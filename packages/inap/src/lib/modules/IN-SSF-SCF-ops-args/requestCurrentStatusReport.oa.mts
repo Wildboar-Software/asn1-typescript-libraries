@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { RequestCurrentStatusReportArg, _decode_RequestCurrentStatusReportArg, _encode_RequestCurrentStatusReportArg } from "../IN-SSF-SCF-ops-args/RequestCurrentStatusReportArg.ta.mjs";
+import { type RequestCurrentStatusReportArg, _decode_RequestCurrentStatusReportArg, _encode_RequestCurrentStatusReportArg } from "../IN-SSF-SCF-ops-args/RequestCurrentStatusReportArg.ta.mjs";
 // export { RequestCurrentStatusReportArg, _decode_RequestCurrentStatusReportArg, _encode_RequestCurrentStatusReportArg } from "../IN-SSF-SCF-ops-args/RequestCurrentStatusReportArg.ta.mjs";
 import { RequestCurrentStatusReportResultArg, _decode_RequestCurrentStatusReportResultArg, _encode_RequestCurrentStatusReportResultArg } from "../IN-SSF-SCF-ops-args/RequestCurrentStatusReportResultArg.ta.mjs";
 // export { RequestCurrentStatusReportResultArg, _decode_RequestCurrentStatusReportResultArg, _encode_RequestCurrentStatusReportResultArg } from "../IN-SSF-SCF-ops-args/RequestCurrentStatusReportResultArg.ta.mjs";

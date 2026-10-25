@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubmissionControls,
+    type SubmissionControls,
     _decode_SubmissionControls,
     _encode_SubmissionControls,
 } from '../MTSAbstractService/SubmissionControls.ta.mjs';

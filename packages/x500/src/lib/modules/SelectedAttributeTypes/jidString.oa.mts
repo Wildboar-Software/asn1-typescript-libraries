@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.mjs";
 import {
-    Jid,
+    type Jid,
     _decode_Jid,
     _encode_Jid,
 } from "../SelectedAttributeTypes/Jid.ta.mjs";

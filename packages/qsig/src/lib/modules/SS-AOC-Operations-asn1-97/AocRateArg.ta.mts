@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AocRateArg_aocRate, _decode_AocRateArg_aocRate, _encode_AocRateArg_aocRate } from "../SS-AOC-Operations-asn1-97/AocRateArg-aocRate.ta.mjs";
-import { AocRateArg_rateArgExtension, _decode_AocRateArg_rateArgExtension, _encode_AocRateArg_rateArgExtension } from "../SS-AOC-Operations-asn1-97/AocRateArg-rateArgExtension.ta.mjs";
+import { type AocRateArg_aocRate, _decode_AocRateArg_aocRate, _encode_AocRateArg_aocRate } from "../SS-AOC-Operations-asn1-97/AocRateArg-aocRate.ta.mjs";
+import { type AocRateArg_rateArgExtension, _decode_AocRateArg_rateArgExtension, _encode_AocRateArg_rateArgExtension } from "../SS-AOC-Operations-asn1-97/AocRateArg-rateArgExtension.ta.mjs";
 
 /**
  * @summary AocRateArg

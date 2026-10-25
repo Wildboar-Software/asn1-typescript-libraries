@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OperationState, _decode_OperationState, _encode_OperationState } from "../ISO-9506-MMS-1/OperationState.ta.mjs";
-import { ExtendedStatus, _decode_ExtendedStatus, _encode_ExtendedStatus } from "../ISO-9506-MMS-1/ExtendedStatus.ta.mjs";
-import { CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_Status_Response_fullResponse_selectedProgramInvocation, _encode_CS_Status_Response_fullResponse_selectedProgramInvocation } from "../ISO-9506-MMS-1/CS-Status-Response-fullResponse-selectedProgramInvocation.ta.mjs";
+import { type OperationState, _decode_OperationState, _encode_OperationState } from "../ISO-9506-MMS-1/OperationState.ta.mjs";
+import { type ExtendedStatus, _decode_ExtendedStatus, _encode_ExtendedStatus } from "../ISO-9506-MMS-1/ExtendedStatus.ta.mjs";
+import { type CS_Status_Response_fullResponse_selectedProgramInvocation, _decode_CS_Status_Response_fullResponse_selectedProgramInvocation, _encode_CS_Status_Response_fullResponse_selectedProgramInvocation } from "../ISO-9506-MMS-1/CS-Status-Response-fullResponse-selectedProgramInvocation.ta.mjs";
 
 
 /**

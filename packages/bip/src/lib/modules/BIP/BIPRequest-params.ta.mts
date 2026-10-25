@@ -16,7 +16,7 @@ import {
   _encode_AddMaster_RequestParams,
 } from '../BIP/AddMaster-RequestParams.ta.mjs';
 import {
-  DeleteMaster_RequestParams,
+  type DeleteMaster_RequestParams,
   _decode_DeleteMaster_RequestParams,
   _encode_DeleteMaster_RequestParams,
 } from '../BIP/DeleteMaster-RequestParams.ta.mjs';

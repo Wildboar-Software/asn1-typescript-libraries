@@ -3,15 +3,15 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";
+import { type DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";
 
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
+import { type NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 

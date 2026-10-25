@@ -6,8 +6,8 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ValidityPeriodRel, _decode_ValidityPeriodRel, _encode_ValidityPeriodRel } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodRel.ta.mjs";
-import { ValidityPeriodSemi, _decode_ValidityPeriodSemi, _encode_ValidityPeriodSemi } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodSemi.ta.mjs";
+import { type ValidityPeriodRel, _decode_ValidityPeriodRel, _encode_ValidityPeriodRel } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodRel.ta.mjs";
+import { type ValidityPeriodSemi, _decode_ValidityPeriodSemi, _encode_ValidityPeriodSemi } from "../Short-Message-Service-Operations-asn1-97/ValidityPeriodSemi.ta.mjs";
 
 /**
  * @summary EnhancedVP

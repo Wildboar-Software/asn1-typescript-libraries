@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../IN-Contexts/AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../IN-Contexts/AddressString.ta.mjs";
 // export { AddressString, _decode_AddressString, _encode_AddressString } from "../IN-Contexts/AddressString.ta.mjs";
 
 

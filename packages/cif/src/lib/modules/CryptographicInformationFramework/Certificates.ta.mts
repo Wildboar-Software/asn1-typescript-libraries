@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PathOrObjects, _get_decoder_for_PathOrObjects, _get_encoder_for_PathOrObjects } from "../CryptographicInformationFramework/PathOrObjects.ta.mjs";
-import { CertificateChoice, _decode_CertificateChoice, _encode_CertificateChoice } from "../CryptographicInformationFramework/CertificateChoice.ta.mjs";
+import { type PathOrObjects, _get_decoder_for_PathOrObjects, _get_encoder_for_PathOrObjects } from "../CryptographicInformationFramework/PathOrObjects.ta.mjs";
+import { type CertificateChoice, _decode_CertificateChoice, _encode_CertificateChoice } from "../CryptographicInformationFramework/CertificateChoice.ta.mjs";
 
 
 /**

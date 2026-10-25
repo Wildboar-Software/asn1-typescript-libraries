@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  IdentifyingStringOrIndex,
+  type IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';

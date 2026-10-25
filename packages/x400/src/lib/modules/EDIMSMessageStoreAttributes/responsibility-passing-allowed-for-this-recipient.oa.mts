@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ResponsibilityPassingAllowedField,
+    type ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
 } from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.mjs';

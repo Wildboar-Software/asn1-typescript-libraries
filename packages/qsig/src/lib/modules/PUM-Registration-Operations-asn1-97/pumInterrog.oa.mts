@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { PumInterrogArg, _decode_PumInterrogArg, _encode_PumInterrogArg } from "../PUM-Registration-Operations-asn1-97/PumInterrogArg.ta.mjs";
-import { PumInterrogRes, _decode_PumInterrogRes, _encode_PumInterrogRes } from "../PUM-Registration-Operations-asn1-97/PumInterrogRes.ta.mjs";
+import { type PumInterrogRes, _decode_PumInterrogRes, _encode_PumInterrogRes } from "../PUM-Registration-Operations-asn1-97/PumInterrogRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { notAuthorized } from "../PUM-Registration-Operations-asn1-97/notAuthorized.oa.mjs";
 import { unspecified } from "../PUM-Registration-Operations-asn1-97/unspecified.oa.mjs";

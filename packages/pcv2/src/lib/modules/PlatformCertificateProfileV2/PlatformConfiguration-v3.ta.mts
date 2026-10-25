@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfileV2/ComponentIdentifier.ta.mjs";
+import { type ComponentIdentifier, _decode_ComponentIdentifier, _encode_ComponentIdentifier } from "../PlatformCertificateProfileV2/ComponentIdentifier.ta.mjs";
 import { Property, _decode_Property, _encode_Property } from "../PlatformCertificateProfileV2/Property.ta.mjs";
 
 

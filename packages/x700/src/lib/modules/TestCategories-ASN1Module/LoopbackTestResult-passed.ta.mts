@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPatternSequence,
+    type TestPatternSequence,
     _decode_TestPatternSequence,
     _encode_TestPatternSequence,
 } from '../TestCategories-ASN1Module/TestPatternSequence.ta.mjs';
 import {
-    LoopbackError,
+    type LoopbackError,
     _decode_LoopbackError,
     _encode_LoopbackError,
 } from '../TestCategories-ASN1Module/LoopbackError.ta.mjs';

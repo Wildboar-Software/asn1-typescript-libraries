@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-import { HandshakeType, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
+import { type HandshakeType, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
 
 
 

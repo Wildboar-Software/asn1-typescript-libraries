@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     type OBJECT_IDENTIFIER,
-    PrintableString
+    type PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 
 

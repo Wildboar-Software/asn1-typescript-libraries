@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MessageToken,
+    type MessageToken,
     _decode_MessageToken,
     _encode_MessageToken,
 } from '../MTSAbstractService/MessageToken.ta.mjs';

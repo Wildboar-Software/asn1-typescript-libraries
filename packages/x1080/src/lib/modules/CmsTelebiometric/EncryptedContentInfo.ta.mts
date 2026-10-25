@@ -18,7 +18,7 @@ import {
     _encode_EncryptedContentInfo_contentEncryptionAlgorithm,
 } from '../CmsTelebiometric/EncryptedContentInfo-contentEncryptionAlgorithm.ta.mjs';
 import {
-    EncryptedContent,
+    type EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
 } from '../CmsTelebiometric/EncryptedContent.ta.mjs';

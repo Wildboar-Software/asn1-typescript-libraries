@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../PKI-Stub/GeneralNames.ta.mjs";

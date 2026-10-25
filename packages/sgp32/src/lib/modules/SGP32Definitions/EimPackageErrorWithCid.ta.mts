@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EimPackageErrorWithCid_correlationId, _decode_EimPackageErrorWithCid_correlationId, _encode_EimPackageErrorWithCid_correlationId } from "../SGP32Definitions/EimPackageErrorWithCid-correlationId.ta.mjs";
-import { EimPackageResultErrorCode, _decode_EimPackageResultErrorCode, _encode_EimPackageResultErrorCode } from "../SGP32Definitions/EimPackageResultErrorCode.ta.mjs";
+import { type EimPackageErrorWithCid_correlationId, _decode_EimPackageErrorWithCid_correlationId, _encode_EimPackageErrorWithCid_correlationId } from "../SGP32Definitions/EimPackageErrorWithCid-correlationId.ta.mjs";
+import { type EimPackageResultErrorCode, _decode_EimPackageResultErrorCode, _encode_EimPackageResultErrorCode } from "../SGP32Definitions/EimPackageResultErrorCode.ta.mjs";
 
 
 /**

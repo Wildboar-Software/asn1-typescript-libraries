@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { UTCTime } from "@wildboar/asn1";
+import { type UTCTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_utcTime } from "../SelectedAttributeTypes/id-lsx-utcTime.va.mjs";

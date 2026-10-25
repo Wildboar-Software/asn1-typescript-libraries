@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_revokedGroups } from "../CertificateExtensions/id-ce-revokedGroups.va.mjs";
 import {
-    RevokedGroupsSyntax,
+    type RevokedGroupsSyntax,
     _decode_RevokedGroupsSyntax,
     _encode_RevokedGroupsSyntax,
 } from "../CertificateExtensions/RevokedGroupsSyntax.ta.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,17 +33,17 @@ import {
   _encode_UnparsedEntity,
 } from '../FastInfoset/UnparsedEntity.ta.mjs';
 import {
-  NonEmptyOctetString,
+  type NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
 import {
-  Document_children_Item,
+  type Document_children_Item,
   _decode_Document_children_Item,
   _encode_Document_children_Item,
 } from '../FastInfoset/Document-children-Item.ta.mjs';

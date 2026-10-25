@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PerceivedTroubleSeverity_number,
+    type PerceivedTroubleSeverity_number,
     _decode_PerceivedTroubleSeverity_number,
     _encode_PerceivedTroubleSeverity_number,
 } from '../X790ASN1Module/PerceivedTroubleSeverity-number.ta.mjs';

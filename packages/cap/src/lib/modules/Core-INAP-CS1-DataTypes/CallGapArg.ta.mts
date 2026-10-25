@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../Core-INAP-CS1-DataTypes/GapCriteria.ta.mjs";
+import { type GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../Core-INAP-CS1-DataTypes/GapCriteria.ta.mjs";
 import { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../Core-INAP-CS1-DataTypes/GapIndicators.ta.mjs";
 import { ControlType, _enum_for_ControlType, _decode_ControlType, _encode_ControlType } from "../Core-INAP-CS1-DataTypes/ControlType.ta.mjs";
-import { GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../Core-INAP-CS1-DataTypes/GapTreatment.ta.mjs";
+import { type GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../Core-INAP-CS1-DataTypes/GapTreatment.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 

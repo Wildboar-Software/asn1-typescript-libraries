@@ -4,7 +4,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { id_contentLocations } from "./id-contentLocations.va.mjs";
 import {
-    URIs,
+    type URIs,
     _decode_URIs,
     _encode_URIs,
 } from "./URIs.ta.mjs";

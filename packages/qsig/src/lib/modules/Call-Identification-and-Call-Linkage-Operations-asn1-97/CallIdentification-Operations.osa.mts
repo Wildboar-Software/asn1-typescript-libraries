@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { callIdentificationAssign } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/callIdentificationAssign.oa.mjs";
 import { callIdentificationUpdate } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/callIdentificationUpdate.oa.mjs";
 

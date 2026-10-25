@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_ImmediateEnableResponse_immediateEnableResult, ImmediateEnableResponse_immediateEnableResult } from "../SGP32Definitions/ImmediateEnableResponse-immediateEnableResult.ta.mjs";
+import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_ImmediateEnableResponse_immediateEnableResult, type ImmediateEnableResponse_immediateEnableResult } from "../SGP32Definitions/ImmediateEnableResponse-immediateEnableResult.ta.mjs";
 
 
 /**

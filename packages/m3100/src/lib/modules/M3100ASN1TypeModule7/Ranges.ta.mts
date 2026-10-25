@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Ranges_Item,
+    type Ranges_Item,
     _decode_Ranges_Item,
     _encode_Ranges_Item,
 } from '../M3100ASN1TypeModule7/Ranges-Item.ta.mjs';

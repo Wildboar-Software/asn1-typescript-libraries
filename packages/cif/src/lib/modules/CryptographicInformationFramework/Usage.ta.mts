@@ -14,7 +14,7 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "../CertificateExtensions/KeyUsage.ta.mjs";
+import { type KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "../CertificateExtensions/KeyUsage.ta.mjs";
 
 
 /**

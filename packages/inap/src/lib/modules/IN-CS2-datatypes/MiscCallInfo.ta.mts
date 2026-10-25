@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, MiscCallInfo_messageType } from "../IN-CS2-datatypes/MiscCallInfo-messageType.ta.mjs";

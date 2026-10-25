@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UnconfirmedService, _decode_UnconfirmedService, _encode_UnconfirmedService } from "../ISO-9506-MMS-1/UnconfirmedService.ta.mjs";
-import { Unconfirmed_Detail, _decode_Unconfirmed_Detail, _encode_Unconfirmed_Detail } from "../ISO-9506-MMS-1/Unconfirmed-Detail.ta.mjs";
+import { type UnconfirmedService, _decode_UnconfirmedService, _encode_UnconfirmedService } from "../ISO-9506-MMS-1/UnconfirmedService.ta.mjs";
+import { type Unconfirmed_Detail, _decode_Unconfirmed_Detail, _encode_Unconfirmed_Detail } from "../ISO-9506-MMS-1/Unconfirmed-Detail.ta.mjs";
 
 
 /**

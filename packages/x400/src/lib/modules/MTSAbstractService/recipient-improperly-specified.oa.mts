@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    ImproperlySpecifiedRecipients,
+    type ImproperlySpecifiedRecipients,
     _decode_ImproperlySpecifiedRecipients,
     _encode_ImproperlySpecifiedRecipients,
 } from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ARU_PPDU,
+    type ARU_PPDU,
     _decode_ARU_PPDU,
     _encode_ARU_PPDU,
 } from '../ISO8823-PRESENTATION/ARU-PPDU.ta.mjs';

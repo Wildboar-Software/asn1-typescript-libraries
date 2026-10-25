@@ -5,14 +5,14 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BMSC_EventList, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
-import { GGSN_EventList, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
-import { MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-import { MME_EventList, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
-import { MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-import { PGW_EventList, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
-import { SGSN_EventList, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
-import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
+import { type BMSC_EventList, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
+import { type GGSN_EventList, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
+import { type MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
+import { type MME_EventList, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
+import { type MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
+import { type PGW_EventList, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
+import { type SGSN_EventList, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
+import { type SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
 
 
 /**

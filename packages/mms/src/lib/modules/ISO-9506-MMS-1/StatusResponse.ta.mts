@@ -13,8 +13,8 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StatusResponse_vmdLogicalStatus, _decode_StatusResponse_vmdLogicalStatus, _encode_StatusResponse_vmdLogicalStatus } from "../ISO-9506-MMS-1/StatusResponse-vmdLogicalStatus.ta.mjs";
-import { StatusResponse_vmdPhysicalStatus, _decode_StatusResponse_vmdPhysicalStatus, _encode_StatusResponse_vmdPhysicalStatus } from "../ISO-9506-MMS-1/StatusResponse-vmdPhysicalStatus.ta.mjs";
+import { type StatusResponse_vmdLogicalStatus, _decode_StatusResponse_vmdLogicalStatus, _encode_StatusResponse_vmdLogicalStatus } from "../ISO-9506-MMS-1/StatusResponse-vmdLogicalStatus.ta.mjs";
+import { type StatusResponse_vmdPhysicalStatus, _decode_StatusResponse_vmdPhysicalStatus, _encode_StatusResponse_vmdPhysicalStatus } from "../ISO-9506-MMS-1/StatusResponse-vmdPhysicalStatus.ta.mjs";
 
 
 /**

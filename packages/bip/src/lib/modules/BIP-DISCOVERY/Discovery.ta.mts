@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,11 +17,11 @@ import {
   _encode_ProtocolVersion,
 } from '../BIP-DISCOVERY/ProtocolVersion.ta.mjs';
 import {
-  IPAddress,
+  type IPAddress,
   _decode_IPAddress,
   _encode_IPAddress,
 } from '../BIP-DISCOVERY/IPAddress.ta.mjs';
-import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
+import { type Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
 
 /**
  * @summary Discovery

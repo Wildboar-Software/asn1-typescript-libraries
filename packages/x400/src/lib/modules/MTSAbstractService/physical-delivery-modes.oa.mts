@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    PhysicalDeliveryModes,
+    type PhysicalDeliveryModes,
     _decode_PhysicalDeliveryModes,
     _encode_PhysicalDeliveryModes,
 } from '../MTSAbstractService/PhysicalDeliveryModes.ta.mjs';

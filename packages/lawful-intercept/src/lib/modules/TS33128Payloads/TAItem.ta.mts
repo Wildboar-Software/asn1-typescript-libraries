@@ -6,7 +6,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
+import { type TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 // export { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 import { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
 // export { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";

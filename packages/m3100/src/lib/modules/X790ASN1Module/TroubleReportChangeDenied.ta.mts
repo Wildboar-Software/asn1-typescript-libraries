@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ChangeDeniedReason,
+    type ChangeDeniedReason,
     _enum_for_ChangeDeniedReason,
     _decode_ChangeDeniedReason,
     _encode_ChangeDeniedReason,
 } from '../X790ASN1Module/ChangeDeniedReason.ta.mjs';
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from '@wildboar/cmip';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';

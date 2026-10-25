@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InitializationAbort_diag,
+    type InitializationAbort_diag,
     _decode_InitializationAbort_diag,
     _encode_InitializationAbort_diag,
     _enum_for_InitializationAbort_diag,

@@ -2,10 +2,10 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Relation, _encode_Relation, Relation } from "../MEDIA-GATEWAY-CONTROL/Relation.ta.mjs";
+import { _decode_Relation, _encode_Relation, type Relation } from "../MEDIA-GATEWAY-CONTROL/Relation.ta.mjs";
 
 
 /**

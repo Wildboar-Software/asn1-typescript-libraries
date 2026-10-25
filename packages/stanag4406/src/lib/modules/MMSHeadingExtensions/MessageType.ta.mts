@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TypeMessage, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
-import { MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
+import { type TypeMessage, _decode_TypeMessage, _encode_TypeMessage } from "../MMSHeadingExtensions/TypeMessage.ta.mjs";
+import { type MessageIdentifier, _decode_MessageIdentifier, _encode_MessageIdentifier } from "../MMSHeadingExtensions/MessageIdentifier.ta.mjs";
 
 
 /**

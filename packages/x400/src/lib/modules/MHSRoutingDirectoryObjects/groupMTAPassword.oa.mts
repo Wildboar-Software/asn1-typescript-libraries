@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    Password,
+    type Password,
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';

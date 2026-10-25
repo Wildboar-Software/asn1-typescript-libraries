@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDIMSynopsis,
+    type EDIMSynopsis,
     _decode_EDIMSynopsis,
     _encode_EDIMSynopsis,
 } from '../EDIMSMessageStoreAttributes/EDIMSynopsis.ta.mjs';

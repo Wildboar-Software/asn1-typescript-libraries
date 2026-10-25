@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass,
     type INTEGER,
     type OBJECT_IDENTIFIER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_CA_DH_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-CA-DH-3DES-CBC-CBC.va.mjs";

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../EpsHI2Operations/RemoteUserID.ta.mjs";
+import { type RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../EpsHI2Operations/RemoteUserID.ta.mjs";
 // export { RemoteUserID, _decode_RemoteUserID, _encode_RemoteUserID } from "../EpsHI2Operations/RemoteUserID.ta.mjs";
 
 

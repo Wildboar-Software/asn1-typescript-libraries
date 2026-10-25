@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ErrorCode_Item,
+    type ErrorCode_Item,
     _decode_ErrorCode_Item,
     _encode_ErrorCode_Item,
 } from '../CSModule/ErrorCode-Item.ta.mjs';

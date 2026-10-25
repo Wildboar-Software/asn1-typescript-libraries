@@ -17,7 +17,7 @@ import {
     _encode_Completeness,
 } from '../MdmpmfASN1Module/Completeness.ta.mjs';
 import {
-    Membership,
+    type Membership,
     _decode_Membership,
     _encode_Membership,
 } from '../MdmpmfASN1Module/Membership.ta.mjs';

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MRTDBTRVersion, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
+import { type MRTDBTRVersion, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_MRTDBTRVersion, _encode_MRTDBTRVersion } from "../MachineReadableBiometricTestingAndReportingTestReport/MRTDBTRVersion.ta.mjs";
 import { ProductInformation, _decode_ProductInformation, _encode_ProductInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/ProductInformation.ta.mjs";
 import { TestReportInformation, _decode_TestReportInformation, _encode_TestReportInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/TestReportInformation.ta.mjs";
 import { TestReportScenarioForOneCondition, _decode_TestReportScenarioForOneCondition, _encode_TestReportScenarioForOneCondition } from "../MachineReadableBiometricTestingAndReportingTestReport/TestReportScenarioForOneCondition.ta.mjs";

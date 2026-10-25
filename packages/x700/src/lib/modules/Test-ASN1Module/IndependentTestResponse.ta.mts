@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
 import {
-    TOName,
+    type TOName,
     _decode_TOName,
     _encode_TOName,
 } from '../Test-ASN1Module/TOName.ta.mjs';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';

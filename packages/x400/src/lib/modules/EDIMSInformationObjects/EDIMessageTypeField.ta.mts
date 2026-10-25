@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDIMessageTypeFieldSubField,
+    type EDIMessageTypeFieldSubField,
     _decode_EDIMessageTypeFieldSubField,
     _encode_EDIMessageTypeFieldSubField,
 } from '../EDIMSInformationObjects/EDIMessageTypeFieldSubField.ta.mjs';

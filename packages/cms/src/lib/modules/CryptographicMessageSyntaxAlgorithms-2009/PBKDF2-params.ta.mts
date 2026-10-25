@@ -8,12 +8,12 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { defaultPBKDF2 } from "../CryptographicMessageSyntaxAlgorithms-2009/defaultPBKDF2.va.mjs";
 import {
-    PBKDF2_params_salt,
+    type PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-params-salt.ta.mjs";
 import {
-    PBKDF2_PRFsAlgorithmIdentifier,
+    type PBKDF2_PRFsAlgorithmIdentifier,
     _decode_PBKDF2_PRFsAlgorithmIdentifier,
     _encode_PBKDF2_PRFsAlgorithmIdentifier,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-PRFsAlgorithmIdentifier.ta.mjs";

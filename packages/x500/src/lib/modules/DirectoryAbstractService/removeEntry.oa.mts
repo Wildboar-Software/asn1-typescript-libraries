@@ -4,12 +4,12 @@ import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 import { referral } from "../DirectoryAbstractService/referral.oa.mjs";
 import {
-    RemoveEntryArgument,
+    type RemoveEntryArgument,
     _decode_RemoveEntryArgument,
     _encode_RemoveEntryArgument,
 } from "../DirectoryAbstractService/RemoveEntryArgument.ta.mjs";
 import {
-    RemoveEntryResult,
+    type RemoveEntryResult,
     _decode_RemoveEntryResult,
     _encode_RemoveEntryResult,
 } from "../DirectoryAbstractService/RemoveEntryResult.ta.mjs";

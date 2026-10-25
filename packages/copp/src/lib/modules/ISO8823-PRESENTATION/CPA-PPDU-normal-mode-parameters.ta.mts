@@ -13,43 +13,43 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Protocol_version,
+    type Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
 } from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
 import {
-    Responding_presentation_selector,
+    type Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
 } from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.mjs';
 import {
-    Presentation_context_definition_result_list,
+    type Presentation_context_definition_result_list,
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs';
 import {
-    Presentation_requirements,
+    type Presentation_requirements,
     _decode_Presentation_requirements,
     _encode_Presentation_requirements,
 } from '../ISO8823-PRESENTATION/Presentation-requirements.ta.mjs';
 import {
-    User_session_requirements,
+    type User_session_requirements,
     _decode_User_session_requirements,
     _encode_User_session_requirements,
 } from '../ISO8823-PRESENTATION/User-session-requirements.ta.mjs';
 import {
-    Protocol_options,
+    type Protocol_options,
     _decode_Protocol_options,
     _encode_Protocol_options,
 } from '../ISO8823-PRESENTATION/Protocol-options.ta.mjs';
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

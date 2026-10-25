@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    Create,
+    type Create,
     _decode_Create,
     _encode_Create,
 } from '../DefinitionASN1Module/Create.ta.mjs';

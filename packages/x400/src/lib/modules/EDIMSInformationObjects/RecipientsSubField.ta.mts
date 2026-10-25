@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientField,
+    type RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
 } from '../EDIMSInformationObjects/RecipientField.ta.mjs';
 import {
-    ActionRequestField,
+    type ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
 } from '../EDIMSInformationObjects/ActionRequestField.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_EDINotificationRequestsField,
 } from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.mjs';
 import {
-    ResponsibilityPassingAllowedField,
+    type ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
 } from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.mjs';
@@ -43,27 +43,27 @@ import {
     _encode_RecipientReferenceField,
 } from '../EDIMSInformationObjects/RecipientReferenceField.ta.mjs';
 import {
-    InterchangeControlReferenceField,
+    type InterchangeControlReferenceField,
     _decode_InterchangeControlReferenceField,
     _encode_InterchangeControlReferenceField,
 } from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta.mjs';
 import {
-    ProcessingPriorityCodeField,
+    type ProcessingPriorityCodeField,
     _decode_ProcessingPriorityCodeField,
     _encode_ProcessingPriorityCodeField,
 } from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta.mjs';
 import {
-    AcknowledgementRequestField,
+    type AcknowledgementRequestField,
     _decode_AcknowledgementRequestField,
     _encode_AcknowledgementRequestField,
 } from '../EDIMSInformationObjects/AcknowledgementRequestField.ta.mjs';
 import {
-    CommunicationsAgreementIdField,
+    type CommunicationsAgreementIdField,
     _decode_CommunicationsAgreementIdField,
     _encode_CommunicationsAgreementIdField,
 } from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta.mjs';
 import {
-    TestIndicatorField,
+    type TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
 } from '../EDIMSInformationObjects/TestIndicatorField.ta.mjs';
@@ -73,7 +73,7 @@ import {
     _encode_AuthorizationInformationField,
 } from '../EDIMSInformationObjects/AuthorizationInformationField.ta.mjs';
 import {
-    RecipientExtensionsField,
+    type RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
 } from '../EDIMSInformationObjects/RecipientExtensionsField.ta.mjs';

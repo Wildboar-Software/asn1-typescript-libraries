@@ -6,13 +6,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { UDMAuthenticationInfoRequest, _decode_UDMAuthenticationInfoRequest, _encode_UDMAuthenticationInfoRequest } from "../TS33128Payloads/UDMAuthenticationInfoRequest.ta.mjs";
 // export { UDMAuthenticationInfoRequest, _decode_UDMAuthenticationInfoRequest, _encode_UDMAuthenticationInfoRequest } from "../TS33128Payloads/UDMAuthenticationInfoRequest.ta.mjs";
 import { UDMProblemDetails, _decode_UDMProblemDetails, _encode_UDMProblemDetails } from "../TS33128Payloads/UDMProblemDetails.ta.mjs";
 // export { UDMProblemDetails, _decode_UDMProblemDetails, _encode_UDMProblemDetails } from "../TS33128Payloads/UDMProblemDetails.ta.mjs";
-import { ServerAddressingInfoList, _decode_ServerAddressingInfoList, _encode_ServerAddressingInfoList } from "../TS33128Payloads/ServerAddressingInfoList.ta.mjs";
+import { type ServerAddressingInfoList, _decode_ServerAddressingInfoList, _encode_ServerAddressingInfoList } from "../TS33128Payloads/ServerAddressingInfoList.ta.mjs";
 // export { ServerAddressingInfoList, _decode_ServerAddressingInfoList, _encode_ServerAddressingInfoList } from "../TS33128Payloads/ServerAddressingInfoList.ta.mjs";
 
 

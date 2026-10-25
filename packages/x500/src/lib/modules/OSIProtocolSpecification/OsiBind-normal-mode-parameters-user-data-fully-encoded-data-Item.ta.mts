@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    type OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
     _decode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
     _encode_OsiBind_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
 } from "../OSIProtocolSpecification/OsiBind-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";

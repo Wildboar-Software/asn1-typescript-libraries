@@ -1,5 +1,5 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { ReleaseCallArg, _decode_ReleaseCallArg, _encode_ReleaseCallArg } from "../CAP-gsmSSF-gsmSCF-ops-args/ReleaseCallArg.ta.mjs";
+import { type ReleaseCallArg, _decode_ReleaseCallArg, _encode_ReleaseCallArg } from "../CAP-gsmSSF-gsmSCF-ops-args/ReleaseCallArg.ta.mjs";
 import { opcode_releaseCall } from "../CAP-operationcodes/opcode-releaseCall.va.mjs";
 
 /**

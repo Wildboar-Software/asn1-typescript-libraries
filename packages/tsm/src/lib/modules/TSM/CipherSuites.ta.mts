@@ -11,7 +11,7 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_CipherSuite } from "../TSM/CipherSuite.ta.mjs";
+import { type CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_CipherSuite } from "../TSM/CipherSuite.ta.mjs";
 
 
 

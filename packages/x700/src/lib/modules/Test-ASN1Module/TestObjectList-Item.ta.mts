@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';

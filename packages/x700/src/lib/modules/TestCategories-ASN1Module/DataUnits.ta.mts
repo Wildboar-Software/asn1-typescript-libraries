@@ -12,27 +12,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DataType,
+    type DataType,
     _decode_DataType,
     _encode_DataType,
 } from '../TestCategories-ASN1Module/DataType.ta.mjs';
 import {
-    DataCategory,
+    type DataCategory,
     _decode_DataCategory,
     _encode_DataCategory,
 } from '../TestCategories-ASN1Module/DataCategory.ta.mjs';
 import {
-    DataSize,
+    type DataSize,
     _decode_DataSize,
     _encode_DataSize,
 } from '../TestCategories-ASN1Module/DataSize.ta.mjs';
 import {
-    UnitsTotal,
+    type UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
 } from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';
 import {
-    DataRate,
+    type DataRate,
     _decode_DataRate,
     _encode_DataRate,
 } from '../TestCategories-ASN1Module/DataRate.ta.mjs';

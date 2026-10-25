@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    CRLReason,
+    type CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
 } from "../CertificateExtensions/CRLReason.ta.mjs";

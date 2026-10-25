@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../Common-Parameters/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../Common-Parameters/IMSI.ta.mjs";
 // export { IMSI, _decode_IMSI, _encode_IMSI } from "../Common-Parameters/IMSI.ta.mjs";
 
 

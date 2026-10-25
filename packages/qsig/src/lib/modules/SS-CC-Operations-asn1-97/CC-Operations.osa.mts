@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { ccbsRequest } from "../SS-CC-Operations-asn1-97/ccbsRequest.oa.mjs";
 import { ccnrRequest } from "../SS-CC-Operations-asn1-97/ccnrRequest.oa.mjs";
 import { ccCancel } from "../SS-CC-Operations-asn1-97/ccCancel.oa.mjs";

@@ -3,7 +3,7 @@ import {
     type OBJECT_IDENTIFIER,
     type REAL,
     type PrintableString,
-    RELATIVE_OID_IRI,
+    type RELATIVE_OID_IRI,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

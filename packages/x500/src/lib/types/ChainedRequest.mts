@@ -11,4 +11,4 @@ interface ChainedRequest extends Request {
     chaining: ChainingArguments;
 }
 
-export default ChainedRequest;
+export type { ChainedRequest as default };

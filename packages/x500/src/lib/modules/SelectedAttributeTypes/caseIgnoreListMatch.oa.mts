@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import {
-    CaseIgnoreList,
+    type CaseIgnoreList,
     _decode_CaseIgnoreList,
     _encode_CaseIgnoreList,
 } from "../SelectedAttributeTypes/CaseIgnoreList.ta.mjs";

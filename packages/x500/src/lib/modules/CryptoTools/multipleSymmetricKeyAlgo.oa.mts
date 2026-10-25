@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_algo_multipleSymmetricKeyAlgo } from "../CryptoTools/id-algo-multipleSymmetricKeyAlgo.va.mjs";
 import {
-    MultipleSymmetricKeyAlgo,
+    type MultipleSymmetricKeyAlgo,
     _decode_MultipleSymmetricKeyAlgo,
     _encode_MultipleSymmetricKeyAlgo,
 } from "../CryptoTools/MultipleSymmetricKeyAlgo.ta.mjs";

@@ -2,12 +2,12 @@
 import {
     type INTEGER,
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Kmid, _decode_Kmid, _encode_Kmid } from "../ACP133CommonContent/Kmid.ta.mjs";
+import { type Kmid, _decode_Kmid, _encode_Kmid } from "../ACP133CommonContent/Kmid.ta.mjs";
 
 
 /**

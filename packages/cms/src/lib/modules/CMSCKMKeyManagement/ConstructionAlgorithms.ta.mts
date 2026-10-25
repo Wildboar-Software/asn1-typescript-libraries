@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CombinerAlgorithmIdentifier,
+    type CombinerAlgorithmIdentifier,
     _decode_CombinerAlgorithmIdentifier,
     _encode_CombinerAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/CombinerAlgorithmIdentifier.ta.mjs";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";

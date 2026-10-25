@@ -13,8 +13,8 @@ import {
     ASN1ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 
 
 /**

@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CirculationSignatureAlgorithmIdentifier,
+    type CirculationSignatureAlgorithmIdentifier,
     _decode_CirculationSignatureAlgorithmIdentifier,
     _encode_CirculationSignatureAlgorithmIdentifier,
 } from '../IPMSHeadingExtensions/CirculationSignatureAlgorithmIdentifier.ta.mjs';
 import {
-    ThisIPMField,
+    type ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
 } from '../IPMSInformationObjects/ThisIPMField.ta.mjs';
 import {
-    CirculationTime,
+    type CirculationTime,
     _decode_CirculationTime,
     _encode_CirculationTime,
 } from '../IPMSHeadingExtensions/CirculationTime.ta.mjs';

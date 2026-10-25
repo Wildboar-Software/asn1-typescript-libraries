@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
+import { type AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
+import { type CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
-import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
-import { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
+import { type GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
+import { type GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
+import { type LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MAP-MS-DataTypes/UserCSGInformation.ta.mjs";
 
 

@@ -9,7 +9,7 @@ import {
     NonReceiptFields,
     _decode_NonReceiptFields,
     _encode_NonReceiptFields,
-    OtherNotificationTypeFields,
+    type OtherNotificationTypeFields,
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
     ReceiptFields,

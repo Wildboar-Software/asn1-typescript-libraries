@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    E_health_SetUp_Message_Response_interactive,
+    type E_health_SetUp_Message_Response_interactive,
     _decode_E_health_SetUp_Message_Response_interactive,
     _encode_E_health_SetUp_Message_Response_interactive,
 } from '../E-health-setup/E-health-SetUp-Message-Response-interactive.ta.mjs';

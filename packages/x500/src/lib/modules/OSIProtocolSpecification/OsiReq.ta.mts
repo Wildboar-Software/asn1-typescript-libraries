@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";

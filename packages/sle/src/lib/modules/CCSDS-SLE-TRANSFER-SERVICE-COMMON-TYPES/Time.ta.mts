@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeCCSDS, _decode_TimeCCSDS, _encode_TimeCCSDS } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/TimeCCSDS.ta.mjs";
-import { TimeCCSDSpico, _decode_TimeCCSDSpico, _encode_TimeCCSDSpico } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/TimeCCSDSpico.ta.mjs";
+import { type TimeCCSDS, _decode_TimeCCSDS, _encode_TimeCCSDS } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/TimeCCSDS.ta.mjs";
+import { type TimeCCSDSpico, _decode_TimeCCSDSpico, _encode_TimeCCSDSpico } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/TimeCCSDSpico.ta.mjs";
 
 
 /**

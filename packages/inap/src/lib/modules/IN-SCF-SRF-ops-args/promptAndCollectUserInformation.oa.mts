@@ -4,7 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { PromptAndCollectUserInformationArg, _decode_PromptAndCollectUserInformationArg, _encode_PromptAndCollectUserInformationArg } from "../IN-SCF-SRF-ops-args/PromptAndCollectUserInformationArg.ta.mjs";
 // export { PromptAndCollectUserInformationArg, _decode_PromptAndCollectUserInformationArg, _encode_PromptAndCollectUserInformationArg } from "../IN-SCF-SRF-ops-args/PromptAndCollectUserInformationArg.ta.mjs";
-import { ReceivedInformationArg, _decode_ReceivedInformationArg, _encode_ReceivedInformationArg } from "../IN-SCF-SRF-ops-args/ReceivedInformationArg.ta.mjs";
+import { type ReceivedInformationArg, _decode_ReceivedInformationArg, _encode_ReceivedInformationArg } from "../IN-SCF-SRF-ops-args/ReceivedInformationArg.ta.mjs";
 // export { ReceivedInformationArg, _decode_ReceivedInformationArg, _encode_ReceivedInformationArg } from "../IN-SCF-SRF-ops-args/ReceivedInformationArg.ta.mjs";
 import { canceled } from "../IN-errortypes/canceled.oa.mjs";
 // export { canceled } from "../IN-errortypes/canceled.oa.mjs";

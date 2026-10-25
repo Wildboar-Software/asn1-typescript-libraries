@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKIStatus,
+  type PKIStatus,
   _decode_PKIStatus,
   _encode_PKIStatus,
 } from '../PKIXCMP-2009/PKIStatus.ta.mjs';
 import {
-  PKIFreeText,
+  type PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';
 import {
-  PKIFailureInfo,
+  type PKIFailureInfo,
   _decode_PKIFailureInfo,
   _encode_PKIFailureInfo,
 } from '../PKIXCMP-2009/PKIFailureInfo.ta.mjs';

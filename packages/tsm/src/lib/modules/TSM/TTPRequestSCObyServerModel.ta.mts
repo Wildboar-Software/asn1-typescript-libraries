@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/TemplateID.ta.mjs";
 
-import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
+import { type SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
 
 
 

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DirectoryNameAndOptionalORAddress,
+    type DirectoryNameAndOptionalORAddress,
     _decode_DirectoryNameAndOptionalORAddress,
     _encode_DirectoryNameAndOptionalORAddress,
 } from '../MhsAcctAsn1Module/DirectoryNameAndOptionalORAddress.ta.mjs';

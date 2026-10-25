@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { PRRetainArg_extension, _decode_PRRetainArg_extension, _encode_PRRetainArg_extension } from "../Path-Replacement-Operations-asn1-97/PRRetainArg-extension.ta.mjs";
+import { type CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PRRetainArg_extension, _decode_PRRetainArg_extension, _encode_PRRetainArg_extension } from "../Path-Replacement-Operations-asn1-97/PRRetainArg-extension.ta.mjs";
 
 /**
  * @summary PRRetainArg

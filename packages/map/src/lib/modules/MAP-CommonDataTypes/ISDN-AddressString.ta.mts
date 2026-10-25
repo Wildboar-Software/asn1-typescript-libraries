@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_AddressString, _encode_AddressString, AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { _decode_AddressString, _encode_AddressString, type AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 
 
 

@@ -12,32 +12,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OriginatorName,
+    type OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
 } from '../MTSAbstractService/OriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
 import {
-    PerMessageIndicators,
+    type PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
 } from '../MTSAbstractService/PerMessageIndicators.ta.mjs';

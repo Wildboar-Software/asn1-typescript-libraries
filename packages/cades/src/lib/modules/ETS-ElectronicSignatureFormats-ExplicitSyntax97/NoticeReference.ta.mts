@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
+import { type DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
 /**
  * @summary NoticeReference
  * @description

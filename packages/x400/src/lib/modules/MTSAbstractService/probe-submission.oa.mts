@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    ProbeSubmissionArgument,
+    type ProbeSubmissionArgument,
     _decode_ProbeSubmissionArgument,
     _encode_ProbeSubmissionArgument,
 } from '../MTSAbstractService/ProbeSubmissionArgument.ta.mjs';

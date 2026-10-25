@@ -16,17 +16,17 @@ import {
     _encode_MessageDeliveryEnvelope,
 } from '../MTSAbstractService/MessageDeliveryEnvelope.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    MessageDeliveryIdentifier,
+    type MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
 } from '../MTSAbstractService/MessageDeliveryIdentifier.ta.mjs';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';

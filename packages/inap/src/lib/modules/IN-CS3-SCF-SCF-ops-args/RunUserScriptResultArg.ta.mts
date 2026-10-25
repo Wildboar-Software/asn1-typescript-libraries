@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProvideUserInformationResultArg, _decode_ProvideUserInformationResultArg, _encode_ProvideUserInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationResultArg.ta.mjs";
+import { type ProvideUserInformationResultArg, _decode_ProvideUserInformationResultArg, _encode_ProvideUserInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationResultArg.ta.mjs";
 // export { ProvideUserInformationResultArg, _decode_ProvideUserInformationResultArg, _encode_ProvideUserInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationResultArg.ta.mjs";
 
 

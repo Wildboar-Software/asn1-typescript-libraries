@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReceivedInformation, _decode_ReceivedInformation, _encode_ReceivedInformation } from "../IN-CS3-SCF-SCF-datatypes/ReceivedInformation.ta.mjs";
+import { type ReceivedInformation, _decode_ReceivedInformation, _encode_ReceivedInformation } from "../IN-CS3-SCF-SCF-datatypes/ReceivedInformation.ta.mjs";
 // export { ReceivedInformation, _decode_ReceivedInformation, _encode_ReceivedInformation } from "../IN-CS3-SCF-SCF-datatypes/ReceivedInformation.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 

@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OperationProgress_nameResolutionPhase,
+    type OperationProgress_nameResolutionPhase,
     _decode_OperationProgress_nameResolutionPhase,
     _encode_OperationProgress_nameResolutionPhase,
     _enum_for_OperationProgress_nameResolutionPhase,

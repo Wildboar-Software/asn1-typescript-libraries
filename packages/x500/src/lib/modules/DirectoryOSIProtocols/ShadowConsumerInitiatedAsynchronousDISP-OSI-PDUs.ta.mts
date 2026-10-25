@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OSI_PDU,
+    type OSI_PDU,
     _decode_OSI_PDU,
     _encode_OSI_PDU,
 } from "../OSIProtocolSpecification/OSI-PDU.ta.mjs";

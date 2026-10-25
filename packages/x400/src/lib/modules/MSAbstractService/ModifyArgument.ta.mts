@@ -12,13 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    ModifyArgument_entries,
+    type ModifyArgument_entries,
     _decode_ModifyArgument_entries,
     _encode_ModifyArgument_entries,
 } from '../MSAbstractService/ModifyArgument-entries.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_EntryModification,
 } from '../MSAbstractService/EntryModification.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';

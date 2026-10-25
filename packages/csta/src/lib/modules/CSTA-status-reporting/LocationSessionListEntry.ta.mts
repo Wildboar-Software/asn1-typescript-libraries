@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { LocCrossRefID, _decode_LocCrossRefID, _encode_LocCrossRefID } from "../CSTA-device-feature-types/LocCrossRefID.ta.mjs";
+import { type LocCrossRefID, _decode_LocCrossRefID, _encode_LocCrossRefID } from "../CSTA-device-feature-types/LocCrossRefID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 

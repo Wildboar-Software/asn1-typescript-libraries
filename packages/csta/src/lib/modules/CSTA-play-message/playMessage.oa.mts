@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { PlayMessageArgument, _decode_PlayMessageArgument, _encode_PlayMessageArgument } from "../CSTA-play-message/PlayMessageArgument.ta.mjs";
 
-import { PlayMessageResult, _decode_PlayMessageResult, _encode_PlayMessageResult } from "../CSTA-play-message/PlayMessageResult.ta.mjs";
+import { type PlayMessageResult, _decode_PlayMessageResult, _encode_PlayMessageResult } from "../CSTA-play-message/PlayMessageResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

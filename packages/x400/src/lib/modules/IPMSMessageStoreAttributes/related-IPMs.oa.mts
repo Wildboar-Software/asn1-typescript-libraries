@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    RelatedIPMsSubfield,
+    type RelatedIPMsSubfield,
     _decode_RelatedIPMsSubfield,
     _encode_RelatedIPMsSubfield,
 } from '../IPMSInformationObjects/RelatedIPMsSubfield.ta.mjs';

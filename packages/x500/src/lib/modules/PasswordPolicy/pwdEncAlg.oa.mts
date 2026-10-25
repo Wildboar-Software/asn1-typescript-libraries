@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oa_pwdEncAlg } from "../PasswordPolicy/id-oa-pwdEncAlg.va.mjs";
 import {
-    PwdEncAlg,
+    type PwdEncAlg,
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";

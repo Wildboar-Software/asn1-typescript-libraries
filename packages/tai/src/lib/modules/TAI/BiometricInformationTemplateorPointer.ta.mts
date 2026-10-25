@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BCBiometricInformationTemplate, _decode_BCBiometricInformationTemplate, _encode_BCBiometricInformationTemplate } from "../TAI/BCBiometricInformationTemplate.ta.mjs";
-import { URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
+import { type BCBiometricInformationTemplate, _decode_BCBiometricInformationTemplate, _encode_BCBiometricInformationTemplate } from "../TAI/BCBiometricInformationTemplate.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
 /**
  * @summary BiometricInformationTemplateorPointer
  * @description

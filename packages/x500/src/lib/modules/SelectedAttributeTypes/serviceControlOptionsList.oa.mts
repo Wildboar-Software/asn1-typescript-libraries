@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ServiceControlOptions,
+    type ServiceControlOptions,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
 } from "../DirectoryAbstractService/ServiceControlOptions.ta.mjs";

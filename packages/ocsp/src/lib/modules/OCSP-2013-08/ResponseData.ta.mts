@@ -2,17 +2,17 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
 import {
-    ResponderID,
+    type ResponderID,
     _decode_ResponderID,
     _encode_ResponderID,
 } from "../OCSP-2013-08/ResponderID.ta.mjs";
@@ -23,7 +23,7 @@ import {
 } from "../OCSP-2013-08/SingleResponse.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../OCSP-2013-08/Version.ta.mjs";

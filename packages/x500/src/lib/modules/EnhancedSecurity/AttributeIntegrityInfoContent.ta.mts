@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttribsHash,
+    type AttribsHash,
     _decode_AttribsHash,
     _encode_AttribsHash,
 } from "../EnhancedSecurity/AttribsHash.ta.mjs";
 import {
-    Scope,
+    type Scope,
     _decode_Scope,
     _encode_Scope,
 } from "../EnhancedSecurity/Scope.ta.mjs";
 import {
-    Signer,
+    type Signer,
     _decode_Signer,
     _encode_Signer,
 } from "../EnhancedSecurity/Signer.ta.mjs";

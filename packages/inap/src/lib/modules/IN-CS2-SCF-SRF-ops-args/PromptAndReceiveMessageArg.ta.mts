@@ -6,19 +6,19 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-CS2-datatypes/GenericNumber.ta.mjs";
+import { type GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-CS2-datatypes/GenericNumber.ta.mjs";
 // export { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-CS2-datatypes/GenericNumber.ta.mjs";
-import { MailBoxID, _decode_MailBoxID, _encode_MailBoxID } from "../IN-CS2-datatypes/MailBoxID.ta.mjs";
+import { type MailBoxID, _decode_MailBoxID, _encode_MailBoxID } from "../IN-CS2-datatypes/MailBoxID.ta.mjs";
 // export { MailBoxID, _decode_MailBoxID, _encode_MailBoxID } from "../IN-CS2-datatypes/MailBoxID.ta.mjs";
 import { InformationToRecord, _decode_InformationToRecord, _encode_InformationToRecord } from "../IN-CS2-datatypes/InformationToRecord.ta.mjs";
 // export { InformationToRecord, _decode_InformationToRecord, _encode_InformationToRecord } from "../IN-CS2-datatypes/InformationToRecord.ta.mjs";
 import { Media, Media_voiceMail /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Media, _encode_Media, _enum_for_Media } from "../IN-CS2-datatypes/Media.ta.mjs";
 // export { Media, _enum_for_Media, Media_voiceMail /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceMail /* IMPORTED_SHORT_ENUMERATION_ITEM */, Media_faxGroup3 /* IMPORTED_LONG_ENUMERATION_ITEM */, faxGroup3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, Media_faxGroup4 /* IMPORTED_LONG_ENUMERATION_ITEM */, faxGroup4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Media, _encode_Media } from "../IN-CS2-datatypes/Media.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 
 

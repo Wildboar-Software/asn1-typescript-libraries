@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NULL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     ModifyDNResultData,
@@ -7,7 +7,7 @@ import {
     _encode_ModifyDNResultData,
 } from "../DirectoryAbstractService/ModifyDNResultData.ta.mjs";
 import {
-    OPTIONALLY_PROTECTED_SEQ,
+    type OPTIONALLY_PROTECTED_SEQ,
     _get_decoder_for_OPTIONALLY_PROTECTED_SEQ,
     _get_encoder_for_OPTIONALLY_PROTECTED_SEQ,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED-SEQ.ta.mjs";

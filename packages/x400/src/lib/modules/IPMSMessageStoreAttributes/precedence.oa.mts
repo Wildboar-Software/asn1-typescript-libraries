@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    Precedence,
+    type Precedence,
     _decode_Precedence,
     _encode_Precedence,
 } from '../IPMSHeadingExtensions/Precedence.ta.mjs';

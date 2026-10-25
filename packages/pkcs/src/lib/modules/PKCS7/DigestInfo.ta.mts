@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta.mjs";
+import { type Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";

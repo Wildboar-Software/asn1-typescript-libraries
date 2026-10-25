@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OtherRecipientName,
+    type OtherRecipientName,
     _decode_OtherRecipientName,
     _encode_OtherRecipientName,
 } from '../MTSAbstractService/OtherRecipientName.ta.mjs';

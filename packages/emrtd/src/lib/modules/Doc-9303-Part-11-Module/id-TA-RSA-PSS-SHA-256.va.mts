@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_TA_RSA } from "../Doc-9303-Part-11-Module/id-TA-RSA.va.mjs";
 // export { id_TA_RSA } from "../Doc-9303-Part-11-Module/id-TA-RSA.va.mjs";

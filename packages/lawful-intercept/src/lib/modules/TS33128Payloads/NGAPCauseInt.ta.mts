@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NGAPCauseGroupInt, _decode_NGAPCauseGroupInt, _encode_NGAPCauseGroupInt } from "../TS33128Payloads/NGAPCauseGroupInt.ta.mjs";
+import { type NGAPCauseGroupInt, _decode_NGAPCauseGroupInt, _encode_NGAPCauseGroupInt } from "../TS33128Payloads/NGAPCauseGroupInt.ta.mjs";
 // export { NGAPCauseGroupInt, _decode_NGAPCauseGroupInt, _encode_NGAPCauseGroupInt } from "../TS33128Payloads/NGAPCauseGroupInt.ta.mjs";
-import { NGAPCauseValueInt, _decode_NGAPCauseValueInt, _encode_NGAPCauseValueInt } from "../TS33128Payloads/NGAPCauseValueInt.ta.mjs";
+import { type NGAPCauseValueInt, _decode_NGAPCauseValueInt, _encode_NGAPCauseValueInt } from "../TS33128Payloads/NGAPCauseValueInt.ta.mjs";
 // export { NGAPCauseValueInt, _decode_NGAPCauseValueInt, _encode_NGAPCauseValueInt } from "../TS33128Payloads/NGAPCauseValueInt.ta.mjs";
 
 

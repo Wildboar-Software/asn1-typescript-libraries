@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
-import { WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
+import { type Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
+import { type WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 
 
 /**

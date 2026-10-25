@@ -16,32 +16,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ResponderCredentials,
+    type ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
 } from '../MTSAbstractService/ResponderCredentials.ta.mjs';
 import {
-    EntryClass,
+    type EntryClass,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AutoActionErrorIndication,
+    type AutoActionErrorIndication,
     _decode_AutoActionErrorIndication,
     _encode_AutoActionErrorIndication,
 } from '../MSAbstractService/AutoActionErrorIndication.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 import {
-    AutoActionType,
+    type AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from "./AutoActionType.ta.mjs";

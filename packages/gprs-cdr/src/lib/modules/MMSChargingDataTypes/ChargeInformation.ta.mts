@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ChargedParty, _encode_ChargedParty, _enum_for_ChargedParty, ChargedParty } from "../MMSChargingDataTypes/ChargedParty.ta.mjs";

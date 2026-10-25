@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ECCAlgorithms,
+    type ECCAlgorithms,
     _decode_ECCAlgorithms,
     _encode_ECCAlgorithms,
 } from "../ANSI-X9-62/ECCAlgorithms.ta.mjs";
 import {
-    ECDomainParameters,
+    type ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
 } from "../ANSI-X9-62/ECDomainParameters.ta.mjs";

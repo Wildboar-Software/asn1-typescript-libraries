@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS2-datatypes/InbandInfo.ta.mjs";
 import { Tone, _decode_Tone, _encode_Tone } from "../IN-CS2-datatypes/Tone.ta.mjs";
-import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
+import { type DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
 
 
 /**

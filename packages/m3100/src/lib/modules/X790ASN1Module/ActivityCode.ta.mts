@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ActivityCode_number,
+    type ActivityCode_number,
     _decode_ActivityCode_number,
     _encode_ActivityCode_number,
 } from '../X790ASN1Module/ActivityCode-number.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AcceptablePrivilegePoliciesSyntax,
+    type AcceptablePrivilegePoliciesSyntax,
     _decode_AcceptablePrivilegePoliciesSyntax,
     _encode_AcceptablePrivilegePoliciesSyntax,
 } from "../AttributeCertificateDefinitions/AcceptablePrivilegePoliciesSyntax.ta.mjs";

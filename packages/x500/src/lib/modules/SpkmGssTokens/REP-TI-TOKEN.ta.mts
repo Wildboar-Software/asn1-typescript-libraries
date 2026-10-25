@@ -11,7 +11,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Integrity,
+    type Integrity,
     _decode_Integrity,
     _encode_Integrity,
 } from "../SpkmGssTokens/Integrity.ta.mjs";

@@ -5,7 +5,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { octetStringMatch } from "@wildboar/x500/SelectedAttributeTypes";
 import {
-    MessageDigest,
+    type MessageDigest,
     _decode_MessageDigest,
     _encode_MessageDigest,
 } from "../PKCS-9/MessageDigest.ta.mjs";

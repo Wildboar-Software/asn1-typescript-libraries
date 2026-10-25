@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FieldElement,
+    type FieldElement,
     _decode_FieldElement,
     _encode_FieldElement,
 } from "../ANSI-X9-62/FieldElement.ta.mjs";

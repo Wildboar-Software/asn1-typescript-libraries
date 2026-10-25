@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AP_title, _decode_AP_title, _encode_AP_title } from "../ACSE-1/AP-title.ta.mjs";
-import { AP_invocation_identifier, _decode_AP_invocation_identifier, _encode_AP_invocation_identifier } from "../ACSE-1/AP-invocation-identifier.ta.mjs";
-import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../ACSE-1/AE-qualifier.ta.mjs";
-import { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_invocation_identifier } from "../ACSE-1/AE-invocation-identifier.ta.mjs";
+import { type AP_title, _decode_AP_title, _encode_AP_title } from "../ACSE-1/AP-title.ta.mjs";
+import { type AP_invocation_identifier, _decode_AP_invocation_identifier, _encode_AP_invocation_identifier } from "../ACSE-1/AP-invocation-identifier.ta.mjs";
+import { type AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../ACSE-1/AE-qualifier.ta.mjs";
+import { type AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_invocation_identifier } from "../ACSE-1/AE-invocation-identifier.ta.mjs";
 
 
 /**

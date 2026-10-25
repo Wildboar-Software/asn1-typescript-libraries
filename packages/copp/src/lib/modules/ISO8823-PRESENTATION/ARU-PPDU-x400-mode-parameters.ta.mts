@@ -17,7 +17,7 @@ import {
     _encode_RTABapdu,
 } from '@wildboar/rtse';
 import {
-    AbortReason,
+    type AbortReason,
     _decode_AbortReason,
     _encode_AbortReason,
 } from '@wildboar/rtse';

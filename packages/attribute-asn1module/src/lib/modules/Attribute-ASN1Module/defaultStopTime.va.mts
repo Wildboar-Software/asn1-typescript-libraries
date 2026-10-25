@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta.mjs";
+import { type StopTime, _decode_StopTime, _encode_StopTime } from "../Attribute-ASN1Module/StopTime.ta.mjs";
 /**
  * @summary defaultStopTime
  * @description

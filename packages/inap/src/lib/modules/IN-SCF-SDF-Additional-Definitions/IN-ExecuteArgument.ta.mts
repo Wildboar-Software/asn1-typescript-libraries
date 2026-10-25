@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } from "../IN-SCF-SDF-operations/ExecuteArgument.ta.mjs";
+import { type ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } from "../IN-SCF-SDF-operations/ExecuteArgument.ta.mjs";
 // export { ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } from "../IN-SCF-SDF-operations/ExecuteArgument.ta.mjs";
 
 

@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FieldParamValues_maxFields, _decode_FieldParamValues_maxFields, _encode_FieldParamValues_maxFields } from "../CDS/FieldParamValues-maxFields.ta.mjs";
-import { FieldParamValues_maxFieldElements, _decode_FieldParamValues_maxFieldElements, _encode_FieldParamValues_maxFieldElements } from "../CDS/FieldParamValues-maxFieldElements.ta.mjs";
-import { FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside, _encode_FieldParamValues_accessOutside } from "../CDS/FieldParamValues-accessOutside.ta.mjs";
+import { type FieldParamValues_maxFields, _decode_FieldParamValues_maxFields, _encode_FieldParamValues_maxFields } from "../CDS/FieldParamValues-maxFields.ta.mjs";
+import { type FieldParamValues_maxFieldElements, _decode_FieldParamValues_maxFieldElements, _encode_FieldParamValues_maxFieldElements } from "../CDS/FieldParamValues-maxFieldElements.ta.mjs";
+import { type FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside, _encode_FieldParamValues_accessOutside } from "../CDS/FieldParamValues-accessOutside.ta.mjs";
 
 
 /**

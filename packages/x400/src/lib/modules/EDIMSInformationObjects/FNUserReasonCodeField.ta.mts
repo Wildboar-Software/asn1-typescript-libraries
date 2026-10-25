@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FNUserBasicCodeField,
+    type FNUserBasicCodeField,
     _decode_FNUserBasicCodeField,
     _encode_FNUserBasicCodeField,
 } from '../EDIMSInformationObjects/FNUserBasicCodeField.ta.mjs';
 import {
-    FNUserDiagnosticField,
+    type FNUserDiagnosticField,
     _decode_FNUserDiagnosticField,
     _encode_FNUserDiagnosticField,
 } from '../EDIMSInformationObjects/FNUserDiagnosticField.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Identifier,
+  type Identifier,
   _decode_Identifier,
   _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';

@@ -3,12 +3,12 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GpLocationInfoList, _decode_GpLocationInfoList, _encode_GpLocationInfoList } from "../CSTA-call-control/GpLocationInfoList.ta.mjs";
+import { type GpLocationInfoList, _decode_GpLocationInfoList, _encode_GpLocationInfoList } from "../CSTA-call-control/GpLocationInfoList.ta.mjs";
 
 import { UsageRules, _decode_UsageRules, _encode_UsageRules } from "../CSTA-call-control/UsageRules.ta.mjs";
 

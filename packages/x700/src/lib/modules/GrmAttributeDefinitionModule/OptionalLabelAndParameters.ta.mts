@@ -17,7 +17,7 @@ import {
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';

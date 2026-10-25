@@ -2,7 +2,7 @@
 import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 import { rc2_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/rc2-cbc.va.mjs";
 import {
-    SMIMECapabilitiesParametersForRC2CBC,
+    type SMIMECapabilitiesParametersForRC2CBC,
     _decode_SMIMECapabilitiesParametersForRC2CBC,
     _encode_SMIMECapabilitiesParametersForRC2CBC,
 } from "../SecureMimeMessageV3dot1-2009/SMIMECapabilitiesParametersForRC2CBC.ta.mjs";

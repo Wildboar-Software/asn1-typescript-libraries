@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    ToTermSpecifier,
+    type ToTermSpecifier,
     _decode_ToTermSpecifier,
     _encode_ToTermSpecifier,
 } from '../ASN1DefinedTypesModule/ToTermSpecifier.ta.mjs';

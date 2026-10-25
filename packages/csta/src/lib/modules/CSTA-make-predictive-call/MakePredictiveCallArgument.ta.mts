@@ -4,8 +4,8 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -13,9 +13,9 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
 
 import { SignallingDetection, _decode_SignallingDetection, _encode_SignallingDetection } from "../CSTA-make-predictive-call/SignallingDetection.ta.mjs";
 
-import { DestinationDetection, _decode_DestinationDetection, _encode_DestinationDetection } from "../CSTA-make-predictive-call/DestinationDetection.ta.mjs";
+import { type DestinationDetection, _decode_DestinationDetection, _encode_DestinationDetection } from "../CSTA-make-predictive-call/DestinationDetection.ta.mjs";
 
-import { DefaultAction, _decode_DefaultAction, _encode_DefaultAction } from "../CSTA-make-predictive-call/DefaultAction.ta.mjs";
+import { type DefaultAction, _decode_DefaultAction, _encode_DefaultAction } from "../CSTA-make-predictive-call/DefaultAction.ta.mjs";
 import { _enum_for_DetectionAction } from "../CSTA-make-predictive-call/DetectionAction.ta.mjs";
 
 import {
@@ -27,23 +27,23 @@ import {
     _encode_AutoOriginate
 } from "../CSTA-call-control/AutoOriginate.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary MakePredictiveCallArgument

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TcVcid, _decode_TcVcid, _encode_TcVcid } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/TcVcid.ta.mjs";
+import { type TcVcid, _decode_TcVcid, _encode_TcVcid } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/TcVcid.ta.mjs";
 
 
 /**

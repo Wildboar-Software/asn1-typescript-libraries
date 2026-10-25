@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_dir } from "../UsefulDefinitions/ldap-dir.va.mjs";
 /**
  * @summary ldap_x509

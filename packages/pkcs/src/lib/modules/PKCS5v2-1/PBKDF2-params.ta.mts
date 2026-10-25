@@ -13,7 +13,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKCS5v2-1/AlgorithmIdentifier.ta.mjs";
 import {
-    PBKDF2_params_salt,
+    type PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
 } from "../PKCS5v2-1/PBKDF2-params-salt.ta.mjs";

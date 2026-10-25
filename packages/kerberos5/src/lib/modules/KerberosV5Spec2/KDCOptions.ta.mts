@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosFlags,
+  type KerberosFlags,
   _decode_KerberosFlags,
   _encode_KerberosFlags,
 } from '../KerberosV5Spec2/KerberosFlags.ta.mjs';

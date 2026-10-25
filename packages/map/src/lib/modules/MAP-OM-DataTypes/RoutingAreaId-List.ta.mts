@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_RAIdentity, _encode_RAIdentity, RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
+import { _decode_RAIdentity, _encode_RAIdentity, type RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
 
 
 /**

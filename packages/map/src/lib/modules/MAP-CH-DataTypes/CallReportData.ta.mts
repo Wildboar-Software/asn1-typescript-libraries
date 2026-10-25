@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallOutcome, _decode_CallOutcome, _encode_CallOutcome, _enum_for_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";
-import { MonitoringMode, _decode_MonitoringMode, _encode_MonitoringMode, _enum_for_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
+import { type CallOutcome, _decode_CallOutcome, _encode_CallOutcome, _enum_for_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";
+import { type MonitoringMode, _decode_MonitoringMode, _encode_MonitoringMode, _enum_for_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

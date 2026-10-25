@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MIMEPartIdentifier, _decode_MIMEPartIdentifier, _encode_MIMEPartIdentifier } from "../TS33128Payloads/MIMEPartIdentifier.ta.mjs";
+import { type MIMEPartIdentifier, _decode_MIMEPartIdentifier, _encode_MIMEPartIdentifier } from "../TS33128Payloads/MIMEPartIdentifier.ta.mjs";
 // export { MIMEPartIdentifier, _decode_MIMEPartIdentifier, _encode_MIMEPartIdentifier } from "../TS33128Payloads/MIMEPartIdentifier.ta.mjs";
 
 

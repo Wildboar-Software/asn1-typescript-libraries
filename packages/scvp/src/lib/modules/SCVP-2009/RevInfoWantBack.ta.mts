@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  RevocationInfos,
+  type RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
 } from '../SCVP-2009/RevocationInfos.ta.mjs';
 import {
-  CertBundle,
+  type CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';

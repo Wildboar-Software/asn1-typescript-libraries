@@ -8,7 +8,7 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
+import { type UserDataHeader, _decode_UserDataHeader, _encode_UserDataHeader } from "../Short-Message-Service-Operations-asn1-97/UserDataHeader.ta.mjs";
 import { ShortMessageText, _decode_ShortMessageText, _encode_ShortMessageText } from "../Short-Message-Service-Operations-asn1-97/ShortMessageText.ta.mjs";
 
 /**

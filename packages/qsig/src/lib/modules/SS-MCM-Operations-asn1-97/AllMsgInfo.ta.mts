@@ -4,7 +4,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM-Operations-asn1-97/MessageInfo.ta.mjs";
+import { type MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../SS-MCM-Operations-asn1-97/MessageInfo.ta.mjs";
 
 /**
  * @summary AllMsgInfo

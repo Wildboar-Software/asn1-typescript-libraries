@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "../PlatformCertificateProfile/CredentialType.ta.mjs";
+import { type CredentialType, _decode_CredentialType, _encode_CredentialType } from "../PlatformCertificateProfile/CredentialType.ta.mjs";
 /**
  * @summary TCGCredentialType
  * @description

@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
+import { type StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 
 

@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
-import { EntryInformation, _decode_EntryInformation, _encode_EntryInformation } from "../DFRAbstractService/EntryInformation.ta.mjs";
+import { type DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
+import { type EntryInformation, _decode_EntryInformation, _encode_EntryInformation } from "../DFRAbstractService/EntryInformation.ta.mjs";
 import { Warning, _decode_Warning, _encode_Warning } from "../DFRAbstractService/Warning.ta.mjs";
-import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+import { type TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 import { Quality_of_Service, _decode_Quality_of_Service, _encode_Quality_of_Service } from "../DOR-definition/Quality-of-Service.ta.mjs";
 import { ReferentStatus, _enum_for_ReferentStatus, _decode_ReferentStatus, _encode_ReferentStatus } from "../DFRAbstractService/ReferentStatus.ta.mjs";
 

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SupportedChoice,
+    type SupportedChoice,
     _decode_SupportedChoice,
     _encode_SupportedChoice,
 } from '../GrmAttributeDefinitionModule/SupportedChoice.ta.mjs';

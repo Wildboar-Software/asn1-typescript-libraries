@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { AccessRestrictionData, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
-import { Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type AccessRestrictionData, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
+import { type Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
 
 
 /**

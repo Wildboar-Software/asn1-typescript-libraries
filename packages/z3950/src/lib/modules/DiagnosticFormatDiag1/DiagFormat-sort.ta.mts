@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-2001/SortElement.ta.mjs";
-import { DiagFormat_sort_key, _decode_DiagFormat_sort_key, _encode_DiagFormat_sort_key } from "../DiagnosticFormatDiag1/DiagFormat-sort-key.ta.mjs";
-import { DiagFormat_sort_illegal, _decode_DiagFormat_sort_illegal, _encode_DiagFormat_sort_illegal } from "../DiagnosticFormatDiag1/DiagFormat-sort-illegal.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-2001/SortElement.ta.mjs";
+import { type DiagFormat_sort_key, _decode_DiagFormat_sort_key, _encode_DiagFormat_sort_key } from "../DiagnosticFormatDiag1/DiagFormat-sort-key.ta.mjs";
+import { type DiagFormat_sort_illegal, _decode_DiagFormat_sort_illegal, _encode_DiagFormat_sort_illegal } from "../DiagnosticFormatDiag1/DiagFormat-sort-illegal.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

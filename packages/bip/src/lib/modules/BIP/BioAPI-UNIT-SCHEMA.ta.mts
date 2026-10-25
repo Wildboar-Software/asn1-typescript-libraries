@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,38 +12,38 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_CATEGORY,
+  type BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
 } from '../BIP/BioAPI-CATEGORY.ta.mjs';
 import {
-  BioAPI_STRING,
+  type BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
 } from '../BIP/BioAPI-STRING.ta.mjs';
 import {
-  BioAPI_UNIT_EVENT_TYPE_MASK,
+  type BioAPI_UNIT_EVENT_TYPE_MASK,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  FADU_Identity,
+  type FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
 } from '../ISO8571-FTAM/FADU-Identity.ta.mjs';
 import {
-  FADU_Lock,
+  type FADU_Lock,
   _decode_FADU_Lock,
   _encode_FADU_Lock,
 } from '../ISO8571-FTAM/FADU-Lock.ta.mjs';

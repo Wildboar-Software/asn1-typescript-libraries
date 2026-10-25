@@ -16,7 +16,7 @@ import {
     _encode_G3FacsimileParameters,
 } from '../IPMSInformationObjects/G3FacsimileParameters.ta.mjs';
 import {
-    G3FacsimileData,
+    type G3FacsimileData,
     _decode_G3FacsimileData,
     _encode_G3FacsimileData,
 } from '../IPMSInformationObjects/G3FacsimileData.ta.mjs';

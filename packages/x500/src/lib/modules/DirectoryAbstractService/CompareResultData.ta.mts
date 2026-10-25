@@ -17,17 +17,17 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "@wildboar/x500/AttributeCertificateDefinitions";

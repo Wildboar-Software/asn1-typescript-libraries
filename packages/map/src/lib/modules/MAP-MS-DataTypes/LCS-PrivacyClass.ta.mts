@@ -5,14 +5,14 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_ExternalClientList, _decode_Ext_ExternalClientList, _encode_Ext_ExternalClientList } from "../MAP-MS-DataTypes/Ext-ExternalClientList.ta.mjs";
-import { ExternalClientList, _decode_ExternalClientList, _encode_ExternalClientList } from "../MAP-MS-DataTypes/ExternalClientList.ta.mjs";
-import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_NotificationToMSUser, _enum_for_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
-import { PLMNClientList, _decode_PLMNClientList, _encode_PLMNClientList } from "../MAP-MS-DataTypes/PLMNClientList.ta.mjs";
-import { ServiceTypeList, _decode_ServiceTypeList, _encode_ServiceTypeList } from "../MAP-MS-DataTypes/ServiceTypeList.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type Ext_ExternalClientList, _decode_Ext_ExternalClientList, _encode_Ext_ExternalClientList } from "../MAP-MS-DataTypes/Ext-ExternalClientList.ta.mjs";
+import { type ExternalClientList, _decode_ExternalClientList, _encode_ExternalClientList } from "../MAP-MS-DataTypes/ExternalClientList.ta.mjs";
+import { type NotificationToMSUser, _decode_NotificationToMSUser, _encode_NotificationToMSUser, _enum_for_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
+import { type PLMNClientList, _decode_PLMNClientList, _encode_PLMNClientList } from "../MAP-MS-DataTypes/PLMNClientList.ta.mjs";
+import { type ServiceTypeList, _decode_ServiceTypeList, _encode_ServiceTypeList } from "../MAP-MS-DataTypes/ServiceTypeList.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 
 
 /**

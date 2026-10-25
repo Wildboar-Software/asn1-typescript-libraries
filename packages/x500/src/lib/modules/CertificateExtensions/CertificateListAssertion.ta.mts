@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
@@ -16,22 +16,22 @@ import {
     _encode_AuthorityKeyIdentifier,
 } from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import {
-    CRLNumber,
+    type CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

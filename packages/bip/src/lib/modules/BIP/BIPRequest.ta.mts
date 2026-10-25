@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BIPRequest_params,
+  type BIPRequest_params,
   _decode_BIPRequest_params,
   _encode_BIPRequest_params,
 } from '../BIP/BIPRequest-params.ta.mjs';

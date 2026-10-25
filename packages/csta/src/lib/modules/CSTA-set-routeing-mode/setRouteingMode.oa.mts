@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetRouteingModeArgument, _decode_SetRouteingModeArgument, _encode_SetRouteingModeArgument } from "../CSTA-set-routeing-mode/SetRouteingModeArgument.ta.mjs";
 
-import { SetRouteingModeResult, _decode_SetRouteingModeResult, _encode_SetRouteingModeResult } from "../CSTA-set-routeing-mode/SetRouteingModeResult.ta.mjs";
+import { type SetRouteingModeResult, _decode_SetRouteingModeResult, _encode_SetRouteingModeResult } from "../CSTA-set-routeing-mode/SetRouteingModeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

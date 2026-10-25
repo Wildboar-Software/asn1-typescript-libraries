@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartSpecifiers,
+    type BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
 } from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.mjs';

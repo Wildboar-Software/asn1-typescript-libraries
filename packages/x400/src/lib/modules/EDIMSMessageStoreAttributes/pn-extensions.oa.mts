@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    PNExtensionsSubField,
+    type PNExtensionsSubField,
     _decode_PNExtensionsSubField,
     _encode_PNExtensionsSubField,
 } from '../EDIMSInformationObjects/PNExtensionsSubField.ta.mjs';

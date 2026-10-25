@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TestLabInformation, _decode_TestLabInformation, _encode_TestLabInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/TestLabInformation.ta.mjs";
 import { StandardDescription, _decode_StandardDescription, _encode_StandardDescription } from "../MachineReadableBiometricTestingAndReportingTestReport/StandardDescription.ta.mjs";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
 import { ExternalDocument, _decode_ExternalDocument, _encode_ExternalDocument } from "../MachineReadableBiometricTestingAndReportingTestReport/ExternalDocument.ta.mjs";
 
 

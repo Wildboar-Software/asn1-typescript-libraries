@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult, EuiccMemoryResetResponse_resetResult } from "../RSPDefinitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
+import { _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult, type EuiccMemoryResetResponse_resetResult } from "../RSPDefinitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
 
 
 /**

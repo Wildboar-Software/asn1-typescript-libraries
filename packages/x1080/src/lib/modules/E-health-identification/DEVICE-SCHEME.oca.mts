@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from '../E-health-identification/SchemeName.ta.mjs';
 import {
-    Supported_formats,
+    type Supported_formats,
     _decode_Supported_formats,
     _encode_Supported_formats,
 } from '../E-health-identification/Supported-formats.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import {
-    ContentCorrelator,
+    type ContentCorrelator,
     _decode_ContentCorrelator,
     _encode_ContentCorrelator,
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';

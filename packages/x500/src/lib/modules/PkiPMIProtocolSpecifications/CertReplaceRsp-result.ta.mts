@@ -7,7 +7,7 @@ import {
     _encode_CertReplaceErr,
 } from "../PkiPMIProtocolSpecifications/CertReplaceErr.ta.mjs";
 import {
-    CertReplaceOK,
+    type CertReplaceOK,
     _decode_CertReplaceOK,
     _encode_CertReplaceOK,
 } from "../PkiPMIProtocolSpecifications/CertReplaceOK.ta.mjs";

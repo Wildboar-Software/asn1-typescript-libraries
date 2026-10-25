@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  NonWrappingCounter,
+  type NonWrappingCounter,
   _decode_NonWrappingCounter,
   _encode_NonWrappingCounter,
 } from '../CommonMgt/NonWrappingCounter.ta.mjs';

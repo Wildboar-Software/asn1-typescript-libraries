@@ -8,11 +8,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
-import { SessionAliveTime, _decode_SessionAliveTime, _encode_SessionAliveTime } from "../IWLANUmtsHI2Operations/SessionAliveTime.ta.mjs";
+import { type SessionAliveTime, _decode_SessionAliveTime, _encode_SessionAliveTime } from "../IWLANUmtsHI2Operations/SessionAliveTime.ta.mjs";
 // export { SessionAliveTime, _decode_SessionAliveTime, _encode_SessionAliveTime } from "../IWLANUmtsHI2Operations/SessionAliveTime.ta.mjs";
 import { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../UmtsHI2Operations/GeographicalCoordinates.ta.mjs";
 // export { GeographicalCoordinates, _decode_GeographicalCoordinates, _encode_GeographicalCoordinates } from "../UmtsHI2Operations/GeographicalCoordinates.ta.mjs";
-import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
+import { type CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
 // export { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
 
 

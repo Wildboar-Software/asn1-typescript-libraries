@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EuiccMemoryResetResponse_resetResult, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
-import { EuiccMemoryResetResponse_resetEimResult, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
-import { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
+import { type EuiccMemoryResetResponse_resetResult, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
+import { type EuiccMemoryResetResponse_resetEimResult, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
+import { type EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
 
 
 /**

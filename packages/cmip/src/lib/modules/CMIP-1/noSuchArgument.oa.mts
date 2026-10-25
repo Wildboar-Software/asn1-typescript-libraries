@@ -17,7 +17,7 @@ import {
 } from '@wildboar/rose';
 import type { ERROR } from '@wildboar/rose';
 import {
-  NoSuchArgument,
+  type NoSuchArgument,
   _decode_NoSuchArgument,
   _encode_NoSuchArgument,
 } from '../CMIP-1/NoSuchArgument.ta.mjs';

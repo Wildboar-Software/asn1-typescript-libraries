@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DITcontext,
+    type DITcontext,
     _decode_DITcontext,
     _encode_DITcontext,
 } from "../HierarchicalOperationalBindings/DITcontext.ta.mjs";

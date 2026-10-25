@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,12 +11,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_CreateProgramInvocation_Request, _decode_CS_CreateProgramInvocation_Request, _encode_CS_CreateProgramInvocation_Request } from "../ISO-9506-MMS-1/CS-CreateProgramInvocation-Request.ta.mjs";
-import { CS_Start_Request, _decode_CS_Start_Request, _encode_CS_Start_Request } from "../ISO-9506-MMS-1/CS-Start-Request.ta.mjs";
-import { CS_Resume_Request, _decode_CS_Resume_Request, _encode_CS_Resume_Request } from "../ISO-9506-MMS-1/CS-Resume-Request.ta.mjs";
-import { CS_DefineEventCondition_Request, _decode_CS_DefineEventCondition_Request, _encode_CS_DefineEventCondition_Request } from "../ISO-9506-MMS-1/CS-DefineEventCondition-Request.ta.mjs";
+import { type CS_CreateProgramInvocation_Request, _decode_CS_CreateProgramInvocation_Request, _encode_CS_CreateProgramInvocation_Request } from "../ISO-9506-MMS-1/CS-CreateProgramInvocation-Request.ta.mjs";
+import { type CS_Start_Request, _decode_CS_Start_Request, _encode_CS_Start_Request } from "../ISO-9506-MMS-1/CS-Start-Request.ta.mjs";
+import { type CS_Resume_Request, _decode_CS_Resume_Request, _encode_CS_Resume_Request } from "../ISO-9506-MMS-1/CS-Resume-Request.ta.mjs";
+import { type CS_DefineEventCondition_Request, _decode_CS_DefineEventCondition_Request, _encode_CS_DefineEventCondition_Request } from "../ISO-9506-MMS-1/CS-DefineEventCondition-Request.ta.mjs";
 import { CS_AlterEventConditionMonitoring_Request, _decode_CS_AlterEventConditionMonitoring_Request, _encode_CS_AlterEventConditionMonitoring_Request } from "../ISO-9506-MMS-1/CS-AlterEventConditionMonitoring-Request.ta.mjs";
-import { CS_DefineEventEnrollment_Request, _decode_CS_DefineEventEnrollment_Request, _encode_CS_DefineEventEnrollment_Request } from "../ISO-9506-MMS-1/CS-DefineEventEnrollment-Request.ta.mjs";
+import { type CS_DefineEventEnrollment_Request, _decode_CS_DefineEventEnrollment_Request, _encode_CS_DefineEventEnrollment_Request } from "../ISO-9506-MMS-1/CS-DefineEventEnrollment-Request.ta.mjs";
 import { CS_AlterEventEnrollment_Request, _decode_CS_AlterEventEnrollment_Request, _encode_CS_AlterEventEnrollment_Request } from "../ISO-9506-MMS-1/CS-AlterEventEnrollment-Request.ta.mjs";
 
 

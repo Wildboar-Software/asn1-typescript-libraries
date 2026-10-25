@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricCertificate, _decode_BiometricCertificate, _encode_BiometricCertificate } from "../TAI/BiometricCertificate.ta.mjs";
+import { type BiometricCertificate, _decode_BiometricCertificate, _encode_BiometricCertificate } from "../TAI/BiometricCertificate.ta.mjs";
 
 
 

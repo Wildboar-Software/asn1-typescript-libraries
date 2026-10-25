@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CoordinateShadowUpdateArgument, _decode_CoordinateShadowUpdateArgument, _encode_CoordinateShadowUpdateArgument } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.mjs";
+import { type CoordinateShadowUpdateArgument, _decode_CoordinateShadowUpdateArgument, _encode_CoordinateShadowUpdateArgument } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.mjs";
 // export { CoordinateShadowUpdateArgument, _decode_CoordinateShadowUpdateArgument, _encode_CoordinateShadowUpdateArgument } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.mjs";
 
 

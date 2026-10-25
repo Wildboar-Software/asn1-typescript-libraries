@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128IdentityAssociation/PLMNID.ta.mjs";
+import { type PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128IdentityAssociation/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128IdentityAssociation/PLMNID.ta.mjs";
-import { NCI, _decode_NCI, _encode_NCI } from "../TS33128IdentityAssociation/NCI.ta.mjs";
+import { type NCI, _decode_NCI, _encode_NCI } from "../TS33128IdentityAssociation/NCI.ta.mjs";
 // export { NCI, _decode_NCI, _encode_NCI } from "../TS33128IdentityAssociation/NCI.ta.mjs";
 
 

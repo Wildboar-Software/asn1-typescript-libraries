@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { threeGPPSUBDomainId } from "../CSvoice-HI3-IP/threeGPPSUBDomainId.va.mjs";
 // export { threeGPPSUBDomainId } from "../CSvoice-HI3-IP/threeGPPSUBDomainId.va.mjs";

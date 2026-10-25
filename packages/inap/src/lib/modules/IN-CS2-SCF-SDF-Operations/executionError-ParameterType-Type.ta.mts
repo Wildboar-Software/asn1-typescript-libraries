@@ -6,12 +6,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExecutionProblem, _decode_ExecutionProblem, _encode_ExecutionProblem } from "../IN-CS2-SCF-SDF-Operations/ExecutionProblem.ta.mjs";
+import { type ExecutionProblem, _decode_ExecutionProblem, _encode_ExecutionProblem } from "../IN-CS2-SCF-SDF-Operations/ExecutionProblem.ta.mjs";
 // export { ExecutionProblem, ExecutionProblem_missingInputValues /* IMPORTED_LONG_NAMED_INTEGER */, missingInputValues /* IMPORTED_SHORT_NAMED_INTEGER */, ExecutionProblem_executionFailure /* IMPORTED_LONG_NAMED_INTEGER */, executionFailure /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_ExecutionProblem, _encode_ExecutionProblem } from "../IN-CS2-SCF-SDF-Operations/ExecutionProblem.ta.mjs";
 // export { CommonResults, _decode_CommonResults, _encode_CommonResults } from "../DirectoryAbstractService/CommonResults.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 // export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
 // export { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";

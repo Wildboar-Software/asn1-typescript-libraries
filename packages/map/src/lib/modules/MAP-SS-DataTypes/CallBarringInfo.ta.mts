@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { CallBarringFeatureList, _decode_CallBarringFeatureList, _encode_CallBarringFeatureList } from "../MAP-SS-DataTypes/CallBarringFeatureList.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type CallBarringFeatureList, _decode_CallBarringFeatureList, _encode_CallBarringFeatureList } from "../MAP-SS-DataTypes/CallBarringFeatureList.ta.mjs";
 
 
 /**

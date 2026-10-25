@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { IN_UpdateShadowArgument, _decode_IN_UpdateShadowArgument, _encode_IN_UpdateShadowArgument } from "../IN-CS3-SDF-SDF-Operations/IN-UpdateShadowArgument.ta.mjs";
+import { type IN_UpdateShadowArgument, _decode_IN_UpdateShadowArgument, _encode_IN_UpdateShadowArgument } from "../IN-CS3-SDF-SDF-Operations/IN-UpdateShadowArgument.ta.mjs";
 // export { IN_UpdateShadowArgument, _decode_IN_UpdateShadowArgument, _encode_IN_UpdateShadowArgument } from "../IN-CS3-SDF-SDF-Operations/IN-UpdateShadowArgument.ta.mjs";
-import { IN_UpdateShadowResult, _decode_IN_UpdateShadowResult, _encode_IN_UpdateShadowResult } from "../IN-CS3-SDF-SDF-Operations/IN-UpdateShadowResult.ta.mjs";
+import { type IN_UpdateShadowResult, _decode_IN_UpdateShadowResult, _encode_IN_UpdateShadowResult } from "../IN-CS3-SDF-SDF-Operations/IN-UpdateShadowResult.ta.mjs";
 // export { IN_UpdateShadowResult, _decode_IN_UpdateShadowResult, _encode_IN_UpdateShadowResult } from "../IN-CS3-SDF-SDF-Operations/IN-UpdateShadowResult.ta.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
 // export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";

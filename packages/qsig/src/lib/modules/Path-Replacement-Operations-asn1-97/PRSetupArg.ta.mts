@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-import { PRSetupArg_extension, _decode_PRSetupArg_extension, _encode_PRSetupArg_extension } from "../Path-Replacement-Operations-asn1-97/PRSetupArg-extension.ta.mjs";
+import { type CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
+import { type PRSetupArg_extension, _decode_PRSetupArg_extension, _encode_PRSetupArg_extension } from "../Path-Replacement-Operations-asn1-97/PRSetupArg-extension.ta.mjs";
 
 /**
  * @summary PRSetupArg

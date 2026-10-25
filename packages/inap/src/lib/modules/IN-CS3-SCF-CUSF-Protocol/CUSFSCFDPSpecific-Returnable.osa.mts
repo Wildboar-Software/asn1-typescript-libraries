@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { activationReceivedAndAuthorized } from "../IN-CS3-SCF-CUSF-Operations/activationReceivedAndAuthorized.oa.mjs";
 // export { activationReceivedAndAuthorized } from "../IN-CS3-SCF-CUSF-Operations/activationReceivedAndAuthorized.oa.mjs";

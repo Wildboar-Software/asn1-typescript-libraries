@@ -2,12 +2,12 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthenticationType,
+    type AuthenticationType,
     _decode_AuthenticationType,
     _encode_AuthenticationType,
 } from "../PKCS-15/AuthenticationType.ta.mjs";
 import {
-    PathOrObjects,
+    type PathOrObjects,
     _get_decoder_for_PathOrObjects,
     _get_encoder_for_PathOrObjects,
 } from "../PKCS-15/PathOrObjects.ta.mjs";

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    CorrelatedDeliveredIPNs,
+    type CorrelatedDeliveredIPNs,
     _decode_CorrelatedDeliveredIPNs,
     _encode_CorrelatedDeliveredIPNs,
 } from '../IPMSMessageStoreAttributes/CorrelatedDeliveredIPNs.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AdditionalBodyParts_Item,
+    type AdditionalBodyParts_Item,
     _decode_AdditionalBodyParts_Item,
     _encode_AdditionalBodyParts_Item,
 } from '../EDIMSInformationObjects/AdditionalBodyParts-Item.ta.mjs';

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SupplReceiptInfoField,
+    type SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
 } from '../IPMSInformationObjects/SupplReceiptInfoField.ta.mjs';

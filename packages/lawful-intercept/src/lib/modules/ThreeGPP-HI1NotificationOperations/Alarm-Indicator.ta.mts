@@ -10,9 +10,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { ThreeGPP_National_HI1_ASN1parameters, _decode_ThreeGPP_National_HI1_ASN1parameters, _encode_ThreeGPP_National_HI1_ASN1parameters } from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-National-HI1-ASN1parameters.ta.mjs";
 // export { ThreeGPP_National_HI1_ASN1parameters, _decode_ThreeGPP_National_HI1_ASN1parameters, _encode_ThreeGPP_National_HI1_ASN1parameters } from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-National-HI1-ASN1parameters.ta.mjs";

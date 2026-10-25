@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TaskPackageRecordStructure_recordOrSurDiag, _decode_TaskPackageRecordStructure_recordOrSurDiag, _encode_TaskPackageRecordStructure_recordOrSurDiag } from "../ESFormat-Update/TaskPackageRecordStructure-recordOrSurDiag.ta.mjs";
+import { type TaskPackageRecordStructure_recordOrSurDiag, _decode_TaskPackageRecordStructure_recordOrSurDiag, _encode_TaskPackageRecordStructure_recordOrSurDiag } from "../ESFormat-Update/TaskPackageRecordStructure-recordOrSurDiag.ta.mjs";
 import { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } from "../ESFormat-Update/CorrelationInfo.ta.mjs";
-import { TaskPackageRecordStructure_recordStatus, _decode_TaskPackageRecordStructure_recordStatus, _encode_TaskPackageRecordStructure_recordStatus } from "../ESFormat-Update/TaskPackageRecordStructure-recordStatus.ta.mjs";
+import { type TaskPackageRecordStructure_recordStatus, _decode_TaskPackageRecordStructure_recordStatus, _encode_TaskPackageRecordStructure_recordStatus } from "../ESFormat-Update/TaskPackageRecordStructure-recordStatus.ta.mjs";
 
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MessageID,
+  type MessageID,
   _decode_MessageID,
   _encode_MessageID,
 } from '../Lightweight-Directory-Access-Protocol-V3/MessageID.ta.mjs';
 import {
-  LDAPMessage_protocolOp,
+  type LDAPMessage_protocolOp,
   _decode_LDAPMessage_protocolOp,
   _encode_LDAPMessage_protocolOp,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPMessage-protocolOp.ta.mjs';
 import {
-  Controls,
+  type Controls,
   _decode_Controls,
   _encode_Controls,
 } from '../Lightweight-Directory-Access-Protocol-V3/Controls.ta.mjs';

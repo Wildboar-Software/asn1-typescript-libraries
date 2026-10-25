@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessMode, _decode_AccessMode, _encode_AccessMode } from "../CryptographicInformationFramework/AccessMode.ta.mjs";
-import { SecurityCondition, _decode_SecurityCondition, _encode_SecurityCondition } from "../CryptographicInformationFramework/SecurityCondition.ta.mjs";
-import { CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
-import { LifeCycleStatus, _enum_for_LifeCycleStatus, _decode_LifeCycleStatus, _encode_LifeCycleStatus } from "../CryptographicInformationFramework/LifeCycleStatus.ta.mjs";
+import { type AccessMode, _decode_AccessMode, _encode_AccessMode } from "../CryptographicInformationFramework/AccessMode.ta.mjs";
+import { type SecurityCondition, _decode_SecurityCondition, _encode_SecurityCondition } from "../CryptographicInformationFramework/SecurityCondition.ta.mjs";
+import { type CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
+import { type LifeCycleStatus, _enum_for_LifeCycleStatus, _decode_LifeCycleStatus, _encode_LifeCycleStatus } from "../CryptographicInformationFramework/LifeCycleStatus.ta.mjs";
 import { RangeOfDate, _decode_RangeOfDate, _encode_RangeOfDate } from "../CryptographicInformationFramework/RangeOfDate.ta.mjs";
 
 

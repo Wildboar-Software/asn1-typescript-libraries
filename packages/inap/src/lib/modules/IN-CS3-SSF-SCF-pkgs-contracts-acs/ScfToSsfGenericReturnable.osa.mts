@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { activateServiceFiltering } from "../IN-CS3-SSF-SCF-ops-args/activateServiceFiltering.oa.mjs";
 // export { activateServiceFiltering } from "../IN-CS3-SSF-SCF-ops-args/activateServiceFiltering.oa.mjs";

@@ -6,7 +6,7 @@ import {
 import { id_at_pseudonym } from "../SelectedAttributeTypes/id-at-pseudonym.va.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedUTSIList, _decode_RequestedUTSIList, _encode_RequestedUTSIList } from "../IN-SSF-SCF-datatypes/RequestedUTSIList.ta.mjs";
+import { type RequestedUTSIList, _decode_RequestedUTSIList, _encode_RequestedUTSIList } from "../IN-SSF-SCF-datatypes/RequestedUTSIList.ta.mjs";
 // export { RequestedUTSIList, _decode_RequestedUTSIList, _encode_RequestedUTSIList } from "../IN-SSF-SCF-datatypes/RequestedUTSIList.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
 import { leg1 } from "../IN-SSF-SCF-datatypes/leg1.va.mjs";
 // export { leg1 } from "../IN-SSF-SCF-datatypes/leg1.va.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,18 +12,18 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceError_errorClass_vmd_state, _decode_ServiceError_errorClass_vmd_state, _encode_ServiceError_errorClass_vmd_state } from "../ISO-9506-MMS-1/ServiceError-errorClass-vmd-state.ta.mjs";
-import { ServiceError_errorClass_application_reference, _decode_ServiceError_errorClass_application_reference, _encode_ServiceError_errorClass_application_reference } from "../ISO-9506-MMS-1/ServiceError-errorClass-application-reference.ta.mjs";
-import { ServiceError_errorClass_definition, _decode_ServiceError_errorClass_definition, _encode_ServiceError_errorClass_definition } from "../ISO-9506-MMS-1/ServiceError-errorClass-definition.ta.mjs";
-import { ServiceError_errorClass_resource, _decode_ServiceError_errorClass_resource, _encode_ServiceError_errorClass_resource } from "../ISO-9506-MMS-1/ServiceError-errorClass-resource.ta.mjs";
-import { ServiceError_errorClass_service, _decode_ServiceError_errorClass_service, _encode_ServiceError_errorClass_service } from "../ISO-9506-MMS-1/ServiceError-errorClass-service.ta.mjs";
-import { ServiceError_errorClass_service_preempt, _decode_ServiceError_errorClass_service_preempt, _encode_ServiceError_errorClass_service_preempt } from "../ISO-9506-MMS-1/ServiceError-errorClass-service-preempt.ta.mjs";
-import { ServiceError_errorClass_time_resolution, _decode_ServiceError_errorClass_time_resolution, _encode_ServiceError_errorClass_time_resolution } from "../ISO-9506-MMS-1/ServiceError-errorClass-time-resolution.ta.mjs";
-import { ServiceError_errorClass_access, _decode_ServiceError_errorClass_access, _encode_ServiceError_errorClass_access } from "../ISO-9506-MMS-1/ServiceError-errorClass-access.ta.mjs";
-import { ServiceError_errorClass_initiate, _decode_ServiceError_errorClass_initiate, _encode_ServiceError_errorClass_initiate } from "../ISO-9506-MMS-1/ServiceError-errorClass-initiate.ta.mjs";
-import { ServiceError_errorClass_conclude, _decode_ServiceError_errorClass_conclude, _encode_ServiceError_errorClass_conclude } from "../ISO-9506-MMS-1/ServiceError-errorClass-conclude.ta.mjs";
-import { ServiceError_errorClass_cancel, _decode_ServiceError_errorClass_cancel, _encode_ServiceError_errorClass_cancel } from "../ISO-9506-MMS-1/ServiceError-errorClass-cancel.ta.mjs";
-import { ServiceError_errorClass_file, _decode_ServiceError_errorClass_file, _encode_ServiceError_errorClass_file } from "../ISO-9506-MMS-1/ServiceError-errorClass-file.ta.mjs";
+import { type ServiceError_errorClass_vmd_state, _decode_ServiceError_errorClass_vmd_state, _encode_ServiceError_errorClass_vmd_state } from "../ISO-9506-MMS-1/ServiceError-errorClass-vmd-state.ta.mjs";
+import { type ServiceError_errorClass_application_reference, _decode_ServiceError_errorClass_application_reference, _encode_ServiceError_errorClass_application_reference } from "../ISO-9506-MMS-1/ServiceError-errorClass-application-reference.ta.mjs";
+import { type ServiceError_errorClass_definition, _decode_ServiceError_errorClass_definition, _encode_ServiceError_errorClass_definition } from "../ISO-9506-MMS-1/ServiceError-errorClass-definition.ta.mjs";
+import { type ServiceError_errorClass_resource, _decode_ServiceError_errorClass_resource, _encode_ServiceError_errorClass_resource } from "../ISO-9506-MMS-1/ServiceError-errorClass-resource.ta.mjs";
+import { type ServiceError_errorClass_service, _decode_ServiceError_errorClass_service, _encode_ServiceError_errorClass_service } from "../ISO-9506-MMS-1/ServiceError-errorClass-service.ta.mjs";
+import { type ServiceError_errorClass_service_preempt, _decode_ServiceError_errorClass_service_preempt, _encode_ServiceError_errorClass_service_preempt } from "../ISO-9506-MMS-1/ServiceError-errorClass-service-preempt.ta.mjs";
+import { type ServiceError_errorClass_time_resolution, _decode_ServiceError_errorClass_time_resolution, _encode_ServiceError_errorClass_time_resolution } from "../ISO-9506-MMS-1/ServiceError-errorClass-time-resolution.ta.mjs";
+import { type ServiceError_errorClass_access, _decode_ServiceError_errorClass_access, _encode_ServiceError_errorClass_access } from "../ISO-9506-MMS-1/ServiceError-errorClass-access.ta.mjs";
+import { type ServiceError_errorClass_initiate, _decode_ServiceError_errorClass_initiate, _encode_ServiceError_errorClass_initiate } from "../ISO-9506-MMS-1/ServiceError-errorClass-initiate.ta.mjs";
+import { type ServiceError_errorClass_conclude, _decode_ServiceError_errorClass_conclude, _encode_ServiceError_errorClass_conclude } from "../ISO-9506-MMS-1/ServiceError-errorClass-conclude.ta.mjs";
+import { type ServiceError_errorClass_cancel, _decode_ServiceError_errorClass_cancel, _encode_ServiceError_errorClass_cancel } from "../ISO-9506-MMS-1/ServiceError-errorClass-cancel.ta.mjs";
+import { type ServiceError_errorClass_file, _decode_ServiceError_errorClass_file, _encode_ServiceError_errorClass_file } from "../ISO-9506-MMS-1/ServiceError-errorClass-file.ta.mjs";
 
 
 /**

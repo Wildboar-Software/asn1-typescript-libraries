@@ -5,14 +5,14 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
+import { type ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
 
-import { MonitorList, _decode_MonitorList, _encode_MonitorList } from "../CSTA-status-reporting/MonitorList.ta.mjs";
+import { type MonitorList, _decode_MonitorList, _encode_MonitorList } from "../CSTA-status-reporting/MonitorList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

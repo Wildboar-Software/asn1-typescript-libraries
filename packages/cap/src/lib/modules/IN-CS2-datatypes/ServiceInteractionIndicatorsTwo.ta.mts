@@ -15,7 +15,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { ForwardServiceInteractionInd, _decode_ForwardServiceInteractionInd, _encode_ForwardServiceInteractionInd } from "../IN-CS2-datatypes/ForwardServiceInteractionInd.ta.mjs";
 import { BackwardServiceInteractionInd, _decode_BackwardServiceInteractionInd, _encode_BackwardServiceInteractionInd } from "../IN-CS2-datatypes/BackwardServiceInteractionInd.ta.mjs";
 import { BothwayThroughConnectionInd, _enum_for_BothwayThroughConnectionInd, _decode_BothwayThroughConnectionInd, _encode_BothwayThroughConnectionInd } from "../IN-CS2-datatypes/BothwayThroughConnectionInd.ta.mjs";
-import { SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-CS2-datatypes/SuspendTimer.ta.mjs";
+import { type SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-CS2-datatypes/SuspendTimer.ta.mjs";
 import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _decode_ConnectedNumberTreatmentInd, _encode_ConnectedNumberTreatmentInd } from "../IN-CS2-datatypes/ConnectedNumberTreatmentInd.ta.mjs";
 
 

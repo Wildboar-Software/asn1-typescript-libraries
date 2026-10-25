@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../Core-INAP-CS1-DataTypes/TimerID.ta.mjs";
-import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../Core-INAP-CS1-DataTypes/TimerValue.ta.mjs";
+import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../Core-INAP-CS1-DataTypes/TimerValue.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    G3FacsimileNonBasicParameters,
+    type G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta.mjs";
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";

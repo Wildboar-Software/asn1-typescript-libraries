@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntityType, _decode_EntityType, _encode_EntityType, _enum_for_EntityType } from "../Network-Facility-Extension/EntityType.ta.mjs";
-import { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension/AddressInformation.ta.mjs";
+import { type AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension/AddressInformation.ta.mjs";
 
 
 /**

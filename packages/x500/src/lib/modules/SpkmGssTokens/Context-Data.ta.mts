@@ -7,27 +7,27 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ChannelId,
+    type ChannelId,
     _decode_ChannelId,
     _encode_ChannelId,
 } from "../SpkmGssTokens/ChannelId.ta.mjs";
 import {
-    Conf_Algs,
+    type Conf_Algs,
     _decode_Conf_Algs,
     _encode_Conf_Algs,
 } from "../SpkmGssTokens/Conf-Algs.ta.mjs";
 import {
-    Intg_Algs,
+    type Intg_Algs,
     _decode_Intg_Algs,
     _encode_Intg_Algs,
 } from "../SpkmGssTokens/Intg-Algs.ta.mjs";
 import {
-    Options,
+    type Options,
     _decode_Options,
     _encode_Options,
 } from "../SpkmGssTokens/Options.ta.mjs";
 import {
-    OWF_Algs,
+    type OWF_Algs,
     _decode_OWF_Algs,
     _encode_OWF_Algs,
 } from "../SpkmGssTokens/OWF-Algs.ta.mjs";

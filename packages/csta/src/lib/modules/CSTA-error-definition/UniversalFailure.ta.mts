@@ -24,7 +24,7 @@ import { PerformanceManagementErrors, _decode_PerformanceManagementErrors, _enco
 
 import { PrivateDataInfoErrors, _decode_PrivateDataInfoErrors, _encode_PrivateDataInfoErrors } from "../CSTA-error-definition/PrivateDataInfoErrors.ta.mjs";
 
-import { UnspecifiedErrors, _decode_UnspecifiedErrors, _encode_UnspecifiedErrors } from "../CSTA-error-definition/UnspecifiedErrors.ta.mjs";
+import { type UnspecifiedErrors, _decode_UnspecifiedErrors, _encode_UnspecifiedErrors } from "../CSTA-error-definition/UnspecifiedErrors.ta.mjs";
 
 
 

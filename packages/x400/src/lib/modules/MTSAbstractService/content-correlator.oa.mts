@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ContentCorrelator,
+    type ContentCorrelator,
     _decode_ContentCorrelator,
     _encode_ContentCorrelator,
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';

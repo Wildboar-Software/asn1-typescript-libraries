@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    StoragePeriod,
+    type StoragePeriod,
     _decode_StoragePeriod,
     _encode_StoragePeriod,
 } from '../MSGeneralAttributeTypes/StoragePeriod.ta.mjs';

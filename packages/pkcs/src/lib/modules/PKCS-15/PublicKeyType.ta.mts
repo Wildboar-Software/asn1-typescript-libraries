@@ -22,7 +22,7 @@ import {
     _encode_PublicKEAKeyAttributes,
 } from "../PKCS-15/PublicKEAKeyAttributes.ta.mjs";
 import {
-    PublicKeyObject,
+    type PublicKeyObject,
     _get_decoder_for_PublicKeyObject,
     _get_encoder_for_PublicKeyObject,
 } from "../PKCS-15/PublicKeyObject.ta.mjs";

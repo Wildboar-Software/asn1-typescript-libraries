@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";

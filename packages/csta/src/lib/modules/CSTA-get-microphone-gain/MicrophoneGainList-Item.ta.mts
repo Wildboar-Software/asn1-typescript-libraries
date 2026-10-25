@@ -3,14 +3,14 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
-import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
+import { type MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
 
 
 

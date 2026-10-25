@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterValues_terminationLength_eventId, _decode_ParameterValues_terminationLength_eventId, _encode_ParameterValues_terminationLength_eventId } from "../DEV/ParameterValues-terminationLength-eventId.ta.mjs";
+import { type ParameterValues_terminationLength_eventId, _decode_ParameterValues_terminationLength_eventId, _encode_ParameterValues_terminationLength_eventId } from "../DEV/ParameterValues-terminationLength-eventId.ta.mjs";
 
 
 /**

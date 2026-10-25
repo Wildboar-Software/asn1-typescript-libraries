@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IndicatedTests,
+    type IndicatedTests,
     _decode_IndicatedTests,
     _encode_IndicatedTests,
 } from '../Test-ASN1Module/IndicatedTests.ta.mjs';

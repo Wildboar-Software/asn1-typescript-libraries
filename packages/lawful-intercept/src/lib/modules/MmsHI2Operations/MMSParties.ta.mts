@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Addresses, _decode_Addresses, _encode_Addresses } from "../MmsHI2Operations/Addresses.ta.mjs";
+import { type Addresses, _decode_Addresses, _encode_Addresses } from "../MmsHI2Operations/Addresses.ta.mjs";
 // export { Addresses, _decode_Addresses, _encode_Addresses } from "../MmsHI2Operations/Addresses.ta.mjs";
-import { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
+import { type From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
 // export { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
 
 

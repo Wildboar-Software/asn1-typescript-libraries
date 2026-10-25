@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentEncryptionAlgorithmIdentifier,
+    type ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    ENCRYPTED,
+    type ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../PKCS7/ENCRYPTED.ta.mjs";

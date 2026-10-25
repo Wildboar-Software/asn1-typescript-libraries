@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ACSE_apdu, _decode_ACSE_apdu, _encode_ACSE_apdu } from "../ACSE-1/ACSE-apdu.ta.mjs";
+import { type ACSE_apdu, _decode_ACSE_apdu, _encode_ACSE_apdu } from "../ACSE-1/ACSE-apdu.ta.mjs";
 
 /**
  * @summary AcseAPDU

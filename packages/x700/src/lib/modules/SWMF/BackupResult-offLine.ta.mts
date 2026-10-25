@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BackupResult_offLine_result,
+    type BackupResult_offLine_result,
     _decode_BackupResult_offLine_result,
     _encode_BackupResult_offLine_result,
 } from '../SWMF/BackupResult-offLine-result.ta.mjs';

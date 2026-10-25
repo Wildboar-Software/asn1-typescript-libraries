@@ -6,19 +6,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASPsequence,
+    type CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
 } from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
 import {
-    CASPversion,
+    type CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_CASPversion,
     _encode_CASPversion,
     _enum_for_CASPversion,
 } from "../PkiPMIProtocolSpecifications/CASPversion.ta.mjs";
 import {
-    CertUnsubscribeRsp_result,
+    type CertUnsubscribeRsp_result,
     _decode_CertUnsubscribeRsp_result,
     _encode_CertUnsubscribeRsp_result,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeRsp-result.ta.mjs";

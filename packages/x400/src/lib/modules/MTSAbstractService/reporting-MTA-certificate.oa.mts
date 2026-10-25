@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ReportingMTACertificate,
+    type ReportingMTACertificate,
     _decode_ReportingMTACertificate,
     _encode_ReportingMTACertificate,
 } from '../MTSAbstractService/ReportingMTACertificate.ta.mjs';

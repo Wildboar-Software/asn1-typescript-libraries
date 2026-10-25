@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 
 

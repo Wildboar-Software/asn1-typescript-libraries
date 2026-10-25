@@ -17,7 +17,7 @@ import {
     _encode_delete_error_ParameterType_problems_Item,
 } from '../MSAbstractService/delete-error-ParameterType-problems-Item.ta.mjs';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';

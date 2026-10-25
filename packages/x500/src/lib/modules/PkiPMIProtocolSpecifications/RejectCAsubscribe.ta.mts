@@ -6,18 +6,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASP_error,
+    type CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
 } from "../PkiPMIProtocolSpecifications/CASP-error.ta.mjs";
 import {
-    CASPsequence,
+    type CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
 } from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
 import {
-    CASPversion,
+    type CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_CASPversion,
     _encode_CASPversion,

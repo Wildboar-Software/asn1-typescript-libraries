@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ModifyRights_Item_item,
+    type ModifyRights_Item_item,
     _decode_ModifyRights_Item_item,
     _encode_ModifyRights_Item_item,
 } from "../DirectoryAbstractService/ModifyRights-Item-item.ta.mjs";
 import {
-    ModifyRights_Item_permission,
+    type ModifyRights_Item_permission,
     _decode_ModifyRights_Item_permission,
     _encode_ModifyRights_Item_permission,
 } from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.mjs";

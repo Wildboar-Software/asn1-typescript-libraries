@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    CharacteristicInformation,
+    type CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';

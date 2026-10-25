@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_subcarrierToBitRateRatio
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { SubcarrierDivisor, _decode_SubcarrierDivisor, _encode_SubcarrierDivisor } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/SubcarrierDivisor.ta.mjs";
+import { type SubcarrierDivisor, _decode_SubcarrierDivisor, _encode_SubcarrierDivisor } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/SubcarrierDivisor.ta.mjs";
 
 
 

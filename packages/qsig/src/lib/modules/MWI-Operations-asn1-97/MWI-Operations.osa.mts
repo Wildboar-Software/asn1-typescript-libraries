@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { mWIActivate } from "../MWI-Operations-asn1-97/mWIActivate.oa.mjs";
 import { mWIDeactivate } from "../MWI-Operations-asn1-97/mWIDeactivate.oa.mjs";
 import { mWIInterrogate } from "../MWI-Operations-asn1-97/mWIInterrogate.oa.mjs";

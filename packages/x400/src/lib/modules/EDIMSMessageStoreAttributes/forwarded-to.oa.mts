@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ForwardedTo,
+    type ForwardedTo,
     _decode_ForwardedTo,
     _encode_ForwardedTo,
 } from '../EDIMSInformationObjects/ForwardedTo.ta.mjs';

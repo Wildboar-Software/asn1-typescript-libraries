@@ -2,12 +2,12 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_ReasonInfo,
 } from "../CertificateExtensions/ReasonInfo.ta.mjs";
 import {
-    RevokedCertificateGroup,
+    type RevokedCertificateGroup,
     _decode_RevokedCertificateGroup,
     _encode_RevokedCertificateGroup,
 } from "../CertificateExtensions/RevokedCertificateGroup.ta.mjs";

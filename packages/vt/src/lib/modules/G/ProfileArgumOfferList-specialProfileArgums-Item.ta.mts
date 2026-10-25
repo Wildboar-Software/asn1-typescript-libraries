@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues.ta.mjs";
+import { type ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues.ta.mjs";
 
 
 /**

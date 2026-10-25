@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ExpiryTimeField,
+    type ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
 } from '../EDIMSInformationObjects/ExpiryTimeField.ta.mjs';

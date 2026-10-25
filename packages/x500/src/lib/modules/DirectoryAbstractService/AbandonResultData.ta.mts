@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
@@ -22,7 +22,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

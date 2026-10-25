@@ -7,9 +7,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogotypeImageType, _decode_LogotypeImageType, _encode_LogotypeImageType, color /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../LogotypeCertExtn/LogotypeImageType.ta.mjs";
+import { type LogotypeImageType, _decode_LogotypeImageType, _encode_LogotypeImageType, color /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../LogotypeCertExtn/LogotypeImageType.ta.mjs";
 // export { LogotypeImageType, LogotypeImageType_grayScale /* IMPORTED_LONG_NAMED_INTEGER */, grayScale /* IMPORTED_SHORT_NAMED_INTEGER */, LogotypeImageType_color /* IMPORTED_LONG_NAMED_INTEGER */, color /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LogotypeImageType, _encode_LogotypeImageType } from "../LogotypeCertExtn/LogotypeImageType.ta.mjs";
-import { LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_LogotypeImageResolution } from "../LogotypeCertExtn/LogotypeImageResolution.ta.mjs";
+import { type LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_LogotypeImageResolution } from "../LogotypeCertExtn/LogotypeImageResolution.ta.mjs";
 // export { LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_LogotypeImageResolution } from "../LogotypeCertExtn/LogotypeImageResolution.ta.mjs";
 
 

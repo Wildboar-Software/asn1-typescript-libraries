@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../CryptographicMessageSyntax-2010/CertificateSet.ta.mjs";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
@@ -26,12 +26,12 @@ import {
     _encode_EncapsulatedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.mjs";
 import {
-    RevocationInfoChoices,
+    type RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.mjs";
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from "../CryptographicMessageSyntax-2010/SignerInfos.ta.mjs";

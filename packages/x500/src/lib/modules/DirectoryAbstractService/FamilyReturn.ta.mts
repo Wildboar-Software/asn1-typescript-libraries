@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FamilyReturn_memberSelect,
+    type FamilyReturn_memberSelect,
     _decode_FamilyReturn_memberSelect,
     _encode_FamilyReturn_memberSelect,
     _enum_for_FamilyReturn_memberSelect,

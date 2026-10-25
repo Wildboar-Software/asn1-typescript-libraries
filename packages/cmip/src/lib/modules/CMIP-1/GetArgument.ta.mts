@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_BaseManagedObjectId,
 } from '../CMIP-1/BaseManagedObjectId.ta.mjs';
 import {
-  AccessControl,
+  type AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
 } from '../CMIP-1/AccessControl.ta.mjs';
@@ -28,24 +28,24 @@ import {
   _decode_CMISSync,
   _encode_CMISSync,
 } from '../CMIP-1/CMISSync.ta.mjs';
-import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
+import { type Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
 import {
-  CMISFilter,
+  type CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
 } from '../CMIP-1/CMISFilter.ta.mjs';
 import {
-  AttributeId,
+  type AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';

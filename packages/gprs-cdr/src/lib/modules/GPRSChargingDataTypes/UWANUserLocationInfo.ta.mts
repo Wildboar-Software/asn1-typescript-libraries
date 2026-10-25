@@ -7,7 +7,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
+import { type GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
 import { WLANOperatorId, _decode_WLANOperatorId, _encode_WLANOperatorId } from "../GPRSChargingDataTypes/WLANOperatorId.ta.mjs";
 
 

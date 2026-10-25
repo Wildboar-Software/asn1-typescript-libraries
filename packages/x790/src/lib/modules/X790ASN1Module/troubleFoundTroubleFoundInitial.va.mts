@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TroubleFound,
+    type TroubleFound,
 } from "../X790ASN1Module/TroubleFound.ta.mjs";
 
 

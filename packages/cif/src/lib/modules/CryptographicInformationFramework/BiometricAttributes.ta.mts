@@ -11,8 +11,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricTemplateAttributes, _decode_BiometricTemplateAttributes, _encode_BiometricTemplateAttributes } from "../CryptographicInformationFramework/BiometricTemplateAttributes.ta.mjs";
-import { BiometricInformationTemplate, _decode_BiometricInformationTemplate, _encode_BiometricInformationTemplate } from "../CryptographicInformationFramework/BiometricInformationTemplate.ta.mjs";
-import { BiometricInformationTemplateGroup, _decode_BiometricInformationTemplateGroup, _encode_BiometricInformationTemplateGroup } from "../CryptographicInformationFramework/BiometricInformationTemplateGroup.ta.mjs";
+import { type BiometricInformationTemplate, _decode_BiometricInformationTemplate, _encode_BiometricInformationTemplate } from "../CryptographicInformationFramework/BiometricInformationTemplate.ta.mjs";
+import { type BiometricInformationTemplateGroup, _decode_BiometricInformationTemplateGroup, _encode_BiometricInformationTemplateGroup } from "../CryptographicInformationFramework/BiometricInformationTemplateGroup.ta.mjs";
 
 
 /**

@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LegType, _decode_LegType, _encode_LegType } from "../IN-SSF-SCF-datatypes/LegType.ta.mjs";
+import { type LegType, _decode_LegType, _encode_LegType } from "../IN-SSF-SCF-datatypes/LegType.ta.mjs";
 // export { LegType, _decode_LegType, _encode_LegType } from "../IN-SSF-SCF-datatypes/LegType.ta.mjs";
 
 

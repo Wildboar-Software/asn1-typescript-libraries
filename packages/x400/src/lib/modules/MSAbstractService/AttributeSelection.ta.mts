@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

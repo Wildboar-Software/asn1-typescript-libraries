@@ -14,13 +14,13 @@ import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } fro
 
 import { ServerRandom, _decode_ServerRandom, _encode_ServerRandom } from "../TSM/ServerRandom.ta.mjs";
 
-import { SessionID, _decode_SessionID, _encode_SessionID } from "../TSM/SessionID.ta.mjs";
+import { type SessionID, _decode_SessionID, _encode_SessionID } from "../TSM/SessionID.ta.mjs";
 
-import { CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_CipherSuite } from "../TSM/CipherSuite.ta.mjs";
+import { type CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_CipherSuite } from "../TSM/CipherSuite.ta.mjs";
 
-import { CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMethod, _encode_CompressionMethod } from "../TSM/CompressionMethod.ta.mjs";
+import { type CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMethod, _encode_CompressionMethod } from "../TSM/CompressionMethod.ta.mjs";
 
-import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } from "../TSM/ExtensionValues.ta.mjs";
+import { type ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } from "../TSM/ExtensionValues.ta.mjs";
 
 
 

@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_terminationTimeout_eventId, _encode_ParameterValues_terminationTimeout_eventId } from "../DEV/ParameterValues-terminationTimeout-eventId.ta.mjs";
+import { type ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_terminationTimeout_eventId, _encode_ParameterValues_terminationTimeout_eventId } from "../DEV/ParameterValues-terminationTimeout-eventId.ta.mjs";
 
 
 /**

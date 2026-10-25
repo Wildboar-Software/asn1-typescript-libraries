@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionDETCurve.ta.mjs";
+import { type ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionDETCurve.ta.mjs";
 
 
 /**

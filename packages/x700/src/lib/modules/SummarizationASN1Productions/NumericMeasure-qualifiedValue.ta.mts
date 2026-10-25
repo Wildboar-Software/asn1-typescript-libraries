@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObservedValue,
+    type ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module';
 import {
-    TimePeriod,
+    type TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';

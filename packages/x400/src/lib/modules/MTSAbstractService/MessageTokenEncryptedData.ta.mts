@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EncryptionKey,
+    type EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
 } from '../MTSAbstractService/EncryptionKey.ta.mjs';
 import {
-    ContentIntegrityCheck,
+    type ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
 import {
-    MessageSecurityLabel,
+    type MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
 } from '../MTSAbstractService/MessageSecurityLabel.ta.mjs';

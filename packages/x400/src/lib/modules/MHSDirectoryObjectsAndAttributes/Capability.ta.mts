@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExtendedContentType,
+    type ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
 } from '../MTSAbstractService/ExtendedContentType.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_EncodedInformationTypesConstraints,
 } from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';

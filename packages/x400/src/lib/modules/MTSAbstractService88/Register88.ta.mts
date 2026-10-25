@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    UserName,
+    type UserName,
     _decode_UserName,
     _encode_UserName,
 } from '../MTSAbstractService/UserName.ta.mjs';
 import {
-    UserAddress,
+    type UserAddress,
     _decode_UserAddress,
     _encode_UserAddress,
 } from '../MTSAbstractService/UserAddress.ta.mjs';
@@ -27,17 +27,17 @@ import {
     _encode_EncodedInformationTypes,
 } from '../MTSAbstractService/EncodedInformationTypes.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
 import {
-    DefaultDeliveryControls,
+    type DefaultDeliveryControls,
     _decode_DefaultDeliveryControls,
     _encode_DefaultDeliveryControls,
 } from '../MTSAbstractService/DefaultDeliveryControls.ta.mjs';
 import {
-    ContentTypes,
+    type ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
 } from '../MTSAbstractService/ContentTypes.ta.mjs';

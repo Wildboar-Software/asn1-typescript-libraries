@@ -4,7 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ManageTriggerDataArg, _decode_ManageTriggerDataArg, _encode_ManageTriggerDataArg } from "../IN-CS3-SSF-SCF-ops-args/ManageTriggerDataArg.ta.mjs";
 // export { ManageTriggerDataArg, _decode_ManageTriggerDataArg, _encode_ManageTriggerDataArg } from "../IN-CS3-SSF-SCF-ops-args/ManageTriggerDataArg.ta.mjs";
-import { ManageTriggerDataResultArg, _decode_ManageTriggerDataResultArg, _encode_ManageTriggerDataResultArg } from "../IN-CS3-SSF-SCF-ops-args/ManageTriggerDataResultArg.ta.mjs";
+import { type ManageTriggerDataResultArg, _decode_ManageTriggerDataResultArg, _encode_ManageTriggerDataResultArg } from "../IN-CS3-SSF-SCF-ops-args/ManageTriggerDataResultArg.ta.mjs";
 // export { ManageTriggerDataResultArg, _decode_ManageTriggerDataResultArg, _encode_ManageTriggerDataResultArg } from "../IN-CS3-SSF-SCF-ops-args/ManageTriggerDataResultArg.ta.mjs";
 import { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";

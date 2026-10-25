@@ -8,9 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
-import { ISO3166CountryCode, _decode_ISO3166CountryCode, _encode_ISO3166CountryCode } from "../PlatformCertificateProfileV2/ISO3166CountryCode.ta.mjs";
-import { ISO3166AdminSubdivisionCode, _decode_ISO3166AdminSubdivisionCode, _encode_ISO3166AdminSubdivisionCode } from "../PlatformCertificateProfileV2/ISO3166AdminSubdivisionCode.ta.mjs";
-import { OpenLocationCode, _decode_OpenLocationCode, _encode_OpenLocationCode } from "../PlatformCertificateProfileV2/OpenLocationCode.ta.mjs";
+import { type ISO3166CountryCode, _decode_ISO3166CountryCode, _encode_ISO3166CountryCode } from "../PlatformCertificateProfileV2/ISO3166CountryCode.ta.mjs";
+import { type ISO3166AdminSubdivisionCode, _decode_ISO3166AdminSubdivisionCode, _encode_ISO3166AdminSubdivisionCode } from "../PlatformCertificateProfileV2/ISO3166AdminSubdivisionCode.ta.mjs";
+import { type OpenLocationCode, _decode_OpenLocationCode, _encode_OpenLocationCode } from "../PlatformCertificateProfileV2/OpenLocationCode.ta.mjs";
 
 
 /**

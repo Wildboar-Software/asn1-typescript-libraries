@@ -4,10 +4,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicServiceGroupList, _decode_BasicServiceGroupList, _encode_BasicServiceGroupList } from "../MAP-SS-DataTypes/BasicServiceGroupList.ta.mjs";
-import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_ForwardingFeatureList } from "../MAP-SS-DataTypes/ForwardingFeatureList.ta.mjs";
+import { type BasicServiceGroupList, _decode_BasicServiceGroupList, _encode_BasicServiceGroupList } from "../MAP-SS-DataTypes/BasicServiceGroupList.ta.mjs";
+import { type ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_ForwardingFeatureList } from "../MAP-SS-DataTypes/ForwardingFeatureList.ta.mjs";
 import { GenericServiceInfo, _decode_GenericServiceInfo, _encode_GenericServiceInfo } from "../MAP-SS-DataTypes/GenericServiceInfo.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**

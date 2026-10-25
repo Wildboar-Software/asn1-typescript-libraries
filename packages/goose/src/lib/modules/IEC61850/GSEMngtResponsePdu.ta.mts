@@ -7,7 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PositiveNegative, _decode_PositiveNegative, _encode_PositiveNegative } from "../IEC61850/PositiveNegative.ta.mjs";
+import { type PositiveNegative, _decode_PositiveNegative, _encode_PositiveNegative } from "../IEC61850/PositiveNegative.ta.mjs";
 
 
 /**

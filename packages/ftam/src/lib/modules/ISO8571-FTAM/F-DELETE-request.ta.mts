@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';

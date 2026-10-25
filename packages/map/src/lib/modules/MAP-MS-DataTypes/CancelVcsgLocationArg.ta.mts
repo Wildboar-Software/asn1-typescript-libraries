@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
+import { type Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

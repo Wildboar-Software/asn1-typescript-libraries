@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AcceptableCertPoliciesSyntax,
+    type AcceptableCertPoliciesSyntax,
     _decode_AcceptableCertPoliciesSyntax,
     _encode_AcceptableCertPoliciesSyntax,
 } from "../AttributeCertificateDefinitions/AcceptableCertPoliciesSyntax.ta.mjs";

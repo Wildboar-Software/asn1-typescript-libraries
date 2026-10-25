@@ -7,7 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NegoData, _decode_NegoData, _encode_NegoData } from "../CredSSP/NegoData.ta.mjs";
+import { type NegoData, _decode_NegoData, _encode_NegoData } from "../CredSSP/NegoData.ta.mjs";
 
 
 /**

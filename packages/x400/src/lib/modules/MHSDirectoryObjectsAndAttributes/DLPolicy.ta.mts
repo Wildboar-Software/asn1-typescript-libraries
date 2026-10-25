@@ -13,24 +13,24 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DLPolicy_report_propagation,
+    type DLPolicy_report_propagation,
     previous_dl_or_originator /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_propagation,
     _encode_DLPolicy_report_propagation,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-propagation.ta.mjs';
 import {
-    DLPolicy_report_from_dl,
+    type DLPolicy_report_from_dl,
     whenever_requested /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_from_dl,
     _encode_DLPolicy_report_from_dl,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-from-dl.ta.mjs';
 import {
-    DLPolicy_originating_MTA_report,
+    type DLPolicy_originating_MTA_report,
     _decode_DLPolicy_originating_MTA_report,
     _encode_DLPolicy_originating_MTA_report,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originating-MTA-report.ta.mjs';
 import {
-    DLPolicy_originator_report,
+    type DLPolicy_originator_report,
     _decode_DLPolicy_originator_report,
     _encode_DLPolicy_originator_report,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originator-report.ta.mjs';
@@ -42,7 +42,7 @@ import {
     _encode_DLPolicy_return_of_content,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-return-of-content.ta.mjs';
 import {
-    DLPolicy_priority,
+    type DLPolicy_priority,
     _decode_DLPolicy_priority,
     _encode_DLPolicy_priority,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-priority.ta.mjs';
@@ -68,13 +68,13 @@ import {
     _encode_DLPolicy_conversion_with_loss_prohibited,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-conversion-with-loss-prohibited.ta.mjs';
 import {
-    DLPolicy_proof_of_delivery,
+    type DLPolicy_proof_of_delivery,
     dl_members /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_proof_of_delivery,
     _encode_DLPolicy_proof_of_delivery,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-proof-of-delivery.ta.mjs';
 import {
-    DLPolicy_requested_delivery_method,
+    type DLPolicy_requested_delivery_method,
     _decode_DLPolicy_requested_delivery_method,
     _encode_DLPolicy_requested_delivery_method,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-requested-delivery-method.ta.mjs';

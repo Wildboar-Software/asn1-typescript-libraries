@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AllowedGSM_Algorithms, _decode_AllowedGSM_Algorithms, _encode_AllowedGSM_Algorithms } from "../MAP-MS-DataTypes/AllowedGSM-Algorithms.ta.mjs";
+import { type AllowedGSM_Algorithms, _decode_AllowedGSM_Algorithms, _encode_AllowedGSM_Algorithms } from "../MAP-MS-DataTypes/AllowedGSM-Algorithms.ta.mjs";
 import { AllowedUMTS_Algorithms, _decode_AllowedUMTS_Algorithms, _encode_AllowedUMTS_Algorithms } from "../MAP-MS-DataTypes/AllowedUMTS-Algorithms.ta.mjs";
-import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
+import { type AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
-import { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
-import { BSSMAP_ServiceHandoverList, _decode_BSSMAP_ServiceHandoverList, _encode_BSSMAP_ServiceHandoverList } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverList.ta.mjs";
-import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
-import { EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
-import { IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
-import { KeyStatus, _decode_KeyStatus, _encode_KeyStatus, _enum_for_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
-import { RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
-import { RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
-import { RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
+import { type BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
+import { type BSSMAP_ServiceHandoverList, _decode_BSSMAP_ServiceHandoverList, _encode_BSSMAP_ServiceHandoverList } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandoverList.ta.mjs";
+import { type Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
+import { type EncryptionInformation, _decode_EncryptionInformation, _encode_EncryptionInformation } from "../MAP-MS-DataTypes/EncryptionInformation.ta.mjs";
+import { type IntegrityProtectionInformation, _decode_IntegrityProtectionInformation, _encode_IntegrityProtectionInformation } from "../MAP-MS-DataTypes/IntegrityProtectionInformation.ta.mjs";
+import { type KeyStatus, _decode_KeyStatus, _encode_KeyStatus, _enum_for_KeyStatus } from "../MAP-MS-DataTypes/KeyStatus.ta.mjs";
+import { type RadioResourceInformation, _decode_RadioResourceInformation, _encode_RadioResourceInformation } from "../MAP-MS-DataTypes/RadioResourceInformation.ta.mjs";
+import { type RadioResourceList, _decode_RadioResourceList, _encode_RadioResourceList } from "../MAP-MS-DataTypes/RadioResourceList.ta.mjs";
+import { type RANAP_ServiceHandover, _decode_RANAP_ServiceHandover, _encode_RANAP_ServiceHandover } from "../MAP-MS-DataTypes/RANAP-ServiceHandover.ta.mjs";
 import { SupportedCodecsList, _decode_SupportedCodecsList, _encode_SupportedCodecsList } from "../MAP-MS-DataTypes/SupportedCodecsList.ta.mjs";
 import { UESBI_Iu, _decode_UESBI_Iu, _encode_UESBI_Iu } from "../MAP-MS-DataTypes/UESBI-Iu.ta.mjs";
 import { TracePropagationList, _decode_TracePropagationList, _encode_TracePropagationList } from "../MAP-OM-DataTypes/TracePropagationList.ta.mjs";

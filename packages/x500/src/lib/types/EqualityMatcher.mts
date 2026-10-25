@@ -14,4 +14,4 @@ type EqualityMatcher = (
     flags?: number,
 ) => boolean;
 
-export default EqualityMatcher;
+export type { EqualityMatcher as default };

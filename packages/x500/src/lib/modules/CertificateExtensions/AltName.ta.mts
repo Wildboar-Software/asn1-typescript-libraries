@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AltNameType,
+    type AltNameType,
     _decode_AltNameType,
     _encode_AltNameType,
 } from "../CertificateExtensions/AltNameType.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

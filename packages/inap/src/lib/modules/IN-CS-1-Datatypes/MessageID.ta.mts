@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatypes/Integer4.ta.mjs";
 // export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatypes/Integer4.ta.mjs";
 import { MessageID_text, _decode_MessageID_text, _encode_MessageID_text } from "../IN-CS-1-Datatypes/MessageID-text.ta.mjs";
 // export { MessageID_text, _decode_MessageID_text, _encode_MessageID_text } from "../IN-CS-1-Datatypes/MessageID-text.ta.mjs";

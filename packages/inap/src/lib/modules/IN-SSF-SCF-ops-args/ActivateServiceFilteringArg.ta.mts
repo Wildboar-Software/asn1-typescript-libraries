@@ -7,15 +7,15 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../IN-SSF-SCF-datatypes/FilteredCallTreatment.ta.mjs";
 // export { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../IN-SSF-SCF-datatypes/FilteredCallTreatment.ta.mjs";
-import { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../IN-SSF-SCF-datatypes/FilteringCharacteristics.ta.mjs";
+import { type FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../IN-SSF-SCF-datatypes/FilteringCharacteristics.ta.mjs";
 // export { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../IN-SSF-SCF-datatypes/FilteringCharacteristics.ta.mjs";
-import { FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../IN-SSF-SCF-datatypes/FilteringTimeOut.ta.mjs";
+import { type FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../IN-SSF-SCF-datatypes/FilteringTimeOut.ta.mjs";
 // export { FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../IN-SSF-SCF-datatypes/FilteringTimeOut.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-SSF-SCF-datatypes/FilteringCriteria.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-SSF-SCF-datatypes/FilteringCriteria.ta.mjs";
 // export { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-SSF-SCF-datatypes/FilteringCriteria.ta.mjs";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
 // export { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

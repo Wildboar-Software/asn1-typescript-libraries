@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    RequestedDeliveryMethod,
+    type RequestedDeliveryMethod,
     _decode_RequestedDeliveryMethod,
     _encode_RequestedDeliveryMethod,
 } from '../MTSAbstractService/RequestedDeliveryMethod.ta.mjs';

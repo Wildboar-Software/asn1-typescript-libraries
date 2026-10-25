@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileInfoListRequest_searchCriteria, _decode_ProfileInfoListRequest_searchCriteria, _encode_ProfileInfoListRequest_searchCriteria } from "../RSPDefinitions/ProfileInfoListRequest-searchCriteria.ta.mjs";
+import { type ProfileInfoListRequest_searchCriteria, _decode_ProfileInfoListRequest_searchCriteria, _encode_ProfileInfoListRequest_searchCriteria } from "../RSPDefinitions/ProfileInfoListRequest-searchCriteria.ta.mjs";
 
 
 /**

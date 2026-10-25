@@ -12,7 +12,7 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { type SEC_EXCHG_ITEM } from '../Notation/SEC-EXCHG-ITEM.oca.mjs';
 import {
-  Identifier,
+  type Identifier,
   _decode_Identifier,
   _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';

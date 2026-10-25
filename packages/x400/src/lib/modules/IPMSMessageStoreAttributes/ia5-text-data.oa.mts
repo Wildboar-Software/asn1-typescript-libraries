@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IA5TextData,
+    type IA5TextData,
     _decode_IA5TextData,
     _encode_IA5TextData,
 } from '../IPMSInformationObjects/IA5TextData.ta.mjs';

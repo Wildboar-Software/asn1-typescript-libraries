@@ -2,7 +2,7 @@
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { id_regCtrl_pkiArchiveOptions } from "../PKIXCRMF-2009/id-regCtrl-pkiArchiveOptions.va.mjs";
 import {
-    PKIArchiveOptions,
+    type PKIArchiveOptions,
     _decode_PKIArchiveOptions,
     _encode_PKIArchiveOptions,
 } from "../PKIXCRMF-2009/PKIArchiveOptions.ta.mjs";

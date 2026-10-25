@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestResults, _decode_RequestResults, _encode_RequestResults } from "../IEC61850/RequestResults.ta.mjs";
+import { type RequestResults, _decode_RequestResults, _encode_RequestResults } from "../IEC61850/RequestResults.ta.mjs";
 
 
 /**

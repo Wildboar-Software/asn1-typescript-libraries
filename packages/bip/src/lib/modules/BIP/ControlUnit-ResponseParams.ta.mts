@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';

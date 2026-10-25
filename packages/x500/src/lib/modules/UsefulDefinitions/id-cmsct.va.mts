@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { cmsContentType } from "../UsefulDefinitions/cmsContentType.va.mjs";
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 /**
  * @summary id_cmsct
  * @description

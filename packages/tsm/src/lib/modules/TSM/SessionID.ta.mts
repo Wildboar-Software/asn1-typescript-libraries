@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
+import { type UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
 
 
 

@@ -7,19 +7,19 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
+import { type GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
 // export { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
-import { Rai, _decode_Rai, _encode_Rai } from "../UmtsHI2Operations/Rai.ta.mjs";
+import { type Rai, _decode_Rai, _encode_Rai } from "../UmtsHI2Operations/Rai.ta.mjs";
 // export { Rai, _decode_Rai, _encode_Rai } from "../UmtsHI2Operations/Rai.ta.mjs";
-import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../UmtsHI2Operations/GSMLocation.ta.mjs";
+import { type GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../UmtsHI2Operations/GSMLocation.ta.mjs";
 // export { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../UmtsHI2Operations/GSMLocation.ta.mjs";
-import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../UmtsHI2Operations/UMTSLocation.ta.mjs";
+import { type UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../UmtsHI2Operations/UMTSLocation.ta.mjs";
 // export { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../UmtsHI2Operations/UMTSLocation.ta.mjs";
-import { Sai, _decode_Sai, _encode_Sai } from "../UmtsHI2Operations/Sai.ta.mjs";
+import { type Sai, _decode_Sai, _encode_Sai } from "../UmtsHI2Operations/Sai.ta.mjs";
 // export { Sai, _decode_Sai, _encode_Sai } from "../UmtsHI2Operations/Sai.ta.mjs";
-import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
+import { type CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
 // export { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
-import { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _encode_Location_uELocationTimestamp } from "../UmtsHI2Operations/Location-uELocationTimestamp.ta.mjs";
+import { type Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _encode_Location_uELocationTimestamp } from "../UmtsHI2Operations/Location-uELocationTimestamp.ta.mjs";
 // export { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _encode_Location_uELocationTimestamp } from "../UmtsHI2Operations/Location-uELocationTimestamp.ta.mjs";
 
 

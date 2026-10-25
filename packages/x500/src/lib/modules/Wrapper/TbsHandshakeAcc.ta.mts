@@ -6,39 +6,39 @@ import {
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_AttributeCertificate,
+    type DER_AttributeCertificate,
     _decode_DER_AttributeCertificate,
     _encode_DER_AttributeCertificate,
 } from "../Wrapper/DER-AttributeCertificate.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    TbsHandshakeAcc_encr_mode,
+    type TbsHandshakeAcc_encr_mode,
     _decode_TbsHandshakeAcc_encr_mode,
     _encode_TbsHandshakeAcc_encr_mode,
 } from "../Wrapper/TbsHandshakeAcc-encr-mode.ta.mjs";
 import {
-    TbsHandshakeAcc_keyEstSel,
+    type TbsHandshakeAcc_keyEstSel,
     _decode_TbsHandshakeAcc_keyEstSel,
     _encode_TbsHandshakeAcc_keyEstSel,
 } from "../Wrapper/TbsHandshakeAcc-keyEstSel.ta.mjs";
 import {
-    TbsHandshakeAcc_sigSel,
+    type TbsHandshakeAcc_sigSel,
     _decode_TbsHandshakeAcc_sigSel,
     _encode_TbsHandshakeAcc_sigSel,
 } from "../Wrapper/TbsHandshakeAcc-sigSel.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
-    Version,
+    type Version,
     Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Version,
     _encode_Version,

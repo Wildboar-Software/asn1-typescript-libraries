@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    OriginatorsReference,
+    type OriginatorsReference,
     _decode_OriginatorsReference,
     _encode_OriginatorsReference,
 } from '../IPMSHeadingExtensions/OriginatorsReference.ta.mjs';

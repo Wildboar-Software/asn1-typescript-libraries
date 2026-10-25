@@ -7,13 +7,13 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS2-SCF-SCF-ops-args/CollectedInfo.ta.mjs";
+import { type CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS2-SCF-SCF-ops-args/CollectedInfo.ta.mjs";
 // export { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../IN-CS2-SCF-SCF-ops-args/CollectedInfo.ta.mjs";
 import { InfoType, _decode_InfoType, _encode_InfoType, _enum_for_InfoType, numericString /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../IN-CS2-datatypes/InfoType.ta.mjs";
 // export { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_ENUMERATION_ITEM */, numericString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_characterString /* IMPORTED_LONG_ENUMERATION_ITEM */, characterString /* IMPORTED_SHORT_ENUMERATION_ITEM */, InfoType_iA5String /* IMPORTED_LONG_ENUMERATION_ITEM */, iA5String /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InfoType, _encode_InfoType } from "../IN-CS2-datatypes/InfoType.ta.mjs";
 import { Actions, _decode_Actions, _encode_Actions, _enum_for_Actions } from "../IN-CS2-SCF-SCF-ops-args/Actions.ta.mjs";
 // export { Actions, _enum_for_Actions, Actions_play /* IMPORTED_LONG_ENUMERATION_ITEM */, play /* IMPORTED_SHORT_ENUMERATION_ITEM */, Actions_playandcollect /* IMPORTED_LONG_ENUMERATION_ITEM */, playandcollect /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Actions, _encode_Actions } from "../IN-CS2-SCF-SCF-ops-args/Actions.ta.mjs";
-import { Language, _decode_Language, _encode_Language } from "../IN-CS2-datatypes/Language.ta.mjs";
+import { type Language, _decode_Language, _encode_Language } from "../IN-CS2-datatypes/Language.ta.mjs";
 // export { Language, _decode_Language, _encode_Language } from "../IN-CS2-datatypes/Language.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";

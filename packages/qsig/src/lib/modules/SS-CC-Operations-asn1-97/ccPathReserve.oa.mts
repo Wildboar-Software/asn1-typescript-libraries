@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
+import { type CcExtension, _decode_CcExtension, _encode_CcExtension } from "../SS-CC-Operations-asn1-97/CcExtension.ta.mjs";
 import { remoteUserBusyAgain } from "../SS-CC-Operations-asn1-97/remoteUserBusyAgain.oa.mjs";
 import { failureToMatch } from "../SS-CC-Operations-asn1-97/failureToMatch.oa.mjs";
 import { failedDueToInterworking } from "../SS-CC-Operations-asn1-97/failedDueToInterworking.oa.mjs";

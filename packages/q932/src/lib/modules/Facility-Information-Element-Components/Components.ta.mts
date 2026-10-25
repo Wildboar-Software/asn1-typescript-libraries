@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ROS, _decode_ROS, _encode_ROS } from "../Facility-Information-Element-Components/ROS.ta.mjs";
+import { type ROS, _decode_ROS, _encode_ROS } from "../Facility-Information-Element-Components/ROS.ta.mjs";
 
 
 /**

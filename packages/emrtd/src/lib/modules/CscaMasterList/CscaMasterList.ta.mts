@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CscaMasterListVersion, _decode_CscaMasterListVersion, _encode_CscaMasterListVersion } from "../CscaMasterList/CscaMasterListVersion.ta.mjs";
+import { type CscaMasterListVersion, _decode_CscaMasterListVersion, _encode_CscaMasterListVersion } from "../CscaMasterList/CscaMasterListVersion.ta.mjs";
 // export { CscaMasterListVersion, CscaMasterListVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CscaMasterListVersion, _encode_CscaMasterListVersion } from "../CscaMasterList/CscaMasterListVersion.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
 // export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { hashAlgs } from "../AlgorithmObjectIdentifiers/hashAlgs.va.mjs";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 /**
  * @summary id_sha3_256
  * @description

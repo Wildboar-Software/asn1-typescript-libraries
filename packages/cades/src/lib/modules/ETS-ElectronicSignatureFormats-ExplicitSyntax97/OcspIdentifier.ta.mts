@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp";
+import { type ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp";
 /**
  * @summary OcspIdentifier
  * @description

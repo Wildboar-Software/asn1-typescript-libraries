@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
+import { type PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
 import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg_PCS_Extensions } from "../MAP-ExtensionDataTypes/SLR-Arg-PCS-Extensions.ta.mjs";
 
 

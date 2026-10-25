@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MechType,
+    type MechType,
     _decode_MechType,
     _encode_MechType,
 } from "../SpkmGssTokens/MechType.ta.mjs";
 import {
-    SPKMInnerContextToken,
+    type SPKMInnerContextToken,
     _decode_SPKMInnerContextToken,
     _encode_SPKMInnerContextToken,
 } from "../SpkmGssTokens/SPKMInnerContextToken.ta.mjs";

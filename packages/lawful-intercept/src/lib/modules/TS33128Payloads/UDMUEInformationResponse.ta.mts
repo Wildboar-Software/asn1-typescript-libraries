@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { UEContextInfo, _decode_UEContextInfo, _encode_UEContextInfo } from "../TS33128Payloads/UEContextInfo.ta.mjs";
 // export { UEContextInfo, _decode_UEContextInfo, _encode_UEContextInfo } from "../TS33128Payloads/UEContextInfo.ta.mjs";

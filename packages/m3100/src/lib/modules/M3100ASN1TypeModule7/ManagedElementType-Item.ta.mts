@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OBJECT_IDENTIFIER,
-    GraphicString,
+    type GraphicString,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

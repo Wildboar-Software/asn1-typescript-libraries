@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+import { type EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 // export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-import { EPSBearerModificationCauseValue, _decode_EPSBearerModificationCauseValue, _encode_EPSBearerModificationCauseValue } from "../TS33128Payloads/EPSBearerModificationCauseValue.ta.mjs";
+import { type EPSBearerModificationCauseValue, _decode_EPSBearerModificationCauseValue, _encode_EPSBearerModificationCauseValue } from "../TS33128Payloads/EPSBearerModificationCauseValue.ta.mjs";
 // export { EPSBearerModificationCauseValue, _decode_EPSBearerModificationCauseValue, _encode_EPSBearerModificationCauseValue } from "../TS33128Payloads/EPSBearerModificationCauseValue.ta.mjs";
 import { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
 // export { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";

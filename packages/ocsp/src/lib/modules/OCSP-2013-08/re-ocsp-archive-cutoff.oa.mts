@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { EXTENSION } from "@wildboar/pki-stub";
 import {
-    ArchiveCutoff,
+    type ArchiveCutoff,
     _decode_ArchiveCutoff,
     _encode_ArchiveCutoff,
 } from "../OCSP-2013-08/ArchiveCutoff.ta.mjs";

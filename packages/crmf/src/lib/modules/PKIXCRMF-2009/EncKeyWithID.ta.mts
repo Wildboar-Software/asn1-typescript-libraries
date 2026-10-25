@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncKeyWithID_identifier,
+    type EncKeyWithID_identifier,
     _decode_EncKeyWithID_identifier,
     _encode_EncKeyWithID_identifier,
 } from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta.mjs";

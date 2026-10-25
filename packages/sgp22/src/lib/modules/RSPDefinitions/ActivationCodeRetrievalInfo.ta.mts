@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     type BOOLEAN,
     type INTEGER,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

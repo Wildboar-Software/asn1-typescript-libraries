@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
+import { type CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
 // export { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 

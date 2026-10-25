@@ -12,43 +12,43 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageIdentifier,
+    type MessageIdentifier,
     _decode_MessageIdentifier,
     _encode_MessageIdentifier,
 } from '../MTAAbstractService/MessageIdentifier.ta.mjs';
 import {
-    OriginatorName,
+    type OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
 } from '../MTAAbstractService/OriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    Priority,
+    type Priority,
     Priority_normal,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    PerMessageIndicators,
+    type PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
 } from '../MTSAbstractService/PerMessageIndicators.ta.mjs';
 import {
-    DeferredDeliveryTime,
+    type DeferredDeliveryTime,
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
 } from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
@@ -58,7 +58,7 @@ import {
     _encode_PerDomainBilateralInformation,
 } from '../MTAAbstractService/PerDomainBilateralInformation.ta.mjs';
 import {
-    TraceInformation,
+    type TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';

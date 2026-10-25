@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NotificationIdentifier, _decode_NotificationIdentifier, _encode_NotificationIdentifier } from "../Attribute-ASN1Module/NotificationIdentifier.ta.mjs";
-import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip";
+import { type NotificationIdentifier, _decode_NotificationIdentifier, _encode_NotificationIdentifier } from "../Attribute-ASN1Module/NotificationIdentifier.ta.mjs";
+import { type ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip";
 /**
  * @summary CorrelatedNotifications_Item
  * @description

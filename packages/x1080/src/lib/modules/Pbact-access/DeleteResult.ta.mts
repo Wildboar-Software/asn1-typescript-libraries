@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AccessdErr,
+    type AccessdErr,
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';

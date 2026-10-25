@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -8,7 +8,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { DurationCurrency, _decode_DurationCurrency, _encode_DurationCurrency } from "../SS-AOC-Operations-asn1-97/DurationCurrency.ta.mjs";
 import { FlatRateCurrency, _decode_FlatRateCurrency, _encode_FlatRateCurrency } from "../SS-AOC-Operations-asn1-97/FlatRateCurrency.ta.mjs";
 import { VolumeRateCurrency, _decode_VolumeRateCurrency, _encode_VolumeRateCurrency } from "../SS-AOC-Operations-asn1-97/VolumeRateCurrency.ta.mjs";
-import { SpecialChargingCode, _decode_SpecialChargingCode, _encode_SpecialChargingCode } from "../SS-AOC-Operations-asn1-97/SpecialChargingCode.ta.mjs";
+import { type SpecialChargingCode, _decode_SpecialChargingCode, _encode_SpecialChargingCode } from "../SS-AOC-Operations-asn1-97/SpecialChargingCode.ta.mjs";
 
 /**
  * @summary AOCSCurrencyInfo_rateType

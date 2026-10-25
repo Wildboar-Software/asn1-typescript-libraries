@@ -12,11 +12,11 @@ import {
     _decode_NameAndOptionalUID,
 } from "../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
 } from "../modules/InformationFramework/DistinguishedName.ta.mjs";
 import { compareRDNSequence } from "@wildboar/dn";
-import { evaluateFilter, EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
+import { evaluateFilter, type EvaluateFilterSettings } from "../utils/evaluateFilter.mjs";
 import {
     EntryInformation,
 } from "../modules/DirectoryAbstractService/EntryInformation.ta.mjs";

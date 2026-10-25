@@ -18,7 +18,7 @@ import {
     _encode_DeleteSpecification_deleteModifier,
 } from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';

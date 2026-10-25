@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AdditionalDispatcherList, _decode_AdditionalDispatcherList, _encode_AdditionalDispatcherList } from "../MAP-SM-DataTypes/AdditionalDispatcherList.ta.mjs";
-import { DispatcherList, _decode_DispatcherList, _encode_DispatcherList } from "../MAP-SM-DataTypes/DispatcherList.ta.mjs";
+import { type AdditionalDispatcherList, _decode_AdditionalDispatcherList, _encode_AdditionalDispatcherList } from "../MAP-SM-DataTypes/AdditionalDispatcherList.ta.mjs";
+import { type DispatcherList, _decode_DispatcherList, _encode_DispatcherList } from "../MAP-SM-DataTypes/DispatcherList.ta.mjs";
 
 
 /**

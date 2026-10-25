@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Result,
+    type Result,
     _decode_Result,
     _encode_Result,
 } from '../ISO8823-PRESENTATION/Result.ta.mjs';

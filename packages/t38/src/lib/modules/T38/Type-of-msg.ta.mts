@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Type_of_msg_t30_indicator,
+  type Type_of_msg_t30_indicator,
   _enum_for_Type_of_msg_t30_indicator,
   _decode_Type_of_msg_t30_indicator,
   _encode_Type_of_msg_t30_indicator,
 } from '../T38/Type-of-msg-t30-indicator.ta.mjs';
 import {
-  Type_of_msg_t30_data,
+  type Type_of_msg_t30_data,
   _enum_for_Type_of_msg_t30_data,
   _decode_Type_of_msg_t30_data,
   _encode_Type_of_msg_t30_data,

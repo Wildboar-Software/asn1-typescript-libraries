@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    TYPE_IDENTIFIER,
+    type TYPE_IDENTIFIER,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
 } from '../IPMSForwardedContentBodyPartType/ForwardedContentParameters.ta.mjs';
 import { id_ep_content } from '../IPMSObjectIdentifiers/id-ep-content.va.mjs';
 import {
-    ExtendedContentType,
+    type ExtendedContentType,
 } from "../MTSAbstractService/ExtendedContentType.ta.mjs";
 
 /**

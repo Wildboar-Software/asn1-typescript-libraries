@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
-import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../Core-INAP-CS1-DataTypes/IPAvailable.ta.mjs";
-import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
+import { type IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../Core-INAP-CS1-DataTypes/IPAvailable.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 

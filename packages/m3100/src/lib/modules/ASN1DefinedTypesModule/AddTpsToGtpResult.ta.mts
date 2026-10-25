@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AddTpsToGtpResult_Item,
+    type AddTpsToGtpResult_Item,
     _decode_AddTpsToGtpResult_Item,
     _encode_AddTpsToGtpResult_Item,
 } from '../ASN1DefinedTypesModule/AddTpsToGtpResult-Item.ta.mjs';

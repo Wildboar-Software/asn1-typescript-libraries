@@ -1,7 +1,7 @@
 /* eslint-disable */
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ScfTaskRefusedParameter, _decode_ScfTaskRefusedParameter, _encode_ScfTaskRefusedParameter } from "../IN-CS2-SCF-SCF-ops-args/ScfTaskRefusedParameter.ta.mjs";
+import { type ScfTaskRefusedParameter, _decode_ScfTaskRefusedParameter, _encode_ScfTaskRefusedParameter } from "../IN-CS2-SCF-SCF-ops-args/ScfTaskRefusedParameter.ta.mjs";
 // export { ScfTaskRefusedParameter, _decode_ScfTaskRefusedParameter, _encode_ScfTaskRefusedParameter } from "../IN-CS2-SCF-SCF-ops-args/ScfTaskRefusedParameter.ta.mjs";
 import { errcode_scfTaskRefused } from "../IN-CS2-errorcodes/errcode-scfTaskRefused.va.mjs";
 // export { errcode_scfTaskRefused } from "../IN-CS2-errorcodes/errcode-scfTaskRefused.va.mjs";

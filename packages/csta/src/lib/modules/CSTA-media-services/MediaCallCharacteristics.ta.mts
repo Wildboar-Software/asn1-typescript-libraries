@@ -5,14 +5,14 @@ import {
     type OPTIONAL,
     type INTEGER,
     type OCTET_STRING,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
-    MediaClass,
+    type MediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MediaClass,
     _encode_MediaClass

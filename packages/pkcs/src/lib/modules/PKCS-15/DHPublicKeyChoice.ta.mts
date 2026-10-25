@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    DiffieHellmanPublicNumber,
+    type DiffieHellmanPublicNumber,
     _decode_DiffieHellmanPublicNumber,
     _encode_DiffieHellmanPublicNumber,
 } from "@wildboar/ansi-x9-42";

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { STIRSHAKENTN, _decode_STIRSHAKENTN, _encode_STIRSHAKENTN } from "../TS33128Payloads/STIRSHAKENTN.ta.mjs";
+import { type STIRSHAKENTN, _decode_STIRSHAKENTN, _encode_STIRSHAKENTN } from "../TS33128Payloads/STIRSHAKENTN.ta.mjs";
 // export { STIRSHAKENTN, _decode_STIRSHAKENTN, _encode_STIRSHAKENTN } from "../TS33128Payloads/STIRSHAKENTN.ta.mjs";
 
 

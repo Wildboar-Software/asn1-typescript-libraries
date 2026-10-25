@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
+import { type RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
 
 
 /**

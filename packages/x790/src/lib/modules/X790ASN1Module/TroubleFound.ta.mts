@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TroubleFound_number,
+    type TroubleFound_number,
     pending,
     cameClear,
     centralOffice,

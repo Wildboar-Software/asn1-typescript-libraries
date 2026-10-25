@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPBinaryAddress, _decode_IPBinaryAddress, _encode_IPBinaryAddress } from "../IMSChargingDataTypes/IPBinaryAddress.ta.mjs";
-import { IPTextRepresentedAddress, _decode_IPTextRepresentedAddress, _encode_IPTextRepresentedAddress } from "../IMSChargingDataTypes/IPTextRepresentedAddress.ta.mjs";
+import { type IPBinaryAddress, _decode_IPBinaryAddress, _encode_IPBinaryAddress } from "../IMSChargingDataTypes/IPBinaryAddress.ta.mjs";
+import { type IPTextRepresentedAddress, _decode_IPTextRepresentedAddress, _encode_IPTextRepresentedAddress } from "../IMSChargingDataTypes/IPTextRepresentedAddress.ta.mjs";
 
 
 /**

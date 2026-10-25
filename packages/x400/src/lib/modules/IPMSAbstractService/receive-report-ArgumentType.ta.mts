@@ -17,7 +17,7 @@ import {
     _encode_ReportDeliveryEnvelope,
 } from '../MTSAbstractService/ReportDeliveryEnvelope.ta.mjs';
 import {
-    InformationObject,
+    type InformationObject,
     _decode_InformationObject,
     _encode_InformationObject,
 } from '../IPMSInformationObjects/InformationObject.ta.mjs';

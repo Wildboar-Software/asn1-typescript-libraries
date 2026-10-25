@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";

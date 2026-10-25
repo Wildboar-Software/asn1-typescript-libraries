@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { type TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
+import { type TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
 
 
 /**

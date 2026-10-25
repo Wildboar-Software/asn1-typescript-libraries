@@ -16,7 +16,7 @@ import {
     _encode_MessageDeliveryEnvelope,
 } from '../MTSAbstractService/MessageDeliveryEnvelope.ta.mjs';
 import {
-    NRN,
+    type NRN,
     _decode_NRN,
     _encode_NRN,
 } from '../IPMSInformationObjects/NRN.ta.mjs';

@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CtatParamInfo, _decode_CtatParamInfo, _encode_CtatParamInfo } from "../CT-Authentication-Operations/CtatParamInfo.ta.mjs";
 // export { CtatParamInfo, _decode_CtatParamInfo, _encode_CtatParamInfo } from "../CT-Authentication-Operations/CtatParamInfo.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 

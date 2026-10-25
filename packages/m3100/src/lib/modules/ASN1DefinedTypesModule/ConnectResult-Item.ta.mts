@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Failed,
+    type Failed,
     _decode_Failed,
     _encode_Failed,
 } from '../ASN1DefinedTypesModule/Failed.ta.mjs';
 import {
-    Connected,
+    type Connected,
     _decode_Connected,
     _encode_Connected,
 } from '../ASN1DefinedTypesModule/Connected.ta.mjs';

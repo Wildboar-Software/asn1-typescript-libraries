@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IV,
+    type IV,
     _decode_IV,
     _encode_IV,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta.mjs";

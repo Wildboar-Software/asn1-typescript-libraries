@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPattern,
+    type TestPattern,
     _decode_TestPattern,
     _encode_TestPattern,
 } from '../TestCategories-ASN1Module/TestPattern.ta.mjs';

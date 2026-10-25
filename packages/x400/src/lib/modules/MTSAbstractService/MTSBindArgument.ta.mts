@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectName,
+    type ObjectName,
     _decode_ObjectName,
     _encode_ObjectName,
 } from '../MTSAbstractService/ObjectName.ta.mjs';
@@ -22,12 +22,12 @@ import {
     _encode_MessagesWaiting,
 } from '../MTSAbstractService/MessagesWaiting.ta.mjs';
 import {
-    InitiatorCredentials,
+    type InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
 } from '../MTSAbstractService/InitiatorCredentials.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';

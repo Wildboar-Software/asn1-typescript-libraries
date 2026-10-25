@@ -17,7 +17,7 @@ import {
     _encode_TypeOfAddress,
 } from '../TCAP-Examples/TypeOfAddress.ta.mjs';
 import {
-    TelephonyString,
+    type TelephonyString,
     _decode_TelephonyString,
     _encode_TelephonyString,
 } from '../TCAP-Examples/TelephonyString.ta.mjs';

@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  FTAM_Regime_PDU,
+  type FTAM_Regime_PDU,
   _decode_FTAM_Regime_PDU,
   _encode_FTAM_Regime_PDU,
 } from '../ISO8571-FTAM/FTAM-Regime-PDU.ta.mjs';
 import {
-  File_PDU,
+  type File_PDU,
   _decode_File_PDU,
   _encode_File_PDU,
 } from '../ISO8571-FTAM/File-PDU.ta.mjs';
 import {
-  Bulk_Data_PDU,
+  type Bulk_Data_PDU,
   _decode_Bulk_Data_PDU,
   _encode_Bulk_Data_PDU,
 } from '../ISO8571-FTAM/Bulk-Data-PDU.ta.mjs';
 import {
-  FSM_PDU,
+  type FSM_PDU,
   _decode_FSM_PDU,
   _encode_FSM_PDU,
 } from '../ISO8571-FTAM/FSM-PDU.ta.mjs';

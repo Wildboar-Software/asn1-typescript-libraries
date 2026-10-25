@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
 // export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
-import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-SSF-SCF-datatypes/IPAvailable.ta.mjs";
+import { type IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-SSF-SCF-datatypes/IPAvailable.ta.mjs";
 // export { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-SSF-SCF-datatypes/IPAvailable.ta.mjs";
-import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-SSF-SCF-datatypes/IPSSPCapabilities.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-SSF-SCF-datatypes/IPSSPCapabilities.ta.mjs";
 // export { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-SSF-SCF-datatypes/IPSSPCapabilities.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

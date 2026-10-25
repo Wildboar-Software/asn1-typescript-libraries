@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { AlterEventConditionListMonitoring_Request_priorityChange, _decode_AlterEventConditionListMonitoring_Request_priorityChange, _encode_AlterEventConditionListMonitoring_Request_priorityChange } from "../ISO-9506-MMS-1/AlterEventConditionListMonitoring-Request-priorityChange.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type AlterEventConditionListMonitoring_Request_priorityChange, _decode_AlterEventConditionListMonitoring_Request_priorityChange, _encode_AlterEventConditionListMonitoring_Request_priorityChange } from "../ISO-9506-MMS-1/AlterEventConditionListMonitoring-Request-priorityChange.ta.mjs";
 
 
 /**

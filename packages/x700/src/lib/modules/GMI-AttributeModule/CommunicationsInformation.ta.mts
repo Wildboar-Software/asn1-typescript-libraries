@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InformationType,
+    type InformationType,
     _decode_InformationType,
     _encode_InformationType,
 } from '../GMI-AttributeModule/InformationType.ta.mjs';
 import {
-    InformationData,
+    type InformationData,
     _decode_InformationData,
     _encode_InformationData,
 } from '../GMI-AttributeModule/InformationData.ta.mjs';

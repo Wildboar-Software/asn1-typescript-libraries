@@ -3,46 +3,46 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { BookmarkReached, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
+import { type BookmarkReached, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
 
-import { Completed, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
+import { type Completed, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
 
-import { DtmfDetected, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
+import { type DtmfDetected, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
 
-import { Emptied, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
+import { type Emptied, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
 
-import { InterruptionDetected, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
+import { type InterruptionDetected, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
 
-import { NotRecognized, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
+import { type NotRecognized, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
 
-import { Play, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
+import { type Play, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
 
-import { Record, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
+import { type Record, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
 
-import { Recognized, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
+import { type Recognized, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
 
-import { ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
+import { type ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
 
-import { Started, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
+import { type Started, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
 
-import { SilenceTimeoutExpired, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
+import { type SilenceTimeoutExpired, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
 
-import { SpeechDetected, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
+import { type SpeechDetected, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
 
-import { StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
+import { type StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
 
-import { SuspendPlay, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
+import { type SuspendPlay, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
 
-import { SuspendRecord, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
+import { type SuspendRecord, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
 
-import { VoiceAttribChanged, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
+import { type VoiceAttribChanged, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
 
-import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
+import { type VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
 
 
 

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TypeAndContextAssertion_contextAssertions,
+    type TypeAndContextAssertion_contextAssertions,
     _decode_TypeAndContextAssertion_contextAssertions,
     _encode_TypeAndContextAssertion_contextAssertions,
 } from "../DirectoryAbstractService/TypeAndContextAssertion-contextAssertions.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";

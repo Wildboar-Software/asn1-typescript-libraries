@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DomainMaintenanceLevel,
+    type DomainMaintenanceLevel,
     _decode_DomainMaintenanceLevel,
     _encode_DomainMaintenanceLevel,
 } from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta.mjs";
 import {
-    DomainName,
+    type DomainName,
     _decode_DomainName,
     _encode_DomainName,
 } from "../CMSCKMKeyManagement/DomainName.ta.mjs";
 import {
-    DomainParams,
+    type DomainParams,
     _decode_DomainParams,
     _encode_DomainParams,
 } from "../CMSCKMKeyManagement/DomainParams.ta.mjs";

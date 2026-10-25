@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-import { MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
-import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-import { CCBS_FeatureList, _decode_CCBS_FeatureList, _encode_CCBS_FeatureList } from "../MAP-SS-DataTypes/CCBS-FeatureList.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
+import { type MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
+import { type CCBS_FeatureList, _decode_CCBS_FeatureList, _encode_CCBS_FeatureList } from "../MAP-SS-DataTypes/CCBS-FeatureList.ta.mjs";
 import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrictionOption, _enum_for_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**

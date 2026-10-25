@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../SGP32Definitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
+import { type RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../SGP32Definitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
 
 
 /**

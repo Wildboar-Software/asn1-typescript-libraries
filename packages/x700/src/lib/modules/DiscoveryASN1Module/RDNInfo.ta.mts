@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/dn';
 import {
-    GdmoObjectClass,
+    type GdmoObjectClass,
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
 } from '../RepertoireASN1Module/GdmoObjectClass.ta.mjs';

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
-import { ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisationRule_pprFlags, _encode_ProfilePolicyAuthorisationRule_pprFlags } from "../RSPDefinitions/ProfilePolicyAuthorisationRule-pprFlags.ta.mjs";
+import { type ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisationRule_pprFlags, _encode_ProfilePolicyAuthorisationRule_pprFlags } from "../RSPDefinitions/ProfilePolicyAuthorisationRule-pprFlags.ta.mjs";
 
 
 /**

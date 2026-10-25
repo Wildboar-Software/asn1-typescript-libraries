@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CBEFFVersion_cbeff_major,
+  type CBEFFVersion_cbeff_major,
   _decode_CBEFFVersion_cbeff_major,
   _encode_CBEFFVersion_cbeff_major,
 } from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-major.ta.mjs';
 import {
-  CBEFFVersion_cbeff_minor,
+  type CBEFFVersion_cbeff_minor,
   _decode_CBEFFVersion_cbeff_minor,
   _encode_CBEFFVersion_cbeff_minor,
 } from '../CBEFF-DATA-ELEMENTS/CBEFFVersion-cbeff-minor.ta.mjs';

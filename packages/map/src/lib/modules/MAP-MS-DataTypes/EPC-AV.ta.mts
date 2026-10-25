@@ -6,10 +6,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
-import { KASME, _decode_KASME, _encode_KASME } from "../MAP-MS-DataTypes/KASME.ta.mjs";
-import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
+import { type AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
+import { type KASME, _decode_KASME, _encode_KASME } from "../MAP-MS-DataTypes/KASME.ta.mjs";
+import { type RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
+import { type XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
 
 
 /**

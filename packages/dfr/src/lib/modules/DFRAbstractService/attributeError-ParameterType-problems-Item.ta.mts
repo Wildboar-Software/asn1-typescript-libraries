@@ -12,8 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeProblem, _enum_for_AttributeProblem, _decode_AttributeProblem, _encode_AttributeProblem } from "../DFRAbstractService/AttributeProblem.ta.mjs";
-import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../InformationFramework/AttributeValue.ta.mjs";
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../InformationFramework/AttributeValue.ta.mjs";
 
 
 /**

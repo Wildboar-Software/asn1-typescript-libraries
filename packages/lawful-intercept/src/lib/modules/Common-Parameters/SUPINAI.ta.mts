@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NAI, _decode_NAI, _encode_NAI } from "../Common-Parameters/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../Common-Parameters/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../Common-Parameters/NAI.ta.mjs";
 
 

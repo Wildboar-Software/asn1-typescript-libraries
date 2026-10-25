@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../AuthenticationFramework/Extensions.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";

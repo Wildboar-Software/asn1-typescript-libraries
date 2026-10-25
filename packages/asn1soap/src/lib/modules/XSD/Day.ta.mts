@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DateTimeType,
+  type DateTimeType,
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';

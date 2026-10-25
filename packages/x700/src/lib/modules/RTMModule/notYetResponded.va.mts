@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ResponseTime,
+    type ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
 } from '../RTMModule/ResponseTime.ta.mjs';

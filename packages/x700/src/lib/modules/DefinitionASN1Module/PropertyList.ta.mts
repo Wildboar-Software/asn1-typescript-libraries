@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ValueSpecifier,
+    type ValueSpecifier,
     _decode_ValueSpecifier,
     _encode_ValueSpecifier,
 } from '../DefinitionASN1Module/ValueSpecifier.ta.mjs';
@@ -35,7 +35,7 @@ import {
     _encode_PropertyList_addRemove,
 } from '../DefinitionASN1Module/PropertyList-addRemove.ta.mjs';
 import {
-    AdditionalProperties,
+    type AdditionalProperties,
     _decode_AdditionalProperties,
     _encode_AdditionalProperties,
 } from '../DefinitionASN1Module/AdditionalProperties.ta.mjs';

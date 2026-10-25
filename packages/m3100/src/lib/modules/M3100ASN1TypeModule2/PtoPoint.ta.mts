@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectivityEndPoint,
+    type ConnectivityEndPoint,
     _decode_ConnectivityEndPoint,
     _encode_ConnectivityEndPoint,
 } from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta.mjs';

@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 import {
-    Body,
+    type Body,
     _decode_Body,
     _encode_Body,
     Heading,

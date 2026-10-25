@@ -2,7 +2,7 @@
 import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 import { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";
 import {
-    SupportedCurves,
+    type SupportedCurves,
     _decode_SupportedCurves,
     _encode_SupportedCurves,
 } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";

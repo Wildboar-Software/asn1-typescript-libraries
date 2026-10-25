@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ContentIntegrityCheck,
+    type ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';

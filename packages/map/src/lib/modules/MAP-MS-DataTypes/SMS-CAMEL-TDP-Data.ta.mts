@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { DefaultSMS_Handling, _decode_DefaultSMS_Handling, _encode_DefaultSMS_Handling, _enum_for_DefaultSMS_Handling } from "../MAP-MS-DataTypes/DefaultSMS-Handling.ta.mjs";
-import { SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type DefaultSMS_Handling, _decode_DefaultSMS_Handling, _encode_DefaultSMS_Handling, _enum_for_DefaultSMS_Handling } from "../MAP-MS-DataTypes/DefaultSMS-Handling.ta.mjs";
+import { type SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 
 
 /**

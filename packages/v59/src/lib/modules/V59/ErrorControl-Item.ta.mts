@@ -11,9 +11,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
+import { type ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
 
-import { ErrorControl_Item_v42featureNegotiation, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
+import { type ErrorControl_Item_v42featureNegotiation, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
 
 import { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics, _encode_ErrorControl_Item_ecStatistics } from "../V59/ErrorControl-Item-ecStatistics.ta.mjs";
 

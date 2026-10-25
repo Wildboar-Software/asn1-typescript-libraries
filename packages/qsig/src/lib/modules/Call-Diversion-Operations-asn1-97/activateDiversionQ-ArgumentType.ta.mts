@@ -8,8 +8,8 @@ import * as $ from "@wildboar/asn1/functional";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDiversionQ_ArgumentType_extension, activateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ-ArgumentType-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDiversionQ_ArgumentType_extension, type activateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary activateDiversionQ_ArgumentType

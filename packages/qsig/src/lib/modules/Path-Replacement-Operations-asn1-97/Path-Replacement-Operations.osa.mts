@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { pathReplacePropose } from "../Path-Replacement-Operations-asn1-97/pathReplacePropose.oa.mjs";
 import { pathReplaceSetup } from "../Path-Replacement-Operations-asn1-97/pathReplaceSetup.oa.mjs";
 import { pathReplaceRetain } from "../Path-Replacement-Operations-asn1-97/pathReplaceRetain.oa.mjs";

@@ -11,12 +11,12 @@ import {
     _get_encoder_for_HASH,
 } from "../AuthenticationFramework/HASH.ta.mjs";
 import {
-    HashedPolicyInfo,
+    type HashedPolicyInfo,
     _decode_HashedPolicyInfo,
     _encode_HashedPolicyInfo,
 } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";

@@ -6,27 +6,27 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../AsymmetricKeyPackageModuleV1/Attributes.ta.mjs";
 import {
-    PrivateKey,
+    type PrivateKey,
     _decode_PrivateKey,
     _encode_PrivateKey,
 } from "../AsymmetricKeyPackageModuleV1/PrivateKey.ta.mjs";
 import {
-    PrivateKeyAlgorithmIdentifier,
+    type PrivateKeyAlgorithmIdentifier,
     _decode_PrivateKeyAlgorithmIdentifier,
     _encode_PrivateKeyAlgorithmIdentifier,
 } from "../AsymmetricKeyPackageModuleV1/PrivateKeyAlgorithmIdentifier.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../AsymmetricKeyPackageModuleV1/Version.ta.mjs";
 import {
-    PublicKey,
+    type PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
 } from "../AsymmetricKeyPackageModuleV1/PublicKey.ta.mjs";

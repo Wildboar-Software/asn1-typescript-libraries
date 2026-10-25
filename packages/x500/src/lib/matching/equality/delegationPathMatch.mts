@@ -2,7 +2,7 @@ import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
-    AttCertPath,
+    type AttCertPath,
     _decode_AttCertPath,
 } from "../../modules/AttributeCertificateDefinitions/AttCertPath.ta.mjs";
 import {

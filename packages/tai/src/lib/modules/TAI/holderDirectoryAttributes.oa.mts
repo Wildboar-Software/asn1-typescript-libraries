@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { AttributesSyntax, _decode_AttributesSyntax, _encode_AttributesSyntax } from "../TAI/AttributesSyntax.ta.mjs";
+import { type AttributesSyntax, _decode_AttributesSyntax, _encode_AttributesSyntax } from "../TAI/AttributesSyntax.ta.mjs";
 import { id_tai_ce_holderDirectoryAttributes } from "../TAI/id-tai-ce-holderDirectoryAttributes.va.mjs";
 import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 

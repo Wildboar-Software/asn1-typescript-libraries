@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../PKCS7/EncryptedKey.ta.mjs";
 import {
-    KeyAgreementRecipientIdentifier,
+    type KeyAgreementRecipientIdentifier,
     _decode_KeyAgreementRecipientIdentifier,
     _encode_KeyAgreementRecipientIdentifier,
 } from "../PKCS7/KeyAgreementRecipientIdentifier.ta.mjs";

@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PKIPublicationInfo_action,
+    type PKIPublicationInfo_action,
     _decode_PKIPublicationInfo_action,
     _encode_PKIPublicationInfo_action,
 } from "../PKIXCRMF-2009/PKIPublicationInfo-action.ta.mjs";

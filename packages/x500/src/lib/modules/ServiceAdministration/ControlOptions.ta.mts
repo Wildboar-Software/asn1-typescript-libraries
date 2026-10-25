@@ -7,18 +7,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    HierarchySelections,
+    type HierarchySelections,
     _decode_HierarchySelections,
     _encode_HierarchySelections,
 } from "../DirectoryAbstractService/HierarchySelections.ta.mjs";
 import {
-    SearchControlOptions,
+    type SearchControlOptions,
     SearchControlOptions_searchAliases /* IMPORTED_LONG_NAMED_BIT */,
     _decode_SearchControlOptions,
     _encode_SearchControlOptions,
 } from "../DirectoryAbstractService/SearchControlOptions.ta.mjs";
 import {
-    ServiceControlOptions,
+    type ServiceControlOptions,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
 } from "../DirectoryAbstractService/ServiceControlOptions.ta.mjs";

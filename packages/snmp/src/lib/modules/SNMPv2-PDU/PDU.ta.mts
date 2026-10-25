@@ -12,12 +12,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PDU_error_status,
+    type PDU_error_status,
     _decode_PDU_error_status,
     _encode_PDU_error_status
 } from "../SNMPv2-PDU/PDU-error-status.ta.mjs";
 import {
-    VarBindList,
+    type VarBindList,
     _decode_VarBindList,
     _encode_VarBindList,
 } from "../SNMPv2-PDU/VarBindList.ta.mjs";

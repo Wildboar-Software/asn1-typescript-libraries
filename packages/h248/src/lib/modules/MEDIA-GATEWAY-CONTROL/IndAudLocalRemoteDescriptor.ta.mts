@@ -7,7 +7,7 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
+import { type IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
 
 
 /**

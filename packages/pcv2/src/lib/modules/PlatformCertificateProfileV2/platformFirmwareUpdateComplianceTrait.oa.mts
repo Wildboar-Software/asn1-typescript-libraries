@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { _decode_PlatformFirmwareUpdateCompliance, _encode_PlatformFirmwareUpdateCompliance, PlatformFirmwareUpdateCompliance } from "../PlatformCertificateProfileV2/PlatformFirmwareUpdateCompliance.ta.mjs";
+import { _decode_PlatformFirmwareUpdateCompliance, _encode_PlatformFirmwareUpdateCompliance, type PlatformFirmwareUpdateCompliance } from "../PlatformCertificateProfileV2/PlatformFirmwareUpdateCompliance.ta.mjs";
 import { tcg_tr_ID_platformFirmwareUpdateCompliance } from "../PlatformCertificateProfileV2/tcg-tr-ID-platformFirmwareUpdateCompliance.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 

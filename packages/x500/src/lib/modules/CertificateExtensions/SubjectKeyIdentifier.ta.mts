@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyIdentifier,
+    type KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
 } from "../CertificateExtensions/KeyIdentifier.ta.mjs";

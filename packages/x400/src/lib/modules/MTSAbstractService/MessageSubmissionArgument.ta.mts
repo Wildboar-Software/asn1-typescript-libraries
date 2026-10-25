@@ -16,7 +16,7 @@ import {
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';

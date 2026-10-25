@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     TRUE,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,

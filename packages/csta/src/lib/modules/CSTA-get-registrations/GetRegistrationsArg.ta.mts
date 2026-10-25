@@ -3,8 +3,8 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -12,7 +12,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_RegistrationTypeList } from "../CSTA-status-reporting/RegistrationTypeList.ta.mjs";
+import { type RegistrationTypeList, _decode_RegistrationTypeList, _encode_RegistrationTypeList } from "../CSTA-status-reporting/RegistrationTypeList.ta.mjs";
 
 /**
  * @summary GetRegistrationsArg

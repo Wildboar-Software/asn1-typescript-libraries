@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../IN-CS3-SSF-SCF-datatypes/IPRoutingAddress.ta.mjs";
+import { type IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../IN-CS3-SSF-SCF-datatypes/IPRoutingAddress.ta.mjs";
 // export { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../IN-CS3-SSF-SCF-datatypes/IPRoutingAddress.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS3-SSF-SCF-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS3-SSF-SCF-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS3-SSF-SCF-datatypes/LegID.ta.mjs";
 import { ConnectToResourceArg_resourceAddress_ipAddressAndLegID, _decode_ConnectToResourceArg_resourceAddress_ipAddressAndLegID, _encode_ConnectToResourceArg_resourceAddress_ipAddressAndLegID } from "../IN-CS3-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress-ipAddressAndLegID.ta.mjs";
 // export { ConnectToResourceArg_resourceAddress_ipAddressAndLegID, _decode_ConnectToResourceArg_resourceAddress_ipAddressAndLegID, _encode_ConnectToResourceArg_resourceAddress_ipAddressAndLegID } from "../IN-CS3-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress-ipAddressAndLegID.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS3-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS3-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS3-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 import { ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment, _decode_ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment, _encode_ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment } from "../IN-CS3-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress-ipAddressAndCallSegment.ta.mjs";
 // export { ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment, _decode_ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment, _encode_ConnectToResourceArg_resourceAddress_ipAddressAndCallSegment } from "../IN-CS3-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress-ipAddressAndCallSegment.ta.mjs";

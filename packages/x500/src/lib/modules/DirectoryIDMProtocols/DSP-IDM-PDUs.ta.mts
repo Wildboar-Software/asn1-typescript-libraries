@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IDM_PDU,
+    type IDM_PDU,
     _decode_IDM_PDU,
     _encode_IDM_PDU,
 } from "../IDMProtocolSpecification/IDM-PDU.ta.mjs";

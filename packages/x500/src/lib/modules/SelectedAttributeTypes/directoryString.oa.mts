@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_directoryString } from "../SelectedAttributeTypes/id-lsx-directoryString.va.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

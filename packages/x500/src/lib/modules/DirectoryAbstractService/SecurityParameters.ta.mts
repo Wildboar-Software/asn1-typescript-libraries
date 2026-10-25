@@ -12,27 +12,27 @@ import {
     _encode_CertificationPath,
 } from "../AuthenticationFramework/CertificationPath.ta.mjs";
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
 import {
-    ErrorProtectionRequest,
+    type ErrorProtectionRequest,
     _decode_ErrorProtectionRequest,
     _encode_ErrorProtectionRequest,
 } from "../DirectoryAbstractService/ErrorProtectionRequest.ta.mjs";
 import {
-    ProtectionRequest,
+    type ProtectionRequest,
     _decode_ProtectionRequest,
     _encode_ProtectionRequest,
 } from "../DirectoryAbstractService/ProtectionRequest.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../DirectoryAbstractService/Time.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

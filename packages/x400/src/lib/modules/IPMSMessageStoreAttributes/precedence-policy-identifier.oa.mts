@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    PrecedencePolicyIdentifier,
+    type PrecedencePolicyIdentifier,
     _decode_PrecedencePolicyIdentifier,
     _encode_PrecedencePolicyIdentifier,
 } from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.mjs';

@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    EquivalentPolicies,
+    type EquivalentPolicies,
     _decode_EquivalentPolicies,
     _encode_EquivalentPolicies,
 } from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta.mjs";
@@ -22,12 +22,12 @@ import {
     _encode_ObjectIdData,
 } from "../SIOsAccessControl-MODULE/ObjectIdData.ta.mjs";
 import {
-    SecurityClassifications,
+    type SecurityClassifications,
     _decode_SecurityClassifications,
     _encode_SecurityClassifications,
 } from "../SIOsAccessControl-MODULE/SecurityClassifications.ta.mjs";
 import {
-    SPIF_SecurityCategories,
+    type SPIF_SecurityCategories,
     _decode_SPIF_SecurityCategories,
     _encode_SPIF_SecurityCategories,
 } from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta.mjs";
@@ -38,7 +38,7 @@ import {
 } from "../SIOsAccessControl-MODULE/UpdateInformationData.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    VersionInformationData,
+    type VersionInformationData,
     _decode_VersionInformationData,
     _encode_VersionInformationData,
 } from "../SIOsAccessControl-MODULE/VersionInformationData.ta.mjs";

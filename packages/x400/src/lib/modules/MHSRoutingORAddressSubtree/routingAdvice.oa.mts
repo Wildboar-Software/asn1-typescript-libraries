@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    RoutingAdvice,
+    type RoutingAdvice,
     _decode_RoutingAdvice,
     _encode_RoutingAdvice,
 } from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta.mjs';

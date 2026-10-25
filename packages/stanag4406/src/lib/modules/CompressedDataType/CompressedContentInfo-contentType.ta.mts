@@ -2,10 +2,10 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, ContentType_ShortForm } from "../CompressedDataType/ContentType-ShortForm.ta.mjs";
+import { _decode_ContentType_ShortForm, _encode_ContentType_ShortForm, type ContentType_ShortForm } from "../CompressedDataType/ContentType-ShortForm.ta.mjs";
 
 
 /**

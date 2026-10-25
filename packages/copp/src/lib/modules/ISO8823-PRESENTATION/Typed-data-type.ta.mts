@@ -21,7 +21,7 @@ import {
     _encode_ACA_PPDU,
 } from '../ISO8823-PRESENTATION/ACA-PPDU.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

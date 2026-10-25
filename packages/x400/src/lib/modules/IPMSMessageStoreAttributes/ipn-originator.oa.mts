@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IPNOriginatorField,
+    type IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
 } from '../IPMSInformationObjects/IPNOriginatorField.ta.mjs';

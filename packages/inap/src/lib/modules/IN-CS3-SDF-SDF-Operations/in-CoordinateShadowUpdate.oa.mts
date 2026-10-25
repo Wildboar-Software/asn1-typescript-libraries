@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { IN_CoordinateShadowUpdateArgument, _decode_IN_CoordinateShadowUpdateArgument, _encode_IN_CoordinateShadowUpdateArgument } from "../IN-CS3-SDF-SDF-Operations/IN-CoordinateShadowUpdateArgument.ta.mjs";
+import { type IN_CoordinateShadowUpdateArgument, _decode_IN_CoordinateShadowUpdateArgument, _encode_IN_CoordinateShadowUpdateArgument } from "../IN-CS3-SDF-SDF-Operations/IN-CoordinateShadowUpdateArgument.ta.mjs";
 // export { IN_CoordinateShadowUpdateArgument, _decode_IN_CoordinateShadowUpdateArgument, _encode_IN_CoordinateShadowUpdateArgument } from "../IN-CS3-SDF-SDF-Operations/IN-CoordinateShadowUpdateArgument.ta.mjs";
-import { IN_CoordinateShadowUpdateResult, _decode_IN_CoordinateShadowUpdateResult, _encode_IN_CoordinateShadowUpdateResult } from "../IN-CS3-SDF-SDF-Operations/IN-CoordinateShadowUpdateResult.ta.mjs";
+import { type IN_CoordinateShadowUpdateResult, _decode_IN_CoordinateShadowUpdateResult, _encode_IN_CoordinateShadowUpdateResult } from "../IN-CS3-SDF-SDF-Operations/IN-CoordinateShadowUpdateResult.ta.mjs";
 // export { IN_CoordinateShadowUpdateResult, _decode_IN_CoordinateShadowUpdateResult, _encode_IN_CoordinateShadowUpdateResult } from "../IN-CS3-SDF-SDF-Operations/IN-CoordinateShadowUpdateResult.ta.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
 // export { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";

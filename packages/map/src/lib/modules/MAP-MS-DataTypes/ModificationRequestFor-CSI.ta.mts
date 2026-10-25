@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AdditionalRequestedCAMEL_SubscriptionInfo, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
+import { type AdditionalRequestedCAMEL_SubscriptionInfo, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
 import { ModificationInstruction, _decode_ModificationInstruction, _encode_ModificationInstruction, _enum_for_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInfo, _encode_RequestedCAMEL_SubscriptionInfo, _enum_for_RequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/RequestedCAMEL-SubscriptionInfo.ta.mjs";
 

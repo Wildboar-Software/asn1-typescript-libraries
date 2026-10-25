@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";

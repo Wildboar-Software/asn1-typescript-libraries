@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC1-v1-9/FieldElement.ta.mjs";
+import { type FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC1-v1-9/FieldElement.ta.mjs";
 /**
  * @summary ECDSA_Sig_Value_y
  * @description

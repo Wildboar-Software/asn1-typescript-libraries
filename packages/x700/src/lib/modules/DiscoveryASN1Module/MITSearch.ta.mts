@@ -13,11 +13,11 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
-import { Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip';
+import { type Scope, _decode_Scope, _encode_Scope } from '@wildboar/cmip';
 /**
  * @summary MITSearch
  * @description

@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { DiscriminatorConstruct, _decode_DiscriminatorConstruct, _encode_DiscriminatorConstruct } from "../Attribute-ASN1Module/DiscriminatorConstruct.ta.mjs";
+import { type DiscriminatorConstruct, _decode_DiscriminatorConstruct, _encode_DiscriminatorConstruct } from "../Attribute-ASN1Module/DiscriminatorConstruct.ta.mjs";
 import { _decode_FilterItem, _encode_FilterItem } from "@wildboar/cmip";
 import { _decode_CMISFilter, _encode_CMISFilter } from "@wildboar/cmip";
 /**

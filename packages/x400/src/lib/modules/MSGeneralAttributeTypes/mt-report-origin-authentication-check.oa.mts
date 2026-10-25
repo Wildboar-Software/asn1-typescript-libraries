@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ReportOriginAuthenticationCheck,
+    type ReportOriginAuthenticationCheck,
     _decode_ReportOriginAuthenticationCheck,
     _encode_ReportOriginAuthenticationCheck,
 } from '../MTSAbstractService/ReportOriginAuthenticationCheck.ta.mjs';

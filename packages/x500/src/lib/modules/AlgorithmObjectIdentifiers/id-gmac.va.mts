@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { iso9797 } from "../AlgorithmObjectIdentifiers/iso9797.va.mjs";
 /**
  * @summary id_gmac

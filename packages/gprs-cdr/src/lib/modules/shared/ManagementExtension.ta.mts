@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     type BOOLEAN,
     type OBJECT_IDENTIFIER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

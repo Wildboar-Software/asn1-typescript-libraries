@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
 import {
-    TypeOfMTSUser,
+    type TypeOfMTSUser,
     public_ /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,

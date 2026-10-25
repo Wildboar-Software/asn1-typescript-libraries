@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
-import { RetrieveNotificationsListResponse_notificationsListResultError, _decode_RetrieveNotificationsListResponse_notificationsListResultError, _encode_RetrieveNotificationsListResponse_notificationsListResultError } from "../RSPDefinitions/RetrieveNotificationsListResponse-notificationsListResultError.ta.mjs";
+import { type PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
+import { type RetrieveNotificationsListResponse_notificationsListResultError, _decode_RetrieveNotificationsListResponse_notificationsListResultError, _encode_RetrieveNotificationsListResponse_notificationsListResultError } from "../RSPDefinitions/RetrieveNotificationsListResponse-notificationsListResultError.ta.mjs";
 
 
 /**

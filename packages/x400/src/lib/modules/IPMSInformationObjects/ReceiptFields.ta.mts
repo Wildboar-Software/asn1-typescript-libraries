@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ReceiptTimeField,
+    type ReceiptTimeField,
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
 } from '../IPMSInformationObjects/ReceiptTimeField.ta.mjs';
@@ -24,12 +24,12 @@ import {
     _encode_AcknowledgmentModeField,
 } from '../IPMSInformationObjects/AcknowledgmentModeField.ta.mjs';
 import {
-    SupplReceiptInfoField,
+    type SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
 } from '../IPMSInformationObjects/SupplReceiptInfoField.ta.mjs';
 import {
-    RNExtensionsField,
+    type RNExtensionsField,
     _decode_RNExtensionsField,
     _encode_RNExtensionsField,
 } from '../IPMSInformationObjects/RNExtensionsField.ta.mjs';

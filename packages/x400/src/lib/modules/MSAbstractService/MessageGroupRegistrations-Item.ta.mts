@@ -16,7 +16,7 @@ import {
     _encode_MessageGroupNameAndDescriptor,
 } from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.mjs';
 import {
-    MessageGroupName,
+    type MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
 } from '../MSAbstractService/MessageGroupName.ta.mjs';

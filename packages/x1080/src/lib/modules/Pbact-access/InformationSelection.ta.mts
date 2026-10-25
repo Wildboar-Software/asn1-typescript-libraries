@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InformationSelection_attributes,
+    type InformationSelection_attributes,
     _decode_InformationSelection_attributes,
     _encode_InformationSelection_attributes,
 } from '../Pbact-access/InformationSelection-attributes.ta.mjs';
 import {
-    InformationSelection_infoTypes,
+    type InformationSelection_infoTypes,
     _enum_for_InformationSelection_infoTypes,
     _decode_InformationSelection_infoTypes,
     _encode_InformationSelection_infoTypes,

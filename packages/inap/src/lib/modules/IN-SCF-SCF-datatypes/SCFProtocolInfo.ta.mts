@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-SCF-SCF-datatypes/AgreementID.ta.mjs";
+import { type AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-SCF-SCF-datatypes/AgreementID.ta.mjs";
 // export { AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-SCF-SCF-datatypes/AgreementID.ta.mjs";
 
 

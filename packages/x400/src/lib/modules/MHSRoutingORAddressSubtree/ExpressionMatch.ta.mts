@@ -16,7 +16,7 @@ import {
     _encode_ORAddressFilter,
 } from '../MHSRoutingORAddressSubtree/ORAddressFilter.ta.mjs';
 import {
-    RoutingAdvice,
+    type RoutingAdvice,
     _decode_RoutingAdvice,
     _encode_RoutingAdvice,
 } from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta.mjs';

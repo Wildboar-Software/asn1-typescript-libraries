@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CODEC_Info, _decode_CODEC_Info, _encode_CODEC_Info } from "../MAP-GR-DataTypes/CODEC-Info.ta.mjs";
-import { CipheringAlgorithm, _decode_CipheringAlgorithm, _encode_CipheringAlgorithm } from "../MAP-GR-DataTypes/CipheringAlgorithm.ta.mjs";
-import { GroupKeyNumber, _decode_GroupKeyNumber, _encode_GroupKeyNumber } from "../MAP-GR-DataTypes/GroupKeyNumber.ta.mjs";
-import { VSTK_RAND, _decode_VSTK_RAND, _encode_VSTK_RAND } from "../MAP-GR-DataTypes/VSTK-RAND.ta.mjs";
-import { VSTK, _decode_VSTK, _encode_VSTK } from "../MAP-GR-DataTypes/VSTK.ta.mjs";
-import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
-import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
+import { type CODEC_Info, _decode_CODEC_Info, _encode_CODEC_Info } from "../MAP-GR-DataTypes/CODEC-Info.ta.mjs";
+import { type CipheringAlgorithm, _decode_CipheringAlgorithm, _encode_CipheringAlgorithm } from "../MAP-GR-DataTypes/CipheringAlgorithm.ta.mjs";
+import { type GroupKeyNumber, _decode_GroupKeyNumber, _encode_GroupKeyNumber } from "../MAP-GR-DataTypes/GroupKeyNumber.ta.mjs";
+import { type VSTK_RAND, _decode_VSTK_RAND, _encode_VSTK_RAND } from "../MAP-GR-DataTypes/VSTK-RAND.ta.mjs";
+import { type VSTK, _decode_VSTK, _encode_VSTK } from "../MAP-GR-DataTypes/VSTK.ta.mjs";
+import { type Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
+import { type Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 
 
 /**

@@ -3,7 +3,7 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_EventTypeBCSM, _encode_EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM } from "../IN-CS3-SSF-SCF-datatypes/EventTypeBCSM.ta.mjs";

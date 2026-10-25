@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeOperations,
+    type AttributeOperations,
     _decode_AttributeOperations,
     _encode_AttributeOperations,
 } from '../Pbact-access/AttributeOperations.ta.mjs';

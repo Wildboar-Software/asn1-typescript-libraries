@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { AuthReference, _decode_AuthReference, _encode_AuthReference } from "../CryptographicInformationFramework/AuthReference.ta.mjs";
 import { cia_ub_securityConditions } from "../CryptographicInformationFramework/cia-ub-securityConditions.va.mjs";
 

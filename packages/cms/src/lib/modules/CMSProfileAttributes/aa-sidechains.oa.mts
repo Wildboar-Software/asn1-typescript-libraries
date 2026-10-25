@@ -4,7 +4,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { id_sidechains } from "./id-sidechains.va.mjs";
 import {
-    Sidechains,
+    type Sidechains,
     _decode_Sidechains,
     _encode_Sidechains,
 } from "./Sidechains.ta.mjs";

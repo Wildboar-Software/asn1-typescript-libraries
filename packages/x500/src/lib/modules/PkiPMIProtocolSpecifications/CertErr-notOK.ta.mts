@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVMP_error,
+    type AVMP_error,
     _decode_AVMP_error,
     _encode_AVMP_error,
 } from "../PkiPMIProtocolSpecifications/AVMP-error.ta.mjs";
 import {
-    PkiWaError,
+    type PkiWaError,
     _decode_PkiWaError,
     _encode_PkiWaError,
 } from "../PkiPmiWrapper/PkiWaError.ta.mjs";

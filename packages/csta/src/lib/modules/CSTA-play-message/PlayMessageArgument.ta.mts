@@ -4,16 +4,16 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { TerminatingConditions, _decode_TerminatingConditions, _encode_TerminatingConditions } from "../CSTA-device-feature-types/TerminatingConditions.ta.mjs";
+import { type TerminatingConditions, _decode_TerminatingConditions, _encode_TerminatingConditions } from "../CSTA-device-feature-types/TerminatingConditions.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

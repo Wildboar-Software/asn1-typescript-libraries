@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RetrievalError,
+    type RetrievalError,
     _decode_RetrievalError,
     _encode_RetrievalError,
 } from '../MhsAcctAsn1Module/RetrievalError.ta.mjs';

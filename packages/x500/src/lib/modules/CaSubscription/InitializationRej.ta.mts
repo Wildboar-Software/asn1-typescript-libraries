@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InitializationRej_diag,
+    type InitializationRej_diag,
     _decode_InitializationRej_diag,
     _encode_InitializationRej_diag,
     _enum_for_InitializationRej_diag,

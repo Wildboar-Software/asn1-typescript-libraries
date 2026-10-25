@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER, NULL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER, type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Period_weeks_bitWeek,
+    type Period_weeks_bitWeek,
     _decode_Period_weeks_bitWeek,
     _encode_Period_weeks_bitWeek,
 } from "../SelectedAttributeTypes/Period-weeks-bitWeek.ta.mjs";

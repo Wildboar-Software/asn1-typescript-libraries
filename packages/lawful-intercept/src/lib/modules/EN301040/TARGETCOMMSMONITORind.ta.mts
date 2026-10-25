@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    UTCTime,
+    type UTCTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
+import { type TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
 // export { TLIIdType, _decode_TLIIdType, _encode_TLIIdType } from "../EN301040/TLIIdType.ta.mjs";
-import { LocationType, _decode_LocationType, _encode_LocationType } from "../EN301040/LocationType.ta.mjs";
+import { type LocationType, _decode_LocationType, _encode_LocationType } from "../EN301040/LocationType.ta.mjs";
 // export { LocationType, _decode_LocationType, _encode_LocationType } from "../EN301040/LocationType.ta.mjs";
 import { AddressType, _decode_AddressType, _encode_AddressType } from "../EN301040/AddressType.ta.mjs";
 // export { AddressType, _decode_AddressType, _encode_AddressType } from "../EN301040/AddressType.ta.mjs";
-import { CircuitIdType, _decode_CircuitIdType, _encode_CircuitIdType } from "../EN301040/CircuitIdType.ta.mjs";
+import { type CircuitIdType, _decode_CircuitIdType, _encode_CircuitIdType } from "../EN301040/CircuitIdType.ta.mjs";
 // export { CircuitIdType, _decode_CircuitIdType, _encode_CircuitIdType } from "../EN301040/CircuitIdType.ta.mjs";
 
 

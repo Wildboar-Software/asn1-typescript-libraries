@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExpectedAttributeList,
+    type ExpectedAttributeList,
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
 } from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.mjs';

@@ -13,7 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-import { ElementParamOffer_category, _decode_ElementParamOffer_category, _encode_ElementParamOffer_category } from "../CSS/ElementParamOffer-category.ta.mjs";
+import { type ElementParamOffer_category, _decode_ElementParamOffer_category, _encode_ElementParamOffer_category } from "../CSS/ElementParamOffer-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 
 

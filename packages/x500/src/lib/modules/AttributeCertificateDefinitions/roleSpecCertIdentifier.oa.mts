@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    RoleSpecCertIdentifierSyntax,
+    type RoleSpecCertIdentifierSyntax,
     _decode_RoleSpecCertIdentifierSyntax,
     _encode_RoleSpecCertIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";

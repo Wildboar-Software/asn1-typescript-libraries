@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { RingerStatusList_Item, _decode_RingerStatusList_Item, _encode_RingerStatusList_Item } from "../CSTA-get-ringer-status/RingerStatusList-Item.ta.mjs";

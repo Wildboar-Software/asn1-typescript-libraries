@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GeneralizedTime,
+    type GeneralizedTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip";
-import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
-import { ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta.mjs";
+import { type AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip";
+import { type ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
+import { type ThresholdLevelInd, _decode_ThresholdLevelInd, _encode_ThresholdLevelInd } from "../Attribute-ASN1Module/ThresholdLevelInd.ta.mjs";
 /**
  * @summary ThresholdInfo
  * @description

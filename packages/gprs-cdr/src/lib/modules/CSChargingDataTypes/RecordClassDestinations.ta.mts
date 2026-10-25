@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordClassDestination, _decode_RecordClassDestination, _encode_RecordClassDestination } from "../CSChargingDataTypes/RecordClassDestination.ta.mjs";
+import { type RecordClassDestination, _decode_RecordClassDestination, _encode_RecordClassDestination } from "../CSChargingDataTypes/RecordClassDestination.ta.mjs";
 
 
 /**

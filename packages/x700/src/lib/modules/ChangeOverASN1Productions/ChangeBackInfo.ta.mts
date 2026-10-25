@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    OptionalObject,
+    type OptionalObject,
     _decode_OptionalObject,
     _encode_OptionalObject,
 } from '../ChangeOverASN1Productions/OptionalObject.ta.mjs';
 import {
-    ExpectedAttributeList,
+    type ExpectedAttributeList,
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
 } from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.mjs';

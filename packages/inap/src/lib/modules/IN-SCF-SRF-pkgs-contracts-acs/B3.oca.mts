@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SCF_SRF_BOUNDS } from "../IN-SCF-SRF-Classes/SCF-SRF-BOUNDS.oca.mjs";
+import { type SCF_SRF_BOUNDS } from "../IN-SCF-SRF-Classes/SCF-SRF-BOUNDS.oca.mjs";
 // export { SCF_SRF_BOUNDS } from "../IN-SCF-SRF-Classes/SCF-SRF-BOUNDS.oca.mjs";
 
 

@@ -4,7 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { TFCBindArgument, _decode_TFCBindArgument, _encode_TFCBindArgument } from "../IN-CS3-SCF-SDF-Operations/TFCBindArgument.ta.mjs";
 // export { TFCBindArgument, _decode_TFCBindArgument, _encode_TFCBindArgument } from "../IN-CS3-SCF-SDF-Operations/TFCBindArgument.ta.mjs";
-import { TFCBindResult, _decode_TFCBindResult, _encode_TFCBindResult } from "../IN-CS3-SCF-SDF-Operations/TFCBindResult.ta.mjs";
+import { type TFCBindResult, _decode_TFCBindResult, _encode_TFCBindResult } from "../IN-CS3-SCF-SDF-Operations/TFCBindResult.ta.mjs";
 // export { TFCBindResult, _decode_TFCBindResult, _encode_TFCBindResult } from "../IN-CS3-SCF-SDF-Operations/TFCBindResult.ta.mjs";
 import { tfcBindError } from "../IN-CS3-errortypes/tfcBindError.oa.mjs";
 // export { tfcBindError } from "../IN-CS3-errortypes/tfcBindError.oa.mjs";

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UserDataHeaderChoice, _decode_UserDataHeaderChoice, _encode_UserDataHeaderChoice } from "../Short-Message-Service-Operations-asn1-97/UserDataHeaderChoice.ta.mjs";
+import { type UserDataHeaderChoice, _decode_UserDataHeaderChoice, _encode_UserDataHeaderChoice } from "../Short-Message-Service-Operations-asn1-97/UserDataHeaderChoice.ta.mjs";
 
 /**
  * @summary UserDataHeader

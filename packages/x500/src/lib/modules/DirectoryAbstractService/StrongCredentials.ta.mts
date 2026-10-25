@@ -16,12 +16,12 @@ import {
     _encode_CertificationPath,
 } from "../AuthenticationFramework/CertificationPath.ta.mjs";
 import {
-    Token,
+    type Token,
     _decode_Token,
     _encode_Token,
 } from "../DirectoryAbstractService/Token.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

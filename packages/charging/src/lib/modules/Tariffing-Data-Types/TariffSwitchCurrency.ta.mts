@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TariffCurrencyFormat, _decode_TariffCurrencyFormat, _encode_TariffCurrencyFormat } from "../Tariffing-Data-Types/TariffCurrencyFormat.ta.mjs";
-import { TariffSwitchoverTime, _decode_TariffSwitchoverTime, _encode_TariffSwitchoverTime } from "../Tariffing-Data-Types/TariffSwitchoverTime.ta.mjs";
+import { type TariffSwitchoverTime, _decode_TariffSwitchoverTime, _encode_TariffSwitchoverTime } from "../Tariffing-Data-Types/TariffSwitchoverTime.ta.mjs";
 
 
 /**

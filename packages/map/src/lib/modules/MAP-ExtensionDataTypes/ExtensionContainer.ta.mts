@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PCS_Extensions, _decode_PCS_Extensions, _encode_PCS_Extensions } from "../MAP-ExtensionDataTypes/PCS-Extensions.ta.mjs";
-import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
+import { type PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
 
 
 /**

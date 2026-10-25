@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IndependentTestInvocationError_Item,
+    type IndependentTestInvocationError_Item,
     _decode_IndependentTestInvocationError_Item,
     _encode_IndependentTestInvocationError_Item,
 } from '../Test-ASN1Module/IndependentTestInvocationError-Item.ta.mjs';

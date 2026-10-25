@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
 // export { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
 // export { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
 
 

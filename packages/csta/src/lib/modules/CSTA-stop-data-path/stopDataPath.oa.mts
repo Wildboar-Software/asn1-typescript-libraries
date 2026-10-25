@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { StopDataPathArgument, _decode_StopDataPathArgument, _encode_StopDataPathArgument } from "../CSTA-stop-data-path/StopDataPathArgument.ta.mjs";
 
-import { StopDataPathResult, _decode_StopDataPathResult, _encode_StopDataPathResult } from "../CSTA-stop-data-path/StopDataPathResult.ta.mjs";
+import { type StopDataPathResult, _decode_StopDataPathResult, _encode_StopDataPathResult } from "../CSTA-stop-data-path/StopDataPathResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

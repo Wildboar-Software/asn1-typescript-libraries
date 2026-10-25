@@ -7,7 +7,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { TransactionRequest, _decode_TransactionRequest, _encode_TransactionRequest } from "../MEDIA-GATEWAY-CONTROL/TransactionRequest.ta.mjs";
 import { TransactionPending, _decode_TransactionPending, _encode_TransactionPending } from "../MEDIA-GATEWAY-CONTROL/TransactionPending.ta.mjs";
 import { TransactionReply, _decode_TransactionReply, _encode_TransactionReply } from "../MEDIA-GATEWAY-CONTROL/TransactionReply.ta.mjs";
-import { TransactionResponseAck, _decode_TransactionResponseAck, _encode_TransactionResponseAck } from "../MEDIA-GATEWAY-CONTROL/TransactionResponseAck.ta.mjs";
+import { type TransactionResponseAck, _decode_TransactionResponseAck, _encode_TransactionResponseAck } from "../MEDIA-GATEWAY-CONTROL/TransactionResponseAck.ta.mjs";
 import { SegmentReply, _decode_SegmentReply, _encode_SegmentReply } from "../MEDIA-GATEWAY-CONTROL/SegmentReply.ta.mjs";
 
 

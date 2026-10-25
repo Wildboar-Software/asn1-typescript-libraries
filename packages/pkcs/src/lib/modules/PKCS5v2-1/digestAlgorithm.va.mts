@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ObjectIdentifier as _OID, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { rsadsi } from "../PKCS5v2-1/rsadsi.va.mjs";
 
 /**

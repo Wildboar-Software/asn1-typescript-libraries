@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../IN-common-datatypes/CriticalityType.ta.mjs";

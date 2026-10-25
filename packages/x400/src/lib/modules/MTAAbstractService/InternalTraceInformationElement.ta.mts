@@ -16,7 +16,7 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';

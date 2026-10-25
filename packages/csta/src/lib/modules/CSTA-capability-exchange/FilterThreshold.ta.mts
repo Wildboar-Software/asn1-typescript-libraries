@@ -3,8 +3,8 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError

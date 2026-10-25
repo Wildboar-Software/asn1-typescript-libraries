@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubprocessName,
+    type SubprocessName,
     _enum_for_SubprocessName,
     _decode_SubprocessName,
     _encode_SubprocessName,
 } from '../AuthenticationContextForBiometrics/SubprocessName.ta.mjs';
 import {
-    SubprocessIndex,
+    type SubprocessIndex,
     _decode_SubprocessIndex,
     _encode_SubprocessIndex,
 } from '../AuthenticationContextForBiometrics/SubprocessIndex.ta.mjs';
 import {
-    IOIndex,
+    type IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
 } from '../AuthenticationContextForBiometrics/IOIndex.ta.mjs';

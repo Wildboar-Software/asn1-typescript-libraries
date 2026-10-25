@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type OBJECT_IDENTIFIER,
-    GeneralizedTime,
+    type GeneralizedTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,17 +14,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPatternSequence,
+    type TestPatternSequence,
     _decode_TestPatternSequence,
     _encode_TestPatternSequence,
 } from '../TestCategories-ASN1Module/TestPatternSequence.ta.mjs';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
 import {
-    LoopbackError,
+    type LoopbackError,
     _decode_LoopbackError,
     _encode_LoopbackError,
 } from '../TestCategories-ASN1Module/LoopbackError.ta.mjs';

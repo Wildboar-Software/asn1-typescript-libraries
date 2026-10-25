@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";

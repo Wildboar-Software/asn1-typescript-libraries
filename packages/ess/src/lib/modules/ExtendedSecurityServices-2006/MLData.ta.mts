@@ -2,17 +2,17 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EntityIdentifier,
+    type EntityIdentifier,
     _decode_EntityIdentifier,
     _encode_EntityIdentifier,
 } from "../ExtendedSecurityServices-2006/EntityIdentifier.ta.mjs";
 import {
-    MLReceiptPolicy,
+    type MLReceiptPolicy,
     _decode_MLReceiptPolicy,
     _encode_MLReceiptPolicy,
 } from "../ExtendedSecurityServices-2006/MLReceiptPolicy.ta.mjs";

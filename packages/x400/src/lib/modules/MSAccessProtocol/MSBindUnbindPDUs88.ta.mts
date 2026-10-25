@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Bind,
+    type Bind,
     _decode_Bind,
     _encode_Bind,
 } from '@wildboar/rose';
 import {
-    Unbind,
+    type Unbind,
     _decode_Unbind,
     _encode_Unbind,
 } from '@wildboar/rose';

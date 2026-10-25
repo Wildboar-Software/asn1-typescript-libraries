@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import {
-    RedirectionReason,
+    type RedirectionReason,
     _enum_for_RedirectionReason,
     _decode_RedirectionReason,
     _encode_RedirectionReason,

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+import { type EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 // export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-import { EPSBearerRemovalCauseValue, _decode_EPSBearerRemovalCauseValue, _encode_EPSBearerRemovalCauseValue } from "../TS33128Payloads/EPSBearerRemovalCauseValue.ta.mjs";
+import { type EPSBearerRemovalCauseValue, _decode_EPSBearerRemovalCauseValue, _encode_EPSBearerRemovalCauseValue } from "../TS33128Payloads/EPSBearerRemovalCauseValue.ta.mjs";
 // export { EPSBearerRemovalCauseValue, _decode_EPSBearerRemovalCauseValue, _encode_EPSBearerRemovalCauseValue } from "../TS33128Payloads/EPSBearerRemovalCauseValue.ta.mjs";
 
 

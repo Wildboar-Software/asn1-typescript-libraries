@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
     type EXTERNAL,
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-import { Challenge_Item_promptInfo, _decode_Challenge_Item_promptInfo, _encode_Challenge_Item_promptInfo } from "../AccessControlFormat-prompt-1/Challenge-Item-promptInfo.ta.mjs";
-import { Challenge_Item_dataType, _decode_Challenge_Item_dataType, _encode_Challenge_Item_dataType } from "../AccessControlFormat-prompt-1/Challenge-Item-dataType.ta.mjs";
+import { type PromptId, _decode_PromptId, _encode_PromptId } from "../AccessControlFormat-prompt-1/PromptId.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type Challenge_Item_promptInfo, _decode_Challenge_Item_promptInfo, _encode_Challenge_Item_promptInfo } from "../AccessControlFormat-prompt-1/Challenge-Item-promptInfo.ta.mjs";
+import { type Challenge_Item_dataType, _decode_Challenge_Item_dataType, _encode_Challenge_Item_dataType } from "../AccessControlFormat-prompt-1/Challenge-Item-dataType.ta.mjs";
 
 
 /**

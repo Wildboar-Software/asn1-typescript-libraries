@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttCertVersion,
+    type AttCertVersion,
     _decode_AttCertVersion,
     _encode_AttCertVersion,
 } from "../PKI-Stub/AttCertVersion.ta.mjs";
@@ -28,7 +28,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../PKI-Stub/CertificateSerialNumber.ta.mjs";
@@ -43,12 +43,12 @@ import {
     _encode_Attribute,
 } from "../PKI-Stub/Attribute.ta.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../PKI-Stub/UniqueIdentifier.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";

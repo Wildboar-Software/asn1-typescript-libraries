@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContextCombination,
+    type ContextCombination,
     _decode_ContextCombination,
     _encode_ContextCombination,
 } from "../ServiceAdministration/ContextCombination.ta.mjs";

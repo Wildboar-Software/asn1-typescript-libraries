@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from '@wildboar/x500/SelectedAttributeTypes';

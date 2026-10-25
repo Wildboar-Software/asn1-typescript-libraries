@@ -14,32 +14,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Operations,
+    type Operations,
     _decode_Operations,
     _encode_Operations,
 } from '../MTSAbstractService/Operations.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
 import {
-    Priority,
+    type Priority,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    ContentTypes,
+    type ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
 } from '../MTSAbstractService/ContentTypes.ta.mjs';
 import {
-    PermissibleEncodedInformationTypes,
+    type PermissibleEncodedInformationTypes,
     _decode_PermissibleEncodedInformationTypes,
     _encode_PermissibleEncodedInformationTypes,
 } from '../MTSAbstractService/PermissibleEncodedInformationTypes.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';

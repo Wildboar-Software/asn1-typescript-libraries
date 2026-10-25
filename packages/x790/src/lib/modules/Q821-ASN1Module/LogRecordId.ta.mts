@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    NumericName,
+    type NumericName,
     _decode_NumericName,
     _encode_NumericName,
 } from "../Q821-ASN1Module/NumericName.ta.mjs";

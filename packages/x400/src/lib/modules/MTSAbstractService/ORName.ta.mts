@@ -17,7 +17,7 @@ import {
     _encode_ORAddress,
 } from '../MTSAbstractService/ORAddress.ta.mjs';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';
@@ -27,12 +27,12 @@ import {
     _encode_BuiltInStandardAttributes,
 } from '../MTSAbstractService/BuiltInStandardAttributes.ta.mjs';
 import {
-    BuiltInDomainDefinedAttributes,
+    type BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
 } from '../MTSAbstractService/BuiltInDomainDefinedAttributes.ta.mjs';
 import {
-    ExtensionAttributes,
+    type ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
 } from '../MTSAbstractService/ExtensionAttributes.ta.mjs';

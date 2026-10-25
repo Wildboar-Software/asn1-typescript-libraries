@@ -23,7 +23,7 @@ import {
     _encode_AlertArgument,
 } from '../MSAbstractService/AlertArgument.ta.mjs';
 import {
-    AlertResult,
+    type AlertResult,
     _decode_AlertResult,
     _encode_AlertResult,
 } from '../MSAbstractService/AlertResult.ta.mjs';

@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CancelledAlarmSynchronization,
+    type CancelledAlarmSynchronization,
     _decode_CancelledAlarmSynchronization,
     _encode_CancelledAlarmSynchronization,
 } from "../Q821-ASN1Module/CancelledAlarmSynchronization.ta.mjs";

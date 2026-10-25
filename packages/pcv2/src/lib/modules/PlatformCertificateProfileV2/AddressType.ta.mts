@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1Error,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { tcg_address_bluetoothmac } from "../PlatformCertificateProfileV2/tcg-address-bluetoothmac.va.mjs";

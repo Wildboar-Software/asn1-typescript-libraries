@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SystemsMgtOperation,
+    type SystemsMgtOperation,
     _decode_SystemsMgtOperation,
     _encode_SystemsMgtOperation,
 } from '../GrmAttributeDefinitionModule/SystemsMgtOperation.ta.mjs';
 import {
-    RoleOrRelationshipObject,
+    type RoleOrRelationshipObject,
     _decode_RoleOrRelationshipObject,
     _encode_RoleOrRelationshipObject,
 } from '../GrmAttributeDefinitionModule/RoleOrRelationshipObject.ta.mjs';

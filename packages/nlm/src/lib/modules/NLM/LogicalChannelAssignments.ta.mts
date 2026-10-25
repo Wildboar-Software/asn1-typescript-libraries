@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    LogicalChannelId,
+    type LogicalChannelId,
     _decode_LogicalChannelId,
     _encode_LogicalChannelId,
 } from '../NLM/LogicalChannelId.ta.mjs';

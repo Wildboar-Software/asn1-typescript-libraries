@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';

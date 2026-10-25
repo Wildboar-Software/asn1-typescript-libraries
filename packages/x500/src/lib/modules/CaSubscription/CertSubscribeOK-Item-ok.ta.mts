@@ -6,18 +6,18 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertStatus,
+    type CertStatus,
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
 } from "../CaSubscription/CertStatus.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub";
 import {
-    CRLReason,
+    type CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,

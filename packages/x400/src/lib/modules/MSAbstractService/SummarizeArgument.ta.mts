@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
@@ -23,12 +23,12 @@ import {
     _encode_Selector,
 } from '../MSAbstractService/Selector.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from '@wildboar/x500/SelectedAttributeTypes';

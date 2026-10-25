@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DestinationIndex, _decode_DestinationIndex, _encode_DestinationIndex } from "../IN-SSF-SCF-datatypes/DestinationIndex.ta.mjs";
+import { type DestinationIndex, _decode_DestinationIndex, _encode_DestinationIndex } from "../IN-SSF-SCF-datatypes/DestinationIndex.ta.mjs";
 // export { DestinationIndex, _decode_DestinationIndex, _encode_DestinationIndex } from "../IN-SSF-SCF-datatypes/DestinationIndex.ta.mjs";
 import { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../IN-SSF-SCF-datatypes/GapIndicators.ta.mjs";
 // export { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../IN-SSF-SCF-datatypes/GapIndicators.ta.mjs";
-import { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
+import { type RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
 // export { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-SSF-SCF-datatypes/RegistratorIdentifier.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

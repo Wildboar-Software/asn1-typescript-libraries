@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "@wildboar/asn1";
+import { type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type OP_BIND_ROLE } from "../OperationalBindingManagement/OP-BIND-ROLE.oca.mjs";
 /**

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallConditions, _decode_CallConditions, _encode_CallConditions } from "../IN-CS2-datatypes/CallConditions.ta.mjs";
+import { type CallConditions, _decode_CallConditions, _encode_CallConditions } from "../IN-CS2-datatypes/CallConditions.ta.mjs";
 
 
 /**

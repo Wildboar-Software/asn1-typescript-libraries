@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_keyExchangeAlgorithm } from "../AlgorithmObjectIdentifiers/id-keyExchangeAlgorithm.va.mjs";
 import {
-    KEA_Parms_Id,
+    type KEA_Parms_Id,
     _decode_KEA_Parms_Id,
     _encode_KEA_Parms_Id,
 } from "../AlgorithmObjectIdentifiers/KEA-Parms-Id.ta.mjs";

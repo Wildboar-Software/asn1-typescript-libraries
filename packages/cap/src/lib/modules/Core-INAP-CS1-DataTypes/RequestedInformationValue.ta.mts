@@ -12,10 +12,10 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
-import { Digits, _decode_Digits, _encode_Digits } from "../Core-INAP-CS1-DataTypes/Digits.ta.mjs";
-import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../Core-INAP-CS1-DataTypes/Digits.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
 
 
 /**

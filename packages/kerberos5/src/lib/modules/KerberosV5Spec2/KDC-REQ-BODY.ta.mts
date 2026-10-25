@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KDCOptions,
+  type KDCOptions,
   _decode_KDCOptions,
   _encode_KDCOptions,
 } from '../KerberosV5Spec2/KDCOptions.ta.mjs';
@@ -22,27 +22,27 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
-  HostAddresses,
+  type HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
 } from '../KerberosV5Spec2/HostAddresses.ta.mjs';

@@ -2,10 +2,10 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type INTEGER,
     type OCTET_STRING,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

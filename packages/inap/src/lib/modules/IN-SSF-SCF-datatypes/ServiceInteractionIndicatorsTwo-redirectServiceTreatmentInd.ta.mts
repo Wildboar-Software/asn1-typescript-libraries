@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "../IN-SSF-SCF-datatypes/RedirectReason.ta.mjs";
+import { type RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "../IN-SSF-SCF-datatypes/RedirectReason.ta.mjs";
 // export { RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "../IN-SSF-SCF-datatypes/RedirectReason.ta.mjs";
 
 

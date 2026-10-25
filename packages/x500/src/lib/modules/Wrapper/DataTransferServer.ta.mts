@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DataTransferServerAE,
+    type DataTransferServerAE,
     _decode_DataTransferServerAE,
     _encode_DataTransferServerAE,
 } from "../Wrapper/DataTransferServerAE.ta.mjs";
 import {
-    DataTransferServerNEA,
+    type DataTransferServerNEA,
     _decode_DataTransferServerNEA,
     _encode_DataTransferServerNEA,
 } from "../Wrapper/DataTransferServerNEA.ta.mjs";

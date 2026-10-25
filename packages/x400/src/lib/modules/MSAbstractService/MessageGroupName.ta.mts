@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GroupNamePart,
+    type GroupNamePart,
     _decode_GroupNamePart,
     _encode_GroupNamePart,
 } from '../MSAbstractService/GroupNamePart.ta.mjs';

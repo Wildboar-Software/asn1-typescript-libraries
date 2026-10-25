@@ -2,7 +2,7 @@
 import { xPath } from "../CMSObjectIdentifiers/xPath.va.mjs";
 import { type SIGNCRYPTED } from "../CMSSigncryption/SIGNCRYPTED.oca.mjs";
 import {
-    XPathSet,
+    type XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../CMSSigncryption/XPathSet.ta.mjs";

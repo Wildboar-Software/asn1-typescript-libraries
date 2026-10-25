@@ -6,7 +6,7 @@ import {
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
 import {
-    DestinationIndicator,
+    type DestinationIndicator,
     _decode_DestinationIndicator,
     _encode_DestinationIndicator,
 } from "../SelectedAttributeTypes/DestinationIndicator.ta.mjs";

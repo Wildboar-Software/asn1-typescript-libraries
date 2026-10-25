@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    Body,
+    type Body,
     _decode_Body,
     _encode_Body,
 } from '../IPMSInformationObjects/Body.ta.mjs';

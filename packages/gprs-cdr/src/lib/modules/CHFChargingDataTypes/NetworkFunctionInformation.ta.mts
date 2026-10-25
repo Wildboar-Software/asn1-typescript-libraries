@@ -9,8 +9,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkFunctionality, _decode_NetworkFunctionality, _encode_NetworkFunctionality, _enum_for_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
 
 
 /**

@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
 
 
 /**

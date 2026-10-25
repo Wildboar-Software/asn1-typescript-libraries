@@ -10,11 +10,11 @@ import { SleUnbindInvocation, _decode_SleUnbindInvocation, _encode_SleUnbindInvo
 import { SleUnbindReturn, _decode_SleUnbindReturn, _encode_SleUnbindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindReturn.ta.mjs";
 import { RafStartReturn, _decode_RafStartReturn, _encode_RafStartReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafStartReturn.ta.mjs";
 import { SleAcknowledgement, _decode_SleAcknowledgement, _encode_SleAcknowledgement } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement.ta.mjs";
-import { RafTransferBuffer, _decode_RafTransferBuffer, _encode_RafTransferBuffer } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferBuffer.ta.mjs";
+import { type RafTransferBuffer, _decode_RafTransferBuffer, _encode_RafTransferBuffer } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafTransferBuffer.ta.mjs";
 import { SleScheduleStatusReportReturn, _decode_SleScheduleStatusReportReturn, _encode_SleScheduleStatusReportReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportReturn.ta.mjs";
 import { RafStatusReportInvocation, _decode_RafStatusReportInvocation, _encode_RafStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafStatusReportInvocation.ta.mjs";
 import { RafGetParameterReturn, _decode_RafGetParameterReturn, _encode_RafGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-OUTGOING-PDUS/RafGetParameterReturn.ta.mjs";
-import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
+import { type SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

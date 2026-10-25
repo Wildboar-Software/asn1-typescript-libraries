@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ADD_Info, _decode_ADD_Info, _encode_ADD_Info } from "../MAP-MS-DataTypes/ADD-Info.ta.mjs";
-import { EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
-import { PagingArea, _decode_PagingArea, _encode_PagingArea } from "../MAP-MS-DataTypes/PagingArea.ta.mjs";
+import { type EPLMN_List, _decode_EPLMN_List, _encode_EPLMN_List } from "../MAP-MS-DataTypes/EPLMN-List.ta.mjs";
+import { type PagingArea, _decode_PagingArea, _encode_PagingArea } from "../MAP-MS-DataTypes/PagingArea.ta.mjs";
 import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "../MAP-MS-DataTypes/VLR-Capability.ta.mjs";
 
 

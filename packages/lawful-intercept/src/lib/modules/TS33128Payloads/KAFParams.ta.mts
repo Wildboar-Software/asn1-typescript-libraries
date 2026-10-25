@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-import { KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
+import { type KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
 // export { KAF, _decode_KAF, _encode_KAF } from "../TS33128Payloads/KAF.ta.mjs";
-import { KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
+import { type KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
 // export { KAFExpiryTime, _decode_KAFExpiryTime, _encode_KAFExpiryTime } from "../TS33128Payloads/KAFExpiryTime.ta.mjs";
-import { UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS33128Payloads/UAStarParams.ta.mjs";
+import { type UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS33128Payloads/UAStarParams.ta.mjs";
 // export { UAStarParams, _decode_UAStarParams, _encode_UAStarParams } from "../TS33128Payloads/UAStarParams.ta.mjs";
 
 

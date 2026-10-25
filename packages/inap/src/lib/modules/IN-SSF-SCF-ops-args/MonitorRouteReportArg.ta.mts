@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RouteCountersValue, _decode_RouteCountersValue, _encode_RouteCountersValue } from "../IN-SSF-SCF-datatypes/RouteCountersValue.ta.mjs";
+import { type RouteCountersValue, _decode_RouteCountersValue, _encode_RouteCountersValue } from "../IN-SSF-SCF-datatypes/RouteCountersValue.ta.mjs";
 // export { RouteCountersValue, _decode_RouteCountersValue, _encode_RouteCountersValue } from "../IN-SSF-SCF-datatypes/RouteCountersValue.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
 // export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

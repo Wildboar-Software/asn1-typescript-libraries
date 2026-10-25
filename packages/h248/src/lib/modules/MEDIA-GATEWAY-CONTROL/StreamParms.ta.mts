@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { LocalControlDescriptor, _decode_LocalControlDescriptor, _encode_LocalControlDescriptor } from "../MEDIA-GATEWAY-CONTROL/LocalControlDescriptor.ta.mjs";
 import { LocalRemoteDescriptor, _decode_LocalRemoteDescriptor, _encode_LocalRemoteDescriptor } from "../MEDIA-GATEWAY-CONTROL/LocalRemoteDescriptor.ta.mjs";
-import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
+import { type StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
 
 
 /**

@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_internationalISDNNumber } from "../SelectedAttributeTypes/id-at-internationalISDNNumber.va.mjs";
 import {
-    InternationalISDNNumber,
+    type InternationalISDNNumber,
     _decode_InternationalISDNNumber,
     _encode_InternationalISDNNumber,
 } from "../SelectedAttributeTypes/InternationalISDNNumber.ta.mjs";

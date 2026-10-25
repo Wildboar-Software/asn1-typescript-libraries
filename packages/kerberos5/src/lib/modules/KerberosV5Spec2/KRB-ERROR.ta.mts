@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  OCTET_STRING,
+  type OPTIONAL,
+  type INTEGER,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,22 +14,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -39,7 +39,7 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  KerberosString,
+  type KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';

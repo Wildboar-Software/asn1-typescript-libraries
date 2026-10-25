@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartNumber,
+    type BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
 } from '../IPMSHeadingExtensions/BodyPartNumber.ta.mjs';
 import {
-    ForwardedContentToken_Item_body_part_choice,
+    type ForwardedContentToken_Item_body_part_choice,
     _decode_ForwardedContentToken_Item_body_part_choice,
     _encode_ForwardedContentToken_Item_body_part_choice,
 } from '../IPMSSecurityExtensions/ForwardedContentToken-Item-body-part-choice.ta.mjs';

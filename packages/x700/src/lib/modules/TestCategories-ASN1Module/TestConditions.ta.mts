@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestConditions_first,
+    type TestConditions_first,
     _decode_TestConditions_first,
     _encode_TestConditions_first,
 } from '../TestCategories-ASN1Module/TestConditions-first.ta.mjs';
 import {
-    TestConditions_second,
+    type TestConditions_second,
     _decode_TestConditions_second,
     _encode_TestConditions_second,
 } from '../TestCategories-ASN1Module/TestConditions-second.ta.mjs';

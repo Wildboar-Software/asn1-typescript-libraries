@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CancelSessionOk, _decode_CancelSessionOk, _encode_CancelSessionOk } from "../SGP32Definitions/CancelSessionOk.ta.mjs";
-import { CancelSessionResponseEsipa_cancelSessionError, _decode_CancelSessionResponseEsipa_cancelSessionError, _encode_CancelSessionResponseEsipa_cancelSessionError } from "../SGP32Definitions/CancelSessionResponseEsipa-cancelSessionError.ta.mjs";
+import { type CancelSessionResponseEsipa_cancelSessionError, _decode_CancelSessionResponseEsipa_cancelSessionError, _encode_CancelSessionResponseEsipa_cancelSessionError } from "../SGP32Definitions/CancelSessionResponseEsipa-cancelSessionError.ta.mjs";
 
 
 /**

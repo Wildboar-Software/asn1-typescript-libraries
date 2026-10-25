@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ATOMIC_ACTION_IDENTIFIER_owners_name,
+  type ATOMIC_ACTION_IDENTIFIER_owners_name,
   _decode_ATOMIC_ACTION_IDENTIFIER_owners_name,
   _encode_ATOMIC_ACTION_IDENTIFIER_owners_name,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER-owners-name.ta.mjs';
 import {
-  ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
+  type ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _decode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
   _encode_ATOMIC_ACTION_IDENTIFIER_atomic_action_suffix,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER-atomic-action-suffix.ta.mjs';

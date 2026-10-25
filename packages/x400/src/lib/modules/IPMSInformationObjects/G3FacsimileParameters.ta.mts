@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    G3FacsimileNonBasicParameters,
+    type G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.mjs';

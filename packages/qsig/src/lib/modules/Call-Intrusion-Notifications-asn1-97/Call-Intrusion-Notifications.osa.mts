@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
+import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";
 import { remoteUserAlerting } from "../Call-Intrusion-Notifications-asn1-97/remoteUserAlerting.oa.mjs";
 import { intrusionIsImpending } from "../Call-Intrusion-Notifications-asn1-97/intrusionIsImpending.oa.mjs";
 import { intrusionIsEffective } from "../Call-Intrusion-Notifications-asn1-97/intrusionIsEffective.oa.mjs";

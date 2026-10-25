@@ -16,7 +16,7 @@ import {
     _encode_BPUReport,
 } from '../AuthenticationContextForBiometrics/BPUReport.ta.mjs';
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';

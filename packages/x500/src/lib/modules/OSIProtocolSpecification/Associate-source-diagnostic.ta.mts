@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Associate_source_diagnostic_acse_service_provider,
+    type Associate_source_diagnostic_acse_service_provider,
     _decode_Associate_source_diagnostic_acse_service_provider,
     _encode_Associate_source_diagnostic_acse_service_provider,
 } from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-provider.ta.mjs";
 import {
-    Associate_source_diagnostic_acse_service_user,
+    type Associate_source_diagnostic_acse_service_user,
     _decode_Associate_source_diagnostic_acse_service_user,
     _encode_Associate_source_diagnostic_acse_service_user,
 } from "../OSIProtocolSpecification/Associate-source-diagnostic-acse-service-user.ta.mjs";

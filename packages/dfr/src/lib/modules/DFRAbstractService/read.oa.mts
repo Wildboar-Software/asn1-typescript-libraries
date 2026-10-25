@@ -13,7 +13,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReadArgument, _decode_ReadArgument, _encode_ReadArgument } from "../DFRAbstractService/ReadArgument.ta.mjs";
-import { ReadResult, _decode_ReadResult, _encode_ReadResult } from "../DFRAbstractService/ReadResult.ta.mjs";
+import { type ReadResult, _decode_ReadResult, _encode_ReadResult } from "../DFRAbstractService/ReadResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { interServerAccessError } from "../DFRAbstractService/interServerAccessError.oa.mjs";

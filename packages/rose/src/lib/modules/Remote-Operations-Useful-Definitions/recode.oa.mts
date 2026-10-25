@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import { type OPERATION } from '../Remote-Operations-Information-Objects/OPERATION.oca.mjs';
-import { Code } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
+import { type Code } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
 
 
 /**

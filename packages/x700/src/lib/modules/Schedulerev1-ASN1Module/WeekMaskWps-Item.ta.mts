@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DaysOfWeek,
+    type DaysOfWeek,
     _decode_DaysOfWeek,
     _encode_DaysOfWeek,
 } from '../Schedulerev1-ASN1Module/DaysOfWeek.ta.mjs';
 import {
-    TimesOfDayWps,
+    type TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';

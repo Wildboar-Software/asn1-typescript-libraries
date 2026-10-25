@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ContentCorrelator,
+    type ContentCorrelator,
     _decode_ContentCorrelator,
     _encode_ContentCorrelator,
 } from '../MTSAbstractService/ContentCorrelator.ta.mjs';

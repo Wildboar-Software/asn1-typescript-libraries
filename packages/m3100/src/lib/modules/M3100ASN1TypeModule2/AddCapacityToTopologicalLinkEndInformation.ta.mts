@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RequestedPointCapacity,
+    type RequestedPointCapacity,
     _decode_RequestedPointCapacity,
     _encode_RequestedPointCapacity,
 } from '../M3100ASN1TypeModule2/RequestedPointCapacity.ta.mjs';

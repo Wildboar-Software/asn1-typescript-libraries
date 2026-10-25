@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    TeletexData,
+    type TeletexData,
     _decode_TeletexData,
     _encode_TeletexData,
 } from '../IPMSInformationObjects/TeletexData.ta.mjs';

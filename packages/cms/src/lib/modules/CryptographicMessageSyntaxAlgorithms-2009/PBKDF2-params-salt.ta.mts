@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OCTET_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PBKDF2_SaltSourcesAlgorithmIdentifier,
+    type PBKDF2_SaltSourcesAlgorithmIdentifier,
     _decode_PBKDF2_SaltSourcesAlgorithmIdentifier,
     _encode_PBKDF2_SaltSourcesAlgorithmIdentifier,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/PBKDF2-SaltSourcesAlgorithmIdentifier.ta.mjs";

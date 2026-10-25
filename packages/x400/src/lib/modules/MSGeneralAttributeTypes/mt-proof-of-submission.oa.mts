@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ProofOfSubmission,
+    type ProofOfSubmission,
     _decode_ProofOfSubmission,
     _encode_ProofOfSubmission,
 } from '../MTSAbstractService/ProofOfSubmission.ta.mjs';

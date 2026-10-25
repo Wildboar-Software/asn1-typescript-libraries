@@ -5,15 +5,15 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
+import { type AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
 // export { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
-import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
+import { type AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
 // export { AuthAlgorithm, AuthAlgorithm_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_dect /* IMPORTED_LONG_NAMED_INTEGER */, dect /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_gsm /* IMPORTED_LONG_NAMED_INTEGER */, gsm /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, us_ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_dect /* IMPORTED_LONG_NAMED_INTEGER */, us_dect /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_gsm /* IMPORTED_LONG_NAMED_INTEGER */, us_gsm /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
-import { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
+import { type CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
 // export { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 

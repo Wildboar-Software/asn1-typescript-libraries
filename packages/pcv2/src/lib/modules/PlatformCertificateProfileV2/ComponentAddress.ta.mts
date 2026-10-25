@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
-import { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfileV2/AddressType.ta.mjs";
+import { type AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfileV2/AddressType.ta.mjs";
 
 
 /**

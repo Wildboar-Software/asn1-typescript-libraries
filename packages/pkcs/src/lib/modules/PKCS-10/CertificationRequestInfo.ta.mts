@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "@wildboar/dn";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKCS-10/Attributes.ta.mjs";
 import {
-    CertificationRequestInfo_version,
+    type CertificationRequestInfo_version,
     _decode_CertificationRequestInfo_version,
     _encode_CertificationRequestInfo_version,
 } from "../PKCS-10/CertificationRequestInfo-version.ta.mjs";

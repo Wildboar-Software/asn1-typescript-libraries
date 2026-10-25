@@ -7,11 +7,11 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../TETRA-HI2Operations/IPAddress-iP-type.ta.mjs";
+import { type IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../TETRA-HI2Operations/IPAddress-iP-type.ta.mjs";
 // export { IPAddress_iP_type, _enum_for_IPAddress_iP_type, IPAddress_iP_type_iPV4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_type_iPV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type } from "../TETRA-HI2Operations/IPAddress-iP-type.ta.mjs";
-import { IP_value, _decode_IP_value, _encode_IP_value } from "../TETRA-HI2Operations/IP-value.ta.mjs";
+import { type IP_value, _decode_IP_value, _encode_IP_value } from "../TETRA-HI2Operations/IP-value.ta.mjs";
 // export { IP_value, _decode_IP_value, _encode_IP_value } from "../TETRA-HI2Operations/IP-value.ta.mjs";
-import { IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment } from "../TETRA-HI2Operations/IPAddress-iP-assignment.ta.mjs";
+import { type IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment } from "../TETRA-HI2Operations/IPAddress-iP-assignment.ta.mjs";
 // export { IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment, IPAddress_iP_assignment_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_notKnown /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment } from "../TETRA-HI2Operations/IPAddress-iP-assignment.ta.mjs";
 
 

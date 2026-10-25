@@ -1,4 +1,4 @@
-import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, OBJECT_IDENTIFIER, ASN1Element } from "@wildboar/asn1";
+import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, type OBJECT_IDENTIFIER, ASN1Element } from "@wildboar/asn1";
 import rdnSequenceToString from "./tostr.mjs";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { BER, _encodeUTF8String } from "@wildboar/asn1/functional";

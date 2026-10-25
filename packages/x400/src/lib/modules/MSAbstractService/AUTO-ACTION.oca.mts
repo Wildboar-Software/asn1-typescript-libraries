@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoActionType,
+    type AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';

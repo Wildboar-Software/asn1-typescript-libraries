@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
-    UTCTime,
+    type UTCTime,
     type VisibleString,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ErrorId,
+    type ErrorId,
     _decode_ErrorId,
     _encode_ErrorId,
 } from '../Schedulerev1-ASN1Module/ErrorId.ta.mjs';

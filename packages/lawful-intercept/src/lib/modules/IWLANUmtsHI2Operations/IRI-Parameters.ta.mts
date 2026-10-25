@@ -8,31 +8,31 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { IRI_Parameters_initiator, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator } from "../IWLANUmtsHI2Operations/IRI-Parameters-initiator.ta.mjs";
+import { type IRI_Parameters_initiator, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator } from "../IWLANUmtsHI2Operations/IRI-Parameters-initiator.ta.mjs";
 // export { IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator, IRI_Parameters_initiator_not_Available /* IMPORTED_LONG_ENUMERATION_ITEM */, not_Available /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_originating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_terminating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, terminating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator } from "../IWLANUmtsHI2Operations/IRI-Parameters-initiator.ta.mjs";
 import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } from "../IWLANUmtsHI2Operations/PartyInformation.ta.mjs";
 // export { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } from "../IWLANUmtsHI2Operations/PartyInformation.ta.mjs";
-import { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
+import { type National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 // export { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { I_WLANEvent, _decode_I_WLANEvent, _encode_I_WLANEvent, _enum_for_I_WLANEvent } from "../IWLANUmtsHI2Operations/I-WLANEvent.ta.mjs";
+import { type I_WLANEvent, _decode_I_WLANEvent, _encode_I_WLANEvent, _enum_for_I_WLANEvent } from "../IWLANUmtsHI2Operations/I-WLANEvent.ta.mjs";
 // export { I_WLANEvent, _enum_for_I_WLANEvent, I_WLANEvent_i_WLANAccessInitiation /* IMPORTED_LONG_ENUMERATION_ITEM */, i_WLANAccessInitiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, I_WLANEvent_i_WLANAccessTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, i_WLANAccessTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, I_WLANEvent_i_WLANTunnelEstablishment /* IMPORTED_LONG_ENUMERATION_ITEM */, i_WLANTunnelEstablishment /* IMPORTED_SHORT_ENUMERATION_ITEM */, I_WLANEvent_i_WLANTunnelDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, i_WLANTunnelDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, I_WLANEvent_startOfInterceptionCommunicationActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionCommunicationActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, I_WLANEvent_packetDataHeaderInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, packetDataHeaderInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_I_WLANEvent, _encode_I_WLANEvent } from "../IWLANUmtsHI2Operations/I-WLANEvent.ta.mjs";
-import { CorrelationNumber, _decode_CorrelationNumber, _encode_CorrelationNumber } from "../IWLANUmtsHI2Operations/CorrelationNumber.ta.mjs";
+import { type CorrelationNumber, _decode_CorrelationNumber, _encode_CorrelationNumber } from "../IWLANUmtsHI2Operations/CorrelationNumber.ta.mjs";
 // export { CorrelationNumber, _decode_CorrelationNumber, _encode_CorrelationNumber } from "../IWLANUmtsHI2Operations/CorrelationNumber.ta.mjs";
-import { I_WLANOperationErrorCode, _decode_I_WLANOperationErrorCode, _encode_I_WLANOperationErrorCode } from "../IWLANUmtsHI2Operations/I-WLANOperationErrorCode.ta.mjs";
+import { type I_WLANOperationErrorCode, _decode_I_WLANOperationErrorCode, _encode_I_WLANOperationErrorCode } from "../IWLANUmtsHI2Operations/I-WLANOperationErrorCode.ta.mjs";
 // export { I_WLANOperationErrorCode, _decode_I_WLANOperationErrorCode, _encode_I_WLANOperationErrorCode } from "../IWLANUmtsHI2Operations/I-WLANOperationErrorCode.ta.mjs";
 import { I_WLANinformation, _decode_I_WLANinformation, _encode_I_WLANinformation } from "../IWLANUmtsHI2Operations/I-WLANinformation.ta.mjs";
 // export { I_WLANinformation, _decode_I_WLANinformation, _encode_I_WLANinformation } from "../IWLANUmtsHI2Operations/I-WLANinformation.ta.mjs";
-import { VisitedPLMNID, _decode_VisitedPLMNID, _encode_VisitedPLMNID } from "../IWLANUmtsHI2Operations/VisitedPLMNID.ta.mjs";
+import { type VisitedPLMNID, _decode_VisitedPLMNID, _encode_VisitedPLMNID } from "../IWLANUmtsHI2Operations/VisitedPLMNID.ta.mjs";
 // export { VisitedPLMNID, _decode_VisitedPLMNID, _encode_VisitedPLMNID } from "../IWLANUmtsHI2Operations/VisitedPLMNID.ta.mjs";
 import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _encode_National_HI2_ASN1parameters } from "../HI2Operations/National-HI2-ASN1parameters.ta.mjs";
 // export { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _encode_National_HI2_ASN1parameters } from "../HI2Operations/National-HI2-ASN1parameters.ta.mjs";
-import { PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _encode_PacketDataHeaderInformation } from "../IWLANUmtsHI2Operations/PacketDataHeaderInformation.ta.mjs";
+import { type PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _encode_PacketDataHeaderInformation } from "../IWLANUmtsHI2Operations/PacketDataHeaderInformation.ta.mjs";
 // export { PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _encode_PacketDataHeaderInformation } from "../IWLANUmtsHI2Operations/PacketDataHeaderInformation.ta.mjs";
 
 

@@ -2,12 +2,12 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CRLReason,
+    type CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
 } from "@wildboar/pki-stub";

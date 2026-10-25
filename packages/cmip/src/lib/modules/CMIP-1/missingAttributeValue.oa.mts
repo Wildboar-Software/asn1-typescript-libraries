@@ -18,7 +18,7 @@ import {
   _encode_Code,
 } from '@wildboar/rose';
 import {
-  AttributeId,
+  type AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';

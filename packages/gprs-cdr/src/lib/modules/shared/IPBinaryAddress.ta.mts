@@ -6,7 +6,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPBinV6AddressWithOrWithoutPrefixLength, _decode_IPBinV6AddressWithOrWithoutPrefixLength, _encode_IPBinV6AddressWithOrWithoutPrefixLength } from "./IPBinV6AddressWithOrWithoutPrefixLength.ta.mjs";
+import { type IPBinV6AddressWithOrWithoutPrefixLength, _decode_IPBinV6AddressWithOrWithoutPrefixLength, _encode_IPBinV6AddressWithOrWithoutPrefixLength } from "./IPBinV6AddressWithOrWithoutPrefixLength.ta.mjs";
 
 
 /**

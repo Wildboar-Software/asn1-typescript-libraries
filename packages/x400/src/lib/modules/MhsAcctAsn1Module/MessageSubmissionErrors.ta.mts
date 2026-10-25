@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubmissionError,
+    type SubmissionError,
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';

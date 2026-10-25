@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NumericString } from "@wildboar/asn1";
+import { type NumericString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_numericString } from "../SelectedAttributeTypes/id-lsx-numericString.va.mjs";

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExplicitTP,
+    type ExplicitTP,
     _decode_ExplicitTP,
     _encode_ExplicitTP,
 } from '../ASN1DefinedTypesModule/ExplicitTP.ta.mjs';

@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PstnIsdnIRIContents, _decode_PstnIsdnIRIContents, _encode_PstnIsdnIRIContents } from "../PstnIsdnPDU/PstnIsdnIRIContents.ta.mjs";
+import { type PstnIsdnIRIContents, _decode_PstnIsdnIRIContents, _encode_PstnIsdnIRIContents } from "../PstnIsdnPDU/PstnIsdnIRIContents.ta.mjs";
 // export { PstnIsdnIRIContents, _decode_PstnIsdnIRIContents, _encode_PstnIsdnIRIContents } from "../PstnIsdnPDU/PstnIsdnIRIContents.ta.mjs";
 
 

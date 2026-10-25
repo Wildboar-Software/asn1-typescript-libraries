@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IpnSecurityResponse_content_or_arguments,
+    type IpnSecurityResponse_content_or_arguments,
     _decode_IpnSecurityResponse_content_or_arguments,
     _encode_IpnSecurityResponse_content_or_arguments,
 } from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments.ta.mjs';
 import {
-    SecurityDiagnosticCode,
+    type SecurityDiagnosticCode,
     _decode_SecurityDiagnosticCode,
     _encode_SecurityDiagnosticCode,
 } from '../IPMSSecurityExtensions/SecurityDiagnosticCode.ta.mjs';

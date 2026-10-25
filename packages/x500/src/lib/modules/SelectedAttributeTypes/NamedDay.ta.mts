@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    NamedDay_bitNamedDays,
+    type NamedDay_bitNamedDays,
     _decode_NamedDay_bitNamedDays,
     _encode_NamedDay_bitNamedDays,
 } from "../SelectedAttributeTypes/NamedDay-bitNamedDays.ta.mjs";

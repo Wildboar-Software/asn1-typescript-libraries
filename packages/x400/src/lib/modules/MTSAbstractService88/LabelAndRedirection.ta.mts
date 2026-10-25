@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    UserSecurityLabel,
+    type UserSecurityLabel,
     _decode_UserSecurityLabel,
     _encode_UserSecurityLabel,
 } from '../MTSAbstractService88/UserSecurityLabel.ta.mjs';
 import {
-    RecipientAssignedAlternateRecipient,
+    type RecipientAssignedAlternateRecipient,
     _decode_RecipientAssignedAlternateRecipient,
     _encode_RecipientAssignedAlternateRecipient,
 } from '../MTSAbstractService/RecipientAssignedAlternateRecipient.ta.mjs';

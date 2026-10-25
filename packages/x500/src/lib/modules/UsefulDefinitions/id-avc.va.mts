@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { attributeValueContext } from "../UsefulDefinitions/attributeValueContext.va.mjs";
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 /**
  * @summary id_avc
  * @description

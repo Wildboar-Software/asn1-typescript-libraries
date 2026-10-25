@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_SS_Info, _encode_SS_Info, SS_Info } from "../MAP-SS-DataTypes/SS-Info.ta.mjs";
+import { _decode_SS_Info, _encode_SS_Info, type SS_Info } from "../MAP-SS-DataTypes/SS-Info.ta.mjs";
 
 
 import { maxNumOfSS } from "./maxNumOfSS.va.mjs";

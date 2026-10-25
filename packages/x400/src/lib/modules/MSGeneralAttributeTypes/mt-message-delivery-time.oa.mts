@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';

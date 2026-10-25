@@ -16,22 +16,22 @@ import {
     _encode_CertificateListContent_revokedCertificates_Item,
 } from "../AuthenticationFramework/CertificateListContent-revokedCertificates-Item.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../AuthenticationFramework/Extensions.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../AuthenticationFramework/Version.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrencyInfoList } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfoList.ta.mjs";
+import { type AOCSCurrencyInfoList, _decode_AOCSCurrencyInfoList, _encode_AOCSCurrencyInfoList } from "../SS-AOC-Operations-asn1-97/AOCSCurrencyInfoList.ta.mjs";
 
 /**
  * @summary AocRateArg_aocRate

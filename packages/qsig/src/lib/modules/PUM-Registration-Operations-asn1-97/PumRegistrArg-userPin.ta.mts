@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-Operations-asn1-97/UserPin.ta.mjs";
+import { type UserPin, _decode_UserPin, _encode_UserPin } from "../PUM-Registration-Operations-asn1-97/UserPin.ta.mjs";
 
 /**
  * @summary PumRegistrArg_userPin

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
-import { OccurrenceByAttributes_Item_occurrences, _decode_OccurrenceByAttributes_Item_occurrences, _encode_OccurrenceByAttributes_Item_occurrences } from "../Z39-50-APDU-2001/OccurrenceByAttributes-Item-occurrences.ta.mjs";
-import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
+import { type AttributeList, _decode_AttributeList, _encode_AttributeList } from "../Z39-50-APDU-2001/AttributeList.ta.mjs";
+import { type OccurrenceByAttributes_Item_occurrences, _decode_OccurrenceByAttributes_Item_occurrences, _encode_OccurrenceByAttributes_Item_occurrences } from "../Z39-50-APDU-2001/OccurrenceByAttributes-Item-occurrences.ta.mjs";
+import { type OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

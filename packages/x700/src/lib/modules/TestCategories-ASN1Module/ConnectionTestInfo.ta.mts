@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPattern,
+    type TestPattern,
     _decode_TestPattern,
     _encode_TestPattern,
 } from '../TestCategories-ASN1Module/TestPattern.ta.mjs';
 import {
-    TestDirection,
+    type TestDirection,
     _decode_TestDirection,
     _encode_TestDirection,
 } from '../TestCategories-ASN1Module/TestDirection.ta.mjs';
 import {
-    TestDuration,
+    type TestDuration,
     _decode_TestDuration,
     _encode_TestDuration,
 } from '../TestCategories-ASN1Module/TestDuration.ta.mjs';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';

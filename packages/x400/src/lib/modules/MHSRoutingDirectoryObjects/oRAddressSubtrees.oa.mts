@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    ORAddressSubtreeNames,
+    type ORAddressSubtreeNames,
     _decode_ORAddressSubtreeNames,
     _encode_ORAddressSubtreeNames,
 } from '../MHSRoutingDirectoryObjects/ORAddressSubtreeNames.ta.mjs';

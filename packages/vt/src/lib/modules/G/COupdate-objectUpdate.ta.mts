@@ -16,10 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
 import { COupdate_objectUpdate_booleanUpdate, _decode_COupdate_objectUpdate_booleanUpdate, _encode_COupdate_objectUpdate_booleanUpdate } from "../G/COupdate-objectUpdate-booleanUpdate.ta.mjs";
 import { COupdate_objectUpdate_multiElement_Item, _decode_COupdate_objectUpdate_multiElement_Item, _encode_COupdate_objectUpdate_multiElement_Item } from "../G/COupdate-objectUpdate-multiElement-Item.ta.mjs";
 import { CCOupdate, _decode_CCOupdate, _encode_CCOupdate } from "../G/CCOupdate.ta.mjs";
-import { FDCOupdate, _decode_FDCOupdate, _encode_FDCOupdate } from "../G/FDCOupdate.ta.mjs";
-import { FEICOupdate, _decode_FEICOupdate, _encode_FEICOupdate } from "../G/FEICOupdate.ta.mjs";
-import { FEPCOupdate, _decode_FEPCOupdate, _encode_FEPCOupdate } from "../G/FEPCOupdate.ta.mjs";
-import { RIOupdate, _decode_RIOupdate, _encode_RIOupdate } from "../G/RIOupdate.ta.mjs";
+import { type FDCOupdate, _decode_FDCOupdate, _encode_FDCOupdate } from "../G/FDCOupdate.ta.mjs";
+import { type FEICOupdate, _decode_FEICOupdate, _encode_FEICOupdate } from "../G/FEICOupdate.ta.mjs";
+import { type FEPCOupdate, _decode_FEPCOupdate, _encode_FEPCOupdate } from "../G/FEPCOupdate.ta.mjs";
+import { type RIOupdate, _decode_RIOupdate, _encode_RIOupdate } from "../G/RIOupdate.ta.mjs";
 
 
 /**

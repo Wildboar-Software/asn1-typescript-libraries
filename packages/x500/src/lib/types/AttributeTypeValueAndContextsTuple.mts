@@ -11,4 +11,4 @@ import type { Context } from "../modules/InformationFramework/Context.ta.mjs";
 export
 type ATVAC = [ OBJECT_IDENTIFIER, ASN1Element | undefined, Context[] ];
 
-export default ATVAC;
+export type { ATVAC as default };

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, EXTERNAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type EXTERNAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     AuthenticationLevel_basicLevels,

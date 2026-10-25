@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCCType, _decode_MCCType, _encode_MCCType } from "../EN301040/MCCType.ta.mjs";
+import { type MCCType, _decode_MCCType, _encode_MCCType } from "../EN301040/MCCType.ta.mjs";
 // export { MCCType, _decode_MCCType, _encode_MCCType } from "../EN301040/MCCType.ta.mjs";
-import { MNCType, _decode_MNCType, _encode_MNCType } from "../EN301040/MNCType.ta.mjs";
+import { type MNCType, _decode_MNCType, _encode_MNCType } from "../EN301040/MNCType.ta.mjs";
 // export { MNCType, _decode_MNCType, _encode_MNCType } from "../EN301040/MNCType.ta.mjs";
-import { SSIType, _decode_SSIType, _encode_SSIType } from "../EN301040/SSIType.ta.mjs";
+import { type SSIType, _decode_SSIType, _encode_SSIType } from "../EN301040/SSIType.ta.mjs";
 // export { SSIType, _decode_SSIType, _encode_SSIType } from "../EN301040/SSIType.ta.mjs";
 
 

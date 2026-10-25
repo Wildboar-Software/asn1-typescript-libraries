@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientReference,
+    type RecipientReference,
     _decode_RecipientReference,
     _encode_RecipientReference,
 } from '../EDIMSInformationObjects/RecipientReference.ta.mjs';
 import {
-    RecipientReferenceQualifier,
+    type RecipientReferenceQualifier,
     _decode_RecipientReferenceQualifier,
     _encode_RecipientReferenceQualifier,
 } from '../EDIMSInformationObjects/RecipientReferenceQualifier.ta.mjs';

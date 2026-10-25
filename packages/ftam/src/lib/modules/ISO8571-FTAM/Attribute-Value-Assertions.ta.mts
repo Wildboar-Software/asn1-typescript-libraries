@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  OR_Set,
+  type OR_Set,
   _decode_OR_Set,
   _encode_OR_Set,
 } from '../ISO8571-FTAM/OR-Set.ta.mjs';

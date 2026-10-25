@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../G/ErrorCode.ta.mjs";
+import { type ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../G/ErrorCode.ta.mjs";
 
 
 /**

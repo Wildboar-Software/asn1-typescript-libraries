@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ContentConfidentialityAlgorithmIdentifier,
+    type ContentConfidentialityAlgorithmIdentifier,
     _decode_ContentConfidentialityAlgorithmIdentifier,
     _encode_ContentConfidentialityAlgorithmIdentifier,
 } from '../MTSAbstractService/ContentConfidentialityAlgorithmIdentifier.ta.mjs';

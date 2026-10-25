@@ -7,11 +7,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CallRecord, _decode_CallRecord, _encode_CallRecord } from "../IN-CS2-datatypes/CallRecord.ta.mjs";
 // export { CallRecord, _decode_CallRecord, _encode_CallRecord } from "../IN-CS2-datatypes/CallRecord.ta.mjs";
-import { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS2-datatypes/UserCredit.ta.mjs";
+import { type UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS2-datatypes/UserCredit.ta.mjs";
 // export { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS2-datatypes/UserCredit.ta.mjs";
-import { CallIdentifier, _decode_CallIdentifier, _encode_CallIdentifier } from "../IN-CS2-SCF-SCF-ops-args/CallIdentifier.ta.mjs";
+import { type CallIdentifier, _decode_CallIdentifier, _encode_CallIdentifier } from "../IN-CS2-SCF-SCF-ops-args/CallIdentifier.ta.mjs";
 // export { CallIdentifier, _decode_CallIdentifier, _encode_CallIdentifier } from "../IN-CS2-SCF-SCF-ops-args/CallIdentifier.ta.mjs";
-import { AccountNumber, _decode_AccountNumber, _encode_AccountNumber } from "../IN-CS2-datatypes/AccountNumber.ta.mjs";
+import { type AccountNumber, _decode_AccountNumber, _encode_AccountNumber } from "../IN-CS2-datatypes/AccountNumber.ta.mjs";
 // export { AccountNumber, _decode_AccountNumber, _encode_AccountNumber } from "../IN-CS2-datatypes/AccountNumber.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";

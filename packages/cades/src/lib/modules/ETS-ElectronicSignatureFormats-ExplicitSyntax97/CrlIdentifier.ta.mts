@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type INTEGER,
-    UTCTime,
+    type UTCTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,7 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name, _decode_Name, _encode_Name
+    type Name, _decode_Name, _encode_Name
 } from "@wildboar/dn";
 
 

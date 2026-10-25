@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,23 +17,23 @@ import {
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
 import {
-  LDAPResult_resultCode,
+  type LDAPResult_resultCode,
   _enum_for_LDAPResult_resultCode,
   _decode_LDAPResult_resultCode,
   _encode_LDAPResult_resultCode,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta.mjs';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  LDAPString,
+  type LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
 import {
-  Referral,
+  type Referral,
   _decode_Referral,
   _encode_Referral,
 } from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.mjs';

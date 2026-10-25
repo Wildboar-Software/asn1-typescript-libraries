@@ -12,7 +12,7 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    ServiceProblem,
+    type ServiceProblem,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
 } from "../DirectoryAbstractService/ServiceProblem.ta.mjs";
@@ -22,7 +22,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, _encode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, DisableEmergencyProfileResponse_disableEmergencyProfileResult } from "../SGP32Definitions/DisableEmergencyProfileResponse-disableEmergencyProfileResult.ta.mjs";
+import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, _encode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, type DisableEmergencyProfileResponse_disableEmergencyProfileResult } from "../SGP32Definitions/DisableEmergencyProfileResponse-disableEmergencyProfileResult.ta.mjs";
 
 
 /**

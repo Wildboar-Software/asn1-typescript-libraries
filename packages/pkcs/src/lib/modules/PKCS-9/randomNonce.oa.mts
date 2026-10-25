@@ -6,7 +6,7 @@ import {
 import { octetStringMatch } from "@wildboar/x500/SelectedAttributeTypes";
 import { pkcs_9_at_randomNonce } from "../PKCS-9/pkcs-9-at-randomNonce.va.mjs";
 import {
-    RandomNonce,
+    type RandomNonce,
     _decode_RandomNonce,
     _encode_RandomNonce,
 } from "../PKCS-9/RandomNonce.ta.mjs";

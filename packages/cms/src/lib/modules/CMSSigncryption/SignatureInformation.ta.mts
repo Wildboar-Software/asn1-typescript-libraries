@@ -11,17 +11,17 @@ import {
     _encode_ToBeSigned,
 } from "../CMSSigncryption/ToBeSigned.ta.mjs";
 import {
-    SignatureAlgorithmIdentifier,
+    type SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.mjs";
 import {
-    SignatureValue,
+    type SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
 } from "../CryptographicMessageSyntax-2010/SignatureValue.ta.mjs";
 import {
-    SignerIdentifier,
+    type SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";

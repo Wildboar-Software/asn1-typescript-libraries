@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ForwardedContentToken,
+    type ForwardedContentToken,
     _decode_ForwardedContentToken,
     _encode_ForwardedContentToken,
 } from '../IPMSSecurityExtensions/ForwardedContentToken.ta.mjs';

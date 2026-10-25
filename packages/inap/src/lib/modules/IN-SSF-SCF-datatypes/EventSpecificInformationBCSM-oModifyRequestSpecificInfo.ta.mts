@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
+import { type ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
 // export { ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
-import { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
+import { type AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
 // export { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
 
 

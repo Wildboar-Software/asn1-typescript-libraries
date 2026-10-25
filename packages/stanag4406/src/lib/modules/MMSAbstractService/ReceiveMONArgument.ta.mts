@@ -10,7 +10,7 @@ import {
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
-import { MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.mjs";
+import { type MON, _decode_MON, _encode_MON } from "../MMSInformationObjects/MON.ta.mjs";
 
 
 /**

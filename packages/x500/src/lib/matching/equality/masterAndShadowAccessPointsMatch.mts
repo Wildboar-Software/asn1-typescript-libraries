@@ -3,11 +3,11 @@ import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import { _decodeSetOf } from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
 } from "../../modules/InformationFramework/Name.ta.mjs";
 import {
-    MasterAndShadowAccessPoints,
+    type MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
 } from "../../modules/DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
 import { compareName } from "@wildboar/dn";

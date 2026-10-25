@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_MT_SMS_TPDU_Type, _encode_MT_SMS_TPDU_Type, MT_SMS_TPDU_Type } from "../MAP-MS-DataTypes/MT-SMS-TPDU-Type.ta.mjs";
+import { _decode_MT_SMS_TPDU_Type, _encode_MT_SMS_TPDU_Type, type MT_SMS_TPDU_Type } from "../MAP-MS-DataTypes/MT-SMS-TPDU-Type.ta.mjs";
 
 
 import { maxNumOfTPDUTypes } from "./maxNumOfTPDUTypes.va.mjs";

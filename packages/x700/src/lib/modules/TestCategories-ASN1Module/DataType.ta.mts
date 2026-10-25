@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IntegerDataType,
+    type IntegerDataType,
     _decode_IntegerDataType,
     _encode_IntegerDataType,
 } from '../TestCategories-ASN1Module/IntegerDataType.ta.mjs';

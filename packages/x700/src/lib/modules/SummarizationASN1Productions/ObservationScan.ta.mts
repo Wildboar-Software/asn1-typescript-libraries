@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -22,7 +22,7 @@ import {
     _encode_AttributeMeasure,
 } from '../SummarizationASN1Productions/AttributeMeasure.ta.mjs';
 import {
-    NumericMeasure,
+    type NumericMeasure,
     _decode_NumericMeasure,
     _encode_NumericMeasure,
 } from '../SummarizationASN1Productions/NumericMeasure.ta.mjs';

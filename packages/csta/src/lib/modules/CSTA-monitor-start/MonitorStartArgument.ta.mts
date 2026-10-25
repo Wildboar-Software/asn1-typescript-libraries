@@ -3,12 +3,12 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MonitorObject, _decode_MonitorObject, _encode_MonitorObject } from "../CSTA-status-reporting/MonitorObject.ta.mjs";
+import { type MonitorObject, _decode_MonitorObject, _encode_MonitorObject } from "../CSTA-status-reporting/MonitorObject.ta.mjs";
 
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
 
@@ -20,7 +20,7 @@ import {
 } from "../CSTA-status-reporting/MonitorType.ta.mjs";
 
 import {
-    MonitorMediaClass,
+    type MonitorMediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MonitorMediaClass,
     _encode_MonitorMediaClass

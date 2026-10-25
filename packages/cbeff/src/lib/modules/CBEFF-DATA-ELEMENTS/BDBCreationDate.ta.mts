@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Date_Time,
+  type Date_Time,
   _decode_Date_Time,
   _encode_Date_Time,
 } from '../CBEFF-DATA-ELEMENTS/Date-Time.ta.mjs';

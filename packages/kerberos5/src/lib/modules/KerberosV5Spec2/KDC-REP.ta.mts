@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
   _encode_PA_DATA,
 } from '../KerberosV5Spec2/PA-DATA.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';

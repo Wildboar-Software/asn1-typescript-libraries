@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { connectSMS } from "../CAP-SMS-ops-args/connectSMS.oa.mjs";
 import { eventReportSMS } from "../CAP-SMS-ops-args/eventReportSMS.oa.mjs";
 import { furnishChargingInformationSMS } from "../CAP-SMS-ops-args/furnishChargingInformationSMS.oa.mjs";

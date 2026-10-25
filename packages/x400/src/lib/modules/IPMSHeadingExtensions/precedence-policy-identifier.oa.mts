@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    PrecedencePolicyIdentifier,
+    type PrecedencePolicyIdentifier,
     _decode_PrecedencePolicyIdentifier,
     _encode_PrecedencePolicyIdentifier,
 } from '../IPMSHeadingExtensions/PrecedencePolicyIdentifier.ta.mjs';

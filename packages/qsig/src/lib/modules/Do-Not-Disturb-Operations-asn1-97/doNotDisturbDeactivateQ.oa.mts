@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { DNDDeactivateArg, _decode_DNDDeactivateArg, _encode_DNDDeactivateArg } from "../Do-Not-Disturb-Operations-asn1-97/DNDDeactivateArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Do-Not-Disturb-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Do-Not-Disturb-Operations-asn1-97/DummyRes.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";

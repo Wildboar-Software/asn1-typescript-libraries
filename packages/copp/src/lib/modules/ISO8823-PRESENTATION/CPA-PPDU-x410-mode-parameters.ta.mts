@@ -15,7 +15,7 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTOACapdu,
     _encode_RTOACapdu,
-    ConnectionData,
+    type ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
 } from '@wildboar/rtse';

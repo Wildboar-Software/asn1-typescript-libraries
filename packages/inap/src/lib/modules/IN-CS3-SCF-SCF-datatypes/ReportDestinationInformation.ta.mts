@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Destination, _decode_Destination, _encode_Destination } from "../IN-CS3-SCF-SCF-datatypes/Destination.ta.mjs";
 // export { Destination, _decode_Destination, _encode_Destination } from "../IN-CS3-SCF-SCF-datatypes/Destination.ta.mjs";
-import { ProtocolInfo, _decode_ProtocolInfo, _encode_ProtocolInfo } from "../IN-CS3-SCF-SCF-datatypes/ProtocolInfo.ta.mjs";
+import { type ProtocolInfo, _decode_ProtocolInfo, _encode_ProtocolInfo } from "../IN-CS3-SCF-SCF-datatypes/ProtocolInfo.ta.mjs";
 // export { ProtocolInfo, _decode_ProtocolInfo, _encode_ProtocolInfo } from "../IN-CS3-SCF-SCF-datatypes/ProtocolInfo.ta.mjs";
 
 

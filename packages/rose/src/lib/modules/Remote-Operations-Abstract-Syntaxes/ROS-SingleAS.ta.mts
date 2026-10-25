@@ -15,7 +15,7 @@ import {
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
 import {
-  ROS,
+  type ROS,
   _decode_ROS,
   _encode_ROS,
 } from '../Remote-Operations-Generic-ROS-PDUs/ROS.ta.mjs';

@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_FiveGProSeAuthorizationIndicator, _encode_FiveGProSeAuthorizationIndicator, _enum_for_FiveGProSeAuthorizationIndicator, FiveGProSeAuthorizationIndicator } from "../TS33128Payloads/FiveGProSeAuthorizationIndicator.ta.mjs";

@@ -16,11 +16,11 @@ import {
     _encode_ContentInfo,
 } from "../PKCS7/ContentInfo.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 
 /**

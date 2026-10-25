@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
-import { AocCompleteArg_completeArgExtension, _decode_AocCompleteArg_completeArgExtension, _encode_AocCompleteArg_completeArgExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteArg-completeArgExtension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type ChargingAssociation, _decode_ChargingAssociation, _encode_ChargingAssociation } from "../SS-AOC-Operations-asn1-97/ChargingAssociation.ta.mjs";
+import { type AocCompleteArg_completeArgExtension, _decode_AocCompleteArg_completeArgExtension, _encode_AocCompleteArg_completeArgExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteArg-completeArgExtension.ta.mjs";
 
 /**
  * @summary AocCompleteArg

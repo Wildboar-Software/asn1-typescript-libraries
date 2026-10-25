@@ -2,12 +2,12 @@
 import { id_opcode_coordinateShadowUpdate } from "../CommonProtocolSpecification/id-opcode-coordinateShadowUpdate.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    CoordinateShadowUpdateArgument,
+    type CoordinateShadowUpdateArgument,
     _decode_CoordinateShadowUpdateArgument,
     _encode_CoordinateShadowUpdateArgument,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgument.ta.mjs";
 import {
-    CoordinateShadowUpdateResult,
+    type CoordinateShadowUpdateResult,
     _decode_CoordinateShadowUpdateResult,
     _encode_CoordinateShadowUpdateResult,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateResult.ta.mjs";

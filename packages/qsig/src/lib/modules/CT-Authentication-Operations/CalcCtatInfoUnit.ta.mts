@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
+import { type AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
 // export { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
-import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
+import { type AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
 // export { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
-import { DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../CT-Authentication-Operations/DerivedCipherKey.ta.mjs";
+import { type DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../CT-Authentication-Operations/DerivedCipherKey.ta.mjs";
 // export { DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../CT-Authentication-Operations/DerivedCipherKey.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 // export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 
 

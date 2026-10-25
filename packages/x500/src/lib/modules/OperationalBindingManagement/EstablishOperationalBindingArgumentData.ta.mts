@@ -17,7 +17,7 @@ import {
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
 import {
-    EstablishOperationalBindingArgumentData_initiator,
+    type EstablishOperationalBindingArgumentData_initiator,
     _decode_EstablishOperationalBindingArgumentData_initiator,
     _encode_EstablishOperationalBindingArgumentData_initiator,
 } from "../OperationalBindingManagement/EstablishOperationalBindingArgumentData-initiator.ta.mjs";

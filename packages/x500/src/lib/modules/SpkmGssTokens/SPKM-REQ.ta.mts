@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthorizationData,
+    type AuthorizationData,
     _decode_AuthorizationData,
     _encode_AuthorizationData,
 } from "../SpkmGssTokens/AuthorizationData.ta.mjs";

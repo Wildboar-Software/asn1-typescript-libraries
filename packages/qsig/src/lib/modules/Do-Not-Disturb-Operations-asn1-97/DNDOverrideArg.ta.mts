@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DNDOCapabilityLevel, _decode_DNDOCapabilityLevel, _encode_DNDOCapabilityLevel, _enum_for_DNDOCapabilityLevel } from "../Do-Not-Disturb-Operations-asn1-97/DNDOCapabilityLevel.ta.mjs";
-import { DNDOverrideArg_argumentExtension, _decode_DNDOverrideArg_argumentExtension, _encode_DNDOverrideArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDOverrideArg-argumentExtension.ta.mjs";
+import { type DNDOverrideArg_argumentExtension, _decode_DNDOverrideArg_argumentExtension, _encode_DNDOverrideArg_argumentExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDOverrideArg-argumentExtension.ta.mjs";
 
 /**
  * @summary DNDOverrideArg

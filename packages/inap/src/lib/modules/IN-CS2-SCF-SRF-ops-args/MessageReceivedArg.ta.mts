@@ -8,7 +8,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ReceivedStatus, _decode_ReceivedStatus, _encode_ReceivedStatus, _enum_for_ReceivedStatus } from "../IN-CS2-datatypes/ReceivedStatus.ta.mjs";
 // export { ReceivedStatus, _enum_for_ReceivedStatus, ReceivedStatus_messageComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, messageComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReceivedStatus_messageInterrupted /* IMPORTED_LONG_ENUMERATION_ITEM */, messageInterrupted /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReceivedStatus_messageTimeOut /* IMPORTED_LONG_ENUMERATION_ITEM */, messageTimeOut /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReceivedStatus, _encode_ReceivedStatus } from "../IN-CS2-datatypes/ReceivedStatus.ta.mjs";
-import { RecordedMessageID, _decode_RecordedMessageID, _encode_RecordedMessageID } from "../IN-CS2-datatypes/RecordedMessageID.ta.mjs";
+import { type RecordedMessageID, _decode_RecordedMessageID, _encode_RecordedMessageID } from "../IN-CS2-datatypes/RecordedMessageID.ta.mjs";
 // export { RecordedMessageID, _decode_RecordedMessageID, _encode_RecordedMessageID } from "../IN-CS2-datatypes/RecordedMessageID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";

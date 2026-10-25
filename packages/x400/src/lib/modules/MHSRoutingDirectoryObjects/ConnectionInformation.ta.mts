@@ -3,7 +3,7 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type OBJECT_IDENTIFIER,
-    INSTANCE_OF,
+    type INSTANCE_OF,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -16,7 +16,7 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va.mjs';
 import {
-    AuthenticationMethod,
+    type AuthenticationMethod,
     simple_password /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AuthenticationMethod,
     _encode_AuthenticationMethod,

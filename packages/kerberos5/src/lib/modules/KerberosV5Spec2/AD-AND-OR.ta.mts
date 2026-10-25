@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
-  AuthorizationData,
+  type AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';

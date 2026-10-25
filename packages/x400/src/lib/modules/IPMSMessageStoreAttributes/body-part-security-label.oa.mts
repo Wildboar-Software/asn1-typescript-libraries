@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    BodyPartSecurityLabel,
+    type BodyPartSecurityLabel,
     _decode_BodyPartSecurityLabel,
     _encode_BodyPartSecurityLabel,
 } from '../IPMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs';

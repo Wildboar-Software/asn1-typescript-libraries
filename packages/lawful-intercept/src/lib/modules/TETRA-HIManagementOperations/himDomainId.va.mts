@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { tETRADomainId } from "../TETRA-HIManagementOperations/tETRADomainId.va.mjs";
 // export { tETRADomainId } from "../TETRA-HIManagementOperations/tETRADomainId.va.mjs";

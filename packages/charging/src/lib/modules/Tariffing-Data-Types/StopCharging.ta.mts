@@ -6,8 +6,8 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StopCharging_stopIndicators, _decode_StopCharging_stopIndicators, _encode_StopCharging_stopIndicators } from "../Tariffing-Data-Types/StopCharging-stopIndicators.ta.mjs";
-import { NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkIdentification } from "../Tariffing-Data-Types/NetworkIdentification.ta.mjs";
+import { type StopCharging_stopIndicators, _decode_StopCharging_stopIndicators, _encode_StopCharging_stopIndicators } from "../Tariffing-Data-Types/StopCharging-stopIndicators.ta.mjs";
+import { type NetworkIdentification, _decode_NetworkIdentification, _encode_NetworkIdentification } from "../Tariffing-Data-Types/NetworkIdentification.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 import { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
 import { maxNetworkOperators } from "../Tariffing-Data-Types/maxNetworkOperators.va.mjs";

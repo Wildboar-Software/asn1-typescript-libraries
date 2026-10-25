@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { signcrypted_envelope } from "../CMSObjectIdentifiers/signcrypted-envelope.va.mjs";
 import {
-    SigncryptedKey,
+    type SigncryptedKey,
     _decode_SigncryptedKey,
     _encode_SigncryptedKey,
 } from "../CMSSigncryption/SigncryptedKey.ta.mjs";

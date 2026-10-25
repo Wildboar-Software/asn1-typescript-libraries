@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MasterAndShadowAccessPoints,
+    type MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
 } from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";

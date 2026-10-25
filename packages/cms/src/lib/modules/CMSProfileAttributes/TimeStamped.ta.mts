@@ -6,11 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../CMSProfileAttributes/TimeStamp.ta.mjs";
-import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
 
 /**
  * @summary TimeStamped

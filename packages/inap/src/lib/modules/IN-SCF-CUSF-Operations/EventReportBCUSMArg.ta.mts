@@ -7,21 +7,21 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { EventTypeBCUSM, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM, _enum_for_EventTypeBCUSM } from "../IN-SCF-CUSF-Datatypes/EventTypeBCUSM.ta.mjs";
 // export { EventTypeBCUSM, _enum_for_EventTypeBCUSM, EventTypeBCUSM_componentReceived /* IMPORTED_LONG_ENUMERATION_ITEM */, componentReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCUSM_associationReleaseRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, associationReleaseRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCUSM_activationReceivedAndAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, activationReceivedAndAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM } from "../IN-SCF-CUSF-Datatypes/EventTypeBCUSM.ta.mjs";
-import { EventSpecificInformationBCUSM, _decode_EventSpecificInformationBCUSM, _encode_EventSpecificInformationBCUSM } from "../IN-SCF-CUSF-Datatypes/EventSpecificInformationBCUSM.ta.mjs";
+import { type EventSpecificInformationBCUSM, _decode_EventSpecificInformationBCUSM, _encode_EventSpecificInformationBCUSM } from "../IN-SCF-CUSF-Datatypes/EventSpecificInformationBCUSM.ta.mjs";
 // export { EventSpecificInformationBCUSM, _decode_EventSpecificInformationBCUSM, _encode_EventSpecificInformationBCUSM } from "../IN-SCF-CUSF-Datatypes/EventSpecificInformationBCUSM.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-SSF-SCF-datatypes/MiscCallInfo.ta.mjs";
 // export { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-SSF-SCF-datatypes/MiscCallInfo.ta.mjs";
-import { CUApplicationInd, _decode_CUApplicationInd, _encode_CUApplicationInd } from "../IN-SCF-CUSF-Datatypes/CUApplicationInd.ta.mjs";
+import { type CUApplicationInd, _decode_CUApplicationInd, _encode_CUApplicationInd } from "../IN-SCF-CUSF-Datatypes/CUApplicationInd.ta.mjs";
 // export { CUApplicationInd, _decode_CUApplicationInd, _encode_CUApplicationInd } from "../IN-SCF-CUSF-Datatypes/CUApplicationInd.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 import { ComponentType, _decode_ComponentType, _encode_ComponentType, _enum_for_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
 // export { ComponentType, _enum_for_ComponentType, ComponentType_any /* IMPORTED_LONG_ENUMERATION_ITEM */, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_invoke /* IMPORTED_LONG_ENUMERATION_ITEM */, invoke /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rResult /* IMPORTED_LONG_ENUMERATION_ITEM */, rResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rError /* IMPORTED_LONG_ENUMERATION_ITEM */, rError /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rReject /* IMPORTED_LONG_ENUMERATION_ITEM */, rReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ComponentType, _encode_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
-import { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
+import { type ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
 // export { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
-import { Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
+import { type Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
 // export { Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
 
 

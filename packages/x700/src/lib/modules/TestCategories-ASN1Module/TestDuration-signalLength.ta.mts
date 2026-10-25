@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DataRate,
+    type DataRate,
     _decode_DataRate,
     _encode_DataRate,
 } from '../TestCategories-ASN1Module/DataRate.ta.mjs';

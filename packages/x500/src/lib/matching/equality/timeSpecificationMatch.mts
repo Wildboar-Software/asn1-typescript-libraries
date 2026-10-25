@@ -2,7 +2,7 @@ import { ASN1Element, DERElement } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import {

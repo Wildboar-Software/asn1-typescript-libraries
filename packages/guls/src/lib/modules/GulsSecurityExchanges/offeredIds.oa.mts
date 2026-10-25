@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  Negotiation_SEI,
+  type Negotiation_SEI,
   _decode_Negotiation_SEI,
   _encode_Negotiation_SEI,
 } from '../GulsSecurityExchanges/Negotiation-SEI.ta.mjs';

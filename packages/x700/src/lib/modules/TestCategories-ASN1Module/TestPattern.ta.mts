@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DataType,
+    type DataType,
     _decode_DataType,
     _encode_DataType,
 } from '../TestCategories-ASN1Module/DataType.ta.mjs';

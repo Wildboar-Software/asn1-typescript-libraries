@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { MW_Status, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataTypes/MW-Status.ta.mjs";
+import { type MW_Status, _decode_MW_Status, _encode_MW_Status } from "../MAP-SM-DataTypes/MW-Status.ta.mjs";
 
 
 /**

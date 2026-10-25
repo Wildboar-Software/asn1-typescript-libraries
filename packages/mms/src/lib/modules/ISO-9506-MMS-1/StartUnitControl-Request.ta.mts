@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { StartUnitControl_Request_executionArgument, _decode_StartUnitControl_Request_executionArgument, _encode_StartUnitControl_Request_executionArgument } from "../ISO-9506-MMS-1/StartUnitControl-Request-executionArgument.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type StartUnitControl_Request_executionArgument, _decode_StartUnitControl_Request_executionArgument, _encode_StartUnitControl_Request_executionArgument } from "../ISO-9506-MMS-1/StartUnitControl-Request-executionArgument.ta.mjs";
 
 
 /**

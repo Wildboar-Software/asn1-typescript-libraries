@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";

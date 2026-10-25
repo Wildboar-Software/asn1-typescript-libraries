@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    SynchronizationProtocolType,
+    type SynchronizationProtocolType,
     _decode_SynchronizationProtocolType,
     _encode_SynchronizationProtocolType,
 } from '../TimeMF/SynchronizationProtocolType.ta.mjs';

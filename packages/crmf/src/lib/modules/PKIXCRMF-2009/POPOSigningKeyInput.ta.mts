@@ -11,7 +11,7 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    POPOSigningKeyInput_authInfo,
+    type POPOSigningKeyInput_authInfo,
     _decode_POPOSigningKeyInput_authInfo,
     _encode_POPOSigningKeyInput_authInfo,
 } from "../PKIXCRMF-2009/POPOSigningKeyInput-authInfo.ta.mjs";

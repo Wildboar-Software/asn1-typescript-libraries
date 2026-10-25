@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BlockParamOffer_capability, _decode_BlockParamOffer_capability, _encode_BlockParamOffer_capability } from "../CDS/BlockParamOffer-capability.ta.mjs";
+import { type BlockParamOffer_capability, _decode_BlockParamOffer_capability, _encode_BlockParamOffer_capability } from "../CDS/BlockParamOffer-capability.ta.mjs";
 import { BlockParamOffer_bound, _decode_BlockParamOffer_bound, _encode_BlockParamOffer_bound } from "../CDS/BlockParamOffer-bound.ta.mjs";
 
 

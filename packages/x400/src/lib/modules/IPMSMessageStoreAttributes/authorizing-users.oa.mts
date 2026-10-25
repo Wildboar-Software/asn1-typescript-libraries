@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    AuthorizingUsersSubfield,
+    type AuthorizingUsersSubfield,
     _decode_AuthorizingUsersSubfield,
     _encode_AuthorizingUsersSubfield,
 } from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta.mjs';

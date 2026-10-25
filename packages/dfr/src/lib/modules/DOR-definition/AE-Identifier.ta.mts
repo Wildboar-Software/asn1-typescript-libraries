@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Locational_identifier, _decode_Locational_identifier, _encode_Locational_identifier } from "../DOR-definition/Locational-identifier.ta.mjs";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 
 
 /**

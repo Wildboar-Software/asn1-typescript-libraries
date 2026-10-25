@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { pathRetain } from "../Call-Intrusion-Operations-asn1-97/pathRetain.oa.mjs";
 import { serviceAvailable } from "../Call-Intrusion-Operations-asn1-97/serviceAvailable.oa.mjs";
 import { callIntrusionRequest } from "../Call-Intrusion-Operations-asn1-97/callIntrusionRequest.oa.mjs";

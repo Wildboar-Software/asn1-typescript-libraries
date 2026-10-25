@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    DateTranslationList,
+    type DateTranslationList,
     _decode_DateTranslationList,
     _encode_DateTranslationList,
 } from '../Schedulerev1-ASN1Module/DateTranslationList.ta.mjs';

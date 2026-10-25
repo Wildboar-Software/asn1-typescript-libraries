@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ThisEDIMField,
+    type ThisEDIMField,
     _decode_ThisEDIMField,
     _encode_ThisEDIMField,
 } from '../EDIMSInformationObjects/ThisEDIMField.ta.mjs';

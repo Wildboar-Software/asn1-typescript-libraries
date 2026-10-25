@@ -21,7 +21,7 @@ import {
     _encode_G3FacsimileBodyPart,
 } from '../IPMSInformationObjects/G3FacsimileBodyPart.ta.mjs';
 import {
-    G4Class1BodyPart,
+    type G4Class1BodyPart,
     _decode_G4Class1BodyPart,
     _encode_G4Class1BodyPart,
 } from '../IPMSInformationObjects/G4Class1BodyPart.ta.mjs';
@@ -46,17 +46,17 @@ import {
     _encode_MessageBodyPart,
 } from '../IPMSInformationObjects/MessageBodyPart.ta.mjs';
 import {
-    MixedModeBodyPart,
+    type MixedModeBodyPart,
     _decode_MixedModeBodyPart,
     _encode_MixedModeBodyPart,
 } from '../IPMSInformationObjects/MixedModeBodyPart.ta.mjs';
 import {
-    BilaterallyDefinedBodyPart,
+    type BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
 } from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.mjs';
 import {
-    NationallyDefinedBodyPart,
+    type NationallyDefinedBodyPart,
     _decode_NationallyDefinedBodyPart,
     _encode_NationallyDefinedBodyPart,
 } from '../IPMSInformationObjects/NationallyDefinedBodyPart.ta.mjs';

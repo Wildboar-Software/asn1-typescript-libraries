@@ -1,7 +1,7 @@
 import {
     type OPTIONAL,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,

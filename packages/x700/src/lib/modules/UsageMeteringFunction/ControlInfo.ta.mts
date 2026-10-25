@@ -17,17 +17,17 @@ import {
     _encode_ActionResponse,
 } from '../UsageMeteringFunction/ActionResponse.ta.mjs';
 import {
-    ReportingTriggers,
+    type ReportingTriggers,
     _decode_ReportingTriggers,
     _encode_ReportingTriggers,
 } from '../UsageMeteringFunction/ReportingTriggers.ta.mjs';
 import {
-    AccountableObjectsReferenceList,
+    type AccountableObjectsReferenceList,
     _decode_AccountableObjectsReferenceList,
     _encode_AccountableObjectsReferenceList,
 } from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta.mjs';
 import {
-    DataObjectsReferenceList,
+    type DataObjectsReferenceList,
     _decode_DataObjectsReferenceList,
     _encode_DataObjectsReferenceList,
 } from '../UsageMeteringFunction/DataObjectsReferenceList.ta.mjs';

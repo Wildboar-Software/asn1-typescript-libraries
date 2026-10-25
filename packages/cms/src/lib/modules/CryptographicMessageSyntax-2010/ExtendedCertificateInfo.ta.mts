@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    UnauthAttributes,
+    type UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from "../CryptographicMessageSyntax-2010/UnauthAttributes.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";

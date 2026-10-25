@@ -12,9 +12,9 @@ import {
     _decode_AlgorithmInfo,
     _encode_AlgorithmInfo,
 } from "../PKCS-15/AlgorithmInfo.ta.mjs";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 import {
-    LastUpdate,
+    type LastUpdate,
     _decode_LastUpdate,
     _encode_LastUpdate,
 } from "../PKCS-15/LastUpdate.ta.mjs";
@@ -29,12 +29,12 @@ import {
     _encode_SecurityEnvironmentInfo,
 } from "../PKCS-15/SecurityEnvironmentInfo.ta.mjs";
 import {
-    TokenFlags,
+    type TokenFlags,
     _decode_TokenFlags,
     _encode_TokenFlags,
 } from "../PKCS-15/TokenFlags.ta.mjs";
 import {
-    TokenInfo_version,
+    type TokenInfo_version,
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,
 } from "../PKCS-15/TokenInfo-version.ta.mjs";

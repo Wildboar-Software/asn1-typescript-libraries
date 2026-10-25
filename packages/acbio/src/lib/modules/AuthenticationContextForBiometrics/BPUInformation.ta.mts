@@ -17,7 +17,7 @@ import {
     _encode_BPUCertificateReferrerInformation,
 } from '../AuthenticationContextForBiometrics/BPUCertificateReferrerInformation.ta.mjs';
 import {
-    BPUReportInformation,
+    type BPUReportInformation,
     _decode_BPUReportInformation,
     _encode_BPUReportInformation,
 } from '../AuthenticationContextForBiometrics/BPUReportInformation.ta.mjs';

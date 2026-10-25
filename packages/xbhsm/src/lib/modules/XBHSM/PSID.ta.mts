@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../XBHSM/HashAlgorithm.ta.mjs";

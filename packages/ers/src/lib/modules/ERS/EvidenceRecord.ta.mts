@@ -11,15 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EvidenceRecord_version, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
+import { type EvidenceRecord_version, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
-import { CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
+import { type CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../ERS/EncryptionInfo.ta.mjs";
-import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
+import { type ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
 
 /**
  * @summary EvidenceRecord

@@ -21,7 +21,7 @@ import {
   _encode_BindResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/BindResponse.ta.mjs';
 import {
-  UnbindRequest,
+  type UnbindRequest,
   _decode_UnbindRequest,
   _encode_UnbindRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/UnbindRequest.ta.mjs';
@@ -36,12 +36,12 @@ import {
   _encode_SearchResultEntry,
 } from '../Lightweight-Directory-Access-Protocol-V3/SearchResultEntry.ta.mjs';
 import {
-  SearchResultDone,
+  type SearchResultDone,
   _decode_SearchResultDone,
   _encode_SearchResultDone,
 } from '../Lightweight-Directory-Access-Protocol-V3/SearchResultDone.ta.mjs';
 import {
-  SearchResultReference,
+  type SearchResultReference,
   _decode_SearchResultReference,
   _encode_SearchResultReference,
 } from '../Lightweight-Directory-Access-Protocol-V3/SearchResultReference.ta.mjs';
@@ -51,7 +51,7 @@ import {
   _encode_ModifyRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest.ta.mjs';
 import {
-  ModifyResponse,
+  type ModifyResponse,
   _decode_ModifyResponse,
   _encode_ModifyResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyResponse.ta.mjs';
@@ -61,17 +61,17 @@ import {
   _encode_AddRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/AddRequest.ta.mjs';
 import {
-  AddResponse,
+  type AddResponse,
   _decode_AddResponse,
   _encode_AddResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/AddResponse.ta.mjs';
 import {
-  DelRequest,
+  type DelRequest,
   _decode_DelRequest,
   _encode_DelRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/DelRequest.ta.mjs';
 import {
-  DelResponse,
+  type DelResponse,
   _decode_DelResponse,
   _encode_DelResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/DelResponse.ta.mjs';
@@ -81,7 +81,7 @@ import {
   _encode_ModifyDNRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNRequest.ta.mjs';
 import {
-  ModifyDNResponse,
+  type ModifyDNResponse,
   _decode_ModifyDNResponse,
   _encode_ModifyDNResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyDNResponse.ta.mjs';
@@ -91,12 +91,12 @@ import {
   _encode_CompareRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/CompareRequest.ta.mjs';
 import {
-  CompareResponse,
+  type CompareResponse,
   _decode_CompareResponse,
   _encode_CompareResponse,
 } from '../Lightweight-Directory-Access-Protocol-V3/CompareResponse.ta.mjs';
 import {
-  AbandonRequest,
+  type AbandonRequest,
   _decode_AbandonRequest,
   _encode_AbandonRequest,
 } from '../Lightweight-Directory-Access-Protocol-V3/AbandonRequest.ta.mjs';

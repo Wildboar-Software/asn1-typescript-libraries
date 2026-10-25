@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificates,
+    type Certificates,
     _decode_Certificates,
     _encode_Certificates,
 } from "../CMSSigncryption/Certificates.ta.mjs";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CMSSigncryption/CMSVersion.ta.mjs";
@@ -20,9 +20,9 @@ import {
     _decode_ContentInformation,
     _encode_ContentInformation,
 } from "../CMSSigncryption/ContentInformation.ta.mjs";
-import { CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta.mjs";
+import { type CRLs, _decode_CRLs, _encode_CRLs } from "../CMSSigncryption/CRLs.ta.mjs";
 import {
-    Signcrypters,
+    type Signcrypters,
     _decode_Signcrypters,
     _encode_Signcrypters,
 } from "../CMSSigncryption/Signcrypters.ta.mjs";

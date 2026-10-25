@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID
+    type RELATIVE_OID
 } from "@wildboar/asn1";
 import { pstnIsdnPDUObjId } from "../PstnIsdnPDU/pstnIsdnPDUObjId.va.mjs";
 // export { pstnIsdnPDUObjId } from "../PstnIsdnPDU/pstnIsdnPDUObjId.va.mjs";

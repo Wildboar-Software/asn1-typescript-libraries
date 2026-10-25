@@ -10,14 +10,14 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { GeneralizedTime, ASN1Element as _Element } from "@wildboar/asn1";
+import { type GeneralizedTime, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 

@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
-import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-import { SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
-import { SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
-import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
+import { type Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
+import { type OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { type SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
+import { type SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
+import { type SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
 
 
 /**

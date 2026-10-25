@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-datatypes/Integer4.ta.mjs";
 // export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS3-common-datatypes/Integer4.ta.mjs";
 
 

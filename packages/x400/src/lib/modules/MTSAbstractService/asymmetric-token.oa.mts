@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    AsymmetricToken,
+    type AsymmetricToken,
     _decode_AsymmetricToken,
     _encode_AsymmetricToken,
 } from '../MTSAbstractService/AsymmetricToken.ta.mjs';

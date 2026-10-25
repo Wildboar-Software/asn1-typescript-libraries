@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-SCF-SCF-datatypes/ScfAddress.ta.mjs";
+import { type ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-SCF-SCF-datatypes/ScfAddress.ta.mjs";
 // export { ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-SCF-SCF-datatypes/ScfAddress.ta.mjs";
-import { TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-SCF-SCF-datatypes/TraceInformation.ta.mjs";
+import { type TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-SCF-SCF-datatypes/TraceInformation.ta.mjs";
 // export { TraceInformation, _decode_TraceInformation, _encode_TraceInformation } from "../IN-SCF-SCF-datatypes/TraceInformation.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

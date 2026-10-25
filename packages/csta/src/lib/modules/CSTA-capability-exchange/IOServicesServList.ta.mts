@@ -3,36 +3,36 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IoRegister, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
+import { type IoRegister, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
 
-import { IoRegisterAbort, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
+import { type IoRegisterAbort, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
 
-import { IoRegisterCancel, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
+import { type IoRegisterCancel, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
 
-import { DataPathResumed, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
+import { type DataPathResumed, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
 
-import { DataPathSuspended, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
+import { type DataPathSuspended, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
 
-import { FastData, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
+import { type FastData, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
 
-import { ResumeDataPath, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
+import { type ResumeDataPath, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
 
-import { SendBroadcastData, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
+import { type SendBroadcastData, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
 
-import { SendData, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
+import { type SendData, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
 
-import { SendMulticastData, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
+import { type SendMulticastData, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
 
-import { StartDataPath, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
+import { type StartDataPath, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
 
-import { StopDataPath, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
+import { type StopDataPath, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
 
-import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
+import { type SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
 
 
 

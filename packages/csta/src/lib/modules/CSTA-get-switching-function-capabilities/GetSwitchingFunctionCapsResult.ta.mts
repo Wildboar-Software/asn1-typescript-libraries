@@ -5,21 +5,21 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { Profiles, _decode_Profiles, _encode_Profiles } from "../CSTA-get-switching-function-capabilities/Profiles.ta.mjs";
+import { type Profiles, _decode_Profiles, _encode_Profiles } from "../CSTA-get-switching-function-capabilities/Profiles.ta.mjs";
 
-import { DeviceIDFormat, _decode_DeviceIDFormat, _encode_DeviceIDFormat } from "../CSTA-capability-exchange/DeviceIDFormat.ta.mjs";
+import { type DeviceIDFormat, _decode_DeviceIDFormat, _encode_DeviceIDFormat } from "../CSTA-capability-exchange/DeviceIDFormat.ta.mjs";
 
-import { SwDomainFeatures, _decode_SwDomainFeatures, _encode_SwDomainFeatures } from "../CSTA-capability-exchange/SwDomainFeatures.ta.mjs";
+import { type SwDomainFeatures, _decode_SwDomainFeatures, _encode_SwDomainFeatures } from "../CSTA-capability-exchange/SwDomainFeatures.ta.mjs";
 
-import { SwAppearanceAddressability, _decode_SwAppearanceAddressability, _encode_SwAppearanceAddressability } from "../CSTA-capability-exchange/SwAppearanceAddressability.ta.mjs";
+import { type SwAppearanceAddressability, _decode_SwAppearanceAddressability, _encode_SwAppearanceAddressability } from "../CSTA-capability-exchange/SwAppearanceAddressability.ta.mjs";
 
-import { SwAppearanceTypes, _decode_SwAppearanceTypes, _encode_SwAppearanceTypes } from "../CSTA-capability-exchange/SwAppearanceTypes.ta.mjs";
+import { type SwAppearanceTypes, _decode_SwAppearanceTypes, _encode_SwAppearanceTypes } from "../CSTA-capability-exchange/SwAppearanceTypes.ta.mjs";
 
 import {
     IgnoreUnsupportedParameters,
@@ -28,32 +28,32 @@ import {
     _encode_IgnoreUnsupportedParameters
 } from "../CSTA-capability-exchange/IgnoreUnsupportedParameters.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import {
-    MonitorMediaClass,
+    type MonitorMediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MonitorMediaClass,
     _encode_MonitorMediaClass
 } from "../CSTA-status-reporting/MonitorMediaClass.ta.mjs";
 
-import { NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
+import { type NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
 
-import { MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
+import { type MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
 
-import { MiscMediaCallCharacteristics, _decode_MiscMediaCallCharacteristics, _encode_MiscMediaCallCharacteristics } from "../CSTA-get-switching-function-capabilities/MiscMediaCallCharacteristics.ta.mjs";
+import { type MiscMediaCallCharacteristics, _decode_MiscMediaCallCharacteristics, _encode_MiscMediaCallCharacteristics } from "../CSTA-get-switching-function-capabilities/MiscMediaCallCharacteristics.ta.mjs";
 
-import { ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
+import { type ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
 
-import { DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
+import { type DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
 
-import { PauseTime, _decode_PauseTime, _encode_PauseTime } from "../CSTA-capability-exchange/PauseTime.ta.mjs";
+import { type PauseTime, _decode_PauseTime, _encode_PauseTime } from "../CSTA-capability-exchange/PauseTime.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
-import { MessageSeqNumbers, _decode_MessageSeqNumbers, _encode_MessageSeqNumbers } from "../CSTA-get-switching-function-capabilities/MessageSeqNumbers.ta.mjs";
+import { type MessageSeqNumbers, _decode_MessageSeqNumbers, _encode_MessageSeqNumbers } from "../CSTA-get-switching-function-capabilities/MessageSeqNumbers.ta.mjs";
 
-import { TimeStampMode, _decode_TimeStampMode, _encode_TimeStampMode } from "../CSTA-capability-exchange/TimeStampMode.ta.mjs";
+import { type TimeStampMode, _decode_TimeStampMode, _encode_TimeStampMode } from "../CSTA-capability-exchange/TimeStampMode.ta.mjs";
 
 import {
     SecurityMode,
@@ -62,13 +62,13 @@ import {
     _encode_SecurityMode
 } from "../CSTA-get-switching-function-capabilities/SecurityMode.ta.mjs";
 
-import { SecurityFormat, _decode_SecurityFormat, _encode_SecurityFormat } from "../CSTA-get-switching-function-capabilities/SecurityFormat.ta.mjs";
+import { type SecurityFormat, _decode_SecurityFormat, _encode_SecurityFormat } from "../CSTA-get-switching-function-capabilities/SecurityFormat.ta.mjs";
 
-import { TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
+import { type TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
 
 import { MonitorFilterItems, _decode_MonitorFilterItems, _encode_MonitorFilterItems } from "../CSTA-get-switching-function-capabilities/MonitorFilterItems.ta.mjs";
 
-import { MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
+import { type MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
 
 import {
     DynamicFeatureSupported,
@@ -78,13 +78,13 @@ import {
     _encode_DynamicFeatureSupported
 } from "../CSTA-get-switching-function-capabilities/DynamicFeatureSupported.ta.mjs";
 
-import { CallLinkageOptions, _decode_CallLinkageOptions, _encode_CallLinkageOptions } from "../CSTA-get-switching-function-capabilities/CallLinkageOptions.ta.mjs";
+import { type CallLinkageOptions, _decode_CallLinkageOptions, _encode_CallLinkageOptions } from "../CSTA-get-switching-function-capabilities/CallLinkageOptions.ta.mjs";
 
-import { ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
+import { type ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
 
-import { AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-get-switching-function-capabilities/AgentLogOnModels.ta.mjs";
+import { type AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-get-switching-function-capabilities/AgentLogOnModels.ta.mjs";
 
-import { AgentStateModels, _decode_AgentStateModels, _encode_AgentStateModels } from "../CSTA-get-switching-function-capabilities/AgentStateModels.ta.mjs";
+import { type AgentStateModels, _decode_AgentStateModels, _encode_AgentStateModels } from "../CSTA-get-switching-function-capabilities/AgentStateModels.ta.mjs";
 
 import {
     ConnectionView,
@@ -99,11 +99,11 @@ import { MaxLengthParametersContinued, _decode_MaxLengthParametersContinued, _en
 
 import { ServEvtsList, _decode_ServEvtsList, _encode_ServEvtsList } from "../CSTA-get-switching-function-capabilities/ServEvtsList.ta.mjs";
 
-import { PrivateDataVersionList, _decode_PrivateDataVersionList, _encode_PrivateDataVersionList } from "../CSTA-get-switching-function-capabilities/PrivateDataVersionList.ta.mjs";
+import { type PrivateDataVersionList, _decode_PrivateDataVersionList, _encode_PrivateDataVersionList } from "../CSTA-get-switching-function-capabilities/PrivateDataVersionList.ta.mjs";
 
 import { FilterThreshold, _decode_FilterThreshold, _encode_FilterThreshold } from "../CSTA-capability-exchange/FilterThreshold.ta.mjs";
 
-import { MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
+import { type MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

@@ -16,7 +16,7 @@ import {
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';

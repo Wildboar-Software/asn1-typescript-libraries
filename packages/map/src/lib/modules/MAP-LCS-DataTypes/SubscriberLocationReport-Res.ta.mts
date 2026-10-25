@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
+import { type LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
 import { ReportingPLMNList, _decode_ReportingPLMNList, _encode_ReportingPLMNList } from "../MAP-LCS-DataTypes/ReportingPLMNList.ta.mjs";
 
 

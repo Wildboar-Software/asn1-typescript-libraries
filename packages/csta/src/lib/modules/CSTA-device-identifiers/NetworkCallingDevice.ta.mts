@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
-import { NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_NetworkCallingDeviceID } from "../CSTA-device-identifiers/NetworkCallingDeviceID.ta.mjs";
+import { type NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_NetworkCallingDeviceID } from "../CSTA-device-identifiers/NetworkCallingDeviceID.ta.mjs";
 
 
 

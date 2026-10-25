@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CharacterSetRegistration,
+    type CharacterSetRegistration,
     _decode_CharacterSetRegistration,
     _encode_CharacterSetRegistration,
 } from '../IPMSExtendedBodyPartTypes2/CharacterSetRegistration.ta.mjs';

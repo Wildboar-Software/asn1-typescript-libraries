@@ -21,7 +21,7 @@ import {
     _encode_OptionalLabelAndParameters,
 } from '../GrmAttributeDefinitionModule/OptionalLabelAndParameters.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';

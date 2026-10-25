@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "@wildboar/gn";
@@ -22,7 +22,7 @@ import {
 } from "../OCSP-2013-08/Request.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../OCSP-2013-08/Version.ta.mjs";

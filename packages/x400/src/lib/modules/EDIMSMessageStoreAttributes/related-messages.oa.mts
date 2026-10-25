@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    RelatedMessageReference,
+    type RelatedMessageReference,
     _decode_RelatedMessageReference,
     _encode_RelatedMessageReference,
 } from '../EDIMSInformationObjects/RelatedMessageReference.ta.mjs';

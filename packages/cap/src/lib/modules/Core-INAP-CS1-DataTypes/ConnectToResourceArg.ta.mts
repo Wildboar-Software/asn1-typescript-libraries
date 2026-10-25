@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../Core-INAP-CS1-DataTypes/ConnectToResourceArg-resourceAddress.ta.mjs";
+import { type ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../Core-INAP-CS1-DataTypes/ConnectToResourceArg-resourceAddress.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
 
 
 /**

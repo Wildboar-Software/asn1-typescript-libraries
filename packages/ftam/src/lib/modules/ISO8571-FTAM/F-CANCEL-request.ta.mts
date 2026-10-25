@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,23 +13,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Action_Result,
+  type Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
 import {
-  Request_Type,
+  type Request_Type,
   _decode_Request_Type,
   _encode_Request_Type,
 } from '../ISO8571-FTAM/Request-Type.ta.mjs';

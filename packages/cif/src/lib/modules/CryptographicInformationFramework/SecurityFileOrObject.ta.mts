@@ -14,8 +14,8 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
+import { type CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 

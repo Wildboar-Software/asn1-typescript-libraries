@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    JoinXCReply_Item,
+    type JoinXCReply_Item,
     _decode_JoinXCReply_Item,
     _encode_JoinXCReply_Item,
 } from '../M3100ASN1TypeModule6/JoinXCReply-Item.ta.mjs';

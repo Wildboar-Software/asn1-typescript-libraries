@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SuppliedRecords, _decode_SuppliedRecords, _encode_SuppliedRecords } from "../ESFormat-Update/SuppliedRecords.ta.mjs";
+import { type SuppliedRecords, _decode_SuppliedRecords, _encode_SuppliedRecords } from "../ESFormat-Update/SuppliedRecords.ta.mjs";
 
 
 /**

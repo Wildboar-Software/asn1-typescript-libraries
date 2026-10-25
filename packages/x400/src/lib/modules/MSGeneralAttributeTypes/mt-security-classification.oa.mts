@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SecurityClassification,
+    type SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
 } from '../MTSAbstractService/SecurityClassification.ta.mjs';

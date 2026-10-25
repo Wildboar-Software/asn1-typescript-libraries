@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { COMMON_BOUNDS } from "../IN-CS3-common-classes/COMMON-BOUNDS.oca.mjs";
+import { type COMMON_BOUNDS } from "../IN-CS3-common-classes/COMMON-BOUNDS.oca.mjs";
 // export { COMMON_BOUNDS } from "../IN-CS3-common-classes/COMMON-BOUNDS.oca.mjs";
 
 

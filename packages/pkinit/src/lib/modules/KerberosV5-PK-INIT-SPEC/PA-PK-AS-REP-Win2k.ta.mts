@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PA_PK_AS_REP, _decode_PA_PK_AS_REP, _encode_PA_PK_AS_REP } from "../KerberosV5-PK-INIT-SPEC/PA-PK-AS-REP.ta.mjs";
+import { type PA_PK_AS_REP, _decode_PA_PK_AS_REP, _encode_PA_PK_AS_REP } from "../KerberosV5-PK-INIT-SPEC/PA-PK-AS-REP.ta.mjs";
 
 
 /**

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ChoiceInteger,
+    type ChoiceInteger,
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';

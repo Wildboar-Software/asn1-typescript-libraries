@@ -9,7 +9,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum } from "../TETRA-HI2Operations/MapDatum.ta.mjs";
+import { type MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum } from "../TETRA-HI2Operations/MapDatum.ta.mjs";
 // export { MapDatum, _enum_for_MapDatum, MapDatum_wGS84 /* IMPORTED_LONG_ENUMERATION_ITEM */, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MapDatum_wGS72 /* IMPORTED_LONG_ENUMERATION_ITEM */, wGS72 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MapDatum_eD50 /* IMPORTED_LONG_ENUMERATION_ITEM */, eD50 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MapDatum, _encode_MapDatum } from "../TETRA-HI2Operations/MapDatum.ta.mjs";
 
 

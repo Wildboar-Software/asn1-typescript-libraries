@@ -3,7 +3,7 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_JWSTokenType, _encode_JWSTokenType, _enum_for_JWSTokenType, JWSTokenType } from "../TS33128Payloads/JWSTokenType.ta.mjs";

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    WeekDayTranslationList,
+    type WeekDayTranslationList,
     _decode_WeekDayTranslationList,
     _encode_WeekDayTranslationList,
 } from '../Schedulerev1-ASN1Module/WeekDayTranslationList.ta.mjs';

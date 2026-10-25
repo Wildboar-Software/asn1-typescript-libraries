@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ActualRecipientName,
+    type ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
 } from '../MTSAbstractService/ActualRecipientName.ta.mjs';
 import {
-    OriginallyIntendedRecipientName,
+    type OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
 } from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.mjs';
 import {
-    PerRecipientReportFields_report_type,
+    type PerRecipientReportFields_report_type,
     _decode_PerRecipientReportFields_report_type,
     _encode_PerRecipientReportFields_report_type,
 } from '../MTSAbstractService/PerRecipientReportFields-report-type.ta.mjs';

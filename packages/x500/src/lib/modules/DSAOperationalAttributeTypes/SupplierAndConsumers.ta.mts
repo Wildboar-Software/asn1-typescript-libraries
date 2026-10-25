@@ -11,7 +11,7 @@ import {
     _encode_AccessPoint,
 } from "../DistributedOperations/AccessPoint.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

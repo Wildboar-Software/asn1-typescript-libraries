@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlternativeIdentities, _decode_AlternativeIdentities, _encode_AlternativeIdentities } from "../IN-SSF-SCF-datatypes/AlternativeIdentities.ta.mjs";
+import { type AlternativeIdentities, _decode_AlternativeIdentities, _encode_AlternativeIdentities } from "../IN-SSF-SCF-datatypes/AlternativeIdentities.ta.mjs";
 // export { AlternativeIdentities, _decode_AlternativeIdentities, _encode_AlternativeIdentities } from "../IN-SSF-SCF-datatypes/AlternativeIdentities.ta.mjs";
 
 

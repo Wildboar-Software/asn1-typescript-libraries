@@ -7,7 +7,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
+import { type Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
 // export { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
 
 

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { ReconnectCallArgument, _decode_ReconnectCallArgument, _encode_ReconnectCallArgument } from "../CSTA-reconnect-call/ReconnectCallArgument.ta.mjs";
 
-import { ReconnectCallResult, _decode_ReconnectCallResult, _encode_ReconnectCallResult } from "../CSTA-reconnect-call/ReconnectCallResult.ta.mjs";
+import { type ReconnectCallResult, _decode_ReconnectCallResult, _encode_ReconnectCallResult } from "../CSTA-reconnect-call/ReconnectCallResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

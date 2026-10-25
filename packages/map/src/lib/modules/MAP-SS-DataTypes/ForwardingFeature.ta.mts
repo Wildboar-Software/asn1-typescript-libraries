@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
-import { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
+import { type FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
+import { type ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
+import { type NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**

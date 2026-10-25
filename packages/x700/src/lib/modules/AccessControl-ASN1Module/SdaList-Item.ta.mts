@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityDomainAuthorityName,
+    type SecurityDomainAuthorityName,
     _decode_SecurityDomainAuthorityName,
     _encode_SecurityDomainAuthorityName,
 } from '../AccessControl-ASN1Module/SecurityDomainAuthorityName.ta.mjs';
 import {
-    OperationType,
+    type OperationType,
     _decode_OperationType,
     _encode_OperationType,
 } from '../AccessControl-ASN1Module/OperationType.ta.mjs';

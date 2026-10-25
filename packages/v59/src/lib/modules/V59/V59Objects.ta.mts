@@ -10,61 +10,61 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ModemIdentity, _decode_ModemIdentity, _encode_ModemIdentity } from "../V59/ModemIdentity.ta.mjs";
+import { type ModemIdentity, _decode_ModemIdentity, _encode_ModemIdentity } from "../V59/ModemIdentity.ta.mjs";
 
-import { ModeCapability, _decode_ModeCapability, _encode_ModeCapability } from "../V59/ModeCapability.ta.mjs";
+import { type ModeCapability, _decode_ModeCapability, _encode_ModeCapability } from "../V59/ModeCapability.ta.mjs";
 
 import { ModeSelected, _decode_ModeSelected, _encode_ModeSelected } from "../V59/ModeSelected.ta.mjs";
 
-import { V8Diag, _decode_V8Diag, _encode_V8Diag } from "../V59/V8Diag.ta.mjs";
+import { type V8Diag, _decode_V8Diag, _encode_V8Diag } from "../V59/V8Diag.ta.mjs";
 
-import { V8bisDiag, _decode_V8bisDiag, _encode_V8bisDiag } from "../V59/V8bisDiag.ta.mjs";
+import { type V8bisDiag, _decode_V8bisDiag, _encode_V8bisDiag } from "../V59/V8bisDiag.ta.mjs";
 
-import { V90Diag, _decode_V90Diag, _encode_V90Diag } from "../V59/V90Diag.ta.mjs";
+import { type V90Diag, _decode_V90Diag, _encode_V90Diag } from "../V59/V90Diag.ta.mjs";
 
-import { V91Diag, _decode_V91Diag, _encode_V91Diag } from "../V59/V91Diag.ta.mjs";
+import { type V91Diag, _decode_V91Diag, _encode_V91Diag } from "../V59/V91Diag.ta.mjs";
 
-import { V92ModDiag, _decode_V92ModDiag, _encode_V92ModDiag } from "../V59/V92ModDiag.ta.mjs";
+import { type V92ModDiag, _decode_V92ModDiag, _encode_V92ModDiag } from "../V59/V92ModDiag.ta.mjs";
 
-import { V34Diag, _decode_V34Diag, _encode_V34Diag } from "../V59/V34Diag.ta.mjs";
+import { type V34Diag, _decode_V34Diag, _encode_V34Diag } from "../V59/V34Diag.ta.mjs";
 
-import { V32Diag, _decode_V32Diag, _encode_V32Diag } from "../V59/V32Diag.ta.mjs";
+import { type V32Diag, _decode_V32Diag, _encode_V32Diag } from "../V59/V32Diag.ta.mjs";
 
-import { V22Diag, _decode_V22Diag, _encode_V22Diag } from "../V59/V22Diag.ta.mjs";
+import { type V22Diag, _decode_V22Diag, _encode_V22Diag } from "../V59/V22Diag.ta.mjs";
 
-import { V23Diag, _decode_V23Diag, _encode_V23Diag } from "../V59/V23Diag.ta.mjs";
+import { type V23Diag, _decode_V23Diag, _encode_V23Diag } from "../V59/V23Diag.ta.mjs";
 
-import { V21Diag, _decode_V21Diag, _encode_V21Diag } from "../V59/V21Diag.ta.mjs";
+import { type V21Diag, _decode_V21Diag, _encode_V21Diag } from "../V59/V21Diag.ta.mjs";
 
-import { V34HdxDiag, _decode_V34HdxDiag, _encode_V34HdxDiag } from "../V59/V34HdxDiag.ta.mjs";
+import { type V34HdxDiag, _decode_V34HdxDiag, _encode_V34HdxDiag } from "../V59/V34HdxDiag.ta.mjs";
 
-import { V17Diag, _decode_V17Diag, _encode_V17Diag } from "../V59/V17Diag.ta.mjs";
+import { type V17Diag, _decode_V17Diag, _encode_V17Diag } from "../V59/V17Diag.ta.mjs";
 
-import { V29faxDiag, _decode_V29faxDiag, _encode_V29faxDiag } from "../V59/V29faxDiag.ta.mjs";
+import { type V29faxDiag, _decode_V29faxDiag, _encode_V29faxDiag } from "../V59/V29faxDiag.ta.mjs";
 
-import { V27tfaxDiag, _decode_V27tfaxDiag, _encode_V27tfaxDiag } from "../V59/V27tfaxDiag.ta.mjs";
+import { type V27tfaxDiag, _decode_V27tfaxDiag, _encode_V27tfaxDiag } from "../V59/V27tfaxDiag.ta.mjs";
 
-import { V18Diag, _decode_V18Diag, _encode_V18Diag } from "../V59/V18Diag.ta.mjs";
+import { type V18Diag, _decode_V18Diag, _encode_V18Diag } from "../V59/V18Diag.ta.mjs";
 
-import { V70Diag, _decode_V70Diag, _encode_V70Diag } from "../V59/V70Diag.ta.mjs";
+import { type V70Diag, _decode_V70Diag, _encode_V70Diag } from "../V59/V70Diag.ta.mjs";
 
-import { V61Diag, _decode_V61Diag, _encode_V61Diag } from "../V59/V61Diag.ta.mjs";
+import { type V61Diag, _decode_V61Diag, _encode_V61Diag } from "../V59/V61Diag.ta.mjs";
 
-import { NSMDiag, _decode_NSMDiag, _encode_NSMDiag } from "../V59/NSMDiag.ta.mjs";
+import { type NSMDiag, _decode_NSMDiag, _encode_NSMDiag } from "../V59/NSMDiag.ta.mjs";
 
-import { CnxDiag, _decode_CnxDiag, _encode_CnxDiag } from "../V59/CnxDiag.ta.mjs";
+import { type CnxDiag, _decode_CnxDiag, _encode_CnxDiag } from "../V59/CnxDiag.ta.mjs";
 
-import { LineConDiag, _decode_LineConDiag, _encode_LineConDiag } from "../V59/LineConDiag.ta.mjs";
+import { type LineConDiag, _decode_LineConDiag, _encode_LineConDiag } from "../V59/LineConDiag.ta.mjs";
 
-import { CallProgress, _decode_CallProgress, _encode_CallProgress } from "../V59/CallProgress.ta.mjs";
+import { type CallProgress, _decode_CallProgress, _encode_CallProgress } from "../V59/CallProgress.ta.mjs";
 
-import { Protocol, _decode_Protocol, _encode_Protocol } from "../V59/Protocol.ta.mjs";
+import { type Protocol, _decode_Protocol, _encode_Protocol } from "../V59/Protocol.ta.mjs";
 
-import { ErrorControl, _decode_ErrorControl, _encode_ErrorControl } from "../V59/ErrorControl.ta.mjs";
+import { type ErrorControl, _decode_ErrorControl, _encode_ErrorControl } from "../V59/ErrorControl.ta.mjs";
 
-import { Compression, _decode_Compression, _encode_Compression } from "../V59/Compression.ta.mjs";
+import { type Compression, _decode_Compression, _encode_Compression } from "../V59/Compression.ta.mjs";
 
-import { DTEDCE, _decode_DTEDCE, _encode_DTEDCE } from "../V59/DTEDCE.ta.mjs";
+import { type DTEDCE, _decode_DTEDCE, _encode_DTEDCE } from "../V59/DTEDCE.ta.mjs";
 
 /**
  * @summary V59Objects

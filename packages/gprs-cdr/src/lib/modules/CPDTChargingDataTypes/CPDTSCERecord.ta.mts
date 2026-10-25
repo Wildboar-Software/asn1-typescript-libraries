@@ -2,7 +2,7 @@
 import {
     type IA5String,
     type INTEGER,
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     type UTF8String,
@@ -12,12 +12,12 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CPDTChargingDataTypes/RecordType.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CPDTChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CPDTChargingDataTypes/RecordType.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CPDTChargingDataTypes/ChChSelectionMode.ta.mjs";
 import { ServingPLMNRateControl, _decode_ServingPLMNRateControl, _encode_ServingPLMNRateControl } from "../CPDTChargingDataTypes/ServingPLMNRateControl.ta.mjs";
 import { NIDDsubmission, _decode_NIDDsubmission, _encode_NIDDsubmission } from "../CPDTChargingDataTypes/NIDDsubmission.ta.mjs";
-import { CPCauseForRecClosing, _decode_CPCauseForRecClosing, _encode_CPCauseForRecClosing } from "../CPDTChargingDataTypes/CPCauseForRecClosing.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CPDTChargingDataTypes/Diagnostics.ta.mjs";
+import { type CPCauseForRecClosing, _decode_CPCauseForRecClosing, _encode_CPCauseForRecClosing } from "../CPDTChargingDataTypes/CPCauseForRecClosing.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CPDTChargingDataTypes/Diagnostics.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CPDTChargingDataTypes/ManagementExtension.ta.mjs";
 import { SubscriptionID, _decode_SubscriptionID, _encode_SubscriptionID } from "../CPDTChargingDataTypes/SubscriptionID.ta.mjs";
 import { APNRateControl, _decode_APNRateControl, _encode_APNRateControl } from "../CPDTChargingDataTypes/APNRateControl.ta.mjs";

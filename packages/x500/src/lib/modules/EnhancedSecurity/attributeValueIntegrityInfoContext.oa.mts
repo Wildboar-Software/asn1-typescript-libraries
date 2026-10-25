@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { TRUE } from "@wildboar/asn1";
 import {
-    AttributeValueIntegrityInfo,
+    type AttributeValueIntegrityInfo,
     _decode_AttributeValueIntegrityInfo,
     _encode_AttributeValueIntegrityInfo,
 } from "../EnhancedSecurity/AttributeValueIntegrityInfo.ta.mjs";

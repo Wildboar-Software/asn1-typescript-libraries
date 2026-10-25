@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RequestAuthenticationPolicy,
+    type RequestAuthenticationPolicy,
     _decode_RequestAuthenticationPolicy,
     _encode_RequestAuthenticationPolicy,
 } from "../DirectoryManagement/RequestAuthenticationPolicy.ta.mjs";

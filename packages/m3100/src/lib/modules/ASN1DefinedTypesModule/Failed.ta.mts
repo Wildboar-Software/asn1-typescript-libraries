@@ -16,7 +16,7 @@ import {
     _encode_LogicalProblem,
 } from '../ASN1DefinedTypesModule/LogicalProblem.ta.mjs';
 import {
-    ResourceProblem,
+    type ResourceProblem,
     _decode_ResourceProblem,
     _encode_ResourceProblem,
 } from '../ASN1DefinedTypesModule/ResourceProblem.ta.mjs';

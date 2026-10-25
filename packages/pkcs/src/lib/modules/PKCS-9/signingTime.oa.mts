@@ -5,7 +5,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { pkcs_9_at_signingTime } from "../PKCS-9/pkcs-9-at-signingTime.va.mjs";
 import {
-    SigningTime,
+    type SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
 } from "../PKCS-9/SigningTime.ta.mjs";

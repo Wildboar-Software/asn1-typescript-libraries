@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass,
     type EXTERNAL,
     type INTEGER,
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

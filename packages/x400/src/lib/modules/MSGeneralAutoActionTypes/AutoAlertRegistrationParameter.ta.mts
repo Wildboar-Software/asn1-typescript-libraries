@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -24,7 +24,7 @@ import {
     _encode_AlertDestination,
 } from '../MSGeneralAutoActionTypes/AlertDestination.ta.mjs';
 import {
-    EntryInformationSelection,
+    type EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
 } from '../MSAbstractService/EntryInformationSelection.ta.mjs';

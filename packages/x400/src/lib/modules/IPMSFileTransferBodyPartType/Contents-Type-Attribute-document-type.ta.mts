@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Document_Type_Name,
+    type Document_Type_Name,
     _decode_Document_Type_Name,
     _encode_Document_Type_Name,
 } from '../IPMSFileTransferBodyPartType/Document-Type-Name.ta.mjs';

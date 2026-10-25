@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BIPAcknowledgement_params,
+  type BIPAcknowledgement_params,
   _decode_BIPAcknowledgement_params,
   _encode_BIPAcknowledgement_params,
 } from '../BIP/BIPAcknowledgement-params.ta.mjs';
 import {
-  BioAPI_RETURN,
+  type BioAPI_RETURN,
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
 } from '../BIP/BioAPI-RETURN.ta.mjs';

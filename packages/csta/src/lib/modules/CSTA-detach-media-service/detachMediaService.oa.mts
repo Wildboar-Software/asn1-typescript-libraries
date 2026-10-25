@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { DetachMediaServiceArgument, _decode_DetachMediaServiceArgument, _encode_DetachMediaServiceArgument } from "../CSTA-detach-media-service/DetachMediaServiceArgument.ta.mjs";
 
-import { DetachMediaServiceResult, _decode_DetachMediaServiceResult, _encode_DetachMediaServiceResult } from "../CSTA-detach-media-service/DetachMediaServiceResult.ta.mjs";
+import { type DetachMediaServiceResult, _decode_DetachMediaServiceResult, _encode_DetachMediaServiceResult } from "../CSTA-detach-media-service/DetachMediaServiceResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

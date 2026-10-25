@@ -7,7 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { L2ProtocolInformation, _decode_L2ProtocolInformation, _encode_L2ProtocolInformation } from "../L2AccessPDU/L2ProtocolInformation.ta.mjs";
+import { type L2ProtocolInformation, _decode_L2ProtocolInformation, _encode_L2ProtocolInformation } from "../L2AccessPDU/L2ProtocolInformation.ta.mjs";
 
 
 /**

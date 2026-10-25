@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
+import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 
 
 /**

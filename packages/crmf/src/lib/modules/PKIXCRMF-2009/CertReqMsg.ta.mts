@@ -16,7 +16,7 @@ import {
     _encode_CertRequest,
 } from "../PKIXCRMF-2009/CertRequest.ta.mjs";
 import {
-    ProofOfPossession,
+    type ProofOfPossession,
     _decode_ProofOfPossession,
     _encode_ProofOfPossession,
 } from "../PKIXCRMF-2009/ProofOfPossession.ta.mjs";

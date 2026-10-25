@@ -7,7 +7,7 @@ import {
     _encode_CertUpdateErr,
 } from "../PkiPMIProtocolSpecifications/CertUpdateErr.ta.mjs";
 import {
-    CertUpdateOK,
+    type CertUpdateOK,
     _decode_CertUpdateOK,
     _encode_CertUpdateOK,
 } from "../PkiPMIProtocolSpecifications/CertUpdateOK.ta.mjs";

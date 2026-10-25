@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { GenericGsmSCF_gprsSSF_PDUs, _decode_GenericGsmSCF_gprsSSF_PDUs, _encode_GenericGsmSCF_gprsSSF_PDUs } from "../CAP-gprsSSF-gsmSCF-pkgs-contracts-acs/GenericGsmSCF-gprsSSF-PDUs.ta.mjs";
+import { type GenericGsmSCF_gprsSSF_PDUs, _decode_GenericGsmSCF_gprsSSF_PDUs, _encode_GenericGsmSCF_gprsSSF_PDUs } from "../CAP-gprsSSF-gsmSCF-pkgs-contracts-acs/GenericGsmSCF-gprsSSF-PDUs.ta.mjs";
 import { id_as_gsmSCF_gprsSSF_AS } from "../CAP-object-identifiers/id-as-gsmSCF-gprsSSF-AS.va.mjs";
 
 

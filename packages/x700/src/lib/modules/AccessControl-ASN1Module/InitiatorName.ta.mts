@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
 import {
-    AE_title,
+    type AE_title,
     _decode_AE_title,
     _encode_AE_title,
 } from '@wildboar/acse';

@@ -17,12 +17,12 @@ import {
     _encode_CommonFields,
 } from '../EDIMSInformationObjects/CommonFields.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    PNExtensionsField,
+    type PNExtensionsField,
     _decode_PNExtensionsField,
     _encode_PNExtensionsField,
 } from '../EDIMSInformationObjects/PNExtensionsField.ta.mjs';

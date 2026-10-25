@@ -2,12 +2,12 @@
 import { id_opcode_changePassword } from "../CommonProtocolSpecification/id-opcode-changePassword.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    ChangePasswordArgument,
+    type ChangePasswordArgument,
     _decode_ChangePasswordArgument,
     _encode_ChangePasswordArgument,
 } from "../DirectoryAbstractService/ChangePasswordArgument.ta.mjs";
 import {
-    ChangePasswordResult,
+    type ChangePasswordResult,
     _decode_ChangePasswordResult,
     _encode_ChangePasswordResult,
 } from "../DirectoryAbstractService/ChangePasswordResult.ta.mjs";

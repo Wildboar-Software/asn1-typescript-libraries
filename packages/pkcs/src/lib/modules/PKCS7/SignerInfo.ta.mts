@@ -6,31 +6,31 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKCS7/Attributes.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
 import {
-    DigestEncryptionAlgorithmIdentifier,
+    type DigestEncryptionAlgorithmIdentifier,
     _decode_DigestEncryptionAlgorithmIdentifier,
     _encode_DigestEncryptionAlgorithmIdentifier,
 } from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    EncryptedDigest,
+    type EncryptedDigest,
     _decode_EncryptedDigest,
     _encode_EncryptedDigest,
 } from "../PKCS7/EncryptedDigest.ta.mjs";
 import {
-    SignerIdentifier,
+    type SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../PKCS7/SignerIdentifier.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary SignerInfo

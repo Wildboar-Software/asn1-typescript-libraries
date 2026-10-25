@@ -3,7 +3,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction, TPDU_direction } from "../IWLANUmtsHI2Operations/TPDU-direction.ta.mjs";

@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { TypeProvider, _enum_for_TypeProvider, _decode_TypeProvider, _encode_TypeProvider } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeProvider.ta.mjs";
 import { RoleProvider, _enum_for_RoleProvider, _decode_RoleProvider, _encode_RoleProvider } from "../MachineReadableBiometricTestingAndReportingTestReport/RoleProvider.ta.mjs";
 

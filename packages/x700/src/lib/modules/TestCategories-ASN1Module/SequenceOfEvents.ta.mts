@@ -19,17 +19,17 @@ import {
     _encode_SignalDirection,
 } from '../TestCategories-ASN1Module/SignalDirection.ta.mjs';
 import {
-    MORTs,
+    type MORTs,
     _decode_MORTs,
     _encode_MORTs,
 } from '../Test-ASN1Module/MORTs.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    WaitDuration,
+    type WaitDuration,
     _decode_WaitDuration,
     _encode_WaitDuration,
 } from '../TestCategories-ASN1Module/WaitDuration.ta.mjs';

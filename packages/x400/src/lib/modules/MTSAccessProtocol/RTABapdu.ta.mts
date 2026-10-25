@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AbortReason,
+    type AbortReason,
     _decode_AbortReason,
     _encode_AbortReason,
 } from '../MTSAccessProtocol/AbortReason.ta.mjs';

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ModifiedValidity_validFrom,
+    type ModifiedValidity_validFrom,
     _decode_ModifiedValidity_validFrom,
     _encode_ModifiedValidity_validFrom,
 } from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta.mjs";
 import {
-    ModifiedValidity_validUntil,
+    type ModifiedValidity_validUntil,
     _decode_ModifiedValidity_validUntil,
     _encode_ModifiedValidity_validUntil,
 } from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.mjs";

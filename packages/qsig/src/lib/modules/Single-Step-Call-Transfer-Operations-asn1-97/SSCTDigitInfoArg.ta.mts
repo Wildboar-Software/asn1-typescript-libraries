@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { SSCTDigitInfoArg_argumentExtension, _decode_SSCTDigitInfoArg_argumentExtension, _encode_SSCTDigitInfoArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTDigitInfoArg-argumentExtension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type SSCTDigitInfoArg_argumentExtension, _decode_SSCTDigitInfoArg_argumentExtension, _encode_SSCTDigitInfoArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTDigitInfoArg-argumentExtension.ta.mjs";
 
 /**
  * @summary SSCTDigitInfoArg

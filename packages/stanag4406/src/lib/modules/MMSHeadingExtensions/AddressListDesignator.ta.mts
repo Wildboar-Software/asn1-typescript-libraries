@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -11,8 +11,8 @@ import {
     _decode_ORDescriptor,
     _encode_ORDescriptor,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { _decode_AddressListDesignator_type, _encode_AddressListDesignator_type, AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
-import { _decode_AddressListRequest, _encode_AddressListRequest, AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
+import { _decode_AddressListDesignator_type, _encode_AddressListDesignator_type, type AddressListDesignator_type } from "../MMSHeadingExtensions/AddressListDesignator-type.ta.mjs";
+import { _decode_AddressListRequest, _encode_AddressListRequest, type AddressListRequest } from "../MMSHeadingExtensions/AddressListRequest.ta.mjs";
 
 
 /**

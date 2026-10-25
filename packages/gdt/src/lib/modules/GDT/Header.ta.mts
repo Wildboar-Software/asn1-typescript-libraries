@@ -8,9 +8,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EndPointDescriptor, _decode_EndPointDescriptor, _encode_EndPointDescriptor } from "../GDT/EndPointDescriptor.ta.mjs";
-import { SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
+import { type SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
 import { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
-import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
+import { type ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../GDT/EncryptionInfo.ta.mjs";
 
 

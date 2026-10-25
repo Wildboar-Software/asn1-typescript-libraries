@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ServerRSAParams, _decode_ServerRSAParams, _encode_ServerRSAParams } from "../TSM/ServerRSAParams.ta.mjs";
 
-import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
+import { type Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
 
 
 

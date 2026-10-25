@@ -6,21 +6,21 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../PKCS7/EncryptedKey.ta.mjs";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    RecipientIdentifier,
+    type RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
 } from "../PKCS7/RecipientIdentifier.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary KeyTransportRecipientInfo

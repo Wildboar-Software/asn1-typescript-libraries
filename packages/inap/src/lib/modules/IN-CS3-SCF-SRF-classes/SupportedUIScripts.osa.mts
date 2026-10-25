@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { UISCRIPT } from "../IN-CS3-SCF-SRF-classes/UISCRIPT.oca.mjs";
+import { type UISCRIPT } from "../IN-CS3-SCF-SRF-classes/UISCRIPT.oca.mjs";
 // export { UISCRIPT } from "../IN-CS3-SCF-SRF-classes/UISCRIPT.oca.mjs";
 import { firstScript } from "../IN-CS3-SCF-SRF-classes/firstScript.oa.mjs";
 // export { firstScript } from "../IN-CS3-SCF-SRF-classes/firstScript.oa.mjs";

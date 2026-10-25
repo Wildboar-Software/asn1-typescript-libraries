@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GraphicStringBase,
+    type GraphicStringBase,
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
 } from '../X790ASN1Module/GraphicStringBase.ta.mjs';

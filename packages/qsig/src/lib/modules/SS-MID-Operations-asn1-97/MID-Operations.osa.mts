@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { mIDMailboxAuth } from "../SS-MID-Operations-asn1-97/mIDMailboxAuth.oa.mjs";
 import { mIDMailboxID } from "../SS-MID-Operations-asn1-97/mIDMailboxID.oa.mjs";
 

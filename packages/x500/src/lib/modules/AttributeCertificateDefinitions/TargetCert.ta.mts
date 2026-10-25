@@ -16,7 +16,7 @@ import {
     _encode_ObjectDigestInfo,
 } from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

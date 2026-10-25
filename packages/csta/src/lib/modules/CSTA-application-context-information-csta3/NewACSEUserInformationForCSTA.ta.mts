@@ -3,16 +3,16 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CSTAVersion, _decode_CSTAVersion, _encode_CSTAVersion } from "../CSTA-application-context-information-csta3/CSTAVersion.ta.mjs";
+import { type CSTAVersion, _decode_CSTAVersion, _encode_CSTAVersion } from "../CSTA-application-context-information-csta3/CSTAVersion.ta.mjs";
 
 import { CSTAFunctionality, _decode_CSTAFunctionality, _encode_CSTAFunctionality } from "../CSTA-application-context-information-csta3/CSTAFunctionality.ta.mjs";
 
-import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode_CSTAPrivateDataVersionList } from "../CSTA-application-context-information-csta3/CSTAPrivateDataVersionList.ta.mjs";
+import { type CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode_CSTAPrivateDataVersionList } from "../CSTA-application-context-information-csta3/CSTAPrivateDataVersionList.ta.mjs";
 
 
 

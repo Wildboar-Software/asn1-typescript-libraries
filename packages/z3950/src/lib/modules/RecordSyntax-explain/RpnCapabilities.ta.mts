@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RpnCapabilities_operators_Item, _decode_RpnCapabilities_operators_Item, _encode_RpnCapabilities_operators_Item } from "../RecordSyntax-explain/RpnCapabilities-operators-Item.ta.mjs";
+import { type RpnCapabilities_operators_Item, _decode_RpnCapabilities_operators_Item, _encode_RpnCapabilities_operators_Item } from "../RecordSyntax-explain/RpnCapabilities-operators-Item.ta.mjs";
 import { ProximitySupport, _decode_ProximitySupport, _encode_ProximitySupport } from "../RecordSyntax-explain/ProximitySupport.ta.mjs";
 
 

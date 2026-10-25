@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RIOupdate_Item_operation, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
+import { type RIOupdate_Item_operation, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
 import { type ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
 
 

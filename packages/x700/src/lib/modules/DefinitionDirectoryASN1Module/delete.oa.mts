@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    Delete,
+    type Delete,
     _decode_Delete,
     _encode_Delete,
 } from '../DefinitionASN1Module/Delete.ta.mjs';

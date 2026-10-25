@@ -9,7 +9,7 @@ import {
   EmbeddedPDV as _PDV,
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
+import { type AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
 
 /**
  * @summary ultimateReceiver

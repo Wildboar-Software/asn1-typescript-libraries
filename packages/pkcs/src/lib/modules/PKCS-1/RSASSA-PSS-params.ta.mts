@@ -7,19 +7,19 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import {
-    MaskGenAlgorithm,
+    type MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
 } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
 import { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.mjs";
 import { sha1 } from "../PKCS-1/sha1.va.mjs";
 import {
-    TrailerField,
+    type TrailerField,
     trailerFieldBC /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TrailerField,
     _encode_TrailerField,

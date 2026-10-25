@@ -10,13 +10,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ChangeCipherSpec, _enum_for_ChangeCipherSpec, _decode_ChangeCipherSpec, _encode_ChangeCipherSpec } from "../TSM/ChangeCipherSpec.ta.mjs";
+import { type ChangeCipherSpec, _enum_for_ChangeCipherSpec, _decode_ChangeCipherSpec, _encode_ChangeCipherSpec } from "../TSM/ChangeCipherSpec.ta.mjs";
 
 import { Alert, _decode_Alert, _encode_Alert } from "../TSM/Alert.ta.mjs";
 
 import { Handshake, _decode_Handshake, _encode_Handshake } from "../TSM/Handshake.ta.mjs";
 
-import { ApplicationData, _decode_ApplicationData, _encode_ApplicationData } from "../TSM/ApplicationData.ta.mjs";
+import { type ApplicationData, _decode_ApplicationData, _encode_ApplicationData } from "../TSM/ApplicationData.ta.mjs";
 
 
 

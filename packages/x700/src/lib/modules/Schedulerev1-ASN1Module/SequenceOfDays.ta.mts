@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TimesOfDayWps,
+    type TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';

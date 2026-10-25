@@ -17,12 +17,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    ENCRYPTED,
+    type ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    EncryptionKey,
+    type EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
 } from '../MTSAbstractService/EncryptionKey.ta.mjs';
@@ -37,7 +37,7 @@ import {
     _encode_Certificates,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';

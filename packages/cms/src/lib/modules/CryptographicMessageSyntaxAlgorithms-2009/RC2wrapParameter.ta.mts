@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RC2ParameterVersion,
+    type RC2ParameterVersion,
     _decode_RC2ParameterVersion,
     _encode_RC2ParameterVersion,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/RC2ParameterVersion.ta.mjs";

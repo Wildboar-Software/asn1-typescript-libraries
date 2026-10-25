@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { EntityReleasedArg, _decode_EntityReleasedArg, _encode_EntityReleasedArg } from "../IN-CS3-SSF-SCF-ops-args/EntityReleasedArg.ta.mjs";
+import { type EntityReleasedArg, _decode_EntityReleasedArg, _encode_EntityReleasedArg } from "../IN-CS3-SSF-SCF-ops-args/EntityReleasedArg.ta.mjs";
 // export { EntityReleasedArg, _decode_EntityReleasedArg, _encode_EntityReleasedArg } from "../IN-CS3-SSF-SCF-ops-args/EntityReleasedArg.ta.mjs";
 import { opcode_entityReleased } from "../IN-CS3-operationcodes/opcode-entityReleased.va.mjs";
 // export { opcode_entityReleased } from "../IN-CS3-operationcodes/opcode-entityReleased.va.mjs";

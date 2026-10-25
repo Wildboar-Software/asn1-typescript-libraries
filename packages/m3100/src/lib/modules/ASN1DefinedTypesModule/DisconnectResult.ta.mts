@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DisconnectResult_Item,
+    type DisconnectResult_Item,
     _decode_DisconnectResult_Item,
     _encode_DisconnectResult_Item,
 } from '../ASN1DefinedTypesModule/DisconnectResult-Item.ta.mjs';

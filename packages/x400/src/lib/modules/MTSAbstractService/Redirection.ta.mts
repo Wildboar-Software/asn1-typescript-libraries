@@ -16,7 +16,7 @@ import {
     _encode_IntendedRecipientName,
 } from '../MTSAbstractService/IntendedRecipientName.ta.mjs';
 import {
-    RedirectionReason,
+    type RedirectionReason,
     _enum_for_RedirectionReason,
     _decode_RedirectionReason,
     _encode_RedirectionReason,

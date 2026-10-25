@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { TrafficManagementSCF_SSF_PDUs, _decode_TrafficManagementSCF_SSF_PDUs, _encode_TrafficManagementSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/TrafficManagementSCF-SSF-PDUs.ta.mjs";
+import { type TrafficManagementSCF_SSF_PDUs, _decode_TrafficManagementSCF_SSF_PDUs, _encode_TrafficManagementSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/TrafficManagementSCF-SSF-PDUs.ta.mjs";
 // export { TrafficManagementSCF_SSF_PDUs, _decode_TrafficManagementSCF_SSF_PDUs, _encode_TrafficManagementSCF_SSF_PDUs } from "../IN-SSF-SCF-pkgs-contracts-acs/TrafficManagementSCF-SSF-PDUs.ta.mjs";
 import { id_as_scf_ssfTrafficManagementAS } from "../IN-object-identifiers/id-as-scf-ssfTrafficManagementAS.va.mjs";
 // export { id_as_scf_ssfTrafficManagementAS } from "../IN-object-identifiers/id-as-scf-ssfTrafficManagementAS.va.mjs";

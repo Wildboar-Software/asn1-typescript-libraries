@@ -16,7 +16,7 @@ import {
   _encode_SecretQuestionType,
 } from '../CMAIL/SecretQuestionType.ta.mjs';
 import {
-  SignatureType,
+  type SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';

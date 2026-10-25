@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AND_Set,
+  type AND_Set,
   _decode_AND_Set,
   _encode_AND_Set,
 } from '../ISO8571-FTAM/AND-Set.ta.mjs';

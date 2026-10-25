@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ClockValue,
+    type ClockValue,
     _decode_ClockValue,
     _encode_ClockValue,
 } from '../TimeMF/ClockValue.ta.mjs';

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OperationSpecifications,
+    type OperationSpecifications,
     _decode_OperationSpecifications,
     _encode_OperationSpecifications,
 } from '../Schedulerev1-ASN1Module/OperationSpecifications.ta.mjs';

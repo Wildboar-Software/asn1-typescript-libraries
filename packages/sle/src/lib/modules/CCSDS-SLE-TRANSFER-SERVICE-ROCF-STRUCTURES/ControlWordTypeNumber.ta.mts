@@ -4,7 +4,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber,
+import { type RequestedControlWordTypeNumber, _decode_RequestedControlWordTypeNumber, _encode_RequestedControlWordTypeNumber,
     RequestedControlWordTypeNumber_allControlWords,
     RequestedControlWordTypeNumber_clcw,
     RequestedControlWordTypeNumber_notClcw

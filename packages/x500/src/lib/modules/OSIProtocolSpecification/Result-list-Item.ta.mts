@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Result_list_Item_provider_reason,
+    type Result_list_Item_provider_reason,
     _decode_Result_list_Item_provider_reason,
     _encode_Result_list_Item_provider_reason,
 } from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta.mjs";
 import {
-    Result,
+    type Result,
     _decode_Result,
     _encode_Result,
 } from "../OSIProtocolSpecification/Result.ta.mjs";
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";

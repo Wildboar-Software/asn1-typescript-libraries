@@ -3,11 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OCTET_STRING,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_BppCommandId, _encode_BppCommandId, BppCommandId } from "../RSPDefinitions/BppCommandId.ta.mjs";
-import { _decode_ErrorReason, _encode_ErrorReason, ErrorReason } from "../RSPDefinitions/ErrorReason.ta.mjs";
+import { _decode_BppCommandId, _encode_BppCommandId, type BppCommandId } from "../RSPDefinitions/BppCommandId.ta.mjs";
+import { _decode_ErrorReason, _encode_ErrorReason, type ErrorReason } from "../RSPDefinitions/ErrorReason.ta.mjs";
 
 
 /**

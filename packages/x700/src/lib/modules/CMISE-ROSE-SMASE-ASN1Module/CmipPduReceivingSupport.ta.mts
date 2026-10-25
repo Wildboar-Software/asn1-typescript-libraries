@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CmipPduType,
+    type CmipPduType,
     _decode_CmipPduType,
     _encode_CmipPduType,
 } from '../CMISE-ROSE-SMASE-ASN1Module/CmipPduType.ta.mjs';

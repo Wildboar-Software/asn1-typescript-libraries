@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceOfDays,
+    type SequenceOfDays,
     _decode_SequenceOfDays,
     _encode_SequenceOfDays,
 } from '../Schedulerev1-ASN1Module/SequenceOfDays.ta.mjs';
 import {
-    SequenceOfWeeks,
+    type SequenceOfWeeks,
     _decode_SequenceOfWeeks,
     _encode_SequenceOfWeeks,
 } from '../Schedulerev1-ASN1Module/SequenceOfWeeks.ta.mjs';
 import {
-    SequenceOfMonths,
+    type SequenceOfMonths,
     _decode_SequenceOfMonths,
     _encode_SequenceOfMonths,
 } from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta.mjs';
 import {
-    SequenceOfTypeOfDays,
+    type SequenceOfTypeOfDays,
     _decode_SequenceOfTypeOfDays,
     _encode_SequenceOfTypeOfDays,
 } from '../Schedulerev1-ASN1Module/SequenceOfTypeOfDays.ta.mjs';

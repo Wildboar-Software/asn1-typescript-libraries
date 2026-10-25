@@ -12,7 +12,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub";

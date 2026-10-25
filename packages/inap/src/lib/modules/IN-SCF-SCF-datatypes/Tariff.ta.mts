@@ -7,9 +7,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Event, _decode_Event, _encode_Event } from "../IN-SCF-SCF-datatypes/Event.ta.mjs";
+import { type Event, _decode_Event, _encode_Event } from "../IN-SCF-SCF-datatypes/Event.ta.mjs";
 // export { Event, _decode_Event, _encode_Event } from "../IN-SCF-SCF-datatypes/Event.ta.mjs";
-import { Rule, _decode_Rule, _encode_Rule } from "../IN-SCF-SCF-datatypes/Rule.ta.mjs";
+import { type Rule, _decode_Rule, _encode_Rule } from "../IN-SCF-SCF-datatypes/Rule.ta.mjs";
 // export { Rule, _decode_Rule, _encode_Rule } from "../IN-SCF-SCF-datatypes/Rule.ta.mjs";
 
 

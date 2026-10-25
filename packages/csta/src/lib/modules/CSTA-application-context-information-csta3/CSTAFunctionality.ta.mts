@@ -3,24 +3,24 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SwitchingFunctionServicesC2, _decode_SwitchingFunctionServicesC2, _encode_SwitchingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/SwitchingFunctionServicesC2.ta.mjs";
+import { type SwitchingFunctionServicesC2, _decode_SwitchingFunctionServicesC2, _encode_SwitchingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/SwitchingFunctionServicesC2.ta.mjs";
 
-import { EventReportServicesC2, _decode_EventReportServicesC2, _encode_EventReportServicesC2 } from "../CSTA-application-context-information-csta3/EventReportServicesC2.ta.mjs";
+import { type EventReportServicesC2, _decode_EventReportServicesC2, _encode_EventReportServicesC2 } from "../CSTA-application-context-information-csta3/EventReportServicesC2.ta.mjs";
 
-import { ComputingFunctionServicesC2, _decode_ComputingFunctionServicesC2, _encode_ComputingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/ComputingFunctionServicesC2.ta.mjs";
+import { type ComputingFunctionServicesC2, _decode_ComputingFunctionServicesC2, _encode_ComputingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/ComputingFunctionServicesC2.ta.mjs";
 
-import { BidirectionalServicesC2, _decode_BidirectionalServicesC2, _encode_BidirectionalServicesC2 } from "../CSTA-application-context-information-csta3/BidirectionalServicesC2.ta.mjs";
+import { type BidirectionalServicesC2, _decode_BidirectionalServicesC2, _encode_BidirectionalServicesC2 } from "../CSTA-application-context-information-csta3/BidirectionalServicesC2.ta.mjs";
 
-import { StatusReportingServicesC2, _decode_StatusReportingServicesC2, _encode_StatusReportingServicesC2 } from "../CSTA-application-context-information-csta3/StatusReportingServicesC2.ta.mjs";
+import { type StatusReportingServicesC2, _decode_StatusReportingServicesC2, _encode_StatusReportingServicesC2 } from "../CSTA-application-context-information-csta3/StatusReportingServicesC2.ta.mjs";
 
-import { InputOutputServicesC2, _decode_InputOutputServicesC2, _encode_InputOutputServicesC2 } from "../CSTA-application-context-information-csta3/InputOutputServicesC2.ta.mjs";
+import { type InputOutputServicesC2, _decode_InputOutputServicesC2, _encode_InputOutputServicesC2 } from "../CSTA-application-context-information-csta3/InputOutputServicesC2.ta.mjs";
 
-import { VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServicesC2 } from "../CSTA-application-context-information-csta3/VoiceUnitServicesC2.ta.mjs";
+import { type VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServicesC2 } from "../CSTA-application-context-information-csta3/VoiceUnitServicesC2.ta.mjs";
 
 
 

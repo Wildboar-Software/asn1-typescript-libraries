@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC_Correlation } from "../EpsHI2Operations/IRI-to-CC-Correlation.ta.mjs";
 // export { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC_Correlation } from "../EpsHI2Operations/IRI-to-CC-Correlation.ta.mjs";
-import { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_IRI_Correlation } from "../EpsHI2Operations/IRI-to-IRI-Correlation.ta.mjs";
+import { type IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_IRI_Correlation } from "../EpsHI2Operations/IRI-to-IRI-Correlation.ta.mjs";
 // export { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_IRI_Correlation } from "../EpsHI2Operations/IRI-to-IRI-Correlation.ta.mjs";
 
 

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PrimaryRecipientsSubfield,
+    type PrimaryRecipientsSubfield,
     _decode_PrimaryRecipientsSubfield,
     _encode_PrimaryRecipientsSubfield,
 } from '../IPMSInformationObjects/PrimaryRecipientsSubfield.ta.mjs';

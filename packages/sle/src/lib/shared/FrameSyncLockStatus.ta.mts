@@ -4,7 +4,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LockStatus, _encode_LockStatus, LockStatus,
+import { _decode_LockStatus, _encode_LockStatus, type LockStatus,
     LockStatus_inLock,
     LockStatus_outOfLock,
     LockStatus_unknown

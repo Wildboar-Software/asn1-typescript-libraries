@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LocationArea, _encode_LocationArea, LocationArea } from "../MAP-MS-DataTypes/LocationArea.ta.mjs";
+import { _decode_LocationArea, _encode_LocationArea, type LocationArea } from "../MAP-MS-DataTypes/LocationArea.ta.mjs";
 
 
 /**

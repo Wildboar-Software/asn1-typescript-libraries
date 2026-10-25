@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "../Attribute-ASN1Module/SimpleNameType.ta.mjs";
+import { type SimpleNameType, _decode_SimpleNameType, _encode_SimpleNameType } from "../Attribute-ASN1Module/SimpleNameType.ta.mjs";
 /**
  * @summary LogRecordId
  * @description

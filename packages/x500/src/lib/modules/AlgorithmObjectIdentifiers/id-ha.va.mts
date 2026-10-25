@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { hashAlgorithm } from "../AlgorithmObjectIdentifiers/hashAlgorithm.va.mjs";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 /**
  * @summary id_ha
  * @description

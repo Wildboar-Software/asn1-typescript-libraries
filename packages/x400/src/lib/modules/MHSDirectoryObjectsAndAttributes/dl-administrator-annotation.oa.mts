@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    dl_administrator_annotation_Type,
+    type dl_administrator_annotation_Type,
     _decode_dl_administrator_annotation_Type,
     _encode_dl_administrator_annotation_Type,
 } from '../MHSDirectoryObjectsAndAttributes/dl-administrator-annotation-Type.ta.mjs';

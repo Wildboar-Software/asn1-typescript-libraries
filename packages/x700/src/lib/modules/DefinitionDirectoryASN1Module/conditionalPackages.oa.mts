@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    ConditionalPackages,
+    type ConditionalPackages,
     _decode_ConditionalPackages,
     _encode_ConditionalPackages,
 } from '../DefinitionASN1Module/ConditionalPackages.ta.mjs';

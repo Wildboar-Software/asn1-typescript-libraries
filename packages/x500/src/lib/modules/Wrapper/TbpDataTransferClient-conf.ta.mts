@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ENCIPHERED,
+    type ENCIPHERED,
     _get_decoder_for_ENCIPHERED,
     _get_encoder_for_ENCIPHERED,
 } from "../CryptoTools/ENCIPHERED.ta.mjs";

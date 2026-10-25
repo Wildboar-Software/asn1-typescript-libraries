@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    QualityEvaluationExtension,
+    type QualityEvaluationExtension,
     _decode_QualityEvaluationExtension,
     _encode_QualityEvaluationExtension,
 } from '../AuthenticationContextForBiometrics/QualityEvaluationExtension.ta.mjs';
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';

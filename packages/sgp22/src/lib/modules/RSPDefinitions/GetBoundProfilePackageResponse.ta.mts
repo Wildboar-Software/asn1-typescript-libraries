@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetBoundProfilePackageOk, _decode_GetBoundProfilePackageOk, _encode_GetBoundProfilePackageOk } from "../RSPDefinitions/GetBoundProfilePackageOk.ta.mjs";
-import { GetBoundProfilePackageResponse_getBoundProfilePackageError, _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError, _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError } from "../RSPDefinitions/GetBoundProfilePackageResponse-getBoundProfilePackageError.ta.mjs";
+import { type GetBoundProfilePackageResponse_getBoundProfilePackageError, _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError, _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError } from "../RSPDefinitions/GetBoundProfilePackageResponse-getBoundProfilePackageError.ta.mjs";
 
 
 /**

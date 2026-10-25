@@ -12,7 +12,7 @@ import {
     _encode_CredentialIdentifier,
 } from "../PKCS-15/CredentialIdentifier.ta.mjs";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";

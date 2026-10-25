@@ -11,7 +11,7 @@ import {
     _encode_OperationProgress,
 } from "../DistributedOperations/OperationProgress.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";

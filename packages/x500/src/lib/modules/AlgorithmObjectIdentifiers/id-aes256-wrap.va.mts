@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { aes } from "../AlgorithmObjectIdentifiers/aes.va.mjs";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 /**
  * @summary id_aes256_wrap
  * @description

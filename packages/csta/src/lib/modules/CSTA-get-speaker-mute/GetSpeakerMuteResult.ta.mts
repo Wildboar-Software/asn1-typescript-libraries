@@ -3,12 +3,12 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SpeakerMuteList, _decode_SpeakerMuteList, _encode_SpeakerMuteList } from "../CSTA-get-speaker-mute/SpeakerMuteList.ta.mjs";
+import { type SpeakerMuteList, _decode_SpeakerMuteList, _encode_SpeakerMuteList } from "../CSTA-get-speaker-mute/SpeakerMuteList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

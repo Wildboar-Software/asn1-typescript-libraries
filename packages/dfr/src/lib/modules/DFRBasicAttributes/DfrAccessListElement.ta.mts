@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessId, _decode_AccessId, _encode_AccessId } from "../DFRBasicAttributes/AccessId.ta.mjs";
+import { type AccessId, _decode_AccessId, _encode_AccessId } from "../DFRBasicAttributes/AccessId.ta.mjs";
 import { AccessRights, _enum_for_AccessRights, _decode_AccessRights, _encode_AccessRights } from "../DFRBasicAttributes/AccessRights.ta.mjs";
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    Group14,
+    type Group14,
     _decode_Group14,
     _encode_Group14,
 } from "../GenAlgo/Group14.ta.mjs";

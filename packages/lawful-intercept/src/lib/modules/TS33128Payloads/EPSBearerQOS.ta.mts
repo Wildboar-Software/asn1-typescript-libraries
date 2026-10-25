@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { QCI, _decode_QCI, _encode_QCI } from "../TS33128Payloads/QCI.ta.mjs";
+import { type QCI, _decode_QCI, _encode_QCI } from "../TS33128Payloads/QCI.ta.mjs";
 // export { QCI, _decode_QCI, _encode_QCI } from "../TS33128Payloads/QCI.ta.mjs";
-import { BitrateBinKBPS, _decode_BitrateBinKBPS, _encode_BitrateBinKBPS } from "../TS33128Payloads/BitrateBinKBPS.ta.mjs";
+import { type BitrateBinKBPS, _decode_BitrateBinKBPS, _encode_BitrateBinKBPS } from "../TS33128Payloads/BitrateBinKBPS.ta.mjs";
 // export { BitrateBinKBPS, _decode_BitrateBinKBPS, _encode_BitrateBinKBPS } from "../TS33128Payloads/BitrateBinKBPS.ta.mjs";
-import { EPSQOSPriority, _decode_EPSQOSPriority, _encode_EPSQOSPriority } from "../TS33128Payloads/EPSQOSPriority.ta.mjs";
+import { type EPSQOSPriority, _decode_EPSQOSPriority, _encode_EPSQOSPriority } from "../TS33128Payloads/EPSQOSPriority.ta.mjs";
 // export { EPSQOSPriority, _decode_EPSQOSPriority, _encode_EPSQOSPriority } from "../TS33128Payloads/EPSQOSPriority.ta.mjs";
 
 

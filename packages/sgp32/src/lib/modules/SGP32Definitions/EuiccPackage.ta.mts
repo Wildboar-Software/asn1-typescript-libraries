@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Psmo, _decode_Psmo, _encode_Psmo } from "../SGP32Definitions/Psmo.ta.mjs";
-import { Eco, _decode_Eco, _encode_Eco } from "../SGP32Definitions/Eco.ta.mjs";
+import { type Psmo, _decode_Psmo, _encode_Psmo } from "../SGP32Definitions/Psmo.ta.mjs";
+import { type Eco, _decode_Eco, _encode_Eco } from "../SGP32Definitions/Eco.ta.mjs";
 
 
 /**

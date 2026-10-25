@@ -21,4 +21,4 @@ type SubstringsFunction = (
     selection?: SubstringSelection,
 ) => boolean;
 
-export default SubstringsFunction;
+export type { SubstringsFunction as default };

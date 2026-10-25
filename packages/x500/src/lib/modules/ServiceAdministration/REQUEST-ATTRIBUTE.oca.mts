@@ -6,7 +6,7 @@ import {
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
+import { type ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
 import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.mjs";
 /**

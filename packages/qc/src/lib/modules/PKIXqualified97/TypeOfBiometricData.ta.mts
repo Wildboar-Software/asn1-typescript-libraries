@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PredefinedBiometricType,
+    type PredefinedBiometricType,
     _decode_PredefinedBiometricType,
     _encode_PredefinedBiometricType,
 } from "../PKIXqualified97/PredefinedBiometricType.ta.mjs";

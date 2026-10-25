@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic, _enum_for_UnauthorizedLCSClient_Diagnostic } from "../MAP-ER-DataTypes/UnauthorizedLCSClient-Diagnostic.ta.mjs";
+import { type UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic, _enum_for_UnauthorizedLCSClient_Diagnostic } from "../MAP-ER-DataTypes/UnauthorizedLCSClient-Diagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

@@ -15,7 +15,7 @@ import {
   _encode_RejectProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/RejectProblem.ta.mjs';
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';

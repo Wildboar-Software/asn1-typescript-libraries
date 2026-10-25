@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { cmnRequest } from "../Common-Information-Operations-asn1-97/cmnRequest.oa.mjs";
 import { cmnInform } from "../Common-Information-Operations-asn1-97/cmnInform.oa.mjs";
 

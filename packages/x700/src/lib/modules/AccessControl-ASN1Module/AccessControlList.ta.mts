@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AccessControlList_Item,
+    type AccessControlList_Item,
     _decode_AccessControlList_Item,
     _encode_AccessControlList_Item,
 } from '../AccessControl-ASN1Module/AccessControlList-Item.ta.mjs';

@@ -4,15 +4,15 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
+import { type IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
 
-import { CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-switching-function-objects/CSTAObject.ta.mjs";
+import { type CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-switching-function-objects/CSTAObject.ta.mjs";
 
 import {
     DataPathDirection,
@@ -28,7 +28,7 @@ import {
     _encode_DataPathType
 } from "../CSTA-device-feature-types/DataPathType.ta.mjs";
 
-import { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
+import { type DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

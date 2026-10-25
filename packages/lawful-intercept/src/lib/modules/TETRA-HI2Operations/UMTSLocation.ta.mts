@@ -8,7 +8,7 @@ import { GA_Point, _decode_GA_Point, _encode_GA_Point } from "../TETRA-HI2Operat
 // export { GA_Point, _decode_GA_Point, _encode_GA_Point } from "../TETRA-HI2Operations/GA-Point.ta.mjs";
 import { GA_PointWithUnCertainty, _decode_GA_PointWithUnCertainty, _encode_GA_PointWithUnCertainty } from "../TETRA-HI2Operations/GA-PointWithUnCertainty.ta.mjs";
 // export { GA_PointWithUnCertainty, _decode_GA_PointWithUnCertainty, _encode_GA_PointWithUnCertainty } from "../TETRA-HI2Operations/GA-PointWithUnCertainty.ta.mjs";
-import { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../TETRA-HI2Operations/GA-Polygon.ta.mjs";
+import { type GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../TETRA-HI2Operations/GA-Polygon.ta.mjs";
 // export { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../TETRA-HI2Operations/GA-Polygon.ta.mjs";
 
 

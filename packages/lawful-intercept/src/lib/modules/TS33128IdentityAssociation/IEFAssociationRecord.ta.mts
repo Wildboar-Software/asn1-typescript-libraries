@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128IdentityAssociation/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128IdentityAssociation/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128IdentityAssociation/SUPI.ta.mjs";
-import { FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128IdentityAssociation/FiveGGUTI.ta.mjs";
+import { type FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128IdentityAssociation/FiveGGUTI.ta.mjs";
 // export { FiveGGUTI, _decode_FiveGGUTI, _encode_FiveGGUTI } from "../TS33128IdentityAssociation/FiveGGUTI.ta.mjs";
-import { TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI.ta.mjs";
+import { type TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI.ta.mjs";
 // export { TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI.ta.mjs";
 import { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128IdentityAssociation/NCGI.ta.mjs";
 // export { NCGI, _decode_NCGI, _encode_NCGI } from "../TS33128IdentityAssociation/NCGI.ta.mjs";
-import { SUCI, _decode_SUCI, _encode_SUCI } from "../TS33128IdentityAssociation/SUCI.ta.mjs";
+import { type SUCI, _decode_SUCI, _encode_SUCI } from "../TS33128IdentityAssociation/SUCI.ta.mjs";
 // export { SUCI, _decode_SUCI, _encode_SUCI } from "../TS33128IdentityAssociation/SUCI.ta.mjs";
-import { PEI, _decode_PEI, _encode_PEI } from "../TS33128IdentityAssociation/PEI.ta.mjs";
+import { type PEI, _decode_PEI, _encode_PEI } from "../TS33128IdentityAssociation/PEI.ta.mjs";
 // export { PEI, _decode_PEI, _encode_PEI } from "../TS33128IdentityAssociation/PEI.ta.mjs";
-import { FiveGSTAIList, _decode_FiveGSTAIList, _encode_FiveGSTAIList } from "../TS33128IdentityAssociation/FiveGSTAIList.ta.mjs";
+import { type FiveGSTAIList, _decode_FiveGSTAIList, _encode_FiveGSTAIList } from "../TS33128IdentityAssociation/FiveGSTAIList.ta.mjs";
 // export { FiveGSTAIList, _decode_FiveGSTAIList, _encode_FiveGSTAIList } from "../TS33128IdentityAssociation/FiveGSTAIList.ta.mjs";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128IdentityAssociation/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128IdentityAssociation/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128IdentityAssociation/GPSI.ta.mjs";
 import { AdditionalCGIs, _decode_AdditionalCGIs, _encode_AdditionalCGIs } from "../TS33128IdentityAssociation/AdditionalCGIs.ta.mjs";
 // export { AdditionalCGIs, _decode_AdditionalCGIs, _encode_AdditionalCGIs } from "../TS33128IdentityAssociation/AdditionalCGIs.ta.mjs";

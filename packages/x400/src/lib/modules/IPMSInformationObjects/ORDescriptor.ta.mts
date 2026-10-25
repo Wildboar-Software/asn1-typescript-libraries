@@ -17,12 +17,12 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    FreeFormName,
+    type FreeFormName,
     _decode_FreeFormName,
     _encode_FreeFormName,
 } from '../IPMSInformationObjects/FreeFormName.ta.mjs';
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from '../IPMSInformationObjects/TelephoneNumber.ta.mjs';

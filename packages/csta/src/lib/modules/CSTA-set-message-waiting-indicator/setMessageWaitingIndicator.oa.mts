@@ -13,7 +13,7 @@ import {
 } from "../CSTA-set-message-waiting-indicator/SetMessageWaitingIndicatorArgument.ta.mjs";
 
 import {
-    SetMessageWaitingIndicatorResult,
+    type SetMessageWaitingIndicatorResult,
     _decode_SetMessageWaitingIndicatorResult,
     _encode_SetMessageWaitingIndicatorResult
 } from "../CSTA-set-message-waiting-indicator/SetMessageWaitingIndicatorResult.ta.mjs";

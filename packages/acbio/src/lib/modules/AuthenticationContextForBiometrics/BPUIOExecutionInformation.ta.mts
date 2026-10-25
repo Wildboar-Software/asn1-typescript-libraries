@@ -16,7 +16,7 @@ import {
     _encode_DataType,
 } from '../AuthenticationContextForBiometrics/DataType.ta.mjs';
 import {
-    IOIndex,
+    type IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
 } from '../AuthenticationContextForBiometrics/IOIndex.ta.mjs';

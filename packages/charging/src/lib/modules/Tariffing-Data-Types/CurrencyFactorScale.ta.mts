@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CurrencyFactor, _decode_CurrencyFactor, _encode_CurrencyFactor } from "../Tariffing-Data-Types/CurrencyFactor.ta.mjs";
+import { type CurrencyFactor, _decode_CurrencyFactor, _encode_CurrencyFactor } from "../Tariffing-Data-Types/CurrencyFactor.ta.mjs";
 import { noCharge } from "../Tariffing-Data-Types/noCharge.va.mjs";
-import { CurrencyScale, _decode_CurrencyScale, _encode_CurrencyScale } from "../Tariffing-Data-Types/CurrencyScale.ta.mjs";
+import { type CurrencyScale, _decode_CurrencyScale, _encode_CurrencyScale } from "../Tariffing-Data-Types/CurrencyScale.ta.mjs";
 import { noScale } from "../Tariffing-Data-Types/noScale.va.mjs";
 
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER, NULL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER, type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Period_months_bitMonth,
+    type Period_months_bitMonth,
     _decode_Period_months_bitMonth,
     _encode_Period_months_bitMonth,
 } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";

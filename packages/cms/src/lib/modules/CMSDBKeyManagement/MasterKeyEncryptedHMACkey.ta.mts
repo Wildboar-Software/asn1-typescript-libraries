@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MasterKeyAlgorithmIdentifier,
+    type MasterKeyAlgorithmIdentifier,
     _decode_MasterKeyAlgorithmIdentifier,
     _encode_MasterKeyAlgorithmIdentifier,
 } from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta.mjs";
 import {
-    MessageAuthenticationCodeAlgorithm,
+    type MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
 } from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs";

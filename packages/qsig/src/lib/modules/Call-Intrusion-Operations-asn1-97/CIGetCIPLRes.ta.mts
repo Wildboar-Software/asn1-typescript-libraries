@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CIProtectionLevel, _decode_CIProtectionLevel, _encode_CIProtectionLevel, _enum_for_CIProtectionLevel } from "../Call-Intrusion-Operations-asn1-97/CIProtectionLevel.ta.mjs";
-import { CIGetCIPLRes_resultExtension, _decode_CIGetCIPLRes_resultExtension, _encode_CIGetCIPLRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIGetCIPLRes-resultExtension.ta.mjs";
+import { type CIGetCIPLRes_resultExtension, _decode_CIGetCIPLRes_resultExtension, _encode_CIGetCIPLRes_resultExtension } from "../Call-Intrusion-Operations-asn1-97/CIGetCIPLRes-resultExtension.ta.mjs";
 
 /**
  * @summary CIGetCIPLRes

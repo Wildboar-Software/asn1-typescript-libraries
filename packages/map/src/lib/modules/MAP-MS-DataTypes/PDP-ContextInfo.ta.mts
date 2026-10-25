@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
-import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
-import { Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
-import { Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
-import { Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
-import { GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
-import { NSAPI, _decode_NSAPI, _encode_NSAPI } from "../MAP-MS-DataTypes/NSAPI.ta.mjs";
-import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
-import { TEID, _decode_TEID, _encode_TEID } from "../MAP-MS-DataTypes/TEID.ta.mjs";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MAP-MS-DataTypes/TransactionId.ta.mjs";
+import { type APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { type ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
+import { type ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { type Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
+import { type Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
+import { type Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
+import { type Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
+import { type Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
+import { type GPRSChargingID, _decode_GPRSChargingID, _encode_GPRSChargingID } from "../MAP-MS-DataTypes/GPRSChargingID.ta.mjs";
+import { type NSAPI, _decode_NSAPI, _encode_NSAPI } from "../MAP-MS-DataTypes/NSAPI.ta.mjs";
+import { type PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
+import { type PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
+import { type TEID, _decode_TEID, _encode_TEID } from "../MAP-MS-DataTypes/TEID.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MAP-MS-DataTypes/TransactionId.ta.mjs";
 
 
 /**

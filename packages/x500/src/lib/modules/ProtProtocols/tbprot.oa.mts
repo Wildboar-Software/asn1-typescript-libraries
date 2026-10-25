@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_tbprot } from "../ProtProtocols/id-tbprot.va.mjs";
 import {
-    TBprot,
+    type TBprot,
     _decode_TBprot,
     _encode_TBprot,
 } from "../TrustBroker/TBprot.ta.mjs";

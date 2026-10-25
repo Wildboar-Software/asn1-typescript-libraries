@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelationshipOperation,
+    type RelationshipOperation,
     _decode_RelationshipOperation,
     _encode_RelationshipOperation,
 } from '../GrmAttributeDefinitionModule/RelationshipOperation.ta.mjs';
 import {
-    MapsTo,
+    type MapsTo,
     _decode_MapsTo,
     _encode_MapsTo,
 } from '../GrmAttributeDefinitionModule/MapsTo.ta.mjs';

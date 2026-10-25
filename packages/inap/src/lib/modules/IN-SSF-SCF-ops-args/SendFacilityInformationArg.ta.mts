@@ -7,15 +7,15 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ComponentType, _decode_ComponentType, _encode_ComponentType, _enum_for_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
 // export { ComponentType, _enum_for_ComponentType, ComponentType_any /* IMPORTED_LONG_ENUMERATION_ITEM */, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_invoke /* IMPORTED_LONG_ENUMERATION_ITEM */, invoke /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rResult /* IMPORTED_LONG_ENUMERATION_ITEM */, rResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rError /* IMPORTED_LONG_ENUMERATION_ITEM */, rError /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rReject /* IMPORTED_LONG_ENUMERATION_ITEM */, rReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ComponentType, _encode_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
-import { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
+import { type ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
 // export { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
-import { Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
+import { type Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
 // export { Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
 import { CallProcessingOperation, CallProcessingOperation_fACility /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CallProcessingOperation, _encode_CallProcessingOperation, _enum_for_CallProcessingOperation } from "../IN-SSF-SCF-datatypes/CallProcessingOperation.ta.mjs";
 // export { CallProcessingOperation, _enum_for_CallProcessingOperation, CallProcessingOperation_aLERTing /* IMPORTED_LONG_ENUMERATION_ITEM */, aLERTing /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallProcessingOperation_sETUP /* IMPORTED_LONG_ENUMERATION_ITEM */, sETUP /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallProcessingOperation_cONNect /* IMPORTED_LONG_ENUMERATION_ITEM */, cONNect /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallProcessingOperation_dISConnect /* IMPORTED_LONG_ENUMERATION_ITEM */, dISConnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallProcessingOperation_rELease /* IMPORTED_LONG_ENUMERATION_ITEM */, rELease /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallProcessingOperation_rELeaseCOMPlete /* IMPORTED_LONG_ENUMERATION_ITEM */, rELeaseCOMPlete /* IMPORTED_SHORT_ENUMERATION_ITEM */, CallProcessingOperation_fACility /* IMPORTED_LONG_ENUMERATION_ITEM */, fACility /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CallProcessingOperation, _encode_CallProcessingOperation } from "../IN-SSF-SCF-datatypes/CallProcessingOperation.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

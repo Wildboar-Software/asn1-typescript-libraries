@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SigParamValueV1, _decode_SigParamValueV1, _encode_SigParamValueV1 } from "../H238V1-SUPPORT/SigParamValueV1.ta.mjs";
-import { SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
+import { type SigParamValueV1, _decode_SigParamValueV1, _encode_SigParamValueV1 } from "../H238V1-SUPPORT/SigParamValueV1.ta.mjs";
+import { type SigParameterName, _decode_SigParameterName, _encode_SigParameterName } from "../MEDIA-GATEWAY-CONTROL/SigParameterName.ta.mjs";
 
 
 /**

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    RecipientCategory,
+    type RecipientCategory,
     _decode_RecipientCategory,
     _encode_RecipientCategory,
 } from '../IPMSMessageStoreAttributes/RecipientCategory.ta.mjs';

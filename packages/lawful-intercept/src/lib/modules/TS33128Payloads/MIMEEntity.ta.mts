@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MIMEContentType, _decode_MIMEContentType, _encode_MIMEContentType } from "../TS33128Payloads/MIMEContentType.ta.mjs";
+import { type MIMEContentType, _decode_MIMEContentType, _encode_MIMEContentType } from "../TS33128Payloads/MIMEContentType.ta.mjs";
 // export { MIMEContentType, _decode_MIMEContentType, _encode_MIMEContentType } from "../TS33128Payloads/MIMEContentType.ta.mjs";
-import { EncapsulatedMIMEEntity, _decode_EncapsulatedMIMEEntity, _encode_EncapsulatedMIMEEntity } from "../TS33128Payloads/EncapsulatedMIMEEntity.ta.mjs";
+import { type EncapsulatedMIMEEntity, _decode_EncapsulatedMIMEEntity, _encode_EncapsulatedMIMEEntity } from "../TS33128Payloads/EncapsulatedMIMEEntity.ta.mjs";
 // export { EncapsulatedMIMEEntity, _decode_EncapsulatedMIMEEntity, _encode_EncapsulatedMIMEEntity } from "../TS33128Payloads/EncapsulatedMIMEEntity.ta.mjs";
 
 

@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    ScanAttributeIdList,
+    type ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
 } from '../SummarizationASN1Productions/ScanAttributeIdList.ta.mjs';
 import {
-    NumericAttributeIdArray,
+    type NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
 } from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';

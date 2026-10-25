@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1SizeError,
-    IA5String
+    type IA5String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ub_data_size } from "../MMSUpperBounds/ub-data-size.va.mjs";

@@ -9,7 +9,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { urimax } from "../EKCredentialProfileV2/urimax.va.mjs";
-import { Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../EKCredentialProfileV2/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../EKCredentialProfileV2/Version.ta.mjs";
 import { EKGenerationType, _decode_EKGenerationType, _encode_EKGenerationType, _enum_for_EKGenerationType } from "../EKCredentialProfileV2/EKGenerationType.ta.mjs";
 import { EKGenerationLocation, _decode_EKGenerationLocation, _encode_EKGenerationLocation, _enum_for_EKGenerationLocation } from "../EKCredentialProfileV2/EKGenerationLocation.ta.mjs";
 import { EKCertificateGenerationLocation, _decode_EKCertificateGenerationLocation, _encode_EKCertificateGenerationLocation, _enum_for_EKCertificateGenerationLocation } from "../EKCredentialProfileV2/EKCertificateGenerationLocation.ta.mjs";

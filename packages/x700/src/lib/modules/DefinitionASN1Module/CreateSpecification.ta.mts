@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CreateSpecification_createModifier,
+    type CreateSpecification_createModifier,
     _decode_CreateSpecification_createModifier,
     _encode_CreateSpecification_createModifier,
 } from '../DefinitionASN1Module/CreateSpecification-createModifier.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';

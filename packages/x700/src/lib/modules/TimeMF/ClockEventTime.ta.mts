@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GlobalTime,
+    type GlobalTime,
     _decode_GlobalTime,
     _encode_GlobalTime,
 } from '../TimeMF/GlobalTime.ta.mjs';

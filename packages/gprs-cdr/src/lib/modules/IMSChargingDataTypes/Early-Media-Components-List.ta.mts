@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    NULL,
+    type GraphicString,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -10,7 +10,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Component, _decode_SDP_Media_Component, _encode_SDP_Media_Component } from "../IMSChargingDataTypes/SDP-Media-Component.ta.mjs";
-import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from "../IMSChargingDataTypes/SDP-Type.ta.mjs";
+import { type SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from "../IMSChargingDataTypes/SDP-Type.ta.mjs";
 
 
 /**

@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CUG_FeatureList, _decode_CUG_FeatureList, _encode_CUG_FeatureList } from "../MAP-MS-DataTypes/CUG-FeatureList.ta.mjs";
-import { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_SubscriptionList } from "../MAP-MS-DataTypes/CUG-SubscriptionList.ta.mjs";
+import { type CUG_FeatureList, _decode_CUG_FeatureList, _encode_CUG_FeatureList } from "../MAP-MS-DataTypes/CUG-FeatureList.ta.mjs";
+import { type CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_SubscriptionList } from "../MAP-MS-DataTypes/CUG-SubscriptionList.ta.mjs";
 
 
 /**

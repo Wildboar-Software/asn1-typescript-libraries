@@ -4,9 +4,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../LNPDQP-Protocol/ServiceKey.ta.mjs";
-import { Digits, _decode_Digits, _encode_Digits } from "../LNPDQP-Protocol/Digits.ta.mjs";
-import { OriginatingStationType, _decode_OriginatingStationType, _encode_OriginatingStationType } from "../LNPDQP-Protocol/OriginatingStationType.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../LNPDQP-Protocol/ServiceKey.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../LNPDQP-Protocol/Digits.ta.mjs";
+import { type OriginatingStationType, _decode_OriginatingStationType, _encode_OriginatingStationType } from "../LNPDQP-Protocol/OriginatingStationType.ta.mjs";
 
 
 /**

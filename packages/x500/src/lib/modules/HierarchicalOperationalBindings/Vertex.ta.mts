@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MasterAndShadowAccessPoints,
+    type MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
 } from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
@@ -21,7 +21,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";

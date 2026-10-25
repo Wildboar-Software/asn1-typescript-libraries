@@ -10,9 +10,9 @@ import {
 import { ASN1ConstructionError } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
+import { type IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 
 
 /**

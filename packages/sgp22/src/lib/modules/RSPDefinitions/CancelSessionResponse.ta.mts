@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CancelSessionResponseOk, _decode_CancelSessionResponseOk, _encode_CancelSessionResponseOk } from "../RSPDefinitions/CancelSessionResponseOk.ta.mjs";
-import { CancelSessionResponse_cancelSessionResponseError, _decode_CancelSessionResponse_cancelSessionResponseError, _encode_CancelSessionResponse_cancelSessionResponseError } from "../RSPDefinitions/CancelSessionResponse-cancelSessionResponseError.ta.mjs";
+import { type CancelSessionResponse_cancelSessionResponseError, _decode_CancelSessionResponse_cancelSessionResponseError, _encode_CancelSessionResponse_cancelSessionResponseError } from "../RSPDefinitions/CancelSessionResponse-cancelSessionResponseError.ta.mjs";
 
 
 /**

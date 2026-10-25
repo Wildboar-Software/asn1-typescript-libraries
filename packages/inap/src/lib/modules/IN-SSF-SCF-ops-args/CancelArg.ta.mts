@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-common-datatypes/InvokeID.ta.mjs";
+import { type InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-common-datatypes/InvokeID.ta.mjs";
 // export { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-common-datatypes/InvokeID.ta.mjs";
 import { CancelArg_callSegmentToCancel, _decode_CancelArg_callSegmentToCancel, _encode_CancelArg_callSegmentToCancel } from "../IN-SSF-SCF-ops-args/CancelArg-callSegmentToCancel.ta.mjs";
 // export { CancelArg_callSegmentToCancel, _decode_CancelArg_callSegmentToCancel, _encode_CancelArg_callSegmentToCancel } from "../IN-SSF-SCF-ops-args/CancelArg-callSegmentToCancel.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 
 

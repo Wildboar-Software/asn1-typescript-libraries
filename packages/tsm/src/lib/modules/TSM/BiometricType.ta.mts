@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BioAPI_BIR_BIOMETRIC_TYPE, _decode_BioAPI_BIR_BIOMETRIC_TYPE, _encode_BioAPI_BIR_BIOMETRIC_TYPE } from "../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs";
+import { type BioAPI_BIR_BIOMETRIC_TYPE, _decode_BioAPI_BIR_BIOMETRIC_TYPE, _encode_BioAPI_BIR_BIOMETRIC_TYPE } from "../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs";
 
 
 

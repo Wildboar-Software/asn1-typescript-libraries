@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { RequestNotificationChargingEventArg, _decode_RequestNotificationChargingEventArg, _encode_RequestNotificationChargingEventArg } from "../IN-CS2-SSF-SCF-ops-args/RequestNotificationChargingEventArg.ta.mjs";
+import { type RequestNotificationChargingEventArg, _decode_RequestNotificationChargingEventArg, _encode_RequestNotificationChargingEventArg } from "../IN-CS2-SSF-SCF-ops-args/RequestNotificationChargingEventArg.ta.mjs";
 // export { RequestNotificationChargingEventArg, _decode_RequestNotificationChargingEventArg, _encode_RequestNotificationChargingEventArg } from "../IN-CS2-SSF-SCF-ops-args/RequestNotificationChargingEventArg.ta.mjs";
 import { missingParameter } from "../IN-CS2-errortypes/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS2-errortypes/missingParameter.oa.mjs";

@@ -22,17 +22,17 @@ import {
     _encode_CommonSubmissionResults,
 } from '../MSAbstractService/CommonSubmissionResults.ta.mjs';
 import {
-    MessageSubmissionIdentifier,
+    type MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
 } from '../MTSAbstractService/MessageSubmissionIdentifier.ta.mjs';
 import {
-    MessageSubmissionTime,
+    type MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from '../MTSAbstractService/MessageSubmissionTime.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';

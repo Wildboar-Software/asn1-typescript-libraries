@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PSAPAddress,
+    type PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
 } from '../MTSAbstractService/PSAPAddress.ta.mjs';

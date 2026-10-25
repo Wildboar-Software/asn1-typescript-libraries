@@ -15,7 +15,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AccessRuleValue, _encode_AccessRuleValue, type AccessRuleValue } from "../CSS/AccessRuleValue.ta.mjs";
-import { ParameterValues_defaultCOPriority, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
+import { type ParameterValues_defaultCOPriority, _decode_ParameterValues_defaultCOPriority, _encode_ParameterValues_defaultCOPriority } from "../DEV/ParameterValues-defaultCOPriority.ta.mjs";
 import { _decode_CompoundRepertoireValue, _encode_CompoundRepertoireValue, CompoundRepertoireValue } from "../CDS/CompoundRepertoireValue.ta.mjs";
 import { _decode_CompoundEmphasisValue, _encode_CompoundEmphasisValue, type CompoundEmphasisValue } from "../CDS/CompoundEmphasisValue.ta.mjs";
 import { _decode_CompoundColourValue, _encode_CompoundColourValue, CompoundColourValue } from "../CDS/CompoundColourValue.ta.mjs";

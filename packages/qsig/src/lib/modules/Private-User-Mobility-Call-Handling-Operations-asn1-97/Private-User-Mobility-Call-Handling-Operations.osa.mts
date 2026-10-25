@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { pumiEnquiry } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/pumiEnquiry.oa.mjs";
 import { pumiDivert } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/pumiDivert.oa.mjs";
 import { pumiInform } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/pumiInform.oa.mjs";

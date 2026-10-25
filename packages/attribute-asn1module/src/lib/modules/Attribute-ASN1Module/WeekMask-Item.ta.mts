@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WeekMask_Item_daysOfWeek, _decode_WeekMask_Item_daysOfWeek, _encode_WeekMask_Item_daysOfWeek } from "../Attribute-ASN1Module/WeekMask-Item-daysOfWeek.ta.mjs";
-import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
+import { type WeekMask_Item_daysOfWeek, _decode_WeekMask_Item_daysOfWeek, _encode_WeekMask_Item_daysOfWeek } from "../Attribute-ASN1Module/WeekMask-Item-daysOfWeek.ta.mjs";
+import { type IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
 /**
  * @summary WeekMask_Item
  * @description

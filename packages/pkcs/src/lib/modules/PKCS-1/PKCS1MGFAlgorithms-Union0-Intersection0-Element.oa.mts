@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../PKCS-1/HashAlgorithm.ta.mjs";

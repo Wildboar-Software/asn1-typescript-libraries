@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_GUI_RESPONSE,
+  type BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
 } from '../BIP/BioAPI-GUI-RESPONSE.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';

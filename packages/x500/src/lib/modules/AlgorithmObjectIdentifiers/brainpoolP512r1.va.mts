@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { versionOne } from "../AlgorithmObjectIdentifiers/versionOne.va.mjs";
 /**
  * @summary brainpoolP512r1

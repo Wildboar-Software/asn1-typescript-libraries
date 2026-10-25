@@ -3,44 +3,44 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { Activate, _decode_Activate, _encode_Activate } from "../CSTA-capability-exchange/Activate.ta.mjs";
+import { type Activate, _decode_Activate, _encode_Activate } from "../CSTA-capability-exchange/Activate.ta.mjs";
 
-import { Clear, _decode_Clear, _encode_Clear } from "../CSTA-capability-exchange/Clear.ta.mjs";
+import { type Clear, _decode_Clear, _encode_Clear } from "../CSTA-capability-exchange/Clear.ta.mjs";
 
-import { Deactivate, _decode_Deactivate, _encode_Deactivate } from "../CSTA-capability-exchange/Deactivate.ta.mjs";
+import { type Deactivate, _decode_Deactivate, _encode_Deactivate } from "../CSTA-capability-exchange/Deactivate.ta.mjs";
 
-import { ConcatenateMsg, _decode_ConcatenateMsg, _encode_ConcatenateMsg } from "../CSTA-capability-exchange/ConcatenateMsg.ta.mjs";
+import { type ConcatenateMsg, _decode_ConcatenateMsg, _encode_ConcatenateMsg } from "../CSTA-capability-exchange/ConcatenateMsg.ta.mjs";
 
-import { DeleteMsg, _decode_DeleteMsg, _encode_DeleteMsg } from "../CSTA-capability-exchange/DeleteMsg.ta.mjs";
+import { type DeleteMsg, _decode_DeleteMsg, _encode_DeleteMsg } from "../CSTA-capability-exchange/DeleteMsg.ta.mjs";
 
-import { Queue, _decode_Queue, _encode_Queue } from "../CSTA-capability-exchange/Queue.ta.mjs";
+import { type Queue, _decode_Queue, _encode_Queue } from "../CSTA-capability-exchange/Queue.ta.mjs";
 
-import { PlayMsg, _decode_PlayMsg, _encode_PlayMsg } from "../CSTA-capability-exchange/PlayMsg.ta.mjs";
+import { type PlayMsg, _decode_PlayMsg, _encode_PlayMsg } from "../CSTA-capability-exchange/PlayMsg.ta.mjs";
 
-import { QueryVoiceAttrib, _decode_QueryVoiceAttrib, _encode_QueryVoiceAttrib } from "../CSTA-capability-exchange/QueryVoiceAttrib.ta.mjs";
+import { type QueryVoiceAttrib, _decode_QueryVoiceAttrib, _encode_QueryVoiceAttrib } from "../CSTA-capability-exchange/QueryVoiceAttrib.ta.mjs";
 
-import { RecordMsg, _decode_RecordMsg, _encode_RecordMsg } from "../CSTA-capability-exchange/RecordMsg.ta.mjs";
+import { type RecordMsg, _decode_RecordMsg, _encode_RecordMsg } from "../CSTA-capability-exchange/RecordMsg.ta.mjs";
 
-import { Reposition, _decode_Reposition, _encode_Reposition } from "../CSTA-capability-exchange/Reposition.ta.mjs";
+import { type Reposition, _decode_Reposition, _encode_Reposition } from "../CSTA-capability-exchange/Reposition.ta.mjs";
 
-import { Resume, _decode_Resume, _encode_Resume } from "../CSTA-capability-exchange/Resume.ta.mjs";
+import { type Resume, _decode_Resume, _encode_Resume } from "../CSTA-capability-exchange/Resume.ta.mjs";
 
-import { Review, _decode_Review, _encode_Review } from "../CSTA-capability-exchange/Review.ta.mjs";
+import { type Review, _decode_Review, _encode_Review } from "../CSTA-capability-exchange/Review.ta.mjs";
 
-import { Start, _decode_Start, _encode_Start } from "../CSTA-capability-exchange/Start.ta.mjs";
+import { type Start, _decode_Start, _encode_Start } from "../CSTA-capability-exchange/Start.ta.mjs";
 
-import { SetVoiceAttrib, _decode_SetVoiceAttrib, _encode_SetVoiceAttrib } from "../CSTA-capability-exchange/SetVoiceAttrib.ta.mjs";
+import { type SetVoiceAttrib, _decode_SetVoiceAttrib, _encode_SetVoiceAttrib } from "../CSTA-capability-exchange/SetVoiceAttrib.ta.mjs";
 
-import { Stop, _decode_Stop, _encode_Stop } from "../CSTA-capability-exchange/Stop.ta.mjs";
+import { type Stop, _decode_Stop, _encode_Stop } from "../CSTA-capability-exchange/Stop.ta.mjs";
 
-import { Suspend, _decode_Suspend, _encode_Suspend } from "../CSTA-capability-exchange/Suspend.ta.mjs";
+import { type Suspend, _decode_Suspend, _encode_Suspend } from "../CSTA-capability-exchange/Suspend.ta.mjs";
 
-import { SynthesizeMsg, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../CSTA-capability-exchange/SynthesizeMsg.ta.mjs";
+import { type SynthesizeMsg, _decode_SynthesizeMsg, _encode_SynthesizeMsg } from "../CSTA-capability-exchange/SynthesizeMsg.ta.mjs";
 
 
 

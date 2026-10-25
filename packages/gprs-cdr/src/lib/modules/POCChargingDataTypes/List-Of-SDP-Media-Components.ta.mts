@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     type INTEGER,
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../POCChargingDataTypes/SDP-Media-Components.ta.mjs";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
 import { List_Of_SDP_Media_Components_sDP_Type, _decode_List_Of_SDP_Media_Components_sDP_Type, _encode_List_Of_SDP_Media_Components_sDP_Type, _enum_for_List_Of_SDP_Media_Components_sDP_Type } from "../POCChargingDataTypes/List-Of-SDP-Media-Components-sDP-Type.ta.mjs";
 
 

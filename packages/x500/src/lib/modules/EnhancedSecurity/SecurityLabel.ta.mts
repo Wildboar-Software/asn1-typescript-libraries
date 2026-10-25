@@ -6,22 +6,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PrivacyMark,
+    type PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
 } from "../EnhancedSecurity/PrivacyMark.ta.mjs";
 import {
-    SecurityCategories,
+    type SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
 } from "../EnhancedSecurity/SecurityCategories.ta.mjs";
 import {
-    SecurityClassification,
+    type SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
 } from "../EnhancedSecurity/SecurityClassification.ta.mjs";
 import {
-    SecurityPolicyIdentifier,
+    type SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
 } from "../EnhancedSecurity/SecurityPolicyIdentifier.ta.mjs";

@@ -6,12 +6,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PumInterrogArg_pumUserId, _decode_PumInterrogArg_pumUserId, _encode_PumInterrogArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumInterrogArg-pumUserId.ta.mjs";
+import { type PumInterrogArg_pumUserId, _decode_PumInterrogArg_pumUserId, _encode_PumInterrogArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumInterrogArg-pumUserId.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
-import { PumInterrogArg_userPin, _decode_PumInterrogArg_userPin, _encode_PumInterrogArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumInterrogArg-userPin.ta.mjs";
-import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
+import { type PumInterrogArg_userPin, _decode_PumInterrogArg_userPin, _encode_PumInterrogArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumInterrogArg-userPin.ta.mjs";
+import { type PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
 
 /**
  * @summary PumInterrogArg

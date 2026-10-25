@@ -16,7 +16,7 @@ import {
     _encode_UserAddress_x121,
 } from '../MTSAbstractService/UserAddress-x121.ta.mjs';
 import {
-    PSAPAddress,
+    type PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
 } from '../MTSAbstractService/PSAPAddress.ta.mjs';

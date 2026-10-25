@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PayloadLevel,
+    type PayloadLevel,
     _decode_PayloadLevel,
     _encode_PayloadLevel,
 } from '../M3100ASN1TypeModule2/PayloadLevel.ta.mjs';

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ReplyTimeField,
+    type ReplyTimeField,
     _decode_ReplyTimeField,
     _encode_ReplyTimeField,
 } from '../IPMSInformationObjects/ReplyTimeField.ta.mjs';

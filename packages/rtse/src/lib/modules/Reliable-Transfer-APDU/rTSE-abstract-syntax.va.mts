@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
   joint_iso_itu_t,
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,

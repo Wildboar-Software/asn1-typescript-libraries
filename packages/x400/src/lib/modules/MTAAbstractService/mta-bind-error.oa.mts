@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    mta_bind_error_ParameterType,
+    type mta_bind_error_ParameterType,
     _decode_mta_bind_error_ParameterType,
     _encode_mta_bind_error_ParameterType,
 } from '../MTAAbstractService/mta-bind-error-ParameterType.ta.mjs';

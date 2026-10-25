@@ -3,15 +3,15 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ThreadLinkageID, _decode_ThreadLinkageID, _encode_ThreadLinkageID } from "../CSTA-call-control/ThreadLinkageID.ta.mjs";
+import { type ThreadLinkageID, _decode_ThreadLinkageID, _encode_ThreadLinkageID } from "../CSTA-call-control/ThreadLinkageID.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
 
 

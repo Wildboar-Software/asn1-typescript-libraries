@@ -15,7 +15,7 @@ import {
 } from '../Notation/Identifier.ta.mjs';
 import { type SE_ERROR } from '../Notation/SE-ERROR.oca.mjs';
 import {
-    SecurityProblem,
+    type SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
 } from "@wildboar/x500/DirectoryAbstractService";

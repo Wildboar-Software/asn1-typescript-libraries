@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from '../MhsAcctAsn1Module/TelephoneNumber.ta.mjs';

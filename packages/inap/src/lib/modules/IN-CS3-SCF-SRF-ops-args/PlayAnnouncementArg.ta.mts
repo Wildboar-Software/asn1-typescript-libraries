@@ -6,11 +6,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS3-SCF-SRF-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS3-SCF-SRF-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS3-SCF-SRF-datatypes/InformationToSend.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
-import { PlayAnnouncementArg_connectedParty, _decode_PlayAnnouncementArg_connectedParty, _encode_PlayAnnouncementArg_connectedParty } from "../IN-CS3-SCF-SRF-ops-args/PlayAnnouncementArg-connectedParty.ta.mjs";
+import { type PlayAnnouncementArg_connectedParty, _decode_PlayAnnouncementArg_connectedParty, _encode_PlayAnnouncementArg_connectedParty } from "../IN-CS3-SCF-SRF-ops-args/PlayAnnouncementArg-connectedParty.ta.mjs";
 // export { PlayAnnouncementArg_connectedParty, _decode_PlayAnnouncementArg_connectedParty, _encode_PlayAnnouncementArg_connectedParty } from "../IN-CS3-SCF-SRF-ops-args/PlayAnnouncementArg-connectedParty.ta.mjs";
 
 

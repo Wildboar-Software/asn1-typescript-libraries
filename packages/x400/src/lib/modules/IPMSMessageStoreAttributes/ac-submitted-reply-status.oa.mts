@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SubmittedReplyStatus,
+    type SubmittedReplyStatus,
     _decode_SubmittedReplyStatus,
     _encode_SubmittedReplyStatus,
 } from '../IPMSMessageStoreAttributes/SubmittedReplyStatus.ta.mjs';

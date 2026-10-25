@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_match } from "../UsefulDefinitions/ldap-match.va.mjs";
 /**
  * @summary id_lmr

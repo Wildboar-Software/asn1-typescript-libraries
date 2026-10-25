@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ChoiceInteger,
+    type ChoiceInteger,
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    ExpiredCertsOnCRL,
+    type ExpiredCertsOnCRL,
     _decode_ExpiredCertsOnCRL,
     _encode_ExpiredCertsOnCRL,
 } from "../CertificateExtensions/ExpiredCertsOnCRL.ta.mjs";

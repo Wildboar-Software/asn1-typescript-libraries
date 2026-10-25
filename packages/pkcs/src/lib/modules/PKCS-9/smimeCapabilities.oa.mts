@@ -5,7 +5,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { pkcs_9_at_smimeCapabilities } from "../PKCS-9/pkcs-9-at-smimeCapabilities.va.mjs";
 import {
-    SMIMECapabilities,
+    type SMIMECapabilities,
     _decode_SMIMECapabilities,
     _encode_SMIMECapabilities,
 } from "../PKCS-9/SMIMECapabilities.ta.mjs";

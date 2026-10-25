@@ -3,20 +3,20 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CdrNotification, _decode_CdrNotification, _encode_CdrNotification } from "../CSTA-capability-exchange/CdrNotification.ta.mjs";
+import { type CdrNotification, _decode_CdrNotification, _encode_CdrNotification } from "../CSTA-capability-exchange/CdrNotification.ta.mjs";
 
-import { CdrReport, _decode_CdrReport, _encode_CdrReport } from "../CSTA-capability-exchange/CdrReport.ta.mjs";
+import { type CdrReport, _decode_CdrReport, _encode_CdrReport } from "../CSTA-capability-exchange/CdrReport.ta.mjs";
 
-import { SendStoredCDRs, _decode_SendStoredCDRs, _encode_SendStoredCDRs } from "../CSTA-capability-exchange/SendStoredCDRs.ta.mjs";
+import { type SendStoredCDRs, _decode_SendStoredCDRs, _encode_SendStoredCDRs } from "../CSTA-capability-exchange/SendStoredCDRs.ta.mjs";
 
-import { StartCDRTransmission, _decode_StartCDRTransmission, _encode_StartCDRTransmission } from "../CSTA-capability-exchange/StartCDRTransmission.ta.mjs";
+import { type StartCDRTransmission, _decode_StartCDRTransmission, _encode_StartCDRTransmission } from "../CSTA-capability-exchange/StartCDRTransmission.ta.mjs";
 
-import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransmission } from "../CSTA-capability-exchange/StopCDRTransmission.ta.mjs";
+import { type StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransmission } from "../CSTA-capability-exchange/StopCDRTransmission.ta.mjs";
 
 
 

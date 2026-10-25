@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';

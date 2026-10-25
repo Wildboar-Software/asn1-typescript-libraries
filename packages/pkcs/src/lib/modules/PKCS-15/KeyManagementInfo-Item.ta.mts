@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
 import {
-    KeyManagementInfo_Item_keyInfo,
+    type KeyManagementInfo_Item_keyInfo,
     _decode_KeyManagementInfo_Item_keyInfo,
     _encode_KeyManagementInfo_Item_keyInfo,
 } from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.mjs";

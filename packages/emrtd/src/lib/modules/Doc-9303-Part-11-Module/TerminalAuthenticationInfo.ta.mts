@@ -5,7 +5,7 @@ import {
     ASN1Error,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";

@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ControlElement_beginDomainDef, _decode_ControlElement_beginDomainDef, _encode_ControlElement_beginDomainDef } from "../ISO-9506-MMS-1/ControlElement-beginDomainDef.ta.mjs";
 import { ControlElement_continueDomainDef, _decode_ControlElement_continueDomainDef, _encode_ControlElement_continueDomainDef } from "../ISO-9506-MMS-1/ControlElement-continueDomainDef.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { ControlElement_piDefinition, _decode_ControlElement_piDefinition, _encode_ControlElement_piDefinition } from "../ISO-9506-MMS-1/ControlElement-piDefinition.ta.mjs";
 
 

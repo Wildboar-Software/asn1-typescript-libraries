@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    EncryptedContentInfo,
+    type EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";
@@ -21,12 +21,12 @@ import {
     _encode_OriginatorInfo,
 } from "../CryptographicMessageSyntax-2010/OriginatorInfo.ta.mjs";
 import {
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from "../CryptographicMessageSyntax-2010/RecipientInfos.ta.mjs";
 import {
-    Attributes,
+    type Attributes,
     _encode_Attributes,
     _decode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";

@@ -9,7 +9,7 @@ import {
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
-import { EuiccPackageUnsignedErrorCode, _decode_EuiccPackageUnsignedErrorCode, _encode_EuiccPackageUnsignedErrorCode } from "../SGP32Definitions/EuiccPackageUnsignedErrorCode.ta.mjs";
+import { type EuiccPackageUnsignedErrorCode, _decode_EuiccPackageUnsignedErrorCode, _encode_EuiccPackageUnsignedErrorCode } from "../SGP32Definitions/EuiccPackageUnsignedErrorCode.ta.mjs";
 
 
 /**

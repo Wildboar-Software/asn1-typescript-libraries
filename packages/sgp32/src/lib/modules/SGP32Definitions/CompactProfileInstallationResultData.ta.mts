@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
-import { CompactProfileInstallationResultData_compactFinalResult, _decode_CompactProfileInstallationResultData_compactFinalResult, _encode_CompactProfileInstallationResultData_compactFinalResult } from "../SGP32Definitions/CompactProfileInstallationResultData-compactFinalResult.ta.mjs";
+import { type CompactProfileInstallationResultData_compactFinalResult, _decode_CompactProfileInstallationResultData_compactFinalResult, _encode_CompactProfileInstallationResultData_compactFinalResult } from "../SGP32Definitions/CompactProfileInstallationResultData-compactFinalResult.ta.mjs";
 
 
 /**

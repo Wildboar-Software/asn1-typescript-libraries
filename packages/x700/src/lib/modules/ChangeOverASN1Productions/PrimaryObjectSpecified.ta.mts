@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OptionalObject,
+    type OptionalObject,
     _decode_OptionalObject,
     _encode_OptionalObject,
 } from '../ChangeOverASN1Productions/OptionalObject.ta.mjs';

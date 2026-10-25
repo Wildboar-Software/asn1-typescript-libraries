@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OGCURN, _decode_OGCURN, _encode_OGCURN } from "../TS33128Payloads/OGCURN.ta.mjs";
+import { type OGCURN, _decode_OGCURN, _encode_OGCURN } from "../TS33128Payloads/OGCURN.ta.mjs";
 // export { OGCURN, _decode_OGCURN, _encode_OGCURN } from "../TS33128Payloads/OGCURN.ta.mjs";
 
 

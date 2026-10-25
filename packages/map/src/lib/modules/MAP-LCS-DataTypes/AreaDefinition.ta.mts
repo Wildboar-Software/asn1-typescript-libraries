@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AreaList, _decode_AreaList, _encode_AreaList } from "../MAP-LCS-DataTypes/AreaList.ta.mjs";
+import { type AreaList, _decode_AreaList, _encode_AreaList } from "../MAP-LCS-DataTypes/AreaList.ta.mjs";
 
 
 /**

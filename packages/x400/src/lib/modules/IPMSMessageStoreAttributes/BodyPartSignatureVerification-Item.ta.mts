@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartNumber,
+    type BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
 } from '../IPMSHeadingExtensions/BodyPartNumber.ta.mjs';
 import {
-    SignatureStatus,
+    type SignatureStatus,
     _decode_SignatureStatus,
     _encode_SignatureStatus,
 } from '../MSGeneralAttributeTypes/SignatureStatus.ta.mjs';

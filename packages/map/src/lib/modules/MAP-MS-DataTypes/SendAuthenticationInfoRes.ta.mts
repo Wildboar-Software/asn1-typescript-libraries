@@ -6,9 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AuthenticationSetList, _decode_AuthenticationSetList, _encode_AuthenticationSetList } from "../MAP-MS-DataTypes/AuthenticationSetList.ta.mjs";
-import { EPS_AuthenticationSetList, _decode_EPS_AuthenticationSetList, _encode_EPS_AuthenticationSetList } from "../MAP-MS-DataTypes/EPS-AuthenticationSetList.ta.mjs";
-import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
+import { type AuthenticationSetList, _decode_AuthenticationSetList, _encode_AuthenticationSetList } from "../MAP-MS-DataTypes/AuthenticationSetList.ta.mjs";
+import { type EPS_AuthenticationSetList, _decode_EPS_AuthenticationSetList, _encode_EPS_AuthenticationSetList } from "../MAP-MS-DataTypes/EPS-AuthenticationSetList.ta.mjs";
+import { type UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
 
 
 /**

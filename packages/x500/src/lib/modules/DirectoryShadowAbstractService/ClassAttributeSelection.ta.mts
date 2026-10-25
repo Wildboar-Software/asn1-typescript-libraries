@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ClassAttributes,
+    type ClassAttributes,
     _decode_ClassAttributes,
     _encode_ClassAttributes,
 } from "../DirectoryShadowAbstractService/ClassAttributes.ta.mjs";

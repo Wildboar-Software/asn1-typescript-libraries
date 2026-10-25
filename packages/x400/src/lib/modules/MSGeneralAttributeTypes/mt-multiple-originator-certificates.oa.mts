@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';

@@ -16,7 +16,7 @@ import {
     _encode_OriginatorInfo,
 } from "../CryptographicMessageSyntax/OriginatorInfo.ta.mjs";
 import {
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from "../CryptographicMessageSyntax/RecipientInfos.ta.mjs";
@@ -26,7 +26,7 @@ import {
     _get_encoder_for_EncryptedContentInfo,
 } from "../PKCS-15/EncryptedContentInfo.ta.mjs";
 import {
-    EnvelopedData_version,
+    type EnvelopedData_version,
     _get_decoder_for_EnvelopedData_version,
     _get_encoder_for_EnvelopedData_version,
 } from "../PKCS-15/EnvelopedData-version.ta.mjs";

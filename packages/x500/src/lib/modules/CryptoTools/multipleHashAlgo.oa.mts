@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_algo_multipleHashAlgo } from "../CryptoTools/id-algo-multipleHashAlgo.va.mjs";
 import {
-    MultipleHashAlgo,
+    type MultipleHashAlgo,
     _decode_MultipleHashAlgo,
     _encode_MultipleHashAlgo,
 } from "../CryptoTools/MultipleHashAlgo.ta.mjs";

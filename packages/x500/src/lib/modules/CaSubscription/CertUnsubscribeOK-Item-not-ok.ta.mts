@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASP_CertStatusCode,
+    type CASP_CertStatusCode,
     _decode_CASP_CertStatusCode,
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,

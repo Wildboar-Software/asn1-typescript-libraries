@@ -3,9 +3,9 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TetraIRIContent, _decode_TetraIRIContent, _encode_TetraIRIContent } from "../TETRA-HI2Operations/TetraIRIContent.ta.mjs";
+import { type TetraIRIContent, _decode_TetraIRIContent, _encode_TetraIRIContent } from "../TETRA-HI2Operations/TetraIRIContent.ta.mjs";
 // export { TetraIRIContent, _decode_TetraIRIContent, _encode_TetraIRIContent } from "../TETRA-HI2Operations/TetraIRIContent.ta.mjs";
-import { TetraIRISequence, _decode_TetraIRISequence, _encode_TetraIRISequence } from "../TETRA-HI2Operations/TetraIRISequence.ta.mjs";
+import { type TetraIRISequence, _decode_TetraIRISequence, _encode_TetraIRISequence } from "../TETRA-HI2Operations/TetraIRISequence.ta.mjs";
 // export { TetraIRISequence, _decode_TetraIRISequence, _encode_TetraIRISequence } from "../TETRA-HI2Operations/TetraIRISequence.ta.mjs";
 
 

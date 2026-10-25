@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  CertBundle,
+  type CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';

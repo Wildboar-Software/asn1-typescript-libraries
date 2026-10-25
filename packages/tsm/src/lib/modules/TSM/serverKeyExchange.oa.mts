@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { server_key_exchange /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
 
-import { ServerKeyExchange, _decode_ServerKeyExchange, _encode_ServerKeyExchange } from "../TSM/ServerKeyExchange.ta.mjs";
+import { type ServerKeyExchange, _decode_ServerKeyExchange, _encode_ServerKeyExchange } from "../TSM/ServerKeyExchange.ta.mjs";
 
 import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 

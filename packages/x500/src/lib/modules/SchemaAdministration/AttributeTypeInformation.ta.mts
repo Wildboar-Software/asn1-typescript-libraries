@@ -8,14 +8,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeUsage,
+    type AttributeUsage,
     AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

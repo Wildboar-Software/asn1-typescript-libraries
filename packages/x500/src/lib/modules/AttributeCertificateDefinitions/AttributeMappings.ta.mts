@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeMappings_Item,
+    type AttributeMappings_Item,
     _decode_AttributeMappings_Item,
     _encode_AttributeMappings_Item,
 } from "../AttributeCertificateDefinitions/AttributeMappings-Item.ta.mjs";

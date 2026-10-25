@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IpaCapabilities_ipaFeatures, _decode_IpaCapabilities_ipaFeatures, _encode_IpaCapabilities_ipaFeatures } from "../SGP32Definitions/IpaCapabilities-ipaFeatures.ta.mjs";
-import { IpaCapabilities_ipaSupportedProtocols, _decode_IpaCapabilities_ipaSupportedProtocols, _encode_IpaCapabilities_ipaSupportedProtocols } from "../SGP32Definitions/IpaCapabilities-ipaSupportedProtocols.ta.mjs";
+import { type IpaCapabilities_ipaFeatures, _decode_IpaCapabilities_ipaFeatures, _encode_IpaCapabilities_ipaFeatures } from "../SGP32Definitions/IpaCapabilities-ipaFeatures.ta.mjs";
+import { type IpaCapabilities_ipaSupportedProtocols, _decode_IpaCapabilities_ipaSupportedProtocols, _encode_IpaCapabilities_ipaSupportedProtocols } from "../SGP32Definitions/IpaCapabilities-ipaSupportedProtocols.ta.mjs";
 import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 
 

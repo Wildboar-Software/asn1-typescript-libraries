@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ChangeAccessControl_Request_scopeOfChange, _decode_ChangeAccessControl_Request_scopeOfChange, _encode_ChangeAccessControl_Request_scopeOfChange } from "../ISO-9506-MMS-1/ChangeAccessControl-Request-scopeOfChange.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ChangeAccessControl_Request_scopeOfChange, _decode_ChangeAccessControl_Request_scopeOfChange, _encode_ChangeAccessControl_Request_scopeOfChange } from "../ISO-9506-MMS-1/ChangeAccessControl-Request-scopeOfChange.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

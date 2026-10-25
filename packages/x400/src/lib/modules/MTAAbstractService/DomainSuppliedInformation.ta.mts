@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ArrivalTime,
+    type ArrivalTime,
     _decode_ArrivalTime,
     _encode_ArrivalTime,
 } from '../MTAAbstractService/ArrivalTime.ta.mjs';
@@ -33,17 +33,17 @@ import {
     _encode_AdditionalActions,
 } from '../MTAAbstractService/AdditionalActions.ta.mjs';
 import {
-    DeferredTime,
+    type DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
 } from '../MTAAbstractService/DeferredTime.ta.mjs';
 import {
-    ConvertedEncodedInformationTypes,
+    type ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
 } from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
 import {
-    OtherActions,
+    type OtherActions,
     _decode_OtherActions,
     _encode_OtherActions,
 } from '../MTAAbstractService/OtherActions.ta.mjs';

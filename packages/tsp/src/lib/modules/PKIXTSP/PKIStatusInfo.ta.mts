@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PKIFreeText,
+    type PKIFreeText,
     _decode_PKIFreeText,
     _encode_PKIFreeText,
 } from "../PKIXCMP/PKIFreeText.ta.mjs";
 import {
-    PKIFailureInfo,
+    type PKIFailureInfo,
     _decode_PKIFailureInfo,
     _encode_PKIFailureInfo,
 } from "../PKIXTSP/PKIFailureInfo.ta.mjs";
 import {
-    PKIStatus,
+    type PKIStatus,
     _decode_PKIStatus,
     _encode_PKIStatus,
 } from "../PKIXTSP/PKIStatus.ta.mjs";

@@ -7,7 +7,7 @@ import {
     _decode_CertificateExactAssertion,
 } from "../../modules/CertificateExtensions/CertificateExactAssertion.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import { Buffer } from "node:buffer";

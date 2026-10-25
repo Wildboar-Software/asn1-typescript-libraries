@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ObjectIdentifier as _OID,
     joint_iso_itu_t
 } from "@wildboar/asn1";

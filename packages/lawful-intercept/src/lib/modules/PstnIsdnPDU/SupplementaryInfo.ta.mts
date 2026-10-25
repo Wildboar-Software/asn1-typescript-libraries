@@ -10,9 +10,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { InformationAppliesTo, _decode_InformationAppliesTo, _encode_InformationAppliesTo } from "../PstnIsdnPDU/InformationAppliesTo.ta.mjs";
 // export { InformationAppliesTo, _decode_InformationAppliesTo, _encode_InformationAppliesTo } from "../PstnIsdnPDU/InformationAppliesTo.ta.mjs";
-import { FrameType, _decode_FrameType, _encode_FrameType, _enum_for_FrameType } from "../PstnIsdnPDU/FrameType.ta.mjs";
+import { type FrameType, _decode_FrameType, _encode_FrameType, _enum_for_FrameType } from "../PstnIsdnPDU/FrameType.ta.mjs";
 // export { FrameType, _enum_for_FrameType, FrameType_ipFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, ipFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_udpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, udpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_applicationFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_audioFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, audioFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, FrameType_artificialRtpFrame /* IMPORTED_LONG_ENUMERATION_ITEM */, artificialRtpFrame /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FrameType, _encode_FrameType } from "../PstnIsdnPDU/FrameType.ta.mjs";
-import { AlternateProtocol, _decode_AlternateProtocol, _encode_AlternateProtocol, _enum_for_AlternateProtocol } from "../PstnIsdnPDU/AlternateProtocol.ta.mjs";
+import { type AlternateProtocol, _decode_AlternateProtocol, _encode_AlternateProtocol, _enum_for_AlternateProtocol } from "../PstnIsdnPDU/AlternateProtocol.ta.mjs";
 // export { AlternateProtocol, _enum_for_AlternateProtocol, AlternateProtocol_uDPTL /* IMPORTED_LONG_ENUMERATION_ITEM */, uDPTL /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AlternateProtocol, _encode_AlternateProtocol } from "../PstnIsdnPDU/AlternateProtocol.ta.mjs";
 
 

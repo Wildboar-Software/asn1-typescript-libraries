@@ -7,7 +7,7 @@ import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mj
 import { id_at_stateOrProvinceName } from "../SelectedAttributeTypes/id-at-stateOrProvinceName.va.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

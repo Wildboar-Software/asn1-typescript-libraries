@@ -3,18 +3,18 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { BackInService, _decode_BackInService, _encode_BackInService } from "../CSTA-capability-exchange/BackInService.ta.mjs";
+import { type BackInService, _decode_BackInService, _encode_BackInService } from "../CSTA-capability-exchange/BackInService.ta.mjs";
 
-import { DeviceCapsChanged, _decode_DeviceCapsChanged, _encode_DeviceCapsChanged } from "../CSTA-capability-exchange/DeviceCapsChanged.ta.mjs";
+import { type DeviceCapsChanged, _decode_DeviceCapsChanged, _encode_DeviceCapsChanged } from "../CSTA-capability-exchange/DeviceCapsChanged.ta.mjs";
 
-import { OutOfService, _decode_OutOfService, _encode_OutOfService } from "../CSTA-capability-exchange/OutOfService.ta.mjs";
+import { type OutOfService, _decode_OutOfService, _encode_OutOfService } from "../CSTA-capability-exchange/OutOfService.ta.mjs";
 
-import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInService } from "../CSTA-capability-exchange/PartiallyInService.ta.mjs";
+import { type PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInService } from "../CSTA-capability-exchange/PartiallyInService.ta.mjs";
 
 
 

@@ -7,7 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HeaderFlags, _decode_HeaderFlags, _encode_HeaderFlags } from "../Spnego/HeaderFlags.ta.mjs";
+import { type HeaderFlags, _decode_HeaderFlags, _encode_HeaderFlags } from "../Spnego/HeaderFlags.ta.mjs";
 
 
 /**

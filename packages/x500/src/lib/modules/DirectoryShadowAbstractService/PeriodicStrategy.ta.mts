@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MAP_UserAbortChoice, _decode_MAP_UserAbortChoice, _encode_MAP_UserAbortChoice } from "../MAP-DialogueInformation/MAP-UserAbortChoice.ta.mjs";
+import { type MAP_UserAbortChoice, _decode_MAP_UserAbortChoice, _encode_MAP_UserAbortChoice } from "../MAP-DialogueInformation/MAP-UserAbortChoice.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  NonEmptyOctetString,
+  type NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';

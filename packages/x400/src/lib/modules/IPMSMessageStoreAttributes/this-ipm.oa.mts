@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ThisIPMField,
+    type ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
 } from '../IPMSInformationObjects/ThisIPMField.ta.mjs';

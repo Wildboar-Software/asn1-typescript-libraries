@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TokenServiceProvider,
+    type TokenServiceProvider,
     _decode_TokenServiceProvider,
     _encode_TokenServiceProvider,
 } from "../TokenizationManifest/TokenServiceProvider.ta.mjs";
 import {
-    XPathSet,
+    type XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../TokenizationManifest/XPathSet.ta.mjs";

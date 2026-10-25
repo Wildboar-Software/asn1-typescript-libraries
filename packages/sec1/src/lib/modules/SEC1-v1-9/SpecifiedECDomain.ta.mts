@@ -12,11 +12,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SpecifiedECDomainVersion, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.mjs";
+import { type SpecifiedECDomainVersion, _decode_SpecifiedECDomainVersion, _encode_SpecifiedECDomainVersion } from "../SEC1-v1-9/SpecifiedECDomainVersion.ta.mjs";
 import { FieldID, _decode_FieldID, _encode_FieldID } from "../SEC1-v1-9/FieldID.ta.mjs";
 import { Curve, _decode_Curve, _encode_Curve } from "../SEC1-v1-9/Curve.ta.mjs";
-import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
-import { HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
+import { type ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
+import { type HashAlgorithm, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../SEC1-v1-9/HashAlgorithm.ta.mjs";
 /**
  * @summary SpecifiedECDomain
  * @description

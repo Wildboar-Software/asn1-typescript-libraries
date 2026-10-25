@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_controlling_modeType, _encode_CS_Resume_Request_controlling_modeType } from "../ISO-9506-MMS-1/CS-Resume-Request-controlling-modeType.ta.mjs";
+import { type CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_controlling_modeType, _encode_CS_Resume_Request_controlling_modeType } from "../ISO-9506-MMS-1/CS-Resume-Request-controlling-modeType.ta.mjs";
 
 
 /**

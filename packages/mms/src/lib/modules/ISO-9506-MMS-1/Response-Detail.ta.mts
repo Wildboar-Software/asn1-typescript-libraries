@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_Status_Response, _decode_CS_Status_Response, _encode_CS_Status_Response } from "../ISO-9506-MMS-1/CS-Status-Response.ta.mjs";
+import { type CS_Status_Response, _decode_CS_Status_Response, _encode_CS_Status_Response } from "../ISO-9506-MMS-1/CS-Status-Response.ta.mjs";
 import { CS_GetProgramInvocationAttributes_Response, _decode_CS_GetProgramInvocationAttributes_Response, _encode_CS_GetProgramInvocationAttributes_Response } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response.ta.mjs";
 import { CS_GetEventConditionAttributes_Response, _decode_CS_GetEventConditionAttributes_Response, _encode_CS_GetEventConditionAttributes_Response } from "../ISO-9506-MMS-1/CS-GetEventConditionAttributes-Response.ta.mjs";
 

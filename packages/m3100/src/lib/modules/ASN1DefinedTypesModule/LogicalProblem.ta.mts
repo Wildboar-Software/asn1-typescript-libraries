@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProblemCause,
+    type ProblemCause,
     _decode_ProblemCause,
     _encode_ProblemCause,
 } from '../ASN1DefinedTypesModule/ProblemCause.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';

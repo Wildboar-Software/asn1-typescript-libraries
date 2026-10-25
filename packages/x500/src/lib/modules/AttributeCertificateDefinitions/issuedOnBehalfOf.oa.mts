@@ -2,7 +2,7 @@
 import { id_ce_issuedOnBehalfOf } from "../AttributeCertificateDefinitions/id-ce-issuedOnBehalfOf.va.mjs";
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
+import { type EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
 import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_MonitorMode } from "../Core-INAP-CS1-DataTypes/MonitorMode.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 
 
 /**

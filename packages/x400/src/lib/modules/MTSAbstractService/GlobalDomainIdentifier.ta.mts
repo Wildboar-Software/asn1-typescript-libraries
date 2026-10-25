@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CountryName,
+    type CountryName,
     _decode_CountryName,
     _encode_CountryName,
 } from '../MTSAbstractService/CountryName.ta.mjs';
 import {
-    AdministrationDomainName,
+    type AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
 } from '../MTSAbstractService/AdministrationDomainName.ta.mjs';
 import {
-    PrivateDomainIdentifier,
+    type PrivateDomainIdentifier,
     _decode_PrivateDomainIdentifier,
     _encode_PrivateDomainIdentifier,
 } from '../MTSAbstractService/PrivateDomainIdentifier.ta.mjs';

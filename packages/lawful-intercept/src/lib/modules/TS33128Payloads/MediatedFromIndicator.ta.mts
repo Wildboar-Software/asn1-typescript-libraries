@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    RELATIVE_OID
+    type RELATIVE_OID
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

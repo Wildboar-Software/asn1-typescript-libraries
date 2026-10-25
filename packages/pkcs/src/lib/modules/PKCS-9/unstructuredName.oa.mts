@@ -6,7 +6,7 @@ import {
 import { pkcs_9_at_unstructuredName } from "../PKCS-9/pkcs-9-at-unstructuredName.va.mjs";
 import { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa.mjs";
 import {
-    PKCS9String,
+    type PKCS9String,
     _decode_PKCS9String,
     _encode_PKCS9String,
 } from "../PKCS-9/PKCS9String.ta.mjs";

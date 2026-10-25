@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
+import { type AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
 
 
 /**

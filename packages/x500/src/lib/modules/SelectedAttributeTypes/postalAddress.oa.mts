@@ -8,7 +8,7 @@ import { caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/caseIgn
 import { id_at_postalAddress } from "../SelectedAttributeTypes/id-at-postalAddress.va.mjs";
 import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
 import {
-    PostalAddress,
+    type PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
 } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";

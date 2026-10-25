@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    CloseOutVerification,
+    type CloseOutVerification,
     _enum_for_CloseOutVerification,
     CloseOutVerification_noAction /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_CloseOutVerification,

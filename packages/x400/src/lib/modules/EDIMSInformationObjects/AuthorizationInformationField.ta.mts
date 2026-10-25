@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AuthorizationInformation,
+    type AuthorizationInformation,
     _decode_AuthorizationInformation,
     _encode_AuthorizationInformation,
 } from '../EDIMSInformationObjects/AuthorizationInformation.ta.mjs';
 import {
-    AuthorizationInformationQualifier,
+    type AuthorizationInformationQualifier,
     _decode_AuthorizationInformationQualifier,
     _encode_AuthorizationInformationQualifier,
 } from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta.mjs';

@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DataTransferClientAE,
+    type DataTransferClientAE,
     _decode_DataTransferClientAE,
     _encode_DataTransferClientAE,
 } from "../Wrapper/DataTransferClientAE.ta.mjs";
 import {
-    DataTransferClientNEA,
+    type DataTransferClientNEA,
     _decode_DataTransferClientNEA,
     _encode_DataTransferClientNEA,
 } from "../Wrapper/DataTransferClientNEA.ta.mjs";

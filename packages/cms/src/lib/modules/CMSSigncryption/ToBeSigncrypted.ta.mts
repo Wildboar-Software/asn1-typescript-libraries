@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from "../CMSSigncryption/Content.ta.mjs";
 import {
-    SigncryptedAttributes,
+    type SigncryptedAttributes,
     _decode_SigncryptedAttributes,
     _encode_SigncryptedAttributes,
 } from "../CMSSigncryption/SigncryptedAttributes.ta.mjs";

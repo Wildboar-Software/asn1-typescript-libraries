@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-import { AttributeCombination, _decode_AttributeCombination, _encode_AttributeCombination } from "../RecordSyntax-explain/AttributeCombination.ta.mjs";
+import { type AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
+import { type AttributeCombination, _decode_AttributeCombination, _encode_AttributeCombination } from "../RecordSyntax-explain/AttributeCombination.ta.mjs";
 
 
 /**

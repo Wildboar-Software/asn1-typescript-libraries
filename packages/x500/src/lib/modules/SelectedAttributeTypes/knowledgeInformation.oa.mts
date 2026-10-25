@@ -6,7 +6,7 @@ import {
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { id_at_knowledgeInformation } from "../SelectedAttributeTypes/id-at-knowledgeInformation.va.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

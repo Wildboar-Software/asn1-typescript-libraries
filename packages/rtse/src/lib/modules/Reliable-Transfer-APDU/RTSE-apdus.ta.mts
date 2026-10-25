@@ -26,12 +26,12 @@ import {
   _encode_RTORJapdu,
 } from '../Reliable-Transfer-APDU/RTORJapdu.ta.mjs';
 import {
-  RTTPapdu,
+  type RTTPapdu,
   _decode_RTTPapdu,
   _encode_RTTPapdu,
 } from '../Reliable-Transfer-APDU/RTTPapdu.ta.mjs';
 import {
-  RTTRapdu,
+  type RTTRapdu,
   _decode_RTTRapdu,
   _encode_RTTRapdu,
 } from '../Reliable-Transfer-APDU/RTTRapdu.ta.mjs';

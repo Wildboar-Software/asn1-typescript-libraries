@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKey.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
+import { type AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../WTM-Authentication-Operations-asn1-97/AuthSessionKey.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
 
 /**
  * @summary AuthSessionKeyInfo

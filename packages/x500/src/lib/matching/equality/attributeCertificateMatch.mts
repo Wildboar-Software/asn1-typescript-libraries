@@ -6,7 +6,7 @@ import {
     _decode_AttributeCertificateAssertion,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificateAssertion.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import type {

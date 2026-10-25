@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LengthOfTimeUnit, _decode_LengthOfTimeUnit, _encode_LengthOfTimeUnit } from "../SS-AOC-Operations-asn1-97/LengthOfTimeUnit.ta.mjs";
+import { type LengthOfTimeUnit, _decode_LengthOfTimeUnit, _encode_LengthOfTimeUnit } from "../SS-AOC-Operations-asn1-97/LengthOfTimeUnit.ta.mjs";
 import { Scale, _decode_Scale, _encode_Scale, _enum_for_Scale } from "../SS-AOC-Operations-asn1-97/Scale.ta.mjs";
 
 /**

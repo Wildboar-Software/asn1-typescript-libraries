@@ -7,7 +7,7 @@ import {
     _encode_EncryptedRecipientID,
 } from "../CMSCKMKeyManagement/EncryptedRecipientID.ta.mjs";
 import {
-    KeyConstructionLabels,
+    type KeyConstructionLabels,
     _decode_KeyConstructionLabels,
     _encode_KeyConstructionLabels,
 } from "../CMSCKMKeyManagement/KeyConstructionLabels.ta.mjs";

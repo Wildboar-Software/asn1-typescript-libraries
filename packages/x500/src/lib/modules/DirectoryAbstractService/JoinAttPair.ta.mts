@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    JoinContextType,
+    type JoinContextType,
     _decode_JoinContextType,
     _encode_JoinContextType,
 } from "../DirectoryAbstractService/JoinContextType.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";

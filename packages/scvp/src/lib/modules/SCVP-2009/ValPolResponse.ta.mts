@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  OCTET_STRING,
-  OBJECT_IDENTIFIER,
-  GeneralizedTime,
+  type OPTIONAL,
+  type INTEGER,
+  type OCTET_STRING,
+  type OBJECT_IDENTIFIER,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -16,17 +16,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertChecks,
+  type CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
 } from '../SCVP-2009/CertChecks.ta.mjs';
 import {
-  WantBack,
+  type WantBack,
   _decode_WantBack,
   _encode_WantBack,
 } from '../SCVP-2009/WantBack.ta.mjs';
 import {
-  AuthPolicy,
+  type AuthPolicy,
   _decode_AuthPolicy,
   _encode_AuthPolicy,
 } from '../SCVP-2009/AuthPolicy.ta.mjs';
@@ -37,12 +37,12 @@ import {
   _encode_ResponseTypes,
 } from '../SCVP-2009/ResponseTypes.ta.mjs';
 import {
-  RespValidationPolicy,
+  type RespValidationPolicy,
   _decode_RespValidationPolicy,
   _encode_RespValidationPolicy,
 } from '../SCVP-2009/RespValidationPolicy.ta.mjs';
 import {
-  RevocationInfoTypes,
+  type RevocationInfoTypes,
   _decode_RevocationInfoTypes,
   _encode_RevocationInfoTypes,
 } from '../SCVP-2009/RevocationInfoTypes.ta.mjs';

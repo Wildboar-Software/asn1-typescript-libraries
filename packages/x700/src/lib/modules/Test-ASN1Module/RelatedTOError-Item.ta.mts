@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TONotCreated,
+    type TONotCreated,
     _decode_TONotCreated,
     _encode_TONotCreated,
 } from '../Test-ASN1Module/TONotCreated.ta.mjs';

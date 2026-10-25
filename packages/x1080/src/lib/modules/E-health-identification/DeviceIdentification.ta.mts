@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
 import {
-    Supported_formats,
+    type Supported_formats,
     _decode_Supported_formats,
     _encode_Supported_formats,
 } from "./Supported-formats.ta.mjs";

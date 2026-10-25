@@ -6,7 +6,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PTCIdentifiers, _decode_PTCIdentifiers, _encode_PTCIdentifiers } from "../TS33128Payloads/PTCIdentifiers.ta.mjs";
+import { type PTCIdentifiers, _decode_PTCIdentifiers, _encode_PTCIdentifiers } from "../TS33128Payloads/PTCIdentifiers.ta.mjs";
 // export { PTCIdentifiers, _decode_PTCIdentifiers, _encode_PTCIdentifiers } from "../TS33128Payloads/PTCIdentifiers.ta.mjs";
 
 

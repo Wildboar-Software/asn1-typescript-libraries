@@ -2,7 +2,7 @@
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { hi2DomainId } from "../HI2Operations/hi2DomainId.va.mjs";
-import { IRIsContent, _decode_IRIsContent, _encode_IRIsContent } from "../HI2Operations/IRIsContent.ta.mjs";
+import { type IRIsContent, _decode_IRIsContent, _encode_IRIsContent } from "../HI2Operations/IRIsContent.ta.mjs";
 import { OperationErrors } from "../HI2Operations/OperationErrors.osa.mjs";
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Transfer-Operations-asn1-97/DummyArg.ta.mjs";
+import { type DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Call-Transfer-Operations-asn1-97/DummyArg.ta.mjs";
 import { CTIdentifyRes, _decode_CTIdentifyRes, _encode_CTIdentifyRes } from "../Call-Transfer-Operations-asn1-97/CTIdentifyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidCallState } from "../General-Error-List/invalidCallState.oa.mjs";

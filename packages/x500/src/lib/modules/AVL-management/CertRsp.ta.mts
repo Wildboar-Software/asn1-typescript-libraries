@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertRsp_result,
+    type CertRsp_result,
     _decode_CertRsp_result,
     _encode_CertRsp_result,
 } from "../AVL-management/CertRsp-result.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-CS3-SCF-SCF-datatypes/ScfAddress.ta.mjs";
+import { type ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-CS3-SCF-SCF-datatypes/ScfAddress.ta.mjs";
 // export { ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-CS3-SCF-SCF-datatypes/ScfAddress.ta.mjs";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
 // export { Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
 
 

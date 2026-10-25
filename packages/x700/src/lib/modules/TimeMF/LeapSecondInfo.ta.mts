@@ -17,7 +17,7 @@ import {
     _encode_LeapIndication,
 } from '../TimeMF/LeapIndication.ta.mjs';
 import {
-    DateOfLeap,
+    type DateOfLeap,
     _decode_DateOfLeap,
     _encode_DateOfLeap,
 } from '../TimeMF/DateOfLeap.ta.mjs';

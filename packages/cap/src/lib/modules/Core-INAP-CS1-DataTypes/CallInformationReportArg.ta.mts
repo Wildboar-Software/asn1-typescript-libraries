@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedInformationList, _decode_RequestedInformationList, _encode_RequestedInformationList } from "../Core-INAP-CS1-DataTypes/RequestedInformationList.ta.mjs";
+import { type RequestedInformationList, _decode_RequestedInformationList, _encode_RequestedInformationList } from "../Core-INAP-CS1-DataTypes/RequestedInformationList.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 

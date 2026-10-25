@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EXQcontent_exceptionType, _decode_EXQcontent_exceptionType, _encode_EXQcontent_exceptionType } from "../ISO9041-VTP/EXQcontent-exceptionType.ta.mjs";
+import { type EXQcontent_exceptionType, _decode_EXQcontent_exceptionType, _encode_EXQcontent_exceptionType } from "../ISO9041-VTP/EXQcontent-exceptionType.ta.mjs";
 import { EXQcontent_standard, _decode_EXQcontent_standard, _encode_EXQcontent_standard } from "../ISO9041-VTP/EXQcontent-standard.ta.mjs";
 import { EXQcontent_profile_Item, _decode_EXQcontent_profile_Item, _encode_EXQcontent_profile_Item } from "../ISO9041-VTP/EXQcontent-profile-Item.ta.mjs";
 

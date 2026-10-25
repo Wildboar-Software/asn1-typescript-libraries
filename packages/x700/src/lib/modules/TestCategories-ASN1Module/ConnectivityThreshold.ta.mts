@@ -16,7 +16,7 @@ import {
     _encode_ConnectivityThreshold_time,
 } from '../TestCategories-ASN1Module/ConnectivityThreshold-time.ta.mjs';
 import {
-    RawData,
+    type RawData,
     _decode_RawData,
     _encode_RawData,
 } from '../TestCategories-ASN1Module/RawData.ta.mjs';

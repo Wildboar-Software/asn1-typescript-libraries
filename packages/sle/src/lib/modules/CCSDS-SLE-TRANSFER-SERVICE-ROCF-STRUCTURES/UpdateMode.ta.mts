@@ -4,7 +4,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode,
+import { type RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode,
     RequestedUpdateMode_continuous,
     RequestedUpdateMode_changeBased
 } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";

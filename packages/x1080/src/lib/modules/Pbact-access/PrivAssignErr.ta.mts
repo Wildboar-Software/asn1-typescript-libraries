@@ -17,7 +17,7 @@ import {
     _encode_CmsErrorCode,
 } from '../CmsTelebiometric/CmsErrorCode.ta.mjs';
 import {
-    AssignErr,
+    type AssignErr,
     _enum_for_AssignErr,
     _decode_AssignErr,
     _encode_AssignErr,

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDIMLocation,
+    type EDIMLocation,
     _decode_EDIMLocation,
     _encode_EDIMLocation,
 } from '../EDIMSMessageStoreAttributes/EDIMLocation.ta.mjs';

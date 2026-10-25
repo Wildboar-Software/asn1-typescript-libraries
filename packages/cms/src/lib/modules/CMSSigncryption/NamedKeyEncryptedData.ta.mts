@@ -7,17 +7,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CMSSigncryption/CMSVersion.ta.mjs";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
 import {
-    EncryptedContentInfo,
+    type EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";

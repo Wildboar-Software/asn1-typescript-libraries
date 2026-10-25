@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    SET,
+    type SET,
     type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectListChoice,
+    type ObjectListChoice,
     _decode_ObjectListChoice,
     _encode_ObjectListChoice,
 } from "../Q821-ASN1Module/ObjectListChoice.ta.mjs";

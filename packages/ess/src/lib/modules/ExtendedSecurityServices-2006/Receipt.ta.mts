@@ -7,17 +7,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
 import {
-    ESSVersion,
+    type ESSVersion,
     _decode_ESSVersion,
     _encode_ESSVersion,
 } from "../ExtendedSecurityServices-2006/ESSVersion.ta.mjs";

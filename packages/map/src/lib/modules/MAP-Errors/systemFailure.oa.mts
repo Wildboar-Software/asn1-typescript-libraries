@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SystemFailureParam, _decode_SystemFailureParam, _encode_SystemFailureParam } from "../MAP-ER-DataTypes/SystemFailureParam.ta.mjs";
+import { type SystemFailureParam, _decode_SystemFailureParam, _encode_SystemFailureParam } from "../MAP-ER-DataTypes/SystemFailureParam.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

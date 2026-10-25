@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { manageTriggerData } from "../IN-CS2-SSF-SCF-ops-args/manageTriggerData.oa.mjs";
 // export { manageTriggerData } from "../IN-CS2-SSF-SCF-ops-args/manageTriggerData.oa.mjs";

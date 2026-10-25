@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PremisesName,
+    type PremisesName,
     _decode_PremisesName,
     _encode_PremisesName,
 } from "../X790ASN1Module/PremisesName.ta.mjs";

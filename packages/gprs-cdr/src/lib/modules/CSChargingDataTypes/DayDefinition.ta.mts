@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayOfTheWeek, _decode_DayOfTheWeek, _encode_DayOfTheWeek, _enum_for_DayOfTheWeek } from "../CSChargingDataTypes/DayOfTheWeek.ta.mjs";
-import { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
+import { type DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
 
 
 /**

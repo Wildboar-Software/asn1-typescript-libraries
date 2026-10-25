@@ -8,7 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "./LCSClientExternalID.ta.mjs";
-import { LCSClientIdentity_lcsClientInternalID, _decode_LCSClientIdentity_lcsClientInternalID, _encode_LCSClientIdentity_lcsClientInternalID, _enum_for_LCSClientIdentity_lcsClientInternalID } from "./LCSClientIdentity-lcsClientInternalID.ta.mjs";
+import { type LCSClientIdentity_lcsClientInternalID, _decode_LCSClientIdentity_lcsClientInternalID, _encode_LCSClientIdentity_lcsClientInternalID, _enum_for_LCSClientIdentity_lcsClientInternalID } from "./LCSClientIdentity-lcsClientInternalID.ta.mjs";
 
 
 /**

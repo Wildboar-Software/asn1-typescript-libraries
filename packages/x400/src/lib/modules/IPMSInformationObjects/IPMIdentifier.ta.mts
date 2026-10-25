@@ -17,7 +17,7 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    LocalIPMIdentifier,
+    type LocalIPMIdentifier,
     _decode_LocalIPMIdentifier,
     _encode_LocalIPMIdentifier,
 } from '../IPMSInformationObjects/LocalIPMIdentifier.ta.mjs';

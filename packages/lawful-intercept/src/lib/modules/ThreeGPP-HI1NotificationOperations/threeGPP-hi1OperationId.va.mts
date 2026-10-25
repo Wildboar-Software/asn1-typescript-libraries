@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { threeGPP_hi1NotificationOperationsId } from "../ThreeGPP-HI1NotificationOperations/threeGPP-hi1NotificationOperationsId.va.mjs";
 // export { threeGPP_hi1NotificationOperationsId } from "../ThreeGPP-HI1NotificationOperations/threeGPP-hi1NotificationOperationsId.va.mjs";

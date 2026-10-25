@@ -3,7 +3,7 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ProvideAnnouncementRequestArg, _decode_ProvideAnnouncementRequestArg, _encode_ProvideAnnouncementRequestArg } from "../IN-SCF-SCF-ops-args/ProvideAnnouncementRequestArg.ta.mjs";
+import { type ProvideAnnouncementRequestArg, _decode_ProvideAnnouncementRequestArg, _encode_ProvideAnnouncementRequestArg } from "../IN-SCF-SCF-ops-args/ProvideAnnouncementRequestArg.ta.mjs";
 // export { ProvideAnnouncementRequestArg, _decode_ProvideAnnouncementRequestArg, _encode_ProvideAnnouncementRequestArg } from "../IN-SCF-SCF-ops-args/ProvideAnnouncementRequestArg.ta.mjs";
 import { missingCustomerRecord } from "../IN-errortypes/missingCustomerRecord.oa.mjs";
 // export { missingCustomerRecord } from "../IN-errortypes/missingCustomerRecord.oa.mjs";

@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DimensionParamValues_bound, _decode_DimensionParamValues_bound, _encode_DimensionParamValues_bound } from "../CDS/DimensionParamValues-bound.ta.mjs";
-import { DimensionParamValues_addressing, _decode_DimensionParamValues_addressing, _encode_DimensionParamValues_addressing } from "../CDS/DimensionParamValues-addressing.ta.mjs";
-import { DimensionParamValues_window, _decode_DimensionParamValues_window, _encode_DimensionParamValues_window } from "../CDS/DimensionParamValues-window.ta.mjs";
+import { type DimensionParamValues_bound, _decode_DimensionParamValues_bound, _encode_DimensionParamValues_bound } from "../CDS/DimensionParamValues-bound.ta.mjs";
+import { type DimensionParamValues_addressing, _decode_DimensionParamValues_addressing, _encode_DimensionParamValues_addressing } from "../CDS/DimensionParamValues-addressing.ta.mjs";
+import { type DimensionParamValues_window, _decode_DimensionParamValues_window, _encode_DimensionParamValues_window } from "../CDS/DimensionParamValues-window.ta.mjs";
 
 
 /**

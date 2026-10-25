@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuditReturnParameter, _decode_AuditReturnParameter, _encode_AuditReturnParameter } from "../MEDIA-GATEWAY-CONTROL/AuditReturnParameter.ta.mjs";
+import { type AuditReturnParameter, _decode_AuditReturnParameter, _encode_AuditReturnParameter } from "../MEDIA-GATEWAY-CONTROL/AuditReturnParameter.ta.mjs";
 
 
 /**

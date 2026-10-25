@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfileV2/PrivateEnterpriseNumber.ta.mjs";
+import { type PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfileV2/PrivateEnterpriseNumber.ta.mjs";
 import { tcg_tr_ID_PEN } from "../PlatformCertificateProfileV2/tcg-tr-ID-PEN.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 

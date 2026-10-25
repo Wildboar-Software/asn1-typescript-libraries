@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,7 +14,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DimensionParamIdent, _decode_DimensionParamIdent, _encode_DimensionParamIdent } from "../CDS/DimensionParamIdent.ta.mjs";
 import { CompoundRepertoireIdent, _decode_CompoundRepertoireIdent, _encode_CompoundRepertoireIdent } from "../CDS/CompoundRepertoireIdent.ta.mjs";
-import { CompoundEmphasisIdent, _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
+import { type CompoundEmphasisIdent, _decode_CompoundEmphasisIdent, _encode_CompoundEmphasisIdent } from "../CDS/CompoundEmphasisIdent.ta.mjs";
 import { CompoundColourIdent, _decode_CompoundColourIdent, _encode_CompoundColourIdent } from "../CDS/CompoundColourIdent.ta.mjs";
 import { BlockParamIdent, _decode_BlockParamIdent, _encode_BlockParamIdent } from "../CDS/BlockParamIdent.ta.mjs";
 import { FieldParamIdent, _decode_FieldParamIdent, _encode_FieldParamIdent } from "../CDS/FieldParamIdent.ta.mjs";

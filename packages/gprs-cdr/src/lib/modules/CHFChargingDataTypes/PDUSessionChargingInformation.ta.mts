@@ -2,7 +2,7 @@
 import {
     type IA5String,
     type INTEGER,
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -11,19 +11,19 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 import { RoamerInOut, _decode_RoamerInOut, _encode_RoamerInOut, _enum_for_RoamerInOut } from "../CHFChargingDataTypes/RoamerInOut.ta.mjs";
 import { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../CHFChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
 import { NetworkSliceInstanceID, _decode_NetworkSliceInstanceID, _encode_NetworkSliceInstanceID } from "../CHFChargingDataTypes/NetworkSliceInstanceID.ta.mjs";
 import { PDUSessionType, _decode_PDUSessionType, _encode_PDUSessionType, _enum_for_PDUSessionType } from "../CHFChargingDataTypes/PDUSessionType.ta.mjs";
-import { PDUSessionChargingInformation_sSCMode, _decode_PDUSessionChargingInformation_sSCMode, _encode_PDUSessionChargingInformation_sSCMode } from "../CHFChargingDataTypes/PDUSessionChargingInformation-sSCMode.ta.mjs";
+import { type PDUSessionChargingInformation_sSCMode, _decode_PDUSessionChargingInformation_sSCMode, _encode_PDUSessionChargingInformation_sSCMode } from "../CHFChargingDataTypes/PDUSessionChargingInformation-sSCMode.ta.mjs";
 import { ServingNetworkFunctionID, _decode_ServingNetworkFunctionID, _encode_ServingNetworkFunctionID } from "../CHFChargingDataTypes/ServingNetworkFunctionID.ta.mjs";
 import { PDUAddress, _decode_PDUAddress, _encode_PDUAddress } from "../CHFChargingDataTypes/PDUAddress.ta.mjs";
 import { AuthorizedQoSInformation, _decode_AuthorizedQoSInformation, _encode_AuthorizedQoSInformation } from "../CHFChargingDataTypes/AuthorizedQoSInformation.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CHFChargingDataTypes/ChChSelectionMode.ta.mjs";
-import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CHFChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
 import { NGRANSecondaryRATUsageReport, _decode_NGRANSecondaryRATUsageReport, _encode_NGRANSecondaryRATUsageReport } from "../CHFChargingDataTypes/NGRANSecondaryRATUsageReport.ta.mjs";
 import { SubscribedQoSInformation, _decode_SubscribedQoSInformation, _encode_SubscribedQoSInformation } from "../CHFChargingDataTypes/SubscribedQoSInformation.ta.mjs";
 import { SessionAMBR, _decode_SessionAMBR, _encode_SessionAMBR } from "../CHFChargingDataTypes/SessionAMBR.ta.mjs";

@@ -6,11 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from "../CMSSigncryption/Content.ta.mjs";
-import { Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs";
+import { type Mode, _decode_Mode, _encode_Mode } from "../CMSSigncryption/Mode.ta.mjs";
 
 /**
  * @summary ContentInformation

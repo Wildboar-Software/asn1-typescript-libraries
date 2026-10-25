@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SmsStatusReportResponseChoice, _decode_SmsStatusReportResponseChoice, _encode_SmsStatusReportResponseChoice } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportResponseChoice.ta.mjs";
-import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
+import { type SmsStatusReportResponseChoice, _decode_SmsStatusReportResponseChoice, _encode_SmsStatusReportResponseChoice } from "../Short-Message-Service-Operations-asn1-97/SmsStatusReportResponseChoice.ta.mjs";
+import { type SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
 
 /**
  * @summary SmsStatusReportRes

@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI, E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
+import { _decode_E_UTRAN_CGI, _encode_E_UTRAN_CGI, type E_UTRAN_CGI } from "../MAP-CommonDataTypes/E-UTRAN-CGI.ta.mjs";
 
 
 /**

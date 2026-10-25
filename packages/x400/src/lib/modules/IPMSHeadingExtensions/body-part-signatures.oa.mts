@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    BodyPartSignatures,
+    type BodyPartSignatures,
     _decode_BodyPartSignatures,
     _encode_BodyPartSignatures,
 } from '../IPMSHeadingExtensions/BodyPartSignatures.ta.mjs';

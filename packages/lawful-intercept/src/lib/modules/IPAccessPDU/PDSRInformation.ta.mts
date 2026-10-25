@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type INTEGER,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PDSRSummaryTrigger, _decode_PDSRSummaryTrigger, _encode_PDSRSummaryTrigger } from "../IPAccessPDU/PDSRSummaryTrigger.ta.mjs";
+import { type PDSRSummaryTrigger, _decode_PDSRSummaryTrigger, _encode_PDSRSummaryTrigger } from "../IPAccessPDU/PDSRSummaryTrigger.ta.mjs";
 
 
 /**

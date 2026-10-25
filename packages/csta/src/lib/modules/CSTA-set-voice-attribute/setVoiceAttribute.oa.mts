@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetVoiceAttributeArgument, _decode_SetVoiceAttributeArgument, _encode_SetVoiceAttributeArgument } from "../CSTA-set-voice-attribute/SetVoiceAttributeArgument.ta.mjs";
 
-import { SetVoiceAttributeResult, _decode_SetVoiceAttributeResult, _encode_SetVoiceAttributeResult } from "../CSTA-set-voice-attribute/SetVoiceAttributeResult.ta.mjs";
+import { type SetVoiceAttributeResult, _decode_SetVoiceAttributeResult, _encode_SetVoiceAttributeResult } from "../CSTA-set-voice-attribute/SetVoiceAttributeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

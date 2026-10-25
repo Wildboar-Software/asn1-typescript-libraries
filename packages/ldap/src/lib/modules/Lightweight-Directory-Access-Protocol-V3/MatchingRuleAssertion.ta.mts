@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MatchingRuleId,
+  type MatchingRuleId,
   _decode_MatchingRuleId,
   _encode_MatchingRuleId,
 } from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleId.ta.mjs';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';
 import {
-  AssertionValue,
+  type AssertionValue,
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';

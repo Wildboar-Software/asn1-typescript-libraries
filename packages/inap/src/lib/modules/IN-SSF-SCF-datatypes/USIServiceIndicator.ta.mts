@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     type OBJECT_IDENTIFIER,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

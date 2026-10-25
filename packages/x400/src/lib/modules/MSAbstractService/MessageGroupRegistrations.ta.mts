@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageGroupRegistrations_Item,
+    type MessageGroupRegistrations_Item,
     _decode_MessageGroupRegistrations_Item,
     _encode_MessageGroupRegistrations_Item,
 } from '../MSAbstractService/MessageGroupRegistrations-Item.ta.mjs';

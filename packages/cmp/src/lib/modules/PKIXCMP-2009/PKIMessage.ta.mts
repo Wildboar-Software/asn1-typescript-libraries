@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,17 +17,17 @@ import {
   _encode_PKIHeader,
 } from '../PKIXCMP-2009/PKIHeader.ta.mjs';
 import {
-  PKIBody,
+  type PKIBody,
   _decode_PKIBody,
   _encode_PKIBody,
 } from '../PKIXCMP-2009/PKIBody.ta.mjs';
 import {
-  PKIProtection,
+  type PKIProtection,
   _decode_PKIProtection,
   _encode_PKIProtection,
 } from '../PKIXCMP-2009/PKIProtection.ta.mjs';
 import {
-  CMPCertificate,
+  type CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
 } from '../PKIXCMP-2009/CMPCertificate.ta.mjs';

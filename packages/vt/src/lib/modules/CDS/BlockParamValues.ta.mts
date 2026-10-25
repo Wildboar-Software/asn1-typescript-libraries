@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BlockParamValues_bound, _decode_BlockParamValues_bound, _encode_BlockParamValues_bound } from "../CDS/BlockParamValues-bound.ta.mjs";
+import { type BlockParamValues_bound, _decode_BlockParamValues_bound, _encode_BlockParamValues_bound } from "../CDS/BlockParamValues-bound.ta.mjs";
 
 
 /**

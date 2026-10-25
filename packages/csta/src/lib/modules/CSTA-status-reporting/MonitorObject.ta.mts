@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
-import { CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-switching-function-objects/CSTAObject.ta.mjs";
+import { type CSTAObject, _decode_CSTAObject, _encode_CSTAObject } from "../CSTA-switching-function-objects/CSTAObject.ta.mjs";
 
 
 

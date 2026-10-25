@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { Group_Service_ID, _decode_Group_Service_ID, _encode_Group_Service_ID } from "../MAP-MS-DataTypes/Group-Service-ID.ta.mjs";
-import { Local_GroupID, _decode_Local_GroupID, _encode_Local_GroupID } from "../MAP-MS-DataTypes/Local-GroupID.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type Group_Service_ID, _decode_Group_Service_ID, _encode_Group_Service_ID } from "../MAP-MS-DataTypes/Group-Service-ID.ta.mjs";
+import { type Local_GroupID, _decode_Local_GroupID, _encode_Local_GroupID } from "../MAP-MS-DataTypes/Local-GroupID.ta.mjs";
 
 
 /**

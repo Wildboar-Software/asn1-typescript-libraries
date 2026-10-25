@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ProblemCause,
+    type ProblemCause,
     _decode_ProblemCause,
     _encode_ProblemCause,
 } from '../ASN1DefinedTypesModule/ProblemCause.ta.mjs';

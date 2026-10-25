@@ -22,7 +22,7 @@ import {
     _encode_ModifiedValidity,
 } from "../OperationalBindingManagement/ModifiedValidity.ta.mjs";
 import {
-    ModifyOperationalBindingArgumentData_initiator,
+    type ModifyOperationalBindingArgumentData_initiator,
     _decode_ModifyOperationalBindingArgumentData_initiator,
     _encode_ModifyOperationalBindingArgumentData_initiator,
 } from "../OperationalBindingManagement/ModifyOperationalBindingArgumentData-initiator.ta.mjs";

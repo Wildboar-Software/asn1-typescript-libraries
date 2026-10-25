@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';

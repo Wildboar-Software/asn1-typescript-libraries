@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-import { KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta.mjs";
+import { type KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta.mjs";
 // export { KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta.mjs";
 
 

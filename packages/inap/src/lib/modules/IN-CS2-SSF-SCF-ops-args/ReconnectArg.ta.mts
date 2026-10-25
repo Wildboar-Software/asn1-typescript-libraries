@@ -5,15 +5,15 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS2-datatypes/ApplicationTimer.ta.mjs";
+import { type ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS2-datatypes/ApplicationTimer.ta.mjs";
 // export { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS2-datatypes/ApplicationTimer.ta.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-CS2-datatypes/AlertingPattern.ta.mjs";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-CS2-datatypes/AlertingPattern.ta.mjs";
 // export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-CS2-datatypes/AlertingPattern.ta.mjs";
-import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
+import { type DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
 // export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-CS2-datatypes/CallSegmentID.ta.mjs";
 
 

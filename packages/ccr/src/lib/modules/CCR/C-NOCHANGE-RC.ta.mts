@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,14 +12,14 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  C_NOCHANGE_RC_outcome,
+  type C_NOCHANGE_RC_outcome,
   _enum_for_C_NOCHANGE_RC_outcome,
   C_NOCHANGE_RC_outcome_not_determined /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_C_NOCHANGE_RC_outcome,
   _encode_C_NOCHANGE_RC_outcome,
 } from '../CCR/C-NOCHANGE-RC-outcome.ta.mjs';
 import {
-  User_data,
+  type User_data,
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';

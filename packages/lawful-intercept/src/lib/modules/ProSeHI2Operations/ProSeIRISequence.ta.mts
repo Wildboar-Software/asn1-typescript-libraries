@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } from "../ProSeHI2Operations/ProSeIRIContent.ta.mjs";
+import { type ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } from "../ProSeHI2Operations/ProSeIRIContent.ta.mjs";
 // export { ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } from "../ProSeHI2Operations/ProSeIRIContent.ta.mjs";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CircuitPackType,
+    type CircuitPackType,
     _decode_CircuitPackType,
     _encode_CircuitPackType,
 } from '../ASN1DefinedTypesModule/CircuitPackType.ta.mjs';

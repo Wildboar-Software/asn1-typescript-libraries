@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, EXTERNAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type EXTERNAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CoordinateShadowUpdateArgumentData_updateStrategy_standard,
+    type CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _decode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
     _encode_CoordinateShadowUpdateArgumentData_updateStrategy_standard,
 } from "../DirectoryShadowAbstractService/CoordinateShadowUpdateArgumentData-updateStrategy-standard.ta.mjs";

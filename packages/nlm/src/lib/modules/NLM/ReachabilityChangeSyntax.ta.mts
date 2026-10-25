@@ -18,7 +18,7 @@ import {
     _encode_ReachabilityChangeSyntax_newState,
 } from '../NLM/ReachabilityChangeSyntax-newState.ta.mjs';
 import {
-    NAddress,
+    type NAddress,
     _decode_NAddress,
     _encode_NAddress,
 } from '../NLM/NAddress.ta.mjs';

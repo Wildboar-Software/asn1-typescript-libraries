@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type INTEGER,
     type OCTET_STRING,
     type OPTIONAL,
@@ -10,18 +10,18 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import {
-    PinFlags,
+    type PinFlags,
     _decode_PinFlags,
     _encode_PinFlags,
 } from "../PKCS-15/PinFlags.ta.mjs";
 import {
-    PinType,
+    type PinType,
     _decode_PinType,
     _encode_PinType,
     _enum_for_PinType,
 } from "../PKCS-15/PinType.ta.mjs";
 import {
-    Reference,
+    type Reference,
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";

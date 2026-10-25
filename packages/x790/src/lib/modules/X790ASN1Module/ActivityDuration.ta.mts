@@ -2,8 +2,8 @@
 import {
     type OPTIONAL,
     type BOOLEAN,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     TRUE,
     type ASN1Element as _Element,
 } from "@wildboar/asn1";

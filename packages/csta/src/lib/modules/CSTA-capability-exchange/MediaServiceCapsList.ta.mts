@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    SEQUENCE,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { MediaServiceCapsList_Item, _decode_MediaServiceCapsList_Item, _encode_MediaServiceCapsList_Item } from "../CSTA-capability-exchange/MediaServiceCapsList-Item.ta.mjs";

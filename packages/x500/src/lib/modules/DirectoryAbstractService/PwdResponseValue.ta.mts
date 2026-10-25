@@ -6,13 +6,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PwdResponseValue_error,
+    type PwdResponseValue_error,
     _decode_PwdResponseValue_error,
     _encode_PwdResponseValue_error,
     _enum_for_PwdResponseValue_error,
 } from "../DirectoryAbstractService/PwdResponseValue-error.ta.mjs";
 import {
-    PwdResponseValue_warning,
+    type PwdResponseValue_warning,
     _decode_PwdResponseValue_warning,
     _encode_PwdResponseValue_warning,
 } from "../DirectoryAbstractService/PwdResponseValue-warning.ta.mjs";

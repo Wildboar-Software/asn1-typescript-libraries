@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GMLC_List, _decode_GMLC_List, _encode_GMLC_List } from "../MAP-MS-DataTypes/GMLC-List.ta.mjs";
-import { LCS_PrivacyExceptionList, _decode_LCS_PrivacyExceptionList, _encode_LCS_PrivacyExceptionList } from "../MAP-MS-DataTypes/LCS-PrivacyExceptionList.ta.mjs";
-import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataTypes/MOLR-List.ta.mjs";
+import { type GMLC_List, _decode_GMLC_List, _encode_GMLC_List } from "../MAP-MS-DataTypes/GMLC-List.ta.mjs";
+import { type LCS_PrivacyExceptionList, _decode_LCS_PrivacyExceptionList, _encode_LCS_PrivacyExceptionList } from "../MAP-MS-DataTypes/LCS-PrivacyExceptionList.ta.mjs";
+import { type MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataTypes/MOLR-List.ta.mjs";
 
 
 /**

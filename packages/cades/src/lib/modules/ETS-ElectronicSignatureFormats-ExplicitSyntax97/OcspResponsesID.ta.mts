@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta.mjs";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
+import { type OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
 /**
  * @summary OcspResponsesID
  * @description

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ManualHandlingInstruction,
+    type ManualHandlingInstruction,
     _decode_ManualHandlingInstruction,
     _encode_ManualHandlingInstruction,
 } from '../IPMSHeadingExtensions/ManualHandlingInstruction.ta.mjs';

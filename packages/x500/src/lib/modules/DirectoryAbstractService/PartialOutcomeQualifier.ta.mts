@@ -8,17 +8,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from "../DirectoryAbstractService/Filter.ta.mjs";
 import {
-    LimitProblem,
+    type LimitProblem,
     _decode_LimitProblem,
     _encode_LimitProblem,
 } from "../DirectoryAbstractService/LimitProblem.ta.mjs";
 import {
-    PartialOutcomeQualifier_entryCount,
+    type PartialOutcomeQualifier_entryCount,
     _decode_PartialOutcomeQualifier_entryCount,
     _encode_PartialOutcomeQualifier_entryCount,
 } from "../DirectoryAbstractService/PartialOutcomeQualifier-entryCount.ta.mjs";

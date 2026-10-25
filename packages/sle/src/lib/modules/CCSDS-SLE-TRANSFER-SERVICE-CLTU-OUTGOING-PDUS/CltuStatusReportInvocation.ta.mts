@@ -5,15 +5,15 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-import { CltuLastProcessed, _decode_CltuLastProcessed, _encode_CltuLastProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastProcessed.ta.mjs";
-import { CltuLastOk, _decode_CltuLastOk, _encode_CltuLastOk } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastOk.ta.mjs";
-import { ProductionStatus, _decode_ProductionStatus, _encode_ProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ProductionStatus.ta.mjs";
-import { UplinkStatus, _decode_UplinkStatus, _encode_UplinkStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/UplinkStatus.ta.mjs";
-import { NumberOfCltusReceived, _decode_NumberOfCltusReceived, _encode_NumberOfCltusReceived } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/NumberOfCltusReceived.ta.mjs";
-import { NumberOfCltusProcessed, _decode_NumberOfCltusProcessed, _encode_NumberOfCltusProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/NumberOfCltusProcessed.ta.mjs";
-import { NumberOfCltusRadiated, _decode_NumberOfCltusRadiated, _encode_NumberOfCltusRadiated } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/NumberOfCltusRadiated.ta.mjs";
-import { BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/BufferSize.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
+import { type CltuLastProcessed, _decode_CltuLastProcessed, _encode_CltuLastProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastProcessed.ta.mjs";
+import { type CltuLastOk, _decode_CltuLastOk, _encode_CltuLastOk } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuLastOk.ta.mjs";
+import { type ProductionStatus, _decode_ProductionStatus, _encode_ProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/ProductionStatus.ta.mjs";
+import { type UplinkStatus, _decode_UplinkStatus, _encode_UplinkStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/UplinkStatus.ta.mjs";
+import { type NumberOfCltusReceived, _decode_NumberOfCltusReceived, _encode_NumberOfCltusReceived } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/NumberOfCltusReceived.ta.mjs";
+import { type NumberOfCltusProcessed, _decode_NumberOfCltusProcessed, _encode_NumberOfCltusProcessed } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/NumberOfCltusProcessed.ta.mjs";
+import { type NumberOfCltusRadiated, _decode_NumberOfCltusRadiated, _encode_NumberOfCltusRadiated } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/NumberOfCltusRadiated.ta.mjs";
+import { type BufferSize, _decode_BufferSize, _encode_BufferSize } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/BufferSize.ta.mjs";
 
 
 /**

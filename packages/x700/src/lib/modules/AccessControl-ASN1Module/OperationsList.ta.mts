@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OperationType,
+    type OperationType,
     _decode_OperationType,
     _encode_OperationType,
 } from '../AccessControl-ASN1Module/OperationType.ta.mjs';

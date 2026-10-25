@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    AddResult,
+    type AddResult,
     _decode_AddResult,
     _encode_AddResult,
 } from '../Pbact-access/AddResult.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DownstreamConnectivityPointer,
+    type DownstreamConnectivityPointer,
     _decode_DownstreamConnectivityPointer,
     _encode_DownstreamConnectivityPointer,
 } from '../ASN1DefinedTypesModule/DownstreamConnectivityPointer.ta.mjs';

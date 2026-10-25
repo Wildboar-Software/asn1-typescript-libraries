@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { ExemptedAddress, _decode_ExemptedAddress, _encode_ExemptedAddress } from "../MMSHeadingExtensions/ExemptedAddress.ta.mjs";
+import { type ExemptedAddress, _decode_ExemptedAddress, _encode_ExemptedAddress } from "../MMSHeadingExtensions/ExemptedAddress.ta.mjs";
 import { id_nato_mmhs_hat_exempted_address } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-exempted-address.va.mjs";
 
 

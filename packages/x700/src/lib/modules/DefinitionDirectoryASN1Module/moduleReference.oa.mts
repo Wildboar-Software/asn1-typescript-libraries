@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';

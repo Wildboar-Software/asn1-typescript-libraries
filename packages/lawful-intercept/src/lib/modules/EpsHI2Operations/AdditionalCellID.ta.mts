@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -8,9 +8,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { NCGI, _decode_NCGI, _encode_NCGI } from "../EpsHI2Operations/NCGI.ta.mjs";
 // export { NCGI, _decode_NCGI, _encode_NCGI } from "../EpsHI2Operations/NCGI.ta.mjs";
-import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
+import { type GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
 // export { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../EpsHI2Operations/GSMLocation.ta.mjs";
-import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../EpsHI2Operations/UMTSLocation.ta.mjs";
+import { type UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../EpsHI2Operations/UMTSLocation.ta.mjs";
 // export { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../EpsHI2Operations/UMTSLocation.ta.mjs";
 
 

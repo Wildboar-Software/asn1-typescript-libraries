@@ -11,19 +11,19 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../Core-INAP-CS1-DataTypes/DestinationRoutingAddress.ta.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../Core-INAP-CS1-DataTypes/AlertingPattern.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
-import { CutAndPaste, _decode_CutAndPaste, _encode_CutAndPaste } from "../Core-INAP-CS1-DataTypes/CutAndPaste.ta.mjs";
-import { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../Core-INAP-CS1-DataTypes/OriginalCalledPartyID.ta.mjs";
-import { RouteList, _decode_RouteList, _encode_RouteList } from "../Core-INAP-CS1-DataTypes/RouteList.ta.mjs";
-import { ScfID, _decode_ScfID, _encode_ScfID } from "../Core-INAP-CS1-DataTypes/ScfID.ta.mjs";
+import { type DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../Core-INAP-CS1-DataTypes/DestinationRoutingAddress.ta.mjs";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../Core-INAP-CS1-DataTypes/AlertingPattern.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
+import { type CutAndPaste, _decode_CutAndPaste, _encode_CutAndPaste } from "../Core-INAP-CS1-DataTypes/CutAndPaste.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../Core-INAP-CS1-DataTypes/OriginalCalledPartyID.ta.mjs";
+import { type RouteList, _decode_RouteList, _encode_RouteList } from "../Core-INAP-CS1-DataTypes/RouteList.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../Core-INAP-CS1-DataTypes/ScfID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../Core-INAP-CS1-DataTypes/RedirectingPartyID.ta.mjs";
-import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
+import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../Core-INAP-CS1-DataTypes/RedirectingPartyID.ta.mjs";
+import { type RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
 
 
 /**

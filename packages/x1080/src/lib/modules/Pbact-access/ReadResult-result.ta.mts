@@ -16,7 +16,7 @@ import {
     _encode_ObjectInformation,
 } from '../Pbact-access/ObjectInformation.ta.mjs';
 import {
-    AccessdErr,
+    type AccessdErr,
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';

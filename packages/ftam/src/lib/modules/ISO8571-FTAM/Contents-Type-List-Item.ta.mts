@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Document_Type_Name,
+  type Document_Type_Name,
   _decode_Document_Type_Name,
   _encode_Document_Type_Name,
 } from '../ISO8571-FTAM/Document-Type-Name.ta.mjs';
 import {
-  Abstract_Syntax_Name,
+  type Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';

@@ -16,7 +16,7 @@ import {
     _encode_DaysOfMonth,
 } from '../Schedulerev1-ASN1Module/DaysOfMonth.ta.mjs';
 import {
-    TimesOfDayWps,
+    type TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';

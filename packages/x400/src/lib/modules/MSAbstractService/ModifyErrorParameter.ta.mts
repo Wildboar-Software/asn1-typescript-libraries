@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    ModifyProblem,
+    type ModifyProblem,
     _decode_ModifyProblem,
     _encode_ModifyProblem,
 } from '../MSAbstractService/ModifyProblem.ta.mjs';

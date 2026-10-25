@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DNDInterrogateRes_status_Item, _decode_DNDInterrogateRes_status_Item, _encode_DNDInterrogateRes_status_Item } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-status-Item.ta.mjs";
-import { DNDInterrogateRes_resultExtension, _decode_DNDInterrogateRes_resultExtension, _encode_DNDInterrogateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-resultExtension.ta.mjs";
+import { type DNDInterrogateRes_resultExtension, _decode_DNDInterrogateRes_resultExtension, _encode_DNDInterrogateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDInterrogateRes-resultExtension.ta.mjs";
 
 /**
  * @summary DNDInterrogateRes

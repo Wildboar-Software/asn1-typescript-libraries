@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BIT_STRING,
+  type OPTIONAL,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AbortReason,
+  type AbortReason,
   _decode_AbortReason,
   _encode_AbortReason,
 } from '../Reliable-Transfer-APDU/AbortReason.ta.mjs';

@@ -11,27 +11,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TriggerId,
+    type TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
 } from '../CSModule/TriggerId.ta.mjs';
 import {
-    ScriptId,
+    type ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
 } from '../CSModule/ScriptId.ta.mjs';
 import {
-    ThreadId,
+    type ThreadId,
     _decode_ThreadId,
     _encode_ThreadId,
 } from '../CSModule/ThreadId.ta.mjs';
 import {
-    ErrorCode,
+    type ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
 } from '../CSModule/ErrorCode.ta.mjs';
 import {
-    ExecutionResultType,
+    type ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
 } from '../CSModule/ExecutionResultType.ta.mjs';

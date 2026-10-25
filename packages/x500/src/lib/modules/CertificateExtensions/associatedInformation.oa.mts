@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    AttributesSyntax,
+    type AttributesSyntax,
     _decode_AttributesSyntax,
     _encode_AttributesSyntax,
 } from "../CertificateExtensions/AttributesSyntax.ta.mjs";

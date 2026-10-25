@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    PerMessageIndicators,
+    type PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
 } from '../MTSAbstractService/PerMessageIndicators.ta.mjs';

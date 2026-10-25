@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertReplaceErr_code,
+    type CertReplaceErr_code,
     _decode_CertReplaceErr_code,
     _encode_CertReplaceErr_code,
 } from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.mjs";

@@ -11,12 +11,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PKCertIdentifier,
+    type PKCertIdentifier,
     _decode_PKCertIdentifier,
     _encode_PKCertIdentifier,
 } from "../PKI-Stub/PKCertIdentifier.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../PKI-Stub/DistinguishedName.ta.mjs";

@@ -7,7 +7,7 @@ import {
     _encode_ExtendedCertificate,
 } from "../CryptographicMessageSyntax-2010/ExtendedCertificate.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";

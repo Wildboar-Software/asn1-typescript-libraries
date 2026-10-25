@@ -10,8 +10,8 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
-import { _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService, CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
+import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, type DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
+import { _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService, type CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
 
 
 /**

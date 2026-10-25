@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    RetrievalStatus,
+    type RetrievalStatus,
     _decode_RetrievalStatus,
     _encode_RetrievalStatus,
 } from '../MSAbstractService/RetrievalStatus.ta.mjs';

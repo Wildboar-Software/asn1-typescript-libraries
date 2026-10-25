@@ -31,10 +31,10 @@ import {
 } from "../../../src/lib/modules/BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.mjs";
 import type EqualityMatcher from "../../../src/lib/types/EqualityMatcher.mjs";
 import {
-    ACIItem, ACIItem_itemOrUserFirst
+    ACIItem, type ACIItem_itemOrUserFirst
 } from "../../../src/lib/modules/BasicAccessControl/index.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../../../src/lib/modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import {

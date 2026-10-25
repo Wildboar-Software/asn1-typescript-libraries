@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BridgeRollReply_Item,
+    type BridgeRollReply_Item,
     _decode_BridgeRollReply_Item,
     _encode_BridgeRollReply_Item,
 } from '../M3100ASN1TypeModule5/BridgeRollReply-Item.ta.mjs';

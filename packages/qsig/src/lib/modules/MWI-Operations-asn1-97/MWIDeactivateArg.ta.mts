@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../MWI-Operations-asn1-97/BasicService.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../MWI-Operations-asn1-97/MsgCentreId.ta.mjs";
-import { MWIDeactivateArg_argumentExt, _decode_MWIDeactivateArg_argumentExt, _encode_MWIDeactivateArg_argumentExt } from "../MWI-Operations-asn1-97/MWIDeactivateArg-argumentExt.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../MWI-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type MWIDeactivateArg_argumentExt, _decode_MWIDeactivateArg_argumentExt, _encode_MWIDeactivateArg_argumentExt } from "../MWI-Operations-asn1-97/MWIDeactivateArg-argumentExt.ta.mjs";
 
 /**
  * @summary MWIDeactivateArg

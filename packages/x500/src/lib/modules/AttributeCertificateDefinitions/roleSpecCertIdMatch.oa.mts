@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_mr_roleSpecCertIdMatch } from "../AttributeCertificateDefinitions/id-mr-roleSpecCertIdMatch.va.mjs";
 import {
-    RoleSpecCertIdentifierSyntax,
+    type RoleSpecCertIdentifierSyntax,
     _decode_RoleSpecCertIdentifierSyntax,
     _encode_RoleSpecCertIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";

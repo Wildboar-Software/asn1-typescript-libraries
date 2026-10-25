@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type OBJECT_IDENTIFIER,
-    GraphicString,
+    type GraphicString,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GeneralIdentifier,
+    type GeneralIdentifier,
     _decode_GeneralIdentifier,
     _encode_GeneralIdentifier,
 } from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta.mjs';

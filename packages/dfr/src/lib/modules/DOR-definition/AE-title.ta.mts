@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AP_title, _decode_AP_title, _encode_AP_title } from "../DOR-definition/AP-title.ta.mjs";
-import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR-definition/AE-qualifier.ta.mjs";
+import { type AP_title, _decode_AP_title, _encode_AP_title } from "../DOR-definition/AP-title.ta.mjs";
+import { type AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR-definition/AE-qualifier.ta.mjs";
 
 
 /**

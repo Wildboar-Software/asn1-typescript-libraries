@@ -22,37 +22,37 @@ import {
     _encode_PerRecipientReportTransferFields,
 } from '../MTAAbstractService/PerRecipientReportTransferFields.ta.mjs';
 import {
-    SubjectIdentifier,
+    type SubjectIdentifier,
     _decode_SubjectIdentifier,
     _encode_SubjectIdentifier,
 } from '../MTAAbstractService/SubjectIdentifier.ta.mjs';
 import {
-    SubjectIntermediateTraceInformation,
+    type SubjectIntermediateTraceInformation,
     _decode_SubjectIntermediateTraceInformation,
     _encode_SubjectIntermediateTraceInformation,
 } from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '../MTAAbstractService/AdditionalInformation.ta.mjs';

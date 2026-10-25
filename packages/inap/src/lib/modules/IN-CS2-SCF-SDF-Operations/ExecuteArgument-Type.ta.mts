@@ -9,7 +9,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 // export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 // export { METHOD } from "../IN-CS2-SDF-InformationFramework/METHOD.oca.mjs";
 // export { SupportedMethods } from "../IN-CS2-SCF-SDF-Operations/SupportedMethods.osa.mjs";
@@ -20,15 +20,15 @@ import { ServiceControls, _decode_ServiceControls, _encode_ServiceControls } fro
 // export { ServiceControls, _decode_ServiceControls, _encode_ServiceControls } from "../DirectoryAbstractService/ServiceControls.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 // export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { OperationProgress, _decode_OperationProgress, _encode_OperationProgress } from "../DistributedOperations/OperationProgress.ta.mjs";
 // export { OperationProgress, _decode_OperationProgress, _encode_OperationProgress } from "../DistributedOperations/OperationProgress.ta.mjs";
-import { ReferenceType, _decode_ReferenceType, _encode_ReferenceType, _enum_for_ReferenceType } from "../DistributedOperations/ReferenceType.ta.mjs";
+import { type ReferenceType, _decode_ReferenceType, _encode_ReferenceType, _enum_for_ReferenceType } from "../DistributedOperations/ReferenceType.ta.mjs";
 // export { ReferenceType, _enum_for_ReferenceType, ReferenceType_superior /* IMPORTED_LONG_ENUMERATION_ITEM */, superior /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_subordinate /* IMPORTED_LONG_ENUMERATION_ITEM */, subordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_cross /* IMPORTED_LONG_ENUMERATION_ITEM */, cross /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_nonSpecificSubordinate /* IMPORTED_LONG_ENUMERATION_ITEM */, nonSpecificSubordinate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_supplier /* IMPORTED_LONG_ENUMERATION_ITEM */, supplier /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_master /* IMPORTED_LONG_ENUMERATION_ITEM */, master /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_immediateSuperior /* IMPORTED_LONG_ENUMERATION_ITEM */, immediateSuperior /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReferenceType_self /* IMPORTED_LONG_ENUMERATION_ITEM */, self /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReferenceType, _encode_ReferenceType } from "../DistributedOperations/ReferenceType.ta.mjs";
-import { ContextSelection, _decode_ContextSelection, _encode_ContextSelection } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
+import { type ContextSelection, _decode_ContextSelection, _encode_ContextSelection } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
 // export { ContextSelection, _decode_ContextSelection, _encode_ContextSelection } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
-import { FamilyGrouping, FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_FamilyGrouping, _encode_FamilyGrouping, _enum_for_FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
+import { type FamilyGrouping, FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_FamilyGrouping, _encode_FamilyGrouping, _enum_for_FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
 // export { FamilyGrouping, _enum_for_FamilyGrouping, FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, entryOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, FamilyGrouping_compoundEntry /* IMPORTED_LONG_ENUMERATION_ITEM */, compoundEntry /* IMPORTED_SHORT_ENUMERATION_ITEM */, FamilyGrouping_strands /* IMPORTED_LONG_ENUMERATION_ITEM */, strands /* IMPORTED_SHORT_ENUMERATION_ITEM */, FamilyGrouping_multiStrand /* IMPORTED_LONG_ENUMERATION_ITEM */, multiStrand /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FamilyGrouping, _encode_FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
 
 

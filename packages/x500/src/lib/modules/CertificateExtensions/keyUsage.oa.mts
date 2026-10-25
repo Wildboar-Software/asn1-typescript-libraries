@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_keyUsage } from "../CertificateExtensions/id-ce-keyUsage.va.mjs";
 import {
-    KeyUsage,
+    type KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
 } from "../CertificateExtensions/KeyUsage.ta.mjs";

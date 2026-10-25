@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UUID,
+    type UUID,
     _decode_UUID,
     _encode_UUID,
 } from "../SelectedAttributeTypes/UUID.ta.mjs";

@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ClientCertificateTypes, _decode_ClientCertificateTypes, _encode_ClientCertificateTypes } from "../TSM/ClientCertificateTypes.ta.mjs";
+import { type ClientCertificateTypes, _decode_ClientCertificateTypes, _encode_ClientCertificateTypes } from "../TSM/ClientCertificateTypes.ta.mjs";
 
-import { DistinguishedNames, _decode_DistinguishedNames, _encode_DistinguishedNames } from "../TSM/DistinguishedNames.ta.mjs";
+import { type DistinguishedNames, _decode_DistinguishedNames, _encode_DistinguishedNames } from "../TSM/DistinguishedNames.ta.mjs";
 
 
 

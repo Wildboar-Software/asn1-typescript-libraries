@@ -5,7 +5,7 @@ import {
 import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { dh_public_number } from "../CryptographicMessageSyntaxAlgorithms-2009/dh-public-number.va.mjs";
 import {
-    DHPublicKey,
+    type DHPublicKey,
     _decode_DHPublicKey,
     _encode_DHPublicKey,
 } from "../PKIXAlgs-2009/DHPublicKey.ta.mjs";

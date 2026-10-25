@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExtendedEncodedInformationType,
+    type ExtendedEncodedInformationType,
     _decode_ExtendedEncodedInformationType,
     _encode_ExtendedEncodedInformationType,
 } from '../MTSAbstractService/ExtendedEncodedInformationType.ta.mjs';

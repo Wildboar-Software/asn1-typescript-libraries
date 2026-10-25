@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { callingName } from "../Name-Operations-asn1-97/callingName.oa.mjs";
 import { calledName } from "../Name-Operations-asn1-97/calledName.oa.mjs";
 import { connectedName } from "../Name-Operations-asn1-97/connectedName.oa.mjs";

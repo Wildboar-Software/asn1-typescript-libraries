@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../Core-INAP-CS1-DataTypes/IPRoutingAddress.ta.mjs";
+import { type IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../Core-INAP-CS1-DataTypes/IPRoutingAddress.ta.mjs";
 
 
 /**

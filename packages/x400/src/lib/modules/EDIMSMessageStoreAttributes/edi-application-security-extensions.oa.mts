@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDIApplicationSecurityExtension,
+    type EDIApplicationSecurityExtension,
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.mjs';

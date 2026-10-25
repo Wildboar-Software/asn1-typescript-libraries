@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    RoutingMTAName,
+    type RoutingMTAName,
     _decode_RoutingMTAName,
     _encode_RoutingMTAName,
 } from '../MHSRoutingDirectoryObjects/RoutingMTAName.ta.mjs';

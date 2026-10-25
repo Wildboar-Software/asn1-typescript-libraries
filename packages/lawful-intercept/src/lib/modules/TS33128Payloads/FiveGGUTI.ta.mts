@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
+import { type MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
 // export { MCC, _decode_MCC, _encode_MCC } from "../TS33128Payloads/MCC.ta.mjs";
-import { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
+import { type MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
 // export { MNC, _decode_MNC, _encode_MNC } from "../TS33128Payloads/MNC.ta.mjs";
-import { AMFRegionID, _decode_AMFRegionID, _encode_AMFRegionID } from "../TS33128Payloads/AMFRegionID.ta.mjs";
+import { type AMFRegionID, _decode_AMFRegionID, _encode_AMFRegionID } from "../TS33128Payloads/AMFRegionID.ta.mjs";
 // export { AMFRegionID, _decode_AMFRegionID, _encode_AMFRegionID } from "../TS33128Payloads/AMFRegionID.ta.mjs";
-import { AMFSetID, _decode_AMFSetID, _encode_AMFSetID } from "../TS33128Payloads/AMFSetID.ta.mjs";
+import { type AMFSetID, _decode_AMFSetID, _encode_AMFSetID } from "../TS33128Payloads/AMFSetID.ta.mjs";
 // export { AMFSetID, _decode_AMFSetID, _encode_AMFSetID } from "../TS33128Payloads/AMFSetID.ta.mjs";
-import { AMFPointer, _decode_AMFPointer, _encode_AMFPointer } from "../TS33128Payloads/AMFPointer.ta.mjs";
+import { type AMFPointer, _decode_AMFPointer, _encode_AMFPointer } from "../TS33128Payloads/AMFPointer.ta.mjs";
 // export { AMFPointer, _decode_AMFPointer, _encode_AMFPointer } from "../TS33128Payloads/AMFPointer.ta.mjs";
-import { FiveGTMSI, _decode_FiveGTMSI, _encode_FiveGTMSI } from "../TS33128Payloads/FiveGTMSI.ta.mjs";
+import { type FiveGTMSI, _decode_FiveGTMSI, _encode_FiveGTMSI } from "../TS33128Payloads/FiveGTMSI.ta.mjs";
 // export { FiveGTMSI, _decode_FiveGTMSI, _encode_FiveGTMSI } from "../TS33128Payloads/FiveGTMSI.ta.mjs";
 
 

@@ -1,6 +1,6 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { PromptAndCollectUserInformationArg, _decode_PromptAndCollectUserInformationArg, _encode_PromptAndCollectUserInformationArg } from "../CAP-gsmSCF-gsmSRF-ops-args/PromptAndCollectUserInformationArg.ta.mjs";
-import { ReceivedInformationArg, _decode_ReceivedInformationArg, _encode_ReceivedInformationArg } from "../CAP-gsmSCF-gsmSRF-ops-args/ReceivedInformationArg.ta.mjs";
+import { type ReceivedInformationArg, _decode_ReceivedInformationArg, _encode_ReceivedInformationArg } from "../CAP-gsmSCF-gsmSRF-ops-args/ReceivedInformationArg.ta.mjs";
 import { canceled } from "../CAP-errortypes/canceled.oa.mjs";
 import { improperCallerResponse } from "../CAP-errortypes/improperCallerResponse.oa.mjs";
 import { missingParameter } from "../CAP-errortypes/missingParameter.oa.mjs";

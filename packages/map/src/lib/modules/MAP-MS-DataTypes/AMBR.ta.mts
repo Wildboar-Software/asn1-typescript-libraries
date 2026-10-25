@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Bandwidth, _decode_Bandwidth, _encode_Bandwidth } from "../MAP-MS-DataTypes/Bandwidth.ta.mjs";
-import { BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP-MS-DataTypes/BandwidthExt.ta.mjs";
+import { type Bandwidth, _decode_Bandwidth, _encode_Bandwidth } from "../MAP-MS-DataTypes/Bandwidth.ta.mjs";
+import { type BandwidthExt, _decode_BandwidthExt, _encode_BandwidthExt } from "../MAP-MS-DataTypes/BandwidthExt.ta.mjs";
 
 
 /**

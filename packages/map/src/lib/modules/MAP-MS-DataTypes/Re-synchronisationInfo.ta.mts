@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AUTS, _decode_AUTS, _encode_AUTS } from "../MAP-MS-DataTypes/AUTS.ta.mjs";
-import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
+import { type AUTS, _decode_AUTS, _encode_AUTS } from "../MAP-MS-DataTypes/AUTS.ta.mjs";
+import { type RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
 
 
 /**

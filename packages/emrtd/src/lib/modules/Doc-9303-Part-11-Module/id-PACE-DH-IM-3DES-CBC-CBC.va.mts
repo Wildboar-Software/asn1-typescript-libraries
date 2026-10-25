@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_PACE_DH_IM } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM.va.mjs";
 // export { id_PACE_DH_IM } from "../Doc-9303-Part-11-Module/id-PACE-DH-IM.va.mjs";

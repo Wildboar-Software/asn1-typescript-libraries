@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PROTECTION_MAPPING } from "../Notation/PROTECTION-MAPPING.oca.mjs";
+import { type PROTECTION_MAPPING } from "../Notation/PROTECTION-MAPPING.oca.mjs";
 // export { PROTECTION_MAPPING } from "../Notation/PROTECTION-MAPPING.oca.mjs";
 
 

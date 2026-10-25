@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LINotificationMessage, _decode_LINotificationMessage, _encode_LINotificationMessage } from "../TS33128Payloads/LINotificationMessage.ta.mjs";
+import { type LINotificationMessage, _decode_LINotificationMessage, _encode_LINotificationMessage } from "../TS33128Payloads/LINotificationMessage.ta.mjs";
 // export { LINotificationMessage, _decode_LINotificationMessage, _encode_LINotificationMessage } from "../TS33128Payloads/LINotificationMessage.ta.mjs";
 
 

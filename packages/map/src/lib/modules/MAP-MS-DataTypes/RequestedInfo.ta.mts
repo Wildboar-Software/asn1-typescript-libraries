@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { DomainType, _decode_DomainType, _encode_DomainType, _enum_for_DomainType } from "../MAP-MS-DataTypes/DomainType.ta.mjs";
-import { RequestedNodes, _decode_RequestedNodes, _encode_RequestedNodes } from "../MAP-MS-DataTypes/RequestedNodes.ta.mjs";
+import { type DomainType, _decode_DomainType, _encode_DomainType, _enum_for_DomainType } from "../MAP-MS-DataTypes/DomainType.ta.mjs";
+import { type RequestedNodes, _decode_RequestedNodes, _encode_RequestedNodes } from "../MAP-MS-DataTypes/RequestedNodes.ta.mjs";
 
 
 /**

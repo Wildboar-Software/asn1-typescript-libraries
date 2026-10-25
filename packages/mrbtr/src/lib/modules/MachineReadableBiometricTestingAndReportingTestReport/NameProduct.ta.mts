@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { Product, _decode_Product, _encode_Product } from "../CBEFF-DATA-ELEMENTS/Product.ta.mjs";
-import { VersionProduct, _decode_VersionProduct, _encode_VersionProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/VersionProduct.ta.mjs";
+import { type VersionProduct, _decode_VersionProduct, _encode_VersionProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/VersionProduct.ta.mjs";
 
 
 /**

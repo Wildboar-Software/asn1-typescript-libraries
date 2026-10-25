@@ -3,10 +3,10 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OCTET_STRING,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterType, _encode_ParameterType, ParameterType } from "../GDT/ParameterType.ta.mjs";
+import { _decode_ParameterType, _encode_ParameterType, type ParameterType } from "../GDT/ParameterType.ta.mjs";
 
 
 /**

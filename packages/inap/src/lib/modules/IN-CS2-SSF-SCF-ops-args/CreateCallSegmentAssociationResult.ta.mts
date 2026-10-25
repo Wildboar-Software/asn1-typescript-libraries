@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
+import { type CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
 // export { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
 
 

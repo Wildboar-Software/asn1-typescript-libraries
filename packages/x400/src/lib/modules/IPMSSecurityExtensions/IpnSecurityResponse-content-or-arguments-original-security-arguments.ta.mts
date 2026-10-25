@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OriginalContentIntegrityCheck,
+    type OriginalContentIntegrityCheck,
     _decode_OriginalContentIntegrityCheck,
     _encode_OriginalContentIntegrityCheck,
 } from '../IPMSSecurityExtensions/OriginalContentIntegrityCheck.ta.mjs';
 import {
-    OriginalMessageOriginAuthenticationCheck,
+    type OriginalMessageOriginAuthenticationCheck,
     _decode_OriginalMessageOriginAuthenticationCheck,
     _encode_OriginalMessageOriginAuthenticationCheck,
 } from '../IPMSSecurityExtensions/OriginalMessageOriginAuthenticationCheck.ta.mjs';
 import {
-    OriginalMessageToken,
+    type OriginalMessageToken,
     _decode_OriginalMessageToken,
     _encode_OriginalMessageToken,
 } from '../IPMSSecurityExtensions/OriginalMessageToken.ta.mjs';

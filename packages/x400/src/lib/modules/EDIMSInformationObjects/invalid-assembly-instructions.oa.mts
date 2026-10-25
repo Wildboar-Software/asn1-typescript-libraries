@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    BodyPartSpecifiers,
+    type BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
 } from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.mjs';

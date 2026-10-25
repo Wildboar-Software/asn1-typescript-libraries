@@ -8,7 +8,7 @@ import {
 } from "../PKCS-15/EnvelopedData.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import {
-    ReferencedValue,
+    type ReferencedValue,
     _get_decoder_for_ReferencedValue,
     _get_encoder_for_ReferencedValue,
 } from "../PKCS-15/ReferencedValue.ta.mjs";

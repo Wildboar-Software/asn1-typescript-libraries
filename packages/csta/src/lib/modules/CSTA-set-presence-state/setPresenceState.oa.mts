@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetPresenceStateArgument, _decode_SetPresenceStateArgument, _encode_SetPresenceStateArgument } from "../CSTA-set-presence-state/SetPresenceStateArgument.ta.mjs";
 
-import { SetPresenceStateResult, _decode_SetPresenceStateResult, _encode_SetPresenceStateResult } from "../CSTA-set-presence-state/SetPresenceStateResult.ta.mjs";
+import { type SetPresenceStateResult, _decode_SetPresenceStateResult, _encode_SetPresenceStateResult } from "../CSTA-set-presence-state/SetPresenceStateResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

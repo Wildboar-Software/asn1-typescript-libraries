@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
-  GeneralizedTime,
+  type OPTIONAL,
+  type OCTET_STRING,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,17 +14,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertReferences,
+  type CertReferences,
   _decode_CertReferences,
   _encode_CertReferences,
 } from '../SCVP-2009/CertReferences.ta.mjs';
 import {
-  CertChecks,
+  type CertChecks,
   _decode_CertChecks,
   _encode_CertChecks,
 } from '../SCVP-2009/CertChecks.ta.mjs';
 import {
-  WantBack,
+  type WantBack,
   _decode_WantBack,
   _encode_WantBack,
 } from '../SCVP-2009/WantBack.ta.mjs';
@@ -39,17 +39,17 @@ import {
   _encode_ResponseFlags,
 } from '../SCVP-2009/ResponseFlags.ta.mjs';
 import {
-  CertBundle,
+  type CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';
 import {
-  RevocationInfos,
+  type RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
 } from '../SCVP-2009/RevocationInfos.ta.mjs';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';

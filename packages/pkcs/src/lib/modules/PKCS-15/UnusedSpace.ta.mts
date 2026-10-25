@@ -11,7 +11,7 @@ import {
     _encode_AccessControlRule,
 } from "../PKCS-15/AccessControlRule.ta.mjs";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";

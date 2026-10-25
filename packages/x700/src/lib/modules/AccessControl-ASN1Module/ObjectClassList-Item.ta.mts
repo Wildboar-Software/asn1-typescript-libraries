@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from '@wildboar/cmip';

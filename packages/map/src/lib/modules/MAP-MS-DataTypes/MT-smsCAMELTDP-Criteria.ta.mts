@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
-import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriterion } from "../MAP-MS-DataTypes/TPDU-TypeCriterion.ta.mjs";
+import { type SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
+import { type TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriterion } from "../MAP-MS-DataTypes/TPDU-TypeCriterion.ta.mjs";
 
 
 /**

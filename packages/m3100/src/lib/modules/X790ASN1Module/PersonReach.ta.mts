@@ -12,37 +12,37 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PersonNumber,
+    type PersonNumber,
     _decode_PersonNumber,
     _encode_PersonNumber,
 } from '../X790ASN1Module/PersonNumber.ta.mjs';
 import {
-    PersonName,
+    type PersonName,
     _decode_PersonName,
     _encode_PersonName,
 } from '../X790ASN1Module/PersonName.ta.mjs';
 import {
-    PersonPhone,
+    type PersonPhone,
     _decode_PersonPhone,
     _encode_PersonPhone,
 } from '../X790ASN1Module/PersonPhone.ta.mjs';
 import {
-    PersonLocation,
+    type PersonLocation,
     _decode_PersonLocation,
     _encode_PersonLocation,
 } from '../X790ASN1Module/PersonLocation.ta.mjs';
 import {
-    PersonEmail,
+    type PersonEmail,
     _decode_PersonEmail,
     _encode_PersonEmail,
 } from '../X790ASN1Module/PersonEmail.ta.mjs';
 import {
-    PersonFax,
+    type PersonFax,
     _decode_PersonFax,
     _encode_PersonFax,
 } from '../X790ASN1Module/PersonFax.ta.mjs';
 import {
-    PersonRespon,
+    type PersonRespon,
     _decode_PersonRespon,
     _encode_PersonRespon,
 } from '../X790ASN1Module/PersonRespon.ta.mjs';

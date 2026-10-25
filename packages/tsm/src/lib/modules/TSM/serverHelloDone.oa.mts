@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { server_hello_done /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
 
-import { ServerHelloDone, _decode_ServerHelloDone, _encode_ServerHelloDone } from "../TSM/ServerHelloDone.ta.mjs";
+import { type ServerHelloDone, _decode_ServerHelloDone, _encode_ServerHelloDone } from "../TSM/ServerHelloDone.ta.mjs";
 
 import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 

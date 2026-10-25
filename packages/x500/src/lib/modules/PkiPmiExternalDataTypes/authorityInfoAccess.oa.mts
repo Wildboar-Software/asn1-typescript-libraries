@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    AuthorityInfoAccessSyntax,
+    type AuthorityInfoAccessSyntax,
     _decode_AuthorityInfoAccessSyntax,
     _encode_AuthorityInfoAccessSyntax,
 } from "../PkiPmiExternalDataTypes/AuthorityInfoAccessSyntax.ta.mjs";

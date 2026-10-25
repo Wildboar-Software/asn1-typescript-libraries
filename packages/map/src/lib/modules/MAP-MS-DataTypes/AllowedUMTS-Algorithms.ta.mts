@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { PermittedEncryptionAlgorithms, _decode_PermittedEncryptionAlgorithms, _encode_PermittedEncryptionAlgorithms } from "../MAP-MS-DataTypes/PermittedEncryptionAlgorithms.ta.mjs";
-import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProtectionAlgorithms, _encode_PermittedIntegrityProtectionAlgorithms } from "../MAP-MS-DataTypes/PermittedIntegrityProtectionAlgorithms.ta.mjs";
+import { type PermittedEncryptionAlgorithms, _decode_PermittedEncryptionAlgorithms, _encode_PermittedEncryptionAlgorithms } from "../MAP-MS-DataTypes/PermittedEncryptionAlgorithms.ta.mjs";
+import { type PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProtectionAlgorithms, _encode_PermittedIntegrityProtectionAlgorithms } from "../MAP-MS-DataTypes/PermittedIntegrityProtectionAlgorithms.ta.mjs";
 
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_sf } from "../IN-CS3-object-identifiers/id-sf.va.mjs";
 // export { id_sf } from "../IN-CS3-object-identifiers/id-sf.va.mjs";

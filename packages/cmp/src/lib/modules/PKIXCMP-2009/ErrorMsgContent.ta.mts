@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
   _encode_PKIStatusInfo,
 } from '../PKIXCMP-2009/PKIStatusInfo.ta.mjs';
 import {
-  PKIFreeText,
+  type PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Document_Type_Name,
+  type Document_Type_Name,
   _decode_Document_Type_Name,
   _encode_Document_Type_Name,
 } from '../ISO8571-FTAM/Document-Type-Name.ta.mjs';

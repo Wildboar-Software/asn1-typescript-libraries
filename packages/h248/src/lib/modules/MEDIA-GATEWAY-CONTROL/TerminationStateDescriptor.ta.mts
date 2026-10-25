@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-import { EventBufferControl, _decode_EventBufferControl, _encode_EventBufferControl, _enum_for_EventBufferControl } from "../MEDIA-GATEWAY-CONTROL/EventBufferControl.ta.mjs";
-import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
+import { type EventBufferControl, _decode_EventBufferControl, _encode_EventBufferControl, _enum_for_EventBufferControl } from "../MEDIA-GATEWAY-CONTROL/EventBufferControl.ta.mjs";
+import { type ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
 
 
 /**

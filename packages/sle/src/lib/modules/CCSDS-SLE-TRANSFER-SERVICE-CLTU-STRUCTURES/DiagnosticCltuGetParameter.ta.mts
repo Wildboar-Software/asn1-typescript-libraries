@@ -4,8 +4,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Diagnostics, _encode_Diagnostics, Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
-import { _decode_DiagnosticCltuGetParameter_specific, _encode_DiagnosticCltuGetParameter_specific, DiagnosticCltuGetParameter_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuGetParameter-specific.ta.mjs";
+import { _decode_Diagnostics, _encode_Diagnostics, type Diagnostics } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Diagnostics.ta.mjs";
+import { _decode_DiagnosticCltuGetParameter_specific, _encode_DiagnosticCltuGetParameter_specific, type DiagnosticCltuGetParameter_specific } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuGetParameter-specific.ta.mjs";
 
 
 /**

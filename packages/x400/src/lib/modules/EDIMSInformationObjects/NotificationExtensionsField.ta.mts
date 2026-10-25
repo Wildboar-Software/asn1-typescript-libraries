@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NotificationExtensionsSubField,
+    type NotificationExtensionsSubField,
     _decode_NotificationExtensionsSubField,
     _encode_NotificationExtensionsSubField,
 } from '../EDIMSInformationObjects/NotificationExtensionsSubField.ta.mjs';

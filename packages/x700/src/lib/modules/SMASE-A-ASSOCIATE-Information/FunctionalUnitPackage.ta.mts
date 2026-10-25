@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FunctionalUnitPackageId,
+    type FunctionalUnitPackageId,
     _decode_FunctionalUnitPackageId,
     _encode_FunctionalUnitPackageId,
 } from '../SMASE-A-ASSOCIATE-Information/FunctionalUnitPackageId.ta.mjs';

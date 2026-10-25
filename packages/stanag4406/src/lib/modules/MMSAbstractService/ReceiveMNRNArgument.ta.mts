@@ -10,7 +10,7 @@ import {
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
-import { MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
+import { type MNRN, _decode_MNRN, _encode_MNRN } from "../MMSInformationObjects/MNRN.ta.mjs";
 
 
 /**

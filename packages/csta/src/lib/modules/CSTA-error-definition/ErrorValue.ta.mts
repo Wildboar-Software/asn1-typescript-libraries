@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
-import { UniversalFailure, _decode_UniversalFailure, _encode_UniversalFailure } from "../CSTA-error-definition/UniversalFailure.ta.mjs";
+import { type UniversalFailure, _decode_UniversalFailure, _encode_UniversalFailure } from "../CSTA-error-definition/UniversalFailure.ta.mjs";
 
 
 

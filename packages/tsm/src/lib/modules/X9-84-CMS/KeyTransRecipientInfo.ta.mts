@@ -10,13 +10,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
-import { RecipientIdentifier, _decode_RecipientIdentifier, _encode_RecipientIdentifier } from "../X9-84-CMS/RecipientIdentifier.ta.mjs";
+import { type RecipientIdentifier, _decode_RecipientIdentifier, _encode_RecipientIdentifier } from "../X9-84-CMS/RecipientIdentifier.ta.mjs";
 
-import { KeyEncryptionAlgorithmIdentifier, _decode_KeyEncryptionAlgorithmIdentifier, _encode_KeyEncryptionAlgorithmIdentifier } from "../X9-84-CMS/KeyEncryptionAlgorithmIdentifier.ta.mjs";
+import { type KeyEncryptionAlgorithmIdentifier, _decode_KeyEncryptionAlgorithmIdentifier, _encode_KeyEncryptionAlgorithmIdentifier } from "../X9-84-CMS/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 
-import { EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-84-CMS/EncryptedKey.ta.mjs";
+import { type EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-84-CMS/EncryptedKey.ta.mjs";
 
 
 

@@ -5,17 +5,17 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RouteList, _decode_RouteList, _encode_RouteList } from "../IN-SSF-SCF-datatypes/RouteList.ta.mjs";
+import { type RouteList, _decode_RouteList, _encode_RouteList } from "../IN-SSF-SCF-datatypes/RouteList.ta.mjs";
 // export { RouteList, _decode_RouteList, _encode_RouteList } from "../IN-SSF-SCF-datatypes/RouteList.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
 // export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
-import { MonitoringCriteria, _decode_MonitoringCriteria, _encode_MonitoringCriteria } from "../IN-SSF-SCF-datatypes/MonitoringCriteria.ta.mjs";
+import { type MonitoringCriteria, _decode_MonitoringCriteria, _encode_MonitoringCriteria } from "../IN-SSF-SCF-datatypes/MonitoringCriteria.ta.mjs";
 // export { MonitoringCriteria, _decode_MonitoringCriteria, _encode_MonitoringCriteria } from "../IN-SSF-SCF-datatypes/MonitoringCriteria.ta.mjs";
-import { MonitoringTimeOut, _decode_MonitoringTimeOut, _encode_MonitoringTimeOut } from "../IN-SSF-SCF-datatypes/MonitoringTimeOut.ta.mjs";
+import { type MonitoringTimeOut, _decode_MonitoringTimeOut, _encode_MonitoringTimeOut } from "../IN-SSF-SCF-datatypes/MonitoringTimeOut.ta.mjs";
 // export { MonitoringTimeOut, _decode_MonitoringTimeOut, _encode_MonitoringTimeOut } from "../IN-SSF-SCF-datatypes/MonitoringTimeOut.ta.mjs";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
 // export { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-SSF-SCF-datatypes/DateAndTime.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

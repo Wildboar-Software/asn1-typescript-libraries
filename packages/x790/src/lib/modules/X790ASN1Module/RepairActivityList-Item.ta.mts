@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
-    GraphicString,
-    GeneralizedTime,
+    type SEQUENCE,
+    type SET,
+    type GraphicString,
+    type GeneralizedTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -16,7 +16,7 @@ import {
 } from "../X790ASN1Module/PersonReach.ta.mjs";
 
 import {
-    ActivityCode,
+    type ActivityCode,
     _decode_ActivityCode,
     _encode_ActivityCode,
 } from "../X790ASN1Module/ActivityCode.ta.mjs";

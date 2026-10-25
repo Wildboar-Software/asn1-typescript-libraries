@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    TYPE_IDENTIFIER,
+    type TYPE_IDENTIFIER,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    VideotexData,
+    type VideotexData,
     _decode_VideotexData,
     _encode_VideotexData,
 } from '../IPMSInformationObjects/VideotexData.ta.mjs';

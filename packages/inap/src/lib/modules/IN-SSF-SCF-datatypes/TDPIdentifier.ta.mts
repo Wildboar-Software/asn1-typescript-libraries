@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Triggers, _decode_Triggers, _encode_Triggers } from "../IN-SSF-SCF-datatypes/Triggers.ta.mjs";
+import { type Triggers, _decode_Triggers, _encode_Triggers } from "../IN-SSF-SCF-datatypes/Triggers.ta.mjs";
 // export { Triggers, _decode_Triggers, _encode_Triggers } from "../IN-SSF-SCF-datatypes/Triggers.ta.mjs";
 
 

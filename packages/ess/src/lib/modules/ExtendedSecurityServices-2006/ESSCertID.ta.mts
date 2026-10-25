@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Hash,
+    type Hash,
     _decode_Hash,
     _encode_Hash,
 } from "../ExtendedSecurityServices-2006/Hash.ta.mjs";

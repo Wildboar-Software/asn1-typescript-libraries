@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RandomNumber,
+    type RandomNumber,
     _decode_RandomNumber,
     _encode_RandomNumber,
 } from '../MTSAbstractService/RandomNumber.ta.mjs';

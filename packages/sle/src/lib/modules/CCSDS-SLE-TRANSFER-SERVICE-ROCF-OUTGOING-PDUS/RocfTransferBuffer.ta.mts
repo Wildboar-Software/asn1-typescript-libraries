@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OcfOrNotification, _decode_OcfOrNotification, _encode_OcfOrNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/OcfOrNotification.ta.mjs";
+import { type OcfOrNotification, _decode_OcfOrNotification, _encode_OcfOrNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-OUTGOING-PDUS/OcfOrNotification.ta.mjs";
 
 
 /**

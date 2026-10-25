@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MuxType, _decode_MuxType, _encode_MuxType, _enum_for_MuxType } from "../MEDIA-GATEWAY-CONTROL/MuxType.ta.mjs";
+import { type MuxType, _decode_MuxType, _encode_MuxType, _enum_for_MuxType } from "../MEDIA-GATEWAY-CONTROL/MuxType.ta.mjs";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 

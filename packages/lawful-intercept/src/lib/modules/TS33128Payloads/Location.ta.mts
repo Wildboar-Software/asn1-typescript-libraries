@@ -13,11 +13,11 @@ import { LocationPresenceReport, _decode_LocationPresenceReport, _encode_Locatio
 // export { LocationPresenceReport, _decode_LocationPresenceReport, _encode_LocationPresenceReport } from "../TS33128Payloads/LocationPresenceReport.ta.mjs";
 import { FourGPositioningInfo, _decode_FourGPositioningInfo, _encode_FourGPositioningInfo } from "../TS33128Payloads/FourGPositioningInfo.ta.mjs";
 // export { FourGPositioningInfo, _decode_FourGPositioningInfo, _encode_FourGPositioningInfo } from "../TS33128Payloads/FourGPositioningInfo.ta.mjs";
-import { FourGLocationInfo, _decode_FourGLocationInfo, _encode_FourGLocationInfo } from "../TS33128Payloads/FourGLocationInfo.ta.mjs";
+import { type FourGLocationInfo, _decode_FourGLocationInfo, _encode_FourGLocationInfo } from "../TS33128Payloads/FourGLocationInfo.ta.mjs";
 // export { FourGLocationInfo, _decode_FourGLocationInfo, _encode_FourGLocationInfo } from "../TS33128Payloads/FourGLocationInfo.ta.mjs";
 import { IMSLocation, _decode_IMSLocation, _encode_IMSLocation } from "../TS33128Payloads/IMSLocation.ta.mjs";
 // export { IMSLocation, _decode_IMSLocation, _encode_IMSLocation } from "../TS33128Payloads/IMSLocation.ta.mjs";
-import { CoarseLocation, _decode_CoarseLocation, _encode_CoarseLocation } from "../TS33128Payloads/CoarseLocation.ta.mjs";
+import { type CoarseLocation, _decode_CoarseLocation, _encode_CoarseLocation } from "../TS33128Payloads/CoarseLocation.ta.mjs";
 // export { CoarseLocation, _decode_CoarseLocation, _encode_CoarseLocation } from "../TS33128Payloads/CoarseLocation.ta.mjs";
 
 

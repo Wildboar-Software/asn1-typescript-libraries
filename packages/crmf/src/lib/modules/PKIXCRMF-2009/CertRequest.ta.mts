@@ -12,7 +12,7 @@ import {
     _encode_CertTemplate,
 } from "../PKIXCRMF-2009/CertTemplate.ta.mjs";
 import {
-    Controls,
+    type Controls,
     _decode_Controls,
     _encode_Controls,
 } from "../PKIXCRMF-2009/Controls.ta.mjs";

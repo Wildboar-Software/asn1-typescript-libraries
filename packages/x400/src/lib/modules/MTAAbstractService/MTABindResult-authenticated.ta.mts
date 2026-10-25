@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
 import {
-    ResponderCredentials,
+    type ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
 } from '../MTSAbstractService/ResponderCredentials.ta.mjs';

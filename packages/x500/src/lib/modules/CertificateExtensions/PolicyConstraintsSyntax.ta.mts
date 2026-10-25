@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SkipCerts,
+    type SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";

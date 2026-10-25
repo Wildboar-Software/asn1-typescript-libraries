@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/AuthenticationFramework";
-import { URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/x500/AuthenticationFramework";
+import { type URI, _decode_URI, _encode_URI } from "../TAI/URI.ta.mjs";
 /**
  * @summary BdcPKCInformation
  * @description

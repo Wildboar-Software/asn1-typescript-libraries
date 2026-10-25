@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../WTM-Location-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
-import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
+import { type AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../WTM-Location-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
+import { type LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
 
 /**
  * @summary PisnEnqArg

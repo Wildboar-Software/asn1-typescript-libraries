@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AuthorizingUsersSubfield,
+    type AuthorizingUsersSubfield,
     _decode_AuthorizingUsersSubfield,
     _encode_AuthorizingUsersSubfield,
 } from '../IPMSInformationObjects/AuthorizingUsersSubfield.ta.mjs';

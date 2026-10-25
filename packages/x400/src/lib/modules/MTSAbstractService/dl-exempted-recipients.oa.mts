@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    DLExemptedRecipients,
+    type DLExemptedRecipients,
     _decode_DLExemptedRecipients,
     _encode_DLExemptedRecipients,
 } from '../MTSAbstractService/DLExemptedRecipients.ta.mjs';

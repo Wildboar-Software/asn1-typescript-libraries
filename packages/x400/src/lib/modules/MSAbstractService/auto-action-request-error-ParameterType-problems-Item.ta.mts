@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoActionRequestProblem,
+    type AutoActionRequestProblem,
     _decode_AutoActionRequestProblem,
     _encode_AutoActionRequestProblem,
 } from '../MSAbstractService/AutoActionRequestProblem.ta.mjs';
 import {
-    AutoActionType,
+    type AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from "./AutoActionType.ta.mjs";

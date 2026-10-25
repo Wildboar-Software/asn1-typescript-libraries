@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityLabel_Item_initiatorLabel_clearance,
+    type SecurityLabel_Item_initiatorLabel_clearance,
     _decode_SecurityLabel_Item_initiatorLabel_clearance,
     _encode_SecurityLabel_Item_initiatorLabel_clearance,
 } from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta.mjs';

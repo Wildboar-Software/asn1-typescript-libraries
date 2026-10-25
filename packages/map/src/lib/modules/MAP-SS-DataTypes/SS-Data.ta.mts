@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { BasicServiceGroupList, _decode_BasicServiceGroupList, _encode_BasicServiceGroupList } from "../MAP-SS-DataTypes/BasicServiceGroupList.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
-import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type BasicServiceGroupList, _decode_BasicServiceGroupList, _encode_BasicServiceGroupList } from "../MAP-SS-DataTypes/BasicServiceGroupList.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
 
 
 /**

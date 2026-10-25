@@ -2,17 +2,17 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CRLNumber,
+    type CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
 import {
-    CRLStreamIdentifier,
+    type CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
 } from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";

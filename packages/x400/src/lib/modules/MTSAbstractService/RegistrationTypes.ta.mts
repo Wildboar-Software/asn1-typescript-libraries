@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationTypes_standard_parameters,
+    type RegistrationTypes_standard_parameters,
     _decode_RegistrationTypes_standard_parameters,
     _encode_RegistrationTypes_standard_parameters,
 } from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta.mjs';
 import {
-    ExtensionType,
+    type ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
 } from "./ExtensionType.ta.mjs";

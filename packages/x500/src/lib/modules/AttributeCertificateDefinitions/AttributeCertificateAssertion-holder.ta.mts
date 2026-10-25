@@ -7,7 +7,7 @@ import {
     _encode_IssuerSerial,
 } from "../AttributeCertificateDefinitions/IssuerSerial.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SCF_CUSF_BOUNDS } from "../IN-CS3-SCF-CUSF-Classes/SCF-CUSF-BOUNDS.oca.mjs";
+import { type SCF_CUSF_BOUNDS } from "../IN-CS3-SCF-CUSF-Classes/SCF-CUSF-BOUNDS.oca.mjs";
 // export { SCF_CUSF_BOUNDS } from "../IN-CS3-SCF-CUSF-Classes/SCF-CUSF-BOUNDS.oca.mjs";
 
 

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
 import {
-    ReplaceAvlRsp_result,
+    type ReplaceAvlRsp_result,
     _decode_ReplaceAvlRsp_result,
     _encode_ReplaceAvlRsp_result,
 } from "../AVL-management/ReplaceAvlRsp-result.ta.mjs";

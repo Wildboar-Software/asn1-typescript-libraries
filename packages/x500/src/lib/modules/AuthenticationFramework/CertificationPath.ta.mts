@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";

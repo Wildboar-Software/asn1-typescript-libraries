@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { FurnishChargingInformationArg, _decode_FurnishChargingInformationArg, _encode_FurnishChargingInformationArg } from "../IN-SSF-SCF-ops-args/FurnishChargingInformationArg.ta.mjs";
+import { type FurnishChargingInformationArg, _decode_FurnishChargingInformationArg, _encode_FurnishChargingInformationArg } from "../IN-SSF-SCF-ops-args/FurnishChargingInformationArg.ta.mjs";
 // export { FurnishChargingInformationArg, _decode_FurnishChargingInformationArg, _encode_FurnishChargingInformationArg } from "../IN-SSF-SCF-ops-args/FurnishChargingInformationArg.ta.mjs";
 import { missingParameter } from "../IN-errortypes/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-errortypes/missingParameter.oa.mjs";

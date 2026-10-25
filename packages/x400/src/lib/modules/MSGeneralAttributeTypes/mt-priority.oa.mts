@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    Priority,
+    type Priority,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';

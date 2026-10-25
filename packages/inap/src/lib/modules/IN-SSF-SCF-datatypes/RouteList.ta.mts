@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Route, _decode_Route, _encode_Route } from "../IN-SSF-SCF-datatypes/Route.ta.mjs";
+import { type Route, _decode_Route, _encode_Route } from "../IN-SSF-SCF-datatypes/Route.ta.mjs";
 // export { Route, _decode_Route, _encode_Route } from "../IN-SSF-SCF-datatypes/Route.ta.mjs";
 
 

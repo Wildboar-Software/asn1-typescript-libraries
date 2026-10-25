@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-import { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
-import { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
+import { type Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
+import { type Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
 import { SubscriberStatus, _decode_SubscriberStatus, _encode_SubscriberStatus, _enum_for_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
-import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-import { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
-import { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
+import { type TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
+import { type VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
+import { type VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
 import { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
-import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
+import { type ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
 
 
 /**

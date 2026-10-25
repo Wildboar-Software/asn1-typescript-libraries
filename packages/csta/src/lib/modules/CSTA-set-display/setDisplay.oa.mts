@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetDisplayArgument, _decode_SetDisplayArgument, _encode_SetDisplayArgument } from "../CSTA-set-display/SetDisplayArgument.ta.mjs";
 
-import { SetDisplayResult, _decode_SetDisplayResult, _encode_SetDisplayResult } from "../CSTA-set-display/SetDisplayResult.ta.mjs";
+import { type SetDisplayResult, _decode_SetDisplayResult, _encode_SetDisplayResult } from "../CSTA-set-display/SetDisplayResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

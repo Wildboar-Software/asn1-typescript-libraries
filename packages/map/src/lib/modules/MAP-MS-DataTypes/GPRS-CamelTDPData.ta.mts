@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { DefaultGPRS_Handling, _decode_DefaultGPRS_Handling, _encode_DefaultGPRS_Handling, _enum_for_DefaultGPRS_Handling } from "../MAP-MS-DataTypes/DefaultGPRS-Handling.ta.mjs";
-import { GPRS_TriggerDetectionPoint, _decode_GPRS_TriggerDetectionPoint, _encode_GPRS_TriggerDetectionPoint, _enum_for_GPRS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/GPRS-TriggerDetectionPoint.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type DefaultGPRS_Handling, _decode_DefaultGPRS_Handling, _encode_DefaultGPRS_Handling, _enum_for_DefaultGPRS_Handling } from "../MAP-MS-DataTypes/DefaultGPRS-Handling.ta.mjs";
+import { type GPRS_TriggerDetectionPoint, _decode_GPRS_TriggerDetectionPoint, _encode_GPRS_TriggerDetectionPoint, _enum_for_GPRS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/GPRS-TriggerDetectionPoint.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 
 
 /**

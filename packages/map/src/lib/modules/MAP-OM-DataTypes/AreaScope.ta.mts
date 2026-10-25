@@ -6,11 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
-import { E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
-import { LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
-import { RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
-import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
+import { type CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
+import { type E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
+import { type LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
+import { type RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
+import { type TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
 
 
 /**

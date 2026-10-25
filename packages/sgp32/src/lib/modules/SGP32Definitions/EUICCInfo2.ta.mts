@@ -11,11 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
 import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wildboar/sgp22/RSPDefinitions";
 import { type RspCapability, _decode_RspCapability, _encode_RspCapability } from "@wildboar/sgp22/RSPDefinitions";
 import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "@wildboar/x500/CertificateExtensions";
-import { EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../SGP32Definitions/EUICCInfo2-euiccCategory.ta.mjs";
+import { type EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../SGP32Definitions/EUICCInfo2-euiccCategory.ta.mjs";
 import { type PprIds, _decode_PprIds, _encode_PprIds } from "@wildboar/sgp22/RSPDefinitions";
 import { CertificationDataObject, _decode_CertificationDataObject, _encode_CertificationDataObject } from "@wildboar/sgp22/RSPDefinitions";
-import { EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../SGP32Definitions/EUICCInfo2-treProperties.ta.mjs";
-import { IpaMode, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
+import { type EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../SGP32Definitions/EUICCInfo2-treProperties.ta.mjs";
+import { type IpaMode, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
 import { IoTSpecificInfo, _decode_IoTSpecificInfo, _encode_IoTSpecificInfo } from "../SGP32Definitions/IoTSpecificInfo.ta.mjs";
 import { type UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "@wildboar/sgp22/PEDefinitions";
 

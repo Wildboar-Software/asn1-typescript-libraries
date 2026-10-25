@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-SSF-SCF-datatypes/NumberOfDigits.ta.mjs";
+import { type NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-SSF-SCF-datatypes/NumberOfDigits.ta.mjs";
 // export { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-SSF-SCF-datatypes/NumberOfDigits.ta.mjs";
 
 

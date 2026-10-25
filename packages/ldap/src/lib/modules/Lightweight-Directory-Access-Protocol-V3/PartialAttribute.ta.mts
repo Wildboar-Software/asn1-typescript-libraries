@@ -15,12 +15,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';
 import {
-  AttributeValue,
+  type AttributeValue,
   _decode_AttributeValue,
   _encode_AttributeValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.mjs';

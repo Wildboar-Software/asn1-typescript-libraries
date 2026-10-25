@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-SSF-SCF-datatypes/SFBillingChargingCharacteristics.ta.mjs";
+import { type SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-SSF-SCF-datatypes/SFBillingChargingCharacteristics.ta.mjs";
 // export { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-SSF-SCF-datatypes/SFBillingChargingCharacteristics.ta.mjs";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-SCF-SRF-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-SCF-SRF-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-SCF-SRF-datatypes/InformationToSend.ta.mjs";
-import { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-SSF-SCF-datatypes/MaximumNumberOfCounters.ta.mjs";
+import { type MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-SSF-SCF-datatypes/MaximumNumberOfCounters.ta.mjs";
 // export { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-SSF-SCF-datatypes/MaximumNumberOfCounters.ta.mjs";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
 // export { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
 
 

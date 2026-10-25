@@ -10,7 +10,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TopologyRequest, _decode_TopologyRequest, _encode_TopologyRequest } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-import { ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } from "../MEDIA-GATEWAY-CONTROL/ContextIDinList.ta.mjs";
+import { type ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } from "../MEDIA-GATEWAY-CONTROL/ContextIDinList.ta.mjs";
 
 
 /**

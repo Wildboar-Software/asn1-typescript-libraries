@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AssertionValue,
+  type AssertionValue,
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -8,23 +8,23 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
-import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { type APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
+import { type APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { type ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
+import { type ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
 import { EPS_QoS_Subscribed, _decode_EPS_QoS_Subscribed, _encode_EPS_QoS_Subscribed } from "../MAP-MS-DataTypes/EPS-QoS-Subscribed.ta.mjs";
-import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
+import { type FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
 import { LIPA_Permission, _decode_LIPA_Permission, _encode_LIPA_Permission, _enum_for_LIPA_Permission } from "../MAP-MS-DataTypes/LIPA-Permission.ta.mjs";
 import { NIDD_Mechanism, _decode_NIDD_Mechanism, _encode_NIDD_Mechanism, _enum_for_NIDD_Mechanism } from "../MAP-MS-DataTypes/NIDD-Mechanism.ta.mjs";
 import { PDN_ConnectionContinuity, _decode_PDN_ConnectionContinuity, _encode_PDN_ConnectionContinuity, _enum_for_PDN_ConnectionContinuity } from "../MAP-MS-DataTypes/PDN-ConnectionContinuity.ta.mjs";
 import { PDN_GW_AllocationType, _decode_PDN_GW_AllocationType, _encode_PDN_GW_AllocationType, _enum_for_PDN_GW_AllocationType } from "../MAP-MS-DataTypes/PDN-GW-AllocationType.ta.mjs";
 import { PDN_GW_Identity, _decode_PDN_GW_Identity, _encode_PDN_GW_Identity } from "../MAP-MS-DataTypes/PDN-GW-Identity.ta.mjs";
-import { PDN_Type, _decode_PDN_Type, _encode_PDN_Type } from "../MAP-MS-DataTypes/PDN-Type.ta.mjs";
-import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-import { Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
+import { type PDN_Type, _decode_PDN_Type, _encode_PDN_Type } from "../MAP-MS-DataTypes/PDN-Type.ta.mjs";
+import { type PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
+import { type Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
 import { SIPTO_Local_Network_Permission, _decode_SIPTO_Local_Network_Permission, _encode_SIPTO_Local_Network_Permission, _enum_for_SIPTO_Local_Network_Permission } from "../MAP-MS-DataTypes/SIPTO-Local-Network-Permission.ta.mjs";
 import { SIPTO_Permission, _decode_SIPTO_Permission, _encode_SIPTO_Permission, _enum_for_SIPTO_Permission } from "../MAP-MS-DataTypes/SIPTO-Permission.ta.mjs";
-import { SpecificAPNInfoList, _decode_SpecificAPNInfoList, _encode_SpecificAPNInfoList } from "../MAP-MS-DataTypes/SpecificAPNInfoList.ta.mjs";
+import { type SpecificAPNInfoList, _decode_SpecificAPNInfoList, _encode_SpecificAPNInfoList } from "../MAP-MS-DataTypes/SpecificAPNInfoList.ta.mjs";
 import { WLAN_Offloadability, _decode_WLAN_Offloadability, _encode_WLAN_Offloadability } from "../MAP-MS-DataTypes/WLAN-Offloadability.ta.mjs";
 
 

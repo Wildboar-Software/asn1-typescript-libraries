@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';

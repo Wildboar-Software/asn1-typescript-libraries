@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-import { Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allowableFunctions_Item, _encode_Permissions_Item_allowableFunctions_Item } from "../Z39-50-APDU-2001/Permissions-Item-allowableFunctions-Item.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type Permissions_Item_allowableFunctions_Item, _decode_Permissions_Item_allowableFunctions_Item, _encode_Permissions_Item_allowableFunctions_Item } from "../Z39-50-APDU-2001/Permissions-Item-allowableFunctions-Item.ta.mjs";
 
 
 /**

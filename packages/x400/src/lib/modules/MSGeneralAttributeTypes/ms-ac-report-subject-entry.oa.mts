@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';

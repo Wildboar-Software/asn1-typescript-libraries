@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ManualHandlingInstruction,
+    type ManualHandlingInstruction,
     _decode_ManualHandlingInstruction,
     _encode_ManualHandlingInstruction,
 } from '../IPMSHeadingExtensions/ManualHandlingInstruction.ta.mjs';

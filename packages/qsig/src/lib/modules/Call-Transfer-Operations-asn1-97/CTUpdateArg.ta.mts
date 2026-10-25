@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-import { CTUpdateArg_argumentExtension, _decode_CTUpdateArg_argumentExtension, _encode_CTUpdateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTUpdateArg-argumentExtension.ta.mjs";
+import { type PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
+import { type CTUpdateArg_argumentExtension, _decode_CTUpdateArg_argumentExtension, _encode_CTUpdateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTUpdateArg-argumentExtension.ta.mjs";
 
 /**
  * @summary CTUpdateArg

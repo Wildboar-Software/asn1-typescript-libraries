@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeSel_attSelect,
+    type AttributeSel_attSelect,
     _decode_AttributeSel_attSelect,
     _encode_AttributeSel_attSelect,
 } from '../Pbact-access/AttributeSel-attSelect.ta.mjs';

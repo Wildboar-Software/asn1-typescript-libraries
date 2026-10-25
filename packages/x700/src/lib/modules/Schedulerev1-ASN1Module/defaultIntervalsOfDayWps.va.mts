@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    IntervalsOfDayWps,
+    type IntervalsOfDayWps,
     _decode_IntervalsOfDayWps,
     _encode_IntervalsOfDayWps,
 } from '../Schedulerev1-ASN1Module/IntervalsOfDayWps.ta.mjs';

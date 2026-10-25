@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
-import { CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
-import { IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
-import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
+import { type AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
+import { type CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
+import { type IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
+import { type RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
+import { type XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
 
 
 /**

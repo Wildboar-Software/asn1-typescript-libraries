@@ -17,27 +17,27 @@ import {
     _encode_ReportDeliveryEnvelope,
 } from '../MTSAbstractService/ReportDeliveryEnvelope.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    SubjectSubmissionIdentifier,
+    type SubjectSubmissionIdentifier,
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
 } from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';

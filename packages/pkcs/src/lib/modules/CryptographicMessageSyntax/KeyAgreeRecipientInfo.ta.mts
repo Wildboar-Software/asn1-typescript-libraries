@@ -6,27 +6,27 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    OriginatorIdentifierOrKey,
+    type OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
 } from "../CryptographicMessageSyntax/OriginatorIdentifierOrKey.ta.mjs";
 import {
-    RecipientEncryptedKeys,
+    type RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
 } from "../CryptographicMessageSyntax/RecipientEncryptedKeys.ta.mjs";
 import {
-    UserKeyingMaterial,
+    type UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax/UserKeyingMaterial.ta.mjs";

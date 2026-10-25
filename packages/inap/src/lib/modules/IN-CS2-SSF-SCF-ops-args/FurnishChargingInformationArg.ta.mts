@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteristics, _encode_FCIBillingChargingCharacteristics } from "../IN-CS2-datatypes/FCIBillingChargingCharacteristics.ta.mjs";
+import { type FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteristics, _encode_FCIBillingChargingCharacteristics } from "../IN-CS2-datatypes/FCIBillingChargingCharacteristics.ta.mjs";
 // export { FCIBillingChargingCharacteristics, _decode_FCIBillingChargingCharacteristics, _encode_FCIBillingChargingCharacteristics } from "../IN-CS2-datatypes/FCIBillingChargingCharacteristics.ta.mjs";
 
 

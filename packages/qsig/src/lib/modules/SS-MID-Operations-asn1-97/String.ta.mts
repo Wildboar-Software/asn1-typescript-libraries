@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     type BMPString,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

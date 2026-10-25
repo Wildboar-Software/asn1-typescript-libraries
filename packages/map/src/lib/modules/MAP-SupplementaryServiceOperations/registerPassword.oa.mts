@@ -7,8 +7,8 @@ import { pw_RegistrationFailure } from "../MAP-Errors/pw-RegistrationFailure.oa.
 import { ss_SubscriptionViolation } from "../MAP-Errors/ss-SubscriptionViolation.oa.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 
 

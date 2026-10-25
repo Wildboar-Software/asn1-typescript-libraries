@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FNUAMSBasicCodeField,
+    type FNUAMSBasicCodeField,
     _decode_FNUAMSBasicCodeField,
     _encode_FNUAMSBasicCodeField,
 } from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta.mjs';
 import {
-    FNUAMSDiagnosticField,
+    type FNUAMSDiagnosticField,
     _decode_FNUAMSDiagnosticField,
     _encode_FNUAMSDiagnosticField,
 } from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta.mjs';
 import {
-    FNUAMSSecurityCheckField,
+    type FNUAMSSecurityCheckField,
     _decode_FNUAMSSecurityCheckField,
     _encode_FNUAMSSecurityCheckField,
 } from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.mjs';

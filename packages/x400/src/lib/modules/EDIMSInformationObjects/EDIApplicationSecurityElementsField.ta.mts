@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDIApplicationSecurityElement,
+    type EDIApplicationSecurityElement,
     _decode_EDIApplicationSecurityElement,
     _encode_EDIApplicationSecurityElement,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityElement.ta.mjs';
 import {
-    EDIApplicationSecurityExtensions,
+    type EDIApplicationSecurityExtensions,
     _decode_EDIApplicationSecurityExtensions,
     _encode_EDIApplicationSecurityExtensions,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta.mjs';

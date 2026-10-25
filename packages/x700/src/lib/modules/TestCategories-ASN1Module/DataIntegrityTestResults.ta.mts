@@ -16,12 +16,12 @@ import {
     _encode_DataIntegrityTestResults_testResult,
 } from '../TestCategories-ASN1Module/DataIntegrityTestResults-testResult.ta.mjs';
 import {
-    TimeoutPeriod,
+    type TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
 import {
-    TestThreshold,
+    type TestThreshold,
     _decode_TestThreshold,
     _encode_TestThreshold,
 } from '../TestCategories-ASN1Module/TestThreshold.ta.mjs';

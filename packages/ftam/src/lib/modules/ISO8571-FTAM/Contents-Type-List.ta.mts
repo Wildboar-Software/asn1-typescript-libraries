@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Contents_Type_List_Item,
+  type Contents_Type_List_Item,
   _decode_Contents_Type_List_Item,
   _encode_Contents_Type_List_Item,
 } from '../ISO8571-FTAM/Contents-Type-List-Item.ta.mjs';

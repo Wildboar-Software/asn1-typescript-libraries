@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdviceModeCombination, _decode_AdviceModeCombination, _encode_AdviceModeCombination, _enum_for_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
-import { ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_chargeReqResExtension, _encode_ChargeRequestRes_chargeReqResExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes-chargeReqResExtension.ta.mjs";
+import { type ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_chargeReqResExtension, _encode_ChargeRequestRes_chargeReqResExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes-chargeReqResExtension.ta.mjs";
 
 /**
  * @summary ChargeRequestRes

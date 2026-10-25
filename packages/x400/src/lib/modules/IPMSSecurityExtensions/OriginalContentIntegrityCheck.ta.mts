@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ContentIntegrityCheck,
+    type ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';

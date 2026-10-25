@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { type BOOLEAN, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type BOOLEAN, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 /**

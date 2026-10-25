@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
+import { type ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
 
 
 /**

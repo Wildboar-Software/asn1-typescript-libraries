@@ -6,11 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
+import { type BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
 import { CallTypeCriteria, _decode_CallTypeCriteria, _encode_CallTypeCriteria, _enum_for_CallTypeCriteria } from "../MAP-MS-DataTypes/CallTypeCriteria.ta.mjs";
 import { DestinationNumberCriteria, _decode_DestinationNumberCriteria, _encode_DestinationNumberCriteria } from "../MAP-MS-DataTypes/DestinationNumberCriteria.ta.mjs";
-import { O_BcsmTriggerDetectionPoint, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
-import { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValueCriteria } from "../MAP-MS-DataTypes/O-CauseValueCriteria.ta.mjs";
+import { type O_BcsmTriggerDetectionPoint, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
+import { type O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValueCriteria } from "../MAP-MS-DataTypes/O-CauseValueCriteria.ta.mjs";
 
 
 /**

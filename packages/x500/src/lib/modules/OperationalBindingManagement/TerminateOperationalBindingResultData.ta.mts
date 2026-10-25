@@ -3,7 +3,7 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type BOOLEAN,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
 } from "@wildboar/asn1";
@@ -19,7 +19,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
+import { type CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
 
 
 /**

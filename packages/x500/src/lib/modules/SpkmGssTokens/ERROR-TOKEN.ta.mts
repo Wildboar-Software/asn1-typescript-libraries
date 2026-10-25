@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";

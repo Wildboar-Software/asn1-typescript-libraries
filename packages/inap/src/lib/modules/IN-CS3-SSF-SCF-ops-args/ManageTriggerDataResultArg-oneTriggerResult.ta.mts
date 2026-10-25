@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ActionPerformed, _decode_ActionPerformed, _encode_ActionPerformed, _enum_for_ActionPerformed } from "../IN-CS3-SSF-SCF-datatypes/ActionPerformed.ta.mjs";
 // export { ActionPerformed, _enum_for_ActionPerformed, ActionPerformed_activated /* IMPORTED_LONG_ENUMERATION_ITEM */, activated /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionPerformed_deactivated /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivated /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionPerformed_alreadyActive /* IMPORTED_LONG_ENUMERATION_ITEM */, alreadyActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionPerformed_alreadyInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, alreadyInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionPerformed_isActive /* IMPORTED_LONG_ENUMERATION_ITEM */, isActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionPerformed_isInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, isInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionPerformed_tDPunknown /* IMPORTED_LONG_ENUMERATION_ITEM */, tDPunknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ActionPerformed, _encode_ActionPerformed } from "../IN-CS3-SSF-SCF-datatypes/ActionPerformed.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 

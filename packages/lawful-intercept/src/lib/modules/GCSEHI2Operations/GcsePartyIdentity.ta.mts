@@ -9,7 +9,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../GCSEHI2Operations/IMSIdentity.ta.mjs";
 // export { IMSIdentity, _decode_IMSIdentity, _encode_IMSIdentity } from "../GCSEHI2Operations/IMSIdentity.ta.mjs";
-import { ProSeUEID, _decode_ProSeUEID, _encode_ProSeUEID } from "../GCSEHI2Operations/ProSeUEID.ta.mjs";
+import { type ProSeUEID, _decode_ProSeUEID, _encode_ProSeUEID } from "../GCSEHI2Operations/ProSeUEID.ta.mjs";
 // export { ProSeUEID, _decode_ProSeUEID, _encode_ProSeUEID } from "../GCSEHI2Operations/ProSeUEID.ta.mjs";
 import { OtherIdentity, _decode_OtherIdentity, _encode_OtherIdentity } from "../GCSEHI2Operations/OtherIdentity.ta.mjs";
 // export { OtherIdentity, _decode_OtherIdentity, _encode_OtherIdentity } from "../GCSEHI2Operations/OtherIdentity.ta.mjs";

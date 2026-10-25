@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
-import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
+import { type CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
 import { CallBarringData, _decode_CallBarringData, _encode_CallBarringData } from "../MAP-MS-DataTypes/CallBarringData.ta.mjs";
 import { CallForwardingData, _decode_CallForwardingData, _encode_CallForwardingData } from "../MAP-MS-DataTypes/CallForwardingData.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
@@ -15,10 +15,10 @@ import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } fro
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-import { MSISDN_BS_List, _decode_MSISDN_BS_List, _encode_MSISDN_BS_List } from "../MAP-MS-DataTypes/MSISDN-BS-List.ta.mjs";
+import { type MSISDN_BS_List, _decode_MSISDN_BS_List, _encode_MSISDN_BS_List } from "../MAP-MS-DataTypes/MSISDN-BS-List.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
-import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 
 
 /**

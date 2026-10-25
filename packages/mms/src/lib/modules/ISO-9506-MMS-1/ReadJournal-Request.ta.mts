@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { ReadJournal_Request_rangeStartSpecification, _decode_ReadJournal_Request_rangeStartSpecification, _encode_ReadJournal_Request_rangeStartSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStartSpecification.ta.mjs";
-import { ReadJournal_Request_rangeStopSpecification, _decode_ReadJournal_Request_rangeStopSpecification, _encode_ReadJournal_Request_rangeStopSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStopSpecification.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ReadJournal_Request_rangeStartSpecification, _decode_ReadJournal_Request_rangeStartSpecification, _encode_ReadJournal_Request_rangeStartSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStartSpecification.ta.mjs";
+import { type ReadJournal_Request_rangeStopSpecification, _decode_ReadJournal_Request_rangeStopSpecification, _encode_ReadJournal_Request_rangeStopSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStopSpecification.ta.mjs";
 import { ReadJournal_Request_entryToStartAfter, _decode_ReadJournal_Request_entryToStartAfter, _encode_ReadJournal_Request_entryToStartAfter } from "../ISO-9506-MMS-1/ReadJournal-Request-entryToStartAfter.ta.mjs";
 
 

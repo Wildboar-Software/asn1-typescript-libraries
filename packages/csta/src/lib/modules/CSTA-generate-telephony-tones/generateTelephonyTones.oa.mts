@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { GenerateTelephonyTonesArgument, _decode_GenerateTelephonyTonesArgument, _encode_GenerateTelephonyTonesArgument } from "../CSTA-generate-telephony-tones/GenerateTelephonyTonesArgument.ta.mjs";
 
-import { GenerateTelephonyTonesResult, _decode_GenerateTelephonyTonesResult, _encode_GenerateTelephonyTonesResult } from "../CSTA-generate-telephony-tones/GenerateTelephonyTonesResult.ta.mjs";
+import { type GenerateTelephonyTonesResult, _decode_GenerateTelephonyTonesResult, _encode_GenerateTelephonyTonesResult } from "../CSTA-generate-telephony-tones/GenerateTelephonyTonesResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

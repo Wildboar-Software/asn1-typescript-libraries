@@ -12,23 +12,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    FetchArgument_item,
+    type FetchArgument_item,
     _decode_FetchArgument_item,
     _encode_FetchArgument_item,
 } from '../MSAbstractService/FetchArgument-item.ta.mjs';
 import {
-    EntryInformationSelection,
+    type EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
 } from '../MSAbstractService/EntryInformationSelection.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';

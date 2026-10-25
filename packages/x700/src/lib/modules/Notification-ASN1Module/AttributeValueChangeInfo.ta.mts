@@ -18,32 +18,32 @@ import {
     _encode_SourceIndicator,
 } from '@wildboar/attribute-asn1module';
 import {
-    AttributeIdentifierList,
+    type AttributeIdentifierList,
     _decode_AttributeIdentifierList,
     _encode_AttributeIdentifierList,
 } from '@wildboar/attribute-asn1module';
 import {
-    AttributeValueChangeDefinition,
+    type AttributeValueChangeDefinition,
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

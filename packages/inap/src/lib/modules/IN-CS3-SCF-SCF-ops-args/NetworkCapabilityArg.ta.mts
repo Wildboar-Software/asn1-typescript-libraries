@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { NetworkCapabilityArg_Type, _decode_NetworkCapabilityArg_Type, _encode_NetworkCapabilityArg_Type } from "../IN-CS3-SCF-SCF-ops-args/NetworkCapabilityArg-Type.ta.mjs";
 // export { NetworkCapabilityArg_Type, _decode_NetworkCapabilityArg_Type, _encode_NetworkCapabilityArg_Type } from "../IN-CS3-SCF-SCF-ops-args/NetworkCapabilityArg-Type.ta.mjs";

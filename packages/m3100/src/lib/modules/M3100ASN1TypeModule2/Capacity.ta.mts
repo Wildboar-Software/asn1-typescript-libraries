@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Bandwidth,
+    type Bandwidth,
     _decode_Bandwidth,
     _encode_Bandwidth,
 } from '../M3100ASN1TypeModule2/Bandwidth.ta.mjs';

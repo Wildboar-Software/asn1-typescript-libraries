@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DestTransactionID,
+  type DestTransactionID,
   _decode_DestTransactionID,
   _encode_DestTransactionID,
 } from '../TCAPMessages/DestTransactionID.ta.mjs';
 import {
-  Abort_reason,
+  type Abort_reason,
   _decode_Abort_reason,
   _encode_Abort_reason,
 } from '../TCAPMessages/Abort-reason.ta.mjs';

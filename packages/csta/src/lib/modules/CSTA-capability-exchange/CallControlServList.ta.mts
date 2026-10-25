@@ -3,64 +3,64 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AcceptCall, _decode_AcceptCall, _encode_AcceptCall } from "../CSTA-capability-exchange/AcceptCall.ta.mjs";
+import { type AcceptCall, _decode_AcceptCall, _encode_AcceptCall } from "../CSTA-capability-exchange/AcceptCall.ta.mjs";
 
-import { AlternateCall, _decode_AlternateCall, _encode_AlternateCall } from "../CSTA-capability-exchange/AlternateCall.ta.mjs";
+import { type AlternateCall, _decode_AlternateCall, _encode_AlternateCall } from "../CSTA-capability-exchange/AlternateCall.ta.mjs";
 
-import { AnswerCall, _decode_AnswerCall, _encode_AnswerCall } from "../CSTA-capability-exchange/AnswerCall.ta.mjs";
+import { type AnswerCall, _decode_AnswerCall, _encode_AnswerCall } from "../CSTA-capability-exchange/AnswerCall.ta.mjs";
 
-import { CallBack, _decode_CallBack, _encode_CallBack } from "../CSTA-capability-exchange/CallBack.ta.mjs";
+import { type CallBack, _decode_CallBack, _encode_CallBack } from "../CSTA-capability-exchange/CallBack.ta.mjs";
 
-import { CallBackMessage, _decode_CallBackMessage, _encode_CallBackMessage } from "../CSTA-capability-exchange/CallBackMessage.ta.mjs";
+import { type CallBackMessage, _decode_CallBackMessage, _encode_CallBackMessage } from "../CSTA-capability-exchange/CallBackMessage.ta.mjs";
 
-import { CampOnCall, _decode_CampOnCall, _encode_CampOnCall } from "../CSTA-capability-exchange/CampOnCall.ta.mjs";
+import { type CampOnCall, _decode_CampOnCall, _encode_CampOnCall } from "../CSTA-capability-exchange/CampOnCall.ta.mjs";
 
-import { ClearCall, _decode_ClearCall, _encode_ClearCall } from "../CSTA-capability-exchange/ClearCall.ta.mjs";
+import { type ClearCall, _decode_ClearCall, _encode_ClearCall } from "../CSTA-capability-exchange/ClearCall.ta.mjs";
 
-import { ClearConnection, _decode_ClearConnection, _encode_ClearConnection } from "../CSTA-capability-exchange/ClearConnection.ta.mjs";
+import { type ClearConnection, _decode_ClearConnection, _encode_ClearConnection } from "../CSTA-capability-exchange/ClearConnection.ta.mjs";
 
-import { ConferenceCall, _decode_ConferenceCall, _encode_ConferenceCall } from "../CSTA-capability-exchange/ConferenceCall.ta.mjs";
+import { type ConferenceCall, _decode_ConferenceCall, _encode_ConferenceCall } from "../CSTA-capability-exchange/ConferenceCall.ta.mjs";
 
-import { ConsultationCall, _decode_ConsultationCall, _encode_ConsultationCall } from "../CSTA-capability-exchange/ConsultationCall.ta.mjs";
+import { type ConsultationCall, _decode_ConsultationCall, _encode_ConsultationCall } from "../CSTA-capability-exchange/ConsultationCall.ta.mjs";
 
-import { DeflectCall, _decode_DeflectCall, _encode_DeflectCall } from "../CSTA-capability-exchange/DeflectCall.ta.mjs";
+import { type DeflectCall, _decode_DeflectCall, _encode_DeflectCall } from "../CSTA-capability-exchange/DeflectCall.ta.mjs";
 
-import { DialDigits, _decode_DialDigits, _encode_DialDigits } from "../CSTA-capability-exchange/DialDigits.ta.mjs";
+import { type DialDigits, _decode_DialDigits, _encode_DialDigits } from "../CSTA-capability-exchange/DialDigits.ta.mjs";
 
-import { DirectedPickupCall, _decode_DirectedPickupCall, _encode_DirectedPickupCall } from "../CSTA-capability-exchange/DirectedPickupCall.ta.mjs";
+import { type DirectedPickupCall, _decode_DirectedPickupCall, _encode_DirectedPickupCall } from "../CSTA-capability-exchange/DirectedPickupCall.ta.mjs";
 
-import { GroupPickupCall, _decode_GroupPickupCall, _encode_GroupPickupCall } from "../CSTA-capability-exchange/GroupPickupCall.ta.mjs";
+import { type GroupPickupCall, _decode_GroupPickupCall, _encode_GroupPickupCall } from "../CSTA-capability-exchange/GroupPickupCall.ta.mjs";
 
-import { HoldCall, _decode_HoldCall, _encode_HoldCall } from "../CSTA-capability-exchange/HoldCall.ta.mjs";
+import { type HoldCall, _decode_HoldCall, _encode_HoldCall } from "../CSTA-capability-exchange/HoldCall.ta.mjs";
 
-import { IntrudeCall, _decode_IntrudeCall, _encode_IntrudeCall } from "../CSTA-capability-exchange/IntrudeCall.ta.mjs";
+import { type IntrudeCall, _decode_IntrudeCall, _encode_IntrudeCall } from "../CSTA-capability-exchange/IntrudeCall.ta.mjs";
 
-import { JoinCall, _decode_JoinCall, _encode_JoinCall } from "../CSTA-capability-exchange/JoinCall.ta.mjs";
+import { type JoinCall, _decode_JoinCall, _encode_JoinCall } from "../CSTA-capability-exchange/JoinCall.ta.mjs";
 
-import { MakeCall, _decode_MakeCall, _encode_MakeCall } from "../CSTA-capability-exchange/MakeCall.ta.mjs";
+import { type MakeCall, _decode_MakeCall, _encode_MakeCall } from "../CSTA-capability-exchange/MakeCall.ta.mjs";
 
-import { MakeConnection, _decode_MakeConnection, _encode_MakeConnection } from "../CSTA-capability-exchange/MakeConnection.ta.mjs";
+import { type MakeConnection, _decode_MakeConnection, _encode_MakeConnection } from "../CSTA-capability-exchange/MakeConnection.ta.mjs";
 
-import { MakePredictiveCall, _decode_MakePredictiveCall, _encode_MakePredictiveCall } from "../CSTA-capability-exchange/MakePredictiveCall.ta.mjs";
+import { type MakePredictiveCall, _decode_MakePredictiveCall, _encode_MakePredictiveCall } from "../CSTA-capability-exchange/MakePredictiveCall.ta.mjs";
 
-import { ParkCall, _decode_ParkCall, _encode_ParkCall } from "../CSTA-capability-exchange/ParkCall.ta.mjs";
+import { type ParkCall, _decode_ParkCall, _encode_ParkCall } from "../CSTA-capability-exchange/ParkCall.ta.mjs";
 
-import { ReconnectCall, _decode_ReconnectCall, _encode_ReconnectCall } from "../CSTA-capability-exchange/ReconnectCall.ta.mjs";
+import { type ReconnectCall, _decode_ReconnectCall, _encode_ReconnectCall } from "../CSTA-capability-exchange/ReconnectCall.ta.mjs";
 
-import { RetrieveCall, _decode_RetrieveCall, _encode_RetrieveCall } from "../CSTA-capability-exchange/RetrieveCall.ta.mjs";
+import { type RetrieveCall, _decode_RetrieveCall, _encode_RetrieveCall } from "../CSTA-capability-exchange/RetrieveCall.ta.mjs";
 
-import { SendMessage, _decode_SendMessage, _encode_SendMessage } from "../CSTA-capability-exchange/SendMessage.ta.mjs";
+import { type SendMessage, _decode_SendMessage, _encode_SendMessage } from "../CSTA-capability-exchange/SendMessage.ta.mjs";
 
-import { SingleStepConference, _decode_SingleStepConference, _encode_SingleStepConference } from "../CSTA-capability-exchange/SingleStepConference.ta.mjs";
+import { type SingleStepConference, _decode_SingleStepConference, _encode_SingleStepConference } from "../CSTA-capability-exchange/SingleStepConference.ta.mjs";
 
-import { SingleStepTransfer, _decode_SingleStepTransfer, _encode_SingleStepTransfer } from "../CSTA-capability-exchange/SingleStepTransfer.ta.mjs";
+import { type SingleStepTransfer, _decode_SingleStepTransfer, _encode_SingleStepTransfer } from "../CSTA-capability-exchange/SingleStepTransfer.ta.mjs";
 
-import { TransferCall, _decode_TransferCall, _encode_TransferCall } from "../CSTA-capability-exchange/TransferCall.ta.mjs";
+import { type TransferCall, _decode_TransferCall, _encode_TransferCall } from "../CSTA-capability-exchange/TransferCall.ta.mjs";
 
 
 

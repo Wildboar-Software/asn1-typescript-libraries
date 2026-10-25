@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
+import { type DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
 import { DfrEntry, _decode_DfrEntry, _encode_DfrEntry } from "../DFRAbstractService/DfrEntry.ta.mjs";
-import { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } from "../DFRAbstractService/DfrObjectContent.ta.mjs";
+import { type DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } from "../DFRAbstractService/DfrObjectContent.ta.mjs";
 import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 import { EntryInformation_attr_and_dor_to_content, _decode_EntryInformation_attr_and_dor_to_content, _encode_EntryInformation_attr_and_dor_to_content } from "../DFRAbstractService/EntryInformation-attr-and-dor-to-content.ta.mjs";
 import { EntryInformation_attr_and_dor_to_entire_object, _decode_EntryInformation_attr_and_dor_to_entire_object, _encode_EntryInformation_attr_and_dor_to_entire_object } from "../DFRAbstractService/EntryInformation-attr-and-dor-to-entire-object.ta.mjs";

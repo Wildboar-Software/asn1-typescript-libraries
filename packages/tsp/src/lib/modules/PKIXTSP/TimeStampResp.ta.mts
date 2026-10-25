@@ -11,7 +11,7 @@ import {
     _encode_PKIStatusInfo,
 } from "../PKIXTSP/PKIStatusInfo.ta.mjs";
 import {
-    TimeStampToken,
+    type TimeStampToken,
     _decode_TimeStampToken,
     _encode_TimeStampToken,
 } from "../PKIXTSP/TimeStampToken.ta.mjs";

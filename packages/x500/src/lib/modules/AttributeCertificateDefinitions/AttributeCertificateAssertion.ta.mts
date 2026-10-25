@@ -2,22 +2,22 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeCertificateAssertion_holder,
+    type AttributeCertificateAssertion_holder,
     _decode_AttributeCertificateAssertion_holder,
     _encode_AttributeCertificateAssertion_holder,
 } from "../AttributeCertificateDefinitions/AttributeCertificateAssertion-holder.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";

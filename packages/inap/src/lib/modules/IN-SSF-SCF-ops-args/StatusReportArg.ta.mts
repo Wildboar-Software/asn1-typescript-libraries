@@ -7,11 +7,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ResourceStatus, _decode_ResourceStatus, _encode_ResourceStatus, _enum_for_ResourceStatus } from "../IN-SSF-SCF-datatypes/ResourceStatus.ta.mjs";
 // export { ResourceStatus, _enum_for_ResourceStatus, ResourceStatus_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResourceStatus_idle /* IMPORTED_LONG_ENUMERATION_ITEM */, idle /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResourceStatus, _encode_ResourceStatus } from "../IN-SSF-SCF-datatypes/ResourceStatus.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
 // export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-SSF-SCF-datatypes/CorrelationID.ta.mjs";
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-SSF-SCF-datatypes/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-SSF-SCF-datatypes/ResourceID.ta.mjs";
 // export { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-SSF-SCF-datatypes/ResourceID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 import { ReportCondition, _decode_ReportCondition, _encode_ReportCondition, _enum_for_ReportCondition } from "../IN-SSF-SCF-datatypes/ReportCondition.ta.mjs";
 // export { ReportCondition, _enum_for_ReportCondition, ReportCondition_statusReport /* IMPORTED_LONG_ENUMERATION_ITEM */, statusReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportCondition_timerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, timerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportCondition_canceled /* IMPORTED_LONG_ENUMERATION_ITEM */, canceled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportCondition, _encode_ReportCondition } from "../IN-SSF-SCF-datatypes/ReportCondition.ta.mjs";

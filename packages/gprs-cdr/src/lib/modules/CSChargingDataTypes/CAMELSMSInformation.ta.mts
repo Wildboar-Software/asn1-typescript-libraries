@@ -9,7 +9,7 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInformation_defaultSMSHandling, _enum_for_CAMELSMSInformation_defaultSMSHandling, CAMELSMSInformation_defaultSMSHandling } from "../CSChargingDataTypes/CAMELSMSInformation-defaultSMSHandling.ta.mjs";
+import { _decode_CAMELSMSInformation_defaultSMSHandling, _encode_CAMELSMSInformation_defaultSMSHandling, _enum_for_CAMELSMSInformation_defaultSMSHandling, type CAMELSMSInformation_defaultSMSHandling } from "../CSChargingDataTypes/CAMELSMSInformation-defaultSMSHandling.ta.mjs";
 
 
 /**

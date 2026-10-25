@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IMSI_WithLMSI, _decode_IMSI_WithLMSI, _encode_IMSI_WithLMSI } from "../MAP-CommonDataTypes/IMSI-WithLMSI.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 
 
 /**

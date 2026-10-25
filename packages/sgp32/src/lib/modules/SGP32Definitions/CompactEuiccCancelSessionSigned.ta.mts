@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CancelSessionReason, _encode_CancelSessionReason, type CancelSessionReason } from "@wildboar/sgp22/RSPDefinitions";

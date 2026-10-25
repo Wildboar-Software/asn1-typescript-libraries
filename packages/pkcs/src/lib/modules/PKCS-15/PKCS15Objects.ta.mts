@@ -2,32 +2,32 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthObjects,
+    type AuthObjects,
     _decode_AuthObjects,
     _encode_AuthObjects,
 } from "../PKCS-15/AuthObjects.ta.mjs";
 import {
-    Certificates,
+    type Certificates,
     _decode_Certificates,
     _encode_Certificates,
 } from "../PKCS-15/Certificates.ta.mjs";
 import {
-    DataObjects,
+    type DataObjects,
     _decode_DataObjects,
     _encode_DataObjects,
 } from "../PKCS-15/DataObjects.ta.mjs";
 import {
-    PrivateKeys,
+    type PrivateKeys,
     _decode_PrivateKeys,
     _encode_PrivateKeys,
 } from "../PKCS-15/PrivateKeys.ta.mjs";
 import {
-    PublicKeys,
+    type PublicKeys,
     _decode_PublicKeys,
     _encode_PublicKeys,
 } from "../PKCS-15/PublicKeys.ta.mjs";
 import {
-    SecretKeys,
+    type SecretKeys,
     _decode_SecretKeys,
     _encode_SecretKeys,
 } from "../PKCS-15/SecretKeys.ta.mjs";

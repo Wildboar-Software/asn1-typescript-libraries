@@ -3,18 +3,18 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type BOOLEAN,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OCTET_STRING,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "@wildboar/gn";
@@ -29,12 +29,12 @@ import {
     _encode_MessageImprint,
 } from "../PKIXTSP/MessageImprint.ta.mjs";
 import {
-    TSAPolicyId,
+    type TSAPolicyId,
     _decode_TSAPolicyId,
     _encode_TSAPolicyId,
 } from "../PKIXTSP/TSAPolicyId.ta.mjs";
 import {
-    TSTInfo_version,
+    type TSTInfo_version,
     _decode_TSTInfo_version,
     _encode_TSTInfo_version,
 } from "../PKIXTSP/TSTInfo-version.ta.mjs";

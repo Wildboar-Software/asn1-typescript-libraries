@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
+import { type SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
 
 
 /**

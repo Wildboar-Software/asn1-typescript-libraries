@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterName, _encode_ParameterName, ParameterName,
+import { _decode_ParameterName, _encode_ParameterName, type ParameterName,
     ParameterName_protocolAbortMode
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { _decode_CltuGetParameter_parProtocolAbortMode_parameterValue, _encode_CltuGetParameter_parProtocolAbortMode_parameterValue, CltuGetParameter_parProtocolAbortMode_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parProtocolAbortMode-parameterValue.ta.mjs";
+import { _decode_CltuGetParameter_parProtocolAbortMode_parameterValue, _encode_CltuGetParameter_parProtocolAbortMode_parameterValue, type CltuGetParameter_parProtocolAbortMode_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parProtocolAbortMode-parameterValue.ta.mjs";
 
 
 

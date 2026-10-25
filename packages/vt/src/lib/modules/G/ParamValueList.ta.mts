@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamValueList_deliveryControl, _decode_ParamValueList_deliveryControl, _encode_ParamValueList_deliveryControl } from "../G/ParamValueList-deliveryControl.ta.mjs";
+import { type ParamValueList_deliveryControl, _decode_ParamValueList_deliveryControl, _encode_ParamValueList_deliveryControl } from "../G/ParamValueList-deliveryControl.ta.mjs";
 import { type Values as CDS_Values, _decode_Values as CDS__decode_Values, _encode_Values as CDS__encode_Values } from "../CDS/Values.ta.mjs";
 import { type Values as CSS_Values, _decode_Values as CSS__decode_Values, _encode_Values as CSS__encode_Values } from "../CSS/Values.ta.mjs";
 import { type Values as DEV_Values, _decode_Values as DEV__decode_Values, _encode_Values as DEV__encode_Values } from "../DEV/Values.ta.mjs";

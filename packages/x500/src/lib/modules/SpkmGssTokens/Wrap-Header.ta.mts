@@ -12,12 +12,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Conf_Alg,
+    type Conf_Alg,
     _decode_Conf_Alg,
     _encode_Conf_Alg,
 } from "../SpkmGssTokens/Conf-Alg.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";

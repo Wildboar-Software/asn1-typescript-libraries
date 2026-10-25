@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDINStatus,
+    type EDINStatus,
     _decode_EDINStatus,
     _encode_EDINStatus,
 } from '../EDIMSMessageStoreAttributes/EDINStatus.ta.mjs';

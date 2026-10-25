@@ -6,30 +6,30 @@ import {
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    TbsHandshakeWrpRej_sigSel,
+    type TbsHandshakeWrpRej_sigSel,
     _decode_TbsHandshakeWrpRej_sigSel,
     _encode_TbsHandshakeWrpRej_sigSel,
 } from "../Wrapper/TbsHandshakeWrpRej-sigSel.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
-    Version,
+    type Version,
     Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
 import {
-    WrpError,
+    type WrpError,
     _decode_WrpError,
     _encode_WrpError,
     _enum_for_WrpError,

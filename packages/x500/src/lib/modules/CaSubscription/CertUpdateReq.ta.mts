@@ -11,7 +11,7 @@ import {
     _encode_CertUpdateReq_certs_Item,
 } from "../CaSubscription/CertUpdateReq-certs-Item.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";

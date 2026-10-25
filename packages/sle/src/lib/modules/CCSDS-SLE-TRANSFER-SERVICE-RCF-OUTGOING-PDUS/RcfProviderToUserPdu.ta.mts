@@ -10,11 +10,11 @@ import { SleUnbindInvocation, _decode_SleUnbindInvocation, _encode_SleUnbindInvo
 import { SleUnbindReturn, _decode_SleUnbindReturn, _encode_SleUnbindReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SleUnbindReturn.ta.mjs";
 import { RcfStartReturn, _decode_RcfStartReturn, _encode_RcfStartReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfStartReturn.ta.mjs";
 import { SleAcknowledgement, _decode_SleAcknowledgement, _encode_SleAcknowledgement } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleAcknowledgement.ta.mjs";
-import { RcfTransferBuffer, _decode_RcfTransferBuffer, _encode_RcfTransferBuffer } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfTransferBuffer.ta.mjs";
+import { type RcfTransferBuffer, _decode_RcfTransferBuffer, _encode_RcfTransferBuffer } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfTransferBuffer.ta.mjs";
 import { SleScheduleStatusReportReturn, _decode_SleScheduleStatusReportReturn, _encode_SleScheduleStatusReportReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-PDUS/SleScheduleStatusReportReturn.ta.mjs";
 import { RcfStatusReportInvocation, _decode_RcfStatusReportInvocation, _encode_RcfStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfStatusReportInvocation.ta.mjs";
 import { RcfGetParameterReturn, _decode_RcfGetParameterReturn, _encode_RcfGetParameterReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-OUTGOING-PDUS/RcfGetParameterReturn.ta.mjs";
-import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
+import { type SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

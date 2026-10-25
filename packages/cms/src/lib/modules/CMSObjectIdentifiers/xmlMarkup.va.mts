@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { id_cms_attributes } from "../CMSObjectIdentifiers/id-cms-attributes.va.mjs";
-import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
+import { type OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 
 /**
  * @summary xmlMarkup

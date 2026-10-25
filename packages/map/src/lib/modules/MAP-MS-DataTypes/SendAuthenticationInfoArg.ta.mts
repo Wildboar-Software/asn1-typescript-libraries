@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
+import { type NumberOfRequestedVectors, _decode_NumberOfRequestedVectors, _encode_NumberOfRequestedVectors } from "../MAP-MS-DataTypes/NumberOfRequestedVectors.ta.mjs";
 import { Re_synchronisationInfo, _decode_Re_synchronisationInfo, _encode_Re_synchronisationInfo } from "../MAP-MS-DataTypes/Re-synchronisationInfo.ta.mjs";
-import { RequestingNodeType, _decode_RequestingNodeType, _encode_RequestingNodeType, _enum_for_RequestingNodeType } from "../MAP-MS-DataTypes/RequestingNodeType.ta.mjs";
+import { type RequestingNodeType, _decode_RequestingNodeType, _encode_RequestingNodeType, _enum_for_RequestingNodeType } from "../MAP-MS-DataTypes/RequestingNodeType.ta.mjs";
 
 
 /**

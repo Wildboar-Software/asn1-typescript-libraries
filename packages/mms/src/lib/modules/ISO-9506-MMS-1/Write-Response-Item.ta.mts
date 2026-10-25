@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DataAccessError, _decode_DataAccessError, _encode_DataAccessError } from "../ISO-9506-MMS-1/DataAccessError.ta.mjs";
+import { type DataAccessError, _decode_DataAccessError, _encode_DataAccessError } from "../ISO-9506-MMS-1/DataAccessError.ta.mjs";
 
 
 /**

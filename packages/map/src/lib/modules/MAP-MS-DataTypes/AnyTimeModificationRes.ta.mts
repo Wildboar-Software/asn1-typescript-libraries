@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
 import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
@@ -13,7 +13,7 @@ import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_S
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-import { Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
+import { type Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
 
 

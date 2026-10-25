@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestSuspendResumeError_Item,
+    type TestSuspendResumeError_Item,
     _decode_TestSuspendResumeError_Item,
     _encode_TestSuspendResumeError_Item,
 } from '../Test-ASN1Module/TestSuspendResumeError-Item.ta.mjs';

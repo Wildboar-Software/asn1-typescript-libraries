@@ -12,14 +12,14 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 import { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
-import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
+import { type Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 import { normalSeverity } from "../MMS-Object-Module-1/normalSeverity.va.mjs";
-import { GetEventConditionAttributes_Response_monitoredVariable, _decode_GetEventConditionAttributes_Response_monitoredVariable, _encode_GetEventConditionAttributes_Response_monitoredVariable } from "../ISO-9506-MMS-1/GetEventConditionAttributes-Response-monitoredVariable.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type GetEventConditionAttributes_Response_monitoredVariable, _decode_GetEventConditionAttributes_Response_monitoredVariable, _encode_GetEventConditionAttributes_Response_monitoredVariable } from "../ISO-9506-MMS-1/GetEventConditionAttributes-Response-monitoredVariable.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

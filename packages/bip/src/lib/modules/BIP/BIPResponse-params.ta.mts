@@ -16,17 +16,17 @@ import {
   _encode_AddMaster_ResponseParams,
 } from '../BIP/AddMaster-ResponseParams.ta.mjs';
 import {
-  DeleteMaster_ResponseParams,
+  type DeleteMaster_ResponseParams,
   _decode_DeleteMaster_ResponseParams,
   _encode_DeleteMaster_ResponseParams,
 } from '../BIP/DeleteMaster-ResponseParams.ta.mjs';
 import {
-  BSPLoad_ResponseParams,
+  type BSPLoad_ResponseParams,
   _decode_BSPLoad_ResponseParams,
   _encode_BSPLoad_ResponseParams,
 } from '../BIP/BSPLoad-ResponseParams.ta.mjs';
 import {
-  BSPUnload_ResponseParams,
+  type BSPUnload_ResponseParams,
   _decode_BSPUnload_ResponseParams,
   _encode_BSPUnload_ResponseParams,
 } from '../BIP/BSPUnload-ResponseParams.ta.mjs';
@@ -46,17 +46,17 @@ import {
   _encode_BSPAttach_ResponseParams,
 } from '../BIP/BSPAttach-ResponseParams.ta.mjs';
 import {
-  BSPDetach_ResponseParams,
+  type BSPDetach_ResponseParams,
   _decode_BSPDetach_ResponseParams,
   _encode_BSPDetach_ResponseParams,
 } from '../BIP/BSPDetach-ResponseParams.ta.mjs';
 import {
-  EnableUnitEvents_ResponseParams,
+  type EnableUnitEvents_ResponseParams,
   _decode_EnableUnitEvents_ResponseParams,
   _encode_EnableUnitEvents_ResponseParams,
 } from '../BIP/EnableUnitEvents-ResponseParams.ta.mjs';
 import {
-  EnableEventNotifications_ResponseParams,
+  type EnableEventNotifications_ResponseParams,
   _decode_EnableEventNotifications_ResponseParams,
   _encode_EnableEventNotifications_ResponseParams,
 } from '../BIP/EnableEventNotifications-ResponseParams.ta.mjs';
@@ -71,7 +71,7 @@ import {
   _encode_Control_ResponseParams,
 } from '../BIP/Control-ResponseParams.ta.mjs';
 import {
-  FreeBIRHandle_ResponseParams,
+  type FreeBIRHandle_ResponseParams,
   _decode_FreeBIRHandle_ResponseParams,
   _encode_FreeBIRHandle_ResponseParams,
 } from '../BIP/FreeBIRHandle-ResponseParams.ta.mjs';
@@ -86,22 +86,22 @@ import {
   _encode_GetHeaderFromHandle_ResponseParams,
 } from '../BIP/GetHeaderFromHandle-ResponseParams.ta.mjs';
 import {
-  SubscribeToGUIEvents_ResponseParams,
+  type SubscribeToGUIEvents_ResponseParams,
   _decode_SubscribeToGUIEvents_ResponseParams,
   _encode_SubscribeToGUIEvents_ResponseParams,
 } from '../BIP/SubscribeToGUIEvents-ResponseParams.ta.mjs';
 import {
-  UnsubscribeFromGUIEvents_ResponseParams,
+  type UnsubscribeFromGUIEvents_ResponseParams,
   _decode_UnsubscribeFromGUIEvents_ResponseParams,
   _encode_UnsubscribeFromGUIEvents_ResponseParams,
 } from '../BIP/UnsubscribeFromGUIEvents-ResponseParams.ta.mjs';
 import {
-  RedirectGUIEvents_ResponseParams,
+  type RedirectGUIEvents_ResponseParams,
   _decode_RedirectGUIEvents_ResponseParams,
   _encode_RedirectGUIEvents_ResponseParams,
 } from '../BIP/RedirectGUIEvents-ResponseParams.ta.mjs';
 import {
-  UnredirectGUIEvents_ResponseParams,
+  type UnredirectGUIEvents_ResponseParams,
   _decode_UnredirectGUIEvents_ResponseParams,
   _encode_UnredirectGUIEvents_ResponseParams,
 } from '../BIP/UnredirectGUIEvents-ResponseParams.ta.mjs';
@@ -176,7 +176,7 @@ import {
   _encode_Import_ResponseParams,
 } from '../BIP/Import-ResponseParams.ta.mjs';
 import {
-  PresetIdentifyPopulation_ResponseParams,
+  type PresetIdentifyPopulation_ResponseParams,
   _decode_PresetIdentifyPopulation_ResponseParams,
   _encode_PresetIdentifyPopulation_ResponseParams,
 } from '../BIP/PresetIdentifyPopulation-ResponseParams.ta.mjs';
@@ -191,7 +191,7 @@ import {
   _encode_DbOpen_ResponseParams,
 } from '../BIP/DbOpen-ResponseParams.ta.mjs';
 import {
-  DbClose_ResponseParams,
+  type DbClose_ResponseParams,
   _decode_DbClose_ResponseParams,
   _encode_DbClose_ResponseParams,
 } from '../BIP/DbClose-ResponseParams.ta.mjs';
@@ -201,17 +201,17 @@ import {
   _encode_DbCreate_ResponseParams,
 } from '../BIP/DbCreate-ResponseParams.ta.mjs';
 import {
-  DbDelete_ResponseParams,
+  type DbDelete_ResponseParams,
   _decode_DbDelete_ResponseParams,
   _encode_DbDelete_ResponseParams,
 } from '../BIP/DbDelete-ResponseParams.ta.mjs';
 import {
-  DbSetMarker_ResponseParams,
+  type DbSetMarker_ResponseParams,
   _decode_DbSetMarker_ResponseParams,
   _encode_DbSetMarker_ResponseParams,
 } from '../BIP/DbSetMarker-ResponseParams.ta.mjs';
 import {
-  DbFreeMarker_ResponseParams,
+  type DbFreeMarker_ResponseParams,
   _decode_DbFreeMarker_ResponseParams,
   _encode_DbFreeMarker_ResponseParams,
 } from '../BIP/DbFreeMarker-ResponseParams.ta.mjs';
@@ -231,22 +231,22 @@ import {
   _encode_DbGetNextBIR_ResponseParams,
 } from '../BIP/DbGetNextBIR-ResponseParams.ta.mjs';
 import {
-  DbDeleteBIR_ResponseParams,
+  type DbDeleteBIR_ResponseParams,
   _decode_DbDeleteBIR_ResponseParams,
   _encode_DbDeleteBIR_ResponseParams,
 } from '../BIP/DbDeleteBIR-ResponseParams.ta.mjs';
 import {
-  CalibrateSensor_ResponseParams,
+  type CalibrateSensor_ResponseParams,
   _decode_CalibrateSensor_ResponseParams,
   _encode_CalibrateSensor_ResponseParams,
 } from '../BIP/CalibrateSensor-ResponseParams.ta.mjs';
 import {
-  SetPowerMode_ResponseParams,
+  type SetPowerMode_ResponseParams,
   _decode_SetPowerMode_ResponseParams,
   _encode_SetPowerMode_ResponseParams,
 } from '../BIP/SetPowerMode-ResponseParams.ta.mjs';
 import {
-  SetIndicatorStatus_ResponseParams,
+  type SetIndicatorStatus_ResponseParams,
   _decode_SetIndicatorStatus_ResponseParams,
   _encode_SetIndicatorStatus_ResponseParams,
 } from '../BIP/SetIndicatorStatus-ResponseParams.ta.mjs';
@@ -256,27 +256,27 @@ import {
   _encode_GetIndicatorStatus_ResponseParams,
 } from '../BIP/GetIndicatorStatus-ResponseParams.ta.mjs';
 import {
-  Cancel_ResponseParams,
+  type Cancel_ResponseParams,
   _decode_Cancel_ResponseParams,
   _encode_Cancel_ResponseParams,
 } from '../BIP/Cancel-ResponseParams.ta.mjs';
 import {
-  RegisterBSP_ResponseParams,
+  type RegisterBSP_ResponseParams,
   _decode_RegisterBSP_ResponseParams,
   _encode_RegisterBSP_ResponseParams,
 } from '../BIP/RegisterBSP-ResponseParams.ta.mjs';
 import {
-  UnregisterBSP_ResponseParams,
+  type UnregisterBSP_ResponseParams,
   _decode_UnregisterBSP_ResponseParams,
   _encode_UnregisterBSP_ResponseParams,
 } from '../BIP/UnregisterBSP-ResponseParams.ta.mjs';
 import {
-  RegisterBFP_ResponseParams,
+  type RegisterBFP_ResponseParams,
   _decode_RegisterBFP_ResponseParams,
   _encode_RegisterBFP_ResponseParams,
 } from '../BIP/RegisterBFP-ResponseParams.ta.mjs';
 import {
-  UnregisterBFP_ResponseParams,
+  type UnregisterBFP_ResponseParams,
   _decode_UnregisterBFP_ResponseParams,
   _encode_UnregisterBFP_ResponseParams,
 } from '../BIP/UnregisterBFP-ResponseParams.ta.mjs';

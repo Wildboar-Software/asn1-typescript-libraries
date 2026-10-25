@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DistinguishedName,
+  type DistinguishedName,
   _decode_DistinguishedName,
   _encode_DistinguishedName,
 } from '../CMIP-1/DistinguishedName.ta.mjs';
 import {
-  RDNSequence,
+  type RDNSequence,
   _decode_RDNSequence,
   _encode_RDNSequence,
 } from '../CMIP-1/RDNSequence.ta.mjs';

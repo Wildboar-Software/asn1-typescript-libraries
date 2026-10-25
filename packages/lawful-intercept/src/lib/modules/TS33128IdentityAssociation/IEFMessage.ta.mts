@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IEFRecord, _decode_IEFRecord, _encode_IEFRecord } from "../TS33128IdentityAssociation/IEFRecord.ta.mjs";
+import { type IEFRecord, _decode_IEFRecord, _encode_IEFRecord } from "../TS33128IdentityAssociation/IEFRecord.ta.mjs";
 // export { IEFRecord, _decode_IEFRecord, _encode_IEFRecord } from "../TS33128IdentityAssociation/IEFRecord.ta.mjs";
 
 

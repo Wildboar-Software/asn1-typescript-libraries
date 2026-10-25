@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Any_sub_type,
+  type Any_sub_type,
   _decode_Any_sub_type,
   _encode_Any_sub_type,
 } from '../CBEFF-DATA-ELEMENTS/Any-sub-type.ta.mjs';
 import {
-  Vein_only,
+  type Vein_only,
   _decode_Vein_only,
   _encode_Vein_only,
 } from '../CBEFF-DATA-ELEMENTS/Vein-only.ta.mjs';

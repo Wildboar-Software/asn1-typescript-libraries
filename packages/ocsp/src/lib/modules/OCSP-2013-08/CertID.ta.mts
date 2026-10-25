@@ -10,7 +10,7 @@ import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub";

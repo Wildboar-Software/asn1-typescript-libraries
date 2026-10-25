@@ -3,8 +3,8 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -17,9 +17,9 @@ import {
     _encode_ReqAgentState
 } from "../CSTA-set-agent-state/ReqAgentState.ta.mjs";
 
-import { AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
+import { type AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
 
-import { AgentPassword, _decode_AgentPassword, _encode_AgentPassword } from "../CSTA-device-feature-types/AgentPassword.ta.mjs";
+import { type AgentPassword, _decode_AgentPassword, _encode_AgentPassword } from "../CSTA-device-feature-types/AgentPassword.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 

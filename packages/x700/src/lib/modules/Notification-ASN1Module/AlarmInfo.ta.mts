@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
 import {
-    SpecificProblems,
+    type SpecificProblems,
     _decode_SpecificProblems,
     _encode_SpecificProblems,
 } from '@wildboar/attribute-asn1module';
@@ -28,12 +28,12 @@ import {
     _encode_PerceivedSeverity,
 } from '@wildboar/attribute-asn1module';
 import {
-    BackedUpStatus,
+    type BackedUpStatus,
     _decode_BackedUpStatus,
     _encode_BackedUpStatus,
 } from '@wildboar/attribute-asn1module';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -49,37 +49,37 @@ import {
     _encode_ThresholdInfo,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    AttributeValueChangeDefinition,
+    type AttributeValueChangeDefinition,
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
 } from '@wildboar/attribute-asn1module';
 import {
-    MonitoredAttributes,
+    type MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
 } from '@wildboar/attribute-asn1module';
 import {
-    ProposedRepairActions,
+    type ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

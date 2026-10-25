@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    DLExpansionHistory,
+    type DLExpansionHistory,
     _decode_DLExpansionHistory,
     _encode_DLExpansionHistory,
 } from '../MTSAbstractService/DLExpansionHistory.ta.mjs';

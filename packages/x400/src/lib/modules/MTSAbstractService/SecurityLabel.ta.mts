@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityPolicyIdentifier,
+    type SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
 } from '../MTSAbstractService/SecurityPolicyIdentifier.ta.mjs';
 import {
-    SecurityClassification,
+    type SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
 } from '../MTSAbstractService/SecurityClassification.ta.mjs';
 import {
-    PrivacyMark,
+    type PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
 } from '../MTSAbstractService/PrivacyMark.ta.mjs';
 import {
-    SecurityCategories,
+    type SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
 } from '../MTSAbstractService/SecurityCategories.ta.mjs';

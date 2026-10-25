@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISIS/Password.ta.mjs';

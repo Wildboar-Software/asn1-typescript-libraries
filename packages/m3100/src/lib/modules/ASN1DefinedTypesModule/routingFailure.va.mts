@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';

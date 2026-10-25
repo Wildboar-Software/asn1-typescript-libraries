@@ -14,34 +14,34 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
+    type SessionId,
     _decode_SessionId,
     _encode_SessionId,
 } from '../E-health-common/SessionId.ta.mjs';
 import {
-    Requirements,
+    type Requirements,
     _enum_for_Requirements,
     Requirements_none /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_Requirements,
     _encode_Requirements,
 } from '../E-health-common/Requirements.ta.mjs';
 import {
-    VoiceOptions,
+    type VoiceOptions,
     _decode_VoiceOptions,
     _encode_VoiceOptions,
 } from '../E-health-common/VoiceOptions.ta.mjs';
 import {
-    VideoOptions,
+    type VideoOptions,
     _decode_VideoOptions,
     _encode_VideoOptions,
 } from '../E-health-common/VideoOptions.ta.mjs';
 import {
-    ReturnMode,
+    type ReturnMode,
     _enum_for_ReturnMode,
     _decode_ReturnMode,
     _encode_ReturnMode,

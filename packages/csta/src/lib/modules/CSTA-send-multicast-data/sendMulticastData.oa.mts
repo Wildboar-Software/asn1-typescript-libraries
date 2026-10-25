@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SendMulticastDataArgument, _decode_SendMulticastDataArgument, _encode_SendMulticastDataArgument } from "../CSTA-send-multicast-data/SendMulticastDataArgument.ta.mjs";
 
-import { SendMulticastDataResult, _decode_SendMulticastDataResult, _encode_SendMulticastDataResult } from "../CSTA-send-multicast-data/SendMulticastDataResult.ta.mjs";
+import { type SendMulticastDataResult, _decode_SendMulticastDataResult, _encode_SendMulticastDataResult } from "../CSTA-send-multicast-data/SendMulticastDataResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

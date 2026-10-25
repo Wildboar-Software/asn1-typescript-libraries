@@ -3,10 +3,10 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OCTET_STRING,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason, _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason, ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason } from "../SGP32Definitions/ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError-profileDownloadErrorReason.ta.mjs";
+import { _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason, _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason, type ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason } from "../SGP32Definitions/ProfileDownloadTriggerResult-profileDownloadTriggerResultData-profileDownloadError-profileDownloadErrorReason.ta.mjs";
 
 
 /**

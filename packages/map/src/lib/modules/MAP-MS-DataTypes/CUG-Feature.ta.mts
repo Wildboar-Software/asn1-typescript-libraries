@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
-import { InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_Restrictions } from "../MAP-MS-DataTypes/InterCUG-Restrictions.ta.mjs";
+import { type CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
+import { type InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_Restrictions } from "../MAP-MS-DataTypes/InterCUG-Restrictions.ta.mjs";
 
 
 /**

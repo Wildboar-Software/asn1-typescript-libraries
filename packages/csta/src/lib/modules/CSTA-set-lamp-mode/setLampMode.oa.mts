@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetLampModeArgument, _decode_SetLampModeArgument, _encode_SetLampModeArgument } from "../CSTA-set-lamp-mode/SetLampModeArgument.ta.mjs";
 
-import { SetLampModeResult, _decode_SetLampModeResult, _encode_SetLampModeResult } from "../CSTA-set-lamp-mode/SetLampModeResult.ta.mjs";
+import { type SetLampModeResult, _decode_SetLampModeResult, _encode_SetLampModeResult } from "../CSTA-set-lamp-mode/SetLampModeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

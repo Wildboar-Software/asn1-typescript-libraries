@@ -2,7 +2,7 @@
 import {
     type IA5String,
     type INTEGER,
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     type UTF8String,
@@ -12,7 +12,7 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
 import { MonitoringEventConfigurationActivity, _decode_MonitoringEventConfigurationActivity, _encode_MonitoringEventConfigurationActivity, _enum_for_MonitoringEventConfigurationActivity } from "../MONTEChargingDataTypes/MonitoringEventConfigurationActivity.ta.mjs";
 import { MonitoringType, _decode_MonitoringType, _encode_MonitoringType, _enum_for_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
 import { ReachabilityConfiguration, _decode_ReachabilityConfiguration, _encode_ReachabilityConfiguration } from "../MONTEChargingDataTypes/ReachabilityConfiguration.ta.mjs";

@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryModification_modification,
+    type EntryModification_modification,
     _decode_EntryModification_modification,
     _encode_EntryModification_modification,
 } from '../MSAbstractService/EntryModification-modification.ta.mjs';

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { wtmiEnquiry } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/wtmiEnquiry.oa.mjs";
 import { wtmiDivert } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/wtmiDivert.oa.mjs";
 import { wtmiInform } from "../Wireless-Terminal-Call-Handling-Operations-asn1-97/wtmiInform.oa.mjs";

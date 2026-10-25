@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExpressionHistogram, _decode_ExpressionHistogram, _encode_ExpressionHistogram } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionHistogram.ta.mjs";
+import { type ExpressionHistogram, _decode_ExpressionHistogram, _encode_ExpressionHistogram } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionHistogram.ta.mjs";
 import { CorpusCrewBasicStatistics, _decode_CorpusCrewBasicStatistics, _encode_CorpusCrewBasicStatistics } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusCrewBasicStatistics.ta.mjs";
 
 

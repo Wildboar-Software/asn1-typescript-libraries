@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    JoinXCReply_Item_success,
+    type JoinXCReply_Item_success,
     _decode_JoinXCReply_Item_success,
     _encode_JoinXCReply_Item_success,
 } from '../M3100ASN1TypeModule6/JoinXCReply-Item-success.ta.mjs';
 import {
-    Failed,
+    type Failed,
     _decode_Failed,
     _encode_Failed,
 } from '../ASN1DefinedTypesModule/Failed.ta.mjs';

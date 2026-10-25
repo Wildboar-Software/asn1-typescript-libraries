@@ -18,12 +18,12 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    SubmissionControlArgument,
+    type SubmissionControlArgument,
     _decode_SubmissionControlArgument,
     _encode_SubmissionControlArgument,
 } from '../MTSAbstractService/SubmissionControlArgument.ta.mjs';
 import {
-    SubmissionControlResult,
+    type SubmissionControlResult,
     _decode_SubmissionControlResult,
     _encode_SubmissionControlResult,
 } from '../MTSAbstractService/SubmissionControlResult.ta.mjs';

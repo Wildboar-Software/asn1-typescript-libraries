@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type BIT_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -14,10 +14,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-import { LogicalStatus, _decode_LogicalStatus, _encode_LogicalStatus } from "../MMS-Object-Module-1/LogicalStatus.ta.mjs";
-import { PhysicalStatus, _decode_PhysicalStatus, _encode_PhysicalStatus } from "../MMS-Object-Module-1/PhysicalStatus.ta.mjs";
+import { type LogicalStatus, _decode_LogicalStatus, _encode_LogicalStatus } from "../MMS-Object-Module-1/LogicalStatus.ta.mjs";
+import { type PhysicalStatus, _decode_PhysicalStatus, _encode_PhysicalStatus } from "../MMS-Object-Module-1/PhysicalStatus.ta.mjs";
 import { Domain_instance, _decode_Domain_instance, _encode_Domain_instance } from "../MMS-SCI-Module-1/Domain-instance.ta.mjs";
 import { Program_Invocation_instance, _decode_Program_Invocation_instance, _encode_Program_Invocation_instance } from "../MMS-SCI-Module-1/Program-Invocation-instance.ta.mjs";
 import { Unit_Control_instance, _decode_Unit_Control_instance, _encode_Unit_Control_instance } from "../MMS-SCI-Module-1/Unit-Control-instance.ta.mjs";
@@ -33,7 +33,7 @@ import { Event_Action_instance, _decode_Event_Action_instance, _encode_Event_Act
 import { Event_Enrollment_instance, _decode_Event_Enrollment_instance, _encode_Event_Enrollment_instance } from "../MMS-SCI-Module-1/Event-Enrollment-instance.ta.mjs";
 import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _encode_Event_Condition_List_instance } from "../MMS-SCI-Module-1/Event-Condition-List-instance.ta.mjs";
 import { Journal_instance, _decode_Journal_instance, _encode_Journal_instance } from "../MMS-SCI-Module-1/Journal-instance.ta.mjs";
-import { VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program_Invocation, _encode_VMD_File_selected_Program_Invocation } from "../MMS-SCI-Module-1/VMD-File-selected-Program-Invocation.ta.mjs";
+import { type VMD_File_selected_Program_Invocation, _decode_VMD_File_selected_Program_Invocation, _encode_VMD_File_selected_Program_Invocation } from "../MMS-SCI-Module-1/VMD-File-selected-Program-Invocation.ta.mjs";
 
 
 /**

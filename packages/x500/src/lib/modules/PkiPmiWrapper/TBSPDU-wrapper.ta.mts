@@ -11,23 +11,23 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    PkiPath,
+    type PkiPath,
     _decode_PkiPath,
     _encode_PkiPath,
 } from "../AuthenticationFramework/PkiPath.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../AuthenticationFramework/Version.ta.mjs";
 import {
-    SignedAttributes,
+    type SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
 } from "../PkiPmiWrapper/SignedAttributes.ta.mjs";
 import {
-    TBSPDU_wrapper_conf,
+    type TBSPDU_wrapper_conf,
     _decode_TBSPDU_wrapper_conf,
     _encode_TBSPDU_wrapper_conf,
 } from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.mjs";

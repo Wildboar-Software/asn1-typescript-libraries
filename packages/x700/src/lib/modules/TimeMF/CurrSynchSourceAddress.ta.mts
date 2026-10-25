@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ClockAddress,
+    type ClockAddress,
     _decode_ClockAddress,
     _encode_ClockAddress,
 } from '../TimeMF/ClockAddress.ta.mjs';
 import {
-    ReferenceClockType,
+    type ReferenceClockType,
     _decode_ReferenceClockType,
     _encode_ReferenceClockType,
 } from '../TimeMF/ReferenceClockType.ta.mjs';

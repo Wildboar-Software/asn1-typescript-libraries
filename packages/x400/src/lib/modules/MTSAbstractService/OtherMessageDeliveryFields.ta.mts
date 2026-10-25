@@ -12,58 +12,58 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveredContentType,
+    type DeliveredContentType,
     _decode_DeliveredContentType,
     _encode_DeliveredContentType,
 } from '../MTSAbstractService/DeliveredContentType.ta.mjs';
 import {
-    DeliveredOriginatorName,
+    type DeliveredOriginatorName,
     _decode_DeliveredOriginatorName,
     _encode_DeliveredOriginatorName,
 } from '../MTSAbstractService/DeliveredOriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    Priority,
+    type Priority,
     Priority_normal,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    DeliveryFlags,
+    type DeliveryFlags,
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
 } from '../MTSAbstractService/DeliveryFlags.ta.mjs';
 import {
-    OtherRecipientNames,
+    type OtherRecipientNames,
     _decode_OtherRecipientNames,
     _encode_OtherRecipientNames,
 } from '../MTSAbstractService/OtherRecipientNames.ta.mjs';
 import {
-    ThisRecipientName,
+    type ThisRecipientName,
     _decode_ThisRecipientName,
     _encode_ThisRecipientName,
 } from '../MTSAbstractService/ThisRecipientName.ta.mjs';
 import {
-    OriginallyIntendedRecipientName,
+    type OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
 } from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.mjs';
 import {
-    ConvertedEncodedInformationTypes,
+    type ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
 } from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
 import {
-    MessageSubmissionTime,
+    type MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from '../MTSAbstractService/MessageSubmissionTime.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  XMLCompatibleString,
+  type XMLCompatibleString,
   _decode_XMLCompatibleString,
   _encode_XMLCompatibleString,
 } from '../XSD/XMLCompatibleString.ta.mjs';

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Contents_Type_Attribute,
+    type Contents_Type_Attribute,
     _decode_Contents_Type_Attribute,
     _encode_Contents_Type_Attribute,
 } from '../IPMSFileTransferBodyPartType/Contents-Type-Attribute.ta.mjs';

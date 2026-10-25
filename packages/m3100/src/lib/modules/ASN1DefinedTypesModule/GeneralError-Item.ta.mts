@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    GraphicString,
+    type GraphicString,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GeneralErrorCause,
+    type GeneralErrorCause,
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';

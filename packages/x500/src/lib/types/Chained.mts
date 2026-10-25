@@ -9,4 +9,4 @@ import type {
 export
 type Chained = OPTIONALLY_PROTECTED<Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1>;
 
-export default Chained;
+export type { Chained as default };

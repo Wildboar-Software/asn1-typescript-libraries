@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivateKeyObject, _get_decoder_for_PrivateKeyObject, _get_encoder_for_PrivateKeyObject } from "../CryptographicInformationFramework/PrivateKeyObject.ta.mjs";
+import { type PrivateKeyObject, _get_decoder_for_PrivateKeyObject, _get_encoder_for_PrivateKeyObject } from "../CryptographicInformationFramework/PrivateKeyObject.ta.mjs";
 import { PrivateRSAKeyAttributes, _decode_PrivateRSAKeyAttributes, _encode_PrivateRSAKeyAttributes } from "../CryptographicInformationFramework/PrivateRSAKeyAttributes.ta.mjs";
 import { PrivateECKeyAttributes, _decode_PrivateECKeyAttributes, _encode_PrivateECKeyAttributes } from "../CryptographicInformationFramework/PrivateECKeyAttributes.ta.mjs";
 import { PrivateDHKeyAttributes, _decode_PrivateDHKeyAttributes, _encode_PrivateDHKeyAttributes } from "../CryptographicInformationFramework/PrivateDHKeyAttributes.ta.mjs";

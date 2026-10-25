@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PerceivedTroubleSeverity_number,
+    type PerceivedTroubleSeverity_number,
     outOfService,
     backInService,
     serviceImpairment,

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    KeyAgreeRecipientIdentifier,
+    type KeyAgreeRecipientIdentifier,
     _decode_KeyAgreeRecipientIdentifier,
     _encode_KeyAgreeRecipientIdentifier,
 } from '../CmsTelebiometric/KeyAgreeRecipientIdentifier.ta.mjs';
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from '../CmsTelebiometric/EncryptedKey.ta.mjs';

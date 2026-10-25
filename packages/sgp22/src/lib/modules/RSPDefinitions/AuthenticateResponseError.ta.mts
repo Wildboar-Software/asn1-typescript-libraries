@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_AuthenticateErrorCode } from "../RSPDefinitions/AuthenticateErrorCode.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_AuthenticateErrorCode } from "../RSPDefinitions/AuthenticateErrorCode.ta.mjs";
 
 
 /**

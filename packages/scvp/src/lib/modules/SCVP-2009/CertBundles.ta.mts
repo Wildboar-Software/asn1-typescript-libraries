@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertBundle,
+  type CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';

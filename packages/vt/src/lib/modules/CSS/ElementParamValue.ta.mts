@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ElementParamValue_category, _decode_ElementParamValue_category, _encode_ElementParamValue_category } from "../CSS/ElementParamValue-category.ta.mjs";
+import { type ElementParamValue_category, _decode_ElementParamValue_category, _encode_ElementParamValue_category } from "../CSS/ElementParamValue-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 
 

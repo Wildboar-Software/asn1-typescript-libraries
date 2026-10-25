@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FDCOupdate_Item_status, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
+import { type FDCOupdate_Item_status, _decode_FDCOupdate_Item_status, _encode_FDCOupdate_Item_status } from "../G/FDCOupdate-Item-status.ta.mjs";
 import { FDCOupdate_Item_extent_Item, _decode_FDCOupdate_Item_extent_Item, _encode_FDCOupdate_Item_extent_Item } from "../G/FDCOupdate-Item-extent-Item.ta.mjs";
 import { FDCOupdate_Item_attributes, _decode_FDCOupdate_Item_attributes, _encode_FDCOupdate_Item_attributes } from "../G/FDCOupdate-Item-attributes.ta.mjs";
-import { FDCOupdate_Item_transmissionPolicy, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
+import { type FDCOupdate_Item_transmissionPolicy, _decode_FDCOupdate_Item_transmissionPolicy, _encode_FDCOupdate_Item_transmissionPolicy } from "../G/FDCOupdate-Item-transmissionPolicy.ta.mjs";
 import { EntryControl, _decode_EntryControl, _encode_EntryControl } from "../G/EntryControl.ta.mjs";
 
 

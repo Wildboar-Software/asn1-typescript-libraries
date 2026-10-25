@@ -6,15 +6,15 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-import { Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
-import { ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
-import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { type BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
+import { type Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
+import { type ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
+import { type OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { RegionalSubscriptionResponse, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
-import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
+import { type TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
+import { type SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**

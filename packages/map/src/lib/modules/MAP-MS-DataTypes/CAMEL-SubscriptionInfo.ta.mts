@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -11,13 +11,13 @@ import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.t
 import { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
 import { M_CSI, _decode_M_CSI, _encode_M_CSI } from "../MAP-MS-DataTypes/M-CSI.ta.mjs";
 import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
-import { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
-import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
+import { type MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
+import { type O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
 import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
-import { SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
+import { type SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
 import { SS_CSI, _decode_SS_CSI, _encode_SS_CSI } from "../MAP-MS-DataTypes/SS-CSI.ta.mjs";
-import { T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
+import { type T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
 import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.ta.mjs";
 
 

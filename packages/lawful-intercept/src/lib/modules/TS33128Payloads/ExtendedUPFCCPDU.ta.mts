@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UPFCCPDUPayload, _decode_UPFCCPDUPayload, _encode_UPFCCPDUPayload } from "../TS33128Payloads/UPFCCPDUPayload.ta.mjs";
+import { type UPFCCPDUPayload, _decode_UPFCCPDUPayload, _encode_UPFCCPDUPayload } from "../TS33128Payloads/UPFCCPDUPayload.ta.mjs";
 // export { UPFCCPDUPayload, _decode_UPFCCPDUPayload, _encode_UPFCCPDUPayload } from "../TS33128Payloads/UPFCCPDUPayload.ta.mjs";
-import { QFI, _decode_QFI, _encode_QFI } from "../TS33128Payloads/QFI.ta.mjs";
+import { type QFI, _decode_QFI, _encode_QFI } from "../TS33128Payloads/QFI.ta.mjs";
 // export { QFI, _decode_QFI, _encode_QFI } from "../TS33128Payloads/QFI.ta.mjs";
 
 

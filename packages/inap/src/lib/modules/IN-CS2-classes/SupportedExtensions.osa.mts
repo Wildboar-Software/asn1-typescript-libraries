@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../IN-CS2-classes/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../IN-CS2-classes/EXTENSION.oca.mjs";
 // export { EXTENSION } from "../IN-CS2-classes/EXTENSION.oca.mjs";
 import { firstExtension } from "../IN-CS2-classes/firstExtension.oa.mjs";
 // export { firstExtension } from "../IN-CS2-classes/firstExtension.oa.mjs";

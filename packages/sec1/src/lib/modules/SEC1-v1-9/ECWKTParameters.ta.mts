@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
-import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } from "../SEC1-v1-9/KeyWrapFunction.ta.mjs";
+import { type KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
+import { type KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } from "../SEC1-v1-9/KeyWrapFunction.ta.mjs";
 /**
  * @summary ECWKTParameters
  * @description

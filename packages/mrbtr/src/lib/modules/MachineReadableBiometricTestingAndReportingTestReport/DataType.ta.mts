@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProcessedLevel, _enum_for_ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
+import { type ProcessedLevel, _enum_for_ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
 import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
 
 

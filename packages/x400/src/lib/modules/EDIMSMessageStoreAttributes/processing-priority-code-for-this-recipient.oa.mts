@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ProcessingPriorityCodeField,
+    type ProcessingPriorityCodeField,
     _decode_ProcessingPriorityCodeField,
     _encode_ProcessingPriorityCodeField,
 } from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta.mjs';

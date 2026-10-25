@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Path-Replacement-Operations-asn1-97/DummyArg.ta.mjs";
+import { type DummyArg, _decode_DummyArg, _encode_DummyArg } from "../Path-Replacement-Operations-asn1-97/DummyArg.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { temporarilyUnavailable } from "../Path-Replacement-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
 import { supplementaryServiceInteractionNotAllowed } from "../General-Error-List/supplementaryServiceInteractionNotAllowed.oa.mjs";

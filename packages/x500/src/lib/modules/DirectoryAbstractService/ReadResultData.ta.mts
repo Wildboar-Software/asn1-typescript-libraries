@@ -12,7 +12,7 @@ import {
     _encode_EntryInformation,
 } from "../DirectoryAbstractService/EntryInformation.ta.mjs";
 import {
-    ModifyRights,
+    type ModifyRights,
     _decode_ModifyRights,
     _encode_ModifyRights,
 } from "../DirectoryAbstractService/ModifyRights.ta.mjs";
@@ -27,7 +27,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";

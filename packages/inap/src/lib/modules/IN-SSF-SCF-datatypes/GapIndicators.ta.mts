@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
 // export { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
-import { Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
+import { type Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
 // export { Interval, _decode_Interval, _encode_Interval } from "../IN-SSF-SCF-datatypes/Interval.ta.mjs";
 
 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TRIGGER } from "../IN-CS3-SSF-SCF-Classes/TRIGGER.oca.mjs";
+import { type TRIGGER } from "../IN-CS3-SSF-SCF-Classes/TRIGGER.oca.mjs";
 // export { TRIGGER } from "../IN-CS3-SSF-SCF-Classes/TRIGGER.oca.mjs";
 
 

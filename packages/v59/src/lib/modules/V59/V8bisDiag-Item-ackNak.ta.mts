@@ -9,9 +9,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V8bisDiag_Item_ackNak_aCK, _decode_V8bisDiag_Item_ackNak_aCK, _encode_V8bisDiag_Item_ackNak_aCK } from "../V59/V8bisDiag-Item-ackNak-aCK.ta.mjs";
+import { type V8bisDiag_Item_ackNak_aCK, _decode_V8bisDiag_Item_ackNak_aCK, _encode_V8bisDiag_Item_ackNak_aCK } from "../V59/V8bisDiag-Item-ackNak-aCK.ta.mjs";
 
-import { V8bisDiag_Item_ackNak_nAK, _decode_V8bisDiag_Item_ackNak_nAK, _encode_V8bisDiag_Item_ackNak_nAK } from "../V59/V8bisDiag-Item-ackNak-nAK.ta.mjs";
+import { type V8bisDiag_Item_ackNak_nAK, _decode_V8bisDiag_Item_ackNak_nAK, _encode_V8bisDiag_Item_ackNak_nAK } from "../V59/V8bisDiag-Item-ackNak-nAK.ta.mjs";
 
 /**
  * @summary V8bisDiag_Item_ackNak

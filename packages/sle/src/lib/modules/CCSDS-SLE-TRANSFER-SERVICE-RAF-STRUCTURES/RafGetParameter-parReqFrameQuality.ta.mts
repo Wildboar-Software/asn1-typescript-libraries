@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_requestedFrameQuality
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { RafGetParameter_parReqFrameQuality_parameterValue, _decode_RafGetParameter_parReqFrameQuality_parameterValue, _encode_RafGetParameter_parReqFrameQuality_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReqFrameQuality-parameterValue.ta.mjs";
+import { type RafGetParameter_parReqFrameQuality_parameterValue, _decode_RafGetParameter_parReqFrameQuality_parameterValue, _encode_RafGetParameter_parReqFrameQuality_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-RAF-STRUCTURES/RafGetParameter-parReqFrameQuality-parameterValue.ta.mjs";
 
 
 

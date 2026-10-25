@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { ServiceAvailableArg, _decode_ServiceAvailableArg, _encode_ServiceAvailableArg } from "../Call-Intrusion-Operations-asn1-97/ServiceAvailableArg.ta.mjs";
+import { type ServiceAvailableArg, _decode_ServiceAvailableArg, _encode_ServiceAvailableArg } from "../Call-Intrusion-Operations-asn1-97/ServiceAvailableArg.ta.mjs";
 
 /**
  * @summary serviceAvailable

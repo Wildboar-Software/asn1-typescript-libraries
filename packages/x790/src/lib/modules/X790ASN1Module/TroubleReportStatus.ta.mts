@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TroubleReportStatus_number,
+    type TroubleReportStatus_number,
     screening,
     testing,
     dispatchedIn,

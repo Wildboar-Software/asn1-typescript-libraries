@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CirculationTime,
+    type CirculationTime,
     _decode_CirculationTime,
     _encode_CirculationTime,
 } from '../IPMSHeadingExtensions/CirculationTime.ta.mjs';
 import {
-    CirculationSignature,
+    type CirculationSignature,
     _decode_CirculationSignature,
     _encode_CirculationSignature,
 } from '../IPMSHeadingExtensions/CirculationSignature.ta.mjs';

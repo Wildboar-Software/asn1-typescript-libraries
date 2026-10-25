@@ -5,7 +5,7 @@ import {
     _encode_SuperiorToSubordinate,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinate.ta.mjs";
 import {
-    SuperiorToSubordinateModification,
+    type SuperiorToSubordinateModification,
     _decode_SuperiorToSubordinateModification,
     _encode_SuperiorToSubordinateModification,
 } from "../HierarchicalOperationalBindings/SuperiorToSubordinateModification.ta.mjs";

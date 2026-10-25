@@ -5,12 +5,12 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { CCBS_RequestState, _decode_CCBS_RequestState, _encode_CCBS_RequestState, _enum_for_CCBS_RequestState } from "../MAP-SS-DataTypes/CCBS-RequestState.ta.mjs";
-import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
+import { type SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
 
 
 /**

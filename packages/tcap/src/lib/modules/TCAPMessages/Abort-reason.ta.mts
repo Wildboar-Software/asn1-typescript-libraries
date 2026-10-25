@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  P_AbortCause,
+  type P_AbortCause,
   _decode_P_AbortCause,
   _encode_P_AbortCause,
 } from '../TCAPMessages/P-AbortCause.ta.mjs';
 import {
-  DialoguePortion,
+  type DialoguePortion,
   _decode_DialoguePortion,
   _encode_DialoguePortion,
 } from '../TCAPMessages/DialoguePortion.ta.mjs';

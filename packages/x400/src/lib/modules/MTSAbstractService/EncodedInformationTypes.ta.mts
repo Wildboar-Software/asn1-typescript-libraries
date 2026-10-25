@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BuiltInEncodedInformationTypes,
+    type BuiltInEncodedInformationTypes,
     _decode_BuiltInEncodedInformationTypes,
     _encode_BuiltInEncodedInformationTypes,
 } from '../MTSAbstractService/BuiltInEncodedInformationTypes.ta.mjs';
@@ -22,12 +22,12 @@ import {
     _encode_NonBasicParameters,
 } from '../MTSAbstractService/NonBasicParameters.ta.mjs';
 import {
-    ExtendedEncodedInformationTypes,
+    type ExtendedEncodedInformationTypes,
     _decode_ExtendedEncodedInformationTypes,
     _encode_ExtendedEncodedInformationTypes,
 } from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta.mjs';
 import {
-    G3FacsimileNonBasicParameters,
+    type G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.mjs';

@@ -9,7 +9,7 @@ import { ActionIndicator, _decode_ActionIndicator, _encode_ActionIndicator, _enu
 // export { ActionIndicator, _enum_for_ActionIndicator, ActionIndicator_activate /* IMPORTED_LONG_ENUMERATION_ITEM */, activate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionIndicator_deactivate /* IMPORTED_LONG_ENUMERATION_ITEM */, deactivate /* IMPORTED_SHORT_ENUMERATION_ITEM */, ActionIndicator_retrieve /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieve /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ActionIndicator, _encode_ActionIndicator } from "../IN-CS2-datatypes/ActionIndicator.ta.mjs";
 import { TriggerDataIdentifier, _decode_TriggerDataIdentifier, _encode_TriggerDataIdentifier } from "../IN-CS2-datatypes/TriggerDataIdentifier.ta.mjs";
 // export { TriggerDataIdentifier, _decode_TriggerDataIdentifier, _encode_TriggerDataIdentifier } from "../IN-CS2-datatypes/TriggerDataIdentifier.ta.mjs";
-import { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-CS2-datatypes/RegistratorIdentifier.ta.mjs";
+import { type RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-CS2-datatypes/RegistratorIdentifier.ta.mjs";
 // export { RegistratorIdentifier, _decode_RegistratorIdentifier, _encode_RegistratorIdentifier } from "../IN-CS2-datatypes/RegistratorIdentifier.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";

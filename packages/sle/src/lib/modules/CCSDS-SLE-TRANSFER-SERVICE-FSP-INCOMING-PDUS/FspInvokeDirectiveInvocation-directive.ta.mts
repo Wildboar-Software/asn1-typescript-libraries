@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosLong.ta.mjs";
-import { IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
-import { FspInvokeDirectiveInvocation_directive_setTimeoutType, _decode_FspInvokeDirectiveInvocation_directive_setTimeoutType, _encode_FspInvokeDirectiveInvocation_directive_setTimeoutType } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-INCOMING-PDUS/FspInvokeDirectiveInvocation-directive-setTimeoutType.ta.mjs";
-import { MapMuxControl, _decode_MapMuxControl, _encode_MapMuxControl } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapMuxControl.ta.mjs";
+import { type IntPosLong, _decode_IntPosLong, _encode_IntPosLong } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosLong.ta.mjs";
+import { type IntPosShort, _decode_IntPosShort, _encode_IntPosShort } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntPosShort.ta.mjs";
+import { type FspInvokeDirectiveInvocation_directive_setTimeoutType, _decode_FspInvokeDirectiveInvocation_directive_setTimeoutType, _encode_FspInvokeDirectiveInvocation_directive_setTimeoutType } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-INCOMING-PDUS/FspInvokeDirectiveInvocation-directive-setTimeoutType.ta.mjs";
+import { type MapMuxControl, _decode_MapMuxControl, _encode_MapMuxControl } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/MapMuxControl.ta.mjs";
 
 
 

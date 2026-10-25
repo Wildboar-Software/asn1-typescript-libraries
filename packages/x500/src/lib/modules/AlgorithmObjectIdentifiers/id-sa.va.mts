@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { signatureAlgorithm } from "../AlgorithmObjectIdentifiers/signatureAlgorithm.va.mjs";
 /**
  * @summary id_sa

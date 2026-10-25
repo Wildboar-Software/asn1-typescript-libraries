@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.mjs";
-import { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.mjs";
+import { type SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.mjs";
+import { type SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.mjs";
 import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta.mjs";
 /**
  * @summary SignaturePolicyId

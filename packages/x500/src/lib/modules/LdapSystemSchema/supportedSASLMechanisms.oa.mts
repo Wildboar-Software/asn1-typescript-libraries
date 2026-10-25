@@ -6,7 +6,7 @@ import {
 import { id_lat_supportedSASLMechanisms } from "../LdapSystemSchema/id-lat-supportedSASLMechanisms.va.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";

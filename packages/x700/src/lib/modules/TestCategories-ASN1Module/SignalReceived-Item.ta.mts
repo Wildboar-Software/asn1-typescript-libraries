@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MORTs,
+    type MORTs,
     _decode_MORTs,
     _encode_MORTs,
 } from '../Test-ASN1Module/MORTs.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';

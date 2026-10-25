@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SyntaxIdentifier,
+    type SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
 } from '../EDIMSInformationObjects/SyntaxIdentifier.ta.mjs';
 import {
-    SyntaxVersion,
+    type SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
 } from '../EDIMSInformationObjects/SyntaxVersion.ta.mjs';

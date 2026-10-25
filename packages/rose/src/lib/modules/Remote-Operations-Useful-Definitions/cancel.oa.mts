@@ -19,7 +19,7 @@ import {
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
 import {
-  InvokeId,
+  type InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';

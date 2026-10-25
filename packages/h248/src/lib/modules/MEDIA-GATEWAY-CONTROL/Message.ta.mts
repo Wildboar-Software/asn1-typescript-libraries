@@ -7,8 +7,8 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-import { Message_messageBody, _decode_Message_messageBody, _encode_Message_messageBody } from "../MEDIA-GATEWAY-CONTROL/Message-messageBody.ta.mjs";
+import { type MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
+import { type Message_messageBody, _decode_Message_messageBody, _encode_Message_messageBody } from "../MEDIA-GATEWAY-CONTROL/Message-messageBody.ta.mjs";
 
 
 /**

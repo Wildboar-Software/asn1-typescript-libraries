@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type INTEGER,
-    SEQUENCE,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { CallMediaInfoList_Item, _decode_CallMediaInfoList_Item, _encode_CallMediaInfoList_Item } from "../CSTA-status-reporting/CallMediaInfoList-Item.ta.mjs";

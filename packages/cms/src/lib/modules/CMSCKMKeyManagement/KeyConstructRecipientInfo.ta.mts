@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyConstructionAlgorithmIdentifier,
+    type KeyConstructionAlgorithmIdentifier,
     _decode_KeyConstructionAlgorithmIdentifier,
     _encode_KeyConstructionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyConstructionAlgorithmIdentifier.ta.mjs";
@@ -16,22 +16,22 @@ import {
     _encode_KeyConstructionDomain,
 } from "../CMSCKMKeyManagement/KeyConstructionDomain.ta.mjs";
 import {
-    KeyConstructionRecipient,
+    type KeyConstructionRecipient,
     _decode_KeyConstructionRecipient,
     _encode_KeyConstructionRecipient,
 } from "../CMSCKMKeyManagement/KeyConstructionRecipient.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../CMSCKMKeyManagement/Version.ta.mjs";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
 import {
-    UserKeyingMaterial,
+    type UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.mjs";

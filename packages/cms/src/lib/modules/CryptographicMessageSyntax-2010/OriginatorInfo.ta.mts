@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../CryptographicMessageSyntax-2010/CertificateSet.ta.mjs";
 import {
-    RevocationInfoChoices,
+    type RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.mjs";

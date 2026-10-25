@@ -3,22 +3,22 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AssociateData, _decode_AssociateData, _encode_AssociateData } from "../CSTA-capability-exchange/AssociateData.ta.mjs";
+import { type AssociateData, _decode_AssociateData, _encode_AssociateData } from "../CSTA-capability-exchange/AssociateData.ta.mjs";
 
-import { CancelTelephonyTones, _decode_CancelTelephonyTones, _encode_CancelTelephonyTones } from "../CSTA-capability-exchange/CancelTelephonyTones.ta.mjs";
+import { type CancelTelephonyTones, _decode_CancelTelephonyTones, _encode_CancelTelephonyTones } from "../CSTA-capability-exchange/CancelTelephonyTones.ta.mjs";
 
-import { ChangeConnectionInformation, _decode_ChangeConnectionInformation, _encode_ChangeConnectionInformation } from "../CSTA-capability-exchange/ChangeConnectionInformation.ta.mjs";
+import { type ChangeConnectionInformation, _decode_ChangeConnectionInformation, _encode_ChangeConnectionInformation } from "../CSTA-capability-exchange/ChangeConnectionInformation.ta.mjs";
 
-import { GenerateDigits, _decode_GenerateDigits, _encode_GenerateDigits } from "../CSTA-capability-exchange/GenerateDigits.ta.mjs";
+import { type GenerateDigits, _decode_GenerateDigits, _encode_GenerateDigits } from "../CSTA-capability-exchange/GenerateDigits.ta.mjs";
 
-import { GenerateTelephonyTones, _decode_GenerateTelephonyTones, _encode_GenerateTelephonyTones } from "../CSTA-capability-exchange/GenerateTelephonyTones.ta.mjs";
+import { type GenerateTelephonyTones, _decode_GenerateTelephonyTones, _encode_GenerateTelephonyTones } from "../CSTA-capability-exchange/GenerateTelephonyTones.ta.mjs";
 
-import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInformation } from "../CSTA-capability-exchange/SendUserInformation.ta.mjs";
+import { type SendUserInformation, _decode_SendUserInformation, _encode_SendUserInformation } from "../CSTA-capability-exchange/SendUserInformation.ta.mjs";
 
 
 

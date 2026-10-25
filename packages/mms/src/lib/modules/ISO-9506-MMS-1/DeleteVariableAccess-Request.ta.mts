@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeleteVariableAccess_Request_scopeOfDelete, specific /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteVariableAccess_Request_scopeOfDelete, _encode_DeleteVariableAccess_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteVariableAccess-Request-scopeOfDelete.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type DeleteVariableAccess_Request_scopeOfDelete, specific /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteVariableAccess_Request_scopeOfDelete, _encode_DeleteVariableAccess_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteVariableAccess-Request-scopeOfDelete.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**

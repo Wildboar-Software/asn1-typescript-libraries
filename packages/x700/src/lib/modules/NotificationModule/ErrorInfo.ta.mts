@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
@@ -29,12 +29,12 @@ import {
     _encode_TrendIndication,
 } from '@wildboar/attribute-asn1module';
 import {
-    BackedUpStatus,
+    type BackedUpStatus,
     _decode_BackedUpStatus,
     _encode_BackedUpStatus,
 } from '@wildboar/attribute-asn1module';
 import {
-    ProposedRepairActions,
+    type ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module';
@@ -44,7 +44,7 @@ import {
     _encode_ThresholdInfo,
 } from '@wildboar/attribute-asn1module';
 import {
-    OtherInfo,
+    type OtherInfo,
     _decode_OtherInfo,
     _encode_OtherInfo,
 } from '../NotificationModule/OtherInfo.ta.mjs';

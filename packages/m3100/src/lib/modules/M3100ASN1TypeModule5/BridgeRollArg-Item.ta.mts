@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    BridgeRollArg_Item_bridgeRollOperation,
+    type BridgeRollArg_Item_bridgeRollOperation,
     _enum_for_BridgeRollArg_Item_bridgeRollOperation,
     _decode_BridgeRollArg_Item_bridgeRollOperation,
     _encode_BridgeRollArg_Item_bridgeRollOperation,

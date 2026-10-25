@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterValues_terminationEventList_Item_eventId, _decode_ParameterValues_terminationEventList_Item_eventId, _encode_ParameterValues_terminationEventList_Item_eventId } from "../DEV/ParameterValues-terminationEventList-Item-eventId.ta.mjs";
+import { type ParameterValues_terminationEventList_Item_eventId, _decode_ParameterValues_terminationEventList_Item_eventId, _encode_ParameterValues_terminationEventList_Item_eventId } from "../DEV/ParameterValues-terminationEventList-Item-eventId.ta.mjs";
 
 
 /**

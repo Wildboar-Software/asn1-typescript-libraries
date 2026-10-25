@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
+import { type PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
 
 
 /**

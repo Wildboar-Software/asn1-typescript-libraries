@@ -18,7 +18,7 @@ import {
     _encode_OperationalState,
 } from '@wildboar/attribute-asn1module';
 import {
-    ActivateReply_responseCode,
+    type ActivateReply_responseCode,
     _decode_ActivateReply_responseCode,
     _encode_ActivateReply_responseCode,
 } from '../ActionModule/ActivateReply-responseCode.ta.mjs';

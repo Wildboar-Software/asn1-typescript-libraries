@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.mjs";
+import { type EncodingParameters } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.mjs";
 
 /**
  * @summary nullOctetString

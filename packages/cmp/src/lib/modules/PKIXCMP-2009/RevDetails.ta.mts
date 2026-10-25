@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_CertTemplate,
 } from '@wildboar/crmf';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';

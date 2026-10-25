@@ -10,8 +10,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CoverageStatus, _encode_CoverageStatus, _enum_for_CoverageStatus, CoverageStatus } from "../ProSeChargingDataTypes/CoverageStatus.ta.mjs";
-import { _decode_ChangeOfProSeCondition_serviceChangeCondition, _encode_ChangeOfProSeCondition_serviceChangeCondition, ChangeOfProSeCondition_serviceChangeCondition } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-serviceChangeCondition.ta.mjs";
-import { _decode_ChangeOfProSeCondition_radioResourcesInd, _encode_ChangeOfProSeCondition_radioResourcesInd, ChangeOfProSeCondition_radioResourcesInd } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-radioResourcesInd.ta.mjs";
+import { _decode_ChangeOfProSeCondition_serviceChangeCondition, _encode_ChangeOfProSeCondition_serviceChangeCondition, type ChangeOfProSeCondition_serviceChangeCondition } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-serviceChangeCondition.ta.mjs";
+import { _decode_ChangeOfProSeCondition_radioResourcesInd, _encode_ChangeOfProSeCondition_radioResourcesInd, type ChangeOfProSeCondition_radioResourcesInd } from "../ProSeChargingDataTypes/ChangeOfProSeCondition-radioResourcesInd.ta.mjs";
 
 
 /**

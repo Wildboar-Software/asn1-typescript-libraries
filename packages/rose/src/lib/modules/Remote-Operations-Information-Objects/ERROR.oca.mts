@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Priority,
+  type Priority,
   _decode_Priority,
   _encode_Priority,
 } from '../Remote-Operations-Information-Objects/Priority.ta.mjs';
 import {
-  Code,
+  type Code,
   _decode_Code,
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';

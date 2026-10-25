@@ -7,7 +7,7 @@ import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
 import { bitStringMatch } from "../SelectedAttributeTypes/bitStringMatch.oa.mjs";
 import { id_at_uniqueIdentifier } from "../SelectedAttributeTypes/id-at-uniqueIdentifier.va.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";

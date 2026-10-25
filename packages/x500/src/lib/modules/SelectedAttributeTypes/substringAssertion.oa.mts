@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.mjs";
 import {
-    SubstringAssertion,
+    type SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";

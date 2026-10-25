@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SendStoredCDRArgument, _decode_SendStoredCDRArgument, _encode_SendStoredCDRArgument } from "../CSTA-send-stored-call-detail-records/SendStoredCDRArgument.ta.mjs";
 
-import { SendStoredCDRResult, _decode_SendStoredCDRResult, _encode_SendStoredCDRResult } from "../CSTA-send-stored-call-detail-records/SendStoredCDRResult.ta.mjs";
+import { type SendStoredCDRResult, _decode_SendStoredCDRResult, _encode_SendStoredCDRResult } from "../CSTA-send-stored-call-detail-records/SendStoredCDRResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

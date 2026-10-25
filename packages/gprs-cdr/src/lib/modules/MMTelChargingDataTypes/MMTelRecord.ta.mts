@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    GraphicString,
+    type GraphicString,
     type INTEGER,
-    NULL,
+    type NULL,
     type OCTET_STRING,
     type OPTIONAL,
     type UTF8String,
@@ -12,10 +12,10 @@ import {
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../MMTelChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../MMTelChargingDataTypes/RecordType.ta.mjs";
 import { MMTelRecord_role_of_Node, _decode_MMTelRecord_role_of_Node, _encode_MMTelRecord_role_of_Node, _enum_for_MMTelRecord_role_of_Node } from "../MMTelChargingDataTypes/MMTelRecord-role-of-Node.ta.mjs";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../MMTelChargingDataTypes/NodeAddress.ta.mjs";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../MMTelChargingDataTypes/NodeAddress.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../MMTelChargingDataTypes/InvolvedParty.ta.mjs";
 import { InterOperatorIdentifiers, _decode_InterOperatorIdentifiers, _encode_InterOperatorIdentifiers } from "../MMTelChargingDataTypes/InterOperatorIdentifiers.ta.mjs";
 import { MMTelRecord_causeForRecordClosing, _decode_MMTelRecord_causeForRecordClosing, _encode_MMTelRecord_causeForRecordClosing, _enum_for_MMTelRecord_causeForRecordClosing } from "../MMTelChargingDataTypes/MMTelRecord-causeForRecordClosing.ta.mjs";
 import { Incomplete_CDR_Indication, _decode_Incomplete_CDR_Indication, _encode_Incomplete_CDR_Indication } from "../MMTelChargingDataTypes/Incomplete-CDR-Indication.ta.mjs";
@@ -25,7 +25,7 @@ import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExt
 import { SubscriptionID, _decode_SubscriptionID, _encode_SubscriptionID } from "../MMTelChargingDataTypes/SubscriptionID.ta.mjs";
 import { List_Of_Early_SDP_Media_Components, _decode_List_Of_Early_SDP_Media_Components, _encode_List_Of_Early_SDP_Media_Components } from "../MMTelChargingDataTypes/List-Of-Early-SDP-Media-Components.ta.mjs";
 import { MMTelRecord_sessionPriority, _decode_MMTelRecord_sessionPriority, _encode_MMTelRecord_sessionPriority, _enum_for_MMTelRecord_sessionPriority } from "../MMTelChargingDataTypes/MMTelRecord-sessionPriority.ta.mjs";
-import { RealTimeTariffInformation, _decode_RealTimeTariffInformation, _encode_RealTimeTariffInformation } from "../MMTelChargingDataTypes/RealTimeTariffInformation.ta.mjs";
+import { type RealTimeTariffInformation, _decode_RealTimeTariffInformation, _encode_RealTimeTariffInformation } from "../MMTelChargingDataTypes/RealTimeTariffInformation.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../MMTelChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 import { MMTelInformation, _decode_MMTelInformation, _encode_MMTelInformation } from "../MMTelChargingDataTypes/MMTelInformation.ta.mjs";
 import { MMTelRecord_threeGPPPSDataOffStatus, _decode_MMTelRecord_threeGPPPSDataOffStatus, _encode_MMTelRecord_threeGPPPSDataOffStatus, _enum_for_MMTelRecord_threeGPPPSDataOffStatus } from "../MMTelChargingDataTypes/MMTelRecord-threeGPPPSDataOffStatus.ta.mjs";

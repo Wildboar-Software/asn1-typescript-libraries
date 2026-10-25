@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    CEKMaxDecrypts,
+    type CEKMaxDecrypts,
     _decode_CEKMaxDecrypts,
     _encode_CEKMaxDecrypts,
 } from '../CmsTelebiometric/CEKMaxDecrypts.ta.mjs';

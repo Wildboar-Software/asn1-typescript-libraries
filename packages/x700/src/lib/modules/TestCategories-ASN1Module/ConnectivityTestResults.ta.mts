@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
 import {
-    TimeoutPeriod,
+    type TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
 import {
-    TestThreshold,
+    type TestThreshold,
     _decode_TestThreshold,
     _encode_TestThreshold,
 } from '../TestCategories-ASN1Module/TestThreshold.ta.mjs';

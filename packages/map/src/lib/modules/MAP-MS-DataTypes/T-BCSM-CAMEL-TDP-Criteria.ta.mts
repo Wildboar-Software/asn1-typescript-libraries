@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
-import { T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
-import { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValueCriteria } from "../MAP-MS-DataTypes/T-CauseValueCriteria.ta.mjs";
+import { type BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
+import { type T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
+import { type T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValueCriteria } from "../MAP-MS-DataTypes/T-CauseValueCriteria.ta.mjs";
 
 
 /**

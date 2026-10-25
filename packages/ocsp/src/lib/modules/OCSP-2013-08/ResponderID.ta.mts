@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "@wildboar/dn";
 import {
-    KeyHash,
+    type KeyHash,
     _decode_KeyHash,
     _encode_KeyHash,
 } from "../OCSP-2013-08/KeyHash.ta.mjs";

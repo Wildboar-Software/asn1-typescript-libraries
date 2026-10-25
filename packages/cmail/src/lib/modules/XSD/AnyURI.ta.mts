@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  XMLStringWithNoCRLFHT,
+  type XMLStringWithNoCRLFHT,
   _decode_XMLStringWithNoCRLFHT,
   _encode_XMLStringWithNoCRLFHT,
 } from '../XSD/XMLStringWithNoCRLFHT.ta.mjs';

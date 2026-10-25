@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { referentAccessError_ParameterType_entry, _decode_referentAccessError_ParameterType_entry, _encode_referentAccessError_ParameterType_entry } from "../DFRAbstractService/referentAccessError-ParameterType-entry.ta.mjs";
+import { type referentAccessError_ParameterType_entry, _decode_referentAccessError_ParameterType_entry, _encode_referentAccessError_ParameterType_entry } from "../DFRAbstractService/referentAccessError-ParameterType-entry.ta.mjs";
 import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_ReferentAccessProblem, _encode_ReferentAccessProblem } from "../DFRAbstractService/ReferentAccessProblem.ta.mjs";
 
 

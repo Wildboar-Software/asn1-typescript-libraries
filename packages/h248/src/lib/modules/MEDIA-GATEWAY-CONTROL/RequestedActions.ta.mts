@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventDM, _decode_EventDM, _encode_EventDM } from "../MEDIA-GATEWAY-CONTROL/EventDM.ta.mjs";
+import { type EventDM, _decode_EventDM, _encode_EventDM } from "../MEDIA-GATEWAY-CONTROL/EventDM.ta.mjs";
 import { SecondEventsDescriptor, _decode_SecondEventsDescriptor, _encode_SecondEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SecondEventsDescriptor.ta.mjs";
-import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
-import { NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } from "../MEDIA-GATEWAY-CONTROL/NotifyBehaviour.ta.mjs";
+import { type SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
+import { type NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } from "../MEDIA-GATEWAY-CONTROL/NotifyBehaviour.ta.mjs";
 
 
 /**

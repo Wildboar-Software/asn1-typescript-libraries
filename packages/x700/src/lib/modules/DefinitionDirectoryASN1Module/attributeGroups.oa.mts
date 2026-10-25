@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    AttributeGroups,
+    type AttributeGroups,
     _decode_AttributeGroups,
     _encode_AttributeGroups,
 } from '../DefinitionASN1Module/AttributeGroups.ta.mjs';

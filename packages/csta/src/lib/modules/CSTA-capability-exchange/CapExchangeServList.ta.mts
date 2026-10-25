@@ -3,26 +3,26 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GetCSTAFeatures, _decode_GetCSTAFeatures, _encode_GetCSTAFeatures } from "../CSTA-capability-exchange/GetCSTAFeatures.ta.mjs";
+import { type GetCSTAFeatures, _decode_GetCSTAFeatures, _encode_GetCSTAFeatures } from "../CSTA-capability-exchange/GetCSTAFeatures.ta.mjs";
 
-import { GetLogicalDeviceInformation, _decode_GetLogicalDeviceInformation, _encode_GetLogicalDeviceInformation } from "../CSTA-capability-exchange/GetLogicalDeviceInformation.ta.mjs";
+import { type GetLogicalDeviceInformation, _decode_GetLogicalDeviceInformation, _encode_GetLogicalDeviceInformation } from "../CSTA-capability-exchange/GetLogicalDeviceInformation.ta.mjs";
 
-import { GetPhysicalDeviceInformation, _decode_GetPhysicalDeviceInformation, _encode_GetPhysicalDeviceInformation } from "../CSTA-capability-exchange/GetPhysicalDeviceInformation.ta.mjs";
+import { type GetPhysicalDeviceInformation, _decode_GetPhysicalDeviceInformation, _encode_GetPhysicalDeviceInformation } from "../CSTA-capability-exchange/GetPhysicalDeviceInformation.ta.mjs";
 
 import {
-    GetSwitchingFunctionCapabilities,
+    type GetSwitchingFunctionCapabilities,
     _decode_GetSwitchingFunctionCapabilities,
     _encode_GetSwitchingFunctionCapabilities
 } from "../CSTA-capability-exchange/GetSwitchingFunctionCapabilities.ta.mjs";
 
-import { GetSwitchingFunctionDevices, _decode_GetSwitchingFunctionDevices, _encode_GetSwitchingFunctionDevices } from "../CSTA-capability-exchange/GetSwitchingFunctionDevices.ta.mjs";
+import { type GetSwitchingFunctionDevices, _decode_GetSwitchingFunctionDevices, _encode_GetSwitchingFunctionDevices } from "../CSTA-capability-exchange/GetSwitchingFunctionDevices.ta.mjs";
 
-import { SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_SwitchingFunctionDevices } from "../CSTA-capability-exchange/SwitchingFunctionDevices.ta.mjs";
+import { type SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_SwitchingFunctionDevices } from "../CSTA-capability-exchange/SwitchingFunctionDevices.ta.mjs";
 
 
 

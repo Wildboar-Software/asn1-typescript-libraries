@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ChangeCredentialsAlgorithms,
+    type ChangeCredentialsAlgorithms,
     _decode_ChangeCredentialsAlgorithms,
     _encode_ChangeCredentialsAlgorithms,
 } from '../MSAbstractService/ChangeCredentialsAlgorithms.ta.mjs';

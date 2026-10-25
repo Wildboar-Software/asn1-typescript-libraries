@@ -4,17 +4,17 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
     type BOOLEAN,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MonitorCrossRefID, _decode_MonitorCrossRefID, _encode_MonitorCrossRefID } from "../CSTA-status-reporting/MonitorCrossRefID.ta.mjs";
+import { type MonitorCrossRefID, _decode_MonitorCrossRefID, _encode_MonitorCrossRefID } from "../CSTA-status-reporting/MonitorCrossRefID.ta.mjs";
 
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
 
 import {
-    MonitorMediaClass,
+    type MonitorMediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MonitorMediaClass,
     _encode_MonitorMediaClass

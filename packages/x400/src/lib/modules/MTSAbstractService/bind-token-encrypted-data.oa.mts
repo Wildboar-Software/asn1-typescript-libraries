@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    BindTokenEncryptedData,
+    type BindTokenEncryptedData,
     _decode_BindTokenEncryptedData,
     _encode_BindTokenEncryptedData,
 } from '../MTSAbstractService/BindTokenEncryptedData.ta.mjs';

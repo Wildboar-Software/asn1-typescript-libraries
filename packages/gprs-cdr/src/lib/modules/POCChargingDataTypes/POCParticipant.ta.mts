@@ -2,10 +2,10 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_InvolvedParty, _encode_InvolvedParty, InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
+import { _decode_InvolvedParty, _encode_InvolvedParty, type InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
 import { _decode_AccessPriority, _encode_AccessPriority, _enum_for_AccessPriority, AccessPriority } from "../POCChargingDataTypes/AccessPriority.ta.mjs";
 import { _decode_ParticipatingType, _encode_ParticipatingType, _enum_for_ParticipatingType, ParticipatingType } from "../POCChargingDataTypes/ParticipatingType.ta.mjs";
 

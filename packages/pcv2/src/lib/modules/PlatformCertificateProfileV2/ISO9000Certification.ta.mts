@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass,
     type BOOLEAN,
     type IA5String,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";

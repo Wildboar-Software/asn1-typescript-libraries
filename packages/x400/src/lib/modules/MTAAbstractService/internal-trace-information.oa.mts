@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    InternalTraceInformation,
+    type InternalTraceInformation,
     _decode_InternalTraceInformation,
     _encode_InternalTraceInformation,
 } from '../MTAAbstractService/InternalTraceInformation.ta.mjs';

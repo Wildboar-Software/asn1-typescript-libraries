@@ -18,17 +18,17 @@ import {
     _encode_OperationalState,
 } from '@wildboar/attribute-asn1module';
 import {
-    ProceduralStatus,
+    type ProceduralStatus,
     _decode_ProceduralStatus,
     _encode_ProceduralStatus,
 } from '@wildboar/attribute-asn1module';
 import {
-    ControlStatus,
+    type ControlStatus,
     _decode_ControlStatus,
     _encode_ControlStatus,
 } from '@wildboar/attribute-asn1module';
 import {
-    AvailabilityStatus,
+    type AvailabilityStatus,
     _decode_AvailabilityStatus,
     _encode_AvailabilityStatus,
 } from '@wildboar/attribute-asn1module';

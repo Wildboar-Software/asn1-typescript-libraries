@@ -2,7 +2,7 @@
 import { type FIELD_ID } from "../ANSI-X9-62/FIELD-ID.oca.mjs";
 import { prime_field } from "../ANSI-X9-62/prime-field.va.mjs";
 import {
-    Prime_p,
+    type Prime_p,
     _decode_Prime_p,
     _encode_Prime_p,
 } from "../ANSI-X9-62/Prime-p.ta.mjs";

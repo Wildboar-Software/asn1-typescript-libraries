@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../modules/CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
+import { type IntUnsignedLong, _decode_IntUnsignedLong, _encode_IntUnsignedLong } from "../modules/CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/IntUnsignedLong.ta.mjs";
 
 
 /**

@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
+import { type AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
 // export { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 // export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 
 

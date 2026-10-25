@@ -6,38 +6,38 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from "../CMIP-1/ObjectClass.ta.mjs";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
 import {
-    EventTime,
+    type EventTime,
     _decode_EventTime,
     _encode_EventTime,
 } from "../Attribute-ASN1Module/EventTime.ta.mjs";
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from "../CMIP-1/EventTypeId.ta.mjs";
 import {
-    AdditionalInformation,
-    AdditionalText,
-    AttributeValueChangeDefinition,
-    BackedUpStatus,
-    CorrelatedNotifications,
-    MonitoredAttributes,
-    NotificationIdentifier,
+    type AdditionalInformation,
+    type AdditionalText,
+    type AttributeValueChangeDefinition,
+    type BackedUpStatus,
+    type CorrelatedNotifications,
+    type MonitoredAttributes,
+    type NotificationIdentifier,
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
-    ProbableCause,
-    ProposedRepairActions,
-    SpecificProblems,
+    type ProbableCause,
+    type ProposedRepairActions,
+    type SpecificProblems,
     ThresholdInfo,
     TrendIndication,
     _enum_for_TrendIndication,

@@ -8,7 +8,7 @@ import { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-SCF-SC
 // export { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-SCF-SCF-datatypes/InbandInfo.ta.mjs";
 import { Tone, _decode_Tone, _encode_Tone } from "../IN-SCF-SRF-datatypes/Tone.ta.mjs";
 // export { Tone, _decode_Tone, _encode_Tone } from "../IN-SCF-SRF-datatypes/Tone.ta.mjs";
-import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-SSF-SCF-datatypes/DisplayInformation.ta.mjs";
+import { type DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-SSF-SCF-datatypes/DisplayInformation.ta.mjs";
 // export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-SSF-SCF-datatypes/DisplayInformation.ta.mjs";
 
 

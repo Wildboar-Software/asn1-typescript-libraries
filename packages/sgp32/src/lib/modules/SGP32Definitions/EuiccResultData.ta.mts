@@ -4,20 +4,20 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EnableProfileResult, _decode_EnableProfileResult, _encode_EnableProfileResult } from "../SGP32Definitions/EnableProfileResult.ta.mjs";
-import { DisableProfileResult, _decode_DisableProfileResult, _encode_DisableProfileResult } from "../SGP32Definitions/DisableProfileResult.ta.mjs";
-import { DeleteProfileResult, _decode_DeleteProfileResult, _encode_DeleteProfileResult } from "../SGP32Definitions/DeleteProfileResult.ta.mjs";
-import { ProfileInfoListResponse, _decode_ProfileInfoListResponse, _encode_ProfileInfoListResponse } from "../SGP32Definitions/ProfileInfoListResponse.ta.mjs";
+import { type EnableProfileResult, _decode_EnableProfileResult, _encode_EnableProfileResult } from "../SGP32Definitions/EnableProfileResult.ta.mjs";
+import { type DisableProfileResult, _decode_DisableProfileResult, _encode_DisableProfileResult } from "../SGP32Definitions/DisableProfileResult.ta.mjs";
+import { type DeleteProfileResult, _decode_DeleteProfileResult, _encode_DeleteProfileResult } from "../SGP32Definitions/DeleteProfileResult.ta.mjs";
+import { type ProfileInfoListResponse, _decode_ProfileInfoListResponse, _encode_ProfileInfoListResponse } from "../SGP32Definitions/ProfileInfoListResponse.ta.mjs";
 import { type RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "@wildboar/sgp22/RSPDefinitions";
-import { ConfigureImmediateEnableResult, _decode_ConfigureImmediateEnableResult, _encode_ConfigureImmediateEnableResult } from "../SGP32Definitions/ConfigureImmediateEnableResult.ta.mjs";
-import { AddEimResult, _decode_AddEimResult, _encode_AddEimResult } from "../SGP32Definitions/AddEimResult.ta.mjs";
-import { DeleteEimResult, _decode_DeleteEimResult, _encode_DeleteEimResult } from "../SGP32Definitions/DeleteEimResult.ta.mjs";
-import { UpdateEimResult, _decode_UpdateEimResult, _encode_UpdateEimResult } from "../SGP32Definitions/UpdateEimResult.ta.mjs";
-import { ListEimResult, _decode_ListEimResult, _encode_ListEimResult } from "../SGP32Definitions/ListEimResult.ta.mjs";
-import { RollbackProfileResult, _decode_RollbackProfileResult, _encode_RollbackProfileResult } from "../SGP32Definitions/RollbackProfileResult.ta.mjs";
-import { SetFallbackAttributeResult, _decode_SetFallbackAttributeResult, _encode_SetFallbackAttributeResult } from "../SGP32Definitions/SetFallbackAttributeResult.ta.mjs";
-import { UnsetFallbackAttributeResult, _decode_UnsetFallbackAttributeResult, _encode_UnsetFallbackAttributeResult } from "../SGP32Definitions/UnsetFallbackAttributeResult.ta.mjs";
-import { EuiccResultData_processingTerminated, _decode_EuiccResultData_processingTerminated, _encode_EuiccResultData_processingTerminated } from "../SGP32Definitions/EuiccResultData-processingTerminated.ta.mjs";
+import { type ConfigureImmediateEnableResult, _decode_ConfigureImmediateEnableResult, _encode_ConfigureImmediateEnableResult } from "../SGP32Definitions/ConfigureImmediateEnableResult.ta.mjs";
+import { type AddEimResult, _decode_AddEimResult, _encode_AddEimResult } from "../SGP32Definitions/AddEimResult.ta.mjs";
+import { type DeleteEimResult, _decode_DeleteEimResult, _encode_DeleteEimResult } from "../SGP32Definitions/DeleteEimResult.ta.mjs";
+import { type UpdateEimResult, _decode_UpdateEimResult, _encode_UpdateEimResult } from "../SGP32Definitions/UpdateEimResult.ta.mjs";
+import { type ListEimResult, _decode_ListEimResult, _encode_ListEimResult } from "../SGP32Definitions/ListEimResult.ta.mjs";
+import { type RollbackProfileResult, _decode_RollbackProfileResult, _encode_RollbackProfileResult } from "../SGP32Definitions/RollbackProfileResult.ta.mjs";
+import { type SetFallbackAttributeResult, _decode_SetFallbackAttributeResult, _encode_SetFallbackAttributeResult } from "../SGP32Definitions/SetFallbackAttributeResult.ta.mjs";
+import { type UnsetFallbackAttributeResult, _decode_UnsetFallbackAttributeResult, _encode_UnsetFallbackAttributeResult } from "../SGP32Definitions/UnsetFallbackAttributeResult.ta.mjs";
+import { type EuiccResultData_processingTerminated, _decode_EuiccResultData_processingTerminated, _encode_EuiccResultData_processingTerminated } from "../SGP32Definitions/EuiccResultData-processingTerminated.ta.mjs";
 import { SetDefaultDpAddressResponse, _decode_SetDefaultDpAddressResponse, _encode_SetDefaultDpAddressResponse } from "../SGP32Definitions/SetDefaultDpAddressResponse.ta.mjs";
 
 

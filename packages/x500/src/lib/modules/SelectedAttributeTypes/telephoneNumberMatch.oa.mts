@@ -3,7 +3,7 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
 import { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va.mjs";
 import { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.mjs";
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";

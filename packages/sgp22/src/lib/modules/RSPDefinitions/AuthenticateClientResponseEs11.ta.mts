@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthenticateClientOkEs11, _decode_AuthenticateClientOkEs11, _encode_AuthenticateClientOkEs11 } from "../RSPDefinitions/AuthenticateClientOkEs11.ta.mjs";
-import { AuthenticateClientResponseEs11_authenticateClientError, _decode_AuthenticateClientResponseEs11_authenticateClientError, _encode_AuthenticateClientResponseEs11_authenticateClientError } from "../RSPDefinitions/AuthenticateClientResponseEs11-authenticateClientError.ta.mjs";
+import { type AuthenticateClientResponseEs11_authenticateClientError, _decode_AuthenticateClientResponseEs11_authenticateClientError, _encode_AuthenticateClientResponseEs11_authenticateClientError } from "../RSPDefinitions/AuthenticateClientResponseEs11-authenticateClientError.ta.mjs";
 
 
 /**

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
@@ -22,47 +22,47 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    TestOutcome,
+    type TestOutcome,
     _decode_TestOutcome,
     _encode_TestOutcome,
 } from '../Test-ASN1Module/TestOutcome.ta.mjs';
 import {
-    MORTs,
+    type MORTs,
     _decode_MORTs,
     _encode_MORTs,
 } from '../Test-ASN1Module/MORTs.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    MonitoredAttributes,
+    type MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
 } from '@wildboar/attribute-asn1module';
 import {
-    ProposedRepairActions,
+    type ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';

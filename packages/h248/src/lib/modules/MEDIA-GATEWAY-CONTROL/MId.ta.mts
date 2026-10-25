@@ -7,8 +7,8 @@ import * as $ from "@wildboar/asn1/functional";
 import { IP4Address, _decode_IP4Address, _encode_IP4Address } from "../MEDIA-GATEWAY-CONTROL/IP4Address.ta.mjs";
 import { IP6Address, _decode_IP6Address, _encode_IP6Address } from "../MEDIA-GATEWAY-CONTROL/IP6Address.ta.mjs";
 import { DomainName, _decode_DomainName, _encode_DomainName } from "../MEDIA-GATEWAY-CONTROL/DomainName.ta.mjs";
-import { PathName, _decode_PathName, _encode_PathName } from "../MEDIA-GATEWAY-CONTROL/PathName.ta.mjs";
-import { MtpAddress, _decode_MtpAddress, _encode_MtpAddress } from "../MEDIA-GATEWAY-CONTROL/MtpAddress.ta.mjs";
+import { type PathName, _decode_PathName, _encode_PathName } from "../MEDIA-GATEWAY-CONTROL/PathName.ta.mjs";
+import { type MtpAddress, _decode_MtpAddress, _encode_MtpAddress } from "../MEDIA-GATEWAY-CONTROL/MtpAddress.ta.mjs";
 
 
 /**

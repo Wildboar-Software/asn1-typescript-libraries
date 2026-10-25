@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FilterItem_substrings_strings_Item,
+    type FilterItem_substrings_strings_Item,
     _decode_FilterItem_substrings_strings_Item,
     _encode_FilterItem_substrings_strings_Item,
 } from '../MSAbstractService/FilterItem-substrings-strings-Item.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

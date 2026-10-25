@@ -3,12 +3,12 @@ import { id_op_establishOperationalBinding } from "../CommonProtocolSpecificatio
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { securityError } from "../DirectoryAbstractService/securityError.oa.mjs";
 import {
-    EstablishOperationalBindingArgument,
+    type EstablishOperationalBindingArgument,
     _decode_EstablishOperationalBindingArgument,
     _encode_EstablishOperationalBindingArgument,
 } from "../OperationalBindingManagement/EstablishOperationalBindingArgument.ta.mjs";
 import {
-    EstablishOperationalBindingResult,
+    type EstablishOperationalBindingResult,
     _decode_EstablishOperationalBindingResult,
     _encode_EstablishOperationalBindingResult,
 } from "../OperationalBindingManagement/EstablishOperationalBindingResult.ta.mjs";

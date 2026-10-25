@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { _enum_for_AttributeUsage, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbstractService/DfrPathName.ta.mjs";
+import { type DfrPathName, _decode_DfrPathName, _encode_DfrPathName } from "../DFRAbstractService/DfrPathName.ta.mjs";
 import { id_att_dfr_pathname } from "../DFRObjectIdentifiers/id-att-dfr-pathname.va.mjs";
 
 

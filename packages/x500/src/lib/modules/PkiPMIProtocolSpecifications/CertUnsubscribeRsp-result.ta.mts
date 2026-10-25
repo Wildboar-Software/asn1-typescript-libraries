@@ -7,7 +7,7 @@ import {
     _encode_CertUnsubscribeErr,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeErr.ta.mjs";
 import {
-    CertUnsubscribeOK,
+    type CertUnsubscribeOK,
     _decode_CertUnsubscribeOK,
     _encode_CertUnsubscribeOK,
 } from "../PkiPMIProtocolSpecifications/CertUnsubscribeOK.ta.mjs";

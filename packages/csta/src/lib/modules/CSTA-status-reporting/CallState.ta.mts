@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { NULL, ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
-import { CompoundCallState, _decode_CompoundCallState, _encode_CompoundCallState } from "../CSTA-status-reporting/CompoundCallState.ta.mjs";
+import { type NULL, ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
+import { type CompoundCallState, _decode_CompoundCallState, _encode_CompoundCallState } from "../CSTA-status-reporting/CompoundCallState.ta.mjs";
 
 import { SimpleCallState, _decode_SimpleCallState, _encode_SimpleCallState } from "../CSTA-status-reporting/SimpleCallState.ta.mjs";
 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CallBarredParam, _decode_CallBarredParam, _encode_CallBarredParam } from "../MAP-ER-DataTypes/CallBarredParam.ta.mjs";
+import { type CallBarredParam, _decode_CallBarredParam, _encode_CallBarredParam } from "../MAP-ER-DataTypes/CallBarredParam.ta.mjs";
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 
 

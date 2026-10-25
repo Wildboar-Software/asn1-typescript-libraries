@@ -5,16 +5,16 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
-import { PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
-import { ProductionTime, _decode_ProductionTime, _encode_ProductionTime } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ProductionTime.ta.mjs";
-import { Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
-import { TransmissionMode, _decode_TransmissionMode, _encode_TransmissionMode } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/TransmissionMode.ta.mjs";
-import { Map, _decode_Map, _encode_Map } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Map.ta.mjs";
-import { BlockingUsage, _decode_BlockingUsage, _encode_BlockingUsage } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingUsage.ta.mjs";
-import { SlduStatusNotification, _decode_SlduStatusNotification, _encode_SlduStatusNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SlduStatusNotification.ta.mjs";
-import { FspData, _decode_FspData, _encode_FspData } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspData.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
+import { type InvokeId, _decode_InvokeId, _encode_InvokeId } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/InvokeId.ta.mjs";
+import { type PacketIdentification, _decode_PacketIdentification, _encode_PacketIdentification } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentification.ta.mjs";
+import { type ProductionTime, _decode_ProductionTime, _encode_ProductionTime } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/ProductionTime.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Duration.ta.mjs";
+import { type TransmissionMode, _decode_TransmissionMode, _encode_TransmissionMode } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/TransmissionMode.ta.mjs";
+import { type Map, _decode_Map, _encode_Map } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Map.ta.mjs";
+import { type BlockingUsage, _decode_BlockingUsage, _encode_BlockingUsage } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/BlockingUsage.ta.mjs";
+import { type SlduStatusNotification, _decode_SlduStatusNotification, _encode_SlduStatusNotification } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SlduStatusNotification.ta.mjs";
+import { type FspData, _decode_FspData, _encode_FspData } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspData.ta.mjs";
 
 
 /**

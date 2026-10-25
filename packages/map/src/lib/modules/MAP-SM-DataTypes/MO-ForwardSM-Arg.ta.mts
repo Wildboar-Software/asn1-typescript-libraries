@@ -5,13 +5,13 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 import { SM_DeliveryOutcome, _decode_SM_DeliveryOutcome, _encode_SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome } from "../MAP-SM-DataTypes/SM-DeliveryOutcome.ta.mjs";
-import { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
-import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
+import { type SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
+import { type SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
 
 
 /**

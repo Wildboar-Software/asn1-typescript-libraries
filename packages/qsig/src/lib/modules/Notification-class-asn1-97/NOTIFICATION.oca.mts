@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Code } from "../Notification-class-asn1-97/Code.ta.mjs";
+import { type Code } from "../Notification-class-asn1-97/Code.ta.mjs";
 
 /**
  * @summary NOTIFICATION

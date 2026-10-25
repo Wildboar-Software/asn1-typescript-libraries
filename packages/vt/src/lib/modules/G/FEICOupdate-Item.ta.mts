@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
+import { type FEI, _decode_FEI, _encode_FEI } from "../G/FEI.ta.mjs";
 
 
 /**

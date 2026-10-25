@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InitiatorName,
+    type InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
 } from '../AccessControl-ASN1Module/InitiatorName.ta.mjs';
 import {
-    SdaList,
+    type SdaList,
     _decode_SdaList,
     _encode_SdaList,
 } from '../AccessControl-ASN1Module/SdaList.ta.mjs';

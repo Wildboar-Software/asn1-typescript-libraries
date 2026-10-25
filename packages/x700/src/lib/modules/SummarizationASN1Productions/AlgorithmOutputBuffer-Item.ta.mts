@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip';
 import {
-    ObservedValue,
+    type ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module';

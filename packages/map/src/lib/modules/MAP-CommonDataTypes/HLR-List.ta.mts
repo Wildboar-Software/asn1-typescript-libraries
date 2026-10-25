@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_HLR_Id, _encode_HLR_Id, HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
+import { _decode_HLR_Id, _encode_HLR_Id, type HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
 
 
 import { maxNumOfHLR_Id } from "./maxNumOfHLR-Id.va.mjs";

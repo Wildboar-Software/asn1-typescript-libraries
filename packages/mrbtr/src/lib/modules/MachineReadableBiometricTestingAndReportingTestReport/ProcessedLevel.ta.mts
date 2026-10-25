@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
+    type ENUMERATED,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,

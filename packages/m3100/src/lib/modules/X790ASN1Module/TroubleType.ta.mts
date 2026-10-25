@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TroubleType_number,
+    type TroubleType_number,
     _decode_TroubleType_number,
     _encode_TroubleType_number,
 } from '../X790ASN1Module/TroubleType-number.ta.mjs';

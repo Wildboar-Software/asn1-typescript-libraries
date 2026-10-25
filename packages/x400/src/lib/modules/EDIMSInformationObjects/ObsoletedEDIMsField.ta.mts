@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObsoletedEDIMsSubfield,
+    type ObsoletedEDIMsSubfield,
     _decode_ObsoletedEDIMsSubfield,
     _encode_ObsoletedEDIMsSubfield,
 } from '../EDIMSInformationObjects/ObsoletedEDIMsSubfield.ta.mjs';

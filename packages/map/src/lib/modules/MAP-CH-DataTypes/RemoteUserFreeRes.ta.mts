@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RUF_Outcome, _decode_RUF_Outcome, _encode_RUF_Outcome, _enum_for_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
+import { type RUF_Outcome, _decode_RUF_Outcome, _encode_RUF_Outcome, _enum_for_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ECCAlgorithm,
+    type ECCAlgorithm,
     _decode_ECCAlgorithm,
     _encode_ECCAlgorithm,
 } from "../ANSI-X9-62/ECCAlgorithm.ta.mjs";

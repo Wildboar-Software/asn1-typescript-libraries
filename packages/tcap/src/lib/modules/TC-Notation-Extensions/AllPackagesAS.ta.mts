@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TCSingleAS,
+    type TCSingleAS,
     _decode_TCSingleAS,
     _encode_TCSingleAS,
 } from '../TC-Notation-Extensions/TCSingleAS.ta.mjs';

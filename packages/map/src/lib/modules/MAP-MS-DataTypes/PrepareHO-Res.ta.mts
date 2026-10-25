@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
+import { type AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 import { AoIPCodecsList, _decode_AoIPCodecsList, _encode_AoIPCodecsList } from "../MAP-MS-DataTypes/AoIPCodecsList.ta.mjs";
 import { ChosenRadioResourceInformation, _decode_ChosenRadioResourceInformation, _encode_ChosenRadioResourceInformation } from "../MAP-MS-DataTypes/ChosenRadioResourceInformation.ta.mjs";
-import { Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
+import { type Codec, _decode_Codec, _encode_Codec } from "../MAP-MS-DataTypes/Codec.ta.mjs";
 import { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataTypes/CodecList.ta.mjs";
-import { MulticallBearerInfo, _decode_MulticallBearerInfo, _encode_MulticallBearerInfo } from "../MAP-MS-DataTypes/MulticallBearerInfo.ta.mjs";
-import { RelocationNumberList, _decode_RelocationNumberList, _encode_RelocationNumberList } from "../MAP-MS-DataTypes/RelocationNumberList.ta.mjs";
+import { type MulticallBearerInfo, _decode_MulticallBearerInfo, _encode_MulticallBearerInfo } from "../MAP-MS-DataTypes/MulticallBearerInfo.ta.mjs";
+import { type RelocationNumberList, _decode_RelocationNumberList, _encode_RelocationNumberList } from "../MAP-MS-DataTypes/RelocationNumberList.ta.mjs";
 import { SelectedUMTS_Algorithms, _decode_SelectedUMTS_Algorithms, _encode_SelectedUMTS_Algorithms } from "../MAP-MS-DataTypes/SelectedUMTS-Algorithms.ta.mjs";
 
 

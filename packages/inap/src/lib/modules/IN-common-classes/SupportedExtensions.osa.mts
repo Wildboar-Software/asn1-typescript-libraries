@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../IN-common-classes/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../IN-common-classes/EXTENSION.oca.mjs";
 // export { EXTENSION } from "../IN-common-classes/EXTENSION.oca.mjs";
 import { firstExtension } from "../IN-common-classes/firstExtension.oa.mjs";
 // export { firstExtension } from "../IN-common-classes/firstExtension.oa.mjs";

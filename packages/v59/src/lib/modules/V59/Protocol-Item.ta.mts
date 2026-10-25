@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ErrorControl, _decode_ErrorControl, _encode_ErrorControl } from "../V59/ErrorControl.ta.mjs";
+import { type ErrorControl, _decode_ErrorControl, _encode_ErrorControl } from "../V59/ErrorControl.ta.mjs";
 
-import { Compression, _decode_Compression, _encode_Compression } from "../V59/Compression.ta.mjs";
+import { type Compression, _decode_Compression, _encode_Compression } from "../V59/Compression.ta.mjs";
 
 /**
  * @summary Protocol_Item

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { EXTENSION } from "@wildboar/x500/AuthenticationFramework";
 import {
-    BiometricSyntax,
+    type BiometricSyntax,
     _decode_BiometricSyntax,
     _encode_BiometricSyntax,
 } from "../PKIXqualified97/BiometricSyntax.ta.mjs";

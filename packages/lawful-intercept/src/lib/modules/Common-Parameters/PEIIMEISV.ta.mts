@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMEISV, _decode_IMEISV, _encode_IMEISV } from "../Common-Parameters/IMEISV.ta.mjs";
+import { type IMEISV, _decode_IMEISV, _encode_IMEISV } from "../Common-Parameters/IMEISV.ta.mjs";
 // export { IMEISV, _decode_IMEISV, _encode_IMEISV } from "../Common-Parameters/IMEISV.ta.mjs";
 
 

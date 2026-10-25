@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BioAPI_DB_ACCESS_TYPE,
+  type BioAPI_DB_ACCESS_TYPE,
   _decode_BioAPI_DB_ACCESS_TYPE,
   _encode_BioAPI_DB_ACCESS_TYPE,
 } from '../BIP/BioAPI-DB-ACCESS-TYPE.ta.mjs';

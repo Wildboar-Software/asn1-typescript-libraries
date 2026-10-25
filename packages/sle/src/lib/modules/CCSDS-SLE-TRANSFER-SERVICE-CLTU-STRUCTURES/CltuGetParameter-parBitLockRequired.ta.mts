@@ -6,10 +6,10 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterName, _encode_ParameterName, ParameterName,
+import { _decode_ParameterName, _encode_ParameterName, type ParameterName,
     ParameterName_bitLockRequired
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { _decode_CltuGetParameter_parBitLockRequired_parameterValue, _encode_CltuGetParameter_parBitLockRequired_parameterValue, CltuGetParameter_parBitLockRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parBitLockRequired-parameterValue.ta.mjs";
+import { _decode_CltuGetParameter_parBitLockRequired_parameterValue, _encode_CltuGetParameter_parBitLockRequired_parameterValue, type CltuGetParameter_parBitLockRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter-parBitLockRequired-parameterValue.ta.mjs";
 
 
 

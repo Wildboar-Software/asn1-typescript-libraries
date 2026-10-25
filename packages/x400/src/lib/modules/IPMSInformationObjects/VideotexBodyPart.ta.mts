@@ -16,7 +16,7 @@ import {
     _encode_VideotexParameters,
 } from '../IPMSInformationObjects/VideotexParameters.ta.mjs';
 import {
-    VideotexData,
+    type VideotexData,
     _decode_VideotexData,
     _encode_VideotexData,
 } from '../IPMSInformationObjects/VideotexData.ta.mjs';

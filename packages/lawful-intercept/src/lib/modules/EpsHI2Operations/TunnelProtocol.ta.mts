@@ -2,8 +2,8 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL,
-    OCTET_STRING
+    type NULL,
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

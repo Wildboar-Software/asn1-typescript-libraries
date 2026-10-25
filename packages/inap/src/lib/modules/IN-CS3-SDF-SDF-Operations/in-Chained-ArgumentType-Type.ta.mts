@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IN_ChainingArguments, _decode_IN_ChainingArguments, _encode_IN_ChainingArguments } from "../IN-CS3-SDF-SDF-Operations/IN-ChainingArguments.ta.mjs";
+import { type IN_ChainingArguments, _decode_IN_ChainingArguments, _encode_IN_ChainingArguments } from "../IN-CS3-SDF-SDF-Operations/IN-ChainingArguments.ta.mjs";
 // export { IN_ChainingArguments, _decode_IN_ChainingArguments, _encode_IN_ChainingArguments } from "../IN-CS3-SDF-SDF-Operations/IN-ChainingArguments.ta.mjs";
 
 

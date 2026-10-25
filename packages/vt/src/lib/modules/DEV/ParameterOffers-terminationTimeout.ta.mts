@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeOffer, _decode_TimeOffer, _encode_TimeOffer } from "../DEV/TimeOffer.ta.mjs";
+import { type TimeOffer, _decode_TimeOffer, _encode_TimeOffer } from "../DEV/TimeOffer.ta.mjs";
 import { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_terminationTimeout_eventId, _encode_ParameterOffers_terminationTimeout_eventId } from "../DEV/ParameterOffers-terminationTimeout-eventId.ta.mjs";
 
 

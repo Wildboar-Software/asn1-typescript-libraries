@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    WeekMask_daysOfWeek,
+    type WeekMask_daysOfWeek,
     _decode_WeekMask_daysOfWeek,
     _encode_WeekMask_daysOfWeek,
 } from '../X790ASN1Module/WeekMask-daysOfWeek.ta.mjs';

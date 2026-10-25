@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Epochs,
+    type Epochs,
     _decode_Epochs,
     _encode_Epochs,
 } from '../TimeRepresentation/Epochs.ta.mjs';
 import {
-    Seconds,
+    type Seconds,
     _decode_Seconds,
     _encode_Seconds,
 } from '../TimeRepresentation/Seconds.ta.mjs';
 import {
-    Nanoseconds,
+    type Nanoseconds,
     _decode_Nanoseconds,
     _encode_Nanoseconds,
 } from '../TimeRepresentation/Nanoseconds.ta.mjs';
 import {
-    MaximumErrorInNanoseconds,
+    type MaximumErrorInNanoseconds,
     _decode_MaximumErrorInNanoseconds,
     _encode_MaximumErrorInNanoseconds,
 } from '../TimeRepresentation/MaximumErrorInNanoseconds.ta.mjs';

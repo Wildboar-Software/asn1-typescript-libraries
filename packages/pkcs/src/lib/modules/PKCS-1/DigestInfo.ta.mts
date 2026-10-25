@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DigestAlgorithm,
+    type DigestAlgorithm,
     _decode_DigestAlgorithm,
     _encode_DigestAlgorithm,
 } from "../PKCS-1/DigestAlgorithm.ta.mjs";

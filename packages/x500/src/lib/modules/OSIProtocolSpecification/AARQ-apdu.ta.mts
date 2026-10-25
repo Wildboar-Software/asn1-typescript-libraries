@@ -7,43 +7,43 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
 import {
-    AARQ_apdu_protocol_version,
+    type AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
 } from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta.mjs";
 import {
-    AE_invocation_identifier,
+    type AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
 } from "../OSIProtocolSpecification/AE-invocation-identifier.ta.mjs";
 import {
-    AP_invocation_identifier,
+    type AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
 } from "../OSIProtocolSpecification/AP-invocation-identifier.ta.mjs";
 import {
-    Application_context_name,
+    type Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
 } from "../OSIProtocolSpecification/Application-context-name.ta.mjs";
 import {
-    Association_informationBind,
+    type Association_informationBind,
     _decode_Association_informationBind,
     _encode_Association_informationBind,
 } from "../OSIProtocolSpecification/Association-informationBind.ta.mjs";
 import {
-    Implementation_data,
+    type Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
 } from "../OSIProtocolSpecification/Implementation-data.ta.mjs";

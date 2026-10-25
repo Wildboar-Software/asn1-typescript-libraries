@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_BIR_PURPOSE,
+  type BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
 } from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
 import {
-  BioAPI_BIR_SUBTYPE,
+  type BioAPI_BIR_SUBTYPE,
   _decode_BioAPI_BIR_SUBTYPE,
   _encode_BioAPI_BIR_SUBTYPE,
 } from '../BIP/BioAPI-BIR-SUBTYPE.ta.mjs';
@@ -34,7 +34,7 @@ import {
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';

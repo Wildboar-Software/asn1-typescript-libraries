@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
+import { type InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
 import { Constraints, _decode_Constraints, _encode_Constraints } from "../IN-CS2-datatypes/Constraints.ta.mjs";
 
 

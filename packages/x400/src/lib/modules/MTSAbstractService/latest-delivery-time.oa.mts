@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    LatestDeliveryTime,
+    type LatestDeliveryTime,
     _decode_LatestDeliveryTime,
     _encode_LatestDeliveryTime,
 } from '../MTSAbstractService/LatestDeliveryTime.ta.mjs';

@@ -6,11 +6,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-import { IntResult_extension, _decode_IntResult_extension, _encode_IntResult_extension } from "../Call-Diversion-Operations-asn1-97/IntResult-extension.ta.mjs";
+import { type IntResult_extension, _decode_IntResult_extension, _encode_IntResult_extension } from "../Call-Diversion-Operations-asn1-97/IntResult-extension.ta.mjs";
 
 /**
  * @summary IntResult

@@ -8,7 +8,7 @@ import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreS
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_houseIdentifier } from "../SelectedAttributeTypes/id-at-houseIdentifier.va.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";

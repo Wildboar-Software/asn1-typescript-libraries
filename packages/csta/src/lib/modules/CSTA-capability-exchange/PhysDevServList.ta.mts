@@ -3,56 +3,56 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ButtonPress, _decode_ButtonPress, _encode_ButtonPress } from "../CSTA-capability-exchange/ButtonPress.ta.mjs";
+import { type ButtonPress, _decode_ButtonPress, _encode_ButtonPress } from "../CSTA-capability-exchange/ButtonPress.ta.mjs";
 
-import { GetAuditoryApparatusInfo, _decode_GetAuditoryApparatusInfo, _encode_GetAuditoryApparatusInfo } from "../CSTA-capability-exchange/GetAuditoryApparatusInfo.ta.mjs";
+import { type GetAuditoryApparatusInfo, _decode_GetAuditoryApparatusInfo, _encode_GetAuditoryApparatusInfo } from "../CSTA-capability-exchange/GetAuditoryApparatusInfo.ta.mjs";
 
-import { GetButtonInformation, _decode_GetButtonInformation, _encode_GetButtonInformation } from "../CSTA-capability-exchange/GetButtonInformation.ta.mjs";
+import { type GetButtonInformation, _decode_GetButtonInformation, _encode_GetButtonInformation } from "../CSTA-capability-exchange/GetButtonInformation.ta.mjs";
 
-import { GetDisplay, _decode_GetDisplay, _encode_GetDisplay } from "../CSTA-capability-exchange/GetDisplay.ta.mjs";
+import { type GetDisplay, _decode_GetDisplay, _encode_GetDisplay } from "../CSTA-capability-exchange/GetDisplay.ta.mjs";
 
-import { GetHookSwitchStatus, _decode_GetHookSwitchStatus, _encode_GetHookSwitchStatus } from "../CSTA-capability-exchange/GetHookSwitchStatus.ta.mjs";
+import { type GetHookSwitchStatus, _decode_GetHookSwitchStatus, _encode_GetHookSwitchStatus } from "../CSTA-capability-exchange/GetHookSwitchStatus.ta.mjs";
 
-import { GetLampInfo, _decode_GetLampInfo, _encode_GetLampInfo } from "../CSTA-capability-exchange/GetLampInfo.ta.mjs";
+import { type GetLampInfo, _decode_GetLampInfo, _encode_GetLampInfo } from "../CSTA-capability-exchange/GetLampInfo.ta.mjs";
 
-import { GetLampMode, _decode_GetLampMode, _encode_GetLampMode } from "../CSTA-capability-exchange/GetLampMode.ta.mjs";
+import { type GetLampMode, _decode_GetLampMode, _encode_GetLampMode } from "../CSTA-capability-exchange/GetLampMode.ta.mjs";
 
-import { GetMessageWaitingIndicator, _decode_GetMessageWaitingIndicator, _encode_GetMessageWaitingIndicator } from "../CSTA-capability-exchange/GetMessageWaitingIndicator.ta.mjs";
+import { type GetMessageWaitingIndicator, _decode_GetMessageWaitingIndicator, _encode_GetMessageWaitingIndicator } from "../CSTA-capability-exchange/GetMessageWaitingIndicator.ta.mjs";
 
-import { GetMicrophoneGain, _decode_GetMicrophoneGain, _encode_GetMicrophoneGain } from "../CSTA-capability-exchange/GetMicrophoneGain.ta.mjs";
+import { type GetMicrophoneGain, _decode_GetMicrophoneGain, _encode_GetMicrophoneGain } from "../CSTA-capability-exchange/GetMicrophoneGain.ta.mjs";
 
-import { GetMicrophoneMute, _decode_GetMicrophoneMute, _encode_GetMicrophoneMute } from "../CSTA-capability-exchange/GetMicrophoneMute.ta.mjs";
+import { type GetMicrophoneMute, _decode_GetMicrophoneMute, _encode_GetMicrophoneMute } from "../CSTA-capability-exchange/GetMicrophoneMute.ta.mjs";
 
-import { GetRingerStatus, _decode_GetRingerStatus, _encode_GetRingerStatus } from "../CSTA-capability-exchange/GetRingerStatus.ta.mjs";
+import { type GetRingerStatus, _decode_GetRingerStatus, _encode_GetRingerStatus } from "../CSTA-capability-exchange/GetRingerStatus.ta.mjs";
 
-import { GetSpeakerMute, _decode_GetSpeakerMute, _encode_GetSpeakerMute } from "../CSTA-capability-exchange/GetSpeakerMute.ta.mjs";
+import { type GetSpeakerMute, _decode_GetSpeakerMute, _encode_GetSpeakerMute } from "../CSTA-capability-exchange/GetSpeakerMute.ta.mjs";
 
-import { GetSpeakerVolume, _decode_GetSpeakerVolume, _encode_GetSpeakerVolume } from "../CSTA-capability-exchange/GetSpeakerVolume.ta.mjs";
+import { type GetSpeakerVolume, _decode_GetSpeakerVolume, _encode_GetSpeakerVolume } from "../CSTA-capability-exchange/GetSpeakerVolume.ta.mjs";
 
-import { SetButtonInformation, _decode_SetButtonInformation, _encode_SetButtonInformation } from "../CSTA-capability-exchange/SetButtonInformation.ta.mjs";
+import { type SetButtonInformation, _decode_SetButtonInformation, _encode_SetButtonInformation } from "../CSTA-capability-exchange/SetButtonInformation.ta.mjs";
 
-import { SetDisplay, _decode_SetDisplay, _encode_SetDisplay } from "../CSTA-capability-exchange/SetDisplay.ta.mjs";
+import { type SetDisplay, _decode_SetDisplay, _encode_SetDisplay } from "../CSTA-capability-exchange/SetDisplay.ta.mjs";
 
-import { SetHookSwitchStatus, _decode_SetHookSwitchStatus, _encode_SetHookSwitchStatus } from "../CSTA-capability-exchange/SetHookSwitchStatus.ta.mjs";
+import { type SetHookSwitchStatus, _decode_SetHookSwitchStatus, _encode_SetHookSwitchStatus } from "../CSTA-capability-exchange/SetHookSwitchStatus.ta.mjs";
 
-import { SetLampMode, _decode_SetLampMode, _encode_SetLampMode } from "../CSTA-capability-exchange/SetLampMode.ta.mjs";
+import { type SetLampMode, _decode_SetLampMode, _encode_SetLampMode } from "../CSTA-capability-exchange/SetLampMode.ta.mjs";
 
-import { SetMessageWaitingIndicator, _decode_SetMessageWaitingIndicator, _encode_SetMessageWaitingIndicator } from "../CSTA-capability-exchange/SetMessageWaitingIndicator.ta.mjs";
+import { type SetMessageWaitingIndicator, _decode_SetMessageWaitingIndicator, _encode_SetMessageWaitingIndicator } from "../CSTA-capability-exchange/SetMessageWaitingIndicator.ta.mjs";
 
-import { SetMicrophoneGain, _decode_SetMicrophoneGain, _encode_SetMicrophoneGain } from "../CSTA-capability-exchange/SetMicrophoneGain.ta.mjs";
+import { type SetMicrophoneGain, _decode_SetMicrophoneGain, _encode_SetMicrophoneGain } from "../CSTA-capability-exchange/SetMicrophoneGain.ta.mjs";
 
-import { SetMicrophoneMute, _decode_SetMicrophoneMute, _encode_SetMicrophoneMute } from "../CSTA-capability-exchange/SetMicrophoneMute.ta.mjs";
+import { type SetMicrophoneMute, _decode_SetMicrophoneMute, _encode_SetMicrophoneMute } from "../CSTA-capability-exchange/SetMicrophoneMute.ta.mjs";
 
-import { SetRingerStatus, _decode_SetRingerStatus, _encode_SetRingerStatus } from "../CSTA-capability-exchange/SetRingerStatus.ta.mjs";
+import { type SetRingerStatus, _decode_SetRingerStatus, _encode_SetRingerStatus } from "../CSTA-capability-exchange/SetRingerStatus.ta.mjs";
 
-import { SetSpeakerMute, _decode_SetSpeakerMute, _encode_SetSpeakerMute } from "../CSTA-capability-exchange/SetSpeakerMute.ta.mjs";
+import { type SetSpeakerMute, _decode_SetSpeakerMute, _encode_SetSpeakerMute } from "../CSTA-capability-exchange/SetSpeakerMute.ta.mjs";
 
-import { SetSpeakerVolume, _decode_SetSpeakerVolume, _encode_SetSpeakerVolume } from "../CSTA-capability-exchange/SetSpeakerVolume.ta.mjs";
+import { type SetSpeakerVolume, _decode_SetSpeakerVolume, _encode_SetSpeakerVolume } from "../CSTA-capability-exchange/SetSpeakerVolume.ta.mjs";
 
 
 

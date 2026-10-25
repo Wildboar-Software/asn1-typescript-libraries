@@ -2,7 +2,7 @@
 import * as $ from "@wildboar/asn1/functional";
 import { CriticalityType } from "../IN-CS3-common-datatypes/CriticalityType.ta.mjs";
 // export { CriticalityType, _enum_for_CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, ignore /* IMPORTED_SHORT_ENUMERATION_ITEM */, CriticalityType_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType } from "../IN-CS3-common-datatypes/CriticalityType.ta.mjs";
-import { Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { type Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 
 

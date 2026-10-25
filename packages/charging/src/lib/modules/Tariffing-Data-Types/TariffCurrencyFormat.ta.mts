@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationChargeCurrency, _decode_CommunicationChargeCurrency, _encode_CommunicationChargeCurrency } from "../Tariffing-Data-Types/CommunicationChargeCurrency.ta.mjs";
-import { TariffCurrencyFormat_tariffControlIndicators, _decode_TariffCurrencyFormat_tariffControlIndicators, _encode_TariffCurrencyFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffCurrencyFormat-tariffControlIndicators.ta.mjs";
+import { type TariffCurrencyFormat_tariffControlIndicators, _decode_TariffCurrencyFormat_tariffControlIndicators, _encode_TariffCurrencyFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffCurrencyFormat-tariffControlIndicators.ta.mjs";
 import { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
 import { maxCommunicationTariffNum } from "../Tariffing-Data-Types/maxCommunicationTariffNum.va.mjs";
 import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicationTariffNum.va.mjs";

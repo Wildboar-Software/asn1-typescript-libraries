@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObsoletedIPMsSubfield,
+    type ObsoletedIPMsSubfield,
     _decode_ObsoletedIPMsSubfield,
     _encode_ObsoletedIPMsSubfield,
 } from '../IPMSInformationObjects/ObsoletedIPMsSubfield.ta.mjs';

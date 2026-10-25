@@ -13,11 +13,11 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TimePeriod,
+    type TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip';
+import { type AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip';
 
 /**
  * @summary AttributeMeasure

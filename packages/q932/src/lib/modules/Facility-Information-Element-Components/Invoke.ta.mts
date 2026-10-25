@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
-import { Invoke_linkedId, _decode_Invoke_linkedId, _encode_Invoke_linkedId } from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
+import { type InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
+import { type Invoke_linkedId, _decode_Invoke_linkedId, _encode_Invoke_linkedId } from "../Facility-Information-Element-Components/Invoke-linkedId.ta.mjs";
 import { type Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 
 

@@ -4,7 +4,7 @@ import {
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_flowControl_ArgumentType_controlReceiver, _encode_flowControl_ArgumentType_controlReceiver, _enum_for_flowControl_ArgumentType_controlReceiver, flowControl_ArgumentType_controlReceiver } from "../Flow-Control/flowControl-ArgumentType-controlReceiver.ta.mjs";

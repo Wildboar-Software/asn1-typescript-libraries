@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
-import { ListNotificationResponse_listNotificationsResultError, _decode_ListNotificationResponse_listNotificationsResultError, _encode_ListNotificationResponse_listNotificationsResultError } from "../RSPDefinitions/ListNotificationResponse-listNotificationsResultError.ta.mjs";
+import { type ListNotificationResponse_listNotificationsResultError, _decode_ListNotificationResponse_listNotificationsResultError, _encode_ListNotificationResponse_listNotificationsResultError } from "../RSPDefinitions/ListNotificationResponse-listNotificationsResultError.ta.mjs";
 
 
 /**

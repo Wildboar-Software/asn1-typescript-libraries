@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  FilterItem,
+  type FilterItem,
   _decode_FilterItem,
   _encode_FilterItem,
 } from '../CMIP-1/FilterItem.ta.mjs';

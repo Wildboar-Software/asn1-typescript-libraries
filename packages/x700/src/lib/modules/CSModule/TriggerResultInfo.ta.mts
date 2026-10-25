@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TriggerId,
+    type TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
 } from '../CSModule/TriggerId.ta.mjs';
 import {
-    TriggerResultInfo_resultType,
+    type TriggerResultInfo_resultType,
     _decode_TriggerResultInfo_resultType,
     _encode_TriggerResultInfo_resultType,
 } from '../CSModule/TriggerResultInfo-resultType.ta.mjs';

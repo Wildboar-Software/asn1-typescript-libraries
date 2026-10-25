@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CMSSigncryption/CMSVersion.ta.mjs";
@@ -16,7 +16,7 @@ import {
     _encode_SignatureInformation,
 } from "../CMSSigncryption/SignatureInformation.ta.mjs";
 import {
-    SigncryptedDataAlgorithmIdentifier,
+    type SigncryptedDataAlgorithmIdentifier,
     _decode_SigncryptedDataAlgorithmIdentifier,
     _encode_SigncryptedDataAlgorithmIdentifier,
 } from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta.mjs";
@@ -26,12 +26,12 @@ import {
     _encode_SigncrypterIDs,
 } from "../CMSSigncryption/SigncrypterIDs.ta.mjs";
 import {
-    SigncryptionValue,
+    type SigncryptionValue,
     _decode_SigncryptionValue,
     _encode_SigncryptionValue,
 } from "../CMSSigncryption/SigncryptionValue.ta.mjs";
 import {
-    UnSigncryptedAttributes,
+    type UnSigncryptedAttributes,
     _decode_UnSigncryptedAttributes,
     _encode_UnSigncryptedAttributes,
 } from "../CMSSigncryption/UnSigncryptedAttributes.ta.mjs";

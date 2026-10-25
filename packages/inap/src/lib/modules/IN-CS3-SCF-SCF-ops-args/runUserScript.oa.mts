@@ -3,9 +3,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { RunUserScriptArg, _decode_RunUserScriptArg, _encode_RunUserScriptArg } from "../IN-CS3-SCF-SCF-ops-args/RunUserScriptArg.ta.mjs";
+import { type RunUserScriptArg, _decode_RunUserScriptArg, _encode_RunUserScriptArg } from "../IN-CS3-SCF-SCF-ops-args/RunUserScriptArg.ta.mjs";
 // export { RunUserScriptArg, _decode_RunUserScriptArg, _encode_RunUserScriptArg } from "../IN-CS3-SCF-SCF-ops-args/RunUserScriptArg.ta.mjs";
-import { RunUserScriptResultArg, _decode_RunUserScriptResultArg, _encode_RunUserScriptResultArg } from "../IN-CS3-SCF-SCF-ops-args/RunUserScriptResultArg.ta.mjs";
+import { type RunUserScriptResultArg, _decode_RunUserScriptResultArg, _encode_RunUserScriptResultArg } from "../IN-CS3-SCF-SCF-ops-args/RunUserScriptResultArg.ta.mjs";
 // export { RunUserScriptResultArg, _decode_RunUserScriptResultArg, _encode_RunUserScriptResultArg } from "../IN-CS3-SCF-SCF-ops-args/RunUserScriptResultArg.ta.mjs";
 import { missingCustomerRecord } from "../IN-CS3-errortypes/missingCustomerRecord.oa.mjs";
 // export { missingCustomerRecord } from "../IN-CS3-errortypes/missingCustomerRecord.oa.mjs";

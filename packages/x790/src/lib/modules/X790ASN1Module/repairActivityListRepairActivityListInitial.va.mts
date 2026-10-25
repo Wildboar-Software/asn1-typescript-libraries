@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RepairActivityList,
+    type RepairActivityList,
 } from "../X790ASN1Module/RepairActivityList.ta.mjs";
 
 

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_SUBTYPE_MASK,
+  type BioAPI_BIR_SUBTYPE_MASK,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
 } from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.mjs';
 import {
-  BioAPI_GUI_RESPONSE,
+  type BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,

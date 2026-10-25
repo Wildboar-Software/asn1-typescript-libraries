@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { CcOptionalArg, _decode_CcOptionalArg, _encode_CcOptionalArg } from "../SS-CC-Operations-asn1-97/CcOptionalArg.ta.mjs";
+import { type CcOptionalArg, _decode_CcOptionalArg, _encode_CcOptionalArg } from "../SS-CC-Operations-asn1-97/CcOptionalArg.ta.mjs";
 
 /**
  * @summary ccCancel

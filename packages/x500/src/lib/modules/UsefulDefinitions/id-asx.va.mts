@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { attributeSyntax } from "../UsefulDefinitions/attributeSyntax.va.mjs";
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 /**
  * @summary id_asx
  * @description

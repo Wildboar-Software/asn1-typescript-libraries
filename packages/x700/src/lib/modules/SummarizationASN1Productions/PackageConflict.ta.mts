@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PackageConflict_Item,
+    type PackageConflict_Item,
     _decode_PackageConflict_Item,
     _encode_PackageConflict_Item,
 } from '../SummarizationASN1Productions/PackageConflict-Item.ta.mjs';

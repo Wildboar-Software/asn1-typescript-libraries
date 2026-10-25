@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "@wildboar/asn1";
+import { type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type DIGEST_ALGORITHM } from "../AlgorithmInformation-2009/DIGEST-ALGORITHM.oca.mjs";
 import {

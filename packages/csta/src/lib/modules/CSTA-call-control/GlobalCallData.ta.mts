@@ -3,15 +3,15 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GlobalCallLinkageID, _decode_GlobalCallLinkageID, _encode_GlobalCallLinkageID } from "../CSTA-call-control/GlobalCallLinkageID.ta.mjs";
+import { type GlobalCallLinkageID, _decode_GlobalCallLinkageID, _encode_GlobalCallLinkageID } from "../CSTA-call-control/GlobalCallLinkageID.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
 
 

@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateRevocationLists,
+    type CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
 } from "../PKCS7/CertificateRevocationLists.ta.mjs";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../PKCS7/CertificateSet.ta.mjs";

@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetadataRequest } from "../RSPDefinitions/StoreMetadataRequest.ta.mjs";
 import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";

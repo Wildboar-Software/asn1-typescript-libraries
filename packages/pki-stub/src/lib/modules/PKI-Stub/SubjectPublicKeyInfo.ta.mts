@@ -16,7 +16,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 import {
-    PublicKey,
+    type PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
 } from "../PKI-Stub/PublicKey.ta.mjs";

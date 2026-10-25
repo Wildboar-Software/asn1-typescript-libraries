@@ -11,12 +11,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ASQcontent_class, _decode_ASQcontent_class, _encode_ASQcontent_class } from "../ISO9041-VTP/ASQcontent-class.ta.mjs";
+import { type ASQcontent_class, _decode_ASQcontent_class, _encode_ASQcontent_class } from "../ISO9041-VTP/ASQcontent-class.ta.mjs";
 import { _decode_ImplementationIdent, _encode_ImplementationIdent, ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
 import { _decode_FunctionalUnits, _encode_FunctionalUnits, type FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
 import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
 import { _decode_ProtocolVersion, _encode_ProtocolVersion, type ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
-import { ASQcontent_either, _decode_ASQcontent_either, _encode_ASQcontent_either } from "../ISO9041-VTP/ASQcontent-either.ta.mjs";
+import { type ASQcontent_either, _decode_ASQcontent_either, _encode_ASQcontent_either } from "../ISO9041-VTP/ASQcontent-either.ta.mjs";
 
 
 /**

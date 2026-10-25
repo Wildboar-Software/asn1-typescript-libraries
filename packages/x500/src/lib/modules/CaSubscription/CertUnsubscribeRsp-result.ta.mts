@@ -7,7 +7,7 @@ import {
     _encode_CertUnsubscribeErr,
 } from "../CaSubscription/CertUnsubscribeErr.ta.mjs";
 import {
-    CertUnsubscribeOK,
+    type CertUnsubscribeOK,
     _decode_CertUnsubscribeOK,
     _encode_CertUnsubscribeOK,
 } from "../CaSubscription/CertUnsubscribeOK.ta.mjs";

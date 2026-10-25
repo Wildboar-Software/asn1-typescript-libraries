@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OriginalTimestamp, _decode_OriginalTimestamp, _encode_OriginalTimestamp } from "../ILHIPDU/OriginalTimestamp.ta.mjs";
+import { type OriginalTimestamp, _decode_OriginalTimestamp, _encode_OriginalTimestamp } from "../ILHIPDU/OriginalTimestamp.ta.mjs";
 // export { OriginalTimestamp, _decode_OriginalTimestamp, _encode_OriginalTimestamp } from "../ILHIPDU/OriginalTimestamp.ta.mjs";
-import { ILHITimestamp, _decode_ILHITimestamp, _encode_ILHITimestamp } from "../ILHIPDU/ILHITimestamp.ta.mjs";
+import { type ILHITimestamp, _decode_ILHITimestamp, _encode_ILHITimestamp } from "../ILHIPDU/ILHITimestamp.ta.mjs";
 // export { ILHITimestamp, _decode_ILHITimestamp, _encode_ILHITimestamp } from "../ILHIPDU/ILHITimestamp.ta.mjs";
 import { _enum_for_TimeStampQualifier } from "../LI-PS-PDU/TimeStampQualifier.ta.mjs";
 import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";

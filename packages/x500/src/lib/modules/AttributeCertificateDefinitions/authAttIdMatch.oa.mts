@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AuthorityAttributeIdentifierSyntax,
+    type AuthorityAttributeIdentifierSyntax,
     _decode_AuthorityAttributeIdentifierSyntax,
     _encode_AuthorityAttributeIdentifierSyntax,
 } from "../AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";

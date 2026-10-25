@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonReceiptReasonField,
+    type NonReceiptReasonField,
     _enum_for_NonReceiptReasonField,
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,
@@ -24,17 +24,17 @@ import {
     _encode_DiscardReasonField,
 } from '../IPMSInformationObjects/DiscardReasonField.ta.mjs';
 import {
-    AutoForwardCommentField,
+    type AutoForwardCommentField,
     _decode_AutoForwardCommentField,
     _encode_AutoForwardCommentField,
 } from '../IPMSInformationObjects/AutoForwardCommentField.ta.mjs';
 import {
-    ReturnedIPMField,
+    type ReturnedIPMField,
     _decode_ReturnedIPMField,
     _encode_ReturnedIPMField,
 } from '../IPMSInformationObjects/ReturnedIPMField.ta.mjs';
 import {
-    NRNExtensionsField,
+    type NRNExtensionsField,
     _decode_NRNExtensionsField,
     _encode_NRNExtensionsField,
 } from '../IPMSInformationObjects/NRNExtensionsField.ta.mjs';

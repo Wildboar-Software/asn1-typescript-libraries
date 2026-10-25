@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_Select_Attributes,
 } from '../ISO8571-FTAM/Select-Attributes.ta.mjs';
 import {
-  Access_Request,
+  type Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
+  type Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
 } from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
@@ -37,12 +37,12 @@ import {
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Account,
+  type Account,
   _decode_Account,
   _encode_Account,
 } from '../ISO8571-FTAM/Account.ta.mjs';

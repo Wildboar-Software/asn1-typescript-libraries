@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    NotificationTimeField,
+    type NotificationTimeField,
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
 } from '../EDIMSInformationObjects/NotificationTimeField.ta.mjs';

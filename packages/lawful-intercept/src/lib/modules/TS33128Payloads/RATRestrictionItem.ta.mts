@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-import { RATRestrictionInformation, _decode_RATRestrictionInformation, _encode_RATRestrictionInformation } from "../TS33128Payloads/RATRestrictionInformation.ta.mjs";
+import { type RATRestrictionInformation, _decode_RATRestrictionInformation, _encode_RATRestrictionInformation } from "../TS33128Payloads/RATRestrictionInformation.ta.mjs";
 // export { RATRestrictionInformation, _decode_RATRestrictionInformation, _encode_RATRestrictionInformation } from "../TS33128Payloads/RATRestrictionInformation.ta.mjs";
 
 

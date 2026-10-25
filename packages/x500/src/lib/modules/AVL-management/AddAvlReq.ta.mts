@@ -6,12 +6,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
 import {
-    CertAVL,
+    type CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
 } from "@wildboar/pki-stub";

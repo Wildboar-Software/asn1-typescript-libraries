@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
@@ -21,12 +21,12 @@ import {
     _encode_KEKIdentifier,
 } from '../CmsTelebiometric/KEKIdentifier.ta.mjs';
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.mjs';
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from '../CmsTelebiometric/EncryptedKey.ta.mjs';

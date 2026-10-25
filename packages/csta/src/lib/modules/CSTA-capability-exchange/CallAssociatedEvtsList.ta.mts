@@ -3,20 +3,20 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CallInformation, _decode_CallInformation, _encode_CallInformation } from "../CSTA-capability-exchange/CallInformation.ta.mjs";
+import { type CallInformation, _decode_CallInformation, _encode_CallInformation } from "../CSTA-capability-exchange/CallInformation.ta.mjs";
 
-import { Charging, _decode_Charging, _encode_Charging } from "../CSTA-capability-exchange/Charging.ta.mjs";
+import { type Charging, _decode_Charging, _encode_Charging } from "../CSTA-capability-exchange/Charging.ta.mjs";
 
-import { DigitsGenerated, _decode_DigitsGenerated, _encode_DigitsGenerated } from "../CSTA-capability-exchange/DigitsGenerated.ta.mjs";
+import { type DigitsGenerated, _decode_DigitsGenerated, _encode_DigitsGenerated } from "../CSTA-capability-exchange/DigitsGenerated.ta.mjs";
 
-import { TelephonyTonesGenerated, _decode_TelephonyTonesGenerated, _encode_TelephonyTonesGenerated } from "../CSTA-capability-exchange/TelephonyTonesGenerated.ta.mjs";
+import { type TelephonyTonesGenerated, _decode_TelephonyTonesGenerated, _encode_TelephonyTonesGenerated } from "../CSTA-capability-exchange/TelephonyTonesGenerated.ta.mjs";
 
-import { ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_ServiceCompletionFailure } from "../CSTA-capability-exchange/ServiceCompletionFailure.ta.mjs";
+import { type ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_ServiceCompletionFailure } from "../CSTA-capability-exchange/ServiceCompletionFailure.ta.mjs";
 
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   TRUE_BIT,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
@@ -14,18 +14,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  C_INITIALIZE_RC_version_number,
+  type C_INITIALIZE_RC_version_number,
   C_INITIALIZE_RC_version_number_version2 /* IMPORTED_LONG_NAMED_BIT */,
   _decode_C_INITIALIZE_RC_version_number,
   _encode_C_INITIALIZE_RC_version_number,
 } from '../CCR/C-INITIALIZE-RC-version-number.ta.mjs';
 import {
-  User_data,
+  type User_data,
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
 import {
-  Ccr_requirements,
+  type Ccr_requirements,
   Ccr_requirements_static_commitment /* IMPORTED_LONG_NAMED_BIT */,
   _decode_Ccr_requirements,
   _encode_Ccr_requirements,

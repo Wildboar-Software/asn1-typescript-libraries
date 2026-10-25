@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    AuthenticatedDataACBio,
+    type AuthenticatedDataACBio,
     _decode_AuthenticatedDataACBio,
     _encode_AuthenticatedDataACBio,
 } from '../AuthenticationContextForBiometrics/AuthenticatedDataACBio.ta.mjs';

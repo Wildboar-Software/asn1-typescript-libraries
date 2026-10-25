@@ -16,7 +16,7 @@ import {
     _encode_TeletexParameters,
 } from '../IPMSInformationObjects/TeletexParameters.ta.mjs';
 import {
-    TeletexData,
+    type TeletexData,
     _decode_TeletexData,
     _encode_TeletexData,
 } from '../IPMSInformationObjects/TeletexData.ta.mjs';

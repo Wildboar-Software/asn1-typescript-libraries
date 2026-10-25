@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI.ta.mjs";
+import { type TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI.ta.mjs";
 // export { TAI, _decode_TAI, _encode_TAI } from "../TS33128IdentityAssociation/TAI.ta.mjs";
 
 

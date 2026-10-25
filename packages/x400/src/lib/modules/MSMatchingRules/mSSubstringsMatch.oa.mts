@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import {
-    SubstringAssertion,
+    type SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from '../MSMatchingRules/SubstringAssertion.ta.mjs';

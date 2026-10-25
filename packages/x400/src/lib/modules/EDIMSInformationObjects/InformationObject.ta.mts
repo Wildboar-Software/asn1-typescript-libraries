@@ -16,7 +16,7 @@ import {
     _encode_EDIM,
 } from '../EDIMSInformationObjects/EDIM.ta.mjs';
 import {
-    EDIN,
+    type EDIN,
     _decode_EDIN,
     _encode_EDIN,
 } from '../EDIMSInformationObjects/EDIN.ta.mjs';

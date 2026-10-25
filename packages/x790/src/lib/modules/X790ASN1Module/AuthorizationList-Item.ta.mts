@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RequestState,
+    type RequestState,
     _enum_for_RequestState,
     _decode_RequestState,
     _encode_RequestState,
 } from "../X790ASN1Module/RequestState.ta.mjs";
 
 import {
-    ActivityType,
+    type ActivityType,
     _decode_ActivityType,
     _encode_ActivityType,
 } from "../X790ASN1Module/ActivityType.ta.mjs";
 
 import {
-    AuthorizationTime,
+    type AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
 } from "../X790ASN1Module/AuthorizationTime.ta.mjs";

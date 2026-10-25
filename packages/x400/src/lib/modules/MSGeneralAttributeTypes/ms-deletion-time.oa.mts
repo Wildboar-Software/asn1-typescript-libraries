@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    DeletionTime,
+    type DeletionTime,
     _decode_DeletionTime,
     _encode_DeletionTime,
 } from '../MSGeneralAttributeTypes/DeletionTime.ta.mjs';

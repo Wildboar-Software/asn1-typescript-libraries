@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProceduralStatus,
+    type ProceduralStatus,
     _decode_ProceduralStatus,
     _encode_ProceduralStatus,
 } from '@wildboar/attribute-asn1module';

@@ -13,14 +13,14 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CIAInfo_version, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
-import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { CardFlags, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
+import { type CIAInfo_version, _decode_CIAInfo_version, _encode_CIAInfo_version } from "../CryptographicInformationFramework/CIAInfo-version.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
+import { type CardFlags, _decode_CardFlags, _encode_CardFlags } from "../CryptographicInformationFramework/CardFlags.ta.mjs";
 import { SecurityEnvironmentInfo, _decode_SecurityEnvironmentInfo, _encode_SecurityEnvironmentInfo } from "../CryptographicInformationFramework/SecurityEnvironmentInfo.ta.mjs";
 import { RecordInfo, _decode_RecordInfo, _encode_RecordInfo } from "../CryptographicInformationFramework/RecordInfo.ta.mjs";
 import { AlgorithmInfo, _decode_AlgorithmInfo, _encode_AlgorithmInfo } from "../CryptographicInformationFramework/AlgorithmInfo.ta.mjs";
-import { LastUpdate, _decode_LastUpdate, _encode_LastUpdate } from "../CryptographicInformationFramework/LastUpdate.ta.mjs";
-import { ProfileIndication, _decode_ProfileIndication, _encode_ProfileIndication } from "../CryptographicInformationFramework/ProfileIndication.ta.mjs";
+import { type LastUpdate, _decode_LastUpdate, _encode_LastUpdate } from "../CryptographicInformationFramework/LastUpdate.ta.mjs";
+import { type ProfileIndication, _decode_ProfileIndication, _encode_ProfileIndication } from "../CryptographicInformationFramework/ProfileIndication.ta.mjs";
 
 
 /**

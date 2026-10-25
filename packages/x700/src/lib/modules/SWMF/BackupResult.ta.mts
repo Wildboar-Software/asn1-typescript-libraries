@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BackupResult_inLine,
+    type BackupResult_inLine,
     _decode_BackupResult_inLine,
     _encode_BackupResult_inLine,
 } from '../SWMF/BackupResult-inLine.ta.mjs';

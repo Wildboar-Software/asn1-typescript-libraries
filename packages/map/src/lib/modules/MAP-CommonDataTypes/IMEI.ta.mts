@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_TBCD_STRING, _encode_TBCD_STRING, TBCD_STRING } from "../MAP-CommonDataTypes/TBCD-STRING.ta.mjs";
+import { _decode_TBCD_STRING, _encode_TBCD_STRING, type TBCD_STRING } from "../MAP-CommonDataTypes/TBCD-STRING.ta.mjs";
 
 
 /**

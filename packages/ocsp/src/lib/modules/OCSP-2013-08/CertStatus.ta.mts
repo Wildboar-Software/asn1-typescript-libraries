@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL,
+    type NULL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,7 +11,7 @@ import {
     _encode_RevokedInfo,
 } from "../OCSP-2013-08/RevokedInfo.ta.mjs";
 import {
-    UnknownInfo,
+    type UnknownInfo,
     _decode_UnknownInfo,
     _encode_UnknownInfo,
 } from "../OCSP-2013-08/UnknownInfo.ta.mjs";

@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../PkiPmiWrapper/EncryptedKey.ta.mjs";
 import {
-    EncryptedPdu,
+    type EncryptedPdu,
     _decode_EncryptedPdu,
     _encode_EncryptedPdu,
 } from "../PkiPmiWrapper/EncryptedPdu.ta.mjs";

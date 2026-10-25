@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    DerivedOrWithSyntaxChoice,
+    type DerivedOrWithSyntaxChoice,
     _decode_DerivedOrWithSyntaxChoice,
     _encode_DerivedOrWithSyntaxChoice,
 } from '../DefinitionASN1Module/DerivedOrWithSyntaxChoice.ta.mjs';

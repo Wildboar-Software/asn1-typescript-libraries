@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  GraphicString,
+  type OPTIONAL,
+  type INTEGER,
+  type GraphicString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,12 +14,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Diagnostic_Item_diagnostic_type,
+  type Diagnostic_Item_diagnostic_type,
   _decode_Diagnostic_Item_diagnostic_type,
   _encode_Diagnostic_Item_diagnostic_type,
 } from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta.mjs';
 import {
-  Entity_Reference,
+  type Entity_Reference,
   _decode_Entity_Reference,
   _encode_Entity_Reference,
 } from '../ISO8571-FTAM/Entity-Reference.ta.mjs';

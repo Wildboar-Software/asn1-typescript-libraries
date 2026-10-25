@@ -7,13 +7,13 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
 // export { UserIdentifiers, _decode_UserIdentifiers, _encode_UserIdentifiers } from "../TS33128Payloads/UserIdentifiers.ta.mjs";
-import { AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
+import { type AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
 // export { AMFUENGAPID, _decode_AMFUENGAPID, _encode_AMFUENGAPID } from "../TS33128Payloads/AMFUENGAPID.ta.mjs";
-import { RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
+import { type RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
 // export { RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
 import { HandoverType, _decode_HandoverType, _encode_HandoverType, _enum_for_HandoverType } from "../TS33128Payloads/HandoverType.ta.mjs";
 // export { HandoverType, _enum_for_HandoverType, HandoverType_intra5GS /* IMPORTED_LONG_ENUMERATION_ITEM */, intra5GS /* IMPORTED_SHORT_ENUMERATION_ITEM */, HandoverType_fiveGStoEPS /* IMPORTED_LONG_ENUMERATION_ITEM */, fiveGStoEPS /* IMPORTED_SHORT_ENUMERATION_ITEM */, HandoverType_ePSto5GS /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSto5GS /* IMPORTED_SHORT_ENUMERATION_ITEM */, HandoverType_fiveGStoUTRA /* IMPORTED_LONG_ENUMERATION_ITEM */, fiveGStoUTRA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_HandoverType, _encode_HandoverType } from "../TS33128Payloads/HandoverType.ta.mjs";
-import { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
+import { type RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
 // export { RANTargetToSourceContainer, _decode_RANTargetToSourceContainer, _encode_RANTargetToSourceContainer } from "../TS33128Payloads/RANTargetToSourceContainer.ta.mjs";
 
 

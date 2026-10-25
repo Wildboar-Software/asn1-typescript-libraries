@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
     type UTF8String,
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { STIRSHAKENOriginator, _decode_STIRSHAKENOriginator, _encode_STIRSHAKENOriginator } from "../TS33128Payloads/STIRSHAKENOriginator.ta.mjs";
+import { type STIRSHAKENOriginator, _decode_STIRSHAKENOriginator, _encode_STIRSHAKENOriginator } from "../TS33128Payloads/STIRSHAKENOriginator.ta.mjs";
 // export { STIRSHAKENOriginator, _decode_STIRSHAKENOriginator, _encode_STIRSHAKENOriginator } from "../TS33128Payloads/STIRSHAKENOriginator.ta.mjs";
-import { STIRSHAKENDestinations, _decode_STIRSHAKENDestinations, _encode_STIRSHAKENDestinations } from "../TS33128Payloads/STIRSHAKENDestinations.ta.mjs";
+import { type STIRSHAKENDestinations, _decode_STIRSHAKENDestinations, _encode_STIRSHAKENDestinations } from "../TS33128Payloads/STIRSHAKENDestinations.ta.mjs";
 // export { STIRSHAKENDestinations, _decode_STIRSHAKENDestinations, _encode_STIRSHAKENDestinations } from "../TS33128Payloads/STIRSHAKENDestinations.ta.mjs";
 import { Attestation, _decode_Attestation, _encode_Attestation, _enum_for_Attestation } from "../TS33128Payloads/Attestation.ta.mjs";
 // export { Attestation, _enum_for_Attestation, Attestation_attestationA /* IMPORTED_LONG_ENUMERATION_ITEM */, attestationA /* IMPORTED_SHORT_ENUMERATION_ITEM */, Attestation_attestationB /* IMPORTED_LONG_ENUMERATION_ITEM */, attestationB /* IMPORTED_SHORT_ENUMERATION_ITEM */, Attestation_attestationC /* IMPORTED_LONG_ENUMERATION_ITEM */, attestationC /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Attestation, _encode_Attestation } from "../TS33128Payloads/Attestation.ta.mjs";
-import { STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKENDestination } from "../TS33128Payloads/STIRSHAKENDestination.ta.mjs";
+import { type STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKENDestination } from "../TS33128Payloads/STIRSHAKENDestination.ta.mjs";
 // export { STIRSHAKENDestination, _decode_STIRSHAKENDestination, _encode_STIRSHAKENDestination } from "../TS33128Payloads/STIRSHAKENDestination.ta.mjs";
 
 

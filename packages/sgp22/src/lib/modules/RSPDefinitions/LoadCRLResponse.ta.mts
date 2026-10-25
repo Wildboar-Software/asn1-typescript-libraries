@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LoadCRLResponseOk, _decode_LoadCRLResponseOk, _encode_LoadCRLResponseOk } from "../RSPDefinitions/LoadCRLResponseOk.ta.mjs";
-import { LoadCRLResponseError, _decode_LoadCRLResponseError, _encode_LoadCRLResponseError } from "../RSPDefinitions/LoadCRLResponseError.ta.mjs";
+import { type LoadCRLResponseError, _decode_LoadCRLResponseError, _encode_LoadCRLResponseError } from "../RSPDefinitions/LoadCRLResponseError.ta.mjs";
 
 
 /**

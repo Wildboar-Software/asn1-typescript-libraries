@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { IN_AddEntryArgument, _decode_IN_AddEntryArgument, _encode_IN_AddEntryArgument } from "../IN-CS3-SCF-SDF-Additional-Definitions/IN-AddEntryArgument.ta.mjs";
+import { type IN_AddEntryArgument, _decode_IN_AddEntryArgument, _encode_IN_AddEntryArgument } from "../IN-CS3-SCF-SDF-Additional-Definitions/IN-AddEntryArgument.ta.mjs";
 // export { IN_AddEntryArgument, _decode_IN_AddEntryArgument, _encode_IN_AddEntryArgument } from "../IN-CS3-SCF-SDF-Additional-Definitions/IN-AddEntryArgument.ta.mjs";
-import { AddEntryResult, _decode_AddEntryResult, _encode_AddEntryResult } from "../DirectoryAbstractService/AddEntryResult.ta.mjs";
+import { type AddEntryResult, _decode_AddEntryResult, _encode_AddEntryResult } from "../DirectoryAbstractService/AddEntryResult.ta.mjs";
 // export { AddEntryResult, _decode_AddEntryResult, _encode_AddEntryResult } from "../DirectoryAbstractService/AddEntryResult.ta.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 // export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";

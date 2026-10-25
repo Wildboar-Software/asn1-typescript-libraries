@@ -3,8 +3,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    INTEGER
+    type GeneralizedTime,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

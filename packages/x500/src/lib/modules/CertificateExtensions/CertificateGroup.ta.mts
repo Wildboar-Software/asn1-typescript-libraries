@@ -7,12 +7,12 @@ import {
     _encode_CertificateGroupNumberRange,
 } from "../CertificateExtensions/CertificateGroupNumberRange.ta.mjs";
 import {
-    CertificateSerialNumbers,
+    type CertificateSerialNumbers,
     _decode_CertificateSerialNumbers,
     _encode_CertificateSerialNumbers,
 } from "../CertificateExtensions/CertificateSerialNumbers.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";

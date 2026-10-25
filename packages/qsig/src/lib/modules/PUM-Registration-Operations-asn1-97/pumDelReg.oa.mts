@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { PumDelRegArg, _decode_PumDelRegArg, _encode_PumDelRegArg } from "../PUM-Registration-Operations-asn1-97/PumDelRegArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../PUM-Registration-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../PUM-Registration-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { temporarilyUnavailable } from "../PUM-Registration-Operations-asn1-97/temporarilyUnavailable.oa.mjs";
 import { unspecified } from "../PUM-Registration-Operations-asn1-97/unspecified.oa.mjs";

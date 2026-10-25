@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuditDescriptor_auditToken, _decode_AuditDescriptor_auditToken, _encode_AuditDescriptor_auditToken } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor-auditToken.ta.mjs";
-import { IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter } from "../MEDIA-GATEWAY-CONTROL/IndAuditParameter.ta.mjs";
+import { type AuditDescriptor_auditToken, _decode_AuditDescriptor_auditToken, _encode_AuditDescriptor_auditToken } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor-auditToken.ta.mjs";
+import { type IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter } from "../MEDIA-GATEWAY-CONTROL/IndAuditParameter.ta.mjs";
 
 
 /**

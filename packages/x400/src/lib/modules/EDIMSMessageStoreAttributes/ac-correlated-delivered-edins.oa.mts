@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    CorrelatedDeliveredEDINs,
+    type CorrelatedDeliveredEDINs,
     _decode_CorrelatedDeliveredEDINs,
     _encode_CorrelatedDeliveredEDINs,
 } from '../EDIMSMessageStoreAttributes/CorrelatedDeliveredEDINs.ta.mjs';

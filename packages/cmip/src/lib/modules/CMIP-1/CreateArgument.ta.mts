@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  CreateArgument_managedOrSuperiorObjectInstance,
+  type CreateArgument_managedOrSuperiorObjectInstance,
   _decode_CreateArgument_managedOrSuperiorObjectInstance,
   _encode_CreateArgument_managedOrSuperiorObjectInstance,
 } from '../CMIP-1/CreateArgument-managedOrSuperiorObjectInstance.ta.mjs';
 import {
-  AccessControl,
+  type AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
 } from '../CMIP-1/AccessControl.ta.mjs';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';

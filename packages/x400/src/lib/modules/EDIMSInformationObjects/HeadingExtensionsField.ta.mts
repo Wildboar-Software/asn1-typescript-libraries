@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    HeadingExtensionsSubField,
+    type HeadingExtensionsSubField,
     _decode_HeadingExtensionsSubField,
     _encode_HeadingExtensionsSubField,
 } from '../EDIMSInformationObjects/HeadingExtensionsSubField.ta.mjs';

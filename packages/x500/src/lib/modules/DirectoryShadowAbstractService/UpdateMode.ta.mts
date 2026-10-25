@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ConsumerUpdateMode,
+    type ConsumerUpdateMode,
     _decode_ConsumerUpdateMode,
     _encode_ConsumerUpdateMode,
 } from "../DirectoryShadowAbstractService/ConsumerUpdateMode.ta.mjs";
 import {
-    SupplierUpdateMode,
+    type SupplierUpdateMode,
     _decode_SupplierUpdateMode,
     _encode_SupplierUpdateMode,
 } from "../DirectoryShadowAbstractService/SupplierUpdateMode.ta.mjs";

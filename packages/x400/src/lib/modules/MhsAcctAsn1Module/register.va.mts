@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip';

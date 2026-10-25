@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    TestIndicatorField,
+    type TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
 } from '../EDIMSInformationObjects/TestIndicatorField.ta.mjs';

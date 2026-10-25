@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RangeProblem,
+    type RangeProblem,
     _decode_RangeProblem,
     _encode_RangeProblem,
 } from '../MSAbstractService/RangeProblem.ta.mjs';

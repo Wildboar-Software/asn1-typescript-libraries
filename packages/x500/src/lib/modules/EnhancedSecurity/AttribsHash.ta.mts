@@ -7,7 +7,7 @@ import {
     _get_encoder_for_HASH,
 } from "../AuthenticationFramework/HASH.ta.mjs";
 import {
-    HashedAttributes,
+    type HashedAttributes,
     _decode_HashedAttributes,
     _encode_HashedAttributes,
 } from "../EnhancedSecurity/HashedAttributes.ta.mjs";

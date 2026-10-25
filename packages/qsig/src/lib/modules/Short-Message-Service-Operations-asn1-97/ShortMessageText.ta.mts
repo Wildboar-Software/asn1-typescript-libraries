@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ShortMessageTextType, _decode_ShortMessageTextType, _encode_ShortMessageTextType } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextType.ta.mjs";
-import { ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessageTextData } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextData.ta.mjs";
+import { type ShortMessageTextType, _decode_ShortMessageTextType, _encode_ShortMessageTextType } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextType.ta.mjs";
+import { type ShortMessageTextData, _decode_ShortMessageTextData, _encode_ShortMessageTextData } from "../Short-Message-Service-Operations-asn1-97/ShortMessageTextData.ta.mjs";
 
 /**
  * @summary ShortMessageText

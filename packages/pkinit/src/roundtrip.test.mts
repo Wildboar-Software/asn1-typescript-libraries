@@ -6,7 +6,7 @@ import {
     _decode_AuthPack,
     _encode_AuthPack,
 } from "./lib/modules/KerberosV5-PK-INIT-SPEC/AuthPack.ta.mjs";
-import { DHNonce } from "./lib/modules/KerberosV5-PK-INIT-SPEC/DHNonce.ta.mjs";
+import { type DHNonce } from "./lib/modules/KerberosV5-PK-INIT-SPEC/DHNonce.ta.mjs";
 import { id_pkinit_kdf_ah_sha256 } from "./lib/modules/KerberosV5-PK-INIT-SPEC/id-pkinit-kdf-ah-sha256.va.mjs";
 import { KDFAlgorithmId } from "./lib/modules/KerberosV5-PK-INIT-SPEC/KDFAlgorithmId.ta.mjs";
 import { PAChecksum2 } from "./lib/modules/KerberosV5-PK-INIT-SPEC/PAChecksum2.ta.mjs";

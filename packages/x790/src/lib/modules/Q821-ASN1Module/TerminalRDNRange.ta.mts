@@ -2,8 +2,8 @@
 import {
     type INTEGER,
     type OBJECT_IDENTIFIER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,

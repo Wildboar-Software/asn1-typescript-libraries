@@ -6,9 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
-import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-import { Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
+import { type CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
+import { type CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
+import { type Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
 import { IntraCUG_Options, _decode_IntraCUG_Options, _encode_IntraCUG_Options, _enum_for_IntraCUG_Options } from "../MAP-MS-DataTypes/IntraCUG-Options.ta.mjs";
 
 

@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TBerror_code,
+    type TBerror_code,
     _decode_TBerror_code,
     _encode_TBerror_code,
     _enum_for_TBerror_code,

@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../TSM/ExtensionType.ta.mjs";
+import { type ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../TSM/ExtensionType.ta.mjs";
 
 
 

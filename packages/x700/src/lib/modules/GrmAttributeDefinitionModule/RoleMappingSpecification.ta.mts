@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
 import {
-    Representation,
+    type Representation,
     _decode_Representation,
     _encode_Representation,
 } from '../GrmAttributeDefinitionModule/Representation.ta.mjs';

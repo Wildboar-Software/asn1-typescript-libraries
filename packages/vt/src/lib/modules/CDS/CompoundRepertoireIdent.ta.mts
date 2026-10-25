@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RepertoireFontIdent, _decode_RepertoireFontIdent, _encode_RepertoireFontIdent } from "../CDS/RepertoireFontIdent.ta.mjs";
+import { type RepertoireFontIdent, _decode_RepertoireFontIdent, _encode_RepertoireFontIdent } from "../CDS/RepertoireFontIdent.ta.mjs";
 
 
 /**

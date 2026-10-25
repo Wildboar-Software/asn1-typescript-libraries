@@ -6,8 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "./ManagementExtension.ta.mjs";
-import { PositionMethodFailure_Diagnostic, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic } from "./PositionMethodFailure-Diagnostic.ta.mjs";
-import { UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic } from "./UnauthorizedLCSClient-Diagnostic.ta.mjs";
+import { type PositionMethodFailure_Diagnostic, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic } from "./PositionMethodFailure-Diagnostic.ta.mjs";
+import { type UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic } from "./UnauthorizedLCSClient-Diagnostic.ta.mjs";
 
 
 /**

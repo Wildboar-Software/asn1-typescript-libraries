@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS-1-Datatypes/InvokeID.ta.mjs";
+import { type InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS-1-Datatypes/InvokeID.ta.mjs";
 // export { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS-1-Datatypes/InvokeID.ta.mjs";
 
 

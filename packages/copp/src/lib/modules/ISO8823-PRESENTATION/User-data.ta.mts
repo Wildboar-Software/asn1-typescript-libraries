@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Simply_encoded_data,
+    type Simply_encoded_data,
     _decode_Simply_encoded_data,
     _encode_Simply_encoded_data,
 } from '../ISO8823-PRESENTATION/Simply-encoded-data.ta.mjs';
 import {
-    Fully_encoded_data,
+    type Fully_encoded_data,
     _decode_Fully_encoded_data,
     _encode_Fully_encoded_data,
 } from '../ISO8823-PRESENTATION/Fully-encoded-data.ta.mjs';

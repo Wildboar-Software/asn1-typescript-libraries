@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RoutingAction, _decode_RoutingAction, _encode_RoutingAction } from "../GDT/RoutingAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type RoutingAction, _decode_RoutingAction, _encode_RoutingAction } from "../GDT/RoutingAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**

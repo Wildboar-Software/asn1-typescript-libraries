@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    DeliveryFlags,
+    type DeliveryFlags,
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
 } from '../MTSAbstractService/DeliveryFlags.ta.mjs';

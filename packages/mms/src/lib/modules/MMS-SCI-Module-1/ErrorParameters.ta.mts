@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { ErrorParameters_additionalDetial, _decode_ErrorParameters_additionalDetial, _encode_ErrorParameters_additionalDetial } from "../MMS-SCI-Module-1/ErrorParameters-additionalDetial.ta.mjs";
 
 

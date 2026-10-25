@@ -5,8 +5,8 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type IA5String,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -19,7 +19,7 @@ import {
     _encode_DeviceCategory
 } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
 
-import { GroupDeviceAttributes, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
+import { type GroupDeviceAttributes, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
 
 import {
     NamedDeviceTypes,

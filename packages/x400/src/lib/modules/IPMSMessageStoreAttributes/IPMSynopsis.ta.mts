@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartSynopsis,
+    type BodyPartSynopsis,
     _decode_BodyPartSynopsis,
     _encode_BodyPartSynopsis,
 } from '../IPMSMessageStoreAttributes/BodyPartSynopsis.ta.mjs';

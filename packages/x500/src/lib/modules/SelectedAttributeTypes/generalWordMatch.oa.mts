@@ -2,7 +2,7 @@
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_generalWordMatch } from "../SelectedAttributeTypes/id-mr-generalWordMatch.va.mjs";
 import {
-    SubstringAssertion,
+    type SubstringAssertion,
     _decode_SubstringAssertion,
     _encode_SubstringAssertion,
 } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";

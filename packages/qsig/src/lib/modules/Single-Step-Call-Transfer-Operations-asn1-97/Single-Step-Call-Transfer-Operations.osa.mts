@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { ssctInitiate } from "../Single-Step-Call-Transfer-Operations-asn1-97/ssctInitiate.oa.mjs";
 import { ssctSetup } from "../Single-Step-Call-Transfer-Operations-asn1-97/ssctSetup.oa.mjs";
 import { ssctPostDial } from "../Single-Step-Call-Transfer-Operations-asn1-97/ssctPostDial.oa.mjs";

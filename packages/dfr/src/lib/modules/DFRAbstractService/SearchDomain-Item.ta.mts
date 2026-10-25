@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { SearchDomain_Item_scope, _decode_SearchDomain_Item_scope, _encode_SearchDomain_Item_scope } from "../DFRAbstractService/SearchDomain-Item-scope.ta.mjs";
 
 

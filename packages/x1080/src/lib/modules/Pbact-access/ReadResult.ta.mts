@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
 import {
-    ReadResult_result,
+    type ReadResult_result,
     _decode_ReadResult_result,
     _encode_ReadResult_result,
 } from '../Pbact-access/ReadResult-result.ta.mjs';

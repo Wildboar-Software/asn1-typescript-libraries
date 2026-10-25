@@ -7,7 +7,7 @@ import { ss_NotAvailable } from "../MAP-Errors/ss-NotAvailable.oa.mjs";
 import { systemFailure } from "../MAP-Errors/systemFailure.oa.mjs";
 import { teleserviceNotProvisioned } from "../MAP-Errors/teleserviceNotProvisioned.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
-import { InterrogateSS_Res, _decode_InterrogateSS_Res, _encode_InterrogateSS_Res } from "../MAP-SS-DataTypes/InterrogateSS-Res.ta.mjs";
+import { type InterrogateSS_Res, _decode_InterrogateSS_Res, _encode_InterrogateSS_Res } from "../MAP-SS-DataTypes/InterrogateSS-Res.ta.mjs";
 import { SS_ForBS_Code, _decode_SS_ForBS_Code, _encode_SS_ForBS_Code } from "../MAP-SS-DataTypes/SS-ForBS-Code.ta.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 

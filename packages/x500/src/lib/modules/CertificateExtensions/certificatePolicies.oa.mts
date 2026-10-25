@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    CertificatePoliciesSyntax,
+    type CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
     _encode_CertificatePoliciesSyntax,
 } from "../CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";

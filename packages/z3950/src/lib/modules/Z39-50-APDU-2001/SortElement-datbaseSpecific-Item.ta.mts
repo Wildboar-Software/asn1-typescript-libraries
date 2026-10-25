@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
-import { SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/SortKey.ta.mjs";
+import { type DatabaseName, _decode_DatabaseName, _encode_DatabaseName } from "../Z39-50-APDU-2001/DatabaseName.ta.mjs";
+import { type SortKey, _decode_SortKey, _encode_SortKey } from "../Z39-50-APDU-2001/SortKey.ta.mjs";
 
 
 /**

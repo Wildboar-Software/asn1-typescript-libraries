@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ConnectionData,
+  type ConnectionData,
   _decode_ConnectionData,
   _encode_ConnectionData,
 } from '../Reliable-Transfer-APDU/ConnectionData.ta.mjs';

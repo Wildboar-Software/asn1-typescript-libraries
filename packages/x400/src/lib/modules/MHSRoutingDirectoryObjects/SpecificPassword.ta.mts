@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RoutingCollectiveName,
+    type RoutingCollectiveName,
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
 } from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.mjs';
 import {
-    Password,
+    type Password,
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';

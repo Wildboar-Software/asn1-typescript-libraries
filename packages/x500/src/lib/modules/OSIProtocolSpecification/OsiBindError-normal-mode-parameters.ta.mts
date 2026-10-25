@@ -7,28 +7,28 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OsiBindError_normal_mode_parameters_protocol_version,
+    type OsiBindError_normal_mode_parameters_protocol_version,
     OsiBindError_normal_mode_parameters_protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_OsiBindError_normal_mode_parameters_protocol_version,
     _encode_OsiBindError_normal_mode_parameters_protocol_version,
 } from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-protocol-version.ta.mjs";
 import {
-    OsiBindError_normal_mode_parameters_user_data,
+    type OsiBindError_normal_mode_parameters_user_data,
     _decode_OsiBindError_normal_mode_parameters_user_data,
     _encode_OsiBindError_normal_mode_parameters_user_data,
 } from "../OSIProtocolSpecification/OsiBindError-normal-mode-parameters-user-data.ta.mjs";
 import {
-    Presentation_selector,
+    type Presentation_selector,
     _decode_Presentation_selector,
     _encode_Presentation_selector,
 } from "../OSIProtocolSpecification/Presentation-selector.ta.mjs";
 import {
-    Provider_reason,
+    type Provider_reason,
     _decode_Provider_reason,
     _encode_Provider_reason,
 } from "../OSIProtocolSpecification/Provider-reason.ta.mjs";
 import {
-    Result_list,
+    type Result_list,
     _decode_Result_list,
     _encode_Result_list,
 } from "../OSIProtocolSpecification/Result-list.ta.mjs";

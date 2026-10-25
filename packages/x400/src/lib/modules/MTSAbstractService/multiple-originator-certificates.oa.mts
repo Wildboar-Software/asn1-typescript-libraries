@@ -18,7 +18,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetHookswitchStatusArgument, _decode_SetHookswitchStatusArgument, _encode_SetHookswitchStatusArgument } from "../CSTA-set-hookswitch-status/SetHookswitchStatusArgument.ta.mjs";
 
-import { SetHookswitchStatusResult, _decode_SetHookswitchStatusResult, _encode_SetHookswitchStatusResult } from "../CSTA-set-hookswitch-status/SetHookswitchStatusResult.ta.mjs";
+import { type SetHookswitchStatusResult, _decode_SetHookswitchStatusResult, _encode_SetHookswitchStatusResult } from "../CSTA-set-hookswitch-status/SetHookswitchStatusResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

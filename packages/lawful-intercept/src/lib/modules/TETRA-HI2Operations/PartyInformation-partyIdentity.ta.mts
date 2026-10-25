@@ -7,9 +7,9 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../TETRA-HI2Operations/CallingPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../TETRA-HI2Operations/CallingPartyNumber.ta.mjs";
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../TETRA-HI2Operations/CallingPartyNumber.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../TETRA-HI2Operations/CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../TETRA-HI2Operations/CalledPartyNumber.ta.mjs";
 // export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../TETRA-HI2Operations/CalledPartyNumber.ta.mjs";
 
 

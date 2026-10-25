@@ -16,7 +16,7 @@ import {
     _encode_EncryptionToken,
 } from '../IPMSSecurityExtensions/EncryptionToken.ta.mjs';
 import {
-    BodyPartTokens,
+    type BodyPartTokens,
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';

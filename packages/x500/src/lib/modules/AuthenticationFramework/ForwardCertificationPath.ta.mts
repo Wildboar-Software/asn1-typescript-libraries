@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CrossCertificates,
+    type CrossCertificates,
     _decode_CrossCertificates,
     _encode_CrossCertificates,
 } from "../AuthenticationFramework/CrossCertificates.ta.mjs";

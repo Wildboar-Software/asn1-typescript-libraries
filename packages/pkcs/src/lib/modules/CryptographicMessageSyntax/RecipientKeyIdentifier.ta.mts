@@ -2,7 +2,7 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -12,7 +12,7 @@ import {
     _encode_OtherKeyAttribute,
 } from "../CryptographicMessageSyntax/OtherKeyAttribute.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax/SubjectKeyIdentifier.ta.mjs";

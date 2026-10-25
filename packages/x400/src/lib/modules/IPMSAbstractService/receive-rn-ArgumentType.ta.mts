@@ -15,7 +15,7 @@ import {
     _decode_MessageDeliveryEnvelope,
     _encode_MessageDeliveryEnvelope,
 } from '../MTSAbstractService/MessageDeliveryEnvelope.ta.mjs';
-import { RN, _decode_RN, _encode_RN } from '../IPMSInformationObjects/RN.ta.mjs';
+import { type RN, _decode_RN, _encode_RN } from '../IPMSInformationObjects/RN.ta.mjs';
 /**
  * @summary receive_rn_ArgumentType
  * @description

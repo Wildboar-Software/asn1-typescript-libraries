@@ -8,27 +8,27 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ClassificationName,
+    type ClassificationName,
     _decode_ClassificationName,
     _encode_ClassificationName,
 } from "../SIOsAccessControl-MODULE/ClassificationName.ta.mjs";
 import {
-    EquivalentClassifications,
+    type EquivalentClassifications,
     _decode_EquivalentClassifications,
     _encode_EquivalentClassifications,
 } from "../SIOsAccessControl-MODULE/EquivalentClassifications.ta.mjs";
 import {
-    LabelAndCertValue,
+    type LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
 } from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";
 import {
-    MarkingDataInfo,
+    type MarkingDataInfo,
     _decode_MarkingDataInfo,
     _encode_MarkingDataInfo,
 } from "../SIOsAccessControl-MODULE/MarkingDataInfo.ta.mjs";
 import {
-    OptionalCategoryGroups,
+    type OptionalCategoryGroups,
     _decode_OptionalCategoryGroups,
     _encode_OptionalCategoryGroups,
 } from "../SIOsAccessControl-MODULE/OptionalCategoryGroups.ta.mjs";

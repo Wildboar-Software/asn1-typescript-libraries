@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDIBodyPartType,
+    type EDIBodyPartType,
     _decode_EDIBodyPartType,
     _encode_EDIBodyPartType,
 } from '../EDIMSInformationObjects/EDIBodyPartType.ta.mjs';

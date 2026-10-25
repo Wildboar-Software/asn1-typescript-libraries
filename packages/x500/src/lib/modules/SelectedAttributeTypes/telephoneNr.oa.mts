@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.mjs";
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";

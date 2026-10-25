@@ -7,12 +7,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Applied,
+    type Applied,
     _decode_Applied,
     _encode_Applied,
 } from "../SIOsAccessControl-MODULE/Applied.ta.mjs";
 import {
-    LabelAndCertValue,
+    type LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
 } from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";

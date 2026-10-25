@@ -23,7 +23,7 @@ import {
     _encode_Register_MSArgument,
 } from '../MSAbstractService/Register-MSArgument.ta.mjs';
 import {
-    Register_MSResult,
+    type Register_MSResult,
     _decode_Register_MSResult,
     _encode_Register_MSResult,
 } from '../MSAbstractService/Register-MSResult.ta.mjs';

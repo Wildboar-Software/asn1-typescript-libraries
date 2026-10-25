@@ -6,17 +6,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
 import {
-    UserKeyingMaterial,
+    type UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../PkiPmiWrapper/UserKeyingMaterial.ta.mjs";

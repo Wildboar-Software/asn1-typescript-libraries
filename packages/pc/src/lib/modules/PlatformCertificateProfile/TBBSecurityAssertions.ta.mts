@@ -17,7 +17,7 @@ import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonC
 import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta.mjs";
 import { MeasurementRootType, _enum_for_MeasurementRootType, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
     v1,

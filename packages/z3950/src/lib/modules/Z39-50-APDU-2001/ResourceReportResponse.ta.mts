@@ -5,10 +5,10 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-import { ResourceReportResponse_resourceReportStatus, _decode_ResourceReportResponse_resourceReportStatus, _encode_ResourceReportResponse_resourceReportStatus } from "../Z39-50-APDU-2001/ResourceReportResponse-resourceReportStatus.ta.mjs";
-import { ResourceReport, _decode_ResourceReport, _encode_ResourceReport } from "../Z39-50-APDU-2001/ResourceReport.ta.mjs";
-import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
+import { type ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
+import { type ResourceReportResponse_resourceReportStatus, _decode_ResourceReportResponse_resourceReportStatus, _encode_ResourceReportResponse_resourceReportStatus } from "../Z39-50-APDU-2001/ResourceReportResponse-resourceReportStatus.ta.mjs";
+import { type ResourceReport, _decode_ResourceReport, _encode_ResourceReport } from "../Z39-50-APDU-2001/ResourceReport.ta.mjs";
+import { type OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

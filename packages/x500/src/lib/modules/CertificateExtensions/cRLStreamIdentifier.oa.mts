@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    CRLStreamIdentifier,
+    type CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
 } from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";

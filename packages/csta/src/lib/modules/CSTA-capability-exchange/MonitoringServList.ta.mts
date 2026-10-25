@@ -3,20 +3,20 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ChangeMonitorFilter, _decode_ChangeMonitorFilter, _encode_ChangeMonitorFilter } from "../CSTA-capability-exchange/ChangeMonitorFilter.ta.mjs";
+import { type ChangeMonitorFilter, _decode_ChangeMonitorFilter, _encode_ChangeMonitorFilter } from "../CSTA-capability-exchange/ChangeMonitorFilter.ta.mjs";
 
-import { MonitorStart, _decode_MonitorStart, _encode_MonitorStart } from "../CSTA-capability-exchange/MonitorStart.ta.mjs";
+import { type MonitorStart, _decode_MonitorStart, _encode_MonitorStart } from "../CSTA-capability-exchange/MonitorStart.ta.mjs";
 
-import { MonitorStop, _decode_MonitorStop, _encode_MonitorStop } from "../CSTA-capability-exchange/MonitorStop.ta.mjs";
+import { type MonitorStop, _decode_MonitorStop, _encode_MonitorStop } from "../CSTA-capability-exchange/MonitorStop.ta.mjs";
 
-import { GetMonitors, _decode_GetMonitors, _encode_GetMonitors } from "../CSTA-capability-exchange/GetMonitors.ta.mjs";
+import { type GetMonitors, _decode_GetMonitors, _encode_GetMonitors } from "../CSTA-capability-exchange/GetMonitors.ta.mjs";
 
-import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-capability-exchange/MonitorInfo.ta.mjs";
+import { type MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-capability-exchange/MonitorInfo.ta.mjs";
 
 
 

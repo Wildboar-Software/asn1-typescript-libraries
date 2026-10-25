@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LAIFixedLength, _encode_LAIFixedLength, LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
+import { _decode_LAIFixedLength, _encode_LAIFixedLength, type LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
 
 
 /**

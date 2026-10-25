@@ -16,7 +16,7 @@ import {
   _encode_HashValueType,
 } from '../CMAIL/HashValueType.ta.mjs';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';

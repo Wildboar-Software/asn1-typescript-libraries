@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "@wildboar/asn1";
+import { type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ALGORITHM_IDENTIFIER } from "../PKCS-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { sha512_224WithRSAEncryption } from "../PKCS-1/sha512-224WithRSAEncryption.va.mjs";

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SwFunctionDevicesChangedArg, _decode_SwFunctionDevicesChangedArg, _encode_SwFunctionDevicesChangedArg } from "../CSTA-switching-function-devices-changed/SwFunctionDevicesChangedArg.ta.mjs";
 
-import { SwFunctionDevicesChangedRes, _decode_SwFunctionDevicesChangedRes, _encode_SwFunctionDevicesChangedRes } from "../CSTA-switching-function-devices-changed/SwFunctionDevicesChangedRes.ta.mjs";
+import { type SwFunctionDevicesChangedRes, _decode_SwFunctionDevicesChangedRes, _encode_SwFunctionDevicesChangedRes } from "../CSTA-switching-function-devices-changed/SwFunctionDevicesChangedRes.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

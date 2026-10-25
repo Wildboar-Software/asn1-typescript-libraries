@@ -5,7 +5,7 @@ import {
     type BOOLEAN,
     type OPTIONAL,
     type UTF8String,
-    VisibleString
+    type VisibleString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

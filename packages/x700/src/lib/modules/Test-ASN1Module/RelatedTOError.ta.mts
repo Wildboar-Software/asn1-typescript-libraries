@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelatedTOError_Item,
+    type RelatedTOError_Item,
     _decode_RelatedTOError_Item,
     _encode_RelatedTOError_Item,
 } from '../Test-ASN1Module/RelatedTOError-Item.ta.mjs';

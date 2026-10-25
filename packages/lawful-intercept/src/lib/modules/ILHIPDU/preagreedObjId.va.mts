@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { iLHIDomainId } from "../ILHIPDU/iLHIDomainId.va.mjs";
 // export { iLHIDomainId } from "../ILHIPDU/iLHIDomainId.va.mjs";

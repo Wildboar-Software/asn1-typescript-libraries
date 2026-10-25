@@ -4,7 +4,7 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import {
-    DHPublicKey,
+    type DHPublicKey,
     _decode_DHPublicKey,
     _encode_DHPublicKey,
 } from "../PKIXAlgs-2009/DHPublicKey.ta.mjs";

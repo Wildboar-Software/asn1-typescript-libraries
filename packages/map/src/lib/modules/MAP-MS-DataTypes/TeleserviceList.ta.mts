@@ -4,7 +4,7 @@ import {
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode, Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
+import { _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode, type Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 
 
 import { maxNumOfTeleservices } from "./maxNumOfTeleservices.va.mjs";

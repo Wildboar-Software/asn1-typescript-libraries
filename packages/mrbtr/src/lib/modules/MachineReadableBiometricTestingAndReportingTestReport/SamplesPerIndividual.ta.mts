@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistributionIntegerInteger, _decode_DistributionIntegerInteger, _encode_DistributionIntegerInteger } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerInteger.ta.mjs";
+import { type DistributionIntegerInteger, _decode_DistributionIntegerInteger, _encode_DistributionIntegerInteger } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerInteger.ta.mjs";
 
 
 /**

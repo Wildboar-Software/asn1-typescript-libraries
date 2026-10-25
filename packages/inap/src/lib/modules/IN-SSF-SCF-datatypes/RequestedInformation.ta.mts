@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType, _enum_for_RequestedInformationType } from "../IN-SSF-SCF-datatypes/RequestedInformationType.ta.mjs";
 // export { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-SSF-SCF-datatypes/RequestedInformationType.ta.mjs";
-import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-SSF-SCF-datatypes/RequestedInformationValue.ta.mjs";
+import { type RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-SSF-SCF-datatypes/RequestedInformationValue.ta.mjs";
 // export { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-SSF-SCF-datatypes/RequestedInformationValue.ta.mjs";
 
 

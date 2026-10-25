@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     type ASN1Element as _Element,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_CertificateBodyField, _encode_CertificateBodyField, CertificateBodyField } from "../DeviationList/CertificateBodyField.ta.mjs";
+import { _decode_CertificateBodyField, _encode_CertificateBodyField, type CertificateBodyField } from "../DeviationList/CertificateBodyField.ta.mjs";
 // export { CertificateBodyField, CertificateBodyField_generic /* IMPORTED_LONG_NAMED_INTEGER */, generic /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_version /* IMPORTED_LONG_NAMED_INTEGER */, version /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_serialNumber /* IMPORTED_LONG_NAMED_INTEGER */, serialNumber /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_signature /* IMPORTED_LONG_NAMED_INTEGER */, signature /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_issuer /* IMPORTED_LONG_NAMED_INTEGER */, issuer /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_validity /* IMPORTED_LONG_NAMED_INTEGER */, validity /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_subject /* IMPORTED_LONG_NAMED_INTEGER */, subject /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_subjectPublicKeyInfo /* IMPORTED_LONG_NAMED_INTEGER */, subjectPublicKeyInfo /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_issuerUniqueID /* IMPORTED_LONG_NAMED_INTEGER */, issuerUniqueID /* IMPORTED_SHORT_NAMED_INTEGER */, CertificateBodyField_subjectUniqueID /* IMPORTED_LONG_NAMED_INTEGER */, subjectUniqueID /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_CertificateBodyField, _encode_CertificateBodyField } from "../DeviationList/CertificateBodyField.ta.mjs";
 
 

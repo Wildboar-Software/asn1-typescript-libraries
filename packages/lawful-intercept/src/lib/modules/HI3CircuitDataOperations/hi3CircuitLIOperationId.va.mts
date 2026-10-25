@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { hi3CircuitLIId } from "../HI3CircuitDataOperations/hi3CircuitLIId.va.mjs";
 // export { hi3CircuitLIId } from "../HI3CircuitDataOperations/hi3CircuitLIId.va.mjs";

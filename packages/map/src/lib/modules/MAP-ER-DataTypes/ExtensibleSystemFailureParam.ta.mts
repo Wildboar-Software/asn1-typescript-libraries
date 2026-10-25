@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AdditionalNetworkResource, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource, _enum_for_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
+import { type AdditionalNetworkResource, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource, _enum_for_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
 import { NetworkResource, _decode_NetworkResource, _encode_NetworkResource, _enum_for_NetworkResource } from "../MAP-CommonDataTypes/NetworkResource.ta.mjs";
-import { FailureCauseParam, _decode_FailureCauseParam, _encode_FailureCauseParam, _enum_for_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
+import { type FailureCauseParam, _decode_FailureCauseParam, _encode_FailureCauseParam, _enum_for_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    ProbeOriginAuthenticationCheck,
+    type ProbeOriginAuthenticationCheck,
     _decode_ProbeOriginAuthenticationCheck,
     _encode_ProbeOriginAuthenticationCheck,
 } from '../MTSAbstractService/ProbeOriginAuthenticationCheck.ta.mjs';

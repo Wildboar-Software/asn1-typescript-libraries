@@ -8,7 +8,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/GvcId-vcId.ta.mjs";
+import { type GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/GvcId-vcId.ta.mjs";
 
 
 

@@ -11,9 +11,9 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
+import { type UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
 
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 
 
 

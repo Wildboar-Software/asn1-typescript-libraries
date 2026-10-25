@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';

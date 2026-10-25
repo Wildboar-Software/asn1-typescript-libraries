@@ -3,32 +3,32 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ButtonInformation, _decode_ButtonInformation, _encode_ButtonInformation } from "../CSTA-capability-exchange/ButtonInformation.ta.mjs";
+import { type ButtonInformation, _decode_ButtonInformation, _encode_ButtonInformation } from "../CSTA-capability-exchange/ButtonInformation.ta.mjs";
 
-import { ButtonPressEvent, _decode_ButtonPressEvent, _encode_ButtonPressEvent } from "../CSTA-capability-exchange/ButtonPressEvent.ta.mjs";
+import { type ButtonPressEvent, _decode_ButtonPressEvent, _encode_ButtonPressEvent } from "../CSTA-capability-exchange/ButtonPressEvent.ta.mjs";
 
-import { DisplayUpdated, _decode_DisplayUpdated, _encode_DisplayUpdated } from "../CSTA-capability-exchange/DisplayUpdated.ta.mjs";
+import { type DisplayUpdated, _decode_DisplayUpdated, _encode_DisplayUpdated } from "../CSTA-capability-exchange/DisplayUpdated.ta.mjs";
 
-import { Hookswitch, _decode_Hookswitch, _encode_Hookswitch } from "../CSTA-capability-exchange/Hookswitch.ta.mjs";
+import { type Hookswitch, _decode_Hookswitch, _encode_Hookswitch } from "../CSTA-capability-exchange/Hookswitch.ta.mjs";
 
-import { LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-capability-exchange/LampMode.ta.mjs";
+import { type LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-capability-exchange/LampMode.ta.mjs";
 
-import { MessageWaiting, _decode_MessageWaiting, _encode_MessageWaiting } from "../CSTA-capability-exchange/MessageWaiting.ta.mjs";
+import { type MessageWaiting, _decode_MessageWaiting, _encode_MessageWaiting } from "../CSTA-capability-exchange/MessageWaiting.ta.mjs";
 
-import { MicrophoneGain, _decode_MicrophoneGain, _encode_MicrophoneGain } from "../CSTA-capability-exchange/MicrophoneGain.ta.mjs";
+import { type MicrophoneGain, _decode_MicrophoneGain, _encode_MicrophoneGain } from "../CSTA-capability-exchange/MicrophoneGain.ta.mjs";
 
-import { MicrophoneMute, _decode_MicrophoneMute, _encode_MicrophoneMute } from "../CSTA-capability-exchange/MicrophoneMute.ta.mjs";
+import { type MicrophoneMute, _decode_MicrophoneMute, _encode_MicrophoneMute } from "../CSTA-capability-exchange/MicrophoneMute.ta.mjs";
 
-import { RingerStatus, _decode_RingerStatus, _encode_RingerStatus } from "../CSTA-capability-exchange/RingerStatus.ta.mjs";
+import { type RingerStatus, _decode_RingerStatus, _encode_RingerStatus } from "../CSTA-capability-exchange/RingerStatus.ta.mjs";
 
-import { SpeakerMute, _decode_SpeakerMute, _encode_SpeakerMute } from "../CSTA-capability-exchange/SpeakerMute.ta.mjs";
+import { type SpeakerMute, _decode_SpeakerMute, _encode_SpeakerMute } from "../CSTA-capability-exchange/SpeakerMute.ta.mjs";
 
-import { SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../CSTA-capability-exchange/SpeakerVolume.ta.mjs";
+import { type SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../CSTA-capability-exchange/SpeakerVolume.ta.mjs";
 
 
 

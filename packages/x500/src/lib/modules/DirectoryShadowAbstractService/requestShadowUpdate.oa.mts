@@ -2,12 +2,12 @@
 import { id_opcode_requestShadowUpdate } from "../CommonProtocolSpecification/id-opcode-requestShadowUpdate.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    RequestShadowUpdateArgument,
+    type RequestShadowUpdateArgument,
     _decode_RequestShadowUpdateArgument,
     _encode_RequestShadowUpdateArgument,
 } from "../DirectoryShadowAbstractService/RequestShadowUpdateArgument.ta.mjs";
 import {
-    RequestShadowUpdateResult,
+    type RequestShadowUpdateResult,
     _decode_RequestShadowUpdateResult,
     _encode_RequestShadowUpdateResult,
 } from "../DirectoryShadowAbstractService/RequestShadowUpdateResult.ta.mjs";

@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    MessageSecurityLabel,
+    type MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
 } from '../MTSAbstractService/MessageSecurityLabel.ta.mjs';

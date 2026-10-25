@@ -6,7 +6,7 @@ import {
     _decode_Identifier,
 } from "./lib/modules/ISO-9506-MMS-1/Identifier.ta.mjs";
 import {
-    Integer32,
+    type Integer32,
     _encode_Integer32,
     _decode_Integer32,
 } from "./lib/modules/ISO-9506-MMS-1/Integer32.ta.mjs";

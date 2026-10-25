@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Integer,
+    type Integer,
     _decode_Integer,
     _encode_Integer,
 } from '../SDHProtASN1/Integer.ta.mjs';

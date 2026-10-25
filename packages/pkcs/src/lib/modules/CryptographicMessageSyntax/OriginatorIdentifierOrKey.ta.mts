@@ -12,7 +12,7 @@ import {
     _encode_OriginatorPublicKey,
 } from "../CryptographicMessageSyntax/OriginatorPublicKey.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax/SubjectKeyIdentifier.ta.mjs";

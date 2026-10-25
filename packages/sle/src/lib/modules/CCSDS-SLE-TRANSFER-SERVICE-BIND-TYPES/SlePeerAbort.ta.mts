@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PeerAbortDiagnostic, _decode_PeerAbortDiagnostic, _encode_PeerAbortDiagnostic } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/PeerAbortDiagnostic.ta.mjs";
+import { type PeerAbortDiagnostic, _decode_PeerAbortDiagnostic, _encode_PeerAbortDiagnostic } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/PeerAbortDiagnostic.ta.mjs";
 
 
 /**

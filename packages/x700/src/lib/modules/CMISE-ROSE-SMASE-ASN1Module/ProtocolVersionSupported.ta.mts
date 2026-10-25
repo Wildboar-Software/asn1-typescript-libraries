@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProtocolVersion,
+    type ProtocolVersion,
     _decode_ProtocolVersion,
     _encode_ProtocolVersion,
 } from '@wildboar/cmip';

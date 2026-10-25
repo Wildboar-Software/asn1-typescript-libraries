@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKIMessages,
+  type PKIMessages,
   _decode_PKIMessages,
   _encode_PKIMessages,
 } from '../PKIXCMP-2009/PKIMessages.ta.mjs';

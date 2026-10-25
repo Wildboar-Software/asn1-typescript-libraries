@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallConditions, _decode_CallConditions, _encode_CallConditions } from "../IN-SCF-SCF-datatypes/CallConditions.ta.mjs";
+import { type CallConditions, _decode_CallConditions, _encode_CallConditions } from "../IN-SCF-SCF-datatypes/CallConditions.ta.mjs";
 // export { CallConditions, _decode_CallConditions, _encode_CallConditions } from "../IN-SCF-SCF-datatypes/CallConditions.ta.mjs";
 import { RequestedNotifications_Item_callConditionWithPartyID, _decode_RequestedNotifications_Item_callConditionWithPartyID, _encode_RequestedNotifications_Item_callConditionWithPartyID } from "../IN-SCF-SCF-datatypes/RequestedNotifications-Item-callConditionWithPartyID.ta.mjs";
 // export { RequestedNotifications_Item_callConditionWithPartyID, _decode_RequestedNotifications_Item_callConditionWithPartyID, _encode_RequestedNotifications_Item_callConditionWithPartyID } from "../IN-SCF-SCF-datatypes/RequestedNotifications-Item-callConditionWithPartyID.ta.mjs";

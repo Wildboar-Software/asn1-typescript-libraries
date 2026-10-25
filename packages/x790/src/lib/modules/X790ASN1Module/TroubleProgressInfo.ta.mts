@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
-    SEQUENCE,
-    SET,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TroubleReportStatus,
+    type TroubleReportStatus,
     _decode_TroubleReportStatus,
     _encode_TroubleReportStatus,
 } from "../X790ASN1Module/TroubleReportStatus.ta.mjs";
 
 import {
-    AdditionalTroubleStatusInfo,
+    type AdditionalTroubleStatusInfo,
     _decode_AdditionalTroubleStatusInfo,
     _encode_AdditionalTroubleStatusInfo,
 } from "../X790ASN1Module/AdditionalTroubleStatusInfo.ta.mjs";

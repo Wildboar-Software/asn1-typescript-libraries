@@ -7,22 +7,22 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentChange_attributeChanges,
+    type ContentChange_attributeChanges,
     _decode_ContentChange_attributeChanges,
     _encode_ContentChange_attributeChanges,
 } from "../DirectoryShadowAbstractService/ContentChange-attributeChanges.ta.mjs";
 import {
-    ContentChange_rename,
+    type ContentChange_rename,
     _decode_ContentChange_rename,
     _encode_ContentChange_rename,
 } from "../DirectoryShadowAbstractService/ContentChange-rename.ta.mjs";
 import {
-    SDSEType,
+    type SDSEType,
     _decode_SDSEType,
     _encode_SDSEType,
 } from "../DirectoryShadowAbstractService/SDSEType.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";

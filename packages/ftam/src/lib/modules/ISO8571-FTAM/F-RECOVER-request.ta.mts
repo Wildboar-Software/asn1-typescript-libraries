@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Activity_Identifier,
+  type Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
 } from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
 import {
-  Access_Request,
+  type Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
@@ -28,7 +28,7 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Abstract_Syntax_Name,
+  type Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';

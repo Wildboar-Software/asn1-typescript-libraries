@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { MessageInstructions, _decode_MessageInstructions, _encode_MessageInstructions } from "../MMSHeadingExtensions/MessageInstructions.ta.mjs";
+import { type MessageInstructions, _decode_MessageInstructions, _encode_MessageInstructions } from "../MMSHeadingExtensions/MessageInstructions.ta.mjs";
 import { id_nato_mmhs_hat_message_instructions } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-message-instructions.va.mjs";
 
 

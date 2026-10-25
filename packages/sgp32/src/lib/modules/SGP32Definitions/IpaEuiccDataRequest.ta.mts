@@ -6,8 +6,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IpaEuiccDataRequest_searchCriteriaNotification, _decode_IpaEuiccDataRequest_searchCriteriaNotification, _encode_IpaEuiccDataRequest_searchCriteriaNotification } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaNotification.ta.mjs";
-import { IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _decode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _encode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaEuiccPackageResult.ta.mjs";
+import { type IpaEuiccDataRequest_searchCriteriaNotification, _decode_IpaEuiccDataRequest_searchCriteriaNotification, _encode_IpaEuiccDataRequest_searchCriteriaNotification } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaNotification.ta.mjs";
+import { type IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _decode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult, _encode_IpaEuiccDataRequest_searchCriteriaEuiccPackageResult } from "../SGP32Definitions/IpaEuiccDataRequest-searchCriteriaEuiccPackageResult.ta.mjs";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
 
 

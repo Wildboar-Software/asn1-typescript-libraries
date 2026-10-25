@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../DFRAbstractService/Credentials.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../DFRAbstractService/Credentials.ta.mjs";
 import { Restrictions, _decode_Restrictions, _encode_Restrictions } from "../DFRAbstractService/Restrictions.ta.mjs";
-import { BindSecurity, _decode_BindSecurity, _encode_BindSecurity } from "../DFRAbstractService/BindSecurity.ta.mjs";
+import { type BindSecurity, _decode_BindSecurity, _encode_BindSecurity } from "../DFRAbstractService/BindSecurity.ta.mjs";
 import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
 
 

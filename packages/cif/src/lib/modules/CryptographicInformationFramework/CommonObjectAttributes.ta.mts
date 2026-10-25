@@ -14,9 +14,9 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { CommonObjectFlags, _decode_CommonObjectFlags, _encode_CommonObjectFlags } from "../CryptographicInformationFramework/CommonObjectFlags.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
+import { type CommonObjectFlags, _decode_CommonObjectFlags, _encode_CommonObjectFlags } from "../CryptographicInformationFramework/CommonObjectFlags.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { AccessControlRule, _decode_AccessControlRule, _encode_AccessControlRule } from "../CryptographicInformationFramework/AccessControlRule.ta.mjs";
 import { cia_ub_userConsent } from "../CryptographicInformationFramework/cia-ub-userConsent.va.mjs";
 

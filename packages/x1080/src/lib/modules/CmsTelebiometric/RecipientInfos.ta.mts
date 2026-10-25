@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientInfo,
+    type RecipientInfo,
     _decode_RecipientInfo,
     _encode_RecipientInfo,
 } from '../CmsTelebiometric/RecipientInfo.ta.mjs';

@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeviationListVersion, _decode_DeviationListVersion, _encode_DeviationListVersion } from "../DeviationList/DeviationListVersion.ta.mjs";
+import { type DeviationListVersion, _decode_DeviationListVersion, _encode_DeviationListVersion } from "../DeviationList/DeviationListVersion.ta.mjs";
 // export { DeviationListVersion, DeviationListVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeviationListVersion, _encode_DeviationListVersion } from "../DeviationList/DeviationListVersion.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 // export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";

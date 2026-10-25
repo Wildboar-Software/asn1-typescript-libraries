@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Context_list,
+  type Context_list,
   _decode_Context_list,
   _encode_Context_list,
 } from '../ACSE-1/Context-list.ta.mjs';
 import {
-  Default_Context_List,
+  type Default_Context_List,
   _decode_Default_Context_List,
   _encode_Default_Context_List,
 } from '../ACSE-1/Default-Context-List.ta.mjs';

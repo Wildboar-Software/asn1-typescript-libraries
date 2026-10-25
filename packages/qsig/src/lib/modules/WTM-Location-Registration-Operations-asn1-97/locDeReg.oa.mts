@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { LocDeRegArg, _decode_LocDeRegArg, _encode_LocDeRegArg } from "../WTM-Location-Registration-Operations-asn1-97/LocDeRegArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../WTM-Location-Registration-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../WTM-Location-Registration-Operations-asn1-97/DummyRes.ta.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { unspecified } from "../WTM-Location-Registration-Operations-asn1-97/unspecified.oa.mjs";
 

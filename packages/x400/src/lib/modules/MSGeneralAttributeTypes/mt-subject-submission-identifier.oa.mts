@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    SubjectSubmissionIdentifier,
+    type SubjectSubmissionIdentifier,
     _decode_SubjectSubmissionIdentifier,
     _encode_SubjectSubmissionIdentifier,
 } from '../MTSAbstractService/SubjectSubmissionIdentifier.ta.mjs';

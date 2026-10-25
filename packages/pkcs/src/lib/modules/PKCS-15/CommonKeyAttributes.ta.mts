@@ -3,27 +3,27 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type BOOLEAN,
-    GeneralizedTime,
+    type GeneralizedTime,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
 import {
-    KeyAccessFlags,
+    type KeyAccessFlags,
     _decode_KeyAccessFlags,
     _encode_KeyAccessFlags,
 } from "../PKCS-15/KeyAccessFlags.ta.mjs";
 import {
-    KeyUsageFlags,
+    type KeyUsageFlags,
     _decode_KeyUsageFlags,
     _encode_KeyUsageFlags,
 } from "../PKCS-15/KeyUsageFlags.ta.mjs";
 import {
-    Reference,
+    type Reference,
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";

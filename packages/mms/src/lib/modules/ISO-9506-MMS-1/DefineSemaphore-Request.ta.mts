@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-MMS-1/Unsigned16.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-MMS-1/Unsigned16.ta.mjs";
 
 
 /**

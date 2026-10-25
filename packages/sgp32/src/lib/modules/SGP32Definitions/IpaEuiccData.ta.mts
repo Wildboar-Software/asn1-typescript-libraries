@@ -7,8 +7,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
-import { EuiccPackageResultList, _decode_EuiccPackageResultList, _encode_EuiccPackageResultList } from "../SGP32Definitions/EuiccPackageResultList.ta.mjs";
+import { type PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
+import { type EuiccPackageResultList, _decode_EuiccPackageResultList, _encode_EuiccPackageResultList } from "../SGP32Definitions/EuiccPackageResultList.ta.mjs";
 import { EUICCInfo1, _decode_EUICCInfo1, _encode_EUICCInfo1 } from "@wildboar/sgp22/RSPDefinitions";
 import { EUICCInfo2, _decode_EUICCInfo2, _encode_EUICCInfo2 } from "../SGP32Definitions/EUICCInfo2.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";

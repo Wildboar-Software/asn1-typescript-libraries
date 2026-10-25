@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ModifyOperator,
+    type ModifyOperator,
     replace /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,

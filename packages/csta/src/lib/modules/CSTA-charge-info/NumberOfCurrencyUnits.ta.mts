@@ -4,9 +4,9 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type INTEGER,
     type OCTET_STRING,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError

@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Criticality,
+    type Criticality,
     _decode_Criticality,
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ExtensionType,
+    type ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
 } from "./ExtensionType.ta.mjs";

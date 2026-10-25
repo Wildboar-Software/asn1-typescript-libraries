@@ -12,23 +12,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from '@wildboar/cms';
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from '../AuthenticationContextForBiometrics/CertificateSet.ta.mjs';
 import {
-    RevocationInfoChoices,
+    type RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta.mjs';

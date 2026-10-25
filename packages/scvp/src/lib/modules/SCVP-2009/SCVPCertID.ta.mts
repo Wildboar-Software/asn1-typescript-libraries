@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
   _encode_SCVPIssuerSerial,
 } from '../SCVP-2009/SCVPIssuerSerial.ta.mjs';
 import {
-  HashAlgorithm,
+  type HashAlgorithm,
   _decode_HashAlgorithm,
   _encode_HashAlgorithm,
 } from '../SCVP-2009/HashAlgorithm.ta.mjs';

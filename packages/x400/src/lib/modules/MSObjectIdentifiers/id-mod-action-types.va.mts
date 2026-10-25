@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
-import { ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
+import { type ID, _decode_ID, _encode_ID } from '../MHSObjectIdentifiers/ID.ta.mjs';
 import { id_mod } from '../MSObjectIdentifiers/id-mod.va.mjs';
 /**
  * @summary id_mod_action_types

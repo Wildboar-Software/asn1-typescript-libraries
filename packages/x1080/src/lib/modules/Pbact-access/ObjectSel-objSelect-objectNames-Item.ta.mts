@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectSel_objSelect_objectNames_Item_object,
+    type ObjectSel_objSelect_objectNames_Item_object,
     _decode_ObjectSel_objSelect_objectNames_Item_object,
     _encode_ObjectSel_objSelect_objectNames_Item_object,
 } from '../Pbact-access/ObjectSel-objSelect-objectNames-Item-object.ta.mjs';

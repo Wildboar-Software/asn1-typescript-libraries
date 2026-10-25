@@ -5,8 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FilterAction, _decode_FilterAction, _encode_FilterAction } from "../GDT/FilterAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type FilterAction, _decode_FilterAction, _encode_FilterAction } from "../GDT/FilterAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**

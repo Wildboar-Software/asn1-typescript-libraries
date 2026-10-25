@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { MonitorStopArgument, _decode_MonitorStopArgument, _encode_MonitorStopArgument } from "../CSTA-monitor-stop/MonitorStopArgument.ta.mjs";
 
-import { MonitorStopResult, _decode_MonitorStopResult, _encode_MonitorStopResult } from "../CSTA-monitor-stop/MonitorStopResult.ta.mjs";
+import { type MonitorStopResult, _decode_MonitorStopResult, _encode_MonitorStopResult } from "../CSTA-monitor-stop/MonitorStopResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

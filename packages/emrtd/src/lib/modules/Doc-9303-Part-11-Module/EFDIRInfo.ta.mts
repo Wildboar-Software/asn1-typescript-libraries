@@ -5,7 +5,7 @@ import {
     ASN1Error,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_EFDIR } from "../Doc-9303-Part-11-Module/id-EFDIR.va.mjs";

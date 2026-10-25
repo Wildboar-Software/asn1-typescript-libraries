@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { GeneralizedTime } from "@wildboar/asn1";
+import { type GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_invalidityDate } from "../CertificateExtensions/id-ce-invalidityDate.va.mjs";

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IndividualResult,
+    type IndividualResult,
     _decode_IndividualResult,
     _encode_IndividualResult,
 } from '../ASN1DefinedTypesModule/IndividualResult.ta.mjs';

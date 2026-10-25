@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PNExtensionsSubField,
+    type PNExtensionsSubField,
     _decode_PNExtensionsSubField,
     _encode_PNExtensionsSubField,
 } from '../EDIMSInformationObjects/PNExtensionsSubField.ta.mjs';

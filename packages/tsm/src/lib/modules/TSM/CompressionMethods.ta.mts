@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMethod, _encode_CompressionMethod } from "../TSM/CompressionMethod.ta.mjs";
+import { type CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMethod, _encode_CompressionMethod } from "../TSM/CompressionMethod.ta.mjs";
 
 
 

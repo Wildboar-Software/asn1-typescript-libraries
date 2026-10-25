@@ -7,8 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegTokenTarg_negResult, _decode_NegTokenTarg_negResult, _encode_NegTokenTarg_negResult, _enum_for_NegTokenTarg_negResult } from "../Spnego/NegTokenTarg-negResult.ta.mjs";
-import { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
-import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
+import { type MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
+import { type MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
 
 
 /**

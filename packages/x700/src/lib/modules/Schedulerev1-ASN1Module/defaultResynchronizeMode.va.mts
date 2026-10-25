@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ResynchronizeMode,
+    type ResynchronizeMode,
     _decode_ResynchronizeMode,
     _encode_ResynchronizeMode,
 } from '../Schedulerev1-ASN1Module/ResynchronizeMode.ta.mjs';

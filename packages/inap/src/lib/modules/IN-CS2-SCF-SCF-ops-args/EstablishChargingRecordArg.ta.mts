@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { EstablishChargingRecordArg_Type, _decode_EstablishChargingRecordArg_Type, _encode_EstablishChargingRecordArg_Type } from "../IN-CS2-SCF-SCF-ops-args/EstablishChargingRecordArg-Type.ta.mjs";
 // export { EstablishChargingRecordArg_Type, _decode_EstablishChargingRecordArg_Type, _encode_EstablishChargingRecordArg_Type } from "../IN-CS2-SCF-SCF-ops-args/EstablishChargingRecordArg-Type.ta.mjs";

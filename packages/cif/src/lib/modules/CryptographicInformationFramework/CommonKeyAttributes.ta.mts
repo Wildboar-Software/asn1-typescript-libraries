@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type BOOLEAN,
-    GeneralizedTime,
+    type GeneralizedTime,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -13,11 +13,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-import { KeyUsageFlags, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
-import { KeyAccessFlags, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
-import { KeyReference, _decode_KeyReference, _encode_KeyReference } from "../CryptographicInformationFramework/KeyReference.ta.mjs";
-import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
+import { type KeyUsageFlags, _decode_KeyUsageFlags, _encode_KeyUsageFlags } from "../CryptographicInformationFramework/KeyUsageFlags.ta.mjs";
+import { type KeyAccessFlags, _decode_KeyAccessFlags, _encode_KeyAccessFlags } from "../CryptographicInformationFramework/KeyAccessFlags.ta.mjs";
+import { type KeyReference, _decode_KeyReference, _encode_KeyReference } from "../CryptographicInformationFramework/KeyReference.ta.mjs";
+import { type Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 
 
 /**

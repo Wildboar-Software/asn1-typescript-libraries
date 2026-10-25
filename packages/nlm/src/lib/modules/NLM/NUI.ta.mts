@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OctetString,
+    type OctetString,
     _decode_OctetString,
     _encode_OctetString,
 } from '../NLM/OctetString.ta.mjs';

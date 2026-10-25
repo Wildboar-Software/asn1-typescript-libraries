@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS-1-Datatypes/EventTypeCharging.ta.mjs";
+import { type EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS-1-Datatypes/EventTypeCharging.ta.mjs";
 // export { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS-1-Datatypes/EventTypeCharging.ta.mjs";
-import { EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../IN-CS-1-Datatypes/EventSpecificInformationCharging.ta.mjs";
+import { type EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../IN-CS-1-Datatypes/EventSpecificInformationCharging.ta.mjs";
 // export { EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../IN-CS-1-Datatypes/EventSpecificInformationCharging.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";

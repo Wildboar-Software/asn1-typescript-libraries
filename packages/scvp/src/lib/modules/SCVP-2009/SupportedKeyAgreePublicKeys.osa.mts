@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    KEY_AGREE,
+    type KEY_AGREE,
 } from '../AlgorithmInformation-2009/KEY-AGREE.oca.mjs';
 
 /**

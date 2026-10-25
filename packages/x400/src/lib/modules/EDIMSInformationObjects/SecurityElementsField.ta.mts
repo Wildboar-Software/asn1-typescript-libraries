@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    ContentIntegrityCheck,
+    type ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_EDIApplicationSecurityElementsField,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.mjs';
 import {
-    SecurityExtensionsField,
+    type SecurityExtensionsField,
     _decode_SecurityExtensionsField,
     _encode_SecurityExtensionsField,
 } from '../EDIMSInformationObjects/SecurityExtensionsField.ta.mjs';

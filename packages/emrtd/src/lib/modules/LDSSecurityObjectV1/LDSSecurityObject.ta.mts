@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LDSSecurityObjectVersion, _decode_LDSSecurityObjectVersion, _encode_LDSSecurityObjectVersion } from "../LDSSecurityObjectV1/LDSSecurityObjectVersion.ta.mjs";
+import { type LDSSecurityObjectVersion, _decode_LDSSecurityObjectVersion, _encode_LDSSecurityObjectVersion } from "../LDSSecurityObjectV1/LDSSecurityObjectVersion.ta.mjs";
 // export { LDSSecurityObjectVersion, LDSSecurityObjectVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, LDSSecurityObjectVersion_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LDSSecurityObjectVersion, _encode_LDSSecurityObjectVersion } from "../LDSSecurityObjectV1/LDSSecurityObjectVersion.ta.mjs";
-import { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../LDSSecurityObjectV1/DigestAlgorithmIdentifier.ta.mjs";
+import { type DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../LDSSecurityObjectV1/DigestAlgorithmIdentifier.ta.mjs";
 // export { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../LDSSecurityObjectV1/DigestAlgorithmIdentifier.ta.mjs";
 import { DataGroupHash, _decode_DataGroupHash, _encode_DataGroupHash } from "../LDSSecurityObjectV1/DataGroupHash.ta.mjs";
 // export { DataGroupHash, _decode_DataGroupHash, _encode_DataGroupHash } from "../LDSSecurityObjectV1/DataGroupHash.ta.mjs";

@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../IN-CS2-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
+import { type ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../IN-CS2-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
 // export { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../IN-CS2-SSF-SCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
 // export { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-CS2-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 // export { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-CS2-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";

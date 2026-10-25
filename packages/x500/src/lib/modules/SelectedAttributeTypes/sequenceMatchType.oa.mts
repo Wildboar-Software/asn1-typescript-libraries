@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_cat_sequenceMatchType } from "../SelectedAttributeTypes/id-cat-sequenceMatchType.va.mjs";
 import {
-    SequenceMatchType,
+    type SequenceMatchType,
     _decode_SequenceMatchType,
     _encode_SequenceMatchType,
 } from "../SelectedAttributeTypes/SequenceMatchType.ta.mjs";

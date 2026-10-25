@@ -32,12 +32,12 @@ import {
     _encode_MessageGroupNameAndDescriptor,
 } from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";

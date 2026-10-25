@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeferredLocationEventType, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
+import { type DeferredLocationEventType, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
 import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
-import { TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _enum_for_TerminationCause } from "../MAP-LCS-DataTypes/TerminationCause.ta.mjs";
+import { type TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _enum_for_TerminationCause } from "../MAP-LCS-DataTypes/TerminationCause.ta.mjs";
 
 
 /**

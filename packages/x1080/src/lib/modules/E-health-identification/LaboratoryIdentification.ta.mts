@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';

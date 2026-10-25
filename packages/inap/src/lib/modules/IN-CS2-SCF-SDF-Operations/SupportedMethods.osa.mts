@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { METHOD } from "../IN-CS2-SDF-InformationFramework/METHOD.oca.mjs";
+import { type METHOD } from "../IN-CS2-SDF-InformationFramework/METHOD.oca.mjs";
 // export { METHOD } from "../IN-CS2-SDF-InformationFramework/METHOD.oca.mjs";
 
 

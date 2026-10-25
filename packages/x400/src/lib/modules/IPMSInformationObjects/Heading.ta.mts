@@ -12,67 +12,67 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ThisIPMField,
+    type ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
 } from '../IPMSInformationObjects/ThisIPMField.ta.mjs';
 import {
-    OriginatorField,
+    type OriginatorField,
     _decode_OriginatorField,
     _encode_OriginatorField,
 } from '../IPMSInformationObjects/OriginatorField.ta.mjs';
 import {
-    AuthorizingUsersField,
+    type AuthorizingUsersField,
     _decode_AuthorizingUsersField,
     _encode_AuthorizingUsersField,
 } from '../IPMSInformationObjects/AuthorizingUsersField.ta.mjs';
 import {
-    PrimaryRecipientsField,
+    type PrimaryRecipientsField,
     _decode_PrimaryRecipientsField,
     _encode_PrimaryRecipientsField,
 } from '../IPMSInformationObjects/PrimaryRecipientsField.ta.mjs';
 import {
-    CopyRecipientsField,
+    type CopyRecipientsField,
     _decode_CopyRecipientsField,
     _encode_CopyRecipientsField,
 } from '../IPMSInformationObjects/CopyRecipientsField.ta.mjs';
 import {
-    BlindCopyRecipientsField,
+    type BlindCopyRecipientsField,
     _decode_BlindCopyRecipientsField,
     _encode_BlindCopyRecipientsField,
 } from '../IPMSInformationObjects/BlindCopyRecipientsField.ta.mjs';
 import {
-    RepliedToIPMField,
+    type RepliedToIPMField,
     _decode_RepliedToIPMField,
     _encode_RepliedToIPMField,
 } from '../IPMSInformationObjects/RepliedToIPMField.ta.mjs';
 import {
-    ObsoletedIPMsField,
+    type ObsoletedIPMsField,
     _decode_ObsoletedIPMsField,
     _encode_ObsoletedIPMsField,
 } from '../IPMSInformationObjects/ObsoletedIPMsField.ta.mjs';
 import {
-    RelatedIPMsField,
+    type RelatedIPMsField,
     _decode_RelatedIPMsField,
     _encode_RelatedIPMsField,
 } from '../IPMSInformationObjects/RelatedIPMsField.ta.mjs';
 import {
-    SubjectField,
+    type SubjectField,
     _decode_SubjectField,
     _encode_SubjectField,
 } from '../IPMSInformationObjects/SubjectField.ta.mjs';
 import {
-    ExpiryTimeField,
+    type ExpiryTimeField,
     _decode_ExpiryTimeField,
     _encode_ExpiryTimeField,
 } from '../IPMSInformationObjects/ExpiryTimeField.ta.mjs';
 import {
-    ReplyTimeField,
+    type ReplyTimeField,
     _decode_ReplyTimeField,
     _encode_ReplyTimeField,
 } from '../IPMSInformationObjects/ReplyTimeField.ta.mjs';
 import {
-    ReplyRecipientsField,
+    type ReplyRecipientsField,
     _decode_ReplyRecipientsField,
     _encode_ReplyRecipientsField,
 } from '../IPMSInformationObjects/ReplyRecipientsField.ta.mjs';
@@ -94,12 +94,12 @@ import {
     _encode_SensitivityField,
 } from '../IPMSInformationObjects/SensitivityField.ta.mjs';
 import {
-    AutoForwardedField,
+    type AutoForwardedField,
     _decode_AutoForwardedField,
     _encode_AutoForwardedField,
 } from '../IPMSInformationObjects/AutoForwardedField.ta.mjs';
 import {
-    ExtensionsField,
+    type ExtensionsField,
     _decode_ExtensionsField,
     _encode_ExtensionsField,
 } from '../IPMSInformationObjects/ExtensionsField.ta.mjs';

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { ReviewArgument, _decode_ReviewArgument, _encode_ReviewArgument } from "../CSTA-review/ReviewArgument.ta.mjs";
 
-import { ReviewResult, _decode_ReviewResult, _encode_ReviewResult } from "../CSTA-review/ReviewResult.ta.mjs";
+import { type ReviewResult, _decode_ReviewResult, _encode_ReviewResult } from "../CSTA-review/ReviewResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

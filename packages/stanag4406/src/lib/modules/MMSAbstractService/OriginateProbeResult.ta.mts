@@ -6,10 +6,10 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 import {
-    ProbeSubmissionIdentifier,
+    type ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
-    ProbeSubmissionTime,
+    type ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
 } from "@wildboar/x400/MTSAbstractService";

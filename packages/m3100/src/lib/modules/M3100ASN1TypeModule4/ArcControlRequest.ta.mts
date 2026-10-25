@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ArcTime,
+    type ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
 } from '../M3100ASN1TypeModule4/ArcTime.ta.mjs';
@@ -23,7 +23,7 @@ import {
     _encode_ArcState,
 } from '../M3100ASN1TypeModule4/ArcState.ta.mjs';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';

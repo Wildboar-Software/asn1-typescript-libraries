@@ -4,7 +4,7 @@ import {
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
+import { _decode_DeliveryMode, _encode_DeliveryMode, type DeliveryMode,
     DeliveryMode_rtnTimelyOnline,
     DeliveryMode_rtnCompleteOnline,
     DeliveryMode_rtnOffline

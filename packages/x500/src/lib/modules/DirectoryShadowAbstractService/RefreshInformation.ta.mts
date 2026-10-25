@@ -3,11 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type EXTERNAL,
-    NULL,
+    type NULL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IncrementalRefresh,
+    type IncrementalRefresh,
     _decode_IncrementalRefresh,
     _encode_IncrementalRefresh,
 } from "../DirectoryShadowAbstractService/IncrementalRefresh.ta.mjs";

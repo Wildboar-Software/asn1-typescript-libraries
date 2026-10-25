@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  AuthenticationChoice,
+  type AuthenticationChoice,
   _decode_AuthenticationChoice,
   _encode_AuthenticationChoice,
 } from '../Lightweight-Directory-Access-Protocol-V3/AuthenticationChoice.ta.mjs';

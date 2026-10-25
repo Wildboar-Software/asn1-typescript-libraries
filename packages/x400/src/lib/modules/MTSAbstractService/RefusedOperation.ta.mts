@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RefusedOperation_refused_argument,
+    type RefusedOperation_refused_argument,
     _decode_RefusedOperation_refused_argument,
     _encode_RefusedOperation_refused_argument,
 } from '../MTSAbstractService/RefusedOperation-refused-argument.ta.mjs';
 import {
-    RefusalReason,
+    type RefusalReason,
     _decode_RefusalReason,
     _encode_RefusalReason,
 } from '../MTSAbstractService/RefusalReason.ta.mjs';

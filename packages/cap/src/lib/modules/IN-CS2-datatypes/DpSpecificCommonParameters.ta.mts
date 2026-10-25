@@ -12,27 +12,27 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceAddressInformation, _decode_ServiceAddressInformation, _encode_ServiceAddressInformation } from "../IN-CS2-datatypes/ServiceAddressInformation.ta.mjs";
-import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
-import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS2-datatypes/IPSSPCapabilities.ta.mjs";
-import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS2-datatypes/IPAvailable.ta.mjs";
-import { ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-CS2-datatypes/ISDNAccessRelatedInformation.ta.mjs";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS2-datatypes/IPSSPCapabilities.ta.mjs";
+import { type IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS2-datatypes/IPAvailable.ta.mjs";
+import { type ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-CS2-datatypes/ISDNAccessRelatedInformation.ta.mjs";
 import { CGEncountered, _enum_for_CGEncountered, _decode_CGEncountered, _encode_CGEncountered } from "../IN-CS2-datatypes/CGEncountered.ta.mjs";
-import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
-import { ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS2-datatypes/ServiceProfileIdentifier.ta.mjs";
+import { type LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
+import { type ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS2-datatypes/ServiceProfileIdentifier.ta.mjs";
 import { TerminalType, _enum_for_TerminalType, _decode_TerminalType, _encode_TerminalType } from "../IN-CS2-datatypes/TerminalType.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { ChargeNumber, _decode_ChargeNumber, _encode_ChargeNumber } from "../IN-CS2-datatypes/ChargeNumber.ta.mjs";
-import { ServingAreaID, _decode_ServingAreaID, _encode_ServingAreaID } from "../IN-CS2-datatypes/ServingAreaID.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
-import { INServiceCompatibilityIndication, _decode_INServiceCompatibilityIndication, _encode_INServiceCompatibilityIndication } from "../IN-CS2-datatypes/INServiceCompatibilityIndication.ta.mjs";
+import { type ChargeNumber, _decode_ChargeNumber, _encode_ChargeNumber } from "../IN-CS2-datatypes/ChargeNumber.ta.mjs";
+import { type ServingAreaID, _decode_ServingAreaID, _encode_ServingAreaID } from "../IN-CS2-datatypes/ServingAreaID.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
+import { type INServiceCompatibilityIndication, _decode_INServiceCompatibilityIndication, _encode_INServiceCompatibilityIndication } from "../IN-CS2-datatypes/INServiceCompatibilityIndication.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-CS2-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
-import { USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
-import { ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS2-datatypes/ForwardGVNS.ta.mjs";
-import { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
+import { type USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
+import { type USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
+import { type ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS2-datatypes/ForwardGVNS.ta.mjs";
+import { type CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
 
 
 /**

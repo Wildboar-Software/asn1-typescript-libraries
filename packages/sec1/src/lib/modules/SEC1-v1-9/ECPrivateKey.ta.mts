@@ -13,8 +13,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
-import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
+import { type ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
+import { type ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
 /**
  * @summary ECPrivateKey
  * @description

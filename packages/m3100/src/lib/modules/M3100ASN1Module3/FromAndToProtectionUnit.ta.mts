@@ -16,7 +16,7 @@ import * as $ from '@wildboar/asn1/functional';
 //     _encode_RelativeDistinguishedName,
 // } from '@wildboar/cmip';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "@wildboar/dn";

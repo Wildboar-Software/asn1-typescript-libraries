@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyPairIdentifier,
+    type KeyPairIdentifier,
     _decode_KeyPairIdentifier,
     _encode_KeyPairIdentifier,
 } from "../CMSSigncryption/KeyPairIdentifier.ta.mjs";

@@ -3,9 +3,9 @@
 import * as $ from "@wildboar/asn1/functional";
 import {
     type OPTIONAL,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -22,7 +22,7 @@ import {
 } from "../CSTA-call-control/NetworkCapability-networkType.ta.mjs";
 
 import {
-    NetworkCapability_eventsProvided,
+    type NetworkCapability_eventsProvided,
     bridged /* IMPORTED_SHORT_NAMED_BIT */,
     allCleared /* IMPORTED_SHORT_NAMED_BIT */,
     conferenced /* IMPORTED_SHORT_NAMED_BIT */,

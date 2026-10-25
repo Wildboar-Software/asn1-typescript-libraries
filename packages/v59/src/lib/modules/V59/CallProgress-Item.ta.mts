@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallProgressRes, _decode_CallProgressRes, _encode_CallProgressRes } from "../V59/CallProgressRes.ta.mjs";
+import { type CallProgressRes, _decode_CallProgressRes, _encode_CallProgressRes } from "../V59/CallProgressRes.ta.mjs";
 
-import { CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode } from "../V59/CallTerminateCode.ta.mjs";
+import { type CallTerminateCode, _decode_CallTerminateCode, _encode_CallTerminateCode } from "../V59/CallTerminateCode.ta.mjs";
 
 /**
  * @summary CallProgress_Item

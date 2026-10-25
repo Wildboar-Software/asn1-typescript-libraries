@@ -8,7 +8,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { SessionDirection, _decode_SessionDirection, _encode_SessionDirection, _enum_for_SessionDirection } from "../IMSChargingDataTypes/SessionDirection.ta.mjs";
 import { NNIType, _decode_NNIType, _encode_NNIType, _enum_for_NNIType } from "../IMSChargingDataTypes/NNIType.ta.mjs";
 import { RelationshipMode, _decode_RelationshipMode, _encode_RelationshipMode, _enum_for_RelationshipMode } from "../IMSChargingDataTypes/RelationshipMode.ta.mjs";
-import { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
+import { type ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
 
 
 /**

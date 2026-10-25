@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Criticality,
+    type Criticality,
     _decode_Criticality,
     _encode_Criticality,
 } from '../EDIMSInformationObjects/Criticality.ta.mjs';

@@ -17,32 +17,32 @@ import {
     _encode_CommonFields,
 } from '../IPMSInformationObjects/CommonFields.ta.mjs';
 import {
-    IPN_choice,
+    type IPN_choice,
     _decode_IPN_choice,
     _encode_IPN_choice,
 } from '../IPMSInformationObjects/IPN-choice.ta.mjs';
 import {
-    SubjectIPMField,
+    type SubjectIPMField,
     _decode_SubjectIPMField,
     _encode_SubjectIPMField,
 } from '../IPMSInformationObjects/SubjectIPMField.ta.mjs';
 import {
-    IPNOriginatorField,
+    type IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
 } from '../IPMSInformationObjects/IPNOriginatorField.ta.mjs';
 import {
-    IPMIntendedRecipientField,
+    type IPMIntendedRecipientField,
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
 } from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.mjs';
 import {
-    ConversionEITsField,
+    type ConversionEITsField,
     _decode_ConversionEITsField,
     _encode_ConversionEITsField,
 } from '../IPMSInformationObjects/ConversionEITsField.ta.mjs';
 import {
-    NotificationExtensionsField,
+    type NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../IPMSInformationObjects/NotificationExtensionsField.ta.mjs';
