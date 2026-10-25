@@ -11,7 +11,7 @@
     "strictNullChecks": true,
     "rootDir": "."
   },
-  "exclude": ["**/*.spec.mts"],
+  "exclude": ["**/*.spec.mts", "vitest.config.ts", "vitest.config.mts"],
   "include": [
     "**/*.mts"
   ],
