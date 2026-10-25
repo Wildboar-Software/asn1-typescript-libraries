@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DataSize = INTEGER;
 
 
-export const _decode_DataSize = $._decodeInteger;
+export const _decode_DataSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DataSize = $._encodeInteger;
+export const _encode_DataSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

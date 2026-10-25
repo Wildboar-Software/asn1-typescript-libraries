@@ -39,7 +39,7 @@ type ReturnResultProblem = INTEGER;
  * @type {number}
  */
 export
-const ReturnResultProblem_unrecognizedInvocation = 0 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnResultProblem_unrecognizedInvocation: 0 = 0 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_unrecognizedInvocation
@@ -53,7 +53,7 @@ const ReturnResultProblem_unrecognizedInvocation = 0 satisfies ReturnResultProbl
  * @type {number}
  */
 export
-const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognizedInvocation: 0 = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
@@ -66,7 +66,7 @@ const unrecognizedInvocation = ReturnResultProblem_unrecognizedInvocation; /* SH
  * @type {number}
  */
 export
-const ReturnResultProblem_resultResponseUnexpected = 1 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnResultProblem_resultResponseUnexpected: 1 = 1 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_resultResponseUnexpected
@@ -79,7 +79,7 @@ const ReturnResultProblem_resultResponseUnexpected = 1 satisfies ReturnResultPro
  * @type {number}
  */
 export
-const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const resultResponseUnexpected: 1 = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_mistypedResult
@@ -92,7 +92,7 @@ const resultResponseUnexpected = ReturnResultProblem_resultResponseUnexpected; /
  * @type {number}
  */
 export
-const ReturnResultProblem_mistypedResult = 2 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnResultProblem_mistypedResult: 2 = 2 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnResultProblem_mistypedResult
@@ -105,7 +105,7 @@ const ReturnResultProblem_mistypedResult = 2 satisfies ReturnResultProblem; /* L
  * @type {number}
  */
 export
-const mistypedResult = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedResult: 2 = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ReturnResultProblem: $.ASN1Decoder<ReturnResultProblem> = $._decodeInteger;
 export const _encode_ReturnResultProblem: $.ASN1Encoder<ReturnResultProblem> = $._encodeInteger;
 

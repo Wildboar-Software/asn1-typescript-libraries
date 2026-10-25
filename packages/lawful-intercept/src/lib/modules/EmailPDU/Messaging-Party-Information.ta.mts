@@ -149,19 +149,19 @@ class Messaging_Party_Information {
          * @static
          */
 
-    public static _enum_for_party_qualifier = _enum_for_Messaging_Party_Qualifier;        /**
+    public static _enum_for_party_qualifier: typeof _enum_for_Messaging_Party_Qualifier = _enum_for_Messaging_Party_Qualifier;        /**
          * @summary The enum used as the type of the component `party_validity`
          * @public
          * @static
          */
 
-    public static _enum_for_party_validity = _enum_for_Messaging_Party_Validity;        /**
+    public static _enum_for_party_validity: typeof _enum_for_Messaging_Party_Validity = _enum_for_Messaging_Party_Validity;        /**
          * @summary The enum used as the type of the component `copy_qualifier`
          * @public
          * @static
          */
 
-    public static _enum_for_copy_qualifier = _enum_for_Messaging_Copy_Qualifier;
+    public static _enum_for_copy_qualifier: typeof _enum_for_Messaging_Copy_Qualifier = _enum_for_Messaging_Copy_Qualifier;
 }
 
 /**

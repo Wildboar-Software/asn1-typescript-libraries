@@ -31,34 +31,34 @@ export type BilateralDeferral = INTEGER;
  * @constant
  * @type {number}
  */
-export const BilateralDeferral_agreement = 0 satisfies BilateralDeferral; /* LONG_NAMED_INTEGER_VALUE */
+export const BilateralDeferral_agreement: 0 = 0 satisfies BilateralDeferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_agreement
  * @constant
  * @type {number}
  */
-export const agreement = BilateralDeferral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
+export const agreement: 0 = BilateralDeferral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_no_agreement
  * @constant
  * @type {number}
  */
-export const BilateralDeferral_no_agreement = 1 satisfies BilateralDeferral; /* LONG_NAMED_INTEGER_VALUE */
+export const BilateralDeferral_no_agreement: 1 = 1 satisfies BilateralDeferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BilateralDeferral_no_agreement
  * @constant
  * @type {number}
  */
-export const no_agreement = BilateralDeferral_no_agreement; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_agreement: 1 = BilateralDeferral_no_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_BilateralDeferral = $._decodeInteger;
+export const _decode_BilateralDeferral: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_BilateralDeferral = $._encodeInteger;
+export const _encode_BilateralDeferral: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -95,13 +95,13 @@ class FiveGMSAFUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_fiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;        /**
+    public static _enum_for_fiveGMSAFUnsuccessfulOperation: typeof _enum_for_FiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;        /**
          * @summary The enum used as the type of the component `fiveGMSAFErrorCode`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGMSAFErrorCode = _enum_for_FiveGMSAFErrorCode;
+    public static _enum_for_fiveGMSAFErrorCode: typeof _enum_for_FiveGMSAFErrorCode = _enum_for_FiveGMSAFErrorCode;
 }
 
 /**

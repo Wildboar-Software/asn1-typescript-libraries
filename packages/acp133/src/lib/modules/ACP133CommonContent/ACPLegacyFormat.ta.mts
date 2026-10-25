@@ -81,7 +81,7 @@ type ACPLegacyFormat = INTEGER;
  * @type {number}
  */
 export
-const ACPLegacyFormat_janap128 = 0 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_janap128: 0 = 0 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_janap128}.
@@ -90,7 +90,7 @@ const ACPLegacyFormat_janap128 = 0 satisfies ACPLegacyFormat; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const janap128 = ACPLegacyFormat_janap128; /* SHORT_NAMED_INTEGER_VALUE */
+const janap128: 0 = ACPLegacyFormat_janap128; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 126.
@@ -99,7 +99,7 @@ const janap128 = ACPLegacyFormat_janap128; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp126 = 1 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp126: 1 = 1 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp126}.
@@ -108,7 +108,7 @@ const ACPLegacyFormat_acp126 = 1 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const acp126 = ACPLegacyFormat_acp126; /* SHORT_NAMED_INTEGER_VALUE */
+const acp126: 1 = ACPLegacyFormat_acp126; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * DOI 103.
@@ -117,7 +117,7 @@ const acp126 = ACPLegacyFormat_acp126; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_doi103 = 2 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_doi103: 2 = 2 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_doi103}.
@@ -126,7 +126,7 @@ const ACPLegacyFormat_doi103 = 2 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const doi103 = ACPLegacyFormat_doi103; /* SHORT_NAMED_INTEGER_VALUE */
+const doi103: 2 = ACPLegacyFormat_doi103; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * DOI 103 special.
@@ -135,7 +135,7 @@ const doi103 = ACPLegacyFormat_doi103; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_doi103_special = 3 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_doi103_special: 3 = 3 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_doi103_special}.
@@ -144,7 +144,7 @@ const ACPLegacyFormat_doi103_special = 3 satisfies ACPLegacyFormat; /* LONG_NAME
  * @type {number}
  */
 export
-const doi103_special = ACPLegacyFormat_doi103_special; /* SHORT_NAMED_INTEGER_VALUE */
+const doi103_special: 3 = ACPLegacyFormat_doi103_special; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 127.
@@ -153,7 +153,7 @@ const doi103_special = ACPLegacyFormat_doi103_special; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp127 = 4 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp127: 4 = 4 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp127}.
@@ -162,7 +162,7 @@ const ACPLegacyFormat_acp127 = 4 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const acp127 = ACPLegacyFormat_acp127; /* SHORT_NAMED_INTEGER_VALUE */
+const acp127: 4 = ACPLegacyFormat_acp127; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 127, converted.
@@ -171,7 +171,7 @@ const acp127 = ACPLegacyFormat_acp127; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp127_converted = 5 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp127_converted: 5 = 5 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp127_converted}.
@@ -180,7 +180,7 @@ const ACPLegacyFormat_acp127_converted = 5 satisfies ACPLegacyFormat; /* LONG_NA
  * @type {number}
  */
 export
-const acp127_converted = ACPLegacyFormat_acp127_converted; /* SHORT_NAMED_INTEGER_VALUE */
+const acp127_converted: 5 = ACPLegacyFormat_acp127_converted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Held for ACP 127 Standard, if that value is needed.
@@ -189,7 +189,7 @@ const acp127_converted = ACPLegacyFormat_acp127_converted; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const ACPLegacyFormat_reserved_1 = 6 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_reserved_1: 6 = 6 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_reserved_1}.
@@ -198,7 +198,7 @@ const ACPLegacyFormat_reserved_1 = 6 satisfies ACPLegacyFormat; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const reserved_1 = ACPLegacyFormat_reserved_1; /* SHORT_NAMED_INTEGER_VALUE */
+const reserved_1: 6 = ACPLegacyFormat_reserved_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 127 state.
@@ -207,7 +207,7 @@ const reserved_1 = ACPLegacyFormat_reserved_1; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp127_state = 7 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp127_state: 7 = 7 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp127_state}.
@@ -216,7 +216,7 @@ const ACPLegacyFormat_acp127_state = 7 satisfies ACPLegacyFormat; /* LONG_NAMED_
  * @type {number}
  */
 export
-const acp127_state = ACPLegacyFormat_acp127_state; /* SHORT_NAMED_INTEGER_VALUE */
+const acp127_state: 7 = ACPLegacyFormat_acp127_state; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 127 modified.
@@ -225,7 +225,7 @@ const acp127_state = ACPLegacyFormat_acp127_state; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp127_modified = 8 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp127_modified: 8 = 8 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp127_modified}.
@@ -234,7 +234,7 @@ const ACPLegacyFormat_acp127_modified = 8 satisfies ACPLegacyFormat; /* LONG_NAM
  * @type {number}
  */
 export
-const acp127_modified = ACPLegacyFormat_acp127_modified; /* SHORT_NAMED_INTEGER_VALUE */
+const acp127_modified: 8 = ACPLegacyFormat_acp127_modified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SOCOMM special.
@@ -243,7 +243,7 @@ const acp127_modified = ACPLegacyFormat_acp127_modified; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const ACPLegacyFormat_socomm_special = 9 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_socomm_special: 9 = 9 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_socomm_special}.
@@ -252,7 +252,7 @@ const ACPLegacyFormat_socomm_special = 9 satisfies ACPLegacyFormat; /* LONG_NAME
  * @type {number}
  */
 export
-const socomm_special = ACPLegacyFormat_socomm_special; /* SHORT_NAMED_INTEGER_VALUE */
+const socomm_special: 9 = ACPLegacyFormat_socomm_special; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SOCOMM narrative.
@@ -261,7 +261,7 @@ const socomm_special = ACPLegacyFormat_socomm_special; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const ACPLegacyFormat_socomm_narrative = 10 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_socomm_narrative: 10 = 10 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_socomm_narrative}.
@@ -270,7 +270,7 @@ const ACPLegacyFormat_socomm_narrative = 10 satisfies ACPLegacyFormat; /* LONG_N
  * @type {number}
  */
 export
-const socomm_narrative = ACPLegacyFormat_socomm_narrative; /* SHORT_NAMED_INTEGER_VALUE */
+const socomm_narrative: 10 = ACPLegacyFormat_socomm_narrative; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Held for SOCOMM narrative TTY, if that value is needed.
@@ -279,7 +279,7 @@ const socomm_narrative = ACPLegacyFormat_socomm_narrative; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const ACPLegacyFormat_reserved_2 = 11 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_reserved_2: 11 = 11 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_reserved_2}.
@@ -288,7 +288,7 @@ const ACPLegacyFormat_reserved_2 = 11 satisfies ACPLegacyFormat; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const reserved_2 = ACPLegacyFormat_reserved_2; /* SHORT_NAMED_INTEGER_VALUE */
+const reserved_2: 11 = ACPLegacyFormat_reserved_2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SOCOMM narrative special.
@@ -297,7 +297,7 @@ const reserved_2 = ACPLegacyFormat_reserved_2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_socomm_narrative_special = 12 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_socomm_narrative_special: 12 = 12 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_socomm_narrative_special}.
@@ -306,7 +306,7 @@ const ACPLegacyFormat_socomm_narrative_special = 12 satisfies ACPLegacyFormat; /
  * @type {number}
  */
 export
-const socomm_narrative_special = ACPLegacyFormat_socomm_narrative_special; /* SHORT_NAMED_INTEGER_VALUE */
+const socomm_narrative_special: 12 = ACPLegacyFormat_socomm_narrative_special; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SOCOMM data.
@@ -315,7 +315,7 @@ const socomm_narrative_special = ACPLegacyFormat_socomm_narrative_special; /* SH
  * @type {number}
  */
 export
-const ACPLegacyFormat_socomm_data = 13 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_socomm_data: 13 = 13 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_socomm_data}.
@@ -324,7 +324,7 @@ const ACPLegacyFormat_socomm_data = 13 satisfies ACPLegacyFormat; /* LONG_NAMED_
  * @type {number}
  */
 export
-const socomm_data = ACPLegacyFormat_socomm_data; /* SHORT_NAMED_INTEGER_VALUE */
+const socomm_data: 13 = ACPLegacyFormat_socomm_data; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SOCOMM internal.
@@ -333,7 +333,7 @@ const socomm_data = ACPLegacyFormat_socomm_data; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_socomm_internal = 14 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_socomm_internal: 14 = 14 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_socomm_internal}.
@@ -342,7 +342,7 @@ const ACPLegacyFormat_socomm_internal = 14 satisfies ACPLegacyFormat; /* LONG_NA
  * @type {number}
  */
 export
-const socomm_internal = ACPLegacyFormat_socomm_internal; /* SHORT_NAMED_INTEGER_VALUE */
+const socomm_internal: 14 = ACPLegacyFormat_socomm_internal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SOCOMM external.
@@ -351,7 +351,7 @@ const socomm_internal = ACPLegacyFormat_socomm_internal; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const ACPLegacyFormat_socomm_external = 15 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_socomm_external: 15 = 15 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_socomm_external}.
@@ -360,7 +360,7 @@ const ACPLegacyFormat_socomm_external = 15 satisfies ACPLegacyFormat; /* LONG_NA
  * @type {number}
  */
 export
-const socomm_external = ACPLegacyFormat_socomm_external; /* SHORT_NAMED_INTEGER_VALUE */
+const socomm_external: 15 = ACPLegacyFormat_socomm_external; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MFI default. Named in ACP 133 SUPP-1(A).
@@ -369,7 +369,7 @@ const socomm_external = ACPLegacyFormat_socomm_external; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const ACPLegacyFormat_mfi_default = 16 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_mfi_default: 16 = 16 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_mfi_default}.
@@ -378,7 +378,7 @@ const ACPLegacyFormat_mfi_default = 16 satisfies ACPLegacyFormat; /* LONG_NAMED_
  * @type {number}
  */
 export
-const mfi_default = ACPLegacyFormat_mfi_default; /* SHORT_NAMED_INTEGER_VALUE */
+const mfi_default: 16 = ACPLegacyFormat_mfi_default; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * SMTP. Named in ACP 133 SUPP-1(A).
@@ -387,7 +387,7 @@ const mfi_default = ACPLegacyFormat_mfi_default; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp_legacy_format_smtp = 17 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp_legacy_format_smtp: 17 = 17 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp_legacy_format_smtp}.
@@ -396,7 +396,7 @@ const ACPLegacyFormat_acp_legacy_format_smtp = 17 satisfies ACPLegacyFormat; /* 
  * @type {number}
  */
 export
-const acp_legacy_format_smtp = ACPLegacyFormat_acp_legacy_format_smtp; /* SHORT_NAMED_INTEGER_VALUE */
+const acp_legacy_format_smtp: 17 = ACPLegacyFormat_acp_legacy_format_smtp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * P22. Named in ACP 133 SUPP-1(A).
@@ -405,7 +405,7 @@ const acp_legacy_format_smtp = ACPLegacyFormat_acp_legacy_format_smtp; /* SHORT_
  * @type {number}
  */
 export
-const ACPLegacyFormat_p22 = 18 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_p22: 18 = 18 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_p22}.
@@ -414,7 +414,7 @@ const ACPLegacyFormat_p22 = 18 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const p22 = ACPLegacyFormat_p22; /* SHORT_NAMED_INTEGER_VALUE */
+const p22: 18 = ACPLegacyFormat_p22; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 145 format of the United States.
@@ -423,7 +423,7 @@ const p22 = ACPLegacyFormat_p22; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp145_united_states = 32 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp145_united_states: 32 = 32 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp145_united_states}.
@@ -432,7 +432,7 @@ const ACPLegacyFormat_acp145_united_states = 32 satisfies ACPLegacyFormat; /* LO
  * @type {number}
  */
 export
-const acp145_united_states = ACPLegacyFormat_acp145_united_states; /* SHORT_NAMED_INTEGER_VALUE */
+const acp145_united_states: 32 = ACPLegacyFormat_acp145_united_states; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 145 format of Australia.
@@ -441,7 +441,7 @@ const acp145_united_states = ACPLegacyFormat_acp145_united_states; /* SHORT_NAME
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp145_australia = 33 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp145_australia: 33 = 33 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp145_australia}.
@@ -450,7 +450,7 @@ const ACPLegacyFormat_acp145_australia = 33 satisfies ACPLegacyFormat; /* LONG_N
  * @type {number}
  */
 export
-const acp145_australia = ACPLegacyFormat_acp145_australia; /* SHORT_NAMED_INTEGER_VALUE */
+const acp145_australia: 33 = ACPLegacyFormat_acp145_australia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 145 format of Canada.
@@ -459,7 +459,7 @@ const acp145_australia = ACPLegacyFormat_acp145_australia; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp145_canada = 34 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp145_canada: 34 = 34 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp145_canada}.
@@ -468,7 +468,7 @@ const ACPLegacyFormat_acp145_canada = 34 satisfies ACPLegacyFormat; /* LONG_NAME
  * @type {number}
  */
 export
-const acp145_canada = ACPLegacyFormat_acp145_canada; /* SHORT_NAMED_INTEGER_VALUE */
+const acp145_canada: 34 = ACPLegacyFormat_acp145_canada; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 145 format of the United Kingdom.
@@ -477,7 +477,7 @@ const acp145_canada = ACPLegacyFormat_acp145_canada; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp145_united_kingdom = 35 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp145_united_kingdom: 35 = 35 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp145_united_kingdom}.
@@ -486,7 +486,7 @@ const ACPLegacyFormat_acp145_united_kingdom = 35 satisfies ACPLegacyFormat; /* L
  * @type {number}
  */
 export
-const acp145_united_kingdom = ACPLegacyFormat_acp145_united_kingdom; /* SHORT_NAMED_INTEGER_VALUE */
+const acp145_united_kingdom: 35 = ACPLegacyFormat_acp145_united_kingdom; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * ACP 145 format of New Zealand.
@@ -495,7 +495,7 @@ const acp145_united_kingdom = ACPLegacyFormat_acp145_united_kingdom; /* SHORT_NA
  * @type {number}
  */
 export
-const ACPLegacyFormat_acp145_new_zealand = 36 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
+const ACPLegacyFormat_acp145_new_zealand: 36 = 36 satisfies ACPLegacyFormat; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link ACPLegacyFormat_acp145_new_zealand}.
@@ -504,9 +504,9 @@ const ACPLegacyFormat_acp145_new_zealand = 36 satisfies ACPLegacyFormat; /* LONG
  * @type {number}
  */
 export
-const acp145_new_zealand = ACPLegacyFormat_acp145_new_zealand; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ACPLegacyFormat = $._decodeInteger;
-export const _encode_ACPLegacyFormat = $._encodeInteger;
+const acp145_new_zealand: 36 = ACPLegacyFormat_acp145_new_zealand; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ACPLegacyFormat: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ACPLegacyFormat: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

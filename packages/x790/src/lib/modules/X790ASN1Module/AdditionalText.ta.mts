@@ -27,7 +27,7 @@ export function _decode_AdditionalText (el: _Element): AdditionalText {
     }
     return value;
 }
-export const _encode_AdditionalText = $._encodeGraphicString;
+export const _encode_AdditionalText: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

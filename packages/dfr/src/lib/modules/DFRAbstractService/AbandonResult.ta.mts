@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AbandonResult = NULL; // NullType
-export const _decode_AbandonResult = $._decodeNull;
-export const _encode_AbandonResult = $._encodeNull;
+export const _decode_AbandonResult: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_AbandonResult: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

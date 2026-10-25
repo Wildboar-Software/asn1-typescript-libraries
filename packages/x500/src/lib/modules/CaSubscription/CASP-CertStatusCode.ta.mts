@@ -35,7 +35,7 @@ export type CASP_CertStatusCode = _enum_for_CASP_CertStatusCode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CASP_CertStatusCode_noReason = _enum_for_CASP_CertStatusCode.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_CertStatusCode_noReason: _enum_for_CASP_CertStatusCode.noReason = _enum_for_CASP_CertStatusCode.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReason
@@ -45,7 +45,7 @@ export const CASP_CertStatusCode_noReason = _enum_for_CASP_CertStatusCode.noReas
  * @constant
  * @type {number}
  */
-export const noReason = CASP_CertStatusCode_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noReason: _enum_for_CASP_CertStatusCode.noReason = CASP_CertStatusCode_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_CertStatusCode_unknownCert
@@ -55,7 +55,7 @@ export const noReason = CASP_CertStatusCode_noReason; /* SHORT_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const CASP_CertStatusCode_unknownCert = _enum_for_CASP_CertStatusCode.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_CertStatusCode_unknownCert: _enum_for_CASP_CertStatusCode.unknownCert = _enum_for_CASP_CertStatusCode.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCert
@@ -65,13 +65,13 @@ export const CASP_CertStatusCode_unknownCert = _enum_for_CASP_CertStatusCode.unk
  * @constant
  * @type {number}
  */
-export const unknownCert = CASP_CertStatusCode_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCert: _enum_for_CASP_CertStatusCode.unknownCert = CASP_CertStatusCode_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CASP_CertStatusCode = $._decodeEnumerated;
+export const _decode_CASP_CertStatusCode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_CASP_CertStatusCode = $._encodeEnumerated;
+export const _encode_CASP_CertStatusCode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

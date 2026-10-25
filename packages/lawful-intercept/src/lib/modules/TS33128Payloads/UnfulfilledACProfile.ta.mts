@@ -80,7 +80,7 @@ class UnfulfilledACProfile {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_UnfulfilledACProfileReason;
+    public static _enum_for_reason: typeof _enum_for_UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
 }
 
 /**

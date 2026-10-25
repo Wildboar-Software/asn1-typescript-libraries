@@ -79,8 +79,8 @@ export class DpSpecificInfoAlt_oServiceChangeSpecificInfo {
         return new DpSpecificInfoAlt_oServiceChangeSpecificInfo(_o.ext_basicServiceCode, _o.initiatorOfServiceChange, _o.natureOfServiceChange, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_initiatorOfServiceChange = _enum_for_InitiatorOfServiceChange;
-    public static _enum_for_natureOfServiceChange = _enum_for_NatureOfServiceChange;
+    public static _enum_for_initiatorOfServiceChange: typeof _enum_for_InitiatorOfServiceChange = _enum_for_InitiatorOfServiceChange;
+    public static _enum_for_natureOfServiceChange: typeof _enum_for_NatureOfServiceChange = _enum_for_NatureOfServiceChange;
 }
 
 export const _root_component_type_list_1_spec_for_DpSpecificInfoAlt_oServiceChangeSpecificInfo: $.ComponentSpec[] = [

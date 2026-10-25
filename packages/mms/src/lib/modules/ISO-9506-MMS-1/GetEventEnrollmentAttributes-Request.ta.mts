@@ -161,7 +161,7 @@ class GetEventEnrollmentAttributes_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_scopeOfRequest () { return client; }
+    public static get _default_value_for_scopeOfRequest (): 1 { return client; }
 }
 
 /**

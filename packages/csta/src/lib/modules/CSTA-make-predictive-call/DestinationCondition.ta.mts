@@ -85,7 +85,7 @@ type DestinationCondition = _enum_for_DestinationCondition;
  * @enum {number}
  */
 export
-const DestinationCondition = _enum_for_DestinationCondition;
+const DestinationCondition: typeof _enum_for_DestinationCondition = _enum_for_DestinationCondition;
 
 /**
  * @summary DestinationCondition_humanVoice
@@ -93,7 +93,7 @@ const DestinationCondition = _enum_for_DestinationCondition;
  * @type {number}
  */
 export
-const DestinationCondition_humanVoice = DestinationCondition.humanVoice; /* LONG_NAMED_ENUMERATED_VALUE */
+const DestinationCondition_humanVoice: _enum_for_DestinationCondition.humanVoice = DestinationCondition.humanVoice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary humanVoice
@@ -101,7 +101,7 @@ const DestinationCondition_humanVoice = DestinationCondition.humanVoice; /* LONG
  * @type {number}
  */
 export
-const humanVoice = DestinationCondition.humanVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const humanVoice: _enum_for_DestinationCondition.humanVoice = DestinationCondition.humanVoice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DestinationCondition_answeringMachine
@@ -109,7 +109,7 @@ const humanVoice = DestinationCondition.humanVoice; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const DestinationCondition_answeringMachine = DestinationCondition.answeringMachine; /* LONG_NAMED_ENUMERATED_VALUE */
+const DestinationCondition_answeringMachine: _enum_for_DestinationCondition.answeringMachine = DestinationCondition.answeringMachine; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answeringMachine
@@ -117,7 +117,7 @@ const DestinationCondition_answeringMachine = DestinationCondition.answeringMach
  * @type {number}
  */
 export
-const answeringMachine = DestinationCondition.answeringMachine; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answeringMachine: _enum_for_DestinationCondition.answeringMachine = DestinationCondition.answeringMachine; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DestinationCondition_facsimileMachine
@@ -125,7 +125,7 @@ const answeringMachine = DestinationCondition.answeringMachine; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const DestinationCondition_facsimileMachine = DestinationCondition.facsimileMachine; /* LONG_NAMED_ENUMERATED_VALUE */
+const DestinationCondition_facsimileMachine: _enum_for_DestinationCondition.facsimileMachine = DestinationCondition.facsimileMachine; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary facsimileMachine
@@ -133,7 +133,7 @@ const DestinationCondition_facsimileMachine = DestinationCondition.facsimileMach
  * @type {number}
  */
 export
-const facsimileMachine = DestinationCondition.facsimileMachine; /* SHORT_NAMED_ENUMERATED_VALUE */
+const facsimileMachine: _enum_for_DestinationCondition.facsimileMachine = DestinationCondition.facsimileMachine; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DestinationCondition: $.ASN1Decoder<DestinationCondition> | null = null;
 

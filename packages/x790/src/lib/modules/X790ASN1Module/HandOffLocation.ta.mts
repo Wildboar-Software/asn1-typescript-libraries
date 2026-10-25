@@ -27,7 +27,7 @@ export function _decode_HandOffLocation (el: _Element): HandOffLocation {
     }
     return value;
 }
-export const _encode_HandOffLocation = $._encodeGraphicString;
+export const _encode_HandOffLocation: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

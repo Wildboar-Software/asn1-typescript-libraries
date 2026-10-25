@@ -120,7 +120,7 @@ export class ResourceBoundaryTestResults {
      * @static
      */
 
-    public static _enum_for_intermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
+    public static _enum_for_intermediateResourceBoundaryTestOutcome: typeof _enum_for_IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 }
 
 /**

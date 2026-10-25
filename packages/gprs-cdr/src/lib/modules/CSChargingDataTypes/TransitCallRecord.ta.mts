@@ -560,7 +560,7 @@ class TransitCallRecord {
          * @static
          */
 
-    public static _enum_for_isdnBasicService = _enum_for_IsdnBasicService;
+    public static _enum_for_isdnBasicService: typeof _enum_for_IsdnBasicService = _enum_for_IsdnBasicService;
 }
 
 /**

@@ -18,12 +18,12 @@ export type PublicKey = BIT_STRING;
 
 
 
-export const _decode_PublicKey = $._decodeBitString;
+export const _decode_PublicKey: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_PublicKey = $._encodeBitString;
+export const _encode_PublicKey: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

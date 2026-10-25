@@ -179,7 +179,7 @@ class NASTransportInitialInformation {
          * @static
          */
 
-    public static _enum_for_rEDCAPIndication = _enum_for_REDCAPIndication;
+    public static _enum_for_rEDCAPIndication: typeof _enum_for_REDCAPIndication = _enum_for_REDCAPIndication;
 }
 
 /**

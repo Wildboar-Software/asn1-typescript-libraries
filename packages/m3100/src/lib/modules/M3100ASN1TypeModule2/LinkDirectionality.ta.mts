@@ -61,7 +61,7 @@ export type LinkDirectionality = _enum_for_LinkDirectionality;
  *
  * @enum {number}
  */
-export const LinkDirectionality = _enum_for_LinkDirectionality;
+export const LinkDirectionality: typeof _enum_for_LinkDirectionality = _enum_for_LinkDirectionality;
 
 
 /**
@@ -69,7 +69,7 @@ export const LinkDirectionality = _enum_for_LinkDirectionality;
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_unidirectional =
+export const LinkDirectionality_unidirectional: _enum_for_LinkDirectionality.unidirectional =
     LinkDirectionality.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const LinkDirectionality_unidirectional =
  * @constant
  * @type {number}
  */
-export const unidirectional =
+export const unidirectional: _enum_for_LinkDirectionality.unidirectional =
     LinkDirectionality.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const unidirectional =
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_bidirectional =
+export const LinkDirectionality_bidirectional: _enum_for_LinkDirectionality.bidirectional =
     LinkDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const LinkDirectionality_bidirectional =
  * @constant
  * @type {number}
  */
-export const bidirectional =
+export const bidirectional: _enum_for_LinkDirectionality.bidirectional =
     LinkDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const bidirectional =
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_undefined =
+export const LinkDirectionality_undefined: _enum_for_LinkDirectionality.undefined =
     LinkDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const LinkDirectionality_undefined =
  * @constant
  * @type {number}
  */
-export const undefined =
+export const undefined: _enum_for_LinkDirectionality.undefined =
     LinkDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

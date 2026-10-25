@@ -175,7 +175,7 @@ class DfrBindArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return Priority_medium; }
+    public static get _default_value_for_priority (): _enum_for_Priority { return Priority_medium; }
     /**
      * @summary Getter that returns the default value for `dor_for_produce_operations`.
      * @public
@@ -195,7 +195,7 @@ class DfrBindArgument {
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

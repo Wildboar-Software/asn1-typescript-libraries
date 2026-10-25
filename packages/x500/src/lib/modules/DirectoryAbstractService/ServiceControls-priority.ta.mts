@@ -22,14 +22,14 @@ export type ServiceControls_priority = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceControls_priority_low = 0 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_priority_low: 0 = 0 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_low
  * @constant
  * @type {number}
  */
-export const low = ServiceControls_priority_low; /* SHORT_NAMED_INTEGER_VALUE */
+export const low: 0 = ServiceControls_priority_low; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_medium
@@ -40,7 +40,7 @@ export const low = ServiceControls_priority_low; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const ServiceControls_priority_medium = 1 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_priority_medium: 1 = 1 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_medium
@@ -51,27 +51,27 @@ export const ServiceControls_priority_medium = 1 satisfies ServiceControls_prior
  * @constant
  * @type {number}
  */
-export const medium = ServiceControls_priority_medium; /* SHORT_NAMED_INTEGER_VALUE */
+export const medium: 1 = ServiceControls_priority_medium; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_high
  * @constant
  * @type {number}
  */
-export const ServiceControls_priority_high = 2 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_priority_high: 2 = 2 satisfies ServiceControls_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_priority_high
  * @constant
  * @type {number}
  */
-export const high = ServiceControls_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
+export const high: 2 = ServiceControls_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ServiceControls_priority = $._decodeInteger;
+export const _decode_ServiceControls_priority: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ServiceControls_priority = $._encodeInteger;
+export const _encode_ServiceControls_priority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ManagedObjectAccessFromTime = GeneralizedTime; // GeneralizedTime
-export const _decode_ManagedObjectAccessFromTime = $._decodeGeneralizedTime;
-export const _encode_ManagedObjectAccessFromTime = $._encodeGeneralizedTime;
+export const _decode_ManagedObjectAccessFromTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
+export const _encode_ManagedObjectAccessFromTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

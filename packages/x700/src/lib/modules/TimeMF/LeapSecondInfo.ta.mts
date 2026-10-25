@@ -98,7 +98,7 @@ export class LeapSecondInfo {
      * @static
      */
 
-    public static _enum_for_leapIndication = _enum_for_LeapIndication;
+    public static _enum_for_leapIndication: typeof _enum_for_LeapIndication = _enum_for_LeapIndication;
 }
 
 /**

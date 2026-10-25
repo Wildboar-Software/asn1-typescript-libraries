@@ -28,12 +28,12 @@ export type TRFormatID = INTEGER;
 
 
 
-export const _decode_TRFormatID = $._decodeInteger;
+export const _decode_TRFormatID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_TRFormatID = $._encodeInteger;
+export const _encode_TRFormatID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

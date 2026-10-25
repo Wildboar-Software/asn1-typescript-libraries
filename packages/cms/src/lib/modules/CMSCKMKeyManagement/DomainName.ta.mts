@@ -20,12 +20,12 @@ export type DomainName = PrintableString; // PrintableString
 
 
 
-export const _decode_DomainName = $._decodePrintableString;
+export const _decode_DomainName: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
 
 
-export const _encode_DomainName = $._encodePrintableString;
+export const _encode_DomainName: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

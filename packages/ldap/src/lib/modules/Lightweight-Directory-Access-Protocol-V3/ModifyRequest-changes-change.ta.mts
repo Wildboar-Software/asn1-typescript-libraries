@@ -106,7 +106,7 @@ export class ModifyRequest_changes_change {
    * @static
    */
 
-  public static _enum_for_operation = _enum_for_ModifyRequest_changes_change_operation;
+  public static _enum_for_operation: typeof _enum_for_ModifyRequest_changes_change_operation = _enum_for_ModifyRequest_changes_change_operation;
 }
 
 

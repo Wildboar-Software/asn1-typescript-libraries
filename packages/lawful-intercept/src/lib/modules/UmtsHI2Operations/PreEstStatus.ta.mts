@@ -54,7 +54,7 @@ type PreEstStatus = _enum_for_PreEstStatus | ENUMERATED;
  * @type {number}
  */
 export
-const PreEstStatus_established = _enum_for_PreEstStatus.established; /* LONG_NAMED_ENUMERATED_VALUE */
+const PreEstStatus_established: _enum_for_PreEstStatus.established = _enum_for_PreEstStatus.established; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary established
@@ -66,7 +66,7 @@ const PreEstStatus_established = _enum_for_PreEstStatus.established; /* LONG_NAM
  * @type {number}
  */
 export
-const established = PreEstStatus_established; /* SHORT_NAMED_ENUMERATED_VALUE */
+const established: _enum_for_PreEstStatus.established = PreEstStatus_established; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PreEstStatus_modify
@@ -79,7 +79,7 @@ const established = PreEstStatus_established; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PreEstStatus_modify = _enum_for_PreEstStatus.modify; /* LONG_NAMED_ENUMERATED_VALUE */
+const PreEstStatus_modify: _enum_for_PreEstStatus.modify = _enum_for_PreEstStatus.modify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modify
@@ -91,7 +91,7 @@ const PreEstStatus_modify = _enum_for_PreEstStatus.modify; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const modify = PreEstStatus_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modify: _enum_for_PreEstStatus.modify = PreEstStatus_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PreEstStatus_released
@@ -105,7 +105,7 @@ const modify = PreEstStatus_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PreEstStatus_released = _enum_for_PreEstStatus.released; /* LONG_NAMED_ENUMERATED_VALUE */
+const PreEstStatus_released: _enum_for_PreEstStatus.released = _enum_for_PreEstStatus.released; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary released
@@ -117,7 +117,7 @@ const PreEstStatus_released = _enum_for_PreEstStatus.released; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const released = PreEstStatus_released; /* SHORT_NAMED_ENUMERATED_VALUE */
+const released: _enum_for_PreEstStatus.released = PreEstStatus_released; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PreEstStatus: $.ASN1Decoder<PreEstStatus> = $._decodeEnumerated;
 export const _encode_PreEstStatus: $.ASN1Encoder<PreEstStatus> = $._encodeEnumerated;
 

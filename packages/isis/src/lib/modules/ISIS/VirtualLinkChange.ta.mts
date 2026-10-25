@@ -75,7 +75,7 @@ export type VirtualLinkChange = _enum_for_VirtualLinkChange;
  *
  * @enum {number}
  */
-export const VirtualLinkChange = _enum_for_VirtualLinkChange;
+export const VirtualLinkChange: typeof _enum_for_VirtualLinkChange = _enum_for_VirtualLinkChange;
 
 /**
  * @summary VirtualLinkChange_deleted
@@ -88,7 +88,7 @@ export const VirtualLinkChange = _enum_for_VirtualLinkChange;
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_deleted =
+export const VirtualLinkChange_deleted: _enum_for_VirtualLinkChange.deleted =
   VirtualLinkChange.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const VirtualLinkChange_deleted =
  * @constant
  * @type {number}
  */
-export const deleted =
+export const deleted: _enum_for_VirtualLinkChange.deleted =
   VirtualLinkChange.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const deleted =
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_created =
+export const VirtualLinkChange_created: _enum_for_VirtualLinkChange.created =
   VirtualLinkChange.created; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const VirtualLinkChange_created =
  * @constant
  * @type {number}
  */
-export const created =
+export const created: _enum_for_VirtualLinkChange.created =
   VirtualLinkChange.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

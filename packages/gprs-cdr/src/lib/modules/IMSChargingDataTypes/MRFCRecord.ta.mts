@@ -1055,13 +1055,13 @@ class MRFCRecord {
          * @static
          */
 
-    public static _enum_for_causeForRecordClosing = _enum_for_CauseForRecordClosing;        /**
+    public static _enum_for_causeForRecordClosing: typeof _enum_for_CauseForRecordClosing = _enum_for_CauseForRecordClosing;        /**
          * @summary The enum used as the type of the component `sessionPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_sessionPriority = _enum_for_SessionPriority;
+    public static _enum_for_sessionPriority: typeof _enum_for_SessionPriority = _enum_for_SessionPriority;
 }
 
 /**

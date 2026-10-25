@@ -133,7 +133,7 @@ class LocationType {
          * @static
          */
 
-    public static _enum_for_locationEstimateType = _enum_for_LocationType_locationEstimateType;
+    public static _enum_for_locationEstimateType: typeof _enum_for_LocationType_locationEstimateType = _enum_for_LocationType_locationEstimateType;
 }
 
 /**

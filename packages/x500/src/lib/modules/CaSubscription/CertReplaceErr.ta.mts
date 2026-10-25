@@ -76,7 +76,7 @@ export class CertReplaceErr {
      * @static
      */
 
-    public static _enum_for_code = _enum_for_CASP_error;
+    public static _enum_for_code: typeof _enum_for_CASP_error = _enum_for_CASP_error;
 }
 
 /**

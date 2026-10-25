@@ -338,19 +338,19 @@ class SubscriberInfo {
          * @static
          */
 
-    public static _enum_for_imsVoiceOverPS_SessionsIndication = _enum_for_IMS_VoiceOverPS_SessionsInd;        /**
+    public static _enum_for_imsVoiceOverPS_SessionsIndication: typeof _enum_for_IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;        /**
          * @summary The enum used as the type of the component `lastRAT_Type`
          * @public
          * @static
          */
 
-    public static _enum_for_lastRAT_Type = _enum_for_Used_RAT_Type;        /**
+    public static _enum_for_lastRAT_Type: typeof _enum_for_Used_RAT_Type = _enum_for_Used_RAT_Type;        /**
          * @summary The enum used as the type of the component `daylightSavingTime`
          * @public
          * @static
          */
 
-    public static _enum_for_daylightSavingTime = _enum_for_DaylightSavingTime;
+    public static _enum_for_daylightSavingTime: typeof _enum_for_DaylightSavingTime = _enum_for_DaylightSavingTime;
 }
 
 /**

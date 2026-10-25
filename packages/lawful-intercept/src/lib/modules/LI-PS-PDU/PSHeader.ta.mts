@@ -349,7 +349,7 @@ class PSHeader {
          * @static
          */
 
-    public static _enum_for_timeStampQualifier = _enum_for_TimeStampQualifier;
+    public static _enum_for_timeStampQualifier: typeof _enum_for_TimeStampQualifier = _enum_for_TimeStampQualifier;
 }
 
 /**

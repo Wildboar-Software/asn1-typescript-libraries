@@ -28,12 +28,12 @@ export type Implicit = BOOLEAN; // BooleanType
 
 
 
-export const _decode_Implicit = $._decodeBoolean;
+export const _decode_Implicit: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_Implicit = $._encodeBoolean;
+export const _encode_Implicit: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

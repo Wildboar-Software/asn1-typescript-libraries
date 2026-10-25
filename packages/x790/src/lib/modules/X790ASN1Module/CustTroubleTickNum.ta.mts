@@ -27,7 +27,7 @@ export function _decode_CustTroubleTickNum (el: _Element): CustTroubleTickNum {
     }
     return value;
 }
-export const _encode_CustTroubleTickNum = $._encodeGraphicString;
+export const _encode_CustTroubleTickNum: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

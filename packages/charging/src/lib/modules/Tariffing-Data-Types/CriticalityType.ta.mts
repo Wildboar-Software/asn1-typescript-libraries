@@ -83,7 +83,7 @@ type CriticalityType = _enum_for_CriticalityType;
  * @enum {number}
  */
 export
-const CriticalityType = _enum_for_CriticalityType;
+const CriticalityType: typeof _enum_for_CriticalityType = _enum_for_CriticalityType;
 
 /**
  * Default criticality. The extension can be ignored.
@@ -92,7 +92,7 @@ const CriticalityType = _enum_for_CriticalityType;
  * @type {number}
  */
 export
-const CriticalityType_ignore = CriticalityType.ignore; /* LONG_NAMED_ENUMERATED_VALUE */
+const CriticalityType_ignore: 0 = CriticalityType.ignore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Default criticality. The extension can be ignored.
@@ -101,7 +101,7 @@ const CriticalityType_ignore = CriticalityType.ignore; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ignore = CriticalityType.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignore: 0 = CriticalityType.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * The commentary example uses this when the extension is not to be
@@ -111,7 +111,7 @@ const ignore = CriticalityType.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CriticalityType_abort = CriticalityType.abort; /* LONG_NAMED_ENUMERATED_VALUE */
+const CriticalityType_abort: 1 = CriticalityType.abort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * The commentary example uses this when the extension is not to be
@@ -121,7 +121,7 @@ const CriticalityType_abort = CriticalityType.abort; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const abort = CriticalityType.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abort: 1 = CriticalityType.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CriticalityType: $.ASN1Decoder<CriticalityType> =
     $._decodeEnumerated as $.ASN1Decoder<CriticalityType>;
 export const _encode_CriticalityType: $.ASN1Encoder<CriticalityType> =

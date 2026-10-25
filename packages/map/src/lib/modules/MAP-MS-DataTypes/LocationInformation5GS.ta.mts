@@ -246,7 +246,7 @@ class LocationInformation5GS {
          * @static
          */
 
-    public static _enum_for_rat_Type = _enum_for_Used_RAT_Type;
+    public static _enum_for_rat_Type: typeof _enum_for_Used_RAT_Type = _enum_for_Used_RAT_Type;
 }
 
 /**

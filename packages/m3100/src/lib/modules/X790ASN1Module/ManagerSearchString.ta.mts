@@ -28,12 +28,12 @@ export type ManagerSearchString = GraphicString; // GraphicString
 
 
 
-export const _decode_ManagerSearchString = $._decodeGraphicString;
+export const _decode_ManagerSearchString: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ManagerSearchString = $._encodeGraphicString;
+export const _encode_ManagerSearchString: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

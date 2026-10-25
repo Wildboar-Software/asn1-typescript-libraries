@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type VoiceData = OCTET_STRING; // OctetStringType
 
 
-export const _decode_VoiceData = $._decodeOctetString;
+export const _decode_VoiceData: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_VoiceData = $._encodeOctetString;
+export const _encode_VoiceData: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

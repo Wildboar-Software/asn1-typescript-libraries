@@ -54,7 +54,7 @@ export type CreateVpnLCSError = _enum_for_CreateVpnLCSError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_unknownServiceClass = _enum_for_CreateVpnLCSError.unknownServiceClass; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_unknownServiceClass: _enum_for_CreateVpnLCSError.unknownServiceClass = _enum_for_CreateVpnLCSError.unknownServiceClass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const CreateVpnLCSError_unknownServiceClass = _enum_for_CreateVpnLCSError
  * @constant
  * @type {number}
  */
-export const unknownServiceClass = CreateVpnLCSError_unknownServiceClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownServiceClass: _enum_for_CreateVpnLCSError.unknownServiceClass = CreateVpnLCSError_unknownServiceClass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const unknownServiceClass = CreateVpnLCSError_unknownServiceClass; /* SHO
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_requestedBandwidthNotAvailable = _enum_for_CreateVpnLCSError.requestedBandwidthNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_requestedBandwidthNotAvailable: _enum_for_CreateVpnLCSError.requestedBandwidthNotAvailable = _enum_for_CreateVpnLCSError.requestedBandwidthNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const CreateVpnLCSError_requestedBandwidthNotAvailable = _enum_for_Create
  * @constant
  * @type {number}
  */
-export const requestedBandwidthNotAvailable = CreateVpnLCSError_requestedBandwidthNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requestedBandwidthNotAvailable: _enum_for_CreateVpnLCSError.requestedBandwidthNotAvailable = CreateVpnLCSError_requestedBandwidthNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const requestedBandwidthNotAvailable = CreateVpnLCSError_requestedBandwid
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_resourcesUnavailable = _enum_for_CreateVpnLCSError.resourcesUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_resourcesUnavailable: _enum_for_CreateVpnLCSError.resourcesUnavailable = _enum_for_CreateVpnLCSError.resourcesUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const CreateVpnLCSError_resourcesUnavailable = _enum_for_CreateVpnLCSErro
  * @constant
  * @type {number}
  */
-export const resourcesUnavailable = CreateVpnLCSError_resourcesUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resourcesUnavailable: _enum_for_CreateVpnLCSError.resourcesUnavailable = CreateVpnLCSError_resourcesUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const resourcesUnavailable = CreateVpnLCSError_resourcesUnavailable; /* S
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_invalidScheduleConflict = _enum_for_CreateVpnLCSError.invalidScheduleConflict; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_invalidScheduleConflict: _enum_for_CreateVpnLCSError.invalidScheduleConflict = _enum_for_CreateVpnLCSError.invalidScheduleConflict; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -110,7 +110,7 @@ export const CreateVpnLCSError_invalidScheduleConflict = _enum_for_CreateVpnLCSE
  * @constant
  * @type {number}
  */
-export const invalidScheduleConflict = CreateVpnLCSError_invalidScheduleConflict; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidScheduleConflict: _enum_for_CreateVpnLCSError.invalidScheduleConflict = CreateVpnLCSError_invalidScheduleConflict; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const invalidScheduleConflict = CreateVpnLCSError_invalidScheduleConflict
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_contractViolation = _enum_for_CreateVpnLCSError.contractViolation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_contractViolation: _enum_for_CreateVpnLCSError.contractViolation = _enum_for_CreateVpnLCSError.contractViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -126,7 +126,7 @@ export const CreateVpnLCSError_contractViolation = _enum_for_CreateVpnLCSError.c
  * @constant
  * @type {number}
  */
-export const contractViolation = CreateVpnLCSError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractViolation: _enum_for_CreateVpnLCSError.contractViolation = CreateVpnLCSError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -134,7 +134,7 @@ export const contractViolation = CreateVpnLCSError_contractViolation; /* SHORT_N
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_invalidParameterValue = _enum_for_CreateVpnLCSError.invalidParameterValue; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_invalidParameterValue: _enum_for_CreateVpnLCSError.invalidParameterValue = _enum_for_CreateVpnLCSError.invalidParameterValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -142,7 +142,7 @@ export const CreateVpnLCSError_invalidParameterValue = _enum_for_CreateVpnLCSErr
  * @constant
  * @type {number}
  */
-export const invalidParameterValue = CreateVpnLCSError_invalidParameterValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidParameterValue: _enum_for_CreateVpnLCSError.invalidParameterValue = CreateVpnLCSError_invalidParameterValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -150,7 +150,7 @@ export const invalidParameterValue = CreateVpnLCSError_invalidParameterValue; /*
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_requiredParameterNotSupplied = _enum_for_CreateVpnLCSError.requiredParameterNotSupplied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_requiredParameterNotSupplied: _enum_for_CreateVpnLCSError.requiredParameterNotSupplied = _enum_for_CreateVpnLCSError.requiredParameterNotSupplied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -158,7 +158,7 @@ export const CreateVpnLCSError_requiredParameterNotSupplied = _enum_for_CreateVp
  * @constant
  * @type {number}
  */
-export const requiredParameterNotSupplied = CreateVpnLCSError_requiredParameterNotSupplied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requiredParameterNotSupplied: _enum_for_CreateVpnLCSError.requiredParameterNotSupplied = CreateVpnLCSError_requiredParameterNotSupplied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -166,7 +166,7 @@ export const requiredParameterNotSupplied = CreateVpnLCSError_requiredParameterN
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_nonExistentSAP = _enum_for_CreateVpnLCSError.nonExistentSAP; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_nonExistentSAP: _enum_for_CreateVpnLCSError.nonExistentSAP = _enum_for_CreateVpnLCSError.nonExistentSAP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -174,7 +174,7 @@ export const CreateVpnLCSError_nonExistentSAP = _enum_for_CreateVpnLCSError.nonE
  * @constant
  * @type {number}
  */
-export const nonExistentSAP = CreateVpnLCSError_nonExistentSAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nonExistentSAP: _enum_for_CreateVpnLCSError.nonExistentSAP = CreateVpnLCSError_nonExistentSAP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -182,7 +182,7 @@ export const nonExistentSAP = CreateVpnLCSError_nonExistentSAP; /* SHORT_NAMED_E
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_sAPnotinVPN = _enum_for_CreateVpnLCSError.sAPnotinVPN; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_sAPnotinVPN: _enum_for_CreateVpnLCSError.sAPnotinVPN = _enum_for_CreateVpnLCSError.sAPnotinVPN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -190,7 +190,7 @@ export const CreateVpnLCSError_sAPnotinVPN = _enum_for_CreateVpnLCSError.sAPnoti
  * @constant
  * @type {number}
  */
-export const sAPnotinVPN = CreateVpnLCSError_sAPnotinVPN; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sAPnotinVPN: _enum_for_CreateVpnLCSError.sAPnotinVPN = CreateVpnLCSError_sAPnotinVPN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -198,7 +198,7 @@ export const sAPnotinVPN = CreateVpnLCSError_sAPnotinVPN; /* SHORT_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_serviceClassnotinserviceClassList = _enum_for_CreateVpnLCSError.serviceClassnotinserviceClassList; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_serviceClassnotinserviceClassList: _enum_for_CreateVpnLCSError.serviceClassnotinserviceClassList = _enum_for_CreateVpnLCSError.serviceClassnotinserviceClassList; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -206,7 +206,7 @@ export const CreateVpnLCSError_serviceClassnotinserviceClassList = _enum_for_Cre
  * @constant
  * @type {number}
  */
-export const serviceClassnotinserviceClassList = CreateVpnLCSError_serviceClassnotinserviceClassList; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const serviceClassnotinserviceClassList: _enum_for_CreateVpnLCSError.serviceClassnotinserviceClassList = CreateVpnLCSError_serviceClassnotinserviceClassList; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -214,7 +214,7 @@ export const serviceClassnotinserviceClassList = CreateVpnLCSError_serviceClassn
  * @constant
  * @type {number}
  */
-export const CreateVpnLCSError_invalidTerminationDate = _enum_for_CreateVpnLCSError.invalidTerminationDate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnLCSError_invalidTerminationDate: _enum_for_CreateVpnLCSError.invalidTerminationDate = _enum_for_CreateVpnLCSError.invalidTerminationDate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -222,17 +222,17 @@ export const CreateVpnLCSError_invalidTerminationDate = _enum_for_CreateVpnLCSEr
  * @constant
  * @type {number}
  */
-export const invalidTerminationDate = CreateVpnLCSError_invalidTerminationDate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidTerminationDate: _enum_for_CreateVpnLCSError.invalidTerminationDate = CreateVpnLCSError_invalidTerminationDate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CreateVpnLCSError = $._decodeEnumerated;
+export const _decode_CreateVpnLCSError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_CreateVpnLCSError = $._encodeEnumerated;
+export const _encode_CreateVpnLCSError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

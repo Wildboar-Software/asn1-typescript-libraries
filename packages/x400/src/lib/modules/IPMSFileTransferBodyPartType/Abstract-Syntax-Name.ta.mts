@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Abstract_Syntax_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_Abstract_Syntax_Name = $._decodeObjectIdentifier;
+export const _decode_Abstract_Syntax_Name: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_Abstract_Syntax_Name = $._encodeObjectIdentifier;
+export const _encode_Abstract_Syntax_Name: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

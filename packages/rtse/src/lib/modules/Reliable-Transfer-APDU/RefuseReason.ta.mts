@@ -49,7 +49,7 @@ export type RefuseReason = INTEGER;
  * @constant
  * @type {number}
  */
-export const RefuseReason_rtsBusy = 0 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_rtsBusy: 0 = 0 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const RefuseReason_rtsBusy = 0 satisfies RefuseReason; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const rtsBusy = RefuseReason_rtsBusy; /* SHORT_NAMED_INTEGER_VALUE */
+export const rtsBusy: 0 = RefuseReason_rtsBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const rtsBusy = RefuseReason_rtsBusy; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const RefuseReason_cannotRecover = 1 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_cannotRecover: 1 = 1 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const RefuseReason_cannotRecover = 1 satisfies RefuseReason; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const cannotRecover = RefuseReason_cannotRecover; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannotRecover: 1 = RefuseReason_cannotRecover; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const cannotRecover = RefuseReason_cannotRecover; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const RefuseReason_validationFailure = 2 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_validationFailure: 2 = 2 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const RefuseReason_validationFailure = 2 satisfies RefuseReason; /* LONG_
  * @constant
  * @type {number}
  */
-export const validationFailure = RefuseReason_validationFailure; /* SHORT_NAMED_INTEGER_VALUE */
+export const validationFailure: 2 = RefuseReason_validationFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const validationFailure = RefuseReason_validationFailure; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const RefuseReason_unacceptableDialogueMode = 3 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
+export const RefuseReason_unacceptableDialogueMode: 3 = 3 satisfies RefuseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,17 +115,17 @@ export const RefuseReason_unacceptableDialogueMode = 3 satisfies RefuseReason; /
  * @constant
  * @type {number}
  */
-export const unacceptableDialogueMode = RefuseReason_unacceptableDialogueMode; /* SHORT_NAMED_INTEGER_VALUE */
+export const unacceptableDialogueMode: 3 = RefuseReason_unacceptableDialogueMode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_RefuseReason = $._decodeInteger;
+export const _decode_RefuseReason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RefuseReason = $._encodeInteger;
+export const _encode_RefuseReason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

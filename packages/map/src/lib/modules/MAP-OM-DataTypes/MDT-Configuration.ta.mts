@@ -338,55 +338,55 @@ class MDT_Configuration {
          * @static
          */
 
-    public static _enum_for_jobType = _enum_for_JobType;        /**
+    public static _enum_for_jobType: typeof _enum_for_JobType = _enum_for_JobType;        /**
          * @summary The enum used as the type of the component `reportInterval`
          * @public
          * @static
          */
 
-    public static _enum_for_reportInterval = _enum_for_ReportInterval;        /**
+    public static _enum_for_reportInterval: typeof _enum_for_ReportInterval = _enum_for_ReportInterval;        /**
          * @summary The enum used as the type of the component `reportAmount`
          * @public
          * @static
          */
 
-    public static _enum_for_reportAmount = _enum_for_ReportAmount;        /**
+    public static _enum_for_reportAmount: typeof _enum_for_ReportAmount = _enum_for_ReportAmount;        /**
          * @summary The enum used as the type of the component `loggingInterval`
          * @public
          * @static
          */
 
-    public static _enum_for_loggingInterval = _enum_for_LoggingInterval;        /**
+    public static _enum_for_loggingInterval: typeof _enum_for_LoggingInterval = _enum_for_LoggingInterval;        /**
          * @summary The enum used as the type of the component `loggingDuration`
          * @public
          * @static
          */
 
-    public static _enum_for_loggingDuration = _enum_for_LoggingDuration;        /**
+    public static _enum_for_loggingDuration: typeof _enum_for_LoggingDuration = _enum_for_LoggingDuration;        /**
          * @summary The enum used as the type of the component `measurementPeriodUMTS`
          * @public
          * @static
          */
 
-    public static _enum_for_measurementPeriodUMTS = _enum_for_PeriodUMTS;        /**
+    public static _enum_for_measurementPeriodUMTS: typeof _enum_for_PeriodUMTS = _enum_for_PeriodUMTS;        /**
          * @summary The enum used as the type of the component `measurementPeriodLTE`
          * @public
          * @static
          */
 
-    public static _enum_for_measurementPeriodLTE = _enum_for_PeriodLTE;        /**
+    public static _enum_for_measurementPeriodLTE: typeof _enum_for_PeriodLTE = _enum_for_PeriodLTE;        /**
          * @summary The enum used as the type of the component `collectionPeriodRRM_UMTS`
          * @public
          * @static
          */
 
-    public static _enum_for_collectionPeriodRRM_UMTS = _enum_for_PeriodUMTS;        /**
+    public static _enum_for_collectionPeriodRRM_UMTS: typeof _enum_for_PeriodUMTS = _enum_for_PeriodUMTS;        /**
          * @summary The enum used as the type of the component `collectionPeriodRRM_LTE`
          * @public
          * @static
          */
 
-    public static _enum_for_collectionPeriodRRM_LTE = _enum_for_PeriodLTE;
+    public static _enum_for_collectionPeriodRRM_LTE: typeof _enum_for_PeriodLTE = _enum_for_PeriodLTE;
 }
 
 /**

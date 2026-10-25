@@ -361,7 +361,7 @@ export class ResponseConfirmationInfo {
      * @static
      */
 
-    public static _enum_for_responseSync = _enum_for_ResponseSync;
+    public static _enum_for_responseSync: typeof _enum_for_ResponseSync = _enum_for_ResponseSync;
 }
 
 /**

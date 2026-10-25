@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -80,14 +81,14 @@ class CurrencyFactorScale {
      * @static
      * @method
      */
-    public static get _default_value_for_currencyFactor () { return noCharge; }
+    public static get _default_value_for_currencyFactor (): INTEGER { return noCharge; }
     /**
      * @summary Getter that returns the default value for `currencyScale`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_currencyScale () { return noScale; }
+    public static get _default_value_for_currencyScale (): INTEGER { return noScale; }
 }
 
 /**

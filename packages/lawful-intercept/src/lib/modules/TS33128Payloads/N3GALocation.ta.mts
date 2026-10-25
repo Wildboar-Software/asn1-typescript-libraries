@@ -302,13 +302,13 @@ class N3GALocation {
          * @static
          */
 
-    public static _enum_for_w5GBANLineType = _enum_for_W5GBANLineType;        /**
+    public static _enum_for_w5GBANLineType: typeof _enum_for_W5GBANLineType = _enum_for_W5GBANLineType;        /**
          * @summary The enum used as the type of the component `protocol`
          * @public
          * @static
          */
 
-    public static _enum_for_protocol = _enum_for_TransportProtocol;
+    public static _enum_for_protocol: typeof _enum_for_TransportProtocol = _enum_for_TransportProtocol;
 }
 
 /**

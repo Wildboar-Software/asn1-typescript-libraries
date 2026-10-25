@@ -34,10 +34,10 @@ export
 type StartTime = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_StartTime = $._decodeGeneralizedTime;
+export const _decode_StartTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_StartTime = $._encodeGeneralizedTime;
+export const _encode_StartTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

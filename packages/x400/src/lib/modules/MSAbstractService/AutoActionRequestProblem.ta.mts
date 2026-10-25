@@ -35,48 +35,48 @@ export type AutoActionRequestProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const AutoActionRequestProblem_unavailable_auto_action_type = 0 satisfies AutoActionRequestProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AutoActionRequestProblem_unavailable_auto_action_type: 0 = 0 satisfies AutoActionRequestProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_unavailable_auto_action_type
  * @constant
  * @type {number}
  */
-export const unavailable_auto_action_type = AutoActionRequestProblem_unavailable_auto_action_type; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailable_auto_action_type: 0 = AutoActionRequestProblem_unavailable_auto_action_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_auto_action_type_not_subscribed
  * @constant
  * @type {number}
  */
-export const AutoActionRequestProblem_auto_action_type_not_subscribed = 1 satisfies AutoActionRequestProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AutoActionRequestProblem_auto_action_type_not_subscribed: 1 = 1 satisfies AutoActionRequestProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_auto_action_type_not_subscribed
  * @constant
  * @type {number}
  */
-export const auto_action_type_not_subscribed = AutoActionRequestProblem_auto_action_type_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
+export const auto_action_type_not_subscribed: 1 = AutoActionRequestProblem_auto_action_type_not_subscribed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_not_willing_to_perform
  * @constant
  * @type {number}
  */
-export const AutoActionRequestProblem_not_willing_to_perform = 2 satisfies AutoActionRequestProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AutoActionRequestProblem_not_willing_to_perform: 2 = 2 satisfies AutoActionRequestProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AutoActionRequestProblem_not_willing_to_perform
  * @constant
  * @type {number}
  */
-export const not_willing_to_perform = AutoActionRequestProblem_not_willing_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_willing_to_perform: 2 = AutoActionRequestProblem_not_willing_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AutoActionRequestProblem = $._decodeInteger;
+export const _decode_AutoActionRequestProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AutoActionRequestProblem = $._encodeInteger;
+export const _encode_AutoActionRequestProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

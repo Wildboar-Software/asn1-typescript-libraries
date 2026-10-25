@@ -80,7 +80,7 @@ class TLS13Extension {
          * @static
          */
 
-    public static _enum_for_extensionType = _enum_for_TLS13ExtensionType;
+    public static _enum_for_extensionType: typeof _enum_for_TLS13ExtensionType = _enum_for_TLS13ExtensionType;
 }
 
 /**

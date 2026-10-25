@@ -191,13 +191,13 @@ class NWDAFAnalyticsInfoQuery {
          * @static
          */
 
-    public static _enum_for_nWDAFEvent = _enum_for_NWDAFEvent;        /**
+    public static _enum_for_nWDAFEvent: typeof _enum_for_NWDAFEvent = _enum_for_NWDAFEvent;        /**
          * @summary The enum used as the type of the component `nWDAFAnalyticsInfoResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_nWDAFAnalyticsInfoResponseCode = _enum_for_NWDAFAnalyticsInfoResponseCode;
+    public static _enum_for_nWDAFAnalyticsInfoResponseCode: typeof _enum_for_NWDAFAnalyticsInfoResponseCode = _enum_for_NWDAFAnalyticsInfoResponseCode;
 }
 
 /**

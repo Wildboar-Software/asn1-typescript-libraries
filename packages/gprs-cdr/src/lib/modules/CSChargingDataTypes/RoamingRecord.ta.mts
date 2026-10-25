@@ -762,13 +762,13 @@ class RoamingRecord {
          * @static
          */
 
-    public static _enum_for_transparencyIndicator = _enum_for_TransparencyInd;        /**
+    public static _enum_for_transparencyIndicator: typeof _enum_for_TransparencyInd = _enum_for_TransparencyInd;        /**
          * @summary The enum used as the type of the component `partialRecordType`
          * @public
          * @static
          */
 
-    public static _enum_for_partialRecordType = _enum_for_PartialRecordType;
+    public static _enum_for_partialRecordType: typeof _enum_for_PartialRecordType = _enum_for_PartialRecordType;
 }
 
 /**

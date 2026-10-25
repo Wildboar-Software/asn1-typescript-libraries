@@ -78,12 +78,12 @@ export const equals_matches: number = Equality_Comparision_equals_matches; /* SH
 
 
 
-export const _decode_Equality_Comparision = $._decodeBitString;
+export const _decode_Equality_Comparision: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Equality_Comparision = $._encodeBitString;
+export const _encode_Equality_Comparision: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

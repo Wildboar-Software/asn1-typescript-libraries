@@ -261,7 +261,7 @@ export class SecurityAlarmInfo {
      * @static
      */
 
-    public static _enum_for_securityAlarmSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_securityAlarmSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 }
 
 /**

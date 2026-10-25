@@ -52,7 +52,7 @@ type BroadcastStatus = _enum_for_BroadcastStatus | ENUMERATED;
  * @type {number}
  */
 export
-const BroadcastStatus_succesfull = _enum_for_BroadcastStatus.succesfull; /* LONG_NAMED_ENUMERATED_VALUE */
+const BroadcastStatus_succesfull: _enum_for_BroadcastStatus.succesfull = _enum_for_BroadcastStatus.succesfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary succesfull
@@ -65,7 +65,7 @@ const BroadcastStatus_succesfull = _enum_for_BroadcastStatus.succesfull; /* LONG
  * @type {number}
  */
 export
-const succesfull = BroadcastStatus_succesfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const succesfull: _enum_for_BroadcastStatus.succesfull = BroadcastStatus_succesfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BroadcastStatus_unsuccesfull
@@ -79,7 +79,7 @@ const succesfull = BroadcastStatus_succesfull; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const BroadcastStatus_unsuccesfull = _enum_for_BroadcastStatus.unsuccesfull; /* LONG_NAMED_ENUMERATED_VALUE */
+const BroadcastStatus_unsuccesfull: _enum_for_BroadcastStatus.unsuccesfull = _enum_for_BroadcastStatus.unsuccesfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsuccesfull
@@ -92,7 +92,7 @@ const BroadcastStatus_unsuccesfull = _enum_for_BroadcastStatus.unsuccesfull; /* 
  * @type {number}
  */
 export
-const unsuccesfull = BroadcastStatus_unsuccesfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsuccesfull: _enum_for_BroadcastStatus.unsuccesfull = BroadcastStatus_unsuccesfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_BroadcastStatus: $.ASN1Decoder<BroadcastStatus> = $._decodeEnumerated;
 export const _encode_BroadcastStatus: $.ASN1Encoder<BroadcastStatus> = $._encodeEnumerated;
 

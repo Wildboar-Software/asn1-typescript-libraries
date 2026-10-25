@@ -28,7 +28,7 @@ export type EntryInformationSelection_infoTypes = INTEGER;
  * @constant
  * @type {number}
  */
-export const EntryInformationSelection_infoTypes_attributeTypesOnly = 0 satisfies EntryInformationSelection_infoTypes; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryInformationSelection_infoTypes_attributeTypesOnly: 0 = 0 satisfies EntryInformationSelection_infoTypes; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesOnly
@@ -40,7 +40,7 @@ export const EntryInformationSelection_infoTypes_attributeTypesOnly = 0 satisfie
  * @constant
  * @type {number}
  */
-export const attributeTypesOnly = EntryInformationSelection_infoTypes_attributeTypesOnly; /* SHORT_NAMED_INTEGER_VALUE */
+export const attributeTypesOnly: 0 = EntryInformationSelection_infoTypes_attributeTypesOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesAndValues
@@ -52,7 +52,7 @@ export const attributeTypesOnly = EntryInformationSelection_infoTypes_attributeT
  * @constant
  * @type {number}
  */
-export const EntryInformationSelection_infoTypes_attributeTypesAndValues = 1 satisfies EntryInformationSelection_infoTypes; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryInformationSelection_infoTypes_attributeTypesAndValues: 1 = 1 satisfies EntryInformationSelection_infoTypes; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryInformationSelection_infoTypes_attributeTypesAndValues
@@ -64,7 +64,7 @@ export const EntryInformationSelection_infoTypes_attributeTypesAndValues = 1 sat
  * @constant
  * @type {number}
  */
-export const attributeTypesAndValues = EntryInformationSelection_infoTypes_attributeTypesAndValues; /* SHORT_NAMED_INTEGER_VALUE */
+export const attributeTypesAndValues: 1 = EntryInformationSelection_infoTypes_attributeTypesAndValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_EntryInformationSelection_infoTypes: $.ASN1Decoder<EntryInformationSelection_infoTypes> | null = null;
 

@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type MgtPrintableString = PrintableString; // PrintableString
 
 
-export const _decode_MgtPrintableString = $._decodePrintableString;
+export const _decode_MgtPrintableString: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_MgtPrintableString = $._encodePrintableString;
+export const _encode_MgtPrintableString: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

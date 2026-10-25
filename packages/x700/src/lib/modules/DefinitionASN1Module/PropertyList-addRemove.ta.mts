@@ -64,7 +64,7 @@ export type PropertyList_addRemove = _enum_for_PropertyList_addRemove;
  *
  * @enum {number}
  */
-export const PropertyList_addRemove = _enum_for_PropertyList_addRemove;
+export const PropertyList_addRemove: typeof _enum_for_PropertyList_addRemove = _enum_for_PropertyList_addRemove;
 
 
 /**
@@ -75,7 +75,7 @@ export const PropertyList_addRemove = _enum_for_PropertyList_addRemove;
  * @constant
  * @type {number}
  */
-export const PropertyList_addRemove_aDD =
+export const PropertyList_addRemove_aDD: _enum_for_PropertyList_addRemove.aDD =
     PropertyList_addRemove.aDD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const PropertyList_addRemove_aDD =
  * @constant
  * @type {number}
  */
-export const aDD =
+export const aDD: _enum_for_PropertyList_addRemove.aDD =
     PropertyList_addRemove.aDD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const aDD =
  * @constant
  * @type {number}
  */
-export const PropertyList_addRemove_rEMOVE =
+export const PropertyList_addRemove_rEMOVE: _enum_for_PropertyList_addRemove.rEMOVE =
     PropertyList_addRemove.rEMOVE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const PropertyList_addRemove_rEMOVE =
  * @constant
  * @type {number}
  */
-export const rEMOVE =
+export const rEMOVE: _enum_for_PropertyList_addRemove.rEMOVE =
     PropertyList_addRemove.rEMOVE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const rEMOVE =
  * @constant
  * @type {number}
  */
-export const PropertyList_addRemove_aDD_REMOVE =
+export const PropertyList_addRemove_aDD_REMOVE: _enum_for_PropertyList_addRemove.aDD_REMOVE =
     PropertyList_addRemove.aDD_REMOVE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const PropertyList_addRemove_aDD_REMOVE =
  * @constant
  * @type {number}
  */
-export const aDD_REMOVE =
+export const aDD_REMOVE: _enum_for_PropertyList_addRemove.aDD_REMOVE =
     PropertyList_addRemove.aDD_REMOVE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -484,12 +484,12 @@ export const read_private_use: number = Attribute_Names_read_private_use; /* SHO
 
 
 
-export const _decode_Attribute_Names = $._decodeBitString;
+export const _decode_Attribute_Names: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Attribute_Names = $._encodeBitString;
+export const _encode_Attribute_Names: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -50,7 +50,7 @@ type VMDState = INTEGER;
  * @type {number}
  */
 export
-const VMDState_idle = 0 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
+const VMDState_idle: 0 = 0 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_idle
@@ -62,7 +62,7 @@ const VMDState_idle = 0 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const idle = VMDState_idle; /* SHORT_NAMED_INTEGER_VALUE */
+const idle: 0 = VMDState_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_loaded
@@ -74,7 +74,7 @@ const idle = VMDState_idle; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const VMDState_loaded = 1 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
+const VMDState_loaded: 1 = 1 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_loaded
@@ -86,7 +86,7 @@ const VMDState_loaded = 1 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const loaded = VMDState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
+const loaded: 1 = VMDState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_ready
@@ -98,7 +98,7 @@ const loaded = VMDState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const VMDState_ready = 2 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
+const VMDState_ready: 2 = 2 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_ready
@@ -110,7 +110,7 @@ const VMDState_ready = 2 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ready = VMDState_ready; /* SHORT_NAMED_INTEGER_VALUE */
+const ready: 2 = VMDState_ready; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_executing
@@ -122,7 +122,7 @@ const ready = VMDState_ready; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const VMDState_executing = 3 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
+const VMDState_executing: 3 = 3 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_executing
@@ -134,7 +134,7 @@ const VMDState_executing = 3 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const executing = VMDState_executing; /* SHORT_NAMED_INTEGER_VALUE */
+const executing: 3 = VMDState_executing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_motion_paused
@@ -146,7 +146,7 @@ const executing = VMDState_executing; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const VMDState_motion_paused = 4 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
+const VMDState_motion_paused: 4 = 4 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_motion_paused
@@ -158,7 +158,7 @@ const VMDState_motion_paused = 4 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const motion_paused = VMDState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
+const motion_paused: 4 = VMDState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_manualInterventionRequired
@@ -171,7 +171,7 @@ const motion_paused = VMDState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const VMDState_manualInterventionRequired = 5 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
+const VMDState_manualInterventionRequired: 5 = 5 satisfies VMDState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VMDState_manualInterventionRequired
@@ -184,9 +184,9 @@ const VMDState_manualInterventionRequired = 5 satisfies VMDState; /* LONG_NAMED_
  * @type {number}
  */
 export
-const manualInterventionRequired = VMDState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_VMDState = $._decodeInteger;
-export const _encode_VMDState = $._encodeInteger;
+const manualInterventionRequired: 5 = VMDState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_VMDState: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_VMDState: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

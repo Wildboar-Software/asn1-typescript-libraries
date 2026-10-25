@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type OneToOne = INTEGER;
 
 
-export const _decode_OneToOne = $._decodeInteger;
+export const _decode_OneToOne: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_OneToOne = $._encodeInteger;
+export const _encode_OneToOne: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

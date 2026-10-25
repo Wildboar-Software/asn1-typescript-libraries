@@ -92,7 +92,7 @@ class SMInterface {
          * @static
          */
 
-    public static _enum_for_interfaceType = _enum_for_SMInterface_interfaceType;
+    public static _enum_for_interfaceType: typeof _enum_for_SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
 }
 
 /**

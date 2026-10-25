@@ -99,7 +99,7 @@ export class ResponseStatus {
    * @static
    */
 
-  public static _enum_for_statusCode = _enum_for_CVStatusCode;
+  public static _enum_for_statusCode: typeof _enum_for_CVStatusCode = _enum_for_CVStatusCode;
 }
 
 /**

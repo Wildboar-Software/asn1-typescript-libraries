@@ -81,7 +81,7 @@ class ManageTriggerDataResultArg_oneTriggerResult {
          * @static
          */
 
-    public static _enum_for_actionPerformed = _enum_for_ActionPerformed;
+    public static _enum_for_actionPerformed: typeof _enum_for_ActionPerformed = _enum_for_ActionPerformed;
 }
 
 /**

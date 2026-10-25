@@ -61,7 +61,7 @@ type KeyGetType = _enum_for_KeyGetType;
  * @enum {number}
  */
 export
-const KeyGetType = _enum_for_KeyGetType;
+const KeyGetType: typeof _enum_for_KeyGetType = _enum_for_KeyGetType;
 
 /**
  * @summary KeyGetType_internal
@@ -69,7 +69,7 @@ const KeyGetType = _enum_for_KeyGetType;
  * @type {number}
  */
 export
-const KeyGetType_internal = KeyGetType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
+const KeyGetType_internal: _enum_for_KeyGetType.internal = KeyGetType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal
@@ -77,7 +77,7 @@ const KeyGetType_internal = KeyGetType.internal; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const internal = KeyGetType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internal: _enum_for_KeyGetType.internal = KeyGetType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KeyGetType_external
@@ -85,7 +85,7 @@ const internal = KeyGetType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const KeyGetType_external = KeyGetType.external; /* LONG_NAMED_ENUMERATED_VALUE */
+const KeyGetType_external: _enum_for_KeyGetType.external = KeyGetType.external; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary external
@@ -93,7 +93,7 @@ const KeyGetType_external = KeyGetType.external; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const external = KeyGetType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
+const external: _enum_for_KeyGetType.external = KeyGetType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_KeyGetType: $.ASN1Decoder<KeyGetType> = $._decodeEnumerated;
 export const _encode_KeyGetType: $.ASN1Encoder<KeyGetType> = $._encodeEnumerated;
 

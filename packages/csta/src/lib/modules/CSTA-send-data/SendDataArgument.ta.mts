@@ -159,7 +159,7 @@ class SendDataArgument {
          * @static
          */
 
-    public static _enum_for_ioCause = _enum_for_EventCause;
+    public static _enum_for_ioCause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

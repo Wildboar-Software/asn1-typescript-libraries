@@ -28,12 +28,12 @@ export type CircuitPackType = PrintableString; // PrintableString
 
 
 
-export const _decode_CircuitPackType = $._decodePrintableString;
+export const _decode_CircuitPackType: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
 
 
-export const _encode_CircuitPackType = $._encodePrintableString;
+export const _encode_CircuitPackType: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

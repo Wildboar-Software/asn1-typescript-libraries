@@ -80,10 +80,12 @@ export class CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
         return new CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1(_o.freeFormatData, _o.partyToCharge, _o.appendFreeFormatData, _o._unrecognizedExtensionsList);
     }
 
-    public static get _default_value_for_partyToCharge () { return { sendingSideID: leg1 }; }
-    public static get _default_value_for_appendFreeFormatData () { return overwrite; }
+    public static get _default_value_for_partyToCharge (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }
+    public static get _default_value_for_appendFreeFormatData (): _enum_for_AppendFreeFormatData.overwrite { return overwrite; }
 
-    public static _enum_for_appendFreeFormatData = _enum_for_AppendFreeFormatData;
+    public static _enum_for_appendFreeFormatData: typeof _enum_for_AppendFreeFormatData = _enum_for_AppendFreeFormatData;
 }
 
 export const _root_component_type_list_1_spec_for_CAMEL_FCIBillingChargingCharacteristics_fCIBCCCAMELsequence1: $.ComponentSpec[] = [

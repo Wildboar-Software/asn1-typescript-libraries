@@ -37,7 +37,7 @@ export const _decode_ContextID = (el: _Element): ContextID => {
     }
     return value;
 };
-export const _encode_ContextID = $._encodeInteger;
+export const _encode_ContextID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

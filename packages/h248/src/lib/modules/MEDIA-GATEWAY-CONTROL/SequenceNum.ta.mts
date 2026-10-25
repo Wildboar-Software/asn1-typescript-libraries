@@ -30,7 +30,7 @@ export const _decode_SequenceNum = (el: _Element): SequenceNum => {
     }
     return value;
 };
-export const _encode_SequenceNum = $._encodeOctetString;
+export const _encode_SequenceNum: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

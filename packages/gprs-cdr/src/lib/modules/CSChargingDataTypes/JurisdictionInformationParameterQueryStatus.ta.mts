@@ -32,7 +32,7 @@ type JurisdictionInformationParameterQueryStatus = INTEGER;
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_successfulQuery = 1 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_successfulQuery: 1 = 1 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_successfulQuery
@@ -40,7 +40,7 @@ const JurisdictionInformationParameterQueryStatus_successfulQuery = 1 satisfies 
  * @type {number}
  */
 export
-const successfulQuery = JurisdictionInformationParameterQueryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery: 1 = JurisdictionInformationParameterQueryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_noQueryResponseMsg
@@ -48,7 +48,7 @@ const successfulQuery = JurisdictionInformationParameterQueryStatus_successfulQu
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_noQueryResponseMsg = 2 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_noQueryResponseMsg: 2 = 2 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_noQueryResponseMsg
@@ -56,7 +56,7 @@ const JurisdictionInformationParameterQueryStatus_noQueryResponseMsg = 2 satisfi
  * @type {number}
  */
 export
-const noQueryResponseMsg = JurisdictionInformationParameterQueryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg: 2 = JurisdictionInformationParameterQueryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryProtocolErr
@@ -64,7 +64,7 @@ const noQueryResponseMsg = JurisdictionInformationParameterQueryStatus_noQueryRe
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_queryProtocolErr = 4 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_queryProtocolErr: 4 = 4 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryProtocolErr
@@ -72,7 +72,7 @@ const JurisdictionInformationParameterQueryStatus_queryProtocolErr = 4 satisfies
  * @type {number}
  */
 export
-const queryProtocolErr = JurisdictionInformationParameterQueryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr: 4 = JurisdictionInformationParameterQueryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryResponseDataErr
@@ -80,7 +80,7 @@ const queryProtocolErr = JurisdictionInformationParameterQueryStatus_queryProtoc
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_queryResponseDataErr = 5 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_queryResponseDataErr: 5 = 5 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryResponseDataErr
@@ -88,7 +88,7 @@ const JurisdictionInformationParameterQueryStatus_queryResponseDataErr = 5 satis
  * @type {number}
  */
 export
-const queryResponseDataErr = JurisdictionInformationParameterQueryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr: 5 = JurisdictionInformationParameterQueryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryRejected
@@ -96,7 +96,7 @@ const queryResponseDataErr = JurisdictionInformationParameterQueryStatus_queryRe
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_queryRejected = 6 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_queryRejected: 6 = 6 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryRejected
@@ -104,7 +104,7 @@ const JurisdictionInformationParameterQueryStatus_queryRejected = 6 satisfies Ju
  * @type {number}
  */
 export
-const queryRejected = JurisdictionInformationParameterQueryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected: 6 = JurisdictionInformationParameterQueryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryNotPerformed
@@ -112,7 +112,7 @@ const queryRejected = JurisdictionInformationParameterQueryStatus_queryRejected;
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_queryNotPerformed = 9 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_queryNotPerformed: 9 = 9 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryNotPerformed
@@ -120,7 +120,7 @@ const JurisdictionInformationParameterQueryStatus_queryNotPerformed = 9 satisfie
  * @type {number}
  */
 export
-const queryNotPerformed = JurisdictionInformationParameterQueryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed: 9 = JurisdictionInformationParameterQueryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryUnsuccessful
@@ -128,7 +128,7 @@ const queryNotPerformed = JurisdictionInformationParameterQueryStatus_queryNotPe
  * @type {number}
  */
 export
-const JurisdictionInformationParameterQueryStatus_queryUnsuccessful = 99 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const JurisdictionInformationParameterQueryStatus_queryUnsuccessful: 99 = 99 satisfies JurisdictionInformationParameterQueryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary JurisdictionInformationParameterQueryStatus_queryUnsuccessful
@@ -136,7 +136,7 @@ const JurisdictionInformationParameterQueryStatus_queryUnsuccessful = 99 satisfi
  * @type {number}
  */
 export
-const queryUnsuccessful = JurisdictionInformationParameterQueryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful: 99 = JurisdictionInformationParameterQueryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_JurisdictionInformationParameterQueryStatus: $.ASN1Decoder<JurisdictionInformationParameterQueryStatus> = $._decodeInteger;

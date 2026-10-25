@@ -74,8 +74,8 @@ const ParameterOffers_rippleCapability_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = ParameterOffers_rippleCapability_no; /* SHORT_NAMED_BIT */
-export const _decode_ParameterOffers_rippleCapability = $._decodeBitString;
-export const _encode_ParameterOffers_rippleCapability = $._encodeBitString;
+export const _decode_ParameterOffers_rippleCapability: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParameterOffers_rippleCapability: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

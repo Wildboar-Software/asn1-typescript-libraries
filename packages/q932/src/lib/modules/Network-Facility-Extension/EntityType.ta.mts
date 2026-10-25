@@ -73,7 +73,7 @@ type EntityType = _enum_for_EntityType;
  * @enum {number}
  */
 export
-const EntityType = _enum_for_EntityType;
+const EntityType: typeof _enum_for_EntityType = _enum_for_EntityType;
 
 /**
  * @summary EntityType_endPINX
@@ -85,7 +85,7 @@ const EntityType = _enum_for_EntityType;
  * @type {number}
  */
 export
-const EntityType_endPINX = EntityType.endPINX; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntityType_endPINX: _enum_for_EntityType.endPINX = EntityType.endPINX; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endPINX
@@ -97,7 +97,7 @@ const EntityType_endPINX = EntityType.endPINX; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const endPINX = EntityType.endPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endPINX: _enum_for_EntityType.endPINX = EntityType.endPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EntityType_anyTypeOfPINX
@@ -111,7 +111,7 @@ const endPINX = EntityType.endPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EntityType_anyTypeOfPINX = EntityType.anyTypeOfPINX; /* LONG_NAMED_ENUMERATED_VALUE */
+const EntityType_anyTypeOfPINX: _enum_for_EntityType.anyTypeOfPINX = EntityType.anyTypeOfPINX; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anyTypeOfPINX
@@ -125,7 +125,7 @@ const EntityType_anyTypeOfPINX = EntityType.anyTypeOfPINX; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const anyTypeOfPINX = EntityType.anyTypeOfPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anyTypeOfPINX: _enum_for_EntityType.anyTypeOfPINX = EntityType.anyTypeOfPINX; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EntityType: $.ASN1Decoder<EntityType> = $._decodeEnumerated;
 export const _encode_EntityType: $.ASN1Encoder<EntityType> = $._encodeEnumerated;
 

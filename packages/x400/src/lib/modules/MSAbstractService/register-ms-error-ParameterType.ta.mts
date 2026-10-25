@@ -85,7 +85,7 @@ export class register_ms_error_ParameterType {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_RegistrationProblem;
+    public static _enum_for_problem: typeof _enum_for_RegistrationProblem = _enum_for_RegistrationProblem;
 }
 
 /**

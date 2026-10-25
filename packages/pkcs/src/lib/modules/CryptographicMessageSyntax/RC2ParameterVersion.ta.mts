@@ -18,12 +18,12 @@ export type RC2ParameterVersion = INTEGER;
 
 
 
-export const _decode_RC2ParameterVersion = $._decodeInteger;
+export const _decode_RC2ParameterVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RC2ParameterVersion = $._encodeInteger;
+export const _encode_RC2ParameterVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

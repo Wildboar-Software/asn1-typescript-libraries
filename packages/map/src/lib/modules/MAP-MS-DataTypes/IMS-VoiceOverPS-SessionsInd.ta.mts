@@ -77,7 +77,7 @@ type IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
  * @enum {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
+const IMS_VoiceOverPS_SessionsInd: typeof _enum_for_IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported
@@ -90,7 +90,7 @@ const IMS_VoiceOverPS_SessionsInd = _enum_for_IMS_VoiceOverPS_SessionsInd;
  * @type {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported: _enum_for_IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsVoiceOverPS_SessionsNotSupported
@@ -103,7 +103,7 @@ const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsNotSupported = IMS_Voic
  * @type {number}
  */
 export
-const imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsVoiceOverPS_SessionsNotSupported: _enum_for_IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported
@@ -115,7 +115,7 @@ const imsVoiceOverPS_SessionsNotSupported = IMS_VoiceOverPS_SessionsInd.imsVoice
  * @type {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported: _enum_for_IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsVoiceOverPS_SessionsSupported
@@ -127,7 +127,7 @@ const IMS_VoiceOverPS_SessionsInd_imsVoiceOverPS_SessionsSupported = IMS_VoiceOv
  * @type {number}
  */
 export
-const imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsVoiceOverPS_SessionsSupported: _enum_for_IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOverPS_SessionsSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMS_VoiceOverPS_SessionsInd_unknown
@@ -140,7 +140,7 @@ const imsVoiceOverPS_SessionsSupported = IMS_VoiceOverPS_SessionsInd.imsVoiceOve
  * @type {number}
  */
 export
-const IMS_VoiceOverPS_SessionsInd_unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMS_VoiceOverPS_SessionsInd_unknown: _enum_for_IMS_VoiceOverPS_SessionsInd.unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -153,7 +153,7 @@ const IMS_VoiceOverPS_SessionsInd_unknown = IMS_VoiceOverPS_SessionsInd.unknown;
  * @type {number}
  */
 export
-const unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_IMS_VoiceOverPS_SessionsInd.unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) IMS_VoiceOverPS_SessionsInd
@@ -161,7 +161,7 @@ const unknown = IMS_VoiceOverPS_SessionsInd.unknown; /* SHORT_NAMED_ENUMERATED_V
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IMS_VoiceOverPS_SessionsInd = $._decodeEnumerated;
+export const _decode_IMS_VoiceOverPS_SessionsInd: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IMS_VoiceOverPS_SessionsInd into an ASN.1 Element.
@@ -170,7 +170,7 @@ export const _decode_IMS_VoiceOverPS_SessionsInd = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IMS_VoiceOverPS_SessionsInd, encoded as an ASN.1 Element.
  */
-export const _encode_IMS_VoiceOverPS_SessionsInd = $._encodeEnumerated;
+export const _encode_IMS_VoiceOverPS_SessionsInd: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type RegistratorIdentifier = OCTET_STRING; // OctetStringType
-export const _decode_RegistratorIdentifier = $._decodeOctetString;
-export const _encode_RegistratorIdentifier = $._encodeOctetString;
+export const _decode_RegistratorIdentifier: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_RegistratorIdentifier: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

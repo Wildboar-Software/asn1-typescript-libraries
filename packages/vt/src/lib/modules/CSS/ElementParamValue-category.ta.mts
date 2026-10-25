@@ -48,7 +48,7 @@ type ElementParamValue_category = INTEGER;
  * @type {number}
  */
 export
-const ElementParamValue_category_character = 0 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
+const ElementParamValue_category_character: 0 = 0 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_character
@@ -62,7 +62,7 @@ const ElementParamValue_category_character = 0 satisfies ElementParamValue_categ
  * @type {number}
  */
 export
-const character = ElementParamValue_category_character; /* SHORT_NAMED_INTEGER_VALUE */
+const character: 0 = ElementParamValue_category_character; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_boolean_
@@ -76,7 +76,7 @@ const character = ElementParamValue_category_character; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ElementParamValue_category_boolean_ = 1 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
+const ElementParamValue_category_boolean_: 1 = 1 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_boolean_
@@ -90,7 +90,7 @@ const ElementParamValue_category_boolean_ = 1 satisfies ElementParamValue_catego
  * @type {number}
  */
 export
-const boolean_ = ElementParamValue_category_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
+const boolean_: 1 = ElementParamValue_category_boolean_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_symbolic
@@ -103,7 +103,7 @@ const boolean_ = ElementParamValue_category_boolean_; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ElementParamValue_category_symbolic = 2 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
+const ElementParamValue_category_symbolic: 2 = 2 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_symbolic
@@ -116,7 +116,7 @@ const ElementParamValue_category_symbolic = 2 satisfies ElementParamValue_catego
  * @type {number}
  */
 export
-const symbolic = ElementParamValue_category_symbolic; /* SHORT_NAMED_INTEGER_VALUE */
+const symbolic: 2 = ElementParamValue_category_symbolic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_integer
@@ -128,7 +128,7 @@ const symbolic = ElementParamValue_category_symbolic; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ElementParamValue_category_integer = 3 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
+const ElementParamValue_category_integer: 3 = 3 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_integer
@@ -140,7 +140,7 @@ const ElementParamValue_category_integer = 3 satisfies ElementParamValue_categor
  * @type {number}
  */
 export
-const integer = ElementParamValue_category_integer; /* SHORT_NAMED_INTEGER_VALUE */
+const integer: 3 = ElementParamValue_category_integer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_transparent
@@ -152,7 +152,7 @@ const integer = ElementParamValue_category_integer; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ElementParamValue_category_transparent = 4 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
+const ElementParamValue_category_transparent: 4 = 4 satisfies ElementParamValue_category; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ElementParamValue_category_transparent
@@ -164,9 +164,9 @@ const ElementParamValue_category_transparent = 4 satisfies ElementParamValue_cat
  * @type {number}
  */
 export
-const transparent = ElementParamValue_category_transparent; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ElementParamValue_category = $._decodeInteger;
-export const _encode_ElementParamValue_category = $._encodeInteger;
+const transparent: 4 = ElementParamValue_category_transparent; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ElementParamValue_category: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ElementParamValue_category: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

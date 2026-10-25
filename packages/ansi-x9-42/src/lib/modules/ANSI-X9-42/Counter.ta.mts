@@ -23,12 +23,12 @@ export type Counter = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_Counter = $._decodeOctetString;
+export const _decode_Counter: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_Counter = $._encodeOctetString;
+export const _encode_Counter: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

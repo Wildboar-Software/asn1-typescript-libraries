@@ -18,12 +18,12 @@ export type Label = UTF8String; // UTF8String
 
 
 
-export const _decode_Label = $._decodeUTF8String;
+export const _decode_Label: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_Label = $._encodeUTF8String;
+export const _encode_Label: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

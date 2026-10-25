@@ -120,7 +120,7 @@ export class CertReplaceRsp implements CASPcommonComponents {
      * @static
      */
 
-    public static _enum_for_version = _enum_for_CASPversion;
+    public static _enum_for_version: typeof _enum_for_CASPversion = _enum_for_CASPversion;
 }
 
 /**

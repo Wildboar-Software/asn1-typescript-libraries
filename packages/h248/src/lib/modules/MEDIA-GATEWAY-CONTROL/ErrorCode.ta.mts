@@ -36,7 +36,7 @@ export const _decode_ErrorCode = (el: _Element): ErrorCode => {
     }
     return value;
 };
-export const _encode_ErrorCode = $._encodeInteger;
+export const _encode_ErrorCode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

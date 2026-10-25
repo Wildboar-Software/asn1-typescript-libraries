@@ -23,8 +23,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type WebAccessCapability = BOOLEAN; // BooleanType
-export const _decode_WebAccessCapability = $._decodeBoolean;
-export const _encode_WebAccessCapability = $._encodeBoolean;
+export const _decode_WebAccessCapability: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_WebAccessCapability: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

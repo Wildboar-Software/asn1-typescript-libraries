@@ -690,13 +690,13 @@ class MMR1NRqRecord {
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_MessageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_MessageClass = _enum_for_MessageClass;        /**
          * @summary The enum used as the type of the component `mmStatusCode`
          * @public
          * @static
          */
 
-    public static _enum_for_mmStatusCode = _enum_for_MMStatusCodeType;
+    public static _enum_for_mmStatusCode: typeof _enum_for_MMStatusCodeType = _enum_for_MMStatusCodeType;
 }
 
 /**

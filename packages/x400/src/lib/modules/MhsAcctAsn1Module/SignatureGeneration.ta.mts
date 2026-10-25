@@ -31,34 +31,34 @@ export type SignatureGeneration = INTEGER;
  * @constant
  * @type {number}
  */
-export const SignatureGeneration_generated = 1 satisfies SignatureGeneration; /* LONG_NAMED_INTEGER_VALUE */
+export const SignatureGeneration_generated: 1 = 1 satisfies SignatureGeneration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_generated
  * @constant
  * @type {number}
  */
-export const generated = SignatureGeneration_generated; /* SHORT_NAMED_INTEGER_VALUE */
+export const generated: 1 = SignatureGeneration_generated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_non_generated
  * @constant
  * @type {number}
  */
-export const SignatureGeneration_non_generated = 2 satisfies SignatureGeneration; /* LONG_NAMED_INTEGER_VALUE */
+export const SignatureGeneration_non_generated: 2 = 2 satisfies SignatureGeneration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SignatureGeneration_non_generated
  * @constant
  * @type {number}
  */
-export const non_generated = SignatureGeneration_non_generated; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_generated: 2 = SignatureGeneration_non_generated; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_SignatureGeneration = $._decodeInteger;
+export const _decode_SignatureGeneration: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SignatureGeneration = $._encodeInteger;
+export const _encode_SignatureGeneration: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

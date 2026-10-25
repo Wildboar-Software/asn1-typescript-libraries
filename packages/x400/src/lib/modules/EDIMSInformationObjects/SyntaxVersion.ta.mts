@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SyntaxVersion = PrintableString; // PrintableString
 
 
-export const _decode_SyntaxVersion = $._decodePrintableString;
+export const _decode_SyntaxVersion: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_SyntaxVersion = $._encodePrintableString;
+export const _encode_SyntaxVersion: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

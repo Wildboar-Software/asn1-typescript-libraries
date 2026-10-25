@@ -98,7 +98,7 @@ export class RestrictionsOnSLC {
      * @static
      */
 
-    public static _enum_for_restrictionId = _enum_for_RestrictionsOnSLC_restrictionId;
+    public static _enum_for_restrictionId: typeof _enum_for_RestrictionsOnSLC_restrictionId = _enum_for_RestrictionsOnSLC_restrictionId;
 }
 
 

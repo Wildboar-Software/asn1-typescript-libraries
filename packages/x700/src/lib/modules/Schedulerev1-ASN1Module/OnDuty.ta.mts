@@ -37,12 +37,12 @@ export type OnDuty = BOOLEAN; // BooleanType
 
 
 
-export const _decode_OnDuty = $._decodeBoolean;
+export const _decode_OnDuty: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_OnDuty = $._encodeBoolean;
+export const _encode_OnDuty: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

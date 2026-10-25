@@ -37,7 +37,7 @@ export const _decode_ReferenceID = (el: _Element): ReferenceID => {
     }
     return value;
 };
-export const _encode_ReferenceID = $._encodeInteger;
+export const _encode_ReferenceID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -67,7 +67,7 @@ type InvokableService = _enum_for_InvokableService;
  * @enum {number}
  */
 export
-const InvokableService = _enum_for_InvokableService;
+const InvokableService: typeof _enum_for_InvokableService = _enum_for_InvokableService;
 
 /**
  * @summary InvokableService_callingLineIdentificationRestriction
@@ -75,7 +75,7 @@ const InvokableService = _enum_for_InvokableService;
  * @type {number}
  */
 export
-const InvokableService_callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callingLineIdentificationRestriction: _enum_for_InvokableService.callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingLineIdentificationRestriction
@@ -83,7 +83,7 @@ const InvokableService_callingLineIdentificationRestriction = InvokableService.c
  * @type {number}
  */
 export
-const callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingLineIdentificationRestriction: _enum_for_InvokableService.callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_connectedLineIdentificationRestriction
@@ -91,7 +91,7 @@ const callingLineIdentificationRestriction = InvokableService.callingLineIdentif
  * @type {number}
  */
 export
-const InvokableService_connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_connectedLineIdentificationRestriction: _enum_for_InvokableService.connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedLineIdentificationRestriction
@@ -99,7 +99,7 @@ const InvokableService_connectedLineIdentificationRestriction = InvokableService
  * @type {number}
  */
 export
-const connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedLineIdentificationRestriction: _enum_for_InvokableService.connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callWaiting
@@ -107,7 +107,7 @@ const connectedLineIdentificationRestriction = InvokableService.connectedLineIde
  * @type {number}
  */
 export
-const InvokableService_callWaiting = InvokableService.callWaiting; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callWaiting: _enum_for_InvokableService.callWaiting = InvokableService.callWaiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaiting
@@ -115,7 +115,7 @@ const InvokableService_callWaiting = InvokableService.callWaiting; /* LONG_NAMED
  * @type {number}
  */
 export
-const callWaiting = InvokableService.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaiting: _enum_for_InvokableService.callWaiting = InvokableService.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callHold
@@ -123,7 +123,7 @@ const callWaiting = InvokableService.callWaiting; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const InvokableService_callHold = InvokableService.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callHold: _enum_for_InvokableService.callHold = InvokableService.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callHold
@@ -131,7 +131,7 @@ const InvokableService_callHold = InvokableService.callHold; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const callHold = InvokableService.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callHold: _enum_for_InvokableService.callHold = InvokableService.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_reverseCharging
@@ -139,7 +139,7 @@ const callHold = InvokableService.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const InvokableService_reverseCharging = InvokableService.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_reverseCharging: _enum_for_InvokableService.reverseCharging = InvokableService.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reverseCharging
@@ -147,7 +147,7 @@ const InvokableService_reverseCharging = InvokableService.reverseCharging; /* LO
  * @type {number}
  */
 export
-const reverseCharging = InvokableService.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reverseCharging: _enum_for_InvokableService.reverseCharging = InvokableService.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_explicitCallTransfer
@@ -155,7 +155,7 @@ const reverseCharging = InvokableService.reverseCharging; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const InvokableService_explicitCallTransfer = InvokableService.explicitCallTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_explicitCallTransfer: _enum_for_InvokableService.explicitCallTransfer = InvokableService.explicitCallTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary explicitCallTransfer
@@ -163,7 +163,7 @@ const InvokableService_explicitCallTransfer = InvokableService.explicitCallTrans
  * @type {number}
  */
 export
-const explicitCallTransfer = InvokableService.explicitCallTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const explicitCallTransfer: _enum_for_InvokableService.explicitCallTransfer = InvokableService.explicitCallTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callCompletionOnBusySubscriber
@@ -171,7 +171,7 @@ const explicitCallTransfer = InvokableService.explicitCallTransfer; /* SHORT_NAM
  * @type {number}
  */
 export
-const InvokableService_callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callCompletionOnBusySubscriber: _enum_for_InvokableService.callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCompletionOnBusySubscriber
@@ -179,7 +179,7 @@ const InvokableService_callCompletionOnBusySubscriber = InvokableService.callCom
  * @type {number}
  */
 export
-const callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callCompletionOnBusySubscriber: _enum_for_InvokableService.callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_InvokableService(el: _Element): InvokableService {

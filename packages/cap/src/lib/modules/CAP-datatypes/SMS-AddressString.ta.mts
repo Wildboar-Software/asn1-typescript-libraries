@@ -1,9 +1,11 @@
 import {
+    type OCTET_STRING,
     type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import type { ASN1Encoder } from "@wildboar/asn1/functional";
 
 /**
  * @summary SMS_AddressString
@@ -30,4 +32,4 @@ export const _decode_SMS_AddressString = (el: _Element): SMS_AddressString => {
     }
     return value;
 };
-export const _encode_SMS_AddressString = _encode_AddressString;
+export const _encode_SMS_AddressString: ASN1Encoder<OCTET_STRING> = _encode_AddressString;

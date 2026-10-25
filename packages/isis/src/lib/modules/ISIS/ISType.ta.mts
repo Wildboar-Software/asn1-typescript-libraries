@@ -72,7 +72,7 @@ export type ISType = _enum_for_ISType;
  *
  * @enum {number}
  */
-export const ISType = _enum_for_ISType;
+export const ISType: typeof _enum_for_ISType = _enum_for_ISType;
 
 /**
  * @summary ISType_level1IS
@@ -85,7 +85,7 @@ export const ISType = _enum_for_ISType;
  * @constant
  * @type {number}
  */
-export const ISType_level1IS =
+export const ISType_level1IS: _enum_for_ISType.level1IS =
   ISType.level1IS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const ISType_level1IS =
  * @constant
  * @type {number}
  */
-export const level1IS =
+export const level1IS: _enum_for_ISType.level1IS =
   ISType.level1IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const level1IS =
  * @constant
  * @type {number}
  */
-export const ISType_level2IS =
+export const ISType_level2IS: _enum_for_ISType.level2IS =
   ISType.level2IS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const ISType_level2IS =
  * @constant
  * @type {number}
  */
-export const level2IS =
+export const level2IS: _enum_for_ISType.level2IS =
   ISType.level2IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

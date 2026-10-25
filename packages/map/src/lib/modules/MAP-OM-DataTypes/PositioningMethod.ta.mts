@@ -45,7 +45,7 @@ export const _decode_PositioningMethod = (el: _Element): PositioningMethod => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PositioningMethod, encoded as an ASN.1 Element.
  */
-export const _encode_PositioningMethod = $._encodeOctetString;
+export const _encode_PositioningMethod: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

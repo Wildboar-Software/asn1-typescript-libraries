@@ -93,7 +93,7 @@ export class Code {
    * @static
    */
 
-  public static _enum_for_value = _enum_for_Value;
+  public static _enum_for_value: typeof _enum_for_Value = _enum_for_Value;
 }
 
 

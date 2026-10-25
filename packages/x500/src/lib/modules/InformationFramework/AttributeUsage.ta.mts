@@ -46,62 +46,62 @@ export type AttributeUsage = _enum_for_AttributeUsage | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const AttributeUsage_userApplications = _enum_for_AttributeUsage.userApplications; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeUsage_userApplications: _enum_for_AttributeUsage.userApplications = _enum_for_AttributeUsage.userApplications; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userApplications
  * @constant
  * @type {number}
  */
-export const userApplications = AttributeUsage_userApplications; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const userApplications: _enum_for_AttributeUsage.userApplications = AttributeUsage_userApplications; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeUsage_directoryOperation
  * @constant
  * @type {number}
  */
-export const AttributeUsage_directoryOperation = _enum_for_AttributeUsage.directoryOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeUsage_directoryOperation: _enum_for_AttributeUsage.directoryOperation = _enum_for_AttributeUsage.directoryOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary directoryOperation
  * @constant
  * @type {number}
  */
-export const directoryOperation = AttributeUsage_directoryOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const directoryOperation: _enum_for_AttributeUsage.directoryOperation = AttributeUsage_directoryOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeUsage_distributedOperation
  * @constant
  * @type {number}
  */
-export const AttributeUsage_distributedOperation = _enum_for_AttributeUsage.distributedOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeUsage_distributedOperation: _enum_for_AttributeUsage.distributedOperation = _enum_for_AttributeUsage.distributedOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary distributedOperation
  * @constant
  * @type {number}
  */
-export const distributedOperation = AttributeUsage_distributedOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const distributedOperation: _enum_for_AttributeUsage.distributedOperation = AttributeUsage_distributedOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeUsage_dSAOperation
  * @constant
  * @type {number}
  */
-export const AttributeUsage_dSAOperation = _enum_for_AttributeUsage.dSAOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeUsage_dSAOperation: _enum_for_AttributeUsage.dSAOperation = _enum_for_AttributeUsage.dSAOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSAOperation
  * @constant
  * @type {number}
  */
-export const dSAOperation = AttributeUsage_dSAOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dSAOperation: _enum_for_AttributeUsage.dSAOperation = AttributeUsage_dSAOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AttributeUsage = $._decodeEnumerated;
+export const _decode_AttributeUsage: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_AttributeUsage = $._encodeEnumerated;
+export const _encode_AttributeUsage: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

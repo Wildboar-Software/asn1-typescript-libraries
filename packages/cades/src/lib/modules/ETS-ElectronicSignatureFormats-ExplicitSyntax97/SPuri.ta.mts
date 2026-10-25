@@ -31,10 +31,10 @@ export
 type SPuri = IA5String; // IA5String
 
 
-export const _decode_SPuri = $._decodeIA5String;
+export const _decode_SPuri: $.ASN1Decoder<string> = $._decodeIA5String;
 
 
-export const _encode_SPuri = $._encodeIA5String;
+export const _encode_SPuri: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

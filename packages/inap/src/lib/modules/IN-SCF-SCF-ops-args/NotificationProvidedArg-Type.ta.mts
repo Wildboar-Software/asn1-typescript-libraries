@@ -114,7 +114,7 @@ class NotificationProvidedArg_Type {
          * @static
          */
 
-    public static _enum_for_notification = _enum_for_Notification;
+    public static _enum_for_notification: typeof _enum_for_Notification = _enum_for_Notification;
 }
 
 /**

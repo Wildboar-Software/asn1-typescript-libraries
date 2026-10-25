@@ -78,7 +78,7 @@ type Community = _enum_for_Community;
  * @enum {number}
  */
 export
-const Community = _enum_for_Community;
+const Community: typeof _enum_for_Community = _enum_for_Community;
 
 /**
  * General service (R).
@@ -87,7 +87,7 @@ const Community = _enum_for_Community;
  * @type {number}
  */
 export
-const Community_genser = Community.genser; /* LONG_NAMED_ENUMERATED_VALUE */
+const Community_genser: 0 = Community.genser; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Community_genser}.
@@ -96,7 +96,7 @@ const Community_genser = Community.genser; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const genser = Community.genser; /* SHORT_NAMED_ENUMERATED_VALUE */
+const genser: 0 = Community.genser; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Special intelligence (Y).
@@ -105,7 +105,7 @@ const genser = Community.genser; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Community_si = Community.si; /* LONG_NAMED_ENUMERATED_VALUE */
+const Community_si: 1 = Community.si; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Community_si}.
@@ -114,7 +114,7 @@ const Community_si = Community.si; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const si = Community.si; /* SHORT_NAMED_ENUMERATED_VALUE */
+const si: 1 = Community.si; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * Both GENSER and SI (R/Y).
@@ -123,7 +123,7 @@ const si = Community.si; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Community_both = Community.both; /* LONG_NAMED_ENUMERATED_VALUE */
+const Community_both: 2 = Community.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * Short name for {@link Community_both}.
@@ -132,7 +132,7 @@ const Community_both = Community.both; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const both = Community.both; /* SHORT_NAMED_ENUMERATED_VALUE */
+const both: 2 = Community.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Community: $.ASN1Decoder<Community> =
     $._decodeEnumerated as $.ASN1Decoder<Community>;
 export const _encode_Community: $.ASN1Encoder<Community> =

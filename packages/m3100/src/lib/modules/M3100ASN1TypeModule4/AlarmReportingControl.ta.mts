@@ -112,7 +112,7 @@ export class AlarmReportingControl {
      * @static
      */
 
-    public static _enum_for_arcState = _enum_for_ArcState;
+    public static _enum_for_arcState: typeof _enum_for_ArcState = _enum_for_ArcState;
 }
 
 

@@ -43,7 +43,7 @@ type RAN_Technology = _enum_for_RAN_Technology | ENUMERATED;
  * @type {number}
  */
 export
-const RAN_Technology_gsm = _enum_for_RAN_Technology.gsm; /* LONG_NAMED_ENUMERATED_VALUE */
+const RAN_Technology_gsm: _enum_for_RAN_Technology.gsm = _enum_for_RAN_Technology.gsm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm
@@ -55,7 +55,7 @@ const RAN_Technology_gsm = _enum_for_RAN_Technology.gsm; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const gsm = RAN_Technology_gsm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm: _enum_for_RAN_Technology.gsm = RAN_Technology_gsm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RAN_Technology_umts
@@ -67,7 +67,7 @@ const gsm = RAN_Technology_gsm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RAN_Technology_umts = _enum_for_RAN_Technology.umts; /* LONG_NAMED_ENUMERATED_VALUE */
+const RAN_Technology_umts: _enum_for_RAN_Technology.umts = _enum_for_RAN_Technology.umts; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary umts
@@ -79,7 +79,7 @@ const RAN_Technology_umts = _enum_for_RAN_Technology.umts; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const umts = RAN_Technology_umts; /* SHORT_NAMED_ENUMERATED_VALUE */
+const umts: _enum_for_RAN_Technology.umts = RAN_Technology_umts; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RAN_Technology
@@ -87,7 +87,7 @@ const umts = RAN_Technology_umts; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_RAN_Technology = $._decodeEnumerated;
+export const _decode_RAN_Technology: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RAN_Technology into an ASN.1 Element.
@@ -96,7 +96,7 @@ export const _decode_RAN_Technology = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RAN_Technology, encoded as an ASN.1 Element.
  */
-export const _encode_RAN_Technology = $._encodeEnumerated;
+export const _encode_RAN_Technology: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

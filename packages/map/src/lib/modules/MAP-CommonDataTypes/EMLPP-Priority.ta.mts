@@ -50,7 +50,7 @@ export const _decode_EMLPP_Priority = (el: _Element): EMLPP_Priority => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EMLPP_Priority, encoded as an ASN.1 Element.
  */
-export const _encode_EMLPP_Priority = $._encodeInteger;
+export const _encode_EMLPP_Priority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

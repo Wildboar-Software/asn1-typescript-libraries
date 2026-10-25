@@ -102,12 +102,12 @@ export const packed_encoding_rules: number = Protocol_options_packed_encoding_ru
 
 
 
-export const _decode_Protocol_options = $._decodeBitString;
+export const _decode_Protocol_options: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Protocol_options = $._encodeBitString;
+export const _encode_Protocol_options: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

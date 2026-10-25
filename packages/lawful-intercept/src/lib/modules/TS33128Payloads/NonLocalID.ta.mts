@@ -61,7 +61,7 @@ type NonLocalID = _enum_for_NonLocalID;
  * @enum {number}
  */
 export
-const NonLocalID = _enum_for_NonLocalID;
+const NonLocalID: typeof _enum_for_NonLocalID = _enum_for_NonLocalID;
 
 /**
  * @summary NonLocalID_local
@@ -69,7 +69,7 @@ const NonLocalID = _enum_for_NonLocalID;
  * @type {number}
  */
 export
-const NonLocalID_local = NonLocalID.local; /* LONG_NAMED_ENUMERATED_VALUE */
+const NonLocalID_local: _enum_for_NonLocalID.local = NonLocalID.local; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary local
@@ -77,7 +77,7 @@ const NonLocalID_local = NonLocalID.local; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const local = NonLocalID.local; /* SHORT_NAMED_ENUMERATED_VALUE */
+const local: _enum_for_NonLocalID.local = NonLocalID.local; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NonLocalID_nonLocal
@@ -85,7 +85,7 @@ const local = NonLocalID.local; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NonLocalID_nonLocal = NonLocalID.nonLocal; /* LONG_NAMED_ENUMERATED_VALUE */
+const NonLocalID_nonLocal: _enum_for_NonLocalID.nonLocal = NonLocalID.nonLocal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonLocal
@@ -93,7 +93,7 @@ const NonLocalID_nonLocal = NonLocalID.nonLocal; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const nonLocal = NonLocalID.nonLocal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonLocal: _enum_for_NonLocalID.nonLocal = NonLocalID.nonLocal; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NonLocalID: $.ASN1Decoder<NonLocalID> = $._decodeEnumerated;
 export const _encode_NonLocalID: $.ASN1Encoder<NonLocalID> = $._encodeEnumerated;
 

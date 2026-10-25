@@ -207,12 +207,12 @@ export const contacts_for_function_related_activities: number = ContactType_cont
 
 
 
-export const _decode_ContactType = $._decodeBitString;
+export const _decode_ContactType: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_ContactType = $._encodeBitString;
+export const _encode_ContactType: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

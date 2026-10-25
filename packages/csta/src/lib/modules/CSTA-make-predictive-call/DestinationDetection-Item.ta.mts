@@ -100,13 +100,13 @@ class DestinationDetection_Item {
          * @static
          */
 
-    public static _enum_for_destinationCondition = _enum_for_DestinationCondition;        /**
+    public static _enum_for_destinationCondition: typeof _enum_for_DestinationCondition = _enum_for_DestinationCondition;        /**
          * @summary The enum used as the type of the component `detectionAction`
          * @public
          * @static
          */
 
-    public static _enum_for_detectionAction = _enum_for_DetectionAction;
+    public static _enum_for_detectionAction: typeof _enum_for_DetectionAction = _enum_for_DetectionAction;
 }
 
 /**

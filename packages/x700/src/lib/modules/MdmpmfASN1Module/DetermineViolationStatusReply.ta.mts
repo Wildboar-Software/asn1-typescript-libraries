@@ -92,7 +92,7 @@ export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusRe
  *
  * @enum {number}
  */
-export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
+export const DetermineViolationStatusReply: typeof _enum_for_DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
 
 /**
  * @summary DetermineViolationStatusReply_unknown
@@ -103,7 +103,7 @@ export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusR
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_unknown =
+export const DetermineViolationStatusReply_unknown: _enum_for_DetermineViolationStatusReply.unknown =
     DetermineViolationStatusReply.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const DetermineViolationStatusReply_unknown =
  * @constant
  * @type {number}
  */
-export const unknown =
+export const unknown: _enum_for_DetermineViolationStatusReply.unknown =
     DetermineViolationStatusReply.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,7 +128,7 @@ export const unknown =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_no_violation =
+export const DetermineViolationStatusReply_no_violation: _enum_for_DetermineViolationStatusReply.no_violation =
     DetermineViolationStatusReply.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,7 +141,7 @@ export const DetermineViolationStatusReply_no_violation =
  * @constant
  * @type {number}
  */
-export const no_violation =
+export const no_violation: _enum_for_DetermineViolationStatusReply.no_violation =
     DetermineViolationStatusReply.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const no_violation =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_violation_detected =
+export const DetermineViolationStatusReply_violation_detected: _enum_for_DetermineViolationStatusReply.violation_detected =
     DetermineViolationStatusReply.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -167,7 +167,7 @@ export const DetermineViolationStatusReply_violation_detected =
  * @constant
  * @type {number}
  */
-export const violation_detected =
+export const violation_detected: _enum_for_DetermineViolationStatusReply.violation_detected =
     DetermineViolationStatusReply.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -179,7 +179,7 @@ export const violation_detected =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_non_member =
+export const DetermineViolationStatusReply_non_member: _enum_for_DetermineViolationStatusReply.non_member =
     DetermineViolationStatusReply.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -191,7 +191,7 @@ export const DetermineViolationStatusReply_non_member =
  * @constant
  * @type {number}
  */
-export const non_member =
+export const non_member: _enum_for_DetermineViolationStatusReply.non_member =
     DetermineViolationStatusReply.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

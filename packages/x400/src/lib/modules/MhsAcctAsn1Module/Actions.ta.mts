@@ -65,10 +65,10 @@ export const Actions_secure_dl_operation: number = 2; /* LONG_NAMED_BIT */
 export const secure_dl_operation: number = Actions_secure_dl_operation; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Actions = $._decodeBitString;
+export const _decode_Actions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Actions = $._encodeBitString;
+export const _encode_Actions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

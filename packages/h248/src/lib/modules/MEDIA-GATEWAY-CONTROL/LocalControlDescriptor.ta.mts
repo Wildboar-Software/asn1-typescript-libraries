@@ -140,7 +140,7 @@ class LocalControlDescriptor {
          * @static
          */
 
-    public static _enum_for_streamMode = _enum_for_StreamMode;
+    public static _enum_for_streamMode: typeof _enum_for_StreamMode = _enum_for_StreamMode;
 }
 
 /**

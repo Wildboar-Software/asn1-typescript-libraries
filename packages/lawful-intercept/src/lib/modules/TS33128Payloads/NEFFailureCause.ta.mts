@@ -73,7 +73,7 @@ type NEFFailureCause = _enum_for_NEFFailureCause;
  * @enum {number}
  */
 export
-const NEFFailureCause = _enum_for_NEFFailureCause;
+const NEFFailureCause: typeof _enum_for_NEFFailureCause = _enum_for_NEFFailureCause;
 
 /**
  * @summary NEFFailureCause_userUnknown
@@ -81,7 +81,7 @@ const NEFFailureCause = _enum_for_NEFFailureCause;
  * @type {number}
  */
 export
-const NEFFailureCause_userUnknown = NEFFailureCause.userUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFFailureCause_userUnknown: _enum_for_NEFFailureCause.userUnknown = NEFFailureCause.userUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userUnknown
@@ -89,7 +89,7 @@ const NEFFailureCause_userUnknown = NEFFailureCause.userUnknown; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const userUnknown = NEFFailureCause.userUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userUnknown: _enum_for_NEFFailureCause.userUnknown = NEFFailureCause.userUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFFailureCause_niddConfigurationNotAvailable
@@ -97,7 +97,7 @@ const userUnknown = NEFFailureCause.userUnknown; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const NEFFailureCause_niddConfigurationNotAvailable = NEFFailureCause.niddConfigurationNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFFailureCause_niddConfigurationNotAvailable: _enum_for_NEFFailureCause.niddConfigurationNotAvailable = NEFFailureCause.niddConfigurationNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary niddConfigurationNotAvailable
@@ -105,7 +105,7 @@ const NEFFailureCause_niddConfigurationNotAvailable = NEFFailureCause.niddConfig
  * @type {number}
  */
 export
-const niddConfigurationNotAvailable = NEFFailureCause.niddConfigurationNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const niddConfigurationNotAvailable: _enum_for_NEFFailureCause.niddConfigurationNotAvailable = NEFFailureCause.niddConfigurationNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFFailureCause_contextNotFound
@@ -113,7 +113,7 @@ const niddConfigurationNotAvailable = NEFFailureCause.niddConfigurationNotAvaila
  * @type {number}
  */
 export
-const NEFFailureCause_contextNotFound = NEFFailureCause.contextNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFFailureCause_contextNotFound: _enum_for_NEFFailureCause.contextNotFound = NEFFailureCause.contextNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contextNotFound
@@ -121,7 +121,7 @@ const NEFFailureCause_contextNotFound = NEFFailureCause.contextNotFound; /* LONG
  * @type {number}
  */
 export
-const contextNotFound = NEFFailureCause.contextNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contextNotFound: _enum_for_NEFFailureCause.contextNotFound = NEFFailureCause.contextNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFFailureCause_portNotFree
@@ -129,7 +129,7 @@ const contextNotFound = NEFFailureCause.contextNotFound; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const NEFFailureCause_portNotFree = NEFFailureCause.portNotFree; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFFailureCause_portNotFree: _enum_for_NEFFailureCause.portNotFree = NEFFailureCause.portNotFree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary portNotFree
@@ -137,7 +137,7 @@ const NEFFailureCause_portNotFree = NEFFailureCause.portNotFree; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const portNotFree = NEFFailureCause.portNotFree; /* SHORT_NAMED_ENUMERATED_VALUE */
+const portNotFree: _enum_for_NEFFailureCause.portNotFree = NEFFailureCause.portNotFree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NEFFailureCause_portNotAssociatedWithSpecifiedApplication
@@ -145,7 +145,7 @@ const portNotFree = NEFFailureCause.portNotFree; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const NEFFailureCause_portNotAssociatedWithSpecifiedApplication = NEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* LONG_NAMED_ENUMERATED_VALUE */
+const NEFFailureCause_portNotAssociatedWithSpecifiedApplication: _enum_for_NEFFailureCause.portNotAssociatedWithSpecifiedApplication = NEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary portNotAssociatedWithSpecifiedApplication
@@ -153,7 +153,7 @@ const NEFFailureCause_portNotAssociatedWithSpecifiedApplication = NEFFailureCaus
  * @type {number}
  */
 export
-const portNotAssociatedWithSpecifiedApplication = NEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const portNotAssociatedWithSpecifiedApplication: _enum_for_NEFFailureCause.portNotAssociatedWithSpecifiedApplication = NEFFailureCause.portNotAssociatedWithSpecifiedApplication; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NEFFailureCause: $.ASN1Decoder<NEFFailureCause> = $._decodeEnumerated;
 export const _encode_NEFFailureCause: $.ASN1Encoder<NEFFailureCause> = $._encodeEnumerated;
 

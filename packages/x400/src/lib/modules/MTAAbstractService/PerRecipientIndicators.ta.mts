@@ -220,10 +220,10 @@ export const PerRecipientIndicators_reserved_7: number = 7; /* LONG_NAMED_BIT */
 export const reserved_7: number = PerRecipientIndicators_reserved_7; /* SHORT_NAMED_BIT */
 
 
-export const _decode_PerRecipientIndicators = $._decodeBitString;
+export const _decode_PerRecipientIndicators: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_PerRecipientIndicators = $._encodeBitString;
+export const _encode_PerRecipientIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

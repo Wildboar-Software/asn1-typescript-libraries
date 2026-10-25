@@ -50,7 +50,7 @@ type CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
  * @enum {number}
  */
 export
-const CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
+const CreateOrRemoveIndicator: typeof _enum_for_CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
 
 /**
  * @summary CreateOrRemoveIndicator_create
@@ -58,7 +58,7 @@ const CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
  * @type {number}
  */
 export
-const CreateOrRemoveIndicator_create = CreateOrRemoveIndicator.create; /* LONG_NAMED_ENUMERATED_VALUE */
+const CreateOrRemoveIndicator_create: _enum_for_CreateOrRemoveIndicator.create = CreateOrRemoveIndicator.create; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary create
@@ -66,7 +66,7 @@ const CreateOrRemoveIndicator_create = CreateOrRemoveIndicator.create; /* LONG_N
  * @type {number}
  */
 export
-const create = CreateOrRemoveIndicator.create; /* SHORT_NAMED_ENUMERATED_VALUE */
+const create: _enum_for_CreateOrRemoveIndicator.create = CreateOrRemoveIndicator.create; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CreateOrRemoveIndicator_remove
@@ -74,7 +74,7 @@ const create = CreateOrRemoveIndicator.create; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const CreateOrRemoveIndicator_remove = CreateOrRemoveIndicator.remove; /* LONG_NAMED_ENUMERATED_VALUE */
+const CreateOrRemoveIndicator_remove: _enum_for_CreateOrRemoveIndicator.remove = CreateOrRemoveIndicator.remove; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remove
@@ -82,7 +82,7 @@ const CreateOrRemoveIndicator_remove = CreateOrRemoveIndicator.remove; /* LONG_N
  * @type {number}
  */
 export
-const remove = CreateOrRemoveIndicator.remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remove: _enum_for_CreateOrRemoveIndicator.remove = CreateOrRemoveIndicator.remove; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_CreateOrRemoveIndicator(el: _Element): CreateOrRemoveIndicator {

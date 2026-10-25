@@ -91,7 +91,7 @@ export const _decode_AdditionalSubscriptions = (el: _Element): AdditionalSubscri
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalSubscriptions, encoded as an ASN.1 Element.
  */
-export const _encode_AdditionalSubscriptions = $._encodeBitString;
+export const _encode_AdditionalSubscriptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

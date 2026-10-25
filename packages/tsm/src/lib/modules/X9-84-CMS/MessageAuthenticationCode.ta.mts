@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MessageAuthenticationCode = OCTET_STRING; // OctetStringType
-export const _decode_MessageAuthenticationCode = $._decodeOctetString;
-export const _encode_MessageAuthenticationCode = $._encodeOctetString;
+export const _decode_MessageAuthenticationCode: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_MessageAuthenticationCode: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

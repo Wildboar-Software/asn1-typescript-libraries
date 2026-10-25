@@ -64,10 +64,10 @@ export const SecurityAction_security_label_check: number = 2; /* LONG_NAMED_BIT 
 export const security_label_check: number = SecurityAction_security_label_check; /* SHORT_NAMED_BIT */
 
 
-export const _decode_SecurityAction = $._decodeBitString;
+export const _decode_SecurityAction: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_SecurityAction = $._encodeBitString;
+export const _encode_SecurityAction: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

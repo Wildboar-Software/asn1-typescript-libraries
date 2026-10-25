@@ -21,12 +21,12 @@ export type DSAPublicKey = INTEGER;
 
 
 
-export const _decode_DSAPublicKey = $._decodeInteger;
+export const _decode_DSAPublicKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DSAPublicKey = $._encodeInteger;
+export const _encode_DSAPublicKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

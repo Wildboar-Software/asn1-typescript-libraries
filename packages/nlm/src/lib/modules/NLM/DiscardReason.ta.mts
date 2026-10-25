@@ -33,12 +33,12 @@ export type DiscardReason = INTEGER;
 
 
 
-export const _decode_DiscardReason = $._decodeInteger;
+export const _decode_DiscardReason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DiscardReason = $._encodeInteger;
+export const _encode_DiscardReason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

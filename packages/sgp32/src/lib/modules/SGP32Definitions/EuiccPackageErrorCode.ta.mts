@@ -40,7 +40,7 @@ type EuiccPackageErrorCode = INTEGER;
  * section 5.9.1). The eUICC returns a signed error and does not store it.
  */
 export
-const EuiccPackageErrorCode_invalidEid = 3 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageErrorCode_invalidEid: 3 = 3 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_invalidEid
@@ -50,7 +50,7 @@ const EuiccPackageErrorCode_invalidEid = 3 satisfies EuiccPackageErrorCode; /* L
  * eidValue does not match this eUICC's EID (SGP.32 v1.2, section 5.9.1).
  */
 export
-const invalidEid = EuiccPackageErrorCode_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidEid: 3 = EuiccPackageErrorCode_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_replayError
@@ -62,7 +62,7 @@ const invalidEid = EuiccPackageErrorCode_invalidEid; /* SHORT_NAMED_INTEGER_VALU
  * strictly greater counter.
  */
 export
-const EuiccPackageErrorCode_replayError = 4 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageErrorCode_replayError: 4 = 4 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_replayError
@@ -73,7 +73,7 @@ const EuiccPackageErrorCode_replayError = 4 satisfies EuiccPackageErrorCode; /* 
  * (SGP.32 v1.2, section 5.9.1).
  */
 export
-const replayError = EuiccPackageErrorCode_replayError; /* SHORT_NAMED_INTEGER_VALUE */
+const replayError: 4 = EuiccPackageErrorCode_replayError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_counterValueOutOfRange
@@ -85,7 +85,7 @@ const replayError = EuiccPackageErrorCode_replayError; /* SHORT_NAMED_INTEGER_VA
  * (0x7FFFFF) inclusive.
  */
 export
-const EuiccPackageErrorCode_counterValueOutOfRange = 6 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageErrorCode_counterValueOutOfRange: 6 = 6 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_counterValueOutOfRange
@@ -96,7 +96,7 @@ const EuiccPackageErrorCode_counterValueOutOfRange = 6 satisfies EuiccPackageErr
  * 2.11.1.1).
  */
 export
-const counterValueOutOfRange = EuiccPackageErrorCode_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
+const counterValueOutOfRange: 6 = EuiccPackageErrorCode_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_sizeOverflow
@@ -107,7 +107,7 @@ const counterValueOutOfRange = EuiccPackageErrorCode_counterValueOutOfRange; /* 
  * define the condition that produces it. Annex C repeats the enumeration.
  */
 export
-const EuiccPackageErrorCode_sizeOverflow = 15 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageErrorCode_sizeOverflow: 15 = 15 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_sizeOverflow
@@ -118,7 +118,7 @@ const EuiccPackageErrorCode_sizeOverflow = 15 satisfies EuiccPackageErrorCode; /
  * the condition that produces it.
  */
 export
-const sizeOverflow = EuiccPackageErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
+const sizeOverflow: 15 = EuiccPackageErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_ecallActive
@@ -130,7 +130,7 @@ const sizeOverflow = EuiccPackageErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_
  * EuiccMemoryResetRequest and ExecuteFallbackMechanismRequest.
  */
 export
-const EuiccPackageErrorCode_ecallActive = 104 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageErrorCode_ecallActive: 104 = 104 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_ecallActive
@@ -141,7 +141,7 @@ const EuiccPackageErrorCode_ecallActive = 104 satisfies EuiccPackageErrorCode; /
  * v1.2, section 2.11.2.1).
  */
 export
-const ecallActive = EuiccPackageErrorCode_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallActive: 104 = EuiccPackageErrorCode_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_undefinedError
@@ -152,7 +152,7 @@ const ecallActive = EuiccPackageErrorCode_ecallActive; /* SHORT_NAMED_INTEGER_VA
  * 2.11.2.1 and does not further define the condition that produces it.
  */
 export
-const EuiccPackageErrorCode_undefinedError = 127 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageErrorCode_undefinedError: 127 = 127 satisfies EuiccPackageErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageErrorCode_undefinedError
@@ -163,7 +163,7 @@ const EuiccPackageErrorCode_undefinedError = 127 satisfies EuiccPackageErrorCode
  * the condition that produces it.
  */
 export
-const undefinedError = EuiccPackageErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = EuiccPackageErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccPackageErrorCode: $.ASN1Decoder<EuiccPackageErrorCode> = $._decodeInteger;
 export const _encode_EuiccPackageErrorCode: $.ASN1Encoder<EuiccPackageErrorCode> = $._encodeInteger;
 

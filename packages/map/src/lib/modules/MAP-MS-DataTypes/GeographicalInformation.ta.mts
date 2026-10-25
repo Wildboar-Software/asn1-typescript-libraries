@@ -47,7 +47,7 @@ export const _decode_GeographicalInformation = (el: _Element): GeographicalInfor
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GeographicalInformation, encoded as an ASN.1 Element.
  */
-export const _encode_GeographicalInformation = $._encodeOctetString;
+export const _encode_GeographicalInformation: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -93,7 +93,7 @@ type RMState = _enum_for_RMState;
  * @enum {number}
  */
 export
-const RMState = _enum_for_RMState;
+const RMState: typeof _enum_for_RMState = _enum_for_RMState;
 
 /**
  * @summary RMState_registered
@@ -107,7 +107,7 @@ const RMState = _enum_for_RMState;
  * @type {number}
  */
 export
-const RMState_registered = RMState.registered; /* LONG_NAMED_ENUMERATED_VALUE */
+const RMState_registered: _enum_for_RMState.registered = RMState.registered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registered
@@ -121,7 +121,7 @@ const RMState_registered = RMState.registered; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const registered = RMState.registered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registered: _enum_for_RMState.registered = RMState.registered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RMState_deregistered
@@ -135,7 +135,7 @@ const registered = RMState.registered; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RMState_deregistered = RMState.deregistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const RMState_deregistered: _enum_for_RMState.deregistered = RMState.deregistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deregistered
@@ -149,7 +149,7 @@ const RMState_deregistered = RMState.deregistered; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const deregistered = RMState.deregistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deregistered: _enum_for_RMState.deregistered = RMState.deregistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RMState: $.ASN1Decoder<RMState> = $._decodeEnumerated;
 export const _encode_RMState: $.ASN1Encoder<RMState> = $._encodeEnumerated;
 

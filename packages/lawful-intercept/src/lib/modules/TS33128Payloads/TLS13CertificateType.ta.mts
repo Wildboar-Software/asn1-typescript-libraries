@@ -61,7 +61,7 @@ type TLS13CertificateType = _enum_for_TLS13CertificateType;
  * @enum {number}
  */
 export
-const TLS13CertificateType = _enum_for_TLS13CertificateType;
+const TLS13CertificateType: typeof _enum_for_TLS13CertificateType = _enum_for_TLS13CertificateType;
 
 /**
  * @summary TLS13CertificateType_x509
@@ -69,7 +69,7 @@ const TLS13CertificateType = _enum_for_TLS13CertificateType;
  * @type {number}
  */
 export
-const TLS13CertificateType_x509 = TLS13CertificateType.x509; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13CertificateType_x509: _enum_for_TLS13CertificateType.x509 = TLS13CertificateType.x509; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary x509
@@ -77,7 +77,7 @@ const TLS13CertificateType_x509 = TLS13CertificateType.x509; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const x509 = TLS13CertificateType.x509; /* SHORT_NAMED_ENUMERATED_VALUE */
+const x509: _enum_for_TLS13CertificateType.x509 = TLS13CertificateType.x509; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13CertificateType_rawPublicKey
@@ -85,7 +85,7 @@ const x509 = TLS13CertificateType.x509; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLS13CertificateType_rawPublicKey = TLS13CertificateType.rawPublicKey; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13CertificateType_rawPublicKey: _enum_for_TLS13CertificateType.rawPublicKey = TLS13CertificateType.rawPublicKey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rawPublicKey
@@ -93,7 +93,7 @@ const TLS13CertificateType_rawPublicKey = TLS13CertificateType.rawPublicKey; /* 
  * @type {number}
  */
 export
-const rawPublicKey = TLS13CertificateType.rawPublicKey; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rawPublicKey: _enum_for_TLS13CertificateType.rawPublicKey = TLS13CertificateType.rawPublicKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLS13CertificateType: $.ASN1Decoder<TLS13CertificateType> = $._decodeEnumerated;
 export const _encode_TLS13CertificateType: $.ASN1Encoder<TLS13CertificateType> = $._encodeEnumerated;
 

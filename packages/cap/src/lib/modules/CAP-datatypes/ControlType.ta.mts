@@ -27,10 +27,10 @@ export enum _enum_for_ControlType {
     manuallyInitiated = 1,
 }
 export type ControlType = _enum_for_ControlType;
-export const ControlType = _enum_for_ControlType;
-export const ControlType_sCPOverloaded = ControlType.sCPOverloaded;
-export const sCPOverloaded = ControlType.sCPOverloaded;
-export const ControlType_manuallyInitiated = ControlType.manuallyInitiated;
-export const manuallyInitiated = ControlType.manuallyInitiated;
-export const _decode_ControlType = $._decodeEnumerated;
-export const _encode_ControlType = $._encodeEnumerated;
+export const ControlType: typeof _enum_for_ControlType = _enum_for_ControlType;
+export const ControlType_sCPOverloaded: _enum_for_ControlType.sCPOverloaded = ControlType.sCPOverloaded;
+export const sCPOverloaded: _enum_for_ControlType.sCPOverloaded = ControlType.sCPOverloaded;
+export const ControlType_manuallyInitiated: _enum_for_ControlType.manuallyInitiated = ControlType.manuallyInitiated;
+export const manuallyInitiated: _enum_for_ControlType.manuallyInitiated = ControlType.manuallyInitiated;
+export const _decode_ControlType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ControlType: $.ASN1Encoder<number> = $._encodeEnumerated;

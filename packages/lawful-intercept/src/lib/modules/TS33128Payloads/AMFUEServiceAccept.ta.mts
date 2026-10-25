@@ -257,7 +257,7 @@ class AMFUEServiceAccept {
          * @static
          */
 
-    public static _enum_for_deprecatedUERequestType = _enum_for_FiveGSMRequestType;
+    public static _enum_for_deprecatedUERequestType: typeof _enum_for_FiveGSMRequestType = _enum_for_FiveGSMRequestType;
 }
 
 /**

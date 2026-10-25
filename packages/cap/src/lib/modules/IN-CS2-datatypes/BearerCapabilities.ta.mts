@@ -183,8 +183,8 @@ const BearerCapabilities_video: number = 10; /* LONG_NAMED_BIT */
  */
 export
 const video: number = BearerCapabilities_video; /* SHORT_NAMED_BIT */
-export const _decode_BearerCapabilities = $._decodeBitString;
-export const _encode_BearerCapabilities = $._encodeBitString;
+export const _decode_BearerCapabilities: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_BearerCapabilities: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

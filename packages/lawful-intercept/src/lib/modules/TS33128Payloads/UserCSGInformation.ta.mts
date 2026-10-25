@@ -118,13 +118,13 @@ class UserCSGInformation {
          * @static
          */
 
-    public static _enum_for_cSGAccessMode = _enum_for_CSGAccessMode;        /**
+    public static _enum_for_cSGAccessMode: typeof _enum_for_CSGAccessMode = _enum_for_CSGAccessMode;        /**
          * @summary The enum used as the type of the component `cSGMembershipIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_cSGMembershipIndication = _enum_for_CSGMembershipIndication;
+    public static _enum_for_cSGMembershipIndication: typeof _enum_for_CSGMembershipIndication = _enum_for_CSGMembershipIndication;
 }
 
 /**

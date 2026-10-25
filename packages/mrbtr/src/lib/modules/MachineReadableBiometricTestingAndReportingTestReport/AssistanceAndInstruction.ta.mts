@@ -103,19 +103,19 @@ class AssistanceAndInstruction {
          * @static
          */
 
-    public static _enum_for_assistanceLocation = _enum_for_AssistanceLocation;        /**
+    public static _enum_for_assistanceLocation: typeof _enum_for_AssistanceLocation = _enum_for_AssistanceLocation;        /**
          * @summary The enum used as the type of the component `assistanceMode`
          * @public
          * @static
          */
 
-    public static _enum_for_assistanceMode = _enum_for_AssistanceMode;        /**
+    public static _enum_for_assistanceMode: typeof _enum_for_AssistanceMode = _enum_for_AssistanceMode;        /**
          * @summary The enum used as the type of the component `instructionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_instructionMode = _enum_for_InstructionMode;
+    public static _enum_for_instructionMode: typeof _enum_for_InstructionMode = _enum_for_InstructionMode;
 }
 
 /**

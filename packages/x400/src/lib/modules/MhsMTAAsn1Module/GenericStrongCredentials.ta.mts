@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type GenericStrongCredentials = EXTERNAL; // ExternalType
 
 
-export const _decode_GenericStrongCredentials = $._decodeExternal;
+export const _decode_GenericStrongCredentials: $.ASN1Decoder<_External> = $._decodeExternal;
 
 
-export const _encode_GenericStrongCredentials = $._encodeExternal;
+export const _encode_GenericStrongCredentials: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

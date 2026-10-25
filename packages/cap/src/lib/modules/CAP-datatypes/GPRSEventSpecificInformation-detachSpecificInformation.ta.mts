@@ -41,7 +41,7 @@ export class GPRSEventSpecificInformation_detachSpecificInformation {
         return new GPRSEventSpecificInformation_detachSpecificInformation(_o.initiatingEntity, _o.routeingAreaUpdate, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_initiatingEntity = _enum_for_InitiatingEntity;
+    public static _enum_for_initiatingEntity: typeof _enum_for_InitiatingEntity = _enum_for_InitiatingEntity;
 }
 
 export const _root_component_type_list_1_spec_for_GPRSEventSpecificInformation_detachSpecificInformation: $.ComponentSpec[] = [

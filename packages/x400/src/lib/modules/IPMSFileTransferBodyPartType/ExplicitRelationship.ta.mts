@@ -32,62 +32,62 @@ export type ExplicitRelationship = INTEGER;
  * @constant
  * @type {number}
  */
-export const ExplicitRelationship_unspecified = 0 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
+export const ExplicitRelationship_unspecified: 0 = 0 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified = ExplicitRelationship_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified: 0 = ExplicitRelationship_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_new_file
  * @constant
  * @type {number}
  */
-export const ExplicitRelationship_new_file = 1 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
+export const ExplicitRelationship_new_file: 1 = 1 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_new_file
  * @constant
  * @type {number}
  */
-export const new_file = ExplicitRelationship_new_file; /* SHORT_NAMED_INTEGER_VALUE */
+export const new_file: 1 = ExplicitRelationship_new_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_replacement
  * @constant
  * @type {number}
  */
-export const ExplicitRelationship_replacement = 2 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
+export const ExplicitRelationship_replacement: 2 = 2 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_replacement
  * @constant
  * @type {number}
  */
-export const replacement = ExplicitRelationship_replacement; /* SHORT_NAMED_INTEGER_VALUE */
+export const replacement: 2 = ExplicitRelationship_replacement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_extension
  * @constant
  * @type {number}
  */
-export const ExplicitRelationship_extension = 3 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
+export const ExplicitRelationship_extension: 3 = 3 satisfies ExplicitRelationship; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExplicitRelationship_extension
  * @constant
  * @type {number}
  */
-export const extension = ExplicitRelationship_extension; /* SHORT_NAMED_INTEGER_VALUE */
+export const extension: 3 = ExplicitRelationship_extension; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ExplicitRelationship = $._decodeInteger;
+export const _decode_ExplicitRelationship: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ExplicitRelationship = $._encodeInteger;
+export const _encode_ExplicitRelationship: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

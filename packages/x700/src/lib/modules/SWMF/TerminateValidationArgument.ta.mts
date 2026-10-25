@@ -104,7 +104,7 @@ export class TerminateValidationArgument {
      * @static
      */
 
-    public static _enum_for_terminateValidationInfo = _enum_for_TerminateValidationInfo;
+    public static _enum_for_terminateValidationInfo: typeof _enum_for_TerminateValidationInfo = _enum_for_TerminateValidationInfo;
 }
 
 /**

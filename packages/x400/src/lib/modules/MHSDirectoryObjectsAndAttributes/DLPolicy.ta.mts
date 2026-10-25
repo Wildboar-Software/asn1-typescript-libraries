@@ -440,28 +440,28 @@ export class DLPolicy {
      * @static
      */
 
-    public static _enum_for_return_of_content = _enum_for_DLPolicy_return_of_content;
+    public static _enum_for_return_of_content: typeof _enum_for_DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
     /**
      * @summary The enum used as the type of the component `disclosure_of_other_recipients`
      * @public
      * @static
      */
 
-    public static _enum_for_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
+    public static _enum_for_disclosure_of_other_recipients: typeof _enum_for_DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
     /**
      * @summary The enum used as the type of the component `implicit_conversion_prohibited`
      * @public
      * @static
      */
 
-    public static _enum_for_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
+    public static _enum_for_implicit_conversion_prohibited: typeof _enum_for_DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
     /**
      * @summary The enum used as the type of the component `conversion_with_loss_prohibited`
      * @public
      * @static
      */
 
-    public static _enum_for_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
+    public static _enum_for_conversion_with_loss_prohibited: typeof _enum_for_DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
 }
 
 /**

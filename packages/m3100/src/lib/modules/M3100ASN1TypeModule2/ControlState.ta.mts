@@ -57,7 +57,7 @@ export type ControlState = _enum_for_ControlState;
  *
  * @enum {number}
  */
-export const ControlState = _enum_for_ControlState;
+export const ControlState: typeof _enum_for_ControlState = _enum_for_ControlState;
 
 
 /**
@@ -65,7 +65,7 @@ export const ControlState = _enum_for_ControlState;
  * @constant
  * @type {number}
  */
-export const ControlState_closed =
+export const ControlState_closed: _enum_for_ControlState.closed =
     ControlState.closed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const ControlState_closed =
  * @constant
  * @type {number}
  */
-export const closed =
+export const closed: _enum_for_ControlState.closed =
     ControlState.closed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const closed =
  * @constant
  * @type {number}
  */
-export const ControlState_open =
+export const ControlState_open: _enum_for_ControlState.open =
     ControlState.open; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -92,7 +92,7 @@ export const ControlState_open =
  * @constant
  * @type {number}
  */
-export const open =
+export const open: _enum_for_ControlState.open =
     ControlState.open; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

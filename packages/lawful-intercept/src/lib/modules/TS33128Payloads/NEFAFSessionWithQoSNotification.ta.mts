@@ -106,7 +106,7 @@ class NEFAFSessionWithQoSNotification {
          * @static
          */
 
-    public static _enum_for_aForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
+    public static _enum_for_aForASSessionWithQoSResponseCode: typeof _enum_for_AForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
 }
 
 /**

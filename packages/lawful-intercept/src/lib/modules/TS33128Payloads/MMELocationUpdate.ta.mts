@@ -224,7 +224,7 @@ class MMELocationUpdate {
          * @static
          */
 
-    public static _enum_for_sMSServiceStatus = _enum_for_EPSSMSServiceStatus;
+    public static _enum_for_sMSServiceStatus: typeof _enum_for_EPSSMSServiceStatus = _enum_for_EPSSMSServiceStatus;
 }
 
 /**

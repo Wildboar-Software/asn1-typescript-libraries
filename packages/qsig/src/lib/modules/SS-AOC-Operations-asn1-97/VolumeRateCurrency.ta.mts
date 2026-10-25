@@ -96,7 +96,7 @@ class VolumeRateCurrency {
          * @static
          */
 
-    public static _enum_for_vRVolumeUnit = _enum_for_VolumeUnit;
+    public static _enum_for_vRVolumeUnit: typeof _enum_for_VolumeUnit = _enum_for_VolumeUnit;
 }
 
 /**

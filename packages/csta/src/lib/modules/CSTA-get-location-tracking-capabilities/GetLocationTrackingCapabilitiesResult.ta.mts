@@ -458,19 +458,19 @@ class GetLocationTrackingCapabilitiesResult {
          * @static
          */
 
-    public static _enum_for_collectionTypeDefault = _enum_for_GetLocationTrackingCapabilitiesResult_collectionTypeDefault;        /**
+    public static _enum_for_collectionTypeDefault: typeof _enum_for_GetLocationTrackingCapabilitiesResult_collectionTypeDefault = _enum_for_GetLocationTrackingCapabilitiesResult_collectionTypeDefault;        /**
          * @summary The enum used as the type of the component `collectionFilterDefault`
          * @public
          * @static
          */
 
-    public static _enum_for_collectionFilterDefault = _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault;        /**
+    public static _enum_for_collectionFilterDefault: typeof _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault;        /**
          * @summary The enum used as the type of the component `reportingTypeDefault`
          * @public
          * @static
          */
 
-    public static _enum_for_reportingTypeDefault = _enum_for_GetLocationTrackingCapabilitiesResult_reportingTypeDefault;
+    public static _enum_for_reportingTypeDefault: typeof _enum_for_GetLocationTrackingCapabilitiesResult_reportingTypeDefault = _enum_for_GetLocationTrackingCapabilitiesResult_reportingTypeDefault;
 }
 
 /**

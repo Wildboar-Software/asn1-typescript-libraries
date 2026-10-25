@@ -42,7 +42,7 @@ type AttrId_graphicCharacterRepertoire = INTEGER;
  * @type {number}
  */
 export
-const AttrId_graphicCharacterRepertoire_null_ = 0 satisfies AttrId_graphicCharacterRepertoire; /* LONG_NAMED_INTEGER_VALUE */
+const AttrId_graphicCharacterRepertoire_null_: 0 = 0 satisfies AttrId_graphicCharacterRepertoire; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttrId_graphicCharacterRepertoire_null_
@@ -54,9 +54,9 @@ const AttrId_graphicCharacterRepertoire_null_ = 0 satisfies AttrId_graphicCharac
  * @type {number}
  */
 export
-const null_ = AttrId_graphicCharacterRepertoire_null_; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AttrId_graphicCharacterRepertoire = $._decodeInteger;
-export const _encode_AttrId_graphicCharacterRepertoire = $._encodeInteger;
+const null_: 0 = AttrId_graphicCharacterRepertoire_null_; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AttrId_graphicCharacterRepertoire: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AttrId_graphicCharacterRepertoire: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

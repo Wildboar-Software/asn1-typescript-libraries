@@ -33,8 +33,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type FloatingPoint = OCTET_STRING; // OctetStringType
-export const _decode_FloatingPoint = $._decodeOctetString;
-export const _encode_FloatingPoint = $._encodeOctetString;
+export const _decode_FloatingPoint: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_FloatingPoint: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

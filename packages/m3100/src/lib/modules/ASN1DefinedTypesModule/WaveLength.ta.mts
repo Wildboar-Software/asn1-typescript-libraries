@@ -28,12 +28,12 @@ export type WaveLength = INTEGER;
 
 
 
-export const _decode_WaveLength = $._decodeInteger;
+export const _decode_WaveLength: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_WaveLength = $._encodeInteger;
+export const _encode_WaveLength: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

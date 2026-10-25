@@ -122,7 +122,7 @@ class LSAInformation {
          * @static
          */
 
-    public static _enum_for_lsaOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
+    public static _enum_for_lsaOnlyAccessIndicator: typeof _enum_for_LSAOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
 }
 
 /**

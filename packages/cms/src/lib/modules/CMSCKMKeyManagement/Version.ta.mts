@@ -20,12 +20,12 @@ export type Version = INTEGER;
 
 
 
-export const _decode_Version = $._decodeInteger;
+export const _decode_Version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Version = $._encodeInteger;
+export const _encode_Version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

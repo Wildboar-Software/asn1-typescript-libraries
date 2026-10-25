@@ -63,7 +63,7 @@ type NetworkFunctionality = _enum_for_NetworkFunctionality;
  * @enum {number}
  */
 export
-const NetworkFunctionality = _enum_for_NetworkFunctionality;
+const NetworkFunctionality: typeof _enum_for_NetworkFunctionality = _enum_for_NetworkFunctionality;
 
 /**
  * @summary NetworkFunctionality_cHF
@@ -71,7 +71,7 @@ const NetworkFunctionality = _enum_for_NetworkFunctionality;
  * @type {number}
  */
 export
-const NetworkFunctionality_cHF = NetworkFunctionality.cHF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkFunctionality_cHF: _enum_for_NetworkFunctionality.cHF = NetworkFunctionality.cHF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cHF
@@ -79,7 +79,7 @@ const NetworkFunctionality_cHF = NetworkFunctionality.cHF; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const cHF = NetworkFunctionality.cHF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cHF: _enum_for_NetworkFunctionality.cHF = NetworkFunctionality.cHF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkFunctionality_sMF
@@ -87,7 +87,7 @@ const cHF = NetworkFunctionality.cHF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkFunctionality_sMF = NetworkFunctionality.sMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkFunctionality_sMF: _enum_for_NetworkFunctionality.sMF = NetworkFunctionality.sMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMF
@@ -95,7 +95,7 @@ const NetworkFunctionality_sMF = NetworkFunctionality.sMF; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const sMF = NetworkFunctionality.sMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMF: _enum_for_NetworkFunctionality.sMF = NetworkFunctionality.sMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkFunctionality_aMF
@@ -103,7 +103,7 @@ const sMF = NetworkFunctionality.sMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkFunctionality_aMF = NetworkFunctionality.aMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkFunctionality_aMF: _enum_for_NetworkFunctionality.aMF = NetworkFunctionality.aMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aMF
@@ -111,7 +111,7 @@ const NetworkFunctionality_aMF = NetworkFunctionality.aMF; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const aMF = NetworkFunctionality.aMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aMF: _enum_for_NetworkFunctionality.aMF = NetworkFunctionality.aMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkFunctionality_sMSF
@@ -119,7 +119,7 @@ const aMF = NetworkFunctionality.aMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkFunctionality_sMSF = NetworkFunctionality.sMSF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkFunctionality_sMSF: _enum_for_NetworkFunctionality.sMSF = NetworkFunctionality.sMSF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSF
@@ -127,7 +127,7 @@ const NetworkFunctionality_sMSF = NetworkFunctionality.sMSF; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const sMSF = NetworkFunctionality.sMSF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSF: _enum_for_NetworkFunctionality.sMSF = NetworkFunctionality.sMSF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_NetworkFunctionality: $.ASN1Decoder<NetworkFunctionality> = $._decodeEnumerated;

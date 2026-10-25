@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TSelect = OCTET_STRING; // OctetStringType
 
 
-export const _decode_TSelect = $._decodeOctetString;
+export const _decode_TSelect: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_TSelect = $._encodeOctetString;
+export const _encode_TSelect: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

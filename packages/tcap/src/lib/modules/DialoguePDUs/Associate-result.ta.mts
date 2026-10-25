@@ -38,14 +38,14 @@ export type Associate_result = INTEGER;
  * @constant
  * @type {number}
  */
-export const Associate_result_accepted = 0 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_result_accepted: 0 = 0 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_accepted
  * @constant
  * @type {number}
  */
-export const accepted = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE */
+export const accepted: 0 = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_reject_permanent
@@ -56,20 +56,20 @@ export const accepted = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const Associate_result_reject_permanent = 1 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_result_reject_permanent: 1 = 1 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_reject_permanent
  * @constant
  * @type {number}
  */
-export const reject_permanent = Associate_result_reject_permanent; /* SHORT_NAMED_INTEGER_VALUE */
+export const reject_permanent: 1 = Associate_result_reject_permanent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Associate_result = $._decodeInteger;
+export const _decode_Associate_result: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Associate_result = $._encodeInteger;
+export const _encode_Associate_result: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

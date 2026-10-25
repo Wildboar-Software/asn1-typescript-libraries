@@ -86,7 +86,7 @@ type EndDesignation = _enum_for_EndDesignation;
  * @enum {number}
  */
 export
-const EndDesignation = _enum_for_EndDesignation;
+const EndDesignation: typeof _enum_for_EndDesignation = _enum_for_EndDesignation;
 
 /**
  * @summary EndDesignation_primaryEnd
@@ -103,7 +103,7 @@ const EndDesignation = _enum_for_EndDesignation;
  * @type {number}
  */
 export
-const EndDesignation_primaryEnd = EndDesignation.primaryEnd; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndDesignation_primaryEnd: _enum_for_EndDesignation.primaryEnd = EndDesignation.primaryEnd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary primaryEnd
@@ -112,7 +112,7 @@ const EndDesignation_primaryEnd = EndDesignation.primaryEnd; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const primaryEnd = EndDesignation.primaryEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const primaryEnd: _enum_for_EndDesignation.primaryEnd = EndDesignation.primaryEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndDesignation_secondaryEnd
@@ -129,7 +129,7 @@ const primaryEnd = EndDesignation.primaryEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EndDesignation_secondaryEnd = EndDesignation.secondaryEnd; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndDesignation_secondaryEnd: _enum_for_EndDesignation.secondaryEnd = EndDesignation.secondaryEnd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary secondaryEnd
@@ -138,7 +138,7 @@ const EndDesignation_secondaryEnd = EndDesignation.secondaryEnd; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const secondaryEnd = EndDesignation.secondaryEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
+const secondaryEnd: _enum_for_EndDesignation.secondaryEnd = EndDesignation.secondaryEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_EndDesignation: $.ASN1Decoder<EndDesignation> = $._decodeEnumerated;

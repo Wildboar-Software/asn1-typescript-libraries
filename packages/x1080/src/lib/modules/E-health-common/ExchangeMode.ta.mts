@@ -52,7 +52,7 @@ export type ExchangeMode = _enum_for_ExchangeMode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ExchangeMode_sync = _enum_for_ExchangeMode.sync; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ExchangeMode_sync: _enum_for_ExchangeMode.sync = _enum_for_ExchangeMode.sync; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const ExchangeMode_sync = _enum_for_ExchangeMode.sync; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const sync = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sync: _enum_for_ExchangeMode.sync = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const sync = ExchangeMode_sync; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ExchangeMode_async = _enum_for_ExchangeMode.async; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ExchangeMode_async: _enum_for_ExchangeMode.async = _enum_for_ExchangeMode.async; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,17 +92,17 @@ export const ExchangeMode_async = _enum_for_ExchangeMode.async; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const async = ExchangeMode_async; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const async: _enum_for_ExchangeMode.async = ExchangeMode_async; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ExchangeMode = $._decodeEnumerated;
+export const _decode_ExchangeMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_ExchangeMode = $._encodeEnumerated;
+export const _encode_ExchangeMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

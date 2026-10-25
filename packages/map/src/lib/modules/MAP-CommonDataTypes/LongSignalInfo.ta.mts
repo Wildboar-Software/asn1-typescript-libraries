@@ -51,7 +51,7 @@ export const _decode_LongSignalInfo = (el: _Element): LongSignalInfo => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LongSignalInfo, encoded as an ASN.1 Element.
  */
-export const _encode_LongSignalInfo = $._encodeOctetString;
+export const _encode_LongSignalInfo: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

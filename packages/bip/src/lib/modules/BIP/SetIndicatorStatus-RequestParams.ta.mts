@@ -123,7 +123,7 @@ export class SetIndicatorStatus_RequestParams {
    * @static
    */
 
-  public static _enum_for_indicatorStatus = _enum_for_BioAPI_INDICATOR_STATUS;
+  public static _enum_for_indicatorStatus: typeof _enum_for_BioAPI_INDICATOR_STATUS = _enum_for_BioAPI_INDICATOR_STATUS;
 }
 
 

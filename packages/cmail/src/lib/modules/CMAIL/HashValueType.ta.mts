@@ -82,7 +82,7 @@ export class HashValueType {
    * @static
    */
 
-  public static _enum_for_algorithmOID = _enum_for_HashValueType_algorithmOID;
+  public static _enum_for_algorithmOID: typeof _enum_for_HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
 }
 
 

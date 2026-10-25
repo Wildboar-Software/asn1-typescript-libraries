@@ -90,7 +90,7 @@ export const _decode_ENB_InterfaceList = (el: _Element): ENB_InterfaceList => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ENB_InterfaceList, encoded as an ASN.1 Element.
  */
-export const _encode_ENB_InterfaceList = $._encodeBitString;
+export const _encode_ENB_InterfaceList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

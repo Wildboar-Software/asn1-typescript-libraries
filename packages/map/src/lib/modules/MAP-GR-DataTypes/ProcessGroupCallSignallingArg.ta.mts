@@ -171,7 +171,7 @@ class ProcessGroupCallSignallingArg {
          * @static
          */
 
-    public static _enum_for_talkerPriority = _enum_for_TalkerPriority;
+    public static _enum_for_talkerPriority: typeof _enum_for_TalkerPriority = _enum_for_TalkerPriority;
 }
 
 /**

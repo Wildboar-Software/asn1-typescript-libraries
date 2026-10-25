@@ -195,7 +195,7 @@ class DfrBindResult {
          * @static
          */
 
-    public static _enum_for_function_Set_supported = _enum_for_FunctionSetType;
+    public static _enum_for_function_Set_supported: typeof _enum_for_FunctionSetType = _enum_for_FunctionSetType;
 }
 
 /**

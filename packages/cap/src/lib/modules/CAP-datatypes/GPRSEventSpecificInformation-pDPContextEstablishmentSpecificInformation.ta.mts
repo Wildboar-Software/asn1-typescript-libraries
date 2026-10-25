@@ -66,7 +66,7 @@ export class GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInforma
         return new GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation(_o.accessPointName, _o.endUserAddress, _o.qualityOfService, _o.locationInformationGPRS, _o.timeAndTimeZone, _o.pDPInitiationType, _o.secondaryPDP_context, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_pDPInitiationType = _enum_for_PDPInitiationType;
+    public static _enum_for_pDPInitiationType: typeof _enum_for_PDPInitiationType = _enum_for_PDPInitiationType;
 }
 
 export const _root_component_type_list_1_spec_for_GPRSEventSpecificInformation_pDPContextEstablishmentSpecificInformation: $.ComponentSpec[] = [

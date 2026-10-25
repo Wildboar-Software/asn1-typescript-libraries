@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ComponentCorrelationID = INTEGER;
-export const _decode_ComponentCorrelationID = $._decodeInteger;
-export const _encode_ComponentCorrelationID = $._encodeInteger;
+export const _decode_ComponentCorrelationID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ComponentCorrelationID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

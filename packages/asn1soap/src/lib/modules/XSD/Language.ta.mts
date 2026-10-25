@@ -35,12 +35,12 @@ export type Language = VisibleString; // VisibleString
 
 
 
-export const _decode_Language = $._decodeVisibleString;
+export const _decode_Language: $.ASN1Decoder<string> = $._decodeVisibleString;
 
 
 
 
-export const _encode_Language = $._encodeVisibleString;
+export const _encode_Language: $.ASN1Encoder<string> = $._encodeVisibleString;
 
 
 /* eslint-enable */

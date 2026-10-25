@@ -28,12 +28,12 @@ export type RepairActivityID = INTEGER;
 
 
 
-export const _decode_RepairActivityID = $._decodeInteger;
+export const _decode_RepairActivityID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RepairActivityID = $._encodeInteger;
+export const _encode_RepairActivityID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

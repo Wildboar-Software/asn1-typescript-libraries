@@ -103,7 +103,7 @@ type BatteryIndication = _enum_for_BatteryIndication;
  * @enum {number}
  */
 export
-const BatteryIndication = _enum_for_BatteryIndication;
+const BatteryIndication: typeof _enum_for_BatteryIndication = _enum_for_BatteryIndication;
 
 /**
  * @summary BatteryIndication_batteryRecharge
@@ -111,7 +111,7 @@ const BatteryIndication = _enum_for_BatteryIndication;
  * @type {number}
  */
 export
-const BatteryIndication_batteryRecharge = BatteryIndication.batteryRecharge; /* LONG_NAMED_ENUMERATED_VALUE */
+const BatteryIndication_batteryRecharge: _enum_for_BatteryIndication.batteryRecharge = BatteryIndication.batteryRecharge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary batteryRecharge
@@ -119,7 +119,7 @@ const BatteryIndication_batteryRecharge = BatteryIndication.batteryRecharge; /* 
  * @type {number}
  */
 export
-const batteryRecharge = BatteryIndication.batteryRecharge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const batteryRecharge: _enum_for_BatteryIndication.batteryRecharge = BatteryIndication.batteryRecharge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BatteryIndication_batteryReplace
@@ -127,7 +127,7 @@ const batteryRecharge = BatteryIndication.batteryRecharge; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const BatteryIndication_batteryReplace = BatteryIndication.batteryReplace; /* LONG_NAMED_ENUMERATED_VALUE */
+const BatteryIndication_batteryReplace: _enum_for_BatteryIndication.batteryReplace = BatteryIndication.batteryReplace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary batteryReplace
@@ -135,7 +135,7 @@ const BatteryIndication_batteryReplace = BatteryIndication.batteryReplace; /* LO
  * @type {number}
  */
 export
-const batteryReplace = BatteryIndication.batteryReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
+const batteryReplace: _enum_for_BatteryIndication.batteryReplace = BatteryIndication.batteryReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BatteryIndication_batteryNoRecharge
@@ -143,7 +143,7 @@ const batteryReplace = BatteryIndication.batteryReplace; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const BatteryIndication_batteryNoRecharge = BatteryIndication.batteryNoRecharge; /* LONG_NAMED_ENUMERATED_VALUE */
+const BatteryIndication_batteryNoRecharge: _enum_for_BatteryIndication.batteryNoRecharge = BatteryIndication.batteryNoRecharge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary batteryNoRecharge
@@ -151,7 +151,7 @@ const BatteryIndication_batteryNoRecharge = BatteryIndication.batteryNoRecharge;
  * @type {number}
  */
 export
-const batteryNoRecharge = BatteryIndication.batteryNoRecharge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const batteryNoRecharge: _enum_for_BatteryIndication.batteryNoRecharge = BatteryIndication.batteryNoRecharge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BatteryIndication_batteryNoReplace
@@ -159,7 +159,7 @@ const batteryNoRecharge = BatteryIndication.batteryNoRecharge; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const BatteryIndication_batteryNoReplace = BatteryIndication.batteryNoReplace; /* LONG_NAMED_ENUMERATED_VALUE */
+const BatteryIndication_batteryNoReplace: _enum_for_BatteryIndication.batteryNoReplace = BatteryIndication.batteryNoReplace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary batteryNoReplace
@@ -167,7 +167,7 @@ const BatteryIndication_batteryNoReplace = BatteryIndication.batteryNoReplace; /
  * @type {number}
  */
 export
-const batteryNoReplace = BatteryIndication.batteryNoReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
+const batteryNoReplace: _enum_for_BatteryIndication.batteryNoReplace = BatteryIndication.batteryNoReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BatteryIndication_noBattery
@@ -175,7 +175,7 @@ const batteryNoReplace = BatteryIndication.batteryNoReplace; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const BatteryIndication_noBattery = BatteryIndication.noBattery; /* LONG_NAMED_ENUMERATED_VALUE */
+const BatteryIndication_noBattery: _enum_for_BatteryIndication.noBattery = BatteryIndication.noBattery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noBattery
@@ -183,7 +183,7 @@ const BatteryIndication_noBattery = BatteryIndication.noBattery; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const noBattery = BatteryIndication.noBattery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noBattery: _enum_for_BatteryIndication.noBattery = BatteryIndication.noBattery; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_BatteryIndication: $.ASN1Decoder<BatteryIndication> = $._decodeEnumerated;
 export const _encode_BatteryIndication: $.ASN1Encoder<BatteryIndication> = $._encodeEnumerated;
 

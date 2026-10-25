@@ -18,12 +18,12 @@ export type ECPrivateKey = INTEGER;
 
 
 
-export const _decode_ECPrivateKey = $._decodeInteger;
+export const _decode_ECPrivateKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ECPrivateKey = $._encodeInteger;
+export const _encode_ECPrivateKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -101,7 +101,7 @@ export class VerifyMembershipStatusReply {
      * @static
      */
 
-    public static _enum_for_membershipStatus = _enum_for_MembershipStatus;
+    public static _enum_for_membershipStatus: typeof _enum_for_MembershipStatus = _enum_for_MembershipStatus;
 }
 
 /**

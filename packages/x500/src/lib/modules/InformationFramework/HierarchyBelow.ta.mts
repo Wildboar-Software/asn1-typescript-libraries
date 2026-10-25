@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type HierarchyBelow = BOOLEAN; // BooleanType
 
 
-export const _decode_HierarchyBelow = $._decodeBoolean;
+export const _decode_HierarchyBelow: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_HierarchyBelow = $._encodeBoolean;
+export const _encode_HierarchyBelow: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -185,7 +185,7 @@ export class ABRT_apdu {
    * @static
    */
 
-  public static _enum_for_abort_diagnostic = _enum_for_ABRT_diagnostic;
+  public static _enum_for_abort_diagnostic: typeof _enum_for_ABRT_diagnostic = _enum_for_ABRT_diagnostic;
 }
 
 /**

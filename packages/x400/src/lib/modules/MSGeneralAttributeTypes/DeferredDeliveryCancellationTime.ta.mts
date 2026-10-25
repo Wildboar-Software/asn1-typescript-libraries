@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DeferredDeliveryCancellationTime = UTCTime; // UTCTime
 
 
-export const _decode_DeferredDeliveryCancellationTime = $._decodeUTCTime;
+export const _decode_DeferredDeliveryCancellationTime: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
-export const _encode_DeferredDeliveryCancellationTime = $._encodeUTCTime;
+export const _encode_DeferredDeliveryCancellationTime: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

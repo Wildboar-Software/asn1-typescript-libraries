@@ -98,8 +98,8 @@ const AuthMethod_always: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const always: number = AuthMethod_always; /* SHORT_NAMED_BIT */
-export const _decode_AuthMethod = $._decodeBitString;
-export const _encode_AuthMethod = $._encodeBitString;
+export const _decode_AuthMethod: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AuthMethod: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

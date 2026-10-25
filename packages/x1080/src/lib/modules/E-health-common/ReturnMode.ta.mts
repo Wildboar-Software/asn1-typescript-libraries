@@ -51,7 +51,7 @@ export type ReturnMode = _enum_for_ReturnMode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ReturnMode_continuous = _enum_for_ReturnMode.continuous; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReturnMode_continuous: _enum_for_ReturnMode.continuous = _enum_for_ReturnMode.continuous; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const ReturnMode_continuous = _enum_for_ReturnMode.continuous; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const continuous = ReturnMode_continuous; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const continuous: _enum_for_ReturnMode.continuous = ReturnMode_continuous; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const continuous = ReturnMode_continuous; /* SHORT_NAMED_ENUMERATED_VALUE
  * @constant
  * @type {number}
  */
-export const ReturnMode_batch = _enum_for_ReturnMode.batch; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReturnMode_batch: _enum_for_ReturnMode.batch = _enum_for_ReturnMode.batch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,17 +90,17 @@ export const ReturnMode_batch = _enum_for_ReturnMode.batch; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const batch = ReturnMode_batch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const batch: _enum_for_ReturnMode.batch = ReturnMode_batch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ReturnMode = $._decodeEnumerated;
+export const _decode_ReturnMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_ReturnMode = $._encodeEnumerated;
+export const _encode_ReturnMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

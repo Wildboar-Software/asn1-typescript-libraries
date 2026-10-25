@@ -113,7 +113,7 @@ class MCMUpdateReqArg {
          * @static
          */
 
-    public static _enum_for_specificMessageType = _enum_for_MessageType;
+    public static _enum_for_specificMessageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 }
 
 /**

@@ -58,7 +58,7 @@ export type SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
  *
  * @enum {number}
  */
-export const SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
+export const SystemTiming_sourceType: typeof _enum_for_SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
 
 
 /**
@@ -66,7 +66,7 @@ export const SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_internalTimingSource =
+export const SystemTiming_sourceType_internalTimingSource: _enum_for_SystemTiming_sourceType.internalTimingSource =
     SystemTiming_sourceType.internalTimingSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const SystemTiming_sourceType_internalTimingSource =
  * @constant
  * @type {number}
  */
-export const internalTimingSource =
+export const internalTimingSource: _enum_for_SystemTiming_sourceType.internalTimingSource =
     SystemTiming_sourceType.internalTimingSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const internalTimingSource =
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_remoteTimingSource =
+export const SystemTiming_sourceType_remoteTimingSource: _enum_for_SystemTiming_sourceType.remoteTimingSource =
     SystemTiming_sourceType.remoteTimingSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const SystemTiming_sourceType_remoteTimingSource =
  * @constant
  * @type {number}
  */
-export const remoteTimingSource =
+export const remoteTimingSource: _enum_for_SystemTiming_sourceType.remoteTimingSource =
     SystemTiming_sourceType.remoteTimingSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const remoteTimingSource =
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_slavedTimingTerminationSignal =
+export const SystemTiming_sourceType_slavedTimingTerminationSignal: _enum_for_SystemTiming_sourceType.slavedTimingTerminationSignal =
     SystemTiming_sourceType.slavedTimingTerminationSignal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const SystemTiming_sourceType_slavedTimingTerminationSignal =
  * @constant
  * @type {number}
  */
-export const slavedTimingTerminationSignal =
+export const slavedTimingTerminationSignal: _enum_for_SystemTiming_sourceType.slavedTimingTerminationSignal =
     SystemTiming_sourceType.slavedTimingTerminationSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

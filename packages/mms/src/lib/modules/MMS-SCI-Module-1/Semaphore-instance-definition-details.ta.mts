@@ -135,7 +135,7 @@ class Semaphore_instance_definition_details {
          * @static
          */
 
-    public static _enum_for_class_ = _enum_for_Semaphore_instance_definition_details_class;
+    public static _enum_for_class_: typeof _enum_for_Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance_definition_details_class;
 }
 
 /**

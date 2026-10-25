@@ -38,7 +38,7 @@ export type RTORQapdu_dialogueMode = INTEGER;
  * @constant
  * @type {number}
  */
-export const RTORQapdu_dialogueMode_monologue = 0 satisfies RTORQapdu_dialogueMode; /* LONG_NAMED_INTEGER_VALUE */
+export const RTORQapdu_dialogueMode_monologue: 0 = 0 satisfies RTORQapdu_dialogueMode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const RTORQapdu_dialogueMode_monologue = 0 satisfies RTORQapdu_dialogueMo
  * @constant
  * @type {number}
  */
-export const monologue = RTORQapdu_dialogueMode_monologue; /* SHORT_NAMED_INTEGER_VALUE */
+export const monologue: 0 = RTORQapdu_dialogueMode_monologue; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const monologue = RTORQapdu_dialogueMode_monologue; /* SHORT_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const RTORQapdu_dialogueMode_twa = 1 satisfies RTORQapdu_dialogueMode; /* LONG_NAMED_INTEGER_VALUE */
+export const RTORQapdu_dialogueMode_twa: 1 = 1 satisfies RTORQapdu_dialogueMode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,17 +66,17 @@ export const RTORQapdu_dialogueMode_twa = 1 satisfies RTORQapdu_dialogueMode; /*
  * @constant
  * @type {number}
  */
-export const twa = RTORQapdu_dialogueMode_twa; /* SHORT_NAMED_INTEGER_VALUE */
+export const twa: 1 = RTORQapdu_dialogueMode_twa; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_RTORQapdu_dialogueMode = $._decodeInteger;
+export const _decode_RTORQapdu_dialogueMode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RTORQapdu_dialogueMode = $._encodeInteger;
+export const _encode_RTORQapdu_dialogueMode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

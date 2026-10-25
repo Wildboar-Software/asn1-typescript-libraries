@@ -85,7 +85,7 @@ class PositionMethodFailure_Param {
          * @static
          */
 
-    public static _enum_for_positionMethodFailure_Diagnostic = _enum_for_PositionMethodFailure_Diagnostic;
+    public static _enum_for_positionMethodFailure_Diagnostic: typeof _enum_for_PositionMethodFailure_Diagnostic = _enum_for_PositionMethodFailure_Diagnostic;
 }
 
 /**

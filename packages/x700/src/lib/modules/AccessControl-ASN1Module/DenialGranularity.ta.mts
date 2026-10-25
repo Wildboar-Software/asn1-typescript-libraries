@@ -115,7 +115,7 @@ export type DenialGranularity = _enum_for_DenialGranularity;
  *
  * @enum {number}
  */
-export const DenialGranularity = _enum_for_DenialGranularity;
+export const DenialGranularity: typeof _enum_for_DenialGranularity = _enum_for_DenialGranularity;
 
 /**
  * @summary DenialGranularity_request
@@ -129,7 +129,7 @@ export const DenialGranularity = _enum_for_DenialGranularity;
  * @constant
  * @type {number}
  */
-export const DenialGranularity_request =
+export const DenialGranularity_request: _enum_for_DenialGranularity.request =
     DenialGranularity.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const DenialGranularity_request =
  * @constant
  * @type {number}
  */
-export const request =
+export const request: _enum_for_DenialGranularity.request =
     DenialGranularity.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -156,7 +156,7 @@ export const request =
  * @constant
  * @type {number}
  */
-export const DenialGranularity_object =
+export const DenialGranularity_object: _enum_for_DenialGranularity.object =
     DenialGranularity.object; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -169,7 +169,7 @@ export const DenialGranularity_object =
  * @constant
  * @type {number}
  */
-export const object =
+export const object: _enum_for_DenialGranularity.object =
     DenialGranularity.object; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -182,7 +182,7 @@ export const object =
  * @constant
  * @type {number}
  */
-export const DenialGranularity_attribute =
+export const DenialGranularity_attribute: _enum_for_DenialGranularity.attribute =
     DenialGranularity.attribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -194,7 +194,7 @@ export const DenialGranularity_attribute =
  * @constant
  * @type {number}
  */
-export const attribute =
+export const attribute: _enum_for_DenialGranularity.attribute =
     DenialGranularity.attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

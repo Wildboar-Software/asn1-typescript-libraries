@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ClockEventCounter = INTEGER;
 
 
-export const _decode_ClockEventCounter = $._decodeInteger;
+export const _decode_ClockEventCounter: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ClockEventCounter = $._encodeInteger;
+export const _encode_ClockEventCounter: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

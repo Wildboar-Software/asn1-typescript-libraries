@@ -132,7 +132,7 @@ class SMSReport {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_SMSMessageType;
+    public static _enum_for_messageType: typeof _enum_for_SMSMessageType = _enum_for_SMSMessageType;
 }
 
 /**

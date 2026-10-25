@@ -58,7 +58,7 @@ type MMTelRecord_role_of_Node = _enum_for_MMTelRecord_role_of_Node;
  * @enum {number}
  */
 export
-const MMTelRecord_role_of_Node = _enum_for_MMTelRecord_role_of_Node;
+const MMTelRecord_role_of_Node: typeof _enum_for_MMTelRecord_role_of_Node = _enum_for_MMTelRecord_role_of_Node;
 
 /**
  * @summary MMTelRecord_role_of_Node_originating
@@ -66,7 +66,7 @@ const MMTelRecord_role_of_Node = _enum_for_MMTelRecord_role_of_Node;
  * @type {number}
  */
 export
-const MMTelRecord_role_of_Node_originating = MMTelRecord_role_of_Node.originating; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_role_of_Node_originating: _enum_for_MMTelRecord_role_of_Node.originating = MMTelRecord_role_of_Node.originating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating
@@ -74,7 +74,7 @@ const MMTelRecord_role_of_Node_originating = MMTelRecord_role_of_Node.originatin
  * @type {number}
  */
 export
-const originating = MMTelRecord_role_of_Node.originating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating: _enum_for_MMTelRecord_role_of_Node.originating = MMTelRecord_role_of_Node.originating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_role_of_Node_terminating
@@ -82,7 +82,7 @@ const originating = MMTelRecord_role_of_Node.originating; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const MMTelRecord_role_of_Node_terminating = MMTelRecord_role_of_Node.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_role_of_Node_terminating: _enum_for_MMTelRecord_role_of_Node.terminating = MMTelRecord_role_of_Node.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating
@@ -90,7 +90,7 @@ const MMTelRecord_role_of_Node_terminating = MMTelRecord_role_of_Node.terminatin
  * @type {number}
  */
 export
-const terminating = MMTelRecord_role_of_Node.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating: _enum_for_MMTelRecord_role_of_Node.terminating = MMTelRecord_role_of_Node.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MMTelRecord_role_of_Node: $.ASN1Decoder<MMTelRecord_role_of_Node> = $._decodeEnumerated;

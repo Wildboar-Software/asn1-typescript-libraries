@@ -28,12 +28,12 @@ export type Int = INTEGER;
 
 
 
-export const _decode_Int = $._decodeInteger;
+export const _decode_Int: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Int = $._encodeInteger;
+export const _encode_Int: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

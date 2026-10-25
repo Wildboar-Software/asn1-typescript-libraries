@@ -42,7 +42,7 @@ export type BridgeRollArg_Item_bridgeRollOperation =
  * @constant
  * @type {number}
  */
-export const BridgeRollArg_Item_bridgeRollOperation_bridge = _enum_for_BridgeRollArg_Item_bridgeRollOperation.bridge; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BridgeRollArg_Item_bridgeRollOperation_bridge: _enum_for_BridgeRollArg_Item_bridgeRollOperation.bridge = _enum_for_BridgeRollArg_Item_bridgeRollOperation.bridge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -50,7 +50,7 @@ export const BridgeRollArg_Item_bridgeRollOperation_bridge = _enum_for_BridgeRol
  * @constant
  * @type {number}
  */
-export const bridge = BridgeRollArg_Item_bridgeRollOperation_bridge; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bridge: _enum_for_BridgeRollArg_Item_bridgeRollOperation.bridge = BridgeRollArg_Item_bridgeRollOperation_bridge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const bridge = BridgeRollArg_Item_bridgeRollOperation_bridge; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const BridgeRollArg_Item_bridgeRollOperation_roll = _enum_for_BridgeRollArg_Item_bridgeRollOperation.roll; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BridgeRollArg_Item_bridgeRollOperation_roll: _enum_for_BridgeRollArg_Item_bridgeRollOperation.roll = _enum_for_BridgeRollArg_Item_bridgeRollOperation.roll; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const BridgeRollArg_Item_bridgeRollOperation_roll = _enum_for_BridgeRollA
  * @constant
  * @type {number}
  */
-export const roll = BridgeRollArg_Item_bridgeRollOperation_roll; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const roll: _enum_for_BridgeRollArg_Item_bridgeRollOperation.roll = BridgeRollArg_Item_bridgeRollOperation_roll; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const roll = BridgeRollArg_Item_bridgeRollOperation_roll; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const BridgeRollArg_Item_bridgeRollOperation_releaseBridge = _enum_for_BridgeRollArg_Item_bridgeRollOperation.releaseBridge; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BridgeRollArg_Item_bridgeRollOperation_releaseBridge: _enum_for_BridgeRollArg_Item_bridgeRollOperation.releaseBridge = _enum_for_BridgeRollArg_Item_bridgeRollOperation.releaseBridge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const BridgeRollArg_Item_bridgeRollOperation_releaseBridge = _enum_for_Br
  * @constant
  * @type {number}
  */
-export const releaseBridge = BridgeRollArg_Item_bridgeRollOperation_releaseBridge; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const releaseBridge: _enum_for_BridgeRollArg_Item_bridgeRollOperation.releaseBridge = BridgeRollArg_Item_bridgeRollOperation_releaseBridge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_BridgeRollArg_Item_bridgeRollOperation: $.ASN1Decoder<BridgeRollArg_Item_bridgeRollOperation> | null = null;

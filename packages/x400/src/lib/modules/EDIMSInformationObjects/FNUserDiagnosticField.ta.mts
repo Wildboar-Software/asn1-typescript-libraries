@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FNUserDiagnosticField = INTEGER;
 
 
-export const _decode_FNUserDiagnosticField = $._decodeInteger;
+export const _decode_FNUserDiagnosticField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_FNUserDiagnosticField = $._encodeInteger;
+export const _encode_FNUserDiagnosticField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -31,4 +31,4 @@ export const _decode_DateAndTime = (el: _Element): DateAndTime => {
     }
     return value;
 };
-export const _encode_DateAndTime = $._encodeOctetString;
+export const _encode_DateAndTime: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

@@ -36,7 +36,7 @@ export const _decode_RequestID = (el: _Element): RequestID => {
     }
     return value;
 };
-export const _encode_RequestID = $._encodeInteger;
+export const _encode_RequestID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -123,7 +123,7 @@ export class SetPowerMode_RequestParams {
    * @static
    */
 
-  public static _enum_for_powerMode = _enum_for_BioAPI_POWER_MODE;
+  public static _enum_for_powerMode: typeof _enum_for_BioAPI_POWER_MODE = _enum_for_BioAPI_POWER_MODE;
 }
 
 

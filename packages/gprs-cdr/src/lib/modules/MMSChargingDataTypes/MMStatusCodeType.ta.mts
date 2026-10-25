@@ -94,7 +94,7 @@ type MMStatusCodeType = _enum_for_MMStatusCodeType;
  * @enum {number}
  */
 export
-const MMStatusCodeType = _enum_for_MMStatusCodeType;
+const MMStatusCodeType: typeof _enum_for_MMStatusCodeType = _enum_for_MMStatusCodeType;
 
 /**
  * @summary MMStatusCodeType_retrieved
@@ -102,7 +102,7 @@ const MMStatusCodeType = _enum_for_MMStatusCodeType;
  * @type {number}
  */
 export
-const MMStatusCodeType_retrieved = MMStatusCodeType.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_retrieved: _enum_for_MMStatusCodeType.retrieved = MMStatusCodeType.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieved
@@ -110,7 +110,7 @@ const MMStatusCodeType_retrieved = MMStatusCodeType.retrieved; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const retrieved = MMStatusCodeType.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieved: _enum_for_MMStatusCodeType.retrieved = MMStatusCodeType.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_forwarded
@@ -118,7 +118,7 @@ const retrieved = MMStatusCodeType.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatusCodeType_forwarded = MMStatusCodeType.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_forwarded: _enum_for_MMStatusCodeType.forwarded = MMStatusCodeType.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -126,7 +126,7 @@ const MMStatusCodeType_forwarded = MMStatusCodeType.forwarded; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const forwarded = MMStatusCodeType.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded: _enum_for_MMStatusCodeType.forwarded = MMStatusCodeType.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_expired
@@ -134,7 +134,7 @@ const forwarded = MMStatusCodeType.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatusCodeType_expired = MMStatusCodeType.expired; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_expired: _enum_for_MMStatusCodeType.expired = MMStatusCodeType.expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expired
@@ -142,7 +142,7 @@ const MMStatusCodeType_expired = MMStatusCodeType.expired; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const expired = MMStatusCodeType.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const expired: _enum_for_MMStatusCodeType.expired = MMStatusCodeType.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_rejected
@@ -150,7 +150,7 @@ const expired = MMStatusCodeType.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatusCodeType_rejected = MMStatusCodeType.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_rejected: _enum_for_MMStatusCodeType.rejected = MMStatusCodeType.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejected
@@ -158,7 +158,7 @@ const MMStatusCodeType_rejected = MMStatusCodeType.rejected; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const rejected = MMStatusCodeType.rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejected: _enum_for_MMStatusCodeType.rejected = MMStatusCodeType.rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_deferred
@@ -166,7 +166,7 @@ const rejected = MMStatusCodeType.rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatusCodeType_deferred = MMStatusCodeType.deferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_deferred: _enum_for_MMStatusCodeType.deferred = MMStatusCodeType.deferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferred
@@ -174,7 +174,7 @@ const MMStatusCodeType_deferred = MMStatusCodeType.deferred; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const deferred = MMStatusCodeType.deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferred: _enum_for_MMStatusCodeType.deferred = MMStatusCodeType.deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_unrecognised
@@ -182,7 +182,7 @@ const deferred = MMStatusCodeType.deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatusCodeType_unrecognised = MMStatusCodeType.unrecognised; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_unrecognised: _enum_for_MMStatusCodeType.unrecognised = MMStatusCodeType.unrecognised; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognised
@@ -190,7 +190,7 @@ const MMStatusCodeType_unrecognised = MMStatusCodeType.unrecognised; /* LONG_NAM
  * @type {number}
  */
 export
-const unrecognised = MMStatusCodeType.unrecognised; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrecognised: _enum_for_MMStatusCodeType.unrecognised = MMStatusCodeType.unrecognised; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_read
@@ -198,7 +198,7 @@ const unrecognised = MMStatusCodeType.unrecognised; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MMStatusCodeType_read = MMStatusCodeType.read; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_read: _enum_for_MMStatusCodeType.read = MMStatusCodeType.read; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read
@@ -206,7 +206,7 @@ const MMStatusCodeType_read = MMStatusCodeType.read; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const read = MMStatusCodeType.read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read: _enum_for_MMStatusCodeType.read = MMStatusCodeType.read; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusCodeType_deletedWithoutBeingRead
@@ -214,7 +214,7 @@ const read = MMStatusCodeType.read; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatusCodeType_deletedWithoutBeingRead = MMStatusCodeType.deletedWithoutBeingRead; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusCodeType_deletedWithoutBeingRead: _enum_for_MMStatusCodeType.deletedWithoutBeingRead = MMStatusCodeType.deletedWithoutBeingRead; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deletedWithoutBeingRead
@@ -222,7 +222,7 @@ const MMStatusCodeType_deletedWithoutBeingRead = MMStatusCodeType.deletedWithout
  * @type {number}
  */
 export
-const deletedWithoutBeingRead = MMStatusCodeType.deletedWithoutBeingRead; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deletedWithoutBeingRead: _enum_for_MMStatusCodeType.deletedWithoutBeingRead = MMStatusCodeType.deletedWithoutBeingRead; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MMStatusCodeType: $.ASN1Decoder<MMStatusCodeType> = $._decodeEnumerated;

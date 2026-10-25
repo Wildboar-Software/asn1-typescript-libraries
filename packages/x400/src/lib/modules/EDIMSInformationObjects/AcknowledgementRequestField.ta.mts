@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AcknowledgementRequestField = BOOLEAN; // BooleanType
 
 
-export const _decode_AcknowledgementRequestField = $._decodeBoolean;
+export const _decode_AcknowledgementRequestField: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_AcknowledgementRequestField = $._encodeBoolean;
+export const _encode_AcknowledgementRequestField: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

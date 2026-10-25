@@ -27,7 +27,7 @@ export function _decode_CloseOutNarr (el: _Element): CloseOutNarr {
     }
     return value;
 }
-export const _encode_CloseOutNarr = $._encodeGraphicString;
+export const _encode_CloseOutNarr: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

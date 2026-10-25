@@ -78,7 +78,7 @@ type ConnectionView = _enum_for_ConnectionView;
  * @enum {number}
  */
 export
-const ConnectionView = _enum_for_ConnectionView;
+const ConnectionView: typeof _enum_for_ConnectionView = _enum_for_ConnectionView;
 
 /**
  * @summary ConnectionView_fixed
@@ -86,7 +86,7 @@ const ConnectionView = _enum_for_ConnectionView;
  * @type {number}
  */
 export
-const ConnectionView_fixed = ConnectionView.fixed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionView_fixed: _enum_for_ConnectionView.fixed = ConnectionView.fixed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fixed
@@ -94,7 +94,7 @@ const ConnectionView_fixed = ConnectionView.fixed; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const fixed = ConnectionView.fixed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fixed: _enum_for_ConnectionView.fixed = ConnectionView.fixed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionView_local
@@ -102,7 +102,7 @@ const fixed = ConnectionView.fixed; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ConnectionView_local = ConnectionView.local; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionView_local: _enum_for_ConnectionView.local = ConnectionView.local; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary local
@@ -110,7 +110,7 @@ const ConnectionView_local = ConnectionView.local; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const local = ConnectionView.local; /* SHORT_NAMED_ENUMERATED_VALUE */
+const local: _enum_for_ConnectionView.local = ConnectionView.local; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ConnectionView: $.ASN1Decoder<ConnectionView> | null = null;
 

@@ -125,13 +125,13 @@ class ServiceType {
          * @static
          */
 
-    public static _enum_for_gmlc_Restriction = _enum_for_GMLC_Restriction;        /**
+    public static _enum_for_gmlc_Restriction: typeof _enum_for_GMLC_Restriction = _enum_for_GMLC_Restriction;        /**
          * @summary The enum used as the type of the component `notificationToMSUser`
          * @public
          * @static
          */
 
-    public static _enum_for_notificationToMSUser = _enum_for_NotificationToMSUser;
+    public static _enum_for_notificationToMSUser: typeof _enum_for_NotificationToMSUser = _enum_for_NotificationToMSUser;
 }
 
 /**

@@ -162,7 +162,7 @@ export class CommonFields {
      * @static
      */
 
-    public static _enum_for_edin_initiator = _enum_for_EDINInitiatorField;
+    public static _enum_for_edin_initiator: typeof _enum_for_EDINInitiatorField = _enum_for_EDINInitiatorField;
 }
 
 /**

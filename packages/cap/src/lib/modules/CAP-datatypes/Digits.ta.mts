@@ -39,5 +39,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type Digits = OCTET_STRING;
-export const _decode_Digits = $._decodeOctetString;
-export const _encode_Digits = $._encodeOctetString;
+export const _decode_Digits: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_Digits: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

@@ -96,7 +96,7 @@ type LocalConnectionState = _enum_for_LocalConnectionState;
  * @enum {number}
  */
 export
-const LocalConnectionState = _enum_for_LocalConnectionState;
+const LocalConnectionState: typeof _enum_for_LocalConnectionState = _enum_for_LocalConnectionState;
 
 /**
  * @summary null
@@ -104,49 +104,49 @@ const LocalConnectionState = _enum_for_LocalConnectionState;
  *
  * No call–device relationship (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_null = LocalConnectionState.null_;
+export const LocalConnectionState_null: _enum_for_LocalConnectionState.null_ = LocalConnectionState.null_;
 /**
  * @summary initiated
  * @description
  *
  * Requesting a service or dialling (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_initiated = LocalConnectionState.initiated;
+export const LocalConnectionState_initiated: _enum_for_LocalConnectionState.initiated = LocalConnectionState.initiated;
 /**
  * @summary alerting
  * @description
  *
  * Attempting to connect the call to the device (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_alerting = LocalConnectionState.alerting;
+export const LocalConnectionState_alerting: _enum_for_LocalConnectionState.alerting = LocalConnectionState.alerting;
 /**
  * @summary connected
  * @description
  *
  * Actively participating in the call (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_connected = LocalConnectionState.connected;
+export const LocalConnectionState_connected: _enum_for_LocalConnectionState.connected = LocalConnectionState.connected;
 /**
  * @summary hold
  * @description
  *
  * Inactive (suspended) participation (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_hold = LocalConnectionState.hold;
+export const LocalConnectionState_hold: _enum_for_LocalConnectionState.hold = LocalConnectionState.hold;
 /**
  * @summary queued
  * @description
  *
  * Progression suspended awaiting action (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_queued = LocalConnectionState.queued;
+export const LocalConnectionState_queued: _enum_for_LocalConnectionState.queued = LocalConnectionState.queued;
 /**
  * @summary fail
  * @description
  *
  * Call progression aborted (ECMA-269 §6.1.3).
  */
-export const LocalConnectionState_fail = LocalConnectionState.fail;
+export const LocalConnectionState_fail: _enum_for_LocalConnectionState.fail = LocalConnectionState.fail;
 
 export function _decode_LocalConnectionState (el: _Element): LocalConnectionState {
     return $._decode_implicit<LocalConnectionState>(() => $._decodeEnumerated)(el);

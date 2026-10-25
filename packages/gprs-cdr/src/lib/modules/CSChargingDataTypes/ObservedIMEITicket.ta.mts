@@ -308,7 +308,7 @@ class ObservedIMEITicket {
          * @static
          */
 
-    public static _enum_for_imeiStatus = _enum_for_IMEIStatus;
+    public static _enum_for_imeiStatus: typeof _enum_for_IMEIStatus = _enum_for_IMEIStatus;
 }
 
 /**

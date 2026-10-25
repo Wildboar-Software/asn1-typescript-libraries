@@ -103,7 +103,7 @@ class NegTokenTarg {
          * @static
          */
 
-    public static _enum_for_negResult = _enum_for_NegTokenTarg_negResult;
+    public static _enum_for_negResult: typeof _enum_for_NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
 }
 
 /**

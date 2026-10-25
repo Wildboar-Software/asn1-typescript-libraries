@@ -40,7 +40,7 @@ export type LoopbackFailInfo = INTEGER;
  * @constant
  * @type {number}
  */
-export const LoopbackFailInfo_errorRatioThresholdExceeded = 0 satisfies LoopbackFailInfo; /* LONG_NAMED_INTEGER_VALUE */
+export const LoopbackFailInfo_errorRatioThresholdExceeded: 0 = 0 satisfies LoopbackFailInfo; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoopbackFailInfo_errorRatioThresholdExceeded
@@ -50,7 +50,7 @@ export const LoopbackFailInfo_errorRatioThresholdExceeded = 0 satisfies Loopback
  * @constant
  * @type {number}
  */
-export const errorRatioThresholdExceeded = LoopbackFailInfo_errorRatioThresholdExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const errorRatioThresholdExceeded: 0 = LoopbackFailInfo_errorRatioThresholdExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoopbackFailInfo_loopbackTimeoutExceeded
@@ -60,7 +60,7 @@ export const errorRatioThresholdExceeded = LoopbackFailInfo_errorRatioThresholdE
  * @constant
  * @type {number}
  */
-export const LoopbackFailInfo_loopbackTimeoutExceeded = 1 satisfies LoopbackFailInfo; /* LONG_NAMED_INTEGER_VALUE */
+export const LoopbackFailInfo_loopbackTimeoutExceeded: 1 = 1 satisfies LoopbackFailInfo; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LoopbackFailInfo_loopbackTimeoutExceeded
@@ -70,13 +70,13 @@ export const LoopbackFailInfo_loopbackTimeoutExceeded = 1 satisfies LoopbackFail
  * @constant
  * @type {number}
  */
-export const loopbackTimeoutExceeded = LoopbackFailInfo_loopbackTimeoutExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const loopbackTimeoutExceeded: 1 = LoopbackFailInfo_loopbackTimeoutExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_LoopbackFailInfo = $._decodeInteger;
+export const _decode_LoopbackFailInfo: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_LoopbackFailInfo = $._encodeInteger;
+export const _encode_LoopbackFailInfo: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

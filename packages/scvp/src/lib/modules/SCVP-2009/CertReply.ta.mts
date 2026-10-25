@@ -217,7 +217,7 @@ export class CertReply {
    * @static
    */
 
-  public static _enum_for_replyStatus = _enum_for_ReplyStatus;
+  public static _enum_for_replyStatus: typeof _enum_for_ReplyStatus = _enum_for_ReplyStatus;
 }
 
 /**

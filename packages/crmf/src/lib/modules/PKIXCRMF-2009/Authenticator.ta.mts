@@ -23,12 +23,12 @@ export type Authenticator = UTF8String; // UTF8String
 
 
 
-export const _decode_Authenticator = $._decodeUTF8String;
+export const _decode_Authenticator: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_Authenticator = $._encodeUTF8String;
+export const _encode_Authenticator: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

@@ -128,7 +128,7 @@ class EmergencyGroupState {
          * @static
          */
 
-    public static _enum_for_clientEmergencyState = _enum_for_EmergencyGroupState_clientEmergencyState;        /**
+    public static _enum_for_clientEmergencyState: typeof _enum_for_EmergencyGroupState_clientEmergencyState = _enum_for_EmergencyGroupState_clientEmergencyState;        /**
          * @summary The enum used as the type of the component `groupEmergencyState`
          * @description
          * 
@@ -140,7 +140,7 @@ class EmergencyGroupState {
          * @static
          */
 
-    public static _enum_for_groupEmergencyState = _enum_for_EmergencyGroupState_groupEmergencyState;
+    public static _enum_for_groupEmergencyState: typeof _enum_for_EmergencyGroupState_groupEmergencyState = _enum_for_EmergencyGroupState_groupEmergencyState;
 }
 
 /**

@@ -108,7 +108,7 @@ class Incomplete_CDR_Indication {
          * @static
          */
 
-    public static _enum_for_aCRInterimLost = _enum_for_ACRInterimLost;
+    public static _enum_for_aCRInterimLost: typeof _enum_for_ACRInterimLost = _enum_for_ACRInterimLost;
 }
 
 /**

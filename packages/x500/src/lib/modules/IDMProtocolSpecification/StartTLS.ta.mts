@@ -20,10 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type StartTLS = NULL; // NullType
 
 
-export const _decode_StartTLS = $._decodeNull;
+export const _decode_StartTLS: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_StartTLS = $._encodeNull;
+export const _encode_StartTLS: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

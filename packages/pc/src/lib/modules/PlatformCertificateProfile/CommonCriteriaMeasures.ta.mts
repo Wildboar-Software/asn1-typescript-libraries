@@ -205,13 +205,13 @@ class CommonCriteriaMeasures {
      * @public
      * @static
      */
-    public static _enum_for_assurancelevel = _enum_for_EvaluationAssuranceLevel;
+    public static _enum_for_assurancelevel: typeof _enum_for_EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
     /**
      * @summary The enum used as the type of the component `strengthOfFunction`
      * @public
      * @static
      */
-    public static _enum_for_strengthOfFunction = _enum_for_StrengthOfFunction;
+    public static _enum_for_strengthOfFunction: typeof _enum_for_StrengthOfFunction = _enum_for_StrengthOfFunction;
 }
 
 /**

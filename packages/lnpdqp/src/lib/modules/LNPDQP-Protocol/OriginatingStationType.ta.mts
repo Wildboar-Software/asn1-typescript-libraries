@@ -41,7 +41,7 @@ export const _decode_OriginatingStationType = (el: _Element): OriginatingStation
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatingStationType, encoded as an ASN.1 Element.
  */
-export const _encode_OriginatingStationType = $._encodeOctetString;
+export const _encode_OriginatingStationType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

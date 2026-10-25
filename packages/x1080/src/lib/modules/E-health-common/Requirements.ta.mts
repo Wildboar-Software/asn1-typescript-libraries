@@ -55,7 +55,7 @@ export type Requirements = _enum_for_Requirements | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const Requirements_none = _enum_for_Requirements.none; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_none: _enum_for_Requirements.none = _enum_for_Requirements.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const Requirements_none = _enum_for_Requirements.none; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const none = Requirements_none; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const none: _enum_for_Requirements.none = Requirements_none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const none = Requirements_none; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Requirements_with_2_way_voice = _enum_for_Requirements.with_2_way_voice; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_with_2_way_voice: _enum_for_Requirements.with_2_way_voice = _enum_for_Requirements.with_2_way_voice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const Requirements_with_2_way_voice = _enum_for_Requirements.with_2_way_v
  * @constant
  * @type {number}
  */
-export const with_2_way_voice = Requirements_with_2_way_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const with_2_way_voice: _enum_for_Requirements.with_2_way_voice = Requirements_with_2_way_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +106,7 @@ export const with_2_way_voice = Requirements_with_2_way_voice; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const Requirements_with_reverse_video_and_2_way_voice = _enum_for_Requirements.with_reverse_video_and_2_way_voice; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_with_reverse_video_and_2_way_voice: _enum_for_Requirements.with_reverse_video_and_2_way_voice = _enum_for_Requirements.with_reverse_video_and_2_way_voice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const Requirements_with_reverse_video_and_2_way_voice = _enum_for_Require
  * @constant
  * @type {number}
  */
-export const with_reverse_video_and_2_way_voice = Requirements_with_reverse_video_and_2_way_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const with_reverse_video_and_2_way_voice: _enum_for_Requirements.with_reverse_video_and_2_way_voice = Requirements_with_reverse_video_and_2_way_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const with_reverse_video_and_2_way_voice = Requirements_with_reverse_vide
  * @constant
  * @type {number}
  */
-export const Requirements_with_2_way_video_and_voice = _enum_for_Requirements.with_2_way_video_and_voice; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Requirements_with_2_way_video_and_voice: _enum_for_Requirements.with_2_way_video_and_voice = _enum_for_Requirements.with_2_way_video_and_voice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -145,17 +145,17 @@ export const Requirements_with_2_way_video_and_voice = _enum_for_Requirements.wi
  * @constant
  * @type {number}
  */
-export const with_2_way_video_and_voice = Requirements_with_2_way_video_and_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const with_2_way_video_and_voice: _enum_for_Requirements.with_2_way_video_and_voice = Requirements_with_2_way_video_and_voice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_Requirements = $._decodeEnumerated;
+export const _decode_Requirements: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_Requirements = $._encodeEnumerated;
+export const _encode_Requirements: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

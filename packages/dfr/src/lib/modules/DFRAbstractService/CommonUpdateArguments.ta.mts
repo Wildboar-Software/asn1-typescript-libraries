@@ -162,7 +162,7 @@ class CommonUpdateArguments {
          * @static
          */
 
-    public static _enum_for_object_class = _enum_for_DfrObjectClass;
+    public static _enum_for_object_class: typeof _enum_for_DfrObjectClass = _enum_for_DfrObjectClass;
 }
 
 /**

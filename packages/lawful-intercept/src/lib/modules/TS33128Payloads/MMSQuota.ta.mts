@@ -87,7 +87,7 @@ class MMSQuota {
          * @static
          */
 
-    public static _enum_for_quotaUnit = _enum_for_MMSQuotaUnit;
+    public static _enum_for_quotaUnit: typeof _enum_for_MMSQuotaUnit = _enum_for_MMSQuotaUnit;
 }
 
 /**

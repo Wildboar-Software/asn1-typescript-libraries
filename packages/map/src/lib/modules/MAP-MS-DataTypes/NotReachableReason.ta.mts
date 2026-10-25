@@ -78,7 +78,7 @@ type NotReachableReason = _enum_for_NotReachableReason;
  * @enum {number}
  */
 export
-const NotReachableReason = _enum_for_NotReachableReason;
+const NotReachableReason: typeof _enum_for_NotReachableReason = _enum_for_NotReachableReason;
 
 /**
  * @summary NotReachableReason_msPurged
@@ -90,7 +90,7 @@ const NotReachableReason = _enum_for_NotReachableReason;
  * @type {number}
  */
 export
-const NotReachableReason_msPurged = NotReachableReason.msPurged; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_msPurged: _enum_for_NotReachableReason.msPurged = NotReachableReason.msPurged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msPurged
@@ -102,7 +102,7 @@ const NotReachableReason_msPurged = NotReachableReason.msPurged; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const msPurged = NotReachableReason.msPurged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msPurged: _enum_for_NotReachableReason.msPurged = NotReachableReason.msPurged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotReachableReason_imsiDetached
@@ -114,7 +114,7 @@ const msPurged = NotReachableReason.msPurged; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NotReachableReason_imsiDetached = NotReachableReason.imsiDetached; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_imsiDetached: _enum_for_NotReachableReason.imsiDetached = NotReachableReason.imsiDetached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiDetached
@@ -126,7 +126,7 @@ const NotReachableReason_imsiDetached = NotReachableReason.imsiDetached; /* LONG
  * @type {number}
  */
 export
-const imsiDetached = NotReachableReason.imsiDetached; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiDetached: _enum_for_NotReachableReason.imsiDetached = NotReachableReason.imsiDetached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotReachableReason_restrictedArea
@@ -138,7 +138,7 @@ const imsiDetached = NotReachableReason.imsiDetached; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const NotReachableReason_restrictedArea = NotReachableReason.restrictedArea; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_restrictedArea: _enum_for_NotReachableReason.restrictedArea = NotReachableReason.restrictedArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedArea
@@ -150,7 +150,7 @@ const NotReachableReason_restrictedArea = NotReachableReason.restrictedArea; /* 
  * @type {number}
  */
 export
-const restrictedArea = NotReachableReason.restrictedArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedArea: _enum_for_NotReachableReason.restrictedArea = NotReachableReason.restrictedArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NotReachableReason_notRegistered
@@ -162,7 +162,7 @@ const restrictedArea = NotReachableReason.restrictedArea; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const NotReachableReason_notRegistered = NotReachableReason.notRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const NotReachableReason_notRegistered: _enum_for_NotReachableReason.notRegistered = NotReachableReason.notRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notRegistered
@@ -174,7 +174,7 @@ const NotReachableReason_notRegistered = NotReachableReason.notRegistered; /* LO
  * @type {number}
  */
 export
-const notRegistered = NotReachableReason.notRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notRegistered: _enum_for_NotReachableReason.notRegistered = NotReachableReason.notRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NotReachableReason
@@ -182,7 +182,7 @@ const notRegistered = NotReachableReason.notRegistered; /* SHORT_NAMED_ENUMERATE
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NotReachableReason = $._decodeEnumerated;
+export const _decode_NotReachableReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NotReachableReason into an ASN.1 Element.
@@ -191,7 +191,7 @@ export const _decode_NotReachableReason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NotReachableReason, encoded as an ASN.1 Element.
  */
-export const _encode_NotReachableReason = $._encodeEnumerated;
+export const _encode_NotReachableReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

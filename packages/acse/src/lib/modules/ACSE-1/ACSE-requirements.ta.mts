@@ -102,10 +102,10 @@ export const ACSE_requirements_nested_association: number = 3; /* LONG_NAMED_BIT
 export const nested_association: number = ACSE_requirements_nested_association; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ACSE_requirements = $._decodeBitString;
+export const _decode_ACSE_requirements: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ACSE_requirements = $._encodeBitString;
+export const _encode_ACSE_requirements: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

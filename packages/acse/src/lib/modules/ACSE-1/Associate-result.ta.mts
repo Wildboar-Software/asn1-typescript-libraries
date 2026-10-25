@@ -36,48 +36,48 @@ export type Associate_result = INTEGER;
  * @constant
  * @type {number}
  */
-export const Associate_result_accepted = 0 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_result_accepted: 0 = 0 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_accepted
  * @constant
  * @type {number}
  */
-export const accepted = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE */
+export const accepted: 0 = Associate_result_accepted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_rejected_permanent
  * @constant
  * @type {number}
  */
-export const Associate_result_rejected_permanent = 1 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_result_rejected_permanent: 1 = 1 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_rejected_permanent
  * @constant
  * @type {number}
  */
-export const rejected_permanent = Associate_result_rejected_permanent; /* SHORT_NAMED_INTEGER_VALUE */
+export const rejected_permanent: 1 = Associate_result_rejected_permanent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_rejected_transient
  * @constant
  * @type {number}
  */
-export const Associate_result_rejected_transient = 2 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_result_rejected_transient: 2 = 2 satisfies Associate_result; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_result_rejected_transient
  * @constant
  * @type {number}
  */
-export const rejected_transient = Associate_result_rejected_transient; /* SHORT_NAMED_INTEGER_VALUE */
+export const rejected_transient: 2 = Associate_result_rejected_transient; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Associate_result = $._decodeInteger;
+export const _decode_Associate_result: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Associate_result = $._encodeInteger;
+export const _encode_Associate_result: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

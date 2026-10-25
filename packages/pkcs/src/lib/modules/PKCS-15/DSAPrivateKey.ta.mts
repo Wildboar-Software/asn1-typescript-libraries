@@ -18,12 +18,12 @@ export type DSAPrivateKey = INTEGER;
 
 
 
-export const _decode_DSAPrivateKey = $._decodeInteger;
+export const _decode_DSAPrivateKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DSAPrivateKey = $._encodeInteger;
+export const _encode_DSAPrivateKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

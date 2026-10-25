@@ -35,12 +35,12 @@ export type PKIConfirmContent = NULL; // NullType
 
 
 
-export const _decode_PKIConfirmContent = $._decodeNull;
+export const _decode_PKIConfirmContent: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_PKIConfirmContent = $._encodeNull;
+export const _encode_PKIConfirmContent: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

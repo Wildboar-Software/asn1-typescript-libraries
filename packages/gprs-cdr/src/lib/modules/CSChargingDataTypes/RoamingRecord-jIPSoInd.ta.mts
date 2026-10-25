@@ -30,7 +30,7 @@ type RoamingRecord_jIPSoInd = INTEGER;
  * @type {number}
  */
 export
-const RoamingRecord_jIPSoInd_lRN_NP_Database = 1 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPSoInd_lRN_NP_Database: 1 = 1 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const RoamingRecord_jIPSoInd_lRN_NP_Database = 1 satisfies RoamingRecord_jIPSoIn
  * @type {number}
  */
 export
-const lRN_NP_Database = RoamingRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database: 1 = RoamingRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database = RoamingRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const RoamingRecord_jIPSoInd_switchingSystemData = 2 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPSoInd_switchingSystemData: 2 = 2 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const RoamingRecord_jIPSoInd_switchingSystemData = 2 satisfies RoamingRecord_jIP
  * @type {number}
  */
 export
-const switchingSystemData = RoamingRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData: 2 = RoamingRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData = RoamingRecord_jIPSoInd_switchingSystemData; /* SHORT
  * @type {number}
  */
 export
-const RoamingRecord_jIPSoInd_incomingsignaling = 3 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPSoInd_incomingsignaling: 3 = 3 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const RoamingRecord_jIPSoInd_incomingsignaling = 3 satisfies RoamingRecord_jIPSo
  * @type {number}
  */
 export
-const incomingsignaling = RoamingRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling: 3 = RoamingRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling = RoamingRecord_jIPSoInd_incomingsignaling; /* SHORT_NAM
  * @type {number}
  */
 export
-const RoamingRecord_jIPSoInd_unknown = 9 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPSoInd_unknown: 9 = 9 satisfies RoamingRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const RoamingRecord_jIPSoInd_unknown = 9 satisfies RoamingRecord_jIPSoInd; /* LO
  * @type {number}
  */
 export
-const unknown = RoamingRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown: 9 = RoamingRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RoamingRecord_jIPSoInd: $.ASN1Decoder<RoamingRecord_jIPSoInd> = $._decodeInteger;

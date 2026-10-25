@@ -59,7 +59,7 @@ type DataAccessError = INTEGER;
  * @type {number}
  */
 export
-const DataAccessError_object_invalidated = 0 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_invalidated: 0 = 0 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_invalidated
@@ -73,7 +73,7 @@ const DataAccessError_object_invalidated = 0 satisfies DataAccessError; /* LONG_
  * @type {number}
  */
 export
-const object_invalidated = DataAccessError_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
+const object_invalidated: 0 = DataAccessError_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_hardware_fault
@@ -86,7 +86,7 @@ const object_invalidated = DataAccessError_object_invalidated; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const DataAccessError_hardware_fault = 1 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_hardware_fault: 1 = 1 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_hardware_fault
@@ -99,7 +99,7 @@ const DataAccessError_hardware_fault = 1 satisfies DataAccessError; /* LONG_NAME
  * @type {number}
  */
 export
-const hardware_fault = DataAccessError_hardware_fault; /* SHORT_NAMED_INTEGER_VALUE */
+const hardware_fault: 1 = DataAccessError_hardware_fault; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_temporarily_unavailable
@@ -112,7 +112,7 @@ const hardware_fault = DataAccessError_hardware_fault; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const DataAccessError_temporarily_unavailable = 2 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_temporarily_unavailable: 2 = 2 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_temporarily_unavailable
@@ -125,7 +125,7 @@ const DataAccessError_temporarily_unavailable = 2 satisfies DataAccessError; /* 
  * @type {number}
  */
 export
-const temporarily_unavailable = DataAccessError_temporarily_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+const temporarily_unavailable: 2 = DataAccessError_temporarily_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_access_denied
@@ -138,7 +138,7 @@ const temporarily_unavailable = DataAccessError_temporarily_unavailable; /* SHOR
  * @type {number}
  */
 export
-const DataAccessError_object_access_denied = 3 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_access_denied: 3 = 3 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_access_denied
@@ -151,7 +151,7 @@ const DataAccessError_object_access_denied = 3 satisfies DataAccessError; /* LON
  * @type {number}
  */
 export
-const object_access_denied = DataAccessError_object_access_denied; /* SHORT_NAMED_INTEGER_VALUE */
+const object_access_denied: 3 = DataAccessError_object_access_denied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_undefined
@@ -164,7 +164,7 @@ const object_access_denied = DataAccessError_object_access_denied; /* SHORT_NAME
  * @type {number}
  */
 export
-const DataAccessError_object_undefined = 4 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_undefined: 4 = 4 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_undefined
@@ -177,7 +177,7 @@ const DataAccessError_object_undefined = 4 satisfies DataAccessError; /* LONG_NA
  * @type {number}
  */
 export
-const object_undefined = DataAccessError_object_undefined; /* SHORT_NAMED_INTEGER_VALUE */
+const object_undefined: 4 = DataAccessError_object_undefined; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_invalid_address
@@ -190,7 +190,7 @@ const object_undefined = DataAccessError_object_undefined; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const DataAccessError_invalid_address = 5 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_invalid_address: 5 = 5 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_invalid_address
@@ -203,7 +203,7 @@ const DataAccessError_invalid_address = 5 satisfies DataAccessError; /* LONG_NAM
  * @type {number}
  */
 export
-const invalid_address = DataAccessError_invalid_address; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_address: 5 = DataAccessError_invalid_address; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_type_unsupported
@@ -216,7 +216,7 @@ const invalid_address = DataAccessError_invalid_address; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const DataAccessError_type_unsupported = 6 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_type_unsupported: 6 = 6 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_type_unsupported
@@ -229,7 +229,7 @@ const DataAccessError_type_unsupported = 6 satisfies DataAccessError; /* LONG_NA
  * @type {number}
  */
 export
-const type_unsupported = DataAccessError_type_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+const type_unsupported: 6 = DataAccessError_type_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_type_inconsistent
@@ -242,7 +242,7 @@ const type_unsupported = DataAccessError_type_unsupported; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const DataAccessError_type_inconsistent = 7 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_type_inconsistent: 7 = 7 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_type_inconsistent
@@ -255,7 +255,7 @@ const DataAccessError_type_inconsistent = 7 satisfies DataAccessError; /* LONG_N
  * @type {number}
  */
 export
-const type_inconsistent = DataAccessError_type_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
+const type_inconsistent: 7 = DataAccessError_type_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_attribute_inconsistent
@@ -268,7 +268,7 @@ const type_inconsistent = DataAccessError_type_inconsistent; /* SHORT_NAMED_INTE
  * @type {number}
  */
 export
-const DataAccessError_object_attribute_inconsistent = 8 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_attribute_inconsistent: 8 = 8 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_attribute_inconsistent
@@ -281,7 +281,7 @@ const DataAccessError_object_attribute_inconsistent = 8 satisfies DataAccessErro
  * @type {number}
  */
 export
-const object_attribute_inconsistent = DataAccessError_object_attribute_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
+const object_attribute_inconsistent: 8 = DataAccessError_object_attribute_inconsistent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_access_unsupported
@@ -294,7 +294,7 @@ const object_attribute_inconsistent = DataAccessError_object_attribute_inconsist
  * @type {number}
  */
 export
-const DataAccessError_object_access_unsupported = 9 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_access_unsupported: 9 = 9 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_access_unsupported
@@ -307,7 +307,7 @@ const DataAccessError_object_access_unsupported = 9 satisfies DataAccessError; /
  * @type {number}
  */
 export
-const object_access_unsupported = DataAccessError_object_access_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+const object_access_unsupported: 9 = DataAccessError_object_access_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_non_existent
@@ -320,7 +320,7 @@ const object_access_unsupported = DataAccessError_object_access_unsupported; /* 
  * @type {number}
  */
 export
-const DataAccessError_object_non_existent = 10 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_non_existent: 10 = 10 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_non_existent
@@ -333,7 +333,7 @@ const DataAccessError_object_non_existent = 10 satisfies DataAccessError; /* LON
  * @type {number}
  */
 export
-const object_non_existent = DataAccessError_object_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
+const object_non_existent: 10 = DataAccessError_object_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_value_invalid
@@ -346,7 +346,7 @@ const object_non_existent = DataAccessError_object_non_existent; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const DataAccessError_object_value_invalid = 11 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
+const DataAccessError_object_value_invalid: 11 = 11 satisfies DataAccessError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataAccessError_object_value_invalid
@@ -359,9 +359,9 @@ const DataAccessError_object_value_invalid = 11 satisfies DataAccessError; /* LO
  * @type {number}
  */
 export
-const object_value_invalid = DataAccessError_object_value_invalid; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DataAccessError = $._decodeInteger;
-export const _encode_DataAccessError = $._encodeInteger;
+const object_value_invalid: 11 = DataAccessError_object_value_invalid; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DataAccessError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DataAccessError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

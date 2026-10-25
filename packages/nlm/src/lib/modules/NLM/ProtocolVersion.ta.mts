@@ -79,7 +79,7 @@ export type ProtocolVersion = _enum_for_ProtocolVersion;
  *
  * @enum {number}
  */
-export const ProtocolVersion = _enum_for_ProtocolVersion;
+export const ProtocolVersion: typeof _enum_for_ProtocolVersion = _enum_for_ProtocolVersion;
 
 
 /**
@@ -93,7 +93,7 @@ export const ProtocolVersion = _enum_for_ProtocolVersion;
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_iSO8208V1 =
+export const ProtocolVersion_iSO8208V1: 0 =
     ProtocolVersion.iSO8208V1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -108,7 +108,7 @@ export const ProtocolVersion_iSO8208V1 =
  * @constant
  * @type {number}
  */
-export const iSO8208V1 =
+export const iSO8208V1: 0 =
     ProtocolVersion.iSO8208V1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const iSO8208V1 =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_iSO8208V2 =
+export const ProtocolVersion_iSO8208V2: 1 =
     ProtocolVersion.iSO8208V2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,7 +138,7 @@ export const ProtocolVersion_iSO8208V2 =
  * @constant
  * @type {number}
  */
-export const iSO8208V2 =
+export const iSO8208V2: 1 =
     ProtocolVersion.iSO8208V2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const iSO8208V2 =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_x2584 =
+export const ProtocolVersion_x2584: 2 =
     ProtocolVersion.x2584; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const ProtocolVersion_x2584 =
  * @constant
  * @type {number}
  */
-export const x2584 =
+export const x2584: 2 =
     ProtocolVersion.x2584; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const x2584 =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_x2588 =
+export const ProtocolVersion_x2588: 3 =
     ProtocolVersion.x2588; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -198,7 +198,7 @@ export const ProtocolVersion_x2588 =
  * @constant
  * @type {number}
  */
-export const x2588 =
+export const x2588: 3 =
     ProtocolVersion.x2588; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

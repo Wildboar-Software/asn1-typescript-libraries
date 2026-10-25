@@ -28,12 +28,12 @@ export type PremisesName = GraphicString; // GraphicString
 
 
 
-export const _decode_PremisesName = $._decodeGraphicString;
+export const _decode_PremisesName: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_PremisesName = $._encodeGraphicString;
+export const _encode_PremisesName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

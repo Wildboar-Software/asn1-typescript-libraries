@@ -28,12 +28,12 @@ export type Long = INTEGER;
 
 
 
-export const _decode_Long = $._decodeInteger;
+export const _decode_Long: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Long = $._encodeInteger;
+export const _encode_Long: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -94,7 +94,7 @@ class Operator_Station_instance_definition_details {
          * @static
          */
 
-    public static _enum_for_stationType = _enum_for_Operator_Station_instance_definition_details_stationType;
+    public static _enum_for_stationType: typeof _enum_for_Operator_Station_instance_definition_details_stationType = _enum_for_Operator_Station_instance_definition_details_stationType;
 }
 
 /**

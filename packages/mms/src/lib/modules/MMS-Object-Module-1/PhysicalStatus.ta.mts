@@ -47,7 +47,7 @@ type PhysicalStatus = INTEGER;
  * @type {number}
  */
 export
-const PhysicalStatus_operational = 0 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const PhysicalStatus_operational: 0 = 0 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_operational
@@ -60,7 +60,7 @@ const PhysicalStatus_operational = 0 satisfies PhysicalStatus; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const operational = PhysicalStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
+const operational: 0 = PhysicalStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_partially_operational
@@ -73,7 +73,7 @@ const operational = PhysicalStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PhysicalStatus_partially_operational = 1 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const PhysicalStatus_partially_operational: 1 = 1 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_partially_operational
@@ -86,7 +86,7 @@ const PhysicalStatus_partially_operational = 1 satisfies PhysicalStatus; /* LONG
  * @type {number}
  */
 export
-const partially_operational = PhysicalStatus_partially_operational; /* SHORT_NAMED_INTEGER_VALUE */
+const partially_operational: 1 = PhysicalStatus_partially_operational; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_inoperable
@@ -98,7 +98,7 @@ const partially_operational = PhysicalStatus_partially_operational; /* SHORT_NAM
  * @type {number}
  */
 export
-const PhysicalStatus_inoperable = 2 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const PhysicalStatus_inoperable: 2 = 2 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_inoperable
@@ -110,7 +110,7 @@ const PhysicalStatus_inoperable = 2 satisfies PhysicalStatus; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const inoperable = PhysicalStatus_inoperable; /* SHORT_NAMED_INTEGER_VALUE */
+const inoperable: 2 = PhysicalStatus_inoperable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_needs_commissioning
@@ -123,7 +123,7 @@ const inoperable = PhysicalStatus_inoperable; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PhysicalStatus_needs_commissioning = 3 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const PhysicalStatus_needs_commissioning: 3 = 3 satisfies PhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalStatus_needs_commissioning
@@ -136,7 +136,7 @@ const PhysicalStatus_needs_commissioning = 3 satisfies PhysicalStatus; /* LONG_N
  * @type {number}
  */
 export
-const needs_commissioning = PhysicalStatus_needs_commissioning; /* SHORT_NAMED_INTEGER_VALUE */
+const needs_commissioning: 3 = PhysicalStatus_needs_commissioning; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_PhysicalStatus: $.ASN1Decoder<PhysicalStatus> | null = null;
 

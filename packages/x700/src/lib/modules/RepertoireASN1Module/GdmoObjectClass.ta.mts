@@ -33,12 +33,12 @@ export type GdmoObjectClass = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
 
-export const _decode_GdmoObjectClass = $._decodeObjectIdentifier;
+export const _decode_GdmoObjectClass: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
 
 
-export const _encode_GdmoObjectClass = $._encodeObjectIdentifier;
+export const _encode_GdmoObjectClass: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

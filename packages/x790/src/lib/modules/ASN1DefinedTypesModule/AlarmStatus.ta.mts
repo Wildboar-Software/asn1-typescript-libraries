@@ -40,101 +40,101 @@ export type AlarmStatus = _enum_for_AlarmStatus;
  * @summary AlarmStatus
  * @enum {number}
  */
-export const AlarmStatus = _enum_for_AlarmStatus;
+export const AlarmStatus: typeof _enum_for_AlarmStatus = _enum_for_AlarmStatus;
 
 /**
  * @summary AlarmStatus_cleared
  * @constant
  */
-export const AlarmStatus_cleared = AlarmStatus.cleared;
+export const AlarmStatus_cleared: _enum_for_AlarmStatus.cleared = AlarmStatus.cleared;
 
 /**
  * @summary cleared
  * @constant
  */
-export const cleared = AlarmStatus.cleared;
+export const cleared: _enum_for_AlarmStatus.cleared = AlarmStatus.cleared;
 
 /**
  * @summary AlarmStatus_activeReportable_Indeterminate
  * @constant
  */
-export const AlarmStatus_activeReportable_Indeterminate =
+export const AlarmStatus_activeReportable_Indeterminate: _enum_for_AlarmStatus.activeReportable_Indeterminate =
     AlarmStatus.activeReportable_Indeterminate;
 
 /**
  * @summary activeReportable_Indeterminate
  * @constant
  */
-export const activeReportable_Indeterminate =
+export const activeReportable_Indeterminate: _enum_for_AlarmStatus.activeReportable_Indeterminate =
     AlarmStatus.activeReportable_Indeterminate;
 
 /**
  * @summary AlarmStatus_activeReportable_Warning
  * @constant
  */
-export const AlarmStatus_activeReportable_Warning =
+export const AlarmStatus_activeReportable_Warning: _enum_for_AlarmStatus.activeReportable_Warning =
     AlarmStatus.activeReportable_Warning;
 
 /**
  * @summary activeReportable_Warning
  * @constant
  */
-export const activeReportable_Warning =
+export const activeReportable_Warning: _enum_for_AlarmStatus.activeReportable_Warning =
     AlarmStatus.activeReportable_Warning;
 
 /**
  * @summary AlarmStatus_activeReportable_Minor
  * @constant
  */
-export const AlarmStatus_activeReportable_Minor =
+export const AlarmStatus_activeReportable_Minor: _enum_for_AlarmStatus.activeReportable_Minor =
     AlarmStatus.activeReportable_Minor;
 
 /**
  * @summary activeReportable_Minor
  * @constant
  */
-export const activeReportable_Minor =
+export const activeReportable_Minor: _enum_for_AlarmStatus.activeReportable_Minor =
     AlarmStatus.activeReportable_Minor;
 
 /**
  * @summary AlarmStatus_activeReportable_Major
  * @constant
  */
-export const AlarmStatus_activeReportable_Major =
+export const AlarmStatus_activeReportable_Major: _enum_for_AlarmStatus.activeReportable_Major =
     AlarmStatus.activeReportable_Major;
 
 /**
  * @summary activeReportable_Major
  * @constant
  */
-export const activeReportable_Major =
+export const activeReportable_Major: _enum_for_AlarmStatus.activeReportable_Major =
     AlarmStatus.activeReportable_Major;
 
 /**
  * @summary AlarmStatus_activeReportable_Critical
  * @constant
  */
-export const AlarmStatus_activeReportable_Critical =
+export const AlarmStatus_activeReportable_Critical: _enum_for_AlarmStatus.activeReportable_Critical =
     AlarmStatus.activeReportable_Critical;
 
 /**
  * @summary activeReportable_Critical
  * @constant
  */
-export const activeReportable_Critical =
+export const activeReportable_Critical: _enum_for_AlarmStatus.activeReportable_Critical =
     AlarmStatus.activeReportable_Critical;
 
 /**
  * @summary AlarmStatus_activePending
  * @constant
  */
-export const AlarmStatus_activePending = AlarmStatus.activePending;
+export const AlarmStatus_activePending: _enum_for_AlarmStatus.activePending = AlarmStatus.activePending;
 
 /**
  * @summary activePending
  * @constant
  */
-export const activePending = AlarmStatus.activePending;
+export const activePending: _enum_for_AlarmStatus.activePending = AlarmStatus.activePending;
 
 export function _decode_AlarmStatus(el: _Element): AlarmStatus {
     const enumerated = $._decodeEnumerated(el);

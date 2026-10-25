@@ -33,7 +33,7 @@ type ConfigAction = INTEGER;
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_get = 0 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_get: 0 = 0 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_get
@@ -41,7 +41,7 @@ const ConfigAction_ca_cfg_get = 0 satisfies ConfigAction; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const ca_cfg_get = ConfigAction_ca_cfg_get; /* SHORT_NAMED_INTEGER_VALUE */
+const ca_cfg_get: 0 = ConfigAction_ca_cfg_get; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_set
@@ -49,7 +49,7 @@ const ca_cfg_get = ConfigAction_ca_cfg_get; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_set = 1 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_set: 1 = 1 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_set
@@ -57,7 +57,7 @@ const ConfigAction_ca_cfg_set = 1 satisfies ConfigAction; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const ca_cfg_set = ConfigAction_ca_cfg_set; /* SHORT_NAMED_INTEGER_VALUE */
+const ca_cfg_set: 1 = ConfigAction_ca_cfg_set; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_replicate
@@ -65,7 +65,7 @@ const ca_cfg_set = ConfigAction_ca_cfg_set; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_replicate = 2 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_replicate: 2 = 2 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_replicate
@@ -73,7 +73,7 @@ const ConfigAction_ca_cfg_replicate = 2 satisfies ConfigAction; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const ca_cfg_replicate = ConfigAction_ca_cfg_replicate; /* SHORT_NAMED_INTEGER_VALUE */
+const ca_cfg_replicate: 2 = ConfigAction_ca_cfg_replicate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_ac
@@ -81,7 +81,7 @@ const ca_cfg_replicate = ConfigAction_ca_cfg_replicate; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_ac = 3 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_ac: 3 = 3 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_ac
@@ -89,7 +89,7 @@ const ConfigAction_ca_cfg_ac = 3 satisfies ConfigAction; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ca_cfg_ac = ConfigAction_ca_cfg_ac; /* SHORT_NAMED_INTEGER_VALUE */
+const ca_cfg_ac: 3 = ConfigAction_ca_cfg_ac; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_result
@@ -97,7 +97,7 @@ const ca_cfg_ac = ConfigAction_ca_cfg_ac; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_result = 4 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_result: 4 = 4 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_result
@@ -105,7 +105,7 @@ const ConfigAction_ca_cfg_result = 4 satisfies ConfigAction; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const ca_cfg_result = ConfigAction_ca_cfg_result; /* SHORT_NAMED_INTEGER_VALUE */
+const ca_cfg_result: 4 = ConfigAction_ca_cfg_result; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_user_login
@@ -113,7 +113,7 @@ const ca_cfg_result = ConfigAction_ca_cfg_result; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_user_login = 5 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_user_login: 5 = 5 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_user_login
@@ -121,7 +121,7 @@ const ConfigAction_ca_cfg_user_login = 5 satisfies ConfigAction; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const ca_cfg_user_login = ConfigAction_ca_cfg_user_login; /* SHORT_NAMED_INTEGER_VALUE */
+const ca_cfg_user_login: 5 = ConfigAction_ca_cfg_user_login; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_user_logout
@@ -129,7 +129,7 @@ const ca_cfg_user_login = ConfigAction_ca_cfg_user_login; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const ConfigAction_ca_cfg_user_logout = 6 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigAction_ca_cfg_user_logout: 6 = 6 satisfies ConfigAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigAction_ca_cfg_user_logout
@@ -137,9 +137,9 @@ const ConfigAction_ca_cfg_user_logout = 6 satisfies ConfigAction; /* LONG_NAMED_
  * @type {number}
  */
 export
-const ca_cfg_user_logout = ConfigAction_ca_cfg_user_logout; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ConfigAction = $._decodeInteger;
-export const _encode_ConfigAction = $._encodeInteger;
+const ca_cfg_user_logout: 6 = ConfigAction_ca_cfg_user_logout; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ConfigAction: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ConfigAction: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

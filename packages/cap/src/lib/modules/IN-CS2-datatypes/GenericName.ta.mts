@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type GenericName = OCTET_STRING; // OctetStringType
-export const _decode_GenericName = $._decodeOctetString;
-export const _encode_GenericName = $._encodeOctetString;
+export const _decode_GenericName: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_GenericName: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

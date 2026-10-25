@@ -44,7 +44,7 @@ type EvidenceRecord_version = INTEGER;
  * @type {number}
  */
 export
-const EvidenceRecord_version_v1 = 1 satisfies EvidenceRecord_version; /* LONG_NAMED_INTEGER_VALUE */
+const EvidenceRecord_version_v1: 1 = 1 satisfies EvidenceRecord_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,17 +57,17 @@ const EvidenceRecord_version_v1 = 1 satisfies EvidenceRecord_version; /* LONG_NA
  * @type {number}
  */
 export
-const v1 = EvidenceRecord_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+const v1: 1 = EvidenceRecord_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_EvidenceRecord_version = $._decodeInteger;
+export const _decode_EvidenceRecord_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_EvidenceRecord_version = $._encodeInteger;
+export const _encode_EvidenceRecord_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

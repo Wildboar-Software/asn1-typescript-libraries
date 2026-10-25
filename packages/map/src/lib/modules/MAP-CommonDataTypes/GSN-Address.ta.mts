@@ -48,7 +48,7 @@ export const _decode_GSN_Address = (el: _Element): GSN_Address => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GSN_Address, encoded as an ASN.1 Element.
  */
-export const _encode_GSN_Address = $._encodeOctetString;
+export const _encode_GSN_Address: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -84,7 +84,7 @@ type AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryAppara
  * @enum {number}
  */
 export
-const AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryApparatusList_Item_auditoryApparatusType;
+const AuditoryApparatusList_Item_auditoryApparatusType: typeof _enum_for_AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryApparatusList_Item_auditoryApparatusType;
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_speakerphone
@@ -96,7 +96,7 @@ const AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryAppar
  * @type {number}
  */
 export
-const AuditoryApparatusList_Item_auditoryApparatusType_speakerphone = AuditoryApparatusList_Item_auditoryApparatusType.speakerphone; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuditoryApparatusList_Item_auditoryApparatusType_speakerphone: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.speakerphone = AuditoryApparatusList_Item_auditoryApparatusType.speakerphone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speakerphone
@@ -104,7 +104,7 @@ const AuditoryApparatusList_Item_auditoryApparatusType_speakerphone = AuditoryAp
  * @type {number}
  */
 export
-const speakerphone = AuditoryApparatusList_Item_auditoryApparatusType.speakerphone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speakerphone: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.speakerphone = AuditoryApparatusList_Item_auditoryApparatusType.speakerphone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_handset
@@ -116,7 +116,7 @@ const speakerphone = AuditoryApparatusList_Item_auditoryApparatusType.speakerpho
  * @type {number}
  */
 export
-const AuditoryApparatusList_Item_auditoryApparatusType_handset = AuditoryApparatusList_Item_auditoryApparatusType.handset; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuditoryApparatusList_Item_auditoryApparatusType_handset: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.handset = AuditoryApparatusList_Item_auditoryApparatusType.handset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handset
@@ -124,7 +124,7 @@ const AuditoryApparatusList_Item_auditoryApparatusType_handset = AuditoryApparat
  * @type {number}
  */
 export
-const handset = AuditoryApparatusList_Item_auditoryApparatusType.handset; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handset: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.handset = AuditoryApparatusList_Item_auditoryApparatusType.handset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_headset
@@ -136,7 +136,7 @@ const handset = AuditoryApparatusList_Item_auditoryApparatusType.handset; /* SHO
  * @type {number}
  */
 export
-const AuditoryApparatusList_Item_auditoryApparatusType_headset = AuditoryApparatusList_Item_auditoryApparatusType.headset; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuditoryApparatusList_Item_auditoryApparatusType_headset: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.headset = AuditoryApparatusList_Item_auditoryApparatusType.headset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary headset
@@ -144,7 +144,7 @@ const AuditoryApparatusList_Item_auditoryApparatusType_headset = AuditoryApparat
  * @type {number}
  */
 export
-const headset = AuditoryApparatusList_Item_auditoryApparatusType.headset; /* SHORT_NAMED_ENUMERATED_VALUE */
+const headset: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.headset = AuditoryApparatusList_Item_auditoryApparatusType.headset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone
@@ -156,7 +156,7 @@ const headset = AuditoryApparatusList_Item_auditoryApparatusType.headset; /* SHO
  * @type {number}
  */
 export
-const AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone = AuditoryApparatusList_Item_auditoryApparatusType.speakerOnlyPhone; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.speakerOnlyPhone = AuditoryApparatusList_Item_auditoryApparatusType.speakerOnlyPhone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speakerOnlyPhone
@@ -164,7 +164,7 @@ const AuditoryApparatusList_Item_auditoryApparatusType_speakerOnlyPhone = Audito
  * @type {number}
  */
 export
-const speakerOnlyPhone = AuditoryApparatusList_Item_auditoryApparatusType.speakerOnlyPhone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speakerOnlyPhone: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.speakerOnlyPhone = AuditoryApparatusList_Item_auditoryApparatusType.speakerOnlyPhone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuditoryApparatusList_Item_auditoryApparatusType_other
@@ -176,7 +176,7 @@ const speakerOnlyPhone = AuditoryApparatusList_Item_auditoryApparatusType.speake
  * @type {number}
  */
 export
-const AuditoryApparatusList_Item_auditoryApparatusType_other = AuditoryApparatusList_Item_auditoryApparatusType.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuditoryApparatusList_Item_auditoryApparatusType_other: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.other = AuditoryApparatusList_Item_auditoryApparatusType.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -184,7 +184,7 @@ const AuditoryApparatusList_Item_auditoryApparatusType_other = AuditoryApparatus
  * @type {number}
  */
 export
-const other = AuditoryApparatusList_Item_auditoryApparatusType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_AuditoryApparatusList_Item_auditoryApparatusType.other = AuditoryApparatusList_Item_auditoryApparatusType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AuditoryApparatusList_Item_auditoryApparatusType: $.ASN1Decoder<AuditoryApparatusList_Item_auditoryApparatusType> | null = null;
 

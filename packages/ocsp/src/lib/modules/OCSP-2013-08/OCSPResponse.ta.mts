@@ -96,7 +96,7 @@ export class OCSPResponse {
      * @static
      */
 
-    public static _enum_for_responseStatus = _enum_for_OCSPResponseStatus;
+    public static _enum_for_responseStatus: typeof _enum_for_OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 }
 
 

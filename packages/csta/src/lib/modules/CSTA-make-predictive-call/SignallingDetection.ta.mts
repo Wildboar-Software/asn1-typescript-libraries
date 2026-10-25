@@ -103,13 +103,13 @@ class SignallingDetection {
          * @static
          */
 
-    public static _enum_for_signallingCondition = _enum_for_SignallingCondition;        /**
+    public static _enum_for_signallingCondition: typeof _enum_for_SignallingCondition = _enum_for_SignallingCondition;        /**
          * @summary The enum used as the type of the component `signallingConditionsAction`
          * @public
          * @static
          */
 
-    public static _enum_for_signallingConditionsAction = _enum_for_SignallingConditionsAction;
+    public static _enum_for_signallingConditionsAction: typeof _enum_for_SignallingConditionsAction = _enum_for_SignallingConditionsAction;
 }
 
 /**

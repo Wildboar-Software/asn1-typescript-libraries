@@ -59,7 +59,7 @@ export type NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  *
  * @enum {number}
  */
-export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
+export const NamedDay_intNamedDays: typeof _enum_for_NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
 
 /**
  * @summary NamedDay_intNamedDays_sunday
@@ -70,7 +70,7 @@ export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_sunday =
+export const NamedDay_intNamedDays_sunday: _enum_for_NamedDay_intNamedDays.sunday =
     NamedDay_intNamedDays.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const NamedDay_intNamedDays_sunday =
  * @constant
  * @type {number}
  */
-export const sunday =
+export const sunday: _enum_for_NamedDay_intNamedDays.sunday =
     NamedDay_intNamedDays.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const sunday =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_monday =
+export const NamedDay_intNamedDays_monday: _enum_for_NamedDay_intNamedDays.monday =
     NamedDay_intNamedDays.monday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const NamedDay_intNamedDays_monday =
  * @constant
  * @type {number}
  */
-export const monday =
+export const monday: _enum_for_NamedDay_intNamedDays.monday =
     NamedDay_intNamedDays.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +106,7 @@ export const monday =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_tuesday =
+export const NamedDay_intNamedDays_tuesday: _enum_for_NamedDay_intNamedDays.tuesday =
     NamedDay_intNamedDays.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +114,7 @@ export const NamedDay_intNamedDays_tuesday =
  * @constant
  * @type {number}
  */
-export const tuesday =
+export const tuesday: _enum_for_NamedDay_intNamedDays.tuesday =
     NamedDay_intNamedDays.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const tuesday =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_wednesday =
+export const NamedDay_intNamedDays_wednesday: _enum_for_NamedDay_intNamedDays.wednesday =
     NamedDay_intNamedDays.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const NamedDay_intNamedDays_wednesday =
  * @constant
  * @type {number}
  */
-export const wednesday =
+export const wednesday: _enum_for_NamedDay_intNamedDays.wednesday =
     NamedDay_intNamedDays.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const wednesday =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_thursday =
+export const NamedDay_intNamedDays_thursday: _enum_for_NamedDay_intNamedDays.thursday =
     NamedDay_intNamedDays.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -146,7 +146,7 @@ export const NamedDay_intNamedDays_thursday =
  * @constant
  * @type {number}
  */
-export const thursday =
+export const thursday: _enum_for_NamedDay_intNamedDays.thursday =
     NamedDay_intNamedDays.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const thursday =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_friday =
+export const NamedDay_intNamedDays_friday: _enum_for_NamedDay_intNamedDays.friday =
     NamedDay_intNamedDays.friday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const NamedDay_intNamedDays_friday =
  * @constant
  * @type {number}
  */
-export const friday =
+export const friday: _enum_for_NamedDay_intNamedDays.friday =
     NamedDay_intNamedDays.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -170,7 +170,7 @@ export const friday =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_saturday =
+export const NamedDay_intNamedDays_saturday: _enum_for_NamedDay_intNamedDays.saturday =
     NamedDay_intNamedDays.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -178,7 +178,7 @@ export const NamedDay_intNamedDays_saturday =
  * @constant
  * @type {number}
  */
-export const saturday =
+export const saturday: _enum_for_NamedDay_intNamedDays.saturday =
     NamedDay_intNamedDays.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

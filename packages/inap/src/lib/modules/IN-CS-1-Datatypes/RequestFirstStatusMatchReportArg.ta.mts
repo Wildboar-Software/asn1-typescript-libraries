@@ -126,7 +126,7 @@ class RequestFirstStatusMatchReportArg {
          * @static
          */
 
-    public static _enum_for_resourceStatus = _enum_for_ResourceStatus;
+    public static _enum_for_resourceStatus: typeof _enum_for_ResourceStatus = _enum_for_ResourceStatus;
 }
 
 /**

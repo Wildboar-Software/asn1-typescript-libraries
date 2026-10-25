@@ -34,12 +34,12 @@ export type ApplicationProcessId = GraphicString; // GraphicString
 
 
 
-export const _decode_ApplicationProcessId = $._decodeGraphicString;
+export const _decode_ApplicationProcessId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ApplicationProcessId = $._encodeGraphicString;
+export const _encode_ApplicationProcessId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -79,7 +79,7 @@ type SwitchOffIndicator = _enum_for_SwitchOffIndicator;
  * @enum {number}
  */
 export
-const SwitchOffIndicator = _enum_for_SwitchOffIndicator;
+const SwitchOffIndicator: typeof _enum_for_SwitchOffIndicator = _enum_for_SwitchOffIndicator;
 
 /**
  * @summary SwitchOffIndicator_normalDetach
@@ -87,7 +87,7 @@ const SwitchOffIndicator = _enum_for_SwitchOffIndicator;
  * @type {number}
  */
 export
-const SwitchOffIndicator_normalDetach = SwitchOffIndicator.normalDetach; /* LONG_NAMED_ENUMERATED_VALUE */
+const SwitchOffIndicator_normalDetach: _enum_for_SwitchOffIndicator.normalDetach = SwitchOffIndicator.normalDetach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalDetach
@@ -95,7 +95,7 @@ const SwitchOffIndicator_normalDetach = SwitchOffIndicator.normalDetach; /* LONG
  * @type {number}
  */
 export
-const normalDetach = SwitchOffIndicator.normalDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalDetach: _enum_for_SwitchOffIndicator.normalDetach = SwitchOffIndicator.normalDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SwitchOffIndicator_switchOff
@@ -103,7 +103,7 @@ const normalDetach = SwitchOffIndicator.normalDetach; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const SwitchOffIndicator_switchOff = SwitchOffIndicator.switchOff; /* LONG_NAMED_ENUMERATED_VALUE */
+const SwitchOffIndicator_switchOff: _enum_for_SwitchOffIndicator.switchOff = SwitchOffIndicator.switchOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchOff
@@ -111,7 +111,7 @@ const SwitchOffIndicator_switchOff = SwitchOffIndicator.switchOff; /* LONG_NAMED
  * @type {number}
  */
 export
-const switchOff = SwitchOffIndicator.switchOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchOff: _enum_for_SwitchOffIndicator.switchOff = SwitchOffIndicator.switchOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SwitchOffIndicator: $.ASN1Decoder<SwitchOffIndicator> = $._decodeEnumerated;
 export const _encode_SwitchOffIndicator: $.ASN1Encoder<SwitchOffIndicator> = $._encodeEnumerated;
 

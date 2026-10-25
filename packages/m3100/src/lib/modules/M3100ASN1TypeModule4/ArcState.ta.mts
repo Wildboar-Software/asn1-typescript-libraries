@@ -62,7 +62,7 @@ export type ArcState = _enum_for_ArcState;
  *
  * @enum {number}
  */
-export const ArcState = _enum_for_ArcState;
+export const ArcState: typeof _enum_for_ArcState = _enum_for_ArcState;
 
 
 /**
@@ -70,7 +70,7 @@ export const ArcState = _enum_for_ArcState;
  * @constant
  * @type {number}
  */
-export const ArcState_alm =
+export const ArcState_alm: _enum_for_ArcState.alm =
     ArcState.alm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -79,7 +79,7 @@ export const ArcState_alm =
  * @constant
  * @type {number}
  */
-export const alm = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alm: _enum_for_ArcState.alm = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const alm = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ArcState_nalm =
+export const ArcState_nalm: _enum_for_ArcState.nalm =
     ArcState.nalm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const ArcState_nalm =
  * @constant
  * @type {number}
  */
-export const nalm = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalm: _enum_for_ArcState.nalm = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const nalm = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ArcState_nalmQualifiedInhibit =
+export const ArcState_nalmQualifiedInhibit: _enum_for_ArcState.nalmQualifiedInhibit =
     ArcState.nalmQualifiedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -113,7 +113,7 @@ export const ArcState_nalmQualifiedInhibit =
  * @constant
  * @type {number}
  */
-export const nalmQualifiedInhibit =
+export const nalmQualifiedInhibit: _enum_for_ArcState.nalmQualifiedInhibit =
     ArcState.nalmQualifiedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -122,7 +122,7 @@ export const nalmQualifiedInhibit =
  * @constant
  * @type {number}
  */
-export const ArcState_nalmTimedInhibit =
+export const ArcState_nalmTimedInhibit: _enum_for_ArcState.nalmTimedInhibit =
     ArcState.nalmTimedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +131,7 @@ export const ArcState_nalmTimedInhibit =
  * @constant
  * @type {number}
  */
-export const nalmTimedInhibit =
+export const nalmTimedInhibit: _enum_for_ArcState.nalmTimedInhibit =
     ArcState.nalmTimedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -126,7 +126,7 @@ class IndAudTerminationStateDescriptor {
          * @static
          */
 
-    public static _enum_for_serviceStateSel = _enum_for_ServiceState;
+    public static _enum_for_serviceStateSel: typeof _enum_for_ServiceState = _enum_for_ServiceState;
 }
 
 /**

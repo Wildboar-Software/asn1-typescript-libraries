@@ -46,7 +46,7 @@ type RafProductionStatus = INTEGER;
  * @type {number}
  */
 export
-const RafProductionStatus_running = 0 satisfies RafProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const RafProductionStatus_running: 0 = 0 satisfies RafProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_running
@@ -58,7 +58,7 @@ const RafProductionStatus_running = 0 satisfies RafProductionStatus; /* LONG_NAM
  * @type {number}
  */
 export
-const running = RafProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
+const running: 0 = RafProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_interrupted
@@ -73,7 +73,7 @@ const running = RafProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const RafProductionStatus_interrupted = 1 satisfies RafProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const RafProductionStatus_interrupted: 1 = 1 satisfies RafProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_interrupted
@@ -85,7 +85,7 @@ const RafProductionStatus_interrupted = 1 satisfies RafProductionStatus; /* LONG
  * @type {number}
  */
 export
-const interrupted = RafProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted: 1 = RafProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_halted
@@ -102,7 +102,7 @@ const interrupted = RafProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const RafProductionStatus_halted = 2 satisfies RafProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const RafProductionStatus_halted: 2 = 2 satisfies RafProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafProductionStatus_halted
@@ -114,7 +114,7 @@ const RafProductionStatus_halted = 2 satisfies RafProductionStatus; /* LONG_NAME
  * @type {number}
  */
 export
-const halted = RafProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
+const halted: 2 = RafProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RafProductionStatus: $.ASN1Decoder<RafProductionStatus> = $._decodeInteger;
 export const _encode_RafProductionStatus: $.ASN1Encoder<RafProductionStatus> = $._encodeInteger;
 

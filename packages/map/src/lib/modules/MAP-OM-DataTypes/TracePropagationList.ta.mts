@@ -268,37 +268,37 @@ class TracePropagationList {
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_rnc_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `msc_s_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_msc_s_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_mgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `rnc_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_rnc_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `msc_s_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_msc_s_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepthExtension = _enum_for_TraceDepthExtension;
+    public static _enum_for_mgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;
 }
 
 /**

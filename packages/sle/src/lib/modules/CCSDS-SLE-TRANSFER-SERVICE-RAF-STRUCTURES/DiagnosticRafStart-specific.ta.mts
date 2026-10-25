@@ -45,7 +45,7 @@ type DiagnosticRafStart_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticRafStart_specific_outOfService = 0 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRafStart_specific_outOfService: 0 = 0 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_outOfService
@@ -56,7 +56,7 @@ const DiagnosticRafStart_specific_outOfService = 0 satisfies DiagnosticRafStart_
  * @type {number}
  */
 export
-const outOfService = DiagnosticRafStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService: 0 = DiagnosticRafStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_unableToComply
@@ -70,7 +70,7 @@ const outOfService = DiagnosticRafStart_specific_outOfService; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const DiagnosticRafStart_specific_unableToComply = 1 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRafStart_specific_unableToComply: 1 = 1 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_unableToComply
@@ -81,7 +81,7 @@ const DiagnosticRafStart_specific_unableToComply = 1 satisfies DiagnosticRafStar
  * @type {number}
  */
 export
-const unableToComply = DiagnosticRafStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToComply: 1 = DiagnosticRafStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_invalidStartTime
@@ -96,7 +96,7 @@ const unableToComply = DiagnosticRafStart_specific_unableToComply; /* SHORT_NAME
  * @type {number}
  */
 export
-const DiagnosticRafStart_specific_invalidStartTime = 2 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRafStart_specific_invalidStartTime: 2 = 2 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_invalidStartTime
@@ -107,7 +107,7 @@ const DiagnosticRafStart_specific_invalidStartTime = 2 satisfies DiagnosticRafSt
  * @type {number}
  */
 export
-const invalidStartTime = DiagnosticRafStart_specific_invalidStartTime; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidStartTime: 2 = DiagnosticRafStart_specific_invalidStartTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_invalidStopTime
@@ -123,7 +123,7 @@ const invalidStartTime = DiagnosticRafStart_specific_invalidStartTime; /* SHORT_
  * @type {number}
  */
 export
-const DiagnosticRafStart_specific_invalidStopTime = 3 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRafStart_specific_invalidStopTime: 3 = 3 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_invalidStopTime
@@ -134,7 +134,7 @@ const DiagnosticRafStart_specific_invalidStopTime = 3 satisfies DiagnosticRafSta
  * @type {number}
  */
 export
-const invalidStopTime = DiagnosticRafStart_specific_invalidStopTime; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidStopTime: 3 = DiagnosticRafStart_specific_invalidStopTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_missingTimeValue
@@ -148,7 +148,7 @@ const invalidStopTime = DiagnosticRafStart_specific_invalidStopTime; /* SHORT_NA
  * @type {number}
  */
 export
-const DiagnosticRafStart_specific_missingTimeValue = 4 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRafStart_specific_missingTimeValue: 4 = 4 satisfies DiagnosticRafStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRafStart_specific_missingTimeValue
@@ -160,7 +160,7 @@ const DiagnosticRafStart_specific_missingTimeValue = 4 satisfies DiagnosticRafSt
  * @type {number}
  */
 export
-const missingTimeValue = DiagnosticRafStart_specific_missingTimeValue; /* SHORT_NAMED_INTEGER_VALUE */
+const missingTimeValue: 4 = DiagnosticRafStart_specific_missingTimeValue; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRafStart_specific: $.ASN1Decoder<DiagnosticRafStart_specific> = $._decodeInteger;
 export const _encode_DiagnosticRafStart_specific: $.ASN1Encoder<DiagnosticRafStart_specific> = $._encodeInteger;
 

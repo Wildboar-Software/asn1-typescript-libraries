@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type BodyPartNumber = INTEGER;
 
 
-export const _decode_BodyPartNumber = $._decodeInteger;
+export const _decode_BodyPartNumber: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_BodyPartNumber = $._encodeInteger;
+export const _encode_BodyPartNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

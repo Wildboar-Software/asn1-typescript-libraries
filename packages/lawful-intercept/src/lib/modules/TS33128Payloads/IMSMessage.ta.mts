@@ -210,13 +210,13 @@ class IMSMessage {
          * @static
          */
 
-    public static _enum_for_sessionDirection = _enum_for_SessionDirection;        /**
+    public static _enum_for_sessionDirection: typeof _enum_for_SessionDirection = _enum_for_SessionDirection;        /**
          * @summary The enum used as the type of the component `voIPRoamingIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_voIPRoamingIndication = _enum_for_VoIPRoamingIndication;
+    public static _enum_for_voIPRoamingIndication: typeof _enum_for_VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
 }
 
 /**

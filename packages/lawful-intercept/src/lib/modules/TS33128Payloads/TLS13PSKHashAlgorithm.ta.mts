@@ -65,7 +65,7 @@ type TLS13PSKHashAlgorithm = _enum_for_TLS13PSKHashAlgorithm;
  * @enum {number}
  */
 export
-const TLS13PSKHashAlgorithm = _enum_for_TLS13PSKHashAlgorithm;
+const TLS13PSKHashAlgorithm: typeof _enum_for_TLS13PSKHashAlgorithm = _enum_for_TLS13PSKHashAlgorithm;
 
 /**
  * @summary TLS13PSKHashAlgorithm_sha256
@@ -73,7 +73,7 @@ const TLS13PSKHashAlgorithm = _enum_for_TLS13PSKHashAlgorithm;
  * @type {number}
  */
 export
-const TLS13PSKHashAlgorithm_sha256 = TLS13PSKHashAlgorithm.sha256; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13PSKHashAlgorithm_sha256: _enum_for_TLS13PSKHashAlgorithm.sha256 = TLS13PSKHashAlgorithm.sha256; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sha256
@@ -81,7 +81,7 @@ const TLS13PSKHashAlgorithm_sha256 = TLS13PSKHashAlgorithm.sha256; /* LONG_NAMED
  * @type {number}
  */
 export
-const sha256 = TLS13PSKHashAlgorithm.sha256; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sha256: _enum_for_TLS13PSKHashAlgorithm.sha256 = TLS13PSKHashAlgorithm.sha256; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13PSKHashAlgorithm_sha384
@@ -89,7 +89,7 @@ const sha256 = TLS13PSKHashAlgorithm.sha256; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLS13PSKHashAlgorithm_sha384 = TLS13PSKHashAlgorithm.sha384; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13PSKHashAlgorithm_sha384: _enum_for_TLS13PSKHashAlgorithm.sha384 = TLS13PSKHashAlgorithm.sha384; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sha384
@@ -97,7 +97,7 @@ const TLS13PSKHashAlgorithm_sha384 = TLS13PSKHashAlgorithm.sha384; /* LONG_NAMED
  * @type {number}
  */
 export
-const sha384 = TLS13PSKHashAlgorithm.sha384; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sha384: _enum_for_TLS13PSKHashAlgorithm.sha384 = TLS13PSKHashAlgorithm.sha384; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13PSKHashAlgorithm_sha512
@@ -105,7 +105,7 @@ const sha384 = TLS13PSKHashAlgorithm.sha384; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLS13PSKHashAlgorithm_sha512 = TLS13PSKHashAlgorithm.sha512; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13PSKHashAlgorithm_sha512: _enum_for_TLS13PSKHashAlgorithm.sha512 = TLS13PSKHashAlgorithm.sha512; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sha512
@@ -113,7 +113,7 @@ const TLS13PSKHashAlgorithm_sha512 = TLS13PSKHashAlgorithm.sha512; /* LONG_NAMED
  * @type {number}
  */
 export
-const sha512 = TLS13PSKHashAlgorithm.sha512; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sha512: _enum_for_TLS13PSKHashAlgorithm.sha512 = TLS13PSKHashAlgorithm.sha512; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLS13PSKHashAlgorithm: $.ASN1Decoder<TLS13PSKHashAlgorithm> = $._decodeEnumerated;
 export const _encode_TLS13PSKHashAlgorithm: $.ASN1Encoder<TLS13PSKHashAlgorithm> = $._encodeEnumerated;
 

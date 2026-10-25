@@ -44,7 +44,7 @@ type ServiceError_errorClass_conclude = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_conclude_other = 0 satisfies ServiceError_errorClass_conclude; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_conclude_other: 0 = 0 satisfies ServiceError_errorClass_conclude; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_conclude_other
@@ -56,7 +56,7 @@ const ServiceError_errorClass_conclude_other = 0 satisfies ServiceError_errorCla
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_conclude_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_conclude_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_conclude_further_communication_required
@@ -69,7 +69,7 @@ const other = ServiceError_errorClass_conclude_other; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ServiceError_errorClass_conclude_further_communication_required = 1 satisfies ServiceError_errorClass_conclude; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_conclude_further_communication_required: 1 = 1 satisfies ServiceError_errorClass_conclude; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_conclude_further_communication_required
@@ -82,9 +82,9 @@ const ServiceError_errorClass_conclude_further_communication_required = 1 satisf
  * @type {number}
  */
 export
-const further_communication_required = ServiceError_errorClass_conclude_further_communication_required; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_conclude = $._decodeInteger;
-export const _encode_ServiceError_errorClass_conclude = $._encodeInteger;
+const further_communication_required: 1 = ServiceError_errorClass_conclude_further_communication_required; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_conclude: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_conclude: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

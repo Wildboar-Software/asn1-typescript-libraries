@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DataElementSeparator = OCTET_STRING; // OctetStringType
 
 
-export const _decode_DataElementSeparator = $._decodeOctetString;
+export const _decode_DataElementSeparator: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_DataElementSeparator = $._encodeOctetString;
+export const _encode_DataElementSeparator: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -26,7 +26,7 @@ export type ErrorProtectionRequest = INTEGER;
  * @constant
  * @type {number}
  */
-export const ErrorProtectionRequest_none = 0 satisfies ErrorProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorProtectionRequest_none: 0 = 0 satisfies ErrorProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_none
@@ -37,7 +37,7 @@ export const ErrorProtectionRequest_none = 0 satisfies ErrorProtectionRequest; /
  * @constant
  * @type {number}
  */
-export const none = ErrorProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
+export const none: 0 = ErrorProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_signed
@@ -48,7 +48,7 @@ export const none = ErrorProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const ErrorProtectionRequest_signed = 1 satisfies ErrorProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorProtectionRequest_signed: 1 = 1 satisfies ErrorProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_signed
@@ -59,13 +59,13 @@ export const ErrorProtectionRequest_signed = 1 satisfies ErrorProtectionRequest;
  * @constant
  * @type {number}
  */
-export const signed = ErrorProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
+export const signed: 1 = ErrorProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ErrorProtectionRequest = $._decodeInteger;
+export const _decode_ErrorProtectionRequest: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ErrorProtectionRequest = $._encodeInteger;
+export const _encode_ErrorProtectionRequest: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

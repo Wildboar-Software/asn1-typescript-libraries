@@ -50,7 +50,7 @@ export type TestOutcome = INTEGER;
  * @constant
  * @type {number}
  */
-export const TestOutcome_inconclusive = 0 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
+export const TestOutcome_inconclusive: 0 = 0 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_inconclusive
@@ -62,7 +62,7 @@ export const TestOutcome_inconclusive = 0 satisfies TestOutcome; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const inconclusive = TestOutcome_inconclusive; /* SHORT_NAMED_INTEGER_VALUE */
+export const inconclusive: 0 = TestOutcome_inconclusive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_pass
@@ -75,7 +75,7 @@ export const inconclusive = TestOutcome_inconclusive; /* SHORT_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const TestOutcome_pass = 1 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
+export const TestOutcome_pass: 1 = 1 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_pass
@@ -88,7 +88,7 @@ export const TestOutcome_pass = 1 satisfies TestOutcome; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const pass = TestOutcome_pass; /* SHORT_NAMED_INTEGER_VALUE */
+export const pass: 1 = TestOutcome_pass; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_fail
@@ -101,7 +101,7 @@ export const pass = TestOutcome_pass; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const TestOutcome_fail = 2 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
+export const TestOutcome_fail: 2 = 2 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_fail
@@ -114,7 +114,7 @@ export const TestOutcome_fail = 2 satisfies TestOutcome; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const fail = TestOutcome_fail; /* SHORT_NAMED_INTEGER_VALUE */
+export const fail: 2 = TestOutcome_fail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_timed_out
@@ -127,7 +127,7 @@ export const fail = TestOutcome_fail; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const TestOutcome_timed_out = 3 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
+export const TestOutcome_timed_out: 3 = 3 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_timed_out
@@ -140,7 +140,7 @@ export const TestOutcome_timed_out = 3 satisfies TestOutcome; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const timed_out = TestOutcome_timed_out; /* SHORT_NAMED_INTEGER_VALUE */
+export const timed_out: 3 = TestOutcome_timed_out; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_premature_termination
@@ -153,7 +153,7 @@ export const timed_out = TestOutcome_timed_out; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const TestOutcome_premature_termination = 4 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
+export const TestOutcome_premature_termination: 4 = 4 satisfies TestOutcome; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestOutcome_premature_termination
@@ -166,13 +166,13 @@ export const TestOutcome_premature_termination = 4 satisfies TestOutcome; /* LON
  * @constant
  * @type {number}
  */
-export const premature_termination = TestOutcome_premature_termination; /* SHORT_NAMED_INTEGER_VALUE */
+export const premature_termination: 4 = TestOutcome_premature_termination; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TestOutcome = $._decodeInteger;
+export const _decode_TestOutcome: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TestOutcome = $._encodeInteger;
+export const _encode_TestOutcome: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

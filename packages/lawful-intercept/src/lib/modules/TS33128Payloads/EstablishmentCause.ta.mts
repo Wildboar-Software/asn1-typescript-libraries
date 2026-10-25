@@ -209,7 +209,7 @@ type EstablishmentCause = _enum_for_EstablishmentCause;
  * @enum {number}
  */
 export
-const EstablishmentCause = _enum_for_EstablishmentCause;
+const EstablishmentCause: typeof _enum_for_EstablishmentCause = _enum_for_EstablishmentCause;
 
 /**
  * @summary EstablishmentCause_emergency
@@ -223,7 +223,7 @@ const EstablishmentCause = _enum_for_EstablishmentCause;
  * @type {number}
  */
 export
-const EstablishmentCause_emergency = EstablishmentCause.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_emergency: _enum_for_EstablishmentCause.emergency = EstablishmentCause.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
@@ -237,7 +237,7 @@ const EstablishmentCause_emergency = EstablishmentCause.emergency; /* LONG_NAMED
  * @type {number}
  */
 export
-const emergency = EstablishmentCause.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergency: _enum_for_EstablishmentCause.emergency = EstablishmentCause.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_highPriorityAccess
@@ -251,7 +251,7 @@ const emergency = EstablishmentCause.emergency; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const EstablishmentCause_highPriorityAccess = EstablishmentCause.highPriorityAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_highPriorityAccess: _enum_for_EstablishmentCause.highPriorityAccess = EstablishmentCause.highPriorityAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary highPriorityAccess
@@ -265,7 +265,7 @@ const EstablishmentCause_highPriorityAccess = EstablishmentCause.highPriorityAcc
  * @type {number}
  */
 export
-const highPriorityAccess = EstablishmentCause.highPriorityAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const highPriorityAccess: _enum_for_EstablishmentCause.highPriorityAccess = EstablishmentCause.highPriorityAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_mtAccess
@@ -279,7 +279,7 @@ const highPriorityAccess = EstablishmentCause.highPriorityAccess; /* SHORT_NAMED
  * @type {number}
  */
 export
-const EstablishmentCause_mtAccess = EstablishmentCause.mtAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_mtAccess: _enum_for_EstablishmentCause.mtAccess = EstablishmentCause.mtAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mtAccess
@@ -293,7 +293,7 @@ const EstablishmentCause_mtAccess = EstablishmentCause.mtAccess; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const mtAccess = EstablishmentCause.mtAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mtAccess: _enum_for_EstablishmentCause.mtAccess = EstablishmentCause.mtAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_moSignalling
@@ -307,7 +307,7 @@ const mtAccess = EstablishmentCause.mtAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EstablishmentCause_moSignalling = EstablishmentCause.moSignalling; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_moSignalling: _enum_for_EstablishmentCause.moSignalling = EstablishmentCause.moSignalling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moSignalling
@@ -321,7 +321,7 @@ const EstablishmentCause_moSignalling = EstablishmentCause.moSignalling; /* LONG
  * @type {number}
  */
 export
-const moSignalling = EstablishmentCause.moSignalling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moSignalling: _enum_for_EstablishmentCause.moSignalling = EstablishmentCause.moSignalling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_moData
@@ -335,7 +335,7 @@ const moSignalling = EstablishmentCause.moSignalling; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const EstablishmentCause_moData = EstablishmentCause.moData; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_moData: _enum_for_EstablishmentCause.moData = EstablishmentCause.moData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moData
@@ -349,7 +349,7 @@ const EstablishmentCause_moData = EstablishmentCause.moData; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const moData = EstablishmentCause.moData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moData: _enum_for_EstablishmentCause.moData = EstablishmentCause.moData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_moVoiceCall
@@ -363,7 +363,7 @@ const moData = EstablishmentCause.moData; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EstablishmentCause_moVoiceCall = EstablishmentCause.moVoiceCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_moVoiceCall: _enum_for_EstablishmentCause.moVoiceCall = EstablishmentCause.moVoiceCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moVoiceCall
@@ -377,7 +377,7 @@ const EstablishmentCause_moVoiceCall = EstablishmentCause.moVoiceCall; /* LONG_N
  * @type {number}
  */
 export
-const moVoiceCall = EstablishmentCause.moVoiceCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moVoiceCall: _enum_for_EstablishmentCause.moVoiceCall = EstablishmentCause.moVoiceCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_moVideoCall
@@ -391,7 +391,7 @@ const moVoiceCall = EstablishmentCause.moVoiceCall; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const EstablishmentCause_moVideoCall = EstablishmentCause.moVideoCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_moVideoCall: _enum_for_EstablishmentCause.moVideoCall = EstablishmentCause.moVideoCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moVideoCall
@@ -405,7 +405,7 @@ const EstablishmentCause_moVideoCall = EstablishmentCause.moVideoCall; /* LONG_N
  * @type {number}
  */
 export
-const moVideoCall = EstablishmentCause.moVideoCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moVideoCall: _enum_for_EstablishmentCause.moVideoCall = EstablishmentCause.moVideoCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_moSMS
@@ -419,7 +419,7 @@ const moVideoCall = EstablishmentCause.moVideoCall; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const EstablishmentCause_moSMS = EstablishmentCause.moSMS; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_moSMS: _enum_for_EstablishmentCause.moSMS = EstablishmentCause.moSMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moSMS
@@ -433,7 +433,7 @@ const EstablishmentCause_moSMS = EstablishmentCause.moSMS; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const moSMS = EstablishmentCause.moSMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moSMS: _enum_for_EstablishmentCause.moSMS = EstablishmentCause.moSMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_mpsPriorityAccess
@@ -447,7 +447,7 @@ const moSMS = EstablishmentCause.moSMS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EstablishmentCause_mpsPriorityAccess = EstablishmentCause.mpsPriorityAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_mpsPriorityAccess: _enum_for_EstablishmentCause.mpsPriorityAccess = EstablishmentCause.mpsPriorityAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mpsPriorityAccess
@@ -461,7 +461,7 @@ const EstablishmentCause_mpsPriorityAccess = EstablishmentCause.mpsPriorityAcces
  * @type {number}
  */
 export
-const mpsPriorityAccess = EstablishmentCause.mpsPriorityAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mpsPriorityAccess: _enum_for_EstablishmentCause.mpsPriorityAccess = EstablishmentCause.mpsPriorityAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_mcsPriorityAccess
@@ -475,7 +475,7 @@ const mpsPriorityAccess = EstablishmentCause.mpsPriorityAccess; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const EstablishmentCause_mcsPriorityAccess = EstablishmentCause.mcsPriorityAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_mcsPriorityAccess: _enum_for_EstablishmentCause.mcsPriorityAccess = EstablishmentCause.mcsPriorityAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mcsPriorityAccess
@@ -489,7 +489,7 @@ const EstablishmentCause_mcsPriorityAccess = EstablishmentCause.mcsPriorityAcces
  * @type {number}
  */
 export
-const mcsPriorityAccess = EstablishmentCause.mcsPriorityAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mcsPriorityAccess: _enum_for_EstablishmentCause.mcsPriorityAccess = EstablishmentCause.mcsPriorityAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_notAvailable
@@ -503,7 +503,7 @@ const mcsPriorityAccess = EstablishmentCause.mcsPriorityAccess; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const EstablishmentCause_notAvailable = EstablishmentCause.notAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_notAvailable: _enum_for_EstablishmentCause.notAvailable = EstablishmentCause.notAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAvailable
@@ -517,7 +517,7 @@ const EstablishmentCause_notAvailable = EstablishmentCause.notAvailable; /* LONG
  * @type {number}
  */
 export
-const notAvailable = EstablishmentCause.notAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAvailable: _enum_for_EstablishmentCause.notAvailable = EstablishmentCause.notAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentCause_exceptionData
@@ -531,7 +531,7 @@ const notAvailable = EstablishmentCause.notAvailable; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const EstablishmentCause_exceptionData = EstablishmentCause.exceptionData; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentCause_exceptionData: _enum_for_EstablishmentCause.exceptionData = EstablishmentCause.exceptionData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary exceptionData
@@ -545,7 +545,7 @@ const EstablishmentCause_exceptionData = EstablishmentCause.exceptionData; /* LO
  * @type {number}
  */
 export
-const exceptionData = EstablishmentCause.exceptionData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const exceptionData: _enum_for_EstablishmentCause.exceptionData = EstablishmentCause.exceptionData; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EstablishmentCause: $.ASN1Decoder<EstablishmentCause> = $._decodeEnumerated;
 export const _encode_EstablishmentCause: $.ASN1Encoder<EstablishmentCause> = $._encodeEnumerated;
 

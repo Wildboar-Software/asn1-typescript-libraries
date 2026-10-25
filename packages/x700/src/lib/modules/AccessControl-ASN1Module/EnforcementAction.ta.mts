@@ -126,7 +126,7 @@ export type EnforcementAction = _enum_for_EnforcementAction;
  *
  * @enum {number}
  */
-export const EnforcementAction = _enum_for_EnforcementAction;
+export const EnforcementAction: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
 
 /**
  * @summary EnforcementAction_denyWithResponse
@@ -139,7 +139,7 @@ export const EnforcementAction = _enum_for_EnforcementAction;
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithResponse =
+export const EnforcementAction_denyWithResponse: _enum_for_EnforcementAction.denyWithResponse =
     EnforcementAction.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const EnforcementAction_denyWithResponse =
  * @constant
  * @type {number}
  */
-export const denyWithResponse =
+export const denyWithResponse: _enum_for_EnforcementAction.denyWithResponse =
     EnforcementAction.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const denyWithResponse =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithoutResponse =
+export const EnforcementAction_denyWithoutResponse: _enum_for_EnforcementAction.denyWithoutResponse =
     EnforcementAction.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -177,7 +177,7 @@ export const EnforcementAction_denyWithoutResponse =
  * @constant
  * @type {number}
  */
-export const denyWithoutResponse =
+export const denyWithoutResponse: _enum_for_EnforcementAction.denyWithoutResponse =
     EnforcementAction.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -190,7 +190,7 @@ export const denyWithoutResponse =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_abortAssociation =
+export const EnforcementAction_abortAssociation: _enum_for_EnforcementAction.abortAssociation =
     EnforcementAction.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -202,7 +202,7 @@ export const EnforcementAction_abortAssociation =
  * @constant
  * @type {number}
  */
-export const abortAssociation =
+export const abortAssociation: _enum_for_EnforcementAction.abortAssociation =
     EnforcementAction.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -216,7 +216,7 @@ export const abortAssociation =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithFalseResponse =
+export const EnforcementAction_denyWithFalseResponse: _enum_for_EnforcementAction.denyWithFalseResponse =
     EnforcementAction.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -229,7 +229,7 @@ export const EnforcementAction_denyWithFalseResponse =
  * @constant
  * @type {number}
  */
-export const denyWithFalseResponse =
+export const denyWithFalseResponse: _enum_for_EnforcementAction.denyWithFalseResponse =
     EnforcementAction.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -243,7 +243,7 @@ export const denyWithFalseResponse =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_allow =
+export const EnforcementAction_allow: _enum_for_EnforcementAction.allow =
     EnforcementAction.allow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -255,7 +255,7 @@ export const EnforcementAction_allow =
  * @constant
  * @type {number}
  */
-export const allow =
+export const allow: _enum_for_EnforcementAction.allow =
     EnforcementAction.allow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

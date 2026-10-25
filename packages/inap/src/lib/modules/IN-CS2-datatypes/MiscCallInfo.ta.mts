@@ -72,13 +72,13 @@ class MiscCallInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MiscCallInfo_messageType;        /**
+    public static _enum_for_messageType: typeof _enum_for_MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;        /**
          * @summary The enum used as the type of the component `dpAssignment`
          * @public
          * @static
          */
 
-    public static _enum_for_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
+    public static _enum_for_dpAssignment: typeof _enum_for_MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
 }
 
 /**

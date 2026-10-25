@@ -168,7 +168,7 @@ export class BindResponse {
    * @static
    */
 
-  public static _enum_for_resultCode = _enum_for_LDAPResult_resultCode;
+  public static _enum_for_resultCode: typeof _enum_for_LDAPResult_resultCode = _enum_for_LDAPResult_resultCode;
 }
 
 

@@ -57,7 +57,7 @@ export type Abort = _enum_for_Abort | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const Abort_mistypedPDU = _enum_for_Abort.mistypedPDU; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_mistypedPDU: _enum_for_Abort.mistypedPDU = _enum_for_Abort.mistypedPDU; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mistypedPDU
@@ -68,7 +68,7 @@ export const Abort_mistypedPDU = _enum_for_Abort.mistypedPDU; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const mistypedPDU = Abort_mistypedPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mistypedPDU: _enum_for_Abort.mistypedPDU = Abort_mistypedPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Abort_unboundRequest
@@ -80,7 +80,7 @@ export const mistypedPDU = Abort_mistypedPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Abort_unboundRequest = _enum_for_Abort.unboundRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_unboundRequest: _enum_for_Abort.unboundRequest = _enum_for_Abort.unboundRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unboundRequest
@@ -91,7 +91,7 @@ export const Abort_unboundRequest = _enum_for_Abort.unboundRequest; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const unboundRequest = Abort_unboundRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unboundRequest: _enum_for_Abort.unboundRequest = Abort_unboundRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Abort_invalidPDU
@@ -102,7 +102,7 @@ export const unboundRequest = Abort_unboundRequest; /* SHORT_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const Abort_invalidPDU = _enum_for_Abort.invalidPDU; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_invalidPDU: _enum_for_Abort.invalidPDU = _enum_for_Abort.invalidPDU; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidPDU
@@ -113,7 +113,7 @@ export const Abort_invalidPDU = _enum_for_Abort.invalidPDU; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const invalidPDU = Abort_invalidPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidPDU: _enum_for_Abort.invalidPDU = Abort_invalidPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Abort_resourceLimitation
@@ -124,7 +124,7 @@ export const invalidPDU = Abort_invalidPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Abort_resourceLimitation = _enum_for_Abort.resourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_resourceLimitation: _enum_for_Abort.resourceLimitation = _enum_for_Abort.resourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceLimitation
@@ -135,7 +135,7 @@ export const Abort_resourceLimitation = _enum_for_Abort.resourceLimitation; /* L
  * @constant
  * @type {number}
  */
-export const resourceLimitation = Abort_resourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resourceLimitation: _enum_for_Abort.resourceLimitation = Abort_resourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Abort_connectionFailed
@@ -147,7 +147,7 @@ export const resourceLimitation = Abort_resourceLimitation; /* SHORT_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const Abort_connectionFailed = _enum_for_Abort.connectionFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_connectionFailed: _enum_for_Abort.connectionFailed = _enum_for_Abort.connectionFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionFailed
@@ -159,7 +159,7 @@ export const Abort_connectionFailed = _enum_for_Abort.connectionFailed; /* LONG_
  * @constant
  * @type {number}
  */
-export const connectionFailed = Abort_connectionFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const connectionFailed: _enum_for_Abort.connectionFailed = Abort_connectionFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Abort_invalidProtocol
@@ -170,7 +170,7 @@ export const connectionFailed = Abort_connectionFailed; /* SHORT_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const Abort_invalidProtocol = _enum_for_Abort.invalidProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_invalidProtocol: _enum_for_Abort.invalidProtocol = _enum_for_Abort.invalidProtocol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidProtocol
@@ -181,7 +181,7 @@ export const Abort_invalidProtocol = _enum_for_Abort.invalidProtocol; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const invalidProtocol = Abort_invalidProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidProtocol: _enum_for_Abort.invalidProtocol = Abort_invalidProtocol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Abort_reasonNotSpecified
@@ -192,7 +192,7 @@ export const invalidProtocol = Abort_invalidProtocol; /* SHORT_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const Abort_reasonNotSpecified = _enum_for_Abort.reasonNotSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Abort_reasonNotSpecified: _enum_for_Abort.reasonNotSpecified = _enum_for_Abort.reasonNotSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reasonNotSpecified
@@ -203,13 +203,13 @@ export const Abort_reasonNotSpecified = _enum_for_Abort.reasonNotSpecified; /* L
  * @constant
  * @type {number}
  */
-export const reasonNotSpecified = Abort_reasonNotSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const reasonNotSpecified: _enum_for_Abort.reasonNotSpecified = Abort_reasonNotSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Abort = $._decodeEnumerated;
+export const _decode_Abort: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_Abort = $._encodeEnumerated;
+export const _encode_Abort: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

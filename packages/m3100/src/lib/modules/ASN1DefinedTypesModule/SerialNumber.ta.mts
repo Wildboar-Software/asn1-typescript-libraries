@@ -28,12 +28,12 @@ export type SerialNumber = GraphicString; // GraphicString
 
 
 
-export const _decode_SerialNumber = $._decodeGraphicString;
+export const _decode_SerialNumber: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_SerialNumber = $._encodeGraphicString;
+export const _encode_SerialNumber: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

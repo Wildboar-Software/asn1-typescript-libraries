@@ -125,7 +125,7 @@ class CS_Status_Response_fullResponse {
      * @static
      * @method
      */
-    public static get _default_value_for_extendedStatusMask () { return new Uint8ClampedArray([ 1, 1, 1, 1 ]); }
+    public static get _default_value_for_extendedStatusMask (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([ 1, 1, 1, 1 ]); }
 }
 
 /**

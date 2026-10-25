@@ -53,7 +53,7 @@ type ClientCertificateType = _enum_for_ClientCertificateType | ENUMERATED;
  * @type {number}
  */
 export
-const ClientCertificateType_rsa_sign = _enum_for_ClientCertificateType.rsa_sign; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClientCertificateType_rsa_sign: _enum_for_ClientCertificateType.rsa_sign = _enum_for_ClientCertificateType.rsa_sign; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rsa_sign
@@ -61,7 +61,7 @@ const ClientCertificateType_rsa_sign = _enum_for_ClientCertificateType.rsa_sign;
  * @type {number}
  */
 export
-const rsa_sign = ClientCertificateType_rsa_sign; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rsa_sign: _enum_for_ClientCertificateType.rsa_sign = ClientCertificateType_rsa_sign; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ClientCertificateType_dss_sign
@@ -69,7 +69,7 @@ const rsa_sign = ClientCertificateType_rsa_sign; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const ClientCertificateType_dss_sign = _enum_for_ClientCertificateType.dss_sign; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClientCertificateType_dss_sign: _enum_for_ClientCertificateType.dss_sign = _enum_for_ClientCertificateType.dss_sign; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dss_sign
@@ -77,7 +77,7 @@ const ClientCertificateType_dss_sign = _enum_for_ClientCertificateType.dss_sign;
  * @type {number}
  */
 export
-const dss_sign = ClientCertificateType_dss_sign; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dss_sign: _enum_for_ClientCertificateType.dss_sign = ClientCertificateType_dss_sign; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ClientCertificateType_rsa_fixed_dh
@@ -85,7 +85,7 @@ const dss_sign = ClientCertificateType_dss_sign; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const ClientCertificateType_rsa_fixed_dh = _enum_for_ClientCertificateType.rsa_fixed_dh; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClientCertificateType_rsa_fixed_dh: _enum_for_ClientCertificateType.rsa_fixed_dh = _enum_for_ClientCertificateType.rsa_fixed_dh; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rsa_fixed_dh
@@ -93,7 +93,7 @@ const ClientCertificateType_rsa_fixed_dh = _enum_for_ClientCertificateType.rsa_f
  * @type {number}
  */
 export
-const rsa_fixed_dh = ClientCertificateType_rsa_fixed_dh; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rsa_fixed_dh: _enum_for_ClientCertificateType.rsa_fixed_dh = ClientCertificateType_rsa_fixed_dh; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ClientCertificateType_dss_fixed_dn
@@ -105,7 +105,7 @@ const rsa_fixed_dh = ClientCertificateType_rsa_fixed_dh; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const ClientCertificateType_dss_fixed_dn = _enum_for_ClientCertificateType.dss_fixed_dn; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClientCertificateType_dss_fixed_dn: _enum_for_ClientCertificateType.dss_fixed_dn = _enum_for_ClientCertificateType.dss_fixed_dn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dss_fixed_dn
@@ -117,9 +117,9 @@ const ClientCertificateType_dss_fixed_dn = _enum_for_ClientCertificateType.dss_f
  * @type {number}
  */
 export
-const dss_fixed_dn = ClientCertificateType_dss_fixed_dn; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ClientCertificateType = $._decodeEnumerated;
-export const _encode_ClientCertificateType = $._encodeEnumerated;
+const dss_fixed_dn: _enum_for_ClientCertificateType.dss_fixed_dn = ClientCertificateType_dss_fixed_dn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ClientCertificateType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ClientCertificateType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

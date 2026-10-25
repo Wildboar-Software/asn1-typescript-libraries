@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Nanoseconds = INTEGER;
 
 
-export const _decode_Nanoseconds = $._decodeInteger;
+export const _decode_Nanoseconds: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Nanoseconds = $._encodeInteger;
+export const _encode_Nanoseconds: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

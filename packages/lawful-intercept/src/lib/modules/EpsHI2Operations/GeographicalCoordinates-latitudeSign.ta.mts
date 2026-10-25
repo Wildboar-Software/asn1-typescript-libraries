@@ -70,7 +70,7 @@ type GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_la
  * @enum {number}
  */
 export
-const GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_latitudeSign;
+const GeographicalCoordinates_latitudeSign: typeof _enum_for_GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_latitudeSign;
 
 /**
  * @summary GeographicalCoordinates_latitudeSign_north
@@ -82,7 +82,7 @@ const GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_l
  * @type {number}
  */
 export
-const GeographicalCoordinates_latitudeSign_north = GeographicalCoordinates_latitudeSign.north; /* LONG_NAMED_ENUMERATED_VALUE */
+const GeographicalCoordinates_latitudeSign_north: _enum_for_GeographicalCoordinates_latitudeSign.north = GeographicalCoordinates_latitudeSign.north; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary north
@@ -94,7 +94,7 @@ const GeographicalCoordinates_latitudeSign_north = GeographicalCoordinates_latit
  * @type {number}
  */
 export
-const north = GeographicalCoordinates_latitudeSign.north; /* SHORT_NAMED_ENUMERATED_VALUE */
+const north: _enum_for_GeographicalCoordinates_latitudeSign.north = GeographicalCoordinates_latitudeSign.north; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GeographicalCoordinates_latitudeSign_south
@@ -106,7 +106,7 @@ const north = GeographicalCoordinates_latitudeSign.north; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const GeographicalCoordinates_latitudeSign_south = GeographicalCoordinates_latitudeSign.south; /* LONG_NAMED_ENUMERATED_VALUE */
+const GeographicalCoordinates_latitudeSign_south: _enum_for_GeographicalCoordinates_latitudeSign.south = GeographicalCoordinates_latitudeSign.south; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary south
@@ -118,7 +118,7 @@ const GeographicalCoordinates_latitudeSign_south = GeographicalCoordinates_latit
  * @type {number}
  */
 export
-const south = GeographicalCoordinates_latitudeSign.south; /* SHORT_NAMED_ENUMERATED_VALUE */
+const south: _enum_for_GeographicalCoordinates_latitudeSign.south = GeographicalCoordinates_latitudeSign.south; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_GeographicalCoordinates_latitudeSign: $.ASN1Decoder<GeographicalCoordinates_latitudeSign> = $._decodeEnumerated;
 export const _encode_GeographicalCoordinates_latitudeSign: $.ASN1Encoder<GeographicalCoordinates_latitudeSign> = $._encodeEnumerated;
 

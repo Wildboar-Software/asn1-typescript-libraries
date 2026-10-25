@@ -48,7 +48,7 @@ type ServiceError_errorClass_resource = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_resource_other = 0 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_resource_other: 0 = 0 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_other
@@ -60,7 +60,7 @@ const ServiceError_errorClass_resource_other = 0 satisfies ServiceError_errorCla
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_resource_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_resource_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_memory_unavailable
@@ -73,7 +73,7 @@ const other = ServiceError_errorClass_resource_other; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ServiceError_errorClass_resource_memory_unavailable = 1 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_resource_memory_unavailable: 1 = 1 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_memory_unavailable
@@ -86,7 +86,7 @@ const ServiceError_errorClass_resource_memory_unavailable = 1 satisfies ServiceE
  * @type {number}
  */
 export
-const memory_unavailable = ServiceError_errorClass_resource_memory_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+const memory_unavailable: 1 = ServiceError_errorClass_resource_memory_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_processor_resource_unavailable
@@ -99,7 +99,7 @@ const memory_unavailable = ServiceError_errorClass_resource_memory_unavailable; 
  * @type {number}
  */
 export
-const ServiceError_errorClass_resource_processor_resource_unavailable = 2 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_resource_processor_resource_unavailable: 2 = 2 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_processor_resource_unavailable
@@ -112,7 +112,7 @@ const ServiceError_errorClass_resource_processor_resource_unavailable = 2 satisf
  * @type {number}
  */
 export
-const processor_resource_unavailable = ServiceError_errorClass_resource_processor_resource_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+const processor_resource_unavailable: 2 = ServiceError_errorClass_resource_processor_resource_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_mass_storage_unavailable
@@ -124,7 +124,7 @@ const processor_resource_unavailable = ServiceError_errorClass_resource_processo
  * @type {number}
  */
 export
-const ServiceError_errorClass_resource_mass_storage_unavailable = 3 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_resource_mass_storage_unavailable: 3 = 3 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_mass_storage_unavailable
@@ -136,7 +136,7 @@ const ServiceError_errorClass_resource_mass_storage_unavailable = 3 satisfies Se
  * @type {number}
  */
 export
-const mass_storage_unavailable = ServiceError_errorClass_resource_mass_storage_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+const mass_storage_unavailable: 3 = ServiceError_errorClass_resource_mass_storage_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unavailable
@@ -148,7 +148,7 @@ const mass_storage_unavailable = ServiceError_errorClass_resource_mass_storage_u
  * @type {number}
  */
 export
-const ServiceError_errorClass_resource_capability_unavailable = 4 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_resource_capability_unavailable: 4 = 4 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unavailable
@@ -160,7 +160,7 @@ const ServiceError_errorClass_resource_capability_unavailable = 4 satisfies Serv
  * @type {number}
  */
 export
-const capability_unavailable = ServiceError_errorClass_resource_capability_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+const capability_unavailable: 4 = ServiceError_errorClass_resource_capability_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unknown
@@ -172,7 +172,7 @@ const capability_unavailable = ServiceError_errorClass_resource_capability_unava
  * @type {number}
  */
 export
-const ServiceError_errorClass_resource_capability_unknown = 5 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_resource_capability_unknown: 5 = 5 satisfies ServiceError_errorClass_resource; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_resource_capability_unknown
@@ -184,9 +184,9 @@ const ServiceError_errorClass_resource_capability_unknown = 5 satisfies ServiceE
  * @type {number}
  */
 export
-const capability_unknown = ServiceError_errorClass_resource_capability_unknown; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_resource = $._decodeInteger;
-export const _encode_ServiceError_errorClass_resource = $._encodeInteger;
+const capability_unknown: 5 = ServiceError_errorClass_resource_capability_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_resource: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_resource: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

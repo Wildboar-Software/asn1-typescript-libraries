@@ -27,7 +27,7 @@ export function _decode_Text128 (el: _Element): Text128 {
     }
     return value;
 }
-export const _encode_Text128 = $._encodePrintableString;
+export const _encode_Text128: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

@@ -91,7 +91,7 @@ class MAP_ProviderAbortInfo {
          * @static
          */
 
-    public static _enum_for_map_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
+    public static _enum_for_map_ProviderAbortReason: typeof _enum_for_MAP_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
 }
 
 /**

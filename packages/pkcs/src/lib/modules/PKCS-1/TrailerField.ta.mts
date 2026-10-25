@@ -21,7 +21,7 @@ export type TrailerField = INTEGER;
  * @constant
  * @type {number}
  */
-export const TrailerField_trailerFieldBC = 1 satisfies TrailerField; /* LONG_NAMED_INTEGER_VALUE */
+export const TrailerField_trailerFieldBC: 1 = 1 satisfies TrailerField; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,17 +29,17 @@ export const TrailerField_trailerFieldBC = 1 satisfies TrailerField; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const trailerFieldBC = TrailerField_trailerFieldBC; /* SHORT_NAMED_INTEGER_VALUE */
+export const trailerFieldBC: 1 = TrailerField_trailerFieldBC; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_TrailerField = $._decodeInteger;
+export const _decode_TrailerField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_TrailerField = $._encodeInteger;
+export const _encode_TrailerField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

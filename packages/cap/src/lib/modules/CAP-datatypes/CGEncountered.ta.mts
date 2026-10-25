@@ -27,12 +27,12 @@ export enum _enum_for_CGEncountered {
     scpOverload = 2,
 }
 export type CGEncountered = _enum_for_CGEncountered;
-export const CGEncountered = _enum_for_CGEncountered;
-export const CGEncountered_noCGencountered = CGEncountered.noCGencountered;
-export const noCGencountered = CGEncountered.noCGencountered;
-export const CGEncountered_manualCGencountered = CGEncountered.manualCGencountered;
-export const manualCGencountered = CGEncountered.manualCGencountered;
-export const CGEncountered_scpOverload = CGEncountered.scpOverload;
-export const scpOverload = CGEncountered.scpOverload;
-export const _decode_CGEncountered = $._decodeEnumerated;
-export const _encode_CGEncountered = $._encodeEnumerated;
+export const CGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;
+export const CGEncountered_noCGencountered: _enum_for_CGEncountered.noCGencountered = CGEncountered.noCGencountered;
+export const noCGencountered: _enum_for_CGEncountered.noCGencountered = CGEncountered.noCGencountered;
+export const CGEncountered_manualCGencountered: _enum_for_CGEncountered.manualCGencountered = CGEncountered.manualCGencountered;
+export const manualCGencountered: _enum_for_CGEncountered.manualCGencountered = CGEncountered.manualCGencountered;
+export const CGEncountered_scpOverload: _enum_for_CGEncountered.scpOverload = CGEncountered.scpOverload;
+export const scpOverload: _enum_for_CGEncountered.scpOverload = CGEncountered.scpOverload;
+export const _decode_CGEncountered: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_CGEncountered: $.ASN1Encoder<number> = $._encodeEnumerated;

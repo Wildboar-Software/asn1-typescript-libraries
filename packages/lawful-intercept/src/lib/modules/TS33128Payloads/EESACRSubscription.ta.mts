@@ -235,19 +235,19 @@ class EESACRSubscription {
          * @static
          */
 
-    public static _enum_for_subscriptionType = _enum_for_SubscriptionType;        /**
+    public static _enum_for_subscriptionType: typeof _enum_for_SubscriptionType = _enum_for_SubscriptionType;        /**
          * @summary The enum used as the type of the component `eventIDs`
          * @public
          * @static
          */
 
-    public static _enum_for_eventIDs = _enum_for_ACREventIDs;        /**
+    public static _enum_for_eventIDs: typeof _enum_for_ACREventIDs = _enum_for_ACREventIDs;        /**
          * @summary The enum used as the type of the component `failureResponse`
          * @public
          * @static
          */
 
-    public static _enum_for_failureResponse = _enum_for_FailureResponse;
+    public static _enum_for_failureResponse: typeof _enum_for_FailureResponse = _enum_for_FailureResponse;
 }
 
 /**

@@ -121,7 +121,7 @@ class BiometricMethod {
          * @static
          */
 
-    public static _enum_for_networkAuthenticationModel = _enum_for_NetworkAuthenticationModel;
+    public static _enum_for_networkAuthenticationModel: typeof _enum_for_NetworkAuthenticationModel = _enum_for_NetworkAuthenticationModel;
 }
 
 /**

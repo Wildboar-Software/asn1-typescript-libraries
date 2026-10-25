@@ -80,8 +80,8 @@ const OnSupported_acp127_tn: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const acp127_tn: number = OnSupported_acp127_tn; /* SHORT_NAMED_BIT */
-export const _decode_OnSupported = $._decodeBitString;
-export const _encode_OnSupported = $._encodeBitString;
+export const _decode_OnSupported: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_OnSupported: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

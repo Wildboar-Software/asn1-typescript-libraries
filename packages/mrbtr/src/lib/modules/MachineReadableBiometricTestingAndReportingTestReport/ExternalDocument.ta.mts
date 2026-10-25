@@ -171,13 +171,13 @@ class ExternalDocument {
          * @static
          */
 
-    public static _enum_for_typeDocument = _enum_for_TypeDocument;        /**
+    public static _enum_for_typeDocument: typeof _enum_for_TypeDocument = _enum_for_TypeDocument;        /**
          * @summary The enum used as the type of the component `availability`
          * @public
          * @static
          */
 
-    public static _enum_for_availability = _enum_for_Availability;
+    public static _enum_for_availability: typeof _enum_for_Availability = _enum_for_Availability;
 }
 
 /**

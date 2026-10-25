@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type BindTokenEncryptedData = EXTERNAL; // ExternalType
 
 
-export const _decode_BindTokenEncryptedData = $._decodeExternal;
+export const _decode_BindTokenEncryptedData: $.ASN1Decoder<_External> = $._decodeExternal;
 
 
-export const _encode_BindTokenEncryptedData = $._encodeExternal;
+export const _encode_BindTokenEncryptedData: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

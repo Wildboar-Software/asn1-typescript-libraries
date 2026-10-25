@@ -24,8 +24,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Kmid = OCTET_STRING; // OctetStringType
-export const _decode_Kmid = $._decodeOctetString;
-export const _encode_Kmid = $._encodeOctetString;
+export const _decode_Kmid: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_Kmid: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

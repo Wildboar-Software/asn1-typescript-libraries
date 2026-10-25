@@ -74,7 +74,7 @@ type LogFullAction = _enum_for_LogFullAction;
  * @enum {number}
  */
 export
-const LogFullAction = _enum_for_LogFullAction;
+const LogFullAction: typeof _enum_for_LogFullAction = _enum_for_LogFullAction;
 
 /**
  * @summary LogFullAction_wrap
@@ -87,7 +87,7 @@ const LogFullAction = _enum_for_LogFullAction;
  * @type {number}
  */
 export
-const LogFullAction_wrap = LogFullAction.wrap; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogFullAction_wrap: 0 = LogFullAction.wrap; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrap
@@ -100,7 +100,7 @@ const LogFullAction_wrap = LogFullAction.wrap; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const wrap = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wrap: 0 = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogFullAction_halt
@@ -113,7 +113,7 @@ const wrap = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LogFullAction_halt = LogFullAction.halt; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogFullAction_halt: 1 = LogFullAction.halt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary halt
@@ -126,7 +126,7 @@ const LogFullAction_halt = LogFullAction.halt; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const halt = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const halt: 1 = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_LogFullAction(el: _Element): LogFullAction {

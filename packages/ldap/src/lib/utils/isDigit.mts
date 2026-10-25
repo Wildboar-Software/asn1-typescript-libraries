@@ -1,5 +1,5 @@
 export
-function isDigit (char: number) {
+function isDigit (char: number): boolean {
     return (
         (char >= 0x30)
         && (char <= 0x39)

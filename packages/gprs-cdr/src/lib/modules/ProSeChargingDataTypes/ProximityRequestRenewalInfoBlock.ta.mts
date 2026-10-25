@@ -129,7 +129,7 @@ class ProximityRequestRenewalInfoBlock {
          * @static
          */
 
-    public static _enum_for_rangeClass = _enum_for_RangeClass;
+    public static _enum_for_rangeClass: typeof _enum_for_RangeClass = _enum_for_RangeClass;
 }
 
 /**

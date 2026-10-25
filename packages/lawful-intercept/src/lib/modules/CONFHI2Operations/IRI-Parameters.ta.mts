@@ -528,13 +528,13 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_confEvent = _enum_for_ConfEvent;        /**
+    public static _enum_for_confEvent: typeof _enum_for_ConfEvent = _enum_for_ConfEvent;        /**
          * @summary The enum used as the type of the component `mediamodification`
          * @public
          * @static
          */
 
-    public static _enum_for_mediamodification = _enum_for_MediaModification;
+    public static _enum_for_mediamodification: typeof _enum_for_MediaModification = _enum_for_MediaModification;
 }
 
 /**

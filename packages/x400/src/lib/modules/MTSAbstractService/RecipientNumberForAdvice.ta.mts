@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RecipientNumberForAdvice = TeletexString; // TeletexString
 
 
-export const _decode_RecipientNumberForAdvice = $._decodeTeletexString;
+export const _decode_RecipientNumberForAdvice: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_RecipientNumberForAdvice = $._encodeTeletexString;
+export const _encode_RecipientNumberForAdvice: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

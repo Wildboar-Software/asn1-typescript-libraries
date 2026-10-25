@@ -132,13 +132,13 @@ class NchfChargingDataRequest {
          * @static
          */
 
-    public static _enum_for_nchfChargingEvent = _enum_for_NchfChargingEvent;        /**
+    public static _enum_for_nchfChargingEvent: typeof _enum_for_NchfChargingEvent = _enum_for_NchfChargingEvent;        /**
          * @summary The enum used as the type of the component `roamerInOut`
          * @public
          * @static
          */
 
-    public static _enum_for_roamerInOut = _enum_for_RoamerInOut;
+    public static _enum_for_roamerInOut: typeof _enum_for_RoamerInOut = _enum_for_RoamerInOut;
 }
 
 /**

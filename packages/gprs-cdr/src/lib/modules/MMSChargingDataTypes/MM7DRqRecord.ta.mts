@@ -348,7 +348,7 @@ class MM7DRqRecord {
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_PriorityType;
+    public static _enum_for_priority: typeof _enum_for_PriorityType = _enum_for_PriorityType;
 }
 
 /**

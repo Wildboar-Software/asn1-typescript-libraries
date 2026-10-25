@@ -87,7 +87,7 @@ type ReqAgentState = _enum_for_ReqAgentState;
  * @enum {number}
  */
 export
-const ReqAgentState = _enum_for_ReqAgentState;
+const ReqAgentState: typeof _enum_for_ReqAgentState = _enum_for_ReqAgentState;
 
 /**
  * @summary ReqAgentState_loggedOn
@@ -98,7 +98,7 @@ const ReqAgentState = _enum_for_ReqAgentState;
  * @type {number}
  */
 export
-const ReqAgentState_loggedOn = ReqAgentState.loggedOn; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqAgentState_loggedOn: _enum_for_ReqAgentState.loggedOn = ReqAgentState.loggedOn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary loggedOn
@@ -106,7 +106,7 @@ const ReqAgentState_loggedOn = ReqAgentState.loggedOn; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const loggedOn = ReqAgentState.loggedOn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const loggedOn: _enum_for_ReqAgentState.loggedOn = ReqAgentState.loggedOn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqAgentState_loggedOff
@@ -117,7 +117,7 @@ const loggedOn = ReqAgentState.loggedOn; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReqAgentState_loggedOff = ReqAgentState.loggedOff; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqAgentState_loggedOff: _enum_for_ReqAgentState.loggedOff = ReqAgentState.loggedOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary loggedOff
@@ -125,7 +125,7 @@ const ReqAgentState_loggedOff = ReqAgentState.loggedOff; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const loggedOff = ReqAgentState.loggedOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const loggedOff: _enum_for_ReqAgentState.loggedOff = ReqAgentState.loggedOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqAgentState_notReady
@@ -136,7 +136,7 @@ const loggedOff = ReqAgentState.loggedOff; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReqAgentState_notReady = ReqAgentState.notReady; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqAgentState_notReady: _enum_for_ReqAgentState.notReady = ReqAgentState.notReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notReady
@@ -144,7 +144,7 @@ const ReqAgentState_notReady = ReqAgentState.notReady; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const notReady = ReqAgentState.notReady; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notReady: _enum_for_ReqAgentState.notReady = ReqAgentState.notReady; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqAgentState_ready
@@ -155,7 +155,7 @@ const notReady = ReqAgentState.notReady; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReqAgentState_ready = ReqAgentState.ready; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqAgentState_ready: _enum_for_ReqAgentState.ready = ReqAgentState.ready; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ready
@@ -163,7 +163,7 @@ const ReqAgentState_ready = ReqAgentState.ready; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ready = ReqAgentState.ready; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ready: _enum_for_ReqAgentState.ready = ReqAgentState.ready; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReqAgentState_workingAfterCall
@@ -174,7 +174,7 @@ const ready = ReqAgentState.ready; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReqAgentState_workingAfterCall = ReqAgentState.workingAfterCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReqAgentState_workingAfterCall: _enum_for_ReqAgentState.workingAfterCall = ReqAgentState.workingAfterCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary workingAfterCall
@@ -182,7 +182,7 @@ const ReqAgentState_workingAfterCall = ReqAgentState.workingAfterCall; /* LONG_N
  * @type {number}
  */
 export
-const workingAfterCall = ReqAgentState.workingAfterCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const workingAfterCall: _enum_for_ReqAgentState.workingAfterCall = ReqAgentState.workingAfterCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ReqAgentState: $.ASN1Decoder<ReqAgentState> | null = null;
 

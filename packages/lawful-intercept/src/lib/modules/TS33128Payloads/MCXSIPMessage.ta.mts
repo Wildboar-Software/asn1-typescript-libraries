@@ -132,7 +132,7 @@ class MCXSIPMessage {
          * @static
          */
 
-    public static _enum_for_sessionDirection = _enum_for_Direction;
+    public static _enum_for_sessionDirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

@@ -133,7 +133,7 @@ class RouteRejectArgument {
          * @static
          */
 
-    public static _enum_for_rejectCause = _enum_for_RejectCause;
+    public static _enum_for_rejectCause: typeof _enum_for_RejectCause = _enum_for_RejectCause;
 }
 
 /**

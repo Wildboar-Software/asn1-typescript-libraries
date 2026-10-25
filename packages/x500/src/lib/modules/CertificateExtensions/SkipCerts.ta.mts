@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type SkipCerts = INTEGER;
 
 
-export const _decode_SkipCerts = $._decodeInteger;
+export const _decode_SkipCerts: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SkipCerts = $._encodeInteger;
+export const _encode_SkipCerts: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

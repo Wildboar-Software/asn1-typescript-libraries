@@ -57,14 +57,14 @@ export type DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implici
  *
  * @enum {number}
  */
-export const DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
+export const DLPolicy_implicit_conversion_prohibited: typeof _enum_for_DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
 
 /**
  * @summary DLPolicy_implicit_conversion_prohibited_unchanged
  * @constant
  * @type {number}
  */
-export const DLPolicy_implicit_conversion_prohibited_unchanged =
+export const DLPolicy_implicit_conversion_prohibited_unchanged: _enum_for_DLPolicy_implicit_conversion_prohibited.unchanged =
     DLPolicy_implicit_conversion_prohibited.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_implicit_conversion_prohibited_unchanged =
  * @constant
  * @type {number}
  */
-export const unchanged =
+export const unchanged: _enum_for_DLPolicy_implicit_conversion_prohibited.unchanged =
     DLPolicy_implicit_conversion_prohibited.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged =
  * @constant
  * @type {number}
  */
-export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_allowed =
+export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_allowed: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_allowed
  * @constant
  * @type {number}
  */
-export const implicit_conversion_allowed =
+export const implicit_conversion_allowed: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const implicit_conversion_allowed =
  * @constant
  * @type {number}
  */
-export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_prohibited =
+export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_prohibited: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_prohibi
  * @constant
  * @type {number}
  */
-export const implicit_conversion_prohibited =
+export const implicit_conversion_prohibited: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Decoder<DLPolicy_implicit_conversion_prohibited> | null = null;

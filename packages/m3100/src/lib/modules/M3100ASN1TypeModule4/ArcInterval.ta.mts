@@ -28,12 +28,12 @@ export type ArcInterval = INTEGER;
 
 
 
-export const _decode_ArcInterval = $._decodeInteger;
+export const _decode_ArcInterval: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ArcInterval = $._encodeInteger;
+export const _encode_ArcInterval: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

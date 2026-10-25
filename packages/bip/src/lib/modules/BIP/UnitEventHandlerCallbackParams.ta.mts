@@ -178,7 +178,7 @@ export class UnitEventHandlerCallbackParams {
    * @static
    */
 
-  public static _enum_for_unitEventType = _enum_for_BioAPI_UNIT_EVENT_TYPE;
+  public static _enum_for_unitEventType: typeof _enum_for_BioAPI_UNIT_EVENT_TYPE = _enum_for_BioAPI_UNIT_EVENT_TYPE;
 }
 
 

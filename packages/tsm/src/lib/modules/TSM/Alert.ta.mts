@@ -91,13 +91,13 @@ class Alert {
          * @static
          */
 
-    public static _enum_for_level = _enum_for_AlertLevel;        /**
+    public static _enum_for_level: typeof _enum_for_AlertLevel = _enum_for_AlertLevel;        /**
          * @summary The enum used as the type of the component `description`
          * @public
          * @static
          */
 
-    public static _enum_for_description = _enum_for_AlertDescription;
+    public static _enum_for_description: typeof _enum_for_AlertDescription = _enum_for_AlertDescription;
 }
 
 /**

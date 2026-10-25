@@ -165,7 +165,7 @@ class SMDeviceTriggerInformation {
          * @static
          */
 
-    public static _enum_for_sMDTPriorityIndication = _enum_for_SMDTPriorityIndication;
+    public static _enum_for_sMDTPriorityIndication: typeof _enum_for_SMDTPriorityIndication = _enum_for_SMDTPriorityIndication;
 }
 
 /**

@@ -18,12 +18,12 @@ export type DHPrivateKey = INTEGER;
 
 
 
-export const _decode_DHPrivateKey = $._decodeInteger;
+export const _decode_DHPrivateKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DHPrivateKey = $._encodeInteger;
+export const _encode_DHPrivateKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

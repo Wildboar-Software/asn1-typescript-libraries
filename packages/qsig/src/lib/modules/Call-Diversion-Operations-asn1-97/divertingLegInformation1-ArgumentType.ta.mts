@@ -117,13 +117,13 @@ class divertingLegInformation1_ArgumentType {
          * @static
          */
 
-    public static _enum_for_diversionReason = _enum_for_DiversionReason;        /**
+    public static _enum_for_diversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;        /**
          * @summary The enum used as the type of the component `subscriptionOption`
          * @public
          * @static
          */
 
-    public static _enum_for_subscriptionOption = _enum_for_SubscriptionOption;
+    public static _enum_for_subscriptionOption: typeof _enum_for_SubscriptionOption = _enum_for_SubscriptionOption;
 }
 
 /**

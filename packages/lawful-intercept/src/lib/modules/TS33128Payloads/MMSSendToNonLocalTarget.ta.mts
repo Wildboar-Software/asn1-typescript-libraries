@@ -476,25 +476,25 @@ class MMSSendToNonLocalTarget {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `messageClass`
          * @public
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_MMSMessageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_MMSMessageClass = _enum_for_MMSMessageClass;        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_MMSPriority;        /**
+    public static _enum_for_priority: typeof _enum_for_MMSPriority = _enum_for_MMSPriority;        /**
          * @summary The enum used as the type of the component `contentClass`
          * @public
          * @static
          */
 
-    public static _enum_for_contentClass = _enum_for_MMSContentClass;
+    public static _enum_for_contentClass: typeof _enum_for_MMSContentClass = _enum_for_MMSContentClass;
 }
 
 /**

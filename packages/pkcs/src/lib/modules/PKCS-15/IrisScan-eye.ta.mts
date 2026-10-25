@@ -48,7 +48,7 @@ export type IrisScan_eye = _enum_for_IrisScan_eye;
  *
  * @enum {number}
  */
-export const IrisScan_eye = _enum_for_IrisScan_eye;
+export const IrisScan_eye: typeof _enum_for_IrisScan_eye = _enum_for_IrisScan_eye;
 
 
 /**
@@ -56,7 +56,7 @@ export const IrisScan_eye = _enum_for_IrisScan_eye;
  * @constant
  * @type {number}
  */
-export const IrisScan_eye_left =
+export const IrisScan_eye_left: _enum_for_IrisScan_eye.left =
     IrisScan_eye.left; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -65,7 +65,7 @@ export const IrisScan_eye_left =
  * @constant
  * @type {number}
  */
-export const left =
+export const left: _enum_for_IrisScan_eye.left =
     IrisScan_eye.left; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const left =
  * @constant
  * @type {number}
  */
-export const IrisScan_eye_right =
+export const IrisScan_eye_right: _enum_for_IrisScan_eye.right =
     IrisScan_eye.right; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,18 +83,18 @@ export const IrisScan_eye_right =
  * @constant
  * @type {number}
  */
-export const right =
+export const right: _enum_for_IrisScan_eye.right =
     IrisScan_eye.right; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_IrisScan_eye = $._decodeEnumerated;
+export const _decode_IrisScan_eye: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_IrisScan_eye = $._encodeEnumerated;
+export const _encode_IrisScan_eye: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -210,14 +210,14 @@ class ExecuteArgument_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceControls () { return ServiceControls._from_object({ _unrecognizedExtensionsList: [] }); }
+    public static get _default_value_for_serviceControls (): ServiceControls { return ServiceControls._from_object({ _unrecognizedExtensionsList: [] }); }
     /**
      * @summary Getter that returns the default value for `operationProgress`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_operationProgress () { return OperationProgress._from_object({ nameResolutionPhase: OperationProgress._enum_for_nameResolutionPhase.notStarted, _unrecognizedExtensionsList: [] }); }
+    public static get _default_value_for_operationProgress (): OperationProgress { return OperationProgress._from_object({ nameResolutionPhase: OperationProgress._enum_for_nameResolutionPhase.notStarted, _unrecognizedExtensionsList: [] }); }
     /**
      * @summary Getter that returns the default value for `entryOnly`.
      * @public
@@ -238,19 +238,19 @@ class ExecuteArgument_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_familyGrouping () { return FamilyGrouping_entryOnly; }        /**
+    public static get _default_value_for_familyGrouping (): _enum_for_FamilyGrouping.entryOnly { return FamilyGrouping_entryOnly; }        /**
          * @summary The enum used as the type of the component `referenceType`
          * @public
          * @static
          */
 
-    public static _enum_for_referenceType = _enum_for_ReferenceType;        /**
+    public static _enum_for_referenceType: typeof _enum_for_ReferenceType = _enum_for_ReferenceType;        /**
          * @summary The enum used as the type of the component `familyGrouping`
          * @public
          * @static
          */
 
-    public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static _enum_for_familyGrouping: typeof _enum_for_FamilyGrouping = _enum_for_FamilyGrouping;
 }
 
 /**

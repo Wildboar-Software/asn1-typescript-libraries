@@ -31,34 +31,34 @@ export type AuthenticationCheck = INTEGER;
  * @constant
  * @type {number}
  */
-export const AuthenticationCheck_validated = 1 satisfies AuthenticationCheck; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationCheck_validated: 1 = 1 satisfies AuthenticationCheck; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_validated
  * @constant
  * @type {number}
  */
-export const validated = AuthenticationCheck_validated; /* SHORT_NAMED_INTEGER_VALUE */
+export const validated: 1 = AuthenticationCheck_validated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_failed
  * @constant
  * @type {number}
  */
-export const AuthenticationCheck_failed = 2 satisfies AuthenticationCheck; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationCheck_failed: 2 = 2 satisfies AuthenticationCheck; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_failed
  * @constant
  * @type {number}
  */
-export const failed = AuthenticationCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
+export const failed: 2 = AuthenticationCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AuthenticationCheck = $._decodeInteger;
+export const _decode_AuthenticationCheck: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AuthenticationCheck = $._encodeInteger;
+export const _encode_AuthenticationCheck: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

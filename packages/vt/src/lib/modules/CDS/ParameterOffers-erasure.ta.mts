@@ -73,8 +73,8 @@ const ParameterOffers_erasure_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = ParameterOffers_erasure_no; /* SHORT_NAMED_BIT */
-export const _decode_ParameterOffers_erasure = $._decodeBitString;
-export const _encode_ParameterOffers_erasure = $._encodeBitString;
+export const _decode_ParameterOffers_erasure: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParameterOffers_erasure: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

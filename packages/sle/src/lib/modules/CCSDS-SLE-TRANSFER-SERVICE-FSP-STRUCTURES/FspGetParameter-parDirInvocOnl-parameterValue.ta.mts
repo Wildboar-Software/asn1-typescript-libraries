@@ -37,7 +37,7 @@ type FspGetParameter_parDirInvocOnl_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parDirInvocOnl_parameterValue_yes = 0 satisfies FspGetParameter_parDirInvocOnl_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parDirInvocOnl_parameterValue_yes: 0 = 0 satisfies FspGetParameter_parDirInvocOnl_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_yes
@@ -49,7 +49,7 @@ const FspGetParameter_parDirInvocOnl_parameterValue_yes = 0 satisfies FspGetPara
  * @type {number}
  */
 export
-const yes = FspGetParameter_parDirInvocOnl_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
+const yes: 0 = FspGetParameter_parDirInvocOnl_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_no
@@ -61,7 +61,7 @@ const yes = FspGetParameter_parDirInvocOnl_parameterValue_yes; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const FspGetParameter_parDirInvocOnl_parameterValue_no = 1 satisfies FspGetParameter_parDirInvocOnl_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parDirInvocOnl_parameterValue_no: 1 = 1 satisfies FspGetParameter_parDirInvocOnl_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parDirInvocOnl_parameterValue_no
@@ -73,7 +73,7 @@ const FspGetParameter_parDirInvocOnl_parameterValue_no = 1 satisfies FspGetParam
  * @type {number}
  */
 export
-const no = FspGetParameter_parDirInvocOnl_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
+const no: 1 = FspGetParameter_parDirInvocOnl_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parDirInvocOnl_parameterValue: $.ASN1Decoder<FspGetParameter_parDirInvocOnl_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parDirInvocOnl_parameterValue: $.ASN1Encoder<FspGetParameter_parDirInvocOnl_parameterValue> = $._encodeInteger;
 

@@ -39,7 +39,7 @@ type DeleteProfileResponse_deleteResult = INTEGER;
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_ok = 0 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_ok: 0 = 0 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_ok
@@ -52,7 +52,7 @@ const DeleteProfileResponse_deleteResult_ok = 0 satisfies DeleteProfileResponse_
  * @type {number}
  */
 export
-const ok = DeleteProfileResponse_deleteResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = DeleteProfileResponse_deleteResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_iccidOrAidNotFound
@@ -64,7 +64,7 @@ const ok = DeleteProfileResponse_deleteResult_ok; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_iccidOrAidNotFound = 1 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_iccidOrAidNotFound: 1 = 1 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_iccidOrAidNotFound
@@ -76,7 +76,7 @@ const DeleteProfileResponse_deleteResult_iccidOrAidNotFound = 1 satisfies Delete
  * @type {number}
  */
 export
-const iccidOrAidNotFound = DeleteProfileResponse_deleteResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound: 1 = DeleteProfileResponse_deleteResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_profileNotInDisabledState
@@ -88,7 +88,7 @@ const iccidOrAidNotFound = DeleteProfileResponse_deleteResult_iccidOrAidNotFound
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_profileNotInDisabledState = 2 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_profileNotInDisabledState: 2 = 2 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_profileNotInDisabledState
@@ -100,7 +100,7 @@ const DeleteProfileResponse_deleteResult_profileNotInDisabledState = 2 satisfies
  * @type {number}
  */
 export
-const profileNotInDisabledState = DeleteProfileResponse_deleteResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState: 2 = DeleteProfileResponse_deleteResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_disallowedByPolicy
@@ -112,7 +112,7 @@ const profileNotInDisabledState = DeleteProfileResponse_deleteResult_profileNotI
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_disallowedByPolicy = 3 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_disallowedByPolicy: 3 = 3 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_disallowedByPolicy
@@ -124,7 +124,7 @@ const DeleteProfileResponse_deleteResult_disallowedByPolicy = 3 satisfies Delete
  * @type {number}
  */
 export
-const disallowedByPolicy = DeleteProfileResponse_deleteResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy: 3 = DeleteProfileResponse_deleteResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_undefinedError
@@ -136,7 +136,7 @@ const disallowedByPolicy = DeleteProfileResponse_deleteResult_disallowedByPolicy
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_undefinedError = 127 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_undefinedError: 127 = 127 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_undefinedError
@@ -148,9 +148,9 @@ const DeleteProfileResponse_deleteResult_undefinedError = 127 satisfies DeletePr
  * @type {number}
  */
 export
-const undefinedError = DeleteProfileResponse_deleteResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteProfileResponse_deleteResult = $._decodeInteger;
-export const _encode_DeleteProfileResponse_deleteResult = $._encodeInteger;
+const undefinedError: 127 = DeleteProfileResponse_deleteResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DeleteProfileResponse_deleteResult: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DeleteProfileResponse_deleteResult: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

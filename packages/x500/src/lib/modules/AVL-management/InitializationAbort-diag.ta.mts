@@ -34,7 +34,7 @@ export type InitializationAbort_diag =
  * @constant
  * @type {number}
  */
-export const InitializationAbort_diag_unsupportedVersion = _enum_for_InitializationAbort_diag.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationAbort_diag_unsupportedVersion: _enum_for_InitializationAbort_diag.unsupportedVersion = _enum_for_InitializationAbort_diag.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedVersion
@@ -45,7 +45,7 @@ export const InitializationAbort_diag_unsupportedVersion = _enum_for_Initializat
  * @constant
  * @type {number}
  */
-export const unsupportedVersion = InitializationAbort_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedVersion: _enum_for_InitializationAbort_diag.unsupportedVersion = InitializationAbort_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InitializationAbort_diag_onlySingleVersionAllowed
@@ -56,7 +56,7 @@ export const unsupportedVersion = InitializationAbort_diag_unsupportedVersion; /
  * @constant
  * @type {number}
  */
-export const InitializationAbort_diag_onlySingleVersionAllowed = _enum_for_InitializationAbort_diag.onlySingleVersionAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationAbort_diag_onlySingleVersionAllowed: _enum_for_InitializationAbort_diag.onlySingleVersionAllowed = _enum_for_InitializationAbort_diag.onlySingleVersionAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlySingleVersionAllowed
@@ -67,13 +67,13 @@ export const InitializationAbort_diag_onlySingleVersionAllowed = _enum_for_Initi
  * @constant
  * @type {number}
  */
-export const onlySingleVersionAllowed = InitializationAbort_diag_onlySingleVersionAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const onlySingleVersionAllowed: _enum_for_InitializationAbort_diag.onlySingleVersionAllowed = InitializationAbort_diag_onlySingleVersionAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_InitializationAbort_diag = $._decodeEnumerated;
+export const _decode_InitializationAbort_diag: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_InitializationAbort_diag = $._encodeEnumerated;
+export const _encode_InitializationAbort_diag: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

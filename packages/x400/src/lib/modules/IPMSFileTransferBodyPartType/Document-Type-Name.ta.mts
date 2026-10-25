@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Document_Type_Name = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_Document_Type_Name = $._decodeObjectIdentifier;
+export const _decode_Document_Type_Name: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_Document_Type_Name = $._encodeObjectIdentifier;
+export const _encode_Document_Type_Name: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

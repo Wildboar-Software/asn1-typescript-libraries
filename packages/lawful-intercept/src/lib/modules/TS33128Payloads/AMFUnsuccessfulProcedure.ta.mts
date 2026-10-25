@@ -292,7 +292,7 @@ class AMFUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_failedProcedureType = _enum_for_AMFFailedProcedureType;
+    public static _enum_for_failedProcedureType: typeof _enum_for_AMFFailedProcedureType = _enum_for_AMFFailedProcedureType;
 }
 
 /**

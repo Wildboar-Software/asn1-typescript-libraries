@@ -111,7 +111,7 @@ class CfuActivated {
          * @static
          */
 
-    public static _enum_for_divOptions = _enum_for_SubscriptionOption;
+    public static _enum_for_divOptions: typeof _enum_for_SubscriptionOption = _enum_for_SubscriptionOption;
 }
 
 /**

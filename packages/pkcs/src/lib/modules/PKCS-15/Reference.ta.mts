@@ -18,12 +18,12 @@ export type Reference = INTEGER;
 
 
 
-export const _decode_Reference = $._decodeInteger;
+export const _decode_Reference: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Reference = $._encodeInteger;
+export const _encode_Reference: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

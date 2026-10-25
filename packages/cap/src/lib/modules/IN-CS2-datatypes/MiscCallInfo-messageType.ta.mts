@@ -65,7 +65,7 @@ type MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
  * @enum {number}
  */
 export
-const MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
+const MiscCallInfo_messageType: typeof _enum_for_MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
 
 /**
  * @summary MiscCallInfo_messageType_request
@@ -73,7 +73,7 @@ const MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
  * @type {number}
  */
 export
-const MiscCallInfo_messageType_request = MiscCallInfo_messageType.request; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_messageType_request: _enum_for_MiscCallInfo_messageType.request = MiscCallInfo_messageType.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -81,7 +81,7 @@ const MiscCallInfo_messageType_request = MiscCallInfo_messageType.request; /* LO
  * @type {number}
  */
 export
-const request = MiscCallInfo_messageType.request; /* SHORT_NAMED_ENUMERATED_VALUE */
+const request: _enum_for_MiscCallInfo_messageType.request = MiscCallInfo_messageType.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_messageType_notification
@@ -89,7 +89,7 @@ const request = MiscCallInfo_messageType.request; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const MiscCallInfo_messageType_notification = MiscCallInfo_messageType.notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_messageType_notification: _enum_for_MiscCallInfo_messageType.notification = MiscCallInfo_messageType.notification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notification
@@ -97,9 +97,9 @@ const MiscCallInfo_messageType_notification = MiscCallInfo_messageType.notificat
  * @type {number}
  */
 export
-const notification = MiscCallInfo_messageType.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_MiscCallInfo_messageType = $._decodeEnumerated;
-export const _encode_MiscCallInfo_messageType = $._encodeEnumerated;
+const notification: _enum_for_MiscCallInfo_messageType.notification = MiscCallInfo_messageType.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_MiscCallInfo_messageType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_MiscCallInfo_messageType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CertificateRevocationLists = OCTET_STRING; // OctetStringType
-export const _decode_CertificateRevocationLists = $._decodeOctetString;
-export const _encode_CertificateRevocationLists = $._encodeOctetString;
+export const _decode_CertificateRevocationLists: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_CertificateRevocationLists: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

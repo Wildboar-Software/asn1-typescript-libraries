@@ -169,10 +169,10 @@ export const Period_months_bitMonth_december: number = 11; /* LONG_NAMED_BIT */
 export const december: number = Period_months_bitMonth_december; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Period_months_bitMonth = $._decodeBitString;
+export const _decode_Period_months_bitMonth: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Period_months_bitMonth = $._encodeBitString;
+export const _encode_Period_months_bitMonth: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

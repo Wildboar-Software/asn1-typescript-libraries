@@ -46,7 +46,7 @@ type IST_SupportIndicator = _enum_for_IST_SupportIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const IST_SupportIndicator_basicISTSupported = _enum_for_IST_SupportIndicator.basicISTSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const IST_SupportIndicator_basicISTSupported: _enum_for_IST_SupportIndicator.basicISTSupported = _enum_for_IST_SupportIndicator.basicISTSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicISTSupported
@@ -58,7 +58,7 @@ const IST_SupportIndicator_basicISTSupported = _enum_for_IST_SupportIndicator.ba
  * @type {number}
  */
 export
-const basicISTSupported = IST_SupportIndicator_basicISTSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicISTSupported: _enum_for_IST_SupportIndicator.basicISTSupported = IST_SupportIndicator_basicISTSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IST_SupportIndicator_istCommandSupported
@@ -72,7 +72,7 @@ const basicISTSupported = IST_SupportIndicator_basicISTSupported; /* SHORT_NAMED
  * @type {number}
  */
 export
-const IST_SupportIndicator_istCommandSupported = _enum_for_IST_SupportIndicator.istCommandSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const IST_SupportIndicator_istCommandSupported: _enum_for_IST_SupportIndicator.istCommandSupported = _enum_for_IST_SupportIndicator.istCommandSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary istCommandSupported
@@ -86,7 +86,7 @@ const IST_SupportIndicator_istCommandSupported = _enum_for_IST_SupportIndicator.
  * @type {number}
  */
 export
-const istCommandSupported = IST_SupportIndicator_istCommandSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const istCommandSupported: _enum_for_IST_SupportIndicator.istCommandSupported = IST_SupportIndicator_istCommandSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) IST_SupportIndicator
@@ -94,7 +94,7 @@ const istCommandSupported = IST_SupportIndicator_istCommandSupported; /* SHORT_N
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IST_SupportIndicator = $._decodeEnumerated;
+export const _decode_IST_SupportIndicator: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IST_SupportIndicator into an ASN.1 Element.
@@ -103,7 +103,7 @@ export const _decode_IST_SupportIndicator = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IST_SupportIndicator, encoded as an ASN.1 Element.
  */
-export const _encode_IST_SupportIndicator = $._encodeEnumerated;
+export const _encode_IST_SupportIndicator: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

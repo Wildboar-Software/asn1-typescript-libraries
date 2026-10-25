@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PDUString = OCTET_STRING; // OctetStringType
 
 
-export const _decode_PDUString = $._decodeOctetString;
+export const _decode_PDUString: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_PDUString = $._encodeOctetString;
+export const _encode_PDUString: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -38,12 +38,12 @@ export type ServiceReportCause = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
 
-export const _decode_ServiceReportCause = $._decodeObjectIdentifier;
+export const _decode_ServiceReportCause: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
 
 
-export const _encode_ServiceReportCause = $._encodeObjectIdentifier;
+export const _encode_ServiceReportCause: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

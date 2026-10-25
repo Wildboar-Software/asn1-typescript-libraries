@@ -570,25 +570,25 @@ class GetLogicalDeviceInformationResult {
      * @static
      * @method
      */
-    public static get _default_value_for_deviceCategory () { return DeviceCategory_station; }        /**
+    public static get _default_value_for_deviceCategory (): _enum_for_DeviceCategory.station { return DeviceCategory_station; }        /**
          * @summary The enum used as the type of the component `deviceCategory`
          * @public
          * @static
          */
 
-    public static _enum_for_deviceCategory = _enum_for_DeviceCategory;        /**
+    public static _enum_for_deviceCategory: typeof _enum_for_DeviceCategory = _enum_for_DeviceCategory;        /**
          * @summary The enum used as the type of the component `namedDeviceTypes`
          * @public
          * @static
          */
 
-    public static _enum_for_namedDeviceTypes = _enum_for_NamedDeviceTypes;        /**
+    public static _enum_for_namedDeviceTypes: typeof _enum_for_NamedDeviceTypes = _enum_for_NamedDeviceTypes;        /**
          * @summary The enum used as the type of the component `appearanceType`
          * @public
          * @static
          */
 
-    public static _enum_for_appearanceType = _enum_for_AppearanceType;
+    public static _enum_for_appearanceType: typeof _enum_for_AppearanceType = _enum_for_AppearanceType;
 }
 
 /**

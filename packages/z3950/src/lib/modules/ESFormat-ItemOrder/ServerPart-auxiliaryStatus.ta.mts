@@ -44,7 +44,7 @@ type ServerPart_auxiliaryStatus = INTEGER;
  * @type {number}
  */
 export
-const ServerPart_auxiliaryStatus_notReceived = 1 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_auxiliaryStatus_notReceived: 1 = 1 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_notReceived
@@ -57,7 +57,7 @@ const ServerPart_auxiliaryStatus_notReceived = 1 satisfies ServerPart_auxiliaryS
  * @type {number}
  */
 export
-const notReceived = ServerPart_auxiliaryStatus_notReceived; /* SHORT_NAMED_INTEGER_VALUE */
+const notReceived: 1 = ServerPart_auxiliaryStatus_notReceived; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_loanQueue
@@ -72,7 +72,7 @@ const notReceived = ServerPart_auxiliaryStatus_notReceived; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const ServerPart_auxiliaryStatus_loanQueue = 2 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_auxiliaryStatus_loanQueue: 2 = 2 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_loanQueue
@@ -85,7 +85,7 @@ const ServerPart_auxiliaryStatus_loanQueue = 2 satisfies ServerPart_auxiliarySta
  * @type {number}
  */
 export
-const loanQueue = ServerPart_auxiliaryStatus_loanQueue; /* SHORT_NAMED_INTEGER_VALUE */
+const loanQueue: 2 = ServerPart_auxiliaryStatus_loanQueue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_forwarded
@@ -100,7 +100,7 @@ const loanQueue = ServerPart_auxiliaryStatus_loanQueue; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ServerPart_auxiliaryStatus_forwarded = 3 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_auxiliaryStatus_forwarded: 3 = 3 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_forwarded
@@ -113,7 +113,7 @@ const ServerPart_auxiliaryStatus_forwarded = 3 satisfies ServerPart_auxiliarySta
  * @type {number}
  */
 export
-const forwarded = ServerPart_auxiliaryStatus_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
+const forwarded: 3 = ServerPart_auxiliaryStatus_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_unfilledCopyright
@@ -128,7 +128,7 @@ const forwarded = ServerPart_auxiliaryStatus_forwarded; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ServerPart_auxiliaryStatus_unfilledCopyright = 4 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_auxiliaryStatus_unfilledCopyright: 4 = 4 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_unfilledCopyright
@@ -141,7 +141,7 @@ const ServerPart_auxiliaryStatus_unfilledCopyright = 4 satisfies ServerPart_auxi
  * @type {number}
  */
 export
-const unfilledCopyright = ServerPart_auxiliaryStatus_unfilledCopyright; /* SHORT_NAMED_INTEGER_VALUE */
+const unfilledCopyright: 4 = ServerPart_auxiliaryStatus_unfilledCopyright; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_filledCopyright
@@ -156,7 +156,7 @@ const unfilledCopyright = ServerPart_auxiliaryStatus_unfilledCopyright; /* SHORT
  * @type {number}
  */
 export
-const ServerPart_auxiliaryStatus_filledCopyright = 5 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ServerPart_auxiliaryStatus_filledCopyright: 5 = 5 satisfies ServerPart_auxiliaryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServerPart_auxiliaryStatus_filledCopyright
@@ -169,7 +169,7 @@ const ServerPart_auxiliaryStatus_filledCopyright = 5 satisfies ServerPart_auxili
  * @type {number}
  */
 export
-const filledCopyright = ServerPart_auxiliaryStatus_filledCopyright; /* SHORT_NAMED_INTEGER_VALUE */
+const filledCopyright: 5 = ServerPart_auxiliaryStatus_filledCopyright; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServerPart_auxiliaryStatus: $.ASN1Decoder<ServerPart_auxiliaryStatus> = $._decodeInteger;
 export const _encode_ServerPart_auxiliaryStatus: $.ASN1Encoder<ServerPart_auxiliaryStatus> = $._encodeInteger;
 

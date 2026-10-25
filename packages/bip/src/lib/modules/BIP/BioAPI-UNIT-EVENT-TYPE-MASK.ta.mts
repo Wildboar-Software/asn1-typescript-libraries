@@ -107,12 +107,12 @@ export const sourceRemoved: number = BioAPI_UNIT_EVENT_TYPE_MASK_sourceRemoved; 
 
 
 
-export const _decode_BioAPI_UNIT_EVENT_TYPE_MASK = $._decodeBitString;
+export const _decode_BioAPI_UNIT_EVENT_TYPE_MASK: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_UNIT_EVENT_TYPE_MASK = $._encodeBitString;
+export const _encode_BioAPI_UNIT_EVENT_TYPE_MASK: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

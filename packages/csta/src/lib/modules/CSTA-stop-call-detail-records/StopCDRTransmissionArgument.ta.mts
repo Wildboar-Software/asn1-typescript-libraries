@@ -111,7 +111,7 @@ class StopCDRTransmissionArgument {
          * @static
          */
 
-    public static _enum_for_cdrTermReason = _enum_for_CDRTermReason;
+    public static _enum_for_cdrTermReason: typeof _enum_for_CDRTermReason = _enum_for_CDRTermReason;
 }
 
 /**

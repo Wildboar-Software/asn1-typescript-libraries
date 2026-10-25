@@ -23,12 +23,12 @@ export type DiffieHellmanPublicNumber = INTEGER;
 
 
 
-export const _decode_DiffieHellmanPublicNumber = $._decodeInteger;
+export const _decode_DiffieHellmanPublicNumber: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DiffieHellmanPublicNumber = $._encodeInteger;
+export const _encode_DiffieHellmanPublicNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

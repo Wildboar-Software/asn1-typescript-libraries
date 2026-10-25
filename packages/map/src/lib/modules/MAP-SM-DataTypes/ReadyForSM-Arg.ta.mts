@@ -149,7 +149,7 @@ class ReadyForSM_Arg {
          * @static
          */
 
-    public static _enum_for_alertReason = _enum_for_AlertReason;
+    public static _enum_for_alertReason: typeof _enum_for_AlertReason = _enum_for_AlertReason;
 }
 
 /**

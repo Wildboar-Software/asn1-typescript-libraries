@@ -104,7 +104,7 @@ type MaximumBitRate = _enum_for_MaximumBitRate;
  * @enum {number}
  */
 export
-const MaximumBitRate = _enum_for_MaximumBitRate;
+const MaximumBitRate: typeof _enum_for_MaximumBitRate = _enum_for_MaximumBitRate;
 
 /**
  * @summary MaximumBitRate_mbr14400BitsPerSecond
@@ -112,7 +112,7 @@ const MaximumBitRate = _enum_for_MaximumBitRate;
  * @type {number}
  */
 export
-const MaximumBitRate_mbr14400BitsPerSecond = MaximumBitRate.mbr14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const MaximumBitRate_mbr14400BitsPerSecond: _enum_for_MaximumBitRate.mbr14400BitsPerSecond = MaximumBitRate.mbr14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mbr14400BitsPerSecond
@@ -120,7 +120,7 @@ const MaximumBitRate_mbr14400BitsPerSecond = MaximumBitRate.mbr14400BitsPerSecon
  * @type {number}
  */
 export
-const mbr14400BitsPerSecond = MaximumBitRate.mbr14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mbr14400BitsPerSecond: _enum_for_MaximumBitRate.mbr14400BitsPerSecond = MaximumBitRate.mbr14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MaximumBitRate_mbr28800BitsPerSecond
@@ -128,7 +128,7 @@ const mbr14400BitsPerSecond = MaximumBitRate.mbr14400BitsPerSecond; /* SHORT_NAM
  * @type {number}
  */
 export
-const MaximumBitRate_mbr28800BitsPerSecond = MaximumBitRate.mbr28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const MaximumBitRate_mbr28800BitsPerSecond: _enum_for_MaximumBitRate.mbr28800BitsPerSecond = MaximumBitRate.mbr28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mbr28800BitsPerSecond
@@ -136,7 +136,7 @@ const MaximumBitRate_mbr28800BitsPerSecond = MaximumBitRate.mbr28800BitsPerSecon
  * @type {number}
  */
 export
-const mbr28800BitsPerSecond = MaximumBitRate.mbr28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mbr28800BitsPerSecond: _enum_for_MaximumBitRate.mbr28800BitsPerSecond = MaximumBitRate.mbr28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MaximumBitRate_mbr32000BitsPerSecond
@@ -144,7 +144,7 @@ const mbr28800BitsPerSecond = MaximumBitRate.mbr28800BitsPerSecond; /* SHORT_NAM
  * @type {number}
  */
 export
-const MaximumBitRate_mbr32000BitsPerSecond = MaximumBitRate.mbr32000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const MaximumBitRate_mbr32000BitsPerSecond: _enum_for_MaximumBitRate.mbr32000BitsPerSecond = MaximumBitRate.mbr32000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mbr32000BitsPerSecond
@@ -152,7 +152,7 @@ const MaximumBitRate_mbr32000BitsPerSecond = MaximumBitRate.mbr32000BitsPerSecon
  * @type {number}
  */
 export
-const mbr32000BitsPerSecond = MaximumBitRate.mbr32000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mbr32000BitsPerSecond: _enum_for_MaximumBitRate.mbr32000BitsPerSecond = MaximumBitRate.mbr32000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MaximumBitRate_mbr33600BitsPerSecond
@@ -160,7 +160,7 @@ const mbr32000BitsPerSecond = MaximumBitRate.mbr32000BitsPerSecond; /* SHORT_NAM
  * @type {number}
  */
 export
-const MaximumBitRate_mbr33600BitsPerSecond = MaximumBitRate.mbr33600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const MaximumBitRate_mbr33600BitsPerSecond: _enum_for_MaximumBitRate.mbr33600BitsPerSecond = MaximumBitRate.mbr33600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mbr33600BitsPerSecond
@@ -168,7 +168,7 @@ const MaximumBitRate_mbr33600BitsPerSecond = MaximumBitRate.mbr33600BitsPerSecon
  * @type {number}
  */
 export
-const mbr33600BitsPerSecond = MaximumBitRate.mbr33600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mbr33600BitsPerSecond: _enum_for_MaximumBitRate.mbr33600BitsPerSecond = MaximumBitRate.mbr33600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MaximumBitRate_mbr56000BitsPerSecond
@@ -176,7 +176,7 @@ const mbr33600BitsPerSecond = MaximumBitRate.mbr33600BitsPerSecond; /* SHORT_NAM
  * @type {number}
  */
 export
-const MaximumBitRate_mbr56000BitsPerSecond = MaximumBitRate.mbr56000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const MaximumBitRate_mbr56000BitsPerSecond: _enum_for_MaximumBitRate.mbr56000BitsPerSecond = MaximumBitRate.mbr56000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mbr56000BitsPerSecond
@@ -184,7 +184,7 @@ const MaximumBitRate_mbr56000BitsPerSecond = MaximumBitRate.mbr56000BitsPerSecon
  * @type {number}
  */
 export
-const mbr56000BitsPerSecond = MaximumBitRate.mbr56000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mbr56000BitsPerSecond: _enum_for_MaximumBitRate.mbr56000BitsPerSecond = MaximumBitRate.mbr56000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MaximumBitRate_mbr57600BitsPerSecond
@@ -192,7 +192,7 @@ const mbr56000BitsPerSecond = MaximumBitRate.mbr56000BitsPerSecond; /* SHORT_NAM
  * @type {number}
  */
 export
-const MaximumBitRate_mbr57600BitsPerSecond = MaximumBitRate.mbr57600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const MaximumBitRate_mbr57600BitsPerSecond: _enum_for_MaximumBitRate.mbr57600BitsPerSecond = MaximumBitRate.mbr57600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mbr57600BitsPerSecond
@@ -200,7 +200,7 @@ const MaximumBitRate_mbr57600BitsPerSecond = MaximumBitRate.mbr57600BitsPerSecon
  * @type {number}
  */
 export
-const mbr57600BitsPerSecond = MaximumBitRate.mbr57600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mbr57600BitsPerSecond: _enum_for_MaximumBitRate.mbr57600BitsPerSecond = MaximumBitRate.mbr57600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MaximumBitRate: $.ASN1Decoder<MaximumBitRate> = $._decodeEnumerated;

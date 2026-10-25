@@ -234,7 +234,7 @@ class CAMELInformationPDP {
          * @static
          */
 
-    public static _enum_for_defaultTransactionHandling = _enum_for_DefaultTransactionHandling;
+    public static _enum_for_defaultTransactionHandling: typeof _enum_for_DefaultTransactionHandling = _enum_for_DefaultTransactionHandling;
 }
 
 /**

@@ -27,7 +27,7 @@ export function _decode_HandOffCenter (el: _Element): HandOffCenter {
     }
     return value;
 }
-export const _encode_HandOffCenter = $._encodeGraphicString;
+export const _encode_HandOffCenter: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -107,7 +107,7 @@ class RegistrationListEntry {
          * @static
          */
 
-    public static _enum_for_registrationType = _enum_for_RegistrationType;
+    public static _enum_for_registrationType: typeof _enum_for_RegistrationType = _enum_for_RegistrationType;
 }
 
 /**

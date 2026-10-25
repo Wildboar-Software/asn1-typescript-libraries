@@ -100,7 +100,7 @@ type PTCType = _enum_for_PTCType | ENUMERATED;
  * @type {number}
  */
 export
-const PTCType_pTCStartofInterception = _enum_for_PTCType.pTCStartofInterception; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCStartofInterception: _enum_for_PTCType.pTCStartofInterception = _enum_for_PTCType.pTCStartofInterception; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCStartofInterception
@@ -111,7 +111,7 @@ const PTCType_pTCStartofInterception = _enum_for_PTCType.pTCStartofInterception;
  * @type {number}
  */
 export
-const pTCStartofInterception = PTCType_pTCStartofInterception; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCStartofInterception: _enum_for_PTCType.pTCStartofInterception = PTCType_pTCStartofInterception; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCServinSystem
@@ -123,7 +123,7 @@ const pTCStartofInterception = PTCType_pTCStartofInterception; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const PTCType_pTCServinSystem = _enum_for_PTCType.pTCServinSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCServinSystem: _enum_for_PTCType.pTCServinSystem = _enum_for_PTCType.pTCServinSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCServinSystem
@@ -134,7 +134,7 @@ const PTCType_pTCServinSystem = _enum_for_PTCType.pTCServinSystem; /* LONG_NAMED
  * @type {number}
  */
 export
-const pTCServinSystem = PTCType_pTCServinSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCServinSystem: _enum_for_PTCType.pTCServinSystem = PTCType_pTCServinSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCSessionInitiation
@@ -146,7 +146,7 @@ const pTCServinSystem = PTCType_pTCServinSystem; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const PTCType_pTCSessionInitiation = _enum_for_PTCType.pTCSessionInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCSessionInitiation: _enum_for_PTCType.pTCSessionInitiation = _enum_for_PTCType.pTCSessionInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCSessionInitiation
@@ -157,7 +157,7 @@ const PTCType_pTCSessionInitiation = _enum_for_PTCType.pTCSessionInitiation; /* 
  * @type {number}
  */
 export
-const pTCSessionInitiation = PTCType_pTCSessionInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCSessionInitiation: _enum_for_PTCType.pTCSessionInitiation = PTCType_pTCSessionInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCSessionAbandonEndRecord
@@ -169,7 +169,7 @@ const pTCSessionInitiation = PTCType_pTCSessionInitiation; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const PTCType_pTCSessionAbandonEndRecord = _enum_for_PTCType.pTCSessionAbandonEndRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCSessionAbandonEndRecord: _enum_for_PTCType.pTCSessionAbandonEndRecord = _enum_for_PTCType.pTCSessionAbandonEndRecord; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCSessionAbandonEndRecord
@@ -180,7 +180,7 @@ const PTCType_pTCSessionAbandonEndRecord = _enum_for_PTCType.pTCSessionAbandonEn
  * @type {number}
  */
 export
-const pTCSessionAbandonEndRecord = PTCType_pTCSessionAbandonEndRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCSessionAbandonEndRecord: _enum_for_PTCType.pTCSessionAbandonEndRecord = PTCType_pTCSessionAbandonEndRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCSessionStartContinueRecord
@@ -192,7 +192,7 @@ const pTCSessionAbandonEndRecord = PTCType_pTCSessionAbandonEndRecord; /* SHORT_
  * @type {number}
  */
 export
-const PTCType_pTCSessionStartContinueRecord = _enum_for_PTCType.pTCSessionStartContinueRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCSessionStartContinueRecord: _enum_for_PTCType.pTCSessionStartContinueRecord = _enum_for_PTCType.pTCSessionStartContinueRecord; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCSessionStartContinueRecord
@@ -203,7 +203,7 @@ const PTCType_pTCSessionStartContinueRecord = _enum_for_PTCType.pTCSessionStartC
  * @type {number}
  */
 export
-const pTCSessionStartContinueRecord = PTCType_pTCSessionStartContinueRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCSessionStartContinueRecord: _enum_for_PTCType.pTCSessionStartContinueRecord = PTCType_pTCSessionStartContinueRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCSessionEndRecord
@@ -215,7 +215,7 @@ const pTCSessionStartContinueRecord = PTCType_pTCSessionStartContinueRecord; /* 
  * @type {number}
  */
 export
-const PTCType_pTCSessionEndRecord = _enum_for_PTCType.pTCSessionEndRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCSessionEndRecord: _enum_for_PTCType.pTCSessionEndRecord = _enum_for_PTCType.pTCSessionEndRecord; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCSessionEndRecord
@@ -226,7 +226,7 @@ const PTCType_pTCSessionEndRecord = _enum_for_PTCType.pTCSessionEndRecord; /* LO
  * @type {number}
  */
 export
-const pTCSessionEndRecord = PTCType_pTCSessionEndRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCSessionEndRecord: _enum_for_PTCType.pTCSessionEndRecord = PTCType_pTCSessionEndRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCPre_EstablishedSessionSessionRecord
@@ -238,7 +238,7 @@ const pTCSessionEndRecord = PTCType_pTCSessionEndRecord; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const PTCType_pTCPre_EstablishedSessionSessionRecord = _enum_for_PTCType.pTCPre_EstablishedSessionSessionRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCPre_EstablishedSessionSessionRecord: _enum_for_PTCType.pTCPre_EstablishedSessionSessionRecord = _enum_for_PTCType.pTCPre_EstablishedSessionSessionRecord; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCPre_EstablishedSessionSessionRecord
@@ -249,7 +249,7 @@ const PTCType_pTCPre_EstablishedSessionSessionRecord = _enum_for_PTCType.pTCPre_
  * @type {number}
  */
 export
-const pTCPre_EstablishedSessionSessionRecord = PTCType_pTCPre_EstablishedSessionSessionRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCPre_EstablishedSessionSessionRecord: _enum_for_PTCType.pTCPre_EstablishedSessionSessionRecord = PTCType_pTCPre_EstablishedSessionSessionRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCInstantPersonalAlert
@@ -261,7 +261,7 @@ const pTCPre_EstablishedSessionSessionRecord = PTCType_pTCPre_EstablishedSession
  * @type {number}
  */
 export
-const PTCType_pTCInstantPersonalAlert = _enum_for_PTCType.pTCInstantPersonalAlert; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCInstantPersonalAlert: _enum_for_PTCType.pTCInstantPersonalAlert = _enum_for_PTCType.pTCInstantPersonalAlert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCInstantPersonalAlert
@@ -272,7 +272,7 @@ const PTCType_pTCInstantPersonalAlert = _enum_for_PTCType.pTCInstantPersonalAler
  * @type {number}
  */
 export
-const pTCInstantPersonalAlert = PTCType_pTCInstantPersonalAlert; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCInstantPersonalAlert: _enum_for_PTCType.pTCInstantPersonalAlert = PTCType_pTCInstantPersonalAlert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCPartyJoin
@@ -284,7 +284,7 @@ const pTCInstantPersonalAlert = PTCType_pTCInstantPersonalAlert; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PTCType_pTCPartyJoin = _enum_for_PTCType.pTCPartyJoin; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCPartyJoin: _enum_for_PTCType.pTCPartyJoin = _enum_for_PTCType.pTCPartyJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCPartyJoin
@@ -295,7 +295,7 @@ const PTCType_pTCPartyJoin = _enum_for_PTCType.pTCPartyJoin; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const pTCPartyJoin = PTCType_pTCPartyJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCPartyJoin: _enum_for_PTCType.pTCPartyJoin = PTCType_pTCPartyJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCPartyDrop
@@ -307,7 +307,7 @@ const pTCPartyJoin = PTCType_pTCPartyJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PTCType_pTCPartyDrop = _enum_for_PTCType.pTCPartyDrop; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCPartyDrop: _enum_for_PTCType.pTCPartyDrop = _enum_for_PTCType.pTCPartyDrop; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCPartyDrop
@@ -318,7 +318,7 @@ const PTCType_pTCPartyDrop = _enum_for_PTCType.pTCPartyDrop; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const pTCPartyDrop = PTCType_pTCPartyDrop; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCPartyDrop: _enum_for_PTCType.pTCPartyDrop = PTCType_pTCPartyDrop; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCPartyHold_RetrieveRecord
@@ -330,7 +330,7 @@ const pTCPartyDrop = PTCType_pTCPartyDrop; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PTCType_pTCPartyHold_RetrieveRecord = _enum_for_PTCType.pTCPartyHold_RetrieveRecord; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCPartyHold_RetrieveRecord: _enum_for_PTCType.pTCPartyHold_RetrieveRecord = _enum_for_PTCType.pTCPartyHold_RetrieveRecord; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCPartyHold_RetrieveRecord
@@ -341,7 +341,7 @@ const PTCType_pTCPartyHold_RetrieveRecord = _enum_for_PTCType.pTCPartyHold_Retri
  * @type {number}
  */
 export
-const pTCPartyHold_RetrieveRecord = PTCType_pTCPartyHold_RetrieveRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCPartyHold_RetrieveRecord: _enum_for_PTCType.pTCPartyHold_RetrieveRecord = PTCType_pTCPartyHold_RetrieveRecord; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCMediaModification
@@ -353,7 +353,7 @@ const pTCPartyHold_RetrieveRecord = PTCType_pTCPartyHold_RetrieveRecord; /* SHOR
  * @type {number}
  */
 export
-const PTCType_pTCMediaModification = _enum_for_PTCType.pTCMediaModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCMediaModification: _enum_for_PTCType.pTCMediaModification = _enum_for_PTCType.pTCMediaModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCMediaModification
@@ -364,7 +364,7 @@ const PTCType_pTCMediaModification = _enum_for_PTCType.pTCMediaModification; /* 
  * @type {number}
  */
 export
-const pTCMediaModification = PTCType_pTCMediaModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCMediaModification: _enum_for_PTCType.pTCMediaModification = PTCType_pTCMediaModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCGroupAdvertizement
@@ -377,7 +377,7 @@ const pTCMediaModification = PTCType_pTCMediaModification; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const PTCType_pTCGroupAdvertizement = _enum_for_PTCType.pTCGroupAdvertizement; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCGroupAdvertizement: _enum_for_PTCType.pTCGroupAdvertizement = _enum_for_PTCType.pTCGroupAdvertizement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroupAdvertizement
@@ -388,7 +388,7 @@ const PTCType_pTCGroupAdvertizement = _enum_for_PTCType.pTCGroupAdvertizement; /
  * @type {number}
  */
 export
-const pTCGroupAdvertizement = PTCType_pTCGroupAdvertizement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroupAdvertizement: _enum_for_PTCType.pTCGroupAdvertizement = PTCType_pTCGroupAdvertizement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCFloorConttrol
@@ -401,7 +401,7 @@ const pTCGroupAdvertizement = PTCType_pTCGroupAdvertizement; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const PTCType_pTCFloorConttrol = _enum_for_PTCType.pTCFloorConttrol; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCFloorConttrol: _enum_for_PTCType.pTCFloorConttrol = _enum_for_PTCType.pTCFloorConttrol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCFloorConttrol
@@ -412,7 +412,7 @@ const PTCType_pTCFloorConttrol = _enum_for_PTCType.pTCFloorConttrol; /* LONG_NAM
  * @type {number}
  */
 export
-const pTCFloorConttrol = PTCType_pTCFloorConttrol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCFloorConttrol: _enum_for_PTCType.pTCFloorConttrol = PTCType_pTCFloorConttrol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCTargetPressence
@@ -425,7 +425,7 @@ const pTCFloorConttrol = PTCType_pTCFloorConttrol; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const PTCType_pTCTargetPressence = _enum_for_PTCType.pTCTargetPressence; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCTargetPressence: _enum_for_PTCType.pTCTargetPressence = _enum_for_PTCType.pTCTargetPressence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCTargetPressence
@@ -436,7 +436,7 @@ const PTCType_pTCTargetPressence = _enum_for_PTCType.pTCTargetPressence; /* LONG
  * @type {number}
  */
 export
-const pTCTargetPressence = PTCType_pTCTargetPressence; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCTargetPressence: _enum_for_PTCType.pTCTargetPressence = PTCType_pTCTargetPressence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCAssociatePressence
@@ -449,7 +449,7 @@ const pTCTargetPressence = PTCType_pTCTargetPressence; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const PTCType_pTCAssociatePressence = _enum_for_PTCType.pTCAssociatePressence; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCAssociatePressence: _enum_for_PTCType.pTCAssociatePressence = _enum_for_PTCType.pTCAssociatePressence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCAssociatePressence
@@ -460,7 +460,7 @@ const PTCType_pTCAssociatePressence = _enum_for_PTCType.pTCAssociatePressence; /
  * @type {number}
  */
 export
-const pTCAssociatePressence = PTCType_pTCAssociatePressence; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCAssociatePressence: _enum_for_PTCType.pTCAssociatePressence = PTCType_pTCAssociatePressence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCListManagementEvents
@@ -473,7 +473,7 @@ const pTCAssociatePressence = PTCType_pTCAssociatePressence; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const PTCType_pTCListManagementEvents = _enum_for_PTCType.pTCListManagementEvents; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCListManagementEvents: _enum_for_PTCType.pTCListManagementEvents = _enum_for_PTCType.pTCListManagementEvents; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCListManagementEvents
@@ -484,7 +484,7 @@ const PTCType_pTCListManagementEvents = _enum_for_PTCType.pTCListManagementEvent
  * @type {number}
  */
 export
-const pTCListManagementEvents = PTCType_pTCListManagementEvents; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCListManagementEvents: _enum_for_PTCType.pTCListManagementEvents = PTCType_pTCListManagementEvents; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCAccessPolicyEvents
@@ -496,7 +496,7 @@ const pTCListManagementEvents = PTCType_pTCListManagementEvents; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PTCType_pTCAccessPolicyEvents = _enum_for_PTCType.pTCAccessPolicyEvents; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCAccessPolicyEvents: _enum_for_PTCType.pTCAccessPolicyEvents = _enum_for_PTCType.pTCAccessPolicyEvents; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCAccessPolicyEvents
@@ -507,7 +507,7 @@ const PTCType_pTCAccessPolicyEvents = _enum_for_PTCType.pTCAccessPolicyEvents; /
  * @type {number}
  */
 export
-const pTCAccessPolicyEvents = PTCType_pTCAccessPolicyEvents; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCAccessPolicyEvents: _enum_for_PTCType.pTCAccessPolicyEvents = PTCType_pTCAccessPolicyEvents; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCMediaTypeNotification
@@ -519,7 +519,7 @@ const pTCAccessPolicyEvents = PTCType_pTCAccessPolicyEvents; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const PTCType_pTCMediaTypeNotification = _enum_for_PTCType.pTCMediaTypeNotification; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCMediaTypeNotification: _enum_for_PTCType.pTCMediaTypeNotification = _enum_for_PTCType.pTCMediaTypeNotification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCMediaTypeNotification
@@ -530,7 +530,7 @@ const PTCType_pTCMediaTypeNotification = _enum_for_PTCType.pTCMediaTypeNotificat
  * @type {number}
  */
 export
-const pTCMediaTypeNotification = PTCType_pTCMediaTypeNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCMediaTypeNotification: _enum_for_PTCType.pTCMediaTypeNotification = PTCType_pTCMediaTypeNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCGroupCallRequest
@@ -543,7 +543,7 @@ const pTCMediaTypeNotification = PTCType_pTCMediaTypeNotification; /* SHORT_NAME
  * @type {number}
  */
 export
-const PTCType_pTCGroupCallRequest = _enum_for_PTCType.pTCGroupCallRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCGroupCallRequest: _enum_for_PTCType.pTCGroupCallRequest = _enum_for_PTCType.pTCGroupCallRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroupCallRequest
@@ -554,7 +554,7 @@ const PTCType_pTCGroupCallRequest = _enum_for_PTCType.pTCGroupCallRequest; /* LO
  * @type {number}
  */
 export
-const pTCGroupCallRequest = PTCType_pTCGroupCallRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroupCallRequest: _enum_for_PTCType.pTCGroupCallRequest = PTCType_pTCGroupCallRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCGroupCallCancel
@@ -567,7 +567,7 @@ const pTCGroupCallRequest = PTCType_pTCGroupCallRequest; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const PTCType_pTCGroupCallCancel = _enum_for_PTCType.pTCGroupCallCancel; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCGroupCallCancel: _enum_for_PTCType.pTCGroupCallCancel = _enum_for_PTCType.pTCGroupCallCancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroupCallCancel
@@ -578,7 +578,7 @@ const PTCType_pTCGroupCallCancel = _enum_for_PTCType.pTCGroupCallCancel; /* LONG
  * @type {number}
  */
 export
-const pTCGroupCallCancel = PTCType_pTCGroupCallCancel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroupCallCancel: _enum_for_PTCType.pTCGroupCallCancel = PTCType_pTCGroupCallCancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCGroupCallResponse
@@ -592,7 +592,7 @@ const pTCGroupCallCancel = PTCType_pTCGroupCallCancel; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const PTCType_pTCGroupCallResponse = _enum_for_PTCType.pTCGroupCallResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCGroupCallResponse: _enum_for_PTCType.pTCGroupCallResponse = _enum_for_PTCType.pTCGroupCallResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroupCallResponse
@@ -603,7 +603,7 @@ const PTCType_pTCGroupCallResponse = _enum_for_PTCType.pTCGroupCallResponse; /* 
  * @type {number}
  */
 export
-const pTCGroupCallResponse = PTCType_pTCGroupCallResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroupCallResponse: _enum_for_PTCType.pTCGroupCallResponse = PTCType_pTCGroupCallResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCGroupCallInterrogate
@@ -616,7 +616,7 @@ const pTCGroupCallResponse = PTCType_pTCGroupCallResponse; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const PTCType_pTCGroupCallInterrogate = _enum_for_PTCType.pTCGroupCallInterrogate; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCGroupCallInterrogate: _enum_for_PTCType.pTCGroupCallInterrogate = _enum_for_PTCType.pTCGroupCallInterrogate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroupCallInterrogate
@@ -627,7 +627,7 @@ const PTCType_pTCGroupCallInterrogate = _enum_for_PTCType.pTCGroupCallInterrogat
  * @type {number}
  */
 export
-const pTCGroupCallInterrogate = PTCType_pTCGroupCallInterrogate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroupCallInterrogate: _enum_for_PTCType.pTCGroupCallInterrogate = PTCType_pTCGroupCallInterrogate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCMCPTTImminentGroupCall
@@ -640,7 +640,7 @@ const pTCGroupCallInterrogate = PTCType_pTCGroupCallInterrogate; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PTCType_pTCMCPTTImminentGroupCall = _enum_for_PTCType.pTCMCPTTImminentGroupCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCMCPTTImminentGroupCall: _enum_for_PTCType.pTCMCPTTImminentGroupCall = _enum_for_PTCType.pTCMCPTTImminentGroupCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCMCPTTImminentGroupCall
@@ -651,7 +651,7 @@ const PTCType_pTCMCPTTImminentGroupCall = _enum_for_PTCType.pTCMCPTTImminentGrou
  * @type {number}
  */
 export
-const pTCMCPTTImminentGroupCall = PTCType_pTCMCPTTImminentGroupCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCMCPTTImminentGroupCall: _enum_for_PTCType.pTCMCPTTImminentGroupCall = PTCType_pTCMCPTTImminentGroupCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCCC
@@ -664,7 +664,7 @@ const pTCMCPTTImminentGroupCall = PTCType_pTCMCPTTImminentGroupCall; /* SHORT_NA
  * @type {number}
  */
 export
-const PTCType_pTCCC = _enum_for_PTCType.pTCCC; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCCC: _enum_for_PTCType.pTCCC = _enum_for_PTCType.pTCCC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCCC
@@ -676,7 +676,7 @@ const PTCType_pTCCC = _enum_for_PTCType.pTCCC; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const pTCCC = PTCType_pTCCC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCCC: _enum_for_PTCType.pTCCC = PTCType_pTCCC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCRegistration
@@ -688,7 +688,7 @@ const pTCCC = PTCType_pTCCC; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PTCType_pTCRegistration = _enum_for_PTCType.pTCRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCRegistration: _enum_for_PTCType.pTCRegistration = _enum_for_PTCType.pTCRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCRegistration
@@ -699,7 +699,7 @@ const PTCType_pTCRegistration = _enum_for_PTCType.pTCRegistration; /* LONG_NAMED
  * @type {number}
  */
 export
-const pTCRegistration = PTCType_pTCRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCRegistration: _enum_for_PTCType.pTCRegistration = PTCType_pTCRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCType_pTCEncryption
@@ -711,7 +711,7 @@ const pTCRegistration = PTCType_pTCRegistration; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const PTCType_pTCEncryption = _enum_for_PTCType.pTCEncryption; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCType_pTCEncryption: _enum_for_PTCType.pTCEncryption = _enum_for_PTCType.pTCEncryption; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCEncryption
@@ -722,7 +722,7 @@ const PTCType_pTCEncryption = _enum_for_PTCType.pTCEncryption; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const pTCEncryption = PTCType_pTCEncryption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCEncryption: _enum_for_PTCType.pTCEncryption = PTCType_pTCEncryption; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCType: $.ASN1Decoder<PTCType> = $._decodeEnumerated;
 export const _encode_PTCType: $.ASN1Encoder<PTCType> = $._encodeEnumerated;
 

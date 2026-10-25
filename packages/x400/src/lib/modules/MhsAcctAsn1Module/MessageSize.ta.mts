@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type MessageSize = INTEGER;
 
 
-export const _decode_MessageSize = $._decodeInteger;
+export const _decode_MessageSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MessageSize = $._encodeInteger;
+export const _encode_MessageSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

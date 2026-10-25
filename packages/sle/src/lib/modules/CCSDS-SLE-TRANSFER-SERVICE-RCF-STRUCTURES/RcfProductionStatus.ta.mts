@@ -46,7 +46,7 @@ type RcfProductionStatus = INTEGER;
  * @type {number}
  */
 export
-const RcfProductionStatus_running = 0 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const RcfProductionStatus_running: 0 = 0 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_running
@@ -58,7 +58,7 @@ const RcfProductionStatus_running = 0 satisfies RcfProductionStatus; /* LONG_NAM
  * @type {number}
  */
 export
-const running = RcfProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
+const running: 0 = RcfProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_interrupted
@@ -73,7 +73,7 @@ const running = RcfProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const RcfProductionStatus_interrupted = 1 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const RcfProductionStatus_interrupted: 1 = 1 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_interrupted
@@ -85,7 +85,7 @@ const RcfProductionStatus_interrupted = 1 satisfies RcfProductionStatus; /* LONG
  * @type {number}
  */
 export
-const interrupted = RcfProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted: 1 = RcfProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_halted
@@ -100,7 +100,7 @@ const interrupted = RcfProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const RcfProductionStatus_halted = 2 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const RcfProductionStatus_halted: 2 = 2 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_halted
@@ -112,7 +112,7 @@ const RcfProductionStatus_halted = 2 satisfies RcfProductionStatus; /* LONG_NAME
  * @type {number}
  */
 export
-const halted = RcfProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
+const halted: 2 = RcfProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RcfProductionStatus: $.ASN1Decoder<RcfProductionStatus> = $._decodeInteger;
 export const _encode_RcfProductionStatus: $.ASN1Encoder<RcfProductionStatus> = $._encodeInteger;
 

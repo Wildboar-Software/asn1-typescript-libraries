@@ -26,5 +26,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type CalledPartyNumber = OCTET_STRING;
-export const _decode_CalledPartyNumber = $._decodeOctetString;
-export const _encode_CalledPartyNumber = $._encodeOctetString;
+export const _decode_CalledPartyNumber: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_CalledPartyNumber: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

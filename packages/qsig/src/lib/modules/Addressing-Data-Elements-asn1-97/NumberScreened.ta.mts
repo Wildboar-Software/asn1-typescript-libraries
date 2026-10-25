@@ -80,7 +80,7 @@ class NumberScreened {
          * @static
          */
 
-    public static _enum_for_screeningIndicator = _enum_for_ScreeningIndicator;
+    public static _enum_for_screeningIndicator: typeof _enum_for_ScreeningIndicator = _enum_for_ScreeningIndicator;
 }
 
 /**

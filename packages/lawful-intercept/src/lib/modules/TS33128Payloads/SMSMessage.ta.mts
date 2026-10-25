@@ -336,25 +336,25 @@ class SMSMessage {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_Direction;        /**
+    public static _enum_for_direction: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `linkTransferStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_linkTransferStatus = _enum_for_SMSTransferStatus;        /**
+    public static _enum_for_linkTransferStatus: typeof _enum_for_SMSTransferStatus = _enum_for_SMSTransferStatus;        /**
          * @summary The enum used as the type of the component `peerNFType`
          * @public
          * @static
          */
 
-    public static _enum_for_peerNFType = _enum_for_SMSNFType;        /**
+    public static _enum_for_peerNFType: typeof _enum_for_SMSNFType = _enum_for_SMSNFType;        /**
          * @summary The enum used as the type of the component `messageType`
          * @public
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_SMSMessageType;
+    public static _enum_for_messageType: typeof _enum_for_SMSMessageType = _enum_for_SMSMessageType;
 }
 
 /**

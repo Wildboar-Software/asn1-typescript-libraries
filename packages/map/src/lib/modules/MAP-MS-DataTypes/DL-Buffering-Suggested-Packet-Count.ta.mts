@@ -50,7 +50,7 @@ export const _decode_DL_Buffering_Suggested_Packet_Count = (el: _Element): DL_Bu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DL_Buffering_Suggested_Packet_Count, encoded as an ASN.1 Element.
  */
-export const _encode_DL_Buffering_Suggested_Packet_Count = $._encodeInteger;
+export const _encode_DL_Buffering_Suggested_Packet_Count: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

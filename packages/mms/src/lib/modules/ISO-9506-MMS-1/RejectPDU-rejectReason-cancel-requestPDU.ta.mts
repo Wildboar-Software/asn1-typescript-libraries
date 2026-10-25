@@ -44,7 +44,7 @@ type RejectPDU_rejectReason_cancel_requestPDU = INTEGER;
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_cancel_requestPDU_other = 0 satisfies RejectPDU_rejectReason_cancel_requestPDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_cancel_requestPDU_other: 0 = 0 satisfies RejectPDU_rejectReason_cancel_requestPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_requestPDU_other
@@ -56,7 +56,7 @@ const RejectPDU_rejectReason_cancel_requestPDU_other = 0 satisfies RejectPDU_rej
  * @type {number}
  */
 export
-const other = RejectPDU_rejectReason_cancel_requestPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = RejectPDU_rejectReason_cancel_requestPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID
@@ -67,7 +67,7 @@ const other = RejectPDU_rejectReason_cancel_requestPDU_other; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID = 1 satisfies RejectPDU_rejectReason_cancel_requestPDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID: 1 = 1 satisfies RejectPDU_rejectReason_cancel_requestPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID
@@ -78,9 +78,9 @@ const RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID = 1 satisfies Re
  * @type {number}
  */
 export
-const invalid_invokeID = RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RejectPDU_rejectReason_cancel_requestPDU = $._decodeInteger;
-export const _encode_RejectPDU_rejectReason_cancel_requestPDU = $._encodeInteger;
+const invalid_invokeID: 1 = RejectPDU_rejectReason_cancel_requestPDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RejectPDU_rejectReason_cancel_requestPDU: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_cancel_requestPDU: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

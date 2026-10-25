@@ -48,7 +48,7 @@ type ServiceError_errorClass_access = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_access_other = 0 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_access_other: 0 = 0 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_other
@@ -60,7 +60,7 @@ const ServiceError_errorClass_access_other = 0 satisfies ServiceError_errorClass
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_access_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_access_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_access_unsupported
@@ -73,7 +73,7 @@ const other = ServiceError_errorClass_access_other; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ServiceError_errorClass_access_object_access_unsupported = 1 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_access_object_access_unsupported: 1 = 1 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_access_unsupported
@@ -86,7 +86,7 @@ const ServiceError_errorClass_access_object_access_unsupported = 1 satisfies Ser
  * @type {number}
  */
 export
-const object_access_unsupported = ServiceError_errorClass_access_object_access_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+const object_access_unsupported: 1 = ServiceError_errorClass_access_object_access_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_non_existent
@@ -98,7 +98,7 @@ const object_access_unsupported = ServiceError_errorClass_access_object_access_u
  * @type {number}
  */
 export
-const ServiceError_errorClass_access_object_non_existent = 2 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_access_object_non_existent: 2 = 2 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_non_existent
@@ -110,7 +110,7 @@ const ServiceError_errorClass_access_object_non_existent = 2 satisfies ServiceEr
  * @type {number}
  */
 export
-const object_non_existent = ServiceError_errorClass_access_object_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
+const object_non_existent: 2 = ServiceError_errorClass_access_object_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_access_denied
@@ -124,7 +124,7 @@ const object_non_existent = ServiceError_errorClass_access_object_non_existent; 
  * @type {number}
  */
 export
-const ServiceError_errorClass_access_object_access_denied = 3 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_access_object_access_denied: 3 = 3 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_access_denied
@@ -138,7 +138,7 @@ const ServiceError_errorClass_access_object_access_denied = 3 satisfies ServiceE
  * @type {number}
  */
 export
-const object_access_denied = ServiceError_errorClass_access_object_access_denied; /* SHORT_NAMED_INTEGER_VALUE */
+const object_access_denied: 3 = ServiceError_errorClass_access_object_access_denied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_invalidated
@@ -151,7 +151,7 @@ const object_access_denied = ServiceError_errorClass_access_object_access_denied
  * @type {number}
  */
 export
-const ServiceError_errorClass_access_object_invalidated = 4 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_access_object_invalidated: 4 = 4 satisfies ServiceError_errorClass_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_access_object_invalidated
@@ -164,9 +164,9 @@ const ServiceError_errorClass_access_object_invalidated = 4 satisfies ServiceErr
  * @type {number}
  */
 export
-const object_invalidated = ServiceError_errorClass_access_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_access = $._decodeInteger;
-export const _encode_ServiceError_errorClass_access = $._encodeInteger;
+const object_invalidated: 4 = ServiceError_errorClass_access_object_invalidated; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_access: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_access: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

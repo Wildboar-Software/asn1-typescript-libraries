@@ -430,7 +430,7 @@ function evaluateEnhancedCertificateAssertion (
  * `enhancedCertificateMatch` on a decoded assertion and certificate.
  * Alias of {@link evaluateEnhancedCertificateAssertion}.
  */
-export const enhancedCertificateMatchTyped = evaluateEnhancedCertificateAssertion;
+export const enhancedCertificateMatchTyped: typeof evaluateEnhancedCertificateAssertion = evaluateEnhancedCertificateAssertion;
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.10

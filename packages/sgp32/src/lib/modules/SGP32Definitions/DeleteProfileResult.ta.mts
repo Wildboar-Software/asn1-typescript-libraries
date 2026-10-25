@@ -51,7 +51,7 @@ type DeleteProfileResult = INTEGER;
  * @type {number}
  */
 export
-const DeleteProfileResult_ok = 0 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_ok: 0 = 0 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_ok
@@ -63,7 +63,7 @@ const DeleteProfileResult_ok = 0 satisfies DeleteProfileResult; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const ok = DeleteProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = DeleteProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_iccidOrAidNotFound
@@ -76,7 +76,7 @@ const ok = DeleteProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DeleteProfileResult_iccidOrAidNotFound = 1 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_iccidOrAidNotFound: 1 = 1 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_iccidOrAidNotFound
@@ -87,7 +87,7 @@ const DeleteProfileResult_iccidOrAidNotFound = 1 satisfies DeleteProfileResult; 
  * @type {number}
  */
 export
-const iccidOrAidNotFound = DeleteProfileResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound: 1 = DeleteProfileResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_profileNotInDisabledState
@@ -101,7 +101,7 @@ const iccidOrAidNotFound = DeleteProfileResult_iccidOrAidNotFound; /* SHORT_NAME
  * @type {number}
  */
 export
-const DeleteProfileResult_profileNotInDisabledState = 2 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_profileNotInDisabledState: 2 = 2 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_profileNotInDisabledState
@@ -113,7 +113,7 @@ const DeleteProfileResult_profileNotInDisabledState = 2 satisfies DeleteProfileR
  * @type {number}
  */
 export
-const profileNotInDisabledState = DeleteProfileResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState: 2 = DeleteProfileResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_disallowedByPolicy
@@ -125,7 +125,7 @@ const profileNotInDisabledState = DeleteProfileResult_profileNotInDisabledState;
  * @type {number}
  */
 export
-const DeleteProfileResult_disallowedByPolicy = 3 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_disallowedByPolicy: 3 = 3 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_disallowedByPolicy
@@ -136,7 +136,7 @@ const DeleteProfileResult_disallowedByPolicy = 3 satisfies DeleteProfileResult; 
  * @type {number}
  */
 export
-const disallowedByPolicy = DeleteProfileResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy: 3 = DeleteProfileResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_rollbackNotAvailable
@@ -151,7 +151,7 @@ const disallowedByPolicy = DeleteProfileResult_disallowedByPolicy; /* SHORT_NAME
  * @type {number}
  */
 export
-const DeleteProfileResult_rollbackNotAvailable = 20 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_rollbackNotAvailable: 20 = 20 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_rollbackNotAvailable
@@ -163,7 +163,7 @@ const DeleteProfileResult_rollbackNotAvailable = 20 satisfies DeleteProfileResul
  * @type {number}
  */
 export
-const rollbackNotAvailable = DeleteProfileResult_rollbackNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const rollbackNotAvailable: 20 = DeleteProfileResult_rollbackNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_returnFallbackProfile
@@ -178,7 +178,7 @@ const rollbackNotAvailable = DeleteProfileResult_rollbackNotAvailable; /* SHORT_
  * @type {number}
  */
 export
-const DeleteProfileResult_returnFallbackProfile = 21 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_returnFallbackProfile: 21 = 21 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_returnFallbackProfile
@@ -190,7 +190,7 @@ const DeleteProfileResult_returnFallbackProfile = 21 satisfies DeleteProfileResu
  * @type {number}
  */
 export
-const returnFallbackProfile = DeleteProfileResult_returnFallbackProfile; /* SHORT_NAMED_INTEGER_VALUE */
+const returnFallbackProfile: 21 = DeleteProfileResult_returnFallbackProfile; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_undefinedError
@@ -202,7 +202,7 @@ const returnFallbackProfile = DeleteProfileResult_returnFallbackProfile; /* SHOR
  * @type {number}
  */
 export
-const DeleteProfileResult_undefinedError = 127 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResult_undefinedError: 127 = 127 satisfies DeleteProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResult_undefinedError
@@ -213,7 +213,7 @@ const DeleteProfileResult_undefinedError = 127 satisfies DeleteProfileResult; /*
  * @type {number}
  */
 export
-const undefinedError = DeleteProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = DeleteProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DeleteProfileResult: $.ASN1Decoder<DeleteProfileResult> = $._decodeInteger;
 export const _encode_DeleteProfileResult: $.ASN1Encoder<DeleteProfileResult> = $._encodeInteger;
 

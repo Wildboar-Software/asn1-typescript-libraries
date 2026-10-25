@@ -87,7 +87,7 @@ type DNDOCapabilityLevel = _enum_for_DNDOCapabilityLevel;
  * @enum {number}
  */
 export
-const DNDOCapabilityLevel = _enum_for_DNDOCapabilityLevel;
+const DNDOCapabilityLevel: typeof _enum_for_DNDOCapabilityLevel = _enum_for_DNDOCapabilityLevel;
 
 /**
  * @summary DNDOCapabilityLevel_overrideLowProt
@@ -100,7 +100,7 @@ const DNDOCapabilityLevel = _enum_for_DNDOCapabilityLevel;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDOCapabilityLevel_overrideLowProt = DNDOCapabilityLevel.overrideLowProt; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDOCapabilityLevel_overrideLowProt: _enum_for_DNDOCapabilityLevel.overrideLowProt = DNDOCapabilityLevel.overrideLowProt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideLowProt
@@ -109,7 +109,7 @@ const DNDOCapabilityLevel_overrideLowProt = DNDOCapabilityLevel.overrideLowProt;
  * @type {number}
  */
 export
-const overrideLowProt = DNDOCapabilityLevel.overrideLowProt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideLowProt: _enum_for_DNDOCapabilityLevel.overrideLowProt = DNDOCapabilityLevel.overrideLowProt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNDOCapabilityLevel_overrideMediumProt
@@ -122,7 +122,7 @@ const overrideLowProt = DNDOCapabilityLevel.overrideLowProt; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDOCapabilityLevel_overrideMediumProt = DNDOCapabilityLevel.overrideMediumProt; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDOCapabilityLevel_overrideMediumProt: _enum_for_DNDOCapabilityLevel.overrideMediumProt = DNDOCapabilityLevel.overrideMediumProt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideMediumProt
@@ -131,7 +131,7 @@ const DNDOCapabilityLevel_overrideMediumProt = DNDOCapabilityLevel.overrideMediu
  * @type {number}
  */
 export
-const overrideMediumProt = DNDOCapabilityLevel.overrideMediumProt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideMediumProt: _enum_for_DNDOCapabilityLevel.overrideMediumProt = DNDOCapabilityLevel.overrideMediumProt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNDOCapabilityLevel_overrideHighProt
@@ -144,7 +144,7 @@ const overrideMediumProt = DNDOCapabilityLevel.overrideMediumProt; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDOCapabilityLevel_overrideHighProt = DNDOCapabilityLevel.overrideHighProt; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDOCapabilityLevel_overrideHighProt: _enum_for_DNDOCapabilityLevel.overrideHighProt = DNDOCapabilityLevel.overrideHighProt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideHighProt
@@ -153,7 +153,7 @@ const DNDOCapabilityLevel_overrideHighProt = DNDOCapabilityLevel.overrideHighPro
  * @type {number}
  */
 export
-const overrideHighProt = DNDOCapabilityLevel.overrideHighProt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideHighProt: _enum_for_DNDOCapabilityLevel.overrideHighProt = DNDOCapabilityLevel.overrideHighProt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DNDOCapabilityLevel: $.ASN1Decoder<DNDOCapabilityLevel> = $._decodeEnumerated;

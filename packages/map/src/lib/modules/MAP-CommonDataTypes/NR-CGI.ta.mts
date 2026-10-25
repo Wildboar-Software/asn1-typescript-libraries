@@ -47,7 +47,7 @@ export const _decode_NR_CGI = (el: _Element): NR_CGI => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NR_CGI, encoded as an ASN.1 Element.
  */
-export const _encode_NR_CGI = $._encodeOctetString;
+export const _encode_NR_CGI: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

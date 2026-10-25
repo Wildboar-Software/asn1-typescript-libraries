@@ -208,7 +208,7 @@ class Journal_Entry_instance {
          * @static
          */
 
-    public static _enum_for_informationType = _enum_for_Journal_Entry_instance_informationType;
+    public static _enum_for_informationType: typeof _enum_for_Journal_Entry_instance_informationType = _enum_for_Journal_Entry_instance_informationType;
 }
 
 /**

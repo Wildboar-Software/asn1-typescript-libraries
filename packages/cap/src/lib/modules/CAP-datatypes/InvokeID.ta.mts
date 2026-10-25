@@ -26,4 +26,4 @@ export const _decode_InvokeID = (el: _Element): InvokeID => {
     }
     return value;
 };
-export const _encode_InvokeID = $._encodeInteger;
+export const _encode_InvokeID: $.ASN1Encoder<INTEGER> = $._encodeInteger;

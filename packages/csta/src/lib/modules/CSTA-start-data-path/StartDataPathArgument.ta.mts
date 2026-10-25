@@ -207,13 +207,13 @@ class StartDataPathArgument {
          * @static
          */
 
-    public static _enum_for_dataPathDirection = _enum_for_DataPathDirection;        /**
+    public static _enum_for_dataPathDirection: typeof _enum_for_DataPathDirection = _enum_for_DataPathDirection;        /**
          * @summary The enum used as the type of the component `dataPathType`
          * @public
          * @static
          */
 
-    public static _enum_for_dataPathType = _enum_for_DataPathType;
+    public static _enum_for_dataPathType: typeof _enum_for_DataPathType = _enum_for_DataPathType;
 }
 
 /**

@@ -58,7 +58,7 @@ export type IdmReject_reason = _enum_for_IdmReject_reason | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_mistypedPDU = _enum_for_IdmReject_reason.mistypedPDU; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_mistypedPDU: _enum_for_IdmReject_reason.mistypedPDU = _enum_for_IdmReject_reason.mistypedPDU; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mistypedPDU
@@ -69,7 +69,7 @@ export const IdmReject_reason_mistypedPDU = _enum_for_IdmReject_reason.mistypedP
  * @constant
  * @type {number}
  */
-export const mistypedPDU = IdmReject_reason_mistypedPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mistypedPDU: _enum_for_IdmReject_reason.mistypedPDU = IdmReject_reason_mistypedPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_duplicateInvokeIDRequest
@@ -80,7 +80,7 @@ export const mistypedPDU = IdmReject_reason_mistypedPDU; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_duplicateInvokeIDRequest = _enum_for_IdmReject_reason.duplicateInvokeIDRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_duplicateInvokeIDRequest: _enum_for_IdmReject_reason.duplicateInvokeIDRequest = _enum_for_IdmReject_reason.duplicateInvokeIDRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicateInvokeIDRequest
@@ -91,7 +91,7 @@ export const IdmReject_reason_duplicateInvokeIDRequest = _enum_for_IdmReject_rea
  * @constant
  * @type {number}
  */
-export const duplicateInvokeIDRequest = IdmReject_reason_duplicateInvokeIDRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicateInvokeIDRequest: _enum_for_IdmReject_reason.duplicateInvokeIDRequest = IdmReject_reason_duplicateInvokeIDRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unsupportedOperationRequest
@@ -102,7 +102,7 @@ export const duplicateInvokeIDRequest = IdmReject_reason_duplicateInvokeIDReques
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unsupportedOperationRequest = _enum_for_IdmReject_reason.unsupportedOperationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unsupportedOperationRequest: _enum_for_IdmReject_reason.unsupportedOperationRequest = _enum_for_IdmReject_reason.unsupportedOperationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedOperationRequest
@@ -113,7 +113,7 @@ export const IdmReject_reason_unsupportedOperationRequest = _enum_for_IdmReject_
  * @constant
  * @type {number}
  */
-export const unsupportedOperationRequest = IdmReject_reason_unsupportedOperationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedOperationRequest: _enum_for_IdmReject_reason.unsupportedOperationRequest = IdmReject_reason_unsupportedOperationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unknownOperationRequest
@@ -124,7 +124,7 @@ export const unsupportedOperationRequest = IdmReject_reason_unsupportedOperation
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unknownOperationRequest = _enum_for_IdmReject_reason.unknownOperationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unknownOperationRequest: _enum_for_IdmReject_reason.unknownOperationRequest = _enum_for_IdmReject_reason.unknownOperationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOperationRequest
@@ -135,7 +135,7 @@ export const IdmReject_reason_unknownOperationRequest = _enum_for_IdmReject_reas
  * @constant
  * @type {number}
  */
-export const unknownOperationRequest = IdmReject_reason_unknownOperationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownOperationRequest: _enum_for_IdmReject_reason.unknownOperationRequest = IdmReject_reason_unknownOperationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_mistypedArgumentRequest
@@ -146,7 +146,7 @@ export const unknownOperationRequest = IdmReject_reason_unknownOperationRequest;
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_mistypedArgumentRequest = _enum_for_IdmReject_reason.mistypedArgumentRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_mistypedArgumentRequest: _enum_for_IdmReject_reason.mistypedArgumentRequest = _enum_for_IdmReject_reason.mistypedArgumentRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mistypedArgumentRequest
@@ -157,7 +157,7 @@ export const IdmReject_reason_mistypedArgumentRequest = _enum_for_IdmReject_reas
  * @constant
  * @type {number}
  */
-export const mistypedArgumentRequest = IdmReject_reason_mistypedArgumentRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mistypedArgumentRequest: _enum_for_IdmReject_reason.mistypedArgumentRequest = IdmReject_reason_mistypedArgumentRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_resourceLimitationRequest
@@ -168,7 +168,7 @@ export const mistypedArgumentRequest = IdmReject_reason_mistypedArgumentRequest;
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_resourceLimitationRequest = _enum_for_IdmReject_reason.resourceLimitationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_resourceLimitationRequest: _enum_for_IdmReject_reason.resourceLimitationRequest = _enum_for_IdmReject_reason.resourceLimitationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceLimitationRequest
@@ -179,7 +179,7 @@ export const IdmReject_reason_resourceLimitationRequest = _enum_for_IdmReject_re
  * @constant
  * @type {number}
  */
-export const resourceLimitationRequest = IdmReject_reason_resourceLimitationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resourceLimitationRequest: _enum_for_IdmReject_reason.resourceLimitationRequest = IdmReject_reason_resourceLimitationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unknownInvokeIDResult
@@ -190,7 +190,7 @@ export const resourceLimitationRequest = IdmReject_reason_resourceLimitationRequ
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unknownInvokeIDResult = _enum_for_IdmReject_reason.unknownInvokeIDResult; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unknownInvokeIDResult: _enum_for_IdmReject_reason.unknownInvokeIDResult = _enum_for_IdmReject_reason.unknownInvokeIDResult; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownInvokeIDResult
@@ -201,7 +201,7 @@ export const IdmReject_reason_unknownInvokeIDResult = _enum_for_IdmReject_reason
  * @constant
  * @type {number}
  */
-export const unknownInvokeIDResult = IdmReject_reason_unknownInvokeIDResult; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownInvokeIDResult: _enum_for_IdmReject_reason.unknownInvokeIDResult = IdmReject_reason_unknownInvokeIDResult; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_mistypedResultRequest
@@ -212,7 +212,7 @@ export const unknownInvokeIDResult = IdmReject_reason_unknownInvokeIDResult; /* 
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_mistypedResultRequest = _enum_for_IdmReject_reason.mistypedResultRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_mistypedResultRequest: _enum_for_IdmReject_reason.mistypedResultRequest = _enum_for_IdmReject_reason.mistypedResultRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mistypedResultRequest
@@ -223,7 +223,7 @@ export const IdmReject_reason_mistypedResultRequest = _enum_for_IdmReject_reason
  * @constant
  * @type {number}
  */
-export const mistypedResultRequest = IdmReject_reason_mistypedResultRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mistypedResultRequest: _enum_for_IdmReject_reason.mistypedResultRequest = IdmReject_reason_mistypedResultRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unknownInvokeIDError
@@ -234,7 +234,7 @@ export const mistypedResultRequest = IdmReject_reason_mistypedResultRequest; /* 
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unknownInvokeIDError = _enum_for_IdmReject_reason.unknownInvokeIDError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unknownInvokeIDError: _enum_for_IdmReject_reason.unknownInvokeIDError = _enum_for_IdmReject_reason.unknownInvokeIDError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownInvokeIDError
@@ -245,7 +245,7 @@ export const IdmReject_reason_unknownInvokeIDError = _enum_for_IdmReject_reason.
  * @constant
  * @type {number}
  */
-export const unknownInvokeIDError = IdmReject_reason_unknownInvokeIDError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownInvokeIDError: _enum_for_IdmReject_reason.unknownInvokeIDError = IdmReject_reason_unknownInvokeIDError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unknownError
@@ -256,7 +256,7 @@ export const unknownInvokeIDError = IdmReject_reason_unknownInvokeIDError; /* SH
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unknownError = _enum_for_IdmReject_reason.unknownError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unknownError: _enum_for_IdmReject_reason.unknownError = _enum_for_IdmReject_reason.unknownError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownError
@@ -267,7 +267,7 @@ export const IdmReject_reason_unknownError = _enum_for_IdmReject_reason.unknownE
  * @constant
  * @type {number}
  */
-export const unknownError = IdmReject_reason_unknownError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownError: _enum_for_IdmReject_reason.unknownError = IdmReject_reason_unknownError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_mistypedParameterError
@@ -278,7 +278,7 @@ export const unknownError = IdmReject_reason_unknownError; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_mistypedParameterError = _enum_for_IdmReject_reason.mistypedParameterError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_mistypedParameterError: _enum_for_IdmReject_reason.mistypedParameterError = _enum_for_IdmReject_reason.mistypedParameterError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mistypedParameterError
@@ -289,7 +289,7 @@ export const IdmReject_reason_mistypedParameterError = _enum_for_IdmReject_reaso
  * @constant
  * @type {number}
  */
-export const mistypedParameterError = IdmReject_reason_mistypedParameterError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mistypedParameterError: _enum_for_IdmReject_reason.mistypedParameterError = IdmReject_reason_mistypedParameterError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unsupportedIdmVersion
@@ -301,7 +301,7 @@ export const mistypedParameterError = IdmReject_reason_mistypedParameterError; /
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unsupportedIdmVersion = _enum_for_IdmReject_reason.unsupportedIdmVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unsupportedIdmVersion: _enum_for_IdmReject_reason.unsupportedIdmVersion = _enum_for_IdmReject_reason.unsupportedIdmVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedIdmVersion
@@ -312,7 +312,7 @@ export const IdmReject_reason_unsupportedIdmVersion = _enum_for_IdmReject_reason
  * @constant
  * @type {number}
  */
-export const unsupportedIdmVersion = IdmReject_reason_unsupportedIdmVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedIdmVersion: _enum_for_IdmReject_reason.unsupportedIdmVersion = IdmReject_reason_unsupportedIdmVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_unsuitableIdmVersion
@@ -324,7 +324,7 @@ export const unsupportedIdmVersion = IdmReject_reason_unsupportedIdmVersion; /* 
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_unsuitableIdmVersion = _enum_for_IdmReject_reason.unsuitableIdmVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_unsuitableIdmVersion: _enum_for_IdmReject_reason.unsuitableIdmVersion = _enum_for_IdmReject_reason.unsuitableIdmVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsuitableIdmVersion
@@ -335,7 +335,7 @@ export const IdmReject_reason_unsuitableIdmVersion = _enum_for_IdmReject_reason.
  * @constant
  * @type {number}
  */
-export const unsuitableIdmVersion = IdmReject_reason_unsuitableIdmVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsuitableIdmVersion: _enum_for_IdmReject_reason.unsuitableIdmVersion = IdmReject_reason_unsuitableIdmVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IdmReject_reason_invalidIdmVersion
@@ -347,7 +347,7 @@ export const unsuitableIdmVersion = IdmReject_reason_unsuitableIdmVersion; /* SH
  * @constant
  * @type {number}
  */
-export const IdmReject_reason_invalidIdmVersion = _enum_for_IdmReject_reason.invalidIdmVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdmReject_reason_invalidIdmVersion: _enum_for_IdmReject_reason.invalidIdmVersion = _enum_for_IdmReject_reason.invalidIdmVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidIdmVersion
@@ -358,13 +358,13 @@ export const IdmReject_reason_invalidIdmVersion = _enum_for_IdmReject_reason.inv
  * @constant
  * @type {number}
  */
-export const invalidIdmVersion = IdmReject_reason_invalidIdmVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidIdmVersion: _enum_for_IdmReject_reason.invalidIdmVersion = IdmReject_reason_invalidIdmVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_IdmReject_reason = $._decodeEnumerated;
+export const _decode_IdmReject_reason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_IdmReject_reason = $._encodeEnumerated;
+export const _encode_IdmReject_reason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

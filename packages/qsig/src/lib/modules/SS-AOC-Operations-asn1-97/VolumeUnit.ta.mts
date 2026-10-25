@@ -78,7 +78,7 @@ type VolumeUnit = _enum_for_VolumeUnit;
  * @enum {number}
  */
 export
-const VolumeUnit = _enum_for_VolumeUnit;
+const VolumeUnit: typeof _enum_for_VolumeUnit = _enum_for_VolumeUnit;
 
 /**
  * @summary VolumeUnit_octet
@@ -89,7 +89,7 @@ const VolumeUnit = _enum_for_VolumeUnit;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const VolumeUnit_octet = VolumeUnit.octet; /* LONG_NAMED_ENUMERATED_VALUE */
+const VolumeUnit_octet: _enum_for_VolumeUnit.octet = VolumeUnit.octet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary octet
@@ -98,7 +98,7 @@ const VolumeUnit_octet = VolumeUnit.octet; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const octet = VolumeUnit.octet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const octet: _enum_for_VolumeUnit.octet = VolumeUnit.octet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VolumeUnit_segment
@@ -113,7 +113,7 @@ const octet = VolumeUnit.octet; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const VolumeUnit_segment = VolumeUnit.segment; /* LONG_NAMED_ENUMERATED_VALUE */
+const VolumeUnit_segment: _enum_for_VolumeUnit.segment = VolumeUnit.segment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary segment
@@ -122,7 +122,7 @@ const VolumeUnit_segment = VolumeUnit.segment; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const segment = VolumeUnit.segment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const segment: _enum_for_VolumeUnit.segment = VolumeUnit.segment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VolumeUnit_message
@@ -137,7 +137,7 @@ const segment = VolumeUnit.segment; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const VolumeUnit_message = VolumeUnit.message; /* LONG_NAMED_ENUMERATED_VALUE */
+const VolumeUnit_message: _enum_for_VolumeUnit.message = VolumeUnit.message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message
@@ -146,7 +146,7 @@ const VolumeUnit_message = VolumeUnit.message; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const message = VolumeUnit.message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message: _enum_for_VolumeUnit.message = VolumeUnit.message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_VolumeUnit: $.ASN1Decoder<VolumeUnit> = $._decodeEnumerated;

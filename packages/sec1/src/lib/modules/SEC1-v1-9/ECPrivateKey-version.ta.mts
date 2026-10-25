@@ -39,7 +39,7 @@ type ECPrivateKey_version = INTEGER;
  * @type {number}
  */
 export
-const ECPrivateKey_version_ecPrivkeyVer1 = 1 satisfies ECPrivateKey_version; /* LONG_NAMED_INTEGER_VALUE */
+const ECPrivateKey_version_ecPrivkeyVer1: 1 = 1 satisfies ECPrivateKey_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ECPrivateKey_version_ecPrivkeyVer1
@@ -51,13 +51,13 @@ const ECPrivateKey_version_ecPrivkeyVer1 = 1 satisfies ECPrivateKey_version; /* 
  * @type {number}
  */
 export
-const ecPrivkeyVer1 = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
+const ecPrivkeyVer1: 1 = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ECPrivateKey_version = $._decodeInteger;
+export const _decode_ECPrivateKey_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ECPrivateKey_version = $._encodeInteger;
+export const _encode_ECPrivateKey_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

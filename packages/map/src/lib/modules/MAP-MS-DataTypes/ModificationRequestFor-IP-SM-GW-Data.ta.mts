@@ -104,7 +104,7 @@ class ModificationRequestFor_IP_SM_GW_Data {
          * @static
          */
 
-    public static _enum_for_modifyRegistrationStatus = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyRegistrationStatus: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

@@ -77,7 +77,7 @@ export const _decode_RequestedEquipmentInfo = (el: _Element): RequestedEquipment
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestedEquipmentInfo, encoded as an ASN.1 Element.
  */
-export const _encode_RequestedEquipmentInfo = $._encodeBitString;
+export const _encode_RequestedEquipmentInfo: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

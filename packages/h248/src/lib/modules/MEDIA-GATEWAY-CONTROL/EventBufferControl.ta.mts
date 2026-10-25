@@ -66,7 +66,7 @@ type EventBufferControl = _enum_for_EventBufferControl | ENUMERATED;
  * @type {number}
  */
 export
-const EventBufferControl_off = _enum_for_EventBufferControl.off; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventBufferControl_off: _enum_for_EventBufferControl.off = _enum_for_EventBufferControl.off; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary off
@@ -74,7 +74,7 @@ const EventBufferControl_off = _enum_for_EventBufferControl.off; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const off = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
+const off: _enum_for_EventBufferControl.off = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventBufferControl_lockStep
@@ -89,7 +89,7 @@ const off = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EventBufferControl_lockStep = _enum_for_EventBufferControl.lockStep; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventBufferControl_lockStep: _enum_for_EventBufferControl.lockStep = _enum_for_EventBufferControl.lockStep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lockStep
@@ -97,9 +97,9 @@ const EventBufferControl_lockStep = _enum_for_EventBufferControl.lockStep; /* LO
  * @type {number}
  */
 export
-const lockStep = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EventBufferControl = $._decodeEnumerated;
-export const _encode_EventBufferControl = $._encodeEnumerated;
+const lockStep: _enum_for_EventBufferControl.lockStep = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_EventBufferControl: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_EventBufferControl: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -39,10 +39,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Identifier = PrintableString; // PrintableString
 
 
-export const _decode_Identifier = $._decodePrintableString;
+export const _decode_Identifier: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_Identifier = $._encodePrintableString;
+export const _encode_Identifier: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

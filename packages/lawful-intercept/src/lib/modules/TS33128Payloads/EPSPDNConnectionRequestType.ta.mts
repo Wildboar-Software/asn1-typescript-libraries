@@ -95,7 +95,7 @@ type EPSPDNConnectionRequestType = _enum_for_EPSPDNConnectionRequestType;
  * @enum {number}
  */
 export
-const EPSPDNConnectionRequestType = _enum_for_EPSPDNConnectionRequestType;
+const EPSPDNConnectionRequestType: typeof _enum_for_EPSPDNConnectionRequestType = _enum_for_EPSPDNConnectionRequestType;
 
 /**
  * @summary EPSPDNConnectionRequestType_initialRequest
@@ -103,7 +103,7 @@ const EPSPDNConnectionRequestType = _enum_for_EPSPDNConnectionRequestType;
  * @type {number}
  */
 export
-const EPSPDNConnectionRequestType_initialRequest = EPSPDNConnectionRequestType.initialRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSPDNConnectionRequestType_initialRequest: _enum_for_EPSPDNConnectionRequestType.initialRequest = EPSPDNConnectionRequestType.initialRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialRequest
@@ -111,7 +111,7 @@ const EPSPDNConnectionRequestType_initialRequest = EPSPDNConnectionRequestType.i
  * @type {number}
  */
 export
-const initialRequest = EPSPDNConnectionRequestType.initialRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialRequest: _enum_for_EPSPDNConnectionRequestType.initialRequest = EPSPDNConnectionRequestType.initialRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSPDNConnectionRequestType_handover
@@ -119,7 +119,7 @@ const initialRequest = EPSPDNConnectionRequestType.initialRequest; /* SHORT_NAME
  * @type {number}
  */
 export
-const EPSPDNConnectionRequestType_handover = EPSPDNConnectionRequestType.handover; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSPDNConnectionRequestType_handover: _enum_for_EPSPDNConnectionRequestType.handover = EPSPDNConnectionRequestType.handover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handover
@@ -127,7 +127,7 @@ const EPSPDNConnectionRequestType_handover = EPSPDNConnectionRequestType.handove
  * @type {number}
  */
 export
-const handover = EPSPDNConnectionRequestType.handover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handover: _enum_for_EPSPDNConnectionRequestType.handover = EPSPDNConnectionRequestType.handover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSPDNConnectionRequestType_rLOS
@@ -135,7 +135,7 @@ const handover = EPSPDNConnectionRequestType.handover; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const EPSPDNConnectionRequestType_rLOS = EPSPDNConnectionRequestType.rLOS; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSPDNConnectionRequestType_rLOS: _enum_for_EPSPDNConnectionRequestType.rLOS = EPSPDNConnectionRequestType.rLOS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rLOS
@@ -143,7 +143,7 @@ const EPSPDNConnectionRequestType_rLOS = EPSPDNConnectionRequestType.rLOS; /* LO
  * @type {number}
  */
 export
-const rLOS = EPSPDNConnectionRequestType.rLOS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rLOS: _enum_for_EPSPDNConnectionRequestType.rLOS = EPSPDNConnectionRequestType.rLOS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSPDNConnectionRequestType_emergency
@@ -151,7 +151,7 @@ const rLOS = EPSPDNConnectionRequestType.rLOS; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const EPSPDNConnectionRequestType_emergency = EPSPDNConnectionRequestType.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSPDNConnectionRequestType_emergency: _enum_for_EPSPDNConnectionRequestType.emergency = EPSPDNConnectionRequestType.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
@@ -159,7 +159,7 @@ const EPSPDNConnectionRequestType_emergency = EPSPDNConnectionRequestType.emerge
  * @type {number}
  */
 export
-const emergency = EPSPDNConnectionRequestType.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergency: _enum_for_EPSPDNConnectionRequestType.emergency = EPSPDNConnectionRequestType.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSPDNConnectionRequestType_handoverOfEmergencyBearerServices
@@ -167,7 +167,7 @@ const emergency = EPSPDNConnectionRequestType.emergency; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const EPSPDNConnectionRequestType_handoverOfEmergencyBearerServices = EPSPDNConnectionRequestType.handoverOfEmergencyBearerServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSPDNConnectionRequestType_handoverOfEmergencyBearerServices: _enum_for_EPSPDNConnectionRequestType.handoverOfEmergencyBearerServices = EPSPDNConnectionRequestType.handoverOfEmergencyBearerServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handoverOfEmergencyBearerServices
@@ -175,7 +175,7 @@ const EPSPDNConnectionRequestType_handoverOfEmergencyBearerServices = EPSPDNConn
  * @type {number}
  */
 export
-const handoverOfEmergencyBearerServices = EPSPDNConnectionRequestType.handoverOfEmergencyBearerServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handoverOfEmergencyBearerServices: _enum_for_EPSPDNConnectionRequestType.handoverOfEmergencyBearerServices = EPSPDNConnectionRequestType.handoverOfEmergencyBearerServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSPDNConnectionRequestType_reserved
@@ -183,7 +183,7 @@ const handoverOfEmergencyBearerServices = EPSPDNConnectionRequestType.handoverOf
  * @type {number}
  */
 export
-const EPSPDNConnectionRequestType_reserved = EPSPDNConnectionRequestType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSPDNConnectionRequestType_reserved: _enum_for_EPSPDNConnectionRequestType.reserved = EPSPDNConnectionRequestType.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -191,7 +191,7 @@ const EPSPDNConnectionRequestType_reserved = EPSPDNConnectionRequestType.reserve
  * @type {number}
  */
 export
-const reserved = EPSPDNConnectionRequestType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved: _enum_for_EPSPDNConnectionRequestType.reserved = EPSPDNConnectionRequestType.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSPDNConnectionRequestType: $.ASN1Decoder<EPSPDNConnectionRequestType> = $._decodeEnumerated;
 export const _encode_EPSPDNConnectionRequestType: $.ASN1Encoder<EPSPDNConnectionRequestType> = $._encodeEnumerated;
 

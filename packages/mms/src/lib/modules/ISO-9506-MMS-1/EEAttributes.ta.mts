@@ -261,7 +261,7 @@ class EEAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_duration () { return current; }
+    public static get _default_value_for_duration (): number { return current; }
 }
 
 /**

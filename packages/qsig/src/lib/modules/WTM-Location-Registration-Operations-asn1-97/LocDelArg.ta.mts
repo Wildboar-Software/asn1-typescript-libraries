@@ -97,13 +97,13 @@ class LocDelArg {
      * @static
      * @method
      */
-    public static get _default_value_for_basicService () { return BasicService_allServices; }        /**
+    public static get _default_value_for_basicService (): _enum_for_BasicService.allServices { return BasicService_allServices; }        /**
          * @summary The enum used as the type of the component `basicService`
          * @public
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

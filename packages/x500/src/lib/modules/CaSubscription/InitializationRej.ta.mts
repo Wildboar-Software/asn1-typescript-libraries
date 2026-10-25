@@ -79,7 +79,7 @@ export class InitializationRej {
      * @static
      */
 
-    public static _enum_for_diag = _enum_for_InitializationRej_diag;
+    public static _enum_for_diag: typeof _enum_for_InitializationRej_diag = _enum_for_InitializationRej_diag;
 }
 
 /**

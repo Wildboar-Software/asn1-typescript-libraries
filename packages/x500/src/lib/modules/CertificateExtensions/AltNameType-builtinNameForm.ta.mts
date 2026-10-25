@@ -38,118 +38,118 @@ export type AltNameType_builtinNameForm =
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_rfc822Name = _enum_for_AltNameType_builtinNameForm.rfc822Name; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_rfc822Name: _enum_for_AltNameType_builtinNameForm.rfc822Name = _enum_for_AltNameType_builtinNameForm.rfc822Name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rfc822Name
  * @constant
  * @type {number}
  */
-export const rfc822Name = AltNameType_builtinNameForm_rfc822Name; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const rfc822Name: _enum_for_AltNameType_builtinNameForm.rfc822Name = AltNameType_builtinNameForm_rfc822Name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_dNSName
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_dNSName = _enum_for_AltNameType_builtinNameForm.dNSName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_dNSName: _enum_for_AltNameType_builtinNameForm.dNSName = _enum_for_AltNameType_builtinNameForm.dNSName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dNSName
  * @constant
  * @type {number}
  */
-export const dNSName = AltNameType_builtinNameForm_dNSName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dNSName: _enum_for_AltNameType_builtinNameForm.dNSName = AltNameType_builtinNameForm_dNSName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_x400Address
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_x400Address = _enum_for_AltNameType_builtinNameForm.x400Address; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_x400Address: _enum_for_AltNameType_builtinNameForm.x400Address = _enum_for_AltNameType_builtinNameForm.x400Address; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary x400Address
  * @constant
  * @type {number}
  */
-export const x400Address = AltNameType_builtinNameForm_x400Address; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const x400Address: _enum_for_AltNameType_builtinNameForm.x400Address = AltNameType_builtinNameForm_x400Address; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_directoryName
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_directoryName = _enum_for_AltNameType_builtinNameForm.directoryName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_directoryName: _enum_for_AltNameType_builtinNameForm.directoryName = _enum_for_AltNameType_builtinNameForm.directoryName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary directoryName
  * @constant
  * @type {number}
  */
-export const directoryName = AltNameType_builtinNameForm_directoryName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const directoryName: _enum_for_AltNameType_builtinNameForm.directoryName = AltNameType_builtinNameForm_directoryName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_ediPartyName
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_ediPartyName = _enum_for_AltNameType_builtinNameForm.ediPartyName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_ediPartyName: _enum_for_AltNameType_builtinNameForm.ediPartyName = _enum_for_AltNameType_builtinNameForm.ediPartyName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ediPartyName
  * @constant
  * @type {number}
  */
-export const ediPartyName = AltNameType_builtinNameForm_ediPartyName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ediPartyName: _enum_for_AltNameType_builtinNameForm.ediPartyName = AltNameType_builtinNameForm_ediPartyName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_uniformResourceIdentifier
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_uniformResourceIdentifier = _enum_for_AltNameType_builtinNameForm.uniformResourceIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_uniformResourceIdentifier: _enum_for_AltNameType_builtinNameForm.uniformResourceIdentifier = _enum_for_AltNameType_builtinNameForm.uniformResourceIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uniformResourceIdentifier
  * @constant
  * @type {number}
  */
-export const uniformResourceIdentifier = AltNameType_builtinNameForm_uniformResourceIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const uniformResourceIdentifier: _enum_for_AltNameType_builtinNameForm.uniformResourceIdentifier = AltNameType_builtinNameForm_uniformResourceIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_iPAddress
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_iPAddress = _enum_for_AltNameType_builtinNameForm.iPAddress; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_iPAddress: _enum_for_AltNameType_builtinNameForm.iPAddress = _enum_for_AltNameType_builtinNameForm.iPAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPAddress
  * @constant
  * @type {number}
  */
-export const iPAddress = AltNameType_builtinNameForm_iPAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const iPAddress: _enum_for_AltNameType_builtinNameForm.iPAddress = AltNameType_builtinNameForm_iPAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AltNameType_builtinNameForm_registeredId
  * @constant
  * @type {number}
  */
-export const AltNameType_builtinNameForm_registeredId = _enum_for_AltNameType_builtinNameForm.registeredId; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AltNameType_builtinNameForm_registeredId: _enum_for_AltNameType_builtinNameForm.registeredId = _enum_for_AltNameType_builtinNameForm.registeredId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registeredId
  * @constant
  * @type {number}
  */
-export const registeredId = AltNameType_builtinNameForm_registeredId; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const registeredId: _enum_for_AltNameType_builtinNameForm.registeredId = AltNameType_builtinNameForm_registeredId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AltNameType_builtinNameForm = $._decodeEnumerated;
+export const _decode_AltNameType_builtinNameForm: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_AltNameType_builtinNameForm = $._encodeEnumerated;
+export const _encode_AltNameType_builtinNameForm: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

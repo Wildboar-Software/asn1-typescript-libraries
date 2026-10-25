@@ -127,7 +127,7 @@ class GeographicalCoordinates {
          * @static
          */
 
-    public static _enum_for_latitudeSign = _enum_for_GeographicalCoordinates_latitudeSign;
+    public static _enum_for_latitudeSign: typeof _enum_for_GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_latitudeSign;
 }
 
 /**

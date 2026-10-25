@@ -66,7 +66,7 @@ type MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
  * @enum {number}
  */
 export
-const MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
+const MiscCallInfo_dpAssignment: typeof _enum_for_MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
 
 /**
  * @summary MiscCallInfo_dpAssignment_individualLine
@@ -74,7 +74,7 @@ const MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_individualLine = MiscCallInfo_dpAssignment.individualLine; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_individualLine: _enum_for_MiscCallInfo_dpAssignment.individualLine = MiscCallInfo_dpAssignment.individualLine; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individualLine
@@ -82,7 +82,7 @@ const MiscCallInfo_dpAssignment_individualLine = MiscCallInfo_dpAssignment.indiv
  * @type {number}
  */
 export
-const individualLine = MiscCallInfo_dpAssignment.individualLine; /* SHORT_NAMED_ENUMERATED_VALUE */
+const individualLine: _enum_for_MiscCallInfo_dpAssignment.individualLine = MiscCallInfo_dpAssignment.individualLine; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_dpAssignment_groupBased
@@ -90,7 +90,7 @@ const individualLine = MiscCallInfo_dpAssignment.individualLine; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_groupBased = MiscCallInfo_dpAssignment.groupBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_groupBased: _enum_for_MiscCallInfo_dpAssignment.groupBased = MiscCallInfo_dpAssignment.groupBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupBased
@@ -98,7 +98,7 @@ const MiscCallInfo_dpAssignment_groupBased = MiscCallInfo_dpAssignment.groupBase
  * @type {number}
  */
 export
-const groupBased = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupBased: _enum_for_MiscCallInfo_dpAssignment.groupBased = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_dpAssignment_officeBased
@@ -106,7 +106,7 @@ const groupBased = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_officeBased = MiscCallInfo_dpAssignment.officeBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_officeBased: _enum_for_MiscCallInfo_dpAssignment.officeBased = MiscCallInfo_dpAssignment.officeBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary officeBased
@@ -114,7 +114,7 @@ const MiscCallInfo_dpAssignment_officeBased = MiscCallInfo_dpAssignment.officeBa
  * @type {number}
  */
 export
-const officeBased = MiscCallInfo_dpAssignment.officeBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const officeBased: _enum_for_MiscCallInfo_dpAssignment.officeBased = MiscCallInfo_dpAssignment.officeBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_MiscCallInfo_dpAssignment(el: _Element): MiscCallInfo_dpAssignment {

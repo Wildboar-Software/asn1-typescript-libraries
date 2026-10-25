@@ -30,7 +30,7 @@ export const _decode_SegmentNumber = (el: _Element): SegmentNumber => {
     }
     return value;
 };
-export const _encode_SegmentNumber = $._encodeInteger;
+export const _encode_SegmentNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

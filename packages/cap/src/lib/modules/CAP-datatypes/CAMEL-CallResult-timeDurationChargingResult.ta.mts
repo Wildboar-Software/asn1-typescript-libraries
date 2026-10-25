@@ -4,6 +4,7 @@ import {
     type NULL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { leg1 } from "../Core-INAP-CS1-DataTypes/leg1.va.mjs";
@@ -107,7 +108,11 @@ export class CAMEL_CallResult_timeDurationChargingResult {
     }
 
     public static get _default_value_for_legActive () { return true; }
-    public static get _default_value_for_aChChargingAddress () { return { legID: { receivingSideID: leg1 } }; }
+    public static get _default_value_for_aChChargingAddress (): {
+        legID: {
+            receivingSideID: OCTET_STRING;
+        };
+    } { return { legID: { receivingSideID: leg1 } }; }
 }
 
 export const _root_component_type_list_1_spec_for_CAMEL_CallResult_timeDurationChargingResult: $.ComponentSpec[] = [

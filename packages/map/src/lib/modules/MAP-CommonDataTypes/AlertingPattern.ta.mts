@@ -39,7 +39,7 @@ type AlertingPattern = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AlertingPattern = $._decodeOctetString;
+export const _decode_AlertingPattern: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) AlertingPattern into an ASN.1 Element.
@@ -48,7 +48,7 @@ export const _decode_AlertingPattern = $._decodeOctetString;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlertingPattern, encoded as an ASN.1 Element.
  */
-export const _encode_AlertingPattern = $._encodeOctetString;
+export const _encode_AlertingPattern: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

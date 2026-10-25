@@ -178,14 +178,14 @@ class GetAlarmSummary_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_acknowledgementFilter () { return not_acked; }
+    public static get _default_value_for_acknowledgementFilter (): 0 { return not_acked; }
     /**
      * @summary Getter that returns the default value for `severityFilter`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_severityFilter () { return GetAlarmSummary_Request_severityFilter._from_object({ mostSevere: 0, leastSevere: 127 }); }
+    public static get _default_value_for_severityFilter (): GetAlarmSummary_Request_severityFilter { return GetAlarmSummary_Request_severityFilter._from_object({ mostSevere: 0, leastSevere: 127 }); }
 }
 
 /**

@@ -203,7 +203,7 @@ class EESEASDiscovery {
          * @static
          */
 
-    public static _enum_for_failureResponse = _enum_for_FailureResponse;
+    public static _enum_for_failureResponse: typeof _enum_for_FailureResponse = _enum_for_FailureResponse;
 }
 
 /**

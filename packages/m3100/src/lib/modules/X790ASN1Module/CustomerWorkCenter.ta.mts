@@ -28,12 +28,12 @@ export type CustomerWorkCenter = GraphicString; // GraphicString
 
 
 
-export const _decode_CustomerWorkCenter = $._decodeGraphicString;
+export const _decode_CustomerWorkCenter: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CustomerWorkCenter = $._encodeGraphicString;
+export const _encode_CustomerWorkCenter: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

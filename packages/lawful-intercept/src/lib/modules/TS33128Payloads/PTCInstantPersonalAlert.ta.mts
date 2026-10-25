@@ -127,7 +127,7 @@ class PTCInstantPersonalAlert {
          * @static
          */
 
-    public static _enum_for_pTCIPADirection = _enum_for_Direction;
+    public static _enum_for_pTCIPADirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

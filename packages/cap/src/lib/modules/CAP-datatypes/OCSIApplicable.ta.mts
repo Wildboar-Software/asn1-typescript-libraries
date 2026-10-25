@@ -22,5 +22,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type OCSIApplicable = NULL;
-export const _decode_OCSIApplicable = $._decodeNull;
-export const _encode_OCSIApplicable = $._encodeNull;
+export const _decode_OCSIApplicable: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_OCSIApplicable: $.ASN1Encoder<null> = $._encodeNull;

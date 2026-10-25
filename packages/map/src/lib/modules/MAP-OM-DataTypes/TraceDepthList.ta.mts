@@ -324,121 +324,121 @@ class TraceDepthList {
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_msc_s_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_mgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `sgsn_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_sgsn_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_sgsn_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `ggsn_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_ggsn_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_ggsn_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `rnc_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_rnc_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `bmsc_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_bmsc_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_bmsc_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mme_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_mme_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_mme_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `sgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_sgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_sgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `pgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_pgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_pgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `eNB_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_eNB_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_eNB_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `msc_s_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_msc_s_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_mgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `sgsn_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_sgsn_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_sgsn_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `ggsn_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_ggsn_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_ggsn_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `rnc_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_rnc_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `bmsc_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_bmsc_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_bmsc_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `mme_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_mme_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_mme_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `sgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_sgw_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_sgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `pgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_pgw_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_pgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `eNB_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_eNB_TraceDepthExtension = _enum_for_TraceDepthExtension;
+    public static _enum_for_eNB_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;
 }
 
 /**

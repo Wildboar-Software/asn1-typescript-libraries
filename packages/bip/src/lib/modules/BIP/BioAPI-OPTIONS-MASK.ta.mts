@@ -335,12 +335,12 @@ export const coarseScores: number = BioAPI_OPTIONS_MASK_coarseScores; /* SHORT_N
 
 
 
-export const _decode_BioAPI_OPTIONS_MASK = $._decodeBitString;
+export const _decode_BioAPI_OPTIONS_MASK: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_OPTIONS_MASK = $._encodeBitString;
+export const _encode_BioAPI_OPTIONS_MASK: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

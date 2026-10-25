@@ -239,14 +239,14 @@ export class PropertyList {
      * @static
      */
 
-    public static _enum_for_getReplace = _enum_for_PropertyList_getReplace;
+    public static _enum_for_getReplace: typeof _enum_for_PropertyList_getReplace = _enum_for_PropertyList_getReplace;
     /**
      * @summary The enum used as the type of the component `addRemove`
      * @public
      * @static
      */
 
-    public static _enum_for_addRemove = _enum_for_PropertyList_addRemove;
+    public static _enum_for_addRemove: typeof _enum_for_PropertyList_addRemove = _enum_for_PropertyList_addRemove;
 }
 
 

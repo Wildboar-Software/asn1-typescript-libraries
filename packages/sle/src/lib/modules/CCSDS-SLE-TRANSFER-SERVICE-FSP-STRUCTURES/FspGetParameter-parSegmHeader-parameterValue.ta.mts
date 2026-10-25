@@ -38,7 +38,7 @@ type FspGetParameter_parSegmHeader_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parSegmHeader_parameterValue_present = 0 satisfies FspGetParameter_parSegmHeader_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parSegmHeader_parameterValue_present: 0 = 0 satisfies FspGetParameter_parSegmHeader_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_present
@@ -49,7 +49,7 @@ const FspGetParameter_parSegmHeader_parameterValue_present = 0 satisfies FspGetP
  * @type {number}
  */
 export
-const present = FspGetParameter_parSegmHeader_parameterValue_present; /* SHORT_NAMED_INTEGER_VALUE */
+const present: 0 = FspGetParameter_parSegmHeader_parameterValue_present; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_absent
@@ -62,7 +62,7 @@ const present = FspGetParameter_parSegmHeader_parameterValue_present; /* SHORT_N
  * @type {number}
  */
 export
-const FspGetParameter_parSegmHeader_parameterValue_absent = 1 satisfies FspGetParameter_parSegmHeader_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parSegmHeader_parameterValue_absent: 1 = 1 satisfies FspGetParameter_parSegmHeader_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parSegmHeader_parameterValue_absent
@@ -73,7 +73,7 @@ const FspGetParameter_parSegmHeader_parameterValue_absent = 1 satisfies FspGetPa
  * @type {number}
  */
 export
-const absent = FspGetParameter_parSegmHeader_parameterValue_absent; /* SHORT_NAMED_INTEGER_VALUE */
+const absent: 1 = FspGetParameter_parSegmHeader_parameterValue_absent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parSegmHeader_parameterValue: $.ASN1Decoder<FspGetParameter_parSegmHeader_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parSegmHeader_parameterValue: $.ASN1Encoder<FspGetParameter_parSegmHeader_parameterValue> = $._encodeInteger;
 

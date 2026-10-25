@@ -1129,7 +1129,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iRIversion = _enum_for_IRI_Parameters_iRIversion;        /**
+    public static _enum_for_iRIversion: typeof _enum_for_IRI_Parameters_iRIversion = _enum_for_IRI_Parameters_iRIversion;        /**
          * @summary The enum used as the type of the component `initiator`
          * @description
          * 
@@ -1141,7 +1141,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_IRI_Parameters_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator;        /**
          * @summary The enum used as the type of the component `gPRSevent`
          * @description
          * 
@@ -1153,7 +1153,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_gPRSevent = _enum_for_GPRSEvent;        /**
+    public static _enum_for_gPRSevent: typeof _enum_for_GPRSEvent = _enum_for_GPRSEvent;        /**
          * @summary The enum used as the type of the component `iMSevent`
          * @description
          * 
@@ -1165,7 +1165,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iMSevent = _enum_for_IMSevent;        /**
+    public static _enum_for_iMSevent: typeof _enum_for_IMSevent = _enum_for_IMSevent;        /**
          * @summary The enum used as the type of the component `ldiEvent`
          * @description
          * 
@@ -1177,7 +1177,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_ldiEvent = _enum_for_LDIevent;        /**
+    public static _enum_for_ldiEvent: typeof _enum_for_LDIevent = _enum_for_LDIevent;        /**
          * @summary The enum used as the type of the component `mediaSecFailureIndication`
          * @description
          * 
@@ -1189,7 +1189,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_mediaSecFailureIndication = _enum_for_MediaSecFailureIndication;        /**
+    public static _enum_for_mediaSecFailureIndication: typeof _enum_for_MediaSecFailureIndication = _enum_for_MediaSecFailureIndication;        /**
          * @summary The enum used as the type of the component `requesting_Node_Type`
          * @description
          * 
@@ -1201,7 +1201,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_requesting_Node_Type = _enum_for_Requesting_Node_Type;        /**
+    public static _enum_for_requesting_Node_Type: typeof _enum_for_Requesting_Node_Type = _enum_for_Requesting_Node_Type;        /**
          * @summary The enum used as the type of the component `cSREvent`
          * @description
          * 
@@ -1212,7 +1212,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_cSREvent = _enum_for_CSREvent;
+    public static _enum_for_cSREvent: typeof _enum_for_CSREvent = _enum_for_CSREvent;
 }
 
 /**

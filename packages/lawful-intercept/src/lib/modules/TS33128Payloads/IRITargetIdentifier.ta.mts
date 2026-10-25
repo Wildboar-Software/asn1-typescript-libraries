@@ -80,7 +80,7 @@ class IRITargetIdentifier {
          * @static
          */
 
-    public static _enum_for_provenance = _enum_for_TargetIdentifierProvenance;
+    public static _enum_for_provenance: typeof _enum_for_TargetIdentifierProvenance = _enum_for_TargetIdentifierProvenance;
 }
 
 /**

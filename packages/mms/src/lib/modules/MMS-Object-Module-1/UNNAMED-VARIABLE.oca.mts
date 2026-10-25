@@ -135,7 +135,7 @@ type UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
  * @enum {number}
  */
 export
-const UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
+const UNNAMED_VARIABLE_accessMethod: typeof _enum_for_UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
 
 /**
  * @summary UNNAMED_VARIABLE_accessMethod_public
@@ -143,6 +143,6 @@ const UNNAMED_VARIABLE_accessMethod = _enum_for_UNNAMED_VARIABLE_accessMethod;
  * @type {number}
  */
 export
-const UNNAMED_VARIABLE_accessMethod_public = UNNAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
+const UNNAMED_VARIABLE_accessMethod_public: _enum_for_UNNAMED_VARIABLE_accessMethod.public = UNNAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

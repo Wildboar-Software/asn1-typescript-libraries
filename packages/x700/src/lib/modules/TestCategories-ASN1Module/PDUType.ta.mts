@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PDUType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_PDUType = $._decodeObjectIdentifier;
+export const _decode_PDUType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_PDUType = $._encodeObjectIdentifier;
+export const _encode_PDUType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

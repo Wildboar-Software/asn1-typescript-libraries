@@ -28,12 +28,12 @@ export type SelectionPriority = INTEGER;
 
 
 
-export const _decode_SelectionPriority = $._decodeInteger;
+export const _decode_SelectionPriority: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_SelectionPriority = $._encodeInteger;
+export const _encode_SelectionPriority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

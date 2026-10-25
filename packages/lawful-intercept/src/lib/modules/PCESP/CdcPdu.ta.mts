@@ -116,7 +116,7 @@ class CdcPdu {
          * @static
          */
 
-    public static _enum_for_protocolVersion = _enum_for_ProtocolVersion;
+    public static _enum_for_protocolVersion: typeof _enum_for_ProtocolVersion = _enum_for_ProtocolVersion;
 }
 
 /**

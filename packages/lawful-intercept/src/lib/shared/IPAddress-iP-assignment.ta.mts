@@ -96,7 +96,7 @@ type IPAddress_iP_assignment = _enum_for_IPAddress_iP_assignment | ENUMERATED;
  * @type {number}
  */
 export
-const IPAddress_iP_assignment_static_ = _enum_for_IPAddress_iP_assignment.static_; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPAddress_iP_assignment_static_: _enum_for_IPAddress_iP_assignment.static_ = _enum_for_IPAddress_iP_assignment.static_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary static_
@@ -112,7 +112,7 @@ const IPAddress_iP_assignment_static_ = _enum_for_IPAddress_iP_assignment.static
  * @type {number}
  */
 export
-const static_ = IPAddress_iP_assignment_static_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const static_: _enum_for_IPAddress_iP_assignment.static_ = IPAddress_iP_assignment_static_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPAddress_iP_assignment_dynamic
@@ -128,7 +128,7 @@ const static_ = IPAddress_iP_assignment_static_; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const IPAddress_iP_assignment_dynamic = _enum_for_IPAddress_iP_assignment.dynamic; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPAddress_iP_assignment_dynamic: _enum_for_IPAddress_iP_assignment.dynamic = _enum_for_IPAddress_iP_assignment.dynamic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic
@@ -144,7 +144,7 @@ const IPAddress_iP_assignment_dynamic = _enum_for_IPAddress_iP_assignment.dynami
  * @type {number}
  */
 export
-const dynamic = IPAddress_iP_assignment_dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dynamic: _enum_for_IPAddress_iP_assignment.dynamic = IPAddress_iP_assignment_dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPAddress_iP_assignment_notKnown
@@ -161,7 +161,7 @@ const dynamic = IPAddress_iP_assignment_dynamic; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const IPAddress_iP_assignment_notKnown = _enum_for_IPAddress_iP_assignment.notKnown; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPAddress_iP_assignment_notKnown: _enum_for_IPAddress_iP_assignment.notKnown = _enum_for_IPAddress_iP_assignment.notKnown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notKnown
@@ -178,7 +178,7 @@ const IPAddress_iP_assignment_notKnown = _enum_for_IPAddress_iP_assignment.notKn
  * @type {number}
  */
 export
-const notKnown = IPAddress_iP_assignment_notKnown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notKnown: _enum_for_IPAddress_iP_assignment.notKnown = IPAddress_iP_assignment_notKnown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IPAddress_iP_assignment: $.ASN1Decoder<IPAddress_iP_assignment> = $._decodeEnumerated;
 export const _encode_IPAddress_iP_assignment: $.ASN1Encoder<IPAddress_iP_assignment> = $._encodeEnumerated;
 

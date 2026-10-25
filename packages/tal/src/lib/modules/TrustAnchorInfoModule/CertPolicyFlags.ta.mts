@@ -114,10 +114,10 @@ export
 const inhibitAnyPolicy: number = CertPolicyFlags_inhibitAnyPolicy; /* SHORT_NAMED_BIT */
 
 
-export const _decode_CertPolicyFlags = $._decodeBitString;
+export const _decode_CertPolicyFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_CertPolicyFlags = $._encodeBitString;
+export const _encode_CertPolicyFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -81,7 +81,7 @@ type ServiceOption = _enum_for_ServiceOption;
  * @enum {number}
  */
 export
-const ServiceOption = _enum_for_ServiceOption;
+const ServiceOption: typeof _enum_for_ServiceOption = _enum_for_ServiceOption;
 
 /**
  * @summary ServiceOption_inCallRegistration
@@ -96,7 +96,7 @@ const ServiceOption = _enum_for_ServiceOption;
  * @type {number}
  */
 export
-const ServiceOption_inCallRegistration = ServiceOption.inCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceOption_inCallRegistration: _enum_for_ServiceOption.inCallRegistration = ServiceOption.inCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inCallRegistration
@@ -105,7 +105,7 @@ const ServiceOption_inCallRegistration = ServiceOption.inCallRegistration; /* LO
  * @type {number}
  */
 export
-const inCallRegistration = ServiceOption.inCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inCallRegistration: _enum_for_ServiceOption.inCallRegistration = ServiceOption.inCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceOption_outCallRegistration
@@ -121,7 +121,7 @@ const inCallRegistration = ServiceOption.inCallRegistration; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const ServiceOption_outCallRegistration = ServiceOption.outCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceOption_outCallRegistration: _enum_for_ServiceOption.outCallRegistration = ServiceOption.outCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outCallRegistration
@@ -130,7 +130,7 @@ const ServiceOption_outCallRegistration = ServiceOption.outCallRegistration; /* 
  * @type {number}
  */
 export
-const outCallRegistration = ServiceOption.outCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outCallRegistration: _enum_for_ServiceOption.outCallRegistration = ServiceOption.outCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceOption_allCallRegistration
@@ -146,7 +146,7 @@ const outCallRegistration = ServiceOption.outCallRegistration; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const ServiceOption_allCallRegistration = ServiceOption.allCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceOption_allCallRegistration: _enum_for_ServiceOption.allCallRegistration = ServiceOption.allCallRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allCallRegistration
@@ -155,7 +155,7 @@ const ServiceOption_allCallRegistration = ServiceOption.allCallRegistration; /* 
  * @type {number}
  */
 export
-const allCallRegistration = ServiceOption.allCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allCallRegistration: _enum_for_ServiceOption.allCallRegistration = ServiceOption.allCallRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ServiceOption: $.ASN1Decoder<ServiceOption> = $._decodeEnumerated;

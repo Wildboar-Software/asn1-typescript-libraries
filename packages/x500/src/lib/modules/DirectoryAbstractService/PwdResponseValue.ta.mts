@@ -97,7 +97,7 @@ export class PwdResponseValue {
      * @static
      */
 
-    public static _enum_for_error = _enum_for_PwdResponseValue_error;
+    public static _enum_for_error: typeof _enum_for_PwdResponseValue_error = _enum_for_PwdResponseValue_error;
 }
 
 /**

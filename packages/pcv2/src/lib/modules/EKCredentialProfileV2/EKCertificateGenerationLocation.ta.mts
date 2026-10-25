@@ -104,7 +104,7 @@ type EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocation
  * @enum {number}
  */
 export
-const EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocation;
+const EKCertificateGenerationLocation: typeof _enum_for_EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocation;
 
 /**
  * @summary EKCertificateGenerationLocation_tpmManufacturer
@@ -120,7 +120,7 @@ const EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocatio
  * @type {number}
  */
 export
-const EKCertificateGenerationLocation_tpmManufacturer = EKCertificateGenerationLocation.tpmManufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKCertificateGenerationLocation_tpmManufacturer: _enum_for_EKCertificateGenerationLocation.tpmManufacturer = EKCertificateGenerationLocation.tpmManufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tpmManufacturer
@@ -136,7 +136,7 @@ const EKCertificateGenerationLocation_tpmManufacturer = EKCertificateGenerationL
  * @type {number}
  */
 export
-const tpmManufacturer = EKCertificateGenerationLocation.tpmManufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tpmManufacturer: _enum_for_EKCertificateGenerationLocation.tpmManufacturer = EKCertificateGenerationLocation.tpmManufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKCertificateGenerationLocation_platformManufacturer
@@ -152,7 +152,7 @@ const tpmManufacturer = EKCertificateGenerationLocation.tpmManufacturer; /* SHOR
  * @type {number}
  */
 export
-const EKCertificateGenerationLocation_platformManufacturer = EKCertificateGenerationLocation.platformManufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKCertificateGenerationLocation_platformManufacturer: _enum_for_EKCertificateGenerationLocation.platformManufacturer = EKCertificateGenerationLocation.platformManufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary platformManufacturer
@@ -168,7 +168,7 @@ const EKCertificateGenerationLocation_platformManufacturer = EKCertificateGenera
  * @type {number}
  */
 export
-const platformManufacturer = EKCertificateGenerationLocation.platformManufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const platformManufacturer: _enum_for_EKCertificateGenerationLocation.platformManufacturer = EKCertificateGenerationLocation.platformManufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKCertificateGenerationLocation_ekCertSigner
@@ -184,7 +184,7 @@ const platformManufacturer = EKCertificateGenerationLocation.platformManufacture
  * @type {number}
  */
 export
-const EKCertificateGenerationLocation_ekCertSigner = EKCertificateGenerationLocation.ekCertSigner; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKCertificateGenerationLocation_ekCertSigner: _enum_for_EKCertificateGenerationLocation.ekCertSigner = EKCertificateGenerationLocation.ekCertSigner; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ekCertSigner
@@ -200,7 +200,7 @@ const EKCertificateGenerationLocation_ekCertSigner = EKCertificateGenerationLoca
  * @type {number}
  */
 export
-const ekCertSigner = EKCertificateGenerationLocation.ekCertSigner; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ekCertSigner: _enum_for_EKCertificateGenerationLocation.ekCertSigner = EKCertificateGenerationLocation.ekCertSigner; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_EKCertificateGenerationLocation: $.ASN1Decoder<EKCertificateGenerationLocation> = $._decodeEnumerated;

@@ -34,12 +34,12 @@ export type CommunicationsEntityId = GraphicString; // GraphicString
 
 
 
-export const _decode_CommunicationsEntityId = $._decodeGraphicString;
+export const _decode_CommunicationsEntityId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CommunicationsEntityId = $._encodeGraphicString;
+export const _encode_CommunicationsEntityId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -61,7 +61,7 @@ type TerminationCause = _enum_for_TerminationCause | ENUMERATED;
  * @type {number}
  */
 export
-const TerminationCause_normal = _enum_for_TerminationCause.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_normal: _enum_for_TerminationCause.normal = _enum_for_TerminationCause.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -73,7 +73,7 @@ const TerminationCause_normal = _enum_for_TerminationCause.normal; /* LONG_NAMED
  * @type {number}
  */
 export
-const normal = TerminationCause_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_TerminationCause.normal = TerminationCause_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_errorundefined
@@ -85,7 +85,7 @@ const normal = TerminationCause_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TerminationCause_errorundefined = _enum_for_TerminationCause.errorundefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_errorundefined: _enum_for_TerminationCause.errorundefined = _enum_for_TerminationCause.errorundefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorundefined
@@ -97,7 +97,7 @@ const TerminationCause_errorundefined = _enum_for_TerminationCause.errorundefine
  * @type {number}
  */
 export
-const errorundefined = TerminationCause_errorundefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorundefined: _enum_for_TerminationCause.errorundefined = TerminationCause_errorundefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_internalTimeout
@@ -109,7 +109,7 @@ const errorundefined = TerminationCause_errorundefined; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TerminationCause_internalTimeout = _enum_for_TerminationCause.internalTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_internalTimeout: _enum_for_TerminationCause.internalTimeout = _enum_for_TerminationCause.internalTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalTimeout
@@ -121,7 +121,7 @@ const TerminationCause_internalTimeout = _enum_for_TerminationCause.internalTime
  * @type {number}
  */
 export
-const internalTimeout = TerminationCause_internalTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internalTimeout: _enum_for_TerminationCause.internalTimeout = TerminationCause_internalTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_congestion
@@ -133,7 +133,7 @@ const internalTimeout = TerminationCause_internalTimeout; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TerminationCause_congestion = _enum_for_TerminationCause.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_congestion: _enum_for_TerminationCause.congestion = _enum_for_TerminationCause.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -145,7 +145,7 @@ const TerminationCause_congestion = _enum_for_TerminationCause.congestion; /* LO
  * @type {number}
  */
 export
-const congestion = TerminationCause_congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion: _enum_for_TerminationCause.congestion = TerminationCause_congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_mt_lrRestart
@@ -158,7 +158,7 @@ const congestion = TerminationCause_congestion; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const TerminationCause_mt_lrRestart = _enum_for_TerminationCause.mt_lrRestart; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_mt_lrRestart: _enum_for_TerminationCause.mt_lrRestart = _enum_for_TerminationCause.mt_lrRestart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mt_lrRestart
@@ -171,7 +171,7 @@ const TerminationCause_mt_lrRestart = _enum_for_TerminationCause.mt_lrRestart; /
  * @type {number}
  */
 export
-const mt_lrRestart = TerminationCause_mt_lrRestart; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mt_lrRestart: _enum_for_TerminationCause.mt_lrRestart = TerminationCause_mt_lrRestart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_privacyViolation
@@ -183,7 +183,7 @@ const mt_lrRestart = TerminationCause_mt_lrRestart; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const TerminationCause_privacyViolation = _enum_for_TerminationCause.privacyViolation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_privacyViolation: _enum_for_TerminationCause.privacyViolation = _enum_for_TerminationCause.privacyViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privacyViolation
@@ -195,7 +195,7 @@ const TerminationCause_privacyViolation = _enum_for_TerminationCause.privacyViol
  * @type {number}
  */
 export
-const privacyViolation = TerminationCause_privacyViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privacyViolation: _enum_for_TerminationCause.privacyViolation = TerminationCause_privacyViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_shapeOfLocationEstimateNotSupported
@@ -208,7 +208,7 @@ const privacyViolation = TerminationCause_privacyViolation; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TerminationCause_shapeOfLocationEstimateNotSupported = _enum_for_TerminationCause.shapeOfLocationEstimateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_shapeOfLocationEstimateNotSupported: _enum_for_TerminationCause.shapeOfLocationEstimateNotSupported = _enum_for_TerminationCause.shapeOfLocationEstimateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shapeOfLocationEstimateNotSupported
@@ -221,7 +221,7 @@ const TerminationCause_shapeOfLocationEstimateNotSupported = _enum_for_Terminati
  * @type {number}
  */
 export
-const shapeOfLocationEstimateNotSupported = TerminationCause_shapeOfLocationEstimateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shapeOfLocationEstimateNotSupported: _enum_for_TerminationCause.shapeOfLocationEstimateNotSupported = TerminationCause_shapeOfLocationEstimateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_subscriberTermination
@@ -233,7 +233,7 @@ const shapeOfLocationEstimateNotSupported = TerminationCause_shapeOfLocationEsti
  * @type {number}
  */
 export
-const TerminationCause_subscriberTermination = _enum_for_TerminationCause.subscriberTermination; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_subscriberTermination: _enum_for_TerminationCause.subscriberTermination = _enum_for_TerminationCause.subscriberTermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriberTermination
@@ -245,7 +245,7 @@ const TerminationCause_subscriberTermination = _enum_for_TerminationCause.subscr
  * @type {number}
  */
 export
-const subscriberTermination = TerminationCause_subscriberTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriberTermination: _enum_for_TerminationCause.subscriberTermination = TerminationCause_subscriberTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_uETermination
@@ -257,7 +257,7 @@ const subscriberTermination = TerminationCause_subscriberTermination; /* SHORT_N
  * @type {number}
  */
 export
-const TerminationCause_uETermination = _enum_for_TerminationCause.uETermination; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_uETermination: _enum_for_TerminationCause.uETermination = _enum_for_TerminationCause.uETermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uETermination
@@ -269,7 +269,7 @@ const TerminationCause_uETermination = _enum_for_TerminationCause.uETermination;
  * @type {number}
  */
 export
-const uETermination = TerminationCause_uETermination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uETermination: _enum_for_TerminationCause.uETermination = TerminationCause_uETermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminationCause_networkTermination
@@ -281,7 +281,7 @@ const uETermination = TerminationCause_uETermination; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TerminationCause_networkTermination = _enum_for_TerminationCause.networkTermination; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminationCause_networkTermination: _enum_for_TerminationCause.networkTermination = _enum_for_TerminationCause.networkTermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkTermination
@@ -293,7 +293,7 @@ const TerminationCause_networkTermination = _enum_for_TerminationCause.networkTe
  * @type {number}
  */
 export
-const networkTermination = TerminationCause_networkTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkTermination: _enum_for_TerminationCause.networkTermination = TerminationCause_networkTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TerminationCause
@@ -301,7 +301,7 @@ const networkTermination = TerminationCause_networkTermination; /* SHORT_NAMED_E
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TerminationCause = $._decodeEnumerated;
+export const _decode_TerminationCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TerminationCause into an ASN.1 Element.
@@ -310,7 +310,7 @@ export const _decode_TerminationCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TerminationCause, encoded as an ASN.1 Element.
  */
-export const _encode_TerminationCause = $._encodeEnumerated;
+export const _encode_TerminationCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

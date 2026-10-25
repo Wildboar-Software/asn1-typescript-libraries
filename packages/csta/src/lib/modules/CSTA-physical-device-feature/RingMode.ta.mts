@@ -69,7 +69,7 @@ type RingMode = _enum_for_RingMode;
  * @enum {number}
  */
 export
-const RingMode = _enum_for_RingMode;
+const RingMode: typeof _enum_for_RingMode = _enum_for_RingMode;
 
 /**
  * @summary RingMode_ringing
@@ -81,7 +81,7 @@ const RingMode = _enum_for_RingMode;
  * @type {number}
  */
 export
-const RingMode_ringing = RingMode.ringing; /* LONG_NAMED_ENUMERATED_VALUE */
+const RingMode_ringing: _enum_for_RingMode.ringing = RingMode.ringing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringing
@@ -89,7 +89,7 @@ const RingMode_ringing = RingMode.ringing; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ringing = RingMode.ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringing: _enum_for_RingMode.ringing = RingMode.ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RingMode_notRinging
@@ -101,7 +101,7 @@ const ringing = RingMode.ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RingMode_notRinging = RingMode.notRinging; /* LONG_NAMED_ENUMERATED_VALUE */
+const RingMode_notRinging: _enum_for_RingMode.notRinging = RingMode.notRinging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notRinging
@@ -109,7 +109,7 @@ const RingMode_notRinging = RingMode.notRinging; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const notRinging = RingMode.notRinging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notRinging: _enum_for_RingMode.notRinging = RingMode.notRinging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RingMode: $.ASN1Decoder<RingMode> | null = null;
 

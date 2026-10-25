@@ -88,7 +88,7 @@ type PDNConnectionType = _enum_for_PDNConnectionType;
  * @enum {number}
  */
 export
-const PDNConnectionType = _enum_for_PDNConnectionType;
+const PDNConnectionType: typeof _enum_for_PDNConnectionType = _enum_for_PDNConnectionType;
 
 /**
  * @summary PDNConnectionType_iPv4
@@ -96,7 +96,7 @@ const PDNConnectionType = _enum_for_PDNConnectionType;
  * @type {number}
  */
 export
-const PDNConnectionType_iPv4 = PDNConnectionType.iPv4; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_iPv4: _enum_for_PDNConnectionType.iPv4 = PDNConnectionType.iPv4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4
@@ -104,7 +104,7 @@ const PDNConnectionType_iPv4 = PDNConnectionType.iPv4; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const iPv4 = PDNConnectionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4: _enum_for_PDNConnectionType.iPv4 = PDNConnectionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_iPv6
@@ -112,7 +112,7 @@ const iPv4 = PDNConnectionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PDNConnectionType_iPv6 = PDNConnectionType.iPv6; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_iPv6: _enum_for_PDNConnectionType.iPv6 = PDNConnectionType.iPv6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv6
@@ -120,7 +120,7 @@ const PDNConnectionType_iPv6 = PDNConnectionType.iPv6; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const iPv6 = PDNConnectionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv6: _enum_for_PDNConnectionType.iPv6 = PDNConnectionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_iPv4v6
@@ -128,7 +128,7 @@ const iPv6 = PDNConnectionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PDNConnectionType_iPv4v6 = PDNConnectionType.iPv4v6; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_iPv4v6: _enum_for_PDNConnectionType.iPv4v6 = PDNConnectionType.iPv4v6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4v6
@@ -136,7 +136,7 @@ const PDNConnectionType_iPv4v6 = PDNConnectionType.iPv4v6; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const iPv4v6 = PDNConnectionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4v6: _enum_for_PDNConnectionType.iPv4v6 = PDNConnectionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_nonIP
@@ -144,7 +144,7 @@ const iPv4v6 = PDNConnectionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PDNConnectionType_nonIP = PDNConnectionType.nonIP; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_nonIP: _enum_for_PDNConnectionType.nonIP = PDNConnectionType.nonIP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonIP
@@ -152,7 +152,7 @@ const PDNConnectionType_nonIP = PDNConnectionType.nonIP; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const nonIP = PDNConnectionType.nonIP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonIP: _enum_for_PDNConnectionType.nonIP = PDNConnectionType.nonIP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDNConnectionType_ethernet
@@ -160,7 +160,7 @@ const nonIP = PDNConnectionType.nonIP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PDNConnectionType_ethernet = PDNConnectionType.ethernet; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDNConnectionType_ethernet: _enum_for_PDNConnectionType.ethernet = PDNConnectionType.ethernet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ethernet
@@ -168,7 +168,7 @@ const PDNConnectionType_ethernet = PDNConnectionType.ethernet; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const ethernet = PDNConnectionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ethernet: _enum_for_PDNConnectionType.ethernet = PDNConnectionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PDNConnectionType: $.ASN1Decoder<PDNConnectionType> = $._decodeEnumerated;
 export const _encode_PDNConnectionType: $.ASN1Encoder<PDNConnectionType> = $._encodeEnumerated;
 

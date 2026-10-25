@@ -50,7 +50,7 @@ type LCS_FormatIndicator = _enum_for_LCS_FormatIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const LCS_FormatIndicator_logicalName = _enum_for_LCS_FormatIndicator.logicalName; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_FormatIndicator_logicalName: _enum_for_LCS_FormatIndicator.logicalName = _enum_for_LCS_FormatIndicator.logicalName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary logicalName
@@ -62,7 +62,7 @@ const LCS_FormatIndicator_logicalName = _enum_for_LCS_FormatIndicator.logicalNam
  * @type {number}
  */
 export
-const logicalName = LCS_FormatIndicator_logicalName; /* SHORT_NAMED_ENUMERATED_VALUE */
+const logicalName: _enum_for_LCS_FormatIndicator.logicalName = LCS_FormatIndicator_logicalName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_FormatIndicator_e_mailAddress
@@ -74,7 +74,7 @@ const logicalName = LCS_FormatIndicator_logicalName; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const LCS_FormatIndicator_e_mailAddress = _enum_for_LCS_FormatIndicator.e_mailAddress; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_FormatIndicator_e_mailAddress: _enum_for_LCS_FormatIndicator.e_mailAddress = _enum_for_LCS_FormatIndicator.e_mailAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mailAddress
@@ -86,7 +86,7 @@ const LCS_FormatIndicator_e_mailAddress = _enum_for_LCS_FormatIndicator.e_mailAd
  * @type {number}
  */
 export
-const e_mailAddress = LCS_FormatIndicator_e_mailAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mailAddress: _enum_for_LCS_FormatIndicator.e_mailAddress = LCS_FormatIndicator_e_mailAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_FormatIndicator_msisdn
@@ -98,7 +98,7 @@ const e_mailAddress = LCS_FormatIndicator_e_mailAddress; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const LCS_FormatIndicator_msisdn = _enum_for_LCS_FormatIndicator.msisdn; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_FormatIndicator_msisdn: _enum_for_LCS_FormatIndicator.msisdn = _enum_for_LCS_FormatIndicator.msisdn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msisdn
@@ -110,7 +110,7 @@ const LCS_FormatIndicator_msisdn = _enum_for_LCS_FormatIndicator.msisdn; /* LONG
  * @type {number}
  */
 export
-const msisdn = LCS_FormatIndicator_msisdn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msisdn: _enum_for_LCS_FormatIndicator.msisdn = LCS_FormatIndicator_msisdn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_FormatIndicator_url
@@ -122,7 +122,7 @@ const msisdn = LCS_FormatIndicator_msisdn; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LCS_FormatIndicator_url = _enum_for_LCS_FormatIndicator.url; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_FormatIndicator_url: _enum_for_LCS_FormatIndicator.url = _enum_for_LCS_FormatIndicator.url; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary url
@@ -134,7 +134,7 @@ const LCS_FormatIndicator_url = _enum_for_LCS_FormatIndicator.url; /* LONG_NAMED
  * @type {number}
  */
 export
-const url = LCS_FormatIndicator_url; /* SHORT_NAMED_ENUMERATED_VALUE */
+const url: _enum_for_LCS_FormatIndicator.url = LCS_FormatIndicator_url; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_FormatIndicator_sipUrl
@@ -146,7 +146,7 @@ const url = LCS_FormatIndicator_url; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LCS_FormatIndicator_sipUrl = _enum_for_LCS_FormatIndicator.sipUrl; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_FormatIndicator_sipUrl: _enum_for_LCS_FormatIndicator.sipUrl = _enum_for_LCS_FormatIndicator.sipUrl; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sipUrl
@@ -158,7 +158,7 @@ const LCS_FormatIndicator_sipUrl = _enum_for_LCS_FormatIndicator.sipUrl; /* LONG
  * @type {number}
  */
 export
-const sipUrl = LCS_FormatIndicator_sipUrl; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sipUrl: _enum_for_LCS_FormatIndicator.sipUrl = LCS_FormatIndicator_sipUrl; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_FormatIndicator
@@ -166,7 +166,7 @@ const sipUrl = LCS_FormatIndicator_sipUrl; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LCS_FormatIndicator = $._decodeEnumerated;
+export const _decode_LCS_FormatIndicator: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCS_FormatIndicator into an ASN.1 Element.
@@ -175,7 +175,7 @@ export const _decode_LCS_FormatIndicator = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_FormatIndicator, encoded as an ASN.1 Element.
  */
-export const _encode_LCS_FormatIndicator = $._encodeEnumerated;
+export const _encode_LCS_FormatIndicator: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

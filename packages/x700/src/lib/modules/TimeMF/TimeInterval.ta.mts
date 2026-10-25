@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TimeInterval = OCTET_STRING; // OctetStringType
 
 
-export const _decode_TimeInterval = $._decodeOctetString;
+export const _decode_TimeInterval: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_TimeInterval = $._encodeOctetString;
+export const _encode_TimeInterval: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -60,7 +60,7 @@ export const _decode_MGW_EventList = (el: _Element): MGW_EventList => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MGW_EventList, encoded as an ASN.1 Element.
  */
-export const _encode_MGW_EventList = $._encodeBitString;
+export const _encode_MGW_EventList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

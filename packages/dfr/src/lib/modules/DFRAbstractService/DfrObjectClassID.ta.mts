@@ -35,8 +35,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DfrObjectClassID = OBJECT_IDENTIFIER; // ObjectIdentifierType
-export const _decode_DfrObjectClassID = $._decodeObjectIdentifier;
-export const _encode_DfrObjectClassID = $._encodeObjectIdentifier;
+export const _decode_DfrObjectClassID: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
+export const _encode_DfrObjectClassID: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

@@ -50,7 +50,7 @@ type AlarmAckRule = INTEGER;
  * @type {number}
  */
 export
-const AlarmAckRule_none = 0 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmAckRule_none: 0 = 0 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_none
@@ -63,7 +63,7 @@ const AlarmAckRule_none = 0 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const none = AlarmAckRule_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 0 = AlarmAckRule_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_simple
@@ -76,7 +76,7 @@ const none = AlarmAckRule_none; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const AlarmAckRule_simple = 1 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmAckRule_simple: 1 = 1 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_simple
@@ -89,7 +89,7 @@ const AlarmAckRule_simple = 1 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const simple = AlarmAckRule_simple; /* SHORT_NAMED_INTEGER_VALUE */
+const simple: 1 = AlarmAckRule_simple; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_ack_active
@@ -102,7 +102,7 @@ const simple = AlarmAckRule_simple; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const AlarmAckRule_ack_active = 2 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmAckRule_ack_active: 2 = 2 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_ack_active
@@ -115,7 +115,7 @@ const AlarmAckRule_ack_active = 2 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const ack_active = AlarmAckRule_ack_active; /* SHORT_NAMED_INTEGER_VALUE */
+const ack_active: 2 = AlarmAckRule_ack_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_ack_all
@@ -128,7 +128,7 @@ const ack_active = AlarmAckRule_ack_active; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const AlarmAckRule_ack_all = 3 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmAckRule_ack_all: 3 = 3 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmAckRule_ack_all
@@ -141,9 +141,9 @@ const AlarmAckRule_ack_all = 3 satisfies AlarmAckRule; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ack_all = AlarmAckRule_ack_all; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AlarmAckRule = $._decodeInteger;
-export const _encode_AlarmAckRule = $._encodeInteger;
+const ack_all: 3 = AlarmAckRule_ack_all; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AlarmAckRule: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AlarmAckRule: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

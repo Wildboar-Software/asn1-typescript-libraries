@@ -85,7 +85,7 @@ type SessionDirection = _enum_for_SessionDirection;
  * @enum {number}
  */
 export
-const SessionDirection = _enum_for_SessionDirection;
+const SessionDirection: typeof _enum_for_SessionDirection = _enum_for_SessionDirection;
 
 /**
  * @summary SessionDirection_inbound
@@ -97,7 +97,7 @@ const SessionDirection = _enum_for_SessionDirection;
  * @type {number}
  */
 export
-const SessionDirection_inbound = SessionDirection.inbound; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionDirection_inbound: _enum_for_SessionDirection.inbound = SessionDirection.inbound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inbound
@@ -109,7 +109,7 @@ const SessionDirection_inbound = SessionDirection.inbound; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const inbound = SessionDirection.inbound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inbound: _enum_for_SessionDirection.inbound = SessionDirection.inbound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionDirection_outbound
@@ -121,7 +121,7 @@ const inbound = SessionDirection.inbound; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SessionDirection_outbound = SessionDirection.outbound; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionDirection_outbound: _enum_for_SessionDirection.outbound = SessionDirection.outbound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outbound
@@ -133,7 +133,7 @@ const SessionDirection_outbound = SessionDirection.outbound; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const outbound = SessionDirection.outbound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outbound: _enum_for_SessionDirection.outbound = SessionDirection.outbound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SessionDirection: $.ASN1Decoder<SessionDirection> = $._decodeEnumerated;

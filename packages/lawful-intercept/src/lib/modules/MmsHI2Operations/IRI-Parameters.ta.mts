@@ -1058,37 +1058,37 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_mMSevent = _enum_for_MMSEvent;        /**
+    public static _enum_for_mMSevent: typeof _enum_for_MMSEvent = _enum_for_MMSEvent;        /**
          * @summary The enum used as the type of the component `contentClass`
          * @public
          * @static
          */
 
-    public static _enum_for_contentClass = _enum_for_ContentClass;        /**
+    public static _enum_for_contentClass: typeof _enum_for_ContentClass = _enum_for_ContentClass;        /**
          * @summary The enum used as the type of the component `mMSStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_mMSStatus = _enum_for_MMSStatus;        /**
+    public static _enum_for_mMSStatus: typeof _enum_for_MMSStatus = _enum_for_MMSStatus;        /**
          * @summary The enum used as the type of the component `mMState`
          * @public
          * @static
          */
 
-    public static _enum_for_mMState = _enum_for_MMSState;        /**
+    public static _enum_for_mMState: typeof _enum_for_MMSState = _enum_for_MMSState;        /**
          * @summary The enum used as the type of the component `storeStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_storeStatus = _enum_for_StoreStatus;        /**
+    public static _enum_for_storeStatus: typeof _enum_for_StoreStatus = _enum_for_StoreStatus;        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

@@ -33,12 +33,12 @@ export type DateTimeType = VisibleString; // VisibleString
 
 
 
-export const _decode_DateTimeType = $._decodeVisibleString;
+export const _decode_DateTimeType: $.ASN1Decoder<string> = $._decodeVisibleString;
 
 
 
 
-export const _encode_DateTimeType = $._encodeVisibleString;
+export const _encode_DateTimeType: $.ASN1Encoder<string> = $._encodeVisibleString;
 
 
 /* eslint-enable */

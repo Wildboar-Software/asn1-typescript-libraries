@@ -52,7 +52,7 @@ export const _decode_RAB_Id = (el: _Element): RAB_Id => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RAB_Id, encoded as an ASN.1 Element.
  */
-export const _encode_RAB_Id = $._encodeInteger;
+export const _encode_RAB_Id: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

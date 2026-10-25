@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ApplicationCrossReference = OCTET_STRING; // OctetStringType
 
 
-export const _decode_ApplicationCrossReference = $._decodeOctetString;
+export const _decode_ApplicationCrossReference: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_ApplicationCrossReference = $._encodeOctetString;
+export const _encode_ApplicationCrossReference: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

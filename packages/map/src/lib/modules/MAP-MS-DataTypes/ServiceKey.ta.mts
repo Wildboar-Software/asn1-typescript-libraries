@@ -48,7 +48,7 @@ export const _decode_ServiceKey = (el: _Element): ServiceKey => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServiceKey, encoded as an ASN.1 Element.
  */
-export const _encode_ServiceKey = $._encodeInteger;
+export const _encode_ServiceKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

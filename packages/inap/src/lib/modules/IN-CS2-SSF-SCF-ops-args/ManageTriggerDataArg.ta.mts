@@ -104,7 +104,7 @@ class ManageTriggerDataArg {
          * @static
          */
 
-    public static _enum_for_actionIndicator = _enum_for_ActionIndicator;
+    public static _enum_for_actionIndicator: typeof _enum_for_ActionIndicator = _enum_for_ActionIndicator;
 }
 
 /**

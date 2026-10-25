@@ -259,7 +259,7 @@ class PTCSessionInitiation {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

@@ -50,7 +50,7 @@ type Criticality = _enum_for_Criticality;
  * @enum {number}
  */
 export
-const Criticality = _enum_for_Criticality;
+const Criticality: typeof _enum_for_Criticality = _enum_for_Criticality;
 
 /**
  * @summary Criticality_ignored
@@ -58,7 +58,7 @@ const Criticality = _enum_for_Criticality;
  * @type {number}
  */
 export
-const Criticality_ignored = Criticality.ignored; /* LONG_NAMED_ENUMERATED_VALUE */
+const Criticality_ignored: _enum_for_Criticality.ignored = Criticality.ignored; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ignored
@@ -66,7 +66,7 @@ const Criticality_ignored = Criticality.ignored; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ignored = Criticality.ignored; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignored: _enum_for_Criticality.ignored = Criticality.ignored; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Criticality_abort
@@ -74,7 +74,7 @@ const ignored = Criticality.ignored; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Criticality_abort = Criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
+const Criticality_abort: _enum_for_Criticality.abort = Criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abort
@@ -82,7 +82,7 @@ const Criticality_abort = Criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const abort = Criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abort: _enum_for_Criticality.abort = Criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_Criticality(el: _Element): Criticality {

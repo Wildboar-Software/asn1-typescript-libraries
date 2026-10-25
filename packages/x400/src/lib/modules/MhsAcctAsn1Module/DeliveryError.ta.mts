@@ -34,62 +34,62 @@ export type DeliveryError = INTEGER;
  * @constant
  * @type {number}
  */
-export const DeliveryError_delivery_control_violation = 1 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryError_delivery_control_violation: 1 = 1 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_delivery_control_violation
  * @constant
  * @type {number}
  */
-export const delivery_control_violation = DeliveryError_delivery_control_violation; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivery_control_violation: 1 = DeliveryError_delivery_control_violation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_control_violates_registration
  * @constant
  * @type {number}
  */
-export const DeliveryError_control_violates_registration = 2 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryError_control_violates_registration: 2 = 2 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_control_violates_registration
  * @constant
  * @type {number}
  */
-export const control_violates_registration = DeliveryError_control_violates_registration; /* SHORT_NAMED_INTEGER_VALUE */
+export const control_violates_registration: 2 = DeliveryError_control_violates_registration; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_security_error
  * @constant
  * @type {number}
  */
-export const DeliveryError_security_error = 3 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryError_security_error: 3 = 3 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_security_error
  * @constant
  * @type {number}
  */
-export const security_error = DeliveryError_security_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_error: 3 = DeliveryError_security_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_unsupported_critical_function
  * @constant
  * @type {number}
  */
-export const DeliveryError_unsupported_critical_function = 4 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveryError_unsupported_critical_function: 4 = 4 satisfies DeliveryError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryError_unsupported_critical_function
  * @constant
  * @type {number}
  */
-export const unsupported_critical_function = DeliveryError_unsupported_critical_function; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupported_critical_function: 4 = DeliveryError_unsupported_critical_function; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DeliveryError = $._decodeInteger;
+export const _decode_DeliveryError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DeliveryError = $._encodeInteger;
+export const _encode_DeliveryError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

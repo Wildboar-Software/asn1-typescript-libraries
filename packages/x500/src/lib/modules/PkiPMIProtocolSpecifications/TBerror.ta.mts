@@ -94,7 +94,7 @@ export class TBerror {
      * @static
      */
 
-    public static _enum_for_code = _enum_for_TBerror_code;
+    public static _enum_for_code: typeof _enum_for_TBerror_code = _enum_for_TBerror_code;
 }
 
 /**

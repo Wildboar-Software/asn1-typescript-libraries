@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AE_title_form2 = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_AE_title_form2 = $._decodeObjectIdentifier;
+export const _decode_AE_title_form2: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_AE_title_form2 = $._encodeObjectIdentifier;
+export const _encode_AE_title_form2: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

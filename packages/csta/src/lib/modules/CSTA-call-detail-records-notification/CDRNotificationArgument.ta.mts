@@ -109,7 +109,7 @@ class CDRNotificationArgument {
          * @static
          */
 
-    public static _enum_for_cdrReason = _enum_for_CDRReason;
+    public static _enum_for_cdrReason: typeof _enum_for_CDRReason = _enum_for_CDRReason;
 }
 
 /**

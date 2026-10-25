@@ -34,7 +34,7 @@ export const _decode_RequestedType = (el: _Element): RequestedType => {
     }
     return value;
 };
-export const _encode_RequestedType = $._encodeInteger;
+export const _encode_RequestedType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

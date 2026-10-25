@@ -54,7 +54,7 @@ export type C_RECOVER_RI_recovery_state =
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RI_recovery_state_commit = _enum_for_C_RECOVER_RI_recovery_state.commit; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RI_recovery_state_commit: 0 = _enum_for_C_RECOVER_RI_recovery_state.commit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const C_RECOVER_RI_recovery_state_commit = _enum_for_C_RECOVER_RI_recover
  * @constant
  * @type {number}
  */
-export const commit = C_RECOVER_RI_recovery_state_commit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const commit: 0 = C_RECOVER_RI_recovery_state_commit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const commit = C_RECOVER_RI_recovery_state_commit; /* SHORT_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RI_recovery_state_ready = _enum_for_C_RECOVER_RI_recovery_state.ready; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RI_recovery_state_ready: 1 = _enum_for_C_RECOVER_RI_recovery_state.ready; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const C_RECOVER_RI_recovery_state_ready = _enum_for_C_RECOVER_RI_recovery
  * @constant
  * @type {number}
  */
-export const ready = C_RECOVER_RI_recovery_state_ready; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ready: 1 = C_RECOVER_RI_recovery_state_ready; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const ready = C_RECOVER_RI_recovery_state_ready; /* SHORT_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RI_recovery_state_done = _enum_for_C_RECOVER_RI_recovery_state.done; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RI_recovery_state_done: 2 = _enum_for_C_RECOVER_RI_recovery_state.done; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const C_RECOVER_RI_recovery_state_done = _enum_for_C_RECOVER_RI_recovery_
  * @constant
  * @type {number}
  */
-export const done = C_RECOVER_RI_recovery_state_done; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const done: 2 = C_RECOVER_RI_recovery_state_done; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const done = C_RECOVER_RI_recovery_state_done; /* SHORT_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RI_recovery_state_unknown = _enum_for_C_RECOVER_RI_recovery_state.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RI_recovery_state_unknown: 3 = _enum_for_C_RECOVER_RI_recovery_state.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -113,7 +113,7 @@ export const C_RECOVER_RI_recovery_state_unknown = _enum_for_C_RECOVER_RI_recove
  * @constant
  * @type {number}
  */
-export const unknown = C_RECOVER_RI_recovery_state_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown: 3 = C_RECOVER_RI_recovery_state_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +122,7 @@ export const unknown = C_RECOVER_RI_recovery_state_unknown; /* SHORT_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const C_RECOVER_RI_recovery_state_retry_later = _enum_for_C_RECOVER_RI_recovery_state.retry_later; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_RECOVER_RI_recovery_state_retry_later: 5 = _enum_for_C_RECOVER_RI_recovery_state.retry_later; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,17 +130,17 @@ export const C_RECOVER_RI_recovery_state_retry_later = _enum_for_C_RECOVER_RI_re
  * @constant
  * @type {number}
  */
-export const retry_later = C_RECOVER_RI_recovery_state_retry_later; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const retry_later: 5 = C_RECOVER_RI_recovery_state_retry_later; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_C_RECOVER_RI_recovery_state = $._decodeEnumerated;
+export const _decode_C_RECOVER_RI_recovery_state: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_C_RECOVER_RI_recovery_state = $._encodeEnumerated;
+export const _encode_C_RECOVER_RI_recovery_state: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

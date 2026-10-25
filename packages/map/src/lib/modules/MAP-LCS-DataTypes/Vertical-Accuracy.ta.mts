@@ -45,7 +45,7 @@ export const _decode_Vertical_Accuracy = (el: _Element): Vertical_Accuracy => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Vertical_Accuracy, encoded as an ASN.1 Element.
  */
-export const _encode_Vertical_Accuracy = $._encodeOctetString;
+export const _encode_Vertical_Accuracy: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

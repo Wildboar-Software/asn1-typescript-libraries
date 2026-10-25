@@ -79,7 +79,7 @@ type ForwardDefault = _enum_for_ForwardDefault;
  * @enum {number}
  */
 export
-const ForwardDefault = _enum_for_ForwardDefault;
+const ForwardDefault: typeof _enum_for_ForwardDefault = _enum_for_ForwardDefault;
 
 /**
  * @summary ForwardDefault_forwardingTypeAndForwardDN
@@ -91,7 +91,7 @@ const ForwardDefault = _enum_for_ForwardDefault;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardDefault_forwardingTypeAndForwardDN = ForwardDefault.forwardingTypeAndForwardDN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardDefault_forwardingTypeAndForwardDN: _enum_for_ForwardDefault.forwardingTypeAndForwardDN = ForwardDefault.forwardingTypeAndForwardDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingTypeAndForwardDN
@@ -100,7 +100,7 @@ const ForwardDefault_forwardingTypeAndForwardDN = ForwardDefault.forwardingTypeA
  * @type {number}
  */
 export
-const forwardingTypeAndForwardDN = ForwardDefault.forwardingTypeAndForwardDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardingTypeAndForwardDN: _enum_for_ForwardDefault.forwardingTypeAndForwardDN = ForwardDefault.forwardingTypeAndForwardDN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardDefault_forwardingType
@@ -111,7 +111,7 @@ const forwardingTypeAndForwardDN = ForwardDefault.forwardingTypeAndForwardDN; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardDefault_forwardingType = ForwardDefault.forwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardDefault_forwardingType: _enum_for_ForwardDefault.forwardingType = ForwardDefault.forwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingType
@@ -120,7 +120,7 @@ const ForwardDefault_forwardingType = ForwardDefault.forwardingType; /* LONG_NAM
  * @type {number}
  */
 export
-const forwardingType = ForwardDefault.forwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardingType: _enum_for_ForwardDefault.forwardingType = ForwardDefault.forwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardDefault_forwardDN
@@ -130,7 +130,7 @@ const forwardingType = ForwardDefault.forwardingType; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ForwardDefault_forwardDN = ForwardDefault.forwardDN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardDefault_forwardDN: _enum_for_ForwardDefault.forwardDN = ForwardDefault.forwardDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardDN
@@ -139,7 +139,7 @@ const ForwardDefault_forwardDN = ForwardDefault.forwardDN; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const forwardDN = ForwardDefault.forwardDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardDN: _enum_for_ForwardDefault.forwardDN = ForwardDefault.forwardDN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ForwardDefault: $.ASN1Decoder<ForwardDefault> | null = null;
 

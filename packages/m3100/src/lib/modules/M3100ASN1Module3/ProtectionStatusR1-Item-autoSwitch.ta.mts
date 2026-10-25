@@ -99,14 +99,14 @@ export class ProtectionStatusR1_Item_autoSwitch {
      * @static
      */
 
-    public static _enum_for_switchStatus = _enum_for_SwitchStatus;
+    public static _enum_for_switchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
     /**
      * @summary The enum used as the type of the component `autoSwitchReason`
      * @public
      * @static
      */
 
-    public static _enum_for_autoSwitchReason = _enum_for_AutoSwitchReason;
+    public static _enum_for_autoSwitchReason: typeof _enum_for_AutoSwitchReason = _enum_for_AutoSwitchReason;
 }
 
 

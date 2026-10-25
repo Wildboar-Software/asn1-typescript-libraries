@@ -251,12 +251,12 @@ export const data_separation: number = User_session_requirements_data_separation
 
 
 
-export const _decode_User_session_requirements = $._decodeBitString;
+export const _decode_User_session_requirements: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_User_session_requirements = $._encodeBitString;
+export const _encode_User_session_requirements: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

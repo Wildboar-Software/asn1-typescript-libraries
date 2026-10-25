@@ -178,7 +178,7 @@ export class PinAttributes {
      * @static
      */
 
-    public static _enum_for_pinType = _enum_for_PinType;
+    public static _enum_for_pinType: typeof _enum_for_PinType = _enum_for_PinType;
 }
 
 

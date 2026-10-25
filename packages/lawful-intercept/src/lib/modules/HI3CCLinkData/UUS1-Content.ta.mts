@@ -250,7 +250,7 @@ class UUS1_Content {
          * @static
          */
 
-    public static _enum_for_direction_Indication = _enum_for_Direction_Indication;
+    public static _enum_for_direction_Indication: typeof _enum_for_Direction_Indication = _enum_for_Direction_Indication;
 }
 
 /**

@@ -87,13 +87,13 @@ class LCS_PrivacyCheck {
          * @static
          */
 
-    public static _enum_for_callSessionUnrelated = _enum_for_PrivacyCheckRelatedAction;        /**
+    public static _enum_for_callSessionUnrelated: typeof _enum_for_PrivacyCheckRelatedAction = _enum_for_PrivacyCheckRelatedAction;        /**
          * @summary The enum used as the type of the component `callSessionRelated`
          * @public
          * @static
          */
 
-    public static _enum_for_callSessionRelated = _enum_for_PrivacyCheckRelatedAction;
+    public static _enum_for_callSessionRelated: typeof _enum_for_PrivacyCheckRelatedAction = _enum_for_PrivacyCheckRelatedAction;
 }
 
 /**

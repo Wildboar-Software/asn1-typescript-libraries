@@ -146,7 +146,7 @@ class FiveGMSAFDynamicPolicyInvocation {
          * @static
          */
 
-    public static _enum_for_dPIoperationType = _enum_for_DPIOperationType;
+    public static _enum_for_dPIoperationType: typeof _enum_for_DPIOperationType = _enum_for_DPIOperationType;
 }
 
 /**

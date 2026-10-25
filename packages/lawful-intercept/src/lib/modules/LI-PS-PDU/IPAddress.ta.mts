@@ -211,13 +211,13 @@ class IPAddress {
          * @static
          */
 
-    public static _enum_for_iP_type = _enum_for_IPAddress_iP_type;        /**
+    public static _enum_for_iP_type: typeof _enum_for_IPAddress_iP_type = _enum_for_IPAddress_iP_type;        /**
          * @summary The enum used as the type of the component `iP_assignment`
          * @public
          * @static
          */
 
-    public static _enum_for_iP_assignment = _enum_for_IPAddress_iP_assignment;
+    public static _enum_for_iP_assignment: typeof _enum_for_IPAddress_iP_assignment = _enum_for_IPAddress_iP_assignment;
 }
 
 /**

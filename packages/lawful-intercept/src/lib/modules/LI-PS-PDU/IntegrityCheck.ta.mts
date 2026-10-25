@@ -213,19 +213,19 @@ class IntegrityCheck {
          * @static
          */
 
-    public static _enum_for_checkType = _enum_for_CheckType;        /**
+    public static _enum_for_checkType: typeof _enum_for_CheckType = _enum_for_CheckType;        /**
          * @summary The enum used as the type of the component `dataType`
          * @public
          * @static
          */
 
-    public static _enum_for_dataType = _enum_for_DataType;        /**
+    public static _enum_for_dataType: typeof _enum_for_DataType = _enum_for_DataType;        /**
          * @summary The enum used as the type of the component `hashAlgorithm`
          * @public
          * @static
          */
 
-    public static _enum_for_hashAlgorithm = _enum_for_HashAlgorithm;
+    public static _enum_for_hashAlgorithm: typeof _enum_for_HashAlgorithm = _enum_for_HashAlgorithm;
 }
 
 /**

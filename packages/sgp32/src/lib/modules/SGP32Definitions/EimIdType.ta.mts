@@ -38,7 +38,7 @@ type EimIdType = INTEGER;
  * 4.3). https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
  */
 export
-const EimIdType_eimIdTypeOid = 1 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALUE */
+const EimIdType_eimIdTypeOid: 1 = 1 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimIdType_eimIdTypeOid
@@ -49,7 +49,7 @@ const EimIdType_eimIdTypeOid = 1 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALU
  * section 4.3).
  */
 export
-const eimIdTypeOid = EimIdType_eimIdTypeOid; /* SHORT_NAMED_INTEGER_VALUE */
+const eimIdTypeOid: 1 = EimIdType_eimIdTypeOid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimIdType_eimIdTypeFqdn
@@ -61,7 +61,7 @@ const eimIdTypeOid = EimIdType_eimIdTypeOid; /* SHORT_NAMED_INTEGER_VALUE */
  * omitted.
  */
 export
-const EimIdType_eimIdTypeFqdn = 2 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALUE */
+const EimIdType_eimIdTypeFqdn: 2 = 2 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimIdType_eimIdTypeFqdn
@@ -72,7 +72,7 @@ const EimIdType_eimIdTypeFqdn = 2 satisfies EimIdType; /* LONG_NAMED_INTEGER_VAL
  * sections 4.3 and 2.11.1.1).
  */
 export
-const eimIdTypeFqdn = EimIdType_eimIdTypeFqdn; /* SHORT_NAMED_INTEGER_VALUE */
+const eimIdTypeFqdn: 2 = EimIdType_eimIdTypeFqdn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimIdType_eimIdTypeProprietary
@@ -84,7 +84,7 @@ const eimIdTypeFqdn = EimIdType_eimIdTypeFqdn; /* SHORT_NAMED_INTEGER_VALUE */
  * 2.11.1.1).
  */
 export
-const EimIdType_eimIdTypeProprietary = 3 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALUE */
+const EimIdType_eimIdTypeProprietary: 3 = 3 satisfies EimIdType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimIdType_eimIdTypeProprietary
@@ -95,7 +95,7 @@ const EimIdType_eimIdTypeProprietary = 3 satisfies EimIdType; /* LONG_NAMED_INTE
  * eimIdType is omitted on add (SGP.32 v1.2, sections 4.3 and 2.11.1.1).
  */
 export
-const eimIdTypeProprietary = EimIdType_eimIdTypeProprietary; /* SHORT_NAMED_INTEGER_VALUE */
+const eimIdTypeProprietary: 3 = EimIdType_eimIdTypeProprietary; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EimIdType: $.ASN1Decoder<EimIdType> = $._decodeInteger;
 export const _encode_EimIdType: $.ASN1Encoder<EimIdType> = $._encodeInteger;
 

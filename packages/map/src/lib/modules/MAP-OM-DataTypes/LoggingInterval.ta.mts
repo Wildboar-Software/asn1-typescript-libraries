@@ -88,7 +88,7 @@ type LoggingInterval = _enum_for_LoggingInterval;
  * @enum {number}
  */
 export
-const LoggingInterval = _enum_for_LoggingInterval;
+const LoggingInterval: typeof _enum_for_LoggingInterval = _enum_for_LoggingInterval;
 
 /**
  * @summary LoggingInterval_d1dot28
@@ -96,7 +96,7 @@ const LoggingInterval = _enum_for_LoggingInterval;
  * @type {number}
  */
 export
-const LoggingInterval_d1dot28 = LoggingInterval.d1dot28; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d1dot28: _enum_for_LoggingInterval.d1dot28 = LoggingInterval.d1dot28; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1dot28
@@ -104,7 +104,7 @@ const LoggingInterval_d1dot28 = LoggingInterval.d1dot28; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d1dot28 = LoggingInterval.d1dot28; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1dot28: _enum_for_LoggingInterval.d1dot28 = LoggingInterval.d1dot28; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d2dot56
@@ -112,7 +112,7 @@ const d1dot28 = LoggingInterval.d1dot28; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d2dot56 = LoggingInterval.d2dot56; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d2dot56: _enum_for_LoggingInterval.d2dot56 = LoggingInterval.d2dot56; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d2dot56
@@ -120,7 +120,7 @@ const LoggingInterval_d2dot56 = LoggingInterval.d2dot56; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d2dot56 = LoggingInterval.d2dot56; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d2dot56: _enum_for_LoggingInterval.d2dot56 = LoggingInterval.d2dot56; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d5dot12
@@ -128,7 +128,7 @@ const d2dot56 = LoggingInterval.d2dot56; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d5dot12 = LoggingInterval.d5dot12; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d5dot12: _enum_for_LoggingInterval.d5dot12 = LoggingInterval.d5dot12; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d5dot12
@@ -136,7 +136,7 @@ const LoggingInterval_d5dot12 = LoggingInterval.d5dot12; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d5dot12 = LoggingInterval.d5dot12; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d5dot12: _enum_for_LoggingInterval.d5dot12 = LoggingInterval.d5dot12; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d10dot24
@@ -144,7 +144,7 @@ const d5dot12 = LoggingInterval.d5dot12; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d10dot24 = LoggingInterval.d10dot24; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d10dot24: _enum_for_LoggingInterval.d10dot24 = LoggingInterval.d10dot24; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d10dot24
@@ -152,7 +152,7 @@ const LoggingInterval_d10dot24 = LoggingInterval.d10dot24; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d10dot24 = LoggingInterval.d10dot24; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d10dot24: _enum_for_LoggingInterval.d10dot24 = LoggingInterval.d10dot24; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d20dot48
@@ -160,7 +160,7 @@ const d10dot24 = LoggingInterval.d10dot24; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d20dot48 = LoggingInterval.d20dot48; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d20dot48: _enum_for_LoggingInterval.d20dot48 = LoggingInterval.d20dot48; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d20dot48
@@ -168,7 +168,7 @@ const LoggingInterval_d20dot48 = LoggingInterval.d20dot48; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d20dot48 = LoggingInterval.d20dot48; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d20dot48: _enum_for_LoggingInterval.d20dot48 = LoggingInterval.d20dot48; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d30dot72
@@ -176,7 +176,7 @@ const d20dot48 = LoggingInterval.d20dot48; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d30dot72 = LoggingInterval.d30dot72; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d30dot72: _enum_for_LoggingInterval.d30dot72 = LoggingInterval.d30dot72; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d30dot72
@@ -184,7 +184,7 @@ const LoggingInterval_d30dot72 = LoggingInterval.d30dot72; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d30dot72 = LoggingInterval.d30dot72; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d30dot72: _enum_for_LoggingInterval.d30dot72 = LoggingInterval.d30dot72; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d40dot96
@@ -192,7 +192,7 @@ const d30dot72 = LoggingInterval.d30dot72; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d40dot96 = LoggingInterval.d40dot96; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d40dot96: _enum_for_LoggingInterval.d40dot96 = LoggingInterval.d40dot96; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d40dot96
@@ -200,7 +200,7 @@ const LoggingInterval_d40dot96 = LoggingInterval.d40dot96; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d40dot96 = LoggingInterval.d40dot96; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d40dot96: _enum_for_LoggingInterval.d40dot96 = LoggingInterval.d40dot96; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LoggingInterval_d61dot44
@@ -208,7 +208,7 @@ const d40dot96 = LoggingInterval.d40dot96; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LoggingInterval_d61dot44 = LoggingInterval.d61dot44; /* LONG_NAMED_ENUMERATED_VALUE */
+const LoggingInterval_d61dot44: _enum_for_LoggingInterval.d61dot44 = LoggingInterval.d61dot44; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d61dot44
@@ -216,7 +216,7 @@ const LoggingInterval_d61dot44 = LoggingInterval.d61dot44; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const d61dot44 = LoggingInterval.d61dot44; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d61dot44: _enum_for_LoggingInterval.d61dot44 = LoggingInterval.d61dot44; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LoggingInterval
@@ -224,7 +224,7 @@ const d61dot44 = LoggingInterval.d61dot44; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LoggingInterval = $._decodeEnumerated;
+export const _decode_LoggingInterval: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LoggingInterval into an ASN.1 Element.
@@ -233,7 +233,7 @@ export const _decode_LoggingInterval = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LoggingInterval, encoded as an ASN.1 Element.
  */
-export const _encode_LoggingInterval = $._encodeEnumerated;
+export const _encode_LoggingInterval: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

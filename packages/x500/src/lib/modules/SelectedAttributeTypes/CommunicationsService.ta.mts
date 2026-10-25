@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element as _Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type CommunicationsService = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_CommunicationsService = $._decodeObjectIdentifier;
+export const _decode_CommunicationsService: $.ASN1Decoder<ObjectIdentifier> = $._decodeObjectIdentifier;
 
 
-export const _encode_CommunicationsService = $._encodeObjectIdentifier;
+export const _encode_CommunicationsService: $.ASN1Encoder<ObjectIdentifier> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

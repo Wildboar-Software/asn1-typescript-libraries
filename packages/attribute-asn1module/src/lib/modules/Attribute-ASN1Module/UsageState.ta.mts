@@ -75,7 +75,7 @@ type UsageState = _enum_for_UsageState;
  * @enum {number}
  */
 export
-const UsageState = _enum_for_UsageState;
+const UsageState: typeof _enum_for_UsageState = _enum_for_UsageState;
 
 /**
  * @summary UsageState_idle
@@ -88,7 +88,7 @@ const UsageState = _enum_for_UsageState;
  * @type {number}
  */
 export
-const UsageState_idle = UsageState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
+const UsageState_idle: 0 = UsageState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -101,7 +101,7 @@ const UsageState_idle = UsageState.idle; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const idle = UsageState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
+const idle: 0 = UsageState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UsageState_active
@@ -114,7 +114,7 @@ const idle = UsageState.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UsageState_active = UsageState.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const UsageState_active: 1 = UsageState.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -127,7 +127,7 @@ const UsageState_active = UsageState.active; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const active = UsageState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: 1 = UsageState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UsageState_busy
@@ -140,7 +140,7 @@ const active = UsageState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UsageState_busy = UsageState.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const UsageState_busy: 2 = UsageState.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -153,7 +153,7 @@ const UsageState_busy = UsageState.busy; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const busy = UsageState.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy: 2 = UsageState.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_UsageState(el: _Element): UsageState {

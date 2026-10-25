@@ -28,12 +28,12 @@ export type MaintServiceCharge = BOOLEAN; // BooleanType
 
 
 
-export const _decode_MaintServiceCharge = $._decodeBoolean;
+export const _decode_MaintServiceCharge: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_MaintServiceCharge = $._encodeBoolean;
+export const _encode_MaintServiceCharge: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

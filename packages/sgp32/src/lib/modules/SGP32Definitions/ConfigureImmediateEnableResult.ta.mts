@@ -47,7 +47,7 @@ type ConfigureImmediateEnableResult = INTEGER;
  * @type {number}
  */
 export
-const ConfigureImmediateEnableResult_ok = 0 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigureImmediateEnableResult_ok: 0 = 0 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_ok
@@ -59,7 +59,7 @@ const ConfigureImmediateEnableResult_ok = 0 satisfies ConfigureImmediateEnableRe
  * @type {number}
  */
 export
-const ok = ConfigureImmediateEnableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = ConfigureImmediateEnableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_insufficientMemory
@@ -71,7 +71,7 @@ const ok = ConfigureImmediateEnableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ConfigureImmediateEnableResult_insufficientMemory = 1 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigureImmediateEnableResult_insufficientMemory: 1 = 1 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_insufficientMemory
@@ -83,7 +83,7 @@ const ConfigureImmediateEnableResult_insufficientMemory = 1 satisfies ConfigureI
  * @type {number}
  */
 export
-const insufficientMemory = ConfigureImmediateEnableResult_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficientMemory: 1 = ConfigureImmediateEnableResult_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_commandError
@@ -95,7 +95,7 @@ const insufficientMemory = ConfigureImmediateEnableResult_insufficientMemory; /*
  * @type {number}
  */
 export
-const ConfigureImmediateEnableResult_commandError = 7 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigureImmediateEnableResult_commandError: 7 = 7 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_commandError
@@ -107,7 +107,7 @@ const ConfigureImmediateEnableResult_commandError = 7 satisfies ConfigureImmedia
  * @type {number}
  */
 export
-const commandError = ConfigureImmediateEnableResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError: 7 = ConfigureImmediateEnableResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_undefinedError
@@ -119,7 +119,7 @@ const commandError = ConfigureImmediateEnableResult_commandError; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ConfigureImmediateEnableResult_undefinedError = 127 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ConfigureImmediateEnableResult_undefinedError: 127 = 127 satisfies ConfigureImmediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ConfigureImmediateEnableResult_undefinedError
@@ -131,7 +131,7 @@ const ConfigureImmediateEnableResult_undefinedError = 127 satisfies ConfigureImm
  * @type {number}
  */
 export
-const undefinedError = ConfigureImmediateEnableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = ConfigureImmediateEnableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ConfigureImmediateEnableResult: $.ASN1Decoder<ConfigureImmediateEnableResult> = $._decodeInteger;
 export const _encode_ConfigureImmediateEnableResult: $.ASN1Encoder<ConfigureImmediateEnableResult> = $._encodeInteger;
 

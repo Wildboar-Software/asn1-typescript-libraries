@@ -66,7 +66,7 @@ type cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_p
  * @enum {number}
  */
 export
-const cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_problem;
+const cancelFailed_ParameterType_problem: typeof _enum_for_cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_problem;
 
 /**
  * @summary cancelFailed_ParameterType_problem_unknownOperation
@@ -74,7 +74,7 @@ const cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_
  * @type {number}
  */
 export
-const cancelFailed_ParameterType_problem_unknownOperation = cancelFailed_ParameterType_problem.unknownOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+const cancelFailed_ParameterType_problem_unknownOperation: _enum_for_cancelFailed_ParameterType_problem.unknownOperation = cancelFailed_ParameterType_problem.unknownOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOperation
@@ -82,7 +82,7 @@ const cancelFailed_ParameterType_problem_unknownOperation = cancelFailed_Paramet
  * @type {number}
  */
 export
-const unknownOperation = cancelFailed_ParameterType_problem.unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownOperation: _enum_for_cancelFailed_ParameterType_problem.unknownOperation = cancelFailed_ParameterType_problem.unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelFailed_ParameterType_problem_tooLate
@@ -90,7 +90,7 @@ const unknownOperation = cancelFailed_ParameterType_problem.unknownOperation; /*
  * @type {number}
  */
 export
-const cancelFailed_ParameterType_problem_tooLate = cancelFailed_ParameterType_problem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
+const cancelFailed_ParameterType_problem_tooLate: _enum_for_cancelFailed_ParameterType_problem.tooLate = cancelFailed_ParameterType_problem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooLate
@@ -98,7 +98,7 @@ const cancelFailed_ParameterType_problem_tooLate = cancelFailed_ParameterType_pr
  * @type {number}
  */
 export
-const tooLate = cancelFailed_ParameterType_problem.tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tooLate: _enum_for_cancelFailed_ParameterType_problem.tooLate = cancelFailed_ParameterType_problem.tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelFailed_ParameterType_problem_operationNotCancellable
@@ -106,7 +106,7 @@ const tooLate = cancelFailed_ParameterType_problem.tooLate; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const cancelFailed_ParameterType_problem_operationNotCancellable = cancelFailed_ParameterType_problem.operationNotCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
+const cancelFailed_ParameterType_problem_operationNotCancellable: _enum_for_cancelFailed_ParameterType_problem.operationNotCancellable = cancelFailed_ParameterType_problem.operationNotCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operationNotCancellable
@@ -114,7 +114,7 @@ const cancelFailed_ParameterType_problem_operationNotCancellable = cancelFailed_
  * @type {number}
  */
 export
-const operationNotCancellable = cancelFailed_ParameterType_problem.operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operationNotCancellable: _enum_for_cancelFailed_ParameterType_problem.operationNotCancellable = cancelFailed_ParameterType_problem.operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_cancelFailed_ParameterType_problem(el: _Element): cancelFailed_ParameterType_problem {

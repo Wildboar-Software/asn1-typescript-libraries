@@ -202,12 +202,12 @@ export const discloseOnError: number = ObjectOperations_discloseOnError; /* SHOR
 
 
 
-export const _decode_ObjectOperations = $._decodeBitString;
+export const _decode_ObjectOperations: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_ObjectOperations = $._encodeBitString;
+export const _encode_ObjectOperations: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -45,7 +45,7 @@ export const _decode_AdditionalInfo = (el: _Element): AdditionalInfo => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalInfo, encoded as an ASN.1 Element.
  */
-export const _encode_AdditionalInfo = $._encodeBitString;
+export const _encode_AdditionalInfo: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -39,104 +39,104 @@ export type SignedData_error = _enum_for_SignedData_error | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SignedData_error_noReason = _enum_for_SignedData_error.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_noReason: _enum_for_SignedData_error.noReason = _enum_for_SignedData_error.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReason
  * @constant
  * @type {number}
  */
-export const noReason = SignedData_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noReason: _enum_for_SignedData_error.noReason = SignedData_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignedData_error_signedDataContectTypeExpected
  * @constant
  * @type {number}
  */
-export const SignedData_error_signedDataContectTypeExpected = _enum_for_SignedData_error.signedDataContectTypeExpected; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_signedDataContectTypeExpected: _enum_for_SignedData_error.signedDataContectTypeExpected = _enum_for_SignedData_error.signedDataContectTypeExpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary signedDataContectTypeExpected
  * @constant
  * @type {number}
  */
-export const signedDataContectTypeExpected = SignedData_error_signedDataContectTypeExpected; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const signedDataContectTypeExpected: _enum_for_SignedData_error.signedDataContectTypeExpected = SignedData_error_signedDataContectTypeExpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignedData_error_wrongSignedDataVersion
  * @constant
  * @type {number}
  */
-export const SignedData_error_wrongSignedDataVersion = _enum_for_SignedData_error.wrongSignedDataVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_wrongSignedDataVersion: _enum_for_SignedData_error.wrongSignedDataVersion = _enum_for_SignedData_error.wrongSignedDataVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrongSignedDataVersion
  * @constant
  * @type {number}
  */
-export const wrongSignedDataVersion = SignedData_error_wrongSignedDataVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wrongSignedDataVersion: _enum_for_SignedData_error.wrongSignedDataVersion = SignedData_error_wrongSignedDataVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignedData_error_missingContent
  * @constant
  * @type {number}
  */
-export const SignedData_error_missingContent = _enum_for_SignedData_error.missingContent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_missingContent: _enum_for_SignedData_error.missingContent = _enum_for_SignedData_error.missingContent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missingContent
  * @constant
  * @type {number}
  */
-export const missingContent = SignedData_error_missingContent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const missingContent: _enum_for_SignedData_error.missingContent = SignedData_error_missingContent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignedData_error_missingContentComponent
  * @constant
  * @type {number}
  */
-export const SignedData_error_missingContentComponent = _enum_for_SignedData_error.missingContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_missingContentComponent: _enum_for_SignedData_error.missingContentComponent = _enum_for_SignedData_error.missingContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missingContentComponent
  * @constant
  * @type {number}
  */
-export const missingContentComponent = SignedData_error_missingContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const missingContentComponent: _enum_for_SignedData_error.missingContentComponent = SignedData_error_missingContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignedData_error_invalidContentComponent
  * @constant
  * @type {number}
  */
-export const SignedData_error_invalidContentComponent = _enum_for_SignedData_error.invalidContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_invalidContentComponent: _enum_for_SignedData_error.invalidContentComponent = _enum_for_SignedData_error.invalidContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidContentComponent
  * @constant
  * @type {number}
  */
-export const invalidContentComponent = SignedData_error_invalidContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidContentComponent: _enum_for_SignedData_error.invalidContentComponent = SignedData_error_invalidContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignedData_error_unsupportedHashAlgorithm
  * @constant
  * @type {number}
  */
-export const SignedData_error_unsupportedHashAlgorithm = _enum_for_SignedData_error.unsupportedHashAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SignedData_error_unsupportedHashAlgorithm: _enum_for_SignedData_error.unsupportedHashAlgorithm = _enum_for_SignedData_error.unsupportedHashAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedHashAlgorithm
  * @constant
  * @type {number}
  */
-export const unsupportedHashAlgorithm = SignedData_error_unsupportedHashAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedHashAlgorithm: _enum_for_SignedData_error.unsupportedHashAlgorithm = SignedData_error_unsupportedHashAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SignedData_error = $._decodeEnumerated;
+export const _decode_SignedData_error: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_SignedData_error = $._encodeEnumerated;
+export const _encode_SignedData_error: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

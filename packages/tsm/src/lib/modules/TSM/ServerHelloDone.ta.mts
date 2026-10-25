@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ServerHelloDone = NULL; // NullType
-export const _decode_ServerHelloDone = $._decodeNull;
-export const _encode_ServerHelloDone = $._encodeNull;
+export const _decode_ServerHelloDone: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_ServerHelloDone: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

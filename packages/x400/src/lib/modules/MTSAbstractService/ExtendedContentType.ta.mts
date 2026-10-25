@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ExtendedContentType = RELATIVE_OID; // RelativeOIDType
 
 
-export const _decode_ExtendedContentType = $._decodeRelativeOID;
+export const _decode_ExtendedContentType: $.ASN1Decoder<RELATIVE_OID> = $._decodeRelativeOID;
 
 
-export const _encode_ExtendedContentType = $._encodeRelativeOID;
+export const _encode_ExtendedContentType: $.ASN1Encoder<RELATIVE_OID> = $._encodeRelativeOID;
 
 
 /* eslint-enable */

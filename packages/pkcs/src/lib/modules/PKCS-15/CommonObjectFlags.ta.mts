@@ -46,12 +46,12 @@ export const modifiable: number = CommonObjectFlags_modifiable; /* SHORT_NAMED_B
 
 
 
-export const _decode_CommonObjectFlags = $._decodeBitString;
+export const _decode_CommonObjectFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_CommonObjectFlags = $._encodeBitString;
+export const _encode_CommonObjectFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

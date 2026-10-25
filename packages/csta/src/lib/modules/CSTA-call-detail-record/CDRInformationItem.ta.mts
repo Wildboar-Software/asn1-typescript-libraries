@@ -509,25 +509,25 @@ class CDRInformationItem {
          * @static
          */
 
-    public static _enum_for_billingID = _enum_for_BillingID;        /**
+    public static _enum_for_billingID: typeof _enum_for_BillingID = _enum_for_BillingID;        /**
          * @summary The enum used as the type of the component `reasonForTerm`
          * @public
          * @static
          */
 
-    public static _enum_for_reasonForTerm = _enum_for_ReasonForTerm;        /**
+    public static _enum_for_reasonForTerm: typeof _enum_for_ReasonForTerm = _enum_for_ReasonForTerm;        /**
          * @summary The enum used as the type of the component `deviceCategory`
          * @public
          * @static
          */
 
-    public static _enum_for_deviceCategory = _enum_for_DeviceCategory;        /**
+    public static _enum_for_deviceCategory: typeof _enum_for_DeviceCategory = _enum_for_DeviceCategory;        /**
          * @summary The enum used as the type of the component `namedDeviceTypes`
          * @public
          * @static
          */
 
-    public static _enum_for_namedDeviceTypes = _enum_for_NamedDeviceTypes;
+    public static _enum_for_namedDeviceTypes: typeof _enum_for_NamedDeviceTypes = _enum_for_NamedDeviceTypes;
 }
 
 /**

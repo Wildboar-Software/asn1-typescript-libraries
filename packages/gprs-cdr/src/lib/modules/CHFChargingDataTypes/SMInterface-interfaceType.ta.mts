@@ -74,7 +74,7 @@ type SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
  * @enum {number}
  */
 export
-const SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
+const SMInterface_interfaceType: typeof _enum_for_SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
 
 /**
  * @summary SMInterface_interfaceType_unkown
@@ -82,7 +82,7 @@ const SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
  * @type {number}
  */
 export
-const SMInterface_interfaceType_unkown = SMInterface_interfaceType.unkown; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMInterface_interfaceType_unkown: _enum_for_SMInterface_interfaceType.unkown = SMInterface_interfaceType.unkown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unkown
@@ -90,7 +90,7 @@ const SMInterface_interfaceType_unkown = SMInterface_interfaceType.unkown; /* LO
  * @type {number}
  */
 export
-const unkown = SMInterface_interfaceType.unkown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unkown: _enum_for_SMInterface_interfaceType.unkown = SMInterface_interfaceType.unkown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMInterface_interfaceType_mobileOriginating
@@ -98,7 +98,7 @@ const unkown = SMInterface_interfaceType.unkown; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const SMInterface_interfaceType_mobileOriginating = SMInterface_interfaceType.mobileOriginating; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMInterface_interfaceType_mobileOriginating: _enum_for_SMInterface_interfaceType.mobileOriginating = SMInterface_interfaceType.mobileOriginating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobileOriginating
@@ -106,7 +106,7 @@ const SMInterface_interfaceType_mobileOriginating = SMInterface_interfaceType.mo
  * @type {number}
  */
 export
-const mobileOriginating = SMInterface_interfaceType.mobileOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobileOriginating: _enum_for_SMInterface_interfaceType.mobileOriginating = SMInterface_interfaceType.mobileOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMInterface_interfaceType_mobileTerminating
@@ -114,7 +114,7 @@ const mobileOriginating = SMInterface_interfaceType.mobileOriginating; /* SHORT_
  * @type {number}
  */
 export
-const SMInterface_interfaceType_mobileTerminating = SMInterface_interfaceType.mobileTerminating; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMInterface_interfaceType_mobileTerminating: _enum_for_SMInterface_interfaceType.mobileTerminating = SMInterface_interfaceType.mobileTerminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobileTerminating
@@ -122,7 +122,7 @@ const SMInterface_interfaceType_mobileTerminating = SMInterface_interfaceType.mo
  * @type {number}
  */
 export
-const mobileTerminating = SMInterface_interfaceType.mobileTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobileTerminating: _enum_for_SMInterface_interfaceType.mobileTerminating = SMInterface_interfaceType.mobileTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMInterface_interfaceType_applicationOriginating
@@ -130,7 +130,7 @@ const mobileTerminating = SMInterface_interfaceType.mobileTerminating; /* SHORT_
  * @type {number}
  */
 export
-const SMInterface_interfaceType_applicationOriginating = SMInterface_interfaceType.applicationOriginating; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMInterface_interfaceType_applicationOriginating: _enum_for_SMInterface_interfaceType.applicationOriginating = SMInterface_interfaceType.applicationOriginating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary applicationOriginating
@@ -138,7 +138,7 @@ const SMInterface_interfaceType_applicationOriginating = SMInterface_interfaceTy
  * @type {number}
  */
 export
-const applicationOriginating = SMInterface_interfaceType.applicationOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const applicationOriginating: _enum_for_SMInterface_interfaceType.applicationOriginating = SMInterface_interfaceType.applicationOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMInterface_interfaceType_applicationTerminating
@@ -146,7 +146,7 @@ const applicationOriginating = SMInterface_interfaceType.applicationOriginating;
  * @type {number}
  */
 export
-const SMInterface_interfaceType_applicationTerminating = SMInterface_interfaceType.applicationTerminating; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMInterface_interfaceType_applicationTerminating: _enum_for_SMInterface_interfaceType.applicationTerminating = SMInterface_interfaceType.applicationTerminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary applicationTerminating
@@ -154,7 +154,7 @@ const SMInterface_interfaceType_applicationTerminating = SMInterface_interfaceTy
  * @type {number}
  */
 export
-const applicationTerminating = SMInterface_interfaceType.applicationTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const applicationTerminating: _enum_for_SMInterface_interfaceType.applicationTerminating = SMInterface_interfaceType.applicationTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMInterface_interfaceType_deviceTrigger
@@ -162,7 +162,7 @@ const applicationTerminating = SMInterface_interfaceType.applicationTerminating;
  * @type {number}
  */
 export
-const SMInterface_interfaceType_deviceTrigger = SMInterface_interfaceType.deviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMInterface_interfaceType_deviceTrigger: _enum_for_SMInterface_interfaceType.deviceTrigger = SMInterface_interfaceType.deviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceTrigger
@@ -170,7 +170,7 @@ const SMInterface_interfaceType_deviceTrigger = SMInterface_interfaceType.device
  * @type {number}
  */
 export
-const deviceTrigger = SMInterface_interfaceType.deviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceTrigger: _enum_for_SMInterface_interfaceType.deviceTrigger = SMInterface_interfaceType.deviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMInterface_interfaceType: $.ASN1Decoder<SMInterface_interfaceType> = $._decodeEnumerated;

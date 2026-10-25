@@ -126,7 +126,7 @@ class LISTATUSind {
          * @static
          */
 
-    public static _enum_for_tETRASysStatus = _enum_for_StatusType;
+    public static _enum_for_tETRASysStatus: typeof _enum_for_StatusType = _enum_for_StatusType;
 }
 
 /**

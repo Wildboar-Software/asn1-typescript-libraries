@@ -96,7 +96,7 @@ export class DeleteSpecification {
      * @static
      */
 
-    public static _enum_for_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
+    public static _enum_for_deleteModifier: typeof _enum_for_DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
 }
 
 /**

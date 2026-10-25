@@ -32,10 +32,10 @@ export
 type SigPolicyId = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_SigPolicyId = $._decodeObjectIdentifier;
+export const _decode_SigPolicyId: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_SigPolicyId = $._encodeObjectIdentifier;
+export const _encode_SigPolicyId: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

@@ -115,13 +115,13 @@ class StatusReportArg {
          * @static
          */
 
-    public static _enum_for_resourceStatus = _enum_for_ResourceStatus;        /**
+    public static _enum_for_resourceStatus: typeof _enum_for_ResourceStatus = _enum_for_ResourceStatus;        /**
          * @summary The enum used as the type of the component `reportCondition`
          * @public
          * @static
          */
 
-    public static _enum_for_reportCondition = _enum_for_ReportCondition;
+    public static _enum_for_reportCondition: typeof _enum_for_ReportCondition = _enum_for_ReportCondition;
 }
 
 /**

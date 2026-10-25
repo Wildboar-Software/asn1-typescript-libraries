@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -162,7 +163,11 @@ class ContinueWithArgumentArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legorCSID () { return { legID: { sendingSideID: leg1 } }; }
+    public static get _default_value_for_legorCSID (): {
+        legID: {
+            sendingSideID: OCTET_STRING;
+        };
+    } { return { legID: { sendingSideID: leg1 } }; }
 }
 
 /**

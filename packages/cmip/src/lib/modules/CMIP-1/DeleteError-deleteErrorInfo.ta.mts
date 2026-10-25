@@ -45,7 +45,7 @@ export type DeleteError_deleteErrorInfo =
  * @constant
  * @type {number}
  */
-export const DeleteError_deleteErrorInfo_accessDenied = _enum_for_DeleteError_deleteErrorInfo.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteError_deleteErrorInfo_accessDenied: _enum_for_DeleteError_deleteErrorInfo.accessDenied = _enum_for_DeleteError_deleteErrorInfo.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,17 +53,17 @@ export const DeleteError_deleteErrorInfo_accessDenied = _enum_for_DeleteError_de
  * @constant
  * @type {number}
  */
-export const accessDenied = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied: _enum_for_DeleteError_deleteErrorInfo.accessDenied = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DeleteError_deleteErrorInfo = $._decodeEnumerated;
+export const _decode_DeleteError_deleteErrorInfo: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_DeleteError_deleteErrorInfo = $._encodeEnumerated;
+export const _encode_DeleteError_deleteErrorInfo: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

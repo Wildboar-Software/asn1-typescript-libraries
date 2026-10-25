@@ -101,7 +101,7 @@ export class CertUpdateReq_certs_Item {
      * @static
      */
 
-    public static _enum_for_certStatus = _enum_for_CertStatus;
+    public static _enum_for_certStatus: typeof _enum_for_CertStatus = _enum_for_CertStatus;
 }
 
 /**

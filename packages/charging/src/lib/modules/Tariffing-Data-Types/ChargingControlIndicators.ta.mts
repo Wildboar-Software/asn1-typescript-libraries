@@ -137,7 +137,7 @@ export const _decode_ChargingControlIndicators = (el: _Element): ChargingControl
     }
     return value;
 };
-export const _encode_ChargingControlIndicators = $._encodeBitString;
+export const _encode_ChargingControlIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

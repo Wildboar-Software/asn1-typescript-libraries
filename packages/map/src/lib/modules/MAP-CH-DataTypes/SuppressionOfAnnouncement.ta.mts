@@ -29,7 +29,7 @@ type SuppressionOfAnnouncement = NULL; // NullType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SuppressionOfAnnouncement = $._decodeNull;
+export const _decode_SuppressionOfAnnouncement: $.ASN1Decoder<null> = $._decodeNull;
 
 /**
  * @summary Encodes a(n) SuppressionOfAnnouncement into an ASN.1 Element.
@@ -38,7 +38,7 @@ export const _decode_SuppressionOfAnnouncement = $._decodeNull;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SuppressionOfAnnouncement, encoded as an ASN.1 Element.
  */
-export const _encode_SuppressionOfAnnouncement = $._encodeNull;
+export const _encode_SuppressionOfAnnouncement: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

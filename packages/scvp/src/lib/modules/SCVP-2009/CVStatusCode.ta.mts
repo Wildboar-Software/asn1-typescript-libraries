@@ -102,7 +102,7 @@ export type CVStatusCode = _enum_for_CVStatusCode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CVStatusCode_okay = _enum_for_CVStatusCode.okay; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_okay: _enum_for_CVStatusCode.okay = _enum_for_CVStatusCode.okay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary okay
@@ -113,7 +113,7 @@ export const CVStatusCode_okay = _enum_for_CVStatusCode.okay; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const okay = CVStatusCode_okay; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const okay: _enum_for_CVStatusCode.okay = CVStatusCode_okay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_skipUnrecognizedItems
@@ -124,7 +124,7 @@ export const okay = CVStatusCode_okay; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const CVStatusCode_skipUnrecognizedItems = _enum_for_CVStatusCode.skipUnrecognizedItems; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_skipUnrecognizedItems: _enum_for_CVStatusCode.skipUnrecognizedItems = _enum_for_CVStatusCode.skipUnrecognizedItems; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary skipUnrecognizedItems
@@ -135,7 +135,7 @@ export const CVStatusCode_skipUnrecognizedItems = _enum_for_CVStatusCode.skipUnr
  * @constant
  * @type {number}
  */
-export const skipUnrecognizedItems = CVStatusCode_skipUnrecognizedItems; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const skipUnrecognizedItems: _enum_for_CVStatusCode.skipUnrecognizedItems = CVStatusCode_skipUnrecognizedItems; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_tooBusy
@@ -146,7 +146,7 @@ export const skipUnrecognizedItems = CVStatusCode_skipUnrecognizedItems; /* SHOR
  * @constant
  * @type {number}
  */
-export const CVStatusCode_tooBusy = _enum_for_CVStatusCode.tooBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_tooBusy: _enum_for_CVStatusCode.tooBusy = _enum_for_CVStatusCode.tooBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooBusy
@@ -157,7 +157,7 @@ export const CVStatusCode_tooBusy = _enum_for_CVStatusCode.tooBusy; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const tooBusy = CVStatusCode_tooBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const tooBusy: _enum_for_CVStatusCode.tooBusy = CVStatusCode_tooBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_invalidRequest
@@ -168,7 +168,7 @@ export const tooBusy = CVStatusCode_tooBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const CVStatusCode_invalidRequest = _enum_for_CVStatusCode.invalidRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_invalidRequest: _enum_for_CVStatusCode.invalidRequest = _enum_for_CVStatusCode.invalidRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRequest
@@ -179,7 +179,7 @@ export const CVStatusCode_invalidRequest = _enum_for_CVStatusCode.invalidRequest
  * @constant
  * @type {number}
  */
-export const invalidRequest = CVStatusCode_invalidRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidRequest: _enum_for_CVStatusCode.invalidRequest = CVStatusCode_invalidRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_internalError
@@ -190,7 +190,7 @@ export const invalidRequest = CVStatusCode_invalidRequest; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const CVStatusCode_internalError = _enum_for_CVStatusCode.internalError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_internalError: _enum_for_CVStatusCode.internalError = _enum_for_CVStatusCode.internalError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalError
@@ -201,7 +201,7 @@ export const CVStatusCode_internalError = _enum_for_CVStatusCode.internalError; 
  * @constant
  * @type {number}
  */
-export const internalError = CVStatusCode_internalError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const internalError: _enum_for_CVStatusCode.internalError = CVStatusCode_internalError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_badStructure
@@ -212,7 +212,7 @@ export const internalError = CVStatusCode_internalError; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const CVStatusCode_badStructure = _enum_for_CVStatusCode.badStructure; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_badStructure: _enum_for_CVStatusCode.badStructure = _enum_for_CVStatusCode.badStructure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badStructure
@@ -223,7 +223,7 @@ export const CVStatusCode_badStructure = _enum_for_CVStatusCode.badStructure; /*
  * @constant
  * @type {number}
  */
-export const badStructure = CVStatusCode_badStructure; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const badStructure: _enum_for_CVStatusCode.badStructure = CVStatusCode_badStructure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unsupportedVersion
@@ -234,7 +234,7 @@ export const badStructure = CVStatusCode_badStructure; /* SHORT_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unsupportedVersion = _enum_for_CVStatusCode.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unsupportedVersion: _enum_for_CVStatusCode.unsupportedVersion = _enum_for_CVStatusCode.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedVersion
@@ -245,7 +245,7 @@ export const CVStatusCode_unsupportedVersion = _enum_for_CVStatusCode.unsupporte
  * @constant
  * @type {number}
  */
-export const unsupportedVersion = CVStatusCode_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedVersion: _enum_for_CVStatusCode.unsupportedVersion = CVStatusCode_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_abortUnrecognizedItems
@@ -256,7 +256,7 @@ export const unsupportedVersion = CVStatusCode_unsupportedVersion; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const CVStatusCode_abortUnrecognizedItems = _enum_for_CVStatusCode.abortUnrecognizedItems; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_abortUnrecognizedItems: _enum_for_CVStatusCode.abortUnrecognizedItems = _enum_for_CVStatusCode.abortUnrecognizedItems; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abortUnrecognizedItems
@@ -267,7 +267,7 @@ export const CVStatusCode_abortUnrecognizedItems = _enum_for_CVStatusCode.abortU
  * @constant
  * @type {number}
  */
-export const abortUnrecognizedItems = CVStatusCode_abortUnrecognizedItems; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const abortUnrecognizedItems: _enum_for_CVStatusCode.abortUnrecognizedItems = CVStatusCode_abortUnrecognizedItems; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unrecognizedSigKey
@@ -278,7 +278,7 @@ export const abortUnrecognizedItems = CVStatusCode_abortUnrecognizedItems; /* SH
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unrecognizedSigKey = _enum_for_CVStatusCode.unrecognizedSigKey; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unrecognizedSigKey: _enum_for_CVStatusCode.unrecognizedSigKey = _enum_for_CVStatusCode.unrecognizedSigKey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognizedSigKey
@@ -289,7 +289,7 @@ export const CVStatusCode_unrecognizedSigKey = _enum_for_CVStatusCode.unrecogniz
  * @constant
  * @type {number}
  */
-export const unrecognizedSigKey = CVStatusCode_unrecognizedSigKey; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedSigKey: _enum_for_CVStatusCode.unrecognizedSigKey = CVStatusCode_unrecognizedSigKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_badSignatureOrMAC
@@ -300,7 +300,7 @@ export const unrecognizedSigKey = CVStatusCode_unrecognizedSigKey; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const CVStatusCode_badSignatureOrMAC = _enum_for_CVStatusCode.badSignatureOrMAC; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_badSignatureOrMAC: _enum_for_CVStatusCode.badSignatureOrMAC = _enum_for_CVStatusCode.badSignatureOrMAC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badSignatureOrMAC
@@ -311,7 +311,7 @@ export const CVStatusCode_badSignatureOrMAC = _enum_for_CVStatusCode.badSignatur
  * @constant
  * @type {number}
  */
-export const badSignatureOrMAC = CVStatusCode_badSignatureOrMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const badSignatureOrMAC: _enum_for_CVStatusCode.badSignatureOrMAC = CVStatusCode_badSignatureOrMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unableToDecode
@@ -322,7 +322,7 @@ export const badSignatureOrMAC = CVStatusCode_badSignatureOrMAC; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unableToDecode = _enum_for_CVStatusCode.unableToDecode; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unableToDecode: _enum_for_CVStatusCode.unableToDecode = _enum_for_CVStatusCode.unableToDecode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unableToDecode
@@ -333,7 +333,7 @@ export const CVStatusCode_unableToDecode = _enum_for_CVStatusCode.unableToDecode
  * @constant
  * @type {number}
  */
-export const unableToDecode = CVStatusCode_unableToDecode; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unableToDecode: _enum_for_CVStatusCode.unableToDecode = CVStatusCode_unableToDecode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_notAuthorized
@@ -344,7 +344,7 @@ export const unableToDecode = CVStatusCode_unableToDecode; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const CVStatusCode_notAuthorized = _enum_for_CVStatusCode.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_notAuthorized: _enum_for_CVStatusCode.notAuthorized = _enum_for_CVStatusCode.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -355,7 +355,7 @@ export const CVStatusCode_notAuthorized = _enum_for_CVStatusCode.notAuthorized; 
  * @constant
  * @type {number}
  */
-export const notAuthorized = CVStatusCode_notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notAuthorized: _enum_for_CVStatusCode.notAuthorized = CVStatusCode_notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unsupportedChecks
@@ -366,7 +366,7 @@ export const notAuthorized = CVStatusCode_notAuthorized; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unsupportedChecks = _enum_for_CVStatusCode.unsupportedChecks; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unsupportedChecks: _enum_for_CVStatusCode.unsupportedChecks = _enum_for_CVStatusCode.unsupportedChecks; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedChecks
@@ -377,7 +377,7 @@ export const CVStatusCode_unsupportedChecks = _enum_for_CVStatusCode.unsupported
  * @constant
  * @type {number}
  */
-export const unsupportedChecks = CVStatusCode_unsupportedChecks; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedChecks: _enum_for_CVStatusCode.unsupportedChecks = CVStatusCode_unsupportedChecks; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unsupportedWantBacks
@@ -388,7 +388,7 @@ export const unsupportedChecks = CVStatusCode_unsupportedChecks; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unsupportedWantBacks = _enum_for_CVStatusCode.unsupportedWantBacks; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unsupportedWantBacks: _enum_for_CVStatusCode.unsupportedWantBacks = _enum_for_CVStatusCode.unsupportedWantBacks; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedWantBacks
@@ -399,7 +399,7 @@ export const CVStatusCode_unsupportedWantBacks = _enum_for_CVStatusCode.unsuppor
  * @constant
  * @type {number}
  */
-export const unsupportedWantBacks = CVStatusCode_unsupportedWantBacks; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedWantBacks: _enum_for_CVStatusCode.unsupportedWantBacks = CVStatusCode_unsupportedWantBacks; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unsupportedSignatureOrMAC
@@ -410,7 +410,7 @@ export const unsupportedWantBacks = CVStatusCode_unsupportedWantBacks; /* SHORT_
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unsupportedSignatureOrMAC = _enum_for_CVStatusCode.unsupportedSignatureOrMAC; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unsupportedSignatureOrMAC: _enum_for_CVStatusCode.unsupportedSignatureOrMAC = _enum_for_CVStatusCode.unsupportedSignatureOrMAC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedSignatureOrMAC
@@ -421,7 +421,7 @@ export const CVStatusCode_unsupportedSignatureOrMAC = _enum_for_CVStatusCode.uns
  * @constant
  * @type {number}
  */
-export const unsupportedSignatureOrMAC = CVStatusCode_unsupportedSignatureOrMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedSignatureOrMAC: _enum_for_CVStatusCode.unsupportedSignatureOrMAC = CVStatusCode_unsupportedSignatureOrMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_invalidSignatureOrMAC
@@ -432,7 +432,7 @@ export const unsupportedSignatureOrMAC = CVStatusCode_unsupportedSignatureOrMAC;
  * @constant
  * @type {number}
  */
-export const CVStatusCode_invalidSignatureOrMAC = _enum_for_CVStatusCode.invalidSignatureOrMAC; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_invalidSignatureOrMAC: _enum_for_CVStatusCode.invalidSignatureOrMAC = _enum_for_CVStatusCode.invalidSignatureOrMAC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidSignatureOrMAC
@@ -443,7 +443,7 @@ export const CVStatusCode_invalidSignatureOrMAC = _enum_for_CVStatusCode.invalid
  * @constant
  * @type {number}
  */
-export const invalidSignatureOrMAC = CVStatusCode_invalidSignatureOrMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSignatureOrMAC: _enum_for_CVStatusCode.invalidSignatureOrMAC = CVStatusCode_invalidSignatureOrMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_protectedResponseUnsupported
@@ -454,7 +454,7 @@ export const invalidSignatureOrMAC = CVStatusCode_invalidSignatureOrMAC; /* SHOR
  * @constant
  * @type {number}
  */
-export const CVStatusCode_protectedResponseUnsupported = _enum_for_CVStatusCode.protectedResponseUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_protectedResponseUnsupported: _enum_for_CVStatusCode.protectedResponseUnsupported = _enum_for_CVStatusCode.protectedResponseUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protectedResponseUnsupported
@@ -465,7 +465,7 @@ export const CVStatusCode_protectedResponseUnsupported = _enum_for_CVStatusCode.
  * @constant
  * @type {number}
  */
-export const protectedResponseUnsupported = CVStatusCode_protectedResponseUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protectedResponseUnsupported: _enum_for_CVStatusCode.protectedResponseUnsupported = CVStatusCode_protectedResponseUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unrecognizedResponderName
@@ -476,7 +476,7 @@ export const protectedResponseUnsupported = CVStatusCode_protectedResponseUnsupp
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unrecognizedResponderName = _enum_for_CVStatusCode.unrecognizedResponderName; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unrecognizedResponderName: _enum_for_CVStatusCode.unrecognizedResponderName = _enum_for_CVStatusCode.unrecognizedResponderName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognizedResponderName
@@ -487,7 +487,7 @@ export const CVStatusCode_unrecognizedResponderName = _enum_for_CVStatusCode.unr
  * @constant
  * @type {number}
  */
-export const unrecognizedResponderName = CVStatusCode_unrecognizedResponderName; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedResponderName: _enum_for_CVStatusCode.unrecognizedResponderName = CVStatusCode_unrecognizedResponderName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_relayingLoop
@@ -498,7 +498,7 @@ export const unrecognizedResponderName = CVStatusCode_unrecognizedResponderName;
  * @constant
  * @type {number}
  */
-export const CVStatusCode_relayingLoop = _enum_for_CVStatusCode.relayingLoop; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_relayingLoop: _enum_for_CVStatusCode.relayingLoop = _enum_for_CVStatusCode.relayingLoop; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary relayingLoop
@@ -509,7 +509,7 @@ export const CVStatusCode_relayingLoop = _enum_for_CVStatusCode.relayingLoop; /*
  * @constant
  * @type {number}
  */
-export const relayingLoop = CVStatusCode_relayingLoop; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const relayingLoop: _enum_for_CVStatusCode.relayingLoop = CVStatusCode_relayingLoop; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unrecognizedValPol
@@ -520,7 +520,7 @@ export const relayingLoop = CVStatusCode_relayingLoop; /* SHORT_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unrecognizedValPol = _enum_for_CVStatusCode.unrecognizedValPol; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unrecognizedValPol: _enum_for_CVStatusCode.unrecognizedValPol = _enum_for_CVStatusCode.unrecognizedValPol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognizedValPol
@@ -531,7 +531,7 @@ export const CVStatusCode_unrecognizedValPol = _enum_for_CVStatusCode.unrecogniz
  * @constant
  * @type {number}
  */
-export const unrecognizedValPol = CVStatusCode_unrecognizedValPol; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedValPol: _enum_for_CVStatusCode.unrecognizedValPol = CVStatusCode_unrecognizedValPol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unrecognizedValAlg
@@ -542,7 +542,7 @@ export const unrecognizedValPol = CVStatusCode_unrecognizedValPol; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unrecognizedValAlg = _enum_for_CVStatusCode.unrecognizedValAlg; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unrecognizedValAlg: _enum_for_CVStatusCode.unrecognizedValAlg = _enum_for_CVStatusCode.unrecognizedValAlg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognizedValAlg
@@ -553,7 +553,7 @@ export const CVStatusCode_unrecognizedValAlg = _enum_for_CVStatusCode.unrecogniz
  * @constant
  * @type {number}
  */
-export const unrecognizedValAlg = CVStatusCode_unrecognizedValAlg; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedValAlg: _enum_for_CVStatusCode.unrecognizedValAlg = CVStatusCode_unrecognizedValAlg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_fullRequestInResponseUnsupported
@@ -564,7 +564,7 @@ export const unrecognizedValAlg = CVStatusCode_unrecognizedValAlg; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const CVStatusCode_fullRequestInResponseUnsupported = _enum_for_CVStatusCode.fullRequestInResponseUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_fullRequestInResponseUnsupported: _enum_for_CVStatusCode.fullRequestInResponseUnsupported = _enum_for_CVStatusCode.fullRequestInResponseUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullRequestInResponseUnsupported
@@ -575,7 +575,7 @@ export const CVStatusCode_fullRequestInResponseUnsupported = _enum_for_CVStatusC
  * @constant
  * @type {number}
  */
-export const fullRequestInResponseUnsupported = CVStatusCode_fullRequestInResponseUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fullRequestInResponseUnsupported: _enum_for_CVStatusCode.fullRequestInResponseUnsupported = CVStatusCode_fullRequestInResponseUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_fullPolResponseUnsupported
@@ -586,7 +586,7 @@ export const fullRequestInResponseUnsupported = CVStatusCode_fullRequestInRespon
  * @constant
  * @type {number}
  */
-export const CVStatusCode_fullPolResponseUnsupported = _enum_for_CVStatusCode.fullPolResponseUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_fullPolResponseUnsupported: _enum_for_CVStatusCode.fullPolResponseUnsupported = _enum_for_CVStatusCode.fullPolResponseUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullPolResponseUnsupported
@@ -597,7 +597,7 @@ export const CVStatusCode_fullPolResponseUnsupported = _enum_for_CVStatusCode.fu
  * @constant
  * @type {number}
  */
-export const fullPolResponseUnsupported = CVStatusCode_fullPolResponseUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fullPolResponseUnsupported: _enum_for_CVStatusCode.fullPolResponseUnsupported = CVStatusCode_fullPolResponseUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_inhibitPolicyMappingUnsupported
@@ -608,7 +608,7 @@ export const fullPolResponseUnsupported = CVStatusCode_fullPolResponseUnsupporte
  * @constant
  * @type {number}
  */
-export const CVStatusCode_inhibitPolicyMappingUnsupported = _enum_for_CVStatusCode.inhibitPolicyMappingUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_inhibitPolicyMappingUnsupported: _enum_for_CVStatusCode.inhibitPolicyMappingUnsupported = _enum_for_CVStatusCode.inhibitPolicyMappingUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inhibitPolicyMappingUnsupported
@@ -619,7 +619,7 @@ export const CVStatusCode_inhibitPolicyMappingUnsupported = _enum_for_CVStatusCo
  * @constant
  * @type {number}
  */
-export const inhibitPolicyMappingUnsupported = CVStatusCode_inhibitPolicyMappingUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inhibitPolicyMappingUnsupported: _enum_for_CVStatusCode.inhibitPolicyMappingUnsupported = CVStatusCode_inhibitPolicyMappingUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_requireExplicitPolicyUnsupported
@@ -630,7 +630,7 @@ export const inhibitPolicyMappingUnsupported = CVStatusCode_inhibitPolicyMapping
  * @constant
  * @type {number}
  */
-export const CVStatusCode_requireExplicitPolicyUnsupported = _enum_for_CVStatusCode.requireExplicitPolicyUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_requireExplicitPolicyUnsupported: _enum_for_CVStatusCode.requireExplicitPolicyUnsupported = _enum_for_CVStatusCode.requireExplicitPolicyUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requireExplicitPolicyUnsupported
@@ -641,7 +641,7 @@ export const CVStatusCode_requireExplicitPolicyUnsupported = _enum_for_CVStatusC
  * @constant
  * @type {number}
  */
-export const requireExplicitPolicyUnsupported = CVStatusCode_requireExplicitPolicyUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requireExplicitPolicyUnsupported: _enum_for_CVStatusCode.requireExplicitPolicyUnsupported = CVStatusCode_requireExplicitPolicyUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_inhibitAnyPolicyUnsupported
@@ -652,7 +652,7 @@ export const requireExplicitPolicyUnsupported = CVStatusCode_requireExplicitPoli
  * @constant
  * @type {number}
  */
-export const CVStatusCode_inhibitAnyPolicyUnsupported = _enum_for_CVStatusCode.inhibitAnyPolicyUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_inhibitAnyPolicyUnsupported: _enum_for_CVStatusCode.inhibitAnyPolicyUnsupported = _enum_for_CVStatusCode.inhibitAnyPolicyUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inhibitAnyPolicyUnsupported
@@ -663,7 +663,7 @@ export const CVStatusCode_inhibitAnyPolicyUnsupported = _enum_for_CVStatusCode.i
  * @constant
  * @type {number}
  */
-export const inhibitAnyPolicyUnsupported = CVStatusCode_inhibitAnyPolicyUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inhibitAnyPolicyUnsupported: _enum_for_CVStatusCode.inhibitAnyPolicyUnsupported = CVStatusCode_inhibitAnyPolicyUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_validationTimeUnsupported
@@ -674,7 +674,7 @@ export const inhibitAnyPolicyUnsupported = CVStatusCode_inhibitAnyPolicyUnsuppor
  * @constant
  * @type {number}
  */
-export const CVStatusCode_validationTimeUnsupported = _enum_for_CVStatusCode.validationTimeUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_validationTimeUnsupported: _enum_for_CVStatusCode.validationTimeUnsupported = _enum_for_CVStatusCode.validationTimeUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary validationTimeUnsupported
@@ -685,7 +685,7 @@ export const CVStatusCode_validationTimeUnsupported = _enum_for_CVStatusCode.val
  * @constant
  * @type {number}
  */
-export const validationTimeUnsupported = CVStatusCode_validationTimeUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const validationTimeUnsupported: _enum_for_CVStatusCode.validationTimeUnsupported = CVStatusCode_validationTimeUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unrecognizedCritQueryExt
@@ -696,7 +696,7 @@ export const validationTimeUnsupported = CVStatusCode_validationTimeUnsupported;
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unrecognizedCritQueryExt = _enum_for_CVStatusCode.unrecognizedCritQueryExt; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unrecognizedCritQueryExt: _enum_for_CVStatusCode.unrecognizedCritQueryExt = _enum_for_CVStatusCode.unrecognizedCritQueryExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognizedCritQueryExt
@@ -707,7 +707,7 @@ export const CVStatusCode_unrecognizedCritQueryExt = _enum_for_CVStatusCode.unre
  * @constant
  * @type {number}
  */
-export const unrecognizedCritQueryExt = CVStatusCode_unrecognizedCritQueryExt; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedCritQueryExt: _enum_for_CVStatusCode.unrecognizedCritQueryExt = CVStatusCode_unrecognizedCritQueryExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CVStatusCode_unrecognizedCritRequestExt
@@ -718,7 +718,7 @@ export const unrecognizedCritQueryExt = CVStatusCode_unrecognizedCritQueryExt; /
  * @constant
  * @type {number}
  */
-export const CVStatusCode_unrecognizedCritRequestExt = _enum_for_CVStatusCode.unrecognizedCritRequestExt; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CVStatusCode_unrecognizedCritRequestExt: _enum_for_CVStatusCode.unrecognizedCritRequestExt = _enum_for_CVStatusCode.unrecognizedCritRequestExt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognizedCritRequestExt
@@ -729,13 +729,13 @@ export const CVStatusCode_unrecognizedCritRequestExt = _enum_for_CVStatusCode.un
  * @constant
  * @type {number}
  */
-export const unrecognizedCritRequestExt = CVStatusCode_unrecognizedCritRequestExt; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unrecognizedCritRequestExt: _enum_for_CVStatusCode.unrecognizedCritRequestExt = CVStatusCode_unrecognizedCritRequestExt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CVStatusCode = $._decodeEnumerated;
+export const _decode_CVStatusCode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_CVStatusCode = $._encodeEnumerated;
+export const _encode_CVStatusCode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

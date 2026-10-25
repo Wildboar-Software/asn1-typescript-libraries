@@ -21,7 +21,7 @@ export type PKCS15Token_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const PKCS15Token_version_v1 = 0 satisfies PKCS15Token_version; /* LONG_NAMED_INTEGER_VALUE */
+export const PKCS15Token_version_v1: 0 = 0 satisfies PKCS15Token_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,17 +29,17 @@ export const PKCS15Token_version_v1 = 0 satisfies PKCS15Token_version; /* LONG_N
  * @constant
  * @type {number}
  */
-export const v1 = PKCS15Token_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 0 = PKCS15Token_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_PKCS15Token_version = $._decodeInteger;
+export const _decode_PKCS15Token_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_PKCS15Token_version = $._encodeInteger;
+export const _encode_PKCS15Token_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

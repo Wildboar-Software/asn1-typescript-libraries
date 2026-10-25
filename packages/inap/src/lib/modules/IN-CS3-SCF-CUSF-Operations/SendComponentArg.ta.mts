@@ -124,19 +124,19 @@ class SendComponentArg {
      * @static
      * @method
      */
-    public static get _default_value_for_message () { return Message_rELeaseCOMPlete; }        /**
+    public static get _default_value_for_message (): _enum_for_Message.rELeaseCOMPlete { return Message_rELeaseCOMPlete; }        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;        /**
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;        /**
          * @summary The enum used as the type of the component `message`
          * @public
          * @static
          */
 
-    public static _enum_for_message = _enum_for_Message;
+    public static _enum_for_message: typeof _enum_for_Message = _enum_for_Message;
 }
 
 /**

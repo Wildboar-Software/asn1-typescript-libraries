@@ -98,13 +98,13 @@ class UDMDeregistrationData {
          * @static
          */
 
-    public static _enum_for_deregReason = _enum_for_UDMDeregReason;        /**
+    public static _enum_for_deregReason: typeof _enum_for_UDMDeregReason = _enum_for_UDMDeregReason;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

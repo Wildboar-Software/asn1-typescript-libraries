@@ -213,8 +213,8 @@ const AuditDescriptor_auditToken_eventBufferToken: number = 9; /* LONG_NAMED_BIT
  */
 export
 const eventBufferToken: number = AuditDescriptor_auditToken_eventBufferToken; /* SHORT_NAMED_BIT */
-export const _decode_AuditDescriptor_auditToken = $._decodeBitString;
-export const _encode_AuditDescriptor_auditToken = $._encodeBitString;
+export const _decode_AuditDescriptor_auditToken: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AuditDescriptor_auditToken: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type KEAPublicKey = INTEGER;
-export const _decode_KEAPublicKey = $._decodeInteger;
-export const _encode_KEAPublicKey = $._encodeInteger;
+export const _decode_KEAPublicKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_KEAPublicKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

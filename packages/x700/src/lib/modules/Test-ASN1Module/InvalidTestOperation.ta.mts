@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type InvalidTestOperation = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_InvalidTestOperation = $._decodeObjectIdentifier;
+export const _decode_InvalidTestOperation: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_InvalidTestOperation = $._encodeObjectIdentifier;
+export const _encode_InvalidTestOperation: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

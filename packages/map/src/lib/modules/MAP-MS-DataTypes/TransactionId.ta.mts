@@ -47,7 +47,7 @@ export const _decode_TransactionId = (el: _Element): TransactionId => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TransactionId, encoded as an ASN.1 Element.
  */
-export const _encode_TransactionId = $._encodeOctetString;
+export const _encode_TransactionId: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

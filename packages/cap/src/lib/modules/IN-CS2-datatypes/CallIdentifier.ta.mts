@@ -34,7 +34,7 @@ export const _decode_CallIdentifier = (el: _Element): CallIdentifier => {
     }
     return value;
 };
-export const _encode_CallIdentifier = $._encodeInteger;
+export const _encode_CallIdentifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

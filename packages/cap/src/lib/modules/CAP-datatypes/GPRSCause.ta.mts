@@ -25,5 +25,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type GPRSCause = OCTET_STRING;
-export const _decode_GPRSCause = $._decodeOctetString;
-export const _encode_GPRSCause = $._encodeOctetString;
+export const _decode_GPRSCause: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_GPRSCause: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

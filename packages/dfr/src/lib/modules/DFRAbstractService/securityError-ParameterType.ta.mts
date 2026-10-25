@@ -69,7 +69,7 @@ class securityError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_SecurityProblem;
+    public static _enum_for_problem: typeof _enum_for_SecurityProblem = _enum_for_SecurityProblem;
 }
 
 /**

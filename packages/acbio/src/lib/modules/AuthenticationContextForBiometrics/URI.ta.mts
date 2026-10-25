@@ -28,12 +28,12 @@ export type URI = VisibleString; // VisibleString
 
 
 
-export const _decode_URI = $._decodeVisibleString;
+export const _decode_URI: $.ASN1Decoder<string> = $._decodeVisibleString;
 
 
 
 
-export const _encode_URI = $._encodeVisibleString;
+export const _encode_URI: $.ASN1Encoder<string> = $._encodeVisibleString;
 
 
 /* eslint-enable */

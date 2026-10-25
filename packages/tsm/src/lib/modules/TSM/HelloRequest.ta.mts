@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type HelloRequest = NULL; // NullType
-export const _decode_HelloRequest = $._decodeNull;
-export const _encode_HelloRequest = $._encodeNull;
+export const _decode_HelloRequest: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_HelloRequest: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

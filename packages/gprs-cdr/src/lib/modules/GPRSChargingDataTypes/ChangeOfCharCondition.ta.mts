@@ -550,19 +550,19 @@ class ChangeOfCharCondition {
          * @static
          */
 
-    public static _enum_for_changeCondition = _enum_for_ChangeCondition;        /**
+    public static _enum_for_changeCondition: typeof _enum_for_ChangeCondition = _enum_for_ChangeCondition;        /**
          * @summary The enum used as the type of the component `presenceReportingAreaStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_presenceReportingAreaStatus = _enum_for_PresenceReportingAreaStatus;        /**
+    public static _enum_for_presenceReportingAreaStatus: typeof _enum_for_PresenceReportingAreaStatus = _enum_for_PresenceReportingAreaStatus;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
 }
 
 /**

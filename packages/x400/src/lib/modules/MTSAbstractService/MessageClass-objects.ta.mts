@@ -39,48 +39,48 @@ export type MessageClass_objects = _enum_for_MessageClass_objects | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const MessageClass_objects_messages = _enum_for_MessageClass_objects.messages; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MessageClass_objects_messages: _enum_for_MessageClass_objects.messages = _enum_for_MessageClass_objects.messages; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messages
  * @constant
  * @type {number}
  */
-export const messages = MessageClass_objects_messages; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const messages: _enum_for_MessageClass_objects.messages = MessageClass_objects_messages; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_objects_reports
  * @constant
  * @type {number}
  */
-export const MessageClass_objects_reports = _enum_for_MessageClass_objects.reports; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MessageClass_objects_reports: _enum_for_MessageClass_objects.reports = _enum_for_MessageClass_objects.reports; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reports
  * @constant
  * @type {number}
  */
-export const reports = MessageClass_objects_reports; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const reports: _enum_for_MessageClass_objects.reports = MessageClass_objects_reports; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_objects_both
  * @constant
  * @type {number}
  */
-export const MessageClass_objects_both = _enum_for_MessageClass_objects.both; /* LONG_NAMED_ENUMERATED_VALUE */
+export const MessageClass_objects_both: _enum_for_MessageClass_objects.both = _enum_for_MessageClass_objects.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
  * @constant
  * @type {number}
  */
-export const both = MessageClass_objects_both; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const both: _enum_for_MessageClass_objects.both = MessageClass_objects_both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MessageClass_objects = $._decodeEnumerated;
+export const _decode_MessageClass_objects: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_MessageClass_objects = $._encodeEnumerated;
+export const _encode_MessageClass_objects: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -48,7 +48,7 @@ export const _decode_TeleserviceCode = (el: _Element): TeleserviceCode => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TeleserviceCode, encoded as an ASN.1 Element.
  */
-export const _encode_TeleserviceCode = $._encodeOctetString;
+export const _encode_TeleserviceCode: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

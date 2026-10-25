@@ -88,7 +88,7 @@ type ModemType = _enum_for_ModemType | ENUMERATED;
  * @type {number}
  */
 export
-const ModemType_v18 = _enum_for_ModemType.v18; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v18: _enum_for_ModemType.v18 = _enum_for_ModemType.v18; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v18
@@ -96,7 +96,7 @@ const ModemType_v18 = _enum_for_ModemType.v18; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v18 = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v18: _enum_for_ModemType.v18 = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v22
@@ -108,7 +108,7 @@ const v18 = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v22 = _enum_for_ModemType.v22; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v22: _enum_for_ModemType.v22 = _enum_for_ModemType.v22; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v22
@@ -116,7 +116,7 @@ const ModemType_v22 = _enum_for_ModemType.v22; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v22 = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v22: _enum_for_ModemType.v22 = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v22bis
@@ -128,7 +128,7 @@ const v22 = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v22bis = _enum_for_ModemType.v22bis; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v22bis: _enum_for_ModemType.v22bis = _enum_for_ModemType.v22bis; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v22bis
@@ -136,7 +136,7 @@ const ModemType_v22bis = _enum_for_ModemType.v22bis; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const v22bis = ModemType_v22bis; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v22bis: _enum_for_ModemType.v22bis = ModemType_v22bis; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v32
@@ -148,7 +148,7 @@ const v22bis = ModemType_v22bis; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v32 = _enum_for_ModemType.v32; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v32: _enum_for_ModemType.v32 = _enum_for_ModemType.v32; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v32
@@ -156,7 +156,7 @@ const ModemType_v32 = _enum_for_ModemType.v32; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v32 = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v32: _enum_for_ModemType.v32 = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v32bis
@@ -168,7 +168,7 @@ const v32 = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v32bis = _enum_for_ModemType.v32bis; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v32bis: _enum_for_ModemType.v32bis = _enum_for_ModemType.v32bis; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v32bis
@@ -176,7 +176,7 @@ const ModemType_v32bis = _enum_for_ModemType.v32bis; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const v32bis = ModemType_v32bis; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v32bis: _enum_for_ModemType.v32bis = ModemType_v32bis; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v34
@@ -188,7 +188,7 @@ const v32bis = ModemType_v32bis; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v34 = _enum_for_ModemType.v34; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v34: _enum_for_ModemType.v34 = _enum_for_ModemType.v34; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v34
@@ -196,7 +196,7 @@ const ModemType_v34 = _enum_for_ModemType.v34; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v34 = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v34: _enum_for_ModemType.v34 = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v90
@@ -208,7 +208,7 @@ const v34 = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v90 = _enum_for_ModemType.v90; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v90: _enum_for_ModemType.v90 = _enum_for_ModemType.v90; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v90
@@ -216,7 +216,7 @@ const ModemType_v90 = _enum_for_ModemType.v90; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v90 = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v90: _enum_for_ModemType.v90 = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v91
@@ -228,7 +228,7 @@ const v90 = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_v91 = _enum_for_ModemType.v91; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v91: _enum_for_ModemType.v91 = _enum_for_ModemType.v91; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v91
@@ -236,7 +236,7 @@ const ModemType_v91 = _enum_for_ModemType.v91; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v91 = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v91: _enum_for_ModemType.v91 = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_synchISDN
@@ -248,7 +248,7 @@ const v91 = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ModemType_synchISDN = _enum_for_ModemType.synchISDN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_synchISDN: _enum_for_ModemType.synchISDN = _enum_for_ModemType.synchISDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary synchISDN
@@ -256,9 +256,9 @@ const ModemType_synchISDN = _enum_for_ModemType.synchISDN; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const synchISDN = ModemType_synchISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ModemType = $._decodeEnumerated;
-export const _encode_ModemType = $._encodeEnumerated;
+const synchISDN: _enum_for_ModemType.synchISDN = ModemType_synchISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ModemType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ModemType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

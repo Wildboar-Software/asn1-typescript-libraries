@@ -27,7 +27,7 @@ export function _decode_PersonPhone (el: _Element): PersonPhone {
     }
     return value;
 }
-export const _encode_PersonPhone = $._encodeGraphicString;
+export const _encode_PersonPhone: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

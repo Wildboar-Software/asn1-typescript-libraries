@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type ChannelId = OCTET_STRING; // OctetStringType
 
 
-export const _decode_ChannelId = $._decodeOctetString;
+export const _decode_ChannelId: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_ChannelId = $._encodeOctetString;
+export const _encode_ChannelId: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

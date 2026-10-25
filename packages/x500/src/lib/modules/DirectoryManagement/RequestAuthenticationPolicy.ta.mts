@@ -64,10 +64,10 @@ export const RequestAuthenticationPolicy_strong: number = 2; /* LONG_NAMED_BIT *
 export const strong: number = RequestAuthenticationPolicy_strong; /* SHORT_NAMED_BIT */
 
 
-export const _decode_RequestAuthenticationPolicy = $._decodeBitString;
+export const _decode_RequestAuthenticationPolicy: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_RequestAuthenticationPolicy = $._encodeBitString;
+export const _encode_RequestAuthenticationPolicy: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

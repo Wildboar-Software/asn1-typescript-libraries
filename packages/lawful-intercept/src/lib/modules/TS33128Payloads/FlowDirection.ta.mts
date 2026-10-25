@@ -65,7 +65,7 @@ type FlowDirection = _enum_for_FlowDirection;
  * @enum {number}
  */
 export
-const FlowDirection = _enum_for_FlowDirection;
+const FlowDirection: typeof _enum_for_FlowDirection = _enum_for_FlowDirection;
 
 /**
  * @summary FlowDirection_downlinkOnly
@@ -73,7 +73,7 @@ const FlowDirection = _enum_for_FlowDirection;
  * @type {number}
  */
 export
-const FlowDirection_downlinkOnly = FlowDirection.downlinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_downlinkOnly: _enum_for_FlowDirection.downlinkOnly = FlowDirection.downlinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downlinkOnly
@@ -81,7 +81,7 @@ const FlowDirection_downlinkOnly = FlowDirection.downlinkOnly; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const downlinkOnly = FlowDirection.downlinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downlinkOnly: _enum_for_FlowDirection.downlinkOnly = FlowDirection.downlinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FlowDirection_uplinkOnly
@@ -89,7 +89,7 @@ const downlinkOnly = FlowDirection.downlinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const FlowDirection_uplinkOnly = FlowDirection.uplinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_uplinkOnly: _enum_for_FlowDirection.uplinkOnly = FlowDirection.uplinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uplinkOnly
@@ -97,7 +97,7 @@ const FlowDirection_uplinkOnly = FlowDirection.uplinkOnly; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const uplinkOnly = FlowDirection.uplinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uplinkOnly: _enum_for_FlowDirection.uplinkOnly = FlowDirection.uplinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FlowDirection_dowlinkAndUplink
@@ -105,7 +105,7 @@ const uplinkOnly = FlowDirection.uplinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const FlowDirection_dowlinkAndUplink = FlowDirection.dowlinkAndUplink; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_dowlinkAndUplink: _enum_for_FlowDirection.dowlinkAndUplink = FlowDirection.dowlinkAndUplink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dowlinkAndUplink
@@ -113,7 +113,7 @@ const FlowDirection_dowlinkAndUplink = FlowDirection.dowlinkAndUplink; /* LONG_N
  * @type {number}
  */
 export
-const dowlinkAndUplink = FlowDirection.dowlinkAndUplink; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dowlinkAndUplink: _enum_for_FlowDirection.dowlinkAndUplink = FlowDirection.dowlinkAndUplink; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FlowDirection: $.ASN1Decoder<FlowDirection> = $._decodeEnumerated;
 export const _encode_FlowDirection: $.ASN1Encoder<FlowDirection> = $._encodeEnumerated;
 

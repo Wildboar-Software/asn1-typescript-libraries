@@ -36,7 +36,7 @@ export const _decode_CurrencyFactor = (el: _Element): CurrencyFactor => {
     }
     return value;
 };
-export const _encode_CurrencyFactor = $._encodeInteger;
+export const _encode_CurrencyFactor: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -121,7 +121,7 @@ class TelTonesData {
          * @static
          */
 
-    public static _enum_for_toneDetected = _enum_for_ToneDetected;
+    public static _enum_for_toneDetected: typeof _enum_for_ToneDetected = _enum_for_ToneDetected;
 }
 
 /**

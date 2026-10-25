@@ -119,13 +119,13 @@ class TraceActivationInfo {
          * @static
          */
 
-    public static _enum_for_traceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_traceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mDTConfiguration`
          * @public
          * @static
          */
 
-    public static _enum_for_mDTConfiguration = _enum_for_MDTConfiguration;
+    public static _enum_for_mDTConfiguration: typeof _enum_for_MDTConfiguration = _enum_for_MDTConfiguration;
 }
 
 /**

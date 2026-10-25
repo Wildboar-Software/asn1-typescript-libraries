@@ -111,7 +111,7 @@ class DeleteNamedType_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_scopeOfDelete () { return specific; }
+    public static get _default_value_for_scopeOfDelete (): 0 { return specific; }
 }
 
 /**

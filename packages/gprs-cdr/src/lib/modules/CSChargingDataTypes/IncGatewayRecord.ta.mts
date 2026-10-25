@@ -596,7 +596,7 @@ class IncGatewayRecord {
          * @static
          */
 
-    public static _enum_for_reasonForServiceChange = _enum_for_ReasonForServiceChange;
+    public static _enum_for_reasonForServiceChange: typeof _enum_for_ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 }
 
 /**

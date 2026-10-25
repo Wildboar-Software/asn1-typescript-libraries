@@ -48,7 +48,7 @@ export const _decode_Ext_QoS_Subscribed = (el: _Element): Ext_QoS_Subscribed => 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_QoS_Subscribed, encoded as an ASN.1 Element.
  */
-export const _encode_Ext_QoS_Subscribed = $._encodeOctetString;
+export const _encode_Ext_QoS_Subscribed: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

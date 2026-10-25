@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type Group14 = INTEGER;
 
 
-export const _decode_Group14 = $._decodeInteger;
+export const _decode_Group14: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Group14 = $._encodeInteger;
+export const _encode_Group14: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

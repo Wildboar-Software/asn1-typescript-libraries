@@ -33,12 +33,12 @@ export type OctetString = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_OctetString = $._decodeOctetString;
+export const _decode_OctetString: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_OctetString = $._encodeOctetString;
+export const _encode_OctetString: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

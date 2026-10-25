@@ -85,7 +85,7 @@ class CPIRequestArg {
          * @static
          */
 
-    public static _enum_for_cpiCapabilityLevel = _enum_for_CPICapabilityLevel;
+    public static _enum_for_cpiCapabilityLevel: typeof _enum_for_CPICapabilityLevel = _enum_for_CPICapabilityLevel;
 }
 
 /**

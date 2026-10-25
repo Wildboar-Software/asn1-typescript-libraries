@@ -142,7 +142,7 @@ class UASNFInformation {
          * @static
          */
 
-    public static _enum_for_uASNFProcedure = _enum_for_UASNFProcedure;
+    public static _enum_for_uASNFProcedure: typeof _enum_for_UASNFProcedure = _enum_for_UASNFProcedure;
 }
 
 /**

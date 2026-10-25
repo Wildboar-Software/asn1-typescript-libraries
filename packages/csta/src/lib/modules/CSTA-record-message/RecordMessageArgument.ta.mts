@@ -167,7 +167,7 @@ class RecordMessageArgument {
          * @static
          */
 
-    public static _enum_for_encodingAlgorithm = _enum_for_EncodingAlgorithm;
+    public static _enum_for_encodingAlgorithm: typeof _enum_for_EncodingAlgorithm = _enum_for_EncodingAlgorithm;
 }
 
 /**

@@ -275,7 +275,7 @@ class SupplService {
          * @static
          */
 
-    public static _enum_for_participantActionType = _enum_for_ParticipantActionType;
+    public static _enum_for_participantActionType: typeof _enum_for_ParticipantActionType = _enum_for_ParticipantActionType;
 }
 
 /**

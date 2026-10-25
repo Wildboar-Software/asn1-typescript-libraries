@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ReserveResult = NULL; // NullType
-export const _decode_ReserveResult = $._decodeNull;
-export const _encode_ReserveResult = $._encodeNull;
+export const _decode_ReserveResult: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_ReserveResult: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

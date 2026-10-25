@@ -204,7 +204,7 @@ export class RelationshipChangeInfo {
      * @static
      */
 
-    public static _enum_for_sourceIndicator = _enum_for_SourceIndicator;
+    public static _enum_for_sourceIndicator: typeof _enum_for_SourceIndicator = _enum_for_SourceIndicator;
 }
 
 /**

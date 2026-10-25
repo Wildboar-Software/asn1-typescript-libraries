@@ -27,7 +27,7 @@ export function _decode_ActivityInfo (el: _Element): ActivityInfo {
     }
     return value;
 }
-export const _encode_ActivityInfo = $._encodeGraphicString;
+export const _encode_ActivityInfo: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

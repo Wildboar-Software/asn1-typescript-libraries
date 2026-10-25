@@ -109,7 +109,7 @@ export class ObjectClassInformation {
      * @static
      */
 
-    public static _enum_for_kind = _enum_for_ObjectClassKind;
+    public static _enum_for_kind: typeof _enum_for_ObjectClassKind = _enum_for_ObjectClassKind;
 }
 
 /**

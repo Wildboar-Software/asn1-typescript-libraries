@@ -296,13 +296,13 @@ class ConsultationCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_consultOptions () { return ConsultOptions_unrestricted; }        /**
+    public static get _default_value_for_consultOptions (): _enum_for_ConsultOptions.unrestricted { return ConsultOptions_unrestricted; }        /**
          * @summary The enum used as the type of the component `consultOptions`
          * @public
          * @static
          */
 
-    public static _enum_for_consultOptions = _enum_for_ConsultOptions;
+    public static _enum_for_consultOptions: typeof _enum_for_ConsultOptions = _enum_for_ConsultOptions;
 }
 
 /**

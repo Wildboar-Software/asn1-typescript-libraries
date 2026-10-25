@@ -28,12 +28,12 @@ export type ExternalTime = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_ExternalTime = $._decodeGeneralizedTime;
+export const _decode_ExternalTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_ExternalTime = $._encodeGeneralizedTime;
+export const _encode_ExternalTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

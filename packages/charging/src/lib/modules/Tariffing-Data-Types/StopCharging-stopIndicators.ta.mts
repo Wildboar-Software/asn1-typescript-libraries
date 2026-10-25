@@ -65,7 +65,7 @@ export const _decode_StopCharging_stopIndicators = (el: _Element): StopCharging_
     }
     return value;
 };
-export const _encode_StopCharging_stopIndicators = $._encodeBitString;
+export const _encode_StopCharging_stopIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

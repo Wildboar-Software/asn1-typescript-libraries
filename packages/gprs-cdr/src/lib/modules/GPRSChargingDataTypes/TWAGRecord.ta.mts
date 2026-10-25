@@ -908,13 +908,13 @@ class TWAGRecord {
          * @static
          */
 
-    public static _enum_for_apnSelectionMode = _enum_for_APNSelectionMode;        /**
+    public static _enum_for_apnSelectionMode: typeof _enum_for_APNSelectionMode = _enum_for_APNSelectionMode;        /**
          * @summary The enum used as the type of the component `chChSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;
 }
 
 /**

@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SupplementaryInformation = PrintableString; // PrintableString
 
 
-export const _decode_SupplementaryInformation = $._decodePrintableString;
+export const _decode_SupplementaryInformation: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_SupplementaryInformation = $._encodePrintableString;
+export const _encode_SupplementaryInformation: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

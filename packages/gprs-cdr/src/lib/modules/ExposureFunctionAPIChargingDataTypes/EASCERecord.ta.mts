@@ -542,13 +542,13 @@ class EASCERecord {
          * @static
          */
 
-    public static _enum_for_aPIDirection = _enum_for_APIDirection;        /**
+    public static _enum_for_aPIDirection: typeof _enum_for_APIDirection = _enum_for_APIDirection;        /**
          * @summary The enum used as the type of the component `aPINetworkServiceNode`
          * @public
          * @static
          */
 
-    public static _enum_for_aPINetworkServiceNode = _enum_for_APINetworkServiceNode;
+    public static _enum_for_aPINetworkServiceNode: typeof _enum_for_APINetworkServiceNode = _enum_for_APINetworkServiceNode;
 }
 
 /**

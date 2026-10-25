@@ -31,8 +31,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AddEventConditionListReference_Response = NULL; // NullType
-export const _decode_AddEventConditionListReference_Response = $._decodeNull;
-export const _encode_AddEventConditionListReference_Response = $._encodeNull;
+export const _decode_AddEventConditionListReference_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_AddEventConditionListReference_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

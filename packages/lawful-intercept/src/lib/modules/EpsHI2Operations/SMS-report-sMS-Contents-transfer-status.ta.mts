@@ -48,7 +48,7 @@ type SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_transfer_status_succeed_transfer = _enum_for_SMS_report_sMS_Contents_transfer_status.succeed_transfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_transfer_status_succeed_transfer: _enum_for_SMS_report_sMS_Contents_transfer_status.succeed_transfer = _enum_for_SMS_report_sMS_Contents_transfer_status.succeed_transfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary succeed_transfer
@@ -59,7 +59,7 @@ const SMS_report_sMS_Contents_transfer_status_succeed_transfer = _enum_for_SMS_r
  * @type {number}
  */
 export
-const succeed_transfer = SMS_report_sMS_Contents_transfer_status_succeed_transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const succeed_transfer: _enum_for_SMS_report_sMS_Contents_transfer_status.succeed_transfer = SMS_report_sMS_Contents_transfer_status_succeed_transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_not_succeed_transfer
@@ -71,7 +71,7 @@ const succeed_transfer = SMS_report_sMS_Contents_transfer_status_succeed_transfe
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer = _enum_for_SMS_report_sMS_Contents_transfer_status.not_succeed_transfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer: _enum_for_SMS_report_sMS_Contents_transfer_status.not_succeed_transfer = _enum_for_SMS_report_sMS_Contents_transfer_status.not_succeed_transfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_succeed_transfer
@@ -82,7 +82,7 @@ const SMS_report_sMS_Contents_transfer_status_not_succeed_transfer = _enum_for_S
  * @type {number}
  */
 export
-const not_succeed_transfer = SMS_report_sMS_Contents_transfer_status_not_succeed_transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_succeed_transfer: _enum_for_SMS_report_sMS_Contents_transfer_status.not_succeed_transfer = SMS_report_sMS_Contents_transfer_status_not_succeed_transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_transfer_status_undefined
@@ -94,7 +94,7 @@ const not_succeed_transfer = SMS_report_sMS_Contents_transfer_status_not_succeed
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_transfer_status_undefined = _enum_for_SMS_report_sMS_Contents_transfer_status.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_transfer_status_undefined: _enum_for_SMS_report_sMS_Contents_transfer_status.undefined = _enum_for_SMS_report_sMS_Contents_transfer_status.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -105,7 +105,7 @@ const SMS_report_sMS_Contents_transfer_status_undefined = _enum_for_SMS_report_s
  * @type {number}
  */
 export
-const undefined = SMS_report_sMS_Contents_transfer_status_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined: _enum_for_SMS_report_sMS_Contents_transfer_status.undefined = SMS_report_sMS_Contents_transfer_status_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMS_report_sMS_Contents_transfer_status: $.ASN1Decoder<SMS_report_sMS_Contents_transfer_status> = $._decodeEnumerated;
 export const _encode_SMS_report_sMS_Contents_transfer_status: $.ASN1Encoder<SMS_report_sMS_Contents_transfer_status> = $._encodeEnumerated;
 

@@ -46,7 +46,7 @@ type EE_Class = INTEGER;
  * @type {number}
  */
 export
-const EE_Class_modifier = 0 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE */
+const EE_Class_modifier: 0 = 0 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_modifier
@@ -59,7 +59,7 @@ const EE_Class_modifier = 0 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const modifier = EE_Class_modifier; /* SHORT_NAMED_INTEGER_VALUE */
+const modifier: 0 = EE_Class_modifier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_notification
@@ -72,7 +72,7 @@ const modifier = EE_Class_modifier; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const EE_Class_notification = 1 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE */
+const EE_Class_notification: 1 = 1 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Class_notification
@@ -85,9 +85,9 @@ const EE_Class_notification = 1 satisfies EE_Class; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const notification = EE_Class_notification; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EE_Class = $._decodeInteger;
-export const _encode_EE_Class = $._encodeInteger;
+const notification: 1 = EE_Class_notification; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_EE_Class: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EE_Class: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -90,7 +90,7 @@ type CCBS_RequestState = _enum_for_CCBS_RequestState;
  * @enum {number}
  */
 export
-const CCBS_RequestState = _enum_for_CCBS_RequestState;
+const CCBS_RequestState: typeof _enum_for_CCBS_RequestState = _enum_for_CCBS_RequestState;
 
 /**
  * @summary CCBS_RequestState_request
@@ -102,7 +102,7 @@ const CCBS_RequestState = _enum_for_CCBS_RequestState;
  * @type {number}
  */
 export
-const CCBS_RequestState_request = CCBS_RequestState.request; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_request: _enum_for_CCBS_RequestState.request = CCBS_RequestState.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -114,7 +114,7 @@ const CCBS_RequestState_request = CCBS_RequestState.request; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const request = CCBS_RequestState.request; /* SHORT_NAMED_ENUMERATED_VALUE */
+const request: _enum_for_CCBS_RequestState.request = CCBS_RequestState.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_recall
@@ -126,7 +126,7 @@ const request = CCBS_RequestState.request; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CCBS_RequestState_recall = CCBS_RequestState.recall; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_recall: _enum_for_CCBS_RequestState.recall = CCBS_RequestState.recall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recall
@@ -138,7 +138,7 @@ const CCBS_RequestState_recall = CCBS_RequestState.recall; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const recall = CCBS_RequestState.recall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recall: _enum_for_CCBS_RequestState.recall = CCBS_RequestState.recall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_active
@@ -150,7 +150,7 @@ const recall = CCBS_RequestState.recall; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CCBS_RequestState_active = CCBS_RequestState.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_active: _enum_for_CCBS_RequestState.active = CCBS_RequestState.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -162,7 +162,7 @@ const CCBS_RequestState_active = CCBS_RequestState.active; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const active = CCBS_RequestState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: _enum_for_CCBS_RequestState.active = CCBS_RequestState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_completed
@@ -174,7 +174,7 @@ const active = CCBS_RequestState.active; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CCBS_RequestState_completed = CCBS_RequestState.completed; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_completed: _enum_for_CCBS_RequestState.completed = CCBS_RequestState.completed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary completed
@@ -186,7 +186,7 @@ const CCBS_RequestState_completed = CCBS_RequestState.completed; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const completed = CCBS_RequestState.completed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const completed: _enum_for_CCBS_RequestState.completed = CCBS_RequestState.completed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_suspended
@@ -198,7 +198,7 @@ const completed = CCBS_RequestState.completed; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const CCBS_RequestState_suspended = CCBS_RequestState.suspended; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_suspended: _enum_for_CCBS_RequestState.suspended = CCBS_RequestState.suspended; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary suspended
@@ -210,7 +210,7 @@ const CCBS_RequestState_suspended = CCBS_RequestState.suspended; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const suspended = CCBS_RequestState.suspended; /* SHORT_NAMED_ENUMERATED_VALUE */
+const suspended: _enum_for_CCBS_RequestState.suspended = CCBS_RequestState.suspended; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_frozen
@@ -222,7 +222,7 @@ const suspended = CCBS_RequestState.suspended; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const CCBS_RequestState_frozen = CCBS_RequestState.frozen; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_frozen: _enum_for_CCBS_RequestState.frozen = CCBS_RequestState.frozen; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary frozen
@@ -234,7 +234,7 @@ const CCBS_RequestState_frozen = CCBS_RequestState.frozen; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const frozen = CCBS_RequestState.frozen; /* SHORT_NAMED_ENUMERATED_VALUE */
+const frozen: _enum_for_CCBS_RequestState.frozen = CCBS_RequestState.frozen; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_RequestState_deleted
@@ -246,7 +246,7 @@ const frozen = CCBS_RequestState.frozen; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CCBS_RequestState_deleted = CCBS_RequestState.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_RequestState_deleted: _enum_for_CCBS_RequestState.deleted = CCBS_RequestState.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deleted
@@ -258,7 +258,7 @@ const CCBS_RequestState_deleted = CCBS_RequestState.deleted; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const deleted = CCBS_RequestState.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deleted: _enum_for_CCBS_RequestState.deleted = CCBS_RequestState.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CCBS_RequestState
@@ -266,7 +266,7 @@ const deleted = CCBS_RequestState.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CCBS_RequestState = $._decodeEnumerated;
+export const _decode_CCBS_RequestState: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CCBS_RequestState into an ASN.1 Element.
@@ -275,7 +275,7 @@ export const _decode_CCBS_RequestState = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CCBS_RequestState, encoded as an ASN.1 Element.
  */
-export const _encode_CCBS_RequestState = $._encodeEnumerated;
+export const _encode_CCBS_RequestState: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -276,13 +276,13 @@ class RequestedSubscriptionInfo {
          * @static
          */
 
-    public static _enum_for_requestedCAMEL_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo;        /**
+    public static _enum_for_requestedCAMEL_SubscriptionInfo: typeof _enum_for_RequestedCAMEL_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo;        /**
          * @summary The enum used as the type of the component `additionalRequestedCAMEL_SubscriptionInfo`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalRequestedCAMEL_SubscriptionInfo = _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo;
+    public static _enum_for_additionalRequestedCAMEL_SubscriptionInfo: typeof _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo = _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo;
 }
 
 /**

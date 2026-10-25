@@ -34,7 +34,7 @@ export const _decode_CallingPartysCategory = (el: _Element): CallingPartysCatego
     }
     return value;
 };
-export const _encode_CallingPartysCategory = $._encodeOctetString;
+export const _encode_CallingPartysCategory: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

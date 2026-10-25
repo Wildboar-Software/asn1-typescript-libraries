@@ -51,7 +51,7 @@ type SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_o
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_other_message_yes = _enum_for_SMS_report_sMS_Contents_other_message.yes; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_other_message_yes: _enum_for_SMS_report_sMS_Contents_other_message.yes = _enum_for_SMS_report_sMS_Contents_other_message.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary yes
@@ -62,7 +62,7 @@ const SMS_report_sMS_Contents_other_message_yes = _enum_for_SMS_report_sMS_Conte
  * @type {number}
  */
 export
-const yes = SMS_report_sMS_Contents_other_message_yes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const yes: _enum_for_SMS_report_sMS_Contents_other_message.yes = SMS_report_sMS_Contents_other_message_yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_no
@@ -74,7 +74,7 @@ const yes = SMS_report_sMS_Contents_other_message_yes; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_other_message_no = _enum_for_SMS_report_sMS_Contents_other_message.no; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_other_message_no: _enum_for_SMS_report_sMS_Contents_other_message.no = _enum_for_SMS_report_sMS_Contents_other_message.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no
@@ -85,7 +85,7 @@ const SMS_report_sMS_Contents_other_message_no = _enum_for_SMS_report_sMS_Conten
  * @type {number}
  */
 export
-const no = SMS_report_sMS_Contents_other_message_no; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no: _enum_for_SMS_report_sMS_Contents_other_message.no = SMS_report_sMS_Contents_other_message_no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_other_message_undefined
@@ -97,7 +97,7 @@ const no = SMS_report_sMS_Contents_other_message_no; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_other_message_undefined = _enum_for_SMS_report_sMS_Contents_other_message.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_other_message_undefined: _enum_for_SMS_report_sMS_Contents_other_message.undefined = _enum_for_SMS_report_sMS_Contents_other_message.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -108,7 +108,7 @@ const SMS_report_sMS_Contents_other_message_undefined = _enum_for_SMS_report_sMS
  * @type {number}
  */
 export
-const undefined = SMS_report_sMS_Contents_other_message_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined: _enum_for_SMS_report_sMS_Contents_other_message.undefined = SMS_report_sMS_Contents_other_message_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMS_report_sMS_Contents_other_message: $.ASN1Decoder<SMS_report_sMS_Contents_other_message> = $._decodeEnumerated;
 export const _encode_SMS_report_sMS_Contents_other_message: $.ASN1Encoder<SMS_report_sMS_Contents_other_message> = $._encodeEnumerated;
 

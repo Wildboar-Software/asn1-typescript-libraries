@@ -77,7 +77,7 @@ type CDRTermReason = _enum_for_CDRTermReason;
  * @enum {number}
  */
 export
-const CDRTermReason = _enum_for_CDRTermReason;
+const CDRTermReason: typeof _enum_for_CDRTermReason = _enum_for_CDRTermReason;
 
 /**
  * @summary CDRTermReason_endOfDataDetected
@@ -89,7 +89,7 @@ const CDRTermReason = _enum_for_CDRTermReason;
  * @type {number}
  */
 export
-const CDRTermReason_endOfDataDetected = CDRTermReason.endOfDataDetected; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTermReason_endOfDataDetected: _enum_for_CDRTermReason.endOfDataDetected = CDRTermReason.endOfDataDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfDataDetected
@@ -97,7 +97,7 @@ const CDRTermReason_endOfDataDetected = CDRTermReason.endOfDataDetected; /* LONG
  * @type {number}
  */
 export
-const endOfDataDetected = CDRTermReason.endOfDataDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfDataDetected: _enum_for_CDRTermReason.endOfDataDetected = CDRTermReason.endOfDataDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRTermReason_errorDetected
@@ -109,7 +109,7 @@ const endOfDataDetected = CDRTermReason.endOfDataDetected; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const CDRTermReason_errorDetected = CDRTermReason.errorDetected; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTermReason_errorDetected: _enum_for_CDRTermReason.errorDetected = CDRTermReason.errorDetected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorDetected
@@ -117,7 +117,7 @@ const CDRTermReason_errorDetected = CDRTermReason.errorDetected; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const errorDetected = CDRTermReason.errorDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorDetected: _enum_for_CDRTermReason.errorDetected = CDRTermReason.errorDetected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRTermReason_thresholdReached
@@ -129,7 +129,7 @@ const errorDetected = CDRTermReason.errorDetected; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const CDRTermReason_thresholdReached = CDRTermReason.thresholdReached; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTermReason_thresholdReached: _enum_for_CDRTermReason.thresholdReached = CDRTermReason.thresholdReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thresholdReached
@@ -137,7 +137,7 @@ const CDRTermReason_thresholdReached = CDRTermReason.thresholdReached; /* LONG_N
  * @type {number}
  */
 export
-const thresholdReached = CDRTermReason.thresholdReached; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thresholdReached: _enum_for_CDRTermReason.thresholdReached = CDRTermReason.thresholdReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRTermReason_other
@@ -149,7 +149,7 @@ const thresholdReached = CDRTermReason.thresholdReached; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const CDRTermReason_other = CDRTermReason.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTermReason_other: _enum_for_CDRTermReason.other = CDRTermReason.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -157,7 +157,7 @@ const CDRTermReason_other = CDRTermReason.other; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const other = CDRTermReason.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_CDRTermReason.other = CDRTermReason.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CDRTermReason: $.ASN1Decoder<CDRTermReason> | null = null;
 

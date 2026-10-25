@@ -21,12 +21,12 @@ export type ECPoint = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_ECPoint = $._decodeOctetString;
+export const _decode_ECPoint: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_ECPoint = $._encodeOctetString;
+export const _encode_ECPoint: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

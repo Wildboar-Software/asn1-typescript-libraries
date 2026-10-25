@@ -602,7 +602,7 @@ class PPFRecord {
          * @static
          */
 
-    public static _enum_for_causeForRecordClosing = _enum_for_CauseForRecordClosing;
+    public static _enum_for_causeForRecordClosing: typeof _enum_for_CauseForRecordClosing = _enum_for_CauseForRecordClosing;
 }
 
 /**

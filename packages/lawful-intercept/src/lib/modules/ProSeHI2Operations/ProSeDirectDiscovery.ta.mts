@@ -170,13 +170,13 @@ class ProSeDirectDiscovery {
          * @static
          */
 
-    public static _enum_for_proseDirectDiscoveryEvent = _enum_for_ProSeDirectDiscoveryEvent;        /**
+    public static _enum_for_proseDirectDiscoveryEvent: typeof _enum_for_ProSeDirectDiscoveryEvent = _enum_for_ProSeDirectDiscoveryEvent;        /**
          * @summary The enum used as the type of the component `targetRole`
          * @public
          * @static
          */
 
-    public static _enum_for_targetRole = _enum_for_TargetRole;
+    public static _enum_for_targetRole: typeof _enum_for_TargetRole = _enum_for_TargetRole;
 }
 
 /**

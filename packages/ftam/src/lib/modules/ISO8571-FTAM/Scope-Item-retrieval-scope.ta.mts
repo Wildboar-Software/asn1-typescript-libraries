@@ -38,7 +38,7 @@ export type Scope_Item_retrieval_scope = INTEGER;
  * @constant
  * @type {number}
  */
-export const Scope_Item_retrieval_scope_child = 0 satisfies Scope_Item_retrieval_scope; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_Item_retrieval_scope_child: 0 = 0 satisfies Scope_Item_retrieval_scope; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -46,7 +46,7 @@ export const Scope_Item_retrieval_scope_child = 0 satisfies Scope_Item_retrieval
  * @constant
  * @type {number}
  */
-export const child = Scope_Item_retrieval_scope_child; /* SHORT_NAMED_INTEGER_VALUE */
+export const child: 0 = Scope_Item_retrieval_scope_child; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const child = Scope_Item_retrieval_scope_child; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const Scope_Item_retrieval_scope_all = 1 satisfies Scope_Item_retrieval_scope; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_Item_retrieval_scope_all: 1 = 1 satisfies Scope_Item_retrieval_scope; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,17 +66,17 @@ export const Scope_Item_retrieval_scope_all = 1 satisfies Scope_Item_retrieval_s
  * @constant
  * @type {number}
  */
-export const all = Scope_Item_retrieval_scope_all; /* SHORT_NAMED_INTEGER_VALUE */
+export const all: 1 = Scope_Item_retrieval_scope_all; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Scope_Item_retrieval_scope = $._decodeInteger;
+export const _decode_Scope_Item_retrieval_scope: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Scope_Item_retrieval_scope = $._encodeInteger;
+export const _encode_Scope_Item_retrieval_scope: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

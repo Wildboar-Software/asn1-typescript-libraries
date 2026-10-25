@@ -123,7 +123,7 @@ class TSMCipherText {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_ContentType;
+    public static _enum_for_type_: typeof _enum_for_ContentType = _enum_for_ContentType;
 }
 
 /**

@@ -175,8 +175,8 @@ export class AlarmSynchronizationData {
         );
     }
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;
-    public static _enum_for_trendIndication = _enum_for_TrendIndication;
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_trendIndication: typeof _enum_for_TrendIndication = _enum_for_TrendIndication;
 }
 
 export const _root_component_type_list_1_spec_for_AlarmSynchronizationData: $.ComponentSpec[] = [

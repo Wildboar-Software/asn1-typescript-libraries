@@ -68,7 +68,7 @@ class DayDefinition {
          * @static
          */
 
-    public static _enum_for_day = _enum_for_DayOfTheWeek;
+    public static _enum_for_day: typeof _enum_for_DayOfTheWeek = _enum_for_DayOfTheWeek;
 }
 
 /**

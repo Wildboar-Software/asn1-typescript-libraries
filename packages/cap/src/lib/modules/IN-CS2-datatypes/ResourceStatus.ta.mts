@@ -59,7 +59,7 @@ type ResourceStatus = _enum_for_ResourceStatus;
  * @enum {number}
  */
 export
-const ResourceStatus = _enum_for_ResourceStatus;
+const ResourceStatus: typeof _enum_for_ResourceStatus = _enum_for_ResourceStatus;
 
 /**
  * @summary ResourceStatus_busy
@@ -67,7 +67,7 @@ const ResourceStatus = _enum_for_ResourceStatus;
  * @type {number}
  */
 export
-const ResourceStatus_busy = ResourceStatus.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceStatus_busy: _enum_for_ResourceStatus.busy = ResourceStatus.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -75,7 +75,7 @@ const ResourceStatus_busy = ResourceStatus.busy; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const busy = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy: _enum_for_ResourceStatus.busy = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResourceStatus_idle
@@ -83,7 +83,7 @@ const busy = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ResourceStatus_idle = ResourceStatus.idle; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceStatus_idle: _enum_for_ResourceStatus.idle = ResourceStatus.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -91,9 +91,9 @@ const ResourceStatus_idle = ResourceStatus.idle; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const idle = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ResourceStatus = $._decodeEnumerated;
-export const _encode_ResourceStatus = $._encodeEnumerated;
+const idle: _enum_for_ResourceStatus.idle = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ResourceStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ResourceStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

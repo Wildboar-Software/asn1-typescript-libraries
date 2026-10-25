@@ -111,10 +111,10 @@ export const Any_sub_type_little_finger: number = 0; /* LONG_NAMED_BIT */
 export const little_finger: number = Any_sub_type_little_finger; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Any_sub_type = $._decodeBitString;
+export const _decode_Any_sub_type: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Any_sub_type = $._encodeBitString;
+export const _encode_Any_sub_type: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

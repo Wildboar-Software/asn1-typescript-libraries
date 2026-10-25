@@ -58,7 +58,7 @@ export type SwitchType = _enum_for_SwitchType;
  *
  * @enum {number}
  */
-export const SwitchType = _enum_for_SwitchType;
+export const SwitchType: typeof _enum_for_SwitchType = _enum_for_SwitchType;
 
 
 /**
@@ -66,7 +66,7 @@ export const SwitchType = _enum_for_SwitchType;
  * @constant
  * @type {number}
  */
-export const SwitchType_manual =
+export const SwitchType_manual: _enum_for_SwitchType.manual =
     SwitchType.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const SwitchType_manual =
  * @constant
  * @type {number}
  */
-export const manual =
+export const manual: _enum_for_SwitchType.manual =
     SwitchType.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const manual =
  * @constant
  * @type {number}
  */
-export const SwitchType_forced =
+export const SwitchType_forced: _enum_for_SwitchType.forced =
     SwitchType.forced; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const SwitchType_forced =
  * @constant
  * @type {number}
  */
-export const forced =
+export const forced: _enum_for_SwitchType.forced =
     SwitchType.forced; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const forced =
  * @constant
  * @type {number}
  */
-export const SwitchType_lockout =
+export const SwitchType_lockout: _enum_for_SwitchType.lockout =
     SwitchType.lockout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const SwitchType_lockout =
  * @constant
  * @type {number}
  */
-export const lockout =
+export const lockout: _enum_for_SwitchType.lockout =
     SwitchType.lockout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

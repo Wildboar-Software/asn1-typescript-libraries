@@ -27,7 +27,7 @@ export function _decode_PersonFax (el: _Element): PersonFax {
     }
     return value;
 }
-export const _encode_PersonFax = $._encodeGraphicString;
+export const _encode_PersonFax: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

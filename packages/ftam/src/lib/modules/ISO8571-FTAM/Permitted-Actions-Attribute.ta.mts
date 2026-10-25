@@ -287,12 +287,12 @@ export const random_Order: number = Permitted_Actions_Attribute_random_Order; /*
 
 
 
-export const _decode_Permitted_Actions_Attribute = $._decodeBitString;
+export const _decode_Permitted_Actions_Attribute: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Permitted_Actions_Attribute = $._encodeBitString;
+export const _encode_Permitted_Actions_Attribute: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

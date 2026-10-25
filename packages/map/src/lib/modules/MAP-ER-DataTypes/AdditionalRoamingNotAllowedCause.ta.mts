@@ -43,7 +43,7 @@ type AdditionalRoamingNotAllowedCause = _enum_for_AdditionalRoamingNotAllowedCau
  * @type {number}
  */
 export
-const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed = _enum_for_AdditionalRoamingNotAllowedCause.supportedRAT_TypesNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed: _enum_for_AdditionalRoamingNotAllowedCause.supportedRAT_TypesNotAllowed = _enum_for_AdditionalRoamingNotAllowedCause.supportedRAT_TypesNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supportedRAT_TypesNotAllowed
@@ -55,7 +55,7 @@ const AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed = _enum_for_
  * @type {number}
  */
 export
-const supportedRAT_TypesNotAllowed = AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supportedRAT_TypesNotAllowed: _enum_for_AdditionalRoamingNotAllowedCause.supportedRAT_TypesNotAllowed = AdditionalRoamingNotAllowedCause_supportedRAT_TypesNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AdditionalRoamingNotAllowedCause
@@ -63,7 +63,7 @@ const supportedRAT_TypesNotAllowed = AdditionalRoamingNotAllowedCause_supportedR
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AdditionalRoamingNotAllowedCause = $._decodeEnumerated;
+export const _decode_AdditionalRoamingNotAllowedCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AdditionalRoamingNotAllowedCause into an ASN.1 Element.
@@ -72,7 +72,7 @@ export const _decode_AdditionalRoamingNotAllowedCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AdditionalRoamingNotAllowedCause, encoded as an ASN.1 Element.
  */
-export const _encode_AdditionalRoamingNotAllowedCause = $._encodeEnumerated;
+export const _encode_AdditionalRoamingNotAllowedCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

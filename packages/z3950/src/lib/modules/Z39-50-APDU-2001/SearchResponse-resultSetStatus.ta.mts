@@ -39,7 +39,7 @@ type SearchResponse_resultSetStatus = INTEGER;
  * @type {number}
  */
 export
-const SearchResponse_resultSetStatus_subset = 1 satisfies SearchResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SearchResponse_resultSetStatus_subset: 1 = 1 satisfies SearchResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_subset
@@ -52,7 +52,7 @@ const SearchResponse_resultSetStatus_subset = 1 satisfies SearchResponse_resultS
  * @type {number}
  */
 export
-const subset = SearchResponse_resultSetStatus_subset; /* SHORT_NAMED_INTEGER_VALUE */
+const subset: 1 = SearchResponse_resultSetStatus_subset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_interim
@@ -66,7 +66,7 @@ const subset = SearchResponse_resultSetStatus_subset; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const SearchResponse_resultSetStatus_interim = 2 satisfies SearchResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SearchResponse_resultSetStatus_interim: 2 = 2 satisfies SearchResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_interim
@@ -79,7 +79,7 @@ const SearchResponse_resultSetStatus_interim = 2 satisfies SearchResponse_result
  * @type {number}
  */
 export
-const interim = SearchResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_VALUE */
+const interim: 2 = SearchResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_none
@@ -92,7 +92,7 @@ const interim = SearchResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const SearchResponse_resultSetStatus_none = 3 satisfies SearchResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SearchResponse_resultSetStatus_none: 3 = 3 satisfies SearchResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchResponse_resultSetStatus_none
@@ -105,7 +105,7 @@ const SearchResponse_resultSetStatus_none = 3 satisfies SearchResponse_resultSet
  * @type {number}
  */
 export
-const none = SearchResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 3 = SearchResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SearchResponse_resultSetStatus: $.ASN1Decoder<SearchResponse_resultSetStatus> = $._decodeInteger;
 export const _encode_SearchResponse_resultSetStatus: $.ASN1Encoder<SearchResponse_resultSetStatus> = $._encodeInteger;
 

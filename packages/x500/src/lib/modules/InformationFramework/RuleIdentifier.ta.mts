@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type RuleIdentifier = INTEGER;
 
 
-export const _decode_RuleIdentifier = $._decodeInteger;
+export const _decode_RuleIdentifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RuleIdentifier = $._encodeInteger;
+export const _encode_RuleIdentifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

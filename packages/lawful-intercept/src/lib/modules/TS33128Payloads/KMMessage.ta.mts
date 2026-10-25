@@ -156,7 +156,7 @@ class KMMessage {
          * @static
          */
 
-    public static _enum_for_kMSRequestName = _enum_for_KMSRequestName;
+    public static _enum_for_kMSRequestName: typeof _enum_for_KMSRequestName = _enum_for_KMSRequestName;
 }
 
 /**

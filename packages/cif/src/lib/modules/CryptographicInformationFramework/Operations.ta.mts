@@ -184,8 +184,8 @@ const Operations_derive_key: number = 8; /* LONG_NAMED_BIT */
  */
 export
 const derive_key: number = Operations_derive_key; /* SHORT_NAMED_BIT */
-export const _decode_Operations = $._decodeBitString;
-export const _encode_Operations = $._encodeBitString;
+export const _decode_Operations: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_Operations: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

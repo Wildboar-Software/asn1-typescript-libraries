@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type BindSecurity = EXTERNAL; // ExternalType
-export const _decode_BindSecurity = $._decodeExternal;
-export const _encode_BindSecurity = $._encodeExternal;
+export const _decode_BindSecurity: $.ASN1Decoder<_External> = $._decodeExternal;
+export const _encode_BindSecurity: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

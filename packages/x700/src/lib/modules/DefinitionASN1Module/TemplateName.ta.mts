@@ -41,10 +41,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TemplateName = PrintableString; // PrintableString
 
 
-export const _decode_TemplateName = $._decodePrintableString;
+export const _decode_TemplateName: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_TemplateName = $._encodePrintableString;
+export const _encode_TemplateName: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

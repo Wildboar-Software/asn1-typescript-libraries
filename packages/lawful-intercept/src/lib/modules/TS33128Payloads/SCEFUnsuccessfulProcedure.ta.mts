@@ -267,7 +267,7 @@ class SCEFUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_failureCause = _enum_for_SCEFFailureCause;
+    public static _enum_for_failureCause: typeof _enum_for_SCEFFailureCause = _enum_for_SCEFFailureCause;
 }
 
 /**

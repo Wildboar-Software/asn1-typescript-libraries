@@ -491,13 +491,13 @@ class CommonEquipRecord {
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;        /**
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;        /**
          * @summary The enum used as the type of the component `fnur`
          * @public
          * @static
          */
 
-    public static _enum_for_fnur = _enum_for_Fnur;
+    public static _enum_for_fnur: typeof _enum_for_Fnur = _enum_for_Fnur;
 }
 
 /**

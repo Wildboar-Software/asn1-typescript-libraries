@@ -73,7 +73,7 @@ type NBIFOMMode = _enum_for_NBIFOMMode;
  * @enum {number}
  */
 export
-const NBIFOMMode = _enum_for_NBIFOMMode;
+const NBIFOMMode: typeof _enum_for_NBIFOMMode = _enum_for_NBIFOMMode;
 
 /**
  * @summary NBIFOMMode_uEINITIATED
@@ -81,7 +81,7 @@ const NBIFOMMode = _enum_for_NBIFOMMode;
  * @type {number}
  */
 export
-const NBIFOMMode_uEINITIATED = NBIFOMMode.uEINITIATED; /* LONG_NAMED_ENUMERATED_VALUE */
+const NBIFOMMode_uEINITIATED: _enum_for_NBIFOMMode.uEINITIATED = NBIFOMMode.uEINITIATED; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEINITIATED
@@ -89,7 +89,7 @@ const NBIFOMMode_uEINITIATED = NBIFOMMode.uEINITIATED; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const uEINITIATED = NBIFOMMode.uEINITIATED; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEINITIATED: _enum_for_NBIFOMMode.uEINITIATED = NBIFOMMode.uEINITIATED; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NBIFOMMode_nETWORKINITIATED
@@ -97,7 +97,7 @@ const uEINITIATED = NBIFOMMode.uEINITIATED; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NBIFOMMode_nETWORKINITIATED = NBIFOMMode.nETWORKINITIATED; /* LONG_NAMED_ENUMERATED_VALUE */
+const NBIFOMMode_nETWORKINITIATED: _enum_for_NBIFOMMode.nETWORKINITIATED = NBIFOMMode.nETWORKINITIATED; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nETWORKINITIATED
@@ -105,7 +105,7 @@ const NBIFOMMode_nETWORKINITIATED = NBIFOMMode.nETWORKINITIATED; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const nETWORKINITIATED = NBIFOMMode.nETWORKINITIATED; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nETWORKINITIATED: _enum_for_NBIFOMMode.nETWORKINITIATED = NBIFOMMode.nETWORKINITIATED; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_NBIFOMMode: $.ASN1Decoder<NBIFOMMode> = $._decodeEnumerated;

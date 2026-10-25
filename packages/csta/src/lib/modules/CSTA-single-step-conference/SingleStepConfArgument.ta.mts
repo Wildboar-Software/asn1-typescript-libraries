@@ -20,7 +20,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { ParticipationType, ParticipationType_active, _decode_ParticipationType, _encode_ParticipationType } from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
+import { ParticipationType, ParticipationType_active, _decode_ParticipationType, _encode_ParticipationType, _enum_for_ParticipationType } from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
 
 import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
@@ -217,7 +217,7 @@ class SingleStepConfArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_participationType () { return ParticipationType_active; }
+    public static get _default_value_for_participationType (): _enum_for_ParticipationType.active { return ParticipationType_active; }
 }
 
 /**

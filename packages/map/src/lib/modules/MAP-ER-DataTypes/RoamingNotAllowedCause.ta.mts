@@ -70,7 +70,7 @@ type RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
  * @enum {number}
  */
 export
-const RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
+const RoamingNotAllowedCause: typeof _enum_for_RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
 
 /**
  * @summary RoamingNotAllowedCause_plmnRoamingNotAllowed
@@ -82,7 +82,7 @@ const RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;
  * @type {number}
  */
 export
-const RoamingNotAllowedCause_plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoamingNotAllowedCause_plmnRoamingNotAllowed: _enum_for_RoamingNotAllowedCause.plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmnRoamingNotAllowed
@@ -94,7 +94,7 @@ const RoamingNotAllowedCause_plmnRoamingNotAllowed = RoamingNotAllowedCause.plmn
  * @type {number}
  */
 export
-const plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plmnRoamingNotAllowed: _enum_for_RoamingNotAllowedCause.plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoamingNotAllowedCause_operatorDeterminedBarring
@@ -106,7 +106,7 @@ const plmnRoamingNotAllowed = RoamingNotAllowedCause.plmnRoamingNotAllowed; /* S
  * @type {number}
  */
 export
-const RoamingNotAllowedCause_operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoamingNotAllowedCause_operatorDeterminedBarring: _enum_for_RoamingNotAllowedCause.operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operatorDeterminedBarring
@@ -118,7 +118,7 @@ const RoamingNotAllowedCause_operatorDeterminedBarring = RoamingNotAllowedCause.
  * @type {number}
  */
 export
-const operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operatorDeterminedBarring: _enum_for_RoamingNotAllowedCause.operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RoamingNotAllowedCause
@@ -126,7 +126,7 @@ const operatorDeterminedBarring = RoamingNotAllowedCause.operatorDeterminedBarri
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_RoamingNotAllowedCause = $._decodeEnumerated;
+export const _decode_RoamingNotAllowedCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RoamingNotAllowedCause into an ASN.1 Element.
@@ -135,7 +135,7 @@ export const _decode_RoamingNotAllowedCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RoamingNotAllowedCause, encoded as an ASN.1 Element.
  */
-export const _encode_RoamingNotAllowedCause = $._encodeEnumerated;
+export const _encode_RoamingNotAllowedCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

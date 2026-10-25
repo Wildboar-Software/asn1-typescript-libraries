@@ -34,7 +34,7 @@ export const _decode_RedirectionInformation = (el: _Element): RedirectionInforma
     }
     return value;
 };
-export const _encode_RedirectionInformation = $._encodeOctetString;
+export const _encode_RedirectionInformation: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -42,7 +42,7 @@ export const _decode_AES_IV = (el: _Element): AES_IV => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AES_IV, encoded as an ASN.1 Element.
  */
-export const _encode_AES_IV = $._encodeOctetString;
+export const _encode_AES_IV: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

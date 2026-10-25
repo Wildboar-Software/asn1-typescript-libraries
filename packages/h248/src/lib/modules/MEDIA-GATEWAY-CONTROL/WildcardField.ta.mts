@@ -34,7 +34,7 @@ export const _decode_WildcardField = (el: _Element): WildcardField => {
     }
     return value;
 };
-export const _encode_WildcardField = $._encodeOctetString;
+export const _encode_WildcardField: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -97,10 +97,10 @@ export const WaitingMessages_other_security_labels: number = 2; /* LONG_NAMED_BI
 export const other_security_labels: number = WaitingMessages_other_security_labels; /* SHORT_NAMED_BIT */
 
 
-export const _decode_WaitingMessages = $._decodeBitString;
+export const _decode_WaitingMessages: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_WaitingMessages = $._encodeBitString;
+export const _encode_WaitingMessages: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

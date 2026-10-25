@@ -34,10 +34,10 @@ export
 type CredentialType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_CredentialType = $._decodeObjectIdentifier;
+export const _decode_CredentialType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_CredentialType = $._encodeObjectIdentifier;
+export const _encode_CredentialType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

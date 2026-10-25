@@ -545,31 +545,31 @@ class InitialDPArg {
          * @static
          */
 
-    public static _enum_for_cGEncountered = _enum_for_CGEncountered;        /**
+    public static _enum_for_cGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;        /**
          * @summary The enum used as the type of the component `terminalType`
          * @public
          * @static
          */
 
-    public static _enum_for_terminalType = _enum_for_TerminalType;        /**
+    public static _enum_for_terminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;        /**
          * @summary The enum used as the type of the component `triggerType`
          * @public
          * @static
          */
 
-    public static _enum_for_triggerType = _enum_for_TriggerType;        /**
+    public static _enum_for_triggerType: typeof _enum_for_TriggerType = _enum_for_TriggerType;        /**
          * @summary The enum used as the type of the component `eventTypeBCSM`
          * @public
          * @static
          */
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;        /**
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;
 }
 
 /**

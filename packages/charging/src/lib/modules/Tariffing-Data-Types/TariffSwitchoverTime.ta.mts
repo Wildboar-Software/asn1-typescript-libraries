@@ -46,7 +46,7 @@ export const _decode_TariffSwitchoverTime = (el: _Element): TariffSwitchoverTime
     }
     return value;
 };
-export const _encode_TariffSwitchoverTime = $._encodeOctetString;
+export const _encode_TariffSwitchoverTime: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

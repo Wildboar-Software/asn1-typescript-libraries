@@ -45,7 +45,7 @@ type ParamValueList_deliveryControl = INTEGER;
  * @type {number}
  */
 export
-const ParamValueList_deliveryControl_none = 0 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
+const ParamValueList_deliveryControl_none: 0 = 0 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_none
@@ -56,7 +56,7 @@ const ParamValueList_deliveryControl_none = 0 satisfies ParamValueList_deliveryC
  * @type {number}
  */
 export
-const none = ParamValueList_deliveryControl_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 0 = ParamValueList_deliveryControl_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_simple
@@ -67,7 +67,7 @@ const none = ParamValueList_deliveryControl_none; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ParamValueList_deliveryControl_simple = 1 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
+const ParamValueList_deliveryControl_simple: 1 = 1 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_simple
@@ -78,7 +78,7 @@ const ParamValueList_deliveryControl_simple = 1 satisfies ParamValueList_deliver
  * @type {number}
  */
 export
-const simple = ParamValueList_deliveryControl_simple; /* SHORT_NAMED_INTEGER_VALUE */
+const simple: 1 = ParamValueList_deliveryControl_simple; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
@@ -90,7 +90,7 @@ const simple = ParamValueList_deliveryControl_simple; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ParamValueList_deliveryControl_quarantine = 2 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
+const ParamValueList_deliveryControl_quarantine: 2 = 2 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
@@ -102,9 +102,9 @@ const ParamValueList_deliveryControl_quarantine = 2 satisfies ParamValueList_del
  * @type {number}
  */
 export
-const quarantine = ParamValueList_deliveryControl_quarantine; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ParamValueList_deliveryControl = $._decodeInteger;
-export const _encode_ParamValueList_deliveryControl = $._encodeInteger;
+const quarantine: 2 = ParamValueList_deliveryControl_quarantine; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ParamValueList_deliveryControl: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ParamValueList_deliveryControl: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

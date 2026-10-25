@@ -294,12 +294,12 @@ export const typePassword: number = BioAPI_BIR_BIOMETRIC_TYPE_typePassword; /* S
 
 
 
-export const _decode_BioAPI_BIR_BIOMETRIC_TYPE = $._decodeBitString;
+export const _decode_BioAPI_BIR_BIOMETRIC_TYPE: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_BIR_BIOMETRIC_TYPE = $._encodeBitString;
+export const _encode_BioAPI_BIR_BIOMETRIC_TYPE: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

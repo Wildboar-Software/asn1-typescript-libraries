@@ -80,7 +80,7 @@ type PDN_ConnectionContinuity = _enum_for_PDN_ConnectionContinuity;
  * @enum {number}
  */
 export
-const PDN_ConnectionContinuity = _enum_for_PDN_ConnectionContinuity;
+const PDN_ConnectionContinuity: typeof _enum_for_PDN_ConnectionContinuity = _enum_for_PDN_ConnectionContinuity;
 
 /**
  * @summary PDN_ConnectionContinuity_maintainPDN_Connection
@@ -88,7 +88,7 @@ const PDN_ConnectionContinuity = _enum_for_PDN_ConnectionContinuity;
  * @type {number}
  */
 export
-const PDN_ConnectionContinuity_maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_ConnectionContinuity_maintainPDN_Connection: _enum_for_PDN_ConnectionContinuity.maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maintainPDN_Connection
@@ -96,7 +96,7 @@ const PDN_ConnectionContinuity_maintainPDN_Connection = PDN_ConnectionContinuity
  * @type {number}
  */
 export
-const maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maintainPDN_Connection: _enum_for_PDN_ConnectionContinuity.maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest
@@ -104,7 +104,7 @@ const maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; 
  * @type {number}
  */
 export
-const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest: _enum_for_PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnectPDN_ConnectionWithReactivationRequest
@@ -112,7 +112,7 @@ const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest =
  * @type {number}
  */
 export
-const disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnectPDN_ConnectionWithReactivationRequest: _enum_for_PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest
@@ -120,7 +120,7 @@ const disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity
  * @type {number}
  */
 export
-const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest: _enum_for_PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnectPDN_ConnectionWithoutReactivationRequest
@@ -128,7 +128,7 @@ const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationReques
  * @type {number}
  */
 export
-const disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnectPDN_ConnectionWithoutReactivationRequest: _enum_for_PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PDN_ConnectionContinuity
@@ -136,7 +136,7 @@ const disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinu
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_PDN_ConnectionContinuity = $._decodeEnumerated;
+export const _decode_PDN_ConnectionContinuity: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PDN_ConnectionContinuity into an ASN.1 Element.
@@ -145,7 +145,7 @@ export const _decode_PDN_ConnectionContinuity = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDN_ConnectionContinuity, encoded as an ASN.1 Element.
  */
-export const _encode_PDN_ConnectionContinuity = $._encodeEnumerated;
+export const _encode_PDN_ConnectionContinuity: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

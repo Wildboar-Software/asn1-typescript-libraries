@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type OneToN = INTEGER;
 
 
-export const _decode_OneToN = $._decodeInteger;
+export const _decode_OneToN: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_OneToN = $._encodeInteger;
+export const _encode_OneToN: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

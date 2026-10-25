@@ -30,7 +30,7 @@ export const _decode_AuthData = (el: _Element): AuthData => {
     }
     return value;
 };
-export const _encode_AuthData = $._encodeOctetString;
+export const _encode_AuthData: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

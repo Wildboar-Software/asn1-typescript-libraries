@@ -31,20 +31,20 @@ export type SequenceNumberProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const SequenceNumberProblem_no_such_entry = 0 satisfies SequenceNumberProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SequenceNumberProblem_no_such_entry: 0 = 0 satisfies SequenceNumberProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceNumberProblem_no_such_entry
  * @constant
  * @type {number}
  */
-export const no_such_entry = SequenceNumberProblem_no_such_entry; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_such_entry: 0 = SequenceNumberProblem_no_such_entry; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_SequenceNumberProblem = $._decodeInteger;
+export const _decode_SequenceNumberProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SequenceNumberProblem = $._encodeInteger;
+export const _encode_SequenceNumberProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

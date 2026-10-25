@@ -80,7 +80,7 @@ class RequestedInformation {
          * @static
          */
 
-    public static _enum_for_requestedInformationType = _enum_for_RequestedInformationType;
+    public static _enum_for_requestedInformationType: typeof _enum_for_RequestedInformationType = _enum_for_RequestedInformationType;
 }
 
 /**

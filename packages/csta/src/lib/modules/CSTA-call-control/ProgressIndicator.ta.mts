@@ -124,13 +124,13 @@ class ProgressIndicator {
          * @static
          */
 
-    public static _enum_for_progressLocation = _enum_for_ProgressIndicator_progressLocation;        /**
+    public static _enum_for_progressLocation: typeof _enum_for_ProgressIndicator_progressLocation = _enum_for_ProgressIndicator_progressLocation;        /**
          * @summary The enum used as the type of the component `progressDescription`
          * @public
          * @static
          */
 
-    public static _enum_for_progressDescription = _enum_for_ProgressIndicator_progressDescription;
+    public static _enum_for_progressDescription: typeof _enum_for_ProgressIndicator_progressDescription = _enum_for_ProgressIndicator_progressDescription;
 }
 
 /**

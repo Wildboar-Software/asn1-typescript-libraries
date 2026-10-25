@@ -154,7 +154,7 @@ class GenerateDigitsArgument {
          * @static
          */
 
-    public static _enum_for_digitMode = _enum_for_DigitMode;
+    public static _enum_for_digitMode: typeof _enum_for_DigitMode = _enum_for_DigitMode;
 }
 
 /**

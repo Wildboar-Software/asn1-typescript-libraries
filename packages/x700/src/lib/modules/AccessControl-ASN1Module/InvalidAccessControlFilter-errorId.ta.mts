@@ -94,7 +94,7 @@ export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlF
  *
  * @enum {number}
  */
-export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
+export const InvalidAccessControlFilter_errorId: typeof _enum_for_InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 
 /**
  * @summary InvalidAccessControlFilter_errorId_duplicateId
@@ -106,7 +106,7 @@ export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControl
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_duplicateId =
+export const InvalidAccessControlFilter_errorId_duplicateId: _enum_for_InvalidAccessControlFilter_errorId.duplicateId =
     InvalidAccessControlFilter_errorId.duplicateId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const InvalidAccessControlFilter_errorId_duplicateId =
  * @constant
  * @type {number}
  */
-export const duplicateId =
+export const duplicateId: _enum_for_InvalidAccessControlFilter_errorId.duplicateId =
     InvalidAccessControlFilter_errorId.duplicateId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const duplicateId =
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_heterogeneousId =
+export const InvalidAccessControlFilter_errorId_heterogeneousId: _enum_for_InvalidAccessControlFilter_errorId.heterogeneousId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -145,7 +145,7 @@ export const InvalidAccessControlFilter_errorId_heterogeneousId =
  * @constant
  * @type {number}
  */
-export const heterogeneousId =
+export const heterogeneousId: _enum_for_InvalidAccessControlFilter_errorId.heterogeneousId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -159,7 +159,7 @@ export const heterogeneousId =
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_invalidId =
+export const InvalidAccessControlFilter_errorId_invalidId: _enum_for_InvalidAccessControlFilter_errorId.invalidId =
     InvalidAccessControlFilter_errorId.invalidId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -172,7 +172,7 @@ export const InvalidAccessControlFilter_errorId_invalidId =
  * @constant
  * @type {number}
  */
-export const invalidId =
+export const invalidId: _enum_for_InvalidAccessControlFilter_errorId.invalidId =
     InvalidAccessControlFilter_errorId.invalidId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<InvalidAccessControlFilter_errorId> | null = null;

@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AuthenticationAttribute = EXTERNAL; // ExternalType
-export const _decode_AuthenticationAttribute = $._decodeExternal;
-export const _encode_AuthenticationAttribute = $._encodeExternal;
+export const _decode_AuthenticationAttribute: $.ASN1Decoder<_External> = $._decodeExternal;
+export const _encode_AuthenticationAttribute: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

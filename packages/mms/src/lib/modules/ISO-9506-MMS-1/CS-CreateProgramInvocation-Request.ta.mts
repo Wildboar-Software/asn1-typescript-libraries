@@ -46,7 +46,7 @@ type CS_CreateProgramInvocation_Request = INTEGER;
  * @type {number}
  */
 export
-const CS_CreateProgramInvocation_Request_normal = 0 satisfies CS_CreateProgramInvocation_Request; /* LONG_NAMED_INTEGER_VALUE */
+const CS_CreateProgramInvocation_Request_normal: 0 = 0 satisfies CS_CreateProgramInvocation_Request; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CS_CreateProgramInvocation_Request_normal
@@ -59,7 +59,7 @@ const CS_CreateProgramInvocation_Request_normal = 0 satisfies CS_CreateProgramIn
  * @type {number}
  */
 export
-const normal = CS_CreateProgramInvocation_Request_normal; /* SHORT_NAMED_INTEGER_VALUE */
+const normal: 0 = CS_CreateProgramInvocation_Request_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CS_CreateProgramInvocation_Request_controlling
@@ -72,7 +72,7 @@ const normal = CS_CreateProgramInvocation_Request_normal; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const CS_CreateProgramInvocation_Request_controlling = 1 satisfies CS_CreateProgramInvocation_Request; /* LONG_NAMED_INTEGER_VALUE */
+const CS_CreateProgramInvocation_Request_controlling: 1 = 1 satisfies CS_CreateProgramInvocation_Request; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CS_CreateProgramInvocation_Request_controlling
@@ -85,7 +85,7 @@ const CS_CreateProgramInvocation_Request_controlling = 1 satisfies CS_CreateProg
  * @type {number}
  */
 export
-const controlling = CS_CreateProgramInvocation_Request_controlling; /* SHORT_NAMED_INTEGER_VALUE */
+const controlling: 1 = CS_CreateProgramInvocation_Request_controlling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CS_CreateProgramInvocation_Request_controlled
@@ -98,7 +98,7 @@ const controlling = CS_CreateProgramInvocation_Request_controlling; /* SHORT_NAM
  * @type {number}
  */
 export
-const CS_CreateProgramInvocation_Request_controlled = 2 satisfies CS_CreateProgramInvocation_Request; /* LONG_NAMED_INTEGER_VALUE */
+const CS_CreateProgramInvocation_Request_controlled: 2 = 2 satisfies CS_CreateProgramInvocation_Request; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CS_CreateProgramInvocation_Request_controlled
@@ -111,9 +111,9 @@ const CS_CreateProgramInvocation_Request_controlled = 2 satisfies CS_CreateProgr
  * @type {number}
  */
 export
-const controlled = CS_CreateProgramInvocation_Request_controlled; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_CS_CreateProgramInvocation_Request = $._decodeInteger;
-export const _encode_CS_CreateProgramInvocation_Request = $._encodeInteger;
+const controlled: 2 = CS_CreateProgramInvocation_Request_controlled; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_CS_CreateProgramInvocation_Request: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_CS_CreateProgramInvocation_Request: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

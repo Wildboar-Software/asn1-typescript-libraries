@@ -36,7 +36,7 @@ export type Degree_Of_Overlap = INTEGER;
  * @constant
  * @type {number}
  */
-export const Degree_Of_Overlap_normal = 0 satisfies Degree_Of_Overlap; /* LONG_NAMED_INTEGER_VALUE */
+export const Degree_Of_Overlap_normal: 0 = 0 satisfies Degree_Of_Overlap; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const Degree_Of_Overlap_normal = 0 satisfies Degree_Of_Overlap; /* LONG_N
  * @constant
  * @type {number}
  */
-export const normal = Degree_Of_Overlap_normal; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal: 0 = Degree_Of_Overlap_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const normal = Degree_Of_Overlap_normal; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Degree_Of_Overlap_consecutive = 1 satisfies Degree_Of_Overlap; /* LONG_NAMED_INTEGER_VALUE */
+export const Degree_Of_Overlap_consecutive: 1 = 1 satisfies Degree_Of_Overlap; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const Degree_Of_Overlap_consecutive = 1 satisfies Degree_Of_Overlap; /* L
  * @constant
  * @type {number}
  */
-export const consecutive = Degree_Of_Overlap_consecutive; /* SHORT_NAMED_INTEGER_VALUE */
+export const consecutive: 1 = Degree_Of_Overlap_consecutive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const consecutive = Degree_Of_Overlap_consecutive; /* SHORT_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const Degree_Of_Overlap_concurrent = 2 satisfies Degree_Of_Overlap; /* LONG_NAMED_INTEGER_VALUE */
+export const Degree_Of_Overlap_concurrent: 2 = 2 satisfies Degree_Of_Overlap; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const Degree_Of_Overlap_concurrent = 2 satisfies Degree_Of_Overlap; /* LO
  * @constant
  * @type {number}
  */
-export const concurrent = Degree_Of_Overlap_concurrent; /* SHORT_NAMED_INTEGER_VALUE */
+export const concurrent: 2 = Degree_Of_Overlap_concurrent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Degree_Of_Overlap: $.ASN1Decoder<Degree_Of_Overlap> | null = null;

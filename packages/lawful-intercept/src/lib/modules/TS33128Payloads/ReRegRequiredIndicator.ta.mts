@@ -79,7 +79,7 @@ type ReRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
  * @enum {number}
  */
 export
-const ReRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
+const ReRegRequiredIndicator: typeof _enum_for_ReRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
 
 /**
  * @summary ReRegRequiredIndicator_reRegistrationRequired
@@ -87,7 +87,7 @@ const ReRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
  * @type {number}
  */
 export
-const ReRegRequiredIndicator_reRegistrationRequired = ReRegRequiredIndicator.reRegistrationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReRegRequiredIndicator_reRegistrationRequired: _enum_for_ReRegRequiredIndicator.reRegistrationRequired = ReRegRequiredIndicator.reRegistrationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reRegistrationRequired
@@ -95,7 +95,7 @@ const ReRegRequiredIndicator_reRegistrationRequired = ReRegRequiredIndicator.reR
  * @type {number}
  */
 export
-const reRegistrationRequired = ReRegRequiredIndicator.reRegistrationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reRegistrationRequired: _enum_for_ReRegRequiredIndicator.reRegistrationRequired = ReRegRequiredIndicator.reRegistrationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReRegRequiredIndicator_reRegistrationNotRequired
@@ -103,7 +103,7 @@ const reRegistrationRequired = ReRegRequiredIndicator.reRegistrationRequired; /*
  * @type {number}
  */
 export
-const ReRegRequiredIndicator_reRegistrationNotRequired = ReRegRequiredIndicator.reRegistrationNotRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReRegRequiredIndicator_reRegistrationNotRequired: _enum_for_ReRegRequiredIndicator.reRegistrationNotRequired = ReRegRequiredIndicator.reRegistrationNotRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reRegistrationNotRequired
@@ -111,7 +111,7 @@ const ReRegRequiredIndicator_reRegistrationNotRequired = ReRegRequiredIndicator.
  * @type {number}
  */
 export
-const reRegistrationNotRequired = ReRegRequiredIndicator.reRegistrationNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reRegistrationNotRequired: _enum_for_ReRegRequiredIndicator.reRegistrationNotRequired = ReRegRequiredIndicator.reRegistrationNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ReRegRequiredIndicator: $.ASN1Decoder<ReRegRequiredIndicator> = $._decodeEnumerated;
 export const _encode_ReRegRequiredIndicator: $.ASN1Encoder<ReRegRequiredIndicator> = $._encodeEnumerated;
 

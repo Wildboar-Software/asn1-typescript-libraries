@@ -51,7 +51,7 @@ type DeleteSetStatus = INTEGER;
  * @type {number}
  */
 export
-const DeleteSetStatus_success = 0 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_success: 0 = 0 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_success
@@ -64,7 +64,7 @@ const DeleteSetStatus_success = 0 satisfies DeleteSetStatus; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const success = DeleteSetStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success: 0 = DeleteSetStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resultSetDidNotExist
@@ -77,7 +77,7 @@ const success = DeleteSetStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DeleteSetStatus_resultSetDidNotExist = 1 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_resultSetDidNotExist: 1 = 1 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resultSetDidNotExist
@@ -90,7 +90,7 @@ const DeleteSetStatus_resultSetDidNotExist = 1 satisfies DeleteSetStatus; /* LON
  * @type {number}
  */
 export
-const resultSetDidNotExist = DeleteSetStatus_resultSetDidNotExist; /* SHORT_NAMED_INTEGER_VALUE */
+const resultSetDidNotExist: 1 = DeleteSetStatus_resultSetDidNotExist; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_previouslyDeletedByServer
@@ -104,7 +104,7 @@ const resultSetDidNotExist = DeleteSetStatus_resultSetDidNotExist; /* SHORT_NAME
  * @type {number}
  */
 export
-const DeleteSetStatus_previouslyDeletedByServer = 2 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_previouslyDeletedByServer: 2 = 2 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_previouslyDeletedByServer
@@ -118,7 +118,7 @@ const DeleteSetStatus_previouslyDeletedByServer = 2 satisfies DeleteSetStatus; /
  * @type {number}
  */
 export
-const previouslyDeletedByServer = DeleteSetStatus_previouslyDeletedByServer; /* SHORT_NAMED_INTEGER_VALUE */
+const previouslyDeletedByServer: 2 = DeleteSetStatus_previouslyDeletedByServer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_systemProblemAtServer
@@ -132,7 +132,7 @@ const previouslyDeletedByServer = DeleteSetStatus_previouslyDeletedByServer; /* 
  * @type {number}
  */
 export
-const DeleteSetStatus_systemProblemAtServer = 3 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_systemProblemAtServer: 3 = 3 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_systemProblemAtServer
@@ -145,7 +145,7 @@ const DeleteSetStatus_systemProblemAtServer = 3 satisfies DeleteSetStatus; /* LO
  * @type {number}
  */
 export
-const systemProblemAtServer = DeleteSetStatus_systemProblemAtServer; /* SHORT_NAMED_INTEGER_VALUE */
+const systemProblemAtServer: 3 = DeleteSetStatus_systemProblemAtServer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_accessNotAllowed
@@ -160,7 +160,7 @@ const systemProblemAtServer = DeleteSetStatus_systemProblemAtServer; /* SHORT_NA
  * @type {number}
  */
 export
-const DeleteSetStatus_accessNotAllowed = 4 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_accessNotAllowed: 4 = 4 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_accessNotAllowed
@@ -173,7 +173,7 @@ const DeleteSetStatus_accessNotAllowed = 4 satisfies DeleteSetStatus; /* LONG_NA
  * @type {number}
  */
 export
-const accessNotAllowed = DeleteSetStatus_accessNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
+const accessNotAllowed: 4 = DeleteSetStatus_accessNotAllowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resourceControlAtClient
@@ -187,7 +187,7 @@ const accessNotAllowed = DeleteSetStatus_accessNotAllowed; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const DeleteSetStatus_resourceControlAtClient = 5 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_resourceControlAtClient: 5 = 5 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resourceControlAtClient
@@ -200,7 +200,7 @@ const DeleteSetStatus_resourceControlAtClient = 5 satisfies DeleteSetStatus; /* 
  * @type {number}
  */
 export
-const resourceControlAtClient = DeleteSetStatus_resourceControlAtClient; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceControlAtClient: 5 = DeleteSetStatus_resourceControlAtClient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resourceControlAtServer
@@ -214,7 +214,7 @@ const resourceControlAtClient = DeleteSetStatus_resourceControlAtClient; /* SHOR
  * @type {number}
  */
 export
-const DeleteSetStatus_resourceControlAtServer = 6 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_resourceControlAtServer: 6 = 6 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resourceControlAtServer
@@ -228,7 +228,7 @@ const DeleteSetStatus_resourceControlAtServer = 6 satisfies DeleteSetStatus; /* 
  * @type {number}
  */
 export
-const resourceControlAtServer = DeleteSetStatus_resourceControlAtServer; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceControlAtServer: 6 = DeleteSetStatus_resourceControlAtServer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_bulkDeleteNotSupported
@@ -242,7 +242,7 @@ const resourceControlAtServer = DeleteSetStatus_resourceControlAtServer; /* SHOR
  * @type {number}
  */
 export
-const DeleteSetStatus_bulkDeleteNotSupported = 7 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_bulkDeleteNotSupported: 7 = 7 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_bulkDeleteNotSupported
@@ -255,7 +255,7 @@ const DeleteSetStatus_bulkDeleteNotSupported = 7 satisfies DeleteSetStatus; /* L
  * @type {number}
  */
 export
-const bulkDeleteNotSupported = DeleteSetStatus_bulkDeleteNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const bulkDeleteNotSupported: 7 = DeleteSetStatus_bulkDeleteNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte
@@ -270,7 +270,7 @@ const bulkDeleteNotSupported = DeleteSetStatus_bulkDeleteNotSupported; /* SHORT_
  * @type {number}
  */
 export
-const DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte = 8 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte: 8 = 8 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte
@@ -283,7 +283,7 @@ const DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte = 8 satisfies DeleteSetSta
  * @type {number}
  */
 export
-const notAllRsltSetsDeletedOnBulkDlte = DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte; /* SHORT_NAMED_INTEGER_VALUE */
+const notAllRsltSetsDeletedOnBulkDlte: 8 = DeleteSetStatus_notAllRsltSetsDeletedOnBulkDlte; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_notAllRequestedResultSetsDeleted
@@ -296,7 +296,7 @@ const notAllRsltSetsDeletedOnBulkDlte = DeleteSetStatus_notAllRsltSetsDeletedOnB
  * @type {number}
  */
 export
-const DeleteSetStatus_notAllRequestedResultSetsDeleted = 9 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_notAllRequestedResultSetsDeleted: 9 = 9 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_notAllRequestedResultSetsDeleted
@@ -310,7 +310,7 @@ const DeleteSetStatus_notAllRequestedResultSetsDeleted = 9 satisfies DeleteSetSt
  * @type {number}
  */
 export
-const notAllRequestedResultSetsDeleted = DeleteSetStatus_notAllRequestedResultSetsDeleted; /* SHORT_NAMED_INTEGER_VALUE */
+const notAllRequestedResultSetsDeleted: 9 = DeleteSetStatus_notAllRequestedResultSetsDeleted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resultSetInUse
@@ -324,7 +324,7 @@ const notAllRequestedResultSetsDeleted = DeleteSetStatus_notAllRequestedResultSe
  * @type {number}
  */
 export
-const DeleteSetStatus_resultSetInUse = 10 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteSetStatus_resultSetInUse: 10 = 10 satisfies DeleteSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteSetStatus_resultSetInUse
@@ -337,7 +337,7 @@ const DeleteSetStatus_resultSetInUse = 10 satisfies DeleteSetStatus; /* LONG_NAM
  * @type {number}
  */
 export
-const resultSetInUse = DeleteSetStatus_resultSetInUse; /* SHORT_NAMED_INTEGER_VALUE */
+const resultSetInUse: 10 = DeleteSetStatus_resultSetInUse; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_DeleteSetStatus: $.ASN1Decoder<DeleteSetStatus> | null = null;
 

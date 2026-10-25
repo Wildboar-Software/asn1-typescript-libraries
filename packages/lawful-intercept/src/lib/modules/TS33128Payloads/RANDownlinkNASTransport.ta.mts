@@ -271,7 +271,7 @@ class RANDownlinkNASTransport {
          * @static
          */
 
-    public static _enum_for_mobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
+    public static _enum_for_mobileIABAuthorizedIndicator: typeof _enum_for_MobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
 }
 
 /**

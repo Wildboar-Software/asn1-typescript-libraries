@@ -42,48 +42,48 @@ export type RegistrationProblem = _enum_for_RegistrationProblem | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const RegistrationProblem_registration_not_supported = _enum_for_RegistrationProblem.registration_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RegistrationProblem_registration_not_supported: _enum_for_RegistrationProblem.registration_not_supported = _enum_for_RegistrationProblem.registration_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration_not_supported
  * @constant
  * @type {number}
  */
-export const registration_not_supported = RegistrationProblem_registration_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const registration_not_supported: _enum_for_RegistrationProblem.registration_not_supported = RegistrationProblem_registration_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationProblem_registration_improperly_specified
  * @constant
  * @type {number}
  */
-export const RegistrationProblem_registration_improperly_specified = _enum_for_RegistrationProblem.registration_improperly_specified; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RegistrationProblem_registration_improperly_specified: _enum_for_RegistrationProblem.registration_improperly_specified = _enum_for_RegistrationProblem.registration_improperly_specified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration_improperly_specified
  * @constant
  * @type {number}
  */
-export const registration_improperly_specified = RegistrationProblem_registration_improperly_specified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const registration_improperly_specified: _enum_for_RegistrationProblem.registration_improperly_specified = RegistrationProblem_registration_improperly_specified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationProblem_registration_limit_exceeded
  * @constant
  * @type {number}
  */
-export const RegistrationProblem_registration_limit_exceeded = _enum_for_RegistrationProblem.registration_limit_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RegistrationProblem_registration_limit_exceeded: _enum_for_RegistrationProblem.registration_limit_exceeded = _enum_for_RegistrationProblem.registration_limit_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration_limit_exceeded
  * @constant
  * @type {number}
  */
-export const registration_limit_exceeded = RegistrationProblem_registration_limit_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const registration_limit_exceeded: _enum_for_RegistrationProblem.registration_limit_exceeded = RegistrationProblem_registration_limit_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_RegistrationProblem = $._decodeEnumerated;
+export const _decode_RegistrationProblem: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_RegistrationProblem = $._encodeEnumerated;
+export const _encode_RegistrationProblem: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

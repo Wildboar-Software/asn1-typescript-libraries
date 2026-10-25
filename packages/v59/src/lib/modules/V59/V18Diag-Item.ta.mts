@@ -129,7 +129,7 @@ class V18Diag_Item {
          * @static
          */
 
-    public static _enum_for_v18used = _enum_for_V18Diag_Item_v18used;
+    public static _enum_for_v18used: typeof _enum_for_V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
 }
 
 /**

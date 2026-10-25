@@ -161,7 +161,7 @@ class FiveGMSAFNetworkAssistance {
          * @static
          */
 
-    public static _enum_for_nAOperationType = _enum_for_NAOperationType;
+    public static _enum_for_nAOperationType: typeof _enum_for_NAOperationType = _enum_for_NAOperationType;
 }
 
 /**

@@ -17,12 +17,12 @@ export type AttributeValue = _Element; // ObjectClassFieldType
 
 
 
-export const _decode_AttributeValue = $._decodeAny;
+export const _decode_AttributeValue: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
 
 
-export const _encode_AttributeValue = $._encodeAny;
+export const _encode_AttributeValue: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

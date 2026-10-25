@@ -34,7 +34,7 @@ export const _decode_Duration = (el: _Element): Duration => {
     }
     return value;
 };
-export const _encode_Duration = $._encodeInteger;
+export const _encode_Duration: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

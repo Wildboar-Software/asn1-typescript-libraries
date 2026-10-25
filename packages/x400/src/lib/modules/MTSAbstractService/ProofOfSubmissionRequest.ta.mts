@@ -67,14 +67,14 @@ export type ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
  *
  * @enum {number}
  */
-export const ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
+export const ProofOfSubmissionRequest: typeof _enum_for_ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
 
 /**
  * @summary ProofOfSubmissionRequest_proof_of_submission_not_requested
  * @constant
  * @type {number}
  */
-export const ProofOfSubmissionRequest_proof_of_submission_not_requested =
+export const ProofOfSubmissionRequest_proof_of_submission_not_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_not_requested =
     ProofOfSubmissionRequest.proof_of_submission_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const ProofOfSubmissionRequest_proof_of_submission_not_requested =
  * @constant
  * @type {number}
  */
-export const proof_of_submission_not_requested =
+export const proof_of_submission_not_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_not_requested =
     ProofOfSubmissionRequest.proof_of_submission_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const proof_of_submission_not_requested =
  * @constant
  * @type {number}
  */
-export const ProofOfSubmissionRequest_proof_of_submission_requested =
+export const ProofOfSubmissionRequest_proof_of_submission_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_requested =
     ProofOfSubmissionRequest.proof_of_submission_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const ProofOfSubmissionRequest_proof_of_submission_requested =
  * @constant
  * @type {number}
  */
-export const proof_of_submission_requested =
+export const proof_of_submission_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_requested =
     ProofOfSubmissionRequest.proof_of_submission_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

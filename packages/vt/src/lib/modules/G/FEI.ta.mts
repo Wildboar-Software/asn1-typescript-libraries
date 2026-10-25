@@ -20,7 +20,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```
  */
 export type FEI = _Element;
-export const _decode_FEI = $._decodeAny;
-export const _encode_FEI = $._encodeAny;
+export const _decode_FEI: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_FEI: $.ASN1Encoder<_Element> = $._encodeAny;
 
 /* eslint-enable */

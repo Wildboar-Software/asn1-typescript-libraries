@@ -114,7 +114,7 @@ class MAP_RefuseInfo {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_Reason;
+    public static _enum_for_reason: typeof _enum_for_Reason = _enum_for_Reason;
 }
 
 /**

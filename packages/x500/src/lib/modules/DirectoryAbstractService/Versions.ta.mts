@@ -63,10 +63,10 @@ export const Versions_v2: number = 1; /* LONG_NAMED_BIT */
 export const v2: number = Versions_v2; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Versions = $._decodeBitString;
+export const _decode_Versions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Versions = $._encodeBitString;
+export const _encode_Versions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

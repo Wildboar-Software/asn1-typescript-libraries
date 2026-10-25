@@ -117,7 +117,7 @@ class GenerateTelephonyTonesArgument {
          * @static
          */
 
-    public static _enum_for_toneToSend = _enum_for_TelephonyTone;
+    public static _enum_for_toneToSend: typeof _enum_for_TelephonyTone = _enum_for_TelephonyTone;
 }
 
 /**

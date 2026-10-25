@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Time = UTCTime; // UTCTime
 
 
-export const _decode_Time = $._decodeUTCTime;
+export const _decode_Time: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
-export const _encode_Time = $._encodeUTCTime;
+export const _encode_Time: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

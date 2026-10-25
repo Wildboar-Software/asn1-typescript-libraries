@@ -28,12 +28,12 @@ export type UTF8Pairs = UTF8String; // UTF8String
 
 
 
-export const _decode_UTF8Pairs = $._decodeUTF8String;
+export const _decode_UTF8Pairs: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_UTF8Pairs = $._encodeUTF8String;
+export const _encode_UTF8Pairs: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

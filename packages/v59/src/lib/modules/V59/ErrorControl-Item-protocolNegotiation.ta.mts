@@ -51,7 +51,7 @@ type ErrorControl_Item_protocolNegotiation = _enum_for_ErrorControl_Item_protoco
  * @type {number}
  */
 export
-const ErrorControl_Item_protocolNegotiation_disabled = _enum_for_ErrorControl_Item_protocolNegotiation.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorControl_Item_protocolNegotiation_disabled: 0 = _enum_for_ErrorControl_Item_protocolNegotiation.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disabled
@@ -59,7 +59,7 @@ const ErrorControl_Item_protocolNegotiation_disabled = _enum_for_ErrorControl_It
  * @type {number}
  */
 export
-const disabled = ErrorControl_Item_protocolNegotiation_disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disabled: 0 = ErrorControl_Item_protocolNegotiation_disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation_lapm
@@ -70,7 +70,7 @@ const disabled = ErrorControl_Item_protocolNegotiation_disabled; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const ErrorControl_Item_protocolNegotiation_lapm = _enum_for_ErrorControl_Item_protocolNegotiation.lapm; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorControl_Item_protocolNegotiation_lapm: 1 = _enum_for_ErrorControl_Item_protocolNegotiation.lapm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lapm
@@ -78,7 +78,7 @@ const ErrorControl_Item_protocolNegotiation_lapm = _enum_for_ErrorControl_Item_p
  * @type {number}
  */
 export
-const lapm = ErrorControl_Item_protocolNegotiation_lapm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lapm: 1 = ErrorControl_Item_protocolNegotiation_lapm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorControl_Item_protocolNegotiation_v42annexA
@@ -89,7 +89,7 @@ const lapm = ErrorControl_Item_protocolNegotiation_lapm; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const ErrorControl_Item_protocolNegotiation_v42annexA = _enum_for_ErrorControl_Item_protocolNegotiation.v42annexA; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorControl_Item_protocolNegotiation_v42annexA: 2 = _enum_for_ErrorControl_Item_protocolNegotiation.v42annexA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v42annexA
@@ -97,8 +97,8 @@ const ErrorControl_Item_protocolNegotiation_v42annexA = _enum_for_ErrorControl_I
  * @type {number}
  */
 export
-const v42annexA = ErrorControl_Item_protocolNegotiation_v42annexA; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ErrorControl_Item_protocolNegotiation = $._decodeEnumerated;
-export const _encode_ErrorControl_Item_protocolNegotiation = $._encodeEnumerated;
+const v42annexA: 2 = ErrorControl_Item_protocolNegotiation_v42annexA; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ErrorControl_Item_protocolNegotiation: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ErrorControl_Item_protocolNegotiation: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 /* eslint-enable */

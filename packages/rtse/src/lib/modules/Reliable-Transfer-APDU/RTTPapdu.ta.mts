@@ -36,12 +36,12 @@ export type RTTPapdu = INTEGER;
 
 
 
-export const _decode_RTTPapdu = $._decodeInteger;
+export const _decode_RTTPapdu: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RTTPapdu = $._encodeInteger;
+export const _encode_RTTPapdu: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

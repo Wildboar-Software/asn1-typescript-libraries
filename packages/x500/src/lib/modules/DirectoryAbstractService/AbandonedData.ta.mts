@@ -154,7 +154,7 @@ export class AbandonedData implements CommonResults {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_AbandonedProblem;
+    public static _enum_for_problem: typeof _enum_for_AbandonedProblem = _enum_for_AbandonedProblem;
 }
 
 /**

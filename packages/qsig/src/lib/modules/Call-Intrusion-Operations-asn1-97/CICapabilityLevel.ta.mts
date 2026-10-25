@@ -90,7 +90,7 @@ type CICapabilityLevel = _enum_for_CICapabilityLevel;
  * @enum {number}
  */
 export
-const CICapabilityLevel = _enum_for_CICapabilityLevel;
+const CICapabilityLevel: typeof _enum_for_CICapabilityLevel = _enum_for_CICapabilityLevel;
 
 /**
  * @summary CICapabilityLevel_intrusionLowProt
@@ -104,7 +104,7 @@ const CICapabilityLevel = _enum_for_CICapabilityLevel;
  * @type {number}
  */
 export
-const CICapabilityLevel_intrusionLowProt = CICapabilityLevel.intrusionLowProt; /* LONG_NAMED_ENUMERATED_VALUE */
+const CICapabilityLevel_intrusionLowProt: _enum_for_CICapabilityLevel.intrusionLowProt = CICapabilityLevel.intrusionLowProt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrusionLowProt
@@ -113,7 +113,7 @@ const CICapabilityLevel_intrusionLowProt = CICapabilityLevel.intrusionLowProt; /
  * @type {number}
  */
 export
-const intrusionLowProt = CICapabilityLevel.intrusionLowProt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intrusionLowProt: _enum_for_CICapabilityLevel.intrusionLowProt = CICapabilityLevel.intrusionLowProt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CICapabilityLevel_intrusionMediumProt
@@ -127,7 +127,7 @@ const intrusionLowProt = CICapabilityLevel.intrusionLowProt; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const CICapabilityLevel_intrusionMediumProt = CICapabilityLevel.intrusionMediumProt; /* LONG_NAMED_ENUMERATED_VALUE */
+const CICapabilityLevel_intrusionMediumProt: _enum_for_CICapabilityLevel.intrusionMediumProt = CICapabilityLevel.intrusionMediumProt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrusionMediumProt
@@ -136,7 +136,7 @@ const CICapabilityLevel_intrusionMediumProt = CICapabilityLevel.intrusionMediumP
  * @type {number}
  */
 export
-const intrusionMediumProt = CICapabilityLevel.intrusionMediumProt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intrusionMediumProt: _enum_for_CICapabilityLevel.intrusionMediumProt = CICapabilityLevel.intrusionMediumProt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CICapabilityLevel_intrusionHighProt
@@ -150,7 +150,7 @@ const intrusionMediumProt = CICapabilityLevel.intrusionMediumProt; /* SHORT_NAME
  * @type {number}
  */
 export
-const CICapabilityLevel_intrusionHighProt = CICapabilityLevel.intrusionHighProt; /* LONG_NAMED_ENUMERATED_VALUE */
+const CICapabilityLevel_intrusionHighProt: _enum_for_CICapabilityLevel.intrusionHighProt = CICapabilityLevel.intrusionHighProt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrusionHighProt
@@ -159,7 +159,7 @@ const CICapabilityLevel_intrusionHighProt = CICapabilityLevel.intrusionHighProt;
  * @type {number}
  */
 export
-const intrusionHighProt = CICapabilityLevel.intrusionHighProt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intrusionHighProt: _enum_for_CICapabilityLevel.intrusionHighProt = CICapabilityLevel.intrusionHighProt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CICapabilityLevel: $.ASN1Decoder<CICapabilityLevel> = $._decodeEnumerated;

@@ -112,7 +112,7 @@ type APIDirection = _enum_for_APIDirection;
  * @enum {number}
  */
 export
-const APIDirection = _enum_for_APIDirection;
+const APIDirection: typeof _enum_for_APIDirection = _enum_for_APIDirection;
 
 /**
  * @summary APIDirection_invocation
@@ -127,7 +127,7 @@ const APIDirection = _enum_for_APIDirection;
  * @type {number}
  */
 export
-const APIDirection_invocation = APIDirection.invocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const APIDirection_invocation: _enum_for_APIDirection.invocation = APIDirection.invocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invocation
@@ -140,7 +140,7 @@ const APIDirection_invocation = APIDirection.invocation; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const invocation = APIDirection.invocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invocation: _enum_for_APIDirection.invocation = APIDirection.invocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APIDirection_notification
@@ -156,7 +156,7 @@ const invocation = APIDirection.invocation; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const APIDirection_notification = APIDirection.notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const APIDirection_notification: _enum_for_APIDirection.notification = APIDirection.notification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notification
@@ -169,7 +169,7 @@ const APIDirection_notification = APIDirection.notification; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const notification = APIDirection.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notification: _enum_for_APIDirection.notification = APIDirection.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_APIDirection: $.ASN1Decoder<APIDirection> = $._decodeEnumerated;

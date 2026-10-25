@@ -49,7 +49,7 @@ export const _decode_PDP_Type = (el: _Element): PDP_Type => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PDP_Type, encoded as an ASN.1 Element.
  */
-export const _encode_PDP_Type = $._encodeOctetString;
+export const _encode_PDP_Type: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -96,14 +96,14 @@ export type CRLReason = _enum_for_CRLReason | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CRLReason_unspecified = _enum_for_CRLReason.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_unspecified: 0 = _enum_for_CRLReason.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
  * @constant
  * @type {number}
  */
-export const unspecified =
+export const unspecified: 0 =
     CRLReason_unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,14 +111,14 @@ export const unspecified =
  * @constant
  * @type {number}
  */
-export const CRLReason_keyCompromise = _enum_for_CRLReason.keyCompromise; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_keyCompromise: 1 = _enum_for_CRLReason.keyCompromise; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyCompromise
  * @constant
  * @type {number}
  */
-export const keyCompromise =
+export const keyCompromise: 1 =
     CRLReason_keyCompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,14 +126,14 @@ export const keyCompromise =
  * @constant
  * @type {number}
  */
-export const CRLReason_cACompromise = _enum_for_CRLReason.cACompromise; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_cACompromise: 2 = _enum_for_CRLReason.cACompromise; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cACompromise
  * @constant
  * @type {number}
  */
-export const cACompromise =
+export const cACompromise: 2 =
     CRLReason_cACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,14 +141,14 @@ export const cACompromise =
  * @constant
  * @type {number}
  */
-export const CRLReason_affiliationChanged = _enum_for_CRLReason.affiliationChanged; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_affiliationChanged: 3 = _enum_for_CRLReason.affiliationChanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary affiliationChanged
  * @constant
  * @type {number}
  */
-export const affiliationChanged =
+export const affiliationChanged: 3 =
     CRLReason_affiliationChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -156,14 +156,14 @@ export const affiliationChanged =
  * @constant
  * @type {number}
  */
-export const CRLReason_superseded = _enum_for_CRLReason.superseded; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_superseded: 4 = _enum_for_CRLReason.superseded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary superseded
  * @constant
  * @type {number}
  */
-export const superseded =
+export const superseded: 4 =
     CRLReason_superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -171,14 +171,14 @@ export const superseded =
  * @constant
  * @type {number}
  */
-export const CRLReason_cessationOfOperation = _enum_for_CRLReason.cessationOfOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_cessationOfOperation: 5 = _enum_for_CRLReason.cessationOfOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cessationOfOperation
  * @constant
  * @type {number}
  */
-export const cessationOfOperation =
+export const cessationOfOperation: 5 =
     CRLReason_cessationOfOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -186,14 +186,14 @@ export const cessationOfOperation =
  * @constant
  * @type {number}
  */
-export const CRLReason_certificateHold = _enum_for_CRLReason.certificateHold; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_certificateHold: 6 = _enum_for_CRLReason.certificateHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificateHold
  * @constant
  * @type {number}
  */
-export const certificateHold =
+export const certificateHold: 6 =
     CRLReason_certificateHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -201,14 +201,14 @@ export const certificateHold =
  * @constant
  * @type {number}
  */
-export const CRLReason_removeFromCRL = _enum_for_CRLReason.removeFromCRL; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_removeFromCRL: 8 = _enum_for_CRLReason.removeFromCRL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary removeFromCRL
  * @constant
  * @type {number}
  */
-export const removeFromCRL =
+export const removeFromCRL: 8 =
     CRLReason_removeFromCRL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -216,14 +216,14 @@ export const removeFromCRL =
  * @constant
  * @type {number}
  */
-export const CRLReason_privilegeWithdrawn = _enum_for_CRLReason.privilegeWithdrawn; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_privilegeWithdrawn: 9 = _enum_for_CRLReason.privilegeWithdrawn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeWithdrawn
  * @constant
  * @type {number}
  */
-export const privilegeWithdrawn =
+export const privilegeWithdrawn: 9 =
     CRLReason_privilegeWithdrawn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -231,14 +231,14 @@ export const privilegeWithdrawn =
  * @constant
  * @type {number}
  */
-export const CRLReason_aACompromise = _enum_for_CRLReason.aACompromise; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_aACompromise: 10 = _enum_for_CRLReason.aACompromise; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aACompromise
  * @constant
  * @type {number}
  */
-export const aACompromise =
+export const aACompromise: 10 =
     CRLReason_aACompromise; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -246,14 +246,14 @@ export const aACompromise =
  * @constant
  * @type {number}
  */
-export const CRLReason_weakAlgorithmOrKey = _enum_for_CRLReason.weakAlgorithmOrKey; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CRLReason_weakAlgorithmOrKey: 11 = _enum_for_CRLReason.weakAlgorithmOrKey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary weakAlgorithmOrKey
  * @constant
  * @type {number}
  */
-export const weakAlgorithmOrKey =
+export const weakAlgorithmOrKey: 11 =
     CRLReason_weakAlgorithmOrKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**

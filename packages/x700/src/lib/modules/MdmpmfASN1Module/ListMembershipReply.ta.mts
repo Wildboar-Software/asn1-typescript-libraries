@@ -97,7 +97,7 @@ export class ListMembershipReply {
      * @static
      */
 
-    public static _enum_for_completeness = _enum_for_Completeness;
+    public static _enum_for_completeness: typeof _enum_for_Completeness = _enum_for_Completeness;
 }
 
 /**

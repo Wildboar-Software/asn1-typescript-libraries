@@ -46,7 +46,7 @@ export const _decode_IntervalTime = (el: _Element): IntervalTime => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IntervalTime, encoded as an ASN.1 Element.
  */
-export const _encode_IntervalTime = $._encodeInteger;
+export const _encode_IntervalTime: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

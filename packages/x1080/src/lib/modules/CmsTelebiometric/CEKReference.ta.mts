@@ -32,12 +32,12 @@ export type CEKReference = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_CEKReference = $._decodeOctetString;
+export const _decode_CEKReference: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_CEKReference = $._encodeOctetString;
+export const _encode_CEKReference: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

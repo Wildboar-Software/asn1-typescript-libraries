@@ -29,4 +29,4 @@ export const _decode_TPShortMessageSpecificInfo = (el: _Element): TPShortMessage
     }
     return value;
 };
-export const _encode_TPShortMessageSpecificInfo = $._encodeOctetString;
+export const _encode_TPShortMessageSpecificInfo: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

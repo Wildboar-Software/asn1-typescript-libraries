@@ -39,7 +39,7 @@ export type Scope_namedNumbers = INTEGER;
  * @constant
  * @type {number}
  */
-export const Scope_namedNumbers_baseObject = 0 satisfies Scope_namedNumbers; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_namedNumbers_baseObject: 0 = 0 satisfies Scope_namedNumbers; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -51,7 +51,7 @@ export const Scope_namedNumbers_baseObject = 0 satisfies Scope_namedNumbers; /* 
  * @constant
  * @type {number}
  */
-export const baseObject = Scope_namedNumbers_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject: 0 = Scope_namedNumbers_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const baseObject = Scope_namedNumbers_baseObject; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const Scope_namedNumbers_firstLevelOnly = 1 satisfies Scope_namedNumbers; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_namedNumbers_firstLevelOnly: 1 = 1 satisfies Scope_namedNumbers; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const Scope_namedNumbers_firstLevelOnly = 1 satisfies Scope_namedNumbers;
  * @constant
  * @type {number}
  */
-export const firstLevelOnly = Scope_namedNumbers_firstLevelOnly; /* SHORT_NAMED_INTEGER_VALUE */
+export const firstLevelOnly: 1 = Scope_namedNumbers_firstLevelOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const firstLevelOnly = Scope_namedNumbers_firstLevelOnly; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const Scope_namedNumbers_wholeSubtree = 2 satisfies Scope_namedNumbers; /* LONG_NAMED_INTEGER_VALUE */
+export const Scope_namedNumbers_wholeSubtree: 2 = 2 satisfies Scope_namedNumbers; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -100,17 +100,17 @@ export const Scope_namedNumbers_wholeSubtree = 2 satisfies Scope_namedNumbers; /
  * @constant
  * @type {number}
  */
-export const wholeSubtree = Scope_namedNumbers_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree: 2 = Scope_namedNumbers_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Scope_namedNumbers = $._decodeInteger;
+export const _decode_Scope_namedNumbers: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Scope_namedNumbers = $._encodeInteger;
+export const _encode_Scope_namedNumbers: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

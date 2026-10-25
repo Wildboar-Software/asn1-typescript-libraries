@@ -490,25 +490,25 @@ class EmailIRI {
          * @static
          */
 
-    public static _enum_for_eventType = _enum_for_E_mail_Event;        /**
+    public static _enum_for_eventType: typeof _enum_for_E_mail_Event = _enum_for_E_mail_Event;        /**
          * @summary The enum used as the type of the component `protocol_ID`
          * @public
          * @static
          */
 
-    public static _enum_for_protocol_ID = _enum_for_E_mail_Protocol;        /**
+    public static _enum_for_protocol_ID: typeof _enum_for_E_mail_Protocol = _enum_for_E_mail_Protocol;        /**
          * @summary The enum used as the type of the component `status`
          * @public
          * @static
          */
 
-    public static _enum_for_status = _enum_for_E_mail_Status;        /**
+    public static _enum_for_status: typeof _enum_for_E_mail_Status = _enum_for_E_mail_Status;        /**
          * @summary The enum used as the type of the component `e_mail_Sender_Validity`
          * @public
          * @static
          */
 
-    public static _enum_for_e_mail_Sender_Validity = _enum_for_EmailIRI_e_mail_Sender_Validity;
+    public static _enum_for_e_mail_Sender_Validity: typeof _enum_for_EmailIRI_e_mail_Sender_Validity = _enum_for_EmailIRI_e_mail_Sender_Validity;
 }
 
 /**

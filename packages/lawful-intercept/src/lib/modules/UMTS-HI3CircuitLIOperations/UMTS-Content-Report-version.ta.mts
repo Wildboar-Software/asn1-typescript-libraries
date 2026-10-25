@@ -51,7 +51,7 @@ type UMTS_Content_Report_version = _enum_for_UMTS_Content_Report_version | ENUME
  * @type {number}
  */
 export
-const UMTS_Content_Report_version_version1 = _enum_for_UMTS_Content_Report_version.version1; /* LONG_NAMED_ENUMERATED_VALUE */
+const UMTS_Content_Report_version_version1: _enum_for_UMTS_Content_Report_version.version1 = _enum_for_UMTS_Content_Report_version.version1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version1
@@ -62,7 +62,7 @@ const UMTS_Content_Report_version_version1 = _enum_for_UMTS_Content_Report_versi
  * @type {number}
  */
 export
-const version1 = UMTS_Content_Report_version_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version1: _enum_for_UMTS_Content_Report_version.version1 = UMTS_Content_Report_version_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UMTS_Content_Report_version_version8
@@ -75,7 +75,7 @@ const version1 = UMTS_Content_Report_version_version1; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const UMTS_Content_Report_version_version8 = _enum_for_UMTS_Content_Report_version.version8; /* LONG_NAMED_ENUMERATED_VALUE */
+const UMTS_Content_Report_version_version8: _enum_for_UMTS_Content_Report_version.version8 = _enum_for_UMTS_Content_Report_version.version8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version8
@@ -86,7 +86,7 @@ const UMTS_Content_Report_version_version8 = _enum_for_UMTS_Content_Report_versi
  * @type {number}
  */
 export
-const version8 = UMTS_Content_Report_version_version8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version8: _enum_for_UMTS_Content_Report_version.version8 = UMTS_Content_Report_version_version8; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UMTS_Content_Report_version: $.ASN1Decoder<UMTS_Content_Report_version> = $._decodeEnumerated;
 export const _encode_UMTS_Content_Report_version: $.ASN1Encoder<UMTS_Content_Report_version> = $._encodeEnumerated;
 

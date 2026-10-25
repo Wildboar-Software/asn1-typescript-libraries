@@ -32,10 +32,10 @@ export
 type NumberOfRecords = INTEGER;
 
 
-export const _decode_NumberOfRecords = $._decodeInteger;
+export const _decode_NumberOfRecords: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NumberOfRecords = $._encodeInteger;
+export const _encode_NumberOfRecords: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

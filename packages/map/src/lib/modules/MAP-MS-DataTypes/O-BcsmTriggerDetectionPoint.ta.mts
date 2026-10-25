@@ -47,7 +47,7 @@ type O_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint | ENUME
  * @type {number}
  */
 export
-const O_BcsmTriggerDetectionPoint_collectedInfo = _enum_for_O_BcsmTriggerDetectionPoint.collectedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const O_BcsmTriggerDetectionPoint_collectedInfo: _enum_for_O_BcsmTriggerDetectionPoint.collectedInfo = _enum_for_O_BcsmTriggerDetectionPoint.collectedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary collectedInfo
@@ -60,7 +60,7 @@ const O_BcsmTriggerDetectionPoint_collectedInfo = _enum_for_O_BcsmTriggerDetecti
  * @type {number}
  */
 export
-const collectedInfo = O_BcsmTriggerDetectionPoint_collectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const collectedInfo: _enum_for_O_BcsmTriggerDetectionPoint.collectedInfo = O_BcsmTriggerDetectionPoint_collectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary O_BcsmTriggerDetectionPoint_routeSelectFailure
@@ -72,7 +72,7 @@ const collectedInfo = O_BcsmTriggerDetectionPoint_collectedInfo; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const O_BcsmTriggerDetectionPoint_routeSelectFailure = _enum_for_O_BcsmTriggerDetectionPoint.routeSelectFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const O_BcsmTriggerDetectionPoint_routeSelectFailure: _enum_for_O_BcsmTriggerDetectionPoint.routeSelectFailure = _enum_for_O_BcsmTriggerDetectionPoint.routeSelectFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeSelectFailure
@@ -84,7 +84,7 @@ const O_BcsmTriggerDetectionPoint_routeSelectFailure = _enum_for_O_BcsmTriggerDe
  * @type {number}
  */
 export
-const routeSelectFailure = O_BcsmTriggerDetectionPoint_routeSelectFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeSelectFailure: _enum_for_O_BcsmTriggerDetectionPoint.routeSelectFailure = O_BcsmTriggerDetectionPoint_routeSelectFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) O_BcsmTriggerDetectionPoint
@@ -92,7 +92,7 @@ const routeSelectFailure = O_BcsmTriggerDetectionPoint_routeSelectFailure; /* SH
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_O_BcsmTriggerDetectionPoint = $._decodeEnumerated;
+export const _decode_O_BcsmTriggerDetectionPoint: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) O_BcsmTriggerDetectionPoint into an ASN.1 Element.
@@ -101,7 +101,7 @@ export const _decode_O_BcsmTriggerDetectionPoint = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The O_BcsmTriggerDetectionPoint, encoded as an ASN.1 Element.
  */
-export const _encode_O_BcsmTriggerDetectionPoint = $._encodeEnumerated;
+export const _encode_O_BcsmTriggerDetectionPoint: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

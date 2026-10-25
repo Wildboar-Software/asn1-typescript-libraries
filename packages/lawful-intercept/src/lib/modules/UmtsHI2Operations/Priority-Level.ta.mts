@@ -54,7 +54,7 @@ type Priority_Level = _enum_for_Priority_Level | ENUMERATED;
  * @type {number}
  */
 export
-const Priority_Level_pre_emptive = _enum_for_Priority_Level.pre_emptive; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_Level_pre_emptive: _enum_for_Priority_Level.pre_emptive = _enum_for_Priority_Level.pre_emptive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_emptive
@@ -66,7 +66,7 @@ const Priority_Level_pre_emptive = _enum_for_Priority_Level.pre_emptive; /* LONG
  * @type {number}
  */
 export
-const pre_emptive = Priority_Level_pre_emptive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_emptive: _enum_for_Priority_Level.pre_emptive = Priority_Level_pre_emptive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_Level_high_priority
@@ -79,7 +79,7 @@ const pre_emptive = Priority_Level_pre_emptive; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const Priority_Level_high_priority = _enum_for_Priority_Level.high_priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_Level_high_priority: _enum_for_Priority_Level.high_priority = _enum_for_Priority_Level.high_priority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high_priority
@@ -91,7 +91,7 @@ const Priority_Level_high_priority = _enum_for_Priority_Level.high_priority; /* 
  * @type {number}
  */
 export
-const high_priority = Priority_Level_high_priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high_priority: _enum_for_Priority_Level.high_priority = Priority_Level_high_priority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_Level_normal_priority
@@ -104,7 +104,7 @@ const high_priority = Priority_Level_high_priority; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Priority_Level_normal_priority = _enum_for_Priority_Level.normal_priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_Level_normal_priority: _enum_for_Priority_Level.normal_priority = _enum_for_Priority_Level.normal_priority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal_priority
@@ -116,7 +116,7 @@ const Priority_Level_normal_priority = _enum_for_Priority_Level.normal_priority;
  * @type {number}
  */
 export
-const normal_priority = Priority_Level_normal_priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal_priority: _enum_for_Priority_Level.normal_priority = Priority_Level_normal_priority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_Level_listen_only
@@ -130,7 +130,7 @@ const normal_priority = Priority_Level_normal_priority; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Priority_Level_listen_only = _enum_for_Priority_Level.listen_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_Level_listen_only: _enum_for_Priority_Level.listen_only = _enum_for_Priority_Level.listen_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary listen_only
@@ -142,7 +142,7 @@ const Priority_Level_listen_only = _enum_for_Priority_Level.listen_only; /* LONG
  * @type {number}
  */
 export
-const listen_only = Priority_Level_listen_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const listen_only: _enum_for_Priority_Level.listen_only = Priority_Level_listen_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Priority_Level: $.ASN1Decoder<Priority_Level> = $._decodeEnumerated;
 export const _encode_Priority_Level: $.ASN1Encoder<Priority_Level> = $._encodeEnumerated;
 

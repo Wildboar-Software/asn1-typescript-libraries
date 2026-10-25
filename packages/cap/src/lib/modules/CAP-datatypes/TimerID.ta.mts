@@ -24,7 +24,7 @@ export enum _enum_for_TimerID {
     tssf = 0,
 }
 export type TimerID = _enum_for_TimerID;
-export const TimerID = _enum_for_TimerID;
+export const TimerID: typeof _enum_for_TimerID = _enum_for_TimerID;
 /**
  * @summary TimerID_tssf
  * @description
@@ -34,7 +34,7 @@ export const TimerID = _enum_for_TimerID;
  *
  * @constant
  */
-export const TimerID_tssf = TimerID.tssf;
+export const TimerID_tssf: _enum_for_TimerID.tssf = TimerID.tssf;
 /**
  * @summary tssf
  * @description
@@ -44,6 +44,6 @@ export const TimerID_tssf = TimerID.tssf;
  *
  * @constant
  */
-export const tssf = TimerID.tssf;
-export const _decode_TimerID = $._decodeEnumerated;
-export const _encode_TimerID = $._encodeEnumerated;
+export const tssf: _enum_for_TimerID.tssf = TimerID.tssf;
+export const _decode_TimerID: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_TimerID: $.ASN1Encoder<number> = $._encodeEnumerated;

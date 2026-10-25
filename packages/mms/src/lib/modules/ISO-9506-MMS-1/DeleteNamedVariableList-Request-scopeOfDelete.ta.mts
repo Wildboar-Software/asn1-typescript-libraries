@@ -47,7 +47,7 @@ type DeleteNamedVariableList_Request_scopeOfDelete = INTEGER;
  * @type {number}
  */
 export
-const DeleteNamedVariableList_Request_scopeOfDelete_specific = 0 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteNamedVariableList_Request_scopeOfDelete_specific: 0 = 0 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_specific
@@ -60,7 +60,7 @@ const DeleteNamedVariableList_Request_scopeOfDelete_specific = 0 satisfies Delet
  * @type {number}
  */
 export
-const specific = DeleteNamedVariableList_Request_scopeOfDelete_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const specific: 0 = DeleteNamedVariableList_Request_scopeOfDelete_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_aa_specific
@@ -73,7 +73,7 @@ const specific = DeleteNamedVariableList_Request_scopeOfDelete_specific; /* SHOR
  * @type {number}
  */
 export
-const DeleteNamedVariableList_Request_scopeOfDelete_aa_specific = 1 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteNamedVariableList_Request_scopeOfDelete_aa_specific: 1 = 1 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_aa_specific
@@ -86,7 +86,7 @@ const DeleteNamedVariableList_Request_scopeOfDelete_aa_specific = 1 satisfies De
  * @type {number}
  */
 export
-const aa_specific = DeleteNamedVariableList_Request_scopeOfDelete_aa_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const aa_specific: 1 = DeleteNamedVariableList_Request_scopeOfDelete_aa_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_domain
@@ -99,7 +99,7 @@ const aa_specific = DeleteNamedVariableList_Request_scopeOfDelete_aa_specific; /
  * @type {number}
  */
 export
-const DeleteNamedVariableList_Request_scopeOfDelete_domain = 2 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteNamedVariableList_Request_scopeOfDelete_domain: 2 = 2 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_domain
@@ -112,7 +112,7 @@ const DeleteNamedVariableList_Request_scopeOfDelete_domain = 2 satisfies DeleteN
  * @type {number}
  */
 export
-const domain = DeleteNamedVariableList_Request_scopeOfDelete_domain; /* SHORT_NAMED_INTEGER_VALUE */
+const domain: 2 = DeleteNamedVariableList_Request_scopeOfDelete_domain; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_vmd
@@ -125,7 +125,7 @@ const domain = DeleteNamedVariableList_Request_scopeOfDelete_domain; /* SHORT_NA
  * @type {number}
  */
 export
-const DeleteNamedVariableList_Request_scopeOfDelete_vmd = 3 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteNamedVariableList_Request_scopeOfDelete_vmd: 3 = 3 satisfies DeleteNamedVariableList_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteNamedVariableList_Request_scopeOfDelete_vmd
@@ -138,9 +138,9 @@ const DeleteNamedVariableList_Request_scopeOfDelete_vmd = 3 satisfies DeleteName
  * @type {number}
  */
 export
-const vmd = DeleteNamedVariableList_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteNamedVariableList_Request_scopeOfDelete = $._decodeInteger;
-export const _encode_DeleteNamedVariableList_Request_scopeOfDelete = $._encodeInteger;
+const vmd: 3 = DeleteNamedVariableList_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DeleteNamedVariableList_Request_scopeOfDelete: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DeleteNamedVariableList_Request_scopeOfDelete: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

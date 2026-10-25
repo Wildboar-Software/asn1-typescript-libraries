@@ -115,7 +115,7 @@ class AAnFKAKMAApplicationKeyGet {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_KeyGetType;
+    public static _enum_for_type_: typeof _enum_for_KeyGetType = _enum_for_KeyGetType;
 }
 
 /**

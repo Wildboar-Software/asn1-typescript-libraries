@@ -20,12 +20,12 @@ export type Digest = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_Digest = $._decodeOctetString;
+export const _decode_Digest: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_Digest = $._encodeOctetString;
+export const _encode_Digest: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

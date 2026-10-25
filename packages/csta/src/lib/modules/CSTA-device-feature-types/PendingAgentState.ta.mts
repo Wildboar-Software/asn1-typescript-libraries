@@ -83,7 +83,7 @@ type PendingAgentState = _enum_for_PendingAgentState;
  * @enum {number}
  */
 export
-const PendingAgentState = _enum_for_PendingAgentState;
+const PendingAgentState: typeof _enum_for_PendingAgentState = _enum_for_PendingAgentState;
 
 /**
  * @summary PendingAgentState_agentNotReady
@@ -93,7 +93,7 @@ const PendingAgentState = _enum_for_PendingAgentState;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PendingAgentState_agentNotReady = PendingAgentState.agentNotReady; /* LONG_NAMED_ENUMERATED_VALUE */
+const PendingAgentState_agentNotReady: _enum_for_PendingAgentState.agentNotReady = PendingAgentState.agentNotReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentNotReady
@@ -102,7 +102,7 @@ const PendingAgentState_agentNotReady = PendingAgentState.agentNotReady; /* LONG
  * @type {number}
  */
 export
-const agentNotReady = PendingAgentState.agentNotReady; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentNotReady: _enum_for_PendingAgentState.agentNotReady = PendingAgentState.agentNotReady; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PendingAgentState_agentNull
@@ -112,7 +112,7 @@ const agentNotReady = PendingAgentState.agentNotReady; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PendingAgentState_agentNull = PendingAgentState.agentNull; /* LONG_NAMED_ENUMERATED_VALUE */
+const PendingAgentState_agentNull: _enum_for_PendingAgentState.agentNull = PendingAgentState.agentNull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentNull
@@ -121,7 +121,7 @@ const PendingAgentState_agentNull = PendingAgentState.agentNull; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const agentNull = PendingAgentState.agentNull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentNull: _enum_for_PendingAgentState.agentNull = PendingAgentState.agentNull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PendingAgentState_agentReady
@@ -131,7 +131,7 @@ const agentNull = PendingAgentState.agentNull; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PendingAgentState_agentReady = PendingAgentState.agentReady; /* LONG_NAMED_ENUMERATED_VALUE */
+const PendingAgentState_agentReady: _enum_for_PendingAgentState.agentReady = PendingAgentState.agentReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentReady
@@ -140,7 +140,7 @@ const PendingAgentState_agentReady = PendingAgentState.agentReady; /* LONG_NAMED
  * @type {number}
  */
 export
-const agentReady = PendingAgentState.agentReady; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentReady: _enum_for_PendingAgentState.agentReady = PendingAgentState.agentReady; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PendingAgentState_agentWorkingAfterCall
@@ -151,7 +151,7 @@ const agentReady = PendingAgentState.agentReady; /* SHORT_NAMED_ENUMERATED_VALUE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PendingAgentState_agentWorkingAfterCall = PendingAgentState.agentWorkingAfterCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const PendingAgentState_agentWorkingAfterCall: _enum_for_PendingAgentState.agentWorkingAfterCall = PendingAgentState.agentWorkingAfterCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentWorkingAfterCall
@@ -160,7 +160,7 @@ const PendingAgentState_agentWorkingAfterCall = PendingAgentState.agentWorkingAf
  * @type {number}
  */
 export
-const agentWorkingAfterCall = PendingAgentState.agentWorkingAfterCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentWorkingAfterCall: _enum_for_PendingAgentState.agentWorkingAfterCall = PendingAgentState.agentWorkingAfterCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PendingAgentState: $.ASN1Decoder<PendingAgentState> | null = null;
 

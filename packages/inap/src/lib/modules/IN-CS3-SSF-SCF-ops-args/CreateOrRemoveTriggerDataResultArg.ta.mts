@@ -103,7 +103,7 @@ class CreateOrRemoveTriggerDataResultArg {
          * @static
          */
 
-    public static _enum_for_triggerStatus = _enum_for_TriggerStatus;
+    public static _enum_for_triggerStatus: typeof _enum_for_TriggerStatus = _enum_for_TriggerStatus;
 }
 
 /**

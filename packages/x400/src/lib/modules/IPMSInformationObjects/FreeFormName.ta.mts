@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FreeFormName = TeletexString; // TeletexString
 
 
-export const _decode_FreeFormName = $._decodeTeletexString;
+export const _decode_FreeFormName: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_FreeFormName = $._encodeTeletexString;
+export const _encode_FreeFormName: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

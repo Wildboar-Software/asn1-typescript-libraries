@@ -179,7 +179,7 @@ export class Capture_RequestParams {
    * @static
    */
 
-  public static _enum_for_purpose = _enum_for_BioAPI_BIR_PURPOSE;
+  public static _enum_for_purpose: typeof _enum_for_BioAPI_BIR_PURPOSE = _enum_for_BioAPI_BIR_PURPOSE;
 }
 
 

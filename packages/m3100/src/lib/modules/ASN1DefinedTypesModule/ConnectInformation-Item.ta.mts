@@ -150,7 +150,7 @@ export class ConnectInformation_Item {
      * @static
      */
 
-    public static _enum_for_administrativeState = _enum_for_AdministrativeState;
+    public static _enum_for_administrativeState: typeof _enum_for_AdministrativeState = _enum_for_AdministrativeState;
 }
 
 

@@ -77,7 +77,7 @@ export const _decode_ServingNode = (el: _Element): ServingNode => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServingNode, encoded as an ASN.1 Element.
  */
-export const _encode_ServingNode = $._encodeBitString;
+export const _encode_ServingNode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

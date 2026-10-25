@@ -27,7 +27,7 @@ export function _decode_PremisesName (el: _Element): PremisesName {
     }
     return value;
 }
-export const _encode_PremisesName = $._encodeGraphicString;
+export const _encode_PremisesName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

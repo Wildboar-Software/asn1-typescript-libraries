@@ -33,10 +33,10 @@ export
 type EventTime = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_EventTime = $._decodeGeneralizedTime;
+export const _decode_EventTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_EventTime = $._encodeGeneralizedTime;
+export const _encode_EventTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

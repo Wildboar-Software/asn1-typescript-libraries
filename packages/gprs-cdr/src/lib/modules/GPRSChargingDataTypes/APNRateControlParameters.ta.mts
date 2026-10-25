@@ -98,7 +98,7 @@ class APNRateControlParameters {
          * @static
          */
 
-    public static _enum_for_additionalExceptionReports = _enum_for_AdditionalExceptionReports;
+    public static _enum_for_additionalExceptionReports: typeof _enum_for_AdditionalExceptionReports = _enum_for_AdditionalExceptionReports;
 }
 
 /**

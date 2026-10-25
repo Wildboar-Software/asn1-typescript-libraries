@@ -118,14 +118,14 @@ export class RejectCAsubscribe implements CASPcommonComponents {
      * @static
      */
 
-    public static _enum_for_version = _enum_for_CASPversion;
+    public static _enum_for_version: typeof _enum_for_CASPversion = _enum_for_CASPversion;
     /**
      * @summary The enum used as the type of the component `reason`
      * @public
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_CASP_error;
+    public static _enum_for_reason: typeof _enum_for_CASP_error = _enum_for_CASP_error;
 }
 
 /**

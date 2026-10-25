@@ -145,7 +145,7 @@ export class AttributeError {
    * @static
    */
 
-  public static _enum_for_errorStatus = _enum_for_AttributeError_errorStatus;
+  public static _enum_for_errorStatus: typeof _enum_for_AttributeError_errorStatus = _enum_for_AttributeError_errorStatus;
 }
 
 

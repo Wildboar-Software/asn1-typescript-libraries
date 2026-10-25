@@ -87,14 +87,14 @@ export type ReportSummary = _enum_for_ReportSummary;
  *
  * @enum {number}
  */
-export const ReportSummary = _enum_for_ReportSummary;
+export const ReportSummary: typeof _enum_for_ReportSummary = _enum_for_ReportSummary;
 
 /**
  * @summary ReportSummary_no_report_requested
  * @constant
  * @type {number}
  */
-export const ReportSummary_no_report_requested =
+export const ReportSummary_no_report_requested: _enum_for_ReportSummary.no_report_requested =
     ReportSummary.no_report_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -102,7 +102,7 @@ export const ReportSummary_no_report_requested =
  * @constant
  * @type {number}
  */
-export const no_report_requested =
+export const no_report_requested: _enum_for_ReportSummary.no_report_requested =
     ReportSummary.no_report_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const no_report_requested =
  * @constant
  * @type {number}
  */
-export const ReportSummary_no_report_received =
+export const ReportSummary_no_report_received: _enum_for_ReportSummary.no_report_received =
     ReportSummary.no_report_received; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const ReportSummary_no_report_received =
  * @constant
  * @type {number}
  */
-export const no_report_received =
+export const no_report_received: _enum_for_ReportSummary.no_report_received =
     ReportSummary.no_report_received; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,7 +126,7 @@ export const no_report_received =
  * @constant
  * @type {number}
  */
-export const ReportSummary_report_outstanding =
+export const ReportSummary_report_outstanding: _enum_for_ReportSummary.report_outstanding =
     ReportSummary.report_outstanding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const ReportSummary_report_outstanding =
  * @constant
  * @type {number}
  */
-export const report_outstanding =
+export const report_outstanding: _enum_for_ReportSummary.report_outstanding =
     ReportSummary.report_outstanding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const report_outstanding =
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_cancelled =
+export const ReportSummary_delivery_cancelled: _enum_for_ReportSummary.delivery_cancelled =
     ReportSummary.delivery_cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +150,7 @@ export const ReportSummary_delivery_cancelled =
  * @constant
  * @type {number}
  */
-export const delivery_cancelled =
+export const delivery_cancelled: _enum_for_ReportSummary.delivery_cancelled =
     ReportSummary.delivery_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,7 +158,7 @@ export const delivery_cancelled =
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_report_from_another_recipient =
+export const ReportSummary_delivery_report_from_another_recipient: _enum_for_ReportSummary.delivery_report_from_another_recipient =
     ReportSummary.delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -166,7 +166,7 @@ export const ReportSummary_delivery_report_from_another_recipient =
  * @constant
  * @type {number}
  */
-export const delivery_report_from_another_recipient =
+export const delivery_report_from_another_recipient: _enum_for_ReportSummary.delivery_report_from_another_recipient =
     ReportSummary.delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -174,7 +174,7 @@ export const delivery_report_from_another_recipient =
  * @constant
  * @type {number}
  */
-export const ReportSummary_non_delivery_report_from_another_recipient =
+export const ReportSummary_non_delivery_report_from_another_recipient: _enum_for_ReportSummary.non_delivery_report_from_another_recipient =
     ReportSummary.non_delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -182,7 +182,7 @@ export const ReportSummary_non_delivery_report_from_another_recipient =
  * @constant
  * @type {number}
  */
-export const non_delivery_report_from_another_recipient =
+export const non_delivery_report_from_another_recipient: _enum_for_ReportSummary.non_delivery_report_from_another_recipient =
     ReportSummary.non_delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -190,7 +190,7 @@ export const non_delivery_report_from_another_recipient =
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_report_from_intended_recipient =
+export const ReportSummary_delivery_report_from_intended_recipient: _enum_for_ReportSummary.delivery_report_from_intended_recipient =
     ReportSummary.delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -198,7 +198,7 @@ export const ReportSummary_delivery_report_from_intended_recipient =
  * @constant
  * @type {number}
  */
-export const delivery_report_from_intended_recipient =
+export const delivery_report_from_intended_recipient: _enum_for_ReportSummary.delivery_report_from_intended_recipient =
     ReportSummary.delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -206,7 +206,7 @@ export const delivery_report_from_intended_recipient =
  * @constant
  * @type {number}
  */
-export const ReportSummary_non_delivery_report_from_intended_recipient =
+export const ReportSummary_non_delivery_report_from_intended_recipient: _enum_for_ReportSummary.non_delivery_report_from_intended_recipient =
     ReportSummary.non_delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -214,7 +214,7 @@ export const ReportSummary_non_delivery_report_from_intended_recipient =
  * @constant
  * @type {number}
  */
-export const non_delivery_report_from_intended_recipient =
+export const non_delivery_report_from_intended_recipient: _enum_for_ReportSummary.non_delivery_report_from_intended_recipient =
     ReportSummary.non_delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

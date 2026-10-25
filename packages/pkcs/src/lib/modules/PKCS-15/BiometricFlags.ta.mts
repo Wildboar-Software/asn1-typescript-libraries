@@ -124,12 +124,12 @@ export const confidentiality_protected: number = BiometricFlags_confidentiality_
 
 
 
-export const _decode_BiometricFlags = $._decodeBitString;
+export const _decode_BiometricFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BiometricFlags = $._encodeBitString;
+export const _encode_BiometricFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -236,13 +236,13 @@ class InitialDPArg {
          * @static
          */
 
-    public static _enum_for_cGEncountered = _enum_for_CGEncountered;        /**
+    public static _enum_for_cGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;        /**
          * @summary The enum used as the type of the component `eventTypeBCSM`
          * @public
          * @static
          */
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

@@ -60,12 +60,12 @@ export const execute: number = AccessMode_execute; /* SHORT_NAMED_BIT */
 
 
 
-export const _decode_AccessMode = $._decodeBitString;
+export const _decode_AccessMode: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_AccessMode = $._encodeBitString;
+export const _encode_AccessMode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

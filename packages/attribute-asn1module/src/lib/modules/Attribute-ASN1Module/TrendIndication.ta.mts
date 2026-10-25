@@ -75,7 +75,7 @@ type TrendIndication = _enum_for_TrendIndication;
  * @enum {number}
  */
 export
-const TrendIndication = _enum_for_TrendIndication;
+const TrendIndication: typeof _enum_for_TrendIndication = _enum_for_TrendIndication;
 
 /**
  * @summary TrendIndication_lessSevere
@@ -88,7 +88,7 @@ const TrendIndication = _enum_for_TrendIndication;
  * @type {number}
  */
 export
-const TrendIndication_lessSevere = TrendIndication.lessSevere; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrendIndication_lessSevere: 0 = TrendIndication.lessSevere; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lessSevere
@@ -101,7 +101,7 @@ const TrendIndication_lessSevere = TrendIndication.lessSevere; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const lessSevere = TrendIndication.lessSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lessSevere: 0 = TrendIndication.lessSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrendIndication_noChange
@@ -114,7 +114,7 @@ const lessSevere = TrendIndication.lessSevere; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const TrendIndication_noChange = TrendIndication.noChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrendIndication_noChange: 1 = TrendIndication.noChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noChange
@@ -127,7 +127,7 @@ const TrendIndication_noChange = TrendIndication.noChange; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const noChange = TrendIndication.noChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noChange: 1 = TrendIndication.noChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrendIndication_moreSevere
@@ -140,7 +140,7 @@ const noChange = TrendIndication.noChange; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TrendIndication_moreSevere = TrendIndication.moreSevere; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrendIndication_moreSevere: 2 = TrendIndication.moreSevere; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moreSevere
@@ -153,7 +153,7 @@ const TrendIndication_moreSevere = TrendIndication.moreSevere; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const moreSevere = TrendIndication.moreSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moreSevere: 2 = TrendIndication.moreSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_TrendIndication(el: _Element): TrendIndication {

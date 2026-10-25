@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DeletionTime = UTCTime; // UTCTime
 
 
-export const _decode_DeletionTime = $._decodeUTCTime;
+export const _decode_DeletionTime: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
-export const _encode_DeletionTime = $._encodeUTCTime;
+export const _encode_DeletionTime: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

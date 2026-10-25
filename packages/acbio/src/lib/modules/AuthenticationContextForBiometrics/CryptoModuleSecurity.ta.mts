@@ -28,12 +28,12 @@ export type CryptoModuleSecurity = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_CryptoModuleSecurity = $._decodeOctetString;
+export const _decode_CryptoModuleSecurity: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_CryptoModuleSecurity = $._encodeOctetString;
+export const _encode_CryptoModuleSecurity: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

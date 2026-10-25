@@ -137,7 +137,7 @@ class EPS5GSComboInfo {
          * @static
          */
 
-    public static _enum_for_ePSInterworkingIndication = _enum_for_EPSInterworkingIndication;
+    public static _enum_for_ePSInterworkingIndication: typeof _enum_for_EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
 }
 
 /**

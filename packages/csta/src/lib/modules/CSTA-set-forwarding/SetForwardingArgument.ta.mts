@@ -158,7 +158,7 @@ class SetForwardingArgument {
          * @static
          */
 
-    public static _enum_for_forwardingType = _enum_for_ForwardingType;
+    public static _enum_for_forwardingType: typeof _enum_for_ForwardingType = _enum_for_ForwardingType;
 }
 
 /**

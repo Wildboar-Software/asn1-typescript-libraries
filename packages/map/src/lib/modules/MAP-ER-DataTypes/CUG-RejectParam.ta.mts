@@ -86,7 +86,7 @@ class CUG_RejectParam {
          * @static
          */
 
-    public static _enum_for_cug_RejectCause = _enum_for_CUG_RejectCause;
+    public static _enum_for_cug_RejectCause: typeof _enum_for_CUG_RejectCause = _enum_for_CUG_RejectCause;
 }
 
 /**

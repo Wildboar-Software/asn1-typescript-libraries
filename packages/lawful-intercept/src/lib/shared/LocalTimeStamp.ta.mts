@@ -119,7 +119,7 @@ class LocalTimeStamp {
          * @static
          */
 
-    public static _enum_for_winterSummerIndication = _enum_for_LocalTimeStamp_winterSummerIndication;
+    public static _enum_for_winterSummerIndication: typeof _enum_for_LocalTimeStamp_winterSummerIndication = _enum_for_LocalTimeStamp_winterSummerIndication;
 }
 
 /**

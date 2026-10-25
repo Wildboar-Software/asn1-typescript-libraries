@@ -28,7 +28,7 @@ type FilterAction = INTEGER;
  * @type {number}
  */
 export
-const FilterAction_fa_filter_request = 0 satisfies FilterAction; /* LONG_NAMED_INTEGER_VALUE */
+const FilterAction_fa_filter_request: 0 = 0 satisfies FilterAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FilterAction_fa_filter_request
@@ -36,7 +36,7 @@ const FilterAction_fa_filter_request = 0 satisfies FilterAction; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const fa_filter_request = FilterAction_fa_filter_request; /* SHORT_NAMED_INTEGER_VALUE */
+const fa_filter_request: 0 = FilterAction_fa_filter_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FilterAction_fa_filter_result
@@ -44,7 +44,7 @@ const fa_filter_request = FilterAction_fa_filter_request; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const FilterAction_fa_filter_result = 1 satisfies FilterAction; /* LONG_NAMED_INTEGER_VALUE */
+const FilterAction_fa_filter_result: 1 = 1 satisfies FilterAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FilterAction_fa_filter_result
@@ -52,9 +52,9 @@ const FilterAction_fa_filter_result = 1 satisfies FilterAction; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const fa_filter_result = FilterAction_fa_filter_result; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_FilterAction = $._decodeInteger;
-export const _encode_FilterAction = $._encodeInteger;
+const fa_filter_result: 1 = FilterAction_fa_filter_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_FilterAction: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_FilterAction: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

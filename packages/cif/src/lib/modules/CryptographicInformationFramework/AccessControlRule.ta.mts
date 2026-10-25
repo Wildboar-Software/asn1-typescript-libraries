@@ -133,7 +133,7 @@ class AccessControlRule {
          * @static
          */
 
-    public static _enum_for_lifeCycleStatus = _enum_for_LifeCycleStatus;
+    public static _enum_for_lifeCycleStatus: typeof _enum_for_LifeCycleStatus = _enum_for_LifeCycleStatus;
 }
 
 /**

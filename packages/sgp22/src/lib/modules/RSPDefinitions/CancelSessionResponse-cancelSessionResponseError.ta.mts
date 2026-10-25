@@ -37,7 +37,7 @@ type CancelSessionResponse_cancelSessionResponseError = INTEGER;
  * @type {number}
  */
 export
-const CancelSessionResponse_cancelSessionResponseError_invalidTransactionId = 5 satisfies CancelSessionResponse_cancelSessionResponseError; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponse_cancelSessionResponseError_invalidTransactionId: 5 = 5 satisfies CancelSessionResponse_cancelSessionResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_invalidTransactionId
@@ -50,7 +50,7 @@ const CancelSessionResponse_cancelSessionResponseError_invalidTransactionId = 5 
  * @type {number}
  */
 export
-const invalidTransactionId = CancelSessionResponse_cancelSessionResponseError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId: 5 = CancelSessionResponse_cancelSessionResponseError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_undefinedError
@@ -62,7 +62,7 @@ const invalidTransactionId = CancelSessionResponse_cancelSessionResponseError_in
  * @type {number}
  */
 export
-const CancelSessionResponse_cancelSessionResponseError_undefinedError = 127 satisfies CancelSessionResponse_cancelSessionResponseError; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponse_cancelSessionResponseError_undefinedError: 127 = 127 satisfies CancelSessionResponse_cancelSessionResponseError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponse_cancelSessionResponseError_undefinedError
@@ -74,9 +74,9 @@ const CancelSessionResponse_cancelSessionResponseError_undefinedError = 127 sati
  * @type {number}
  */
 export
-const undefinedError = CancelSessionResponse_cancelSessionResponseError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_CancelSessionResponse_cancelSessionResponseError = $._decodeInteger;
-export const _encode_CancelSessionResponse_cancelSessionResponseError = $._encodeInteger;
+const undefinedError: 127 = CancelSessionResponse_cancelSessionResponseError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_CancelSessionResponse_cancelSessionResponseError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_CancelSessionResponse_cancelSessionResponseError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

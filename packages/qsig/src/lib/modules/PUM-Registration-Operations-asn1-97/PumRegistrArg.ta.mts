@@ -191,19 +191,19 @@ class PumRegistrArg {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceOption () { return ServiceOption_inCallRegistration; }        /**
+    public static get _default_value_for_serviceOption (): _enum_for_ServiceOption { return ServiceOption_inCallRegistration; }        /**
          * @summary The enum used as the type of the component `basicService`
          * @public
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;        /**
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;        /**
          * @summary The enum used as the type of the component `serviceOption`
          * @public
          * @static
          */
 
-    public static _enum_for_serviceOption = _enum_for_ServiceOption;
+    public static _enum_for_serviceOption: typeof _enum_for_ServiceOption = _enum_for_ServiceOption;
 }
 
 /**

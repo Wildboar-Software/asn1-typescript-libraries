@@ -53,7 +53,7 @@ type USIMonitorMode = _enum_for_USIMonitorMode;
  * @enum {number}
  */
 export
-const USIMonitorMode = _enum_for_USIMonitorMode;
+const USIMonitorMode: typeof _enum_for_USIMonitorMode = _enum_for_USIMonitorMode;
 
 /**
  * @summary USIMonitorMode_monitoringActive
@@ -61,7 +61,7 @@ const USIMonitorMode = _enum_for_USIMonitorMode;
  * @type {number}
  */
 export
-const USIMonitorMode_monitoringActive = USIMonitorMode.monitoringActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const USIMonitorMode_monitoringActive: _enum_for_USIMonitorMode.monitoringActive = USIMonitorMode.monitoringActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringActive
@@ -69,7 +69,7 @@ const USIMonitorMode_monitoringActive = USIMonitorMode.monitoringActive; /* LONG
  * @type {number}
  */
 export
-const monitoringActive = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringActive: _enum_for_USIMonitorMode.monitoringActive = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary USIMonitorMode_monitoringInactive
@@ -77,7 +77,7 @@ const monitoringActive = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const USIMonitorMode_monitoringInactive = USIMonitorMode.monitoringInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const USIMonitorMode_monitoringInactive: _enum_for_USIMonitorMode.monitoringInactive = USIMonitorMode.monitoringInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringInactive
@@ -85,7 +85,7 @@ const USIMonitorMode_monitoringInactive = USIMonitorMode.monitoringInactive; /* 
  * @type {number}
  */
 export
-const monitoringInactive = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringInactive: _enum_for_USIMonitorMode.monitoringInactive = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_USIMonitorMode(el: _Element): USIMonitorMode {

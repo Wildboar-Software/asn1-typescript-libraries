@@ -233,7 +233,7 @@ class AccessTransferInformation {
          * @static
          */
 
-    public static _enum_for_accessTransferType = _enum_for_AccessTransferType;
+    public static _enum_for_accessTransferType: typeof _enum_for_AccessTransferType = _enum_for_AccessTransferType;
 }
 
 /**

@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type MS_EIT = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_MS_EIT = $._decodeObjectIdentifier;
+export const _decode_MS_EIT: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_MS_EIT = $._encodeObjectIdentifier;
+export const _encode_MS_EIT: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

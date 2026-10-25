@@ -29,7 +29,7 @@ type Bandwidth = INTEGER;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Bandwidth = $._decodeInteger;
+export const _decode_Bandwidth: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) Bandwidth into an ASN.1 Element.
@@ -38,7 +38,7 @@ export const _decode_Bandwidth = $._decodeInteger;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Bandwidth, encoded as an ASN.1 Element.
  */
-export const _encode_Bandwidth = $._encodeInteger;
+export const _encode_Bandwidth: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

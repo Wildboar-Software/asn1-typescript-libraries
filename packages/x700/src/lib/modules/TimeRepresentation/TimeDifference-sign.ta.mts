@@ -66,7 +66,7 @@ export type TimeDifference_sign = _enum_for_TimeDifference_sign;
  *
  * @enum {number}
  */
-export const TimeDifference_sign = _enum_for_TimeDifference_sign;
+export const TimeDifference_sign: typeof _enum_for_TimeDifference_sign = _enum_for_TimeDifference_sign;
 
 /**
  * @summary TimeDifference_sign_positive
@@ -77,7 +77,7 @@ export const TimeDifference_sign = _enum_for_TimeDifference_sign;
  * @constant
  * @type {number}
  */
-export const TimeDifference_sign_positive =
+export const TimeDifference_sign_positive: _enum_for_TimeDifference_sign.positive =
     TimeDifference_sign.positive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,7 +85,7 @@ export const TimeDifference_sign_positive =
  * @constant
  * @type {number}
  */
-export const positive =
+export const positive: _enum_for_TimeDifference_sign.positive =
     TimeDifference_sign.positive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const positive =
  * @constant
  * @type {number}
  */
-export const TimeDifference_sign_negative =
+export const TimeDifference_sign_negative: _enum_for_TimeDifference_sign.negative =
     TimeDifference_sign.negative; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const TimeDifference_sign_negative =
  * @constant
  * @type {number}
  */
-export const negative =
+export const negative: _enum_for_TimeDifference_sign.negative =
     TimeDifference_sign.negative; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

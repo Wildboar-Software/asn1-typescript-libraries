@@ -83,7 +83,7 @@ export type WeekDay = _enum_for_WeekDay;
  *
  * @enum {number}
  */
-export const WeekDay = _enum_for_WeekDay;
+export const WeekDay: typeof _enum_for_WeekDay = _enum_for_WeekDay;
 
 
 /**
@@ -91,7 +91,7 @@ export const WeekDay = _enum_for_WeekDay;
  * @constant
  * @type {number}
  */
-export const WeekDay_sunday =
+export const WeekDay_sunday: _enum_for_WeekDay.sunday =
     WeekDay.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const WeekDay_sunday =
  * @constant
  * @type {number}
  */
-export const sunday =
+export const sunday: _enum_for_WeekDay.sunday =
     WeekDay.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -109,7 +109,7 @@ export const sunday =
  * @constant
  * @type {number}
  */
-export const WeekDay_monday =
+export const WeekDay_monday: _enum_for_WeekDay.monday =
     WeekDay.monday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const WeekDay_monday =
  * @constant
  * @type {number}
  */
-export const monday =
+export const monday: _enum_for_WeekDay.monday =
     WeekDay.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -127,7 +127,7 @@ export const monday =
  * @constant
  * @type {number}
  */
-export const WeekDay_tuesday =
+export const WeekDay_tuesday: _enum_for_WeekDay.tuesday =
     WeekDay.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -136,7 +136,7 @@ export const WeekDay_tuesday =
  * @constant
  * @type {number}
  */
-export const tuesday =
+export const tuesday: _enum_for_WeekDay.tuesday =
     WeekDay.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -145,7 +145,7 @@ export const tuesday =
  * @constant
  * @type {number}
  */
-export const WeekDay_wednesday =
+export const WeekDay_wednesday: _enum_for_WeekDay.wednesday =
     WeekDay.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -154,7 +154,7 @@ export const WeekDay_wednesday =
  * @constant
  * @type {number}
  */
-export const wednesday =
+export const wednesday: _enum_for_WeekDay.wednesday =
     WeekDay.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -163,7 +163,7 @@ export const wednesday =
  * @constant
  * @type {number}
  */
-export const WeekDay_thursday =
+export const WeekDay_thursday: _enum_for_WeekDay.thursday =
     WeekDay.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -172,7 +172,7 @@ export const WeekDay_thursday =
  * @constant
  * @type {number}
  */
-export const thursday =
+export const thursday: _enum_for_WeekDay.thursday =
     WeekDay.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -181,7 +181,7 @@ export const thursday =
  * @constant
  * @type {number}
  */
-export const WeekDay_friday =
+export const WeekDay_friday: _enum_for_WeekDay.friday =
     WeekDay.friday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -190,7 +190,7 @@ export const WeekDay_friday =
  * @constant
  * @type {number}
  */
-export const friday =
+export const friday: _enum_for_WeekDay.friday =
     WeekDay.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -199,7 +199,7 @@ export const friday =
  * @constant
  * @type {number}
  */
-export const WeekDay_saturday =
+export const WeekDay_saturday: _enum_for_WeekDay.saturday =
     WeekDay.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -208,7 +208,7 @@ export const WeekDay_saturday =
  * @constant
  * @type {number}
  */
-export const saturday =
+export const saturday: _enum_for_WeekDay.saturday =
     WeekDay.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

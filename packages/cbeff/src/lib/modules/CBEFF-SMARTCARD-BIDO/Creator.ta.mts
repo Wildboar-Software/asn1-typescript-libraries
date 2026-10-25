@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Creator = UTF8String; // UTF8String
 
 
-export const _decode_Creator = $._decodeUTF8String;
+export const _decode_Creator: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
-export const _encode_Creator = $._encodeUTF8String;
+export const _encode_Creator: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

@@ -20,12 +20,12 @@ export type KeyConstructionLabel = INTEGER;
 
 
 
-export const _decode_KeyConstructionLabel = $._decodeInteger;
+export const _decode_KeyConstructionLabel: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_KeyConstructionLabel = $._encodeInteger;
+export const _encode_KeyConstructionLabel: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

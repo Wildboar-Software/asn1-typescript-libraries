@@ -34,12 +34,12 @@ export type Node_Name = EXTERNAL; // ExternalType
 
 
 
-export const _decode_Node_Name = $._decodeExternal;
+export const _decode_Node_Name: $.ASN1Decoder<_External> = $._decodeExternal;
 
 
 
 
-export const _encode_Node_Name = $._encodeExternal;
+export const _encode_Node_Name: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

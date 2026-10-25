@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DateOfLeap = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_DateOfLeap = $._decodeGeneralizedTime;
+export const _decode_DateOfLeap: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_DateOfLeap = $._encodeGeneralizedTime;
+export const _encode_DateOfLeap: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

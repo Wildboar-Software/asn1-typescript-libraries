@@ -122,7 +122,7 @@ class PASSporTHeader {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_JWSTokenType;
+    public static _enum_for_type_: typeof _enum_for_JWSTokenType = _enum_for_JWSTokenType;
 }
 
 /**

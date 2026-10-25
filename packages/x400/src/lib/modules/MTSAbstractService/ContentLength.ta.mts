@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ContentLength = INTEGER;
 
 
-export const _decode_ContentLength = $._decodeInteger;
+export const _decode_ContentLength: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ContentLength = $._encodeInteger;
+export const _encode_ContentLength: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

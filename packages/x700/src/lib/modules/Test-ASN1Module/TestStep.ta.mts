@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TestStep = INTEGER;
 
 
-export const _decode_TestStep = $._decodeInteger;
+export const _decode_TestStep: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TestStep = $._encodeInteger;
+export const _encode_TestStep: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

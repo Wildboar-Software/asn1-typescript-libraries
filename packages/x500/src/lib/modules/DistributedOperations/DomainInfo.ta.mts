@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type DomainInfo = _Element; // ObjectClassFieldType
 
 
-export const _decode_DomainInfo = $._decodeAny;
+export const _decode_DomainInfo: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
-export const _encode_DomainInfo = $._encodeAny;
+export const _encode_DomainInfo: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

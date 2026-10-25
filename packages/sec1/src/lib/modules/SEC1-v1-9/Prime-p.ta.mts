@@ -32,10 +32,10 @@ export
 type Prime_p = INTEGER;
 
 
-export const _decode_Prime_p = $._decodeInteger;
+export const _decode_Prime_p: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Prime_p = $._encodeInteger;
+export const _encode_Prime_p: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

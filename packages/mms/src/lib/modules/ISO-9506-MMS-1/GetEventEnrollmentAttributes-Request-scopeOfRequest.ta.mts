@@ -51,7 +51,7 @@ type GetEventEnrollmentAttributes_Request_scopeOfRequest = INTEGER;
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific = 0 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific: 0 = 0 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_specific
@@ -65,7 +65,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific = 0 satisfies
  * @type {number}
  */
 export
-const specific = GetEventEnrollmentAttributes_Request_scopeOfRequest_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const specific: 0 = GetEventEnrollmentAttributes_Request_scopeOfRequest_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_client
@@ -80,7 +80,7 @@ const specific = GetEventEnrollmentAttributes_Request_scopeOfRequest_specific; /
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_client = 1 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_client: 1 = 1 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_client
@@ -94,7 +94,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_client = 1 satisfies G
  * @type {number}
  */
 export
-const client = GetEventEnrollmentAttributes_Request_scopeOfRequest_client; /* SHORT_NAMED_INTEGER_VALUE */
+const client: 1 = GetEventEnrollmentAttributes_Request_scopeOfRequest_client; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ec
@@ -109,7 +109,7 @@ const client = GetEventEnrollmentAttributes_Request_scopeOfRequest_client; /* SH
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec = 2 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec: 2 = 2 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ec
@@ -123,7 +123,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec = 2 satisfies GetEv
  * @type {number}
  */
 export
-const ec = GetEventEnrollmentAttributes_Request_scopeOfRequest_ec; /* SHORT_NAMED_INTEGER_VALUE */
+const ec: 2 = GetEventEnrollmentAttributes_Request_scopeOfRequest_ec; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ea
@@ -138,7 +138,7 @@ const ec = GetEventEnrollmentAttributes_Request_scopeOfRequest_ec; /* SHORT_NAME
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea = 3 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea: 3 = 3 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ea
@@ -152,9 +152,9 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea = 3 satisfies GetEv
  * @type {number}
  */
 export
-const ea = GetEventEnrollmentAttributes_Request_scopeOfRequest_ea; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest = $._decodeInteger;
-export const _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest = $._encodeInteger;
+const ea: 3 = GetEventEnrollmentAttributes_Request_scopeOfRequest_ea; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

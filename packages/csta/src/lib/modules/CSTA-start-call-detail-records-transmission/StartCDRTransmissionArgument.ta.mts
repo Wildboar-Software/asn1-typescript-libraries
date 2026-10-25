@@ -94,7 +94,7 @@ class StartCDRTransmissionArgument {
          * @static
          */
 
-    public static _enum_for_transferMode = _enum_for_CDRTransferMode;
+    public static _enum_for_transferMode: typeof _enum_for_CDRTransferMode = _enum_for_CDRTransferMode;
 }
 
 /**

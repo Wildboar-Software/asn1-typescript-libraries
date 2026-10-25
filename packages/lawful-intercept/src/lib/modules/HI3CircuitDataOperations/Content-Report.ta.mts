@@ -237,7 +237,7 @@ class Content_Report {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_Content_Report_initiator;
+    public static _enum_for_initiator: typeof _enum_for_Content_Report_initiator = _enum_for_Content_Report_initiator;
 }
 
 /**

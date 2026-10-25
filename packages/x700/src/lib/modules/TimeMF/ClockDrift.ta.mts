@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ClockDrift = REAL; // RealType
 
 
-export const _decode_ClockDrift = $._decodeReal;
+export const _decode_ClockDrift: $.ASN1Decoder<number> = $._decodeReal;
 
 
-export const _encode_ClockDrift = $._encodeReal;
+export const _encode_ClockDrift: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

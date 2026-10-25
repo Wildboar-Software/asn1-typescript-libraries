@@ -38,7 +38,7 @@ type CIAInfo_version = INTEGER;
  * @type {number}
  */
 export
-const CIAInfo_version_v1 = 0 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VALUE */
+const CIAInfo_version_v1: 0 = 0 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CIAInfo_version_v1
@@ -46,7 +46,7 @@ const CIAInfo_version_v1 = 0 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const v1 = CIAInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+const v1: 0 = CIAInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CIAInfo_version_v2
@@ -56,7 +56,7 @@ const v1 = CIAInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CIAInfo_version_v2 = 1 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VALUE */
+const CIAInfo_version_v2: 1 = 1 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CIAInfo_version_v2
@@ -64,9 +64,9 @@ const CIAInfo_version_v2 = 1 satisfies CIAInfo_version; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const v2 = CIAInfo_version_v2; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_CIAInfo_version = $._decodeInteger;
-export const _encode_CIAInfo_version = $._encodeInteger;
+const v2: 1 = CIAInfo_version_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_CIAInfo_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_CIAInfo_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

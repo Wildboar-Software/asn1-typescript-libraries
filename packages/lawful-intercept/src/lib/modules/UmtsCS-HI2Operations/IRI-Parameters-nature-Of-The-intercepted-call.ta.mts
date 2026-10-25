@@ -66,7 +66,7 @@ type IRI_Parameters_nature_Of_The_intercepted_call = _enum_for_IRI_Parameters_na
  * @type {number}
  */
 export
-const IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_ISDN_PSTN_circuit_call; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_ISDN_PSTN_circuit_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_ISDN_PSTN_circuit_call; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gSM_ISDN_PSTN_circuit_call
@@ -78,7 +78,7 @@ const IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call =
  * @type {number}
  */
 export
-const gSM_ISDN_PSTN_circuit_call = IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gSM_ISDN_PSTN_circuit_call: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_ISDN_PSTN_circuit_call = IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message
@@ -91,7 +91,7 @@ const gSM_ISDN_PSTN_circuit_call = IRI_Parameters_nature_Of_The_intercepted_call
  * @type {number}
  */
 export
-const IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_SMS_Message; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_SMS_Message = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_SMS_Message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gSM_SMS_Message
@@ -103,7 +103,7 @@ const IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message = _enum_for_
  * @type {number}
  */
 export
-const gSM_SMS_Message = IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gSM_SMS_Message: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gSM_SMS_Message = IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages
@@ -117,7 +117,7 @@ const gSM_SMS_Message = IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Me
  * @type {number}
  */
 export
-const IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.uUS4_Messages; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.uUS4_Messages = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.uUS4_Messages; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uUS4_Messages
@@ -129,7 +129,7 @@ const IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages = _enum_for_IR
  * @type {number}
  */
 export
-const uUS4_Messages = IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uUS4_Messages: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.uUS4_Messages = IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call
@@ -142,7 +142,7 @@ const uUS4_Messages = IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Message
  * @type {number}
  */
 export
-const IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.tETRA_circuit_call; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.tETRA_circuit_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.tETRA_circuit_call; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tETRA_circuit_call
@@ -154,7 +154,7 @@ const IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call = _enum_f
  * @type {number}
  */
 export
-const tETRA_circuit_call = IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tETRA_circuit_call: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.tETRA_circuit_call = IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data
@@ -167,7 +167,7 @@ const tETRA_circuit_call = IRI_Parameters_nature_Of_The_intercepted_call_tETRA_c
  * @type {number}
  */
 export
-const IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.teTRA_Packet_Data; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.teTRA_Packet_Data = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.teTRA_Packet_Data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teTRA_Packet_Data
@@ -179,7 +179,7 @@ const IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data = _enum_fo
  * @type {number}
  */
 export
-const teTRA_Packet_Data = IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teTRA_Packet_Data: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.teTRA_Packet_Data = IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data
@@ -191,7 +191,7 @@ const teTRA_Packet_Data = IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Pa
  * @type {number}
  */
 export
-const IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gPRS_Packet_Data; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gPRS_Packet_Data = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gPRS_Packet_Data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRS_Packet_Data
@@ -203,7 +203,7 @@ const IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data = _enum_for
  * @type {number}
  */
 export
-const gPRS_Packet_Data = IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRS_Packet_Data: _enum_for_IRI_Parameters_nature_Of_The_intercepted_call.gPRS_Packet_Data = IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Decoder<IRI_Parameters_nature_Of_The_intercepted_call> = $._decodeEnumerated;
 export const _encode_IRI_Parameters_nature_Of_The_intercepted_call: $.ASN1Encoder<IRI_Parameters_nature_Of_The_intercepted_call> = $._encodeEnumerated;
 

@@ -417,7 +417,7 @@ function evaluateCertificateAssertion (
  * `certificateMatch` on a decoded assertion and certificate.
  * Alias of {@link evaluateCertificateAssertion}.
  */
-export const certificateMatchTyped = evaluateCertificateAssertion;
+export const certificateMatchTyped: typeof evaluateCertificateAssertion = evaluateCertificateAssertion;
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.2 `certificateMatch`.

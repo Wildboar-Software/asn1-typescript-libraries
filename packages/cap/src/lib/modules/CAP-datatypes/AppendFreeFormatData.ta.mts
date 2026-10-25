@@ -26,10 +26,10 @@ export enum _enum_for_AppendFreeFormatData {
     append = 1,
 }
 export type AppendFreeFormatData = _enum_for_AppendFreeFormatData;
-export const AppendFreeFormatData = _enum_for_AppendFreeFormatData;
-export const AppendFreeFormatData_overwrite = AppendFreeFormatData.overwrite;
-export const overwrite = AppendFreeFormatData.overwrite;
-export const AppendFreeFormatData_append = AppendFreeFormatData.append;
-export const append = AppendFreeFormatData.append;
-export const _decode_AppendFreeFormatData = $._decodeEnumerated;
-export const _encode_AppendFreeFormatData = $._encodeEnumerated;
+export const AppendFreeFormatData: typeof _enum_for_AppendFreeFormatData = _enum_for_AppendFreeFormatData;
+export const AppendFreeFormatData_overwrite: _enum_for_AppendFreeFormatData.overwrite = AppendFreeFormatData.overwrite;
+export const overwrite: _enum_for_AppendFreeFormatData.overwrite = AppendFreeFormatData.overwrite;
+export const AppendFreeFormatData_append: _enum_for_AppendFreeFormatData.append = AppendFreeFormatData.append;
+export const append: _enum_for_AppendFreeFormatData.append = AppendFreeFormatData.append;
+export const _decode_AppendFreeFormatData: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_AppendFreeFormatData: $.ASN1Encoder<number> = $._encodeEnumerated;

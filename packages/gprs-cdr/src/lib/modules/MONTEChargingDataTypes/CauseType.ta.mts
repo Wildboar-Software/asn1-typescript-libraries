@@ -94,7 +94,7 @@ type CauseType = _enum_for_CauseType;
  * @enum {number}
  */
 export
-const CauseType = _enum_for_CauseType;
+const CauseType: typeof _enum_for_CauseType = _enum_for_CauseType;
 
 /**
  * @summary CauseType_radioNetworkLayer
@@ -108,7 +108,7 @@ const CauseType = _enum_for_CauseType;
  * @type {number}
  */
 export
-const CauseType_radioNetworkLayer = CauseType.radioNetworkLayer; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseType_radioNetworkLayer: _enum_for_CauseType.radioNetworkLayer = CauseType.radioNetworkLayer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary radioNetworkLayer
@@ -120,7 +120,7 @@ const CauseType_radioNetworkLayer = CauseType.radioNetworkLayer; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const radioNetworkLayer = CauseType.radioNetworkLayer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const radioNetworkLayer: _enum_for_CauseType.radioNetworkLayer = CauseType.radioNetworkLayer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseType_transportLayer
@@ -133,7 +133,7 @@ const radioNetworkLayer = CauseType.radioNetworkLayer; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const CauseType_transportLayer = CauseType.transportLayer; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseType_transportLayer: _enum_for_CauseType.transportLayer = CauseType.transportLayer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transportLayer
@@ -145,7 +145,7 @@ const CauseType_transportLayer = CauseType.transportLayer; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const transportLayer = CauseType.transportLayer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transportLayer: _enum_for_CauseType.transportLayer = CauseType.transportLayer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseType_nAS
@@ -160,7 +160,7 @@ const transportLayer = CauseType.transportLayer; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const CauseType_nAS = CauseType.nAS; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseType_nAS: _enum_for_CauseType.nAS = CauseType.nAS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nAS
@@ -172,7 +172,7 @@ const CauseType_nAS = CauseType.nAS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nAS = CauseType.nAS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nAS: _enum_for_CauseType.nAS = CauseType.nAS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseType_protocol
@@ -185,7 +185,7 @@ const nAS = CauseType.nAS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CauseType_protocol = CauseType.protocol; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseType_protocol: _enum_for_CauseType.protocol = CauseType.protocol; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocol
@@ -197,7 +197,7 @@ const CauseType_protocol = CauseType.protocol; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const protocol = CauseType.protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
+const protocol: _enum_for_CauseType.protocol = CauseType.protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseType_miscellaneous
@@ -210,7 +210,7 @@ const protocol = CauseType.protocol; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CauseType_miscellaneous = CauseType.miscellaneous; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseType_miscellaneous: _enum_for_CauseType.miscellaneous = CauseType.miscellaneous; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary miscellaneous
@@ -222,7 +222,7 @@ const CauseType_miscellaneous = CauseType.miscellaneous; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const miscellaneous = CauseType.miscellaneous; /* SHORT_NAMED_ENUMERATED_VALUE */
+const miscellaneous: _enum_for_CauseType.miscellaneous = CauseType.miscellaneous; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CauseType: $.ASN1Decoder<CauseType> = $._decodeEnumerated;

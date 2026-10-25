@@ -1,5 +1,7 @@
 /* eslint-disable */
 import {
+    type OCTET_STRING,
+    type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -188,14 +190,16 @@ class InitiateCallAttemptArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legToBeCreated () { return { sendingSideID: leg1 }; }
+    public static get _default_value_for_legToBeCreated (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }
     /**
      * @summary Getter that returns the default value for `newCallSegment`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_newCallSegment () { return initialCallSegment; }
+    public static get _default_value_for_newCallSegment (): INTEGER { return initialCallSegment; }
 }
 
 /**

@@ -96,7 +96,7 @@ class MMFlags {
          * @static
          */
 
-    public static _enum_for_flag = _enum_for_MMStateFlag;
+    public static _enum_for_flag: typeof _enum_for_MMStateFlag = _enum_for_MMStateFlag;
 }
 
 /**

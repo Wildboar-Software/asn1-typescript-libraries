@@ -79,7 +79,7 @@ class Trigger {
          * @static
          */
 
-    public static _enum_for_dpName = _enum_for_EventTypeBCSM;
+    public static _enum_for_dpName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

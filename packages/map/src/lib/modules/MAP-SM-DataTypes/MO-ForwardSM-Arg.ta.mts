@@ -159,7 +159,7 @@ class MO_ForwardSM_Arg {
          * @static
          */
 
-    public static _enum_for_sm_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
+    public static _enum_for_sm_DeliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
 }
 
 /**

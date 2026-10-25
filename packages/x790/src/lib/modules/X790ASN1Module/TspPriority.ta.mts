@@ -27,7 +27,7 @@ export function _decode_TspPriority (el: _Element): TspPriority {
     }
     return value;
 }
-export const _encode_TspPriority = $._encodeGraphicString;
+export const _encode_TspPriority: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

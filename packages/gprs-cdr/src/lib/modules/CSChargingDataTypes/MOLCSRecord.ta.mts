@@ -561,19 +561,19 @@ class MOLCSRecord {
          * @static
          */
 
-    public static _enum_for_lcsClientType = _enum_for_LCSClientType;        /**
+    public static _enum_for_lcsClientType: typeof _enum_for_LCSClientType = _enum_for_LCSClientType;        /**
          * @summary The enum used as the type of the component `molr_Type`
          * @public
          * @static
          */
 
-    public static _enum_for_molr_Type = _enum_for_Molr_Type;        /**
+    public static _enum_for_molr_Type: typeof _enum_for_Molr_Type = _enum_for_Molr_Type;        /**
          * @summary The enum used as the type of the component `systemType`
          * @public
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;
 }
 
 /**

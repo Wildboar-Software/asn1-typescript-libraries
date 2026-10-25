@@ -27,7 +27,7 @@ export function _decode_ManagerSearchString (el: _Element): ManagerSearchString 
     }
     return value;
 }
-export const _encode_ManagerSearchString = $._encodeGraphicString;
+export const _encode_ManagerSearchString: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

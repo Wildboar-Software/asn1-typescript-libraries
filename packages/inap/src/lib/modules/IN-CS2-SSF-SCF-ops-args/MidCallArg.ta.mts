@@ -181,13 +181,13 @@ class MidCallArg {
          * @static
          */
 
-    public static _enum_for_featureRequestIndicator = _enum_for_FeatureRequestIndicator;        /**
+    public static _enum_for_featureRequestIndicator: typeof _enum_for_FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;
 }
 
 /**

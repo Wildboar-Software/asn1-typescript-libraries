@@ -36,7 +36,7 @@ type SMServiceType = INTEGER;
  * @type {number}
  */
 export
-const SMServiceType_contentProcessing = 0 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_contentProcessing: 0 = 0 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_contentProcessing
@@ -44,7 +44,7 @@ const SMServiceType_contentProcessing = 0 satisfies SMServiceType; /* LONG_NAMED
  * @type {number}
  */
 export
-const contentProcessing = SMServiceType_contentProcessing; /* SHORT_NAMED_INTEGER_VALUE */
+const contentProcessing: 0 = SMServiceType_contentProcessing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_forwarding
@@ -52,7 +52,7 @@ const contentProcessing = SMServiceType_contentProcessing; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const SMServiceType_forwarding = 1 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_forwarding: 1 = 1 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_forwarding
@@ -60,7 +60,7 @@ const SMServiceType_forwarding = 1 satisfies SMServiceType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const forwarding = SMServiceType_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
+const forwarding: 1 = SMServiceType_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_forwardingMultipleSubscriptions
@@ -68,7 +68,7 @@ const forwarding = SMServiceType_forwarding; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SMServiceType_forwardingMultipleSubscriptions = 2 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_forwardingMultipleSubscriptions: 2 = 2 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_forwardingMultipleSubscriptions
@@ -76,7 +76,7 @@ const SMServiceType_forwardingMultipleSubscriptions = 2 satisfies SMServiceType;
  * @type {number}
  */
 export
-const forwardingMultipleSubscriptions = SMServiceType_forwardingMultipleSubscriptions; /* SHORT_NAMED_INTEGER_VALUE */
+const forwardingMultipleSubscriptions: 2 = SMServiceType_forwardingMultipleSubscriptions; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_filtering
@@ -84,7 +84,7 @@ const forwardingMultipleSubscriptions = SMServiceType_forwardingMultipleSubscrip
  * @type {number}
  */
 export
-const SMServiceType_filtering = 3 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_filtering: 3 = 3 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_filtering
@@ -92,7 +92,7 @@ const SMServiceType_filtering = 3 satisfies SMServiceType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const filtering = SMServiceType_filtering; /* SHORT_NAMED_INTEGER_VALUE */
+const filtering: 3 = SMServiceType_filtering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_receipt
@@ -100,7 +100,7 @@ const filtering = SMServiceType_filtering; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SMServiceType_receipt = 4 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_receipt: 4 = 4 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_receipt
@@ -108,7 +108,7 @@ const SMServiceType_receipt = 4 satisfies SMServiceType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const receipt = SMServiceType_receipt; /* SHORT_NAMED_INTEGER_VALUE */
+const receipt: 4 = SMServiceType_receipt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_networkStorage
@@ -116,7 +116,7 @@ const receipt = SMServiceType_receipt; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SMServiceType_networkStorage = 5 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_networkStorage: 5 = 5 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_networkStorage
@@ -124,7 +124,7 @@ const SMServiceType_networkStorage = 5 satisfies SMServiceType; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const networkStorage = SMServiceType_networkStorage; /* SHORT_NAMED_INTEGER_VALUE */
+const networkStorage: 5 = SMServiceType_networkStorage; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_toMultipleDestinations
@@ -132,7 +132,7 @@ const networkStorage = SMServiceType_networkStorage; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const SMServiceType_toMultipleDestinations = 6 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_toMultipleDestinations: 6 = 6 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_toMultipleDestinations
@@ -140,7 +140,7 @@ const SMServiceType_toMultipleDestinations = 6 satisfies SMServiceType; /* LONG_
  * @type {number}
  */
 export
-const toMultipleDestinations = SMServiceType_toMultipleDestinations; /* SHORT_NAMED_INTEGER_VALUE */
+const toMultipleDestinations: 6 = SMServiceType_toMultipleDestinations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_virtualPrivateNetwork
@@ -148,7 +148,7 @@ const toMultipleDestinations = SMServiceType_toMultipleDestinations; /* SHORT_NA
  * @type {number}
  */
 export
-const SMServiceType_virtualPrivateNetwork = 7 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_virtualPrivateNetwork: 7 = 7 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_virtualPrivateNetwork
@@ -156,7 +156,7 @@ const SMServiceType_virtualPrivateNetwork = 7 satisfies SMServiceType; /* LONG_N
  * @type {number}
  */
 export
-const virtualPrivateNetwork = SMServiceType_virtualPrivateNetwork; /* SHORT_NAMED_INTEGER_VALUE */
+const virtualPrivateNetwork: 7 = SMServiceType_virtualPrivateNetwork; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_autoreply
@@ -164,7 +164,7 @@ const virtualPrivateNetwork = SMServiceType_virtualPrivateNetwork; /* SHORT_NAME
  * @type {number}
  */
 export
-const SMServiceType_autoreply = 8 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_autoreply: 8 = 8 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_autoreply
@@ -172,7 +172,7 @@ const SMServiceType_autoreply = 8 satisfies SMServiceType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const autoreply = SMServiceType_autoreply; /* SHORT_NAMED_INTEGER_VALUE */
+const autoreply: 8 = SMServiceType_autoreply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_personalSignature
@@ -180,7 +180,7 @@ const autoreply = SMServiceType_autoreply; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SMServiceType_personalSignature = 9 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_personalSignature: 9 = 9 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_personalSignature
@@ -188,7 +188,7 @@ const SMServiceType_personalSignature = 9 satisfies SMServiceType; /* LONG_NAMED
  * @type {number}
  */
 export
-const personalSignature = SMServiceType_personalSignature; /* SHORT_NAMED_INTEGER_VALUE */
+const personalSignature: 9 = SMServiceType_personalSignature; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_deferredDelivery
@@ -196,7 +196,7 @@ const personalSignature = SMServiceType_personalSignature; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const SMServiceType_deferredDelivery = 10 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
+const SMServiceType_deferredDelivery: 10 = 10 satisfies SMServiceType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMServiceType_deferredDelivery
@@ -204,7 +204,7 @@ const SMServiceType_deferredDelivery = 10 satisfies SMServiceType; /* LONG_NAMED
  * @type {number}
  */
 export
-const deferredDelivery = SMServiceType_deferredDelivery; /* SHORT_NAMED_INTEGER_VALUE */
+const deferredDelivery: 10 = SMServiceType_deferredDelivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_SMServiceType: $.ASN1Decoder<SMServiceType> = $._decodeInteger;

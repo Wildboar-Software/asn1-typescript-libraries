@@ -34,7 +34,7 @@ export type PwdResponse_error = _enum_for_PwdResponse_error | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const PwdResponse_error_passwordExpired = _enum_for_PwdResponse_error.passwordExpired; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PwdResponse_error_passwordExpired: _enum_for_PwdResponse_error.passwordExpired = _enum_for_PwdResponse_error.passwordExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary passwordExpired
@@ -46,7 +46,7 @@ export const PwdResponse_error_passwordExpired = _enum_for_PwdResponse_error.pas
  * @constant
  * @type {number}
  */
-export const passwordExpired = PwdResponse_error_passwordExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const passwordExpired: _enum_for_PwdResponse_error.passwordExpired = PwdResponse_error_passwordExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PwdResponse_error_changeAfterReset
@@ -57,7 +57,7 @@ export const passwordExpired = PwdResponse_error_passwordExpired; /* SHORT_NAMED
  * @constant
  * @type {number}
  */
-export const PwdResponse_error_changeAfterReset = _enum_for_PwdResponse_error.changeAfterReset; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PwdResponse_error_changeAfterReset: _enum_for_PwdResponse_error.changeAfterReset = _enum_for_PwdResponse_error.changeAfterReset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changeAfterReset
@@ -68,13 +68,13 @@ export const PwdResponse_error_changeAfterReset = _enum_for_PwdResponse_error.ch
  * @constant
  * @type {number}
  */
-export const changeAfterReset = PwdResponse_error_changeAfterReset; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const changeAfterReset: _enum_for_PwdResponse_error.changeAfterReset = PwdResponse_error_changeAfterReset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PwdResponse_error = $._decodeEnumerated;
+export const _decode_PwdResponse_error: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_PwdResponse_error = $._encodeEnumerated;
+export const _encode_PwdResponse_error: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

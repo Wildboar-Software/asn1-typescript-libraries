@@ -34,7 +34,7 @@ export const _decode_CounterID = (el: _Element): CounterID => {
     }
     return value;
 };
-export const _encode_CounterID = $._encodeInteger;
+export const _encode_CounterID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

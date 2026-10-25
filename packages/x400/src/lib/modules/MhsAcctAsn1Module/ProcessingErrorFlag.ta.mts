@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ProcessingErrorFlag = BOOLEAN; // BooleanType
 
 
-export const _decode_ProcessingErrorFlag = $._decodeBoolean;
+export const _decode_ProcessingErrorFlag: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_ProcessingErrorFlag = $._encodeBoolean;
+export const _encode_ProcessingErrorFlag: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

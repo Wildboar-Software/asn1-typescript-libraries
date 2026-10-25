@@ -59,7 +59,7 @@ type MBMS2G3GIndicator = _enum_for_MBMS2G3GIndicator;
  * @enum {number}
  */
 export
-const MBMS2G3GIndicator = _enum_for_MBMS2G3GIndicator;
+const MBMS2G3GIndicator: typeof _enum_for_MBMS2G3GIndicator = _enum_for_MBMS2G3GIndicator;
 
 /**
  * @summary MBMS2G3GIndicator_twoG
@@ -67,7 +67,7 @@ const MBMS2G3GIndicator = _enum_for_MBMS2G3GIndicator;
  * @type {number}
  */
 export
-const MBMS2G3GIndicator_twoG = MBMS2G3GIndicator.twoG; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMS2G3GIndicator_twoG: _enum_for_MBMS2G3GIndicator.twoG = MBMS2G3GIndicator.twoG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary twoG
@@ -75,7 +75,7 @@ const MBMS2G3GIndicator_twoG = MBMS2G3GIndicator.twoG; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const twoG = MBMS2G3GIndicator.twoG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const twoG: _enum_for_MBMS2G3GIndicator.twoG = MBMS2G3GIndicator.twoG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMS2G3GIndicator_threeG
@@ -83,7 +83,7 @@ const twoG = MBMS2G3GIndicator.twoG; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MBMS2G3GIndicator_threeG = MBMS2G3GIndicator.threeG; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMS2G3GIndicator_threeG: _enum_for_MBMS2G3GIndicator.threeG = MBMS2G3GIndicator.threeG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeG
@@ -91,7 +91,7 @@ const MBMS2G3GIndicator_threeG = MBMS2G3GIndicator.threeG; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const threeG = MBMS2G3GIndicator.threeG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeG: _enum_for_MBMS2G3GIndicator.threeG = MBMS2G3GIndicator.threeG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMS2G3GIndicator_twoG_AND_threeG
@@ -99,7 +99,7 @@ const threeG = MBMS2G3GIndicator.threeG; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MBMS2G3GIndicator_twoG_AND_threeG = MBMS2G3GIndicator.twoG_AND_threeG; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMS2G3GIndicator_twoG_AND_threeG: _enum_for_MBMS2G3GIndicator.twoG_AND_threeG = MBMS2G3GIndicator.twoG_AND_threeG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary twoG_AND_threeG
@@ -107,7 +107,7 @@ const MBMS2G3GIndicator_twoG_AND_threeG = MBMS2G3GIndicator.twoG_AND_threeG; /* 
  * @type {number}
  */
 export
-const twoG_AND_threeG = MBMS2G3GIndicator.twoG_AND_threeG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const twoG_AND_threeG: _enum_for_MBMS2G3GIndicator.twoG_AND_threeG = MBMS2G3GIndicator.twoG_AND_threeG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MBMS2G3GIndicator: $.ASN1Decoder<MBMS2G3GIndicator> = $._decodeEnumerated;

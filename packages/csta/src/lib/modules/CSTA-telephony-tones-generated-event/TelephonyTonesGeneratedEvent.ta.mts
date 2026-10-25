@@ -159,7 +159,7 @@ class TelephonyTonesGeneratedEvent {
          * @static
          */
 
-    public static _enum_for_toneGenerated = _enum_for_TelephonyTone;
+    public static _enum_for_toneGenerated: typeof _enum_for_TelephonyTone = _enum_for_TelephonyTone;
 }
 
 /**

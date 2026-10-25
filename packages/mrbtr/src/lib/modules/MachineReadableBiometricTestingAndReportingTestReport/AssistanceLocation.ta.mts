@@ -84,7 +84,7 @@ type AssistanceLocation = _enum_for_AssistanceLocation;
  * @enum {number}
  */
 export
-const AssistanceLocation = _enum_for_AssistanceLocation;
+const AssistanceLocation: typeof _enum_for_AssistanceLocation = _enum_for_AssistanceLocation;
 
 /**
  * @summary AssistanceLocation_separate_from_transaction
@@ -92,7 +92,7 @@ const AssistanceLocation = _enum_for_AssistanceLocation;
  * @type {number}
  */
 export
-const AssistanceLocation_separate_from_transaction = AssistanceLocation.separate_from_transaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceLocation_separate_from_transaction: _enum_for_AssistanceLocation.separate_from_transaction = AssistanceLocation.separate_from_transaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary separate_from_transaction
@@ -100,7 +100,7 @@ const AssistanceLocation_separate_from_transaction = AssistanceLocation.separate
  * @type {number}
  */
 export
-const separate_from_transaction = AssistanceLocation.separate_from_transaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const separate_from_transaction: _enum_for_AssistanceLocation.separate_from_transaction = AssistanceLocation.separate_from_transaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceLocation_interactively_with_transaction
@@ -108,7 +108,7 @@ const separate_from_transaction = AssistanceLocation.separate_from_transaction; 
  * @type {number}
  */
 export
-const AssistanceLocation_interactively_with_transaction = AssistanceLocation.interactively_with_transaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceLocation_interactively_with_transaction: _enum_for_AssistanceLocation.interactively_with_transaction = AssistanceLocation.interactively_with_transaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interactively_with_transaction
@@ -116,7 +116,7 @@ const AssistanceLocation_interactively_with_transaction = AssistanceLocation.int
  * @type {number}
  */
 export
-const interactively_with_transaction = AssistanceLocation.interactively_with_transaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interactively_with_transaction: _enum_for_AssistanceLocation.interactively_with_transaction = AssistanceLocation.interactively_with_transaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceLocation_after_failure
@@ -124,7 +124,7 @@ const interactively_with_transaction = AssistanceLocation.interactively_with_tra
  * @type {number}
  */
 export
-const AssistanceLocation_after_failure = AssistanceLocation.after_failure; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceLocation_after_failure: _enum_for_AssistanceLocation.after_failure = AssistanceLocation.after_failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary after_failure
@@ -132,7 +132,7 @@ const AssistanceLocation_after_failure = AssistanceLocation.after_failure; /* LO
  * @type {number}
  */
 export
-const after_failure = AssistanceLocation.after_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const after_failure: _enum_for_AssistanceLocation.after_failure = AssistanceLocation.after_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -141,7 +141,7 @@ const after_failure = AssistanceLocation.after_failure; /* SHORT_NAMED_ENUMERATE
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AssistanceLocation = $._decodeEnumerated;
+export const _decode_AssistanceLocation: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -151,7 +151,7 @@ export const _decode_AssistanceLocation = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssistanceLocation, encoded as an ASN.1 Element.
  */
-export const _encode_AssistanceLocation = $._encodeEnumerated;
+export const _encode_AssistanceLocation: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -99,10 +99,10 @@ export const ClassList_topSecret: number = 5; /* LONG_NAMED_BIT */
 export const topSecret: number = ClassList_topSecret; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ClassList = $._decodeBitString;
+export const _decode_ClassList: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ClassList = $._encodeBitString;
+export const _encode_ClassList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -138,10 +138,10 @@ export const ProcessingSummary_securityContextCheck: number = 8; /* LONG_NAMED_B
 export const securityContextCheck: number = ProcessingSummary_securityContextCheck; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ProcessingSummary = $._decodeBitString;
+export const _decode_ProcessingSummary: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ProcessingSummary = $._encodeBitString;
+export const _encode_ProcessingSummary: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

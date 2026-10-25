@@ -59,7 +59,7 @@ type ChannelCoding = _enum_for_ChannelCoding;
  * @enum {number}
  */
 export
-const ChannelCoding = _enum_for_ChannelCoding;
+const ChannelCoding: typeof _enum_for_ChannelCoding = _enum_for_ChannelCoding;
 
 /**
  * @summary ChannelCoding_tchF4800
@@ -67,7 +67,7 @@ const ChannelCoding = _enum_for_ChannelCoding;
  * @type {number}
  */
 export
-const ChannelCoding_tchF4800 = ChannelCoding.tchF4800; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChannelCoding_tchF4800: _enum_for_ChannelCoding.tchF4800 = ChannelCoding.tchF4800; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tchF4800
@@ -75,7 +75,7 @@ const ChannelCoding_tchF4800 = ChannelCoding.tchF4800; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const tchF4800 = ChannelCoding.tchF4800; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tchF4800: _enum_for_ChannelCoding.tchF4800 = ChannelCoding.tchF4800; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChannelCoding_tchF9600
@@ -83,7 +83,7 @@ const tchF4800 = ChannelCoding.tchF4800; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ChannelCoding_tchF9600 = ChannelCoding.tchF9600; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChannelCoding_tchF9600: _enum_for_ChannelCoding.tchF9600 = ChannelCoding.tchF9600; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tchF9600
@@ -91,7 +91,7 @@ const ChannelCoding_tchF9600 = ChannelCoding.tchF9600; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const tchF9600 = ChannelCoding.tchF9600; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tchF9600: _enum_for_ChannelCoding.tchF9600 = ChannelCoding.tchF9600; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChannelCoding_tchF14400
@@ -99,7 +99,7 @@ const tchF9600 = ChannelCoding.tchF9600; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ChannelCoding_tchF14400 = ChannelCoding.tchF14400; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChannelCoding_tchF14400: _enum_for_ChannelCoding.tchF14400 = ChannelCoding.tchF14400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tchF14400
@@ -107,7 +107,7 @@ const ChannelCoding_tchF14400 = ChannelCoding.tchF14400; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const tchF14400 = ChannelCoding.tchF14400; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tchF14400: _enum_for_ChannelCoding.tchF14400 = ChannelCoding.tchF14400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChannelCoding: $.ASN1Decoder<ChannelCoding> = $._decodeEnumerated;

@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type LoopbackType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_LoopbackType = $._decodeObjectIdentifier;
+export const _decode_LoopbackType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_LoopbackType = $._encodeObjectIdentifier;
+export const _encode_LoopbackType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

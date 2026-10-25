@@ -126,7 +126,7 @@ class ConnectionInformation {
          * @static
          */
 
-    public static _enum_for_flowDirection = _enum_for_ConnectionInformation_flowDirection;
+    public static _enum_for_flowDirection: typeof _enum_for_ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flowDirection;
 }
 
 /**

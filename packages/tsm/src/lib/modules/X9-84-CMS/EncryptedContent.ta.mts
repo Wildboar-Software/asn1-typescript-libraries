@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EncryptedContent = OCTET_STRING; // OctetStringType
-export const _decode_EncryptedContent = $._decodeOctetString;
-export const _encode_EncryptedContent = $._encodeOctetString;
+export const _decode_EncryptedContent: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_EncryptedContent: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

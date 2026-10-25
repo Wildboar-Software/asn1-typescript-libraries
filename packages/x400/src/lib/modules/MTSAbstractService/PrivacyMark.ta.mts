@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PrivacyMark = PrintableString; // PrintableString
 
 
-export const _decode_PrivacyMark = $._decodePrintableString;
+export const _decode_PrivacyMark: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_PrivacyMark = $._encodePrintableString;
+export const _encode_PrivacyMark: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

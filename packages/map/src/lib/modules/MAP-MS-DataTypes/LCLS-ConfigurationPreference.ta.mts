@@ -146,7 +146,7 @@ export const _decode_LCLS_ConfigurationPreference = (el: _Element): LCLS_Configu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCLS_ConfigurationPreference, encoded as an ASN.1 Element.
  */
-export const _encode_LCLS_ConfigurationPreference = $._encodeBitString;
+export const _encode_LCLS_ConfigurationPreference: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

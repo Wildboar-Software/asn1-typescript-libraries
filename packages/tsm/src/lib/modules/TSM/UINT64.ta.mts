@@ -38,7 +38,7 @@ export const _decode_UINT64 = (el: _Element): UINT64 => {
     }
     return value;
 };
-export const _encode_UINT64 = $._encodeInteger;
+export const _encode_UINT64: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

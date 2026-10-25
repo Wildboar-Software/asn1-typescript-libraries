@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RTTRapdu = OCTET_STRING; // OctetStringType
 
 
-export const _decode_RTTRapdu = $._decodeOctetString;
+export const _decode_RTTRapdu: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_RTTRapdu = $._encodeOctetString;
+export const _encode_RTTRapdu: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

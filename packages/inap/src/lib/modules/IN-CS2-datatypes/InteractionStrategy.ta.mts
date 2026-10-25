@@ -50,7 +50,7 @@ type InteractionStrategy = _enum_for_InteractionStrategy;
  * @enum {number}
  */
 export
-const InteractionStrategy = _enum_for_InteractionStrategy;
+const InteractionStrategy: typeof _enum_for_InteractionStrategy = _enum_for_InteractionStrategy;
 
 /**
  * @summary InteractionStrategy_stopOnError
@@ -58,7 +58,7 @@ const InteractionStrategy = _enum_for_InteractionStrategy;
  * @type {number}
  */
 export
-const InteractionStrategy_stopOnError = InteractionStrategy.stopOnError; /* LONG_NAMED_ENUMERATED_VALUE */
+const InteractionStrategy_stopOnError: _enum_for_InteractionStrategy.stopOnError = InteractionStrategy.stopOnError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stopOnError
@@ -66,7 +66,7 @@ const InteractionStrategy_stopOnError = InteractionStrategy.stopOnError; /* LONG
  * @type {number}
  */
 export
-const stopOnError = InteractionStrategy.stopOnError; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stopOnError: _enum_for_InteractionStrategy.stopOnError = InteractionStrategy.stopOnError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InteractionStrategy_bestEffort
@@ -74,7 +74,7 @@ const stopOnError = InteractionStrategy.stopOnError; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const InteractionStrategy_bestEffort = InteractionStrategy.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
+const InteractionStrategy_bestEffort: _enum_for_InteractionStrategy.bestEffort = InteractionStrategy.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bestEffort
@@ -82,7 +82,7 @@ const InteractionStrategy_bestEffort = InteractionStrategy.bestEffort; /* LONG_N
  * @type {number}
  */
 export
-const bestEffort = InteractionStrategy.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bestEffort: _enum_for_InteractionStrategy.bestEffort = InteractionStrategy.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_InteractionStrategy(el: _Element): InteractionStrategy {

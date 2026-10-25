@@ -50,7 +50,7 @@ type NetworkAccessMode = _enum_for_NetworkAccessMode | ENUMERATED;
  * @type {number}
  */
 export
-const NetworkAccessMode_packetAndCircuit = _enum_for_NetworkAccessMode.packetAndCircuit; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAccessMode_packetAndCircuit: _enum_for_NetworkAccessMode.packetAndCircuit = _enum_for_NetworkAccessMode.packetAndCircuit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary packetAndCircuit
@@ -62,7 +62,7 @@ const NetworkAccessMode_packetAndCircuit = _enum_for_NetworkAccessMode.packetAnd
  * @type {number}
  */
 export
-const packetAndCircuit = NetworkAccessMode_packetAndCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const packetAndCircuit: _enum_for_NetworkAccessMode.packetAndCircuit = NetworkAccessMode_packetAndCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAccessMode_onlyCircuit
@@ -74,7 +74,7 @@ const packetAndCircuit = NetworkAccessMode_packetAndCircuit; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const NetworkAccessMode_onlyCircuit = _enum_for_NetworkAccessMode.onlyCircuit; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAccessMode_onlyCircuit: _enum_for_NetworkAccessMode.onlyCircuit = _enum_for_NetworkAccessMode.onlyCircuit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyCircuit
@@ -86,7 +86,7 @@ const NetworkAccessMode_onlyCircuit = _enum_for_NetworkAccessMode.onlyCircuit; /
  * @type {number}
  */
 export
-const onlyCircuit = NetworkAccessMode_onlyCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyCircuit: _enum_for_NetworkAccessMode.onlyCircuit = NetworkAccessMode_onlyCircuit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAccessMode_onlyPacket
@@ -98,7 +98,7 @@ const onlyCircuit = NetworkAccessMode_onlyCircuit; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const NetworkAccessMode_onlyPacket = _enum_for_NetworkAccessMode.onlyPacket; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAccessMode_onlyPacket: _enum_for_NetworkAccessMode.onlyPacket = _enum_for_NetworkAccessMode.onlyPacket; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyPacket
@@ -110,7 +110,7 @@ const NetworkAccessMode_onlyPacket = _enum_for_NetworkAccessMode.onlyPacket; /* 
  * @type {number}
  */
 export
-const onlyPacket = NetworkAccessMode_onlyPacket; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyPacket: _enum_for_NetworkAccessMode.onlyPacket = NetworkAccessMode_onlyPacket; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkAccessMode
@@ -118,7 +118,7 @@ const onlyPacket = NetworkAccessMode_onlyPacket; /* SHORT_NAMED_ENUMERATED_VALUE
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NetworkAccessMode = $._decodeEnumerated;
+export const _decode_NetworkAccessMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NetworkAccessMode into an ASN.1 Element.
@@ -127,7 +127,7 @@ export const _decode_NetworkAccessMode = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NetworkAccessMode, encoded as an ASN.1 Element.
  */
-export const _encode_NetworkAccessMode = $._encodeEnumerated;
+export const _encode_NetworkAccessMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

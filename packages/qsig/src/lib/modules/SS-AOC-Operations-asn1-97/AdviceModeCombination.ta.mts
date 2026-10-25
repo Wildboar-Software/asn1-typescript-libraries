@@ -121,7 +121,7 @@ type AdviceModeCombination = _enum_for_AdviceModeCombination;
  * @enum {number}
  */
 export
-const AdviceModeCombination = _enum_for_AdviceModeCombination;
+const AdviceModeCombination: typeof _enum_for_AdviceModeCombination = _enum_for_AdviceModeCombination;
 
 /**
  * @summary AdviceModeCombination_rate
@@ -132,7 +132,7 @@ const AdviceModeCombination = _enum_for_AdviceModeCombination;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rate = AdviceModeCombination.rate; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rate: _enum_for_AdviceModeCombination.rate = AdviceModeCombination.rate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rate
@@ -141,7 +141,7 @@ const AdviceModeCombination_rate = AdviceModeCombination.rate; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const rate = AdviceModeCombination.rate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rate: _enum_for_AdviceModeCombination.rate = AdviceModeCombination.rate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_rateInterim
@@ -156,7 +156,7 @@ const rate = AdviceModeCombination.rate; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rateInterim = AdviceModeCombination.rateInterim; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rateInterim: _enum_for_AdviceModeCombination.rateInterim = AdviceModeCombination.rateInterim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rateInterim
@@ -165,7 +165,7 @@ const AdviceModeCombination_rateInterim = AdviceModeCombination.rateInterim; /* 
  * @type {number}
  */
 export
-const rateInterim = AdviceModeCombination.rateInterim; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rateInterim: _enum_for_AdviceModeCombination.rateInterim = AdviceModeCombination.rateInterim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_rateFinal
@@ -179,7 +179,7 @@ const rateInterim = AdviceModeCombination.rateInterim; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rateFinal = AdviceModeCombination.rateFinal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rateFinal: _enum_for_AdviceModeCombination.rateFinal = AdviceModeCombination.rateFinal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rateFinal
@@ -188,7 +188,7 @@ const AdviceModeCombination_rateFinal = AdviceModeCombination.rateFinal; /* LONG
  * @type {number}
  */
 export
-const rateFinal = AdviceModeCombination.rateFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rateFinal: _enum_for_AdviceModeCombination.rateFinal = AdviceModeCombination.rateFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_interim
@@ -199,7 +199,7 @@ const rateFinal = AdviceModeCombination.rateFinal; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_interim = AdviceModeCombination.interim; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_interim: _enum_for_AdviceModeCombination.interim = AdviceModeCombination.interim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interim
@@ -208,7 +208,7 @@ const AdviceModeCombination_interim = AdviceModeCombination.interim; /* LONG_NAM
  * @type {number}
  */
 export
-const interim = AdviceModeCombination.interim; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interim: _enum_for_AdviceModeCombination.interim = AdviceModeCombination.interim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_final
@@ -219,7 +219,7 @@ const interim = AdviceModeCombination.interim; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_final = AdviceModeCombination.final; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_final: _enum_for_AdviceModeCombination.final = AdviceModeCombination.final; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary final
@@ -228,7 +228,7 @@ const AdviceModeCombination_final = AdviceModeCombination.final; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const final = AdviceModeCombination.final; /* SHORT_NAMED_ENUMERATED_VALUE */
+const final: _enum_for_AdviceModeCombination.final = AdviceModeCombination.final; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_interimFinal
@@ -243,7 +243,7 @@ const final = AdviceModeCombination.final; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_interimFinal = AdviceModeCombination.interimFinal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_interimFinal: _enum_for_AdviceModeCombination.interimFinal = AdviceModeCombination.interimFinal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interimFinal
@@ -252,7 +252,7 @@ const AdviceModeCombination_interimFinal = AdviceModeCombination.interimFinal; /
  * @type {number}
  */
 export
-const interimFinal = AdviceModeCombination.interimFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interimFinal: _enum_for_AdviceModeCombination.interimFinal = AdviceModeCombination.interimFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdviceModeCombination_rateInterimFinal
@@ -267,7 +267,7 @@ const interimFinal = AdviceModeCombination.interimFinal; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const AdviceModeCombination_rateInterimFinal = AdviceModeCombination.rateInterimFinal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdviceModeCombination_rateInterimFinal: _enum_for_AdviceModeCombination.rateInterimFinal = AdviceModeCombination.rateInterimFinal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rateInterimFinal
@@ -276,7 +276,7 @@ const AdviceModeCombination_rateInterimFinal = AdviceModeCombination.rateInterim
  * @type {number}
  */
 export
-const rateInterimFinal = AdviceModeCombination.rateInterimFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rateInterimFinal: _enum_for_AdviceModeCombination.rateInterimFinal = AdviceModeCombination.rateInterimFinal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AdviceModeCombination: $.ASN1Decoder<AdviceModeCombination> = $._decodeEnumerated;

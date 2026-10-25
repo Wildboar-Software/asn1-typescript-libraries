@@ -181,7 +181,7 @@ class PASSporTPayload {
          * @static
          */
 
-    public static _enum_for_attestation = _enum_for_Attestation;
+    public static _enum_for_attestation: typeof _enum_for_Attestation = _enum_for_Attestation;
 }
 
 /**

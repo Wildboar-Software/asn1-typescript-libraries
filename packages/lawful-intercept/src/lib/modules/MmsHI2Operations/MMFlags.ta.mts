@@ -93,7 +93,7 @@ class MMFlags {
          * @static
          */
 
-    public static _enum_for_tokenAction = _enum_for_TokenAction;
+    public static _enum_for_tokenAction: typeof _enum_for_TokenAction = _enum_for_TokenAction;
 }
 
 /**

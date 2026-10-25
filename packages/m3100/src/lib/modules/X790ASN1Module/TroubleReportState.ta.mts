@@ -33,7 +33,7 @@ export type TroubleReportState = INTEGER;
  * @constant
  * @type {number}
  */
-export const TroubleReportState_queued = 0 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
+export const TroubleReportState_queued: 0 = 0 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -41,7 +41,7 @@ export const TroubleReportState_queued = 0 satisfies TroubleReportState; /* LONG
  * @constant
  * @type {number}
  */
-export const queued = TroubleReportState_queued; /* SHORT_NAMED_INTEGER_VALUE */
+export const queued: 0 = TroubleReportState_queued; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const queued = TroubleReportState_queued; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const TroubleReportState_openActive = 1 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
+export const TroubleReportState_openActive: 1 = 1 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const TroubleReportState_openActive = 1 satisfies TroubleReportState; /* 
  * @constant
  * @type {number}
  */
-export const openActive = TroubleReportState_openActive; /* SHORT_NAMED_INTEGER_VALUE */
+export const openActive: 1 = TroubleReportState_openActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const openActive = TroubleReportState_openActive; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const TroubleReportState_deferred = 2 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
+export const TroubleReportState_deferred: 2 = 2 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const TroubleReportState_deferred = 2 satisfies TroubleReportState; /* LO
  * @constant
  * @type {number}
  */
-export const deferred = TroubleReportState_deferred; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred: 2 = TroubleReportState_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const deferred = TroubleReportState_deferred; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const TroubleReportState_cleared = 3 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
+export const TroubleReportState_cleared: 3 = 3 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const TroubleReportState_cleared = 3 satisfies TroubleReportState; /* LON
  * @constant
  * @type {number}
  */
-export const cleared = TroubleReportState_cleared; /* SHORT_NAMED_INTEGER_VALUE */
+export const cleared: 3 = TroubleReportState_cleared; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -97,7 +97,7 @@ export const cleared = TroubleReportState_cleared; /* SHORT_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const TroubleReportState_closed = 4 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
+export const TroubleReportState_closed: 4 = 4 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const TroubleReportState_closed = 4 satisfies TroubleReportState; /* LONG
  * @constant
  * @type {number}
  */
-export const closed = TroubleReportState_closed; /* SHORT_NAMED_INTEGER_VALUE */
+export const closed: 4 = TroubleReportState_closed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -113,7 +113,7 @@ export const closed = TroubleReportState_closed; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const TroubleReportState_disabled = 5 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
+export const TroubleReportState_disabled: 5 = 5 satisfies TroubleReportState; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -121,17 +121,17 @@ export const TroubleReportState_disabled = 5 satisfies TroubleReportState; /* LO
  * @constant
  * @type {number}
  */
-export const disabled = TroubleReportState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
+export const disabled: 5 = TroubleReportState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_TroubleReportState = $._decodeInteger;
+export const _decode_TroubleReportState: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_TroubleReportState = $._encodeInteger;
+export const _encode_TroubleReportState: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -279,7 +279,7 @@ class UDMSubscriberRecordChangeMessage {
          * @static
          */
 
-    public static _enum_for_subscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMethod;
+    public static _enum_for_subscriberRecordChangeMethod: typeof _enum_for_UDMSubscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMethod;
 }
 
 /**

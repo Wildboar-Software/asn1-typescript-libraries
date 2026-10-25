@@ -27,7 +27,7 @@ type ChargeIndicator = INTEGER;
  * @type {number}
  */
 export
-const ChargeIndicator_noCharge = 0 satisfies ChargeIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const ChargeIndicator_noCharge: 0 = 0 satisfies ChargeIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ChargeIndicator_noCharge
@@ -35,7 +35,7 @@ const ChargeIndicator_noCharge = 0 satisfies ChargeIndicator; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const noCharge = ChargeIndicator_noCharge; /* SHORT_NAMED_INTEGER_VALUE */
+const noCharge: 0 = ChargeIndicator_noCharge; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ChargeIndicator_charge
@@ -43,7 +43,7 @@ const noCharge = ChargeIndicator_noCharge; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ChargeIndicator_charge = 1 satisfies ChargeIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const ChargeIndicator_charge: 1 = 1 satisfies ChargeIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ChargeIndicator_charge
@@ -51,7 +51,7 @@ const ChargeIndicator_charge = 1 satisfies ChargeIndicator; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const charge = ChargeIndicator_charge; /* SHORT_NAMED_INTEGER_VALUE */
+const charge: 1 = ChargeIndicator_charge; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ChargeIndicator: $.ASN1Decoder<ChargeIndicator> = $._decodeInteger;

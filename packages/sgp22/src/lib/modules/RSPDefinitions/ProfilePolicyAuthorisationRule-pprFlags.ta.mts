@@ -51,8 +51,8 @@ const ProfilePolicyAuthorisationRule_pprFlags_consentRequired: number = 0; /* LO
  */
 export
 const consentRequired: number = ProfilePolicyAuthorisationRule_pprFlags_consentRequired; /* SHORT_NAMED_BIT */
-export const _decode_ProfilePolicyAuthorisationRule_pprFlags = $._decodeBitString;
-export const _encode_ProfilePolicyAuthorisationRule_pprFlags = $._encodeBitString;
+export const _decode_ProfilePolicyAuthorisationRule_pprFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ProfilePolicyAuthorisationRule_pprFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

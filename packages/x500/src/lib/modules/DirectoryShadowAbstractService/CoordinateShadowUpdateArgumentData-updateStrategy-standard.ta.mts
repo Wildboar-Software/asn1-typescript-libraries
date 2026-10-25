@@ -34,42 +34,42 @@ export type CoordinateShadowUpdateArgumentData_updateStrategy_standard =
  * @constant
  * @type {number}
  */
-export const CoordinateShadowUpdateArgumentData_updateStrategy_standard_noChanges = _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.noChanges; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CoordinateShadowUpdateArgumentData_updateStrategy_standard_noChanges: _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.noChanges = _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.noChanges; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noChanges
  * @constant
  * @type {number}
  */
-export const noChanges = CoordinateShadowUpdateArgumentData_updateStrategy_standard_noChanges; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noChanges: _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.noChanges = CoordinateShadowUpdateArgumentData_updateStrategy_standard_noChanges; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental
  * @constant
  * @type {number}
  */
-export const CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental = _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.incremental; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental: _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.incremental = _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.incremental; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incremental
  * @constant
  * @type {number}
  */
-export const incremental = CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const incremental: _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.incremental = CoordinateShadowUpdateArgumentData_updateStrategy_standard_incremental; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CoordinateShadowUpdateArgumentData_updateStrategy_standard_total
  * @constant
  * @type {number}
  */
-export const CoordinateShadowUpdateArgumentData_updateStrategy_standard_total = _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.total; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CoordinateShadowUpdateArgumentData_updateStrategy_standard_total: _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.total = _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.total; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary total
  * @constant
  * @type {number}
  */
-export const total = CoordinateShadowUpdateArgumentData_updateStrategy_standard_total; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const total: _enum_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard.total = CoordinateShadowUpdateArgumentData_updateStrategy_standard_total; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CoordinateShadowUpdateArgumentData_updateStrategy_standard: $.ASN1Decoder<CoordinateShadowUpdateArgumentData_updateStrategy_standard> | null = null;
 

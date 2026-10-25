@@ -103,7 +103,7 @@ class CheckIMEI_Res {
          * @static
          */
 
-    public static _enum_for_equipmentStatus = _enum_for_EquipmentStatus;
+    public static _enum_for_equipmentStatus: typeof _enum_for_EquipmentStatus = _enum_for_EquipmentStatus;
 }
 
 /**

@@ -39,4 +39,4 @@ export const _decode_LegType = (el: _Element): LegType => {
     }
     return value;
 };
-export const _encode_LegType = $._encodeOctetString;
+export const _encode_LegType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

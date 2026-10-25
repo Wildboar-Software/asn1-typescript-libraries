@@ -53,7 +53,7 @@ type HandshakeType = INTEGER;
  * @type {number}
  */
 export
-const HandshakeType_hello_request = 0 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_hello_request: 0 = 0 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_hello_request
@@ -62,7 +62,7 @@ const HandshakeType_hello_request = 0 satisfies HandshakeType; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const hello_request = HandshakeType_hello_request; /* SHORT_NAMED_INTEGER_VALUE */
+const hello_request: 0 = HandshakeType_hello_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_client_hello
@@ -71,7 +71,7 @@ const hello_request = HandshakeType_hello_request; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const HandshakeType_client_hello = 1 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_client_hello: 1 = 1 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_client_hello
@@ -80,7 +80,7 @@ const HandshakeType_client_hello = 1 satisfies HandshakeType; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const client_hello = HandshakeType_client_hello; /* SHORT_NAMED_INTEGER_VALUE */
+const client_hello: 1 = HandshakeType_client_hello; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_server_hello
@@ -89,7 +89,7 @@ const client_hello = HandshakeType_client_hello; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const HandshakeType_server_hello = 2 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_server_hello: 2 = 2 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_server_hello
@@ -98,7 +98,7 @@ const HandshakeType_server_hello = 2 satisfies HandshakeType; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const server_hello = HandshakeType_server_hello; /* SHORT_NAMED_INTEGER_VALUE */
+const server_hello: 2 = HandshakeType_server_hello; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_certificate_list
@@ -108,7 +108,7 @@ const server_hello = HandshakeType_server_hello; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const HandshakeType_certificate_list = 11 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_certificate_list: 11 = 11 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_certificate_list
@@ -118,7 +118,7 @@ const HandshakeType_certificate_list = 11 satisfies HandshakeType; /* LONG_NAMED
  * @type {number}
  */
 export
-const certificate_list = HandshakeType_certificate_list; /* SHORT_NAMED_INTEGER_VALUE */
+const certificate_list: 11 = HandshakeType_certificate_list; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_server_key_exchange
@@ -127,7 +127,7 @@ const certificate_list = HandshakeType_certificate_list; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const HandshakeType_server_key_exchange = 12 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_server_key_exchange: 12 = 12 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_server_key_exchange
@@ -136,7 +136,7 @@ const HandshakeType_server_key_exchange = 12 satisfies HandshakeType; /* LONG_NA
  * @type {number}
  */
 export
-const server_key_exchange = HandshakeType_server_key_exchange; /* SHORT_NAMED_INTEGER_VALUE */
+const server_key_exchange: 12 = HandshakeType_server_key_exchange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_certificate_request
@@ -145,7 +145,7 @@ const server_key_exchange = HandshakeType_server_key_exchange; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const HandshakeType_certificate_request = 13 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_certificate_request: 13 = 13 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_certificate_request
@@ -154,7 +154,7 @@ const HandshakeType_certificate_request = 13 satisfies HandshakeType; /* LONG_NA
  * @type {number}
  */
 export
-const certificate_request = HandshakeType_certificate_request; /* SHORT_NAMED_INTEGER_VALUE */
+const certificate_request: 13 = HandshakeType_certificate_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_server_hello_done
@@ -163,7 +163,7 @@ const certificate_request = HandshakeType_certificate_request; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const HandshakeType_server_hello_done = 14 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_server_hello_done: 14 = 14 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_server_hello_done
@@ -172,7 +172,7 @@ const HandshakeType_server_hello_done = 14 satisfies HandshakeType; /* LONG_NAME
  * @type {number}
  */
 export
-const server_hello_done = HandshakeType_server_hello_done; /* SHORT_NAMED_INTEGER_VALUE */
+const server_hello_done: 14 = HandshakeType_server_hello_done; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_certificate_verify
@@ -181,7 +181,7 @@ const server_hello_done = HandshakeType_server_hello_done; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const HandshakeType_certificate_verify = 15 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_certificate_verify: 15 = 15 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_certificate_verify
@@ -190,7 +190,7 @@ const HandshakeType_certificate_verify = 15 satisfies HandshakeType; /* LONG_NAM
  * @type {number}
  */
 export
-const certificate_verify = HandshakeType_certificate_verify; /* SHORT_NAMED_INTEGER_VALUE */
+const certificate_verify: 15 = HandshakeType_certificate_verify; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_client_key_exchange
@@ -199,7 +199,7 @@ const certificate_verify = HandshakeType_certificate_verify; /* SHORT_NAMED_INTE
  * @type {number}
  */
 export
-const HandshakeType_client_key_exchange = 16 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_client_key_exchange: 16 = 16 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_client_key_exchange
@@ -208,7 +208,7 @@ const HandshakeType_client_key_exchange = 16 satisfies HandshakeType; /* LONG_NA
  * @type {number}
  */
 export
-const client_key_exchange = HandshakeType_client_key_exchange; /* SHORT_NAMED_INTEGER_VALUE */
+const client_key_exchange: 16 = HandshakeType_client_key_exchange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_finished
@@ -217,7 +217,7 @@ const client_key_exchange = HandshakeType_client_key_exchange; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const HandshakeType_finished = 20 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_finished: 20 = 20 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_finished
@@ -226,7 +226,7 @@ const HandshakeType_finished = 20 satisfies HandshakeType; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const finished = HandshakeType_finished; /* SHORT_NAMED_INTEGER_VALUE */
+const finished: 20 = HandshakeType_finished; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_biometric_client_hello
@@ -238,7 +238,7 @@ const finished = HandshakeType_finished; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const HandshakeType_biometric_client_hello = 100 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_biometric_client_hello: 100 = 100 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_biometric_client_hello
@@ -250,7 +250,7 @@ const HandshakeType_biometric_client_hello = 100 satisfies HandshakeType; /* LON
  * @type {number}
  */
 export
-const biometric_client_hello = HandshakeType_biometric_client_hello; /* SHORT_NAMED_INTEGER_VALUE */
+const biometric_client_hello: 100 = HandshakeType_biometric_client_hello; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_biometric_server_hello
@@ -262,7 +262,7 @@ const biometric_client_hello = HandshakeType_biometric_client_hello; /* SHORT_NA
  * @type {number}
  */
 export
-const HandshakeType_biometric_server_hello = 101 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
+const HandshakeType_biometric_server_hello: 101 = 101 satisfies HandshakeType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HandshakeType_biometric_server_hello
@@ -274,7 +274,7 @@ const HandshakeType_biometric_server_hello = 101 satisfies HandshakeType; /* LON
  * @type {number}
  */
 export
-const biometric_server_hello = HandshakeType_biometric_server_hello; /* SHORT_NAMED_INTEGER_VALUE */
+const biometric_server_hello: 101 = HandshakeType_biometric_server_hello; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_HandshakeType = (el: _Element): HandshakeType => {
     const value = $._decodeInteger(el);
     const n = typeof value === "bigint" ? value : BigInt(value);
@@ -283,7 +283,7 @@ export const _decode_HandshakeType = (el: _Element): HandshakeType => {
     }
     return value;
 };
-export const _encode_HandshakeType = $._encodeInteger;
+export const _encode_HandshakeType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

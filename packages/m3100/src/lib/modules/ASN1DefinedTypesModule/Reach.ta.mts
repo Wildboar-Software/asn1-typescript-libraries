@@ -28,12 +28,12 @@ export type Reach = INTEGER;
 
 
 
-export const _decode_Reach = $._decodeInteger;
+export const _decode_Reach: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Reach = $._encodeInteger;
+export const _encode_Reach: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

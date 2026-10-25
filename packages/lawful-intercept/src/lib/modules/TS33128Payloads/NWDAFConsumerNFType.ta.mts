@@ -112,7 +112,7 @@ type NWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;
  * @enum {number}
  */
 export
-const NWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;
+const NWDAFConsumerNFType: typeof _enum_for_NWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;
 
 /**
  * @summary NWDAFConsumerNFType_pCF
@@ -120,7 +120,7 @@ const NWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_pCF = NWDAFConsumerNFType.pCF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_pCF: _enum_for_NWDAFConsumerNFType.pCF = NWDAFConsumerNFType.pCF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pCF
@@ -128,7 +128,7 @@ const NWDAFConsumerNFType_pCF = NWDAFConsumerNFType.pCF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const pCF = NWDAFConsumerNFType.pCF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pCF: _enum_for_NWDAFConsumerNFType.pCF = NWDAFConsumerNFType.pCF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_nSSF
@@ -136,7 +136,7 @@ const pCF = NWDAFConsumerNFType.pCF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_nSSF = NWDAFConsumerNFType.nSSF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_nSSF: _enum_for_NWDAFConsumerNFType.nSSF = NWDAFConsumerNFType.nSSF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nSSF
@@ -144,7 +144,7 @@ const NWDAFConsumerNFType_nSSF = NWDAFConsumerNFType.nSSF; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const nSSF = NWDAFConsumerNFType.nSSF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nSSF: _enum_for_NWDAFConsumerNFType.nSSF = NWDAFConsumerNFType.nSSF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_aMF
@@ -152,7 +152,7 @@ const nSSF = NWDAFConsumerNFType.nSSF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_aMF = NWDAFConsumerNFType.aMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_aMF: _enum_for_NWDAFConsumerNFType.aMF = NWDAFConsumerNFType.aMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aMF
@@ -160,7 +160,7 @@ const NWDAFConsumerNFType_aMF = NWDAFConsumerNFType.aMF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const aMF = NWDAFConsumerNFType.aMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aMF: _enum_for_NWDAFConsumerNFType.aMF = NWDAFConsumerNFType.aMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_sMF
@@ -168,7 +168,7 @@ const aMF = NWDAFConsumerNFType.aMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_sMF = NWDAFConsumerNFType.sMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_sMF: _enum_for_NWDAFConsumerNFType.sMF = NWDAFConsumerNFType.sMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMF
@@ -176,7 +176,7 @@ const NWDAFConsumerNFType_sMF = NWDAFConsumerNFType.sMF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const sMF = NWDAFConsumerNFType.sMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMF: _enum_for_NWDAFConsumerNFType.sMF = NWDAFConsumerNFType.sMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_nEF
@@ -184,7 +184,7 @@ const sMF = NWDAFConsumerNFType.sMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_nEF = NWDAFConsumerNFType.nEF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_nEF: _enum_for_NWDAFConsumerNFType.nEF = NWDAFConsumerNFType.nEF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nEF
@@ -192,7 +192,7 @@ const NWDAFConsumerNFType_nEF = NWDAFConsumerNFType.nEF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const nEF = NWDAFConsumerNFType.nEF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nEF: _enum_for_NWDAFConsumerNFType.nEF = NWDAFConsumerNFType.nEF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_aF
@@ -200,7 +200,7 @@ const nEF = NWDAFConsumerNFType.nEF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_aF = NWDAFConsumerNFType.aF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_aF: _enum_for_NWDAFConsumerNFType.aF = NWDAFConsumerNFType.aF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aF
@@ -208,7 +208,7 @@ const NWDAFConsumerNFType_aF = NWDAFConsumerNFType.aF; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const aF = NWDAFConsumerNFType.aF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aF: _enum_for_NWDAFConsumerNFType.aF = NWDAFConsumerNFType.aF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_lMF
@@ -216,7 +216,7 @@ const aF = NWDAFConsumerNFType.aF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_lMF = NWDAFConsumerNFType.lMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_lMF: _enum_for_NWDAFConsumerNFType.lMF = NWDAFConsumerNFType.lMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lMF
@@ -224,7 +224,7 @@ const NWDAFConsumerNFType_lMF = NWDAFConsumerNFType.lMF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const lMF = NWDAFConsumerNFType.lMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lMF: _enum_for_NWDAFConsumerNFType.lMF = NWDAFConsumerNFType.lMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_oAM
@@ -232,7 +232,7 @@ const lMF = NWDAFConsumerNFType.lMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_oAM = NWDAFConsumerNFType.oAM; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_oAM: _enum_for_NWDAFConsumerNFType.oAM = NWDAFConsumerNFType.oAM; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oAM
@@ -240,7 +240,7 @@ const NWDAFConsumerNFType_oAM = NWDAFConsumerNFType.oAM; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const oAM = NWDAFConsumerNFType.oAM; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oAM: _enum_for_NWDAFConsumerNFType.oAM = NWDAFConsumerNFType.oAM; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_nWDAF
@@ -248,7 +248,7 @@ const oAM = NWDAFConsumerNFType.oAM; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_nWDAF = NWDAFConsumerNFType.nWDAF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_nWDAF: _enum_for_NWDAFConsumerNFType.nWDAF = NWDAFConsumerNFType.nWDAF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nWDAF
@@ -256,7 +256,7 @@ const NWDAFConsumerNFType_nWDAF = NWDAFConsumerNFType.nWDAF; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const nWDAF = NWDAFConsumerNFType.nWDAF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nWDAF: _enum_for_NWDAFConsumerNFType.nWDAF = NWDAFConsumerNFType.nWDAF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_dCCF
@@ -264,7 +264,7 @@ const nWDAF = NWDAFConsumerNFType.nWDAF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_dCCF = NWDAFConsumerNFType.dCCF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_dCCF: _enum_for_NWDAFConsumerNFType.dCCF = NWDAFConsumerNFType.dCCF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dCCF
@@ -272,7 +272,7 @@ const NWDAFConsumerNFType_dCCF = NWDAFConsumerNFType.dCCF; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const dCCF = NWDAFConsumerNFType.dCCF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dCCF: _enum_for_NWDAFConsumerNFType.dCCF = NWDAFConsumerNFType.dCCF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFConsumerNFType_cEF
@@ -280,7 +280,7 @@ const dCCF = NWDAFConsumerNFType.dCCF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFConsumerNFType_cEF = NWDAFConsumerNFType.cEF; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFConsumerNFType_cEF: _enum_for_NWDAFConsumerNFType.cEF = NWDAFConsumerNFType.cEF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cEF
@@ -288,7 +288,7 @@ const NWDAFConsumerNFType_cEF = NWDAFConsumerNFType.cEF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const cEF = NWDAFConsumerNFType.cEF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cEF: _enum_for_NWDAFConsumerNFType.cEF = NWDAFConsumerNFType.cEF; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NWDAFConsumerNFType: $.ASN1Decoder<NWDAFConsumerNFType> = $._decodeEnumerated;
 export const _encode_NWDAFConsumerNFType: $.ASN1Encoder<NWDAFConsumerNFType> = $._encodeEnumerated;
 

@@ -106,7 +106,7 @@ class ChangeSysStatFilterArg {
          * @static
          */
 
-    public static _enum_for_requestedStatusFilter = _enum_for_SystemStatus;
+    public static _enum_for_requestedStatusFilter: typeof _enum_for_SystemStatus = _enum_for_SystemStatus;
 }
 
 /**

@@ -256,14 +256,14 @@ export class E_setupRequest {
      * @static
      */
 
-    public static _enum_for_requirement = _enum_for_Requirements;
+    public static _enum_for_requirement: typeof _enum_for_Requirements = _enum_for_Requirements;
     /**
      * @summary The enum used as the type of the component `returnMode`
      * @public
      * @static
      */
 
-    public static _enum_for_returnMode = _enum_for_ReturnMode;
+    public static _enum_for_returnMode: typeof _enum_for_ReturnMode = _enum_for_ReturnMode;
 }
 
 

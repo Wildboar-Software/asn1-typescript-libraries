@@ -104,7 +104,7 @@ class PacketDataHeaderCopy {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_TPDU_direction;
+    public static _enum_for_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;
 }
 
 /**

@@ -995,7 +995,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_alertIndicator = _enum_for_AlertIndicator;        /**
+    public static _enum_for_alertIndicator: typeof _enum_for_AlertIndicator = _enum_for_AlertIndicator;        /**
          * @summary The enum used as the type of the component `emergency`
          * @description
          * 
@@ -1004,7 +1004,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_emergency = _enum_for_Emergency;        /**
+    public static _enum_for_emergency: typeof _enum_for_Emergency = _enum_for_Emergency;        /**
          * @summary The enum used as the type of the component `pTCType`
          * @description
          * 
@@ -1013,7 +1013,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_pTCType = _enum_for_PTCType;        /**
+    public static _enum_for_pTCType: typeof _enum_for_PTCType = _enum_for_PTCType;        /**
          * @summary The enum used as the type of the component `groupAuthRule`
          * @description
          * 
@@ -1023,7 +1023,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_groupAuthRule = _enum_for_GroupAuthRule;        /**
+    public static _enum_for_groupAuthRule: typeof _enum_for_GroupAuthRule = _enum_for_GroupAuthRule;        /**
          * @summary The enum used as the type of the component `imminentPerilInd`
          * @description
          * 
@@ -1032,7 +1032,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_imminentPerilInd = _enum_for_ImminentPerilInd;        /**
+    public static _enum_for_imminentPerilInd: typeof _enum_for_ImminentPerilInd = _enum_for_ImminentPerilInd;        /**
          * @summary The enum used as the type of the component `implicitFloorReq`
          * @description
          * 
@@ -1042,7 +1042,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_implicitFloorReq = _enum_for_ImplicitFloorReq;        /**
+    public static _enum_for_implicitFloorReq: typeof _enum_for_ImplicitFloorReq = _enum_for_ImplicitFloorReq;        /**
          * @summary The enum used as the type of the component `initiationCause`
          * @description
          * 
@@ -1051,7 +1051,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_initiationCause = _enum_for_InitiationCause;        /**
+    public static _enum_for_initiationCause: typeof _enum_for_InitiationCause = _enum_for_InitiationCause;        /**
          * @summary The enum used as the type of the component `iPADirection`
          * @description
          * 
@@ -1061,7 +1061,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_iPADirection = _enum_for_IPADirection;        /**
+    public static _enum_for_iPADirection: typeof _enum_for_IPADirection = _enum_for_IPADirection;        /**
          * @summary The enum used as the type of the component `listManagementAction`
          * @description
          * 
@@ -1071,7 +1071,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_listManagementAction = _enum_for_ListManagementAction;        /**
+    public static _enum_for_listManagementAction: typeof _enum_for_ListManagementAction = _enum_for_ListManagementAction;        /**
          * @summary The enum used as the type of the component `listManagementType`
          * @description
          * 
@@ -1080,7 +1080,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_listManagementType = _enum_for_ListManagementType;        /**
+    public static _enum_for_listManagementType: typeof _enum_for_ListManagementType = _enum_for_ListManagementType;        /**
          * @summary The enum used as the type of the component `priority_Level`
          * @description
          * 
@@ -1090,7 +1090,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_priority_Level = _enum_for_Priority_Level;        /**
+    public static _enum_for_priority_Level: typeof _enum_for_Priority_Level = _enum_for_Priority_Level;        /**
          * @summary The enum used as the type of the component `preEstStatus`
          * @description
          * 
@@ -1100,7 +1100,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_preEstStatus = _enum_for_PreEstStatus;        /**
+    public static _enum_for_preEstStatus: typeof _enum_for_PreEstStatus = _enum_for_PreEstStatus;        /**
          * @summary The enum used as the type of the component `registrationRequest`
          * @description
          * 
@@ -1109,7 +1109,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_registrationRequest = _enum_for_RegistrationRequest;        /**
+    public static _enum_for_registrationRequest: typeof _enum_for_RegistrationRequest = _enum_for_RegistrationRequest;        /**
          * @summary The enum used as the type of the component `registrationOutcome`
          * @description
          * 
@@ -1118,7 +1118,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_registrationOutcome = _enum_for_RegistrationOutcome;        /**
+    public static _enum_for_registrationOutcome: typeof _enum_for_RegistrationOutcome = _enum_for_RegistrationOutcome;        /**
          * @summary The enum used as the type of the component `talkBurstPriority`
          * @description
          * 
@@ -1128,7 +1128,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_talkBurstPriority = _enum_for_Priority_Level;
+    public static _enum_for_talkBurstPriority: typeof _enum_for_Priority_Level = _enum_for_Priority_Level;
 }
 
 /**

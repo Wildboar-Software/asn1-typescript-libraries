@@ -39,48 +39,48 @@ export type NNPDAUBasicCodeField = INTEGER;
  * @constant
  * @type {number}
  */
-export const NNPDAUBasicCodeField_unspecified = 0 satisfies NNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNPDAUBasicCodeField_unspecified: 0 = 0 satisfies NNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified = NNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified: 0 = NNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_undeliverable_mail
  * @constant
  * @type {number}
  */
-export const NNPDAUBasicCodeField_undeliverable_mail = 1 satisfies NNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNPDAUBasicCodeField_undeliverable_mail: 1 = 1 satisfies NNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_undeliverable_mail
  * @constant
  * @type {number}
  */
-export const undeliverable_mail = NNPDAUBasicCodeField_undeliverable_mail; /* SHORT_NAMED_INTEGER_VALUE */
+export const undeliverable_mail: 1 = NNPDAUBasicCodeField_undeliverable_mail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_physical_rendition_not_performed
  * @constant
  * @type {number}
  */
-export const NNPDAUBasicCodeField_physical_rendition_not_performed = 2 satisfies NNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNPDAUBasicCodeField_physical_rendition_not_performed: 2 = 2 satisfies NNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNPDAUBasicCodeField_physical_rendition_not_performed
  * @constant
  * @type {number}
  */
-export const physical_rendition_not_performed = NNPDAUBasicCodeField_physical_rendition_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_rendition_not_performed: 2 = NNPDAUBasicCodeField_physical_rendition_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_NNPDAUBasicCodeField = $._decodeInteger;
+export const _decode_NNPDAUBasicCodeField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NNPDAUBasicCodeField = $._encodeInteger;
+export const _encode_NNPDAUBasicCodeField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

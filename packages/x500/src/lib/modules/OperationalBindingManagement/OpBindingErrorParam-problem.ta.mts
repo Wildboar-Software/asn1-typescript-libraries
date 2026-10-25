@@ -46,188 +46,188 @@ export type OpBindingErrorParam_problem =
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_invalidID = _enum_for_OpBindingErrorParam_problem.invalidID; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_invalidID: _enum_for_OpBindingErrorParam_problem.invalidID = _enum_for_OpBindingErrorParam_problem.invalidID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidID
  * @constant
  * @type {number}
  */
-export const invalidID = OpBindingErrorParam_problem_invalidID; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidID: _enum_for_OpBindingErrorParam_problem.invalidID = OpBindingErrorParam_problem_invalidID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_duplicateID
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_duplicateID = _enum_for_OpBindingErrorParam_problem.duplicateID; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_duplicateID: _enum_for_OpBindingErrorParam_problem.duplicateID = _enum_for_OpBindingErrorParam_problem.duplicateID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicateID
  * @constant
  * @type {number}
  */
-export const duplicateID = OpBindingErrorParam_problem_duplicateID; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicateID: _enum_for_OpBindingErrorParam_problem.duplicateID = OpBindingErrorParam_problem_duplicateID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_unsupportedBindingType
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_unsupportedBindingType = _enum_for_OpBindingErrorParam_problem.unsupportedBindingType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_unsupportedBindingType: _enum_for_OpBindingErrorParam_problem.unsupportedBindingType = _enum_for_OpBindingErrorParam_problem.unsupportedBindingType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedBindingType
  * @constant
  * @type {number}
  */
-export const unsupportedBindingType = OpBindingErrorParam_problem_unsupportedBindingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedBindingType: _enum_for_OpBindingErrorParam_problem.unsupportedBindingType = OpBindingErrorParam_problem_unsupportedBindingType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_notAllowedForRole
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_notAllowedForRole = _enum_for_OpBindingErrorParam_problem.notAllowedForRole; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_notAllowedForRole: _enum_for_OpBindingErrorParam_problem.notAllowedForRole = _enum_for_OpBindingErrorParam_problem.notAllowedForRole; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowedForRole
  * @constant
  * @type {number}
  */
-export const notAllowedForRole = OpBindingErrorParam_problem_notAllowedForRole; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notAllowedForRole: _enum_for_OpBindingErrorParam_problem.notAllowedForRole = OpBindingErrorParam_problem_notAllowedForRole; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_parametersMissing
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_parametersMissing = _enum_for_OpBindingErrorParam_problem.parametersMissing; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_parametersMissing: _enum_for_OpBindingErrorParam_problem.parametersMissing = _enum_for_OpBindingErrorParam_problem.parametersMissing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary parametersMissing
  * @constant
  * @type {number}
  */
-export const parametersMissing = OpBindingErrorParam_problem_parametersMissing; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const parametersMissing: _enum_for_OpBindingErrorParam_problem.parametersMissing = OpBindingErrorParam_problem_parametersMissing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_roleAssignment
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_roleAssignment = _enum_for_OpBindingErrorParam_problem.roleAssignment; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_roleAssignment: _enum_for_OpBindingErrorParam_problem.roleAssignment = _enum_for_OpBindingErrorParam_problem.roleAssignment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roleAssignment
  * @constant
  * @type {number}
  */
-export const roleAssignment = OpBindingErrorParam_problem_roleAssignment; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const roleAssignment: _enum_for_OpBindingErrorParam_problem.roleAssignment = OpBindingErrorParam_problem_roleAssignment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_invalidStartTime
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_invalidStartTime = _enum_for_OpBindingErrorParam_problem.invalidStartTime; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_invalidStartTime: _enum_for_OpBindingErrorParam_problem.invalidStartTime = _enum_for_OpBindingErrorParam_problem.invalidStartTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidStartTime
  * @constant
  * @type {number}
  */
-export const invalidStartTime = OpBindingErrorParam_problem_invalidStartTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidStartTime: _enum_for_OpBindingErrorParam_problem.invalidStartTime = OpBindingErrorParam_problem_invalidStartTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_invalidEndTime
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_invalidEndTime = _enum_for_OpBindingErrorParam_problem.invalidEndTime; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_invalidEndTime: _enum_for_OpBindingErrorParam_problem.invalidEndTime = _enum_for_OpBindingErrorParam_problem.invalidEndTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidEndTime
  * @constant
  * @type {number}
  */
-export const invalidEndTime = OpBindingErrorParam_problem_invalidEndTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidEndTime: _enum_for_OpBindingErrorParam_problem.invalidEndTime = OpBindingErrorParam_problem_invalidEndTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_invalidAgreement
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_invalidAgreement = _enum_for_OpBindingErrorParam_problem.invalidAgreement; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_invalidAgreement: _enum_for_OpBindingErrorParam_problem.invalidAgreement = _enum_for_OpBindingErrorParam_problem.invalidAgreement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAgreement
  * @constant
  * @type {number}
  */
-export const invalidAgreement = OpBindingErrorParam_problem_invalidAgreement; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAgreement: _enum_for_OpBindingErrorParam_problem.invalidAgreement = OpBindingErrorParam_problem_invalidAgreement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_currentlyNotDecidable
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_currentlyNotDecidable = _enum_for_OpBindingErrorParam_problem.currentlyNotDecidable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_currentlyNotDecidable: _enum_for_OpBindingErrorParam_problem.currentlyNotDecidable = _enum_for_OpBindingErrorParam_problem.currentlyNotDecidable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentlyNotDecidable
  * @constant
  * @type {number}
  */
-export const currentlyNotDecidable = OpBindingErrorParam_problem_currentlyNotDecidable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const currentlyNotDecidable: _enum_for_OpBindingErrorParam_problem.currentlyNotDecidable = OpBindingErrorParam_problem_currentlyNotDecidable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_modificationNotAllowed
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_modificationNotAllowed = _enum_for_OpBindingErrorParam_problem.modificationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_modificationNotAllowed: _enum_for_OpBindingErrorParam_problem.modificationNotAllowed = _enum_for_OpBindingErrorParam_problem.modificationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modificationNotAllowed
  * @constant
  * @type {number}
  */
-export const modificationNotAllowed = OpBindingErrorParam_problem_modificationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const modificationNotAllowed: _enum_for_OpBindingErrorParam_problem.modificationNotAllowed = OpBindingErrorParam_problem_modificationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_invalidBindingType
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_invalidBindingType = _enum_for_OpBindingErrorParam_problem.invalidBindingType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_invalidBindingType: _enum_for_OpBindingErrorParam_problem.invalidBindingType = _enum_for_OpBindingErrorParam_problem.invalidBindingType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidBindingType
  * @constant
  * @type {number}
  */
-export const invalidBindingType = OpBindingErrorParam_problem_invalidBindingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidBindingType: _enum_for_OpBindingErrorParam_problem.invalidBindingType = OpBindingErrorParam_problem_invalidBindingType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OpBindingErrorParam_problem_invalidNewID
  * @constant
  * @type {number}
  */
-export const OpBindingErrorParam_problem_invalidNewID = _enum_for_OpBindingErrorParam_problem.invalidNewID; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OpBindingErrorParam_problem_invalidNewID: _enum_for_OpBindingErrorParam_problem.invalidNewID = _enum_for_OpBindingErrorParam_problem.invalidNewID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidNewID
  * @constant
  * @type {number}
  */
-export const invalidNewID = OpBindingErrorParam_problem_invalidNewID; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidNewID: _enum_for_OpBindingErrorParam_problem.invalidNewID = OpBindingErrorParam_problem_invalidNewID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OpBindingErrorParam_problem = $._decodeEnumerated;
+export const _decode_OpBindingErrorParam_problem: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_OpBindingErrorParam_problem = $._encodeEnumerated;
+export const _encode_OpBindingErrorParam_problem: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

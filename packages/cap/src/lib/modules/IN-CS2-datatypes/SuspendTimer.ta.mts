@@ -34,7 +34,7 @@ export const _decode_SuspendTimer = (el: _Element): SuspendTimer => {
     }
     return value;
 };
-export const _encode_SuspendTimer = $._encodeInteger;
+export const _encode_SuspendTimer: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

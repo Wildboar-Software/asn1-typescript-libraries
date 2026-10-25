@@ -55,7 +55,7 @@ type ProcessedLevel = _enum_for_ProcessedLevel | ENUMERATED;
  * @type {number}
  */
 export
-const ProcessedLevel_raw_data = _enum_for_ProcessedLevel.raw_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcessedLevel_raw_data: _enum_for_ProcessedLevel.raw_data = _enum_for_ProcessedLevel.raw_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary raw_data
@@ -63,7 +63,7 @@ const ProcessedLevel_raw_data = _enum_for_ProcessedLevel.raw_data; /* LONG_NAMED
  * @type {number}
  */
 export
-const raw_data = ProcessedLevel_raw_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const raw_data: _enum_for_ProcessedLevel.raw_data = ProcessedLevel_raw_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_intermediate_data
@@ -71,7 +71,7 @@ const raw_data = ProcessedLevel_raw_data; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProcessedLevel_intermediate_data = _enum_for_ProcessedLevel.intermediate_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcessedLevel_intermediate_data: _enum_for_ProcessedLevel.intermediate_data = _enum_for_ProcessedLevel.intermediate_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intermediate_data
@@ -79,7 +79,7 @@ const ProcessedLevel_intermediate_data = _enum_for_ProcessedLevel.intermediate_d
  * @type {number}
  */
 export
-const intermediate_data = ProcessedLevel_intermediate_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intermediate_data: _enum_for_ProcessedLevel.intermediate_data = ProcessedLevel_intermediate_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_processed_data
@@ -87,7 +87,7 @@ const intermediate_data = ProcessedLevel_intermediate_data; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ProcessedLevel_processed_data = _enum_for_ProcessedLevel.processed_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcessedLevel_processed_data: _enum_for_ProcessedLevel.processed_data = _enum_for_ProcessedLevel.processed_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary processed_data
@@ -95,7 +95,7 @@ const ProcessedLevel_processed_data = _enum_for_ProcessedLevel.processed_data; /
  * @type {number}
  */
 export
-const processed_data = ProcessedLevel_processed_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const processed_data: _enum_for_ProcessedLevel.processed_data = ProcessedLevel_processed_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_comparison_score
@@ -103,7 +103,7 @@ const processed_data = ProcessedLevel_processed_data; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ProcessedLevel_comparison_score = _enum_for_ProcessedLevel.comparison_score; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcessedLevel_comparison_score: _enum_for_ProcessedLevel.comparison_score = _enum_for_ProcessedLevel.comparison_score; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary comparison_score
@@ -111,7 +111,7 @@ const ProcessedLevel_comparison_score = _enum_for_ProcessedLevel.comparison_scor
  * @type {number}
  */
 export
-const comparison_score = ProcessedLevel_comparison_score; /* SHORT_NAMED_ENUMERATED_VALUE */
+const comparison_score: _enum_for_ProcessedLevel.comparison_score = ProcessedLevel_comparison_score; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcessedLevel_comparison_result
@@ -119,7 +119,7 @@ const comparison_score = ProcessedLevel_comparison_score; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ProcessedLevel_comparison_result = _enum_for_ProcessedLevel.comparison_result; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcessedLevel_comparison_result: _enum_for_ProcessedLevel.comparison_result = _enum_for_ProcessedLevel.comparison_result; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary comparison_result
@@ -127,7 +127,7 @@ const ProcessedLevel_comparison_result = _enum_for_ProcessedLevel.comparison_res
  * @type {number}
  */
 export
-const comparison_result = ProcessedLevel_comparison_result; /* SHORT_NAMED_ENUMERATED_VALUE */
+const comparison_result: _enum_for_ProcessedLevel.comparison_result = ProcessedLevel_comparison_result; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -136,7 +136,7 @@ const comparison_result = ProcessedLevel_comparison_result; /* SHORT_NAMED_ENUME
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ProcessedLevel = $._decodeEnumerated;
+export const _decode_ProcessedLevel: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -146,7 +146,7 @@ export const _decode_ProcessedLevel = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProcessedLevel, encoded as an ASN.1 Element.
  */
-export const _encode_ProcessedLevel = $._encodeEnumerated;
+export const _encode_ProcessedLevel: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

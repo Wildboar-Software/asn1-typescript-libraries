@@ -197,7 +197,7 @@ type JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
  * @enum {number}
  */
 export
-const JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
+const JOURNAL_ENTRY_informationType: typeof _enum_for_JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
 
 /**
  * @summary JOURNAL_ENTRY_informationType_annotation
@@ -205,7 +205,7 @@ const JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
  * @type {number}
  */
 export
-const JOURNAL_ENTRY_informationType_annotation = JOURNAL_ENTRY_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
+const JOURNAL_ENTRY_informationType_annotation: _enum_for_JOURNAL_ENTRY_informationType.annotation = JOURNAL_ENTRY_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JOURNAL_ENTRY_informationType_event_data
@@ -213,7 +213,7 @@ const JOURNAL_ENTRY_informationType_annotation = JOURNAL_ENTRY_informationType.a
  * @type {number}
  */
 export
-const JOURNAL_ENTRY_informationType_event_data = JOURNAL_ENTRY_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const JOURNAL_ENTRY_informationType_event_data: _enum_for_JOURNAL_ENTRY_informationType.event_data = JOURNAL_ENTRY_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JOURNAL_ENTRY_informationType_data
@@ -221,6 +221,6 @@ const JOURNAL_ENTRY_informationType_event_data = JOURNAL_ENTRY_informationType.e
  * @type {number}
  */
 export
-const JOURNAL_ENTRY_informationType_data = JOURNAL_ENTRY_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
+const JOURNAL_ENTRY_informationType_data: _enum_for_JOURNAL_ENTRY_informationType.data = JOURNAL_ENTRY_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

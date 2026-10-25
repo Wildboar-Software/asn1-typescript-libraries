@@ -150,19 +150,19 @@ class CTCompleteArg {
      * @static
      * @method
      */
-    public static get _default_value_for_callStatus () { return CallStatus_answered; }        /**
+    public static get _default_value_for_callStatus (): _enum_for_CallStatus { return CallStatus_answered; }        /**
          * @summary The enum used as the type of the component `endDesignation`
          * @public
          * @static
          */
 
-    public static _enum_for_endDesignation = _enum_for_EndDesignation;        /**
+    public static _enum_for_endDesignation: typeof _enum_for_EndDesignation = _enum_for_EndDesignation;        /**
          * @summary The enum used as the type of the component `callStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_callStatus = _enum_for_CallStatus;
+    public static _enum_for_callStatus: typeof _enum_for_CallStatus = _enum_for_CallStatus;
 }
 
 /**

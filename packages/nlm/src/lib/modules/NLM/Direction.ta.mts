@@ -71,7 +71,7 @@ export type Direction = _enum_for_Direction;
  *
  * @enum {number}
  */
-export const Direction = _enum_for_Direction;
+export const Direction: typeof _enum_for_Direction = _enum_for_Direction;
 
 
 /**
@@ -85,7 +85,7 @@ export const Direction = _enum_for_Direction;
  * @constant
  * @type {number}
  */
-export const Direction_incoming =
+export const Direction_incoming: 0 =
     Direction.incoming; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const Direction_incoming =
  * @constant
  * @type {number}
  */
-export const incoming =
+export const incoming: 0 =
     Direction.incoming; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const incoming =
  * @constant
  * @type {number}
  */
-export const Direction_outgoing =
+export const Direction_outgoing: 1 =
     Direction.outgoing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -130,7 +130,7 @@ export const Direction_outgoing =
  * @constant
  * @type {number}
  */
-export const outgoing =
+export const outgoing: 1 =
     Direction.outgoing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

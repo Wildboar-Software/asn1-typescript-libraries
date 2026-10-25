@@ -82,7 +82,7 @@ class Destination {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_Destination_type;
+    public static _enum_for_type_: typeof _enum_for_Destination_type = _enum_for_Destination_type;
 }
 
 /**

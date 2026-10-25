@@ -46,7 +46,7 @@ export const _decode_Group_Service_ID = (el: _Element): Group_Service_ID => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Group_Service_ID, encoded as an ASN.1 Element.
  */
-export const _encode_Group_Service_ID = $._encodeInteger;
+export const _encode_Group_Service_ID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

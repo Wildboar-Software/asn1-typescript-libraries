@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RangeFromZeroToMax = INTEGER;
 
 
-export const _decode_RangeFromZeroToMax = $._decodeInteger;
+export const _decode_RangeFromZeroToMax: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RangeFromZeroToMax = $._encodeInteger;
+export const _encode_RangeFromZeroToMax: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

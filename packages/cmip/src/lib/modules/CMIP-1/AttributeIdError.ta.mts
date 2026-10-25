@@ -109,7 +109,7 @@ export class AttributeIdError {
    * @static
    */
 
-  public static _enum_for_errorStatus = _enum_for_AttributeIdError_errorStatus;
+  public static _enum_for_errorStatus: typeof _enum_for_AttributeIdError_errorStatus = _enum_for_AttributeIdError_errorStatus;
 }
 
 

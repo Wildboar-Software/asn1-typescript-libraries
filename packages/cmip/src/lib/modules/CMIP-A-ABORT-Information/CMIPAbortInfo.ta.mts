@@ -99,7 +99,7 @@ export class CMIPAbortInfo {
    * @static
    */
 
-  public static _enum_for_abortSource = _enum_for_CMIPAbortSource;
+  public static _enum_for_abortSource: typeof _enum_for_CMIPAbortSource = _enum_for_CMIPAbortSource;
 }
 
 

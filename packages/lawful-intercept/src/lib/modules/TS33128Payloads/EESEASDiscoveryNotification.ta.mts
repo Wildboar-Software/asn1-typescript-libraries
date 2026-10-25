@@ -147,13 +147,13 @@ class EESEASDiscoveryNotification {
          * @static
          */
 
-    public static _enum_for_eventType = _enum_for_EASEventType;        /**
+    public static _enum_for_eventType: typeof _enum_for_EASEventType = _enum_for_EASEventType;        /**
          * @summary The enum used as the type of the component `failureResponse`
          * @public
          * @static
          */
 
-    public static _enum_for_failureResponse = _enum_for_FailureResponse;
+    public static _enum_for_failureResponse: typeof _enum_for_FailureResponse = _enum_for_FailureResponse;
 }
 
 /**

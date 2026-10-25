@@ -42,7 +42,7 @@ type DefaultSMS_Handling = _enum_for_DefaultSMS_Handling | ENUMERATED;
  * @type {number}
  */
 export
-const DefaultSMS_Handling_continueTransaction = _enum_for_DefaultSMS_Handling.continueTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultSMS_Handling_continueTransaction: _enum_for_DefaultSMS_Handling.continueTransaction = _enum_for_DefaultSMS_Handling.continueTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueTransaction
@@ -50,7 +50,7 @@ const DefaultSMS_Handling_continueTransaction = _enum_for_DefaultSMS_Handling.co
  * @type {number}
  */
 export
-const continueTransaction = DefaultSMS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueTransaction: _enum_for_DefaultSMS_Handling.continueTransaction = DefaultSMS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultSMS_Handling_releaseTransaction
@@ -58,7 +58,7 @@ const continueTransaction = DefaultSMS_Handling_continueTransaction; /* SHORT_NA
  * @type {number}
  */
 export
-const DefaultSMS_Handling_releaseTransaction = _enum_for_DefaultSMS_Handling.releaseTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultSMS_Handling_releaseTransaction: _enum_for_DefaultSMS_Handling.releaseTransaction = _enum_for_DefaultSMS_Handling.releaseTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseTransaction
@@ -66,7 +66,7 @@ const DefaultSMS_Handling_releaseTransaction = _enum_for_DefaultSMS_Handling.rel
  * @type {number}
  */
 export
-const releaseTransaction = DefaultSMS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseTransaction: _enum_for_DefaultSMS_Handling.releaseTransaction = DefaultSMS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultSMS_Handling
@@ -74,7 +74,7 @@ const releaseTransaction = DefaultSMS_Handling_releaseTransaction; /* SHORT_NAME
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DefaultSMS_Handling = $._decodeEnumerated;
+export const _decode_DefaultSMS_Handling: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DefaultSMS_Handling into an ASN.1 Element.
@@ -83,7 +83,7 @@ export const _decode_DefaultSMS_Handling = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefaultSMS_Handling, encoded as an ASN.1 Element.
  */
-export const _encode_DefaultSMS_Handling = $._encodeEnumerated;
+export const _encode_DefaultSMS_Handling: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -218,7 +218,7 @@ class MediaAttachedEvent {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;
 }
 
 /**

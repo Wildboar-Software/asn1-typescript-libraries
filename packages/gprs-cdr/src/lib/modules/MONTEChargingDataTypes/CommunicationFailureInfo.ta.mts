@@ -162,7 +162,7 @@ class CommunicationFailureInfo {
          * @static
          */
 
-    public static _enum_for_causeType = _enum_for_CauseType;
+    public static _enum_for_causeType: typeof _enum_for_CauseType = _enum_for_CauseType;
 }
 
 /**

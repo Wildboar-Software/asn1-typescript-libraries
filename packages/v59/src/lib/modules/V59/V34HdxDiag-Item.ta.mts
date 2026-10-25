@@ -273,7 +273,7 @@ class V34HdxDiag_Item {
          * @static
          */
 
-    public static _enum_for_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
+    public static _enum_for_cCrate: typeof _enum_for_V34HdxDiag_Item_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
 }
 
 /**

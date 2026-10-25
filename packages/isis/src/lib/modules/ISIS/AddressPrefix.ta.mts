@@ -34,10 +34,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AddressPrefix = BIT_STRING;
 
 
-export const _decode_AddressPrefix = $._decodeBitString;
+export const _decode_AddressPrefix: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_AddressPrefix = $._encodeBitString;
+export const _encode_AddressPrefix: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

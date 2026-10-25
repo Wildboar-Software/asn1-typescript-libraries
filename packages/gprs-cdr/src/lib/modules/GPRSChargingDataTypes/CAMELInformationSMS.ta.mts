@@ -188,7 +188,7 @@ class CAMELInformationSMS {
          * @static
          */
 
-    public static _enum_for_defaultSMSHandling = _enum_for_DefaultTransactionHandling;
+    public static _enum_for_defaultSMSHandling: typeof _enum_for_DefaultTransactionHandling = _enum_for_DefaultTransactionHandling;
 }
 
 /**

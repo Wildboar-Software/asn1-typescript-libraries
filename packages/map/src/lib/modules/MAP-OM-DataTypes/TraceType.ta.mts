@@ -30,7 +30,7 @@ type TraceType = INTEGER;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TraceType = $._decodeInteger;
+export const _decode_TraceType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) TraceType into an ASN.1 Element.
@@ -39,7 +39,7 @@ export const _decode_TraceType = $._decodeInteger;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceType, encoded as an ASN.1 Element.
  */
-export const _encode_TraceType = $._encodeInteger;
+export const _encode_TraceType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

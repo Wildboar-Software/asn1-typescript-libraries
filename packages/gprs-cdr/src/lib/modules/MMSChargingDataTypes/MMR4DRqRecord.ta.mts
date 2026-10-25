@@ -374,7 +374,7 @@ class MMR4DRqRecord {
          * @static
          */
 
-    public static _enum_for_mmStatusCode = _enum_for_MMStatusCodeType;
+    public static _enum_for_mmStatusCode: typeof _enum_for_MMStatusCodeType = _enum_for_MMStatusCodeType;
 }
 
 /**

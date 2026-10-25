@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CannotVerifyOrDenyAtThisTime = NULL; // NullType
-export const _decode_CannotVerifyOrDenyAtThisTime = $._decodeNull;
-export const _encode_CannotVerifyOrDenyAtThisTime = $._encodeNull;
+export const _decode_CannotVerifyOrDenyAtThisTime: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_CannotVerifyOrDenyAtThisTime: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

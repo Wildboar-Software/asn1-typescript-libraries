@@ -127,13 +127,13 @@ class GPRS_CamelTDPData {
          * @static
          */
 
-    public static _enum_for_gprs_TriggerDetectionPoint = _enum_for_GPRS_TriggerDetectionPoint;        /**
+    public static _enum_for_gprs_TriggerDetectionPoint: typeof _enum_for_GPRS_TriggerDetectionPoint = _enum_for_GPRS_TriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `defaultSessionHandling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultSessionHandling = _enum_for_DefaultGPRS_Handling;
+    public static _enum_for_defaultSessionHandling: typeof _enum_for_DefaultGPRS_Handling = _enum_for_DefaultGPRS_Handling;
 }
 
 /**

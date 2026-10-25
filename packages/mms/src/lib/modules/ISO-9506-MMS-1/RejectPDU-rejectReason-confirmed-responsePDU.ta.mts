@@ -49,7 +49,7 @@ type RejectPDU_rejectReason_confirmed_responsePDU = INTEGER;
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_confirmed_responsePDU_other = 0 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_confirmed_responsePDU_other: 0 = 0 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_other
@@ -61,7 +61,7 @@ const RejectPDU_rejectReason_confirmed_responsePDU_other = 0 satisfies RejectPDU
  * @type {number}
  */
 export
-const other = RejectPDU_rejectReason_confirmed_responsePDU_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = RejectPDU_rejectReason_confirmed_responsePDU_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service
@@ -73,7 +73,7 @@ const other = RejectPDU_rejectReason_confirmed_responsePDU_other; /* SHORT_NAMED
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service = 1 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service: 1 = 1 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service
@@ -85,7 +85,7 @@ const RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service = 1 sati
  * @type {number}
  */
 export
-const unrecognized_service = RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognized_service: 1 = RejectPDU_rejectReason_confirmed_responsePDU_unrecognized_service; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID
@@ -97,7 +97,7 @@ const unrecognized_service = RejectPDU_rejectReason_confirmed_responsePDU_unreco
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID = 2 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID: 2 = 2 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID
@@ -109,7 +109,7 @@ const RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID = 2 satisfie
  * @type {number}
  */
 export
-const invalid_invokeID = RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_invokeID: 2 = RejectPDU_rejectReason_confirmed_responsePDU_invalid_invokeID; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_invalid_result
@@ -121,7 +121,7 @@ const invalid_invokeID = RejectPDU_rejectReason_confirmed_responsePDU_invalid_in
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_confirmed_responsePDU_invalid_result = 3 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_confirmed_responsePDU_invalid_result: 3 = 3 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_invalid_result
@@ -133,7 +133,7 @@ const RejectPDU_rejectReason_confirmed_responsePDU_invalid_result = 3 satisfies 
  * @type {number}
  */
 export
-const invalid_result = RejectPDU_rejectReason_confirmed_responsePDU_invalid_result; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_result: 3 = RejectPDU_rejectReason_confirmed_responsePDU_invalid_result; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded
@@ -144,7 +144,7 @@ const invalid_result = RejectPDU_rejectReason_confirmed_responsePDU_invalid_resu
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded = 5 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded: 5 = 5 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded
@@ -155,7 +155,7 @@ const RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded = 5 sa
  * @type {number}
  */
 export
-const max_recursion_exceeded = RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+const max_recursion_exceeded: 5 = RejectPDU_rejectReason_confirmed_responsePDU_max_recursion_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range
@@ -167,7 +167,7 @@ const max_recursion_exceeded = RejectPDU_rejectReason_confirmed_responsePDU_max_
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range = 6 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range: 6 = 6 satisfies RejectPDU_rejectReason_confirmed_responsePDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range
@@ -179,9 +179,9 @@ const RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range = 6 satisf
  * @type {number}
  */
 export
-const value_out_of_range = RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RejectPDU_rejectReason_confirmed_responsePDU = $._decodeInteger;
-export const _encode_RejectPDU_rejectReason_confirmed_responsePDU = $._encodeInteger;
+const value_out_of_range: 6 = RejectPDU_rejectReason_confirmed_responsePDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RejectPDU_rejectReason_confirmed_responsePDU: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_confirmed_responsePDU: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

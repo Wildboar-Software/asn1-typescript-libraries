@@ -111,7 +111,7 @@ class DfrEntryList_Item {
          * @static
          */
 
-    public static _enum_for_class_ = _enum_for_DfrObjectClass;
+    public static _enum_for_class_: typeof _enum_for_DfrObjectClass = _enum_for_DfrObjectClass;
 }
 
 /**

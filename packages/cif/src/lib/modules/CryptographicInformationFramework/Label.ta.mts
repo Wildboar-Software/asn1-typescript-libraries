@@ -38,7 +38,7 @@ export const _decode_Label = (el: _Element): Label => {
     }
     return value;
 };
-export const _encode_Label = $._encodeUTF8String;
+export const _encode_Label: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

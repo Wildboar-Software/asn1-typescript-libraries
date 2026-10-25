@@ -51,7 +51,7 @@ type Media = _enum_for_Media;
  * @enum {number}
  */
 export
-const Media = _enum_for_Media;
+const Media: typeof _enum_for_Media = _enum_for_Media;
 
 /**
  * @summary Media_voiceMail
@@ -59,7 +59,7 @@ const Media = _enum_for_Media;
  * @type {number}
  */
 export
-const Media_voiceMail = Media.voiceMail; /* LONG_NAMED_ENUMERATED_VALUE */
+const Media_voiceMail: _enum_for_Media.voiceMail = Media.voiceMail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceMail
@@ -67,7 +67,7 @@ const Media_voiceMail = Media.voiceMail; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const voiceMail = Media.voiceMail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceMail: _enum_for_Media.voiceMail = Media.voiceMail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Media_faxGroup3
@@ -75,7 +75,7 @@ const voiceMail = Media.voiceMail; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Media_faxGroup3 = Media.faxGroup3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Media_faxGroup3: _enum_for_Media.faxGroup3 = Media.faxGroup3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxGroup3
@@ -83,7 +83,7 @@ const Media_faxGroup3 = Media.faxGroup3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const faxGroup3 = Media.faxGroup3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxGroup3: _enum_for_Media.faxGroup3 = Media.faxGroup3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Media_faxGroup4
@@ -91,7 +91,7 @@ const faxGroup3 = Media.faxGroup3; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Media_faxGroup4 = Media.faxGroup4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Media_faxGroup4: _enum_for_Media.faxGroup4 = Media.faxGroup4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxGroup4
@@ -99,7 +99,7 @@ const Media_faxGroup4 = Media.faxGroup4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const faxGroup4 = Media.faxGroup4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxGroup4: _enum_for_Media.faxGroup4 = Media.faxGroup4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_Media(el: _Element): Media {

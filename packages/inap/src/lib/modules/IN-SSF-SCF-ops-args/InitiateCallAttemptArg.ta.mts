@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
     type BOOLEAN,
+    type INTEGER,
     type NULL,
+    type OCTET_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -450,14 +452,16 @@ class InitiateCallAttemptArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legToBeCreated () { return { sendingSideID: leg1 }; }
+    public static get _default_value_for_legToBeCreated (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }
     /**
      * @summary Getter that returns the default value for `newCallSegment`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_newCallSegment () { return initialCallSegment; }
+    public static get _default_value_for_newCallSegment (): INTEGER { return initialCallSegment; }
     /**
      * @summary Getter that returns the default value for `incomingSignallingBufferCopy`.
      * @public

@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type USIInformation = OCTET_STRING; // OctetStringType
-export const _decode_USIInformation = $._decodeOctetString;
-export const _encode_USIInformation = $._encodeOctetString;
+export const _decode_USIInformation: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_USIInformation: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

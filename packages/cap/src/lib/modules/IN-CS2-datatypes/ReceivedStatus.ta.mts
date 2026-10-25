@@ -63,7 +63,7 @@ type ReceivedStatus = _enum_for_ReceivedStatus;
  * @enum {number}
  */
 export
-const ReceivedStatus = _enum_for_ReceivedStatus;
+const ReceivedStatus: typeof _enum_for_ReceivedStatus = _enum_for_ReceivedStatus;
 
 /**
  * @summary ReceivedStatus_messageComplete
@@ -71,7 +71,7 @@ const ReceivedStatus = _enum_for_ReceivedStatus;
  * @type {number}
  */
 export
-const ReceivedStatus_messageComplete = ReceivedStatus.messageComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageComplete: _enum_for_ReceivedStatus.messageComplete = ReceivedStatus.messageComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageComplete
@@ -79,7 +79,7 @@ const ReceivedStatus_messageComplete = ReceivedStatus.messageComplete; /* LONG_N
  * @type {number}
  */
 export
-const messageComplete = ReceivedStatus.messageComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageComplete: _enum_for_ReceivedStatus.messageComplete = ReceivedStatus.messageComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReceivedStatus_messageInterrupted
@@ -87,7 +87,7 @@ const messageComplete = ReceivedStatus.messageComplete; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ReceivedStatus_messageInterrupted = ReceivedStatus.messageInterrupted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageInterrupted: _enum_for_ReceivedStatus.messageInterrupted = ReceivedStatus.messageInterrupted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageInterrupted
@@ -95,7 +95,7 @@ const ReceivedStatus_messageInterrupted = ReceivedStatus.messageInterrupted; /* 
  * @type {number}
  */
 export
-const messageInterrupted = ReceivedStatus.messageInterrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageInterrupted: _enum_for_ReceivedStatus.messageInterrupted = ReceivedStatus.messageInterrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReceivedStatus_messageTimeOut
@@ -103,7 +103,7 @@ const messageInterrupted = ReceivedStatus.messageInterrupted; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ReceivedStatus_messageTimeOut = ReceivedStatus.messageTimeOut; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageTimeOut: _enum_for_ReceivedStatus.messageTimeOut = ReceivedStatus.messageTimeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageTimeOut
@@ -111,9 +111,9 @@ const ReceivedStatus_messageTimeOut = ReceivedStatus.messageTimeOut; /* LONG_NAM
  * @type {number}
  */
 export
-const messageTimeOut = ReceivedStatus.messageTimeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReceivedStatus = $._decodeEnumerated;
-export const _encode_ReceivedStatus = $._encodeEnumerated;
+const messageTimeOut: _enum_for_ReceivedStatus.messageTimeOut = ReceivedStatus.messageTimeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ReceivedStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ReceivedStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

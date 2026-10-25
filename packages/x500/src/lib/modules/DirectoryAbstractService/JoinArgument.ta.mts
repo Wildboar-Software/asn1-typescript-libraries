@@ -197,7 +197,7 @@ export class JoinArgument {
      * @static
      */
 
-    public static _enum_for_joinSubset = _enum_for_JoinArgument_joinSubset;
+    public static _enum_for_joinSubset: typeof _enum_for_JoinArgument_joinSubset = _enum_for_JoinArgument_joinSubset;
 }
 
 /**

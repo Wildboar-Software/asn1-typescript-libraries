@@ -375,13 +375,13 @@ class MMBoxDescriptionPdus {
          * @static
          */
 
-    public static _enum_for_mMState = _enum_for_MMSState;        /**
+    public static _enum_for_mMState: typeof _enum_for_MMSState = _enum_for_MMSState;        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

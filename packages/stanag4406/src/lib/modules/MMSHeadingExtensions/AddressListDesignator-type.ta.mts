@@ -36,7 +36,7 @@ type AddressListDesignator_type = INTEGER;
  * @type {number}
  */
 export
-const AddressListDesignator_type_primaryAddressList = 0 satisfies AddressListDesignator_type; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListDesignator_type_primaryAddressList: 0 = 0 satisfies AddressListDesignator_type; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListDesignator_type_primaryAddressList
@@ -48,7 +48,7 @@ const AddressListDesignator_type_primaryAddressList = 0 satisfies AddressListDes
  * @type {number}
  */
 export
-const primaryAddressList = AddressListDesignator_type_primaryAddressList; /* SHORT_NAMED_INTEGER_VALUE */
+const primaryAddressList: 0 = AddressListDesignator_type_primaryAddressList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListDesignator_type_copyAddressList
@@ -60,7 +60,7 @@ const primaryAddressList = AddressListDesignator_type_primaryAddressList; /* SHO
  * @type {number}
  */
 export
-const AddressListDesignator_type_copyAddressList = 1 satisfies AddressListDesignator_type; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListDesignator_type_copyAddressList: 1 = 1 satisfies AddressListDesignator_type; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListDesignator_type_copyAddressList
@@ -72,7 +72,7 @@ const AddressListDesignator_type_copyAddressList = 1 satisfies AddressListDesign
  * @type {number}
  */
 export
-const copyAddressList = AddressListDesignator_type_copyAddressList; /* SHORT_NAMED_INTEGER_VALUE */
+const copyAddressList: 1 = AddressListDesignator_type_copyAddressList; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddressListDesignator_type: $.ASN1Decoder<AddressListDesignator_type> = $._decodeInteger;
 export const _encode_AddressListDesignator_type: $.ASN1Encoder<AddressListDesignator_type> = $._encodeInteger;
 

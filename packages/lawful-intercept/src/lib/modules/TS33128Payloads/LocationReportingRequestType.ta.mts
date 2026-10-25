@@ -97,13 +97,13 @@ class LocationReportingRequestType {
          * @static
          */
 
-    public static _enum_for_eventType = _enum_for_LocationEventType;        /**
+    public static _enum_for_eventType: typeof _enum_for_LocationEventType = _enum_for_LocationEventType;        /**
          * @summary The enum used as the type of the component `reportArea`
          * @public
          * @static
          */
 
-    public static _enum_for_reportArea = _enum_for_LocationReportArea;
+    public static _enum_for_reportArea: typeof _enum_for_LocationReportArea = _enum_for_LocationReportArea;
 }
 
 /**

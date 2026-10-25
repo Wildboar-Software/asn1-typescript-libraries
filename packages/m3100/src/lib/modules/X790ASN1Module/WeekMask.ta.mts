@@ -105,7 +105,7 @@ export class WeekMask {
      * @static
      * @method
      */
-    public static get _default_value_for_daysOfWeek() {
+    public static get _default_value_for_daysOfWeek(): Uint8ClampedArray<ArrayBuffer> {
         return new Uint8ClampedArray([1, 1, 1, 1, 1, 1, 1]);
     }
     /**

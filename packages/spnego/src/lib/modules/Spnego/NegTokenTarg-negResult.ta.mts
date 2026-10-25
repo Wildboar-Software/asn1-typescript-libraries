@@ -70,7 +70,7 @@ type NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
  * @enum {number}
  */
 export
-const NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
+const NegTokenTarg_negResult: typeof _enum_for_NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
 
 /**
  * @summary NegTokenTarg_negResult_accept_completed
@@ -78,7 +78,7 @@ const NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
  * @type {number}
  */
 export
-const NegTokenTarg_negResult_accept_completed = NegTokenTarg_negResult.accept_completed; /* LONG_NAMED_ENUMERATED_VALUE */
+const NegTokenTarg_negResult_accept_completed: 0 = NegTokenTarg_negResult.accept_completed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accept_completed
@@ -86,7 +86,7 @@ const NegTokenTarg_negResult_accept_completed = NegTokenTarg_negResult.accept_co
  * @type {number}
  */
 export
-const accept_completed = NegTokenTarg_negResult.accept_completed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accept_completed: 0 = NegTokenTarg_negResult.accept_completed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NegTokenTarg_negResult_accept_incomplete
@@ -94,7 +94,7 @@ const accept_completed = NegTokenTarg_negResult.accept_completed; /* SHORT_NAMED
  * @type {number}
  */
 export
-const NegTokenTarg_negResult_accept_incomplete = NegTokenTarg_negResult.accept_incomplete; /* LONG_NAMED_ENUMERATED_VALUE */
+const NegTokenTarg_negResult_accept_incomplete: 1 = NegTokenTarg_negResult.accept_incomplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accept_incomplete
@@ -102,7 +102,7 @@ const NegTokenTarg_negResult_accept_incomplete = NegTokenTarg_negResult.accept_i
  * @type {number}
  */
 export
-const accept_incomplete = NegTokenTarg_negResult.accept_incomplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accept_incomplete: 1 = NegTokenTarg_negResult.accept_incomplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NegTokenTarg_negResult_reject
@@ -110,7 +110,7 @@ const accept_incomplete = NegTokenTarg_negResult.accept_incomplete; /* SHORT_NAM
  * @type {number}
  */
 export
-const NegTokenTarg_negResult_reject = NegTokenTarg_negResult.reject; /* LONG_NAMED_ENUMERATED_VALUE */
+const NegTokenTarg_negResult_reject: 2 = NegTokenTarg_negResult.reject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reject
@@ -118,7 +118,7 @@ const NegTokenTarg_negResult_reject = NegTokenTarg_negResult.reject; /* LONG_NAM
  * @type {number}
  */
 export
-const reject = NegTokenTarg_negResult.reject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reject: 2 = NegTokenTarg_negResult.reject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NegTokenTarg_negResult_request_mic
@@ -126,7 +126,7 @@ const reject = NegTokenTarg_negResult.reject; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NegTokenTarg_negResult_request_mic = NegTokenTarg_negResult.request_mic; /* LONG_NAMED_ENUMERATED_VALUE */
+const NegTokenTarg_negResult_request_mic: 3 = NegTokenTarg_negResult.request_mic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request_mic
@@ -134,7 +134,7 @@ const NegTokenTarg_negResult_request_mic = NegTokenTarg_negResult.request_mic; /
  * @type {number}
  */
 export
-const request_mic = NegTokenTarg_negResult.request_mic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const request_mic: 3 = NegTokenTarg_negResult.request_mic; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_NegTokenTarg_negResult(el: _Element): NegTokenTarg_negResult {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

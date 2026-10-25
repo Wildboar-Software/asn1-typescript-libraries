@@ -220,7 +220,7 @@ class MMSDeliveryReport {
          * @static
          */
 
-    public static _enum_for_responseStatus = _enum_for_MMSResponseStatus;
+    public static _enum_for_responseStatus: typeof _enum_for_MMSResponseStatus = _enum_for_MMSResponseStatus;
 }
 
 /**

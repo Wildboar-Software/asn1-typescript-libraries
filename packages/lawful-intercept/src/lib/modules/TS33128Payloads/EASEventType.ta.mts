@@ -76,7 +76,7 @@ type EASEventType = _enum_for_EASEventType;
  * @enum {number}
  */
 export
-const EASEventType = _enum_for_EASEventType;
+const EASEventType: typeof _enum_for_EASEventType = _enum_for_EASEventType;
 
 /**
  * @summary EASEventType_eASAvailabilityChange
@@ -84,7 +84,7 @@ const EASEventType = _enum_for_EASEventType;
  * @type {number}
  */
 export
-const EASEventType_eASAvailabilityChange = EASEventType.eASAvailabilityChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const EASEventType_eASAvailabilityChange: _enum_for_EASEventType.eASAvailabilityChange = EASEventType.eASAvailabilityChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASAvailabilityChange
@@ -92,7 +92,7 @@ const EASEventType_eASAvailabilityChange = EASEventType.eASAvailabilityChange; /
  * @type {number}
  */
 export
-const eASAvailabilityChange = EASEventType.eASAvailabilityChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASAvailabilityChange: _enum_for_EASEventType.eASAvailabilityChange = EASEventType.eASAvailabilityChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EASEventType_eASDynamicInfoChange
@@ -100,7 +100,7 @@ const eASAvailabilityChange = EASEventType.eASAvailabilityChange; /* SHORT_NAMED
  * @type {number}
  */
 export
-const EASEventType_eASDynamicInfoChange = EASEventType.eASDynamicInfoChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const EASEventType_eASDynamicInfoChange: _enum_for_EASEventType.eASDynamicInfoChange = EASEventType.eASDynamicInfoChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASDynamicInfoChange
@@ -108,7 +108,7 @@ const EASEventType_eASDynamicInfoChange = EASEventType.eASDynamicInfoChange; /* 
  * @type {number}
  */
 export
-const eASDynamicInfoChange = EASEventType.eASDynamicInfoChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASDynamicInfoChange: _enum_for_EASEventType.eASDynamicInfoChange = EASEventType.eASDynamicInfoChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EASEventType: $.ASN1Decoder<EASEventType> = $._decodeEnumerated;
 export const _encode_EASEventType: $.ASN1Encoder<EASEventType> = $._encodeEnumerated;
 

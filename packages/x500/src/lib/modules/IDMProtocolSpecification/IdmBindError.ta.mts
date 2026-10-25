@@ -137,7 +137,7 @@ export class IdmBindError {
      * @static
      */
 
-    public static _enum_for_aETitleError = _enum_for_IdmBindError_aETitleError;
+    public static _enum_for_aETitleError: typeof _enum_for_IdmBindError_aETitleError = _enum_for_IdmBindError_aETitleError;
 }
 
 /**

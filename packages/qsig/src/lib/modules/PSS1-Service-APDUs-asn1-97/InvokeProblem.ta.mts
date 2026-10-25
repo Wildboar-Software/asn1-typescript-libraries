@@ -44,7 +44,7 @@ type InvokeProblem = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_duplicateInvocation = 0 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_duplicateInvocation: 0 = 0 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary duplicateInvocation
@@ -53,7 +53,7 @@ const InvokeProblem_duplicateInvocation = 0 satisfies InvokeProblem; /* LONG_NAM
  * @type {number}
  */
 export
-const duplicateInvocation = InvokeProblem_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const duplicateInvocation: 0 = InvokeProblem_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unrecognisedOperation
@@ -67,7 +67,7 @@ const duplicateInvocation = InvokeProblem_duplicateInvocation; /* SHORT_NAMED_IN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_unrecognisedOperation = 1 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_unrecognisedOperation: 1 = 1 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedOperation
@@ -76,7 +76,7 @@ const InvokeProblem_unrecognisedOperation = 1 satisfies InvokeProblem; /* LONG_N
  * @type {number}
  */
 export
-const unrecognisedOperation = InvokeProblem_unrecognisedOperation; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedOperation: 1 = InvokeProblem_unrecognisedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_mistypedArgument
@@ -89,7 +89,7 @@ const unrecognisedOperation = InvokeProblem_unrecognisedOperation; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_mistypedArgument = 2 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_mistypedArgument: 2 = 2 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mistypedArgument
@@ -98,7 +98,7 @@ const InvokeProblem_mistypedArgument = 2 satisfies InvokeProblem; /* LONG_NAMED_
  * @type {number}
  */
 export
-const mistypedArgument = InvokeProblem_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedArgument: 2 = InvokeProblem_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_resourceLimitation
@@ -113,7 +113,7 @@ const mistypedArgument = InvokeProblem_mistypedArgument; /* SHORT_NAMED_INTEGER_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_resourceLimitation = 3 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_resourceLimitation: 3 = 3 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary resourceLimitation
@@ -122,7 +122,7 @@ const InvokeProblem_resourceLimitation = 3 satisfies InvokeProblem; /* LONG_NAME
  * @type {number}
  */
 export
-const resourceLimitation = InvokeProblem_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceLimitation: 3 = InvokeProblem_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_initiatorReleasing
@@ -136,7 +136,7 @@ const resourceLimitation = InvokeProblem_resourceLimitation; /* SHORT_NAMED_INTE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_initiatorReleasing = 4 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_initiatorReleasing: 4 = 4 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary initiatorReleasing
@@ -145,7 +145,7 @@ const InvokeProblem_initiatorReleasing = 4 satisfies InvokeProblem; /* LONG_NAME
  * @type {number}
  */
 export
-const initiatorReleasing = InvokeProblem_initiatorReleasing; /* SHORT_NAMED_INTEGER_VALUE */
+const initiatorReleasing: 4 = InvokeProblem_initiatorReleasing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unrecognisedLinkedId
@@ -159,7 +159,7 @@ const initiatorReleasing = InvokeProblem_initiatorReleasing; /* SHORT_NAMED_INTE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_unrecognisedLinkedId = 5 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_unrecognisedLinkedId: 5 = 5 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedLinkedId
@@ -168,7 +168,7 @@ const InvokeProblem_unrecognisedLinkedId = 5 satisfies InvokeProblem; /* LONG_NA
  * @type {number}
  */
 export
-const unrecognisedLinkedId = InvokeProblem_unrecognisedLinkedId; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedLinkedId: 5 = InvokeProblem_unrecognisedLinkedId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_linkedResponseUnexpected
@@ -182,7 +182,7 @@ const unrecognisedLinkedId = InvokeProblem_unrecognisedLinkedId; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_linkedResponseUnexpected = 6 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_linkedResponseUnexpected: 6 = 6 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary linkedResponseUnexpected
@@ -191,7 +191,7 @@ const InvokeProblem_linkedResponseUnexpected = 6 satisfies InvokeProblem; /* LON
  * @type {number}
  */
 export
-const linkedResponseUnexpected = InvokeProblem_linkedResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const linkedResponseUnexpected: 6 = InvokeProblem_linkedResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InvokeProblem_unexpectedChildOperation
@@ -206,7 +206,7 @@ const linkedResponseUnexpected = InvokeProblem_linkedResponseUnexpected; /* SHOR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const InvokeProblem_unexpectedChildOperation = 7 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
+const InvokeProblem_unexpectedChildOperation: 7 = 7 satisfies InvokeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unexpectedChildOperation
@@ -215,7 +215,7 @@ const InvokeProblem_unexpectedChildOperation = 7 satisfies InvokeProblem; /* LON
  * @type {number}
  */
 export
-const unexpectedChildOperation = InvokeProblem_unexpectedChildOperation; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpectedChildOperation: 7 = InvokeProblem_unexpectedChildOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_InvokeProblem: $.ASN1Decoder<InvokeProblem> = $._decodeInteger;

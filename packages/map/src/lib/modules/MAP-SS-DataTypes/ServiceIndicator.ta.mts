@@ -91,7 +91,7 @@ export const _decode_ServiceIndicator = (el: _Element): ServiceIndicator => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ServiceIndicator, encoded as an ASN.1 Element.
  */
-export const _encode_ServiceIndicator = $._encodeBitString;
+export const _encode_ServiceIndicator: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

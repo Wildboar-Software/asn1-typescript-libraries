@@ -131,7 +131,7 @@ export class FunctionDefinition {
      * @static
      */
 
-    public static _enum_for_subprocessName = _enum_for_SubprocessName;
+    public static _enum_for_subprocessName: typeof _enum_for_SubprocessName = _enum_for_SubprocessName;
 }
 
 

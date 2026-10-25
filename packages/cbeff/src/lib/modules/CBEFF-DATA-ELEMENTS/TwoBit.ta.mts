@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TwoBit = INTEGER;
 
 
-export const _decode_TwoBit = $._decodeInteger;
+export const _decode_TwoBit: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TwoBit = $._encodeInteger;
+export const _encode_TwoBit: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

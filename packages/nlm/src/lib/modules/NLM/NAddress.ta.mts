@@ -34,12 +34,12 @@ export type NAddress = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_NAddress = $._decodeOctetString;
+export const _decode_NAddress: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_NAddress = $._encodeOctetString;
+export const _encode_NAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

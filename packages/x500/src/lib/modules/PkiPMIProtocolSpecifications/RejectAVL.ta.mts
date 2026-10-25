@@ -128,14 +128,14 @@ export class RejectAVL implements AVMPcommonComponents {
      * @static
      */
 
-    public static _enum_for_version = _enum_for_AVMPversion;
+    public static _enum_for_version: typeof _enum_for_AVMPversion = _enum_for_AVMPversion;
     /**
      * @summary The enum used as the type of the component `reason`
      * @public
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_AVMP_error;
+    public static _enum_for_reason: typeof _enum_for_AVMP_error = _enum_for_AVMP_error;
 }
 
 /**

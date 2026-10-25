@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SuppressObjectInstance = BOOLEAN; // BooleanType
 
 
-export const _decode_SuppressObjectInstance = $._decodeBoolean;
+export const _decode_SuppressObjectInstance: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_SuppressObjectInstance = $._encodeBoolean;
+export const _encode_SuppressObjectInstance: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

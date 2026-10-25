@@ -102,7 +102,7 @@ class MDTConfigurationNR {
          * @static
          */
 
-    public static _enum_for_mDTActivation = _enum_for_MDTActivation;
+    public static _enum_for_mDTActivation: typeof _enum_for_MDTActivation = _enum_for_MDTActivation;
 }
 
 /**

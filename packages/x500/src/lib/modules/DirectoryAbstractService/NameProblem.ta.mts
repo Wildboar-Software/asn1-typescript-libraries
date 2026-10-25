@@ -32,7 +32,7 @@ export type NameProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const NameProblem_noSuchObject = 1 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const NameProblem_noSuchObject: 1 = 1 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_noSuchObject
@@ -43,7 +43,7 @@ export const NameProblem_noSuchObject = 1 satisfies NameProblem; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const noSuchObject = NameProblem_noSuchObject; /* SHORT_NAMED_INTEGER_VALUE */
+export const noSuchObject: 1 = NameProblem_noSuchObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_aliasProblem
@@ -54,7 +54,7 @@ export const noSuchObject = NameProblem_noSuchObject; /* SHORT_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const NameProblem_aliasProblem = 2 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const NameProblem_aliasProblem: 2 = 2 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_aliasProblem
@@ -65,7 +65,7 @@ export const NameProblem_aliasProblem = 2 satisfies NameProblem; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const aliasProblem = NameProblem_aliasProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const aliasProblem: 2 = NameProblem_aliasProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_invalidAttributeSyntax
@@ -76,7 +76,7 @@ export const aliasProblem = NameProblem_aliasProblem; /* SHORT_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const NameProblem_invalidAttributeSyntax = 3 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const NameProblem_invalidAttributeSyntax: 3 = 3 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_invalidAttributeSyntax
@@ -87,7 +87,7 @@ export const NameProblem_invalidAttributeSyntax = 3 satisfies NameProblem; /* LO
  * @constant
  * @type {number}
  */
-export const invalidAttributeSyntax = NameProblem_invalidAttributeSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidAttributeSyntax: 3 = NameProblem_invalidAttributeSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_aliasDereferencingProblem
@@ -98,7 +98,7 @@ export const invalidAttributeSyntax = NameProblem_invalidAttributeSyntax; /* SHO
  * @constant
  * @type {number}
  */
-export const NameProblem_aliasDereferencingProblem = 4 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const NameProblem_aliasDereferencingProblem: 4 = 4 satisfies NameProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NameProblem_aliasDereferencingProblem
@@ -109,13 +109,13 @@ export const NameProblem_aliasDereferencingProblem = 4 satisfies NameProblem; /*
  * @constant
  * @type {number}
  */
-export const aliasDereferencingProblem = NameProblem_aliasDereferencingProblem; /* SHORT_NAMED_INTEGER_VALUE */
+export const aliasDereferencingProblem: 4 = NameProblem_aliasDereferencingProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_NameProblem = $._decodeInteger;
+export const _decode_NameProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NameProblem = $._encodeInteger;
+export const _encode_NameProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

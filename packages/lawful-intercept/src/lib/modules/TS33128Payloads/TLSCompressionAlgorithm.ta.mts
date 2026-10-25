@@ -61,7 +61,7 @@ type TLSCompressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
  * @enum {number}
  */
 export
-const TLSCompressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
+const TLSCompressionAlgorithm: typeof _enum_for_TLSCompressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
 
 /**
  * @summary TLSCompressionAlgorithm_null_
@@ -69,7 +69,7 @@ const TLSCompressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
  * @type {number}
  */
 export
-const TLSCompressionAlgorithm_null_ = TLSCompressionAlgorithm.null_; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLSCompressionAlgorithm_null_: _enum_for_TLSCompressionAlgorithm.null_ = TLSCompressionAlgorithm.null_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary null_
@@ -77,7 +77,7 @@ const TLSCompressionAlgorithm_null_ = TLSCompressionAlgorithm.null_; /* LONG_NAM
  * @type {number}
  */
 export
-const null_ = TLSCompressionAlgorithm.null_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const null_: _enum_for_TLSCompressionAlgorithm.null_ = TLSCompressionAlgorithm.null_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLSCompressionAlgorithm_deflate
@@ -85,7 +85,7 @@ const null_ = TLSCompressionAlgorithm.null_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLSCompressionAlgorithm_deflate = TLSCompressionAlgorithm.deflate; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLSCompressionAlgorithm_deflate: _enum_for_TLSCompressionAlgorithm.deflate = TLSCompressionAlgorithm.deflate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deflate
@@ -93,7 +93,7 @@ const TLSCompressionAlgorithm_deflate = TLSCompressionAlgorithm.deflate; /* LONG
  * @type {number}
  */
 export
-const deflate = TLSCompressionAlgorithm.deflate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deflate: _enum_for_TLSCompressionAlgorithm.deflate = TLSCompressionAlgorithm.deflate; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLSCompressionAlgorithm: $.ASN1Decoder<TLSCompressionAlgorithm> = $._decodeEnumerated;
 export const _encode_TLSCompressionAlgorithm: $.ASN1Encoder<TLSCompressionAlgorithm> = $._encodeEnumerated;
 

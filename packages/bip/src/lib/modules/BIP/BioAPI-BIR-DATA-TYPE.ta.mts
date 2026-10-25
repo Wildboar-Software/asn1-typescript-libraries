@@ -103,7 +103,7 @@ export class BioAPI_BIR_DATA_TYPE {
    * @static
    */
 
-  public static _enum_for_processedLevel = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel;
+  public static _enum_for_processedLevel: typeof _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel;
 }
 
 

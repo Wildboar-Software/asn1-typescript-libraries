@@ -82,7 +82,7 @@ class reservationError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_ReservationProblem;
+    public static _enum_for_problem: typeof _enum_for_ReservationProblem = _enum_for_ReservationProblem;
 }
 
 /**

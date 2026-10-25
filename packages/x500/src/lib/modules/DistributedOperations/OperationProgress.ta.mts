@@ -106,7 +106,7 @@ export class OperationProgress {
      * @static
      */
 
-    public static _enum_for_nameResolutionPhase = _enum_for_OperationProgress_nameResolutionPhase;
+    public static _enum_for_nameResolutionPhase: typeof _enum_for_OperationProgress_nameResolutionPhase = _enum_for_OperationProgress_nameResolutionPhase;
 }
 
 /**

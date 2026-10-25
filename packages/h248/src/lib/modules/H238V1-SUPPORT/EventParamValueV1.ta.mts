@@ -22,8 +22,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EventParamValueV1 = OCTET_STRING; // OctetStringType
-export const _decode_EventParamValueV1 = $._decodeOctetString;
-export const _encode_EventParamValueV1 = $._encodeOctetString;
+export const _decode_EventParamValueV1: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_EventParamValueV1: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

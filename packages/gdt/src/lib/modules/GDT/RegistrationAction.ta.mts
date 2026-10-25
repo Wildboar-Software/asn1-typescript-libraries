@@ -28,7 +28,7 @@ type RegistrationAction = INTEGER;
  * @type {number}
  */
 export
-const RegistrationAction_ra_reg_request = 0 satisfies RegistrationAction; /* LONG_NAMED_INTEGER_VALUE */
+const RegistrationAction_ra_reg_request: 0 = 0 satisfies RegistrationAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_request
@@ -36,7 +36,7 @@ const RegistrationAction_ra_reg_request = 0 satisfies RegistrationAction; /* LON
  * @type {number}
  */
 export
-const ra_reg_request = RegistrationAction_ra_reg_request; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_reg_request: 0 = RegistrationAction_ra_reg_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_result
@@ -44,7 +44,7 @@ const ra_reg_request = RegistrationAction_ra_reg_request; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const RegistrationAction_ra_reg_result = 1 satisfies RegistrationAction; /* LONG_NAMED_INTEGER_VALUE */
+const RegistrationAction_ra_reg_result: 1 = 1 satisfies RegistrationAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegistrationAction_ra_reg_result
@@ -52,9 +52,9 @@ const RegistrationAction_ra_reg_result = 1 satisfies RegistrationAction; /* LONG
  * @type {number}
  */
 export
-const ra_reg_result = RegistrationAction_ra_reg_result; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RegistrationAction = $._decodeInteger;
-export const _encode_RegistrationAction = $._encodeInteger;
+const ra_reg_result: 1 = RegistrationAction_ra_reg_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RegistrationAction: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RegistrationAction: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

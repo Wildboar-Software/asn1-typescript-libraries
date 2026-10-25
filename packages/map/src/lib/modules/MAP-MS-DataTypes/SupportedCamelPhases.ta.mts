@@ -108,7 +108,7 @@ export const _decode_SupportedCamelPhases = (el: _Element): SupportedCamelPhases
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SupportedCamelPhases, encoded as an ASN.1 Element.
  */
-export const _encode_SupportedCamelPhases = $._encodeBitString;
+export const _encode_SupportedCamelPhases: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

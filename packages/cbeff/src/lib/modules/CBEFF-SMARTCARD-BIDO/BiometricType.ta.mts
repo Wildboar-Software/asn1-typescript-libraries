@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type BiometricType = OCTET_STRING; // OctetStringType
 
 
-export const _decode_BiometricType = $._decodeOctetString;
+export const _decode_BiometricType: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_BiometricType = $._encodeOctetString;
+export const _encode_BiometricType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

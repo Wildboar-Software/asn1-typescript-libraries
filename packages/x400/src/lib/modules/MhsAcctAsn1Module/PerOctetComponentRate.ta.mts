@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PerOctetComponentRate = INTEGER;
 
 
-export const _decode_PerOctetComponentRate = $._decodeInteger;
+export const _decode_PerOctetComponentRate: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_PerOctetComponentRate = $._encodeInteger;
+export const _encode_PerOctetComponentRate: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

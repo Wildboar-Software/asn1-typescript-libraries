@@ -72,7 +72,7 @@ class SubscriberEquipmentNumber {
          * @static
          */
 
-    public static _enum_for_subscriberEquipmentNumberType = _enum_for_SubscriberEquipmentType;
+    public static _enum_for_subscriberEquipmentNumberType: typeof _enum_for_SubscriberEquipmentType = _enum_for_SubscriberEquipmentType;
 }
 
 /**

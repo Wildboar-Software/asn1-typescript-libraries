@@ -97,8 +97,8 @@ const ParameterOffers_access_waca: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const waca: number = ParameterOffers_access_waca; /* SHORT_NAMED_BIT */
-export const _decode_ParameterOffers_access = $._decodeBitString;
-export const _encode_ParameterOffers_access = $._encodeBitString;
+export const _decode_ParameterOffers_access: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParameterOffers_access: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

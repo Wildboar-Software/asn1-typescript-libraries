@@ -41,7 +41,7 @@ type AlarmStatus_Item = INTEGER;
  * @type {number}
  */
 export
-const AlarmStatus_Item_underRepair = 0 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmStatus_Item_underRepair: 0 = 0 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_underRepair
@@ -54,7 +54,7 @@ const AlarmStatus_Item_underRepair = 0 satisfies AlarmStatus_Item; /* LONG_NAMED
  * @type {number}
  */
 export
-const underRepair = AlarmStatus_Item_underRepair; /* SHORT_NAMED_INTEGER_VALUE */
+const underRepair: 0 = AlarmStatus_Item_underRepair; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_critical
@@ -67,7 +67,7 @@ const underRepair = AlarmStatus_Item_underRepair; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const AlarmStatus_Item_critical = 1 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmStatus_Item_critical: 1 = 1 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_critical
@@ -80,7 +80,7 @@ const AlarmStatus_Item_critical = 1 satisfies AlarmStatus_Item; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const critical = AlarmStatus_Item_critical; /* SHORT_NAMED_INTEGER_VALUE */
+const critical: 1 = AlarmStatus_Item_critical; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_major
@@ -93,7 +93,7 @@ const critical = AlarmStatus_Item_critical; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const AlarmStatus_Item_major = 2 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmStatus_Item_major: 2 = 2 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_major
@@ -106,7 +106,7 @@ const AlarmStatus_Item_major = 2 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const major = AlarmStatus_Item_major; /* SHORT_NAMED_INTEGER_VALUE */
+const major: 2 = AlarmStatus_Item_major; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_minor
@@ -119,7 +119,7 @@ const major = AlarmStatus_Item_major; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const AlarmStatus_Item_minor = 3 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmStatus_Item_minor: 3 = 3 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_minor
@@ -132,7 +132,7 @@ const AlarmStatus_Item_minor = 3 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const minor = AlarmStatus_Item_minor; /* SHORT_NAMED_INTEGER_VALUE */
+const minor: 3 = AlarmStatus_Item_minor; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_alarmOutstanding
@@ -145,7 +145,7 @@ const minor = AlarmStatus_Item_minor; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const AlarmStatus_Item_alarmOutstanding = 4 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmStatus_Item_alarmOutstanding: 4 = 4 satisfies AlarmStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmStatus_Item_alarmOutstanding
@@ -158,13 +158,13 @@ const AlarmStatus_Item_alarmOutstanding = 4 satisfies AlarmStatus_Item; /* LONG_
  * @type {number}
  */
 export
-const alarmOutstanding = AlarmStatus_Item_alarmOutstanding; /* SHORT_NAMED_INTEGER_VALUE */
+const alarmOutstanding: 4 = AlarmStatus_Item_alarmOutstanding; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AlarmStatus_Item = $._decodeInteger;
+export const _decode_AlarmStatus_Item: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AlarmStatus_Item = $._encodeInteger;
+export const _encode_AlarmStatus_Item: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

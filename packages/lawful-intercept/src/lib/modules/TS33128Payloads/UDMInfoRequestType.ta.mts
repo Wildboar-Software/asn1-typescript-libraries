@@ -65,7 +65,7 @@ type UDMInfoRequestType = _enum_for_UDMInfoRequestType;
  * @enum {number}
  */
 export
-const UDMInfoRequestType = _enum_for_UDMInfoRequestType;
+const UDMInfoRequestType: typeof _enum_for_UDMInfoRequestType = _enum_for_UDMInfoRequestType;
 
 /**
  * @summary UDMInfoRequestType_hSS
@@ -73,7 +73,7 @@ const UDMInfoRequestType = _enum_for_UDMInfoRequestType;
  * @type {number}
  */
 export
-const UDMInfoRequestType_hSS = UDMInfoRequestType.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMInfoRequestType_hSS: _enum_for_UDMInfoRequestType.hSS = UDMInfoRequestType.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSS
@@ -81,7 +81,7 @@ const UDMInfoRequestType_hSS = UDMInfoRequestType.hSS; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const hSS = UDMInfoRequestType.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSS: _enum_for_UDMInfoRequestType.hSS = UDMInfoRequestType.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMInfoRequestType_aUSF
@@ -89,7 +89,7 @@ const hSS = UDMInfoRequestType.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UDMInfoRequestType_aUSF = UDMInfoRequestType.aUSF; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMInfoRequestType_aUSF: _enum_for_UDMInfoRequestType.aUSF = UDMInfoRequestType.aUSF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aUSF
@@ -97,7 +97,7 @@ const UDMInfoRequestType_aUSF = UDMInfoRequestType.aUSF; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const aUSF = UDMInfoRequestType.aUSF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aUSF: _enum_for_UDMInfoRequestType.aUSF = UDMInfoRequestType.aUSF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMInfoRequestType_other
@@ -105,7 +105,7 @@ const aUSF = UDMInfoRequestType.aUSF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UDMInfoRequestType_other = UDMInfoRequestType.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMInfoRequestType_other: _enum_for_UDMInfoRequestType.other = UDMInfoRequestType.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -113,7 +113,7 @@ const UDMInfoRequestType_other = UDMInfoRequestType.other; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const other = UDMInfoRequestType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_UDMInfoRequestType.other = UDMInfoRequestType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMInfoRequestType: $.ASN1Decoder<UDMInfoRequestType> = $._decodeEnumerated;
 export const _encode_UDMInfoRequestType: $.ASN1Encoder<UDMInfoRequestType> = $._encodeEnumerated;
 

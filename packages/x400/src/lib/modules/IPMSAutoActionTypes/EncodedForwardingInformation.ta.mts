@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type EncodedForwardingInformation = OCTET_STRING; // OctetStringType
 
 
-export const _decode_EncodedForwardingInformation = $._decodeOctetString;
+export const _decode_EncodedForwardingInformation: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_EncodedForwardingInformation = $._encodeOctetString;
+export const _encode_EncodedForwardingInformation: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

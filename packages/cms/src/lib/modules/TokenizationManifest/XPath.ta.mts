@@ -20,12 +20,12 @@ export type XPath = UTF8String; // UTF8String
 
 
 
-export const _decode_XPath = $._decodeUTF8String;
+export const _decode_XPath: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_XPath = $._encodeUTF8String;
+export const _encode_XPath: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

@@ -73,7 +73,7 @@ class explicitReservationCreationControl_ArgumentType {
          * @static
          */
 
-    public static _enum_for_controlOption = _enum_for_explicitReservationCreationControl_ArgumentType_controlOption;
+    public static _enum_for_controlOption: typeof _enum_for_explicitReservationCreationControl_ArgumentType_controlOption = _enum_for_explicitReservationCreationControl_ArgumentType_controlOption;
 }
 
 /**

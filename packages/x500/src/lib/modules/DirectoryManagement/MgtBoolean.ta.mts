@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type MgtBoolean = BOOLEAN; // BooleanType
 
 
-export const _decode_MgtBoolean = $._decodeBoolean;
+export const _decode_MgtBoolean: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_MgtBoolean = $._encodeBoolean;
+export const _encode_MgtBoolean: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

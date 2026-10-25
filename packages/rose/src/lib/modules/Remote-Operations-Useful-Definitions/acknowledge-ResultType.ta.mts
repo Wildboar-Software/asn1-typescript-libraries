@@ -47,7 +47,7 @@ export type acknowledge_ResultType =
  * @constant
  * @type {number}
  */
-export const acknowledge_ResultType_acknowledged = _enum_for_acknowledge_ResultType.acknowledged; /* LONG_NAMED_ENUMERATED_VALUE */
+export const acknowledge_ResultType_acknowledged: 0 = _enum_for_acknowledge_ResultType.acknowledged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const acknowledge_ResultType_acknowledged = _enum_for_acknowledge_ResultT
  * @constant
  * @type {number}
  */
-export const acknowledged = acknowledge_ResultType_acknowledged; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const acknowledged: 0 = acknowledge_ResultType_acknowledged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const acknowledged = acknowledge_ResultType_acknowledged; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const acknowledge_ResultType_unknown = _enum_for_acknowledge_ResultType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const acknowledge_ResultType_unknown: 1 = _enum_for_acknowledge_ResultType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,17 +74,17 @@ export const acknowledge_ResultType_unknown = _enum_for_acknowledge_ResultType.u
  * @constant
  * @type {number}
  */
-export const unknown = acknowledge_ResultType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown: 1 = acknowledge_ResultType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_acknowledge_ResultType = $._decodeEnumerated;
+export const _decode_acknowledge_ResultType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_acknowledge_ResultType = $._encodeEnumerated;
+export const _encode_acknowledge_ResultType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

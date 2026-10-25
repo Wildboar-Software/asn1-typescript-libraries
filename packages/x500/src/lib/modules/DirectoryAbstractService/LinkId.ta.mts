@@ -20,10 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type LinkId = INTEGER;
 
 
-export const _decode_LinkId = $._decodeInteger;
+export const _decode_LinkId: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_LinkId = $._encodeInteger;
+export const _encode_LinkId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

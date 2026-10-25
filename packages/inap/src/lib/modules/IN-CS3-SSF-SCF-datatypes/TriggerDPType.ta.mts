@@ -50,7 +50,7 @@ type TriggerDPType = _enum_for_TriggerDPType;
  * @enum {number}
  */
 export
-const TriggerDPType = _enum_for_TriggerDPType;
+const TriggerDPType: typeof _enum_for_TriggerDPType = _enum_for_TriggerDPType;
 
 /**
  * @summary TriggerDPType_tdp_r
@@ -58,7 +58,7 @@ const TriggerDPType = _enum_for_TriggerDPType;
  * @type {number}
  */
 export
-const TriggerDPType_tdp_r = TriggerDPType.tdp_r; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerDPType_tdp_r: _enum_for_TriggerDPType.tdp_r = TriggerDPType.tdp_r; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tdp_r
@@ -66,7 +66,7 @@ const TriggerDPType_tdp_r = TriggerDPType.tdp_r; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const tdp_r = TriggerDPType.tdp_r; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tdp_r: _enum_for_TriggerDPType.tdp_r = TriggerDPType.tdp_r; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerDPType_tdp_n
@@ -74,7 +74,7 @@ const tdp_r = TriggerDPType.tdp_r; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerDPType_tdp_n = TriggerDPType.tdp_n; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerDPType_tdp_n: _enum_for_TriggerDPType.tdp_n = TriggerDPType.tdp_n; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tdp_n
@@ -82,7 +82,7 @@ const TriggerDPType_tdp_n = TriggerDPType.tdp_n; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const tdp_n = TriggerDPType.tdp_n; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tdp_n: _enum_for_TriggerDPType.tdp_n = TriggerDPType.tdp_n; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_TriggerDPType(el: _Element): TriggerDPType {

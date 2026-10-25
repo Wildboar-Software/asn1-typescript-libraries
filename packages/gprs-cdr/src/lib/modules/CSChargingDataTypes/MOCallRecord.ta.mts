@@ -2021,85 +2021,85 @@ class MOCallRecord {
          * @static
          */
 
-    public static _enum_for_transparencyIndicator = _enum_for_TransparencyInd;        /**
+    public static _enum_for_transparencyIndicator: typeof _enum_for_TransparencyInd = _enum_for_TransparencyInd;        /**
          * @summary The enum used as the type of the component `radioChanRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_radioChanRequested = _enum_for_RadioChanRequested;        /**
+    public static _enum_for_radioChanRequested: typeof _enum_for_RadioChanRequested = _enum_for_RadioChanRequested;        /**
          * @summary The enum used as the type of the component `radioChanUsed`
          * @public
          * @static
          */
 
-    public static _enum_for_radioChanUsed = _enum_for_TrafficChannel;        /**
+    public static _enum_for_radioChanUsed: typeof _enum_for_TrafficChannel = _enum_for_TrafficChannel;        /**
          * @summary The enum used as the type of the component `cAMELInitCFIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_cAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;        /**
+    public static _enum_for_cAMELInitCFIndicator: typeof _enum_for_CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;        /**
          * @summary The enum used as the type of the component `defaultCallHandling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultCallHandling = _enum_for_DefaultCallHandling;        /**
+    public static _enum_for_defaultCallHandling: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;        /**
          * @summary The enum used as the type of the component `fnur`
          * @public
          * @static
          */
 
-    public static _enum_for_fnur = _enum_for_Fnur;        /**
+    public static _enum_for_fnur: typeof _enum_for_Fnur = _enum_for_Fnur;        /**
          * @summary The enum used as the type of the component `aiurRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_aiurRequested = _enum_for_AiurRequested;        /**
+    public static _enum_for_aiurRequested: typeof _enum_for_AiurRequested = _enum_for_AiurRequested;        /**
          * @summary The enum used as the type of the component `chanCodingUsed`
          * @public
          * @static
          */
 
-    public static _enum_for_chanCodingUsed = _enum_for_ChannelCoding;        /**
+    public static _enum_for_chanCodingUsed: typeof _enum_for_ChannelCoding = _enum_for_ChannelCoding;        /**
          * @summary The enum used as the type of the component `defaultCallHandling_2`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultCallHandling_2 = _enum_for_DefaultCallHandling;        /**
+    public static _enum_for_defaultCallHandling_2: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;        /**
          * @summary The enum used as the type of the component `systemType`
          * @public
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;        /**
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;        /**
          * @summary The enum used as the type of the component `partialRecordType`
          * @public
          * @static
          */
 
-    public static _enum_for_partialRecordType = _enum_for_PartialRecordType;        /**
+    public static _enum_for_partialRecordType: typeof _enum_for_PartialRecordType = _enum_for_PartialRecordType;        /**
          * @summary The enum used as the type of the component `guaranteedBitRate`
          * @public
          * @static
          */
 
-    public static _enum_for_guaranteedBitRate = _enum_for_GuaranteedBitRate;        /**
+    public static _enum_for_guaranteedBitRate: typeof _enum_for_GuaranteedBitRate = _enum_for_GuaranteedBitRate;        /**
          * @summary The enum used as the type of the component `maximumBitRate`
          * @public
          * @static
          */
 
-    public static _enum_for_maximumBitRate = _enum_for_MaximumBitRate;        /**
+    public static _enum_for_maximumBitRate: typeof _enum_for_MaximumBitRate = _enum_for_MaximumBitRate;        /**
          * @summary The enum used as the type of the component `reasonForServiceChange`
          * @public
          * @static
          */
 
-    public static _enum_for_reasonForServiceChange = _enum_for_ReasonForServiceChange;
+    public static _enum_for_reasonForServiceChange: typeof _enum_for_ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 }
 
 /**

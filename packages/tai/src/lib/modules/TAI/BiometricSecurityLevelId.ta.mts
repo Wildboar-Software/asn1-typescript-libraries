@@ -34,8 +34,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type BiometricSecurityLevelId = BIT_STRING;
-export const _decode_BiometricSecurityLevelId = $._decodeBitString;
-export const _encode_BiometricSecurityLevelId = $._encodeBitString;
+export const _decode_BiometricSecurityLevelId: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_BiometricSecurityLevelId: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Identify_Request = NULL; // NullType
-export const _decode_Identify_Request = $._decodeNull;
-export const _encode_Identify_Request = $._encodeNull;
+export const _decode_Identify_Request: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_Identify_Request: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

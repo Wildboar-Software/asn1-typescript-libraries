@@ -102,7 +102,7 @@ class APNRateControlParameters {
          * @static
          */
 
-    public static _enum_for_additionalExceptionReports = _enum_for_APNRateControlParameters_additionalExceptionReports;
+    public static _enum_for_additionalExceptionReports: typeof _enum_for_APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateControlParameters_additionalExceptionReports;
 }
 
 /**

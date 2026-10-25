@@ -80,7 +80,7 @@ class RequestedUTSI {
          * @static
          */
 
-    public static _enum_for_uSImonitorMode = _enum_for_USIMonitorMode;
+    public static _enum_for_uSImonitorMode: typeof _enum_for_USIMonitorMode = _enum_for_USIMonitorMode;
 }
 
 /**

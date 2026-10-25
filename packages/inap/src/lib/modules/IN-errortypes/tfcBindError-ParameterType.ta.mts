@@ -78,7 +78,7 @@ class tfcBindError_ParameterType {
      * @static
      * @method
      */
-    public static get _default_value_for_versions () { return (() => { const _ret = new Uint8ClampedArray(1); _ret[Versions_v1] = TRUE_BIT;return _ret; })(); }
+    public static get _default_value_for_versions (): Uint8ClampedArray<ArrayBuffer> { return (() => { const _ret = new Uint8ClampedArray(1); _ret[Versions_v1] = TRUE_BIT;return _ret; })(); }
 }
 
 /**

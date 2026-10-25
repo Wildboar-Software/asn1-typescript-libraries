@@ -319,13 +319,13 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_IRI_Parameters_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator;        /**
          * @summary The enum used as the type of the component `mBMSevent`
          * @public
          * @static
          */
 
-    public static _enum_for_mBMSevent = _enum_for_MBMSEvent;
+    public static _enum_for_mBMSevent: typeof _enum_for_MBMSEvent = _enum_for_MBMSEvent;
 }
 
 /**

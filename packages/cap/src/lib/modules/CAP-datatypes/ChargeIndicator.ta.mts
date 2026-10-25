@@ -31,4 +31,4 @@ export const _decode_ChargeIndicator = (el: _Element): ChargeIndicator => {
     }
     return value;
 };
-export const _encode_ChargeIndicator = $._encodeOctetString;
+export const _encode_ChargeIndicator: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

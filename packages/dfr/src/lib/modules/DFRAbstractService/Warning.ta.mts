@@ -98,13 +98,13 @@ class Warning {
          * @static
          */
 
-    public static _enum_for_accessl = _enum_for_AccessProblem;        /**
+    public static _enum_for_accessl: typeof _enum_for_AccessProblem = _enum_for_AccessProblem;        /**
          * @summary The enum used as the type of the component `access2`
          * @public
          * @static
          */
 
-    public static _enum_for_access2 = _enum_for_ReferentAccessProblem;
+    public static _enum_for_access2: typeof _enum_for_ReferentAccessProblem = _enum_for_ReferentAccessProblem;
 }
 
 /**

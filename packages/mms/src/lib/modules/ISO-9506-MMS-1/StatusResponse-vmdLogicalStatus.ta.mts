@@ -48,7 +48,7 @@ type StatusResponse_vmdLogicalStatus = INTEGER;
  * @type {number}
  */
 export
-const StatusResponse_vmdLogicalStatus_state_changes_allowed = 0 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdLogicalStatus_state_changes_allowed: 0 = 0 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_state_changes_allowed
@@ -61,7 +61,7 @@ const StatusResponse_vmdLogicalStatus_state_changes_allowed = 0 satisfies Status
  * @type {number}
  */
 export
-const state_changes_allowed = StatusResponse_vmdLogicalStatus_state_changes_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+const state_changes_allowed: 0 = StatusResponse_vmdLogicalStatus_state_changes_allowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_no_state_changes_allowed
@@ -75,7 +75,7 @@ const state_changes_allowed = StatusResponse_vmdLogicalStatus_state_changes_allo
  * @type {number}
  */
 export
-const StatusResponse_vmdLogicalStatus_no_state_changes_allowed = 1 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdLogicalStatus_no_state_changes_allowed: 1 = 1 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_no_state_changes_allowed
@@ -89,7 +89,7 @@ const StatusResponse_vmdLogicalStatus_no_state_changes_allowed = 1 satisfies Sta
  * @type {number}
  */
 export
-const no_state_changes_allowed = StatusResponse_vmdLogicalStatus_no_state_changes_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+const no_state_changes_allowed: 1 = StatusResponse_vmdLogicalStatus_no_state_changes_allowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_limited_services_permitted
@@ -102,7 +102,7 @@ const no_state_changes_allowed = StatusResponse_vmdLogicalStatus_no_state_change
  * @type {number}
  */
 export
-const StatusResponse_vmdLogicalStatus_limited_services_permitted = 2 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdLogicalStatus_limited_services_permitted: 2 = 2 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_limited_services_permitted
@@ -115,7 +115,7 @@ const StatusResponse_vmdLogicalStatus_limited_services_permitted = 2 satisfies S
  * @type {number}
  */
 export
-const limited_services_permitted = StatusResponse_vmdLogicalStatus_limited_services_permitted; /* SHORT_NAMED_INTEGER_VALUE */
+const limited_services_permitted: 2 = StatusResponse_vmdLogicalStatus_limited_services_permitted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_support_services_allowed
@@ -128,7 +128,7 @@ const limited_services_permitted = StatusResponse_vmdLogicalStatus_limited_servi
  * @type {number}
  */
 export
-const StatusResponse_vmdLogicalStatus_support_services_allowed = 3 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdLogicalStatus_support_services_allowed: 3 = 3 satisfies StatusResponse_vmdLogicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdLogicalStatus_support_services_allowed
@@ -141,9 +141,9 @@ const StatusResponse_vmdLogicalStatus_support_services_allowed = 3 satisfies Sta
  * @type {number}
  */
 export
-const support_services_allowed = StatusResponse_vmdLogicalStatus_support_services_allowed; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_StatusResponse_vmdLogicalStatus = $._decodeInteger;
-export const _encode_StatusResponse_vmdLogicalStatus = $._encodeInteger;
+const support_services_allowed: 3 = StatusResponse_vmdLogicalStatus_support_services_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_StatusResponse_vmdLogicalStatus: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_StatusResponse_vmdLogicalStatus: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

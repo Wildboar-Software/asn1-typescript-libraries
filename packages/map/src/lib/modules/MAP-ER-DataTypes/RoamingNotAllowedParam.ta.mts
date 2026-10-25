@@ -102,13 +102,13 @@ class RoamingNotAllowedParam {
          * @static
          */
 
-    public static _enum_for_roamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;        /**
+    public static _enum_for_roamingNotAllowedCause: typeof _enum_for_RoamingNotAllowedCause = _enum_for_RoamingNotAllowedCause;        /**
          * @summary The enum used as the type of the component `additionalRoamingNotAllowedCause`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalRoamingNotAllowedCause = _enum_for_AdditionalRoamingNotAllowedCause;
+    public static _enum_for_additionalRoamingNotAllowedCause: typeof _enum_for_AdditionalRoamingNotAllowedCause = _enum_for_AdditionalRoamingNotAllowedCause;
 }
 
 /**

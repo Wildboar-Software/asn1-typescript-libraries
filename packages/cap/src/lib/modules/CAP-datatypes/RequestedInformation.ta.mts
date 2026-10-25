@@ -40,7 +40,7 @@ export class RequestedInformation {
         return new RequestedInformation(_o.requestedInformationType, _o.requestedInformationValue, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_requestedInformationType = _enum_for_RequestedInformationType;
+    public static _enum_for_requestedInformationType: typeof _enum_for_RequestedInformationType = _enum_for_RequestedInformationType;
 }
 
 export const _root_component_type_list_1_spec_for_RequestedInformation: $.ComponentSpec[] = [

@@ -36,7 +36,7 @@ export type ASO_context_name = OBJECT_IDENTIFIER; // ObjectIdentifierType
  * @returns The decoded `ASO_context_name` value
  * @function
  */
-export const _decode_ASO_context_name = $._decodeObjectIdentifier;
+export const _decode_ASO_context_name: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 /**
  * @summary Encode an `ASO_context_name` value
@@ -45,6 +45,6 @@ export const _decode_ASO_context_name = $._decodeObjectIdentifier;
  * @returns The encoded ASN.1 element
  * @function
  */
-export const _encode_ASO_context_name = $._encodeObjectIdentifier;
+export const _encode_ASO_context_name: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 /* eslint-enable */

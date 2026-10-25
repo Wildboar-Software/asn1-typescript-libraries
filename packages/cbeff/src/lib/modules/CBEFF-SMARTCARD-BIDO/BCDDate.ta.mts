@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type BCDDate = OCTET_STRING; // OctetStringType
 
 
-export const _decode_BCDDate = $._decodeOctetString;
+export const _decode_BCDDate: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_BCDDate = $._encodeOctetString;
+export const _encode_BCDDate: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

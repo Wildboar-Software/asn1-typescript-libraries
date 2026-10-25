@@ -43,7 +43,7 @@ type RIOupdate_Item_operation = INTEGER;
  * @type {number}
  */
 export
-const RIOupdate_Item_operation_eraseRIO = 0 satisfies RIOupdate_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
+const RIOupdate_Item_operation_eraseRIO: 0 = 0 satisfies RIOupdate_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_eraseRIO
@@ -54,7 +54,7 @@ const RIOupdate_Item_operation_eraseRIO = 0 satisfies RIOupdate_Item_operation; 
  * @type {number}
  */
 export
-const eraseRIO = RIOupdate_Item_operation_eraseRIO; /* SHORT_NAMED_INTEGER_VALUE */
+const eraseRIO: 0 = RIOupdate_Item_operation_eraseRIO; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_deleteRecord
@@ -65,7 +65,7 @@ const eraseRIO = RIOupdate_Item_operation_eraseRIO; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const RIOupdate_Item_operation_deleteRecord = 1 satisfies RIOupdate_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
+const RIOupdate_Item_operation_deleteRecord: 1 = 1 satisfies RIOupdate_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_deleteRecord
@@ -76,7 +76,7 @@ const RIOupdate_Item_operation_deleteRecord = 1 satisfies RIOupdate_Item_operati
  * @type {number}
  */
 export
-const deleteRecord = RIOupdate_Item_operation_deleteRecord; /* SHORT_NAMED_INTEGER_VALUE */
+const deleteRecord: 1 = RIOupdate_Item_operation_deleteRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_createRecord
@@ -88,7 +88,7 @@ const deleteRecord = RIOupdate_Item_operation_deleteRecord; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const RIOupdate_Item_operation_createRecord = 2 satisfies RIOupdate_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
+const RIOupdate_Item_operation_createRecord: 2 = 2 satisfies RIOupdate_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOupdate_Item_operation_createRecord
@@ -100,9 +100,9 @@ const RIOupdate_Item_operation_createRecord = 2 satisfies RIOupdate_Item_operati
  * @type {number}
  */
 export
-const createRecord = RIOupdate_Item_operation_createRecord; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RIOupdate_Item_operation = $._decodeInteger;
-export const _encode_RIOupdate_Item_operation = $._encodeInteger;
+const createRecord: 2 = RIOupdate_Item_operation_createRecord; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RIOupdate_Item_operation: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RIOupdate_Item_operation: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

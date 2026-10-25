@@ -79,7 +79,7 @@ type Direction = _enum_for_Direction;
  * @enum {number}
  */
 export
-const Direction = _enum_for_Direction;
+const Direction: typeof _enum_for_Direction = _enum_for_Direction;
 
 /**
  * @summary Direction_fromTarget
@@ -87,7 +87,7 @@ const Direction = _enum_for_Direction;
  * @type {number}
  */
 export
-const Direction_fromTarget = Direction.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_fromTarget: _enum_for_Direction.fromTarget = Direction.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -95,7 +95,7 @@ const Direction_fromTarget = Direction.fromTarget; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const fromTarget = Direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget: _enum_for_Direction.fromTarget = Direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_toTarget
@@ -103,7 +103,7 @@ const fromTarget = Direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Direction_toTarget = Direction.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_toTarget: _enum_for_Direction.toTarget = Direction.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -111,7 +111,7 @@ const Direction_toTarget = Direction.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const toTarget = Direction.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget: _enum_for_Direction.toTarget = Direction.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Direction: $.ASN1Decoder<Direction> = $._decodeEnumerated;
 export const _encode_Direction: $.ASN1Encoder<Direction> = $._encodeEnumerated;
 

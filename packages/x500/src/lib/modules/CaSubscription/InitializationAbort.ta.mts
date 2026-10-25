@@ -81,7 +81,7 @@ export class InitializationAbort {
      * @static
      */
 
-    public static _enum_for_diag = _enum_for_InitializationAbort_diag;
+    public static _enum_for_diag: typeof _enum_for_InitializationAbort_diag = _enum_for_InitializationAbort_diag;
 }
 
 /**

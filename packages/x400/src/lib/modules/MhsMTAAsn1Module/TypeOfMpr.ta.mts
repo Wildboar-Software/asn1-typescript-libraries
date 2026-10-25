@@ -31,48 +31,48 @@ export type TypeOfMpr = INTEGER;
  * @constant
  * @type {number}
  */
-export const TypeOfMpr_message = 0 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMpr_message: 0 = 0 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_message
  * @constant
  * @type {number}
  */
-export const message = TypeOfMpr_message; /* SHORT_NAMED_INTEGER_VALUE */
+export const message: 0 = TypeOfMpr_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_probe
  * @constant
  * @type {number}
  */
-export const TypeOfMpr_probe = 1 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMpr_probe: 1 = 1 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_probe
  * @constant
  * @type {number}
  */
-export const probe = TypeOfMpr_probe; /* SHORT_NAMED_INTEGER_VALUE */
+export const probe: 1 = TypeOfMpr_probe; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_report
  * @constant
  * @type {number}
  */
-export const TypeOfMpr_report = 2 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMpr_report: 2 = 2 satisfies TypeOfMpr; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMpr_report
  * @constant
  * @type {number}
  */
-export const report = TypeOfMpr_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const report: 2 = TypeOfMpr_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TypeOfMpr = $._decodeInteger;
+export const _decode_TypeOfMpr: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TypeOfMpr = $._encodeInteger;
+export const _encode_TypeOfMpr: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

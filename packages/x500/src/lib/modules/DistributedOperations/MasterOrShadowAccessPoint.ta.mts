@@ -198,7 +198,7 @@ export class MasterOrShadowAccessPoint extends AccessPoint {
      * @static
      */
 
-    public static _enum_for_category = _enum_for_MasterOrShadowAccessPoint_category;
+    public static _enum_for_category: typeof _enum_for_MasterOrShadowAccessPoint_category = _enum_for_MasterOrShadowAccessPoint_category;
 }
 
 /**

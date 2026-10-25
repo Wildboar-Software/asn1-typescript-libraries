@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ReleaseIndicator = OCTET_STRING; // OctetStringType
 
 
-export const _decode_ReleaseIndicator = $._decodeOctetString;
+export const _decode_ReleaseIndicator: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_ReleaseIndicator = $._encodeOctetString;
+export const _encode_ReleaseIndicator: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

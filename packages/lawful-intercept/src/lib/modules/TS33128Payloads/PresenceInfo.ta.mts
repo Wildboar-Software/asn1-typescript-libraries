@@ -175,7 +175,7 @@ class PresenceInfo {
          * @static
          */
 
-    public static _enum_for_presenceState = _enum_for_PresenceState;
+    public static _enum_for_presenceState: typeof _enum_for_PresenceState = _enum_for_PresenceState;
 }
 
 /**

@@ -67,7 +67,7 @@ class MiscCallInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MiscCallInfo_messageType;
+    public static _enum_for_messageType: typeof _enum_for_MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
 }
 
 /**

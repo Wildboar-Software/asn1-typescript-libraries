@@ -115,7 +115,7 @@ export class BridgeRollArg_Item {
      * @static
      */
 
-    public static _enum_for_bridgeRollOperation = _enum_for_BridgeRollArg_Item_bridgeRollOperation;
+    public static _enum_for_bridgeRollOperation: typeof _enum_for_BridgeRollArg_Item_bridgeRollOperation = _enum_for_BridgeRollArg_Item_bridgeRollOperation;
 }
 
 

@@ -60,7 +60,7 @@ export const _decode_BMSC_EventList = (el: _Element): BMSC_EventList => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BMSC_EventList, encoded as an ASN.1 Element.
  */
-export const _encode_BMSC_EventList = $._encodeBitString;
+export const _encode_BMSC_EventList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

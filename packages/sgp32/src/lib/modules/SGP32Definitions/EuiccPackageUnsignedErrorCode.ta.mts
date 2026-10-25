@@ -39,7 +39,7 @@ type EuiccPackageUnsignedErrorCode = INTEGER;
  * likewise only enumerated (section 2.11.2.1).
  */
 export
-const EuiccPackageUnsignedErrorCode_sizeOverflow = 15 satisfies EuiccPackageUnsignedErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageUnsignedErrorCode_sizeOverflow: 15 = 15 satisfies EuiccPackageUnsignedErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageUnsignedErrorCode_sizeOverflow
@@ -50,7 +50,7 @@ const EuiccPackageUnsignedErrorCode_sizeOverflow = 15 satisfies EuiccPackageUnsi
  * only enumerates sizeOverflow on EuiccPackageErrorCode).
  */
 export
-const sizeOverflow = EuiccPackageUnsignedErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
+const sizeOverflow: 15 = EuiccPackageUnsignedErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageUnsignedErrorCode_undefinedError
@@ -61,7 +61,7 @@ const sizeOverflow = EuiccPackageUnsignedErrorCode_sizeOverflow; /* SHORT_NAMED_
  * EuiccPackageUnsignedErrorCode.
  */
 export
-const EuiccPackageUnsignedErrorCode_undefinedError = 127 satisfies EuiccPackageUnsignedErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageUnsignedErrorCode_undefinedError: 127 = 127 satisfies EuiccPackageUnsignedErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageUnsignedErrorCode_undefinedError
@@ -72,7 +72,7 @@ const EuiccPackageUnsignedErrorCode_undefinedError = 127 satisfies EuiccPackageU
  * EuiccPackageUnsignedErrorCode.
  */
 export
-const undefinedError = EuiccPackageUnsignedErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = EuiccPackageUnsignedErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccPackageUnsignedErrorCode: $.ASN1Decoder<EuiccPackageUnsignedErrorCode> = $._decodeInteger;
 export const _encode_EuiccPackageUnsignedErrorCode: $.ASN1Encoder<EuiccPackageUnsignedErrorCode> = $._encodeInteger;
 

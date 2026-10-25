@@ -169,7 +169,7 @@ class StatisticInformationSet {
          * @static
          */
 
-    public static _enum_for_unitTime = _enum_for_UnitTime;
+    public static _enum_for_unitTime: typeof _enum_for_UnitTime = _enum_for_UnitTime;
 }
 
 /**

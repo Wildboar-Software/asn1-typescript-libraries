@@ -1469,31 +1469,31 @@ class ASRecord {
          * @static
          */
 
-    public static _enum_for_role_of_Node = _enum_for_Role_of_Node;        /**
+    public static _enum_for_role_of_Node: typeof _enum_for_Role_of_Node = _enum_for_Role_of_Node;        /**
          * @summary The enum used as the type of the component `causeForRecordClosing`
          * @public
          * @static
          */
 
-    public static _enum_for_causeForRecordClosing = _enum_for_CauseForRecordClosing;        /**
+    public static _enum_for_causeForRecordClosing: typeof _enum_for_CauseForRecordClosing = _enum_for_CauseForRecordClosing;        /**
          * @summary The enum used as the type of the component `sessionPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_sessionPriority = _enum_for_SessionPriority;        /**
+    public static _enum_for_sessionPriority: typeof _enum_for_SessionPriority = _enum_for_SessionPriority;        /**
          * @summary The enum used as the type of the component `tADS_Identifier`
          * @public
          * @static
          */
 
-    public static _enum_for_tADS_Identifier = _enum_for_TADIdentifier;        /**
+    public static _enum_for_tADS_Identifier: typeof _enum_for_TADIdentifier = _enum_for_TADIdentifier;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffStatus;
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffStatus;
 }
 
 /**

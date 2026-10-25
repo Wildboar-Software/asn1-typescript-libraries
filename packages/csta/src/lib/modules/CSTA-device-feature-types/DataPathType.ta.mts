@@ -69,7 +69,7 @@ type DataPathType = _enum_for_DataPathType;
  * @enum {number}
  */
 export
-const DataPathType = _enum_for_DataPathType;
+const DataPathType: typeof _enum_for_DataPathType = _enum_for_DataPathType;
 
 /**
  * @summary DataPathType_text
@@ -79,7 +79,7 @@ const DataPathType = _enum_for_DataPathType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const DataPathType_text = DataPathType.text; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataPathType_text: _enum_for_DataPathType.text = DataPathType.text; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary text
@@ -88,7 +88,7 @@ const DataPathType_text = DataPathType.text; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const text = DataPathType.text; /* SHORT_NAMED_ENUMERATED_VALUE */
+const text: _enum_for_DataPathType.text = DataPathType.text; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataPathType_voice
@@ -98,7 +98,7 @@ const text = DataPathType.text; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const DataPathType_voice = DataPathType.voice; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataPathType_voice: _enum_for_DataPathType.voice = DataPathType.voice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voice
@@ -107,7 +107,7 @@ const DataPathType_voice = DataPathType.voice; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const voice = DataPathType.voice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voice: _enum_for_DataPathType.voice = DataPathType.voice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DataPathType: $.ASN1Decoder<DataPathType> | null = null;
 

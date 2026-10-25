@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NationallyDefinedBodyPart = _Element; // ObjectClassFieldType
 
 
-export const _decode_NationallyDefinedBodyPart = $._decodeAny;
+export const _decode_NationallyDefinedBodyPart: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
-export const _encode_NationallyDefinedBodyPart = $._encodeAny;
+export const _encode_NationallyDefinedBodyPart: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

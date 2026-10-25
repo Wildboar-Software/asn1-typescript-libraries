@@ -39,12 +39,12 @@ export type KerberosString = GeneralString; // GeneralString
 
 
 
-export const _decode_KerberosString = $._decodeGeneralString;
+export const _decode_KerberosString: $.ASN1Decoder<string> = $._decodeGeneralString;
 
 
 
 
-export const _encode_KerberosString = $._encodeGeneralString;
+export const _encode_KerberosString: $.ASN1Encoder<string> = $._encodeGeneralString;
 
 
 /* eslint-enable */

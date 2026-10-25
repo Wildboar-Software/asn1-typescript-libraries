@@ -20,10 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type InvokeID = OCTET_STRING; // OctetStringType
 
 
-export const _decode_InvokeID = $._decodeOctetString;
+export const _decode_InvokeID: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_InvokeID = $._encodeOctetString;
+export const _encode_InvokeID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

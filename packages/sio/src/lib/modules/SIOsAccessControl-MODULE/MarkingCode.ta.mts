@@ -29,7 +29,7 @@ export type MarkingCode = INTEGER;
  * @constant
  * @type {number}
  */
-export const MarkingCode_pageTop = 1 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_pageTop: 1 = 1 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -37,7 +37,7 @@ export const MarkingCode_pageTop = 1 satisfies MarkingCode; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const pageTop = MarkingCode_pageTop; /* SHORT_NAMED_INTEGER_VALUE */
+export const pageTop: 1 = MarkingCode_pageTop; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,7 +45,7 @@ export const pageTop = MarkingCode_pageTop; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const MarkingCode_pageBottom = 2 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_pageBottom: 2 = 2 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const MarkingCode_pageBottom = 2 satisfies MarkingCode; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const pageBottom = MarkingCode_pageBottom; /* SHORT_NAMED_INTEGER_VALUE */
+export const pageBottom: 2 = MarkingCode_pageBottom; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const pageBottom = MarkingCode_pageBottom; /* SHORT_NAMED_INTEGER_VALUE *
  * @constant
  * @type {number}
  */
-export const MarkingCode_pageTopBottom = 3 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_pageTopBottom: 3 = 3 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const MarkingCode_pageTopBottom = 3 satisfies MarkingCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const pageTopBottom = MarkingCode_pageTopBottom; /* SHORT_NAMED_INTEGER_VALUE */
+export const pageTopBottom: 3 = MarkingCode_pageTopBottom; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const pageTopBottom = MarkingCode_pageTopBottom; /* SHORT_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const MarkingCode_documentEnd = 4 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_documentEnd: 4 = 4 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const MarkingCode_documentEnd = 4 satisfies MarkingCode; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const documentEnd = MarkingCode_documentEnd; /* SHORT_NAMED_INTEGER_VALUE */
+export const documentEnd: 4 = MarkingCode_documentEnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const documentEnd = MarkingCode_documentEnd; /* SHORT_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const MarkingCode_noNameDisplay = 5 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_noNameDisplay: 5 = 5 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const MarkingCode_noNameDisplay = 5 satisfies MarkingCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const noNameDisplay = MarkingCode_noNameDisplay; /* SHORT_NAMED_INTEGER_VALUE */
+export const noNameDisplay: 5 = MarkingCode_noNameDisplay; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const noNameDisplay = MarkingCode_noNameDisplay; /* SHORT_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const MarkingCode_noMarkingDisplay = 6 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_noMarkingDisplay: 6 = 6 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const MarkingCode_noMarkingDisplay = 6 satisfies MarkingCode; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const noMarkingDisplay = MarkingCode_noMarkingDisplay; /* SHORT_NAMED_INTEGER_VALUE */
+export const noMarkingDisplay: 6 = MarkingCode_noMarkingDisplay; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const noMarkingDisplay = MarkingCode_noMarkingDisplay; /* SHORT_NAMED_INT
  * @constant
  * @type {number}
  */
-export const MarkingCode_unused = 7 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_unused: 7 = 7 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const MarkingCode_unused = 7 satisfies MarkingCode; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const unused = MarkingCode_unused; /* SHORT_NAMED_INTEGER_VALUE */
+export const unused: 7 = MarkingCode_unused; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -141,7 +141,7 @@ export const unused = MarkingCode_unused; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const MarkingCode_documentStart = 8 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_documentStart: 8 = 8 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -149,7 +149,7 @@ export const MarkingCode_documentStart = 8 satisfies MarkingCode; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const documentStart = MarkingCode_documentStart; /* SHORT_NAMED_INTEGER_VALUE */
+export const documentStart: 8 = MarkingCode_documentStart; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -157,7 +157,7 @@ export const documentStart = MarkingCode_documentStart; /* SHORT_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const MarkingCode_suppressClassName = 9 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
+export const MarkingCode_suppressClassName: 9 = 9 satisfies MarkingCode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -165,17 +165,17 @@ export const MarkingCode_suppressClassName = 9 satisfies MarkingCode; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const suppressClassName = MarkingCode_suppressClassName; /* SHORT_NAMED_INTEGER_VALUE */
+export const suppressClassName: 9 = MarkingCode_suppressClassName; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_MarkingCode = $._decodeInteger;
+export const _decode_MarkingCode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_MarkingCode = $._encodeInteger;
+export const _encode_MarkingCode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

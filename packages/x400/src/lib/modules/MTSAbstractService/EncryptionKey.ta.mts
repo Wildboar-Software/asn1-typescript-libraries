@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type EncryptionKey = BIT_STRING;
 
 
-export const _decode_EncryptionKey = $._decodeBitString;
+export const _decode_EncryptionKey: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_EncryptionKey = $._encodeBitString;
+export const _encode_EncryptionKey: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -82,7 +82,7 @@ export type MembershipStatus = _enum_for_MembershipStatus;
  *
  * @enum {number}
  */
-export const MembershipStatus = _enum_for_MembershipStatus;
+export const MembershipStatus: typeof _enum_for_MembershipStatus = _enum_for_MembershipStatus;
 
 /**
  * @summary MembershipStatus_unknown
@@ -94,7 +94,7 @@ export const MembershipStatus = _enum_for_MembershipStatus;
  * @constant
  * @type {number}
  */
-export const MembershipStatus_unknown =
+export const MembershipStatus_unknown: _enum_for_MembershipStatus.unknown =
     MembershipStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const MembershipStatus_unknown =
  * @constant
  * @type {number}
  */
-export const unknown =
+export const unknown: _enum_for_MembershipStatus.unknown =
     MembershipStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const unknown =
  * @constant
  * @type {number}
  */
-export const MembershipStatus_member =
+export const MembershipStatus_member: _enum_for_MembershipStatus.member =
     MembershipStatus.member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -131,7 +131,7 @@ export const MembershipStatus_member =
  * @constant
  * @type {number}
  */
-export const member =
+export const member: _enum_for_MembershipStatus.member =
     MembershipStatus.member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -143,7 +143,7 @@ export const member =
  * @constant
  * @type {number}
  */
-export const MembershipStatus_non_member =
+export const MembershipStatus_non_member: _enum_for_MembershipStatus.non_member =
     MembershipStatus.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -155,7 +155,7 @@ export const MembershipStatus_non_member =
  * @constant
  * @type {number}
  */
-export const non_member =
+export const non_member: _enum_for_MembershipStatus.non_member =
     MembershipStatus.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

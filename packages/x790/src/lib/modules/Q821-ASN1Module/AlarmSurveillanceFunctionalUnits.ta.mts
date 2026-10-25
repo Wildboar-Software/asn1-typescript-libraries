@@ -248,8 +248,8 @@ const AlarmSurveillanceFunctionalUnits_as_alarm_synch_cancel: number = 15; /* LO
  */
 export
 const as_alarm_synch_cancel: number = AlarmSurveillanceFunctionalUnits_as_alarm_synch_cancel; /* SHORT_NAMED_BIT */
-export const _decode_AlarmSurveillanceFunctionalUnits = $._decodeBitString;
-export const _encode_AlarmSurveillanceFunctionalUnits = $._encodeBitString;
+export const _decode_AlarmSurveillanceFunctionalUnits: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AlarmSurveillanceFunctionalUnits: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

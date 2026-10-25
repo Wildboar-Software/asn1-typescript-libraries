@@ -132,7 +132,7 @@ export class MessageTokenSignedData {
      * @static
      */
 
-    public static _enum_for_proof_of_delivery_request = _enum_for_ProofOfDeliveryRequest;
+    public static _enum_for_proof_of_delivery_request: typeof _enum_for_ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
 }
 
 /**

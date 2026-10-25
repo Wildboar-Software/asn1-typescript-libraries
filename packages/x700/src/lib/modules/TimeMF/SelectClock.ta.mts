@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SelectClock = INTEGER;
 
 
-export const _decode_SelectClock = $._decodeInteger;
+export const _decode_SelectClock: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SelectClock = $._encodeInteger;
+export const _encode_SelectClock: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

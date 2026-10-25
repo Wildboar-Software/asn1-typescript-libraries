@@ -300,19 +300,19 @@ class Compression_Item {
          * @static
          */
 
-    public static _enum_for_compressionNegotiationResult = _enum_for_Compression_Item_compressionNegotiationResult;        /**
+    public static _enum_for_compressionNegotiationResult: typeof _enum_for_Compression_Item_compressionNegotiationResult = _enum_for_Compression_Item_compressionNegotiationResult;        /**
          * @summary The enum used as the type of the component `v42bisCompressionActive`
          * @public
          * @static
          */
 
-    public static _enum_for_v42bisCompressionActive = _enum_for_Compression_Item_v42bisCompressionActive;        /**
+    public static _enum_for_v42bisCompressionActive: typeof _enum_for_Compression_Item_v42bisCompressionActive = _enum_for_Compression_Item_v42bisCompressionActive;        /**
          * @summary The enum used as the type of the component `v44CompressionActive`
          * @public
          * @static
          */
 
-    public static _enum_for_v44CompressionActive = _enum_for_Compression_Item_v44CompressionActive;
+    public static _enum_for_v44CompressionActive: typeof _enum_for_Compression_Item_v44CompressionActive = _enum_for_Compression_Item_v44CompressionActive;
 }
 
 /**

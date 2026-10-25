@@ -47,7 +47,7 @@ export const _decode_CCBS_Index = (el: _Element): CCBS_Index => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CCBS_Index, encoded as an ASN.1 Element.
  */
-export const _encode_CCBS_Index = $._encodeInteger;
+export const _encode_CCBS_Index: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

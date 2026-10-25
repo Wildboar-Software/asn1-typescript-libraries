@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AutoForwardComment = PrintableString; // PrintableString
 
 
-export const _decode_AutoForwardComment = $._decodePrintableString;
+export const _decode_AutoForwardComment: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_AutoForwardComment = $._encodePrintableString;
+export const _encode_AutoForwardComment: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

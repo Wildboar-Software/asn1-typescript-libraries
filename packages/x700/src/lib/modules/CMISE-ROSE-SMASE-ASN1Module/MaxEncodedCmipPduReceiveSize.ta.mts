@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type MaxEncodedCmipPduReceiveSize = INTEGER;
 
 
-export const _decode_MaxEncodedCmipPduReceiveSize = $._decodeInteger;
+export const _decode_MaxEncodedCmipPduReceiveSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MaxEncodedCmipPduReceiveSize = $._encodeInteger;
+export const _encode_MaxEncodedCmipPduReceiveSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

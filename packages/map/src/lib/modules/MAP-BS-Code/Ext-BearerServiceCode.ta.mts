@@ -51,7 +51,7 @@ export const _decode_Ext_BearerServiceCode = (el: _Element): Ext_BearerServiceCo
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_BearerServiceCode, encoded as an ASN.1 Element.
  */
-export const _encode_Ext_BearerServiceCode = $._encodeOctetString;
+export const _encode_Ext_BearerServiceCode: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

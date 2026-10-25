@@ -168,13 +168,13 @@ class TopologyRequest {
          * @static
          */
 
-    public static _enum_for_topologyDirection = _enum_for_TopologyRequest_topologyDirection;        /**
+    public static _enum_for_topologyDirection: typeof _enum_for_TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirection;        /**
          * @summary The enum used as the type of the component `topologyDirectionExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_topologyDirectionExtension = _enum_for_TopologyRequest_topologyDirectionExtension;
+    public static _enum_for_topologyDirectionExtension: typeof _enum_for_TopologyRequest_topologyDirectionExtension = _enum_for_TopologyRequest_topologyDirectionExtension;
 }
 
 /**

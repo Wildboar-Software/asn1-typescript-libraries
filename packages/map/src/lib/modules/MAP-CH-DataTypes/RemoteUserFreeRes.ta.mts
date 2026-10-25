@@ -88,7 +88,7 @@ class RemoteUserFreeRes {
          * @static
          */
 
-    public static _enum_for_ruf_Outcome = _enum_for_RUF_Outcome;
+    public static _enum_for_ruf_Outcome: typeof _enum_for_RUF_Outcome = _enum_for_RUF_Outcome;
 }
 
 /**

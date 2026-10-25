@@ -52,7 +52,7 @@ type IRI_Parameters_iRIversion = _enum_for_IRI_Parameters_iRIversion | ENUMERATE
  * @type {number}
  */
 export
-const IRI_Parameters_iRIversion_version1 = _enum_for_IRI_Parameters_iRIversion.version1; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_iRIversion_version1: _enum_for_IRI_Parameters_iRIversion.version1 = _enum_for_IRI_Parameters_iRIversion.version1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version1
@@ -64,7 +64,7 @@ const IRI_Parameters_iRIversion_version1 = _enum_for_IRI_Parameters_iRIversion.v
  * @type {number}
  */
 export
-const version1 = IRI_Parameters_iRIversion_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version1: _enum_for_IRI_Parameters_iRIversion.version1 = IRI_Parameters_iRIversion_version1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_iRIversion_version2
@@ -76,7 +76,7 @@ const version1 = IRI_Parameters_iRIversion_version1; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const IRI_Parameters_iRIversion_version2 = _enum_for_IRI_Parameters_iRIversion.version2; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_iRIversion_version2: _enum_for_IRI_Parameters_iRIversion.version2 = _enum_for_IRI_Parameters_iRIversion.version2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version2
@@ -88,7 +88,7 @@ const IRI_Parameters_iRIversion_version2 = _enum_for_IRI_Parameters_iRIversion.v
  * @type {number}
  */
 export
-const version2 = IRI_Parameters_iRIversion_version2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version2: _enum_for_IRI_Parameters_iRIversion.version2 = IRI_Parameters_iRIversion_version2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_iRIversion_version3
@@ -100,7 +100,7 @@ const version2 = IRI_Parameters_iRIversion_version2; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const IRI_Parameters_iRIversion_version3 = _enum_for_IRI_Parameters_iRIversion.version3; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_iRIversion_version3: _enum_for_IRI_Parameters_iRIversion.version3 = _enum_for_IRI_Parameters_iRIversion.version3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version3
@@ -112,7 +112,7 @@ const IRI_Parameters_iRIversion_version3 = _enum_for_IRI_Parameters_iRIversion.v
  * @type {number}
  */
 export
-const version3 = IRI_Parameters_iRIversion_version3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const version3: _enum_for_IRI_Parameters_iRIversion.version3 = IRI_Parameters_iRIversion_version3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRI_Parameters_iRIversion_lastVersion
@@ -126,7 +126,7 @@ const version3 = IRI_Parameters_iRIversion_version3; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const IRI_Parameters_iRIversion_lastVersion = _enum_for_IRI_Parameters_iRIversion.lastVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRI_Parameters_iRIversion_lastVersion: _enum_for_IRI_Parameters_iRIversion.lastVersion = _enum_for_IRI_Parameters_iRIversion.lastVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastVersion
@@ -138,7 +138,7 @@ const IRI_Parameters_iRIversion_lastVersion = _enum_for_IRI_Parameters_iRIversio
  * @type {number}
  */
 export
-const lastVersion = IRI_Parameters_iRIversion_lastVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lastVersion: _enum_for_IRI_Parameters_iRIversion.lastVersion = IRI_Parameters_iRIversion_lastVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRI_Parameters_iRIversion: $.ASN1Decoder<IRI_Parameters_iRIversion> = $._decodeEnumerated;
 export const _encode_IRI_Parameters_iRIversion: $.ASN1Encoder<IRI_Parameters_iRIversion> = $._encodeEnumerated;
 

@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type IPAvailable = OCTET_STRING; // OctetStringType
-export const _decode_IPAvailable = $._decodeOctetString;
-export const _encode_IPAvailable = $._encodeOctetString;
+export const _decode_IPAvailable: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_IPAvailable: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

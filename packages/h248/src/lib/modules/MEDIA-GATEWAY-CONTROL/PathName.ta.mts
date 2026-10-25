@@ -35,7 +35,7 @@ export const _decode_PathName = (el: _Element): PathName => {
     }
     return value;
 };
-export const _encode_PathName = $._encodeIA5String;
+export const _encode_PathName: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

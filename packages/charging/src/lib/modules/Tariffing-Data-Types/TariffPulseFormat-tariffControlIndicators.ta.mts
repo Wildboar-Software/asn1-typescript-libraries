@@ -63,7 +63,7 @@ export const _decode_TariffPulseFormat_tariffControlIndicators = (el: _Element):
     }
     return value;
 };
-export const _encode_TariffPulseFormat_tariffControlIndicators = $._encodeBitString;
+export const _encode_TariffPulseFormat_tariffControlIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

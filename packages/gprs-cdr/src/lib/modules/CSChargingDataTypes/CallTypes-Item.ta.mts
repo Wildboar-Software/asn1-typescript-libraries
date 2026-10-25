@@ -28,7 +28,7 @@ type CallTypes_Item = INTEGER;
  * @type {number}
  */
 export
-const CallTypes_Item_mobileOriginated = 0 satisfies CallTypes_Item; /* LONG_NAMED_INTEGER_VALUE */
+const CallTypes_Item_mobileOriginated: 0 = 0 satisfies CallTypes_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CallTypes_Item_mobileOriginated
@@ -36,7 +36,7 @@ const CallTypes_Item_mobileOriginated = 0 satisfies CallTypes_Item; /* LONG_NAME
  * @type {number}
  */
 export
-const mobileOriginated = CallTypes_Item_mobileOriginated; /* SHORT_NAMED_INTEGER_VALUE */
+const mobileOriginated: 0 = CallTypes_Item_mobileOriginated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CallTypes_Item_mobileTerminated
@@ -44,7 +44,7 @@ const mobileOriginated = CallTypes_Item_mobileOriginated; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const CallTypes_Item_mobileTerminated = 1 satisfies CallTypes_Item; /* LONG_NAMED_INTEGER_VALUE */
+const CallTypes_Item_mobileTerminated: 1 = 1 satisfies CallTypes_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CallTypes_Item_mobileTerminated
@@ -52,7 +52,7 @@ const CallTypes_Item_mobileTerminated = 1 satisfies CallTypes_Item; /* LONG_NAME
  * @type {number}
  */
 export
-const mobileTerminated = CallTypes_Item_mobileTerminated; /* SHORT_NAMED_INTEGER_VALUE */
+const mobileTerminated: 1 = CallTypes_Item_mobileTerminated; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CallTypes_Item: $.ASN1Decoder<CallTypes_Item> = $._decodeInteger;

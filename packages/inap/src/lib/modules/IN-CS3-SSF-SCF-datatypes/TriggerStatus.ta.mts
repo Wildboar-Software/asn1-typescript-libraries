@@ -55,7 +55,7 @@ type TriggerStatus = _enum_for_TriggerStatus;
  * @enum {number}
  */
 export
-const TriggerStatus = _enum_for_TriggerStatus;
+const TriggerStatus: typeof _enum_for_TriggerStatus = _enum_for_TriggerStatus;
 
 /**
  * @summary TriggerStatus_created
@@ -63,7 +63,7 @@ const TriggerStatus = _enum_for_TriggerStatus;
  * @type {number}
  */
 export
-const TriggerStatus_created = TriggerStatus.created; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_created: _enum_for_TriggerStatus.created = TriggerStatus.created; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary created
@@ -71,7 +71,7 @@ const TriggerStatus_created = TriggerStatus.created; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const created = TriggerStatus.created; /* SHORT_NAMED_ENUMERATED_VALUE */
+const created: _enum_for_TriggerStatus.created = TriggerStatus.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerStatus_alreadyExist
@@ -79,7 +79,7 @@ const created = TriggerStatus.created; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerStatus_alreadyExist = TriggerStatus.alreadyExist; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_alreadyExist: _enum_for_TriggerStatus.alreadyExist = TriggerStatus.alreadyExist; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alreadyExist
@@ -87,7 +87,7 @@ const TriggerStatus_alreadyExist = TriggerStatus.alreadyExist; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const alreadyExist = TriggerStatus.alreadyExist; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alreadyExist: _enum_for_TriggerStatus.alreadyExist = TriggerStatus.alreadyExist; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerStatus_deleted
@@ -95,7 +95,7 @@ const alreadyExist = TriggerStatus.alreadyExist; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const TriggerStatus_deleted = TriggerStatus.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_deleted: _enum_for_TriggerStatus.deleted = TriggerStatus.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deleted
@@ -103,7 +103,7 @@ const TriggerStatus_deleted = TriggerStatus.deleted; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const deleted = TriggerStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deleted: _enum_for_TriggerStatus.deleted = TriggerStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerStatus_unknownTrigger
@@ -111,7 +111,7 @@ const deleted = TriggerStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerStatus_unknownTrigger = TriggerStatus.unknownTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerStatus_unknownTrigger: _enum_for_TriggerStatus.unknownTrigger = TriggerStatus.unknownTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownTrigger
@@ -119,7 +119,7 @@ const TriggerStatus_unknownTrigger = TriggerStatus.unknownTrigger; /* LONG_NAMED
  * @type {number}
  */
 export
-const unknownTrigger = TriggerStatus.unknownTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownTrigger: _enum_for_TriggerStatus.unknownTrigger = TriggerStatus.unknownTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_TriggerStatus(el: _Element): TriggerStatus {

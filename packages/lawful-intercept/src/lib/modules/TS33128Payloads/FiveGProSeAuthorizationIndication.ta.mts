@@ -144,31 +144,31 @@ class FiveGProSeAuthorizationIndication {
          * @static
          */
 
-    public static _enum_for_fiveGProSeDirectDiscovery = _enum_for_FiveGProSeAuthorizationIndicator;        /**
+    public static _enum_for_fiveGProSeDirectDiscovery: typeof _enum_for_FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;        /**
          * @summary The enum used as the type of the component `fiveGProSeDirectCommunication`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGProSeDirectCommunication = _enum_for_FiveGProSeAuthorizationIndicator;        /**
+    public static _enum_for_fiveGProSeDirectCommunication: typeof _enum_for_FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;        /**
          * @summary The enum used as the type of the component `fiveGProSeL2UEToNetworkRelay`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGProSeL2UEToNetworkRelay = _enum_for_FiveGProSeAuthorizationIndicator;        /**
+    public static _enum_for_fiveGProSeL2UEToNetworkRelay: typeof _enum_for_FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;        /**
          * @summary The enum used as the type of the component `fiveGProSeL3UEToNetworkRelay`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGProSeL3UEToNetworkRelay = _enum_for_FiveGProSeAuthorizationIndicator;        /**
+    public static _enum_for_fiveGProSeL3UEToNetworkRelay: typeof _enum_for_FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;        /**
          * @summary The enum used as the type of the component `fiveGProSeL2RemoteUE`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGProSeL2RemoteUE = _enum_for_FiveGProSeAuthorizationIndicator;
+    public static _enum_for_fiveGProSeL2RemoteUE: typeof _enum_for_FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;
 }
 
 /**

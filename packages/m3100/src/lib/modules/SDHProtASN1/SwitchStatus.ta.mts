@@ -58,7 +58,7 @@ export type SwitchStatus = _enum_for_SwitchStatus;
  *
  * @enum {number}
  */
-export const SwitchStatus = _enum_for_SwitchStatus;
+export const SwitchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
 
 
 /**
@@ -66,7 +66,7 @@ export const SwitchStatus = _enum_for_SwitchStatus;
  * @constant
  * @type {number}
  */
-export const SwitchStatus_pending =
+export const SwitchStatus_pending: _enum_for_SwitchStatus.pending =
     SwitchStatus.pending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const SwitchStatus_pending =
  * @constant
  * @type {number}
  */
-export const pending =
+export const pending: _enum_for_SwitchStatus.pending =
     SwitchStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const pending =
  * @constant
  * @type {number}
  */
-export const SwitchStatus_completed =
+export const SwitchStatus_completed: _enum_for_SwitchStatus.completed =
     SwitchStatus.completed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const SwitchStatus_completed =
  * @constant
  * @type {number}
  */
-export const completed =
+export const completed: _enum_for_SwitchStatus.completed =
     SwitchStatus.completed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const completed =
  * @constant
  * @type {number}
  */
-export const SwitchStatus_operateFailed =
+export const SwitchStatus_operateFailed: _enum_for_SwitchStatus.operateFailed =
     SwitchStatus.operateFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const SwitchStatus_operateFailed =
  * @constant
  * @type {number}
  */
-export const operateFailed =
+export const operateFailed: _enum_for_SwitchStatus.operateFailed =
     SwitchStatus.operateFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

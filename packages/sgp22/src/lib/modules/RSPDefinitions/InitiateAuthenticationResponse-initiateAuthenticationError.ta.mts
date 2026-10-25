@@ -37,7 +37,7 @@ type InitiateAuthenticationResponse_initiateAuthenticationError = INTEGER;
  * @type {number}
  */
 export
-const InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress = 1 satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* LONG_NAMED_INTEGER_VALUE */
+const InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress: 1 = 1 satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress
@@ -50,7 +50,7 @@ const InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddres
  * @type {number}
  */
 export
-const invalidDpAddress = InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidDpAddress: 1 = InitiateAuthenticationResponse_initiateAuthenticationError_invalidDpAddress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp
@@ -63,7 +63,7 @@ const invalidDpAddress = InitiateAuthenticationResponse_initiateAuthenticationEr
  * @type {number}
  */
 export
-const InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp = 2 satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* LONG_NAMED_INTEGER_VALUE */
+const InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp: 2 = 2 satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp
@@ -76,7 +76,7 @@ const InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNot
  * @type {number}
  */
 export
-const euiccVersionNotSupportedByDp = InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccVersionNotSupportedByDp: 2 = InitiateAuthenticationResponse_initiateAuthenticationError_euiccVersionNotSupportedByDp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported
@@ -90,7 +90,7 @@ const euiccVersionNotSupportedByDp = InitiateAuthenticationResponse_initiateAuth
  * @type {number}
  */
 export
-const InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported = 3 satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* LONG_NAMED_INTEGER_VALUE */
+const InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported: 3 = 3 satisfies InitiateAuthenticationResponse_initiateAuthenticationError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported
@@ -104,9 +104,9 @@ const InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSuppor
  * @type {number}
  */
 export
-const ciPKIdNotSupported = InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_InitiateAuthenticationResponse_initiateAuthenticationError = $._decodeInteger;
-export const _encode_InitiateAuthenticationResponse_initiateAuthenticationError = $._encodeInteger;
+const ciPKIdNotSupported: 3 = InitiateAuthenticationResponse_initiateAuthenticationError_ciPKIdNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_InitiateAuthenticationResponse_initiateAuthenticationError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_InitiateAuthenticationResponse_initiateAuthenticationError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

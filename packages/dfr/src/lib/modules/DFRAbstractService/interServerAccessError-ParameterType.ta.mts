@@ -83,7 +83,7 @@ class interServerAccessError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_InterServerAccessProblem;
+    public static _enum_for_problem: typeof _enum_for_InterServerAccessProblem = _enum_for_InterServerAccessProblem;
 }
 
 /**

@@ -426,7 +426,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_gcseEvent = _enum_for_GcseEvent;
+    public static _enum_for_gcseEvent: typeof _enum_for_GcseEvent = _enum_for_GcseEvent;
 }
 
 /**

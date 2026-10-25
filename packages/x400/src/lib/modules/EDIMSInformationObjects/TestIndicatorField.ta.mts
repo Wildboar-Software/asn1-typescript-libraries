@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TestIndicatorField = BOOLEAN; // BooleanType
 
 
-export const _decode_TestIndicatorField = $._decodeBoolean;
+export const _decode_TestIndicatorField: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_TestIndicatorField = $._encodeBoolean;
+export const _encode_TestIndicatorField: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

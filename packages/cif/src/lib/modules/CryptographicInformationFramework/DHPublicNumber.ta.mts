@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DHPublicNumber = INTEGER;
-export const _decode_DHPublicNumber = $._decodeInteger;
-export const _encode_DHPublicNumber = $._encodeInteger;
+export const _decode_DHPublicNumber: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DHPublicNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

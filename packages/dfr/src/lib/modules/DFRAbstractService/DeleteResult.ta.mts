@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DeleteResult = NULL; // NullType
-export const _decode_DeleteResult = $._decodeNull;
-export const _encode_DeleteResult = $._encodeNull;
+export const _decode_DeleteResult: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_DeleteResult: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

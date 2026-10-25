@@ -58,7 +58,7 @@ export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
  *
  * @enum {number}
  */
-export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
+export const SearchArgumentData_joinType: typeof _enum_for_SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
 
 /**
  * @summary SearchArgumentData_joinType_innerJoin
@@ -69,7 +69,7 @@ export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_innerJoin =
+export const SearchArgumentData_joinType_innerJoin: _enum_for_SearchArgumentData_joinType.innerJoin =
     SearchArgumentData_joinType.innerJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const SearchArgumentData_joinType_innerJoin =
  * @constant
  * @type {number}
  */
-export const innerJoin =
+export const innerJoin: _enum_for_SearchArgumentData_joinType.innerJoin =
     SearchArgumentData_joinType.innerJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const innerJoin =
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_leftOuterJoin =
+export const SearchArgumentData_joinType_leftOuterJoin: _enum_for_SearchArgumentData_joinType.leftOuterJoin =
     SearchArgumentData_joinType.leftOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const SearchArgumentData_joinType_leftOuterJoin =
  * @constant
  * @type {number}
  */
-export const leftOuterJoin =
+export const leftOuterJoin: _enum_for_SearchArgumentData_joinType.leftOuterJoin =
     SearchArgumentData_joinType.leftOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const leftOuterJoin =
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_fullOuterJoin =
+export const SearchArgumentData_joinType_fullOuterJoin: _enum_for_SearchArgumentData_joinType.fullOuterJoin =
     SearchArgumentData_joinType.fullOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -131,7 +131,7 @@ export const SearchArgumentData_joinType_fullOuterJoin =
  * @constant
  * @type {number}
  */
-export const fullOuterJoin =
+export const fullOuterJoin: _enum_for_SearchArgumentData_joinType.fullOuterJoin =
     SearchArgumentData_joinType.fullOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

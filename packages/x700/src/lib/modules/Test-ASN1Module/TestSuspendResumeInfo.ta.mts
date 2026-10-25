@@ -100,7 +100,7 @@ export class TestSuspendResumeInfo {
      * @static
      */
 
-    public static _enum_for_suspendResumeChoice = _enum_for_SuspendResumeChoice;
+    public static _enum_for_suspendResumeChoice: typeof _enum_for_SuspendResumeChoice = _enum_for_SuspendResumeChoice;
 }
 
 /**

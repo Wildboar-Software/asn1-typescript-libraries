@@ -700,31 +700,31 @@ class AMFRegistration {
          * @static
          */
 
-    public static _enum_for_registrationType = _enum_for_AMFRegistrationType;        /**
+    public static _enum_for_registrationType: typeof _enum_for_AMFRegistrationType = _enum_for_AMFRegistrationType;        /**
          * @summary The enum used as the type of the component `registrationResult`
          * @public
          * @static
          */
 
-    public static _enum_for_registrationResult = _enum_for_AMFRegistrationResult;        /**
+    public static _enum_for_registrationResult: typeof _enum_for_AMFRegistrationResult = _enum_for_AMFRegistrationResult;        /**
          * @summary The enum used as the type of the component `sMSOverNasIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_sMSOverNasIndicator = _enum_for_SMSOverNASIndicator;        /**
+    public static _enum_for_sMSOverNasIndicator: typeof _enum_for_SMSOverNASIndicator = _enum_for_SMSOverNASIndicator;        /**
          * @summary The enum used as the type of the component `mACRestIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_mACRestIndicator = _enum_for_MACRestrictionIndicator;        /**
+    public static _enum_for_mACRestIndicator: typeof _enum_for_MACRestrictionIndicator = _enum_for_MACRestrictionIndicator;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

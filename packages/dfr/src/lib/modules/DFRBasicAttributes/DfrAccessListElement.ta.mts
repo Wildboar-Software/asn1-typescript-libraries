@@ -83,7 +83,7 @@ class DfrAccessListElement {
          * @static
          */
 
-    public static _enum_for_access_rights = _enum_for_AccessRights;
+    public static _enum_for_access_rights: typeof _enum_for_AccessRights = _enum_for_AccessRights;
 }
 
 /**

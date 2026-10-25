@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Precedence = INTEGER;
 
 
-export const _decode_Precedence = $._decodeInteger;
+export const _decode_Precedence: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Precedence = $._encodeInteger;
+export const _encode_Precedence: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

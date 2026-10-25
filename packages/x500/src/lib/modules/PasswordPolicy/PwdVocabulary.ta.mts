@@ -87,10 +87,10 @@ export const PwdVocabulary_noGeographicalNames: number = 2; /* LONG_NAMED_BIT */
 export const noGeographicalNames: number = PwdVocabulary_noGeographicalNames; /* SHORT_NAMED_BIT */
 
 
-export const _decode_PwdVocabulary = $._decodeBitString;
+export const _decode_PwdVocabulary: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_PwdVocabulary = $._encodeBitString;
+export const _encode_PwdVocabulary: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -61,7 +61,7 @@ type PTCPresenceType = _enum_for_PTCPresenceType;
  * @enum {number}
  */
 export
-const PTCPresenceType = _enum_for_PTCPresenceType;
+const PTCPresenceType: typeof _enum_for_PTCPresenceType = _enum_for_PTCPresenceType;
 
 /**
  * @summary PTCPresenceType_pTCClient
@@ -69,7 +69,7 @@ const PTCPresenceType = _enum_for_PTCPresenceType;
  * @type {number}
  */
 export
-const PTCPresenceType_pTCClient = PTCPresenceType.pTCClient; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCPresenceType_pTCClient: _enum_for_PTCPresenceType.pTCClient = PTCPresenceType.pTCClient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCClient
@@ -77,7 +77,7 @@ const PTCPresenceType_pTCClient = PTCPresenceType.pTCClient; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const pTCClient = PTCPresenceType.pTCClient; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCClient: _enum_for_PTCPresenceType.pTCClient = PTCPresenceType.pTCClient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCPresenceType_pTCGroup
@@ -85,7 +85,7 @@ const pTCClient = PTCPresenceType.pTCClient; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PTCPresenceType_pTCGroup = PTCPresenceType.pTCGroup; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCPresenceType_pTCGroup: _enum_for_PTCPresenceType.pTCGroup = PTCPresenceType.pTCGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCGroup
@@ -93,7 +93,7 @@ const PTCPresenceType_pTCGroup = PTCPresenceType.pTCGroup; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const pTCGroup = PTCPresenceType.pTCGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCGroup: _enum_for_PTCPresenceType.pTCGroup = PTCPresenceType.pTCGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCPresenceType: $.ASN1Decoder<PTCPresenceType> = $._decodeEnumerated;
 export const _encode_PTCPresenceType: $.ASN1Encoder<PTCPresenceType> = $._encodeEnumerated;
 

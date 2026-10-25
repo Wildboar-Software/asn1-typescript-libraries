@@ -61,12 +61,12 @@ export const version2: number = C_INITIALIZE_RC_version_number_version2; /* SHOR
 
 
 
-export const _decode_C_INITIALIZE_RC_version_number = $._decodeBitString;
+export const _decode_C_INITIALIZE_RC_version_number: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_C_INITIALIZE_RC_version_number = $._encodeBitString;
+export const _encode_C_INITIALIZE_RC_version_number: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

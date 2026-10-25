@@ -151,7 +151,7 @@ class SetRingerStatusArgument {
          * @static
          */
 
-    public static _enum_for_ringMode = _enum_for_RingMode;
+    public static _enum_for_ringMode: typeof _enum_for_RingMode = _enum_for_RingMode;
 }
 
 /**

@@ -60,7 +60,7 @@ type EndReason = _enum_for_EndReason | ENUMERATED;
  * @type {number}
  */
 export
-const EndReason_undefined = _enum_for_EndReason.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_undefined: _enum_for_EndReason.undefined = _enum_for_EndReason.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -73,7 +73,7 @@ const EndReason_undefined = _enum_for_EndReason.undefined; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const undefined = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined: _enum_for_EndReason.undefined = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_regularLogoff
@@ -87,7 +87,7 @@ const undefined = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const EndReason_regularLogoff = _enum_for_EndReason.regularLogoff; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_regularLogoff: _enum_for_EndReason.regularLogoff = _enum_for_EndReason.regularLogoff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary regularLogoff
@@ -99,7 +99,7 @@ const EndReason_regularLogoff = _enum_for_EndReason.regularLogoff; /* LONG_NAMED
  * @type {number}
  */
 export
-const regularLogoff = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const regularLogoff: _enum_for_EndReason.regularLogoff = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_connectionLoss
@@ -114,7 +114,7 @@ const regularLogoff = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const EndReason_connectionLoss = _enum_for_EndReason.connectionLoss; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_connectionLoss: _enum_for_EndReason.connectionLoss = _enum_for_EndReason.connectionLoss; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionLoss
@@ -126,7 +126,7 @@ const EndReason_connectionLoss = _enum_for_EndReason.connectionLoss; /* LONG_NAM
  * @type {number}
  */
 export
-const connectionLoss = EndReason_connectionLoss; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionLoss: _enum_for_EndReason.connectionLoss = EndReason_connectionLoss; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_connectionTimeout
@@ -139,7 +139,7 @@ const connectionLoss = EndReason_connectionLoss; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const EndReason_connectionTimeout = _enum_for_EndReason.connectionTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_connectionTimeout: _enum_for_EndReason.connectionTimeout = _enum_for_EndReason.connectionTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionTimeout
@@ -151,7 +151,7 @@ const EndReason_connectionTimeout = _enum_for_EndReason.connectionTimeout; /* LO
  * @type {number}
  */
 export
-const connectionTimeout = EndReason_connectionTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionTimeout: _enum_for_EndReason.connectionTimeout = EndReason_connectionTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_leaseExpired
@@ -165,7 +165,7 @@ const connectionTimeout = EndReason_connectionTimeout; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const EndReason_leaseExpired = _enum_for_EndReason.leaseExpired; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_leaseExpired: _enum_for_EndReason.leaseExpired = _enum_for_EndReason.leaseExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leaseExpired
@@ -177,7 +177,7 @@ const EndReason_leaseExpired = _enum_for_EndReason.leaseExpired; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const leaseExpired = EndReason_leaseExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const leaseExpired: _enum_for_EndReason.leaseExpired = EndReason_leaseExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EndReason: $.ASN1Decoder<EndReason> = $._decodeEnumerated;
 export const _encode_EndReason: $.ASN1Encoder<EndReason> = $._encodeEnumerated;
 

@@ -41,7 +41,7 @@ type BiometricTemplateVersion = INTEGER;
  * @type {number}
  */
 export
-const BiometricTemplateVersion_v0 = 0 satisfies BiometricTemplateVersion; /* LONG_NAMED_INTEGER_VALUE */
+const BiometricTemplateVersion_v0: 0 = 0 satisfies BiometricTemplateVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BiometricTemplateVersion_v0
@@ -53,9 +53,9 @@ const BiometricTemplateVersion_v0 = 0 satisfies BiometricTemplateVersion; /* LON
  * @type {number}
  */
 export
-const v0 = BiometricTemplateVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_BiometricTemplateVersion = $._decodeInteger;
-export const _encode_BiometricTemplateVersion = $._encodeInteger;
+const v0: 0 = BiometricTemplateVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_BiometricTemplateVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_BiometricTemplateVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

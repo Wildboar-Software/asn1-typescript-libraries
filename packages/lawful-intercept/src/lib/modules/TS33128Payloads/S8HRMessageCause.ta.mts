@@ -85,7 +85,7 @@ type S8HRMessageCause = _enum_for_S8HRMessageCause;
  * @enum {number}
  */
 export
-const S8HRMessageCause = _enum_for_S8HRMessageCause;
+const S8HRMessageCause: typeof _enum_for_S8HRMessageCause = _enum_for_S8HRMessageCause;
 
 /**
  * @summary S8HRMessageCause_bearerActivated
@@ -93,7 +93,7 @@ const S8HRMessageCause = _enum_for_S8HRMessageCause;
  * @type {number}
  */
 export
-const S8HRMessageCause_bearerActivated = S8HRMessageCause.bearerActivated; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_bearerActivated: _enum_for_S8HRMessageCause.bearerActivated = S8HRMessageCause.bearerActivated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerActivated
@@ -101,7 +101,7 @@ const S8HRMessageCause_bearerActivated = S8HRMessageCause.bearerActivated; /* LO
  * @type {number}
  */
 export
-const bearerActivated = S8HRMessageCause.bearerActivated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerActivated: _enum_for_S8HRMessageCause.bearerActivated = S8HRMessageCause.bearerActivated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_bearerModified
@@ -109,7 +109,7 @@ const bearerActivated = S8HRMessageCause.bearerActivated; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const S8HRMessageCause_bearerModified = S8HRMessageCause.bearerModified; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_bearerModified: _enum_for_S8HRMessageCause.bearerModified = S8HRMessageCause.bearerModified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerModified
@@ -117,7 +117,7 @@ const S8HRMessageCause_bearerModified = S8HRMessageCause.bearerModified; /* LONG
  * @type {number}
  */
 export
-const bearerModified = S8HRMessageCause.bearerModified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerModified: _enum_for_S8HRMessageCause.bearerModified = S8HRMessageCause.bearerModified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_bearerDeleted
@@ -125,7 +125,7 @@ const bearerModified = S8HRMessageCause.bearerModified; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const S8HRMessageCause_bearerDeleted = S8HRMessageCause.bearerDeleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_bearerDeleted: _enum_for_S8HRMessageCause.bearerDeleted = S8HRMessageCause.bearerDeleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerDeleted
@@ -133,7 +133,7 @@ const S8HRMessageCause_bearerDeleted = S8HRMessageCause.bearerDeleted; /* LONG_N
  * @type {number}
  */
 export
-const bearerDeleted = S8HRMessageCause.bearerDeleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerDeleted: _enum_for_S8HRMessageCause.bearerDeleted = S8HRMessageCause.bearerDeleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_pDNDisconnected
@@ -141,7 +141,7 @@ const bearerDeleted = S8HRMessageCause.bearerDeleted; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const S8HRMessageCause_pDNDisconnected = S8HRMessageCause.pDNDisconnected; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_pDNDisconnected: _enum_for_S8HRMessageCause.pDNDisconnected = S8HRMessageCause.pDNDisconnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDNDisconnected
@@ -149,7 +149,7 @@ const S8HRMessageCause_pDNDisconnected = S8HRMessageCause.pDNDisconnected; /* LO
  * @type {number}
  */
 export
-const pDNDisconnected = S8HRMessageCause.pDNDisconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDNDisconnected: _enum_for_S8HRMessageCause.pDNDisconnected = S8HRMessageCause.pDNDisconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_updatedLocationAvailable
@@ -157,7 +157,7 @@ const pDNDisconnected = S8HRMessageCause.pDNDisconnected; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const S8HRMessageCause_updatedLocationAvailable = S8HRMessageCause.updatedLocationAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_updatedLocationAvailable: _enum_for_S8HRMessageCause.updatedLocationAvailable = S8HRMessageCause.updatedLocationAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updatedLocationAvailable
@@ -165,7 +165,7 @@ const S8HRMessageCause_updatedLocationAvailable = S8HRMessageCause.updatedLocati
  * @type {number}
  */
 export
-const updatedLocationAvailable = S8HRMessageCause.updatedLocationAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updatedLocationAvailable: _enum_for_S8HRMessageCause.updatedLocationAvailable = S8HRMessageCause.updatedLocationAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_sGWChanged
@@ -173,7 +173,7 @@ const updatedLocationAvailable = S8HRMessageCause.updatedLocationAvailable; /* S
  * @type {number}
  */
 export
-const S8HRMessageCause_sGWChanged = S8HRMessageCause.sGWChanged; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_sGWChanged: _enum_for_S8HRMessageCause.sGWChanged = S8HRMessageCause.sGWChanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGWChanged
@@ -181,7 +181,7 @@ const S8HRMessageCause_sGWChanged = S8HRMessageCause.sGWChanged; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const sGWChanged = S8HRMessageCause.sGWChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGWChanged: _enum_for_S8HRMessageCause.sGWChanged = S8HRMessageCause.sGWChanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_other
@@ -189,7 +189,7 @@ const sGWChanged = S8HRMessageCause.sGWChanged; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const S8HRMessageCause_other = S8HRMessageCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_other: _enum_for_S8HRMessageCause.other = S8HRMessageCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -197,7 +197,7 @@ const S8HRMessageCause_other = S8HRMessageCause.other; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const other = S8HRMessageCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_S8HRMessageCause.other = S8HRMessageCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary S8HRMessageCause_hRLIEnabled
@@ -205,7 +205,7 @@ const other = S8HRMessageCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const S8HRMessageCause_hRLIEnabled = S8HRMessageCause.hRLIEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const S8HRMessageCause_hRLIEnabled: _enum_for_S8HRMessageCause.hRLIEnabled = S8HRMessageCause.hRLIEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hRLIEnabled
@@ -213,7 +213,7 @@ const S8HRMessageCause_hRLIEnabled = S8HRMessageCause.hRLIEnabled; /* LONG_NAMED
  * @type {number}
  */
 export
-const hRLIEnabled = S8HRMessageCause.hRLIEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hRLIEnabled: _enum_for_S8HRMessageCause.hRLIEnabled = S8HRMessageCause.hRLIEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_S8HRMessageCause: $.ASN1Decoder<S8HRMessageCause> = $._decodeEnumerated;
 export const _encode_S8HRMessageCause: $.ASN1Encoder<S8HRMessageCause> = $._encodeEnumerated;
 

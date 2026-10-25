@@ -152,7 +152,7 @@ class GSMLocation_utmCoordinates {
          * @static
          */
 
-    public static _enum_for_mapDatum = _enum_for_MapDatum;
+    public static _enum_for_mapDatum: typeof _enum_for_MapDatum = _enum_for_MapDatum;
 }
 
 /**

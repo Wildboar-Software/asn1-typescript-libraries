@@ -102,7 +102,7 @@ class AreaEventInfo {
          * @static
          */
 
-    public static _enum_for_occurrenceInfo = _enum_for_OccurrenceInfo;
+    public static _enum_for_occurrenceInfo: typeof _enum_for_OccurrenceInfo = _enum_for_OccurrenceInfo;
 }
 
 /**

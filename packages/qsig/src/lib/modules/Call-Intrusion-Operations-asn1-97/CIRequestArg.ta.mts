@@ -87,7 +87,7 @@ class CIRequestArg {
          * @static
          */
 
-    public static _enum_for_ciCapabilityLevel = _enum_for_CICapabilityLevel;
+    public static _enum_for_ciCapabilityLevel: typeof _enum_for_CICapabilityLevel = _enum_for_CICapabilityLevel;
 }
 
 /**

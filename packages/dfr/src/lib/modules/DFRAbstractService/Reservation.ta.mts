@@ -100,19 +100,19 @@ class Reservation {
      * @static
      * @method
      */
-    public static get _default_value_for_reservation_Status () { return ReservationStatus_uncommitted; }        /**
+    public static get _default_value_for_reservation_Status (): _enum_for_ReservationStatus { return ReservationStatus_uncommitted; }        /**
          * @summary The enum used as the type of the component `reservation_level`
          * @public
          * @static
          */
 
-    public static _enum_for_reservation_level = _enum_for_ReservationLevel;        /**
+    public static _enum_for_reservation_level: typeof _enum_for_ReservationLevel = _enum_for_ReservationLevel;        /**
          * @summary The enum used as the type of the component `reservation_Status`
          * @public
          * @static
          */
 
-    public static _enum_for_reservation_Status = _enum_for_ReservationStatus;
+    public static _enum_for_reservation_Status: typeof _enum_for_ReservationStatus = _enum_for_ReservationStatus;
 }
 
 /**

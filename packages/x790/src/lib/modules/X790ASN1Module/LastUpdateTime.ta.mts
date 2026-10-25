@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type LastUpdateTime = GeneralizedTime; // GeneralizedTime
-export const _decode_LastUpdateTime = $._decodeGeneralizedTime;
-export const _encode_LastUpdateTime = $._encodeGeneralizedTime;
+export const _decode_LastUpdateTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
+export const _encode_LastUpdateTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

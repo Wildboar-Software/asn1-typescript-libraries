@@ -75,7 +75,7 @@ type LifecycleState = _enum_for_LifecycleState;
  * @enum {number}
  */
 export
-const LifecycleState = _enum_for_LifecycleState;
+const LifecycleState: typeof _enum_for_LifecycleState = _enum_for_LifecycleState;
 
 /**
  * @summary LifecycleState_planned
@@ -88,7 +88,7 @@ const LifecycleState = _enum_for_LifecycleState;
  * @type {number}
  */
 export
-const LifecycleState_planned = LifecycleState.planned; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifecycleState_planned: 0 = LifecycleState.planned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary planned
@@ -101,7 +101,7 @@ const LifecycleState_planned = LifecycleState.planned; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const planned = LifecycleState.planned; /* SHORT_NAMED_ENUMERATED_VALUE */
+const planned: 0 = LifecycleState.planned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifecycleState_installed
@@ -113,7 +113,7 @@ const planned = LifecycleState.planned; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LifecycleState_installed = LifecycleState.installed; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifecycleState_installed: 1 = LifecycleState.installed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary installed
@@ -125,7 +125,7 @@ const LifecycleState_installed = LifecycleState.installed; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const installed = LifecycleState.installed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const installed: 1 = LifecycleState.installed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifecycleState_pendingRemoval
@@ -137,7 +137,7 @@ const installed = LifecycleState.installed; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LifecycleState_pendingRemoval = LifecycleState.pendingRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifecycleState_pendingRemoval: 2 = LifecycleState.pendingRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pendingRemoval
@@ -149,7 +149,7 @@ const LifecycleState_pendingRemoval = LifecycleState.pendingRemoval; /* LONG_NAM
  * @type {number}
  */
 export
-const pendingRemoval = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pendingRemoval: 2 = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_LifecycleState(el: _Element): LifecycleState {

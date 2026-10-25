@@ -117,7 +117,7 @@ class ApplicationServersInformation {
          * @static
          */
 
-    public static _enum_for_sTatus = _enum_for_Status;
+    public static _enum_for_sTatus: typeof _enum_for_Status = _enum_for_Status;
 }
 
 /**

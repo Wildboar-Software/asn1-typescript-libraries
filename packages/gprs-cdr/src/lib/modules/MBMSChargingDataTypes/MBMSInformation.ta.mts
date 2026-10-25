@@ -359,25 +359,25 @@ class MBMSInformation {
          * @static
          */
 
-    public static _enum_for_mBMSServiceType = _enum_for_MBMSInformation_mBMSServiceType;        /**
+    public static _enum_for_mBMSServiceType: typeof _enum_for_MBMSInformation_mBMSServiceType = _enum_for_MBMSInformation_mBMSServiceType;        /**
          * @summary The enum used as the type of the component `mBMSUserServiceType`
          * @public
          * @static
          */
 
-    public static _enum_for_mBMSUserServiceType = _enum_for_MBMSInformation_mBMSUserServiceType;        /**
+    public static _enum_for_mBMSUserServiceType: typeof _enum_for_MBMSInformation_mBMSUserServiceType = _enum_for_MBMSInformation_mBMSUserServiceType;        /**
          * @summary The enum used as the type of the component `mBMS2G3GIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_mBMS2G3GIndicator = _enum_for_MBMSInformation_mBMS2G3GIndicator;        /**
+    public static _enum_for_mBMS2G3GIndicator: typeof _enum_for_MBMSInformation_mBMS2G3GIndicator = _enum_for_MBMSInformation_mBMS2G3GIndicator;        /**
          * @summary The enum used as the type of the component `cNIPMulticastDistribution`
          * @public
          * @static
          */
 
-    public static _enum_for_cNIPMulticastDistribution = _enum_for_MBMSInformation_cNIPMulticastDistribution;
+    public static _enum_for_cNIPMulticastDistribution: typeof _enum_for_MBMSInformation_cNIPMulticastDistribution = _enum_for_MBMSInformation_cNIPMulticastDistribution;
 }
 
 /**

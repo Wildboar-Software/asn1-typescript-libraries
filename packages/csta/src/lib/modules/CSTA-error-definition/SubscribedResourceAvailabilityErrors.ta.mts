@@ -84,7 +84,7 @@ type SubscribedResourceAvailabilityErrors = _enum_for_SubscribedResourceAvailabi
  * @enum {number}
  */
 export
-const SubscribedResourceAvailabilityErrors = _enum_for_SubscribedResourceAvailabilityErrors;
+const SubscribedResourceAvailabilityErrors: typeof _enum_for_SubscribedResourceAvailabilityErrors = _enum_for_SubscribedResourceAvailabilityErrors;
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_generic
@@ -96,7 +96,7 @@ const SubscribedResourceAvailabilityErrors = _enum_for_SubscribedResourceAvailab
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SubscribedResourceAvailabilityErrors_generic = SubscribedResourceAvailabilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscribedResourceAvailabilityErrors_generic: _enum_for_SubscribedResourceAvailabilityErrors.generic = SubscribedResourceAvailabilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -105,7 +105,7 @@ const SubscribedResourceAvailabilityErrors_generic = SubscribedResourceAvailabil
  * @type {number}
  */
 export
-const generic = SubscribedResourceAvailabilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_SubscribedResourceAvailabilityErrors.generic = SubscribedResourceAvailabilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded
@@ -117,7 +117,7 @@ const generic = SubscribedResourceAvailabilityErrors.generic; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded = SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded = SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectMonitorLimitExceeded
@@ -128,7 +128,7 @@ const SubscribedResourceAvailabilityErrors_objectMonitorLimitExceeded = Subscrib
  * @type {number}
  */
 export
-const objectMonitorLimitExceeded = SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const objectMonitorLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded = SubscribedResourceAvailabilityErrors.objectMonitorLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_trunkLimitExceeded
@@ -138,7 +138,7 @@ const objectMonitorLimitExceeded = SubscribedResourceAvailabilityErrors.objectMo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SubscribedResourceAvailabilityErrors_trunkLimitExceeded = SubscribedResourceAvailabilityErrors.trunkLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscribedResourceAvailabilityErrors_trunkLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.trunkLimitExceeded = SubscribedResourceAvailabilityErrors.trunkLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trunkLimitExceeded
@@ -148,7 +148,7 @@ const SubscribedResourceAvailabilityErrors_trunkLimitExceeded = SubscribedResour
  * @type {number}
  */
 export
-const trunkLimitExceeded = SubscribedResourceAvailabilityErrors.trunkLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trunkLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.trunkLimitExceeded = SubscribedResourceAvailabilityErrors.trunkLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded
@@ -160,7 +160,7 @@ const trunkLimitExceeded = SubscribedResourceAvailabilityErrors.trunkLimitExceed
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded = SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded = SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outstandingReqLimitExceeded
@@ -171,7 +171,7 @@ const SubscribedResourceAvailabilityErrors_outstandingReqLimitExceeded = Subscri
  * @type {number}
  */
 export
-const outstandingReqLimitExceeded = SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outstandingReqLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded = SubscribedResourceAvailabilityErrors.outstandingReqLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded
@@ -182,7 +182,7 @@ const outstandingReqLimitExceeded = SubscribedResourceAvailabilityErrors.outstan
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded = SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded = SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectRegistrationLimitExceeded
@@ -193,7 +193,7 @@ const SubscribedResourceAvailabilityErrors_objectRegistrationLimitExceeded = Sub
  * @type {number}
  */
 export
-const objectRegistrationLimitExceeded = SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const objectRegistrationLimitExceeded: _enum_for_SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded = SubscribedResourceAvailabilityErrors.objectRegistrationLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SubscribedResourceAvailabilityErrors: $.ASN1Decoder<SubscribedResourceAvailabilityErrors> | null = null;
 

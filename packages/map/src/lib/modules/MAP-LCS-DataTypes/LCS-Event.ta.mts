@@ -53,7 +53,7 @@ type LCS_Event = _enum_for_LCS_Event | ENUMERATED;
  * @type {number}
  */
 export
-const LCS_Event_emergencyCallOrigination = _enum_for_LCS_Event.emergencyCallOrigination; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_emergencyCallOrigination: _enum_for_LCS_Event.emergencyCallOrigination = _enum_for_LCS_Event.emergencyCallOrigination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCallOrigination
@@ -65,7 +65,7 @@ const LCS_Event_emergencyCallOrigination = _enum_for_LCS_Event.emergencyCallOrig
  * @type {number}
  */
 export
-const emergencyCallOrigination = LCS_Event_emergencyCallOrigination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCallOrigination: _enum_for_LCS_Event.emergencyCallOrigination = LCS_Event_emergencyCallOrigination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_emergencyCallRelease
@@ -77,7 +77,7 @@ const emergencyCallOrigination = LCS_Event_emergencyCallOrigination; /* SHORT_NA
  * @type {number}
  */
 export
-const LCS_Event_emergencyCallRelease = _enum_for_LCS_Event.emergencyCallRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_emergencyCallRelease: _enum_for_LCS_Event.emergencyCallRelease = _enum_for_LCS_Event.emergencyCallRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCallRelease
@@ -89,7 +89,7 @@ const LCS_Event_emergencyCallRelease = _enum_for_LCS_Event.emergencyCallRelease;
  * @type {number}
  */
 export
-const emergencyCallRelease = LCS_Event_emergencyCallRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCallRelease: _enum_for_LCS_Event.emergencyCallRelease = LCS_Event_emergencyCallRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_mo_lr
@@ -101,7 +101,7 @@ const emergencyCallRelease = LCS_Event_emergencyCallRelease; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const LCS_Event_mo_lr = _enum_for_LCS_Event.mo_lr; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_mo_lr: _enum_for_LCS_Event.mo_lr = _enum_for_LCS_Event.mo_lr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mo_lr
@@ -113,7 +113,7 @@ const LCS_Event_mo_lr = _enum_for_LCS_Event.mo_lr; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const mo_lr = LCS_Event_mo_lr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mo_lr: _enum_for_LCS_Event.mo_lr = LCS_Event_mo_lr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_deferredmt_lrResponse
@@ -125,7 +125,7 @@ const mo_lr = LCS_Event_mo_lr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LCS_Event_deferredmt_lrResponse = _enum_for_LCS_Event.deferredmt_lrResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_deferredmt_lrResponse: _enum_for_LCS_Event.deferredmt_lrResponse = _enum_for_LCS_Event.deferredmt_lrResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredmt_lrResponse
@@ -137,7 +137,7 @@ const LCS_Event_deferredmt_lrResponse = _enum_for_LCS_Event.deferredmt_lrRespons
  * @type {number}
  */
 export
-const deferredmt_lrResponse = LCS_Event_deferredmt_lrResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredmt_lrResponse: _enum_for_LCS_Event.deferredmt_lrResponse = LCS_Event_deferredmt_lrResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_deferredmo_lrTTTPInitiation
@@ -149,7 +149,7 @@ const deferredmt_lrResponse = LCS_Event_deferredmt_lrResponse; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const LCS_Event_deferredmo_lrTTTPInitiation = _enum_for_LCS_Event.deferredmo_lrTTTPInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_deferredmo_lrTTTPInitiation: _enum_for_LCS_Event.deferredmo_lrTTTPInitiation = _enum_for_LCS_Event.deferredmo_lrTTTPInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredmo_lrTTTPInitiation
@@ -161,7 +161,7 @@ const LCS_Event_deferredmo_lrTTTPInitiation = _enum_for_LCS_Event.deferredmo_lrT
  * @type {number}
  */
 export
-const deferredmo_lrTTTPInitiation = LCS_Event_deferredmo_lrTTTPInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredmo_lrTTTPInitiation: _enum_for_LCS_Event.deferredmo_lrTTTPInitiation = LCS_Event_deferredmo_lrTTTPInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_Event_emergencyCallHandover
@@ -173,7 +173,7 @@ const deferredmo_lrTTTPInitiation = LCS_Event_deferredmo_lrTTTPInitiation; /* SH
  * @type {number}
  */
 export
-const LCS_Event_emergencyCallHandover = _enum_for_LCS_Event.emergencyCallHandover; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_Event_emergencyCallHandover: _enum_for_LCS_Event.emergencyCallHandover = _enum_for_LCS_Event.emergencyCallHandover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCallHandover
@@ -185,7 +185,7 @@ const LCS_Event_emergencyCallHandover = _enum_for_LCS_Event.emergencyCallHandove
  * @type {number}
  */
 export
-const emergencyCallHandover = LCS_Event_emergencyCallHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCallHandover: _enum_for_LCS_Event.emergencyCallHandover = LCS_Event_emergencyCallHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_Event
@@ -193,7 +193,7 @@ const emergencyCallHandover = LCS_Event_emergencyCallHandover; /* SHORT_NAMED_EN
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LCS_Event = $._decodeEnumerated;
+export const _decode_LCS_Event: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCS_Event into an ASN.1 Element.
@@ -202,7 +202,7 @@ export const _decode_LCS_Event = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_Event, encoded as an ASN.1 Element.
  */
-export const _encode_LCS_Event = $._encodeEnumerated;
+export const _encode_LCS_Event: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

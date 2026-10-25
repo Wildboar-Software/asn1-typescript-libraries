@@ -58,7 +58,7 @@ export type LoopbackControl_status = _enum_for_LoopbackControl_status;
  *
  * @enum {number}
  */
-export const LoopbackControl_status = _enum_for_LoopbackControl_status;
+export const LoopbackControl_status: typeof _enum_for_LoopbackControl_status = _enum_for_LoopbackControl_status;
 
 
 /**
@@ -66,7 +66,7 @@ export const LoopbackControl_status = _enum_for_LoopbackControl_status;
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_noLoopback =
+export const LoopbackControl_status_noLoopback: _enum_for_LoopbackControl_status.noLoopback =
     LoopbackControl_status.noLoopback; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const LoopbackControl_status_noLoopback =
  * @constant
  * @type {number}
  */
-export const noLoopback =
+export const noLoopback: _enum_for_LoopbackControl_status.noLoopback =
     LoopbackControl_status.noLoopback; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const noLoopback =
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_endALoopedBack =
+export const LoopbackControl_status_endALoopedBack: _enum_for_LoopbackControl_status.endALoopedBack =
     LoopbackControl_status.endALoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const LoopbackControl_status_endALoopedBack =
  * @constant
  * @type {number}
  */
-export const endALoopedBack =
+export const endALoopedBack: _enum_for_LoopbackControl_status.endALoopedBack =
     LoopbackControl_status.endALoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const endALoopedBack =
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_endBLoopedBack =
+export const LoopbackControl_status_endBLoopedBack: _enum_for_LoopbackControl_status.endBLoopedBack =
     LoopbackControl_status.endBLoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const LoopbackControl_status_endBLoopedBack =
  * @constant
  * @type {number}
  */
-export const endBLoopedBack =
+export const endBLoopedBack: _enum_for_LoopbackControl_status.endBLoopedBack =
     LoopbackControl_status.endBLoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

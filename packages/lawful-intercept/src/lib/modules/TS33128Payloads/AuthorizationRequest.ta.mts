@@ -97,7 +97,7 @@ class AuthorizationRequest {
          * @static
          */
 
-    public static _enum_for_authorizationType = _enum_for_AuthorizationType;
+    public static _enum_for_authorizationType: typeof _enum_for_AuthorizationType = _enum_for_AuthorizationType;
 }
 
 /**

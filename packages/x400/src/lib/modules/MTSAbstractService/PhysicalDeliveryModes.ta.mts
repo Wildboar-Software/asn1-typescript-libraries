@@ -209,10 +209,10 @@ export const PhysicalDeliveryModes_bureau_fax_delivery: number = 7; /* LONG_NAME
 export const bureau_fax_delivery: number = PhysicalDeliveryModes_bureau_fax_delivery; /* SHORT_NAMED_BIT */
 
 
-export const _decode_PhysicalDeliveryModes = $._decodeBitString;
+export const _decode_PhysicalDeliveryModes: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_PhysicalDeliveryModes = $._encodeBitString;
+export const _encode_PhysicalDeliveryModes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

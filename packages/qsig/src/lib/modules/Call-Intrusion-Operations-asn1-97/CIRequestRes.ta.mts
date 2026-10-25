@@ -86,7 +86,7 @@ class CIRequestRes {
          * @static
          */
 
-    public static _enum_for_ciUnwantedUserStatus = _enum_for_CIUnwantedUserStatus;
+    public static _enum_for_ciUnwantedUserStatus: typeof _enum_for_CIUnwantedUserStatus = _enum_for_CIUnwantedUserStatus;
 }
 
 /**

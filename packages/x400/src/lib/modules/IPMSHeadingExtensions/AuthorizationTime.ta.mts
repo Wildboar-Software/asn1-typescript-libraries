@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AuthorizationTime = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_AuthorizationTime = $._decodeGeneralizedTime;
+export const _decode_AuthorizationTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_AuthorizationTime = $._encodeGeneralizedTime;
+export const _encode_AuthorizationTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

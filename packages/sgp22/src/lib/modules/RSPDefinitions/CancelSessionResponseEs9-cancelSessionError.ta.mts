@@ -37,7 +37,7 @@ type CancelSessionResponseEs9_cancelSessionError = INTEGER;
  * @type {number}
  */
 export
-const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId = 1 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId: 1 = 1 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_invalidTransactionId
@@ -49,7 +49,7 @@ const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId = 1 satis
  * @type {number}
  */
 export
-const invalidTransactionId = CancelSessionResponseEs9_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId: 1 = CancelSessionResponseEs9_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid
@@ -61,7 +61,7 @@ const invalidTransactionId = CancelSessionResponseEs9_cancelSessionError_invalid
  * @type {number}
  */
 export
-const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid = 2 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid: 2 = 2 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid
@@ -73,7 +73,7 @@ const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid = 2 sati
  * @type {number}
  */
 export
-const euiccSignatureInvalid = CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid: 2 = CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_undefinedError
@@ -85,7 +85,7 @@ const euiccSignatureInvalid = CancelSessionResponseEs9_cancelSessionError_euiccS
  * @type {number}
  */
 export
-const CancelSessionResponseEs9_cancelSessionError_undefinedError = 127 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEs9_cancelSessionError_undefinedError: 127 = 127 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_undefinedError
@@ -97,9 +97,9 @@ const CancelSessionResponseEs9_cancelSessionError_undefinedError = 127 satisfies
  * @type {number}
  */
 export
-const undefinedError = CancelSessionResponseEs9_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_CancelSessionResponseEs9_cancelSessionError = $._decodeInteger;
-export const _encode_CancelSessionResponseEs9_cancelSessionError = $._encodeInteger;
+const undefinedError: 127 = CancelSessionResponseEs9_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_CancelSessionResponseEs9_cancelSessionError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_CancelSessionResponseEs9_cancelSessionError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -34,12 +34,12 @@ export type Float = REAL; // RealType
 
 
 
-export const _decode_Float = $._decodeReal;
+export const _decode_Float: $.ASN1Decoder<number> = $._decodeReal;
 
 
 
 
-export const _encode_Float = $._encodeReal;
+export const _encode_Float: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

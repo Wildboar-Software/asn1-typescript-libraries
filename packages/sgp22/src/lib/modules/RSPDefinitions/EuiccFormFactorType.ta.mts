@@ -24,8 +24,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EuiccFormFactorType = INTEGER;
-export const _decode_EuiccFormFactorType = $._decodeInteger;
-export const _encode_EuiccFormFactorType = $._encodeInteger;
+export const _decode_EuiccFormFactorType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EuiccFormFactorType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

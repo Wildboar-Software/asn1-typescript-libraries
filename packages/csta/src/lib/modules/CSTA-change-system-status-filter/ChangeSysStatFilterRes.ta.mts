@@ -90,7 +90,7 @@ class ChangeSysStatFilterRes {
          * @static
          */
 
-    public static _enum_for_actualStatusFilter = _enum_for_SystemStatus;
+    public static _enum_for_actualStatusFilter: typeof _enum_for_SystemStatus = _enum_for_SystemStatus;
 }
 
 /**

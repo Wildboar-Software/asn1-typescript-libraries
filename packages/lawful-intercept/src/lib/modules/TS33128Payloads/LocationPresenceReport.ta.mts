@@ -247,13 +247,13 @@ class LocationPresenceReport {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_AMFEventType;        /**
+    public static _enum_for_type_: typeof _enum_for_AMFEventType = _enum_for_AMFEventType;        /**
          * @summary The enum used as the type of the component `reachability`
          * @public
          * @static
          */
 
-    public static _enum_for_reachability = _enum_for_UEReachability;
+    public static _enum_for_reachability: typeof _enum_for_UEReachability = _enum_for_UEReachability;
 }
 
 /**

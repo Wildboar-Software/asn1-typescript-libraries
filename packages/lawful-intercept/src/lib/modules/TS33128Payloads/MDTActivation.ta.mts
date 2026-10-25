@@ -65,7 +65,7 @@ type MDTActivation = _enum_for_MDTActivation;
  * @enum {number}
  */
 export
-const MDTActivation = _enum_for_MDTActivation;
+const MDTActivation: typeof _enum_for_MDTActivation = _enum_for_MDTActivation;
 
 /**
  * @summary MDTActivation_immediateMDTOnly
@@ -73,7 +73,7 @@ const MDTActivation = _enum_for_MDTActivation;
  * @type {number}
  */
 export
-const MDTActivation_immediateMDTOnly = MDTActivation.immediateMDTOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const MDTActivation_immediateMDTOnly: _enum_for_MDTActivation.immediateMDTOnly = MDTActivation.immediateMDTOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediateMDTOnly
@@ -81,7 +81,7 @@ const MDTActivation_immediateMDTOnly = MDTActivation.immediateMDTOnly; /* LONG_N
  * @type {number}
  */
 export
-const immediateMDTOnly = MDTActivation.immediateMDTOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const immediateMDTOnly: _enum_for_MDTActivation.immediateMDTOnly = MDTActivation.immediateMDTOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MDTActivation_loggedMDTOnly
@@ -89,7 +89,7 @@ const immediateMDTOnly = MDTActivation.immediateMDTOnly; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const MDTActivation_loggedMDTOnly = MDTActivation.loggedMDTOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const MDTActivation_loggedMDTOnly: _enum_for_MDTActivation.loggedMDTOnly = MDTActivation.loggedMDTOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary loggedMDTOnly
@@ -97,7 +97,7 @@ const MDTActivation_loggedMDTOnly = MDTActivation.loggedMDTOnly; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const loggedMDTOnly = MDTActivation.loggedMDTOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const loggedMDTOnly: _enum_for_MDTActivation.loggedMDTOnly = MDTActivation.loggedMDTOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MDTActivation_immediateMDTandTrace
@@ -105,7 +105,7 @@ const loggedMDTOnly = MDTActivation.loggedMDTOnly; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const MDTActivation_immediateMDTandTrace = MDTActivation.immediateMDTandTrace; /* LONG_NAMED_ENUMERATED_VALUE */
+const MDTActivation_immediateMDTandTrace: _enum_for_MDTActivation.immediateMDTandTrace = MDTActivation.immediateMDTandTrace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediateMDTandTrace
@@ -113,7 +113,7 @@ const MDTActivation_immediateMDTandTrace = MDTActivation.immediateMDTandTrace; /
  * @type {number}
  */
 export
-const immediateMDTandTrace = MDTActivation.immediateMDTandTrace; /* SHORT_NAMED_ENUMERATED_VALUE */
+const immediateMDTandTrace: _enum_for_MDTActivation.immediateMDTandTrace = MDTActivation.immediateMDTandTrace; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MDTActivation: $.ASN1Decoder<MDTActivation> = $._decodeEnumerated;
 export const _encode_MDTActivation: $.ASN1Encoder<MDTActivation> = $._encodeEnumerated;
 

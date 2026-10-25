@@ -94,7 +94,7 @@ type DPIOperationType = _enum_for_DPIOperationType;
  * @enum {number}
  */
 export
-const DPIOperationType = _enum_for_DPIOperationType;
+const DPIOperationType: typeof _enum_for_DPIOperationType = _enum_for_DPIOperationType;
 
 /**
  * @summary DPIOperationType_createDynamicPolicy
@@ -102,7 +102,7 @@ const DPIOperationType = _enum_for_DPIOperationType;
  * @type {number}
  */
 export
-const DPIOperationType_createDynamicPolicy = DPIOperationType.createDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const DPIOperationType_createDynamicPolicy: _enum_for_DPIOperationType.createDynamicPolicy = DPIOperationType.createDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary createDynamicPolicy
@@ -110,7 +110,7 @@ const DPIOperationType_createDynamicPolicy = DPIOperationType.createDynamicPolic
  * @type {number}
  */
 export
-const createDynamicPolicy = DPIOperationType.createDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const createDynamicPolicy: _enum_for_DPIOperationType.createDynamicPolicy = DPIOperationType.createDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DPIOperationType_retrieveDynamicPolicy
@@ -118,7 +118,7 @@ const createDynamicPolicy = DPIOperationType.createDynamicPolicy; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DPIOperationType_retrieveDynamicPolicy = DPIOperationType.retrieveDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const DPIOperationType_retrieveDynamicPolicy: _enum_for_DPIOperationType.retrieveDynamicPolicy = DPIOperationType.retrieveDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieveDynamicPolicy
@@ -126,7 +126,7 @@ const DPIOperationType_retrieveDynamicPolicy = DPIOperationType.retrieveDynamicP
  * @type {number}
  */
 export
-const retrieveDynamicPolicy = DPIOperationType.retrieveDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieveDynamicPolicy: _enum_for_DPIOperationType.retrieveDynamicPolicy = DPIOperationType.retrieveDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DPIOperationType_updateDynamicPolicy
@@ -134,7 +134,7 @@ const retrieveDynamicPolicy = DPIOperationType.retrieveDynamicPolicy; /* SHORT_N
  * @type {number}
  */
 export
-const DPIOperationType_updateDynamicPolicy = DPIOperationType.updateDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const DPIOperationType_updateDynamicPolicy: _enum_for_DPIOperationType.updateDynamicPolicy = DPIOperationType.updateDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updateDynamicPolicy
@@ -142,7 +142,7 @@ const DPIOperationType_updateDynamicPolicy = DPIOperationType.updateDynamicPolic
  * @type {number}
  */
 export
-const updateDynamicPolicy = DPIOperationType.updateDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updateDynamicPolicy: _enum_for_DPIOperationType.updateDynamicPolicy = DPIOperationType.updateDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DPIOperationType_patchDynamicPolicy
@@ -150,7 +150,7 @@ const updateDynamicPolicy = DPIOperationType.updateDynamicPolicy; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DPIOperationType_patchDynamicPolicy = DPIOperationType.patchDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const DPIOperationType_patchDynamicPolicy: _enum_for_DPIOperationType.patchDynamicPolicy = DPIOperationType.patchDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary patchDynamicPolicy
@@ -158,7 +158,7 @@ const DPIOperationType_patchDynamicPolicy = DPIOperationType.patchDynamicPolicy;
  * @type {number}
  */
 export
-const patchDynamicPolicy = DPIOperationType.patchDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const patchDynamicPolicy: _enum_for_DPIOperationType.patchDynamicPolicy = DPIOperationType.patchDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DPIOperationType_destroyDynamicPolicy
@@ -166,7 +166,7 @@ const patchDynamicPolicy = DPIOperationType.patchDynamicPolicy; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const DPIOperationType_destroyDynamicPolicy = DPIOperationType.destroyDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const DPIOperationType_destroyDynamicPolicy: _enum_for_DPIOperationType.destroyDynamicPolicy = DPIOperationType.destroyDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destroyDynamicPolicy
@@ -174,7 +174,7 @@ const DPIOperationType_destroyDynamicPolicy = DPIOperationType.destroyDynamicPol
  * @type {number}
  */
 export
-const destroyDynamicPolicy = DPIOperationType.destroyDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destroyDynamicPolicy: _enum_for_DPIOperationType.destroyDynamicPolicy = DPIOperationType.destroyDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DPIOperationType: $.ASN1Decoder<DPIOperationType> = $._decodeEnumerated;
 export const _encode_DPIOperationType: $.ASN1Encoder<DPIOperationType> = $._encodeEnumerated;
 

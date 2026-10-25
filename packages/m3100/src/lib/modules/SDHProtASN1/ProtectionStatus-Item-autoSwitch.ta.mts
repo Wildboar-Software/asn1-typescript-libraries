@@ -114,14 +114,14 @@ export class ProtectionStatus_Item_autoSwitch {
      * @static
      */
 
-    public static _enum_for_requestSource = _enum_for_RequestSource;
+    public static _enum_for_requestSource: typeof _enum_for_RequestSource = _enum_for_RequestSource;
     /**
      * @summary The enum used as the type of the component `switchStatus`
      * @public
      * @static
      */
 
-    public static _enum_for_switchStatus = _enum_for_SwitchStatus;
+    public static _enum_for_switchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
 }
 
 

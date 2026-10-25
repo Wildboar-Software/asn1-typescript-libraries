@@ -70,7 +70,7 @@ type UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessMo
  * @enum {number}
  */
 export
-const UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessMode;
+const UserCSGInformation_cSGAccessMode: typeof _enum_for_UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessMode;
 
 /**
  * @summary UserCSGInformation_cSGAccessMode_closedMode
@@ -82,7 +82,7 @@ const UserCSGInformation_cSGAccessMode = _enum_for_UserCSGInformation_cSGAccessM
  * @type {number}
  */
 export
-const UserCSGInformation_cSGAccessMode_closedMode = UserCSGInformation_cSGAccessMode.closedMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserCSGInformation_cSGAccessMode_closedMode: _enum_for_UserCSGInformation_cSGAccessMode.closedMode = UserCSGInformation_cSGAccessMode.closedMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary closedMode
@@ -94,7 +94,7 @@ const UserCSGInformation_cSGAccessMode_closedMode = UserCSGInformation_cSGAccess
  * @type {number}
  */
 export
-const closedMode = UserCSGInformation_cSGAccessMode.closedMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const closedMode: _enum_for_UserCSGInformation_cSGAccessMode.closedMode = UserCSGInformation_cSGAccessMode.closedMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserCSGInformation_cSGAccessMode_hybridMode
@@ -106,7 +106,7 @@ const closedMode = UserCSGInformation_cSGAccessMode.closedMode; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const UserCSGInformation_cSGAccessMode_hybridMode = UserCSGInformation_cSGAccessMode.hybridMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserCSGInformation_cSGAccessMode_hybridMode: _enum_for_UserCSGInformation_cSGAccessMode.hybridMode = UserCSGInformation_cSGAccessMode.hybridMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hybridMode
@@ -118,7 +118,7 @@ const UserCSGInformation_cSGAccessMode_hybridMode = UserCSGInformation_cSGAccess
  * @type {number}
  */
 export
-const hybridMode = UserCSGInformation_cSGAccessMode.hybridMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hybridMode: _enum_for_UserCSGInformation_cSGAccessMode.hybridMode = UserCSGInformation_cSGAccessMode.hybridMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_UserCSGInformation_cSGAccessMode: $.ASN1Decoder<UserCSGInformation_cSGAccessMode> = $._decodeEnumerated;

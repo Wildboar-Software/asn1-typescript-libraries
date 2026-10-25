@@ -158,7 +158,7 @@ export class TimeDifference {
      * @static
      */
 
-    public static _enum_for_sign = _enum_for_TimeDifference_sign;
+    public static _enum_for_sign: typeof _enum_for_TimeDifference_sign = _enum_for_TimeDifference_sign;
 }
 
 /**

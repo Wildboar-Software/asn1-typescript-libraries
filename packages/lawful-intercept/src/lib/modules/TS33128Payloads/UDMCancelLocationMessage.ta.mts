@@ -227,7 +227,7 @@ class UDMCancelLocationMessage {
          * @static
          */
 
-    public static _enum_for_cancelLocationMethod = _enum_for_UDMCancelLocationMethod;
+    public static _enum_for_cancelLocationMethod: typeof _enum_for_UDMCancelLocationMethod = _enum_for_UDMCancelLocationMethod;
 }
 
 /**

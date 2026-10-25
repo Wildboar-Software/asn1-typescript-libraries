@@ -107,13 +107,13 @@ class CallUnrelatedDpSpecificCommonParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_terminalType () { return TerminalType_isdn; }        /**
+    public static get _default_value_for_terminalType (): _enum_for_TerminalType { return TerminalType_isdn; }        /**
          * @summary The enum used as the type of the component `terminalType`
          * @public
          * @static
          */
 
-    public static _enum_for_terminalType = _enum_for_TerminalType;
+    public static _enum_for_terminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;
 }
 
 /**

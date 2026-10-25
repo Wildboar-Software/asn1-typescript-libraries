@@ -37,10 +37,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AlarmEffectOnServiceParameter = BOOLEAN; // BooleanType
 
 
-export const _decode_AlarmEffectOnServiceParameter = $._decodeBoolean;
+export const _decode_AlarmEffectOnServiceParameter: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_AlarmEffectOnServiceParameter = $._encodeBoolean;
+export const _encode_AlarmEffectOnServiceParameter: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

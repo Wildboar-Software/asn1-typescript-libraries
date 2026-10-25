@@ -31,20 +31,20 @@ export type RangeProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const RangeProblem_reversed = 0 satisfies RangeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const RangeProblem_reversed: 0 = 0 satisfies RangeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RangeProblem_reversed
  * @constant
  * @type {number}
  */
-export const reversed = RangeProblem_reversed; /* SHORT_NAMED_INTEGER_VALUE */
+export const reversed: 0 = RangeProblem_reversed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_RangeProblem = $._decodeInteger;
+export const _decode_RangeProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RangeProblem = $._encodeInteger;
+export const _encode_RangeProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

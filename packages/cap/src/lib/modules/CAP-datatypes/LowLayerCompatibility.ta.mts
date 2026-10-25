@@ -22,5 +22,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type LowLayerCompatibility = OCTET_STRING;
-export const _decode_LowLayerCompatibility = $._decodeOctetString;
-export const _encode_LowLayerCompatibility = $._encodeOctetString;
+export const _decode_LowLayerCompatibility: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_LowLayerCompatibility: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

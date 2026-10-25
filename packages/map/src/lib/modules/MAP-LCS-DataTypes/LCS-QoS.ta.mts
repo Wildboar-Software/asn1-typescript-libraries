@@ -158,7 +158,7 @@ class LCS_QoS {
          * @static
          */
 
-    public static _enum_for_lcs_qos_class = _enum_for_LCS_QoS_Class;
+    public static _enum_for_lcs_qos_class: typeof _enum_for_LCS_QoS_Class = _enum_for_LCS_QoS_Class;
 }
 
 /**

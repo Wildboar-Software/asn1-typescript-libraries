@@ -29,7 +29,7 @@ export enum _enum_for_MonitorMode {
     transparent = 2,
 }
 export type MonitorMode = _enum_for_MonitorMode;
-export const MonitorMode = _enum_for_MonitorMode;
+export const MonitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 /**
  * @summary MonitorMode_interrupted
  * @description
@@ -39,7 +39,7 @@ export const MonitorMode = _enum_for_MonitorMode;
  *
  * @constant
  */
-export const MonitorMode_interrupted = MonitorMode.interrupted;
+export const MonitorMode_interrupted: _enum_for_MonitorMode.interrupted = MonitorMode.interrupted;
 /**
  * @summary interrupted
  * @description
@@ -49,7 +49,7 @@ export const MonitorMode_interrupted = MonitorMode.interrupted;
  *
  * @constant
  */
-export const interrupted = MonitorMode.interrupted;
+export const interrupted: _enum_for_MonitorMode.interrupted = MonitorMode.interrupted;
 /**
  * @summary MonitorMode_notifyAndContinue
  * @description
@@ -58,7 +58,7 @@ export const interrupted = MonitorMode.interrupted;
  *
  * @constant
  */
-export const MonitorMode_notifyAndContinue = MonitorMode.notifyAndContinue;
+export const MonitorMode_notifyAndContinue: _enum_for_MonitorMode.notifyAndContinue = MonitorMode.notifyAndContinue;
 /**
  * @summary notifyAndContinue
  * @description
@@ -67,7 +67,7 @@ export const MonitorMode_notifyAndContinue = MonitorMode.notifyAndContinue;
  *
  * @constant
  */
-export const notifyAndContinue = MonitorMode.notifyAndContinue;
+export const notifyAndContinue: _enum_for_MonitorMode.notifyAndContinue = MonitorMode.notifyAndContinue;
 /**
  * @summary MonitorMode_transparent
  * @description
@@ -77,7 +77,7 @@ export const notifyAndContinue = MonitorMode.notifyAndContinue;
  *
  * @constant
  */
-export const MonitorMode_transparent = MonitorMode.transparent;
+export const MonitorMode_transparent: _enum_for_MonitorMode.transparent = MonitorMode.transparent;
 /**
  * @summary transparent
  * @description
@@ -87,6 +87,6 @@ export const MonitorMode_transparent = MonitorMode.transparent;
  *
  * @constant
  */
-export const transparent = MonitorMode.transparent;
-export const _decode_MonitorMode = $._decodeEnumerated;
-export const _encode_MonitorMode = $._encodeEnumerated;
+export const transparent: _enum_for_MonitorMode.transparent = MonitorMode.transparent;
+export const _decode_MonitorMode: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_MonitorMode: $.ASN1Encoder<number> = $._encodeEnumerated;

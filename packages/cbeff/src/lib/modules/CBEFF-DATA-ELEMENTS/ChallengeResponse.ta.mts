@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ChallengeResponse = OCTET_STRING; // OctetStringType
 
 
-export const _decode_ChallengeResponse = $._decodeOctetString;
+export const _decode_ChallengeResponse: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_ChallengeResponse = $._encodeOctetString;
+export const _encode_ChallengeResponse: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -164,7 +164,7 @@ class SS_InvocationNotificationArg {
          * @static
          */
 
-    public static _enum_for_ccbs_RequestState = _enum_for_CCBS_RequestState;
+    public static _enum_for_ccbs_RequestState: typeof _enum_for_CCBS_RequestState = _enum_for_CCBS_RequestState;
 }
 
 /**

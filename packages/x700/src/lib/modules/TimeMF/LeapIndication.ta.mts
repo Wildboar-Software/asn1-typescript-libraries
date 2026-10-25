@@ -98,7 +98,7 @@ export type LeapIndication = _enum_for_LeapIndication;
  *
  * @enum {number}
  */
-export const LeapIndication = _enum_for_LeapIndication;
+export const LeapIndication: typeof _enum_for_LeapIndication = _enum_for_LeapIndication;
 
 /**
  * @summary LeapIndication_noWarning
@@ -109,7 +109,7 @@ export const LeapIndication = _enum_for_LeapIndication;
  * @constant
  * @type {number}
  */
-export const LeapIndication_noWarning =
+export const LeapIndication_noWarning: _enum_for_LeapIndication.noWarning =
     LeapIndication.noWarning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,7 +117,7 @@ export const LeapIndication_noWarning =
  * @constant
  * @type {number}
  */
-export const noWarning =
+export const noWarning: _enum_for_LeapIndication.noWarning =
     LeapIndication.noWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const noWarning =
  * @constant
  * @type {number}
  */
-export const LeapIndication_minuteHas61Seconds =
+export const LeapIndication_minuteHas61Seconds: _enum_for_LeapIndication.minuteHas61Seconds =
     LeapIndication.minuteHas61Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const LeapIndication_minuteHas61Seconds =
  * @constant
  * @type {number}
  */
-export const minuteHas61Seconds =
+export const minuteHas61Seconds: _enum_for_LeapIndication.minuteHas61Seconds =
     LeapIndication.minuteHas61Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -151,7 +151,7 @@ export const minuteHas61Seconds =
  * @constant
  * @type {number}
  */
-export const LeapIndication_minuteHas59Seconds =
+export const LeapIndication_minuteHas59Seconds: _enum_for_LeapIndication.minuteHas59Seconds =
     LeapIndication.minuteHas59Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -159,7 +159,7 @@ export const LeapIndication_minuteHas59Seconds =
  * @constant
  * @type {number}
  */
-export const minuteHas59Seconds =
+export const minuteHas59Seconds: _enum_for_LeapIndication.minuteHas59Seconds =
     LeapIndication.minuteHas59Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -172,7 +172,7 @@ export const minuteHas59Seconds =
  * @constant
  * @type {number}
  */
-export const LeapIndication_alarmCondition =
+export const LeapIndication_alarmCondition: _enum_for_LeapIndication.alarmCondition =
     LeapIndication.alarmCondition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -180,7 +180,7 @@ export const LeapIndication_alarmCondition =
  * @constant
  * @type {number}
  */
-export const alarmCondition =
+export const alarmCondition: _enum_for_LeapIndication.alarmCondition =
     LeapIndication.alarmCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

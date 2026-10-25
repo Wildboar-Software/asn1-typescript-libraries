@@ -21,12 +21,12 @@ export type CRLs = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_CRLs = $._decodeOctetString;
+export const _decode_CRLs: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_CRLs = $._encodeOctetString;
+export const _encode_CRLs: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

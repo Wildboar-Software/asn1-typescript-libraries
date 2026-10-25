@@ -54,14 +54,14 @@ export type Termination = _enum_for_Termination;
  *
  * @enum {number}
  */
-export const Termination = _enum_for_Termination;
+export const Termination: typeof _enum_for_Termination = _enum_for_Termination;
 
 /**
  * @summary Termination_basic
  * @constant
  * @type {number}
  */
-export const Termination_basic =
+export const Termination_basic: _enum_for_Termination.basic =
     Termination.basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -69,7 +69,7 @@ export const Termination_basic =
  * @constant
  * @type {number}
  */
-export const basic =
+export const basic: _enum_for_Termination.basic =
     Termination.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const basic =
  * @constant
  * @type {number}
  */
-export const Termination_prearranged =
+export const Termination_prearranged: _enum_for_Termination.prearranged =
     Termination.prearranged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,14 +85,14 @@ export const Termination_prearranged =
  * @constant
  * @type {number}
  */
-export const prearranged =
+export const prearranged: _enum_for_Termination.prearranged =
     Termination.prearranged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Termination = $._decodeEnumerated;
+export const _decode_Termination: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_Termination = $._encodeEnumerated;
+export const _encode_Termination: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

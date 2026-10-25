@@ -27,7 +27,7 @@ export function _decode_Dialog (el: _Element): Dialog {
     }
     return value;
 }
-export const _encode_Dialog = $._encodeGraphicString;
+export const _encode_Dialog: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

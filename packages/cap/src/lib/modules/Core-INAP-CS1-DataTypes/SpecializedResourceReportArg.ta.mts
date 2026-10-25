@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SpecializedResourceReportArg = NULL; // NullType
-export const _decode_SpecializedResourceReportArg = $._decodeNull;
-export const _encode_SpecializedResourceReportArg = $._encodeNull;
+export const _decode_SpecializedResourceReportArg: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_SpecializedResourceReportArg: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

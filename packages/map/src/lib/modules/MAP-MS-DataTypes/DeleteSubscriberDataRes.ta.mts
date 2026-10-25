@@ -88,7 +88,7 @@ class DeleteSubscriberDataRes {
          * @static
          */
 
-    public static _enum_for_regionalSubscriptionResponse = _enum_for_RegionalSubscriptionResponse;
+    public static _enum_for_regionalSubscriptionResponse: typeof _enum_for_RegionalSubscriptionResponse = _enum_for_RegionalSubscriptionResponse;
 }
 
 /**

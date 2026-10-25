@@ -48,7 +48,7 @@ export const _decode_CS_AllocationRetentionPriority = (el: _Element): CS_Allocat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CS_AllocationRetentionPriority, encoded as an ASN.1 Element.
  */
-export const _encode_CS_AllocationRetentionPriority = $._encodeOctetString;
+export const _encode_CS_AllocationRetentionPriority: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

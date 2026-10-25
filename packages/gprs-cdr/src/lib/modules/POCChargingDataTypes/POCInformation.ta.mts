@@ -265,19 +265,19 @@ class POCInformation {
          * @static
          */
 
-    public static _enum_for_pOCSessionType = _enum_for_POCSessionType;        /**
+    public static _enum_for_pOCSessionType: typeof _enum_for_POCSessionType = _enum_for_POCSessionType;        /**
          * @summary The enum used as the type of the component `pOCSessionInitiationType`
          * @public
          * @static
          */
 
-    public static _enum_for_pOCSessionInitiationType = _enum_for_POCSessionInitType;        /**
+    public static _enum_for_pOCSessionInitiationType: typeof _enum_for_POCSessionInitType = _enum_for_POCSessionInitType;        /**
          * @summary The enum used as the type of the component `pOCEventType`
          * @public
          * @static
          */
 
-    public static _enum_for_pOCEventType = _enum_for_POCEventType;
+    public static _enum_for_pOCEventType: typeof _enum_for_POCEventType = _enum_for_POCEventType;
 }
 
 /**

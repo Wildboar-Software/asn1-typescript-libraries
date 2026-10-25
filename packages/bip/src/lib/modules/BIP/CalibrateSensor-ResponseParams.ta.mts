@@ -32,12 +32,12 @@ export type CalibrateSensor_ResponseParams = NULL; // NullType
 
 
 
-export const _decode_CalibrateSensor_ResponseParams = $._decodeNull;
+export const _decode_CalibrateSensor_ResponseParams: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_CalibrateSensor_ResponseParams = $._encodeNull;
+export const _encode_CalibrateSensor_ResponseParams: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

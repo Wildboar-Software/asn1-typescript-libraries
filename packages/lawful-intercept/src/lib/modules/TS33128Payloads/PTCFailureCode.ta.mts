@@ -76,7 +76,7 @@ type PTCFailureCode = _enum_for_PTCFailureCode;
  * @enum {number}
  */
 export
-const PTCFailureCode = _enum_for_PTCFailureCode;
+const PTCFailureCode: typeof _enum_for_PTCFailureCode = _enum_for_PTCFailureCode;
 
 /**
  * @summary PTCFailureCode_sessionCannotBeEstablished
@@ -84,7 +84,7 @@ const PTCFailureCode = _enum_for_PTCFailureCode;
  * @type {number}
  */
 export
-const PTCFailureCode_sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFailureCode_sessionCannotBeEstablished: _enum_for_PTCFailureCode.sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionCannotBeEstablished
@@ -92,7 +92,7 @@ const PTCFailureCode_sessionCannotBeEstablished = PTCFailureCode.sessionCannotBe
  * @type {number}
  */
 export
-const sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionCannotBeEstablished: _enum_for_PTCFailureCode.sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFailureCode_sessionCannotBeModified
@@ -100,7 +100,7 @@ const sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /*
  * @type {number}
  */
 export
-const PTCFailureCode_sessionCannotBeModified = PTCFailureCode.sessionCannotBeModified; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFailureCode_sessionCannotBeModified: _enum_for_PTCFailureCode.sessionCannotBeModified = PTCFailureCode.sessionCannotBeModified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionCannotBeModified
@@ -108,7 +108,7 @@ const PTCFailureCode_sessionCannotBeModified = PTCFailureCode.sessionCannotBeMod
  * @type {number}
  */
 export
-const sessionCannotBeModified = PTCFailureCode.sessionCannotBeModified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionCannotBeModified: _enum_for_PTCFailureCode.sessionCannotBeModified = PTCFailureCode.sessionCannotBeModified; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCFailureCode: $.ASN1Decoder<PTCFailureCode> = $._decodeEnumerated;
 export const _encode_PTCFailureCode: $.ASN1Encoder<PTCFailureCode> = $._encodeEnumerated;
 

@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NonEmptyOctetString = OCTET_STRING; // OctetStringType
 
 
-export const _decode_NonEmptyOctetString = $._decodeOctetString;
+export const _decode_NonEmptyOctetString: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_NonEmptyOctetString = $._encodeOctetString;
+export const _encode_NonEmptyOctetString: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

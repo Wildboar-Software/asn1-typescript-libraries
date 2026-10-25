@@ -29,7 +29,7 @@ type PDUSessionChargingInformation_sSCMode = INTEGER;
  * @type {number}
  */
 export
-const PDUSessionChargingInformation_sSCMode_sSCMode1 = 1 satisfies PDUSessionChargingInformation_sSCMode; /* LONG_NAMED_INTEGER_VALUE */
+const PDUSessionChargingInformation_sSCMode_sSCMode1: 1 = 1 satisfies PDUSessionChargingInformation_sSCMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDUSessionChargingInformation_sSCMode_sSCMode1
@@ -37,7 +37,7 @@ const PDUSessionChargingInformation_sSCMode_sSCMode1 = 1 satisfies PDUSessionCha
  * @type {number}
  */
 export
-const sSCMode1 = PDUSessionChargingInformation_sSCMode_sSCMode1; /* SHORT_NAMED_INTEGER_VALUE */
+const sSCMode1: 1 = PDUSessionChargingInformation_sSCMode_sSCMode1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDUSessionChargingInformation_sSCMode_sSCMode2
@@ -45,7 +45,7 @@ const sSCMode1 = PDUSessionChargingInformation_sSCMode_sSCMode1; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PDUSessionChargingInformation_sSCMode_sSCMode2 = 2 satisfies PDUSessionChargingInformation_sSCMode; /* LONG_NAMED_INTEGER_VALUE */
+const PDUSessionChargingInformation_sSCMode_sSCMode2: 2 = 2 satisfies PDUSessionChargingInformation_sSCMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDUSessionChargingInformation_sSCMode_sSCMode2
@@ -53,7 +53,7 @@ const PDUSessionChargingInformation_sSCMode_sSCMode2 = 2 satisfies PDUSessionCha
  * @type {number}
  */
 export
-const sSCMode2 = PDUSessionChargingInformation_sSCMode_sSCMode2; /* SHORT_NAMED_INTEGER_VALUE */
+const sSCMode2: 2 = PDUSessionChargingInformation_sSCMode_sSCMode2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDUSessionChargingInformation_sSCMode_sSCMode3
@@ -61,7 +61,7 @@ const sSCMode2 = PDUSessionChargingInformation_sSCMode_sSCMode2; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PDUSessionChargingInformation_sSCMode_sSCMode3 = 3 satisfies PDUSessionChargingInformation_sSCMode; /* LONG_NAMED_INTEGER_VALUE */
+const PDUSessionChargingInformation_sSCMode_sSCMode3: 3 = 3 satisfies PDUSessionChargingInformation_sSCMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDUSessionChargingInformation_sSCMode_sSCMode3
@@ -69,7 +69,7 @@ const PDUSessionChargingInformation_sSCMode_sSCMode3 = 3 satisfies PDUSessionCha
  * @type {number}
  */
 export
-const sSCMode3 = PDUSessionChargingInformation_sSCMode_sSCMode3; /* SHORT_NAMED_INTEGER_VALUE */
+const sSCMode3: 3 = PDUSessionChargingInformation_sSCMode_sSCMode3; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_PDUSessionChargingInformation_sSCMode: $.ASN1Decoder<PDUSessionChargingInformation_sSCMode> = $._decodeInteger;

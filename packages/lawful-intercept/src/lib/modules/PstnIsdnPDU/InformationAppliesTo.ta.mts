@@ -132,7 +132,7 @@ class InformationAppliesTo {
          * @static
          */
 
-    public static _enum_for_payloadDirection = _enum_for_PayloadDirection;
+    public static _enum_for_payloadDirection: typeof _enum_for_PayloadDirection = _enum_for_PayloadDirection;
 }
 
 /**

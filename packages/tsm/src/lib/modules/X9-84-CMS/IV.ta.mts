@@ -34,7 +34,7 @@ export const _decode_IV = (el: _Element): IV => {
     }
     return value;
 };
-export const _encode_IV = $._encodeOctetString;
+export const _encode_IV: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

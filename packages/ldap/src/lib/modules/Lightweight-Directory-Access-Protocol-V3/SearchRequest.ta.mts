@@ -224,14 +224,14 @@ export class SearchRequest {
    * @static
    */
 
-  public static _enum_for_scope = _enum_for_SearchRequest_scope;
+  public static _enum_for_scope: typeof _enum_for_SearchRequest_scope = _enum_for_SearchRequest_scope;
   /**
    * @summary The enum used as the type of the component `derefAliases`
    * @public
    * @static
    */
 
-  public static _enum_for_derefAliases = _enum_for_SearchRequest_derefAliases;
+  public static _enum_for_derefAliases: typeof _enum_for_SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
 }
 
 

@@ -132,7 +132,7 @@ type Messaging_Property_Message_Status = _enum_for_Messaging_Property_Message_St
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_indeterminate = _enum_for_Messaging_Property_Message_Status.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_indeterminate: _enum_for_Messaging_Property_Message_Status.indeterminate = _enum_for_Messaging_Property_Message_Status.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -146,7 +146,7 @@ const Messaging_Property_Message_Status_indeterminate = _enum_for_Messaging_Prop
  * @type {number}
  */
 export
-const indeterminate = Messaging_Property_Message_Status_indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate: _enum_for_Messaging_Property_Message_Status.indeterminate = Messaging_Property_Message_Status_indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_expired
@@ -160,7 +160,7 @@ const indeterminate = Messaging_Property_Message_Status_indeterminate; /* SHORT_
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_expired = _enum_for_Messaging_Property_Message_Status.expired; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_expired: _enum_for_Messaging_Property_Message_Status.expired = _enum_for_Messaging_Property_Message_Status.expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expired
@@ -174,7 +174,7 @@ const Messaging_Property_Message_Status_expired = _enum_for_Messaging_Property_M
  * @type {number}
  */
 export
-const expired = Messaging_Property_Message_Status_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const expired: _enum_for_Messaging_Property_Message_Status.expired = Messaging_Property_Message_Status_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_retrieved
@@ -188,7 +188,7 @@ const expired = Messaging_Property_Message_Status_expired; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_retrieved = _enum_for_Messaging_Property_Message_Status.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_retrieved: _enum_for_Messaging_Property_Message_Status.retrieved = _enum_for_Messaging_Property_Message_Status.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieved
@@ -202,7 +202,7 @@ const Messaging_Property_Message_Status_retrieved = _enum_for_Messaging_Property
  * @type {number}
  */
 export
-const retrieved = Messaging_Property_Message_Status_retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieved: _enum_for_Messaging_Property_Message_Status.retrieved = Messaging_Property_Message_Status_retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_rejected
@@ -216,7 +216,7 @@ const retrieved = Messaging_Property_Message_Status_retrieved; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_rejected = _enum_for_Messaging_Property_Message_Status.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_rejected: _enum_for_Messaging_Property_Message_Status.rejected = _enum_for_Messaging_Property_Message_Status.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejected
@@ -230,7 +230,7 @@ const Messaging_Property_Message_Status_rejected = _enum_for_Messaging_Property_
  * @type {number}
  */
 export
-const rejected = Messaging_Property_Message_Status_rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejected: _enum_for_Messaging_Property_Message_Status.rejected = Messaging_Property_Message_Status_rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_deferred
@@ -244,7 +244,7 @@ const rejected = Messaging_Property_Message_Status_rejected; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_deferred = _enum_for_Messaging_Property_Message_Status.deferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_deferred: _enum_for_Messaging_Property_Message_Status.deferred = _enum_for_Messaging_Property_Message_Status.deferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferred
@@ -258,7 +258,7 @@ const Messaging_Property_Message_Status_deferred = _enum_for_Messaging_Property_
  * @type {number}
  */
 export
-const deferred = Messaging_Property_Message_Status_deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferred: _enum_for_Messaging_Property_Message_Status.deferred = Messaging_Property_Message_Status_deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_forwarded
@@ -272,7 +272,7 @@ const deferred = Messaging_Property_Message_Status_deferred; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_forwarded = _enum_for_Messaging_Property_Message_Status.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_forwarded: _enum_for_Messaging_Property_Message_Status.forwarded = _enum_for_Messaging_Property_Message_Status.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -286,7 +286,7 @@ const Messaging_Property_Message_Status_forwarded = _enum_for_Messaging_Property
  * @type {number}
  */
 export
-const forwarded = Messaging_Property_Message_Status_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded: _enum_for_Messaging_Property_Message_Status.forwarded = Messaging_Property_Message_Status_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_unrecognized
@@ -300,7 +300,7 @@ const forwarded = Messaging_Property_Message_Status_forwarded; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_unrecognized = _enum_for_Messaging_Property_Message_Status.unrecognized; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_unrecognized: _enum_for_Messaging_Property_Message_Status.unrecognized = _enum_for_Messaging_Property_Message_Status.unrecognized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognized
@@ -314,7 +314,7 @@ const Messaging_Property_Message_Status_unrecognized = _enum_for_Messaging_Prope
  * @type {number}
  */
 export
-const unrecognized = Messaging_Property_Message_Status_unrecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrecognized: _enum_for_Messaging_Property_Message_Status.unrecognized = Messaging_Property_Message_Status_unrecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_unreachable
@@ -328,7 +328,7 @@ const unrecognized = Messaging_Property_Message_Status_unrecognized; /* SHORT_NA
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_unreachable = _enum_for_Messaging_Property_Message_Status.unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_unreachable: _enum_for_Messaging_Property_Message_Status.unreachable = _enum_for_Messaging_Property_Message_Status.unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unreachable
@@ -342,7 +342,7 @@ const Messaging_Property_Message_Status_unreachable = _enum_for_Messaging_Proper
  * @type {number}
  */
 export
-const unreachable = Messaging_Property_Message_Status_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unreachable: _enum_for_Messaging_Property_Message_Status.unreachable = Messaging_Property_Message_Status_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_read
@@ -356,7 +356,7 @@ const unreachable = Messaging_Property_Message_Status_unreachable; /* SHORT_NAME
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_read = _enum_for_Messaging_Property_Message_Status.read; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_read: _enum_for_Messaging_Property_Message_Status.read = _enum_for_Messaging_Property_Message_Status.read; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read
@@ -370,7 +370,7 @@ const Messaging_Property_Message_Status_read = _enum_for_Messaging_Property_Mess
  * @type {number}
  */
 export
-const read = Messaging_Property_Message_Status_read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read: _enum_for_Messaging_Property_Message_Status.read = Messaging_Property_Message_Status_read; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_deleted_without_being_read
@@ -384,7 +384,7 @@ const read = Messaging_Property_Message_Status_read; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_deleted_without_being_read = _enum_for_Messaging_Property_Message_Status.deleted_without_being_read; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_deleted_without_being_read: _enum_for_Messaging_Property_Message_Status.deleted_without_being_read = _enum_for_Messaging_Property_Message_Status.deleted_without_being_read; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deleted_without_being_read
@@ -398,7 +398,7 @@ const Messaging_Property_Message_Status_deleted_without_being_read = _enum_for_M
  * @type {number}
  */
 export
-const deleted_without_being_read = Messaging_Property_Message_Status_deleted_without_being_read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deleted_without_being_read: _enum_for_Messaging_Property_Message_Status.deleted_without_being_read = Messaging_Property_Message_Status_deleted_without_being_read; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Message_Status_delivery_condition_not_met
@@ -412,7 +412,7 @@ const deleted_without_being_read = Messaging_Property_Message_Status_deleted_wit
  * @type {number}
  */
 export
-const Messaging_Property_Message_Status_delivery_condition_not_met = _enum_for_Messaging_Property_Message_Status.delivery_condition_not_met; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Message_Status_delivery_condition_not_met: _enum_for_Messaging_Property_Message_Status.delivery_condition_not_met = _enum_for_Messaging_Property_Message_Status.delivery_condition_not_met; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery_condition_not_met
@@ -426,7 +426,7 @@ const Messaging_Property_Message_Status_delivery_condition_not_met = _enum_for_M
  * @type {number}
  */
 export
-const delivery_condition_not_met = Messaging_Property_Message_Status_delivery_condition_not_met; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery_condition_not_met: _enum_for_Messaging_Property_Message_Status.delivery_condition_not_met = Messaging_Property_Message_Status_delivery_condition_not_met; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Property_Message_Status: $.ASN1Decoder<Messaging_Property_Message_Status> = $._decodeEnumerated;
 export const _encode_Messaging_Property_Message_Status: $.ASN1Encoder<Messaging_Property_Message_Status> = $._encodeEnumerated;
 

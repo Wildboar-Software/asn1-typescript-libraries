@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DiscoveryId = GraphicString; // GraphicString
 
 
-export const _decode_DiscoveryId = $._decodeGraphicString;
+export const _decode_DiscoveryId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_DiscoveryId = $._encodeGraphicString;
+export const _encode_DiscoveryId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

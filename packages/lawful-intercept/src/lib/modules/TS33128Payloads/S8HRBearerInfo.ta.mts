@@ -285,7 +285,7 @@ class S8HRBearerInfo {
          * @static
          */
 
-    public static _enum_for_messageCause = _enum_for_S8HRMessageCause;
+    public static _enum_for_messageCause: typeof _enum_for_S8HRMessageCause = _enum_for_S8HRMessageCause;
 }
 
 /**

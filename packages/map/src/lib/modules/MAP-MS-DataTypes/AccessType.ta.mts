@@ -63,7 +63,7 @@ type AccessType = _enum_for_AccessType | ENUMERATED;
  * @type {number}
  */
 export
-const AccessType_call = _enum_for_AccessType.call; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_call: _enum_for_AccessType.call = _enum_for_AccessType.call; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary call
@@ -71,7 +71,7 @@ const AccessType_call = _enum_for_AccessType.call; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const call = AccessType_call; /* SHORT_NAMED_ENUMERATED_VALUE */
+const call: _enum_for_AccessType.call = AccessType_call; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_emergencyCall
@@ -79,7 +79,7 @@ const call = AccessType_call; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AccessType_emergencyCall = _enum_for_AccessType.emergencyCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_emergencyCall: _enum_for_AccessType.emergencyCall = _enum_for_AccessType.emergencyCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyCall
@@ -87,7 +87,7 @@ const AccessType_emergencyCall = _enum_for_AccessType.emergencyCall; /* LONG_NAM
  * @type {number}
  */
 export
-const emergencyCall = AccessType_emergencyCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyCall: _enum_for_AccessType.emergencyCall = AccessType_emergencyCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_locationUpdating
@@ -95,7 +95,7 @@ const emergencyCall = AccessType_emergencyCall; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const AccessType_locationUpdating = _enum_for_AccessType.locationUpdating; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_locationUpdating: _enum_for_AccessType.locationUpdating = _enum_for_AccessType.locationUpdating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationUpdating
@@ -103,7 +103,7 @@ const AccessType_locationUpdating = _enum_for_AccessType.locationUpdating; /* LO
  * @type {number}
  */
 export
-const locationUpdating = AccessType_locationUpdating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationUpdating: _enum_for_AccessType.locationUpdating = AccessType_locationUpdating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_supplementaryService
@@ -111,7 +111,7 @@ const locationUpdating = AccessType_locationUpdating; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AccessType_supplementaryService = _enum_for_AccessType.supplementaryService; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_supplementaryService: _enum_for_AccessType.supplementaryService = _enum_for_AccessType.supplementaryService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supplementaryService
@@ -119,7 +119,7 @@ const AccessType_supplementaryService = _enum_for_AccessType.supplementaryServic
  * @type {number}
  */
 export
-const supplementaryService = AccessType_supplementaryService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supplementaryService: _enum_for_AccessType.supplementaryService = AccessType_supplementaryService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_shortMessage
@@ -127,7 +127,7 @@ const supplementaryService = AccessType_supplementaryService; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AccessType_shortMessage = _enum_for_AccessType.shortMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_shortMessage: _enum_for_AccessType.shortMessage = _enum_for_AccessType.shortMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortMessage
@@ -135,7 +135,7 @@ const AccessType_shortMessage = _enum_for_AccessType.shortMessage; /* LONG_NAMED
  * @type {number}
  */
 export
-const shortMessage = AccessType_shortMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shortMessage: _enum_for_AccessType.shortMessage = AccessType_shortMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_gprsAttach
@@ -143,7 +143,7 @@ const shortMessage = AccessType_shortMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AccessType_gprsAttach = _enum_for_AccessType.gprsAttach; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_gprsAttach: _enum_for_AccessType.gprsAttach = _enum_for_AccessType.gprsAttach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gprsAttach
@@ -151,7 +151,7 @@ const AccessType_gprsAttach = _enum_for_AccessType.gprsAttach; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const gprsAttach = AccessType_gprsAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gprsAttach: _enum_for_AccessType.gprsAttach = AccessType_gprsAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_routingAreaUpdating
@@ -159,7 +159,7 @@ const gprsAttach = AccessType_gprsAttach; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AccessType_routingAreaUpdating = _enum_for_AccessType.routingAreaUpdating; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_routingAreaUpdating: _enum_for_AccessType.routingAreaUpdating = _enum_for_AccessType.routingAreaUpdating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routingAreaUpdating
@@ -167,7 +167,7 @@ const AccessType_routingAreaUpdating = _enum_for_AccessType.routingAreaUpdating;
  * @type {number}
  */
 export
-const routingAreaUpdating = AccessType_routingAreaUpdating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routingAreaUpdating: _enum_for_AccessType.routingAreaUpdating = AccessType_routingAreaUpdating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_serviceRequest
@@ -175,7 +175,7 @@ const routingAreaUpdating = AccessType_routingAreaUpdating; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const AccessType_serviceRequest = _enum_for_AccessType.serviceRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_serviceRequest: _enum_for_AccessType.serviceRequest = _enum_for_AccessType.serviceRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceRequest
@@ -183,7 +183,7 @@ const AccessType_serviceRequest = _enum_for_AccessType.serviceRequest; /* LONG_N
  * @type {number}
  */
 export
-const serviceRequest = AccessType_serviceRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceRequest: _enum_for_AccessType.serviceRequest = AccessType_serviceRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_pdpContextActivation
@@ -191,7 +191,7 @@ const serviceRequest = AccessType_serviceRequest; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const AccessType_pdpContextActivation = _enum_for_AccessType.pdpContextActivation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_pdpContextActivation: _enum_for_AccessType.pdpContextActivation = _enum_for_AccessType.pdpContextActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pdpContextActivation
@@ -199,7 +199,7 @@ const AccessType_pdpContextActivation = _enum_for_AccessType.pdpContextActivatio
  * @type {number}
  */
 export
-const pdpContextActivation = AccessType_pdpContextActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pdpContextActivation: _enum_for_AccessType.pdpContextActivation = AccessType_pdpContextActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_pdpContextDeactivation
@@ -207,7 +207,7 @@ const pdpContextActivation = AccessType_pdpContextActivation; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AccessType_pdpContextDeactivation = _enum_for_AccessType.pdpContextDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_pdpContextDeactivation: _enum_for_AccessType.pdpContextDeactivation = _enum_for_AccessType.pdpContextDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pdpContextDeactivation
@@ -215,7 +215,7 @@ const AccessType_pdpContextDeactivation = _enum_for_AccessType.pdpContextDeactiv
  * @type {number}
  */
 export
-const pdpContextDeactivation = AccessType_pdpContextDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pdpContextDeactivation: _enum_for_AccessType.pdpContextDeactivation = AccessType_pdpContextDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessType_gprsDetach
@@ -223,7 +223,7 @@ const pdpContextDeactivation = AccessType_pdpContextDeactivation; /* SHORT_NAMED
  * @type {number}
  */
 export
-const AccessType_gprsDetach = _enum_for_AccessType.gprsDetach; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessType_gprsDetach: _enum_for_AccessType.gprsDetach = _enum_for_AccessType.gprsDetach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gprsDetach
@@ -231,7 +231,7 @@ const AccessType_gprsDetach = _enum_for_AccessType.gprsDetach; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const gprsDetach = AccessType_gprsDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gprsDetach: _enum_for_AccessType.gprsDetach = AccessType_gprsDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessType
@@ -239,7 +239,7 @@ const gprsDetach = AccessType_gprsDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AccessType = $._decodeEnumerated;
+export const _decode_AccessType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AccessType into an ASN.1 Element.
@@ -248,7 +248,7 @@ export const _decode_AccessType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AccessType, encoded as an ASN.1 Element.
  */
-export const _encode_AccessType = $._encodeEnumerated;
+export const _encode_AccessType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

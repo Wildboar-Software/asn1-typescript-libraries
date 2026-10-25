@@ -83,13 +83,13 @@ class DNDInterrogateRes_status_Item {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;        /**
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;        /**
          * @summary The enum used as the type of the component `dndProtectionLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_dndProtectionLevel = _enum_for_DNDProtectionLevel;
+    public static _enum_for_dndProtectionLevel: typeof _enum_for_DNDProtectionLevel = _enum_for_DNDProtectionLevel;
 }
 
 /**

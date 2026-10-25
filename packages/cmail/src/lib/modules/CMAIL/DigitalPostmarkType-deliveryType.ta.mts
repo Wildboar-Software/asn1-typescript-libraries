@@ -52,7 +52,7 @@ export type DigitalPostmarkType_deliveryType =
  * @constant
  * @type {number}
  */
-export const DigitalPostmarkType_deliveryType_certifiedMail = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DigitalPostmarkType_deliveryType_certifiedMail: _enum_for_DigitalPostmarkType_deliveryType.certifiedMail = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,17 +61,17 @@ export const DigitalPostmarkType_deliveryType_certifiedMail = _enum_for_DigitalP
  * @constant
  * @type {number}
  */
-export const certifiedMail = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certifiedMail: _enum_for_DigitalPostmarkType_deliveryType.certifiedMail = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DigitalPostmarkType_deliveryType = $._decodeEnumerated;
+export const _decode_DigitalPostmarkType_deliveryType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_DigitalPostmarkType_deliveryType = $._encodeEnumerated;
+export const _encode_DigitalPostmarkType_deliveryType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

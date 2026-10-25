@@ -34,104 +34,104 @@ export type MessageGroupProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_name_not_registered = 0 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_name_not_registered: 0 = 0 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_name_not_registered
  * @constant
  * @type {number}
  */
-export const name_not_registered = MessageGroupProblem_name_not_registered; /* SHORT_NAMED_INTEGER_VALUE */
+export const name_not_registered: 0 = MessageGroupProblem_name_not_registered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_name_already_registered
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_name_already_registered = 1 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_name_already_registered: 1 = 1 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_name_already_registered
  * @constant
  * @type {number}
  */
-export const name_already_registered = MessageGroupProblem_name_already_registered; /* SHORT_NAMED_INTEGER_VALUE */
+export const name_already_registered: 1 = MessageGroupProblem_name_already_registered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_parent_not_registered
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_parent_not_registered = 2 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_parent_not_registered: 2 = 2 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_parent_not_registered
  * @constant
  * @type {number}
  */
-export const parent_not_registered = MessageGroupProblem_parent_not_registered; /* SHORT_NAMED_INTEGER_VALUE */
+export const parent_not_registered: 2 = MessageGroupProblem_parent_not_registered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_group_not_empty
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_group_not_empty = 3 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_group_not_empty: 3 = 3 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_group_not_empty
  * @constant
  * @type {number}
  */
-export const group_not_empty = MessageGroupProblem_group_not_empty; /* SHORT_NAMED_INTEGER_VALUE */
+export const group_not_empty: 3 = MessageGroupProblem_group_not_empty; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_name_in_use
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_name_in_use = 4 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_name_in_use: 4 = 4 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_name_in_use
  * @constant
  * @type {number}
  */
-export const name_in_use = MessageGroupProblem_name_in_use; /* SHORT_NAMED_INTEGER_VALUE */
+export const name_in_use: 4 = MessageGroupProblem_name_in_use; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_child_group_registered
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_child_group_registered = 5 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_child_group_registered: 5 = 5 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_child_group_registered
  * @constant
  * @type {number}
  */
-export const child_group_registered = MessageGroupProblem_child_group_registered; /* SHORT_NAMED_INTEGER_VALUE */
+export const child_group_registered: 5 = MessageGroupProblem_child_group_registered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_group_depth_exceeded
  * @constant
  * @type {number}
  */
-export const MessageGroupProblem_group_depth_exceeded = 6 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const MessageGroupProblem_group_depth_exceeded: 6 = 6 satisfies MessageGroupProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MessageGroupProblem_group_depth_exceeded
  * @constant
  * @type {number}
  */
-export const group_depth_exceeded = MessageGroupProblem_group_depth_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const group_depth_exceeded: 6 = MessageGroupProblem_group_depth_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_MessageGroupProblem = $._decodeInteger;
+export const _decode_MessageGroupProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MessageGroupProblem = $._encodeInteger;
+export const _encode_MessageGroupProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

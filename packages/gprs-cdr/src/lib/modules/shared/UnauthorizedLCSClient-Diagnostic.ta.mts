@@ -66,7 +66,7 @@ type UnauthorizedLCSClient_Diagnostic = _enum_for_UnauthorizedLCSClient_Diagnost
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_noAdditionalInformation = _enum_for_UnauthorizedLCSClient_Diagnostic.noAdditionalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_noAdditionalInformation: _enum_for_UnauthorizedLCSClient_Diagnostic.noAdditionalInformation = _enum_for_UnauthorizedLCSClient_Diagnostic.noAdditionalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAdditionalInformation
@@ -74,7 +74,7 @@ const UnauthorizedLCSClient_Diagnostic_noAdditionalInformation = _enum_for_Unaut
  * @type {number}
  */
 export
-const noAdditionalInformation = UnauthorizedLCSClient_Diagnostic_noAdditionalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noAdditionalInformation: _enum_for_UnauthorizedLCSClient_Diagnostic.noAdditionalInformation = UnauthorizedLCSClient_Diagnostic_noAdditionalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList
@@ -82,7 +82,7 @@ const noAdditionalInformation = UnauthorizedLCSClient_Diagnostic_noAdditionalInf
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList = _enum_for_UnauthorizedLCSClient_Diagnostic.clientNotInMSPrivacyExceptionList; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList: _enum_for_UnauthorizedLCSClient_Diagnostic.clientNotInMSPrivacyExceptionList = _enum_for_UnauthorizedLCSClient_Diagnostic.clientNotInMSPrivacyExceptionList; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary clientNotInMSPrivacyExceptionList
@@ -90,7 +90,7 @@ const UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList = _enum
  * @type {number}
  */
 export
-const clientNotInMSPrivacyExceptionList = UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList; /* SHORT_NAMED_ENUMERATED_VALUE */
+const clientNotInMSPrivacyExceptionList: _enum_for_UnauthorizedLCSClient_Diagnostic.clientNotInMSPrivacyExceptionList = UnauthorizedLCSClient_Diagnostic_clientNotInMSPrivacyExceptionList; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_callToClientNotSetup
@@ -98,7 +98,7 @@ const clientNotInMSPrivacyExceptionList = UnauthorizedLCSClient_Diagnostic_clien
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_callToClientNotSetup = _enum_for_UnauthorizedLCSClient_Diagnostic.callToClientNotSetup; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_callToClientNotSetup: _enum_for_UnauthorizedLCSClient_Diagnostic.callToClientNotSetup = _enum_for_UnauthorizedLCSClient_Diagnostic.callToClientNotSetup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callToClientNotSetup
@@ -106,7 +106,7 @@ const UnauthorizedLCSClient_Diagnostic_callToClientNotSetup = _enum_for_Unauthor
  * @type {number}
  */
 export
-const callToClientNotSetup = UnauthorizedLCSClient_Diagnostic_callToClientNotSetup; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callToClientNotSetup: _enum_for_UnauthorizedLCSClient_Diagnostic.callToClientNotSetup = UnauthorizedLCSClient_Diagnostic_callToClientNotSetup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable
@@ -114,7 +114,7 @@ const callToClientNotSetup = UnauthorizedLCSClient_Diagnostic_callToClientNotSet
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable = _enum_for_UnauthorizedLCSClient_Diagnostic.privacyOverrideNotApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable: _enum_for_UnauthorizedLCSClient_Diagnostic.privacyOverrideNotApplicable = _enum_for_UnauthorizedLCSClient_Diagnostic.privacyOverrideNotApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privacyOverrideNotApplicable
@@ -122,7 +122,7 @@ const UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable = _enum_for_
  * @type {number}
  */
 export
-const privacyOverrideNotApplicable = UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privacyOverrideNotApplicable: _enum_for_UnauthorizedLCSClient_Diagnostic.privacyOverrideNotApplicable = UnauthorizedLCSClient_Diagnostic_privacyOverrideNotApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements
@@ -130,7 +130,7 @@ const privacyOverrideNotApplicable = UnauthorizedLCSClient_Diagnostic_privacyOve
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements = _enum_for_UnauthorizedLCSClient_Diagnostic.disallowedByLocalRegulatoryRequirements; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements: _enum_for_UnauthorizedLCSClient_Diagnostic.disallowedByLocalRegulatoryRequirements = _enum_for_UnauthorizedLCSClient_Diagnostic.disallowedByLocalRegulatoryRequirements; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disallowedByLocalRegulatoryRequirements
@@ -138,7 +138,7 @@ const UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements =
  * @type {number}
  */
 export
-const disallowedByLocalRegulatoryRequirements = UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disallowedByLocalRegulatoryRequirements: _enum_for_UnauthorizedLCSClient_Diagnostic.disallowedByLocalRegulatoryRequirements = UnauthorizedLCSClient_Diagnostic_disallowedByLocalRegulatoryRequirements; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass
@@ -146,7 +146,7 @@ const disallowedByLocalRegulatoryRequirements = UnauthorizedLCSClient_Diagnostic
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass = _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedPrivacyClass; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass: _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedPrivacyClass = _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedPrivacyClass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorizedPrivacyClass
@@ -154,7 +154,7 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass = _enum_for_Unau
  * @type {number}
  */
 export
-const unauthorizedPrivacyClass = UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorizedPrivacyClass: _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedPrivacyClass = UnauthorizedLCSClient_Diagnostic_unauthorizedPrivacyClass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient
@@ -162,7 +162,7 @@ const unauthorizedPrivacyClass = UnauthorizedLCSClient_Diagnostic_unauthorizedPr
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient = _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionUnrelatedExternalClient; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient: _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionUnrelatedExternalClient = _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionUnrelatedExternalClient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorizedCallSessionUnrelatedExternalClient
@@ -170,7 +170,7 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalC
  * @type {number}
  */
 export
-const unauthorizedCallSessionUnrelatedExternalClient = UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorizedCallSessionUnrelatedExternalClient: _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionUnrelatedExternalClient = UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionUnrelatedExternalClient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient
@@ -178,7 +178,7 @@ const unauthorizedCallSessionUnrelatedExternalClient = UnauthorizedLCSClient_Dia
  * @type {number}
  */
 export
-const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient = _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionRelatedExternalClient; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient: _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionRelatedExternalClient = _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionRelatedExternalClient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorizedCallSessionRelatedExternalClient
@@ -186,7 +186,7 @@ const UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalCli
  * @type {number}
  */
 export
-const unauthorizedCallSessionRelatedExternalClient = UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorizedCallSessionRelatedExternalClient: _enum_for_UnauthorizedLCSClient_Diagnostic.unauthorizedCallSessionRelatedExternalClient = UnauthorizedLCSClient_Diagnostic_unauthorizedCallSessionRelatedExternalClient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_UnauthorizedLCSClient_Diagnostic: $.ASN1Decoder<UnauthorizedLCSClient_Diagnostic> = $._decodeEnumerated;

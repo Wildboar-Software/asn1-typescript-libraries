@@ -41,7 +41,7 @@ type VersionProduct = INTEGER;
  * @type {number}
  */
 export
-const VersionProduct_v0 = 0 satisfies VersionProduct; /* LONG_NAMED_INTEGER_VALUE */
+const VersionProduct_v0: 0 = 0 satisfies VersionProduct; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary VersionProduct_v0
@@ -49,7 +49,7 @@ const VersionProduct_v0 = 0 satisfies VersionProduct; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const v0 = VersionProduct_v0; /* SHORT_NAMED_INTEGER_VALUE */
+const v0: 0 = VersionProduct_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ const v0 = VersionProduct_v0; /* SHORT_NAMED_INTEGER_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_VersionProduct = $._decodeInteger;
+export const _decode_VersionProduct: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 /**
@@ -68,7 +68,7 @@ export const _decode_VersionProduct = $._decodeInteger;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VersionProduct, encoded as an ASN.1 Element.
  */
-export const _encode_VersionProduct = $._encodeInteger;
+export const _encode_VersionProduct: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

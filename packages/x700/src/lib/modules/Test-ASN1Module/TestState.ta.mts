@@ -153,7 +153,7 @@ export class TestState {
      * @static
      */
 
-    public static _enum_for_operationalState = _enum_for_OperationalState;
+    public static _enum_for_operationalState: typeof _enum_for_OperationalState = _enum_for_OperationalState;
 }
 
 /**

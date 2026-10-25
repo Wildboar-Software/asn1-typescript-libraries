@@ -178,7 +178,7 @@ class ProvideUserInformationArg_Type {
      * @static
      * @method
      */
-    public static get _default_value_for_typeOfRequestedInfo () { return numericString; }
+    public static get _default_value_for_typeOfRequestedInfo (): _enum_for_InfoType.numericString { return numericString; }
     /**
      * @summary Getter that returns the default value for `numberOfAllowedRetries`.
      * @public
@@ -191,19 +191,19 @@ class ProvideUserInformationArg_Type {
          * @static
          */
 
-    public static _enum_for_typeOfRequestedInfo = _enum_for_InfoType;        /**
+    public static _enum_for_typeOfRequestedInfo: typeof _enum_for_InfoType = _enum_for_InfoType;        /**
          * @summary The enum used as the type of the component `actions`
          * @public
          * @static
          */
 
-    public static _enum_for_actions = _enum_for_Actions;        /**
+    public static _enum_for_actions: typeof _enum_for_Actions = _enum_for_Actions;        /**
          * @summary The enum used as the type of the component `userToConnect`
          * @public
          * @static
          */
 
-    public static _enum_for_userToConnect = _enum_for_UserToConnect;
+    public static _enum_for_userToConnect: typeof _enum_for_UserToConnect = _enum_for_UserToConnect;
 }
 
 /**

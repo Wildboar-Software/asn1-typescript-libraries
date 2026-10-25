@@ -83,7 +83,7 @@ type SMSNFType = _enum_for_SMSNFType;
  * @enum {number}
  */
 export
-const SMSNFType = _enum_for_SMSNFType;
+const SMSNFType: typeof _enum_for_SMSNFType = _enum_for_SMSNFType;
 
 /**
  * @summary SMSNFType_sMSGMSC
@@ -91,7 +91,7 @@ const SMSNFType = _enum_for_SMSNFType;
  * @type {number}
  */
 export
-const SMSNFType_sMSGMSC = SMSNFType.sMSGMSC; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSNFType_sMSGMSC: _enum_for_SMSNFType.sMSGMSC = SMSNFType.sMSGMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSGMSC
@@ -99,7 +99,7 @@ const SMSNFType_sMSGMSC = SMSNFType.sMSGMSC; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sMSGMSC = SMSNFType.sMSGMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSGMSC: _enum_for_SMSNFType.sMSGMSC = SMSNFType.sMSGMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSNFType_iWMSC
@@ -107,7 +107,7 @@ const sMSGMSC = SMSNFType.sMSGMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SMSNFType_iWMSC = SMSNFType.iWMSC; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSNFType_iWMSC: _enum_for_SMSNFType.iWMSC = SMSNFType.iWMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iWMSC
@@ -115,7 +115,7 @@ const SMSNFType_iWMSC = SMSNFType.iWMSC; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iWMSC = SMSNFType.iWMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iWMSC: _enum_for_SMSNFType.iWMSC = SMSNFType.iWMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSNFType_sMSRouter
@@ -123,7 +123,7 @@ const iWMSC = SMSNFType.iWMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SMSNFType_sMSRouter = SMSNFType.sMSRouter; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSNFType_sMSRouter: _enum_for_SMSNFType.sMSRouter = SMSNFType.sMSRouter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSRouter
@@ -131,7 +131,7 @@ const SMSNFType_sMSRouter = SMSNFType.sMSRouter; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const sMSRouter = SMSNFType.sMSRouter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSRouter: _enum_for_SMSNFType.sMSRouter = SMSNFType.sMSRouter; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMSNFType: $.ASN1Decoder<SMSNFType> = $._decodeEnumerated;
 export const _encode_SMSNFType: $.ASN1Encoder<SMSNFType> = $._encodeEnumerated;
 

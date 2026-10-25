@@ -224,7 +224,7 @@ class AlertServiceCentreArg {
          * @static
          */
 
-    public static _enum_for_smsGmscAlertEvent = _enum_for_SmsGmsc_Alert_Event;
+    public static _enum_for_smsGmscAlertEvent: typeof _enum_for_SmsGmsc_Alert_Event = _enum_for_SmsGmsc_Alert_Event;
 }
 
 /**

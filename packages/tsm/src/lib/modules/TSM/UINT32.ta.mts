@@ -39,7 +39,7 @@ export const _decode_UINT32 = (el: _Element): UINT32 => {
     }
     return value;
 };
-export const _encode_UINT32 = $._encodeInteger;
+export const _encode_UINT32: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

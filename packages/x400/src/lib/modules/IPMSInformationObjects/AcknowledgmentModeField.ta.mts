@@ -56,14 +56,14 @@ export type AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
  *
  * @enum {number}
  */
-export const AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
+export const AcknowledgmentModeField: typeof _enum_for_AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
 
 /**
  * @summary AcknowledgmentModeField_manual
  * @constant
  * @type {number}
  */
-export const AcknowledgmentModeField_manual =
+export const AcknowledgmentModeField_manual: _enum_for_AcknowledgmentModeField.manual =
     AcknowledgmentModeField.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -71,7 +71,7 @@ export const AcknowledgmentModeField_manual =
  * @constant
  * @type {number}
  */
-export const manual =
+export const manual: _enum_for_AcknowledgmentModeField.manual =
     AcknowledgmentModeField.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const manual =
  * @constant
  * @type {number}
  */
-export const AcknowledgmentModeField_automatic =
+export const AcknowledgmentModeField_automatic: _enum_for_AcknowledgmentModeField.automatic =
     AcknowledgmentModeField.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const AcknowledgmentModeField_automatic =
  * @constant
  * @type {number}
  */
-export const automatic =
+export const automatic: _enum_for_AcknowledgmentModeField.automatic =
     AcknowledgmentModeField.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

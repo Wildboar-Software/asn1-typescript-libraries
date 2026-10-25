@@ -36,7 +36,7 @@ type TBCD_STRING = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TBCD_STRING = $._decodeOctetString;
+export const _decode_TBCD_STRING: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) TBCD_STRING into an ASN.1 Element.
@@ -45,7 +45,7 @@ export const _decode_TBCD_STRING = $._decodeOctetString;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TBCD_STRING, encoded as an ASN.1 Element.
  */
-export const _encode_TBCD_STRING = $._encodeOctetString;
+export const _encode_TBCD_STRING: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

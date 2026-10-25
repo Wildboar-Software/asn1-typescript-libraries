@@ -33,8 +33,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type JPEG = OCTET_STRING; // OctetStringType
-export const _decode_JPEG = $._decodeOctetString;
-export const _encode_JPEG = $._encodeOctetString;
+export const _decode_JPEG: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_JPEG: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

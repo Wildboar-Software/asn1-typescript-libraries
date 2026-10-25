@@ -127,7 +127,7 @@ class IMSHSSStartOfInterceptionWithRegisteredTarget {
          * @static
          */
 
-    public static _enum_for_iMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
+    public static _enum_for_iMSRegistrationStatus: typeof _enum_for_IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
 }
 
 /**

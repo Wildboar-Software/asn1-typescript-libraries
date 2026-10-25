@@ -25,12 +25,12 @@ export type HMAC = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_HMAC = $._decodeOctetString;
+export const _decode_HMAC: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_HMAC = $._encodeOctetString;
+export const _encode_HMAC: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

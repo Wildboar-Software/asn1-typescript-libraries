@@ -70,7 +70,7 @@ type Event_event = _enum_for_Event_event;
  * @enum {number}
  */
 export
-const Event_event = _enum_for_Event_event;
+const Event_event: typeof _enum_for_Event_event = _enum_for_Event_event;
 
 /**
  * @summary Event_event_now
@@ -78,7 +78,7 @@ const Event_event = _enum_for_Event_event;
  * @type {number}
  */
 export
-const Event_event_now = Event_event.now; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_now: _enum_for_Event_event.now = Event_event.now; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary now
@@ -86,7 +86,7 @@ const Event_event_now = Event_event.now; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const now = Event_event.now; /* SHORT_NAMED_ENUMERATED_VALUE */
+const now: _enum_for_Event_event.now = Event_event.now; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Event_event_answer
@@ -94,7 +94,7 @@ const now = Event_event.now; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Event_event_answer = Event_event.answer; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_answer: _enum_for_Event_event.answer = Event_event.answer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answer
@@ -102,7 +102,7 @@ const Event_event_answer = Event_event.answer; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const answer = Event_event.answer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answer: _enum_for_Event_event.answer = Event_event.answer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Event_event_user_interaction
@@ -110,7 +110,7 @@ const answer = Event_event.answer; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Event_event_user_interaction = Event_event.user_interaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_user_interaction: _enum_for_Event_event.user_interaction = Event_event.user_interaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user_interaction
@@ -118,7 +118,7 @@ const Event_event_user_interaction = Event_event.user_interaction; /* LONG_NAMED
  * @type {number}
  */
 export
-const user_interaction = Event_event.user_interaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user_interaction: _enum_for_Event_event.user_interaction = Event_event.user_interaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Event_event_failure
@@ -126,7 +126,7 @@ const user_interaction = Event_event.user_interaction; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const Event_event_failure = Event_event.failure; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_failure: _enum_for_Event_event.failure = Event_event.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -134,7 +134,7 @@ const Event_event_failure = Event_event.failure; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const failure = Event_event.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure: _enum_for_Event_event.failure = Event_event.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_Event_event(el: _Element): Event_event {

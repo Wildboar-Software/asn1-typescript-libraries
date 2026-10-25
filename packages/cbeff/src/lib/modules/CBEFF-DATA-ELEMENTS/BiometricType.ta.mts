@@ -233,10 +233,10 @@ export const BiometricType_signature_sign: number = 16; /* LONG_NAMED_BIT */
 export const signature_sign: number = BiometricType_signature_sign; /* SHORT_NAMED_BIT */
 
 
-export const _decode_BiometricType = $._decodeBitString;
+export const _decode_BiometricType: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_BiometricType = $._encodeBitString;
+export const _encode_BiometricType: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

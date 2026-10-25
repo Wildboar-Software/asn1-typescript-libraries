@@ -45,7 +45,7 @@ export const _decode_SM_RP_SMEA = (el: _Element): SM_RP_SMEA => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_RP_SMEA, encoded as an ASN.1 Element.
  */
-export const _encode_SM_RP_SMEA = $._encodeOctetString;
+export const _encode_SM_RP_SMEA: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -44,7 +44,7 @@ export const _decode_ChargeUnitTimeInterval = (el: _Element): ChargeUnitTimeInte
     }
     return value;
 };
-export const _encode_ChargeUnitTimeInterval = $._encodeOctetString;
+export const _encode_ChargeUnitTimeInterval: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

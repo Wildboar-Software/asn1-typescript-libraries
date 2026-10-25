@@ -305,13 +305,13 @@ class DpSpecificCommonParameters {
          * @static
          */
 
-    public static _enum_for_cGEncountered = _enum_for_CGEncountered;        /**
+    public static _enum_for_cGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;        /**
          * @summary The enum used as the type of the component `terminalType`
          * @public
          * @static
          */
 
-    public static _enum_for_terminalType = _enum_for_TerminalType;
+    public static _enum_for_terminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;
 }
 
 /**

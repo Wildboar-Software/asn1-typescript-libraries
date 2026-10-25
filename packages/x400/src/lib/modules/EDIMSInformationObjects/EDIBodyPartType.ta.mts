@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type EDIBodyPartType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_EDIBodyPartType = $._decodeObjectIdentifier;
+export const _decode_EDIBodyPartType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_EDIBodyPartType = $._encodeObjectIdentifier;
+export const _encode_EDIBodyPartType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

@@ -75,7 +75,7 @@ export type ResultReportIndicator = _enum_for_ResultReportIndicator;
  *
  * @enum {number}
  */
-export const ResultReportIndicator = _enum_for_ResultReportIndicator;
+export const ResultReportIndicator: typeof _enum_for_ResultReportIndicator = _enum_for_ResultReportIndicator;
 
 /**
  * @summary ResultReportIndicator_resultReportForPassedSequences
@@ -85,7 +85,7 @@ export const ResultReportIndicator = _enum_for_ResultReportIndicator;
  * @constant
  * @type {number}
  */
-export const ResultReportIndicator_resultReportForPassedSequences =
+export const ResultReportIndicator_resultReportForPassedSequences: _enum_for_ResultReportIndicator.resultReportForPassedSequences =
     ResultReportIndicator.resultReportForPassedSequences; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const ResultReportIndicator_resultReportForPassedSequences =
  * @constant
  * @type {number}
  */
-export const resultReportForPassedSequences =
+export const resultReportForPassedSequences: _enum_for_ResultReportIndicator.resultReportForPassedSequences =
     ResultReportIndicator.resultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const resultReportForPassedSequences =
  * @constant
  * @type {number}
  */
-export const ResultReportIndicator_noResultReportForPassedSequences =
+export const ResultReportIndicator_noResultReportForPassedSequences: _enum_for_ResultReportIndicator.noResultReportForPassedSequences =
     ResultReportIndicator.noResultReportForPassedSequences; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const ResultReportIndicator_noResultReportForPassedSequences =
  * @constant
  * @type {number}
  */
-export const noResultReportForPassedSequences =
+export const noResultReportForPassedSequences: _enum_for_ResultReportIndicator.noResultReportForPassedSequences =
     ResultReportIndicator.noResultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

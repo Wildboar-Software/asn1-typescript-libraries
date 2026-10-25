@@ -78,7 +78,7 @@ export const _decode_RequestedNodes = (el: _Element): RequestedNodes => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestedNodes, encoded as an ASN.1 Element.
  */
-export const _encode_RequestedNodes = $._encodeBitString;
+export const _encode_RequestedNodes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

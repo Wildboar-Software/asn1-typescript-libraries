@@ -47,7 +47,7 @@ export const _decode_CamelCapabilityHandling = (el: _Element): CamelCapabilityHa
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CamelCapabilityHandling, encoded as an ASN.1 Element.
  */
-export const _encode_CamelCapabilityHandling = $._encodeInteger;
+export const _encode_CamelCapabilityHandling: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -477,7 +477,7 @@ class CAMELInformation {
          * @static
          */
 
-    public static _enum_for_cAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
+    public static _enum_for_cAMELInitCFIndicator: typeof _enum_for_CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
 }
 
 /**

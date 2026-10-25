@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type HighLayerCompatibility = OCTET_STRING; // OctetStringType
-export const _decode_HighLayerCompatibility = $._decodeOctetString;
-export const _encode_HighLayerCompatibility = $._encodeOctetString;
+export const _decode_HighLayerCompatibility: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_HighLayerCompatibility: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

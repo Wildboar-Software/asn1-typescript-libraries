@@ -33,20 +33,20 @@ export type NNUserDiagnosticField = INTEGER;
  * @constant
  * @type {number}
  */
-export const NNUserDiagnosticField_compression_unsupported = 1 satisfies NNUserDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserDiagnosticField_compression_unsupported: 1 = 1 satisfies NNUserDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserDiagnosticField_compression_unsupported
  * @constant
  * @type {number}
  */
-export const compression_unsupported = NNUserDiagnosticField_compression_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const compression_unsupported: 1 = NNUserDiagnosticField_compression_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_NNUserDiagnosticField = $._decodeInteger;
+export const _decode_NNUserDiagnosticField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NNUserDiagnosticField = $._encodeInteger;
+export const _encode_NNUserDiagnosticField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

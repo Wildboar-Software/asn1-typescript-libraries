@@ -112,7 +112,7 @@ class PFD {
          * @static
          */
 
-    public static _enum_for_dnProtocol = _enum_for_DnProtocol;
+    public static _enum_for_dnProtocol: typeof _enum_for_DnProtocol = _enum_for_DnProtocol;
 }
 
 /**

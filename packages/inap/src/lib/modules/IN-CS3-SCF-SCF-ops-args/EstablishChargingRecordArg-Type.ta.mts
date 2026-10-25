@@ -205,7 +205,7 @@ class EstablishChargingRecordArg_Type {
          * @static
          */
 
-    public static _enum_for_consumedCreditAction = _enum_for_ConsumedCreditAction;
+    public static _enum_for_consumedCreditAction: typeof _enum_for_ConsumedCreditAction = _enum_for_ConsumedCreditAction;
 }
 
 /**

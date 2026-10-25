@@ -55,7 +55,7 @@ type PreemptionCapability = _enum_for_PreemptionCapability;
  * @enum {number}
  */
 export
-const PreemptionCapability = _enum_for_PreemptionCapability;
+const PreemptionCapability: typeof _enum_for_PreemptionCapability = _enum_for_PreemptionCapability;
 
 /**
  * @summary PreemptionCapability_nOT_PREEMPT
@@ -63,7 +63,7 @@ const PreemptionCapability = _enum_for_PreemptionCapability;
  * @type {number}
  */
 export
-const PreemptionCapability_nOT_PREEMPT = PreemptionCapability.nOT_PREEMPT; /* LONG_NAMED_ENUMERATED_VALUE */
+const PreemptionCapability_nOT_PREEMPT: _enum_for_PreemptionCapability.nOT_PREEMPT = PreemptionCapability.nOT_PREEMPT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nOT_PREEMPT
@@ -71,7 +71,7 @@ const PreemptionCapability_nOT_PREEMPT = PreemptionCapability.nOT_PREEMPT; /* LO
  * @type {number}
  */
 export
-const nOT_PREEMPT = PreemptionCapability.nOT_PREEMPT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nOT_PREEMPT: _enum_for_PreemptionCapability.nOT_PREEMPT = PreemptionCapability.nOT_PREEMPT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PreemptionCapability_mAY_PREEMPT
@@ -79,7 +79,7 @@ const nOT_PREEMPT = PreemptionCapability.nOT_PREEMPT; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const PreemptionCapability_mAY_PREEMPT = PreemptionCapability.mAY_PREEMPT; /* LONG_NAMED_ENUMERATED_VALUE */
+const PreemptionCapability_mAY_PREEMPT: _enum_for_PreemptionCapability.mAY_PREEMPT = PreemptionCapability.mAY_PREEMPT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mAY_PREEMPT
@@ -87,7 +87,7 @@ const PreemptionCapability_mAY_PREEMPT = PreemptionCapability.mAY_PREEMPT; /* LO
  * @type {number}
  */
 export
-const mAY_PREEMPT = PreemptionCapability.mAY_PREEMPT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mAY_PREEMPT: _enum_for_PreemptionCapability.mAY_PREEMPT = PreemptionCapability.mAY_PREEMPT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PreemptionCapability: $.ASN1Decoder<PreemptionCapability> = $._decodeEnumerated;

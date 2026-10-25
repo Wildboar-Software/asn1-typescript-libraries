@@ -96,7 +96,7 @@ export class ReasonInfo {
      * @static
      */
 
-    public static _enum_for_reasonCode = _enum_for_CRLReason;
+    public static _enum_for_reasonCode: typeof _enum_for_CRLReason = _enum_for_CRLReason;
 }
 
 /**

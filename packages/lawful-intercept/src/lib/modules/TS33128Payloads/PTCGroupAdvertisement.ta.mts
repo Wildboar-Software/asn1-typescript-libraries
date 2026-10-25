@@ -188,13 +188,13 @@ class PTCGroupAdvertisement {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;        /**
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pTCGroupAuthRule`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
+    public static _enum_for_pTCGroupAuthRule: typeof _enum_for_PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
 }
 
 /**

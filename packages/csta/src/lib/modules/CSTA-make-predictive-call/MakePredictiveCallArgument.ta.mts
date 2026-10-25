@@ -306,19 +306,19 @@ class MakePredictiveCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }        /**
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }        /**
          * @summary The enum used as the type of the component `defaultAction`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultAction = _enum_for_DetectionAction;        /**
+    public static _enum_for_defaultAction: typeof _enum_for_DetectionAction = _enum_for_DetectionAction;        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;
 }
 
 /**

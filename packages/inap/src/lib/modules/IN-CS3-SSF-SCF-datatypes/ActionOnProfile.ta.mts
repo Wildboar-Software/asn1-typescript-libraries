@@ -50,7 +50,7 @@ type ActionOnProfile = _enum_for_ActionOnProfile;
  * @enum {number}
  */
 export
-const ActionOnProfile = _enum_for_ActionOnProfile;
+const ActionOnProfile: typeof _enum_for_ActionOnProfile = _enum_for_ActionOnProfile;
 
 /**
  * @summary ActionOnProfile_activate
@@ -58,7 +58,7 @@ const ActionOnProfile = _enum_for_ActionOnProfile;
  * @type {number}
  */
 export
-const ActionOnProfile_activate = ActionOnProfile.activate; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionOnProfile_activate: _enum_for_ActionOnProfile.activate = ActionOnProfile.activate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activate
@@ -66,7 +66,7 @@ const ActionOnProfile_activate = ActionOnProfile.activate; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const activate = ActionOnProfile.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activate: _enum_for_ActionOnProfile.activate = ActionOnProfile.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionOnProfile_deactivate
@@ -74,7 +74,7 @@ const activate = ActionOnProfile.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ActionOnProfile_deactivate = ActionOnProfile.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionOnProfile_deactivate: _enum_for_ActionOnProfile.deactivate = ActionOnProfile.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivate
@@ -82,7 +82,7 @@ const ActionOnProfile_deactivate = ActionOnProfile.deactivate; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const deactivate = ActionOnProfile.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivate: _enum_for_ActionOnProfile.deactivate = ActionOnProfile.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ActionOnProfile(el: _Element): ActionOnProfile {

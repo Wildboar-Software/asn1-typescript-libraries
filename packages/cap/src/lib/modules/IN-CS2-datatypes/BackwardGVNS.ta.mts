@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type BackwardGVNS = OCTET_STRING; // OctetStringType
-export const _decode_BackwardGVNS = $._decodeOctetString;
-export const _encode_BackwardGVNS = $._encodeOctetString;
+export const _decode_BackwardGVNS: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_BackwardGVNS: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

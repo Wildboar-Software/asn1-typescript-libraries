@@ -176,7 +176,7 @@ type StateIncompatibilityErrors = _enum_for_StateIncompatibilityErrors;
  * @enum {number}
  */
 export
-const StateIncompatibilityErrors = _enum_for_StateIncompatibilityErrors;
+const StateIncompatibilityErrors: typeof _enum_for_StateIncompatibilityErrors = _enum_for_StateIncompatibilityErrors;
 
 /**
  * @summary StateIncompatibilityErrors_generic
@@ -188,7 +188,7 @@ const StateIncompatibilityErrors = _enum_for_StateIncompatibilityErrors;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_generic = StateIncompatibilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_generic: _enum_for_StateIncompatibilityErrors.generic = StateIncompatibilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -197,7 +197,7 @@ const StateIncompatibilityErrors_generic = StateIncompatibilityErrors.generic; /
  * @type {number}
  */
 export
-const generic = StateIncompatibilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_StateIncompatibilityErrors.generic = StateIncompatibilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidObjectState
@@ -209,7 +209,7 @@ const generic = StateIncompatibilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidObjectState = StateIncompatibilityErrors.invalidObjectState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidObjectState: _enum_for_StateIncompatibilityErrors.invalidObjectState = StateIncompatibilityErrors.invalidObjectState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidObjectState
@@ -218,7 +218,7 @@ const StateIncompatibilityErrors_invalidObjectState = StateIncompatibilityErrors
  * @type {number}
  */
 export
-const invalidObjectState = StateIncompatibilityErrors.invalidObjectState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidObjectState: _enum_for_StateIncompatibilityErrors.invalidObjectState = StateIncompatibilityErrors.invalidObjectState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidDeviceState
@@ -230,7 +230,7 @@ const invalidObjectState = StateIncompatibilityErrors.invalidObjectState; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidDeviceState = StateIncompatibilityErrors.invalidDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidDeviceState: _enum_for_StateIncompatibilityErrors.invalidDeviceState = StateIncompatibilityErrors.invalidDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDeviceState
@@ -239,7 +239,7 @@ const StateIncompatibilityErrors_invalidDeviceState = StateIncompatibilityErrors
  * @type {number}
  */
 export
-const invalidDeviceState = StateIncompatibilityErrors.invalidDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDeviceState: _enum_for_StateIncompatibilityErrors.invalidDeviceState = StateIncompatibilityErrors.invalidDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_connectedCallExists
@@ -251,7 +251,7 @@ const invalidDeviceState = StateIncompatibilityErrors.invalidDeviceState; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_connectedCallExists = StateIncompatibilityErrors.connectedCallExists; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_connectedCallExists: _enum_for_StateIncompatibilityErrors.connectedCallExists = StateIncompatibilityErrors.connectedCallExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedCallExists
@@ -260,7 +260,7 @@ const StateIncompatibilityErrors_connectedCallExists = StateIncompatibilityError
  * @type {number}
  */
 export
-const connectedCallExists = StateIncompatibilityErrors.connectedCallExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedCallExists: _enum_for_StateIncompatibilityErrors.connectedCallExists = StateIncompatibilityErrors.connectedCallExists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidActiveDeviceState
@@ -272,7 +272,7 @@ const connectedCallExists = StateIncompatibilityErrors.connectedCallExists; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidActiveDeviceState = StateIncompatibilityErrors.invalidActiveDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidActiveDeviceState: _enum_for_StateIncompatibilityErrors.invalidActiveDeviceState = StateIncompatibilityErrors.invalidActiveDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveDeviceState
@@ -282,7 +282,7 @@ const StateIncompatibilityErrors_invalidActiveDeviceState = StateIncompatibility
  * @type {number}
  */
 export
-const invalidActiveDeviceState = StateIncompatibilityErrors.invalidActiveDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidActiveDeviceState: _enum_for_StateIncompatibilityErrors.invalidActiveDeviceState = StateIncompatibilityErrors.invalidActiveDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidCalledDeviceState
@@ -293,7 +293,7 @@ const invalidActiveDeviceState = StateIncompatibilityErrors.invalidActiveDeviceS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidCalledDeviceState = StateIncompatibilityErrors.invalidCalledDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidCalledDeviceState: _enum_for_StateIncompatibilityErrors.invalidCalledDeviceState = StateIncompatibilityErrors.invalidCalledDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCalledDeviceState
@@ -303,7 +303,7 @@ const StateIncompatibilityErrors_invalidCalledDeviceState = StateIncompatibility
  * @type {number}
  */
 export
-const invalidCalledDeviceState = StateIncompatibilityErrors.invalidCalledDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCalledDeviceState: _enum_for_StateIncompatibilityErrors.invalidCalledDeviceState = StateIncompatibilityErrors.invalidCalledDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidCallingDeviceState
@@ -314,7 +314,7 @@ const invalidCalledDeviceState = StateIncompatibilityErrors.invalidCalledDeviceS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidCallingDeviceState = StateIncompatibilityErrors.invalidCallingDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidCallingDeviceState: _enum_for_StateIncompatibilityErrors.invalidCallingDeviceState = StateIncompatibilityErrors.invalidCallingDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallingDeviceState
@@ -324,7 +324,7 @@ const StateIncompatibilityErrors_invalidCallingDeviceState = StateIncompatibilit
  * @type {number}
  */
 export
-const invalidCallingDeviceState = StateIncompatibilityErrors.invalidCallingDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallingDeviceState: _enum_for_StateIncompatibilityErrors.invalidCallingDeviceState = StateIncompatibilityErrors.invalidCallingDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidCallToParkDeviceState
@@ -335,7 +335,7 @@ const invalidCallingDeviceState = StateIncompatibilityErrors.invalidCallingDevic
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidCallToParkDeviceState = StateIncompatibilityErrors.invalidCallToParkDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidCallToParkDeviceState: _enum_for_StateIncompatibilityErrors.invalidCallToParkDeviceState = StateIncompatibilityErrors.invalidCallToParkDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallToParkDeviceState
@@ -345,7 +345,7 @@ const StateIncompatibilityErrors_invalidCallToParkDeviceState = StateIncompatibi
  * @type {number}
  */
 export
-const invalidCallToParkDeviceState = StateIncompatibilityErrors.invalidCallToParkDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallToParkDeviceState: _enum_for_StateIncompatibilityErrors.invalidCallToParkDeviceState = StateIncompatibilityErrors.invalidCallToParkDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidDestinationDeviceState
@@ -356,7 +356,7 @@ const invalidCallToParkDeviceState = StateIncompatibilityErrors.invalidCallToPar
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidDestinationDeviceState = StateIncompatibilityErrors.invalidDestinationDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidDestinationDeviceState: _enum_for_StateIncompatibilityErrors.invalidDestinationDeviceState = StateIncompatibilityErrors.invalidDestinationDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationDeviceState
@@ -366,7 +366,7 @@ const StateIncompatibilityErrors_invalidDestinationDeviceState = StateIncompatib
  * @type {number}
  */
 export
-const invalidDestinationDeviceState = StateIncompatibilityErrors.invalidDestinationDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestinationDeviceState: _enum_for_StateIncompatibilityErrors.invalidDestinationDeviceState = StateIncompatibilityErrors.invalidDestinationDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidDivertingDeviceState
@@ -377,7 +377,7 @@ const invalidDestinationDeviceState = StateIncompatibilityErrors.invalidDestinat
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidDivertingDeviceState = StateIncompatibilityErrors.invalidDivertingDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidDivertingDeviceState: _enum_for_StateIncompatibilityErrors.invalidDivertingDeviceState = StateIncompatibilityErrors.invalidDivertingDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDivertingDeviceState
@@ -387,7 +387,7 @@ const StateIncompatibilityErrors_invalidDivertingDeviceState = StateIncompatibil
  * @type {number}
  */
 export
-const invalidDivertingDeviceState = StateIncompatibilityErrors.invalidDivertingDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDivertingDeviceState: _enum_for_StateIncompatibilityErrors.invalidDivertingDeviceState = StateIncompatibilityErrors.invalidDivertingDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidHeldDeviceState
@@ -398,7 +398,7 @@ const invalidDivertingDeviceState = StateIncompatibilityErrors.invalidDivertingD
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidHeldDeviceState = StateIncompatibilityErrors.invalidHeldDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidHeldDeviceState: _enum_for_StateIncompatibilityErrors.invalidHeldDeviceState = StateIncompatibilityErrors.invalidHeldDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldDeviceState
@@ -408,7 +408,7 @@ const StateIncompatibilityErrors_invalidHeldDeviceState = StateIncompatibilityEr
  * @type {number}
  */
 export
-const invalidHeldDeviceState = StateIncompatibilityErrors.invalidHeldDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHeldDeviceState: _enum_for_StateIncompatibilityErrors.invalidHeldDeviceState = StateIncompatibilityErrors.invalidHeldDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidParkToDeviceState
@@ -419,7 +419,7 @@ const invalidHeldDeviceState = StateIncompatibilityErrors.invalidHeldDeviceState
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidParkToDeviceState = StateIncompatibilityErrors.invalidParkToDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidParkToDeviceState: _enum_for_StateIncompatibilityErrors.invalidParkToDeviceState = StateIncompatibilityErrors.invalidParkToDeviceState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParkToDeviceState
@@ -429,7 +429,7 @@ const StateIncompatibilityErrors_invalidParkToDeviceState = StateIncompatibility
  * @type {number}
  */
 export
-const invalidParkToDeviceState = StateIncompatibilityErrors.invalidParkToDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidParkToDeviceState: _enum_for_StateIncompatibilityErrors.invalidParkToDeviceState = StateIncompatibilityErrors.invalidParkToDeviceState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidConnectionState
@@ -441,7 +441,7 @@ const invalidParkToDeviceState = StateIncompatibilityErrors.invalidParkToDeviceS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidConnectionState = StateIncompatibilityErrors.invalidConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidConnectionState: _enum_for_StateIncompatibilityErrors.invalidConnectionState = StateIncompatibilityErrors.invalidConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionState
@@ -451,7 +451,7 @@ const StateIncompatibilityErrors_invalidConnectionState = StateIncompatibilityEr
  * @type {number}
  */
 export
-const invalidConnectionState = StateIncompatibilityErrors.invalidConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConnectionState: _enum_for_StateIncompatibilityErrors.invalidConnectionState = StateIncompatibilityErrors.invalidConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidActiveConnectionState
@@ -462,7 +462,7 @@ const invalidConnectionState = StateIncompatibilityErrors.invalidConnectionState
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidActiveConnectionState = StateIncompatibilityErrors.invalidActiveConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidActiveConnectionState: _enum_for_StateIncompatibilityErrors.invalidActiveConnectionState = StateIncompatibilityErrors.invalidActiveConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveConnectionState
@@ -472,7 +472,7 @@ const StateIncompatibilityErrors_invalidActiveConnectionState = StateIncompatibi
  * @type {number}
  */
 export
-const invalidActiveConnectionState = StateIncompatibilityErrors.invalidActiveConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidActiveConnectionState: _enum_for_StateIncompatibilityErrors.invalidActiveConnectionState = StateIncompatibilityErrors.invalidActiveConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidConnectionIDForActiveCall
@@ -484,7 +484,7 @@ const invalidActiveConnectionState = StateIncompatibilityErrors.invalidActiveCon
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidConnectionIDForActiveCall = StateIncompatibilityErrors.invalidConnectionIDForActiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidConnectionIDForActiveCall: _enum_for_StateIncompatibilityErrors.invalidConnectionIDForActiveCall = StateIncompatibilityErrors.invalidConnectionIDForActiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionIDForActiveCall
@@ -494,7 +494,7 @@ const StateIncompatibilityErrors_invalidConnectionIDForActiveCall = StateIncompa
  * @type {number}
  */
 export
-const invalidConnectionIDForActiveCall = StateIncompatibilityErrors.invalidConnectionIDForActiveCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConnectionIDForActiveCall: _enum_for_StateIncompatibilityErrors.invalidConnectionIDForActiveCall = StateIncompatibilityErrors.invalidConnectionIDForActiveCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_invalidHeldConnectionState
@@ -505,7 +505,7 @@ const invalidConnectionIDForActiveCall = StateIncompatibilityErrors.invalidConne
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_invalidHeldConnectionState = StateIncompatibilityErrors.invalidHeldConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_invalidHeldConnectionState: _enum_for_StateIncompatibilityErrors.invalidHeldConnectionState = StateIncompatibilityErrors.invalidHeldConnectionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldConnectionState
@@ -515,7 +515,7 @@ const StateIncompatibilityErrors_invalidHeldConnectionState = StateIncompatibili
  * @type {number}
  */
 export
-const invalidHeldConnectionState = StateIncompatibilityErrors.invalidHeldConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHeldConnectionState: _enum_for_StateIncompatibilityErrors.invalidHeldConnectionState = StateIncompatibilityErrors.invalidHeldConnectionState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_noActiveCall
@@ -526,7 +526,7 @@ const invalidHeldConnectionState = StateIncompatibilityErrors.invalidHeldConnect
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_noActiveCall = StateIncompatibilityErrors.noActiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_noActiveCall: _enum_for_StateIncompatibilityErrors.noActiveCall = StateIncompatibilityErrors.noActiveCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noActiveCall
@@ -535,7 +535,7 @@ const StateIncompatibilityErrors_noActiveCall = StateIncompatibilityErrors.noAct
  * @type {number}
  */
 export
-const noActiveCall = StateIncompatibilityErrors.noActiveCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noActiveCall: _enum_for_StateIncompatibilityErrors.noActiveCall = StateIncompatibilityErrors.noActiveCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_noCallToAnswer
@@ -547,7 +547,7 @@ const noActiveCall = StateIncompatibilityErrors.noActiveCall; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_noCallToAnswer = StateIncompatibilityErrors.noCallToAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_noCallToAnswer: _enum_for_StateIncompatibilityErrors.noCallToAnswer = StateIncompatibilityErrors.noCallToAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCallToAnswer
@@ -556,7 +556,7 @@ const StateIncompatibilityErrors_noCallToAnswer = StateIncompatibilityErrors.noC
  * @type {number}
  */
 export
-const noCallToAnswer = StateIncompatibilityErrors.noCallToAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCallToAnswer: _enum_for_StateIncompatibilityErrors.noCallToAnswer = StateIncompatibilityErrors.noCallToAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_noCallToClear
@@ -567,7 +567,7 @@ const noCallToAnswer = StateIncompatibilityErrors.noCallToAnswer; /* SHORT_NAMED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_noCallToClear = StateIncompatibilityErrors.noCallToClear; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_noCallToClear: _enum_for_StateIncompatibilityErrors.noCallToClear = StateIncompatibilityErrors.noCallToClear; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCallToClear
@@ -576,7 +576,7 @@ const StateIncompatibilityErrors_noCallToClear = StateIncompatibilityErrors.noCa
  * @type {number}
  */
 export
-const noCallToClear = StateIncompatibilityErrors.noCallToClear; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCallToClear: _enum_for_StateIncompatibilityErrors.noCallToClear = StateIncompatibilityErrors.noCallToClear; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_noCallToComplete
@@ -588,7 +588,7 @@ const noCallToClear = StateIncompatibilityErrors.noCallToClear; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_noCallToComplete = StateIncompatibilityErrors.noCallToComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_noCallToComplete: _enum_for_StateIncompatibilityErrors.noCallToComplete = StateIncompatibilityErrors.noCallToComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCallToComplete
@@ -597,7 +597,7 @@ const StateIncompatibilityErrors_noCallToComplete = StateIncompatibilityErrors.n
  * @type {number}
  */
 export
-const noCallToComplete = StateIncompatibilityErrors.noCallToComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCallToComplete: _enum_for_StateIncompatibilityErrors.noCallToComplete = StateIncompatibilityErrors.noCallToComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_noConnectionToClear
@@ -609,7 +609,7 @@ const noCallToComplete = StateIncompatibilityErrors.noCallToComplete; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_noConnectionToClear = StateIncompatibilityErrors.noConnectionToClear; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_noConnectionToClear: _enum_for_StateIncompatibilityErrors.noConnectionToClear = StateIncompatibilityErrors.noConnectionToClear; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noConnectionToClear
@@ -618,7 +618,7 @@ const StateIncompatibilityErrors_noConnectionToClear = StateIncompatibilityError
  * @type {number}
  */
 export
-const noConnectionToClear = StateIncompatibilityErrors.noConnectionToClear; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noConnectionToClear: _enum_for_StateIncompatibilityErrors.noConnectionToClear = StateIncompatibilityErrors.noConnectionToClear; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_noHeldCall
@@ -630,7 +630,7 @@ const noConnectionToClear = StateIncompatibilityErrors.noConnectionToClear; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_noHeldCall = StateIncompatibilityErrors.noHeldCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_noHeldCall: _enum_for_StateIncompatibilityErrors.noHeldCall = StateIncompatibilityErrors.noHeldCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noHeldCall
@@ -639,7 +639,7 @@ const StateIncompatibilityErrors_noHeldCall = StateIncompatibilityErrors.noHeldC
  * @type {number}
  */
 export
-const noHeldCall = StateIncompatibilityErrors.noHeldCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noHeldCall: _enum_for_StateIncompatibilityErrors.noHeldCall = StateIncompatibilityErrors.noHeldCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_incorrectMsgState
@@ -651,7 +651,7 @@ const noHeldCall = StateIncompatibilityErrors.noHeldCall; /* SHORT_NAMED_ENUMERA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_incorrectMsgState = StateIncompatibilityErrors.incorrectMsgState; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_incorrectMsgState: _enum_for_StateIncompatibilityErrors.incorrectMsgState = StateIncompatibilityErrors.incorrectMsgState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incorrectMsgState
@@ -660,7 +660,7 @@ const StateIncompatibilityErrors_incorrectMsgState = StateIncompatibilityErrors.
  * @type {number}
  */
 export
-const incorrectMsgState = StateIncompatibilityErrors.incorrectMsgState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const incorrectMsgState: _enum_for_StateIncompatibilityErrors.incorrectMsgState = StateIncompatibilityErrors.incorrectMsgState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_beginningOfMsg
@@ -671,7 +671,7 @@ const incorrectMsgState = StateIncompatibilityErrors.incorrectMsgState; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_beginningOfMsg = StateIncompatibilityErrors.beginningOfMsg; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_beginningOfMsg: _enum_for_StateIncompatibilityErrors.beginningOfMsg = StateIncompatibilityErrors.beginningOfMsg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary beginningOfMsg
@@ -680,7 +680,7 @@ const StateIncompatibilityErrors_beginningOfMsg = StateIncompatibilityErrors.beg
  * @type {number}
  */
 export
-const beginningOfMsg = StateIncompatibilityErrors.beginningOfMsg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const beginningOfMsg: _enum_for_StateIncompatibilityErrors.beginningOfMsg = StateIncompatibilityErrors.beginningOfMsg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_endOfMsg
@@ -691,7 +691,7 @@ const beginningOfMsg = StateIncompatibilityErrors.beginningOfMsg; /* SHORT_NAMED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_endOfMsg = StateIncompatibilityErrors.endOfMsg; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_endOfMsg: _enum_for_StateIncompatibilityErrors.endOfMsg = StateIncompatibilityErrors.endOfMsg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfMsg
@@ -700,7 +700,7 @@ const StateIncompatibilityErrors_endOfMsg = StateIncompatibilityErrors.endOfMsg;
  * @type {number}
  */
 export
-const endOfMsg = StateIncompatibilityErrors.endOfMsg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfMsg: _enum_for_StateIncompatibilityErrors.endOfMsg = StateIncompatibilityErrors.endOfMsg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_msgSuspended
@@ -712,7 +712,7 @@ const endOfMsg = StateIncompatibilityErrors.endOfMsg; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_msgSuspended = StateIncompatibilityErrors.msgSuspended; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_msgSuspended: _enum_for_StateIncompatibilityErrors.msgSuspended = StateIncompatibilityErrors.msgSuspended; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msgSuspended
@@ -721,7 +721,7 @@ const StateIncompatibilityErrors_msgSuspended = StateIncompatibilityErrors.msgSu
  * @type {number}
  */
 export
-const msgSuspended = StateIncompatibilityErrors.msgSuspended; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msgSuspended: _enum_for_StateIncompatibilityErrors.msgSuspended = StateIncompatibilityErrors.msgSuspended; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_notAbleToPlay
@@ -732,7 +732,7 @@ const msgSuspended = StateIncompatibilityErrors.msgSuspended; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_notAbleToPlay = StateIncompatibilityErrors.notAbleToPlay; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_notAbleToPlay: _enum_for_StateIncompatibilityErrors.notAbleToPlay = StateIncompatibilityErrors.notAbleToPlay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAbleToPlay
@@ -741,7 +741,7 @@ const StateIncompatibilityErrors_notAbleToPlay = StateIncompatibilityErrors.notA
  * @type {number}
  */
 export
-const notAbleToPlay = StateIncompatibilityErrors.notAbleToPlay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAbleToPlay: _enum_for_StateIncompatibilityErrors.notAbleToPlay = StateIncompatibilityErrors.notAbleToPlay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StateIncompatibilityErrors_notAbleToResume
@@ -751,7 +751,7 @@ const notAbleToPlay = StateIncompatibilityErrors.notAbleToPlay; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const StateIncompatibilityErrors_notAbleToResume = StateIncompatibilityErrors.notAbleToResume; /* LONG_NAMED_ENUMERATED_VALUE */
+const StateIncompatibilityErrors_notAbleToResume: _enum_for_StateIncompatibilityErrors.notAbleToResume = StateIncompatibilityErrors.notAbleToResume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAbleToResume
@@ -760,7 +760,7 @@ const StateIncompatibilityErrors_notAbleToResume = StateIncompatibilityErrors.no
  * @type {number}
  */
 export
-const notAbleToResume = StateIncompatibilityErrors.notAbleToResume; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAbleToResume: _enum_for_StateIncompatibilityErrors.notAbleToResume = StateIncompatibilityErrors.notAbleToResume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_StateIncompatibilityErrors: $.ASN1Decoder<StateIncompatibilityErrors> | null = null;
 

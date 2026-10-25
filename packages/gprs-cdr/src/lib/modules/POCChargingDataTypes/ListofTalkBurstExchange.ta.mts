@@ -241,7 +241,7 @@ class ListofTalkBurstExchange {
          * @static
          */
 
-    public static _enum_for_changeCondition = _enum_for_ChangeCondition;
+    public static _enum_for_changeCondition: typeof _enum_for_ChangeCondition = _enum_for_ChangeCondition;
 }
 
 /**

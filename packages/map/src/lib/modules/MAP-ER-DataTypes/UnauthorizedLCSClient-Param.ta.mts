@@ -85,7 +85,7 @@ class UnauthorizedLCSClient_Param {
          * @static
          */
 
-    public static _enum_for_unauthorizedLCSClient_Diagnostic = _enum_for_UnauthorizedLCSClient_Diagnostic;
+    public static _enum_for_unauthorizedLCSClient_Diagnostic: typeof _enum_for_UnauthorizedLCSClient_Diagnostic = _enum_for_UnauthorizedLCSClient_Diagnostic;
 }
 
 /**

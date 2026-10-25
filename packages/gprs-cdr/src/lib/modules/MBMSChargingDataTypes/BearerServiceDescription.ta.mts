@@ -223,7 +223,7 @@ class BearerServiceDescription {
          * @static
          */
 
-    public static _enum_for_sDP_Type = _enum_for_BearerServiceDescription_sDP_Type;
+    public static _enum_for_sDP_Type: typeof _enum_for_BearerServiceDescription_sDP_Type = _enum_for_BearerServiceDescription_sDP_Type;
 }
 
 /**

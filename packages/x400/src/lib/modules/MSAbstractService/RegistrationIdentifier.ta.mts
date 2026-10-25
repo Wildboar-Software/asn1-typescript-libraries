@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RegistrationIdentifier = PrintableString; // PrintableString
 
 
-export const _decode_RegistrationIdentifier = $._decodePrintableString;
+export const _decode_RegistrationIdentifier: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_RegistrationIdentifier = $._encodePrintableString;
+export const _encode_RegistrationIdentifier: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

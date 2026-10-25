@@ -86,7 +86,7 @@ type Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance_
  * @enum {number}
  */
 export
-const Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance_definition_details_class;
+const Semaphore_instance_definition_details_class: typeof _enum_for_Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance_definition_details_class;
 
 /**
  * @summary Semaphore_instance_definition_details_class_token
@@ -99,7 +99,7 @@ const Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance
  * @type {number}
  */
 export
-const Semaphore_instance_definition_details_class_token = Semaphore_instance_definition_details_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
+const Semaphore_instance_definition_details_class_token: _enum_for_Semaphore_instance_definition_details_class.token = Semaphore_instance_definition_details_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary token
@@ -112,7 +112,7 @@ const Semaphore_instance_definition_details_class_token = Semaphore_instance_def
  * @type {number}
  */
 export
-const token = Semaphore_instance_definition_details_class.token; /* SHORT_NAMED_ENUMERATED_VALUE */
+const token: _enum_for_Semaphore_instance_definition_details_class.token = Semaphore_instance_definition_details_class.token; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Semaphore_instance_definition_details_class_pool
@@ -125,7 +125,7 @@ const token = Semaphore_instance_definition_details_class.token; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const Semaphore_instance_definition_details_class_pool = Semaphore_instance_definition_details_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
+const Semaphore_instance_definition_details_class_pool: _enum_for_Semaphore_instance_definition_details_class.pool = Semaphore_instance_definition_details_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pool
@@ -138,9 +138,9 @@ const Semaphore_instance_definition_details_class_pool = Semaphore_instance_defi
  * @type {number}
  */
 export
-const pool = Semaphore_instance_definition_details_class.pool; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Semaphore_instance_definition_details_class = $._decodeEnumerated;
-export const _encode_Semaphore_instance_definition_details_class = $._encodeEnumerated;
+const pool: _enum_for_Semaphore_instance_definition_details_class.pool = Semaphore_instance_definition_details_class.pool; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_Semaphore_instance_definition_details_class: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_Semaphore_instance_definition_details_class: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

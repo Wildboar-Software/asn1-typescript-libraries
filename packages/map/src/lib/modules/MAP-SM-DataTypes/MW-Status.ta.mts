@@ -183,7 +183,7 @@ export const _decode_MW_Status = (el: _Element): MW_Status => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MW_Status, encoded as an ASN.1 Element.
  */
-export const _encode_MW_Status = $._encodeBitString;
+export const _encode_MW_Status: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

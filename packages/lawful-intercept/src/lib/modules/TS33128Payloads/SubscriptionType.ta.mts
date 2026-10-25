@@ -83,7 +83,7 @@ type SubscriptionType = _enum_for_SubscriptionType;
  * @enum {number}
  */
 export
-const SubscriptionType = _enum_for_SubscriptionType;
+const SubscriptionType: typeof _enum_for_SubscriptionType = _enum_for_SubscriptionType;
 
 /**
  * @summary SubscriptionType_subscription
@@ -91,7 +91,7 @@ const SubscriptionType = _enum_for_SubscriptionType;
  * @type {number}
  */
 export
-const SubscriptionType_subscription = SubscriptionType.subscription; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionType_subscription: _enum_for_SubscriptionType.subscription = SubscriptionType.subscription; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscription
@@ -99,7 +99,7 @@ const SubscriptionType_subscription = SubscriptionType.subscription; /* LONG_NAM
  * @type {number}
  */
 export
-const subscription = SubscriptionType.subscription; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscription: _enum_for_SubscriptionType.subscription = SubscriptionType.subscription; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionType_subscriptionUpdate
@@ -107,7 +107,7 @@ const subscription = SubscriptionType.subscription; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SubscriptionType_subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionType_subscriptionUpdate: _enum_for_SubscriptionType.subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionUpdate
@@ -115,7 +115,7 @@ const SubscriptionType_subscriptionUpdate = SubscriptionType.subscriptionUpdate;
  * @type {number}
  */
 export
-const subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionUpdate: _enum_for_SubscriptionType.subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionType_unsubscription
@@ -123,7 +123,7 @@ const subscriptionUpdate = SubscriptionType.subscriptionUpdate; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const SubscriptionType_unsubscription = SubscriptionType.unsubscription; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionType_unsubscription: _enum_for_SubscriptionType.unsubscription = SubscriptionType.unsubscription; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsubscription
@@ -131,7 +131,7 @@ const SubscriptionType_unsubscription = SubscriptionType.unsubscription; /* LONG
  * @type {number}
  */
 export
-const unsubscription = SubscriptionType.unsubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsubscription: _enum_for_SubscriptionType.unsubscription = SubscriptionType.unsubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SubscriptionType: $.ASN1Decoder<SubscriptionType> = $._decodeEnumerated;
 export const _encode_SubscriptionType: $.ASN1Encoder<SubscriptionType> = $._encodeEnumerated;
 

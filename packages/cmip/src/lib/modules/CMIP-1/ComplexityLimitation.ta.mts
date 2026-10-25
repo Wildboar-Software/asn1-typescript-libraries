@@ -126,7 +126,7 @@ export class ComplexityLimitation {
    * @static
    */
 
-  public static _enum_for_sync = _enum_for_CMISSync;
+  public static _enum_for_sync: typeof _enum_for_CMISSync = _enum_for_CMISSync;
 }
 
 

@@ -95,7 +95,7 @@ type ProSeUERole = _enum_for_ProSeUERole;
  * @enum {number}
  */
 export
-const ProSeUERole = _enum_for_ProSeUERole;
+const ProSeUERole: typeof _enum_for_ProSeUERole = _enum_for_ProSeUERole;
 
 /**
  * @summary ProSeUERole_annoucingUE
@@ -110,7 +110,7 @@ const ProSeUERole = _enum_for_ProSeUERole;
  * @type {number}
  */
 export
-const ProSeUERole_annoucingUE = ProSeUERole.annoucingUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeUERole_annoucingUE: _enum_for_ProSeUERole.annoucingUE = ProSeUERole.annoucingUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary annoucingUE
@@ -122,7 +122,7 @@ const ProSeUERole_annoucingUE = ProSeUERole.annoucingUE; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const annoucingUE = ProSeUERole.annoucingUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const annoucingUE: _enum_for_ProSeUERole.annoucingUE = ProSeUERole.annoucingUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeUERole_monitoringUE
@@ -136,7 +136,7 @@ const annoucingUE = ProSeUERole.annoucingUE; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProSeUERole_monitoringUE = ProSeUERole.monitoringUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeUERole_monitoringUE: _enum_for_ProSeUERole.monitoringUE = ProSeUERole.monitoringUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringUE
@@ -148,7 +148,7 @@ const ProSeUERole_monitoringUE = ProSeUERole.monitoringUE; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const monitoringUE = ProSeUERole.monitoringUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringUE: _enum_for_ProSeUERole.monitoringUE = ProSeUERole.monitoringUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeUERole_requestorUE
@@ -162,7 +162,7 @@ const monitoringUE = ProSeUERole.monitoringUE; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const ProSeUERole_requestorUE = ProSeUERole.requestorUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeUERole_requestorUE: _enum_for_ProSeUERole.requestorUE = ProSeUERole.requestorUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestorUE
@@ -174,7 +174,7 @@ const ProSeUERole_requestorUE = ProSeUERole.requestorUE; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const requestorUE = ProSeUERole.requestorUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestorUE: _enum_for_ProSeUERole.requestorUE = ProSeUERole.requestorUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeUERole_requestedUE
@@ -188,7 +188,7 @@ const requestorUE = ProSeUERole.requestorUE; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProSeUERole_requestedUE = ProSeUERole.requestedUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeUERole_requestedUE: _enum_for_ProSeUERole.requestedUE = ProSeUERole.requestedUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedUE
@@ -200,7 +200,7 @@ const ProSeUERole_requestedUE = ProSeUERole.requestedUE; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const requestedUE = ProSeUERole.requestedUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedUE: _enum_for_ProSeUERole.requestedUE = ProSeUERole.requestedUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeUERole_discovererUE
@@ -215,7 +215,7 @@ const requestedUE = ProSeUERole.requestedUE; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProSeUERole_discovererUE = ProSeUERole.discovererUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeUERole_discovererUE: _enum_for_ProSeUERole.discovererUE = ProSeUERole.discovererUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary discovererUE
@@ -227,7 +227,7 @@ const ProSeUERole_discovererUE = ProSeUERole.discovererUE; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const discovererUE = ProSeUERole.discovererUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const discovererUE: _enum_for_ProSeUERole.discovererUE = ProSeUERole.discovererUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeUERole_discovereeUE
@@ -242,7 +242,7 @@ const discovererUE = ProSeUERole.discovererUE; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const ProSeUERole_discovereeUE = ProSeUERole.discovereeUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeUERole_discovereeUE: _enum_for_ProSeUERole.discovereeUE = ProSeUERole.discovereeUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary discovereeUE
@@ -254,7 +254,7 @@ const ProSeUERole_discovereeUE = ProSeUERole.discovereeUE; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const discovereeUE = ProSeUERole.discovereeUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const discovereeUE: _enum_for_ProSeUERole.discovereeUE = ProSeUERole.discovereeUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProSeUERole: $.ASN1Decoder<ProSeUERole> = $._decodeEnumerated;

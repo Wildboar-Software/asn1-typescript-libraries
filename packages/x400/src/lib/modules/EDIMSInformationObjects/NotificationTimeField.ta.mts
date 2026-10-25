@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NotificationTimeField = UTCTime; // UTCTime
 
 
-export const _decode_NotificationTimeField = $._decodeUTCTime;
+export const _decode_NotificationTimeField: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
-export const _encode_NotificationTimeField = $._encodeUTCTime;
+export const _encode_NotificationTimeField: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

@@ -234,13 +234,13 @@ class InitialAssociationDPArg {
          * @static
          */
 
-    public static _enum_for_eventTypeBCUSM = _enum_for_EventTypeBCUSM;        /**
+    public static _enum_for_eventTypeBCUSM: typeof _enum_for_EventTypeBCUSM = _enum_for_EventTypeBCUSM;        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;
 }
 
 /**

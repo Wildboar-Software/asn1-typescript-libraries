@@ -27,7 +27,7 @@ export function _decode_CalledNumber (el: _Element): CalledNumber {
     }
     return value;
 }
-export const _encode_CalledNumber = $._encodeGraphicString;
+export const _encode_CalledNumber: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

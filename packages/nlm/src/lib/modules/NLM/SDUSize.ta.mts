@@ -33,12 +33,12 @@ export type SDUSize = INTEGER;
 
 
 
-export const _decode_SDUSize = $._decodeInteger;
+export const _decode_SDUSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_SDUSize = $._encodeInteger;
+export const _encode_SDUSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -96,7 +96,7 @@ export class WeekDayTranslationList_Item {
      * @static
      */
 
-    public static _enum_for_weekDay = _enum_for_WeekDay;
+    public static _enum_for_weekDay: typeof _enum_for_WeekDay = _enum_for_WeekDay;
 }
 
 

@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Language = PrintableString; // PrintableString
 
 
-export const _decode_Language = $._decodePrintableString;
+export const _decode_Language: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_Language = $._encodePrintableString;
+export const _encode_Language: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

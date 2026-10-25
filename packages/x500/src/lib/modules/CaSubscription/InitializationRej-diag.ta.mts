@@ -33,7 +33,7 @@ export type InitializationRej_diag =
  * @constant
  * @type {number}
  */
-export const InitializationRej_diag_unsupportedVersion = _enum_for_InitializationRej_diag.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationRej_diag_unsupportedVersion: _enum_for_InitializationRej_diag.unsupportedVersion = _enum_for_InitializationRej_diag.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedVersion
@@ -43,13 +43,13 @@ export const InitializationRej_diag_unsupportedVersion = _enum_for_Initializatio
  * @constant
  * @type {number}
  */
-export const unsupportedVersion = InitializationRej_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedVersion: _enum_for_InitializationRej_diag.unsupportedVersion = InitializationRej_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_InitializationRej_diag = $._decodeEnumerated;
+export const _decode_InitializationRej_diag: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_InitializationRej_diag = $._encodeEnumerated;
+export const _encode_InitializationRej_diag: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

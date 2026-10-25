@@ -298,7 +298,7 @@ class EPSPDNConnectionRelease {
          * @static
          */
 
-    public static _enum_for_pDNConnectionType = _enum_for_PDNConnectionType;
+    public static _enum_for_pDNConnectionType: typeof _enum_for_PDNConnectionType = _enum_for_PDNConnectionType;
 }
 
 /**

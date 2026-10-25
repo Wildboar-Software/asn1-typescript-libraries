@@ -125,8 +125,8 @@ const NotificationEvent_notificationDelete: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const notificationDelete: number = NotificationEvent_notificationDelete; /* SHORT_NAMED_BIT */
-export const _decode_NotificationEvent = $._decodeBitString;
-export const _encode_NotificationEvent = $._encodeBitString;
+export const _decode_NotificationEvent: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_NotificationEvent: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

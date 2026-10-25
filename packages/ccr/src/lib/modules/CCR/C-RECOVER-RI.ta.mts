@@ -195,7 +195,7 @@ export class C_RECOVER_RI {
    * @static
    */
 
-  public static _enum_for_recovery_state = _enum_for_C_RECOVER_RI_recovery_state;
+  public static _enum_for_recovery_state: typeof _enum_for_C_RECOVER_RI_recovery_state = _enum_for_C_RECOVER_RI_recovery_state;
 }
 
 

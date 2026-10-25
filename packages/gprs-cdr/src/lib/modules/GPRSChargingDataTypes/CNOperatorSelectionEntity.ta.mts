@@ -70,7 +70,7 @@ type CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
  * @enum {number}
  */
 export
-const CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
+const CNOperatorSelectionEntity: typeof _enum_for_CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
 
 /**
  * @summary CNOperatorSelectionEntity_servCNSelectedbyUE
@@ -78,7 +78,7 @@ const CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
  * @type {number}
  */
 export
-const CNOperatorSelectionEntity_servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const CNOperatorSelectionEntity_servCNSelectedbyUE: _enum_for_CNOperatorSelectionEntity.servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servCNSelectedbyUE
@@ -86,7 +86,7 @@ const CNOperatorSelectionEntity_servCNSelectedbyUE = CNOperatorSelectionEntity.s
  * @type {number}
  */
 export
-const servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servCNSelectedbyUE: _enum_for_CNOperatorSelectionEntity.servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CNOperatorSelectionEntity_servCNSelectedbyNtw
@@ -94,7 +94,7 @@ const servCNSelectedbyUE = CNOperatorSelectionEntity.servCNSelectedbyUE; /* SHOR
  * @type {number}
  */
 export
-const CNOperatorSelectionEntity_servCNSelectedbyNtw = CNOperatorSelectionEntity.servCNSelectedbyNtw; /* LONG_NAMED_ENUMERATED_VALUE */
+const CNOperatorSelectionEntity_servCNSelectedbyNtw: _enum_for_CNOperatorSelectionEntity.servCNSelectedbyNtw = CNOperatorSelectionEntity.servCNSelectedbyNtw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servCNSelectedbyNtw
@@ -102,7 +102,7 @@ const CNOperatorSelectionEntity_servCNSelectedbyNtw = CNOperatorSelectionEntity.
  * @type {number}
  */
 export
-const servCNSelectedbyNtw = CNOperatorSelectionEntity.servCNSelectedbyNtw; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servCNSelectedbyNtw: _enum_for_CNOperatorSelectionEntity.servCNSelectedbyNtw = CNOperatorSelectionEntity.servCNSelectedbyNtw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CNOperatorSelectionEntity: $.ASN1Decoder<CNOperatorSelectionEntity> = $._decodeEnumerated;

@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ResultInterval = INTEGER;
 
 
-export const _decode_ResultInterval = $._decodeInteger;
+export const _decode_ResultInterval: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ResultInterval = $._encodeInteger;
+export const _encode_ResultInterval: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

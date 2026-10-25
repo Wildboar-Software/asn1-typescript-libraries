@@ -108,7 +108,7 @@ class DeviceHistory {
          * @static
          */
 
-    public static _enum_for_eventCause = _enum_for_EventCause;
+    public static _enum_for_eventCause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

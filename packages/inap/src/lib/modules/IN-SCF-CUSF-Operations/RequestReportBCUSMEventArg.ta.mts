@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { BCUSMEvent, _decode_BCUSMEvent, _encode_BCUSMEvent } from "../IN-SCF-CUSF-Datatypes/BCUSMEvent.ta.mjs";
 // export { BCUSMEvent, _decode_BCUSMEvent, _encode_BCUSMEvent } from "../IN-SCF-CUSF-Datatypes/BCUSMEvent.ta.mjs";
-import { ComponentType, _decode_ComponentType, _encode_ComponentType, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
+import { ComponentType, _decode_ComponentType, _encode_ComponentType, _enum_for_ComponentType, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
 // export { ComponentType, _enum_for_ComponentType, ComponentType_any /* IMPORTED_LONG_ENUMERATION_ITEM */, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_invoke /* IMPORTED_LONG_ENUMERATION_ITEM */, invoke /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rResult /* IMPORTED_LONG_ENUMERATION_ITEM */, rResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rError /* IMPORTED_LONG_ENUMERATION_ITEM */, rError /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rReject /* IMPORTED_LONG_ENUMERATION_ITEM */, rReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ComponentType, _encode_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
 import { type ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
 // export { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
@@ -137,7 +137,7 @@ class RequestReportBCUSMEventArg {
      * @static
      * @method
      */
-    public static get _default_value_for_componentTypes () { return [ any_ ]; }
+    public static get _default_value_for_componentTypes (): _enum_for_ComponentType[] { return [ any_ ]; }
 }
 
 /**

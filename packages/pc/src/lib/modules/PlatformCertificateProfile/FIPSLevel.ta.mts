@@ -105,7 +105,7 @@ class FIPSLevel {
      * @public
      * @static
      */
-    public static _enum_for_level = _enum_for_SecurityLevel;
+    public static _enum_for_level: typeof _enum_for_SecurityLevel = _enum_for_SecurityLevel;
 }
 
 /**

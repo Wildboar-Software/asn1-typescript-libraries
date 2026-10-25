@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type GlobalTime = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_GlobalTime = $._decodeGeneralizedTime;
+export const _decode_GlobalTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_GlobalTime = $._encodeGeneralizedTime;
+export const _encode_GlobalTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

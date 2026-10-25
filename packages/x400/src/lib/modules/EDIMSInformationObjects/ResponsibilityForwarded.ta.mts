@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ResponsibilityForwarded = BOOLEAN; // BooleanType
 
 
-export const _decode_ResponsibilityForwarded = $._decodeBoolean;
+export const _decode_ResponsibilityForwarded: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_ResponsibilityForwarded = $._encodeBoolean;
+export const _encode_ResponsibilityForwarded: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    type INTEGER,
     type NULL,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -101,7 +102,7 @@ class MergeCallSegmentsArg {
      * @static
      * @method
      */
-    public static get _default_value_for_targetCallSegment () { return initialCallSegment; }
+    public static get _default_value_for_targetCallSegment (): INTEGER { return initialCallSegment; }
 }
 
 /**

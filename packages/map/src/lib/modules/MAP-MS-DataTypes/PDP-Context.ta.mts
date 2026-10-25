@@ -435,25 +435,25 @@ class PDP_Context {
          * @static
          */
 
-    public static _enum_for_sipto_Permission = _enum_for_SIPTO_Permission;        /**
+    public static _enum_for_sipto_Permission: typeof _enum_for_SIPTO_Permission = _enum_for_SIPTO_Permission;        /**
          * @summary The enum used as the type of the component `lipa_Permission`
          * @public
          * @static
          */
 
-    public static _enum_for_lipa_Permission = _enum_for_LIPA_Permission;        /**
+    public static _enum_for_lipa_Permission: typeof _enum_for_LIPA_Permission = _enum_for_LIPA_Permission;        /**
          * @summary The enum used as the type of the component `sipto_local_network_Permission`
          * @public
          * @static
          */
 
-    public static _enum_for_sipto_local_network_Permission = _enum_for_SIPTO_Local_Network_Permission;        /**
+    public static _enum_for_sipto_local_network_Permission: typeof _enum_for_SIPTO_Local_Network_Permission = _enum_for_SIPTO_Local_Network_Permission;        /**
          * @summary The enum used as the type of the component `nIDD_Mechanism`
          * @public
          * @static
          */
 
-    public static _enum_for_nIDD_Mechanism = _enum_for_NIDD_Mechanism;
+    public static _enum_for_nIDD_Mechanism: typeof _enum_for_NIDD_Mechanism = _enum_for_NIDD_Mechanism;
 }
 
 /**

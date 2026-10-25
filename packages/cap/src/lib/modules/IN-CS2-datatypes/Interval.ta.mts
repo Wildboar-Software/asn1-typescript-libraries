@@ -34,7 +34,7 @@ export const _decode_Interval = (el: _Element): Interval => {
     }
     return value;
 };
-export const _encode_Interval = $._encodeInteger;
+export const _encode_Interval: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

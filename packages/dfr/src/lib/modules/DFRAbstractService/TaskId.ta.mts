@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TaskId = OCTET_STRING; // OctetStringType
-export const _decode_TaskId = $._decodeOctetString;
-export const _encode_TaskId = $._encodeOctetString;
+export const _decode_TaskId: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_TaskId: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

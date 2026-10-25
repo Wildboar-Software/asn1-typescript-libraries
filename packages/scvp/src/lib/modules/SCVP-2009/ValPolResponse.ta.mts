@@ -413,7 +413,7 @@ export class ValPolResponse {
    * @static
    */
 
-  public static _enum_for_responseTypes = _enum_for_ResponseTypes;
+  public static _enum_for_responseTypes: typeof _enum_for_ResponseTypes = _enum_for_ResponseTypes;
 }
 
 /**

@@ -31,7 +31,7 @@ export type Version = INTEGER;
  * @constant
  * @type {number}
  */
-export const Version_v0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v0: 0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -39,17 +39,17 @@ export const Version_v0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v0 = Version_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0: 0 = Version_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Version = $._decodeInteger;
+export const _decode_Version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Version = $._encodeInteger;
+export const _encode_Version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -57,7 +57,7 @@ export const version1: number = AUDT_apdu_protocol_version_version1; /* SHORT_NA
  * @returns The decoded `AUDT_apdu_protocol_version` value
  * @function
  */
-export const _decode_AUDT_apdu_protocol_version = $._decodeBitString;
+export const _decode_AUDT_apdu_protocol_version: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 /**
  * @summary Encode an `AUDT_apdu_protocol_version` value
@@ -66,6 +66,6 @@ export const _decode_AUDT_apdu_protocol_version = $._decodeBitString;
  * @returns The encoded ASN.1 element
  * @function
  */
-export const _encode_AUDT_apdu_protocol_version = $._encodeBitString;
+export const _encode_AUDT_apdu_protocol_version: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 /* eslint-enable */

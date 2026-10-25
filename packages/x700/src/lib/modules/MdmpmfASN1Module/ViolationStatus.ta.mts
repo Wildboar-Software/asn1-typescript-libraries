@@ -85,7 +85,7 @@ export type ViolationStatus = _enum_for_ViolationStatus;
  *
  * @enum {number}
  */
-export const ViolationStatus = _enum_for_ViolationStatus;
+export const ViolationStatus: typeof _enum_for_ViolationStatus = _enum_for_ViolationStatus;
 
 /**
  * @summary ViolationStatus_unknown
@@ -97,7 +97,7 @@ export const ViolationStatus = _enum_for_ViolationStatus;
  * @constant
  * @type {number}
  */
-export const ViolationStatus_unknown =
+export const ViolationStatus_unknown: _enum_for_ViolationStatus.unknown =
     ViolationStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const ViolationStatus_unknown =
  * @constant
  * @type {number}
  */
-export const unknown =
+export const unknown: _enum_for_ViolationStatus.unknown =
     ViolationStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const unknown =
  * @constant
  * @type {number}
  */
-export const ViolationStatus_no_violation =
+export const ViolationStatus_no_violation: _enum_for_ViolationStatus.no_violation =
     ViolationStatus.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const ViolationStatus_no_violation =
  * @constant
  * @type {number}
  */
-export const no_violation =
+export const no_violation: _enum_for_ViolationStatus.no_violation =
     ViolationStatus.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -146,7 +146,7 @@ export const no_violation =
  * @constant
  * @type {number}
  */
-export const ViolationStatus_violation_detected =
+export const ViolationStatus_violation_detected: _enum_for_ViolationStatus.violation_detected =
     ViolationStatus.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,7 +158,7 @@ export const ViolationStatus_violation_detected =
  * @constant
  * @type {number}
  */
-export const violation_detected =
+export const violation_detected: _enum_for_ViolationStatus.violation_detected =
     ViolationStatus.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

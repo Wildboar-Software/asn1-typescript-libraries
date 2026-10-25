@@ -118,7 +118,7 @@ type ProSeEventType = _enum_for_ProSeEventType;
  * @enum {number}
  */
 export
-const ProSeEventType = _enum_for_ProSeEventType;
+const ProSeEventType: typeof _enum_for_ProSeEventType = _enum_for_ProSeEventType;
 
 /**
  * @summary ProSeEventType_openAnnouncing
@@ -135,7 +135,7 @@ const ProSeEventType = _enum_for_ProSeEventType;
  * @type {number}
  */
 export
-const ProSeEventType_openAnnouncing = ProSeEventType.openAnnouncing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_openAnnouncing: _enum_for_ProSeEventType.openAnnouncing = ProSeEventType.openAnnouncing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary openAnnouncing
@@ -147,7 +147,7 @@ const ProSeEventType_openAnnouncing = ProSeEventType.openAnnouncing; /* LONG_NAM
  * @type {number}
  */
 export
-const openAnnouncing = ProSeEventType.openAnnouncing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const openAnnouncing: _enum_for_ProSeEventType.openAnnouncing = ProSeEventType.openAnnouncing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_openMonitoring
@@ -163,7 +163,7 @@ const openAnnouncing = ProSeEventType.openAnnouncing; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ProSeEventType_openMonitoring = ProSeEventType.openMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_openMonitoring: _enum_for_ProSeEventType.openMonitoring = ProSeEventType.openMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary openMonitoring
@@ -175,7 +175,7 @@ const ProSeEventType_openMonitoring = ProSeEventType.openMonitoring; /* LONG_NAM
  * @type {number}
  */
 export
-const openMonitoring = ProSeEventType.openMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const openMonitoring: _enum_for_ProSeEventType.openMonitoring = ProSeEventType.openMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_openMatchReport
@@ -192,7 +192,7 @@ const openMonitoring = ProSeEventType.openMonitoring; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ProSeEventType_openMatchReport = ProSeEventType.openMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_openMatchReport: _enum_for_ProSeEventType.openMatchReport = ProSeEventType.openMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary openMatchReport
@@ -204,7 +204,7 @@ const ProSeEventType_openMatchReport = ProSeEventType.openMatchReport; /* LONG_N
  * @type {number}
  */
 export
-const openMatchReport = ProSeEventType.openMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const openMatchReport: _enum_for_ProSeEventType.openMatchReport = ProSeEventType.openMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedAnnouncing
@@ -219,7 +219,7 @@ const openMatchReport = ProSeEventType.openMatchReport; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ProSeEventType_restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedAnnouncing: _enum_for_ProSeEventType.restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedAnnouncing
@@ -231,7 +231,7 @@ const ProSeEventType_restrictedAnnouncing = ProSeEventType.restrictedAnnouncing;
  * @type {number}
  */
 export
-const restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedAnnouncing: _enum_for_ProSeEventType.restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedMonitoring
@@ -246,7 +246,7 @@ const restrictedAnnouncing = ProSeEventType.restrictedAnnouncing; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ProSeEventType_restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedMonitoring: _enum_for_ProSeEventType.restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedMonitoring
@@ -258,7 +258,7 @@ const ProSeEventType_restrictedMonitoring = ProSeEventType.restrictedMonitoring;
  * @type {number}
  */
 export
-const restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedMonitoring: _enum_for_ProSeEventType.restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedMatchReport
@@ -272,7 +272,7 @@ const restrictedMonitoring = ProSeEventType.restrictedMonitoring; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ProSeEventType_restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedMatchReport: _enum_for_ProSeEventType.restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedMatchReport
@@ -284,7 +284,7 @@ const ProSeEventType_restrictedMatchReport = ProSeEventType.restrictedMatchRepor
  * @type {number}
  */
 export
-const restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedMatchReport: _enum_for_ProSeEventType.restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedDiscoveryRequest
@@ -301,7 +301,7 @@ const restrictedMatchReport = ProSeEventType.restrictedMatchReport; /* SHORT_NAM
  * @type {number}
  */
 export
-const ProSeEventType_restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedDiscoveryRequest: _enum_for_ProSeEventType.restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedDiscoveryRequest
@@ -314,7 +314,7 @@ const ProSeEventType_restrictedDiscoveryRequest = ProSeEventType.restrictedDisco
  * @type {number}
  */
 export
-const restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedDiscoveryRequest: _enum_for_ProSeEventType.restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeEventType_restrictedDiscoveryReporting
@@ -329,7 +329,7 @@ const restrictedDiscoveryRequest = ProSeEventType.restrictedDiscoveryRequest; /*
  * @type {number}
  */
 export
-const ProSeEventType_restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeEventType_restrictedDiscoveryReporting: _enum_for_ProSeEventType.restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedDiscoveryReporting
@@ -342,7 +342,7 @@ const ProSeEventType_restrictedDiscoveryReporting = ProSeEventType.restrictedDis
  * @type {number}
  */
 export
-const restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedDiscoveryReporting: _enum_for_ProSeEventType.restrictedDiscoveryReporting = ProSeEventType.restrictedDiscoveryReporting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProSeEventType: $.ASN1Decoder<ProSeEventType> = $._decodeEnumerated;

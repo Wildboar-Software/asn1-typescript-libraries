@@ -52,7 +52,7 @@ type PayloadType = INTEGER;
  * @type {number}
  */
 export
-const PayloadType_dmt_unknown = 1000 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_unknown: 1000 = 1000 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_unknown
@@ -60,7 +60,7 @@ const PayloadType_dmt_unknown = 1000 satisfies PayloadType; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const dmt_unknown = PayloadType_dmt_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_unknown: 1000 = PayloadType_dmt_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_r14p
@@ -68,7 +68,7 @@ const dmt_unknown = PayloadType_dmt_unknown; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_r14p = 2000 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_r14p: 2000 = 2000 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_r14p
@@ -76,7 +76,7 @@ const PayloadType_dmt_r14p = 2000 satisfies PayloadType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const dmt_r14p = PayloadType_dmt_r14p; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_r14p: 2000 = PayloadType_dmt_r14p; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_layer2
@@ -84,7 +84,7 @@ const dmt_r14p = PayloadType_dmt_r14p; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_layer2 = 0 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_layer2: 0 = 0 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_layer2
@@ -92,7 +92,7 @@ const PayloadType_dmt_layer2 = 0 satisfies PayloadType; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const dmt_layer2 = PayloadType_dmt_layer2; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_layer2: 0 = PayloadType_dmt_layer2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_ip
@@ -100,7 +100,7 @@ const dmt_layer2 = PayloadType_dmt_layer2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_ip = 1 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_ip: 1 = 1 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_ip
@@ -108,7 +108,7 @@ const PayloadType_dmt_ip = 1 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const dmt_ip = PayloadType_dmt_ip; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_ip: 1 = PayloadType_dmt_ip; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_sctp
@@ -116,7 +116,7 @@ const dmt_ip = PayloadType_dmt_ip; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_sctp = 2 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_sctp: 2 = 2 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_sctp
@@ -124,7 +124,7 @@ const PayloadType_dmt_sctp = 2 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_sctp = PayloadType_dmt_sctp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_sctp: 2 = PayloadType_dmt_sctp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_tcp
@@ -132,7 +132,7 @@ const dmt_sctp = PayloadType_dmt_sctp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_tcp = 3 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_tcp: 3 = 3 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_tcp
@@ -140,7 +140,7 @@ const PayloadType_dmt_tcp = 3 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const dmt_tcp = PayloadType_dmt_tcp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_tcp: 3 = PayloadType_dmt_tcp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_udp
@@ -148,7 +148,7 @@ const dmt_tcp = PayloadType_dmt_tcp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_udp = 4 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_udp: 4 = 4 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_udp
@@ -156,7 +156,7 @@ const PayloadType_dmt_udp = 4 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const dmt_udp = PayloadType_dmt_udp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_udp: 4 = PayloadType_dmt_udp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_m3ua
@@ -164,7 +164,7 @@ const dmt_udp = PayloadType_dmt_udp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_m3ua = 5 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_m3ua: 5 = 5 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_m3ua
@@ -172,7 +172,7 @@ const PayloadType_dmt_m3ua = 5 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_m3ua = PayloadType_dmt_m3ua; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_m3ua: 5 = PayloadType_dmt_m3ua; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_m2ua
@@ -180,7 +180,7 @@ const dmt_m3ua = PayloadType_dmt_m3ua; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_m2ua = 6 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_m2ua: 6 = 6 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_m2ua
@@ -188,7 +188,7 @@ const PayloadType_dmt_m2ua = 6 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_m2ua = PayloadType_dmt_m2ua; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_m2ua: 6 = PayloadType_dmt_m2ua; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_mtp3
@@ -196,7 +196,7 @@ const dmt_m2ua = PayloadType_dmt_m2ua; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_mtp3 = 7 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_mtp3: 7 = 7 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_mtp3
@@ -204,7 +204,7 @@ const PayloadType_dmt_mtp3 = 7 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_mtp3 = PayloadType_dmt_mtp3; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_mtp3: 7 = PayloadType_dmt_mtp3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_isup
@@ -212,7 +212,7 @@ const dmt_mtp3 = PayloadType_dmt_mtp3; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_isup = 8 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_isup: 8 = 8 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_isup
@@ -220,7 +220,7 @@ const PayloadType_dmt_isup = 8 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_isup = PayloadType_dmt_isup; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_isup: 8 = PayloadType_dmt_isup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_h248
@@ -228,7 +228,7 @@ const dmt_isup = PayloadType_dmt_isup; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_h248 = 9 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_h248: 9 = 9 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_h248
@@ -236,7 +236,7 @@ const PayloadType_dmt_h248 = 9 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_h248 = PayloadType_dmt_h248; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_h248: 9 = PayloadType_dmt_h248; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_sccp
@@ -244,7 +244,7 @@ const dmt_h248 = PayloadType_dmt_h248; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_sccp = 10 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_sccp: 10 = 10 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_sccp
@@ -252,7 +252,7 @@ const PayloadType_dmt_sccp = 10 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_sccp = PayloadType_dmt_sccp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_sccp: 10 = PayloadType_dmt_sccp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_smstpdu
@@ -260,7 +260,7 @@ const dmt_sccp = PayloadType_dmt_sccp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_smstpdu = 11 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_smstpdu: 11 = 11 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_smstpdu
@@ -268,7 +268,7 @@ const PayloadType_dmt_smstpdu = 11 satisfies PayloadType; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const dmt_smstpdu = PayloadType_dmt_smstpdu; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_smstpdu: 11 = PayloadType_dmt_smstpdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_smpp
@@ -276,7 +276,7 @@ const dmt_smstpdu = PayloadType_dmt_smstpdu; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_smpp = 12 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_smpp: 12 = 12 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_smpp
@@ -284,7 +284,7 @@ const PayloadType_dmt_smpp = 12 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_smpp = PayloadType_dmt_smpp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_smpp: 12 = PayloadType_dmt_smpp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_tcap
@@ -292,7 +292,7 @@ const dmt_smpp = PayloadType_dmt_smpp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_tcap = 13 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_tcap: 13 = 13 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_tcap
@@ -300,7 +300,7 @@ const PayloadType_dmt_tcap = 13 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_tcap = PayloadType_dmt_tcap; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_tcap: 13 = PayloadType_dmt_tcap; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_rtp
@@ -308,7 +308,7 @@ const dmt_tcap = PayloadType_dmt_tcap; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_rtp = 14 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_rtp: 14 = 14 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_rtp
@@ -316,7 +316,7 @@ const PayloadType_dmt_rtp = 14 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_rtp = PayloadType_dmt_rtp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_rtp: 14 = PayloadType_dmt_rtp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_sip
@@ -324,7 +324,7 @@ const dmt_rtp = PayloadType_dmt_rtp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_sip = 15 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_sip: 15 = 15 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_sip
@@ -332,7 +332,7 @@ const PayloadType_dmt_sip = 15 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const dmt_sip = PayloadType_dmt_sip; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_sip: 15 = PayloadType_dmt_sip; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_pop3
@@ -340,7 +340,7 @@ const dmt_sip = PayloadType_dmt_sip; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_pop3 = 16 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_pop3: 16 = 16 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_pop3
@@ -348,7 +348,7 @@ const PayloadType_dmt_pop3 = 16 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_pop3 = PayloadType_dmt_pop3; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_pop3: 16 = PayloadType_dmt_pop3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_imap
@@ -356,7 +356,7 @@ const dmt_pop3 = PayloadType_dmt_pop3; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_imap = 17 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_imap: 17 = 17 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_imap
@@ -364,7 +364,7 @@ const PayloadType_dmt_imap = 17 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_imap = PayloadType_dmt_imap; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_imap: 17 = PayloadType_dmt_imap; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_http
@@ -372,7 +372,7 @@ const dmt_imap = PayloadType_dmt_imap; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_http = 18 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_http: 18 = 18 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_http
@@ -380,7 +380,7 @@ const PayloadType_dmt_http = 18 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_http = PayloadType_dmt_http; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_http: 18 = PayloadType_dmt_http; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_radius
@@ -388,7 +388,7 @@ const dmt_http = PayloadType_dmt_http; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_radius = 19 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_radius: 19 = 19 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_radius
@@ -396,7 +396,7 @@ const PayloadType_dmt_radius = 19 satisfies PayloadType; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const dmt_radius = PayloadType_dmt_radius; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_radius: 19 = PayloadType_dmt_radius; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_dhcp
@@ -404,7 +404,7 @@ const dmt_radius = PayloadType_dmt_radius; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_dhcp = 20 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_dhcp: 20 = 20 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_dhcp
@@ -412,7 +412,7 @@ const PayloadType_dmt_dhcp = 20 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_dhcp = PayloadType_dmt_dhcp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_dhcp: 20 = PayloadType_dmt_dhcp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_smtp
@@ -420,7 +420,7 @@ const dmt_dhcp = PayloadType_dmt_dhcp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_smtp = 21 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_smtp: 21 = 21 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_smtp
@@ -428,7 +428,7 @@ const PayloadType_dmt_smtp = 21 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_smtp = PayloadType_dmt_smtp; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_smtp: 21 = PayloadType_dmt_smtp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_m2pa
@@ -436,7 +436,7 @@ const dmt_smtp = PayloadType_dmt_smtp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_m2pa = 22 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_m2pa: 22 = 22 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_m2pa
@@ -444,7 +444,7 @@ const PayloadType_dmt_m2pa = 22 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_m2pa = PayloadType_dmt_m2pa; /* SHORT_NAMED_INTEGER_VALUE */
+const dmt_m2pa: 22 = PayloadType_dmt_m2pa; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_mtp2
@@ -452,7 +452,7 @@ const dmt_m2pa = PayloadType_dmt_m2pa; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const PayloadType_dmt_mtp2 = 23 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
+const PayloadType_dmt_mtp2: 23 = 23 satisfies PayloadType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PayloadType_dmt_mtp2
@@ -460,9 +460,9 @@ const PayloadType_dmt_mtp2 = 23 satisfies PayloadType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const dmt_mtp2 = PayloadType_dmt_mtp2; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_PayloadType = $._decodeInteger;
-export const _encode_PayloadType = $._encodeInteger;
+const dmt_mtp2: 23 = PayloadType_dmt_mtp2; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_PayloadType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_PayloadType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

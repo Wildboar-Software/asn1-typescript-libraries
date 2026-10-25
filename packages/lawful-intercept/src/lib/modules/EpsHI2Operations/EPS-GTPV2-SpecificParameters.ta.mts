@@ -619,7 +619,7 @@ class EPS_GTPV2_SpecificParameters {
          * @static
          */
 
-    public static _enum_for_bearerActivationType = _enum_for_TypeOfBearer;        /**
+    public static _enum_for_bearerActivationType: typeof _enum_for_TypeOfBearer = _enum_for_TypeOfBearer;        /**
          * @summary The enum used as the type of the component `bearerDeactivationType`
          * @description
          * 
@@ -630,7 +630,7 @@ class EPS_GTPV2_SpecificParameters {
          * @static
          */
 
-    public static _enum_for_bearerDeactivationType = _enum_for_TypeOfBearer;
+    public static _enum_for_bearerDeactivationType: typeof _enum_for_TypeOfBearer = _enum_for_TypeOfBearer;
 }
 
 /**

@@ -562,8 +562,8 @@ const AdditionalSupportOptions_alterEventConditionListMonitoring: number = 22; /
  */
 export
 const alterEventConditionListMonitoring: number = AdditionalSupportOptions_alterEventConditionListMonitoring; /* SHORT_NAMED_BIT */
-export const _decode_AdditionalSupportOptions = $._decodeBitString;
-export const _encode_AdditionalSupportOptions = $._encodeBitString;
+export const _decode_AdditionalSupportOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AdditionalSupportOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -305,70 +305,70 @@ export class DefaultAccess {
      * @static
      */
 
-    public static _enum_for_action = _enum_for_EnforcementAction;
+    public static _enum_for_action: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `create`
      * @public
      * @static
      */
 
-    public static _enum_for_create = _enum_for_EnforcementAction;
+    public static _enum_for_create: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `delete_`
      * @public
      * @static
      */
 
-    public static _enum_for_delete_ = _enum_for_EnforcementAction;
+    public static _enum_for_delete_: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `get_`
      * @public
      * @static
      */
 
-    public static _enum_for_get_ = _enum_for_EnforcementAction;
+    public static _enum_for_get_: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `replace`
      * @public
      * @static
      */
 
-    public static _enum_for_replace = _enum_for_EnforcementAction;
+    public static _enum_for_replace: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `addMember`
      * @public
      * @static
      */
 
-    public static _enum_for_addMember = _enum_for_EnforcementAction;
+    public static _enum_for_addMember: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `removeMember`
      * @public
      * @static
      */
 
-    public static _enum_for_removeMember = _enum_for_EnforcementAction;
+    public static _enum_for_removeMember: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `replaceWithDefault`
      * @public
      * @static
      */
 
-    public static _enum_for_replaceWithDefault = _enum_for_EnforcementAction;
+    public static _enum_for_replaceWithDefault: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `multipleObjectSelection`
      * @public
      * @static
      */
 
-    public static _enum_for_multipleObjectSelection = _enum_for_EnforcementAction;
+    public static _enum_for_multipleObjectSelection: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `filter`
      * @public
      * @static
      */
 
-    public static _enum_for_filter = _enum_for_EnforcementAction;
+    public static _enum_for_filter: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
 }
 
 /**

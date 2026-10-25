@@ -127,7 +127,7 @@ export class ReceiptFields {
      * @static
      */
 
-    public static _enum_for_acknowledgment_mode = _enum_for_AcknowledgmentModeField;
+    public static _enum_for_acknowledgment_mode: typeof _enum_for_AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
 }
 
 /**

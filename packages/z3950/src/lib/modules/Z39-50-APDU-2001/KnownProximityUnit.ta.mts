@@ -45,7 +45,7 @@ type KnownProximityUnit = INTEGER;
  * @type {number}
  */
 export
-const KnownProximityUnit_character = 1 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_character: 1 = 1 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_character
@@ -58,7 +58,7 @@ const KnownProximityUnit_character = 1 satisfies KnownProximityUnit; /* LONG_NAM
  * @type {number}
  */
 export
-const character = KnownProximityUnit_character; /* SHORT_NAMED_INTEGER_VALUE */
+const character: 1 = KnownProximityUnit_character; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_word
@@ -70,7 +70,7 @@ const character = KnownProximityUnit_character; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_word = 2 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_word: 2 = 2 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_word
@@ -82,7 +82,7 @@ const KnownProximityUnit_word = 2 satisfies KnownProximityUnit; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const word = KnownProximityUnit_word; /* SHORT_NAMED_INTEGER_VALUE */
+const word: 2 = KnownProximityUnit_word; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_sentence
@@ -94,7 +94,7 @@ const word = KnownProximityUnit_word; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_sentence = 3 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_sentence: 3 = 3 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_sentence
@@ -107,7 +107,7 @@ const KnownProximityUnit_sentence = 3 satisfies KnownProximityUnit; /* LONG_NAME
  * @type {number}
  */
 export
-const sentence = KnownProximityUnit_sentence; /* SHORT_NAMED_INTEGER_VALUE */
+const sentence: 3 = KnownProximityUnit_sentence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_paragraph
@@ -120,7 +120,7 @@ const sentence = KnownProximityUnit_sentence; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_paragraph = 4 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_paragraph: 4 = 4 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_paragraph
@@ -133,7 +133,7 @@ const KnownProximityUnit_paragraph = 4 satisfies KnownProximityUnit; /* LONG_NAM
  * @type {number}
  */
 export
-const paragraph = KnownProximityUnit_paragraph; /* SHORT_NAMED_INTEGER_VALUE */
+const paragraph: 4 = KnownProximityUnit_paragraph; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_section
@@ -145,7 +145,7 @@ const paragraph = KnownProximityUnit_paragraph; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_section = 5 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_section: 5 = 5 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_section
@@ -157,7 +157,7 @@ const KnownProximityUnit_section = 5 satisfies KnownProximityUnit; /* LONG_NAMED
  * @type {number}
  */
 export
-const section = KnownProximityUnit_section; /* SHORT_NAMED_INTEGER_VALUE */
+const section: 5 = KnownProximityUnit_section; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_chapter
@@ -169,7 +169,7 @@ const section = KnownProximityUnit_section; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_chapter = 6 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_chapter: 6 = 6 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_chapter
@@ -181,7 +181,7 @@ const KnownProximityUnit_chapter = 6 satisfies KnownProximityUnit; /* LONG_NAMED
  * @type {number}
  */
 export
-const chapter = KnownProximityUnit_chapter; /* SHORT_NAMED_INTEGER_VALUE */
+const chapter: 6 = KnownProximityUnit_chapter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_document
@@ -193,7 +193,7 @@ const chapter = KnownProximityUnit_chapter; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_document = 7 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_document: 7 = 7 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_document
@@ -206,7 +206,7 @@ const KnownProximityUnit_document = 7 satisfies KnownProximityUnit; /* LONG_NAME
  * @type {number}
  */
 export
-const document = KnownProximityUnit_document; /* SHORT_NAMED_INTEGER_VALUE */
+const document: 7 = KnownProximityUnit_document; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_element
@@ -219,7 +219,7 @@ const document = KnownProximityUnit_document; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_element = 8 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_element: 8 = 8 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_element
@@ -232,7 +232,7 @@ const KnownProximityUnit_element = 8 satisfies KnownProximityUnit; /* LONG_NAMED
  * @type {number}
  */
 export
-const element = KnownProximityUnit_element; /* SHORT_NAMED_INTEGER_VALUE */
+const element: 8 = KnownProximityUnit_element; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_subelement
@@ -245,7 +245,7 @@ const element = KnownProximityUnit_element; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const KnownProximityUnit_subelement = 9 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_subelement: 9 = 9 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_subelement
@@ -258,7 +258,7 @@ const KnownProximityUnit_subelement = 9 satisfies KnownProximityUnit; /* LONG_NA
  * @type {number}
  */
 export
-const subelement = KnownProximityUnit_subelement; /* SHORT_NAMED_INTEGER_VALUE */
+const subelement: 9 = KnownProximityUnit_subelement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_elementType
@@ -271,7 +271,7 @@ const subelement = KnownProximityUnit_subelement; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const KnownProximityUnit_elementType = 10 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_elementType: 10 = 10 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_elementType
@@ -284,7 +284,7 @@ const KnownProximityUnit_elementType = 10 satisfies KnownProximityUnit; /* LONG_
  * @type {number}
  */
 export
-const elementType = KnownProximityUnit_elementType; /* SHORT_NAMED_INTEGER_VALUE */
+const elementType: 10 = KnownProximityUnit_elementType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_byte
@@ -296,7 +296,7 @@ const elementType = KnownProximityUnit_elementType; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const KnownProximityUnit_byte = 11 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
+const KnownProximityUnit_byte: 11 = 11 satisfies KnownProximityUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary KnownProximityUnit_byte
@@ -309,7 +309,7 @@ const KnownProximityUnit_byte = 11 satisfies KnownProximityUnit; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const byte = KnownProximityUnit_byte; /* SHORT_NAMED_INTEGER_VALUE */
+const byte: 11 = KnownProximityUnit_byte; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_KnownProximityUnit: $.ASN1Decoder<KnownProximityUnit> = $._decodeInteger;
 export const _encode_KnownProximityUnit: $.ASN1Encoder<KnownProximityUnit> = $._encodeInteger;
 

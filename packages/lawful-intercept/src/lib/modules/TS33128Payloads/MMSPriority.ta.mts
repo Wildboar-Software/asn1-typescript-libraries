@@ -83,7 +83,7 @@ type MMSPriority = _enum_for_MMSPriority;
  * @enum {number}
  */
 export
-const MMSPriority = _enum_for_MMSPriority;
+const MMSPriority: typeof _enum_for_MMSPriority = _enum_for_MMSPriority;
 
 /**
  * @summary MMSPriority_low
@@ -91,7 +91,7 @@ const MMSPriority = _enum_for_MMSPriority;
  * @type {number}
  */
 export
-const MMSPriority_low = MMSPriority.low; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSPriority_low: _enum_for_MMSPriority.low = MMSPriority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -99,7 +99,7 @@ const MMSPriority_low = MMSPriority.low; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const low = MMSPriority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low: _enum_for_MMSPriority.low = MMSPriority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSPriority_normal
@@ -107,7 +107,7 @@ const low = MMSPriority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSPriority_normal = MMSPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSPriority_normal: _enum_for_MMSPriority.normal = MMSPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -115,7 +115,7 @@ const MMSPriority_normal = MMSPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const normal = MMSPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_MMSPriority.normal = MMSPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSPriority_high
@@ -123,7 +123,7 @@ const normal = MMSPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSPriority_high = MMSPriority.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSPriority_high: _enum_for_MMSPriority.high = MMSPriority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -131,7 +131,7 @@ const MMSPriority_high = MMSPriority.high; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const high = MMSPriority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high: _enum_for_MMSPriority.high = MMSPriority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSPriority: $.ASN1Decoder<MMSPriority> = $._decodeEnumerated;
 export const _encode_MMSPriority: $.ASN1Encoder<MMSPriority> = $._encodeEnumerated;
 

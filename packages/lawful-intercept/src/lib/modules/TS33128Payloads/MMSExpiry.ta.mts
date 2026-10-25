@@ -85,7 +85,7 @@ class MMSExpiry {
          * @static
          */
 
-    public static _enum_for_periodFormat = _enum_for_MMSPeriodFormat;
+    public static _enum_for_periodFormat: typeof _enum_for_MMSPeriodFormat = _enum_for_MMSPeriodFormat;
 }
 
 /**

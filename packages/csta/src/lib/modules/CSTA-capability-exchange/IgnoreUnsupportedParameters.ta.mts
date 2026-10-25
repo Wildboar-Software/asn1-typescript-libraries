@@ -75,7 +75,7 @@ type IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
  * @enum {number}
  */
 export
-const IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
+const IgnoreUnsupportedParameters: typeof _enum_for_IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
 
 /**
  * @summary IgnoreUnsupportedParameters_ignoreParameters
@@ -86,7 +86,7 @@ const IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;
  * §13.1.2–13.1.4).
  */
 export
-const IgnoreUnsupportedParameters_ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters; /* LONG_NAMED_ENUMERATED_VALUE */
+const IgnoreUnsupportedParameters_ignoreParameters: _enum_for_IgnoreUnsupportedParameters.ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ignoreParameters
@@ -96,7 +96,7 @@ const IgnoreUnsupportedParameters_ignoreParameters = IgnoreUnsupportedParameters
  * Alias of `IgnoreUnsupportedParameters_ignoreParameters`.
  */
 export
-const ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignoreParameters: _enum_for_IgnoreUnsupportedParameters.ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IgnoreUnsupportedParameters_rejectMessage
@@ -107,7 +107,7 @@ const ignoreParameters = IgnoreUnsupportedParameters.ignoreParameters; /* SHORT_
  * (ECMA-269 §13.1.2–13.1.4).
  */
 export
-const IgnoreUnsupportedParameters_rejectMessage = IgnoreUnsupportedParameters.rejectMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const IgnoreUnsupportedParameters_rejectMessage: _enum_for_IgnoreUnsupportedParameters.rejectMessage = IgnoreUnsupportedParameters.rejectMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectMessage
@@ -117,7 +117,7 @@ const IgnoreUnsupportedParameters_rejectMessage = IgnoreUnsupportedParameters.re
  * Alias of `IgnoreUnsupportedParameters_rejectMessage`.
  */
 export
-const rejectMessage = IgnoreUnsupportedParameters.rejectMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectMessage: _enum_for_IgnoreUnsupportedParameters.rejectMessage = IgnoreUnsupportedParameters.rejectMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_IgnoreUnsupportedParameters: $.ASN1Decoder<IgnoreUnsupportedParameters> | null = null;
 

@@ -207,7 +207,7 @@ const ModemIdentity_Item_multimediaMode_v18Text: number = 9; /* LONG_NAMED_BIT *
  */
 export
 const v18Text: number = ModemIdentity_Item_multimediaMode_v18Text; /* SHORT_NAMED_BIT */
-export const _decode_ModemIdentity_Item_multimediaMode = $._decodeBitString;
-export const _encode_ModemIdentity_Item_multimediaMode = $._encodeBitString;
+export const _decode_ModemIdentity_Item_multimediaMode: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ModemIdentity_Item_multimediaMode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 /* eslint-enable */

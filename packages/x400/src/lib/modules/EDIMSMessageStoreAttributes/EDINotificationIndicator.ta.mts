@@ -65,14 +65,14 @@ export type EDINotificationIndicator = _enum_for_EDINotificationIndicator;
  *
  * @enum {number}
  */
-export const EDINotificationIndicator = _enum_for_EDINotificationIndicator;
+export const EDINotificationIndicator: typeof _enum_for_EDINotificationIndicator = _enum_for_EDINotificationIndicator;
 
 /**
  * @summary EDINotificationIndicator_no_notification_sent
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_no_notification_sent =
+export const EDINotificationIndicator_no_notification_sent: _enum_for_EDINotificationIndicator.no_notification_sent =
     EDINotificationIndicator.no_notification_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const EDINotificationIndicator_no_notification_sent =
  * @constant
  * @type {number}
  */
-export const no_notification_sent =
+export const no_notification_sent: _enum_for_EDINotificationIndicator.no_notification_sent =
     EDINotificationIndicator.no_notification_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const no_notification_sent =
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_pn_sent =
+export const EDINotificationIndicator_pn_sent: _enum_for_EDINotificationIndicator.pn_sent =
     EDINotificationIndicator.pn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const EDINotificationIndicator_pn_sent =
  * @constant
  * @type {number}
  */
-export const pn_sent =
+export const pn_sent: _enum_for_EDINotificationIndicator.pn_sent =
     EDINotificationIndicator.pn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const pn_sent =
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_nn_sent =
+export const EDINotificationIndicator_nn_sent: _enum_for_EDINotificationIndicator.nn_sent =
     EDINotificationIndicator.nn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const EDINotificationIndicator_nn_sent =
  * @constant
  * @type {number}
  */
-export const nn_sent =
+export const nn_sent: _enum_for_EDINotificationIndicator.nn_sent =
     EDINotificationIndicator.nn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const nn_sent =
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_fn_sent =
+export const EDINotificationIndicator_fn_sent: _enum_for_EDINotificationIndicator.fn_sent =
     EDINotificationIndicator.fn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,7 +128,7 @@ export const EDINotificationIndicator_fn_sent =
  * @constant
  * @type {number}
  */
-export const fn_sent =
+export const fn_sent: _enum_for_EDINotificationIndicator.fn_sent =
     EDINotificationIndicator.fn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

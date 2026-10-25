@@ -38,12 +38,12 @@ export type ModeConfirmed = BOOLEAN; // BooleanType
 
 
 
-export const _decode_ModeConfirmed = $._decodeBoolean;
+export const _decode_ModeConfirmed: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_ModeConfirmed = $._encodeBoolean;
+export const _encode_ModeConfirmed: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -41,7 +41,7 @@ export type Diagnostic_Item_diagnostic_type = INTEGER;
  * @constant
  * @type {number}
  */
-export const Diagnostic_Item_diagnostic_type_informative = 0 satisfies Diagnostic_Item_diagnostic_type; /* LONG_NAMED_INTEGER_VALUE */
+export const Diagnostic_Item_diagnostic_type_informative: 0 = 0 satisfies Diagnostic_Item_diagnostic_type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const Diagnostic_Item_diagnostic_type_informative = 0 satisfies Diagnosti
  * @constant
  * @type {number}
  */
-export const informative = Diagnostic_Item_diagnostic_type_informative; /* SHORT_NAMED_INTEGER_VALUE */
+export const informative: 0 = Diagnostic_Item_diagnostic_type_informative; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const informative = Diagnostic_Item_diagnostic_type_informative; /* SHORT
  * @constant
  * @type {number}
  */
-export const Diagnostic_Item_diagnostic_type_transient = 1 satisfies Diagnostic_Item_diagnostic_type; /* LONG_NAMED_INTEGER_VALUE */
+export const Diagnostic_Item_diagnostic_type_transient: 1 = 1 satisfies Diagnostic_Item_diagnostic_type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const Diagnostic_Item_diagnostic_type_transient = 1 satisfies Diagnostic_
  * @constant
  * @type {number}
  */
-export const transient = Diagnostic_Item_diagnostic_type_transient; /* SHORT_NAMED_INTEGER_VALUE */
+export const transient: 1 = Diagnostic_Item_diagnostic_type_transient; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -83,7 +83,7 @@ export const transient = Diagnostic_Item_diagnostic_type_transient; /* SHORT_NAM
  * @constant
  * @type {number}
  */
-export const Diagnostic_Item_diagnostic_type_permanent = 2 satisfies Diagnostic_Item_diagnostic_type; /* LONG_NAMED_INTEGER_VALUE */
+export const Diagnostic_Item_diagnostic_type_permanent: 2 = 2 satisfies Diagnostic_Item_diagnostic_type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -91,17 +91,17 @@ export const Diagnostic_Item_diagnostic_type_permanent = 2 satisfies Diagnostic_
  * @constant
  * @type {number}
  */
-export const permanent = Diagnostic_Item_diagnostic_type_permanent; /* SHORT_NAMED_INTEGER_VALUE */
+export const permanent: 2 = Diagnostic_Item_diagnostic_type_permanent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Diagnostic_Item_diagnostic_type = $._decodeInteger;
+export const _decode_Diagnostic_Item_diagnostic_type: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Diagnostic_Item_diagnostic_type = $._encodeInteger;
+export const _encode_Diagnostic_Item_diagnostic_type: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

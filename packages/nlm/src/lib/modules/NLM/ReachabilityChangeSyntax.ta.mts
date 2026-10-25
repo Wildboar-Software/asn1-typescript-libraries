@@ -152,14 +152,14 @@ export class ReachabilityChangeSyntax {
      * @static
      */
 
-    public static _enum_for_newState = _enum_for_ReachabilityChangeSyntax_newState;
+    public static _enum_for_newState: typeof _enum_for_ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
     /**
      * @summary The enum used as the type of the component `reason`
      * @public
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_ReachabilityChangeSyntax_reason;
+    public static _enum_for_reason: typeof _enum_for_ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
 }
 
 

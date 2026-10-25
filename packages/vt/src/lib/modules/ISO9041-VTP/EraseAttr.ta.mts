@@ -30,8 +30,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EraseAttr = BOOLEAN; // BooleanType
-export const _decode_EraseAttr = $._decodeBoolean;
-export const _encode_EraseAttr = $._encodeBoolean;
+export const _decode_EraseAttr: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_EraseAttr: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -33,132 +33,132 @@ export type TBerror_code = _enum_for_TBerror_code | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const TBerror_code_caCertInvalid = _enum_for_TBerror_code.caCertInvalid; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_caCertInvalid: _enum_for_TBerror_code.caCertInvalid = _enum_for_TBerror_code.caCertInvalid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary caCertInvalid
  * @constant
  * @type {number}
  */
-export const caCertInvalid = TBerror_code_caCertInvalid; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const caCertInvalid: _enum_for_TBerror_code.caCertInvalid = TBerror_code_caCertInvalid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_unknownCert
  * @constant
  * @type {number}
  */
-export const TBerror_code_unknownCert = _enum_for_TBerror_code.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_unknownCert: _enum_for_TBerror_code.unknownCert = _enum_for_TBerror_code.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCert
  * @constant
  * @type {number}
  */
-export const unknownCert = TBerror_code_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCert: _enum_for_TBerror_code.unknownCert = TBerror_code_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_unknownCertStatus
  * @constant
  * @type {number}
  */
-export const TBerror_code_unknownCertStatus = _enum_for_TBerror_code.unknownCertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_unknownCertStatus: _enum_for_TBerror_code.unknownCertStatus = _enum_for_TBerror_code.unknownCertStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCertStatus
  * @constant
  * @type {number}
  */
-export const unknownCertStatus = TBerror_code_unknownCertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCertStatus: _enum_for_TBerror_code.unknownCertStatus = TBerror_code_unknownCertStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_subjectCertRevoked
  * @constant
  * @type {number}
  */
-export const TBerror_code_subjectCertRevoked = _enum_for_TBerror_code.subjectCertRevoked; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_subjectCertRevoked: _enum_for_TBerror_code.subjectCertRevoked = _enum_for_TBerror_code.subjectCertRevoked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subjectCertRevoked
  * @constant
  * @type {number}
  */
-export const subjectCertRevoked = TBerror_code_subjectCertRevoked; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const subjectCertRevoked: _enum_for_TBerror_code.subjectCertRevoked = TBerror_code_subjectCertRevoked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_incorrectCert
  * @constant
  * @type {number}
  */
-export const TBerror_code_incorrectCert = _enum_for_TBerror_code.incorrectCert; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_incorrectCert: _enum_for_TBerror_code.incorrectCert = _enum_for_TBerror_code.incorrectCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incorrectCert
  * @constant
  * @type {number}
  */
-export const incorrectCert = TBerror_code_incorrectCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const incorrectCert: _enum_for_TBerror_code.incorrectCert = TBerror_code_incorrectCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_contractExpired
  * @constant
  * @type {number}
  */
-export const TBerror_code_contractExpired = _enum_for_TBerror_code.contractExpired; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_contractExpired: _enum_for_TBerror_code.contractExpired = _enum_for_TBerror_code.contractExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contractExpired
  * @constant
  * @type {number}
  */
-export const contractExpired = TBerror_code_contractExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractExpired: _enum_for_TBerror_code.contractExpired = TBerror_code_contractExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_pathValidationFailed
  * @constant
  * @type {number}
  */
-export const TBerror_code_pathValidationFailed = _enum_for_TBerror_code.pathValidationFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_pathValidationFailed: _enum_for_TBerror_code.pathValidationFailed = _enum_for_TBerror_code.pathValidationFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pathValidationFailed
  * @constant
  * @type {number}
  */
-export const pathValidationFailed = TBerror_code_pathValidationFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const pathValidationFailed: _enum_for_TBerror_code.pathValidationFailed = TBerror_code_pathValidationFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_timeOut
  * @constant
  * @type {number}
  */
-export const TBerror_code_timeOut = _enum_for_TBerror_code.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_timeOut: _enum_for_TBerror_code.timeOut = _enum_for_TBerror_code.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOut
  * @constant
  * @type {number}
  */
-export const timeOut = TBerror_code_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const timeOut: _enum_for_TBerror_code.timeOut = TBerror_code_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TBerror_code_other
  * @constant
  * @type {number}
  */
-export const TBerror_code_other = _enum_for_TBerror_code.other; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TBerror_code_other: _enum_for_TBerror_code.other = _enum_for_TBerror_code.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
  * @constant
  * @type {number}
  */
-export const other = TBerror_code_other; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const other: _enum_for_TBerror_code.other = TBerror_code_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TBerror_code = $._decodeEnumerated;
+export const _decode_TBerror_code: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_TBerror_code = $._encodeEnumerated;
+export const _encode_TBerror_code: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

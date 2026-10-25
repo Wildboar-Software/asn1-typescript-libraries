@@ -139,12 +139,12 @@ export const generate_key: number = Operations_generate_key; /* SHORT_NAMED_BIT 
 
 
 
-export const _decode_Operations = $._decodeBitString;
+export const _decode_Operations: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Operations = $._encodeBitString;
+export const _encode_Operations: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

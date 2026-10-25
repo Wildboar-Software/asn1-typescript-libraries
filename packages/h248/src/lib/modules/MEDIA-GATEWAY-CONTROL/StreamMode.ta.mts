@@ -78,7 +78,7 @@ type StreamMode = _enum_for_StreamMode | ENUMERATED;
  * @type {number}
  */
 export
-const StreamMode_sendOnly = _enum_for_StreamMode.sendOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const StreamMode_sendOnly: _enum_for_StreamMode.sendOnly = _enum_for_StreamMode.sendOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sendOnly
@@ -86,7 +86,7 @@ const StreamMode_sendOnly = _enum_for_StreamMode.sendOnly; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const sendOnly = StreamMode_sendOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sendOnly: _enum_for_StreamMode.sendOnly = StreamMode_sendOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StreamMode_recvOnly
@@ -99,7 +99,7 @@ const sendOnly = StreamMode_sendOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const StreamMode_recvOnly = _enum_for_StreamMode.recvOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const StreamMode_recvOnly: _enum_for_StreamMode.recvOnly = _enum_for_StreamMode.recvOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recvOnly
@@ -107,7 +107,7 @@ const StreamMode_recvOnly = _enum_for_StreamMode.recvOnly; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const recvOnly = StreamMode_recvOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recvOnly: _enum_for_StreamMode.recvOnly = StreamMode_recvOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StreamMode_sendRecv
@@ -119,7 +119,7 @@ const recvOnly = StreamMode_recvOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const StreamMode_sendRecv = _enum_for_StreamMode.sendRecv; /* LONG_NAMED_ENUMERATED_VALUE */
+const StreamMode_sendRecv: _enum_for_StreamMode.sendRecv = _enum_for_StreamMode.sendRecv; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sendRecv
@@ -127,7 +127,7 @@ const StreamMode_sendRecv = _enum_for_StreamMode.sendRecv; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const sendRecv = StreamMode_sendRecv; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sendRecv: _enum_for_StreamMode.sendRecv = StreamMode_sendRecv; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StreamMode_inactive
@@ -140,7 +140,7 @@ const sendRecv = StreamMode_sendRecv; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const StreamMode_inactive = _enum_for_StreamMode.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const StreamMode_inactive: _enum_for_StreamMode.inactive = _enum_for_StreamMode.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -148,7 +148,7 @@ const StreamMode_inactive = _enum_for_StreamMode.inactive; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const inactive = StreamMode_inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive: _enum_for_StreamMode.inactive = StreamMode_inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StreamMode_loopBack
@@ -162,7 +162,7 @@ const inactive = StreamMode_inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const StreamMode_loopBack = _enum_for_StreamMode.loopBack; /* LONG_NAMED_ENUMERATED_VALUE */
+const StreamMode_loopBack: _enum_for_StreamMode.loopBack = _enum_for_StreamMode.loopBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary loopBack
@@ -170,9 +170,9 @@ const StreamMode_loopBack = _enum_for_StreamMode.loopBack; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const loopBack = StreamMode_loopBack; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_StreamMode = $._decodeEnumerated;
-export const _encode_StreamMode = $._encodeEnumerated;
+const loopBack: _enum_for_StreamMode.loopBack = StreamMode_loopBack; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_StreamMode: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_StreamMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

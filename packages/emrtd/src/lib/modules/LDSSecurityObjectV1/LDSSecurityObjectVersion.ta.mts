@@ -29,7 +29,7 @@ type LDSSecurityObjectVersion = INTEGER;
  * @type {number}
  */
 export
-const LDSSecurityObjectVersion_v0 = 0 satisfies LDSSecurityObjectVersion; /* LONG_NAMED_INTEGER_VALUE */
+const LDSSecurityObjectVersion_v0: 0 = 0 satisfies LDSSecurityObjectVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LDSSecurityObjectVersion_v0
@@ -37,7 +37,7 @@ const LDSSecurityObjectVersion_v0 = 0 satisfies LDSSecurityObjectVersion; /* LON
  * @type {number}
  */
 export
-const v0 = LDSSecurityObjectVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+const v0: 0 = LDSSecurityObjectVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LDSSecurityObjectVersion_v1
@@ -45,7 +45,7 @@ const v0 = LDSSecurityObjectVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const LDSSecurityObjectVersion_v1 = 1 satisfies LDSSecurityObjectVersion; /* LONG_NAMED_INTEGER_VALUE */
+const LDSSecurityObjectVersion_v1: 1 = 1 satisfies LDSSecurityObjectVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LDSSecurityObjectVersion_v1
@@ -53,9 +53,9 @@ const LDSSecurityObjectVersion_v1 = 1 satisfies LDSSecurityObjectVersion; /* LON
  * @type {number}
  */
 export
-const v1 = LDSSecurityObjectVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_LDSSecurityObjectVersion = $._decodeInteger;
-export const _encode_LDSSecurityObjectVersion = $._encodeInteger;
+const v1: 1 = LDSSecurityObjectVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_LDSSecurityObjectVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_LDSSecurityObjectVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

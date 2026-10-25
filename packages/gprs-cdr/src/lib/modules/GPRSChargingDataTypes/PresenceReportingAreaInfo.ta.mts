@@ -106,7 +106,7 @@ class PresenceReportingAreaInfo {
          * @static
          */
 
-    public static _enum_for_presenceReportingAreaStatus = _enum_for_PresenceReportingAreaStatus;
+    public static _enum_for_presenceReportingAreaStatus: typeof _enum_for_PresenceReportingAreaStatus = _enum_for_PresenceReportingAreaStatus;
 }
 
 /**

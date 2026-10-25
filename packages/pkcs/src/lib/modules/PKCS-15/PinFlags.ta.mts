@@ -199,12 +199,12 @@ export const exchangeRefData: number = PinFlags_exchangeRefData; /* SHORT_NAMED_
 
 
 
-export const _decode_PinFlags = $._decodeBitString;
+export const _decode_PinFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_PinFlags = $._encodeBitString;
+export const _encode_PinFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -261,13 +261,13 @@ class SupplementaryInfo {
          * @static
          */
 
-    public static _enum_for_frameType = _enum_for_FrameType;        /**
+    public static _enum_for_frameType: typeof _enum_for_FrameType = _enum_for_FrameType;        /**
          * @summary The enum used as the type of the component `alternateProtocol`
          * @public
          * @static
          */
 
-    public static _enum_for_alternateProtocol = _enum_for_AlternateProtocol;
+    public static _enum_for_alternateProtocol: typeof _enum_for_AlternateProtocol = _enum_for_AlternateProtocol;
 }
 
 /**

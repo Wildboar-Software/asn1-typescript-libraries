@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ISDNAccessRelatedInformation = OCTET_STRING; // OctetStringType
-export const _decode_ISDNAccessRelatedInformation = $._decodeOctetString;
-export const _encode_ISDNAccessRelatedInformation = $._encodeOctetString;
+export const _decode_ISDNAccessRelatedInformation: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_ISDNAccessRelatedInformation: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

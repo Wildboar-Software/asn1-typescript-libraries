@@ -28,12 +28,12 @@ export type PersonFax = GraphicString; // GraphicString
 
 
 
-export const _decode_PersonFax = $._decodeGraphicString;
+export const _decode_PersonFax: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_PersonFax = $._encodeGraphicString;
+export const _encode_PersonFax: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

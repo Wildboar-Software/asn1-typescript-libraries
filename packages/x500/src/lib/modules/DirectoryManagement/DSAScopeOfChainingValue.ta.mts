@@ -29,7 +29,7 @@ export type DSAScopeOfChainingValue = INTEGER;
  * @constant
  * @type {number}
  */
-export const DSAScopeOfChainingValue_dmd = 0 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfChainingValue_dmd: 0 = 0 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_dmd
@@ -41,7 +41,7 @@ export const DSAScopeOfChainingValue_dmd = 0 satisfies DSAScopeOfChainingValue; 
  * @constant
  * @type {number}
  */
-export const dmd = DSAScopeOfChainingValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd: 0 = DSAScopeOfChainingValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_country
@@ -52,7 +52,7 @@ export const dmd = DSAScopeOfChainingValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const DSAScopeOfChainingValue_country = 1 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfChainingValue_country: 1 = 1 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_country
@@ -63,7 +63,7 @@ export const DSAScopeOfChainingValue_country = 1 satisfies DSAScopeOfChainingVal
  * @constant
  * @type {number}
  */
-export const country = DSAScopeOfChainingValue_country; /* SHORT_NAMED_INTEGER_VALUE */
+export const country: 1 = DSAScopeOfChainingValue_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_global
@@ -74,7 +74,7 @@ export const country = DSAScopeOfChainingValue_country; /* SHORT_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const DSAScopeOfChainingValue_global = 2 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfChainingValue_global: 2 = 2 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_global
@@ -85,13 +85,13 @@ export const DSAScopeOfChainingValue_global = 2 satisfies DSAScopeOfChainingValu
  * @constant
  * @type {number}
  */
-export const global = DSAScopeOfChainingValue_global; /* SHORT_NAMED_INTEGER_VALUE */
+export const global: 2 = DSAScopeOfChainingValue_global; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DSAScopeOfChainingValue = $._decodeInteger;
+export const _decode_DSAScopeOfChainingValue: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DSAScopeOfChainingValue = $._encodeInteger;
+export const _encode_DSAScopeOfChainingValue: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

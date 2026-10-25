@@ -32,7 +32,7 @@ export type AbandonProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const AbandonProblem_noSuchOperation = 1 satisfies AbandonProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AbandonProblem_noSuchOperation: 1 = 1 satisfies AbandonProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_noSuchOperation
@@ -43,7 +43,7 @@ export const AbandonProblem_noSuchOperation = 1 satisfies AbandonProblem; /* LON
  * @constant
  * @type {number}
  */
-export const noSuchOperation = AbandonProblem_noSuchOperation; /* SHORT_NAMED_INTEGER_VALUE */
+export const noSuchOperation: 1 = AbandonProblem_noSuchOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_tooLate
@@ -55,7 +55,7 @@ export const noSuchOperation = AbandonProblem_noSuchOperation; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const AbandonProblem_tooLate = 2 satisfies AbandonProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AbandonProblem_tooLate: 2 = 2 satisfies AbandonProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_tooLate
@@ -67,7 +67,7 @@ export const AbandonProblem_tooLate = 2 satisfies AbandonProblem; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const tooLate = AbandonProblem_tooLate; /* SHORT_NAMED_INTEGER_VALUE */
+export const tooLate: 2 = AbandonProblem_tooLate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_cannotAbandon
@@ -78,7 +78,7 @@ export const tooLate = AbandonProblem_tooLate; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const AbandonProblem_cannotAbandon = 3 satisfies AbandonProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AbandonProblem_cannotAbandon: 3 = 3 satisfies AbandonProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AbandonProblem_cannotAbandon
@@ -89,13 +89,13 @@ export const AbandonProblem_cannotAbandon = 3 satisfies AbandonProblem; /* LONG_
  * @constant
  * @type {number}
  */
-export const cannotAbandon = AbandonProblem_cannotAbandon; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannotAbandon: 3 = AbandonProblem_cannotAbandon; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AbandonProblem = $._decodeInteger;
+export const _decode_AbandonProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AbandonProblem = $._encodeInteger;
+export const _encode_AbandonProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

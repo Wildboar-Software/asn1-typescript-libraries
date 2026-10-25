@@ -76,7 +76,7 @@ class TimeQuotaMechanism {
          * @static
          */
 
-    public static _enum_for_timeQuotaType = _enum_for_TimeQuotaType;
+    public static _enum_for_timeQuotaType: typeof _enum_for_TimeQuotaType = _enum_for_TimeQuotaType;
 }
 
 /**

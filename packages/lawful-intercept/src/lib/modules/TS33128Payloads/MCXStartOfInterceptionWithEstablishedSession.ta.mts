@@ -216,7 +216,7 @@ class MCXStartOfInterceptionWithEstablishedSession {
          * @static
          */
 
-    public static _enum_for_mCServiceDirection = _enum_for_Direction;
+    public static _enum_for_mCServiceDirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

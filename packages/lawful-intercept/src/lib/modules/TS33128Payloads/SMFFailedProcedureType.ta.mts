@@ -80,7 +80,7 @@ type SMFFailedProcedureType = _enum_for_SMFFailedProcedureType;
  * @enum {number}
  */
 export
-const SMFFailedProcedureType = _enum_for_SMFFailedProcedureType;
+const SMFFailedProcedureType: typeof _enum_for_SMFFailedProcedureType = _enum_for_SMFFailedProcedureType;
 
 /**
  * @summary SMFFailedProcedureType_pDUSessionEstablishment
@@ -88,7 +88,7 @@ const SMFFailedProcedureType = _enum_for_SMFFailedProcedureType;
  * @type {number}
  */
 export
-const SMFFailedProcedureType_pDUSessionEstablishment = SMFFailedProcedureType.pDUSessionEstablishment; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMFFailedProcedureType_pDUSessionEstablishment: _enum_for_SMFFailedProcedureType.pDUSessionEstablishment = SMFFailedProcedureType.pDUSessionEstablishment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionEstablishment
@@ -96,7 +96,7 @@ const SMFFailedProcedureType_pDUSessionEstablishment = SMFFailedProcedureType.pD
  * @type {number}
  */
 export
-const pDUSessionEstablishment = SMFFailedProcedureType.pDUSessionEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionEstablishment: _enum_for_SMFFailedProcedureType.pDUSessionEstablishment = SMFFailedProcedureType.pDUSessionEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMFFailedProcedureType_pDUSessionModification
@@ -104,7 +104,7 @@ const pDUSessionEstablishment = SMFFailedProcedureType.pDUSessionEstablishment; 
  * @type {number}
  */
 export
-const SMFFailedProcedureType_pDUSessionModification = SMFFailedProcedureType.pDUSessionModification; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMFFailedProcedureType_pDUSessionModification: _enum_for_SMFFailedProcedureType.pDUSessionModification = SMFFailedProcedureType.pDUSessionModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionModification
@@ -112,7 +112,7 @@ const SMFFailedProcedureType_pDUSessionModification = SMFFailedProcedureType.pDU
  * @type {number}
  */
 export
-const pDUSessionModification = SMFFailedProcedureType.pDUSessionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionModification: _enum_for_SMFFailedProcedureType.pDUSessionModification = SMFFailedProcedureType.pDUSessionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMFFailedProcedureType_pDUSessionRelease
@@ -120,7 +120,7 @@ const pDUSessionModification = SMFFailedProcedureType.pDUSessionModification; /*
  * @type {number}
  */
 export
-const SMFFailedProcedureType_pDUSessionRelease = SMFFailedProcedureType.pDUSessionRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMFFailedProcedureType_pDUSessionRelease: _enum_for_SMFFailedProcedureType.pDUSessionRelease = SMFFailedProcedureType.pDUSessionRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionRelease
@@ -128,7 +128,7 @@ const SMFFailedProcedureType_pDUSessionRelease = SMFFailedProcedureType.pDUSessi
  * @type {number}
  */
 export
-const pDUSessionRelease = SMFFailedProcedureType.pDUSessionRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionRelease: _enum_for_SMFFailedProcedureType.pDUSessionRelease = SMFFailedProcedureType.pDUSessionRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMFFailedProcedureType: $.ASN1Decoder<SMFFailedProcedureType> = $._decodeEnumerated;
 export const _encode_SMFFailedProcedureType: $.ASN1Encoder<SMFFailedProcedureType> = $._encodeEnumerated;
 

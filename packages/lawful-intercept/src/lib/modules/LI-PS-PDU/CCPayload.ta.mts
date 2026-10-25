@@ -179,13 +179,13 @@ class CCPayload {
          * @static
          */
 
-    public static _enum_for_payloadDirection = _enum_for_PayloadDirection;        /**
+    public static _enum_for_payloadDirection: typeof _enum_for_PayloadDirection = _enum_for_PayloadDirection;        /**
          * @summary The enum used as the type of the component `timeStampQualifier`
          * @public
          * @static
          */
 
-    public static _enum_for_timeStampQualifier = _enum_for_TimeStampQualifier;
+    public static _enum_for_timeStampQualifier: typeof _enum_for_TimeStampQualifier = _enum_for_TimeStampQualifier;
 }
 
 /**

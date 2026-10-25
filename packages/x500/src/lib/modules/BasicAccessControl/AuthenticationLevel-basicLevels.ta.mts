@@ -110,7 +110,7 @@ export class AuthenticationLevel_basicLevels {
      * @static
      */
 
-    public static _enum_for_level = _enum_for_AuthenticationLevel_basicLevels_level;
+    public static _enum_for_level: typeof _enum_for_AuthenticationLevel_basicLevels_level = _enum_for_AuthenticationLevel_basicLevels_level;
 }
 
 /**

@@ -36,7 +36,7 @@ export const _decode_PkgdName = (el: _Element): PkgdName => {
     }
     return value;
 };
-export const _encode_PkgdName = $._encodeOctetString;
+export const _encode_PkgdName: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

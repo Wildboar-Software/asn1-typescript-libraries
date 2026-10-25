@@ -96,7 +96,7 @@ type W5GBANLineType = _enum_for_W5GBANLineType;
  * @enum {number}
  */
 export
-const W5GBANLineType = _enum_for_W5GBANLineType;
+const W5GBANLineType: typeof _enum_for_W5GBANLineType = _enum_for_W5GBANLineType;
 
 /**
  * @summary W5GBANLineType_dSL
@@ -110,7 +110,7 @@ const W5GBANLineType = _enum_for_W5GBANLineType;
  * @type {number}
  */
 export
-const W5GBANLineType_dSL = W5GBANLineType.dSL; /* LONG_NAMED_ENUMERATED_VALUE */
+const W5GBANLineType_dSL: _enum_for_W5GBANLineType.dSL = W5GBANLineType.dSL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dSL
@@ -124,7 +124,7 @@ const W5GBANLineType_dSL = W5GBANLineType.dSL; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const dSL = W5GBANLineType.dSL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dSL: _enum_for_W5GBANLineType.dSL = W5GBANLineType.dSL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary W5GBANLineType_pON
@@ -138,7 +138,7 @@ const dSL = W5GBANLineType.dSL; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const W5GBANLineType_pON = W5GBANLineType.pON; /* LONG_NAMED_ENUMERATED_VALUE */
+const W5GBANLineType_pON: _enum_for_W5GBANLineType.pON = W5GBANLineType.pON; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pON
@@ -152,7 +152,7 @@ const W5GBANLineType_pON = W5GBANLineType.pON; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const pON = W5GBANLineType.pON; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pON: _enum_for_W5GBANLineType.pON = W5GBANLineType.pON; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_W5GBANLineType: $.ASN1Decoder<W5GBANLineType> = $._decodeEnumerated;
 export const _encode_W5GBANLineType: $.ASN1Encoder<W5GBANLineType> = $._encodeEnumerated;
 

@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type KEA_Parms_Id = OCTET_STRING; // OctetStringType
 
 
-export const _decode_KEA_Parms_Id = $._decodeOctetString;
+export const _decode_KEA_Parms_Id: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_KEA_Parms_Id = $._encodeOctetString;
+export const _encode_KEA_Parms_Id: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

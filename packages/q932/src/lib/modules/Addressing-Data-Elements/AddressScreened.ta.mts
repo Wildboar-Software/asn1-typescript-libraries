@@ -101,7 +101,7 @@ class AddressScreened {
          * @static
          */
 
-    public static _enum_for_screeninglndicator = _enum_for_ScreeningIndicator;
+    public static _enum_for_screeninglndicator: typeof _enum_for_ScreeningIndicator = _enum_for_ScreeningIndicator;
 }
 
 /**

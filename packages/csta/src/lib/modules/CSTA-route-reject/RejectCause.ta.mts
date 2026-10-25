@@ -87,7 +87,7 @@ type RejectCause = _enum_for_RejectCause;
  * @enum {number}
  */
 export
-const RejectCause = _enum_for_RejectCause;
+const RejectCause: typeof _enum_for_RejectCause = _enum_for_RejectCause;
 
 /**
  * @summary RejectCause_busyOverflow
@@ -95,7 +95,7 @@ const RejectCause = _enum_for_RejectCause;
  * @type {number}
  */
 export
-const RejectCause_busyOverflow = RejectCause.busyOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_busyOverflow: _enum_for_RejectCause.busyOverflow = RejectCause.busyOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busyOverflow
@@ -103,7 +103,7 @@ const RejectCause_busyOverflow = RejectCause.busyOverflow; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const busyOverflow = RejectCause.busyOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busyOverflow: _enum_for_RejectCause.busyOverflow = RejectCause.busyOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_queueTimeOverflow
@@ -111,7 +111,7 @@ const busyOverflow = RejectCause.busyOverflow; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const RejectCause_queueTimeOverflow = RejectCause.queueTimeOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_queueTimeOverflow: _enum_for_RejectCause.queueTimeOverflow = RejectCause.queueTimeOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueTimeOverflow
@@ -119,7 +119,7 @@ const RejectCause_queueTimeOverflow = RejectCause.queueTimeOverflow; /* LONG_NAM
  * @type {number}
  */
 export
-const queueTimeOverflow = RejectCause.queueTimeOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const queueTimeOverflow: _enum_for_RejectCause.queueTimeOverflow = RejectCause.queueTimeOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_capacityOverflow
@@ -127,7 +127,7 @@ const queueTimeOverflow = RejectCause.queueTimeOverflow; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const RejectCause_capacityOverflow = RejectCause.capacityOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_capacityOverflow: _enum_for_RejectCause.capacityOverflow = RejectCause.capacityOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary capacityOverflow
@@ -135,7 +135,7 @@ const RejectCause_capacityOverflow = RejectCause.capacityOverflow; /* LONG_NAMED
  * @type {number}
  */
 export
-const capacityOverflow = RejectCause.capacityOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const capacityOverflow: _enum_for_RejectCause.capacityOverflow = RejectCause.capacityOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_calendarOverflow
@@ -143,7 +143,7 @@ const capacityOverflow = RejectCause.capacityOverflow; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const RejectCause_calendarOverflow = RejectCause.calendarOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_calendarOverflow: _enum_for_RejectCause.calendarOverflow = RejectCause.calendarOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calendarOverflow
@@ -151,7 +151,7 @@ const RejectCause_calendarOverflow = RejectCause.calendarOverflow; /* LONG_NAMED
  * @type {number}
  */
 export
-const calendarOverflow = RejectCause.calendarOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calendarOverflow: _enum_for_RejectCause.calendarOverflow = RejectCause.calendarOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RejectCause_unknownOverflow
@@ -159,7 +159,7 @@ const calendarOverflow = RejectCause.calendarOverflow; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const RejectCause_unknownOverflow = RejectCause.unknownOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const RejectCause_unknownOverflow: _enum_for_RejectCause.unknownOverflow = RejectCause.unknownOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownOverflow
@@ -167,7 +167,7 @@ const RejectCause_unknownOverflow = RejectCause.unknownOverflow; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const unknownOverflow = RejectCause.unknownOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownOverflow: _enum_for_RejectCause.unknownOverflow = RejectCause.unknownOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RejectCause: $.ASN1Decoder<RejectCause> | null = null;
 

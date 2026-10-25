@@ -87,7 +87,7 @@ class Area {
          * @static
          */
 
-    public static _enum_for_areaType = _enum_for_AreaType;
+    public static _enum_for_areaType: typeof _enum_for_AreaType = _enum_for_AreaType;
 }
 
 /**

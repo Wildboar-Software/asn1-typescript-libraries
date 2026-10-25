@@ -79,8 +79,8 @@ export class BCSMEvent {
         return new BCSMEvent(_o.eventTypeBCSM, _o.monitorMode, _o.legID, _o.dpSpecificCriteria, _o.automaticRearm, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 export const _root_component_type_list_1_spec_for_BCSMEvent: $.ComponentSpec[] = [

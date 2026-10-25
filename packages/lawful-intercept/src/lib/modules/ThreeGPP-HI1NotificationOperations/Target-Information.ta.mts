@@ -242,13 +242,13 @@ class Target_Information {
          * @static
          */
 
-    public static _enum_for_targetType = _enum_for_TargetType;        /**
+    public static _enum_for_targetType: typeof _enum_for_TargetType = _enum_for_TargetType;        /**
          * @summary The enum used as the type of the component `interceptionType`
          * @public
          * @static
          */
 
-    public static _enum_for_interceptionType = _enum_for_InterceptionType;
+    public static _enum_for_interceptionType: typeof _enum_for_InterceptionType = _enum_for_InterceptionType;
 }
 
 /**

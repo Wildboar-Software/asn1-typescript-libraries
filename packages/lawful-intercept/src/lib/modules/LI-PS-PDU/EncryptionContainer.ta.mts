@@ -158,13 +158,13 @@ class EncryptionContainer {
          * @static
          */
 
-    public static _enum_for_encryptionType = _enum_for_EncryptionType;        /**
+    public static _enum_for_encryptionType: typeof _enum_for_EncryptionType = _enum_for_EncryptionType;        /**
          * @summary The enum used as the type of the component `encryptedPayloadType`
          * @public
          * @static
          */
 
-    public static _enum_for_encryptedPayloadType = _enum_for_EncryptedPayloadType;
+    public static _enum_for_encryptedPayloadType: typeof _enum_for_EncryptedPayloadType = _enum_for_EncryptedPayloadType;
 }
 
 /**

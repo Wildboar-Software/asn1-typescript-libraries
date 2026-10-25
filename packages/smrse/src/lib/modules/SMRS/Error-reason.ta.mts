@@ -70,7 +70,7 @@ type Error_reason = INTEGER;
  * @type {number}
  */
 export
-const Error_reason_unknown_subscriber = 1 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_unknown_subscriber: 1 = 1 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_unknown_subscriber
@@ -84,7 +84,7 @@ const Error_reason_unknown_subscriber = 1 satisfies Error_reason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const unknown_subscriber = Error_reason_unknown_subscriber; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown_subscriber: 1 = Error_reason_unknown_subscriber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_illegal_subscriber
@@ -97,7 +97,7 @@ const unknown_subscriber = Error_reason_unknown_subscriber; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const Error_reason_illegal_subscriber = 9 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_illegal_subscriber: 9 = 9 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_illegal_subscriber
@@ -110,7 +110,7 @@ const Error_reason_illegal_subscriber = 9 satisfies Error_reason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const illegal_subscriber = Error_reason_illegal_subscriber; /* SHORT_NAMED_INTEGER_VALUE */
+const illegal_subscriber: 9 = Error_reason_illegal_subscriber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_teleservice_not_provisioned
@@ -123,7 +123,7 @@ const illegal_subscriber = Error_reason_illegal_subscriber; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const Error_reason_teleservice_not_provisioned = 11 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_teleservice_not_provisioned: 11 = 11 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_teleservice_not_provisioned
@@ -136,7 +136,7 @@ const Error_reason_teleservice_not_provisioned = 11 satisfies Error_reason; /* L
  * @type {number}
  */
 export
-const teleservice_not_provisioned = Error_reason_teleservice_not_provisioned; /* SHORT_NAMED_INTEGER_VALUE */
+const teleservice_not_provisioned: 11 = Error_reason_teleservice_not_provisioned; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_call_barred
@@ -149,7 +149,7 @@ const teleservice_not_provisioned = Error_reason_teleservice_not_provisioned; /*
  * @type {number}
  */
 export
-const Error_reason_call_barred = 13 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_call_barred: 13 = 13 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_call_barred
@@ -162,7 +162,7 @@ const Error_reason_call_barred = 13 satisfies Error_reason; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const call_barred = Error_reason_call_barred; /* SHORT_NAMED_INTEGER_VALUE */
+const call_barred: 13 = Error_reason_call_barred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_cug_reject
@@ -174,7 +174,7 @@ const call_barred = Error_reason_call_barred; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Error_reason_cug_reject = 15 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_cug_reject: 15 = 15 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_cug_reject
@@ -186,7 +186,7 @@ const Error_reason_cug_reject = 15 satisfies Error_reason; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const cug_reject = Error_reason_cug_reject; /* SHORT_NAMED_INTEGER_VALUE */
+const cug_reject: 15 = Error_reason_cug_reject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_sMS_ll_capabilities_not_prov
@@ -202,7 +202,7 @@ const cug_reject = Error_reason_cug_reject; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Error_reason_sMS_ll_capabilities_not_prov = 19 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_sMS_ll_capabilities_not_prov: 19 = 19 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_sMS_ll_capabilities_not_prov
@@ -218,7 +218,7 @@ const Error_reason_sMS_ll_capabilities_not_prov = 19 satisfies Error_reason; /* 
  * @type {number}
  */
 export
-const sMS_ll_capabilities_not_prov = Error_reason_sMS_ll_capabilities_not_prov; /* SHORT_NAMED_INTEGER_VALUE */
+const sMS_ll_capabilities_not_prov: 19 = Error_reason_sMS_ll_capabilities_not_prov; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_error_in_MS
@@ -231,7 +231,7 @@ const sMS_ll_capabilities_not_prov = Error_reason_sMS_ll_capabilities_not_prov; 
  * @type {number}
  */
 export
-const Error_reason_error_in_MS = 20 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_error_in_MS: 20 = 20 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_error_in_MS
@@ -244,7 +244,7 @@ const Error_reason_error_in_MS = 20 satisfies Error_reason; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const error_in_MS = Error_reason_error_in_MS; /* SHORT_NAMED_INTEGER_VALUE */
+const error_in_MS: 20 = Error_reason_error_in_MS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_facility_not_supported
@@ -257,7 +257,7 @@ const error_in_MS = Error_reason_error_in_MS; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Error_reason_facility_not_supported = 21 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_facility_not_supported: 21 = 21 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_facility_not_supported
@@ -270,7 +270,7 @@ const Error_reason_facility_not_supported = 21 satisfies Error_reason; /* LONG_N
  * @type {number}
  */
 export
-const facility_not_supported = Error_reason_facility_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+const facility_not_supported: 21 = Error_reason_facility_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_memory_capacity_exceeded
@@ -283,7 +283,7 @@ const facility_not_supported = Error_reason_facility_not_supported; /* SHORT_NAM
  * @type {number}
  */
 export
-const Error_reason_memory_capacity_exceeded = 22 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_memory_capacity_exceeded: 22 = 22 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_memory_capacity_exceeded
@@ -296,7 +296,7 @@ const Error_reason_memory_capacity_exceeded = 22 satisfies Error_reason; /* LONG
  * @type {number}
  */
 export
-const memory_capacity_exceeded = Error_reason_memory_capacity_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+const memory_capacity_exceeded: 22 = Error_reason_memory_capacity_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_absent_subscriber
@@ -309,7 +309,7 @@ const memory_capacity_exceeded = Error_reason_memory_capacity_exceeded; /* SHORT
  * @type {number}
  */
 export
-const Error_reason_absent_subscriber = 29 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_absent_subscriber: 29 = 29 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_absent_subscriber
@@ -322,7 +322,7 @@ const Error_reason_absent_subscriber = 29 satisfies Error_reason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const absent_subscriber = Error_reason_absent_subscriber; /* SHORT_NAMED_INTEGER_VALUE */
+const absent_subscriber: 29 = Error_reason_absent_subscriber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_ms_busy_for_MT_sms
@@ -336,7 +336,7 @@ const absent_subscriber = Error_reason_absent_subscriber; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const Error_reason_ms_busy_for_MT_sms = 30 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_ms_busy_for_MT_sms: 30 = 30 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_ms_busy_for_MT_sms
@@ -350,7 +350,7 @@ const Error_reason_ms_busy_for_MT_sms = 30 satisfies Error_reason; /* LONG_NAMED
  * @type {number}
  */
 export
-const ms_busy_for_MT_sms = Error_reason_ms_busy_for_MT_sms; /* SHORT_NAMED_INTEGER_VALUE */
+const ms_busy_for_MT_sms: 30 = Error_reason_ms_busy_for_MT_sms; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_system_failure
@@ -365,7 +365,7 @@ const ms_busy_for_MT_sms = Error_reason_ms_busy_for_MT_sms; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const Error_reason_system_failure = 36 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_system_failure: 36 = 36 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_system_failure
@@ -380,7 +380,7 @@ const Error_reason_system_failure = 36 satisfies Error_reason; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const system_failure = Error_reason_system_failure; /* SHORT_NAMED_INTEGER_VALUE */
+const system_failure: 36 = Error_reason_system_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_illegal_equipment
@@ -393,7 +393,7 @@ const system_failure = Error_reason_system_failure; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const Error_reason_illegal_equipment = 44 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_illegal_equipment: 44 = 44 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_illegal_equipment
@@ -406,7 +406,7 @@ const Error_reason_illegal_equipment = 44 satisfies Error_reason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const illegal_equipment = Error_reason_illegal_equipment; /* SHORT_NAMED_INTEGER_VALUE */
+const illegal_equipment: 44 = Error_reason_illegal_equipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_no_resp_to_paging
@@ -418,7 +418,7 @@ const illegal_equipment = Error_reason_illegal_equipment; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const Error_reason_no_resp_to_paging = 60 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_no_resp_to_paging: 60 = 60 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_no_resp_to_paging
@@ -430,7 +430,7 @@ const Error_reason_no_resp_to_paging = 60 satisfies Error_reason; /* LONG_NAMED_
  * @type {number}
  */
 export
-const no_resp_to_paging = Error_reason_no_resp_to_paging; /* SHORT_NAMED_INTEGER_VALUE */
+const no_resp_to_paging: 60 = Error_reason_no_resp_to_paging; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_gMSC_congestion
@@ -442,7 +442,7 @@ const no_resp_to_paging = Error_reason_no_resp_to_paging; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const Error_reason_gMSC_congestion = 61 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_gMSC_congestion: 61 = 61 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_gMSC_congestion
@@ -454,7 +454,7 @@ const Error_reason_gMSC_congestion = 61 satisfies Error_reason; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const gMSC_congestion = Error_reason_gMSC_congestion; /* SHORT_NAMED_INTEGER_VALUE */
+const gMSC_congestion: 61 = Error_reason_gMSC_congestion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_dublicate_sm
@@ -467,7 +467,7 @@ const gMSC_congestion = Error_reason_gMSC_congestion; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const Error_reason_dublicate_sm = 70 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_dublicate_sm: 70 = 70 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_dublicate_sm
@@ -480,7 +480,7 @@ const Error_reason_dublicate_sm = 70 satisfies Error_reason; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const dublicate_sm = Error_reason_dublicate_sm; /* SHORT_NAMED_INTEGER_VALUE */
+const dublicate_sm: 70 = Error_reason_dublicate_sm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_sC_congestion
@@ -494,7 +494,7 @@ const dublicate_sm = Error_reason_dublicate_sm; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Error_reason_sC_congestion = 101 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_sC_congestion: 101 = 101 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_sC_congestion
@@ -508,7 +508,7 @@ const Error_reason_sC_congestion = 101 satisfies Error_reason; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const sC_congestion = Error_reason_sC_congestion; /* SHORT_NAMED_INTEGER_VALUE */
+const sC_congestion: 101 = Error_reason_sC_congestion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_mS_not_SC_Subscriber
@@ -522,7 +522,7 @@ const sC_congestion = Error_reason_sC_congestion; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const Error_reason_mS_not_SC_Subscriber = 103 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_mS_not_SC_Subscriber: 103 = 103 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_mS_not_SC_Subscriber
@@ -536,7 +536,7 @@ const Error_reason_mS_not_SC_Subscriber = 103 satisfies Error_reason; /* LONG_NA
  * @type {number}
  */
 export
-const mS_not_SC_Subscriber = Error_reason_mS_not_SC_Subscriber; /* SHORT_NAMED_INTEGER_VALUE */
+const mS_not_SC_Subscriber: 103 = Error_reason_mS_not_SC_Subscriber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_invalid_sme_address
@@ -550,7 +550,7 @@ const mS_not_SC_Subscriber = Error_reason_mS_not_SC_Subscriber; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const Error_reason_invalid_sme_address = 104 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
+const Error_reason_invalid_sme_address: 104 = 104 satisfies Error_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Error_reason_invalid_sme_address
@@ -564,9 +564,9 @@ const Error_reason_invalid_sme_address = 104 satisfies Error_reason; /* LONG_NAM
  * @type {number}
  */
 export
-const invalid_sme_address = Error_reason_invalid_sme_address; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Error_reason = $._decodeInteger;
-export const _encode_Error_reason = $._encodeInteger;
+const invalid_sme_address: 104 = Error_reason_invalid_sme_address; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_Error_reason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_Error_reason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

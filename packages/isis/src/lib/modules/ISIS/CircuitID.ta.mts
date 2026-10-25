@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type CircuitID = OCTET_STRING; // OctetStringType
 
 
-export const _decode_CircuitID = $._decodeOctetString;
+export const _decode_CircuitID: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_CircuitID = $._encodeOctetString;
+export const _encode_CircuitID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

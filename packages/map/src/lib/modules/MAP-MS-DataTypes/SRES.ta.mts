@@ -46,7 +46,7 @@ export const _decode_SRES = (el: _Element): SRES => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SRES, encoded as an ASN.1 Element.
  */
-export const _encode_SRES = $._encodeOctetString;
+export const _encode_SRES: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

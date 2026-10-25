@@ -128,13 +128,13 @@ class IntrudeCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_participationType () { return ParticipationType_active; }        /**
+    public static get _default_value_for_participationType (): _enum_for_ParticipationType.active { return ParticipationType_active; }        /**
          * @summary The enum used as the type of the component `participationType`
          * @public
          * @static
          */
 
-    public static _enum_for_participationType = _enum_for_ParticipationType;
+    public static _enum_for_participationType: typeof _enum_for_ParticipationType = _enum_for_ParticipationType;
 }
 
 /**

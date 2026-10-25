@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SequenceNumber = INTEGER;
 
 
-export const _decode_SequenceNumber = $._decodeInteger;
+export const _decode_SequenceNumber: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SequenceNumber = $._encodeInteger;
+export const _encode_SequenceNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -52,7 +52,7 @@ export type EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_resul
  *
  * @enum {number}
  */
-export const EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_result;
+export const EpcFormat_fields_Item_result: typeof _enum_for_EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_result;
 
 /**
  * @summary EpcFormat_fields_Item_result_numericPad
@@ -64,7 +64,7 @@ export const EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_resu
  * @constant
  * @type {number}
  */
-export const EpcFormat_fields_Item_result_numericPad =
+export const EpcFormat_fields_Item_result_numericPad: _enum_for_EpcFormat_fields_Item_result.numericPad =
     EpcFormat_fields_Item_result.numericPad; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const EpcFormat_fields_Item_result_numericPad =
  * @constant
  * @type {number}
  */
-export const numericPad =
+export const numericPad: _enum_for_EpcFormat_fields_Item_result.numericPad =
     EpcFormat_fields_Item_result.numericPad; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const numericPad =
  * @constant
  * @type {number}
  */
-export const EpcFormat_fields_Item_result_numeric =
+export const EpcFormat_fields_Item_result_numeric: _enum_for_EpcFormat_fields_Item_result.numeric =
     EpcFormat_fields_Item_result.numeric; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -101,7 +101,7 @@ export const EpcFormat_fields_Item_result_numeric =
  * @constant
  * @type {number}
  */
-export const numeric =
+export const numeric: _enum_for_EpcFormat_fields_Item_result.numeric =
     EpcFormat_fields_Item_result.numeric; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const numeric =
  * @constant
  * @type {number}
  */
-export const EpcFormat_fields_Item_result_alpha7bits =
+export const EpcFormat_fields_Item_result_alpha7bits: _enum_for_EpcFormat_fields_Item_result.alpha7bits =
     EpcFormat_fields_Item_result.alpha7bits; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -125,7 +125,7 @@ export const EpcFormat_fields_Item_result_alpha7bits =
  * @constant
  * @type {number}
  */
-export const alpha7bits =
+export const alpha7bits: _enum_for_EpcFormat_fields_Item_result.alpha7bits =
     EpcFormat_fields_Item_result.alpha7bits; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

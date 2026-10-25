@@ -15,10 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type Presentation_selector = OCTET_STRING; // OctetStringType
 
 
-export const _decode_Presentation_selector = $._decodeOctetString;
+export const _decode_Presentation_selector: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_Presentation_selector = $._encodeOctetString;
+export const _encode_Presentation_selector: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

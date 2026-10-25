@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PossibleError = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_PossibleError = $._decodeObjectIdentifier;
+export const _decode_PossibleError: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_PossibleError = $._encodeObjectIdentifier;
+export const _encode_PossibleError: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

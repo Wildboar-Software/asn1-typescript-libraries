@@ -92,7 +92,7 @@ export class RealizationParameter {
    * @static
    */
 
-  public static _enum_for_realization_type = _enum_for_RealizationParameter_realization_type;
+  public static _enum_for_realization_type: typeof _enum_for_RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
 }
 
 

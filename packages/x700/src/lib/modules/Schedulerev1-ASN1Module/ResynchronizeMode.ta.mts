@@ -39,12 +39,12 @@ export type ResynchronizeMode = BOOLEAN; // BooleanType
 
 
 
-export const _decode_ResynchronizeMode = $._decodeBoolean;
+export const _decode_ResynchronizeMode: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_ResynchronizeMode = $._encodeBoolean;
+export const _encode_ResynchronizeMode: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

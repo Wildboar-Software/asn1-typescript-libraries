@@ -551,19 +551,19 @@ class SCSMTRecord {
          * @static
          */
 
-    public static _enum_for_sMPriority = _enum_for_PriorityType;        /**
+    public static _enum_for_sMPriority: typeof _enum_for_PriorityType = _enum_for_PriorityType;        /**
          * @summary The enum used as the type of the component `messageClass`
          * @public
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_MessageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_MessageClass = _enum_for_MessageClass;        /**
          * @summary The enum used as the type of the component `sMMessageType`
          * @public
          * @static
          */
 
-    public static _enum_for_sMMessageType = _enum_for_SMMessageType;
+    public static _enum_for_sMMessageType: typeof _enum_for_SMMessageType = _enum_for_SMMessageType;
 }
 
 /**

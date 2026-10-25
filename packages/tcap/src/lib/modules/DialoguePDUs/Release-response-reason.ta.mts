@@ -35,48 +35,48 @@ export type Release_response_reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const Release_response_reason_normal = 0 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_response_reason_normal: 0 = 0 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_normal
  * @constant
  * @type {number}
  */
-export const normal = Release_response_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal: 0 = Release_response_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_not_finished
  * @constant
  * @type {number}
  */
-export const Release_response_reason_not_finished = 1 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_response_reason_not_finished: 1 = 1 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_not_finished
  * @constant
  * @type {number}
  */
-export const not_finished = Release_response_reason_not_finished; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_finished: 1 = Release_response_reason_not_finished; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_user_defined
  * @constant
  * @type {number}
  */
-export const Release_response_reason_user_defined = 30 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_response_reason_user_defined: 30 = 30 satisfies Release_response_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_response_reason_user_defined
  * @constant
  * @type {number}
  */
-export const user_defined = Release_response_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_defined: 30 = Release_response_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Release_response_reason = $._decodeInteger;
+export const _decode_Release_response_reason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Release_response_reason = $._encodeInteger;
+export const _encode_Release_response_reason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

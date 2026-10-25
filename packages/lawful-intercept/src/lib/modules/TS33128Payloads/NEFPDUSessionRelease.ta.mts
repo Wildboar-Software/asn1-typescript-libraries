@@ -212,7 +212,7 @@ class NEFPDUSessionRelease {
          * @static
          */
 
-    public static _enum_for_releaseCause = _enum_for_NEFReleaseCause;
+    public static _enum_for_releaseCause: typeof _enum_for_NEFReleaseCause = _enum_for_NEFReleaseCause;
 }
 
 /**

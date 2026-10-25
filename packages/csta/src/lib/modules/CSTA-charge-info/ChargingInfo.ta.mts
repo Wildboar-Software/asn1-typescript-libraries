@@ -97,7 +97,7 @@ class ChargingInfo {
          * @static
          */
 
-    public static _enum_for_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo;
+    public static _enum_for_typeOfChargingInfo: typeof _enum_for_ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo;
 }
 
 /**

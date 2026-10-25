@@ -39,7 +39,7 @@ export const _decode_Severity = (el: _Element): Severity => {
     }
     return value;
 };
-export const _encode_Severity = $._encodeInteger;
+export const _encode_Severity: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

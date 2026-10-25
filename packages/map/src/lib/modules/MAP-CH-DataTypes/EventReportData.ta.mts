@@ -88,7 +88,7 @@ class EventReportData {
          * @static
          */
 
-    public static _enum_for_ccbs_SubscriberStatus = _enum_for_CCBS_SubscriberStatus;
+    public static _enum_for_ccbs_SubscriberStatus: typeof _enum_for_CCBS_SubscriberStatus = _enum_for_CCBS_SubscriberStatus;
 }
 
 /**

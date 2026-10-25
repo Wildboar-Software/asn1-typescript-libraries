@@ -116,7 +116,7 @@ class V8Diag_Item {
          * @static
          */
 
-    public static _enum_for_v8Result = _enum_for_V8Diag_Item_v8Result;
+    public static _enum_for_v8Result: typeof _enum_for_V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
 }
 
 /**

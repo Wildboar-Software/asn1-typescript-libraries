@@ -27,8 +27,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ServiceChangeReasonStr = IA5String; // IA5String
-export const _decode_ServiceChangeReasonStr = $._decodeIA5String;
-export const _encode_ServiceChangeReasonStr = $._encodeIA5String;
+export const _decode_ServiceChangeReasonStr: $.ASN1Decoder<string> = $._decodeIA5String;
+export const _encode_ServiceChangeReasonStr: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

@@ -74,7 +74,7 @@ type Reason = _enum_for_Reason;
  * @enum {number}
  */
 export
-const Reason = _enum_for_Reason;
+const Reason: typeof _enum_for_Reason = _enum_for_Reason;
 
 /**
  * @summary Reason_noReasonGiven
@@ -87,7 +87,7 @@ const Reason = _enum_for_Reason;
  * @type {number}
  */
 export
-const Reason_noReasonGiven = Reason.noReasonGiven; /* LONG_NAMED_ENUMERATED_VALUE */
+const Reason_noReasonGiven: _enum_for_Reason.noReasonGiven = Reason.noReasonGiven; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReasonGiven
@@ -99,7 +99,7 @@ const Reason_noReasonGiven = Reason.noReasonGiven; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const noReasonGiven = Reason.noReasonGiven; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReasonGiven: _enum_for_Reason.noReasonGiven = Reason.noReasonGiven; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_invalidDestinationReference
@@ -112,7 +112,7 @@ const noReasonGiven = Reason.noReasonGiven; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Reason_invalidDestinationReference = Reason.invalidDestinationReference; /* LONG_NAMED_ENUMERATED_VALUE */
+const Reason_invalidDestinationReference: _enum_for_Reason.invalidDestinationReference = Reason.invalidDestinationReference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationReference
@@ -125,7 +125,7 @@ const Reason_invalidDestinationReference = Reason.invalidDestinationReference; /
  * @type {number}
  */
 export
-const invalidDestinationReference = Reason.invalidDestinationReference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestinationReference: _enum_for_Reason.invalidDestinationReference = Reason.invalidDestinationReference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Reason_invalidOriginatingReference
@@ -138,7 +138,7 @@ const invalidDestinationReference = Reason.invalidDestinationReference; /* SHORT
  * @type {number}
  */
 export
-const Reason_invalidOriginatingReference = Reason.invalidOriginatingReference; /* LONG_NAMED_ENUMERATED_VALUE */
+const Reason_invalidOriginatingReference: _enum_for_Reason.invalidOriginatingReference = Reason.invalidOriginatingReference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidOriginatingReference
@@ -151,7 +151,7 @@ const Reason_invalidOriginatingReference = Reason.invalidOriginatingReference; /
  * @type {number}
  */
 export
-const invalidOriginatingReference = Reason.invalidOriginatingReference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidOriginatingReference: _enum_for_Reason.invalidOriginatingReference = Reason.invalidOriginatingReference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Reason
@@ -159,7 +159,7 @@ const invalidOriginatingReference = Reason.invalidOriginatingReference; /* SHORT
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Reason = $._decodeEnumerated;
+export const _decode_Reason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Reason into an ASN.1 Element.
@@ -168,7 +168,7 @@ export const _decode_Reason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Reason, encoded as an ASN.1 Element.
  */
-export const _encode_Reason = $._encodeEnumerated;
+export const _encode_Reason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */
