@@ -93,7 +93,7 @@ const ReasonForTerm = _enum_for_ReasonForTerm;
  * @type {number}
  */
 export
-const ReasonForTerm_normalClearing: ReasonForTerm = ReasonForTerm.normalClearing; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForTerm_normalClearing = ReasonForTerm.normalClearing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalClearing
@@ -101,7 +101,7 @@ const ReasonForTerm_normalClearing: ReasonForTerm = ReasonForTerm.normalClearing
  * @type {number}
  */
 export
-const normalClearing: ReasonForTerm = ReasonForTerm.normalClearing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalClearing = ReasonForTerm.normalClearing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForTerm_unsuccessfulCallAttempt
@@ -113,7 +113,7 @@ const normalClearing: ReasonForTerm = ReasonForTerm.normalClearing; /* SHORT_NAM
  * @type {number}
  */
 export
-const ReasonForTerm_unsuccessfulCallAttempt: ReasonForTerm = ReasonForTerm.unsuccessfulCallAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForTerm_unsuccessfulCallAttempt = ReasonForTerm.unsuccessfulCallAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsuccessfulCallAttempt
@@ -121,7 +121,7 @@ const ReasonForTerm_unsuccessfulCallAttempt: ReasonForTerm = ReasonForTerm.unsuc
  * @type {number}
  */
 export
-const unsuccessfulCallAttempt: ReasonForTerm = ReasonForTerm.unsuccessfulCallAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsuccessfulCallAttempt = ReasonForTerm.unsuccessfulCallAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForTerm_abnormalTermination
@@ -133,7 +133,7 @@ const unsuccessfulCallAttempt: ReasonForTerm = ReasonForTerm.unsuccessfulCallAtt
  * @type {number}
  */
 export
-const ReasonForTerm_abnormalTermination: ReasonForTerm = ReasonForTerm.abnormalTermination; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForTerm_abnormalTermination = ReasonForTerm.abnormalTermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abnormalTermination
@@ -141,7 +141,7 @@ const ReasonForTerm_abnormalTermination: ReasonForTerm = ReasonForTerm.abnormalT
  * @type {number}
  */
 export
-const abnormalTermination: ReasonForTerm = ReasonForTerm.abnormalTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abnormalTermination = ReasonForTerm.abnormalTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForTerm_callTransferred
@@ -153,7 +153,7 @@ const abnormalTermination: ReasonForTerm = ReasonForTerm.abnormalTermination; /*
  * @type {number}
  */
 export
-const ReasonForTerm_callTransferred: ReasonForTerm = ReasonForTerm.callTransferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForTerm_callTransferred = ReasonForTerm.callTransferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callTransferred
@@ -161,7 +161,7 @@ const ReasonForTerm_callTransferred: ReasonForTerm = ReasonForTerm.callTransferr
  * @type {number}
  */
 export
-const callTransferred: ReasonForTerm = ReasonForTerm.callTransferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callTransferred = ReasonForTerm.callTransferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForTerm_other
@@ -173,7 +173,7 @@ const callTransferred: ReasonForTerm = ReasonForTerm.callTransferred; /* SHORT_N
  * @type {number}
  */
 export
-const ReasonForTerm_other: ReasonForTerm = ReasonForTerm.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForTerm_other = ReasonForTerm.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -181,7 +181,7 @@ const ReasonForTerm_other: ReasonForTerm = ReasonForTerm.other; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const other: ReasonForTerm = ReasonForTerm.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ReasonForTerm.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ReasonForTerm: $.ASN1Decoder<ReasonForTerm> | null = null;
 

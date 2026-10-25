@@ -89,7 +89,7 @@ const SMDTPriorityIndication = _enum_for_SMDTPriorityIndication;
  * @type {number}
  */
 export
-const SMDTPriorityIndication_nonpriority: SMDTPriorityIndication = SMDTPriorityIndication.nonpriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMDTPriorityIndication_nonpriority = SMDTPriorityIndication.nonpriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonpriority
@@ -97,7 +97,7 @@ const SMDTPriorityIndication_nonpriority: SMDTPriorityIndication = SMDTPriorityI
  * @type {number}
  */
 export
-const nonpriority: SMDTPriorityIndication = SMDTPriorityIndication.nonpriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonpriority = SMDTPriorityIndication.nonpriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMDTPriorityIndication_priority
@@ -110,7 +110,7 @@ const nonpriority: SMDTPriorityIndication = SMDTPriorityIndication.nonpriority; 
  * @type {number}
  */
 export
-const SMDTPriorityIndication_priority: SMDTPriorityIndication = SMDTPriorityIndication.priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMDTPriorityIndication_priority = SMDTPriorityIndication.priority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary priority
@@ -118,7 +118,7 @@ const SMDTPriorityIndication_priority: SMDTPriorityIndication = SMDTPriorityIndi
  * @type {number}
  */
 export
-const priority: SMDTPriorityIndication = SMDTPriorityIndication.priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const priority = SMDTPriorityIndication.priority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMDTPriorityIndication: $.ASN1Decoder<SMDTPriorityIndication> = $._decodeEnumerated;

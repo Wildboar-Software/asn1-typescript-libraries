@@ -114,7 +114,7 @@ const MMStatus = _enum_for_MMStatus;
  * @type {number}
  */
 export
-const MMStatus_expired: MMStatus = MMStatus.expired; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_expired = MMStatus.expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary expired
@@ -122,7 +122,7 @@ const MMStatus_expired: MMStatus = MMStatus.expired; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const expired: MMStatus = MMStatus.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const expired = MMStatus.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_retrieved
@@ -130,7 +130,7 @@ const expired: MMStatus = MMStatus.expired; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatus_retrieved: MMStatus = MMStatus.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_retrieved = MMStatus.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieved
@@ -138,7 +138,7 @@ const MMStatus_retrieved: MMStatus = MMStatus.retrieved; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const retrieved: MMStatus = MMStatus.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieved = MMStatus.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_rejected
@@ -146,7 +146,7 @@ const retrieved: MMStatus = MMStatus.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MMStatus_rejected: MMStatus = MMStatus.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_rejected = MMStatus.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejected
@@ -154,7 +154,7 @@ const MMStatus_rejected: MMStatus = MMStatus.rejected; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const rejected: MMStatus = MMStatus.rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejected = MMStatus.rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_deferred
@@ -162,7 +162,7 @@ const rejected: MMStatus = MMStatus.rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatus_deferred: MMStatus = MMStatus.deferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_deferred = MMStatus.deferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferred
@@ -170,7 +170,7 @@ const MMStatus_deferred: MMStatus = MMStatus.deferred; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const deferred: MMStatus = MMStatus.deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferred = MMStatus.deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_unrecognized
@@ -178,7 +178,7 @@ const deferred: MMStatus = MMStatus.deferred; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMStatus_unrecognized: MMStatus = MMStatus.unrecognized; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_unrecognized = MMStatus.unrecognized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognized
@@ -186,7 +186,7 @@ const MMStatus_unrecognized: MMStatus = MMStatus.unrecognized; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const unrecognized: MMStatus = MMStatus.unrecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrecognized = MMStatus.unrecognized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_indeterminate
@@ -194,7 +194,7 @@ const unrecognized: MMStatus = MMStatus.unrecognized; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const MMStatus_indeterminate: MMStatus = MMStatus.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_indeterminate = MMStatus.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -202,7 +202,7 @@ const MMStatus_indeterminate: MMStatus = MMStatus.indeterminate; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const indeterminate: MMStatus = MMStatus.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate = MMStatus.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_forwarded
@@ -210,7 +210,7 @@ const indeterminate: MMStatus = MMStatus.indeterminate; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const MMStatus_forwarded: MMStatus = MMStatus.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_forwarded = MMStatus.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -218,7 +218,7 @@ const MMStatus_forwarded: MMStatus = MMStatus.forwarded; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const forwarded: MMStatus = MMStatus.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded = MMStatus.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatus_unreachable
@@ -226,7 +226,7 @@ const forwarded: MMStatus = MMStatus.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MMStatus_unreachable: MMStatus = MMStatus.unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatus_unreachable = MMStatus.unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unreachable
@@ -234,7 +234,7 @@ const MMStatus_unreachable: MMStatus = MMStatus.unreachable; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const unreachable: MMStatus = MMStatus.unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unreachable = MMStatus.unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMStatus: $.ASN1Decoder<MMStatus> = $._decodeEnumerated;
 export const _encode_MMStatus: $.ASN1Encoder<MMStatus> = $._encodeEnumerated;
 

@@ -67,7 +67,7 @@ export const AutoSubmitted = _enum_for_AutoSubmitted;
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_not_auto_submitted: AutoSubmitted =
+export const AutoSubmitted_not_auto_submitted =
     AutoSubmitted.not_auto_submitted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -75,7 +75,7 @@ export const AutoSubmitted_not_auto_submitted: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const not_auto_submitted: AutoSubmitted =
+export const not_auto_submitted =
     AutoSubmitted.not_auto_submitted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -83,7 +83,7 @@ export const not_auto_submitted: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_auto_generated: AutoSubmitted =
+export const AutoSubmitted_auto_generated =
     AutoSubmitted.auto_generated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -91,7 +91,7 @@ export const AutoSubmitted_auto_generated: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const auto_generated: AutoSubmitted =
+export const auto_generated =
     AutoSubmitted.auto_generated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const auto_generated: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_auto_replied: AutoSubmitted =
+export const AutoSubmitted_auto_replied =
     AutoSubmitted.auto_replied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const AutoSubmitted_auto_replied: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const auto_replied: AutoSubmitted =
+export const auto_replied =
     AutoSubmitted.auto_replied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

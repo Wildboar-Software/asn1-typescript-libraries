@@ -80,7 +80,7 @@ const PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PrivateDataInfoErrors_cSTAPrivateDataInfoError: PrivateDataInfoErrors = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateDataInfoErrors_cSTAPrivateDataInfoError = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSTAPrivateDataInfoError
@@ -89,7 +89,7 @@ const PrivateDataInfoErrors_cSTAPrivateDataInfoError: PrivateDataInfoErrors = Pr
  * @type {number}
  */
 export
-const cSTAPrivateDataInfoError: PrivateDataInfoErrors = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSTAPrivateDataInfoError = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PrivateDataInfoErrors: $.ASN1Decoder<PrivateDataInfoErrors> | null = null;
 

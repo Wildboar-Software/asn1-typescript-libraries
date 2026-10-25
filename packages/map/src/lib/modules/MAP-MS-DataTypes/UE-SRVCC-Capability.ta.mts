@@ -41,7 +41,7 @@ type UE_SRVCC_Capability = _enum_for_UE_SRVCC_Capability | ENUMERATED;
  * @type {number}
  */
 export
-const UE_SRVCC_Capability_ue_srvcc_not_supported: UE_SRVCC_Capability = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const UE_SRVCC_Capability_ue_srvcc_not_supported = _enum_for_UE_SRVCC_Capability.ue_srvcc_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ue_srvcc_not_supported
@@ -49,7 +49,7 @@ const UE_SRVCC_Capability_ue_srvcc_not_supported: UE_SRVCC_Capability = 0; /* LO
  * @type {number}
  */
 export
-const ue_srvcc_not_supported: UE_SRVCC_Capability = UE_SRVCC_Capability_ue_srvcc_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ue_srvcc_not_supported = UE_SRVCC_Capability_ue_srvcc_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UE_SRVCC_Capability_ue_srvcc_supported
@@ -57,7 +57,7 @@ const ue_srvcc_not_supported: UE_SRVCC_Capability = UE_SRVCC_Capability_ue_srvcc
  * @type {number}
  */
 export
-const UE_SRVCC_Capability_ue_srvcc_supported: UE_SRVCC_Capability = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const UE_SRVCC_Capability_ue_srvcc_supported = _enum_for_UE_SRVCC_Capability.ue_srvcc_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ue_srvcc_supported
@@ -65,7 +65,7 @@ const UE_SRVCC_Capability_ue_srvcc_supported: UE_SRVCC_Capability = 1; /* LONG_N
  * @type {number}
  */
 export
-const ue_srvcc_supported: UE_SRVCC_Capability = UE_SRVCC_Capability_ue_srvcc_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ue_srvcc_supported = UE_SRVCC_Capability_ue_srvcc_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) UE_SRVCC_Capability

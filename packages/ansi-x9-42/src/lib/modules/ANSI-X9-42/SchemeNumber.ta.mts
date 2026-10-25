@@ -65,7 +65,7 @@ export type SchemeNumber = _enum_for_SchemeNumber | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SchemeNumber_dhStatic_sha1: SchemeNumber = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_dhStatic_sha1 = _enum_for_SchemeNumber.dhStatic_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const SchemeNumber_dhStatic_sha1: SchemeNumber = 0; /* LONG_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const dhStatic_sha1: SchemeNumber = SchemeNumber_dhStatic_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhStatic_sha1 = SchemeNumber_dhStatic_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const dhStatic_sha1: SchemeNumber = SchemeNumber_dhStatic_sha1; /* SHORT_
  * @constant
  * @type {number}
  */
-export const SchemeNumber_dhEphem_sha1: SchemeNumber = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_dhEphem_sha1 = _enum_for_SchemeNumber.dhEphem_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -95,7 +95,7 @@ export const SchemeNumber_dhEphem_sha1: SchemeNumber = 1; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const dhEphem_sha1: SchemeNumber = SchemeNumber_dhEphem_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhEphem_sha1 = SchemeNumber_dhEphem_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const dhEphem_sha1: SchemeNumber = SchemeNumber_dhEphem_sha1; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const SchemeNumber_dhOneFlow_sha1: SchemeNumber = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_dhOneFlow_sha1 = _enum_for_SchemeNumber.dhOneFlow_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const SchemeNumber_dhOneFlow_sha1: SchemeNumber = 2; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const dhOneFlow_sha1: SchemeNumber = SchemeNumber_dhOneFlow_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhOneFlow_sha1 = SchemeNumber_dhOneFlow_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,7 +130,7 @@ export const dhOneFlow_sha1: SchemeNumber = SchemeNumber_dhOneFlow_sha1; /* SHOR
  * @constant
  * @type {number}
  */
-export const SchemeNumber_dhHybrid1_sha1: SchemeNumber = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_dhHybrid1_sha1 = _enum_for_SchemeNumber.dhHybrid1_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -138,7 +138,7 @@ export const SchemeNumber_dhHybrid1_sha1: SchemeNumber = 3; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const dhHybrid1_sha1: SchemeNumber = SchemeNumber_dhHybrid1_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhHybrid1_sha1 = SchemeNumber_dhHybrid1_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -152,7 +152,7 @@ export const dhHybrid1_sha1: SchemeNumber = SchemeNumber_dhHybrid1_sha1; /* SHOR
  * @constant
  * @type {number}
  */
-export const SchemeNumber_dhHybrid2_sha1: SchemeNumber = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_dhHybrid2_sha1 = _enum_for_SchemeNumber.dhHybrid2_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -160,7 +160,7 @@ export const SchemeNumber_dhHybrid2_sha1: SchemeNumber = 4; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const dhHybrid2_sha1: SchemeNumber = SchemeNumber_dhHybrid2_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhHybrid2_sha1 = SchemeNumber_dhHybrid2_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -173,7 +173,7 @@ export const dhHybrid2_sha1: SchemeNumber = SchemeNumber_dhHybrid2_sha1; /* SHOR
  * @constant
  * @type {number}
  */
-export const SchemeNumber_dhHybridOneFlow_sha1: SchemeNumber = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_dhHybridOneFlow_sha1 = _enum_for_SchemeNumber.dhHybridOneFlow_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -181,7 +181,7 @@ export const SchemeNumber_dhHybridOneFlow_sha1: SchemeNumber = 5; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const dhHybridOneFlow_sha1: SchemeNumber = SchemeNumber_dhHybridOneFlow_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhHybridOneFlow_sha1 = SchemeNumber_dhHybridOneFlow_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -195,7 +195,7 @@ export const dhHybridOneFlow_sha1: SchemeNumber = SchemeNumber_dhHybridOneFlow_s
  * @constant
  * @type {number}
  */
-export const SchemeNumber_mqv2_sha1: SchemeNumber = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_mqv2_sha1 = _enum_for_SchemeNumber.mqv2_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -203,7 +203,7 @@ export const SchemeNumber_mqv2_sha1: SchemeNumber = 6; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const mqv2_sha1: SchemeNumber = SchemeNumber_mqv2_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mqv2_sha1 = SchemeNumber_mqv2_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -218,7 +218,7 @@ export const mqv2_sha1: SchemeNumber = SchemeNumber_mqv2_sha1; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const SchemeNumber_mqv1_sha1: SchemeNumber = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SchemeNumber_mqv1_sha1 = _enum_for_SchemeNumber.mqv1_sha1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -226,7 +226,7 @@ export const SchemeNumber_mqv1_sha1: SchemeNumber = 7; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const mqv1_sha1: SchemeNumber = SchemeNumber_mqv1_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const mqv1_sha1 = SchemeNumber_mqv1_sha1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

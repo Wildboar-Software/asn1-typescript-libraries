@@ -32,7 +32,7 @@ type ServiceId = INTEGER;
  * @type {number}
  */
 export
-const ServiceId_sid_stp_routing: ServiceId = 42; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceId_sid_stp_routing = 42 satisfies ServiceId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_stp_routing
@@ -40,7 +40,7 @@ const ServiceId_sid_stp_routing: ServiceId = 42; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sid_stp_routing: ServiceId = ServiceId_sid_stp_routing; /* SHORT_NAMED_INTEGER_VALUE */
+const sid_stp_routing = ServiceId_sid_stp_routing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_sgn_forward
@@ -48,7 +48,7 @@ const sid_stp_routing: ServiceId = ServiceId_sid_stp_routing; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ServiceId_sid_sgn_forward: ServiceId = 43; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceId_sid_sgn_forward = 43 satisfies ServiceId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_sgn_forward
@@ -56,7 +56,7 @@ const ServiceId_sid_sgn_forward: ServiceId = 43; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sid_sgn_forward: ServiceId = ServiceId_sid_sgn_forward; /* SHORT_NAMED_INTEGER_VALUE */
+const sid_sgn_forward = ServiceId_sid_sgn_forward; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_fgn_filtering
@@ -64,7 +64,7 @@ const sid_sgn_forward: ServiceId = ServiceId_sid_sgn_forward; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ServiceId_sid_fgn_filtering: ServiceId = 44; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceId_sid_fgn_filtering = 44 satisfies ServiceId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_fgn_filtering
@@ -72,7 +72,7 @@ const ServiceId_sid_fgn_filtering: ServiceId = 44; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const sid_fgn_filtering: ServiceId = ServiceId_sid_fgn_filtering; /* SHORT_NAMED_INTEGER_VALUE */
+const sid_fgn_filtering = ServiceId_sid_fgn_filtering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_security
@@ -80,7 +80,7 @@ const sid_fgn_filtering: ServiceId = ServiceId_sid_fgn_filtering; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ServiceId_sid_security: ServiceId = 45; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceId_sid_security = 45 satisfies ServiceId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_security
@@ -88,7 +88,7 @@ const ServiceId_sid_security: ServiceId = 45; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sid_security: ServiceId = ServiceId_sid_security; /* SHORT_NAMED_INTEGER_VALUE */
+const sid_security = ServiceId_sid_security; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_pdn_filtering
@@ -96,7 +96,7 @@ const sid_security: ServiceId = ServiceId_sid_security; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ServiceId_sid_pdn_filtering: ServiceId = 46; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceId_sid_pdn_filtering = 46 satisfies ServiceId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_pdn_filtering
@@ -104,7 +104,7 @@ const ServiceId_sid_pdn_filtering: ServiceId = 46; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const sid_pdn_filtering: ServiceId = ServiceId_sid_pdn_filtering; /* SHORT_NAMED_INTEGER_VALUE */
+const sid_pdn_filtering = ServiceId_sid_pdn_filtering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_sysagent
@@ -112,7 +112,7 @@ const sid_pdn_filtering: ServiceId = ServiceId_sid_pdn_filtering; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ServiceId_sid_sysagent: ServiceId = 47; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceId_sid_sysagent = 47 satisfies ServiceId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceId_sid_sysagent
@@ -120,7 +120,7 @@ const ServiceId_sid_sysagent: ServiceId = 47; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sid_sysagent: ServiceId = ServiceId_sid_sysagent; /* SHORT_NAMED_INTEGER_VALUE */
+const sid_sysagent = ServiceId_sid_sysagent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ServiceId = $._decodeInteger;
 export const _encode_ServiceId = $._encodeInteger;
 

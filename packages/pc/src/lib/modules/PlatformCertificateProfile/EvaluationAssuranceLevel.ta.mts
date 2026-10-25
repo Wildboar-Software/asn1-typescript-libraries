@@ -112,7 +112,7 @@ const EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level1: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level1; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level1 = EvaluationAssuranceLevel.level1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level1
@@ -124,7 +124,7 @@ const EvaluationAssuranceLevel_level1: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level1: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level1 = EvaluationAssuranceLevel.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationAssuranceLevel_level2
@@ -136,7 +136,7 @@ const level1: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level1; /* SHO
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level2: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level2; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level2 = EvaluationAssuranceLevel.level2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level2
@@ -148,7 +148,7 @@ const EvaluationAssuranceLevel_level2: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level2: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level2 = EvaluationAssuranceLevel.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationAssuranceLevel_level3
@@ -160,7 +160,7 @@ const level2: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level2; /* SHO
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level3: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level3; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level3 = EvaluationAssuranceLevel.level3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level3
@@ -172,7 +172,7 @@ const EvaluationAssuranceLevel_level3: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level3: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level3 = EvaluationAssuranceLevel.level3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationAssuranceLevel_level4
@@ -184,7 +184,7 @@ const level3: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level3; /* SHO
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level4: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level4; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level4 = EvaluationAssuranceLevel.level4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level4
@@ -196,7 +196,7 @@ const EvaluationAssuranceLevel_level4: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level4: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level4 = EvaluationAssuranceLevel.level4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationAssuranceLevel_level5
@@ -208,7 +208,7 @@ const level4: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level4; /* SHO
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level5: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level5; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level5 = EvaluationAssuranceLevel.level5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level5
@@ -220,7 +220,7 @@ const EvaluationAssuranceLevel_level5: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level5: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level5 = EvaluationAssuranceLevel.level5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationAssuranceLevel_level6
@@ -232,7 +232,7 @@ const level5: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level5; /* SHO
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level6: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level6; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level6 = EvaluationAssuranceLevel.level6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level6
@@ -244,7 +244,7 @@ const EvaluationAssuranceLevel_level6: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level6: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level6 = EvaluationAssuranceLevel.level6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationAssuranceLevel_level7
@@ -256,7 +256,7 @@ const level6: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level6; /* SHO
  * @type {number}
  */
 export
-const EvaluationAssuranceLevel_level7: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level7; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationAssuranceLevel_level7 = EvaluationAssuranceLevel.level7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary level7
@@ -268,7 +268,7 @@ const EvaluationAssuranceLevel_level7: EvaluationAssuranceLevel = EvaluationAssu
  * @type {number}
  */
 export
-const level7: EvaluationAssuranceLevel = EvaluationAssuranceLevel.level7; /* SHORT_NAMED_ENUMERATED_VALUE */
+const level7 = EvaluationAssuranceLevel.level7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_EvaluationAssuranceLevel(el: _Element): EvaluationAssuranceLevel {

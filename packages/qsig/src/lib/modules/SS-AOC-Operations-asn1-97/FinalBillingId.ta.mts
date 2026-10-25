@@ -118,7 +118,7 @@ const FinalBillingId = _enum_for_FinalBillingId;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_normalCharging: FinalBillingId = FinalBillingId.normalCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_normalCharging = FinalBillingId.normalCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalCharging
@@ -127,7 +127,7 @@ const FinalBillingId_normalCharging: FinalBillingId = FinalBillingId.normalCharg
  * @type {number}
  */
 export
-const normalCharging: FinalBillingId = FinalBillingId.normalCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalCharging = FinalBillingId.normalCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FinalBillingId_creditCardCharging
@@ -138,7 +138,7 @@ const normalCharging: FinalBillingId = FinalBillingId.normalCharging; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_creditCardCharging: FinalBillingId = FinalBillingId.creditCardCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_creditCardCharging = FinalBillingId.creditCardCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary creditCardCharging
@@ -147,7 +147,7 @@ const FinalBillingId_creditCardCharging: FinalBillingId = FinalBillingId.creditC
  * @type {number}
  */
 export
-const creditCardCharging: FinalBillingId = FinalBillingId.creditCardCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const creditCardCharging = FinalBillingId.creditCardCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FinalBillingId_callForwardingUnconditional
@@ -163,7 +163,7 @@ const creditCardCharging: FinalBillingId = FinalBillingId.creditCardCharging; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_callForwardingUnconditional: FinalBillingId = FinalBillingId.callForwardingUnconditional; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_callForwardingUnconditional = FinalBillingId.callForwardingUnconditional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingUnconditional
@@ -172,7 +172,7 @@ const FinalBillingId_callForwardingUnconditional: FinalBillingId = FinalBillingI
  * @type {number}
  */
 export
-const callForwardingUnconditional: FinalBillingId = FinalBillingId.callForwardingUnconditional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingUnconditional = FinalBillingId.callForwardingUnconditional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FinalBillingId_callForwardingBusy
@@ -187,7 +187,7 @@ const callForwardingUnconditional: FinalBillingId = FinalBillingId.callForwardin
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_callForwardingBusy: FinalBillingId = FinalBillingId.callForwardingBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_callForwardingBusy = FinalBillingId.callForwardingBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingBusy
@@ -196,7 +196,7 @@ const FinalBillingId_callForwardingBusy: FinalBillingId = FinalBillingId.callFor
  * @type {number}
  */
 export
-const callForwardingBusy: FinalBillingId = FinalBillingId.callForwardingBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingBusy = FinalBillingId.callForwardingBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FinalBillingId_callForwardingNoReply
@@ -211,7 +211,7 @@ const callForwardingBusy: FinalBillingId = FinalBillingId.callForwardingBusy; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_callForwardingNoReply: FinalBillingId = FinalBillingId.callForwardingNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_callForwardingNoReply = FinalBillingId.callForwardingNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingNoReply
@@ -220,7 +220,7 @@ const FinalBillingId_callForwardingNoReply: FinalBillingId = FinalBillingId.call
  * @type {number}
  */
 export
-const callForwardingNoReply: FinalBillingId = FinalBillingId.callForwardingNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingNoReply = FinalBillingId.callForwardingNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FinalBillingId_callDeflection
@@ -235,7 +235,7 @@ const callForwardingNoReply: FinalBillingId = FinalBillingId.callForwardingNoRep
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_callDeflection: FinalBillingId = FinalBillingId.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_callDeflection = FinalBillingId.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDeflection
@@ -244,7 +244,7 @@ const FinalBillingId_callDeflection: FinalBillingId = FinalBillingId.callDeflect
  * @type {number}
  */
 export
-const callDeflection: FinalBillingId = FinalBillingId.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDeflection = FinalBillingId.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FinalBillingId_callTransfer
@@ -259,7 +259,7 @@ const callDeflection: FinalBillingId = FinalBillingId.callDeflection; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const FinalBillingId_callTransfer: FinalBillingId = FinalBillingId.callTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const FinalBillingId_callTransfer = FinalBillingId.callTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callTransfer
@@ -268,7 +268,7 @@ const FinalBillingId_callTransfer: FinalBillingId = FinalBillingId.callTransfer;
  * @type {number}
  */
 export
-const callTransfer: FinalBillingId = FinalBillingId.callTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callTransfer = FinalBillingId.callTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_FinalBillingId: $.ASN1Decoder<FinalBillingId> = $._decodeEnumerated;

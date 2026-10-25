@@ -70,7 +70,7 @@ export const PhysicalForwardingProhibited = _enum_for_PhysicalForwardingProhibit
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingProhibited_physical_forwarding_allowed: PhysicalForwardingProhibited =
+export const PhysicalForwardingProhibited_physical_forwarding_allowed =
     PhysicalForwardingProhibited.physical_forwarding_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const PhysicalForwardingProhibited_physical_forwarding_allowed: PhysicalF
  * @constant
  * @type {number}
  */
-export const physical_forwarding_allowed: PhysicalForwardingProhibited =
+export const physical_forwarding_allowed =
     PhysicalForwardingProhibited.physical_forwarding_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const physical_forwarding_allowed: PhysicalForwardingProhibited =
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingProhibited_physical_forwarding_prohibited: PhysicalForwardingProhibited =
+export const PhysicalForwardingProhibited_physical_forwarding_prohibited =
     PhysicalForwardingProhibited.physical_forwarding_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const PhysicalForwardingProhibited_physical_forwarding_prohibited: Physic
  * @constant
  * @type {number}
  */
-export const physical_forwarding_prohibited: PhysicalForwardingProhibited =
+export const physical_forwarding_prohibited =
     PhysicalForwardingProhibited.physical_forwarding_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

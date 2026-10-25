@@ -85,7 +85,7 @@ const VersionManagementProblem = _enum_for_VersionManagementProblem;
  * @type {number}
  */
 export
-const VersionManagementProblem_inappropriate_object_class: VersionManagementProblem = VersionManagementProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionManagementProblem_inappropriate_object_class = VersionManagementProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -96,7 +96,7 @@ const VersionManagementProblem_inappropriate_object_class: VersionManagementProb
  * @type {number}
  */
 export
-const inappropriate_object_class: VersionManagementProblem = VersionManagementProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_object_class = VersionManagementProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VersionManagementProblem_belongs_to_another_conceptual_document
@@ -108,7 +108,7 @@ const inappropriate_object_class: VersionManagementProblem = VersionManagementPr
  * @type {number}
  */
 export
-const VersionManagementProblem_belongs_to_another_conceptual_document: VersionManagementProblem = VersionManagementProblem.belongs_to_another_conceptual_document; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionManagementProblem_belongs_to_another_conceptual_document = VersionManagementProblem.belongs_to_another_conceptual_document; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary belongs_to_another_conceptual_document
@@ -120,7 +120,7 @@ const VersionManagementProblem_belongs_to_another_conceptual_document: VersionMa
  * @type {number}
  */
 export
-const belongs_to_another_conceptual_document: VersionManagementProblem = VersionManagementProblem.belongs_to_another_conceptual_document; /* SHORT_NAMED_ENUMERATED_VALUE */
+const belongs_to_another_conceptual_document = VersionManagementProblem.belongs_to_another_conceptual_document; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_VersionManagementProblem(el: _Element): VersionManagementProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

@@ -45,7 +45,7 @@ type ParamValueList_deliveryControl = INTEGER;
  * @type {number}
  */
 export
-const ParamValueList_deliveryControl_none: ParamValueList_deliveryControl = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ParamValueList_deliveryControl_none = 0 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_none
@@ -56,7 +56,7 @@ const ParamValueList_deliveryControl_none: ParamValueList_deliveryControl = 0; /
  * @type {number}
  */
 export
-const none: ParamValueList_deliveryControl = ParamValueList_deliveryControl_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none = ParamValueList_deliveryControl_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_simple
@@ -67,7 +67,7 @@ const none: ParamValueList_deliveryControl = ParamValueList_deliveryControl_none
  * @type {number}
  */
 export
-const ParamValueList_deliveryControl_simple: ParamValueList_deliveryControl = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ParamValueList_deliveryControl_simple = 1 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_simple
@@ -78,7 +78,7 @@ const ParamValueList_deliveryControl_simple: ParamValueList_deliveryControl = 1;
  * @type {number}
  */
 export
-const simple: ParamValueList_deliveryControl = ParamValueList_deliveryControl_simple; /* SHORT_NAMED_INTEGER_VALUE */
+const simple = ParamValueList_deliveryControl_simple; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
@@ -90,7 +90,7 @@ const simple: ParamValueList_deliveryControl = ParamValueList_deliveryControl_si
  * @type {number}
  */
 export
-const ParamValueList_deliveryControl_quarantine: ParamValueList_deliveryControl = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ParamValueList_deliveryControl_quarantine = 2 satisfies ParamValueList_deliveryControl; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParamValueList_deliveryControl_quarantine
@@ -102,7 +102,7 @@ const ParamValueList_deliveryControl_quarantine: ParamValueList_deliveryControl 
  * @type {number}
  */
 export
-const quarantine: ParamValueList_deliveryControl = ParamValueList_deliveryControl_quarantine; /* SHORT_NAMED_INTEGER_VALUE */
+const quarantine = ParamValueList_deliveryControl_quarantine; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ParamValueList_deliveryControl = $._decodeInteger;
 export const _encode_ParamValueList_deliveryControl = $._encodeInteger;
 

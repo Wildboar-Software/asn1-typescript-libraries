@@ -84,7 +84,7 @@ const PTCFailureCode = _enum_for_PTCFailureCode;
  * @type {number}
  */
 export
-const PTCFailureCode_sessionCannotBeEstablished: PTCFailureCode = PTCFailureCode.sessionCannotBeEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFailureCode_sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionCannotBeEstablished
@@ -92,7 +92,7 @@ const PTCFailureCode_sessionCannotBeEstablished: PTCFailureCode = PTCFailureCode
  * @type {number}
  */
 export
-const sessionCannotBeEstablished: PTCFailureCode = PTCFailureCode.sessionCannotBeEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionCannotBeEstablished = PTCFailureCode.sessionCannotBeEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCFailureCode_sessionCannotBeModified
@@ -100,7 +100,7 @@ const sessionCannotBeEstablished: PTCFailureCode = PTCFailureCode.sessionCannotB
  * @type {number}
  */
 export
-const PTCFailureCode_sessionCannotBeModified: PTCFailureCode = PTCFailureCode.sessionCannotBeModified; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCFailureCode_sessionCannotBeModified = PTCFailureCode.sessionCannotBeModified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionCannotBeModified
@@ -108,7 +108,7 @@ const PTCFailureCode_sessionCannotBeModified: PTCFailureCode = PTCFailureCode.se
  * @type {number}
  */
 export
-const sessionCannotBeModified: PTCFailureCode = PTCFailureCode.sessionCannotBeModified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionCannotBeModified = PTCFailureCode.sessionCannotBeModified; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCFailureCode: $.ASN1Decoder<PTCFailureCode> = $._decodeEnumerated;
 export const _encode_PTCFailureCode: $.ASN1Encoder<PTCFailureCode> = $._encodeEnumerated;
 

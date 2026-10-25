@@ -139,7 +139,7 @@ export const EnforcementAction = _enum_for_EnforcementAction;
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithResponse: EnforcementAction =
+export const EnforcementAction_denyWithResponse =
     EnforcementAction.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const EnforcementAction_denyWithResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const denyWithResponse: EnforcementAction =
+export const denyWithResponse =
     EnforcementAction.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const denyWithResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithoutResponse: EnforcementAction =
+export const EnforcementAction_denyWithoutResponse =
     EnforcementAction.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -177,7 +177,7 @@ export const EnforcementAction_denyWithoutResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const denyWithoutResponse: EnforcementAction =
+export const denyWithoutResponse =
     EnforcementAction.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -190,7 +190,7 @@ export const denyWithoutResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_abortAssociation: EnforcementAction =
+export const EnforcementAction_abortAssociation =
     EnforcementAction.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -202,7 +202,7 @@ export const EnforcementAction_abortAssociation: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const abortAssociation: EnforcementAction =
+export const abortAssociation =
     EnforcementAction.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -216,7 +216,7 @@ export const abortAssociation: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithFalseResponse: EnforcementAction =
+export const EnforcementAction_denyWithFalseResponse =
     EnforcementAction.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -229,7 +229,7 @@ export const EnforcementAction_denyWithFalseResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const denyWithFalseResponse: EnforcementAction =
+export const denyWithFalseResponse =
     EnforcementAction.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -243,7 +243,7 @@ export const denyWithFalseResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_allow: EnforcementAction =
+export const EnforcementAction_allow =
     EnforcementAction.allow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -255,7 +255,7 @@ export const EnforcementAction_allow: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const allow: EnforcementAction =
+export const allow =
     EnforcementAction.allow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

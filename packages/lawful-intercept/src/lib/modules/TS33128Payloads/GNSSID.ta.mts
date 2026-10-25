@@ -176,7 +176,7 @@ const GNSSID = _enum_for_GNSSID;
  * @type {number}
  */
 export
-const GNSSID_gPS: GNSSID = GNSSID.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_gPS = GNSSID.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPS
@@ -190,7 +190,7 @@ const GNSSID_gPS: GNSSID = GNSSID.gPS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gPS: GNSSID = GNSSID.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPS = GNSSID.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_galileo
@@ -204,7 +204,7 @@ const gPS: GNSSID = GNSSID.gPS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GNSSID_galileo: GNSSID = GNSSID.galileo; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_galileo = GNSSID.galileo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary galileo
@@ -218,7 +218,7 @@ const GNSSID_galileo: GNSSID = GNSSID.galileo; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const galileo: GNSSID = GNSSID.galileo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const galileo = GNSSID.galileo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_sBAS
@@ -232,7 +232,7 @@ const galileo: GNSSID = GNSSID.galileo; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GNSSID_sBAS: GNSSID = GNSSID.sBAS; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_sBAS = GNSSID.sBAS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sBAS
@@ -246,7 +246,7 @@ const GNSSID_sBAS: GNSSID = GNSSID.sBAS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sBAS: GNSSID = GNSSID.sBAS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sBAS = GNSSID.sBAS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_modernizedGPS
@@ -260,7 +260,7 @@ const sBAS: GNSSID = GNSSID.sBAS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GNSSID_modernizedGPS: GNSSID = GNSSID.modernizedGPS; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_modernizedGPS = GNSSID.modernizedGPS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modernizedGPS
@@ -274,7 +274,7 @@ const GNSSID_modernizedGPS: GNSSID = GNSSID.modernizedGPS; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const modernizedGPS: GNSSID = GNSSID.modernizedGPS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modernizedGPS = GNSSID.modernizedGPS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_qZSS
@@ -288,7 +288,7 @@ const modernizedGPS: GNSSID = GNSSID.modernizedGPS; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const GNSSID_qZSS: GNSSID = GNSSID.qZSS; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_qZSS = GNSSID.qZSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary qZSS
@@ -302,7 +302,7 @@ const GNSSID_qZSS: GNSSID = GNSSID.qZSS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const qZSS: GNSSID = GNSSID.qZSS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const qZSS = GNSSID.qZSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_gLONASS
@@ -316,7 +316,7 @@ const qZSS: GNSSID = GNSSID.qZSS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GNSSID_gLONASS: GNSSID = GNSSID.gLONASS; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_gLONASS = GNSSID.gLONASS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gLONASS
@@ -330,7 +330,7 @@ const GNSSID_gLONASS: GNSSID = GNSSID.gLONASS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const gLONASS: GNSSID = GNSSID.gLONASS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gLONASS = GNSSID.gLONASS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_bDS
@@ -344,7 +344,7 @@ const gLONASS: GNSSID = GNSSID.gLONASS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GNSSID_bDS: GNSSID = GNSSID.bDS; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_bDS = GNSSID.bDS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bDS
@@ -358,7 +358,7 @@ const GNSSID_bDS: GNSSID = GNSSID.bDS; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const bDS: GNSSID = GNSSID.bDS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bDS = GNSSID.bDS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GNSSID_nAVIC
@@ -372,7 +372,7 @@ const bDS: GNSSID = GNSSID.bDS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GNSSID_nAVIC: GNSSID = GNSSID.nAVIC; /* LONG_NAMED_ENUMERATED_VALUE */
+const GNSSID_nAVIC = GNSSID.nAVIC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nAVIC
@@ -386,7 +386,7 @@ const GNSSID_nAVIC: GNSSID = GNSSID.nAVIC; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const nAVIC: GNSSID = GNSSID.nAVIC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nAVIC = GNSSID.nAVIC; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_GNSSID: $.ASN1Decoder<GNSSID> = $._decodeEnumerated;
 export const _encode_GNSSID: $.ASN1Encoder<GNSSID> = $._encodeEnumerated;
 

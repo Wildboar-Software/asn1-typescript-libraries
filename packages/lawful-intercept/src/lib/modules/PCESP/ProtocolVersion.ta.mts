@@ -82,7 +82,7 @@ type ProtocolVersion = _enum_for_ProtocolVersion | ENUMERATED;
  * @type {number}
  */
 export
-const ProtocolVersion_v3: ProtocolVersion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolVersion_v3 = _enum_for_ProtocolVersion.v3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v3
@@ -96,7 +96,7 @@ const ProtocolVersion_v3: ProtocolVersion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v3: ProtocolVersion = ProtocolVersion_v3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v3 = ProtocolVersion_v3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolVersion_v4
@@ -111,7 +111,7 @@ const v3: ProtocolVersion = ProtocolVersion_v3; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ProtocolVersion_v4: ProtocolVersion = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolVersion_v4 = _enum_for_ProtocolVersion.v4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v4
@@ -126,7 +126,7 @@ const ProtocolVersion_v4: ProtocolVersion = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const v4: ProtocolVersion = ProtocolVersion_v4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v4 = ProtocolVersion_v4; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ProtocolVersion: $.ASN1Decoder<ProtocolVersion> = $._decodeEnumerated;
 export const _encode_ProtocolVersion: $.ASN1Encoder<ProtocolVersion> = $._encodeEnumerated;
 

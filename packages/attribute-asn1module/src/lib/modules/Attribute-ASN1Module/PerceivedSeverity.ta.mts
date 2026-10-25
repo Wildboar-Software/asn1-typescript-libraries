@@ -103,7 +103,7 @@ const PerceivedSeverity = _enum_for_PerceivedSeverity;
  * @type {number}
  */
 export
-const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_indeterminate = PerceivedSeverity.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -116,7 +116,7 @@ const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.ind
  * @type {number}
  */
 export
-const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate = PerceivedSeverity.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_critical
@@ -129,7 +129,7 @@ const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHO
  * @type {number}
  */
 export
-const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_critical = PerceivedSeverity.critical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary critical
@@ -142,7 +142,7 @@ const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical
  * @type {number}
  */
 export
-const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
+const critical = PerceivedSeverity.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_major
@@ -155,7 +155,7 @@ const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_major = PerceivedSeverity.major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary major
@@ -168,7 +168,7 @@ const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* L
  * @type {number}
  */
 export
-const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERATED_VALUE */
+const major = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_minor
@@ -182,7 +182,7 @@ const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_minor = PerceivedSeverity.minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minor
@@ -196,7 +196,7 @@ const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* L
  * @type {number}
  */
 export
-const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minor = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_warning
@@ -210,7 +210,7 @@ const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_warning = PerceivedSeverity.warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary warning
@@ -224,7 +224,7 @@ const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; 
  * @type {number}
  */
 export
-const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
+const warning = PerceivedSeverity.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_cleared
@@ -237,7 +237,7 @@ const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_cleared = PerceivedSeverity.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cleared
@@ -250,7 +250,7 @@ const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; 
  * @type {number}
  */
 export
-const cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cleared = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_PerceivedSeverity(el: _Element): PerceivedSeverity {

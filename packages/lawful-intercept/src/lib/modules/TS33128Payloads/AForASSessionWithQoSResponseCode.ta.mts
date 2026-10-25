@@ -121,7 +121,7 @@ const AForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseC
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_oK200: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.oK200; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_oK200 = AForASSessionWithQoSResponseCode.oK200; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oK200
@@ -129,7 +129,7 @@ const AForASSessionWithQoSResponseCode_oK200: AForASSessionWithQoSResponseCode =
  * @type {number}
  */
 export
-const oK200: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.oK200; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oK200 = AForASSessionWithQoSResponseCode.oK200; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_created201
@@ -137,7 +137,7 @@ const oK200: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_created201: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.created201; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_created201 = AForASSessionWithQoSResponseCode.created201; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary created201
@@ -145,7 +145,7 @@ const AForASSessionWithQoSResponseCode_created201: AForASSessionWithQoSResponseC
  * @type {number}
  */
 export
-const created201: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.created201; /* SHORT_NAMED_ENUMERATED_VALUE */
+const created201 = AForASSessionWithQoSResponseCode.created201; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_noContent204
@@ -153,7 +153,7 @@ const created201: AForASSessionWithQoSResponseCode = AForASSessionWithQoSRespons
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_noContent204: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.noContent204; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_noContent204 = AForASSessionWithQoSResponseCode.noContent204; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noContent204
@@ -161,7 +161,7 @@ const AForASSessionWithQoSResponseCode_noContent204: AForASSessionWithQoSRespons
  * @type {number}
  */
 export
-const noContent204: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.noContent204; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noContent204 = AForASSessionWithQoSResponseCode.noContent204; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_temporaryRedirect307
@@ -169,7 +169,7 @@ const noContent204: AForASSessionWithQoSResponseCode = AForASSessionWithQoSRespo
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_temporaryRedirect307: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.temporaryRedirect307; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_temporaryRedirect307 = AForASSessionWithQoSResponseCode.temporaryRedirect307; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary temporaryRedirect307
@@ -177,7 +177,7 @@ const AForASSessionWithQoSResponseCode_temporaryRedirect307: AForASSessionWithQo
  * @type {number}
  */
 export
-const temporaryRedirect307: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.temporaryRedirect307; /* SHORT_NAMED_ENUMERATED_VALUE */
+const temporaryRedirect307 = AForASSessionWithQoSResponseCode.temporaryRedirect307; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_permanentRedirect308
@@ -185,7 +185,7 @@ const temporaryRedirect307: AForASSessionWithQoSResponseCode = AForASSessionWith
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_permanentRedirect308: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.permanentRedirect308; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_permanentRedirect308 = AForASSessionWithQoSResponseCode.permanentRedirect308; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary permanentRedirect308
@@ -193,7 +193,7 @@ const AForASSessionWithQoSResponseCode_permanentRedirect308: AForASSessionWithQo
  * @type {number}
  */
 export
-const permanentRedirect308: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.permanentRedirect308; /* SHORT_NAMED_ENUMERATED_VALUE */
+const permanentRedirect308 = AForASSessionWithQoSResponseCode.permanentRedirect308; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_badRequest400
@@ -201,7 +201,7 @@ const permanentRedirect308: AForASSessionWithQoSResponseCode = AForASSessionWith
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_badRequest400: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.badRequest400; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_badRequest400 = AForASSessionWithQoSResponseCode.badRequest400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badRequest400
@@ -209,7 +209,7 @@ const AForASSessionWithQoSResponseCode_badRequest400: AForASSessionWithQoSRespon
  * @type {number}
  */
 export
-const badRequest400: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.badRequest400; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badRequest400 = AForASSessionWithQoSResponseCode.badRequest400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_unauthorized401
@@ -217,7 +217,7 @@ const badRequest400: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResp
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_unauthorized401: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.unauthorized401; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_unauthorized401 = AForASSessionWithQoSResponseCode.unauthorized401; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorized401
@@ -225,7 +225,7 @@ const AForASSessionWithQoSResponseCode_unauthorized401: AForASSessionWithQoSResp
  * @type {number}
  */
 export
-const unauthorized401: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.unauthorized401; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorized401 = AForASSessionWithQoSResponseCode.unauthorized401; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_forbidden403
@@ -233,7 +233,7 @@ const unauthorized401: AForASSessionWithQoSResponseCode = AForASSessionWithQoSRe
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_forbidden403: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.forbidden403; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_forbidden403 = AForASSessionWithQoSResponseCode.forbidden403; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forbidden403
@@ -241,7 +241,7 @@ const AForASSessionWithQoSResponseCode_forbidden403: AForASSessionWithQoSRespons
  * @type {number}
  */
 export
-const forbidden403: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.forbidden403; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forbidden403 = AForASSessionWithQoSResponseCode.forbidden403; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_notFound404
@@ -249,7 +249,7 @@ const forbidden403: AForASSessionWithQoSResponseCode = AForASSessionWithQoSRespo
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_notFound404: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.notFound404; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_notFound404 = AForASSessionWithQoSResponseCode.notFound404; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notFound404
@@ -257,7 +257,7 @@ const AForASSessionWithQoSResponseCode_notFound404: AForASSessionWithQoSResponse
  * @type {number}
  */
 export
-const notFound404: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.notFound404; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notFound404 = AForASSessionWithQoSResponseCode.notFound404; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_notAcceptable406
@@ -265,7 +265,7 @@ const notFound404: AForASSessionWithQoSResponseCode = AForASSessionWithQoSRespon
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_notAcceptable406: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.notAcceptable406; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_notAcceptable406 = AForASSessionWithQoSResponseCode.notAcceptable406; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAcceptable406
@@ -273,7 +273,7 @@ const AForASSessionWithQoSResponseCode_notAcceptable406: AForASSessionWithQoSRes
  * @type {number}
  */
 export
-const notAcceptable406: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.notAcceptable406; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAcceptable406 = AForASSessionWithQoSResponseCode.notAcceptable406; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_lengthRequired411
@@ -281,7 +281,7 @@ const notAcceptable406: AForASSessionWithQoSResponseCode = AForASSessionWithQoSR
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_lengthRequired411: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.lengthRequired411; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_lengthRequired411 = AForASSessionWithQoSResponseCode.lengthRequired411; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lengthRequired411
@@ -289,7 +289,7 @@ const AForASSessionWithQoSResponseCode_lengthRequired411: AForASSessionWithQoSRe
  * @type {number}
  */
 export
-const lengthRequired411: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.lengthRequired411; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lengthRequired411 = AForASSessionWithQoSResponseCode.lengthRequired411; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_unsupportedMediaType415
@@ -297,7 +297,7 @@ const lengthRequired411: AForASSessionWithQoSResponseCode = AForASSessionWithQoS
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_unsupportedMediaType415: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.unsupportedMediaType415; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_unsupportedMediaType415 = AForASSessionWithQoSResponseCode.unsupportedMediaType415; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedMediaType415
@@ -305,7 +305,7 @@ const AForASSessionWithQoSResponseCode_unsupportedMediaType415: AForASSessionWit
  * @type {number}
  */
 export
-const unsupportedMediaType415: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.unsupportedMediaType415; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupportedMediaType415 = AForASSessionWithQoSResponseCode.unsupportedMediaType415; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_tooManyRequests429
@@ -313,7 +313,7 @@ const unsupportedMediaType415: AForASSessionWithQoSResponseCode = AForASSessionW
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_tooManyRequests429: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.tooManyRequests429; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_tooManyRequests429 = AForASSessionWithQoSResponseCode.tooManyRequests429; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooManyRequests429
@@ -321,7 +321,7 @@ const AForASSessionWithQoSResponseCode_tooManyRequests429: AForASSessionWithQoSR
  * @type {number}
  */
 export
-const tooManyRequests429: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.tooManyRequests429; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tooManyRequests429 = AForASSessionWithQoSResponseCode.tooManyRequests429; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_internalServerError500
@@ -329,7 +329,7 @@ const tooManyRequests429: AForASSessionWithQoSResponseCode = AForASSessionWithQo
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_internalServerError500: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.internalServerError500; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_internalServerError500 = AForASSessionWithQoSResponseCode.internalServerError500; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalServerError500
@@ -337,7 +337,7 @@ const AForASSessionWithQoSResponseCode_internalServerError500: AForASSessionWith
  * @type {number}
  */
 export
-const internalServerError500: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.internalServerError500; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internalServerError500 = AForASSessionWithQoSResponseCode.internalServerError500; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AForASSessionWithQoSResponseCode_serviceUnavailable503
@@ -345,7 +345,7 @@ const internalServerError500: AForASSessionWithQoSResponseCode = AForASSessionWi
  * @type {number}
  */
 export
-const AForASSessionWithQoSResponseCode_serviceUnavailable503: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.serviceUnavailable503; /* LONG_NAMED_ENUMERATED_VALUE */
+const AForASSessionWithQoSResponseCode_serviceUnavailable503 = AForASSessionWithQoSResponseCode.serviceUnavailable503; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnavailable503
@@ -353,7 +353,7 @@ const AForASSessionWithQoSResponseCode_serviceUnavailable503: AForASSessionWithQ
  * @type {number}
  */
 export
-const serviceUnavailable503: AForASSessionWithQoSResponseCode = AForASSessionWithQoSResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceUnavailable503 = AForASSessionWithQoSResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AForASSessionWithQoSResponseCode: $.ASN1Decoder<AForASSessionWithQoSResponseCode> = $._decodeEnumerated;
 export const _encode_AForASSessionWithQoSResponseCode: $.ASN1Encoder<AForASSessionWithQoSResponseCode> = $._encodeEnumerated;
 

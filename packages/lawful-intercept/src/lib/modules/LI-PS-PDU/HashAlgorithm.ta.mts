@@ -101,7 +101,7 @@ type HashAlgorithm = _enum_for_HashAlgorithm | ENUMERATED;
  * @type {number}
  */
 export
-const HashAlgorithm_sHA_1: HashAlgorithm = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const HashAlgorithm_sHA_1 = _enum_for_HashAlgorithm.sHA_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sHA_1
@@ -118,7 +118,7 @@ const HashAlgorithm_sHA_1: HashAlgorithm = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sHA_1: HashAlgorithm = HashAlgorithm_sHA_1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sHA_1 = HashAlgorithm_sHA_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HashAlgorithm_sHA_256
@@ -134,7 +134,7 @@ const sHA_1: HashAlgorithm = HashAlgorithm_sHA_1; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const HashAlgorithm_sHA_256: HashAlgorithm = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const HashAlgorithm_sHA_256 = _enum_for_HashAlgorithm.sHA_256; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sHA_256
@@ -150,7 +150,7 @@ const HashAlgorithm_sHA_256: HashAlgorithm = 2; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const sHA_256: HashAlgorithm = HashAlgorithm_sHA_256; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sHA_256 = HashAlgorithm_sHA_256; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HashAlgorithm_sHA_384
@@ -166,7 +166,7 @@ const sHA_256: HashAlgorithm = HashAlgorithm_sHA_256; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const HashAlgorithm_sHA_384: HashAlgorithm = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const HashAlgorithm_sHA_384 = _enum_for_HashAlgorithm.sHA_384; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sHA_384
@@ -182,7 +182,7 @@ const HashAlgorithm_sHA_384: HashAlgorithm = 3; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const sHA_384: HashAlgorithm = HashAlgorithm_sHA_384; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sHA_384 = HashAlgorithm_sHA_384; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary HashAlgorithm_sHA_512
@@ -198,7 +198,7 @@ const sHA_384: HashAlgorithm = HashAlgorithm_sHA_384; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const HashAlgorithm_sHA_512: HashAlgorithm = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const HashAlgorithm_sHA_512 = _enum_for_HashAlgorithm.sHA_512; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sHA_512
@@ -214,7 +214,7 @@ const HashAlgorithm_sHA_512: HashAlgorithm = 4; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const sHA_512: HashAlgorithm = HashAlgorithm_sHA_512; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sHA_512 = HashAlgorithm_sHA_512; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_HashAlgorithm: $.ASN1Decoder<HashAlgorithm> = $._decodeEnumerated;
 export const _encode_HashAlgorithm: $.ASN1Encoder<HashAlgorithm> = $._encodeEnumerated;
 

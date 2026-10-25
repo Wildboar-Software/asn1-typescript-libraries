@@ -39,7 +39,7 @@ type RequestedUpdateMode = INTEGER;
  * @type {number}
  */
 export
-const RequestedUpdateMode_continuous: RequestedUpdateMode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RequestedUpdateMode_continuous = 0 satisfies RequestedUpdateMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedUpdateMode_continuous
@@ -51,7 +51,7 @@ const RequestedUpdateMode_continuous: RequestedUpdateMode = 0; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const continuous: RequestedUpdateMode = RequestedUpdateMode_continuous; /* SHORT_NAMED_INTEGER_VALUE */
+const continuous = RequestedUpdateMode_continuous; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedUpdateMode_changeBased
@@ -66,7 +66,7 @@ const continuous: RequestedUpdateMode = RequestedUpdateMode_continuous; /* SHORT
  * @type {number}
  */
 export
-const RequestedUpdateMode_changeBased: RequestedUpdateMode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RequestedUpdateMode_changeBased = 1 satisfies RequestedUpdateMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedUpdateMode_changeBased
@@ -78,7 +78,7 @@ const RequestedUpdateMode_changeBased: RequestedUpdateMode = 1; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const changeBased: RequestedUpdateMode = RequestedUpdateMode_changeBased; /* SHORT_NAMED_INTEGER_VALUE */
+const changeBased = RequestedUpdateMode_changeBased; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RequestedUpdateMode: $.ASN1Decoder<RequestedUpdateMode> = $._decodeInteger;
 export const _encode_RequestedUpdateMode: $.ASN1Encoder<RequestedUpdateMode> = $._encodeInteger;
 

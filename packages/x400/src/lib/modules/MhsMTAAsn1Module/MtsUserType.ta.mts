@@ -31,42 +31,42 @@ export type MtsUserType = INTEGER;
  * @constant
  * @type {number}
  */
-export const MtsUserType_ms: MtsUserType = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const MtsUserType_ms = 1 satisfies MtsUserType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MtsUserType_ms
  * @constant
  * @type {number}
  */
-export const ms: MtsUserType = MtsUserType_ms; /* SHORT_NAMED_INTEGER_VALUE */
+export const ms = MtsUserType_ms; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MtsUserType_ua
  * @constant
  * @type {number}
  */
-export const MtsUserType_ua: MtsUserType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const MtsUserType_ua = 2 satisfies MtsUserType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MtsUserType_ua
  * @constant
  * @type {number}
  */
-export const ua: MtsUserType = MtsUserType_ua; /* SHORT_NAMED_INTEGER_VALUE */
+export const ua = MtsUserType_ua; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MtsUserType_au
  * @constant
  * @type {number}
  */
-export const MtsUserType_au: MtsUserType = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const MtsUserType_au = 3 satisfies MtsUserType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MtsUserType_au
  * @constant
  * @type {number}
  */
-export const au: MtsUserType = MtsUserType_au; /* SHORT_NAMED_INTEGER_VALUE */
+export const au = MtsUserType_au; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_MtsUserType = $._decodeInteger;

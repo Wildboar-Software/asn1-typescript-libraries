@@ -78,7 +78,7 @@ const PDN_GW_AllocationType = _enum_for_PDN_GW_AllocationType;
  * @type {number}
  */
 export
-const PDN_GW_AllocationType_static_: PDN_GW_AllocationType = PDN_GW_AllocationType.static_; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_GW_AllocationType_static_ = PDN_GW_AllocationType.static_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary static_
@@ -86,7 +86,7 @@ const PDN_GW_AllocationType_static_: PDN_GW_AllocationType = PDN_GW_AllocationTy
  * @type {number}
  */
 export
-const static_: PDN_GW_AllocationType = PDN_GW_AllocationType.static_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const static_ = PDN_GW_AllocationType.static_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDN_GW_AllocationType_dynamic
@@ -94,7 +94,7 @@ const static_: PDN_GW_AllocationType = PDN_GW_AllocationType.static_; /* SHORT_N
  * @type {number}
  */
 export
-const PDN_GW_AllocationType_dynamic: PDN_GW_AllocationType = PDN_GW_AllocationType.dynamic; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_GW_AllocationType_dynamic = PDN_GW_AllocationType.dynamic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic
@@ -102,7 +102,7 @@ const PDN_GW_AllocationType_dynamic: PDN_GW_AllocationType = PDN_GW_AllocationTy
  * @type {number}
  */
 export
-const dynamic: PDN_GW_AllocationType = PDN_GW_AllocationType.dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dynamic = PDN_GW_AllocationType.dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PDN_GW_AllocationType

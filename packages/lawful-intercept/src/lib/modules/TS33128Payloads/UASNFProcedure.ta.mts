@@ -155,7 +155,7 @@ const UASNFProcedure = _enum_for_UASNFProcedure;
  * @type {number}
  */
 export
-const UASNFProcedure_configurationCreate: UASNFProcedure = UASNFProcedure.configurationCreate; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_configurationCreate = UASNFProcedure.configurationCreate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary configurationCreate
@@ -170,7 +170,7 @@ const UASNFProcedure_configurationCreate: UASNFProcedure = UASNFProcedure.config
  * @type {number}
  */
 export
-const configurationCreate: UASNFProcedure = UASNFProcedure.configurationCreate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const configurationCreate = UASNFProcedure.configurationCreate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UASNFProcedure_configurationRetrieve
@@ -185,7 +185,7 @@ const configurationCreate: UASNFProcedure = UASNFProcedure.configurationCreate; 
  * @type {number}
  */
 export
-const UASNFProcedure_configurationRetrieve: UASNFProcedure = UASNFProcedure.configurationRetrieve; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_configurationRetrieve = UASNFProcedure.configurationRetrieve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary configurationRetrieve
@@ -200,7 +200,7 @@ const UASNFProcedure_configurationRetrieve: UASNFProcedure = UASNFProcedure.conf
  * @type {number}
  */
 export
-const configurationRetrieve: UASNFProcedure = UASNFProcedure.configurationRetrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const configurationRetrieve = UASNFProcedure.configurationRetrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UASNFProcedure_configurationUpdate
@@ -215,7 +215,7 @@ const configurationRetrieve: UASNFProcedure = UASNFProcedure.configurationRetrie
  * @type {number}
  */
 export
-const UASNFProcedure_configurationUpdate: UASNFProcedure = UASNFProcedure.configurationUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_configurationUpdate = UASNFProcedure.configurationUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary configurationUpdate
@@ -230,7 +230,7 @@ const UASNFProcedure_configurationUpdate: UASNFProcedure = UASNFProcedure.config
  * @type {number}
  */
 export
-const configurationUpdate: UASNFProcedure = UASNFProcedure.configurationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const configurationUpdate = UASNFProcedure.configurationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UASNFProcedure_configurationModify
@@ -245,7 +245,7 @@ const configurationUpdate: UASNFProcedure = UASNFProcedure.configurationUpdate; 
  * @type {number}
  */
 export
-const UASNFProcedure_configurationModify: UASNFProcedure = UASNFProcedure.configurationModify; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_configurationModify = UASNFProcedure.configurationModify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary configurationModify
@@ -260,7 +260,7 @@ const UASNFProcedure_configurationModify: UASNFProcedure = UASNFProcedure.config
  * @type {number}
  */
 export
-const configurationModify: UASNFProcedure = UASNFProcedure.configurationModify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const configurationModify = UASNFProcedure.configurationModify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UASNFProcedure_configurationDelete
@@ -275,7 +275,7 @@ const configurationModify: UASNFProcedure = UASNFProcedure.configurationModify; 
  * @type {number}
  */
 export
-const UASNFProcedure_configurationDelete: UASNFProcedure = UASNFProcedure.configurationDelete; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_configurationDelete = UASNFProcedure.configurationDelete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary configurationDelete
@@ -290,7 +290,7 @@ const UASNFProcedure_configurationDelete: UASNFProcedure = UASNFProcedure.config
  * @type {number}
  */
 export
-const configurationDelete: UASNFProcedure = UASNFProcedure.configurationDelete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const configurationDelete = UASNFProcedure.configurationDelete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UASNFProcedure_authenticationAuthorize
@@ -307,7 +307,7 @@ const configurationDelete: UASNFProcedure = UASNFProcedure.configurationDelete; 
  * @type {number}
  */
 export
-const UASNFProcedure_authenticationAuthorize: UASNFProcedure = UASNFProcedure.authenticationAuthorize; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_authenticationAuthorize = UASNFProcedure.authenticationAuthorize; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationAuthorize
@@ -324,7 +324,7 @@ const UASNFProcedure_authenticationAuthorize: UASNFProcedure = UASNFProcedure.au
  * @type {number}
  */
 export
-const authenticationAuthorize: UASNFProcedure = UASNFProcedure.authenticationAuthorize; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationAuthorize = UASNFProcedure.authenticationAuthorize; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UASNFProcedure_authenticationNotification
@@ -340,7 +340,7 @@ const authenticationAuthorize: UASNFProcedure = UASNFProcedure.authenticationAut
  * @type {number}
  */
 export
-const UASNFProcedure_authenticationNotification: UASNFProcedure = UASNFProcedure.authenticationNotification; /* LONG_NAMED_ENUMERATED_VALUE */
+const UASNFProcedure_authenticationNotification = UASNFProcedure.authenticationNotification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationNotification
@@ -356,7 +356,7 @@ const UASNFProcedure_authenticationNotification: UASNFProcedure = UASNFProcedure
  * @type {number}
  */
 export
-const authenticationNotification: UASNFProcedure = UASNFProcedure.authenticationNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationNotification = UASNFProcedure.authenticationNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UASNFProcedure: $.ASN1Decoder<UASNFProcedure> = $._decodeEnumerated;
 export const _encode_UASNFProcedure: $.ASN1Encoder<UASNFProcedure> = $._encodeEnumerated;
 

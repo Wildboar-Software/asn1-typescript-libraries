@@ -112,7 +112,7 @@ const ParticipatingType = _enum_for_ParticipatingType;
  * @type {number}
  */
 export
-const ParticipatingType_normal: ParticipatingType = ParticipatingType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipatingType_normal = ParticipatingType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -120,7 +120,7 @@ const ParticipatingType_normal: ParticipatingType = ParticipatingType.normal; /*
  * @type {number}
  */
 export
-const normal: ParticipatingType = ParticipatingType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal = ParticipatingType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipatingType_nW_PoC_Box
@@ -128,7 +128,7 @@ const normal: ParticipatingType = ParticipatingType.normal; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ParticipatingType_nW_PoC_Box: ParticipatingType = ParticipatingType.nW_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipatingType_nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nW_PoC_Box
@@ -136,7 +136,7 @@ const ParticipatingType_nW_PoC_Box: ParticipatingType = ParticipatingType.nW_PoC
  * @type {number}
  */
 export
-const nW_PoC_Box: ParticipatingType = ParticipatingType.nW_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipatingType_uE_PoC_Box
@@ -144,7 +144,7 @@ const nW_PoC_Box: ParticipatingType = ParticipatingType.nW_PoC_Box; /* SHORT_NAM
  * @type {number}
  */
 export
-const ParticipatingType_uE_PoC_Box: ParticipatingType = ParticipatingType.uE_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipatingType_uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uE_PoC_Box
@@ -152,7 +152,7 @@ const ParticipatingType_uE_PoC_Box: ParticipatingType = ParticipatingType.uE_PoC
  * @type {number}
  */
 export
-const uE_PoC_Box: ParticipatingType = ParticipatingType.uE_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ParticipatingType: $.ASN1Decoder<ParticipatingType> = $._decodeEnumerated;

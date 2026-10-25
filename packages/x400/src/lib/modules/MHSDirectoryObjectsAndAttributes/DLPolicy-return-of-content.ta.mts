@@ -64,7 +64,7 @@ export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_unchanged: DLPolicy_return_of_content =
+export const DLPolicy_return_of_content_unchanged =
     DLPolicy_return_of_content.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_return_of_content_unchanged: DLPolicy_return_of_content =
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_return_of_content =
+export const unchanged =
     DLPolicy_return_of_content.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_return_of_content =
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_content_return_not_requested: DLPolicy_return_of_content =
+export const DLPolicy_return_of_content_content_return_not_requested =
     DLPolicy_return_of_content.content_return_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_return_of_content_content_return_not_requested: DLPolicy_r
  * @constant
  * @type {number}
  */
-export const content_return_not_requested: DLPolicy_return_of_content =
+export const content_return_not_requested =
     DLPolicy_return_of_content.content_return_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const content_return_not_requested: DLPolicy_return_of_content =
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_content_return_requested: DLPolicy_return_of_content =
+export const DLPolicy_return_of_content_content_return_requested =
     DLPolicy_return_of_content.content_return_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_return_of_content_content_return_requested: DLPolicy_retur
  * @constant
  * @type {number}
  */
-export const content_return_requested: DLPolicy_return_of_content =
+export const content_return_requested =
     DLPolicy_return_of_content.content_return_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

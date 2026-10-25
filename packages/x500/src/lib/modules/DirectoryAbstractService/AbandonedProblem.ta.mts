@@ -67,7 +67,7 @@ export const AbandonedProblem = _enum_for_AbandonedProblem;
  * @constant
  * @type {number}
  */
-export const AbandonedProblem_pagingAbandoned: AbandonedProblem =
+export const AbandonedProblem_pagingAbandoned =
     AbandonedProblem.pagingAbandoned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const AbandonedProblem_pagingAbandoned: AbandonedProblem =
  * @constant
  * @type {number}
  */
-export const pagingAbandoned: AbandonedProblem =
+export const pagingAbandoned =
     AbandonedProblem.pagingAbandoned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

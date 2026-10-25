@@ -73,7 +73,7 @@ export const ControlResult = _enum_for_ControlResult;
  * @constant
  * @type {number}
  */
-export const ControlResult_complete: ControlResult =
+export const ControlResult_complete =
     ControlResult.complete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -82,7 +82,7 @@ export const ControlResult_complete: ControlResult =
  * @constant
  * @type {number}
  */
-export const complete: ControlResult =
+export const complete =
     ControlResult.complete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const complete: ControlResult =
  * @constant
  * @type {number}
  */
-export const ControlResult_alreadyInCondition: ControlResult =
+export const ControlResult_alreadyInCondition =
     ControlResult.alreadyInCondition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const ControlResult_alreadyInCondition: ControlResult =
  * @constant
  * @type {number}
  */
-export const alreadyInCondition: ControlResult =
+export const alreadyInCondition =
     ControlResult.alreadyInCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -109,7 +109,7 @@ export const alreadyInCondition: ControlResult =
  * @constant
  * @type {number}
  */
-export const ControlResult_fail_InvalidControlActionType: ControlResult =
+export const ControlResult_fail_InvalidControlActionType =
     ControlResult.fail_InvalidControlActionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const ControlResult_fail_InvalidControlActionType: ControlResult =
  * @constant
  * @type {number}
  */
-export const fail_InvalidControlActionType: ControlResult =
+export const fail_InvalidControlActionType =
     ControlResult.fail_InvalidControlActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -127,7 +127,7 @@ export const fail_InvalidControlActionType: ControlResult =
  * @constant
  * @type {number}
  */
-export const ControlResult_fail_ReasonUnknown: ControlResult =
+export const ControlResult_fail_ReasonUnknown =
     ControlResult.fail_ReasonUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -136,7 +136,7 @@ export const ControlResult_fail_ReasonUnknown: ControlResult =
  * @constant
  * @type {number}
  */
-export const fail_ReasonUnknown: ControlResult =
+export const fail_ReasonUnknown =
     ControlResult.fail_ReasonUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

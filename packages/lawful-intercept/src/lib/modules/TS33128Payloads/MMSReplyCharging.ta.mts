@@ -113,7 +113,7 @@ const MMSReplyCharging = _enum_for_MMSReplyCharging;
  * @type {number}
  */
 export
-const MMSReplyCharging_requested: MMSReplyCharging = MMSReplyCharging.requested; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSReplyCharging_requested = MMSReplyCharging.requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requested
@@ -121,7 +121,7 @@ const MMSReplyCharging_requested: MMSReplyCharging = MMSReplyCharging.requested;
  * @type {number}
  */
 export
-const requested: MMSReplyCharging = MMSReplyCharging.requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requested = MMSReplyCharging.requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSReplyCharging_requestedTextOnly
@@ -129,7 +129,7 @@ const requested: MMSReplyCharging = MMSReplyCharging.requested; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const MMSReplyCharging_requestedTextOnly: MMSReplyCharging = MMSReplyCharging.requestedTextOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSReplyCharging_requestedTextOnly = MMSReplyCharging.requestedTextOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedTextOnly
@@ -137,7 +137,7 @@ const MMSReplyCharging_requestedTextOnly: MMSReplyCharging = MMSReplyCharging.re
  * @type {number}
  */
 export
-const requestedTextOnly: MMSReplyCharging = MMSReplyCharging.requestedTextOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedTextOnly = MMSReplyCharging.requestedTextOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSReplyCharging_accepted
@@ -145,7 +145,7 @@ const requestedTextOnly: MMSReplyCharging = MMSReplyCharging.requestedTextOnly; 
  * @type {number}
  */
 export
-const MMSReplyCharging_accepted: MMSReplyCharging = MMSReplyCharging.accepted; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSReplyCharging_accepted = MMSReplyCharging.accepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accepted
@@ -153,7 +153,7 @@ const MMSReplyCharging_accepted: MMSReplyCharging = MMSReplyCharging.accepted; /
  * @type {number}
  */
 export
-const accepted: MMSReplyCharging = MMSReplyCharging.accepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accepted = MMSReplyCharging.accepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSReplyCharging_acceptedTextOnly
@@ -161,7 +161,7 @@ const accepted: MMSReplyCharging = MMSReplyCharging.accepted; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const MMSReplyCharging_acceptedTextOnly: MMSReplyCharging = MMSReplyCharging.acceptedTextOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSReplyCharging_acceptedTextOnly = MMSReplyCharging.acceptedTextOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acceptedTextOnly
@@ -169,7 +169,7 @@ const MMSReplyCharging_acceptedTextOnly: MMSReplyCharging = MMSReplyCharging.acc
  * @type {number}
  */
 export
-const acceptedTextOnly: MMSReplyCharging = MMSReplyCharging.acceptedTextOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acceptedTextOnly = MMSReplyCharging.acceptedTextOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSReplyCharging: $.ASN1Decoder<MMSReplyCharging> = $._decodeEnumerated;
 export const _encode_MMSReplyCharging: $.ASN1Encoder<MMSReplyCharging> = $._encodeEnumerated;
 

@@ -27,13 +27,13 @@ export enum _enum_for_RequestedInformationType {
 }
 export type RequestedInformationType = _enum_for_RequestedInformationType;
 export const RequestedInformationType = _enum_for_RequestedInformationType;
-export const RequestedInformationType_callAttemptElapsedTime: RequestedInformationType = RequestedInformationType.callAttemptElapsedTime;
-export const callAttemptElapsedTime: RequestedInformationType = RequestedInformationType.callAttemptElapsedTime;
-export const RequestedInformationType_callStopTime: RequestedInformationType = RequestedInformationType.callStopTime;
-export const callStopTime: RequestedInformationType = RequestedInformationType.callStopTime;
-export const RequestedInformationType_callConnectedElapsedTime: RequestedInformationType = RequestedInformationType.callConnectedElapsedTime;
-export const callConnectedElapsedTime: RequestedInformationType = RequestedInformationType.callConnectedElapsedTime;
-export const RequestedInformationType_releaseCause: RequestedInformationType = RequestedInformationType.releaseCause;
-export const releaseCause: RequestedInformationType = RequestedInformationType.releaseCause;
+export const RequestedInformationType_callAttemptElapsedTime = RequestedInformationType.callAttemptElapsedTime;
+export const callAttemptElapsedTime = RequestedInformationType.callAttemptElapsedTime;
+export const RequestedInformationType_callStopTime = RequestedInformationType.callStopTime;
+export const callStopTime = RequestedInformationType.callStopTime;
+export const RequestedInformationType_callConnectedElapsedTime = RequestedInformationType.callConnectedElapsedTime;
+export const callConnectedElapsedTime = RequestedInformationType.callConnectedElapsedTime;
+export const RequestedInformationType_releaseCause = RequestedInformationType.releaseCause;
+export const releaseCause = RequestedInformationType.releaseCause;
 export const _decode_RequestedInformationType = $._decodeEnumerated;
 export const _encode_RequestedInformationType = $._encodeEnumerated;

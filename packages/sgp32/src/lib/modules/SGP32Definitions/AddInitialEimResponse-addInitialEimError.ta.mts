@@ -45,7 +45,7 @@ type AddInitialEimResponse_addInitialEimError = INTEGER;
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_insufficientMemory: AddInitialEimResponse_addInitialEimError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_insufficientMemory = 1 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_insufficientMemory
@@ -57,7 +57,7 @@ const AddInitialEimResponse_addInitialEimError_insufficientMemory: AddInitialEim
  * @type {number}
  */
 export
-const insufficientMemory: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficientMemory = AddInitialEimResponse_addInitialEimError_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists
@@ -71,7 +71,7 @@ const insufficientMemory: AddInitialEimResponse_addInitialEimError = AddInitialE
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists: AddInitialEimResponse_addInitialEimError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists = 2 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists
@@ -83,7 +83,7 @@ const AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists: AddIn
  * @type {number}
  */
 export
-const associatedEimAlreadyExists: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
+const associatedEimAlreadyExists = AddInitialEimResponse_addInitialEimError_associatedEimAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_ciPKUnknown
@@ -97,7 +97,7 @@ const associatedEimAlreadyExists: AddInitialEimResponse_addInitialEimError = Add
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_ciPKUnknown: AddInitialEimResponse_addInitialEimError = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_ciPKUnknown = 3 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_ciPKUnknown
@@ -109,7 +109,7 @@ const AddInitialEimResponse_addInitialEimError_ciPKUnknown: AddInitialEimRespons
  * @type {number}
  */
 export
-const ciPKUnknown: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown = AddInitialEimResponse_addInitialEimError_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_invalidAssociationToken
@@ -123,7 +123,7 @@ const ciPKUnknown: AddInitialEimResponse_addInitialEimError = AddInitialEimRespo
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_invalidAssociationToken: AddInitialEimResponse_addInitialEimError = 5; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_invalidAssociationToken = 5 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_invalidAssociationToken
@@ -135,7 +135,7 @@ const AddInitialEimResponse_addInitialEimError_invalidAssociationToken: AddIniti
  * @type {number}
  */
 export
-const invalidAssociationToken: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_invalidAssociationToken; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidAssociationToken = AddInitialEimResponse_addInitialEimError_invalidAssociationToken; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_counterValueOutOfRange
@@ -149,7 +149,7 @@ const invalidAssociationToken: AddInitialEimResponse_addInitialEimError = AddIni
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_counterValueOutOfRange: AddInitialEimResponse_addInitialEimError = 6; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_counterValueOutOfRange = 6 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_counterValueOutOfRange
@@ -161,7 +161,7 @@ const AddInitialEimResponse_addInitialEimError_counterValueOutOfRange: AddInitia
  * @type {number}
  */
 export
-const counterValueOutOfRange: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
+const counterValueOutOfRange = AddInitialEimResponse_addInitialEimError_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_commandError
@@ -174,7 +174,7 @@ const counterValueOutOfRange: AddInitialEimResponse_addInitialEimError = AddInit
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_commandError: AddInitialEimResponse_addInitialEimError = 7; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_commandError = 7 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_commandError
@@ -186,7 +186,7 @@ const AddInitialEimResponse_addInitialEimError_commandError: AddInitialEimRespon
  * @type {number}
  */
 export
-const commandError: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError = AddInitialEimResponse_addInitialEimError_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_undefinedError
@@ -199,7 +199,7 @@ const commandError: AddInitialEimResponse_addInitialEimError = AddInitialEimResp
  * @type {number}
  */
 export
-const AddInitialEimResponse_addInitialEimError_undefinedError: AddInitialEimResponse_addInitialEimError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const AddInitialEimResponse_addInitialEimError_undefinedError = 127 satisfies AddInitialEimResponse_addInitialEimError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddInitialEimResponse_addInitialEimError_undefinedError
@@ -210,7 +210,7 @@ const AddInitialEimResponse_addInitialEimError_undefinedError: AddInitialEimResp
  * @type {number}
  */
 export
-const undefinedError: AddInitialEimResponse_addInitialEimError = AddInitialEimResponse_addInitialEimError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = AddInitialEimResponse_addInitialEimError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddInitialEimResponse_addInitialEimError: $.ASN1Decoder<AddInitialEimResponse_addInitialEimError> = $._decodeInteger;
 export const _encode_AddInitialEimResponse_addInitialEimError: $.ASN1Encoder<AddInitialEimResponse_addInitialEimError> = $._encodeInteger;
 

@@ -68,7 +68,7 @@ type PDU_error_status = INTEGER;
  * @type {number}
  */
 export
-const PDU_error_status_noError: PDU_error_status = 0; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_noError = 0 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noError
@@ -76,7 +76,7 @@ const PDU_error_status_noError: PDU_error_status = 0; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const noError: PDU_error_status = PDU_error_status_noError; /* SHORT_NAMED_INTEGER_VALUE */
+const noError = PDU_error_status_noError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_tooBig
@@ -88,7 +88,7 @@ const noError: PDU_error_status = PDU_error_status_noError; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const PDU_error_status_tooBig: PDU_error_status = 1; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_tooBig = 1 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_tooBig
@@ -96,7 +96,7 @@ const PDU_error_status_tooBig: PDU_error_status = 1; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const tooBig: PDU_error_status = PDU_error_status_tooBig; /* SHORT_NAMED_INTEGER_VALUE */
+const tooBig = PDU_error_status_tooBig; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noSuchName
@@ -108,7 +108,7 @@ const tooBig: PDU_error_status = PDU_error_status_tooBig; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PDU_error_status_noSuchName: PDU_error_status = 2; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_noSuchName = 2 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noSuchName
@@ -116,7 +116,7 @@ const PDU_error_status_noSuchName: PDU_error_status = 2; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const noSuchName: PDU_error_status = PDU_error_status_noSuchName; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchName = PDU_error_status_noSuchName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_badValue
@@ -128,7 +128,7 @@ const noSuchName: PDU_error_status = PDU_error_status_noSuchName; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PDU_error_status_badValue: PDU_error_status = 3; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_badValue = 3 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_badValue
@@ -136,7 +136,7 @@ const PDU_error_status_badValue: PDU_error_status = 3; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const badValue: PDU_error_status = PDU_error_status_badValue; /* SHORT_NAMED_INTEGER_VALUE */
+const badValue = PDU_error_status_badValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_readOnly
@@ -148,7 +148,7 @@ const badValue: PDU_error_status = PDU_error_status_badValue; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const PDU_error_status_readOnly: PDU_error_status = 4; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_readOnly = 4 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_readOnly
@@ -156,7 +156,7 @@ const PDU_error_status_readOnly: PDU_error_status = 4; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const readOnly: PDU_error_status = PDU_error_status_readOnly; /* SHORT_NAMED_INTEGER_VALUE */
+const readOnly = PDU_error_status_readOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_genErr
@@ -168,7 +168,7 @@ const readOnly: PDU_error_status = PDU_error_status_readOnly; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const PDU_error_status_genErr: PDU_error_status = 5; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_genErr = 5 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_genErr
@@ -176,7 +176,7 @@ const PDU_error_status_genErr: PDU_error_status = 5; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const genErr: PDU_error_status = PDU_error_status_genErr; /* SHORT_NAMED_INTEGER_VALUE */
+const genErr = PDU_error_status_genErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noAccess
@@ -188,7 +188,7 @@ const genErr: PDU_error_status = PDU_error_status_genErr; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PDU_error_status_noAccess: PDU_error_status = 6; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_noAccess = 6 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noAccess
@@ -196,7 +196,7 @@ const PDU_error_status_noAccess: PDU_error_status = 6; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const noAccess: PDU_error_status = PDU_error_status_noAccess; /* SHORT_NAMED_INTEGER_VALUE */
+const noAccess = PDU_error_status_noAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongType
@@ -208,7 +208,7 @@ const noAccess: PDU_error_status = PDU_error_status_noAccess; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const PDU_error_status_wrongType: PDU_error_status = 7; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_wrongType = 7 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongType
@@ -216,7 +216,7 @@ const PDU_error_status_wrongType: PDU_error_status = 7; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const wrongType: PDU_error_status = PDU_error_status_wrongType; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongType = PDU_error_status_wrongType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongLength
@@ -228,7 +228,7 @@ const wrongType: PDU_error_status = PDU_error_status_wrongType; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const PDU_error_status_wrongLength: PDU_error_status = 8; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_wrongLength = 8 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongLength
@@ -236,7 +236,7 @@ const PDU_error_status_wrongLength: PDU_error_status = 8; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const wrongLength: PDU_error_status = PDU_error_status_wrongLength; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongLength = PDU_error_status_wrongLength; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongEncoding
@@ -248,7 +248,7 @@ const wrongLength: PDU_error_status = PDU_error_status_wrongLength; /* SHORT_NAM
  * @type {number}
  */
 export
-const PDU_error_status_wrongEncoding: PDU_error_status = 9; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_wrongEncoding = 9 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongEncoding
@@ -256,7 +256,7 @@ const PDU_error_status_wrongEncoding: PDU_error_status = 9; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const wrongEncoding: PDU_error_status = PDU_error_status_wrongEncoding; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongEncoding = PDU_error_status_wrongEncoding; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongValue
@@ -268,7 +268,7 @@ const wrongEncoding: PDU_error_status = PDU_error_status_wrongEncoding; /* SHORT
  * @type {number}
  */
 export
-const PDU_error_status_wrongValue: PDU_error_status = 10; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_wrongValue = 10 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_wrongValue
@@ -276,7 +276,7 @@ const PDU_error_status_wrongValue: PDU_error_status = 10; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const wrongValue: PDU_error_status = PDU_error_status_wrongValue; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongValue = PDU_error_status_wrongValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noCreation
@@ -288,7 +288,7 @@ const wrongValue: PDU_error_status = PDU_error_status_wrongValue; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PDU_error_status_noCreation: PDU_error_status = 11; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_noCreation = 11 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_noCreation
@@ -296,7 +296,7 @@ const PDU_error_status_noCreation: PDU_error_status = 11; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const noCreation: PDU_error_status = PDU_error_status_noCreation; /* SHORT_NAMED_INTEGER_VALUE */
+const noCreation = PDU_error_status_noCreation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_inconsistentValue
@@ -308,7 +308,7 @@ const noCreation: PDU_error_status = PDU_error_status_noCreation; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PDU_error_status_inconsistentValue: PDU_error_status = 12; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_inconsistentValue = 12 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_inconsistentValue
@@ -316,7 +316,7 @@ const PDU_error_status_inconsistentValue: PDU_error_status = 12; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const inconsistentValue: PDU_error_status = PDU_error_status_inconsistentValue; /* SHORT_NAMED_INTEGER_VALUE */
+const inconsistentValue = PDU_error_status_inconsistentValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_resourceUnavailable
@@ -328,7 +328,7 @@ const inconsistentValue: PDU_error_status = PDU_error_status_inconsistentValue; 
  * @type {number}
  */
 export
-const PDU_error_status_resourceUnavailable: PDU_error_status = 13; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_resourceUnavailable = 13 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_resourceUnavailable
@@ -336,7 +336,7 @@ const PDU_error_status_resourceUnavailable: PDU_error_status = 13; /* LONG_NAMED
  * @type {number}
  */
 export
-const resourceUnavailable: PDU_error_status = PDU_error_status_resourceUnavailable; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceUnavailable = PDU_error_status_resourceUnavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_commitFailed
@@ -348,7 +348,7 @@ const resourceUnavailable: PDU_error_status = PDU_error_status_resourceUnavailab
  * @type {number}
  */
 export
-const PDU_error_status_commitFailed: PDU_error_status = 14; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_commitFailed = 14 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_commitFailed
@@ -356,7 +356,7 @@ const PDU_error_status_commitFailed: PDU_error_status = 14; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const commitFailed: PDU_error_status = PDU_error_status_commitFailed; /* SHORT_NAMED_INTEGER_VALUE */
+const commitFailed = PDU_error_status_commitFailed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_undoFailed
@@ -368,7 +368,7 @@ const commitFailed: PDU_error_status = PDU_error_status_commitFailed; /* SHORT_N
  * @type {number}
  */
 export
-const PDU_error_status_undoFailed: PDU_error_status = 15; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_undoFailed = 15 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_undoFailed
@@ -376,7 +376,7 @@ const PDU_error_status_undoFailed: PDU_error_status = 15; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const undoFailed: PDU_error_status = PDU_error_status_undoFailed; /* SHORT_NAMED_INTEGER_VALUE */
+const undoFailed = PDU_error_status_undoFailed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_authorizationError
@@ -388,7 +388,7 @@ const undoFailed: PDU_error_status = PDU_error_status_undoFailed; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PDU_error_status_authorizationError: PDU_error_status = 16; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_authorizationError = 16 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_authorizationError
@@ -396,7 +396,7 @@ const PDU_error_status_authorizationError: PDU_error_status = 16; /* LONG_NAMED_
  * @type {number}
  */
 export
-const authorizationError: PDU_error_status = PDU_error_status_authorizationError; /* SHORT_NAMED_INTEGER_VALUE */
+const authorizationError = PDU_error_status_authorizationError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_notWritable
@@ -408,7 +408,7 @@ const authorizationError: PDU_error_status = PDU_error_status_authorizationError
  * @type {number}
  */
 export
-const PDU_error_status_notWritable: PDU_error_status = 17; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_notWritable = 17 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_notWritable
@@ -416,7 +416,7 @@ const PDU_error_status_notWritable: PDU_error_status = 17; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const notWritable: PDU_error_status = PDU_error_status_notWritable; /* SHORT_NAMED_INTEGER_VALUE */
+const notWritable = PDU_error_status_notWritable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_inconsistentName
@@ -428,7 +428,7 @@ const notWritable: PDU_error_status = PDU_error_status_notWritable; /* SHORT_NAM
  * @type {number}
  */
 export
-const PDU_error_status_inconsistentName: PDU_error_status = 18; /* LONG_NAMED_INTEGER_VALUE */
+const PDU_error_status_inconsistentName = 18 satisfies PDU_error_status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PDU_error_status_inconsistentName
@@ -436,7 +436,7 @@ const PDU_error_status_inconsistentName: PDU_error_status = 18; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const inconsistentName: PDU_error_status = PDU_error_status_inconsistentName; /* SHORT_NAMED_INTEGER_VALUE */
+const inconsistentName = PDU_error_status_inconsistentName; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_PDU_error_status = $._decodeInteger;

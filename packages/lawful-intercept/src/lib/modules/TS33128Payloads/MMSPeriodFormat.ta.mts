@@ -69,7 +69,7 @@ const MMSPeriodFormat = _enum_for_MMSPeriodFormat;
  * @type {number}
  */
 export
-const MMSPeriodFormat_absolute: MMSPeriodFormat = MMSPeriodFormat.absolute; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSPeriodFormat_absolute = MMSPeriodFormat.absolute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absolute
@@ -77,7 +77,7 @@ const MMSPeriodFormat_absolute: MMSPeriodFormat = MMSPeriodFormat.absolute; /* L
  * @type {number}
  */
 export
-const absolute: MMSPeriodFormat = MMSPeriodFormat.absolute; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absolute = MMSPeriodFormat.absolute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSPeriodFormat_relative
@@ -85,7 +85,7 @@ const absolute: MMSPeriodFormat = MMSPeriodFormat.absolute; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const MMSPeriodFormat_relative: MMSPeriodFormat = MMSPeriodFormat.relative; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSPeriodFormat_relative = MMSPeriodFormat.relative; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary relative
@@ -93,7 +93,7 @@ const MMSPeriodFormat_relative: MMSPeriodFormat = MMSPeriodFormat.relative; /* L
  * @type {number}
  */
 export
-const relative: MMSPeriodFormat = MMSPeriodFormat.relative; /* SHORT_NAMED_ENUMERATED_VALUE */
+const relative = MMSPeriodFormat.relative; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSPeriodFormat: $.ASN1Decoder<MMSPeriodFormat> = $._decodeEnumerated;
 export const _encode_MMSPeriodFormat: $.ASN1Encoder<MMSPeriodFormat> = $._encodeEnumerated;
 

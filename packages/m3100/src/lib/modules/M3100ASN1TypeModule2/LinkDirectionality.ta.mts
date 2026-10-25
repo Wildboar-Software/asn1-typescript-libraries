@@ -69,7 +69,7 @@ export const LinkDirectionality = _enum_for_LinkDirectionality;
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_unidirectional: LinkDirectionality =
+export const LinkDirectionality_unidirectional =
     LinkDirectionality.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const LinkDirectionality_unidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const unidirectional: LinkDirectionality =
+export const unidirectional =
     LinkDirectionality.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const unidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_bidirectional: LinkDirectionality =
+export const LinkDirectionality_bidirectional =
     LinkDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const LinkDirectionality_bidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const bidirectional: LinkDirectionality =
+export const bidirectional =
     LinkDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const bidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_undefined: LinkDirectionality =
+export const LinkDirectionality_undefined =
     LinkDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const LinkDirectionality_undefined: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const undefined: LinkDirectionality =
+export const undefined =
     LinkDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

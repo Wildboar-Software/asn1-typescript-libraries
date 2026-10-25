@@ -31,28 +31,28 @@ export type AuthenticationCheck = INTEGER;
  * @constant
  * @type {number}
  */
-export const AuthenticationCheck_validated: AuthenticationCheck = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationCheck_validated = 1 satisfies AuthenticationCheck; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_validated
  * @constant
  * @type {number}
  */
-export const validated: AuthenticationCheck = AuthenticationCheck_validated; /* SHORT_NAMED_INTEGER_VALUE */
+export const validated = AuthenticationCheck_validated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_failed
  * @constant
  * @type {number}
  */
-export const AuthenticationCheck_failed: AuthenticationCheck = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const AuthenticationCheck_failed = 2 satisfies AuthenticationCheck; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticationCheck_failed
  * @constant
  * @type {number}
  */
-export const failed: AuthenticationCheck = AuthenticationCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
+export const failed = AuthenticationCheck_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AuthenticationCheck = $._decodeInteger;

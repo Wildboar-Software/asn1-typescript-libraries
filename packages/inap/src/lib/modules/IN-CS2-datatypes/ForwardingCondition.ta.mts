@@ -59,7 +59,7 @@ const ForwardingCondition = _enum_for_ForwardingCondition;
  * @type {number}
  */
 export
-const ForwardingCondition_busy: ForwardingCondition = ForwardingCondition.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingCondition_busy = ForwardingCondition.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -67,7 +67,7 @@ const ForwardingCondition_busy: ForwardingCondition = ForwardingCondition.busy; 
  * @type {number}
  */
 export
-const busy: ForwardingCondition = ForwardingCondition.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = ForwardingCondition.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingCondition_noanswer
@@ -75,7 +75,7 @@ const busy: ForwardingCondition = ForwardingCondition.busy; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ForwardingCondition_noanswer: ForwardingCondition = ForwardingCondition.noanswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingCondition_noanswer = ForwardingCondition.noanswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noanswer
@@ -83,7 +83,7 @@ const ForwardingCondition_noanswer: ForwardingCondition = ForwardingCondition.no
  * @type {number}
  */
 export
-const noanswer: ForwardingCondition = ForwardingCondition.noanswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noanswer = ForwardingCondition.noanswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingCondition_any_
@@ -91,7 +91,7 @@ const noanswer: ForwardingCondition = ForwardingCondition.noanswer; /* SHORT_NAM
  * @type {number}
  */
 export
-const ForwardingCondition_any_: ForwardingCondition = ForwardingCondition.any_; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingCondition_any_ = ForwardingCondition.any_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary any_
@@ -99,7 +99,7 @@ const ForwardingCondition_any_: ForwardingCondition = ForwardingCondition.any_; 
  * @type {number}
  */
 export
-const any_: ForwardingCondition = ForwardingCondition.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const any_ = ForwardingCondition.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ForwardingCondition(el: _Element): ForwardingCondition {

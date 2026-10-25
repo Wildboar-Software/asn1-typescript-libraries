@@ -92,7 +92,7 @@ const RegistrationType = _enum_for_RegistrationType;
  * @type {number}
  */
 export
-const RegistrationType_escapeRegister: RegistrationType = RegistrationType.escapeRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_escapeRegister = RegistrationType.escapeRegister; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary escapeRegister
@@ -100,7 +100,7 @@ const RegistrationType_escapeRegister: RegistrationType = RegistrationType.escap
  * @type {number}
  */
 export
-const escapeRegister: RegistrationType = RegistrationType.escapeRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+const escapeRegister = RegistrationType.escapeRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationType_ioRegister
@@ -112,7 +112,7 @@ const escapeRegister: RegistrationType = RegistrationType.escapeRegister; /* SHO
  * @type {number}
  */
 export
-const RegistrationType_ioRegister: RegistrationType = RegistrationType.ioRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_ioRegister = RegistrationType.ioRegister; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ioRegister
@@ -120,7 +120,7 @@ const RegistrationType_ioRegister: RegistrationType = RegistrationType.ioRegiste
  * @type {number}
  */
 export
-const ioRegister: RegistrationType = RegistrationType.ioRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ioRegister = RegistrationType.ioRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationType_routeRegister
@@ -132,7 +132,7 @@ const ioRegister: RegistrationType = RegistrationType.ioRegister; /* SHORT_NAMED
  * @type {number}
  */
 export
-const RegistrationType_routeRegister: RegistrationType = RegistrationType.routeRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_routeRegister = RegistrationType.routeRegister; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeRegister
@@ -140,7 +140,7 @@ const RegistrationType_routeRegister: RegistrationType = RegistrationType.routeR
  * @type {number}
  */
 export
-const routeRegister: RegistrationType = RegistrationType.routeRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeRegister = RegistrationType.routeRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationType_sysStatRegister
@@ -152,7 +152,7 @@ const routeRegister: RegistrationType = RegistrationType.routeRegister; /* SHORT
  * @type {number}
  */
 export
-const RegistrationType_sysStatRegister: RegistrationType = RegistrationType.sysStatRegister; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_sysStatRegister = RegistrationType.sysStatRegister; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sysStatRegister
@@ -160,7 +160,7 @@ const RegistrationType_sysStatRegister: RegistrationType = RegistrationType.sysS
  * @type {number}
  */
 export
-const sysStatRegister: RegistrationType = RegistrationType.sysStatRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sysStatRegister = RegistrationType.sysStatRegister; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RegistrationType: $.ASN1Decoder<RegistrationType> | null = null;
 

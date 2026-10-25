@@ -85,7 +85,7 @@ const CharacterSet = _enum_for_CharacterSet;
  * @type {number}
  */
 export
-const CharacterSet_ascii: CharacterSet = CharacterSet.ascii; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_ascii = CharacterSet.ascii; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascii
@@ -93,7 +93,7 @@ const CharacterSet_ascii: CharacterSet = CharacterSet.ascii; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const ascii: CharacterSet = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ascii = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterSet_unicode
@@ -105,7 +105,7 @@ const ascii: CharacterSet = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const CharacterSet_unicode: CharacterSet = CharacterSet.unicode; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_unicode = CharacterSet.unicode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unicode
@@ -113,7 +113,7 @@ const CharacterSet_unicode: CharacterSet = CharacterSet.unicode; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const unicode: CharacterSet = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unicode = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterSet_proprietary
@@ -125,7 +125,7 @@ const unicode: CharacterSet = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const CharacterSet_proprietary: CharacterSet = CharacterSet.proprietary; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_proprietary = CharacterSet.proprietary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proprietary
@@ -133,7 +133,7 @@ const CharacterSet_proprietary: CharacterSet = CharacterSet.proprietary; /* LONG
  * @type {number}
  */
 export
-const proprietary: CharacterSet = CharacterSet.proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proprietary = CharacterSet.proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CharacterSet: $.ASN1Decoder<CharacterSet> | null = null;
 

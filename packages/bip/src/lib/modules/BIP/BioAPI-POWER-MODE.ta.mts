@@ -47,7 +47,7 @@ export type BioAPI_POWER_MODE = _enum_for_BioAPI_POWER_MODE | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_normal: BioAPI_POWER_MODE = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_normal = _enum_for_BioAPI_POWER_MODE.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const BioAPI_POWER_MODE_normal: BioAPI_POWER_MODE = 0; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const normal: BioAPI_POWER_MODE = BioAPI_POWER_MODE_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const normal = BioAPI_POWER_MODE_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const normal: BioAPI_POWER_MODE = BioAPI_POWER_MODE_normal; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_detect: BioAPI_POWER_MODE = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_detect = _enum_for_BioAPI_POWER_MODE.detect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const BioAPI_POWER_MODE_detect: BioAPI_POWER_MODE = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const detect: BioAPI_POWER_MODE = BioAPI_POWER_MODE_detect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const detect = BioAPI_POWER_MODE_detect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const detect: BioAPI_POWER_MODE = BioAPI_POWER_MODE_detect; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_sleep: BioAPI_POWER_MODE = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_sleep = _enum_for_BioAPI_POWER_MODE.sleep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const BioAPI_POWER_MODE_sleep: BioAPI_POWER_MODE = 2; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const sleep: BioAPI_POWER_MODE = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sleep = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

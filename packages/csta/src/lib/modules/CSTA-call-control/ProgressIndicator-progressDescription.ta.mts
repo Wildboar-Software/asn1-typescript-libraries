@@ -91,7 +91,7 @@ const ProgressIndicator_progressDescription = _enum_for_ProgressIndicator_progre
  * @type {number}
  */
 export
-const ProgressIndicator_progressDescription_iSDNProgressDesc: ProgressIndicator_progressDescription = ProgressIndicator_progressDescription.iSDNProgressDesc; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressDescription_iSDNProgressDesc = ProgressIndicator_progressDescription.iSDNProgressDesc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iSDNProgressDesc
@@ -99,7 +99,7 @@ const ProgressIndicator_progressDescription_iSDNProgressDesc: ProgressIndicator_
  * @type {number}
  */
 export
-const iSDNProgressDesc: ProgressIndicator_progressDescription = ProgressIndicator_progressDescription.iSDNProgressDesc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iSDNProgressDesc = ProgressIndicator_progressDescription.iSDNProgressDesc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressDescription_qSIGProgressDesc
@@ -111,7 +111,7 @@ const iSDNProgressDesc: ProgressIndicator_progressDescription = ProgressIndicato
  * @type {number}
  */
 export
-const ProgressIndicator_progressDescription_qSIGProgressDesc: ProgressIndicator_progressDescription = ProgressIndicator_progressDescription.qSIGProgressDesc; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressDescription_qSIGProgressDesc = ProgressIndicator_progressDescription.qSIGProgressDesc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary qSIGProgressDesc
@@ -119,7 +119,7 @@ const ProgressIndicator_progressDescription_qSIGProgressDesc: ProgressIndicator_
  * @type {number}
  */
 export
-const qSIGProgressDesc: ProgressIndicator_progressDescription = ProgressIndicator_progressDescription.qSIGProgressDesc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const qSIGProgressDesc = ProgressIndicator_progressDescription.qSIGProgressDesc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProgressIndicator_progressDescription_other
@@ -131,7 +131,7 @@ const qSIGProgressDesc: ProgressIndicator_progressDescription = ProgressIndicato
  * @type {number}
  */
 export
-const ProgressIndicator_progressDescription_other: ProgressIndicator_progressDescription = ProgressIndicator_progressDescription.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProgressIndicator_progressDescription_other = ProgressIndicator_progressDescription.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -139,7 +139,7 @@ const ProgressIndicator_progressDescription_other: ProgressIndicator_progressDes
  * @type {number}
  */
 export
-const other: ProgressIndicator_progressDescription = ProgressIndicator_progressDescription.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = ProgressIndicator_progressDescription.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ProgressIndicator_progressDescription: $.ASN1Decoder<ProgressIndicator_progressDescription> | null = null;
 

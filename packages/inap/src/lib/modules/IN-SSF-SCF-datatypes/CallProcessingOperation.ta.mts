@@ -69,7 +69,7 @@ const CallProcessingOperation = _enum_for_CallProcessingOperation;
  * @type {number}
  */
 export
-const CallProcessingOperation_aLERTing: CallProcessingOperation = CallProcessingOperation.aLERTing; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_aLERTing = CallProcessingOperation.aLERTing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aLERTing
@@ -77,7 +77,7 @@ const CallProcessingOperation_aLERTing: CallProcessingOperation = CallProcessing
  * @type {number}
  */
 export
-const aLERTing: CallProcessingOperation = CallProcessingOperation.aLERTing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aLERTing = CallProcessingOperation.aLERTing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_sETUP
@@ -85,7 +85,7 @@ const aLERTing: CallProcessingOperation = CallProcessingOperation.aLERTing; /* S
  * @type {number}
  */
 export
-const CallProcessingOperation_sETUP: CallProcessingOperation = CallProcessingOperation.sETUP; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_sETUP = CallProcessingOperation.sETUP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sETUP
@@ -93,7 +93,7 @@ const CallProcessingOperation_sETUP: CallProcessingOperation = CallProcessingOpe
  * @type {number}
  */
 export
-const sETUP: CallProcessingOperation = CallProcessingOperation.sETUP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sETUP = CallProcessingOperation.sETUP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_cONNect
@@ -101,7 +101,7 @@ const sETUP: CallProcessingOperation = CallProcessingOperation.sETUP; /* SHORT_N
  * @type {number}
  */
 export
-const CallProcessingOperation_cONNect: CallProcessingOperation = CallProcessingOperation.cONNect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_cONNect = CallProcessingOperation.cONNect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cONNect
@@ -109,7 +109,7 @@ const CallProcessingOperation_cONNect: CallProcessingOperation = CallProcessingO
  * @type {number}
  */
 export
-const cONNect: CallProcessingOperation = CallProcessingOperation.cONNect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cONNect = CallProcessingOperation.cONNect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_dISConnect
@@ -117,7 +117,7 @@ const cONNect: CallProcessingOperation = CallProcessingOperation.cONNect; /* SHO
  * @type {number}
  */
 export
-const CallProcessingOperation_dISConnect: CallProcessingOperation = CallProcessingOperation.dISConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_dISConnect = CallProcessingOperation.dISConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dISConnect
@@ -125,7 +125,7 @@ const CallProcessingOperation_dISConnect: CallProcessingOperation = CallProcessi
  * @type {number}
  */
 export
-const dISConnect: CallProcessingOperation = CallProcessingOperation.dISConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dISConnect = CallProcessingOperation.dISConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_rELease
@@ -133,7 +133,7 @@ const dISConnect: CallProcessingOperation = CallProcessingOperation.dISConnect; 
  * @type {number}
  */
 export
-const CallProcessingOperation_rELease: CallProcessingOperation = CallProcessingOperation.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_rELease = CallProcessingOperation.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELease
@@ -141,7 +141,7 @@ const CallProcessingOperation_rELease: CallProcessingOperation = CallProcessingO
  * @type {number}
  */
 export
-const rELease: CallProcessingOperation = CallProcessingOperation.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELease = CallProcessingOperation.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_rELeaseCOMPlete
@@ -149,7 +149,7 @@ const rELease: CallProcessingOperation = CallProcessingOperation.rELease; /* SHO
  * @type {number}
  */
 export
-const CallProcessingOperation_rELeaseCOMPlete: CallProcessingOperation = CallProcessingOperation.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_rELeaseCOMPlete = CallProcessingOperation.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELeaseCOMPlete
@@ -157,7 +157,7 @@ const CallProcessingOperation_rELeaseCOMPlete: CallProcessingOperation = CallPro
  * @type {number}
  */
 export
-const rELeaseCOMPlete: CallProcessingOperation = CallProcessingOperation.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELeaseCOMPlete = CallProcessingOperation.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_fACility
@@ -165,7 +165,7 @@ const rELeaseCOMPlete: CallProcessingOperation = CallProcessingOperation.rELease
  * @type {number}
  */
 export
-const CallProcessingOperation_fACility: CallProcessingOperation = CallProcessingOperation.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_fACility = CallProcessingOperation.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fACility
@@ -173,7 +173,7 @@ const CallProcessingOperation_fACility: CallProcessingOperation = CallProcessing
  * @type {number}
  */
 export
-const fACility: CallProcessingOperation = CallProcessingOperation.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fACility = CallProcessingOperation.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_CallProcessingOperation(el: _Element): CallProcessingOperation {

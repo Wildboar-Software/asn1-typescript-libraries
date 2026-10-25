@@ -105,7 +105,7 @@ const PriorityLevelQualifier = _enum_for_PriorityLevelQualifier;
  * @type {number}
  */
 export
-const PriorityLevelQualifier_low: PriorityLevelQualifier = PriorityLevelQualifier.low; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityLevelQualifier_low = PriorityLevelQualifier.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -119,7 +119,7 @@ const PriorityLevelQualifier_low: PriorityLevelQualifier = PriorityLevelQualifie
  * @type {number}
  */
 export
-const low: PriorityLevelQualifier = PriorityLevelQualifier.low; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low = PriorityLevelQualifier.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PriorityLevelQualifier_high
@@ -132,7 +132,7 @@ const low: PriorityLevelQualifier = PriorityLevelQualifier.low; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const PriorityLevelQualifier_high: PriorityLevelQualifier = PriorityLevelQualifier.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityLevelQualifier_high = PriorityLevelQualifier.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -145,7 +145,7 @@ const PriorityLevelQualifier_high: PriorityLevelQualifier = PriorityLevelQualifi
  * @type {number}
  */
 export
-const high: PriorityLevelQualifier = PriorityLevelQualifier.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high = PriorityLevelQualifier.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PriorityLevelQualifier: $.ASN1Decoder<PriorityLevelQualifier> = $._decodeEnumerated;
 export const _encode_PriorityLevelQualifier: $.ASN1Encoder<PriorityLevelQualifier> = $._encodeEnumerated;
 

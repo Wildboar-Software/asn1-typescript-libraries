@@ -31,28 +31,28 @@ export type AssociationInitiator = INTEGER;
  * @constant
  * @type {number}
  */
-export const AssociationInitiator_local: AssociationInitiator = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AssociationInitiator_local = 0 satisfies AssociationInitiator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AssociationInitiator_local
  * @constant
  * @type {number}
  */
-export const local: AssociationInitiator = AssociationInitiator_local; /* SHORT_NAMED_INTEGER_VALUE */
+export const local = AssociationInitiator_local; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AssociationInitiator_remote
  * @constant
  * @type {number}
  */
-export const AssociationInitiator_remote: AssociationInitiator = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AssociationInitiator_remote = 1 satisfies AssociationInitiator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AssociationInitiator_remote
  * @constant
  * @type {number}
  */
-export const remote: AssociationInitiator = AssociationInitiator_remote; /* SHORT_NAMED_INTEGER_VALUE */
+export const remote = AssociationInitiator_remote; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_AssociationInitiator = $._decodeInteger;

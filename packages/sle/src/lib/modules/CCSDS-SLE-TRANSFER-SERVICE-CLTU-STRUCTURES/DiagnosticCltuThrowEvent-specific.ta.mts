@@ -37,7 +37,7 @@ type DiagnosticCltuThrowEvent_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticCltuThrowEvent_specific_operationNotSupported: DiagnosticCltuThrowEvent_specific = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticCltuThrowEvent_specific_operationNotSupported = 0 satisfies DiagnosticCltuThrowEvent_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_operationNotSupported
@@ -49,7 +49,7 @@ const DiagnosticCltuThrowEvent_specific_operationNotSupported: DiagnosticCltuThr
  * @type {number}
  */
 export
-const operationNotSupported: DiagnosticCltuThrowEvent_specific = DiagnosticCltuThrowEvent_specific_operationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const operationNotSupported = DiagnosticCltuThrowEvent_specific_operationNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence
@@ -62,7 +62,7 @@ const operationNotSupported: DiagnosticCltuThrowEvent_specific = DiagnosticCltuT
  * @type {number}
  */
 export
-const DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence: DiagnosticCltuThrowEvent_specific = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence = 1 satisfies DiagnosticCltuThrowEvent_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence
@@ -74,7 +74,7 @@ const DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence: DiagnosticClt
  * @type {number}
  */
 export
-const eventInvocIdOutOfSequence: DiagnosticCltuThrowEvent_specific = DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
+const eventInvocIdOutOfSequence = DiagnosticCltuThrowEvent_specific_eventInvocIdOutOfSequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_noSuchEvent
@@ -86,7 +86,7 @@ const eventInvocIdOutOfSequence: DiagnosticCltuThrowEvent_specific = DiagnosticC
  * @type {number}
  */
 export
-const DiagnosticCltuThrowEvent_specific_noSuchEvent: DiagnosticCltuThrowEvent_specific = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticCltuThrowEvent_specific_noSuchEvent = 2 satisfies DiagnosticCltuThrowEvent_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticCltuThrowEvent_specific_noSuchEvent
@@ -98,7 +98,7 @@ const DiagnosticCltuThrowEvent_specific_noSuchEvent: DiagnosticCltuThrowEvent_sp
  * @type {number}
  */
 export
-const noSuchEvent: DiagnosticCltuThrowEvent_specific = DiagnosticCltuThrowEvent_specific_noSuchEvent; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchEvent = DiagnosticCltuThrowEvent_specific_noSuchEvent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticCltuThrowEvent_specific: $.ASN1Decoder<DiagnosticCltuThrowEvent_specific> = $._decodeInteger;
 export const _encode_DiagnosticCltuThrowEvent_specific: $.ASN1Encoder<DiagnosticCltuThrowEvent_specific> = $._encodeInteger;
 

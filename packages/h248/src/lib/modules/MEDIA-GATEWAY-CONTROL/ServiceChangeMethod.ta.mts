@@ -97,7 +97,7 @@ type ServiceChangeMethod = _enum_for_ServiceChangeMethod | ENUMERATED;
  * @type {number}
  */
 export
-const ServiceChangeMethod_failover: ServiceChangeMethod = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceChangeMethod_failover = _enum_for_ServiceChangeMethod.failover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failover
@@ -105,7 +105,7 @@ const ServiceChangeMethod_failover: ServiceChangeMethod = 0; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const failover: ServiceChangeMethod = ServiceChangeMethod_failover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failover = ServiceChangeMethod_failover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceChangeMethod_forced
@@ -119,7 +119,7 @@ const failover: ServiceChangeMethod = ServiceChangeMethod_failover; /* SHORT_NAM
  * @type {number}
  */
 export
-const ServiceChangeMethod_forced: ServiceChangeMethod = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceChangeMethod_forced = _enum_for_ServiceChangeMethod.forced; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forced
@@ -127,7 +127,7 @@ const ServiceChangeMethod_forced: ServiceChangeMethod = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const forced: ServiceChangeMethod = ServiceChangeMethod_forced; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forced = ServiceChangeMethod_forced; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceChangeMethod_graceful
@@ -141,7 +141,7 @@ const forced: ServiceChangeMethod = ServiceChangeMethod_forced; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ServiceChangeMethod_graceful: ServiceChangeMethod = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceChangeMethod_graceful = _enum_for_ServiceChangeMethod.graceful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary graceful
@@ -149,7 +149,7 @@ const ServiceChangeMethod_graceful: ServiceChangeMethod = 2; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const graceful: ServiceChangeMethod = ServiceChangeMethod_graceful; /* SHORT_NAMED_ENUMERATED_VALUE */
+const graceful = ServiceChangeMethod_graceful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceChangeMethod_restart
@@ -163,7 +163,7 @@ const graceful: ServiceChangeMethod = ServiceChangeMethod_graceful; /* SHORT_NAM
  * @type {number}
  */
 export
-const ServiceChangeMethod_restart: ServiceChangeMethod = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceChangeMethod_restart = _enum_for_ServiceChangeMethod.restart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restart
@@ -171,7 +171,7 @@ const ServiceChangeMethod_restart: ServiceChangeMethod = 3; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const restart: ServiceChangeMethod = ServiceChangeMethod_restart; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restart = ServiceChangeMethod_restart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceChangeMethod_disconnected
@@ -184,7 +184,7 @@ const restart: ServiceChangeMethod = ServiceChangeMethod_restart; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ServiceChangeMethod_disconnected: ServiceChangeMethod = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceChangeMethod_disconnected = _enum_for_ServiceChangeMethod.disconnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnected
@@ -192,7 +192,7 @@ const ServiceChangeMethod_disconnected: ServiceChangeMethod = 4; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const disconnected: ServiceChangeMethod = ServiceChangeMethod_disconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnected = ServiceChangeMethod_disconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceChangeMethod_handOff
@@ -206,7 +206,7 @@ const disconnected: ServiceChangeMethod = ServiceChangeMethod_disconnected; /* S
  * @type {number}
  */
 export
-const ServiceChangeMethod_handOff: ServiceChangeMethod = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceChangeMethod_handOff = _enum_for_ServiceChangeMethod.handOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handOff
@@ -214,7 +214,7 @@ const ServiceChangeMethod_handOff: ServiceChangeMethod = 5; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const handOff: ServiceChangeMethod = ServiceChangeMethod_handOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handOff = ServiceChangeMethod_handOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ServiceChangeMethod = $._decodeEnumerated;
 export const _encode_ServiceChangeMethod = $._encodeEnumerated;
 

@@ -73,7 +73,7 @@ const MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
  * @type {number}
  */
 export
-const MiscCallInfo_messageType_request: MiscCallInfo_messageType = MiscCallInfo_messageType.request; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_messageType_request = MiscCallInfo_messageType.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary request
@@ -81,7 +81,7 @@ const MiscCallInfo_messageType_request: MiscCallInfo_messageType = MiscCallInfo_
  * @type {number}
  */
 export
-const request: MiscCallInfo_messageType = MiscCallInfo_messageType.request; /* SHORT_NAMED_ENUMERATED_VALUE */
+const request = MiscCallInfo_messageType.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_messageType_notification
@@ -89,7 +89,7 @@ const request: MiscCallInfo_messageType = MiscCallInfo_messageType.request; /* S
  * @type {number}
  */
 export
-const MiscCallInfo_messageType_notification: MiscCallInfo_messageType = MiscCallInfo_messageType.notification; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_messageType_notification = MiscCallInfo_messageType.notification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notification
@@ -97,7 +97,7 @@ const MiscCallInfo_messageType_notification: MiscCallInfo_messageType = MiscCall
  * @type {number}
  */
 export
-const notification: MiscCallInfo_messageType = MiscCallInfo_messageType.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notification = MiscCallInfo_messageType.notification; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MiscCallInfo_messageType = $._decodeEnumerated;
 export const _encode_MiscCallInfo_messageType = $._encodeEnumerated;
 

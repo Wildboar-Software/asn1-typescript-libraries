@@ -48,7 +48,7 @@ export type BioAPI_GUI_MOMENT = _enum_for_BioAPI_GUI_MOMENT | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_MOMENT_beforeStart: BioAPI_GUI_MOMENT = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_MOMENT_beforeStart = _enum_for_BioAPI_GUI_MOMENT.beforeStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const BioAPI_GUI_MOMENT_beforeStart: BioAPI_GUI_MOMENT = 0; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const beforeStart: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_beforeStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const beforeStart = BioAPI_GUI_MOMENT_beforeStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const beforeStart: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_beforeStart; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_MOMENT_during: BioAPI_GUI_MOMENT = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_MOMENT_during = _enum_for_BioAPI_GUI_MOMENT.during; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const BioAPI_GUI_MOMENT_during: BioAPI_GUI_MOMENT = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const during: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_during; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const during = BioAPI_GUI_MOMENT_during; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const during: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_during; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_MOMENT_afterEnd: BioAPI_GUI_MOMENT = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_MOMENT_afterEnd = _enum_for_BioAPI_GUI_MOMENT.afterEnd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const BioAPI_GUI_MOMENT_afterEnd: BioAPI_GUI_MOMENT = 2; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const afterEnd: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_afterEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const afterEnd = BioAPI_GUI_MOMENT_afterEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

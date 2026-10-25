@@ -42,7 +42,7 @@ type DefaultGPRS_Handling = _enum_for_DefaultGPRS_Handling | ENUMERATED;
  * @type {number}
  */
 export
-const DefaultGPRS_Handling_continueTransaction: DefaultGPRS_Handling = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultGPRS_Handling_continueTransaction = _enum_for_DefaultGPRS_Handling.continueTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueTransaction
@@ -50,7 +50,7 @@ const DefaultGPRS_Handling_continueTransaction: DefaultGPRS_Handling = 0; /* LON
  * @type {number}
  */
 export
-const continueTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueTransaction = DefaultGPRS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultGPRS_Handling_releaseTransaction
@@ -58,7 +58,7 @@ const continueTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_continueT
  * @type {number}
  */
 export
-const DefaultGPRS_Handling_releaseTransaction: DefaultGPRS_Handling = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultGPRS_Handling_releaseTransaction = _enum_for_DefaultGPRS_Handling.releaseTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseTransaction
@@ -66,7 +66,7 @@ const DefaultGPRS_Handling_releaseTransaction: DefaultGPRS_Handling = 1; /* LONG
  * @type {number}
  */
 export
-const releaseTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseTransaction = DefaultGPRS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultGPRS_Handling

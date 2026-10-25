@@ -117,7 +117,7 @@ const AttributeProblem = _enum_for_AttributeProblem;
  * @type {number}
  */
 export
-const AttributeProblem_no_such_attribute: AttributeProblem = AttributeProblem.no_such_attribute; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_no_such_attribute = AttributeProblem.no_such_attribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_such_attribute
@@ -128,7 +128,7 @@ const AttributeProblem_no_such_attribute: AttributeProblem = AttributeProblem.no
  * @type {number}
  */
 export
-const no_such_attribute: AttributeProblem = AttributeProblem.no_such_attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_such_attribute = AttributeProblem.no_such_attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_invalid_attribute_syntax
@@ -139,7 +139,7 @@ const no_such_attribute: AttributeProblem = AttributeProblem.no_such_attribute; 
  * @type {number}
  */
 export
-const AttributeProblem_invalid_attribute_syntax: AttributeProblem = AttributeProblem.invalid_attribute_syntax; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_invalid_attribute_syntax = AttributeProblem.invalid_attribute_syntax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_attribute_syntax
@@ -150,7 +150,7 @@ const AttributeProblem_invalid_attribute_syntax: AttributeProblem = AttributePro
  * @type {number}
  */
 export
-const invalid_attribute_syntax: AttributeProblem = AttributeProblem.invalid_attribute_syntax; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_attribute_syntax = AttributeProblem.invalid_attribute_syntax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_undefined_attribute_type
@@ -161,7 +161,7 @@ const invalid_attribute_syntax: AttributeProblem = AttributeProblem.invalid_attr
  * @type {number}
  */
 export
-const AttributeProblem_undefined_attribute_type: AttributeProblem = AttributeProblem.undefined_attribute_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_undefined_attribute_type = AttributeProblem.undefined_attribute_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined_attribute_type
@@ -172,7 +172,7 @@ const AttributeProblem_undefined_attribute_type: AttributeProblem = AttributePro
  * @type {number}
  */
 export
-const undefined_attribute_type: AttributeProblem = AttributeProblem.undefined_attribute_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined_attribute_type = AttributeProblem.undefined_attribute_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_inappropriate_matching
@@ -183,7 +183,7 @@ const undefined_attribute_type: AttributeProblem = AttributeProblem.undefined_at
  * @type {number}
  */
 export
-const AttributeProblem_inappropriate_matching: AttributeProblem = AttributeProblem.inappropriate_matching; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_inappropriate_matching = AttributeProblem.inappropriate_matching; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_matching
@@ -194,7 +194,7 @@ const AttributeProblem_inappropriate_matching: AttributeProblem = AttributeProbl
  * @type {number}
  */
 export
-const inappropriate_matching: AttributeProblem = AttributeProblem.inappropriate_matching; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_matching = AttributeProblem.inappropriate_matching; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_constraint_violation
@@ -205,7 +205,7 @@ const inappropriate_matching: AttributeProblem = AttributeProblem.inappropriate_
  * @type {number}
  */
 export
-const AttributeProblem_constraint_violation: AttributeProblem = AttributeProblem.constraint_violation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_constraint_violation = AttributeProblem.constraint_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary constraint_violation
@@ -216,7 +216,7 @@ const AttributeProblem_constraint_violation: AttributeProblem = AttributeProblem
  * @type {number}
  */
 export
-const constraint_violation: AttributeProblem = AttributeProblem.constraint_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const constraint_violation = AttributeProblem.constraint_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_attribute_or_value_already_exists
@@ -227,7 +227,7 @@ const constraint_violation: AttributeProblem = AttributeProblem.constraint_viola
  * @type {number}
  */
 export
-const AttributeProblem_attribute_or_value_already_exists: AttributeProblem = AttributeProblem.attribute_or_value_already_exists; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_attribute_or_value_already_exists = AttributeProblem.attribute_or_value_already_exists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attribute_or_value_already_exists
@@ -238,7 +238,7 @@ const AttributeProblem_attribute_or_value_already_exists: AttributeProblem = Att
  * @type {number}
  */
 export
-const attribute_or_value_already_exists: AttributeProblem = AttributeProblem.attribute_or_value_already_exists; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attribute_or_value_already_exists = AttributeProblem.attribute_or_value_already_exists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_illegal_modification
@@ -250,7 +250,7 @@ const attribute_or_value_already_exists: AttributeProblem = AttributeProblem.att
  * @type {number}
  */
 export
-const AttributeProblem_illegal_modification: AttributeProblem = AttributeProblem.illegal_modification; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_illegal_modification = AttributeProblem.illegal_modification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary illegal_modification
@@ -262,7 +262,7 @@ const AttributeProblem_illegal_modification: AttributeProblem = AttributeProblem
  * @type {number}
  */
 export
-const illegal_modification: AttributeProblem = AttributeProblem.illegal_modification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const illegal_modification = AttributeProblem.illegal_modification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_inconsistent_with_other_attributes
@@ -274,7 +274,7 @@ const illegal_modification: AttributeProblem = AttributeProblem.illegal_modifica
  * @type {number}
  */
 export
-const AttributeProblem_inconsistent_with_other_attributes: AttributeProblem = AttributeProblem.inconsistent_with_other_attributes; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_inconsistent_with_other_attributes = AttributeProblem.inconsistent_with_other_attributes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inconsistent_with_other_attributes
@@ -286,7 +286,7 @@ const AttributeProblem_inconsistent_with_other_attributes: AttributeProblem = At
  * @type {number}
  */
 export
-const inconsistent_with_other_attributes: AttributeProblem = AttributeProblem.inconsistent_with_other_attributes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inconsistent_with_other_attributes = AttributeProblem.inconsistent_with_other_attributes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_undefined_for_this_object_class
@@ -297,7 +297,7 @@ const inconsistent_with_other_attributes: AttributeProblem = AttributeProblem.in
  * @type {number}
  */
 export
-const AttributeProblem_undefined_for_this_object_class: AttributeProblem = AttributeProblem.undefined_for_this_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_undefined_for_this_object_class = AttributeProblem.undefined_for_this_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined_for_this_object_class
@@ -308,7 +308,7 @@ const AttributeProblem_undefined_for_this_object_class: AttributeProblem = Attri
  * @type {number}
  */
 export
-const undefined_for_this_object_class: AttributeProblem = AttributeProblem.undefined_for_this_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined_for_this_object_class = AttributeProblem.undefined_for_this_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeProblem_unsupported_document_type
@@ -319,7 +319,7 @@ const undefined_for_this_object_class: AttributeProblem = AttributeProblem.undef
  * @type {number}
  */
 export
-const AttributeProblem_unsupported_document_type: AttributeProblem = AttributeProblem.unsupported_document_type; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeProblem_unsupported_document_type = AttributeProblem.unsupported_document_type; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupported_document_type
@@ -330,7 +330,7 @@ const AttributeProblem_unsupported_document_type: AttributeProblem = AttributePr
  * @type {number}
  */
 export
-const unsupported_document_type: AttributeProblem = AttributeProblem.unsupported_document_type; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupported_document_type = AttributeProblem.unsupported_document_type; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_AttributeProblem(el: _Element): AttributeProblem {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

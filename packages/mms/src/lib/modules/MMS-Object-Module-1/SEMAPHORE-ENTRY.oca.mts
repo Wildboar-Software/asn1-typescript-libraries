@@ -241,7 +241,7 @@ const SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_class_simple: SEMAPHORE_ENTRY_class = SEMAPHORE_ENTRY_class.simple; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_class_simple = SEMAPHORE_ENTRY_class.simple; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_class_modifier
@@ -249,7 +249,7 @@ const SEMAPHORE_ENTRY_class_simple: SEMAPHORE_ENTRY_class = SEMAPHORE_ENTRY_clas
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_class_modifier: SEMAPHORE_ENTRY_class = SEMAPHORE_ENTRY_class.modifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_class_modifier = SEMAPHORE_ENTRY_class.modifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState
@@ -297,7 +297,7 @@ const SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState_queued: SEMAPHORE_ENTRY_entryState = SEMAPHORE_ENTRY_entryState.queued; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_entryState_queued = SEMAPHORE_ENTRY_entryState.queued; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState_owner
@@ -305,7 +305,7 @@ const SEMAPHORE_ENTRY_entryState_queued: SEMAPHORE_ENTRY_entryState = SEMAPHORE_
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState_owner: SEMAPHORE_ENTRY_entryState = SEMAPHORE_ENTRY_entryState.owner; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_entryState_owner = SEMAPHORE_ENTRY_entryState.owner; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState_hung
@@ -313,6 +313,6 @@ const SEMAPHORE_ENTRY_entryState_owner: SEMAPHORE_ENTRY_entryState = SEMAPHORE_E
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState_hung: SEMAPHORE_ENTRY_entryState = SEMAPHORE_ENTRY_entryState.hung; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_entryState_hung = SEMAPHORE_ENTRY_entryState.hung; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

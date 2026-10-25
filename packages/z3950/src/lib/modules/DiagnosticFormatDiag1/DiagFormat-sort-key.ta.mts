@@ -36,7 +36,7 @@ type DiagFormat_sort_key = INTEGER;
  * @type {number}
  */
 export
-const DiagFormat_sort_key_tooMany: DiagFormat_sort_key = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_sort_key_tooMany = 1 satisfies DiagFormat_sort_key; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_key_tooMany
@@ -48,7 +48,7 @@ const DiagFormat_sort_key_tooMany: DiagFormat_sort_key = 1; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const tooMany: DiagFormat_sort_key = DiagFormat_sort_key_tooMany; /* SHORT_NAMED_INTEGER_VALUE */
+const tooMany = DiagFormat_sort_key_tooMany; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_key_duplicate
@@ -60,7 +60,7 @@ const tooMany: DiagFormat_sort_key = DiagFormat_sort_key_tooMany; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DiagFormat_sort_key_duplicate: DiagFormat_sort_key = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_sort_key_duplicate = 2 satisfies DiagFormat_sort_key; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_key_duplicate
@@ -72,7 +72,7 @@ const DiagFormat_sort_key_duplicate: DiagFormat_sort_key = 2; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const duplicate: DiagFormat_sort_key = DiagFormat_sort_key_duplicate; /* SHORT_NAMED_INTEGER_VALUE */
+const duplicate = DiagFormat_sort_key_duplicate; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_sort_key: $.ASN1Decoder<DiagFormat_sort_key> = $._decodeInteger;
 export const _encode_DiagFormat_sort_key: $.ASN1Encoder<DiagFormat_sort_key> = $._encodeInteger;
 

@@ -81,7 +81,7 @@ export const SignallingCapabilities = _enum_for_SignallingCapabilities;
  * @constant
  * @type {number}
  */
-export const SignallingCapabilities_isup: SignallingCapabilities =
+export const SignallingCapabilities_isup =
     SignallingCapabilities.isup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -90,7 +90,7 @@ export const SignallingCapabilities_isup: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const isup: SignallingCapabilities =
+export const isup =
     SignallingCapabilities.isup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const isup: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const SignallingCapabilities_isup92: SignallingCapabilities =
+export const SignallingCapabilities_isup92 =
     SignallingCapabilities.isup92; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -108,7 +108,7 @@ export const SignallingCapabilities_isup92: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const isup92: SignallingCapabilities =
+export const isup92 =
     SignallingCapabilities.isup92; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -117,7 +117,7 @@ export const isup92: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const SignallingCapabilities_itu_tNo5: SignallingCapabilities =
+export const SignallingCapabilities_itu_tNo5 =
     SignallingCapabilities.itu_tNo5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -126,7 +126,7 @@ export const SignallingCapabilities_itu_tNo5: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const itu_tNo5: SignallingCapabilities =
+export const itu_tNo5 =
     SignallingCapabilities.itu_tNo5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const itu_tNo5: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const SignallingCapabilities_r2: SignallingCapabilities =
+export const SignallingCapabilities_r2 =
     SignallingCapabilities.r2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const SignallingCapabilities_r2: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const r2: SignallingCapabilities =
+export const r2 =
     SignallingCapabilities.r2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const r2: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const SignallingCapabilities_itu_tNo6: SignallingCapabilities =
+export const SignallingCapabilities_itu_tNo6 =
     SignallingCapabilities.itu_tNo6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -162,7 +162,7 @@ export const SignallingCapabilities_itu_tNo6: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const itu_tNo6: SignallingCapabilities =
+export const itu_tNo6 =
     SignallingCapabilities.itu_tNo6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -171,7 +171,7 @@ export const itu_tNo6: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const SignallingCapabilities_tup: SignallingCapabilities =
+export const SignallingCapabilities_tup =
     SignallingCapabilities.tup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -180,7 +180,7 @@ export const SignallingCapabilities_tup: SignallingCapabilities =
  * @constant
  * @type {number}
  */
-export const tup: SignallingCapabilities =
+export const tup =
     SignallingCapabilities.tup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

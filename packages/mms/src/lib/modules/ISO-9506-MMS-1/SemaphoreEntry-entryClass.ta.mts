@@ -47,7 +47,7 @@ type SemaphoreEntry_entryClass = INTEGER;
  * @type {number}
  */
 export
-const SemaphoreEntry_entryClass_simple: SemaphoreEntry_entryClass = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SemaphoreEntry_entryClass_simple = 0 satisfies SemaphoreEntry_entryClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SemaphoreEntry_entryClass_simple
@@ -60,7 +60,7 @@ const SemaphoreEntry_entryClass_simple: SemaphoreEntry_entryClass = 0; /* LONG_N
  * @type {number}
  */
 export
-const simple: SemaphoreEntry_entryClass = SemaphoreEntry_entryClass_simple; /* SHORT_NAMED_INTEGER_VALUE */
+const simple = SemaphoreEntry_entryClass_simple; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SemaphoreEntry_entryClass_modifier
@@ -74,7 +74,7 @@ const simple: SemaphoreEntry_entryClass = SemaphoreEntry_entryClass_simple; /* S
  * @type {number}
  */
 export
-const SemaphoreEntry_entryClass_modifier: SemaphoreEntry_entryClass = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SemaphoreEntry_entryClass_modifier = 1 satisfies SemaphoreEntry_entryClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SemaphoreEntry_entryClass_modifier
@@ -88,7 +88,7 @@ const SemaphoreEntry_entryClass_modifier: SemaphoreEntry_entryClass = 1; /* LONG
  * @type {number}
  */
 export
-const modifier: SemaphoreEntry_entryClass = SemaphoreEntry_entryClass_modifier; /* SHORT_NAMED_INTEGER_VALUE */
+const modifier = SemaphoreEntry_entryClass_modifier; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SemaphoreEntry_entryClass = $._decodeInteger;
 export const _encode_SemaphoreEntry_entryClass = $._encodeInteger;
 

@@ -108,7 +108,7 @@ type TroubleType_number = INTEGER;
  * @type {number}
  */
 export
-const TroubleType_number_noDialToneGroup: TroubleType_number = 100; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noDialToneGroup = 100 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noDialToneGroup
@@ -116,7 +116,7 @@ const TroubleType_number_noDialToneGroup: TroubleType_number = 100; /* LONG_NAME
  * @type {number}
  */
 export
-const noDialToneGroup: TroubleType_number = TroubleType_number_noDialToneGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const noDialToneGroup = TroubleType_number_noDialToneGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noDialTone
@@ -124,7 +124,7 @@ const noDialToneGroup: TroubleType_number = TroubleType_number_noDialToneGroup; 
  * @type {number}
  */
 export
-const TroubleType_number_noDialTone: TroubleType_number = 101; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noDialTone = 101 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noDialTone
@@ -132,7 +132,7 @@ const TroubleType_number_noDialTone: TroubleType_number = 101; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const noDialTone: TroubleType_number = TroubleType_number_noDialTone; /* SHORT_NAMED_INTEGER_VALUE */
+const noDialTone = TroubleType_number_noDialTone; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_slowDialTone
@@ -140,7 +140,7 @@ const noDialTone: TroubleType_number = TroubleType_number_noDialTone; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_slowDialTone: TroubleType_number = 102; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_slowDialTone = 102 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_slowDialTone
@@ -148,7 +148,7 @@ const TroubleType_number_slowDialTone: TroubleType_number = 102; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const slowDialTone: TroubleType_number = TroubleType_number_slowDialTone; /* SHORT_NAMED_INTEGER_VALUE */
+const slowDialTone = TroubleType_number_slowDialTone; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitDead
@@ -156,7 +156,7 @@ const slowDialTone: TroubleType_number = TroubleType_number_slowDialTone; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_circuitDead: TroubleType_number = 103; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_circuitDead = 103 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitDead
@@ -164,7 +164,7 @@ const TroubleType_number_circuitDead: TroubleType_number = 103; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const circuitDead: TroubleType_number = TroubleType_number_circuitDead; /* SHORT_NAMED_INTEGER_VALUE */
+const circuitDead = TroubleType_number_circuitDead; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOutGroup
@@ -172,7 +172,7 @@ const circuitDead: TroubleType_number = TroubleType_number_circuitDead; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_canNotCallOutGroup: TroubleType_number = 200; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotCallOutGroup = 200 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOutGroup
@@ -180,7 +180,7 @@ const TroubleType_number_canNotCallOutGroup: TroubleType_number = 200; /* LONG_N
  * @type {number}
  */
 export
-const canNotCallOutGroup: TroubleType_number = TroubleType_number_canNotCallOutGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotCallOutGroup = TroubleType_number_canNotCallOutGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOut
@@ -188,7 +188,7 @@ const canNotCallOutGroup: TroubleType_number = TroubleType_number_canNotCallOutG
  * @type {number}
  */
 export
-const TroubleType_number_canNotCallOut: TroubleType_number = 201; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotCallOut = 201 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOut
@@ -196,7 +196,7 @@ const TroubleType_number_canNotCallOut: TroubleType_number = 201; /* LONG_NAMED_
  * @type {number}
  */
 export
-const canNotCallOut: TroubleType_number = TroubleType_number_canNotCallOut; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotCallOut = TroubleType_number_canNotCallOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBreakDialTone
@@ -204,7 +204,7 @@ const canNotCallOut: TroubleType_number = TroubleType_number_canNotCallOut; /* S
  * @type {number}
  */
 export
-const TroubleType_number_canNotBreakDialTone: TroubleType_number = 203; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBreakDialTone = 203 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBreakDialTone
@@ -212,7 +212,7 @@ const TroubleType_number_canNotBreakDialTone: TroubleType_number = 203; /* LONG_
  * @type {number}
  */
 export
-const canNotBreakDialTone: TroubleType_number = TroubleType_number_canNotBreakDialTone; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBreakDialTone = TroubleType_number_canNotBreakDialTone; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dialToneAfterDialing
@@ -220,7 +220,7 @@ const canNotBreakDialTone: TroubleType_number = TroubleType_number_canNotBreakDi
  * @type {number}
  */
 export
-const TroubleType_number_dialToneAfterDialing: TroubleType_number = 204; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_dialToneAfterDialing = 204 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dialToneAfterDialing
@@ -228,7 +228,7 @@ const TroubleType_number_dialToneAfterDialing: TroubleType_number = 204; /* LONG
  * @type {number}
  */
 export
-const dialToneAfterDialing: TroubleType_number = TroubleType_number_dialToneAfterDialing; /* SHORT_NAMED_INTEGER_VALUE */
+const dialToneAfterDialing = TroubleType_number_dialToneAfterDialing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highAndDry
@@ -236,7 +236,7 @@ const dialToneAfterDialing: TroubleType_number = TroubleType_number_dialToneAfte
  * @type {number}
  */
 export
-const TroubleType_number_highAndDry: TroubleType_number = 205; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_highAndDry = 205 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highAndDry
@@ -244,7 +244,7 @@ const TroubleType_number_highAndDry: TroubleType_number = 205; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const highAndDry: TroubleType_number = TroubleType_number_highAndDry; /* SHORT_NAMED_INTEGER_VALUE */
+const highAndDry = TroubleType_number_highAndDry; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaise
@@ -252,7 +252,7 @@ const highAndDry: TroubleType_number = TroubleType_number_highAndDry; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_canNotRaise: TroubleType_number = 206; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotRaise = 206 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaise
@@ -260,7 +260,7 @@ const TroubleType_number_canNotRaise: TroubleType_number = 206; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const canNotRaise: TroubleType_number = TroubleType_number_canNotRaise; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotRaise = TroubleType_number_canNotRaise; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_allAccessBusy
@@ -268,7 +268,7 @@ const canNotRaise: TroubleType_number = TroubleType_number_canNotRaise; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_allAccessBusy: TroubleType_number = 207; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_allAccessBusy = 207 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_allAccessBusy
@@ -276,7 +276,7 @@ const TroubleType_number_allAccessBusy: TroubleType_number = 207; /* LONG_NAMED_
  * @type {number}
  */
 export
-const allAccessBusy: TroubleType_number = TroubleType_number_allAccessBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const allAccessBusy = TroubleType_number_allAccessBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOut2
@@ -284,7 +284,7 @@ const allAccessBusy: TroubleType_number = TroubleType_number_allAccessBusy; /* S
  * @type {number}
  */
 export
-const TroubleType_number_canNotCallOut2: TroubleType_number = 208; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotCallOut2 = 208 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOut2
@@ -292,7 +292,7 @@ const TroubleType_number_canNotCallOut2: TroubleType_number = 208; /* LONG_NAMED
  * @type {number}
  */
 export
-const canNotCallOut2: TroubleType_number = TroubleType_number_canNotCallOut2; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotCallOut2 = TroubleType_number_canNotCallOut2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallLongDistance
@@ -300,7 +300,7 @@ const canNotCallOut2: TroubleType_number = TroubleType_number_canNotCallOut2; /*
  * @type {number}
  */
 export
-const TroubleType_number_canNotCallLongDistance: TroubleType_number = 209; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotCallLongDistance = 209 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallLongDistance
@@ -308,7 +308,7 @@ const TroubleType_number_canNotCallLongDistance: TroubleType_number = 209; /* LO
  * @type {number}
  */
 export
-const canNotCallLongDistance: TroubleType_number = TroubleType_number_canNotCallLongDistance; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotCallLongDistance = TroubleType_number_canNotCallLongDistance; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOverseas
@@ -316,7 +316,7 @@ const canNotCallLongDistance: TroubleType_number = TroubleType_number_canNotCall
  * @type {number}
  */
 export
-const TroubleType_number_canNotCallOverseas: TroubleType_number = 210; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotCallOverseas = 210 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotCallOverseas
@@ -324,7 +324,7 @@ const TroubleType_number_canNotCallOverseas: TroubleType_number = 210; /* LONG_N
  * @type {number}
  */
 export
-const canNotCallOverseas: TroubleType_number = TroubleType_number_canNotCallOverseas; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotCallOverseas = TroubleType_number_canNotCallOverseas; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_speedCall
@@ -332,7 +332,7 @@ const canNotCallOverseas: TroubleType_number = TroubleType_number_canNotCallOver
  * @type {number}
  */
 export
-const TroubleType_number_speedCall: TroubleType_number = 211; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_speedCall = 211 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_speedCall
@@ -340,7 +340,7 @@ const TroubleType_number_speedCall: TroubleType_number = 211; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const speedCall: TroubleType_number = TroubleType_number_speedCall; /* SHORT_NAMED_INTEGER_VALUE */
+const speedCall = TroubleType_number_speedCall; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeCalledGroup
@@ -348,7 +348,7 @@ const speedCall: TroubleType_number = TroubleType_number_speedCall; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_canNotBeCalledGroup: TroubleType_number = 300; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBeCalledGroup = 300 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeCalledGroup
@@ -356,7 +356,7 @@ const TroubleType_number_canNotBeCalledGroup: TroubleType_number = 300; /* LONG_
  * @type {number}
  */
 export
-const canNotBeCalledGroup: TroubleType_number = TroubleType_number_canNotBeCalledGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBeCalledGroup = TroubleType_number_canNotBeCalledGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeCalled
@@ -364,7 +364,7 @@ const canNotBeCalledGroup: TroubleType_number = TroubleType_number_canNotBeCalle
  * @type {number}
  */
 export
-const TroubleType_number_canNotBeCalled: TroubleType_number = 301; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBeCalled = 301 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeCalled
@@ -372,7 +372,7 @@ const TroubleType_number_canNotBeCalled: TroubleType_number = 301; /* LONG_NAMED
  * @type {number}
  */
 export
-const canNotBeCalled: TroubleType_number = TroubleType_number_canNotBeCalled; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBeCalled = TroubleType_number_canNotBeCalled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeCalledBusy
@@ -380,7 +380,7 @@ const canNotBeCalled: TroubleType_number = TroubleType_number_canNotBeCalled; /*
  * @type {number}
  */
 export
-const TroubleType_number_canNotBeCalledBusy: TroubleType_number = 302; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBeCalledBusy = 302 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeCalledBusy
@@ -388,7 +388,7 @@ const TroubleType_number_canNotBeCalledBusy: TroubleType_number = 302; /* LONG_N
  * @type {number}
  */
 export
-const canNotBeCalledBusy: TroubleType_number = TroubleType_number_canNotBeCalledBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBeCalledBusy = TroubleType_number_canNotBeCalledBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_doNotGetCalled
@@ -396,7 +396,7 @@ const canNotBeCalledBusy: TroubleType_number = TroubleType_number_canNotBeCalled
  * @type {number}
  */
 export
-const TroubleType_number_doNotGetCalled: TroubleType_number = 303; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_doNotGetCalled = 303 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_doNotGetCalled
@@ -404,7 +404,7 @@ const TroubleType_number_doNotGetCalled: TroubleType_number = 303; /* LONG_NAMED
  * @type {number}
  */
 export
-const doNotGetCalled: TroubleType_number = TroubleType_number_doNotGetCalled; /* SHORT_NAMED_INTEGER_VALUE */
+const doNotGetCalled = TroubleType_number_doNotGetCalled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotTripRing
@@ -412,7 +412,7 @@ const doNotGetCalled: TroubleType_number = TroubleType_number_doNotGetCalled; /*
  * @type {number}
  */
 export
-const TroubleType_number_canNotTripRing: TroubleType_number = 304; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotTripRing = 304 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotTripRing
@@ -420,7 +420,7 @@ const TroubleType_number_canNotTripRing: TroubleType_number = 304; /* LONG_NAMED
  * @type {number}
  */
 export
-const canNotTripRing: TroubleType_number = TroubleType_number_canNotTripRing; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotTripRing = TroubleType_number_canNotTripRing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_falseRings
@@ -428,7 +428,7 @@ const canNotTripRing: TroubleType_number = TroubleType_number_canNotTripRing; /*
  * @type {number}
  */
 export
-const TroubleType_number_falseRings: TroubleType_number = 305; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_falseRings = 305 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_falseRings
@@ -436,7 +436,7 @@ const TroubleType_number_falseRings: TroubleType_number = 305; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const falseRings: TroubleType_number = TroubleType_number_falseRings; /* SHORT_NAMED_INTEGER_VALUE */
+const falseRings = TroubleType_number_falseRings; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_doNotAnswer
@@ -444,7 +444,7 @@ const falseRings: TroubleType_number = TroubleType_number_falseRings; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_doNotAnswer: TroubleType_number = 306; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_doNotAnswer = 306 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_doNotAnswer
@@ -452,7 +452,7 @@ const TroubleType_number_doNotAnswer: TroubleType_number = 306; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const doNotAnswer: TroubleType_number = TroubleType_number_doNotAnswer; /* SHORT_NAMED_INTEGER_VALUE */
+const doNotAnswer = TroubleType_number_doNotAnswer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_reachRecording
@@ -460,7 +460,7 @@ const doNotAnswer: TroubleType_number = TroubleType_number_doNotAnswer; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_reachRecording: TroubleType_number = 307; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_reachRecording = 307 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_reachRecording
@@ -468,7 +468,7 @@ const TroubleType_number_reachRecording: TroubleType_number = 307; /* LONG_NAMED
  * @type {number}
  */
 export
-const reachRecording: TroubleType_number = TroubleType_number_reachRecording; /* SHORT_NAMED_INTEGER_VALUE */
+const reachRecording = TroubleType_number_reachRecording; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaiseAStation
@@ -476,7 +476,7 @@ const reachRecording: TroubleType_number = TroubleType_number_reachRecording; /*
  * @type {number}
  */
 export
-const TroubleType_number_canNotRaiseAStation: TroubleType_number = 308; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotRaiseAStation = 308 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaiseAStation
@@ -484,7 +484,7 @@ const TroubleType_number_canNotRaiseAStation: TroubleType_number = 308; /* LONG_
  * @type {number}
  */
 export
-const canNotRaiseAStation: TroubleType_number = TroubleType_number_canNotRaiseAStation; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotRaiseAStation = TroubleType_number_canNotRaiseAStation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaiseADrop
@@ -492,7 +492,7 @@ const canNotRaiseAStation: TroubleType_number = TroubleType_number_canNotRaiseAS
  * @type {number}
  */
 export
-const TroubleType_number_canNotRaiseADrop: TroubleType_number = 309; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotRaiseADrop = 309 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaiseADrop
@@ -500,7 +500,7 @@ const TroubleType_number_canNotRaiseADrop: TroubleType_number = 309; /* LONG_NAM
  * @type {number}
  */
 export
-const canNotRaiseADrop: TroubleType_number = TroubleType_number_canNotRaiseADrop; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotRaiseADrop = TroubleType_number_canNotRaiseADrop; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaiseACircuitLocation
@@ -508,7 +508,7 @@ const canNotRaiseADrop: TroubleType_number = TroubleType_number_canNotRaiseADrop
  * @type {number}
  */
 export
-const TroubleType_number_canNotRaiseACircuitLocation: TroubleType_number = 310; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotRaiseACircuitLocation = 310 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRaiseACircuitLocation
@@ -516,7 +516,7 @@ const TroubleType_number_canNotRaiseACircuitLocation: TroubleType_number = 310; 
  * @type {number}
  */
 export
-const canNotRaiseACircuitLocation: TroubleType_number = TroubleType_number_canNotRaiseACircuitLocation; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotRaiseACircuitLocation = TroubleType_number_canNotRaiseACircuitLocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_ringNoAnswer
@@ -524,7 +524,7 @@ const canNotRaiseACircuitLocation: TroubleType_number = TroubleType_number_canNo
  * @type {number}
  */
 export
-const TroubleType_number_ringNoAnswer: TroubleType_number = 311; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_ringNoAnswer = 311 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_ringNoAnswer
@@ -532,7 +532,7 @@ const TroubleType_number_ringNoAnswer: TroubleType_number = 311; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const ringNoAnswer: TroubleType_number = TroubleType_number_ringNoAnswer; /* SHORT_NAMED_INTEGER_VALUE */
+const ringNoAnswer = TroubleType_number_ringNoAnswer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_reorder
@@ -540,7 +540,7 @@ const ringNoAnswer: TroubleType_number = TroubleType_number_ringNoAnswer; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_reorder: TroubleType_number = 312; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_reorder = 312 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_reorder
@@ -548,7 +548,7 @@ const TroubleType_number_reorder: TroubleType_number = 312; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const reorder: TroubleType_number = TroubleType_number_reorder; /* SHORT_NAMED_INTEGER_VALUE */
+const reorder = TroubleType_number_reorder; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_alwaysBusy
@@ -556,7 +556,7 @@ const reorder: TroubleType_number = TroubleType_number_reorder; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const TroubleType_number_alwaysBusy: TroubleType_number = 313; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_alwaysBusy = 313 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_alwaysBusy
@@ -564,7 +564,7 @@ const TroubleType_number_alwaysBusy: TroubleType_number = 313; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const alwaysBusy: TroubleType_number = TroubleType_number_alwaysBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const alwaysBusy = TroubleType_number_alwaysBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellDoesNotRing
@@ -572,7 +572,7 @@ const alwaysBusy: TroubleType_number = TroubleType_number_alwaysBusy; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_bellDoesNotRing: TroubleType_number = 314; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_bellDoesNotRing = 314 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellDoesNotRing
@@ -580,7 +580,7 @@ const TroubleType_number_bellDoesNotRing: TroubleType_number = 314; /* LONG_NAME
  * @type {number}
  */
 export
-const bellDoesNotRing: TroubleType_number = TroubleType_number_bellDoesNotRing; /* SHORT_NAMED_INTEGER_VALUE */
+const bellDoesNotRing = TroubleType_number_bellDoesNotRing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellDoesNotRing2
@@ -588,7 +588,7 @@ const bellDoesNotRing: TroubleType_number = TroubleType_number_bellDoesNotRing; 
  * @type {number}
  */
 export
-const TroubleType_number_bellDoesNotRing2: TroubleType_number = 315; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_bellDoesNotRing2 = 315 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellDoesNotRing2
@@ -596,7 +596,7 @@ const TroubleType_number_bellDoesNotRing2: TroubleType_number = 315; /* LONG_NAM
  * @type {number}
  */
 export
-const bellDoesNotRing2: TroubleType_number = TroubleType_number_bellDoesNotRing2; /* SHORT_NAMED_INTEGER_VALUE */
+const bellDoesNotRing2 = TroubleType_number_bellDoesNotRing2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellRingsCanNotAnswer
@@ -604,7 +604,7 @@ const bellDoesNotRing2: TroubleType_number = TroubleType_number_bellDoesNotRing2
  * @type {number}
  */
 export
-const TroubleType_number_bellRingsCanNotAnswer: TroubleType_number = 316; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_bellRingsCanNotAnswer = 316 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellRingsCanNotAnswer
@@ -612,7 +612,7 @@ const TroubleType_number_bellRingsCanNotAnswer: TroubleType_number = 316; /* LON
  * @type {number}
  */
 export
-const bellRingsCanNotAnswer: TroubleType_number = TroubleType_number_bellRingsCanNotAnswer; /* SHORT_NAMED_INTEGER_VALUE */
+const bellRingsCanNotAnswer = TroubleType_number_bellRingsCanNotAnswer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellRingsAfterAnswer
@@ -620,7 +620,7 @@ const bellRingsCanNotAnswer: TroubleType_number = TroubleType_number_bellRingsCa
  * @type {number}
  */
 export
-const TroubleType_number_bellRingsAfterAnswer: TroubleType_number = 317; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_bellRingsAfterAnswer = 317 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_bellRingsAfterAnswer
@@ -628,7 +628,7 @@ const TroubleType_number_bellRingsAfterAnswer: TroubleType_number = 317; /* LONG
  * @type {number}
  */
 export
-const bellRingsAfterAnswer: TroubleType_number = TroubleType_number_bellRingsAfterAnswer; /* SHORT_NAMED_INTEGER_VALUE */
+const bellRingsAfterAnswer = TroubleType_number_bellRingsAfterAnswer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noRingNoAnswer
@@ -636,7 +636,7 @@ const bellRingsAfterAnswer: TroubleType_number = TroubleType_number_bellRingsAft
  * @type {number}
  */
 export
-const TroubleType_number_noRingNoAnswer: TroubleType_number = 318; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noRingNoAnswer = 318 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noRingNoAnswer
@@ -644,7 +644,7 @@ const TroubleType_number_noRingNoAnswer: TroubleType_number = 318; /* LONG_NAMED
  * @type {number}
  */
 export
-const noRingNoAnswer: TroubleType_number = TroubleType_number_noRingNoAnswer; /* SHORT_NAMED_INTEGER_VALUE */
+const noRingNoAnswer = TroubleType_number_noRingNoAnswer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherRingTrouble
@@ -652,7 +652,7 @@ const noRingNoAnswer: TroubleType_number = TroubleType_number_noRingNoAnswer; /*
  * @type {number}
  */
 export
-const TroubleType_number_otherRingTrouble: TroubleType_number = 319; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_otherRingTrouble = 319 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherRingTrouble
@@ -660,7 +660,7 @@ const TroubleType_number_otherRingTrouble: TroubleType_number = 319; /* LONG_NAM
  * @type {number}
  */
 export
-const otherRingTrouble: TroubleType_number = TroubleType_number_otherRingTrouble; /* SHORT_NAMED_INTEGER_VALUE */
+const otherRingTrouble = TroubleType_number_otherRingTrouble; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_receivesCallsForWrongNumber
@@ -668,7 +668,7 @@ const otherRingTrouble: TroubleType_number = TroubleType_number_otherRingTrouble
  * @type {number}
  */
 export
-const TroubleType_number_receivesCallsForWrongNumber: TroubleType_number = 320; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_receivesCallsForWrongNumber = 320 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_receivesCallsForWrongNumber
@@ -676,7 +676,7 @@ const TroubleType_number_receivesCallsForWrongNumber: TroubleType_number = 320; 
  * @type {number}
  */
 export
-const receivesCallsForWrongNumber: TroubleType_number = TroubleType_number_receivesCallsForWrongNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const receivesCallsForWrongNumber = TroubleType_number_receivesCallsForWrongNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_recordingOnLine
@@ -684,7 +684,7 @@ const receivesCallsForWrongNumber: TroubleType_number = TroubleType_number_recei
  * @type {number}
  */
 export
-const TroubleType_number_recordingOnLine: TroubleType_number = 321; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_recordingOnLine = 321 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_recordingOnLine
@@ -692,7 +692,7 @@ const TroubleType_number_recordingOnLine: TroubleType_number = 321; /* LONG_NAME
  * @type {number}
  */
 export
-const recordingOnLine: TroubleType_number = TroubleType_number_recordingOnLine; /* SHORT_NAMED_INTEGER_VALUE */
+const recordingOnLine = TroubleType_number_recordingOnLine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeHeardGroup
@@ -700,7 +700,7 @@ const recordingOnLine: TroubleType_number = TroubleType_number_recordingOnLine; 
  * @type {number}
  */
 export
-const TroubleType_number_canNotBeHeardGroup: TroubleType_number = 400; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBeHeardGroup = 400 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeHeardGroup
@@ -708,7 +708,7 @@ const TroubleType_number_canNotBeHeardGroup: TroubleType_number = 400; /* LONG_N
  * @type {number}
  */
 export
-const canNotBeHeardGroup: TroubleType_number = TroubleType_number_canNotBeHeardGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBeHeardGroup = TroubleType_number_canNotBeHeardGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeHeard
@@ -716,7 +716,7 @@ const canNotBeHeardGroup: TroubleType_number = TroubleType_number_canNotBeHeardG
  * @type {number}
  */
 export
-const TroubleType_number_canNotBeHeard: TroubleType_number = 401; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBeHeard = 401 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeHeard
@@ -724,7 +724,7 @@ const TroubleType_number_canNotBeHeard: TroubleType_number = 401; /* LONG_NAMED_
  * @type {number}
  */
 export
-const canNotBeHeard: TroubleType_number = TroubleType_number_canNotBeHeard; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBeHeard = TroubleType_number_canNotBeHeard; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotHear
@@ -732,7 +732,7 @@ const canNotBeHeard: TroubleType_number = TroubleType_number_canNotBeHeard; /* S
  * @type {number}
  */
 export
-const TroubleType_number_canNotHear: TroubleType_number = 402; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotHear = 402 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotHear
@@ -740,7 +740,7 @@ const TroubleType_number_canNotHear: TroubleType_number = 402; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const canNotHear: TroubleType_number = TroubleType_number_canNotHear; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotHear = TroubleType_number_canNotHear; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_fading
@@ -748,7 +748,7 @@ const canNotHear: TroubleType_number = TroubleType_number_canNotHear; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_fading: TroubleType_number = 403; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_fading = 403 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_fading
@@ -756,7 +756,7 @@ const TroubleType_number_fading: TroubleType_number = 403; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const fading: TroubleType_number = TroubleType_number_fading; /* SHORT_NAMED_INTEGER_VALUE */
+const fading = TroubleType_number_fading; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_distant
@@ -764,7 +764,7 @@ const fading: TroubleType_number = TroubleType_number_fading; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const TroubleType_number_distant: TroubleType_number = 404; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_distant = 404 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_distant
@@ -772,7 +772,7 @@ const TroubleType_number_distant: TroubleType_number = 404; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const distant: TroubleType_number = TroubleType_number_distant; /* SHORT_NAMED_INTEGER_VALUE */
+const distant = TroubleType_number_distant; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_reachedWrongNumberGroup
@@ -780,7 +780,7 @@ const distant: TroubleType_number = TroubleType_number_distant; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const TroubleType_number_reachedWrongNumberGroup: TroubleType_number = 500; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_reachedWrongNumberGroup = 500 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_reachedWrongNumberGroup
@@ -788,7 +788,7 @@ const TroubleType_number_reachedWrongNumberGroup: TroubleType_number = 500; /* L
  * @type {number}
  */
 export
-const reachedWrongNumberGroup: TroubleType_number = TroubleType_number_reachedWrongNumberGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const reachedWrongNumberGroup = TroubleType_number_reachedWrongNumberGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_wrongNumber
@@ -796,7 +796,7 @@ const reachedWrongNumberGroup: TroubleType_number = TroubleType_number_reachedWr
  * @type {number}
  */
 export
-const TroubleType_number_wrongNumber: TroubleType_number = 501; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_wrongNumber = 501 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_wrongNumber
@@ -804,7 +804,7 @@ const TroubleType_number_wrongNumber: TroubleType_number = 501; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const wrongNumber: TroubleType_number = TroubleType_number_wrongNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongNumber = TroubleType_number_wrongNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitOperationGroup
@@ -812,7 +812,7 @@ const wrongNumber: TroubleType_number = TroubleType_number_wrongNumber; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_circuitOperationGroup: TroubleType_number = 600; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_circuitOperationGroup = 600 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitOperationGroup
@@ -820,7 +820,7 @@ const TroubleType_number_circuitOperationGroup: TroubleType_number = 600; /* LON
  * @type {number}
  */
 export
-const circuitOperationGroup: TroubleType_number = TroubleType_number_circuitOperationGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const circuitOperationGroup = TroubleType_number_circuitOperationGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_open
@@ -828,7 +828,7 @@ const circuitOperationGroup: TroubleType_number = TroubleType_number_circuitOper
  * @type {number}
  */
 export
-const TroubleType_number_open: TroubleType_number = 601; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_open = 601 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_open
@@ -836,7 +836,7 @@ const TroubleType_number_open: TroubleType_number = 601; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const open: TroubleType_number = TroubleType_number_open; /* SHORT_NAMED_INTEGER_VALUE */
+const open = TroubleType_number_open; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_falseDisconnect
@@ -844,7 +844,7 @@ const open: TroubleType_number = TroubleType_number_open; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const TroubleType_number_falseDisconnect: TroubleType_number = 602; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_falseDisconnect = 602 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_falseDisconnect
@@ -852,7 +852,7 @@ const TroubleType_number_falseDisconnect: TroubleType_number = 602; /* LONG_NAME
  * @type {number}
  */
 export
-const falseDisconnect: TroubleType_number = TroubleType_number_falseDisconnect; /* SHORT_NAMED_INTEGER_VALUE */
+const falseDisconnect = TroubleType_number_falseDisconnect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_grounded
@@ -860,7 +860,7 @@ const falseDisconnect: TroubleType_number = TroubleType_number_falseDisconnect; 
  * @type {number}
  */
 export
-const TroubleType_number_grounded: TroubleType_number = 603; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_grounded = 603 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_grounded
@@ -868,7 +868,7 @@ const TroubleType_number_grounded: TroubleType_number = 603; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const grounded: TroubleType_number = TroubleType_number_grounded; /* SHORT_NAMED_INTEGER_VALUE */
+const grounded = TroubleType_number_grounded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeSignalled
@@ -876,7 +876,7 @@ const grounded: TroubleType_number = TroubleType_number_grounded; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_canNotBeSignalled: TroubleType_number = 604; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotBeSignalled = 604 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotBeSignalled
@@ -884,7 +884,7 @@ const TroubleType_number_canNotBeSignalled: TroubleType_number = 604; /* LONG_NA
  * @type {number}
  */
 export
-const canNotBeSignalled: TroubleType_number = TroubleType_number_canNotBeSignalled; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotBeSignalled = TroubleType_number_canNotBeSignalled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotSignal
@@ -892,7 +892,7 @@ const canNotBeSignalled: TroubleType_number = TroubleType_number_canNotBeSignall
  * @type {number}
  */
 export
-const TroubleType_number_canNotSignal: TroubleType_number = 605; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotSignal = 605 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotSignal
@@ -900,7 +900,7 @@ const TroubleType_number_canNotSignal: TroubleType_number = 605; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const canNotSignal: TroubleType_number = TroubleType_number_canNotSignal; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotSignal = TroubleType_number_canNotSignal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_permanentSignal
@@ -908,7 +908,7 @@ const canNotSignal: TroubleType_number = TroubleType_number_canNotSignal; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_permanentSignal: TroubleType_number = 606; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_permanentSignal = 606 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_permanentSignal
@@ -916,7 +916,7 @@ const TroubleType_number_permanentSignal: TroubleType_number = 606; /* LONG_NAME
  * @type {number}
  */
 export
-const permanentSignal: TroubleType_number = TroubleType_number_permanentSignal; /* SHORT_NAMED_INTEGER_VALUE */
+const permanentSignal = TroubleType_number_permanentSignal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_improperSupervision
@@ -924,7 +924,7 @@ const permanentSignal: TroubleType_number = TroubleType_number_permanentSignal; 
  * @type {number}
  */
 export
-const TroubleType_number_improperSupervision: TroubleType_number = 607; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_improperSupervision = 607 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_improperSupervision
@@ -932,7 +932,7 @@ const TroubleType_number_improperSupervision: TroubleType_number = 607; /* LONG_
  * @type {number}
  */
 export
-const improperSupervision: TroubleType_number = TroubleType_number_improperSupervision; /* SHORT_NAMED_INTEGER_VALUE */
+const improperSupervision = TroubleType_number_improperSupervision; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_supervision
@@ -940,7 +940,7 @@ const improperSupervision: TroubleType_number = TroubleType_number_improperSuper
  * @type {number}
  */
 export
-const TroubleType_number_supervision: TroubleType_number = 608; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_supervision = 608 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_supervision
@@ -948,7 +948,7 @@ const TroubleType_number_supervision: TroubleType_number = 608; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const supervision: TroubleType_number = TroubleType_number_supervision; /* SHORT_NAMED_INTEGER_VALUE */
+const supervision = TroubleType_number_supervision; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotMeet
@@ -956,7 +956,7 @@ const supervision: TroubleType_number = TroubleType_number_supervision; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_canNotMeet: TroubleType_number = 609; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotMeet = 609 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotMeet
@@ -964,7 +964,7 @@ const TroubleType_number_canNotMeet: TroubleType_number = 609; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const canNotMeet: TroubleType_number = TroubleType_number_canNotMeet; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotMeet = TroubleType_number_canNotMeet; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotReleaseCircuit
@@ -972,7 +972,7 @@ const canNotMeet: TroubleType_number = TroubleType_number_canNotMeet; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_canNotReleaseCircuit: TroubleType_number = 610; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotReleaseCircuit = 610 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotReleaseCircuit
@@ -980,7 +980,7 @@ const TroubleType_number_canNotReleaseCircuit: TroubleType_number = 610; /* LONG
  * @type {number}
  */
 export
-const canNotReleaseCircuit: TroubleType_number = TroubleType_number_canNotReleaseCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotReleaseCircuit = TroubleType_number_canNotReleaseCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hungUp
@@ -988,7 +988,7 @@ const canNotReleaseCircuit: TroubleType_number = TroubleType_number_canNotReleas
  * @type {number}
  */
 export
-const TroubleType_number_hungUp: TroubleType_number = 611; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_hungUp = 611 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hungUp
@@ -996,7 +996,7 @@ const TroubleType_number_hungUp: TroubleType_number = 611; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const hungUp: TroubleType_number = TroubleType_number_hungUp; /* SHORT_NAMED_INTEGER_VALUE */
+const hungUp = TroubleType_number_hungUp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noWinkStart
@@ -1004,7 +1004,7 @@ const hungUp: TroubleType_number = TroubleType_number_hungUp; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const TroubleType_number_noWinkStart: TroubleType_number = 612; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noWinkStart = 612 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noWinkStart
@@ -1012,7 +1012,7 @@ const TroubleType_number_noWinkStart: TroubleType_number = 612; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const noWinkStart: TroubleType_number = TroubleType_number_noWinkStart; /* SHORT_NAMED_INTEGER_VALUE */
+const noWinkStart = TroubleType_number_noWinkStart; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noSF
@@ -1020,7 +1020,7 @@ const noWinkStart: TroubleType_number = TroubleType_number_noWinkStart; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_noSF: TroubleType_number = 613; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noSF = 613 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noSF
@@ -1028,7 +1028,7 @@ const TroubleType_number_noSF: TroubleType_number = 613; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const noSF: TroubleType_number = TroubleType_number_noSF; /* SHORT_NAMED_INTEGER_VALUE */
+const noSF = TroubleType_number_noSF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lowSF
@@ -1036,7 +1036,7 @@ const noSF: TroubleType_number = TroubleType_number_noSF; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const TroubleType_number_lowSF: TroubleType_number = 614; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lowSF = 614 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lowSF
@@ -1044,7 +1044,7 @@ const TroubleType_number_lowSF: TroubleType_number = 614; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const lowSF: TroubleType_number = TroubleType_number_lowSF; /* SHORT_NAMED_INTEGER_VALUE */
+const lowSF = TroubleType_number_lowSF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noContinuity
@@ -1052,7 +1052,7 @@ const lowSF: TroubleType_number = TroubleType_number_lowSF; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const TroubleType_number_noContinuity: TroubleType_number = 615; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noContinuity = 615 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noContinuity
@@ -1060,7 +1060,7 @@ const TroubleType_number_noContinuity: TroubleType_number = 615; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const noContinuity: TroubleType_number = TroubleType_number_noContinuity; /* SHORT_NAMED_INTEGER_VALUE */
+const noContinuity = TroubleType_number_noContinuity; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cutCable
@@ -1068,7 +1068,7 @@ const noContinuity: TroubleType_number = TroubleType_number_noContinuity; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_cutCable: TroubleType_number = 616; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_cutCable = 616 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cutCable
@@ -1076,7 +1076,7 @@ const TroubleType_number_cutCable: TroubleType_number = 616; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const cutCable: TroubleType_number = TroubleType_number_cutCable; /* SHORT_NAMED_INTEGER_VALUE */
+const cutCable = TroubleType_number_cutCable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_openToDEMARC
@@ -1084,7 +1084,7 @@ const cutCable: TroubleType_number = TroubleType_number_cutCable; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_openToDEMARC: TroubleType_number = 617; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_openToDEMARC = 617 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_openToDEMARC
@@ -1092,7 +1092,7 @@ const TroubleType_number_openToDEMARC: TroubleType_number = 617; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const openToDEMARC: TroubleType_number = TroubleType_number_openToDEMARC; /* SHORT_NAMED_INTEGER_VALUE */
+const openToDEMARC = TroubleType_number_openToDEMARC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noRingGenerator
@@ -1100,7 +1100,7 @@ const openToDEMARC: TroubleType_number = TroubleType_number_openToDEMARC; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_noRingGenerator: TroubleType_number = 618; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noRingGenerator = 618 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noRingGenerator
@@ -1108,7 +1108,7 @@ const TroubleType_number_noRingGenerator: TroubleType_number = 618; /* LONG_NAME
  * @type {number}
  */
 export
-const noRingGenerator: TroubleType_number = TroubleType_number_noRingGenerator; /* SHORT_NAMED_INTEGER_VALUE */
+const noRingGenerator = TroubleType_number_noRingGenerator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_badERL
@@ -1116,7 +1116,7 @@ const noRingGenerator: TroubleType_number = TroubleType_number_noRingGenerator; 
  * @type {number}
  */
 export
-const TroubleType_number_badERL: TroubleType_number = 619; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_badERL = 619 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_badERL
@@ -1124,7 +1124,7 @@ const TroubleType_number_badERL: TroubleType_number = 619; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const badERL: TroubleType_number = TroubleType_number_badERL; /* SHORT_NAMED_INTEGER_VALUE */
+const badERL = TroubleType_number_badERL; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_echo
@@ -1132,7 +1132,7 @@ const badERL: TroubleType_number = TroubleType_number_badERL; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const TroubleType_number_echo: TroubleType_number = 620; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_echo = 620 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_echo
@@ -1140,7 +1140,7 @@ const TroubleType_number_echo: TroubleType_number = 620; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const echo: TroubleType_number = TroubleType_number_echo; /* SHORT_NAMED_INTEGER_VALUE */
+const echo = TroubleType_number_echo; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hollow
@@ -1148,7 +1148,7 @@ const echo: TroubleType_number = TroubleType_number_echo; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const TroubleType_number_hollow: TroubleType_number = 621; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_hollow = 621 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hollow
@@ -1156,7 +1156,7 @@ const TroubleType_number_hollow: TroubleType_number = 621; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const hollow: TroubleType_number = TroubleType_number_hollow; /* SHORT_NAMED_INTEGER_VALUE */
+const hollow = TroubleType_number_hollow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitDeadNoActivity
@@ -1164,7 +1164,7 @@ const hollow: TroubleType_number = TroubleType_number_hollow; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const TroubleType_number_circuitDeadNoActivity: TroubleType_number = 622; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_circuitDeadNoActivity = 622 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitDeadNoActivity
@@ -1172,7 +1172,7 @@ const TroubleType_number_circuitDeadNoActivity: TroubleType_number = 622; /* LON
  * @type {number}
  */
 export
-const circuitDeadNoActivity: TroubleType_number = TroubleType_number_circuitDeadNoActivity; /* SHORT_NAMED_INTEGER_VALUE */
+const circuitDeadNoActivity = TroubleType_number_circuitDeadNoActivity; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitDown
@@ -1180,7 +1180,7 @@ const circuitDeadNoActivity: TroubleType_number = TroubleType_number_circuitDead
  * @type {number}
  */
 export
-const TroubleType_number_circuitDown: TroubleType_number = 623; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_circuitDown = 623 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitDown
@@ -1188,7 +1188,7 @@ const TroubleType_number_circuitDown: TroubleType_number = 623; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const circuitDown: TroubleType_number = TroubleType_number_circuitDown; /* SHORT_NAMED_INTEGER_VALUE */
+const circuitDown = TroubleType_number_circuitDown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_failingCircuit
@@ -1196,7 +1196,7 @@ const circuitDown: TroubleType_number = TroubleType_number_circuitDown; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_failingCircuit: TroubleType_number = 624; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_failingCircuit = 624 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_failingCircuit
@@ -1204,7 +1204,7 @@ const TroubleType_number_failingCircuit: TroubleType_number = 624; /* LONG_NAMED
  * @type {number}
  */
 export
-const failingCircuit: TroubleType_number = TroubleType_number_failingCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const failingCircuit = TroubleType_number_failingCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noSignal
@@ -1212,7 +1212,7 @@ const failingCircuit: TroubleType_number = TroubleType_number_failingCircuit; /*
  * @type {number}
  */
 export
-const TroubleType_number_noSignal: TroubleType_number = 625; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noSignal = 625 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noSignal
@@ -1220,7 +1220,7 @@ const TroubleType_number_noSignal: TroubleType_number = 625; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const noSignal: TroubleType_number = TroubleType_number_noSignal; /* SHORT_NAMED_INTEGER_VALUE */
+const noSignal = TroubleType_number_noSignal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_seizureOnCircuit
@@ -1228,7 +1228,7 @@ const noSignal: TroubleType_number = TroubleType_number_noSignal; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_seizureOnCircuit: TroubleType_number = 626; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_seizureOnCircuit = 626 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_seizureOnCircuit
@@ -1236,7 +1236,7 @@ const TroubleType_number_seizureOnCircuit: TroubleType_number = 626; /* LONG_NAM
  * @type {number}
  */
 export
-const seizureOnCircuit: TroubleType_number = TroubleType_number_seizureOnCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const seizureOnCircuit = TroubleType_number_seizureOnCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lossEPSCSorSwitchedServices
@@ -1244,7 +1244,7 @@ const seizureOnCircuit: TroubleType_number = TroubleType_number_seizureOnCircuit
  * @type {number}
  */
 export
-const TroubleType_number_lossEPSCSorSwitchedServices: TroubleType_number = 627; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lossEPSCSorSwitchedServices = 627 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lossEPSCSorSwitchedServices
@@ -1252,7 +1252,7 @@ const TroubleType_number_lossEPSCSorSwitchedServices: TroubleType_number = 627; 
  * @type {number}
  */
 export
-const lossEPSCSorSwitchedServices: TroubleType_number = TroubleType_number_lossEPSCSorSwitchedServices; /* SHORT_NAMED_INTEGER_VALUE */
+const lossEPSCSorSwitchedServices = TroubleType_number_lossEPSCSorSwitchedServices; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_monitorCircuit
@@ -1260,7 +1260,7 @@ const lossEPSCSorSwitchedServices: TroubleType_number = TroubleType_number_lossE
  * @type {number}
  */
 export
-const TroubleType_number_monitorCircuit: TroubleType_number = 628; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_monitorCircuit = 628 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_monitorCircuit
@@ -1268,7 +1268,7 @@ const TroubleType_number_monitorCircuit: TroubleType_number = 628; /* LONG_NAMED
  * @type {number}
  */
 export
-const monitorCircuit: TroubleType_number = TroubleType_number_monitorCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const monitorCircuit = TroubleType_number_monitorCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_newServiceNotWorking
@@ -1276,7 +1276,7 @@ const monitorCircuit: TroubleType_number = TroubleType_number_monitorCircuit; /*
  * @type {number}
  */
 export
-const TroubleType_number_newServiceNotWorking: TroubleType_number = 629; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_newServiceNotWorking = 629 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_newServiceNotWorking
@@ -1284,7 +1284,7 @@ const TroubleType_number_newServiceNotWorking: TroubleType_number = 629; /* LONG
  * @type {number}
  */
 export
-const newServiceNotWorking: TroubleType_number = TroubleType_number_newServiceNotWorking; /* SHORT_NAMED_INTEGER_VALUE */
+const newServiceNotWorking = TroubleType_number_newServiceNotWorking; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_openEPSCSorSwitchedServices
@@ -1292,7 +1292,7 @@ const newServiceNotWorking: TroubleType_number = TroubleType_number_newServiceNo
  * @type {number}
  */
 export
-const TroubleType_number_openEPSCSorSwitchedServices: TroubleType_number = 630; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_openEPSCSorSwitchedServices = 630 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_openEPSCSorSwitchedServices
@@ -1300,7 +1300,7 @@ const TroubleType_number_openEPSCSorSwitchedServices: TroubleType_number = 630; 
  * @type {number}
  */
 export
-const openEPSCSorSwitchedServices: TroubleType_number = TroubleType_number_openEPSCSorSwitchedServices; /* SHORT_NAMED_INTEGER_VALUE */
+const openEPSCSorSwitchedServices = TroubleType_number_openEPSCSorSwitchedServices; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherVoiceDescribeAdditInfo
@@ -1308,7 +1308,7 @@ const openEPSCSorSwitchedServices: TroubleType_number = TroubleType_number_openE
  * @type {number}
  */
 export
-const TroubleType_number_otherVoiceDescribeAdditInfo: TroubleType_number = 631; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_otherVoiceDescribeAdditInfo = 631 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherVoiceDescribeAdditInfo
@@ -1316,7 +1316,7 @@ const TroubleType_number_otherVoiceDescribeAdditInfo: TroubleType_number = 631; 
  * @type {number}
  */
 export
-const otherVoiceDescribeAdditInfo: TroubleType_number = TroubleType_number_otherVoiceDescribeAdditInfo; /* SHORT_NAMED_INTEGER_VALUE */
+const otherVoiceDescribeAdditInfo = TroubleType_number_otherVoiceDescribeAdditInfo; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cutOffsGroup
@@ -1324,7 +1324,7 @@ const otherVoiceDescribeAdditInfo: TroubleType_number = TroubleType_number_other
  * @type {number}
  */
 export
-const TroubleType_number_cutOffsGroup: TroubleType_number = 700; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_cutOffsGroup = 700 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cutOffsGroup
@@ -1332,7 +1332,7 @@ const TroubleType_number_cutOffsGroup: TroubleType_number = 700; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const cutOffsGroup: TroubleType_number = TroubleType_number_cutOffsGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const cutOffsGroup = TroubleType_number_cutOffsGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cutsOff
@@ -1340,7 +1340,7 @@ const cutOffsGroup: TroubleType_number = TroubleType_number_cutOffsGroup; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_cutsOff: TroubleType_number = 701; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_cutsOff = 701 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cutsOff
@@ -1348,7 +1348,7 @@ const TroubleType_number_cutsOff: TroubleType_number = 701; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const cutsOff: TroubleType_number = TroubleType_number_cutsOff; /* SHORT_NAMED_INTEGER_VALUE */
+const cutsOff = TroubleType_number_cutsOff; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noiseProblemGroup
@@ -1356,7 +1356,7 @@ const cutsOff: TroubleType_number = TroubleType_number_cutsOff; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const TroubleType_number_noiseProblemGroup: TroubleType_number = 800; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noiseProblemGroup = 800 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noiseProblemGroup
@@ -1364,7 +1364,7 @@ const TroubleType_number_noiseProblemGroup: TroubleType_number = 800; /* LONG_NA
  * @type {number}
  */
 export
-const noiseProblemGroup: TroubleType_number = TroubleType_number_noiseProblemGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const noiseProblemGroup = TroubleType_number_noiseProblemGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_intermittentNoise
@@ -1372,7 +1372,7 @@ const noiseProblemGroup: TroubleType_number = TroubleType_number_noiseProblemGro
  * @type {number}
  */
 export
-const TroubleType_number_intermittentNoise: TroubleType_number = 801; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_intermittentNoise = 801 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_intermittentNoise
@@ -1380,7 +1380,7 @@ const TroubleType_number_intermittentNoise: TroubleType_number = 801; /* LONG_NA
  * @type {number}
  */
 export
-const intermittentNoise: TroubleType_number = TroubleType_number_intermittentNoise; /* SHORT_NAMED_INTEGER_VALUE */
+const intermittentNoise = TroubleType_number_intermittentNoise; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noisy
@@ -1388,7 +1388,7 @@ const intermittentNoise: TroubleType_number = TroubleType_number_intermittentNoi
  * @type {number}
  */
 export
-const TroubleType_number_noisy: TroubleType_number = 802; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noisy = 802 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noisy
@@ -1396,7 +1396,7 @@ const TroubleType_number_noisy: TroubleType_number = 802; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const noisy: TroubleType_number = TroubleType_number_noisy; /* SHORT_NAMED_INTEGER_VALUE */
+const noisy = TroubleType_number_noisy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_foreignTone
@@ -1404,7 +1404,7 @@ const noisy: TroubleType_number = TroubleType_number_noisy; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const TroubleType_number_foreignTone: TroubleType_number = 803; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_foreignTone = 803 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_foreignTone
@@ -1412,7 +1412,7 @@ const TroubleType_number_foreignTone: TroubleType_number = 803; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const foreignTone: TroubleType_number = TroubleType_number_foreignTone; /* SHORT_NAMED_INTEGER_VALUE */
+const foreignTone = TroubleType_number_foreignTone; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_clipping
@@ -1420,7 +1420,7 @@ const foreignTone: TroubleType_number = TroubleType_number_foreignTone; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_clipping: TroubleType_number = 804; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_clipping = 804 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_clipping
@@ -1428,7 +1428,7 @@ const TroubleType_number_clipping: TroubleType_number = 804; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const clipping: TroubleType_number = TroubleType_number_clipping; /* SHORT_NAMED_INTEGER_VALUE */
+const clipping = TroubleType_number_clipping; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_crossTalk
@@ -1436,7 +1436,7 @@ const clipping: TroubleType_number = TroubleType_number_clipping; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_crossTalk: TroubleType_number = 805; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_crossTalk = 805 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_crossTalk
@@ -1444,7 +1444,7 @@ const TroubleType_number_crossTalk: TroubleType_number = 805; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const crossTalk: TroubleType_number = TroubleType_number_crossTalk; /* SHORT_NAMED_INTEGER_VALUE */
+const crossTalk = TroubleType_number_crossTalk; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_staticOnLine
@@ -1452,7 +1452,7 @@ const crossTalk: TroubleType_number = TroubleType_number_crossTalk; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_staticOnLine: TroubleType_number = 806; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_staticOnLine = 806 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_staticOnLine
@@ -1460,7 +1460,7 @@ const TroubleType_number_staticOnLine: TroubleType_number = 806; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const staticOnLine: TroubleType_number = TroubleType_number_staticOnLine; /* SHORT_NAMED_INTEGER_VALUE */
+const staticOnLine = TroubleType_number_staticOnLine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_groundHum
@@ -1468,7 +1468,7 @@ const staticOnLine: TroubleType_number = TroubleType_number_staticOnLine; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_groundHum: TroubleType_number = 807; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_groundHum = 807 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_groundHum
@@ -1476,7 +1476,7 @@ const TroubleType_number_groundHum: TroubleType_number = 807; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const groundHum: TroubleType_number = TroubleType_number_groundHum; /* SHORT_NAMED_INTEGER_VALUE */
+const groundHum = TroubleType_number_groundHum; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hearsOtherOnLine
@@ -1484,7 +1484,7 @@ const groundHum: TroubleType_number = TroubleType_number_groundHum; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_hearsOtherOnLine: TroubleType_number = 808; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_hearsOtherOnLine = 808 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hearsOtherOnLine
@@ -1492,7 +1492,7 @@ const TroubleType_number_hearsOtherOnLine: TroubleType_number = 808; /* LONG_NAM
  * @type {number}
  */
 export
-const hearsOtherOnLine: TroubleType_number = TroubleType_number_hearsOtherOnLine; /* SHORT_NAMED_INTEGER_VALUE */
+const hearsOtherOnLine = TroubleType_number_hearsOtherOnLine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_humOnLine
@@ -1500,7 +1500,7 @@ const hearsOtherOnLine: TroubleType_number = TroubleType_number_hearsOtherOnLine
  * @type {number}
  */
 export
-const TroubleType_number_humOnLine: TroubleType_number = 809; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_humOnLine = 809 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_humOnLine
@@ -1508,7 +1508,7 @@ const TroubleType_number_humOnLine: TroubleType_number = 809; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const humOnLine: TroubleType_number = TroubleType_number_humOnLine; /* SHORT_NAMED_INTEGER_VALUE */
+const humOnLine = TroubleType_number_humOnLine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_clicking
@@ -1516,7 +1516,7 @@ const humOnLine: TroubleType_number = TroubleType_number_humOnLine; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_clicking: TroubleType_number = 810; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_clicking = 810 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_clicking
@@ -1524,7 +1524,7 @@ const TroubleType_number_clicking: TroubleType_number = 810; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const clicking: TroubleType_number = TroubleType_number_clicking; /* SHORT_NAMED_INTEGER_VALUE */
+const clicking = TroubleType_number_clicking; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noiseEPSCSorSwitchedServices
@@ -1532,7 +1532,7 @@ const clicking: TroubleType_number = TroubleType_number_clicking; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_noiseEPSCSorSwitchedServices: TroubleType_number = 811; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noiseEPSCSorSwitchedServices = 811 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noiseEPSCSorSwitchedServices
@@ -1540,7 +1540,7 @@ const TroubleType_number_noiseEPSCSorSwitchedServices: TroubleType_number = 811;
  * @type {number}
  */
 export
-const noiseEPSCSorSwitchedServices: TroubleType_number = TroubleType_number_noiseEPSCSorSwitchedServices; /* SHORT_NAMED_INTEGER_VALUE */
+const noiseEPSCSorSwitchedServices = TroubleType_number_noiseEPSCSorSwitchedServices; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_levelTroublesGroup
@@ -1548,7 +1548,7 @@ const noiseEPSCSorSwitchedServices: TroubleType_number = TroubleType_number_nois
  * @type {number}
  */
 export
-const TroubleType_number_levelTroublesGroup: TroubleType_number = 900; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_levelTroublesGroup = 900 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_levelTroublesGroup
@@ -1556,7 +1556,7 @@ const TroubleType_number_levelTroublesGroup: TroubleType_number = 900; /* LONG_N
  * @type {number}
  */
 export
-const levelTroublesGroup: TroubleType_number = TroubleType_number_levelTroublesGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const levelTroublesGroup = TroubleType_number_levelTroublesGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lowLevels
@@ -1564,7 +1564,7 @@ const levelTroublesGroup: TroubleType_number = TroubleType_number_levelTroublesG
  * @type {number}
  */
 export
-const TroubleType_number_lowLevels: TroubleType_number = 901; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lowLevels = 901 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lowLevels
@@ -1572,7 +1572,7 @@ const TroubleType_number_lowLevels: TroubleType_number = 901; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const lowLevels: TroubleType_number = TroubleType_number_lowLevels; /* SHORT_NAMED_INTEGER_VALUE */
+const lowLevels = TroubleType_number_lowLevels; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highLevels
@@ -1580,7 +1580,7 @@ const lowLevels: TroubleType_number = TroubleType_number_lowLevels; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_highLevels: TroubleType_number = 902; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_highLevels = 902 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highLevels
@@ -1588,7 +1588,7 @@ const TroubleType_number_highLevels: TroubleType_number = 902; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const highLevels: TroubleType_number = TroubleType_number_highLevels; /* SHORT_NAMED_INTEGER_VALUE */
+const highLevels = TroubleType_number_highLevels; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_longLevels
@@ -1596,7 +1596,7 @@ const highLevels: TroubleType_number = TroubleType_number_highLevels; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_longLevels: TroubleType_number = 903; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_longLevels = 903 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_longLevels
@@ -1604,7 +1604,7 @@ const TroubleType_number_longLevels: TroubleType_number = 903; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const longLevels: TroubleType_number = TroubleType_number_longLevels; /* SHORT_NAMED_INTEGER_VALUE */
+const longLevels = TroubleType_number_longLevels; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hotLevels
@@ -1612,7 +1612,7 @@ const longLevels: TroubleType_number = TroubleType_number_longLevels; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_hotLevels: TroubleType_number = 904; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_hotLevels = 904 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hotLevels
@@ -1620,7 +1620,7 @@ const TroubleType_number_hotLevels: TroubleType_number = 904; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const hotLevels: TroubleType_number = TroubleType_number_hotLevels; /* SHORT_NAMED_INTEGER_VALUE */
+const hotLevels = TroubleType_number_hotLevels; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highEndRollOff
@@ -1628,7 +1628,7 @@ const hotLevels: TroubleType_number = TroubleType_number_hotLevels; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_highEndRollOff: TroubleType_number = 905; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_highEndRollOff = 905 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highEndRollOff
@@ -1636,7 +1636,7 @@ const TroubleType_number_highEndRollOff: TroubleType_number = 905; /* LONG_NAMED
  * @type {number}
  */
 export
-const highEndRollOff: TroubleType_number = TroubleType_number_highEndRollOff; /* SHORT_NAMED_INTEGER_VALUE */
+const highEndRollOff = TroubleType_number_highEndRollOff; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lowEndRollOff
@@ -1644,7 +1644,7 @@ const highEndRollOff: TroubleType_number = TroubleType_number_highEndRollOff; /*
  * @type {number}
  */
 export
-const TroubleType_number_lowEndRollOff: TroubleType_number = 906; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lowEndRollOff = 906 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lowEndRollOff
@@ -1652,7 +1652,7 @@ const TroubleType_number_lowEndRollOff: TroubleType_number = 906; /* LONG_NAMED_
  * @type {number}
  */
 export
-const lowEndRollOff: TroubleType_number = TroubleType_number_lowEndRollOff; /* SHORT_NAMED_INTEGER_VALUE */
+const lowEndRollOff = TroubleType_number_lowEndRollOff; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_needsEqualized
@@ -1660,7 +1660,7 @@ const lowEndRollOff: TroubleType_number = TroubleType_number_lowEndRollOff; /* S
  * @type {number}
  */
 export
-const TroubleType_number_needsEqualized: TroubleType_number = 907; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_needsEqualized = 907 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_needsEqualized
@@ -1668,7 +1668,7 @@ const TroubleType_number_needsEqualized: TroubleType_number = 907; /* LONG_NAMED
  * @type {number}
  */
 export
-const needsEqualized: TroubleType_number = TroubleType_number_needsEqualized; /* SHORT_NAMED_INTEGER_VALUE */
+const needsEqualized = TroubleType_number_needsEqualized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lineLoss
@@ -1676,7 +1676,7 @@ const needsEqualized: TroubleType_number = TroubleType_number_needsEqualized; /*
  * @type {number}
  */
 export
-const TroubleType_number_lineLoss: TroubleType_number = 908; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lineLoss = 908 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lineLoss
@@ -1684,7 +1684,7 @@ const TroubleType_number_lineLoss: TroubleType_number = 908; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const lineLoss: TroubleType_number = TroubleType_number_lineLoss; /* SHORT_NAMED_INTEGER_VALUE */
+const lineLoss = TroubleType_number_lineLoss; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_doesNotPassFreqResponse
@@ -1692,7 +1692,7 @@ const lineLoss: TroubleType_number = TroubleType_number_lineLoss; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_doesNotPassFreqResponse: TroubleType_number = 909; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_doesNotPassFreqResponse = 909 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_doesNotPassFreqResponse
@@ -1700,7 +1700,7 @@ const TroubleType_number_doesNotPassFreqResponse: TroubleType_number = 909; /* L
  * @type {number}
  */
 export
-const doesNotPassFreqResponse: TroubleType_number = TroubleType_number_doesNotPassFreqResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const doesNotPassFreqResponse = TroubleType_number_doesNotPassFreqResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_miscellaneousTroubleGroup
@@ -1708,7 +1708,7 @@ const doesNotPassFreqResponse: TroubleType_number = TroubleType_number_doesNotPa
  * @type {number}
  */
 export
-const TroubleType_number_miscellaneousTroubleGroup: TroubleType_number = 1000; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_miscellaneousTroubleGroup = 1000 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_miscellaneousTroubleGroup
@@ -1716,7 +1716,7 @@ const TroubleType_number_miscellaneousTroubleGroup: TroubleType_number = 1000; /
  * @type {number}
  */
 export
-const miscellaneousTroubleGroup: TroubleType_number = TroubleType_number_miscellaneousTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const miscellaneousTroubleGroup = TroubleType_number_miscellaneousTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hiCapDown
@@ -1724,7 +1724,7 @@ const miscellaneousTroubleGroup: TroubleType_number = TroubleType_number_miscell
  * @type {number}
  */
 export
-const TroubleType_number_hiCapDown: TroubleType_number = 1001; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_hiCapDown = 1001 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hiCapDown
@@ -1732,7 +1732,7 @@ const TroubleType_number_hiCapDown: TroubleType_number = 1001; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const hiCapDown: TroubleType_number = TroubleType_number_hiCapDown; /* SHORT_NAMED_INTEGER_VALUE */
+const hiCapDown = TroubleType_number_hiCapDown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_carrierDown
@@ -1740,7 +1740,7 @@ const hiCapDown: TroubleType_number = TroubleType_number_hiCapDown; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_carrierDown: TroubleType_number = 1002; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_carrierDown = 1002 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_carrierDown
@@ -1748,7 +1748,7 @@ const TroubleType_number_carrierDown: TroubleType_number = 1002; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const carrierDown: TroubleType_number = TroubleType_number_carrierDown; /* SHORT_NAMED_INTEGER_VALUE */
+const carrierDown = TroubleType_number_carrierDown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_biPolarViolations
@@ -1756,7 +1756,7 @@ const carrierDown: TroubleType_number = TroubleType_number_carrierDown; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_biPolarViolations: TroubleType_number = 1003; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_biPolarViolations = 1003 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_biPolarViolations
@@ -1764,7 +1764,7 @@ const TroubleType_number_biPolarViolations: TroubleType_number = 1003; /* LONG_N
  * @type {number}
  */
 export
-const biPolarViolations: TroubleType_number = TroubleType_number_biPolarViolations; /* SHORT_NAMED_INTEGER_VALUE */
+const biPolarViolations = TroubleType_number_biPolarViolations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_frameErrorsHiCap
@@ -1772,7 +1772,7 @@ const biPolarViolations: TroubleType_number = TroubleType_number_biPolarViolatio
  * @type {number}
  */
 export
-const TroubleType_number_frameErrorsHiCap: TroubleType_number = 1004; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_frameErrorsHiCap = 1004 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_frameErrorsHiCap
@@ -1780,7 +1780,7 @@ const TroubleType_number_frameErrorsHiCap: TroubleType_number = 1004; /* LONG_NA
  * @type {number}
  */
 export
-const frameErrorsHiCap: TroubleType_number = TroubleType_number_frameErrorsHiCap; /* SHORT_NAMED_INTEGER_VALUE */
+const frameErrorsHiCap = TroubleType_number_frameErrorsHiCap; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_outOfFrame
@@ -1788,7 +1788,7 @@ const frameErrorsHiCap: TroubleType_number = TroubleType_number_frameErrorsHiCap
  * @type {number}
  */
 export
-const TroubleType_number_outOfFrame: TroubleType_number = 1005; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_outOfFrame = 1005 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_outOfFrame
@@ -1796,7 +1796,7 @@ const TroubleType_number_outOfFrame: TroubleType_number = 1005; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const outOfFrame: TroubleType_number = TroubleType_number_outOfFrame; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfFrame = TroubleType_number_outOfFrame; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lossOfSync
@@ -1804,7 +1804,7 @@ const outOfFrame: TroubleType_number = TroubleType_number_outOfFrame; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_lossOfSync: TroubleType_number = 1006; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lossOfSync = 1006 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lossOfSync
@@ -1812,7 +1812,7 @@ const TroubleType_number_lossOfSync: TroubleType_number = 1006; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const lossOfSync: TroubleType_number = TroubleType_number_lossOfSync; /* SHORT_NAMED_INTEGER_VALUE */
+const lossOfSync = TroubleType_number_lossOfSync; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_frameSlips
@@ -1820,7 +1820,7 @@ const lossOfSync: TroubleType_number = TroubleType_number_lossOfSync; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_frameSlips: TroubleType_number = 1007; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_frameSlips = 1007 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_frameSlips
@@ -1828,7 +1828,7 @@ const TroubleType_number_frameSlips: TroubleType_number = 1007; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const frameSlips: TroubleType_number = TroubleType_number_frameSlips; /* SHORT_NAMED_INTEGER_VALUE */
+const frameSlips = TroubleType_number_frameSlips; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noLoopback
@@ -1836,7 +1836,7 @@ const frameSlips: TroubleType_number = TroubleType_number_frameSlips; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_noLoopback: TroubleType_number = 1008; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noLoopback = 1008 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noLoopback
@@ -1844,7 +1844,7 @@ const TroubleType_number_noLoopback: TroubleType_number = 1008; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const noLoopback: TroubleType_number = TroubleType_number_noLoopback; /* SHORT_NAMED_INTEGER_VALUE */
+const noLoopback = TroubleType_number_noLoopback; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotLoopbackDEMARC
@@ -1852,7 +1852,7 @@ const noLoopback: TroubleType_number = TroubleType_number_noLoopback; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_canNotLoopbackDEMARC: TroubleType_number = 1009; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotLoopbackDEMARC = 1009 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotLoopbackDEMARC
@@ -1860,7 +1860,7 @@ const TroubleType_number_canNotLoopbackDEMARC: TroubleType_number = 1009; /* LON
  * @type {number}
  */
 export
-const canNotLoopbackDEMARC: TroubleType_number = TroubleType_number_canNotLoopbackDEMARC; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotLoopbackDEMARC = TroubleType_number_canNotLoopbackDEMARC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_recordingOnCircuit
@@ -1868,7 +1868,7 @@ const canNotLoopbackDEMARC: TroubleType_number = TroubleType_number_canNotLoopba
  * @type {number}
  */
 export
-const TroubleType_number_recordingOnCircuit: TroubleType_number = 1010; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_recordingOnCircuit = 1010 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_recordingOnCircuit
@@ -1876,7 +1876,7 @@ const TroubleType_number_recordingOnCircuit: TroubleType_number = 1010; /* LONG_
  * @type {number}
  */
 export
-const recordingOnCircuit: TroubleType_number = TroubleType_number_recordingOnCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const recordingOnCircuit = TroubleType_number_recordingOnCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_linesNeedTagging
@@ -1884,7 +1884,7 @@ const recordingOnCircuit: TroubleType_number = TroubleType_number_recordingOnCir
  * @type {number}
  */
 export
-const TroubleType_number_linesNeedTagging: TroubleType_number = 1011; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_linesNeedTagging = 1011 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_linesNeedTagging
@@ -1892,7 +1892,7 @@ const TroubleType_number_linesNeedTagging: TroubleType_number = 1011; /* LONG_NA
  * @type {number}
  */
 export
-const linesNeedTagging: TroubleType_number = TroubleType_number_linesNeedTagging; /* SHORT_NAMED_INTEGER_VALUE */
+const linesNeedTagging = TroubleType_number_linesNeedTagging; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_outwatsRingingin
@@ -1900,7 +1900,7 @@ const linesNeedTagging: TroubleType_number = TroubleType_number_linesNeedTagging
  * @type {number}
  */
 export
-const TroubleType_number_outwatsRingingin: TroubleType_number = 1012; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_outwatsRingingin = 1012 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_outwatsRingingin
@@ -1908,7 +1908,7 @@ const TroubleType_number_outwatsRingingin: TroubleType_number = 1012; /* LONG_NA
  * @type {number}
  */
 export
-const outwatsRingingin: TroubleType_number = TroubleType_number_outwatsRingingin; /* SHORT_NAMED_INTEGER_VALUE */
+const outwatsRingingin = TroubleType_number_outwatsRingingin; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_remoteAccess
@@ -1916,7 +1916,7 @@ const outwatsRingingin: TroubleType_number = TroubleType_number_outwatsRingingin
  * @type {number}
  */
 export
-const TroubleType_number_remoteAccess: TroubleType_number = 1013; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_remoteAccess = 1013 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_remoteAccess
@@ -1924,7 +1924,7 @@ const TroubleType_number_remoteAccess: TroubleType_number = 1013; /* LONG_NAMED_
  * @type {number}
  */
 export
-const remoteAccess: TroubleType_number = TroubleType_number_remoteAccess; /* SHORT_NAMED_INTEGER_VALUE */
+const remoteAccess = TroubleType_number_remoteAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_other
@@ -1932,7 +1932,7 @@ const remoteAccess: TroubleType_number = TroubleType_number_remoteAccess; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_other: TroubleType_number = 1014; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_other = 1014 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_other
@@ -1940,7 +1940,7 @@ const TroubleType_number_other: TroubleType_number = 1014; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const other: TroubleType_number = TroubleType_number_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = TroubleType_number_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_alarm
@@ -1948,7 +1948,7 @@ const other: TroubleType_number = TroubleType_number_other; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const TroubleType_number_alarm: TroubleType_number = 1015; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_alarm = 1015 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_alarm
@@ -1956,7 +1956,7 @@ const TroubleType_number_alarm: TroubleType_number = 1015; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const alarm: TroubleType_number = TroubleType_number_alarm; /* SHORT_NAMED_INTEGER_VALUE */
+const alarm = TroubleType_number_alarm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_memoryServiceProblemGroup
@@ -1964,7 +1964,7 @@ const alarm: TroubleType_number = TroubleType_number_alarm; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const TroubleType_number_memoryServiceProblemGroup: TroubleType_number = 1100; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_memoryServiceProblemGroup = 1100 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_memoryServiceProblemGroup
@@ -1972,7 +1972,7 @@ const TroubleType_number_memoryServiceProblemGroup: TroubleType_number = 1100; /
  * @type {number}
  */
 export
-const memoryServiceProblemGroup: TroubleType_number = TroubleType_number_memoryServiceProblemGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const memoryServiceProblemGroup = TroubleType_number_memoryServiceProblemGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataTroubleGroup
@@ -1980,7 +1980,7 @@ const memoryServiceProblemGroup: TroubleType_number = TroubleType_number_memoryS
  * @type {number}
  */
 export
-const TroubleType_number_dataTroubleGroup: TroubleType_number = 1200; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_dataTroubleGroup = 1200 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataTroubleGroup
@@ -1988,7 +1988,7 @@ const TroubleType_number_dataTroubleGroup: TroubleType_number = 1200; /* LONG_NA
  * @type {number}
  */
 export
-const dataTroubleGroup: TroubleType_number = TroubleType_number_dataTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const dataTroubleGroup = TroubleType_number_dataTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotReceiveData
@@ -1996,7 +1996,7 @@ const dataTroubleGroup: TroubleType_number = TroubleType_number_dataTroubleGroup
  * @type {number}
  */
 export
-const TroubleType_number_canNotReceiveData: TroubleType_number = 1201; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotReceiveData = 1201 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotReceiveData
@@ -2004,7 +2004,7 @@ const TroubleType_number_canNotReceiveData: TroubleType_number = 1201; /* LONG_N
  * @type {number}
  */
 export
-const canNotReceiveData: TroubleType_number = TroubleType_number_canNotReceiveData; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotReceiveData = TroubleType_number_canNotReceiveData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotSendData
@@ -2012,7 +2012,7 @@ const canNotReceiveData: TroubleType_number = TroubleType_number_canNotReceiveDa
  * @type {number}
  */
 export
-const TroubleType_number_canNotSendData: TroubleType_number = 1202; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotSendData = 1202 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotSendData
@@ -2020,7 +2020,7 @@ const TroubleType_number_canNotSendData: TroubleType_number = 1202; /* LONG_NAME
  * @type {number}
  */
 export
-const canNotSendData: TroubleType_number = TroubleType_number_canNotSendData; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotSendData = TroubleType_number_canNotSendData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotTransmitCanNotReceive
@@ -2028,7 +2028,7 @@ const canNotSendData: TroubleType_number = TroubleType_number_canNotSendData; /*
  * @type {number}
  */
 export
-const TroubleType_number_canNotTransmitCanNotReceive: TroubleType_number = 1203; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotTransmitCanNotReceive = 1203 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotTransmitCanNotReceive
@@ -2036,7 +2036,7 @@ const TroubleType_number_canNotTransmitCanNotReceive: TroubleType_number = 1203;
  * @type {number}
  */
 export
-const canNotTransmitCanNotReceive: TroubleType_number = TroubleType_number_canNotTransmitCanNotReceive; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotTransmitCanNotReceive = TroubleType_number_canNotTransmitCanNotReceive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noReceive
@@ -2044,7 +2044,7 @@ const canNotTransmitCanNotReceive: TroubleType_number = TroubleType_number_canNo
  * @type {number}
  */
 export
-const TroubleType_number_noReceive: TroubleType_number = 1204; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noReceive = 1204 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noReceive
@@ -2052,7 +2052,7 @@ const TroubleType_number_noReceive: TroubleType_number = 1204; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const noReceive: TroubleType_number = TroubleType_number_noReceive; /* SHORT_NAMED_INTEGER_VALUE */
+const noReceive = TroubleType_number_noReceive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noResponse
@@ -2060,7 +2060,7 @@ const noReceive: TroubleType_number = TroubleType_number_noReceive; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_noResponse: TroubleType_number = 1205; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noResponse = 1205 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noResponse
@@ -2068,7 +2068,7 @@ const TroubleType_number_noResponse: TroubleType_number = 1205; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const noResponse: TroubleType_number = TroubleType_number_noResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const noResponse = TroubleType_number_noResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_delay
@@ -2076,7 +2076,7 @@ const noResponse: TroubleType_number = TroubleType_number_noResponse; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_delay: TroubleType_number = 1206; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_delay = 1206 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_delay
@@ -2084,7 +2084,7 @@ const TroubleType_number_delay: TroubleType_number = 1206; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const delay: TroubleType_number = TroubleType_number_delay; /* SHORT_NAMED_INTEGER_VALUE */
+const delay = TroubleType_number_delay; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_impulseNoise
@@ -2092,7 +2092,7 @@ const delay: TroubleType_number = TroubleType_number_delay; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const TroubleType_number_impulseNoise: TroubleType_number = 1207; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_impulseNoise = 1207 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_impulseNoise
@@ -2100,7 +2100,7 @@ const TroubleType_number_impulseNoise: TroubleType_number = 1207; /* LONG_NAMED_
  * @type {number}
  */
 export
-const impulseNoise: TroubleType_number = TroubleType_number_impulseNoise; /* SHORT_NAMED_INTEGER_VALUE */
+const impulseNoise = TroubleType_number_impulseNoise; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_phaseJitter
@@ -2108,7 +2108,7 @@ const impulseNoise: TroubleType_number = TroubleType_number_impulseNoise; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_phaseJitter: TroubleType_number = 1208; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_phaseJitter = 1208 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_phaseJitter
@@ -2116,7 +2116,7 @@ const TroubleType_number_phaseJitter: TroubleType_number = 1208; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const phaseJitter: TroubleType_number = TroubleType_number_phaseJitter; /* SHORT_NAMED_INTEGER_VALUE */
+const phaseJitter = TroubleType_number_phaseJitter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_harmonicDistortion
@@ -2124,7 +2124,7 @@ const phaseJitter: TroubleType_number = TroubleType_number_phaseJitter; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_harmonicDistortion: TroubleType_number = 1209; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_harmonicDistortion = 1209 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_harmonicDistortion
@@ -2132,7 +2132,7 @@ const TroubleType_number_harmonicDistortion: TroubleType_number = 1209; /* LONG_
  * @type {number}
  */
 export
-const harmonicDistortion: TroubleType_number = TroubleType_number_harmonicDistortion; /* SHORT_NAMED_INTEGER_VALUE */
+const harmonicDistortion = TroubleType_number_harmonicDistortion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highDistortion
@@ -2140,7 +2140,7 @@ const harmonicDistortion: TroubleType_number = TroubleType_number_harmonicDistor
  * @type {number}
  */
 export
-const TroubleType_number_highDistortion: TroubleType_number = 1210; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_highDistortion = 1210 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highDistortion
@@ -2148,7 +2148,7 @@ const TroubleType_number_highDistortion: TroubleType_number = 1210; /* LONG_NAME
  * @type {number}
  */
 export
-const highDistortion: TroubleType_number = TroubleType_number_highDistortion; /* SHORT_NAMED_INTEGER_VALUE */
+const highDistortion = TroubleType_number_highDistortion; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noDataLoopback
@@ -2156,7 +2156,7 @@ const highDistortion: TroubleType_number = TroubleType_number_highDistortion; /*
  * @type {number}
  */
 export
-const TroubleType_number_noDataLoopback: TroubleType_number = 1211; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noDataLoopback = 1211 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noDataLoopback
@@ -2164,7 +2164,7 @@ const TroubleType_number_noDataLoopback: TroubleType_number = 1211; /* LONG_NAME
  * @type {number}
  */
 export
-const noDataLoopback: TroubleType_number = TroubleType_number_noDataLoopback; /* SHORT_NAMED_INTEGER_VALUE */
+const noDataLoopback = TroubleType_number_noDataLoopback; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noCarrier
@@ -2172,7 +2172,7 @@ const noDataLoopback: TroubleType_number = TroubleType_number_noDataLoopback; /*
  * @type {number}
  */
 export
-const TroubleType_number_noCarrier: TroubleType_number = 1212; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noCarrier = 1212 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noCarrier
@@ -2180,7 +2180,7 @@ const TroubleType_number_noCarrier: TroubleType_number = 1212; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const noCarrier: TroubleType_number = TroubleType_number_noCarrier; /* SHORT_NAMED_INTEGER_VALUE */
+const noCarrier = TroubleType_number_noCarrier; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_notPolling
@@ -2188,7 +2188,7 @@ const noCarrier: TroubleType_number = TroubleType_number_noCarrier; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_notPolling: TroubleType_number = 1213; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_notPolling = 1213 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_notPolling
@@ -2196,7 +2196,7 @@ const TroubleType_number_notPolling: TroubleType_number = 1213; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const notPolling: TroubleType_number = TroubleType_number_notPolling; /* SHORT_NAMED_INTEGER_VALUE */
+const notPolling = TroubleType_number_notPolling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataFramingErrors
@@ -2204,7 +2204,7 @@ const notPolling: TroubleType_number = TroubleType_number_notPolling; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_dataFramingErrors: TroubleType_number = 1214; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_dataFramingErrors = 1214 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataFramingErrors
@@ -2212,7 +2212,7 @@ const TroubleType_number_dataFramingErrors: TroubleType_number = 1214; /* LONG_N
  * @type {number}
  */
 export
-const dataFramingErrors: TroubleType_number = TroubleType_number_dataFramingErrors; /* SHORT_NAMED_INTEGER_VALUE */
+const dataFramingErrors = TroubleType_number_dataFramingErrors; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dropOuts
@@ -2220,7 +2220,7 @@ const dataFramingErrors: TroubleType_number = TroubleType_number_dataFramingErro
  * @type {number}
  */
 export
-const TroubleType_number_dropOuts: TroubleType_number = 1215; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_dropOuts = 1215 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dropOuts
@@ -2228,7 +2228,7 @@ const TroubleType_number_dropOuts: TroubleType_number = 1215; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const dropOuts: TroubleType_number = TroubleType_number_dropOuts; /* SHORT_NAMED_INTEGER_VALUE */
+const dropOuts = TroubleType_number_dropOuts; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hits
@@ -2236,7 +2236,7 @@ const dropOuts: TroubleType_number = TroubleType_number_dropOuts; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_hits: TroubleType_number = 1216; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_hits = 1216 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_hits
@@ -2244,7 +2244,7 @@ const TroubleType_number_hits: TroubleType_number = 1216; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const hits: TroubleType_number = TroubleType_number_hits; /* SHORT_NAMED_INTEGER_VALUE */
+const hits = TroubleType_number_hits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noAnswerBack
@@ -2252,7 +2252,7 @@ const hits: TroubleType_number = TroubleType_number_hits; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const TroubleType_number_noAnswerBack: TroubleType_number = 1217; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noAnswerBack = 1217 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noAnswerBack
@@ -2260,7 +2260,7 @@ const TroubleType_number_noAnswerBack: TroubleType_number = 1217; /* LONG_NAMED_
  * @type {number}
  */
 export
-const noAnswerBack: TroubleType_number = TroubleType_number_noAnswerBack; /* SHORT_NAMED_INTEGER_VALUE */
+const noAnswerBack = TroubleType_number_noAnswerBack; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_streamer
@@ -2268,7 +2268,7 @@ const noAnswerBack: TroubleType_number = TroubleType_number_noAnswerBack; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_streamer: TroubleType_number = 1218; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_streamer = 1218 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_streamer
@@ -2276,7 +2276,7 @@ const TroubleType_number_streamer: TroubleType_number = 1218; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const streamer: TroubleType_number = TroubleType_number_streamer; /* SHORT_NAMED_INTEGER_VALUE */
+const streamer = TroubleType_number_streamer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_outOfSpecification
@@ -2284,7 +2284,7 @@ const streamer: TroubleType_number = TroubleType_number_streamer; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TroubleType_number_outOfSpecification: TroubleType_number = 1219; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_outOfSpecification = 1219 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_outOfSpecification
@@ -2292,7 +2292,7 @@ const TroubleType_number_outOfSpecification: TroubleType_number = 1219; /* LONG_
  * @type {number}
  */
 export
-const outOfSpecification: TroubleType_number = TroubleType_number_outOfSpecification; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfSpecification = TroubleType_number_outOfSpecification; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRunToCSU
@@ -2300,7 +2300,7 @@ const outOfSpecification: TroubleType_number = TroubleType_number_outOfSpecifica
  * @type {number}
  */
 export
-const TroubleType_number_canNotRunToCSU: TroubleType_number = 1220; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotRunToCSU = 1220 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRunToCSU
@@ -2308,7 +2308,7 @@ const TroubleType_number_canNotRunToCSU: TroubleType_number = 1220; /* LONG_NAME
  * @type {number}
  */
 export
-const canNotRunToCSU: TroubleType_number = TroubleType_number_canNotRunToCSU; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotRunToCSU = TroubleType_number_canNotRunToCSU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRunToOSU
@@ -2316,7 +2316,7 @@ const canNotRunToCSU: TroubleType_number = TroubleType_number_canNotRunToCSU; /*
  * @type {number}
  */
 export
-const TroubleType_number_canNotRunToOSU: TroubleType_number = 1221; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotRunToOSU = 1221 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotRunToOSU
@@ -2324,7 +2324,7 @@ const TroubleType_number_canNotRunToOSU: TroubleType_number = 1221; /* LONG_NAME
  * @type {number}
  */
 export
-const canNotRunToOSU: TroubleType_number = TroubleType_number_canNotRunToOSU; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotRunToOSU = TroubleType_number_canNotRunToOSU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_deadDataCircuit
@@ -2332,7 +2332,7 @@ const canNotRunToOSU: TroubleType_number = TroubleType_number_canNotRunToOSU; /*
  * @type {number}
  */
 export
-const TroubleType_number_deadDataCircuit: TroubleType_number = 1222; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_deadDataCircuit = 1222 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_deadDataCircuit
@@ -2340,7 +2340,7 @@ const TroubleType_number_deadDataCircuit: TroubleType_number = 1222; /* LONG_NAM
  * @type {number}
  */
 export
-const deadDataCircuit: TroubleType_number = TroubleType_number_deadDataCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const deadDataCircuit = TroubleType_number_deadDataCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitInLoopback
@@ -2348,7 +2348,7 @@ const deadDataCircuit: TroubleType_number = TroubleType_number_deadDataCircuit; 
  * @type {number}
  */
 export
-const TroubleType_number_circuitInLoopback: TroubleType_number = 1223; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_circuitInLoopback = 1223 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_circuitInLoopback
@@ -2356,7 +2356,7 @@ const TroubleType_number_circuitInLoopback: TroubleType_number = 1223; /* LONG_N
  * @type {number}
  */
 export
-const circuitInLoopback: TroubleType_number = TroubleType_number_circuitInLoopback; /* SHORT_NAMED_INTEGER_VALUE */
+const circuitInLoopback = TroubleType_number_circuitInLoopback; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_errors
@@ -2364,7 +2364,7 @@ const circuitInLoopback: TroubleType_number = TroubleType_number_circuitInLoopba
  * @type {number}
  */
 export
-const TroubleType_number_errors: TroubleType_number = 1224; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_errors = 1224 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_errors
@@ -2372,7 +2372,7 @@ const TroubleType_number_errors: TroubleType_number = 1224; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const errors: TroubleType_number = TroubleType_number_errors; /* SHORT_NAMED_INTEGER_VALUE */
+const errors = TroubleType_number_errors; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_garbledData
@@ -2380,7 +2380,7 @@ const errors: TroubleType_number = TroubleType_number_errors; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const TroubleType_number_garbledData: TroubleType_number = 1225; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_garbledData = 1225 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_garbledData
@@ -2388,7 +2388,7 @@ const TroubleType_number_garbledData: TroubleType_number = 1225; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const garbledData: TroubleType_number = TroubleType_number_garbledData; /* SHORT_NAMED_INTEGER_VALUE */
+const garbledData = TroubleType_number_garbledData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_invalidData
@@ -2396,7 +2396,7 @@ const garbledData: TroubleType_number = TroubleType_number_garbledData; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_invalidData: TroubleType_number = 1226; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_invalidData = 1226 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_invalidData
@@ -2404,7 +2404,7 @@ const TroubleType_number_invalidData: TroubleType_number = 1226; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const invalidData: TroubleType_number = TroubleType_number_invalidData; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidData = TroubleType_number_invalidData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_crossModulation
@@ -2412,7 +2412,7 @@ const invalidData: TroubleType_number = TroubleType_number_invalidData; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_crossModulation: TroubleType_number = 1227; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_crossModulation = 1227 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_crossModulation
@@ -2420,7 +2420,7 @@ const TroubleType_number_crossModulation: TroubleType_number = 1227; /* LONG_NAM
  * @type {number}
  */
 export
-const crossModulation: TroubleType_number = TroubleType_number_crossModulation; /* SHORT_NAMED_INTEGER_VALUE */
+const crossModulation = TroubleType_number_crossModulation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_slowResponse
@@ -2428,7 +2428,7 @@ const crossModulation: TroubleType_number = TroubleType_number_crossModulation; 
  * @type {number}
  */
 export
-const TroubleType_number_slowResponse: TroubleType_number = 1228; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_slowResponse = 1228 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_slowResponse
@@ -2436,7 +2436,7 @@ const TroubleType_number_slowResponse: TroubleType_number = 1228; /* LONG_NAMED_
  * @type {number}
  */
 export
-const slowResponse: TroubleType_number = TroubleType_number_slowResponse; /* SHORT_NAMED_INTEGER_VALUE */
+const slowResponse = TroubleType_number_slowResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherDataDescribeAdditInfo
@@ -2444,7 +2444,7 @@ const slowResponse: TroubleType_number = TroubleType_number_slowResponse; /* SHO
  * @type {number}
  */
 export
-const TroubleType_number_otherDataDescribeAdditInfo: TroubleType_number = 1229; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_otherDataDescribeAdditInfo = 1229 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherDataDescribeAdditInfo
@@ -2452,7 +2452,7 @@ const TroubleType_number_otherDataDescribeAdditInfo: TroubleType_number = 1229; 
  * @type {number}
  */
 export
-const otherDataDescribeAdditInfo: TroubleType_number = TroubleType_number_otherDataDescribeAdditInfo; /* SHORT_NAMED_INTEGER_VALUE */
+const otherDataDescribeAdditInfo = TroubleType_number_otherDataDescribeAdditInfo; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_gettingAllOnes
@@ -2460,7 +2460,7 @@ const otherDataDescribeAdditInfo: TroubleType_number = TroubleType_number_otherD
  * @type {number}
  */
 export
-const TroubleType_number_gettingAllOnes: TroubleType_number = 1230; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_gettingAllOnes = 1230 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_gettingAllOnes
@@ -2468,7 +2468,7 @@ const TroubleType_number_gettingAllOnes: TroubleType_number = 1230; /* LONG_NAME
  * @type {number}
  */
 export
-const gettingAllOnes: TroubleType_number = TroubleType_number_gettingAllOnes; /* SHORT_NAMED_INTEGER_VALUE */
+const gettingAllOnes = TroubleType_number_gettingAllOnes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_slip
@@ -2476,7 +2476,7 @@ const gettingAllOnes: TroubleType_number = TroubleType_number_gettingAllOnes; /*
  * @type {number}
  */
 export
-const TroubleType_number_slip: TroubleType_number = 1231; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_slip = 1231 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_slip
@@ -2484,7 +2484,7 @@ const TroubleType_number_slip: TroubleType_number = 1231; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const slip: TroubleType_number = TroubleType_number_slip; /* SHORT_NAMED_INTEGER_VALUE */
+const slip = TroubleType_number_slip; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_stationTroubleGroup
@@ -2492,7 +2492,7 @@ const slip: TroubleType_number = TroubleType_number_slip; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const TroubleType_number_stationTroubleGroup: TroubleType_number = 1300; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_stationTroubleGroup = 1300 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_stationTroubleGroup
@@ -2500,7 +2500,7 @@ const TroubleType_number_stationTroubleGroup: TroubleType_number = 1300; /* LONG
  * @type {number}
  */
 export
-const stationTroubleGroup: TroubleType_number = TroubleType_number_stationTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const stationTroubleGroup = TroubleType_number_stationTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_voiceEquipment
@@ -2508,7 +2508,7 @@ const stationTroubleGroup: TroubleType_number = TroubleType_number_stationTroubl
  * @type {number}
  */
 export
-const TroubleType_number_voiceEquipment: TroubleType_number = 1301; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_voiceEquipment = 1301 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_voiceEquipment
@@ -2516,7 +2516,7 @@ const TroubleType_number_voiceEquipment: TroubleType_number = 1301; /* LONG_NAME
  * @type {number}
  */
 export
-const voiceEquipment: TroubleType_number = TroubleType_number_voiceEquipment; /* SHORT_NAMED_INTEGER_VALUE */
+const voiceEquipment = TroubleType_number_voiceEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataEquipment
@@ -2524,7 +2524,7 @@ const voiceEquipment: TroubleType_number = TroubleType_number_voiceEquipment; /*
  * @type {number}
  */
 export
-const TroubleType_number_dataEquipment: TroubleType_number = 1302; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_dataEquipment = 1302 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataEquipment
@@ -2532,7 +2532,7 @@ const TroubleType_number_dataEquipment: TroubleType_number = 1302; /* LONG_NAMED
  * @type {number}
  */
 export
-const dataEquipment: TroubleType_number = TroubleType_number_dataEquipment; /* SHORT_NAMED_INTEGER_VALUE */
+const dataEquipment = TroubleType_number_dataEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_videoEquipment
@@ -2540,7 +2540,7 @@ const dataEquipment: TroubleType_number = TroubleType_number_dataEquipment; /* S
  * @type {number}
  */
 export
-const TroubleType_number_videoEquipment: TroubleType_number = 1303; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_videoEquipment = 1303 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_videoEquipment
@@ -2548,7 +2548,7 @@ const TroubleType_number_videoEquipment: TroubleType_number = 1303; /* LONG_NAME
  * @type {number}
  */
 export
-const videoEquipment: TroubleType_number = TroubleType_number_videoEquipment; /* SHORT_NAMED_INTEGER_VALUE */
+const videoEquipment = TroubleType_number_videoEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherEquipment
@@ -2556,7 +2556,7 @@ const videoEquipment: TroubleType_number = TroubleType_number_videoEquipment; /*
  * @type {number}
  */
 export
-const TroubleType_number_otherEquipment: TroubleType_number = 1304; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_otherEquipment = 1304 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherEquipment
@@ -2564,7 +2564,7 @@ const TroubleType_number_otherEquipment: TroubleType_number = 1304; /* LONG_NAME
  * @type {number}
  */
 export
-const otherEquipment: TroubleType_number = TroubleType_number_otherEquipment; /* SHORT_NAMED_INTEGER_VALUE */
+const otherEquipment = TroubleType_number_otherEquipment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_stationWiring
@@ -2572,7 +2572,7 @@ const otherEquipment: TroubleType_number = TroubleType_number_otherEquipment; /*
  * @type {number}
  */
 export
-const TroubleType_number_stationWiring: TroubleType_number = 1305; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_stationWiring = 1305 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_stationWiring
@@ -2580,7 +2580,7 @@ const TroubleType_number_stationWiring: TroubleType_number = 1305; /* LONG_NAMED
  * @type {number}
  */
 export
-const stationWiring: TroubleType_number = TroubleType_number_stationWiring; /* SHORT_NAMED_INTEGER_VALUE */
+const stationWiring = TroubleType_number_stationWiring; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_physicalTroubleGroup
@@ -2588,7 +2588,7 @@ const stationWiring: TroubleType_number = TroubleType_number_stationWiring; /* S
  * @type {number}
  */
 export
-const TroubleType_number_physicalTroubleGroup: TroubleType_number = 1400; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_physicalTroubleGroup = 1400 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_physicalTroubleGroup
@@ -2596,7 +2596,7 @@ const TroubleType_number_physicalTroubleGroup: TroubleType_number = 1400; /* LON
  * @type {number}
  */
 export
-const physicalTroubleGroup: TroubleType_number = TroubleType_number_physicalTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const physicalTroubleGroup = TroubleType_number_physicalTroubleGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lightBurnedOut
@@ -2604,7 +2604,7 @@ const physicalTroubleGroup: TroubleType_number = TroubleType_number_physicalTrou
  * @type {number}
  */
 export
-const TroubleType_number_lightBurnedOut: TroubleType_number = 1401; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lightBurnedOut = 1401 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lightBurnedOut
@@ -2612,7 +2612,7 @@ const TroubleType_number_lightBurnedOut: TroubleType_number = 1401; /* LONG_NAME
  * @type {number}
  */
 export
-const lightBurnedOut: TroubleType_number = TroubleType_number_lightBurnedOut; /* SHORT_NAMED_INTEGER_VALUE */
+const lightBurnedOut = TroubleType_number_lightBurnedOut; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataset
@@ -2620,7 +2620,7 @@ const lightBurnedOut: TroubleType_number = TroubleType_number_lightBurnedOut; /*
  * @type {number}
  */
 export
-const TroubleType_number_dataset: TroubleType_number = 1402; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_dataset = 1402 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_dataset
@@ -2628,7 +2628,7 @@ const TroubleType_number_dataset: TroubleType_number = 1402; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const dataset: TroubleType_number = TroubleType_number_dataset; /* SHORT_NAMED_INTEGER_VALUE */
+const dataset = TroubleType_number_dataset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_ttySet
@@ -2636,7 +2636,7 @@ const dataset: TroubleType_number = TroubleType_number_dataset; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const TroubleType_number_ttySet: TroubleType_number = 1403; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_ttySet = 1403 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_ttySet
@@ -2644,7 +2644,7 @@ const TroubleType_number_ttySet: TroubleType_number = 1403; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const ttySet: TroubleType_number = TroubleType_number_ttySet; /* SHORT_NAMED_INTEGER_VALUE */
+const ttySet = TroubleType_number_ttySet; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highSpeedPrinter
@@ -2652,7 +2652,7 @@ const ttySet: TroubleType_number = TroubleType_number_ttySet; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const TroubleType_number_highSpeedPrinter: TroubleType_number = 1404; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_highSpeedPrinter = 1404 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_highSpeedPrinter
@@ -2660,7 +2660,7 @@ const TroubleType_number_highSpeedPrinter: TroubleType_number = 1404; /* LONG_NA
  * @type {number}
  */
 export
-const highSpeedPrinter: TroubleType_number = TroubleType_number_highSpeedPrinter; /* SHORT_NAMED_INTEGER_VALUE */
+const highSpeedPrinter = TroubleType_number_highSpeedPrinter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_aNI
@@ -2668,7 +2668,7 @@ const highSpeedPrinter: TroubleType_number = TroubleType_number_highSpeedPrinter
  * @type {number}
  */
 export
-const TroubleType_number_aNI: TroubleType_number = 1405; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_aNI = 1405 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_aNI
@@ -2676,7 +2676,7 @@ const TroubleType_number_aNI: TroubleType_number = 1405; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const aNI: TroubleType_number = TroubleType_number_aNI; /* SHORT_NAMED_INTEGER_VALUE */
+const aNI = TroubleType_number_aNI; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_aLI
@@ -2684,7 +2684,7 @@ const aNI: TroubleType_number = TroubleType_number_aNI; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const TroubleType_number_aLI: TroubleType_number = 1406; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_aLI = 1406 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_aLI
@@ -2692,7 +2692,7 @@ const TroubleType_number_aLI: TroubleType_number = 1406; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const aLI: TroubleType_number = TroubleType_number_aLI; /* SHORT_NAMED_INTEGER_VALUE */
+const aLI = TroubleType_number_aLI; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotActivatePC
@@ -2700,7 +2700,7 @@ const aLI: TroubleType_number = TroubleType_number_aLI; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const TroubleType_number_canNotActivatePC: TroubleType_number = 1407; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_canNotActivatePC = 1407 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_canNotActivatePC
@@ -2708,7 +2708,7 @@ const TroubleType_number_canNotActivatePC: TroubleType_number = 1407; /* LONG_NA
  * @type {number}
  */
 export
-const canNotActivatePC: TroubleType_number = TroubleType_number_canNotActivatePC; /* SHORT_NAMED_INTEGER_VALUE */
+const canNotActivatePC = TroubleType_number_canNotActivatePC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_modem
@@ -2716,7 +2716,7 @@ const canNotActivatePC: TroubleType_number = TroubleType_number_canNotActivatePC
  * @type {number}
  */
 export
-const TroubleType_number_modem: TroubleType_number = 1408; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_modem = 1408 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_modem
@@ -2724,7 +2724,7 @@ const TroubleType_number_modem: TroubleType_number = 1408; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const modem: TroubleType_number = TroubleType_number_modem; /* SHORT_NAMED_INTEGER_VALUE */
+const modem = TroubleType_number_modem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cathodeRayTube
@@ -2732,7 +2732,7 @@ const modem: TroubleType_number = TroubleType_number_modem; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const TroubleType_number_cathodeRayTube: TroubleType_number = 1409; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_cathodeRayTube = 1409 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_cathodeRayTube
@@ -2740,7 +2740,7 @@ const TroubleType_number_cathodeRayTube: TroubleType_number = 1409; /* LONG_NAME
  * @type {number}
  */
 export
-const cathodeRayTube: TroubleType_number = TroubleType_number_cathodeRayTube; /* SHORT_NAMED_INTEGER_VALUE */
+const cathodeRayTube = TroubleType_number_cathodeRayTube; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_looseJack
@@ -2748,7 +2748,7 @@ const cathodeRayTube: TroubleType_number = TroubleType_number_cathodeRayTube; /*
  * @type {number}
  */
 export
-const TroubleType_number_looseJack: TroubleType_number = 1410; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_looseJack = 1410 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_looseJack
@@ -2756,7 +2756,7 @@ const TroubleType_number_looseJack: TroubleType_number = 1410; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const looseJack: TroubleType_number = TroubleType_number_looseJack; /* SHORT_NAMED_INTEGER_VALUE */
+const looseJack = TroubleType_number_looseJack; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_offHook
@@ -2764,7 +2764,7 @@ const looseJack: TroubleType_number = TroubleType_number_looseJack; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_offHook: TroubleType_number = 1411; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_offHook = 1411 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_offHook
@@ -2772,7 +2772,7 @@ const TroubleType_number_offHook: TroubleType_number = 1411; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const offHook: TroubleType_number = TroubleType_number_offHook; /* SHORT_NAMED_INTEGER_VALUE */
+const offHook = TroubleType_number_offHook; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_physicalProblem
@@ -2780,7 +2780,7 @@ const offHook: TroubleType_number = TroubleType_number_offHook; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const TroubleType_number_physicalProblem: TroubleType_number = 1412; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_physicalProblem = 1412 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_physicalProblem
@@ -2788,7 +2788,7 @@ const TroubleType_number_physicalProblem: TroubleType_number = 1412; /* LONG_NAM
  * @type {number}
  */
 export
-const physicalProblem: TroubleType_number = TroubleType_number_physicalProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const physicalProblem = TroubleType_number_physicalProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_processorDead
@@ -2796,7 +2796,7 @@ const physicalProblem: TroubleType_number = TroubleType_number_physicalProblem; 
  * @type {number}
  */
 export
-const TroubleType_number_processorDead: TroubleType_number = 1413; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_processorDead = 1413 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_processorDead
@@ -2804,7 +2804,7 @@ const TroubleType_number_processorDead: TroubleType_number = 1413; /* LONG_NAMED
  * @type {number}
  */
 export
-const processorDead: TroubleType_number = TroubleType_number_processorDead; /* SHORT_NAMED_INTEGER_VALUE */
+const processorDead = TroubleType_number_processorDead; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_wiringProblem
@@ -2812,7 +2812,7 @@ const processorDead: TroubleType_number = TroubleType_number_processorDead; /* S
  * @type {number}
  */
 export
-const TroubleType_number_wiringProblem: TroubleType_number = 1414; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_wiringProblem = 1414 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_wiringProblem
@@ -2820,7 +2820,7 @@ const TroubleType_number_wiringProblem: TroubleType_number = 1414; /* LONG_NAMED
  * @type {number}
  */
 export
-const wiringProblem: TroubleType_number = TroubleType_number_wiringProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const wiringProblem = TroubleType_number_wiringProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_wireBrokeSetBrokePoleDown
@@ -2828,7 +2828,7 @@ const wiringProblem: TroubleType_number = TroubleType_number_wiringProblem; /* S
  * @type {number}
  */
 export
-const TroubleType_number_wireBrokeSetBrokePoleDown: TroubleType_number = 1415; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_wireBrokeSetBrokePoleDown = 1415 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_wireBrokeSetBrokePoleDown
@@ -2836,7 +2836,7 @@ const TroubleType_number_wireBrokeSetBrokePoleDown: TroubleType_number = 1415; /
  * @type {number}
  */
 export
-const wireBrokeSetBrokePoleDown: TroubleType_number = TroubleType_number_wireBrokeSetBrokePoleDown; /* SHORT_NAMED_INTEGER_VALUE */
+const wireBrokeSetBrokePoleDown = TroubleType_number_wireBrokeSetBrokePoleDown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noRegister
@@ -2844,7 +2844,7 @@ const wireBrokeSetBrokePoleDown: TroubleType_number = TroubleType_number_wireBro
  * @type {number}
  */
 export
-const TroubleType_number_noRegister: TroubleType_number = 1416; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_noRegister = 1416 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_noRegister
@@ -2852,7 +2852,7 @@ const TroubleType_number_noRegister: TroubleType_number = 1416; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const noRegister: TroubleType_number = TroubleType_number_noRegister; /* SHORT_NAMED_INTEGER_VALUE */
+const noRegister = TroubleType_number_noRegister; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_stuckSender
@@ -2860,7 +2860,7 @@ const noRegister: TroubleType_number = TroubleType_number_noRegister; /* SHORT_N
  * @type {number}
  */
 export
-const TroubleType_number_stuckSender: TroubleType_number = 1417; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_stuckSender = 1417 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_stuckSender
@@ -2868,7 +2868,7 @@ const TroubleType_number_stuckSender: TroubleType_number = 1417; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const stuckSender: TroubleType_number = TroubleType_number_stuckSender; /* SHORT_NAMED_INTEGER_VALUE */
+const stuckSender = TroubleType_number_stuckSender; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherStationTrouble
@@ -2876,7 +2876,7 @@ const stuckSender: TroubleType_number = TroubleType_number_stuckSender; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_otherStationTrouble: TroubleType_number = 1418; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_otherStationTrouble = 1418 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherStationTrouble
@@ -2884,7 +2884,7 @@ const TroubleType_number_otherStationTrouble: TroubleType_number = 1418; /* LONG
  * @type {number}
  */
 export
-const otherStationTrouble: TroubleType_number = TroubleType_number_otherStationTrouble; /* SHORT_NAMED_INTEGER_VALUE */
+const otherStationTrouble = TroubleType_number_otherStationTrouble; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherCaseGroup
@@ -2892,7 +2892,7 @@ const otherStationTrouble: TroubleType_number = TroubleType_number_otherStationT
  * @type {number}
  */
 export
-const TroubleType_number_otherCaseGroup: TroubleType_number = 1500; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_otherCaseGroup = 1500 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_otherCaseGroup
@@ -2900,7 +2900,7 @@ const TroubleType_number_otherCaseGroup: TroubleType_number = 1500; /* LONG_NAME
  * @type {number}
  */
 export
-const otherCaseGroup: TroubleType_number = TroubleType_number_otherCaseGroup; /* SHORT_NAMED_INTEGER_VALUE */
+const otherCaseGroup = TroubleType_number_otherCaseGroup; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_callTransferProblem
@@ -2908,7 +2908,7 @@ const otherCaseGroup: TroubleType_number = TroubleType_number_otherCaseGroup; /*
  * @type {number}
  */
 export
-const TroubleType_number_callTransferProblem: TroubleType_number = 1501; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_callTransferProblem = 1501 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_callTransferProblem
@@ -2916,7 +2916,7 @@ const TroubleType_number_callTransferProblem: TroubleType_number = 1501; /* LONG
  * @type {number}
  */
 export
-const callTransferProblem: TroubleType_number = TroubleType_number_callTransferProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const callTransferProblem = TroubleType_number_callTransferProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_callWaitingProblem
@@ -2924,7 +2924,7 @@ const callTransferProblem: TroubleType_number = TroubleType_number_callTransferP
  * @type {number}
  */
 export
-const TroubleType_number_callWaitingProblem: TroubleType_number = 1502; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_callWaitingProblem = 1502 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_callWaitingProblem
@@ -2932,7 +2932,7 @@ const TroubleType_number_callWaitingProblem: TroubleType_number = 1502; /* LONG_
  * @type {number}
  */
 export
-const callWaitingProblem: TroubleType_number = TroubleType_number_callWaitingProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const callWaitingProblem = TroubleType_number_callWaitingProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_customCallFeatureDoNotWork
@@ -2940,7 +2940,7 @@ const callWaitingProblem: TroubleType_number = TroubleType_number_callWaitingPro
  * @type {number}
  */
 export
-const TroubleType_number_customCallFeatureDoNotWork: TroubleType_number = 1503; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_customCallFeatureDoNotWork = 1503 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_customCallFeatureDoNotWork
@@ -2948,7 +2948,7 @@ const TroubleType_number_customCallFeatureDoNotWork: TroubleType_number = 1503; 
  * @type {number}
  */
 export
-const customCallFeatureDoNotWork: TroubleType_number = TroubleType_number_customCallFeatureDoNotWork; /* SHORT_NAMED_INTEGER_VALUE */
+const customCallFeatureDoNotWork = TroubleType_number_customCallFeatureDoNotWork; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_information
@@ -2956,7 +2956,7 @@ const customCallFeatureDoNotWork: TroubleType_number = TroubleType_number_custom
  * @type {number}
  */
 export
-const TroubleType_number_information: TroubleType_number = 1504; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_information = 1504 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_information
@@ -2964,7 +2964,7 @@ const TroubleType_number_information: TroubleType_number = 1504; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const information: TroubleType_number = TroubleType_number_information; /* SHORT_NAMED_INTEGER_VALUE */
+const information = TroubleType_number_information; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_threeWayCallingProblem
@@ -2972,7 +2972,7 @@ const information: TroubleType_number = TroubleType_number_information; /* SHORT
  * @type {number}
  */
 export
-const TroubleType_number_threeWayCallingProblem: TroubleType_number = 1505; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_threeWayCallingProblem = 1505 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_threeWayCallingProblem
@@ -2980,7 +2980,7 @@ const TroubleType_number_threeWayCallingProblem: TroubleType_number = 1505; /* L
  * @type {number}
  */
 export
-const threeWayCallingProblem: TroubleType_number = TroubleType_number_threeWayCallingProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const threeWayCallingProblem = TroubleType_number_threeWayCallingProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_orderWork
@@ -2988,7 +2988,7 @@ const threeWayCallingProblem: TroubleType_number = TroubleType_number_threeWayCa
  * @type {number}
  */
 export
-const TroubleType_number_orderWork: TroubleType_number = 1506; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_orderWork = 1506 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_orderWork
@@ -2996,7 +2996,7 @@ const TroubleType_number_orderWork: TroubleType_number = 1506; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const orderWork: TroubleType_number = TroubleType_number_orderWork; /* SHORT_NAMED_INTEGER_VALUE */
+const orderWork = TroubleType_number_orderWork; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseCktRequestedByIC
@@ -3004,7 +3004,7 @@ const orderWork: TroubleType_number = TroubleType_number_orderWork; /* SHORT_NAM
  * @type {number}
  */
 export
-const TroubleType_number_releaseCktRequestedByIC: TroubleType_number = 1507; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_releaseCktRequestedByIC = 1507 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseCktRequestedByIC
@@ -3012,7 +3012,7 @@ const TroubleType_number_releaseCktRequestedByIC: TroubleType_number = 1507; /* 
  * @type {number}
  */
 export
-const releaseCktRequestedByIC: TroubleType_number = TroubleType_number_releaseCktRequestedByIC; /* SHORT_NAMED_INTEGER_VALUE */
+const releaseCktRequestedByIC = TroubleType_number_releaseCktRequestedByIC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseCktRequestedByEC
@@ -3020,7 +3020,7 @@ const releaseCktRequestedByIC: TroubleType_number = TroubleType_number_releaseCk
  * @type {number}
  */
 export
-const TroubleType_number_releaseCktRequestedByEC: TroubleType_number = 1508; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_releaseCktRequestedByEC = 1508 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseCktRequestedByEC
@@ -3028,7 +3028,7 @@ const TroubleType_number_releaseCktRequestedByEC: TroubleType_number = 1508; /* 
  * @type {number}
  */
 export
-const releaseCktRequestedByEC: TroubleType_number = TroubleType_number_releaseCktRequestedByEC; /* SHORT_NAMED_INTEGER_VALUE */
+const releaseCktRequestedByEC = TroubleType_number_releaseCktRequestedByEC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseFacilityRequestedByIC
@@ -3036,7 +3036,7 @@ const releaseCktRequestedByEC: TroubleType_number = TroubleType_number_releaseCk
  * @type {number}
  */
 export
-const TroubleType_number_releaseFacilityRequestedByIC: TroubleType_number = 1509; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_releaseFacilityRequestedByIC = 1509 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseFacilityRequestedByIC
@@ -3044,7 +3044,7 @@ const TroubleType_number_releaseFacilityRequestedByIC: TroubleType_number = 1509
  * @type {number}
  */
 export
-const releaseFacilityRequestedByIC: TroubleType_number = TroubleType_number_releaseFacilityRequestedByIC; /* SHORT_NAMED_INTEGER_VALUE */
+const releaseFacilityRequestedByIC = TroubleType_number_releaseFacilityRequestedByIC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseFacilityRequestedByEC
@@ -3052,7 +3052,7 @@ const releaseFacilityRequestedByIC: TroubleType_number = TroubleType_number_rele
  * @type {number}
  */
 export
-const TroubleType_number_releaseFacilityRequestedByEC: TroubleType_number = 1510; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_releaseFacilityRequestedByEC = 1510 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_releaseFacilityRequestedByEC
@@ -3060,7 +3060,7 @@ const TroubleType_number_releaseFacilityRequestedByEC: TroubleType_number = 1510
  * @type {number}
  */
 export
-const releaseFacilityRequestedByEC: TroubleType_number = TroubleType_number_releaseFacilityRequestedByEC; /* SHORT_NAMED_INTEGER_VALUE */
+const releaseFacilityRequestedByEC = TroubleType_number_releaseFacilityRequestedByEC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_requestForRoutine
@@ -3068,7 +3068,7 @@ const releaseFacilityRequestedByEC: TroubleType_number = TroubleType_number_rele
  * @type {number}
  */
 export
-const TroubleType_number_requestForRoutine: TroubleType_number = 1511; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_requestForRoutine = 1511 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_requestForRoutine
@@ -3076,7 +3076,7 @@ const TroubleType_number_requestForRoutine: TroubleType_number = 1511; /* LONG_N
  * @type {number}
  */
 export
-const requestForRoutine: TroubleType_number = TroubleType_number_requestForRoutine; /* SHORT_NAMED_INTEGER_VALUE */
+const requestForRoutine = TroubleType_number_requestForRoutine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_release
@@ -3084,7 +3084,7 @@ const requestForRoutine: TroubleType_number = TroubleType_number_requestForRouti
  * @type {number}
  */
 export
-const TroubleType_number_release: TroubleType_number = 1512; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_release = 1512 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_release
@@ -3092,7 +3092,7 @@ const TroubleType_number_release: TroubleType_number = 1512; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const release: TroubleType_number = TroubleType_number_release; /* SHORT_NAMED_INTEGER_VALUE */
+const release = TroubleType_number_release; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_requestDispatch
@@ -3100,7 +3100,7 @@ const release: TroubleType_number = TroubleType_number_release; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const TroubleType_number_requestDispatch: TroubleType_number = 1513; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_requestDispatch = 1513 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_requestDispatch
@@ -3108,7 +3108,7 @@ const TroubleType_number_requestDispatch: TroubleType_number = 1513; /* LONG_NAM
  * @type {number}
  */
 export
-const requestDispatch: TroubleType_number = TroubleType_number_requestDispatch; /* SHORT_NAMED_INTEGER_VALUE */
+const requestDispatch = TroubleType_number_requestDispatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_requestMonitorOfCircuit
@@ -3116,7 +3116,7 @@ const requestDispatch: TroubleType_number = TroubleType_number_requestDispatch; 
  * @type {number}
  */
 export
-const TroubleType_number_requestMonitorOfCircuit: TroubleType_number = 1514; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_requestMonitorOfCircuit = 1514 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_requestMonitorOfCircuit
@@ -3124,7 +3124,7 @@ const TroubleType_number_requestMonitorOfCircuit: TroubleType_number = 1514; /* 
  * @type {number}
  */
 export
-const requestMonitorOfCircuit: TroubleType_number = TroubleType_number_requestMonitorOfCircuit; /* SHORT_NAMED_INTEGER_VALUE */
+const requestMonitorOfCircuit = TroubleType_number_requestMonitorOfCircuit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_routineTestFailure
@@ -3132,7 +3132,7 @@ const requestMonitorOfCircuit: TroubleType_number = TroubleType_number_requestMo
  * @type {number}
  */
 export
-const TroubleType_number_routineTestFailure: TroubleType_number = 1515; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_routineTestFailure = 1515 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_routineTestFailure
@@ -3140,7 +3140,7 @@ const TroubleType_number_routineTestFailure: TroubleType_number = 1515; /* LONG_
  * @type {number}
  */
 export
-const routineTestFailure: TroubleType_number = TroubleType_number_routineTestFailure; /* SHORT_NAMED_INTEGER_VALUE */
+const routineTestFailure = TroubleType_number_routineTestFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lostTimerReport
@@ -3148,7 +3148,7 @@ const routineTestFailure: TroubleType_number = TroubleType_number_routineTestFai
  * @type {number}
  */
 export
-const TroubleType_number_lostTimerReport: TroubleType_number = 1516; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_lostTimerReport = 1516 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_lostTimerReport
@@ -3156,7 +3156,7 @@ const TroubleType_number_lostTimerReport: TroubleType_number = 1516; /* LONG_NAM
  * @type {number}
  */
 export
-const lostTimerReport: TroubleType_number = TroubleType_number_lostTimerReport; /* SHORT_NAMED_INTEGER_VALUE */
+const lostTimerReport = TroubleType_number_lostTimerReport; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_historicalReports
@@ -3164,7 +3164,7 @@ const lostTimerReport: TroubleType_number = TroubleType_number_lostTimerReport; 
  * @type {number}
  */
 export
-const TroubleType_number_historicalReports: TroubleType_number = 1517; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_historicalReports = 1517 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_historicalReports
@@ -3172,7 +3172,7 @@ const TroubleType_number_historicalReports: TroubleType_number = 1517; /* LONG_N
  * @type {number}
  */
 export
-const historicalReports: TroubleType_number = TroubleType_number_historicalReports; /* SHORT_NAMED_INTEGER_VALUE */
+const historicalReports = TroubleType_number_historicalReports; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_switchOrTrunkRelated
@@ -3180,7 +3180,7 @@ const historicalReports: TroubleType_number = TroubleType_number_historicalRepor
  * @type {number}
  */
 export
-const TroubleType_number_switchOrTrunkRelated: TroubleType_number = 1518; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_switchOrTrunkRelated = 1518 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_switchOrTrunkRelated
@@ -3188,7 +3188,7 @@ const TroubleType_number_switchOrTrunkRelated: TroubleType_number = 1518; /* LON
  * @type {number}
  */
 export
-const switchOrTrunkRelated: TroubleType_number = TroubleType_number_switchOrTrunkRelated; /* SHORT_NAMED_INTEGER_VALUE */
+const switchOrTrunkRelated = TroubleType_number_switchOrTrunkRelated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_testAssist
@@ -3196,7 +3196,7 @@ const switchOrTrunkRelated: TroubleType_number = TroubleType_number_switchOrTrun
  * @type {number}
  */
 export
-const TroubleType_number_testAssist: TroubleType_number = 1519; /* LONG_NAMED_INTEGER_VALUE */
+const TroubleType_number_testAssist = 1519 satisfies TroubleType_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TroubleType_number_testAssist
@@ -3204,7 +3204,7 @@ const TroubleType_number_testAssist: TroubleType_number = 1519; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const testAssist: TroubleType_number = TroubleType_number_testAssist; /* SHORT_NAMED_INTEGER_VALUE */
+const testAssist = TroubleType_number_testAssist; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TroubleType_number = $._decodeInteger;
 export const _encode_TroubleType_number = $._encodeInteger;
 

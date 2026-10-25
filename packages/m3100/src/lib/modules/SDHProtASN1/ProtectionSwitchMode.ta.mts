@@ -65,7 +65,7 @@ export const ProtectionSwitchMode = _enum_for_ProtectionSwitchMode;
  * @constant
  * @type {number}
  */
-export const ProtectionSwitchMode_bidirectional: ProtectionSwitchMode =
+export const ProtectionSwitchMode_bidirectional =
     ProtectionSwitchMode.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const ProtectionSwitchMode_bidirectional: ProtectionSwitchMode =
  * @constant
  * @type {number}
  */
-export const bidirectional: ProtectionSwitchMode =
+export const bidirectional =
     ProtectionSwitchMode.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const bidirectional: ProtectionSwitchMode =
  * @constant
  * @type {number}
  */
-export const ProtectionSwitchMode_unidirectional: ProtectionSwitchMode =
+export const ProtectionSwitchMode_unidirectional =
     ProtectionSwitchMode.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -92,7 +92,7 @@ export const ProtectionSwitchMode_unidirectional: ProtectionSwitchMode =
  * @constant
  * @type {number}
  */
-export const unidirectional: ProtectionSwitchMode =
+export const unidirectional =
     ProtectionSwitchMode.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

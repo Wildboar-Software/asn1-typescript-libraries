@@ -51,7 +51,7 @@ type UMTS_Content_Report_initiator = _enum_for_UMTS_Content_Report_initiator | E
  * @type {number}
  */
 export
-const UMTS_Content_Report_initiator_originating_party: UMTS_Content_Report_initiator = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const UMTS_Content_Report_initiator_originating_party = _enum_for_UMTS_Content_Report_initiator.originating_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_party
@@ -62,7 +62,7 @@ const UMTS_Content_Report_initiator_originating_party: UMTS_Content_Report_initi
  * @type {number}
  */
 export
-const originating_party: UMTS_Content_Report_initiator = UMTS_Content_Report_initiator_originating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_party = UMTS_Content_Report_initiator_originating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UMTS_Content_Report_initiator_terminating_party
@@ -73,7 +73,7 @@ const originating_party: UMTS_Content_Report_initiator = UMTS_Content_Report_ini
  * @type {number}
  */
 export
-const UMTS_Content_Report_initiator_terminating_party: UMTS_Content_Report_initiator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const UMTS_Content_Report_initiator_terminating_party = _enum_for_UMTS_Content_Report_initiator.terminating_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_party
@@ -84,7 +84,7 @@ const UMTS_Content_Report_initiator_terminating_party: UMTS_Content_Report_initi
  * @type {number}
  */
 export
-const terminating_party: UMTS_Content_Report_initiator = UMTS_Content_Report_initiator_terminating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_party = UMTS_Content_Report_initiator_terminating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UMTS_Content_Report_initiator_forwarded_to_party
@@ -95,7 +95,7 @@ const terminating_party: UMTS_Content_Report_initiator = UMTS_Content_Report_ini
  * @type {number}
  */
 export
-const UMTS_Content_Report_initiator_forwarded_to_party: UMTS_Content_Report_initiator = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const UMTS_Content_Report_initiator_forwarded_to_party = _enum_for_UMTS_Content_Report_initiator.forwarded_to_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded_to_party
@@ -106,7 +106,7 @@ const UMTS_Content_Report_initiator_forwarded_to_party: UMTS_Content_Report_init
  * @type {number}
  */
 export
-const forwarded_to_party: UMTS_Content_Report_initiator = UMTS_Content_Report_initiator_forwarded_to_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded_to_party = UMTS_Content_Report_initiator_forwarded_to_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UMTS_Content_Report_initiator_undefined_party
@@ -117,7 +117,7 @@ const forwarded_to_party: UMTS_Content_Report_initiator = UMTS_Content_Report_in
  * @type {number}
  */
 export
-const UMTS_Content_Report_initiator_undefined_party: UMTS_Content_Report_initiator = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const UMTS_Content_Report_initiator_undefined_party = _enum_for_UMTS_Content_Report_initiator.undefined_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined_party
@@ -128,7 +128,7 @@ const UMTS_Content_Report_initiator_undefined_party: UMTS_Content_Report_initiat
  * @type {number}
  */
 export
-const undefined_party: UMTS_Content_Report_initiator = UMTS_Content_Report_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined_party = UMTS_Content_Report_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UMTS_Content_Report_initiator: $.ASN1Decoder<UMTS_Content_Report_initiator> = $._decodeEnumerated;
 export const _encode_UMTS_Content_Report_initiator: $.ASN1Encoder<UMTS_Content_Report_initiator> = $._encodeEnumerated;
 

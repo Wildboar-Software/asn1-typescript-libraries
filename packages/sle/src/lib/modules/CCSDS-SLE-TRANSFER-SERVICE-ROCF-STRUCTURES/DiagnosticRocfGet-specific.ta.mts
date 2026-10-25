@@ -39,7 +39,7 @@ type DiagnosticRocfGet_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticRocfGet_specific_unknownParameter: DiagnosticRocfGet_specific = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfGet_specific_unknownParameter = 0 satisfies DiagnosticRocfGet_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfGet_specific_unknownParameter
@@ -51,7 +51,7 @@ const DiagnosticRocfGet_specific_unknownParameter: DiagnosticRocfGet_specific = 
  * @type {number}
  */
 export
-const unknownParameter: DiagnosticRocfGet_specific = DiagnosticRocfGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter = DiagnosticRocfGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRocfGet_specific: $.ASN1Decoder<DiagnosticRocfGet_specific> = $._decodeInteger;
 export const _encode_DiagnosticRocfGet_specific: $.ASN1Encoder<DiagnosticRocfGet_specific> = $._encodeInteger;
 

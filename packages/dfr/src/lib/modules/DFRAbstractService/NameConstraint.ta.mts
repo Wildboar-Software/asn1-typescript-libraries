@@ -95,7 +95,7 @@ const NameConstraint = _enum_for_NameConstraint;
  * @type {number}
  */
 export
-const NameConstraint_no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameConstraint_no_name_constraint = NameConstraint.no_name_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_name_constraint
@@ -106,7 +106,7 @@ const NameConstraint_no_name_constraint: NameConstraint = NameConstraint.no_name
  * @type {number}
  */
 export
-const no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_name_constraint = NameConstraint.no_name_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameConstraint_local_unambiguity
@@ -117,7 +117,7 @@ const no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /*
  * @type {number}
  */
 export
-const NameConstraint_local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameConstraint_local_unambiguity = NameConstraint.local_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary local_unambiguity
@@ -128,7 +128,7 @@ const NameConstraint_local_unambiguity: NameConstraint = NameConstraint.local_un
  * @type {number}
  */
 export
-const local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const local_unambiguity = NameConstraint.local_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameConstraint_global_unambiguity
@@ -139,7 +139,7 @@ const local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* S
  * @type {number}
  */
 export
-const NameConstraint_global_unambiguity: NameConstraint = NameConstraint.global_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameConstraint_global_unambiguity = NameConstraint.global_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary global_unambiguity
@@ -150,7 +150,7 @@ const NameConstraint_global_unambiguity: NameConstraint = NameConstraint.global_
  * @type {number}
  */
 export
-const global_unambiguity: NameConstraint = NameConstraint.global_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const global_unambiguity = NameConstraint.global_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_NameConstraint(el: _Element): NameConstraint {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

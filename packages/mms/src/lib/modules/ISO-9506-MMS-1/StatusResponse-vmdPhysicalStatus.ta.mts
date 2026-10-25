@@ -48,7 +48,7 @@ type StatusResponse_vmdPhysicalStatus = INTEGER;
  * @type {number}
  */
 export
-const StatusResponse_vmdPhysicalStatus_operational: StatusResponse_vmdPhysicalStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdPhysicalStatus_operational = 0 satisfies StatusResponse_vmdPhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_operational
@@ -61,7 +61,7 @@ const StatusResponse_vmdPhysicalStatus_operational: StatusResponse_vmdPhysicalSt
  * @type {number}
  */
 export
-const operational: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
+const operational = StatusResponse_vmdPhysicalStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_partially_operational
@@ -74,7 +74,7 @@ const operational: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysical
  * @type {number}
  */
 export
-const StatusResponse_vmdPhysicalStatus_partially_operational: StatusResponse_vmdPhysicalStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdPhysicalStatus_partially_operational = 1 satisfies StatusResponse_vmdPhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_partially_operational
@@ -87,7 +87,7 @@ const StatusResponse_vmdPhysicalStatus_partially_operational: StatusResponse_vmd
  * @type {number}
  */
 export
-const partially_operational: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalStatus_partially_operational; /* SHORT_NAMED_INTEGER_VALUE */
+const partially_operational = StatusResponse_vmdPhysicalStatus_partially_operational; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_inoperable
@@ -100,7 +100,7 @@ const partially_operational: StatusResponse_vmdPhysicalStatus = StatusResponse_v
  * @type {number}
  */
 export
-const StatusResponse_vmdPhysicalStatus_inoperable: StatusResponse_vmdPhysicalStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdPhysicalStatus_inoperable = 2 satisfies StatusResponse_vmdPhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_inoperable
@@ -113,7 +113,7 @@ const StatusResponse_vmdPhysicalStatus_inoperable: StatusResponse_vmdPhysicalSta
  * @type {number}
  */
 export
-const inoperable: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalStatus_inoperable; /* SHORT_NAMED_INTEGER_VALUE */
+const inoperable = StatusResponse_vmdPhysicalStatus_inoperable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_needs_commissioning
@@ -126,7 +126,7 @@ const inoperable: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalS
  * @type {number}
  */
 export
-const StatusResponse_vmdPhysicalStatus_needs_commissioning: StatusResponse_vmdPhysicalStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const StatusResponse_vmdPhysicalStatus_needs_commissioning = 3 satisfies StatusResponse_vmdPhysicalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StatusResponse_vmdPhysicalStatus_needs_commissioning
@@ -139,7 +139,7 @@ const StatusResponse_vmdPhysicalStatus_needs_commissioning: StatusResponse_vmdPh
  * @type {number}
  */
 export
-const needs_commissioning: StatusResponse_vmdPhysicalStatus = StatusResponse_vmdPhysicalStatus_needs_commissioning; /* SHORT_NAMED_INTEGER_VALUE */
+const needs_commissioning = StatusResponse_vmdPhysicalStatus_needs_commissioning; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_StatusResponse_vmdPhysicalStatus = $._decodeInteger;
 export const _encode_StatusResponse_vmdPhysicalStatus = $._encodeInteger;
 

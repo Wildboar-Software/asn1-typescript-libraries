@@ -65,7 +65,7 @@ const LocationReportArea = _enum_for_LocationReportArea;
  * @type {number}
  */
 export
-const LocationReportArea_cell: LocationReportArea = LocationReportArea.cell; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationReportArea_cell = LocationReportArea.cell; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cell
@@ -73,7 +73,7 @@ const LocationReportArea_cell: LocationReportArea = LocationReportArea.cell; /* 
  * @type {number}
  */
 export
-const cell: LocationReportArea = LocationReportArea.cell; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cell = LocationReportArea.cell; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LocationReportArea: $.ASN1Decoder<LocationReportArea> = $._decodeEnumerated;
 export const _encode_LocationReportArea: $.ASN1Encoder<LocationReportArea> = $._encodeEnumerated;
 

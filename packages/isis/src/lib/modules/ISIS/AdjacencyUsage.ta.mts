@@ -87,7 +87,7 @@ export const AdjacencyUsage = _enum_for_AdjacencyUsage;
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_undefined: AdjacencyUsage =
+export const AdjacencyUsage_undefined =
   AdjacencyUsage.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const AdjacencyUsage_undefined: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const undefined: AdjacencyUsage =
+export const undefined =
   AdjacencyUsage.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const undefined: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1: AdjacencyUsage =
+export const AdjacencyUsage_level1 =
   AdjacencyUsage.level1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,7 +117,7 @@ export const AdjacencyUsage_level1: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const level1: AdjacencyUsage =
+export const level1 =
   AdjacencyUsage.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -131,7 +131,7 @@ export const level1: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level2: AdjacencyUsage =
+export const AdjacencyUsage_level2 =
   AdjacencyUsage.level2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -139,7 +139,7 @@ export const AdjacencyUsage_level2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const level2: AdjacencyUsage =
+export const level2 =
   AdjacencyUsage.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +153,7 @@ export const level2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1and2: AdjacencyUsage =
+export const AdjacencyUsage_level1and2 =
   AdjacencyUsage.level1and2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -161,7 +161,7 @@ export const AdjacencyUsage_level1and2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const level1and2: AdjacencyUsage =
+export const level1and2 =
   AdjacencyUsage.level1and2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

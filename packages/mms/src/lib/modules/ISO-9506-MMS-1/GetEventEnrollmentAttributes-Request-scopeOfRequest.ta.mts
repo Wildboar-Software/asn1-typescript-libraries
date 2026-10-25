@@ -51,7 +51,7 @@ type GetEventEnrollmentAttributes_Request_scopeOfRequest = INTEGER;
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific: GetEventEnrollmentAttributes_Request_scopeOfRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific = 0 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_specific
@@ -65,7 +65,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_specific: GetEventEnro
  * @type {number}
  */
 export
-const specific: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollmentAttributes_Request_scopeOfRequest_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const specific = GetEventEnrollmentAttributes_Request_scopeOfRequest_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_client
@@ -80,7 +80,7 @@ const specific: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEn
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_client: GetEventEnrollmentAttributes_Request_scopeOfRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_client = 1 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_client
@@ -94,7 +94,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_client: GetEventEnroll
  * @type {number}
  */
 export
-const client: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollmentAttributes_Request_scopeOfRequest_client; /* SHORT_NAMED_INTEGER_VALUE */
+const client = GetEventEnrollmentAttributes_Request_scopeOfRequest_client; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ec
@@ -109,7 +109,7 @@ const client: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnro
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec: GetEventEnrollmentAttributes_Request_scopeOfRequest = 2; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec = 2 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ec
@@ -123,7 +123,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ec: GetEventEnrollment
  * @type {number}
  */
 export
-const ec: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollmentAttributes_Request_scopeOfRequest_ec; /* SHORT_NAMED_INTEGER_VALUE */
+const ec = GetEventEnrollmentAttributes_Request_scopeOfRequest_ec; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ea
@@ -138,7 +138,7 @@ const ec: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollme
  * @type {number}
  */
 export
-const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea: GetEventEnrollmentAttributes_Request_scopeOfRequest = 3; /* LONG_NAMED_INTEGER_VALUE */
+const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea = 3 satisfies GetEventEnrollmentAttributes_Request_scopeOfRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetEventEnrollmentAttributes_Request_scopeOfRequest_ea
@@ -152,7 +152,7 @@ const GetEventEnrollmentAttributes_Request_scopeOfRequest_ea: GetEventEnrollment
  * @type {number}
  */
 export
-const ea: GetEventEnrollmentAttributes_Request_scopeOfRequest = GetEventEnrollmentAttributes_Request_scopeOfRequest_ea; /* SHORT_NAMED_INTEGER_VALUE */
+const ea = GetEventEnrollmentAttributes_Request_scopeOfRequest_ea; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest = $._decodeInteger;
 export const _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest = $._encodeInteger;
 

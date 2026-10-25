@@ -46,7 +46,7 @@ type TargetRole = _enum_for_TargetRole | ENUMERATED;
  * @type {number}
  */
 export
-const TargetRole_announcingUE: TargetRole = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetRole_announcingUE = _enum_for_TargetRole.announcingUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary announcingUE
@@ -58,7 +58,7 @@ const TargetRole_announcingUE: TargetRole = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const announcingUE: TargetRole = TargetRole_announcingUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const announcingUE = TargetRole_announcingUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetRole_monitoringUE
@@ -72,7 +72,7 @@ const announcingUE: TargetRole = TargetRole_announcingUE; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TargetRole_monitoringUE: TargetRole = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetRole_monitoringUE = _enum_for_TargetRole.monitoringUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringUE
@@ -84,7 +84,7 @@ const TargetRole_monitoringUE: TargetRole = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const monitoringUE: TargetRole = TargetRole_monitoringUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringUE = TargetRole_monitoringUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TargetRole: $.ASN1Decoder<TargetRole> = $._decodeEnumerated;
 export const _encode_TargetRole: $.ASN1Encoder<TargetRole> = $._encodeEnumerated;
 

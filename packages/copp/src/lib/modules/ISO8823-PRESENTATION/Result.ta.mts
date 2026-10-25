@@ -36,7 +36,7 @@ export type Result = INTEGER;
  * @constant
  * @type {number}
  */
-export const Result_acceptance: Result = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_acceptance = 0 satisfies Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const Result_acceptance: Result = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const acceptance: Result = Result_acceptance; /* SHORT_NAMED_INTEGER_VALUE */
+export const acceptance = Result_acceptance; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const acceptance: Result = Result_acceptance; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const Result_user_rejection: Result = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_user_rejection = 1 satisfies Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const Result_user_rejection: Result = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const user_rejection: Result = Result_user_rejection; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_rejection = Result_user_rejection; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const user_rejection: Result = Result_user_rejection; /* SHORT_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const Result_provider_rejection: Result = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_provider_rejection = 2 satisfies Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const Result_provider_rejection: Result = 2; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const provider_rejection: Result = Result_provider_rejection; /* SHORT_NAMED_INTEGER_VALUE */
+export const provider_rejection = Result_provider_rejection; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

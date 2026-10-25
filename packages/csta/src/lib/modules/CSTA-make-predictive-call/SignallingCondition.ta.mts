@@ -89,7 +89,7 @@ const SignallingCondition = _enum_for_SignallingCondition;
  * @type {number}
  */
 export
-const SignallingCondition_callDelivered: SignallingCondition = SignallingCondition.callDelivered; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignallingCondition_callDelivered = SignallingCondition.callDelivered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDelivered
@@ -97,7 +97,7 @@ const SignallingCondition_callDelivered: SignallingCondition = SignallingConditi
  * @type {number}
  */
 export
-const callDelivered: SignallingCondition = SignallingCondition.callDelivered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDelivered = SignallingCondition.callDelivered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignallingCondition_callEstablished
@@ -105,7 +105,7 @@ const callDelivered: SignallingCondition = SignallingCondition.callDelivered; /*
  * @type {number}
  */
 export
-const SignallingCondition_callEstablished: SignallingCondition = SignallingCondition.callEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignallingCondition_callEstablished = SignallingCondition.callEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callEstablished
@@ -113,7 +113,7 @@ const SignallingCondition_callEstablished: SignallingCondition = SignallingCondi
  * @type {number}
  */
 export
-const callEstablished: SignallingCondition = SignallingCondition.callEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callEstablished = SignallingCondition.callEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SignallingCondition: $.ASN1Decoder<SignallingCondition> | null = null;
 

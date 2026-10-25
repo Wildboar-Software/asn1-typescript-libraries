@@ -91,7 +91,7 @@ type Messaging_Property_Requested_Reports = _enum_for_Messaging_Property_Request
  * @type {number}
  */
 export
-const Messaging_Property_Requested_Reports_none: Messaging_Property_Requested_Reports = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Requested_Reports_none = _enum_for_Messaging_Property_Requested_Reports.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -106,7 +106,7 @@ const Messaging_Property_Requested_Reports_none: Messaging_Property_Requested_Re
  * @type {number}
  */
 export
-const none: Messaging_Property_Requested_Reports = Messaging_Property_Requested_Reports_none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none = Messaging_Property_Requested_Reports_none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Requested_Reports_delivery
@@ -120,7 +120,7 @@ const none: Messaging_Property_Requested_Reports = Messaging_Property_Requested_
  * @type {number}
  */
 export
-const Messaging_Property_Requested_Reports_delivery: Messaging_Property_Requested_Reports = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Requested_Reports_delivery = _enum_for_Messaging_Property_Requested_Reports.delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery
@@ -134,7 +134,7 @@ const Messaging_Property_Requested_Reports_delivery: Messaging_Property_Requeste
  * @type {number}
  */
 export
-const delivery: Messaging_Property_Requested_Reports = Messaging_Property_Requested_Reports_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery = Messaging_Property_Requested_Reports_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Requested_Reports_read
@@ -148,7 +148,7 @@ const delivery: Messaging_Property_Requested_Reports = Messaging_Property_Reques
  * @type {number}
  */
 export
-const Messaging_Property_Requested_Reports_read: Messaging_Property_Requested_Reports = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Requested_Reports_read = _enum_for_Messaging_Property_Requested_Reports.read; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary read
@@ -162,7 +162,7 @@ const Messaging_Property_Requested_Reports_read: Messaging_Property_Requested_Re
  * @type {number}
  */
 export
-const read: Messaging_Property_Requested_Reports = Messaging_Property_Requested_Reports_read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const read = Messaging_Property_Requested_Reports_read; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Property_Requested_Reports_delivery_and_read
@@ -176,7 +176,7 @@ const read: Messaging_Property_Requested_Reports = Messaging_Property_Requested_
  * @type {number}
  */
 export
-const Messaging_Property_Requested_Reports_delivery_and_read: Messaging_Property_Requested_Reports = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Property_Requested_Reports_delivery_and_read = _enum_for_Messaging_Property_Requested_Reports.delivery_and_read; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery_and_read
@@ -190,7 +190,7 @@ const Messaging_Property_Requested_Reports_delivery_and_read: Messaging_Property
  * @type {number}
  */
 export
-const delivery_and_read: Messaging_Property_Requested_Reports = Messaging_Property_Requested_Reports_delivery_and_read; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery_and_read = Messaging_Property_Requested_Reports_delivery_and_read; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Property_Requested_Reports: $.ASN1Decoder<Messaging_Property_Requested_Reports> = $._decodeEnumerated;
 export const _encode_Messaging_Property_Requested_Reports: $.ASN1Encoder<Messaging_Property_Requested_Reports> = $._encodeEnumerated;
 

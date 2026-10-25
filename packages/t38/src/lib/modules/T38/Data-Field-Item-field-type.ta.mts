@@ -94,7 +94,7 @@ export type Data_Field_Item_field_type =
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_hdlc_data: Data_Field_Item_field_type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_hdlc_data = _enum_for_Data_Field_Item_field_type.hdlc_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const Data_Field_Item_field_type_hdlc_data: Data_Field_Item_field_type = 
  * @constant
  * @type {number}
  */
-export const hdlc_data: Data_Field_Item_field_type = Data_Field_Item_field_type_hdlc_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const hdlc_data = Data_Field_Item_field_type_hdlc_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,7 +114,7 @@ export const hdlc_data: Data_Field_Item_field_type = Data_Field_Item_field_type_
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_hdlc_sig_end: Data_Field_Item_field_type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_hdlc_sig_end = _enum_for_Data_Field_Item_field_type.hdlc_sig_end; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const Data_Field_Item_field_type_hdlc_sig_end: Data_Field_Item_field_type
  * @constant
  * @type {number}
  */
-export const hdlc_sig_end: Data_Field_Item_field_type = Data_Field_Item_field_type_hdlc_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const hdlc_sig_end = Data_Field_Item_field_type_hdlc_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -134,7 +134,7 @@ export const hdlc_sig_end: Data_Field_Item_field_type = Data_Field_Item_field_ty
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_hdlc_fcs_OK: Data_Field_Item_field_type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_hdlc_fcs_OK = _enum_for_Data_Field_Item_field_type.hdlc_fcs_OK; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -144,7 +144,7 @@ export const Data_Field_Item_field_type_hdlc_fcs_OK: Data_Field_Item_field_type 
  * @constant
  * @type {number}
  */
-export const hdlc_fcs_OK: Data_Field_Item_field_type = Data_Field_Item_field_type_hdlc_fcs_OK; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const hdlc_fcs_OK = Data_Field_Item_field_type_hdlc_fcs_OK; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const hdlc_fcs_OK: Data_Field_Item_field_type = Data_Field_Item_field_typ
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_hdlc_fcs_BAD: Data_Field_Item_field_type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_hdlc_fcs_BAD = _enum_for_Data_Field_Item_field_type.hdlc_fcs_BAD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -164,7 +164,7 @@ export const Data_Field_Item_field_type_hdlc_fcs_BAD: Data_Field_Item_field_type
  * @constant
  * @type {number}
  */
-export const hdlc_fcs_BAD: Data_Field_Item_field_type = Data_Field_Item_field_type_hdlc_fcs_BAD; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const hdlc_fcs_BAD = Data_Field_Item_field_type_hdlc_fcs_BAD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -174,7 +174,7 @@ export const hdlc_fcs_BAD: Data_Field_Item_field_type = Data_Field_Item_field_ty
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_hdlc_fcs_OK_sig_end: Data_Field_Item_field_type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_hdlc_fcs_OK_sig_end = _enum_for_Data_Field_Item_field_type.hdlc_fcs_OK_sig_end; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -184,7 +184,7 @@ export const Data_Field_Item_field_type_hdlc_fcs_OK_sig_end: Data_Field_Item_fie
  * @constant
  * @type {number}
  */
-export const hdlc_fcs_OK_sig_end: Data_Field_Item_field_type = Data_Field_Item_field_type_hdlc_fcs_OK_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const hdlc_fcs_OK_sig_end = Data_Field_Item_field_type_hdlc_fcs_OK_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -194,7 +194,7 @@ export const hdlc_fcs_OK_sig_end: Data_Field_Item_field_type = Data_Field_Item_f
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_hdlc_fcs_BAD_sig_end: Data_Field_Item_field_type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_hdlc_fcs_BAD_sig_end = _enum_for_Data_Field_Item_field_type.hdlc_fcs_BAD_sig_end; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -204,7 +204,7 @@ export const Data_Field_Item_field_type_hdlc_fcs_BAD_sig_end: Data_Field_Item_fi
  * @constant
  * @type {number}
  */
-export const hdlc_fcs_BAD_sig_end: Data_Field_Item_field_type = Data_Field_Item_field_type_hdlc_fcs_BAD_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const hdlc_fcs_BAD_sig_end = Data_Field_Item_field_type_hdlc_fcs_BAD_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -214,7 +214,7 @@ export const hdlc_fcs_BAD_sig_end: Data_Field_Item_field_type = Data_Field_Item_
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_t4_non_ecm_data: Data_Field_Item_field_type = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_t4_non_ecm_data = _enum_for_Data_Field_Item_field_type.t4_non_ecm_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -224,7 +224,7 @@ export const Data_Field_Item_field_type_t4_non_ecm_data: Data_Field_Item_field_t
  * @constant
  * @type {number}
  */
-export const t4_non_ecm_data: Data_Field_Item_field_type = Data_Field_Item_field_type_t4_non_ecm_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const t4_non_ecm_data = Data_Field_Item_field_type_t4_non_ecm_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -234,7 +234,7 @@ export const t4_non_ecm_data: Data_Field_Item_field_type = Data_Field_Item_field
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_t4_non_ecm_sig_end: Data_Field_Item_field_type = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_t4_non_ecm_sig_end = _enum_for_Data_Field_Item_field_type.t4_non_ecm_sig_end; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -244,7 +244,7 @@ export const Data_Field_Item_field_type_t4_non_ecm_sig_end: Data_Field_Item_fiel
  * @constant
  * @type {number}
  */
-export const t4_non_ecm_sig_end: Data_Field_Item_field_type = Data_Field_Item_field_type_t4_non_ecm_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const t4_non_ecm_sig_end = Data_Field_Item_field_type_t4_non_ecm_sig_end; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -254,7 +254,7 @@ export const t4_non_ecm_sig_end: Data_Field_Item_field_type = Data_Field_Item_fi
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_cm_message: Data_Field_Item_field_type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_cm_message = _enum_for_Data_Field_Item_field_type.cm_message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -264,7 +264,7 @@ export const Data_Field_Item_field_type_cm_message: Data_Field_Item_field_type =
  * @constant
  * @type {number}
  */
-export const cm_message: Data_Field_Item_field_type = Data_Field_Item_field_type_cm_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cm_message = Data_Field_Item_field_type_cm_message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -274,7 +274,7 @@ export const cm_message: Data_Field_Item_field_type = Data_Field_Item_field_type
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_jm_message: Data_Field_Item_field_type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_jm_message = _enum_for_Data_Field_Item_field_type.jm_message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -284,7 +284,7 @@ export const Data_Field_Item_field_type_jm_message: Data_Field_Item_field_type =
  * @constant
  * @type {number}
  */
-export const jm_message: Data_Field_Item_field_type = Data_Field_Item_field_type_jm_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const jm_message = Data_Field_Item_field_type_jm_message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -294,7 +294,7 @@ export const jm_message: Data_Field_Item_field_type = Data_Field_Item_field_type
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_ci_message: Data_Field_Item_field_type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_ci_message = _enum_for_Data_Field_Item_field_type.ci_message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -304,7 +304,7 @@ export const Data_Field_Item_field_type_ci_message: Data_Field_Item_field_type =
  * @constant
  * @type {number}
  */
-export const ci_message: Data_Field_Item_field_type = Data_Field_Item_field_type_ci_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ci_message = Data_Field_Item_field_type_ci_message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -314,7 +314,7 @@ export const ci_message: Data_Field_Item_field_type = Data_Field_Item_field_type
  * @constant
  * @type {number}
  */
-export const Data_Field_Item_field_type_v34rate: Data_Field_Item_field_type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Data_Field_Item_field_type_v34rate = _enum_for_Data_Field_Item_field_type.v34rate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -324,7 +324,7 @@ export const Data_Field_Item_field_type_v34rate: Data_Field_Item_field_type = 8;
  * @constant
  * @type {number}
  */
-export const v34rate: Data_Field_Item_field_type = Data_Field_Item_field_type_v34rate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v34rate = Data_Field_Item_field_type_v34rate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

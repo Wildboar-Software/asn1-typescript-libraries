@@ -74,7 +74,7 @@ const MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_individualBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.individualBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_individualBased = MiscCallInfo_dpAssignment.individualBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individualBased
@@ -82,7 +82,7 @@ const MiscCallInfo_dpAssignment_individualBased: MiscCallInfo_dpAssignment = Mis
  * @type {number}
  */
 export
-const individualBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.individualBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const individualBased = MiscCallInfo_dpAssignment.individualBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_dpAssignment_groupBased
@@ -90,7 +90,7 @@ const individualBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.ind
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_groupBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.groupBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_groupBased = MiscCallInfo_dpAssignment.groupBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupBased
@@ -98,7 +98,7 @@ const MiscCallInfo_dpAssignment_groupBased: MiscCallInfo_dpAssignment = MiscCall
  * @type {number}
  */
 export
-const groupBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupBased = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_dpAssignment_switchBased
@@ -106,7 +106,7 @@ const groupBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.groupBas
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_switchBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.switchBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_switchBased = MiscCallInfo_dpAssignment.switchBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchBased
@@ -114,7 +114,7 @@ const MiscCallInfo_dpAssignment_switchBased: MiscCallInfo_dpAssignment = MiscCal
  * @type {number}
  */
 export
-const switchBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.switchBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchBased = MiscCallInfo_dpAssignment.switchBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_MiscCallInfo_dpAssignment(el: _Element): MiscCallInfo_dpAssignment {

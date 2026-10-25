@@ -73,7 +73,7 @@ const UDMInfoRequestType = _enum_for_UDMInfoRequestType;
  * @type {number}
  */
 export
-const UDMInfoRequestType_hSS: UDMInfoRequestType = UDMInfoRequestType.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMInfoRequestType_hSS = UDMInfoRequestType.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSS
@@ -81,7 +81,7 @@ const UDMInfoRequestType_hSS: UDMInfoRequestType = UDMInfoRequestType.hSS; /* LO
  * @type {number}
  */
 export
-const hSS: UDMInfoRequestType = UDMInfoRequestType.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSS = UDMInfoRequestType.hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMInfoRequestType_aUSF
@@ -89,7 +89,7 @@ const hSS: UDMInfoRequestType = UDMInfoRequestType.hSS; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const UDMInfoRequestType_aUSF: UDMInfoRequestType = UDMInfoRequestType.aUSF; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMInfoRequestType_aUSF = UDMInfoRequestType.aUSF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aUSF
@@ -97,7 +97,7 @@ const UDMInfoRequestType_aUSF: UDMInfoRequestType = UDMInfoRequestType.aUSF; /* 
  * @type {number}
  */
 export
-const aUSF: UDMInfoRequestType = UDMInfoRequestType.aUSF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aUSF = UDMInfoRequestType.aUSF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMInfoRequestType_other
@@ -105,7 +105,7 @@ const aUSF: UDMInfoRequestType = UDMInfoRequestType.aUSF; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const UDMInfoRequestType_other: UDMInfoRequestType = UDMInfoRequestType.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMInfoRequestType_other = UDMInfoRequestType.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -113,7 +113,7 @@ const UDMInfoRequestType_other: UDMInfoRequestType = UDMInfoRequestType.other; /
  * @type {number}
  */
 export
-const other: UDMInfoRequestType = UDMInfoRequestType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other = UDMInfoRequestType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMInfoRequestType: $.ASN1Decoder<UDMInfoRequestType> = $._decodeEnumerated;
 export const _encode_UDMInfoRequestType: $.ASN1Encoder<UDMInfoRequestType> = $._encodeEnumerated;
 

@@ -39,7 +39,7 @@ export const MonitorMode = _enum_for_MonitorMode;
  *
  * @constant
  */
-export const MonitorMode_interrupted: MonitorMode = MonitorMode.interrupted;
+export const MonitorMode_interrupted = MonitorMode.interrupted;
 /**
  * @summary interrupted
  * @description
@@ -49,7 +49,7 @@ export const MonitorMode_interrupted: MonitorMode = MonitorMode.interrupted;
  *
  * @constant
  */
-export const interrupted: MonitorMode = MonitorMode.interrupted;
+export const interrupted = MonitorMode.interrupted;
 /**
  * @summary MonitorMode_notifyAndContinue
  * @description
@@ -58,7 +58,7 @@ export const interrupted: MonitorMode = MonitorMode.interrupted;
  *
  * @constant
  */
-export const MonitorMode_notifyAndContinue: MonitorMode = MonitorMode.notifyAndContinue;
+export const MonitorMode_notifyAndContinue = MonitorMode.notifyAndContinue;
 /**
  * @summary notifyAndContinue
  * @description
@@ -67,7 +67,7 @@ export const MonitorMode_notifyAndContinue: MonitorMode = MonitorMode.notifyAndC
  *
  * @constant
  */
-export const notifyAndContinue: MonitorMode = MonitorMode.notifyAndContinue;
+export const notifyAndContinue = MonitorMode.notifyAndContinue;
 /**
  * @summary MonitorMode_transparent
  * @description
@@ -77,7 +77,7 @@ export const notifyAndContinue: MonitorMode = MonitorMode.notifyAndContinue;
  *
  * @constant
  */
-export const MonitorMode_transparent: MonitorMode = MonitorMode.transparent;
+export const MonitorMode_transparent = MonitorMode.transparent;
 /**
  * @summary transparent
  * @description
@@ -87,6 +87,6 @@ export const MonitorMode_transparent: MonitorMode = MonitorMode.transparent;
  *
  * @constant
  */
-export const transparent: MonitorMode = MonitorMode.transparent;
+export const transparent = MonitorMode.transparent;
 export const _decode_MonitorMode = $._decodeEnumerated;
 export const _encode_MonitorMode = $._encodeEnumerated;

@@ -37,7 +37,7 @@ type RemoteOpId = INTEGER;
  * @type {number}
  */
 export
-const RemoteOpId_installBoundProfilePackage: RemoteOpId = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RemoteOpId_installBoundProfilePackage = 1 satisfies RemoteOpId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RemoteOpId_installBoundProfilePackage
@@ -50,7 +50,7 @@ const RemoteOpId_installBoundProfilePackage: RemoteOpId = 1; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const installBoundProfilePackage: RemoteOpId = RemoteOpId_installBoundProfilePackage; /* SHORT_NAMED_INTEGER_VALUE */
+const installBoundProfilePackage = RemoteOpId_installBoundProfilePackage; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_RemoteOpId: $.ASN1Decoder<RemoteOpId> | null = null;
 

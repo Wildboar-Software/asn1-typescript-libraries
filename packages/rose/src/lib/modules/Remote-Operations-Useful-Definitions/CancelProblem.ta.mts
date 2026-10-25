@@ -48,7 +48,7 @@ export type CancelProblem = _enum_for_CancelProblem | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CancelProblem_unknownOperation: CancelProblem = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_unknownOperation = _enum_for_CancelProblem.unknownOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const CancelProblem_unknownOperation: CancelProblem = 0; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const unknownOperation: CancelProblem = CancelProblem_unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownOperation = CancelProblem_unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const unknownOperation: CancelProblem = CancelProblem_unknownOperation; /
  * @constant
  * @type {number}
  */
-export const CancelProblem_tooLate: CancelProblem = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_tooLate = _enum_for_CancelProblem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const CancelProblem_tooLate: CancelProblem = 1; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const tooLate: CancelProblem = CancelProblem_tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const tooLate = CancelProblem_tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const tooLate: CancelProblem = CancelProblem_tooLate; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const CancelProblem_operationNotCancellable: CancelProblem = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_operationNotCancellable = _enum_for_CancelProblem.operationNotCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const CancelProblem_operationNotCancellable: CancelProblem = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const operationNotCancellable: CancelProblem = CancelProblem_operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const operationNotCancellable = CancelProblem_operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

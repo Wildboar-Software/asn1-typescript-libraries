@@ -114,7 +114,7 @@ const DirectionType = _enum_for_DirectionType;
  * @type {number}
  */
 export
-const DirectionType_toTarget: DirectionType = DirectionType.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const DirectionType_toTarget = DirectionType.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -129,7 +129,7 @@ const DirectionType_toTarget: DirectionType = DirectionType.toTarget; /* LONG_NA
  * @type {number}
  */
 export
-const toTarget: DirectionType = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DirectionType_fromTarget
@@ -144,7 +144,7 @@ const toTarget: DirectionType = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const DirectionType_fromTarget: DirectionType = DirectionType.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const DirectionType_fromTarget = DirectionType.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -159,7 +159,7 @@ const DirectionType_fromTarget: DirectionType = DirectionType.fromTarget; /* LON
  * @type {number}
  */
 export
-const fromTarget: DirectionType = DirectionType.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget = DirectionType.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DirectionType_unknown
@@ -175,7 +175,7 @@ const fromTarget: DirectionType = DirectionType.fromTarget; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const DirectionType_unknown: DirectionType = DirectionType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const DirectionType_unknown = DirectionType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -191,7 +191,7 @@ const DirectionType_unknown: DirectionType = DirectionType.unknown; /* LONG_NAME
  * @type {number}
  */
 export
-const unknown: DirectionType = DirectionType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = DirectionType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DirectionType: $.ASN1Decoder<DirectionType> = $._decodeEnumerated;
 export const _encode_DirectionType: $.ASN1Encoder<DirectionType> = $._encodeEnumerated;
 

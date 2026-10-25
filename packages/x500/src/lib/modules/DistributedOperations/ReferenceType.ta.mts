@@ -54,7 +54,7 @@ export type ReferenceType = _enum_for_ReferenceType | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ReferenceType_superior: ReferenceType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_superior = _enum_for_ReferenceType.superior; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary superior
@@ -66,7 +66,7 @@ export const ReferenceType_superior: ReferenceType = 1; /* LONG_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const superior: ReferenceType = ReferenceType_superior; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const superior = ReferenceType_superior; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_subordinate
@@ -77,7 +77,7 @@ export const superior: ReferenceType = ReferenceType_superior; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const ReferenceType_subordinate: ReferenceType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_subordinate = _enum_for_ReferenceType.subordinate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subordinate
@@ -88,7 +88,7 @@ export const ReferenceType_subordinate: ReferenceType = 2; /* LONG_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const subordinate: ReferenceType = ReferenceType_subordinate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const subordinate = ReferenceType_subordinate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_cross
@@ -99,7 +99,7 @@ export const subordinate: ReferenceType = ReferenceType_subordinate; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const ReferenceType_cross: ReferenceType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_cross = _enum_for_ReferenceType.cross; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cross
@@ -110,7 +110,7 @@ export const ReferenceType_cross: ReferenceType = 3; /* LONG_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const cross: ReferenceType = ReferenceType_cross; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cross = ReferenceType_cross; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_nonSpecificSubordinate
@@ -122,7 +122,7 @@ export const cross: ReferenceType = ReferenceType_cross; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const ReferenceType_nonSpecificSubordinate: ReferenceType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_nonSpecificSubordinate = _enum_for_ReferenceType.nonSpecificSubordinate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonSpecificSubordinate
@@ -134,7 +134,7 @@ export const ReferenceType_nonSpecificSubordinate: ReferenceType = 4; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const nonSpecificSubordinate: ReferenceType = ReferenceType_nonSpecificSubordinate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nonSpecificSubordinate = ReferenceType_nonSpecificSubordinate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_supplier
@@ -145,7 +145,7 @@ export const nonSpecificSubordinate: ReferenceType = ReferenceType_nonSpecificSu
  * @constant
  * @type {number}
  */
-export const ReferenceType_supplier: ReferenceType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_supplier = _enum_for_ReferenceType.supplier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supplier
@@ -156,7 +156,7 @@ export const ReferenceType_supplier: ReferenceType = 5; /* LONG_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const supplier: ReferenceType = ReferenceType_supplier; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const supplier = ReferenceType_supplier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_master
@@ -167,7 +167,7 @@ export const supplier: ReferenceType = ReferenceType_supplier; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const ReferenceType_master: ReferenceType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_master = _enum_for_ReferenceType.master; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary master
@@ -178,7 +178,7 @@ export const ReferenceType_master: ReferenceType = 6; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const master: ReferenceType = ReferenceType_master; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const master = ReferenceType_master; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_immediateSuperior
@@ -189,7 +189,7 @@ export const master: ReferenceType = ReferenceType_master; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const ReferenceType_immediateSuperior: ReferenceType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_immediateSuperior = _enum_for_ReferenceType.immediateSuperior; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediateSuperior
@@ -200,7 +200,7 @@ export const ReferenceType_immediateSuperior: ReferenceType = 7; /* LONG_NAMED_E
  * @constant
  * @type {number}
  */
-export const immediateSuperior: ReferenceType = ReferenceType_immediateSuperior; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const immediateSuperior = ReferenceType_immediateSuperior; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_self
@@ -211,7 +211,7 @@ export const immediateSuperior: ReferenceType = ReferenceType_immediateSuperior;
  * @constant
  * @type {number}
  */
-export const ReferenceType_self: ReferenceType = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_self = _enum_for_ReferenceType.self; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary self
@@ -222,7 +222,7 @@ export const ReferenceType_self: ReferenceType = 8; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const self: ReferenceType = ReferenceType_self; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const self = ReferenceType_self; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferenceType_ditBridge
@@ -233,7 +233,7 @@ export const self: ReferenceType = ReferenceType_self; /* SHORT_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const ReferenceType_ditBridge: ReferenceType = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReferenceType_ditBridge = _enum_for_ReferenceType.ditBridge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ditBridge
@@ -244,7 +244,7 @@ export const ReferenceType_ditBridge: ReferenceType = 9; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const ditBridge: ReferenceType = ReferenceType_ditBridge; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ditBridge = ReferenceType_ditBridge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_ReferenceType = $._decodeEnumerated;

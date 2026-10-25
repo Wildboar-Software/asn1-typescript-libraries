@@ -126,7 +126,7 @@ export const DenialResponse = _enum_for_DenialResponse;
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithResponse: DenialResponse =
+export const DenialResponse_denyWithResponse =
     DenialResponse.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const DenialResponse_denyWithResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithResponse: DenialResponse =
+export const denyWithResponse =
     DenialResponse.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +150,7 @@ export const denyWithResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithoutResponse: DenialResponse =
+export const DenialResponse_denyWithoutResponse =
     DenialResponse.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const DenialResponse_denyWithoutResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithoutResponse: DenialResponse =
+export const denyWithoutResponse =
     DenialResponse.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -174,7 +174,7 @@ export const denyWithoutResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_abortAssociation: DenialResponse =
+export const DenialResponse_abortAssociation =
     DenialResponse.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -186,7 +186,7 @@ export const DenialResponse_abortAssociation: DenialResponse =
  * @constant
  * @type {number}
  */
-export const abortAssociation: DenialResponse =
+export const abortAssociation =
     DenialResponse.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -199,7 +199,7 @@ export const abortAssociation: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithFalseResponse: DenialResponse =
+export const DenialResponse_denyWithFalseResponse =
     DenialResponse.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -212,7 +212,7 @@ export const DenialResponse_denyWithFalseResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithFalseResponse: DenialResponse =
+export const denyWithFalseResponse =
     DenialResponse.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

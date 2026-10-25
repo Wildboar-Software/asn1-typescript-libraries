@@ -66,7 +66,7 @@ export const ProcessedLevel = _enum_for_ProcessedLevel;
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_no_value_available: ProcessedLevel =
+export const ProcessedLevel_no_value_available =
   ProcessedLevel.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -74,7 +74,7 @@ export const ProcessedLevel_no_value_available: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const no_value_available: ProcessedLevel =
+export const no_value_available =
   ProcessedLevel.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const no_value_available: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_raw: ProcessedLevel =
+export const ProcessedLevel_raw =
   ProcessedLevel.raw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const ProcessedLevel_raw: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const raw: ProcessedLevel =
+export const raw =
   ProcessedLevel.raw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const raw: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_intermediate: ProcessedLevel =
+export const ProcessedLevel_intermediate =
   ProcessedLevel.intermediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +106,7 @@ export const ProcessedLevel_intermediate: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const intermediate: ProcessedLevel =
+export const intermediate =
   ProcessedLevel.intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +114,7 @@ export const intermediate: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_processed: ProcessedLevel =
+export const ProcessedLevel_processed =
   ProcessedLevel.processed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const ProcessedLevel_processed: ProcessedLevel =
  * @constant
  * @type {number}
  */
-export const processed: ProcessedLevel =
+export const processed =
   ProcessedLevel.processed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

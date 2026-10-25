@@ -87,7 +87,7 @@ const MMStatusExtension = _enum_for_MMStatusExtension;
  * @type {number}
  */
 export
-const MMStatusExtension_rejectionByMMSRecipient: MMStatusExtension = MMStatusExtension.rejectionByMMSRecipient; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusExtension_rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectionByMMSRecipient
@@ -95,7 +95,7 @@ const MMStatusExtension_rejectionByMMSRecipient: MMStatusExtension = MMStatusExt
  * @type {number}
  */
 export
-const rejectionByMMSRecipient: MMStatusExtension = MMStatusExtension.rejectionByMMSRecipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusExtension_rejectionByOtherRS
@@ -103,7 +103,7 @@ const rejectionByMMSRecipient: MMStatusExtension = MMStatusExtension.rejectionBy
  * @type {number}
  */
 export
-const MMStatusExtension_rejectionByOtherRS: MMStatusExtension = MMStatusExtension.rejectionByOtherRS; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusExtension_rejectionByOtherRS = MMStatusExtension.rejectionByOtherRS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectionByOtherRS
@@ -111,7 +111,7 @@ const MMStatusExtension_rejectionByOtherRS: MMStatusExtension = MMStatusExtensio
  * @type {number}
  */
 export
-const rejectionByOtherRS: MMStatusExtension = MMStatusExtension.rejectionByOtherRS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectionByOtherRS = MMStatusExtension.rejectionByOtherRS; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMStatusExtension: $.ASN1Decoder<MMStatusExtension> = $._decodeEnumerated;
 export const _encode_MMStatusExtension: $.ASN1Encoder<MMStatusExtension> = $._encodeEnumerated;
 

@@ -106,7 +106,7 @@ const KMSRequestName = _enum_for_KMSRequestName;
  * @type {number}
  */
 export
-const KMSRequestName_kMSInitialize: KMSRequestName = KMSRequestName.kMSInitialize; /* LONG_NAMED_ENUMERATED_VALUE */
+const KMSRequestName_kMSInitialize = KMSRequestName.kMSInitialize; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary kMSInitialize
@@ -114,7 +114,7 @@ const KMSRequestName_kMSInitialize: KMSRequestName = KMSRequestName.kMSInitializ
  * @type {number}
  */
 export
-const kMSInitialize: KMSRequestName = KMSRequestName.kMSInitialize; /* SHORT_NAMED_ENUMERATED_VALUE */
+const kMSInitialize = KMSRequestName.kMSInitialize; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KMSRequestName_kMSKeyProvision
@@ -122,7 +122,7 @@ const kMSInitialize: KMSRequestName = KMSRequestName.kMSInitialize; /* SHORT_NAM
  * @type {number}
  */
 export
-const KMSRequestName_kMSKeyProvision: KMSRequestName = KMSRequestName.kMSKeyProvision; /* LONG_NAMED_ENUMERATED_VALUE */
+const KMSRequestName_kMSKeyProvision = KMSRequestName.kMSKeyProvision; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary kMSKeyProvision
@@ -130,7 +130,7 @@ const KMSRequestName_kMSKeyProvision: KMSRequestName = KMSRequestName.kMSKeyProv
  * @type {number}
  */
 export
-const kMSKeyProvision: KMSRequestName = KMSRequestName.kMSKeyProvision; /* SHORT_NAMED_ENUMERATED_VALUE */
+const kMSKeyProvision = KMSRequestName.kMSKeyProvision; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KMSRequestName_kMSCert
@@ -138,7 +138,7 @@ const kMSKeyProvision: KMSRequestName = KMSRequestName.kMSKeyProvision; /* SHORT
  * @type {number}
  */
 export
-const KMSRequestName_kMSCert: KMSRequestName = KMSRequestName.kMSCert; /* LONG_NAMED_ENUMERATED_VALUE */
+const KMSRequestName_kMSCert = KMSRequestName.kMSCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary kMSCert
@@ -146,7 +146,7 @@ const KMSRequestName_kMSCert: KMSRequestName = KMSRequestName.kMSCert; /* LONG_N
  * @type {number}
  */
 export
-const kMSCert: KMSRequestName = KMSRequestName.kMSCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+const kMSCert = KMSRequestName.kMSCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KMSRequestName_kMSCertCache
@@ -154,7 +154,7 @@ const kMSCert: KMSRequestName = KMSRequestName.kMSCert; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const KMSRequestName_kMSCertCache: KMSRequestName = KMSRequestName.kMSCertCache; /* LONG_NAMED_ENUMERATED_VALUE */
+const KMSRequestName_kMSCertCache = KMSRequestName.kMSCertCache; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary kMSCertCache
@@ -162,7 +162,7 @@ const KMSRequestName_kMSCertCache: KMSRequestName = KMSRequestName.kMSCertCache;
  * @type {number}
  */
 export
-const kMSCertCache: KMSRequestName = KMSRequestName.kMSCertCache; /* SHORT_NAMED_ENUMERATED_VALUE */
+const kMSCertCache = KMSRequestName.kMSCertCache; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KMSRequestName_kMSLookup
@@ -170,7 +170,7 @@ const kMSCertCache: KMSRequestName = KMSRequestName.kMSCertCache; /* SHORT_NAMED
  * @type {number}
  */
 export
-const KMSRequestName_kMSLookup: KMSRequestName = KMSRequestName.kMSLookup; /* LONG_NAMED_ENUMERATED_VALUE */
+const KMSRequestName_kMSLookup = KMSRequestName.kMSLookup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary kMSLookup
@@ -178,7 +178,7 @@ const KMSRequestName_kMSLookup: KMSRequestName = KMSRequestName.kMSLookup; /* LO
  * @type {number}
  */
 export
-const kMSLookup: KMSRequestName = KMSRequestName.kMSLookup; /* SHORT_NAMED_ENUMERATED_VALUE */
+const kMSLookup = KMSRequestName.kMSLookup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KMSRequestName_kMSRedirectUpload
@@ -186,7 +186,7 @@ const kMSLookup: KMSRequestName = KMSRequestName.kMSLookup; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const KMSRequestName_kMSRedirectUpload: KMSRequestName = KMSRequestName.kMSRedirectUpload; /* LONG_NAMED_ENUMERATED_VALUE */
+const KMSRequestName_kMSRedirectUpload = KMSRequestName.kMSRedirectUpload; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary kMSRedirectUpload
@@ -194,7 +194,7 @@ const KMSRequestName_kMSRedirectUpload: KMSRequestName = KMSRequestName.kMSRedir
  * @type {number}
  */
 export
-const kMSRedirectUpload: KMSRequestName = KMSRequestName.kMSRedirectUpload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const kMSRedirectUpload = KMSRequestName.kMSRedirectUpload; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_KMSRequestName: $.ASN1Decoder<KMSRequestName> = $._decodeEnumerated;
 export const _encode_KMSRequestName: $.ASN1Encoder<KMSRequestName> = $._encodeEnumerated;
 

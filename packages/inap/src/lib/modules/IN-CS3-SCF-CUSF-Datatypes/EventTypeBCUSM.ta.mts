@@ -65,7 +65,7 @@ const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @type {number}
  */
 export
-const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_componentReceived = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary componentReceived
@@ -73,7 +73,7 @@ const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componen
  * @type {number}
  */
 export
-const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const componentReceived = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_associationReleaseRequested
@@ -81,7 +81,7 @@ const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* S
  * @type {number}
  */
 export
-const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associationReleaseRequested
@@ -89,7 +89,7 @@ const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUS
  * @type {number}
  */
 export
-const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_activationReceivedAndAuthorized
@@ -97,7 +97,7 @@ const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationRe
  * @type {number}
  */
 export
-const EventTypeBCUSM_activationReceivedAndAuthorized: EventTypeBCUSM = EventTypeBCUSM.activationReceivedAndAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_activationReceivedAndAuthorized = EventTypeBCUSM.activationReceivedAndAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activationReceivedAndAuthorized
@@ -105,7 +105,7 @@ const EventTypeBCUSM_activationReceivedAndAuthorized: EventTypeBCUSM = EventType
  * @type {number}
  */
 export
-const activationReceivedAndAuthorized: EventTypeBCUSM = EventTypeBCUSM.activationReceivedAndAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activationReceivedAndAuthorized = EventTypeBCUSM.activationReceivedAndAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_EventTypeBCUSM(el: _Element): EventTypeBCUSM {

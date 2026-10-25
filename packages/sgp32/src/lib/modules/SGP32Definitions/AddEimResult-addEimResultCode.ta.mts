@@ -47,7 +47,7 @@ type AddEimResult_addEimResultCode = INTEGER;
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_ok: AddEimResult_addEimResultCode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_ok = 0 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_ok
@@ -58,7 +58,7 @@ const AddEimResult_addEimResultCode_ok: AddEimResult_addEimResultCode = 0; /* LO
  * @type {number}
  */
 export
-const ok: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = AddEimResult_addEimResultCode_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_insufficientMemory
@@ -71,7 +71,7 @@ const ok: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_ok; /* S
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_insufficientMemory: AddEimResult_addEimResultCode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_insufficientMemory = 1 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_insufficientMemory
@@ -82,7 +82,7 @@ const AddEimResult_addEimResultCode_insufficientMemory: AddEimResult_addEimResul
  * @type {number}
  */
 export
-const insufficientMemory: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
+const insufficientMemory = AddEimResult_addEimResultCode_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_associatedEimAlreadyExists
@@ -95,7 +95,7 @@ const insufficientMemory: AddEimResult_addEimResultCode = AddEimResult_addEimRes
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_associatedEimAlreadyExists: AddEimResult_addEimResultCode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_associatedEimAlreadyExists = 2 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_associatedEimAlreadyExists
@@ -106,7 +106,7 @@ const AddEimResult_addEimResultCode_associatedEimAlreadyExists: AddEimResult_add
  * @type {number}
  */
 export
-const associatedEimAlreadyExists: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_associatedEimAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
+const associatedEimAlreadyExists = AddEimResult_addEimResultCode_associatedEimAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_ciPKUnknown
@@ -120,7 +120,7 @@ const associatedEimAlreadyExists: AddEimResult_addEimResultCode = AddEimResult_a
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_ciPKUnknown: AddEimResult_addEimResultCode = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_ciPKUnknown = 3 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_ciPKUnknown
@@ -132,7 +132,7 @@ const AddEimResult_addEimResultCode_ciPKUnknown: AddEimResult_addEimResultCode =
  * @type {number}
  */
 export
-const ciPKUnknown: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown = AddEimResult_addEimResultCode_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_invalidAssociationToken
@@ -146,7 +146,7 @@ const ciPKUnknown: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_invalidAssociationToken: AddEimResult_addEimResultCode = 5; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_invalidAssociationToken = 5 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_invalidAssociationToken
@@ -158,7 +158,7 @@ const AddEimResult_addEimResultCode_invalidAssociationToken: AddEimResult_addEim
  * @type {number}
  */
 export
-const invalidAssociationToken: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_invalidAssociationToken; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidAssociationToken = AddEimResult_addEimResultCode_invalidAssociationToken; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_counterValueOutOfRange
@@ -172,7 +172,7 @@ const invalidAssociationToken: AddEimResult_addEimResultCode = AddEimResult_addE
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_counterValueOutOfRange: AddEimResult_addEimResultCode = 6; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_counterValueOutOfRange = 6 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_counterValueOutOfRange
@@ -184,7 +184,7 @@ const AddEimResult_addEimResultCode_counterValueOutOfRange: AddEimResult_addEimR
  * @type {number}
  */
 export
-const counterValueOutOfRange: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
+const counterValueOutOfRange = AddEimResult_addEimResultCode_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_commandError
@@ -197,7 +197,7 @@ const counterValueOutOfRange: AddEimResult_addEimResultCode = AddEimResult_addEi
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_commandError: AddEimResult_addEimResultCode = 7; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_commandError = 7 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_commandError
@@ -208,7 +208,7 @@ const AddEimResult_addEimResultCode_commandError: AddEimResult_addEimResultCode 
  * @type {number}
  */
 export
-const commandError: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError = AddEimResult_addEimResultCode_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_undefinedError
@@ -221,7 +221,7 @@ const commandError: AddEimResult_addEimResultCode = AddEimResult_addEimResultCod
  * @type {number}
  */
 export
-const AddEimResult_addEimResultCode_undefinedError: AddEimResult_addEimResultCode = 127; /* LONG_NAMED_INTEGER_VALUE */
+const AddEimResult_addEimResultCode_undefinedError = 127 satisfies AddEimResult_addEimResultCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddEimResult_addEimResultCode_undefinedError
@@ -232,7 +232,7 @@ const AddEimResult_addEimResultCode_undefinedError: AddEimResult_addEimResultCod
  * @type {number}
  */
 export
-const undefinedError: AddEimResult_addEimResultCode = AddEimResult_addEimResultCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = AddEimResult_addEimResultCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddEimResult_addEimResultCode: $.ASN1Decoder<AddEimResult_addEimResultCode> = $._decodeInteger;
 export const _encode_AddEimResult_addEimResultCode: $.ASN1Encoder<AddEimResult_addEimResultCode> = $._encodeInteger;
 

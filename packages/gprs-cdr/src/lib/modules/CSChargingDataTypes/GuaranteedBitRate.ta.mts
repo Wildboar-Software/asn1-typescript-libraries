@@ -122,7 +122,7 @@ const GuaranteedBitRate = _enum_for_GuaranteedBitRate;
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr14400BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr14400BitsPerSecond = GuaranteedBitRate.gbr14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr14400BitsPerSecond
@@ -130,7 +130,7 @@ const GuaranteedBitRate_gbr14400BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr14400BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr14400BitsPerSecond = GuaranteedBitRate.gbr14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuaranteedBitRate_gbr28800BitsPerSecond
@@ -138,7 +138,7 @@ const gbr14400BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr14400BitsP
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr28800BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr28800BitsPerSecond = GuaranteedBitRate.gbr28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr28800BitsPerSecond
@@ -146,7 +146,7 @@ const GuaranteedBitRate_gbr28800BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr28800BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr28800BitsPerSecond = GuaranteedBitRate.gbr28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuaranteedBitRate_gbr32000BitsPerSecond
@@ -154,7 +154,7 @@ const gbr28800BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr28800BitsP
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr32000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr32000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr32000BitsPerSecond = GuaranteedBitRate.gbr32000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr32000BitsPerSecond
@@ -162,7 +162,7 @@ const GuaranteedBitRate_gbr32000BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr32000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr32000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr32000BitsPerSecond = GuaranteedBitRate.gbr32000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuaranteedBitRate_gbr33600BitsPerSecond
@@ -170,7 +170,7 @@ const gbr32000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr32000BitsP
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr33600BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr33600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr33600BitsPerSecond = GuaranteedBitRate.gbr33600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr33600BitsPerSecond
@@ -178,7 +178,7 @@ const GuaranteedBitRate_gbr33600BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr33600BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr33600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr33600BitsPerSecond = GuaranteedBitRate.gbr33600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuaranteedBitRate_gbr56000BitsPerSecond
@@ -186,7 +186,7 @@ const gbr33600BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr33600BitsP
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr56000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr56000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr56000BitsPerSecond = GuaranteedBitRate.gbr56000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr56000BitsPerSecond
@@ -194,7 +194,7 @@ const GuaranteedBitRate_gbr56000BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr56000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr56000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr56000BitsPerSecond = GuaranteedBitRate.gbr56000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuaranteedBitRate_gbr57600BitsPerSecond
@@ -202,7 +202,7 @@ const gbr56000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr56000BitsP
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr57600BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr57600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr57600BitsPerSecond = GuaranteedBitRate.gbr57600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr57600BitsPerSecond
@@ -210,7 +210,7 @@ const GuaranteedBitRate_gbr57600BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr57600BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr57600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr57600BitsPerSecond = GuaranteedBitRate.gbr57600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuaranteedBitRate_gbr64000BitsPerSecond
@@ -218,7 +218,7 @@ const gbr57600BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr57600BitsP
  * @type {number}
  */
 export
-const GuaranteedBitRate_gbr64000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr64000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuaranteedBitRate_gbr64000BitsPerSecond = GuaranteedBitRate.gbr64000BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gbr64000BitsPerSecond
@@ -226,7 +226,7 @@ const GuaranteedBitRate_gbr64000BitsPerSecond: GuaranteedBitRate = GuaranteedBit
  * @type {number}
  */
 export
-const gbr64000BitsPerSecond: GuaranteedBitRate = GuaranteedBitRate.gbr64000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gbr64000BitsPerSecond = GuaranteedBitRate.gbr64000BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_GuaranteedBitRate: $.ASN1Decoder<GuaranteedBitRate> = $._decodeEnumerated;

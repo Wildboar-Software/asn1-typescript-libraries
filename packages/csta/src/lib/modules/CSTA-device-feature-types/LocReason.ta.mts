@@ -79,7 +79,7 @@ const LocReason = _enum_for_LocReason;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const LocReason_connectionToDeviceOrNetworkRestored: LocReason = LocReason.connectionToDeviceOrNetworkRestored; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocReason_connectionToDeviceOrNetworkRestored = LocReason.connectionToDeviceOrNetworkRestored; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionToDeviceOrNetworkRestored
@@ -88,7 +88,7 @@ const LocReason_connectionToDeviceOrNetworkRestored: LocReason = LocReason.conne
  * @type {number}
  */
 export
-const connectionToDeviceOrNetworkRestored: LocReason = LocReason.connectionToDeviceOrNetworkRestored; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionToDeviceOrNetworkRestored = LocReason.connectionToDeviceOrNetworkRestored; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocReason_performanceConditionRelieved
@@ -98,7 +98,7 @@ const connectionToDeviceOrNetworkRestored: LocReason = LocReason.connectionToDev
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const LocReason_performanceConditionRelieved: LocReason = LocReason.performanceConditionRelieved; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocReason_performanceConditionRelieved = LocReason.performanceConditionRelieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary performanceConditionRelieved
@@ -107,7 +107,7 @@ const LocReason_performanceConditionRelieved: LocReason = LocReason.performanceC
  * @type {number}
  */
 export
-const performanceConditionRelieved: LocReason = LocReason.performanceConditionRelieved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const performanceConditionRelieved = LocReason.performanceConditionRelieved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_LocReason: $.ASN1Decoder<LocReason> | null = null;
 

@@ -45,7 +45,7 @@ type DocumentArchitectureClass = INTEGER;
  * @type {number}
  */
 export
-const DocumentArchitectureClass_formatted: DocumentArchitectureClass = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentArchitectureClass_formatted = 0 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted
@@ -56,7 +56,7 @@ const DocumentArchitectureClass_formatted: DocumentArchitectureClass = 0; /* LON
  * @type {number}
  */
 export
-const formatted: DocumentArchitectureClass = DocumentArchitectureClass_formatted; /* SHORT_NAMED_INTEGER_VALUE */
+const formatted = DocumentArchitectureClass_formatted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_processable
@@ -67,7 +67,7 @@ const formatted: DocumentArchitectureClass = DocumentArchitectureClass_formatted
  * @type {number}
  */
 export
-const DocumentArchitectureClass_processable: DocumentArchitectureClass = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentArchitectureClass_processable = 1 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_processable
@@ -78,7 +78,7 @@ const DocumentArchitectureClass_processable: DocumentArchitectureClass = 1; /* L
  * @type {number}
  */
 export
-const processable: DocumentArchitectureClass = DocumentArchitectureClass_processable; /* SHORT_NAMED_INTEGER_VALUE */
+const processable = DocumentArchitectureClass_processable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
@@ -89,7 +89,7 @@ const processable: DocumentArchitectureClass = DocumentArchitectureClass_process
  * @type {number}
  */
 export
-const DocumentArchitectureClass_formatted_processable: DocumentArchitectureClass = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentArchitectureClass_formatted_processable = 2 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
@@ -100,7 +100,7 @@ const DocumentArchitectureClass_formatted_processable: DocumentArchitectureClass
  * @type {number}
  */
 export
-const formatted_processable: DocumentArchitectureClass = DocumentArchitectureClass_formatted_processable; /* SHORT_NAMED_INTEGER_VALUE */
+const formatted_processable = DocumentArchitectureClass_formatted_processable; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DocumentArchitectureClass = $._decodeInteger;
 export const _encode_DocumentArchitectureClass = $._encodeInteger;
 

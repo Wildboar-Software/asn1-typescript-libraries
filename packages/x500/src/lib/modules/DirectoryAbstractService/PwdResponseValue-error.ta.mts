@@ -36,7 +36,7 @@ export type PwdResponseValue_error =
  * @constant
  * @type {number}
  */
-export const PwdResponseValue_error_passwordExpired: PwdResponseValue_error = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PwdResponseValue_error_passwordExpired = _enum_for_PwdResponseValue_error.passwordExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary passwordExpired
@@ -48,7 +48,7 @@ export const PwdResponseValue_error_passwordExpired: PwdResponseValue_error = 0;
  * @constant
  * @type {number}
  */
-export const passwordExpired: PwdResponseValue_error = PwdResponseValue_error_passwordExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const passwordExpired = PwdResponseValue_error_passwordExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PwdResponseValue_error_changeAfterReset
@@ -59,7 +59,7 @@ export const passwordExpired: PwdResponseValue_error = PwdResponseValue_error_pa
  * @constant
  * @type {number}
  */
-export const PwdResponseValue_error_changeAfterReset: PwdResponseValue_error = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PwdResponseValue_error_changeAfterReset = _enum_for_PwdResponseValue_error.changeAfterReset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changeAfterReset
@@ -70,7 +70,7 @@ export const PwdResponseValue_error_changeAfterReset: PwdResponseValue_error = 1
  * @constant
  * @type {number}
  */
-export const changeAfterReset: PwdResponseValue_error = PwdResponseValue_error_changeAfterReset; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const changeAfterReset = PwdResponseValue_error_changeAfterReset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_PwdResponseValue_error = $._decodeEnumerated;

@@ -44,154 +44,154 @@ export type NNUserBasicCodeField = INTEGER;
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_unspecified: NNUserBasicCodeField = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_unspecified = 0 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified: NNUserBasicCodeField = NNUserBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified = NNUserBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_syntax_error
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_syntax_error: NNUserBasicCodeField = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_syntax_error = 1 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_syntax_error
  * @constant
  * @type {number}
  */
-export const syntax_error: NNUserBasicCodeField = NNUserBasicCodeField_syntax_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const syntax_error = NNUserBasicCodeField_syntax_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_interchange_sender_unknown
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_interchange_sender_unknown: NNUserBasicCodeField = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_interchange_sender_unknown = 2 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_interchange_sender_unknown
  * @constant
  * @type {number}
  */
-export const interchange_sender_unknown: NNUserBasicCodeField = NNUserBasicCodeField_interchange_sender_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const interchange_sender_unknown = NNUserBasicCodeField_interchange_sender_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_interchange_recipient_unknown
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_interchange_recipient_unknown: NNUserBasicCodeField = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_interchange_recipient_unknown = 3 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_interchange_recipient_unknown
  * @constant
  * @type {number}
  */
-export const interchange_recipient_unknown: NNUserBasicCodeField = NNUserBasicCodeField_interchange_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const interchange_recipient_unknown = NNUserBasicCodeField_interchange_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_invalid_heading_field
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_invalid_heading_field: NNUserBasicCodeField = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_invalid_heading_field = 4 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_invalid_heading_field
  * @constant
  * @type {number}
  */
-export const invalid_heading_field: NNUserBasicCodeField = NNUserBasicCodeField_invalid_heading_field; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_heading_field = NNUserBasicCodeField_invalid_heading_field; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_invalid_bodypart_type
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_invalid_bodypart_type: NNUserBasicCodeField = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_invalid_bodypart_type = 5 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_invalid_bodypart_type
  * @constant
  * @type {number}
  */
-export const invalid_bodypart_type: NNUserBasicCodeField = NNUserBasicCodeField_invalid_bodypart_type; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_bodypart_type = NNUserBasicCodeField_invalid_bodypart_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_invalid_message_type
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_invalid_message_type: NNUserBasicCodeField = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_invalid_message_type = 6 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_invalid_message_type
  * @constant
  * @type {number}
  */
-export const invalid_message_type: NNUserBasicCodeField = NNUserBasicCodeField_invalid_message_type; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_message_type = NNUserBasicCodeField_invalid_message_type; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_functional_group_not_supported
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_functional_group_not_supported: NNUserBasicCodeField = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_functional_group_not_supported = 7 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_functional_group_not_supported
  * @constant
  * @type {number}
  */
-export const functional_group_not_supported: NNUserBasicCodeField = NNUserBasicCodeField_functional_group_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const functional_group_not_supported = NNUserBasicCodeField_functional_group_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_subscription_terminated
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_subscription_terminated: NNUserBasicCodeField = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_subscription_terminated = 8 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_subscription_terminated
  * @constant
  * @type {number}
  */
-export const subscription_terminated: NNUserBasicCodeField = NNUserBasicCodeField_subscription_terminated; /* SHORT_NAMED_INTEGER_VALUE */
+export const subscription_terminated = NNUserBasicCodeField_subscription_terminated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_no_bilateral_agreement
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_no_bilateral_agreement: NNUserBasicCodeField = 9; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_no_bilateral_agreement = 9 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_no_bilateral_agreement
  * @constant
  * @type {number}
  */
-export const no_bilateral_agreement: NNUserBasicCodeField = NNUserBasicCodeField_no_bilateral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_bilateral_agreement = NNUserBasicCodeField_no_bilateral_agreement; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_user_defined_reason
  * @constant
  * @type {number}
  */
-export const NNUserBasicCodeField_user_defined_reason: NNUserBasicCodeField = 10; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUserBasicCodeField_user_defined_reason = 10 satisfies NNUserBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUserBasicCodeField_user_defined_reason
  * @constant
  * @type {number}
  */
-export const user_defined_reason: NNUserBasicCodeField = NNUserBasicCodeField_user_defined_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_defined_reason = NNUserBasicCodeField_user_defined_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_NNUserBasicCodeField = $._decodeInteger;

@@ -76,7 +76,7 @@ export const ErrorRatioReportType = _enum_for_ErrorRatioReportType;
  * @constant
  * @type {number}
  */
-export const ErrorRatioReportType_errorBitNumber: ErrorRatioReportType =
+export const ErrorRatioReportType_errorBitNumber =
     ErrorRatioReportType.errorBitNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const ErrorRatioReportType_errorBitNumber: ErrorRatioReportType =
  * @constant
  * @type {number}
  */
-export const errorBitNumber: ErrorRatioReportType =
+export const errorBitNumber =
     ErrorRatioReportType.errorBitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const errorBitNumber: ErrorRatioReportType =
  * @constant
  * @type {number}
  */
-export const ErrorRatioReportType_percentErrorSecond: ErrorRatioReportType =
+export const ErrorRatioReportType_percentErrorSecond =
     ErrorRatioReportType.percentErrorSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const ErrorRatioReportType_percentErrorSecond: ErrorRatioReportType =
  * @constant
  * @type {number}
  */
-export const percentErrorSecond: ErrorRatioReportType =
+export const percentErrorSecond =
     ErrorRatioReportType.percentErrorSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

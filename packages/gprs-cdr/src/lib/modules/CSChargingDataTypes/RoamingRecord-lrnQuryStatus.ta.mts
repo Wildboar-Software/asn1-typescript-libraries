@@ -33,7 +33,7 @@ type RoamingRecord_lrnQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_successfulQuery: RoamingRecord_lrnQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_successfulQuery = 1 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const RoamingRecord_lrnQuryStatus_successfulQuery: RoamingRecord_lrnQuryStatus =
  * @type {number}
  */
 export
-const successfulQuery: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery = RoamingRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_noQueryResponseMsg: RoamingRecord_lrnQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_noQueryResponseMsg = 2 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const RoamingRecord_lrnQuryStatus_noQueryResponseMsg: RoamingRecord_lrnQuryStatu
  * @type {number}
  */
 export
-const noQueryResponseMsg: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg = RoamingRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQurySta
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_queryProtocolErr: RoamingRecord_lrnQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_queryProtocolErr = 4 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const RoamingRecord_lrnQuryStatus_queryProtocolErr: RoamingRecord_lrnQuryStatus 
  * @type {number}
  */
 export
-const queryProtocolErr: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr = RoamingRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatu
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_queryResponseDataErr: RoamingRecord_lrnQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_queryResponseDataErr = 5 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const RoamingRecord_lrnQuryStatus_queryResponseDataErr: RoamingRecord_lrnQurySta
  * @type {number}
  */
 export
-const queryResponseDataErr: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr = RoamingRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryS
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_queryRejected: RoamingRecord_lrnQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_queryRejected = 6 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const RoamingRecord_lrnQuryStatus_queryRejected: RoamingRecord_lrnQuryStatus = 6
  * @type {number}
  */
 export
-const queryRejected: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected = RoamingRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_q
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_queryNotPerformed: RoamingRecord_lrnQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_queryNotPerformed = 9 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const RoamingRecord_lrnQuryStatus_queryNotPerformed: RoamingRecord_lrnQuryStatus
  * @type {number}
  */
 export
-const queryNotPerformed: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed = RoamingRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStat
  * @type {number}
  */
 export
-const RoamingRecord_lrnQuryStatus_queryUnsuccessful: RoamingRecord_lrnQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_lrnQuryStatus_queryUnsuccessful = 99 satisfies RoamingRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const RoamingRecord_lrnQuryStatus_queryUnsuccessful: RoamingRecord_lrnQuryStatus
  * @type {number}
  */
 export
-const queryUnsuccessful: RoamingRecord_lrnQuryStatus = RoamingRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful = RoamingRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RoamingRecord_lrnQuryStatus: $.ASN1Decoder<RoamingRecord_lrnQuryStatus> = $._decodeInteger;

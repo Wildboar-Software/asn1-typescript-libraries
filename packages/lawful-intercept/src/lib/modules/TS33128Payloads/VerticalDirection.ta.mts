@@ -110,7 +110,7 @@ const VerticalDirection = _enum_for_VerticalDirection;
  * @type {number}
  */
 export
-const VerticalDirection_upward: VerticalDirection = VerticalDirection.upward; /* LONG_NAMED_ENUMERATED_VALUE */
+const VerticalDirection_upward = VerticalDirection.upward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary upward
@@ -124,7 +124,7 @@ const VerticalDirection_upward: VerticalDirection = VerticalDirection.upward; /*
  * @type {number}
  */
 export
-const upward: VerticalDirection = VerticalDirection.upward; /* SHORT_NAMED_ENUMERATED_VALUE */
+const upward = VerticalDirection.upward; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VerticalDirection_downward
@@ -138,7 +138,7 @@ const upward: VerticalDirection = VerticalDirection.upward; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const VerticalDirection_downward: VerticalDirection = VerticalDirection.downward; /* LONG_NAMED_ENUMERATED_VALUE */
+const VerticalDirection_downward = VerticalDirection.downward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downward
@@ -152,7 +152,7 @@ const VerticalDirection_downward: VerticalDirection = VerticalDirection.downward
  * @type {number}
  */
 export
-const downward: VerticalDirection = VerticalDirection.downward; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downward = VerticalDirection.downward; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_VerticalDirection: $.ASN1Decoder<VerticalDirection> = $._decodeEnumerated;
 export const _encode_VerticalDirection: $.ASN1Encoder<VerticalDirection> = $._encodeEnumerated;
 

@@ -82,7 +82,7 @@ type AAAauthMethod = _enum_for_AAAauthMethod | ENUMERATED;
  * @type {number}
  */
 export
-const AAAauthMethod_undefinedAuthMethod: AAAauthMethod = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AAAauthMethod_undefinedAuthMethod = _enum_for_AAAauthMethod.undefinedAuthMethod; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefinedAuthMethod
@@ -97,7 +97,7 @@ const AAAauthMethod_undefinedAuthMethod: AAAauthMethod = 1; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const undefinedAuthMethod: AAAauthMethod = AAAauthMethod_undefinedAuthMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefinedAuthMethod = AAAauthMethod_undefinedAuthMethod; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AAAauthMethod_cramMD5
@@ -112,7 +112,7 @@ const undefinedAuthMethod: AAAauthMethod = AAAauthMethod_undefinedAuthMethod; /*
  * @type {number}
  */
 export
-const AAAauthMethod_cramMD5: AAAauthMethod = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AAAauthMethod_cramMD5 = _enum_for_AAAauthMethod.cramMD5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cramMD5
@@ -127,7 +127,7 @@ const AAAauthMethod_cramMD5: AAAauthMethod = 2; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const cramMD5: AAAauthMethod = AAAauthMethod_cramMD5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cramMD5 = AAAauthMethod_cramMD5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AAAauthMethod_digestMD5
@@ -142,7 +142,7 @@ const cramMD5: AAAauthMethod = AAAauthMethod_cramMD5; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AAAauthMethod_digestMD5: AAAauthMethod = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AAAauthMethod_digestMD5 = _enum_for_AAAauthMethod.digestMD5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digestMD5
@@ -157,7 +157,7 @@ const AAAauthMethod_digestMD5: AAAauthMethod = 3; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const digestMD5: AAAauthMethod = AAAauthMethod_digestMD5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digestMD5 = AAAauthMethod_digestMD5; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AAAauthMethod: $.ASN1Decoder<AAAauthMethod> = $._decodeEnumerated;
 export const _encode_AAAauthMethod: $.ASN1Encoder<AAAauthMethod> = $._encodeEnumerated;
 

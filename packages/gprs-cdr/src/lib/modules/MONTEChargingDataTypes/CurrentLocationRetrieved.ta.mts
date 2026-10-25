@@ -88,7 +88,7 @@ const CurrentLocationRetrieved = _enum_for_CurrentLocationRetrieved;
  * @type {number}
  */
 export
-const CurrentLocationRetrieved_activeLocationRetrieval: CurrentLocationRetrieved = CurrentLocationRetrieved.activeLocationRetrieval; /* LONG_NAMED_ENUMERATED_VALUE */
+const CurrentLocationRetrieved_activeLocationRetrieval = CurrentLocationRetrieved.activeLocationRetrieval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activeLocationRetrieval
@@ -100,7 +100,7 @@ const CurrentLocationRetrieved_activeLocationRetrieval: CurrentLocationRetrieved
  * @type {number}
  */
 export
-const activeLocationRetrieval: CurrentLocationRetrieved = CurrentLocationRetrieved.activeLocationRetrieval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activeLocationRetrieval = CurrentLocationRetrieved.activeLocationRetrieval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CurrentLocationRetrieved: $.ASN1Decoder<CurrentLocationRetrieved> = $._decodeEnumerated;

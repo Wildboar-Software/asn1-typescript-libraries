@@ -98,7 +98,7 @@ type ActualResponseStatus = _enum_for_ActualResponseStatus | ENUMERATED;
  * @type {number}
  */
 export
-const ActualResponseStatus_ok: ActualResponseStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_ok = _enum_for_ActualResponseStatus.ok; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ok
@@ -109,7 +109,7 @@ const ActualResponseStatus_ok: ActualResponseStatus = 0; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ok: ActualResponseStatus = ActualResponseStatus_ok; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ok = ActualResponseStatus_ok; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorUnspecified
@@ -121,7 +121,7 @@ const ok: ActualResponseStatus = ActualResponseStatus_ok; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ActualResponseStatus_errorUnspecified: ActualResponseStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorUnspecified = _enum_for_ActualResponseStatus.errorUnspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorUnspecified
@@ -132,7 +132,7 @@ const ActualResponseStatus_errorUnspecified: ActualResponseStatus = 1; /* LONG_N
  * @type {number}
  */
 export
-const errorUnspecified: ActualResponseStatus = ActualResponseStatus_errorUnspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorUnspecified = ActualResponseStatus_errorUnspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorServiceDenied
@@ -144,7 +144,7 @@ const errorUnspecified: ActualResponseStatus = ActualResponseStatus_errorUnspeci
  * @type {number}
  */
 export
-const ActualResponseStatus_errorServiceDenied: ActualResponseStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorServiceDenied = _enum_for_ActualResponseStatus.errorServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorServiceDenied
@@ -155,7 +155,7 @@ const ActualResponseStatus_errorServiceDenied: ActualResponseStatus = 2; /* LONG
  * @type {number}
  */
 export
-const errorServiceDenied: ActualResponseStatus = ActualResponseStatus_errorServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorServiceDenied = ActualResponseStatus_errorServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorMessageFormatCorrupt
@@ -167,7 +167,7 @@ const errorServiceDenied: ActualResponseStatus = ActualResponseStatus_errorServi
  * @type {number}
  */
 export
-const ActualResponseStatus_errorMessageFormatCorrupt: ActualResponseStatus = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorMessageFormatCorrupt = _enum_for_ActualResponseStatus.errorMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorMessageFormatCorrupt
@@ -178,7 +178,7 @@ const ActualResponseStatus_errorMessageFormatCorrupt: ActualResponseStatus = 3; 
  * @type {number}
  */
 export
-const errorMessageFormatCorrupt: ActualResponseStatus = ActualResponseStatus_errorMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorMessageFormatCorrupt = ActualResponseStatus_errorMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorSendingAddressUnresolved
@@ -190,7 +190,7 @@ const errorMessageFormatCorrupt: ActualResponseStatus = ActualResponseStatus_err
  * @type {number}
  */
 export
-const ActualResponseStatus_errorSendingAddressUnresolved: ActualResponseStatus = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorSendingAddressUnresolved = _enum_for_ActualResponseStatus.errorSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorSendingAddressUnresolved
@@ -201,7 +201,7 @@ const ActualResponseStatus_errorSendingAddressUnresolved: ActualResponseStatus =
  * @type {number}
  */
 export
-const errorSendingAddressUnresolved: ActualResponseStatus = ActualResponseStatus_errorSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorSendingAddressUnresolved = ActualResponseStatus_errorSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorMessageNotFound
@@ -213,7 +213,7 @@ const errorSendingAddressUnresolved: ActualResponseStatus = ActualResponseStatus
  * @type {number}
  */
 export
-const ActualResponseStatus_errorMessageNotFound: ActualResponseStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorMessageNotFound = _enum_for_ActualResponseStatus.errorMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorMessageNotFound
@@ -224,7 +224,7 @@ const ActualResponseStatus_errorMessageNotFound: ActualResponseStatus = 5; /* LO
  * @type {number}
  */
 export
-const errorMessageNotFound: ActualResponseStatus = ActualResponseStatus_errorMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorMessageNotFound = ActualResponseStatus_errorMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorNetworkProblem
@@ -236,7 +236,7 @@ const errorMessageNotFound: ActualResponseStatus = ActualResponseStatus_errorMes
  * @type {number}
  */
 export
-const ActualResponseStatus_errorNetworkProblem: ActualResponseStatus = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorNetworkProblem = _enum_for_ActualResponseStatus.errorNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorNetworkProblem
@@ -247,7 +247,7 @@ const ActualResponseStatus_errorNetworkProblem: ActualResponseStatus = 6; /* LON
  * @type {number}
  */
 export
-const errorNetworkProblem: ActualResponseStatus = ActualResponseStatus_errorNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorNetworkProblem = ActualResponseStatus_errorNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorContentNotAccepted
@@ -259,7 +259,7 @@ const errorNetworkProblem: ActualResponseStatus = ActualResponseStatus_errorNetw
  * @type {number}
  */
 export
-const ActualResponseStatus_errorContentNotAccepted: ActualResponseStatus = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorContentNotAccepted = _enum_for_ActualResponseStatus.errorContentNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorContentNotAccepted
@@ -270,7 +270,7 @@ const ActualResponseStatus_errorContentNotAccepted: ActualResponseStatus = 7; /*
  * @type {number}
  */
 export
-const errorContentNotAccepted: ActualResponseStatus = ActualResponseStatus_errorContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorContentNotAccepted = ActualResponseStatus_errorContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorUnsuportedMessage
@@ -282,7 +282,7 @@ const errorContentNotAccepted: ActualResponseStatus = ActualResponseStatus_error
  * @type {number}
  */
 export
-const ActualResponseStatus_errorUnsuportedMessage: ActualResponseStatus = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorUnsuportedMessage = _enum_for_ActualResponseStatus.errorUnsuportedMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorUnsuportedMessage
@@ -293,7 +293,7 @@ const ActualResponseStatus_errorUnsuportedMessage: ActualResponseStatus = 8; /* 
  * @type {number}
  */
 export
-const errorUnsuportedMessage: ActualResponseStatus = ActualResponseStatus_errorUnsuportedMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorUnsuportedMessage = ActualResponseStatus_errorUnsuportedMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorTransientFailure
@@ -305,7 +305,7 @@ const errorUnsuportedMessage: ActualResponseStatus = ActualResponseStatus_errorU
  * @type {number}
  */
 export
-const ActualResponseStatus_errorTransientFailure: ActualResponseStatus = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorTransientFailure = _enum_for_ActualResponseStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientFailure
@@ -316,7 +316,7 @@ const ActualResponseStatus_errorTransientFailure: ActualResponseStatus = 9; /* L
  * @type {number}
  */
 export
-const errorTransientFailure: ActualResponseStatus = ActualResponseStatus_errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientFailure = ActualResponseStatus_errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorTransientSendingAddressUnresolved
@@ -328,7 +328,7 @@ const errorTransientFailure: ActualResponseStatus = ActualResponseStatus_errorTr
  * @type {number}
  */
 export
-const ActualResponseStatus_errorTransientSendingAddressUnresolved: ActualResponseStatus = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorTransientSendingAddressUnresolved = _enum_for_ActualResponseStatus.errorTransientSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientSendingAddressUnresolved
@@ -339,7 +339,7 @@ const ActualResponseStatus_errorTransientSendingAddressUnresolved: ActualRespons
  * @type {number}
  */
 export
-const errorTransientSendingAddressUnresolved: ActualResponseStatus = ActualResponseStatus_errorTransientSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientSendingAddressUnresolved = ActualResponseStatus_errorTransientSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorTransientMessageNotFound
@@ -351,7 +351,7 @@ const errorTransientSendingAddressUnresolved: ActualResponseStatus = ActualRespo
  * @type {number}
  */
 export
-const ActualResponseStatus_errorTransientMessageNotFound: ActualResponseStatus = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorTransientMessageNotFound = _enum_for_ActualResponseStatus.errorTransientMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientMessageNotFound
@@ -362,7 +362,7 @@ const ActualResponseStatus_errorTransientMessageNotFound: ActualResponseStatus =
  * @type {number}
  */
 export
-const errorTransientMessageNotFound: ActualResponseStatus = ActualResponseStatus_errorTransientMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientMessageNotFound = ActualResponseStatus_errorTransientMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorTransientNetworkProblem
@@ -374,7 +374,7 @@ const errorTransientMessageNotFound: ActualResponseStatus = ActualResponseStatus
  * @type {number}
  */
 export
-const ActualResponseStatus_errorTransientNetworkProblem: ActualResponseStatus = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorTransientNetworkProblem = _enum_for_ActualResponseStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientNetworkProblem
@@ -385,7 +385,7 @@ const ActualResponseStatus_errorTransientNetworkProblem: ActualResponseStatus = 
  * @type {number}
  */
 export
-const errorTransientNetworkProblem: ActualResponseStatus = ActualResponseStatus_errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientNetworkProblem = ActualResponseStatus_errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorTransientPartialSucess
@@ -397,7 +397,7 @@ const errorTransientNetworkProblem: ActualResponseStatus = ActualResponseStatus_
  * @type {number}
  */
 export
-const ActualResponseStatus_errorTransientPartialSucess: ActualResponseStatus = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorTransientPartialSucess = _enum_for_ActualResponseStatus.errorTransientPartialSucess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientPartialSucess
@@ -408,7 +408,7 @@ const ActualResponseStatus_errorTransientPartialSucess: ActualResponseStatus = 1
  * @type {number}
  */
 export
-const errorTransientPartialSucess: ActualResponseStatus = ActualResponseStatus_errorTransientPartialSucess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientPartialSucess = ActualResponseStatus_errorTransientPartialSucess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentFailure
@@ -420,7 +420,7 @@ const errorTransientPartialSucess: ActualResponseStatus = ActualResponseStatus_e
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentFailure: ActualResponseStatus = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentFailure = _enum_for_ActualResponseStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentFailure
@@ -431,7 +431,7 @@ const ActualResponseStatus_errorPermanentFailure: ActualResponseStatus = 14; /* 
  * @type {number}
  */
 export
-const errorPermanentFailure: ActualResponseStatus = ActualResponseStatus_errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentFailure = ActualResponseStatus_errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentServiceDenied
@@ -443,7 +443,7 @@ const errorPermanentFailure: ActualResponseStatus = ActualResponseStatus_errorPe
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentServiceDenied: ActualResponseStatus = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentServiceDenied = _enum_for_ActualResponseStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentServiceDenied
@@ -454,7 +454,7 @@ const ActualResponseStatus_errorPermanentServiceDenied: ActualResponseStatus = 1
  * @type {number}
  */
 export
-const errorPermanentServiceDenied: ActualResponseStatus = ActualResponseStatus_errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentServiceDenied = ActualResponseStatus_errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentMessageFormatCorrupt
@@ -466,7 +466,7 @@ const errorPermanentServiceDenied: ActualResponseStatus = ActualResponseStatus_e
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentMessageFormatCorrupt: ActualResponseStatus = 16; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentMessageFormatCorrupt = _enum_for_ActualResponseStatus.errorPermanentMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageFormatCorrupt
@@ -477,7 +477,7 @@ const ActualResponseStatus_errorPermanentMessageFormatCorrupt: ActualResponseSta
  * @type {number}
  */
 export
-const errorPermanentMessageFormatCorrupt: ActualResponseStatus = ActualResponseStatus_errorPermanentMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageFormatCorrupt = ActualResponseStatus_errorPermanentMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentSendingAddressUnresolved
@@ -489,7 +489,7 @@ const errorPermanentMessageFormatCorrupt: ActualResponseStatus = ActualResponseS
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentSendingAddressUnresolved: ActualResponseStatus = 17; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentSendingAddressUnresolved = _enum_for_ActualResponseStatus.errorPermanentSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentSendingAddressUnresolved
@@ -500,7 +500,7 @@ const ActualResponseStatus_errorPermanentSendingAddressUnresolved: ActualRespons
  * @type {number}
  */
 export
-const errorPermanentSendingAddressUnresolved: ActualResponseStatus = ActualResponseStatus_errorPermanentSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentSendingAddressUnresolved = ActualResponseStatus_errorPermanentSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentMessageNotFound
@@ -512,7 +512,7 @@ const errorPermanentSendingAddressUnresolved: ActualResponseStatus = ActualRespo
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentMessageNotFound: ActualResponseStatus = 18; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentMessageNotFound = _enum_for_ActualResponseStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageNotFound
@@ -523,7 +523,7 @@ const ActualResponseStatus_errorPermanentMessageNotFound: ActualResponseStatus =
  * @type {number}
  */
 export
-const errorPermanentMessageNotFound: ActualResponseStatus = ActualResponseStatus_errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageNotFound = ActualResponseStatus_errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentContentNotAccepted
@@ -535,7 +535,7 @@ const errorPermanentMessageNotFound: ActualResponseStatus = ActualResponseStatus
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentContentNotAccepted: ActualResponseStatus = 19; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentContentNotAccepted = _enum_for_ActualResponseStatus.errorPermanentContentNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentContentNotAccepted
@@ -546,7 +546,7 @@ const ActualResponseStatus_errorPermanentContentNotAccepted: ActualResponseStatu
  * @type {number}
  */
 export
-const errorPermanentContentNotAccepted: ActualResponseStatus = ActualResponseStatus_errorPermanentContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentContentNotAccepted = ActualResponseStatus_errorPermanentContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet
@@ -558,7 +558,7 @@ const errorPermanentContentNotAccepted: ActualResponseStatus = ActualResponseSta
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet: ActualResponseStatus = 20; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet = _enum_for_ActualResponseStatus.errorPermanentReplyChargingLimitationsNotMet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingLimitationsNotMet
@@ -569,7 +569,7 @@ const ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet: ActualR
  * @type {number}
  */
 export
-const errorPermanentReplyChargingLimitationsNotMet: ActualResponseStatus = ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingLimitationsNotMet = ActualResponseStatus_errorPermanentReplyChargingLimitationsNotMet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted
@@ -581,7 +581,7 @@ const errorPermanentReplyChargingLimitationsNotMet: ActualResponseStatus = Actua
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted: ActualResponseStatus = 21; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted = _enum_for_ActualResponseStatus.errorPermanentReplyChargingRequestNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingRequestNotAccepted
@@ -592,7 +592,7 @@ const ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted: Actual
  * @type {number}
  */
 export
-const errorPermanentReplyChargingRequestNotAccepted: ActualResponseStatus = ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingRequestNotAccepted = ActualResponseStatus_errorPermanentReplyChargingRequestNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingForwardingDenied
@@ -604,7 +604,7 @@ const errorPermanentReplyChargingRequestNotAccepted: ActualResponseStatus = Actu
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentReplyChargingForwardingDenied: ActualResponseStatus = 22; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentReplyChargingForwardingDenied = _enum_for_ActualResponseStatus.errorPermanentReplyChargingForwardingDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingForwardingDenied
@@ -615,7 +615,7 @@ const ActualResponseStatus_errorPermanentReplyChargingForwardingDenied: ActualRe
  * @type {number}
  */
 export
-const errorPermanentReplyChargingForwardingDenied: ActualResponseStatus = ActualResponseStatus_errorPermanentReplyChargingForwardingDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingForwardingDenied = ActualResponseStatus_errorPermanentReplyChargingForwardingDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentReplyChargingNotSupported
@@ -627,7 +627,7 @@ const errorPermanentReplyChargingForwardingDenied: ActualResponseStatus = Actual
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentReplyChargingNotSupported: ActualResponseStatus = 23; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentReplyChargingNotSupported = _enum_for_ActualResponseStatus.errorPermanentReplyChargingNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingNotSupported
@@ -638,7 +638,7 @@ const ActualResponseStatus_errorPermanentReplyChargingNotSupported: ActualRespon
  * @type {number}
  */
 export
-const errorPermanentReplyChargingNotSupported: ActualResponseStatus = ActualResponseStatus_errorPermanentReplyChargingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingNotSupported = ActualResponseStatus_errorPermanentReplyChargingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentAddressHidingNotSupported
@@ -650,7 +650,7 @@ const errorPermanentReplyChargingNotSupported: ActualResponseStatus = ActualResp
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentAddressHidingNotSupported: ActualResponseStatus = 24; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentAddressHidingNotSupported = _enum_for_ActualResponseStatus.errorPermanentAddressHidingNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentAddressHidingNotSupported
@@ -661,7 +661,7 @@ const ActualResponseStatus_errorPermanentAddressHidingNotSupported: ActualRespon
  * @type {number}
  */
 export
-const errorPermanentAddressHidingNotSupported: ActualResponseStatus = ActualResponseStatus_errorPermanentAddressHidingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentAddressHidingNotSupported = ActualResponseStatus_errorPermanentAddressHidingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActualResponseStatus_errorPermanentLackOfPrepaid
@@ -673,7 +673,7 @@ const errorPermanentAddressHidingNotSupported: ActualResponseStatus = ActualResp
  * @type {number}
  */
 export
-const ActualResponseStatus_errorPermanentLackOfPrepaid: ActualResponseStatus = 25; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActualResponseStatus_errorPermanentLackOfPrepaid = _enum_for_ActualResponseStatus.errorPermanentLackOfPrepaid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentLackOfPrepaid
@@ -684,7 +684,7 @@ const ActualResponseStatus_errorPermanentLackOfPrepaid: ActualResponseStatus = 2
  * @type {number}
  */
 export
-const errorPermanentLackOfPrepaid: ActualResponseStatus = ActualResponseStatus_errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentLackOfPrepaid = ActualResponseStatus_errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ActualResponseStatus: $.ASN1Decoder<ActualResponseStatus> = $._decodeEnumerated;
 export const _encode_ActualResponseStatus: $.ASN1Encoder<ActualResponseStatus> = $._encodeEnumerated;
 

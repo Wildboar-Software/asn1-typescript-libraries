@@ -82,7 +82,7 @@ export const InformationStatus = _enum_for_InformationStatus;
  * @constant
  * @type {number}
  */
-export const InformationStatus_active: InformationStatus =
+export const InformationStatus_active =
     InformationStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const InformationStatus_active: InformationStatus =
  * @constant
  * @type {number}
  */
-export const active: InformationStatus =
+export const active =
     InformationStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const active: InformationStatus =
  * @constant
  * @type {number}
  */
-export const InformationStatus_deleted: InformationStatus =
+export const InformationStatus_deleted =
     InformationStatus.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const InformationStatus_deleted: InformationStatus =
  * @constant
  * @type {number}
  */
-export const deleted: InformationStatus =
+export const deleted =
     InformationStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,7 +126,7 @@ export const deleted: InformationStatus =
  * @constant
  * @type {number}
  */
-export const InformationStatus_preliminary: InformationStatus =
+export const InformationStatus_preliminary =
     InformationStatus.preliminary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -137,7 +137,7 @@ export const InformationStatus_preliminary: InformationStatus =
  * @constant
  * @type {number}
  */
-export const preliminary: InformationStatus =
+export const preliminary =
     InformationStatus.preliminary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

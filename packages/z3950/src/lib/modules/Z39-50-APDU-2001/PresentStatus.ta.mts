@@ -47,7 +47,7 @@ type PresentStatus = INTEGER;
  * @type {number}
  */
 export
-const PresentStatus_success: PresentStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const PresentStatus_success = 0 satisfies PresentStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_success
@@ -60,7 +60,7 @@ const PresentStatus_success: PresentStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const success: PresentStatus = PresentStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success = PresentStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_1
@@ -73,7 +73,7 @@ const success: PresentStatus = PresentStatus_success; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const PresentStatus_partial_1: PresentStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const PresentStatus_partial_1 = 1 satisfies PresentStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_1
@@ -87,7 +87,7 @@ const PresentStatus_partial_1: PresentStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const partial_1: PresentStatus = PresentStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_1 = PresentStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_2
@@ -100,7 +100,7 @@ const partial_1: PresentStatus = PresentStatus_partial_1; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PresentStatus_partial_2: PresentStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const PresentStatus_partial_2 = 2 satisfies PresentStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_2
@@ -113,7 +113,7 @@ const PresentStatus_partial_2: PresentStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const partial_2: PresentStatus = PresentStatus_partial_2; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_2 = PresentStatus_partial_2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_3
@@ -129,7 +129,7 @@ const partial_2: PresentStatus = PresentStatus_partial_2; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PresentStatus_partial_3: PresentStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const PresentStatus_partial_3 = 3 satisfies PresentStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_3
@@ -142,7 +142,7 @@ const PresentStatus_partial_3: PresentStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const partial_3: PresentStatus = PresentStatus_partial_3; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_3 = PresentStatus_partial_3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_4
@@ -157,7 +157,7 @@ const partial_3: PresentStatus = PresentStatus_partial_3; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PresentStatus_partial_4: PresentStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const PresentStatus_partial_4 = 4 satisfies PresentStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_partial_4
@@ -170,7 +170,7 @@ const PresentStatus_partial_4: PresentStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const partial_4: PresentStatus = PresentStatus_partial_4; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_4 = PresentStatus_partial_4; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_failure
@@ -184,7 +184,7 @@ const partial_4: PresentStatus = PresentStatus_partial_4; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PresentStatus_failure: PresentStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const PresentStatus_failure = 5 satisfies PresentStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PresentStatus_failure
@@ -197,7 +197,7 @@ const PresentStatus_failure: PresentStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const failure: PresentStatus = PresentStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
+const failure = PresentStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_PresentStatus: $.ASN1Decoder<PresentStatus> | null = null;
 

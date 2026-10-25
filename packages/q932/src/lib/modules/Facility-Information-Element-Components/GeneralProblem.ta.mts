@@ -41,7 +41,7 @@ type GeneralProblem = INTEGER;
  * @type {number}
  */
 export
-const GeneralProblem_unrecognizedComponent: GeneralProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+const GeneralProblem_unrecognizedComponent = 0 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_unrecognizedComponent
@@ -55,7 +55,7 @@ const GeneralProblem_unrecognizedComponent: GeneralProblem = 0; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const unrecognizedComponent: GeneralProblem = GeneralProblem_unrecognizedComponent; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognizedComponent = GeneralProblem_unrecognizedComponent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_mistypedComponent
@@ -69,7 +69,7 @@ const unrecognizedComponent: GeneralProblem = GeneralProblem_unrecognizedCompone
  * @type {number}
  */
 export
-const GeneralProblem_mistypedComponent: GeneralProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const GeneralProblem_mistypedComponent = 1 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_mistypedComponent
@@ -83,7 +83,7 @@ const GeneralProblem_mistypedComponent: GeneralProblem = 1; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const mistypedComponent: GeneralProblem = GeneralProblem_mistypedComponent; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedComponent = GeneralProblem_mistypedComponent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_badlyStructuredComponent
@@ -96,7 +96,7 @@ const mistypedComponent: GeneralProblem = GeneralProblem_mistypedComponent; /* S
  * @type {number}
  */
 export
-const GeneralProblem_badlyStructuredComponent: GeneralProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const GeneralProblem_badlyStructuredComponent = 2 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GeneralProblem_badlyStructuredComponent
@@ -109,7 +109,7 @@ const GeneralProblem_badlyStructuredComponent: GeneralProblem = 2; /* LONG_NAMED
  * @type {number}
  */
 export
-const badlyStructuredComponent: GeneralProblem = GeneralProblem_badlyStructuredComponent; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyStructuredComponent = GeneralProblem_badlyStructuredComponent; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GeneralProblem: $.ASN1Decoder<GeneralProblem> = $._decodeInteger;
 export const _encode_GeneralProblem: $.ASN1Encoder<GeneralProblem> = $._encodeInteger;
 

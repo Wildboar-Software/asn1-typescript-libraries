@@ -91,7 +91,7 @@ const SHAKENValidationResult = _enum_for_SHAKENValidationResult;
  * @type {number}
  */
 export
-const SHAKENValidationResult_tNValidationPassed: SHAKENValidationResult = SHAKENValidationResult.tNValidationPassed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SHAKENValidationResult_tNValidationPassed = SHAKENValidationResult.tNValidationPassed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNValidationPassed
@@ -99,7 +99,7 @@ const SHAKENValidationResult_tNValidationPassed: SHAKENValidationResult = SHAKEN
  * @type {number}
  */
 export
-const tNValidationPassed: SHAKENValidationResult = SHAKENValidationResult.tNValidationPassed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNValidationPassed = SHAKENValidationResult.tNValidationPassed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SHAKENValidationResult_tNValidationFailed
@@ -107,7 +107,7 @@ const tNValidationPassed: SHAKENValidationResult = SHAKENValidationResult.tNVali
  * @type {number}
  */
 export
-const SHAKENValidationResult_tNValidationFailed: SHAKENValidationResult = SHAKENValidationResult.tNValidationFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SHAKENValidationResult_tNValidationFailed = SHAKENValidationResult.tNValidationFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNValidationFailed
@@ -115,7 +115,7 @@ const SHAKENValidationResult_tNValidationFailed: SHAKENValidationResult = SHAKEN
  * @type {number}
  */
 export
-const tNValidationFailed: SHAKENValidationResult = SHAKENValidationResult.tNValidationFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNValidationFailed = SHAKENValidationResult.tNValidationFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SHAKENValidationResult_noTNValidation
@@ -123,7 +123,7 @@ const tNValidationFailed: SHAKENValidationResult = SHAKENValidationResult.tNVali
  * @type {number}
  */
 export
-const SHAKENValidationResult_noTNValidation: SHAKENValidationResult = SHAKENValidationResult.noTNValidation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SHAKENValidationResult_noTNValidation = SHAKENValidationResult.noTNValidation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noTNValidation
@@ -131,7 +131,7 @@ const SHAKENValidationResult_noTNValidation: SHAKENValidationResult = SHAKENVali
  * @type {number}
  */
 export
-const noTNValidation: SHAKENValidationResult = SHAKENValidationResult.noTNValidation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noTNValidation = SHAKENValidationResult.noTNValidation; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SHAKENValidationResult: $.ASN1Decoder<SHAKENValidationResult> = $._decodeEnumerated;
 export const _encode_SHAKENValidationResult: $.ASN1Encoder<SHAKENValidationResult> = $._encodeEnumerated;
 

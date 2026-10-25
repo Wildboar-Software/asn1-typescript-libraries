@@ -131,7 +131,7 @@ const ChangeCondition = _enum_for_ChangeCondition;
  * @type {number}
  */
 export
-const ChangeCondition_qoSChange: ChangeCondition = ChangeCondition.qoSChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_qoSChange = ChangeCondition.qoSChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary qoSChange
@@ -139,7 +139,7 @@ const ChangeCondition_qoSChange: ChangeCondition = ChangeCondition.qoSChange; /*
  * @type {number}
  */
 export
-const qoSChange: ChangeCondition = ChangeCondition.qoSChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const qoSChange = ChangeCondition.qoSChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_tariffTime
@@ -147,7 +147,7 @@ const qoSChange: ChangeCondition = ChangeCondition.qoSChange; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ChangeCondition_tariffTime: ChangeCondition = ChangeCondition.tariffTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_tariffTime = ChangeCondition.tariffTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tariffTime
@@ -155,7 +155,7 @@ const ChangeCondition_tariffTime: ChangeCondition = ChangeCondition.tariffTime; 
  * @type {number}
  */
 export
-const tariffTime: ChangeCondition = ChangeCondition.tariffTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tariffTime = ChangeCondition.tariffTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_recordClosure
@@ -163,7 +163,7 @@ const tariffTime: ChangeCondition = ChangeCondition.tariffTime; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ChangeCondition_recordClosure: ChangeCondition = ChangeCondition.recordClosure; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_recordClosure = ChangeCondition.recordClosure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recordClosure
@@ -171,7 +171,7 @@ const ChangeCondition_recordClosure: ChangeCondition = ChangeCondition.recordClo
  * @type {number}
  */
 export
-const recordClosure: ChangeCondition = ChangeCondition.recordClosure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recordClosure = ChangeCondition.recordClosure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_cGI_SAICHange
@@ -179,7 +179,7 @@ const recordClosure: ChangeCondition = ChangeCondition.recordClosure; /* SHORT_N
  * @type {number}
  */
 export
-const ChangeCondition_cGI_SAICHange: ChangeCondition = ChangeCondition.cGI_SAICHange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_cGI_SAICHange = ChangeCondition.cGI_SAICHange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cGI_SAICHange
@@ -187,7 +187,7 @@ const ChangeCondition_cGI_SAICHange: ChangeCondition = ChangeCondition.cGI_SAICH
  * @type {number}
  */
 export
-const cGI_SAICHange: ChangeCondition = ChangeCondition.cGI_SAICHange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cGI_SAICHange = ChangeCondition.cGI_SAICHange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_rAIChange
@@ -195,7 +195,7 @@ const cGI_SAICHange: ChangeCondition = ChangeCondition.cGI_SAICHange; /* SHORT_N
  * @type {number}
  */
 export
-const ChangeCondition_rAIChange: ChangeCondition = ChangeCondition.rAIChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_rAIChange = ChangeCondition.rAIChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rAIChange
@@ -203,7 +203,7 @@ const ChangeCondition_rAIChange: ChangeCondition = ChangeCondition.rAIChange; /*
  * @type {number}
  */
 export
-const rAIChange: ChangeCondition = ChangeCondition.rAIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rAIChange = ChangeCondition.rAIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_dT_Establishment
@@ -211,7 +211,7 @@ const rAIChange: ChangeCondition = ChangeCondition.rAIChange; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ChangeCondition_dT_Establishment: ChangeCondition = ChangeCondition.dT_Establishment; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_dT_Establishment = ChangeCondition.dT_Establishment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dT_Establishment
@@ -219,7 +219,7 @@ const ChangeCondition_dT_Establishment: ChangeCondition = ChangeCondition.dT_Est
  * @type {number}
  */
 export
-const dT_Establishment: ChangeCondition = ChangeCondition.dT_Establishment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dT_Establishment = ChangeCondition.dT_Establishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_dT_Removal
@@ -227,7 +227,7 @@ const dT_Establishment: ChangeCondition = ChangeCondition.dT_Establishment; /* S
  * @type {number}
  */
 export
-const ChangeCondition_dT_Removal: ChangeCondition = ChangeCondition.dT_Removal; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_dT_Removal = ChangeCondition.dT_Removal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dT_Removal
@@ -235,7 +235,7 @@ const ChangeCondition_dT_Removal: ChangeCondition = ChangeCondition.dT_Removal; 
  * @type {number}
  */
 export
-const dT_Removal: ChangeCondition = ChangeCondition.dT_Removal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dT_Removal = ChangeCondition.dT_Removal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_eCGIChange
@@ -243,7 +243,7 @@ const dT_Removal: ChangeCondition = ChangeCondition.dT_Removal; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ChangeCondition_eCGIChange: ChangeCondition = ChangeCondition.eCGIChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_eCGIChange = ChangeCondition.eCGIChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eCGIChange
@@ -251,7 +251,7 @@ const ChangeCondition_eCGIChange: ChangeCondition = ChangeCondition.eCGIChange; 
  * @type {number}
  */
 export
-const eCGIChange: ChangeCondition = ChangeCondition.eCGIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eCGIChange = ChangeCondition.eCGIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_tAIChange
@@ -259,7 +259,7 @@ const eCGIChange: ChangeCondition = ChangeCondition.eCGIChange; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ChangeCondition_tAIChange: ChangeCondition = ChangeCondition.tAIChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_tAIChange = ChangeCondition.tAIChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tAIChange
@@ -267,7 +267,7 @@ const ChangeCondition_tAIChange: ChangeCondition = ChangeCondition.tAIChange; /*
  * @type {number}
  */
 export
-const tAIChange: ChangeCondition = ChangeCondition.tAIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tAIChange = ChangeCondition.tAIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_userLocationChange
@@ -275,7 +275,7 @@ const tAIChange: ChangeCondition = ChangeCondition.tAIChange; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ChangeCondition_userLocationChange: ChangeCondition = ChangeCondition.userLocationChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_userLocationChange = ChangeCondition.userLocationChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userLocationChange
@@ -283,7 +283,7 @@ const ChangeCondition_userLocationChange: ChangeCondition = ChangeCondition.user
  * @type {number}
  */
 export
-const userLocationChange: ChangeCondition = ChangeCondition.userLocationChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userLocationChange = ChangeCondition.userLocationChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_userCSGInformationChange
@@ -291,7 +291,7 @@ const userLocationChange: ChangeCondition = ChangeCondition.userLocationChange; 
  * @type {number}
  */
 export
-const ChangeCondition_userCSGInformationChange: ChangeCondition = ChangeCondition.userCSGInformationChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_userCSGInformationChange = ChangeCondition.userCSGInformationChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userCSGInformationChange
@@ -299,7 +299,7 @@ const ChangeCondition_userCSGInformationChange: ChangeCondition = ChangeConditio
  * @type {number}
  */
 export
-const userCSGInformationChange: ChangeCondition = ChangeCondition.userCSGInformationChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userCSGInformationChange = ChangeCondition.userCSGInformationChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_presenceInPRAChange
@@ -307,7 +307,7 @@ const userCSGInformationChange: ChangeCondition = ChangeCondition.userCSGInforma
  * @type {number}
  */
 export
-const ChangeCondition_presenceInPRAChange: ChangeCondition = ChangeCondition.presenceInPRAChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_presenceInPRAChange = ChangeCondition.presenceInPRAChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presenceInPRAChange
@@ -315,7 +315,7 @@ const ChangeCondition_presenceInPRAChange: ChangeCondition = ChangeCondition.pre
  * @type {number}
  */
 export
-const presenceInPRAChange: ChangeCondition = ChangeCondition.presenceInPRAChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presenceInPRAChange = ChangeCondition.presenceInPRAChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_removalOfAccess
@@ -323,7 +323,7 @@ const presenceInPRAChange: ChangeCondition = ChangeCondition.presenceInPRAChange
  * @type {number}
  */
 export
-const ChangeCondition_removalOfAccess: ChangeCondition = ChangeCondition.removalOfAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_removalOfAccess = ChangeCondition.removalOfAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary removalOfAccess
@@ -331,7 +331,7 @@ const ChangeCondition_removalOfAccess: ChangeCondition = ChangeCondition.removal
  * @type {number}
  */
 export
-const removalOfAccess: ChangeCondition = ChangeCondition.removalOfAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const removalOfAccess = ChangeCondition.removalOfAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_unusabilityOfAccess
@@ -339,7 +339,7 @@ const removalOfAccess: ChangeCondition = ChangeCondition.removalOfAccess; /* SHO
  * @type {number}
  */
 export
-const ChangeCondition_unusabilityOfAccess: ChangeCondition = ChangeCondition.unusabilityOfAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_unusabilityOfAccess = ChangeCondition.unusabilityOfAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unusabilityOfAccess
@@ -347,7 +347,7 @@ const ChangeCondition_unusabilityOfAccess: ChangeCondition = ChangeCondition.unu
  * @type {number}
  */
 export
-const unusabilityOfAccess: ChangeCondition = ChangeCondition.unusabilityOfAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unusabilityOfAccess = ChangeCondition.unusabilityOfAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_indirectChangeCondition
@@ -355,7 +355,7 @@ const unusabilityOfAccess: ChangeCondition = ChangeCondition.unusabilityOfAccess
  * @type {number}
  */
 export
-const ChangeCondition_indirectChangeCondition: ChangeCondition = ChangeCondition.indirectChangeCondition; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_indirectChangeCondition = ChangeCondition.indirectChangeCondition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indirectChangeCondition
@@ -363,7 +363,7 @@ const ChangeCondition_indirectChangeCondition: ChangeCondition = ChangeCondition
  * @type {number}
  */
 export
-const indirectChangeCondition: ChangeCondition = ChangeCondition.indirectChangeCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indirectChangeCondition = ChangeCondition.indirectChangeCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_userPlaneToUEChange
@@ -371,7 +371,7 @@ const indirectChangeCondition: ChangeCondition = ChangeCondition.indirectChangeC
  * @type {number}
  */
 export
-const ChangeCondition_userPlaneToUEChange: ChangeCondition = ChangeCondition.userPlaneToUEChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_userPlaneToUEChange = ChangeCondition.userPlaneToUEChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userPlaneToUEChange
@@ -379,7 +379,7 @@ const ChangeCondition_userPlaneToUEChange: ChangeCondition = ChangeCondition.use
  * @type {number}
  */
 export
-const userPlaneToUEChange: ChangeCondition = ChangeCondition.userPlaneToUEChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userPlaneToUEChange = ChangeCondition.userPlaneToUEChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_servingPLMNRateControlChange
@@ -387,7 +387,7 @@ const userPlaneToUEChange: ChangeCondition = ChangeCondition.userPlaneToUEChange
  * @type {number}
  */
 export
-const ChangeCondition_servingPLMNRateControlChange: ChangeCondition = ChangeCondition.servingPLMNRateControlChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_servingPLMNRateControlChange = ChangeCondition.servingPLMNRateControlChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingPLMNRateControlChange
@@ -395,7 +395,7 @@ const ChangeCondition_servingPLMNRateControlChange: ChangeCondition = ChangeCond
  * @type {number}
  */
 export
-const servingPLMNRateControlChange: ChangeCondition = ChangeCondition.servingPLMNRateControlChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servingPLMNRateControlChange = ChangeCondition.servingPLMNRateControlChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_threeGPPPSDataOffStatusChange
@@ -403,7 +403,7 @@ const servingPLMNRateControlChange: ChangeCondition = ChangeCondition.servingPLM
  * @type {number}
  */
 export
-const ChangeCondition_threeGPPPSDataOffStatusChange: ChangeCondition = ChangeCondition.threeGPPPSDataOffStatusChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_threeGPPPSDataOffStatusChange = ChangeCondition.threeGPPPSDataOffStatusChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threeGPPPSDataOffStatusChange
@@ -411,7 +411,7 @@ const ChangeCondition_threeGPPPSDataOffStatusChange: ChangeCondition = ChangeCon
  * @type {number}
  */
 export
-const threeGPPPSDataOffStatusChange: ChangeCondition = ChangeCondition.threeGPPPSDataOffStatusChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threeGPPPSDataOffStatusChange = ChangeCondition.threeGPPPSDataOffStatusChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_aPNRateControlChange
@@ -419,7 +419,7 @@ const threeGPPPSDataOffStatusChange: ChangeCondition = ChangeCondition.threeGPPP
  * @type {number}
  */
 export
-const ChangeCondition_aPNRateControlChange: ChangeCondition = ChangeCondition.aPNRateControlChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_aPNRateControlChange = ChangeCondition.aPNRateControlChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aPNRateControlChange
@@ -427,7 +427,7 @@ const ChangeCondition_aPNRateControlChange: ChangeCondition = ChangeCondition.aP
  * @type {number}
  */
 export
-const aPNRateControlChange: ChangeCondition = ChangeCondition.aPNRateControlChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aPNRateControlChange = ChangeCondition.aPNRateControlChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChangeCondition: $.ASN1Decoder<ChangeCondition> = $._decodeEnumerated;

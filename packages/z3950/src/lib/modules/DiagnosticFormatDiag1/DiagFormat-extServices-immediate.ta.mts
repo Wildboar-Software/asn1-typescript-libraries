@@ -38,7 +38,7 @@ type DiagFormat_extServices_immediate = INTEGER;
  * @type {number}
  */
 export
-const DiagFormat_extServices_immediate_failed: DiagFormat_extServices_immediate = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_immediate_failed = 1 satisfies DiagFormat_extServices_immediate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_failed
@@ -50,7 +50,7 @@ const DiagFormat_extServices_immediate_failed: DiagFormat_extServices_immediate 
  * @type {number}
  */
 export
-const failed: DiagFormat_extServices_immediate = DiagFormat_extServices_immediate_failed; /* SHORT_NAMED_INTEGER_VALUE */
+const failed = DiagFormat_extServices_immediate_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_service
@@ -62,7 +62,7 @@ const failed: DiagFormat_extServices_immediate = DiagFormat_extServices_immediat
  * @type {number}
  */
 export
-const DiagFormat_extServices_immediate_service: DiagFormat_extServices_immediate = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_immediate_service = 2 satisfies DiagFormat_extServices_immediate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_service
@@ -74,7 +74,7 @@ const DiagFormat_extServices_immediate_service: DiagFormat_extServices_immediate
  * @type {number}
  */
 export
-const service: DiagFormat_extServices_immediate = DiagFormat_extServices_immediate_service; /* SHORT_NAMED_INTEGER_VALUE */
+const service = DiagFormat_extServices_immediate_service; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_parameters
@@ -87,7 +87,7 @@ const service: DiagFormat_extServices_immediate = DiagFormat_extServices_immedia
  * @type {number}
  */
 export
-const DiagFormat_extServices_immediate_parameters: DiagFormat_extServices_immediate = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_extServices_immediate_parameters = 3 satisfies DiagFormat_extServices_immediate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_extServices_immediate_parameters
@@ -100,7 +100,7 @@ const DiagFormat_extServices_immediate_parameters: DiagFormat_extServices_immedi
  * @type {number}
  */
 export
-const parameters: DiagFormat_extServices_immediate = DiagFormat_extServices_immediate_parameters; /* SHORT_NAMED_INTEGER_VALUE */
+const parameters = DiagFormat_extServices_immediate_parameters; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_extServices_immediate: $.ASN1Decoder<DiagFormat_extServices_immediate> = $._decodeInteger;
 export const _encode_DiagFormat_extServices_immediate: $.ASN1Encoder<DiagFormat_extServices_immediate> = $._encodeInteger;
 

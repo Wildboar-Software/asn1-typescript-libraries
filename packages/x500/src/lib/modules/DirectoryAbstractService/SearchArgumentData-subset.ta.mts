@@ -23,42 +23,42 @@ export type SearchArgumentData_subset = INTEGER;
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_subset_baseObject: SearchArgumentData_subset = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const SearchArgumentData_subset_baseObject = 0 satisfies SearchArgumentData_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_baseObject
  * @constant
  * @type {number}
  */
-export const baseObject: SearchArgumentData_subset = SearchArgumentData_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject = SearchArgumentData_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_oneLevel
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_subset_oneLevel: SearchArgumentData_subset = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SearchArgumentData_subset_oneLevel = 1 satisfies SearchArgumentData_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_oneLevel
  * @constant
  * @type {number}
  */
-export const oneLevel: SearchArgumentData_subset = SearchArgumentData_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneLevel = SearchArgumentData_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_subset_wholeSubtree: SearchArgumentData_subset = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const SearchArgumentData_subset_wholeSubtree = 2 satisfies SearchArgumentData_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SearchArgumentData_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree: SearchArgumentData_subset = SearchArgumentData_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree = SearchArgumentData_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_SearchArgumentData_subset = $._decodeInteger;

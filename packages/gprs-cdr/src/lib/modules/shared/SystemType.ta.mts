@@ -67,7 +67,7 @@ const SystemType = _enum_for_SystemType;
  * @type {number}
  */
 export
-const SystemType_unknown: SystemType = SystemType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemType_unknown = SystemType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -75,7 +75,7 @@ const SystemType_unknown: SystemType = SystemType.unknown; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const unknown: SystemType = SystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = SystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemType_iuUTRAN
@@ -83,7 +83,7 @@ const unknown: SystemType = SystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const SystemType_iuUTRAN: SystemType = SystemType.iuUTRAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemType_iuUTRAN = SystemType.iuUTRAN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iuUTRAN
@@ -91,7 +91,7 @@ const SystemType_iuUTRAN: SystemType = SystemType.iuUTRAN; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const iuUTRAN: SystemType = SystemType.iuUTRAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iuUTRAN = SystemType.iuUTRAN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemType_gERAN
@@ -99,7 +99,7 @@ const iuUTRAN: SystemType = SystemType.iuUTRAN; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const SystemType_gERAN: SystemType = SystemType.gERAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemType_gERAN = SystemType.gERAN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gERAN
@@ -107,7 +107,7 @@ const SystemType_gERAN: SystemType = SystemType.gERAN; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const gERAN: SystemType = SystemType.gERAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gERAN = SystemType.gERAN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SystemType: $.ASN1Decoder<SystemType> = $._decodeEnumerated;

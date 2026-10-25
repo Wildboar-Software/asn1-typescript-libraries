@@ -38,7 +38,7 @@ type RollbackProfileResult = INTEGER;
  * @type {number}
  */
 export
-const RollbackProfileResult_ok: RollbackProfileResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RollbackProfileResult_ok = 0 satisfies RollbackProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RollbackProfileResult_ok
@@ -49,7 +49,7 @@ const RollbackProfileResult_ok: RollbackProfileResult = 0; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const ok: RollbackProfileResult = RollbackProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok = RollbackProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RollbackProfileResult_undefinedError
@@ -61,7 +61,7 @@ const ok: RollbackProfileResult = RollbackProfileResult_ok; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const RollbackProfileResult_undefinedError: RollbackProfileResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const RollbackProfileResult_undefinedError = 127 satisfies RollbackProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RollbackProfileResult_undefinedError
@@ -71,7 +71,7 @@ const RollbackProfileResult_undefinedError: RollbackProfileResult = 127; /* LONG
  * @type {number}
  */
 export
-const undefinedError: RollbackProfileResult = RollbackProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = RollbackProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RollbackProfileResult: $.ASN1Decoder<RollbackProfileResult> = $._decodeInteger;
 export const _encode_RollbackProfileResult: $.ASN1Encoder<RollbackProfileResult> = $._encodeInteger;
 

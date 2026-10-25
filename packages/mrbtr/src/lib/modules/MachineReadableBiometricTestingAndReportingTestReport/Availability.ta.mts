@@ -93,7 +93,7 @@ const Availability = _enum_for_Availability;
  * @type {number}
  */
 export
-const Availability_public_: Availability = Availability.public_; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_public_ = Availability.public_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary public_
@@ -101,7 +101,7 @@ const Availability_public_: Availability = Availability.public_; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const public_: Availability = Availability.public_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const public_ = Availability.public_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Availability_restricted
@@ -109,7 +109,7 @@ const public_: Availability = Availability.public_; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Availability_restricted: Availability = Availability.restricted; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_restricted = Availability.restricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restricted
@@ -117,7 +117,7 @@ const Availability_restricted: Availability = Availability.restricted; /* LONG_N
  * @type {number}
  */
 export
-const restricted: Availability = Availability.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restricted = Availability.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Availability_unavailable
@@ -125,7 +125,7 @@ const restricted: Availability = Availability.restricted; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Availability_unavailable: Availability = Availability.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_unavailable = Availability.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailable
@@ -133,7 +133,7 @@ const Availability_unavailable: Availability = Availability.unavailable; /* LONG
  * @type {number}
  */
 export
-const unavailable: Availability = Availability.unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unavailable = Availability.unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Availability_superseded
@@ -141,7 +141,7 @@ const unavailable: Availability = Availability.unavailable; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Availability_superseded: Availability = Availability.superseded; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_superseded = Availability.superseded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary superseded
@@ -149,7 +149,7 @@ const Availability_superseded: Availability = Availability.superseded; /* LONG_N
  * @type {number}
  */
 export
-const superseded: Availability = Availability.superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const superseded = Availability.superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**

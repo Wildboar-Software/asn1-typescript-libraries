@@ -56,7 +56,7 @@ export const FingerPrint_hand = _enum_for_FingerPrint_hand;
  * @constant
  * @type {number}
  */
-export const FingerPrint_hand_left: FingerPrint_hand =
+export const FingerPrint_hand_left =
     FingerPrint_hand.left; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -65,7 +65,7 @@ export const FingerPrint_hand_left: FingerPrint_hand =
  * @constant
  * @type {number}
  */
-export const left: FingerPrint_hand =
+export const left =
     FingerPrint_hand.left; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const left: FingerPrint_hand =
  * @constant
  * @type {number}
  */
-export const FingerPrint_hand_right: FingerPrint_hand =
+export const FingerPrint_hand_right =
     FingerPrint_hand.right; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const FingerPrint_hand_right: FingerPrint_hand =
  * @constant
  * @type {number}
  */
-export const right: FingerPrint_hand =
+export const right =
     FingerPrint_hand.right; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

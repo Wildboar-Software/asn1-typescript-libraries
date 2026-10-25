@@ -76,7 +76,7 @@ const MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_I
  * @type {number}
  */
 export
-const MidCallControlInfo_Item_midCallReportType_inMonitoringState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* LONG_NAMED_ENUMERATED_VALUE */
+const MidCallControlInfo_Item_midCallReportType_inMonitoringState = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inMonitoringState
@@ -84,7 +84,7 @@ const MidCallControlInfo_Item_midCallReportType_inMonitoringState: MidCallContro
  * @type {number}
  */
 export
-const inMonitoringState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inMonitoringState = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MidCallControlInfo_Item_midCallReportType_inAnyState
@@ -92,7 +92,7 @@ const inMonitoringState: MidCallControlInfo_Item_midCallReportType = MidCallCont
  * @type {number}
  */
 export
-const MidCallControlInfo_Item_midCallReportType_inAnyState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inAnyState; /* LONG_NAMED_ENUMERATED_VALUE */
+const MidCallControlInfo_Item_midCallReportType_inAnyState = MidCallControlInfo_Item_midCallReportType.inAnyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inAnyState
@@ -100,7 +100,7 @@ const MidCallControlInfo_Item_midCallReportType_inAnyState: MidCallControlInfo_I
  * @type {number}
  */
 export
-const inAnyState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inAnyState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inAnyState = MidCallControlInfo_Item_midCallReportType.inAnyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MidCallControlInfo_Item_midCallReportType = $._decodeEnumerated;
 export const _encode_MidCallControlInfo_Item_midCallReportType = $._encodeEnumerated;
 

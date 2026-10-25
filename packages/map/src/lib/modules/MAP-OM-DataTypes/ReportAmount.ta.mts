@@ -100,7 +100,7 @@ const ReportAmount = _enum_for_ReportAmount;
  * @type {number}
  */
 export
-const ReportAmount_d1: ReportAmount = ReportAmount.d1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d1 = ReportAmount.d1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d1
@@ -112,7 +112,7 @@ const ReportAmount_d1: ReportAmount = ReportAmount.d1; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const d1: ReportAmount = ReportAmount.d1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d1 = ReportAmount.d1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_d2
@@ -124,7 +124,7 @@ const d1: ReportAmount = ReportAmount.d1; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_d2: ReportAmount = ReportAmount.d2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d2 = ReportAmount.d2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d2
@@ -136,7 +136,7 @@ const ReportAmount_d2: ReportAmount = ReportAmount.d2; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const d2: ReportAmount = ReportAmount.d2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d2 = ReportAmount.d2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_d4
@@ -148,7 +148,7 @@ const d2: ReportAmount = ReportAmount.d2; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_d4: ReportAmount = ReportAmount.d4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d4 = ReportAmount.d4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d4
@@ -160,7 +160,7 @@ const ReportAmount_d4: ReportAmount = ReportAmount.d4; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const d4: ReportAmount = ReportAmount.d4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d4 = ReportAmount.d4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_d8
@@ -172,7 +172,7 @@ const d4: ReportAmount = ReportAmount.d4; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_d8: ReportAmount = ReportAmount.d8; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d8 = ReportAmount.d8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d8
@@ -184,7 +184,7 @@ const ReportAmount_d8: ReportAmount = ReportAmount.d8; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const d8: ReportAmount = ReportAmount.d8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d8 = ReportAmount.d8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_d16
@@ -196,7 +196,7 @@ const d8: ReportAmount = ReportAmount.d8; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_d16: ReportAmount = ReportAmount.d16; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d16 = ReportAmount.d16; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d16
@@ -208,7 +208,7 @@ const ReportAmount_d16: ReportAmount = ReportAmount.d16; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d16: ReportAmount = ReportAmount.d16; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d16 = ReportAmount.d16; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_d32
@@ -220,7 +220,7 @@ const d16: ReportAmount = ReportAmount.d16; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_d32: ReportAmount = ReportAmount.d32; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d32 = ReportAmount.d32; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d32
@@ -232,7 +232,7 @@ const ReportAmount_d32: ReportAmount = ReportAmount.d32; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d32: ReportAmount = ReportAmount.d32; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d32 = ReportAmount.d32; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_d64
@@ -244,7 +244,7 @@ const d32: ReportAmount = ReportAmount.d32; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_d64: ReportAmount = ReportAmount.d64; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_d64 = ReportAmount.d64; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary d64
@@ -256,7 +256,7 @@ const ReportAmount_d64: ReportAmount = ReportAmount.d64; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const d64: ReportAmount = ReportAmount.d64; /* SHORT_NAMED_ENUMERATED_VALUE */
+const d64 = ReportAmount.d64; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportAmount_infinity
@@ -268,7 +268,7 @@ const d64: ReportAmount = ReportAmount.d64; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ReportAmount_infinity: ReportAmount = ReportAmount.infinity; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportAmount_infinity = ReportAmount.infinity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary infinity
@@ -280,7 +280,7 @@ const ReportAmount_infinity: ReportAmount = ReportAmount.infinity; /* LONG_NAMED
  * @type {number}
  */
 export
-const infinity: ReportAmount = ReportAmount.infinity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const infinity = ReportAmount.infinity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportAmount

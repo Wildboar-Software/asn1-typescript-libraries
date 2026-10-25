@@ -66,7 +66,7 @@ export const ValidControlType = _enum_for_ValidControlType;
  * @constant
  * @type {number}
  */
-export const ValidControlType_momentaryOnly: ValidControlType =
+export const ValidControlType_momentaryOnly =
     ValidControlType.momentaryOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const ValidControlType_momentaryOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const momentaryOnly: ValidControlType =
+export const momentaryOnly =
     ValidControlType.momentaryOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const momentaryOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const ValidControlType_continuousOnly: ValidControlType =
+export const ValidControlType_continuousOnly =
     ValidControlType.continuousOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const ValidControlType_continuousOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const continuousOnly: ValidControlType =
+export const continuousOnly =
     ValidControlType.continuousOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const continuousOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const ValidControlType_both: ValidControlType =
+export const ValidControlType_both =
     ValidControlType.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const ValidControlType_both: ValidControlType =
  * @constant
  * @type {number}
  */
-export const both: ValidControlType =
+export const both =
     ValidControlType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

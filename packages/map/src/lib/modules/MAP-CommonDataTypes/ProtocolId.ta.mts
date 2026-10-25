@@ -103,7 +103,7 @@ const ProtocolId = _enum_for_ProtocolId;
  * @type {number}
  */
 export
-const ProtocolId_gsm_0408: ProtocolId = ProtocolId.gsm_0408; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_gsm_0408 = ProtocolId.gsm_0408; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_0408
@@ -116,7 +116,7 @@ const ProtocolId_gsm_0408: ProtocolId = ProtocolId.gsm_0408; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const gsm_0408: ProtocolId = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_0408 = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolId_gsm_0806
@@ -129,7 +129,7 @@ const gsm_0408: ProtocolId = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ProtocolId_gsm_0806: ProtocolId = ProtocolId.gsm_0806; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_gsm_0806 = ProtocolId.gsm_0806; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_0806
@@ -142,7 +142,7 @@ const ProtocolId_gsm_0806: ProtocolId = ProtocolId.gsm_0806; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const gsm_0806: ProtocolId = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_0806 = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolId_gsm_BSSMAP
@@ -154,7 +154,7 @@ const gsm_0806: ProtocolId = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ProtocolId_gsm_BSSMAP: ProtocolId = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_BSSMAP
@@ -166,7 +166,7 @@ const ProtocolId_gsm_BSSMAP: ProtocolId = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const gsm_BSSMAP: ProtocolId = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolId_ets_300102_1
@@ -179,7 +179,7 @@ const gsm_BSSMAP: ProtocolId = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ProtocolId_ets_300102_1: ProtocolId = ProtocolId.ets_300102_1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_ets_300102_1 = ProtocolId.ets_300102_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ets_300102_1
@@ -192,7 +192,7 @@ const ProtocolId_ets_300102_1: ProtocolId = ProtocolId.ets_300102_1; /* LONG_NAM
  * @type {number}
  */
 export
-const ets_300102_1: ProtocolId = ProtocolId.ets_300102_1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ets_300102_1 = ProtocolId.ets_300102_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolId

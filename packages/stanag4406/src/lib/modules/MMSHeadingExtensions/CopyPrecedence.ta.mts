@@ -44,7 +44,7 @@ type CopyPrecedence = INTEGER;
  * @type {number}
  */
 export
-const CopyPrecedence_deferred: CopyPrecedence = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_deferred = 0 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_deferred
@@ -56,7 +56,7 @@ const CopyPrecedence_deferred: CopyPrecedence = 0; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const deferred: CopyPrecedence = CopyPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
+const deferred = CopyPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_routine
@@ -68,7 +68,7 @@ const deferred: CopyPrecedence = CopyPrecedence_deferred; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const CopyPrecedence_routine: CopyPrecedence = 1; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_routine = 1 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_routine
@@ -80,7 +80,7 @@ const CopyPrecedence_routine: CopyPrecedence = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const routine: CopyPrecedence = CopyPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
+const routine = CopyPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_priority
@@ -93,7 +93,7 @@ const routine: CopyPrecedence = CopyPrecedence_routine; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const CopyPrecedence_priority: CopyPrecedence = 2; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_priority = 2 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_priority
@@ -106,7 +106,7 @@ const CopyPrecedence_priority: CopyPrecedence = 2; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const priority: CopyPrecedence = CopyPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const priority = CopyPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_immediate
@@ -118,7 +118,7 @@ const priority: CopyPrecedence = CopyPrecedence_priority; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const CopyPrecedence_immediate: CopyPrecedence = 3; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_immediate = 3 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_immediate
@@ -130,7 +130,7 @@ const CopyPrecedence_immediate: CopyPrecedence = 3; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const immediate: CopyPrecedence = CopyPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const immediate = CopyPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_flash
@@ -142,7 +142,7 @@ const immediate: CopyPrecedence = CopyPrecedence_immediate; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const CopyPrecedence_flash: CopyPrecedence = 4; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_flash = 4 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_flash
@@ -154,7 +154,7 @@ const CopyPrecedence_flash: CopyPrecedence = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const flash: CopyPrecedence = CopyPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
+const flash = CopyPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_override
@@ -166,7 +166,7 @@ const flash: CopyPrecedence = CopyPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const CopyPrecedence_override: CopyPrecedence = 5; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_override = 5 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_override
@@ -178,7 +178,7 @@ const CopyPrecedence_override: CopyPrecedence = 5; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const override: CopyPrecedence = CopyPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
+const override = CopyPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_ecp
@@ -190,7 +190,7 @@ const override: CopyPrecedence = CopyPrecedence_override; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const CopyPrecedence_ecp: CopyPrecedence = 16; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_ecp = 16 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_ecp
@@ -202,7 +202,7 @@ const CopyPrecedence_ecp: CopyPrecedence = 16; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ecp: CopyPrecedence = CopyPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
+const ecp = CopyPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_critic
@@ -214,7 +214,7 @@ const ecp: CopyPrecedence = CopyPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CopyPrecedence_critic: CopyPrecedence = 17; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_critic = 17 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_critic
@@ -226,7 +226,7 @@ const CopyPrecedence_critic: CopyPrecedence = 17; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const critic: CopyPrecedence = CopyPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
+const critic = CopyPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_override_2
@@ -238,7 +238,7 @@ const critic: CopyPrecedence = CopyPrecedence_critic; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const CopyPrecedence_override_2: CopyPrecedence = 18; /* LONG_NAMED_INTEGER_VALUE */
+const CopyPrecedence_override_2 = 18 satisfies CopyPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CopyPrecedence_override_2
@@ -250,7 +250,7 @@ const CopyPrecedence_override_2: CopyPrecedence = 18; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const override_2: CopyPrecedence = CopyPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
+const override_2 = CopyPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CopyPrecedence: $.ASN1Decoder<CopyPrecedence> = $._decodeInteger;
 export const _encode_CopyPrecedence: $.ASN1Encoder<CopyPrecedence> = $._encodeInteger;
 

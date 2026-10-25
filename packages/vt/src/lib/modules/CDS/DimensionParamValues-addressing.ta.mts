@@ -45,7 +45,7 @@ type DimensionParamValues_addressing = INTEGER;
  * @type {number}
  */
 export
-const DimensionParamValues_addressing_noConstraint: DimensionParamValues_addressing = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DimensionParamValues_addressing_noConstraint = 0 satisfies DimensionParamValues_addressing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary noConstraint
@@ -57,7 +57,7 @@ const DimensionParamValues_addressing_noConstraint: DimensionParamValues_address
  * @type {number}
  */
 export
-const noConstraint: DimensionParamValues_addressing = DimensionParamValues_addressing_noConstraint; /* SHORT_NAMED_INTEGER_VALUE */
+const noConstraint = DimensionParamValues_addressing_noConstraint; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DimensionParamValues_addressing_higherOnly
@@ -69,7 +69,7 @@ const noConstraint: DimensionParamValues_addressing = DimensionParamValues_addre
  * @type {number}
  */
 export
-const DimensionParamValues_addressing_higherOnly: DimensionParamValues_addressing = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DimensionParamValues_addressing_higherOnly = 1 satisfies DimensionParamValues_addressing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary higherOnly
@@ -81,7 +81,7 @@ const DimensionParamValues_addressing_higherOnly: DimensionParamValues_addressin
  * @type {number}
  */
 export
-const higherOnly: DimensionParamValues_addressing = DimensionParamValues_addressing_higherOnly; /* SHORT_NAMED_INTEGER_VALUE */
+const higherOnly = DimensionParamValues_addressing_higherOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DimensionParamValues_addressing_notPermitted
@@ -93,7 +93,7 @@ const higherOnly: DimensionParamValues_addressing = DimensionParamValues_address
  * @type {number}
  */
 export
-const DimensionParamValues_addressing_notPermitted: DimensionParamValues_addressing = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DimensionParamValues_addressing_notPermitted = 2 satisfies DimensionParamValues_addressing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary notPermitted
@@ -105,7 +105,7 @@ const DimensionParamValues_addressing_notPermitted: DimensionParamValues_address
  * @type {number}
  */
 export
-const notPermitted: DimensionParamValues_addressing = DimensionParamValues_addressing_notPermitted; /* SHORT_NAMED_INTEGER_VALUE */
+const notPermitted = DimensionParamValues_addressing_notPermitted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DimensionParamValues_addressing = $._decodeInteger;
 export const _encode_DimensionParamValues_addressing = $._encodeInteger;
 

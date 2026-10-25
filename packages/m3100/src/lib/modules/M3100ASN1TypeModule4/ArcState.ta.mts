@@ -70,7 +70,7 @@ export const ArcState = _enum_for_ArcState;
  * @constant
  * @type {number}
  */
-export const ArcState_alm: ArcState =
+export const ArcState_alm =
     ArcState.alm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -79,7 +79,7 @@ export const ArcState_alm: ArcState =
  * @constant
  * @type {number}
  */
-export const alm: ArcState = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alm = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const alm: ArcState = ArcState.alm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ArcState_nalm: ArcState =
+export const ArcState_nalm =
     ArcState.nalm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const ArcState_nalm: ArcState =
  * @constant
  * @type {number}
  */
-export const nalm: ArcState = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nalm = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const nalm: ArcState = ArcState.nalm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const ArcState_nalmQualifiedInhibit: ArcState =
+export const ArcState_nalmQualifiedInhibit =
     ArcState.nalmQualifiedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -113,7 +113,7 @@ export const ArcState_nalmQualifiedInhibit: ArcState =
  * @constant
  * @type {number}
  */
-export const nalmQualifiedInhibit: ArcState =
+export const nalmQualifiedInhibit =
     ArcState.nalmQualifiedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -122,7 +122,7 @@ export const nalmQualifiedInhibit: ArcState =
  * @constant
  * @type {number}
  */
-export const ArcState_nalmTimedInhibit: ArcState =
+export const ArcState_nalmTimedInhibit =
     ArcState.nalmTimedInhibit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +131,7 @@ export const ArcState_nalmTimedInhibit: ArcState =
  * @constant
  * @type {number}
  */
-export const nalmTimedInhibit: ArcState =
+export const nalmTimedInhibit =
     ArcState.nalmTimedInhibit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

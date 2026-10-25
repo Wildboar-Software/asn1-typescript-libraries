@@ -31,14 +31,14 @@ export type RangeProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const RangeProblem_reversed: RangeProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const RangeProblem_reversed = 0 satisfies RangeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RangeProblem_reversed
  * @constant
  * @type {number}
  */
-export const reversed: RangeProblem = RangeProblem_reversed; /* SHORT_NAMED_INTEGER_VALUE */
+export const reversed = RangeProblem_reversed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_RangeProblem = $._decodeInteger;

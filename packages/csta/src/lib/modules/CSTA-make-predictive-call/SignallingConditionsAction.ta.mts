@@ -86,7 +86,7 @@ const SignallingConditionsAction = _enum_for_SignallingConditionsAction;
  * @type {number}
  */
 export
-const SignallingConditionsAction_destinationDetection: SignallingConditionsAction = SignallingConditionsAction.destinationDetection; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignallingConditionsAction_destinationDetection = SignallingConditionsAction.destinationDetection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destinationDetection
@@ -94,7 +94,7 @@ const SignallingConditionsAction_destinationDetection: SignallingConditionsActio
  * @type {number}
  */
 export
-const destinationDetection: SignallingConditionsAction = SignallingConditionsAction.destinationDetection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destinationDetection = SignallingConditionsAction.destinationDetection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignallingConditionsAction_remainConnected
@@ -102,7 +102,7 @@ const destinationDetection: SignallingConditionsAction = SignallingConditionsAct
  * @type {number}
  */
 export
-const SignallingConditionsAction_remainConnected: SignallingConditionsAction = SignallingConditionsAction.remainConnected; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignallingConditionsAction_remainConnected = SignallingConditionsAction.remainConnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remainConnected
@@ -110,7 +110,7 @@ const SignallingConditionsAction_remainConnected: SignallingConditionsAction = S
  * @type {number}
  */
 export
-const remainConnected: SignallingConditionsAction = SignallingConditionsAction.remainConnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remainConnected = SignallingConditionsAction.remainConnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SignallingConditionsAction: $.ASN1Decoder<SignallingConditionsAction> | null = null;
 

@@ -32,7 +32,7 @@ type CommonEquipRecord_equipmentType = INTEGER;
  * @type {number}
  */
 export
-const CommonEquipRecord_equipmentType_conferenceBridge: CommonEquipRecord_equipmentType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CommonEquipRecord_equipmentType_conferenceBridge = 0 satisfies CommonEquipRecord_equipmentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommonEquipRecord_equipmentType_conferenceBridge
@@ -40,7 +40,7 @@ const CommonEquipRecord_equipmentType_conferenceBridge: CommonEquipRecord_equipm
  * @type {number}
  */
 export
-const conferenceBridge: CommonEquipRecord_equipmentType = CommonEquipRecord_equipmentType_conferenceBridge; /* SHORT_NAMED_INTEGER_VALUE */
+const conferenceBridge = CommonEquipRecord_equipmentType_conferenceBridge; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CommonEquipRecord_equipmentType: $.ASN1Decoder<CommonEquipRecord_equipmentType> = $._decodeInteger;

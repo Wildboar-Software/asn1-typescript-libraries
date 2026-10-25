@@ -120,7 +120,7 @@ const RCSRegistrationType = _enum_for_RCSRegistrationType;
  * @type {number}
  */
 export
-const RCSRegistrationType_registration: RCSRegistrationType = RCSRegistrationType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSRegistrationType_registration = RCSRegistrationType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration
@@ -135,7 +135,7 @@ const RCSRegistrationType_registration: RCSRegistrationType = RCSRegistrationTyp
  * @type {number}
  */
 export
-const registration: RCSRegistrationType = RCSRegistrationType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registration = RCSRegistrationType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSRegistrationType_reRegistration
@@ -150,7 +150,7 @@ const registration: RCSRegistrationType = RCSRegistrationType.registration; /* S
  * @type {number}
  */
 export
-const RCSRegistrationType_reRegistration: RCSRegistrationType = RCSRegistrationType.reRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSRegistrationType_reRegistration = RCSRegistrationType.reRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reRegistration
@@ -165,7 +165,7 @@ const RCSRegistrationType_reRegistration: RCSRegistrationType = RCSRegistrationT
  * @type {number}
  */
 export
-const reRegistration: RCSRegistrationType = RCSRegistrationType.reRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reRegistration = RCSRegistrationType.reRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSRegistrationType_uEDeregistration
@@ -182,7 +182,7 @@ const reRegistration: RCSRegistrationType = RCSRegistrationType.reRegistration; 
  * @type {number}
  */
 export
-const RCSRegistrationType_uEDeregistration: RCSRegistrationType = RCSRegistrationType.uEDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSRegistrationType_uEDeregistration = RCSRegistrationType.uEDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEDeregistration
@@ -199,7 +199,7 @@ const RCSRegistrationType_uEDeregistration: RCSRegistrationType = RCSRegistratio
  * @type {number}
  */
 export
-const uEDeregistration: RCSRegistrationType = RCSRegistrationType.uEDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEDeregistration = RCSRegistrationType.uEDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSRegistrationType_networkDeregistration
@@ -215,7 +215,7 @@ const uEDeregistration: RCSRegistrationType = RCSRegistrationType.uEDeregistrati
  * @type {number}
  */
 export
-const RCSRegistrationType_networkDeregistration: RCSRegistrationType = RCSRegistrationType.networkDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSRegistrationType_networkDeregistration = RCSRegistrationType.networkDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkDeregistration
@@ -231,7 +231,7 @@ const RCSRegistrationType_networkDeregistration: RCSRegistrationType = RCSRegist
  * @type {number}
  */
 export
-const networkDeregistration: RCSRegistrationType = RCSRegistrationType.networkDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkDeregistration = RCSRegistrationType.networkDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RCSRegistrationType: $.ASN1Decoder<RCSRegistrationType> = $._decodeEnumerated;
 export const _encode_RCSRegistrationType: $.ASN1Encoder<RCSRegistrationType> = $._encodeEnumerated;
 

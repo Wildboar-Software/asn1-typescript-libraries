@@ -65,7 +65,7 @@ const TLSPRFAlgorithm = _enum_for_TLSPRFAlgorithm;
  * @type {number}
  */
 export
-const TLSPRFAlgorithm_rfc5246: TLSPRFAlgorithm = TLSPRFAlgorithm.rfc5246; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLSPRFAlgorithm_rfc5246 = TLSPRFAlgorithm.rfc5246; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rfc5246
@@ -73,7 +73,7 @@ const TLSPRFAlgorithm_rfc5246: TLSPRFAlgorithm = TLSPRFAlgorithm.rfc5246; /* LON
  * @type {number}
  */
 export
-const rfc5246: TLSPRFAlgorithm = TLSPRFAlgorithm.rfc5246; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rfc5246 = TLSPRFAlgorithm.rfc5246; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLSPRFAlgorithm: $.ASN1Decoder<TLSPRFAlgorithm> = $._decodeEnumerated;
 export const _encode_TLSPRFAlgorithm: $.ASN1Encoder<TLSPRFAlgorithm> = $._encodeEnumerated;
 

@@ -35,7 +35,7 @@ export type InitializationAbort_diag =
  * @constant
  * @type {number}
  */
-export const InitializationAbort_diag_unsupportedVersion: InitializationAbort_diag = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationAbort_diag_unsupportedVersion = _enum_for_InitializationAbort_diag.unsupportedVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedVersion
@@ -45,7 +45,7 @@ export const InitializationAbort_diag_unsupportedVersion: InitializationAbort_di
  * @constant
  * @type {number}
  */
-export const unsupportedVersion: InitializationAbort_diag = InitializationAbort_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedVersion = InitializationAbort_diag_unsupportedVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InitializationAbort_diag_onlySingleVersionAllowed
@@ -55,7 +55,7 @@ export const unsupportedVersion: InitializationAbort_diag = InitializationAbort_
  * @constant
  * @type {number}
  */
-export const InitializationAbort_diag_onlySingleVersionAllowed: InitializationAbort_diag = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationAbort_diag_onlySingleVersionAllowed = _enum_for_InitializationAbort_diag.onlySingleVersionAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlySingleVersionAllowed
@@ -65,7 +65,7 @@ export const InitializationAbort_diag_onlySingleVersionAllowed: InitializationAb
  * @constant
  * @type {number}
  */
-export const onlySingleVersionAllowed: InitializationAbort_diag = InitializationAbort_diag_onlySingleVersionAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const onlySingleVersionAllowed = InitializationAbort_diag_onlySingleVersionAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_InitializationAbort_diag = $._decodeEnumerated;

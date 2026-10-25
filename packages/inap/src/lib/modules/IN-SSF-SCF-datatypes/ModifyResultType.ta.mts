@@ -61,7 +61,7 @@ const ModifyResultType = _enum_for_ModifyResultType;
  * @type {number}
  */
 export
-const ModifyResultType_modifyAcknowledge: ModifyResultType = ModifyResultType.modifyAcknowledge; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModifyResultType_modifyAcknowledge = ModifyResultType.modifyAcknowledge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modifyAcknowledge
@@ -69,7 +69,7 @@ const ModifyResultType_modifyAcknowledge: ModifyResultType = ModifyResultType.mo
  * @type {number}
  */
 export
-const modifyAcknowledge: ModifyResultType = ModifyResultType.modifyAcknowledge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modifyAcknowledge = ModifyResultType.modifyAcknowledge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModifyResultType_modifyReject
@@ -77,7 +77,7 @@ const modifyAcknowledge: ModifyResultType = ModifyResultType.modifyAcknowledge; 
  * @type {number}
  */
 export
-const ModifyResultType_modifyReject: ModifyResultType = ModifyResultType.modifyReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModifyResultType_modifyReject = ModifyResultType.modifyReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modifyReject
@@ -85,7 +85,7 @@ const ModifyResultType_modifyReject: ModifyResultType = ModifyResultType.modifyR
  * @type {number}
  */
 export
-const modifyReject: ModifyResultType = ModifyResultType.modifyReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modifyReject = ModifyResultType.modifyReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ModifyResultType(el: _Element): ModifyResultType {

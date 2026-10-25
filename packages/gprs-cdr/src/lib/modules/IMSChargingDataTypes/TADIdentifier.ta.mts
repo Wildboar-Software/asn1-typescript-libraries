@@ -95,7 +95,7 @@ const TADIdentifier = _enum_for_TADIdentifier;
  * @type {number}
  */
 export
-const TADIdentifier_cS: TADIdentifier = TADIdentifier.cS; /* LONG_NAMED_ENUMERATED_VALUE */
+const TADIdentifier_cS = TADIdentifier.cS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cS
@@ -108,7 +108,7 @@ const TADIdentifier_cS: TADIdentifier = TADIdentifier.cS; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const cS: TADIdentifier = TADIdentifier.cS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cS = TADIdentifier.cS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TADIdentifier_pS
@@ -121,7 +121,7 @@ const cS: TADIdentifier = TADIdentifier.cS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TADIdentifier_pS: TADIdentifier = TADIdentifier.pS; /* LONG_NAMED_ENUMERATED_VALUE */
+const TADIdentifier_pS = TADIdentifier.pS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pS
@@ -134,7 +134,7 @@ const TADIdentifier_pS: TADIdentifier = TADIdentifier.pS; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const pS: TADIdentifier = TADIdentifier.pS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pS = TADIdentifier.pS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TADIdentifier: $.ASN1Decoder<TADIdentifier> = $._decodeEnumerated;

@@ -70,7 +70,7 @@ export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_sunday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_sunday =
     NamedDay_intNamedDays.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const NamedDay_intNamedDays_sunday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const sunday: NamedDay_intNamedDays =
+export const sunday =
     NamedDay_intNamedDays.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const sunday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_monday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_monday =
     NamedDay_intNamedDays.monday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const NamedDay_intNamedDays_monday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const monday: NamedDay_intNamedDays =
+export const monday =
     NamedDay_intNamedDays.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +106,7 @@ export const monday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_tuesday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_tuesday =
     NamedDay_intNamedDays.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +114,7 @@ export const NamedDay_intNamedDays_tuesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const tuesday: NamedDay_intNamedDays =
+export const tuesday =
     NamedDay_intNamedDays.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const tuesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_wednesday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_wednesday =
     NamedDay_intNamedDays.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const NamedDay_intNamedDays_wednesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const wednesday: NamedDay_intNamedDays =
+export const wednesday =
     NamedDay_intNamedDays.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const wednesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_thursday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_thursday =
     NamedDay_intNamedDays.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -146,7 +146,7 @@ export const NamedDay_intNamedDays_thursday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const thursday: NamedDay_intNamedDays =
+export const thursday =
     NamedDay_intNamedDays.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const thursday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_friday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_friday =
     NamedDay_intNamedDays.friday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const NamedDay_intNamedDays_friday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const friday: NamedDay_intNamedDays =
+export const friday =
     NamedDay_intNamedDays.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -170,7 +170,7 @@ export const friday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_saturday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_saturday =
     NamedDay_intNamedDays.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -178,7 +178,7 @@ export const NamedDay_intNamedDays_saturday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const saturday: NamedDay_intNamedDays =
+export const saturday =
     NamedDay_intNamedDays.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

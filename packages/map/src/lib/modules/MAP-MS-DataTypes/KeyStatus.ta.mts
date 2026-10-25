@@ -47,7 +47,7 @@ type KeyStatus = _enum_for_KeyStatus | ENUMERATED;
  * @type {number}
  */
 export
-const KeyStatus_old: KeyStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const KeyStatus_old = _enum_for_KeyStatus.old; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary old
@@ -60,7 +60,7 @@ const KeyStatus_old: KeyStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const old: KeyStatus = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
+const old = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KeyStatus_new_
@@ -73,7 +73,7 @@ const old: KeyStatus = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const KeyStatus_new_ = _enum_for_KeyStatus.new_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_
@@ -86,7 +86,7 @@ const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const new_: KeyStatus = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_ = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyStatus

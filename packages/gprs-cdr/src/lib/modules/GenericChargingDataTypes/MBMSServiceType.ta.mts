@@ -63,7 +63,7 @@ const MBMSServiceType = _enum_for_MBMSServiceType;
  * @type {number}
  */
 export
-const MBMSServiceType_mULTICAST: MBMSServiceType = MBMSServiceType.mULTICAST; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSServiceType_mULTICAST = MBMSServiceType.mULTICAST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mULTICAST
@@ -71,7 +71,7 @@ const MBMSServiceType_mULTICAST: MBMSServiceType = MBMSServiceType.mULTICAST; /*
  * @type {number}
  */
 export
-const mULTICAST: MBMSServiceType = MBMSServiceType.mULTICAST; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mULTICAST = MBMSServiceType.mULTICAST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MBMSServiceType_bROADCAST
@@ -79,7 +79,7 @@ const mULTICAST: MBMSServiceType = MBMSServiceType.mULTICAST; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const MBMSServiceType_bROADCAST: MBMSServiceType = MBMSServiceType.bROADCAST; /* LONG_NAMED_ENUMERATED_VALUE */
+const MBMSServiceType_bROADCAST = MBMSServiceType.bROADCAST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bROADCAST
@@ -87,7 +87,7 @@ const MBMSServiceType_bROADCAST: MBMSServiceType = MBMSServiceType.bROADCAST; /*
  * @type {number}
  */
 export
-const bROADCAST: MBMSServiceType = MBMSServiceType.bROADCAST; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bROADCAST = MBMSServiceType.bROADCAST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MBMSServiceType: $.ASN1Decoder<MBMSServiceType> = $._decodeEnumerated;

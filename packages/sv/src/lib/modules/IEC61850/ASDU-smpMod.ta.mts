@@ -37,7 +37,7 @@ type ASDU_smpMod = INTEGER;
  * @type {number}
  */
 export
-const ASDU_smpMod_samplesPerNormalPeriod: ASDU_smpMod = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ASDU_smpMod_samplesPerNormalPeriod = 0 satisfies ASDU_smpMod; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpMod_samplesPerNormalPeriod
@@ -49,7 +49,7 @@ const ASDU_smpMod_samplesPerNormalPeriod: ASDU_smpMod = 0; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const samplesPerNormalPeriod: ASDU_smpMod = ASDU_smpMod_samplesPerNormalPeriod; /* SHORT_NAMED_INTEGER_VALUE */
+const samplesPerNormalPeriod = ASDU_smpMod_samplesPerNormalPeriod; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpMod_samplesPerSecond
@@ -61,7 +61,7 @@ const samplesPerNormalPeriod: ASDU_smpMod = ASDU_smpMod_samplesPerNormalPeriod; 
  * @type {number}
  */
 export
-const ASDU_smpMod_samplesPerSecond: ASDU_smpMod = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ASDU_smpMod_samplesPerSecond = 1 satisfies ASDU_smpMod; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpMod_samplesPerSecond
@@ -73,7 +73,7 @@ const ASDU_smpMod_samplesPerSecond: ASDU_smpMod = 1; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const samplesPerSecond: ASDU_smpMod = ASDU_smpMod_samplesPerSecond; /* SHORT_NAMED_INTEGER_VALUE */
+const samplesPerSecond = ASDU_smpMod_samplesPerSecond; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpMod_secondsPerSample
@@ -85,7 +85,7 @@ const samplesPerSecond: ASDU_smpMod = ASDU_smpMod_samplesPerSecond; /* SHORT_NAM
  * @type {number}
  */
 export
-const ASDU_smpMod_secondsPerSample: ASDU_smpMod = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ASDU_smpMod_secondsPerSample = 2 satisfies ASDU_smpMod; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpMod_secondsPerSample
@@ -97,7 +97,7 @@ const ASDU_smpMod_secondsPerSample: ASDU_smpMod = 2; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const secondsPerSample: ASDU_smpMod = ASDU_smpMod_secondsPerSample; /* SHORT_NAMED_INTEGER_VALUE */
+const secondsPerSample = ASDU_smpMod_secondsPerSample; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ASDU_smpMod = $._decodeInteger;
 export const _encode_ASDU_smpMod = $._encodeInteger;
 

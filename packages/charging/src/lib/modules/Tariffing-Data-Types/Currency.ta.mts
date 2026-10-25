@@ -100,7 +100,7 @@ type Currency = _enum_for_Currency | ENUMERATED;
  * @type {number}
  */
 export
-const Currency_noIndication: Currency = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_noIndication = _enum_for_Currency.noIndication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * No currency is indicated (clause 9). Which currency a network
@@ -110,7 +110,7 @@ const Currency_noIndication: Currency = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const noIndication: Currency = Currency_noIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noIndication = Currency_noIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_australianDollar
@@ -118,7 +118,7 @@ const noIndication: Currency = Currency_noIndication; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_australianDollar: Currency = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_australianDollar = _enum_for_Currency.australianDollar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary australianDollar
@@ -126,7 +126,7 @@ const Currency_australianDollar: Currency = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const australianDollar: Currency = Currency_australianDollar; /* SHORT_NAMED_ENUMERATED_VALUE */
+const australianDollar = Currency_australianDollar; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_austrianSchilling
@@ -134,7 +134,7 @@ const australianDollar: Currency = Currency_australianDollar; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Currency_austrianSchilling: Currency = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_austrianSchilling = _enum_for_Currency.austrianSchilling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary austrianSchilling
@@ -142,7 +142,7 @@ const Currency_austrianSchilling: Currency = 2; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const austrianSchilling: Currency = Currency_austrianSchilling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const austrianSchilling = Currency_austrianSchilling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_belgianFranc
@@ -150,7 +150,7 @@ const austrianSchilling: Currency = Currency_austrianSchilling; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const Currency_belgianFranc: Currency = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_belgianFranc = _enum_for_Currency.belgianFranc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary belgianFranc
@@ -158,7 +158,7 @@ const Currency_belgianFranc: Currency = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const belgianFranc: Currency = Currency_belgianFranc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const belgianFranc = Currency_belgianFranc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_britishPound
@@ -166,7 +166,7 @@ const belgianFranc: Currency = Currency_belgianFranc; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_britishPound: Currency = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_britishPound = _enum_for_Currency.britishPound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary britishPound
@@ -174,7 +174,7 @@ const Currency_britishPound: Currency = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const britishPound: Currency = Currency_britishPound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const britishPound = Currency_britishPound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_czechKoruna
@@ -182,7 +182,7 @@ const britishPound: Currency = Currency_britishPound; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_czechKoruna: Currency = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_czechKoruna = _enum_for_Currency.czechKoruna; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary czechKoruna
@@ -190,7 +190,7 @@ const Currency_czechKoruna: Currency = 5; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const czechKoruna: Currency = Currency_czechKoruna; /* SHORT_NAMED_ENUMERATED_VALUE */
+const czechKoruna = Currency_czechKoruna; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_danishKrone
@@ -198,7 +198,7 @@ const czechKoruna: Currency = Currency_czechKoruna; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_danishKrone: Currency = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_danishKrone = _enum_for_Currency.danishKrone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary danishKrone
@@ -206,7 +206,7 @@ const Currency_danishKrone: Currency = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const danishKrone: Currency = Currency_danishKrone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const danishKrone = Currency_danishKrone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_dutchGuilder
@@ -214,7 +214,7 @@ const danishKrone: Currency = Currency_danishKrone; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_dutchGuilder: Currency = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_dutchGuilder = _enum_for_Currency.dutchGuilder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dutchGuilder
@@ -222,7 +222,7 @@ const Currency_dutchGuilder: Currency = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const dutchGuilder: Currency = Currency_dutchGuilder; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dutchGuilder = Currency_dutchGuilder; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_euro
@@ -230,7 +230,7 @@ const dutchGuilder: Currency = Currency_dutchGuilder; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_euro: Currency = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_euro = _enum_for_Currency.euro; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary euro
@@ -238,7 +238,7 @@ const Currency_euro: Currency = 8; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const euro: Currency = Currency_euro; /* SHORT_NAMED_ENUMERATED_VALUE */
+const euro = Currency_euro; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_finnishMarkka
@@ -246,7 +246,7 @@ const euro: Currency = Currency_euro; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Currency_finnishMarkka: Currency = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_finnishMarkka = _enum_for_Currency.finnishMarkka; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary finnishMarkka
@@ -254,7 +254,7 @@ const Currency_finnishMarkka: Currency = 9; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const finnishMarkka: Currency = Currency_finnishMarkka; /* SHORT_NAMED_ENUMERATED_VALUE */
+const finnishMarkka = Currency_finnishMarkka; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_frenchFranc
@@ -262,7 +262,7 @@ const finnishMarkka: Currency = Currency_finnishMarkka; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Currency_frenchFranc: Currency = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_frenchFranc = _enum_for_Currency.frenchFranc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary frenchFranc
@@ -270,7 +270,7 @@ const Currency_frenchFranc: Currency = 10; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const frenchFranc: Currency = Currency_frenchFranc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const frenchFranc = Currency_frenchFranc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_germanMark
@@ -278,7 +278,7 @@ const frenchFranc: Currency = Currency_frenchFranc; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_germanMark: Currency = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_germanMark = _enum_for_Currency.germanMark; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary germanMark
@@ -286,7 +286,7 @@ const Currency_germanMark: Currency = 11; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const germanMark: Currency = Currency_germanMark; /* SHORT_NAMED_ENUMERATED_VALUE */
+const germanMark = Currency_germanMark; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_greekDrachma
@@ -294,7 +294,7 @@ const germanMark: Currency = Currency_germanMark; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const Currency_greekDrachma: Currency = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_greekDrachma = _enum_for_Currency.greekDrachma; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greekDrachma
@@ -302,7 +302,7 @@ const Currency_greekDrachma: Currency = 12; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const greekDrachma: Currency = Currency_greekDrachma; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greekDrachma = Currency_greekDrachma; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_hungarianForint
@@ -310,7 +310,7 @@ const greekDrachma: Currency = Currency_greekDrachma; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_hungarianForint: Currency = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_hungarianForint = _enum_for_Currency.hungarianForint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hungarianForint
@@ -318,7 +318,7 @@ const Currency_hungarianForint: Currency = 13; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const hungarianForint: Currency = Currency_hungarianForint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hungarianForint = Currency_hungarianForint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_irishPunt
@@ -326,7 +326,7 @@ const hungarianForint: Currency = Currency_hungarianForint; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Currency_irishPunt: Currency = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_irishPunt = _enum_for_Currency.irishPunt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary irishPunt
@@ -334,7 +334,7 @@ const Currency_irishPunt: Currency = 14; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const irishPunt: Currency = Currency_irishPunt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const irishPunt = Currency_irishPunt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_italianLira
@@ -342,7 +342,7 @@ const irishPunt: Currency = Currency_irishPunt; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const Currency_italianLira: Currency = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_italianLira = _enum_for_Currency.italianLira; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary italianLira
@@ -350,7 +350,7 @@ const Currency_italianLira: Currency = 15; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const italianLira: Currency = Currency_italianLira; /* SHORT_NAMED_ENUMERATED_VALUE */
+const italianLira = Currency_italianLira; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_japaneseYen
@@ -358,7 +358,7 @@ const italianLira: Currency = Currency_italianLira; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_japaneseYen: Currency = 16; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_japaneseYen = _enum_for_Currency.japaneseYen; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary japaneseYen
@@ -366,7 +366,7 @@ const Currency_japaneseYen: Currency = 16; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const japaneseYen: Currency = Currency_japaneseYen; /* SHORT_NAMED_ENUMERATED_VALUE */
+const japaneseYen = Currency_japaneseYen; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_luxembourgian_Franc
@@ -374,7 +374,7 @@ const japaneseYen: Currency = Currency_japaneseYen; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_luxembourgian_Franc: Currency = 17; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_luxembourgian_Franc = _enum_for_Currency.luxembourgian_Franc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary luxembourgian_Franc
@@ -382,7 +382,7 @@ const Currency_luxembourgian_Franc: Currency = 17; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const luxembourgian_Franc: Currency = Currency_luxembourgian_Franc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const luxembourgian_Franc = Currency_luxembourgian_Franc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_norwegianKrone
@@ -390,7 +390,7 @@ const luxembourgian_Franc: Currency = Currency_luxembourgian_Franc; /* SHORT_NAM
  * @type {number}
  */
 export
-const Currency_norwegianKrone: Currency = 18; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_norwegianKrone = _enum_for_Currency.norwegianKrone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary norwegianKrone
@@ -398,7 +398,7 @@ const Currency_norwegianKrone: Currency = 18; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const norwegianKrone: Currency = Currency_norwegianKrone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const norwegianKrone = Currency_norwegianKrone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_polishZloty
@@ -406,7 +406,7 @@ const norwegianKrone: Currency = Currency_norwegianKrone; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Currency_polishZloty: Currency = 19; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_polishZloty = _enum_for_Currency.polishZloty; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary polishZloty
@@ -414,7 +414,7 @@ const Currency_polishZloty: Currency = 19; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const polishZloty: Currency = Currency_polishZloty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const polishZloty = Currency_polishZloty; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_portugeseEscudo
@@ -422,7 +422,7 @@ const polishZloty: Currency = Currency_polishZloty; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_portugeseEscudo: Currency = 20; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_portugeseEscudo = _enum_for_Currency.portugeseEscudo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary portugeseEscudo
@@ -430,7 +430,7 @@ const Currency_portugeseEscudo: Currency = 20; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const portugeseEscudo: Currency = Currency_portugeseEscudo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const portugeseEscudo = Currency_portugeseEscudo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_russianRouble
@@ -438,7 +438,7 @@ const portugeseEscudo: Currency = Currency_portugeseEscudo; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Currency_russianRouble: Currency = 21; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_russianRouble = _enum_for_Currency.russianRouble; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary russianRouble
@@ -446,7 +446,7 @@ const Currency_russianRouble: Currency = 21; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const russianRouble: Currency = Currency_russianRouble; /* SHORT_NAMED_ENUMERATED_VALUE */
+const russianRouble = Currency_russianRouble; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_slovakKoruna
@@ -454,7 +454,7 @@ const russianRouble: Currency = Currency_russianRouble; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Currency_slovakKoruna: Currency = 22; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_slovakKoruna = _enum_for_Currency.slovakKoruna; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary slovakKoruna
@@ -462,7 +462,7 @@ const Currency_slovakKoruna: Currency = 22; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const slovakKoruna: Currency = Currency_slovakKoruna; /* SHORT_NAMED_ENUMERATED_VALUE */
+const slovakKoruna = Currency_slovakKoruna; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_spanishPeseta
@@ -470,7 +470,7 @@ const slovakKoruna: Currency = Currency_slovakKoruna; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_spanishPeseta: Currency = 23; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_spanishPeseta = _enum_for_Currency.spanishPeseta; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary spanishPeseta
@@ -478,7 +478,7 @@ const Currency_spanishPeseta: Currency = 23; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const spanishPeseta: Currency = Currency_spanishPeseta; /* SHORT_NAMED_ENUMERATED_VALUE */
+const spanishPeseta = Currency_spanishPeseta; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_swedishKrone
@@ -486,7 +486,7 @@ const spanishPeseta: Currency = Currency_spanishPeseta; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Currency_swedishKrone: Currency = 24; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_swedishKrone = _enum_for_Currency.swedishKrone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary swedishKrone
@@ -494,7 +494,7 @@ const Currency_swedishKrone: Currency = 24; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const swedishKrone: Currency = Currency_swedishKrone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const swedishKrone = Currency_swedishKrone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_swissFranc
@@ -502,7 +502,7 @@ const swedishKrone: Currency = Currency_swedishKrone; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Currency_swissFranc: Currency = 25; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_swissFranc = _enum_for_Currency.swissFranc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary swissFranc
@@ -510,7 +510,7 @@ const Currency_swissFranc: Currency = 25; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const swissFranc: Currency = Currency_swissFranc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const swissFranc = Currency_swissFranc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_turkishLira
@@ -518,7 +518,7 @@ const swissFranc: Currency = Currency_swissFranc; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const Currency_turkishLira: Currency = 26; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_turkishLira = _enum_for_Currency.turkishLira; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary turkishLira
@@ -526,7 +526,7 @@ const Currency_turkishLira: Currency = 26; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const turkishLira: Currency = Currency_turkishLira; /* SHORT_NAMED_ENUMERATED_VALUE */
+const turkishLira = Currency_turkishLira; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Currency_uSDollar
@@ -534,7 +534,7 @@ const turkishLira: Currency = Currency_turkishLira; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Currency_uSDollar: Currency = 27; /* LONG_NAMED_ENUMERATED_VALUE */
+const Currency_uSDollar = _enum_for_Currency.uSDollar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uSDollar
@@ -542,7 +542,7 @@ const Currency_uSDollar: Currency = 27; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const uSDollar: Currency = Currency_uSDollar; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uSDollar = Currency_uSDollar; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Currency = $._decodeEnumerated;
 export const _encode_Currency = $._encodeEnumerated;
 

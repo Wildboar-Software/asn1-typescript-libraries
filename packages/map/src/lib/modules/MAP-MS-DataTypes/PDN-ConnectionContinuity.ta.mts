@@ -88,7 +88,7 @@ const PDN_ConnectionContinuity = _enum_for_PDN_ConnectionContinuity;
  * @type {number}
  */
 export
-const PDN_ConnectionContinuity_maintainPDN_Connection: PDN_ConnectionContinuity = PDN_ConnectionContinuity.maintainPDN_Connection; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_ConnectionContinuity_maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maintainPDN_Connection
@@ -96,7 +96,7 @@ const PDN_ConnectionContinuity_maintainPDN_Connection: PDN_ConnectionContinuity 
  * @type {number}
  */
 export
-const maintainPDN_Connection: PDN_ConnectionContinuity = PDN_ConnectionContinuity.maintainPDN_Connection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maintainPDN_Connection = PDN_ConnectionContinuity.maintainPDN_Connection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest
@@ -104,7 +104,7 @@ const maintainPDN_Connection: PDN_ConnectionContinuity = PDN_ConnectionContinuit
  * @type {number}
  */
 export
-const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest: PDN_ConnectionContinuity = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnectPDN_ConnectionWithReactivationRequest
@@ -112,7 +112,7 @@ const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithReactivationRequest: 
  * @type {number}
  */
 export
-const disconnectPDN_ConnectionWithReactivationRequest: PDN_ConnectionContinuity = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnectPDN_ConnectionWithReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest
@@ -120,7 +120,7 @@ const disconnectPDN_ConnectionWithReactivationRequest: PDN_ConnectionContinuity 
  * @type {number}
  */
 export
-const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest: PDN_ConnectionContinuity = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnectPDN_ConnectionWithoutReactivationRequest
@@ -128,7 +128,7 @@ const PDN_ConnectionContinuity_disconnectPDN_ConnectionWithoutReactivationReques
  * @type {number}
  */
 export
-const disconnectPDN_ConnectionWithoutReactivationRequest: PDN_ConnectionContinuity = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnectPDN_ConnectionWithoutReactivationRequest = PDN_ConnectionContinuity.disconnectPDN_ConnectionWithoutReactivationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PDN_ConnectionContinuity

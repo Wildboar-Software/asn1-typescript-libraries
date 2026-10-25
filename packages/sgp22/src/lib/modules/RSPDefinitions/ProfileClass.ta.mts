@@ -38,7 +38,7 @@ type ProfileClass = INTEGER;
  * @type {number}
  */
 export
-const ProfileClass_test: ProfileClass = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileClass_test = 0 satisfies ProfileClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_test
@@ -51,7 +51,7 @@ const ProfileClass_test: ProfileClass = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const test: ProfileClass = ProfileClass_test; /* SHORT_NAMED_INTEGER_VALUE */
+const test = ProfileClass_test; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_provisioning
@@ -65,7 +65,7 @@ const test: ProfileClass = ProfileClass_test; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ProfileClass_provisioning: ProfileClass = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileClass_provisioning = 1 satisfies ProfileClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_provisioning
@@ -79,7 +79,7 @@ const ProfileClass_provisioning: ProfileClass = 1; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const provisioning: ProfileClass = ProfileClass_provisioning; /* SHORT_NAMED_INTEGER_VALUE */
+const provisioning = ProfileClass_provisioning; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_operational
@@ -91,7 +91,7 @@ const provisioning: ProfileClass = ProfileClass_provisioning; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const ProfileClass_operational: ProfileClass = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileClass_operational = 2 satisfies ProfileClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileClass_operational
@@ -103,7 +103,7 @@ const ProfileClass_operational: ProfileClass = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const operational: ProfileClass = ProfileClass_operational; /* SHORT_NAMED_INTEGER_VALUE */
+const operational = ProfileClass_operational; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileClass = $._decodeInteger;
 export const _encode_ProfileClass = $._encodeInteger;
 

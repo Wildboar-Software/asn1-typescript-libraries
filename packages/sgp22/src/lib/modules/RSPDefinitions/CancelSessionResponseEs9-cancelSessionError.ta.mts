@@ -37,7 +37,7 @@ type CancelSessionResponseEs9_cancelSessionError = INTEGER;
  * @type {number}
  */
 export
-const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId: CancelSessionResponseEs9_cancelSessionError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId = 1 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_invalidTransactionId
@@ -49,7 +49,7 @@ const CancelSessionResponseEs9_cancelSessionError_invalidTransactionId: CancelSe
  * @type {number}
  */
 export
-const invalidTransactionId: CancelSessionResponseEs9_cancelSessionError = CancelSessionResponseEs9_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = CancelSessionResponseEs9_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid
@@ -61,7 +61,7 @@ const invalidTransactionId: CancelSessionResponseEs9_cancelSessionError = Cancel
  * @type {number}
  */
 export
-const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid: CancelSessionResponseEs9_cancelSessionError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid = 2 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid
@@ -73,7 +73,7 @@ const CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid: CancelS
  * @type {number}
  */
 export
-const euiccSignatureInvalid: CancelSessionResponseEs9_cancelSessionError = CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid = CancelSessionResponseEs9_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_undefinedError
@@ -85,7 +85,7 @@ const euiccSignatureInvalid: CancelSessionResponseEs9_cancelSessionError = Cance
  * @type {number}
  */
 export
-const CancelSessionResponseEs9_cancelSessionError_undefinedError: CancelSessionResponseEs9_cancelSessionError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEs9_cancelSessionError_undefinedError = 127 satisfies CancelSessionResponseEs9_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEs9_cancelSessionError_undefinedError
@@ -97,7 +97,7 @@ const CancelSessionResponseEs9_cancelSessionError_undefinedError: CancelSessionR
  * @type {number}
  */
 export
-const undefinedError: CancelSessionResponseEs9_cancelSessionError = CancelSessionResponseEs9_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = CancelSessionResponseEs9_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CancelSessionResponseEs9_cancelSessionError = $._decodeInteger;
 export const _encode_CancelSessionResponseEs9_cancelSessionError = $._encodeInteger;
 

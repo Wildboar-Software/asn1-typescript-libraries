@@ -141,7 +141,7 @@ export const Induced = _enum_for_Induced;
  * @constant
  * @type {number}
  */
-export const Induced_start: Induced =
+export const Induced_start =
     Induced.start; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +153,7 @@ export const Induced_start: Induced =
  * @constant
  * @type {number}
  */
-export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const start = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Induced_suspend
@@ -164,7 +164,7 @@ export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Induced_suspend: Induced =
+export const Induced_suspend =
     Induced.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +176,7 @@ export const Induced_suspend: Induced =
  * @constant
  * @type {number}
  */
-export const suspend: Induced =
+export const suspend =
     Induced.suspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -188,7 +188,7 @@ export const suspend: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_resume: Induced =
+export const Induced_resume =
     Induced.resume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -200,7 +200,7 @@ export const Induced_resume: Induced =
  * @constant
  * @type {number}
  */
-export const resume: Induced =
+export const resume =
     Induced.resume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -213,7 +213,7 @@ export const resume: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_delete_: Induced =
+export const Induced_delete_ =
     Induced.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -226,7 +226,7 @@ export const Induced_delete_: Induced =
  * @constant
  * @type {number}
  */
-export const delete_: Induced =
+export const delete_ =
     Induced.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -239,7 +239,7 @@ export const delete_: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_disabled: Induced =
+export const Induced_disabled =
     Induced.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -252,7 +252,7 @@ export const Induced_disabled: Induced =
  * @constant
  * @type {number}
  */
-export const disabled: Induced =
+export const disabled =
     Induced.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -265,7 +265,7 @@ export const disabled: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_enabled: Induced =
+export const Induced_enabled =
     Induced.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -278,7 +278,7 @@ export const Induced_enabled: Induced =
  * @constant
  * @type {number}
  */
-export const enabled: Induced =
+export const enabled =
     Induced.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

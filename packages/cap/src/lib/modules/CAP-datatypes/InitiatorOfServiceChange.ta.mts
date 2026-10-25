@@ -23,9 +23,9 @@ export enum _enum_for_InitiatorOfServiceChange {
 }
 export type InitiatorOfServiceChange = _enum_for_InitiatorOfServiceChange;
 export const InitiatorOfServiceChange = _enum_for_InitiatorOfServiceChange;
-export const InitiatorOfServiceChange_a_side: InitiatorOfServiceChange = InitiatorOfServiceChange.a_side;
-export const a_side: InitiatorOfServiceChange = InitiatorOfServiceChange.a_side;
-export const InitiatorOfServiceChange_b_side: InitiatorOfServiceChange = InitiatorOfServiceChange.b_side;
-export const b_side: InitiatorOfServiceChange = InitiatorOfServiceChange.b_side;
+export const InitiatorOfServiceChange_a_side = InitiatorOfServiceChange.a_side;
+export const a_side = InitiatorOfServiceChange.a_side;
+export const InitiatorOfServiceChange_b_side = InitiatorOfServiceChange.b_side;
+export const b_side = InitiatorOfServiceChange.b_side;
 export const _decode_InitiatorOfServiceChange = $._decodeEnumerated;
 export const _encode_InitiatorOfServiceChange = $._encodeEnumerated;

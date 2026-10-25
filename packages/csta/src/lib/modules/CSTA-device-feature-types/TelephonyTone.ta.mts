@@ -558,7 +558,7 @@ const TelephonyTone = _enum_for_TelephonyTone;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_beep: TelephonyTone = TelephonyTone.beep; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_beep = TelephonyTone.beep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary beep
@@ -567,7 +567,7 @@ const TelephonyTone_beep: TelephonyTone = TelephonyTone.beep; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const beep: TelephonyTone = TelephonyTone.beep; /* SHORT_NAMED_ENUMERATED_VALUE */
+const beep = TelephonyTone.beep; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_billing
@@ -577,7 +577,7 @@ const beep: TelephonyTone = TelephonyTone.beep; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_billing: TelephonyTone = TelephonyTone.billing; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_billing = TelephonyTone.billing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary billing
@@ -586,7 +586,7 @@ const TelephonyTone_billing: TelephonyTone = TelephonyTone.billing; /* LONG_NAME
  * @type {number}
  */
 export
-const billing: TelephonyTone = TelephonyTone.billing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const billing = TelephonyTone.billing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_busy
@@ -596,7 +596,7 @@ const billing: TelephonyTone = TelephonyTone.billing; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_busy: TelephonyTone = TelephonyTone.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_busy = TelephonyTone.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -605,7 +605,7 @@ const TelephonyTone_busy: TelephonyTone = TelephonyTone.busy; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const busy: TelephonyTone = TelephonyTone.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy = TelephonyTone.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_carrier
@@ -615,7 +615,7 @@ const busy: TelephonyTone = TelephonyTone.busy; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_carrier: TelephonyTone = TelephonyTone.carrier; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_carrier = TelephonyTone.carrier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary carrier
@@ -624,7 +624,7 @@ const TelephonyTone_carrier: TelephonyTone = TelephonyTone.carrier; /* LONG_NAME
  * @type {number}
  */
 export
-const carrier: TelephonyTone = TelephonyTone.carrier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const carrier = TelephonyTone.carrier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_confirmation
@@ -634,7 +634,7 @@ const carrier: TelephonyTone = TelephonyTone.carrier; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_confirmation: TelephonyTone = TelephonyTone.confirmation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_confirmation = TelephonyTone.confirmation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confirmation
@@ -643,7 +643,7 @@ const TelephonyTone_confirmation: TelephonyTone = TelephonyTone.confirmation; /*
  * @type {number}
  */
 export
-const confirmation: TelephonyTone = TelephonyTone.confirmation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confirmation = TelephonyTone.confirmation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_dial
@@ -653,7 +653,7 @@ const confirmation: TelephonyTone = TelephonyTone.confirmation; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_dial: TelephonyTone = TelephonyTone.dial; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_dial = TelephonyTone.dial; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dial
@@ -662,7 +662,7 @@ const TelephonyTone_dial: TelephonyTone = TelephonyTone.dial; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const dial: TelephonyTone = TelephonyTone.dial; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dial = TelephonyTone.dial; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_faxCNG
@@ -672,7 +672,7 @@ const dial: TelephonyTone = TelephonyTone.dial; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_faxCNG: TelephonyTone = TelephonyTone.faxCNG; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_faxCNG = TelephonyTone.faxCNG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxCNG
@@ -681,7 +681,7 @@ const TelephonyTone_faxCNG: TelephonyTone = TelephonyTone.faxCNG; /* LONG_NAMED_
  * @type {number}
  */
 export
-const faxCNG: TelephonyTone = TelephonyTone.faxCNG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxCNG = TelephonyTone.faxCNG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_hold
@@ -691,7 +691,7 @@ const faxCNG: TelephonyTone = TelephonyTone.faxCNG; /* SHORT_NAMED_ENUMERATED_VA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_hold: TelephonyTone = TelephonyTone.hold; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_hold = TelephonyTone.hold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hold
@@ -700,7 +700,7 @@ const TelephonyTone_hold: TelephonyTone = TelephonyTone.hold; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const hold: TelephonyTone = TelephonyTone.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hold = TelephonyTone.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_howler
@@ -710,7 +710,7 @@ const hold: TelephonyTone = TelephonyTone.hold; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_howler: TelephonyTone = TelephonyTone.howler; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_howler = TelephonyTone.howler; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary howler
@@ -719,7 +719,7 @@ const TelephonyTone_howler: TelephonyTone = TelephonyTone.howler; /* LONG_NAMED_
  * @type {number}
  */
 export
-const howler: TelephonyTone = TelephonyTone.howler; /* SHORT_NAMED_ENUMERATED_VALUE */
+const howler = TelephonyTone.howler; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_intrusion
@@ -729,7 +729,7 @@ const howler: TelephonyTone = TelephonyTone.howler; /* SHORT_NAMED_ENUMERATED_VA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_intrusion: TelephonyTone = TelephonyTone.intrusion; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_intrusion = TelephonyTone.intrusion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intrusion
@@ -738,7 +738,7 @@ const TelephonyTone_intrusion: TelephonyTone = TelephonyTone.intrusion; /* LONG_
  * @type {number}
  */
 export
-const intrusion: TelephonyTone = TelephonyTone.intrusion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intrusion = TelephonyTone.intrusion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_modemCNG
@@ -748,7 +748,7 @@ const intrusion: TelephonyTone = TelephonyTone.intrusion; /* SHORT_NAMED_ENUMERA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_modemCNG: TelephonyTone = TelephonyTone.modemCNG; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_modemCNG = TelephonyTone.modemCNG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modemCNG
@@ -757,7 +757,7 @@ const TelephonyTone_modemCNG: TelephonyTone = TelephonyTone.modemCNG; /* LONG_NA
  * @type {number}
  */
 export
-const modemCNG: TelephonyTone = TelephonyTone.modemCNG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modemCNG = TelephonyTone.modemCNG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_park
@@ -767,7 +767,7 @@ const modemCNG: TelephonyTone = TelephonyTone.modemCNG; /* SHORT_NAMED_ENUMERATE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_park: TelephonyTone = TelephonyTone.park; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_park = TelephonyTone.park; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary park
@@ -776,7 +776,7 @@ const TelephonyTone_park: TelephonyTone = TelephonyTone.park; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const park: TelephonyTone = TelephonyTone.park; /* SHORT_NAMED_ENUMERATED_VALUE */
+const park = TelephonyTone.park; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_recordWarning
@@ -786,7 +786,7 @@ const park: TelephonyTone = TelephonyTone.park; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_recordWarning: TelephonyTone = TelephonyTone.recordWarning; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_recordWarning = TelephonyTone.recordWarning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recordWarning
@@ -795,7 +795,7 @@ const TelephonyTone_recordWarning: TelephonyTone = TelephonyTone.recordWarning; 
  * @type {number}
  */
 export
-const recordWarning: TelephonyTone = TelephonyTone.recordWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recordWarning = TelephonyTone.recordWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_reorder
@@ -805,7 +805,7 @@ const recordWarning: TelephonyTone = TelephonyTone.recordWarning; /* SHORT_NAMED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_reorder: TelephonyTone = TelephonyTone.reorder; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_reorder = TelephonyTone.reorder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reorder
@@ -814,7 +814,7 @@ const TelephonyTone_reorder: TelephonyTone = TelephonyTone.reorder; /* LONG_NAME
  * @type {number}
  */
 export
-const reorder: TelephonyTone = TelephonyTone.reorder; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reorder = TelephonyTone.reorder; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_ringback
@@ -824,7 +824,7 @@ const reorder: TelephonyTone = TelephonyTone.reorder; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_ringback: TelephonyTone = TelephonyTone.ringback; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_ringback = TelephonyTone.ringback; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringback
@@ -833,7 +833,7 @@ const TelephonyTone_ringback: TelephonyTone = TelephonyTone.ringback; /* LONG_NA
  * @type {number}
  */
 export
-const ringback: TelephonyTone = TelephonyTone.ringback; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringback = TelephonyTone.ringback; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_silence
@@ -843,7 +843,7 @@ const ringback: TelephonyTone = TelephonyTone.ringback; /* SHORT_NAMED_ENUMERATE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_silence: TelephonyTone = TelephonyTone.silence; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_silence = TelephonyTone.silence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silence
@@ -852,7 +852,7 @@ const TelephonyTone_silence: TelephonyTone = TelephonyTone.silence; /* LONG_NAME
  * @type {number}
  */
 export
-const silence: TelephonyTone = TelephonyTone.silence; /* SHORT_NAMED_ENUMERATED_VALUE */
+const silence = TelephonyTone.silence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_sitVC
@@ -862,7 +862,7 @@ const silence: TelephonyTone = TelephonyTone.silence; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_sitVC: TelephonyTone = TelephonyTone.sitVC; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_sitVC = TelephonyTone.sitVC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitVC
@@ -871,7 +871,7 @@ const TelephonyTone_sitVC: TelephonyTone = TelephonyTone.sitVC; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sitVC: TelephonyTone = TelephonyTone.sitVC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitVC = TelephonyTone.sitVC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_sitIC
@@ -881,7 +881,7 @@ const sitVC: TelephonyTone = TelephonyTone.sitVC; /* SHORT_NAMED_ENUMERATED_VALU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_sitIC: TelephonyTone = TelephonyTone.sitIC; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_sitIC = TelephonyTone.sitIC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitIC
@@ -890,7 +890,7 @@ const TelephonyTone_sitIC: TelephonyTone = TelephonyTone.sitIC; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sitIC: TelephonyTone = TelephonyTone.sitIC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitIC = TelephonyTone.sitIC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_sitRO
@@ -900,7 +900,7 @@ const sitIC: TelephonyTone = TelephonyTone.sitIC; /* SHORT_NAMED_ENUMERATED_VALU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_sitRO: TelephonyTone = TelephonyTone.sitRO; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_sitRO = TelephonyTone.sitRO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitRO
@@ -909,7 +909,7 @@ const TelephonyTone_sitRO: TelephonyTone = TelephonyTone.sitRO; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sitRO: TelephonyTone = TelephonyTone.sitRO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitRO = TelephonyTone.sitRO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_sitNC
@@ -919,7 +919,7 @@ const sitRO: TelephonyTone = TelephonyTone.sitRO; /* SHORT_NAMED_ENUMERATED_VALU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_sitNC: TelephonyTone = TelephonyTone.sitNC; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_sitNC = TelephonyTone.sitNC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sitNC
@@ -928,7 +928,7 @@ const TelephonyTone_sitNC: TelephonyTone = TelephonyTone.sitNC; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sitNC: TelephonyTone = TelephonyTone.sitNC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sitNC = TelephonyTone.sitNC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec0
@@ -938,7 +938,7 @@ const sitNC: TelephonyTone = TelephonyTone.sitNC; /* SHORT_NAMED_ENUMERATED_VALU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec0: TelephonyTone = TelephonyTone.switchSpec0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec0 = TelephonyTone.switchSpec0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec0
@@ -947,7 +947,7 @@ const TelephonyTone_switchSpec0: TelephonyTone = TelephonyTone.switchSpec0; /* L
  * @type {number}
  */
 export
-const switchSpec0: TelephonyTone = TelephonyTone.switchSpec0; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec0 = TelephonyTone.switchSpec0; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec1
@@ -957,7 +957,7 @@ const switchSpec0: TelephonyTone = TelephonyTone.switchSpec0; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec1: TelephonyTone = TelephonyTone.switchSpec1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec1 = TelephonyTone.switchSpec1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec1
@@ -966,7 +966,7 @@ const TelephonyTone_switchSpec1: TelephonyTone = TelephonyTone.switchSpec1; /* L
  * @type {number}
  */
 export
-const switchSpec1: TelephonyTone = TelephonyTone.switchSpec1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec1 = TelephonyTone.switchSpec1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec2
@@ -976,7 +976,7 @@ const switchSpec1: TelephonyTone = TelephonyTone.switchSpec1; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec2: TelephonyTone = TelephonyTone.switchSpec2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec2 = TelephonyTone.switchSpec2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec2
@@ -985,7 +985,7 @@ const TelephonyTone_switchSpec2: TelephonyTone = TelephonyTone.switchSpec2; /* L
  * @type {number}
  */
 export
-const switchSpec2: TelephonyTone = TelephonyTone.switchSpec2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec2 = TelephonyTone.switchSpec2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec3
@@ -995,7 +995,7 @@ const switchSpec2: TelephonyTone = TelephonyTone.switchSpec2; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec3: TelephonyTone = TelephonyTone.switchSpec3; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec3 = TelephonyTone.switchSpec3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec3
@@ -1004,7 +1004,7 @@ const TelephonyTone_switchSpec3: TelephonyTone = TelephonyTone.switchSpec3; /* L
  * @type {number}
  */
 export
-const switchSpec3: TelephonyTone = TelephonyTone.switchSpec3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec3 = TelephonyTone.switchSpec3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec4
@@ -1014,7 +1014,7 @@ const switchSpec3: TelephonyTone = TelephonyTone.switchSpec3; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec4: TelephonyTone = TelephonyTone.switchSpec4; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec4 = TelephonyTone.switchSpec4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec4
@@ -1023,7 +1023,7 @@ const TelephonyTone_switchSpec4: TelephonyTone = TelephonyTone.switchSpec4; /* L
  * @type {number}
  */
 export
-const switchSpec4: TelephonyTone = TelephonyTone.switchSpec4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec4 = TelephonyTone.switchSpec4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec5
@@ -1033,7 +1033,7 @@ const switchSpec4: TelephonyTone = TelephonyTone.switchSpec4; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec5: TelephonyTone = TelephonyTone.switchSpec5; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec5 = TelephonyTone.switchSpec5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec5
@@ -1042,7 +1042,7 @@ const TelephonyTone_switchSpec5: TelephonyTone = TelephonyTone.switchSpec5; /* L
  * @type {number}
  */
 export
-const switchSpec5: TelephonyTone = TelephonyTone.switchSpec5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec5 = TelephonyTone.switchSpec5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec6
@@ -1052,7 +1052,7 @@ const switchSpec5: TelephonyTone = TelephonyTone.switchSpec5; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec6: TelephonyTone = TelephonyTone.switchSpec6; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec6 = TelephonyTone.switchSpec6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec6
@@ -1061,7 +1061,7 @@ const TelephonyTone_switchSpec6: TelephonyTone = TelephonyTone.switchSpec6; /* L
  * @type {number}
  */
 export
-const switchSpec6: TelephonyTone = TelephonyTone.switchSpec6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec6 = TelephonyTone.switchSpec6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec7
@@ -1071,7 +1071,7 @@ const switchSpec6: TelephonyTone = TelephonyTone.switchSpec6; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec7: TelephonyTone = TelephonyTone.switchSpec7; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec7 = TelephonyTone.switchSpec7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec7
@@ -1080,7 +1080,7 @@ const TelephonyTone_switchSpec7: TelephonyTone = TelephonyTone.switchSpec7; /* L
  * @type {number}
  */
 export
-const switchSpec7: TelephonyTone = TelephonyTone.switchSpec7; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec7 = TelephonyTone.switchSpec7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec8
@@ -1090,7 +1090,7 @@ const switchSpec7: TelephonyTone = TelephonyTone.switchSpec7; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec8: TelephonyTone = TelephonyTone.switchSpec8; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec8 = TelephonyTone.switchSpec8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec8
@@ -1099,7 +1099,7 @@ const TelephonyTone_switchSpec8: TelephonyTone = TelephonyTone.switchSpec8; /* L
  * @type {number}
  */
 export
-const switchSpec8: TelephonyTone = TelephonyTone.switchSpec8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec8 = TelephonyTone.switchSpec8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec9
@@ -1109,7 +1109,7 @@ const switchSpec8: TelephonyTone = TelephonyTone.switchSpec8; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec9: TelephonyTone = TelephonyTone.switchSpec9; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec9 = TelephonyTone.switchSpec9; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec9
@@ -1118,7 +1118,7 @@ const TelephonyTone_switchSpec9: TelephonyTone = TelephonyTone.switchSpec9; /* L
  * @type {number}
  */
 export
-const switchSpec9: TelephonyTone = TelephonyTone.switchSpec9; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec9 = TelephonyTone.switchSpec9; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec10
@@ -1128,7 +1128,7 @@ const switchSpec9: TelephonyTone = TelephonyTone.switchSpec9; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec10: TelephonyTone = TelephonyTone.switchSpec10; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec10 = TelephonyTone.switchSpec10; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec10
@@ -1137,7 +1137,7 @@ const TelephonyTone_switchSpec10: TelephonyTone = TelephonyTone.switchSpec10; /*
  * @type {number}
  */
 export
-const switchSpec10: TelephonyTone = TelephonyTone.switchSpec10; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec10 = TelephonyTone.switchSpec10; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec11
@@ -1147,7 +1147,7 @@ const switchSpec10: TelephonyTone = TelephonyTone.switchSpec10; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec11: TelephonyTone = TelephonyTone.switchSpec11; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec11 = TelephonyTone.switchSpec11; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec11
@@ -1156,7 +1156,7 @@ const TelephonyTone_switchSpec11: TelephonyTone = TelephonyTone.switchSpec11; /*
  * @type {number}
  */
 export
-const switchSpec11: TelephonyTone = TelephonyTone.switchSpec11; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec11 = TelephonyTone.switchSpec11; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec12
@@ -1166,7 +1166,7 @@ const switchSpec11: TelephonyTone = TelephonyTone.switchSpec11; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec12: TelephonyTone = TelephonyTone.switchSpec12; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec12 = TelephonyTone.switchSpec12; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec12
@@ -1175,7 +1175,7 @@ const TelephonyTone_switchSpec12: TelephonyTone = TelephonyTone.switchSpec12; /*
  * @type {number}
  */
 export
-const switchSpec12: TelephonyTone = TelephonyTone.switchSpec12; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec12 = TelephonyTone.switchSpec12; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec13
@@ -1185,7 +1185,7 @@ const switchSpec12: TelephonyTone = TelephonyTone.switchSpec12; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec13: TelephonyTone = TelephonyTone.switchSpec13; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec13 = TelephonyTone.switchSpec13; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec13
@@ -1194,7 +1194,7 @@ const TelephonyTone_switchSpec13: TelephonyTone = TelephonyTone.switchSpec13; /*
  * @type {number}
  */
 export
-const switchSpec13: TelephonyTone = TelephonyTone.switchSpec13; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec13 = TelephonyTone.switchSpec13; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec14
@@ -1204,7 +1204,7 @@ const switchSpec13: TelephonyTone = TelephonyTone.switchSpec13; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec14: TelephonyTone = TelephonyTone.switchSpec14; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec14 = TelephonyTone.switchSpec14; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec14
@@ -1213,7 +1213,7 @@ const TelephonyTone_switchSpec14: TelephonyTone = TelephonyTone.switchSpec14; /*
  * @type {number}
  */
 export
-const switchSpec14: TelephonyTone = TelephonyTone.switchSpec14; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec14 = TelephonyTone.switchSpec14; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec15
@@ -1223,7 +1223,7 @@ const switchSpec14: TelephonyTone = TelephonyTone.switchSpec14; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec15: TelephonyTone = TelephonyTone.switchSpec15; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec15 = TelephonyTone.switchSpec15; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec15
@@ -1232,7 +1232,7 @@ const TelephonyTone_switchSpec15: TelephonyTone = TelephonyTone.switchSpec15; /*
  * @type {number}
  */
 export
-const switchSpec15: TelephonyTone = TelephonyTone.switchSpec15; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec15 = TelephonyTone.switchSpec15; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec16
@@ -1242,7 +1242,7 @@ const switchSpec15: TelephonyTone = TelephonyTone.switchSpec15; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec16: TelephonyTone = TelephonyTone.switchSpec16; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec16 = TelephonyTone.switchSpec16; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec16
@@ -1251,7 +1251,7 @@ const TelephonyTone_switchSpec16: TelephonyTone = TelephonyTone.switchSpec16; /*
  * @type {number}
  */
 export
-const switchSpec16: TelephonyTone = TelephonyTone.switchSpec16; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec16 = TelephonyTone.switchSpec16; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec17
@@ -1261,7 +1261,7 @@ const switchSpec16: TelephonyTone = TelephonyTone.switchSpec16; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec17: TelephonyTone = TelephonyTone.switchSpec17; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec17 = TelephonyTone.switchSpec17; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec17
@@ -1270,7 +1270,7 @@ const TelephonyTone_switchSpec17: TelephonyTone = TelephonyTone.switchSpec17; /*
  * @type {number}
  */
 export
-const switchSpec17: TelephonyTone = TelephonyTone.switchSpec17; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec17 = TelephonyTone.switchSpec17; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec18
@@ -1280,7 +1280,7 @@ const switchSpec17: TelephonyTone = TelephonyTone.switchSpec17; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec18: TelephonyTone = TelephonyTone.switchSpec18; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec18 = TelephonyTone.switchSpec18; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec18
@@ -1289,7 +1289,7 @@ const TelephonyTone_switchSpec18: TelephonyTone = TelephonyTone.switchSpec18; /*
  * @type {number}
  */
 export
-const switchSpec18: TelephonyTone = TelephonyTone.switchSpec18; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec18 = TelephonyTone.switchSpec18; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec19
@@ -1299,7 +1299,7 @@ const switchSpec18: TelephonyTone = TelephonyTone.switchSpec18; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec19: TelephonyTone = TelephonyTone.switchSpec19; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec19 = TelephonyTone.switchSpec19; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec19
@@ -1308,7 +1308,7 @@ const TelephonyTone_switchSpec19: TelephonyTone = TelephonyTone.switchSpec19; /*
  * @type {number}
  */
 export
-const switchSpec19: TelephonyTone = TelephonyTone.switchSpec19; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec19 = TelephonyTone.switchSpec19; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec20
@@ -1318,7 +1318,7 @@ const switchSpec19: TelephonyTone = TelephonyTone.switchSpec19; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec20: TelephonyTone = TelephonyTone.switchSpec20; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec20 = TelephonyTone.switchSpec20; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec20
@@ -1327,7 +1327,7 @@ const TelephonyTone_switchSpec20: TelephonyTone = TelephonyTone.switchSpec20; /*
  * @type {number}
  */
 export
-const switchSpec20: TelephonyTone = TelephonyTone.switchSpec20; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec20 = TelephonyTone.switchSpec20; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec21
@@ -1337,7 +1337,7 @@ const switchSpec20: TelephonyTone = TelephonyTone.switchSpec20; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec21: TelephonyTone = TelephonyTone.switchSpec21; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec21 = TelephonyTone.switchSpec21; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec21
@@ -1346,7 +1346,7 @@ const TelephonyTone_switchSpec21: TelephonyTone = TelephonyTone.switchSpec21; /*
  * @type {number}
  */
 export
-const switchSpec21: TelephonyTone = TelephonyTone.switchSpec21; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec21 = TelephonyTone.switchSpec21; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec22
@@ -1356,7 +1356,7 @@ const switchSpec21: TelephonyTone = TelephonyTone.switchSpec21; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec22: TelephonyTone = TelephonyTone.switchSpec22; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec22 = TelephonyTone.switchSpec22; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec22
@@ -1365,7 +1365,7 @@ const TelephonyTone_switchSpec22: TelephonyTone = TelephonyTone.switchSpec22; /*
  * @type {number}
  */
 export
-const switchSpec22: TelephonyTone = TelephonyTone.switchSpec22; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec22 = TelephonyTone.switchSpec22; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec23
@@ -1375,7 +1375,7 @@ const switchSpec22: TelephonyTone = TelephonyTone.switchSpec22; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec23: TelephonyTone = TelephonyTone.switchSpec23; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec23 = TelephonyTone.switchSpec23; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec23
@@ -1384,7 +1384,7 @@ const TelephonyTone_switchSpec23: TelephonyTone = TelephonyTone.switchSpec23; /*
  * @type {number}
  */
 export
-const switchSpec23: TelephonyTone = TelephonyTone.switchSpec23; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec23 = TelephonyTone.switchSpec23; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec24
@@ -1394,7 +1394,7 @@ const switchSpec23: TelephonyTone = TelephonyTone.switchSpec23; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec24: TelephonyTone = TelephonyTone.switchSpec24; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec24 = TelephonyTone.switchSpec24; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec24
@@ -1403,7 +1403,7 @@ const TelephonyTone_switchSpec24: TelephonyTone = TelephonyTone.switchSpec24; /*
  * @type {number}
  */
 export
-const switchSpec24: TelephonyTone = TelephonyTone.switchSpec24; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec24 = TelephonyTone.switchSpec24; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec25
@@ -1413,7 +1413,7 @@ const switchSpec24: TelephonyTone = TelephonyTone.switchSpec24; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec25: TelephonyTone = TelephonyTone.switchSpec25; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec25 = TelephonyTone.switchSpec25; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec25
@@ -1422,7 +1422,7 @@ const TelephonyTone_switchSpec25: TelephonyTone = TelephonyTone.switchSpec25; /*
  * @type {number}
  */
 export
-const switchSpec25: TelephonyTone = TelephonyTone.switchSpec25; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec25 = TelephonyTone.switchSpec25; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec26
@@ -1432,7 +1432,7 @@ const switchSpec25: TelephonyTone = TelephonyTone.switchSpec25; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec26: TelephonyTone = TelephonyTone.switchSpec26; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec26 = TelephonyTone.switchSpec26; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec26
@@ -1441,7 +1441,7 @@ const TelephonyTone_switchSpec26: TelephonyTone = TelephonyTone.switchSpec26; /*
  * @type {number}
  */
 export
-const switchSpec26: TelephonyTone = TelephonyTone.switchSpec26; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec26 = TelephonyTone.switchSpec26; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec27
@@ -1451,7 +1451,7 @@ const switchSpec26: TelephonyTone = TelephonyTone.switchSpec26; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec27: TelephonyTone = TelephonyTone.switchSpec27; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec27 = TelephonyTone.switchSpec27; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec27
@@ -1460,7 +1460,7 @@ const TelephonyTone_switchSpec27: TelephonyTone = TelephonyTone.switchSpec27; /*
  * @type {number}
  */
 export
-const switchSpec27: TelephonyTone = TelephonyTone.switchSpec27; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec27 = TelephonyTone.switchSpec27; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec28
@@ -1470,7 +1470,7 @@ const switchSpec27: TelephonyTone = TelephonyTone.switchSpec27; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec28: TelephonyTone = TelephonyTone.switchSpec28; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec28 = TelephonyTone.switchSpec28; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec28
@@ -1479,7 +1479,7 @@ const TelephonyTone_switchSpec28: TelephonyTone = TelephonyTone.switchSpec28; /*
  * @type {number}
  */
 export
-const switchSpec28: TelephonyTone = TelephonyTone.switchSpec28; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec28 = TelephonyTone.switchSpec28; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec29
@@ -1489,7 +1489,7 @@ const switchSpec28: TelephonyTone = TelephonyTone.switchSpec28; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec29: TelephonyTone = TelephonyTone.switchSpec29; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec29 = TelephonyTone.switchSpec29; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec29
@@ -1498,7 +1498,7 @@ const TelephonyTone_switchSpec29: TelephonyTone = TelephonyTone.switchSpec29; /*
  * @type {number}
  */
 export
-const switchSpec29: TelephonyTone = TelephonyTone.switchSpec29; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec29 = TelephonyTone.switchSpec29; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec30
@@ -1508,7 +1508,7 @@ const switchSpec29: TelephonyTone = TelephonyTone.switchSpec29; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec30: TelephonyTone = TelephonyTone.switchSpec30; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec30 = TelephonyTone.switchSpec30; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec30
@@ -1517,7 +1517,7 @@ const TelephonyTone_switchSpec30: TelephonyTone = TelephonyTone.switchSpec30; /*
  * @type {number}
  */
 export
-const switchSpec30: TelephonyTone = TelephonyTone.switchSpec30; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec30 = TelephonyTone.switchSpec30; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec31
@@ -1527,7 +1527,7 @@ const switchSpec30: TelephonyTone = TelephonyTone.switchSpec30; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec31: TelephonyTone = TelephonyTone.switchSpec31; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec31 = TelephonyTone.switchSpec31; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec31
@@ -1536,7 +1536,7 @@ const TelephonyTone_switchSpec31: TelephonyTone = TelephonyTone.switchSpec31; /*
  * @type {number}
  */
 export
-const switchSpec31: TelephonyTone = TelephonyTone.switchSpec31; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec31 = TelephonyTone.switchSpec31; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec32
@@ -1546,7 +1546,7 @@ const switchSpec31: TelephonyTone = TelephonyTone.switchSpec31; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec32: TelephonyTone = TelephonyTone.switchSpec32; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec32 = TelephonyTone.switchSpec32; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec32
@@ -1555,7 +1555,7 @@ const TelephonyTone_switchSpec32: TelephonyTone = TelephonyTone.switchSpec32; /*
  * @type {number}
  */
 export
-const switchSpec32: TelephonyTone = TelephonyTone.switchSpec32; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec32 = TelephonyTone.switchSpec32; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec33
@@ -1565,7 +1565,7 @@ const switchSpec32: TelephonyTone = TelephonyTone.switchSpec32; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec33: TelephonyTone = TelephonyTone.switchSpec33; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec33 = TelephonyTone.switchSpec33; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec33
@@ -1574,7 +1574,7 @@ const TelephonyTone_switchSpec33: TelephonyTone = TelephonyTone.switchSpec33; /*
  * @type {number}
  */
 export
-const switchSpec33: TelephonyTone = TelephonyTone.switchSpec33; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec33 = TelephonyTone.switchSpec33; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec34
@@ -1584,7 +1584,7 @@ const switchSpec33: TelephonyTone = TelephonyTone.switchSpec33; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec34: TelephonyTone = TelephonyTone.switchSpec34; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec34 = TelephonyTone.switchSpec34; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec34
@@ -1593,7 +1593,7 @@ const TelephonyTone_switchSpec34: TelephonyTone = TelephonyTone.switchSpec34; /*
  * @type {number}
  */
 export
-const switchSpec34: TelephonyTone = TelephonyTone.switchSpec34; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec34 = TelephonyTone.switchSpec34; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec35
@@ -1603,7 +1603,7 @@ const switchSpec34: TelephonyTone = TelephonyTone.switchSpec34; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec35: TelephonyTone = TelephonyTone.switchSpec35; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec35 = TelephonyTone.switchSpec35; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec35
@@ -1612,7 +1612,7 @@ const TelephonyTone_switchSpec35: TelephonyTone = TelephonyTone.switchSpec35; /*
  * @type {number}
  */
 export
-const switchSpec35: TelephonyTone = TelephonyTone.switchSpec35; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec35 = TelephonyTone.switchSpec35; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec36
@@ -1622,7 +1622,7 @@ const switchSpec35: TelephonyTone = TelephonyTone.switchSpec35; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec36: TelephonyTone = TelephonyTone.switchSpec36; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec36 = TelephonyTone.switchSpec36; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec36
@@ -1631,7 +1631,7 @@ const TelephonyTone_switchSpec36: TelephonyTone = TelephonyTone.switchSpec36; /*
  * @type {number}
  */
 export
-const switchSpec36: TelephonyTone = TelephonyTone.switchSpec36; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec36 = TelephonyTone.switchSpec36; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec37
@@ -1641,7 +1641,7 @@ const switchSpec36: TelephonyTone = TelephonyTone.switchSpec36; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec37: TelephonyTone = TelephonyTone.switchSpec37; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec37 = TelephonyTone.switchSpec37; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec37
@@ -1650,7 +1650,7 @@ const TelephonyTone_switchSpec37: TelephonyTone = TelephonyTone.switchSpec37; /*
  * @type {number}
  */
 export
-const switchSpec37: TelephonyTone = TelephonyTone.switchSpec37; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec37 = TelephonyTone.switchSpec37; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec38
@@ -1660,7 +1660,7 @@ const switchSpec37: TelephonyTone = TelephonyTone.switchSpec37; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec38: TelephonyTone = TelephonyTone.switchSpec38; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec38 = TelephonyTone.switchSpec38; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec38
@@ -1669,7 +1669,7 @@ const TelephonyTone_switchSpec38: TelephonyTone = TelephonyTone.switchSpec38; /*
  * @type {number}
  */
 export
-const switchSpec38: TelephonyTone = TelephonyTone.switchSpec38; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec38 = TelephonyTone.switchSpec38; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec39
@@ -1679,7 +1679,7 @@ const switchSpec38: TelephonyTone = TelephonyTone.switchSpec38; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec39: TelephonyTone = TelephonyTone.switchSpec39; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec39 = TelephonyTone.switchSpec39; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec39
@@ -1688,7 +1688,7 @@ const TelephonyTone_switchSpec39: TelephonyTone = TelephonyTone.switchSpec39; /*
  * @type {number}
  */
 export
-const switchSpec39: TelephonyTone = TelephonyTone.switchSpec39; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec39 = TelephonyTone.switchSpec39; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec40
@@ -1698,7 +1698,7 @@ const switchSpec39: TelephonyTone = TelephonyTone.switchSpec39; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec40: TelephonyTone = TelephonyTone.switchSpec40; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec40 = TelephonyTone.switchSpec40; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec40
@@ -1707,7 +1707,7 @@ const TelephonyTone_switchSpec40: TelephonyTone = TelephonyTone.switchSpec40; /*
  * @type {number}
  */
 export
-const switchSpec40: TelephonyTone = TelephonyTone.switchSpec40; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec40 = TelephonyTone.switchSpec40; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec41
@@ -1717,7 +1717,7 @@ const switchSpec40: TelephonyTone = TelephonyTone.switchSpec40; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec41: TelephonyTone = TelephonyTone.switchSpec41; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec41 = TelephonyTone.switchSpec41; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec41
@@ -1726,7 +1726,7 @@ const TelephonyTone_switchSpec41: TelephonyTone = TelephonyTone.switchSpec41; /*
  * @type {number}
  */
 export
-const switchSpec41: TelephonyTone = TelephonyTone.switchSpec41; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec41 = TelephonyTone.switchSpec41; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec42
@@ -1736,7 +1736,7 @@ const switchSpec41: TelephonyTone = TelephonyTone.switchSpec41; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec42: TelephonyTone = TelephonyTone.switchSpec42; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec42 = TelephonyTone.switchSpec42; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec42
@@ -1745,7 +1745,7 @@ const TelephonyTone_switchSpec42: TelephonyTone = TelephonyTone.switchSpec42; /*
  * @type {number}
  */
 export
-const switchSpec42: TelephonyTone = TelephonyTone.switchSpec42; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec42 = TelephonyTone.switchSpec42; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec43
@@ -1755,7 +1755,7 @@ const switchSpec42: TelephonyTone = TelephonyTone.switchSpec42; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec43: TelephonyTone = TelephonyTone.switchSpec43; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec43 = TelephonyTone.switchSpec43; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec43
@@ -1764,7 +1764,7 @@ const TelephonyTone_switchSpec43: TelephonyTone = TelephonyTone.switchSpec43; /*
  * @type {number}
  */
 export
-const switchSpec43: TelephonyTone = TelephonyTone.switchSpec43; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec43 = TelephonyTone.switchSpec43; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec44
@@ -1774,7 +1774,7 @@ const switchSpec43: TelephonyTone = TelephonyTone.switchSpec43; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec44: TelephonyTone = TelephonyTone.switchSpec44; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec44 = TelephonyTone.switchSpec44; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec44
@@ -1783,7 +1783,7 @@ const TelephonyTone_switchSpec44: TelephonyTone = TelephonyTone.switchSpec44; /*
  * @type {number}
  */
 export
-const switchSpec44: TelephonyTone = TelephonyTone.switchSpec44; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec44 = TelephonyTone.switchSpec44; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec45
@@ -1793,7 +1793,7 @@ const switchSpec44: TelephonyTone = TelephonyTone.switchSpec44; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec45: TelephonyTone = TelephonyTone.switchSpec45; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec45 = TelephonyTone.switchSpec45; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec45
@@ -1802,7 +1802,7 @@ const TelephonyTone_switchSpec45: TelephonyTone = TelephonyTone.switchSpec45; /*
  * @type {number}
  */
 export
-const switchSpec45: TelephonyTone = TelephonyTone.switchSpec45; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec45 = TelephonyTone.switchSpec45; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec46
@@ -1812,7 +1812,7 @@ const switchSpec45: TelephonyTone = TelephonyTone.switchSpec45; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec46: TelephonyTone = TelephonyTone.switchSpec46; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec46 = TelephonyTone.switchSpec46; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec46
@@ -1821,7 +1821,7 @@ const TelephonyTone_switchSpec46: TelephonyTone = TelephonyTone.switchSpec46; /*
  * @type {number}
  */
 export
-const switchSpec46: TelephonyTone = TelephonyTone.switchSpec46; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec46 = TelephonyTone.switchSpec46; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec47
@@ -1831,7 +1831,7 @@ const switchSpec46: TelephonyTone = TelephonyTone.switchSpec46; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec47: TelephonyTone = TelephonyTone.switchSpec47; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec47 = TelephonyTone.switchSpec47; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec47
@@ -1840,7 +1840,7 @@ const TelephonyTone_switchSpec47: TelephonyTone = TelephonyTone.switchSpec47; /*
  * @type {number}
  */
 export
-const switchSpec47: TelephonyTone = TelephonyTone.switchSpec47; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec47 = TelephonyTone.switchSpec47; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec48
@@ -1850,7 +1850,7 @@ const switchSpec47: TelephonyTone = TelephonyTone.switchSpec47; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec48: TelephonyTone = TelephonyTone.switchSpec48; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec48 = TelephonyTone.switchSpec48; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec48
@@ -1859,7 +1859,7 @@ const TelephonyTone_switchSpec48: TelephonyTone = TelephonyTone.switchSpec48; /*
  * @type {number}
  */
 export
-const switchSpec48: TelephonyTone = TelephonyTone.switchSpec48; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec48 = TelephonyTone.switchSpec48; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec49
@@ -1869,7 +1869,7 @@ const switchSpec48: TelephonyTone = TelephonyTone.switchSpec48; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec49: TelephonyTone = TelephonyTone.switchSpec49; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec49 = TelephonyTone.switchSpec49; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec49
@@ -1878,7 +1878,7 @@ const TelephonyTone_switchSpec49: TelephonyTone = TelephonyTone.switchSpec49; /*
  * @type {number}
  */
 export
-const switchSpec49: TelephonyTone = TelephonyTone.switchSpec49; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec49 = TelephonyTone.switchSpec49; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec50
@@ -1888,7 +1888,7 @@ const switchSpec49: TelephonyTone = TelephonyTone.switchSpec49; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec50: TelephonyTone = TelephonyTone.switchSpec50; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec50 = TelephonyTone.switchSpec50; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec50
@@ -1897,7 +1897,7 @@ const TelephonyTone_switchSpec50: TelephonyTone = TelephonyTone.switchSpec50; /*
  * @type {number}
  */
 export
-const switchSpec50: TelephonyTone = TelephonyTone.switchSpec50; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec50 = TelephonyTone.switchSpec50; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec51
@@ -1907,7 +1907,7 @@ const switchSpec50: TelephonyTone = TelephonyTone.switchSpec50; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec51: TelephonyTone = TelephonyTone.switchSpec51; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec51 = TelephonyTone.switchSpec51; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec51
@@ -1916,7 +1916,7 @@ const TelephonyTone_switchSpec51: TelephonyTone = TelephonyTone.switchSpec51; /*
  * @type {number}
  */
 export
-const switchSpec51: TelephonyTone = TelephonyTone.switchSpec51; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec51 = TelephonyTone.switchSpec51; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec52
@@ -1926,7 +1926,7 @@ const switchSpec51: TelephonyTone = TelephonyTone.switchSpec51; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec52: TelephonyTone = TelephonyTone.switchSpec52; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec52 = TelephonyTone.switchSpec52; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec52
@@ -1935,7 +1935,7 @@ const TelephonyTone_switchSpec52: TelephonyTone = TelephonyTone.switchSpec52; /*
  * @type {number}
  */
 export
-const switchSpec52: TelephonyTone = TelephonyTone.switchSpec52; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec52 = TelephonyTone.switchSpec52; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec53
@@ -1945,7 +1945,7 @@ const switchSpec52: TelephonyTone = TelephonyTone.switchSpec52; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec53: TelephonyTone = TelephonyTone.switchSpec53; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec53 = TelephonyTone.switchSpec53; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec53
@@ -1954,7 +1954,7 @@ const TelephonyTone_switchSpec53: TelephonyTone = TelephonyTone.switchSpec53; /*
  * @type {number}
  */
 export
-const switchSpec53: TelephonyTone = TelephonyTone.switchSpec53; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec53 = TelephonyTone.switchSpec53; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec54
@@ -1964,7 +1964,7 @@ const switchSpec53: TelephonyTone = TelephonyTone.switchSpec53; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec54: TelephonyTone = TelephonyTone.switchSpec54; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec54 = TelephonyTone.switchSpec54; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec54
@@ -1973,7 +1973,7 @@ const TelephonyTone_switchSpec54: TelephonyTone = TelephonyTone.switchSpec54; /*
  * @type {number}
  */
 export
-const switchSpec54: TelephonyTone = TelephonyTone.switchSpec54; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec54 = TelephonyTone.switchSpec54; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec55
@@ -1983,7 +1983,7 @@ const switchSpec54: TelephonyTone = TelephonyTone.switchSpec54; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec55: TelephonyTone = TelephonyTone.switchSpec55; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec55 = TelephonyTone.switchSpec55; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec55
@@ -1992,7 +1992,7 @@ const TelephonyTone_switchSpec55: TelephonyTone = TelephonyTone.switchSpec55; /*
  * @type {number}
  */
 export
-const switchSpec55: TelephonyTone = TelephonyTone.switchSpec55; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec55 = TelephonyTone.switchSpec55; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec56
@@ -2002,7 +2002,7 @@ const switchSpec55: TelephonyTone = TelephonyTone.switchSpec55; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec56: TelephonyTone = TelephonyTone.switchSpec56; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec56 = TelephonyTone.switchSpec56; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec56
@@ -2011,7 +2011,7 @@ const TelephonyTone_switchSpec56: TelephonyTone = TelephonyTone.switchSpec56; /*
  * @type {number}
  */
 export
-const switchSpec56: TelephonyTone = TelephonyTone.switchSpec56; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec56 = TelephonyTone.switchSpec56; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec57
@@ -2021,7 +2021,7 @@ const switchSpec56: TelephonyTone = TelephonyTone.switchSpec56; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec57: TelephonyTone = TelephonyTone.switchSpec57; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec57 = TelephonyTone.switchSpec57; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec57
@@ -2030,7 +2030,7 @@ const TelephonyTone_switchSpec57: TelephonyTone = TelephonyTone.switchSpec57; /*
  * @type {number}
  */
 export
-const switchSpec57: TelephonyTone = TelephonyTone.switchSpec57; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec57 = TelephonyTone.switchSpec57; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec58
@@ -2040,7 +2040,7 @@ const switchSpec57: TelephonyTone = TelephonyTone.switchSpec57; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec58: TelephonyTone = TelephonyTone.switchSpec58; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec58 = TelephonyTone.switchSpec58; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec58
@@ -2049,7 +2049,7 @@ const TelephonyTone_switchSpec58: TelephonyTone = TelephonyTone.switchSpec58; /*
  * @type {number}
  */
 export
-const switchSpec58: TelephonyTone = TelephonyTone.switchSpec58; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec58 = TelephonyTone.switchSpec58; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec59
@@ -2059,7 +2059,7 @@ const switchSpec58: TelephonyTone = TelephonyTone.switchSpec58; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec59: TelephonyTone = TelephonyTone.switchSpec59; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec59 = TelephonyTone.switchSpec59; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec59
@@ -2068,7 +2068,7 @@ const TelephonyTone_switchSpec59: TelephonyTone = TelephonyTone.switchSpec59; /*
  * @type {number}
  */
 export
-const switchSpec59: TelephonyTone = TelephonyTone.switchSpec59; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec59 = TelephonyTone.switchSpec59; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec60
@@ -2078,7 +2078,7 @@ const switchSpec59: TelephonyTone = TelephonyTone.switchSpec59; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec60: TelephonyTone = TelephonyTone.switchSpec60; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec60 = TelephonyTone.switchSpec60; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec60
@@ -2087,7 +2087,7 @@ const TelephonyTone_switchSpec60: TelephonyTone = TelephonyTone.switchSpec60; /*
  * @type {number}
  */
 export
-const switchSpec60: TelephonyTone = TelephonyTone.switchSpec60; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec60 = TelephonyTone.switchSpec60; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec61
@@ -2097,7 +2097,7 @@ const switchSpec60: TelephonyTone = TelephonyTone.switchSpec60; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec61: TelephonyTone = TelephonyTone.switchSpec61; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec61 = TelephonyTone.switchSpec61; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec61
@@ -2106,7 +2106,7 @@ const TelephonyTone_switchSpec61: TelephonyTone = TelephonyTone.switchSpec61; /*
  * @type {number}
  */
 export
-const switchSpec61: TelephonyTone = TelephonyTone.switchSpec61; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec61 = TelephonyTone.switchSpec61; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec62
@@ -2116,7 +2116,7 @@ const switchSpec61: TelephonyTone = TelephonyTone.switchSpec61; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec62: TelephonyTone = TelephonyTone.switchSpec62; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec62 = TelephonyTone.switchSpec62; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec62
@@ -2125,7 +2125,7 @@ const TelephonyTone_switchSpec62: TelephonyTone = TelephonyTone.switchSpec62; /*
  * @type {number}
  */
 export
-const switchSpec62: TelephonyTone = TelephonyTone.switchSpec62; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec62 = TelephonyTone.switchSpec62; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec63
@@ -2135,7 +2135,7 @@ const switchSpec62: TelephonyTone = TelephonyTone.switchSpec62; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec63: TelephonyTone = TelephonyTone.switchSpec63; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec63 = TelephonyTone.switchSpec63; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec63
@@ -2144,7 +2144,7 @@ const TelephonyTone_switchSpec63: TelephonyTone = TelephonyTone.switchSpec63; /*
  * @type {number}
  */
 export
-const switchSpec63: TelephonyTone = TelephonyTone.switchSpec63; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec63 = TelephonyTone.switchSpec63; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec64
@@ -2154,7 +2154,7 @@ const switchSpec63: TelephonyTone = TelephonyTone.switchSpec63; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec64: TelephonyTone = TelephonyTone.switchSpec64; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec64 = TelephonyTone.switchSpec64; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec64
@@ -2163,7 +2163,7 @@ const TelephonyTone_switchSpec64: TelephonyTone = TelephonyTone.switchSpec64; /*
  * @type {number}
  */
 export
-const switchSpec64: TelephonyTone = TelephonyTone.switchSpec64; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec64 = TelephonyTone.switchSpec64; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec65
@@ -2173,7 +2173,7 @@ const switchSpec64: TelephonyTone = TelephonyTone.switchSpec64; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec65: TelephonyTone = TelephonyTone.switchSpec65; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec65 = TelephonyTone.switchSpec65; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec65
@@ -2182,7 +2182,7 @@ const TelephonyTone_switchSpec65: TelephonyTone = TelephonyTone.switchSpec65; /*
  * @type {number}
  */
 export
-const switchSpec65: TelephonyTone = TelephonyTone.switchSpec65; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec65 = TelephonyTone.switchSpec65; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec66
@@ -2192,7 +2192,7 @@ const switchSpec65: TelephonyTone = TelephonyTone.switchSpec65; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec66: TelephonyTone = TelephonyTone.switchSpec66; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec66 = TelephonyTone.switchSpec66; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec66
@@ -2201,7 +2201,7 @@ const TelephonyTone_switchSpec66: TelephonyTone = TelephonyTone.switchSpec66; /*
  * @type {number}
  */
 export
-const switchSpec66: TelephonyTone = TelephonyTone.switchSpec66; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec66 = TelephonyTone.switchSpec66; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec67
@@ -2211,7 +2211,7 @@ const switchSpec66: TelephonyTone = TelephonyTone.switchSpec66; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec67: TelephonyTone = TelephonyTone.switchSpec67; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec67 = TelephonyTone.switchSpec67; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec67
@@ -2220,7 +2220,7 @@ const TelephonyTone_switchSpec67: TelephonyTone = TelephonyTone.switchSpec67; /*
  * @type {number}
  */
 export
-const switchSpec67: TelephonyTone = TelephonyTone.switchSpec67; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec67 = TelephonyTone.switchSpec67; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec68
@@ -2230,7 +2230,7 @@ const switchSpec67: TelephonyTone = TelephonyTone.switchSpec67; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec68: TelephonyTone = TelephonyTone.switchSpec68; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec68 = TelephonyTone.switchSpec68; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec68
@@ -2239,7 +2239,7 @@ const TelephonyTone_switchSpec68: TelephonyTone = TelephonyTone.switchSpec68; /*
  * @type {number}
  */
 export
-const switchSpec68: TelephonyTone = TelephonyTone.switchSpec68; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec68 = TelephonyTone.switchSpec68; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec69
@@ -2249,7 +2249,7 @@ const switchSpec68: TelephonyTone = TelephonyTone.switchSpec68; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec69: TelephonyTone = TelephonyTone.switchSpec69; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec69 = TelephonyTone.switchSpec69; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec69
@@ -2258,7 +2258,7 @@ const TelephonyTone_switchSpec69: TelephonyTone = TelephonyTone.switchSpec69; /*
  * @type {number}
  */
 export
-const switchSpec69: TelephonyTone = TelephonyTone.switchSpec69; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec69 = TelephonyTone.switchSpec69; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec70
@@ -2268,7 +2268,7 @@ const switchSpec69: TelephonyTone = TelephonyTone.switchSpec69; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec70: TelephonyTone = TelephonyTone.switchSpec70; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec70 = TelephonyTone.switchSpec70; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec70
@@ -2277,7 +2277,7 @@ const TelephonyTone_switchSpec70: TelephonyTone = TelephonyTone.switchSpec70; /*
  * @type {number}
  */
 export
-const switchSpec70: TelephonyTone = TelephonyTone.switchSpec70; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec70 = TelephonyTone.switchSpec70; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec71
@@ -2287,7 +2287,7 @@ const switchSpec70: TelephonyTone = TelephonyTone.switchSpec70; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec71: TelephonyTone = TelephonyTone.switchSpec71; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec71 = TelephonyTone.switchSpec71; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec71
@@ -2296,7 +2296,7 @@ const TelephonyTone_switchSpec71: TelephonyTone = TelephonyTone.switchSpec71; /*
  * @type {number}
  */
 export
-const switchSpec71: TelephonyTone = TelephonyTone.switchSpec71; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec71 = TelephonyTone.switchSpec71; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec72
@@ -2306,7 +2306,7 @@ const switchSpec71: TelephonyTone = TelephonyTone.switchSpec71; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec72: TelephonyTone = TelephonyTone.switchSpec72; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec72 = TelephonyTone.switchSpec72; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec72
@@ -2315,7 +2315,7 @@ const TelephonyTone_switchSpec72: TelephonyTone = TelephonyTone.switchSpec72; /*
  * @type {number}
  */
 export
-const switchSpec72: TelephonyTone = TelephonyTone.switchSpec72; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec72 = TelephonyTone.switchSpec72; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec73
@@ -2325,7 +2325,7 @@ const switchSpec72: TelephonyTone = TelephonyTone.switchSpec72; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec73: TelephonyTone = TelephonyTone.switchSpec73; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec73 = TelephonyTone.switchSpec73; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec73
@@ -2334,7 +2334,7 @@ const TelephonyTone_switchSpec73: TelephonyTone = TelephonyTone.switchSpec73; /*
  * @type {number}
  */
 export
-const switchSpec73: TelephonyTone = TelephonyTone.switchSpec73; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec73 = TelephonyTone.switchSpec73; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec74
@@ -2344,7 +2344,7 @@ const switchSpec73: TelephonyTone = TelephonyTone.switchSpec73; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec74: TelephonyTone = TelephonyTone.switchSpec74; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec74 = TelephonyTone.switchSpec74; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec74
@@ -2353,7 +2353,7 @@ const TelephonyTone_switchSpec74: TelephonyTone = TelephonyTone.switchSpec74; /*
  * @type {number}
  */
 export
-const switchSpec74: TelephonyTone = TelephonyTone.switchSpec74; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec74 = TelephonyTone.switchSpec74; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec75
@@ -2363,7 +2363,7 @@ const switchSpec74: TelephonyTone = TelephonyTone.switchSpec74; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec75: TelephonyTone = TelephonyTone.switchSpec75; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec75 = TelephonyTone.switchSpec75; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec75
@@ -2372,7 +2372,7 @@ const TelephonyTone_switchSpec75: TelephonyTone = TelephonyTone.switchSpec75; /*
  * @type {number}
  */
 export
-const switchSpec75: TelephonyTone = TelephonyTone.switchSpec75; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec75 = TelephonyTone.switchSpec75; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec76
@@ -2382,7 +2382,7 @@ const switchSpec75: TelephonyTone = TelephonyTone.switchSpec75; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec76: TelephonyTone = TelephonyTone.switchSpec76; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec76 = TelephonyTone.switchSpec76; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec76
@@ -2391,7 +2391,7 @@ const TelephonyTone_switchSpec76: TelephonyTone = TelephonyTone.switchSpec76; /*
  * @type {number}
  */
 export
-const switchSpec76: TelephonyTone = TelephonyTone.switchSpec76; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec76 = TelephonyTone.switchSpec76; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec77
@@ -2401,7 +2401,7 @@ const switchSpec76: TelephonyTone = TelephonyTone.switchSpec76; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec77: TelephonyTone = TelephonyTone.switchSpec77; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec77 = TelephonyTone.switchSpec77; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec77
@@ -2410,7 +2410,7 @@ const TelephonyTone_switchSpec77: TelephonyTone = TelephonyTone.switchSpec77; /*
  * @type {number}
  */
 export
-const switchSpec77: TelephonyTone = TelephonyTone.switchSpec77; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec77 = TelephonyTone.switchSpec77; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec78
@@ -2420,7 +2420,7 @@ const switchSpec77: TelephonyTone = TelephonyTone.switchSpec77; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec78: TelephonyTone = TelephonyTone.switchSpec78; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec78 = TelephonyTone.switchSpec78; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec78
@@ -2429,7 +2429,7 @@ const TelephonyTone_switchSpec78: TelephonyTone = TelephonyTone.switchSpec78; /*
  * @type {number}
  */
 export
-const switchSpec78: TelephonyTone = TelephonyTone.switchSpec78; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec78 = TelephonyTone.switchSpec78; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec79
@@ -2439,7 +2439,7 @@ const switchSpec78: TelephonyTone = TelephonyTone.switchSpec78; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec79: TelephonyTone = TelephonyTone.switchSpec79; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec79 = TelephonyTone.switchSpec79; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec79
@@ -2448,7 +2448,7 @@ const TelephonyTone_switchSpec79: TelephonyTone = TelephonyTone.switchSpec79; /*
  * @type {number}
  */
 export
-const switchSpec79: TelephonyTone = TelephonyTone.switchSpec79; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec79 = TelephonyTone.switchSpec79; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec80
@@ -2458,7 +2458,7 @@ const switchSpec79: TelephonyTone = TelephonyTone.switchSpec79; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec80: TelephonyTone = TelephonyTone.switchSpec80; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec80 = TelephonyTone.switchSpec80; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec80
@@ -2467,7 +2467,7 @@ const TelephonyTone_switchSpec80: TelephonyTone = TelephonyTone.switchSpec80; /*
  * @type {number}
  */
 export
-const switchSpec80: TelephonyTone = TelephonyTone.switchSpec80; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec80 = TelephonyTone.switchSpec80; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec81
@@ -2477,7 +2477,7 @@ const switchSpec80: TelephonyTone = TelephonyTone.switchSpec80; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec81: TelephonyTone = TelephonyTone.switchSpec81; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec81 = TelephonyTone.switchSpec81; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec81
@@ -2486,7 +2486,7 @@ const TelephonyTone_switchSpec81: TelephonyTone = TelephonyTone.switchSpec81; /*
  * @type {number}
  */
 export
-const switchSpec81: TelephonyTone = TelephonyTone.switchSpec81; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec81 = TelephonyTone.switchSpec81; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec82
@@ -2496,7 +2496,7 @@ const switchSpec81: TelephonyTone = TelephonyTone.switchSpec81; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec82: TelephonyTone = TelephonyTone.switchSpec82; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec82 = TelephonyTone.switchSpec82; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec82
@@ -2505,7 +2505,7 @@ const TelephonyTone_switchSpec82: TelephonyTone = TelephonyTone.switchSpec82; /*
  * @type {number}
  */
 export
-const switchSpec82: TelephonyTone = TelephonyTone.switchSpec82; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec82 = TelephonyTone.switchSpec82; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec83
@@ -2515,7 +2515,7 @@ const switchSpec82: TelephonyTone = TelephonyTone.switchSpec82; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec83: TelephonyTone = TelephonyTone.switchSpec83; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec83 = TelephonyTone.switchSpec83; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec83
@@ -2524,7 +2524,7 @@ const TelephonyTone_switchSpec83: TelephonyTone = TelephonyTone.switchSpec83; /*
  * @type {number}
  */
 export
-const switchSpec83: TelephonyTone = TelephonyTone.switchSpec83; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec83 = TelephonyTone.switchSpec83; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec84
@@ -2534,7 +2534,7 @@ const switchSpec83: TelephonyTone = TelephonyTone.switchSpec83; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec84: TelephonyTone = TelephonyTone.switchSpec84; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec84 = TelephonyTone.switchSpec84; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec84
@@ -2543,7 +2543,7 @@ const TelephonyTone_switchSpec84: TelephonyTone = TelephonyTone.switchSpec84; /*
  * @type {number}
  */
 export
-const switchSpec84: TelephonyTone = TelephonyTone.switchSpec84; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec84 = TelephonyTone.switchSpec84; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec85
@@ -2553,7 +2553,7 @@ const switchSpec84: TelephonyTone = TelephonyTone.switchSpec84; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec85: TelephonyTone = TelephonyTone.switchSpec85; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec85 = TelephonyTone.switchSpec85; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec85
@@ -2562,7 +2562,7 @@ const TelephonyTone_switchSpec85: TelephonyTone = TelephonyTone.switchSpec85; /*
  * @type {number}
  */
 export
-const switchSpec85: TelephonyTone = TelephonyTone.switchSpec85; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec85 = TelephonyTone.switchSpec85; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec86
@@ -2572,7 +2572,7 @@ const switchSpec85: TelephonyTone = TelephonyTone.switchSpec85; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec86: TelephonyTone = TelephonyTone.switchSpec86; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec86 = TelephonyTone.switchSpec86; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec86
@@ -2581,7 +2581,7 @@ const TelephonyTone_switchSpec86: TelephonyTone = TelephonyTone.switchSpec86; /*
  * @type {number}
  */
 export
-const switchSpec86: TelephonyTone = TelephonyTone.switchSpec86; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec86 = TelephonyTone.switchSpec86; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec87
@@ -2591,7 +2591,7 @@ const switchSpec86: TelephonyTone = TelephonyTone.switchSpec86; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec87: TelephonyTone = TelephonyTone.switchSpec87; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec87 = TelephonyTone.switchSpec87; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec87
@@ -2600,7 +2600,7 @@ const TelephonyTone_switchSpec87: TelephonyTone = TelephonyTone.switchSpec87; /*
  * @type {number}
  */
 export
-const switchSpec87: TelephonyTone = TelephonyTone.switchSpec87; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec87 = TelephonyTone.switchSpec87; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec88
@@ -2610,7 +2610,7 @@ const switchSpec87: TelephonyTone = TelephonyTone.switchSpec87; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec88: TelephonyTone = TelephonyTone.switchSpec88; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec88 = TelephonyTone.switchSpec88; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec88
@@ -2619,7 +2619,7 @@ const TelephonyTone_switchSpec88: TelephonyTone = TelephonyTone.switchSpec88; /*
  * @type {number}
  */
 export
-const switchSpec88: TelephonyTone = TelephonyTone.switchSpec88; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec88 = TelephonyTone.switchSpec88; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec89
@@ -2629,7 +2629,7 @@ const switchSpec88: TelephonyTone = TelephonyTone.switchSpec88; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec89: TelephonyTone = TelephonyTone.switchSpec89; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec89 = TelephonyTone.switchSpec89; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec89
@@ -2638,7 +2638,7 @@ const TelephonyTone_switchSpec89: TelephonyTone = TelephonyTone.switchSpec89; /*
  * @type {number}
  */
 export
-const switchSpec89: TelephonyTone = TelephonyTone.switchSpec89; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec89 = TelephonyTone.switchSpec89; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec90
@@ -2648,7 +2648,7 @@ const switchSpec89: TelephonyTone = TelephonyTone.switchSpec89; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec90: TelephonyTone = TelephonyTone.switchSpec90; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec90 = TelephonyTone.switchSpec90; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec90
@@ -2657,7 +2657,7 @@ const TelephonyTone_switchSpec90: TelephonyTone = TelephonyTone.switchSpec90; /*
  * @type {number}
  */
 export
-const switchSpec90: TelephonyTone = TelephonyTone.switchSpec90; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec90 = TelephonyTone.switchSpec90; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec91
@@ -2667,7 +2667,7 @@ const switchSpec90: TelephonyTone = TelephonyTone.switchSpec90; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec91: TelephonyTone = TelephonyTone.switchSpec91; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec91 = TelephonyTone.switchSpec91; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec91
@@ -2676,7 +2676,7 @@ const TelephonyTone_switchSpec91: TelephonyTone = TelephonyTone.switchSpec91; /*
  * @type {number}
  */
 export
-const switchSpec91: TelephonyTone = TelephonyTone.switchSpec91; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec91 = TelephonyTone.switchSpec91; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec92
@@ -2686,7 +2686,7 @@ const switchSpec91: TelephonyTone = TelephonyTone.switchSpec91; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec92: TelephonyTone = TelephonyTone.switchSpec92; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec92 = TelephonyTone.switchSpec92; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec92
@@ -2695,7 +2695,7 @@ const TelephonyTone_switchSpec92: TelephonyTone = TelephonyTone.switchSpec92; /*
  * @type {number}
  */
 export
-const switchSpec92: TelephonyTone = TelephonyTone.switchSpec92; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec92 = TelephonyTone.switchSpec92; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec93
@@ -2705,7 +2705,7 @@ const switchSpec92: TelephonyTone = TelephonyTone.switchSpec92; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec93: TelephonyTone = TelephonyTone.switchSpec93; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec93 = TelephonyTone.switchSpec93; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec93
@@ -2714,7 +2714,7 @@ const TelephonyTone_switchSpec93: TelephonyTone = TelephonyTone.switchSpec93; /*
  * @type {number}
  */
 export
-const switchSpec93: TelephonyTone = TelephonyTone.switchSpec93; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec93 = TelephonyTone.switchSpec93; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec94
@@ -2724,7 +2724,7 @@ const switchSpec93: TelephonyTone = TelephonyTone.switchSpec93; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec94: TelephonyTone = TelephonyTone.switchSpec94; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec94 = TelephonyTone.switchSpec94; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec94
@@ -2733,7 +2733,7 @@ const TelephonyTone_switchSpec94: TelephonyTone = TelephonyTone.switchSpec94; /*
  * @type {number}
  */
 export
-const switchSpec94: TelephonyTone = TelephonyTone.switchSpec94; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec94 = TelephonyTone.switchSpec94; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec95
@@ -2743,7 +2743,7 @@ const switchSpec94: TelephonyTone = TelephonyTone.switchSpec94; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec95: TelephonyTone = TelephonyTone.switchSpec95; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec95 = TelephonyTone.switchSpec95; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec95
@@ -2752,7 +2752,7 @@ const TelephonyTone_switchSpec95: TelephonyTone = TelephonyTone.switchSpec95; /*
  * @type {number}
  */
 export
-const switchSpec95: TelephonyTone = TelephonyTone.switchSpec95; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec95 = TelephonyTone.switchSpec95; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec96
@@ -2762,7 +2762,7 @@ const switchSpec95: TelephonyTone = TelephonyTone.switchSpec95; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec96: TelephonyTone = TelephonyTone.switchSpec96; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec96 = TelephonyTone.switchSpec96; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec96
@@ -2771,7 +2771,7 @@ const TelephonyTone_switchSpec96: TelephonyTone = TelephonyTone.switchSpec96; /*
  * @type {number}
  */
 export
-const switchSpec96: TelephonyTone = TelephonyTone.switchSpec96; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec96 = TelephonyTone.switchSpec96; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec97
@@ -2781,7 +2781,7 @@ const switchSpec96: TelephonyTone = TelephonyTone.switchSpec96; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec97: TelephonyTone = TelephonyTone.switchSpec97; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec97 = TelephonyTone.switchSpec97; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec97
@@ -2790,7 +2790,7 @@ const TelephonyTone_switchSpec97: TelephonyTone = TelephonyTone.switchSpec97; /*
  * @type {number}
  */
 export
-const switchSpec97: TelephonyTone = TelephonyTone.switchSpec97; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec97 = TelephonyTone.switchSpec97; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec98
@@ -2800,7 +2800,7 @@ const switchSpec97: TelephonyTone = TelephonyTone.switchSpec97; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec98: TelephonyTone = TelephonyTone.switchSpec98; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec98 = TelephonyTone.switchSpec98; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec98
@@ -2809,7 +2809,7 @@ const TelephonyTone_switchSpec98: TelephonyTone = TelephonyTone.switchSpec98; /*
  * @type {number}
  */
 export
-const switchSpec98: TelephonyTone = TelephonyTone.switchSpec98; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec98 = TelephonyTone.switchSpec98; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec99
@@ -2819,7 +2819,7 @@ const switchSpec98: TelephonyTone = TelephonyTone.switchSpec98; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec99: TelephonyTone = TelephonyTone.switchSpec99; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec99 = TelephonyTone.switchSpec99; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec99
@@ -2828,7 +2828,7 @@ const TelephonyTone_switchSpec99: TelephonyTone = TelephonyTone.switchSpec99; /*
  * @type {number}
  */
 export
-const switchSpec99: TelephonyTone = TelephonyTone.switchSpec99; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec99 = TelephonyTone.switchSpec99; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TelephonyTone_switchSpec100
@@ -2838,7 +2838,7 @@ const switchSpec99: TelephonyTone = TelephonyTone.switchSpec99; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const TelephonyTone_switchSpec100: TelephonyTone = TelephonyTone.switchSpec100; /* LONG_NAMED_ENUMERATED_VALUE */
+const TelephonyTone_switchSpec100 = TelephonyTone.switchSpec100; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchSpec100
@@ -2847,7 +2847,7 @@ const TelephonyTone_switchSpec100: TelephonyTone = TelephonyTone.switchSpec100; 
  * @type {number}
  */
 export
-const switchSpec100: TelephonyTone = TelephonyTone.switchSpec100; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchSpec100 = TelephonyTone.switchSpec100; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_TelephonyTone: $.ASN1Decoder<TelephonyTone> | null = null;
 

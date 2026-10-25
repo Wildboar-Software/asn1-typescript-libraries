@@ -66,7 +66,7 @@ export const SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_internalTimingSource: SystemTiming_sourceType =
+export const SystemTiming_sourceType_internalTimingSource =
     SystemTiming_sourceType.internalTimingSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const SystemTiming_sourceType_internalTimingSource: SystemTiming_sourceTy
  * @constant
  * @type {number}
  */
-export const internalTimingSource: SystemTiming_sourceType =
+export const internalTimingSource =
     SystemTiming_sourceType.internalTimingSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const internalTimingSource: SystemTiming_sourceType =
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_remoteTimingSource: SystemTiming_sourceType =
+export const SystemTiming_sourceType_remoteTimingSource =
     SystemTiming_sourceType.remoteTimingSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const SystemTiming_sourceType_remoteTimingSource: SystemTiming_sourceType
  * @constant
  * @type {number}
  */
-export const remoteTimingSource: SystemTiming_sourceType =
+export const remoteTimingSource =
     SystemTiming_sourceType.remoteTimingSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const remoteTimingSource: SystemTiming_sourceType =
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_slavedTimingTerminationSignal: SystemTiming_sourceType =
+export const SystemTiming_sourceType_slavedTimingTerminationSignal =
     SystemTiming_sourceType.slavedTimingTerminationSignal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const SystemTiming_sourceType_slavedTimingTerminationSignal: SystemTiming
  * @constant
  * @type {number}
  */
-export const slavedTimingTerminationSignal: SystemTiming_sourceType =
+export const slavedTimingTerminationSignal =
     SystemTiming_sourceType.slavedTimingTerminationSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

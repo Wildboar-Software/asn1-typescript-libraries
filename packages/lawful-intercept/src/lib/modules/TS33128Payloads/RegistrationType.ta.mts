@@ -94,7 +94,7 @@ const RegistrationType = _enum_for_RegistrationType;
  * @type {number}
  */
 export
-const RegistrationType_registration: RegistrationType = RegistrationType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_registration = RegistrationType.registration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registration
@@ -102,7 +102,7 @@ const RegistrationType_registration: RegistrationType = RegistrationType.registr
  * @type {number}
  */
 export
-const registration: RegistrationType = RegistrationType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registration = RegistrationType.registration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationType_registrationUpdate
@@ -110,7 +110,7 @@ const registration: RegistrationType = RegistrationType.registration; /* SHORT_N
  * @type {number}
  */
 export
-const RegistrationType_registrationUpdate: RegistrationType = RegistrationType.registrationUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_registrationUpdate = RegistrationType.registrationUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registrationUpdate
@@ -118,7 +118,7 @@ const RegistrationType_registrationUpdate: RegistrationType = RegistrationType.r
  * @type {number}
  */
 export
-const registrationUpdate: RegistrationType = RegistrationType.registrationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registrationUpdate = RegistrationType.registrationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationType_deregistration
@@ -126,7 +126,7 @@ const registrationUpdate: RegistrationType = RegistrationType.registrationUpdate
  * @type {number}
  */
 export
-const RegistrationType_deregistration: RegistrationType = RegistrationType.deregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationType_deregistration = RegistrationType.deregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deregistration
@@ -134,7 +134,7 @@ const RegistrationType_deregistration: RegistrationType = RegistrationType.dereg
  * @type {number}
  */
 export
-const deregistration: RegistrationType = RegistrationType.deregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deregistration = RegistrationType.deregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RegistrationType: $.ASN1Decoder<RegistrationType> = $._decodeEnumerated;
 export const _encode_RegistrationType: $.ASN1Encoder<RegistrationType> = $._encodeEnumerated;
 

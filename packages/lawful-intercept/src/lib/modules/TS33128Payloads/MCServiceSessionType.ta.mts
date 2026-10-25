@@ -69,7 +69,7 @@ const MCServiceSessionType = _enum_for_MCServiceSessionType;
  * @type {number}
  */
 export
-const MCServiceSessionType_private_: MCServiceSessionType = MCServiceSessionType.private_; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceSessionType_private_ = MCServiceSessionType.private_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary private_
@@ -77,7 +77,7 @@ const MCServiceSessionType_private_: MCServiceSessionType = MCServiceSessionType
  * @type {number}
  */
 export
-const private_: MCServiceSessionType = MCServiceSessionType.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const private_ = MCServiceSessionType.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MCServiceSessionType_group
@@ -85,7 +85,7 @@ const private_: MCServiceSessionType = MCServiceSessionType.private_; /* SHORT_N
  * @type {number}
  */
 export
-const MCServiceSessionType_group: MCServiceSessionType = MCServiceSessionType.group; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCServiceSessionType_group = MCServiceSessionType.group; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary group
@@ -93,7 +93,7 @@ const MCServiceSessionType_group: MCServiceSessionType = MCServiceSessionType.gr
  * @type {number}
  */
 export
-const group: MCServiceSessionType = MCServiceSessionType.group; /* SHORT_NAMED_ENUMERATED_VALUE */
+const group = MCServiceSessionType.group; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MCServiceSessionType: $.ASN1Decoder<MCServiceSessionType> = $._decodeEnumerated;
 export const _encode_MCServiceSessionType: $.ASN1Encoder<MCServiceSessionType> = $._encodeEnumerated;
 

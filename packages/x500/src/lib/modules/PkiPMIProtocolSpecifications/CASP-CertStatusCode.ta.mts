@@ -29,28 +29,28 @@ export type CASP_CertStatusCode = _enum_for_CASP_CertStatusCode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CASP_CertStatusCode_noReason: CASP_CertStatusCode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_CertStatusCode_noReason = _enum_for_CASP_CertStatusCode.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReason
  * @constant
  * @type {number}
  */
-export const noReason: CASP_CertStatusCode = CASP_CertStatusCode_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noReason = CASP_CertStatusCode_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_CertStatusCode_unknownCert
  * @constant
  * @type {number}
  */
-export const CASP_CertStatusCode_unknownCert: CASP_CertStatusCode = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_CertStatusCode_unknownCert = _enum_for_CASP_CertStatusCode.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCert
  * @constant
  * @type {number}
  */
-export const unknownCert: CASP_CertStatusCode = CASP_CertStatusCode_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCert = CASP_CertStatusCode_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_CASP_CertStatusCode = $._decodeEnumerated;

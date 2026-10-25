@@ -84,7 +84,7 @@ const V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
  * @type {number}
  */
 export
-const V8Diag_Item_v8Result_v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
+const V8Diag_Item_v8Result_v8ComNeg = V8Diag_Item_v8Result.v8ComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v8ComNeg
@@ -92,7 +92,7 @@ const V8Diag_Item_v8Result_v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result
  * @type {number}
  */
 export
-const v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v8ComNeg = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V8Diag_Item_v8Result_v8NoComNeg
@@ -103,7 +103,7 @@ const v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_N
  * @type {number}
  */
 export
-const V8Diag_Item_v8Result_v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
+const V8Diag_Item_v8Result_v8NoComNeg = V8Diag_Item_v8Result.v8NoComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v8NoComNeg
@@ -111,7 +111,7 @@ const V8Diag_Item_v8Result_v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Resu
  * @type {number}
  */
 export
-const v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v8NoComNeg = V8Diag_Item_v8Result.v8NoComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V8Diag_Item_v8Result_v8NoNegAuto
@@ -123,7 +123,7 @@ const v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* SHO
  * @type {number}
  */
 export
-const V8Diag_Item_v8Result_v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoNegAuto; /* LONG_NAMED_ENUMERATED_VALUE */
+const V8Diag_Item_v8Result_v8NoNegAuto = V8Diag_Item_v8Result.v8NoNegAuto; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v8NoNegAuto
@@ -131,7 +131,7 @@ const V8Diag_Item_v8Result_v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Res
  * @type {number}
  */
 export
-const v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoNegAuto; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v8NoNegAuto = V8Diag_Item_v8Result.v8NoNegAuto; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_V8Diag_Item_v8Result(el: _Element): V8Diag_Item_v8Result {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

@@ -24,7 +24,7 @@ export type CMSVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const CMSVersion_v0: CMSVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v0 = 0 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -32,7 +32,7 @@ export const CMSVersion_v0: CMSVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v0: CMSVersion = CMSVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0 = CMSVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

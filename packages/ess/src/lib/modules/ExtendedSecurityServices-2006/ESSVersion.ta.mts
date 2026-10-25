@@ -24,7 +24,7 @@ export type ESSVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const ESSVersion_v1: ESSVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ESSVersion_v1 = 1 satisfies ESSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -32,7 +32,7 @@ export const ESSVersion_v1: ESSVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v1: ESSVersion = ESSVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1 = ESSVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 

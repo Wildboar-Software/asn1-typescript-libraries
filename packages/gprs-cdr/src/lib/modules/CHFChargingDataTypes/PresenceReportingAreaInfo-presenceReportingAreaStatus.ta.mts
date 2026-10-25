@@ -74,7 +74,7 @@ const PresenceReportingAreaInfo_presenceReportingAreaStatus = _enum_for_Presence
  * @type {number}
  */
 export
-const PresenceReportingAreaInfo_presenceReportingAreaStatus_insideArea: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.insideArea; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceReportingAreaInfo_presenceReportingAreaStatus_insideArea = PresenceReportingAreaInfo_presenceReportingAreaStatus.insideArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insideArea
@@ -82,7 +82,7 @@ const PresenceReportingAreaInfo_presenceReportingAreaStatus_insideArea: Presence
  * @type {number}
  */
 export
-const insideArea: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.insideArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insideArea = PresenceReportingAreaInfo_presenceReportingAreaStatus.insideArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceReportingAreaInfo_presenceReportingAreaStatus_outsideArea
@@ -90,7 +90,7 @@ const insideArea: PresenceReportingAreaInfo_presenceReportingAreaStatus = Presen
  * @type {number}
  */
 export
-const PresenceReportingAreaInfo_presenceReportingAreaStatus_outsideArea: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.outsideArea; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceReportingAreaInfo_presenceReportingAreaStatus_outsideArea = PresenceReportingAreaInfo_presenceReportingAreaStatus.outsideArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outsideArea
@@ -98,7 +98,7 @@ const PresenceReportingAreaInfo_presenceReportingAreaStatus_outsideArea: Presenc
  * @type {number}
  */
 export
-const outsideArea: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.outsideArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outsideArea = PresenceReportingAreaInfo_presenceReportingAreaStatus.outsideArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceReportingAreaInfo_presenceReportingAreaStatus_inactive
@@ -106,7 +106,7 @@ const outsideArea: PresenceReportingAreaInfo_presenceReportingAreaStatus = Prese
  * @type {number}
  */
 export
-const PresenceReportingAreaInfo_presenceReportingAreaStatus_inactive: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceReportingAreaInfo_presenceReportingAreaStatus_inactive = PresenceReportingAreaInfo_presenceReportingAreaStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -114,7 +114,7 @@ const PresenceReportingAreaInfo_presenceReportingAreaStatus_inactive: PresenceRe
  * @type {number}
  */
 export
-const inactive: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive = PresenceReportingAreaInfo_presenceReportingAreaStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PresenceReportingAreaInfo_presenceReportingAreaStatus_unknown
@@ -122,7 +122,7 @@ const inactive: PresenceReportingAreaInfo_presenceReportingAreaStatus = Presence
  * @type {number}
  */
 export
-const PresenceReportingAreaInfo_presenceReportingAreaStatus_unknown: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const PresenceReportingAreaInfo_presenceReportingAreaStatus_unknown = PresenceReportingAreaInfo_presenceReportingAreaStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -130,7 +130,7 @@ const PresenceReportingAreaInfo_presenceReportingAreaStatus_unknown: PresenceRep
  * @type {number}
  */
 export
-const unknown: PresenceReportingAreaInfo_presenceReportingAreaStatus = PresenceReportingAreaInfo_presenceReportingAreaStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown = PresenceReportingAreaInfo_presenceReportingAreaStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PresenceReportingAreaInfo_presenceReportingAreaStatus: $.ASN1Decoder<PresenceReportingAreaInfo_presenceReportingAreaStatus> = $._decodeEnumerated;

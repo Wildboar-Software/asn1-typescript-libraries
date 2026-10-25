@@ -38,7 +38,7 @@ type ConnectRequest_PDU_version = INTEGER;
  * @type {number}
  */
 export
-const ConnectRequest_PDU_version_version_1: ConnectRequest_PDU_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ConnectRequest_PDU_version_version_1 = 0 satisfies ConnectRequest_PDU_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary version_1
@@ -52,7 +52,7 @@ const ConnectRequest_PDU_version_version_1: ConnectRequest_PDU_version = 0; /* L
  * @type {number}
  */
 export
-const version_1: ConnectRequest_PDU_version = ConnectRequest_PDU_version_version_1; /* SHORT_NAMED_INTEGER_VALUE */
+const version_1 = ConnectRequest_PDU_version_version_1; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ConnectRequest_PDU_version: $.ASN1Decoder<ConnectRequest_PDU_version> = $._decodeInteger;
 export const _encode_ConnectRequest_PDU_version: $.ASN1Encoder<ConnectRequest_PDU_version> = $._encodeInteger;
 

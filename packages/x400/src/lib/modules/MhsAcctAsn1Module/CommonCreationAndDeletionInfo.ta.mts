@@ -32,42 +32,42 @@ export type CommonCreationAndDeletionInfo = INTEGER;
  * @constant
  * @type {number}
  */
-export const CommonCreationAndDeletionInfo_unknown: CommonCreationAndDeletionInfo = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CommonCreationAndDeletionInfo_unknown = 0 satisfies CommonCreationAndDeletionInfo; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommonCreationAndDeletionInfo_unknown
  * @constant
  * @type {number}
  */
-export const unknown: CommonCreationAndDeletionInfo = CommonCreationAndDeletionInfo_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown = CommonCreationAndDeletionInfo_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommonCreationAndDeletionInfo_ressourceOperation
  * @constant
  * @type {number}
  */
-export const CommonCreationAndDeletionInfo_ressourceOperation: CommonCreationAndDeletionInfo = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const CommonCreationAndDeletionInfo_ressourceOperation = 1 satisfies CommonCreationAndDeletionInfo; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommonCreationAndDeletionInfo_ressourceOperation
  * @constant
  * @type {number}
  */
-export const ressourceOperation: CommonCreationAndDeletionInfo = CommonCreationAndDeletionInfo_ressourceOperation; /* SHORT_NAMED_INTEGER_VALUE */
+export const ressourceOperation = CommonCreationAndDeletionInfo_ressourceOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommonCreationAndDeletionInfo_managementOperation
  * @constant
  * @type {number}
  */
-export const CommonCreationAndDeletionInfo_managementOperation: CommonCreationAndDeletionInfo = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const CommonCreationAndDeletionInfo_managementOperation = 2 satisfies CommonCreationAndDeletionInfo; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommonCreationAndDeletionInfo_managementOperation
  * @constant
  * @type {number}
  */
-export const managementOperation: CommonCreationAndDeletionInfo = CommonCreationAndDeletionInfo_managementOperation; /* SHORT_NAMED_INTEGER_VALUE */
+export const managementOperation = CommonCreationAndDeletionInfo_managementOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 export const _decode_CommonCreationAndDeletionInfo = $._decodeInteger;

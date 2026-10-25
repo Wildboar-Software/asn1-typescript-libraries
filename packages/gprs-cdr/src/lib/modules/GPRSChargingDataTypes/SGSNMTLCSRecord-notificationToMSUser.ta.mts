@@ -41,7 +41,7 @@ type SGSNMTLCSRecord_notificationToMSUser = _enum_for_SGSNMTLCSRecord_notificati
  * @type {number}
  */
 export
-const SGSNMTLCSRecord_notificationToMSUser_notifyLocationAllowed: SGSNMTLCSRecord_notificationToMSUser = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMTLCSRecord_notificationToMSUser_notifyLocationAllowed = _enum_for_SGSNMTLCSRecord_notificationToMSUser.notifyLocationAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyLocationAllowed
@@ -49,7 +49,7 @@ const SGSNMTLCSRecord_notificationToMSUser_notifyLocationAllowed: SGSNMTLCSRecor
  * @type {number}
  */
 export
-const notifyLocationAllowed: SGSNMTLCSRecord_notificationToMSUser = SGSNMTLCSRecord_notificationToMSUser_notifyLocationAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyLocationAllowed = SGSNMTLCSRecord_notificationToMSUser_notifyLocationAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse
@@ -57,7 +57,7 @@ const notifyLocationAllowed: SGSNMTLCSRecord_notificationToMSUser = SGSNMTLCSRec
  * @type {number}
  */
 export
-const SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse: SGSNMTLCSRecord_notificationToMSUser = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse = _enum_for_SGSNMTLCSRecord_notificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndVerify_LocationAllowedIfNoResponse
@@ -65,7 +65,7 @@ const SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoRe
  * @type {number}
  */
 export
-const notifyAndVerify_LocationAllowedIfNoResponse: SGSNMTLCSRecord_notificationToMSUser = SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndVerify_LocationAllowedIfNoResponse = SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse
@@ -73,7 +73,7 @@ const notifyAndVerify_LocationAllowedIfNoResponse: SGSNMTLCSRecord_notificationT
  * @type {number}
  */
 export
-const SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse: SGSNMTLCSRecord_notificationToMSUser = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse = _enum_for_SGSNMTLCSRecord_notificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndVerify_LocationNotAllowedIfNoResponse
@@ -81,7 +81,7 @@ const SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfN
  * @type {number}
  */
 export
-const notifyAndVerify_LocationNotAllowedIfNoResponse: SGSNMTLCSRecord_notificationToMSUser = SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndVerify_LocationNotAllowedIfNoResponse = SGSNMTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGSNMTLCSRecord_notificationToMSUser_locationNotAllowed
@@ -89,7 +89,7 @@ const notifyAndVerify_LocationNotAllowedIfNoResponse: SGSNMTLCSRecord_notificati
  * @type {number}
  */
 export
-const SGSNMTLCSRecord_notificationToMSUser_locationNotAllowed: SGSNMTLCSRecord_notificationToMSUser = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGSNMTLCSRecord_notificationToMSUser_locationNotAllowed = _enum_for_SGSNMTLCSRecord_notificationToMSUser.locationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationNotAllowed
@@ -97,7 +97,7 @@ const SGSNMTLCSRecord_notificationToMSUser_locationNotAllowed: SGSNMTLCSRecord_n
  * @type {number}
  */
 export
-const locationNotAllowed: SGSNMTLCSRecord_notificationToMSUser = SGSNMTLCSRecord_notificationToMSUser_locationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationNotAllowed = SGSNMTLCSRecord_notificationToMSUser_locationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SGSNMTLCSRecord_notificationToMSUser: $.ASN1Decoder<SGSNMTLCSRecord_notificationToMSUser> = $._decodeEnumerated;

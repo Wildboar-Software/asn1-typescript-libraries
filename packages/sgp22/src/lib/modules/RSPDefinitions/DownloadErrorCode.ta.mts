@@ -32,7 +32,7 @@ type DownloadErrorCode = INTEGER;
  * @type {number}
  */
 export
-const DownloadErrorCode_invalidCertificate: DownloadErrorCode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DownloadErrorCode_invalidCertificate = 1 satisfies DownloadErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_invalidCertificate
@@ -44,7 +44,7 @@ const DownloadErrorCode_invalidCertificate: DownloadErrorCode = 1; /* LONG_NAMED
  * @type {number}
  */
 export
-const invalidCertificate: DownloadErrorCode = DownloadErrorCode_invalidCertificate; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidCertificate = DownloadErrorCode_invalidCertificate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_invalidSignature
@@ -56,7 +56,7 @@ const invalidCertificate: DownloadErrorCode = DownloadErrorCode_invalidCertifica
  * @type {number}
  */
 export
-const DownloadErrorCode_invalidSignature: DownloadErrorCode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DownloadErrorCode_invalidSignature = 2 satisfies DownloadErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_invalidSignature
@@ -68,7 +68,7 @@ const DownloadErrorCode_invalidSignature: DownloadErrorCode = 2; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const invalidSignature: DownloadErrorCode = DownloadErrorCode_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidSignature = DownloadErrorCode_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_unsupportedCurve
@@ -81,7 +81,7 @@ const invalidSignature: DownloadErrorCode = DownloadErrorCode_invalidSignature; 
  * @type {number}
  */
 export
-const DownloadErrorCode_unsupportedCurve: DownloadErrorCode = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DownloadErrorCode_unsupportedCurve = 3 satisfies DownloadErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_unsupportedCurve
@@ -94,7 +94,7 @@ const DownloadErrorCode_unsupportedCurve: DownloadErrorCode = 3; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const unsupportedCurve: DownloadErrorCode = DownloadErrorCode_unsupportedCurve; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedCurve = DownloadErrorCode_unsupportedCurve; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_noSessionContext
@@ -107,7 +107,7 @@ const unsupportedCurve: DownloadErrorCode = DownloadErrorCode_unsupportedCurve; 
  * @type {number}
  */
 export
-const DownloadErrorCode_noSessionContext: DownloadErrorCode = 4; /* LONG_NAMED_INTEGER_VALUE */
+const DownloadErrorCode_noSessionContext = 4 satisfies DownloadErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_noSessionContext
@@ -120,7 +120,7 @@ const DownloadErrorCode_noSessionContext: DownloadErrorCode = 4; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const noSessionContext: DownloadErrorCode = DownloadErrorCode_noSessionContext; /* SHORT_NAMED_INTEGER_VALUE */
+const noSessionContext = DownloadErrorCode_noSessionContext; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_invalidTransactionId
@@ -132,7 +132,7 @@ const noSessionContext: DownloadErrorCode = DownloadErrorCode_noSessionContext; 
  * @type {number}
  */
 export
-const DownloadErrorCode_invalidTransactionId: DownloadErrorCode = 5; /* LONG_NAMED_INTEGER_VALUE */
+const DownloadErrorCode_invalidTransactionId = 5 satisfies DownloadErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_invalidTransactionId
@@ -144,7 +144,7 @@ const DownloadErrorCode_invalidTransactionId: DownloadErrorCode = 5; /* LONG_NAM
  * @type {number}
  */
 export
-const invalidTransactionId: DownloadErrorCode = DownloadErrorCode_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId = DownloadErrorCode_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_undefinedError
@@ -157,7 +157,7 @@ const invalidTransactionId: DownloadErrorCode = DownloadErrorCode_invalidTransac
  * @type {number}
  */
 export
-const DownloadErrorCode_undefinedError: DownloadErrorCode = 127; /* LONG_NAMED_INTEGER_VALUE */
+const DownloadErrorCode_undefinedError = 127 satisfies DownloadErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DownloadErrorCode_undefinedError
@@ -170,7 +170,7 @@ const DownloadErrorCode_undefinedError: DownloadErrorCode = 127; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const undefinedError: DownloadErrorCode = DownloadErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError = DownloadErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DownloadErrorCode = $._decodeInteger;
 export const _encode_DownloadErrorCode = $._encodeInteger;
 

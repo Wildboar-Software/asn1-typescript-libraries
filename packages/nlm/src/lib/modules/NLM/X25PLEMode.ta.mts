@@ -89,7 +89,7 @@ export const X25PLEMode = _enum_for_X25PLEMode;
  * @constant
  * @type {number}
  */
-export const X25PLEMode_dTE: X25PLEMode =
+export const X25PLEMode_dTE =
     X25PLEMode.dTE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -104,7 +104,7 @@ export const X25PLEMode_dTE: X25PLEMode =
  * @constant
  * @type {number}
  */
-export const dTE: X25PLEMode =
+export const dTE =
     X25PLEMode.dTE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -119,7 +119,7 @@ export const dTE: X25PLEMode =
  * @constant
  * @type {number}
  */
-export const X25PLEMode_dCE: X25PLEMode =
+export const X25PLEMode_dCE =
     X25PLEMode.dCE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -134,7 +134,7 @@ export const X25PLEMode_dCE: X25PLEMode =
  * @constant
  * @type {number}
  */
-export const dCE: X25PLEMode =
+export const dCE =
     X25PLEMode.dCE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -149,7 +149,7 @@ export const dCE: X25PLEMode =
  * @constant
  * @type {number}
  */
-export const X25PLEMode_dTEasDCE: X25PLEMode =
+export const X25PLEMode_dTEasDCE =
     X25PLEMode.dTEasDCE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -164,7 +164,7 @@ export const X25PLEMode_dTEasDCE: X25PLEMode =
  * @constant
  * @type {number}
  */
-export const dTEasDCE: X25PLEMode =
+export const dTEasDCE =
     X25PLEMode.dTEasDCE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

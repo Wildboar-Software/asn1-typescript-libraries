@@ -44,7 +44,7 @@ type LCS_QoS_Class = _enum_for_LCS_QoS_Class | ENUMERATED;
  * @type {number}
  */
 export
-const LCS_QoS_Class_bestEffort: LCS_QoS_Class = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_QoS_Class_bestEffort = _enum_for_LCS_QoS_Class.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bestEffort
@@ -56,7 +56,7 @@ const LCS_QoS_Class_bestEffort: LCS_QoS_Class = 0; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const bestEffort: LCS_QoS_Class = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bestEffort = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_QoS_Class_assured
@@ -68,7 +68,7 @@ const bestEffort: LCS_QoS_Class = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LCS_QoS_Class_assured: LCS_QoS_Class = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_QoS_Class_assured = _enum_for_LCS_QoS_Class.assured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary assured
@@ -80,7 +80,7 @@ const LCS_QoS_Class_assured: LCS_QoS_Class = 1; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const assured: LCS_QoS_Class = LCS_QoS_Class_assured; /* SHORT_NAMED_ENUMERATED_VALUE */
+const assured = LCS_QoS_Class_assured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_QoS_Class

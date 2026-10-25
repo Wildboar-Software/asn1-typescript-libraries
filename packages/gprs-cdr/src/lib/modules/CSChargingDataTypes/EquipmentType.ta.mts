@@ -31,7 +31,7 @@ type EquipmentType = INTEGER;
  * @type {number}
  */
 export
-const EquipmentType_conferenceBridge: EquipmentType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EquipmentType_conferenceBridge = 0 satisfies EquipmentType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EquipmentType_conferenceBridge
@@ -39,7 +39,7 @@ const EquipmentType_conferenceBridge: EquipmentType = 0; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const conferenceBridge: EquipmentType = EquipmentType_conferenceBridge; /* SHORT_NAMED_INTEGER_VALUE */
+const conferenceBridge = EquipmentType_conferenceBridge; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_EquipmentType: $.ASN1Decoder<EquipmentType> = $._decodeInteger;

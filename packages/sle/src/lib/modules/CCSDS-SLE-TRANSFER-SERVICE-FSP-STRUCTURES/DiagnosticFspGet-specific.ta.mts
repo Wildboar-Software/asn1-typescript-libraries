@@ -38,7 +38,7 @@ type DiagnosticFspGet_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticFspGet_specific_unknownParameter: DiagnosticFspGet_specific = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticFspGet_specific_unknownParameter = 0 satisfies DiagnosticFspGet_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticFspGet_specific_unknownParameter
@@ -50,7 +50,7 @@ const DiagnosticFspGet_specific_unknownParameter: DiagnosticFspGet_specific = 0;
  * @type {number}
  */
 export
-const unknownParameter: DiagnosticFspGet_specific = DiagnosticFspGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter = DiagnosticFspGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticFspGet_specific: $.ASN1Decoder<DiagnosticFspGet_specific> = $._decodeInteger;
 export const _encode_DiagnosticFspGet_specific: $.ASN1Encoder<DiagnosticFspGet_specific> = $._encodeInteger;
 

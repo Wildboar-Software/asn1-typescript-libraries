@@ -108,7 +108,7 @@ const DNDProtectionLevel = _enum_for_DNDProtectionLevel;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDProtectionLevel_lowProtection: DNDProtectionLevel = DNDProtectionLevel.lowProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDProtectionLevel_lowProtection = DNDProtectionLevel.lowProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lowProtection
@@ -117,7 +117,7 @@ const DNDProtectionLevel_lowProtection: DNDProtectionLevel = DNDProtectionLevel.
  * @type {number}
  */
 export
-const lowProtection: DNDProtectionLevel = DNDProtectionLevel.lowProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lowProtection = DNDProtectionLevel.lowProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNDProtectionLevel_mediumProtection
@@ -131,7 +131,7 @@ const lowProtection: DNDProtectionLevel = DNDProtectionLevel.lowProtection; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDProtectionLevel_mediumProtection: DNDProtectionLevel = DNDProtectionLevel.mediumProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDProtectionLevel_mediumProtection = DNDProtectionLevel.mediumProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mediumProtection
@@ -140,7 +140,7 @@ const DNDProtectionLevel_mediumProtection: DNDProtectionLevel = DNDProtectionLev
  * @type {number}
  */
 export
-const mediumProtection: DNDProtectionLevel = DNDProtectionLevel.mediumProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mediumProtection = DNDProtectionLevel.mediumProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNDProtectionLevel_highProtection
@@ -154,7 +154,7 @@ const mediumProtection: DNDProtectionLevel = DNDProtectionLevel.mediumProtection
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDProtectionLevel_highProtection: DNDProtectionLevel = DNDProtectionLevel.highProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDProtectionLevel_highProtection = DNDProtectionLevel.highProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary highProtection
@@ -163,7 +163,7 @@ const DNDProtectionLevel_highProtection: DNDProtectionLevel = DNDProtectionLevel
  * @type {number}
  */
 export
-const highProtection: DNDProtectionLevel = DNDProtectionLevel.highProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const highProtection = DNDProtectionLevel.highProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNDProtectionLevel_fullProtection
@@ -177,7 +177,7 @@ const highProtection: DNDProtectionLevel = DNDProtectionLevel.highProtection; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-193/
  */
 export
-const DNDProtectionLevel_fullProtection: DNDProtectionLevel = DNDProtectionLevel.fullProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNDProtectionLevel_fullProtection = DNDProtectionLevel.fullProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullProtection
@@ -186,7 +186,7 @@ const DNDProtectionLevel_fullProtection: DNDProtectionLevel = DNDProtectionLevel
  * @type {number}
  */
 export
-const fullProtection: DNDProtectionLevel = DNDProtectionLevel.fullProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fullProtection = DNDProtectionLevel.fullProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DNDProtectionLevel: $.ASN1Decoder<DNDProtectionLevel> = $._decodeEnumerated;

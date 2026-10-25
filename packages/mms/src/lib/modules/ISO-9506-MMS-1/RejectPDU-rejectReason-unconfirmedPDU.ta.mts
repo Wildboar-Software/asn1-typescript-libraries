@@ -47,7 +47,7 @@ type RejectPDU_rejectReason_unconfirmedPDU = INTEGER;
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_unconfirmedPDU_other: RejectPDU_rejectReason_unconfirmedPDU = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_unconfirmedPDU_other = 0 satisfies RejectPDU_rejectReason_unconfirmedPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_other
@@ -59,7 +59,7 @@ const RejectPDU_rejectReason_unconfirmedPDU_other: RejectPDU_rejectReason_unconf
  * @type {number}
  */
 export
-const other: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unconfirmedPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other = RejectPDU_rejectReason_unconfirmedPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service
@@ -70,7 +70,7 @@ const other: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unco
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service: RejectPDU_rejectReason_unconfirmedPDU = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service = 1 satisfies RejectPDU_rejectReason_unconfirmedPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service
@@ -81,7 +81,7 @@ const RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service: RejectPDU_reje
  * @type {number}
  */
 export
-const unrecognized_service: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognized_service = RejectPDU_rejectReason_unconfirmedPDU_unrecognized_service; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_invalid_argument
@@ -93,7 +93,7 @@ const unrecognized_service: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_re
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_unconfirmedPDU_invalid_argument: RejectPDU_rejectReason_unconfirmedPDU = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_unconfirmedPDU_invalid_argument = 2 satisfies RejectPDU_rejectReason_unconfirmedPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_invalid_argument
@@ -105,7 +105,7 @@ const RejectPDU_rejectReason_unconfirmedPDU_invalid_argument: RejectPDU_rejectRe
  * @type {number}
  */
 export
-const invalid_argument: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unconfirmedPDU_invalid_argument; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_argument = RejectPDU_rejectReason_unconfirmedPDU_invalid_argument; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded
@@ -116,7 +116,7 @@ const invalid_argument: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_reject
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded: RejectPDU_rejectReason_unconfirmedPDU = 3; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded = 3 satisfies RejectPDU_rejectReason_unconfirmedPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded
@@ -127,7 +127,7 @@ const RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded: RejectPDU_re
  * @type {number}
  */
 export
-const max_recursion_exceeded: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+const max_recursion_exceeded = RejectPDU_rejectReason_unconfirmedPDU_max_recursion_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range
@@ -139,7 +139,7 @@ const max_recursion_exceeded: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range: RejectPDU_rejectReason_unconfirmedPDU = 4; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range = 4 satisfies RejectPDU_rejectReason_unconfirmedPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range
@@ -151,7 +151,7 @@ const RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range: RejectPDU_reject
  * @type {number}
  */
 export
-const value_out_of_range: RejectPDU_rejectReason_unconfirmedPDU = RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
+const value_out_of_range = RejectPDU_rejectReason_unconfirmedPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RejectPDU_rejectReason_unconfirmedPDU = $._decodeInteger;
 export const _encode_RejectPDU_rejectReason_unconfirmedPDU = $._encodeInteger;
 

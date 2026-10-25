@@ -51,7 +51,7 @@ export type ReturnMode = _enum_for_ReturnMode | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ReturnMode_continuous: ReturnMode = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReturnMode_continuous = _enum_for_ReturnMode.continuous; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const ReturnMode_continuous: ReturnMode = 0; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const continuous: ReturnMode = ReturnMode_continuous; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const continuous = ReturnMode_continuous; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const continuous: ReturnMode = ReturnMode_continuous; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const ReturnMode_batch: ReturnMode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ReturnMode_batch = _enum_for_ReturnMode.batch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const ReturnMode_batch: ReturnMode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const batch: ReturnMode = ReturnMode_batch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const batch = ReturnMode_batch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

@@ -91,7 +91,7 @@ export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  * @constant
  * @type {number}
  */
-export const ControlledTestRequestType_independent: ControlledTestRequestType =
+export const ControlledTestRequestType_independent =
     ControlledTestRequestType.independent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const ControlledTestRequestType_independent: ControlledTestRequestType =
  * @constant
  * @type {number}
  */
-export const independent: ControlledTestRequestType =
+export const independent =
     ControlledTestRequestType.independent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const independent: ControlledTestRequestType =
  * @constant
  * @type {number}
  */
-export const ControlledTestRequestType_related: ControlledTestRequestType =
+export const ControlledTestRequestType_related =
     ControlledTestRequestType.related; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -135,7 +135,7 @@ export const ControlledTestRequestType_related: ControlledTestRequestType =
  * @constant
  * @type {number}
  */
-export const related: ControlledTestRequestType =
+export const related =
     ControlledTestRequestType.related; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

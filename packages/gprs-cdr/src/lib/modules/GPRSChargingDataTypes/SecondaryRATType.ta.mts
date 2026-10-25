@@ -32,7 +32,7 @@ type SecondaryRATType = INTEGER;
  * @type {number}
  */
 export
-const SecondaryRATType_nR: SecondaryRATType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SecondaryRATType_nR = 0 satisfies SecondaryRATType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecondaryRATType_nR
@@ -40,7 +40,7 @@ const SecondaryRATType_nR: SecondaryRATType = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const nR: SecondaryRATType = SecondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
+const nR = SecondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_SecondaryRATType: $.ASN1Decoder<SecondaryRATType> = $._decodeInteger;

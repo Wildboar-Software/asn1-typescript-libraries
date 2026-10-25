@@ -51,7 +51,7 @@ type ClassIdentifier = _enum_for_ClassIdentifier | ENUMERATED;
  * @type {number}
  */
 export
-const ClassIdentifier_personal: ClassIdentifier = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClassIdentifier_personal = _enum_for_ClassIdentifier.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -62,7 +62,7 @@ const ClassIdentifier_personal: ClassIdentifier = 0; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const personal: ClassIdentifier = ClassIdentifier_personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal = ClassIdentifier_personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ClassIdentifier_advertisement
@@ -73,7 +73,7 @@ const personal: ClassIdentifier = ClassIdentifier_personal; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ClassIdentifier_advertisement: ClassIdentifier = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClassIdentifier_advertisement = _enum_for_ClassIdentifier.advertisement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary advertisement
@@ -84,7 +84,7 @@ const ClassIdentifier_advertisement: ClassIdentifier = 1; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const advertisement: ClassIdentifier = ClassIdentifier_advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const advertisement = ClassIdentifier_advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ClassIdentifier_informational
@@ -95,7 +95,7 @@ const advertisement: ClassIdentifier = ClassIdentifier_advertisement; /* SHORT_N
  * @type {number}
  */
 export
-const ClassIdentifier_informational: ClassIdentifier = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClassIdentifier_informational = _enum_for_ClassIdentifier.informational; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary informational
@@ -106,7 +106,7 @@ const ClassIdentifier_informational: ClassIdentifier = 2; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const informational: ClassIdentifier = ClassIdentifier_informational; /* SHORT_NAMED_ENUMERATED_VALUE */
+const informational = ClassIdentifier_informational; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ClassIdentifier_auto
@@ -117,7 +117,7 @@ const informational: ClassIdentifier = ClassIdentifier_informational; /* SHORT_N
  * @type {number}
  */
 export
-const ClassIdentifier_auto: ClassIdentifier = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ClassIdentifier_auto = _enum_for_ClassIdentifier.auto; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auto
@@ -128,7 +128,7 @@ const ClassIdentifier_auto: ClassIdentifier = 3; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const auto: ClassIdentifier = ClassIdentifier_auto; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auto = ClassIdentifier_auto; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ClassIdentifier: $.ASN1Decoder<ClassIdentifier> = $._decodeEnumerated;
 export const _encode_ClassIdentifier: $.ASN1Encoder<ClassIdentifier> = $._encodeEnumerated;
 

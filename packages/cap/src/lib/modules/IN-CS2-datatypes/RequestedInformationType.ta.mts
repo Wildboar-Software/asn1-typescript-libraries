@@ -76,7 +76,7 @@ const RequestedInformationType = _enum_for_RequestedInformationType;
  * @type {number}
  */
 export
-const RequestedInformationType_callAttemptElapsedTime: RequestedInformationType = RequestedInformationType.callAttemptElapsedTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInformationType_callAttemptElapsedTime = RequestedInformationType.callAttemptElapsedTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callAttemptElapsedTime
@@ -84,7 +84,7 @@ const RequestedInformationType_callAttemptElapsedTime: RequestedInformationType 
  * @type {number}
  */
 export
-const callAttemptElapsedTime: RequestedInformationType = RequestedInformationType.callAttemptElapsedTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callAttemptElapsedTime = RequestedInformationType.callAttemptElapsedTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedInformationType_callStopTime
@@ -92,7 +92,7 @@ const callAttemptElapsedTime: RequestedInformationType = RequestedInformationTyp
  * @type {number}
  */
 export
-const RequestedInformationType_callStopTime: RequestedInformationType = RequestedInformationType.callStopTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInformationType_callStopTime = RequestedInformationType.callStopTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callStopTime
@@ -100,7 +100,7 @@ const RequestedInformationType_callStopTime: RequestedInformationType = Requeste
  * @type {number}
  */
 export
-const callStopTime: RequestedInformationType = RequestedInformationType.callStopTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callStopTime = RequestedInformationType.callStopTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedInformationType_callConnectedElapsedTime
@@ -108,7 +108,7 @@ const callStopTime: RequestedInformationType = RequestedInformationType.callStop
  * @type {number}
  */
 export
-const RequestedInformationType_callConnectedElapsedTime: RequestedInformationType = RequestedInformationType.callConnectedElapsedTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInformationType_callConnectedElapsedTime = RequestedInformationType.callConnectedElapsedTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callConnectedElapsedTime
@@ -116,7 +116,7 @@ const RequestedInformationType_callConnectedElapsedTime: RequestedInformationTyp
  * @type {number}
  */
 export
-const callConnectedElapsedTime: RequestedInformationType = RequestedInformationType.callConnectedElapsedTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callConnectedElapsedTime = RequestedInformationType.callConnectedElapsedTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedInformationType_calledAddress
@@ -124,7 +124,7 @@ const callConnectedElapsedTime: RequestedInformationType = RequestedInformationT
  * @type {number}
  */
 export
-const RequestedInformationType_calledAddress: RequestedInformationType = RequestedInformationType.calledAddress; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInformationType_calledAddress = RequestedInformationType.calledAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledAddress
@@ -132,7 +132,7 @@ const RequestedInformationType_calledAddress: RequestedInformationType = Request
  * @type {number}
  */
 export
-const calledAddress: RequestedInformationType = RequestedInformationType.calledAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calledAddress = RequestedInformationType.calledAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedInformationType_releaseCause
@@ -140,7 +140,7 @@ const calledAddress: RequestedInformationType = RequestedInformationType.calledA
  * @type {number}
  */
 export
-const RequestedInformationType_releaseCause: RequestedInformationType = RequestedInformationType.releaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInformationType_releaseCause = RequestedInformationType.releaseCause; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseCause
@@ -148,7 +148,7 @@ const RequestedInformationType_releaseCause: RequestedInformationType = Requeste
  * @type {number}
  */
 export
-const releaseCause: RequestedInformationType = RequestedInformationType.releaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseCause = RequestedInformationType.releaseCause; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RequestedInformationType = $._decodeEnumerated;
 export const _encode_RequestedInformationType = $._encodeEnumerated;
 

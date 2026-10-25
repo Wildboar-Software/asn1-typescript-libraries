@@ -53,7 +53,7 @@ type RUF_Outcome = _enum_for_RUF_Outcome | ENUMERATED;
  * @type {number}
  */
 export
-const RUF_Outcome_accepted: RUF_Outcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const RUF_Outcome_accepted = _enum_for_RUF_Outcome.accepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accepted
@@ -65,7 +65,7 @@ const RUF_Outcome_accepted: RUF_Outcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const accepted: RUF_Outcome = RUF_Outcome_accepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accepted = RUF_Outcome_accepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RUF_Outcome_rejected
@@ -77,7 +77,7 @@ const accepted: RUF_Outcome = RUF_Outcome_accepted; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RUF_Outcome_rejected: RUF_Outcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RUF_Outcome_rejected = _enum_for_RUF_Outcome.rejected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejected
@@ -89,7 +89,7 @@ const RUF_Outcome_rejected: RUF_Outcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rejected: RUF_Outcome = RUF_Outcome_rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejected = RUF_Outcome_rejected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RUF_Outcome_noResponseFromFreeMS
@@ -101,7 +101,7 @@ const rejected: RUF_Outcome = RUF_Outcome_rejected; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RUF_Outcome_noResponseFromFreeMS: RUF_Outcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const RUF_Outcome_noResponseFromFreeMS = _enum_for_RUF_Outcome.noResponseFromFreeMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noResponseFromFreeMS
@@ -113,7 +113,7 @@ const RUF_Outcome_noResponseFromFreeMS: RUF_Outcome = 2; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const noResponseFromFreeMS: RUF_Outcome = RUF_Outcome_noResponseFromFreeMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noResponseFromFreeMS = RUF_Outcome_noResponseFromFreeMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RUF_Outcome_noResponseFromBusyMS
@@ -125,7 +125,7 @@ const noResponseFromFreeMS: RUF_Outcome = RUF_Outcome_noResponseFromFreeMS; /* S
  * @type {number}
  */
 export
-const RUF_Outcome_noResponseFromBusyMS: RUF_Outcome = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const RUF_Outcome_noResponseFromBusyMS = _enum_for_RUF_Outcome.noResponseFromBusyMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noResponseFromBusyMS
@@ -137,7 +137,7 @@ const RUF_Outcome_noResponseFromBusyMS: RUF_Outcome = 3; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const noResponseFromBusyMS: RUF_Outcome = RUF_Outcome_noResponseFromBusyMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noResponseFromBusyMS = RUF_Outcome_noResponseFromBusyMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RUF_Outcome_udubFromFreeMS
@@ -149,7 +149,7 @@ const noResponseFromBusyMS: RUF_Outcome = RUF_Outcome_noResponseFromBusyMS; /* S
  * @type {number}
  */
 export
-const RUF_Outcome_udubFromFreeMS: RUF_Outcome = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const RUF_Outcome_udubFromFreeMS = _enum_for_RUF_Outcome.udubFromFreeMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary udubFromFreeMS
@@ -161,7 +161,7 @@ const RUF_Outcome_udubFromFreeMS: RUF_Outcome = 4; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const udubFromFreeMS: RUF_Outcome = RUF_Outcome_udubFromFreeMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const udubFromFreeMS = RUF_Outcome_udubFromFreeMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RUF_Outcome_udubFromBusyMS
@@ -173,7 +173,7 @@ const udubFromFreeMS: RUF_Outcome = RUF_Outcome_udubFromFreeMS; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const RUF_Outcome_udubFromBusyMS: RUF_Outcome = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const RUF_Outcome_udubFromBusyMS = _enum_for_RUF_Outcome.udubFromBusyMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary udubFromBusyMS
@@ -185,7 +185,7 @@ const RUF_Outcome_udubFromBusyMS: RUF_Outcome = 5; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const udubFromBusyMS: RUF_Outcome = RUF_Outcome_udubFromBusyMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const udubFromBusyMS = RUF_Outcome_udubFromBusyMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RUF_Outcome

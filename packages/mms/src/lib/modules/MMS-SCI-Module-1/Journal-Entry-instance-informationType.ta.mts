@@ -99,7 +99,7 @@ const Journal_Entry_instance_informationType = _enum_for_Journal_Entry_instance_
  * @type {number}
  */
 export
-const Journal_Entry_instance_informationType_annotation: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Journal_Entry_instance_informationType_annotation = Journal_Entry_instance_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary annotation
@@ -111,7 +111,7 @@ const Journal_Entry_instance_informationType_annotation: Journal_Entry_instance_
  * @type {number}
  */
 export
-const annotation: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.annotation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const annotation = Journal_Entry_instance_informationType.annotation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Journal_Entry_instance_informationType_event_data
@@ -124,7 +124,7 @@ const annotation: Journal_Entry_instance_informationType = Journal_Entry_instanc
  * @type {number}
  */
 export
-const Journal_Entry_instance_informationType_event_data: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const Journal_Entry_instance_informationType_event_data = Journal_Entry_instance_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary event_data
@@ -137,7 +137,7 @@ const Journal_Entry_instance_informationType_event_data: Journal_Entry_instance_
  * @type {number}
  */
 export
-const event_data: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.event_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const event_data = Journal_Entry_instance_informationType.event_data; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Journal_Entry_instance_informationType_data
@@ -150,7 +150,7 @@ const event_data: Journal_Entry_instance_informationType = Journal_Entry_instanc
  * @type {number}
  */
 export
-const Journal_Entry_instance_informationType_data: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
+const Journal_Entry_instance_informationType_data = Journal_Entry_instance_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary data
@@ -163,7 +163,7 @@ const Journal_Entry_instance_informationType_data: Journal_Entry_instance_inform
  * @type {number}
  */
 export
-const data: Journal_Entry_instance_informationType = Journal_Entry_instance_informationType.data; /* SHORT_NAMED_ENUMERATED_VALUE */
+const data = Journal_Entry_instance_informationType.data; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Journal_Entry_instance_informationType = $._decodeEnumerated;
 export const _encode_Journal_Entry_instance_informationType = $._encodeEnumerated;
 

@@ -66,7 +66,7 @@ export const ProtectionDirection = _enum_for_ProtectionDirection;
  * @constant
  * @type {number}
  */
-export const ProtectionDirection_transmit: ProtectionDirection =
+export const ProtectionDirection_transmit =
     ProtectionDirection.transmit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const ProtectionDirection_transmit: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const transmit: ProtectionDirection =
+export const transmit =
     ProtectionDirection.transmit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const transmit: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const ProtectionDirection_receive: ProtectionDirection =
+export const ProtectionDirection_receive =
     ProtectionDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const ProtectionDirection_receive: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const receive: ProtectionDirection =
+export const receive =
     ProtectionDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const receive: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const ProtectionDirection_bidirectional: ProtectionDirection =
+export const ProtectionDirection_bidirectional =
     ProtectionDirection.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const ProtectionDirection_bidirectional: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const bidirectional: ProtectionDirection =
+export const bidirectional =
     ProtectionDirection.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

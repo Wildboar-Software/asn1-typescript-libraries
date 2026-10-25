@@ -63,7 +63,7 @@ const SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
  * @type {number}
  */
 export
-const SMdeliveryReportRequested_yes: SMdeliveryReportRequested = SMdeliveryReportRequested.yes; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMdeliveryReportRequested_yes = SMdeliveryReportRequested.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary yes
@@ -71,7 +71,7 @@ const SMdeliveryReportRequested_yes: SMdeliveryReportRequested = SMdeliveryRepor
  * @type {number}
  */
 export
-const yes: SMdeliveryReportRequested = SMdeliveryReportRequested.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const yes = SMdeliveryReportRequested.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMdeliveryReportRequested_no
@@ -79,7 +79,7 @@ const yes: SMdeliveryReportRequested = SMdeliveryReportRequested.yes; /* SHORT_N
  * @type {number}
  */
 export
-const SMdeliveryReportRequested_no: SMdeliveryReportRequested = SMdeliveryReportRequested.no; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMdeliveryReportRequested_no = SMdeliveryReportRequested.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no
@@ -87,7 +87,7 @@ const SMdeliveryReportRequested_no: SMdeliveryReportRequested = SMdeliveryReport
  * @type {number}
  */
 export
-const no: SMdeliveryReportRequested = SMdeliveryReportRequested.no; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no = SMdeliveryReportRequested.no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMdeliveryReportRequested: $.ASN1Decoder<SMdeliveryReportRequested> = $._decodeEnumerated;

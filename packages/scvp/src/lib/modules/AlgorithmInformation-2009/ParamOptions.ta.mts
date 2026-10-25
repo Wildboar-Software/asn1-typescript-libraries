@@ -48,7 +48,7 @@ export type ParamOptions = _enum_for_ParamOptions | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_required = _enum_for_ParamOptions.required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary required
@@ -59,7 +59,7 @@ export const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const required = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParamOptions_preferredPresent
@@ -70,7 +70,7 @@ export const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_preferredPresent = _enum_for_ParamOptions.preferredPresent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preferredPresent
@@ -81,7 +81,7 @@ export const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const preferredPresent = ParamOptions_preferredPresent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParamOptions_preferredAbsent
@@ -92,7 +92,7 @@ export const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* 
  * @constant
  * @type {number}
  */
-export const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_preferredAbsent = _enum_for_ParamOptions.preferredAbsent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preferredAbsent
@@ -103,7 +103,7 @@ export const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const preferredAbsent = ParamOptions_preferredAbsent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParamOptions_absent
@@ -114,7 +114,7 @@ export const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SH
  * @constant
  * @type {number}
  */
-export const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_absent = _enum_for_ParamOptions.absent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absent
@@ -125,7 +125,7 @@ export const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const absent = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParamOptions_inheritable
@@ -136,7 +136,7 @@ export const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_inheritable = _enum_for_ParamOptions.inheritable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inheritable
@@ -147,7 +147,7 @@ export const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inheritable = ParamOptions_inheritable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParamOptions_optional
@@ -158,7 +158,7 @@ export const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_optional = _enum_for_ParamOptions.optional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary optional
@@ -169,7 +169,7 @@ export const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const optional: ParamOptions = ParamOptions_optional; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const optional = ParamOptions_optional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export const _decode_ParamOptions = $._decodeEnumerated;

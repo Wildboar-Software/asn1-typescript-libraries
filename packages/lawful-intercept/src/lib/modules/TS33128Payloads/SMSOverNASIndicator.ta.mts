@@ -110,7 +110,7 @@ const SMSOverNASIndicator = _enum_for_SMSOverNASIndicator;
  * @type {number}
  */
 export
-const SMSOverNASIndicator_sMSOverNASNotAllowed: SMSOverNASIndicator = SMSOverNASIndicator.sMSOverNASNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSOverNASIndicator_sMSOverNASNotAllowed = SMSOverNASIndicator.sMSOverNASNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSOverNASNotAllowed
@@ -124,7 +124,7 @@ const SMSOverNASIndicator_sMSOverNASNotAllowed: SMSOverNASIndicator = SMSOverNAS
  * @type {number}
  */
 export
-const sMSOverNASNotAllowed: SMSOverNASIndicator = SMSOverNASIndicator.sMSOverNASNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSOverNASNotAllowed = SMSOverNASIndicator.sMSOverNASNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSOverNASIndicator_sMSOverNASAllowed
@@ -138,7 +138,7 @@ const sMSOverNASNotAllowed: SMSOverNASIndicator = SMSOverNASIndicator.sMSOverNAS
  * @type {number}
  */
 export
-const SMSOverNASIndicator_sMSOverNASAllowed: SMSOverNASIndicator = SMSOverNASIndicator.sMSOverNASAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSOverNASIndicator_sMSOverNASAllowed = SMSOverNASIndicator.sMSOverNASAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSOverNASAllowed
@@ -152,7 +152,7 @@ const SMSOverNASIndicator_sMSOverNASAllowed: SMSOverNASIndicator = SMSOverNASInd
  * @type {number}
  */
 export
-const sMSOverNASAllowed: SMSOverNASIndicator = SMSOverNASIndicator.sMSOverNASAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSOverNASAllowed = SMSOverNASIndicator.sMSOverNASAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMSOverNASIndicator: $.ASN1Decoder<SMSOverNASIndicator> = $._decodeEnumerated;
 export const _encode_SMSOverNASIndicator: $.ASN1Encoder<SMSOverNASIndicator> = $._encodeEnumerated;
 

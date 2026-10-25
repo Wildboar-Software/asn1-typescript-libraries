@@ -38,7 +38,7 @@ type DiagFormat_unSupOp = INTEGER;
  * @type {number}
  */
 export
-const DiagFormat_unSupOp_and: DiagFormat_unSupOp = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_unSupOp_and = 0 satisfies DiagFormat_unSupOp; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_and
@@ -50,7 +50,7 @@ const DiagFormat_unSupOp_and: DiagFormat_unSupOp = 0; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const and: DiagFormat_unSupOp = DiagFormat_unSupOp_and; /* SHORT_NAMED_INTEGER_VALUE */
+const and = DiagFormat_unSupOp_and; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_or
@@ -62,7 +62,7 @@ const and: DiagFormat_unSupOp = DiagFormat_unSupOp_and; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const DiagFormat_unSupOp_or: DiagFormat_unSupOp = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_unSupOp_or = 1 satisfies DiagFormat_unSupOp; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_or
@@ -74,7 +74,7 @@ const DiagFormat_unSupOp_or: DiagFormat_unSupOp = 1; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const or: DiagFormat_unSupOp = DiagFormat_unSupOp_or; /* SHORT_NAMED_INTEGER_VALUE */
+const or = DiagFormat_unSupOp_or; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_and_not
@@ -86,7 +86,7 @@ const or: DiagFormat_unSupOp = DiagFormat_unSupOp_or; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const DiagFormat_unSupOp_and_not: DiagFormat_unSupOp = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_unSupOp_and_not = 2 satisfies DiagFormat_unSupOp; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_and_not
@@ -98,7 +98,7 @@ const DiagFormat_unSupOp_and_not: DiagFormat_unSupOp = 2; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const and_not: DiagFormat_unSupOp = DiagFormat_unSupOp_and_not; /* SHORT_NAMED_INTEGER_VALUE */
+const and_not = DiagFormat_unSupOp_and_not; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_prox
@@ -110,7 +110,7 @@ const and_not: DiagFormat_unSupOp = DiagFormat_unSupOp_and_not; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const DiagFormat_unSupOp_prox: DiagFormat_unSupOp = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_unSupOp_prox = 3 satisfies DiagFormat_unSupOp; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_unSupOp_prox
@@ -122,7 +122,7 @@ const DiagFormat_unSupOp_prox: DiagFormat_unSupOp = 3; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const prox: DiagFormat_unSupOp = DiagFormat_unSupOp_prox; /* SHORT_NAMED_INTEGER_VALUE */
+const prox = DiagFormat_unSupOp_prox; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_unSupOp: $.ASN1Decoder<DiagFormat_unSupOp> = $._decodeInteger;
 export const _encode_DiagFormat_unSupOp: $.ASN1Encoder<DiagFormat_unSupOp> = $._encodeInteger;
 

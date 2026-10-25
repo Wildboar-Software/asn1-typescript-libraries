@@ -96,7 +96,7 @@ const InstructionMode = _enum_for_InstructionMode;
  * @type {number}
  */
 export
-const InstructionMode_written_manual: InstructionMode = InstructionMode.written_manual; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_written_manual = InstructionMode.written_manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary written_manual
@@ -104,7 +104,7 @@ const InstructionMode_written_manual: InstructionMode = InstructionMode.written_
  * @type {number}
  */
 export
-const written_manual: InstructionMode = InstructionMode.written_manual; /* SHORT_NAMED_ENUMERATED_VALUE */
+const written_manual = InstructionMode.written_manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InstructionMode_poster
@@ -112,7 +112,7 @@ const written_manual: InstructionMode = InstructionMode.written_manual; /* SHORT
  * @type {number}
  */
 export
-const InstructionMode_poster: InstructionMode = InstructionMode.poster; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_poster = InstructionMode.poster; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary poster
@@ -120,7 +120,7 @@ const InstructionMode_poster: InstructionMode = InstructionMode.poster; /* LONG_
  * @type {number}
  */
 export
-const poster: InstructionMode = InstructionMode.poster; /* SHORT_NAMED_ENUMERATED_VALUE */
+const poster = InstructionMode.poster; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InstructionMode_video
@@ -133,7 +133,7 @@ const poster: InstructionMode = InstructionMode.poster; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const InstructionMode_video: InstructionMode = InstructionMode.video; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_video = InstructionMode.video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video
@@ -141,7 +141,7 @@ const InstructionMode_video: InstructionMode = InstructionMode.video; /* LONG_NA
  * @type {number}
  */
 export
-const video: InstructionMode = InstructionMode.video; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video = InstructionMode.video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InstructionMode_personal
@@ -149,7 +149,7 @@ const video: InstructionMode = InstructionMode.video; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const InstructionMode_personal: InstructionMode = InstructionMode.personal; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_personal = InstructionMode.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -157,7 +157,7 @@ const InstructionMode_personal: InstructionMode = InstructionMode.personal; /* L
  * @type {number}
  */
 export
-const personal: InstructionMode = InstructionMode.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal = InstructionMode.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
