@@ -136,8 +136,8 @@ const ExtendedStatus_localControl: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const localControl: number = ExtendedStatus_localControl; /* SHORT_NAMED_BIT */
-export const _decode_ExtendedStatus = $._decodeBitString;
-export const _encode_ExtendedStatus = $._encodeBitString;
+export const _decode_ExtendedStatus: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ExtendedStatus: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

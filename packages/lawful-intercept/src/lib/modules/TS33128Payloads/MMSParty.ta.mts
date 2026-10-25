@@ -91,7 +91,7 @@ class MMSParty {
          * @static
          */
 
-    public static _enum_for_nonLocalID = _enum_for_NonLocalID;
+    public static _enum_for_nonLocalID: typeof _enum_for_NonLocalID = _enum_for_NonLocalID;
 }
 
 /**

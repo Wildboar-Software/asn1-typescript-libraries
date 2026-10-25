@@ -147,7 +147,7 @@ class SetAgentStateArgument {
          * @static
          */
 
-    public static _enum_for_requestedAgentState = _enum_for_ReqAgentState;
+    public static _enum_for_requestedAgentState: typeof _enum_for_ReqAgentState = _enum_for_ReqAgentState;
 }
 
 /**

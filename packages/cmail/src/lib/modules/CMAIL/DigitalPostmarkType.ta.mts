@@ -146,7 +146,7 @@ export class DigitalPostmarkType {
    * @static
    */
 
-  public static _enum_for_deliveryType = _enum_for_DigitalPostmarkType_deliveryType;
+  public static _enum_for_deliveryType: typeof _enum_for_DigitalPostmarkType_deliveryType = _enum_for_DigitalPostmarkType_deliveryType;
 }
 
 

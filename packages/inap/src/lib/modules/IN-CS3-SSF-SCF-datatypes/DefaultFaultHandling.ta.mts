@@ -81,7 +81,7 @@ class DefaultFaultHandling {
          * @static
          */
 
-    public static _enum_for_action = _enum_for_DefaultFaultHandling_action;
+    public static _enum_for_action: typeof _enum_for_DefaultFaultHandling_action = _enum_for_DefaultFaultHandling_action;
 }
 
 /**

@@ -173,25 +173,25 @@ class AccessInfo {
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;        /**
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;        /**
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;        /**
          * @summary The enum used as the type of the component `establishmentStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_establishmentStatus = _enum_for_EstablishmentStatus;        /**
+    public static _enum_for_establishmentStatus: typeof _enum_for_EstablishmentStatus = _enum_for_EstablishmentStatus;        /**
          * @summary The enum used as the type of the component `aNTypeToReactivate`
          * @public
          * @static
          */
 
-    public static _enum_for_aNTypeToReactivate = _enum_for_AccessType;
+    public static _enum_for_aNTypeToReactivate: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

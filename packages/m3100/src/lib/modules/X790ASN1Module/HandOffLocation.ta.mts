@@ -28,12 +28,12 @@ export type HandOffLocation = GraphicString; // GraphicString
 
 
 
-export const _decode_HandOffLocation = $._decodeGraphicString;
+export const _decode_HandOffLocation: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_HandOffLocation = $._encodeGraphicString;
+export const _encode_HandOffLocation: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

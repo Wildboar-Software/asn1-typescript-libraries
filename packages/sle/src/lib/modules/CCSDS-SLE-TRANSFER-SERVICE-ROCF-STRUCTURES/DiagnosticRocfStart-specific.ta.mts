@@ -49,7 +49,7 @@ type DiagnosticRocfStart_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_outOfService = 0 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_outOfService: 0 = 0 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_outOfService
@@ -61,7 +61,7 @@ const DiagnosticRocfStart_specific_outOfService = 0 satisfies DiagnosticRocfStar
  * @type {number}
  */
 export
-const outOfService = DiagnosticRocfStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService: 0 = DiagnosticRocfStart_specific_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_unableToComply
@@ -75,7 +75,7 @@ const outOfService = DiagnosticRocfStart_specific_outOfService; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_unableToComply = 1 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_unableToComply: 1 = 1 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_unableToComply
@@ -87,7 +87,7 @@ const DiagnosticRocfStart_specific_unableToComply = 1 satisfies DiagnosticRocfSt
  * @type {number}
  */
 export
-const unableToComply = DiagnosticRocfStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
+const unableToComply: 1 = DiagnosticRocfStart_specific_unableToComply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidStartTime
@@ -100,7 +100,7 @@ const unableToComply = DiagnosticRocfStart_specific_unableToComply; /* SHORT_NAM
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_invalidStartTime = 2 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_invalidStartTime: 2 = 2 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidStartTime
@@ -112,7 +112,7 @@ const DiagnosticRocfStart_specific_invalidStartTime = 2 satisfies DiagnosticRocf
  * @type {number}
  */
 export
-const invalidStartTime = DiagnosticRocfStart_specific_invalidStartTime; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidStartTime: 2 = DiagnosticRocfStart_specific_invalidStartTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidStopTime
@@ -127,7 +127,7 @@ const invalidStartTime = DiagnosticRocfStart_specific_invalidStartTime; /* SHORT
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_invalidStopTime = 3 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_invalidStopTime: 3 = 3 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidStopTime
@@ -139,7 +139,7 @@ const DiagnosticRocfStart_specific_invalidStopTime = 3 satisfies DiagnosticRocfS
  * @type {number}
  */
 export
-const invalidStopTime = DiagnosticRocfStart_specific_invalidStopTime; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidStopTime: 3 = DiagnosticRocfStart_specific_invalidStopTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_missingTimeValue
@@ -152,7 +152,7 @@ const invalidStopTime = DiagnosticRocfStart_specific_invalidStopTime; /* SHORT_N
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_missingTimeValue = 4 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_missingTimeValue: 4 = 4 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_missingTimeValue
@@ -164,7 +164,7 @@ const DiagnosticRocfStart_specific_missingTimeValue = 4 satisfies DiagnosticRocf
  * @type {number}
  */
 export
-const missingTimeValue = DiagnosticRocfStart_specific_missingTimeValue; /* SHORT_NAMED_INTEGER_VALUE */
+const missingTimeValue: 4 = DiagnosticRocfStart_specific_missingTimeValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidGvcid
@@ -176,7 +176,7 @@ const missingTimeValue = DiagnosticRocfStart_specific_missingTimeValue; /* SHORT
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_invalidGvcid = 5 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_invalidGvcid: 5 = 5 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidGvcid
@@ -188,7 +188,7 @@ const DiagnosticRocfStart_specific_invalidGvcid = 5 satisfies DiagnosticRocfStar
  * @type {number}
  */
 export
-const invalidGvcid = DiagnosticRocfStart_specific_invalidGvcid; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidGvcid: 5 = DiagnosticRocfStart_specific_invalidGvcid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidControlWordType
@@ -201,7 +201,7 @@ const invalidGvcid = DiagnosticRocfStart_specific_invalidGvcid; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_invalidControlWordType = 6 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_invalidControlWordType: 6 = 6 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidControlWordType
@@ -213,7 +213,7 @@ const DiagnosticRocfStart_specific_invalidControlWordType = 6 satisfies Diagnost
  * @type {number}
  */
 export
-const invalidControlWordType = DiagnosticRocfStart_specific_invalidControlWordType; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidControlWordType: 6 = DiagnosticRocfStart_specific_invalidControlWordType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidTcVcid
@@ -226,7 +226,7 @@ const invalidControlWordType = DiagnosticRocfStart_specific_invalidControlWordTy
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_invalidTcVcid = 7 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_invalidTcVcid: 7 = 7 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidTcVcid
@@ -238,7 +238,7 @@ const DiagnosticRocfStart_specific_invalidTcVcid = 7 satisfies DiagnosticRocfSta
  * @type {number}
  */
 export
-const invalidTcVcid = DiagnosticRocfStart_specific_invalidTcVcid; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTcVcid: 7 = DiagnosticRocfStart_specific_invalidTcVcid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidUpdateMode
@@ -250,7 +250,7 @@ const invalidTcVcid = DiagnosticRocfStart_specific_invalidTcVcid; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DiagnosticRocfStart_specific_invalidUpdateMode = 8 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRocfStart_specific_invalidUpdateMode: 8 = 8 satisfies DiagnosticRocfStart_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRocfStart_specific_invalidUpdateMode
@@ -262,7 +262,7 @@ const DiagnosticRocfStart_specific_invalidUpdateMode = 8 satisfies DiagnosticRoc
  * @type {number}
  */
 export
-const invalidUpdateMode = DiagnosticRocfStart_specific_invalidUpdateMode; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidUpdateMode: 8 = DiagnosticRocfStart_specific_invalidUpdateMode; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRocfStart_specific: $.ASN1Decoder<DiagnosticRocfStart_specific> = $._decodeInteger;
 export const _encode_DiagnosticRocfStart_specific: $.ASN1Encoder<DiagnosticRocfStart_specific> = $._encodeInteger;
 

@@ -63,7 +63,7 @@ type CintCause = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_unknown = 0 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_unknown: 0 = 0 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unknown
@@ -72,7 +72,7 @@ const CintCause_unknown = 0 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unknown = CintCause_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown: 0 = CintCause_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintBnan
@@ -84,7 +84,7 @@ const unknown = CintCause_unknown; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintBnan = 1 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintBnan: 1 = 1 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintBnan
@@ -93,7 +93,7 @@ const CintCause_cintBnan = 1 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintBnan = CintCause_cintBnan; /* SHORT_NAMED_INTEGER_VALUE */
+const cintBnan: 1 = CintCause_cintBnan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintBus
@@ -106,7 +106,7 @@ const cintBnan = CintCause_cintBnan; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export
-const CintCause_cintBus = 2 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintBus: 2 = 2 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintBus
@@ -115,7 +115,7 @@ const CintCause_cintBus = 2 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintBus = CintCause_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
+const cintBus: 2 = CintCause_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintCug
@@ -127,7 +127,7 @@ const cintBus = CintCause_cintBus; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintCug = 3 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintCug: 3 = 3 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintCug
@@ -136,7 +136,7 @@ const CintCause_cintCug = 3 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintCug = CintCause_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
+const cintCug: 3 = CintCause_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintDnd
@@ -148,7 +148,7 @@ const cintCug = CintCause_cintCug; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintDnd = 4 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintDnd: 4 = 4 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintDnd
@@ -157,7 +157,7 @@ const CintCause_cintDnd = 4 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintDnd = CintCause_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
+const cintDnd: 4 = CintCause_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintIbd
@@ -169,7 +169,7 @@ const cintDnd = CintCause_cintDnd; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintIbd = 5 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintIbd: 5 = 5 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintIbd
@@ -178,7 +178,7 @@ const CintCause_cintIbd = 5 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintIbd = CintCause_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
+const cintIbd: 5 = CintCause_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintInn
@@ -190,7 +190,7 @@ const cintIbd = CintCause_cintIbd; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintInn = 6 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintInn: 6 = 6 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintInn
@@ -199,7 +199,7 @@ const CintCause_cintInn = 6 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintInn = CintCause_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInn: 6 = CintCause_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintMob1
@@ -211,7 +211,7 @@ const cintInn = CintCause_cintInn; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintMob1 = 7 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintMob1: 7 = 7 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintMob1
@@ -220,7 +220,7 @@ const CintCause_cintMob1 = 7 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob1 = CintCause_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob1: 7 = CintCause_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintMob2
@@ -232,7 +232,7 @@ const cintMob1 = CintCause_cintMob1; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintMob2 = 8 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintMob2: 8 = 8 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintMob2
@@ -241,7 +241,7 @@ const CintCause_cintMob2 = 8 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob2 = CintCause_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob2: 8 = CintCause_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintMob3
@@ -253,7 +253,7 @@ const cintMob2 = CintCause_cintMob2; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintMob3 = 9 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintMob3: 9 = 9 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintMob3
@@ -262,7 +262,7 @@ const CintCause_cintMob3 = 9 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintMob3 = CintCause_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
+const cintMob3: 9 = CintCause_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintNcmp
@@ -276,7 +276,7 @@ const cintMob3 = CintCause_cintMob3; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export
-const CintCause_cintNcmp = 10 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintNcmp: 10 = 10 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintNcmp
@@ -285,7 +285,7 @@ const CintCause_cintNcmp = 10 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintNcmp = CintCause_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcmp: 10 = CintCause_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintNcong
@@ -297,7 +297,7 @@ const cintNcmp = CintCause_cintNcmp; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintNcong = 11 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintNcong: 11 = 11 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintNcong
@@ -306,7 +306,7 @@ const CintCause_cintNcong = 11 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintNcong = CintCause_cintNcong; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNcong: 11 = CintCause_cintNcong; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintNre
@@ -320,7 +320,7 @@ const cintNcong = CintCause_cintNcong; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export
-const CintCause_cintNre = 12 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintNre: 12 = 12 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintNre
@@ -329,7 +329,7 @@ const CintCause_cintNre = 12 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintNre = CintCause_cintNre; /* SHORT_NAMED_INTEGER_VALUE */
+const cintNre: 12 = CintCause_cintNre; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintOos
@@ -343,7 +343,7 @@ const cintNre = CintCause_cintNre; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-220/
  */
 export
-const CintCause_cintOos = 13 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintOos: 13 = 13 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintOos
@@ -352,7 +352,7 @@ const CintCause_cintOos = 13 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintOos = CintCause_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
+const cintOos: 13 = CintCause_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintRrs
@@ -365,7 +365,7 @@ const cintOos = CintCause_cintOos; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintRrs = 14 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintRrs: 14 = 14 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintRrs
@@ -374,7 +374,7 @@ const CintCause_cintRrs = 14 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintRrs = CintCause_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
+const cintRrs: 14 = CintCause_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintTbnan
@@ -386,7 +386,7 @@ const cintRrs = CintCause_cintRrs; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintTbnan = 15 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintTbnan: 15 = 15 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintTbnan
@@ -395,7 +395,7 @@ const CintCause_cintTbnan = 15 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintTbnan = CintCause_cintTbnan; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTbnan: 15 = CintCause_cintTbnan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintTnre
@@ -408,7 +408,7 @@ const cintTbnan = CintCause_cintTbnan; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintTnre = 16 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintTnre: 16 = 16 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintTnre
@@ -417,7 +417,7 @@ const CintCause_cintTnre = 16 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintTnre = CintCause_cintTnre; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTnre: 16 = CintCause_cintTnre; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintTrans
@@ -429,7 +429,7 @@ const cintTnre = CintCause_cintTnre; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintTrans = 17 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintTrans: 17 = 17 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintTrans
@@ -438,7 +438,7 @@ const CintCause_cintTrans = 17 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cintTrans = CintCause_cintTrans; /* SHORT_NAMED_INTEGER_VALUE */
+const cintTrans: 17 = CintCause_cintTrans; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintUpl
@@ -450,7 +450,7 @@ const cintTrans = CintCause_cintTrans; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintUpl = 18 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintUpl: 18 = 18 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintUpl
@@ -459,7 +459,7 @@ const CintCause_cintUpl = 18 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const cintUpl = CintCause_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
+const cintUpl: 18 = CintCause_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintInvDiv
@@ -471,7 +471,7 @@ const cintUpl = CintCause_cintUpl; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintInvDiv = 19 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintInvDiv: 19 = 19 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintInvDiv
@@ -480,7 +480,7 @@ const CintCause_cintInvDiv = 19 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const cintInvDiv = CintCause_cintInvDiv; /* SHORT_NAMED_INTEGER_VALUE */
+const cintInvDiv: 19 = CintCause_cintInvDiv; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CintCause_cintHold
@@ -492,7 +492,7 @@ const cintInvDiv = CintCause_cintInvDiv; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-221/
  */
 export
-const CintCause_cintHold = 20 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
+const CintCause_cintHold: 20 = 20 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cintHold
@@ -501,7 +501,7 @@ const CintCause_cintHold = 20 satisfies CintCause; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const cintHold = CintCause_cintHold; /* SHORT_NAMED_INTEGER_VALUE */
+const cintHold: 20 = CintCause_cintHold; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CintCause = (el: _Element): CintCause => {

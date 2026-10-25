@@ -19,7 +19,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```
  */
 export type FER = _Element;
-export const _decode_FER = $._decodeAny;
-export const _encode_FER = $._encodeAny;
+export const _decode_FER: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_FER: $.ASN1Encoder<_Element> = $._encodeAny;
 
 /* eslint-enable */

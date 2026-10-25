@@ -474,31 +474,31 @@ class SMFUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_failedProcedureType = _enum_for_SMFFailedProcedureType;        /**
+    public static _enum_for_failedProcedureType: typeof _enum_for_SMFFailedProcedureType = _enum_for_SMFFailedProcedureType;        /**
          * @summary The enum used as the type of the component `initiator`
          * @public
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_Initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_Initiator = _enum_for_Initiator;        /**
          * @summary The enum used as the type of the component `requestType`
          * @public
          * @static
          */
 
-    public static _enum_for_requestType = _enum_for_FiveGSMRequestType;        /**
+    public static _enum_for_requestType: typeof _enum_for_FiveGSMRequestType = _enum_for_FiveGSMRequestType;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;        /**
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

@@ -96,7 +96,7 @@ class RoamingTrigger {
          * @static
          */
 
-    public static _enum_for_triggerCategory = _enum_for_TriggerCategory;
+    public static _enum_for_triggerCategory: typeof _enum_for_TriggerCategory = _enum_for_TriggerCategory;
 }
 
 /**

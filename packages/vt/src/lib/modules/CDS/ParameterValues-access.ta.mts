@@ -41,7 +41,7 @@ type ParameterValues_access = INTEGER;
  * @type {number}
  */
 export
-const ParameterValues_access_wavar = 0 satisfies ParameterValues_access; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_access_wavar: 0 = 0 satisfies ParameterValues_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary wavar
@@ -53,7 +53,7 @@ const ParameterValues_access_wavar = 0 satisfies ParameterValues_access; /* LONG
  * @type {number}
  */
 export
-const wavar = ParameterValues_access_wavar; /* SHORT_NAMED_INTEGER_VALUE */
+const wavar: 0 = ParameterValues_access_wavar; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_access_waci
@@ -65,7 +65,7 @@ const wavar = ParameterValues_access_wavar; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ParameterValues_access_waci = 1 satisfies ParameterValues_access; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_access_waci: 1 = 1 satisfies ParameterValues_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary waci
@@ -77,7 +77,7 @@ const ParameterValues_access_waci = 1 satisfies ParameterValues_access; /* LONG_
  * @type {number}
  */
 export
-const waci = ParameterValues_access_waci; /* SHORT_NAMED_INTEGER_VALUE */
+const waci: 1 = ParameterValues_access_waci; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_access_waca
@@ -89,7 +89,7 @@ const waci = ParameterValues_access_waci; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ParameterValues_access_waca = 2 satisfies ParameterValues_access; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_access_waca: 2 = 2 satisfies ParameterValues_access; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary waca
@@ -101,9 +101,9 @@ const ParameterValues_access_waca = 2 satisfies ParameterValues_access; /* LONG_
  * @type {number}
  */
 export
-const waca = ParameterValues_access_waca; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ParameterValues_access = $._decodeInteger;
-export const _encode_ParameterValues_access = $._encodeInteger;
+const waca: 2 = ParameterValues_access_waca; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ParameterValues_access: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ParameterValues_access: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

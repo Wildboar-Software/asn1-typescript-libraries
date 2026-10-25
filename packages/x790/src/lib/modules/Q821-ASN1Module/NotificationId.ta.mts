@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type NotificationId = INTEGER;
-export const _decode_NotificationId = $._decodeInteger;
-export const _encode_NotificationId = $._encodeInteger;
+export const _decode_NotificationId: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_NotificationId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

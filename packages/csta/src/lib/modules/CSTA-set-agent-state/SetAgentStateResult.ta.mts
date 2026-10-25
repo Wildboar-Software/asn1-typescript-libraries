@@ -93,7 +93,7 @@ class SetAgentStateResult {
          * @static
          */
 
-    public static _enum_for_pendingAgentState = _enum_for_PendingAgentState;
+    public static _enum_for_pendingAgentState: typeof _enum_for_PendingAgentState = _enum_for_PendingAgentState;
 }
 
 /**

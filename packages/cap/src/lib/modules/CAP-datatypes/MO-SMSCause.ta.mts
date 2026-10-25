@@ -31,7 +31,7 @@ export enum _enum_for_MO_SMSCause {
     releaseFromRadioInterface = 4,
 }
 export type MO_SMSCause = _enum_for_MO_SMSCause;
-export const MO_SMSCause = _enum_for_MO_SMSCause;
+export const MO_SMSCause: typeof _enum_for_MO_SMSCause = _enum_for_MO_SMSCause;
 /**
  * @summary MO_SMSCause_systemFailure
  * @description
@@ -40,7 +40,7 @@ export const MO_SMSCause = _enum_for_MO_SMSCause;
  *
  * @constant
  */
-export const MO_SMSCause_systemFailure = MO_SMSCause.systemFailure;
+export const MO_SMSCause_systemFailure: _enum_for_MO_SMSCause.systemFailure = MO_SMSCause.systemFailure;
 /**
  * @summary systemFailure
  * @description
@@ -49,7 +49,7 @@ export const MO_SMSCause_systemFailure = MO_SMSCause.systemFailure;
  *
  * @constant
  */
-export const systemFailure = MO_SMSCause.systemFailure;
+export const systemFailure: _enum_for_MO_SMSCause.systemFailure = MO_SMSCause.systemFailure;
 /**
  * @summary MO_SMSCause_unexpectedDataValue
  * @description
@@ -58,7 +58,7 @@ export const systemFailure = MO_SMSCause.systemFailure;
  *
  * @constant
  */
-export const MO_SMSCause_unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
+export const MO_SMSCause_unexpectedDataValue: _enum_for_MO_SMSCause.unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
 /**
  * @summary unexpectedDataValue
  * @description
@@ -67,7 +67,7 @@ export const MO_SMSCause_unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
  *
  * @constant
  */
-export const unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
+export const unexpectedDataValue: _enum_for_MO_SMSCause.unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
 /**
  * @summary MO_SMSCause_facilityNotSupported
  * @description
@@ -76,7 +76,7 @@ export const unexpectedDataValue = MO_SMSCause.unexpectedDataValue;
  *
  * @constant
  */
-export const MO_SMSCause_facilityNotSupported = MO_SMSCause.facilityNotSupported;
+export const MO_SMSCause_facilityNotSupported: _enum_for_MO_SMSCause.facilityNotSupported = MO_SMSCause.facilityNotSupported;
 /**
  * @summary facilityNotSupported
  * @description
@@ -85,7 +85,7 @@ export const MO_SMSCause_facilityNotSupported = MO_SMSCause.facilityNotSupported
  *
  * @constant
  */
-export const facilityNotSupported = MO_SMSCause.facilityNotSupported;
+export const facilityNotSupported: _enum_for_MO_SMSCause.facilityNotSupported = MO_SMSCause.facilityNotSupported;
 /**
  * @summary MO_SMSCause_sM_DeliveryFailure
  * @description
@@ -94,7 +94,7 @@ export const facilityNotSupported = MO_SMSCause.facilityNotSupported;
  *
  * @constant
  */
-export const MO_SMSCause_sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
+export const MO_SMSCause_sM_DeliveryFailure: _enum_for_MO_SMSCause.sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
 /**
  * @summary sM_DeliveryFailure
  * @description
@@ -103,7 +103,7 @@ export const MO_SMSCause_sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
  *
  * @constant
  */
-export const sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
+export const sM_DeliveryFailure: _enum_for_MO_SMSCause.sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
 /**
  * @summary MO_SMSCause_releaseFromRadioInterface
  * @description
@@ -112,7 +112,7 @@ export const sM_DeliveryFailure = MO_SMSCause.sM_DeliveryFailure;
  *
  * @constant
  */
-export const MO_SMSCause_releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface;
+export const MO_SMSCause_releaseFromRadioInterface: _enum_for_MO_SMSCause.releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface;
 /**
  * @summary releaseFromRadioInterface
  * @description
@@ -121,6 +121,6 @@ export const MO_SMSCause_releaseFromRadioInterface = MO_SMSCause.releaseFromRadi
  *
  * @constant
  */
-export const releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface;
-export const _decode_MO_SMSCause = $._decodeEnumerated;
-export const _encode_MO_SMSCause = $._encodeEnumerated;
+export const releaseFromRadioInterface: _enum_for_MO_SMSCause.releaseFromRadioInterface = MO_SMSCause.releaseFromRadioInterface;
+export const _decode_MO_SMSCause: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_MO_SMSCause: $.ASN1Encoder<number> = $._encodeEnumerated;

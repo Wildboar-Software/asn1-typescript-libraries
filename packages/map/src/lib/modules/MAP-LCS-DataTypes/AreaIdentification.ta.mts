@@ -46,7 +46,7 @@ export const _decode_AreaIdentification = (el: _Element): AreaIdentification => 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AreaIdentification, encoded as an ASN.1 Element.
  */
-export const _encode_AreaIdentification = $._encodeOctetString;
+export const _encode_AreaIdentification: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type EDIApplicationSecurityElement = BIT_STRING;
 
 
-export const _decode_EDIApplicationSecurityElement = $._decodeBitString;
+export const _decode_EDIApplicationSecurityElement: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_EDIApplicationSecurityElement = $._encodeBitString;
+export const _encode_EDIApplicationSecurityElement: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -327,25 +327,25 @@ class AMFDeregistration {
          * @static
          */
 
-    public static _enum_for_deregistrationDirection = _enum_for_AMFDirection;        /**
+    public static _enum_for_deregistrationDirection: typeof _enum_for_AMFDirection = _enum_for_AMFDirection;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;        /**
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;        /**
          * @summary The enum used as the type of the component `switchOffIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_switchOffIndicator = _enum_for_SwitchOffIndicator;        /**
+    public static _enum_for_switchOffIndicator: typeof _enum_for_SwitchOffIndicator = _enum_for_SwitchOffIndicator;        /**
          * @summary The enum used as the type of the component `reRegRequiredIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_reRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
+    public static _enum_for_reRegRequiredIndicator: typeof _enum_for_ReRegRequiredIndicator = _enum_for_ReRegRequiredIndicator;
 }
 
 /**

@@ -95,14 +95,14 @@ export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorR
  *
  * @enum {number}
  */
-export const ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
+export const ServiceProviderErrorResponseReason: typeof _enum_for_ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
 
 /**
  * @summary ServiceProviderErrorResponseReason_insufficientResources
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_insufficientResources =
+export const ServiceProviderErrorResponseReason_insufficientResources: _enum_for_ServiceProviderErrorResponseReason.insufficientResources =
     ServiceProviderErrorResponseReason.insufficientResources; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const ServiceProviderErrorResponseReason_insufficientResources =
  * @constant
  * @type {number}
  */
-export const insufficientResources =
+export const insufficientResources: _enum_for_ServiceProviderErrorResponseReason.insufficientResources =
     ServiceProviderErrorResponseReason.insufficientResources; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const insufficientResources =
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_providerDoesNotExist =
+export const ServiceProviderErrorResponseReason_providerDoesNotExist: _enum_for_ServiceProviderErrorResponseReason.providerDoesNotExist =
     ServiceProviderErrorResponseReason.providerDoesNotExist; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,7 +126,7 @@ export const ServiceProviderErrorResponseReason_providerDoesNotExist =
  * @constant
  * @type {number}
  */
-export const providerDoesNotExist =
+export const providerDoesNotExist: _enum_for_ServiceProviderErrorResponseReason.providerDoesNotExist =
     ServiceProviderErrorResponseReason.providerDoesNotExist; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const providerDoesNotExist =
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_providerNotAvailable =
+export const ServiceProviderErrorResponseReason_providerNotAvailable: _enum_for_ServiceProviderErrorResponseReason.providerNotAvailable =
     ServiceProviderErrorResponseReason.providerNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const ServiceProviderErrorResponseReason_providerNotAvailable =
  * @constant
  * @type {number}
  */
-export const providerNotAvailable =
+export const providerNotAvailable: _enum_for_ServiceProviderErrorResponseReason.providerNotAvailable =
     ServiceProviderErrorResponseReason.providerNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +150,7 @@ export const providerNotAvailable =
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable =
+export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable: _enum_for_ServiceProviderErrorResponseReason.requiredServiceNotAvailable =
     ServiceProviderErrorResponseReason.requiredServiceNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,7 +158,7 @@ export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable =
  * @constant
  * @type {number}
  */
-export const requiredServiceNotAvailable =
+export const requiredServiceNotAvailable: _enum_for_ServiceProviderErrorResponseReason.requiredServiceNotAvailable =
     ServiceProviderErrorResponseReason.requiredServiceNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ServiceProviderErrorResponseReason: $.ASN1Decoder<ServiceProviderErrorResponseReason> | null = null;

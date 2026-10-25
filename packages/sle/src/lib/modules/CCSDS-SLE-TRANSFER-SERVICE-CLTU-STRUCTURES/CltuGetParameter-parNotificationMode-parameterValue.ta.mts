@@ -43,7 +43,7 @@ type CltuGetParameter_parNotificationMode_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const CltuGetParameter_parNotificationMode_parameterValue_deferred = 0 satisfies CltuGetParameter_parNotificationMode_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parNotificationMode_parameterValue_deferred: 0 = 0 satisfies CltuGetParameter_parNotificationMode_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_deferred
@@ -55,7 +55,7 @@ const CltuGetParameter_parNotificationMode_parameterValue_deferred = 0 satisfies
  * @type {number}
  */
 export
-const deferred = CltuGetParameter_parNotificationMode_parameterValue_deferred; /* SHORT_NAMED_INTEGER_VALUE */
+const deferred: 0 = CltuGetParameter_parNotificationMode_parameterValue_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_immediate
@@ -67,7 +67,7 @@ const deferred = CltuGetParameter_parNotificationMode_parameterValue_deferred; /
  * @type {number}
  */
 export
-const CltuGetParameter_parNotificationMode_parameterValue_immediate = 1 satisfies CltuGetParameter_parNotificationMode_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parNotificationMode_parameterValue_immediate: 1 = 1 satisfies CltuGetParameter_parNotificationMode_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parNotificationMode_parameterValue_immediate
@@ -79,7 +79,7 @@ const CltuGetParameter_parNotificationMode_parameterValue_immediate = 1 satisfie
  * @type {number}
  */
 export
-const immediate = CltuGetParameter_parNotificationMode_parameterValue_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const immediate: 1 = CltuGetParameter_parNotificationMode_parameterValue_immediate; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CltuGetParameter_parNotificationMode_parameterValue: $.ASN1Decoder<CltuGetParameter_parNotificationMode_parameterValue> = $._decodeInteger;
 export const _encode_CltuGetParameter_parNotificationMode_parameterValue: $.ASN1Encoder<CltuGetParameter_parNotificationMode_parameterValue> = $._encodeInteger;
 

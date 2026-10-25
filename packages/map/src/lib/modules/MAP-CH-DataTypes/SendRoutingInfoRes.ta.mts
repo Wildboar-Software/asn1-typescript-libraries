@@ -404,13 +404,13 @@ class SendRoutingInfoRes {
          * @static
          */
 
-    public static _enum_for_numberPortabilityStatus = _enum_for_NumberPortabilityStatus;        /**
+    public static _enum_for_numberPortabilityStatus: typeof _enum_for_NumberPortabilityStatus = _enum_for_NumberPortabilityStatus;        /**
          * @summary The enum used as the type of the component `unavailabilityCause`
          * @public
          * @static
          */
 
-    public static _enum_for_unavailabilityCause = _enum_for_UnavailabilityCause;
+    public static _enum_for_unavailabilityCause: typeof _enum_for_UnavailabilityCause = _enum_for_UnavailabilityCause;
 }
 
 /**

@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SNPAPrefix = BIT_STRING;
 
 
-export const _decode_SNPAPrefix = $._decodeBitString;
+export const _decode_SNPAPrefix: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_SNPAPrefix = $._encodeBitString;
+export const _encode_SNPAPrefix: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

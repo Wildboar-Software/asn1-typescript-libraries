@@ -76,7 +76,7 @@ type CDRTransferMode = _enum_for_CDRTransferMode;
  * @enum {number}
  */
 export
-const CDRTransferMode = _enum_for_CDRTransferMode;
+const CDRTransferMode: typeof _enum_for_CDRTransferMode = _enum_for_CDRTransferMode;
 
 /**
  * @summary CDRTransferMode_transferAtEndOfCall
@@ -88,7 +88,7 @@ const CDRTransferMode = _enum_for_CDRTransferMode;
  * @type {number}
  */
 export
-const CDRTransferMode_transferAtEndOfCall = CDRTransferMode.transferAtEndOfCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTransferMode_transferAtEndOfCall: _enum_for_CDRTransferMode.transferAtEndOfCall = CDRTransferMode.transferAtEndOfCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferAtEndOfCall
@@ -96,7 +96,7 @@ const CDRTransferMode_transferAtEndOfCall = CDRTransferMode.transferAtEndOfCall;
  * @type {number}
  */
 export
-const transferAtEndOfCall = CDRTransferMode.transferAtEndOfCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferAtEndOfCall: _enum_for_CDRTransferMode.transferAtEndOfCall = CDRTransferMode.transferAtEndOfCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRTransferMode_transferOnRequest
@@ -108,7 +108,7 @@ const transferAtEndOfCall = CDRTransferMode.transferAtEndOfCall; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const CDRTransferMode_transferOnRequest = CDRTransferMode.transferOnRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTransferMode_transferOnRequest: _enum_for_CDRTransferMode.transferOnRequest = CDRTransferMode.transferOnRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferOnRequest
@@ -116,7 +116,7 @@ const CDRTransferMode_transferOnRequest = CDRTransferMode.transferOnRequest; /* 
  * @type {number}
  */
 export
-const transferOnRequest = CDRTransferMode.transferOnRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferOnRequest: _enum_for_CDRTransferMode.transferOnRequest = CDRTransferMode.transferOnRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CDRTransferMode_transferOnThresholdReached
@@ -128,7 +128,7 @@ const transferOnRequest = CDRTransferMode.transferOnRequest; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const CDRTransferMode_transferOnThresholdReached = CDRTransferMode.transferOnThresholdReached; /* LONG_NAMED_ENUMERATED_VALUE */
+const CDRTransferMode_transferOnThresholdReached: _enum_for_CDRTransferMode.transferOnThresholdReached = CDRTransferMode.transferOnThresholdReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferOnThresholdReached
@@ -136,7 +136,7 @@ const CDRTransferMode_transferOnThresholdReached = CDRTransferMode.transferOnThr
  * @type {number}
  */
 export
-const transferOnThresholdReached = CDRTransferMode.transferOnThresholdReached; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferOnThresholdReached: _enum_for_CDRTransferMode.transferOnThresholdReached = CDRTransferMode.transferOnThresholdReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CDRTransferMode: $.ASN1Decoder<CDRTransferMode> | null = null;
 

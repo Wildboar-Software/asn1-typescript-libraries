@@ -50,7 +50,7 @@ export const _decode_AgeOfLocationInformation = (el: _Element): AgeOfLocationInf
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AgeOfLocationInformation, encoded as an ASN.1 Element.
  */
-export const _encode_AgeOfLocationInformation = $._encodeInteger;
+export const _encode_AgeOfLocationInformation: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

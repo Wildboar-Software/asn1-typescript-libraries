@@ -34,5 +34,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type IPSSPCapabilities = OCTET_STRING;
-export const _decode_IPSSPCapabilities = $._decodeOctetString;
-export const _encode_IPSSPCapabilities = $._encodeOctetString;
+export const _decode_IPSSPCapabilities: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_IPSSPCapabilities: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

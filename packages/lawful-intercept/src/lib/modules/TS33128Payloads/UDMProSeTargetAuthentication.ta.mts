@@ -100,7 +100,7 @@ class UDMProSeTargetAuthentication {
          * @static
          */
 
-    public static _enum_for_authenticationType = _enum_for_PrimaryAuthenticationType;
+    public static _enum_for_authenticationType: typeof _enum_for_PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
 }
 
 /**

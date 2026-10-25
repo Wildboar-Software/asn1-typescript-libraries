@@ -226,19 +226,19 @@ class MMSMBoxStore {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `state`
          * @public
          * @static
          */
 
-    public static _enum_for_state = _enum_for_MMState;        /**
+    public static _enum_for_state: typeof _enum_for_MMState = _enum_for_MMState;        /**
          * @summary The enum used as the type of the component `storeStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_storeStatus = _enum_for_MMSStoreStatus;
+    public static _enum_for_storeStatus: typeof _enum_for_MMSStoreStatus = _enum_for_MMSStoreStatus;
 }
 
 /**

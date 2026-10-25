@@ -69,7 +69,7 @@ type CharacterSet = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_unknown = 0 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_unknown: 0 = 0 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unknown
@@ -78,7 +78,7 @@ const CharacterSet_unknown = 0 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const unknown = CharacterSet_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown: 0 = CharacterSet_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso8859_1
@@ -91,7 +91,7 @@ const unknown = CharacterSet_unknown; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso8859_1 = 1 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso8859_1: 1 = 1 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso8859_1
@@ -100,7 +100,7 @@ const CharacterSet_iso8859_1 = 1 satisfies CharacterSet; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const iso8859_1 = CharacterSet_iso8859_1; /* SHORT_NAMED_INTEGER_VALUE */
+const iso8859_1: 1 = CharacterSet_iso8859_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso8859_2
@@ -110,7 +110,7 @@ const iso8859_1 = CharacterSet_iso8859_1; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso8859_2 = 3 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso8859_2: 3 = 3 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso8859_2
@@ -119,7 +119,7 @@ const CharacterSet_iso8859_2 = 3 satisfies CharacterSet; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const iso8859_2 = CharacterSet_iso8859_2; /* SHORT_NAMED_INTEGER_VALUE */
+const iso8859_2: 3 = CharacterSet_iso8859_2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso8859_3
@@ -129,7 +129,7 @@ const iso8859_2 = CharacterSet_iso8859_2; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso8859_3 = 4 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso8859_3: 4 = 4 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso8859_3
@@ -138,7 +138,7 @@ const CharacterSet_iso8859_3 = 4 satisfies CharacterSet; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const iso8859_3 = CharacterSet_iso8859_3; /* SHORT_NAMED_INTEGER_VALUE */
+const iso8859_3: 4 = CharacterSet_iso8859_3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso8859_4
@@ -148,7 +148,7 @@ const iso8859_3 = CharacterSet_iso8859_3; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso8859_4 = 5 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso8859_4: 5 = 5 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso8859_4
@@ -157,7 +157,7 @@ const CharacterSet_iso8859_4 = 5 satisfies CharacterSet; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const iso8859_4 = CharacterSet_iso8859_4; /* SHORT_NAMED_INTEGER_VALUE */
+const iso8859_4: 5 = CharacterSet_iso8859_4; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso8859_5
@@ -167,7 +167,7 @@ const iso8859_4 = CharacterSet_iso8859_4; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso8859_5 = 6 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso8859_5: 6 = 6 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso8859_5
@@ -176,7 +176,7 @@ const CharacterSet_iso8859_5 = 6 satisfies CharacterSet; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const iso8859_5 = CharacterSet_iso8859_5; /* SHORT_NAMED_INTEGER_VALUE */
+const iso8859_5: 6 = CharacterSet_iso8859_5; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso8859_7
@@ -186,7 +186,7 @@ const iso8859_5 = CharacterSet_iso8859_5; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso8859_7 = 7 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso8859_7: 7 = 7 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso8859_7
@@ -195,7 +195,7 @@ const CharacterSet_iso8859_7 = 7 satisfies CharacterSet; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const iso8859_7 = CharacterSet_iso8859_7; /* SHORT_NAMED_INTEGER_VALUE */
+const iso8859_7: 7 = CharacterSet_iso8859_7; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso10646_BmpString
@@ -208,7 +208,7 @@ const iso8859_7 = CharacterSet_iso8859_7; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso10646_BmpString = 8 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso10646_BmpString: 8 = 8 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso10646_BmpString
@@ -217,7 +217,7 @@ const CharacterSet_iso10646_BmpString = 8 satisfies CharacterSet; /* LONG_NAMED_
  * @type {number}
  */
 export
-const iso10646_BmpString = CharacterSet_iso10646_BmpString; /* SHORT_NAMED_INTEGER_VALUE */
+const iso10646_BmpString: 8 = CharacterSet_iso10646_BmpString; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CharacterSet_iso10646_utf_8String
@@ -230,7 +230,7 @@ const iso10646_BmpString = CharacterSet_iso10646_BmpString; /* SHORT_NAMED_INTEG
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-164/
  */
 export
-const CharacterSet_iso10646_utf_8String = 9 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
+const CharacterSet_iso10646_utf_8String: 9 = 9 satisfies CharacterSet; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary iso10646_utf_8String
@@ -239,7 +239,7 @@ const CharacterSet_iso10646_utf_8String = 9 satisfies CharacterSet; /* LONG_NAME
  * @type {number}
  */
 export
-const iso10646_utf_8String = CharacterSet_iso10646_utf_8String; /* SHORT_NAMED_INTEGER_VALUE */
+const iso10646_utf_8String: 9 = CharacterSet_iso10646_utf_8String; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CharacterSet = (el: _Element): CharacterSet => {

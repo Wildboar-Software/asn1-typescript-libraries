@@ -31,7 +31,7 @@ export const _decode_Name = (el: _Element): Name => {
     }
     return value;
 };
-export const _encode_Name = $._encodeOctetString;
+export const _encode_Name: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

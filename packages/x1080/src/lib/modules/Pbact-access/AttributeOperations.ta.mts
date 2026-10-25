@@ -252,12 +252,12 @@ export const discloseOnError: number = AttributeOperations_discloseOnError; /* S
 
 
 
-export const _decode_AttributeOperations = $._decodeBitString;
+export const _decode_AttributeOperations: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_AttributeOperations = $._encodeBitString;
+export const _encode_AttributeOperations: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -37,7 +37,7 @@ type SortResponse_resultSetStatus = INTEGER;
  * @type {number}
  */
 export
-const SortResponse_resultSetStatus_empty = 1 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_resultSetStatus_empty: 1 = 1 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_empty
@@ -50,7 +50,7 @@ const SortResponse_resultSetStatus_empty = 1 satisfies SortResponse_resultSetSta
  * @type {number}
  */
 export
-const empty = SortResponse_resultSetStatus_empty; /* SHORT_NAMED_INTEGER_VALUE */
+const empty: 1 = SortResponse_resultSetStatus_empty; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_interim
@@ -63,7 +63,7 @@ const empty = SortResponse_resultSetStatus_empty; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const SortResponse_resultSetStatus_interim = 2 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_resultSetStatus_interim: 2 = 2 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_interim
@@ -76,7 +76,7 @@ const SortResponse_resultSetStatus_interim = 2 satisfies SortResponse_resultSetS
  * @type {number}
  */
 export
-const interim = SortResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_VALUE */
+const interim: 2 = SortResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_unchanged
@@ -89,7 +89,7 @@ const interim = SortResponse_resultSetStatus_interim; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const SortResponse_resultSetStatus_unchanged = 3 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_resultSetStatus_unchanged: 3 = 3 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_unchanged
@@ -102,7 +102,7 @@ const SortResponse_resultSetStatus_unchanged = 3 satisfies SortResponse_resultSe
  * @type {number}
  */
 export
-const unchanged = SortResponse_resultSetStatus_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
+const unchanged: 3 = SortResponse_resultSetStatus_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_none
@@ -115,7 +115,7 @@ const unchanged = SortResponse_resultSetStatus_unchanged; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const SortResponse_resultSetStatus_none = 4 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_resultSetStatus_none: 4 = 4 satisfies SortResponse_resultSetStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_resultSetStatus_none
@@ -128,7 +128,7 @@ const SortResponse_resultSetStatus_none = 4 satisfies SortResponse_resultSetStat
  * @type {number}
  */
 export
-const none = SortResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 4 = SortResponse_resultSetStatus_none; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortResponse_resultSetStatus: $.ASN1Decoder<SortResponse_resultSetStatus> = $._decodeInteger;
 export const _encode_SortResponse_resultSetStatus: $.ASN1Encoder<SortResponse_resultSetStatus> = $._encodeInteger;
 

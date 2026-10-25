@@ -99,7 +99,7 @@ class LADNInfo {
          * @static
          */
 
-    public static _enum_for_presence = _enum_for_PresenceState;
+    public static _enum_for_presence: typeof _enum_for_PresenceState = _enum_for_PresenceState;
 }
 
 /**

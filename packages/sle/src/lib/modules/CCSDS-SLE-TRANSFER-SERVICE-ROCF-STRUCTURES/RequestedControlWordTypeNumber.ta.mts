@@ -42,7 +42,7 @@ type RequestedControlWordTypeNumber = INTEGER;
  * @type {number}
  */
 export
-const RequestedControlWordTypeNumber_allControlWords = 0 satisfies RequestedControlWordTypeNumber; /* LONG_NAMED_INTEGER_VALUE */
+const RequestedControlWordTypeNumber_allControlWords: 0 = 0 satisfies RequestedControlWordTypeNumber; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedControlWordTypeNumber_allControlWords
@@ -54,7 +54,7 @@ const RequestedControlWordTypeNumber_allControlWords = 0 satisfies RequestedCont
  * @type {number}
  */
 export
-const allControlWords = RequestedControlWordTypeNumber_allControlWords; /* SHORT_NAMED_INTEGER_VALUE */
+const allControlWords: 0 = RequestedControlWordTypeNumber_allControlWords; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedControlWordTypeNumber_clcw
@@ -66,7 +66,7 @@ const allControlWords = RequestedControlWordTypeNumber_allControlWords; /* SHORT
  * @type {number}
  */
 export
-const RequestedControlWordTypeNumber_clcw = 1 satisfies RequestedControlWordTypeNumber; /* LONG_NAMED_INTEGER_VALUE */
+const RequestedControlWordTypeNumber_clcw: 1 = 1 satisfies RequestedControlWordTypeNumber; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedControlWordTypeNumber_clcw
@@ -78,7 +78,7 @@ const RequestedControlWordTypeNumber_clcw = 1 satisfies RequestedControlWordType
  * @type {number}
  */
 export
-const clcw = RequestedControlWordTypeNumber_clcw; /* SHORT_NAMED_INTEGER_VALUE */
+const clcw: 1 = RequestedControlWordTypeNumber_clcw; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedControlWordTypeNumber_notClcw
@@ -91,7 +91,7 @@ const clcw = RequestedControlWordTypeNumber_clcw; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const RequestedControlWordTypeNumber_notClcw = 2 satisfies RequestedControlWordTypeNumber; /* LONG_NAMED_INTEGER_VALUE */
+const RequestedControlWordTypeNumber_notClcw: 2 = 2 satisfies RequestedControlWordTypeNumber; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RequestedControlWordTypeNumber_notClcw
@@ -103,7 +103,7 @@ const RequestedControlWordTypeNumber_notClcw = 2 satisfies RequestedControlWordT
  * @type {number}
  */
 export
-const notClcw = RequestedControlWordTypeNumber_notClcw; /* SHORT_NAMED_INTEGER_VALUE */
+const notClcw: 2 = RequestedControlWordTypeNumber_notClcw; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RequestedControlWordTypeNumber: $.ASN1Decoder<RequestedControlWordTypeNumber> = $._decodeInteger;
 export const _encode_RequestedControlWordTypeNumber: $.ASN1Encoder<RequestedControlWordTypeNumber> = $._encodeInteger;
 

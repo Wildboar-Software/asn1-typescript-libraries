@@ -95,13 +95,13 @@ class EntryInformationSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_read_selector () { return EntryInformationSelection_read_selector_attributes_only; }        /**
+    public static get _default_value_for_read_selector (): _enum_for_EntryInformationSelection_read_selector.attributes_only { return EntryInformationSelection_read_selector_attributes_only; }        /**
          * @summary The enum used as the type of the component `read_selector`
          * @public
          * @static
          */
 
-    public static _enum_for_read_selector = _enum_for_EntryInformationSelection_read_selector;
+    public static _enum_for_read_selector: typeof _enum_for_EntryInformationSelection_read_selector = _enum_for_EntryInformationSelection_read_selector;
 }
 
 /**

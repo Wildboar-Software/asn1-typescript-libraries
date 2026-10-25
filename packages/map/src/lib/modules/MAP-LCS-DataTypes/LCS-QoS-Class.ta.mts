@@ -44,7 +44,7 @@ type LCS_QoS_Class = _enum_for_LCS_QoS_Class | ENUMERATED;
  * @type {number}
  */
 export
-const LCS_QoS_Class_bestEffort = _enum_for_LCS_QoS_Class.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_QoS_Class_bestEffort: _enum_for_LCS_QoS_Class.bestEffort = _enum_for_LCS_QoS_Class.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bestEffort
@@ -56,7 +56,7 @@ const LCS_QoS_Class_bestEffort = _enum_for_LCS_QoS_Class.bestEffort; /* LONG_NAM
  * @type {number}
  */
 export
-const bestEffort = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bestEffort: _enum_for_LCS_QoS_Class.bestEffort = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCS_QoS_Class_assured
@@ -68,7 +68,7 @@ const bestEffort = LCS_QoS_Class_bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LCS_QoS_Class_assured = _enum_for_LCS_QoS_Class.assured; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCS_QoS_Class_assured: _enum_for_LCS_QoS_Class.assured = _enum_for_LCS_QoS_Class.assured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary assured
@@ -80,7 +80,7 @@ const LCS_QoS_Class_assured = _enum_for_LCS_QoS_Class.assured; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const assured = LCS_QoS_Class_assured; /* SHORT_NAMED_ENUMERATED_VALUE */
+const assured: _enum_for_LCS_QoS_Class.assured = LCS_QoS_Class_assured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCS_QoS_Class
@@ -88,7 +88,7 @@ const assured = LCS_QoS_Class_assured; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LCS_QoS_Class = $._decodeEnumerated;
+export const _decode_LCS_QoS_Class: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCS_QoS_Class into an ASN.1 Element.
@@ -97,7 +97,7 @@ export const _decode_LCS_QoS_Class = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_QoS_Class, encoded as an ASN.1 Element.
  */
-export const _encode_LCS_QoS_Class = $._encodeEnumerated;
+export const _encode_LCS_QoS_Class: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

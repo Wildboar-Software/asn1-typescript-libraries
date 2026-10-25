@@ -31,8 +31,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DefineEventEnrollment_Response = NULL; // NullType
-export const _decode_DefineEventEnrollment_Response = $._decodeNull;
-export const _encode_DefineEventEnrollment_Response = $._encodeNull;
+export const _decode_DefineEventEnrollment_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_DefineEventEnrollment_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

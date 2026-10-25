@@ -60,14 +60,14 @@ export type AutoSubmitted = _enum_for_AutoSubmitted;
  *
  * @enum {number}
  */
-export const AutoSubmitted = _enum_for_AutoSubmitted;
+export const AutoSubmitted: typeof _enum_for_AutoSubmitted = _enum_for_AutoSubmitted;
 
 /**
  * @summary AutoSubmitted_not_auto_submitted
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_not_auto_submitted =
+export const AutoSubmitted_not_auto_submitted: _enum_for_AutoSubmitted.not_auto_submitted =
     AutoSubmitted.not_auto_submitted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -75,7 +75,7 @@ export const AutoSubmitted_not_auto_submitted =
  * @constant
  * @type {number}
  */
-export const not_auto_submitted =
+export const not_auto_submitted: _enum_for_AutoSubmitted.not_auto_submitted =
     AutoSubmitted.not_auto_submitted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -83,7 +83,7 @@ export const not_auto_submitted =
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_auto_generated =
+export const AutoSubmitted_auto_generated: _enum_for_AutoSubmitted.auto_generated =
     AutoSubmitted.auto_generated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -91,7 +91,7 @@ export const AutoSubmitted_auto_generated =
  * @constant
  * @type {number}
  */
-export const auto_generated =
+export const auto_generated: _enum_for_AutoSubmitted.auto_generated =
     AutoSubmitted.auto_generated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const auto_generated =
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_auto_replied =
+export const AutoSubmitted_auto_replied: _enum_for_AutoSubmitted.auto_replied =
     AutoSubmitted.auto_replied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const AutoSubmitted_auto_replied =
  * @constant
  * @type {number}
  */
-export const auto_replied =
+export const auto_replied: _enum_for_AutoSubmitted.auto_replied =
     AutoSubmitted.auto_replied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

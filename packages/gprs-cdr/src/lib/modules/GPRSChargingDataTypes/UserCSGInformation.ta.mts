@@ -116,7 +116,7 @@ class UserCSGInformation {
          * @static
          */
 
-    public static _enum_for_cSGAccessMode = _enum_for_CSGAccessMode;
+    public static _enum_for_cSGAccessMode: typeof _enum_for_CSGAccessMode = _enum_for_CSGAccessMode;
 }
 
 /**

@@ -63,14 +63,14 @@ export type ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
  *
  * @enum {number}
  */
-export const ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
+export const ProofOfDeliveryRequest: typeof _enum_for_ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
 
 /**
  * @summary ProofOfDeliveryRequest_proof_of_delivery_not_requested
  * @constant
  * @type {number}
  */
-export const ProofOfDeliveryRequest_proof_of_delivery_not_requested =
+export const ProofOfDeliveryRequest_proof_of_delivery_not_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_not_requested =
     ProofOfDeliveryRequest.proof_of_delivery_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const ProofOfDeliveryRequest_proof_of_delivery_not_requested =
  * @constant
  * @type {number}
  */
-export const proof_of_delivery_not_requested =
+export const proof_of_delivery_not_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_not_requested =
     ProofOfDeliveryRequest.proof_of_delivery_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const proof_of_delivery_not_requested =
  * @constant
  * @type {number}
  */
-export const ProofOfDeliveryRequest_proof_of_delivery_requested =
+export const ProofOfDeliveryRequest_proof_of_delivery_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_requested =
     ProofOfDeliveryRequest.proof_of_delivery_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const ProofOfDeliveryRequest_proof_of_delivery_requested =
  * @constant
  * @type {number}
  */
-export const proof_of_delivery_requested =
+export const proof_of_delivery_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_requested =
     ProofOfDeliveryRequest.proof_of_delivery_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

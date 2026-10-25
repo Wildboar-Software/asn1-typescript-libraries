@@ -102,10 +102,10 @@ export const PeerEntityAuthenticationPolicy_external: number = 5; /* LONG_NAMED_
 export const external: number = PeerEntityAuthenticationPolicy_external; /* SHORT_NAMED_BIT */
 
 
-export const _decode_PeerEntityAuthenticationPolicy = $._decodeBitString;
+export const _decode_PeerEntityAuthenticationPolicy: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_PeerEntityAuthenticationPolicy = $._encodeBitString;
+export const _encode_PeerEntityAuthenticationPolicy: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

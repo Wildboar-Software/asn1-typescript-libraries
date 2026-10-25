@@ -28,12 +28,12 @@ export type AccountName = GraphicString; // GraphicString
 
 
 
-export const _decode_AccountName = $._decodeGraphicString;
+export const _decode_AccountName: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_AccountName = $._encodeGraphicString;
+export const _encode_AccountName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

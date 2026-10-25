@@ -36,12 +36,12 @@ export type BioAPI_DATA = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_BioAPI_DATA = $._decodeOctetString;
+export const _decode_BioAPI_DATA: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_BioAPI_DATA = $._encodeOctetString;
+export const _encode_BioAPI_DATA: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

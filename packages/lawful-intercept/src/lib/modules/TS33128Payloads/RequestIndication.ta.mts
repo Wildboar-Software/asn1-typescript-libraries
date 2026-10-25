@@ -106,7 +106,7 @@ type RequestIndication = _enum_for_RequestIndication;
  * @enum {number}
  */
 export
-const RequestIndication = _enum_for_RequestIndication;
+const RequestIndication: typeof _enum_for_RequestIndication = _enum_for_RequestIndication;
 
 /**
  * @summary RequestIndication_uEREQPDUSESMOD
@@ -114,7 +114,7 @@ const RequestIndication = _enum_for_RequestIndication;
  * @type {number}
  */
 export
-const RequestIndication_uEREQPDUSESMOD = RequestIndication.uEREQPDUSESMOD; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_uEREQPDUSESMOD: _enum_for_RequestIndication.uEREQPDUSESMOD = RequestIndication.uEREQPDUSESMOD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEREQPDUSESMOD
@@ -122,7 +122,7 @@ const RequestIndication_uEREQPDUSESMOD = RequestIndication.uEREQPDUSESMOD; /* LO
  * @type {number}
  */
 export
-const uEREQPDUSESMOD = RequestIndication.uEREQPDUSESMOD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEREQPDUSESMOD: _enum_for_RequestIndication.uEREQPDUSESMOD = RequestIndication.uEREQPDUSESMOD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_uEREQPDUSESREL
@@ -130,7 +130,7 @@ const uEREQPDUSESMOD = RequestIndication.uEREQPDUSESMOD; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const RequestIndication_uEREQPDUSESREL = RequestIndication.uEREQPDUSESREL; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_uEREQPDUSESREL: _enum_for_RequestIndication.uEREQPDUSESREL = RequestIndication.uEREQPDUSESREL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEREQPDUSESREL
@@ -138,7 +138,7 @@ const RequestIndication_uEREQPDUSESREL = RequestIndication.uEREQPDUSESREL; /* LO
  * @type {number}
  */
 export
-const uEREQPDUSESREL = RequestIndication.uEREQPDUSESREL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEREQPDUSESREL: _enum_for_RequestIndication.uEREQPDUSESREL = RequestIndication.uEREQPDUSESREL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_pDUSESMOB
@@ -146,7 +146,7 @@ const uEREQPDUSESREL = RequestIndication.uEREQPDUSESREL; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const RequestIndication_pDUSESMOB = RequestIndication.pDUSESMOB; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_pDUSESMOB: _enum_for_RequestIndication.pDUSESMOB = RequestIndication.pDUSESMOB; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSESMOB
@@ -154,7 +154,7 @@ const RequestIndication_pDUSESMOB = RequestIndication.pDUSESMOB; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const pDUSESMOB = RequestIndication.pDUSESMOB; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSESMOB: _enum_for_RequestIndication.pDUSESMOB = RequestIndication.pDUSESMOB; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_nWREQPDUSESAUTH
@@ -162,7 +162,7 @@ const pDUSESMOB = RequestIndication.pDUSESMOB; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const RequestIndication_nWREQPDUSESAUTH = RequestIndication.nWREQPDUSESAUTH; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_nWREQPDUSESAUTH: _enum_for_RequestIndication.nWREQPDUSESAUTH = RequestIndication.nWREQPDUSESAUTH; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nWREQPDUSESAUTH
@@ -170,7 +170,7 @@ const RequestIndication_nWREQPDUSESAUTH = RequestIndication.nWREQPDUSESAUTH; /* 
  * @type {number}
  */
 export
-const nWREQPDUSESAUTH = RequestIndication.nWREQPDUSESAUTH; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nWREQPDUSESAUTH: _enum_for_RequestIndication.nWREQPDUSESAUTH = RequestIndication.nWREQPDUSESAUTH; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_nWREQPDUSESMOD
@@ -178,7 +178,7 @@ const nWREQPDUSESAUTH = RequestIndication.nWREQPDUSESAUTH; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const RequestIndication_nWREQPDUSESMOD = RequestIndication.nWREQPDUSESMOD; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_nWREQPDUSESMOD: _enum_for_RequestIndication.nWREQPDUSESMOD = RequestIndication.nWREQPDUSESMOD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nWREQPDUSESMOD
@@ -186,7 +186,7 @@ const RequestIndication_nWREQPDUSESMOD = RequestIndication.nWREQPDUSESMOD; /* LO
  * @type {number}
  */
 export
-const nWREQPDUSESMOD = RequestIndication.nWREQPDUSESMOD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nWREQPDUSESMOD: _enum_for_RequestIndication.nWREQPDUSESMOD = RequestIndication.nWREQPDUSESMOD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_nWREQPDUSESREL
@@ -194,7 +194,7 @@ const nWREQPDUSESMOD = RequestIndication.nWREQPDUSESMOD; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const RequestIndication_nWREQPDUSESREL = RequestIndication.nWREQPDUSESREL; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_nWREQPDUSESREL: _enum_for_RequestIndication.nWREQPDUSESREL = RequestIndication.nWREQPDUSESREL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nWREQPDUSESREL
@@ -202,7 +202,7 @@ const RequestIndication_nWREQPDUSESREL = RequestIndication.nWREQPDUSESREL; /* LO
  * @type {number}
  */
 export
-const nWREQPDUSESREL = RequestIndication.nWREQPDUSESREL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nWREQPDUSESREL: _enum_for_RequestIndication.nWREQPDUSESREL = RequestIndication.nWREQPDUSESREL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_eBIASSIGNMENTREQ
@@ -210,7 +210,7 @@ const nWREQPDUSESREL = RequestIndication.nWREQPDUSESREL; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const RequestIndication_eBIASSIGNMENTREQ = RequestIndication.eBIASSIGNMENTREQ; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_eBIASSIGNMENTREQ: _enum_for_RequestIndication.eBIASSIGNMENTREQ = RequestIndication.eBIASSIGNMENTREQ; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eBIASSIGNMENTREQ
@@ -218,7 +218,7 @@ const RequestIndication_eBIASSIGNMENTREQ = RequestIndication.eBIASSIGNMENTREQ; /
  * @type {number}
  */
 export
-const eBIASSIGNMENTREQ = RequestIndication.eBIASSIGNMENTREQ; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eBIASSIGNMENTREQ: _enum_for_RequestIndication.eBIASSIGNMENTREQ = RequestIndication.eBIASSIGNMENTREQ; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestIndication_rELDUETO5GANREQUEST
@@ -226,7 +226,7 @@ const eBIASSIGNMENTREQ = RequestIndication.eBIASSIGNMENTREQ; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const RequestIndication_rELDUETO5GANREQUEST = RequestIndication.rELDUETO5GANREQUEST; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestIndication_rELDUETO5GANREQUEST: _enum_for_RequestIndication.rELDUETO5GANREQUEST = RequestIndication.rELDUETO5GANREQUEST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELDUETO5GANREQUEST
@@ -234,7 +234,7 @@ const RequestIndication_rELDUETO5GANREQUEST = RequestIndication.rELDUETO5GANREQU
  * @type {number}
  */
 export
-const rELDUETO5GANREQUEST = RequestIndication.rELDUETO5GANREQUEST; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELDUETO5GANREQUEST: _enum_for_RequestIndication.rELDUETO5GANREQUEST = RequestIndication.rELDUETO5GANREQUEST; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RequestIndication: $.ASN1Decoder<RequestIndication> = $._decodeEnumerated;
 export const _encode_RequestIndication: $.ASN1Encoder<RequestIndication> = $._encodeEnumerated;
 

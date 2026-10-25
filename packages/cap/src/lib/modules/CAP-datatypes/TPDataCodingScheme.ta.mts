@@ -29,4 +29,4 @@ export const _decode_TPDataCodingScheme = (el: _Element): TPDataCodingScheme => 
     }
     return value;
 };
-export const _encode_TPDataCodingScheme = $._encodeOctetString;
+export const _encode_TPDataCodingScheme: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

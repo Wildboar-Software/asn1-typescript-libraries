@@ -82,7 +82,7 @@ type ResourceState = _enum_for_ResourceState | ENUMERATED;
  * @type {number}
  */
 export
-const ResourceState_reserved = _enum_for_ResourceState.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceState_reserved: _enum_for_ResourceState.reserved = _enum_for_ResourceState.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -98,7 +98,7 @@ const ResourceState_reserved = _enum_for_ResourceState.reserved; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const reserved = ResourceState_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved: _enum_for_ResourceState.reserved = ResourceState_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResourceState_committed
@@ -112,7 +112,7 @@ const reserved = ResourceState_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ResourceState_committed = _enum_for_ResourceState.committed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceState_committed: _enum_for_ResourceState.committed = _enum_for_ResourceState.committed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary committed
@@ -126,7 +126,7 @@ const ResourceState_committed = _enum_for_ResourceState.committed; /* LONG_NAMED
  * @type {number}
  */
 export
-const committed = ResourceState_committed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const committed: _enum_for_ResourceState.committed = ResourceState_committed; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ResourceState: $.ASN1Decoder<ResourceState> = $._decodeEnumerated;
 export const _encode_ResourceState: $.ASN1Encoder<ResourceState> = $._encodeEnumerated;
 

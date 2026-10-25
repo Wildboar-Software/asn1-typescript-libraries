@@ -118,13 +118,13 @@ class Provider {
          * @static
          */
 
-    public static _enum_for_typeProvider = _enum_for_TypeProvider;        /**
+    public static _enum_for_typeProvider: typeof _enum_for_TypeProvider = _enum_for_TypeProvider;        /**
          * @summary The enum used as the type of the component `roleProvider`
          * @public
          * @static
          */
 
-    public static _enum_for_roleProvider = _enum_for_RoleProvider;
+    public static _enum_for_roleProvider: typeof _enum_for_RoleProvider = _enum_for_RoleProvider;
 }
 
 /**

@@ -130,7 +130,7 @@ class MNPInfoRes {
          * @static
          */
 
-    public static _enum_for_numberPortabilityStatus = _enum_for_NumberPortabilityStatus;
+    public static _enum_for_numberPortabilityStatus: typeof _enum_for_NumberPortabilityStatus = _enum_for_NumberPortabilityStatus;
 }
 
 /**

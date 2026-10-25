@@ -298,7 +298,7 @@ class AMFLocationUpdate {
          * @static
          */
 
-    public static _enum_for_deprecatedSMSOverNASIndicator = _enum_for_SMSOverNASIndicator;
+    public static _enum_for_deprecatedSMSOverNASIndicator: typeof _enum_for_SMSOverNASIndicator = _enum_for_SMSOverNASIndicator;
 }
 
 /**

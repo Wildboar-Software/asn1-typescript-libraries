@@ -147,7 +147,7 @@ class NetworkCapability {
          * @static
          */
 
-    public static _enum_for_networkType = _enum_for_NetworkCapability_networkType;
+    public static _enum_for_networkType: typeof _enum_for_NetworkCapability_networkType = _enum_for_NetworkCapability_networkType;
 }
 
 /**

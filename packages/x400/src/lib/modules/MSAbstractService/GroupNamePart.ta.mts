@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type GroupNamePart = GeneralString; // GeneralString
 
 
-export const _decode_GroupNamePart = $._decodeGeneralString;
+export const _decode_GroupNamePart: $.ASN1Decoder<string> = $._decodeGeneralString;
 
 
-export const _encode_GroupNamePart = $._encodeGeneralString;
+export const _encode_GroupNamePart: $.ASN1Encoder<string> = $._encodeGeneralString;
 
 
 /* eslint-enable */

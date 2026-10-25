@@ -21,8 +21,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type SigParamValueV1 = OCTET_STRING; // OctetStringType
-export const _decode_SigParamValueV1 = $._decodeOctetString;
-export const _encode_SigParamValueV1 = $._encodeOctetString;
+export const _decode_SigParamValueV1: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_SigParamValueV1: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

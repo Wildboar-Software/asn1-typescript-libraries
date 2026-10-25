@@ -26,5 +26,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type AChBillingChargingCharacteristics = OCTET_STRING;
-export const _decode_AChBillingChargingCharacteristics = $._decodeOctetString;
-export const _encode_AChBillingChargingCharacteristics = $._encodeOctetString;
+export const _decode_AChBillingChargingCharacteristics: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_AChBillingChargingCharacteristics: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

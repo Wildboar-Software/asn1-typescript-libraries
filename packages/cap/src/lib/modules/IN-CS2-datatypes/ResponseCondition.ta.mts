@@ -68,7 +68,7 @@ type ResponseCondition = _enum_for_ResponseCondition;
  * @enum {number}
  */
 export
-const ResponseCondition = _enum_for_ResponseCondition;
+const ResponseCondition: typeof _enum_for_ResponseCondition = _enum_for_ResponseCondition;
 
 /**
  * @summary ResponseCondition_intermediateResponse
@@ -76,7 +76,7 @@ const ResponseCondition = _enum_for_ResponseCondition;
  * @type {number}
  */
 export
-const ResponseCondition_intermediateResponse = ResponseCondition.intermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseCondition_intermediateResponse: _enum_for_ResponseCondition.intermediateResponse = ResponseCondition.intermediateResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary intermediateResponse
@@ -84,7 +84,7 @@ const ResponseCondition_intermediateResponse = ResponseCondition.intermediateRes
  * @type {number}
  */
 export
-const intermediateResponse = ResponseCondition.intermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const intermediateResponse: _enum_for_ResponseCondition.intermediateResponse = ResponseCondition.intermediateResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseCondition_lastResponse
@@ -92,7 +92,7 @@ const intermediateResponse = ResponseCondition.intermediateResponse; /* SHORT_NA
  * @type {number}
  */
 export
-const ResponseCondition_lastResponse = ResponseCondition.lastResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseCondition_lastResponse: _enum_for_ResponseCondition.lastResponse = ResponseCondition.lastResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastResponse
@@ -100,9 +100,9 @@ const ResponseCondition_lastResponse = ResponseCondition.lastResponse; /* LONG_N
  * @type {number}
  */
 export
-const lastResponse = ResponseCondition.lastResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ResponseCondition = $._decodeEnumerated;
-export const _encode_ResponseCondition = $._encodeEnumerated;
+const lastResponse: _enum_for_ResponseCondition.lastResponse = ResponseCondition.lastResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ResponseCondition: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ResponseCondition: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -41,7 +41,7 @@ type MTLCSRecord_notificationToMSUser = _enum_for_MTLCSRecord_notificationToMSUs
  * @type {number}
  */
 export
-const MTLCSRecord_notificationToMSUser_notifyLocationAllowed = _enum_for_MTLCSRecord_notificationToMSUser.notifyLocationAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const MTLCSRecord_notificationToMSUser_notifyLocationAllowed: _enum_for_MTLCSRecord_notificationToMSUser.notifyLocationAllowed = _enum_for_MTLCSRecord_notificationToMSUser.notifyLocationAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyLocationAllowed
@@ -49,7 +49,7 @@ const MTLCSRecord_notificationToMSUser_notifyLocationAllowed = _enum_for_MTLCSRe
  * @type {number}
  */
 export
-const notifyLocationAllowed = MTLCSRecord_notificationToMSUser_notifyLocationAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyLocationAllowed: _enum_for_MTLCSRecord_notificationToMSUser.notifyLocationAllowed = MTLCSRecord_notificationToMSUser_notifyLocationAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse
@@ -57,7 +57,7 @@ const notifyLocationAllowed = MTLCSRecord_notificationToMSUser_notifyLocationAll
  * @type {number}
  */
 export
-const MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse = _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse: _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse = _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndVerify_LocationAllowedIfNoResponse
@@ -65,7 +65,7 @@ const MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoRespon
  * @type {number}
  */
 export
-const notifyAndVerify_LocationAllowedIfNoResponse = MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndVerify_LocationAllowedIfNoResponse: _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationAllowedIfNoResponse = MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse
@@ -73,7 +73,7 @@ const notifyAndVerify_LocationAllowedIfNoResponse = MTLCSRecord_notificationToMS
  * @type {number}
  */
 export
-const MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse = _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse: _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse = _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notifyAndVerify_LocationNotAllowedIfNoResponse
@@ -81,7 +81,7 @@ const MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoRes
  * @type {number}
  */
 export
-const notifyAndVerify_LocationNotAllowedIfNoResponse = MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notifyAndVerify_LocationNotAllowedIfNoResponse: _enum_for_MTLCSRecord_notificationToMSUser.notifyAndVerify_LocationNotAllowedIfNoResponse = MTLCSRecord_notificationToMSUser_notifyAndVerify_LocationNotAllowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MTLCSRecord_notificationToMSUser_locationNotAllowed
@@ -89,7 +89,7 @@ const notifyAndVerify_LocationNotAllowedIfNoResponse = MTLCSRecord_notificationT
  * @type {number}
  */
 export
-const MTLCSRecord_notificationToMSUser_locationNotAllowed = _enum_for_MTLCSRecord_notificationToMSUser.locationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const MTLCSRecord_notificationToMSUser_locationNotAllowed: _enum_for_MTLCSRecord_notificationToMSUser.locationNotAllowed = _enum_for_MTLCSRecord_notificationToMSUser.locationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationNotAllowed
@@ -97,7 +97,7 @@ const MTLCSRecord_notificationToMSUser_locationNotAllowed = _enum_for_MTLCSRecor
  * @type {number}
  */
 export
-const locationNotAllowed = MTLCSRecord_notificationToMSUser_locationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationNotAllowed: _enum_for_MTLCSRecord_notificationToMSUser.locationNotAllowed = MTLCSRecord_notificationToMSUser_locationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MTLCSRecord_notificationToMSUser: $.ASN1Decoder<MTLCSRecord_notificationToMSUser> = $._decodeEnumerated;

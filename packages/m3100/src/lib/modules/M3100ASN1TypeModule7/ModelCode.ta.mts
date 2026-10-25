@@ -28,12 +28,12 @@ export type ModelCode = GraphicString; // GraphicString
 
 
 
-export const _decode_ModelCode = $._decodeGraphicString;
+export const _decode_ModelCode: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ModelCode = $._encodeGraphicString;
+export const _encode_ModelCode: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

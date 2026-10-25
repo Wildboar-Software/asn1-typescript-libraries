@@ -27,8 +27,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AE_qualifier = _Element; // ObjectClassFieldType
-export const _decode_AE_qualifier = $._decodeAny;
-export const _encode_AE_qualifier = $._encodeAny;
+export const _decode_AE_qualifier: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_AE_qualifier: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

@@ -31,4 +31,4 @@ export const _decode_PDPID = (el: _Element): PDPID => {
     }
     return value;
 };
-export const _encode_PDPID = $._encodeOctetString;
+export const _encode_PDPID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

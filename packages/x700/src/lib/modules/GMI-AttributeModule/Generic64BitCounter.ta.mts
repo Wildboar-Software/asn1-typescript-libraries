@@ -36,12 +36,12 @@ export type Generic64BitCounter = INTEGER;
 
 
 
-export const _decode_Generic64BitCounter = $._decodeInteger;
+export const _decode_Generic64BitCounter: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Generic64BitCounter = $._encodeInteger;
+export const _encode_Generic64BitCounter: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -62,7 +62,7 @@ export type TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionalit
  *
  * @enum {number}
  */
-export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
+export const TopologicalEndDirectionality: typeof _enum_for_TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
 
 
 /**
@@ -70,7 +70,7 @@ export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionali
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_undefined =
+export const TopologicalEndDirectionality_undefined: _enum_for_TopologicalEndDirectionality.undefined =
     TopologicalEndDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -79,7 +79,7 @@ export const TopologicalEndDirectionality_undefined =
  * @constant
  * @type {number}
  */
-export const undefined =
+export const undefined: _enum_for_TopologicalEndDirectionality.undefined =
     TopologicalEndDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -88,7 +88,7 @@ export const undefined =
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_sink =
+export const TopologicalEndDirectionality_sink: _enum_for_TopologicalEndDirectionality.sink =
     TopologicalEndDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -97,7 +97,7 @@ export const TopologicalEndDirectionality_sink =
  * @constant
  * @type {number}
  */
-export const sink =
+export const sink: _enum_for_TopologicalEndDirectionality.sink =
     TopologicalEndDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -106,7 +106,7 @@ export const sink =
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_source =
+export const TopologicalEndDirectionality_source: _enum_for_TopologicalEndDirectionality.source =
     TopologicalEndDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const TopologicalEndDirectionality_source =
  * @constant
  * @type {number}
  */
-export const source =
+export const source: _enum_for_TopologicalEndDirectionality.source =
     TopologicalEndDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -124,7 +124,7 @@ export const source =
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_bidirectional =
+export const TopologicalEndDirectionality_bidirectional: _enum_for_TopologicalEndDirectionality.bidirectional =
     TopologicalEndDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -133,7 +133,7 @@ export const TopologicalEndDirectionality_bidirectional =
  * @constant
  * @type {number}
  */
-export const bidirectional =
+export const bidirectional: _enum_for_TopologicalEndDirectionality.bidirectional =
     TopologicalEndDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -34,10 +34,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SystemId = OCTET_STRING; // OctetStringType
 
 
-export const _decode_SystemId = $._decodeOctetString;
+export const _decode_SystemId: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_SystemId = $._encodeOctetString;
+export const _encode_SystemId: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

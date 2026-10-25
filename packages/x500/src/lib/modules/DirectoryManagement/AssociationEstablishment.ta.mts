@@ -45,10 +45,10 @@ export const AssociationEstablishment_outward: number = 1; /* LONG_NAMED_BIT */
 export const outward: number = AssociationEstablishment_outward; /* SHORT_NAMED_BIT */
 
 
-export const _decode_AssociationEstablishment = $._decodeBitString;
+export const _decode_AssociationEstablishment: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_AssociationEstablishment = $._encodeBitString;
+export const _encode_AssociationEstablishment: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

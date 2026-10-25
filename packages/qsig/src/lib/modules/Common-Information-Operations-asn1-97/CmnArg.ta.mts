@@ -164,7 +164,7 @@ class CmnArg {
          * @static
          */
 
-    public static _enum_for_partyCategory = _enum_for_PartyCategory;
+    public static _enum_for_partyCategory: typeof _enum_for_PartyCategory = _enum_for_PartyCategory;
 }
 
 /**

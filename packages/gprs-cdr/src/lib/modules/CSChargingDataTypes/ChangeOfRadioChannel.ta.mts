@@ -85,7 +85,7 @@ class ChangeOfRadioChannel {
          * @static
          */
 
-    public static _enum_for_radioChannel = _enum_for_TrafficChannel;
+    public static _enum_for_radioChannel: typeof _enum_for_TrafficChannel = _enum_for_TrafficChannel;
 }
 
 /**

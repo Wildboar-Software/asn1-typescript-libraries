@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ErrorResult = NULL; // NullType
 
 
-export const _decode_ErrorResult = $._decodeNull;
+export const _decode_ErrorResult: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_ErrorResult = $._encodeNull;
+export const _encode_ErrorResult: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

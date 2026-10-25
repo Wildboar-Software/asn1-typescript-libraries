@@ -72,7 +72,7 @@ export class IrisScan {
      * @static
      */
 
-    public static _enum_for_eye = _enum_for_IrisScan_eye;
+    public static _enum_for_eye: typeof _enum_for_IrisScan_eye = _enum_for_IrisScan_eye;
 }
 
 

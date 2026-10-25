@@ -48,7 +48,7 @@ type ICE_type = _enum_for_ICE_type | ENUMERATED;
  * @type {number}
  */
 export
-const ICE_type_mMSC = _enum_for_ICE_type.mMSC; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_mMSC: _enum_for_ICE_type.mMSC = _enum_for_ICE_type.mMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMSC
@@ -59,7 +59,7 @@ const ICE_type_mMSC = _enum_for_ICE_type.mMSC; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const mMSC = ICE_type_mMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMSC: _enum_for_ICE_type.mMSC = ICE_type_mMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ICE_type_mMSProxyRelay
@@ -72,7 +72,7 @@ const mMSC = ICE_type_mMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ICE_type_mMSProxyRelay = _enum_for_ICE_type.mMSProxyRelay; /* LONG_NAMED_ENUMERATED_VALUE */
+const ICE_type_mMSProxyRelay: _enum_for_ICE_type.mMSProxyRelay = _enum_for_ICE_type.mMSProxyRelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mMSProxyRelay
@@ -83,7 +83,7 @@ const ICE_type_mMSProxyRelay = _enum_for_ICE_type.mMSProxyRelay; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const mMSProxyRelay = ICE_type_mMSProxyRelay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mMSProxyRelay: _enum_for_ICE_type.mMSProxyRelay = ICE_type_mMSProxyRelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ICE_type: $.ASN1Decoder<ICE_type> = $._decodeEnumerated;
 export const _encode_ICE_type: $.ASN1Encoder<ICE_type> = $._encodeEnumerated;
 

@@ -34,7 +34,7 @@ export const _decode_CreditUnit = (el: _Element): CreditUnit => {
     }
     return value;
 };
-export const _encode_CreditUnit = $._encodeInteger;
+export const _encode_CreditUnit: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

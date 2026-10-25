@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type AttributeDescription = UTF8String; // UTF8String
 
 
-export const _decode_AttributeDescription = $._decodeUTF8String;
+export const _decode_AttributeDescription: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
-export const _encode_AttributeDescription = $._encodeUTF8String;
+export const _encode_AttributeDescription: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

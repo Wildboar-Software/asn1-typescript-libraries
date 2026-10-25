@@ -77,7 +77,7 @@ class IrisInformation {
          * @static
          */
 
-    public static _enum_for_eye = _enum_for_IrisInformation_eye;
+    public static _enum_for_eye: typeof _enum_for_IrisInformation_eye = _enum_for_IrisInformation_eye;
 }
 
 /**

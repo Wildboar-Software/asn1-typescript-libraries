@@ -37,48 +37,48 @@ export type RegisteredMailType = INTEGER;
  * @constant
  * @type {number}
  */
-export const RegisteredMailType_non_registered_mail = 0 satisfies RegisteredMailType; /* LONG_NAMED_INTEGER_VALUE */
+export const RegisteredMailType_non_registered_mail: 0 = 0 satisfies RegisteredMailType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_non_registered_mail
  * @constant
  * @type {number}
  */
-export const non_registered_mail = RegisteredMailType_non_registered_mail; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_registered_mail: 0 = RegisteredMailType_non_registered_mail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_registered_mail
  * @constant
  * @type {number}
  */
-export const RegisteredMailType_registered_mail = 1 satisfies RegisteredMailType; /* LONG_NAMED_INTEGER_VALUE */
+export const RegisteredMailType_registered_mail: 1 = 1 satisfies RegisteredMailType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_registered_mail
  * @constant
  * @type {number}
  */
-export const registered_mail = RegisteredMailType_registered_mail; /* SHORT_NAMED_INTEGER_VALUE */
+export const registered_mail: 1 = RegisteredMailType_registered_mail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_registered_mail_to_addressee_in_person
  * @constant
  * @type {number}
  */
-export const RegisteredMailType_registered_mail_to_addressee_in_person = 2 satisfies RegisteredMailType; /* LONG_NAMED_INTEGER_VALUE */
+export const RegisteredMailType_registered_mail_to_addressee_in_person: 2 = 2 satisfies RegisteredMailType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RegisteredMailType_registered_mail_to_addressee_in_person
  * @constant
  * @type {number}
  */
-export const registered_mail_to_addressee_in_person = RegisteredMailType_registered_mail_to_addressee_in_person; /* SHORT_NAMED_INTEGER_VALUE */
+export const registered_mail_to_addressee_in_person: 2 = RegisteredMailType_registered_mail_to_addressee_in_person; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_RegisteredMailType = $._decodeInteger;
+export const _decode_RegisteredMailType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RegisteredMailType = $._encodeInteger;
+export const _encode_RegisteredMailType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

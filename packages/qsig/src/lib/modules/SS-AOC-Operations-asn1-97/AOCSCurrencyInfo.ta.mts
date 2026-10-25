@@ -92,7 +92,7 @@ class AOCSCurrencyInfo {
          * @static
          */
 
-    public static _enum_for_chargedItem = _enum_for_ChargedItem;
+    public static _enum_for_chargedItem: typeof _enum_for_ChargedItem = _enum_for_ChargedItem;
 }
 
 /**

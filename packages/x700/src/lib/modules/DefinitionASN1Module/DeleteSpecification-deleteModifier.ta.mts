@@ -66,7 +66,7 @@ export type DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_d
  *
  * @enum {number}
  */
-export const DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
+export const DeleteSpecification_deleteModifier: typeof _enum_for_DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
 
 
 /**
@@ -78,7 +78,7 @@ export const DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_
  * @constant
  * @type {number}
  */
-export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects =
+export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects: _enum_for_DeleteSpecification_deleteModifier.onlyIfNoContainedObjects =
     DeleteSpecification_deleteModifier.onlyIfNoContainedObjects; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects =
  * @constant
  * @type {number}
  */
-export const onlyIfNoContainedObjects =
+export const onlyIfNoContainedObjects: _enum_for_DeleteSpecification_deleteModifier.onlyIfNoContainedObjects =
     DeleteSpecification_deleteModifier.onlyIfNoContainedObjects; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -104,7 +104,7 @@ export const onlyIfNoContainedObjects =
  * @constant
  * @type {number}
  */
-export const DeleteSpecification_deleteModifier_deletesContainedObjects =
+export const DeleteSpecification_deleteModifier_deletesContainedObjects: _enum_for_DeleteSpecification_deleteModifier.deletesContainedObjects =
     DeleteSpecification_deleteModifier.deletesContainedObjects; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -117,7 +117,7 @@ export const DeleteSpecification_deleteModifier_deletesContainedObjects =
  * @constant
  * @type {number}
  */
-export const deletesContainedObjects =
+export const deletesContainedObjects: _enum_for_DeleteSpecification_deleteModifier.deletesContainedObjects =
     DeleteSpecification_deleteModifier.deletesContainedObjects; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

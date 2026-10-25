@@ -259,7 +259,7 @@ class RoutingInfoForSM_Arg {
          * @static
          */
 
-    public static _enum_for_sm_deliveryNotIntended = _enum_for_SM_DeliveryNotIntended;
+    public static _enum_for_sm_deliveryNotIntended: typeof _enum_for_SM_DeliveryNotIntended = _enum_for_SM_DeliveryNotIntended;
 }
 
 /**

@@ -76,7 +76,7 @@ type ReachabilityType = _enum_for_ReachabilityType;
  * @enum {number}
  */
 export
-const ReachabilityType = _enum_for_ReachabilityType;
+const ReachabilityType: typeof _enum_for_ReachabilityType = _enum_for_ReachabilityType;
 
 /**
  * @summary ReachabilityType_reachabilityforSMS
@@ -90,7 +90,7 @@ const ReachabilityType = _enum_for_ReachabilityType;
  * @type {number}
  */
 export
-const ReachabilityType_reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReachabilityType_reachabilityforSMS: _enum_for_ReachabilityType.reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reachabilityforSMS
@@ -103,7 +103,7 @@ const ReachabilityType_reachabilityforSMS = ReachabilityType.reachabilityforSMS;
  * @type {number}
  */
 export
-const reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reachabilityforSMS: _enum_for_ReachabilityType.reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReachabilityType_reachabilityforData
@@ -117,7 +117,7 @@ const reachabilityforSMS = ReachabilityType.reachabilityforSMS; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ReachabilityType_reachabilityforData = ReachabilityType.reachabilityforData; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReachabilityType_reachabilityforData: _enum_for_ReachabilityType.reachabilityforData = ReachabilityType.reachabilityforData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reachabilityforData
@@ -130,7 +130,7 @@ const ReachabilityType_reachabilityforData = ReachabilityType.reachabilityforDat
  * @type {number}
  */
 export
-const reachabilityforData = ReachabilityType.reachabilityforData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reachabilityforData: _enum_for_ReachabilityType.reachabilityforData = ReachabilityType.reachabilityforData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ReachabilityType: $.ASN1Decoder<ReachabilityType> = $._decodeEnumerated;

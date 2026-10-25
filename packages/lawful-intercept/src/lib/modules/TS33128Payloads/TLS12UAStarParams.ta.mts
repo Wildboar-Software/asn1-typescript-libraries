@@ -241,19 +241,19 @@ class TLS12UAStarParams {
          * @static
          */
 
-    public static _enum_for_pRFAlgorithm = _enum_for_TLSPRFAlgorithm;        /**
+    public static _enum_for_pRFAlgorithm: typeof _enum_for_TLSPRFAlgorithm = _enum_for_TLSPRFAlgorithm;        /**
          * @summary The enum used as the type of the component `cipherType`
          * @public
          * @static
          */
 
-    public static _enum_for_cipherType = _enum_for_TLSCipherType;        /**
+    public static _enum_for_cipherType: typeof _enum_for_TLSCipherType = _enum_for_TLSCipherType;        /**
          * @summary The enum used as the type of the component `compressionAlgorithm`
          * @public
          * @static
          */
 
-    public static _enum_for_compressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
+    public static _enum_for_compressionAlgorithm: typeof _enum_for_TLSCompressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
 }
 
 /**

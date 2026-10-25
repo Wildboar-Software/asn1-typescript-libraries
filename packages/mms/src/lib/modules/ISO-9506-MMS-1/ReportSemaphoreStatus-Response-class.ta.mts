@@ -46,7 +46,7 @@ type ReportSemaphoreStatus_Response_class = INTEGER;
  * @type {number}
  */
 export
-const ReportSemaphoreStatus_Response_class_token = 0 satisfies ReportSemaphoreStatus_Response_class; /* LONG_NAMED_INTEGER_VALUE */
+const ReportSemaphoreStatus_Response_class_token: 0 = 0 satisfies ReportSemaphoreStatus_Response_class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_token
@@ -59,7 +59,7 @@ const ReportSemaphoreStatus_Response_class_token = 0 satisfies ReportSemaphoreSt
  * @type {number}
  */
 export
-const token = ReportSemaphoreStatus_Response_class_token; /* SHORT_NAMED_INTEGER_VALUE */
+const token: 0 = ReportSemaphoreStatus_Response_class_token; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_pool
@@ -73,7 +73,7 @@ const token = ReportSemaphoreStatus_Response_class_token; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const ReportSemaphoreStatus_Response_class_pool = 1 satisfies ReportSemaphoreStatus_Response_class; /* LONG_NAMED_INTEGER_VALUE */
+const ReportSemaphoreStatus_Response_class_pool: 1 = 1 satisfies ReportSemaphoreStatus_Response_class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreStatus_Response_class_pool
@@ -87,9 +87,9 @@ const ReportSemaphoreStatus_Response_class_pool = 1 satisfies ReportSemaphoreSta
  * @type {number}
  */
 export
-const pool = ReportSemaphoreStatus_Response_class_pool; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ReportSemaphoreStatus_Response_class = $._decodeInteger;
-export const _encode_ReportSemaphoreStatus_Response_class = $._encodeInteger;
+const pool: 1 = ReportSemaphoreStatus_Response_class_pool; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ReportSemaphoreStatus_Response_class: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ReportSemaphoreStatus_Response_class: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

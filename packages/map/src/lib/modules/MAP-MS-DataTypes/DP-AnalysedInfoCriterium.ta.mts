@@ -120,7 +120,7 @@ class DP_AnalysedInfoCriterium {
          * @static
          */
 
-    public static _enum_for_defaultCallHandling = _enum_for_DefaultCallHandling;
+    public static _enum_for_defaultCallHandling: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;
 }
 
 /**

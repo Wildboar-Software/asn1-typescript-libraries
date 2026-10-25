@@ -104,7 +104,7 @@ type VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
  * @enum {number}
  */
 export
-const VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
+const VoIPRoamingIndication: typeof _enum_for_VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
 
 /**
  * @summary VoIPRoamingIndication_roamingLBO
@@ -118,7 +118,7 @@ const VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
  * @type {number}
  */
 export
-const VoIPRoamingIndication_roamingLBO = VoIPRoamingIndication.roamingLBO; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoIPRoamingIndication_roamingLBO: _enum_for_VoIPRoamingIndication.roamingLBO = VoIPRoamingIndication.roamingLBO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingLBO
@@ -132,7 +132,7 @@ const VoIPRoamingIndication_roamingLBO = VoIPRoamingIndication.roamingLBO; /* LO
  * @type {number}
  */
 export
-const roamingLBO = VoIPRoamingIndication.roamingLBO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingLBO: _enum_for_VoIPRoamingIndication.roamingLBO = VoIPRoamingIndication.roamingLBO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VoIPRoamingIndication_roamingS8HR
@@ -146,7 +146,7 @@ const roamingLBO = VoIPRoamingIndication.roamingLBO; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const VoIPRoamingIndication_roamingS8HR = VoIPRoamingIndication.roamingS8HR; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoIPRoamingIndication_roamingS8HR: _enum_for_VoIPRoamingIndication.roamingS8HR = VoIPRoamingIndication.roamingS8HR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingS8HR
@@ -160,7 +160,7 @@ const VoIPRoamingIndication_roamingS8HR = VoIPRoamingIndication.roamingS8HR; /* 
  * @type {number}
  */
 export
-const roamingS8HR = VoIPRoamingIndication.roamingS8HR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingS8HR: _enum_for_VoIPRoamingIndication.roamingS8HR = VoIPRoamingIndication.roamingS8HR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VoIPRoamingIndication_roamingN9HR
@@ -174,7 +174,7 @@ const roamingS8HR = VoIPRoamingIndication.roamingS8HR; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const VoIPRoamingIndication_roamingN9HR = VoIPRoamingIndication.roamingN9HR; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoIPRoamingIndication_roamingN9HR: _enum_for_VoIPRoamingIndication.roamingN9HR = VoIPRoamingIndication.roamingN9HR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingN9HR
@@ -188,7 +188,7 @@ const VoIPRoamingIndication_roamingN9HR = VoIPRoamingIndication.roamingN9HR; /* 
  * @type {number}
  */
 export
-const roamingN9HR = VoIPRoamingIndication.roamingN9HR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingN9HR: _enum_for_VoIPRoamingIndication.roamingN9HR = VoIPRoamingIndication.roamingN9HR; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_VoIPRoamingIndication: $.ASN1Decoder<VoIPRoamingIndication> = $._decodeEnumerated;
 export const _encode_VoIPRoamingIndication: $.ASN1Encoder<VoIPRoamingIndication> = $._encodeEnumerated;
 

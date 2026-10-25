@@ -114,7 +114,7 @@ class OperatorLeaMessage {
          * @static
          */
 
-    public static _enum_for_messagePriority = _enum_for_OperatorLeaMessagePriority;
+    public static _enum_for_messagePriority: typeof _enum_for_OperatorLeaMessagePriority = _enum_for_OperatorLeaMessagePriority;
 }
 
 /**

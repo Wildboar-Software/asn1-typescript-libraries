@@ -106,12 +106,12 @@ export const no_access: number = Concurrency_Key_no_access; /* SHORT_NAMED_BIT *
 
 
 
-export const _decode_Concurrency_Key = $._decodeBitString;
+export const _decode_Concurrency_Key: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Concurrency_Key = $._encodeBitString;
+export const _encode_Concurrency_Key: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

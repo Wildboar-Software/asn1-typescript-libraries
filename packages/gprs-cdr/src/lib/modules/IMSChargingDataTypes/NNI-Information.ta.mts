@@ -133,19 +133,19 @@ class NNI_Information {
          * @static
          */
 
-    public static _enum_for_sessionDirection = _enum_for_SessionDirection;        /**
+    public static _enum_for_sessionDirection: typeof _enum_for_SessionDirection = _enum_for_SessionDirection;        /**
          * @summary The enum used as the type of the component `nNIType`
          * @public
          * @static
          */
 
-    public static _enum_for_nNIType = _enum_for_NNIType;        /**
+    public static _enum_for_nNIType: typeof _enum_for_NNIType = _enum_for_NNIType;        /**
          * @summary The enum used as the type of the component `relationshipMode`
          * @public
          * @static
          */
 
-    public static _enum_for_relationshipMode = _enum_for_RelationshipMode;
+    public static _enum_for_relationshipMode: typeof _enum_for_RelationshipMode = _enum_for_RelationshipMode;
 }
 
 /**

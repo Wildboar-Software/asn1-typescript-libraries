@@ -79,7 +79,7 @@ type DataPathDirection = _enum_for_DataPathDirection;
  * @enum {number}
  */
 export
-const DataPathDirection = _enum_for_DataPathDirection;
+const DataPathDirection: typeof _enum_for_DataPathDirection = _enum_for_DataPathDirection;
 
 /**
  * @summary DataPathDirection_computeFunctionToObject
@@ -91,7 +91,7 @@ const DataPathDirection = _enum_for_DataPathDirection;
  * @type {number}
  */
 export
-const DataPathDirection_computeFunctionToObject = DataPathDirection.computeFunctionToObject; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataPathDirection_computeFunctionToObject: _enum_for_DataPathDirection.computeFunctionToObject = DataPathDirection.computeFunctionToObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary computeFunctionToObject
@@ -103,7 +103,7 @@ const DataPathDirection_computeFunctionToObject = DataPathDirection.computeFunct
  * @type {number}
  */
 export
-const computeFunctionToObject = DataPathDirection.computeFunctionToObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const computeFunctionToObject: _enum_for_DataPathDirection.computeFunctionToObject = DataPathDirection.computeFunctionToObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataPathDirection_objectToComputeFunction
@@ -115,7 +115,7 @@ const computeFunctionToObject = DataPathDirection.computeFunctionToObject; /* SH
  * @type {number}
  */
 export
-const DataPathDirection_objectToComputeFunction = DataPathDirection.objectToComputeFunction; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataPathDirection_objectToComputeFunction: _enum_for_DataPathDirection.objectToComputeFunction = DataPathDirection.objectToComputeFunction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectToComputeFunction
@@ -127,7 +127,7 @@ const DataPathDirection_objectToComputeFunction = DataPathDirection.objectToComp
  * @type {number}
  */
 export
-const objectToComputeFunction = DataPathDirection.objectToComputeFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const objectToComputeFunction: _enum_for_DataPathDirection.objectToComputeFunction = DataPathDirection.objectToComputeFunction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataPathDirection_bidirectional
@@ -139,7 +139,7 @@ const objectToComputeFunction = DataPathDirection.objectToComputeFunction; /* SH
  * @type {number}
  */
 export
-const DataPathDirection_bidirectional = DataPathDirection.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataPathDirection_bidirectional: _enum_for_DataPathDirection.bidirectional = DataPathDirection.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bidirectional
@@ -151,7 +151,7 @@ const DataPathDirection_bidirectional = DataPathDirection.bidirectional; /* LONG
  * @type {number}
  */
 export
-const bidirectional = DataPathDirection.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bidirectional: _enum_for_DataPathDirection.bidirectional = DataPathDirection.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DataPathDirection: $.ASN1Decoder<DataPathDirection> | null = null;
 

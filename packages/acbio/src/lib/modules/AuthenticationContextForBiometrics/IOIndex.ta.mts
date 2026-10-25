@@ -28,12 +28,12 @@ export type IOIndex = INTEGER;
 
 
 
-export const _decode_IOIndex = $._decodeInteger;
+export const _decode_IOIndex: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_IOIndex = $._encodeInteger;
+export const _encode_IOIndex: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

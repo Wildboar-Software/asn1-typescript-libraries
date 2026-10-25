@@ -33,4 +33,4 @@ export const _decode_MT_SMSCause = (el: _Element): MT_SMSCause => {
     }
     return value;
 };
-export const _encode_MT_SMSCause = $._encodeOctetString;
+export const _encode_MT_SMSCause: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

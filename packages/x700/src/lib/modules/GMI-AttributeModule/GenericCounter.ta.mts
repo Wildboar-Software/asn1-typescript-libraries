@@ -36,12 +36,12 @@ export type GenericCounter = INTEGER;
 
 
 
-export const _decode_GenericCounter = $._decodeInteger;
+export const _decode_GenericCounter: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_GenericCounter = $._encodeInteger;
+export const _encode_GenericCounter: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

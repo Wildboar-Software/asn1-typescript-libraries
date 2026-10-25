@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type InterchangeLength = INTEGER;
 
 
-export const _decode_InterchangeLength = $._decodeInteger;
+export const _decode_InterchangeLength: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_InterchangeLength = $._encodeInteger;
+export const _encode_InterchangeLength: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

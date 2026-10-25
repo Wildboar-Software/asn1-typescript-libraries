@@ -33,12 +33,12 @@ export type KerberosFlags = BIT_STRING;
 
 
 
-export const _decode_KerberosFlags = $._decodeBitString;
+export const _decode_KerberosFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_KerberosFlags = $._encodeBitString;
+export const _encode_KerberosFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

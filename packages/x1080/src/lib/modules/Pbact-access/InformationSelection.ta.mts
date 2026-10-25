@@ -118,7 +118,7 @@ export class InformationSelection {
      * @static
      */
 
-    public static _enum_for_infoTypes = _enum_for_InformationSelection_infoTypes;
+    public static _enum_for_infoTypes: typeof _enum_for_InformationSelection_infoTypes = _enum_for_InformationSelection_infoTypes;
 }
 
 

@@ -47,7 +47,7 @@ export const _decode_Restoration_Priority = (el: _Element): Restoration_Priority
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Restoration_Priority, encoded as an ASN.1 Element.
  */
-export const _encode_Restoration_Priority = $._encodeOctetString;
+export const _encode_Restoration_Priority: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

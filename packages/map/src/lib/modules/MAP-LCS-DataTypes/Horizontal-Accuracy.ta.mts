@@ -46,7 +46,7 @@ export const _decode_Horizontal_Accuracy = (el: _Element): Horizontal_Accuracy =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Horizontal_Accuracy, encoded as an ASN.1 Element.
  */
-export const _encode_Horizontal_Accuracy = $._encodeOctetString;
+export const _encode_Horizontal_Accuracy: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

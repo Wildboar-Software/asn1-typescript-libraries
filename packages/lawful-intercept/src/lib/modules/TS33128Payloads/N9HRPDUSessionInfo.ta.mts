@@ -135,7 +135,7 @@ class N9HRPDUSessionInfo {
          * @static
          */
 
-    public static _enum_for_messageCause = _enum_for_N9HRMessageCause;
+    public static _enum_for_messageCause: typeof _enum_for_N9HRMessageCause = _enum_for_N9HRMessageCause;
 }
 
 /**

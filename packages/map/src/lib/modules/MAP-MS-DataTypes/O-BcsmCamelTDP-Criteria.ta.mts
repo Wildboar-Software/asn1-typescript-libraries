@@ -148,13 +148,13 @@ class O_BcsmCamelTDP_Criteria {
          * @static
          */
 
-    public static _enum_for_o_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint;        /**
+    public static _enum_for_o_BcsmTriggerDetectionPoint: typeof _enum_for_O_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `callTypeCriteria`
          * @public
          * @static
          */
 
-    public static _enum_for_callTypeCriteria = _enum_for_CallTypeCriteria;
+    public static _enum_for_callTypeCriteria: typeof _enum_for_CallTypeCriteria = _enum_for_CallTypeCriteria;
 }
 
 /**

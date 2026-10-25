@@ -33,8 +33,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DefineScatteredAccess_Response = NULL; // NullType
-export const _decode_DefineScatteredAccess_Response = $._decodeNull;
-export const _encode_DefineScatteredAccess_Response = $._encodeNull;
+export const _decode_DefineScatteredAccess_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_DefineScatteredAccess_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

@@ -46,7 +46,7 @@ export const _decode_MS_Classmark2 = (el: _Element): MS_Classmark2 => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MS_Classmark2, encoded as an ASN.1 Element.
  */
-export const _encode_MS_Classmark2 = $._encodeOctetString;
+export const _encode_MS_Classmark2: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

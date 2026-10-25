@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ContactFunction = UniversalString; // UniversalString
 
 
-export const _decode_ContactFunction = $._decodeUniversalString;
+export const _decode_ContactFunction: $.ASN1Decoder<string> = $._decodeUniversalString;
 
 
-export const _encode_ContactFunction = $._encodeUniversalString;
+export const _encode_ContactFunction: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

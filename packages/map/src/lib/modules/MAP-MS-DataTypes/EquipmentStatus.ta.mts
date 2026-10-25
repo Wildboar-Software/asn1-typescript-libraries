@@ -77,7 +77,7 @@ type EquipmentStatus = _enum_for_EquipmentStatus;
  * @enum {number}
  */
 export
-const EquipmentStatus = _enum_for_EquipmentStatus;
+const EquipmentStatus: typeof _enum_for_EquipmentStatus = _enum_for_EquipmentStatus;
 
 /**
  * @summary EquipmentStatus_permittedListed
@@ -85,7 +85,7 @@ const EquipmentStatus = _enum_for_EquipmentStatus;
  * @type {number}
  */
 export
-const EquipmentStatus_permittedListed = EquipmentStatus.permittedListed; /* LONG_NAMED_ENUMERATED_VALUE */
+const EquipmentStatus_permittedListed: _enum_for_EquipmentStatus.permittedListed = EquipmentStatus.permittedListed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary permittedListed
@@ -93,7 +93,7 @@ const EquipmentStatus_permittedListed = EquipmentStatus.permittedListed; /* LONG
  * @type {number}
  */
 export
-const permittedListed = EquipmentStatus.permittedListed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const permittedListed: _enum_for_EquipmentStatus.permittedListed = EquipmentStatus.permittedListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EquipmentStatus_prohibitedListed
@@ -101,7 +101,7 @@ const permittedListed = EquipmentStatus.permittedListed; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const EquipmentStatus_prohibitedListed = EquipmentStatus.prohibitedListed; /* LONG_NAMED_ENUMERATED_VALUE */
+const EquipmentStatus_prohibitedListed: _enum_for_EquipmentStatus.prohibitedListed = EquipmentStatus.prohibitedListed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary prohibitedListed
@@ -109,7 +109,7 @@ const EquipmentStatus_prohibitedListed = EquipmentStatus.prohibitedListed; /* LO
  * @type {number}
  */
 export
-const prohibitedListed = EquipmentStatus.prohibitedListed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const prohibitedListed: _enum_for_EquipmentStatus.prohibitedListed = EquipmentStatus.prohibitedListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EquipmentStatus_trackingListed
@@ -117,7 +117,7 @@ const prohibitedListed = EquipmentStatus.prohibitedListed; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const EquipmentStatus_trackingListed = EquipmentStatus.trackingListed; /* LONG_NAMED_ENUMERATED_VALUE */
+const EquipmentStatus_trackingListed: _enum_for_EquipmentStatus.trackingListed = EquipmentStatus.trackingListed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trackingListed
@@ -125,7 +125,7 @@ const EquipmentStatus_trackingListed = EquipmentStatus.trackingListed; /* LONG_N
  * @type {number}
  */
 export
-const trackingListed = EquipmentStatus.trackingListed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trackingListed: _enum_for_EquipmentStatus.trackingListed = EquipmentStatus.trackingListed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) EquipmentStatus
@@ -133,7 +133,7 @@ const trackingListed = EquipmentStatus.trackingListed; /* SHORT_NAMED_ENUMERATED
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_EquipmentStatus = $._decodeEnumerated;
+export const _decode_EquipmentStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) EquipmentStatus into an ASN.1 Element.
@@ -142,7 +142,7 @@ export const _decode_EquipmentStatus = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EquipmentStatus, encoded as an ASN.1 Element.
  */
-export const _encode_EquipmentStatus = $._encodeEnumerated;
+export const _encode_EquipmentStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

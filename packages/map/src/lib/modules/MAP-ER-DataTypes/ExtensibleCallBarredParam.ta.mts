@@ -117,7 +117,7 @@ class ExtensibleCallBarredParam {
          * @static
          */
 
-    public static _enum_for_callBarringCause = _enum_for_CallBarringCause;
+    public static _enum_for_callBarringCause: typeof _enum_for_CallBarringCause = _enum_for_CallBarringCause;
 }
 
 /**

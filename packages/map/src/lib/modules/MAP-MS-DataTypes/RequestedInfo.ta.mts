@@ -265,7 +265,7 @@ class RequestedInfo {
          * @static
          */
 
-    public static _enum_for_requestedDomain = _enum_for_DomainType;
+    public static _enum_for_requestedDomain: typeof _enum_for_DomainType = _enum_for_DomainType;
 }
 
 /**

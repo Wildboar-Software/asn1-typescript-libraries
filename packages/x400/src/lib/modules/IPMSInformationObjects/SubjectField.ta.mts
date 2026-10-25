@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SubjectField = TeletexString; // TeletexString
 
 
-export const _decode_SubjectField = $._decodeTeletexString;
+export const _decode_SubjectField: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_SubjectField = $._encodeTeletexString;
+export const _encode_SubjectField: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

@@ -37,12 +37,12 @@ type CurvePrivateKey = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_CurvePrivateKey = $._decodeOctetString;
+export const _decode_CurvePrivateKey: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_CurvePrivateKey = $._encodeOctetString;
+export const _encode_CurvePrivateKey: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

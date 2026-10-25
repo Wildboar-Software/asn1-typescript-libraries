@@ -67,7 +67,7 @@ type OverrideCategory = _enum_for_OverrideCategory;
  * @enum {number}
  */
 export
-const OverrideCategory = _enum_for_OverrideCategory;
+const OverrideCategory: typeof _enum_for_OverrideCategory = _enum_for_OverrideCategory;
 
 /**
  * @summary OverrideCategory_overrideEnabled
@@ -79,7 +79,7 @@ const OverrideCategory = _enum_for_OverrideCategory;
  * @type {number}
  */
 export
-const OverrideCategory_overrideEnabled = OverrideCategory.overrideEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OverrideCategory_overrideEnabled: _enum_for_OverrideCategory.overrideEnabled = OverrideCategory.overrideEnabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideEnabled
@@ -91,7 +91,7 @@ const OverrideCategory_overrideEnabled = OverrideCategory.overrideEnabled; /* LO
  * @type {number}
  */
 export
-const overrideEnabled = OverrideCategory.overrideEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideEnabled: _enum_for_OverrideCategory.overrideEnabled = OverrideCategory.overrideEnabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OverrideCategory_overrideDisabled
@@ -103,7 +103,7 @@ const overrideEnabled = OverrideCategory.overrideEnabled; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const OverrideCategory_overrideDisabled = OverrideCategory.overrideDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OverrideCategory_overrideDisabled: _enum_for_OverrideCategory.overrideDisabled = OverrideCategory.overrideDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overrideDisabled
@@ -115,7 +115,7 @@ const OverrideCategory_overrideDisabled = OverrideCategory.overrideDisabled; /* 
  * @type {number}
  */
 export
-const overrideDisabled = OverrideCategory.overrideDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overrideDisabled: _enum_for_OverrideCategory.overrideDisabled = OverrideCategory.overrideDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) OverrideCategory
@@ -123,7 +123,7 @@ const overrideDisabled = OverrideCategory.overrideDisabled; /* SHORT_NAMED_ENUME
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_OverrideCategory = $._decodeEnumerated;
+export const _decode_OverrideCategory: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) OverrideCategory into an ASN.1 Element.
@@ -132,7 +132,7 @@ export const _decode_OverrideCategory = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OverrideCategory, encoded as an ASN.1 Element.
  */
-export const _encode_OverrideCategory = $._encodeEnumerated;
+export const _encode_OverrideCategory: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

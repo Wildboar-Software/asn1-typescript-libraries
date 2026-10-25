@@ -169,13 +169,13 @@ class StartOfInterceptWithEstablisedRCSSession {
          * @static
          */
 
-    public static _enum_for_rCSSessionType = _enum_for_RCSSessionType;        /**
+    public static _enum_for_rCSSessionType: typeof _enum_for_RCSSessionType = _enum_for_RCSSessionType;        /**
          * @summary The enum used as the type of the component `rCSSessionEndpoints`
          * @public
          * @static
          */
 
-    public static _enum_for_rCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
+    public static _enum_for_rCSSessionEndpoints: typeof _enum_for_RCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
 }
 
 /**

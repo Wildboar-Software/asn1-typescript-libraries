@@ -246,7 +246,7 @@ export class BioAPI_BFP_SCHEMA {
    * @static
    */
 
-  public static _enum_for_category = _enum_for_BioAPI_CATEGORY;
+  public static _enum_for_category: typeof _enum_for_BioAPI_CATEGORY = _enum_for_BioAPI_CATEGORY;
 }
 
 

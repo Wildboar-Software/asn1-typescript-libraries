@@ -49,7 +49,7 @@ export const _decode_RP_UD = (el: _Element): RP_UD => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RP_UD, encoded as an ASN.1 Element.
  */
-export const _encode_RP_UD = $._encodeOctetString;
+export const _encode_RP_UD: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type X121Address = NumericString; // NumericString
 
 
-export const _decode_X121Address = $._decodeNumericString;
+export const _decode_X121Address: $.ASN1Decoder<string> = $._decodeNumericString;
 
 
-export const _encode_X121Address = $._encodeNumericString;
+export const _encode_X121Address: $.ASN1Encoder<string> = $._encodeNumericString;
 
 
 /* eslint-enable */

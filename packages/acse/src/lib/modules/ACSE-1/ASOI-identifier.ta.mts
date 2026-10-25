@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ASOI_identifier = INTEGER;
 
 
-export const _decode_ASOI_identifier = $._decodeInteger;
+export const _decode_ASOI_identifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ASOI_identifier = $._encodeInteger;
+export const _encode_ASOI_identifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

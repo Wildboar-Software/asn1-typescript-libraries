@@ -1064,19 +1064,19 @@ class TermCAMELRecord {
          * @static
          */
 
-    public static _enum_for_defaultCallHandling = _enum_for_DefaultCallHandling;        /**
+    public static _enum_for_defaultCallHandling: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;        /**
          * @summary The enum used as the type of the component `defaultCallHandling_2`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultCallHandling_2 = _enum_for_DefaultCallHandling;        /**
+    public static _enum_for_defaultCallHandling_2: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;        /**
          * @summary The enum used as the type of the component `partialRecordType`
          * @public
          * @static
          */
 
-    public static _enum_for_partialRecordType = _enum_for_PartialRecordType;
+    public static _enum_for_partialRecordType: typeof _enum_for_PartialRecordType = _enum_for_PartialRecordType;
 }
 
 /**

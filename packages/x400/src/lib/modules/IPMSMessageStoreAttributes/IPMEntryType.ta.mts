@@ -58,14 +58,14 @@ export type IPMEntryType = _enum_for_IPMEntryType;
  *
  * @enum {number}
  */
-export const IPMEntryType = _enum_for_IPMEntryType;
+export const IPMEntryType: typeof _enum_for_IPMEntryType = _enum_for_IPMEntryType;
 
 /**
  * @summary IPMEntryType_ipm
  * @constant
  * @type {number}
  */
-export const IPMEntryType_ipm =
+export const IPMEntryType_ipm: _enum_for_IPMEntryType.ipm =
     IPMEntryType.ipm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -73,7 +73,7 @@ export const IPMEntryType_ipm =
  * @constant
  * @type {number}
  */
-export const ipm =
+export const ipm: _enum_for_IPMEntryType.ipm =
     IPMEntryType.ipm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const ipm =
  * @constant
  * @type {number}
  */
-export const IPMEntryType_rn =
+export const IPMEntryType_rn: _enum_for_IPMEntryType.rn =
     IPMEntryType.rn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const IPMEntryType_rn =
  * @constant
  * @type {number}
  */
-export const rn =
+export const rn: _enum_for_IPMEntryType.rn =
     IPMEntryType.rn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const rn =
  * @constant
  * @type {number}
  */
-export const IPMEntryType_nrn =
+export const IPMEntryType_nrn: _enum_for_IPMEntryType.nrn =
     IPMEntryType.nrn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const IPMEntryType_nrn =
  * @constant
  * @type {number}
  */
-export const nrn =
+export const nrn: _enum_for_IPMEntryType.nrn =
     IPMEntryType.nrn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const nrn =
  * @constant
  * @type {number}
  */
-export const IPMEntryType_on =
+export const IPMEntryType_on: _enum_for_IPMEntryType.on =
     IPMEntryType.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const IPMEntryType_on =
  * @constant
  * @type {number}
  */
-export const on =
+export const on: _enum_for_IPMEntryType.on =
     IPMEntryType.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

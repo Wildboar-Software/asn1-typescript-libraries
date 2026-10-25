@@ -137,7 +137,7 @@ type CauseForRecordClosing = _enum_for_CauseForRecordClosing;
  * @enum {number}
  */
 export
-const CauseForRecordClosing = _enum_for_CauseForRecordClosing;
+const CauseForRecordClosing: typeof _enum_for_CauseForRecordClosing = _enum_for_CauseForRecordClosing;
 
 /**
  * @summary CauseForRecordClosing_normalRelease
@@ -153,7 +153,7 @@ const CauseForRecordClosing = _enum_for_CauseForRecordClosing;
  * @type {number}
  */
 export
-const CauseForRecordClosing_normalRelease = CauseForRecordClosing.normalRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_normalRelease: _enum_for_CauseForRecordClosing.normalRelease = CauseForRecordClosing.normalRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normalRelease
@@ -161,7 +161,7 @@ const CauseForRecordClosing_normalRelease = CauseForRecordClosing.normalRelease;
  * @type {number}
  */
 export
-const normalRelease = CauseForRecordClosing.normalRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normalRelease: _enum_for_CauseForRecordClosing.normalRelease = CauseForRecordClosing.normalRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_abnormalRelease
@@ -176,7 +176,7 @@ const normalRelease = CauseForRecordClosing.normalRelease; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const CauseForRecordClosing_abnormalRelease = CauseForRecordClosing.abnormalRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_abnormalRelease: _enum_for_CauseForRecordClosing.abnormalRelease = CauseForRecordClosing.abnormalRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abnormalRelease
@@ -184,7 +184,7 @@ const CauseForRecordClosing_abnormalRelease = CauseForRecordClosing.abnormalRele
  * @type {number}
  */
 export
-const abnormalRelease = CauseForRecordClosing.abnormalRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abnormalRelease: _enum_for_CauseForRecordClosing.abnormalRelease = CauseForRecordClosing.abnormalRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_serviceChange
@@ -199,7 +199,7 @@ const abnormalRelease = CauseForRecordClosing.abnormalRelease; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const CauseForRecordClosing_serviceChange = CauseForRecordClosing.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_serviceChange: _enum_for_CauseForRecordClosing.serviceChange = CauseForRecordClosing.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceChange
@@ -207,7 +207,7 @@ const CauseForRecordClosing_serviceChange = CauseForRecordClosing.serviceChange;
  * @type {number}
  */
 export
-const serviceChange = CauseForRecordClosing.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceChange: _enum_for_CauseForRecordClosing.serviceChange = CauseForRecordClosing.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_volumeLimit
@@ -221,7 +221,7 @@ const serviceChange = CauseForRecordClosing.serviceChange; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const CauseForRecordClosing_volumeLimit = CauseForRecordClosing.volumeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_volumeLimit: _enum_for_CauseForRecordClosing.volumeLimit = CauseForRecordClosing.volumeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary volumeLimit
@@ -229,7 +229,7 @@ const CauseForRecordClosing_volumeLimit = CauseForRecordClosing.volumeLimit; /* 
  * @type {number}
  */
 export
-const volumeLimit = CauseForRecordClosing.volumeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const volumeLimit: _enum_for_CauseForRecordClosing.volumeLimit = CauseForRecordClosing.volumeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_timeLimit
@@ -246,7 +246,7 @@ const volumeLimit = CauseForRecordClosing.volumeLimit; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const CauseForRecordClosing_timeLimit = CauseForRecordClosing.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_timeLimit: _enum_for_CauseForRecordClosing.timeLimit = CauseForRecordClosing.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimit
@@ -254,7 +254,7 @@ const CauseForRecordClosing_timeLimit = CauseForRecordClosing.timeLimit; /* LONG
  * @type {number}
  */
 export
-const timeLimit = CauseForRecordClosing.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeLimit: _enum_for_CauseForRecordClosing.timeLimit = CauseForRecordClosing.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_numberofTalkBurstLimit
@@ -269,7 +269,7 @@ const timeLimit = CauseForRecordClosing.timeLimit; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const CauseForRecordClosing_numberofTalkBurstLimit = CauseForRecordClosing.numberofTalkBurstLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_numberofTalkBurstLimit: _enum_for_CauseForRecordClosing.numberofTalkBurstLimit = CauseForRecordClosing.numberofTalkBurstLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberofTalkBurstLimit
@@ -277,7 +277,7 @@ const CauseForRecordClosing_numberofTalkBurstLimit = CauseForRecordClosing.numbe
  * @type {number}
  */
 export
-const numberofTalkBurstLimit = CauseForRecordClosing.numberofTalkBurstLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberofTalkBurstLimit: _enum_for_CauseForRecordClosing.numberofTalkBurstLimit = CauseForRecordClosing.numberofTalkBurstLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_maxChangeCond
@@ -294,7 +294,7 @@ const numberofTalkBurstLimit = CauseForRecordClosing.numberofTalkBurstLimit; /* 
  * @type {number}
  */
 export
-const CauseForRecordClosing_maxChangeCond = CauseForRecordClosing.maxChangeCond; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_maxChangeCond: _enum_for_CauseForRecordClosing.maxChangeCond = CauseForRecordClosing.maxChangeCond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxChangeCond
@@ -302,7 +302,7 @@ const CauseForRecordClosing_maxChangeCond = CauseForRecordClosing.maxChangeCond;
  * @type {number}
  */
 export
-const maxChangeCond = CauseForRecordClosing.maxChangeCond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maxChangeCond: _enum_for_CauseForRecordClosing.maxChangeCond = CauseForRecordClosing.maxChangeCond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_sessionTypeChange
@@ -317,7 +317,7 @@ const maxChangeCond = CauseForRecordClosing.maxChangeCond; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const CauseForRecordClosing_sessionTypeChange = CauseForRecordClosing.sessionTypeChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_sessionTypeChange: _enum_for_CauseForRecordClosing.sessionTypeChange = CauseForRecordClosing.sessionTypeChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sessionTypeChange
@@ -325,7 +325,7 @@ const CauseForRecordClosing_sessionTypeChange = CauseForRecordClosing.sessionTyp
  * @type {number}
  */
 export
-const sessionTypeChange = CauseForRecordClosing.sessionTypeChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sessionTypeChange: _enum_for_CauseForRecordClosing.sessionTypeChange = CauseForRecordClosing.sessionTypeChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseForRecordClosing_managementIntervention
@@ -341,7 +341,7 @@ const sessionTypeChange = CauseForRecordClosing.sessionTypeChange; /* SHORT_NAME
  * @type {number}
  */
 export
-const CauseForRecordClosing_managementIntervention = CauseForRecordClosing.managementIntervention; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseForRecordClosing_managementIntervention: _enum_for_CauseForRecordClosing.managementIntervention = CauseForRecordClosing.managementIntervention; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary managementIntervention
@@ -349,7 +349,7 @@ const CauseForRecordClosing_managementIntervention = CauseForRecordClosing.manag
  * @type {number}
  */
 export
-const managementIntervention = CauseForRecordClosing.managementIntervention; /* SHORT_NAMED_ENUMERATED_VALUE */
+const managementIntervention: _enum_for_CauseForRecordClosing.managementIntervention = CauseForRecordClosing.managementIntervention; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CauseForRecordClosing: $.ASN1Decoder<CauseForRecordClosing> = $._decodeEnumerated;

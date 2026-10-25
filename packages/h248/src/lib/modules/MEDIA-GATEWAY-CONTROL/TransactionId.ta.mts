@@ -35,7 +35,7 @@ export const _decode_TransactionId = (el: _Element): TransactionId => {
     }
     return value;
 };
-export const _encode_TransactionId = $._encodeInteger;
+export const _encode_TransactionId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

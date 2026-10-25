@@ -47,7 +47,7 @@ type ChangeCipherSpec = _enum_for_ChangeCipherSpec | ENUMERATED;
  * @type {number}
  */
 export
-const ChangeCipherSpec_change_cipher_spec = _enum_for_ChangeCipherSpec.change_cipher_spec; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCipherSpec_change_cipher_spec: _enum_for_ChangeCipherSpec.change_cipher_spec = _enum_for_ChangeCipherSpec.change_cipher_spec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary change_cipher_spec
@@ -56,9 +56,9 @@ const ChangeCipherSpec_change_cipher_spec = _enum_for_ChangeCipherSpec.change_ci
  * @type {number}
  */
 export
-const change_cipher_spec = ChangeCipherSpec_change_cipher_spec; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ChangeCipherSpec = $._decodeEnumerated;
-export const _encode_ChangeCipherSpec = $._encodeEnumerated;
+const change_cipher_spec: _enum_for_ChangeCipherSpec.change_cipher_spec = ChangeCipherSpec_change_cipher_spec; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ChangeCipherSpec: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ChangeCipherSpec: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

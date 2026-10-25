@@ -82,10 +82,10 @@ export const EDIReceptionSecurity_non_repudiation: number = 1; /* LONG_NAMED_BIT
 export const non_repudiation: number = EDIReceptionSecurity_non_repudiation; /* SHORT_NAMED_BIT */
 
 
-export const _decode_EDIReceptionSecurity = $._decodeBitString;
+export const _decode_EDIReceptionSecurity: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_EDIReceptionSecurity = $._encodeBitString;
+export const _encode_EDIReceptionSecurity: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -33,12 +33,12 @@ export type BioAPI_UUID = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_BioAPI_UUID = $._decodeOctetString;
+export const _decode_BioAPI_UUID: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_BioAPI_UUID = $._encodeOctetString;
+export const _encode_BioAPI_UUID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

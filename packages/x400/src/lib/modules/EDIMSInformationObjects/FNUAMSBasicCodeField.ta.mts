@@ -36,76 +36,76 @@ export type FNUAMSBasicCodeField = INTEGER;
  * @constant
  * @type {number}
  */
-export const FNUAMSBasicCodeField_unspecified = 0 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSBasicCodeField_unspecified: 0 = 0 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified = FNUAMSBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified: 0 = FNUAMSBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_onward_routing
  * @constant
  * @type {number}
  */
-export const FNUAMSBasicCodeField_onward_routing = 1 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSBasicCodeField_onward_routing: 1 = 1 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_onward_routing
  * @constant
  * @type {number}
  */
-export const onward_routing = FNUAMSBasicCodeField_onward_routing; /* SHORT_NAMED_INTEGER_VALUE */
+export const onward_routing: 1 = FNUAMSBasicCodeField_onward_routing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_edim_recipient_unknown
  * @constant
  * @type {number}
  */
-export const FNUAMSBasicCodeField_edim_recipient_unknown = 2 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSBasicCodeField_edim_recipient_unknown: 2 = 2 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_edim_recipient_unknown
  * @constant
  * @type {number}
  */
-export const edim_recipient_unknown = FNUAMSBasicCodeField_edim_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_recipient_unknown: 2 = FNUAMSBasicCodeField_edim_recipient_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_edim_originator_unknown
  * @constant
  * @type {number}
  */
-export const FNUAMSBasicCodeField_edim_originator_unknown = 3 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSBasicCodeField_edim_originator_unknown: 3 = 3 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_edim_originator_unknown
  * @constant
  * @type {number}
  */
-export const edim_originator_unknown = FNUAMSBasicCodeField_edim_originator_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const edim_originator_unknown: 3 = FNUAMSBasicCodeField_edim_originator_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_forwarded_by_edi_ms
  * @constant
  * @type {number}
  */
-export const FNUAMSBasicCodeField_forwarded_by_edi_ms = 4 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSBasicCodeField_forwarded_by_edi_ms: 4 = 4 satisfies FNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSBasicCodeField_forwarded_by_edi_ms
  * @constant
  * @type {number}
  */
-export const forwarded_by_edi_ms = FNUAMSBasicCodeField_forwarded_by_edi_ms; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_by_edi_ms: 4 = FNUAMSBasicCodeField_forwarded_by_edi_ms; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_FNUAMSBasicCodeField = $._decodeInteger;
+export const _decode_FNUAMSBasicCodeField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_FNUAMSBasicCodeField = $._encodeInteger;
+export const _encode_FNUAMSBasicCodeField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

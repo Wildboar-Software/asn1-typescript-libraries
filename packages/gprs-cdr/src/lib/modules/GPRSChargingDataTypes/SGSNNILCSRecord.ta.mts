@@ -683,19 +683,19 @@ class SGSNNILCSRecord {
          * @static
          */
 
-    public static _enum_for_lcsClientType = _enum_for_LCSClientType;        /**
+    public static _enum_for_lcsClientType: typeof _enum_for_LCSClientType = _enum_for_LCSClientType;        /**
          * @summary The enum used as the type of the component `chChSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `cNOperatorSelectionEnt`
          * @public
          * @static
          */
 
-    public static _enum_for_cNOperatorSelectionEnt = _enum_for_CNOperatorSelectionEntity;
+    public static _enum_for_cNOperatorSelectionEnt: typeof _enum_for_CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
 }
 
 /**

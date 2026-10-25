@@ -28,12 +28,12 @@ export type CancelRequestedByManager = BOOLEAN; // BooleanType
 
 
 
-export const _decode_CancelRequestedByManager = $._decodeBoolean;
+export const _decode_CancelRequestedByManager: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_CancelRequestedByManager = $._encodeBoolean;
+export const _encode_CancelRequestedByManager: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

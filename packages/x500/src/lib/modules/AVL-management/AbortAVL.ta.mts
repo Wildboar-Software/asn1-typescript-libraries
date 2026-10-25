@@ -98,7 +98,7 @@ export class AbortAVL {
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_AVMP_error;
+    public static _enum_for_reason: typeof _enum_for_AVMP_error = _enum_for_AVMP_error;
 }
 
 /**

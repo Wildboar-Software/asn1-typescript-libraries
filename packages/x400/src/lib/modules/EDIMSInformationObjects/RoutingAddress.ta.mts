@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RoutingAddress = TeletexString; // TeletexString
 
 
-export const _decode_RoutingAddress = $._decodeTeletexString;
+export const _decode_RoutingAddress: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_RoutingAddress = $._encodeTeletexString;
+export const _encode_RoutingAddress: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

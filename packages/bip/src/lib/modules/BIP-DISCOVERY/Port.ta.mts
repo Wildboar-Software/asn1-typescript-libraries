@@ -35,12 +35,12 @@ export type Port = INTEGER;
 
 
 
-export const _decode_Port = $._decodeInteger;
+export const _decode_Port: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Port = $._encodeInteger;
+export const _encode_Port: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

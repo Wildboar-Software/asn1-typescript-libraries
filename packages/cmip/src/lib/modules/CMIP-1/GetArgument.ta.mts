@@ -247,7 +247,7 @@ export class GetArgument implements BaseManagedObjectId {
    * @static
    */
 
-  public static _enum_for_synchronization = _enum_for_CMISSync;
+  public static _enum_for_synchronization: typeof _enum_for_CMISSync = _enum_for_CMISSync;
 }
 
 

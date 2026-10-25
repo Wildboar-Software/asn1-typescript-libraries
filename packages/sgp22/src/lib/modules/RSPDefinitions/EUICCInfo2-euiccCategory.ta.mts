@@ -40,7 +40,7 @@ type EUICCInfo2_euiccCategory = INTEGER;
  * @type {number}
  */
 export
-const EUICCInfo2_euiccCategory_other = 0 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
+const EUICCInfo2_euiccCategory_other: 0 = 0 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_other
@@ -53,7 +53,7 @@ const EUICCInfo2_euiccCategory_other = 0 satisfies EUICCInfo2_euiccCategory; /* 
  * @type {number}
  */
 export
-const other = EUICCInfo2_euiccCategory_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = EUICCInfo2_euiccCategory_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
@@ -65,7 +65,7 @@ const other = EUICCInfo2_euiccCategory_other; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const EUICCInfo2_euiccCategory_basicEuicc = 1 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
+const EUICCInfo2_euiccCategory_basicEuicc: 1 = 1 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_basicEuicc
@@ -77,7 +77,7 @@ const EUICCInfo2_euiccCategory_basicEuicc = 1 satisfies EUICCInfo2_euiccCategory
  * @type {number}
  */
 export
-const basicEuicc = EUICCInfo2_euiccCategory_basicEuicc; /* SHORT_NAMED_INTEGER_VALUE */
+const basicEuicc: 1 = EUICCInfo2_euiccCategory_basicEuicc; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
@@ -89,7 +89,7 @@ const basicEuicc = EUICCInfo2_euiccCategory_basicEuicc; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const EUICCInfo2_euiccCategory_mediumEuicc = 2 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
+const EUICCInfo2_euiccCategory_mediumEuicc: 2 = 2 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_mediumEuicc
@@ -101,7 +101,7 @@ const EUICCInfo2_euiccCategory_mediumEuicc = 2 satisfies EUICCInfo2_euiccCategor
  * @type {number}
  */
 export
-const mediumEuicc = EUICCInfo2_euiccCategory_mediumEuicc; /* SHORT_NAMED_INTEGER_VALUE */
+const mediumEuicc: 2 = EUICCInfo2_euiccCategory_mediumEuicc; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
@@ -113,7 +113,7 @@ const mediumEuicc = EUICCInfo2_euiccCategory_mediumEuicc; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const EUICCInfo2_euiccCategory_contactlessEuicc = 3 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
+const EUICCInfo2_euiccCategory_contactlessEuicc: 3 = 3 satisfies EUICCInfo2_euiccCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EUICCInfo2_euiccCategory_contactlessEuicc
@@ -125,9 +125,9 @@ const EUICCInfo2_euiccCategory_contactlessEuicc = 3 satisfies EUICCInfo2_euiccCa
  * @type {number}
  */
 export
-const contactlessEuicc = EUICCInfo2_euiccCategory_contactlessEuicc; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EUICCInfo2_euiccCategory = $._decodeInteger;
-export const _encode_EUICCInfo2_euiccCategory = $._encodeInteger;
+const contactlessEuicc: 3 = EUICCInfo2_euiccCategory_contactlessEuicc; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_EUICCInfo2_euiccCategory: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EUICCInfo2_euiccCategory: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

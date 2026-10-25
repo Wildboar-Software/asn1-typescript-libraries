@@ -120,7 +120,7 @@ export class AuthorizationList_Item {
      * @static
      */
 
-    public static _enum_for_state = _enum_for_RequestState;
+    public static _enum_for_state: typeof _enum_for_RequestState = _enum_for_RequestState;
 }
 
 

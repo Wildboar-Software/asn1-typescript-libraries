@@ -198,13 +198,13 @@ class PumInterrogArg {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;        /**
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;        /**
          * @summary The enum used as the type of the component `serviceOption`
          * @public
          * @static
          */
 
-    public static _enum_for_serviceOption = _enum_for_ServiceOption;
+    public static _enum_for_serviceOption: typeof _enum_for_ServiceOption = _enum_for_ServiceOption;
 }
 
 /**

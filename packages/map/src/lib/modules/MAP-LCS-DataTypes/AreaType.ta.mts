@@ -51,7 +51,7 @@ type AreaType = _enum_for_AreaType | ENUMERATED;
  * @type {number}
  */
 export
-const AreaType_countryCode = _enum_for_AreaType.countryCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const AreaType_countryCode: _enum_for_AreaType.countryCode = _enum_for_AreaType.countryCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary countryCode
@@ -63,7 +63,7 @@ const AreaType_countryCode = _enum_for_AreaType.countryCode; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const countryCode = AreaType_countryCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const countryCode: _enum_for_AreaType.countryCode = AreaType_countryCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AreaType_plmnId
@@ -75,7 +75,7 @@ const countryCode = AreaType_countryCode; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AreaType_plmnId = _enum_for_AreaType.plmnId; /* LONG_NAMED_ENUMERATED_VALUE */
+const AreaType_plmnId: _enum_for_AreaType.plmnId = _enum_for_AreaType.plmnId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmnId
@@ -87,7 +87,7 @@ const AreaType_plmnId = _enum_for_AreaType.plmnId; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const plmnId = AreaType_plmnId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plmnId: _enum_for_AreaType.plmnId = AreaType_plmnId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AreaType_locationAreaId
@@ -99,7 +99,7 @@ const plmnId = AreaType_plmnId; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AreaType_locationAreaId = _enum_for_AreaType.locationAreaId; /* LONG_NAMED_ENUMERATED_VALUE */
+const AreaType_locationAreaId: _enum_for_AreaType.locationAreaId = _enum_for_AreaType.locationAreaId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationAreaId
@@ -111,7 +111,7 @@ const AreaType_locationAreaId = _enum_for_AreaType.locationAreaId; /* LONG_NAMED
  * @type {number}
  */
 export
-const locationAreaId = AreaType_locationAreaId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationAreaId: _enum_for_AreaType.locationAreaId = AreaType_locationAreaId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AreaType_routingAreaId
@@ -123,7 +123,7 @@ const locationAreaId = AreaType_locationAreaId; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const AreaType_routingAreaId = _enum_for_AreaType.routingAreaId; /* LONG_NAMED_ENUMERATED_VALUE */
+const AreaType_routingAreaId: _enum_for_AreaType.routingAreaId = _enum_for_AreaType.routingAreaId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routingAreaId
@@ -135,7 +135,7 @@ const AreaType_routingAreaId = _enum_for_AreaType.routingAreaId; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const routingAreaId = AreaType_routingAreaId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routingAreaId: _enum_for_AreaType.routingAreaId = AreaType_routingAreaId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AreaType_cellGlobalId
@@ -147,7 +147,7 @@ const routingAreaId = AreaType_routingAreaId; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AreaType_cellGlobalId = _enum_for_AreaType.cellGlobalId; /* LONG_NAMED_ENUMERATED_VALUE */
+const AreaType_cellGlobalId: _enum_for_AreaType.cellGlobalId = _enum_for_AreaType.cellGlobalId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellGlobalId
@@ -159,7 +159,7 @@ const AreaType_cellGlobalId = _enum_for_AreaType.cellGlobalId; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const cellGlobalId = AreaType_cellGlobalId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cellGlobalId: _enum_for_AreaType.cellGlobalId = AreaType_cellGlobalId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AreaType_utranCellId
@@ -171,7 +171,7 @@ const cellGlobalId = AreaType_cellGlobalId; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AreaType_utranCellId = _enum_for_AreaType.utranCellId; /* LONG_NAMED_ENUMERATED_VALUE */
+const AreaType_utranCellId: _enum_for_AreaType.utranCellId = _enum_for_AreaType.utranCellId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary utranCellId
@@ -183,7 +183,7 @@ const AreaType_utranCellId = _enum_for_AreaType.utranCellId; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const utranCellId = AreaType_utranCellId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const utranCellId: _enum_for_AreaType.utranCellId = AreaType_utranCellId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AreaType
@@ -191,7 +191,7 @@ const utranCellId = AreaType_utranCellId; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AreaType = $._decodeEnumerated;
+export const _decode_AreaType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AreaType into an ASN.1 Element.
@@ -200,7 +200,7 @@ export const _decode_AreaType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AreaType, encoded as an ASN.1 Element.
  */
-export const _encode_AreaType = $._encodeEnumerated;
+export const _encode_AreaType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

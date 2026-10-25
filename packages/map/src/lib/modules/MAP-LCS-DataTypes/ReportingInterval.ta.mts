@@ -48,7 +48,7 @@ export const _decode_ReportingInterval = (el: _Element): ReportingInterval => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingInterval, encoded as an ASN.1 Element.
  */
-export const _encode_ReportingInterval = $._encodeInteger;
+export const _encode_ReportingInterval: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

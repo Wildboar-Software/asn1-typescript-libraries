@@ -45,7 +45,7 @@ export const _decode_EDRX_Cycle_Length_Value = (el: _Element): EDRX_Cycle_Length
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EDRX_Cycle_Length_Value, encoded as an ASN.1 Element.
  */
-export const _encode_EDRX_Cycle_Length_Value = $._encodeOctetString;
+export const _encode_EDRX_Cycle_Length_Value: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

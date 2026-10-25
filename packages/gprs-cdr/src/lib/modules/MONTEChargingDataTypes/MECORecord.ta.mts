@@ -503,25 +503,25 @@ class MECORecord {
          * @static
          */
 
-    public static _enum_for_monitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurationActivity;        /**
+    public static _enum_for_monitoringEventConfigurationActivity: typeof _enum_for_MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurationActivity;        /**
          * @summary The enum used as the type of the component `monitoringType`
          * @public
          * @static
          */
 
-    public static _enum_for_monitoringType = _enum_for_MonitoringType;        /**
+    public static _enum_for_monitoringType: typeof _enum_for_MonitoringType = _enum_for_MonitoringType;        /**
          * @summary The enum used as the type of the component `locationType`
          * @public
          * @static
          */
 
-    public static _enum_for_locationType = _enum_for_LocationType;        /**
+    public static _enum_for_locationType: typeof _enum_for_LocationType = _enum_for_LocationType;        /**
          * @summary The enum used as the type of the component `accuracy`
          * @public
          * @static
          */
 
-    public static _enum_for_accuracy = _enum_for_Accuracy;
+    public static _enum_for_accuracy: typeof _enum_for_Accuracy = _enum_for_Accuracy;
 }
 
 /**

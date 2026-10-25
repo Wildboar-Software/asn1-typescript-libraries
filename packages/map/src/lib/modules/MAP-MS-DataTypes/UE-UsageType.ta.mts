@@ -48,7 +48,7 @@ export const _decode_UE_UsageType = (el: _Element): UE_UsageType => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UE_UsageType, encoded as an ASN.1 Element.
  */
-export const _encode_UE_UsageType = $._encodeOctetString;
+export const _encode_UE_UsageType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -150,7 +150,7 @@ class SearchResult {
          * @static
          */
 
-    public static _enum_for_limit_encountered = _enum_for_LimitEncountered;
+    public static _enum_for_limit_encountered: typeof _enum_for_LimitEncountered = _enum_for_LimitEncountered;
 }
 
 /**

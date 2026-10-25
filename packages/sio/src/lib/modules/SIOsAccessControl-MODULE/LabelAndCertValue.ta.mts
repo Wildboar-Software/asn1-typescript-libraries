@@ -23,12 +23,12 @@ export type LabelAndCertValue = INTEGER;
 
 
 
-export const _decode_LabelAndCertValue = $._decodeInteger;
+export const _decode_LabelAndCertValue: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_LabelAndCertValue = $._encodeInteger;
+export const _encode_LabelAndCertValue: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

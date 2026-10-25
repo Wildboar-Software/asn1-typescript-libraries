@@ -61,7 +61,7 @@ type UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
  * @enum {number}
  */
 export
-const UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
+const UnfulfilledACProfileReason: typeof _enum_for_UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
 
 /**
  * @summary UnfulfilledACProfileReason_eASNotAvailable
@@ -69,7 +69,7 @@ const UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
  * @type {number}
  */
 export
-const UnfulfilledACProfileReason_eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnfulfilledACProfileReason_eASNotAvailable: _enum_for_UnfulfilledACProfileReason.eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eASNotAvailable
@@ -77,7 +77,7 @@ const UnfulfilledACProfileReason_eASNotAvailable = UnfulfilledACProfileReason.eA
  * @type {number}
  */
 export
-const eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eASNotAvailable: _enum_for_UnfulfilledACProfileReason.eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnfulfilledACProfileReason_requirementsUnfulfilled
@@ -85,7 +85,7 @@ const eASNotAvailable = UnfulfilledACProfileReason.eASNotAvailable; /* SHORT_NAM
  * @type {number}
  */
 export
-const UnfulfilledACProfileReason_requirementsUnfulfilled = UnfulfilledACProfileReason.requirementsUnfulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnfulfilledACProfileReason_requirementsUnfulfilled: _enum_for_UnfulfilledACProfileReason.requirementsUnfulfilled = UnfulfilledACProfileReason.requirementsUnfulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requirementsUnfulfilled
@@ -93,7 +93,7 @@ const UnfulfilledACProfileReason_requirementsUnfulfilled = UnfulfilledACProfileR
  * @type {number}
  */
 export
-const requirementsUnfulfilled = UnfulfilledACProfileReason.requirementsUnfulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requirementsUnfulfilled: _enum_for_UnfulfilledACProfileReason.requirementsUnfulfilled = UnfulfilledACProfileReason.requirementsUnfulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UnfulfilledACProfileReason: $.ASN1Decoder<UnfulfilledACProfileReason> = $._decodeEnumerated;
 export const _encode_UnfulfilledACProfileReason: $.ASN1Encoder<UnfulfilledACProfileReason> = $._encodeEnumerated;
 

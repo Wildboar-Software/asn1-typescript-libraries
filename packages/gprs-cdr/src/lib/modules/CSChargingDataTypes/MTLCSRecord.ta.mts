@@ -636,19 +636,19 @@ class MTLCSRecord {
          * @static
          */
 
-    public static _enum_for_lcsClientType = _enum_for_LCSClientType;        /**
+    public static _enum_for_lcsClientType: typeof _enum_for_LCSClientType = _enum_for_LCSClientType;        /**
          * @summary The enum used as the type of the component `notificationToMSUser`
          * @public
          * @static
          */
 
-    public static _enum_for_notificationToMSUser = _enum_for_MTLCSRecord_notificationToMSUser;        /**
+    public static _enum_for_notificationToMSUser: typeof _enum_for_MTLCSRecord_notificationToMSUser = _enum_for_MTLCSRecord_notificationToMSUser;        /**
          * @summary The enum used as the type of the component `systemType`
          * @public
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;
 }
 
 /**

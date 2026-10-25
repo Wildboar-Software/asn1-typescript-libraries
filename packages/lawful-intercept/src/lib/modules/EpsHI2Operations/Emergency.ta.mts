@@ -50,7 +50,7 @@ type Emergency = _enum_for_Emergency | ENUMERATED;
  * @type {number}
  */
 export
-const Emergency_imminent = _enum_for_Emergency.imminent; /* LONG_NAMED_ENUMERATED_VALUE */
+const Emergency_imminent: _enum_for_Emergency.imminent = _enum_for_Emergency.imminent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imminent
@@ -62,7 +62,7 @@ const Emergency_imminent = _enum_for_Emergency.imminent; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const imminent = Emergency_imminent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imminent: _enum_for_Emergency.imminent = Emergency_imminent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Emergency_peril
@@ -74,7 +74,7 @@ const imminent = Emergency_imminent; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Emergency_peril = _enum_for_Emergency.peril; /* LONG_NAMED_ENUMERATED_VALUE */
+const Emergency_peril: _enum_for_Emergency.peril = _enum_for_Emergency.peril; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary peril
@@ -86,7 +86,7 @@ const Emergency_peril = _enum_for_Emergency.peril; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const peril = Emergency_peril; /* SHORT_NAMED_ENUMERATED_VALUE */
+const peril: _enum_for_Emergency.peril = Emergency_peril; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Emergency_cancel
@@ -98,7 +98,7 @@ const peril = Emergency_peril; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Emergency_cancel = _enum_for_Emergency.cancel; /* LONG_NAMED_ENUMERATED_VALUE */
+const Emergency_cancel: _enum_for_Emergency.cancel = _enum_for_Emergency.cancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel
@@ -110,7 +110,7 @@ const Emergency_cancel = _enum_for_Emergency.cancel; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const cancel = Emergency_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancel: _enum_for_Emergency.cancel = Emergency_cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Emergency: $.ASN1Decoder<Emergency> = $._decodeEnumerated;
 export const _encode_Emergency: $.ASN1Encoder<Emergency> = $._encodeEnumerated;
 

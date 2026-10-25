@@ -74,7 +74,7 @@ export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax
  *
  * @enum {number}
  */
-export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
+export const ReachabilityChangeSyntax_reason: typeof _enum_for_ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
 
 
 /**
@@ -88,7 +88,7 @@ export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSynta
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_reason_holdingTimerExpired =
+export const ReachabilityChangeSyntax_reason_holdingTimerExpired: 0 =
     ReachabilityChangeSyntax_reason.holdingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -103,7 +103,7 @@ export const ReachabilityChangeSyntax_reason_holdingTimerExpired =
  * @constant
  * @type {number}
  */
-export const holdingTimerExpired =
+export const holdingTimerExpired: 0 =
     ReachabilityChangeSyntax_reason.holdingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const holdingTimerExpired =
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_reason_circuitDisabled =
+export const ReachabilityChangeSyntax_reason_circuitDisabled: 1 =
     ReachabilityChangeSyntax_reason.circuitDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -133,7 +133,7 @@ export const ReachabilityChangeSyntax_reason_circuitDisabled =
  * @constant
  * @type {number}
  */
-export const circuitDisabled =
+export const circuitDisabled: 1 =
     ReachabilityChangeSyntax_reason.circuitDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

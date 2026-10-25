@@ -36,7 +36,7 @@ export type TestConditions_second = INTEGER;
  * @constant
  * @type {number}
  */
-export const TestConditions_second_customerOverrideTest = 0 satisfies TestConditions_second; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_second_customerOverrideTest: 0 = 0 satisfies TestConditions_second; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_customerOverrideTest
@@ -46,7 +46,7 @@ export const TestConditions_second_customerOverrideTest = 0 satisfies TestCondit
  * @constant
  * @type {number}
  */
-export const customerOverrideTest = TestConditions_second_customerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
+export const customerOverrideTest: 0 = TestConditions_second_customerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
@@ -56,7 +56,7 @@ export const customerOverrideTest = TestConditions_second_customerOverrideTest; 
  * @constant
  * @type {number}
  */
-export const TestConditions_second_noCustomerOverrideTest = 1 satisfies TestConditions_second; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_second_noCustomerOverrideTest: 1 = 1 satisfies TestConditions_second; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_second_noCustomerOverrideTest
@@ -66,13 +66,13 @@ export const TestConditions_second_noCustomerOverrideTest = 1 satisfies TestCond
  * @constant
  * @type {number}
  */
-export const noCustomerOverrideTest = TestConditions_second_noCustomerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
+export const noCustomerOverrideTest: 1 = TestConditions_second_noCustomerOverrideTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TestConditions_second = $._decodeInteger;
+export const _decode_TestConditions_second: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TestConditions_second = $._encodeInteger;
+export const _encode_TestConditions_second: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

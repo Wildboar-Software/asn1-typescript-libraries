@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SupplementaryError = UniversalString; // UniversalString
 
 
-export const _decode_SupplementaryError = $._decodeUniversalString;
+export const _decode_SupplementaryError: $.ASN1Decoder<string> = $._decodeUniversalString;
 
 
-export const _encode_SupplementaryError = $._encodeUniversalString;
+export const _encode_SupplementaryError: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

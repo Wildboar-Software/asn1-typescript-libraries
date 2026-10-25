@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Identity = GraphicString; // GraphicString
 
 
-export const _decode_Identity = $._decodeGraphicString;
+export const _decode_Identity: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_Identity = $._encodeGraphicString;
+export const _encode_Identity: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

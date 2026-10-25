@@ -35,12 +35,12 @@ export type Lifetime = INTEGER;
 
 
 
-export const _decode_Lifetime = $._decodeInteger;
+export const _decode_Lifetime: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Lifetime = $._encodeInteger;
+export const _encode_Lifetime: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

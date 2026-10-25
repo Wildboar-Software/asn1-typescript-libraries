@@ -190,7 +190,7 @@ class OriginationAttemptAuthorizedArg {
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;
 }
 
 /**

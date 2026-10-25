@@ -28,12 +28,12 @@ export type ReceivedTime = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_ReceivedTime = $._decodeGeneralizedTime;
+export const _decode_ReceivedTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_ReceivedTime = $._encodeGeneralizedTime;
+export const _encode_ReceivedTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

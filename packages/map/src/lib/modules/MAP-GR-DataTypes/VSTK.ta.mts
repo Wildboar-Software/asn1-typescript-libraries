@@ -45,7 +45,7 @@ export const _decode_VSTK = (el: _Element): VSTK => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The VSTK, encoded as an ASN.1 Element.
  */
-export const _encode_VSTK = $._encodeOctetString;
+export const _encode_VSTK: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

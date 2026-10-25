@@ -46,7 +46,7 @@ type FailureCauseParam = _enum_for_FailureCauseParam | ENUMERATED;
  * @type {number}
  */
 export
-const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests = _enum_for_FailureCauseParam.limitReachedOnNumberOfConcurrentLocationRequests; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests: _enum_for_FailureCauseParam.limitReachedOnNumberOfConcurrentLocationRequests = _enum_for_FailureCauseParam.limitReachedOnNumberOfConcurrentLocationRequests; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary limitReachedOnNumberOfConcurrentLocationRequests
@@ -60,7 +60,7 @@ const FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests = _enum
  * @type {number}
  */
 export
-const limitReachedOnNumberOfConcurrentLocationRequests = FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests; /* SHORT_NAMED_ENUMERATED_VALUE */
+const limitReachedOnNumberOfConcurrentLocationRequests: _enum_for_FailureCauseParam.limitReachedOnNumberOfConcurrentLocationRequests = FailureCauseParam_limitReachedOnNumberOfConcurrentLocationRequests; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) FailureCauseParam
@@ -68,7 +68,7 @@ const limitReachedOnNumberOfConcurrentLocationRequests = FailureCauseParam_limit
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FailureCauseParam = $._decodeEnumerated;
+export const _decode_FailureCauseParam: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) FailureCauseParam into an ASN.1 Element.
@@ -77,7 +77,7 @@ export const _decode_FailureCauseParam = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FailureCauseParam, encoded as an ASN.1 Element.
  */
-export const _encode_FailureCauseParam = $._encodeEnumerated;
+export const _encode_FailureCauseParam: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

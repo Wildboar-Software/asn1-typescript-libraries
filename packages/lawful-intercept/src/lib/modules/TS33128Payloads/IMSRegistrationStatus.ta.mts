@@ -103,7 +103,7 @@ type IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
  * @enum {number}
  */
 export
-const IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
+const IMSRegistrationStatus: typeof _enum_for_IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
 
 /**
  * @summary IMSRegistrationStatus_initialRegistration
@@ -111,7 +111,7 @@ const IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
  * @type {number}
  */
 export
-const IMSRegistrationStatus_initialRegistration = IMSRegistrationStatus.initialRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_initialRegistration: _enum_for_IMSRegistrationStatus.initialRegistration = IMSRegistrationStatus.initialRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialRegistration
@@ -119,7 +119,7 @@ const IMSRegistrationStatus_initialRegistration = IMSRegistrationStatus.initialR
  * @type {number}
  */
 export
-const initialRegistration = IMSRegistrationStatus.initialRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialRegistration: _enum_for_IMSRegistrationStatus.initialRegistration = IMSRegistrationStatus.initialRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_reregistration
@@ -127,7 +127,7 @@ const initialRegistration = IMSRegistrationStatus.initialRegistration; /* SHORT_
  * @type {number}
  */
 export
-const IMSRegistrationStatus_reregistration = IMSRegistrationStatus.reregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_reregistration: _enum_for_IMSRegistrationStatus.reregistration = IMSRegistrationStatus.reregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reregistration
@@ -135,7 +135,7 @@ const IMSRegistrationStatus_reregistration = IMSRegistrationStatus.reregistratio
  * @type {number}
  */
 export
-const reregistration = IMSRegistrationStatus.reregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reregistration: _enum_for_IMSRegistrationStatus.reregistration = IMSRegistrationStatus.reregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_timeoutDeregistration
@@ -143,7 +143,7 @@ const reregistration = IMSRegistrationStatus.reregistration; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const IMSRegistrationStatus_timeoutDeregistration = IMSRegistrationStatus.timeoutDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_timeoutDeregistration: _enum_for_IMSRegistrationStatus.timeoutDeregistration = IMSRegistrationStatus.timeoutDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeoutDeregistration
@@ -151,7 +151,7 @@ const IMSRegistrationStatus_timeoutDeregistration = IMSRegistrationStatus.timeou
  * @type {number}
  */
 export
-const timeoutDeregistration = IMSRegistrationStatus.timeoutDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeoutDeregistration: _enum_for_IMSRegistrationStatus.timeoutDeregistration = IMSRegistrationStatus.timeoutDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_userDeregistration
@@ -159,7 +159,7 @@ const timeoutDeregistration = IMSRegistrationStatus.timeoutDeregistration; /* SH
  * @type {number}
  */
 export
-const IMSRegistrationStatus_userDeregistration = IMSRegistrationStatus.userDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_userDeregistration: _enum_for_IMSRegistrationStatus.userDeregistration = IMSRegistrationStatus.userDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userDeregistration
@@ -167,7 +167,7 @@ const IMSRegistrationStatus_userDeregistration = IMSRegistrationStatus.userDereg
  * @type {number}
  */
 export
-const userDeregistration = IMSRegistrationStatus.userDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userDeregistration: _enum_for_IMSRegistrationStatus.userDeregistration = IMSRegistrationStatus.userDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_administrativeDeregistration
@@ -175,7 +175,7 @@ const userDeregistration = IMSRegistrationStatus.userDeregistration; /* SHORT_NA
  * @type {number}
  */
 export
-const IMSRegistrationStatus_administrativeDeregistration = IMSRegistrationStatus.administrativeDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_administrativeDeregistration: _enum_for_IMSRegistrationStatus.administrativeDeregistration = IMSRegistrationStatus.administrativeDeregistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary administrativeDeregistration
@@ -183,7 +183,7 @@ const IMSRegistrationStatus_administrativeDeregistration = IMSRegistrationStatus
  * @type {number}
  */
 export
-const administrativeDeregistration = IMSRegistrationStatus.administrativeDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const administrativeDeregistration: _enum_for_IMSRegistrationStatus.administrativeDeregistration = IMSRegistrationStatus.administrativeDeregistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_authenticationFailure
@@ -191,7 +191,7 @@ const administrativeDeregistration = IMSRegistrationStatus.administrativeDeregis
  * @type {number}
  */
 export
-const IMSRegistrationStatus_authenticationFailure = IMSRegistrationStatus.authenticationFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_authenticationFailure: _enum_for_IMSRegistrationStatus.authenticationFailure = IMSRegistrationStatus.authenticationFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationFailure
@@ -199,7 +199,7 @@ const IMSRegistrationStatus_authenticationFailure = IMSRegistrationStatus.authen
  * @type {number}
  */
 export
-const authenticationFailure = IMSRegistrationStatus.authenticationFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationFailure: _enum_for_IMSRegistrationStatus.authenticationFailure = IMSRegistrationStatus.authenticationFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_authenticationTimeout
@@ -207,7 +207,7 @@ const authenticationFailure = IMSRegistrationStatus.authenticationFailure; /* SH
  * @type {number}
  */
 export
-const IMSRegistrationStatus_authenticationTimeout = IMSRegistrationStatus.authenticationTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_authenticationTimeout: _enum_for_IMSRegistrationStatus.authenticationTimeout = IMSRegistrationStatus.authenticationTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authenticationTimeout
@@ -215,7 +215,7 @@ const IMSRegistrationStatus_authenticationTimeout = IMSRegistrationStatus.authen
  * @type {number}
  */
 export
-const authenticationTimeout = IMSRegistrationStatus.authenticationTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authenticationTimeout: _enum_for_IMSRegistrationStatus.authenticationTimeout = IMSRegistrationStatus.authenticationTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSRegistrationStatus_unregisteredUser
@@ -223,7 +223,7 @@ const authenticationTimeout = IMSRegistrationStatus.authenticationTimeout; /* SH
  * @type {number}
  */
 export
-const IMSRegistrationStatus_unregisteredUser = IMSRegistrationStatus.unregisteredUser; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSRegistrationStatus_unregisteredUser: _enum_for_IMSRegistrationStatus.unregisteredUser = IMSRegistrationStatus.unregisteredUser; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unregisteredUser
@@ -231,7 +231,7 @@ const IMSRegistrationStatus_unregisteredUser = IMSRegistrationStatus.unregistere
  * @type {number}
  */
 export
-const unregisteredUser = IMSRegistrationStatus.unregisteredUser; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unregisteredUser: _enum_for_IMSRegistrationStatus.unregisteredUser = IMSRegistrationStatus.unregisteredUser; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IMSRegistrationStatus: $.ASN1Decoder<IMSRegistrationStatus> = $._decodeEnumerated;
 export const _encode_IMSRegistrationStatus: $.ASN1Encoder<IMSRegistrationStatus> = $._encodeEnumerated;
 

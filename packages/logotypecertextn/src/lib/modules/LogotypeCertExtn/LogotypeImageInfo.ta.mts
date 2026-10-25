@@ -124,7 +124,7 @@ class LogotypeImageInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_type_ () { return color; }
+    public static get _default_value_for_type_ (): number { return color; }
 }
 
 /**

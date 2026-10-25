@@ -30,7 +30,7 @@ type TransitCallRecord_jIPSoInd = INTEGER;
  * @type {number}
  */
 export
-const TransitCallRecord_jIPSoInd_lRN_NP_Database = 1 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPSoInd_lRN_NP_Database: 1 = 1 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const TransitCallRecord_jIPSoInd_lRN_NP_Database = 1 satisfies TransitCallRecord
  * @type {number}
  */
 export
-const lRN_NP_Database = TransitCallRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database: 1 = TransitCallRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database = TransitCallRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAM
  * @type {number}
  */
 export
-const TransitCallRecord_jIPSoInd_switchingSystemData = 2 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPSoInd_switchingSystemData: 2 = 2 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const TransitCallRecord_jIPSoInd_switchingSystemData = 2 satisfies TransitCallRe
  * @type {number}
  */
 export
-const switchingSystemData = TransitCallRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData: 2 = TransitCallRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData = TransitCallRecord_jIPSoInd_switchingSystemData; /* S
  * @type {number}
  */
 export
-const TransitCallRecord_jIPSoInd_incomingsignaling = 3 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPSoInd_incomingsignaling: 3 = 3 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const TransitCallRecord_jIPSoInd_incomingsignaling = 3 satisfies TransitCallReco
  * @type {number}
  */
 export
-const incomingsignaling = TransitCallRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling: 3 = TransitCallRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling = TransitCallRecord_jIPSoInd_incomingsignaling; /* SHORT
  * @type {number}
  */
 export
-const TransitCallRecord_jIPSoInd_unknown = 9 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_jIPSoInd_unknown: 9 = 9 satisfies TransitCallRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const TransitCallRecord_jIPSoInd_unknown = 9 satisfies TransitCallRecord_jIPSoIn
  * @type {number}
  */
 export
-const unknown = TransitCallRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown: 9 = TransitCallRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TransitCallRecord_jIPSoInd: $.ASN1Decoder<TransitCallRecord_jIPSoInd> = $._decodeInteger;

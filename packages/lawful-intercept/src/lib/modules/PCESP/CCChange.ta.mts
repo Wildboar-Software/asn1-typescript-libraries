@@ -236,13 +236,13 @@ class CCChange {
          * @static
          */
 
-    public static _enum_for_flowDirection = _enum_for_FlowDirection;        /**
+    public static _enum_for_flowDirection: typeof _enum_for_FlowDirection = _enum_for_FlowDirection;        /**
          * @summary The enum used as the type of the component `resourceState`
          * @public
          * @static
          */
 
-    public static _enum_for_resourceState = _enum_for_ResourceState;
+    public static _enum_for_resourceState: typeof _enum_for_ResourceState = _enum_for_ResourceState;
 }
 
 /**

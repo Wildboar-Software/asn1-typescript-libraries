@@ -172,13 +172,13 @@ class ServiceInteractionIndicatorsTwo {
          * @static
          */
 
-    public static _enum_for_bothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;        /**
+    public static _enum_for_bothwayThroughConnectionInd: typeof _enum_for_BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;        /**
          * @summary The enum used as the type of the component `connectedNumberTreatmentInd`
          * @public
          * @static
          */
 
-    public static _enum_for_connectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
+    public static _enum_for_connectedNumberTreatmentInd: typeof _enum_for_ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
 }
 
 /**

@@ -89,7 +89,7 @@ export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateReso
  *
  * @enum {number}
  */
-export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
+export const IntermediateResourceBoundaryTestOutcome: typeof _enum_for_IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_passed
@@ -99,7 +99,7 @@ export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateRes
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_passed =
+export const IntermediateResourceBoundaryTestOutcome_passed: _enum_for_IntermediateResourceBoundaryTestOutcome.passed =
     IntermediateResourceBoundaryTestOutcome.passed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const IntermediateResourceBoundaryTestOutcome_passed =
  * @constant
  * @type {number}
  */
-export const passed =
+export const passed: _enum_for_IntermediateResourceBoundaryTestOutcome.passed =
     IntermediateResourceBoundaryTestOutcome.passed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const passed =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_unexpected =
+export const IntermediateResourceBoundaryTestOutcome_unexpected: _enum_for_IntermediateResourceBoundaryTestOutcome.unexpected =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const IntermediateResourceBoundaryTestOutcome_unexpected =
  * @constant
  * @type {number}
  */
-export const unexpected =
+export const unexpected: _enum_for_IntermediateResourceBoundaryTestOutcome.unexpected =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -143,7 +143,7 @@ export const unexpected =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived =
+export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: _enum_for_IntermediateResourceBoundaryTestOutcome.wrongSignalReceived =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived =
  * @constant
  * @type {number}
  */
-export const wrongSignalReceived =
+export const wrongSignalReceived: _enum_for_IntermediateResourceBoundaryTestOutcome.wrongSignalReceived =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const wrongSignalReceived =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired =
+export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: _enum_for_IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +176,7 @@ export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired =
  * @constant
  * @type {number}
  */
-export const waitDurationTimerExpired =
+export const waitDurationTimerExpired: _enum_for_IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<IntermediateResourceBoundaryTestOutcome> | null = null;

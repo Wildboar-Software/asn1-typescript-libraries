@@ -82,7 +82,7 @@ class AocInterimArg_interimCharge_specificCurrency {
          * @static
          */
 
-    public static _enum_for_interimBillingId = _enum_for_InterimBillingId;
+    public static _enum_for_interimBillingId: typeof _enum_for_InterimBillingId = _enum_for_InterimBillingId;
 }
 
 /**

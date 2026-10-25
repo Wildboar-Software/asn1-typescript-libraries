@@ -80,7 +80,7 @@ class NumberTranslation {
          * @static
          */
 
-    public static _enum_for_partyIndication = _enum_for_PartyIndication;
+    public static _enum_for_partyIndication: typeof _enum_for_PartyIndication = _enum_for_PartyIndication;
 }
 
 /**

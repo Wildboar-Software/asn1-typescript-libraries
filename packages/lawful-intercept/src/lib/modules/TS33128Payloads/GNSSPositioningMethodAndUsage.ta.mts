@@ -121,19 +121,19 @@ class GNSSPositioningMethodAndUsage {
          * @static
          */
 
-    public static _enum_for_mode = _enum_for_PositioningMode;        /**
+    public static _enum_for_mode: typeof _enum_for_PositioningMode = _enum_for_PositioningMode;        /**
          * @summary The enum used as the type of the component `gNSS`
          * @public
          * @static
          */
 
-    public static _enum_for_gNSS = _enum_for_GNSSID;        /**
+    public static _enum_for_gNSS: typeof _enum_for_GNSSID = _enum_for_GNSSID;        /**
          * @summary The enum used as the type of the component `usage`
          * @public
          * @static
          */
 
-    public static _enum_for_usage = _enum_for_Usage;
+    public static _enum_for_usage: typeof _enum_for_Usage = _enum_for_Usage;
 }
 
 /**

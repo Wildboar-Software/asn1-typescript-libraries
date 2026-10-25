@@ -34,7 +34,7 @@ export function _decode_TransactionId (el: _Element): TransactionId {
     }
     return value;
 }
-export const _encode_TransactionId = $._encodeOctetString;
+export const _encode_TransactionId: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

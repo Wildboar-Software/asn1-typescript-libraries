@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "isolatedDeclarations": true,
     "rootDir": "src",
     "outDir": "../../dist/packages/novell_pkis",
     "tsBuildInfoFile": "../../dist/packages/novell_pkis/tsconfig.lib.tsbuildinfo",

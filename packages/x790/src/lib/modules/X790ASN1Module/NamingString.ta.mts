@@ -27,7 +27,7 @@ export function _decode_NamingString (el: _Element): NamingString {
     }
     return value;
 }
-export const _encode_NamingString = $._encodeGraphicString;
+export const _encode_NamingString: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

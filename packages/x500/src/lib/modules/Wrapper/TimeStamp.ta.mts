@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type TimeStamp = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_TimeStamp = $._decodeGeneralizedTime;
+export const _decode_TimeStamp: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_TimeStamp = $._encodeGeneralizedTime;
+export const _encode_TimeStamp: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

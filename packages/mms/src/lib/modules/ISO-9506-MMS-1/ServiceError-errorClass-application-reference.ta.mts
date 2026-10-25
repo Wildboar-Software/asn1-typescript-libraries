@@ -48,7 +48,7 @@ type ServiceError_errorClass_application_reference = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_application_reference_other = 0 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_application_reference_other: 0 = 0 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_other
@@ -61,7 +61,7 @@ const ServiceError_errorClass_application_reference_other = 0 satisfies ServiceE
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_application_reference_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_application_reference_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_unreachable
@@ -74,7 +74,7 @@ const other = ServiceError_errorClass_application_reference_other; /* SHORT_NAME
  * @type {number}
  */
 export
-const ServiceError_errorClass_application_reference_application_unreachable = 1 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_application_reference_application_unreachable: 1 = 1 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_unreachable
@@ -87,7 +87,7 @@ const ServiceError_errorClass_application_reference_application_unreachable = 1 
  * @type {number}
  */
 export
-const application_unreachable = ServiceError_errorClass_application_reference_application_unreachable; /* SHORT_NAMED_INTEGER_VALUE */
+const application_unreachable: 1 = ServiceError_errorClass_application_reference_application_unreachable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_connection_lost
@@ -100,7 +100,7 @@ const application_unreachable = ServiceError_errorClass_application_reference_ap
  * @type {number}
  */
 export
-const ServiceError_errorClass_application_reference_connection_lost = 2 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_application_reference_connection_lost: 2 = 2 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_connection_lost
@@ -113,7 +113,7 @@ const ServiceError_errorClass_application_reference_connection_lost = 2 satisfie
  * @type {number}
  */
 export
-const connection_lost = ServiceError_errorClass_application_reference_connection_lost; /* SHORT_NAMED_INTEGER_VALUE */
+const connection_lost: 2 = ServiceError_errorClass_application_reference_connection_lost; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_reference_invalid
@@ -125,7 +125,7 @@ const connection_lost = ServiceError_errorClass_application_reference_connection
  * @type {number}
  */
 export
-const ServiceError_errorClass_application_reference_application_reference_invalid = 3 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_application_reference_application_reference_invalid: 3 = 3 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_application_reference_invalid
@@ -137,7 +137,7 @@ const ServiceError_errorClass_application_reference_application_reference_invali
  * @type {number}
  */
 export
-const application_reference_invalid = ServiceError_errorClass_application_reference_application_reference_invalid; /* SHORT_NAMED_INTEGER_VALUE */
+const application_reference_invalid: 3 = ServiceError_errorClass_application_reference_application_reference_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_context_unsupported
@@ -150,7 +150,7 @@ const application_reference_invalid = ServiceError_errorClass_application_refere
  * @type {number}
  */
 export
-const ServiceError_errorClass_application_reference_context_unsupported = 4 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_application_reference_context_unsupported: 4 = 4 satisfies ServiceError_errorClass_application_reference; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_application_reference_context_unsupported
@@ -163,9 +163,9 @@ const ServiceError_errorClass_application_reference_context_unsupported = 4 sati
  * @type {number}
  */
 export
-const context_unsupported = ServiceError_errorClass_application_reference_context_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_application_reference = $._decodeInteger;
-export const _encode_ServiceError_errorClass_application_reference = $._encodeInteger;
+const context_unsupported: 4 = ServiceError_errorClass_application_reference_context_unsupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_application_reference: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_application_reference: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

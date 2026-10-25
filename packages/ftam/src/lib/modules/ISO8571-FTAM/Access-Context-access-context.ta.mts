@@ -38,7 +38,7 @@ export type Access_Context_access_context = INTEGER;
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_hierarchical_all_data_units = 0 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_hierarchical_all_data_units: 0 = 0 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -46,7 +46,7 @@ export const Access_Context_access_context_hierarchical_all_data_units = 0 satis
  * @constant
  * @type {number}
  */
-export const hierarchical_all_data_units = Access_Context_access_context_hierarchical_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
+export const hierarchical_all_data_units: 0 = Access_Context_access_context_hierarchical_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const hierarchical_all_data_units = Access_Context_access_context_hierarc
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_hierarchical_no_data_units = 1 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_hierarchical_no_data_units: 1 = 1 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const Access_Context_access_context_hierarchical_no_data_units = 1 satisf
  * @constant
  * @type {number}
  */
-export const hierarchical_no_data_units = Access_Context_access_context_hierarchical_no_data_units; /* SHORT_NAMED_INTEGER_VALUE */
+export const hierarchical_no_data_units: 1 = Access_Context_access_context_hierarchical_no_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const hierarchical_no_data_units = Access_Context_access_context_hierarch
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_flat_all_data_units = 2 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_flat_all_data_units: 2 = 2 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const Access_Context_access_context_flat_all_data_units = 2 satisfies Acc
  * @constant
  * @type {number}
  */
-export const flat_all_data_units = Access_Context_access_context_flat_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
+export const flat_all_data_units: 2 = Access_Context_access_context_flat_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const flat_all_data_units = Access_Context_access_context_flat_all_data_u
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_flat_one_level_data_unit = 3 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_flat_one_level_data_unit: 3 = 3 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const Access_Context_access_context_flat_one_level_data_unit = 3 satisfie
  * @constant
  * @type {number}
  */
-export const flat_one_level_data_unit = Access_Context_access_context_flat_one_level_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
+export const flat_one_level_data_unit: 3 = Access_Context_access_context_flat_one_level_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const flat_one_level_data_unit = Access_Context_access_context_flat_one_l
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_flat_Single_data_unit = 4 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_flat_Single_data_unit: 4 = 4 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const Access_Context_access_context_flat_Single_data_unit = 4 satisfies A
  * @constant
  * @type {number}
  */
-export const flat_Single_data_unit = Access_Context_access_context_flat_Single_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
+export const flat_Single_data_unit: 4 = Access_Context_access_context_flat_Single_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -129,7 +129,7 @@ export const flat_Single_data_unit = Access_Context_access_context_flat_Single_d
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_unstructured_all_data_units = 5 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_unstructured_all_data_units: 5 = 5 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -137,7 +137,7 @@ export const Access_Context_access_context_unstructured_all_data_units = 5 satis
  * @constant
  * @type {number}
  */
-export const unstructured_all_data_units = Access_Context_access_context_unstructured_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
+export const unstructured_all_data_units: 5 = Access_Context_access_context_unstructured_all_data_units; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -147,7 +147,7 @@ export const unstructured_all_data_units = Access_Context_access_context_unstruc
  * @constant
  * @type {number}
  */
-export const Access_Context_access_context_unstructured_Single_data_unit = 6 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
+export const Access_Context_access_context_unstructured_Single_data_unit: 6 = 6 satisfies Access_Context_access_context; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -155,17 +155,17 @@ export const Access_Context_access_context_unstructured_Single_data_unit = 6 sat
  * @constant
  * @type {number}
  */
-export const unstructured_Single_data_unit = Access_Context_access_context_unstructured_Single_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
+export const unstructured_Single_data_unit: 6 = Access_Context_access_context_unstructured_Single_data_unit; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Access_Context_access_context = $._decodeInteger;
+export const _decode_Access_Context_access_context: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Access_Context_access_context = $._encodeInteger;
+export const _encode_Access_Context_access_context: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

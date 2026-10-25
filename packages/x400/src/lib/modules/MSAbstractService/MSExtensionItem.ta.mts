@@ -26,10 +26,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type MSExtensionItem = INSTANCE_OF; // InstanceOfType
 
 
-export const _decode_MSExtensionItem = $._decodeInstanceOf;
+export const _decode_MSExtensionItem: $.ASN1Decoder<_External> = $._decodeInstanceOf;
 
 
-export const _encode_MSExtensionItem = $._encodeInstanceOf;
+export const _encode_MSExtensionItem: $.ASN1Encoder<_External> = $._encodeInstanceOf;
 
 
 /* eslint-enable */

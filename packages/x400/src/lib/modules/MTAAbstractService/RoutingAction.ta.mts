@@ -56,14 +56,14 @@ export type RoutingAction = _enum_for_RoutingAction;
  *
  * @enum {number}
  */
-export const RoutingAction = _enum_for_RoutingAction;
+export const RoutingAction: typeof _enum_for_RoutingAction = _enum_for_RoutingAction;
 
 /**
  * @summary RoutingAction_relayed
  * @constant
  * @type {number}
  */
-export const RoutingAction_relayed =
+export const RoutingAction_relayed: _enum_for_RoutingAction.relayed =
     RoutingAction.relayed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -71,7 +71,7 @@ export const RoutingAction_relayed =
  * @constant
  * @type {number}
  */
-export const relayed =
+export const relayed: _enum_for_RoutingAction.relayed =
     RoutingAction.relayed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const relayed =
  * @constant
  * @type {number}
  */
-export const RoutingAction_rerouted =
+export const RoutingAction_rerouted: _enum_for_RoutingAction.rerouted =
     RoutingAction.rerouted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const RoutingAction_rerouted =
  * @constant
  * @type {number}
  */
-export const rerouted =
+export const rerouted: _enum_for_RoutingAction.rerouted =
     RoutingAction.rerouted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

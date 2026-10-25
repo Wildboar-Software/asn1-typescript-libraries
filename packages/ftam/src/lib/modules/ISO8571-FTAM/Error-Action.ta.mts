@@ -39,7 +39,7 @@ export type Error_Action = INTEGER;
  * @constant
  * @type {number}
  */
-export const Error_Action_terminate = 0 satisfies Error_Action; /* LONG_NAMED_INTEGER_VALUE */
+export const Error_Action_terminate: 0 = 0 satisfies Error_Action; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -51,7 +51,7 @@ export const Error_Action_terminate = 0 satisfies Error_Action; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const terminate = Error_Action_terminate; /* SHORT_NAMED_INTEGER_VALUE */
+export const terminate: 0 = Error_Action_terminate; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const terminate = Error_Action_terminate; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Error_Action_continue_ = 1 satisfies Error_Action; /* LONG_NAMED_INTEGER_VALUE */
+export const Error_Action_continue_: 1 = 1 satisfies Error_Action; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,17 +75,17 @@ export const Error_Action_continue_ = 1 satisfies Error_Action; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const continue_ = Error_Action_continue_; /* SHORT_NAMED_INTEGER_VALUE */
+export const continue_: 1 = Error_Action_continue_; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Error_Action = $._decodeInteger;
+export const _decode_Error_Action: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Error_Action = $._encodeInteger;
+export const _encode_Error_Action: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -73,7 +73,7 @@ export type PkiWaError = _enum_for_PkiWaError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const PkiWaError_unsupportedWrapperVersion = _enum_for_PkiWaError.unsupportedWrapperVersion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unsupportedWrapperVersion: _enum_for_PkiWaError.unsupportedWrapperVersion = _enum_for_PkiWaError.unsupportedWrapperVersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedWrapperVersion
@@ -85,7 +85,7 @@ export const PkiWaError_unsupportedWrapperVersion = _enum_for_PkiWaError.unsuppo
  * @constant
  * @type {number}
  */
-export const unsupportedWrapperVersion = PkiWaError_unsupportedWrapperVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedWrapperVersion: _enum_for_PkiWaError.unsupportedWrapperVersion = PkiWaError_unsupportedWrapperVersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_unsupportedSignatureAlgorithm
@@ -96,7 +96,7 @@ export const unsupportedWrapperVersion = PkiWaError_unsupportedWrapperVersion; /
  * @constant
  * @type {number}
  */
-export const PkiWaError_unsupportedSignatureAlgorithm = _enum_for_PkiWaError.unsupportedSignatureAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unsupportedSignatureAlgorithm: _enum_for_PkiWaError.unsupportedSignatureAlgorithm = _enum_for_PkiWaError.unsupportedSignatureAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedSignatureAlgorithm
@@ -107,7 +107,7 @@ export const PkiWaError_unsupportedSignatureAlgorithm = _enum_for_PkiWaError.uns
  * @constant
  * @type {number}
  */
-export const unsupportedSignatureAlgorithm = PkiWaError_unsupportedSignatureAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedSignatureAlgorithm: _enum_for_PkiWaError.unsupportedSignatureAlgorithm = PkiWaError_unsupportedSignatureAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_incompleteCertPath
@@ -118,7 +118,7 @@ export const unsupportedSignatureAlgorithm = PkiWaError_unsupportedSignatureAlgo
  * @constant
  * @type {number}
  */
-export const PkiWaError_incompleteCertPath = _enum_for_PkiWaError.incompleteCertPath; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_incompleteCertPath: _enum_for_PkiWaError.incompleteCertPath = _enum_for_PkiWaError.incompleteCertPath; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incompleteCertPath
@@ -129,7 +129,7 @@ export const PkiWaError_incompleteCertPath = _enum_for_PkiWaError.incompleteCert
  * @constant
  * @type {number}
  */
-export const incompleteCertPath = PkiWaError_incompleteCertPath; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const incompleteCertPath: _enum_for_PkiWaError.incompleteCertPath = PkiWaError_incompleteCertPath; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_certificationPathFailure
@@ -140,7 +140,7 @@ export const incompleteCertPath = PkiWaError_incompleteCertPath; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const PkiWaError_certificationPathFailure = _enum_for_PkiWaError.certificationPathFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_certificationPathFailure: _enum_for_PkiWaError.certificationPathFailure = _enum_for_PkiWaError.certificationPathFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificationPathFailure
@@ -151,7 +151,7 @@ export const PkiWaError_certificationPathFailure = _enum_for_PkiWaError.certific
  * @constant
  * @type {number}
  */
-export const certificationPathFailure = PkiWaError_certificationPathFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certificationPathFailure: _enum_for_PkiWaError.certificationPathFailure = PkiWaError_certificationPathFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_invalidSignature
@@ -162,7 +162,7 @@ export const certificationPathFailure = PkiWaError_certificationPathFailure; /* 
  * @constant
  * @type {number}
  */
-export const PkiWaError_invalidSignature = _enum_for_PkiWaError.invalidSignature; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_invalidSignature: _enum_for_PkiWaError.invalidSignature = _enum_for_PkiWaError.invalidSignature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidSignature
@@ -173,7 +173,7 @@ export const PkiWaError_invalidSignature = _enum_for_PkiWaError.invalidSignature
  * @constant
  * @type {number}
  */
-export const invalidSignature = PkiWaError_invalidSignature; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSignature: _enum_for_PkiWaError.invalidSignature = PkiWaError_invalidSignature; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_missingMandatoryAttributes
@@ -184,7 +184,7 @@ export const invalidSignature = PkiWaError_invalidSignature; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const PkiWaError_missingMandatoryAttributes = _enum_for_PkiWaError.missingMandatoryAttributes; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_missingMandatoryAttributes: _enum_for_PkiWaError.missingMandatoryAttributes = _enum_for_PkiWaError.missingMandatoryAttributes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missingMandatoryAttributes
@@ -195,7 +195,7 @@ export const PkiWaError_missingMandatoryAttributes = _enum_for_PkiWaError.missin
  * @constant
  * @type {number}
  */
-export const missingMandatoryAttributes = PkiWaError_missingMandatoryAttributes; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const missingMandatoryAttributes: _enum_for_PkiWaError.missingMandatoryAttributes = PkiWaError_missingMandatoryAttributes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_unwantedAttribute
@@ -206,7 +206,7 @@ export const missingMandatoryAttributes = PkiWaError_missingMandatoryAttributes;
  * @constant
  * @type {number}
  */
-export const PkiWaError_unwantedAttribute = _enum_for_PkiWaError.unwantedAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unwantedAttribute: _enum_for_PkiWaError.unwantedAttribute = _enum_for_PkiWaError.unwantedAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unwantedAttribute
@@ -217,7 +217,7 @@ export const PkiWaError_unwantedAttribute = _enum_for_PkiWaError.unwantedAttribu
  * @constant
  * @type {number}
  */
-export const unwantedAttribute = PkiWaError_unwantedAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unwantedAttribute: _enum_for_PkiWaError.unwantedAttribute = PkiWaError_unwantedAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_unsupportedPduType
@@ -228,7 +228,7 @@ export const unwantedAttribute = PkiWaError_unwantedAttribute; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const PkiWaError_unsupportedPduType = _enum_for_PkiWaError.unsupportedPduType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unsupportedPduType: _enum_for_PkiWaError.unsupportedPduType = _enum_for_PkiWaError.unsupportedPduType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedPduType
@@ -239,7 +239,7 @@ export const PkiWaError_unsupportedPduType = _enum_for_PkiWaError.unsupportedPdu
  * @constant
  * @type {number}
  */
-export const unsupportedPduType = PkiWaError_unsupportedPduType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedPduType: _enum_for_PkiWaError.unsupportedPduType = PkiWaError_unsupportedPduType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_unexpectedPduType
@@ -250,7 +250,7 @@ export const unsupportedPduType = PkiWaError_unsupportedPduType; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const PkiWaError_unexpectedPduType = _enum_for_PkiWaError.unexpectedPduType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unexpectedPduType: _enum_for_PkiWaError.unexpectedPduType = _enum_for_PkiWaError.unexpectedPduType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unexpectedPduType
@@ -261,7 +261,7 @@ export const PkiWaError_unexpectedPduType = _enum_for_PkiWaError.unexpectedPduTy
  * @constant
  * @type {number}
  */
-export const unexpectedPduType = PkiWaError_unexpectedPduType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unexpectedPduType: _enum_for_PkiWaError.unexpectedPduType = PkiWaError_unexpectedPduType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_invalidPduSyntax
@@ -272,7 +272,7 @@ export const unexpectedPduType = PkiWaError_unexpectedPduType; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const PkiWaError_invalidPduSyntax = _enum_for_PkiWaError.invalidPduSyntax; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_invalidPduSyntax: _enum_for_PkiWaError.invalidPduSyntax = _enum_for_PkiWaError.invalidPduSyntax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidPduSyntax
@@ -283,7 +283,7 @@ export const PkiWaError_invalidPduSyntax = _enum_for_PkiWaError.invalidPduSyntax
  * @constant
  * @type {number}
  */
-export const invalidPduSyntax = PkiWaError_invalidPduSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidPduSyntax: _enum_for_PkiWaError.invalidPduSyntax = PkiWaError_invalidPduSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_unknownDHpkCetificate
@@ -294,7 +294,7 @@ export const invalidPduSyntax = PkiWaError_invalidPduSyntax; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const PkiWaError_unknownDHpkCetificate = _enum_for_PkiWaError.unknownDHpkCetificate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unknownDHpkCetificate: _enum_for_PkiWaError.unknownDHpkCetificate = _enum_for_PkiWaError.unknownDHpkCetificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownDHpkCetificate
@@ -305,7 +305,7 @@ export const PkiWaError_unknownDHpkCetificate = _enum_for_PkiWaError.unknownDHpk
  * @constant
  * @type {number}
  */
-export const unknownDHpkCetificate = PkiWaError_unknownDHpkCetificate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownDHpkCetificate: _enum_for_PkiWaError.unknownDHpkCetificate = PkiWaError_unknownDHpkCetificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_invalidKeyingMaterial
@@ -316,7 +316,7 @@ export const unknownDHpkCetificate = PkiWaError_unknownDHpkCetificate; /* SHORT_
  * @constant
  * @type {number}
  */
-export const PkiWaError_invalidKeyingMaterial = _enum_for_PkiWaError.invalidKeyingMaterial; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_invalidKeyingMaterial: _enum_for_PkiWaError.invalidKeyingMaterial = _enum_for_PkiWaError.invalidKeyingMaterial; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidKeyingMaterial
@@ -327,7 +327,7 @@ export const PkiWaError_invalidKeyingMaterial = _enum_for_PkiWaError.invalidKeyi
  * @constant
  * @type {number}
  */
-export const invalidKeyingMaterial = PkiWaError_invalidKeyingMaterial; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidKeyingMaterial: _enum_for_PkiWaError.invalidKeyingMaterial = PkiWaError_invalidKeyingMaterial; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_dhAlgorithmMismatch
@@ -338,7 +338,7 @@ export const invalidKeyingMaterial = PkiWaError_invalidKeyingMaterial; /* SHORT_
  * @constant
  * @type {number}
  */
-export const PkiWaError_dhAlgorithmMismatch = _enum_for_PkiWaError.dhAlgorithmMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_dhAlgorithmMismatch: _enum_for_PkiWaError.dhAlgorithmMismatch = _enum_for_PkiWaError.dhAlgorithmMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dhAlgorithmMismatch
@@ -349,7 +349,7 @@ export const PkiWaError_dhAlgorithmMismatch = _enum_for_PkiWaError.dhAlgorithmMi
  * @constant
  * @type {number}
  */
-export const dhAlgorithmMismatch = PkiWaError_dhAlgorithmMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dhAlgorithmMismatch: _enum_for_PkiWaError.dhAlgorithmMismatch = PkiWaError_dhAlgorithmMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_invalideDhPublickey
@@ -360,7 +360,7 @@ export const dhAlgorithmMismatch = PkiWaError_dhAlgorithmMismatch; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const PkiWaError_invalideDhPublickey = _enum_for_PkiWaError.invalideDhPublickey; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_invalideDhPublickey: _enum_for_PkiWaError.invalideDhPublickey = _enum_for_PkiWaError.invalideDhPublickey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalideDhPublickey
@@ -371,7 +371,7 @@ export const PkiWaError_invalideDhPublickey = _enum_for_PkiWaError.invalideDhPub
  * @constant
  * @type {number}
  */
-export const invalideDhPublickey = PkiWaError_invalideDhPublickey; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalideDhPublickey: _enum_for_PkiWaError.invalideDhPublickey = PkiWaError_invalideDhPublickey; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_unsupportedKeyWrappingAlgorithm
@@ -382,7 +382,7 @@ export const invalideDhPublickey = PkiWaError_invalideDhPublickey; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const PkiWaError_unsupportedKeyWrappingAlgorithm = _enum_for_PkiWaError.unsupportedKeyWrappingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_unsupportedKeyWrappingAlgorithm: _enum_for_PkiWaError.unsupportedKeyWrappingAlgorithm = _enum_for_PkiWaError.unsupportedKeyWrappingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedKeyWrappingAlgorithm
@@ -393,7 +393,7 @@ export const PkiWaError_unsupportedKeyWrappingAlgorithm = _enum_for_PkiWaError.u
  * @constant
  * @type {number}
  */
-export const unsupportedKeyWrappingAlgorithm = PkiWaError_unsupportedKeyWrappingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedKeyWrappingAlgorithm: _enum_for_PkiWaError.unsupportedKeyWrappingAlgorithm = PkiWaError_unsupportedKeyWrappingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_keyEncAlgorithmParametersMissing
@@ -404,7 +404,7 @@ export const unsupportedKeyWrappingAlgorithm = PkiWaError_unsupportedKeyWrapping
  * @constant
  * @type {number}
  */
-export const PkiWaError_keyEncAlgorithmParametersMissing = _enum_for_PkiWaError.keyEncAlgorithmParametersMissing; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_keyEncAlgorithmParametersMissing: _enum_for_PkiWaError.keyEncAlgorithmParametersMissing = _enum_for_PkiWaError.keyEncAlgorithmParametersMissing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyEncAlgorithmParametersMissing
@@ -415,7 +415,7 @@ export const PkiWaError_keyEncAlgorithmParametersMissing = _enum_for_PkiWaError.
  * @constant
  * @type {number}
  */
-export const keyEncAlgorithmParametersMissing = PkiWaError_keyEncAlgorithmParametersMissing; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const keyEncAlgorithmParametersMissing: _enum_for_PkiWaError.keyEncAlgorithmParametersMissing = PkiWaError_keyEncAlgorithmParametersMissing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_keyEncAlgorithmParametersNotAllowed
@@ -426,7 +426,7 @@ export const keyEncAlgorithmParametersMissing = PkiWaError_keyEncAlgorithmParame
  * @constant
  * @type {number}
  */
-export const PkiWaError_keyEncAlgorithmParametersNotAllowed = _enum_for_PkiWaError.keyEncAlgorithmParametersNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_keyEncAlgorithmParametersNotAllowed: _enum_for_PkiWaError.keyEncAlgorithmParametersNotAllowed = _enum_for_PkiWaError.keyEncAlgorithmParametersNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyEncAlgorithmParametersNotAllowed
@@ -437,7 +437,7 @@ export const PkiWaError_keyEncAlgorithmParametersNotAllowed = _enum_for_PkiWaErr
  * @constant
  * @type {number}
  */
-export const keyEncAlgorithmParametersNotAllowed = PkiWaError_keyEncAlgorithmParametersNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const keyEncAlgorithmParametersNotAllowed: _enum_for_PkiWaError.keyEncAlgorithmParametersNotAllowed = PkiWaError_keyEncAlgorithmParametersNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_invalidParmsForSymEncryptAlgorithms
@@ -448,7 +448,7 @@ export const keyEncAlgorithmParametersNotAllowed = PkiWaError_keyEncAlgorithmPar
  * @constant
  * @type {number}
  */
-export const PkiWaError_invalidParmsForSymEncryptAlgorithms = _enum_for_PkiWaError.invalidParmsForSymEncryptAlgorithms; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_invalidParmsForSymEncryptAlgorithms: _enum_for_PkiWaError.invalidParmsForSymEncryptAlgorithms = _enum_for_PkiWaError.invalidParmsForSymEncryptAlgorithms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParmsForSymEncryptAlgorithms
@@ -459,7 +459,7 @@ export const PkiWaError_invalidParmsForSymEncryptAlgorithms = _enum_for_PkiWaErr
  * @constant
  * @type {number}
  */
-export const invalidParmsForSymEncryptAlgorithms = PkiWaError_invalidParmsForSymEncryptAlgorithms; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidParmsForSymEncryptAlgorithms: _enum_for_PkiWaError.invalidParmsForSymEncryptAlgorithms = PkiWaError_invalidParmsForSymEncryptAlgorithms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PkiWaError_decryptionFailed
@@ -470,7 +470,7 @@ export const invalidParmsForSymEncryptAlgorithms = PkiWaError_invalidParmsForSym
  * @constant
  * @type {number}
  */
-export const PkiWaError_decryptionFailed = _enum_for_PkiWaError.decryptionFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PkiWaError_decryptionFailed: _enum_for_PkiWaError.decryptionFailed = _enum_for_PkiWaError.decryptionFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decryptionFailed
@@ -481,13 +481,13 @@ export const PkiWaError_decryptionFailed = _enum_for_PkiWaError.decryptionFailed
  * @constant
  * @type {number}
  */
-export const decryptionFailed = PkiWaError_decryptionFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const decryptionFailed: _enum_for_PkiWaError.decryptionFailed = PkiWaError_decryptionFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PkiWaError = $._decodeEnumerated;
+export const _decode_PkiWaError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_PkiWaError = $._encodeEnumerated;
+export const _encode_PkiWaError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

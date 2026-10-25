@@ -107,7 +107,7 @@ class GetSwitchingFunctionDevicesArgument {
          * @static
          */
 
-    public static _enum_for_requestedDeviceCategory = _enum_for_ReqDeviceCategory;
+    public static _enum_for_requestedDeviceCategory: typeof _enum_for_ReqDeviceCategory = _enum_for_ReqDeviceCategory;
 }
 
 /**

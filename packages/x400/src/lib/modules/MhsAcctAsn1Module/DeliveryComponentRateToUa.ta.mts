@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DeliveryComponentRateToUa = REAL; // RealType
 
 
-export const _decode_DeliveryComponentRateToUa = $._decodeReal;
+export const _decode_DeliveryComponentRateToUa: $.ASN1Decoder<number> = $._decodeReal;
 
 
-export const _encode_DeliveryComponentRateToUa = $._encodeReal;
+export const _encode_DeliveryComponentRateToUa: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

@@ -27,7 +27,7 @@ export function _decode_PersonEmail (el: _Element): PersonEmail {
     }
     return value;
 }
-export const _encode_PersonEmail = $._encodeGraphicString;
+export const _encode_PersonEmail: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

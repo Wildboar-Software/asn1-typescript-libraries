@@ -25,5 +25,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type FCIBillingChargingCharacteristics = OCTET_STRING;
-export const _decode_FCIBillingChargingCharacteristics = $._decodeOctetString;
-export const _encode_FCIBillingChargingCharacteristics = $._encodeOctetString;
+export const _decode_FCIBillingChargingCharacteristics: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_FCIBillingChargingCharacteristics: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

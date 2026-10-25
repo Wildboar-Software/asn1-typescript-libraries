@@ -83,13 +83,13 @@ class ConstraintsType {
          * @static
          */
 
-    public static _enum_for_name_constraint = _enum_for_NameConstraint;        /**
+    public static _enum_for_name_constraint: typeof _enum_for_NameConstraint = _enum_for_NameConstraint;        /**
          * @summary The enum used as the type of the component `version_constraint`
          * @public
          * @static
          */
 
-    public static _enum_for_version_constraint = _enum_for_VersionConstraint;
+    public static _enum_for_version_constraint: typeof _enum_for_VersionConstraint = _enum_for_VersionConstraint;
 }
 
 /**

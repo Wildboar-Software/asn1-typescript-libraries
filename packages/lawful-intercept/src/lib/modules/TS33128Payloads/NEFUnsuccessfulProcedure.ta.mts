@@ -244,7 +244,7 @@ class NEFUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_failureCause = _enum_for_NEFFailureCause;
+    public static _enum_for_failureCause: typeof _enum_for_NEFFailureCause = _enum_for_NEFFailureCause;
 }
 
 /**

@@ -58,8 +58,8 @@ export class GPRSEvent {
         return new GPRSEvent(_o.gPRSEventType, _o.monitorMode);
     }
 
-    public static _enum_for_gPRSEventType = _enum_for_GPRSEventType;
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_gPRSEventType: typeof _enum_for_GPRSEventType = _enum_for_GPRSEventType;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 export const _root_component_type_list_1_spec_for_GPRSEvent: $.ComponentSpec[] = [

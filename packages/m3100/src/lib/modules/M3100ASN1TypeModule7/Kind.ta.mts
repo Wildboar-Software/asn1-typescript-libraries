@@ -28,12 +28,12 @@ export type Kind = GraphicString; // GraphicString
 
 
 
-export const _decode_Kind = $._decodeGraphicString;
+export const _decode_Kind: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_Kind = $._encodeGraphicString;
+export const _encode_Kind: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

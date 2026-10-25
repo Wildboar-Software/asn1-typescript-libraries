@@ -35,34 +35,34 @@ export type FNUAMSDiagnosticField = INTEGER;
  * @constant
  * @type {number}
  */
-export const FNUAMSDiagnosticField_recipient_name_changed = 1 satisfies FNUAMSDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSDiagnosticField_recipient_name_changed: 1 = 1 satisfies FNUAMSDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSDiagnosticField_recipient_name_changed
  * @constant
  * @type {number}
  */
-export const recipient_name_changed = FNUAMSDiagnosticField_recipient_name_changed; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_name_changed: 1 = FNUAMSDiagnosticField_recipient_name_changed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSDiagnosticField_recipient_name_deleted
  * @constant
  * @type {number}
  */
-export const FNUAMSDiagnosticField_recipient_name_deleted = 2 satisfies FNUAMSDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNUAMSDiagnosticField_recipient_name_deleted: 2 = 2 satisfies FNUAMSDiagnosticField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNUAMSDiagnosticField_recipient_name_deleted
  * @constant
  * @type {number}
  */
-export const recipient_name_deleted = FNUAMSDiagnosticField_recipient_name_deleted; /* SHORT_NAMED_INTEGER_VALUE */
+export const recipient_name_deleted: 2 = FNUAMSDiagnosticField_recipient_name_deleted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_FNUAMSDiagnosticField = $._decodeInteger;
+export const _decode_FNUAMSDiagnosticField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_FNUAMSDiagnosticField = $._encodeInteger;
+export const _encode_FNUAMSDiagnosticField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

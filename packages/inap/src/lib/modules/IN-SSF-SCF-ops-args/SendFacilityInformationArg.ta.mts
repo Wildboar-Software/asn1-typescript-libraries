@@ -124,19 +124,19 @@ class SendFacilityInformationArg {
      * @static
      * @method
      */
-    public static get _default_value_for_callProcessingOperation () { return CallProcessingOperation_fACility; }        /**
+    public static get _default_value_for_callProcessingOperation (): _enum_for_CallProcessingOperation.fACility { return CallProcessingOperation_fACility; }        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;        /**
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;        /**
          * @summary The enum used as the type of the component `callProcessingOperation`
          * @public
          * @static
          */
 
-    public static _enum_for_callProcessingOperation = _enum_for_CallProcessingOperation;
+    public static _enum_for_callProcessingOperation: typeof _enum_for_CallProcessingOperation = _enum_for_CallProcessingOperation;
 }
 
 /**

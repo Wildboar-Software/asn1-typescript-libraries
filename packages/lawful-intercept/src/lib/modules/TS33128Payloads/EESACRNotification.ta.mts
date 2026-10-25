@@ -170,7 +170,7 @@ class EESACRNotification {
          * @static
          */
 
-    public static _enum_for_eventID = _enum_for_ACREventIDs;
+    public static _enum_for_eventID: typeof _enum_for_ACREventIDs = _enum_for_ACREventIDs;
 }
 
 /**

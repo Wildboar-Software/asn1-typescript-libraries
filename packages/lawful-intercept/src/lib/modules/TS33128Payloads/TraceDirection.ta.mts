@@ -115,7 +115,7 @@ type TraceDirection = _enum_for_TraceDirection;
  * @enum {number}
  */
 export
-const TraceDirection = _enum_for_TraceDirection;
+const TraceDirection: typeof _enum_for_TraceDirection = _enum_for_TraceDirection;
 
 /**
  * @summary TraceDirection_toAMF
@@ -129,7 +129,7 @@ const TraceDirection = _enum_for_TraceDirection;
  * @type {number}
  */
 export
-const TraceDirection_toAMF = TraceDirection.toAMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDirection_toAMF: _enum_for_TraceDirection.toAMF = TraceDirection.toAMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toAMF
@@ -143,7 +143,7 @@ const TraceDirection_toAMF = TraceDirection.toAMF; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const toAMF = TraceDirection.toAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toAMF: _enum_for_TraceDirection.toAMF = TraceDirection.toAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDirection_fromAMF
@@ -157,7 +157,7 @@ const toAMF = TraceDirection.toAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TraceDirection_fromAMF = TraceDirection.fromAMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDirection_fromAMF: _enum_for_TraceDirection.fromAMF = TraceDirection.fromAMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromAMF
@@ -171,7 +171,7 @@ const TraceDirection_fromAMF = TraceDirection.fromAMF; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const fromAMF = TraceDirection.fromAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromAMF: _enum_for_TraceDirection.fromAMF = TraceDirection.fromAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDirection_toMME
@@ -185,7 +185,7 @@ const fromAMF = TraceDirection.fromAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TraceDirection_toMME = TraceDirection.toMME; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDirection_toMME: _enum_for_TraceDirection.toMME = TraceDirection.toMME; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toMME
@@ -199,7 +199,7 @@ const TraceDirection_toMME = TraceDirection.toMME; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const toMME = TraceDirection.toMME; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toMME: _enum_for_TraceDirection.toMME = TraceDirection.toMME; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDirection_fromMME
@@ -213,7 +213,7 @@ const toMME = TraceDirection.toMME; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TraceDirection_fromMME = TraceDirection.fromMME; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDirection_fromMME: _enum_for_TraceDirection.fromMME = TraceDirection.fromMME; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromMME
@@ -227,7 +227,7 @@ const TraceDirection_fromMME = TraceDirection.fromMME; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const fromMME = TraceDirection.fromMME; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromMME: _enum_for_TraceDirection.fromMME = TraceDirection.fromMME; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TraceDirection: $.ASN1Decoder<TraceDirection> = $._decodeEnumerated;
 export const _encode_TraceDirection: $.ASN1Encoder<TraceDirection> = $._encodeEnumerated;
 

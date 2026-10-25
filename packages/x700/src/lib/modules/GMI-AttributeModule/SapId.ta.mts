@@ -33,12 +33,12 @@ export type SapId = GraphicString; // GraphicString
 
 
 
-export const _decode_SapId = $._decodeGraphicString;
+export const _decode_SapId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_SapId = $._encodeGraphicString;
+export const _encode_SapId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NoteField = GraphicString; // GraphicString
 
 
-export const _decode_NoteField = $._decodeGraphicString;
+export const _decode_NoteField: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_NoteField = $._encodeGraphicString;
+export const _encode_NoteField: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

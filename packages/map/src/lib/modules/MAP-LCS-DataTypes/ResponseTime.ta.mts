@@ -74,7 +74,7 @@ class ResponseTime {
          * @static
          */
 
-    public static _enum_for_responseTimeCategory = _enum_for_ResponseTimeCategory;
+    public static _enum_for_responseTimeCategory: typeof _enum_for_ResponseTimeCategory = _enum_for_ResponseTimeCategory;
 }
 
 /**

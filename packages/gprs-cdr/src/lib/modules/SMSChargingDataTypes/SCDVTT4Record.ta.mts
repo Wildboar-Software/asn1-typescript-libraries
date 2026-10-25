@@ -245,7 +245,7 @@ class SCDVTT4Record {
          * @static
          */
 
-    public static _enum_for_sMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
+    public static _enum_for_sMDeviceTriggerIndicator: typeof _enum_for_SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
 }
 
 /**

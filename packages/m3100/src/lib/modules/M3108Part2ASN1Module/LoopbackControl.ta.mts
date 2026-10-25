@@ -92,7 +92,7 @@ export class LoopbackControl {
      * @static
      */
 
-    public static _enum_for_status = _enum_for_LoopbackControl_status;
+    public static _enum_for_status: typeof _enum_for_LoopbackControl_status = _enum_for_LoopbackControl_status;
 }
 
 

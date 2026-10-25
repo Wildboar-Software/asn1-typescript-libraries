@@ -35,12 +35,12 @@ export type AccessControl = EXTERNAL; // ExternalType
 
 
 
-export const _decode_AccessControl = $._decodeExternal;
+export const _decode_AccessControl: $.ASN1Decoder<_External> = $._decodeExternal;
 
 
 
 
-export const _encode_AccessControl = $._encodeExternal;
+export const _encode_AccessControl: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

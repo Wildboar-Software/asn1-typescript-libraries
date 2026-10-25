@@ -87,7 +87,7 @@ type taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
  * @enum {number}
  */
 export
-const taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
+const taskRefused_ParameterType: typeof _enum_for_taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
 
 /**
  * @summary taskRefused_ParameterType_generic
@@ -100,7 +100,7 @@ const taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
  * @type {number}
  */
 export
-const taskRefused_ParameterType_generic = taskRefused_ParameterType.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_generic: _enum_for_taskRefused_ParameterType.generic = taskRefused_ParameterType.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -113,7 +113,7 @@ const taskRefused_ParameterType_generic = taskRefused_ParameterType.generic; /* 
  * @type {number}
  */
 export
-const generic = taskRefused_ParameterType.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_taskRefused_ParameterType.generic = taskRefused_ParameterType.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taskRefused_ParameterType_unobtainable
@@ -126,7 +126,7 @@ const generic = taskRefused_ParameterType.generic; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const taskRefused_ParameterType_unobtainable = taskRefused_ParameterType.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_unobtainable: _enum_for_taskRefused_ParameterType.unobtainable = taskRefused_ParameterType.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unobtainable
@@ -139,7 +139,7 @@ const taskRefused_ParameterType_unobtainable = taskRefused_ParameterType.unobtai
  * @type {number}
  */
 export
-const unobtainable = taskRefused_ParameterType.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unobtainable: _enum_for_taskRefused_ParameterType.unobtainable = taskRefused_ParameterType.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taskRefused_ParameterType_congestion
@@ -152,7 +152,7 @@ const unobtainable = taskRefused_ParameterType.unobtainable; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const taskRefused_ParameterType_congestion = taskRefused_ParameterType.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_congestion: _enum_for_taskRefused_ParameterType.congestion = taskRefused_ParameterType.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -165,9 +165,9 @@ const taskRefused_ParameterType_congestion = taskRefused_ParameterType.congestio
  * @type {number}
  */
 export
-const congestion = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_taskRefused_ParameterType = $._decodeEnumerated;
-export const _encode_taskRefused_ParameterType = $._encodeEnumerated;
+const congestion: _enum_for_taskRefused_ParameterType.congestion = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_taskRefused_ParameterType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_taskRefused_ParameterType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

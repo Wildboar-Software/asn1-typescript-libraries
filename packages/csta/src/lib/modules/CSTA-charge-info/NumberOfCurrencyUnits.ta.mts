@@ -122,7 +122,7 @@ class NumberOfCurrencyUnits {
          * @static
          */
 
-    public static _enum_for_currencyMultiplier = _enum_for_NumberOfCurrencyUnits_currencyMultiplier;
+    public static _enum_for_currencyMultiplier: typeof _enum_for_NumberOfCurrencyUnits_currencyMultiplier = _enum_for_NumberOfCurrencyUnits_currencyMultiplier;
 }
 
 /**

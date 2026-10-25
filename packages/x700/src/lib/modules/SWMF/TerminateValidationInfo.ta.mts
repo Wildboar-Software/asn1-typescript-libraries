@@ -81,7 +81,7 @@ export type TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  *
  * @enum {number}
  */
-export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;
+export const TerminateValidationInfo: typeof _enum_for_TerminateValidationInfo = _enum_for_TerminateValidationInfo;
 
 /**
  * @summary TerminateValidationInfo_cancel
@@ -93,7 +93,7 @@ export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  * @constant
  * @type {number}
  */
-export const TerminateValidationInfo_cancel =
+export const TerminateValidationInfo_cancel: _enum_for_TerminateValidationInfo.cancel =
     TerminateValidationInfo.cancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const TerminateValidationInfo_cancel =
  * @constant
  * @type {number}
  */
-export const cancel =
+export const cancel: _enum_for_TerminateValidationInfo.cancel =
     TerminateValidationInfo.cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const cancel =
  * @constant
  * @type {number}
  */
-export const TerminateValidationInfo_truncate =
+export const TerminateValidationInfo_truncate: _enum_for_TerminateValidationInfo.truncate =
     TerminateValidationInfo.truncate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const TerminateValidationInfo_truncate =
  * @constant
  * @type {number}
  */
-export const truncate =
+export const truncate: _enum_for_TerminateValidationInfo.truncate =
     TerminateValidationInfo.truncate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

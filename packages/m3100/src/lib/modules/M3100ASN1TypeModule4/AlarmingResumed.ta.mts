@@ -28,12 +28,12 @@ export type AlarmingResumed = BOOLEAN; // BooleanType
 
 
 
-export const _decode_AlarmingResumed = $._decodeBoolean;
+export const _decode_AlarmingResumed: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_AlarmingResumed = $._encodeBoolean;
+export const _encode_AlarmingResumed: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

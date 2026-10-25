@@ -52,7 +52,7 @@ export type CASP_error = _enum_for_CASP_error | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CASP_error_noReason = _enum_for_CASP_error.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_noReason: _enum_for_CASP_error.noReason = _enum_for_CASP_error.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReason
@@ -62,7 +62,7 @@ export const CASP_error_noReason = _enum_for_CASP_error.noReason; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const noReason = CASP_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noReason: _enum_for_CASP_error.noReason = CASP_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_unknownContentType
@@ -72,7 +72,7 @@ export const noReason = CASP_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const CASP_error_unknownContentType = _enum_for_CASP_error.unknownContentType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_unknownContentType: _enum_for_CASP_error.unknownContentType = _enum_for_CASP_error.unknownContentType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownContentType
@@ -82,7 +82,7 @@ export const CASP_error_unknownContentType = _enum_for_CASP_error.unknownContent
  * @constant
  * @type {number}
  */
-export const unknownContentType = CASP_error_unknownContentType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownContentType: _enum_for_CASP_error.unknownContentType = CASP_error_unknownContentType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_unsupportedWLMPversion
@@ -93,7 +93,7 @@ export const unknownContentType = CASP_error_unknownContentType; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const CASP_error_unsupportedWLMPversion = _enum_for_CASP_error.unsupportedWLMPversion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_unsupportedWLMPversion: _enum_for_CASP_error.unsupportedWLMPversion = _enum_for_CASP_error.unsupportedWLMPversion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedWLMPversion
@@ -104,7 +104,7 @@ export const CASP_error_unsupportedWLMPversion = _enum_for_CASP_error.unsupporte
  * @constant
  * @type {number}
  */
-export const unsupportedWLMPversion = CASP_error_unsupportedWLMPversion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedWLMPversion: _enum_for_CASP_error.unsupportedWLMPversion = CASP_error_unsupportedWLMPversion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_missingContent
@@ -114,7 +114,7 @@ export const unsupportedWLMPversion = CASP_error_unsupportedWLMPversion; /* SHOR
  * @constant
  * @type {number}
  */
-export const CASP_error_missingContent = _enum_for_CASP_error.missingContent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_missingContent: _enum_for_CASP_error.missingContent = _enum_for_CASP_error.missingContent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missingContent
@@ -124,7 +124,7 @@ export const CASP_error_missingContent = _enum_for_CASP_error.missingContent; /*
  * @constant
  * @type {number}
  */
-export const missingContent = CASP_error_missingContent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const missingContent: _enum_for_CASP_error.missingContent = CASP_error_missingContent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_missingContentComponent
@@ -134,7 +134,7 @@ export const missingContent = CASP_error_missingContent; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const CASP_error_missingContentComponent = _enum_for_CASP_error.missingContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_missingContentComponent: _enum_for_CASP_error.missingContentComponent = _enum_for_CASP_error.missingContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary missingContentComponent
@@ -144,7 +144,7 @@ export const CASP_error_missingContentComponent = _enum_for_CASP_error.missingCo
  * @constant
  * @type {number}
  */
-export const missingContentComponent = CASP_error_missingContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const missingContentComponent: _enum_for_CASP_error.missingContentComponent = CASP_error_missingContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_invalidContentComponent
@@ -154,7 +154,7 @@ export const missingContentComponent = CASP_error_missingContentComponent; /* SH
  * @constant
  * @type {number}
  */
-export const CASP_error_invalidContentComponent = _enum_for_CASP_error.invalidContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_invalidContentComponent: _enum_for_CASP_error.invalidContentComponent = _enum_for_CASP_error.invalidContentComponent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidContentComponent
@@ -164,7 +164,7 @@ export const CASP_error_invalidContentComponent = _enum_for_CASP_error.invalidCo
  * @constant
  * @type {number}
  */
-export const invalidContentComponent = CASP_error_invalidContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidContentComponent: _enum_for_CASP_error.invalidContentComponent = CASP_error_invalidContentComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_sequenceError
@@ -175,7 +175,7 @@ export const invalidContentComponent = CASP_error_invalidContentComponent; /* SH
  * @constant
  * @type {number}
  */
-export const CASP_error_sequenceError = _enum_for_CASP_error.sequenceError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_sequenceError: _enum_for_CASP_error.sequenceError = _enum_for_CASP_error.sequenceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceError
@@ -186,7 +186,7 @@ export const CASP_error_sequenceError = _enum_for_CASP_error.sequenceError; /* L
  * @constant
  * @type {number}
  */
-export const sequenceError = CASP_error_sequenceError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequenceError: _enum_for_CASP_error.sequenceError = CASP_error_sequenceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_unknownSubject
@@ -197,7 +197,7 @@ export const sequenceError = CASP_error_sequenceError; /* SHORT_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const CASP_error_unknownSubject = _enum_for_CASP_error.unknownSubject; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_unknownSubject: _enum_for_CASP_error.unknownSubject = _enum_for_CASP_error.unknownSubject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownSubject
@@ -208,7 +208,7 @@ export const CASP_error_unknownSubject = _enum_for_CASP_error.unknownSubject; /*
  * @constant
  * @type {number}
  */
-export const unknownSubject = CASP_error_unknownSubject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownSubject: _enum_for_CASP_error.unknownSubject = CASP_error_unknownSubject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CASP_error_unknownCert
@@ -219,7 +219,7 @@ export const unknownSubject = CASP_error_unknownSubject; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const CASP_error_unknownCert = _enum_for_CASP_error.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CASP_error_unknownCert: _enum_for_CASP_error.unknownCert = _enum_for_CASP_error.unknownCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownCert
@@ -230,13 +230,13 @@ export const CASP_error_unknownCert = _enum_for_CASP_error.unknownCert; /* LONG_
  * @constant
  * @type {number}
  */
-export const unknownCert = CASP_error_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownCert: _enum_for_CASP_error.unknownCert = CASP_error_unknownCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CASP_error = $._decodeEnumerated;
+export const _decode_CASP_error: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_CASP_error = $._encodeEnumerated;
+export const _encode_CASP_error: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

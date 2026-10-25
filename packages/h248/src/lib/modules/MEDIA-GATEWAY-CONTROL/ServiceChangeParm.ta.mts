@@ -286,7 +286,7 @@ class ServiceChangeParm {
          * @static
          */
 
-    public static _enum_for_serviceChangeMethod = _enum_for_ServiceChangeMethod;
+    public static _enum_for_serviceChangeMethod: typeof _enum_for_ServiceChangeMethod = _enum_for_ServiceChangeMethod;
 }
 
 /**

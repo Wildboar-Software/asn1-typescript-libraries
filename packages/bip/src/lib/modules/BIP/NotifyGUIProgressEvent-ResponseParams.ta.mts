@@ -82,7 +82,7 @@ export class NotifyGUIProgressEvent_ResponseParams {
    * @static
    */
 
-  public static _enum_for_response = _enum_for_BioAPI_GUI_RESPONSE;
+  public static _enum_for_response: typeof _enum_for_BioAPI_GUI_RESPONSE = _enum_for_BioAPI_GUI_RESPONSE;
 }
 
 

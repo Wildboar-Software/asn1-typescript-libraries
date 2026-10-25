@@ -28,12 +28,12 @@ export type CrossConnectionName = GraphicString; // GraphicString
 
 
 
-export const _decode_CrossConnectionName = $._decodeGraphicString;
+export const _decode_CrossConnectionName: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CrossConnectionName = $._encodeGraphicString;
+export const _encode_CrossConnectionName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

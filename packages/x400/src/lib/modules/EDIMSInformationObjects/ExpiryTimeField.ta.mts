@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ExpiryTimeField = UTCTime; // UTCTime
 
 
-export const _decode_ExpiryTimeField = $._decodeUTCTime;
+export const _decode_ExpiryTimeField: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
-export const _encode_ExpiryTimeField = $._encodeUTCTime;
+export const _encode_ExpiryTimeField: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ActionRequestField = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_ActionRequestField = $._decodeObjectIdentifier;
+export const _decode_ActionRequestField: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_ActionRequestField = $._encodeObjectIdentifier;
+export const _encode_ActionRequestField: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

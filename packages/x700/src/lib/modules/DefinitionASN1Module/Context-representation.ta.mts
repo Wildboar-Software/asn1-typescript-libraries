@@ -70,7 +70,7 @@ export type Context_representation = _enum_for_Context_representation;
  *
  * @enum {number}
  */
-export const Context_representation = _enum_for_Context_representation;
+export const Context_representation: typeof _enum_for_Context_representation = _enum_for_Context_representation;
 
 
 /**
@@ -81,7 +81,7 @@ export const Context_representation = _enum_for_Context_representation;
  * @constant
  * @type {number}
  */
-export const Context_representation_aCTION_INFO =
+export const Context_representation_aCTION_INFO: _enum_for_Context_representation.aCTION_INFO =
     Context_representation.aCTION_INFO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const Context_representation_aCTION_INFO =
  * @constant
  * @type {number}
  */
-export const aCTION_INFO =
+export const aCTION_INFO: _enum_for_Context_representation.aCTION_INFO =
     Context_representation.aCTION_INFO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const aCTION_INFO =
  * @constant
  * @type {number}
  */
-export const Context_representation_aCTION_REPLY =
+export const Context_representation_aCTION_REPLY: _enum_for_Context_representation.aCTION_REPLY =
     Context_representation.aCTION_REPLY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -117,7 +117,7 @@ export const Context_representation_aCTION_REPLY =
  * @constant
  * @type {number}
  */
-export const aCTION_REPLY =
+export const aCTION_REPLY: _enum_for_Context_representation.aCTION_REPLY =
     Context_representation.aCTION_REPLY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -129,7 +129,7 @@ export const aCTION_REPLY =
  * @constant
  * @type {number}
  */
-export const Context_representation_eVENT_INFO =
+export const Context_representation_eVENT_INFO: _enum_for_Context_representation.eVENT_INFO =
     Context_representation.eVENT_INFO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -141,7 +141,7 @@ export const Context_representation_eVENT_INFO =
  * @constant
  * @type {number}
  */
-export const eVENT_INFO =
+export const eVENT_INFO: _enum_for_Context_representation.eVENT_INFO =
     Context_representation.eVENT_INFO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const eVENT_INFO =
  * @constant
  * @type {number}
  */
-export const Context_representation_eVENT_REPLY =
+export const Context_representation_eVENT_REPLY: _enum_for_Context_representation.eVENT_REPLY =
     Context_representation.eVENT_REPLY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -165,7 +165,7 @@ export const Context_representation_eVENT_REPLY =
  * @constant
  * @type {number}
  */
-export const eVENT_REPLY =
+export const eVENT_REPLY: _enum_for_Context_representation.eVENT_REPLY =
     Context_representation.eVENT_REPLY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -177,7 +177,7 @@ export const eVENT_REPLY =
  * @constant
  * @type {number}
  */
-export const Context_representation_sPECIFIC_ERROR =
+export const Context_representation_sPECIFIC_ERROR: _enum_for_Context_representation.sPECIFIC_ERROR =
     Context_representation.sPECIFIC_ERROR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -189,7 +189,7 @@ export const Context_representation_sPECIFIC_ERROR =
  * @constant
  * @type {number}
  */
-export const sPECIFIC_ERROR =
+export const sPECIFIC_ERROR: _enum_for_Context_representation.sPECIFIC_ERROR =
     Context_representation.sPECIFIC_ERROR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

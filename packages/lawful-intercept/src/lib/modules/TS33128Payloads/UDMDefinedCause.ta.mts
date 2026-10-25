@@ -73,7 +73,7 @@ type UDMDefinedCause = _enum_for_UDMDefinedCause;
  * @enum {number}
  */
 export
-const UDMDefinedCause = _enum_for_UDMDefinedCause;
+const UDMDefinedCause: typeof _enum_for_UDMDefinedCause = _enum_for_UDMDefinedCause;
 
 /**
  * @summary UDMDefinedCause_userNotFound
@@ -81,7 +81,7 @@ const UDMDefinedCause = _enum_for_UDMDefinedCause;
  * @type {number}
  */
 export
-const UDMDefinedCause_userNotFound = UDMDefinedCause.userNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_userNotFound: _enum_for_UDMDefinedCause.userNotFound = UDMDefinedCause.userNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userNotFound
@@ -89,7 +89,7 @@ const UDMDefinedCause_userNotFound = UDMDefinedCause.userNotFound; /* LONG_NAMED
  * @type {number}
  */
 export
-const userNotFound = UDMDefinedCause.userNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userNotFound: _enum_for_UDMDefinedCause.userNotFound = UDMDefinedCause.userNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_dataNotFound
@@ -97,7 +97,7 @@ const userNotFound = UDMDefinedCause.userNotFound; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const UDMDefinedCause_dataNotFound = UDMDefinedCause.dataNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_dataNotFound: _enum_for_UDMDefinedCause.dataNotFound = UDMDefinedCause.dataNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dataNotFound
@@ -105,7 +105,7 @@ const UDMDefinedCause_dataNotFound = UDMDefinedCause.dataNotFound; /* LONG_NAMED
  * @type {number}
  */
 export
-const dataNotFound = UDMDefinedCause.dataNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dataNotFound: _enum_for_UDMDefinedCause.dataNotFound = UDMDefinedCause.dataNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_contextNotFound
@@ -113,7 +113,7 @@ const dataNotFound = UDMDefinedCause.dataNotFound; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const UDMDefinedCause_contextNotFound = UDMDefinedCause.contextNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_contextNotFound: _enum_for_UDMDefinedCause.contextNotFound = UDMDefinedCause.contextNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contextNotFound
@@ -121,7 +121,7 @@ const UDMDefinedCause_contextNotFound = UDMDefinedCause.contextNotFound; /* LONG
  * @type {number}
  */
 export
-const contextNotFound = UDMDefinedCause.contextNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contextNotFound: _enum_for_UDMDefinedCause.contextNotFound = UDMDefinedCause.contextNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_subscriptionNotFound
@@ -129,7 +129,7 @@ const contextNotFound = UDMDefinedCause.contextNotFound; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const UDMDefinedCause_subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_subscriptionNotFound: _enum_for_UDMDefinedCause.subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionNotFound
@@ -137,7 +137,7 @@ const UDMDefinedCause_subscriptionNotFound = UDMDefinedCause.subscriptionNotFoun
  * @type {number}
  */
 export
-const subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionNotFound: _enum_for_UDMDefinedCause.subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_other
@@ -145,7 +145,7 @@ const subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* SHORT_NAME
  * @type {number}
  */
 export
-const UDMDefinedCause_other = UDMDefinedCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_other: _enum_for_UDMDefinedCause.other = UDMDefinedCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -153,7 +153,7 @@ const UDMDefinedCause_other = UDMDefinedCause.other; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const other = UDMDefinedCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_UDMDefinedCause.other = UDMDefinedCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMDefinedCause: $.ASN1Decoder<UDMDefinedCause> = $._decodeEnumerated;
 export const _encode_UDMDefinedCause: $.ASN1Encoder<UDMDefinedCause> = $._encodeEnumerated;
 

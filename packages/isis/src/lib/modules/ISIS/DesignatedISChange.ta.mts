@@ -72,7 +72,7 @@ export type DesignatedISChange = _enum_for_DesignatedISChange;
  *
  * @enum {number}
  */
-export const DesignatedISChange = _enum_for_DesignatedISChange;
+export const DesignatedISChange: typeof _enum_for_DesignatedISChange = _enum_for_DesignatedISChange;
 
 /**
  * @summary DesignatedISChange_resigned
@@ -85,7 +85,7 @@ export const DesignatedISChange = _enum_for_DesignatedISChange;
  * @constant
  * @type {number}
  */
-export const DesignatedISChange_resigned =
+export const DesignatedISChange_resigned: _enum_for_DesignatedISChange.resigned =
   DesignatedISChange.resigned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const DesignatedISChange_resigned =
  * @constant
  * @type {number}
  */
-export const resigned =
+export const resigned: _enum_for_DesignatedISChange.resigned =
   DesignatedISChange.resigned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const resigned =
  * @constant
  * @type {number}
  */
-export const DesignatedISChange_elected =
+export const DesignatedISChange_elected: _enum_for_DesignatedISChange.elected =
   DesignatedISChange.elected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const DesignatedISChange_elected =
  * @constant
  * @type {number}
  */
-export const elected =
+export const elected: _enum_for_DesignatedISChange.elected =
   DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -205,7 +205,7 @@ type AlertDescription = _enum_for_AlertDescription;
  * @enum {number}
  */
 export
-const AlertDescription = _enum_for_AlertDescription;
+const AlertDescription: typeof _enum_for_AlertDescription = _enum_for_AlertDescription;
 
 /**
  * @summary AlertDescription_close_notify
@@ -213,7 +213,7 @@ const AlertDescription = _enum_for_AlertDescription;
  * @type {number}
  */
 export
-const AlertDescription_close_notify = AlertDescription.close_notify; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_close_notify: _enum_for_AlertDescription.close_notify = AlertDescription.close_notify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary close_notify
@@ -221,7 +221,7 @@ const AlertDescription_close_notify = AlertDescription.close_notify; /* LONG_NAM
  * @type {number}
  */
 export
-const close_notify = AlertDescription.close_notify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const close_notify: _enum_for_AlertDescription.close_notify = AlertDescription.close_notify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unexpected_message
@@ -229,7 +229,7 @@ const close_notify = AlertDescription.close_notify; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const AlertDescription_unexpected_message = AlertDescription.unexpected_message; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unexpected_message: _enum_for_AlertDescription.unexpected_message = AlertDescription.unexpected_message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unexpected_message
@@ -237,7 +237,7 @@ const AlertDescription_unexpected_message = AlertDescription.unexpected_message;
  * @type {number}
  */
 export
-const unexpected_message = AlertDescription.unexpected_message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unexpected_message: _enum_for_AlertDescription.unexpected_message = AlertDescription.unexpected_message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_bad_record_mac
@@ -245,7 +245,7 @@ const unexpected_message = AlertDescription.unexpected_message; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AlertDescription_bad_record_mac = AlertDescription.bad_record_mac; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_bad_record_mac: _enum_for_AlertDescription.bad_record_mac = AlertDescription.bad_record_mac; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bad_record_mac
@@ -253,7 +253,7 @@ const AlertDescription_bad_record_mac = AlertDescription.bad_record_mac; /* LONG
  * @type {number}
  */
 export
-const bad_record_mac = AlertDescription.bad_record_mac; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bad_record_mac: _enum_for_AlertDescription.bad_record_mac = AlertDescription.bad_record_mac; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_decryption_failed
@@ -261,7 +261,7 @@ const bad_record_mac = AlertDescription.bad_record_mac; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const AlertDescription_decryption_failed = AlertDescription.decryption_failed; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_decryption_failed: _enum_for_AlertDescription.decryption_failed = AlertDescription.decryption_failed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decryption_failed
@@ -269,7 +269,7 @@ const AlertDescription_decryption_failed = AlertDescription.decryption_failed; /
  * @type {number}
  */
 export
-const decryption_failed = AlertDescription.decryption_failed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decryption_failed: _enum_for_AlertDescription.decryption_failed = AlertDescription.decryption_failed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_record_overflow
@@ -277,7 +277,7 @@ const decryption_failed = AlertDescription.decryption_failed; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AlertDescription_record_overflow = AlertDescription.record_overflow; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_record_overflow: _enum_for_AlertDescription.record_overflow = AlertDescription.record_overflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary record_overflow
@@ -285,7 +285,7 @@ const AlertDescription_record_overflow = AlertDescription.record_overflow; /* LO
  * @type {number}
  */
 export
-const record_overflow = AlertDescription.record_overflow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const record_overflow: _enum_for_AlertDescription.record_overflow = AlertDescription.record_overflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_decompression_failure
@@ -293,7 +293,7 @@ const record_overflow = AlertDescription.record_overflow; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AlertDescription_decompression_failure = AlertDescription.decompression_failure; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_decompression_failure: _enum_for_AlertDescription.decompression_failure = AlertDescription.decompression_failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decompression_failure
@@ -301,7 +301,7 @@ const AlertDescription_decompression_failure = AlertDescription.decompression_fa
  * @type {number}
  */
 export
-const decompression_failure = AlertDescription.decompression_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decompression_failure: _enum_for_AlertDescription.decompression_failure = AlertDescription.decompression_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_handshake_failure
@@ -309,7 +309,7 @@ const decompression_failure = AlertDescription.decompression_failure; /* SHORT_N
  * @type {number}
  */
 export
-const AlertDescription_handshake_failure = AlertDescription.handshake_failure; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_handshake_failure: _enum_for_AlertDescription.handshake_failure = AlertDescription.handshake_failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handshake_failure
@@ -317,7 +317,7 @@ const AlertDescription_handshake_failure = AlertDescription.handshake_failure; /
  * @type {number}
  */
 export
-const handshake_failure = AlertDescription.handshake_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handshake_failure: _enum_for_AlertDescription.handshake_failure = AlertDescription.handshake_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_bad_certificate
@@ -325,7 +325,7 @@ const handshake_failure = AlertDescription.handshake_failure; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AlertDescription_bad_certificate = AlertDescription.bad_certificate; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_bad_certificate: _enum_for_AlertDescription.bad_certificate = AlertDescription.bad_certificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bad_certificate
@@ -333,7 +333,7 @@ const AlertDescription_bad_certificate = AlertDescription.bad_certificate; /* LO
  * @type {number}
  */
 export
-const bad_certificate = AlertDescription.bad_certificate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bad_certificate: _enum_for_AlertDescription.bad_certificate = AlertDescription.bad_certificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unsupported_certificate
@@ -341,7 +341,7 @@ const bad_certificate = AlertDescription.bad_certificate; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AlertDescription_unsupported_certificate = AlertDescription.unsupported_certificate; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unsupported_certificate: _enum_for_AlertDescription.unsupported_certificate = AlertDescription.unsupported_certificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupported_certificate
@@ -349,7 +349,7 @@ const AlertDescription_unsupported_certificate = AlertDescription.unsupported_ce
  * @type {number}
  */
 export
-const unsupported_certificate = AlertDescription.unsupported_certificate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupported_certificate: _enum_for_AlertDescription.unsupported_certificate = AlertDescription.unsupported_certificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_certificate_revoked
@@ -357,7 +357,7 @@ const unsupported_certificate = AlertDescription.unsupported_certificate; /* SHO
  * @type {number}
  */
 export
-const AlertDescription_certificate_revoked = AlertDescription.certificate_revoked; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_certificate_revoked: _enum_for_AlertDescription.certificate_revoked = AlertDescription.certificate_revoked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificate_revoked
@@ -365,7 +365,7 @@ const AlertDescription_certificate_revoked = AlertDescription.certificate_revoke
  * @type {number}
  */
 export
-const certificate_revoked = AlertDescription.certificate_revoked; /* SHORT_NAMED_ENUMERATED_VALUE */
+const certificate_revoked: _enum_for_AlertDescription.certificate_revoked = AlertDescription.certificate_revoked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_certificate_expired
@@ -373,7 +373,7 @@ const certificate_revoked = AlertDescription.certificate_revoked; /* SHORT_NAMED
  * @type {number}
  */
 export
-const AlertDescription_certificate_expired = AlertDescription.certificate_expired; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_certificate_expired: _enum_for_AlertDescription.certificate_expired = AlertDescription.certificate_expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificate_expired
@@ -381,7 +381,7 @@ const AlertDescription_certificate_expired = AlertDescription.certificate_expire
  * @type {number}
  */
 export
-const certificate_expired = AlertDescription.certificate_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const certificate_expired: _enum_for_AlertDescription.certificate_expired = AlertDescription.certificate_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_certificate_unknown
@@ -389,7 +389,7 @@ const certificate_expired = AlertDescription.certificate_expired; /* SHORT_NAMED
  * @type {number}
  */
 export
-const AlertDescription_certificate_unknown = AlertDescription.certificate_unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_certificate_unknown: _enum_for_AlertDescription.certificate_unknown = AlertDescription.certificate_unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificate_unknown
@@ -397,7 +397,7 @@ const AlertDescription_certificate_unknown = AlertDescription.certificate_unknow
  * @type {number}
  */
 export
-const certificate_unknown = AlertDescription.certificate_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const certificate_unknown: _enum_for_AlertDescription.certificate_unknown = AlertDescription.certificate_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_illegal_parameter
@@ -405,7 +405,7 @@ const certificate_unknown = AlertDescription.certificate_unknown; /* SHORT_NAMED
  * @type {number}
  */
 export
-const AlertDescription_illegal_parameter = AlertDescription.illegal_parameter; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_illegal_parameter: _enum_for_AlertDescription.illegal_parameter = AlertDescription.illegal_parameter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary illegal_parameter
@@ -413,7 +413,7 @@ const AlertDescription_illegal_parameter = AlertDescription.illegal_parameter; /
  * @type {number}
  */
 export
-const illegal_parameter = AlertDescription.illegal_parameter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const illegal_parameter: _enum_for_AlertDescription.illegal_parameter = AlertDescription.illegal_parameter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unknown_ca
@@ -421,7 +421,7 @@ const illegal_parameter = AlertDescription.illegal_parameter; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AlertDescription_unknown_ca = AlertDescription.unknown_ca; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unknown_ca: _enum_for_AlertDescription.unknown_ca = AlertDescription.unknown_ca; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown_ca
@@ -429,7 +429,7 @@ const AlertDescription_unknown_ca = AlertDescription.unknown_ca; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const unknown_ca = AlertDescription.unknown_ca; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown_ca: _enum_for_AlertDescription.unknown_ca = AlertDescription.unknown_ca; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_access_denied
@@ -437,7 +437,7 @@ const unknown_ca = AlertDescription.unknown_ca; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const AlertDescription_access_denied = AlertDescription.access_denied; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_access_denied: _enum_for_AlertDescription.access_denied = AlertDescription.access_denied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary access_denied
@@ -445,7 +445,7 @@ const AlertDescription_access_denied = AlertDescription.access_denied; /* LONG_N
  * @type {number}
  */
 export
-const access_denied = AlertDescription.access_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const access_denied: _enum_for_AlertDescription.access_denied = AlertDescription.access_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_decode_error
@@ -453,7 +453,7 @@ const access_denied = AlertDescription.access_denied; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AlertDescription_decode_error = AlertDescription.decode_error; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_decode_error: _enum_for_AlertDescription.decode_error = AlertDescription.decode_error; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decode_error
@@ -461,7 +461,7 @@ const AlertDescription_decode_error = AlertDescription.decode_error; /* LONG_NAM
  * @type {number}
  */
 export
-const decode_error = AlertDescription.decode_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decode_error: _enum_for_AlertDescription.decode_error = AlertDescription.decode_error; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_decrypt_error
@@ -469,7 +469,7 @@ const decode_error = AlertDescription.decode_error; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const AlertDescription_decrypt_error = AlertDescription.decrypt_error; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_decrypt_error: _enum_for_AlertDescription.decrypt_error = AlertDescription.decrypt_error; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decrypt_error
@@ -477,7 +477,7 @@ const AlertDescription_decrypt_error = AlertDescription.decrypt_error; /* LONG_N
  * @type {number}
  */
 export
-const decrypt_error = AlertDescription.decrypt_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decrypt_error: _enum_for_AlertDescription.decrypt_error = AlertDescription.decrypt_error; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_export_restriction
@@ -485,7 +485,7 @@ const decrypt_error = AlertDescription.decrypt_error; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AlertDescription_export_restriction = AlertDescription.export_restriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_export_restriction: _enum_for_AlertDescription.export_restriction = AlertDescription.export_restriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary export_restriction
@@ -493,7 +493,7 @@ const AlertDescription_export_restriction = AlertDescription.export_restriction;
  * @type {number}
  */
 export
-const export_restriction = AlertDescription.export_restriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const export_restriction: _enum_for_AlertDescription.export_restriction = AlertDescription.export_restriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_protocol_version
@@ -501,7 +501,7 @@ const export_restriction = AlertDescription.export_restriction; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AlertDescription_protocol_version = AlertDescription.protocol_version; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_protocol_version: _enum_for_AlertDescription.protocol_version = AlertDescription.protocol_version; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocol_version
@@ -509,7 +509,7 @@ const AlertDescription_protocol_version = AlertDescription.protocol_version; /* 
  * @type {number}
  */
 export
-const protocol_version = AlertDescription.protocol_version; /* SHORT_NAMED_ENUMERATED_VALUE */
+const protocol_version: _enum_for_AlertDescription.protocol_version = AlertDescription.protocol_version; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_insufficient_security
@@ -517,7 +517,7 @@ const protocol_version = AlertDescription.protocol_version; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const AlertDescription_insufficient_security = AlertDescription.insufficient_security; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_insufficient_security: _enum_for_AlertDescription.insufficient_security = AlertDescription.insufficient_security; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficient_security
@@ -525,7 +525,7 @@ const AlertDescription_insufficient_security = AlertDescription.insufficient_sec
  * @type {number}
  */
 export
-const insufficient_security = AlertDescription.insufficient_security; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insufficient_security: _enum_for_AlertDescription.insufficient_security = AlertDescription.insufficient_security; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_internal_error
@@ -533,7 +533,7 @@ const insufficient_security = AlertDescription.insufficient_security; /* SHORT_N
  * @type {number}
  */
 export
-const AlertDescription_internal_error = AlertDescription.internal_error; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_internal_error: _enum_for_AlertDescription.internal_error = AlertDescription.internal_error; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal_error
@@ -541,7 +541,7 @@ const AlertDescription_internal_error = AlertDescription.internal_error; /* LONG
  * @type {number}
  */
 export
-const internal_error = AlertDescription.internal_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internal_error: _enum_for_AlertDescription.internal_error = AlertDescription.internal_error; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_user_canceled
@@ -549,7 +549,7 @@ const internal_error = AlertDescription.internal_error; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const AlertDescription_user_canceled = AlertDescription.user_canceled; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_user_canceled: _enum_for_AlertDescription.user_canceled = AlertDescription.user_canceled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user_canceled
@@ -557,7 +557,7 @@ const AlertDescription_user_canceled = AlertDescription.user_canceled; /* LONG_N
  * @type {number}
  */
 export
-const user_canceled = AlertDescription.user_canceled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user_canceled: _enum_for_AlertDescription.user_canceled = AlertDescription.user_canceled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_no_renegotiation
@@ -565,7 +565,7 @@ const user_canceled = AlertDescription.user_canceled; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AlertDescription_no_renegotiation = AlertDescription.no_renegotiation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_no_renegotiation: _enum_for_AlertDescription.no_renegotiation = AlertDescription.no_renegotiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_renegotiation
@@ -573,7 +573,7 @@ const AlertDescription_no_renegotiation = AlertDescription.no_renegotiation; /* 
  * @type {number}
  */
 export
-const no_renegotiation = AlertDescription.no_renegotiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_renegotiation: _enum_for_AlertDescription.no_renegotiation = AlertDescription.no_renegotiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unsupported_extension
@@ -585,7 +585,7 @@ const no_renegotiation = AlertDescription.no_renegotiation; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const AlertDescription_unsupported_extension = AlertDescription.unsupported_extension; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unsupported_extension: _enum_for_AlertDescription.unsupported_extension = AlertDescription.unsupported_extension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupported_extension
@@ -597,7 +597,7 @@ const AlertDescription_unsupported_extension = AlertDescription.unsupported_exte
  * @type {number}
  */
 export
-const unsupported_extension = AlertDescription.unsupported_extension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupported_extension: _enum_for_AlertDescription.unsupported_extension = AlertDescription.unsupported_extension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_certificate_unobtainable
@@ -605,7 +605,7 @@ const unsupported_extension = AlertDescription.unsupported_extension; /* SHORT_N
  * @type {number}
  */
 export
-const AlertDescription_certificate_unobtainable = AlertDescription.certificate_unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_certificate_unobtainable: _enum_for_AlertDescription.certificate_unobtainable = AlertDescription.certificate_unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificate_unobtainable
@@ -613,7 +613,7 @@ const AlertDescription_certificate_unobtainable = AlertDescription.certificate_u
  * @type {number}
  */
 export
-const certificate_unobtainable = AlertDescription.certificate_unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const certificate_unobtainable: _enum_for_AlertDescription.certificate_unobtainable = AlertDescription.certificate_unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unrecognized_name
@@ -621,7 +621,7 @@ const certificate_unobtainable = AlertDescription.certificate_unobtainable; /* S
  * @type {number}
  */
 export
-const AlertDescription_unrecognized_name = AlertDescription.unrecognized_name; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unrecognized_name: _enum_for_AlertDescription.unrecognized_name = AlertDescription.unrecognized_name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrecognized_name
@@ -629,7 +629,7 @@ const AlertDescription_unrecognized_name = AlertDescription.unrecognized_name; /
  * @type {number}
  */
 export
-const unrecognized_name = AlertDescription.unrecognized_name; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrecognized_name: _enum_for_AlertDescription.unrecognized_name = AlertDescription.unrecognized_name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_bad_certificate_status_response
@@ -637,7 +637,7 @@ const unrecognized_name = AlertDescription.unrecognized_name; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AlertDescription_bad_certificate_status_response = AlertDescription.bad_certificate_status_response; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_bad_certificate_status_response: _enum_for_AlertDescription.bad_certificate_status_response = AlertDescription.bad_certificate_status_response; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bad_certificate_status_response
@@ -645,7 +645,7 @@ const AlertDescription_bad_certificate_status_response = AlertDescription.bad_ce
  * @type {number}
  */
 export
-const bad_certificate_status_response = AlertDescription.bad_certificate_status_response; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bad_certificate_status_response: _enum_for_AlertDescription.bad_certificate_status_response = AlertDescription.bad_certificate_status_response; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_bad_certificate_hash_value
@@ -653,7 +653,7 @@ const bad_certificate_status_response = AlertDescription.bad_certificate_status_
  * @type {number}
  */
 export
-const AlertDescription_bad_certificate_hash_value = AlertDescription.bad_certificate_hash_value; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_bad_certificate_hash_value: _enum_for_AlertDescription.bad_certificate_hash_value = AlertDescription.bad_certificate_hash_value; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bad_certificate_hash_value
@@ -661,7 +661,7 @@ const AlertDescription_bad_certificate_hash_value = AlertDescription.bad_certifi
  * @type {number}
  */
 export
-const bad_certificate_hash_value = AlertDescription.bad_certificate_hash_value; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bad_certificate_hash_value: _enum_for_AlertDescription.bad_certificate_hash_value = AlertDescription.bad_certificate_hash_value; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unacceptable_model
@@ -673,7 +673,7 @@ const bad_certificate_hash_value = AlertDescription.bad_certificate_hash_value; 
  * @type {number}
  */
 export
-const AlertDescription_unacceptable_model = AlertDescription.unacceptable_model; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unacceptable_model: _enum_for_AlertDescription.unacceptable_model = AlertDescription.unacceptable_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unacceptable_model
@@ -685,7 +685,7 @@ const AlertDescription_unacceptable_model = AlertDescription.unacceptable_model;
  * @type {number}
  */
 export
-const unacceptable_model = AlertDescription.unacceptable_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unacceptable_model: _enum_for_AlertDescription.unacceptable_model = AlertDescription.unacceptable_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unacceptable_biometrics
@@ -697,7 +697,7 @@ const unacceptable_model = AlertDescription.unacceptable_model; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AlertDescription_unacceptable_biometrics = AlertDescription.unacceptable_biometrics; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unacceptable_biometrics: _enum_for_AlertDescription.unacceptable_biometrics = AlertDescription.unacceptable_biometrics; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unacceptable_biometrics
@@ -709,7 +709,7 @@ const AlertDescription_unacceptable_biometrics = AlertDescription.unacceptable_b
  * @type {number}
  */
 export
-const unacceptable_biometrics = AlertDescription.unacceptable_biometrics; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unacceptable_biometrics: _enum_for_AlertDescription.unacceptable_biometrics = AlertDescription.unacceptable_biometrics; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertDescription_unsupported_biometrics
@@ -721,7 +721,7 @@ const unacceptable_biometrics = AlertDescription.unacceptable_biometrics; /* SHO
  * @type {number}
  */
 export
-const AlertDescription_unsupported_biometrics = AlertDescription.unsupported_biometrics; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertDescription_unsupported_biometrics: _enum_for_AlertDescription.unsupported_biometrics = AlertDescription.unsupported_biometrics; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupported_biometrics
@@ -733,7 +733,7 @@ const AlertDescription_unsupported_biometrics = AlertDescription.unsupported_bio
  * @type {number}
  */
 export
-const unsupported_biometrics = AlertDescription.unsupported_biometrics; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupported_biometrics: _enum_for_AlertDescription.unsupported_biometrics = AlertDescription.unsupported_biometrics; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_AlertDescription(el: _Element): AlertDescription {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

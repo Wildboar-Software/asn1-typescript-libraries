@@ -33,12 +33,12 @@ export type DateTime = TIME; // TimeType
 
 
 
-export const _decode_DateTime = $._decodeTime;
+export const _decode_DateTime: $.ASN1Decoder<string> = $._decodeTime;
 
 
 
 
-export const _encode_DateTime = $._encodeTime;
+export const _encode_DateTime: $.ASN1Encoder<string> = $._encodeTime;
 
 
 /* eslint-enable */

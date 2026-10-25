@@ -36,42 +36,42 @@ export type Version = INTEGER;
  * @constant
  * @type {number}
  */
-export const Version_v1 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v1: 0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v1
  * @constant
  * @type {number}
  */
-export const v1 = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 0 = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v2
  * @constant
  * @type {number}
  */
-export const Version_v2 = 1 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v2: 1 = 1 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v2
  * @constant
  * @type {number}
  */
-export const v2 = Version_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2: 1 = Version_v2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v3
  * @constant
  * @type {number}
  */
-export const Version_v3 = 2 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v3: 2 = 2 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v3
  * @constant
  * @type {number}
  */
-export const v3 = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
+export const v3: 2 = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Version

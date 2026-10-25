@@ -211,13 +211,13 @@ class IPMMCC {
          * @static
          */
 
-    public static _enum_for_frameType = _enum_for_FrameType;        /**
+    public static _enum_for_frameType: typeof _enum_for_FrameType = _enum_for_FrameType;        /**
          * @summary The enum used as the type of the component `mMCCprotocol`
          * @public
          * @static
          */
 
-    public static _enum_for_mMCCprotocol = _enum_for_MMCCprotocol;
+    public static _enum_for_mMCCprotocol: typeof _enum_for_MMCCprotocol = _enum_for_MMCCprotocol;
 }
 
 /**

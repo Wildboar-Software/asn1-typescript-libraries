@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EscalationTime = GeneralizedTime; // GeneralizedTime
-export const _decode_EscalationTime = $._decodeGeneralizedTime;
-export const _encode_EscalationTime = $._encodeGeneralizedTime;
+export const _decode_EscalationTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
+export const _encode_EscalationTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

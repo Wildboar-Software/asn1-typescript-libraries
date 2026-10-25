@@ -397,13 +397,13 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_IRI_Parameters_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator;        /**
          * @summary The enum used as the type of the component `i_WLANevent`
          * @public
          * @static
          */
 
-    public static _enum_for_i_WLANevent = _enum_for_I_WLANEvent;
+    public static _enum_for_i_WLANevent: typeof _enum_for_I_WLANEvent = _enum_for_I_WLANEvent;
 }
 
 /**

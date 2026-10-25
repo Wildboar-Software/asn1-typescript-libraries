@@ -146,7 +146,7 @@ class UPPathChange {
          * @static
          */
 
-    public static _enum_for_dNAIChangeType = _enum_for_DNAIChangeType;
+    public static _enum_for_dNAIChangeType: typeof _enum_for_DNAIChangeType = _enum_for_DNAIChangeType;
 }
 
 /**

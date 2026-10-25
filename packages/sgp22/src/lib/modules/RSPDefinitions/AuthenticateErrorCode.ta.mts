@@ -32,7 +32,7 @@ type AuthenticateErrorCode = INTEGER;
  * @type {number}
  */
 export
-const AuthenticateErrorCode_invalidCertificate = 1 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_invalidCertificate: 1 = 1 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_invalidCertificate
@@ -44,7 +44,7 @@ const AuthenticateErrorCode_invalidCertificate = 1 satisfies AuthenticateErrorCo
  * @type {number}
  */
 export
-const invalidCertificate = AuthenticateErrorCode_invalidCertificate; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidCertificate: 1 = AuthenticateErrorCode_invalidCertificate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_invalidSignature
@@ -56,7 +56,7 @@ const invalidCertificate = AuthenticateErrorCode_invalidCertificate; /* SHORT_NA
  * @type {number}
  */
 export
-const AuthenticateErrorCode_invalidSignature = 2 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_invalidSignature: 2 = 2 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_invalidSignature
@@ -68,7 +68,7 @@ const AuthenticateErrorCode_invalidSignature = 2 satisfies AuthenticateErrorCode
  * @type {number}
  */
 export
-const invalidSignature = AuthenticateErrorCode_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidSignature: 2 = AuthenticateErrorCode_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_unsupportedCurve
@@ -81,7 +81,7 @@ const invalidSignature = AuthenticateErrorCode_invalidSignature; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AuthenticateErrorCode_unsupportedCurve = 3 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_unsupportedCurve: 3 = 3 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_unsupportedCurve
@@ -94,7 +94,7 @@ const AuthenticateErrorCode_unsupportedCurve = 3 satisfies AuthenticateErrorCode
  * @type {number}
  */
 export
-const unsupportedCurve = AuthenticateErrorCode_unsupportedCurve; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedCurve: 3 = AuthenticateErrorCode_unsupportedCurve; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_noSessionContext
@@ -106,7 +106,7 @@ const unsupportedCurve = AuthenticateErrorCode_unsupportedCurve; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AuthenticateErrorCode_noSessionContext = 4 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_noSessionContext: 4 = 4 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_noSessionContext
@@ -118,7 +118,7 @@ const AuthenticateErrorCode_noSessionContext = 4 satisfies AuthenticateErrorCode
  * @type {number}
  */
 export
-const noSessionContext = AuthenticateErrorCode_noSessionContext; /* SHORT_NAMED_INTEGER_VALUE */
+const noSessionContext: 4 = AuthenticateErrorCode_noSessionContext; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_invalidOid
@@ -131,7 +131,7 @@ const noSessionContext = AuthenticateErrorCode_noSessionContext; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const AuthenticateErrorCode_invalidOid = 5 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_invalidOid: 5 = 5 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_invalidOid
@@ -144,7 +144,7 @@ const AuthenticateErrorCode_invalidOid = 5 satisfies AuthenticateErrorCode; /* L
  * @type {number}
  */
 export
-const invalidOid = AuthenticateErrorCode_invalidOid; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidOid: 5 = AuthenticateErrorCode_invalidOid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_euiccChallengeMismatch
@@ -157,7 +157,7 @@ const invalidOid = AuthenticateErrorCode_invalidOid; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const AuthenticateErrorCode_euiccChallengeMismatch = 6 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_euiccChallengeMismatch: 6 = 6 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_euiccChallengeMismatch
@@ -170,7 +170,7 @@ const AuthenticateErrorCode_euiccChallengeMismatch = 6 satisfies AuthenticateErr
  * @type {number}
  */
 export
-const euiccChallengeMismatch = AuthenticateErrorCode_euiccChallengeMismatch; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccChallengeMismatch: 6 = AuthenticateErrorCode_euiccChallengeMismatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_ciPKUnknown
@@ -183,7 +183,7 @@ const euiccChallengeMismatch = AuthenticateErrorCode_euiccChallengeMismatch; /* 
  * @type {number}
  */
 export
-const AuthenticateErrorCode_ciPKUnknown = 7 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_ciPKUnknown: 7 = 7 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_ciPKUnknown
@@ -196,7 +196,7 @@ const AuthenticateErrorCode_ciPKUnknown = 7 satisfies AuthenticateErrorCode; /* 
  * @type {number}
  */
 export
-const ciPKUnknown = AuthenticateErrorCode_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown: 7 = AuthenticateErrorCode_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_undefinedError
@@ -209,7 +209,7 @@ const ciPKUnknown = AuthenticateErrorCode_ciPKUnknown; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const AuthenticateErrorCode_undefinedError = 127 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateErrorCode_undefinedError: 127 = 127 satisfies AuthenticateErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateErrorCode_undefinedError
@@ -222,9 +222,9 @@ const AuthenticateErrorCode_undefinedError = 127 satisfies AuthenticateErrorCode
  * @type {number}
  */
 export
-const undefinedError = AuthenticateErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AuthenticateErrorCode = $._decodeInteger;
-export const _encode_AuthenticateErrorCode = $._encodeInteger;
+const undefinedError: 127 = AuthenticateErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AuthenticateErrorCode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AuthenticateErrorCode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

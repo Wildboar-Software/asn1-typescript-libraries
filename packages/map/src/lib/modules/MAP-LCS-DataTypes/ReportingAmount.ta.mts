@@ -47,7 +47,7 @@ export const _decode_ReportingAmount = (el: _Element): ReportingAmount => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingAmount, encoded as an ASN.1 Element.
  */
-export const _encode_ReportingAmount = $._encodeInteger;
+export const _encode_ReportingAmount: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

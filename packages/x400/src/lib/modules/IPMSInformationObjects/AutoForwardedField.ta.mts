@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AutoForwardedField = BOOLEAN; // BooleanType
 
 
-export const _decode_AutoForwardedField = $._decodeBoolean;
+export const _decode_AutoForwardedField: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_AutoForwardedField = $._encodeBoolean;
+export const _encode_AutoForwardedField: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -113,7 +113,7 @@ class CoverageInfo {
          * @static
          */
 
-    public static _enum_for_coverageStatus = _enum_for_CoverageStatus;
+    public static _enum_for_coverageStatus: typeof _enum_for_CoverageStatus = _enum_for_CoverageStatus;
 }
 
 /**

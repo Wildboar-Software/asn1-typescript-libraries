@@ -294,7 +294,7 @@ class EASProfile {
          * @static
          */
 
-    public static _enum_for_eASStatus = _enum_for_EASStatus;
+    public static _enum_for_eASStatus: typeof _enum_for_EASStatus = _enum_for_EASStatus;
 }
 
 /**

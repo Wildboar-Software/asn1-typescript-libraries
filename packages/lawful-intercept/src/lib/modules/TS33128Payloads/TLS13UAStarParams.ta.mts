@@ -403,7 +403,7 @@ class TLS13UAStarParams {
          * @static
          */
 
-    public static _enum_for_kDFAlgorithm = _enum_for_TLS13KDFAlgorithm;
+    public static _enum_for_kDFAlgorithm: typeof _enum_for_TLS13KDFAlgorithm = _enum_for_TLS13KDFAlgorithm;
 }
 
 /**

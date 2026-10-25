@@ -18,12 +18,12 @@ export type PrivateKey = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_PrivateKey = $._decodeOctetString;
+export const _decode_PrivateKey: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_PrivateKey = $._encodeOctetString;
+export const _encode_PrivateKey: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

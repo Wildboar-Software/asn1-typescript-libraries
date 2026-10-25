@@ -130,12 +130,12 @@ export const overlapped_recovery: number = Ccr_requirements_overlapped_recovery;
 
 
 
-export const _decode_Ccr_requirements = $._decodeBitString;
+export const _decode_Ccr_requirements: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Ccr_requirements = $._encodeBitString;
+export const _encode_Ccr_requirements: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

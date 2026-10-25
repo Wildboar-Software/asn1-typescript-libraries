@@ -76,7 +76,7 @@ export type ResponseTypes = _enum_for_ResponseTypes;
  *
  * @enum {number}
  */
-export const ResponseTypes = _enum_for_ResponseTypes;
+export const ResponseTypes: typeof _enum_for_ResponseTypes = _enum_for_ResponseTypes;
 
 /**
  * @summary ResponseTypes_cached_only
@@ -87,7 +87,7 @@ export const ResponseTypes = _enum_for_ResponseTypes;
  * @constant
  * @type {number}
  */
-export const ResponseTypes_cached_only =
+export const ResponseTypes_cached_only: _enum_for_ResponseTypes.cached_only =
   ResponseTypes.cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const ResponseTypes_cached_only =
  * @constant
  * @type {number}
  */
-export const cached_only =
+export const cached_only: _enum_for_ResponseTypes.cached_only =
   ResponseTypes.cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +111,7 @@ export const cached_only =
  * @constant
  * @type {number}
  */
-export const ResponseTypes_non_cached_only =
+export const ResponseTypes_non_cached_only: _enum_for_ResponseTypes.non_cached_only =
   ResponseTypes.non_cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -123,7 +123,7 @@ export const ResponseTypes_non_cached_only =
  * @constant
  * @type {number}
  */
-export const non_cached_only =
+export const non_cached_only: _enum_for_ResponseTypes.non_cached_only =
   ResponseTypes.non_cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -135,7 +135,7 @@ export const non_cached_only =
  * @constant
  * @type {number}
  */
-export const ResponseTypes_cached_and_non_cached =
+export const ResponseTypes_cached_and_non_cached: _enum_for_ResponseTypes.cached_and_non_cached =
   ResponseTypes.cached_and_non_cached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -147,7 +147,7 @@ export const ResponseTypes_cached_and_non_cached =
  * @constant
  * @type {number}
  */
-export const cached_and_non_cached =
+export const cached_and_non_cached: _enum_for_ResponseTypes.cached_and_non_cached =
   ResponseTypes.cached_and_non_cached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

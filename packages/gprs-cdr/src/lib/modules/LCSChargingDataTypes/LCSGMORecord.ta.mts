@@ -372,7 +372,7 @@ class LCSGMORecord {
          * @static
          */
 
-    public static _enum_for_lcsClientType = _enum_for_LCSClientType;
+    public static _enum_for_lcsClientType: typeof _enum_for_LCSClientType = _enum_for_LCSClientType;
 }
 
 /**

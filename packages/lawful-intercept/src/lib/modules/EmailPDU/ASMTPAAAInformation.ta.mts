@@ -158,13 +158,13 @@ class ASMTPAAAInformation {
          * @static
          */
 
-    public static _enum_for_authMethod = _enum_for_AAAauthMethod;        /**
+    public static _enum_for_authMethod: typeof _enum_for_AAAauthMethod = _enum_for_AAAauthMethod;        /**
          * @summary The enum used as the type of the component `aAAResult`
          * @public
          * @static
          */
 
-    public static _enum_for_aAAResult = _enum_for_AAAResult;
+    public static _enum_for_aAAResult: typeof _enum_for_AAAResult = _enum_for_AAAResult;
 }
 
 /**

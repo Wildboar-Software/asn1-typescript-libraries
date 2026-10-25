@@ -198,7 +198,7 @@ class LCS_PrivacyClass {
          * @static
          */
 
-    public static _enum_for_notificationToMSUser = _enum_for_NotificationToMSUser;
+    public static _enum_for_notificationToMSUser: typeof _enum_for_NotificationToMSUser = _enum_for_NotificationToMSUser;
 }
 
 /**

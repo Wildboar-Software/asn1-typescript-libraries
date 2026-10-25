@@ -129,7 +129,7 @@ export class E_setupError {
      * @static
      */
 
-    public static _enum_for_error = _enum_for_SetupError;
+    public static _enum_for_error: typeof _enum_for_SetupError = _enum_for_SetupError;
 }
 
 

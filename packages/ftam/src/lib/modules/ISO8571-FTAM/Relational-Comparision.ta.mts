@@ -123,12 +123,12 @@ export const greater_than_matches: number = Relational_Comparision_greater_than_
 
 
 
-export const _decode_Relational_Comparision = $._decodeBitString;
+export const _decode_Relational_Comparision: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Relational_Comparision = $._encodeBitString;
+export const _encode_Relational_Comparision: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

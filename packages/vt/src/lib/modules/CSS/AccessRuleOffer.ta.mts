@@ -208,8 +208,8 @@ const AccessRuleOffer_no_access: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const no_access: number = AccessRuleOffer_no_access; /* SHORT_NAMED_BIT */
-export const _decode_AccessRuleOffer = $._decodeBitString;
-export const _encode_AccessRuleOffer = $._encodeBitString;
+export const _decode_AccessRuleOffer: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AccessRuleOffer: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

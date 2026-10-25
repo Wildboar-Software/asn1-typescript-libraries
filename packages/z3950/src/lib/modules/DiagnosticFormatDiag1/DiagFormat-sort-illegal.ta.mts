@@ -41,7 +41,7 @@ type DiagFormat_sort_illegal = INTEGER;
  * @type {number}
  */
 export
-const DiagFormat_sort_illegal_relation = 1 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_sort_illegal_relation: 1 = 1 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_relation
@@ -53,7 +53,7 @@ const DiagFormat_sort_illegal_relation = 1 satisfies DiagFormat_sort_illegal; /*
  * @type {number}
  */
 export
-const relation = DiagFormat_sort_illegal_relation; /* SHORT_NAMED_INTEGER_VALUE */
+const relation: 1 = DiagFormat_sort_illegal_relation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_case_
@@ -65,7 +65,7 @@ const relation = DiagFormat_sort_illegal_relation; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const DiagFormat_sort_illegal_case_ = 2 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_sort_illegal_case_: 2 = 2 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_case_
@@ -77,7 +77,7 @@ const DiagFormat_sort_illegal_case_ = 2 satisfies DiagFormat_sort_illegal; /* LO
  * @type {number}
  */
 export
-const case_ = DiagFormat_sort_illegal_case_; /* SHORT_NAMED_INTEGER_VALUE */
+const case_: 2 = DiagFormat_sort_illegal_case_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_action
@@ -89,7 +89,7 @@ const case_ = DiagFormat_sort_illegal_case_; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DiagFormat_sort_illegal_action = 3 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_sort_illegal_action: 3 = 3 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_action
@@ -101,7 +101,7 @@ const DiagFormat_sort_illegal_action = 3 satisfies DiagFormat_sort_illegal; /* L
  * @type {number}
  */
 export
-const action = DiagFormat_sort_illegal_action; /* SHORT_NAMED_INTEGER_VALUE */
+const action: 3 = DiagFormat_sort_illegal_action; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_sort
@@ -113,7 +113,7 @@ const action = DiagFormat_sort_illegal_action; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DiagFormat_sort_illegal_sort = 4 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_sort_illegal_sort: 4 = 4 satisfies DiagFormat_sort_illegal; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_sort_illegal_sort
@@ -125,7 +125,7 @@ const DiagFormat_sort_illegal_sort = 4 satisfies DiagFormat_sort_illegal; /* LON
  * @type {number}
  */
 export
-const sort = DiagFormat_sort_illegal_sort; /* SHORT_NAMED_INTEGER_VALUE */
+const sort: 4 = DiagFormat_sort_illegal_sort; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_sort_illegal: $.ASN1Decoder<DiagFormat_sort_illegal> = $._decodeInteger;
 export const _encode_DiagFormat_sort_illegal: $.ASN1Encoder<DiagFormat_sort_illegal> = $._encodeInteger;
 

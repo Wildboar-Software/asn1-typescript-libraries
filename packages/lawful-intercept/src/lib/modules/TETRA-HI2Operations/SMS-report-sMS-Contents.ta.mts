@@ -174,19 +174,19 @@ class SMS_report_sMS_Contents {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_SMS_report_sMS_Contents_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_SMS_report_sMS_Contents_initiator = _enum_for_SMS_report_sMS_Contents_initiator;        /**
          * @summary The enum used as the type of the component `transfer_status`
          * @public
          * @static
          */
 
-    public static _enum_for_transfer_status = _enum_for_SMS_report_sMS_Contents_transfer_status;        /**
+    public static _enum_for_transfer_status: typeof _enum_for_SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents_transfer_status;        /**
          * @summary The enum used as the type of the component `other_message`
          * @public
          * @static
          */
 
-    public static _enum_for_other_message = _enum_for_SMS_report_sMS_Contents_other_message;
+    public static _enum_for_other_message: typeof _enum_for_SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_other_message;
 }
 
 /**

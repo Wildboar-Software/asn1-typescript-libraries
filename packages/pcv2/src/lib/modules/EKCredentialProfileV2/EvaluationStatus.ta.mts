@@ -104,7 +104,7 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
  * @enum {number}
  */
 export
-const EvaluationStatus = _enum_for_EvaluationStatus;
+const EvaluationStatus: typeof _enum_for_EvaluationStatus = _enum_for_EvaluationStatus;
 
 /**
  * @summary EvaluationStatus_designedToMeet
@@ -120,7 +120,7 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
  * @type {number}
  */
 export
-const EvaluationStatus_designedToMeet = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_designedToMeet: _enum_for_EvaluationStatus.designedToMeet = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary designedToMeet
@@ -136,7 +136,7 @@ const EvaluationStatus_designedToMeet = EvaluationStatus.designedToMeet; /* LONG
  * @type {number}
  */
 export
-const designedToMeet = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const designedToMeet: _enum_for_EvaluationStatus.designedToMeet = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationInProgress
@@ -152,7 +152,7 @@ const designedToMeet = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationInProgress = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationInProgress: _enum_for_EvaluationStatus.evaluationInProgress = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationInProgress
@@ -168,7 +168,7 @@ const EvaluationStatus_evaluationInProgress = EvaluationStatus.evaluationInProgr
  * @type {number}
  */
 export
-const evaluationInProgress = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationInProgress: _enum_for_EvaluationStatus.evaluationInProgress = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationCompleted
@@ -184,7 +184,7 @@ const evaluationInProgress = EvaluationStatus.evaluationInProgress; /* SHORT_NAM
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationCompleted = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationCompleted: _enum_for_EvaluationStatus.evaluationCompleted = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationCompleted
@@ -200,7 +200,7 @@ const EvaluationStatus_evaluationCompleted = EvaluationStatus.evaluationComplete
  * @type {number}
  */
 export
-const evaluationCompleted = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationCompleted: _enum_for_EvaluationStatus.evaluationCompleted = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_EvaluationStatus: $.ASN1Decoder<EvaluationStatus> = $._decodeEnumerated;

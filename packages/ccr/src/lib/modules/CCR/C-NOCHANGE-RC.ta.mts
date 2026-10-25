@@ -127,7 +127,7 @@ export class C_NOCHANGE_RC {
    * @static
    */
 
-  public static _enum_for_outcome = _enum_for_C_NOCHANGE_RC_outcome;
+  public static _enum_for_outcome: typeof _enum_for_C_NOCHANGE_RC_outcome = _enum_for_C_NOCHANGE_RC_outcome;
 }
 
 

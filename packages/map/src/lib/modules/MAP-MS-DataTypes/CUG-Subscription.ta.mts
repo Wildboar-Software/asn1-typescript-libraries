@@ -130,7 +130,7 @@ class CUG_Subscription {
          * @static
          */
 
-    public static _enum_for_intraCUG_Options = _enum_for_IntraCUG_Options;
+    public static _enum_for_intraCUG_Options: typeof _enum_for_IntraCUG_Options = _enum_for_IntraCUG_Options;
 }
 
 /**

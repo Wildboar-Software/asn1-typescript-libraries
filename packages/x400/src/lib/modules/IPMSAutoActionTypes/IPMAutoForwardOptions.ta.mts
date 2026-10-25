@@ -174,10 +174,10 @@ export const IPMAutoForwardOptions_delete_delivered_object: number = 5; /* LONG_
 export const delete_delivered_object: number = IPMAutoForwardOptions_delete_delivered_object; /* SHORT_NAMED_BIT */
 
 
-export const _decode_IPMAutoForwardOptions = $._decodeBitString;
+export const _decode_IPMAutoForwardOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_IPMAutoForwardOptions = $._encodeBitString;
+export const _encode_IPMAutoForwardOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -93,7 +93,7 @@ class EPSCSGInfo {
          * @static
          */
 
-    public static _enum_for_cSGMembershipStatus = _enum_for_CSGMembershipIndication;
+    public static _enum_for_cSGMembershipStatus: typeof _enum_for_CSGMembershipIndication = _enum_for_CSGMembershipIndication;
 }
 
 /**

@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type UnitsTotal = INTEGER;
 
 
-export const _decode_UnitsTotal = $._decodeInteger;
+export const _decode_UnitsTotal: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_UnitsTotal = $._encodeInteger;
+export const _encode_UnitsTotal: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

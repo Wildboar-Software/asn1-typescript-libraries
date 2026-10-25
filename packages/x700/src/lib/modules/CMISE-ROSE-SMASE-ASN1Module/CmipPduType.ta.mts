@@ -606,10 +606,10 @@ export const CmipPduType_rosReject: number = 46; /* LONG_NAMED_BIT */
 export const rosReject: number = CmipPduType_rosReject; /* SHORT_NAMED_BIT */
 
 
-export const _decode_CmipPduType = $._decodeBitString;
+export const _decode_CmipPduType: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_CmipPduType = $._encodeBitString;
+export const _encode_CmipPduType: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

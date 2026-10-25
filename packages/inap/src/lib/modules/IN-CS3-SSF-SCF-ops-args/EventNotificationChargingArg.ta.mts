@@ -114,13 +114,13 @@ class EventNotificationChargingArg {
      * @static
      * @method
      */
-    public static get _default_value_for_monitorMode () { return MonitorMode_notifyAndContinue; }        /**
+    public static get _default_value_for_monitorMode (): _enum_for_MonitorMode.notifyAndContinue { return MonitorMode_notifyAndContinue; }        /**
          * @summary The enum used as the type of the component `monitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 /**

@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ServiceProfileIdentifier = OCTET_STRING; // OctetStringType
-export const _decode_ServiceProfileIdentifier = $._decodeOctetString;
-export const _encode_ServiceProfileIdentifier = $._encodeOctetString;
+export const _decode_ServiceProfileIdentifier: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_ServiceProfileIdentifier: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

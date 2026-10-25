@@ -96,7 +96,7 @@ type POCSessionType = _enum_for_POCSessionType;
  * @enum {number}
  */
 export
-const POCSessionType = _enum_for_POCSessionType;
+const POCSessionType: typeof _enum_for_POCSessionType = _enum_for_POCSessionType;
 
 /**
  * @summary POCSessionType_one_to_one_session
@@ -111,7 +111,7 @@ const POCSessionType = _enum_for_POCSessionType;
  * @type {number}
  */
 export
-const POCSessionType_one_to_one_session = POCSessionType.one_to_one_session; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCSessionType_one_to_one_session: _enum_for_POCSessionType.one_to_one_session = POCSessionType.one_to_one_session; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary one_to_one_session
@@ -119,7 +119,7 @@ const POCSessionType_one_to_one_session = POCSessionType.one_to_one_session; /* 
  * @type {number}
  */
 export
-const one_to_one_session = POCSessionType.one_to_one_session; /* SHORT_NAMED_ENUMERATED_VALUE */
+const one_to_one_session: _enum_for_POCSessionType.one_to_one_session = POCSessionType.one_to_one_session; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCSessionType_chat_group_session
@@ -137,7 +137,7 @@ const one_to_one_session = POCSessionType.one_to_one_session; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const POCSessionType_chat_group_session = POCSessionType.chat_group_session; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCSessionType_chat_group_session: _enum_for_POCSessionType.chat_group_session = POCSessionType.chat_group_session; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary chat_group_session
@@ -145,7 +145,7 @@ const POCSessionType_chat_group_session = POCSessionType.chat_group_session; /* 
  * @type {number}
  */
 export
-const chat_group_session = POCSessionType.chat_group_session; /* SHORT_NAMED_ENUMERATED_VALUE */
+const chat_group_session: _enum_for_POCSessionType.chat_group_session = POCSessionType.chat_group_session; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCSessionType_pre_arranged_group_session
@@ -163,7 +163,7 @@ const chat_group_session = POCSessionType.chat_group_session; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const POCSessionType_pre_arranged_group_session = POCSessionType.pre_arranged_group_session; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCSessionType_pre_arranged_group_session: _enum_for_POCSessionType.pre_arranged_group_session = POCSessionType.pre_arranged_group_session; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_arranged_group_session
@@ -171,7 +171,7 @@ const POCSessionType_pre_arranged_group_session = POCSessionType.pre_arranged_gr
  * @type {number}
  */
 export
-const pre_arranged_group_session = POCSessionType.pre_arranged_group_session; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_arranged_group_session: _enum_for_POCSessionType.pre_arranged_group_session = POCSessionType.pre_arranged_group_session; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary POCSessionType_ad_hoc_group_session
@@ -189,7 +189,7 @@ const pre_arranged_group_session = POCSessionType.pre_arranged_group_session; /*
  * @type {number}
  */
 export
-const POCSessionType_ad_hoc_group_session = POCSessionType.ad_hoc_group_session; /* LONG_NAMED_ENUMERATED_VALUE */
+const POCSessionType_ad_hoc_group_session: _enum_for_POCSessionType.ad_hoc_group_session = POCSessionType.ad_hoc_group_session; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ad_hoc_group_session
@@ -197,7 +197,7 @@ const POCSessionType_ad_hoc_group_session = POCSessionType.ad_hoc_group_session;
  * @type {number}
  */
 export
-const ad_hoc_group_session = POCSessionType.ad_hoc_group_session; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ad_hoc_group_session: _enum_for_POCSessionType.ad_hoc_group_session = POCSessionType.ad_hoc_group_session; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_POCSessionType: $.ASN1Decoder<POCSessionType> = $._decodeEnumerated;

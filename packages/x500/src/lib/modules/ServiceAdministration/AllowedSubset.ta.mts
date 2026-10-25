@@ -59,10 +59,10 @@ export const AllowedSubset_wholeSubtree: number = 2; /* LONG_NAMED_BIT */
 export const wholeSubtree: number = AllowedSubset_wholeSubtree; /* SHORT_NAMED_BIT */
 
 
-export const _decode_AllowedSubset = $._decodeBitString;
+export const _decode_AllowedSubset: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_AllowedSubset = $._encodeBitString;
+export const _encode_AllowedSubset: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

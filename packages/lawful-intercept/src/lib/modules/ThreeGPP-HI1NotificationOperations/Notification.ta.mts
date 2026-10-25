@@ -215,7 +215,7 @@ class Notification {
          * @static
          */
 
-    public static _enum_for_broadcastStatus = _enum_for_BroadcastStatus;
+    public static _enum_for_broadcastStatus: typeof _enum_for_BroadcastStatus = _enum_for_BroadcastStatus;
 }
 
 /**

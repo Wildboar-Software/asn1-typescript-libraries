@@ -139,7 +139,7 @@ class MonitorStartArgument {
          * @static
          */
 
-    public static _enum_for_monitorType = _enum_for_MonitorType;
+    public static _enum_for_monitorType: typeof _enum_for_MonitorType = _enum_for_MonitorType;
 }
 
 /**

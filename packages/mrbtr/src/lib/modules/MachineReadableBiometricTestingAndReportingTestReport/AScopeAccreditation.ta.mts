@@ -53,7 +53,7 @@ type AScopeAccreditation = _enum_for_AScopeAccreditation | ENUMERATED;
  * @type {number}
  */
 export
-const AScopeAccreditation_iso_iec19795_1_2006 = _enum_for_AScopeAccreditation.iso_iec19795_1_2006; /* LONG_NAMED_ENUMERATED_VALUE */
+const AScopeAccreditation_iso_iec19795_1_2006: _enum_for_AScopeAccreditation.iso_iec19795_1_2006 = _enum_for_AScopeAccreditation.iso_iec19795_1_2006; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iso_iec19795_1_2006
@@ -61,7 +61,7 @@ const AScopeAccreditation_iso_iec19795_1_2006 = _enum_for_AScopeAccreditation.is
  * @type {number}
  */
 export
-const iso_iec19795_1_2006 = AScopeAccreditation_iso_iec19795_1_2006; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iso_iec19795_1_2006: _enum_for_AScopeAccreditation.iso_iec19795_1_2006 = AScopeAccreditation_iso_iec19795_1_2006; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AScopeAccreditation_iso_iec19795_1_2021
@@ -69,7 +69,7 @@ const iso_iec19795_1_2006 = AScopeAccreditation_iso_iec19795_1_2006; /* SHORT_NA
  * @type {number}
  */
 export
-const AScopeAccreditation_iso_iec19795_1_2021 = _enum_for_AScopeAccreditation.iso_iec19795_1_2021; /* LONG_NAMED_ENUMERATED_VALUE */
+const AScopeAccreditation_iso_iec19795_1_2021: _enum_for_AScopeAccreditation.iso_iec19795_1_2021 = _enum_for_AScopeAccreditation.iso_iec19795_1_2021; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iso_iec19795_1_2021
@@ -77,7 +77,7 @@ const AScopeAccreditation_iso_iec19795_1_2021 = _enum_for_AScopeAccreditation.is
  * @type {number}
  */
 export
-const iso_iec19795_1_2021 = AScopeAccreditation_iso_iec19795_1_2021; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iso_iec19795_1_2021: _enum_for_AScopeAccreditation.iso_iec19795_1_2021 = AScopeAccreditation_iso_iec19795_1_2021; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AScopeAccreditation_iso_iec19795_3
@@ -85,7 +85,7 @@ const iso_iec19795_1_2021 = AScopeAccreditation_iso_iec19795_1_2021; /* SHORT_NA
  * @type {number}
  */
 export
-const AScopeAccreditation_iso_iec19795_3 = _enum_for_AScopeAccreditation.iso_iec19795_3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AScopeAccreditation_iso_iec19795_3: _enum_for_AScopeAccreditation.iso_iec19795_3 = _enum_for_AScopeAccreditation.iso_iec19795_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iso_iec19795_3
@@ -93,7 +93,7 @@ const AScopeAccreditation_iso_iec19795_3 = _enum_for_AScopeAccreditation.iso_iec
  * @type {number}
  */
 export
-const iso_iec19795_3 = AScopeAccreditation_iso_iec19795_3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iso_iec19795_3: _enum_for_AScopeAccreditation.iso_iec19795_3 = AScopeAccreditation_iso_iec19795_3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AScopeAccreditation_iso_iec30107_4
@@ -101,7 +101,7 @@ const iso_iec19795_3 = AScopeAccreditation_iso_iec19795_3; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const AScopeAccreditation_iso_iec30107_4 = _enum_for_AScopeAccreditation.iso_iec30107_4; /* LONG_NAMED_ENUMERATED_VALUE */
+const AScopeAccreditation_iso_iec30107_4: _enum_for_AScopeAccreditation.iso_iec30107_4 = _enum_for_AScopeAccreditation.iso_iec30107_4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iso_iec30107_4
@@ -109,7 +109,7 @@ const AScopeAccreditation_iso_iec30107_4 = _enum_for_AScopeAccreditation.iso_iec
  * @type {number}
  */
 export
-const iso_iec30107_4 = AScopeAccreditation_iso_iec30107_4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iso_iec30107_4: _enum_for_AScopeAccreditation.iso_iec30107_4 = AScopeAccreditation_iso_iec30107_4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ const iso_iec30107_4 = AScopeAccreditation_iso_iec30107_4; /* SHORT_NAMED_ENUMER
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AScopeAccreditation = $._decodeEnumerated;
+export const _decode_AScopeAccreditation: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -128,7 +128,7 @@ export const _decode_AScopeAccreditation = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AScopeAccreditation, encoded as an ASN.1 Element.
  */
-export const _encode_AScopeAccreditation = $._encodeEnumerated;
+export const _encode_AScopeAccreditation: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

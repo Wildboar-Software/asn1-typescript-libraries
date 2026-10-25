@@ -94,7 +94,7 @@ type DiversionReason = _enum_for_DiversionReason;
  * @enum {number}
  */
 export
-const DiversionReason = _enum_for_DiversionReason;
+const DiversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;
 
 /**
  * @summary DiversionReason_unknown
@@ -107,7 +107,7 @@ const DiversionReason = _enum_for_DiversionReason;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const DiversionReason_unknown = DiversionReason.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionReason_unknown: _enum_for_DiversionReason.unknown = DiversionReason.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -116,7 +116,7 @@ const DiversionReason_unknown = DiversionReason.unknown; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const unknown = DiversionReason.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_DiversionReason.unknown = DiversionReason.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionReason_cfu
@@ -131,7 +131,7 @@ const unknown = DiversionReason.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const DiversionReason_cfu = DiversionReason.cfu; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionReason_cfu: _enum_for_DiversionReason.cfu = DiversionReason.cfu; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cfu
@@ -140,7 +140,7 @@ const DiversionReason_cfu = DiversionReason.cfu; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const cfu = DiversionReason.cfu; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cfu: _enum_for_DiversionReason.cfu = DiversionReason.cfu; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionReason_cfb
@@ -155,7 +155,7 @@ const cfu = DiversionReason.cfu; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const DiversionReason_cfb = DiversionReason.cfb; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionReason_cfb: _enum_for_DiversionReason.cfb = DiversionReason.cfb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cfb
@@ -164,7 +164,7 @@ const DiversionReason_cfb = DiversionReason.cfb; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const cfb = DiversionReason.cfb; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cfb: _enum_for_DiversionReason.cfb = DiversionReason.cfb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionReason_cfnr
@@ -180,7 +180,7 @@ const cfb = DiversionReason.cfb; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const DiversionReason_cfnr = DiversionReason.cfnr; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionReason_cfnr: _enum_for_DiversionReason.cfnr = DiversionReason.cfnr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cfnr
@@ -189,7 +189,7 @@ const DiversionReason_cfnr = DiversionReason.cfnr; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const cfnr = DiversionReason.cfnr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cfnr: _enum_for_DiversionReason.cfnr = DiversionReason.cfnr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DiversionReason: $.ASN1Decoder<DiversionReason> = $._decodeEnumerated;

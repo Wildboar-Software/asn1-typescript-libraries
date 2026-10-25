@@ -10,6 +10,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
@@ -210,14 +211,14 @@ class GetEventConditionAttributes_Response {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return normalPriority; }
+    public static get _default_value_for_priority (): INTEGER { return normalPriority; }
     /**
      * @summary Getter that returns the default value for `severity`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_severity () { return normalSeverity; }
+    public static get _default_value_for_severity (): INTEGER { return normalSeverity; }
     /**
      * @summary Getter that returns the default value for `alarmSummaryReports`.
      * @public

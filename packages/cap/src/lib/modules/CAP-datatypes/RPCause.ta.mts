@@ -32,4 +32,4 @@ export const _decode_RPCause = (el: _Element): RPCause => {
     }
     return value;
 };
-export const _encode_RPCause = $._encodeOctetString;
+export const _encode_RPCause: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

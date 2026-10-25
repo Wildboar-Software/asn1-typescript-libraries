@@ -30,4 +30,4 @@ export const _decode_NAOliInfo = (el: _Element): NAOliInfo => {
     }
     return value;
 };
-export const _encode_NAOliInfo = $._encodeOctetString;
+export const _encode_NAOliInfo: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

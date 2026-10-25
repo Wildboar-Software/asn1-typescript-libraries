@@ -27,7 +27,7 @@ export function _decode_TypeText (el: _Element): TypeText {
     }
     return value;
 }
-export const _encode_TypeText = $._encodeIA5String;
+export const _encode_TypeText: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

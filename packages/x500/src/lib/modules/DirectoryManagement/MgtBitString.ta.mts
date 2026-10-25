@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type MgtBitString = BIT_STRING;
 
 
-export const _decode_MgtBitString = $._decodeBitString;
+export const _decode_MgtBitString: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_MgtBitString = $._encodeBitString;
+export const _encode_MgtBitString: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

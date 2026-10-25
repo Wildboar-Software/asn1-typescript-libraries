@@ -1,6 +1,6 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig, type ViteUserConfigFnObject } from "vitest/config";
 
-export default defineConfig(() => ({
+const _default_1: ViteUserConfigFnObject=defineConfig(() => ({
     root: __dirname,
     cacheDir: "../../node_modules/.vite/packages/ansi-x9-62",
     test: {
@@ -16,3 +16,4 @@ export default defineConfig(() => ({
         },
     },
 }));
+export default _default_1;

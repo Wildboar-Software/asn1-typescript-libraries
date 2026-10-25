@@ -129,7 +129,7 @@ export class E_terminateError {
      * @static
      */
 
-    public static _enum_for_error = _enum_for_TerminateError;
+    public static _enum_for_error: typeof _enum_for_TerminateError = _enum_for_TerminateError;
 }
 
 

@@ -100,7 +100,7 @@ class ClipData {
          * @static
          */
 
-    public static _enum_for_overrideCategory = _enum_for_OverrideCategory;
+    public static _enum_for_overrideCategory: typeof _enum_for_OverrideCategory = _enum_for_OverrideCategory;
 }
 
 /**

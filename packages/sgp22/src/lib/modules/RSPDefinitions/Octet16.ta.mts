@@ -30,7 +30,7 @@ export function _decode_Octet16 (el: _Element): Octet16 {
     }
     return value;
 }
-export const _encode_Octet16 = $._encodeOctetString;
+export const _encode_Octet16: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

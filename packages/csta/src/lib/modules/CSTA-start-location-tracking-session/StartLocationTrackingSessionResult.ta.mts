@@ -111,7 +111,7 @@ class StartLocationTrackingSessionResult {
          * @static
          */
 
-    public static _enum_for_pidProfile = _enum_for_PIDProfile;
+    public static _enum_for_pidProfile: typeof _enum_for_PIDProfile = _enum_for_PIDProfile;
 }
 
 /**

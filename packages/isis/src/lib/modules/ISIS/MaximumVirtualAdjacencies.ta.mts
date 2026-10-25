@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type MaximumVirtualAdjacencies = INTEGER;
 
 
-export const _decode_MaximumVirtualAdjacencies = $._decodeInteger;
+export const _decode_MaximumVirtualAdjacencies: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MaximumVirtualAdjacencies = $._encodeInteger;
+export const _encode_MaximumVirtualAdjacencies: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

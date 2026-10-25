@@ -33,12 +33,12 @@ export type RedirectHoldingTime = INTEGER;
 
 
 
-export const _decode_RedirectHoldingTime = $._decodeInteger;
+export const _decode_RedirectHoldingTime: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RedirectHoldingTime = $._encodeInteger;
+export const _encode_RedirectHoldingTime: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

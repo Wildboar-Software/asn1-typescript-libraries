@@ -48,7 +48,7 @@ export const _decode_RFSP_ID = (el: _Element): RFSP_ID => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RFSP_ID, encoded as an ASN.1 Element.
  */
-export const _encode_RFSP_ID = $._encodeInteger;
+export const _encode_RFSP_ID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

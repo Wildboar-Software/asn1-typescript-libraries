@@ -25,12 +25,12 @@ export type UnknownInfo = NULL; // NullType
 
 
 
-export const _decode_UnknownInfo = $._decodeNull;
+export const _decode_UnknownInfo: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_UnknownInfo = $._encodeNull;
+export const _encode_UnknownInfo: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

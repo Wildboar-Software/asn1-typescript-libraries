@@ -11,6 +11,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type SemaphoreEntry_entryClass, _decode_SemaphoreEntry_entryClass, _encode_SemaphoreEntry_entryClass } from "../ISO-9506-MMS-1/SemaphoreEntry-entryClass.ta.mjs";
@@ -186,7 +187,7 @@ class SemaphoreEntry {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return normalPriority; }
+    public static get _default_value_for_priority (): INTEGER { return normalPriority; }
     /**
      * @summary Getter that returns the default value for `relinquishIfConnectionLost`.
      * @public

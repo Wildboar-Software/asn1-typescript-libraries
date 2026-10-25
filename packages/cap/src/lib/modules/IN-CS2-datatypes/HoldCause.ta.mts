@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type HoldCause = OCTET_STRING; // OctetStringType
-export const _decode_HoldCause = $._decodeOctetString;
-export const _encode_HoldCause = $._encodeOctetString;
+export const _decode_HoldCause: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_HoldCause: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

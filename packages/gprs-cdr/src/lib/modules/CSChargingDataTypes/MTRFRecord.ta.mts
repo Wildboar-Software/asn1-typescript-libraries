@@ -519,7 +519,7 @@ class MTRFRecord {
          * @static
          */
 
-    public static _enum_for_partialRecordType = _enum_for_PartialRecordType;
+    public static _enum_for_partialRecordType: typeof _enum_for_PartialRecordType = _enum_for_PartialRecordType;
 }
 
 /**

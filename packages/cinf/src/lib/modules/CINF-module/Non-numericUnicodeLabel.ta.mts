@@ -38,12 +38,12 @@ export type Non_numericUnicodeLabel = UTF8String; // UTF8String
 
 
 
-export const _decode_Non_numericUnicodeLabel = $._decodeUTF8String;
+export const _decode_Non_numericUnicodeLabel: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_Non_numericUnicodeLabel = $._encodeUTF8String;
+export const _encode_Non_numericUnicodeLabel: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

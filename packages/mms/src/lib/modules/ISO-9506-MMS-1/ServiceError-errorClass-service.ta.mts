@@ -48,7 +48,7 @@ type ServiceError_errorClass_service = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_service_other = 0 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_service_other: 0 = 0 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_other
@@ -60,7 +60,7 @@ const ServiceError_errorClass_service_other = 0 satisfies ServiceError_errorClas
  * @type {number}
  */
 export
-const other = ServiceError_errorClass_service_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_service_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_primitives_out_of_sequence
@@ -72,7 +72,7 @@ const other = ServiceError_errorClass_service_other; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const ServiceError_errorClass_service_primitives_out_of_sequence = 1 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_service_primitives_out_of_sequence: 1 = 1 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_primitives_out_of_sequence
@@ -84,7 +84,7 @@ const ServiceError_errorClass_service_primitives_out_of_sequence = 1 satisfies S
  * @type {number}
  */
 export
-const primitives_out_of_sequence = ServiceError_errorClass_service_primitives_out_of_sequence; /* SHORT_NAMED_INTEGER_VALUE */
+const primitives_out_of_sequence: 1 = ServiceError_errorClass_service_primitives_out_of_sequence; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_object_state_conflict
@@ -97,7 +97,7 @@ const primitives_out_of_sequence = ServiceError_errorClass_service_primitives_ou
  * @type {number}
  */
 export
-const ServiceError_errorClass_service_object_state_conflict = 2 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_service_object_state_conflict: 2 = 2 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_object_state_conflict
@@ -110,7 +110,7 @@ const ServiceError_errorClass_service_object_state_conflict = 2 satisfies Servic
  * @type {number}
  */
 export
-const object_state_conflict = ServiceError_errorClass_service_object_state_conflict; /* SHORT_NAMED_INTEGER_VALUE */
+const object_state_conflict: 2 = ServiceError_errorClass_service_object_state_conflict; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_continuation_invalid
@@ -123,7 +123,7 @@ const object_state_conflict = ServiceError_errorClass_service_object_state_confl
  * @type {number}
  */
 export
-const ServiceError_errorClass_service_continuation_invalid = 4 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_service_continuation_invalid: 4 = 4 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_continuation_invalid
@@ -136,7 +136,7 @@ const ServiceError_errorClass_service_continuation_invalid = 4 satisfies Service
  * @type {number}
  */
 export
-const continuation_invalid = ServiceError_errorClass_service_continuation_invalid; /* SHORT_NAMED_INTEGER_VALUE */
+const continuation_invalid: 4 = ServiceError_errorClass_service_continuation_invalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_object_constraint_conflict
@@ -149,7 +149,7 @@ const continuation_invalid = ServiceError_errorClass_service_continuation_invali
  * @type {number}
  */
 export
-const ServiceError_errorClass_service_object_constraint_conflict = 5 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_service_object_constraint_conflict: 5 = 5 satisfies ServiceError_errorClass_service; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_service_object_constraint_conflict
@@ -162,9 +162,9 @@ const ServiceError_errorClass_service_object_constraint_conflict = 5 satisfies S
  * @type {number}
  */
 export
-const object_constraint_conflict = ServiceError_errorClass_service_object_constraint_conflict; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_service = $._decodeInteger;
-export const _encode_ServiceError_errorClass_service = $._encodeInteger;
+const object_constraint_conflict: 5 = ServiceError_errorClass_service_object_constraint_conflict; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_service: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_service: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

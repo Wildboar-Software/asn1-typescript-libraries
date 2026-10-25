@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TelephoneNumber = UniversalString; // UniversalString
 
 
-export const _decode_TelephoneNumber = $._decodeUniversalString;
+export const _decode_TelephoneNumber: $.ASN1Decoder<string> = $._decodeUniversalString;
 
 
-export const _encode_TelephoneNumber = $._encodeUniversalString;
+export const _encode_TelephoneNumber: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

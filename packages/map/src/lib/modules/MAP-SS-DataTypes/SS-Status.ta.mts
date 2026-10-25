@@ -45,7 +45,7 @@ export const _decode_SS_Status = (el: _Element): SS_Status => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SS_Status, encoded as an ASN.1 Element.
  */
-export const _encode_SS_Status = $._encodeOctetString;
+export const _encode_SS_Status: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

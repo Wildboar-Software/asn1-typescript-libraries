@@ -61,7 +61,7 @@ type EstablishmentStatus = _enum_for_EstablishmentStatus;
  * @enum {number}
  */
 export
-const EstablishmentStatus = _enum_for_EstablishmentStatus;
+const EstablishmentStatus: typeof _enum_for_EstablishmentStatus = _enum_for_EstablishmentStatus;
 
 /**
  * @summary EstablishmentStatus_established
@@ -69,7 +69,7 @@ const EstablishmentStatus = _enum_for_EstablishmentStatus;
  * @type {number}
  */
 export
-const EstablishmentStatus_established = EstablishmentStatus.established; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentStatus_established: _enum_for_EstablishmentStatus.established = EstablishmentStatus.established; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary established
@@ -77,7 +77,7 @@ const EstablishmentStatus_established = EstablishmentStatus.established; /* LONG
  * @type {number}
  */
 export
-const established = EstablishmentStatus.established; /* SHORT_NAMED_ENUMERATED_VALUE */
+const established: _enum_for_EstablishmentStatus.established = EstablishmentStatus.established; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EstablishmentStatus_released
@@ -85,7 +85,7 @@ const established = EstablishmentStatus.established; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const EstablishmentStatus_released = EstablishmentStatus.released; /* LONG_NAMED_ENUMERATED_VALUE */
+const EstablishmentStatus_released: _enum_for_EstablishmentStatus.released = EstablishmentStatus.released; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary released
@@ -93,7 +93,7 @@ const EstablishmentStatus_released = EstablishmentStatus.released; /* LONG_NAMED
  * @type {number}
  */
 export
-const released = EstablishmentStatus.released; /* SHORT_NAMED_ENUMERATED_VALUE */
+const released: _enum_for_EstablishmentStatus.released = EstablishmentStatus.released; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EstablishmentStatus: $.ASN1Decoder<EstablishmentStatus> = $._decodeEnumerated;
 export const _encode_EstablishmentStatus: $.ASN1Encoder<EstablishmentStatus> = $._encodeEnumerated;
 

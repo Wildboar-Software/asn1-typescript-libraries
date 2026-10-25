@@ -29,4 +29,4 @@ export const _decode_TPProtocolIdentifier = (el: _Element): TPProtocolIdentifier
     }
     return value;
 };
-export const _encode_TPProtocolIdentifier = $._encodeOctetString;
+export const _encode_TPProtocolIdentifier: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

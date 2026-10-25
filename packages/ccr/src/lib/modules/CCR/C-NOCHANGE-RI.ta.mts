@@ -132,7 +132,7 @@ export class C_NOCHANGE_RI {
    * @static
    */
 
-  public static _enum_for_confirmation = _enum_for_C_NOCHANGE_RI_confirmation;
+  public static _enum_for_confirmation: typeof _enum_for_C_NOCHANGE_RI_confirmation = _enum_for_C_NOCHANGE_RI_confirmation;
 }
 
 

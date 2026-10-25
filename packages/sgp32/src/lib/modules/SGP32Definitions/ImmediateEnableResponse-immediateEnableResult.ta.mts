@@ -41,7 +41,7 @@ type ImmediateEnableResponse_immediateEnableResult = INTEGER;
  * @type {number}
  */
 export
-const ImmediateEnableResponse_immediateEnableResult_ok = 0 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ImmediateEnableResponse_immediateEnableResult_ok: 0 = 0 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_ok
@@ -52,7 +52,7 @@ const ImmediateEnableResponse_immediateEnableResult_ok = 0 satisfies ImmediateEn
  * @type {number}
  */
 export
-const ok = ImmediateEnableResponse_immediateEnableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = ImmediateEnableResponse_immediateEnableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable
@@ -64,7 +64,7 @@ const ok = ImmediateEnableResponse_immediateEnableResult_ok; /* SHORT_NAMED_INTE
  * @type {number}
  */
 export
-const ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable = 1 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable: 1 = 1 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable
@@ -75,7 +75,7 @@ const ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable 
  * @type {number}
  */
 export
-const immediateEnableNotAvailable = ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const immediateEnableNotAvailable: 1 = ImmediateEnableResponse_immediateEnableResult_immediateEnableNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_noSessionContext
@@ -86,7 +86,7 @@ const immediateEnableNotAvailable = ImmediateEnableResponse_immediateEnableResul
  * @type {number}
  */
 export
-const ImmediateEnableResponse_immediateEnableResult_noSessionContext = 4 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ImmediateEnableResponse_immediateEnableResult_noSessionContext: 4 = 4 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_noSessionContext
@@ -97,7 +97,7 @@ const ImmediateEnableResponse_immediateEnableResult_noSessionContext = 4 satisfi
  * @type {number}
  */
 export
-const noSessionContext = ImmediateEnableResponse_immediateEnableResult_noSessionContext; /* SHORT_NAMED_INTEGER_VALUE */
+const noSessionContext: 4 = ImmediateEnableResponse_immediateEnableResult_noSessionContext; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_catBusy
@@ -109,7 +109,7 @@ const noSessionContext = ImmediateEnableResponse_immediateEnableResult_noSession
  * @type {number}
  */
 export
-const ImmediateEnableResponse_immediateEnableResult_catBusy = 5 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ImmediateEnableResponse_immediateEnableResult_catBusy: 5 = 5 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_catBusy
@@ -120,7 +120,7 @@ const ImmediateEnableResponse_immediateEnableResult_catBusy = 5 satisfies Immedi
  * @type {number}
  */
 export
-const catBusy = ImmediateEnableResponse_immediateEnableResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy: 5 = ImmediateEnableResponse_immediateEnableResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_undefinedError
@@ -131,7 +131,7 @@ const catBusy = ImmediateEnableResponse_immediateEnableResult_catBusy; /* SHORT_
  * @type {number}
  */
 export
-const ImmediateEnableResponse_immediateEnableResult_undefinedError = 127 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
+const ImmediateEnableResponse_immediateEnableResult_undefinedError: 127 = 127 satisfies ImmediateEnableResponse_immediateEnableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ImmediateEnableResponse_immediateEnableResult_undefinedError
@@ -142,7 +142,7 @@ const ImmediateEnableResponse_immediateEnableResult_undefinedError = 127 satisfi
  * @type {number}
  */
 export
-const undefinedError = ImmediateEnableResponse_immediateEnableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = ImmediateEnableResponse_immediateEnableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ImmediateEnableResponse_immediateEnableResult: $.ASN1Decoder<ImmediateEnableResponse_immediateEnableResult> = $._decodeInteger;
 export const _encode_ImmediateEnableResponse_immediateEnableResult: $.ASN1Encoder<ImmediateEnableResponse_immediateEnableResult> = $._encodeInteger;
 

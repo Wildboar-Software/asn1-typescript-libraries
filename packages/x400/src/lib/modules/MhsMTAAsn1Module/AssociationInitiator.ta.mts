@@ -31,34 +31,34 @@ export type AssociationInitiator = INTEGER;
  * @constant
  * @type {number}
  */
-export const AssociationInitiator_local = 0 satisfies AssociationInitiator; /* LONG_NAMED_INTEGER_VALUE */
+export const AssociationInitiator_local: 0 = 0 satisfies AssociationInitiator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AssociationInitiator_local
  * @constant
  * @type {number}
  */
-export const local = AssociationInitiator_local; /* SHORT_NAMED_INTEGER_VALUE */
+export const local: 0 = AssociationInitiator_local; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AssociationInitiator_remote
  * @constant
  * @type {number}
  */
-export const AssociationInitiator_remote = 1 satisfies AssociationInitiator; /* LONG_NAMED_INTEGER_VALUE */
+export const AssociationInitiator_remote: 1 = 1 satisfies AssociationInitiator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AssociationInitiator_remote
  * @constant
  * @type {number}
  */
-export const remote = AssociationInitiator_remote; /* SHORT_NAMED_INTEGER_VALUE */
+export const remote: 1 = AssociationInitiator_remote; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AssociationInitiator = $._decodeInteger;
+export const _decode_AssociationInitiator: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AssociationInitiator = $._encodeInteger;
+export const _encode_AssociationInitiator: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ObjectIdentifier,
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -34,8 +35,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type NetworkIdentification = OBJECT_IDENTIFIER; // ObjectIdentifierType
-export const _decode_NetworkIdentification = $._decodeObjectIdentifier;
-export const _encode_NetworkIdentification = $._encodeObjectIdentifier;
+export const _decode_NetworkIdentification: $.ASN1Decoder<ObjectIdentifier> = $._decodeObjectIdentifier;
+export const _encode_NetworkIdentification: $.ASN1Encoder<ObjectIdentifier> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

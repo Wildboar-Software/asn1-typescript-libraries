@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Criticality = BOOLEAN; // BooleanType
 
 
-export const _decode_Criticality = $._decodeBoolean;
+export const _decode_Criticality: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_Criticality = $._encodeBoolean;
+export const _encode_Criticality: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

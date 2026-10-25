@@ -82,7 +82,7 @@ export class CurrentProblem {
      * @static
      */
 
-    public static _enum_for_alarmStatus = _enum_for_AlarmStatus;
+    public static _enum_for_alarmStatus: typeof _enum_for_AlarmStatus = _enum_for_AlarmStatus;
 }
 
 

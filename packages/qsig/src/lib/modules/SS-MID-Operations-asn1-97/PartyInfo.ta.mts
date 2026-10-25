@@ -98,7 +98,7 @@ class PartyInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MessageType;
+    public static _enum_for_messageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 }
 
 /**

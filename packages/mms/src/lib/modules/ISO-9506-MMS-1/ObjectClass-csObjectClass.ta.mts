@@ -43,7 +43,7 @@ type ObjectClass_csObjectClass = INTEGER;
  * @type {number}
  */
 export
-const ObjectClass_csObjectClass_eventConditionList = 0 satisfies ObjectClass_csObjectClass; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_csObjectClass_eventConditionList: 0 = 0 satisfies ObjectClass_csObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_csObjectClass_eventConditionList
@@ -54,7 +54,7 @@ const ObjectClass_csObjectClass_eventConditionList = 0 satisfies ObjectClass_csO
  * @type {number}
  */
 export
-const eventConditionList = ObjectClass_csObjectClass_eventConditionList; /* SHORT_NAMED_INTEGER_VALUE */
+const eventConditionList: 0 = ObjectClass_csObjectClass_eventConditionList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_csObjectClass_unitControl
@@ -65,7 +65,7 @@ const eventConditionList = ObjectClass_csObjectClass_eventConditionList; /* SHOR
  * @type {number}
  */
 export
-const ObjectClass_csObjectClass_unitControl = 1 satisfies ObjectClass_csObjectClass; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_csObjectClass_unitControl: 1 = 1 satisfies ObjectClass_csObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_csObjectClass_unitControl
@@ -76,9 +76,9 @@ const ObjectClass_csObjectClass_unitControl = 1 satisfies ObjectClass_csObjectCl
  * @type {number}
  */
 export
-const unitControl = ObjectClass_csObjectClass_unitControl; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ObjectClass_csObjectClass = $._decodeInteger;
-export const _encode_ObjectClass_csObjectClass = $._encodeInteger;
+const unitControl: 1 = ObjectClass_csObjectClass_unitControl; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ObjectClass_csObjectClass: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ObjectClass_csObjectClass: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

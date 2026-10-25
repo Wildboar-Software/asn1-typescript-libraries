@@ -48,7 +48,7 @@ type AccessNetworkProtocolId = _enum_for_AccessNetworkProtocolId | ENUMERATED;
  * @type {number}
  */
 export
-const AccessNetworkProtocolId_ts3G_48006 = _enum_for_AccessNetworkProtocolId.ts3G_48006; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessNetworkProtocolId_ts3G_48006: _enum_for_AccessNetworkProtocolId.ts3G_48006 = _enum_for_AccessNetworkProtocolId.ts3G_48006; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ts3G_48006
@@ -61,7 +61,7 @@ const AccessNetworkProtocolId_ts3G_48006 = _enum_for_AccessNetworkProtocolId.ts3
  * @type {number}
  */
 export
-const ts3G_48006 = AccessNetworkProtocolId_ts3G_48006; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ts3G_48006: _enum_for_AccessNetworkProtocolId.ts3G_48006 = AccessNetworkProtocolId_ts3G_48006; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccessNetworkProtocolId_ts3G_25413
@@ -74,7 +74,7 @@ const ts3G_48006 = AccessNetworkProtocolId_ts3G_48006; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const AccessNetworkProtocolId_ts3G_25413 = _enum_for_AccessNetworkProtocolId.ts3G_25413; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccessNetworkProtocolId_ts3G_25413: _enum_for_AccessNetworkProtocolId.ts3G_25413 = _enum_for_AccessNetworkProtocolId.ts3G_25413; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ts3G_25413
@@ -87,7 +87,7 @@ const AccessNetworkProtocolId_ts3G_25413 = _enum_for_AccessNetworkProtocolId.ts3
  * @type {number}
  */
 export
-const ts3G_25413 = AccessNetworkProtocolId_ts3G_25413; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ts3G_25413: _enum_for_AccessNetworkProtocolId.ts3G_25413 = AccessNetworkProtocolId_ts3G_25413; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AccessNetworkProtocolId
@@ -95,7 +95,7 @@ const ts3G_25413 = AccessNetworkProtocolId_ts3G_25413; /* SHORT_NAMED_ENUMERATED
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AccessNetworkProtocolId = $._decodeEnumerated;
+export const _decode_AccessNetworkProtocolId: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AccessNetworkProtocolId into an ASN.1 Element.
@@ -104,7 +104,7 @@ export const _decode_AccessNetworkProtocolId = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AccessNetworkProtocolId, encoded as an ASN.1 Element.
  */
-export const _encode_AccessNetworkProtocolId = $._encodeEnumerated;
+export const _encode_AccessNetworkProtocolId: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

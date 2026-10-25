@@ -352,31 +352,31 @@ class SMSChargingInformation {
          * @static
          */
 
-    public static _enum_for_sMMessageType = _enum_for_SMSChargingInformation_sMMessageType;        /**
+    public static _enum_for_sMMessageType: typeof _enum_for_SMSChargingInformation_sMMessageType = _enum_for_SMSChargingInformation_sMMessageType;        /**
          * @summary The enum used as the type of the component `sMReplyPathRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_sMReplyPathRequested = _enum_for_SMReplyPathRequested;        /**
+    public static _enum_for_sMReplyPathRequested: typeof _enum_for_SMReplyPathRequested = _enum_for_SMReplyPathRequested;        /**
          * @summary The enum used as the type of the component `sMPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_sMPriority = _enum_for_SMSChargingInformation_sMPriority;        /**
+    public static _enum_for_sMPriority: typeof _enum_for_SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPriority;        /**
          * @summary The enum used as the type of the component `messageClass`
          * @public
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_SMSChargingInformation_messageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_SMSChargingInformation_messageClass = _enum_for_SMSChargingInformation_messageClass;        /**
          * @summary The enum used as the type of the component `sMdeliveryReportRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_sMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
+    public static _enum_for_sMdeliveryReportRequested: typeof _enum_for_SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
 }
 
 /**

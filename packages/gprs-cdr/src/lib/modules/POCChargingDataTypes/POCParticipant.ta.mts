@@ -115,13 +115,13 @@ class POCParticipant {
          * @static
          */
 
-    public static _enum_for_participant_access_priority = _enum_for_AccessPriority;        /**
+    public static _enum_for_participant_access_priority: typeof _enum_for_AccessPriority = _enum_for_AccessPriority;        /**
          * @summary The enum used as the type of the component `user_participating_type`
          * @public
          * @static
          */
 
-    public static _enum_for_user_participating_type = _enum_for_ParticipatingType;
+    public static _enum_for_user_participating_type: typeof _enum_for_ParticipatingType = _enum_for_ParticipatingType;
 }
 
 /**

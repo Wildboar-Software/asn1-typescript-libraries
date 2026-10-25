@@ -58,7 +58,7 @@ type APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateCont
  * @enum {number}
  */
 export
-const APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateControlParameters_additionalExceptionReports;
+const APNRateControlParameters_additionalExceptionReports: typeof _enum_for_APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateControlParameters_additionalExceptionReports;
 
 /**
  * @summary APNRateControlParameters_additionalExceptionReports_notAllowed
@@ -66,7 +66,7 @@ const APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateCon
  * @type {number}
  */
 export
-const APNRateControlParameters_additionalExceptionReports_notAllowed = APNRateControlParameters_additionalExceptionReports.notAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const APNRateControlParameters_additionalExceptionReports_notAllowed: _enum_for_APNRateControlParameters_additionalExceptionReports.notAllowed = APNRateControlParameters_additionalExceptionReports.notAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowed
@@ -74,7 +74,7 @@ const APNRateControlParameters_additionalExceptionReports_notAllowed = APNRateCo
  * @type {number}
  */
 export
-const notAllowed = APNRateControlParameters_additionalExceptionReports.notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAllowed: _enum_for_APNRateControlParameters_additionalExceptionReports.notAllowed = APNRateControlParameters_additionalExceptionReports.notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APNRateControlParameters_additionalExceptionReports_allowed
@@ -82,7 +82,7 @@ const notAllowed = APNRateControlParameters_additionalExceptionReports.notAllowe
  * @type {number}
  */
 export
-const APNRateControlParameters_additionalExceptionReports_allowed = APNRateControlParameters_additionalExceptionReports.allowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const APNRateControlParameters_additionalExceptionReports_allowed: _enum_for_APNRateControlParameters_additionalExceptionReports.allowed = APNRateControlParameters_additionalExceptionReports.allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowed
@@ -90,7 +90,7 @@ const APNRateControlParameters_additionalExceptionReports_allowed = APNRateContr
  * @type {number}
  */
 export
-const allowed = APNRateControlParameters_additionalExceptionReports.allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowed: _enum_for_APNRateControlParameters_additionalExceptionReports.allowed = APNRateControlParameters_additionalExceptionReports.allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_APNRateControlParameters_additionalExceptionReports: $.ASN1Decoder<APNRateControlParameters_additionalExceptionReports> = $._decodeEnumerated;

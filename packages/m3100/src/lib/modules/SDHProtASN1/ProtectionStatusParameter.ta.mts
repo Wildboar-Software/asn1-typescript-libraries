@@ -99,7 +99,7 @@ export class ProtectionStatusParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_psDirection() {
+    public static get _default_value_for_psDirection(): _enum_for_ProtectionDirection.bidirectional {
         return ProtectionDirection_bidirectional;
     }
     /**
@@ -108,7 +108,7 @@ export class ProtectionStatusParameter {
      * @static
      */
 
-    public static _enum_for_psDirection = _enum_for_ProtectionDirection;
+    public static _enum_for_psDirection: typeof _enum_for_ProtectionDirection = _enum_for_ProtectionDirection;
 }
 
 

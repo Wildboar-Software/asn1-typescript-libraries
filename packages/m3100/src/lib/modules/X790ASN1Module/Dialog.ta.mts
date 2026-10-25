@@ -28,12 +28,12 @@ export type Dialog = GraphicString; // GraphicString
 
 
 
-export const _decode_Dialog = $._decodeGraphicString;
+export const _decode_Dialog: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_Dialog = $._encodeGraphicString;
+export const _encode_Dialog: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

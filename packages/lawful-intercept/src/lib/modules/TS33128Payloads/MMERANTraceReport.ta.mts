@@ -274,13 +274,13 @@ class MMERANTraceReport {
          * @static
          */
 
-    public static _enum_for_traceRecordType = _enum_for_TraceRecordType;        /**
+    public static _enum_for_traceRecordType: typeof _enum_for_TraceRecordType = _enum_for_TraceRecordType;        /**
          * @summary The enum used as the type of the component `traceDirection`
          * @public
          * @static
          */
 
-    public static _enum_for_traceDirection = _enum_for_TraceDirection;
+    public static _enum_for_traceDirection: typeof _enum_for_TraceDirection = _enum_for_TraceDirection;
 }
 
 /**

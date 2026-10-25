@@ -158,10 +158,10 @@ export const Options_target_certif_data_required: number = 6; /* LONG_NAMED_BIT 
 export const target_certif_data_required: number = Options_target_certif_data_required; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Options = $._decodeBitString;
+export const _decode_Options: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Options = $._encodeBitString;
+export const _encode_Options: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

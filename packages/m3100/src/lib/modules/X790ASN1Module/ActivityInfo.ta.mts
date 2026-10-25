@@ -28,12 +28,12 @@ export type ActivityInfo = GraphicString; // GraphicString
 
 
 
-export const _decode_ActivityInfo = $._decodeGraphicString;
+export const _decode_ActivityInfo: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ActivityInfo = $._encodeGraphicString;
+export const _encode_ActivityInfo: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

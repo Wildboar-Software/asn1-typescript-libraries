@@ -46,7 +46,7 @@ export type SequenceMatchType = _enum_for_SequenceMatchType | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SequenceMatchType_sequenceExact = _enum_for_SequenceMatchType.sequenceExact; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SequenceMatchType_sequenceExact: _enum_for_SequenceMatchType.sequenceExact = _enum_for_SequenceMatchType.sequenceExact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceExact
@@ -58,7 +58,7 @@ export const SequenceMatchType_sequenceExact = _enum_for_SequenceMatchType.seque
  * @constant
  * @type {number}
  */
-export const sequenceExact = SequenceMatchType_sequenceExact; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequenceExact: _enum_for_SequenceMatchType.sequenceExact = SequenceMatchType_sequenceExact; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SequenceMatchType_sequenceDeletion
@@ -69,7 +69,7 @@ export const sequenceExact = SequenceMatchType_sequenceExact; /* SHORT_NAMED_ENU
  * @constant
  * @type {number}
  */
-export const SequenceMatchType_sequenceDeletion = _enum_for_SequenceMatchType.sequenceDeletion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SequenceMatchType_sequenceDeletion: _enum_for_SequenceMatchType.sequenceDeletion = _enum_for_SequenceMatchType.sequenceDeletion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceDeletion
@@ -80,7 +80,7 @@ export const SequenceMatchType_sequenceDeletion = _enum_for_SequenceMatchType.se
  * @constant
  * @type {number}
  */
-export const sequenceDeletion = SequenceMatchType_sequenceDeletion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequenceDeletion: _enum_for_SequenceMatchType.sequenceDeletion = SequenceMatchType_sequenceDeletion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SequenceMatchType_sequenceRestrictedDeletion
@@ -91,7 +91,7 @@ export const sequenceDeletion = SequenceMatchType_sequenceDeletion; /* SHORT_NAM
  * @constant
  * @type {number}
  */
-export const SequenceMatchType_sequenceRestrictedDeletion = _enum_for_SequenceMatchType.sequenceRestrictedDeletion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SequenceMatchType_sequenceRestrictedDeletion: _enum_for_SequenceMatchType.sequenceRestrictedDeletion = _enum_for_SequenceMatchType.sequenceRestrictedDeletion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceRestrictedDeletion
@@ -102,7 +102,7 @@ export const SequenceMatchType_sequenceRestrictedDeletion = _enum_for_SequenceMa
  * @constant
  * @type {number}
  */
-export const sequenceRestrictedDeletion = SequenceMatchType_sequenceRestrictedDeletion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequenceRestrictedDeletion: _enum_for_SequenceMatchType.sequenceRestrictedDeletion = SequenceMatchType_sequenceRestrictedDeletion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SequenceMatchType_sequencePermutation
@@ -113,7 +113,7 @@ export const sequenceRestrictedDeletion = SequenceMatchType_sequenceRestrictedDe
  * @constant
  * @type {number}
  */
-export const SequenceMatchType_sequencePermutation = _enum_for_SequenceMatchType.sequencePermutation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SequenceMatchType_sequencePermutation: _enum_for_SequenceMatchType.sequencePermutation = _enum_for_SequenceMatchType.sequencePermutation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequencePermutation
@@ -124,7 +124,7 @@ export const SequenceMatchType_sequencePermutation = _enum_for_SequenceMatchType
  * @constant
  * @type {number}
  */
-export const sequencePermutation = SequenceMatchType_sequencePermutation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequencePermutation: _enum_for_SequenceMatchType.sequencePermutation = SequenceMatchType_sequencePermutation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SequenceMatchType_sequencePermutationAndDeletion
@@ -135,7 +135,7 @@ export const sequencePermutation = SequenceMatchType_sequencePermutation; /* SHO
  * @constant
  * @type {number}
  */
-export const SequenceMatchType_sequencePermutationAndDeletion = _enum_for_SequenceMatchType.sequencePermutationAndDeletion; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SequenceMatchType_sequencePermutationAndDeletion: _enum_for_SequenceMatchType.sequencePermutationAndDeletion = _enum_for_SequenceMatchType.sequencePermutationAndDeletion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequencePermutationAndDeletion
@@ -146,7 +146,7 @@ export const SequenceMatchType_sequencePermutationAndDeletion = _enum_for_Sequen
  * @constant
  * @type {number}
  */
-export const sequencePermutationAndDeletion = SequenceMatchType_sequencePermutationAndDeletion; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequencePermutationAndDeletion: _enum_for_SequenceMatchType.sequencePermutationAndDeletion = SequenceMatchType_sequencePermutationAndDeletion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SequenceMatchType_sequenceProviderDefined
@@ -157,7 +157,7 @@ export const sequencePermutationAndDeletion = SequenceMatchType_sequencePermutat
  * @constant
  * @type {number}
  */
-export const SequenceMatchType_sequenceProviderDefined = _enum_for_SequenceMatchType.sequenceProviderDefined; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SequenceMatchType_sequenceProviderDefined: _enum_for_SequenceMatchType.sequenceProviderDefined = _enum_for_SequenceMatchType.sequenceProviderDefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sequenceProviderDefined
@@ -168,13 +168,13 @@ export const SequenceMatchType_sequenceProviderDefined = _enum_for_SequenceMatch
  * @constant
  * @type {number}
  */
-export const sequenceProviderDefined = SequenceMatchType_sequenceProviderDefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sequenceProviderDefined: _enum_for_SequenceMatchType.sequenceProviderDefined = SequenceMatchType_sequenceProviderDefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SequenceMatchType = $._decodeEnumerated;
+export const _decode_SequenceMatchType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_SequenceMatchType = $._encodeEnumerated;
+export const _encode_SequenceMatchType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

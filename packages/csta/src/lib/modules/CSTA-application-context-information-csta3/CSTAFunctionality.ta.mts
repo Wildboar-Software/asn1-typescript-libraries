@@ -142,49 +142,49 @@ class CSTAFunctionality {
      * @static
      * @method
      */
-    public static get _default_value_for_switchingFunctionServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_switchingFunctionServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `eventReportServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_eventReportServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_eventReportServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `computingFunctionServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_computingFunctionServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_computingFunctionServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `bidirectionalServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bidirectionalServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_bidirectionalServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `statusReportingServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_statusReportingServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_statusReportingServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `inputOutputServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_inputOutputServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_inputOutputServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `voiceUnitServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_voiceUnitServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_voiceUnitServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
 }
 
 /**

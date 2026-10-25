@@ -53,7 +53,7 @@ type EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @enum {number}
  */
 export
-const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
+const EventTypeBCUSM: typeof _enum_for_EventTypeBCUSM = _enum_for_EventTypeBCUSM;
 
 /**
  * @summary EventTypeBCUSM_componentReceived
@@ -61,7 +61,7 @@ const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @type {number}
  */
 export
-const EventTypeBCUSM_componentReceived = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_componentReceived: _enum_for_EventTypeBCUSM.componentReceived = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary componentReceived
@@ -69,7 +69,7 @@ const EventTypeBCUSM_componentReceived = EventTypeBCUSM.componentReceived; /* LO
  * @type {number}
  */
 export
-const componentReceived = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const componentReceived: _enum_for_EventTypeBCUSM.componentReceived = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_associationReleaseRequested
@@ -77,7 +77,7 @@ const componentReceived = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const EventTypeBCUSM_associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_associationReleaseRequested: _enum_for_EventTypeBCUSM.associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associationReleaseRequested
@@ -85,7 +85,7 @@ const EventTypeBCUSM_associationReleaseRequested = EventTypeBCUSM.associationRel
  * @type {number}
  */
 export
-const associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const associationReleaseRequested: _enum_for_EventTypeBCUSM.associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_EventTypeBCUSM(el: _Element): EventTypeBCUSM {

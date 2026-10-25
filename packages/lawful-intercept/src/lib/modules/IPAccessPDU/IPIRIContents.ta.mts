@@ -599,31 +599,31 @@ class IPIRIContents {
          * @static
          */
 
-    public static _enum_for_accessEventType = _enum_for_AccessEventType;        /**
+    public static _enum_for_accessEventType: typeof _enum_for_AccessEventType = _enum_for_AccessEventType;        /**
          * @summary The enum used as the type of the component `internetAccessType`
          * @public
          * @static
          */
 
-    public static _enum_for_internetAccessType = _enum_for_InternetAccessType;        /**
+    public static _enum_for_internetAccessType: typeof _enum_for_InternetAccessType = _enum_for_InternetAccessType;        /**
          * @summary The enum used as the type of the component `iPVersion`
          * @public
          * @static
          */
 
-    public static _enum_for_iPVersion = _enum_for_IPVersion;        /**
+    public static _enum_for_iPVersion: typeof _enum_for_IPVersion = _enum_for_IPVersion;        /**
          * @summary The enum used as the type of the component `endReason`
          * @public
          * @static
          */
 
-    public static _enum_for_endReason = _enum_for_EndReason;        /**
+    public static _enum_for_endReason: typeof _enum_for_EndReason = _enum_for_EndReason;        /**
          * @summary The enum used as the type of the component `authenticationType`
          * @public
          * @static
          */
 
-    public static _enum_for_authenticationType = _enum_for_AuthenticationType;
+    public static _enum_for_authenticationType: typeof _enum_for_AuthenticationType = _enum_for_AuthenticationType;
 }
 
 /**

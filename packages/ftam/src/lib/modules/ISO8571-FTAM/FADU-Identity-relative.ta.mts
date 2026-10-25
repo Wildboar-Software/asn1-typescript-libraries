@@ -36,7 +36,7 @@ export type FADU_Identity_relative = INTEGER;
  * @constant
  * @type {number}
  */
-export const FADU_Identity_relative_previous = 0 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_relative_previous: 0 = 0 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const FADU_Identity_relative_previous = 0 satisfies FADU_Identity_relativ
  * @constant
  * @type {number}
  */
-export const previous = FADU_Identity_relative_previous; /* SHORT_NAMED_INTEGER_VALUE */
+export const previous: 0 = FADU_Identity_relative_previous; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const previous = FADU_Identity_relative_previous; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const FADU_Identity_relative_current = 1 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_relative_current: 1 = 1 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const FADU_Identity_relative_current = 1 satisfies FADU_Identity_relative
  * @constant
  * @type {number}
  */
-export const current = FADU_Identity_relative_current; /* SHORT_NAMED_INTEGER_VALUE */
+export const current: 1 = FADU_Identity_relative_current; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const current = FADU_Identity_relative_current; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const FADU_Identity_relative_next = 2 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_relative_next: 2 = 2 satisfies FADU_Identity_relative; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,17 +79,17 @@ export const FADU_Identity_relative_next = 2 satisfies FADU_Identity_relative; /
  * @constant
  * @type {number}
  */
-export const next = FADU_Identity_relative_next; /* SHORT_NAMED_INTEGER_VALUE */
+export const next: 2 = FADU_Identity_relative_next; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_FADU_Identity_relative = $._decodeInteger;
+export const _decode_FADU_Identity_relative: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_FADU_Identity_relative = $._encodeInteger;
+export const _encode_FADU_Identity_relative: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

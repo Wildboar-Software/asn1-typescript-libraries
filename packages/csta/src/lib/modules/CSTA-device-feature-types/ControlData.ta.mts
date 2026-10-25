@@ -90,7 +90,7 @@ class ControlData {
          * @static
          */
 
-    public static _enum_for_gender = _enum_for_ControlData_gender;
+    public static _enum_for_gender: typeof _enum_for_ControlData_gender = _enum_for_ControlData_gender;
 }
 
 /**

@@ -92,7 +92,7 @@ class TAItem {
          * @static
          */
 
-    public static _enum_for_rATinformation = _enum_for_RATInformation;
+    public static _enum_for_rATinformation: typeof _enum_for_RATInformation = _enum_for_RATInformation;
 }
 
 /**

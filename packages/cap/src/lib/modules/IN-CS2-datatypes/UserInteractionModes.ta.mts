@@ -68,8 +68,8 @@ const UserInteractionModes_display: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const display: number = UserInteractionModes_display; /* SHORT_NAMED_BIT */
-export const _decode_UserInteractionModes = $._decodeBitString;
-export const _encode_UserInteractionModes = $._encodeBitString;
+export const _decode_UserInteractionModes: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_UserInteractionModes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

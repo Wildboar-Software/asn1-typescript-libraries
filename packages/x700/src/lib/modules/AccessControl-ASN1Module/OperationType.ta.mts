@@ -53,7 +53,7 @@ export type OperationType = INTEGER;
  * @constant
  * @type {number}
  */
-export const OperationType_action = 0 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_action: 0 = 0 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_action
@@ -64,7 +64,7 @@ export const OperationType_action = 0 satisfies OperationType; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const action = OperationType_action; /* SHORT_NAMED_INTEGER_VALUE */
+export const action: 0 = OperationType_action; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_create
@@ -78,7 +78,7 @@ export const action = OperationType_action; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OperationType_create = 1 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_create: 1 = 1 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_create
@@ -89,7 +89,7 @@ export const OperationType_create = 1 satisfies OperationType; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const create = OperationType_create; /* SHORT_NAMED_INTEGER_VALUE */
+export const create: 1 = OperationType_create; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_delete_
@@ -101,7 +101,7 @@ export const create = OperationType_create; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OperationType_delete_ = 2 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_delete_: 2 = 2 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_delete_
@@ -112,7 +112,7 @@ export const OperationType_delete_ = 2 satisfies OperationType; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const delete_ = OperationType_delete_; /* SHORT_NAMED_INTEGER_VALUE */
+export const delete_: 2 = OperationType_delete_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_get_
@@ -124,7 +124,7 @@ export const delete_ = OperationType_delete_; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OperationType_get_ = 3 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_get_: 3 = 3 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_get_
@@ -135,7 +135,7 @@ export const OperationType_get_ = 3 satisfies OperationType; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const get_ = OperationType_get_; /* SHORT_NAMED_INTEGER_VALUE */
+export const get_: 3 = OperationType_get_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_replace
@@ -149,7 +149,7 @@ export const get_ = OperationType_get_; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OperationType_replace = 4 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_replace: 4 = 4 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_replace
@@ -160,7 +160,7 @@ export const OperationType_replace = 4 satisfies OperationType; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const replace = OperationType_replace; /* SHORT_NAMED_INTEGER_VALUE */
+export const replace: 4 = OperationType_replace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_addMember
@@ -172,7 +172,7 @@ export const replace = OperationType_replace; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OperationType_addMember = 5 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_addMember: 5 = 5 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_addMember
@@ -183,7 +183,7 @@ export const OperationType_addMember = 5 satisfies OperationType; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const addMember = OperationType_addMember; /* SHORT_NAMED_INTEGER_VALUE */
+export const addMember: 5 = OperationType_addMember; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_removeMember
@@ -195,7 +195,7 @@ export const addMember = OperationType_addMember; /* SHORT_NAMED_INTEGER_VALUE *
  * @constant
  * @type {number}
  */
-export const OperationType_removeMember = 6 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_removeMember: 6 = 6 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_removeMember
@@ -206,7 +206,7 @@ export const OperationType_removeMember = 6 satisfies OperationType; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const removeMember = OperationType_removeMember; /* SHORT_NAMED_INTEGER_VALUE */
+export const removeMember: 6 = OperationType_removeMember; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_replaceWithDefault
@@ -218,7 +218,7 @@ export const removeMember = OperationType_removeMember; /* SHORT_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const OperationType_replaceWithDefault = 7 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_replaceWithDefault: 7 = 7 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_replaceWithDefault
@@ -230,7 +230,7 @@ export const OperationType_replaceWithDefault = 7 satisfies OperationType; /* LO
  * @constant
  * @type {number}
  */
-export const replaceWithDefault = OperationType_replaceWithDefault; /* SHORT_NAMED_INTEGER_VALUE */
+export const replaceWithDefault: 7 = OperationType_replaceWithDefault; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_multipleObjectSelection
@@ -245,7 +245,7 @@ export const replaceWithDefault = OperationType_replaceWithDefault; /* SHORT_NAM
  * @constant
  * @type {number}
  */
-export const OperationType_multipleObjectSelection = 8 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_multipleObjectSelection: 8 = 8 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_multipleObjectSelection
@@ -257,7 +257,7 @@ export const OperationType_multipleObjectSelection = 8 satisfies OperationType; 
  * @constant
  * @type {number}
  */
-export const multipleObjectSelection = OperationType_multipleObjectSelection; /* SHORT_NAMED_INTEGER_VALUE */
+export const multipleObjectSelection: 8 = OperationType_multipleObjectSelection; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_filter
@@ -269,7 +269,7 @@ export const multipleObjectSelection = OperationType_multipleObjectSelection; /*
  * @constant
  * @type {number}
  */
-export const OperationType_filter = 9 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
+export const OperationType_filter: 9 = 9 satisfies OperationType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationType_filter
@@ -281,13 +281,13 @@ export const OperationType_filter = 9 satisfies OperationType; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const filter = OperationType_filter; /* SHORT_NAMED_INTEGER_VALUE */
+export const filter: 9 = OperationType_filter; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_OperationType = $._decodeInteger;
+export const _decode_OperationType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_OperationType = $._encodeInteger;
+export const _encode_OperationType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

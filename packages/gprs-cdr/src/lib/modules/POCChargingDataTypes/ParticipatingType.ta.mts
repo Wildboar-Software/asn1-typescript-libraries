@@ -104,7 +104,7 @@ type ParticipatingType = _enum_for_ParticipatingType;
  * @enum {number}
  */
 export
-const ParticipatingType = _enum_for_ParticipatingType;
+const ParticipatingType: typeof _enum_for_ParticipatingType = _enum_for_ParticipatingType;
 
 /**
  * @summary ParticipatingType_normal
@@ -112,7 +112,7 @@ const ParticipatingType = _enum_for_ParticipatingType;
  * @type {number}
  */
 export
-const ParticipatingType_normal = ParticipatingType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipatingType_normal: _enum_for_ParticipatingType.normal = ParticipatingType.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -120,7 +120,7 @@ const ParticipatingType_normal = ParticipatingType.normal; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const normal = ParticipatingType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_ParticipatingType.normal = ParticipatingType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipatingType_nW_PoC_Box
@@ -128,7 +128,7 @@ const normal = ParticipatingType.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ParticipatingType_nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipatingType_nW_PoC_Box: _enum_for_ParticipatingType.nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nW_PoC_Box
@@ -136,7 +136,7 @@ const ParticipatingType_nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* LONG_NAMED
  * @type {number}
  */
 export
-const nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nW_PoC_Box: _enum_for_ParticipatingType.nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipatingType_uE_PoC_Box
@@ -144,7 +144,7 @@ const nW_PoC_Box = ParticipatingType.nW_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const ParticipatingType_uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipatingType_uE_PoC_Box: _enum_for_ParticipatingType.uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uE_PoC_Box
@@ -152,7 +152,7 @@ const ParticipatingType_uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* LONG_NAMED
  * @type {number}
  */
 export
-const uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uE_PoC_Box: _enum_for_ParticipatingType.uE_PoC_Box = ParticipatingType.uE_PoC_Box; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ParticipatingType: $.ASN1Decoder<ParticipatingType> = $._decodeEnumerated;

@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type InformationLossSuspected = BOOLEAN; // BooleanType
 
 
-export const _decode_InformationLossSuspected = $._decodeBoolean;
+export const _decode_InformationLossSuspected: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_InformationLossSuspected = $._encodeBoolean;
+export const _encode_InformationLossSuspected: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

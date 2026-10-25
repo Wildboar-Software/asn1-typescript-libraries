@@ -73,7 +73,7 @@ type SubscriberStatus = _enum_for_SubscriberStatus;
  * @enum {number}
  */
 export
-const SubscriberStatus = _enum_for_SubscriberStatus;
+const SubscriberStatus: typeof _enum_for_SubscriberStatus = _enum_for_SubscriberStatus;
 
 /**
  * @summary SubscriberStatus_serviceGranted
@@ -81,7 +81,7 @@ const SubscriberStatus = _enum_for_SubscriberStatus;
  * @type {number}
  */
 export
-const SubscriberStatus_serviceGranted = SubscriberStatus.serviceGranted; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberStatus_serviceGranted: _enum_for_SubscriberStatus.serviceGranted = SubscriberStatus.serviceGranted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceGranted
@@ -89,7 +89,7 @@ const SubscriberStatus_serviceGranted = SubscriberStatus.serviceGranted; /* LONG
  * @type {number}
  */
 export
-const serviceGranted = SubscriberStatus.serviceGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceGranted: _enum_for_SubscriberStatus.serviceGranted = SubscriberStatus.serviceGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriberStatus_operatorDeterminedBarring
@@ -97,7 +97,7 @@ const serviceGranted = SubscriberStatus.serviceGranted; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const SubscriberStatus_operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriberStatus_operatorDeterminedBarring: _enum_for_SubscriberStatus.operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operatorDeterminedBarring
@@ -105,7 +105,7 @@ const SubscriberStatus_operatorDeterminedBarring = SubscriberStatus.operatorDete
  * @type {number}
  */
 export
-const operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operatorDeterminedBarring: _enum_for_SubscriberStatus.operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SubscriberStatus
@@ -113,7 +113,7 @@ const operatorDeterminedBarring = SubscriberStatus.operatorDeterminedBarring; /*
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SubscriberStatus = $._decodeEnumerated;
+export const _decode_SubscriberStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SubscriberStatus into an ASN.1 Element.
@@ -122,7 +122,7 @@ export const _decode_SubscriberStatus = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubscriberStatus, encoded as an ASN.1 Element.
  */
-export const _encode_SubscriberStatus = $._encodeEnumerated;
+export const _encode_SubscriberStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

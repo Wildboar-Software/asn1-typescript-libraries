@@ -131,7 +131,7 @@ class AssociatePresenceStatus {
          * @static
          */
 
-    public static _enum_for_presenceType = _enum_for_PresenceType;
+    public static _enum_for_presenceType: typeof _enum_for_PresenceType = _enum_for_PresenceType;
 }
 
 /**

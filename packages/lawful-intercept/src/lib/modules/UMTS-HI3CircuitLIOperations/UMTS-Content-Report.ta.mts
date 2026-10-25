@@ -216,13 +216,13 @@ class UMTS_Content_Report {
          * @static
          */
 
-    public static _enum_for_version = _enum_for_UMTS_Content_Report_version;        /**
+    public static _enum_for_version: typeof _enum_for_UMTS_Content_Report_version = _enum_for_UMTS_Content_Report_version;        /**
          * @summary The enum used as the type of the component `initiator`
          * @public
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_UMTS_Content_Report_initiator;
+    public static _enum_for_initiator: typeof _enum_for_UMTS_Content_Report_initiator = _enum_for_UMTS_Content_Report_initiator;
 }
 
 /**

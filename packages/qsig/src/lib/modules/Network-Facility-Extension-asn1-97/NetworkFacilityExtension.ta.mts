@@ -118,13 +118,13 @@ class NetworkFacilityExtension {
          * @static
          */
 
-    public static _enum_for_sourceEntity = _enum_for_EntityType;        /**
+    public static _enum_for_sourceEntity: typeof _enum_for_EntityType = _enum_for_EntityType;        /**
          * @summary The enum used as the type of the component `destinationEntity`
          * @public
          * @static
          */
 
-    public static _enum_for_destinationEntity = _enum_for_EntityType;
+    public static _enum_for_destinationEntity: typeof _enum_for_EntityType = _enum_for_EntityType;
 }
 
 /**

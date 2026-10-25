@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type IntEmail = UTF8String; // UTF8String
 
 
-export const _decode_IntEmail = $._decodeUTF8String;
+export const _decode_IntEmail: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
-export const _encode_IntEmail = $._encodeUTF8String;
+export const _encode_IntEmail: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

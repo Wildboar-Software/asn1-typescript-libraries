@@ -141,7 +141,7 @@ type TLS13ExtensionType = _enum_for_TLS13ExtensionType;
  * @enum {number}
  */
 export
-const TLS13ExtensionType = _enum_for_TLS13ExtensionType;
+const TLS13ExtensionType: typeof _enum_for_TLS13ExtensionType = _enum_for_TLS13ExtensionType;
 
 /**
  * @summary TLS13ExtensionType_serverName
@@ -149,7 +149,7 @@ const TLS13ExtensionType = _enum_for_TLS13ExtensionType;
  * @type {number}
  */
 export
-const TLS13ExtensionType_serverName = TLS13ExtensionType.serverName; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_serverName: _enum_for_TLS13ExtensionType.serverName = TLS13ExtensionType.serverName; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serverName
@@ -157,7 +157,7 @@ const TLS13ExtensionType_serverName = TLS13ExtensionType.serverName; /* LONG_NAM
  * @type {number}
  */
 export
-const serverName = TLS13ExtensionType.serverName; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serverName: _enum_for_TLS13ExtensionType.serverName = TLS13ExtensionType.serverName; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_maxFragmentLength
@@ -165,7 +165,7 @@ const serverName = TLS13ExtensionType.serverName; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TLS13ExtensionType_maxFragmentLength = TLS13ExtensionType.maxFragmentLength; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_maxFragmentLength: _enum_for_TLS13ExtensionType.maxFragmentLength = TLS13ExtensionType.maxFragmentLength; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxFragmentLength
@@ -173,7 +173,7 @@ const TLS13ExtensionType_maxFragmentLength = TLS13ExtensionType.maxFragmentLengt
  * @type {number}
  */
 export
-const maxFragmentLength = TLS13ExtensionType.maxFragmentLength; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maxFragmentLength: _enum_for_TLS13ExtensionType.maxFragmentLength = TLS13ExtensionType.maxFragmentLength; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_statusRequest
@@ -181,7 +181,7 @@ const maxFragmentLength = TLS13ExtensionType.maxFragmentLength; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TLS13ExtensionType_statusRequest = TLS13ExtensionType.statusRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_statusRequest: _enum_for_TLS13ExtensionType.statusRequest = TLS13ExtensionType.statusRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary statusRequest
@@ -189,7 +189,7 @@ const TLS13ExtensionType_statusRequest = TLS13ExtensionType.statusRequest; /* LO
  * @type {number}
  */
 export
-const statusRequest = TLS13ExtensionType.statusRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const statusRequest: _enum_for_TLS13ExtensionType.statusRequest = TLS13ExtensionType.statusRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_supportedGroups
@@ -197,7 +197,7 @@ const statusRequest = TLS13ExtensionType.statusRequest; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TLS13ExtensionType_supportedGroups = TLS13ExtensionType.supportedGroups; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_supportedGroups: _enum_for_TLS13ExtensionType.supportedGroups = TLS13ExtensionType.supportedGroups; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supportedGroups
@@ -205,7 +205,7 @@ const TLS13ExtensionType_supportedGroups = TLS13ExtensionType.supportedGroups; /
  * @type {number}
  */
 export
-const supportedGroups = TLS13ExtensionType.supportedGroups; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supportedGroups: _enum_for_TLS13ExtensionType.supportedGroups = TLS13ExtensionType.supportedGroups; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_signatureAlgorithms
@@ -213,7 +213,7 @@ const supportedGroups = TLS13ExtensionType.supportedGroups; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TLS13ExtensionType_signatureAlgorithms = TLS13ExtensionType.signatureAlgorithms; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_signatureAlgorithms: _enum_for_TLS13ExtensionType.signatureAlgorithms = TLS13ExtensionType.signatureAlgorithms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary signatureAlgorithms
@@ -221,7 +221,7 @@ const TLS13ExtensionType_signatureAlgorithms = TLS13ExtensionType.signatureAlgor
  * @type {number}
  */
 export
-const signatureAlgorithms = TLS13ExtensionType.signatureAlgorithms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const signatureAlgorithms: _enum_for_TLS13ExtensionType.signatureAlgorithms = TLS13ExtensionType.signatureAlgorithms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_useSRTP
@@ -229,7 +229,7 @@ const signatureAlgorithms = TLS13ExtensionType.signatureAlgorithms; /* SHORT_NAM
  * @type {number}
  */
 export
-const TLS13ExtensionType_useSRTP = TLS13ExtensionType.useSRTP; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_useSRTP: _enum_for_TLS13ExtensionType.useSRTP = TLS13ExtensionType.useSRTP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary useSRTP
@@ -237,7 +237,7 @@ const TLS13ExtensionType_useSRTP = TLS13ExtensionType.useSRTP; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const useSRTP = TLS13ExtensionType.useSRTP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const useSRTP: _enum_for_TLS13ExtensionType.useSRTP = TLS13ExtensionType.useSRTP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_heartbeat
@@ -245,7 +245,7 @@ const useSRTP = TLS13ExtensionType.useSRTP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLS13ExtensionType_heartbeat = TLS13ExtensionType.heartbeat; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_heartbeat: _enum_for_TLS13ExtensionType.heartbeat = TLS13ExtensionType.heartbeat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary heartbeat
@@ -253,7 +253,7 @@ const TLS13ExtensionType_heartbeat = TLS13ExtensionType.heartbeat; /* LONG_NAMED
  * @type {number}
  */
 export
-const heartbeat = TLS13ExtensionType.heartbeat; /* SHORT_NAMED_ENUMERATED_VALUE */
+const heartbeat: _enum_for_TLS13ExtensionType.heartbeat = TLS13ExtensionType.heartbeat; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_applicationLayerProtocolNegotiation
@@ -261,7 +261,7 @@ const heartbeat = TLS13ExtensionType.heartbeat; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const TLS13ExtensionType_applicationLayerProtocolNegotiation = TLS13ExtensionType.applicationLayerProtocolNegotiation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_applicationLayerProtocolNegotiation: _enum_for_TLS13ExtensionType.applicationLayerProtocolNegotiation = TLS13ExtensionType.applicationLayerProtocolNegotiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary applicationLayerProtocolNegotiation
@@ -269,7 +269,7 @@ const TLS13ExtensionType_applicationLayerProtocolNegotiation = TLS13ExtensionTyp
  * @type {number}
  */
 export
-const applicationLayerProtocolNegotiation = TLS13ExtensionType.applicationLayerProtocolNegotiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const applicationLayerProtocolNegotiation: _enum_for_TLS13ExtensionType.applicationLayerProtocolNegotiation = TLS13ExtensionType.applicationLayerProtocolNegotiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_signedCertificateTimestamp
@@ -277,7 +277,7 @@ const applicationLayerProtocolNegotiation = TLS13ExtensionType.applicationLayerP
  * @type {number}
  */
 export
-const TLS13ExtensionType_signedCertificateTimestamp = TLS13ExtensionType.signedCertificateTimestamp; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_signedCertificateTimestamp: _enum_for_TLS13ExtensionType.signedCertificateTimestamp = TLS13ExtensionType.signedCertificateTimestamp; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary signedCertificateTimestamp
@@ -285,7 +285,7 @@ const TLS13ExtensionType_signedCertificateTimestamp = TLS13ExtensionType.signedC
  * @type {number}
  */
 export
-const signedCertificateTimestamp = TLS13ExtensionType.signedCertificateTimestamp; /* SHORT_NAMED_ENUMERATED_VALUE */
+const signedCertificateTimestamp: _enum_for_TLS13ExtensionType.signedCertificateTimestamp = TLS13ExtensionType.signedCertificateTimestamp; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_clientCertificateType
@@ -293,7 +293,7 @@ const signedCertificateTimestamp = TLS13ExtensionType.signedCertificateTimestamp
  * @type {number}
  */
 export
-const TLS13ExtensionType_clientCertificateType = TLS13ExtensionType.clientCertificateType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_clientCertificateType: _enum_for_TLS13ExtensionType.clientCertificateType = TLS13ExtensionType.clientCertificateType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary clientCertificateType
@@ -301,7 +301,7 @@ const TLS13ExtensionType_clientCertificateType = TLS13ExtensionType.clientCertif
  * @type {number}
  */
 export
-const clientCertificateType = TLS13ExtensionType.clientCertificateType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const clientCertificateType: _enum_for_TLS13ExtensionType.clientCertificateType = TLS13ExtensionType.clientCertificateType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_serverCertificateType
@@ -309,7 +309,7 @@ const clientCertificateType = TLS13ExtensionType.clientCertificateType; /* SHORT
  * @type {number}
  */
 export
-const TLS13ExtensionType_serverCertificateType = TLS13ExtensionType.serverCertificateType; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_serverCertificateType: _enum_for_TLS13ExtensionType.serverCertificateType = TLS13ExtensionType.serverCertificateType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serverCertificateType
@@ -317,7 +317,7 @@ const TLS13ExtensionType_serverCertificateType = TLS13ExtensionType.serverCertif
  * @type {number}
  */
 export
-const serverCertificateType = TLS13ExtensionType.serverCertificateType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serverCertificateType: _enum_for_TLS13ExtensionType.serverCertificateType = TLS13ExtensionType.serverCertificateType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_padding
@@ -325,7 +325,7 @@ const serverCertificateType = TLS13ExtensionType.serverCertificateType; /* SHORT
  * @type {number}
  */
 export
-const TLS13ExtensionType_padding = TLS13ExtensionType.padding; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_padding: _enum_for_TLS13ExtensionType.padding = TLS13ExtensionType.padding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary padding
@@ -333,7 +333,7 @@ const TLS13ExtensionType_padding = TLS13ExtensionType.padding; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const padding = TLS13ExtensionType.padding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const padding: _enum_for_TLS13ExtensionType.padding = TLS13ExtensionType.padding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_presharedKey
@@ -341,7 +341,7 @@ const padding = TLS13ExtensionType.padding; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLS13ExtensionType_presharedKey = TLS13ExtensionType.presharedKey; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_presharedKey: _enum_for_TLS13ExtensionType.presharedKey = TLS13ExtensionType.presharedKey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presharedKey
@@ -349,7 +349,7 @@ const TLS13ExtensionType_presharedKey = TLS13ExtensionType.presharedKey; /* LONG
  * @type {number}
  */
 export
-const presharedKey = TLS13ExtensionType.presharedKey; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presharedKey: _enum_for_TLS13ExtensionType.presharedKey = TLS13ExtensionType.presharedKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_earlyData
@@ -357,7 +357,7 @@ const presharedKey = TLS13ExtensionType.presharedKey; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TLS13ExtensionType_earlyData = TLS13ExtensionType.earlyData; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_earlyData: _enum_for_TLS13ExtensionType.earlyData = TLS13ExtensionType.earlyData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary earlyData
@@ -365,7 +365,7 @@ const TLS13ExtensionType_earlyData = TLS13ExtensionType.earlyData; /* LONG_NAMED
  * @type {number}
  */
 export
-const earlyData = TLS13ExtensionType.earlyData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const earlyData: _enum_for_TLS13ExtensionType.earlyData = TLS13ExtensionType.earlyData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_supportedVersions
@@ -373,7 +373,7 @@ const earlyData = TLS13ExtensionType.earlyData; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const TLS13ExtensionType_supportedVersions = TLS13ExtensionType.supportedVersions; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_supportedVersions: _enum_for_TLS13ExtensionType.supportedVersions = TLS13ExtensionType.supportedVersions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supportedVersions
@@ -381,7 +381,7 @@ const TLS13ExtensionType_supportedVersions = TLS13ExtensionType.supportedVersion
  * @type {number}
  */
 export
-const supportedVersions = TLS13ExtensionType.supportedVersions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supportedVersions: _enum_for_TLS13ExtensionType.supportedVersions = TLS13ExtensionType.supportedVersions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_cookie
@@ -389,7 +389,7 @@ const supportedVersions = TLS13ExtensionType.supportedVersions; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TLS13ExtensionType_cookie = TLS13ExtensionType.cookie; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_cookie: _enum_for_TLS13ExtensionType.cookie = TLS13ExtensionType.cookie; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cookie
@@ -397,7 +397,7 @@ const TLS13ExtensionType_cookie = TLS13ExtensionType.cookie; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const cookie = TLS13ExtensionType.cookie; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cookie: _enum_for_TLS13ExtensionType.cookie = TLS13ExtensionType.cookie; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_pSKKeyExchangeModes
@@ -405,7 +405,7 @@ const cookie = TLS13ExtensionType.cookie; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TLS13ExtensionType_pSKKeyExchangeModes = TLS13ExtensionType.pSKKeyExchangeModes; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_pSKKeyExchangeModes: _enum_for_TLS13ExtensionType.pSKKeyExchangeModes = TLS13ExtensionType.pSKKeyExchangeModes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pSKKeyExchangeModes
@@ -413,7 +413,7 @@ const TLS13ExtensionType_pSKKeyExchangeModes = TLS13ExtensionType.pSKKeyExchange
  * @type {number}
  */
 export
-const pSKKeyExchangeModes = TLS13ExtensionType.pSKKeyExchangeModes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pSKKeyExchangeModes: _enum_for_TLS13ExtensionType.pSKKeyExchangeModes = TLS13ExtensionType.pSKKeyExchangeModes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_certificateAuthorities
@@ -421,7 +421,7 @@ const pSKKeyExchangeModes = TLS13ExtensionType.pSKKeyExchangeModes; /* SHORT_NAM
  * @type {number}
  */
 export
-const TLS13ExtensionType_certificateAuthorities = TLS13ExtensionType.certificateAuthorities; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_certificateAuthorities: _enum_for_TLS13ExtensionType.certificateAuthorities = TLS13ExtensionType.certificateAuthorities; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary certificateAuthorities
@@ -429,7 +429,7 @@ const TLS13ExtensionType_certificateAuthorities = TLS13ExtensionType.certificate
  * @type {number}
  */
 export
-const certificateAuthorities = TLS13ExtensionType.certificateAuthorities; /* SHORT_NAMED_ENUMERATED_VALUE */
+const certificateAuthorities: _enum_for_TLS13ExtensionType.certificateAuthorities = TLS13ExtensionType.certificateAuthorities; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_oIDFilters
@@ -437,7 +437,7 @@ const certificateAuthorities = TLS13ExtensionType.certificateAuthorities; /* SHO
  * @type {number}
  */
 export
-const TLS13ExtensionType_oIDFilters = TLS13ExtensionType.oIDFilters; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_oIDFilters: _enum_for_TLS13ExtensionType.oIDFilters = TLS13ExtensionType.oIDFilters; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oIDFilters
@@ -445,7 +445,7 @@ const TLS13ExtensionType_oIDFilters = TLS13ExtensionType.oIDFilters; /* LONG_NAM
  * @type {number}
  */
 export
-const oIDFilters = TLS13ExtensionType.oIDFilters; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oIDFilters: _enum_for_TLS13ExtensionType.oIDFilters = TLS13ExtensionType.oIDFilters; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_postHandshakeAuth
@@ -453,7 +453,7 @@ const oIDFilters = TLS13ExtensionType.oIDFilters; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TLS13ExtensionType_postHandshakeAuth = TLS13ExtensionType.postHandshakeAuth; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_postHandshakeAuth: _enum_for_TLS13ExtensionType.postHandshakeAuth = TLS13ExtensionType.postHandshakeAuth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary postHandshakeAuth
@@ -461,7 +461,7 @@ const TLS13ExtensionType_postHandshakeAuth = TLS13ExtensionType.postHandshakeAut
  * @type {number}
  */
 export
-const postHandshakeAuth = TLS13ExtensionType.postHandshakeAuth; /* SHORT_NAMED_ENUMERATED_VALUE */
+const postHandshakeAuth: _enum_for_TLS13ExtensionType.postHandshakeAuth = TLS13ExtensionType.postHandshakeAuth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_signatureAlgorithmsCert
@@ -469,7 +469,7 @@ const postHandshakeAuth = TLS13ExtensionType.postHandshakeAuth; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TLS13ExtensionType_signatureAlgorithmsCert = TLS13ExtensionType.signatureAlgorithmsCert; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_signatureAlgorithmsCert: _enum_for_TLS13ExtensionType.signatureAlgorithmsCert = TLS13ExtensionType.signatureAlgorithmsCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary signatureAlgorithmsCert
@@ -477,7 +477,7 @@ const TLS13ExtensionType_signatureAlgorithmsCert = TLS13ExtensionType.signatureA
  * @type {number}
  */
 export
-const signatureAlgorithmsCert = TLS13ExtensionType.signatureAlgorithmsCert; /* SHORT_NAMED_ENUMERATED_VALUE */
+const signatureAlgorithmsCert: _enum_for_TLS13ExtensionType.signatureAlgorithmsCert = TLS13ExtensionType.signatureAlgorithmsCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLS13ExtensionType_keyShare
@@ -485,7 +485,7 @@ const signatureAlgorithmsCert = TLS13ExtensionType.signatureAlgorithmsCert; /* S
  * @type {number}
  */
 export
-const TLS13ExtensionType_keyShare = TLS13ExtensionType.keyShare; /* LONG_NAMED_ENUMERATED_VALUE */
+const TLS13ExtensionType_keyShare: _enum_for_TLS13ExtensionType.keyShare = TLS13ExtensionType.keyShare; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary keyShare
@@ -493,7 +493,7 @@ const TLS13ExtensionType_keyShare = TLS13ExtensionType.keyShare; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const keyShare = TLS13ExtensionType.keyShare; /* SHORT_NAMED_ENUMERATED_VALUE */
+const keyShare: _enum_for_TLS13ExtensionType.keyShare = TLS13ExtensionType.keyShare; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TLS13ExtensionType: $.ASN1Decoder<TLS13ExtensionType> = $._decodeEnumerated;
 export const _encode_TLS13ExtensionType: $.ASN1Encoder<TLS13ExtensionType> = $._encodeEnumerated;
 

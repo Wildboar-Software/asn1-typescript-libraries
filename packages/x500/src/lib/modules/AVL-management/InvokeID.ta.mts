@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type InvokeID = INTEGER;
 
 
-export const _decode_InvokeID = $._decodeInteger;
+export const _decode_InvokeID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_InvokeID = $._encodeInteger;
+export const _encode_InvokeID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

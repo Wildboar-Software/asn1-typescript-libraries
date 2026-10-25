@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Date_Time = TIME; // TimeType
 
 
-export const _decode_Date_Time = $._decodeTime;
+export const _decode_Date_Time: $.ASN1Decoder<string> = $._decodeTime;
 
 
-export const _encode_Date_Time = $._encodeTime;
+export const _encode_Date_Time: $.ASN1Encoder<string> = $._encodeTime;
 
 
 /* eslint-enable */

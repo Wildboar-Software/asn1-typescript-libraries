@@ -46,7 +46,7 @@ type UnknownSubscriberDiagnostic = _enum_for_UnknownSubscriberDiagnostic | ENUME
  * @type {number}
  */
 export
-const UnknownSubscriberDiagnostic_imsiUnknown = _enum_for_UnknownSubscriberDiagnostic.imsiUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnknownSubscriberDiagnostic_imsiUnknown: _enum_for_UnknownSubscriberDiagnostic.imsiUnknown = _enum_for_UnknownSubscriberDiagnostic.imsiUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiUnknown
@@ -58,7 +58,7 @@ const UnknownSubscriberDiagnostic_imsiUnknown = _enum_for_UnknownSubscriberDiagn
  * @type {number}
  */
 export
-const imsiUnknown = UnknownSubscriberDiagnostic_imsiUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiUnknown: _enum_for_UnknownSubscriberDiagnostic.imsiUnknown = UnknownSubscriberDiagnostic_imsiUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown
@@ -70,7 +70,7 @@ const imsiUnknown = UnknownSubscriberDiagnostic_imsiUnknown; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown = _enum_for_UnknownSubscriberDiagnostic.gprs_eps_SubscriptionUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown: _enum_for_UnknownSubscriberDiagnostic.gprs_eps_SubscriptionUnknown = _enum_for_UnknownSubscriberDiagnostic.gprs_eps_SubscriptionUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gprs_eps_SubscriptionUnknown
@@ -82,7 +82,7 @@ const UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown = _enum_for_Unkno
  * @type {number}
  */
 export
-const gprs_eps_SubscriptionUnknown = UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gprs_eps_SubscriptionUnknown: _enum_for_UnknownSubscriberDiagnostic.gprs_eps_SubscriptionUnknown = UnknownSubscriberDiagnostic_gprs_eps_SubscriptionUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnknownSubscriberDiagnostic_npdbMismatch
@@ -94,7 +94,7 @@ const gprs_eps_SubscriptionUnknown = UnknownSubscriberDiagnostic_gprs_eps_Subscr
  * @type {number}
  */
 export
-const UnknownSubscriberDiagnostic_npdbMismatch = _enum_for_UnknownSubscriberDiagnostic.npdbMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnknownSubscriberDiagnostic_npdbMismatch: _enum_for_UnknownSubscriberDiagnostic.npdbMismatch = _enum_for_UnknownSubscriberDiagnostic.npdbMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary npdbMismatch
@@ -106,7 +106,7 @@ const UnknownSubscriberDiagnostic_npdbMismatch = _enum_for_UnknownSubscriberDiag
  * @type {number}
  */
 export
-const npdbMismatch = UnknownSubscriberDiagnostic_npdbMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+const npdbMismatch: _enum_for_UnknownSubscriberDiagnostic.npdbMismatch = UnknownSubscriberDiagnostic_npdbMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) UnknownSubscriberDiagnostic
@@ -114,7 +114,7 @@ const npdbMismatch = UnknownSubscriberDiagnostic_npdbMismatch; /* SHORT_NAMED_EN
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UnknownSubscriberDiagnostic = $._decodeEnumerated;
+export const _decode_UnknownSubscriberDiagnostic: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UnknownSubscriberDiagnostic into an ASN.1 Element.
@@ -123,7 +123,7 @@ export const _decode_UnknownSubscriberDiagnostic = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnknownSubscriberDiagnostic, encoded as an ASN.1 Element.
  */
-export const _encode_UnknownSubscriberDiagnostic = $._encodeEnumerated;
+export const _encode_UnknownSubscriberDiagnostic: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

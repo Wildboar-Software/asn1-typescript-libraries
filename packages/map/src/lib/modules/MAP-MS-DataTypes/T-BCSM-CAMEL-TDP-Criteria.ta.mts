@@ -110,7 +110,7 @@ class T_BCSM_CAMEL_TDP_Criteria {
          * @static
          */
 
-    public static _enum_for_t_BCSM_TriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint;
+    public static _enum_for_t_BCSM_TriggerDetectionPoint: typeof _enum_for_T_BcsmTriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint;
 }
 
 /**

@@ -91,7 +91,7 @@ export type DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  *
  * @enum {number}
  */
-export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
+export const DeniedMeteringAction: typeof _enum_for_DeniedMeteringAction = _enum_for_DeniedMeteringAction;
 
 
 /**
@@ -104,7 +104,7 @@ export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotStart =
+export const DeniedMeteringAction_canNotStart: _enum_for_DeniedMeteringAction.canNotStart =
     DeniedMeteringAction.canNotStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const DeniedMeteringAction_canNotStart =
  * @constant
  * @type {number}
  */
-export const canNotStart =
+export const canNotStart: _enum_for_DeniedMeteringAction.canNotStart =
     DeniedMeteringAction.canNotStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -132,7 +132,7 @@ export const canNotStart =
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotSuspend =
+export const DeniedMeteringAction_canNotSuspend: _enum_for_DeniedMeteringAction.canNotSuspend =
     DeniedMeteringAction.canNotSuspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -146,7 +146,7 @@ export const DeniedMeteringAction_canNotSuspend =
  * @constant
  * @type {number}
  */
-export const canNotSuspend =
+export const canNotSuspend: _enum_for_DeniedMeteringAction.canNotSuspend =
     DeniedMeteringAction.canNotSuspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -160,7 +160,7 @@ export const canNotSuspend =
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotResume =
+export const DeniedMeteringAction_canNotResume: _enum_for_DeniedMeteringAction.canNotResume =
     DeniedMeteringAction.canNotResume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -174,7 +174,7 @@ export const DeniedMeteringAction_canNotResume =
  * @constant
  * @type {number}
  */
-export const canNotResume =
+export const canNotResume: _enum_for_DeniedMeteringAction.canNotResume =
     DeniedMeteringAction.canNotResume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

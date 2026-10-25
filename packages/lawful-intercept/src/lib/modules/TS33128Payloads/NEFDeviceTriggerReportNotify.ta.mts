@@ -173,7 +173,7 @@ class NEFDeviceTriggerReportNotify {
          * @static
          */
 
-    public static _enum_for_deviceTriggerDeliveryResult = _enum_for_DeviceTriggerDeliveryResult;
+    public static _enum_for_deviceTriggerDeliveryResult: typeof _enum_for_DeviceTriggerDeliveryResult = _enum_for_DeviceTriggerDeliveryResult;
 }
 
 /**

@@ -42,7 +42,7 @@ type AttrId_foregroundColour = INTEGER;
  * @type {number}
  */
 export
-const AttrId_foregroundColour_null_ = 0 satisfies AttrId_foregroundColour; /* LONG_NAMED_INTEGER_VALUE */
+const AttrId_foregroundColour_null_: 0 = 0 satisfies AttrId_foregroundColour; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttrId_foregroundColour_null_
@@ -54,9 +54,9 @@ const AttrId_foregroundColour_null_ = 0 satisfies AttrId_foregroundColour; /* LO
  * @type {number}
  */
 export
-const null_ = AttrId_foregroundColour_null_; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AttrId_foregroundColour = $._decodeInteger;
-export const _encode_AttrId_foregroundColour = $._encodeInteger;
+const null_: 0 = AttrId_foregroundColour_null_; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AttrId_foregroundColour: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AttrId_foregroundColour: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -41,7 +41,7 @@ type RIOreference_operations_Item_operation = INTEGER;
  * @type {number}
  */
 export
-const RIOreference_operations_Item_operation_executeRecord = 0 satisfies RIOreference_operations_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
+const RIOreference_operations_Item_operation_executeRecord: 0 = 0 satisfies RIOreference_operations_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOreference_operations_Item_operation_executeRecord
@@ -52,7 +52,7 @@ const RIOreference_operations_Item_operation_executeRecord = 0 satisfies RIOrefe
  * @type {number}
  */
 export
-const executeRecord = RIOreference_operations_Item_operation_executeRecord; /* SHORT_NAMED_INTEGER_VALUE */
+const executeRecord: 0 = RIOreference_operations_Item_operation_executeRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOreference_operations_Item_operation_callRecord
@@ -63,7 +63,7 @@ const executeRecord = RIOreference_operations_Item_operation_executeRecord; /* S
  * @type {number}
  */
 export
-const RIOreference_operations_Item_operation_callRecord = 1 satisfies RIOreference_operations_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
+const RIOreference_operations_Item_operation_callRecord: 1 = 1 satisfies RIOreference_operations_Item_operation; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RIOreference_operations_Item_operation_callRecord
@@ -74,9 +74,9 @@ const RIOreference_operations_Item_operation_callRecord = 1 satisfies RIOreferen
  * @type {number}
  */
 export
-const callRecord = RIOreference_operations_Item_operation_callRecord; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RIOreference_operations_Item_operation = $._decodeInteger;
-export const _encode_RIOreference_operations_Item_operation = $._encodeInteger;
+const callRecord: 1 = RIOreference_operations_Item_operation_callRecord; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RIOreference_operations_Item_operation: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RIOreference_operations_Item_operation: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

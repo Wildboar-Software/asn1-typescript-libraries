@@ -93,7 +93,7 @@ type ProcedureCancellationReason = _enum_for_ProcedureCancellationReason;
  * @enum {number}
  */
 export
-const ProcedureCancellationReason = _enum_for_ProcedureCancellationReason;
+const ProcedureCancellationReason: typeof _enum_for_ProcedureCancellationReason = _enum_for_ProcedureCancellationReason;
 
 /**
  * @summary ProcedureCancellationReason_handoverCancellation
@@ -106,7 +106,7 @@ const ProcedureCancellationReason = _enum_for_ProcedureCancellationReason;
  * @type {number}
  */
 export
-const ProcedureCancellationReason_handoverCancellation = ProcedureCancellationReason.handoverCancellation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_handoverCancellation: _enum_for_ProcedureCancellationReason.handoverCancellation = ProcedureCancellationReason.handoverCancellation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handoverCancellation
@@ -119,7 +119,7 @@ const ProcedureCancellationReason_handoverCancellation = ProcedureCancellationRe
  * @type {number}
  */
 export
-const handoverCancellation = ProcedureCancellationReason.handoverCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handoverCancellation: _enum_for_ProcedureCancellationReason.handoverCancellation = ProcedureCancellationReason.handoverCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcedureCancellationReason_radioChannelRelease
@@ -131,7 +131,7 @@ const handoverCancellation = ProcedureCancellationReason.handoverCancellation; /
  * @type {number}
  */
 export
-const ProcedureCancellationReason_radioChannelRelease = ProcedureCancellationReason.radioChannelRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_radioChannelRelease: _enum_for_ProcedureCancellationReason.radioChannelRelease = ProcedureCancellationReason.radioChannelRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary radioChannelRelease
@@ -144,7 +144,7 @@ const ProcedureCancellationReason_radioChannelRelease = ProcedureCancellationRea
  * @type {number}
  */
 export
-const radioChannelRelease = ProcedureCancellationReason.radioChannelRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const radioChannelRelease: _enum_for_ProcedureCancellationReason.radioChannelRelease = ProcedureCancellationReason.radioChannelRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcedureCancellationReason_networkPathRelease
@@ -156,7 +156,7 @@ const radioChannelRelease = ProcedureCancellationReason.radioChannelRelease; /* 
  * @type {number}
  */
 export
-const ProcedureCancellationReason_networkPathRelease = ProcedureCancellationReason.networkPathRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_networkPathRelease: _enum_for_ProcedureCancellationReason.networkPathRelease = ProcedureCancellationReason.networkPathRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkPathRelease
@@ -169,7 +169,7 @@ const ProcedureCancellationReason_networkPathRelease = ProcedureCancellationReas
  * @type {number}
  */
 export
-const networkPathRelease = ProcedureCancellationReason.networkPathRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkPathRelease: _enum_for_ProcedureCancellationReason.networkPathRelease = ProcedureCancellationReason.networkPathRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcedureCancellationReason_callRelease
@@ -181,7 +181,7 @@ const networkPathRelease = ProcedureCancellationReason.networkPathRelease; /* SH
  * @type {number}
  */
 export
-const ProcedureCancellationReason_callRelease = ProcedureCancellationReason.callRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_callRelease: _enum_for_ProcedureCancellationReason.callRelease = ProcedureCancellationReason.callRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callRelease
@@ -194,7 +194,7 @@ const ProcedureCancellationReason_callRelease = ProcedureCancellationReason.call
  * @type {number}
  */
 export
-const callRelease = ProcedureCancellationReason.callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callRelease: _enum_for_ProcedureCancellationReason.callRelease = ProcedureCancellationReason.callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcedureCancellationReason_associatedProcedureFailure
@@ -207,7 +207,7 @@ const callRelease = ProcedureCancellationReason.callRelease; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const ProcedureCancellationReason_associatedProcedureFailure = ProcedureCancellationReason.associatedProcedureFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_associatedProcedureFailure: _enum_for_ProcedureCancellationReason.associatedProcedureFailure = ProcedureCancellationReason.associatedProcedureFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associatedProcedureFailure
@@ -220,7 +220,7 @@ const ProcedureCancellationReason_associatedProcedureFailure = ProcedureCancella
  * @type {number}
  */
 export
-const associatedProcedureFailure = ProcedureCancellationReason.associatedProcedureFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const associatedProcedureFailure: _enum_for_ProcedureCancellationReason.associatedProcedureFailure = ProcedureCancellationReason.associatedProcedureFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcedureCancellationReason_tandemDialogueRelease
@@ -233,7 +233,7 @@ const associatedProcedureFailure = ProcedureCancellationReason.associatedProcedu
  * @type {number}
  */
 export
-const ProcedureCancellationReason_tandemDialogueRelease = ProcedureCancellationReason.tandemDialogueRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_tandemDialogueRelease: _enum_for_ProcedureCancellationReason.tandemDialogueRelease = ProcedureCancellationReason.tandemDialogueRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tandemDialogueRelease
@@ -246,7 +246,7 @@ const ProcedureCancellationReason_tandemDialogueRelease = ProcedureCancellationR
  * @type {number}
  */
 export
-const tandemDialogueRelease = ProcedureCancellationReason.tandemDialogueRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tandemDialogueRelease: _enum_for_ProcedureCancellationReason.tandemDialogueRelease = ProcedureCancellationReason.tandemDialogueRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProcedureCancellationReason_remoteOperationsFailure
@@ -259,7 +259,7 @@ const tandemDialogueRelease = ProcedureCancellationReason.tandemDialogueRelease;
  * @type {number}
  */
 export
-const ProcedureCancellationReason_remoteOperationsFailure = ProcedureCancellationReason.remoteOperationsFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProcedureCancellationReason_remoteOperationsFailure: _enum_for_ProcedureCancellationReason.remoteOperationsFailure = ProcedureCancellationReason.remoteOperationsFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remoteOperationsFailure
@@ -272,7 +272,7 @@ const ProcedureCancellationReason_remoteOperationsFailure = ProcedureCancellatio
  * @type {number}
  */
 export
-const remoteOperationsFailure = ProcedureCancellationReason.remoteOperationsFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remoteOperationsFailure: _enum_for_ProcedureCancellationReason.remoteOperationsFailure = ProcedureCancellationReason.remoteOperationsFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ProcedureCancellationReason
@@ -280,7 +280,7 @@ const remoteOperationsFailure = ProcedureCancellationReason.remoteOperationsFail
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ProcedureCancellationReason = $._decodeEnumerated;
+export const _decode_ProcedureCancellationReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ProcedureCancellationReason into an ASN.1 Element.
@@ -289,7 +289,7 @@ export const _decode_ProcedureCancellationReason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProcedureCancellationReason, encoded as an ASN.1 Element.
  */
-export const _encode_ProcedureCancellationReason = $._encodeEnumerated;
+export const _encode_ProcedureCancellationReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

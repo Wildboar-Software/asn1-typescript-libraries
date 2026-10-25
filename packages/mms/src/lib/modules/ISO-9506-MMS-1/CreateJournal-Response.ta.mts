@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CreateJournal_Response = NULL; // NullType
-export const _decode_CreateJournal_Response = $._decodeNull;
-export const _encode_CreateJournal_Response = $._encodeNull;
+export const _decode_CreateJournal_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_CreateJournal_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

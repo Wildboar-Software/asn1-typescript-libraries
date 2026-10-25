@@ -243,13 +243,13 @@ class NetworkSignal {
          * @static
          */
 
-    public static _enum_for_alertingSignal = _enum_for_AlertingSignal;        /**
+    public static _enum_for_alertingSignal: typeof _enum_for_AlertingSignal = _enum_for_AlertingSignal;        /**
          * @summary The enum used as the type of the component `subjectAudibleSignal`
          * @public
          * @static
          */
 
-    public static _enum_for_subjectAudibleSignal = _enum_for_AudibleSignal;
+    public static _enum_for_subjectAudibleSignal: typeof _enum_for_AudibleSignal = _enum_for_AudibleSignal;
 }
 
 /**

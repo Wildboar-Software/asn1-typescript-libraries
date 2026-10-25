@@ -32,12 +32,12 @@ export type KerberosTime = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_KerberosTime = $._decodeGeneralizedTime;
+export const _decode_KerberosTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_KerberosTime = $._encodeGeneralizedTime;
+export const _encode_KerberosTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

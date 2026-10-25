@@ -44,7 +44,7 @@ export type Lock = INTEGER;
  * @constant
  * @type {number}
  */
-export const Lock_not_required = 0 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
+export const Lock_not_required: 0 = 0 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const Lock_not_required = 0 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE *
  * @constant
  * @type {number}
  */
-export const not_required = Lock_not_required; /* SHORT_NAMED_INTEGER_VALUE */
+export const not_required: 0 = Lock_not_required; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const not_required = Lock_not_required; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Lock_shared = 1 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
+export const Lock_shared: 1 = 1 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const Lock_shared = 1 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const shared = Lock_shared; /* SHORT_NAMED_INTEGER_VALUE */
+export const shared: 1 = Lock_shared; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const shared = Lock_shared; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Lock_exclusive = 2 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
+export const Lock_exclusive: 2 = 2 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const Lock_exclusive = 2 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const exclusive = Lock_exclusive; /* SHORT_NAMED_INTEGER_VALUE */
+export const exclusive: 2 = Lock_exclusive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const exclusive = Lock_exclusive; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Lock_no_access = 3 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
+export const Lock_no_access: 3 = 3 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,17 +115,17 @@ export const Lock_no_access = 3 satisfies Lock; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const no_access = Lock_no_access; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_access: 3 = Lock_no_access; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Lock = $._decodeInteger;
+export const _decode_Lock: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Lock = $._encodeInteger;
+export const _encode_Lock: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

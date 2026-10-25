@@ -274,7 +274,7 @@ type CipherSuite = _enum_for_CipherSuite | ENUMERATED;
  * @type {number}
  */
 export
-const CipherSuite_tls_null_with_null_null = _enum_for_CipherSuite.tls_null_with_null_null; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_null_with_null_null: _enum_for_CipherSuite.tls_null_with_null_null = _enum_for_CipherSuite.tls_null_with_null_null; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_null_with_null_null
@@ -282,7 +282,7 @@ const CipherSuite_tls_null_with_null_null = _enum_for_CipherSuite.tls_null_with_
  * @type {number}
  */
 export
-const tls_null_with_null_null = CipherSuite_tls_null_with_null_null; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_null_with_null_null: _enum_for_CipherSuite.tls_null_with_null_null = CipherSuite_tls_null_with_null_null; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_null_md5
@@ -290,7 +290,7 @@ const tls_null_with_null_null = CipherSuite_tls_null_with_null_null; /* SHORT_NA
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_null_md5 = _enum_for_CipherSuite.tls_rsa_with_null_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_null_md5: _enum_for_CipherSuite.tls_rsa_with_null_md5 = _enum_for_CipherSuite.tls_rsa_with_null_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_null_md5
@@ -298,7 +298,7 @@ const CipherSuite_tls_rsa_with_null_md5 = _enum_for_CipherSuite.tls_rsa_with_nul
  * @type {number}
  */
 export
-const tls_rsa_with_null_md5 = CipherSuite_tls_rsa_with_null_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_null_md5: _enum_for_CipherSuite.tls_rsa_with_null_md5 = CipherSuite_tls_rsa_with_null_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_null_sha
@@ -306,7 +306,7 @@ const tls_rsa_with_null_md5 = CipherSuite_tls_rsa_with_null_md5; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_null_sha = _enum_for_CipherSuite.tls_rsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_null_sha: _enum_for_CipherSuite.tls_rsa_with_null_sha = _enum_for_CipherSuite.tls_rsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_null_sha
@@ -314,7 +314,7 @@ const CipherSuite_tls_rsa_with_null_sha = _enum_for_CipherSuite.tls_rsa_with_nul
  * @type {number}
  */
 export
-const tls_rsa_with_null_sha = CipherSuite_tls_rsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_null_sha: _enum_for_CipherSuite.tls_rsa_with_null_sha = CipherSuite_tls_rsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_export_with_rc4_40_md5
@@ -322,7 +322,7 @@ const tls_rsa_with_null_sha = CipherSuite_tls_rsa_with_null_sha; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_export_with_rc4_40_md5 = _enum_for_CipherSuite.tls_rsa_export_with_rc4_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_export_with_rc4_40_md5: _enum_for_CipherSuite.tls_rsa_export_with_rc4_40_md5 = _enum_for_CipherSuite.tls_rsa_export_with_rc4_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_export_with_rc4_40_md5
@@ -330,7 +330,7 @@ const CipherSuite_tls_rsa_export_with_rc4_40_md5 = _enum_for_CipherSuite.tls_rsa
  * @type {number}
  */
 export
-const tls_rsa_export_with_rc4_40_md5 = CipherSuite_tls_rsa_export_with_rc4_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_export_with_rc4_40_md5: _enum_for_CipherSuite.tls_rsa_export_with_rc4_40_md5 = CipherSuite_tls_rsa_export_with_rc4_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_rc4_128_md5
@@ -338,7 +338,7 @@ const tls_rsa_export_with_rc4_40_md5 = CipherSuite_tls_rsa_export_with_rc4_40_md
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_rc4_128_md5 = _enum_for_CipherSuite.tls_rsa_with_rc4_128_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_rc4_128_md5: _enum_for_CipherSuite.tls_rsa_with_rc4_128_md5 = _enum_for_CipherSuite.tls_rsa_with_rc4_128_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_rc4_128_md5
@@ -346,7 +346,7 @@ const CipherSuite_tls_rsa_with_rc4_128_md5 = _enum_for_CipherSuite.tls_rsa_with_
  * @type {number}
  */
 export
-const tls_rsa_with_rc4_128_md5 = CipherSuite_tls_rsa_with_rc4_128_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_rc4_128_md5: _enum_for_CipherSuite.tls_rsa_with_rc4_128_md5 = CipherSuite_tls_rsa_with_rc4_128_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_rc4_128_sha
@@ -354,7 +354,7 @@ const tls_rsa_with_rc4_128_md5 = CipherSuite_tls_rsa_with_rc4_128_md5; /* SHORT_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_rsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_rsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_rc4_128_sha
@@ -362,7 +362,7 @@ const CipherSuite_tls_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_rsa_with_
  * @type {number}
  */
 export
-const tls_rsa_with_rc4_128_sha = CipherSuite_tls_rsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_rsa_with_rc4_128_sha = CipherSuite_tls_rsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_export_with_rc2_cbc_40_md5
@@ -370,7 +370,7 @@ const tls_rsa_with_rc4_128_sha = CipherSuite_tls_rsa_with_rc4_128_sha; /* SHORT_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_export_with_rc2_cbc_40_md5 = _enum_for_CipherSuite.tls_rsa_export_with_rc2_cbc_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_export_with_rc2_cbc_40_md5: _enum_for_CipherSuite.tls_rsa_export_with_rc2_cbc_40_md5 = _enum_for_CipherSuite.tls_rsa_export_with_rc2_cbc_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_export_with_rc2_cbc_40_md5
@@ -378,7 +378,7 @@ const CipherSuite_tls_rsa_export_with_rc2_cbc_40_md5 = _enum_for_CipherSuite.tls
  * @type {number}
  */
 export
-const tls_rsa_export_with_rc2_cbc_40_md5 = CipherSuite_tls_rsa_export_with_rc2_cbc_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_export_with_rc2_cbc_40_md5: _enum_for_CipherSuite.tls_rsa_export_with_rc2_cbc_40_md5 = CipherSuite_tls_rsa_export_with_rc2_cbc_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_idea_cbc_sha
@@ -386,7 +386,7 @@ const tls_rsa_export_with_rc2_cbc_40_md5 = CipherSuite_tls_rsa_export_with_rc2_c
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_idea_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_idea_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_idea_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_idea_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_idea_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_idea_cbc_sha
@@ -394,7 +394,7 @@ const CipherSuite_tls_rsa_with_idea_cbc_sha = _enum_for_CipherSuite.tls_rsa_with
  * @type {number}
  */
 export
-const tls_rsa_with_idea_cbc_sha = CipherSuite_tls_rsa_with_idea_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_idea_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_idea_cbc_sha = CipherSuite_tls_rsa_with_idea_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_export_with_des40_cbc_sha
@@ -402,7 +402,7 @@ const tls_rsa_with_idea_cbc_sha = CipherSuite_tls_rsa_with_idea_cbc_sha; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_rsa_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_rsa_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_export_with_des40_cbc_sha
@@ -410,7 +410,7 @@ const CipherSuite_tls_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_rsa_export_with_des40_cbc_sha = CipherSuite_tls_rsa_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_rsa_export_with_des40_cbc_sha = CipherSuite_tls_rsa_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_des_cbc_sha
@@ -418,7 +418,7 @@ const tls_rsa_export_with_des40_cbc_sha = CipherSuite_tls_rsa_export_with_des40_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_des_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_des_cbc_sha
@@ -426,7 +426,7 @@ const CipherSuite_tls_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_
  * @type {number}
  */
 export
-const tls_rsa_with_des_cbc_sha = CipherSuite_tls_rsa_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_des_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_des_cbc_sha = CipherSuite_tls_rsa_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_3des_ede_cbc_sha
@@ -434,7 +434,7 @@ const tls_rsa_with_des_cbc_sha = CipherSuite_tls_rsa_with_des_cbc_sha; /* SHORT_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_3des_ede_cbc_sha
@@ -442,7 +442,7 @@ const CipherSuite_tls_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_rsa_
  * @type {number}
  */
 export
-const tls_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_export_with_des40_cbc_sha
@@ -450,7 +450,7 @@ const tls_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_rsa_with_3des_ede_cbc_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_export_with_des40_cbc_sha
@@ -458,7 +458,7 @@ const CipherSuite_tls_dh_dss_export_with_des40_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_dh_dss_export_with_des40_cbc_sha = CipherSuite_tls_dh_dss_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_export_with_des40_cbc_sha = CipherSuite_tls_dh_dss_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_des_cbc_sha
@@ -466,7 +466,7 @@ const tls_dh_dss_export_with_des40_cbc_sha = CipherSuite_tls_dh_dss_export_with_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_des_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_des_cbc_sha
@@ -474,7 +474,7 @@ const CipherSuite_tls_dh_dss_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_dss
  * @type {number}
  */
 export
-const tls_dh_dss_with_des_cbc_sha = CipherSuite_tls_dh_dss_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_des_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_des_cbc_sha = CipherSuite_tls_dh_dss_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_3des_ede_cbc_sha
@@ -482,7 +482,7 @@ const tls_dh_dss_with_des_cbc_sha = CipherSuite_tls_dh_dss_with_des_cbc_sha; /* 
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_3des_ede_cbc_sha
@@ -490,7 +490,7 @@ const CipherSuite_tls_dh_dss_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dh_dss_with_3des_ede_cbc_sha = CipherSuite_tls_dh_dss_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_3des_ede_cbc_sha = CipherSuite_tls_dh_dss_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_export_with_des40_cbc_sha
@@ -498,7 +498,7 @@ const tls_dh_dss_with_3des_ede_cbc_sha = CipherSuite_tls_dh_dss_with_3des_ede_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_export_with_des40_cbc_sha
@@ -506,7 +506,7 @@ const CipherSuite_tls_dh_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_dh_rsa_export_with_des40_cbc_sha = CipherSuite_tls_dh_rsa_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_export_with_des40_cbc_sha = CipherSuite_tls_dh_rsa_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_des_cbc_sha
@@ -514,7 +514,7 @@ const tls_dh_rsa_export_with_des40_cbc_sha = CipherSuite_tls_dh_rsa_export_with_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_des_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_des_cbc_sha
@@ -522,7 +522,7 @@ const CipherSuite_tls_dh_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa
  * @type {number}
  */
 export
-const tls_dh_rsa_with_des_cbc_sha = CipherSuite_tls_dh_rsa_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_des_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_des_cbc_sha = CipherSuite_tls_dh_rsa_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_3des_ede_cbc_sha
@@ -530,7 +530,7 @@ const tls_dh_rsa_with_des_cbc_sha = CipherSuite_tls_dh_rsa_with_des_cbc_sha; /* 
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_3des_ede_cbc_sha
@@ -538,7 +538,7 @@ const CipherSuite_tls_dh_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dh_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_dh_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_dh_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_export_with_des40_cbc_sha
@@ -546,7 +546,7 @@ const tls_dh_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_dh_rsa_with_3des_ede_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_export_with_des40_cbc_sha
@@ -554,7 +554,7 @@ const CipherSuite_tls_dhe_dss_export_with_des40_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dhe_dss_export_with_des40_cbc_sha = CipherSuite_tls_dhe_dss_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_export_with_des40_cbc_sha = CipherSuite_tls_dhe_dss_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_des_cbc_sha
@@ -562,7 +562,7 @@ const tls_dhe_dss_export_with_des40_cbc_sha = CipherSuite_tls_dhe_dss_export_wit
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_des_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_des_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_des_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_des_cbc_sha
@@ -570,7 +570,7 @@ const CipherSuite_tls_dhe_dss_with_des_cbc_sha = _enum_for_CipherSuite.tls_dhe_d
  * @type {number}
  */
 export
-const tls_dhe_dss_with_des_cbc_sha = CipherSuite_tls_dhe_dss_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_des_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_des_cbc_sha = CipherSuite_tls_dhe_dss_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_3des_ede_cbc_sha
@@ -578,7 +578,7 @@ const tls_dhe_dss_with_des_cbc_sha = CipherSuite_tls_dhe_dss_with_des_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_3des_ede_cbc_sha
@@ -586,7 +586,7 @@ const CipherSuite_tls_dhe_dss_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_dhe_dss_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_dss_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_dss_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_export_with_des40_cbc_sha
@@ -594,7 +594,7 @@ const tls_dhe_dss_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_dss_with_3des_ede_
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_export_with_des40_cbc_sha
@@ -602,7 +602,7 @@ const CipherSuite_tls_dhe_rsa_export_with_des40_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dhe_rsa_export_with_des40_cbc_sha = CipherSuite_tls_dhe_rsa_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_export_with_des40_cbc_sha = CipherSuite_tls_dhe_rsa_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_des_cbc_sha
@@ -610,7 +610,7 @@ const tls_dhe_rsa_export_with_des40_cbc_sha = CipherSuite_tls_dhe_rsa_export_wit
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_des_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_des_cbc_sha
@@ -618,7 +618,7 @@ const CipherSuite_tls_dhe_rsa_with_des_cbc_sha = _enum_for_CipherSuite.tls_dhe_r
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_des_cbc_sha = CipherSuite_tls_dhe_rsa_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_des_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_des_cbc_sha = CipherSuite_tls_dhe_rsa_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_3des_ede_cbc_sha
@@ -626,7 +626,7 @@ const tls_dhe_rsa_with_des_cbc_sha = CipherSuite_tls_dhe_rsa_with_des_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_3des_ede_cbc_sha
@@ -634,7 +634,7 @@ const CipherSuite_tls_dhe_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_export_rc4_40_md5
@@ -642,7 +642,7 @@ const tls_dhe_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_rsa_with_3des_ede_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_export_rc4_40_md5 = _enum_for_CipherSuite.tls_dh_anon_export_rc4_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_export_rc4_40_md5: _enum_for_CipherSuite.tls_dh_anon_export_rc4_40_md5 = _enum_for_CipherSuite.tls_dh_anon_export_rc4_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_export_rc4_40_md5
@@ -650,7 +650,7 @@ const CipherSuite_tls_dh_anon_export_rc4_40_md5 = _enum_for_CipherSuite.tls_dh_a
  * @type {number}
  */
 export
-const tls_dh_anon_export_rc4_40_md5 = CipherSuite_tls_dh_anon_export_rc4_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_export_rc4_40_md5: _enum_for_CipherSuite.tls_dh_anon_export_rc4_40_md5 = CipherSuite_tls_dh_anon_export_rc4_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_rc4_128_md5
@@ -658,7 +658,7 @@ const tls_dh_anon_export_rc4_40_md5 = CipherSuite_tls_dh_anon_export_rc4_40_md5;
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_rc4_128_md5 = _enum_for_CipherSuite.tls_dh_anon_with_rc4_128_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_rc4_128_md5: _enum_for_CipherSuite.tls_dh_anon_with_rc4_128_md5 = _enum_for_CipherSuite.tls_dh_anon_with_rc4_128_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_rc4_128_md5
@@ -666,7 +666,7 @@ const CipherSuite_tls_dh_anon_with_rc4_128_md5 = _enum_for_CipherSuite.tls_dh_an
  * @type {number}
  */
 export
-const tls_dh_anon_with_rc4_128_md5 = CipherSuite_tls_dh_anon_with_rc4_128_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_rc4_128_md5: _enum_for_CipherSuite.tls_dh_anon_with_rc4_128_md5 = CipherSuite_tls_dh_anon_with_rc4_128_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_export_with_des40_cbc_sha
@@ -674,7 +674,7 @@ const tls_dh_anon_with_rc4_128_md5 = CipherSuite_tls_dh_anon_with_rc4_128_md5; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_export_with_des40_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_export_with_des40_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_export_with_des40_cbc_sha
@@ -682,7 +682,7 @@ const CipherSuite_tls_dh_anon_export_with_des40_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dh_anon_export_with_des40_cbc_sha = CipherSuite_tls_dh_anon_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_export_with_des40_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_export_with_des40_cbc_sha = CipherSuite_tls_dh_anon_export_with_des40_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_des_cbc_sha
@@ -690,7 +690,7 @@ const tls_dh_anon_export_with_des40_cbc_sha = CipherSuite_tls_dh_anon_export_wit
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_des_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_des_cbc_sha
@@ -698,7 +698,7 @@ const CipherSuite_tls_dh_anon_with_des_cbc_sha = _enum_for_CipherSuite.tls_dh_an
  * @type {number}
  */
 export
-const tls_dh_anon_with_des_cbc_sha = CipherSuite_tls_dh_anon_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_des_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_des_cbc_sha = CipherSuite_tls_dh_anon_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_3des_ede_cbc_sha
@@ -706,7 +706,7 @@ const tls_dh_anon_with_des_cbc_sha = CipherSuite_tls_dh_anon_with_des_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_3des_ede_cbc_sha
@@ -714,7 +714,7 @@ const CipherSuite_tls_dh_anon_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_dh_anon_with_3des_ede_cbc_sha = CipherSuite_tls_dh_anon_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_3des_ede_cbc_sha = CipherSuite_tls_dh_anon_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_des_cbc_sha
@@ -722,7 +722,7 @@ const tls_dh_anon_with_3des_ede_cbc_sha = CipherSuite_tls_dh_anon_with_3des_ede_
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_des_cbc_sha = _enum_for_CipherSuite.tls_krb5_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_des_cbc_sha: _enum_for_CipherSuite.tls_krb5_with_des_cbc_sha = _enum_for_CipherSuite.tls_krb5_with_des_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_des_cbc_sha
@@ -730,7 +730,7 @@ const CipherSuite_tls_krb5_with_des_cbc_sha = _enum_for_CipherSuite.tls_krb5_wit
  * @type {number}
  */
 export
-const tls_krb5_with_des_cbc_sha = CipherSuite_tls_krb5_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_des_cbc_sha: _enum_for_CipherSuite.tls_krb5_with_des_cbc_sha = CipherSuite_tls_krb5_with_des_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_3des_ede_cbc_sha
@@ -738,7 +738,7 @@ const tls_krb5_with_des_cbc_sha = CipherSuite_tls_krb5_with_des_cbc_sha; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_3des_ede_cbc_sha
@@ -746,7 +746,7 @@ const CipherSuite_tls_krb5_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_krb
  * @type {number}
  */
 export
-const tls_krb5_with_3des_ede_cbc_sha = CipherSuite_tls_krb5_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_sha = CipherSuite_tls_krb5_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_rc4_128_sha
@@ -754,7 +754,7 @@ const tls_krb5_with_3des_ede_cbc_sha = CipherSuite_tls_krb5_with_3des_ede_cbc_sh
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_rc4_128_sha = _enum_for_CipherSuite.tls_krb5_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_rc4_128_sha: _enum_for_CipherSuite.tls_krb5_with_rc4_128_sha = _enum_for_CipherSuite.tls_krb5_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_rc4_128_sha
@@ -762,7 +762,7 @@ const CipherSuite_tls_krb5_with_rc4_128_sha = _enum_for_CipherSuite.tls_krb5_wit
  * @type {number}
  */
 export
-const tls_krb5_with_rc4_128_sha = CipherSuite_tls_krb5_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_rc4_128_sha: _enum_for_CipherSuite.tls_krb5_with_rc4_128_sha = CipherSuite_tls_krb5_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_idea_cbc_sha
@@ -770,7 +770,7 @@ const tls_krb5_with_rc4_128_sha = CipherSuite_tls_krb5_with_rc4_128_sha; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_idea_cbc_sha = _enum_for_CipherSuite.tls_krb5_with_idea_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_idea_cbc_sha: _enum_for_CipherSuite.tls_krb5_with_idea_cbc_sha = _enum_for_CipherSuite.tls_krb5_with_idea_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_idea_cbc_sha
@@ -778,7 +778,7 @@ const CipherSuite_tls_krb5_with_idea_cbc_sha = _enum_for_CipherSuite.tls_krb5_wi
  * @type {number}
  */
 export
-const tls_krb5_with_idea_cbc_sha = CipherSuite_tls_krb5_with_idea_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_idea_cbc_sha: _enum_for_CipherSuite.tls_krb5_with_idea_cbc_sha = CipherSuite_tls_krb5_with_idea_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_des_cbc_md5
@@ -786,7 +786,7 @@ const tls_krb5_with_idea_cbc_sha = CipherSuite_tls_krb5_with_idea_cbc_sha; /* SH
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_des_cbc_md5 = _enum_for_CipherSuite.tls_krb5_with_des_cbc_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_des_cbc_md5: _enum_for_CipherSuite.tls_krb5_with_des_cbc_md5 = _enum_for_CipherSuite.tls_krb5_with_des_cbc_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_des_cbc_md5
@@ -794,7 +794,7 @@ const CipherSuite_tls_krb5_with_des_cbc_md5 = _enum_for_CipherSuite.tls_krb5_wit
  * @type {number}
  */
 export
-const tls_krb5_with_des_cbc_md5 = CipherSuite_tls_krb5_with_des_cbc_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_des_cbc_md5: _enum_for_CipherSuite.tls_krb5_with_des_cbc_md5 = CipherSuite_tls_krb5_with_des_cbc_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_3des_ede_cbc_md5
@@ -802,7 +802,7 @@ const tls_krb5_with_des_cbc_md5 = CipherSuite_tls_krb5_with_des_cbc_md5; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_3des_ede_cbc_md5 = _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_3des_ede_cbc_md5: _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_md5 = _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_3des_ede_cbc_md5
@@ -810,7 +810,7 @@ const CipherSuite_tls_krb5_with_3des_ede_cbc_md5 = _enum_for_CipherSuite.tls_krb
  * @type {number}
  */
 export
-const tls_krb5_with_3des_ede_cbc_md5 = CipherSuite_tls_krb5_with_3des_ede_cbc_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_3des_ede_cbc_md5: _enum_for_CipherSuite.tls_krb5_with_3des_ede_cbc_md5 = CipherSuite_tls_krb5_with_3des_ede_cbc_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_rc4_128_md5
@@ -818,7 +818,7 @@ const tls_krb5_with_3des_ede_cbc_md5 = CipherSuite_tls_krb5_with_3des_ede_cbc_md
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_rc4_128_md5 = _enum_for_CipherSuite.tls_krb5_with_rc4_128_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_rc4_128_md5: _enum_for_CipherSuite.tls_krb5_with_rc4_128_md5 = _enum_for_CipherSuite.tls_krb5_with_rc4_128_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_rc4_128_md5
@@ -826,7 +826,7 @@ const CipherSuite_tls_krb5_with_rc4_128_md5 = _enum_for_CipherSuite.tls_krb5_wit
  * @type {number}
  */
 export
-const tls_krb5_with_rc4_128_md5 = CipherSuite_tls_krb5_with_rc4_128_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_rc4_128_md5: _enum_for_CipherSuite.tls_krb5_with_rc4_128_md5 = CipherSuite_tls_krb5_with_rc4_128_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_with_idea_cbc_md5
@@ -834,7 +834,7 @@ const tls_krb5_with_rc4_128_md5 = CipherSuite_tls_krb5_with_rc4_128_md5; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_with_idea_cbc_md5 = _enum_for_CipherSuite.tls_krb5_with_idea_cbc_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_with_idea_cbc_md5: _enum_for_CipherSuite.tls_krb5_with_idea_cbc_md5 = _enum_for_CipherSuite.tls_krb5_with_idea_cbc_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_with_idea_cbc_md5
@@ -842,7 +842,7 @@ const CipherSuite_tls_krb5_with_idea_cbc_md5 = _enum_for_CipherSuite.tls_krb5_wi
  * @type {number}
  */
 export
-const tls_krb5_with_idea_cbc_md5 = CipherSuite_tls_krb5_with_idea_cbc_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_with_idea_cbc_md5: _enum_for_CipherSuite.tls_krb5_with_idea_cbc_md5 = CipherSuite_tls_krb5_with_idea_cbc_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_export_with_des_cbc_40_sha
@@ -850,7 +850,7 @@ const tls_krb5_with_idea_cbc_md5 = CipherSuite_tls_krb5_with_idea_cbc_md5; /* SH
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_export_with_des_cbc_40_sha = _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_export_with_des_cbc_40_sha: _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_sha = _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_export_with_des_cbc_40_sha
@@ -858,7 +858,7 @@ const CipherSuite_tls_krb5_export_with_des_cbc_40_sha = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_krb5_export_with_des_cbc_40_sha = CipherSuite_tls_krb5_export_with_des_cbc_40_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_export_with_des_cbc_40_sha: _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_sha = CipherSuite_tls_krb5_export_with_des_cbc_40_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_export_with_rc2_cbc_40_sha
@@ -866,7 +866,7 @@ const tls_krb5_export_with_des_cbc_40_sha = CipherSuite_tls_krb5_export_with_des
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_export_with_rc2_cbc_40_sha = _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_export_with_rc2_cbc_40_sha: _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_sha = _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_export_with_rc2_cbc_40_sha
@@ -874,7 +874,7 @@ const CipherSuite_tls_krb5_export_with_rc2_cbc_40_sha = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_krb5_export_with_rc2_cbc_40_sha = CipherSuite_tls_krb5_export_with_rc2_cbc_40_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_export_with_rc2_cbc_40_sha: _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_sha = CipherSuite_tls_krb5_export_with_rc2_cbc_40_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_export_with_rc4_40_sha
@@ -882,7 +882,7 @@ const tls_krb5_export_with_rc2_cbc_40_sha = CipherSuite_tls_krb5_export_with_rc2
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_export_with_rc4_40_sha = _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_export_with_rc4_40_sha: _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_sha = _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_export_with_rc4_40_sha
@@ -890,7 +890,7 @@ const CipherSuite_tls_krb5_export_with_rc4_40_sha = _enum_for_CipherSuite.tls_kr
  * @type {number}
  */
 export
-const tls_krb5_export_with_rc4_40_sha = CipherSuite_tls_krb5_export_with_rc4_40_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_export_with_rc4_40_sha: _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_sha = CipherSuite_tls_krb5_export_with_rc4_40_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_export_with_des_cbc_40_md5
@@ -898,7 +898,7 @@ const tls_krb5_export_with_rc4_40_sha = CipherSuite_tls_krb5_export_with_rc4_40_
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_export_with_des_cbc_40_md5 = _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_export_with_des_cbc_40_md5: _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_md5 = _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_export_with_des_cbc_40_md5
@@ -906,7 +906,7 @@ const CipherSuite_tls_krb5_export_with_des_cbc_40_md5 = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_krb5_export_with_des_cbc_40_md5 = CipherSuite_tls_krb5_export_with_des_cbc_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_export_with_des_cbc_40_md5: _enum_for_CipherSuite.tls_krb5_export_with_des_cbc_40_md5 = CipherSuite_tls_krb5_export_with_des_cbc_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_export_with_rc2_cbc_40_md5
@@ -914,7 +914,7 @@ const tls_krb5_export_with_des_cbc_40_md5 = CipherSuite_tls_krb5_export_with_des
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_export_with_rc2_cbc_40_md5 = _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_export_with_rc2_cbc_40_md5: _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_md5 = _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_export_with_rc2_cbc_40_md5
@@ -922,7 +922,7 @@ const CipherSuite_tls_krb5_export_with_rc2_cbc_40_md5 = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_krb5_export_with_rc2_cbc_40_md5 = CipherSuite_tls_krb5_export_with_rc2_cbc_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_export_with_rc2_cbc_40_md5: _enum_for_CipherSuite.tls_krb5_export_with_rc2_cbc_40_md5 = CipherSuite_tls_krb5_export_with_rc2_cbc_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_krb5_export_with_rc4_40_md5
@@ -930,7 +930,7 @@ const tls_krb5_export_with_rc2_cbc_40_md5 = CipherSuite_tls_krb5_export_with_rc2
  * @type {number}
  */
 export
-const CipherSuite_tls_krb5_export_with_rc4_40_md5 = _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_krb5_export_with_rc4_40_md5: _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_md5 = _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_md5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_krb5_export_with_rc4_40_md5
@@ -938,7 +938,7 @@ const CipherSuite_tls_krb5_export_with_rc4_40_md5 = _enum_for_CipherSuite.tls_kr
  * @type {number}
  */
 export
-const tls_krb5_export_with_rc4_40_md5 = CipherSuite_tls_krb5_export_with_rc4_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_krb5_export_with_rc4_40_md5: _enum_for_CipherSuite.tls_krb5_export_with_rc4_40_md5 = CipherSuite_tls_krb5_export_with_rc4_40_md5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_psk_with_null_sha
@@ -946,7 +946,7 @@ const tls_krb5_export_with_rc4_40_md5 = CipherSuite_tls_krb5_export_with_rc4_40_
  * @type {number}
  */
 export
-const CipherSuite_tls_psk_with_null_sha = _enum_for_CipherSuite.tls_psk_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_psk_with_null_sha: _enum_for_CipherSuite.tls_psk_with_null_sha = _enum_for_CipherSuite.tls_psk_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_psk_with_null_sha
@@ -954,7 +954,7 @@ const CipherSuite_tls_psk_with_null_sha = _enum_for_CipherSuite.tls_psk_with_nul
  * @type {number}
  */
 export
-const tls_psk_with_null_sha = CipherSuite_tls_psk_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_psk_with_null_sha: _enum_for_CipherSuite.tls_psk_with_null_sha = CipherSuite_tls_psk_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_psk_with_null_sha
@@ -962,7 +962,7 @@ const tls_psk_with_null_sha = CipherSuite_tls_psk_with_null_sha; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_psk_with_null_sha = _enum_for_CipherSuite.tls_dhe_psk_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_psk_with_null_sha: _enum_for_CipherSuite.tls_dhe_psk_with_null_sha = _enum_for_CipherSuite.tls_dhe_psk_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_psk_with_null_sha
@@ -970,7 +970,7 @@ const CipherSuite_tls_dhe_psk_with_null_sha = _enum_for_CipherSuite.tls_dhe_psk_
  * @type {number}
  */
 export
-const tls_dhe_psk_with_null_sha = CipherSuite_tls_dhe_psk_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_psk_with_null_sha: _enum_for_CipherSuite.tls_dhe_psk_with_null_sha = CipherSuite_tls_dhe_psk_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_psk_with_null_sha
@@ -978,7 +978,7 @@ const tls_dhe_psk_with_null_sha = CipherSuite_tls_dhe_psk_with_null_sha; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_psk_with_null_sha = _enum_for_CipherSuite.tls_rsa_psk_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_psk_with_null_sha: _enum_for_CipherSuite.tls_rsa_psk_with_null_sha = _enum_for_CipherSuite.tls_rsa_psk_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_psk_with_null_sha
@@ -986,7 +986,7 @@ const CipherSuite_tls_rsa_psk_with_null_sha = _enum_for_CipherSuite.tls_rsa_psk_
  * @type {number}
  */
 export
-const tls_rsa_psk_with_null_sha = CipherSuite_tls_rsa_psk_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_psk_with_null_sha: _enum_for_CipherSuite.tls_rsa_psk_with_null_sha = CipherSuite_tls_rsa_psk_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_aes_128_cbc_sha
@@ -994,7 +994,7 @@ const tls_rsa_psk_with_null_sha = CipherSuite_tls_rsa_psk_with_null_sha; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_aes_128_cbc_sha
@@ -1002,7 +1002,7 @@ const CipherSuite_tls_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_w
  * @type {number}
  */
 export
-const tls_rsa_with_aes_128_cbc_sha = CipherSuite_tls_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_aes_128_cbc_sha = CipherSuite_tls_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_aes_128_cbc_sha
@@ -1010,7 +1010,7 @@ const tls_rsa_with_aes_128_cbc_sha = CipherSuite_tls_rsa_with_aes_128_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_aes_128_cbc_sha
@@ -1018,7 +1018,7 @@ const CipherSuite_tls_dh_dss_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dh
  * @type {number}
  */
 export
-const tls_dh_dss_with_aes_128_cbc_sha = CipherSuite_tls_dh_dss_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_aes_128_cbc_sha = CipherSuite_tls_dh_dss_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_aes_128_cbc_sha
@@ -1026,7 +1026,7 @@ const tls_dh_dss_with_aes_128_cbc_sha = CipherSuite_tls_dh_dss_with_aes_128_cbc_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_aes_128_cbc_sha
@@ -1034,7 +1034,7 @@ const CipherSuite_tls_dh_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dh
  * @type {number}
  */
 export
-const tls_dh_rsa_with_aes_128_cbc_sha = CipherSuite_tls_dh_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_aes_128_cbc_sha = CipherSuite_tls_dh_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_aes_128_cbc_sha
@@ -1042,7 +1042,7 @@ const tls_dh_rsa_with_aes_128_cbc_sha = CipherSuite_tls_dh_rsa_with_aes_128_cbc_
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_aes_128_cbc_sha
@@ -1050,7 +1050,7 @@ const CipherSuite_tls_dhe_dss_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dhe_dss_with_aes_128_cbc_sha = CipherSuite_tls_dhe_dss_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_aes_128_cbc_sha = CipherSuite_tls_dhe_dss_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_aes_128_cbc_sha
@@ -1058,7 +1058,7 @@ const tls_dhe_dss_with_aes_128_cbc_sha = CipherSuite_tls_dhe_dss_with_aes_128_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_aes_128_cbc_sha
@@ -1066,7 +1066,7 @@ const CipherSuite_tls_dhe_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_aes_128_cbc_sha = CipherSuite_tls_dhe_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_aes_128_cbc_sha = CipherSuite_tls_dhe_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_aes_128_cnc_sha
@@ -1074,7 +1074,7 @@ const tls_dhe_rsa_with_aes_128_cbc_sha = CipherSuite_tls_dhe_rsa_with_aes_128_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_aes_128_cnc_sha = _enum_for_CipherSuite.tls_dh_anon_with_aes_128_cnc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_aes_128_cnc_sha: _enum_for_CipherSuite.tls_dh_anon_with_aes_128_cnc_sha = _enum_for_CipherSuite.tls_dh_anon_with_aes_128_cnc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_aes_128_cnc_sha
@@ -1082,7 +1082,7 @@ const CipherSuite_tls_dh_anon_with_aes_128_cnc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dh_anon_with_aes_128_cnc_sha = CipherSuite_tls_dh_anon_with_aes_128_cnc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_aes_128_cnc_sha: _enum_for_CipherSuite.tls_dh_anon_with_aes_128_cnc_sha = CipherSuite_tls_dh_anon_with_aes_128_cnc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_aes_256_cbc_sha
@@ -1090,7 +1090,7 @@ const tls_dh_anon_with_aes_128_cnc_sha = CipherSuite_tls_dh_anon_with_aes_128_cn
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_aes_256_cbc_sha
@@ -1098,7 +1098,7 @@ const CipherSuite_tls_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_w
  * @type {number}
  */
 export
-const tls_rsa_with_aes_256_cbc_sha = CipherSuite_tls_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_aes_256_cbc_sha = CipherSuite_tls_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_aes_256_cbc_sha
@@ -1106,7 +1106,7 @@ const tls_rsa_with_aes_256_cbc_sha = CipherSuite_tls_rsa_with_aes_256_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_aes_256_cbc_sha
@@ -1114,7 +1114,7 @@ const CipherSuite_tls_dh_dss_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh
  * @type {number}
  */
 export
-const tls_dh_dss_with_aes_256_cbc_sha = CipherSuite_tls_dh_dss_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_aes_256_cbc_sha = CipherSuite_tls_dh_dss_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_aes_256_cbc_sha
@@ -1122,7 +1122,7 @@ const tls_dh_dss_with_aes_256_cbc_sha = CipherSuite_tls_dh_dss_with_aes_256_cbc_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_aes_256_cbc_sha
@@ -1130,7 +1130,7 @@ const CipherSuite_tls_dh_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh
  * @type {number}
  */
 export
-const tls_dh_rsa_with_aes_256_cbc_sha = CipherSuite_tls_dh_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_aes_256_cbc_sha = CipherSuite_tls_dh_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_aes_256_cbc_sha
@@ -1138,7 +1138,7 @@ const tls_dh_rsa_with_aes_256_cbc_sha = CipherSuite_tls_dh_rsa_with_aes_256_cbc_
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_aes_256_cbc_sha
@@ -1146,7 +1146,7 @@ const CipherSuite_tls_dhe_dss_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dhe_dss_with_aes_256_cbc_sha = CipherSuite_tls_dhe_dss_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_aes_256_cbc_sha = CipherSuite_tls_dhe_dss_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_aes_256_cbc_sha
@@ -1154,7 +1154,7 @@ const tls_dhe_dss_with_aes_256_cbc_sha = CipherSuite_tls_dhe_dss_with_aes_256_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_aes_256_cbc_sha
@@ -1162,7 +1162,7 @@ const CipherSuite_tls_dhe_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_aes_256_cbc_sha = CipherSuite_tls_dhe_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_aes_256_cbc_sha = CipherSuite_tls_dhe_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_aes_256_cbc_sha
@@ -1170,7 +1170,7 @@ const tls_dhe_rsa_with_aes_256_cbc_sha = CipherSuite_tls_dhe_rsa_with_aes_256_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_aes_256_cbc_sha
@@ -1178,7 +1178,7 @@ const CipherSuite_tls_dh_anon_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dh_anon_with_aes_256_cbc_sha = CipherSuite_tls_dh_anon_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_aes_256_cbc_sha = CipherSuite_tls_dh_anon_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_camellia_128_cbc_sha
@@ -1186,7 +1186,7 @@ const tls_dh_anon_with_aes_256_cbc_sha = CipherSuite_tls_dh_anon_with_aes_256_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_camellia_128_cbc_sha
@@ -1194,7 +1194,7 @@ const CipherSuite_tls_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_rsa_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_rsa_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_camellia_128_cbc_sha
@@ -1202,7 +1202,7 @@ const tls_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_rsa_with_camellia_128_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_camellia_128_cbc_sha
@@ -1210,7 +1210,7 @@ const CipherSuite_tls_dh_dss_with_camellia_128_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_dh_dss_with_camellia_128_cbc_sha = CipherSuite_tls_dh_dss_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_camellia_128_cbc_sha = CipherSuite_tls_dh_dss_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_camellia_128_cbc_sha
@@ -1218,7 +1218,7 @@ const tls_dh_dss_with_camellia_128_cbc_sha = CipherSuite_tls_dh_dss_with_camelli
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_camellia_128_cbc_sha
@@ -1226,7 +1226,7 @@ const CipherSuite_tls_dh_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_dh_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_dh_rsa_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_dh_rsa_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_camellia_128_cbc_sha
@@ -1234,7 +1234,7 @@ const tls_dh_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_dh_rsa_with_camelli
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_camellia_128_cbc_sha
@@ -1242,7 +1242,7 @@ const CipherSuite_tls_dhe_dss_with_camellia_128_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dhe_dss_with_camellia_128_cbc_sha = CipherSuite_tls_dhe_dss_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_camellia_128_cbc_sha = CipherSuite_tls_dhe_dss_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_camellia_128_cbc_sha
@@ -1250,7 +1250,7 @@ const tls_dhe_dss_with_camellia_128_cbc_sha = CipherSuite_tls_dhe_dss_with_camel
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_camellia_128_cbc_sha
@@ -1258,7 +1258,7 @@ const CipherSuite_tls_dhe_rsa_with_camellia_128_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_dhe_rsa_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_dhe_rsa_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_camellia_128_cbc_sha
@@ -1266,7 +1266,7 @@ const tls_dhe_rsa_with_camellia_128_cbc_sha = CipherSuite_tls_dhe_rsa_with_camel
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_camellia_128_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_camellia_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_camellia_128_cbc_sha
@@ -1274,7 +1274,7 @@ const CipherSuite_tls_dh_anon_with_camellia_128_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dh_anon_with_camellia_128_cbc_sha = CipherSuite_tls_dh_anon_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_camellia_128_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_camellia_128_cbc_sha = CipherSuite_tls_dh_anon_with_camellia_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_camellia_256_cbc_sha
@@ -1282,7 +1282,7 @@ const tls_dh_anon_with_camellia_128_cbc_sha = CipherSuite_tls_dh_anon_with_camel
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_camellia_256_cbc_sha
@@ -1290,7 +1290,7 @@ const CipherSuite_tls_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_rsa_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_rsa_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_camellia_256_cbc_sha
@@ -1298,7 +1298,7 @@ const tls_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_rsa_with_camellia_256_
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_camellia_256_cbc_sha
@@ -1306,7 +1306,7 @@ const CipherSuite_tls_dh_dss_with_camellia_256_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_dh_dss_with_camellia_256_cbc_sha = CipherSuite_tls_dh_dss_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_camellia_256_cbc_sha = CipherSuite_tls_dh_dss_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_camellia_256_cbc_sha
@@ -1314,7 +1314,7 @@ const tls_dh_dss_with_camellia_256_cbc_sha = CipherSuite_tls_dh_dss_with_camelli
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_camellia_256_cbc_sha
@@ -1322,7 +1322,7 @@ const CipherSuite_tls_dh_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_dh_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_dh_rsa_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_dh_rsa_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_camellia_256_cbc_sha
@@ -1330,7 +1330,7 @@ const tls_dh_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_dh_rsa_with_camelli
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_camellia_256_cbc_sha
@@ -1338,7 +1338,7 @@ const CipherSuite_tls_dhe_dss_with_camellia_256_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dhe_dss_with_camellia_256_cbc_sha = CipherSuite_tls_dhe_dss_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_camellia_256_cbc_sha = CipherSuite_tls_dhe_dss_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_camellia_256_cbc_sha
@@ -1346,7 +1346,7 @@ const tls_dhe_dss_with_camellia_256_cbc_sha = CipherSuite_tls_dhe_dss_with_camel
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_camellia_256_cbc_sha
@@ -1354,7 +1354,7 @@ const CipherSuite_tls_dhe_rsa_with_camellia_256_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_dhe_rsa_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_dhe_rsa_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_camellia_256_cbc_sha
@@ -1362,7 +1362,7 @@ const tls_dhe_rsa_with_camellia_256_cbc_sha = CipherSuite_tls_dhe_rsa_with_camel
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_camellia_256_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_camellia_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_camellia_256_cbc_sha
@@ -1370,7 +1370,7 @@ const CipherSuite_tls_dh_anon_with_camellia_256_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_dh_anon_with_camellia_256_cbc_sha = CipherSuite_tls_dh_anon_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_camellia_256_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_camellia_256_cbc_sha = CipherSuite_tls_dh_anon_with_camellia_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_psk_with_rc4_128_sha
@@ -1378,7 +1378,7 @@ const tls_dh_anon_with_camellia_256_cbc_sha = CipherSuite_tls_dh_anon_with_camel
  * @type {number}
  */
 export
-const CipherSuite_tls_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_psk_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_psk_with_rc4_128_sha: _enum_for_CipherSuite.tls_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_psk_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_psk_with_rc4_128_sha
@@ -1386,7 +1386,7 @@ const CipherSuite_tls_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_psk_with_
  * @type {number}
  */
 export
-const tls_psk_with_rc4_128_sha = CipherSuite_tls_psk_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_psk_with_rc4_128_sha: _enum_for_CipherSuite.tls_psk_with_rc4_128_sha = CipherSuite_tls_psk_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_psk_with_3des_ede_cbc_sha
@@ -1394,7 +1394,7 @@ const tls_psk_with_rc4_128_sha = CipherSuite_tls_psk_with_rc4_128_sha; /* SHORT_
  * @type {number}
  */
 export
-const CipherSuite_tls_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_psk_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_psk_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_psk_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_psk_with_3des_ede_cbc_sha
@@ -1402,7 +1402,7 @@ const CipherSuite_tls_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_psk_
  * @type {number}
  */
 export
-const tls_psk_with_3des_ede_cbc_sha = CipherSuite_tls_psk_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_psk_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_psk_with_3des_ede_cbc_sha = CipherSuite_tls_psk_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_psk_with_aes_128_cbc_sha
@@ -1410,7 +1410,7 @@ const tls_psk_with_3des_ede_cbc_sha = CipherSuite_tls_psk_with_3des_ede_cbc_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_psk_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_psk_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_psk_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_psk_with_aes_128_cbc_sha
@@ -1418,7 +1418,7 @@ const CipherSuite_tls_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_psk_w
  * @type {number}
  */
 export
-const tls_psk_with_aes_128_cbc_sha = CipherSuite_tls_psk_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_psk_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_psk_with_aes_128_cbc_sha = CipherSuite_tls_psk_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_psk_with_aes_256_cbc_sha
@@ -1426,7 +1426,7 @@ const tls_psk_with_aes_128_cbc_sha = CipherSuite_tls_psk_with_aes_128_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_psk_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_psk_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_psk_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_psk_with_aes_256_cbc_sha
@@ -1434,7 +1434,7 @@ const CipherSuite_tls_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_psk_w
  * @type {number}
  */
 export
-const tls_psk_with_aes_256_cbc_sha = CipherSuite_tls_psk_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_psk_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_psk_with_aes_256_cbc_sha = CipherSuite_tls_psk_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_psk_with_rc4_128_sha
@@ -1442,7 +1442,7 @@ const tls_psk_with_aes_256_cbc_sha = CipherSuite_tls_psk_with_aes_256_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_dhe_psk_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_psk_with_rc4_128_sha: _enum_for_CipherSuite.tls_dhe_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_dhe_psk_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_psk_with_rc4_128_sha
@@ -1450,7 +1450,7 @@ const CipherSuite_tls_dhe_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_dhe_p
  * @type {number}
  */
 export
-const tls_dhe_psk_with_rc4_128_sha = CipherSuite_tls_dhe_psk_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_psk_with_rc4_128_sha: _enum_for_CipherSuite.tls_dhe_psk_with_rc4_128_sha = CipherSuite_tls_dhe_psk_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_psk_with_3des_ede_cbc_sha
@@ -1458,7 +1458,7 @@ const tls_dhe_psk_with_rc4_128_sha = CipherSuite_tls_dhe_psk_with_rc4_128_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dhe_psk_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_psk_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dhe_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_dhe_psk_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_psk_with_3des_ede_cbc_sha
@@ -1466,7 +1466,7 @@ const CipherSuite_tls_dhe_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_dhe_psk_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_psk_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_psk_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_dhe_psk_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_psk_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_psk_with_aes_128_cbc_sha
@@ -1474,7 +1474,7 @@ const tls_dhe_psk_with_3des_ede_cbc_sha = CipherSuite_tls_dhe_psk_with_3des_ede_
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_psk_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_psk_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_dhe_psk_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_psk_with_aes_128_cbc_sha
@@ -1482,7 +1482,7 @@ const CipherSuite_tls_dhe_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dhe_psk_with_aes_128_cbc_sha = CipherSuite_tls_dhe_psk_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_psk_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_dhe_psk_with_aes_128_cbc_sha = CipherSuite_tls_dhe_psk_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_psk_with_aes_256_cbc_sha
@@ -1490,7 +1490,7 @@ const tls_dhe_psk_with_aes_128_cbc_sha = CipherSuite_tls_dhe_psk_with_aes_128_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_psk_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_psk_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_dhe_psk_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_psk_with_aes_256_cbc_sha
@@ -1498,7 +1498,7 @@ const CipherSuite_tls_dhe_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_d
  * @type {number}
  */
 export
-const tls_dhe_psk_with_aes_256_cbc_sha = CipherSuite_tls_dhe_psk_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_psk_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_dhe_psk_with_aes_256_cbc_sha = CipherSuite_tls_dhe_psk_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_psk_with_rc4_128_sha
@@ -1506,7 +1506,7 @@ const tls_dhe_psk_with_aes_256_cbc_sha = CipherSuite_tls_dhe_psk_with_aes_256_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_rsa_psk_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_psk_with_rc4_128_sha: _enum_for_CipherSuite.tls_rsa_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_rsa_psk_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_psk_with_rc4_128_sha
@@ -1514,7 +1514,7 @@ const CipherSuite_tls_rsa_psk_with_rc4_128_sha = _enum_for_CipherSuite.tls_rsa_p
  * @type {number}
  */
 export
-const tls_rsa_psk_with_rc4_128_sha = CipherSuite_tls_rsa_psk_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_psk_with_rc4_128_sha: _enum_for_CipherSuite.tls_rsa_psk_with_rc4_128_sha = CipherSuite_tls_rsa_psk_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_psk_with_3des_ede_cbc_sha
@@ -1522,7 +1522,7 @@ const tls_rsa_psk_with_rc4_128_sha = CipherSuite_tls_rsa_psk_with_rc4_128_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_rsa_psk_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_psk_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_rsa_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_rsa_psk_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_psk_with_3des_ede_cbc_sha
@@ -1530,7 +1530,7 @@ const CipherSuite_tls_rsa_psk_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_rsa_psk_with_3des_ede_cbc_sha = CipherSuite_tls_rsa_psk_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_psk_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_rsa_psk_with_3des_ede_cbc_sha = CipherSuite_tls_rsa_psk_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_psk_with_aes_128_cbc_sha
@@ -1538,7 +1538,7 @@ const tls_rsa_psk_with_3des_ede_cbc_sha = CipherSuite_tls_rsa_psk_with_3des_ede_
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_psk_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_psk_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_rsa_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_rsa_psk_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_psk_with_aes_128_cbc_sha
@@ -1546,7 +1546,7 @@ const CipherSuite_tls_rsa_psk_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_r
  * @type {number}
  */
 export
-const tls_rsa_psk_with_aes_128_cbc_sha = CipherSuite_tls_rsa_psk_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_psk_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_rsa_psk_with_aes_128_cbc_sha = CipherSuite_tls_rsa_psk_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_psk_with_aes_256_cbc_sha
@@ -1554,7 +1554,7 @@ const tls_rsa_psk_with_aes_128_cbc_sha = CipherSuite_tls_rsa_psk_with_aes_128_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_psk_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_psk_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_rsa_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_rsa_psk_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_psk_with_aes_256_cbc_sha
@@ -1562,7 +1562,7 @@ const CipherSuite_tls_rsa_psk_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_r
  * @type {number}
  */
 export
-const tls_rsa_psk_with_aes_256_cbc_sha = CipherSuite_tls_rsa_psk_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_psk_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_rsa_psk_with_aes_256_cbc_sha = CipherSuite_tls_rsa_psk_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_rsa_with_seed_cbc_sha
@@ -1570,7 +1570,7 @@ const tls_rsa_psk_with_aes_256_cbc_sha = CipherSuite_tls_rsa_psk_with_aes_256_cb
  * @type {number}
  */
 export
-const CipherSuite_tls_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_rsa_with_seed_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_rsa_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_rsa_with_seed_cbc_sha
@@ -1578,7 +1578,7 @@ const CipherSuite_tls_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_rsa_with
  * @type {number}
  */
 export
-const tls_rsa_with_seed_cbc_sha = CipherSuite_tls_rsa_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_rsa_with_seed_cbc_sha: _enum_for_CipherSuite.tls_rsa_with_seed_cbc_sha = CipherSuite_tls_rsa_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_dss_with_seed_cbc_sha
@@ -1586,7 +1586,7 @@ const tls_rsa_with_seed_cbc_sha = CipherSuite_tls_rsa_with_seed_cbc_sha; /* SHOR
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_dss_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_dss_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_dss_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_dss_with_seed_cbc_sha
@@ -1594,7 +1594,7 @@ const CipherSuite_tls_dh_dss_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_ds
  * @type {number}
  */
 export
-const tls_dh_dss_with_seed_cbc_sha = CipherSuite_tls_dh_dss_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_dss_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dh_dss_with_seed_cbc_sha = CipherSuite_tls_dh_dss_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_rsa_with_seed_cbc_sha
@@ -1602,7 +1602,7 @@ const tls_dh_dss_with_seed_cbc_sha = CipherSuite_tls_dh_dss_with_seed_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_rsa_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_rsa_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_rsa_with_seed_cbc_sha
@@ -1610,7 +1610,7 @@ const CipherSuite_tls_dh_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_rs
  * @type {number}
  */
 export
-const tls_dh_rsa_with_seed_cbc_sha = CipherSuite_tls_dh_rsa_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_rsa_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dh_rsa_with_seed_cbc_sha = CipherSuite_tls_dh_rsa_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_dss_with_seed_cbc_sha
@@ -1618,7 +1618,7 @@ const tls_dh_rsa_with_seed_cbc_sha = CipherSuite_tls_dh_rsa_with_seed_cbc_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_dss_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_dss_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dhe_dss_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_dss_with_seed_cbc_sha
@@ -1626,7 +1626,7 @@ const CipherSuite_tls_dhe_dss_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dhe_
  * @type {number}
  */
 export
-const tls_dhe_dss_with_seed_cbc_sha = CipherSuite_tls_dhe_dss_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_dss_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dhe_dss_with_seed_cbc_sha = CipherSuite_tls_dhe_dss_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dhe_rsa_with_seed_cbc_sha
@@ -1634,7 +1634,7 @@ const tls_dhe_dss_with_seed_cbc_sha = CipherSuite_tls_dhe_dss_with_seed_cbc_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_dhe_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dhe_rsa_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dhe_rsa_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dhe_rsa_with_seed_cbc_sha
@@ -1642,7 +1642,7 @@ const CipherSuite_tls_dhe_rsa_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dhe_
  * @type {number}
  */
 export
-const tls_dhe_rsa_with_seed_cbc_sha = CipherSuite_tls_dhe_rsa_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dhe_rsa_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dhe_rsa_with_seed_cbc_sha = CipherSuite_tls_dhe_rsa_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_dh_anon_with_seed_cbc_sha
@@ -1650,7 +1650,7 @@ const tls_dhe_rsa_with_seed_cbc_sha = CipherSuite_tls_dhe_rsa_with_seed_cbc_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_dh_anon_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_dh_anon_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_anon_with_seed_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_dh_anon_with_seed_cbc_sha
@@ -1658,7 +1658,7 @@ const CipherSuite_tls_dh_anon_with_seed_cbc_sha = _enum_for_CipherSuite.tls_dh_a
  * @type {number}
  */
 export
-const tls_dh_anon_with_seed_cbc_sha = CipherSuite_tls_dh_anon_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_dh_anon_with_seed_cbc_sha: _enum_for_CipherSuite.tls_dh_anon_with_seed_cbc_sha = CipherSuite_tls_dh_anon_with_seed_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_ecdsa_with_null_sha
@@ -1666,7 +1666,7 @@ const tls_dh_anon_with_seed_cbc_sha = CipherSuite_tls_dh_anon_with_seed_cbc_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_ecdsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_ecdsa_with_null_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_ecdsa_with_null_sha
@@ -1674,7 +1674,7 @@ const CipherSuite_tls_ecdh_ecdsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh_
  * @type {number}
  */
 export
-const tls_ecdh_ecdsa_with_null_sha = CipherSuite_tls_ecdh_ecdsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_ecdsa_with_null_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_null_sha = CipherSuite_tls_ecdh_ecdsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_ecdsa_with_rc4_128_sha
@@ -1682,7 +1682,7 @@ const tls_ecdh_ecdsa_with_null_sha = CipherSuite_tls_ecdh_ecdsa_with_null_sha; /
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_ecdsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_ecdsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_ecdsa_with_rc4_128_sha
@@ -1690,7 +1690,7 @@ const CipherSuite_tls_ecdh_ecdsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ec
  * @type {number}
  */
 export
-const tls_ecdh_ecdsa_with_rc4_128_sha = CipherSuite_tls_ecdh_ecdsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_ecdsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_rc4_128_sha = CipherSuite_tls_ecdh_ecdsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_ecdsa_with_3des_ede_cbc_sha
@@ -1698,7 +1698,7 @@ const tls_ecdh_ecdsa_with_rc4_128_sha = CipherSuite_tls_ecdh_ecdsa_with_rc4_128_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_ecdsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_ecdsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_ecdsa_with_3des_ede_cbc_sha
@@ -1706,7 +1706,7 @@ const CipherSuite_tls_ecdh_ecdsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_ecdh_ecdsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_ecdsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_ecdsa_with_aes_128_cbc_sha
@@ -1714,7 +1714,7 @@ const tls_ecdh_ecdsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_3de
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_ecdsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_ecdsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_ecdsa_with_aes_128_cbc_sha
@@ -1722,7 +1722,7 @@ const CipherSuite_tls_ecdh_ecdsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_ecdh_ecdsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_ecdsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_ecdsa_with_aes_256_cbc_sha
@@ -1730,7 +1730,7 @@ const tls_ecdh_ecdsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_aes_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_ecdsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_ecdsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_ecdsa_with_aes_256_cbc_sha
@@ -1738,7 +1738,7 @@ const CipherSuite_tls_ecdh_ecdsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_ecdh_ecdsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_ecdsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdh_ecdsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_ecdsa_with_null_sha
@@ -1746,7 +1746,7 @@ const tls_ecdh_ecdsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_ecdsa_with_aes_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_ecdsa_with_null_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_ecdsa_with_null_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_null_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_ecdsa_with_null_sha
@@ -1754,7 +1754,7 @@ const CipherSuite_tls_ecdhe_ecdsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh
  * @type {number}
  */
 export
-const tls_ecdhe_ecdsa_with_null_sha = CipherSuite_tls_ecdhe_ecdsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_ecdsa_with_null_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_null_sha = CipherSuite_tls_ecdhe_ecdsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_ecdsa_with_rc4_128_sha
@@ -1762,7 +1762,7 @@ const tls_ecdhe_ecdsa_with_null_sha = CipherSuite_tls_ecdhe_ecdsa_with_null_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_ecdsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_ecdsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_ecdsa_with_rc4_128_sha
@@ -1770,7 +1770,7 @@ const CipherSuite_tls_ecdhe_ecdsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_e
  * @type {number}
  */
 export
-const tls_ecdhe_ecdsa_with_rc4_128_sha = CipherSuite_tls_ecdhe_ecdsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_ecdsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_rc4_128_sha = CipherSuite_tls_ecdhe_ecdsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_ecdsa_with_3des_ede_cbc_sha
@@ -1778,7 +1778,7 @@ const tls_ecdhe_ecdsa_with_rc4_128_sha = CipherSuite_tls_ecdhe_ecdsa_with_rc4_12
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_ecdsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_ecdsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_ecdsa_with_3des_ede_cbc_sha
@@ -1786,7 +1786,7 @@ const CipherSuite_tls_ecdhe_ecdsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.
  * @type {number}
  */
 export
-const tls_ecdhe_ecdsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_ecdsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_ecdsa_with_aes_128_cbc_sha
@@ -1794,7 +1794,7 @@ const tls_ecdhe_ecdsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_3
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_ecdsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_ecdsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_ecdsa_with_aes_128_cbc_sha
@@ -1802,7 +1802,7 @@ const CipherSuite_tls_ecdhe_ecdsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_ecdhe_ecdsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_ecdsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_ecdsa_with_aes_256_cbc_sha
@@ -1810,7 +1810,7 @@ const tls_ecdhe_ecdsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_ae
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_ecdsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_ecdsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_ecdsa_with_aes_256_cbc_sha
@@ -1818,7 +1818,7 @@ const CipherSuite_tls_ecdhe_ecdsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.t
  * @type {number}
  */
 export
-const tls_ecdhe_ecdsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_ecdsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_ecdsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_rsa_with_null_sha
@@ -1826,7 +1826,7 @@ const tls_ecdhe_ecdsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdhe_ecdsa_with_ae
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_rsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_rsa_with_null_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_rsa_with_null_sha
@@ -1834,7 +1834,7 @@ const CipherSuite_tls_ecdh_rsa_with_null_sha = _enum_for_CipherSuite.tls_ecdh_rs
  * @type {number}
  */
 export
-const tls_ecdh_rsa_with_null_sha = CipherSuite_tls_ecdh_rsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_rsa_with_null_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_null_sha = CipherSuite_tls_ecdh_rsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_rsa_with_rc4_128_sha
@@ -1842,7 +1842,7 @@ const tls_ecdh_rsa_with_null_sha = CipherSuite_tls_ecdh_rsa_with_null_sha; /* SH
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_rsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_rsa_with_rc4_128_sha
@@ -1850,7 +1850,7 @@ const CipherSuite_tls_ecdh_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh
  * @type {number}
  */
 export
-const tls_ecdh_rsa_with_rc4_128_sha = CipherSuite_tls_ecdh_rsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_rsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_rc4_128_sha = CipherSuite_tls_ecdh_rsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_rsa_with_3des_ede_cbc_sha
@@ -1858,7 +1858,7 @@ const tls_ecdh_rsa_with_rc4_128_sha = CipherSuite_tls_ecdh_rsa_with_rc4_128_sha;
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_rsa_with_3des_ede_cbc_sha
@@ -1866,7 +1866,7 @@ const CipherSuite_tls_ecdh_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls
  * @type {number}
  */
 export
-const tls_ecdh_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_rsa_with_aes_128_cbc_sha
@@ -1874,7 +1874,7 @@ const tls_ecdh_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_rsa_with_3des_ed
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_rsa_with_aes_128_cbc_sha
@@ -1882,7 +1882,7 @@ const CipherSuite_tls_ecdh_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_ecdh_rsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_rsa_with_aes_256_cbc_sha
@@ -1890,7 +1890,7 @@ const tls_ecdh_rsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_rsa_with_aes_128_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_rsa_with_aes_256_cbc_sha
@@ -1898,7 +1898,7 @@ const CipherSuite_tls_ecdh_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_
  * @type {number}
  */
 export
-const tls_ecdh_rsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdh_rsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_rsa_with_null_sha
@@ -1906,7 +1906,7 @@ const tls_ecdh_rsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_rsa_with_aes_256_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_rsa_with_null_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_rsa_with_null_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_null_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_rsa_with_null_sha
@@ -1914,7 +1914,7 @@ const CipherSuite_tls_ecdhe_rsa_with_null_sha = _enum_for_CipherSuite.tls_ecdhe_
  * @type {number}
  */
 export
-const tls_ecdhe_rsa_with_null_sha = CipherSuite_tls_ecdhe_rsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_rsa_with_null_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_null_sha = CipherSuite_tls_ecdhe_rsa_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_rsa_with_rc4_128_sha
@@ -1922,7 +1922,7 @@ const tls_ecdhe_rsa_with_null_sha = CipherSuite_tls_ecdhe_rsa_with_null_sha; /* 
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_rsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_rsa_with_rc4_128_sha
@@ -1930,7 +1930,7 @@ const CipherSuite_tls_ecdhe_rsa_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecd
  * @type {number}
  */
 export
-const tls_ecdhe_rsa_with_rc4_128_sha = CipherSuite_tls_ecdhe_rsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_rsa_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_rc4_128_sha = CipherSuite_tls_ecdhe_rsa_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_rsa_with_3des_ede_cbc_sha
@@ -1938,7 +1938,7 @@ const tls_ecdhe_rsa_with_rc4_128_sha = CipherSuite_tls_ecdhe_rsa_with_rc4_128_sh
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_rsa_with_3des_ede_cbc_sha
@@ -1946,7 +1946,7 @@ const CipherSuite_tls_ecdhe_rsa_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_ecdhe_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_rsa_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_rsa_with_aes_128_cbc_sha
@@ -1954,7 +1954,7 @@ const tls_ecdhe_rsa_with_3des_ede_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_3des_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_rsa_with_aes_128_cbc_sha
@@ -1962,7 +1962,7 @@ const CipherSuite_tls_ecdhe_rsa_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls
  * @type {number}
  */
 export
-const tls_ecdhe_rsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_rsa_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdhe_rsa_with_aes_256_cbc_sha
@@ -1970,7 +1970,7 @@ const tls_ecdhe_rsa_with_aes_128_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_aes_12
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdhe_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdhe_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdhe_rsa_with_aes_256_cbc_sha
@@ -1978,7 +1978,7 @@ const CipherSuite_tls_ecdhe_rsa_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls
  * @type {number}
  */
 export
-const tls_ecdhe_rsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdhe_rsa_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdhe_rsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_anon_with_null_sha
@@ -1986,7 +1986,7 @@ const tls_ecdhe_rsa_with_aes_256_cbc_sha = CipherSuite_tls_ecdhe_rsa_with_aes_25
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_anon_with_null_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_anon_with_null_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_null_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_null_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_anon_with_null_sha
@@ -1994,7 +1994,7 @@ const CipherSuite_tls_ecdh_anon_with_null_sha = _enum_for_CipherSuite.tls_ecdh_a
  * @type {number}
  */
 export
-const tls_ecdh_anon_with_null_sha = CipherSuite_tls_ecdh_anon_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_anon_with_null_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_null_sha = CipherSuite_tls_ecdh_anon_with_null_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_anon_with_rc4_128_sha
@@ -2002,7 +2002,7 @@ const tls_ecdh_anon_with_null_sha = CipherSuite_tls_ecdh_anon_with_null_sha; /* 
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_anon_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_anon_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_rc4_128_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_anon_with_rc4_128_sha
@@ -2010,7 +2010,7 @@ const CipherSuite_tls_ecdh_anon_with_rc4_128_sha = _enum_for_CipherSuite.tls_ecd
  * @type {number}
  */
 export
-const tls_ecdh_anon_with_rc4_128_sha = CipherSuite_tls_ecdh_anon_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_anon_with_rc4_128_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_rc4_128_sha = CipherSuite_tls_ecdh_anon_with_rc4_128_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_anon_with_3des_ede_cbc_sha
@@ -2018,7 +2018,7 @@ const tls_ecdh_anon_with_rc4_128_sha = CipherSuite_tls_ecdh_anon_with_rc4_128_sh
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_anon_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_anon_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_3des_ede_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_anon_with_3des_ede_cbc_sha
@@ -2026,7 +2026,7 @@ const CipherSuite_tls_ecdh_anon_with_3des_ede_cbc_sha = _enum_for_CipherSuite.tl
  * @type {number}
  */
 export
-const tls_ecdh_anon_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_anon_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_anon_with_3des_ede_cbc_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_anon_with_3des_ede_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_anon_with_aes_128_cbc_sha
@@ -2034,7 +2034,7 @@ const tls_ecdh_anon_with_3des_ede_cbc_sha = CipherSuite_tls_ecdh_anon_with_3des_
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_anon_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_anon_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_aes_128_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_anon_with_aes_128_cbc_sha
@@ -2042,7 +2042,7 @@ const CipherSuite_tls_ecdh_anon_with_aes_128_cbc_sha = _enum_for_CipherSuite.tls
  * @type {number}
  */
 export
-const tls_ecdh_anon_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_anon_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tls_ecdh_anon_with_aes_128_cbc_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_anon_with_aes_128_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CipherSuite_tls_ecdh_anon_with_aes_256_cbc_sha
@@ -2050,7 +2050,7 @@ const tls_ecdh_anon_with_aes_128_cbc_sha = CipherSuite_tls_ecdh_anon_with_aes_12
  * @type {number}
  */
 export
-const CipherSuite_tls_ecdh_anon_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
+const CipherSuite_tls_ecdh_anon_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls_ecdh_anon_with_aes_256_cbc_sha; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tls_ecdh_anon_with_aes_256_cbc_sha
@@ -2058,9 +2058,9 @@ const CipherSuite_tls_ecdh_anon_with_aes_256_cbc_sha = _enum_for_CipherSuite.tls
  * @type {number}
  */
 export
-const tls_ecdh_anon_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_anon_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_CipherSuite = $._decodeEnumerated;
-export const _encode_CipherSuite = $._encodeEnumerated;
+const tls_ecdh_anon_with_aes_256_cbc_sha: _enum_for_CipherSuite.tls_ecdh_anon_with_aes_256_cbc_sha = CipherSuite_tls_ecdh_anon_with_aes_256_cbc_sha; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_CipherSuite: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_CipherSuite: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

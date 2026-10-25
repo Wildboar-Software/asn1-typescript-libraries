@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type CirculationTime = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_CirculationTime = $._decodeGeneralizedTime;
+export const _decode_CirculationTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_CirculationTime = $._encodeGeneralizedTime;
+export const _encode_CirculationTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

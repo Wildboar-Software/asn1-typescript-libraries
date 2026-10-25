@@ -28,12 +28,12 @@ export type TypeText = IA5String; // IA5String
 
 
 
-export const _decode_TypeText = $._decodeIA5String;
+export const _decode_TypeText: $.ASN1Decoder<string> = $._decodeIA5String;
 
 
 
 
-export const _encode_TypeText = $._encodeIA5String;
+export const _encode_TypeText: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

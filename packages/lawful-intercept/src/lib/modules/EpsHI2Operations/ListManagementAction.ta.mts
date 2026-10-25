@@ -53,7 +53,7 @@ type ListManagementAction = _enum_for_ListManagementAction | ENUMERATED;
  * @type {number}
  */
 export
-const ListManagementAction_create = _enum_for_ListManagementAction.create; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementAction_create: _enum_for_ListManagementAction.create = _enum_for_ListManagementAction.create; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary create
@@ -65,7 +65,7 @@ const ListManagementAction_create = _enum_for_ListManagementAction.create; /* LO
  * @type {number}
  */
 export
-const create = ListManagementAction_create; /* SHORT_NAMED_ENUMERATED_VALUE */
+const create: _enum_for_ListManagementAction.create = ListManagementAction_create; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementAction_modify
@@ -77,7 +77,7 @@ const create = ListManagementAction_create; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ListManagementAction_modify = _enum_for_ListManagementAction.modify; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementAction_modify: _enum_for_ListManagementAction.modify = _enum_for_ListManagementAction.modify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modify
@@ -89,7 +89,7 @@ const ListManagementAction_modify = _enum_for_ListManagementAction.modify; /* LO
  * @type {number}
  */
 export
-const modify = ListManagementAction_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modify: _enum_for_ListManagementAction.modify = ListManagementAction_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementAction_retrieve
@@ -101,7 +101,7 @@ const modify = ListManagementAction_modify; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ListManagementAction_retrieve = _enum_for_ListManagementAction.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementAction_retrieve: _enum_for_ListManagementAction.retrieve = _enum_for_ListManagementAction.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieve
@@ -113,7 +113,7 @@ const ListManagementAction_retrieve = _enum_for_ListManagementAction.retrieve; /
  * @type {number}
  */
 export
-const retrieve = ListManagementAction_retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieve: _enum_for_ListManagementAction.retrieve = ListManagementAction_retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementAction_delete_
@@ -125,7 +125,7 @@ const retrieve = ListManagementAction_retrieve; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ListManagementAction_delete_ = _enum_for_ListManagementAction.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementAction_delete_: _enum_for_ListManagementAction.delete_ = _enum_for_ListManagementAction.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delete_
@@ -137,7 +137,7 @@ const ListManagementAction_delete_ = _enum_for_ListManagementAction.delete_; /* 
  * @type {number}
  */
 export
-const delete_ = ListManagementAction_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delete_: _enum_for_ListManagementAction.delete_ = ListManagementAction_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ListManagementAction_notify
@@ -150,7 +150,7 @@ const delete_ = ListManagementAction_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ListManagementAction_notify = _enum_for_ListManagementAction.notify; /* LONG_NAMED_ENUMERATED_VALUE */
+const ListManagementAction_notify: _enum_for_ListManagementAction.notify = _enum_for_ListManagementAction.notify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notify
@@ -162,7 +162,7 @@ const ListManagementAction_notify = _enum_for_ListManagementAction.notify; /* LO
  * @type {number}
  */
 export
-const notify = ListManagementAction_notify; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notify: _enum_for_ListManagementAction.notify = ListManagementAction_notify; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ListManagementAction: $.ASN1Decoder<ListManagementAction> = $._decodeEnumerated;
 export const _encode_ListManagementAction: $.ASN1Encoder<ListManagementAction> = $._encodeEnumerated;
 

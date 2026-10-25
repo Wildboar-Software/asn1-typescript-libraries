@@ -28,12 +28,12 @@ export type UserLabel = GraphicString; // GraphicString
 
 
 
-export const _decode_UserLabel = $._decodeGraphicString;
+export const _decode_UserLabel: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_UserLabel = $._encodeGraphicString;
+export const _encode_UserLabel: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

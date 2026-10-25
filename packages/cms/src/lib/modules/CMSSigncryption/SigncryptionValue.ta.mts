@@ -20,12 +20,12 @@ export type SigncryptionValue = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_SigncryptionValue = $._decodeOctetString;
+export const _decode_SigncryptionValue: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_SigncryptionValue = $._encodeOctetString;
+export const _encode_SigncryptionValue: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

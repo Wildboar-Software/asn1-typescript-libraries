@@ -23,8 +23,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ACPNoAttachments = BOOLEAN; // BooleanType
-export const _decode_ACPNoAttachments = $._decodeBoolean;
-export const _encode_ACPNoAttachments = $._encodeBoolean;
+export const _decode_ACPNoAttachments: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_ACPNoAttachments: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

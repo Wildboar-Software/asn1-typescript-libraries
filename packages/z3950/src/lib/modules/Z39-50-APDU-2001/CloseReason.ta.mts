@@ -51,7 +51,7 @@ type CloseReason = INTEGER;
  * @type {number}
  */
 export
-const CloseReason_finished = 0 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_finished: 0 = 0 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_finished
@@ -64,7 +64,7 @@ const CloseReason_finished = 0 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const finished = CloseReason_finished; /* SHORT_NAMED_INTEGER_VALUE */
+const finished: 0 = CloseReason_finished; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_shutdown
@@ -77,7 +77,7 @@ const finished = CloseReason_finished; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CloseReason_shutdown = 1 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_shutdown: 1 = 1 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_shutdown
@@ -90,7 +90,7 @@ const CloseReason_shutdown = 1 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const shutdown = CloseReason_shutdown; /* SHORT_NAMED_INTEGER_VALUE */
+const shutdown: 1 = CloseReason_shutdown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_systemProblem
@@ -104,7 +104,7 @@ const shutdown = CloseReason_shutdown; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CloseReason_systemProblem = 2 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_systemProblem: 2 = 2 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_systemProblem
@@ -117,7 +117,7 @@ const CloseReason_systemProblem = 2 satisfies CloseReason; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const systemProblem = CloseReason_systemProblem; /* SHORT_NAMED_INTEGER_VALUE */
+const systemProblem: 2 = CloseReason_systemProblem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_costLimit
@@ -130,7 +130,7 @@ const systemProblem = CloseReason_systemProblem; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CloseReason_costLimit = 3 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_costLimit: 3 = 3 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_costLimit
@@ -143,7 +143,7 @@ const CloseReason_costLimit = 3 satisfies CloseReason; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const costLimit = CloseReason_costLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const costLimit: 3 = CloseReason_costLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_resources
@@ -156,7 +156,7 @@ const costLimit = CloseReason_costLimit; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CloseReason_resources = 4 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_resources: 4 = 4 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_resources
@@ -169,7 +169,7 @@ const CloseReason_resources = 4 satisfies CloseReason; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const resources = CloseReason_resources; /* SHORT_NAMED_INTEGER_VALUE */
+const resources: 4 = CloseReason_resources; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_securityViolation
@@ -183,7 +183,7 @@ const resources = CloseReason_resources; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CloseReason_securityViolation = 5 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_securityViolation: 5 = 5 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_securityViolation
@@ -196,7 +196,7 @@ const CloseReason_securityViolation = 5 satisfies CloseReason; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const securityViolation = CloseReason_securityViolation; /* SHORT_NAMED_INTEGER_VALUE */
+const securityViolation: 5 = CloseReason_securityViolation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_protocolError
@@ -211,7 +211,7 @@ const securityViolation = CloseReason_securityViolation; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const CloseReason_protocolError = 6 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_protocolError: 6 = 6 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_protocolError
@@ -225,7 +225,7 @@ const CloseReason_protocolError = 6 satisfies CloseReason; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const protocolError = CloseReason_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
+const protocolError: 6 = CloseReason_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_lackOfActivity
@@ -239,7 +239,7 @@ const protocolError = CloseReason_protocolError; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CloseReason_lackOfActivity = 7 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_lackOfActivity: 7 = 7 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_lackOfActivity
@@ -252,7 +252,7 @@ const CloseReason_lackOfActivity = 7 satisfies CloseReason; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const lackOfActivity = CloseReason_lackOfActivity; /* SHORT_NAMED_INTEGER_VALUE */
+const lackOfActivity: 7 = CloseReason_lackOfActivity; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_responseToPeer
@@ -267,7 +267,7 @@ const lackOfActivity = CloseReason_lackOfActivity; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const CloseReason_responseToPeer = 8 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_responseToPeer: 8 = 8 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_responseToPeer
@@ -280,7 +280,7 @@ const CloseReason_responseToPeer = 8 satisfies CloseReason; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const responseToPeer = CloseReason_responseToPeer; /* SHORT_NAMED_INTEGER_VALUE */
+const responseToPeer: 8 = CloseReason_responseToPeer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_unspecified
@@ -294,7 +294,7 @@ const responseToPeer = CloseReason_responseToPeer; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const CloseReason_unspecified = 9 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
+const CloseReason_unspecified: 9 = 9 satisfies CloseReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CloseReason_unspecified
@@ -307,7 +307,7 @@ const CloseReason_unspecified = 9 satisfies CloseReason; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const unspecified = CloseReason_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+const unspecified: 9 = CloseReason_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_CloseReason: $.ASN1Decoder<CloseReason> | null = null;
 

@@ -187,19 +187,19 @@ class MediaCallCharacteristics {
      * @static
      * @method
      */
-    public static get _default_value_for_bitRate () { return MediaCallCharacteristics_bitRate_constant; }        /**
+    public static get _default_value_for_bitRate (): _enum_for_MediaCallCharacteristics_bitRate.constant { return MediaCallCharacteristics_bitRate_constant; }        /**
          * @summary The enum used as the type of the component `bitRate`
          * @public
          * @static
          */
 
-    public static _enum_for_bitRate = _enum_for_MediaCallCharacteristics_bitRate;        /**
+    public static _enum_for_bitRate: typeof _enum_for_MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitRate;        /**
          * @summary The enum used as the type of the component `switchingSubDomainCCIEType`
          * @public
          * @static
          */
 
-    public static _enum_for_switchingSubDomainCCIEType = _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType;
+    public static _enum_for_switchingSubDomainCCIEType: typeof _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType = _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType;
 }
 
 /**

@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FormatOwner = OCTET_STRING; // OctetStringType
 
 
-export const _decode_FormatOwner = $._decodeOctetString;
+export const _decode_FormatOwner: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_FormatOwner = $._encodeOctetString;
+export const _encode_FormatOwner: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -46,7 +46,7 @@ export const _decode_GERAN_Classmark = (el: _Element): GERAN_Classmark => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GERAN_Classmark, encoded as an ASN.1 Element.
  */
-export const _encode_GERAN_Classmark = $._encodeOctetString;
+export const _encode_GERAN_Classmark: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -116,7 +116,7 @@ class PumRegistrRes {
          * @static
          */
 
-    public static _enum_for_serviceOption = _enum_for_ServiceOption;
+    public static _enum_for_serviceOption: typeof _enum_for_ServiceOption = _enum_for_ServiceOption;
 }
 
 /**

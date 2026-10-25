@@ -102,7 +102,7 @@ export class InvalidAccessControlFilter {
      * @static
      */
 
-    public static _enum_for_errorId = _enum_for_InvalidAccessControlFilter_errorId;
+    public static _enum_for_errorId: typeof _enum_for_InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 }
 
 /**

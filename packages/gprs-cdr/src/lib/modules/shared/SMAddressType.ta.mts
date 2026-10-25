@@ -79,7 +79,7 @@ type SMAddressType = _enum_for_SMAddressType;
  * @enum {number}
  */
 export
-const SMAddressType = _enum_for_SMAddressType;
+const SMAddressType: typeof _enum_for_SMAddressType = _enum_for_SMAddressType;
 
 /**
  * @summary SMAddressType_emailAddress
@@ -87,7 +87,7 @@ const SMAddressType = _enum_for_SMAddressType;
  * @type {number}
  */
 export
-const SMAddressType_emailAddress = SMAddressType.emailAddress; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_emailAddress: _enum_for_SMAddressType.emailAddress = SMAddressType.emailAddress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emailAddress
@@ -95,7 +95,7 @@ const SMAddressType_emailAddress = SMAddressType.emailAddress; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const emailAddress = SMAddressType.emailAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emailAddress: _enum_for_SMAddressType.emailAddress = SMAddressType.emailAddress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_mSISDN
@@ -103,7 +103,7 @@ const emailAddress = SMAddressType.emailAddress; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const SMAddressType_mSISDN = SMAddressType.mSISDN; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_mSISDN: _enum_for_SMAddressType.mSISDN = SMAddressType.mSISDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mSISDN
@@ -111,7 +111,7 @@ const SMAddressType_mSISDN = SMAddressType.mSISDN; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const mSISDN = SMAddressType.mSISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mSISDN: _enum_for_SMAddressType.mSISDN = SMAddressType.mSISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_iPv4Address
@@ -119,7 +119,7 @@ const mSISDN = SMAddressType.mSISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SMAddressType_iPv4Address = SMAddressType.iPv4Address; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_iPv4Address: _enum_for_SMAddressType.iPv4Address = SMAddressType.iPv4Address; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4Address
@@ -127,7 +127,7 @@ const SMAddressType_iPv4Address = SMAddressType.iPv4Address; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const iPv4Address = SMAddressType.iPv4Address; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4Address: _enum_for_SMAddressType.iPv4Address = SMAddressType.iPv4Address; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_iPv6Address
@@ -135,7 +135,7 @@ const iPv4Address = SMAddressType.iPv4Address; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const SMAddressType_iPv6Address = SMAddressType.iPv6Address; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_iPv6Address: _enum_for_SMAddressType.iPv6Address = SMAddressType.iPv6Address; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv6Address
@@ -143,7 +143,7 @@ const SMAddressType_iPv6Address = SMAddressType.iPv6Address; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const iPv6Address = SMAddressType.iPv6Address; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv6Address: _enum_for_SMAddressType.iPv6Address = SMAddressType.iPv6Address; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_numericShortCode
@@ -151,7 +151,7 @@ const iPv6Address = SMAddressType.iPv6Address; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const SMAddressType_numericShortCode = SMAddressType.numericShortCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_numericShortCode: _enum_for_SMAddressType.numericShortCode = SMAddressType.numericShortCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numericShortCode
@@ -159,7 +159,7 @@ const SMAddressType_numericShortCode = SMAddressType.numericShortCode; /* LONG_N
  * @type {number}
  */
 export
-const numericShortCode = SMAddressType.numericShortCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numericShortCode: _enum_for_SMAddressType.numericShortCode = SMAddressType.numericShortCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_alphanumericShortCode
@@ -167,7 +167,7 @@ const numericShortCode = SMAddressType.numericShortCode; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const SMAddressType_alphanumericShortCode = SMAddressType.alphanumericShortCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_alphanumericShortCode: _enum_for_SMAddressType.alphanumericShortCode = SMAddressType.alphanumericShortCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alphanumericShortCode
@@ -175,7 +175,7 @@ const SMAddressType_alphanumericShortCode = SMAddressType.alphanumericShortCode;
  * @type {number}
  */
 export
-const alphanumericShortCode = SMAddressType.alphanumericShortCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alphanumericShortCode: _enum_for_SMAddressType.alphanumericShortCode = SMAddressType.alphanumericShortCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_other
@@ -183,7 +183,7 @@ const alphanumericShortCode = SMAddressType.alphanumericShortCode; /* SHORT_NAME
  * @type {number}
  */
 export
-const SMAddressType_other = SMAddressType.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_other: _enum_for_SMAddressType.other = SMAddressType.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -191,7 +191,7 @@ const SMAddressType_other = SMAddressType.other; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const other = SMAddressType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_SMAddressType.other = SMAddressType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMAddressType_iMSI
@@ -199,7 +199,7 @@ const other = SMAddressType.other; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SMAddressType_iMSI = SMAddressType.iMSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMAddressType_iMSI: _enum_for_SMAddressType.iMSI = SMAddressType.iMSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSI
@@ -207,7 +207,7 @@ const SMAddressType_iMSI = SMAddressType.iMSI; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iMSI = SMAddressType.iMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSI: _enum_for_SMAddressType.iMSI = SMAddressType.iMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMAddressType: $.ASN1Decoder<SMAddressType> = $._decodeEnumerated;

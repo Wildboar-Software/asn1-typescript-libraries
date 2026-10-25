@@ -29,7 +29,7 @@ type EventThreshold1I = INTEGER;
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_EventThreshold1I = $._decodeInteger;
+export const _decode_EventThreshold1I: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 /**
  * @summary Encodes a(n) EventThreshold1I into an ASN.1 Element.
@@ -38,7 +38,7 @@ export const _decode_EventThreshold1I = $._decodeInteger;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The EventThreshold1I, encoded as an ASN.1 Element.
  */
-export const _encode_EventThreshold1I = $._encodeInteger;
+export const _encode_EventThreshold1I: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

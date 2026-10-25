@@ -130,7 +130,7 @@ class LINotification {
          * @static
          */
 
-    public static _enum_for_notificationType = _enum_for_LINotificationType;
+    public static _enum_for_notificationType: typeof _enum_for_LINotificationType = _enum_for_LINotificationType;
 }
 
 /**

@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MailBoxID = OCTET_STRING; // OctetStringType
-export const _decode_MailBoxID = $._decodeOctetString;
-export const _encode_MailBoxID = $._encodeOctetString;
+export const _decode_MailBoxID: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_MailBoxID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

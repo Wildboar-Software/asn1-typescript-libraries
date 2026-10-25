@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type InterworkingMDName = UniversalString; // UniversalString
 
 
-export const _decode_InterworkingMDName = $._decodeUniversalString;
+export const _decode_InterworkingMDName: $.ASN1Decoder<string> = $._decodeUniversalString;
 
 
-export const _encode_InterworkingMDName = $._encodeUniversalString;
+export const _encode_InterworkingMDName: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

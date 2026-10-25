@@ -102,13 +102,13 @@ class WLAN_Offloadability {
          * @static
          */
 
-    public static _enum_for_wlan_offloadability_EUTRAN = _enum_for_WLAN_Offloadability_Indication;        /**
+    public static _enum_for_wlan_offloadability_EUTRAN: typeof _enum_for_WLAN_Offloadability_Indication = _enum_for_WLAN_Offloadability_Indication;        /**
          * @summary The enum used as the type of the component `wlan_offloadability_UTRAN`
          * @public
          * @static
          */
 
-    public static _enum_for_wlan_offloadability_UTRAN = _enum_for_WLAN_Offloadability_Indication;
+    public static _enum_for_wlan_offloadability_UTRAN: typeof _enum_for_WLAN_Offloadability_Indication = _enum_for_WLAN_Offloadability_Indication;
 }
 
 /**

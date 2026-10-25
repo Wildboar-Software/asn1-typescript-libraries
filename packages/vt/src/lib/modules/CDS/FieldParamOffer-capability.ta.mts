@@ -74,8 +74,8 @@ const FieldParamOffer_capability_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = FieldParamOffer_capability_no; /* SHORT_NAMED_BIT */
-export const _decode_FieldParamOffer_capability = $._decodeBitString;
-export const _encode_FieldParamOffer_capability = $._encodeBitString;
+export const _decode_FieldParamOffer_capability: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_FieldParamOffer_capability: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

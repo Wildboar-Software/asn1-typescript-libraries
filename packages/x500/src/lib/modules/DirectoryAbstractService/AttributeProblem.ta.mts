@@ -40,7 +40,7 @@ export type AttributeProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const AttributeProblem_noSuchAttributeOrValue = 1 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_noSuchAttributeOrValue: 1 = 1 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_noSuchAttributeOrValue
@@ -51,7 +51,7 @@ export const AttributeProblem_noSuchAttributeOrValue = 1 satisfies AttributeProb
  * @constant
  * @type {number}
  */
-export const noSuchAttributeOrValue = AttributeProblem_noSuchAttributeOrValue; /* SHORT_NAMED_INTEGER_VALUE */
+export const noSuchAttributeOrValue: 1 = AttributeProblem_noSuchAttributeOrValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_invalidAttributeSyntax
@@ -62,7 +62,7 @@ export const noSuchAttributeOrValue = AttributeProblem_noSuchAttributeOrValue; /
  * @constant
  * @type {number}
  */
-export const AttributeProblem_invalidAttributeSyntax = 2 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_invalidAttributeSyntax: 2 = 2 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_invalidAttributeSyntax
@@ -73,7 +73,7 @@ export const AttributeProblem_invalidAttributeSyntax = 2 satisfies AttributeProb
  * @constant
  * @type {number}
  */
-export const invalidAttributeSyntax = AttributeProblem_invalidAttributeSyntax; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidAttributeSyntax: 2 = AttributeProblem_invalidAttributeSyntax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_undefinedAttributeType
@@ -84,7 +84,7 @@ export const invalidAttributeSyntax = AttributeProblem_invalidAttributeSyntax; /
  * @constant
  * @type {number}
  */
-export const AttributeProblem_undefinedAttributeType = 3 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_undefinedAttributeType: 3 = 3 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_undefinedAttributeType
@@ -95,7 +95,7 @@ export const AttributeProblem_undefinedAttributeType = 3 satisfies AttributeProb
  * @constant
  * @type {number}
  */
-export const undefinedAttributeType = AttributeProblem_undefinedAttributeType; /* SHORT_NAMED_INTEGER_VALUE */
+export const undefinedAttributeType: 3 = AttributeProblem_undefinedAttributeType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_inappropriateMatching
@@ -106,7 +106,7 @@ export const undefinedAttributeType = AttributeProblem_undefinedAttributeType; /
  * @constant
  * @type {number}
  */
-export const AttributeProblem_inappropriateMatching = 4 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_inappropriateMatching: 4 = 4 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_inappropriateMatching
@@ -117,7 +117,7 @@ export const AttributeProblem_inappropriateMatching = 4 satisfies AttributeProbl
  * @constant
  * @type {number}
  */
-export const inappropriateMatching = AttributeProblem_inappropriateMatching; /* SHORT_NAMED_INTEGER_VALUE */
+export const inappropriateMatching: 4 = AttributeProblem_inappropriateMatching; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_constraintViolation
@@ -128,7 +128,7 @@ export const inappropriateMatching = AttributeProblem_inappropriateMatching; /* 
  * @constant
  * @type {number}
  */
-export const AttributeProblem_constraintViolation = 5 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_constraintViolation: 5 = 5 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_constraintViolation
@@ -139,7 +139,7 @@ export const AttributeProblem_constraintViolation = 5 satisfies AttributeProblem
  * @constant
  * @type {number}
  */
-export const constraintViolation = AttributeProblem_constraintViolation; /* SHORT_NAMED_INTEGER_VALUE */
+export const constraintViolation: 5 = AttributeProblem_constraintViolation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_attributeOrValueAlreadyExists
@@ -150,7 +150,7 @@ export const constraintViolation = AttributeProblem_constraintViolation; /* SHOR
  * @constant
  * @type {number}
  */
-export const AttributeProblem_attributeOrValueAlreadyExists = 6 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_attributeOrValueAlreadyExists: 6 = 6 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_attributeOrValueAlreadyExists
@@ -161,7 +161,7 @@ export const AttributeProblem_attributeOrValueAlreadyExists = 6 satisfies Attrib
  * @constant
  * @type {number}
  */
-export const attributeOrValueAlreadyExists = AttributeProblem_attributeOrValueAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
+export const attributeOrValueAlreadyExists: 6 = AttributeProblem_attributeOrValueAlreadyExists; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_contextViolation
@@ -172,7 +172,7 @@ export const attributeOrValueAlreadyExists = AttributeProblem_attributeOrValueAl
  * @constant
  * @type {number}
  */
-export const AttributeProblem_contextViolation = 7 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const AttributeProblem_contextViolation: 7 = 7 satisfies AttributeProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttributeProblem_contextViolation
@@ -183,13 +183,13 @@ export const AttributeProblem_contextViolation = 7 satisfies AttributeProblem; /
  * @constant
  * @type {number}
  */
-export const contextViolation = AttributeProblem_contextViolation; /* SHORT_NAMED_INTEGER_VALUE */
+export const contextViolation: 7 = AttributeProblem_contextViolation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AttributeProblem = $._decodeInteger;
+export const _decode_AttributeProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AttributeProblem = $._encodeInteger;
+export const _encode_AttributeProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

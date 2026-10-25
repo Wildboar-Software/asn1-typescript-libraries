@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type HashedPolicyInfo = _Element; // ObjectClassFieldType
 
 
-export const _decode_HashedPolicyInfo = $._decodeAny;
+export const _decode_HashedPolicyInfo: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
-export const _encode_HashedPolicyInfo = $._encodeAny;
+export const _encode_HashedPolicyInfo: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

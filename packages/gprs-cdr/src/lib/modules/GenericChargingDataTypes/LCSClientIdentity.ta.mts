@@ -99,7 +99,7 @@ class LCSClientIdentity {
          * @static
          */
 
-    public static _enum_for_lcsClientInternalID = _enum_for_LCSClientIdentity_lcsClientInternalID;
+    public static _enum_for_lcsClientInternalID: typeof _enum_for_LCSClientIdentity_lcsClientInternalID = _enum_for_LCSClientIdentity_lcsClientInternalID;
 }
 
 /**

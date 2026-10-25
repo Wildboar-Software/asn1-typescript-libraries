@@ -30,4 +30,4 @@ export const _decode_SGSNCapabilities = (el: _Element): SGSNCapabilities => {
     }
     return value;
 };
-export const _encode_SGSNCapabilities = $._encodeOctetString;
+export const _encode_SGSNCapabilities: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

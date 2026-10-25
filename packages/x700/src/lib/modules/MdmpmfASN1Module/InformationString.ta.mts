@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type InformationString = GeneralString; // GeneralString
 
 
-export const _decode_InformationString = $._decodeGeneralString;
+export const _decode_InformationString: $.ASN1Decoder<string> = $._decodeGeneralString;
 
 
-export const _encode_InformationString = $._encodeGeneralString;
+export const _encode_InformationString: $.ASN1Encoder<string> = $._encodeGeneralString;
 
 
 /* eslint-enable */

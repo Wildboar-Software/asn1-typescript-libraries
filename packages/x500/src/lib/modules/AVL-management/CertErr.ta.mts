@@ -94,7 +94,7 @@ export class CertErr {
      * @static
      */
 
-    public static _enum_for_notOK = _enum_for_AVMP_error;
+    public static _enum_for_notOK: typeof _enum_for_AVMP_error = _enum_for_AVMP_error;
 }
 
 /**

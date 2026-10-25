@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type DER_AttributeCertificate = OCTET_STRING; // OctetStringType
 
 
-export const _decode_DER_AttributeCertificate = $._decodeOctetString;
+export const _decode_DER_AttributeCertificate: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_DER_AttributeCertificate = $._encodeOctetString;
+export const _encode_DER_AttributeCertificate: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

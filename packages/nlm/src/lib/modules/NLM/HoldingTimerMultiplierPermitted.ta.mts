@@ -32,12 +32,12 @@ export type HoldingTimerMultiplierPermitted = INTEGER;
 
 
 
-export const _decode_HoldingTimerMultiplierPermitted = $._decodeInteger;
+export const _decode_HoldingTimerMultiplierPermitted: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_HoldingTimerMultiplierPermitted = $._encodeInteger;
+export const _encode_HoldingTimerMultiplierPermitted: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

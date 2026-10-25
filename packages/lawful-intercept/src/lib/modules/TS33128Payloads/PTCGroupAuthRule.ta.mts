@@ -129,7 +129,7 @@ type PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
  * @enum {number}
  */
 export
-const PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
+const PTCGroupAuthRule: typeof _enum_for_PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
 
 /**
  * @summary PTCGroupAuthRule_allowInitiatingPTCSession
@@ -137,7 +137,7 @@ const PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
  * @type {number}
  */
 export
-const PTCGroupAuthRule_allowInitiatingPTCSession = PTCGroupAuthRule.allowInitiatingPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_allowInitiatingPTCSession: _enum_for_PTCGroupAuthRule.allowInitiatingPTCSession = PTCGroupAuthRule.allowInitiatingPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowInitiatingPTCSession
@@ -145,7 +145,7 @@ const PTCGroupAuthRule_allowInitiatingPTCSession = PTCGroupAuthRule.allowInitiat
  * @type {number}
  */
 export
-const allowInitiatingPTCSession = PTCGroupAuthRule.allowInitiatingPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowInitiatingPTCSession: _enum_for_PTCGroupAuthRule.allowInitiatingPTCSession = PTCGroupAuthRule.allowInitiatingPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_blockInitiatingPTCSession
@@ -153,7 +153,7 @@ const allowInitiatingPTCSession = PTCGroupAuthRule.allowInitiatingPTCSession; /*
  * @type {number}
  */
 export
-const PTCGroupAuthRule_blockInitiatingPTCSession = PTCGroupAuthRule.blockInitiatingPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_blockInitiatingPTCSession: _enum_for_PTCGroupAuthRule.blockInitiatingPTCSession = PTCGroupAuthRule.blockInitiatingPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blockInitiatingPTCSession
@@ -161,7 +161,7 @@ const PTCGroupAuthRule_blockInitiatingPTCSession = PTCGroupAuthRule.blockInitiat
  * @type {number}
  */
 export
-const blockInitiatingPTCSession = PTCGroupAuthRule.blockInitiatingPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blockInitiatingPTCSession: _enum_for_PTCGroupAuthRule.blockInitiatingPTCSession = PTCGroupAuthRule.blockInitiatingPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_allowJoiningPTCSession
@@ -169,7 +169,7 @@ const blockInitiatingPTCSession = PTCGroupAuthRule.blockInitiatingPTCSession; /*
  * @type {number}
  */
 export
-const PTCGroupAuthRule_allowJoiningPTCSession = PTCGroupAuthRule.allowJoiningPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_allowJoiningPTCSession: _enum_for_PTCGroupAuthRule.allowJoiningPTCSession = PTCGroupAuthRule.allowJoiningPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowJoiningPTCSession
@@ -177,7 +177,7 @@ const PTCGroupAuthRule_allowJoiningPTCSession = PTCGroupAuthRule.allowJoiningPTC
  * @type {number}
  */
 export
-const allowJoiningPTCSession = PTCGroupAuthRule.allowJoiningPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowJoiningPTCSession: _enum_for_PTCGroupAuthRule.allowJoiningPTCSession = PTCGroupAuthRule.allowJoiningPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_blockJoiningPTCSession
@@ -185,7 +185,7 @@ const allowJoiningPTCSession = PTCGroupAuthRule.allowJoiningPTCSession; /* SHORT
  * @type {number}
  */
 export
-const PTCGroupAuthRule_blockJoiningPTCSession = PTCGroupAuthRule.blockJoiningPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_blockJoiningPTCSession: _enum_for_PTCGroupAuthRule.blockJoiningPTCSession = PTCGroupAuthRule.blockJoiningPTCSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blockJoiningPTCSession
@@ -193,7 +193,7 @@ const PTCGroupAuthRule_blockJoiningPTCSession = PTCGroupAuthRule.blockJoiningPTC
  * @type {number}
  */
 export
-const blockJoiningPTCSession = PTCGroupAuthRule.blockJoiningPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blockJoiningPTCSession: _enum_for_PTCGroupAuthRule.blockJoiningPTCSession = PTCGroupAuthRule.blockJoiningPTCSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_allowAddParticipants
@@ -201,7 +201,7 @@ const blockJoiningPTCSession = PTCGroupAuthRule.blockJoiningPTCSession; /* SHORT
  * @type {number}
  */
 export
-const PTCGroupAuthRule_allowAddParticipants = PTCGroupAuthRule.allowAddParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_allowAddParticipants: _enum_for_PTCGroupAuthRule.allowAddParticipants = PTCGroupAuthRule.allowAddParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowAddParticipants
@@ -209,7 +209,7 @@ const PTCGroupAuthRule_allowAddParticipants = PTCGroupAuthRule.allowAddParticipa
  * @type {number}
  */
 export
-const allowAddParticipants = PTCGroupAuthRule.allowAddParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowAddParticipants: _enum_for_PTCGroupAuthRule.allowAddParticipants = PTCGroupAuthRule.allowAddParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_blockAddParticipants
@@ -217,7 +217,7 @@ const allowAddParticipants = PTCGroupAuthRule.allowAddParticipants; /* SHORT_NAM
  * @type {number}
  */
 export
-const PTCGroupAuthRule_blockAddParticipants = PTCGroupAuthRule.blockAddParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_blockAddParticipants: _enum_for_PTCGroupAuthRule.blockAddParticipants = PTCGroupAuthRule.blockAddParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blockAddParticipants
@@ -225,7 +225,7 @@ const PTCGroupAuthRule_blockAddParticipants = PTCGroupAuthRule.blockAddParticipa
  * @type {number}
  */
 export
-const blockAddParticipants = PTCGroupAuthRule.blockAddParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blockAddParticipants: _enum_for_PTCGroupAuthRule.blockAddParticipants = PTCGroupAuthRule.blockAddParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_allowSubscriptionPTCSessionState
@@ -233,7 +233,7 @@ const blockAddParticipants = PTCGroupAuthRule.blockAddParticipants; /* SHORT_NAM
  * @type {number}
  */
 export
-const PTCGroupAuthRule_allowSubscriptionPTCSessionState = PTCGroupAuthRule.allowSubscriptionPTCSessionState; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_allowSubscriptionPTCSessionState: _enum_for_PTCGroupAuthRule.allowSubscriptionPTCSessionState = PTCGroupAuthRule.allowSubscriptionPTCSessionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowSubscriptionPTCSessionState
@@ -241,7 +241,7 @@ const PTCGroupAuthRule_allowSubscriptionPTCSessionState = PTCGroupAuthRule.allow
  * @type {number}
  */
 export
-const allowSubscriptionPTCSessionState = PTCGroupAuthRule.allowSubscriptionPTCSessionState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowSubscriptionPTCSessionState: _enum_for_PTCGroupAuthRule.allowSubscriptionPTCSessionState = PTCGroupAuthRule.allowSubscriptionPTCSessionState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_blockSubscriptionPTCSessionState
@@ -249,7 +249,7 @@ const allowSubscriptionPTCSessionState = PTCGroupAuthRule.allowSubscriptionPTCSe
  * @type {number}
  */
 export
-const PTCGroupAuthRule_blockSubscriptionPTCSessionState = PTCGroupAuthRule.blockSubscriptionPTCSessionState; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_blockSubscriptionPTCSessionState: _enum_for_PTCGroupAuthRule.blockSubscriptionPTCSessionState = PTCGroupAuthRule.blockSubscriptionPTCSessionState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blockSubscriptionPTCSessionState
@@ -257,7 +257,7 @@ const PTCGroupAuthRule_blockSubscriptionPTCSessionState = PTCGroupAuthRule.block
  * @type {number}
  */
 export
-const blockSubscriptionPTCSessionState = PTCGroupAuthRule.blockSubscriptionPTCSessionState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blockSubscriptionPTCSessionState: _enum_for_PTCGroupAuthRule.blockSubscriptionPTCSessionState = PTCGroupAuthRule.blockSubscriptionPTCSessionState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_allowAnonymity
@@ -265,7 +265,7 @@ const blockSubscriptionPTCSessionState = PTCGroupAuthRule.blockSubscriptionPTCSe
  * @type {number}
  */
 export
-const PTCGroupAuthRule_allowAnonymity = PTCGroupAuthRule.allowAnonymity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_allowAnonymity: _enum_for_PTCGroupAuthRule.allowAnonymity = PTCGroupAuthRule.allowAnonymity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowAnonymity
@@ -273,7 +273,7 @@ const PTCGroupAuthRule_allowAnonymity = PTCGroupAuthRule.allowAnonymity; /* LONG
  * @type {number}
  */
 export
-const allowAnonymity = PTCGroupAuthRule.allowAnonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowAnonymity: _enum_for_PTCGroupAuthRule.allowAnonymity = PTCGroupAuthRule.allowAnonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCGroupAuthRule_forbidAnonymity
@@ -281,7 +281,7 @@ const allowAnonymity = PTCGroupAuthRule.allowAnonymity; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const PTCGroupAuthRule_forbidAnonymity = PTCGroupAuthRule.forbidAnonymity; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCGroupAuthRule_forbidAnonymity: _enum_for_PTCGroupAuthRule.forbidAnonymity = PTCGroupAuthRule.forbidAnonymity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forbidAnonymity
@@ -289,7 +289,7 @@ const PTCGroupAuthRule_forbidAnonymity = PTCGroupAuthRule.forbidAnonymity; /* LO
  * @type {number}
  */
 export
-const forbidAnonymity = PTCGroupAuthRule.forbidAnonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forbidAnonymity: _enum_for_PTCGroupAuthRule.forbidAnonymity = PTCGroupAuthRule.forbidAnonymity; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCGroupAuthRule: $.ASN1Decoder<PTCGroupAuthRule> = $._decodeEnumerated;
 export const _encode_PTCGroupAuthRule: $.ASN1Encoder<PTCGroupAuthRule> = $._encodeEnumerated;
 

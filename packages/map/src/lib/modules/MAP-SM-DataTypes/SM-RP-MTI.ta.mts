@@ -46,7 +46,7 @@ export const _decode_SM_RP_MTI = (el: _Element): SM_RP_MTI => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_RP_MTI, encoded as an ASN.1 Element.
  */
-export const _encode_SM_RP_MTI = $._encodeInteger;
+export const _encode_SM_RP_MTI: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

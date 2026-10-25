@@ -98,7 +98,7 @@ type RCSSessionLeg = _enum_for_RCSSessionLeg;
  * @enum {number}
  */
 export
-const RCSSessionLeg = _enum_for_RCSSessionLeg;
+const RCSSessionLeg: typeof _enum_for_RCSSessionLeg = _enum_for_RCSSessionLeg;
 
 /**
  * @summary RCSSessionLeg_remoteLeg
@@ -113,7 +113,7 @@ const RCSSessionLeg = _enum_for_RCSSessionLeg;
  * @type {number}
  */
 export
-const RCSSessionLeg_remoteLeg = RCSSessionLeg.remoteLeg; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionLeg_remoteLeg: _enum_for_RCSSessionLeg.remoteLeg = RCSSessionLeg.remoteLeg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remoteLeg
@@ -128,7 +128,7 @@ const RCSSessionLeg_remoteLeg = RCSSessionLeg.remoteLeg; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const remoteLeg = RCSSessionLeg.remoteLeg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remoteLeg: _enum_for_RCSSessionLeg.remoteLeg = RCSSessionLeg.remoteLeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionLeg_localLeg
@@ -143,7 +143,7 @@ const remoteLeg = RCSSessionLeg.remoteLeg; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RCSSessionLeg_localLeg = RCSSessionLeg.localLeg; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionLeg_localLeg: _enum_for_RCSSessionLeg.localLeg = RCSSessionLeg.localLeg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localLeg
@@ -158,7 +158,7 @@ const RCSSessionLeg_localLeg = RCSSessionLeg.localLeg; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const localLeg = RCSSessionLeg.localLeg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localLeg: _enum_for_RCSSessionLeg.localLeg = RCSSessionLeg.localLeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RCSSessionLeg: $.ASN1Decoder<RCSSessionLeg> = $._decodeEnumerated;
 export const _encode_RCSSessionLeg: $.ASN1Encoder<RCSSessionLeg> = $._encodeEnumerated;
 

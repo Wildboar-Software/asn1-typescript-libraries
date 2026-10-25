@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AuthorizationInformation = TeletexString; // TeletexString
 
 
-export const _decode_AuthorizationInformation = $._decodeTeletexString;
+export const _decode_AuthorizationInformation: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_AuthorizationInformation = $._encodeTeletexString;
+export const _encode_AuthorizationInformation: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

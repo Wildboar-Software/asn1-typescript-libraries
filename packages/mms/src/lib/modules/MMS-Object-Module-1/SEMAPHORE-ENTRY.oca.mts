@@ -233,7 +233,7 @@ type SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
  * @enum {number}
  */
 export
-const SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
+const SEMAPHORE_ENTRY_class: typeof _enum_for_SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
 
 /**
  * @summary SEMAPHORE_ENTRY_class_simple
@@ -241,7 +241,7 @@ const SEMAPHORE_ENTRY_class = _enum_for_SEMAPHORE_ENTRY_class;
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_class_simple = SEMAPHORE_ENTRY_class.simple; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_class_simple: _enum_for_SEMAPHORE_ENTRY_class.simple = SEMAPHORE_ENTRY_class.simple; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_class_modifier
@@ -249,7 +249,7 @@ const SEMAPHORE_ENTRY_class_simple = SEMAPHORE_ENTRY_class.simple; /* LONG_NAMED
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_class_modifier = SEMAPHORE_ENTRY_class.modifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_class_modifier: _enum_for_SEMAPHORE_ENTRY_class.modifier = SEMAPHORE_ENTRY_class.modifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState
@@ -289,7 +289,7 @@ type SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
  * @enum {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
+const SEMAPHORE_ENTRY_entryState: typeof _enum_for_SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState_queued
@@ -297,7 +297,7 @@ const SEMAPHORE_ENTRY_entryState = _enum_for_SEMAPHORE_ENTRY_entryState;
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState_queued = SEMAPHORE_ENTRY_entryState.queued; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_entryState_queued: _enum_for_SEMAPHORE_ENTRY_entryState.queued = SEMAPHORE_ENTRY_entryState.queued; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState_owner
@@ -305,7 +305,7 @@ const SEMAPHORE_ENTRY_entryState_queued = SEMAPHORE_ENTRY_entryState.queued; /* 
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState_owner = SEMAPHORE_ENTRY_entryState.owner; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_entryState_owner: _enum_for_SEMAPHORE_ENTRY_entryState.owner = SEMAPHORE_ENTRY_entryState.owner; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_ENTRY_entryState_hung
@@ -313,6 +313,6 @@ const SEMAPHORE_ENTRY_entryState_owner = SEMAPHORE_ENTRY_entryState.owner; /* LO
  * @type {number}
  */
 export
-const SEMAPHORE_ENTRY_entryState_hung = SEMAPHORE_ENTRY_entryState.hung; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_ENTRY_entryState_hung: _enum_for_SEMAPHORE_ENTRY_entryState.hung = SEMAPHORE_ENTRY_entryState.hung; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

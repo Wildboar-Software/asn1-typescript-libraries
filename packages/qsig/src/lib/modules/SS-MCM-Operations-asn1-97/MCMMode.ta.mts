@@ -44,7 +44,7 @@ type MCMMode = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MCMMode_compressed = 0 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
+const MCMMode_compressed: 0 = 0 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MCMMode_compressed
@@ -53,7 +53,7 @@ const MCMMode_compressed = 0 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const compressed = MCMMode_compressed; /* SHORT_NAMED_INTEGER_VALUE */
+const compressed: 0 = MCMMode_compressed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MCMMode_complete
@@ -69,7 +69,7 @@ const compressed = MCMMode_compressed; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MCMMode_complete = 1 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
+const MCMMode_complete: 1 = 1 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MCMMode_complete
@@ -78,7 +78,7 @@ const MCMMode_complete = 1 satisfies MCMMode; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const complete = MCMMode_complete; /* SHORT_NAMED_INTEGER_VALUE */
+const complete: 1 = MCMMode_complete; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MCMMode: $.ASN1Decoder<MCMMode> = $._decodeInteger;

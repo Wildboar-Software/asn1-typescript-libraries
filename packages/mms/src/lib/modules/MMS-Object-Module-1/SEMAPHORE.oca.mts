@@ -182,7 +182,7 @@ type SEMAPHORE_class = _enum_for_SEMAPHORE_class;
  * @enum {number}
  */
 export
-const SEMAPHORE_class = _enum_for_SEMAPHORE_class;
+const SEMAPHORE_class: typeof _enum_for_SEMAPHORE_class = _enum_for_SEMAPHORE_class;
 
 /**
  * @summary SEMAPHORE_class_token
@@ -190,7 +190,7 @@ const SEMAPHORE_class = _enum_for_SEMAPHORE_class;
  * @type {number}
  */
 export
-const SEMAPHORE_class_token = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_class_token: _enum_for_SEMAPHORE_class.token = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_class_pool
@@ -198,6 +198,6 @@ const SEMAPHORE_class_token = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const SEMAPHORE_class_pool = SEMAPHORE_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_class_pool: _enum_for_SEMAPHORE_class.pool = SEMAPHORE_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

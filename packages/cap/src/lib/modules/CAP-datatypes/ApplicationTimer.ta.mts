@@ -29,4 +29,4 @@ export const _decode_ApplicationTimer = (el: _Element): ApplicationTimer => {
     }
     return value;
 };
-export const _encode_ApplicationTimer = $._encodeInteger;
+export const _encode_ApplicationTimer: $.ASN1Encoder<INTEGER> = $._encodeInteger;

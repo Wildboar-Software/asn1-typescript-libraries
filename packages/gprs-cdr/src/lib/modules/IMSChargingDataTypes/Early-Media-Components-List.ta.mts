@@ -175,7 +175,7 @@ class Early_Media_Components_List {
          * @static
          */
 
-    public static _enum_for_sDP_Type = _enum_for_SDP_Type;
+    public static _enum_for_sDP_Type: typeof _enum_for_SDP_Type = _enum_for_SDP_Type;
 }
 
 /**

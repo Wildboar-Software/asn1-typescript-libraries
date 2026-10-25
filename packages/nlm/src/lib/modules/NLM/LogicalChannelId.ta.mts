@@ -33,12 +33,12 @@ export type LogicalChannelId = INTEGER;
 
 
 
-export const _decode_LogicalChannelId = $._decodeInteger;
+export const _decode_LogicalChannelId: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_LogicalChannelId = $._encodeInteger;
+export const _encode_LogicalChannelId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

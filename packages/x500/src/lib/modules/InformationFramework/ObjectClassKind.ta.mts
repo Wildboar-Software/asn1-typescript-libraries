@@ -65,14 +65,14 @@ export type ObjectClassKind = _enum_for_ObjectClassKind;
  *
  * @enum {number}
  */
-export const ObjectClassKind = _enum_for_ObjectClassKind;
+export const ObjectClassKind: typeof _enum_for_ObjectClassKind = _enum_for_ObjectClassKind;
 
 /**
  * @summary ObjectClassKind_abstract
  * @constant
  * @type {number}
  */
-export const ObjectClassKind_abstract =
+export const ObjectClassKind_abstract: _enum_for_ObjectClassKind.abstract =
     ObjectClassKind.abstract; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const ObjectClassKind_abstract =
  * @constant
  * @type {number}
  */
-export const abstract =
+export const abstract: _enum_for_ObjectClassKind.abstract =
     ObjectClassKind.abstract; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const abstract =
  * @constant
  * @type {number}
  */
-export const ObjectClassKind_structural =
+export const ObjectClassKind_structural: _enum_for_ObjectClassKind.structural =
     ObjectClassKind.structural; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const ObjectClassKind_structural =
  * @constant
  * @type {number}
  */
-export const structural =
+export const structural: _enum_for_ObjectClassKind.structural =
     ObjectClassKind.structural; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const structural =
  * @constant
  * @type {number}
  */
-export const ObjectClassKind_auxiliary =
+export const ObjectClassKind_auxiliary: _enum_for_ObjectClassKind.auxiliary =
     ObjectClassKind.auxiliary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const ObjectClassKind_auxiliary =
  * @constant
  * @type {number}
  */
-export const auxiliary =
+export const auxiliary: _enum_for_ObjectClassKind.auxiliary =
     ObjectClassKind.auxiliary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

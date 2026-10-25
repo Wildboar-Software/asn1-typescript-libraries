@@ -69,7 +69,7 @@ class serviceError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_ServiceProblem;
+    public static _enum_for_problem: typeof _enum_for_ServiceProblem = _enum_for_ServiceProblem;
 }
 
 /**

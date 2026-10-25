@@ -186,13 +186,13 @@ class MMSDeleteFromRelay {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `deleteResponseStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_deleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
+    public static _enum_for_deleteResponseStatus: typeof _enum_for_MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
 }
 
 /**

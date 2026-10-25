@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CertHash = OCTET_STRING; // OctetStringType
-export const _decode_CertHash = $._decodeOctetString;
-export const _encode_CertHash = $._encodeOctetString;
+export const _decode_CertHash: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_CertHash: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

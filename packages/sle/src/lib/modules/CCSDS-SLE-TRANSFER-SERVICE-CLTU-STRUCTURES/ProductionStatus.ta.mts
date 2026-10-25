@@ -42,7 +42,7 @@ type ProductionStatus = INTEGER;
  * @type {number}
  */
 export
-const ProductionStatus_operational = 0 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ProductionStatus_operational: 0 = 0 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_operational
@@ -53,7 +53,7 @@ const ProductionStatus_operational = 0 satisfies ProductionStatus; /* LONG_NAMED
  * @type {number}
  */
 export
-const operational = ProductionStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
+const operational: 0 = ProductionStatus_operational; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_configured
@@ -66,7 +66,7 @@ const operational = ProductionStatus_operational; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ProductionStatus_configured = 1 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ProductionStatus_configured: 1 = 1 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_configured
@@ -78,7 +78,7 @@ const ProductionStatus_configured = 1 satisfies ProductionStatus; /* LONG_NAMED_
  * @type {number}
  */
 export
-const configured = ProductionStatus_configured; /* SHORT_NAMED_INTEGER_VALUE */
+const configured: 1 = ProductionStatus_configured; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_interrupted
@@ -94,7 +94,7 @@ const configured = ProductionStatus_configured; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ProductionStatus_interrupted = 2 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ProductionStatus_interrupted: 2 = 2 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_interrupted
@@ -106,7 +106,7 @@ const ProductionStatus_interrupted = 2 satisfies ProductionStatus; /* LONG_NAMED
  * @type {number}
  */
 export
-const interrupted = ProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted: 2 = ProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_halted
@@ -121,7 +121,7 @@ const interrupted = ProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ProductionStatus_halted = 3 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ProductionStatus_halted: 3 = 3 satisfies ProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProductionStatus_halted
@@ -133,7 +133,7 @@ const ProductionStatus_halted = 3 satisfies ProductionStatus; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const halted = ProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
+const halted: 3 = ProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProductionStatus: $.ASN1Decoder<ProductionStatus> = $._decodeInteger;
 export const _encode_ProductionStatus: $.ASN1Encoder<ProductionStatus> = $._encodeInteger;
 

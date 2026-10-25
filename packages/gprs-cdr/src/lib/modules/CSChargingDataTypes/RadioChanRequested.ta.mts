@@ -63,7 +63,7 @@ type RadioChanRequested = _enum_for_RadioChanRequested;
  * @enum {number}
  */
 export
-const RadioChanRequested = _enum_for_RadioChanRequested;
+const RadioChanRequested: typeof _enum_for_RadioChanRequested = _enum_for_RadioChanRequested;
 
 /**
  * @summary RadioChanRequested_halfRateChannel
@@ -71,7 +71,7 @@ const RadioChanRequested = _enum_for_RadioChanRequested;
  * @type {number}
  */
 export
-const RadioChanRequested_halfRateChannel = RadioChanRequested.halfRateChannel; /* LONG_NAMED_ENUMERATED_VALUE */
+const RadioChanRequested_halfRateChannel: _enum_for_RadioChanRequested.halfRateChannel = RadioChanRequested.halfRateChannel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary halfRateChannel
@@ -79,7 +79,7 @@ const RadioChanRequested_halfRateChannel = RadioChanRequested.halfRateChannel; /
  * @type {number}
  */
 export
-const halfRateChannel = RadioChanRequested.halfRateChannel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const halfRateChannel: _enum_for_RadioChanRequested.halfRateChannel = RadioChanRequested.halfRateChannel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RadioChanRequested_fullRateChannel
@@ -87,7 +87,7 @@ const halfRateChannel = RadioChanRequested.halfRateChannel; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const RadioChanRequested_fullRateChannel = RadioChanRequested.fullRateChannel; /* LONG_NAMED_ENUMERATED_VALUE */
+const RadioChanRequested_fullRateChannel: _enum_for_RadioChanRequested.fullRateChannel = RadioChanRequested.fullRateChannel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullRateChannel
@@ -95,7 +95,7 @@ const RadioChanRequested_fullRateChannel = RadioChanRequested.fullRateChannel; /
  * @type {number}
  */
 export
-const fullRateChannel = RadioChanRequested.fullRateChannel; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fullRateChannel: _enum_for_RadioChanRequested.fullRateChannel = RadioChanRequested.fullRateChannel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RadioChanRequested_dualHalfRatePreferred
@@ -103,7 +103,7 @@ const fullRateChannel = RadioChanRequested.fullRateChannel; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const RadioChanRequested_dualHalfRatePreferred = RadioChanRequested.dualHalfRatePreferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const RadioChanRequested_dualHalfRatePreferred: _enum_for_RadioChanRequested.dualHalfRatePreferred = RadioChanRequested.dualHalfRatePreferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dualHalfRatePreferred
@@ -111,7 +111,7 @@ const RadioChanRequested_dualHalfRatePreferred = RadioChanRequested.dualHalfRate
  * @type {number}
  */
 export
-const dualHalfRatePreferred = RadioChanRequested.dualHalfRatePreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dualHalfRatePreferred: _enum_for_RadioChanRequested.dualHalfRatePreferred = RadioChanRequested.dualHalfRatePreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RadioChanRequested_dualFullRatePreferred
@@ -119,7 +119,7 @@ const dualHalfRatePreferred = RadioChanRequested.dualHalfRatePreferred; /* SHORT
  * @type {number}
  */
 export
-const RadioChanRequested_dualFullRatePreferred = RadioChanRequested.dualFullRatePreferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const RadioChanRequested_dualFullRatePreferred: _enum_for_RadioChanRequested.dualFullRatePreferred = RadioChanRequested.dualFullRatePreferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dualFullRatePreferred
@@ -127,7 +127,7 @@ const RadioChanRequested_dualFullRatePreferred = RadioChanRequested.dualFullRate
  * @type {number}
  */
 export
-const dualFullRatePreferred = RadioChanRequested.dualFullRatePreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dualFullRatePreferred: _enum_for_RadioChanRequested.dualFullRatePreferred = RadioChanRequested.dualFullRatePreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_RadioChanRequested: $.ASN1Decoder<RadioChanRequested> = $._decodeEnumerated;

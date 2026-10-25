@@ -45,7 +45,7 @@ export const _decode_FQDN = (el: _Element): FQDN => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FQDN, encoded as an ASN.1 Element.
  */
-export const _encode_FQDN = $._encodeOctetString;
+export const _encode_FQDN: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

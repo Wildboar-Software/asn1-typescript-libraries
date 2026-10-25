@@ -170,7 +170,7 @@ export class TbsHandshakeSecAbort {
      * @static
      */
 
-    public static _enum_for_diag = _enum_for_WrpError;
+    public static _enum_for_diag: typeof _enum_for_WrpError = _enum_for_WrpError;
 }
 
 /**

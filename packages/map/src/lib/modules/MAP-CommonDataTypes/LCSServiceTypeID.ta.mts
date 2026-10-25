@@ -49,7 +49,7 @@ export const _decode_LCSServiceTypeID = (el: _Element): LCSServiceTypeID => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCSServiceTypeID, encoded as an ASN.1 Element.
  */
-export const _encode_LCSServiceTypeID = $._encodeInteger;
+export const _encode_LCSServiceTypeID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

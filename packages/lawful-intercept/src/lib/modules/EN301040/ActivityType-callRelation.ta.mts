@@ -120,7 +120,7 @@ type ActivityType_callRelation = _enum_for_ActivityType_callRelation;
  * @enum {number}
  */
 export
-const ActivityType_callRelation = _enum_for_ActivityType_callRelation;
+const ActivityType_callRelation: typeof _enum_for_ActivityType_callRelation = _enum_for_ActivityType_callRelation;
 
 /**
  * @summary ActivityType_callRelation_begin
@@ -136,7 +136,7 @@ const ActivityType_callRelation = _enum_for_ActivityType_callRelation;
  * @type {number}
  */
 export
-const ActivityType_callRelation_begin = ActivityType_callRelation.begin; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_callRelation_begin: _enum_for_ActivityType_callRelation.begin = ActivityType_callRelation.begin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary begin
@@ -152,7 +152,7 @@ const ActivityType_callRelation_begin = ActivityType_callRelation.begin; /* LONG
  * @type {number}
  */
 export
-const begin = ActivityType_callRelation.begin; /* SHORT_NAMED_ENUMERATED_VALUE */
+const begin: _enum_for_ActivityType_callRelation.begin = ActivityType_callRelation.begin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityType_callRelation_end
@@ -169,7 +169,7 @@ const begin = ActivityType_callRelation.begin; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const ActivityType_callRelation_end = ActivityType_callRelation.end; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_callRelation_end: _enum_for_ActivityType_callRelation.end = ActivityType_callRelation.end; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary end
@@ -186,7 +186,7 @@ const ActivityType_callRelation_end = ActivityType_callRelation.end; /* LONG_NAM
  * @type {number}
  */
 export
-const end = ActivityType_callRelation.end; /* SHORT_NAMED_ENUMERATED_VALUE */
+const end: _enum_for_ActivityType_callRelation.end = ActivityType_callRelation.end; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityType_callRelation_continue_
@@ -203,7 +203,7 @@ const end = ActivityType_callRelation.end; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ActivityType_callRelation_continue_ = ActivityType_callRelation.continue_; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_callRelation_continue_: _enum_for_ActivityType_callRelation.continue_ = ActivityType_callRelation.continue_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continue_
@@ -220,7 +220,7 @@ const ActivityType_callRelation_continue_ = ActivityType_callRelation.continue_;
  * @type {number}
  */
 export
-const continue_ = ActivityType_callRelation.continue_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continue_: _enum_for_ActivityType_callRelation.continue_ = ActivityType_callRelation.continue_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityType_callRelation_report
@@ -236,7 +236,7 @@ const continue_ = ActivityType_callRelation.continue_; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const ActivityType_callRelation_report = ActivityType_callRelation.report; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_callRelation_report: _enum_for_ActivityType_callRelation.report = ActivityType_callRelation.report; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary report
@@ -252,7 +252,7 @@ const ActivityType_callRelation_report = ActivityType_callRelation.report; /* LO
  * @type {number}
  */
 export
-const report = ActivityType_callRelation.report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const report: _enum_for_ActivityType_callRelation.report = ActivityType_callRelation.report; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ActivityType_callRelation: $.ASN1Decoder<ActivityType_callRelation> = $._decodeEnumerated;
 export const _encode_ActivityType_callRelation: $.ASN1Encoder<ActivityType_callRelation> = $._encodeEnumerated;
 

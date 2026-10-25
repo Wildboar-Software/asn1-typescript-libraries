@@ -82,12 +82,12 @@ export const version2: number = ProtocolVersion_version2; /* SHORT_NAMED_BIT */
 
 
 
-export const _decode_ProtocolVersion = $._decodeBitString;
+export const _decode_ProtocolVersion: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_ProtocolVersion = $._encodeBitString;
+export const _encode_ProtocolVersion: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

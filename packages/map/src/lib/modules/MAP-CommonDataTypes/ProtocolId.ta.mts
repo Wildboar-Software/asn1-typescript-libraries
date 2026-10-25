@@ -90,7 +90,7 @@ type ProtocolId = _enum_for_ProtocolId;
  * @enum {number}
  */
 export
-const ProtocolId = _enum_for_ProtocolId;
+const ProtocolId: typeof _enum_for_ProtocolId = _enum_for_ProtocolId;
 
 /**
  * @summary ProtocolId_gsm_0408
@@ -103,7 +103,7 @@ const ProtocolId = _enum_for_ProtocolId;
  * @type {number}
  */
 export
-const ProtocolId_gsm_0408 = ProtocolId.gsm_0408; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_gsm_0408: _enum_for_ProtocolId.gsm_0408 = ProtocolId.gsm_0408; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_0408
@@ -116,7 +116,7 @@ const ProtocolId_gsm_0408 = ProtocolId.gsm_0408; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const gsm_0408 = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_0408: _enum_for_ProtocolId.gsm_0408 = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolId_gsm_0806
@@ -129,7 +129,7 @@ const gsm_0408 = ProtocolId.gsm_0408; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProtocolId_gsm_0806 = ProtocolId.gsm_0806; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_gsm_0806: _enum_for_ProtocolId.gsm_0806 = ProtocolId.gsm_0806; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_0806
@@ -142,7 +142,7 @@ const ProtocolId_gsm_0806 = ProtocolId.gsm_0806; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const gsm_0806 = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_0806: _enum_for_ProtocolId.gsm_0806 = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolId_gsm_BSSMAP
@@ -154,7 +154,7 @@ const gsm_0806 = ProtocolId.gsm_0806; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProtocolId_gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_gsm_BSSMAP: _enum_for_ProtocolId.gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gsm_BSSMAP
@@ -166,7 +166,7 @@ const ProtocolId_gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gsm_BSSMAP: _enum_for_ProtocolId.gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProtocolId_ets_300102_1
@@ -179,7 +179,7 @@ const gsm_BSSMAP = ProtocolId.gsm_BSSMAP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ProtocolId_ets_300102_1 = ProtocolId.ets_300102_1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProtocolId_ets_300102_1: _enum_for_ProtocolId.ets_300102_1 = ProtocolId.ets_300102_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ets_300102_1
@@ -192,7 +192,7 @@ const ProtocolId_ets_300102_1 = ProtocolId.ets_300102_1; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ets_300102_1 = ProtocolId.ets_300102_1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ets_300102_1: _enum_for_ProtocolId.ets_300102_1 = ProtocolId.ets_300102_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ProtocolId
@@ -200,7 +200,7 @@ const ets_300102_1 = ProtocolId.ets_300102_1; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ProtocolId = $._decodeEnumerated;
+export const _decode_ProtocolId: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ProtocolId into an ASN.1 Element.
@@ -209,7 +209,7 @@ export const _decode_ProtocolId = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProtocolId, encoded as an ASN.1 Element.
  */
-export const _encode_ProtocolId = $._encodeEnumerated;
+export const _encode_ProtocolId: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

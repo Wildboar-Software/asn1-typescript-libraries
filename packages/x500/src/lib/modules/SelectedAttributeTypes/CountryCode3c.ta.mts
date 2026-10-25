@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type CountryCode3c = PrintableString; // PrintableString
 
 
-export const _decode_CountryCode3c = $._decodePrintableString;
+export const _decode_CountryCode3c: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_CountryCode3c = $._encodePrintableString;
+export const _encode_CountryCode3c: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

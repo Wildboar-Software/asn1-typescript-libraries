@@ -46,7 +46,7 @@ export class EventSpecificInformationSMS_o_smsFailureSpecificInfo {
         return new EventSpecificInformationSMS_o_smsFailureSpecificInfo(_o.failureCause, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_failureCause = _enum_for_MO_SMSCause;
+    public static _enum_for_failureCause: typeof _enum_for_MO_SMSCause = _enum_for_MO_SMSCause;
 }
 
 export const _root_component_type_list_1_spec_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo: $.ComponentSpec[] = [

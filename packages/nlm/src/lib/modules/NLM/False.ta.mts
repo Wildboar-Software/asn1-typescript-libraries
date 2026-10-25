@@ -33,12 +33,12 @@ export type False = BOOLEAN; // BooleanType
 
 
 
-export const _decode_False = $._decodeBoolean;
+export const _decode_False: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_False = $._encodeBoolean;
+export const _encode_False: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

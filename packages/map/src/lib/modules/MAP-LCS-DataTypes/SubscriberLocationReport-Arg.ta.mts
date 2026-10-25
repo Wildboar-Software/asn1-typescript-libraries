@@ -514,13 +514,13 @@ class SubscriberLocationReport_Arg {
          * @static
          */
 
-    public static _enum_for_lcs_Event = _enum_for_LCS_Event;        /**
+    public static _enum_for_lcs_Event: typeof _enum_for_LCS_Event = _enum_for_LCS_Event;        /**
          * @summary The enum used as the type of the component `accuracyFulfilmentIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_accuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
+    public static _enum_for_accuracyFulfilmentIndicator: typeof _enum_for_AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
 }
 
 /**

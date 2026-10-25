@@ -130,13 +130,13 @@ class O_BcsmCamelTDPData {
          * @static
          */
 
-    public static _enum_for_o_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint;        /**
+    public static _enum_for_o_BcsmTriggerDetectionPoint: typeof _enum_for_O_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `defaultCallHandling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultCallHandling = _enum_for_DefaultCallHandling;
+    public static _enum_for_defaultCallHandling: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;
 }
 
 /**

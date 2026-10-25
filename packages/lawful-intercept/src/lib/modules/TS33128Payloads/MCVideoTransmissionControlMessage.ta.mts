@@ -142,7 +142,7 @@ class MCVideoTransmissionControlMessage {
          * @static
          */
 
-    public static _enum_for_transmissionControlMessageDirection = _enum_for_Direction;
+    public static _enum_for_transmissionControlMessageDirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

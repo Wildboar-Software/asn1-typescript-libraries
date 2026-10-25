@@ -35,10 +35,10 @@ export
 type AddressType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_AddressType = $._decodeObjectIdentifier;
+export const _decode_AddressType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_AddressType = $._encodeObjectIdentifier;
+export const _encode_AddressType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

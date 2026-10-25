@@ -48,7 +48,7 @@ type LCSClientType = _enum_for_LCSClientType | ENUMERATED;
  * @type {number}
  */
 export
-const LCSClientType_emergencyServices = _enum_for_LCSClientType.emergencyServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientType_emergencyServices: _enum_for_LCSClientType.emergencyServices = _enum_for_LCSClientType.emergencyServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyServices
@@ -60,7 +60,7 @@ const LCSClientType_emergencyServices = _enum_for_LCSClientType.emergencyService
  * @type {number}
  */
 export
-const emergencyServices = LCSClientType_emergencyServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyServices: _enum_for_LCSClientType.emergencyServices = LCSClientType_emergencyServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientType_valueAddedServices
@@ -72,7 +72,7 @@ const emergencyServices = LCSClientType_emergencyServices; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const LCSClientType_valueAddedServices = _enum_for_LCSClientType.valueAddedServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientType_valueAddedServices: _enum_for_LCSClientType.valueAddedServices = _enum_for_LCSClientType.valueAddedServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary valueAddedServices
@@ -84,7 +84,7 @@ const LCSClientType_valueAddedServices = _enum_for_LCSClientType.valueAddedServi
  * @type {number}
  */
 export
-const valueAddedServices = LCSClientType_valueAddedServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const valueAddedServices: _enum_for_LCSClientType.valueAddedServices = LCSClientType_valueAddedServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientType_plmnOperatorServices
@@ -96,7 +96,7 @@ const valueAddedServices = LCSClientType_valueAddedServices; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const LCSClientType_plmnOperatorServices = _enum_for_LCSClientType.plmnOperatorServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientType_plmnOperatorServices: _enum_for_LCSClientType.plmnOperatorServices = _enum_for_LCSClientType.plmnOperatorServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmnOperatorServices
@@ -108,7 +108,7 @@ const LCSClientType_plmnOperatorServices = _enum_for_LCSClientType.plmnOperatorS
  * @type {number}
  */
 export
-const plmnOperatorServices = LCSClientType_plmnOperatorServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plmnOperatorServices: _enum_for_LCSClientType.plmnOperatorServices = LCSClientType_plmnOperatorServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientType_lawfulInterceptServices
@@ -120,7 +120,7 @@ const plmnOperatorServices = LCSClientType_plmnOperatorServices; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const LCSClientType_lawfulInterceptServices = _enum_for_LCSClientType.lawfulInterceptServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientType_lawfulInterceptServices: _enum_for_LCSClientType.lawfulInterceptServices = _enum_for_LCSClientType.lawfulInterceptServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lawfulInterceptServices
@@ -132,7 +132,7 @@ const LCSClientType_lawfulInterceptServices = _enum_for_LCSClientType.lawfulInte
  * @type {number}
  */
 export
-const lawfulInterceptServices = LCSClientType_lawfulInterceptServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lawfulInterceptServices: _enum_for_LCSClientType.lawfulInterceptServices = LCSClientType_lawfulInterceptServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCSClientType
@@ -140,7 +140,7 @@ const lawfulInterceptServices = LCSClientType_lawfulInterceptServices; /* SHORT_
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LCSClientType = $._decodeEnumerated;
+export const _decode_LCSClientType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCSClientType into an ASN.1 Element.
@@ -149,7 +149,7 @@ export const _decode_LCSClientType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCSClientType, encoded as an ASN.1 Element.
  */
-export const _encode_LCSClientType = $._encodeEnumerated;
+export const _encode_LCSClientType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

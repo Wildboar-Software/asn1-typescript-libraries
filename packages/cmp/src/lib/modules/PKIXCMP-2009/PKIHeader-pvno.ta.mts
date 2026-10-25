@@ -41,7 +41,7 @@ export type PKIHeader_pvno = INTEGER;
  * @constant
  * @type {number}
  */
-export const PKIHeader_pvno_cmp1999 = 1 satisfies PKIHeader_pvno; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIHeader_pvno_cmp1999: 1 = 1 satisfies PKIHeader_pvno; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const PKIHeader_pvno_cmp1999 = 1 satisfies PKIHeader_pvno; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const cmp1999 = PKIHeader_pvno_cmp1999; /* SHORT_NAMED_INTEGER_VALUE */
+export const cmp1999: 1 = PKIHeader_pvno_cmp1999; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const cmp1999 = PKIHeader_pvno_cmp1999; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const PKIHeader_pvno_cmp2000 = 2 satisfies PKIHeader_pvno; /* LONG_NAMED_INTEGER_VALUE */
+export const PKIHeader_pvno_cmp2000: 2 = 2 satisfies PKIHeader_pvno; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,17 +79,17 @@ export const PKIHeader_pvno_cmp2000 = 2 satisfies PKIHeader_pvno; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const cmp2000 = PKIHeader_pvno_cmp2000; /* SHORT_NAMED_INTEGER_VALUE */
+export const cmp2000: 2 = PKIHeader_pvno_cmp2000; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_PKIHeader_pvno = $._decodeInteger;
+export const _decode_PKIHeader_pvno: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_PKIHeader_pvno = $._encodeInteger;
+export const _encode_PKIHeader_pvno: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

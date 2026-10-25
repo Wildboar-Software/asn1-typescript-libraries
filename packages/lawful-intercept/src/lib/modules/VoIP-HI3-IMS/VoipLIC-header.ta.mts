@@ -258,13 +258,13 @@ class VoipLIC_header {
          * @static
          */
 
-    public static _enum_for_t_PDU_direction = _enum_for_TPDU_direction;        /**
+    public static _enum_for_t_PDU_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;        /**
          * @summary The enum used as the type of the component `ice_type`
          * @public
          * @static
          */
 
-    public static _enum_for_ice_type = _enum_for_ICE_type;
+    public static _enum_for_ice_type: typeof _enum_for_ICE_type = _enum_for_ICE_type;
 }
 
 /**

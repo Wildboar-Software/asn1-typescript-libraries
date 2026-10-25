@@ -172,7 +172,7 @@ class TBBSecurityAssertions {
      * @public
      * @static
      */
-    public static _enum_for_rtmType = _enum_for_MeasurementRootType;
+    public static _enum_for_rtmType: typeof _enum_for_MeasurementRootType = _enum_for_MeasurementRootType;
 }
 
 /**

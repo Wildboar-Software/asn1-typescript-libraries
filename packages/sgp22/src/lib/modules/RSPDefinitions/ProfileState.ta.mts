@@ -36,7 +36,7 @@ type ProfileState = INTEGER;
  * @type {number}
  */
 export
-const ProfileState_disabled = 0 satisfies ProfileState; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileState_disabled: 0 = 0 satisfies ProfileState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileState_disabled
@@ -49,7 +49,7 @@ const ProfileState_disabled = 0 satisfies ProfileState; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const disabled = ProfileState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
+const disabled: 0 = ProfileState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileState_enabled
@@ -62,7 +62,7 @@ const disabled = ProfileState_disabled; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ProfileState_enabled = 1 satisfies ProfileState; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileState_enabled: 1 = 1 satisfies ProfileState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileState_enabled
@@ -75,9 +75,9 @@ const ProfileState_enabled = 1 satisfies ProfileState; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const enabled = ProfileState_enabled; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ProfileState = $._decodeInteger;
-export const _encode_ProfileState = $._encodeInteger;
+const enabled: 1 = ProfileState_enabled; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ProfileState: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ProfileState: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

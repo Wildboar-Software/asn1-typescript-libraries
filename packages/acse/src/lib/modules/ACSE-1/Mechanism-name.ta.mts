@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Mechanism_name = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_Mechanism_name = $._decodeObjectIdentifier;
+export const _decode_Mechanism_name: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_Mechanism_name = $._encodeObjectIdentifier;
+export const _encode_Mechanism_name: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

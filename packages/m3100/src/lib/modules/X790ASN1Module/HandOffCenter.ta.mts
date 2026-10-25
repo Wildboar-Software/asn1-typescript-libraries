@@ -28,12 +28,12 @@ export type HandOffCenter = GraphicString; // GraphicString
 
 
 
-export const _decode_HandOffCenter = $._decodeGraphicString;
+export const _decode_HandOffCenter: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_HandOffCenter = $._encodeGraphicString;
+export const _encode_HandOffCenter: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -42,7 +42,7 @@ type MaxLogSize = INTEGER;
  * @type {number}
  */
 export
-const MaxLogSize_unlimited = 0 satisfies MaxLogSize; /* LONG_NAMED_INTEGER_VALUE */
+const MaxLogSize_unlimited: 0 = 0 satisfies MaxLogSize; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MaxLogSize_unlimited
@@ -54,13 +54,13 @@ const MaxLogSize_unlimited = 0 satisfies MaxLogSize; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const unlimited = MaxLogSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
+const unlimited: 0 = MaxLogSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_MaxLogSize = $._decodeInteger;
+export const _decode_MaxLogSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MaxLogSize = $._encodeInteger;
+export const _encode_MaxLogSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

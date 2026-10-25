@@ -499,8 +499,8 @@ const HeaderFlags_force_rediscovery: number = 31; /* LONG_NAMED_BIT */
  */
 export
 const force_rediscovery: number = HeaderFlags_force_rediscovery; /* SHORT_NAMED_BIT */
-export const _decode_HeaderFlags = $._decodeBitString;
-export const _encode_HeaderFlags = $._encodeBitString;
+export const _decode_HeaderFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_HeaderFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

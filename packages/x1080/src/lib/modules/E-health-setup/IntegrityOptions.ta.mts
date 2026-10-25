@@ -35,12 +35,12 @@ export type IntegrityOptions = BOOLEAN; // BooleanType
 
 
 
-export const _decode_IntegrityOptions = $._decodeBoolean;
+export const _decode_IntegrityOptions: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_IntegrityOptions = $._encodeBoolean;
+export const _encode_IntegrityOptions: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

@@ -94,7 +94,7 @@ type TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirec
  * @enum {number}
  */
 export
-const TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirection;
+const TopologyRequest_topologyDirection: typeof _enum_for_TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirection;
 
 /**
  * @summary TopologyRequest_topologyDirection_bothway
@@ -108,7 +108,7 @@ const TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDire
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirection_bothway = TopologyRequest_topologyDirection.bothway; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirection_bothway: _enum_for_TopologyRequest_topologyDirection.bothway = TopologyRequest_topologyDirection.bothway; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothway
@@ -116,7 +116,7 @@ const TopologyRequest_topologyDirection_bothway = TopologyRequest_topologyDirect
  * @type {number}
  */
 export
-const bothway = TopologyRequest_topologyDirection.bothway; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothway: _enum_for_TopologyRequest_topologyDirection.bothway = TopologyRequest_topologyDirection.bothway; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TopologyRequest_topologyDirection_isolate
@@ -128,7 +128,7 @@ const bothway = TopologyRequest_topologyDirection.bothway; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirection_isolate = TopologyRequest_topologyDirection.isolate; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirection_isolate: _enum_for_TopologyRequest_topologyDirection.isolate = TopologyRequest_topologyDirection.isolate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isolate
@@ -136,7 +136,7 @@ const TopologyRequest_topologyDirection_isolate = TopologyRequest_topologyDirect
  * @type {number}
  */
 export
-const isolate = TopologyRequest_topologyDirection.isolate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isolate: _enum_for_TopologyRequest_topologyDirection.isolate = TopologyRequest_topologyDirection.isolate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TopologyRequest_topologyDirection_oneway
@@ -151,7 +151,7 @@ const isolate = TopologyRequest_topologyDirection.isolate; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirection_oneway = TopologyRequest_topologyDirection.oneway; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirection_oneway: _enum_for_TopologyRequest_topologyDirection.oneway = TopologyRequest_topologyDirection.oneway; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneway
@@ -159,9 +159,9 @@ const TopologyRequest_topologyDirection_oneway = TopologyRequest_topologyDirecti
  * @type {number}
  */
 export
-const oneway = TopologyRequest_topologyDirection.oneway; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_TopologyRequest_topologyDirection = $._decodeEnumerated;
-export const _encode_TopologyRequest_topologyDirection = $._encodeEnumerated;
+const oneway: _enum_for_TopologyRequest_topologyDirection.oneway = TopologyRequest_topologyDirection.oneway; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_TopologyRequest_topologyDirection: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_TopologyRequest_topologyDirection: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

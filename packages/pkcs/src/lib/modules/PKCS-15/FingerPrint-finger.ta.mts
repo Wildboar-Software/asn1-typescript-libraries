@@ -51,7 +51,7 @@ export type FingerPrint_finger = _enum_for_FingerPrint_finger;
  *
  * @enum {number}
  */
-export const FingerPrint_finger = _enum_for_FingerPrint_finger;
+export const FingerPrint_finger: typeof _enum_for_FingerPrint_finger = _enum_for_FingerPrint_finger;
 
 
 /**
@@ -59,7 +59,7 @@ export const FingerPrint_finger = _enum_for_FingerPrint_finger;
  * @constant
  * @type {number}
  */
-export const FingerPrint_finger_thumb =
+export const FingerPrint_finger_thumb: _enum_for_FingerPrint_finger.thumb =
     FingerPrint_finger.thumb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -68,7 +68,7 @@ export const FingerPrint_finger_thumb =
  * @constant
  * @type {number}
  */
-export const thumb =
+export const thumb: _enum_for_FingerPrint_finger.thumb =
     FingerPrint_finger.thumb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -77,7 +77,7 @@ export const thumb =
  * @constant
  * @type {number}
  */
-export const FingerPrint_finger_pointerFinger =
+export const FingerPrint_finger_pointerFinger: _enum_for_FingerPrint_finger.pointerFinger =
     FingerPrint_finger.pointerFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -86,7 +86,7 @@ export const FingerPrint_finger_pointerFinger =
  * @constant
  * @type {number}
  */
-export const pointerFinger =
+export const pointerFinger: _enum_for_FingerPrint_finger.pointerFinger =
     FingerPrint_finger.pointerFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -95,7 +95,7 @@ export const pointerFinger =
  * @constant
  * @type {number}
  */
-export const FingerPrint_finger_middleFinger =
+export const FingerPrint_finger_middleFinger: _enum_for_FingerPrint_finger.middleFinger =
     FingerPrint_finger.middleFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -104,7 +104,7 @@ export const FingerPrint_finger_middleFinger =
  * @constant
  * @type {number}
  */
-export const middleFinger =
+export const middleFinger: _enum_for_FingerPrint_finger.middleFinger =
     FingerPrint_finger.middleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -113,7 +113,7 @@ export const middleFinger =
  * @constant
  * @type {number}
  */
-export const FingerPrint_finger_ringFinger =
+export const FingerPrint_finger_ringFinger: _enum_for_FingerPrint_finger.ringFinger =
     FingerPrint_finger.ringFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -122,7 +122,7 @@ export const FingerPrint_finger_ringFinger =
  * @constant
  * @type {number}
  */
-export const ringFinger =
+export const ringFinger: _enum_for_FingerPrint_finger.ringFinger =
     FingerPrint_finger.ringFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +131,7 @@ export const ringFinger =
  * @constant
  * @type {number}
  */
-export const FingerPrint_finger_littleFinger =
+export const FingerPrint_finger_littleFinger: _enum_for_FingerPrint_finger.littleFinger =
     FingerPrint_finger.littleFinger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -140,18 +140,18 @@ export const FingerPrint_finger_littleFinger =
  * @constant
  * @type {number}
  */
-export const littleFinger =
+export const littleFinger: _enum_for_FingerPrint_finger.littleFinger =
     FingerPrint_finger.littleFinger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_FingerPrint_finger = $._decodeEnumerated;
+export const _decode_FingerPrint_finger: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_FingerPrint_finger = $._encodeEnumerated;
+export const _encode_FingerPrint_finger: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

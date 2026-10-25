@@ -133,14 +133,14 @@ export class NonReceiptFields {
      * @static
      */
 
-    public static _enum_for_non_receipt_reason = _enum_for_NonReceiptReasonField;
+    public static _enum_for_non_receipt_reason: typeof _enum_for_NonReceiptReasonField = _enum_for_NonReceiptReasonField;
     /**
      * @summary The enum used as the type of the component `discard_reason`
      * @public
      * @static
      */
 
-    public static _enum_for_discard_reason = _enum_for_DiscardReasonField;
+    public static _enum_for_discard_reason: typeof _enum_for_DiscardReasonField = _enum_for_DiscardReasonField;
 }
 
 /**

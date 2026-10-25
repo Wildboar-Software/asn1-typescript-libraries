@@ -28,12 +28,12 @@ export type ServiceDescription = GraphicString; // GraphicString
 
 
 
-export const _decode_ServiceDescription = $._decodeGraphicString;
+export const _decode_ServiceDescription: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ServiceDescription = $._encodeGraphicString;
+export const _encode_ServiceDescription: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

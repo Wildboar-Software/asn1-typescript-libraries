@@ -124,7 +124,7 @@ type MonitoringType = _enum_for_MonitoringType;
  * @enum {number}
  */
 export
-const MonitoringType = _enum_for_MonitoringType;
+const MonitoringType: typeof _enum_for_MonitoringType = _enum_for_MonitoringType;
 
 /**
  * @summary MonitoringType_lossOfConnectivity
@@ -141,7 +141,7 @@ const MonitoringType = _enum_for_MonitoringType;
  * @type {number}
  */
 export
-const MonitoringType_lossOfConnectivity = MonitoringType.lossOfConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_lossOfConnectivity: _enum_for_MonitoringType.lossOfConnectivity = MonitoringType.lossOfConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lossOfConnectivity
@@ -154,7 +154,7 @@ const MonitoringType_lossOfConnectivity = MonitoringType.lossOfConnectivity; /* 
  * @type {number}
  */
 export
-const lossOfConnectivity = MonitoringType.lossOfConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lossOfConnectivity: _enum_for_MonitoringType.lossOfConnectivity = MonitoringType.lossOfConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_ueReachability
@@ -170,7 +170,7 @@ const lossOfConnectivity = MonitoringType.lossOfConnectivity; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const MonitoringType_ueReachability = MonitoringType.ueReachability; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_ueReachability: _enum_for_MonitoringType.ueReachability = MonitoringType.ueReachability; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ueReachability
@@ -182,7 +182,7 @@ const MonitoringType_ueReachability = MonitoringType.ueReachability; /* LONG_NAM
  * @type {number}
  */
 export
-const ueReachability = MonitoringType.ueReachability; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ueReachability: _enum_for_MonitoringType.ueReachability = MonitoringType.ueReachability; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_locationReporting
@@ -198,7 +198,7 @@ const ueReachability = MonitoringType.ueReachability; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const MonitoringType_locationReporting = MonitoringType.locationReporting; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_locationReporting: _enum_for_MonitoringType.locationReporting = MonitoringType.locationReporting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationReporting
@@ -211,7 +211,7 @@ const MonitoringType_locationReporting = MonitoringType.locationReporting; /* LO
  * @type {number}
  */
 export
-const locationReporting = MonitoringType.locationReporting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationReporting: _enum_for_MonitoringType.locationReporting = MonitoringType.locationReporting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_changeOfIMSIIMEISVAssociation
@@ -224,7 +224,7 @@ const locationReporting = MonitoringType.locationReporting; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const MonitoringType_changeOfIMSIIMEISVAssociation = MonitoringType.changeOfIMSIIMEISVAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_changeOfIMSIIMEISVAssociation: _enum_for_MonitoringType.changeOfIMSIIMEISVAssociation = MonitoringType.changeOfIMSIIMEISVAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changeOfIMSIIMEISVAssociation
@@ -237,7 +237,7 @@ const MonitoringType_changeOfIMSIIMEISVAssociation = MonitoringType.changeOfIMSI
  * @type {number}
  */
 export
-const changeOfIMSIIMEISVAssociation = MonitoringType.changeOfIMSIIMEISVAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const changeOfIMSIIMEISVAssociation: _enum_for_MonitoringType.changeOfIMSIIMEISVAssociation = MonitoringType.changeOfIMSIIMEISVAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_roamingStatus
@@ -250,7 +250,7 @@ const changeOfIMSIIMEISVAssociation = MonitoringType.changeOfIMSIIMEISVAssociati
  * @type {number}
  */
 export
-const MonitoringType_roamingStatus = MonitoringType.roamingStatus; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_roamingStatus: _enum_for_MonitoringType.roamingStatus = MonitoringType.roamingStatus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingStatus
@@ -263,7 +263,7 @@ const MonitoringType_roamingStatus = MonitoringType.roamingStatus; /* LONG_NAMED
  * @type {number}
  */
 export
-const roamingStatus = MonitoringType.roamingStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingStatus: _enum_for_MonitoringType.roamingStatus = MonitoringType.roamingStatus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_communicationFailure
@@ -279,7 +279,7 @@ const roamingStatus = MonitoringType.roamingStatus; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MonitoringType_communicationFailure = MonitoringType.communicationFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_communicationFailure: _enum_for_MonitoringType.communicationFailure = MonitoringType.communicationFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary communicationFailure
@@ -292,7 +292,7 @@ const MonitoringType_communicationFailure = MonitoringType.communicationFailure;
  * @type {number}
  */
 export
-const communicationFailure = MonitoringType.communicationFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const communicationFailure: _enum_for_MonitoringType.communicationFailure = MonitoringType.communicationFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_availabilityAfterDDNFailure
@@ -308,7 +308,7 @@ const communicationFailure = MonitoringType.communicationFailure; /* SHORT_NAMED
  * @type {number}
  */
 export
-const MonitoringType_availabilityAfterDDNFailure = MonitoringType.availabilityAfterDDNFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_availabilityAfterDDNFailure: _enum_for_MonitoringType.availabilityAfterDDNFailure = MonitoringType.availabilityAfterDDNFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary availabilityAfterDDNFailure
@@ -321,7 +321,7 @@ const MonitoringType_availabilityAfterDDNFailure = MonitoringType.availabilityAf
  * @type {number}
  */
 export
-const availabilityAfterDDNFailure = MonitoringType.availabilityAfterDDNFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const availabilityAfterDDNFailure: _enum_for_MonitoringType.availabilityAfterDDNFailure = MonitoringType.availabilityAfterDDNFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringType_numberOfUEPerLocation
@@ -339,7 +339,7 @@ const availabilityAfterDDNFailure = MonitoringType.availabilityAfterDDNFailure; 
  * @type {number}
  */
 export
-const MonitoringType_numberOfUEPerLocation = MonitoringType.numberOfUEPerLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringType_numberOfUEPerLocation: _enum_for_MonitoringType.numberOfUEPerLocation = MonitoringType.numberOfUEPerLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberOfUEPerLocation
@@ -352,7 +352,7 @@ const MonitoringType_numberOfUEPerLocation = MonitoringType.numberOfUEPerLocatio
  * @type {number}
  */
 export
-const numberOfUEPerLocation = MonitoringType.numberOfUEPerLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberOfUEPerLocation: _enum_for_MonitoringType.numberOfUEPerLocation = MonitoringType.numberOfUEPerLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MonitoringType: $.ASN1Decoder<MonitoringType> = $._decodeEnumerated;

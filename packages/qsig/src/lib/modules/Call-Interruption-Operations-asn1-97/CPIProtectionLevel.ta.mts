@@ -91,7 +91,7 @@ type CPIProtectionLevel = _enum_for_CPIProtectionLevel;
  * @enum {number}
  */
 export
-const CPIProtectionLevel = _enum_for_CPIProtectionLevel;
+const CPIProtectionLevel: typeof _enum_for_CPIProtectionLevel = _enum_for_CPIProtectionLevel;
 
 /**
  * @summary CPIProtectionLevel_noProtection
@@ -105,7 +105,7 @@ const CPIProtectionLevel = _enum_for_CPIProtectionLevel;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPIProtectionLevel_noProtection = CPIProtectionLevel.noProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPIProtectionLevel_noProtection: _enum_for_CPIProtectionLevel.noProtection = CPIProtectionLevel.noProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noProtection
@@ -114,7 +114,7 @@ const CPIProtectionLevel_noProtection = CPIProtectionLevel.noProtection; /* LONG
  * @type {number}
  */
 export
-const noProtection = CPIProtectionLevel.noProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noProtection: _enum_for_CPIProtectionLevel.noProtection = CPIProtectionLevel.noProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CPIProtectionLevel_lowProtection
@@ -127,7 +127,7 @@ const noProtection = CPIProtectionLevel.noProtection; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPIProtectionLevel_lowProtection = CPIProtectionLevel.lowProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPIProtectionLevel_lowProtection: _enum_for_CPIProtectionLevel.lowProtection = CPIProtectionLevel.lowProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lowProtection
@@ -136,7 +136,7 @@ const CPIProtectionLevel_lowProtection = CPIProtectionLevel.lowProtection; /* LO
  * @type {number}
  */
 export
-const lowProtection = CPIProtectionLevel.lowProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lowProtection: _enum_for_CPIProtectionLevel.lowProtection = CPIProtectionLevel.lowProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CPIProtectionLevel_mediumProtection
@@ -149,7 +149,7 @@ const lowProtection = CPIProtectionLevel.lowProtection; /* SHORT_NAMED_ENUMERATE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPIProtectionLevel_mediumProtection = CPIProtectionLevel.mediumProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPIProtectionLevel_mediumProtection: _enum_for_CPIProtectionLevel.mediumProtection = CPIProtectionLevel.mediumProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mediumProtection
@@ -158,7 +158,7 @@ const CPIProtectionLevel_mediumProtection = CPIProtectionLevel.mediumProtection;
  * @type {number}
  */
 export
-const mediumProtection = CPIProtectionLevel.mediumProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mediumProtection: _enum_for_CPIProtectionLevel.mediumProtection = CPIProtectionLevel.mediumProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CPIProtectionLevel_totalProtection
@@ -171,7 +171,7 @@ const mediumProtection = CPIProtectionLevel.mediumProtection; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-264/
  */
 export
-const CPIProtectionLevel_totalProtection = CPIProtectionLevel.totalProtection; /* LONG_NAMED_ENUMERATED_VALUE */
+const CPIProtectionLevel_totalProtection: _enum_for_CPIProtectionLevel.totalProtection = CPIProtectionLevel.totalProtection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary totalProtection
@@ -180,7 +180,7 @@ const CPIProtectionLevel_totalProtection = CPIProtectionLevel.totalProtection; /
  * @type {number}
  */
 export
-const totalProtection = CPIProtectionLevel.totalProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const totalProtection: _enum_for_CPIProtectionLevel.totalProtection = CPIProtectionLevel.totalProtection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CPIProtectionLevel: $.ASN1Decoder<CPIProtectionLevel> = $._decodeEnumerated;

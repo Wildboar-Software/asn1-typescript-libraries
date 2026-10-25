@@ -30,8 +30,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type PrivilegeAttributeCertificate = EXTERNAL; // ExternalType
-export const _decode_PrivilegeAttributeCertificate = $._decodeExternal;
-export const _encode_PrivilegeAttributeCertificate = $._encodeExternal;
+export const _decode_PrivilegeAttributeCertificate: $.ASN1Decoder<_External> = $._decodeExternal;
+export const _encode_PrivilegeAttributeCertificate: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

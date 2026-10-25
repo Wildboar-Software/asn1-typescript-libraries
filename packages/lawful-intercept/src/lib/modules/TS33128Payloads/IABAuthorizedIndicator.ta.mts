@@ -93,7 +93,7 @@ type IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
  * @enum {number}
  */
 export
-const IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
+const IABAuthorizedIndicator: typeof _enum_for_IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
 
 /**
  * @summary IABAuthorizedIndicator_authorized
@@ -107,7 +107,7 @@ const IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
  * @type {number}
  */
 export
-const IABAuthorizedIndicator_authorized = IABAuthorizedIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const IABAuthorizedIndicator_authorized: _enum_for_IABAuthorizedIndicator.authorized = IABAuthorizedIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -121,7 +121,7 @@ const IABAuthorizedIndicator_authorized = IABAuthorizedIndicator.authorized; /* 
  * @type {number}
  */
 export
-const authorized = IABAuthorizedIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized: _enum_for_IABAuthorizedIndicator.authorized = IABAuthorizedIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IABAuthorizedIndicator_notAuthorized
@@ -135,7 +135,7 @@ const authorized = IABAuthorizedIndicator.authorized; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const IABAuthorizedIndicator_notAuthorized = IABAuthorizedIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const IABAuthorizedIndicator_notAuthorized: _enum_for_IABAuthorizedIndicator.notAuthorized = IABAuthorizedIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -149,7 +149,7 @@ const IABAuthorizedIndicator_notAuthorized = IABAuthorizedIndicator.notAuthorize
  * @type {number}
  */
 export
-const notAuthorized = IABAuthorizedIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized: _enum_for_IABAuthorizedIndicator.notAuthorized = IABAuthorizedIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IABAuthorizedIndicator: $.ASN1Decoder<IABAuthorizedIndicator> = $._decodeEnumerated;
 export const _encode_IABAuthorizedIndicator: $.ASN1Encoder<IABAuthorizedIndicator> = $._encodeEnumerated;
 

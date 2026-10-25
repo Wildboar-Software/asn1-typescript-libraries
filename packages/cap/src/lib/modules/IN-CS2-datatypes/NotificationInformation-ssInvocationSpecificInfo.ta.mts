@@ -73,7 +73,7 @@ class NotificationInformation_ssInvocationSpecificInfo {
          * @static
          */
 
-    public static _enum_for_invokedService = _enum_for_InvokableService;
+    public static _enum_for_invokedService: typeof _enum_for_InvokableService = _enum_for_InvokableService;
 }
 
 /**

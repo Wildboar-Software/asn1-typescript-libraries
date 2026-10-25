@@ -312,19 +312,19 @@ class EPSRANUEContext {
          * @static
          */
 
-    public static _enum_for_cSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;        /**
+    public static _enum_for_cSFallbackIndicator: typeof _enum_for_EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;        /**
          * @summary The enum used as the type of the component `aerialUESubscription`
          * @public
          * @static
          */
 
-    public static _enum_for_aerialUESubscription = _enum_for_AerialUESubscriptionIndicator;        /**
+    public static _enum_for_aerialUESubscription: typeof _enum_for_AerialUESubscriptionIndicator = _enum_for_AerialUESubscriptionIndicator;        /**
          * @summary The enum used as the type of the component `iABAuthorizedIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_iABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
+    public static _enum_for_iABAuthorizedIndicator: typeof _enum_for_IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
 }
 
 /**

@@ -31,12 +31,12 @@ export type Double = REAL; // RealType
 
 
 
-export const _decode_Double = $._decodeReal;
+export const _decode_Double: $.ASN1Decoder<number> = $._decodeReal;
 
 
 
 
-export const _encode_Double = $._encodeReal;
+export const _encode_Double: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

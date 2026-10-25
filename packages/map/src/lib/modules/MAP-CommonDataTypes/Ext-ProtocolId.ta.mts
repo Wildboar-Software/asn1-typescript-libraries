@@ -46,7 +46,7 @@ type Ext_ProtocolId = _enum_for_Ext_ProtocolId | ENUMERATED;
  * @type {number}
  */
 export
-const Ext_ProtocolId_ets_300356 = _enum_for_Ext_ProtocolId.ets_300356; /* LONG_NAMED_ENUMERATED_VALUE */
+const Ext_ProtocolId_ets_300356: _enum_for_Ext_ProtocolId.ets_300356 = _enum_for_Ext_ProtocolId.ets_300356; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ets_300356
@@ -58,7 +58,7 @@ const Ext_ProtocolId_ets_300356 = _enum_for_Ext_ProtocolId.ets_300356; /* LONG_N
  * @type {number}
  */
 export
-const ets_300356 = Ext_ProtocolId_ets_300356; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ets_300356: _enum_for_Ext_ProtocolId.ets_300356 = Ext_ProtocolId_ets_300356; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Ext_ProtocolId
@@ -66,7 +66,7 @@ const ets_300356 = Ext_ProtocolId_ets_300356; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Ext_ProtocolId = $._decodeEnumerated;
+export const _decode_Ext_ProtocolId: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) Ext_ProtocolId into an ASN.1 Element.
@@ -75,7 +75,7 @@ export const _decode_Ext_ProtocolId = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_ProtocolId, encoded as an ASN.1 Element.
  */
-export const _encode_Ext_ProtocolId = $._encodeEnumerated;
+export const _encode_Ext_ProtocolId: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

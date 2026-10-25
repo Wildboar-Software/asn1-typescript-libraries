@@ -41,7 +41,7 @@ export type WordMatchTypes = _enum_for_WordMatchTypes | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const WordMatchTypes_wordExact = _enum_for_WordMatchTypes.wordExact; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WordMatchTypes_wordExact: _enum_for_WordMatchTypes.wordExact = _enum_for_WordMatchTypes.wordExact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wordExact
@@ -52,7 +52,7 @@ export const WordMatchTypes_wordExact = _enum_for_WordMatchTypes.wordExact; /* L
  * @constant
  * @type {number}
  */
-export const wordExact = WordMatchTypes_wordExact; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wordExact: _enum_for_WordMatchTypes.wordExact = WordMatchTypes_wordExact; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WordMatchTypes_wordTruncated
@@ -63,7 +63,7 @@ export const wordExact = WordMatchTypes_wordExact; /* SHORT_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const WordMatchTypes_wordTruncated = _enum_for_WordMatchTypes.wordTruncated; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WordMatchTypes_wordTruncated: _enum_for_WordMatchTypes.wordTruncated = _enum_for_WordMatchTypes.wordTruncated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wordTruncated
@@ -74,7 +74,7 @@ export const WordMatchTypes_wordTruncated = _enum_for_WordMatchTypes.wordTruncat
  * @constant
  * @type {number}
  */
-export const wordTruncated = WordMatchTypes_wordTruncated; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wordTruncated: _enum_for_WordMatchTypes.wordTruncated = WordMatchTypes_wordTruncated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WordMatchTypes_wordPhonetic
@@ -85,7 +85,7 @@ export const wordTruncated = WordMatchTypes_wordTruncated; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const WordMatchTypes_wordPhonetic = _enum_for_WordMatchTypes.wordPhonetic; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WordMatchTypes_wordPhonetic: _enum_for_WordMatchTypes.wordPhonetic = _enum_for_WordMatchTypes.wordPhonetic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wordPhonetic
@@ -96,7 +96,7 @@ export const WordMatchTypes_wordPhonetic = _enum_for_WordMatchTypes.wordPhonetic
  * @constant
  * @type {number}
  */
-export const wordPhonetic = WordMatchTypes_wordPhonetic; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wordPhonetic: _enum_for_WordMatchTypes.wordPhonetic = WordMatchTypes_wordPhonetic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WordMatchTypes_wordProviderDefined
@@ -107,7 +107,7 @@ export const wordPhonetic = WordMatchTypes_wordPhonetic; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const WordMatchTypes_wordProviderDefined = _enum_for_WordMatchTypes.wordProviderDefined; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WordMatchTypes_wordProviderDefined: _enum_for_WordMatchTypes.wordProviderDefined = _enum_for_WordMatchTypes.wordProviderDefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wordProviderDefined
@@ -118,13 +118,13 @@ export const WordMatchTypes_wordProviderDefined = _enum_for_WordMatchTypes.wordP
  * @constant
  * @type {number}
  */
-export const wordProviderDefined = WordMatchTypes_wordProviderDefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wordProviderDefined: _enum_for_WordMatchTypes.wordProviderDefined = WordMatchTypes_wordProviderDefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_WordMatchTypes = $._decodeEnumerated;
+export const _decode_WordMatchTypes: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_WordMatchTypes = $._encodeEnumerated;
+export const _encode_WordMatchTypes: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

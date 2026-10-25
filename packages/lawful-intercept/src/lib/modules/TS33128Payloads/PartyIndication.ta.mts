@@ -61,7 +61,7 @@ type PartyIndication = _enum_for_PartyIndication;
  * @enum {number}
  */
 export
-const PartyIndication = _enum_for_PartyIndication;
+const PartyIndication: typeof _enum_for_PartyIndication = _enum_for_PartyIndication;
 
 /**
  * @summary PartyIndication_callingParty
@@ -69,7 +69,7 @@ const PartyIndication = _enum_for_PartyIndication;
  * @type {number}
  */
 export
-const PartyIndication_callingParty = PartyIndication.callingParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyIndication_callingParty: _enum_for_PartyIndication.callingParty = PartyIndication.callingParty; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingParty
@@ -77,7 +77,7 @@ const PartyIndication_callingParty = PartyIndication.callingParty; /* LONG_NAMED
  * @type {number}
  */
 export
-const callingParty = PartyIndication.callingParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingParty: _enum_for_PartyIndication.callingParty = PartyIndication.callingParty; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyIndication_calledParty
@@ -85,7 +85,7 @@ const callingParty = PartyIndication.callingParty; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const PartyIndication_calledParty = PartyIndication.calledParty; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyIndication_calledParty: _enum_for_PartyIndication.calledParty = PartyIndication.calledParty; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledParty
@@ -93,7 +93,7 @@ const PartyIndication_calledParty = PartyIndication.calledParty; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const calledParty = PartyIndication.calledParty; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calledParty: _enum_for_PartyIndication.calledParty = PartyIndication.calledParty; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PartyIndication: $.ASN1Decoder<PartyIndication> = $._decodeEnumerated;
 export const _encode_PartyIndication: $.ASN1Encoder<PartyIndication> = $._encodeEnumerated;
 

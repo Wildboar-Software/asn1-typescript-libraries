@@ -45,7 +45,7 @@ type CommandType = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const CommandType_enquiry = 0 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
+const CommandType_enquiry: 0 = 0 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary enquiry
@@ -54,7 +54,7 @@ const CommandType_enquiry = 0 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const enquiry = CommandType_enquiry; /* SHORT_NAMED_INTEGER_VALUE */
+const enquiry: 0 = CommandType_enquiry; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommandType_cancelSRR
@@ -68,7 +68,7 @@ const enquiry = CommandType_enquiry; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const CommandType_cancelSRR = 1 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
+const CommandType_cancelSRR: 1 = 1 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary cancelSRR
@@ -77,7 +77,7 @@ const CommandType_cancelSRR = 1 satisfies CommandType; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const cancelSRR = CommandType_cancelSRR; /* SHORT_NAMED_INTEGER_VALUE */
+const cancelSRR: 1 = CommandType_cancelSRR; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommandType_deletePreviouslySubmittedSM
@@ -92,7 +92,7 @@ const cancelSRR = CommandType_cancelSRR; /* SHORT_NAMED_INTEGER_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const CommandType_deletePreviouslySubmittedSM = 2 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
+const CommandType_deletePreviouslySubmittedSM: 2 = 2 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary deletePreviouslySubmittedSM
@@ -101,7 +101,7 @@ const CommandType_deletePreviouslySubmittedSM = 2 satisfies CommandType; /* LONG
  * @type {number}
  */
 export
-const deletePreviouslySubmittedSM = CommandType_deletePreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
+const deletePreviouslySubmittedSM: 2 = CommandType_deletePreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CommandType_enableSRRrelatingToPreviouslySubmittedSM
@@ -115,7 +115,7 @@ const deletePreviouslySubmittedSM = CommandType_deletePreviouslySubmittedSM; /* 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const CommandType_enableSRRrelatingToPreviouslySubmittedSM = 3 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
+const CommandType_enableSRRrelatingToPreviouslySubmittedSM: 3 = 3 satisfies CommandType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary enableSRRrelatingToPreviouslySubmittedSM
@@ -125,7 +125,7 @@ const CommandType_enableSRRrelatingToPreviouslySubmittedSM = 3 satisfies Command
  * @type {number}
  */
 export
-const enableSRRrelatingToPreviouslySubmittedSM = CommandType_enableSRRrelatingToPreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
+const enableSRRrelatingToPreviouslySubmittedSM: 3 = CommandType_enableSRRrelatingToPreviouslySubmittedSM; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CommandType = (el: _Element): CommandType => {

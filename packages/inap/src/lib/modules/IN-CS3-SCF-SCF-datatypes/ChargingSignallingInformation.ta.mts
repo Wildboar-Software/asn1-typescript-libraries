@@ -70,7 +70,7 @@ class ChargingSignallingInformation {
          * @static
          */
 
-    public static _enum_for_partyToBeCharged = _enum_for_PartyToBeCharged;
+    public static _enum_for_partyToBeCharged: typeof _enum_for_PartyToBeCharged = _enum_for_PartyToBeCharged;
 }
 
 /**

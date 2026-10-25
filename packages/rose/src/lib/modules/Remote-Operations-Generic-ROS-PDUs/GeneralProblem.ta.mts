@@ -35,7 +35,7 @@ export type GeneralProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const GeneralProblem_unrecognizedPDU = 0 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const GeneralProblem_unrecognizedPDU: 0 = 0 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const GeneralProblem_unrecognizedPDU = 0 satisfies GeneralProblem; /* LON
  * @constant
  * @type {number}
  */
-export const unrecognizedPDU = GeneralProblem_unrecognizedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedPDU: 0 = GeneralProblem_unrecognizedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const unrecognizedPDU = GeneralProblem_unrecognizedPDU; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const GeneralProblem_mistypedPDU = 1 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const GeneralProblem_mistypedPDU: 1 = 1 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const GeneralProblem_mistypedPDU = 1 satisfies GeneralProblem; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const mistypedPDU = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedPDU: 1 = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const mistypedPDU = GeneralProblem_mistypedPDU; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const GeneralProblem_badlyStructuredPDU = 2 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const GeneralProblem_badlyStructuredPDU: 2 = 2 satisfies GeneralProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -80,17 +80,17 @@ export const GeneralProblem_badlyStructuredPDU = 2 satisfies GeneralProblem; /* 
  * @constant
  * @type {number}
  */
-export const badlyStructuredPDU = GeneralProblem_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
+export const badlyStructuredPDU: 2 = GeneralProblem_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_GeneralProblem = $._decodeInteger;
+export const _decode_GeneralProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_GeneralProblem = $._encodeInteger;
+export const _encode_GeneralProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

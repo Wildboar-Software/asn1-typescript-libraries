@@ -27,8 +27,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ContentType = OBJECT_IDENTIFIER; // ObjectClassFieldType
-export const _decode_ContentType = $._decodeObjectIdentifier;
-export const _encode_ContentType = $._encodeObjectIdentifier;
+export const _decode_ContentType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
+export const _encode_ContentType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

@@ -70,8 +70,8 @@ const LpaeActivationRequest_lpaeOption_activateScwsBasedLpae: number = 1; /* LON
  */
 export
 const activateScwsBasedLpae: number = LpaeActivationRequest_lpaeOption_activateScwsBasedLpae; /* SHORT_NAMED_BIT */
-export const _decode_LpaeActivationRequest_lpaeOption = $._decodeBitString;
-export const _encode_LpaeActivationRequest_lpaeOption = $._encodeBitString;
+export const _decode_LpaeActivationRequest_lpaeOption: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_LpaeActivationRequest_lpaeOption: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

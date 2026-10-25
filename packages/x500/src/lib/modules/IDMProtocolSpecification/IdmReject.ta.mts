@@ -115,7 +115,7 @@ export class IdmReject {
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_IdmReject_reason;
+    public static _enum_for_reason: typeof _enum_for_IdmReject_reason = _enum_for_IdmReject_reason;
 }
 
 /**

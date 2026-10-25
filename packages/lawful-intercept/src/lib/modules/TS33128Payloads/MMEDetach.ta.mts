@@ -254,19 +254,19 @@ class MMEDetach {
          * @static
          */
 
-    public static _enum_for_detachDirection = _enum_for_MMEDirection;        /**
+    public static _enum_for_detachDirection: typeof _enum_for_MMEDirection = _enum_for_MMEDirection;        /**
          * @summary The enum used as the type of the component `detachType`
          * @public
          * @static
          */
 
-    public static _enum_for_detachType = _enum_for_EPSDetachType;        /**
+    public static _enum_for_detachType: typeof _enum_for_EPSDetachType = _enum_for_EPSDetachType;        /**
          * @summary The enum used as the type of the component `switchOffIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_switchOffIndicator = _enum_for_SwitchOffIndicator;
+    public static _enum_for_switchOffIndicator: typeof _enum_for_SwitchOffIndicator = _enum_for_SwitchOffIndicator;
 }
 
 /**

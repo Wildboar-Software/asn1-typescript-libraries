@@ -46,7 +46,7 @@ export const _decode_NoReplyConditionTime = (el: _Element): NoReplyConditionTime
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NoReplyConditionTime, encoded as an ASN.1 Element.
  */
-export const _encode_NoReplyConditionTime = $._encodeInteger;
+export const _encode_NoReplyConditionTime: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

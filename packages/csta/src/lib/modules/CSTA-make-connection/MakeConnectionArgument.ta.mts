@@ -305,19 +305,19 @@ class MakeConnectionArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }        /**
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;        /**
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;        /**
          * @summary The enum used as the type of the component `reason`
          * @public
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

@@ -58,7 +58,7 @@ type PositionMethodFailure_Diagnostic = _enum_for_PositionMethodFailure_Diagnost
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_congestion = _enum_for_PositionMethodFailure_Diagnostic.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_congestion: _enum_for_PositionMethodFailure_Diagnostic.congestion = _enum_for_PositionMethodFailure_Diagnostic.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -70,7 +70,7 @@ const PositionMethodFailure_Diagnostic_congestion = _enum_for_PositionMethodFail
  * @type {number}
  */
 export
-const congestion = PositionMethodFailure_Diagnostic_congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion: _enum_for_PositionMethodFailure_Diagnostic.congestion = PositionMethodFailure_Diagnostic_congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_insufficientResources
@@ -82,7 +82,7 @@ const congestion = PositionMethodFailure_Diagnostic_congestion; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_insufficientResources = _enum_for_PositionMethodFailure_Diagnostic.insufficientResources; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_insufficientResources: _enum_for_PositionMethodFailure_Diagnostic.insufficientResources = _enum_for_PositionMethodFailure_Diagnostic.insufficientResources; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficientResources
@@ -94,7 +94,7 @@ const PositionMethodFailure_Diagnostic_insufficientResources = _enum_for_Positio
  * @type {number}
  */
 export
-const insufficientResources = PositionMethodFailure_Diagnostic_insufficientResources; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insufficientResources: _enum_for_PositionMethodFailure_Diagnostic.insufficientResources = PositionMethodFailure_Diagnostic_insufficientResources; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_insufficientMeasurementData
@@ -106,7 +106,7 @@ const insufficientResources = PositionMethodFailure_Diagnostic_insufficientResou
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_insufficientMeasurementData = _enum_for_PositionMethodFailure_Diagnostic.insufficientMeasurementData; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_insufficientMeasurementData: _enum_for_PositionMethodFailure_Diagnostic.insufficientMeasurementData = _enum_for_PositionMethodFailure_Diagnostic.insufficientMeasurementData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficientMeasurementData
@@ -118,7 +118,7 @@ const PositionMethodFailure_Diagnostic_insufficientMeasurementData = _enum_for_P
  * @type {number}
  */
 export
-const insufficientMeasurementData = PositionMethodFailure_Diagnostic_insufficientMeasurementData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insufficientMeasurementData: _enum_for_PositionMethodFailure_Diagnostic.insufficientMeasurementData = PositionMethodFailure_Diagnostic_insufficientMeasurementData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_inconsistentMeasurementData
@@ -130,7 +130,7 @@ const insufficientMeasurementData = PositionMethodFailure_Diagnostic_insufficien
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_inconsistentMeasurementData = _enum_for_PositionMethodFailure_Diagnostic.inconsistentMeasurementData; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_inconsistentMeasurementData: _enum_for_PositionMethodFailure_Diagnostic.inconsistentMeasurementData = _enum_for_PositionMethodFailure_Diagnostic.inconsistentMeasurementData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inconsistentMeasurementData
@@ -142,7 +142,7 @@ const PositionMethodFailure_Diagnostic_inconsistentMeasurementData = _enum_for_P
  * @type {number}
  */
 export
-const inconsistentMeasurementData = PositionMethodFailure_Diagnostic_inconsistentMeasurementData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inconsistentMeasurementData: _enum_for_PositionMethodFailure_Diagnostic.inconsistentMeasurementData = PositionMethodFailure_Diagnostic_inconsistentMeasurementData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_locationProcedureNotCompleted
@@ -154,7 +154,7 @@ const inconsistentMeasurementData = PositionMethodFailure_Diagnostic_inconsisten
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_locationProcedureNotCompleted = _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_locationProcedureNotCompleted: _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotCompleted = _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationProcedureNotCompleted
@@ -166,7 +166,7 @@ const PositionMethodFailure_Diagnostic_locationProcedureNotCompleted = _enum_for
  * @type {number}
  */
 export
-const locationProcedureNotCompleted = PositionMethodFailure_Diagnostic_locationProcedureNotCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationProcedureNotCompleted: _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotCompleted = PositionMethodFailure_Diagnostic_locationProcedureNotCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS
@@ -180,7 +180,7 @@ const locationProcedureNotCompleted = PositionMethodFailure_Diagnostic_locationP
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS = _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotSupportedByTargetMS; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS: _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotSupportedByTargetMS = _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotSupportedByTargetMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationProcedureNotSupportedByTargetMS
@@ -194,7 +194,7 @@ const PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS =
  * @type {number}
  */
 export
-const locationProcedureNotSupportedByTargetMS = PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationProcedureNotSupportedByTargetMS: _enum_for_PositionMethodFailure_Diagnostic.locationProcedureNotSupportedByTargetMS = PositionMethodFailure_Diagnostic_locationProcedureNotSupportedByTargetMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_qoSNotAttainable
@@ -206,7 +206,7 @@ const locationProcedureNotSupportedByTargetMS = PositionMethodFailure_Diagnostic
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_qoSNotAttainable = _enum_for_PositionMethodFailure_Diagnostic.qoSNotAttainable; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_qoSNotAttainable: _enum_for_PositionMethodFailure_Diagnostic.qoSNotAttainable = _enum_for_PositionMethodFailure_Diagnostic.qoSNotAttainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary qoSNotAttainable
@@ -218,7 +218,7 @@ const PositionMethodFailure_Diagnostic_qoSNotAttainable = _enum_for_PositionMeth
  * @type {number}
  */
 export
-const qoSNotAttainable = PositionMethodFailure_Diagnostic_qoSNotAttainable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const qoSNotAttainable: _enum_for_PositionMethodFailure_Diagnostic.qoSNotAttainable = PositionMethodFailure_Diagnostic_qoSNotAttainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork
@@ -231,7 +231,7 @@ const qoSNotAttainable = PositionMethodFailure_Diagnostic_qoSNotAttainable; /* S
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork = _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInNetwork; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork: _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInNetwork = _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInNetwork; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary positionMethodNotAvailableInNetwork
@@ -244,7 +244,7 @@ const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork = _en
  * @type {number}
  */
 export
-const positionMethodNotAvailableInNetwork = PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
+const positionMethodNotAvailableInNetwork: _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInNetwork = PositionMethodFailure_Diagnostic_positionMethodNotAvailableInNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea
@@ -257,7 +257,7 @@ const positionMethodNotAvailableInNetwork = PositionMethodFailure_Diagnostic_pos
  * @type {number}
  */
 export
-const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea = _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInLocationArea; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea: _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInLocationArea = _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInLocationArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary positionMethodNotAvailableInLocationArea
@@ -270,7 +270,7 @@ const PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea 
  * @type {number}
  */
 export
-const positionMethodNotAvailableInLocationArea = PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const positionMethodNotAvailableInLocationArea: _enum_for_PositionMethodFailure_Diagnostic.positionMethodNotAvailableInLocationArea = PositionMethodFailure_Diagnostic_positionMethodNotAvailableInLocationArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PositionMethodFailure_Diagnostic
@@ -278,7 +278,7 @@ const positionMethodNotAvailableInLocationArea = PositionMethodFailure_Diagnosti
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_PositionMethodFailure_Diagnostic = $._decodeEnumerated;
+export const _decode_PositionMethodFailure_Diagnostic: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PositionMethodFailure_Diagnostic into an ASN.1 Element.
@@ -287,7 +287,7 @@ export const _decode_PositionMethodFailure_Diagnostic = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PositionMethodFailure_Diagnostic, encoded as an ASN.1 Element.
  */
-export const _encode_PositionMethodFailure_Diagnostic = $._encodeEnumerated;
+export const _encode_PositionMethodFailure_Diagnostic: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

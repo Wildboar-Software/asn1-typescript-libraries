@@ -48,7 +48,7 @@ export const _decode_SM_TC = (el: _Element): SM_TC => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_TC, encoded as an ASN.1 Element.
  */
-export const _encode_SM_TC = $._encodeInteger;
+export const _encode_SM_TC: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

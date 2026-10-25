@@ -167,7 +167,7 @@ export class DomainSuppliedInformation implements AdditionalActions {
      * @static
      */
 
-    public static _enum_for_routing_action = _enum_for_RoutingAction;
+    public static _enum_for_routing_action: typeof _enum_for_RoutingAction = _enum_for_RoutingAction;
 }
 
 /**

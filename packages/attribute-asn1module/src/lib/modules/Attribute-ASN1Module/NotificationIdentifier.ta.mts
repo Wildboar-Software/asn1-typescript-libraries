@@ -33,10 +33,10 @@ export
 type NotificationIdentifier = INTEGER;
 
 
-export const _decode_NotificationIdentifier = $._decodeInteger;
+export const _decode_NotificationIdentifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NotificationIdentifier = $._encodeInteger;
+export const _encode_NotificationIdentifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

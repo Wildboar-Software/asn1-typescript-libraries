@@ -101,13 +101,13 @@ class CallReportData {
          * @static
          */
 
-    public static _enum_for_monitoringMode = _enum_for_MonitoringMode;        /**
+    public static _enum_for_monitoringMode: typeof _enum_for_MonitoringMode = _enum_for_MonitoringMode;        /**
          * @summary The enum used as the type of the component `callOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_callOutcome = _enum_for_CallOutcome;
+    public static _enum_for_callOutcome: typeof _enum_for_CallOutcome = _enum_for_CallOutcome;
 }
 
 /**

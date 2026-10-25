@@ -100,7 +100,7 @@ type NetworkResource = _enum_for_NetworkResource;
  * @enum {number}
  */
 export
-const NetworkResource = _enum_for_NetworkResource;
+const NetworkResource: typeof _enum_for_NetworkResource = _enum_for_NetworkResource;
 
 /**
  * @summary NetworkResource_plmn
@@ -112,7 +112,7 @@ const NetworkResource = _enum_for_NetworkResource;
  * @type {number}
  */
 export
-const NetworkResource_plmn = NetworkResource.plmn; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_plmn: _enum_for_NetworkResource.plmn = NetworkResource.plmn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary plmn
@@ -124,7 +124,7 @@ const NetworkResource_plmn = NetworkResource.plmn; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const plmn = NetworkResource.plmn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const plmn: _enum_for_NetworkResource.plmn = NetworkResource.plmn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_hlr
@@ -136,7 +136,7 @@ const plmn = NetworkResource.plmn; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkResource_hlr = NetworkResource.hlr; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_hlr: _enum_for_NetworkResource.hlr = NetworkResource.hlr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hlr
@@ -148,7 +148,7 @@ const NetworkResource_hlr = NetworkResource.hlr; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const hlr = NetworkResource.hlr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hlr: _enum_for_NetworkResource.hlr = NetworkResource.hlr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_vlr
@@ -160,7 +160,7 @@ const hlr = NetworkResource.hlr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkResource_vlr = NetworkResource.vlr; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_vlr: _enum_for_NetworkResource.vlr = NetworkResource.vlr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vlr
@@ -172,7 +172,7 @@ const NetworkResource_vlr = NetworkResource.vlr; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const vlr = NetworkResource.vlr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vlr: _enum_for_NetworkResource.vlr = NetworkResource.vlr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_pvlr
@@ -184,7 +184,7 @@ const vlr = NetworkResource.vlr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkResource_pvlr = NetworkResource.pvlr; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_pvlr: _enum_for_NetworkResource.pvlr = NetworkResource.pvlr; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pvlr
@@ -196,7 +196,7 @@ const NetworkResource_pvlr = NetworkResource.pvlr; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const pvlr = NetworkResource.pvlr; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pvlr: _enum_for_NetworkResource.pvlr = NetworkResource.pvlr; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_controllingMSC
@@ -208,7 +208,7 @@ const pvlr = NetworkResource.pvlr; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkResource_controllingMSC = NetworkResource.controllingMSC; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_controllingMSC: _enum_for_NetworkResource.controllingMSC = NetworkResource.controllingMSC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary controllingMSC
@@ -220,7 +220,7 @@ const NetworkResource_controllingMSC = NetworkResource.controllingMSC; /* LONG_N
  * @type {number}
  */
 export
-const controllingMSC = NetworkResource.controllingMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const controllingMSC: _enum_for_NetworkResource.controllingMSC = NetworkResource.controllingMSC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_vmsc
@@ -232,7 +232,7 @@ const controllingMSC = NetworkResource.controllingMSC; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const NetworkResource_vmsc = NetworkResource.vmsc; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_vmsc: _enum_for_NetworkResource.vmsc = NetworkResource.vmsc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary vmsc
@@ -244,7 +244,7 @@ const NetworkResource_vmsc = NetworkResource.vmsc; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const vmsc = NetworkResource.vmsc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const vmsc: _enum_for_NetworkResource.vmsc = NetworkResource.vmsc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_eir
@@ -256,7 +256,7 @@ const vmsc = NetworkResource.vmsc; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkResource_eir = NetworkResource.eir; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_eir: _enum_for_NetworkResource.eir = NetworkResource.eir; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eir
@@ -268,7 +268,7 @@ const NetworkResource_eir = NetworkResource.eir; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const eir = NetworkResource.eir; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eir: _enum_for_NetworkResource.eir = NetworkResource.eir; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkResource_rss
@@ -280,7 +280,7 @@ const eir = NetworkResource.eir; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NetworkResource_rss = NetworkResource.rss; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkResource_rss: _enum_for_NetworkResource.rss = NetworkResource.rss; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rss
@@ -292,7 +292,7 @@ const NetworkResource_rss = NetworkResource.rss; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const rss = NetworkResource.rss; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rss: _enum_for_NetworkResource.rss = NetworkResource.rss; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NetworkResource
@@ -300,7 +300,7 @@ const rss = NetworkResource.rss; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NetworkResource = $._decodeEnumerated;
+export const _decode_NetworkResource: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NetworkResource into an ASN.1 Element.
@@ -309,7 +309,7 @@ export const _decode_NetworkResource = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NetworkResource, encoded as an ASN.1 Element.
  */
-export const _encode_NetworkResource = $._encodeEnumerated;
+export const _encode_NetworkResource: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

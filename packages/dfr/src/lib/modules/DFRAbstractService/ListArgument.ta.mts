@@ -220,13 +220,13 @@ class ListArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return Priority_medium; }        /**
+    public static get _default_value_for_priority (): _enum_for_Priority { return Priority_medium; }        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

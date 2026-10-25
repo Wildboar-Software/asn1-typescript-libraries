@@ -124,7 +124,7 @@ class StartDataCollectionArgument {
          * @static
          */
 
-    public static _enum_for_dataCollType = _enum_for_DataCollType;
+    public static _enum_for_dataCollType: typeof _enum_for_DataCollType = _enum_for_DataCollType;
 }
 
 /**

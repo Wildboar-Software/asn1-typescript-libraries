@@ -77,7 +77,7 @@ type LocationEventType = _enum_for_LocationEventType;
  * @enum {number}
  */
 export
-const LocationEventType = _enum_for_LocationEventType;
+const LocationEventType: typeof _enum_for_LocationEventType = _enum_for_LocationEventType;
 
 /**
  * @summary LocationEventType_direct
@@ -85,7 +85,7 @@ const LocationEventType = _enum_for_LocationEventType;
  * @type {number}
  */
 export
-const LocationEventType_direct = LocationEventType.direct; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationEventType_direct: _enum_for_LocationEventType.direct = LocationEventType.direct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary direct
@@ -93,7 +93,7 @@ const LocationEventType_direct = LocationEventType.direct; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const direct = LocationEventType.direct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const direct: _enum_for_LocationEventType.direct = LocationEventType.direct; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationEventType_changeOfServeCell
@@ -101,7 +101,7 @@ const direct = LocationEventType.direct; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LocationEventType_changeOfServeCell = LocationEventType.changeOfServeCell; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationEventType_changeOfServeCell: _enum_for_LocationEventType.changeOfServeCell = LocationEventType.changeOfServeCell; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changeOfServeCell
@@ -109,7 +109,7 @@ const LocationEventType_changeOfServeCell = LocationEventType.changeOfServeCell;
  * @type {number}
  */
 export
-const changeOfServeCell = LocationEventType.changeOfServeCell; /* SHORT_NAMED_ENUMERATED_VALUE */
+const changeOfServeCell: _enum_for_LocationEventType.changeOfServeCell = LocationEventType.changeOfServeCell; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationEventType_uEPrescenceInAreaOfInterest
@@ -117,7 +117,7 @@ const changeOfServeCell = LocationEventType.changeOfServeCell; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const LocationEventType_uEPrescenceInAreaOfInterest = LocationEventType.uEPrescenceInAreaOfInterest; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationEventType_uEPrescenceInAreaOfInterest: _enum_for_LocationEventType.uEPrescenceInAreaOfInterest = LocationEventType.uEPrescenceInAreaOfInterest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEPrescenceInAreaOfInterest
@@ -125,7 +125,7 @@ const LocationEventType_uEPrescenceInAreaOfInterest = LocationEventType.uEPresce
  * @type {number}
  */
 export
-const uEPrescenceInAreaOfInterest = LocationEventType.uEPrescenceInAreaOfInterest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEPrescenceInAreaOfInterest: _enum_for_LocationEventType.uEPrescenceInAreaOfInterest = LocationEventType.uEPrescenceInAreaOfInterest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationEventType_stopChangeOfServeCell
@@ -133,7 +133,7 @@ const uEPrescenceInAreaOfInterest = LocationEventType.uEPrescenceInAreaOfInteres
  * @type {number}
  */
 export
-const LocationEventType_stopChangeOfServeCell = LocationEventType.stopChangeOfServeCell; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationEventType_stopChangeOfServeCell: _enum_for_LocationEventType.stopChangeOfServeCell = LocationEventType.stopChangeOfServeCell; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stopChangeOfServeCell
@@ -141,7 +141,7 @@ const LocationEventType_stopChangeOfServeCell = LocationEventType.stopChangeOfSe
  * @type {number}
  */
 export
-const stopChangeOfServeCell = LocationEventType.stopChangeOfServeCell; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stopChangeOfServeCell: _enum_for_LocationEventType.stopChangeOfServeCell = LocationEventType.stopChangeOfServeCell; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationEventType_stopUEPresenceInAreaOfInterest
@@ -149,7 +149,7 @@ const stopChangeOfServeCell = LocationEventType.stopChangeOfServeCell; /* SHORT_
  * @type {number}
  */
 export
-const LocationEventType_stopUEPresenceInAreaOfInterest = LocationEventType.stopUEPresenceInAreaOfInterest; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationEventType_stopUEPresenceInAreaOfInterest: _enum_for_LocationEventType.stopUEPresenceInAreaOfInterest = LocationEventType.stopUEPresenceInAreaOfInterest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stopUEPresenceInAreaOfInterest
@@ -157,7 +157,7 @@ const LocationEventType_stopUEPresenceInAreaOfInterest = LocationEventType.stopU
  * @type {number}
  */
 export
-const stopUEPresenceInAreaOfInterest = LocationEventType.stopUEPresenceInAreaOfInterest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stopUEPresenceInAreaOfInterest: _enum_for_LocationEventType.stopUEPresenceInAreaOfInterest = LocationEventType.stopUEPresenceInAreaOfInterest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationEventType_cancelLocationReportingForTheUE
@@ -165,7 +165,7 @@ const stopUEPresenceInAreaOfInterest = LocationEventType.stopUEPresenceInAreaOfI
  * @type {number}
  */
 export
-const LocationEventType_cancelLocationReportingForTheUE = LocationEventType.cancelLocationReportingForTheUE; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationEventType_cancelLocationReportingForTheUE: _enum_for_LocationEventType.cancelLocationReportingForTheUE = LocationEventType.cancelLocationReportingForTheUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelLocationReportingForTheUE
@@ -173,7 +173,7 @@ const LocationEventType_cancelLocationReportingForTheUE = LocationEventType.canc
  * @type {number}
  */
 export
-const cancelLocationReportingForTheUE = LocationEventType.cancelLocationReportingForTheUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelLocationReportingForTheUE: _enum_for_LocationEventType.cancelLocationReportingForTheUE = LocationEventType.cancelLocationReportingForTheUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LocationEventType: $.ASN1Decoder<LocationEventType> = $._decodeEnumerated;
 export const _encode_LocationEventType: $.ASN1Encoder<LocationEventType> = $._encodeEnumerated;
 

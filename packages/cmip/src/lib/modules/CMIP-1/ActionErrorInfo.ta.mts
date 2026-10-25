@@ -116,7 +116,7 @@ export class ActionErrorInfo {
    * @static
    */
 
-  public static _enum_for_errorStatus = _enum_for_ActionErrorInfo_errorStatus;
+  public static _enum_for_errorStatus: typeof _enum_for_ActionErrorInfo_errorStatus = _enum_for_ActionErrorInfo_errorStatus;
 }
 
 

@@ -392,31 +392,31 @@ class ReportSM_DeliveryStatusArg {
          * @static
          */
 
-    public static _enum_for_sm_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
+    public static _enum_for_sm_DeliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
          * @summary The enum used as the type of the component `additionalSM_DeliveryOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalSM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
+    public static _enum_for_additionalSM_DeliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
          * @summary The enum used as the type of the component `ip_sm_gw_sm_deliveryOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_ip_sm_gw_sm_deliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
+    public static _enum_for_ip_sm_gw_sm_deliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
          * @summary The enum used as the type of the component `smsf_3gpp_deliveryOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_smsf_3gpp_deliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
+    public static _enum_for_smsf_3gpp_deliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;        /**
          * @summary The enum used as the type of the component `smsf_non_3gpp_deliveryOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_smsf_non_3gpp_deliveryOutcome = _enum_for_SM_DeliveryOutcome;
+    public static _enum_for_smsf_non_3gpp_deliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
 }
 
 /**

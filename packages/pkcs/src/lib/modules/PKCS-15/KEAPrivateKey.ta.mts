@@ -18,12 +18,12 @@ export type KEAPrivateKey = INTEGER;
 
 
 
-export const _decode_KEAPrivateKey = $._decodeInteger;
+export const _decode_KEAPrivateKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_KEAPrivateKey = $._encodeInteger;
+export const _encode_KEAPrivateKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

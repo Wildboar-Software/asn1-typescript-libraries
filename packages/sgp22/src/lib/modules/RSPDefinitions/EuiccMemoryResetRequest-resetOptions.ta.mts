@@ -94,8 +94,8 @@ const EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress: number = 2; 
  */
 export
 const resetDefaultSmdpAddress: number = EuiccMemoryResetRequest_resetOptions_resetDefaultSmdpAddress; /* SHORT_NAMED_BIT */
-export const _decode_EuiccMemoryResetRequest_resetOptions = $._decodeBitString;
-export const _encode_EuiccMemoryResetRequest_resetOptions = $._encodeBitString;
+export const _decode_EuiccMemoryResetRequest_resetOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_EuiccMemoryResetRequest_resetOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

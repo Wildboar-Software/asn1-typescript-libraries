@@ -39,7 +39,7 @@ export const _decode_ExtensionType = (el: _Element): ExtensionType => {
     }
     return value;
 };
-export const _encode_ExtensionType = $._encodeInteger;
+export const _encode_ExtensionType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

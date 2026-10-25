@@ -165,7 +165,7 @@ class LampModeEvent {
          * @static
          */
 
-    public static _enum_for_lampBrightness = _enum_for_LampBrightness;
+    public static _enum_for_lampBrightness: typeof _enum_for_LampBrightness = _enum_for_LampBrightness;
 }
 
 /**

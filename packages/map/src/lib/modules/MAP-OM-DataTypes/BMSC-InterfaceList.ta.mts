@@ -60,7 +60,7 @@ export const _decode_BMSC_InterfaceList = (el: _Element): BMSC_InterfaceList => 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BMSC_InterfaceList, encoded as an ASN.1 Element.
  */
-export const _encode_BMSC_InterfaceList = $._encodeBitString;
+export const _encode_BMSC_InterfaceList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

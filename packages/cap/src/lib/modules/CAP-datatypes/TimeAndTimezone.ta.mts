@@ -28,5 +28,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type TimeAndTimezone = OCTET_STRING;
-export const _decode_TimeAndTimezone = $._decodeOctetString;
-export const _encode_TimeAndTimezone = $._encodeOctetString;
+export const _decode_TimeAndTimezone: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_TimeAndTimezone: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

@@ -79,7 +79,7 @@ export class IA5TextParameters {
      * @static
      */
 
-    public static _enum_for_repertoire = _enum_for_Repertoire;
+    public static _enum_for_repertoire: typeof _enum_for_Repertoire = _enum_for_Repertoire;
 }
 
 /**

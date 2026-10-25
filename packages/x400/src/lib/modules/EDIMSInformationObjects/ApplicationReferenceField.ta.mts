@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ApplicationReferenceField = TeletexString; // TeletexString
 
 
-export const _decode_ApplicationReferenceField = $._decodeTeletexString;
+export const _decode_ApplicationReferenceField: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_ApplicationReferenceField = $._encodeTeletexString;
+export const _encode_ApplicationReferenceField: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

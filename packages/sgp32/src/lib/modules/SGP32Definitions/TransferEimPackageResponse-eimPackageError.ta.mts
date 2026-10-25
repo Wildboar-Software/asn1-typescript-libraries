@@ -38,7 +38,7 @@ type TransferEimPackageResponse_eimPackageError = INTEGER;
  * @type {number}
  */
 export
-const TransferEimPackageResponse_eimPackageError_invalidPackageFormat = 1 satisfies TransferEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
+const TransferEimPackageResponse_eimPackageError_invalidPackageFormat: 1 = 1 satisfies TransferEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransferEimPackageResponse_eimPackageError_invalidPackageFormat
@@ -49,7 +49,7 @@ const TransferEimPackageResponse_eimPackageError_invalidPackageFormat = 1 satisf
  * @type {number}
  */
 export
-const invalidPackageFormat = TransferEimPackageResponse_eimPackageError_invalidPackageFormat; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidPackageFormat: 1 = TransferEimPackageResponse_eimPackageError_invalidPackageFormat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransferEimPackageResponse_eimPackageError_unknownPackage
@@ -61,7 +61,7 @@ const invalidPackageFormat = TransferEimPackageResponse_eimPackageError_invalidP
  * @type {number}
  */
 export
-const TransferEimPackageResponse_eimPackageError_unknownPackage = 2 satisfies TransferEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
+const TransferEimPackageResponse_eimPackageError_unknownPackage: 2 = 2 satisfies TransferEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransferEimPackageResponse_eimPackageError_unknownPackage
@@ -72,7 +72,7 @@ const TransferEimPackageResponse_eimPackageError_unknownPackage = 2 satisfies Tr
  * @type {number}
  */
 export
-const unknownPackage = TransferEimPackageResponse_eimPackageError_unknownPackage; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownPackage: 2 = TransferEimPackageResponse_eimPackageError_unknownPackage; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransferEimPackageResponse_eimPackageError_undefinedError
@@ -83,7 +83,7 @@ const unknownPackage = TransferEimPackageResponse_eimPackageError_unknownPackage
  * @type {number}
  */
 export
-const TransferEimPackageResponse_eimPackageError_undefinedError = 127 satisfies TransferEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
+const TransferEimPackageResponse_eimPackageError_undefinedError: 127 = 127 satisfies TransferEimPackageResponse_eimPackageError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransferEimPackageResponse_eimPackageError_undefinedError
@@ -93,7 +93,7 @@ const TransferEimPackageResponse_eimPackageError_undefinedError = 127 satisfies 
  * @type {number}
  */
 export
-const undefinedError = TransferEimPackageResponse_eimPackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = TransferEimPackageResponse_eimPackageError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TransferEimPackageResponse_eimPackageError: $.ASN1Decoder<TransferEimPackageResponse_eimPackageError> = $._decodeInteger;
 export const _encode_TransferEimPackageResponse_eimPackageError: $.ASN1Encoder<TransferEimPackageResponse_eimPackageError> = $._encodeInteger;
 

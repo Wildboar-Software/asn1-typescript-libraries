@@ -74,12 +74,12 @@ export const eidCompliant: number = TokenFlags_eidCompliant; /* SHORT_NAMED_BIT 
 
 
 
-export const _decode_TokenFlags = $._decodeBitString;
+export const _decode_TokenFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_TokenFlags = $._encodeBitString;
+export const _encode_TokenFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

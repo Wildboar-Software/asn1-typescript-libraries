@@ -34,7 +34,7 @@ type SequenceFlag = INTEGER;
  * @type {number}
  */
 export
-const SequenceFlag_sf_start = 0 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_start: 0 = 0 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_start
@@ -42,7 +42,7 @@ const SequenceFlag_sf_start = 0 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const sf_start = SequenceFlag_sf_start; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_start: 0 = SequenceFlag_sf_start; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_continue
@@ -50,7 +50,7 @@ const sf_start = SequenceFlag_sf_start; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SequenceFlag_sf_continue = 1 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_continue: 1 = 1 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_continue
@@ -58,7 +58,7 @@ const SequenceFlag_sf_continue = 1 satisfies SequenceFlag; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const sf_continue = SequenceFlag_sf_continue; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_continue: 1 = SequenceFlag_sf_continue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_end
@@ -66,7 +66,7 @@ const sf_continue = SequenceFlag_sf_continue; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SequenceFlag_sf_end = 2 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_end: 2 = 2 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_end
@@ -74,7 +74,7 @@ const SequenceFlag_sf_end = 2 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const sf_end = SequenceFlag_sf_end; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_end: 2 = SequenceFlag_sf_end; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_stateless_no_reply
@@ -82,7 +82,7 @@ const sf_end = SequenceFlag_sf_end; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SequenceFlag_sf_stateless_no_reply = 3 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_stateless_no_reply: 3 = 3 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_stateless_no_reply
@@ -90,7 +90,7 @@ const SequenceFlag_sf_stateless_no_reply = 3 satisfies SequenceFlag; /* LONG_NAM
  * @type {number}
  */
 export
-const sf_stateless_no_reply = SequenceFlag_sf_stateless_no_reply; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_stateless_no_reply: 3 = SequenceFlag_sf_stateless_no_reply; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_stateless
@@ -98,7 +98,7 @@ const sf_stateless_no_reply = SequenceFlag_sf_stateless_no_reply; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SequenceFlag_sf_stateless = 4 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_stateless: 4 = 4 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_stateless
@@ -106,7 +106,7 @@ const SequenceFlag_sf_stateless = 4 satisfies SequenceFlag; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const sf_stateless = SequenceFlag_sf_stateless; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_stateless: 4 = SequenceFlag_sf_stateless; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_stream_complete
@@ -114,7 +114,7 @@ const sf_stateless = SequenceFlag_sf_stateless; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SequenceFlag_sf_stream_complete = 5 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_stream_complete: 5 = 5 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_stream_complete
@@ -122,7 +122,7 @@ const SequenceFlag_sf_stream_complete = 5 satisfies SequenceFlag; /* LONG_NAMED_
  * @type {number}
  */
 export
-const sf_stream_complete = SequenceFlag_sf_stream_complete; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_stream_complete: 5 = SequenceFlag_sf_stream_complete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_continue_wait
@@ -130,7 +130,7 @@ const sf_stream_complete = SequenceFlag_sf_stream_complete; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const SequenceFlag_sf_continue_wait = 6 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_continue_wait: 6 = 6 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_continue_wait
@@ -138,7 +138,7 @@ const SequenceFlag_sf_continue_wait = 6 satisfies SequenceFlag; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const sf_continue_wait = SequenceFlag_sf_continue_wait; /* SHORT_NAMED_INTEGER_VALUE */
+const sf_continue_wait: 6 = SequenceFlag_sf_continue_wait; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_heartbeat
@@ -146,7 +146,7 @@ const sf_continue_wait = SequenceFlag_sf_continue_wait; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const SequenceFlag_sf_heartbeat = 7 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
+const SequenceFlag_sf_heartbeat: 7 = 7 satisfies SequenceFlag; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SequenceFlag_sf_heartbeat
@@ -154,9 +154,9 @@ const SequenceFlag_sf_heartbeat = 7 satisfies SequenceFlag; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const sf_heartbeat = SequenceFlag_sf_heartbeat; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SequenceFlag = $._decodeInteger;
-export const _encode_SequenceFlag = $._encodeInteger;
+const sf_heartbeat: 7 = SequenceFlag_sf_heartbeat; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_SequenceFlag: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_SequenceFlag: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -75,7 +75,7 @@ type ChargingOption = _enum_for_ChargingOption;
  * @enum {number}
  */
 export
-const ChargingOption = _enum_for_ChargingOption;
+const ChargingOption: typeof _enum_for_ChargingOption = _enum_for_ChargingOption;
 
 /**
  * @summary ChargingOption_aocFreeOfCharge
@@ -90,7 +90,7 @@ const ChargingOption = _enum_for_ChargingOption;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingOption_aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingOption_aocFreeOfCharge: _enum_for_ChargingOption.aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocFreeOfCharge
@@ -99,7 +99,7 @@ const ChargingOption_aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* LONG_N
  * @type {number}
  */
 export
-const aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocFreeOfCharge: _enum_for_ChargingOption.aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingOption_aocContinueCharging
@@ -115,7 +115,7 @@ const aocFreeOfCharge = ChargingOption.aocFreeOfCharge; /* SHORT_NAMED_ENUMERATE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingOption_aocContinueCharging = ChargingOption.aocContinueCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingOption_aocContinueCharging: _enum_for_ChargingOption.aocContinueCharging = ChargingOption.aocContinueCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocContinueCharging
@@ -124,7 +124,7 @@ const ChargingOption_aocContinueCharging = ChargingOption.aocContinueCharging; /
  * @type {number}
  */
 export
-const aocContinueCharging = ChargingOption.aocContinueCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocContinueCharging: _enum_for_ChargingOption.aocContinueCharging = ChargingOption.aocContinueCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingOption_aocStopCharging
@@ -139,7 +139,7 @@ const aocContinueCharging = ChargingOption.aocContinueCharging; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargingOption_aocStopCharging = ChargingOption.aocStopCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingOption_aocStopCharging: _enum_for_ChargingOption.aocStopCharging = ChargingOption.aocStopCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aocStopCharging
@@ -148,7 +148,7 @@ const ChargingOption_aocStopCharging = ChargingOption.aocStopCharging; /* LONG_N
  * @type {number}
  */
 export
-const aocStopCharging = ChargingOption.aocStopCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aocStopCharging: _enum_for_ChargingOption.aocStopCharging = ChargingOption.aocStopCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargingOption: $.ASN1Decoder<ChargingOption> = $._decodeEnumerated;

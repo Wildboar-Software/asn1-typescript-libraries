@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ASO_qualifier_form2 = INTEGER;
 
 
-export const _decode_ASO_qualifier_form2 = $._decodeInteger;
+export const _decode_ASO_qualifier_form2: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ASO_qualifier_form2 = $._encodeInteger;
+export const _encode_ASO_qualifier_form2: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

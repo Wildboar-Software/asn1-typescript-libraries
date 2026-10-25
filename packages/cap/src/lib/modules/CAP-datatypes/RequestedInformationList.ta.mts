@@ -24,4 +24,4 @@ export const _decode_RequestedInformationList = (el: _Element): RequestedInforma
     }
     return value;
 };
-export const _encode_RequestedInformationList = $._encodeSequenceOf<RequestedInformation>(() => _encode_RequestedInformation, $.BER);
+export const _encode_RequestedInformationList: $.SequenceOfEncoder<RequestedInformation> = $._encodeSequenceOf<RequestedInformation>(() => _encode_RequestedInformation, $.BER);

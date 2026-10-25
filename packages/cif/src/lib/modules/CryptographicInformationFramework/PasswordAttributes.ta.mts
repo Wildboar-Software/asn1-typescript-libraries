@@ -244,7 +244,7 @@ class PasswordAttributes {
      * @public
      * @static
      */
-    public static _enum_for_pwdType = _enum_for_PasswordType;
+    public static _enum_for_pwdType: typeof _enum_for_PasswordType = _enum_for_PasswordType;
 }
 
 /**

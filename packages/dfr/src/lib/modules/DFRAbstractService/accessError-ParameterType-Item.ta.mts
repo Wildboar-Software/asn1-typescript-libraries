@@ -82,7 +82,7 @@ class accessError_ParameterType_Item {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_AccessProblem;
+    public static _enum_for_problem: typeof _enum_for_AccessProblem = _enum_for_AccessProblem;
 }
 
 /**

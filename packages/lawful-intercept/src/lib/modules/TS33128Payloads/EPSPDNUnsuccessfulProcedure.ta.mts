@@ -244,7 +244,7 @@ class EPSPDNUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_Initiator;
+    public static _enum_for_initiator: typeof _enum_for_Initiator = _enum_for_Initiator;
 }
 
 /**

@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DateAndTimeOfPreparationField = UTCTime; // UTCTime
 
 
-export const _decode_DateAndTimeOfPreparationField = $._decodeUTCTime;
+export const _decode_DateAndTimeOfPreparationField: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
-export const _encode_DateAndTimeOfPreparationField = $._encodeUTCTime;
+export const _encode_DateAndTimeOfPreparationField: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

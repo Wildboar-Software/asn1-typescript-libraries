@@ -112,7 +112,7 @@ class MWIDeactivateArg {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

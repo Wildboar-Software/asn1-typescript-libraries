@@ -46,7 +46,7 @@ export const _decode_RAND = (el: _Element): RAND => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RAND, encoded as an ASN.1 Element.
  */
-export const _encode_RAND = $._encodeOctetString;
+export const _encode_RAND: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

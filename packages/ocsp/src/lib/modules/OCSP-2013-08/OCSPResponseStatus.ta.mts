@@ -96,7 +96,7 @@ export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  *
  * @enum {number}
  */
-export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
+export const OCSPResponseStatus: typeof _enum_for_OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 
 
 /**
@@ -109,7 +109,7 @@ export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_successful =
+export const OCSPResponseStatus_successful: 0 =
     OCSPResponseStatus.successful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const OCSPResponseStatus_successful =
  * @constant
  * @type {number}
  */
-export const successful =
+export const successful: 0 =
     OCSPResponseStatus.successful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,7 +138,7 @@ export const successful =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_malformedRequest =
+export const OCSPResponseStatus_malformedRequest: 1 =
     OCSPResponseStatus.malformedRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const OCSPResponseStatus_malformedRequest =
  * @constant
  * @type {number}
  */
-export const malformedRequest =
+export const malformedRequest: 1 =
     OCSPResponseStatus.malformedRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -169,7 +169,7 @@ export const malformedRequest =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_internalError =
+export const OCSPResponseStatus_internalError: 2 =
     OCSPResponseStatus.internalError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -185,7 +185,7 @@ export const OCSPResponseStatus_internalError =
  * @constant
  * @type {number}
  */
-export const internalError =
+export const internalError: 2 =
     OCSPResponseStatus.internalError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -200,7 +200,7 @@ export const internalError =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_tryLater =
+export const OCSPResponseStatus_tryLater: 3 =
     OCSPResponseStatus.tryLater; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -215,7 +215,7 @@ export const OCSPResponseStatus_tryLater =
  * @constant
  * @type {number}
  */
-export const tryLater =
+export const tryLater: 3 =
     OCSPResponseStatus.tryLater; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -229,7 +229,7 @@ export const tryLater =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_sigRequired =
+export const OCSPResponseStatus_sigRequired: 5 =
     OCSPResponseStatus.sigRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -243,7 +243,7 @@ export const OCSPResponseStatus_sigRequired =
  * @constant
  * @type {number}
  */
-export const sigRequired =
+export const sigRequired: 5 =
     OCSPResponseStatus.sigRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -260,7 +260,7 @@ export const sigRequired =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_unauthorized =
+export const OCSPResponseStatus_unauthorized: 6 =
     OCSPResponseStatus.unauthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -277,7 +277,7 @@ export const OCSPResponseStatus_unauthorized =
  * @constant
  * @type {number}
  */
-export const unauthorized =
+export const unauthorized: 6 =
     OCSPResponseStatus.unauthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

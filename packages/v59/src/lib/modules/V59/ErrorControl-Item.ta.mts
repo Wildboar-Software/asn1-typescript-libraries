@@ -302,7 +302,7 @@ class ErrorControl_Item {
          * @static
          */
 
-    public static _enum_for_protocolNegotiation = _enum_for_ErrorControl_Item_protocolNegotiation;
+    public static _enum_for_protocolNegotiation: typeof _enum_for_ErrorControl_Item_protocolNegotiation = _enum_for_ErrorControl_Item_protocolNegotiation;
 }
 
 /**

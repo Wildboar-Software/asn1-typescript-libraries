@@ -28,12 +28,12 @@ export type EquipmentHolderType = GraphicString; // GraphicString
 
 
 
-export const _decode_EquipmentHolderType = $._decodeGraphicString;
+export const _decode_EquipmentHolderType: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_EquipmentHolderType = $._encodeGraphicString;
+export const _encode_EquipmentHolderType: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

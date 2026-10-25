@@ -48,7 +48,7 @@ export type FingerPrint_hand = _enum_for_FingerPrint_hand;
  *
  * @enum {number}
  */
-export const FingerPrint_hand = _enum_for_FingerPrint_hand;
+export const FingerPrint_hand: typeof _enum_for_FingerPrint_hand = _enum_for_FingerPrint_hand;
 
 
 /**
@@ -56,7 +56,7 @@ export const FingerPrint_hand = _enum_for_FingerPrint_hand;
  * @constant
  * @type {number}
  */
-export const FingerPrint_hand_left =
+export const FingerPrint_hand_left: _enum_for_FingerPrint_hand.left =
     FingerPrint_hand.left; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -65,7 +65,7 @@ export const FingerPrint_hand_left =
  * @constant
  * @type {number}
  */
-export const left =
+export const left: _enum_for_FingerPrint_hand.left =
     FingerPrint_hand.left; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const left =
  * @constant
  * @type {number}
  */
-export const FingerPrint_hand_right =
+export const FingerPrint_hand_right: _enum_for_FingerPrint_hand.right =
     FingerPrint_hand.right; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,18 +83,18 @@ export const FingerPrint_hand_right =
  * @constant
  * @type {number}
  */
-export const right =
+export const right: _enum_for_FingerPrint_hand.right =
     FingerPrint_hand.right; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_FingerPrint_hand = $._decodeEnumerated;
+export const _decode_FingerPrint_hand: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_FingerPrint_hand = $._encodeEnumerated;
+export const _encode_FingerPrint_hand: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

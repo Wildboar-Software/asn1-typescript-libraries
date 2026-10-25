@@ -108,14 +108,14 @@ class WeekMask {
      * @static
      * @method
      */
-    public static get _default_value_for_daysOfWeek () { return new Uint8ClampedArray([ 1, 1, 1, 1, 1, 1, 1 ]); }
+    public static get _default_value_for_daysOfWeek (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([ 1, 1, 1, 1, 1, 1, 1 ]); }
     /**
      * @summary Getter that returns the default value for `intervalsOfDay`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_intervalsOfDay () { return [ new WeekMask_intervalsOfDay_Item(new Time24(0, 0), new Time24(23, 59)) ]; }
+    public static get _default_value_for_intervalsOfDay (): WeekMask_intervalsOfDay_Item[] { return [ new WeekMask_intervalsOfDay_Item(new Time24(0, 0), new Time24(23, 59)) ]; }
 }
 
 /**

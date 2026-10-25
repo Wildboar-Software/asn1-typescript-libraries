@@ -1034,7 +1034,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iRIversion = _enum_for_IRI_Parameters_iRIversion;        /**
+    public static _enum_for_iRIversion: typeof _enum_for_IRI_Parameters_iRIversion = _enum_for_IRI_Parameters_iRIversion;        /**
          * @summary The enum used as the type of the component `intercepted_Call_Direct`
          * @description
          *
@@ -1049,7 +1049,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_intercepted_Call_Direct = _enum_for_IRI_Parameters_intercepted_Call_Direct;        /**
+    public static _enum_for_intercepted_Call_Direct: typeof _enum_for_IRI_Parameters_intercepted_Call_Direct = _enum_for_IRI_Parameters_intercepted_Call_Direct;        /**
          * @summary The enum used as the type of the component `intercepted_Call_State`
          * @description
          *
@@ -1064,7 +1064,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_intercepted_Call_State = _enum_for_Intercepted_Call_State;        /**
+    public static _enum_for_intercepted_Call_State: typeof _enum_for_Intercepted_Call_State = _enum_for_Intercepted_Call_State;        /**
          * @summary The enum used as the type of the component `nature_Of_The_intercepted_call`
          * @description
          *
@@ -1079,7 +1079,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_nature_Of_The_intercepted_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call;        /**
+    public static _enum_for_nature_Of_The_intercepted_call: typeof _enum_for_IRI_Parameters_nature_Of_The_intercepted_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call;        /**
          * @summary The enum used as the type of the component `gPRSevent`
          * @description
          *
@@ -1094,7 +1094,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_gPRSevent = _enum_for_GPRSEvent;        /**
+    public static _enum_for_gPRSevent: typeof _enum_for_GPRSEvent = _enum_for_GPRSEvent;        /**
          * @summary The enum used as the type of the component `iMSevent`
          * @description
          *
@@ -1109,7 +1109,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iMSevent = _enum_for_IMSevent;        /**
+    public static _enum_for_iMSevent: typeof _enum_for_IMSevent = _enum_for_IMSevent;        /**
          * @summary The enum used as the type of the component `ldiEvent`
          * @description
          *
@@ -1123,7 +1123,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_ldiEvent = _enum_for_LDIevent;
+    public static _enum_for_ldiEvent: typeof _enum_for_LDIevent = _enum_for_LDIevent;
 }
 
 /**

@@ -45,7 +45,7 @@ export const _decode_KASME = (el: _Element): KASME => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KASME, encoded as an ASN.1 Element.
  */
-export const _encode_KASME = $._encodeOctetString;
+export const _encode_KASME: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -115,7 +115,7 @@ class ReachabilityConfiguration {
          * @static
          */
 
-    public static _enum_for_reachabilityType = _enum_for_ReachabilityType;
+    public static _enum_for_reachabilityType: typeof _enum_for_ReachabilityType = _enum_for_ReachabilityType;
 }
 
 /**

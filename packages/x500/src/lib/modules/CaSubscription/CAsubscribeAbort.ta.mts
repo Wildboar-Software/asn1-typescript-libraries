@@ -98,7 +98,7 @@ export class CAsubscribeAbort {
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_CASP_error;
+    public static _enum_for_reason: typeof _enum_for_CASP_error = _enum_for_CASP_error;
 }
 
 /**

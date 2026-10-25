@@ -36,10 +36,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type IDLength = INTEGER;
 
 
-export const _decode_IDLength = $._decodeInteger;
+export const _decode_IDLength: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_IDLength = $._encodeInteger;
+export const _encode_IDLength: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

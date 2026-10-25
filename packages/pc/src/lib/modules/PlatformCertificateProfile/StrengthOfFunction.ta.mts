@@ -81,7 +81,7 @@ type StrengthOfFunction = _enum_for_StrengthOfFunction;
  * @enum {number}
  */
 export
-const StrengthOfFunction = _enum_for_StrengthOfFunction;
+const StrengthOfFunction: typeof _enum_for_StrengthOfFunction = _enum_for_StrengthOfFunction;
 
 /**
  * @summary StrengthOfFunction_basic
@@ -93,7 +93,7 @@ const StrengthOfFunction = _enum_for_StrengthOfFunction;
  * @type {number}
  */
 export
-const StrengthOfFunction_basic = StrengthOfFunction.basic; /* LONG_NAMED_ENUMERATED_VALUE */
+const StrengthOfFunction_basic: 0 = StrengthOfFunction.basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basic
@@ -105,7 +105,7 @@ const StrengthOfFunction_basic = StrengthOfFunction.basic; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const basic = StrengthOfFunction.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basic: 0 = StrengthOfFunction.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StrengthOfFunction_medium
@@ -117,7 +117,7 @@ const basic = StrengthOfFunction.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const StrengthOfFunction_medium = StrengthOfFunction.medium; /* LONG_NAMED_ENUMERATED_VALUE */
+const StrengthOfFunction_medium: 1 = StrengthOfFunction.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -129,7 +129,7 @@ const StrengthOfFunction_medium = StrengthOfFunction.medium; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const medium = StrengthOfFunction.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium: 1 = StrengthOfFunction.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StrengthOfFunction_high
@@ -141,7 +141,7 @@ const medium = StrengthOfFunction.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const StrengthOfFunction_high = StrengthOfFunction.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const StrengthOfFunction_high: 2 = StrengthOfFunction.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -153,7 +153,7 @@ const StrengthOfFunction_high = StrengthOfFunction.high; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const high = StrengthOfFunction.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high: 2 = StrengthOfFunction.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_StrengthOfFunction(el: _Element): StrengthOfFunction {

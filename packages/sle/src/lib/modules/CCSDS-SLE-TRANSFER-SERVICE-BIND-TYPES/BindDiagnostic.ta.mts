@@ -51,7 +51,7 @@ type BindDiagnostic = INTEGER;
  * @type {number}
  */
 export
-const BindDiagnostic_accessDenied = 0 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_accessDenied: 0 = 0 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_accessDenied
@@ -63,7 +63,7 @@ const BindDiagnostic_accessDenied = 0 satisfies BindDiagnostic; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const accessDenied = BindDiagnostic_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
+const accessDenied: 0 = BindDiagnostic_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_serviceTypeNotSupported
@@ -76,7 +76,7 @@ const accessDenied = BindDiagnostic_accessDenied; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const BindDiagnostic_serviceTypeNotSupported = 1 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_serviceTypeNotSupported: 1 = 1 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_serviceTypeNotSupported
@@ -88,7 +88,7 @@ const BindDiagnostic_serviceTypeNotSupported = 1 satisfies BindDiagnostic; /* LO
  * @type {number}
  */
 export
-const serviceTypeNotSupported = BindDiagnostic_serviceTypeNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const serviceTypeNotSupported: 1 = BindDiagnostic_serviceTypeNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_versionNotSupported
@@ -102,7 +102,7 @@ const serviceTypeNotSupported = BindDiagnostic_serviceTypeNotSupported; /* SHORT
  * @type {number}
  */
 export
-const BindDiagnostic_versionNotSupported = 2 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_versionNotSupported: 2 = 2 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_versionNotSupported
@@ -114,7 +114,7 @@ const BindDiagnostic_versionNotSupported = 2 satisfies BindDiagnostic; /* LONG_N
  * @type {number}
  */
 export
-const versionNotSupported = BindDiagnostic_versionNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const versionNotSupported: 2 = BindDiagnostic_versionNotSupported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_noSuchServiceInstance
@@ -129,7 +129,7 @@ const versionNotSupported = BindDiagnostic_versionNotSupported; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const BindDiagnostic_noSuchServiceInstance = 3 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_noSuchServiceInstance: 3 = 3 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_noSuchServiceInstance
@@ -141,7 +141,7 @@ const BindDiagnostic_noSuchServiceInstance = 3 satisfies BindDiagnostic; /* LONG
  * @type {number}
  */
 export
-const noSuchServiceInstance = BindDiagnostic_noSuchServiceInstance; /* SHORT_NAMED_INTEGER_VALUE */
+const noSuchServiceInstance: 3 = BindDiagnostic_noSuchServiceInstance; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_alreadyBound
@@ -154,7 +154,7 @@ const noSuchServiceInstance = BindDiagnostic_noSuchServiceInstance; /* SHORT_NAM
  * @type {number}
  */
 export
-const BindDiagnostic_alreadyBound = 4 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_alreadyBound: 4 = 4 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_alreadyBound
@@ -166,7 +166,7 @@ const BindDiagnostic_alreadyBound = 4 satisfies BindDiagnostic; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const alreadyBound = BindDiagnostic_alreadyBound; /* SHORT_NAMED_INTEGER_VALUE */
+const alreadyBound: 4 = BindDiagnostic_alreadyBound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_siNotAccessibleToThisInitiator
@@ -181,7 +181,7 @@ const alreadyBound = BindDiagnostic_alreadyBound; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const BindDiagnostic_siNotAccessibleToThisInitiator = 5 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_siNotAccessibleToThisInitiator: 5 = 5 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_siNotAccessibleToThisInitiator
@@ -193,7 +193,7 @@ const BindDiagnostic_siNotAccessibleToThisInitiator = 5 satisfies BindDiagnostic
  * @type {number}
  */
 export
-const siNotAccessibleToThisInitiator = BindDiagnostic_siNotAccessibleToThisInitiator; /* SHORT_NAMED_INTEGER_VALUE */
+const siNotAccessibleToThisInitiator: 5 = BindDiagnostic_siNotAccessibleToThisInitiator; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_inconsistentServiceType
@@ -207,7 +207,7 @@ const siNotAccessibleToThisInitiator = BindDiagnostic_siNotAccessibleToThisIniti
  * @type {number}
  */
 export
-const BindDiagnostic_inconsistentServiceType = 6 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_inconsistentServiceType: 6 = 6 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_inconsistentServiceType
@@ -219,7 +219,7 @@ const BindDiagnostic_inconsistentServiceType = 6 satisfies BindDiagnostic; /* LO
  * @type {number}
  */
 export
-const inconsistentServiceType = BindDiagnostic_inconsistentServiceType; /* SHORT_NAMED_INTEGER_VALUE */
+const inconsistentServiceType: 6 = BindDiagnostic_inconsistentServiceType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_invalidTime
@@ -234,7 +234,7 @@ const inconsistentServiceType = BindDiagnostic_inconsistentServiceType; /* SHORT
  * @type {number}
  */
 export
-const BindDiagnostic_invalidTime = 7 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_invalidTime: 7 = 7 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_invalidTime
@@ -246,7 +246,7 @@ const BindDiagnostic_invalidTime = 7 satisfies BindDiagnostic; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const invalidTime = BindDiagnostic_invalidTime; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTime: 7 = BindDiagnostic_invalidTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_outOfService
@@ -261,7 +261,7 @@ const invalidTime = BindDiagnostic_invalidTime; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const BindDiagnostic_outOfService = 8 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_outOfService: 8 = 8 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_outOfService
@@ -272,7 +272,7 @@ const BindDiagnostic_outOfService = 8 satisfies BindDiagnostic; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const outOfService = BindDiagnostic_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
+const outOfService: 8 = BindDiagnostic_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_otherReason
@@ -286,7 +286,7 @@ const outOfService = BindDiagnostic_outOfService; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const BindDiagnostic_otherReason = 127 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
+const BindDiagnostic_otherReason: 127 = 127 satisfies BindDiagnostic; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BindDiagnostic_otherReason
@@ -298,7 +298,7 @@ const BindDiagnostic_otherReason = 127 satisfies BindDiagnostic; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const otherReason = BindDiagnostic_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
+const otherReason: 127 = BindDiagnostic_otherReason; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_BindDiagnostic: $.ASN1Decoder<BindDiagnostic> = $._decodeInteger;
 export const _encode_BindDiagnostic: $.ASN1Encoder<BindDiagnostic> = $._encodeInteger;
 

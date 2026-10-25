@@ -22,10 +22,10 @@ export enum _enum_for_PDPInitiationType {
     networkInitiated = 1,
 }
 export type PDPInitiationType = _enum_for_PDPInitiationType;
-export const PDPInitiationType = _enum_for_PDPInitiationType;
-export const PDPInitiationType_mSInitiated = PDPInitiationType.mSInitiated;
-export const mSInitiated = PDPInitiationType.mSInitiated;
-export const PDPInitiationType_networkInitiated = PDPInitiationType.networkInitiated;
-export const networkInitiated = PDPInitiationType.networkInitiated;
-export const _decode_PDPInitiationType = $._decodeEnumerated;
-export const _encode_PDPInitiationType = $._encodeEnumerated;
+export const PDPInitiationType: typeof _enum_for_PDPInitiationType = _enum_for_PDPInitiationType;
+export const PDPInitiationType_mSInitiated: _enum_for_PDPInitiationType.mSInitiated = PDPInitiationType.mSInitiated;
+export const mSInitiated: _enum_for_PDPInitiationType.mSInitiated = PDPInitiationType.mSInitiated;
+export const PDPInitiationType_networkInitiated: _enum_for_PDPInitiationType.networkInitiated = PDPInitiationType.networkInitiated;
+export const networkInitiated: _enum_for_PDPInitiationType.networkInitiated = PDPInitiationType.networkInitiated;
+export const _decode_PDPInitiationType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_PDPInitiationType: $.ASN1Encoder<number> = $._encodeEnumerated;

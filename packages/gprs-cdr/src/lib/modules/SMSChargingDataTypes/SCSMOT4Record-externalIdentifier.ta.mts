@@ -98,7 +98,7 @@ class SCSMOT4Record_externalIdentifier {
          * @static
          */
 
-    public static _enum_for_subscriptionIDType = _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType;
+    public static _enum_for_subscriptionIDType: typeof _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType = _enum_for_SCSMOT4Record_externalIdentifier_subscriptionIDType;
 }
 
 /**

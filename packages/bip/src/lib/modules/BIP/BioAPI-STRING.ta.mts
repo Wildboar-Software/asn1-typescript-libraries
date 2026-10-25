@@ -38,12 +38,12 @@ export type BioAPI_STRING = UTF8String; // UTF8String
 
 
 
-export const _decode_BioAPI_STRING = $._decodeUTF8String;
+export const _decode_BioAPI_STRING: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_BioAPI_STRING = $._encodeUTF8String;
+export const _encode_BioAPI_STRING: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

@@ -183,13 +183,13 @@ class UDMAuthenticationInfoRequest {
          * @static
          */
 
-    public static _enum_for_infoRequestType = _enum_for_UDMInfoRequestType;        /**
+    public static _enum_for_infoRequestType: typeof _enum_for_UDMInfoRequestType = _enum_for_UDMInfoRequestType;        /**
          * @summary The enum used as the type of the component `authType`
          * @public
          * @static
          */
 
-    public static _enum_for_authType = _enum_for_PrimaryAuthenticationType;
+    public static _enum_for_authType: typeof _enum_for_PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
 }
 
 /**

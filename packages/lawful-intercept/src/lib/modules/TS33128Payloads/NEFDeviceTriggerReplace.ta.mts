@@ -233,7 +233,7 @@ class NEFDeviceTriggerReplace {
          * @static
          */
 
-    public static _enum_for_priorityDT = _enum_for_PriorityDT;
+    public static _enum_for_priorityDT: typeof _enum_for_PriorityDT = _enum_for_PriorityDT;
 }
 
 /**

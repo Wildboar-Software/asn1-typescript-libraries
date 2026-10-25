@@ -98,13 +98,13 @@ class AlarmSummaryInfo {
          * @static
          */
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;        /**
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;        /**
          * @summary The enum used as the type of the component `alarmStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_alarmStatus = _enum_for_AlarmStatus;
+    public static _enum_for_alarmStatus: typeof _enum_for_AlarmStatus = _enum_for_AlarmStatus;
 }
 
 /**

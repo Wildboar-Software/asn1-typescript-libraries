@@ -142,7 +142,7 @@ class QueryVoiceAttributeArgument {
          * @static
          */
 
-    public static _enum_for_attributeToQuery = _enum_for_AttributeToQuery;
+    public static _enum_for_attributeToQuery: typeof _enum_for_AttributeToQuery = _enum_for_AttributeToQuery;
 }
 
 /**

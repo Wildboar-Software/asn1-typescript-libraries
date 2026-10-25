@@ -28,12 +28,12 @@ export type PersonEmail = GraphicString; // GraphicString
 
 
 
-export const _decode_PersonEmail = $._decodeGraphicString;
+export const _decode_PersonEmail: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_PersonEmail = $._encodeGraphicString;
+export const _encode_PersonEmail: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

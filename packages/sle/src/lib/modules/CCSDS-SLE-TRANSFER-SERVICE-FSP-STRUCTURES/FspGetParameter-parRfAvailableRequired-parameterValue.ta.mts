@@ -38,7 +38,7 @@ type FspGetParameter_parRfAvailableRequired_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parRfAvailableRequired_parameterValue_yes = 0 satisfies FspGetParameter_parRfAvailableRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parRfAvailableRequired_parameterValue_yes: 0 = 0 satisfies FspGetParameter_parRfAvailableRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parRfAvailableRequired_parameterValue_yes
@@ -50,7 +50,7 @@ const FspGetParameter_parRfAvailableRequired_parameterValue_yes = 0 satisfies Fs
  * @type {number}
  */
 export
-const yes = FspGetParameter_parRfAvailableRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
+const yes: 0 = FspGetParameter_parRfAvailableRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parRfAvailableRequired_parameterValue_no
@@ -63,7 +63,7 @@ const yes = FspGetParameter_parRfAvailableRequired_parameterValue_yes; /* SHORT_
  * @type {number}
  */
 export
-const FspGetParameter_parRfAvailableRequired_parameterValue_no = 1 satisfies FspGetParameter_parRfAvailableRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parRfAvailableRequired_parameterValue_no: 1 = 1 satisfies FspGetParameter_parRfAvailableRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parRfAvailableRequired_parameterValue_no
@@ -74,7 +74,7 @@ const FspGetParameter_parRfAvailableRequired_parameterValue_no = 1 satisfies Fsp
  * @type {number}
  */
 export
-const no = FspGetParameter_parRfAvailableRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
+const no: 1 = FspGetParameter_parRfAvailableRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parRfAvailableRequired_parameterValue: $.ASN1Decoder<FspGetParameter_parRfAvailableRequired_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parRfAvailableRequired_parameterValue: $.ASN1Encoder<FspGetParameter_parRfAvailableRequired_parameterValue> = $._encodeInteger;
 

@@ -124,7 +124,7 @@ class DataNodeIdentifier {
          * @static
          */
 
-    public static _enum_for_logicalFunctionType = _enum_for_LogicalFunctionType;
+    public static _enum_for_logicalFunctionType: typeof _enum_for_LogicalFunctionType = _enum_for_LogicalFunctionType;
 }
 
 /**

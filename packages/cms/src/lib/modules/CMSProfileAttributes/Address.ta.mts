@@ -20,12 +20,12 @@ export type Address = UTF8String; // UTF8String
 
 
 
-export const _decode_Address = $._decodeUTF8String;
+export const _decode_Address: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_Address = $._encodeUTF8String;
+export const _encode_Address: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

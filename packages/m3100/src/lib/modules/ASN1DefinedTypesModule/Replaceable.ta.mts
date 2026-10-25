@@ -58,7 +58,7 @@ export type Replaceable = _enum_for_Replaceable;
  *
  * @enum {number}
  */
-export const Replaceable = _enum_for_Replaceable;
+export const Replaceable: typeof _enum_for_Replaceable = _enum_for_Replaceable;
 
 
 /**
@@ -66,7 +66,7 @@ export const Replaceable = _enum_for_Replaceable;
  * @constant
  * @type {number}
  */
-export const Replaceable_yes =
+export const Replaceable_yes: _enum_for_Replaceable.yes =
     Replaceable.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const Replaceable_yes =
  * @constant
  * @type {number}
  */
-export const yes =
+export const yes: _enum_for_Replaceable.yes =
     Replaceable.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const yes =
  * @constant
  * @type {number}
  */
-export const Replaceable_no =
+export const Replaceable_no: _enum_for_Replaceable.no =
     Replaceable.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const Replaceable_no =
  * @constant
  * @type {number}
  */
-export const no =
+export const no: _enum_for_Replaceable.no =
     Replaceable.no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const no =
  * @constant
  * @type {number}
  */
-export const Replaceable_notapplicable =
+export const Replaceable_notapplicable: _enum_for_Replaceable.notapplicable =
     Replaceable.notapplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const Replaceable_notapplicable =
  * @constant
  * @type {number}
  */
-export const notapplicable =
+export const notapplicable: _enum_for_Replaceable.notapplicable =
     Replaceable.notapplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

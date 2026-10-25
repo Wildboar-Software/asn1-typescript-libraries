@@ -114,7 +114,7 @@ type BasicService = _enum_for_BasicService;
  * @enum {number}
  */
 export
-const BasicService = _enum_for_BasicService;
+const BasicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 
 /**
  * @summary BasicService_allServices
@@ -129,7 +129,7 @@ const BasicService = _enum_for_BasicService;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-173/
  */
 export
-const BasicService_allServices = BasicService.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_allServices: _enum_for_BasicService.allServices = BasicService.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
@@ -138,7 +138,7 @@ const BasicService_allServices = BasicService.allServices; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const allServices = BasicService.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allServices: _enum_for_BasicService.allServices = BasicService.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_speech
@@ -151,7 +151,7 @@ const allServices = BasicService.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_speech = BasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_speech: _enum_for_BasicService.speech = BasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
@@ -160,7 +160,7 @@ const BasicService_speech = BasicService.speech; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const speech = BasicService.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speech: _enum_for_BasicService.speech = BasicService.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_unrestrictedDigitalInformation
@@ -173,7 +173,7 @@ const speech = BasicService.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_unrestrictedDigitalInformation: _enum_for_BasicService.unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
@@ -182,7 +182,7 @@ const BasicService_unrestrictedDigitalInformation = BasicService.unrestrictedDig
  * @type {number}
  */
 export
-const unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestrictedDigitalInformation: _enum_for_BasicService.unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_audio3100Hz
@@ -195,7 +195,7 @@ const unrestrictedDigitalInformation = BasicService.unrestrictedDigitalInformati
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_audio3100Hz = BasicService.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_audio3100Hz: _enum_for_BasicService.audio3100Hz = BasicService.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3100Hz
@@ -204,7 +204,7 @@ const BasicService_audio3100Hz = BasicService.audio3100Hz; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const audio3100Hz = BasicService.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio3100Hz: _enum_for_BasicService.audio3100Hz = BasicService.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_telephony
@@ -217,7 +217,7 @@ const audio3100Hz = BasicService.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_telephony = BasicService.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_telephony: _enum_for_BasicService.telephony = BasicService.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony
@@ -226,7 +226,7 @@ const BasicService_telephony = BasicService.telephony; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const telephony = BasicService.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telephony: _enum_for_BasicService.telephony = BasicService.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_teletex
@@ -239,7 +239,7 @@ const telephony = BasicService.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_teletex = BasicService.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_teletex: _enum_for_BasicService.teletex = BasicService.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
@@ -248,7 +248,7 @@ const BasicService_teletex = BasicService.teletex; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const teletex = BasicService.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teletex: _enum_for_BasicService.teletex = BasicService.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_telefaxGroup4Class1
@@ -261,7 +261,7 @@ const teletex = BasicService.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_telefaxGroup4Class1: _enum_for_BasicService.telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
@@ -270,7 +270,7 @@ const BasicService_telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* LO
  * @type {number}
  */
 export
-const telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup4Class1: _enum_for_BasicService.telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videotexSyntaxBased
@@ -283,7 +283,7 @@ const telefaxGroup4Class1 = BasicService.telefaxGroup4Class1; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_videotexSyntaxBased = BasicService.videotexSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videotexSyntaxBased: _enum_for_BasicService.videotexSyntaxBased = BasicService.videotexSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotexSyntaxBased
@@ -292,7 +292,7 @@ const BasicService_videotexSyntaxBased = BasicService.videotexSyntaxBased; /* LO
  * @type {number}
  */
 export
-const videotexSyntaxBased = BasicService.videotexSyntaxBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotexSyntaxBased: _enum_for_BasicService.videotexSyntaxBased = BasicService.videotexSyntaxBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BasicService_videotelephony
@@ -305,7 +305,7 @@ const videotexSyntaxBased = BasicService.videotexSyntaxBased; /* SHORT_NAMED_ENU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-174/
  */
 export
-const BasicService_videotelephony = BasicService.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
+const BasicService_videotelephony: _enum_for_BasicService.videotelephony = BasicService.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
@@ -314,7 +314,7 @@ const BasicService_videotelephony = BasicService.videotelephony; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const videotelephony = BasicService.videotelephony; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotelephony: _enum_for_BasicService.videotelephony = BasicService.videotelephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_BasicService: $.ASN1Decoder<BasicService> = $._decodeEnumerated;

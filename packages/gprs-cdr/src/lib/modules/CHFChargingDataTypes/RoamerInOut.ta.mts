@@ -55,7 +55,7 @@ type RoamerInOut = _enum_for_RoamerInOut;
  * @enum {number}
  */
 export
-const RoamerInOut = _enum_for_RoamerInOut;
+const RoamerInOut: typeof _enum_for_RoamerInOut = _enum_for_RoamerInOut;
 
 /**
  * @summary RoamerInOut_roamerInBound
@@ -63,7 +63,7 @@ const RoamerInOut = _enum_for_RoamerInOut;
  * @type {number}
  */
 export
-const RoamerInOut_roamerInBound = RoamerInOut.roamerInBound; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoamerInOut_roamerInBound: _enum_for_RoamerInOut.roamerInBound = RoamerInOut.roamerInBound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamerInBound
@@ -71,7 +71,7 @@ const RoamerInOut_roamerInBound = RoamerInOut.roamerInBound; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const roamerInBound = RoamerInOut.roamerInBound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamerInBound: _enum_for_RoamerInOut.roamerInBound = RoamerInOut.roamerInBound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoamerInOut_roamerOutBound
@@ -79,7 +79,7 @@ const roamerInBound = RoamerInOut.roamerInBound; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const RoamerInOut_roamerOutBound = RoamerInOut.roamerOutBound; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoamerInOut_roamerOutBound: _enum_for_RoamerInOut.roamerOutBound = RoamerInOut.roamerOutBound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamerOutBound
@@ -87,7 +87,7 @@ const RoamerInOut_roamerOutBound = RoamerInOut.roamerOutBound; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const roamerOutBound = RoamerInOut.roamerOutBound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamerOutBound: _enum_for_RoamerInOut.roamerOutBound = RoamerInOut.roamerOutBound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_RoamerInOut: $.ASN1Decoder<RoamerInOut> = $._decodeEnumerated;

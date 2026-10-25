@@ -124,7 +124,7 @@ class SendBroadcastDataArgument {
          * @static
          */
 
-    public static _enum_for_dataPathType = _enum_for_DataPathType;
+    public static _enum_for_dataPathType: typeof _enum_for_DataPathType = _enum_for_DataPathType;
 }
 
 /**

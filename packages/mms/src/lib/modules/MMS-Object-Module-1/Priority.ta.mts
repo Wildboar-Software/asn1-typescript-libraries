@@ -39,7 +39,7 @@ export const _decode_Priority = (el: _Element): Priority => {
     }
     return value;
 };
-export const _encode_Priority = $._encodeInteger;
+export const _encode_Priority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

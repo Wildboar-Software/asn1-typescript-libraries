@@ -51,7 +51,7 @@ type ProSeDirectDiscoveryEvent = _enum_for_ProSeDirectDiscoveryEvent | ENUMERATE
  * @type {number}
  */
 export
-const ProSeDirectDiscoveryEvent_proseDiscoveryRequest = _enum_for_ProSeDirectDiscoveryEvent.proseDiscoveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeDirectDiscoveryEvent_proseDiscoveryRequest: _enum_for_ProSeDirectDiscoveryEvent.proseDiscoveryRequest = _enum_for_ProSeDirectDiscoveryEvent.proseDiscoveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proseDiscoveryRequest
@@ -63,7 +63,7 @@ const ProSeDirectDiscoveryEvent_proseDiscoveryRequest = _enum_for_ProSeDirectDis
  * @type {number}
  */
 export
-const proseDiscoveryRequest = ProSeDirectDiscoveryEvent_proseDiscoveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proseDiscoveryRequest: _enum_for_ProSeDirectDiscoveryEvent.proseDiscoveryRequest = ProSeDirectDiscoveryEvent_proseDiscoveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeDirectDiscoveryEvent_proseMatchReport
@@ -77,7 +77,7 @@ const proseDiscoveryRequest = ProSeDirectDiscoveryEvent_proseDiscoveryRequest; /
  * @type {number}
  */
 export
-const ProSeDirectDiscoveryEvent_proseMatchReport = _enum_for_ProSeDirectDiscoveryEvent.proseMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeDirectDiscoveryEvent_proseMatchReport: _enum_for_ProSeDirectDiscoveryEvent.proseMatchReport = _enum_for_ProSeDirectDiscoveryEvent.proseMatchReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proseMatchReport
@@ -89,7 +89,7 @@ const ProSeDirectDiscoveryEvent_proseMatchReport = _enum_for_ProSeDirectDiscover
  * @type {number}
  */
 export
-const proseMatchReport = ProSeDirectDiscoveryEvent_proseMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proseMatchReport: _enum_for_ProSeDirectDiscoveryEvent.proseMatchReport = ProSeDirectDiscoveryEvent_proseMatchReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ProSeDirectDiscoveryEvent: $.ASN1Decoder<ProSeDirectDiscoveryEvent> = $._decodeEnumerated;
 export const _encode_ProSeDirectDiscoveryEvent: $.ASN1Encoder<ProSeDirectDiscoveryEvent> = $._encodeEnumerated;
 

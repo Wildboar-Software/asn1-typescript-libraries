@@ -35,7 +35,7 @@ export type Request_Type = INTEGER;
  * @constant
  * @type {number}
  */
-export const Request_Type_read = 0 satisfies Request_Type; /* LONG_NAMED_INTEGER_VALUE */
+export const Request_Type_read: 0 = 0 satisfies Request_Type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -43,7 +43,7 @@ export const Request_Type_read = 0 satisfies Request_Type; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const read = Request_Type_read; /* SHORT_NAMED_INTEGER_VALUE */
+export const read: 0 = Request_Type_read; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const read = Request_Type_read; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Request_Type_write = 1 satisfies Request_Type; /* LONG_NAMED_INTEGER_VALUE */
+export const Request_Type_write: 1 = 1 satisfies Request_Type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const Request_Type_write = 1 satisfies Request_Type; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const write = Request_Type_write; /* SHORT_NAMED_INTEGER_VALUE */
+export const write: 1 = Request_Type_write; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Request_Type: $.ASN1Decoder<Request_Type> | null = null;

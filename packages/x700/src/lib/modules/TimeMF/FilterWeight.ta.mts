@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FilterWeight = REAL; // RealType
 
 
-export const _decode_FilterWeight = $._decodeReal;
+export const _decode_FilterWeight: $.ASN1Decoder<number> = $._decodeReal;
 
 
-export const _encode_FilterWeight = $._encodeReal;
+export const _encode_FilterWeight: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

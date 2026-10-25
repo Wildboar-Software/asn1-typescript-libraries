@@ -424,8 +424,8 @@ const ParameterSupportOptions_char: number = 17; /* LONG_NAMED_BIT */
  */
 export
 const char: number = ParameterSupportOptions_char; /* SHORT_NAMED_BIT */
-export const _decode_ParameterSupportOptions = $._decodeBitString;
-export const _encode_ParameterSupportOptions = $._encodeBitString;
+export const _decode_ParameterSupportOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParameterSupportOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

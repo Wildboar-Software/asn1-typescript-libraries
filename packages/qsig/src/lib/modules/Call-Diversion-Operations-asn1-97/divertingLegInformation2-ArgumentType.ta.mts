@@ -181,13 +181,13 @@ class divertingLegInformation2_ArgumentType {
          * @static
          */
 
-    public static _enum_for_diversionReason = _enum_for_DiversionReason;        /**
+    public static _enum_for_diversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;        /**
          * @summary The enum used as the type of the component `originalDiversionReason`
          * @public
          * @static
          */
 
-    public static _enum_for_originalDiversionReason = _enum_for_DiversionReason;
+    public static _enum_for_originalDiversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;
 }
 
 /**

@@ -21,8 +21,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type MaxMessageSize = INTEGER;
-export const _decode_MaxMessageSize = $._decodeInteger;
-export const _encode_MaxMessageSize = $._encodeInteger;
+export const _decode_MaxMessageSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_MaxMessageSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

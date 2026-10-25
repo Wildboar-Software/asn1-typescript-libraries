@@ -125,7 +125,7 @@ export class SeverityIndicatingThreshold {
      * @static
      */
 
-    public static _enum_for_severityIndication = _enum_for_PerceivedSeverity;
+    public static _enum_for_severityIndication: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 }
 
 /**

@@ -36,12 +36,12 @@ export type MasterDeletionEvent_NotificationParams = NULL; // NullType
 
 
 
-export const _decode_MasterDeletionEvent_NotificationParams = $._decodeNull;
+export const _decode_MasterDeletionEvent_NotificationParams: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_MasterDeletionEvent_NotificationParams = $._encodeNull;
+export const _encode_MasterDeletionEvent_NotificationParams: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

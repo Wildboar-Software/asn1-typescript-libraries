@@ -52,7 +52,7 @@ export type AssignErr = _enum_for_AssignErr | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const AssignErr_invalidAttributeCertificate = _enum_for_AssignErr.invalidAttributeCertificate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AssignErr_invalidAttributeCertificate: _enum_for_AssignErr.invalidAttributeCertificate = _enum_for_AssignErr.invalidAttributeCertificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,17 +66,17 @@ export const AssignErr_invalidAttributeCertificate = _enum_for_AssignErr.invalid
  * @constant
  * @type {number}
  */
-export const invalidAttributeCertificate = AssignErr_invalidAttributeCertificate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAttributeCertificate: _enum_for_AssignErr.invalidAttributeCertificate = AssignErr_invalidAttributeCertificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AssignErr = $._decodeEnumerated;
+export const _decode_AssignErr: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_AssignErr = $._encodeEnumerated;
+export const _encode_AssignErr: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

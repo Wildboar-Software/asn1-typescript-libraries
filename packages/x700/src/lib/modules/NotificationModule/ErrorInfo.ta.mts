@@ -200,14 +200,14 @@ export class ErrorInfo {
      * @static
      */
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
     /**
      * @summary The enum used as the type of the component `trendIndication`
      * @public
      * @static
      */
 
-    public static _enum_for_trendIndication = _enum_for_TrendIndication;
+    public static _enum_for_trendIndication: typeof _enum_for_TrendIndication = _enum_for_TrendIndication;
 }
 
 /**

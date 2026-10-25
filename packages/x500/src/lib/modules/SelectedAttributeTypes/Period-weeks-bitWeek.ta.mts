@@ -94,10 +94,10 @@ export const Period_weeks_bitWeek_week5: number = 4; /* LONG_NAMED_BIT */
 export const week5: number = Period_weeks_bitWeek_week5; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Period_weeks_bitWeek = $._decodeBitString;
+export const _decode_Period_weeks_bitWeek: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Period_weeks_bitWeek = $._encodeBitString;
+export const _encode_Period_weeks_bitWeek: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -290,13 +290,13 @@ class RANUEContextModification {
          * @static
          */
 
-    public static _enum_for_iABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;        /**
+    public static _enum_for_iABAuthorizedIndicator: typeof _enum_for_IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;        /**
          * @summary The enum used as the type of the component `mobileIABAuthorizedIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_mobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
+    public static _enum_for_mobileIABAuthorizedIndicator: typeof _enum_for_MobileIABAuthorizedIndicator = _enum_for_MobileIABAuthorizedIndicator;
 }
 
 /**

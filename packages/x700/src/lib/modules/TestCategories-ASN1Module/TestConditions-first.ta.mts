@@ -36,7 +36,7 @@ export type TestConditions_first = INTEGER;
  * @constant
  * @type {number}
  */
-export const TestConditions_first_testIfBusy = 0 satisfies TestConditions_first; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_first_testIfBusy: 0 = 0 satisfies TestConditions_first; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_testIfBusy
@@ -46,7 +46,7 @@ export const TestConditions_first_testIfBusy = 0 satisfies TestConditions_first;
  * @constant
  * @type {number}
  */
-export const testIfBusy = TestConditions_first_testIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
+export const testIfBusy: 0 = TestConditions_first_testIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_rejectIfBusy
@@ -56,7 +56,7 @@ export const testIfBusy = TestConditions_first_testIfBusy; /* SHORT_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const TestConditions_first_rejectIfBusy = 1 satisfies TestConditions_first; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_first_rejectIfBusy: 1 = 1 satisfies TestConditions_first; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_rejectIfBusy
@@ -66,7 +66,7 @@ export const TestConditions_first_rejectIfBusy = 1 satisfies TestConditions_firs
  * @constant
  * @type {number}
  */
-export const rejectIfBusy = TestConditions_first_rejectIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
+export const rejectIfBusy: 1 = TestConditions_first_rejectIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_waitIfBusy
@@ -76,7 +76,7 @@ export const rejectIfBusy = TestConditions_first_rejectIfBusy; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const TestConditions_first_waitIfBusy = 2 satisfies TestConditions_first; /* LONG_NAMED_INTEGER_VALUE */
+export const TestConditions_first_waitIfBusy: 2 = 2 satisfies TestConditions_first; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestConditions_first_waitIfBusy
@@ -86,13 +86,13 @@ export const TestConditions_first_waitIfBusy = 2 satisfies TestConditions_first;
  * @constant
  * @type {number}
  */
-export const waitIfBusy = TestConditions_first_waitIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
+export const waitIfBusy: 2 = TestConditions_first_waitIfBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TestConditions_first = $._decodeInteger;
+export const _decode_TestConditions_first: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TestConditions_first = $._encodeInteger;
+export const _encode_TestConditions_first: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

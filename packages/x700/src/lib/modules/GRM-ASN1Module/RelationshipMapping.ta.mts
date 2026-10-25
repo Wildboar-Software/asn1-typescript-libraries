@@ -36,10 +36,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RelationshipMapping = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_RelationshipMapping = $._decodeObjectIdentifier;
+export const _decode_RelationshipMapping: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_RelationshipMapping = $._encodeObjectIdentifier;
+export const _encode_RelationshipMapping: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

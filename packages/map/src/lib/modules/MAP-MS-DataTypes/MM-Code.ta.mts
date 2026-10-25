@@ -52,7 +52,7 @@ export const _decode_MM_Code = (el: _Element): MM_Code => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MM_Code, encoded as an ASN.1 Element.
  */
-export const _encode_MM_Code = $._encodeOctetString;
+export const _encode_MM_Code: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -24,12 +24,12 @@ export type EncodedSPIF = _Element; // ObjectClassFieldType
 
 
 
-export const _decode_EncodedSPIF = $._decodeAny;
+export const _decode_EncodedSPIF: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
 
 
-export const _encode_EncodedSPIF = $._encodeAny;
+export const _encode_EncodedSPIF: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

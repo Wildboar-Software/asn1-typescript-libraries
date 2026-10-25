@@ -45,7 +45,7 @@ export type AttributeIdError_errorStatus =
  * @constant
  * @type {number}
  */
-export const AttributeIdError_errorStatus_accessDenied = _enum_for_AttributeIdError_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeIdError_errorStatus_accessDenied: _enum_for_AttributeIdError_errorStatus.accessDenied = _enum_for_AttributeIdError_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const AttributeIdError_errorStatus_accessDenied = _enum_for_AttributeIdEr
  * @constant
  * @type {number}
  */
-export const accessDenied = AttributeIdError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied: _enum_for_AttributeIdError_errorStatus.accessDenied = AttributeIdError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const accessDenied = AttributeIdError_errorStatus_accessDenied; /* SHORT_
  * @constant
  * @type {number}
  */
-export const AttributeIdError_errorStatus_noSuchAttribute = _enum_for_AttributeIdError_errorStatus.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeIdError_errorStatus_noSuchAttribute: _enum_for_AttributeIdError_errorStatus.noSuchAttribute = _enum_for_AttributeIdError_errorStatus.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,17 +69,17 @@ export const AttributeIdError_errorStatus_noSuchAttribute = _enum_for_AttributeI
  * @constant
  * @type {number}
  */
-export const noSuchAttribute = AttributeIdError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAttribute: _enum_for_AttributeIdError_errorStatus.noSuchAttribute = AttributeIdError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AttributeIdError_errorStatus = $._decodeEnumerated;
+export const _decode_AttributeIdError_errorStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_AttributeIdError_errorStatus = $._encodeEnumerated;
+export const _encode_AttributeIdError_errorStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

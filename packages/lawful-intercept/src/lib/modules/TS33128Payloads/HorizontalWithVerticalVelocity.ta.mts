@@ -137,7 +137,7 @@ class HorizontalWithVerticalVelocity {
          * @static
          */
 
-    public static _enum_for_vDirection = _enum_for_VerticalDirection;
+    public static _enum_for_vDirection: typeof _enum_for_VerticalDirection = _enum_for_VerticalDirection;
 }
 
 /**

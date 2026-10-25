@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimerID, _decode_TimerID, _encode_TimerID, tssf } from "../CAP-datatypes/TimerID.ta.mjs";
+import { TimerID, _decode_TimerID, _encode_TimerID, _enum_for_TimerID, tssf } from "../CAP-datatypes/TimerID.ta.mjs";
 import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-datatypes/TimerValue.ta.mjs";
 
 
@@ -99,7 +99,7 @@ class ResetTimerGPRSArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return tssf; }
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return tssf; }
 }
 
 /**

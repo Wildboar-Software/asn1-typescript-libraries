@@ -43,7 +43,7 @@ export type PreferredPriority = _enum_for_PreferredPriority | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const PreferredPriority_undefined = _enum_for_PreferredPriority.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PreferredPriority_undefined: _enum_for_PreferredPriority.undefined = _enum_for_PreferredPriority.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -51,7 +51,7 @@ export const PreferredPriority_undefined = _enum_for_PreferredPriority.undefined
  * @constant
  * @type {number}
  */
-export const undefined = PreferredPriority_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const undefined: _enum_for_PreferredPriority.undefined = PreferredPriority_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -59,7 +59,7 @@ export const undefined = PreferredPriority_undefined; /* SHORT_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const PreferredPriority_minor = _enum_for_PreferredPriority.minor; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PreferredPriority_minor: _enum_for_PreferredPriority.minor = _enum_for_PreferredPriority.minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const PreferredPriority_minor = _enum_for_PreferredPriority.minor; /* LON
  * @constant
  * @type {number}
  */
-export const minor = PreferredPriority_minor; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const minor: _enum_for_PreferredPriority.minor = PreferredPriority_minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const minor = PreferredPriority_minor; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const PreferredPriority_major = _enum_for_PreferredPriority.major; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PreferredPriority_major: _enum_for_PreferredPriority.major = _enum_for_PreferredPriority.major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -83,7 +83,7 @@ export const PreferredPriority_major = _enum_for_PreferredPriority.major; /* LON
  * @constant
  * @type {number}
  */
-export const major = PreferredPriority_major; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const major: _enum_for_PreferredPriority.major = PreferredPriority_major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const major = PreferredPriority_major; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const PreferredPriority_serious = _enum_for_PreferredPriority.serious; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PreferredPriority_serious: _enum_for_PreferredPriority.serious = _enum_for_PreferredPriority.serious; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -99,17 +99,17 @@ export const PreferredPriority_serious = _enum_for_PreferredPriority.serious; /*
  * @constant
  * @type {number}
  */
-export const serious = PreferredPriority_serious; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const serious: _enum_for_PreferredPriority.serious = PreferredPriority_serious; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_PreferredPriority = $._decodeEnumerated;
+export const _decode_PreferredPriority: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_PreferredPriority = $._encodeEnumerated;
+export const _encode_PreferredPriority: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

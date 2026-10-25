@@ -191,7 +191,7 @@ class RCSRegistration {
          * @static
          */
 
-    public static _enum_for_rCSRegistrationType = _enum_for_RCSRegistrationType;
+    public static _enum_for_rCSRegistrationType: typeof _enum_for_RCSRegistrationType = _enum_for_RCSRegistrationType;
 }
 
 /**

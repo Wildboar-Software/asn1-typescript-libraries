@@ -218,31 +218,31 @@ class PTCAccessPolicy {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;        /**
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pTCAccessPolicyType`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCAccessPolicyType = _enum_for_PTCAccessPolicyType;        /**
+    public static _enum_for_pTCAccessPolicyType: typeof _enum_for_PTCAccessPolicyType = _enum_for_PTCAccessPolicyType;        /**
          * @summary The enum used as the type of the component `pTCUserAccessPolicy`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCUserAccessPolicy = _enum_for_PTCUserAccessPolicy;        /**
+    public static _enum_for_pTCUserAccessPolicy: typeof _enum_for_PTCUserAccessPolicy = _enum_for_PTCUserAccessPolicy;        /**
          * @summary The enum used as the type of the component `pTCGroupAuthRule`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCGroupAuthRule = _enum_for_PTCGroupAuthRule;        /**
+    public static _enum_for_pTCGroupAuthRule: typeof _enum_for_PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;        /**
          * @summary The enum used as the type of the component `pTCAccessPolicyFailure`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCAccessPolicyFailure = _enum_for_PTCAccessPolicyFailure;
+    public static _enum_for_pTCAccessPolicyFailure: typeof _enum_for_PTCAccessPolicyFailure = _enum_for_PTCAccessPolicyFailure;
 }
 
 /**

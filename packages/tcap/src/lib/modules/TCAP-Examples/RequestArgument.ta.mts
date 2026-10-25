@@ -82,7 +82,7 @@ export class RequestArgument {
      * @static
      */
 
-    public static _enum_for_basicService = _enum_for_BasicServiceIndicator;
+    public static _enum_for_basicService: typeof _enum_for_BasicServiceIndicator = _enum_for_BasicServiceIndicator;
 }
 
 /**

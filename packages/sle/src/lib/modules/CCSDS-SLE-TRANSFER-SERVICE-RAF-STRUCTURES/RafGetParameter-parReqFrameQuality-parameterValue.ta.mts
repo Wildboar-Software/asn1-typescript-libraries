@@ -43,7 +43,7 @@ type RafGetParameter_parReqFrameQuality_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly = 0 satisfies RafGetParameter_parReqFrameQuality_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly: 0 = 0 satisfies RafGetParameter_parReqFrameQuality_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly
@@ -55,7 +55,7 @@ const RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly = 0 satis
  * @type {number}
  */
 export
-const goodFramesOnly = RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly; /* SHORT_NAMED_INTEGER_VALUE */
+const goodFramesOnly: 0 = RafGetParameter_parReqFrameQuality_parameterValue_goodFramesOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly
@@ -70,7 +70,7 @@ const goodFramesOnly = RafGetParameter_parReqFrameQuality_parameterValue_goodFra
  * @type {number}
  */
 export
-const RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly = 1 satisfies RafGetParameter_parReqFrameQuality_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly: 1 = 1 satisfies RafGetParameter_parReqFrameQuality_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly
@@ -82,7 +82,7 @@ const RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly = 1 satis
  * @type {number}
  */
 export
-const erredFrameOnly = RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly; /* SHORT_NAMED_INTEGER_VALUE */
+const erredFrameOnly: 1 = RafGetParameter_parReqFrameQuality_parameterValue_erredFrameOnly; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_allFrames
@@ -98,7 +98,7 @@ const erredFrameOnly = RafGetParameter_parReqFrameQuality_parameterValue_erredFr
  * @type {number}
  */
 export
-const RafGetParameter_parReqFrameQuality_parameterValue_allFrames = 2 satisfies RafGetParameter_parReqFrameQuality_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const RafGetParameter_parReqFrameQuality_parameterValue_allFrames: 2 = 2 satisfies RafGetParameter_parReqFrameQuality_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RafGetParameter_parReqFrameQuality_parameterValue_allFrames
@@ -110,7 +110,7 @@ const RafGetParameter_parReqFrameQuality_parameterValue_allFrames = 2 satisfies 
  * @type {number}
  */
 export
-const allFrames = RafGetParameter_parReqFrameQuality_parameterValue_allFrames; /* SHORT_NAMED_INTEGER_VALUE */
+const allFrames: 2 = RafGetParameter_parReqFrameQuality_parameterValue_allFrames; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RafGetParameter_parReqFrameQuality_parameterValue: $.ASN1Decoder<RafGetParameter_parReqFrameQuality_parameterValue> = $._decodeInteger;
 export const _encode_RafGetParameter_parReqFrameQuality_parameterValue: $.ASN1Encoder<RafGetParameter_parReqFrameQuality_parameterValue> = $._encodeInteger;
 

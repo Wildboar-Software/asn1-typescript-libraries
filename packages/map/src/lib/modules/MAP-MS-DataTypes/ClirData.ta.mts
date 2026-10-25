@@ -100,7 +100,7 @@ class ClirData {
          * @static
          */
 
-    public static _enum_for_cliRestrictionOption = _enum_for_CliRestrictionOption;
+    public static _enum_for_cliRestrictionOption: typeof _enum_for_CliRestrictionOption = _enum_for_CliRestrictionOption;
 }
 
 /**

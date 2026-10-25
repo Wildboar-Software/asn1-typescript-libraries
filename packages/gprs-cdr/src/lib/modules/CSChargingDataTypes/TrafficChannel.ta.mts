@@ -55,7 +55,7 @@ type TrafficChannel = _enum_for_TrafficChannel;
  * @enum {number}
  */
 export
-const TrafficChannel = _enum_for_TrafficChannel;
+const TrafficChannel: typeof _enum_for_TrafficChannel = _enum_for_TrafficChannel;
 
 /**
  * @summary TrafficChannel_fullRate
@@ -63,7 +63,7 @@ const TrafficChannel = _enum_for_TrafficChannel;
  * @type {number}
  */
 export
-const TrafficChannel_fullRate = TrafficChannel.fullRate; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficChannel_fullRate: _enum_for_TrafficChannel.fullRate = TrafficChannel.fullRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fullRate
@@ -71,7 +71,7 @@ const TrafficChannel_fullRate = TrafficChannel.fullRate; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const fullRate = TrafficChannel.fullRate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fullRate: _enum_for_TrafficChannel.fullRate = TrafficChannel.fullRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrafficChannel_halfRate
@@ -79,7 +79,7 @@ const fullRate = TrafficChannel.fullRate; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TrafficChannel_halfRate = TrafficChannel.halfRate; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficChannel_halfRate: _enum_for_TrafficChannel.halfRate = TrafficChannel.halfRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary halfRate
@@ -87,7 +87,7 @@ const TrafficChannel_halfRate = TrafficChannel.halfRate; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const halfRate = TrafficChannel.halfRate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const halfRate: _enum_for_TrafficChannel.halfRate = TrafficChannel.halfRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TrafficChannel: $.ASN1Decoder<TrafficChannel> = $._decodeEnumerated;

@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../CAP-datatypes/CallSegmentID.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
-import { TimerID, _decode_TimerID, _encode_TimerID, tssf } from "../CAP-datatypes/TimerID.ta.mjs";
+import { TimerID, _decode_TimerID, _encode_TimerID, _enum_for_TimerID, tssf } from "../CAP-datatypes/TimerID.ta.mjs";
 import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-datatypes/TimerValue.ta.mjs";
 
 
@@ -123,7 +123,7 @@ class ResetTimerArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return tssf; }
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return tssf; }
 }
 
 /**

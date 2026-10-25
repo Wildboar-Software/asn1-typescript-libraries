@@ -645,37 +645,37 @@ class PFEDRecord {
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `roleofUE`
          * @public
          * @static
          */
 
-    public static _enum_for_roleofUE = _enum_for_ProSeUERole;        /**
+    public static _enum_for_roleofUE: typeof _enum_for_ProSeUERole = _enum_for_ProSeUERole;        /**
          * @summary The enum used as the type of the component `rangeClass`
          * @public
          * @static
          */
 
-    public static _enum_for_rangeClass = _enum_for_RangeClass;        /**
+    public static _enum_for_rangeClass: typeof _enum_for_RangeClass = _enum_for_RangeClass;        /**
          * @summary The enum used as the type of the component `proximityAlertIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_proximityAlertIndication = _enum_for_ProximityAlertIndication;        /**
+    public static _enum_for_proximityAlertIndication: typeof _enum_for_ProximityAlertIndication = _enum_for_ProximityAlertIndication;        /**
          * @summary The enum used as the type of the component `reasonforCancellation`
          * @public
          * @static
          */
 
-    public static _enum_for_reasonforCancellation = _enum_for_ReasonforCancellation;        /**
+    public static _enum_for_reasonforCancellation: typeof _enum_for_ReasonforCancellation = _enum_for_ReasonforCancellation;        /**
          * @summary The enum used as the type of the component `causeForRecClosing`
          * @public
          * @static
          */
 
-    public static _enum_for_causeForRecClosing = _enum_for_ProSeCauseForRecClosing;
+    public static _enum_for_causeForRecClosing: typeof _enum_for_ProSeCauseForRecClosing = _enum_for_ProSeCauseForRecClosing;
 }
 
 /**

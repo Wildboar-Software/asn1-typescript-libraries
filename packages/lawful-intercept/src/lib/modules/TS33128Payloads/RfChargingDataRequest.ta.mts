@@ -104,7 +104,7 @@ class RfChargingDataRequest {
          * @static
          */
 
-    public static _enum_for_rfChargingEvent = _enum_for_RfChargingEvent;
+    public static _enum_for_rfChargingEvent: typeof _enum_for_RfChargingEvent = _enum_for_RfChargingEvent;
 }
 
 /**

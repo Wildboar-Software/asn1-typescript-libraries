@@ -34,7 +34,7 @@ export const _decode_StreamID = (el: _Element): StreamID => {
     }
     return value;
 };
-export const _encode_StreamID = $._encodeInteger;
+export const _encode_StreamID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

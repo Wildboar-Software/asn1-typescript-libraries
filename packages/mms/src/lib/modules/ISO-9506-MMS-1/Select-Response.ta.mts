@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Select_Response = NULL; // NullType
-export const _decode_Select_Response = $._decodeNull;
-export const _encode_Select_Response = $._encodeNull;
+export const _decode_Select_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_Select_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

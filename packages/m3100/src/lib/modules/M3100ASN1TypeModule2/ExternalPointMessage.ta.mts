@@ -28,12 +28,12 @@ export type ExternalPointMessage = GraphicString; // GraphicString
 
 
 
-export const _decode_ExternalPointMessage = $._decodeGraphicString;
+export const _decode_ExternalPointMessage: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ExternalPointMessage = $._encodeGraphicString;
+export const _encode_ExternalPointMessage: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

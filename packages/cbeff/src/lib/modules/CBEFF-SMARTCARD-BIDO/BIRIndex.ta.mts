@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type BIRIndex = OCTET_STRING; // OctetStringType
 
 
-export const _decode_BIRIndex = $._decodeOctetString;
+export const _decode_BIRIndex: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_BIRIndex = $._encodeOctetString;
+export const _encode_BIRIndex: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

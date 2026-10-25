@@ -159,7 +159,7 @@ class MMBoxStorageInformation {
          * @static
          */
 
-    public static _enum_for_mmState = _enum_for_MMState;
+    public static _enum_for_mmState: typeof _enum_for_MMState = _enum_for_MMState;
 }
 
 /**

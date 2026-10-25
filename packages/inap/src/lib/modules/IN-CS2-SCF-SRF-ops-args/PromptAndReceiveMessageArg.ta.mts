@@ -154,13 +154,13 @@ class PromptAndReceiveMessageArg {
      * @static
      * @method
      */
-    public static get _default_value_for_media () { return Media_voiceMail; }        /**
+    public static get _default_value_for_media (): _enum_for_Media { return Media_voiceMail; }        /**
          * @summary The enum used as the type of the component `media`
          * @public
          * @static
          */
 
-    public static _enum_for_media = _enum_for_Media;
+    public static _enum_for_media: typeof _enum_for_Media = _enum_for_Media;
 }
 
 /**

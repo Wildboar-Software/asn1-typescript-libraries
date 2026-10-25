@@ -27,7 +27,7 @@ export function _decode_CustomerWorkCenter (el: _Element): CustomerWorkCenter {
     }
     return value;
 }
-export const _encode_CustomerWorkCenter = $._encodeGraphicString;
+export const _encode_CustomerWorkCenter: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

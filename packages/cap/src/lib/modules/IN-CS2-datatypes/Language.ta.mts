@@ -34,7 +34,7 @@ export const _decode_Language = (el: _Element): Language => {
     }
     return value;
 };
-export const _encode_Language = $._encodePrintableString;
+export const _encode_Language: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

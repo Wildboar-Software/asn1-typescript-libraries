@@ -119,7 +119,7 @@ class SMS_report_sMS_Contents_enhancedContent {
          * @static
          */
 
-    public static _enum_for_character_encoding = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding;
+    public static _enum_for_character_encoding: typeof _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding;
 }
 
 /**

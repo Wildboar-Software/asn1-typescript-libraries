@@ -217,7 +217,7 @@ class PacketFlowSummary {
          * @static
          */
 
-    public static _enum_for_packetDataSummaryReason = _enum_for_ReportReason;
+    public static _enum_for_packetDataSummaryReason: typeof _enum_for_ReportReason = _enum_for_ReportReason;
 }
 
 /**

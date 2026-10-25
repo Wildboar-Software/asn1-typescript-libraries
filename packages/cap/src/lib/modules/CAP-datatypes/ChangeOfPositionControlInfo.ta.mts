@@ -24,4 +24,4 @@ export const _decode_ChangeOfPositionControlInfo = (el: _Element): ChangeOfPosit
     }
     return value;
 };
-export const _encode_ChangeOfPositionControlInfo = $._encodeSequenceOf<ChangeOfLocation>(() => _encode_ChangeOfLocation, $.BER);
+export const _encode_ChangeOfPositionControlInfo: $.SequenceOfEncoder<ChangeOfLocation> = $._encodeSequenceOf<ChangeOfLocation>(() => _encode_ChangeOfLocation, $.BER);

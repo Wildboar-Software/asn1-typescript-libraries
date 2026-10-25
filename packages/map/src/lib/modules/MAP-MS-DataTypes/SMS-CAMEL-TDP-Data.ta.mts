@@ -139,13 +139,13 @@ class SMS_CAMEL_TDP_Data {
          * @static
          */
 
-    public static _enum_for_sms_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;        /**
+    public static _enum_for_sms_TriggerDetectionPoint: typeof _enum_for_SMS_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `defaultSMS_Handling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultSMS_Handling = _enum_for_DefaultSMS_Handling;
+    public static _enum_for_defaultSMS_Handling: typeof _enum_for_DefaultSMS_Handling = _enum_for_DefaultSMS_Handling;
 }
 
 /**

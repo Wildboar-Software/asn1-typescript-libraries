@@ -130,7 +130,7 @@ export class AddAvlRsp implements AVMPcommonComponents {
      * @static
      */
 
-    public static _enum_for_version = _enum_for_AVMPversion;
+    public static _enum_for_version: typeof _enum_for_AVMPversion = _enum_for_AVMPversion;
 }
 
 /**

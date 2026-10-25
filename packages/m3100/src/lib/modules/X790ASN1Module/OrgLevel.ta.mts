@@ -33,7 +33,7 @@ export type OrgLevel = INTEGER;
  * @constant
  * @type {number}
  */
-export const OrgLevel_no_escalation = 0 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_no_escalation: 0 = 0 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -41,7 +41,7 @@ export const OrgLevel_no_escalation = 0 satisfies OrgLevel; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const no_escalation = OrgLevel_no_escalation; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_escalation: 0 = OrgLevel_no_escalation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const no_escalation = OrgLevel_no_escalation; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const OrgLevel_first_level = 1 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_first_level: 1 = 1 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const OrgLevel_first_level = 1 satisfies OrgLevel; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const first_level = OrgLevel_first_level; /* SHORT_NAMED_INTEGER_VALUE */
+export const first_level: 1 = OrgLevel_first_level; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const first_level = OrgLevel_first_level; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OrgLevel_second_level = 2 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_second_level: 2 = 2 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const OrgLevel_second_level = 2 satisfies OrgLevel; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const second_level = OrgLevel_second_level; /* SHORT_NAMED_INTEGER_VALUE */
+export const second_level: 2 = OrgLevel_second_level; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const second_level = OrgLevel_second_level; /* SHORT_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const OrgLevel_third_level = 3 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_third_level: 3 = 3 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -89,7 +89,7 @@ export const OrgLevel_third_level = 3 satisfies OrgLevel; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const third_level = OrgLevel_third_level; /* SHORT_NAMED_INTEGER_VALUE */
+export const third_level: 3 = OrgLevel_third_level; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -97,7 +97,7 @@ export const third_level = OrgLevel_third_level; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OrgLevel_fourth_level = 4 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_fourth_level: 4 = 4 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const OrgLevel_fourth_level = 4 satisfies OrgLevel; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const fourth_level = OrgLevel_fourth_level; /* SHORT_NAMED_INTEGER_VALUE */
+export const fourth_level: 4 = OrgLevel_fourth_level; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -113,7 +113,7 @@ export const fourth_level = OrgLevel_fourth_level; /* SHORT_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const OrgLevel_fifth_level = 5 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_fifth_level: 5 = 5 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -121,7 +121,7 @@ export const OrgLevel_fifth_level = 5 satisfies OrgLevel; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const fifth_level = OrgLevel_fifth_level; /* SHORT_NAMED_INTEGER_VALUE */
+export const fifth_level: 5 = OrgLevel_fifth_level; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -129,7 +129,7 @@ export const fifth_level = OrgLevel_fifth_level; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const OrgLevel_sixth_level = 6 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
+export const OrgLevel_sixth_level: 6 = 6 satisfies OrgLevel; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -137,17 +137,17 @@ export const OrgLevel_sixth_level = 6 satisfies OrgLevel; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const sixth_level = OrgLevel_sixth_level; /* SHORT_NAMED_INTEGER_VALUE */
+export const sixth_level: 6 = OrgLevel_sixth_level; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_OrgLevel = $._decodeInteger;
+export const _decode_OrgLevel: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_OrgLevel = $._encodeInteger;
+export const _encode_OrgLevel: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

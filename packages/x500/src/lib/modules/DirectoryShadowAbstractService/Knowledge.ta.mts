@@ -112,7 +112,7 @@ export class Knowledge {
      * @static
      */
 
-    public static _enum_for_knowledgeType = _enum_for_Knowledge_knowledgeType;
+    public static _enum_for_knowledgeType: typeof _enum_for_Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
 }
 
 /**

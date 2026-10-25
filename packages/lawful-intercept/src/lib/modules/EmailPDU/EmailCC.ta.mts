@@ -137,7 +137,7 @@ class EmailCC {
          * @static
          */
 
-    public static _enum_for_email_Format = _enum_for_Email_Format;
+    public static _enum_for_email_Format: typeof _enum_for_Email_Format = _enum_for_Email_Format;
 }
 
 /**

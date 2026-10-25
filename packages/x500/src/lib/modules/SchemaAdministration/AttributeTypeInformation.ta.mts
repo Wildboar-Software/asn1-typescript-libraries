@@ -185,7 +185,7 @@ export class AttributeTypeInformation {
      * @static
      */
 
-    public static _enum_for_application = _enum_for_AttributeUsage;
+    public static _enum_for_application: typeof _enum_for_AttributeUsage = _enum_for_AttributeUsage;
 }
 
 /**

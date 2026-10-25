@@ -115,7 +115,7 @@ type SessionDirection = _enum_for_SessionDirection;
  * @enum {number}
  */
 export
-const SessionDirection = _enum_for_SessionDirection;
+const SessionDirection: typeof _enum_for_SessionDirection = _enum_for_SessionDirection;
 
 /**
  * @summary SessionDirection_fromTarget
@@ -129,7 +129,7 @@ const SessionDirection = _enum_for_SessionDirection;
  * @type {number}
  */
 export
-const SessionDirection_fromTarget = SessionDirection.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionDirection_fromTarget: _enum_for_SessionDirection.fromTarget = SessionDirection.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -143,7 +143,7 @@ const SessionDirection_fromTarget = SessionDirection.fromTarget; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const fromTarget = SessionDirection.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget: _enum_for_SessionDirection.fromTarget = SessionDirection.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionDirection_toTarget
@@ -157,7 +157,7 @@ const fromTarget = SessionDirection.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const SessionDirection_toTarget = SessionDirection.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionDirection_toTarget: _enum_for_SessionDirection.toTarget = SessionDirection.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -171,7 +171,7 @@ const SessionDirection_toTarget = SessionDirection.toTarget; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const toTarget = SessionDirection.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget: _enum_for_SessionDirection.toTarget = SessionDirection.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionDirection_combined
@@ -185,7 +185,7 @@ const toTarget = SessionDirection.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SessionDirection_combined = SessionDirection.combined; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionDirection_combined: _enum_for_SessionDirection.combined = SessionDirection.combined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combined
@@ -199,7 +199,7 @@ const SessionDirection_combined = SessionDirection.combined; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const combined = SessionDirection.combined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combined: _enum_for_SessionDirection.combined = SessionDirection.combined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SessionDirection_indeterminate
@@ -213,7 +213,7 @@ const combined = SessionDirection.combined; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SessionDirection_indeterminate = SessionDirection.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
+const SessionDirection_indeterminate: _enum_for_SessionDirection.indeterminate = SessionDirection.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -227,7 +227,7 @@ const SessionDirection_indeterminate = SessionDirection.indeterminate; /* LONG_N
  * @type {number}
  */
 export
-const indeterminate = SessionDirection.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate: _enum_for_SessionDirection.indeterminate = SessionDirection.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SessionDirection: $.ASN1Decoder<SessionDirection> = $._decodeEnumerated;
 export const _encode_SessionDirection: $.ASN1Encoder<SessionDirection> = $._encodeEnumerated;
 

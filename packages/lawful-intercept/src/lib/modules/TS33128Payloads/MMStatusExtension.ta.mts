@@ -79,7 +79,7 @@ type MMStatusExtension = _enum_for_MMStatusExtension;
  * @enum {number}
  */
 export
-const MMStatusExtension = _enum_for_MMStatusExtension;
+const MMStatusExtension: typeof _enum_for_MMStatusExtension = _enum_for_MMStatusExtension;
 
 /**
  * @summary MMStatusExtension_rejectionByMMSRecipient
@@ -87,7 +87,7 @@ const MMStatusExtension = _enum_for_MMStatusExtension;
  * @type {number}
  */
 export
-const MMStatusExtension_rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusExtension_rejectionByMMSRecipient: _enum_for_MMStatusExtension.rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectionByMMSRecipient
@@ -95,7 +95,7 @@ const MMStatusExtension_rejectionByMMSRecipient = MMStatusExtension.rejectionByM
  * @type {number}
  */
 export
-const rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectionByMMSRecipient: _enum_for_MMStatusExtension.rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMStatusExtension_rejectionByOtherRS
@@ -103,7 +103,7 @@ const rejectionByMMSRecipient = MMStatusExtension.rejectionByMMSRecipient; /* SH
  * @type {number}
  */
 export
-const MMStatusExtension_rejectionByOtherRS = MMStatusExtension.rejectionByOtherRS; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMStatusExtension_rejectionByOtherRS: _enum_for_MMStatusExtension.rejectionByOtherRS = MMStatusExtension.rejectionByOtherRS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rejectionByOtherRS
@@ -111,7 +111,7 @@ const MMStatusExtension_rejectionByOtherRS = MMStatusExtension.rejectionByOtherR
  * @type {number}
  */
 export
-const rejectionByOtherRS = MMStatusExtension.rejectionByOtherRS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rejectionByOtherRS: _enum_for_MMStatusExtension.rejectionByOtherRS = MMStatusExtension.rejectionByOtherRS; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMStatusExtension: $.ASN1Decoder<MMStatusExtension> = $._decodeEnumerated;
 export const _encode_MMStatusExtension: $.ASN1Encoder<MMStatusExtension> = $._encodeEnumerated;
 

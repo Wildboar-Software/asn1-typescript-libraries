@@ -49,7 +49,7 @@ export const _decode_DfrDocumentContent = (el: _Element): DfrDocumentContent => 
     }
     return value;
 };
-export const _encode_DfrDocumentContent = $._encodeExternal;
+export const _encode_DfrDocumentContent: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

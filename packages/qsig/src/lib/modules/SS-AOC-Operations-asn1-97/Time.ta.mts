@@ -81,7 +81,7 @@ class Time {
          * @static
          */
 
-    public static _enum_for_scale = _enum_for_Scale;
+    public static _enum_for_scale: typeof _enum_for_Scale = _enum_for_Scale;
 }
 
 /**

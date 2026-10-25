@@ -34,8 +34,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ProblematicThereforeAnyType = _Element; // ObjectClassFieldType
-export const _decode_ProblematicThereforeAnyType = $._decodeAny;
-export const _encode_ProblematicThereforeAnyType = $._encodeAny;
+export const _decode_ProblematicThereforeAnyType: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_ProblematicThereforeAnyType: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

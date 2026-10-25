@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NumberOfAddressedUas = INTEGER;
 
 
-export const _decode_NumberOfAddressedUas = $._decodeInteger;
+export const _decode_NumberOfAddressedUas: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NumberOfAddressedUas = $._encodeInteger;
+export const _encode_NumberOfAddressedUas: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -23,12 +23,12 @@ export type SPIFVersionNumber = INTEGER;
 
 
 
-export const _decode_SPIFVersionNumber = $._decodeInteger;
+export const _decode_SPIFVersionNumber: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_SPIFVersionNumber = $._encodeInteger;
+export const _encode_SPIFVersionNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -89,10 +89,10 @@ export const Restriction_source_type_dl_expanded_by: number = 2; /* LONG_NAMED_B
 export const dl_expanded_by: number = Restriction_source_type_dl_expanded_by; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Restriction_source_type = $._decodeBitString;
+export const _decode_Restriction_source_type: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Restriction_source_type = $._encodeBitString;
+export const _encode_Restriction_source_type: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

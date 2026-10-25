@@ -120,7 +120,7 @@ class TFCArgument_Type {
          * @static
          */
 
-    public static _enum_for_controlType = _enum_for_ControlType;
+    public static _enum_for_controlType: typeof _enum_for_ControlType = _enum_for_ControlType;
 }
 
 /**

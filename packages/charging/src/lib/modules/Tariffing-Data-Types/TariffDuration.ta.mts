@@ -40,7 +40,7 @@ export const _decode_TariffDuration = (el: _Element): TariffDuration => {
     }
     return value;
 };
-export const _encode_TariffDuration = $._encodeInteger;
+export const _encode_TariffDuration: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

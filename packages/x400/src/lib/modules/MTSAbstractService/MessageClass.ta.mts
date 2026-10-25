@@ -200,7 +200,7 @@ export class MessageClass {
      * @static
      */
 
-    public static _enum_for_objects = _enum_for_MessageClass_objects;
+    public static _enum_for_objects: typeof _enum_for_MessageClass_objects = _enum_for_MessageClass_objects;
 }
 
 /**

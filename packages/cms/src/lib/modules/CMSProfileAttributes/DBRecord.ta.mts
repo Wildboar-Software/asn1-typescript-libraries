@@ -20,12 +20,12 @@ export type DBRecord = UTF8String; // UTF8String
 
 
 
-export const _decode_DBRecord = $._decodeUTF8String;
+export const _decode_DBRecord: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_DBRecord = $._encodeUTF8String;
+export const _encode_DBRecord: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

@@ -34,7 +34,7 @@ export const _decode_InvokeIdType = (el: _Element): InvokeIdType => {
     }
     return value;
 };
-export const _encode_InvokeIdType = $._encodeInteger;
+export const _encode_InvokeIdType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

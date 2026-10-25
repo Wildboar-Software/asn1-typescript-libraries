@@ -91,7 +91,7 @@ class ServiceAddressInformation {
          * @static
          */
 
-    public static _enum_for_triggerType = _enum_for_TriggerType;
+    public static _enum_for_triggerType: typeof _enum_for_TriggerType = _enum_for_TriggerType;
 }
 
 /**

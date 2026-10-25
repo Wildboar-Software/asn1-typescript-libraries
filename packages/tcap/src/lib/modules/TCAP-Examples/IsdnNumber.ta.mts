@@ -81,7 +81,7 @@ export class IsdnNumber {
      * @static
      */
 
-    public static _enum_for_typeOfAddress = _enum_for_TypeOfAddress;
+    public static _enum_for_typeOfAddress: typeof _enum_for_TypeOfAddress = _enum_for_TypeOfAddress;
 }
 
 /**

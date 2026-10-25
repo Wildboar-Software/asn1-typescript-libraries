@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DocumentRelease = TeletexString; // TeletexString
 
 
-export const _decode_DocumentRelease = $._decodeTeletexString;
+export const _decode_DocumentRelease: $.ASN1Decoder<TeletexString> = $._decodeTeletexString;
 
 
-export const _encode_DocumentRelease = $._encodeTeletexString;
+export const _encode_DocumentRelease: $.ASN1Encoder<TeletexString> = $._encodeTeletexString;
 
 
 /* eslint-enable */

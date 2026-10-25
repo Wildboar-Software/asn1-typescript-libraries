@@ -69,10 +69,10 @@ export const ASN1Version_v1994: number = 1; /* LONG_NAMED_BIT */
 export const v1994: number = ASN1Version_v1994; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ASN1Version = $._decodeBitString;
+export const _decode_ASN1Version: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ASN1Version = $._encodeBitString;
+export const _encode_ASN1Version: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -152,10 +152,10 @@ export const EDINStatus_pn_issued: number = 5; /* LONG_NAMED_BIT */
 export const pn_issued: number = EDINStatus_pn_issued; /* SHORT_NAMED_BIT */
 
 
-export const _decode_EDINStatus = $._decodeBitString;
+export const _decode_EDINStatus: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_EDINStatus = $._encodeBitString;
+export const _encode_EDINStatus: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

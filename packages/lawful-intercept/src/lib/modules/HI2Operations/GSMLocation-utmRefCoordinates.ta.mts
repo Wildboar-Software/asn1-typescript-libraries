@@ -124,7 +124,7 @@ class GSMLocation_utmRefCoordinates {
      * @static
      * @method
      */
-    public static get _default_value_for_mapDatum () { return wGS84; }        /**
+    public static get _default_value_for_mapDatum (): _enum_for_MapDatum { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
          * @description
          *
@@ -140,7 +140,7 @@ class GSMLocation_utmRefCoordinates {
          * @static
          */
 
-    public static _enum_for_mapDatum = _enum_for_MapDatum;
+    public static _enum_for_mapDatum: typeof _enum_for_MapDatum = _enum_for_MapDatum;
 }
 
 /**

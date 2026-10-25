@@ -46,7 +46,7 @@ type CCBS_SubscriberStatus = _enum_for_CCBS_SubscriberStatus | ENUMERATED;
  * @type {number}
  */
 export
-const CCBS_SubscriberStatus_ccbsNotIdle = _enum_for_CCBS_SubscriberStatus.ccbsNotIdle; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_SubscriberStatus_ccbsNotIdle: _enum_for_CCBS_SubscriberStatus.ccbsNotIdle = _enum_for_CCBS_SubscriberStatus.ccbsNotIdle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccbsNotIdle
@@ -58,7 +58,7 @@ const CCBS_SubscriberStatus_ccbsNotIdle = _enum_for_CCBS_SubscriberStatus.ccbsNo
  * @type {number}
  */
 export
-const ccbsNotIdle = CCBS_SubscriberStatus_ccbsNotIdle; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ccbsNotIdle: _enum_for_CCBS_SubscriberStatus.ccbsNotIdle = CCBS_SubscriberStatus_ccbsNotIdle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_SubscriberStatus_ccbsIdle
@@ -70,7 +70,7 @@ const ccbsNotIdle = CCBS_SubscriberStatus_ccbsNotIdle; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const CCBS_SubscriberStatus_ccbsIdle = _enum_for_CCBS_SubscriberStatus.ccbsIdle; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_SubscriberStatus_ccbsIdle: _enum_for_CCBS_SubscriberStatus.ccbsIdle = _enum_for_CCBS_SubscriberStatus.ccbsIdle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccbsIdle
@@ -82,7 +82,7 @@ const CCBS_SubscriberStatus_ccbsIdle = _enum_for_CCBS_SubscriberStatus.ccbsIdle;
  * @type {number}
  */
 export
-const ccbsIdle = CCBS_SubscriberStatus_ccbsIdle; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ccbsIdle: _enum_for_CCBS_SubscriberStatus.ccbsIdle = CCBS_SubscriberStatus_ccbsIdle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CCBS_SubscriberStatus_ccbsNotReachable
@@ -94,7 +94,7 @@ const ccbsIdle = CCBS_SubscriberStatus_ccbsIdle; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const CCBS_SubscriberStatus_ccbsNotReachable = _enum_for_CCBS_SubscriberStatus.ccbsNotReachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const CCBS_SubscriberStatus_ccbsNotReachable: _enum_for_CCBS_SubscriberStatus.ccbsNotReachable = _enum_for_CCBS_SubscriberStatus.ccbsNotReachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccbsNotReachable
@@ -106,7 +106,7 @@ const CCBS_SubscriberStatus_ccbsNotReachable = _enum_for_CCBS_SubscriberStatus.c
  * @type {number}
  */
 export
-const ccbsNotReachable = CCBS_SubscriberStatus_ccbsNotReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ccbsNotReachable: _enum_for_CCBS_SubscriberStatus.ccbsNotReachable = CCBS_SubscriberStatus_ccbsNotReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CCBS_SubscriberStatus
@@ -114,7 +114,7 @@ const ccbsNotReachable = CCBS_SubscriberStatus_ccbsNotReachable; /* SHORT_NAMED_
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CCBS_SubscriberStatus = $._decodeEnumerated;
+export const _decode_CCBS_SubscriberStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CCBS_SubscriberStatus into an ASN.1 Element.
@@ -123,7 +123,7 @@ export const _decode_CCBS_SubscriberStatus = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CCBS_SubscriberStatus, encoded as an ASN.1 Element.
  */
-export const _encode_CCBS_SubscriberStatus = $._encodeEnumerated;
+export const _encode_CCBS_SubscriberStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

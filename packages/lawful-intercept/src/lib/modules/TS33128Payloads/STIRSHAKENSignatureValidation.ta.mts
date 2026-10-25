@@ -242,7 +242,7 @@ class STIRSHAKENSignatureValidation {
          * @static
          */
 
-    public static _enum_for_sHAKENValidationResult = _enum_for_SHAKENValidationResult;
+    public static _enum_for_sHAKENValidationResult: typeof _enum_for_SHAKENValidationResult = _enum_for_SHAKENValidationResult;
 }
 
 /**

@@ -48,7 +48,7 @@ export const _decode_APN_OI_Replacement = (el: _Element): APN_OI_Replacement => 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The APN_OI_Replacement, encoded as an ASN.1 Element.
  */
-export const _encode_APN_OI_Replacement = $._encodeOctetString;
+export const _encode_APN_OI_Replacement: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
@@ -115,7 +116,9 @@ class CallInformationRequestArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legID () { return { sendingSideID: leg2 }; }
+    public static get _default_value_for_legID (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg2 }; }
 }
 
 /**

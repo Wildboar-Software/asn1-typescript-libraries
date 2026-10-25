@@ -51,7 +51,7 @@ export type TLSResponse = _enum_for_TLSResponse | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const TLSResponse_success = _enum_for_TLSResponse.success; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TLSResponse_success: _enum_for_TLSResponse.success = _enum_for_TLSResponse.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -62,7 +62,7 @@ export const TLSResponse_success = _enum_for_TLSResponse.success; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const success = TLSResponse_success; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const success: _enum_for_TLSResponse.success = TLSResponse_success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLSResponse_operationsError
@@ -73,7 +73,7 @@ export const success = TLSResponse_success; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const TLSResponse_operationsError = _enum_for_TLSResponse.operationsError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TLSResponse_operationsError: _enum_for_TLSResponse.operationsError = _enum_for_TLSResponse.operationsError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operationsError
@@ -84,7 +84,7 @@ export const TLSResponse_operationsError = _enum_for_TLSResponse.operationsError
  * @constant
  * @type {number}
  */
-export const operationsError = TLSResponse_operationsError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const operationsError: _enum_for_TLSResponse.operationsError = TLSResponse_operationsError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLSResponse_protocolError
@@ -95,7 +95,7 @@ export const operationsError = TLSResponse_operationsError; /* SHORT_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const TLSResponse_protocolError = _enum_for_TLSResponse.protocolError; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TLSResponse_protocolError: _enum_for_TLSResponse.protocolError = _enum_for_TLSResponse.protocolError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocolError
@@ -106,7 +106,7 @@ export const TLSResponse_protocolError = _enum_for_TLSResponse.protocolError; /*
  * @constant
  * @type {number}
  */
-export const protocolError = TLSResponse_protocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protocolError: _enum_for_TLSResponse.protocolError = TLSResponse_protocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TLSResponse_unavailable
@@ -117,7 +117,7 @@ export const protocolError = TLSResponse_protocolError; /* SHORT_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const TLSResponse_unavailable = _enum_for_TLSResponse.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TLSResponse_unavailable: _enum_for_TLSResponse.unavailable = _enum_for_TLSResponse.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailable
@@ -128,13 +128,13 @@ export const TLSResponse_unavailable = _enum_for_TLSResponse.unavailable; /* LON
  * @constant
  * @type {number}
  */
-export const unavailable = TLSResponse_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unavailable: _enum_for_TLSResponse.unavailable = TLSResponse_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TLSResponse = $._decodeEnumerated;
+export const _decode_TLSResponse: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_TLSResponse = $._encodeEnumerated;
+export const _encode_TLSResponse: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

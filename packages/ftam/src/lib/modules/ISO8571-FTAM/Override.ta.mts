@@ -43,7 +43,7 @@ export type Override = INTEGER;
  * @constant
  * @type {number}
  */
-export const Override_create_failure = 0 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
+export const Override_create_failure: 0 = 0 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -51,7 +51,7 @@ export const Override_create_failure = 0 satisfies Override; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const create_failure = Override_create_failure; /* SHORT_NAMED_INTEGER_VALUE */
+export const create_failure: 0 = Override_create_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const create_failure = Override_create_failure; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const Override_select_old_Object = 1 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
+export const Override_select_old_Object: 1 = 1 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const Override_select_old_Object = 1 satisfies Override; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const select_old_Object = Override_select_old_Object; /* SHORT_NAMED_INTEGER_VALUE */
+export const select_old_Object: 1 = Override_select_old_Object; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const select_old_Object = Override_select_old_Object; /* SHORT_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const Override_delete_and_create_with_old_attributes = 2 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
+export const Override_delete_and_create_with_old_attributes: 2 = 2 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -95,7 +95,7 @@ export const Override_delete_and_create_with_old_attributes = 2 satisfies Overri
  * @constant
  * @type {number}
  */
-export const delete_and_create_with_old_attributes = Override_delete_and_create_with_old_attributes; /* SHORT_NAMED_INTEGER_VALUE */
+export const delete_and_create_with_old_attributes: 2 = Override_delete_and_create_with_old_attributes; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const delete_and_create_with_old_attributes = Override_delete_and_create_
  * @constant
  * @type {number}
  */
-export const Override_delete_and_create_with_new_attributes = 3 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
+export const Override_delete_and_create_with_new_attributes: 3 = 3 satisfies Override; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -117,17 +117,17 @@ export const Override_delete_and_create_with_new_attributes = 3 satisfies Overri
  * @constant
  * @type {number}
  */
-export const delete_and_create_with_new_attributes = Override_delete_and_create_with_new_attributes; /* SHORT_NAMED_INTEGER_VALUE */
+export const delete_and_create_with_new_attributes: 3 = Override_delete_and_create_with_new_attributes; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Override = $._decodeInteger;
+export const _decode_Override: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Override = $._encodeInteger;
+export const _encode_Override: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

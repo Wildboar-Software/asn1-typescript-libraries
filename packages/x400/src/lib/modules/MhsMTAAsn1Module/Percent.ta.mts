@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Percent = INTEGER;
 
 
-export const _decode_Percent = $._decodeInteger;
+export const _decode_Percent: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Percent = $._encodeInteger;
+export const _encode_Percent: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

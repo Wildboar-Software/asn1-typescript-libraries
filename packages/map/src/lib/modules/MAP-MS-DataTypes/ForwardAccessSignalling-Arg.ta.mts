@@ -412,7 +412,7 @@ class ForwardAccessSignalling_Arg {
          * @static
          */
 
-    public static _enum_for_keyStatus = _enum_for_KeyStatus;
+    public static _enum_for_keyStatus: typeof _enum_for_KeyStatus = _enum_for_KeyStatus;
 }
 
 /**

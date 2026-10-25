@@ -35,7 +35,7 @@ type LpaeActivationResponse_lpaeActivationResult = INTEGER;
  * @type {number}
  */
 export
-const LpaeActivationResponse_lpaeActivationResult_ok = 0 satisfies LpaeActivationResponse_lpaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
+const LpaeActivationResponse_lpaeActivationResult_ok: 0 = 0 satisfies LpaeActivationResponse_lpaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_ok
@@ -47,7 +47,7 @@ const LpaeActivationResponse_lpaeActivationResult_ok = 0 satisfies LpaeActivatio
  * @type {number}
  */
 export
-const ok = LpaeActivationResponse_lpaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = LpaeActivationResponse_lpaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
@@ -59,7 +59,7 @@ const ok = LpaeActivationResponse_lpaeActivationResult_ok; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const LpaeActivationResponse_lpaeActivationResult_notSupported = 1 satisfies LpaeActivationResponse_lpaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
+const LpaeActivationResponse_lpaeActivationResult_notSupported: 1 = 1 satisfies LpaeActivationResponse_lpaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LpaeActivationResponse_lpaeActivationResult_notSupported
@@ -71,9 +71,9 @@ const LpaeActivationResponse_lpaeActivationResult_notSupported = 1 satisfies Lpa
  * @type {number}
  */
 export
-const notSupported = LpaeActivationResponse_lpaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_LpaeActivationResponse_lpaeActivationResult = $._decodeInteger;
-export const _encode_LpaeActivationResponse_lpaeActivationResult = $._encodeInteger;
+const notSupported: 1 = LpaeActivationResponse_lpaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_LpaeActivationResponse_lpaeActivationResult: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_LpaeActivationResponse_lpaeActivationResult: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

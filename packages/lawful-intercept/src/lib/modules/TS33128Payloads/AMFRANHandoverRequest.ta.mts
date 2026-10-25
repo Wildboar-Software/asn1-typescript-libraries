@@ -272,7 +272,7 @@ class AMFRANHandoverRequest {
          * @static
          */
 
-    public static _enum_for_handoverType = _enum_for_HandoverType;
+    public static _enum_for_handoverType: typeof _enum_for_HandoverType = _enum_for_HandoverType;
 }
 
 /**

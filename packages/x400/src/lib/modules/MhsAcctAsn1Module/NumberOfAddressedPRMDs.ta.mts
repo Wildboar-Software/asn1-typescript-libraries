@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NumberOfAddressedPRMDs = INTEGER;
 
 
-export const _decode_NumberOfAddressedPRMDs = $._decodeInteger;
+export const _decode_NumberOfAddressedPRMDs: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NumberOfAddressedPRMDs = $._encodeInteger;
+export const _encode_NumberOfAddressedPRMDs: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -214,26 +214,26 @@ class JoinCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }
     /**
      * @summary Getter that returns the default value for `participationType`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_participationType () { return ParticipationType_active; }        /**
+    public static get _default_value_for_participationType (): _enum_for_ParticipationType.active { return ParticipationType_active; }        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;        /**
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;        /**
          * @summary The enum used as the type of the component `participationType`
          * @public
          * @static
          */
 
-    public static _enum_for_participationType = _enum_for_ParticipationType;
+    public static _enum_for_participationType: typeof _enum_for_ParticipationType = _enum_for_ParticipationType;
 }
 
 /**

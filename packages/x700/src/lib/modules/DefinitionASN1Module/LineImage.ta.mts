@@ -36,12 +36,12 @@ export type LineImage = GraphicString; // GraphicString
 
 
 
-export const _decode_LineImage = $._decodeGraphicString;
+export const _decode_LineImage: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_LineImage = $._encodeGraphicString;
+export const _encode_LineImage: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -62,7 +62,7 @@ type SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPrio
  * @enum {number}
  */
 export
-const SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPriority;
+const SMSChargingInformation_sMPriority: typeof _enum_for_SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPriority;
 
 /**
  * @summary SMSChargingInformation_sMPriority_low
@@ -70,7 +70,7 @@ const SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPri
  * @type {number}
  */
 export
-const SMSChargingInformation_sMPriority_low = SMSChargingInformation_sMPriority.low; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMPriority_low: _enum_for_SMSChargingInformation_sMPriority.low = SMSChargingInformation_sMPriority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -78,7 +78,7 @@ const SMSChargingInformation_sMPriority_low = SMSChargingInformation_sMPriority.
  * @type {number}
  */
 export
-const low = SMSChargingInformation_sMPriority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low: _enum_for_SMSChargingInformation_sMPriority.low = SMSChargingInformation_sMPriority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMPriority_normal
@@ -86,7 +86,7 @@ const low = SMSChargingInformation_sMPriority.low; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const SMSChargingInformation_sMPriority_normal = SMSChargingInformation_sMPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMPriority_normal: _enum_for_SMSChargingInformation_sMPriority.normal = SMSChargingInformation_sMPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -94,7 +94,7 @@ const SMSChargingInformation_sMPriority_normal = SMSChargingInformation_sMPriori
  * @type {number}
  */
 export
-const normal = SMSChargingInformation_sMPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_SMSChargingInformation_sMPriority.normal = SMSChargingInformation_sMPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMPriority_high
@@ -102,7 +102,7 @@ const normal = SMSChargingInformation_sMPriority.normal; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const SMSChargingInformation_sMPriority_high = SMSChargingInformation_sMPriority.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMPriority_high: _enum_for_SMSChargingInformation_sMPriority.high = SMSChargingInformation_sMPriority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -110,7 +110,7 @@ const SMSChargingInformation_sMPriority_high = SMSChargingInformation_sMPriority
  * @type {number}
  */
 export
-const high = SMSChargingInformation_sMPriority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high: _enum_for_SMSChargingInformation_sMPriority.high = SMSChargingInformation_sMPriority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMSChargingInformation_sMPriority: $.ASN1Decoder<SMSChargingInformation_sMPriority> = $._decodeEnumerated;

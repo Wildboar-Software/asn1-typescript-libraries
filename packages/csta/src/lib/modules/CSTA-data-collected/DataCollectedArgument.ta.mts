@@ -158,7 +158,7 @@ class DataCollectedArgument {
          * @static
          */
 
-    public static _enum_for_dcollCause = _enum_for_DcollCause;
+    public static _enum_for_dcollCause: typeof _enum_for_DcollCause = _enum_for_DcollCause;
 }
 
 /**

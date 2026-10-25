@@ -73,7 +73,7 @@ type PTCSessionType = _enum_for_PTCSessionType;
  * @enum {number}
  */
 export
-const PTCSessionType = _enum_for_PTCSessionType;
+const PTCSessionType: typeof _enum_for_PTCSessionType = _enum_for_PTCSessionType;
 
 /**
  * @summary PTCSessionType_ondemand
@@ -81,7 +81,7 @@ const PTCSessionType = _enum_for_PTCSessionType;
  * @type {number}
  */
 export
-const PTCSessionType_ondemand = PTCSessionType.ondemand; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionType_ondemand: _enum_for_PTCSessionType.ondemand = PTCSessionType.ondemand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ondemand
@@ -89,7 +89,7 @@ const PTCSessionType_ondemand = PTCSessionType.ondemand; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ondemand = PTCSessionType.ondemand; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ondemand: _enum_for_PTCSessionType.ondemand = PTCSessionType.ondemand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionType_preEstablished
@@ -97,7 +97,7 @@ const ondemand = PTCSessionType.ondemand; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PTCSessionType_preEstablished = PTCSessionType.preEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionType_preEstablished: _enum_for_PTCSessionType.preEstablished = PTCSessionType.preEstablished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary preEstablished
@@ -105,7 +105,7 @@ const PTCSessionType_preEstablished = PTCSessionType.preEstablished; /* LONG_NAM
  * @type {number}
  */
 export
-const preEstablished = PTCSessionType.preEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
+const preEstablished: _enum_for_PTCSessionType.preEstablished = PTCSessionType.preEstablished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionType_adhoc
@@ -113,7 +113,7 @@ const preEstablished = PTCSessionType.preEstablished; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const PTCSessionType_adhoc = PTCSessionType.adhoc; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionType_adhoc: _enum_for_PTCSessionType.adhoc = PTCSessionType.adhoc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary adhoc
@@ -121,7 +121,7 @@ const PTCSessionType_adhoc = PTCSessionType.adhoc; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const adhoc = PTCSessionType.adhoc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const adhoc: _enum_for_PTCSessionType.adhoc = PTCSessionType.adhoc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionType_prearranged
@@ -129,7 +129,7 @@ const adhoc = PTCSessionType.adhoc; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const PTCSessionType_prearranged = PTCSessionType.prearranged; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionType_prearranged: _enum_for_PTCSessionType.prearranged = PTCSessionType.prearranged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary prearranged
@@ -137,7 +137,7 @@ const PTCSessionType_prearranged = PTCSessionType.prearranged; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const prearranged = PTCSessionType.prearranged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const prearranged: _enum_for_PTCSessionType.prearranged = PTCSessionType.prearranged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PTCSessionType_groupSession
@@ -145,7 +145,7 @@ const prearranged = PTCSessionType.prearranged; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const PTCSessionType_groupSession = PTCSessionType.groupSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const PTCSessionType_groupSession: _enum_for_PTCSessionType.groupSession = PTCSessionType.groupSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupSession
@@ -153,7 +153,7 @@ const PTCSessionType_groupSession = PTCSessionType.groupSession; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const groupSession = PTCSessionType.groupSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupSession: _enum_for_PTCSessionType.groupSession = PTCSessionType.groupSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PTCSessionType: $.ASN1Decoder<PTCSessionType> = $._decodeEnumerated;
 export const _encode_PTCSessionType: $.ASN1Encoder<PTCSessionType> = $._encodeEnumerated;
 

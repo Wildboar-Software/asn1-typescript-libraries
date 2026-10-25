@@ -64,7 +64,7 @@ export type Purpose = _enum_for_Purpose;
  *
  * @enum {number}
  */
-export const Purpose = _enum_for_Purpose;
+export const Purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 
 
 /**
@@ -72,7 +72,7 @@ export const Purpose = _enum_for_Purpose;
  * @constant
  * @type {number}
  */
-export const Purpose_reference =
+export const Purpose_reference: 1 =
     Purpose.reference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -81,7 +81,7 @@ export const Purpose_reference =
  * @constant
  * @type {number}
  */
-export const reference =
+export const reference: 1 =
     Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -90,7 +90,7 @@ export const reference =
  * @constant
  * @type {number}
  */
-export const Purpose_sample =
+export const Purpose_sample: 2 =
     Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const Purpose_sample =
  * @constant
  * @type {number}
  */
-export const sample =
+export const sample: 2 =
     Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

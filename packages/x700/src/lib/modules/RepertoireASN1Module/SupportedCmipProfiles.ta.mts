@@ -100,10 +100,10 @@ export const SupportedCmipProfiles_aom12: number = 2; /* LONG_NAMED_BIT */
 export const aom12: number = SupportedCmipProfiles_aom12; /* SHORT_NAMED_BIT */
 
 
-export const _decode_SupportedCmipProfiles = $._decodeBitString;
+export const _decode_SupportedCmipProfiles: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_SupportedCmipProfiles = $._encodeBitString;
+export const _encode_SupportedCmipProfiles: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

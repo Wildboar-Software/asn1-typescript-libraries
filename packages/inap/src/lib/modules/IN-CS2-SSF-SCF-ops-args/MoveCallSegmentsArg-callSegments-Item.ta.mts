@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -72,7 +73,7 @@ class MoveCallSegmentsArg_callSegments_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_sourceCallSegment () { return initialCallSegment; }
+    public static get _default_value_for_sourceCallSegment (): INTEGER { return initialCallSegment; }
 }
 
 /**

@@ -20,8 +20,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type InnerContextToken = _Element; // AnyType
-export const _decode_InnerContextToken = $._decodeAny;
-export const _encode_InnerContextToken = $._encodeAny;
+export const _decode_InnerContextToken: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_InnerContextToken: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

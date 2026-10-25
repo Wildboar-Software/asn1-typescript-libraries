@@ -253,7 +253,7 @@ class SeparatedLocationReporting {
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

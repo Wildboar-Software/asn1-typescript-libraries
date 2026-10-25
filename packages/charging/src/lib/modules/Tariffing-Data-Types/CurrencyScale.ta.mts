@@ -50,7 +50,7 @@ export const _decode_CurrencyScale = (el: _Element): CurrencyScale => {
     }
     return value;
 };
-export const _encode_CurrencyScale = $._encodeInteger;
+export const _encode_CurrencyScale: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

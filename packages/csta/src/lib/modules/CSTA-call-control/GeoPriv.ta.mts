@@ -130,7 +130,7 @@ class GeoPriv {
          * @static
          */
 
-    public static _enum_for_method = _enum_for_Method;
+    public static _enum_for_method: typeof _enum_for_Method = _enum_for_Method;
 }
 
 /**

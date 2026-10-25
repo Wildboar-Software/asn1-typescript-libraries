@@ -193,13 +193,13 @@ class NEFAFSessionWithQoSProvision {
          * @static
          */
 
-    public static _enum_for_aFSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;        /**
+    public static _enum_for_aFSessionWithQoSOpType: typeof _enum_for_AForASSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;        /**
          * @summary The enum used as the type of the component `aFSessionWithQoSResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_aFSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
+    public static _enum_for_aFSessionWithQoSResponseCode: typeof _enum_for_AForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
 }
 
 /**

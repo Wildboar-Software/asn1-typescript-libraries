@@ -69,7 +69,7 @@ type TargetIdentifierProvenance = _enum_for_TargetIdentifierProvenance;
  * @enum {number}
  */
 export
-const TargetIdentifierProvenance = _enum_for_TargetIdentifierProvenance;
+const TargetIdentifierProvenance: typeof _enum_for_TargetIdentifierProvenance = _enum_for_TargetIdentifierProvenance;
 
 /**
  * @summary TargetIdentifierProvenance_lEAProvided
@@ -77,7 +77,7 @@ const TargetIdentifierProvenance = _enum_for_TargetIdentifierProvenance;
  * @type {number}
  */
 export
-const TargetIdentifierProvenance_lEAProvided = TargetIdentifierProvenance.lEAProvided; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetIdentifierProvenance_lEAProvided: _enum_for_TargetIdentifierProvenance.lEAProvided = TargetIdentifierProvenance.lEAProvided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lEAProvided
@@ -85,7 +85,7 @@ const TargetIdentifierProvenance_lEAProvided = TargetIdentifierProvenance.lEAPro
  * @type {number}
  */
 export
-const lEAProvided = TargetIdentifierProvenance.lEAProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lEAProvided: _enum_for_TargetIdentifierProvenance.lEAProvided = TargetIdentifierProvenance.lEAProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetIdentifierProvenance_observed
@@ -93,7 +93,7 @@ const lEAProvided = TargetIdentifierProvenance.lEAProvided; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TargetIdentifierProvenance_observed = TargetIdentifierProvenance.observed; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetIdentifierProvenance_observed: _enum_for_TargetIdentifierProvenance.observed = TargetIdentifierProvenance.observed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary observed
@@ -101,7 +101,7 @@ const TargetIdentifierProvenance_observed = TargetIdentifierProvenance.observed;
  * @type {number}
  */
 export
-const observed = TargetIdentifierProvenance.observed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const observed: _enum_for_TargetIdentifierProvenance.observed = TargetIdentifierProvenance.observed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetIdentifierProvenance_matchedOn
@@ -109,7 +109,7 @@ const observed = TargetIdentifierProvenance.observed; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TargetIdentifierProvenance_matchedOn = TargetIdentifierProvenance.matchedOn; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetIdentifierProvenance_matchedOn: _enum_for_TargetIdentifierProvenance.matchedOn = TargetIdentifierProvenance.matchedOn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary matchedOn
@@ -117,7 +117,7 @@ const TargetIdentifierProvenance_matchedOn = TargetIdentifierProvenance.matchedO
  * @type {number}
  */
 export
-const matchedOn = TargetIdentifierProvenance.matchedOn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const matchedOn: _enum_for_TargetIdentifierProvenance.matchedOn = TargetIdentifierProvenance.matchedOn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TargetIdentifierProvenance_other
@@ -125,7 +125,7 @@ const matchedOn = TargetIdentifierProvenance.matchedOn; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TargetIdentifierProvenance_other = TargetIdentifierProvenance.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const TargetIdentifierProvenance_other: _enum_for_TargetIdentifierProvenance.other = TargetIdentifierProvenance.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -133,7 +133,7 @@ const TargetIdentifierProvenance_other = TargetIdentifierProvenance.other; /* LO
  * @type {number}
  */
 export
-const other = TargetIdentifierProvenance.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_TargetIdentifierProvenance.other = TargetIdentifierProvenance.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TargetIdentifierProvenance: $.ASN1Decoder<TargetIdentifierProvenance> = $._decodeEnumerated;
 export const _encode_TargetIdentifierProvenance: $.ASN1Encoder<TargetIdentifierProvenance> = $._encodeEnumerated;
 

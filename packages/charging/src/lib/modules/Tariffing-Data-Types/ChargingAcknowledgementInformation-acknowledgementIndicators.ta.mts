@@ -76,7 +76,7 @@ export const _decode_ChargingAcknowledgementInformation_acknowledgementIndicator
     }
     return value;
 };
-export const _encode_ChargingAcknowledgementInformation_acknowledgementIndicators = $._encodeBitString;
+export const _encode_ChargingAcknowledgementInformation_acknowledgementIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -221,13 +221,13 @@ class CancelLocationArg {
          * @static
          */
 
-    public static _enum_for_cancellationType = _enum_for_CancellationType;        /**
+    public static _enum_for_cancellationType: typeof _enum_for_CancellationType = _enum_for_CancellationType;        /**
          * @summary The enum used as the type of the component `typeOfUpdate`
          * @public
          * @static
          */
 
-    public static _enum_for_typeOfUpdate = _enum_for_TypeOfUpdate;
+    public static _enum_for_typeOfUpdate: typeof _enum_for_TypeOfUpdate = _enum_for_TypeOfUpdate;
 }
 
 /**

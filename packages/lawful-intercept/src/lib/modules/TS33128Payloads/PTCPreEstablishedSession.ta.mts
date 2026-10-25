@@ -240,13 +240,13 @@ class PTCPreEstablishedSession {
          * @static
          */
 
-    public static _enum_for_pTCPreEstStatus = _enum_for_PTCPreEstStatus;        /**
+    public static _enum_for_pTCPreEstStatus: typeof _enum_for_PTCPreEstStatus = _enum_for_PTCPreEstStatus;        /**
          * @summary The enum used as the type of the component `pTCFailureCode`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCFailureCode = _enum_for_PTCFailureCode;
+    public static _enum_for_pTCFailureCode: typeof _enum_for_PTCFailureCode = _enum_for_PTCFailureCode;
 }
 
 /**

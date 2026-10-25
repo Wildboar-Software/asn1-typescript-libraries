@@ -85,7 +85,7 @@ class AuthWtmRes {
          * @static
          */
 
-    public static _enum_for_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
+    public static _enum_for_autWtmResValue: typeof _enum_for_AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
 }
 
 /**

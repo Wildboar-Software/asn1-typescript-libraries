@@ -118,7 +118,7 @@ class AFApplicationKeyRemoval {
          * @static
          */
 
-    public static _enum_for_removalCause = _enum_for_AFKeyRemovalCause;
+    public static _enum_for_removalCause: typeof _enum_for_AFKeyRemovalCause = _enum_for_AFKeyRemovalCause;
 }
 
 /**

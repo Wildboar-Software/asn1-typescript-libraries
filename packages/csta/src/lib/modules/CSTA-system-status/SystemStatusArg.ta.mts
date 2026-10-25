@@ -105,7 +105,7 @@ class SystemStatusArg {
          * @static
          */
 
-    public static _enum_for_systemStatus = _enum_for_SystemStatus;
+    public static _enum_for_systemStatus: typeof _enum_for_SystemStatus = _enum_for_SystemStatus;
 }
 
 /**

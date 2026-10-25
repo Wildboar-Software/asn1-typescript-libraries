@@ -64,14 +64,14 @@ export type ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibite
  *
  * @enum {number}
  */
-export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
+export const ConversionWithLossProhibited: typeof _enum_for_ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
 
 /**
  * @summary ConversionWithLossProhibited_conversion_with_loss_allowed
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_allowed =
+export const ConversionWithLossProhibited_conversion_with_loss_allowed: _enum_for_ConversionWithLossProhibited.conversion_with_loss_allowed =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const ConversionWithLossProhibited_conversion_with_loss_allowed =
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_allowed =
+export const conversion_with_loss_allowed: _enum_for_ConversionWithLossProhibited.conversion_with_loss_allowed =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const conversion_with_loss_allowed =
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_prohibited =
+export const ConversionWithLossProhibited_conversion_with_loss_prohibited: _enum_for_ConversionWithLossProhibited.conversion_with_loss_prohibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const ConversionWithLossProhibited_conversion_with_loss_prohibited =
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited =
+export const conversion_with_loss_prohibited: _enum_for_ConversionWithLossProhibited.conversion_with_loss_prohibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

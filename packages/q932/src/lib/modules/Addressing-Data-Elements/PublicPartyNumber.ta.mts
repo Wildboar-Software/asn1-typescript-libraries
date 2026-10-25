@@ -83,7 +83,7 @@ class PublicPartyNumber {
          * @static
          */
 
-    public static _enum_for_publicTypeOfNumber = _enum_for_PublicTypeOfNumber;
+    public static _enum_for_publicTypeOfNumber: typeof _enum_for_PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
 }
 
 /**

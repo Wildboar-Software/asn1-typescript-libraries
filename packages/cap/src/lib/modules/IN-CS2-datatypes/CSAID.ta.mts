@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CSAID = INTEGER;
-export const _decode_CSAID = $._decodeInteger;
-export const _encode_CSAID = $._encodeInteger;
+export const _decode_CSAID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_CSAID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

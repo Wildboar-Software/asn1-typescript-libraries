@@ -88,7 +88,7 @@ class DNDOverrideArg {
          * @static
          */
 
-    public static _enum_for_dndoCapabilityLevel = _enum_for_DNDOCapabilityLevel;
+    public static _enum_for_dndoCapabilityLevel: typeof _enum_for_DNDOCapabilityLevel = _enum_for_DNDOCapabilityLevel;
 }
 
 /**

@@ -86,7 +86,7 @@ type NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;
  * @enum {number}
  */
 export
-const NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;
+const NWDAFEventsSubscriptionOpType: typeof _enum_for_NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;
 
 /**
  * @summary NWDAFEventsSubscriptionOpType_pOST
@@ -94,7 +94,7 @@ const NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionOpType_pOST = NWDAFEventsSubscriptionOpType.pOST; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionOpType_pOST: _enum_for_NWDAFEventsSubscriptionOpType.pOST = NWDAFEventsSubscriptionOpType.pOST; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pOST
@@ -102,7 +102,7 @@ const NWDAFEventsSubscriptionOpType_pOST = NWDAFEventsSubscriptionOpType.pOST; /
  * @type {number}
  */
 export
-const pOST = NWDAFEventsSubscriptionOpType.pOST; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pOST: _enum_for_NWDAFEventsSubscriptionOpType.pOST = NWDAFEventsSubscriptionOpType.pOST; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionOpType_pUT
@@ -110,7 +110,7 @@ const pOST = NWDAFEventsSubscriptionOpType.pOST; /* SHORT_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionOpType_pUT = NWDAFEventsSubscriptionOpType.pUT; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionOpType_pUT: _enum_for_NWDAFEventsSubscriptionOpType.pUT = NWDAFEventsSubscriptionOpType.pUT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pUT
@@ -118,7 +118,7 @@ const NWDAFEventsSubscriptionOpType_pUT = NWDAFEventsSubscriptionOpType.pUT; /* 
  * @type {number}
  */
 export
-const pUT = NWDAFEventsSubscriptionOpType.pUT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pUT: _enum_for_NWDAFEventsSubscriptionOpType.pUT = NWDAFEventsSubscriptionOpType.pUT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionOpType_dELETE
@@ -126,7 +126,7 @@ const pUT = NWDAFEventsSubscriptionOpType.pUT; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionOpType_dELETE = NWDAFEventsSubscriptionOpType.dELETE; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionOpType_dELETE: _enum_for_NWDAFEventsSubscriptionOpType.dELETE = NWDAFEventsSubscriptionOpType.dELETE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dELETE
@@ -134,7 +134,7 @@ const NWDAFEventsSubscriptionOpType_dELETE = NWDAFEventsSubscriptionOpType.dELET
  * @type {number}
  */
 export
-const dELETE = NWDAFEventsSubscriptionOpType.dELETE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dELETE: _enum_for_NWDAFEventsSubscriptionOpType.dELETE = NWDAFEventsSubscriptionOpType.dELETE; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NWDAFEventsSubscriptionOpType: $.ASN1Decoder<NWDAFEventsSubscriptionOpType> = $._decodeEnumerated;
 export const _encode_NWDAFEventsSubscriptionOpType: $.ASN1Encoder<NWDAFEventsSubscriptionOpType> = $._encodeEnumerated;
 

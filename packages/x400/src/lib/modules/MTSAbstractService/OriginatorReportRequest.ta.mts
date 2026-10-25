@@ -76,10 +76,10 @@ export const OriginatorReportRequest_non_delivery_report: number = 4; /* LONG_NA
 export const non_delivery_report: number = OriginatorReportRequest_non_delivery_report; /* SHORT_NAMED_BIT */
 
 
-export const _decode_OriginatorReportRequest = $._decodeBitString;
+export const _decode_OriginatorReportRequest: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_OriginatorReportRequest = $._encodeBitString;
+export const _encode_OriginatorReportRequest: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

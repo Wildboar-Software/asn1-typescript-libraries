@@ -75,7 +75,7 @@ type DataCollType = _enum_for_DataCollType;
  * @enum {number}
  */
 export
-const DataCollType = _enum_for_DataCollType;
+const DataCollType: typeof _enum_for_DataCollType = _enum_for_DataCollType;
 
 /**
  * @summary DataCollType_digits
@@ -87,7 +87,7 @@ const DataCollType = _enum_for_DataCollType;
  * @type {number}
  */
 export
-const DataCollType_digits = DataCollType.digits; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataCollType_digits: _enum_for_DataCollType.digits = DataCollType.digits; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digits
@@ -99,7 +99,7 @@ const DataCollType_digits = DataCollType.digits; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const digits = DataCollType.digits; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digits: _enum_for_DataCollType.digits = DataCollType.digits; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DataCollType_telTones
@@ -111,7 +111,7 @@ const digits = DataCollType.digits; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DataCollType_telTones = DataCollType.telTones; /* LONG_NAMED_ENUMERATED_VALUE */
+const DataCollType_telTones: _enum_for_DataCollType.telTones = DataCollType.telTones; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telTones
@@ -123,7 +123,7 @@ const DataCollType_telTones = DataCollType.telTones; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const telTones = DataCollType.telTones; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telTones: _enum_for_DataCollType.telTones = DataCollType.telTones; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DataCollType: $.ASN1Decoder<DataCollType> | null = null;
 

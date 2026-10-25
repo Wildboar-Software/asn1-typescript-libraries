@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type CheckSum = BIT_STRING;
 
 
-export const _decode_CheckSum = $._decodeBitString;
+export const _decode_CheckSum: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_CheckSum = $._encodeBitString;
+export const _encode_CheckSum: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

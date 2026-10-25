@@ -38,7 +38,7 @@ type FspGetParameter_parTimeoutType_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parTimeoutType_parameterValue_generateAlert = 0 satisfies FspGetParameter_parTimeoutType_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parTimeoutType_parameterValue_generateAlert: 0 = 0 satisfies FspGetParameter_parTimeoutType_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_generateAlert
@@ -49,7 +49,7 @@ const FspGetParameter_parTimeoutType_parameterValue_generateAlert = 0 satisfies 
  * @type {number}
  */
 export
-const generateAlert = FspGetParameter_parTimeoutType_parameterValue_generateAlert; /* SHORT_NAMED_INTEGER_VALUE */
+const generateAlert: 0 = FspGetParameter_parTimeoutType_parameterValue_generateAlert; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled
@@ -61,7 +61,7 @@ const generateAlert = FspGetParameter_parTimeoutType_parameterValue_generateAler
  * @type {number}
  */
 export
-const FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled = 1 satisfies FspGetParameter_parTimeoutType_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled: 1 = 1 satisfies FspGetParameter_parTimeoutType_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled
@@ -72,7 +72,7 @@ const FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled = 
  * @type {number}
  */
 export
-const suspendSequenceControlled = FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled; /* SHORT_NAMED_INTEGER_VALUE */
+const suspendSequenceControlled: 1 = FspGetParameter_parTimeoutType_parameterValue_suspendSequenceControlled; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parTimeoutType_parameterValue: $.ASN1Decoder<FspGetParameter_parTimeoutType_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parTimeoutType_parameterValue: $.ASN1Encoder<FspGetParameter_parTimeoutType_parameterValue> = $._encodeInteger;
 

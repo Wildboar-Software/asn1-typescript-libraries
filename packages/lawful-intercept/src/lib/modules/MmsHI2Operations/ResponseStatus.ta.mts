@@ -100,7 +100,7 @@ class ResponseStatus {
          * @static
          */
 
-    public static _enum_for_actualResponseStatus = _enum_for_ActualResponseStatus;
+    public static _enum_for_actualResponseStatus: typeof _enum_for_ActualResponseStatus = _enum_for_ActualResponseStatus;
 }
 
 /**

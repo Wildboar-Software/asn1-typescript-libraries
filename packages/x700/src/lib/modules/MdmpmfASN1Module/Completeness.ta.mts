@@ -85,7 +85,7 @@ export type Completeness = _enum_for_Completeness;
  *
  * @enum {number}
  */
-export const Completeness = _enum_for_Completeness;
+export const Completeness: typeof _enum_for_Completeness = _enum_for_Completeness;
 
 /**
  * @summary Completeness_completenessUnknown
@@ -97,7 +97,7 @@ export const Completeness = _enum_for_Completeness;
  * @constant
  * @type {number}
  */
-export const Completeness_completenessUnknown =
+export const Completeness_completenessUnknown: _enum_for_Completeness.completenessUnknown =
     Completeness.completenessUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const Completeness_completenessUnknown =
  * @constant
  * @type {number}
  */
-export const completenessUnknown =
+export const completenessUnknown: _enum_for_Completeness.completenessUnknown =
     Completeness.completenessUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -123,7 +123,7 @@ export const completenessUnknown =
  * @constant
  * @type {number}
  */
-export const Completeness_knownComplete =
+export const Completeness_knownComplete: _enum_for_Completeness.knownComplete =
     Completeness.knownComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -136,7 +136,7 @@ export const Completeness_knownComplete =
  * @constant
  * @type {number}
  */
-export const knownComplete =
+export const knownComplete: _enum_for_Completeness.knownComplete =
     Completeness.knownComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -149,7 +149,7 @@ export const knownComplete =
  * @constant
  * @type {number}
  */
-export const Completeness_knownNotComplete =
+export const Completeness_knownNotComplete: _enum_for_Completeness.knownNotComplete =
     Completeness.knownNotComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const Completeness_knownNotComplete =
  * @constant
  * @type {number}
  */
-export const knownNotComplete =
+export const knownNotComplete: _enum_for_Completeness.knownNotComplete =
     Completeness.knownNotComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -22,14 +22,14 @@ export type EnhancedGuide_subset = INTEGER;
  * @constant
  * @type {number}
  */
-export const EnhancedGuide_subset_baseObject = 0 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
+export const EnhancedGuide_subset_baseObject: 0 = 0 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_baseObject
  * @constant
  * @type {number}
  */
-export const baseObject = EnhancedGuide_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
+export const baseObject: 0 = EnhancedGuide_subset_baseObject; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
@@ -40,7 +40,7 @@ export const baseObject = EnhancedGuide_subset_baseObject; /* SHORT_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const EnhancedGuide_subset_oneLevel = 1 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
+export const EnhancedGuide_subset_oneLevel: 1 = 1 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_oneLevel
@@ -51,27 +51,27 @@ export const EnhancedGuide_subset_oneLevel = 1 satisfies EnhancedGuide_subset; /
  * @constant
  * @type {number}
  */
-export const oneLevel = EnhancedGuide_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneLevel: 1 = EnhancedGuide_subset_oneLevel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const EnhancedGuide_subset_wholeSubtree = 2 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
+export const EnhancedGuide_subset_wholeSubtree: 2 = 2 satisfies EnhancedGuide_subset; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnhancedGuide_subset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree = EnhancedGuide_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
+export const wholeSubtree: 2 = EnhancedGuide_subset_wholeSubtree; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_EnhancedGuide_subset = $._decodeInteger;
+export const _decode_EnhancedGuide_subset: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_EnhancedGuide_subset = $._encodeInteger;
+export const _encode_EnhancedGuide_subset: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

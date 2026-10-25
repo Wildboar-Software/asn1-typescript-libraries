@@ -125,13 +125,13 @@ class deactivateDiversionQ_ArgumentType {
          * @static
          */
 
-    public static _enum_for_procedure = _enum_for_Procedure;        /**
+    public static _enum_for_procedure: typeof _enum_for_Procedure = _enum_for_Procedure;        /**
          * @summary The enum used as the type of the component `basicService`
          * @public
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

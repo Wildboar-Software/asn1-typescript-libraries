@@ -107,7 +107,7 @@ class RCSSIPSessionExchange {
          * @static
          */
 
-    public static _enum_for_sessionLeg = _enum_for_RCSSessionLeg;
+    public static _enum_for_sessionLeg: typeof _enum_for_RCSSessionLeg = _enum_for_RCSSessionLeg;
 }
 
 /**

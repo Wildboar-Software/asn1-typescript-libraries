@@ -81,13 +81,13 @@ class FingerPrintInformation {
          * @static
          */
 
-    public static _enum_for_hand = _enum_for_FingerPrintInformation_hand;        /**
+    public static _enum_for_hand: typeof _enum_for_FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;        /**
          * @summary The enum used as the type of the component `finger`
          * @public
          * @static
          */
 
-    public static _enum_for_finger = _enum_for_FingerPrintInformation_finger;
+    public static _enum_for_finger: typeof _enum_for_FingerPrintInformation_finger = _enum_for_FingerPrintInformation_finger;
 }
 
 /**

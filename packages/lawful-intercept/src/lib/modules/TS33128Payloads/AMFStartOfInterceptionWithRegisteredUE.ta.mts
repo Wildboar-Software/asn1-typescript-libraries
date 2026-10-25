@@ -470,19 +470,19 @@ class AMFStartOfInterceptionWithRegisteredUE {
          * @static
          */
 
-    public static _enum_for_registrationResult = _enum_for_AMFRegistrationResult;        /**
+    public static _enum_for_registrationResult: typeof _enum_for_AMFRegistrationResult = _enum_for_AMFRegistrationResult;        /**
          * @summary The enum used as the type of the component `registrationType`
          * @public
          * @static
          */
 
-    public static _enum_for_registrationType = _enum_for_AMFRegistrationType;        /**
+    public static _enum_for_registrationType: typeof _enum_for_AMFRegistrationType = _enum_for_AMFRegistrationType;        /**
          * @summary The enum used as the type of the component `sMSOverNASIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_sMSOverNASIndicator = _enum_for_SMSOverNASIndicator;
+    public static _enum_for_sMSOverNASIndicator: typeof _enum_for_SMSOverNASIndicator = _enum_for_SMSOverNASIndicator;
 }
 
 /**

@@ -227,7 +227,7 @@ const ErrorControl_Item_v42featureNegotiation_v42fallbackUnBuf: number = 10; /* 
  */
 export
 const v42fallbackUnBuf: number = ErrorControl_Item_v42featureNegotiation_v42fallbackUnBuf; /* SHORT_NAMED_BIT */
-export const _decode_ErrorControl_Item_v42featureNegotiation = $._decodeBitString;
-export const _encode_ErrorControl_Item_v42featureNegotiation = $._encodeBitString;
+export const _decode_ErrorControl_Item_v42featureNegotiation: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ErrorControl_Item_v42featureNegotiation: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 /* eslint-enable */

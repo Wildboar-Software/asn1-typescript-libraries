@@ -27,7 +27,7 @@ export function _decode_PersonName (el: _Element): PersonName {
     }
     return value;
 }
-export const _encode_PersonName = $._encodeGraphicString;
+export const _encode_PersonName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

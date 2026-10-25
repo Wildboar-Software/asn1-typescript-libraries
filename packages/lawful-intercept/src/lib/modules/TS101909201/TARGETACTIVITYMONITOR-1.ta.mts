@@ -284,19 +284,19 @@ class TARGETACTIVITYMONITOR_1 {
      * @static
      * @method
      */
-    public static get _default_value_for_iRITransaction () { return IRITransactionType_iRIreport; }        /**
+    public static get _default_value_for_iRITransaction (): _enum_for_IRITransactionType.iRIreport { return IRITransactionType_iRIreport; }        /**
          * @summary The enum used as the type of the component `direction`
          * @public
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_DirectionType;        /**
+    public static _enum_for_direction: typeof _enum_for_DirectionType = _enum_for_DirectionType;        /**
          * @summary The enum used as the type of the component `iRITransaction`
          * @public
          * @static
          */
 
-    public static _enum_for_iRITransaction = _enum_for_IRITransactionType;
+    public static _enum_for_iRITransaction: typeof _enum_for_IRITransactionType = _enum_for_IRITransactionType;
 }
 
 /**

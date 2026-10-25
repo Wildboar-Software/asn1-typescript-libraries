@@ -209,13 +209,13 @@ class SCEFASSessionWithQoSProvision {
          * @static
          */
 
-    public static _enum_for_aSSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;        /**
+    public static _enum_for_aSSessionWithQoSOpType: typeof _enum_for_AForASSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;        /**
          * @summary The enum used as the type of the component `aSSessionWithQoSResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_aSSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
+    public static _enum_for_aSSessionWithQoSResponseCode: typeof _enum_for_AForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
 }
 
 /**

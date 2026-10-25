@@ -55,7 +55,7 @@ type V92ModDiag_Item_lastMOHaction = _enum_for_V92ModDiag_Item_lastMOHaction | E
  * @type {number}
  */
 export
-const V92ModDiag_Item_lastMOHaction_mohaccepted = _enum_for_V92ModDiag_Item_lastMOHaction.mohaccepted; /* LONG_NAMED_ENUMERATED_VALUE */
+const V92ModDiag_Item_lastMOHaction_mohaccepted: 0 = _enum_for_V92ModDiag_Item_lastMOHaction.mohaccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mohaccepted
@@ -63,7 +63,7 @@ const V92ModDiag_Item_lastMOHaction_mohaccepted = _enum_for_V92ModDiag_Item_last
  * @type {number}
  */
 export
-const mohaccepted = V92ModDiag_Item_lastMOHaction_mohaccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mohaccepted: 0 = V92ModDiag_Item_lastMOHaction_mohaccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohdeclined
@@ -75,7 +75,7 @@ const mohaccepted = V92ModDiag_Item_lastMOHaction_mohaccepted; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const V92ModDiag_Item_lastMOHaction_mohdeclined = _enum_for_V92ModDiag_Item_lastMOHaction.mohdeclined; /* LONG_NAMED_ENUMERATED_VALUE */
+const V92ModDiag_Item_lastMOHaction_mohdeclined: 1 = _enum_for_V92ModDiag_Item_lastMOHaction.mohdeclined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mohdeclined
@@ -83,7 +83,7 @@ const V92ModDiag_Item_lastMOHaction_mohdeclined = _enum_for_V92ModDiag_Item_last
  * @type {number}
  */
 export
-const mohdeclined = V92ModDiag_Item_lastMOHaction_mohdeclined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mohdeclined: 1 = V92ModDiag_Item_lastMOHaction_mohdeclined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohdenied
@@ -95,7 +95,7 @@ const mohdeclined = V92ModDiag_Item_lastMOHaction_mohdeclined; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const V92ModDiag_Item_lastMOHaction_mohdenied = _enum_for_V92ModDiag_Item_lastMOHaction.mohdenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const V92ModDiag_Item_lastMOHaction_mohdenied: 2 = _enum_for_V92ModDiag_Item_lastMOHaction.mohdenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mohdenied
@@ -103,7 +103,7 @@ const V92ModDiag_Item_lastMOHaction_mohdenied = _enum_for_V92ModDiag_Item_lastMO
  * @type {number}
  */
 export
-const mohdenied = V92ModDiag_Item_lastMOHaction_mohdenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mohdenied: 2 = V92ModDiag_Item_lastMOHaction_mohdenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V92ModDiag_Item_lastMOHaction_mohclrdn
@@ -115,7 +115,7 @@ const mohdenied = V92ModDiag_Item_lastMOHaction_mohdenied; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const V92ModDiag_Item_lastMOHaction_mohclrdn = _enum_for_V92ModDiag_Item_lastMOHaction.mohclrdn; /* LONG_NAMED_ENUMERATED_VALUE */
+const V92ModDiag_Item_lastMOHaction_mohclrdn: 3 = _enum_for_V92ModDiag_Item_lastMOHaction.mohclrdn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mohclrdn
@@ -123,8 +123,8 @@ const V92ModDiag_Item_lastMOHaction_mohclrdn = _enum_for_V92ModDiag_Item_lastMOH
  * @type {number}
  */
 export
-const mohclrdn = V92ModDiag_Item_lastMOHaction_mohclrdn; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V92ModDiag_Item_lastMOHaction = $._decodeEnumerated;
-export const _encode_V92ModDiag_Item_lastMOHaction = $._encodeEnumerated;
+const mohclrdn: 3 = V92ModDiag_Item_lastMOHaction_mohclrdn; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_V92ModDiag_Item_lastMOHaction: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_V92ModDiag_Item_lastMOHaction: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 /* eslint-enable */

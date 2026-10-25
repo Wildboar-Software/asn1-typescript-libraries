@@ -42,7 +42,7 @@ type DOupdate_copyToBuffer_structure = INTEGER;
  * @type {number}
  */
 export
-const DOupdate_copyToBuffer_structure_none = 0 satisfies DOupdate_copyToBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
+const DOupdate_copyToBuffer_structure_none: 0 = 0 satisfies DOupdate_copyToBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyToBuffer_structure_none
@@ -55,7 +55,7 @@ const DOupdate_copyToBuffer_structure_none = 0 satisfies DOupdate_copyToBuffer_s
  * @type {number}
  */
 export
-const none = DOupdate_copyToBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 0 = DOupdate_copyToBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyToBuffer_structure_x
@@ -67,7 +67,7 @@ const none = DOupdate_copyToBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const DOupdate_copyToBuffer_structure_x = 1 satisfies DOupdate_copyToBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
+const DOupdate_copyToBuffer_structure_x: 1 = 1 satisfies DOupdate_copyToBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyToBuffer_structure_x
@@ -79,7 +79,7 @@ const DOupdate_copyToBuffer_structure_x = 1 satisfies DOupdate_copyToBuffer_stru
  * @type {number}
  */
 export
-const x = DOupdate_copyToBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
+const x: 1 = DOupdate_copyToBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyToBuffer_structure_xAndy
@@ -91,7 +91,7 @@ const x = DOupdate_copyToBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DOupdate_copyToBuffer_structure_xAndy = 2 satisfies DOupdate_copyToBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
+const DOupdate_copyToBuffer_structure_xAndy: 2 = 2 satisfies DOupdate_copyToBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyToBuffer_structure_xAndy
@@ -103,9 +103,9 @@ const DOupdate_copyToBuffer_structure_xAndy = 2 satisfies DOupdate_copyToBuffer_
  * @type {number}
  */
 export
-const xAndy = DOupdate_copyToBuffer_structure_xAndy; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DOupdate_copyToBuffer_structure = $._decodeInteger;
-export const _encode_DOupdate_copyToBuffer_structure = $._encodeInteger;
+const xAndy: 2 = DOupdate_copyToBuffer_structure_xAndy; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DOupdate_copyToBuffer_structure: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DOupdate_copyToBuffer_structure: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

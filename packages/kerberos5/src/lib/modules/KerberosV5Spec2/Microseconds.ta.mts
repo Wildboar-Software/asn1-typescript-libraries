@@ -32,12 +32,12 @@ export type Microseconds = INTEGER;
 
 
 
-export const _decode_Microseconds = $._decodeInteger;
+export const _decode_Microseconds: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Microseconds = $._encodeInteger;
+export const _encode_Microseconds: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

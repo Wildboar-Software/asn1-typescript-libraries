@@ -77,7 +77,7 @@ type APNSelectionMode = _enum_for_APNSelectionMode;
  * @enum {number}
  */
 export
-const APNSelectionMode = _enum_for_APNSelectionMode;
+const APNSelectionMode: typeof _enum_for_APNSelectionMode = _enum_for_APNSelectionMode;
 
 /**
  * @summary APNSelectionMode_mSorNetworkProvidedSubscriptionVerified
@@ -85,7 +85,7 @@ const APNSelectionMode = _enum_for_APNSelectionMode;
  * @type {number}
  */
 export
-const APNSelectionMode_mSorNetworkProvidedSubscriptionVerified = APNSelectionMode.mSorNetworkProvidedSubscriptionVerified; /* LONG_NAMED_ENUMERATED_VALUE */
+const APNSelectionMode_mSorNetworkProvidedSubscriptionVerified: _enum_for_APNSelectionMode.mSorNetworkProvidedSubscriptionVerified = APNSelectionMode.mSorNetworkProvidedSubscriptionVerified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mSorNetworkProvidedSubscriptionVerified
@@ -93,7 +93,7 @@ const APNSelectionMode_mSorNetworkProvidedSubscriptionVerified = APNSelectionMod
  * @type {number}
  */
 export
-const mSorNetworkProvidedSubscriptionVerified = APNSelectionMode.mSorNetworkProvidedSubscriptionVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mSorNetworkProvidedSubscriptionVerified: _enum_for_APNSelectionMode.mSorNetworkProvidedSubscriptionVerified = APNSelectionMode.mSorNetworkProvidedSubscriptionVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APNSelectionMode_mSProvidedSubscriptionNotVerified
@@ -101,7 +101,7 @@ const mSorNetworkProvidedSubscriptionVerified = APNSelectionMode.mSorNetworkProv
  * @type {number}
  */
 export
-const APNSelectionMode_mSProvidedSubscriptionNotVerified = APNSelectionMode.mSProvidedSubscriptionNotVerified; /* LONG_NAMED_ENUMERATED_VALUE */
+const APNSelectionMode_mSProvidedSubscriptionNotVerified: _enum_for_APNSelectionMode.mSProvidedSubscriptionNotVerified = APNSelectionMode.mSProvidedSubscriptionNotVerified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mSProvidedSubscriptionNotVerified
@@ -109,7 +109,7 @@ const APNSelectionMode_mSProvidedSubscriptionNotVerified = APNSelectionMode.mSPr
  * @type {number}
  */
 export
-const mSProvidedSubscriptionNotVerified = APNSelectionMode.mSProvidedSubscriptionNotVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mSProvidedSubscriptionNotVerified: _enum_for_APNSelectionMode.mSProvidedSubscriptionNotVerified = APNSelectionMode.mSProvidedSubscriptionNotVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary APNSelectionMode_networkProvidedSubscriptionNotVerified
@@ -117,7 +117,7 @@ const mSProvidedSubscriptionNotVerified = APNSelectionMode.mSProvidedSubscriptio
  * @type {number}
  */
 export
-const APNSelectionMode_networkProvidedSubscriptionNotVerified = APNSelectionMode.networkProvidedSubscriptionNotVerified; /* LONG_NAMED_ENUMERATED_VALUE */
+const APNSelectionMode_networkProvidedSubscriptionNotVerified: _enum_for_APNSelectionMode.networkProvidedSubscriptionNotVerified = APNSelectionMode.networkProvidedSubscriptionNotVerified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkProvidedSubscriptionNotVerified
@@ -125,7 +125,7 @@ const APNSelectionMode_networkProvidedSubscriptionNotVerified = APNSelectionMode
  * @type {number}
  */
 export
-const networkProvidedSubscriptionNotVerified = APNSelectionMode.networkProvidedSubscriptionNotVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkProvidedSubscriptionNotVerified: _enum_for_APNSelectionMode.networkProvidedSubscriptionNotVerified = APNSelectionMode.networkProvidedSubscriptionNotVerified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_APNSelectionMode: $.ASN1Decoder<APNSelectionMode> = $._decodeEnumerated;

@@ -102,13 +102,13 @@ class INprofile {
          * @static
          */
 
-    public static _enum_for_actionOnProfile = _enum_for_ActionOnProfile;        /**
+    public static _enum_for_actionOnProfile: typeof _enum_for_ActionOnProfile = _enum_for_ActionOnProfile;        /**
          * @summary The enum used as the type of the component `dPName`
          * @public
          * @static
          */
 
-    public static _enum_for_dPName = _enum_for_EventTypeBCSM;
+    public static _enum_for_dPName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

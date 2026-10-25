@@ -103,7 +103,7 @@ class Deferredmt_lrData {
          * @static
          */
 
-    public static _enum_for_terminationCause = _enum_for_TerminationCause;
+    public static _enum_for_terminationCause: typeof _enum_for_TerminationCause = _enum_for_TerminationCause;
 }
 
 /**

@@ -106,7 +106,7 @@ export class ArcControlRequest {
      * @static
      */
 
-    public static _enum_for_newState = _enum_for_ArcState;
+    public static _enum_for_newState: typeof _enum_for_ArcState = _enum_for_ArcState;
 }
 
 

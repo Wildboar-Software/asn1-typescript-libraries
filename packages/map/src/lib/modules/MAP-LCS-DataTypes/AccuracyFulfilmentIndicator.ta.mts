@@ -43,7 +43,7 @@ type AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator | ENUME
  * @type {number}
  */
 export
-const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled: _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedAccuracyFulfilled
@@ -55,7 +55,7 @@ const AccuracyFulfilmentIndicator_requestedAccuracyFulfilled = _enum_for_Accurac
  * @type {number}
  */
 export
-const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedAccuracyFulfilled: _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled
@@ -68,7 +68,7 @@ const requestedAccuracyFulfilled = AccuracyFulfilmentIndicator_requestedAccuracy
  * @type {number}
  */
 export
-const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
+const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled: _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled = _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedAccuracyNotFulfilled
@@ -81,7 +81,7 @@ const AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled = _enum_for_Accu
  * @type {number}
  */
 export
-const requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedAccuracyNotFulfilled: _enum_for_AccuracyFulfilmentIndicator.requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator_requestedAccuracyNotFulfilled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AccuracyFulfilmentIndicator
@@ -89,7 +89,7 @@ const requestedAccuracyNotFulfilled = AccuracyFulfilmentIndicator_requestedAccur
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AccuracyFulfilmentIndicator = $._decodeEnumerated;
+export const _decode_AccuracyFulfilmentIndicator: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AccuracyFulfilmentIndicator into an ASN.1 Element.
@@ -98,7 +98,7 @@ export const _decode_AccuracyFulfilmentIndicator = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AccuracyFulfilmentIndicator, encoded as an ASN.1 Element.
  */
-export const _encode_AccuracyFulfilmentIndicator = $._encodeEnumerated;
+export const _encode_AccuracyFulfilmentIndicator: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

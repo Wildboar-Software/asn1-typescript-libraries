@@ -33,10 +33,10 @@ export
 type BackedUpStatus = BOOLEAN; // BooleanType
 
 
-export const _decode_BackedUpStatus = $._decodeBoolean;
+export const _decode_BackedUpStatus: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_BackedUpStatus = $._encodeBoolean;
+export const _encode_BackedUpStatus: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

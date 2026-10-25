@@ -360,7 +360,7 @@ class ConnectArg {
          * @static
          */
 
-    public static _enum_for_forwardingCondition = _enum_for_ForwardingCondition;
+    public static _enum_for_forwardingCondition: typeof _enum_for_ForwardingCondition = _enum_for_ForwardingCondition;
 }
 
 /**

@@ -277,7 +277,7 @@ export class ContinuationReference {
      * @static
      */
 
-    public static _enum_for_referenceType = _enum_for_ReferenceType;
+    public static _enum_for_referenceType: typeof _enum_for_ReferenceType = _enum_for_ReferenceType;
 }
 
 /**

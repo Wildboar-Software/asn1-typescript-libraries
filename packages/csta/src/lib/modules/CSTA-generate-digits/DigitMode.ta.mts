@@ -72,7 +72,7 @@ type DigitMode = _enum_for_DigitMode;
  * @enum {number}
  */
 export
-const DigitMode = _enum_for_DigitMode;
+const DigitMode: typeof _enum_for_DigitMode = _enum_for_DigitMode;
 
 /**
  * @summary DigitMode_rotaryPulse
@@ -80,7 +80,7 @@ const DigitMode = _enum_for_DigitMode;
  * @type {number}
  */
 export
-const DigitMode_rotaryPulse = DigitMode.rotaryPulse; /* LONG_NAMED_ENUMERATED_VALUE */
+const DigitMode_rotaryPulse: _enum_for_DigitMode.rotaryPulse = DigitMode.rotaryPulse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rotaryPulse
@@ -88,7 +88,7 @@ const DigitMode_rotaryPulse = DigitMode.rotaryPulse; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const rotaryPulse = DigitMode.rotaryPulse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rotaryPulse: _enum_for_DigitMode.rotaryPulse = DigitMode.rotaryPulse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DigitMode_dTMF
@@ -96,7 +96,7 @@ const rotaryPulse = DigitMode.rotaryPulse; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DigitMode_dTMF = DigitMode.dTMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const DigitMode_dTMF: _enum_for_DigitMode.dTMF = DigitMode.dTMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dTMF
@@ -104,7 +104,7 @@ const DigitMode_dTMF = DigitMode.dTMF; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const dTMF = DigitMode.dTMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dTMF: _enum_for_DigitMode.dTMF = DigitMode.dTMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DigitMode: $.ASN1Decoder<DigitMode> | null = null;
 

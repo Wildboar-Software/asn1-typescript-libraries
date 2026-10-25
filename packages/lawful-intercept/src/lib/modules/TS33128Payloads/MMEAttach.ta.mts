@@ -467,25 +467,25 @@ class MMEAttach {
          * @static
          */
 
-    public static _enum_for_attachType = _enum_for_EPSAttachType;        /**
+    public static _enum_for_attachType: typeof _enum_for_EPSAttachType = _enum_for_EPSAttachType;        /**
          * @summary The enum used as the type of the component `attachResult`
          * @public
          * @static
          */
 
-    public static _enum_for_attachResult = _enum_for_EPSAttachResult;        /**
+    public static _enum_for_attachResult: typeof _enum_for_EPSAttachResult = _enum_for_EPSAttachResult;        /**
          * @summary The enum used as the type of the component `sMSServiceStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_sMSServiceStatus = _enum_for_EPSSMSServiceStatus;        /**
+    public static _enum_for_sMSServiceStatus: typeof _enum_for_EPSSMSServiceStatus = _enum_for_EPSSMSServiceStatus;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

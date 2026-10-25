@@ -51,7 +51,7 @@ export type AttributeError_errorStatus =
  * @constant
  * @type {number}
  */
-export const AttributeError_errorStatus_accessDenied = _enum_for_AttributeError_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeError_errorStatus_accessDenied: _enum_for_AttributeError_errorStatus.accessDenied = _enum_for_AttributeError_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -59,7 +59,7 @@ export const AttributeError_errorStatus_accessDenied = _enum_for_AttributeError_
  * @constant
  * @type {number}
  */
-export const accessDenied = AttributeError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied: _enum_for_AttributeError_errorStatus.accessDenied = AttributeError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const accessDenied = AttributeError_errorStatus_accessDenied; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const AttributeError_errorStatus_noSuchAttribute = _enum_for_AttributeError_errorStatus.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeError_errorStatus_noSuchAttribute: _enum_for_AttributeError_errorStatus.noSuchAttribute = _enum_for_AttributeError_errorStatus.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const AttributeError_errorStatus_noSuchAttribute = _enum_for_AttributeErr
  * @constant
  * @type {number}
  */
-export const noSuchAttribute = AttributeError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAttribute: _enum_for_AttributeError_errorStatus.noSuchAttribute = AttributeError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -83,7 +83,7 @@ export const noSuchAttribute = AttributeError_errorStatus_noSuchAttribute; /* SH
  * @constant
  * @type {number}
  */
-export const AttributeError_errorStatus_invalidAttributeValue = _enum_for_AttributeError_errorStatus.invalidAttributeValue; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeError_errorStatus_invalidAttributeValue: _enum_for_AttributeError_errorStatus.invalidAttributeValue = _enum_for_AttributeError_errorStatus.invalidAttributeValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -91,7 +91,7 @@ export const AttributeError_errorStatus_invalidAttributeValue = _enum_for_Attrib
  * @constant
  * @type {number}
  */
-export const invalidAttributeValue = AttributeError_errorStatus_invalidAttributeValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAttributeValue: _enum_for_AttributeError_errorStatus.invalidAttributeValue = AttributeError_errorStatus_invalidAttributeValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const invalidAttributeValue = AttributeError_errorStatus_invalidAttribute
  * @constant
  * @type {number}
  */
-export const AttributeError_errorStatus_invalidOperation = _enum_for_AttributeError_errorStatus.invalidOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeError_errorStatus_invalidOperation: _enum_for_AttributeError_errorStatus.invalidOperation = _enum_for_AttributeError_errorStatus.invalidOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const AttributeError_errorStatus_invalidOperation = _enum_for_AttributeEr
  * @constant
  * @type {number}
  */
-export const invalidOperation = AttributeError_errorStatus_invalidOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidOperation: _enum_for_AttributeError_errorStatus.invalidOperation = AttributeError_errorStatus_invalidOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const invalidOperation = AttributeError_errorStatus_invalidOperation; /* 
  * @constant
  * @type {number}
  */
-export const AttributeError_errorStatus_invalidOperator = _enum_for_AttributeError_errorStatus.invalidOperator; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeError_errorStatus_invalidOperator: _enum_for_AttributeError_errorStatus.invalidOperator = _enum_for_AttributeError_errorStatus.invalidOperator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,17 +133,17 @@ export const AttributeError_errorStatus_invalidOperator = _enum_for_AttributeErr
  * @constant
  * @type {number}
  */
-export const invalidOperator = AttributeError_errorStatus_invalidOperator; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidOperator: _enum_for_AttributeError_errorStatus.invalidOperator = AttributeError_errorStatus_invalidOperator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AttributeError_errorStatus = $._decodeEnumerated;
+export const _decode_AttributeError_errorStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_AttributeError_errorStatus = $._encodeEnumerated;
+export const _encode_AttributeError_errorStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

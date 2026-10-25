@@ -32,12 +32,12 @@ export type SessionType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
 
-export const _decode_SessionType = $._decodeObjectIdentifier;
+export const _decode_SessionType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
 
 
-export const _encode_SessionType = $._encodeObjectIdentifier;
+export const _encode_SessionType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

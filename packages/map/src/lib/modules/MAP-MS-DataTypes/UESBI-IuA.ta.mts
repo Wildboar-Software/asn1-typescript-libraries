@@ -47,7 +47,7 @@ export const _decode_UESBI_IuA = (el: _Element): UESBI_IuA => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UESBI_IuA, encoded as an ASN.1 Element.
  */
-export const _encode_UESBI_IuA = $._encodeBitString;
+export const _encode_UESBI_IuA: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

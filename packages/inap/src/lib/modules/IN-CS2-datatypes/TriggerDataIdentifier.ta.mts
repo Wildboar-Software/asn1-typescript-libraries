@@ -84,7 +84,7 @@ class TriggerDataIdentifier {
          * @static
          */
 
-    public static _enum_for_triggerID = _enum_for_EventTypeBCSM;
+    public static _enum_for_triggerID: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

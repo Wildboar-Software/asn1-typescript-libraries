@@ -81,7 +81,7 @@ type SourceIndicator = _enum_for_SourceIndicator;
  * @enum {number}
  */
 export
-const SourceIndicator = _enum_for_SourceIndicator;
+const SourceIndicator: typeof _enum_for_SourceIndicator = _enum_for_SourceIndicator;
 
 /**
  * @summary SourceIndicator_resourceOperation
@@ -94,7 +94,7 @@ const SourceIndicator = _enum_for_SourceIndicator;
  * @type {number}
  */
 export
-const SourceIndicator_resourceOperation = SourceIndicator.resourceOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SourceIndicator_resourceOperation: 0 = SourceIndicator.resourceOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceOperation
@@ -107,7 +107,7 @@ const SourceIndicator_resourceOperation = SourceIndicator.resourceOperation; /* 
  * @type {number}
  */
 export
-const resourceOperation = SourceIndicator.resourceOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceOperation: 0 = SourceIndicator.resourceOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SourceIndicator_managementOperation
@@ -120,7 +120,7 @@ const resourceOperation = SourceIndicator.resourceOperation; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const SourceIndicator_managementOperation = SourceIndicator.managementOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SourceIndicator_managementOperation: 1 = SourceIndicator.managementOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary managementOperation
@@ -133,7 +133,7 @@ const SourceIndicator_managementOperation = SourceIndicator.managementOperation;
  * @type {number}
  */
 export
-const managementOperation = SourceIndicator.managementOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const managementOperation: 1 = SourceIndicator.managementOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SourceIndicator_unknown
@@ -145,7 +145,7 @@ const managementOperation = SourceIndicator.managementOperation; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const SourceIndicator_unknown = SourceIndicator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const SourceIndicator_unknown: 2 = SourceIndicator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -157,7 +157,7 @@ const SourceIndicator_unknown = SourceIndicator.unknown; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const unknown = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: 2 = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 export function _decode_SourceIndicator(el: _Element): SourceIndicator {

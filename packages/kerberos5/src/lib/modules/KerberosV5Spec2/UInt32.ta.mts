@@ -30,12 +30,12 @@ export type UInt32 = INTEGER;
 
 
 
-export const _decode_UInt32 = $._decodeInteger;
+export const _decode_UInt32: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_UInt32 = $._encodeInteger;
+export const _encode_UInt32: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -61,7 +61,7 @@ export const _decode_Ext_SupportedFeatures = (el: _Element): Ext_SupportedFeatur
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_SupportedFeatures, encoded as an ASN.1 Element.
  */
-export const _encode_Ext_SupportedFeatures = $._encodeBitString;
+export const _encode_Ext_SupportedFeatures: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

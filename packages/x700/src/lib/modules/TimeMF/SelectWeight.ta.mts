@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SelectWeight = REAL; // RealType
 
 
-export const _decode_SelectWeight = $._decodeReal;
+export const _decode_SelectWeight: $.ASN1Decoder<number> = $._decodeReal;
 
 
-export const _encode_SelectWeight = $._encodeReal;
+export const _encode_SelectWeight: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

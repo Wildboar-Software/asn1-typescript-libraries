@@ -99,7 +99,7 @@ export class RedirectionProcessingInfo {
      * @static
      */
 
-    public static _enum_for_redirection_reason = _enum_for_RedirectionReason;
+    public static _enum_for_redirection_reason: typeof _enum_for_RedirectionReason = _enum_for_RedirectionReason;
 }
 
 /**

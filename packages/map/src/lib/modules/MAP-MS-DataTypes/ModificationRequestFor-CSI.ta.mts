@@ -133,25 +133,25 @@ class ModificationRequestFor_CSI {
          * @static
          */
 
-    public static _enum_for_requestedCamel_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo;        /**
+    public static _enum_for_requestedCamel_SubscriptionInfo: typeof _enum_for_RequestedCAMEL_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo;        /**
          * @summary The enum used as the type of the component `modifyNotificationToCSE`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;        /**
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;        /**
          * @summary The enum used as the type of the component `modifyCSI_State`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyCSI_State = _enum_for_ModificationInstruction;        /**
+    public static _enum_for_modifyCSI_State: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;        /**
          * @summary The enum used as the type of the component `additionalRequestedCAMEL_SubscriptionInfo`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalRequestedCAMEL_SubscriptionInfo = _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo;
+    public static _enum_for_additionalRequestedCAMEL_SubscriptionInfo: typeof _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo = _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo;
 }
 
 /**

@@ -145,7 +145,7 @@ export class DeleteError {
    * @static
    */
 
-  public static _enum_for_deleteErrorInfo = _enum_for_DeleteError_deleteErrorInfo;
+  public static _enum_for_deleteErrorInfo: typeof _enum_for_DeleteError_deleteErrorInfo = _enum_for_DeleteError_deleteErrorInfo;
 }
 
 

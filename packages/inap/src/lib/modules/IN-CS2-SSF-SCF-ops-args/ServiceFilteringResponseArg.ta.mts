@@ -104,7 +104,7 @@ class ServiceFilteringResponseArg {
          * @static
          */
 
-    public static _enum_for_responseCondition = _enum_for_ResponseCondition;
+    public static _enum_for_responseCondition: typeof _enum_for_ResponseCondition = _enum_for_ResponseCondition;
 }
 
 /**

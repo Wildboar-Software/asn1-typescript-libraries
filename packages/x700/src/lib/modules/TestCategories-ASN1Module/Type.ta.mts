@@ -38,7 +38,7 @@ export type Type = INTEGER;
  * @constant
  * @type {number}
  */
-export const Type_connectionOriented = 0 satisfies Type; /* LONG_NAMED_INTEGER_VALUE */
+export const Type_connectionOriented: 0 = 0 satisfies Type; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Type_connectionOriented
@@ -48,7 +48,7 @@ export const Type_connectionOriented = 0 satisfies Type; /* LONG_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const connectionOriented = Type_connectionOriented; /* SHORT_NAMED_INTEGER_VALUE */
+export const connectionOriented: 0 = Type_connectionOriented; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Type_connectionless
@@ -58,7 +58,7 @@ export const connectionOriented = Type_connectionOriented; /* SHORT_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const Type_connectionless = 1 satisfies Type; /* LONG_NAMED_INTEGER_VALUE */
+export const Type_connectionless: 1 = 1 satisfies Type; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Type_connectionless
@@ -68,13 +68,13 @@ export const Type_connectionless = 1 satisfies Type; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const connectionless = Type_connectionless; /* SHORT_NAMED_INTEGER_VALUE */
+export const connectionless: 1 = Type_connectionless; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Type = $._decodeInteger;
+export const _decode_Type: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Type = $._encodeInteger;
+export const _encode_Type: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

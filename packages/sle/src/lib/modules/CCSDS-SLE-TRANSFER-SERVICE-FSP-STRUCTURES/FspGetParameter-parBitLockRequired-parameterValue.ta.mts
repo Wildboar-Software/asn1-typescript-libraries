@@ -38,7 +38,7 @@ type FspGetParameter_parBitLockRequired_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const FspGetParameter_parBitLockRequired_parameterValue_yes = 0 satisfies FspGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parBitLockRequired_parameterValue_yes: 0 = 0 satisfies FspGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_yes
@@ -50,7 +50,7 @@ const FspGetParameter_parBitLockRequired_parameterValue_yes = 0 satisfies FspGet
  * @type {number}
  */
 export
-const yes = FspGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
+const yes: 0 = FspGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_no
@@ -63,7 +63,7 @@ const yes = FspGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAME
  * @type {number}
  */
 export
-const FspGetParameter_parBitLockRequired_parameterValue_no = 1 satisfies FspGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const FspGetParameter_parBitLockRequired_parameterValue_no: 1 = 1 satisfies FspGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspGetParameter_parBitLockRequired_parameterValue_no
@@ -74,7 +74,7 @@ const FspGetParameter_parBitLockRequired_parameterValue_no = 1 satisfies FspGetP
  * @type {number}
  */
 export
-const no = FspGetParameter_parBitLockRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
+const no: 1 = FspGetParameter_parBitLockRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspGetParameter_parBitLockRequired_parameterValue: $.ASN1Decoder<FspGetParameter_parBitLockRequired_parameterValue> = $._decodeInteger;
 export const _encode_FspGetParameter_parBitLockRequired_parameterValue: $.ASN1Encoder<FspGetParameter_parBitLockRequired_parameterValue> = $._encodeInteger;
 

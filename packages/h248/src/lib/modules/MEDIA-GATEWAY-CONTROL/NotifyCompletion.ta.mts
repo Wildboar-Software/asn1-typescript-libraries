@@ -125,8 +125,8 @@ const NotifyCompletion_onIteration: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const onIteration: number = NotifyCompletion_onIteration; /* SHORT_NAMED_BIT */
-export const _decode_NotifyCompletion = $._decodeBitString;
-export const _encode_NotifyCompletion = $._encodeBitString;
+export const _decode_NotifyCompletion: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_NotifyCompletion: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

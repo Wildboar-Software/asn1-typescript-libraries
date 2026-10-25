@@ -45,7 +45,7 @@ type DisableEmergencyProfileResponse_disableEmergencyProfileResult = INTEGER;
  * @type {number}
  */
 export
-const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok = 0 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok: 0 = 0 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok
@@ -57,7 +57,7 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok = 0 satis
  * @type {number}
  */
 export
-const ok = DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState
@@ -70,7 +70,7 @@ const ok = DisableEmergencyProfileResponse_disableEmergencyProfileResult_ok; /* 
  * @type {number}
  */
 export
-const DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState = 2 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState: 2 = 2 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState
@@ -81,7 +81,7 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotIn
  * @type {number}
  */
 export
-const profileNotInEnabledState = DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInEnabledState: 2 = DisableEmergencyProfileResponse_disableEmergencyProfileResult_profileNotInEnabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy
@@ -95,7 +95,7 @@ const profileNotInEnabledState = DisableEmergencyProfileResponse_disableEmergenc
  * @type {number}
  */
 export
-const DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy = 5 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy: 5 = 5 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy
@@ -107,7 +107,7 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy = 5 
  * @type {number}
  */
 export
-const catBusy = DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy: 5 = DisableEmergencyProfileResponse_disableEmergencyProfileResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable
@@ -121,7 +121,7 @@ const catBusy = DisableEmergencyProfileResponse_disableEmergencyProfileResult_ca
  * @type {number}
  */
 export
-const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable = 8 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable: 8 = 8 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable
@@ -133,7 +133,7 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvai
  * @type {number}
  */
 export
-const ecallNotAvailable = DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallNotAvailable: 8 = DisableEmergencyProfileResponse_disableEmergencyProfileResult_ecallNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError
@@ -145,7 +145,7 @@ const ecallNotAvailable = DisableEmergencyProfileResponse_disableEmergencyProfil
  * @type {number}
  */
 export
-const DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError = 127 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
+const DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError: 127 = 127 satisfies DisableEmergencyProfileResponse_disableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError
@@ -157,7 +157,7 @@ const DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedErr
  * @type {number}
  */
 export
-const undefinedError = DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = DisableEmergencyProfileResponse_disableEmergencyProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult: $.ASN1Decoder<DisableEmergencyProfileResponse_disableEmergencyProfileResult> = $._decodeInteger;
 export const _encode_DisableEmergencyProfileResponse_disableEmergencyProfileResult: $.ASN1Encoder<DisableEmergencyProfileResponse_disableEmergencyProfileResult> = $._encodeInteger;
 

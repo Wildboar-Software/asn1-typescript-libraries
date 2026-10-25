@@ -76,7 +76,7 @@ export type InformationTransferCapabilities = _enum_for_InformationTransferCapab
  *
  * @enum {number}
  */
-export const InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
+export const InformationTransferCapabilities: typeof _enum_for_InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
 
 
 /**
@@ -84,7 +84,7 @@ export const InformationTransferCapabilities = _enum_for_InformationTransferCapa
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_speech =
+export const InformationTransferCapabilities_speech: _enum_for_InformationTransferCapabilities.speech =
     InformationTransferCapabilities.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const InformationTransferCapabilities_speech =
  * @constant
  * @type {number}
  */
-export const speech =
+export const speech: _enum_for_InformationTransferCapabilities.speech =
     InformationTransferCapabilities.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const speech =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_audio3pt1 =
+export const InformationTransferCapabilities_audio3pt1: _enum_for_InformationTransferCapabilities.audio3pt1 =
     InformationTransferCapabilities.audio3pt1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const InformationTransferCapabilities_audio3pt1 =
  * @constant
  * @type {number}
  */
-export const audio3pt1 =
+export const audio3pt1: _enum_for_InformationTransferCapabilities.audio3pt1 =
     InformationTransferCapabilities.audio3pt1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -120,7 +120,7 @@ export const audio3pt1 =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_audio7 =
+export const InformationTransferCapabilities_audio7: _enum_for_InformationTransferCapabilities.audio7 =
     InformationTransferCapabilities.audio7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -129,7 +129,7 @@ export const InformationTransferCapabilities_audio7 =
  * @constant
  * @type {number}
  */
-export const audio7 =
+export const audio7: _enum_for_InformationTransferCapabilities.audio7 =
     InformationTransferCapabilities.audio7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,7 +138,7 @@ export const audio7 =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_audioComb =
+export const InformationTransferCapabilities_audioComb: _enum_for_InformationTransferCapabilities.audioComb =
     InformationTransferCapabilities.audioComb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -147,7 +147,7 @@ export const InformationTransferCapabilities_audioComb =
  * @constant
  * @type {number}
  */
-export const audioComb =
+export const audioComb: _enum_for_InformationTransferCapabilities.audioComb =
     InformationTransferCapabilities.audioComb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -156,7 +156,7 @@ export const audioComb =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_digitalRestricted56 =
+export const InformationTransferCapabilities_digitalRestricted56: _enum_for_InformationTransferCapabilities.digitalRestricted56 =
     InformationTransferCapabilities.digitalRestricted56; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -165,7 +165,7 @@ export const InformationTransferCapabilities_digitalRestricted56 =
  * @constant
  * @type {number}
  */
-export const digitalRestricted56 =
+export const digitalRestricted56: _enum_for_InformationTransferCapabilities.digitalRestricted56 =
     InformationTransferCapabilities.digitalRestricted56; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -174,7 +174,7 @@ export const digitalRestricted56 =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_digitalUnrestricted64 =
+export const InformationTransferCapabilities_digitalUnrestricted64: _enum_for_InformationTransferCapabilities.digitalUnrestricted64 =
     InformationTransferCapabilities.digitalUnrestricted64; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const InformationTransferCapabilities_digitalUnrestricted64 =
  * @constant
  * @type {number}
  */
-export const digitalUnrestricted64 =
+export const digitalUnrestricted64: _enum_for_InformationTransferCapabilities.digitalUnrestricted64 =
     InformationTransferCapabilities.digitalUnrestricted64; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

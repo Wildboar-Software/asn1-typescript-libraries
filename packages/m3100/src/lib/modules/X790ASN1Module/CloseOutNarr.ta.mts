@@ -28,12 +28,12 @@ export type CloseOutNarr = GraphicString; // GraphicString
 
 
 
-export const _decode_CloseOutNarr = $._decodeGraphicString;
+export const _decode_CloseOutNarr: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CloseOutNarr = $._encodeGraphicString;
+export const _encode_CloseOutNarr: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

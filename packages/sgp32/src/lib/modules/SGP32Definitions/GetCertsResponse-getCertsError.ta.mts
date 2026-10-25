@@ -37,7 +37,7 @@ type GetCertsResponse_getCertsError = INTEGER;
  * @type {number}
  */
 export
-const GetCertsResponse_getCertsError_invalidCiPKId = 1 satisfies GetCertsResponse_getCertsError; /* LONG_NAMED_INTEGER_VALUE */
+const GetCertsResponse_getCertsError_invalidCiPKId: 1 = 1 satisfies GetCertsResponse_getCertsError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetCertsResponse_getCertsError_invalidCiPKId
@@ -48,7 +48,7 @@ const GetCertsResponse_getCertsError_invalidCiPKId = 1 satisfies GetCertsRespons
  * @type {number}
  */
 export
-const invalidCiPKId = GetCertsResponse_getCertsError_invalidCiPKId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidCiPKId: 1 = GetCertsResponse_getCertsError_invalidCiPKId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetCertsResponse_getCertsError_undfinedError
@@ -60,7 +60,7 @@ const invalidCiPKId = GetCertsResponse_getCertsError_invalidCiPKId; /* SHORT_NAM
  * @type {number}
  */
 export
-const GetCertsResponse_getCertsError_undfinedError = 127 satisfies GetCertsResponse_getCertsError; /* LONG_NAMED_INTEGER_VALUE */
+const GetCertsResponse_getCertsError_undfinedError: 127 = 127 satisfies GetCertsResponse_getCertsError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetCertsResponse_getCertsError_undfinedError
@@ -71,7 +71,7 @@ const GetCertsResponse_getCertsError_undfinedError = 127 satisfies GetCertsRespo
  * @type {number}
  */
 export
-const undfinedError = GetCertsResponse_getCertsError_undfinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undfinedError: 127 = GetCertsResponse_getCertsError_undfinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_GetCertsResponse_getCertsError: $.ASN1Decoder<GetCertsResponse_getCertsError> = $._decodeInteger;
 export const _encode_GetCertsResponse_getCertsError: $.ASN1Encoder<GetCertsResponse_getCertsError> = $._encodeInteger;
 

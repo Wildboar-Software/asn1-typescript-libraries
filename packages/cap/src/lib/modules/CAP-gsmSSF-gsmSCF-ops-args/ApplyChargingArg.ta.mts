@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type AChBillingChargingCharacteristics, _decode_AChBillingChargingCharacteristics, _encode_AChBillingChargingCharacteristics } from "../CAP-datatypes/AChBillingChargingCharacteristics.ta.mjs";
@@ -133,14 +134,20 @@ class ApplyChargingArg {
      * @static
      * @method
      */
-    public static get _default_value_for_partyToCharge () { return { sendingSideID: leg1 }; }
+    public static get _default_value_for_partyToCharge (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }
     /**
      * @summary Getter that returns the default value for `aChChargingAddress`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_aChChargingAddress () { return { legID: { sendingSideID: leg1 } }; }
+    public static get _default_value_for_aChChargingAddress (): {
+        legID: {
+            sendingSideID: OCTET_STRING;
+        };
+    } { return { legID: { sendingSideID: leg1 } }; }
 }
 
 /**

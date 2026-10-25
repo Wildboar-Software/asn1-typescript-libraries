@@ -39,7 +39,7 @@ export const _decode_TimeOfDay = (el: _Element): TimeOfDay => {
     }
     return value;
 };
-export const _encode_TimeOfDay = $._encodeOctetString;
+export const _encode_TimeOfDay: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -129,19 +129,19 @@ class AgentInfo {
          * @static
          */
 
-    public static _enum_for_agentState = _enum_for_AgentState;        /**
+    public static _enum_for_agentState: typeof _enum_for_AgentState = _enum_for_AgentState;        /**
          * @summary The enum used as the type of the component `pendingAgentState`
          * @public
          * @static
          */
 
-    public static _enum_for_pendingAgentState = _enum_for_PendingAgentState;        /**
+    public static _enum_for_pendingAgentState: typeof _enum_for_PendingAgentState = _enum_for_PendingAgentState;        /**
          * @summary The enum used as the type of the component `agentStateCondition`
          * @public
          * @static
          */
 
-    public static _enum_for_agentStateCondition = _enum_for_AgentStateCondition;
+    public static _enum_for_agentStateCondition: typeof _enum_for_AgentStateCondition = _enum_for_AgentStateCondition;
 }
 
 /**

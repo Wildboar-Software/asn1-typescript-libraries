@@ -33,8 +33,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type X509Certificate = OCTET_STRING; // OctetStringType
-export const _decode_X509Certificate = $._decodeOctetString;
-export const _encode_X509Certificate = $._encodeOctetString;
+export const _decode_X509Certificate: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_X509Certificate: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

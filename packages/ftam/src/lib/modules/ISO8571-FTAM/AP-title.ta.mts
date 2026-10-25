@@ -29,12 +29,12 @@ export type AP_title = _Element; // ObjectClassFieldType
 
 
 
-export const _decode_AP_title = $._decodeAny;
+export const _decode_AP_title: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
 
 
-export const _encode_AP_title = $._encodeAny;
+export const _encode_AP_title: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

@@ -265,7 +265,7 @@ type MessageType = _enum_for_MessageType;
  * @enum {number}
  */
 export
-const MessageType = _enum_for_MessageType;
+const MessageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 
 /**
  * @summary MessageType_allServices
@@ -279,7 +279,7 @@ const MessageType = _enum_for_MessageType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_allServices = MessageType.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_allServices: _enum_for_MessageType.allServices = MessageType.allServices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allServices
@@ -288,7 +288,7 @@ const MessageType_allServices = MessageType.allServices; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const allServices = MessageType.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allServices: _enum_for_MessageType.allServices = MessageType.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speech
@@ -302,7 +302,7 @@ const allServices = MessageType.allServices; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speech = MessageType.speech; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speech: _enum_for_MessageType.speech = MessageType.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speech
@@ -311,7 +311,7 @@ const MessageType_speech = MessageType.speech; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const speech = MessageType.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speech: _enum_for_MessageType.speech = MessageType.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_unrestrictedDigitalInformation
@@ -325,7 +325,7 @@ const speech = MessageType.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_unrestrictedDigitalInformation = MessageType.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_unrestrictedDigitalInformation: _enum_for_MessageType.unrestrictedDigitalInformation = MessageType.unrestrictedDigitalInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestrictedDigitalInformation
@@ -334,7 +334,7 @@ const MessageType_unrestrictedDigitalInformation = MessageType.unrestrictedDigit
  * @type {number}
  */
 export
-const unrestrictedDigitalInformation = MessageType.unrestrictedDigitalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestrictedDigitalInformation: _enum_for_MessageType.unrestrictedDigitalInformation = MessageType.unrestrictedDigitalInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_audio3100Hz
@@ -348,7 +348,7 @@ const unrestrictedDigitalInformation = MessageType.unrestrictedDigitalInformatio
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_audio3100Hz = MessageType.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_audio3100Hz: _enum_for_MessageType.audio3100Hz = MessageType.audio3100Hz; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio3100Hz
@@ -357,7 +357,7 @@ const MessageType_audio3100Hz = MessageType.audio3100Hz; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const audio3100Hz = MessageType.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio3100Hz: _enum_for_MessageType.audio3100Hz = MessageType.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_telephony
@@ -370,7 +370,7 @@ const audio3100Hz = MessageType.audio3100Hz; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_telephony = MessageType.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_telephony: _enum_for_MessageType.telephony = MessageType.telephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telephony
@@ -379,7 +379,7 @@ const MessageType_telephony = MessageType.telephony; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const telephony = MessageType.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telephony: _enum_for_MessageType.telephony = MessageType.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_teletex
@@ -391,7 +391,7 @@ const telephony = MessageType.telephony; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_teletex = MessageType.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_teletex: _enum_for_MessageType.teletex = MessageType.teletex; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teletex
@@ -400,7 +400,7 @@ const MessageType_teletex = MessageType.teletex; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const teletex = MessageType.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teletex: _enum_for_MessageType.teletex = MessageType.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_telefaxGroup4Class1
@@ -414,7 +414,7 @@ const teletex = MessageType.teletex; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_telefaxGroup4Class1 = MessageType.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_telefaxGroup4Class1: _enum_for_MessageType.telefaxGroup4Class1 = MessageType.telefaxGroup4Class1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup4Class1
@@ -423,7 +423,7 @@ const MessageType_telefaxGroup4Class1 = MessageType.telefaxGroup4Class1; /* LONG
  * @type {number}
  */
 export
-const telefaxGroup4Class1 = MessageType.telefaxGroup4Class1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup4Class1: _enum_for_MessageType.telefaxGroup4Class1 = MessageType.telefaxGroup4Class1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_videotextSyntaxBased
@@ -436,7 +436,7 @@ const telefaxGroup4Class1 = MessageType.telefaxGroup4Class1; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_videotextSyntaxBased = MessageType.videotextSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_videotextSyntaxBased: _enum_for_MessageType.videotextSyntaxBased = MessageType.videotextSyntaxBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotextSyntaxBased
@@ -445,7 +445,7 @@ const MessageType_videotextSyntaxBased = MessageType.videotextSyntaxBased; /* LO
  * @type {number}
  */
 export
-const videotextSyntaxBased = MessageType.videotextSyntaxBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotextSyntaxBased: _enum_for_MessageType.videotextSyntaxBased = MessageType.videotextSyntaxBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_videotelephony
@@ -458,7 +458,7 @@ const videotextSyntaxBased = MessageType.videotextSyntaxBased; /* SHORT_NAMED_EN
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_videotelephony = MessageType.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_videotelephony: _enum_for_MessageType.videotelephony = MessageType.videotelephony; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videotelephony
@@ -467,7 +467,7 @@ const MessageType_videotelephony = MessageType.videotelephony; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const videotelephony = MessageType.videotelephony; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videotelephony: _enum_for_MessageType.videotelephony = MessageType.videotelephony; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_telefaxGroup2_3
@@ -480,7 +480,7 @@ const videotelephony = MessageType.videotelephony; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_telefaxGroup2_3 = MessageType.telefaxGroup2_3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_telefaxGroup2_3: _enum_for_MessageType.telefaxGroup2_3 = MessageType.telefaxGroup2_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary telefaxGroup2_3
@@ -489,7 +489,7 @@ const MessageType_telefaxGroup2_3 = MessageType.telefaxGroup2_3; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const telefaxGroup2_3 = MessageType.telefaxGroup2_3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const telefaxGroup2_3: _enum_for_MessageType.telefaxGroup2_3 = MessageType.telefaxGroup2_3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_reservedNotUsed1
@@ -502,7 +502,7 @@ const telefaxGroup2_3 = MessageType.telefaxGroup2_3; /* SHORT_NAMED_ENUMERATED_V
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_reservedNotUsed1 = MessageType.reservedNotUsed1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_reservedNotUsed1: _enum_for_MessageType.reservedNotUsed1 = MessageType.reservedNotUsed1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed1
@@ -511,7 +511,7 @@ const MessageType_reservedNotUsed1 = MessageType.reservedNotUsed1; /* LONG_NAMED
  * @type {number}
  */
 export
-const reservedNotUsed1 = MessageType.reservedNotUsed1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed1: _enum_for_MessageType.reservedNotUsed1 = MessageType.reservedNotUsed1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_reservedNotUsed2
@@ -524,7 +524,7 @@ const reservedNotUsed1 = MessageType.reservedNotUsed1; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_reservedNotUsed2 = MessageType.reservedNotUsed2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_reservedNotUsed2: _enum_for_MessageType.reservedNotUsed2 = MessageType.reservedNotUsed2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed2
@@ -533,7 +533,7 @@ const MessageType_reservedNotUsed2 = MessageType.reservedNotUsed2; /* LONG_NAMED
  * @type {number}
  */
 export
-const reservedNotUsed2 = MessageType.reservedNotUsed2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed2: _enum_for_MessageType.reservedNotUsed2 = MessageType.reservedNotUsed2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_reservedNotUsed3
@@ -546,7 +546,7 @@ const reservedNotUsed2 = MessageType.reservedNotUsed2; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_reservedNotUsed3 = MessageType.reservedNotUsed3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_reservedNotUsed3: _enum_for_MessageType.reservedNotUsed3 = MessageType.reservedNotUsed3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed3
@@ -555,7 +555,7 @@ const MessageType_reservedNotUsed3 = MessageType.reservedNotUsed3; /* LONG_NAMED
  * @type {number}
  */
 export
-const reservedNotUsed3 = MessageType.reservedNotUsed3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed3: _enum_for_MessageType.reservedNotUsed3 = MessageType.reservedNotUsed3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_reservedNotUsed4
@@ -568,7 +568,7 @@ const reservedNotUsed3 = MessageType.reservedNotUsed3; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_reservedNotUsed4 = MessageType.reservedNotUsed4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_reservedNotUsed4: _enum_for_MessageType.reservedNotUsed4 = MessageType.reservedNotUsed4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed4
@@ -577,7 +577,7 @@ const MessageType_reservedNotUsed4 = MessageType.reservedNotUsed4; /* LONG_NAMED
  * @type {number}
  */
 export
-const reservedNotUsed4 = MessageType.reservedNotUsed4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed4: _enum_for_MessageType.reservedNotUsed4 = MessageType.reservedNotUsed4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_reservedNotUsed5
@@ -590,7 +590,7 @@ const reservedNotUsed4 = MessageType.reservedNotUsed4; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_reservedNotUsed5 = MessageType.reservedNotUsed5; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_reservedNotUsed5: _enum_for_MessageType.reservedNotUsed5 = MessageType.reservedNotUsed5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservedNotUsed5
@@ -599,7 +599,7 @@ const MessageType_reservedNotUsed5 = MessageType.reservedNotUsed5; /* LONG_NAMED
  * @type {number}
  */
 export
-const reservedNotUsed5 = MessageType.reservedNotUsed5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservedNotUsed5: _enum_for_MessageType.reservedNotUsed5 = MessageType.reservedNotUsed5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_email
@@ -613,7 +613,7 @@ const reservedNotUsed5 = MessageType.reservedNotUsed5; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_email = MessageType.email; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_email: _enum_for_MessageType.email = MessageType.email; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary email
@@ -622,7 +622,7 @@ const MessageType_email = MessageType.email; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const email = MessageType.email; /* SHORT_NAMED_ENUMERATED_VALUE */
+const email: _enum_for_MessageType.email = MessageType.email; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_video
@@ -637,7 +637,7 @@ const email = MessageType.email; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_video = MessageType.video; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_video: _enum_for_MessageType.video = MessageType.video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video
@@ -646,7 +646,7 @@ const MessageType_video = MessageType.video; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const video = MessageType.video; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video: _enum_for_MessageType.video = MessageType.video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_fileTransfer
@@ -660,7 +660,7 @@ const video = MessageType.video; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_fileTransfer = MessageType.fileTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_fileTransfer: _enum_for_MessageType.fileTransfer = MessageType.fileTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fileTransfer
@@ -669,7 +669,7 @@ const MessageType_fileTransfer = MessageType.fileTransfer; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const fileTransfer = MessageType.fileTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fileTransfer: _enum_for_MessageType.fileTransfer = MessageType.fileTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_shortMessageService
@@ -683,7 +683,7 @@ const fileTransfer = MessageType.fileTransfer; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_shortMessageService = MessageType.shortMessageService; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_shortMessageService: _enum_for_MessageType.shortMessageService = MessageType.shortMessageService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortMessageService
@@ -692,7 +692,7 @@ const MessageType_shortMessageService = MessageType.shortMessageService; /* LONG
  * @type {number}
  */
 export
-const shortMessageService = MessageType.shortMessageService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shortMessageService: _enum_for_MessageType.shortMessageService = MessageType.shortMessageService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechAndVideo
@@ -705,7 +705,7 @@ const shortMessageService = MessageType.shortMessageService; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechAndVideo = MessageType.speechAndVideo; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechAndVideo: _enum_for_MessageType.speechAndVideo = MessageType.speechAndVideo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndVideo
@@ -714,7 +714,7 @@ const MessageType_speechAndVideo = MessageType.speechAndVideo; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const speechAndVideo = MessageType.speechAndVideo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechAndVideo: _enum_for_MessageType.speechAndVideo = MessageType.speechAndVideo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechAndFax
@@ -727,7 +727,7 @@ const speechAndVideo = MessageType.speechAndVideo; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechAndFax = MessageType.speechAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechAndFax: _enum_for_MessageType.speechAndFax = MessageType.speechAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndFax
@@ -736,7 +736,7 @@ const MessageType_speechAndFax = MessageType.speechAndFax; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const speechAndFax = MessageType.speechAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechAndFax: _enum_for_MessageType.speechAndFax = MessageType.speechAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechAndEmail
@@ -748,7 +748,7 @@ const speechAndFax = MessageType.speechAndFax; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechAndEmail = MessageType.speechAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechAndEmail: _enum_for_MessageType.speechAndEmail = MessageType.speechAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechAndEmail
@@ -757,7 +757,7 @@ const MessageType_speechAndEmail = MessageType.speechAndEmail; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const speechAndEmail = MessageType.speechAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechAndEmail: _enum_for_MessageType.speechAndEmail = MessageType.speechAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_videoAndFax
@@ -770,7 +770,7 @@ const speechAndEmail = MessageType.speechAndEmail; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_videoAndFax = MessageType.videoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_videoAndFax: _enum_for_MessageType.videoAndFax = MessageType.videoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndFax
@@ -779,7 +779,7 @@ const MessageType_videoAndFax = MessageType.videoAndFax; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const videoAndFax = MessageType.videoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoAndFax: _enum_for_MessageType.videoAndFax = MessageType.videoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_videoAndEmail
@@ -792,7 +792,7 @@ const videoAndFax = MessageType.videoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_videoAndEmail = MessageType.videoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_videoAndEmail: _enum_for_MessageType.videoAndEmail = MessageType.videoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoAndEmail
@@ -801,7 +801,7 @@ const MessageType_videoAndEmail = MessageType.videoAndEmail; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const videoAndEmail = MessageType.videoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoAndEmail: _enum_for_MessageType.videoAndEmail = MessageType.videoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_faxAndEmail
@@ -814,7 +814,7 @@ const videoAndEmail = MessageType.videoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_faxAndEmail = MessageType.faxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_faxAndEmail: _enum_for_MessageType.faxAndEmail = MessageType.faxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxAndEmail
@@ -823,7 +823,7 @@ const MessageType_faxAndEmail = MessageType.faxAndEmail; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const faxAndEmail = MessageType.faxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxAndEmail: _enum_for_MessageType.faxAndEmail = MessageType.faxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechVideoAndFax
@@ -836,7 +836,7 @@ const faxAndEmail = MessageType.faxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechVideoAndFax = MessageType.speechVideoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechVideoAndFax: _enum_for_MessageType.speechVideoAndFax = MessageType.speechVideoAndFax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndFax
@@ -845,7 +845,7 @@ const MessageType_speechVideoAndFax = MessageType.speechVideoAndFax; /* LONG_NAM
  * @type {number}
  */
 export
-const speechVideoAndFax = MessageType.speechVideoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechVideoAndFax: _enum_for_MessageType.speechVideoAndFax = MessageType.speechVideoAndFax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechVideoAndEmail
@@ -858,7 +858,7 @@ const speechVideoAndFax = MessageType.speechVideoAndFax; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechVideoAndEmail = MessageType.speechVideoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechVideoAndEmail: _enum_for_MessageType.speechVideoAndEmail = MessageType.speechVideoAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoAndEmail
@@ -867,7 +867,7 @@ const MessageType_speechVideoAndEmail = MessageType.speechVideoAndEmail; /* LONG
  * @type {number}
  */
 export
-const speechVideoAndEmail = MessageType.speechVideoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechVideoAndEmail: _enum_for_MessageType.speechVideoAndEmail = MessageType.speechVideoAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechFaxAndEmail
@@ -880,7 +880,7 @@ const speechVideoAndEmail = MessageType.speechVideoAndEmail; /* SHORT_NAMED_ENUM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechFaxAndEmail = MessageType.speechFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechFaxAndEmail: _enum_for_MessageType.speechFaxAndEmail = MessageType.speechFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechFaxAndEmail
@@ -889,7 +889,7 @@ const MessageType_speechFaxAndEmail = MessageType.speechFaxAndEmail; /* LONG_NAM
  * @type {number}
  */
 export
-const speechFaxAndEmail = MessageType.speechFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechFaxAndEmail: _enum_for_MessageType.speechFaxAndEmail = MessageType.speechFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_videoFaxAndEmail
@@ -902,7 +902,7 @@ const speechFaxAndEmail = MessageType.speechFaxAndEmail; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_videoFaxAndEmail = MessageType.videoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_videoFaxAndEmail: _enum_for_MessageType.videoFaxAndEmail = MessageType.videoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary videoFaxAndEmail
@@ -911,7 +911,7 @@ const MessageType_videoFaxAndEmail = MessageType.videoFaxAndEmail; /* LONG_NAMED
  * @type {number}
  */
 export
-const videoFaxAndEmail = MessageType.videoFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const videoFaxAndEmail: _enum_for_MessageType.videoFaxAndEmail = MessageType.videoFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_speechVideoFaxAndEmail
@@ -924,7 +924,7 @@ const videoFaxAndEmail = MessageType.videoFaxAndEmail; /* SHORT_NAMED_ENUMERATED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_speechVideoFaxAndEmail = MessageType.speechVideoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_speechVideoFaxAndEmail: _enum_for_MessageType.speechVideoFaxAndEmail = MessageType.speechVideoFaxAndEmail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speechVideoFaxAndEmail
@@ -933,7 +933,7 @@ const MessageType_speechVideoFaxAndEmail = MessageType.speechVideoFaxAndEmail; /
  * @type {number}
  */
 export
-const speechVideoFaxAndEmail = MessageType.speechVideoFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speechVideoFaxAndEmail: _enum_for_MessageType.speechVideoFaxAndEmail = MessageType.speechVideoFaxAndEmail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_multimediaUnknown
@@ -947,7 +947,7 @@ const speechVideoFaxAndEmail = MessageType.speechVideoFaxAndEmail; /* SHORT_NAME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_multimediaUnknown = MessageType.multimediaUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_multimediaUnknown: _enum_for_MessageType.multimediaUnknown = MessageType.multimediaUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multimediaUnknown
@@ -956,7 +956,7 @@ const MessageType_multimediaUnknown = MessageType.multimediaUnknown; /* LONG_NAM
  * @type {number}
  */
 export
-const multimediaUnknown = MessageType.multimediaUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multimediaUnknown: _enum_for_MessageType.multimediaUnknown = MessageType.multimediaUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_serviceUnknown
@@ -970,7 +970,7 @@ const multimediaUnknown = MessageType.multimediaUnknown; /* SHORT_NAMED_ENUMERAT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_serviceUnknown = MessageType.serviceUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_serviceUnknown: _enum_for_MessageType.serviceUnknown = MessageType.serviceUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnknown
@@ -979,7 +979,7 @@ const MessageType_serviceUnknown = MessageType.serviceUnknown; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const serviceUnknown = MessageType.serviceUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceUnknown: _enum_for_MessageType.serviceUnknown = MessageType.serviceUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve1
@@ -992,7 +992,7 @@ const serviceUnknown = MessageType.serviceUnknown; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve1 = MessageType.futureReserve1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve1: _enum_for_MessageType.futureReserve1 = MessageType.futureReserve1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve1
@@ -1001,7 +1001,7 @@ const MessageType_futureReserve1 = MessageType.futureReserve1; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve1 = MessageType.futureReserve1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve1: _enum_for_MessageType.futureReserve1 = MessageType.futureReserve1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve2
@@ -1014,7 +1014,7 @@ const futureReserve1 = MessageType.futureReserve1; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve2 = MessageType.futureReserve2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve2: _enum_for_MessageType.futureReserve2 = MessageType.futureReserve2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve2
@@ -1023,7 +1023,7 @@ const MessageType_futureReserve2 = MessageType.futureReserve2; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve2 = MessageType.futureReserve2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve2: _enum_for_MessageType.futureReserve2 = MessageType.futureReserve2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve3
@@ -1036,7 +1036,7 @@ const futureReserve2 = MessageType.futureReserve2; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve3 = MessageType.futureReserve3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve3: _enum_for_MessageType.futureReserve3 = MessageType.futureReserve3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve3
@@ -1045,7 +1045,7 @@ const MessageType_futureReserve3 = MessageType.futureReserve3; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve3 = MessageType.futureReserve3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve3: _enum_for_MessageType.futureReserve3 = MessageType.futureReserve3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve4
@@ -1058,7 +1058,7 @@ const futureReserve3 = MessageType.futureReserve3; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve4 = MessageType.futureReserve4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve4: _enum_for_MessageType.futureReserve4 = MessageType.futureReserve4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve4
@@ -1067,7 +1067,7 @@ const MessageType_futureReserve4 = MessageType.futureReserve4; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve4 = MessageType.futureReserve4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve4: _enum_for_MessageType.futureReserve4 = MessageType.futureReserve4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve5
@@ -1080,7 +1080,7 @@ const futureReserve4 = MessageType.futureReserve4; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve5 = MessageType.futureReserve5; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve5: _enum_for_MessageType.futureReserve5 = MessageType.futureReserve5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve5
@@ -1089,7 +1089,7 @@ const MessageType_futureReserve5 = MessageType.futureReserve5; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve5 = MessageType.futureReserve5; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve5: _enum_for_MessageType.futureReserve5 = MessageType.futureReserve5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve6
@@ -1102,7 +1102,7 @@ const futureReserve5 = MessageType.futureReserve5; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve6 = MessageType.futureReserve6; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve6: _enum_for_MessageType.futureReserve6 = MessageType.futureReserve6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve6
@@ -1111,7 +1111,7 @@ const MessageType_futureReserve6 = MessageType.futureReserve6; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve6 = MessageType.futureReserve6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve6: _enum_for_MessageType.futureReserve6 = MessageType.futureReserve6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve7
@@ -1124,7 +1124,7 @@ const futureReserve6 = MessageType.futureReserve6; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve7 = MessageType.futureReserve7; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve7: _enum_for_MessageType.futureReserve7 = MessageType.futureReserve7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve7
@@ -1133,7 +1133,7 @@ const MessageType_futureReserve7 = MessageType.futureReserve7; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve7 = MessageType.futureReserve7; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve7: _enum_for_MessageType.futureReserve7 = MessageType.futureReserve7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageType_futureReserve8
@@ -1146,7 +1146,7 @@ const futureReserve7 = MessageType.futureReserve7; /* SHORT_NAMED_ENUMERATED_VAL
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-347/
  */
 export
-const MessageType_futureReserve8 = MessageType.futureReserve8; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageType_futureReserve8: _enum_for_MessageType.futureReserve8 = MessageType.futureReserve8; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary futureReserve8
@@ -1155,7 +1155,7 @@ const MessageType_futureReserve8 = MessageType.futureReserve8; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const futureReserve8 = MessageType.futureReserve8; /* SHORT_NAMED_ENUMERATED_VALUE */
+const futureReserve8: _enum_for_MessageType.futureReserve8 = MessageType.futureReserve8; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MessageType: $.ASN1Decoder<MessageType> = $._decodeEnumerated;

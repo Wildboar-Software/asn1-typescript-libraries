@@ -403,13 +403,13 @@ class PDSummaryReport {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_Direction;        /**
+    public static _enum_for_direction: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pDSRSummaryTrigger`
          * @public
          * @static
          */
 
-    public static _enum_for_pDSRSummaryTrigger = _enum_for_PDSRSummaryTrigger;
+    public static _enum_for_pDSRSummaryTrigger: typeof _enum_for_PDSRSummaryTrigger = _enum_for_PDSRSummaryTrigger;
 }
 
 /**

@@ -40,7 +40,7 @@ type ChangeOfProSeCondition_radioResourcesInd = INTEGER;
  * @type {number}
  */
 export
-const ChangeOfProSeCondition_radioResourcesInd_operatorProvided = 1 satisfies ChangeOfProSeCondition_radioResourcesInd; /* LONG_NAMED_INTEGER_VALUE */
+const ChangeOfProSeCondition_radioResourcesInd_operatorProvided: 1 = 1 satisfies ChangeOfProSeCondition_radioResourcesInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_operatorProvided
@@ -55,7 +55,7 @@ const ChangeOfProSeCondition_radioResourcesInd_operatorProvided = 1 satisfies Ch
  * @type {number}
  */
 export
-const operatorProvided = ChangeOfProSeCondition_radioResourcesInd_operatorProvided; /* SHORT_NAMED_INTEGER_VALUE */
+const operatorProvided: 1 = ChangeOfProSeCondition_radioResourcesInd_operatorProvided; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_configured
@@ -69,7 +69,7 @@ const operatorProvided = ChangeOfProSeCondition_radioResourcesInd_operatorProvid
  * @type {number}
  */
 export
-const ChangeOfProSeCondition_radioResourcesInd_configured = 2 satisfies ChangeOfProSeCondition_radioResourcesInd; /* LONG_NAMED_INTEGER_VALUE */
+const ChangeOfProSeCondition_radioResourcesInd_configured: 2 = 2 satisfies ChangeOfProSeCondition_radioResourcesInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ChangeOfProSeCondition_radioResourcesInd_configured
@@ -83,7 +83,7 @@ const ChangeOfProSeCondition_radioResourcesInd_configured = 2 satisfies ChangeOf
  * @type {number}
  */
 export
-const configured = ChangeOfProSeCondition_radioResourcesInd_configured; /* SHORT_NAMED_INTEGER_VALUE */
+const configured: 2 = ChangeOfProSeCondition_radioResourcesInd_configured; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ChangeOfProSeCondition_radioResourcesInd: $.ASN1Decoder<ChangeOfProSeCondition_radioResourcesInd> = $._decodeInteger;

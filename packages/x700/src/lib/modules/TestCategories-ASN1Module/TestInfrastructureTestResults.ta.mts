@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TestInfrastructureTestResults = NULL; // NullType
 
 
-export const _decode_TestInfrastructureTestResults = $._decodeNull;
+export const _decode_TestInfrastructureTestResults: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_TestInfrastructureTestResults = $._encodeNull;
+export const _encode_TestInfrastructureTestResults: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

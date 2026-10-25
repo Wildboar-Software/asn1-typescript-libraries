@@ -105,7 +105,7 @@ class DestinationNumberCriteria {
          * @static
          */
 
-    public static _enum_for_matchType = _enum_for_MatchType;
+    public static _enum_for_matchType: typeof _enum_for_MatchType = _enum_for_MatchType;
 }
 
 /**

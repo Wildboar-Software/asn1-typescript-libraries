@@ -92,13 +92,13 @@ class EventSpecificInformationBCSM_oModifyResultSpecificInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_modifyResultType () { return modifyAcknowledge; }        /**
+    public static get _default_value_for_modifyResultType (): _enum_for_ModifyResultType { return modifyAcknowledge; }        /**
          * @summary The enum used as the type of the component `modifyResultType`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyResultType = _enum_for_ModifyResultType;
+    public static _enum_for_modifyResultType: typeof _enum_for_ModifyResultType = _enum_for_ModifyResultType;
 }
 
 /**

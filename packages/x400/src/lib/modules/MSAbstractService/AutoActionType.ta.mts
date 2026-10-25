@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AutoActionType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_AutoActionType = $._decodeObjectIdentifier;
+export const _decode_AutoActionType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_AutoActionType = $._encodeObjectIdentifier;
+export const _encode_AutoActionType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

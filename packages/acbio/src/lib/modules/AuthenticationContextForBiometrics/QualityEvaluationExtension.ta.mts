@@ -28,12 +28,12 @@ export type QualityEvaluationExtension = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_QualityEvaluationExtension = $._decodeOctetString;
+export const _decode_QualityEvaluationExtension: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_QualityEvaluationExtension = $._encodeOctetString;
+export const _encode_QualityEvaluationExtension: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

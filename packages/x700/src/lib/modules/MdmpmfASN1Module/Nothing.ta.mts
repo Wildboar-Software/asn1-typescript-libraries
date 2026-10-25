@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Nothing = NULL; // NullType
 
 
-export const _decode_Nothing = $._decodeNull;
+export const _decode_Nothing: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_Nothing = $._encodeNull;
+export const _encode_Nothing: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

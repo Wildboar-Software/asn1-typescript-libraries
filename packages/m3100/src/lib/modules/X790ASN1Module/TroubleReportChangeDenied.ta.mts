@@ -123,7 +123,7 @@ export class TroubleReportChangeDenied {
      * @static
      */
 
-    public static _enum_for_changeDeniedReason = _enum_for_ChangeDeniedReason;
+    public static _enum_for_changeDeniedReason: typeof _enum_for_ChangeDeniedReason = _enum_for_ChangeDeniedReason;
 }
 
 

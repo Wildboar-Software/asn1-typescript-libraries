@@ -37,76 +37,76 @@ export type RecipientCategory = INTEGER;
  * @constant
  * @type {number}
  */
-export const RecipientCategory_primary_recipient = 0 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
+export const RecipientCategory_primary_recipient: 0 = 0 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_primary_recipient
  * @constant
  * @type {number}
  */
-export const primary_recipient = RecipientCategory_primary_recipient; /* SHORT_NAMED_INTEGER_VALUE */
+export const primary_recipient: 0 = RecipientCategory_primary_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_copy_recipient
  * @constant
  * @type {number}
  */
-export const RecipientCategory_copy_recipient = 1 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
+export const RecipientCategory_copy_recipient: 1 = 1 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_copy_recipient
  * @constant
  * @type {number}
  */
-export const copy_recipient = RecipientCategory_copy_recipient; /* SHORT_NAMED_INTEGER_VALUE */
+export const copy_recipient: 1 = RecipientCategory_copy_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_blind_copy_recipient
  * @constant
  * @type {number}
  */
-export const RecipientCategory_blind_copy_recipient = 2 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
+export const RecipientCategory_blind_copy_recipient: 2 = 2 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_blind_copy_recipient
  * @constant
  * @type {number}
  */
-export const blind_copy_recipient = RecipientCategory_blind_copy_recipient; /* SHORT_NAMED_INTEGER_VALUE */
+export const blind_copy_recipient: 2 = RecipientCategory_blind_copy_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_category_unknown
  * @constant
  * @type {number}
  */
-export const RecipientCategory_category_unknown = 3 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
+export const RecipientCategory_category_unknown: 3 = 3 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_category_unknown
  * @constant
  * @type {number}
  */
-export const category_unknown = RecipientCategory_category_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const category_unknown: 3 = RecipientCategory_category_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_circulation_list
  * @constant
  * @type {number}
  */
-export const RecipientCategory_circulation_list = 4 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
+export const RecipientCategory_circulation_list: 4 = 4 satisfies RecipientCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RecipientCategory_circulation_list
  * @constant
  * @type {number}
  */
-export const circulation_list = RecipientCategory_circulation_list; /* SHORT_NAMED_INTEGER_VALUE */
+export const circulation_list: 4 = RecipientCategory_circulation_list; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_RecipientCategory = $._decodeInteger;
+export const _decode_RecipientCategory: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RecipientCategory = $._encodeInteger;
+export const _encode_RecipientCategory: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

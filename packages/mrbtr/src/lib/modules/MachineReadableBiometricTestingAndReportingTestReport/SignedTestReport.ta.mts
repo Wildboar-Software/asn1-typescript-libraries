@@ -151,7 +151,7 @@ class SignedTestReport {
      * @static
      * @method
      */
-    public static get _default_value_for_version () { return v0; }
+    public static get _default_value_for_version (): 0 { return v0; }
 }
 
 /**

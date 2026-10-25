@@ -72,7 +72,7 @@ export type EntityType_type = _enum_for_EntityType_type;
  *
  * @enum {number}
  */
-export const EntityType_type = _enum_for_EntityType_type;
+export const EntityType_type: typeof _enum_for_EntityType_type = _enum_for_EntityType_type;
 
 
 /**
@@ -81,7 +81,7 @@ export const EntityType_type = _enum_for_EntityType_type;
  * @constant
  * @type {number}
  */
-export const EntityType_type_from_ =
+export const EntityType_type_from_: _enum_for_EntityType_type.from_ =
   EntityType_type.from_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const EntityType_type_from_ =
  * @constant
  * @type {number}
  */
-export const from_ =
+export const from_: _enum_for_EntityType_type.from_ =
   EntityType_type.from_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -101,7 +101,7 @@ export const from_ =
  * @constant
  * @type {number}
  */
-export const EntityType_type_to =
+export const EntityType_type_to: _enum_for_EntityType_type.to =
   EntityType_type.to; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const EntityType_type_to =
  * @constant
  * @type {number}
  */
-export const to =
+export const to: _enum_for_EntityType_type.to =
   EntityType_type.to; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +121,7 @@ export const to =
  * @constant
  * @type {number}
  */
-export const EntityType_type_cc =
+export const EntityType_type_cc: _enum_for_EntityType_type.cc =
   EntityType_type.cc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +131,7 @@ export const EntityType_type_cc =
  * @constant
  * @type {number}
  */
-export const cc =
+export const cc: _enum_for_EntityType_type.cc =
   EntityType_type.cc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -141,7 +141,7 @@ export const cc =
  * @constant
  * @type {number}
  */
-export const EntityType_type_transit =
+export const EntityType_type_transit: _enum_for_EntityType_type.transit =
   EntityType_type.transit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -151,18 +151,18 @@ export const EntityType_type_transit =
  * @constant
  * @type {number}
  */
-export const transit =
+export const transit: _enum_for_EntityType_type.transit =
   EntityType_type.transit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_EntityType_type = $._decodeEnumerated;
+export const _decode_EntityType_type: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_EntityType_type = $._encodeEnumerated;
+export const _encode_EntityType_type: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

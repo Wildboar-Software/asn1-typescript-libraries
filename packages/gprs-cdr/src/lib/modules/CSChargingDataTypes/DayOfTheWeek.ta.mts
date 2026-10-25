@@ -79,7 +79,7 @@ type DayOfTheWeek = _enum_for_DayOfTheWeek;
  * @enum {number}
  */
 export
-const DayOfTheWeek = _enum_for_DayOfTheWeek;
+const DayOfTheWeek: typeof _enum_for_DayOfTheWeek = _enum_for_DayOfTheWeek;
 
 /**
  * @summary DayOfTheWeek_allDays
@@ -87,7 +87,7 @@ const DayOfTheWeek = _enum_for_DayOfTheWeek;
  * @type {number}
  */
 export
-const DayOfTheWeek_allDays = DayOfTheWeek.allDays; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_allDays: _enum_for_DayOfTheWeek.allDays = DayOfTheWeek.allDays; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allDays
@@ -95,7 +95,7 @@ const DayOfTheWeek_allDays = DayOfTheWeek.allDays; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const allDays = DayOfTheWeek.allDays; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allDays: _enum_for_DayOfTheWeek.allDays = DayOfTheWeek.allDays; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_sunday
@@ -103,7 +103,7 @@ const allDays = DayOfTheWeek.allDays; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_sunday = DayOfTheWeek.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_sunday: _enum_for_DayOfTheWeek.sunday = DayOfTheWeek.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sunday
@@ -111,7 +111,7 @@ const DayOfTheWeek_sunday = DayOfTheWeek.sunday; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const sunday = DayOfTheWeek.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sunday: _enum_for_DayOfTheWeek.sunday = DayOfTheWeek.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_monday
@@ -119,7 +119,7 @@ const sunday = DayOfTheWeek.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_monday = DayOfTheWeek.monday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_monday: _enum_for_DayOfTheWeek.monday = DayOfTheWeek.monday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monday
@@ -127,7 +127,7 @@ const DayOfTheWeek_monday = DayOfTheWeek.monday; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const monday = DayOfTheWeek.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monday: _enum_for_DayOfTheWeek.monday = DayOfTheWeek.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_tuesday
@@ -135,7 +135,7 @@ const monday = DayOfTheWeek.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_tuesday = DayOfTheWeek.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_tuesday: _enum_for_DayOfTheWeek.tuesday = DayOfTheWeek.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tuesday
@@ -143,7 +143,7 @@ const DayOfTheWeek_tuesday = DayOfTheWeek.tuesday; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const tuesday = DayOfTheWeek.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tuesday: _enum_for_DayOfTheWeek.tuesday = DayOfTheWeek.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_wednesday
@@ -151,7 +151,7 @@ const tuesday = DayOfTheWeek.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_wednesday = DayOfTheWeek.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_wednesday: _enum_for_DayOfTheWeek.wednesday = DayOfTheWeek.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wednesday
@@ -159,7 +159,7 @@ const DayOfTheWeek_wednesday = DayOfTheWeek.wednesday; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const wednesday = DayOfTheWeek.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wednesday: _enum_for_DayOfTheWeek.wednesday = DayOfTheWeek.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_thursday
@@ -167,7 +167,7 @@ const wednesday = DayOfTheWeek.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_thursday = DayOfTheWeek.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_thursday: _enum_for_DayOfTheWeek.thursday = DayOfTheWeek.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary thursday
@@ -175,7 +175,7 @@ const DayOfTheWeek_thursday = DayOfTheWeek.thursday; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const thursday = DayOfTheWeek.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const thursday: _enum_for_DayOfTheWeek.thursday = DayOfTheWeek.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_friday
@@ -183,7 +183,7 @@ const thursday = DayOfTheWeek.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_friday = DayOfTheWeek.friday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_friday: _enum_for_DayOfTheWeek.friday = DayOfTheWeek.friday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary friday
@@ -191,7 +191,7 @@ const DayOfTheWeek_friday = DayOfTheWeek.friday; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const friday = DayOfTheWeek.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const friday: _enum_for_DayOfTheWeek.friday = DayOfTheWeek.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DayOfTheWeek_saturday
@@ -199,7 +199,7 @@ const friday = DayOfTheWeek.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DayOfTheWeek_saturday = DayOfTheWeek.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
+const DayOfTheWeek_saturday: _enum_for_DayOfTheWeek.saturday = DayOfTheWeek.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary saturday
@@ -207,7 +207,7 @@ const DayOfTheWeek_saturday = DayOfTheWeek.saturday; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const saturday = DayOfTheWeek.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
+const saturday: _enum_for_DayOfTheWeek.saturday = DayOfTheWeek.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DayOfTheWeek: $.ASN1Decoder<DayOfTheWeek> = $._decodeEnumerated;

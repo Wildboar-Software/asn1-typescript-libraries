@@ -103,7 +103,7 @@ class PTCParticipantPresenceStatus {
          * @static
          */
 
-    public static _enum_for_presenceType = _enum_for_PTCPresenceType;
+    public static _enum_for_presenceType: typeof _enum_for_PTCPresenceType = _enum_for_PTCPresenceType;
 }
 
 /**

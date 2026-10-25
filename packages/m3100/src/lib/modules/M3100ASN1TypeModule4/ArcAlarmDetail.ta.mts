@@ -118,7 +118,7 @@ export class ArcAlarmDetail {
      * @static
      */
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 }
 
 

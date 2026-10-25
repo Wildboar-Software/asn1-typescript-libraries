@@ -317,7 +317,7 @@ class MM7RRqRecord {
          * @static
          */
 
-    public static _enum_for_readStatus = _enum_for_MMStatusCodeType;
+    public static _enum_for_readStatus: typeof _enum_for_MMStatusCodeType = _enum_for_MMStatusCodeType;
 }
 
 /**

@@ -22,5 +22,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type GenericNumber = OCTET_STRING;
-export const _decode_GenericNumber = $._decodeOctetString;
-export const _encode_GenericNumber = $._encodeOctetString;
+export const _decode_GenericNumber: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_GenericNumber: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

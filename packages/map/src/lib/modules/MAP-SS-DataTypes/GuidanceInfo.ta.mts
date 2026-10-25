@@ -77,7 +77,7 @@ type GuidanceInfo = _enum_for_GuidanceInfo;
  * @enum {number}
  */
 export
-const GuidanceInfo = _enum_for_GuidanceInfo;
+const GuidanceInfo: typeof _enum_for_GuidanceInfo = _enum_for_GuidanceInfo;
 
 /**
  * @summary GuidanceInfo_enterPW
@@ -89,7 +89,7 @@ const GuidanceInfo = _enum_for_GuidanceInfo;
  * @type {number}
  */
 export
-const GuidanceInfo_enterPW = GuidanceInfo.enterPW; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterPW: _enum_for_GuidanceInfo.enterPW = GuidanceInfo.enterPW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterPW
@@ -101,7 +101,7 @@ const GuidanceInfo_enterPW = GuidanceInfo.enterPW; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const enterPW = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterPW: _enum_for_GuidanceInfo.enterPW = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuidanceInfo_enterNewPW
@@ -114,7 +114,7 @@ const enterPW = GuidanceInfo.enterPW; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GuidanceInfo_enterNewPW = GuidanceInfo.enterNewPW; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterNewPW: _enum_for_GuidanceInfo.enterNewPW = GuidanceInfo.enterNewPW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterNewPW
@@ -127,7 +127,7 @@ const GuidanceInfo_enterNewPW = GuidanceInfo.enterNewPW; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const enterNewPW = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterNewPW: _enum_for_GuidanceInfo.enterNewPW = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GuidanceInfo_enterNewPW_Again
@@ -140,7 +140,7 @@ const enterNewPW = GuidanceInfo.enterNewPW; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const GuidanceInfo_enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* LONG_NAMED_ENUMERATED_VALUE */
+const GuidanceInfo_enterNewPW_Again: _enum_for_GuidanceInfo.enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enterNewPW_Again
@@ -153,7 +153,7 @@ const GuidanceInfo_enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* LONG_NAM
  * @type {number}
  */
 export
-const enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enterNewPW_Again: _enum_for_GuidanceInfo.enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) GuidanceInfo
@@ -161,7 +161,7 @@ const enterNewPW_Again = GuidanceInfo.enterNewPW_Again; /* SHORT_NAMED_ENUMERATE
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GuidanceInfo = $._decodeEnumerated;
+export const _decode_GuidanceInfo: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) GuidanceInfo into an ASN.1 Element.
@@ -170,7 +170,7 @@ export const _decode_GuidanceInfo = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GuidanceInfo, encoded as an ASN.1 Element.
  */
-export const _encode_GuidanceInfo = $._encodeEnumerated;
+export const _encode_GuidanceInfo: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

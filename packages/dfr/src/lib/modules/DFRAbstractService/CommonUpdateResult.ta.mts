@@ -151,7 +151,7 @@ class CommonUpdateResult {
          * @static
          */
 
-    public static _enum_for_referent_altered = _enum_for_ReferentStatus;
+    public static _enum_for_referent_altered: typeof _enum_for_ReferentStatus = _enum_for_ReferentStatus;
 }
 
 /**

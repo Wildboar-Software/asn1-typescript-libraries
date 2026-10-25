@@ -26,5 +26,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type SCIBillingChargingCharacteristics = OCTET_STRING;
-export const _decode_SCIBillingChargingCharacteristics = $._decodeOctetString;
-export const _encode_SCIBillingChargingCharacteristics = $._encodeOctetString;
+export const _decode_SCIBillingChargingCharacteristics: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_SCIBillingChargingCharacteristics: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

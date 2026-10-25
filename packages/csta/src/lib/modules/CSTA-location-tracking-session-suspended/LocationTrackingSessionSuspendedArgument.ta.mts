@@ -126,7 +126,7 @@ class LocationTrackingSessionSuspendedArgument {
          * @static
          */
 
-    public static _enum_for_locReason = _enum_for_LocReason;
+    public static _enum_for_locReason: typeof _enum_for_LocReason = _enum_for_LocReason;
 }
 
 /**

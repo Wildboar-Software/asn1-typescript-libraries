@@ -119,19 +119,19 @@ class ExtensibleSystemFailureParam {
          * @static
          */
 
-    public static _enum_for_networkResource = _enum_for_NetworkResource;        /**
+    public static _enum_for_networkResource: typeof _enum_for_NetworkResource = _enum_for_NetworkResource;        /**
          * @summary The enum used as the type of the component `additionalNetworkResource`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalNetworkResource = _enum_for_AdditionalNetworkResource;        /**
+    public static _enum_for_additionalNetworkResource: typeof _enum_for_AdditionalNetworkResource = _enum_for_AdditionalNetworkResource;        /**
          * @summary The enum used as the type of the component `failureCauseParam`
          * @public
          * @static
          */
 
-    public static _enum_for_failureCauseParam = _enum_for_FailureCauseParam;
+    public static _enum_for_failureCauseParam: typeof _enum_for_FailureCauseParam = _enum_for_FailureCauseParam;
 }
 
 /**

@@ -36,7 +36,7 @@ type ASDU_smpSynch = INTEGER;
  * @type {number}
  */
 export
-const ASDU_smpSynch_none = 0 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALUE */
+const ASDU_smpSynch_none: 0 = 0 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpSynch_none
@@ -48,7 +48,7 @@ const ASDU_smpSynch_none = 0 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const none = ASDU_smpSynch_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 0 = ASDU_smpSynch_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpSynch_local
@@ -60,7 +60,7 @@ const none = ASDU_smpSynch_none; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ASDU_smpSynch_local = 1 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALUE */
+const ASDU_smpSynch_local: 1 = 1 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpSynch_local
@@ -72,7 +72,7 @@ const ASDU_smpSynch_local = 1 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const local = ASDU_smpSynch_local; /* SHORT_NAMED_INTEGER_VALUE */
+const local: 1 = ASDU_smpSynch_local; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpSynch_global
@@ -84,7 +84,7 @@ const local = ASDU_smpSynch_local; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ASDU_smpSynch_global = 2 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALUE */
+const ASDU_smpSynch_global: 2 = 2 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASDU_smpSynch_global
@@ -96,9 +96,9 @@ const ASDU_smpSynch_global = 2 satisfies ASDU_smpSynch; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const global = ASDU_smpSynch_global; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ASDU_smpSynch = $._decodeInteger;
-export const _encode_ASDU_smpSynch = $._encodeInteger;
+const global: 2 = ASDU_smpSynch_global; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ASDU_smpSynch: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ASDU_smpSynch: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

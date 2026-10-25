@@ -239,7 +239,7 @@ class PCCRule {
          * @static
          */
 
-    public static _enum_for_deprecatedDNAIChangeType = _enum_for_DNAIChangeType;
+    public static _enum_for_deprecatedDNAIChangeType: typeof _enum_for_DNAIChangeType = _enum_for_DNAIChangeType;
 }
 
 /**

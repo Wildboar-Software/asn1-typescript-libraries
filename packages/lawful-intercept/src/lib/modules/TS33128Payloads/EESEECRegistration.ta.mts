@@ -255,13 +255,13 @@ class EESEECRegistration {
          * @static
          */
 
-    public static _enum_for_registrationType = _enum_for_RegistrationType;        /**
+    public static _enum_for_registrationType: typeof _enum_for_RegistrationType = _enum_for_RegistrationType;        /**
          * @summary The enum used as the type of the component `failureResponse`
          * @public
          * @static
          */
 
-    public static _enum_for_failureResponse = _enum_for_FailureResponse;
+    public static _enum_for_failureResponse: typeof _enum_for_FailureResponse = _enum_for_FailureResponse;
 }
 
 /**

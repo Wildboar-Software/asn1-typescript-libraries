@@ -185,56 +185,56 @@ class MonitorFilter {
      * @static
      * @method
      */
-    public static get _default_value_for_callControl () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_callControl (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `callAssociated`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_callAssociated () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_callAssociated (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `mediaAttachment`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_mediaAttachment () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_mediaAttachment (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `physicalDeviceFeature`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_physicalDeviceFeature () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_physicalDeviceFeature (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `logicalDeviceFeature`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_logicalDeviceFeature () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_logicalDeviceFeature (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `maintenance`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_maintenance () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_maintenance (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `voiceUnit`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_voiceUnit () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_voiceUnit (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `private_`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_private_ () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_private_ (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
 }
 
 /**

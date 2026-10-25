@@ -118,13 +118,13 @@ class TerminationStateDescriptor {
          * @static
          */
 
-    public static _enum_for_eventBufferControl = _enum_for_EventBufferControl;        /**
+    public static _enum_for_eventBufferControl: typeof _enum_for_EventBufferControl = _enum_for_EventBufferControl;        /**
          * @summary The enum used as the type of the component `serviceState`
          * @public
          * @static
          */
 
-    public static _enum_for_serviceState = _enum_for_ServiceState;
+    public static _enum_for_serviceState: typeof _enum_for_ServiceState = _enum_for_ServiceState;
 }
 
 /**

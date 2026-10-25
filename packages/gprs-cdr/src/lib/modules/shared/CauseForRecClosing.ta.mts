@@ -45,7 +45,7 @@ type CauseForRecClosing = INTEGER;
  * @type {number}
  */
 export
-const CauseForRecClosing_normalRelease = 0 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_normalRelease: 0 = 0 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_normalRelease
@@ -53,7 +53,7 @@ const CauseForRecClosing_normalRelease = 0 satisfies CauseForRecClosing; /* LONG
  * @type {number}
  */
 export
-const normalRelease = CauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease: 0 = CauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_abnormalRelease
@@ -61,7 +61,7 @@ const normalRelease = CauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const CauseForRecClosing_abnormalRelease = 4 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_abnormalRelease: 4 = 4 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_abnormalRelease
@@ -69,7 +69,7 @@ const CauseForRecClosing_abnormalRelease = 4 satisfies CauseForRecClosing; /* LO
  * @type {number}
  */
 export
-const abnormalRelease = CauseForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease: 4 = CauseForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_cAMELInitCallRelease
@@ -77,7 +77,7 @@ const abnormalRelease = CauseForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const CauseForRecClosing_cAMELInitCallRelease = 5 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_cAMELInitCallRelease: 5 = 5 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_cAMELInitCallRelease
@@ -85,7 +85,7 @@ const CauseForRecClosing_cAMELInitCallRelease = 5 satisfies CauseForRecClosing; 
  * @type {number}
  */
 export
-const cAMELInitCallRelease = CauseForRecClosing_cAMELInitCallRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const cAMELInitCallRelease: 5 = CauseForRecClosing_cAMELInitCallRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_volumeLimit
@@ -93,7 +93,7 @@ const cAMELInitCallRelease = CauseForRecClosing_cAMELInitCallRelease; /* SHORT_N
  * @type {number}
  */
 export
-const CauseForRecClosing_volumeLimit = 16 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_volumeLimit: 16 = 16 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_volumeLimit
@@ -101,7 +101,7 @@ const CauseForRecClosing_volumeLimit = 16 satisfies CauseForRecClosing; /* LONG_
  * @type {number}
  */
 export
-const volumeLimit = CauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeLimit: 16 = CauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_timeLimit
@@ -109,7 +109,7 @@ const volumeLimit = CauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const CauseForRecClosing_timeLimit = 17 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_timeLimit: 17 = 17 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_timeLimit
@@ -117,7 +117,7 @@ const CauseForRecClosing_timeLimit = 17 satisfies CauseForRecClosing; /* LONG_NA
  * @type {number}
  */
 export
-const timeLimit = CauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const timeLimit: 17 = CauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_servingNodeChange
@@ -125,7 +125,7 @@ const timeLimit = CauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CauseForRecClosing_servingNodeChange = 18 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_servingNodeChange: 18 = 18 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_servingNodeChange
@@ -133,7 +133,7 @@ const CauseForRecClosing_servingNodeChange = 18 satisfies CauseForRecClosing; /*
  * @type {number}
  */
 export
-const servingNodeChange = CauseForRecClosing_servingNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
+const servingNodeChange: 18 = CauseForRecClosing_servingNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_maxChangeCond
@@ -141,7 +141,7 @@ const servingNodeChange = CauseForRecClosing_servingNodeChange; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const CauseForRecClosing_maxChangeCond = 19 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_maxChangeCond: 19 = 19 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_maxChangeCond
@@ -149,7 +149,7 @@ const CauseForRecClosing_maxChangeCond = 19 satisfies CauseForRecClosing; /* LON
  * @type {number}
  */
 export
-const maxChangeCond = CauseForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_VALUE */
+const maxChangeCond: 19 = CauseForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_managementIntervention
@@ -157,7 +157,7 @@ const maxChangeCond = CauseForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const CauseForRecClosing_managementIntervention = 20 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_managementIntervention: 20 = 20 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_managementIntervention
@@ -165,7 +165,7 @@ const CauseForRecClosing_managementIntervention = 20 satisfies CauseForRecClosin
  * @type {number}
  */
 export
-const managementIntervention = CauseForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
+const managementIntervention: 20 = CauseForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_intraSGSNIntersystemChange
@@ -173,7 +173,7 @@ const managementIntervention = CauseForRecClosing_managementIntervention; /* SHO
  * @type {number}
  */
 export
-const CauseForRecClosing_intraSGSNIntersystemChange = 21 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_intraSGSNIntersystemChange: 21 = 21 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_intraSGSNIntersystemChange
@@ -181,7 +181,7 @@ const CauseForRecClosing_intraSGSNIntersystemChange = 21 satisfies CauseForRecCl
  * @type {number}
  */
 export
-const intraSGSNIntersystemChange = CauseForRecClosing_intraSGSNIntersystemChange; /* SHORT_NAMED_INTEGER_VALUE */
+const intraSGSNIntersystemChange: 21 = CauseForRecClosing_intraSGSNIntersystemChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_rATChange
@@ -189,7 +189,7 @@ const intraSGSNIntersystemChange = CauseForRecClosing_intraSGSNIntersystemChange
  * @type {number}
  */
 export
-const CauseForRecClosing_rATChange = 22 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_rATChange: 22 = 22 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_rATChange
@@ -197,7 +197,7 @@ const CauseForRecClosing_rATChange = 22 satisfies CauseForRecClosing; /* LONG_NA
  * @type {number}
  */
 export
-const rATChange = CauseForRecClosing_rATChange; /* SHORT_NAMED_INTEGER_VALUE */
+const rATChange: 22 = CauseForRecClosing_rATChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_mSTimeZoneChange
@@ -205,7 +205,7 @@ const rATChange = CauseForRecClosing_rATChange; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CauseForRecClosing_mSTimeZoneChange = 23 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_mSTimeZoneChange: 23 = 23 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_mSTimeZoneChange
@@ -213,7 +213,7 @@ const CauseForRecClosing_mSTimeZoneChange = 23 satisfies CauseForRecClosing; /* 
  * @type {number}
  */
 export
-const mSTimeZoneChange = CauseForRecClosing_mSTimeZoneChange; /* SHORT_NAMED_INTEGER_VALUE */
+const mSTimeZoneChange: 23 = CauseForRecClosing_mSTimeZoneChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_sGSNPLMNIDChange
@@ -221,7 +221,7 @@ const mSTimeZoneChange = CauseForRecClosing_mSTimeZoneChange; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const CauseForRecClosing_sGSNPLMNIDChange = 24 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_sGSNPLMNIDChange: 24 = 24 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_sGSNPLMNIDChange
@@ -229,7 +229,7 @@ const CauseForRecClosing_sGSNPLMNIDChange = 24 satisfies CauseForRecClosing; /* 
  * @type {number}
  */
 export
-const sGSNPLMNIDChange = CauseForRecClosing_sGSNPLMNIDChange; /* SHORT_NAMED_INTEGER_VALUE */
+const sGSNPLMNIDChange: 24 = CauseForRecClosing_sGSNPLMNIDChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_sGWChange
@@ -237,7 +237,7 @@ const sGSNPLMNIDChange = CauseForRecClosing_sGSNPLMNIDChange; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const CauseForRecClosing_sGWChange = 25 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_sGWChange: 25 = 25 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_sGWChange
@@ -245,7 +245,7 @@ const CauseForRecClosing_sGWChange = 25 satisfies CauseForRecClosing; /* LONG_NA
  * @type {number}
  */
 export
-const sGWChange = CauseForRecClosing_sGWChange; /* SHORT_NAMED_INTEGER_VALUE */
+const sGWChange: 25 = CauseForRecClosing_sGWChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_aPNAMBRChange
@@ -253,7 +253,7 @@ const sGWChange = CauseForRecClosing_sGWChange; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const CauseForRecClosing_aPNAMBRChange = 26 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_aPNAMBRChange: 26 = 26 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_aPNAMBRChange
@@ -261,7 +261,7 @@ const CauseForRecClosing_aPNAMBRChange = 26 satisfies CauseForRecClosing; /* LON
  * @type {number}
  */
 export
-const aPNAMBRChange = CauseForRecClosing_aPNAMBRChange; /* SHORT_NAMED_INTEGER_VALUE */
+const aPNAMBRChange: 26 = CauseForRecClosing_aPNAMBRChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_mOExceptionDataCounterReceipt
@@ -269,7 +269,7 @@ const aPNAMBRChange = CauseForRecClosing_aPNAMBRChange; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const CauseForRecClosing_mOExceptionDataCounterReceipt = 27 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_mOExceptionDataCounterReceipt: 27 = 27 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_mOExceptionDataCounterReceipt
@@ -277,7 +277,7 @@ const CauseForRecClosing_mOExceptionDataCounterReceipt = 27 satisfies CauseForRe
  * @type {number}
  */
 export
-const mOExceptionDataCounterReceipt = CauseForRecClosing_mOExceptionDataCounterReceipt; /* SHORT_NAMED_INTEGER_VALUE */
+const mOExceptionDataCounterReceipt: 27 = CauseForRecClosing_mOExceptionDataCounterReceipt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_unauthorizedRequestingNetwork
@@ -285,7 +285,7 @@ const mOExceptionDataCounterReceipt = CauseForRecClosing_mOExceptionDataCounterR
  * @type {number}
  */
 export
-const CauseForRecClosing_unauthorizedRequestingNetwork = 52 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_unauthorizedRequestingNetwork: 52 = 52 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_unauthorizedRequestingNetwork
@@ -293,7 +293,7 @@ const CauseForRecClosing_unauthorizedRequestingNetwork = 52 satisfies CauseForRe
  * @type {number}
  */
 export
-const unauthorizedRequestingNetwork = CauseForRecClosing_unauthorizedRequestingNetwork; /* SHORT_NAMED_INTEGER_VALUE */
+const unauthorizedRequestingNetwork: 52 = CauseForRecClosing_unauthorizedRequestingNetwork; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_unauthorizedLCSClient
@@ -301,7 +301,7 @@ const unauthorizedRequestingNetwork = CauseForRecClosing_unauthorizedRequestingN
  * @type {number}
  */
 export
-const CauseForRecClosing_unauthorizedLCSClient = 53 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_unauthorizedLCSClient: 53 = 53 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_unauthorizedLCSClient
@@ -309,7 +309,7 @@ const CauseForRecClosing_unauthorizedLCSClient = 53 satisfies CauseForRecClosing
  * @type {number}
  */
 export
-const unauthorizedLCSClient = CauseForRecClosing_unauthorizedLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
+const unauthorizedLCSClient: 53 = CauseForRecClosing_unauthorizedLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_positionMethodFailure
@@ -317,7 +317,7 @@ const unauthorizedLCSClient = CauseForRecClosing_unauthorizedLCSClient; /* SHORT
  * @type {number}
  */
 export
-const CauseForRecClosing_positionMethodFailure = 54 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_positionMethodFailure: 54 = 54 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_positionMethodFailure
@@ -325,7 +325,7 @@ const CauseForRecClosing_positionMethodFailure = 54 satisfies CauseForRecClosing
  * @type {number}
  */
 export
-const positionMethodFailure = CauseForRecClosing_positionMethodFailure; /* SHORT_NAMED_INTEGER_VALUE */
+const positionMethodFailure: 54 = CauseForRecClosing_positionMethodFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_unknownOrUnreachableLCSClient
@@ -333,7 +333,7 @@ const positionMethodFailure = CauseForRecClosing_positionMethodFailure; /* SHORT
  * @type {number}
  */
 export
-const CauseForRecClosing_unknownOrUnreachableLCSClient = 58 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_unknownOrUnreachableLCSClient: 58 = 58 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_unknownOrUnreachableLCSClient
@@ -341,7 +341,7 @@ const CauseForRecClosing_unknownOrUnreachableLCSClient = 58 satisfies CauseForRe
  * @type {number}
  */
 export
-const unknownOrUnreachableLCSClient = CauseForRecClosing_unknownOrUnreachableLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownOrUnreachableLCSClient: 58 = CauseForRecClosing_unknownOrUnreachableLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_listofDownstreamNodeChange
@@ -349,7 +349,7 @@ const unknownOrUnreachableLCSClient = CauseForRecClosing_unknownOrUnreachableLCS
  * @type {number}
  */
 export
-const CauseForRecClosing_listofDownstreamNodeChange = 59 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForRecClosing_listofDownstreamNodeChange: 59 = 59 satisfies CauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForRecClosing_listofDownstreamNodeChange
@@ -357,7 +357,7 @@ const CauseForRecClosing_listofDownstreamNodeChange = 59 satisfies CauseForRecCl
  * @type {number}
  */
 export
-const listofDownstreamNodeChange = CauseForRecClosing_listofDownstreamNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
+const listofDownstreamNodeChange: 59 = CauseForRecClosing_listofDownstreamNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CauseForRecClosing: $.ASN1Decoder<CauseForRecClosing> = $._decodeInteger;

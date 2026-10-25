@@ -51,7 +51,7 @@ type ConsumedCreditAction = _enum_for_ConsumedCreditAction;
  * @enum {number}
  */
 export
-const ConsumedCreditAction = _enum_for_ConsumedCreditAction;
+const ConsumedCreditAction: typeof _enum_for_ConsumedCreditAction = _enum_for_ConsumedCreditAction;
 
 /**
  * @summary ConsumedCreditAction_disconnect
@@ -59,7 +59,7 @@ const ConsumedCreditAction = _enum_for_ConsumedCreditAction;
  * @type {number}
  */
 export
-const ConsumedCreditAction_disconnect = ConsumedCreditAction.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_disconnect: _enum_for_ConsumedCreditAction.disconnect = ConsumedCreditAction.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnect
@@ -67,7 +67,7 @@ const ConsumedCreditAction_disconnect = ConsumedCreditAction.disconnect; /* LONG
  * @type {number}
  */
 export
-const disconnect = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnect: _enum_for_ConsumedCreditAction.disconnect = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_message
@@ -75,7 +75,7 @@ const disconnect = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ConsumedCreditAction_message = ConsumedCreditAction.message; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_message: _enum_for_ConsumedCreditAction.message = ConsumedCreditAction.message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message
@@ -83,7 +83,7 @@ const ConsumedCreditAction_message = ConsumedCreditAction.message; /* LONG_NAMED
  * @type {number}
  */
 export
-const message = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message: _enum_for_ConsumedCreditAction.message = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_tone
@@ -91,7 +91,7 @@ const message = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ConsumedCreditAction_tone = ConsumedCreditAction.tone; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_tone: _enum_for_ConsumedCreditAction.tone = ConsumedCreditAction.tone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tone
@@ -99,7 +99,7 @@ const ConsumedCreditAction_tone = ConsumedCreditAction.tone; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const tone = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tone: _enum_for_ConsumedCreditAction.tone = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_ConsumedCreditAction(el: _Element): ConsumedCreditAction {

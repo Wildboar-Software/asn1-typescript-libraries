@@ -177,7 +177,7 @@ class SetDisplayArgument {
          * @static
          */
 
-    public static _enum_for_characterSet = _enum_for_CharacterSet;
+    public static _enum_for_characterSet: typeof _enum_for_CharacterSet = _enum_for_CharacterSet;
 }
 
 /**

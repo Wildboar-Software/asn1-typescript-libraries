@@ -228,13 +228,13 @@ class PTCSessionEnd {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;        /**
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pTCSessionEndCause`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCSessionEndCause = _enum_for_PTCSessionEndCause;
+    public static _enum_for_pTCSessionEndCause: typeof _enum_for_PTCSessionEndCause = _enum_for_PTCSessionEndCause;
 }
 
 /**

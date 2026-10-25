@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ScriptLanguageName = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_ScriptLanguageName = $._decodeObjectIdentifier;
+export const _decode_ScriptLanguageName: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_ScriptLanguageName = $._encodeObjectIdentifier;
+export const _encode_ScriptLanguageName: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

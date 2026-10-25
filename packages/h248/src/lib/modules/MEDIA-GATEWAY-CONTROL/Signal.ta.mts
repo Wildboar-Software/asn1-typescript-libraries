@@ -246,13 +246,13 @@ class Signal {
          * @static
          */
 
-    public static _enum_for_sigType = _enum_for_SignalType;        /**
+    public static _enum_for_sigType: typeof _enum_for_SignalType = _enum_for_SignalType;        /**
          * @summary The enum used as the type of the component `direction`
          * @public
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_SignalDirection;
+    public static _enum_for_direction: typeof _enum_for_SignalDirection = _enum_for_SignalDirection;
 }
 
 /**

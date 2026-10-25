@@ -181,7 +181,7 @@ export class SequenceOfEvents {
      * @static
      */
 
-    public static _enum_for_signalDirection = _enum_for_SignalDirection;
+    public static _enum_for_signalDirection: typeof _enum_for_SignalDirection = _enum_for_SignalDirection;
 }
 
 /**

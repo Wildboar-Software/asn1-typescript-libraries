@@ -60,7 +60,7 @@ type MBMSCauseForRecClosing = INTEGER;
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_normalRelease = 0 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_normalRelease: 0 = 0 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_normalRelease
@@ -78,7 +78,7 @@ const MBMSCauseForRecClosing_normalRelease = 0 satisfies MBMSCauseForRecClosing;
  * @type {number}
  */
 export
-const normalRelease = MBMSCauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease: 0 = MBMSCauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_abnormalRelease
@@ -93,7 +93,7 @@ const normalRelease = MBMSCauseForRecClosing_normalRelease; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_abnormalRelease = 4 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_abnormalRelease: 4 = 4 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_abnormalRelease
@@ -108,7 +108,7 @@ const MBMSCauseForRecClosing_abnormalRelease = 4 satisfies MBMSCauseForRecClosin
  * @type {number}
  */
 export
-const abnormalRelease = MBMSCauseForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease: 4 = MBMSCauseForRecClosing_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_volumeLimit
@@ -124,7 +124,7 @@ const abnormalRelease = MBMSCauseForRecClosing_abnormalRelease; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_volumeLimit = 16 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_volumeLimit: 16 = 16 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_volumeLimit
@@ -140,7 +140,7 @@ const MBMSCauseForRecClosing_volumeLimit = 16 satisfies MBMSCauseForRecClosing; 
  * @type {number}
  */
 export
-const volumeLimit = MBMSCauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeLimit: 16 = MBMSCauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_timeLimit
@@ -156,7 +156,7 @@ const volumeLimit = MBMSCauseForRecClosing_volumeLimit; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_timeLimit = 17 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_timeLimit: 17 = 17 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_timeLimit
@@ -172,7 +172,7 @@ const MBMSCauseForRecClosing_timeLimit = 17 satisfies MBMSCauseForRecClosing; /*
  * @type {number}
  */
 export
-const timeLimit = MBMSCauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const timeLimit: 17 = MBMSCauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_maxChangeCond
@@ -188,7 +188,7 @@ const timeLimit = MBMSCauseForRecClosing_timeLimit; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_maxChangeCond = 19 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_maxChangeCond: 19 = 19 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_maxChangeCond
@@ -204,7 +204,7 @@ const MBMSCauseForRecClosing_maxChangeCond = 19 satisfies MBMSCauseForRecClosing
  * @type {number}
  */
 export
-const maxChangeCond = MBMSCauseForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_VALUE */
+const maxChangeCond: 19 = MBMSCauseForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_managementIntervention
@@ -219,7 +219,7 @@ const maxChangeCond = MBMSCauseForRecClosing_maxChangeCond; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_managementIntervention = 20 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_managementIntervention: 20 = 20 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_managementIntervention
@@ -234,7 +234,7 @@ const MBMSCauseForRecClosing_managementIntervention = 20 satisfies MBMSCauseForR
  * @type {number}
  */
 export
-const managementIntervention = MBMSCauseForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
+const managementIntervention: 20 = MBMSCauseForRecClosing_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_listofDownstreamNodeChange
@@ -251,7 +251,7 @@ const managementIntervention = MBMSCauseForRecClosing_managementIntervention; /*
  * @type {number}
  */
 export
-const MBMSCauseForRecClosing_listofDownstreamNodeChange = 59 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
+const MBMSCauseForRecClosing_listofDownstreamNodeChange: 59 = 59 satisfies MBMSCauseForRecClosing; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MBMSCauseForRecClosing_listofDownstreamNodeChange
@@ -268,7 +268,7 @@ const MBMSCauseForRecClosing_listofDownstreamNodeChange = 59 satisfies MBMSCause
  * @type {number}
  */
 export
-const listofDownstreamNodeChange = MBMSCauseForRecClosing_listofDownstreamNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
+const listofDownstreamNodeChange: 59 = MBMSCauseForRecClosing_listofDownstreamNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MBMSCauseForRecClosing: $.ASN1Decoder<MBMSCauseForRecClosing> = $._decodeInteger;

@@ -29,7 +29,7 @@ type InitiatingMode = INTEGER;
  * @type {number}
  */
 export
-const InitiatingMode_managerDirect = 0 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_managerDirect: 0 = 0 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerDirect
@@ -37,7 +37,7 @@ const InitiatingMode_managerDirect = 0 satisfies InitiatingMode; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const managerDirect = InitiatingMode_managerDirect; /* SHORT_NAMED_INTEGER_VALUE */
+const managerDirect: 0 = InitiatingMode_managerDirect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirect
@@ -45,7 +45,7 @@ const managerDirect = InitiatingMode_managerDirect; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const InitiatingMode_managerIndirect = 1 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_managerIndirect: 1 = 1 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirect
@@ -53,7 +53,7 @@ const InitiatingMode_managerIndirect = 1 satisfies InitiatingMode; /* LONG_NAMED
  * @type {number}
  */
 export
-const managerIndirect = InitiatingMode_managerIndirect; /* SHORT_NAMED_INTEGER_VALUE */
+const managerIndirect: 1 = InitiatingMode_managerIndirect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_agentOriginated
@@ -61,7 +61,7 @@ const managerIndirect = InitiatingMode_managerIndirect; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const InitiatingMode_agentOriginated = 2 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_agentOriginated: 2 = 2 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_agentOriginated
@@ -69,7 +69,7 @@ const InitiatingMode_agentOriginated = 2 satisfies InitiatingMode; /* LONG_NAMED
  * @type {number}
  */
 export
-const agentOriginated = InitiatingMode_agentOriginated; /* SHORT_NAMED_INTEGER_VALUE */
+const agentOriginated: 2 = InitiatingMode_agentOriginated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectEMail
@@ -77,7 +77,7 @@ const agentOriginated = InitiatingMode_agentOriginated; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const InitiatingMode_managerIndirectEMail = 4 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_managerIndirectEMail: 4 = 4 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectEMail
@@ -85,7 +85,7 @@ const InitiatingMode_managerIndirectEMail = 4 satisfies InitiatingMode; /* LONG_
  * @type {number}
  */
 export
-const managerIndirectEMail = InitiatingMode_managerIndirectEMail; /* SHORT_NAMED_INTEGER_VALUE */
+const managerIndirectEMail: 4 = InitiatingMode_managerIndirectEMail; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectFax
@@ -93,7 +93,7 @@ const managerIndirectEMail = InitiatingMode_managerIndirectEMail; /* SHORT_NAMED
  * @type {number}
  */
 export
-const InitiatingMode_managerIndirectFax = 5 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_managerIndirectFax: 5 = 5 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectFax
@@ -101,7 +101,7 @@ const InitiatingMode_managerIndirectFax = 5 satisfies InitiatingMode; /* LONG_NA
  * @type {number}
  */
 export
-const managerIndirectFax = InitiatingMode_managerIndirectFax; /* SHORT_NAMED_INTEGER_VALUE */
+const managerIndirectFax: 5 = InitiatingMode_managerIndirectFax; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectPersonal
@@ -109,7 +109,7 @@ const managerIndirectFax = InitiatingMode_managerIndirectFax; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const InitiatingMode_managerIndirectPersonal = 6 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_managerIndirectPersonal: 6 = 6 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectPersonal
@@ -117,7 +117,7 @@ const InitiatingMode_managerIndirectPersonal = 6 satisfies InitiatingMode; /* LO
  * @type {number}
  */
 export
-const managerIndirectPersonal = InitiatingMode_managerIndirectPersonal; /* SHORT_NAMED_INTEGER_VALUE */
+const managerIndirectPersonal: 6 = InitiatingMode_managerIndirectPersonal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectPhone
@@ -125,7 +125,7 @@ const managerIndirectPersonal = InitiatingMode_managerIndirectPersonal; /* SHORT
  * @type {number}
  */
 export
-const InitiatingMode_managerIndirectPhone = 7 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
+const InitiatingMode_managerIndirectPhone: 7 = 7 satisfies InitiatingMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary InitiatingMode_managerIndirectPhone
@@ -133,9 +133,9 @@ const InitiatingMode_managerIndirectPhone = 7 satisfies InitiatingMode; /* LONG_
  * @type {number}
  */
 export
-const managerIndirectPhone = InitiatingMode_managerIndirectPhone; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_InitiatingMode = $._decodeInteger;
-export const _encode_InitiatingMode = $._encodeInteger;
+const managerIndirectPhone: 7 = InitiatingMode_managerIndirectPhone; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_InitiatingMode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_InitiatingMode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

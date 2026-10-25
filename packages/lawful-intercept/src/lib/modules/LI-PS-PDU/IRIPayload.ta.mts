@@ -227,25 +227,25 @@ class IRIPayload {
          * @static
          */
 
-    public static _enum_for_iRIType = _enum_for_IRIType;        /**
+    public static _enum_for_iRIType: typeof _enum_for_IRIType = _enum_for_IRIType;        /**
          * @summary The enum used as the type of the component `timeStampQualifier`
          * @public
          * @static
          */
 
-    public static _enum_for_timeStampQualifier = _enum_for_TimeStampQualifier;        /**
+    public static _enum_for_timeStampQualifier: typeof _enum_for_TimeStampQualifier = _enum_for_TimeStampQualifier;        /**
          * @summary The enum used as the type of the component `sessionDirection`
          * @public
          * @static
          */
 
-    public static _enum_for_sessionDirection = _enum_for_PayloadDirection;        /**
+    public static _enum_for_sessionDirection: typeof _enum_for_PayloadDirection = _enum_for_PayloadDirection;        /**
          * @summary The enum used as the type of the component `payloadDirection`
          * @public
          * @static
          */
 
-    public static _enum_for_payloadDirection = _enum_for_PayloadDirection;
+    public static _enum_for_payloadDirection: typeof _enum_for_PayloadDirection = _enum_for_PayloadDirection;
 }
 
 /**

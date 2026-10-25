@@ -32,10 +32,10 @@ export
 type NameBinding = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_NameBinding = $._decodeObjectIdentifier;
+export const _decode_NameBinding: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_NameBinding = $._encodeObjectIdentifier;
+export const _encode_NameBinding: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

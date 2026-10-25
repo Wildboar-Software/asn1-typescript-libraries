@@ -33,12 +33,12 @@ export type RegisteredAs = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
 
-export const _decode_RegisteredAs = $._decodeObjectIdentifier;
+export const _decode_RegisteredAs: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
 
 
-export const _encode_RegisteredAs = $._encodeObjectIdentifier;
+export const _encode_RegisteredAs: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

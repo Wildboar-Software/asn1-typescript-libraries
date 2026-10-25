@@ -54,7 +54,7 @@ type MMHSPrecedence = INTEGER;
  * @type {number}
  */
 export
-const MMHSPrecedence_deferred = 0 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_deferred: 0 = 0 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_deferred
@@ -66,7 +66,7 @@ const MMHSPrecedence_deferred = 0 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const deferred = MMHSPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
+const deferred: 0 = MMHSPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_routine
@@ -78,7 +78,7 @@ const deferred = MMHSPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_routine = 1 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_routine: 1 = 1 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_routine
@@ -90,7 +90,7 @@ const MMHSPrecedence_routine = 1 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const routine = MMHSPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
+const routine: 1 = MMHSPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_priority
@@ -103,7 +103,7 @@ const routine = MMHSPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_priority = 2 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_priority: 2 = 2 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_priority
@@ -116,7 +116,7 @@ const MMHSPrecedence_priority = 2 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const priority = MMHSPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const priority: 2 = MMHSPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_immediate
@@ -128,7 +128,7 @@ const priority = MMHSPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_immediate = 3 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_immediate: 3 = 3 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_immediate
@@ -140,7 +140,7 @@ const MMHSPrecedence_immediate = 3 satisfies MMHSPrecedence; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const immediate = MMHSPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const immediate: 3 = MMHSPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_flash
@@ -152,7 +152,7 @@ const immediate = MMHSPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_flash = 4 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_flash: 4 = 4 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_flash
@@ -164,7 +164,7 @@ const MMHSPrecedence_flash = 4 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const flash = MMHSPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
+const flash: 4 = MMHSPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_override
@@ -176,7 +176,7 @@ const flash = MMHSPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_override = 5 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_override: 5 = 5 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_override
@@ -188,7 +188,7 @@ const MMHSPrecedence_override = 5 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const override = MMHSPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
+const override: 5 = MMHSPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_ecp
@@ -200,7 +200,7 @@ const override = MMHSPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_ecp = 16 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_ecp: 16 = 16 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_ecp
@@ -212,7 +212,7 @@ const MMHSPrecedence_ecp = 16 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const ecp = MMHSPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
+const ecp: 16 = MMHSPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_critic
@@ -224,7 +224,7 @@ const ecp = MMHSPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_critic = 17 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_critic: 17 = 17 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_critic
@@ -236,7 +236,7 @@ const MMHSPrecedence_critic = 17 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const critic = MMHSPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
+const critic: 17 = MMHSPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_override_2
@@ -248,7 +248,7 @@ const critic = MMHSPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MMHSPrecedence_override_2 = 18 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
+const MMHSPrecedence_override_2: 18 = 18 satisfies MMHSPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MMHSPrecedence_override_2
@@ -260,7 +260,7 @@ const MMHSPrecedence_override_2 = 18 satisfies MMHSPrecedence; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const override_2 = MMHSPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
+const override_2: 18 = MMHSPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_MMHSPrecedence: $.ASN1Decoder<MMHSPrecedence> = $._decodeInteger;
 export const _encode_MMHSPrecedence: $.ASN1Encoder<MMHSPrecedence> = $._encodeInteger;
 

@@ -78,13 +78,13 @@ class AllocationRetentionPriority {
          * @static
          */
 
-    public static _enum_for_preemptionCapability = _enum_for_PreemptionCapability;        /**
+    public static _enum_for_preemptionCapability: typeof _enum_for_PreemptionCapability = _enum_for_PreemptionCapability;        /**
          * @summary The enum used as the type of the component `preemptionVulnerability`
          * @public
          * @static
          */
 
-    public static _enum_for_preemptionVulnerability = _enum_for_PreemptionVulnerability;
+    public static _enum_for_preemptionVulnerability: typeof _enum_for_PreemptionVulnerability = _enum_for_PreemptionVulnerability;
 }
 
 /**

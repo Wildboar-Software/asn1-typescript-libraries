@@ -72,7 +72,7 @@ type Altered_value = _enum_for_Altered_value;
  * @enum {number}
  */
 export
-const Altered_value = _enum_for_Altered_value;
+const Altered_value: typeof _enum_for_Altered_value = _enum_for_Altered_value;
 
 /**
  * @summary Altered_value_value_not_altered
@@ -80,7 +80,7 @@ const Altered_value = _enum_for_Altered_value;
  * @type {number}
  */
 export
-const Altered_value_value_not_altered = Altered_value.value_not_altered; /* LONG_NAMED_ENUMERATED_VALUE */
+const Altered_value_value_not_altered: _enum_for_Altered_value.value_not_altered = Altered_value.value_not_altered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary value_not_altered
@@ -88,7 +88,7 @@ const Altered_value_value_not_altered = Altered_value.value_not_altered; /* LONG
  * @type {number}
  */
 export
-const value_not_altered = Altered_value.value_not_altered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const value_not_altered: _enum_for_Altered_value.value_not_altered = Altered_value.value_not_altered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Altered_value_value_altered
@@ -96,7 +96,7 @@ const value_not_altered = Altered_value.value_not_altered; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const Altered_value_value_altered = Altered_value.value_altered; /* LONG_NAMED_ENUMERATED_VALUE */
+const Altered_value_value_altered: _enum_for_Altered_value.value_altered = Altered_value.value_altered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary value_altered
@@ -104,7 +104,7 @@ const Altered_value_value_altered = Altered_value.value_altered; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const value_altered = Altered_value.value_altered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const value_altered: _enum_for_Altered_value.value_altered = Altered_value.value_altered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Altered_value_undefined
@@ -112,7 +112,7 @@ const value_altered = Altered_value.value_altered; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const Altered_value_undefined = Altered_value.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const Altered_value_undefined: _enum_for_Altered_value.undefined = Altered_value.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -120,7 +120,7 @@ const Altered_value_undefined = Altered_value.undefined; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const undefined = Altered_value.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined: _enum_for_Altered_value.undefined = Altered_value.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export function _decode_Altered_value(el: _Element): Altered_value {
     const enumerated = $._decodeEnumerated(el);
     switch (enumerated) {

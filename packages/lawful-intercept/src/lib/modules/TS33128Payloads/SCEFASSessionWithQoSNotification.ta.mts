@@ -166,7 +166,7 @@ class SCEFASSessionWithQoSNotification {
          * @static
          */
 
-    public static _enum_for_aSSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
+    public static _enum_for_aSSessionWithQoSResponseCode: typeof _enum_for_AForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
 }
 
 /**

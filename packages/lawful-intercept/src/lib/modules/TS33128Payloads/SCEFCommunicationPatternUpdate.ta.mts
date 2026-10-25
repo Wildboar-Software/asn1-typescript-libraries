@@ -300,31 +300,31 @@ class SCEFCommunicationPatternUpdate {
          * @static
          */
 
-    public static _enum_for_periodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;        /**
+    public static _enum_for_periodicCommunicationIndicator: typeof _enum_for_PeriodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;        /**
          * @summary The enum used as the type of the component `scheduledCommunicationType`
          * @public
          * @static
          */
 
-    public static _enum_for_scheduledCommunicationType = _enum_for_ScheduledCommunicationType;        /**
+    public static _enum_for_scheduledCommunicationType: typeof _enum_for_ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;        /**
          * @summary The enum used as the type of the component `stationaryIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_stationaryIndication = _enum_for_StationaryIndication;        /**
+    public static _enum_for_stationaryIndication: typeof _enum_for_StationaryIndication = _enum_for_StationaryIndication;        /**
          * @summary The enum used as the type of the component `batteryIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_batteryIndication = _enum_for_BatteryIndication;        /**
+    public static _enum_for_batteryIndication: typeof _enum_for_BatteryIndication = _enum_for_BatteryIndication;        /**
          * @summary The enum used as the type of the component `trafficProfile`
          * @public
          * @static
          */
 
-    public static _enum_for_trafficProfile = _enum_for_TrafficProfile;
+    public static _enum_for_trafficProfile: typeof _enum_for_TrafficProfile = _enum_for_TrafficProfile;
 }
 
 /**

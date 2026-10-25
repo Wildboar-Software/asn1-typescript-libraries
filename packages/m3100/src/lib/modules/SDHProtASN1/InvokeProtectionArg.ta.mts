@@ -101,7 +101,7 @@ export class InvokeProtectionArg {
      * @static
      */
 
-    public static _enum_for_switchType = _enum_for_SwitchType;
+    public static _enum_for_switchType: typeof _enum_for_SwitchType = _enum_for_SwitchType;
 }
 
 

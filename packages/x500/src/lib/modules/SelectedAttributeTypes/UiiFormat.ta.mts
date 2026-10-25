@@ -121,7 +121,7 @@ export class UiiFormat {
      * @static
      */
 
-    public static _enum_for_subset = _enum_for_UiiFormat_subset;
+    public static _enum_for_subset: typeof _enum_for_UiiFormat_subset = _enum_for_UiiFormat_subset;
 }
 
 /**

@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
@@ -86,13 +87,15 @@ class RequestedUTSI {
      * @static
      * @method
      */
-    public static get _default_value_for_legID () { return { sendingSideID: leg1 }; }        /**
+    public static get _default_value_for_legID (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }        /**
          * @summary The enum used as the type of the component `uSImonitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_uSImonitorMode = _enum_for_USIMonitorMode;
+    public static _enum_for_uSImonitorMode: typeof _enum_for_USIMonitorMode = _enum_for_USIMonitorMode;
 }
 
 /**

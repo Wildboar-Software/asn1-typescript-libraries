@@ -127,19 +127,19 @@ class SendFacilityInformationArg {
      * @static
      * @method
      */
-    public static get _default_value_for_callProcessingOperationCorrelationID () { return CallProcessingOperationCorrelationID_fACility; }        /**
+    public static get _default_value_for_callProcessingOperationCorrelationID (): _enum_for_CallProcessingOperationCorrelationID { return CallProcessingOperationCorrelationID_fACility; }        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;        /**
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;        /**
          * @summary The enum used as the type of the component `callProcessingOperationCorrelationID`
          * @public
          * @static
          */
 
-    public static _enum_for_callProcessingOperationCorrelationID = _enum_for_CallProcessingOperationCorrelationID;
+    public static _enum_for_callProcessingOperationCorrelationID: typeof _enum_for_CallProcessingOperationCorrelationID = _enum_for_CallProcessingOperationCorrelationID;
 }
 
 /**

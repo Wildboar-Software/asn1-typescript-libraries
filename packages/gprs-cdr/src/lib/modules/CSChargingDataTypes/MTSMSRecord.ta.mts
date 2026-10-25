@@ -380,7 +380,7 @@ class MTSMSRecord {
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;
 }
 
 /**

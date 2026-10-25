@@ -132,7 +132,7 @@ type IRIType = _enum_for_IRIType;
  * @enum {number}
  */
 export
-const IRIType = _enum_for_IRIType;
+const IRIType: typeof _enum_for_IRIType = _enum_for_IRIType;
 
 /**
  * @summary IRIType_iRI_Begin
@@ -150,7 +150,7 @@ const IRIType = _enum_for_IRIType;
  * @type {number}
  */
 export
-const IRIType_iRI_Begin = IRIType.iRI_Begin; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRIType_iRI_Begin: _enum_for_IRIType.iRI_Begin = IRIType.iRI_Begin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRI_Begin
@@ -168,7 +168,7 @@ const IRIType_iRI_Begin = IRIType.iRI_Begin; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iRI_Begin = IRIType.iRI_Begin; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRI_Begin: _enum_for_IRIType.iRI_Begin = IRIType.iRI_Begin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRIType_iRI_End
@@ -185,7 +185,7 @@ const iRI_Begin = IRIType.iRI_Begin; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IRIType_iRI_End = IRIType.iRI_End; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRIType_iRI_End: _enum_for_IRIType.iRI_End = IRIType.iRI_End; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRI_End
@@ -202,7 +202,7 @@ const IRIType_iRI_End = IRIType.iRI_End; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iRI_End = IRIType.iRI_End; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRI_End: _enum_for_IRIType.iRI_End = IRIType.iRI_End; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRIType_iRI_Continue
@@ -219,7 +219,7 @@ const iRI_End = IRIType.iRI_End; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IRIType_iRI_Continue = IRIType.iRI_Continue; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRIType_iRI_Continue: _enum_for_IRIType.iRI_Continue = IRIType.iRI_Continue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRI_Continue
@@ -236,7 +236,7 @@ const IRIType_iRI_Continue = IRIType.iRI_Continue; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const iRI_Continue = IRIType.iRI_Continue; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRI_Continue: _enum_for_IRIType.iRI_Continue = IRIType.iRI_Continue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IRIType_iRI_Report
@@ -253,7 +253,7 @@ const iRI_Continue = IRIType.iRI_Continue; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IRIType_iRI_Report = IRIType.iRI_Report; /* LONG_NAMED_ENUMERATED_VALUE */
+const IRIType_iRI_Report: _enum_for_IRIType.iRI_Report = IRIType.iRI_Report; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iRI_Report
@@ -270,7 +270,7 @@ const IRIType_iRI_Report = IRIType.iRI_Report; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iRI_Report = IRIType.iRI_Report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iRI_Report: _enum_for_IRIType.iRI_Report = IRIType.iRI_Report; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IRIType: $.ASN1Decoder<IRIType> = $._decodeEnumerated;
 export const _encode_IRIType: $.ASN1Encoder<IRIType> = $._encodeEnumerated;
 

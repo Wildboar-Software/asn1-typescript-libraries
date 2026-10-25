@@ -48,7 +48,7 @@ type MediaSecFailureIndication = _enum_for_MediaSecFailureIndication | ENUMERATE
  * @type {number}
  */
 export
-const MediaSecFailureIndication_genericFailure = _enum_for_MediaSecFailureIndication.genericFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaSecFailureIndication_genericFailure: _enum_for_MediaSecFailureIndication.genericFailure = _enum_for_MediaSecFailureIndication.genericFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary genericFailure
@@ -61,7 +61,7 @@ const MediaSecFailureIndication_genericFailure = _enum_for_MediaSecFailureIndica
  * @type {number}
  */
 export
-const genericFailure = MediaSecFailureIndication_genericFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const genericFailure: _enum_for_MediaSecFailureIndication.genericFailure = MediaSecFailureIndication_genericFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MediaSecFailureIndication: $.ASN1Decoder<MediaSecFailureIndication> = $._decodeEnumerated;
 export const _encode_MediaSecFailureIndication: $.ASN1Encoder<MediaSecFailureIndication> = $._encodeEnumerated;
 

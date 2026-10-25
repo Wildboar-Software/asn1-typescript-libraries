@@ -57,14 +57,14 @@ export type DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  *
  * @enum {number}
  */
-export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
+export const DLPolicy_return_of_content: typeof _enum_for_DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
 
 /**
  * @summary DLPolicy_return_of_content_unchanged
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_unchanged =
+export const DLPolicy_return_of_content_unchanged: _enum_for_DLPolicy_return_of_content.unchanged =
     DLPolicy_return_of_content.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_return_of_content_unchanged =
  * @constant
  * @type {number}
  */
-export const unchanged =
+export const unchanged: _enum_for_DLPolicy_return_of_content.unchanged =
     DLPolicy_return_of_content.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged =
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_content_return_not_requested =
+export const DLPolicy_return_of_content_content_return_not_requested: _enum_for_DLPolicy_return_of_content.content_return_not_requested =
     DLPolicy_return_of_content.content_return_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_return_of_content_content_return_not_requested =
  * @constant
  * @type {number}
  */
-export const content_return_not_requested =
+export const content_return_not_requested: _enum_for_DLPolicy_return_of_content.content_return_not_requested =
     DLPolicy_return_of_content.content_return_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const content_return_not_requested =
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_content_return_requested =
+export const DLPolicy_return_of_content_content_return_requested: _enum_for_DLPolicy_return_of_content.content_return_requested =
     DLPolicy_return_of_content.content_return_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_return_of_content_content_return_requested =
  * @constant
  * @type {number}
  */
-export const content_return_requested =
+export const content_return_requested: _enum_for_DLPolicy_return_of_content.content_return_requested =
     DLPolicy_return_of_content.content_return_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -34,10 +34,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type LabelName = INTEGER;
 
 
-export const _decode_LabelName = $._decodeInteger;
+export const _decode_LabelName: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_LabelName = $._encodeInteger;
+export const _encode_LabelName: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

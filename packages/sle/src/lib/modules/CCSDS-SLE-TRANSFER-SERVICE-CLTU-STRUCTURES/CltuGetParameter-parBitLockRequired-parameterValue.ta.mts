@@ -35,7 +35,7 @@ type CltuGetParameter_parBitLockRequired_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const CltuGetParameter_parBitLockRequired_parameterValue_yes = 0 satisfies CltuGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parBitLockRequired_parameterValue_yes: 0 = 0 satisfies CltuGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parBitLockRequired_parameterValue_yes
@@ -47,7 +47,7 @@ const CltuGetParameter_parBitLockRequired_parameterValue_yes = 0 satisfies CltuG
  * @type {number}
  */
 export
-const yes = CltuGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
+const yes: 0 = CltuGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parBitLockRequired_parameterValue_no
@@ -60,7 +60,7 @@ const yes = CltuGetParameter_parBitLockRequired_parameterValue_yes; /* SHORT_NAM
  * @type {number}
  */
 export
-const CltuGetParameter_parBitLockRequired_parameterValue_no = 1 satisfies CltuGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parBitLockRequired_parameterValue_no: 1 = 1 satisfies CltuGetParameter_parBitLockRequired_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parBitLockRequired_parameterValue_no
@@ -71,7 +71,7 @@ const CltuGetParameter_parBitLockRequired_parameterValue_no = 1 satisfies CltuGe
  * @type {number}
  */
 export
-const no = CltuGetParameter_parBitLockRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
+const no: 1 = CltuGetParameter_parBitLockRequired_parameterValue_no; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CltuGetParameter_parBitLockRequired_parameterValue: $.ASN1Decoder<CltuGetParameter_parBitLockRequired_parameterValue> = $._decodeInteger;
 export const _encode_CltuGetParameter_parBitLockRequired_parameterValue: $.ASN1Encoder<CltuGetParameter_parBitLockRequired_parameterValue> = $._encodeInteger;
 

@@ -34,7 +34,7 @@ export const _decode_CutAndPaste = (el: _Element): CutAndPaste => {
     }
     return value;
 };
-export const _encode_CutAndPaste = $._encodeInteger;
+export const _encode_CutAndPaste: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

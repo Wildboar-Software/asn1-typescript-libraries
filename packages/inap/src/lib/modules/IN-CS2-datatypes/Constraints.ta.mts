@@ -88,7 +88,7 @@ class Constraints {
      * @static
      * @method
      */
-    public static get _default_value_for_typeOfRequestedInfo () { return InfoType_numericString; }
+    public static get _default_value_for_typeOfRequestedInfo (): _enum_for_InfoType { return InfoType_numericString; }
     /**
      * @summary Getter that returns the default value for `numberOfAllowedRetries`.
      * @public
@@ -101,7 +101,7 @@ class Constraints {
          * @static
          */
 
-    public static _enum_for_typeOfRequestedInfo = _enum_for_InfoType;
+    public static _enum_for_typeOfRequestedInfo: typeof _enum_for_InfoType = _enum_for_InfoType;
 }
 
 /**

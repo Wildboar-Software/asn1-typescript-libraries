@@ -77,7 +77,7 @@ type EncodingAlgorithm = _enum_for_EncodingAlgorithm;
  * @enum {number}
  */
 export
-const EncodingAlgorithm = _enum_for_EncodingAlgorithm;
+const EncodingAlgorithm: typeof _enum_for_EncodingAlgorithm = _enum_for_EncodingAlgorithm;
 
 /**
  * @summary EncodingAlgorithm_aDPCM6K
@@ -87,7 +87,7 @@ const EncodingAlgorithm = _enum_for_EncodingAlgorithm;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const EncodingAlgorithm_aDPCM6K = EncodingAlgorithm.aDPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncodingAlgorithm_aDPCM6K: _enum_for_EncodingAlgorithm.aDPCM6K = EncodingAlgorithm.aDPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aDPCM6K
@@ -96,7 +96,7 @@ const EncodingAlgorithm_aDPCM6K = EncodingAlgorithm.aDPCM6K; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const aDPCM6K = EncodingAlgorithm.aDPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aDPCM6K: _enum_for_EncodingAlgorithm.aDPCM6K = EncodingAlgorithm.aDPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncodingAlgorithm_aDPCM8K
@@ -106,7 +106,7 @@ const aDPCM6K = EncodingAlgorithm.aDPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const EncodingAlgorithm_aDPCM8K = EncodingAlgorithm.aDPCM8K; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncodingAlgorithm_aDPCM8K: _enum_for_EncodingAlgorithm.aDPCM8K = EncodingAlgorithm.aDPCM8K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aDPCM8K
@@ -115,7 +115,7 @@ const EncodingAlgorithm_aDPCM8K = EncodingAlgorithm.aDPCM8K; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const aDPCM8K = EncodingAlgorithm.aDPCM8K; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aDPCM8K: _enum_for_EncodingAlgorithm.aDPCM8K = EncodingAlgorithm.aDPCM8K; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncodingAlgorithm_muLawPCM6K
@@ -125,7 +125,7 @@ const aDPCM8K = EncodingAlgorithm.aDPCM8K; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const EncodingAlgorithm_muLawPCM6K = EncodingAlgorithm.muLawPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncodingAlgorithm_muLawPCM6K: _enum_for_EncodingAlgorithm.muLawPCM6K = EncodingAlgorithm.muLawPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary muLawPCM6K
@@ -134,7 +134,7 @@ const EncodingAlgorithm_muLawPCM6K = EncodingAlgorithm.muLawPCM6K; /* LONG_NAMED
  * @type {number}
  */
 export
-const muLawPCM6K = EncodingAlgorithm.muLawPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
+const muLawPCM6K: _enum_for_EncodingAlgorithm.muLawPCM6K = EncodingAlgorithm.muLawPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncodingAlgorithm_aLawPCM6K
@@ -144,7 +144,7 @@ const muLawPCM6K = EncodingAlgorithm.muLawPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const EncodingAlgorithm_aLawPCM6K = EncodingAlgorithm.aLawPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncodingAlgorithm_aLawPCM6K: _enum_for_EncodingAlgorithm.aLawPCM6K = EncodingAlgorithm.aLawPCM6K; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aLawPCM6K
@@ -153,7 +153,7 @@ const EncodingAlgorithm_aLawPCM6K = EncodingAlgorithm.aLawPCM6K; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const aLawPCM6K = EncodingAlgorithm.aLawPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aLawPCM6K: _enum_for_EncodingAlgorithm.aLawPCM6K = EncodingAlgorithm.aLawPCM6K; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_EncodingAlgorithm: $.ASN1Decoder<EncodingAlgorithm> | null = null;
 

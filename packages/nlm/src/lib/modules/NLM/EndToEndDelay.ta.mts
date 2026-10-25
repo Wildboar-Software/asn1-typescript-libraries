@@ -34,12 +34,12 @@ export type EndToEndDelay = INTEGER;
 
 
 
-export const _decode_EndToEndDelay = $._decodeInteger;
+export const _decode_EndToEndDelay: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_EndToEndDelay = $._encodeInteger;
+export const _encode_EndToEndDelay: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

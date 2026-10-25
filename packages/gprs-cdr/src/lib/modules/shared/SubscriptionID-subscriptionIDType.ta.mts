@@ -70,7 +70,7 @@ type SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionID
  * @enum {number}
  */
 export
-const SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionIDType;
+const SubscriptionID_subscriptionIDType: typeof _enum_for_SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionIDType;
 
 /**
  * @summary SubscriptionID_subscriptionIDType_eND_USER_E164
@@ -78,7 +78,7 @@ const SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionI
  * @type {number}
  */
 export
-const SubscriptionID_subscriptionIDType_eND_USER_E164 = SubscriptionID_subscriptionIDType.eND_USER_E164; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionID_subscriptionIDType_eND_USER_E164: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_E164 = SubscriptionID_subscriptionIDType.eND_USER_E164; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_E164
@@ -86,7 +86,7 @@ const SubscriptionID_subscriptionIDType_eND_USER_E164 = SubscriptionID_subscript
  * @type {number}
  */
 export
-const eND_USER_E164 = SubscriptionID_subscriptionIDType.eND_USER_E164; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_E164: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_E164 = SubscriptionID_subscriptionIDType.eND_USER_E164; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionID_subscriptionIDType_eND_USER_IMSI
@@ -94,7 +94,7 @@ const eND_USER_E164 = SubscriptionID_subscriptionIDType.eND_USER_E164; /* SHORT_
  * @type {number}
  */
 export
-const SubscriptionID_subscriptionIDType_eND_USER_IMSI = SubscriptionID_subscriptionIDType.eND_USER_IMSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionID_subscriptionIDType_eND_USER_IMSI: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_IMSI = SubscriptionID_subscriptionIDType.eND_USER_IMSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_IMSI
@@ -102,7 +102,7 @@ const SubscriptionID_subscriptionIDType_eND_USER_IMSI = SubscriptionID_subscript
  * @type {number}
  */
 export
-const eND_USER_IMSI = SubscriptionID_subscriptionIDType.eND_USER_IMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_IMSI: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_IMSI = SubscriptionID_subscriptionIDType.eND_USER_IMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionID_subscriptionIDType_eND_USER_SIP_URI
@@ -110,7 +110,7 @@ const eND_USER_IMSI = SubscriptionID_subscriptionIDType.eND_USER_IMSI; /* SHORT_
  * @type {number}
  */
 export
-const SubscriptionID_subscriptionIDType_eND_USER_SIP_URI = SubscriptionID_subscriptionIDType.eND_USER_SIP_URI; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionID_subscriptionIDType_eND_USER_SIP_URI: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_SIP_URI = SubscriptionID_subscriptionIDType.eND_USER_SIP_URI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_SIP_URI
@@ -118,7 +118,7 @@ const SubscriptionID_subscriptionIDType_eND_USER_SIP_URI = SubscriptionID_subscr
  * @type {number}
  */
 export
-const eND_USER_SIP_URI = SubscriptionID_subscriptionIDType.eND_USER_SIP_URI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_SIP_URI: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_SIP_URI = SubscriptionID_subscriptionIDType.eND_USER_SIP_URI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionID_subscriptionIDType_eND_USER_NAI
@@ -126,7 +126,7 @@ const eND_USER_SIP_URI = SubscriptionID_subscriptionIDType.eND_USER_SIP_URI; /* 
  * @type {number}
  */
 export
-const SubscriptionID_subscriptionIDType_eND_USER_NAI = SubscriptionID_subscriptionIDType.eND_USER_NAI; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionID_subscriptionIDType_eND_USER_NAI: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_NAI = SubscriptionID_subscriptionIDType.eND_USER_NAI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_NAI
@@ -134,7 +134,7 @@ const SubscriptionID_subscriptionIDType_eND_USER_NAI = SubscriptionID_subscripti
  * @type {number}
  */
 export
-const eND_USER_NAI = SubscriptionID_subscriptionIDType.eND_USER_NAI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_NAI: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_NAI = SubscriptionID_subscriptionIDType.eND_USER_NAI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SubscriptionID_subscriptionIDType_eND_USER_PRIVATE
@@ -142,7 +142,7 @@ const eND_USER_NAI = SubscriptionID_subscriptionIDType.eND_USER_NAI; /* SHORT_NA
  * @type {number}
  */
 export
-const SubscriptionID_subscriptionIDType_eND_USER_PRIVATE = SubscriptionID_subscriptionIDType.eND_USER_PRIVATE; /* LONG_NAMED_ENUMERATED_VALUE */
+const SubscriptionID_subscriptionIDType_eND_USER_PRIVATE: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_PRIVATE = SubscriptionID_subscriptionIDType.eND_USER_PRIVATE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eND_USER_PRIVATE
@@ -150,7 +150,7 @@ const SubscriptionID_subscriptionIDType_eND_USER_PRIVATE = SubscriptionID_subscr
  * @type {number}
  */
 export
-const eND_USER_PRIVATE = SubscriptionID_subscriptionIDType.eND_USER_PRIVATE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eND_USER_PRIVATE: _enum_for_SubscriptionID_subscriptionIDType.eND_USER_PRIVATE = SubscriptionID_subscriptionIDType.eND_USER_PRIVATE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SubscriptionID_subscriptionIDType: $.ASN1Decoder<SubscriptionID_subscriptionIDType> = $._decodeEnumerated;

@@ -28,12 +28,12 @@ export type TspPriority = GraphicString; // GraphicString
 
 
 
-export const _decode_TspPriority = $._decodeGraphicString;
+export const _decode_TspPriority: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_TspPriority = $._encodeGraphicString;
+export const _encode_TspPriority: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

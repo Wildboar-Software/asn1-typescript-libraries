@@ -41,7 +41,7 @@ export type FamilyReturn_memberSelect =
  * @constant
  * @type {number}
  */
-export const FamilyReturn_memberSelect_contributingEntriesOnly = _enum_for_FamilyReturn_memberSelect.contributingEntriesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyReturn_memberSelect_contributingEntriesOnly: _enum_for_FamilyReturn_memberSelect.contributingEntriesOnly = _enum_for_FamilyReturn_memberSelect.contributingEntriesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contributingEntriesOnly
@@ -54,7 +54,7 @@ export const FamilyReturn_memberSelect_contributingEntriesOnly = _enum_for_Famil
  * @constant
  * @type {number}
  */
-export const contributingEntriesOnly = FamilyReturn_memberSelect_contributingEntriesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contributingEntriesOnly: _enum_for_FamilyReturn_memberSelect.contributingEntriesOnly = FamilyReturn_memberSelect_contributingEntriesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FamilyReturn_memberSelect_participatingEntriesOnly
@@ -66,7 +66,7 @@ export const contributingEntriesOnly = FamilyReturn_memberSelect_contributingEnt
  * @constant
  * @type {number}
  */
-export const FamilyReturn_memberSelect_participatingEntriesOnly = _enum_for_FamilyReturn_memberSelect.participatingEntriesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyReturn_memberSelect_participatingEntriesOnly: _enum_for_FamilyReturn_memberSelect.participatingEntriesOnly = _enum_for_FamilyReturn_memberSelect.participatingEntriesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary participatingEntriesOnly
@@ -78,7 +78,7 @@ export const FamilyReturn_memberSelect_participatingEntriesOnly = _enum_for_Fami
  * @constant
  * @type {number}
  */
-export const participatingEntriesOnly = FamilyReturn_memberSelect_participatingEntriesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const participatingEntriesOnly: _enum_for_FamilyReturn_memberSelect.participatingEntriesOnly = FamilyReturn_memberSelect_participatingEntriesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FamilyReturn_memberSelect_compoundEntry
@@ -90,7 +90,7 @@ export const participatingEntriesOnly = FamilyReturn_memberSelect_participatingE
  * @constant
  * @type {number}
  */
-export const FamilyReturn_memberSelect_compoundEntry = _enum_for_FamilyReturn_memberSelect.compoundEntry; /* LONG_NAMED_ENUMERATED_VALUE */
+export const FamilyReturn_memberSelect_compoundEntry: _enum_for_FamilyReturn_memberSelect.compoundEntry = _enum_for_FamilyReturn_memberSelect.compoundEntry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary compoundEntry
@@ -102,13 +102,13 @@ export const FamilyReturn_memberSelect_compoundEntry = _enum_for_FamilyReturn_me
  * @constant
  * @type {number}
  */
-export const compoundEntry = FamilyReturn_memberSelect_compoundEntry; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const compoundEntry: _enum_for_FamilyReturn_memberSelect.compoundEntry = FamilyReturn_memberSelect_compoundEntry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_FamilyReturn_memberSelect = $._decodeEnumerated;
+export const _decode_FamilyReturn_memberSelect: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_FamilyReturn_memberSelect = $._encodeEnumerated;
+export const _encode_FamilyReturn_memberSelect: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

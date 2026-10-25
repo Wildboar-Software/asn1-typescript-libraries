@@ -32,48 +32,48 @@ export type ImposedSubset = _enum_for_ImposedSubset | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ImposedSubset_baseObject = _enum_for_ImposedSubset.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ImposedSubset_baseObject: _enum_for_ImposedSubset.baseObject = _enum_for_ImposedSubset.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baseObject
  * @constant
  * @type {number}
  */
-export const baseObject = ImposedSubset_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const baseObject: _enum_for_ImposedSubset.baseObject = ImposedSubset_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImposedSubset_oneLevel
  * @constant
  * @type {number}
  */
-export const ImposedSubset_oneLevel = _enum_for_ImposedSubset.oneLevel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ImposedSubset_oneLevel: _enum_for_ImposedSubset.oneLevel = _enum_for_ImposedSubset.oneLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneLevel
  * @constant
  * @type {number}
  */
-export const oneLevel = ImposedSubset_oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const oneLevel: _enum_for_ImposedSubset.oneLevel = ImposedSubset_oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ImposedSubset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const ImposedSubset_wholeSubtree = _enum_for_ImposedSubset.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ImposedSubset_wholeSubtree: _enum_for_ImposedSubset.wholeSubtree = _enum_for_ImposedSubset.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree = ImposedSubset_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wholeSubtree: _enum_for_ImposedSubset.wholeSubtree = ImposedSubset_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ImposedSubset = $._decodeEnumerated;
+export const _decode_ImposedSubset: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_ImposedSubset = $._encodeEnumerated;
+export const _encode_ImposedSubset: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

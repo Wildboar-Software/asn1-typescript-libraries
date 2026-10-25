@@ -45,7 +45,7 @@ type ForwardDuStatus = INTEGER;
  * @type {number}
  */
 export
-const ForwardDuStatus_radiated = 0 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_radiated: 0 = 0 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_radiated
@@ -57,7 +57,7 @@ const ForwardDuStatus_radiated = 0 satisfies ForwardDuStatus; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const radiated = ForwardDuStatus_radiated; /* SHORT_NAMED_INTEGER_VALUE */
+const radiated: 0 = ForwardDuStatus_radiated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_expired
@@ -71,7 +71,7 @@ const radiated = ForwardDuStatus_radiated; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ForwardDuStatus_expired = 1 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_expired: 1 = 1 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_expired
@@ -83,7 +83,7 @@ const ForwardDuStatus_expired = 1 satisfies ForwardDuStatus; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const expired = ForwardDuStatus_expired; /* SHORT_NAMED_INTEGER_VALUE */
+const expired: 1 = ForwardDuStatus_expired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_interrupted
@@ -97,7 +97,7 @@ const expired = ForwardDuStatus_expired; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ForwardDuStatus_interrupted = 2 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_interrupted: 2 = 2 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_interrupted
@@ -109,7 +109,7 @@ const ForwardDuStatus_interrupted = 2 satisfies ForwardDuStatus; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const interrupted = ForwardDuStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted: 2 = ForwardDuStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_acknowledged
@@ -123,7 +123,7 @@ const interrupted = ForwardDuStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ForwardDuStatus_acknowledged = 3 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_acknowledged: 3 = 3 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_acknowledged
@@ -135,7 +135,7 @@ const ForwardDuStatus_acknowledged = 3 satisfies ForwardDuStatus; /* LONG_NAMED_
  * @type {number}
  */
 export
-const acknowledged = ForwardDuStatus_acknowledged; /* SHORT_NAMED_INTEGER_VALUE */
+const acknowledged: 3 = ForwardDuStatus_acknowledged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_productionStarted
@@ -149,7 +149,7 @@ const acknowledged = ForwardDuStatus_acknowledged; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const ForwardDuStatus_productionStarted = 4 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_productionStarted: 4 = 4 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_productionStarted
@@ -161,7 +161,7 @@ const ForwardDuStatus_productionStarted = 4 satisfies ForwardDuStatus; /* LONG_N
  * @type {number}
  */
 export
-const productionStarted = ForwardDuStatus_productionStarted; /* SHORT_NAMED_INTEGER_VALUE */
+const productionStarted: 4 = ForwardDuStatus_productionStarted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_productionNotStarted
@@ -175,7 +175,7 @@ const productionStarted = ForwardDuStatus_productionStarted; /* SHORT_NAMED_INTE
  * @type {number}
  */
 export
-const ForwardDuStatus_productionNotStarted = 5 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_productionNotStarted: 5 = 5 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_productionNotStarted
@@ -187,7 +187,7 @@ const ForwardDuStatus_productionNotStarted = 5 satisfies ForwardDuStatus; /* LON
  * @type {number}
  */
 export
-const productionNotStarted = ForwardDuStatus_productionNotStarted; /* SHORT_NAMED_INTEGER_VALUE */
+const productionNotStarted: 5 = ForwardDuStatus_productionNotStarted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_unsupportedTransmissionMode
@@ -201,7 +201,7 @@ const productionNotStarted = ForwardDuStatus_productionNotStarted; /* SHORT_NAME
  * @type {number}
  */
 export
-const ForwardDuStatus_unsupportedTransmissionMode = 6 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
+const ForwardDuStatus_unsupportedTransmissionMode: 6 = 6 satisfies ForwardDuStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ForwardDuStatus_unsupportedTransmissionMode
@@ -213,7 +213,7 @@ const ForwardDuStatus_unsupportedTransmissionMode = 6 satisfies ForwardDuStatus;
  * @type {number}
  */
 export
-const unsupportedTransmissionMode = ForwardDuStatus_unsupportedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
+const unsupportedTransmissionMode: 6 = ForwardDuStatus_unsupportedTransmissionMode; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ForwardDuStatus: $.ASN1Decoder<ForwardDuStatus> = $._decodeInteger;
 export const _encode_ForwardDuStatus: $.ASN1Encoder<ForwardDuStatus> = $._encodeInteger;
 

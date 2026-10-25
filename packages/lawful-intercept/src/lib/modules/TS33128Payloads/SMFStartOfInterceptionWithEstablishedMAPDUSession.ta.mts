@@ -602,13 +602,13 @@ class SMFStartOfInterceptionWithEstablishedMAPDUSession {
          * @static
          */
 
-    public static _enum_for_pDUSessionType = _enum_for_PDUSessionType;        /**
+    public static _enum_for_pDUSessionType: typeof _enum_for_PDUSessionType = _enum_for_PDUSessionType;        /**
          * @summary The enum used as the type of the component `requestType`
          * @public
          * @static
          */
 
-    public static _enum_for_requestType = _enum_for_FiveGSMRequestType;
+    public static _enum_for_requestType: typeof _enum_for_FiveGSMRequestType = _enum_for_FiveGSMRequestType;
 }
 
 /**

@@ -47,7 +47,7 @@ export const _decode_Ext_NoRepCondTime = (el: _Element): Ext_NoRepCondTime => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Ext_NoRepCondTime, encoded as an ASN.1 Element.
  */
-export const _encode_Ext_NoRepCondTime = $._encodeInteger;
+export const _encode_Ext_NoRepCondTime: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

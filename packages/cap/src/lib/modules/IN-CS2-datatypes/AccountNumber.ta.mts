@@ -34,7 +34,7 @@ export const _decode_AccountNumber = (el: _Element): AccountNumber => {
     }
     return value;
 };
-export const _encode_AccountNumber = $._encodeNumericString;
+export const _encode_AccountNumber: $.ASN1Encoder<string> = $._encodeNumericString;
 
 
 /* eslint-enable */

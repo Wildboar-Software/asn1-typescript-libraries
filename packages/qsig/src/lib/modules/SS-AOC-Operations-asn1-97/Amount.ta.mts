@@ -82,7 +82,7 @@ class Amount {
          * @static
          */
 
-    public static _enum_for_multiplier = _enum_for_Multiplier;
+    public static _enum_for_multiplier: typeof _enum_for_Multiplier = _enum_for_Multiplier;
 }
 
 /**

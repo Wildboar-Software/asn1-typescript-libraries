@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ExecutionResultType = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_ExecutionResultType = $._decodeObjectIdentifier;
+export const _decode_ExecutionResultType: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_ExecutionResultType = $._encodeObjectIdentifier;
+export const _encode_ExecutionResultType: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

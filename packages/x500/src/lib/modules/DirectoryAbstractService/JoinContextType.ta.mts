@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element as _Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary JoinContextType
@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type JoinContextType = OBJECT_IDENTIFIER; // ObjectClassFieldType
 
 
-export const _decode_JoinContextType = $._decodeObjectIdentifier;
+export const _decode_JoinContextType: $.ASN1Decoder<ObjectIdentifier> = $._decodeObjectIdentifier;
 
 
-export const _encode_JoinContextType = $._encodeObjectIdentifier;
+export const _encode_JoinContextType: $.ASN1Encoder<ObjectIdentifier> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

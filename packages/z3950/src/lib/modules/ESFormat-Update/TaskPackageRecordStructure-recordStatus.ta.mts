@@ -47,7 +47,7 @@ type TaskPackageRecordStructure_recordStatus = INTEGER;
  * @type {number}
  */
 export
-const TaskPackageRecordStructure_recordStatus_success = 1 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackageRecordStructure_recordStatus_success: 1 = 1 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_success
@@ -59,7 +59,7 @@ const TaskPackageRecordStructure_recordStatus_success = 1 satisfies TaskPackageR
  * @type {number}
  */
 export
-const success = TaskPackageRecordStructure_recordStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success: 1 = TaskPackageRecordStructure_recordStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_queued
@@ -75,7 +75,7 @@ const success = TaskPackageRecordStructure_recordStatus_success; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const TaskPackageRecordStructure_recordStatus_queued = 2 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackageRecordStructure_recordStatus_queued: 2 = 2 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_queued
@@ -87,7 +87,7 @@ const TaskPackageRecordStructure_recordStatus_queued = 2 satisfies TaskPackageRe
  * @type {number}
  */
 export
-const queued = TaskPackageRecordStructure_recordStatus_queued; /* SHORT_NAMED_INTEGER_VALUE */
+const queued: 2 = TaskPackageRecordStructure_recordStatus_queued; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_inProcess
@@ -103,7 +103,7 @@ const queued = TaskPackageRecordStructure_recordStatus_queued; /* SHORT_NAMED_IN
  * @type {number}
  */
 export
-const TaskPackageRecordStructure_recordStatus_inProcess = 3 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackageRecordStructure_recordStatus_inProcess: 3 = 3 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_inProcess
@@ -115,7 +115,7 @@ const TaskPackageRecordStructure_recordStatus_inProcess = 3 satisfies TaskPackag
  * @type {number}
  */
 export
-const inProcess = TaskPackageRecordStructure_recordStatus_inProcess; /* SHORT_NAMED_INTEGER_VALUE */
+const inProcess: 3 = TaskPackageRecordStructure_recordStatus_inProcess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_failure
@@ -130,7 +130,7 @@ const inProcess = TaskPackageRecordStructure_recordStatus_inProcess; /* SHORT_NA
  * @type {number}
  */
 export
-const TaskPackageRecordStructure_recordStatus_failure = 4 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackageRecordStructure_recordStatus_failure: 4 = 4 satisfies TaskPackageRecordStructure_recordStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackageRecordStructure_recordStatus_failure
@@ -142,7 +142,7 @@ const TaskPackageRecordStructure_recordStatus_failure = 4 satisfies TaskPackageR
  * @type {number}
  */
 export
-const failure = TaskPackageRecordStructure_recordStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
+const failure: 4 = TaskPackageRecordStructure_recordStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TaskPackageRecordStructure_recordStatus: $.ASN1Decoder<TaskPackageRecordStructure_recordStatus> = $._decodeInteger;
 export const _encode_TaskPackageRecordStructure_recordStatus: $.ASN1Encoder<TaskPackageRecordStructure_recordStatus> = $._encodeInteger;
 

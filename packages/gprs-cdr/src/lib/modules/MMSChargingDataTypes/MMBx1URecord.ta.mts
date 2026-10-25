@@ -549,13 +549,13 @@ class MMBx1URecord {
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_MessageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_MessageClass = _enum_for_MessageClass;        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_PriorityType;
+    public static _enum_for_priority: typeof _enum_for_PriorityType = _enum_for_PriorityType;
 }
 
 /**

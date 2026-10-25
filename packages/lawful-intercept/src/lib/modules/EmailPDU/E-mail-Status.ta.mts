@@ -129,7 +129,7 @@ type E_mail_Status = _enum_for_E_mail_Status;
  * @enum {number}
  */
 export
-const E_mail_Status = _enum_for_E_mail_Status;
+const E_mail_Status: typeof _enum_for_E_mail_Status = _enum_for_E_mail_Status;
 
 /**
  * @summary E_mail_Status_status_unknown
@@ -144,7 +144,7 @@ const E_mail_Status = _enum_for_E_mail_Status;
  * @type {number}
  */
 export
-const E_mail_Status_status_unknown = E_mail_Status.status_unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Status_status_unknown: _enum_for_E_mail_Status.status_unknown = E_mail_Status.status_unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary status_unknown
@@ -159,7 +159,7 @@ const E_mail_Status_status_unknown = E_mail_Status.status_unknown; /* LONG_NAMED
  * @type {number}
  */
 export
-const status_unknown = E_mail_Status.status_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const status_unknown: _enum_for_E_mail_Status.status_unknown = E_mail_Status.status_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Status_operation_failed
@@ -174,7 +174,7 @@ const status_unknown = E_mail_Status.status_unknown; /* SHORT_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const E_mail_Status_operation_failed = E_mail_Status.operation_failed; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Status_operation_failed: _enum_for_E_mail_Status.operation_failed = E_mail_Status.operation_failed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_failed
@@ -189,7 +189,7 @@ const E_mail_Status_operation_failed = E_mail_Status.operation_failed; /* LONG_N
  * @type {number}
  */
 export
-const operation_failed = E_mail_Status.operation_failed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_failed: _enum_for_E_mail_Status.operation_failed = E_mail_Status.operation_failed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Status_operation_succeeded
@@ -204,7 +204,7 @@ const operation_failed = E_mail_Status.operation_failed; /* SHORT_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const E_mail_Status_operation_succeeded = E_mail_Status.operation_succeeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Status_operation_succeeded: _enum_for_E_mail_Status.operation_succeeded = E_mail_Status.operation_succeeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_succeeded
@@ -219,7 +219,7 @@ const E_mail_Status_operation_succeeded = E_mail_Status.operation_succeeded; /* 
  * @type {number}
  */
 export
-const operation_succeeded = E_mail_Status.operation_succeeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_succeeded: _enum_for_E_mail_Status.operation_succeeded = E_mail_Status.operation_succeeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_E_mail_Status: $.ASN1Decoder<E_mail_Status> = $._decodeEnumerated;
 export const _encode_E_mail_Status: $.ASN1Encoder<E_mail_Status> = $._encodeEnumerated;
 

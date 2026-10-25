@@ -79,7 +79,7 @@ type CollectionType = _enum_for_CollectionType;
  * @enum {number}
  */
 export
-const CollectionType = _enum_for_CollectionType;
+const CollectionType: typeof _enum_for_CollectionType = _enum_for_CollectionType;
 
 /**
  * @summary CollectionType_periodic
@@ -91,7 +91,7 @@ const CollectionType = _enum_for_CollectionType;
  * @type {number}
  */
 export
-const CollectionType_periodic = CollectionType.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
+const CollectionType_periodic: _enum_for_CollectionType.periodic = CollectionType.periodic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodic
@@ -103,7 +103,7 @@ const CollectionType_periodic = CollectionType.periodic; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const periodic = CollectionType.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodic: _enum_for_CollectionType.periodic = CollectionType.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CollectionType_periodicWithUpdates
@@ -115,7 +115,7 @@ const periodic = CollectionType.periodic; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CollectionType_periodicWithUpdates = CollectionType.periodicWithUpdates; /* LONG_NAMED_ENUMERATED_VALUE */
+const CollectionType_periodicWithUpdates: _enum_for_CollectionType.periodicWithUpdates = CollectionType.periodicWithUpdates; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodicWithUpdates
@@ -128,7 +128,7 @@ const CollectionType_periodicWithUpdates = CollectionType.periodicWithUpdates; /
  * @type {number}
  */
 export
-const periodicWithUpdates = CollectionType.periodicWithUpdates; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodicWithUpdates: _enum_for_CollectionType.periodicWithUpdates = CollectionType.periodicWithUpdates; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CollectionType_updatesOnly
@@ -140,7 +140,7 @@ const periodicWithUpdates = CollectionType.periodicWithUpdates; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const CollectionType_updatesOnly = CollectionType.updatesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const CollectionType_updatesOnly: _enum_for_CollectionType.updatesOnly = CollectionType.updatesOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updatesOnly
@@ -153,7 +153,7 @@ const CollectionType_updatesOnly = CollectionType.updatesOnly; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const updatesOnly = CollectionType.updatesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updatesOnly: _enum_for_CollectionType.updatesOnly = CollectionType.updatesOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CollectionType: $.ASN1Decoder<CollectionType> | null = null;
 

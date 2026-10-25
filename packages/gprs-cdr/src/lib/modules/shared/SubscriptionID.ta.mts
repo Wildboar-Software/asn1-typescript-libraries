@@ -72,7 +72,7 @@ class SubscriptionID {
          * @static
          */
 
-    public static _enum_for_subscriptionIDType = _enum_for_SubscriptionID_subscriptionIDType;
+    public static _enum_for_subscriptionIDType: typeof _enum_for_SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionIDType;
 }
 
 /**

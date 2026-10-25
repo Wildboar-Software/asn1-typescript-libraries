@@ -110,7 +110,7 @@ type Content_Report_initiator = _enum_for_Content_Report_initiator | ENUMERATED;
  * @type {number}
  */
 export
-const Content_Report_initiator_originating_party = _enum_for_Content_Report_initiator.originating_party; /* LONG_NAMED_ENUMERATED_VALUE */
+const Content_Report_initiator_originating_party: _enum_for_Content_Report_initiator.originating_party = _enum_for_Content_Report_initiator.originating_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating_party
@@ -126,7 +126,7 @@ const Content_Report_initiator_originating_party = _enum_for_Content_Report_init
  * @type {number}
  */
 export
-const originating_party = Content_Report_initiator_originating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating_party: _enum_for_Content_Report_initiator.originating_party = Content_Report_initiator_originating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Content_Report_initiator_terminating_party
@@ -142,7 +142,7 @@ const originating_party = Content_Report_initiator_originating_party; /* SHORT_N
  * @type {number}
  */
 export
-const Content_Report_initiator_terminating_party = _enum_for_Content_Report_initiator.terminating_party; /* LONG_NAMED_ENUMERATED_VALUE */
+const Content_Report_initiator_terminating_party: _enum_for_Content_Report_initiator.terminating_party = _enum_for_Content_Report_initiator.terminating_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating_party
@@ -158,7 +158,7 @@ const Content_Report_initiator_terminating_party = _enum_for_Content_Report_init
  * @type {number}
  */
 export
-const terminating_party = Content_Report_initiator_terminating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating_party: _enum_for_Content_Report_initiator.terminating_party = Content_Report_initiator_terminating_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Content_Report_initiator_forwarded_to_party
@@ -174,7 +174,7 @@ const terminating_party = Content_Report_initiator_terminating_party; /* SHORT_N
  * @type {number}
  */
 export
-const Content_Report_initiator_forwarded_to_party = _enum_for_Content_Report_initiator.forwarded_to_party; /* LONG_NAMED_ENUMERATED_VALUE */
+const Content_Report_initiator_forwarded_to_party: _enum_for_Content_Report_initiator.forwarded_to_party = _enum_for_Content_Report_initiator.forwarded_to_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded_to_party
@@ -190,7 +190,7 @@ const Content_Report_initiator_forwarded_to_party = _enum_for_Content_Report_ini
  * @type {number}
  */
 export
-const forwarded_to_party = Content_Report_initiator_forwarded_to_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded_to_party: _enum_for_Content_Report_initiator.forwarded_to_party = Content_Report_initiator_forwarded_to_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Content_Report_initiator_undefined_party
@@ -206,7 +206,7 @@ const forwarded_to_party = Content_Report_initiator_forwarded_to_party; /* SHORT
  * @type {number}
  */
 export
-const Content_Report_initiator_undefined_party = _enum_for_Content_Report_initiator.undefined_party; /* LONG_NAMED_ENUMERATED_VALUE */
+const Content_Report_initiator_undefined_party: _enum_for_Content_Report_initiator.undefined_party = _enum_for_Content_Report_initiator.undefined_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined_party
@@ -222,7 +222,7 @@ const Content_Report_initiator_undefined_party = _enum_for_Content_Report_initia
  * @type {number}
  */
 export
-const undefined_party = Content_Report_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined_party: _enum_for_Content_Report_initiator.undefined_party = Content_Report_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Content_Report_initiator: $.ASN1Decoder<Content_Report_initiator> = $._decodeEnumerated;
 export const _encode_Content_Report_initiator: $.ASN1Encoder<Content_Report_initiator> = $._encodeEnumerated;
 

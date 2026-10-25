@@ -76,7 +76,7 @@ class cancelFailed_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_cancelFailed_ParameterType_problem;
+    public static _enum_for_problem: typeof _enum_for_cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_problem;
 }
 
 /**

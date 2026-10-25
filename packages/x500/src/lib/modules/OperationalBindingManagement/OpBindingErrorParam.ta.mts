@@ -196,7 +196,7 @@ export class OpBindingErrorParam implements CommonResultsSeq {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_OpBindingErrorParam_problem;
+    public static _enum_for_problem: typeof _enum_for_OpBindingErrorParam_problem = _enum_for_OpBindingErrorParam_problem;
 }
 
 /**

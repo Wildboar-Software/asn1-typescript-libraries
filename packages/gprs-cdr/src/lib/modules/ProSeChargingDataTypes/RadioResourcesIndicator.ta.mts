@@ -40,7 +40,7 @@ type RadioResourcesIndicator = INTEGER;
  * @type {number}
  */
 export
-const RadioResourcesIndicator_operatorProvided = 1 satisfies RadioResourcesIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const RadioResourcesIndicator_operatorProvided: 1 = 1 satisfies RadioResourcesIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RadioResourcesIndicator_operatorProvided
@@ -55,7 +55,7 @@ const RadioResourcesIndicator_operatorProvided = 1 satisfies RadioResourcesIndic
  * @type {number}
  */
 export
-const operatorProvided = RadioResourcesIndicator_operatorProvided; /* SHORT_NAMED_INTEGER_VALUE */
+const operatorProvided: 1 = RadioResourcesIndicator_operatorProvided; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RadioResourcesIndicator_configured
@@ -69,7 +69,7 @@ const operatorProvided = RadioResourcesIndicator_operatorProvided; /* SHORT_NAME
  * @type {number}
  */
 export
-const RadioResourcesIndicator_configured = 2 satisfies RadioResourcesIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const RadioResourcesIndicator_configured: 2 = 2 satisfies RadioResourcesIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RadioResourcesIndicator_configured
@@ -83,7 +83,7 @@ const RadioResourcesIndicator_configured = 2 satisfies RadioResourcesIndicator; 
  * @type {number}
  */
 export
-const configured = RadioResourcesIndicator_configured; /* SHORT_NAMED_INTEGER_VALUE */
+const configured: 2 = RadioResourcesIndicator_configured; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RadioResourcesIndicator: $.ASN1Decoder<RadioResourcesIndicator> = $._decodeInteger;

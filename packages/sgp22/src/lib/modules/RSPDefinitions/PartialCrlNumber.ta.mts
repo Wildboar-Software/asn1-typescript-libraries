@@ -22,8 +22,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type PartialCrlNumber = INTEGER;
-export const _decode_PartialCrlNumber = $._decodeInteger;
-export const _encode_PartialCrlNumber = $._encodeInteger;
+export const _decode_PartialCrlNumber: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_PartialCrlNumber: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

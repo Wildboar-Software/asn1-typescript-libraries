@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ScfAddress = OCTET_STRING; // OctetStringType
-export const _decode_ScfAddress = $._decodeOctetString;
-export const _encode_ScfAddress = $._encodeOctetString;
+export const _decode_ScfAddress: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_ScfAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

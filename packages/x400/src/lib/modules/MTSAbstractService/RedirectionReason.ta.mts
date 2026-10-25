@@ -47,76 +47,76 @@ export type RedirectionReason = _enum_for_RedirectionReason | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const RedirectionReason_recipient_assigned_alternate_recipient = _enum_for_RedirectionReason.recipient_assigned_alternate_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RedirectionReason_recipient_assigned_alternate_recipient: _enum_for_RedirectionReason.recipient_assigned_alternate_recipient = _enum_for_RedirectionReason.recipient_assigned_alternate_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recipient_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
-export const recipient_assigned_alternate_recipient = RedirectionReason_recipient_assigned_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const recipient_assigned_alternate_recipient: _enum_for_RedirectionReason.recipient_assigned_alternate_recipient = RedirectionReason_recipient_assigned_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RedirectionReason_originator_requested_alternate_recipient
  * @constant
  * @type {number}
  */
-export const RedirectionReason_originator_requested_alternate_recipient = _enum_for_RedirectionReason.originator_requested_alternate_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RedirectionReason_originator_requested_alternate_recipient: _enum_for_RedirectionReason.originator_requested_alternate_recipient = _enum_for_RedirectionReason.originator_requested_alternate_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originator_requested_alternate_recipient
  * @constant
  * @type {number}
  */
-export const originator_requested_alternate_recipient = RedirectionReason_originator_requested_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const originator_requested_alternate_recipient: _enum_for_RedirectionReason.originator_requested_alternate_recipient = RedirectionReason_originator_requested_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RedirectionReason_recipient_MD_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
-export const RedirectionReason_recipient_MD_assigned_alternate_recipient = _enum_for_RedirectionReason.recipient_MD_assigned_alternate_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RedirectionReason_recipient_MD_assigned_alternate_recipient: _enum_for_RedirectionReason.recipient_MD_assigned_alternate_recipient = _enum_for_RedirectionReason.recipient_MD_assigned_alternate_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recipient_MD_assigned_alternate_recipient
  * @constant
  * @type {number}
  */
-export const recipient_MD_assigned_alternate_recipient = RedirectionReason_recipient_MD_assigned_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const recipient_MD_assigned_alternate_recipient: _enum_for_RedirectionReason.recipient_MD_assigned_alternate_recipient = RedirectionReason_recipient_MD_assigned_alternate_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RedirectionReason_directory_look_up
  * @constant
  * @type {number}
  */
-export const RedirectionReason_directory_look_up = _enum_for_RedirectionReason.directory_look_up; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RedirectionReason_directory_look_up: _enum_for_RedirectionReason.directory_look_up = _enum_for_RedirectionReason.directory_look_up; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary directory_look_up
  * @constant
  * @type {number}
  */
-export const directory_look_up = RedirectionReason_directory_look_up; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const directory_look_up: _enum_for_RedirectionReason.directory_look_up = RedirectionReason_directory_look_up; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RedirectionReason_alias
  * @constant
  * @type {number}
  */
-export const RedirectionReason_alias = _enum_for_RedirectionReason.alias; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RedirectionReason_alias: _enum_for_RedirectionReason.alias = _enum_for_RedirectionReason.alias; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alias
  * @constant
  * @type {number}
  */
-export const alias = RedirectionReason_alias; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alias: _enum_for_RedirectionReason.alias = RedirectionReason_alias; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_RedirectionReason = $._decodeEnumerated;
+export const _decode_RedirectionReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_RedirectionReason = $._encodeEnumerated;
+export const _encode_RedirectionReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

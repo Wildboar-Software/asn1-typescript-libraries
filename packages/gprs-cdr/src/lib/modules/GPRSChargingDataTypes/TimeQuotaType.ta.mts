@@ -70,7 +70,7 @@ type TimeQuotaType = _enum_for_TimeQuotaType;
  * @enum {number}
  */
 export
-const TimeQuotaType = _enum_for_TimeQuotaType;
+const TimeQuotaType: typeof _enum_for_TimeQuotaType = _enum_for_TimeQuotaType;
 
 /**
  * @summary TimeQuotaType_dISCRETETIMEPERIOD
@@ -78,7 +78,7 @@ const TimeQuotaType = _enum_for_TimeQuotaType;
  * @type {number}
  */
 export
-const TimeQuotaType_dISCRETETIMEPERIOD = TimeQuotaType.dISCRETETIMEPERIOD; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimeQuotaType_dISCRETETIMEPERIOD: _enum_for_TimeQuotaType.dISCRETETIMEPERIOD = TimeQuotaType.dISCRETETIMEPERIOD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dISCRETETIMEPERIOD
@@ -86,7 +86,7 @@ const TimeQuotaType_dISCRETETIMEPERIOD = TimeQuotaType.dISCRETETIMEPERIOD; /* LO
  * @type {number}
  */
 export
-const dISCRETETIMEPERIOD = TimeQuotaType.dISCRETETIMEPERIOD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dISCRETETIMEPERIOD: _enum_for_TimeQuotaType.dISCRETETIMEPERIOD = TimeQuotaType.dISCRETETIMEPERIOD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TimeQuotaType_cONTINUOUSTIMEPERIOD
@@ -94,7 +94,7 @@ const dISCRETETIMEPERIOD = TimeQuotaType.dISCRETETIMEPERIOD; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const TimeQuotaType_cONTINUOUSTIMEPERIOD = TimeQuotaType.cONTINUOUSTIMEPERIOD; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimeQuotaType_cONTINUOUSTIMEPERIOD: _enum_for_TimeQuotaType.cONTINUOUSTIMEPERIOD = TimeQuotaType.cONTINUOUSTIMEPERIOD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cONTINUOUSTIMEPERIOD
@@ -102,7 +102,7 @@ const TimeQuotaType_cONTINUOUSTIMEPERIOD = TimeQuotaType.cONTINUOUSTIMEPERIOD; /
  * @type {number}
  */
 export
-const cONTINUOUSTIMEPERIOD = TimeQuotaType.cONTINUOUSTIMEPERIOD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cONTINUOUSTIMEPERIOD: _enum_for_TimeQuotaType.cONTINUOUSTIMEPERIOD = TimeQuotaType.cONTINUOUSTIMEPERIOD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TimeQuotaType: $.ASN1Decoder<TimeQuotaType> = $._decodeEnumerated;

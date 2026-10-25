@@ -19,8 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type GmidData = OCTET_STRING; // OctetStringType
-export const _decode_GmidData = $._decodeOctetString;
-export const _encode_GmidData = $._encodeOctetString;
+export const _decode_GmidData: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_GmidData: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

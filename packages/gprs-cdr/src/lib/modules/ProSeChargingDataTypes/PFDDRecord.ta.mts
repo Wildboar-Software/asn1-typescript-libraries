@@ -688,31 +688,31 @@ class PFDDRecord {
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `roleofUE`
          * @public
          * @static
          */
 
-    public static _enum_for_roleofUE = _enum_for_ProSeUERole;        /**
+    public static _enum_for_roleofUE: typeof _enum_for_ProSeUERole = _enum_for_ProSeUERole;        /**
          * @summary The enum used as the type of the component `roleofProSeFunction`
          * @public
          * @static
          */
 
-    public static _enum_for_roleofProSeFunction = _enum_for_ProSeFunctionRole;        /**
+    public static _enum_for_roleofProSeFunction: typeof _enum_for_ProSeFunctionRole = _enum_for_ProSeFunctionRole;        /**
          * @summary The enum used as the type of the component `proSeEventType`
          * @public
          * @static
          */
 
-    public static _enum_for_proSeEventType = _enum_for_ProSeEventType;        /**
+    public static _enum_for_proSeEventType: typeof _enum_for_ProSeEventType = _enum_for_ProSeEventType;        /**
          * @summary The enum used as the type of the component `pc5RadioTechnology`
          * @public
          * @static
          */
 
-    public static _enum_for_pc5RadioTechnology = _enum_for_PC5RadioTechnology;
+    public static _enum_for_pc5RadioTechnology: typeof _enum_for_PC5RadioTechnology = _enum_for_PC5RadioTechnology;
 }
 
 /**

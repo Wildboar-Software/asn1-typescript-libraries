@@ -28,12 +28,12 @@ export type CalledNumber = GraphicString; // GraphicString
 
 
 
-export const _decode_CalledNumber = $._decodeGraphicString;
+export const _decode_CalledNumber: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CalledNumber = $._encodeGraphicString;
+export const _encode_CalledNumber: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

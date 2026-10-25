@@ -35,48 +35,48 @@ export type Release_request_reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const Release_request_reason_normal = 0 satisfies Release_request_reason; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_request_reason_normal: 0 = 0 satisfies Release_request_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_request_reason_normal
  * @constant
  * @type {number}
  */
-export const normal = Release_request_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal: 0 = Release_request_reason_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_request_reason_urgent
  * @constant
  * @type {number}
  */
-export const Release_request_reason_urgent = 1 satisfies Release_request_reason; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_request_reason_urgent: 1 = 1 satisfies Release_request_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_request_reason_urgent
  * @constant
  * @type {number}
  */
-export const urgent = Release_request_reason_urgent; /* SHORT_NAMED_INTEGER_VALUE */
+export const urgent: 1 = Release_request_reason_urgent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_request_reason_user_defined
  * @constant
  * @type {number}
  */
-export const Release_request_reason_user_defined = 30 satisfies Release_request_reason; /* LONG_NAMED_INTEGER_VALUE */
+export const Release_request_reason_user_defined: 30 = 30 satisfies Release_request_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Release_request_reason_user_defined
  * @constant
  * @type {number}
  */
-export const user_defined = Release_request_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_defined: 30 = Release_request_reason_user_defined; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Release_request_reason = $._decodeInteger;
+export const _decode_Release_request_reason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Release_request_reason = $._encodeInteger;
+export const _encode_Release_request_reason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

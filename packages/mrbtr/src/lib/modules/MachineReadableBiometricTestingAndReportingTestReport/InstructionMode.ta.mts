@@ -88,7 +88,7 @@ type InstructionMode = _enum_for_InstructionMode;
  * @enum {number}
  */
 export
-const InstructionMode = _enum_for_InstructionMode;
+const InstructionMode: typeof _enum_for_InstructionMode = _enum_for_InstructionMode;
 
 /**
  * @summary InstructionMode_written_manual
@@ -96,7 +96,7 @@ const InstructionMode = _enum_for_InstructionMode;
  * @type {number}
  */
 export
-const InstructionMode_written_manual = InstructionMode.written_manual; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_written_manual: _enum_for_InstructionMode.written_manual = InstructionMode.written_manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary written_manual
@@ -104,7 +104,7 @@ const InstructionMode_written_manual = InstructionMode.written_manual; /* LONG_N
  * @type {number}
  */
 export
-const written_manual = InstructionMode.written_manual; /* SHORT_NAMED_ENUMERATED_VALUE */
+const written_manual: _enum_for_InstructionMode.written_manual = InstructionMode.written_manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InstructionMode_poster
@@ -112,7 +112,7 @@ const written_manual = InstructionMode.written_manual; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const InstructionMode_poster = InstructionMode.poster; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_poster: _enum_for_InstructionMode.poster = InstructionMode.poster; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary poster
@@ -120,7 +120,7 @@ const InstructionMode_poster = InstructionMode.poster; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const poster = InstructionMode.poster; /* SHORT_NAMED_ENUMERATED_VALUE */
+const poster: _enum_for_InstructionMode.poster = InstructionMode.poster; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InstructionMode_video
@@ -133,7 +133,7 @@ const poster = InstructionMode.poster; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const InstructionMode_video = InstructionMode.video; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_video: _enum_for_InstructionMode.video = InstructionMode.video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video
@@ -141,7 +141,7 @@ const InstructionMode_video = InstructionMode.video; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const video = InstructionMode.video; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video: _enum_for_InstructionMode.video = InstructionMode.video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InstructionMode_personal
@@ -149,7 +149,7 @@ const video = InstructionMode.video; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const InstructionMode_personal = InstructionMode.personal; /* LONG_NAMED_ENUMERATED_VALUE */
+const InstructionMode_personal: _enum_for_InstructionMode.personal = InstructionMode.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -157,7 +157,7 @@ const InstructionMode_personal = InstructionMode.personal; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const personal = InstructionMode.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal: _enum_for_InstructionMode.personal = InstructionMode.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -166,7 +166,7 @@ const personal = InstructionMode.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_InstructionMode = $._decodeEnumerated;
+export const _decode_InstructionMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -176,7 +176,7 @@ export const _decode_InstructionMode = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InstructionMode, encoded as an ASN.1 Element.
  */
-export const _encode_InstructionMode = $._encodeEnumerated;
+export const _encode_InstructionMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

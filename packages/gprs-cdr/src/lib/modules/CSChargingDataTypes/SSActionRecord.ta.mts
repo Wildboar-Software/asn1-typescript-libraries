@@ -418,13 +418,13 @@ class SSActionRecord {
          * @static
          */
 
-    public static _enum_for_ssAction = _enum_for_SSActionType;        /**
+    public static _enum_for_ssAction: typeof _enum_for_SSActionType = _enum_for_SSActionType;        /**
          * @summary The enum used as the type of the component `systemType`
          * @public
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;
 }
 
 /**

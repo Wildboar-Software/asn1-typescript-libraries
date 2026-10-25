@@ -112,7 +112,7 @@ class AccessNetworkSignalInfo {
          * @static
          */
 
-    public static _enum_for_accessNetworkProtocolId = _enum_for_AccessNetworkProtocolId;
+    public static _enum_for_accessNetworkProtocolId: typeof _enum_for_AccessNetworkProtocolId = _enum_for_AccessNetworkProtocolId;
 }
 
 /**

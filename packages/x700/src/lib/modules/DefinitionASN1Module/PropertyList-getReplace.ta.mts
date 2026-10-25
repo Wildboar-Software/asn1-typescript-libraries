@@ -64,7 +64,7 @@ export type PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  *
  * @enum {number}
  */
-export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
+export const PropertyList_getReplace: typeof _enum_for_PropertyList_getReplace = _enum_for_PropertyList_getReplace;
 
 
 /**
@@ -75,7 +75,7 @@ export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET =
+export const PropertyList_getReplace_gET: _enum_for_PropertyList_getReplace.gET =
     PropertyList_getReplace.gET; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const PropertyList_getReplace_gET =
  * @constant
  * @type {number}
  */
-export const gET =
+export const gET: _enum_for_PropertyList_getReplace.gET =
     PropertyList_getReplace.gET; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const gET =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_rEPLACE =
+export const PropertyList_getReplace_rEPLACE: _enum_for_PropertyList_getReplace.rEPLACE =
     PropertyList_getReplace.rEPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const PropertyList_getReplace_rEPLACE =
  * @constant
  * @type {number}
  */
-export const rEPLACE =
+export const rEPLACE: _enum_for_PropertyList_getReplace.rEPLACE =
     PropertyList_getReplace.rEPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const rEPLACE =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET_REPLACE =
+export const PropertyList_getReplace_gET_REPLACE: _enum_for_PropertyList_getReplace.gET_REPLACE =
     PropertyList_getReplace.gET_REPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const PropertyList_getReplace_gET_REPLACE =
  * @constant
  * @type {number}
  */
-export const gET_REPLACE =
+export const gET_REPLACE: _enum_for_PropertyList_getReplace.gET_REPLACE =
     PropertyList_getReplace.gET_REPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -88,13 +88,13 @@ class DataType {
          * @static
          */
 
-    public static _enum_for_processedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_processedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
          * @summary The enum used as the type of the component `purpose`
          * @public
          * @static
          */
 
-    public static _enum_for_purpose = _enum_for_Purpose;
+    public static _enum_for_purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 }
 
 /**

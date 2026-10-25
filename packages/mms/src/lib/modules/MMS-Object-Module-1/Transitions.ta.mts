@@ -196,8 +196,8 @@ const Transitions_any_to_deleted: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const any_to_deleted: number = Transitions_any_to_deleted; /* SHORT_NAMED_BIT */
-export const _decode_Transitions = $._decodeBitString;
-export const _encode_Transitions = $._encodeBitString;
+export const _decode_Transitions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_Transitions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

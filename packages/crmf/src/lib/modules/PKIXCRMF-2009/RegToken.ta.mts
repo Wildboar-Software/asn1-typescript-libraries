@@ -22,12 +22,12 @@ export type RegToken = UTF8String; // UTF8String
 
 
 
-export const _decode_RegToken = $._decodeUTF8String;
+export const _decode_RegToken: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_RegToken = $._encodeUTF8String;
+export const _encode_RegToken: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

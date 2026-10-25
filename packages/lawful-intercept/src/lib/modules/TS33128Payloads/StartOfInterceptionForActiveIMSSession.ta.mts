@@ -225,7 +225,7 @@ class StartOfInterceptionForActiveIMSSession {
          * @static
          */
 
-    public static _enum_for_voIPRoamingIndication = _enum_for_VoIPRoamingIndication;
+    public static _enum_for_voIPRoamingIndication: typeof _enum_for_VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;
 }
 
 /**

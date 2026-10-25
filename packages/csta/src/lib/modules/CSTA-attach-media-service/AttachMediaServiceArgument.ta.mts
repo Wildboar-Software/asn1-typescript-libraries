@@ -165,13 +165,13 @@ class AttachMediaServiceArgument {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;        /**
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;        /**
          * @summary The enum used as the type of the component `connectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_connectionMode = _enum_for_ConnectionMode;
+    public static _enum_for_connectionMode: typeof _enum_for_ConnectionMode = _enum_for_ConnectionMode;
 }
 
 /**

@@ -148,7 +148,7 @@ class MCDataFileUpload {
          * @static
          */
 
-    public static _enum_for_mcDataRequestType = _enum_for_MCDataRequestType;
+    public static _enum_for_mcDataRequestType: typeof _enum_for_MCDataRequestType = _enum_for_MCDataRequestType;
 }
 
 /**

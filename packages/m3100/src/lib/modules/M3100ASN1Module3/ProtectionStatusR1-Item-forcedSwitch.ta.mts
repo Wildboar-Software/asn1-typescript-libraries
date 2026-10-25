@@ -84,7 +84,7 @@ export class ProtectionStatusR1_Item_forcedSwitch {
      * @static
      */
 
-    public static _enum_for_switchStatus = _enum_for_SwitchStatus;
+    public static _enum_for_switchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
 }
 
 

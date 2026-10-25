@@ -87,7 +87,7 @@ class AuthCtmRes {
          * @static
          */
 
-    public static _enum_for_result = _enum_for_AuthCtmRes_result;
+    public static _enum_for_result: typeof _enum_for_AuthCtmRes_result = _enum_for_AuthCtmRes_result;
 }
 
 /**

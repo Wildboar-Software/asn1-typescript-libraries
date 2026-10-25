@@ -29,7 +29,7 @@ type ActivityCode_number = INTEGER;
  * @type {number}
  */
 export
-const ActivityCode_number_approved = 0 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_approved: 0 = 0 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_approved
@@ -37,7 +37,7 @@ const ActivityCode_number_approved = 0 satisfies ActivityCode_number; /* LONG_NA
  * @type {number}
  */
 export
-const approved = ActivityCode_number_approved; /* SHORT_NAMED_INTEGER_VALUE */
+const approved: 0 = ActivityCode_number_approved; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_assign
@@ -45,7 +45,7 @@ const approved = ActivityCode_number_approved; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_assign = 1 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_assign: 1 = 1 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_assign
@@ -53,7 +53,7 @@ const ActivityCode_number_assign = 1 satisfies ActivityCode_number; /* LONG_NAME
  * @type {number}
  */
 export
-const assign = ActivityCode_number_assign; /* SHORT_NAMED_INTEGER_VALUE */
+const assign: 1 = ActivityCode_number_assign; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_cancel
@@ -61,7 +61,7 @@ const assign = ActivityCode_number_assign; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_cancel = 2 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_cancel: 2 = 2 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_cancel
@@ -69,7 +69,7 @@ const ActivityCode_number_cancel = 2 satisfies ActivityCode_number; /* LONG_NAME
  * @type {number}
  */
 export
-const cancel = ActivityCode_number_cancel; /* SHORT_NAMED_INTEGER_VALUE */
+const cancel: 2 = ActivityCode_number_cancel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_clear
@@ -77,7 +77,7 @@ const cancel = ActivityCode_number_cancel; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_clear = 3 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_clear: 3 = 3 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_clear
@@ -85,7 +85,7 @@ const ActivityCode_number_clear = 3 satisfies ActivityCode_number; /* LONG_NAMED
  * @type {number}
  */
 export
-const clear = ActivityCode_number_clear; /* SHORT_NAMED_INTEGER_VALUE */
+const clear: 3 = ActivityCode_number_clear; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_close
@@ -93,7 +93,7 @@ const clear = ActivityCode_number_clear; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_close = 4 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_close: 4 = 4 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_close
@@ -101,7 +101,7 @@ const ActivityCode_number_close = 4 satisfies ActivityCode_number; /* LONG_NAMED
  * @type {number}
  */
 export
-const close = ActivityCode_number_close; /* SHORT_NAMED_INTEGER_VALUE */
+const close: 4 = ActivityCode_number_close; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_defer
@@ -109,7 +109,7 @@ const close = ActivityCode_number_close; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_defer = 5 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_defer: 5 = 5 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_defer
@@ -117,7 +117,7 @@ const ActivityCode_number_defer = 5 satisfies ActivityCode_number; /* LONG_NAMED
  * @type {number}
  */
 export
-const defer = ActivityCode_number_defer; /* SHORT_NAMED_INTEGER_VALUE */
+const defer: 5 = ActivityCode_number_defer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_dispatch
@@ -125,7 +125,7 @@ const defer = ActivityCode_number_defer; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_dispatch = 6 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_dispatch: 6 = 6 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_dispatch
@@ -133,7 +133,7 @@ const ActivityCode_number_dispatch = 6 satisfies ActivityCode_number; /* LONG_NA
  * @type {number}
  */
 export
-const dispatch = ActivityCode_number_dispatch; /* SHORT_NAMED_INTEGER_VALUE */
+const dispatch: 6 = ActivityCode_number_dispatch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_refer
@@ -141,7 +141,7 @@ const dispatch = ActivityCode_number_dispatch; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_refer = 7 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_refer: 7 = 7 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_refer
@@ -149,7 +149,7 @@ const ActivityCode_number_refer = 7 satisfies ActivityCode_number; /* LONG_NAMED
  * @type {number}
  */
 export
-const refer = ActivityCode_number_refer; /* SHORT_NAMED_INTEGER_VALUE */
+const refer: 7 = ActivityCode_number_refer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_release
@@ -157,7 +157,7 @@ const refer = ActivityCode_number_refer; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_release = 8 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_release: 8 = 8 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_release
@@ -165,7 +165,7 @@ const ActivityCode_number_release = 8 satisfies ActivityCode_number; /* LONG_NAM
  * @type {number}
  */
 export
-const release = ActivityCode_number_release; /* SHORT_NAMED_INTEGER_VALUE */
+const release: 8 = ActivityCode_number_release; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_re_open
@@ -173,7 +173,7 @@ const release = ActivityCode_number_release; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_re_open = 9 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_re_open: 9 = 9 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_re_open
@@ -181,7 +181,7 @@ const ActivityCode_number_re_open = 9 satisfies ActivityCode_number; /* LONG_NAM
  * @type {number}
  */
 export
-const re_open = ActivityCode_number_re_open; /* SHORT_NAMED_INTEGER_VALUE */
+const re_open: 9 = ActivityCode_number_re_open; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_repair
@@ -189,7 +189,7 @@ const re_open = ActivityCode_number_re_open; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_repair = 10 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_repair: 10 = 10 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_repair
@@ -197,7 +197,7 @@ const ActivityCode_number_repair = 10 satisfies ActivityCode_number; /* LONG_NAM
  * @type {number}
  */
 export
-const repair = ActivityCode_number_repair; /* SHORT_NAMED_INTEGER_VALUE */
+const repair: 10 = ActivityCode_number_repair; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_test
@@ -205,7 +205,7 @@ const repair = ActivityCode_number_repair; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_test = 11 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_test: 11 = 11 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_test
@@ -213,7 +213,7 @@ const ActivityCode_number_test = 11 satisfies ActivityCode_number; /* LONG_NAMED
  * @type {number}
  */
 export
-const test = ActivityCode_number_test; /* SHORT_NAMED_INTEGER_VALUE */
+const test: 11 = ActivityCode_number_test; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_transfer
@@ -221,7 +221,7 @@ const test = ActivityCode_number_test; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ActivityCode_number_transfer = 12 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
+const ActivityCode_number_transfer: 12 = 12 satisfies ActivityCode_number; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivityCode_number_transfer
@@ -229,9 +229,9 @@ const ActivityCode_number_transfer = 12 satisfies ActivityCode_number; /* LONG_N
  * @type {number}
  */
 export
-const transfer = ActivityCode_number_transfer; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ActivityCode_number = $._decodeInteger;
-export const _encode_ActivityCode_number = $._encodeInteger;
+const transfer: 12 = ActivityCode_number_transfer; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ActivityCode_number: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ActivityCode_number: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

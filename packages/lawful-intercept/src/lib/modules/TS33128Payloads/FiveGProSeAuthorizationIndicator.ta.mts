@@ -96,7 +96,7 @@ type FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicat
  * @enum {number}
  */
 export
-const FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;
+const FiveGProSeAuthorizationIndicator: typeof _enum_for_FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndicator;
 
 /**
  * @summary FiveGProSeAuthorizationIndicator_authorized
@@ -110,7 +110,7 @@ const FiveGProSeAuthorizationIndicator = _enum_for_FiveGProSeAuthorizationIndica
  * @type {number}
  */
 export
-const FiveGProSeAuthorizationIndicator_authorized = FiveGProSeAuthorizationIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGProSeAuthorizationIndicator_authorized: _enum_for_FiveGProSeAuthorizationIndicator.authorized = FiveGProSeAuthorizationIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -124,7 +124,7 @@ const FiveGProSeAuthorizationIndicator_authorized = FiveGProSeAuthorizationIndic
  * @type {number}
  */
 export
-const authorized = FiveGProSeAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized: _enum_for_FiveGProSeAuthorizationIndicator.authorized = FiveGProSeAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGProSeAuthorizationIndicator_notAuthorized
@@ -138,7 +138,7 @@ const authorized = FiveGProSeAuthorizationIndicator.authorized; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const FiveGProSeAuthorizationIndicator_notAuthorized = FiveGProSeAuthorizationIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGProSeAuthorizationIndicator_notAuthorized: _enum_for_FiveGProSeAuthorizationIndicator.notAuthorized = FiveGProSeAuthorizationIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -152,7 +152,7 @@ const FiveGProSeAuthorizationIndicator_notAuthorized = FiveGProSeAuthorizationIn
  * @type {number}
  */
 export
-const notAuthorized = FiveGProSeAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized: _enum_for_FiveGProSeAuthorizationIndicator.notAuthorized = FiveGProSeAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGProSeAuthorizationIndicator: $.ASN1Decoder<FiveGProSeAuthorizationIndicator> = $._decodeEnumerated;
 export const _encode_FiveGProSeAuthorizationIndicator: $.ASN1Encoder<FiveGProSeAuthorizationIndicator> = $._encodeEnumerated;
 

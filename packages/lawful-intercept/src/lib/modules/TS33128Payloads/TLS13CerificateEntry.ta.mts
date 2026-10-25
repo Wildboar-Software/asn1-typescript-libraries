@@ -91,7 +91,7 @@ class TLS13CerificateEntry {
          * @static
          */
 
-    public static _enum_for_tLSCertificateType = _enum_for_TLS13CertificateType;
+    public static _enum_for_tLSCertificateType: typeof _enum_for_TLS13CertificateType = _enum_for_TLS13CertificateType;
 }
 
 /**

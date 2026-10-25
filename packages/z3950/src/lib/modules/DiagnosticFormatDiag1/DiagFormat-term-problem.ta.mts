@@ -38,7 +38,7 @@ type DiagFormat_term_problem = INTEGER;
  * @type {number}
  */
 export
-const DiagFormat_term_problem_codedValue = 1 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_term_problem_codedValue: 1 = 1 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_codedValue
@@ -51,7 +51,7 @@ const DiagFormat_term_problem_codedValue = 1 satisfies DiagFormat_term_problem; 
  * @type {number}
  */
 export
-const codedValue = DiagFormat_term_problem_codedValue; /* SHORT_NAMED_INTEGER_VALUE */
+const codedValue: 1 = DiagFormat_term_problem_codedValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_unparsable
@@ -64,7 +64,7 @@ const codedValue = DiagFormat_term_problem_codedValue; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const DiagFormat_term_problem_unparsable = 2 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_term_problem_unparsable: 2 = 2 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_unparsable
@@ -77,7 +77,7 @@ const DiagFormat_term_problem_unparsable = 2 satisfies DiagFormat_term_problem; 
  * @type {number}
  */
 export
-const unparsable = DiagFormat_term_problem_unparsable; /* SHORT_NAMED_INTEGER_VALUE */
+const unparsable: 2 = DiagFormat_term_problem_unparsable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_tooShort
@@ -89,7 +89,7 @@ const unparsable = DiagFormat_term_problem_unparsable; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const DiagFormat_term_problem_tooShort = 3 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_term_problem_tooShort: 3 = 3 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_tooShort
@@ -101,7 +101,7 @@ const DiagFormat_term_problem_tooShort = 3 satisfies DiagFormat_term_problem; /*
  * @type {number}
  */
 export
-const tooShort = DiagFormat_term_problem_tooShort; /* SHORT_NAMED_INTEGER_VALUE */
+const tooShort: 3 = DiagFormat_term_problem_tooShort; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_type_
@@ -113,7 +113,7 @@ const tooShort = DiagFormat_term_problem_tooShort; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const DiagFormat_term_problem_type_ = 4 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
+const DiagFormat_term_problem_type_: 4 = 4 satisfies DiagFormat_term_problem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagFormat_term_problem_type_
@@ -125,7 +125,7 @@ const DiagFormat_term_problem_type_ = 4 satisfies DiagFormat_term_problem; /* LO
  * @type {number}
  */
 export
-const type_ = DiagFormat_term_problem_type_; /* SHORT_NAMED_INTEGER_VALUE */
+const type_: 4 = DiagFormat_term_problem_type_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagFormat_term_problem: $.ASN1Decoder<DiagFormat_term_problem> = $._decodeInteger;
 export const _encode_DiagFormat_term_problem: $.ASN1Encoder<DiagFormat_term_problem> = $._encodeInteger;
 

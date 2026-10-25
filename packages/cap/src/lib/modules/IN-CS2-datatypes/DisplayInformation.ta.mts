@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DisplayInformation = IA5String; // IA5String
-export const _decode_DisplayInformation = $._decodeIA5String;
-export const _encode_DisplayInformation = $._encodeIA5String;
+export const _decode_DisplayInformation: $.ASN1Decoder<string> = $._decodeIA5String;
+export const _encode_DisplayInformation: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

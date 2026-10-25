@@ -104,7 +104,7 @@ class SM_DeliveryFailureCause {
          * @static
          */
 
-    public static _enum_for_sm_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureCause;
+    public static _enum_for_sm_EnumeratedDeliveryFailureCause: typeof _enum_for_SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureCause;
 }
 
 /**

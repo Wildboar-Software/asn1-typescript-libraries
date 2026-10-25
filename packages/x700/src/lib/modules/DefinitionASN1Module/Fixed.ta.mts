@@ -35,12 +35,12 @@ export type Fixed = BOOLEAN; // BooleanType
 
 
 
-export const _decode_Fixed = $._decodeBoolean;
+export const _decode_Fixed: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_Fixed = $._encodeBoolean;
+export const _encode_Fixed: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

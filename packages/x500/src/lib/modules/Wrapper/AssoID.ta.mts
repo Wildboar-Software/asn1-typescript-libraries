@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type AssoID = INTEGER;
 
 
-export const _decode_AssoID = $._decodeInteger;
+export const _decode_AssoID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AssoID = $._encodeInteger;
+export const _encode_AssoID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

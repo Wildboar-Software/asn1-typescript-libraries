@@ -46,7 +46,7 @@ export type probe_ResultType = _enum_for_probe_ResultType | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const probe_ResultType_running = _enum_for_probe_ResultType.running; /* LONG_NAMED_ENUMERATED_VALUE */
+export const probe_ResultType_running: 0 = _enum_for_probe_ResultType.running; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const probe_ResultType_running = _enum_for_probe_ResultType.running; /* L
  * @constant
  * @type {number}
  */
-export const running = probe_ResultType_running; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const running: 0 = probe_ResultType_running; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const running = probe_ResultType_running; /* SHORT_NAMED_ENUMERATED_VALUE
  * @constant
  * @type {number}
  */
-export const probe_ResultType_finished = _enum_for_probe_ResultType.finished; /* LONG_NAMED_ENUMERATED_VALUE */
+export const probe_ResultType_finished: 1 = _enum_for_probe_ResultType.finished; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const probe_ResultType_finished = _enum_for_probe_ResultType.finished; /*
  * @constant
  * @type {number}
  */
-export const finished = probe_ResultType_finished; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const finished: 1 = probe_ResultType_finished; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const finished = probe_ResultType_finished; /* SHORT_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const probe_ResultType_unknown = _enum_for_probe_ResultType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+export const probe_ResultType_unknown: 2 = _enum_for_probe_ResultType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -91,17 +91,17 @@ export const probe_ResultType_unknown = _enum_for_probe_ResultType.unknown; /* L
  * @constant
  * @type {number}
  */
-export const unknown = probe_ResultType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknown: 2 = probe_ResultType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_probe_ResultType = $._decodeEnumerated;
+export const _decode_probe_ResultType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_probe_ResultType = $._encodeEnumerated;
+export const _encode_probe_ResultType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

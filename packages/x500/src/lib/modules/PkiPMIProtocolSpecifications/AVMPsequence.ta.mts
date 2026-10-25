@@ -15,10 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type AVMPsequence = INTEGER;
 
 
-export const _decode_AVMPsequence = $._decodeInteger;
+export const _decode_AVMPsequence: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AVMPsequence = $._encodeInteger;
+export const _encode_AVMPsequence: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type VideotexData = VideotexString; // VideotexString
 
 
-export const _decode_VideotexData = $._decodeVideotexString;
+export const _decode_VideotexData: $.ASN1Decoder<VideotexString> = $._decodeVideotexString;
 
 
-export const _encode_VideotexData = $._encodeVideotexString;
+export const _encode_VideotexData: $.ASN1Encoder<VideotexString> = $._encodeVideotexString;
 
 
 /* eslint-enable */

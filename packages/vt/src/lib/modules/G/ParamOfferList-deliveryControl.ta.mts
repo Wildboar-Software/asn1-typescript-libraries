@@ -99,8 +99,8 @@ const ParamOfferList_deliveryControl_quarantine: number = 2; /* LONG_NAMED_BIT *
  */
 export
 const quarantine: number = ParamOfferList_deliveryControl_quarantine; /* SHORT_NAMED_BIT */
-export const _decode_ParamOfferList_deliveryControl = $._decodeBitString;
-export const _encode_ParamOfferList_deliveryControl = $._encodeBitString;
+export const _decode_ParamOfferList_deliveryControl: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParamOfferList_deliveryControl: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

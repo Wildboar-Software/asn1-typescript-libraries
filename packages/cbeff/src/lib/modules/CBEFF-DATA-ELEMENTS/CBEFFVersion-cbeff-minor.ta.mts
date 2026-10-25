@@ -29,20 +29,20 @@ export type CBEFFVersion_cbeff_minor = INTEGER;
  * @constant
  * @type {number}
  */
-export const CBEFFVersion_cbeff_minor_version0 = 0 satisfies CBEFFVersion_cbeff_minor; /* LONG_NAMED_INTEGER_VALUE */
+export const CBEFFVersion_cbeff_minor_version0: 0 = 0 satisfies CBEFFVersion_cbeff_minor; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CBEFFVersion_cbeff_minor_version0
  * @constant
  * @type {number}
  */
-export const version0 = CBEFFVersion_cbeff_minor_version0; /* SHORT_NAMED_INTEGER_VALUE */
+export const version0: 0 = CBEFFVersion_cbeff_minor_version0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_CBEFFVersion_cbeff_minor = $._decodeInteger;
+export const _decode_CBEFFVersion_cbeff_minor: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_CBEFFVersion_cbeff_minor = $._encodeInteger;
+export const _encode_CBEFFVersion_cbeff_minor: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

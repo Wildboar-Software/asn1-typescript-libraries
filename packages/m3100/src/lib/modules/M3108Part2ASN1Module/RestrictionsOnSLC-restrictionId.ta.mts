@@ -45,7 +45,7 @@ export type RestrictionsOnSLC_restrictionId =
  * @constant
  * @type {number}
  */
-export const RestrictionsOnSLC_restrictionId_noRestrictions = _enum_for_RestrictionsOnSLC_restrictionId.noRestrictions; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RestrictionsOnSLC_restrictionId_noRestrictions: _enum_for_RestrictionsOnSLC_restrictionId.noRestrictions = _enum_for_RestrictionsOnSLC_restrictionId.noRestrictions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const RestrictionsOnSLC_restrictionId_noRestrictions = _enum_for_Restrict
  * @constant
  * @type {number}
  */
-export const noRestrictions = RestrictionsOnSLC_restrictionId_noRestrictions; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noRestrictions: _enum_for_RestrictionsOnSLC_restrictionId.noRestrictions = RestrictionsOnSLC_restrictionId_noRestrictions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const noRestrictions = RestrictionsOnSLC_restrictionId_noRestrictions; /*
  * @constant
  * @type {number}
  */
-export const RestrictionsOnSLC_restrictionId_protectedSLCsOnly = _enum_for_RestrictionsOnSLC_restrictionId.protectedSLCsOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RestrictionsOnSLC_restrictionId_protectedSLCsOnly: _enum_for_RestrictionsOnSLC_restrictionId.protectedSLCsOnly = _enum_for_RestrictionsOnSLC_restrictionId.protectedSLCsOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const RestrictionsOnSLC_restrictionId_protectedSLCsOnly = _enum_for_Restr
  * @constant
  * @type {number}
  */
-export const protectedSLCsOnly = RestrictionsOnSLC_restrictionId_protectedSLCsOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protectedSLCsOnly: _enum_for_RestrictionsOnSLC_restrictionId.protectedSLCsOnly = RestrictionsOnSLC_restrictionId_protectedSLCsOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const protectedSLCsOnly = RestrictionsOnSLC_restrictionId_protectedSLCsOn
  * @constant
  * @type {number}
  */
-export const RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly = _enum_for_RestrictionsOnSLC_restrictionId.protectedDedicatedSLCsOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly: _enum_for_RestrictionsOnSLC_restrictionId.protectedDedicatedSLCsOnly = _enum_for_RestrictionsOnSLC_restrictionId.protectedDedicatedSLCsOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly = _enum_
  * @constant
  * @type {number}
  */
-export const protectedDedicatedSLCsOnly = RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protectedDedicatedSLCsOnly: _enum_for_RestrictionsOnSLC_restrictionId.protectedDedicatedSLCsOnly = RestrictionsOnSLC_restrictionId_protectedDedicatedSLCsOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const protectedDedicatedSLCsOnly = RestrictionsOnSLC_restrictionId_protec
  * @constant
  * @type {number}
  */
-export const RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsPreferred = _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsOnlyWithProtectedSLCsPreferred; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsPreferred: _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsOnlyWithProtectedSLCsPreferred = _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsOnlyWithProtectedSLCsPreferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsP
  * @constant
  * @type {number}
  */
-export const dedicatedSLCsOnlyWithProtectedSLCsPreferred = RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsPreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dedicatedSLCsOnlyWithProtectedSLCsPreferred: _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsOnlyWithProtectedSLCsPreferred = RestrictionsOnSLC_restrictionId_dedicatedSLCsOnlyWithProtectedSLCsPreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const dedicatedSLCsOnlyWithProtectedSLCsPreferred = RestrictionsOnSLC_res
  * @constant
  * @type {number}
  */
-export const RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCsRequired = _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsPreferredProtectedSLCsRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCsRequired: _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsPreferredProtectedSLCsRequired = _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsPreferredProtectedSLCsRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCs
  * @constant
  * @type {number}
  */
-export const dedicatedSLCsPreferredProtectedSLCsRequired = RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCsRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dedicatedSLCsPreferredProtectedSLCsRequired: _enum_for_RestrictionsOnSLC_restrictionId.dedicatedSLCsPreferredProtectedSLCsRequired = RestrictionsOnSLC_restrictionId_dedicatedSLCsPreferredProtectedSLCsRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const dedicatedSLCsPreferredProtectedSLCsRequired = RestrictionsOnSLC_res
  * @constant
  * @type {number}
  */
-export const RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred = _enum_for_RestrictionsOnSLC_restrictionId.dedicatedProtectedSLCsPreferred; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred: _enum_for_RestrictionsOnSLC_restrictionId.dedicatedProtectedSLCsPreferred = _enum_for_RestrictionsOnSLC_restrictionId.dedicatedProtectedSLCsPreferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -133,7 +133,7 @@ export const RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred = _
  * @constant
  * @type {number}
  */
-export const dedicatedProtectedSLCsPreferred = RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dedicatedProtectedSLCsPreferred: _enum_for_RestrictionsOnSLC_restrictionId.dedicatedProtectedSLCsPreferred = RestrictionsOnSLC_restrictionId_dedicatedProtectedSLCsPreferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_RestrictionsOnSLC_restrictionId: $.ASN1Decoder<RestrictionsOnSLC_restrictionId> | null = null;

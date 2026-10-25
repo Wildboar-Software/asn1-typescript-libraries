@@ -141,13 +141,13 @@ class RCSSIPSessionMessage {
          * @static
          */
 
-    public static _enum_for_sessionLeg = _enum_for_RCSSessionLeg;        /**
+    public static _enum_for_sessionLeg: typeof _enum_for_RCSSessionLeg = _enum_for_RCSSessionLeg;        /**
          * @summary The enum used as the type of the component `rCSSessionResult`
          * @public
          * @static
          */
 
-    public static _enum_for_rCSSessionResult = _enum_for_RCSSessionResult;
+    public static _enum_for_rCSSessionResult: typeof _enum_for_RCSSessionResult = _enum_for_RCSSessionResult;
 }
 
 /**

@@ -16,7 +16,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```
  */
 export type GeneralMessage = _Element;
-export const _decode_GeneralMessage = $._decodeAny;
-export const _encode_GeneralMessage = $._encodeAny;
+export const _decode_GeneralMessage: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_GeneralMessage: $.ASN1Encoder<_Element> = $._encodeAny;
 
 /* eslint-enable */

@@ -54,7 +54,7 @@ type ProgramInvocationState = INTEGER;
  * @type {number}
  */
 export
-const ProgramInvocationState_non_existent = 0 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_non_existent: 0 = 0 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_non_existent
@@ -66,7 +66,7 @@ const ProgramInvocationState_non_existent = 0 satisfies ProgramInvocationState; 
  * @type {number}
  */
 export
-const non_existent = ProgramInvocationState_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
+const non_existent: 0 = ProgramInvocationState_non_existent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_unrunnable
@@ -79,7 +79,7 @@ const non_existent = ProgramInvocationState_non_existent; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const ProgramInvocationState_unrunnable = 1 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_unrunnable: 1 = 1 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_unrunnable
@@ -92,7 +92,7 @@ const ProgramInvocationState_unrunnable = 1 satisfies ProgramInvocationState; /*
  * @type {number}
  */
 export
-const unrunnable = ProgramInvocationState_unrunnable; /* SHORT_NAMED_INTEGER_VALUE */
+const unrunnable: 1 = ProgramInvocationState_unrunnable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_idle
@@ -104,7 +104,7 @@ const unrunnable = ProgramInvocationState_unrunnable; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const ProgramInvocationState_idle = 2 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_idle: 2 = 2 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_idle
@@ -116,7 +116,7 @@ const ProgramInvocationState_idle = 2 satisfies ProgramInvocationState; /* LONG_
  * @type {number}
  */
 export
-const idle = ProgramInvocationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
+const idle: 2 = ProgramInvocationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_running
@@ -129,7 +129,7 @@ const idle = ProgramInvocationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ProgramInvocationState_running = 3 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_running: 3 = 3 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_running
@@ -142,7 +142,7 @@ const ProgramInvocationState_running = 3 satisfies ProgramInvocationState; /* LO
  * @type {number}
  */
 export
-const running = ProgramInvocationState_running; /* SHORT_NAMED_INTEGER_VALUE */
+const running: 3 = ProgramInvocationState_running; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_stopped
@@ -155,7 +155,7 @@ const running = ProgramInvocationState_running; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ProgramInvocationState_stopped = 4 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_stopped: 4 = 4 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_stopped
@@ -168,7 +168,7 @@ const ProgramInvocationState_stopped = 4 satisfies ProgramInvocationState; /* LO
  * @type {number}
  */
 export
-const stopped = ProgramInvocationState_stopped; /* SHORT_NAMED_INTEGER_VALUE */
+const stopped: 4 = ProgramInvocationState_stopped; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_starting
@@ -181,7 +181,7 @@ const stopped = ProgramInvocationState_stopped; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ProgramInvocationState_starting = 5 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_starting: 5 = 5 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_starting
@@ -194,7 +194,7 @@ const ProgramInvocationState_starting = 5 satisfies ProgramInvocationState; /* L
  * @type {number}
  */
 export
-const starting = ProgramInvocationState_starting; /* SHORT_NAMED_INTEGER_VALUE */
+const starting: 5 = ProgramInvocationState_starting; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_stopping
@@ -207,7 +207,7 @@ const starting = ProgramInvocationState_starting; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ProgramInvocationState_stopping = 6 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_stopping: 6 = 6 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_stopping
@@ -220,7 +220,7 @@ const ProgramInvocationState_stopping = 6 satisfies ProgramInvocationState; /* L
  * @type {number}
  */
 export
-const stopping = ProgramInvocationState_stopping; /* SHORT_NAMED_INTEGER_VALUE */
+const stopping: 6 = ProgramInvocationState_stopping; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_resuming
@@ -233,7 +233,7 @@ const stopping = ProgramInvocationState_stopping; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ProgramInvocationState_resuming = 7 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_resuming: 7 = 7 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_resuming
@@ -246,7 +246,7 @@ const ProgramInvocationState_resuming = 7 satisfies ProgramInvocationState; /* L
  * @type {number}
  */
 export
-const resuming = ProgramInvocationState_resuming; /* SHORT_NAMED_INTEGER_VALUE */
+const resuming: 7 = ProgramInvocationState_resuming; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_resetting
@@ -259,7 +259,7 @@ const resuming = ProgramInvocationState_resuming; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ProgramInvocationState_resetting = 8 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
+const ProgramInvocationState_resetting: 8 = 8 satisfies ProgramInvocationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProgramInvocationState_resetting
@@ -272,9 +272,9 @@ const ProgramInvocationState_resetting = 8 satisfies ProgramInvocationState; /* 
  * @type {number}
  */
 export
-const resetting = ProgramInvocationState_resetting; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ProgramInvocationState = $._decodeInteger;
-export const _encode_ProgramInvocationState = $._encodeInteger;
+const resetting: 8 = ProgramInvocationState_resetting; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ProgramInvocationState: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ProgramInvocationState: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

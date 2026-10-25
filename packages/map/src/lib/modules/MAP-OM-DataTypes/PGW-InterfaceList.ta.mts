@@ -165,7 +165,7 @@ export const _decode_PGW_InterfaceList = (el: _Element): PGW_InterfaceList => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PGW_InterfaceList, encoded as an ASN.1 Element.
  */
-export const _encode_PGW_InterfaceList = $._encodeBitString;
+export const _encode_PGW_InterfaceList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

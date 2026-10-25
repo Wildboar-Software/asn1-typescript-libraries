@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type LocalReference = PrintableString; // PrintableString
 
 
-export const _decode_LocalReference = $._decodePrintableString;
+export const _decode_LocalReference: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_LocalReference = $._encodePrintableString;
+export const _encode_LocalReference: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

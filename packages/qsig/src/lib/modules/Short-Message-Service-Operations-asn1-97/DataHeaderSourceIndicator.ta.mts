@@ -44,7 +44,7 @@ type DataHeaderSourceIndicator = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const DataHeaderSourceIndicator_originalSender = 1 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const DataHeaderSourceIndicator_originalSender: 1 = 1 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary originalSender
@@ -53,7 +53,7 @@ const DataHeaderSourceIndicator_originalSender = 1 satisfies DataHeaderSourceInd
  * @type {number}
  */
 export
-const originalSender = DataHeaderSourceIndicator_originalSender; /* SHORT_NAMED_INTEGER_VALUE */
+const originalSender: 1 = DataHeaderSourceIndicator_originalSender; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataHeaderSourceIndicator_originalReceiver
@@ -66,7 +66,7 @@ const originalSender = DataHeaderSourceIndicator_originalSender; /* SHORT_NAMED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const DataHeaderSourceIndicator_originalReceiver = 2 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const DataHeaderSourceIndicator_originalReceiver: 2 = 2 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary originalReceiver
@@ -75,7 +75,7 @@ const DataHeaderSourceIndicator_originalReceiver = 2 satisfies DataHeaderSourceI
  * @type {number}
  */
 export
-const originalReceiver = DataHeaderSourceIndicator_originalReceiver; /* SHORT_NAMED_INTEGER_VALUE */
+const originalReceiver: 2 = DataHeaderSourceIndicator_originalReceiver; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataHeaderSourceIndicator_sMSC
@@ -88,7 +88,7 @@ const originalReceiver = DataHeaderSourceIndicator_originalReceiver; /* SHORT_NA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const DataHeaderSourceIndicator_sMSC = 3 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
+const DataHeaderSourceIndicator_sMSC: 3 = 3 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary sMSC
@@ -97,7 +97,7 @@ const DataHeaderSourceIndicator_sMSC = 3 satisfies DataHeaderSourceIndicator; /*
  * @type {number}
  */
 export
-const sMSC = DataHeaderSourceIndicator_sMSC; /* SHORT_NAMED_INTEGER_VALUE */
+const sMSC: 3 = DataHeaderSourceIndicator_sMSC; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_DataHeaderSourceIndicator = (el: _Element): DataHeaderSourceIndicator => {

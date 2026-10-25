@@ -66,7 +66,7 @@ export type RealizationParameter_realization_type = _enum_for_RealizationParamet
  *
  * @enum {number}
  */
-export const RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
+export const RealizationParameter_realization_type: typeof _enum_for_RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
 
 
 /**
@@ -75,7 +75,7 @@ export const RealizationParameter_realization_type = _enum_for_RealizationParame
  * @constant
  * @type {number}
  */
-export const RealizationParameter_realization_type_association_service =
+export const RealizationParameter_realization_type_association_service: 0 =
   RealizationParameter_realization_type.association_service; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -85,7 +85,7 @@ export const RealizationParameter_realization_type_association_service =
  * @constant
  * @type {number}
  */
-export const association_service =
+export const association_service: 0 =
   RealizationParameter_realization_type.association_service; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -95,7 +95,7 @@ export const association_service =
  * @constant
  * @type {number}
  */
-export const RealizationParameter_realization_type_transfer_service =
+export const RealizationParameter_realization_type_transfer_service: 1 =
   RealizationParameter_realization_type.transfer_service; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const RealizationParameter_realization_type_transfer_service =
  * @constant
  * @type {number}
  */
-export const transfer_service =
+export const transfer_service: 1 =
   RealizationParameter_realization_type.transfer_service; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

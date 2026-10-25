@@ -1070,25 +1070,25 @@ class MMTelRecord {
          * @static
          */
 
-    public static _enum_for_role_of_Node = _enum_for_MMTelRecord_role_of_Node;        /**
+    public static _enum_for_role_of_Node: typeof _enum_for_MMTelRecord_role_of_Node = _enum_for_MMTelRecord_role_of_Node;        /**
          * @summary The enum used as the type of the component `causeForRecordClosing`
          * @public
          * @static
          */
 
-    public static _enum_for_causeForRecordClosing = _enum_for_MMTelRecord_causeForRecordClosing;        /**
+    public static _enum_for_causeForRecordClosing: typeof _enum_for_MMTelRecord_causeForRecordClosing = _enum_for_MMTelRecord_causeForRecordClosing;        /**
          * @summary The enum used as the type of the component `sessionPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_sessionPriority = _enum_for_MMTelRecord_sessionPriority;        /**
+    public static _enum_for_sessionPriority: typeof _enum_for_MMTelRecord_sessionPriority = _enum_for_MMTelRecord_sessionPriority;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataOffStatus;
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataOffStatus;
 }
 
 /**

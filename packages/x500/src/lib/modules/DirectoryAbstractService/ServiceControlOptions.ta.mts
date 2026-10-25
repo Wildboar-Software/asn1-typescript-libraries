@@ -366,10 +366,10 @@ export const ServiceControlOptions_allowWriteableCopy: number = 14; /* LONG_NAME
 export const allowWriteableCopy: number = ServiceControlOptions_allowWriteableCopy; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ServiceControlOptions = $._decodeBitString;
+export const _decode_ServiceControlOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ServiceControlOptions = $._encodeBitString;
+export const _encode_ServiceControlOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

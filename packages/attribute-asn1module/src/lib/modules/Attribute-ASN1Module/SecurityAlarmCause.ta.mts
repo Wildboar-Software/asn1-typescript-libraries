@@ -32,10 +32,10 @@ export
 type SecurityAlarmCause = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_SecurityAlarmCause = $._decodeObjectIdentifier;
+export const _decode_SecurityAlarmCause: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_SecurityAlarmCause = $._encodeObjectIdentifier;
+export const _encode_SecurityAlarmCause: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

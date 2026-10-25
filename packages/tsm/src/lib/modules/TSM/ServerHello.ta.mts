@@ -158,13 +158,13 @@ class ServerHello {
          * @static
          */
 
-    public static _enum_for_cipher_suite = _enum_for_CipherSuite;        /**
+    public static _enum_for_cipher_suite: typeof _enum_for_CipherSuite = _enum_for_CipherSuite;        /**
          * @summary The enum used as the type of the component `compression_method`
          * @public
          * @static
          */
 
-    public static _enum_for_compression_method = _enum_for_CompressionMethod;
+    public static _enum_for_compression_method: typeof _enum_for_CompressionMethod = _enum_for_CompressionMethod;
 }
 
 /**

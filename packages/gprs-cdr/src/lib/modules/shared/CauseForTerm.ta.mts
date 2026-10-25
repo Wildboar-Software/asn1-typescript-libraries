@@ -63,7 +63,7 @@ type CauseForTerm = INTEGER;
  * @type {number}
  */
 export
-const CauseForTerm_normalRelease = 0 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_normalRelease: 0 = 0 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_normalRelease
@@ -78,7 +78,7 @@ const CauseForTerm_normalRelease = 0 satisfies CauseForTerm; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const normalRelease = CauseForTerm_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const normalRelease: 0 = CauseForTerm_normalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_partialRecord
@@ -93,7 +93,7 @@ const normalRelease = CauseForTerm_normalRelease; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const CauseForTerm_partialRecord = 1 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_partialRecord: 1 = 1 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_partialRecord
@@ -108,7 +108,7 @@ const CauseForTerm_partialRecord = 1 satisfies CauseForTerm; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const partialRecord = CauseForTerm_partialRecord; /* SHORT_NAMED_INTEGER_VALUE */
+const partialRecord: 1 = CauseForTerm_partialRecord; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_partialRecordCallReestablishment
@@ -125,7 +125,7 @@ const partialRecord = CauseForTerm_partialRecord; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const CauseForTerm_partialRecordCallReestablishment = 2 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_partialRecordCallReestablishment: 2 = 2 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_partialRecordCallReestablishment
@@ -142,7 +142,7 @@ const CauseForTerm_partialRecordCallReestablishment = 2 satisfies CauseForTerm; 
  * @type {number}
  */
 export
-const partialRecordCallReestablishment = CauseForTerm_partialRecordCallReestablishment; /* SHORT_NAMED_INTEGER_VALUE */
+const partialRecordCallReestablishment: 2 = CauseForTerm_partialRecordCallReestablishment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unsuccessfulCallAttempt
@@ -157,7 +157,7 @@ const partialRecordCallReestablishment = CauseForTerm_partialRecordCallReestabli
  * @type {number}
  */
 export
-const CauseForTerm_unsuccessfulCallAttempt = 3 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_unsuccessfulCallAttempt: 3 = 3 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unsuccessfulCallAttempt
@@ -172,7 +172,7 @@ const CauseForTerm_unsuccessfulCallAttempt = 3 satisfies CauseForTerm; /* LONG_N
  * @type {number}
  */
 export
-const unsuccessfulCallAttempt = CauseForTerm_unsuccessfulCallAttempt; /* SHORT_NAMED_INTEGER_VALUE */
+const unsuccessfulCallAttempt: 3 = CauseForTerm_unsuccessfulCallAttempt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_abnormalRelease
@@ -188,7 +188,7 @@ const unsuccessfulCallAttempt = CauseForTerm_unsuccessfulCallAttempt; /* SHORT_N
  * @type {number}
  */
 export
-const CauseForTerm_abnormalRelease = 4 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_abnormalRelease: 4 = 4 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_abnormalRelease
@@ -204,7 +204,7 @@ const CauseForTerm_abnormalRelease = 4 satisfies CauseForTerm; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const abnormalRelease = CauseForTerm_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease: 4 = CauseForTerm_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_cAMELInitCallRelease
@@ -218,7 +218,7 @@ const abnormalRelease = CauseForTerm_abnormalRelease; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const CauseForTerm_cAMELInitCallRelease = 5 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_cAMELInitCallRelease: 5 = 5 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_cAMELInitCallRelease
@@ -232,7 +232,7 @@ const CauseForTerm_cAMELInitCallRelease = 5 satisfies CauseForTerm; /* LONG_NAME
  * @type {number}
  */
 export
-const cAMELInitCallRelease = CauseForTerm_cAMELInitCallRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const cAMELInitCallRelease: 5 = CauseForTerm_cAMELInitCallRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unauthorizedRequestingNetwork
@@ -247,7 +247,7 @@ const cAMELInitCallRelease = CauseForTerm_cAMELInitCallRelease; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const CauseForTerm_unauthorizedRequestingNetwork = 52 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_unauthorizedRequestingNetwork: 52 = 52 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unauthorizedRequestingNetwork
@@ -262,7 +262,7 @@ const CauseForTerm_unauthorizedRequestingNetwork = 52 satisfies CauseForTerm; /*
  * @type {number}
  */
 export
-const unauthorizedRequestingNetwork = CauseForTerm_unauthorizedRequestingNetwork; /* SHORT_NAMED_INTEGER_VALUE */
+const unauthorizedRequestingNetwork: 52 = CauseForTerm_unauthorizedRequestingNetwork; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unauthorizedLCSClient
@@ -276,7 +276,7 @@ const unauthorizedRequestingNetwork = CauseForTerm_unauthorizedRequestingNetwork
  * @type {number}
  */
 export
-const CauseForTerm_unauthorizedLCSClient = 53 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_unauthorizedLCSClient: 53 = 53 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unauthorizedLCSClient
@@ -290,7 +290,7 @@ const CauseForTerm_unauthorizedLCSClient = 53 satisfies CauseForTerm; /* LONG_NA
  * @type {number}
  */
 export
-const unauthorizedLCSClient = CauseForTerm_unauthorizedLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
+const unauthorizedLCSClient: 53 = CauseForTerm_unauthorizedLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_positionMethodFailure
@@ -305,7 +305,7 @@ const unauthorizedLCSClient = CauseForTerm_unauthorizedLCSClient; /* SHORT_NAMED
  * @type {number}
  */
 export
-const CauseForTerm_positionMethodFailure = 54 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_positionMethodFailure: 54 = 54 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_positionMethodFailure
@@ -320,7 +320,7 @@ const CauseForTerm_positionMethodFailure = 54 satisfies CauseForTerm; /* LONG_NA
  * @type {number}
  */
 export
-const positionMethodFailure = CauseForTerm_positionMethodFailure; /* SHORT_NAMED_INTEGER_VALUE */
+const positionMethodFailure: 54 = CauseForTerm_positionMethodFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unknownOrUnreachableLCSClient
@@ -334,7 +334,7 @@ const positionMethodFailure = CauseForTerm_positionMethodFailure; /* SHORT_NAMED
  * @type {number}
  */
 export
-const CauseForTerm_unknownOrUnreachableLCSClient = 58 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
+const CauseForTerm_unknownOrUnreachableLCSClient: 58 = 58 satisfies CauseForTerm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CauseForTerm_unknownOrUnreachableLCSClient
@@ -348,7 +348,7 @@ const CauseForTerm_unknownOrUnreachableLCSClient = 58 satisfies CauseForTerm; /*
  * @type {number}
  */
 export
-const unknownOrUnreachableLCSClient = CauseForTerm_unknownOrUnreachableLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownOrUnreachableLCSClient: 58 = CauseForTerm_unknownOrUnreachableLCSClient; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_CauseForTerm: $.ASN1Decoder<CauseForTerm> = $._decodeInteger;

@@ -43,7 +43,7 @@ export type IncompleteScan = INTEGER;
  * @constant
  * @type {number}
  */
-export const IncompleteScan_sizeExceeded = 0 satisfies IncompleteScan; /* LONG_NAMED_INTEGER_VALUE */
+export const IncompleteScan_sizeExceeded: 0 = 0 satisfies IncompleteScan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_sizeExceeded
@@ -55,7 +55,7 @@ export const IncompleteScan_sizeExceeded = 0 satisfies IncompleteScan; /* LONG_N
  * @constant
  * @type {number}
  */
-export const sizeExceeded = IncompleteScan_sizeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const sizeExceeded: 0 = IncompleteScan_sizeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_timeExceeded
@@ -67,7 +67,7 @@ export const sizeExceeded = IncompleteScan_sizeExceeded; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const IncompleteScan_timeExceeded = 1 satisfies IncompleteScan; /* LONG_NAMED_INTEGER_VALUE */
+export const IncompleteScan_timeExceeded: 1 = 1 satisfies IncompleteScan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_timeExceeded
@@ -79,7 +79,7 @@ export const IncompleteScan_timeExceeded = 1 satisfies IncompleteScan; /* LONG_N
  * @constant
  * @type {number}
  */
-export const timeExceeded = IncompleteScan_timeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const timeExceeded: 1 = IncompleteScan_timeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_other
@@ -91,7 +91,7 @@ export const timeExceeded = IncompleteScan_timeExceeded; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const IncompleteScan_other = 2 satisfies IncompleteScan; /* LONG_NAMED_INTEGER_VALUE */
+export const IncompleteScan_other: 2 = 2 satisfies IncompleteScan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IncompleteScan_other
@@ -103,13 +103,13 @@ export const IncompleteScan_other = 2 satisfies IncompleteScan; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const other = IncompleteScan_other; /* SHORT_NAMED_INTEGER_VALUE */
+export const other: 2 = IncompleteScan_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_IncompleteScan = $._decodeInteger;
+export const _decode_IncompleteScan: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_IncompleteScan = $._encodeInteger;
+export const _encode_IncompleteScan: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

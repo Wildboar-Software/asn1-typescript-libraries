@@ -58,7 +58,7 @@ type MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataO
  * @enum {number}
  */
 export
-const MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataOffStatus;
+const MMTelRecord_threeGPPPSDataOffStatus: typeof _enum_for_MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSDataOffStatus;
 
 /**
  * @summary MMTelRecord_threeGPPPSDataOffStatus_active
@@ -66,7 +66,7 @@ const MMTelRecord_threeGPPPSDataOffStatus = _enum_for_MMTelRecord_threeGPPPSData
  * @type {number}
  */
 export
-const MMTelRecord_threeGPPPSDataOffStatus_active = MMTelRecord_threeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_threeGPPPSDataOffStatus_active: _enum_for_MMTelRecord_threeGPPPSDataOffStatus.active = MMTelRecord_threeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -74,7 +74,7 @@ const MMTelRecord_threeGPPPSDataOffStatus_active = MMTelRecord_threeGPPPSDataOff
  * @type {number}
  */
 export
-const active = MMTelRecord_threeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: _enum_for_MMTelRecord_threeGPPPSDataOffStatus.active = MMTelRecord_threeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_threeGPPPSDataOffStatus_inactive
@@ -82,7 +82,7 @@ const active = MMTelRecord_threeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const MMTelRecord_threeGPPPSDataOffStatus_inactive = MMTelRecord_threeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_threeGPPPSDataOffStatus_inactive: _enum_for_MMTelRecord_threeGPPPSDataOffStatus.inactive = MMTelRecord_threeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -90,7 +90,7 @@ const MMTelRecord_threeGPPPSDataOffStatus_inactive = MMTelRecord_threeGPPPSDataO
  * @type {number}
  */
 export
-const inactive = MMTelRecord_threeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive: _enum_for_MMTelRecord_threeGPPPSDataOffStatus.inactive = MMTelRecord_threeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MMTelRecord_threeGPPPSDataOffStatus: $.ASN1Decoder<MMTelRecord_threeGPPPSDataOffStatus> = $._decodeEnumerated;

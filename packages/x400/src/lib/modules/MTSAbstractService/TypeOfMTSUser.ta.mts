@@ -35,104 +35,104 @@ export type TypeOfMTSUser = INTEGER;
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_public_ = 0 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_public_: 0 = 0 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_public_
  * @constant
  * @type {number}
  */
-export const public_ = TypeOfMTSUser_public_; /* SHORT_NAMED_INTEGER_VALUE */
+export const public_: 0 = TypeOfMTSUser_public_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_private_
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_private_ = 1 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_private_: 1 = 1 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_private_
  * @constant
  * @type {number}
  */
-export const private_ = TypeOfMTSUser_private_; /* SHORT_NAMED_INTEGER_VALUE */
+export const private_: 1 = TypeOfMTSUser_private_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_ms
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_ms = 2 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_ms: 2 = 2 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_ms
  * @constant
  * @type {number}
  */
-export const ms = TypeOfMTSUser_ms; /* SHORT_NAMED_INTEGER_VALUE */
+export const ms: 2 = TypeOfMTSUser_ms; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_dl
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_dl = 3 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_dl: 3 = 3 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_dl
  * @constant
  * @type {number}
  */
-export const dl = TypeOfMTSUser_dl; /* SHORT_NAMED_INTEGER_VALUE */
+export const dl: 3 = TypeOfMTSUser_dl; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_pdau
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_pdau = 4 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_pdau: 4 = 4 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_pdau
  * @constant
  * @type {number}
  */
-export const pdau = TypeOfMTSUser_pdau; /* SHORT_NAMED_INTEGER_VALUE */
+export const pdau: 4 = TypeOfMTSUser_pdau; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_physical_recipient
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_physical_recipient = 5 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_physical_recipient: 5 = 5 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_physical_recipient
  * @constant
  * @type {number}
  */
-export const physical_recipient = TypeOfMTSUser_physical_recipient; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_recipient: 5 = TypeOfMTSUser_physical_recipient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_other
  * @constant
  * @type {number}
  */
-export const TypeOfMTSUser_other = 6 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
+export const TypeOfMTSUser_other: 6 = 6 satisfies TypeOfMTSUser; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TypeOfMTSUser_other
  * @constant
  * @type {number}
  */
-export const other = TypeOfMTSUser_other; /* SHORT_NAMED_INTEGER_VALUE */
+export const other: 6 = TypeOfMTSUser_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TypeOfMTSUser = $._decodeInteger;
+export const _decode_TypeOfMTSUser: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TypeOfMTSUser = $._encodeInteger;
+export const _encode_TypeOfMTSUser: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

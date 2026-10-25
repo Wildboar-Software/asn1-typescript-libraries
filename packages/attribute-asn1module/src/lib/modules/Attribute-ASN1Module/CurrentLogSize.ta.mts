@@ -32,10 +32,10 @@ export
 type CurrentLogSize = INTEGER;
 
 
-export const _decode_CurrentLogSize = $._decodeInteger;
+export const _decode_CurrentLogSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_CurrentLogSize = $._encodeInteger;
+export const _encode_CurrentLogSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

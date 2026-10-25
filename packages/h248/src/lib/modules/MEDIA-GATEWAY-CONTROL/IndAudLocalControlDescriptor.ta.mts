@@ -141,7 +141,7 @@ class IndAudLocalControlDescriptor {
          * @static
          */
 
-    public static _enum_for_streamModeSel = _enum_for_StreamMode;
+    public static _enum_for_streamModeSel: typeof _enum_for_StreamMode = _enum_for_StreamMode;
 }
 
 /**

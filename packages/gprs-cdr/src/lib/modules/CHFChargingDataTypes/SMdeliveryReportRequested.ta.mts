@@ -55,7 +55,7 @@ type SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
  * @enum {number}
  */
 export
-const SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
+const SMdeliveryReportRequested: typeof _enum_for_SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
 
 /**
  * @summary SMdeliveryReportRequested_yes
@@ -63,7 +63,7 @@ const SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
  * @type {number}
  */
 export
-const SMdeliveryReportRequested_yes = SMdeliveryReportRequested.yes; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMdeliveryReportRequested_yes: _enum_for_SMdeliveryReportRequested.yes = SMdeliveryReportRequested.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary yes
@@ -71,7 +71,7 @@ const SMdeliveryReportRequested_yes = SMdeliveryReportRequested.yes; /* LONG_NAM
  * @type {number}
  */
 export
-const yes = SMdeliveryReportRequested.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
+const yes: _enum_for_SMdeliveryReportRequested.yes = SMdeliveryReportRequested.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMdeliveryReportRequested_no
@@ -79,7 +79,7 @@ const yes = SMdeliveryReportRequested.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SMdeliveryReportRequested_no = SMdeliveryReportRequested.no; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMdeliveryReportRequested_no: _enum_for_SMdeliveryReportRequested.no = SMdeliveryReportRequested.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no
@@ -87,7 +87,7 @@ const SMdeliveryReportRequested_no = SMdeliveryReportRequested.no; /* LONG_NAMED
  * @type {number}
  */
 export
-const no = SMdeliveryReportRequested.no; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no: _enum_for_SMdeliveryReportRequested.no = SMdeliveryReportRequested.no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMdeliveryReportRequested: $.ASN1Decoder<SMdeliveryReportRequested> = $._decodeEnumerated;

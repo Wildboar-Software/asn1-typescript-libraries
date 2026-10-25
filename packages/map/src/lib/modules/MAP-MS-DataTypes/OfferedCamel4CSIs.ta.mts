@@ -223,7 +223,7 @@ export const _decode_OfferedCamel4CSIs = (el: _Element): OfferedCamel4CSIs => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OfferedCamel4CSIs, encoded as an ASN.1 Element.
  */
-export const _encode_OfferedCamel4CSIs = $._encodeBitString;
+export const _encode_OfferedCamel4CSIs: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -91,7 +91,7 @@ type AiurRequested = _enum_for_AiurRequested;
  * @enum {number}
  */
 export
-const AiurRequested = _enum_for_AiurRequested;
+const AiurRequested: typeof _enum_for_AiurRequested = _enum_for_AiurRequested;
 
 /**
  * @summary AiurRequested_aiur09600BitsPerSecond
@@ -99,7 +99,7 @@ const AiurRequested = _enum_for_AiurRequested;
  * @type {number}
  */
 export
-const AiurRequested_aiur09600BitsPerSecond = AiurRequested.aiur09600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur09600BitsPerSecond: _enum_for_AiurRequested.aiur09600BitsPerSecond = AiurRequested.aiur09600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur09600BitsPerSecond
@@ -107,7 +107,7 @@ const AiurRequested_aiur09600BitsPerSecond = AiurRequested.aiur09600BitsPerSecon
  * @type {number}
  */
 export
-const aiur09600BitsPerSecond = AiurRequested.aiur09600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur09600BitsPerSecond: _enum_for_AiurRequested.aiur09600BitsPerSecond = AiurRequested.aiur09600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur14400BitsPerSecond
@@ -115,7 +115,7 @@ const aiur09600BitsPerSecond = AiurRequested.aiur09600BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur14400BitsPerSecond = AiurRequested.aiur14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur14400BitsPerSecond: _enum_for_AiurRequested.aiur14400BitsPerSecond = AiurRequested.aiur14400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur14400BitsPerSecond
@@ -123,7 +123,7 @@ const AiurRequested_aiur14400BitsPerSecond = AiurRequested.aiur14400BitsPerSecon
  * @type {number}
  */
 export
-const aiur14400BitsPerSecond = AiurRequested.aiur14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur14400BitsPerSecond: _enum_for_AiurRequested.aiur14400BitsPerSecond = AiurRequested.aiur14400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur19200BitsPerSecond
@@ -131,7 +131,7 @@ const aiur14400BitsPerSecond = AiurRequested.aiur14400BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur19200BitsPerSecond = AiurRequested.aiur19200BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur19200BitsPerSecond: _enum_for_AiurRequested.aiur19200BitsPerSecond = AiurRequested.aiur19200BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur19200BitsPerSecond
@@ -139,7 +139,7 @@ const AiurRequested_aiur19200BitsPerSecond = AiurRequested.aiur19200BitsPerSecon
  * @type {number}
  */
 export
-const aiur19200BitsPerSecond = AiurRequested.aiur19200BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur19200BitsPerSecond: _enum_for_AiurRequested.aiur19200BitsPerSecond = AiurRequested.aiur19200BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur28800BitsPerSecond
@@ -147,7 +147,7 @@ const aiur19200BitsPerSecond = AiurRequested.aiur19200BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur28800BitsPerSecond = AiurRequested.aiur28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur28800BitsPerSecond: _enum_for_AiurRequested.aiur28800BitsPerSecond = AiurRequested.aiur28800BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur28800BitsPerSecond
@@ -155,7 +155,7 @@ const AiurRequested_aiur28800BitsPerSecond = AiurRequested.aiur28800BitsPerSecon
  * @type {number}
  */
 export
-const aiur28800BitsPerSecond = AiurRequested.aiur28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur28800BitsPerSecond: _enum_for_AiurRequested.aiur28800BitsPerSecond = AiurRequested.aiur28800BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur38400BitsPerSecond
@@ -163,7 +163,7 @@ const aiur28800BitsPerSecond = AiurRequested.aiur28800BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur38400BitsPerSecond = AiurRequested.aiur38400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur38400BitsPerSecond: _enum_for_AiurRequested.aiur38400BitsPerSecond = AiurRequested.aiur38400BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur38400BitsPerSecond
@@ -171,7 +171,7 @@ const AiurRequested_aiur38400BitsPerSecond = AiurRequested.aiur38400BitsPerSecon
  * @type {number}
  */
 export
-const aiur38400BitsPerSecond = AiurRequested.aiur38400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur38400BitsPerSecond: _enum_for_AiurRequested.aiur38400BitsPerSecond = AiurRequested.aiur38400BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur43200BitsPerSecond
@@ -179,7 +179,7 @@ const aiur38400BitsPerSecond = AiurRequested.aiur38400BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur43200BitsPerSecond = AiurRequested.aiur43200BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur43200BitsPerSecond: _enum_for_AiurRequested.aiur43200BitsPerSecond = AiurRequested.aiur43200BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur43200BitsPerSecond
@@ -187,7 +187,7 @@ const AiurRequested_aiur43200BitsPerSecond = AiurRequested.aiur43200BitsPerSecon
  * @type {number}
  */
 export
-const aiur43200BitsPerSecond = AiurRequested.aiur43200BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur43200BitsPerSecond: _enum_for_AiurRequested.aiur43200BitsPerSecond = AiurRequested.aiur43200BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur57600BitsPerSecond
@@ -195,7 +195,7 @@ const aiur43200BitsPerSecond = AiurRequested.aiur43200BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur57600BitsPerSecond = AiurRequested.aiur57600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur57600BitsPerSecond: _enum_for_AiurRequested.aiur57600BitsPerSecond = AiurRequested.aiur57600BitsPerSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur57600BitsPerSecond
@@ -203,7 +203,7 @@ const AiurRequested_aiur57600BitsPerSecond = AiurRequested.aiur57600BitsPerSecon
  * @type {number}
  */
 export
-const aiur57600BitsPerSecond = AiurRequested.aiur57600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur57600BitsPerSecond: _enum_for_AiurRequested.aiur57600BitsPerSecond = AiurRequested.aiur57600BitsPerSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur38400BitsPerSecond1
@@ -211,7 +211,7 @@ const aiur57600BitsPerSecond = AiurRequested.aiur57600BitsPerSecond; /* SHORT_NA
  * @type {number}
  */
 export
-const AiurRequested_aiur38400BitsPerSecond1 = AiurRequested.aiur38400BitsPerSecond1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur38400BitsPerSecond1: _enum_for_AiurRequested.aiur38400BitsPerSecond1 = AiurRequested.aiur38400BitsPerSecond1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur38400BitsPerSecond1
@@ -219,7 +219,7 @@ const AiurRequested_aiur38400BitsPerSecond1 = AiurRequested.aiur38400BitsPerSeco
  * @type {number}
  */
 export
-const aiur38400BitsPerSecond1 = AiurRequested.aiur38400BitsPerSecond1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur38400BitsPerSecond1: _enum_for_AiurRequested.aiur38400BitsPerSecond1 = AiurRequested.aiur38400BitsPerSecond1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur38400BitsPerSecond2
@@ -227,7 +227,7 @@ const aiur38400BitsPerSecond1 = AiurRequested.aiur38400BitsPerSecond1; /* SHORT_
  * @type {number}
  */
 export
-const AiurRequested_aiur38400BitsPerSecond2 = AiurRequested.aiur38400BitsPerSecond2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur38400BitsPerSecond2: _enum_for_AiurRequested.aiur38400BitsPerSecond2 = AiurRequested.aiur38400BitsPerSecond2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur38400BitsPerSecond2
@@ -235,7 +235,7 @@ const AiurRequested_aiur38400BitsPerSecond2 = AiurRequested.aiur38400BitsPerSeco
  * @type {number}
  */
 export
-const aiur38400BitsPerSecond2 = AiurRequested.aiur38400BitsPerSecond2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur38400BitsPerSecond2: _enum_for_AiurRequested.aiur38400BitsPerSecond2 = AiurRequested.aiur38400BitsPerSecond2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur38400BitsPerSecond3
@@ -243,7 +243,7 @@ const aiur38400BitsPerSecond2 = AiurRequested.aiur38400BitsPerSecond2; /* SHORT_
  * @type {number}
  */
 export
-const AiurRequested_aiur38400BitsPerSecond3 = AiurRequested.aiur38400BitsPerSecond3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur38400BitsPerSecond3: _enum_for_AiurRequested.aiur38400BitsPerSecond3 = AiurRequested.aiur38400BitsPerSecond3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur38400BitsPerSecond3
@@ -251,7 +251,7 @@ const AiurRequested_aiur38400BitsPerSecond3 = AiurRequested.aiur38400BitsPerSeco
  * @type {number}
  */
 export
-const aiur38400BitsPerSecond3 = AiurRequested.aiur38400BitsPerSecond3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur38400BitsPerSecond3: _enum_for_AiurRequested.aiur38400BitsPerSecond3 = AiurRequested.aiur38400BitsPerSecond3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AiurRequested_aiur38400BitsPerSecond4
@@ -259,7 +259,7 @@ const aiur38400BitsPerSecond3 = AiurRequested.aiur38400BitsPerSecond3; /* SHORT_
  * @type {number}
  */
 export
-const AiurRequested_aiur38400BitsPerSecond4 = AiurRequested.aiur38400BitsPerSecond4; /* LONG_NAMED_ENUMERATED_VALUE */
+const AiurRequested_aiur38400BitsPerSecond4: _enum_for_AiurRequested.aiur38400BitsPerSecond4 = AiurRequested.aiur38400BitsPerSecond4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aiur38400BitsPerSecond4
@@ -267,7 +267,7 @@ const AiurRequested_aiur38400BitsPerSecond4 = AiurRequested.aiur38400BitsPerSeco
  * @type {number}
  */
 export
-const aiur38400BitsPerSecond4 = AiurRequested.aiur38400BitsPerSecond4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aiur38400BitsPerSecond4: _enum_for_AiurRequested.aiur38400BitsPerSecond4 = AiurRequested.aiur38400BitsPerSecond4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AiurRequested: $.ASN1Decoder<AiurRequested> = $._decodeEnumerated;

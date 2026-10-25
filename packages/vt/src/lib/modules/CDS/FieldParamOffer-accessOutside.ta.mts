@@ -77,8 +77,8 @@ const FieldParamOffer_accessOutside_notAllowed: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const notAllowed: number = FieldParamOffer_accessOutside_notAllowed; /* SHORT_NAMED_BIT */
-export const _decode_FieldParamOffer_accessOutside = $._decodeBitString;
-export const _encode_FieldParamOffer_accessOutside = $._encodeBitString;
+export const _decode_FieldParamOffer_accessOutside: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_FieldParamOffer_accessOutside: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

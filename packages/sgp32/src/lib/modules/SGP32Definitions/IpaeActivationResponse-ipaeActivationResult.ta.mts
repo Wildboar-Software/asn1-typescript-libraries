@@ -36,7 +36,7 @@ type IpaeActivationResponse_ipaeActivationResult = INTEGER;
  * @type {number}
  */
 export
-const IpaeActivationResponse_ipaeActivationResult_ok = 0 satisfies IpaeActivationResponse_ipaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
+const IpaeActivationResponse_ipaeActivationResult_ok: 0 = 0 satisfies IpaeActivationResponse_ipaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaeActivationResponse_ipaeActivationResult_ok
@@ -47,7 +47,7 @@ const IpaeActivationResponse_ipaeActivationResult_ok = 0 satisfies IpaeActivatio
  * @type {number}
  */
 export
-const ok = IpaeActivationResponse_ipaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = IpaeActivationResponse_ipaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaeActivationResponse_ipaeActivationResult_notSupported
@@ -58,7 +58,7 @@ const ok = IpaeActivationResponse_ipaeActivationResult_ok; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const IpaeActivationResponse_ipaeActivationResult_notSupported = 1 satisfies IpaeActivationResponse_ipaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
+const IpaeActivationResponse_ipaeActivationResult_notSupported: 1 = 1 satisfies IpaeActivationResponse_ipaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaeActivationResponse_ipaeActivationResult_notSupported
@@ -69,7 +69,7 @@ const IpaeActivationResponse_ipaeActivationResult_notSupported = 1 satisfies Ipa
  * @type {number}
  */
 export
-const notSupported = IpaeActivationResponse_ipaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const notSupported: 1 = IpaeActivationResponse_ipaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_IpaeActivationResponse_ipaeActivationResult: $.ASN1Decoder<IpaeActivationResponse_ipaeActivationResult> = $._decodeInteger;
 export const _encode_IpaeActivationResponse_ipaeActivationResult: $.ASN1Encoder<IpaeActivationResponse_ipaeActivationResult> = $._encodeInteger;
 

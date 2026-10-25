@@ -28,12 +28,12 @@ export type NumberOfCircuits = INTEGER;
 
 
 
-export const _decode_NumberOfCircuits = $._decodeInteger;
+export const _decode_NumberOfCircuits: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_NumberOfCircuits = $._encodeInteger;
+export const _encode_NumberOfCircuits: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

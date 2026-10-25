@@ -67,7 +67,7 @@ type FailureCause = _enum_for_FailureCause;
  * @enum {number}
  */
 export
-const FailureCause = _enum_for_FailureCause;
+const FailureCause: typeof _enum_for_FailureCause = _enum_for_FailureCause;
 
 /**
  * @summary FailureCause_wrongUserResponse
@@ -75,7 +75,7 @@ const FailureCause = _enum_for_FailureCause;
  * @type {number}
  */
 export
-const FailureCause_wrongUserResponse = FailureCause.wrongUserResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureCause_wrongUserResponse: _enum_for_FailureCause.wrongUserResponse = FailureCause.wrongUserResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrongUserResponse
@@ -83,7 +83,7 @@ const FailureCause_wrongUserResponse = FailureCause.wrongUserResponse; /* LONG_N
  * @type {number}
  */
 export
-const wrongUserResponse = FailureCause.wrongUserResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wrongUserResponse: _enum_for_FailureCause.wrongUserResponse = FailureCause.wrongUserResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FailureCause_wrongNetworkSignature
@@ -91,7 +91,7 @@ const wrongUserResponse = FailureCause.wrongUserResponse; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const FailureCause_wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* LONG_NAMED_ENUMERATED_VALUE */
+const FailureCause_wrongNetworkSignature: _enum_for_FailureCause.wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrongNetworkSignature
@@ -99,7 +99,7 @@ const FailureCause_wrongNetworkSignature = FailureCause.wrongNetworkSignature; /
  * @type {number}
  */
 export
-const wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wrongNetworkSignature: _enum_for_FailureCause.wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) FailureCause
@@ -107,7 +107,7 @@ const wrongNetworkSignature = FailureCause.wrongNetworkSignature; /* SHORT_NAMED
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_FailureCause = $._decodeEnumerated;
+export const _decode_FailureCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) FailureCause into an ASN.1 Element.
@@ -116,7 +116,7 @@ export const _decode_FailureCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FailureCause, encoded as an ASN.1 Element.
  */
-export const _encode_FailureCause = $._encodeEnumerated;
+export const _encode_FailureCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

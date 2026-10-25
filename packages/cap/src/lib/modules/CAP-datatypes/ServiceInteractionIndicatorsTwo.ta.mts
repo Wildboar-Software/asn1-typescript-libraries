@@ -172,8 +172,8 @@ export class ServiceInteractionIndicatorsTwo {
         return new ServiceInteractionIndicatorsTwo(_o.forwardServiceInteractionInd, _o.backwardServiceInteractionInd, _o.bothwayThroughConnectionInd, _o.connectedNumberTreatmentInd, _o.nonCUGCall, _o.holdTreatmentIndicator, _o.cwTreatmentIndicator, _o.ectTreatmentIndicator, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_bothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
-    public static _enum_for_connectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
+    public static _enum_for_bothwayThroughConnectionInd: typeof _enum_for_BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
+    public static _enum_for_connectedNumberTreatmentInd: typeof _enum_for_ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
 }
 
 export const _root_component_type_list_1_spec_for_ServiceInteractionIndicatorsTwo: $.ComponentSpec[] = [

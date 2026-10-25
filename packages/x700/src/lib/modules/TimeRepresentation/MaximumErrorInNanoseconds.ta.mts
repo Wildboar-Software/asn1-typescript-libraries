@@ -46,7 +46,7 @@ export type MaximumErrorInNanoseconds = INTEGER;
  * @constant
  * @type {number}
  */
-export const MaximumErrorInNanoseconds_noEstimate = 281474976710655 satisfies MaximumErrorInNanoseconds; /* LONG_NAMED_INTEGER_VALUE */
+export const MaximumErrorInNanoseconds_noEstimate: 281474976710655 = 281474976710655 satisfies MaximumErrorInNanoseconds; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MaximumErrorInNanoseconds_noEstimate
@@ -60,13 +60,13 @@ export const MaximumErrorInNanoseconds_noEstimate = 281474976710655 satisfies Ma
  * @constant
  * @type {number}
  */
-export const noEstimate = MaximumErrorInNanoseconds_noEstimate; /* SHORT_NAMED_INTEGER_VALUE */
+export const noEstimate: 281474976710655 = MaximumErrorInNanoseconds_noEstimate; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_MaximumErrorInNanoseconds = $._decodeInteger;
+export const _decode_MaximumErrorInNanoseconds: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MaximumErrorInNanoseconds = $._encodeInteger;
+export const _encode_MaximumErrorInNanoseconds: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

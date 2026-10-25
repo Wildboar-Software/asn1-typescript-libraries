@@ -94,7 +94,7 @@ class Downstream {
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

@@ -34,7 +34,7 @@ export const _decode_MaximumNumberOfCounters = (el: _Element): MaximumNumberOfCo
     }
     return value;
 };
-export const _encode_MaximumNumberOfCounters = $._encodeInteger;
+export const _encode_MaximumNumberOfCounters: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

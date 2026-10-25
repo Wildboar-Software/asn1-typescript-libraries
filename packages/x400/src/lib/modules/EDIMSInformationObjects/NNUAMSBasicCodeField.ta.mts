@@ -48,104 +48,104 @@ export type NNUAMSBasicCodeField = INTEGER;
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_unspecified = 0 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_unspecified: 0 = 0 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified = NNUAMSBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified: 0 = NNUAMSBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_cannot_deliver_to_user
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_cannot_deliver_to_user = 1 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_cannot_deliver_to_user: 1 = 1 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_cannot_deliver_to_user
  * @constant
  * @type {number}
  */
-export const cannot_deliver_to_user = NNUAMSBasicCodeField_cannot_deliver_to_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const cannot_deliver_to_user: 1 = NNUAMSBasicCodeField_cannot_deliver_to_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_delivery_timeout
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_delivery_timeout = 2 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_delivery_timeout: 2 = 2 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_delivery_timeout
  * @constant
  * @type {number}
  */
-export const delivery_timeout = NNUAMSBasicCodeField_delivery_timeout; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivery_timeout: 2 = NNUAMSBasicCodeField_delivery_timeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_message_discarded
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_message_discarded = 3 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_message_discarded: 3 = 3 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_message_discarded
  * @constant
  * @type {number}
  */
-export const message_discarded = NNUAMSBasicCodeField_message_discarded; /* SHORT_NAMED_INTEGER_VALUE */
+export const message_discarded: 3 = NNUAMSBasicCodeField_message_discarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_subscription_terminated
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_subscription_terminated = 4 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_subscription_terminated: 4 = 4 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_subscription_terminated
  * @constant
  * @type {number}
  */
-export const subscription_terminated = NNUAMSBasicCodeField_subscription_terminated; /* SHORT_NAMED_INTEGER_VALUE */
+export const subscription_terminated: 4 = NNUAMSBasicCodeField_subscription_terminated; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_forwarding_error
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_forwarding_error = 5 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_forwarding_error: 5 = 5 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_forwarding_error
  * @constant
  * @type {number}
  */
-export const forwarding_error = NNUAMSBasicCodeField_forwarding_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarding_error: 5 = NNUAMSBasicCodeField_forwarding_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_security_error
  * @constant
  * @type {number}
  */
-export const NNUAMSBasicCodeField_security_error = 6 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const NNUAMSBasicCodeField_security_error: 6 = 6 satisfies NNUAMSBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NNUAMSBasicCodeField_security_error
  * @constant
  * @type {number}
  */
-export const security_error = NNUAMSBasicCodeField_security_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const security_error: 6 = NNUAMSBasicCodeField_security_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_NNUAMSBasicCodeField = $._decodeInteger;
+export const _decode_NNUAMSBasicCodeField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NNUAMSBasicCodeField = $._encodeInteger;
+export const _encode_NNUAMSBasicCodeField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

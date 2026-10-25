@@ -69,7 +69,7 @@ class RoamingChargingProfile {
          * @static
          */
 
-    public static _enum_for_partialRecordMethod = _enum_for_PartialRecordMethod;
+    public static _enum_for_partialRecordMethod: typeof _enum_for_PartialRecordMethod = _enum_for_PartialRecordMethod;
 }
 
 /**

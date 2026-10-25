@@ -44,7 +44,7 @@ export type ServiceProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceProblem_busy = 1 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_busy: 1 = 1 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_busy
@@ -55,7 +55,7 @@ export const ServiceProblem_busy = 1 satisfies ServiceProblem; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const busy = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy: 1 = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
@@ -66,7 +66,7 @@ export const busy = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unavailable = 2 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unavailable: 2 = 2 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
@@ -77,7 +77,7 @@ export const ServiceProblem_unavailable = 2 satisfies ServiceProblem; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const unavailable = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailable: 2 = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwillingToPerform
@@ -88,7 +88,7 @@ export const unavailable = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unwillingToPerform = 3 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unwillingToPerform: 3 = 3 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwillingToPerform
@@ -99,7 +99,7 @@ export const ServiceProblem_unwillingToPerform = 3 satisfies ServiceProblem; /* 
  * @constant
  * @type {number}
  */
-export const unwillingToPerform = ServiceProblem_unwillingToPerform; /* SHORT_NAMED_INTEGER_VALUE */
+export const unwillingToPerform: 3 = ServiceProblem_unwillingToPerform; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_chainingRequired
@@ -110,7 +110,7 @@ export const unwillingToPerform = ServiceProblem_unwillingToPerform; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const ServiceProblem_chainingRequired = 4 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_chainingRequired: 4 = 4 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_chainingRequired
@@ -121,7 +121,7 @@ export const ServiceProblem_chainingRequired = 4 satisfies ServiceProblem; /* LO
  * @constant
  * @type {number}
  */
-export const chainingRequired = ServiceProblem_chainingRequired; /* SHORT_NAMED_INTEGER_VALUE */
+export const chainingRequired: 4 = ServiceProblem_chainingRequired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unableToProceed
@@ -133,7 +133,7 @@ export const chainingRequired = ServiceProblem_chainingRequired; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unableToProceed = 5 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unableToProceed: 5 = 5 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unableToProceed
@@ -145,7 +145,7 @@ export const ServiceProblem_unableToProceed = 5 satisfies ServiceProblem; /* LON
  * @constant
  * @type {number}
  */
-export const unableToProceed = ServiceProblem_unableToProceed; /* SHORT_NAMED_INTEGER_VALUE */
+export const unableToProceed: 5 = ServiceProblem_unableToProceed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_invalidReference
@@ -156,7 +156,7 @@ export const unableToProceed = ServiceProblem_unableToProceed; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const ServiceProblem_invalidReference = 6 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_invalidReference: 6 = 6 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_invalidReference
@@ -167,7 +167,7 @@ export const ServiceProblem_invalidReference = 6 satisfies ServiceProblem; /* LO
  * @constant
  * @type {number}
  */
-export const invalidReference = ServiceProblem_invalidReference; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidReference: 6 = ServiceProblem_invalidReference; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_timeLimitExceeded
@@ -178,7 +178,7 @@ export const invalidReference = ServiceProblem_invalidReference; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const ServiceProblem_timeLimitExceeded = 7 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_timeLimitExceeded: 7 = 7 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_timeLimitExceeded
@@ -189,7 +189,7 @@ export const ServiceProblem_timeLimitExceeded = 7 satisfies ServiceProblem; /* L
  * @constant
  * @type {number}
  */
-export const timeLimitExceeded = ServiceProblem_timeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const timeLimitExceeded: 7 = ServiceProblem_timeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_administrativeLimitExceeded
@@ -201,7 +201,7 @@ export const timeLimitExceeded = ServiceProblem_timeLimitExceeded; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const ServiceProblem_administrativeLimitExceeded = 8 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_administrativeLimitExceeded: 8 = 8 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_administrativeLimitExceeded
@@ -213,7 +213,7 @@ export const ServiceProblem_administrativeLimitExceeded = 8 satisfies ServicePro
  * @constant
  * @type {number}
  */
-export const administrativeLimitExceeded = ServiceProblem_administrativeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const administrativeLimitExceeded: 8 = ServiceProblem_administrativeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_loopDetected
@@ -224,7 +224,7 @@ export const administrativeLimitExceeded = ServiceProblem_administrativeLimitExc
  * @constant
  * @type {number}
  */
-export const ServiceProblem_loopDetected = 9 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_loopDetected: 9 = 9 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_loopDetected
@@ -235,7 +235,7 @@ export const ServiceProblem_loopDetected = 9 satisfies ServiceProblem; /* LONG_N
  * @constant
  * @type {number}
  */
-export const loopDetected = ServiceProblem_loopDetected; /* SHORT_NAMED_INTEGER_VALUE */
+export const loopDetected: 9 = ServiceProblem_loopDetected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailableCriticalExtension
@@ -246,7 +246,7 @@ export const loopDetected = ServiceProblem_loopDetected; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unavailableCriticalExtension = 10 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unavailableCriticalExtension: 10 = 10 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailableCriticalExtension
@@ -257,7 +257,7 @@ export const ServiceProblem_unavailableCriticalExtension = 10 satisfies ServiceP
  * @constant
  * @type {number}
  */
-export const unavailableCriticalExtension = ServiceProblem_unavailableCriticalExtension; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailableCriticalExtension: 10 = ServiceProblem_unavailableCriticalExtension; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_outOfScope
@@ -268,7 +268,7 @@ export const unavailableCriticalExtension = ServiceProblem_unavailableCriticalEx
  * @constant
  * @type {number}
  */
-export const ServiceProblem_outOfScope = 11 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_outOfScope: 11 = 11 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_outOfScope
@@ -279,7 +279,7 @@ export const ServiceProblem_outOfScope = 11 satisfies ServiceProblem; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const outOfScope = ServiceProblem_outOfScope; /* SHORT_NAMED_INTEGER_VALUE */
+export const outOfScope: 11 = ServiceProblem_outOfScope; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_ditError
@@ -290,7 +290,7 @@ export const outOfScope = ServiceProblem_outOfScope; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const ServiceProblem_ditError = 12 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_ditError: 12 = 12 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_ditError
@@ -301,7 +301,7 @@ export const ServiceProblem_ditError = 12 satisfies ServiceProblem; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const ditError = ServiceProblem_ditError; /* SHORT_NAMED_INTEGER_VALUE */
+export const ditError: 12 = ServiceProblem_ditError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_invalidQueryReference
@@ -312,7 +312,7 @@ export const ditError = ServiceProblem_ditError; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const ServiceProblem_invalidQueryReference = 13 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_invalidQueryReference: 13 = 13 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_invalidQueryReference
@@ -323,7 +323,7 @@ export const ServiceProblem_invalidQueryReference = 13 satisfies ServiceProblem;
  * @constant
  * @type {number}
  */
-export const invalidQueryReference = ServiceProblem_invalidQueryReference; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidQueryReference: 13 = ServiceProblem_invalidQueryReference; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_requestedServiceNotAvailable
@@ -335,7 +335,7 @@ export const invalidQueryReference = ServiceProblem_invalidQueryReference; /* SH
  * @constant
  * @type {number}
  */
-export const ServiceProblem_requestedServiceNotAvailable = 14 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_requestedServiceNotAvailable: 14 = 14 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_requestedServiceNotAvailable
@@ -347,7 +347,7 @@ export const ServiceProblem_requestedServiceNotAvailable = 14 satisfies ServiceP
  * @constant
  * @type {number}
  */
-export const requestedServiceNotAvailable = ServiceProblem_requestedServiceNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+export const requestedServiceNotAvailable: 14 = ServiceProblem_requestedServiceNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unsupportedMatchingUse
@@ -358,7 +358,7 @@ export const requestedServiceNotAvailable = ServiceProblem_requestedServiceNotAv
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unsupportedMatchingUse = 15 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unsupportedMatchingUse: 15 = 15 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unsupportedMatchingUse
@@ -369,7 +369,7 @@ export const ServiceProblem_unsupportedMatchingUse = 15 satisfies ServiceProblem
  * @constant
  * @type {number}
  */
-export const unsupportedMatchingUse = ServiceProblem_unsupportedMatchingUse; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupportedMatchingUse: 15 = ServiceProblem_unsupportedMatchingUse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_ambiguousKeyAttributes
@@ -381,7 +381,7 @@ export const unsupportedMatchingUse = ServiceProblem_unsupportedMatchingUse; /* 
  * @constant
  * @type {number}
  */
-export const ServiceProblem_ambiguousKeyAttributes = 16 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_ambiguousKeyAttributes: 16 = 16 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_ambiguousKeyAttributes
@@ -393,7 +393,7 @@ export const ServiceProblem_ambiguousKeyAttributes = 16 satisfies ServiceProblem
  * @constant
  * @type {number}
  */
-export const ambiguousKeyAttributes = ServiceProblem_ambiguousKeyAttributes; /* SHORT_NAMED_INTEGER_VALUE */
+export const ambiguousKeyAttributes: 16 = ServiceProblem_ambiguousKeyAttributes; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_saslBindInProgress
@@ -405,7 +405,7 @@ export const ambiguousKeyAttributes = ServiceProblem_ambiguousKeyAttributes; /* 
  * @constant
  * @type {number}
  */
-export const ServiceProblem_saslBindInProgress = 17 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_saslBindInProgress: 17 = 17 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_saslBindInProgress
@@ -417,7 +417,7 @@ export const ServiceProblem_saslBindInProgress = 17 satisfies ServiceProblem; /*
  * @constant
  * @type {number}
  */
-export const saslBindInProgress = ServiceProblem_saslBindInProgress; /* SHORT_NAMED_INTEGER_VALUE */
+export const saslBindInProgress: 17 = ServiceProblem_saslBindInProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_notSupportedByLDAP
@@ -428,7 +428,7 @@ export const saslBindInProgress = ServiceProblem_saslBindInProgress; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const ServiceProblem_notSupportedByLDAP = 18 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_notSupportedByLDAP: 18 = 18 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_notSupportedByLDAP
@@ -439,13 +439,13 @@ export const ServiceProblem_notSupportedByLDAP = 18 satisfies ServiceProblem; /*
  * @constant
  * @type {number}
  */
-export const notSupportedByLDAP = ServiceProblem_notSupportedByLDAP; /* SHORT_NAMED_INTEGER_VALUE */
+export const notSupportedByLDAP: 18 = ServiceProblem_notSupportedByLDAP; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ServiceProblem = $._decodeInteger;
+export const _decode_ServiceProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ServiceProblem = $._encodeInteger;
+export const _encode_ServiceProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

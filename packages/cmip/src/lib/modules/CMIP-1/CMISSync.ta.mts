@@ -63,7 +63,7 @@ export type CMISSync = _enum_for_CMISSync;
  *
  * @enum {number}
  */
-export const CMISSync = _enum_for_CMISSync;
+export const CMISSync: typeof _enum_for_CMISSync = _enum_for_CMISSync;
 
 
 /**
@@ -75,7 +75,7 @@ export const CMISSync = _enum_for_CMISSync;
  * @constant
  * @type {number}
  */
-export const CMISSync_bestEffort =
+export const CMISSync_bestEffort: _enum_for_CMISSync.bestEffort =
   CMISSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const CMISSync_bestEffort =
  * @constant
  * @type {number}
  */
-export const bestEffort =
+export const bestEffort: _enum_for_CMISSync.bestEffort =
   CMISSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +98,7 @@ export const bestEffort =
  * @constant
  * @type {number}
  */
-export const CMISSync_atomic =
+export const CMISSync_atomic: _enum_for_CMISSync.atomic =
   CMISSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -107,18 +107,18 @@ export const CMISSync_atomic =
  * @constant
  * @type {number}
  */
-export const atomic =
+export const atomic: _enum_for_CMISSync.atomic =
   CMISSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CMISSync = $._decodeEnumerated;
+export const _decode_CMISSync: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_CMISSync = $._encodeEnumerated;
+export const _encode_CMISSync: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

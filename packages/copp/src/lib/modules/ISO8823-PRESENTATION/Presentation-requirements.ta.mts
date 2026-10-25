@@ -76,12 +76,12 @@ export const restoration: number = Presentation_requirements_restoration; /* SHO
 
 
 
-export const _decode_Presentation_requirements = $._decodeBitString;
+export const _decode_Presentation_requirements: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Presentation_requirements = $._encodeBitString;
+export const _encode_Presentation_requirements: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

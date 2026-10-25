@@ -105,13 +105,13 @@ class ChargeInformation {
          * @static
          */
 
-    public static _enum_for_chargedparty = _enum_for_ChargedParty;        /**
+    public static _enum_for_chargedparty: typeof _enum_for_ChargedParty = _enum_for_ChargedParty;        /**
          * @summary The enum used as the type of the component `chargetype`
          * @public
          * @static
          */
 
-    public static _enum_for_chargetype = _enum_for_ChargeType;
+    public static _enum_for_chargetype: typeof _enum_for_ChargeType = _enum_for_ChargeType;
 }
 
 /**

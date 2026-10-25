@@ -266,7 +266,7 @@ class HandlingInformationRequestArg_Type {
          * @static
          */
 
-    public static _enum_for_invokedSupplementaryService = _enum_for_InvokableService;
+    public static _enum_for_invokedSupplementaryService: typeof _enum_for_InvokableService = _enum_for_InvokableService;
 }
 
 /**

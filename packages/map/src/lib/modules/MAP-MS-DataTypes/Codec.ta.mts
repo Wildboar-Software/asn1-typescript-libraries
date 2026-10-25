@@ -46,7 +46,7 @@ export const _decode_Codec = (el: _Element): Codec => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Codec, encoded as an ASN.1 Element.
  */
-export const _encode_Codec = $._encodeOctetString;
+export const _encode_Codec: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

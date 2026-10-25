@@ -34,6 +34,6 @@ export const _decode_V59String = (el: _Element): V59String => {
     }
     return value;
 };
-export const _encode_V59String = $._encodeIA5String;
+export const _encode_V59String: $.ASN1Encoder<string> = $._encodeIA5String;
 
 /* eslint-enable */

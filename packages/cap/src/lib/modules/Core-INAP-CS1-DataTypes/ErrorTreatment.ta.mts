@@ -69,7 +69,7 @@ type ErrorTreatment = _enum_for_ErrorTreatment;
  * @enum {number}
  */
 export
-const ErrorTreatment = _enum_for_ErrorTreatment;
+const ErrorTreatment: typeof _enum_for_ErrorTreatment = _enum_for_ErrorTreatment;
 
 /**
  * @summary ErrorTreatment_stdErrorAndInfo
@@ -77,7 +77,7 @@ const ErrorTreatment = _enum_for_ErrorTreatment;
  * @type {number}
  */
 export
-const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_stdErrorAndInfo: _enum_for_ErrorTreatment.stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stdErrorAndInfo
@@ -85,7 +85,7 @@ const ErrorTreatment_stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* LONG_N
  * @type {number}
  */
 export
-const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stdErrorAndInfo: _enum_for_ErrorTreatment.stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorTreatment_help
@@ -93,7 +93,7 @@ const stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ErrorTreatment_help = ErrorTreatment.help; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_help: _enum_for_ErrorTreatment.help = ErrorTreatment.help; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary help
@@ -101,7 +101,7 @@ const ErrorTreatment_help = ErrorTreatment.help; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const help = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALUE */
+const help: _enum_for_ErrorTreatment.help = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorTreatment_repeatPrompt
@@ -109,7 +109,7 @@ const help = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_repeatPrompt: _enum_for_ErrorTreatment.repeatPrompt = ErrorTreatment.repeatPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary repeatPrompt
@@ -117,9 +117,9 @@ const ErrorTreatment_repeatPrompt = ErrorTreatment.repeatPrompt; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const repeatPrompt = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ErrorTreatment = $._decodeEnumerated;
-export const _encode_ErrorTreatment = $._encodeEnumerated;
+const repeatPrompt: _enum_for_ErrorTreatment.repeatPrompt = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ErrorTreatment: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ErrorTreatment: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

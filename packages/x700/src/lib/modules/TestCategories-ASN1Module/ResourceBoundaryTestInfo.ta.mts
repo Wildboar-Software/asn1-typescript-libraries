@@ -105,7 +105,7 @@ export class ResourceBoundaryTestInfo {
      * @static
      */
 
-    public static _enum_for_resultReportIndicator = _enum_for_ResultReportIndicator;
+    public static _enum_for_resultReportIndicator: typeof _enum_for_ResultReportIndicator = _enum_for_ResultReportIndicator;
 }
 
 /**

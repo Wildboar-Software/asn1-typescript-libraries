@@ -255,7 +255,7 @@ class MultipleQFIContainer {
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
 }
 
 /**

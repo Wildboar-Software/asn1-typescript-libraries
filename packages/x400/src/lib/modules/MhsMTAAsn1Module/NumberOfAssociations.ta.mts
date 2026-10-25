@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type NumberOfAssociations = INTEGER;
 
 
-export const _decode_NumberOfAssociations = $._decodeInteger;
+export const _decode_NumberOfAssociations: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NumberOfAssociations = $._encodeInteger;
+export const _encode_NumberOfAssociations: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

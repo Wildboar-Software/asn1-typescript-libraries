@@ -87,7 +87,7 @@ export type IntermediateResponse = _enum_for_IntermediateResponse;
  *
  * @enum {number}
  */
-export const IntermediateResponse = _enum_for_IntermediateResponse;
+export const IntermediateResponse: typeof _enum_for_IntermediateResponse = _enum_for_IntermediateResponse;
 
 /**
  * @summary IntermediateResponse_inProgress
@@ -97,7 +97,7 @@ export const IntermediateResponse = _enum_for_IntermediateResponse;
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_inProgress =
+export const IntermediateResponse_inProgress: _enum_for_IntermediateResponse.inProgress =
     IntermediateResponse.inProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -108,7 +108,7 @@ export const IntermediateResponse_inProgress =
  * @constant
  * @type {number}
  */
-export const inProgress =
+export const inProgress: _enum_for_IntermediateResponse.inProgress =
     IntermediateResponse.inProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const inProgress =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_delayedMeasurement =
+export const IntermediateResponse_delayedMeasurement: _enum_for_IntermediateResponse.delayedMeasurement =
     IntermediateResponse.delayedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const IntermediateResponse_delayedMeasurement =
  * @constant
  * @type {number}
  */
-export const delayedMeasurement =
+export const delayedMeasurement: _enum_for_IntermediateResponse.delayedMeasurement =
     IntermediateResponse.delayedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,7 +141,7 @@ export const delayedMeasurement =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_interruptedMeasurement =
+export const IntermediateResponse_interruptedMeasurement: _enum_for_IntermediateResponse.interruptedMeasurement =
     IntermediateResponse.interruptedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const IntermediateResponse_interruptedMeasurement =
  * @constant
  * @type {number}
  */
-export const interruptedMeasurement =
+export const interruptedMeasurement: _enum_for_IntermediateResponse.interruptedMeasurement =
     IntermediateResponse.interruptedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -163,7 +163,7 @@ export const interruptedMeasurement =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_repeatLater =
+export const IntermediateResponse_repeatLater: _enum_for_IntermediateResponse.repeatLater =
     IntermediateResponse.repeatLater; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -174,7 +174,7 @@ export const IntermediateResponse_repeatLater =
  * @constant
  * @type {number}
  */
-export const repeatLater =
+export const repeatLater: _enum_for_IntermediateResponse.repeatLater =
     IntermediateResponse.repeatLater; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -185,7 +185,7 @@ export const repeatLater =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_noAcknowledgement =
+export const IntermediateResponse_noAcknowledgement: _enum_for_IntermediateResponse.noAcknowledgement =
     IntermediateResponse.noAcknowledgement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -196,7 +196,7 @@ export const IntermediateResponse_noAcknowledgement =
  * @constant
  * @type {number}
  */
-export const noAcknowledgement =
+export const noAcknowledgement: _enum_for_IntermediateResponse.noAcknowledgement =
     IntermediateResponse.noAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

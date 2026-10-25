@@ -203,7 +203,7 @@ class SGSNLocationInformation {
          * @static
          */
 
-    public static _enum_for_currentLocationRetrieved = _enum_for_CurrentLocationRetrieved;
+    public static _enum_for_currentLocationRetrieved: typeof _enum_for_CurrentLocationRetrieved = _enum_for_CurrentLocationRetrieved;
 }
 
 /**

@@ -38,7 +38,7 @@ export type OperationProgress_nameResolutionPhase =
  * @constant
  * @type {number}
  */
-export const OperationProgress_nameResolutionPhase_notStarted = _enum_for_OperationProgress_nameResolutionPhase.notStarted; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OperationProgress_nameResolutionPhase_notStarted: _enum_for_OperationProgress_nameResolutionPhase.notStarted = _enum_for_OperationProgress_nameResolutionPhase.notStarted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notStarted
@@ -50,7 +50,7 @@ export const OperationProgress_nameResolutionPhase_notStarted = _enum_for_Operat
  * @constant
  * @type {number}
  */
-export const notStarted = OperationProgress_nameResolutionPhase_notStarted; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notStarted: _enum_for_OperationProgress_nameResolutionPhase.notStarted = OperationProgress_nameResolutionPhase_notStarted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationProgress_nameResolutionPhase_proceeding
@@ -62,7 +62,7 @@ export const notStarted = OperationProgress_nameResolutionPhase_notStarted; /* S
  * @constant
  * @type {number}
  */
-export const OperationProgress_nameResolutionPhase_proceeding = _enum_for_OperationProgress_nameResolutionPhase.proceeding; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OperationProgress_nameResolutionPhase_proceeding: _enum_for_OperationProgress_nameResolutionPhase.proceeding = _enum_for_OperationProgress_nameResolutionPhase.proceeding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proceeding
@@ -74,7 +74,7 @@ export const OperationProgress_nameResolutionPhase_proceeding = _enum_for_Operat
  * @constant
  * @type {number}
  */
-export const proceeding = OperationProgress_nameResolutionPhase_proceeding; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const proceeding: _enum_for_OperationProgress_nameResolutionPhase.proceeding = OperationProgress_nameResolutionPhase_proceeding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationProgress_nameResolutionPhase_completed
@@ -86,7 +86,7 @@ export const proceeding = OperationProgress_nameResolutionPhase_proceeding; /* S
  * @constant
  * @type {number}
  */
-export const OperationProgress_nameResolutionPhase_completed = _enum_for_OperationProgress_nameResolutionPhase.completed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const OperationProgress_nameResolutionPhase_completed: _enum_for_OperationProgress_nameResolutionPhase.completed = _enum_for_OperationProgress_nameResolutionPhase.completed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary completed
@@ -98,7 +98,7 @@ export const OperationProgress_nameResolutionPhase_completed = _enum_for_Operati
  * @constant
  * @type {number}
  */
-export const completed = OperationProgress_nameResolutionPhase_completed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const completed: _enum_for_OperationProgress_nameResolutionPhase.completed = OperationProgress_nameResolutionPhase_completed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_OperationProgress_nameResolutionPhase: $.ASN1Decoder<OperationProgress_nameResolutionPhase> | null = null;
 

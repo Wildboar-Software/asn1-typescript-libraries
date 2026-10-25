@@ -55,7 +55,7 @@ type ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
  * @enum {number}
  */
 export
-const ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
+const ThreeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
 
 /**
  * @summary ThreeGPPPSDataOffStatus_active
@@ -63,7 +63,7 @@ const ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
  * @type {number}
  */
 export
-const ThreeGPPPSDataOffStatus_active = ThreeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const ThreeGPPPSDataOffStatus_active: _enum_for_ThreeGPPPSDataOffStatus.active = ThreeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -71,7 +71,7 @@ const ThreeGPPPSDataOffStatus_active = ThreeGPPPSDataOffStatus.active; /* LONG_N
  * @type {number}
  */
 export
-const active = ThreeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: _enum_for_ThreeGPPPSDataOffStatus.active = ThreeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ThreeGPPPSDataOffStatus_inactive
@@ -79,7 +79,7 @@ const active = ThreeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const ThreeGPPPSDataOffStatus_inactive = ThreeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ThreeGPPPSDataOffStatus_inactive: _enum_for_ThreeGPPPSDataOffStatus.inactive = ThreeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -87,7 +87,7 @@ const ThreeGPPPSDataOffStatus_inactive = ThreeGPPPSDataOffStatus.inactive; /* LO
  * @type {number}
  */
 export
-const inactive = ThreeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive: _enum_for_ThreeGPPPSDataOffStatus.inactive = ThreeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ThreeGPPPSDataOffStatus: $.ASN1Decoder<ThreeGPPPSDataOffStatus> = $._decodeEnumerated;

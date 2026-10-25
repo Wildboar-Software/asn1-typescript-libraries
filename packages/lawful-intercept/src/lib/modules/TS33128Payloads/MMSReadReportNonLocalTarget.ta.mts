@@ -278,13 +278,13 @@ class MMSReadReportNonLocalTarget {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `readStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_readStatus = _enum_for_MMSReadStatus;
+    public static _enum_for_readStatus: typeof _enum_for_MMSReadStatus = _enum_for_MMSReadStatus;
 }
 
 /**

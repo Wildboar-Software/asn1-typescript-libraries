@@ -482,19 +482,19 @@ class SendRoutingInfoArg {
          * @static
          */
 
-    public static _enum_for_interrogationType = _enum_for_InterrogationType;        /**
+    public static _enum_for_interrogationType: typeof _enum_for_InterrogationType = _enum_for_InterrogationType;        /**
          * @summary The enum used as the type of the component `forwardingReason`
          * @public
          * @static
          */
 
-    public static _enum_for_forwardingReason = _enum_for_ForwardingReason;        /**
+    public static _enum_for_forwardingReason: typeof _enum_for_ForwardingReason = _enum_for_ForwardingReason;        /**
          * @summary The enum used as the type of the component `istSupportIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_istSupportIndicator = _enum_for_IST_SupportIndicator;
+    public static _enum_for_istSupportIndicator: typeof _enum_for_IST_SupportIndicator = _enum_for_IST_SupportIndicator;
 }
 
 /**

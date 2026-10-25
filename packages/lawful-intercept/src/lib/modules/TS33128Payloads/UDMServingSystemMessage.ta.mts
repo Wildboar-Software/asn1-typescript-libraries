@@ -231,7 +231,7 @@ class UDMServingSystemMessage {
          * @static
          */
 
-    public static _enum_for_servingSystemMethod = _enum_for_UDMServingSystemMethod;
+    public static _enum_for_servingSystemMethod: typeof _enum_for_UDMServingSystemMethod = _enum_for_UDMServingSystemMethod;
 }
 
 /**

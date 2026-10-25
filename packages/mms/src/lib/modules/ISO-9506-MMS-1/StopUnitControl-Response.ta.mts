@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type StopUnitControl_Response = NULL; // NullType
-export const _decode_StopUnitControl_Response = $._decodeNull;
-export const _encode_StopUnitControl_Response = $._encodeNull;
+export const _decode_StopUnitControl_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_StopUnitControl_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

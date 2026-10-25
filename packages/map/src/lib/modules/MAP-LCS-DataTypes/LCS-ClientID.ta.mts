@@ -157,13 +157,13 @@ class LCS_ClientID {
          * @static
          */
 
-    public static _enum_for_lcsClientType = _enum_for_LCSClientType;        /**
+    public static _enum_for_lcsClientType: typeof _enum_for_LCSClientType = _enum_for_LCSClientType;        /**
          * @summary The enum used as the type of the component `lcsClientInternalID`
          * @public
          * @static
          */
 
-    public static _enum_for_lcsClientInternalID = _enum_for_LCSClientInternalID;
+    public static _enum_for_lcsClientInternalID: typeof _enum_for_LCSClientInternalID = _enum_for_LCSClientInternalID;
 }
 
 /**

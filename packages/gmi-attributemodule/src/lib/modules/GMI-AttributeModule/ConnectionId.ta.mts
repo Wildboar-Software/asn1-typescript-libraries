@@ -44,12 +44,12 @@ type ConnectionId = GraphicString; // GraphicString
 
 
 
-export const _decode_ConnectionId = $._decodeGraphicString;
+export const _decode_ConnectionId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_ConnectionId = $._encodeGraphicString;
+export const _encode_ConnectionId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

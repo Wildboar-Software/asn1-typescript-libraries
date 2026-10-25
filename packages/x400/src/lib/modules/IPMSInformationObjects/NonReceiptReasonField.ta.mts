@@ -42,34 +42,34 @@ export type NonReceiptReasonField =
  * @constant
  * @type {number}
  */
-export const NonReceiptReasonField_ipm_discarded = _enum_for_NonReceiptReasonField.ipm_discarded; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NonReceiptReasonField_ipm_discarded: _enum_for_NonReceiptReasonField.ipm_discarded = _enum_for_NonReceiptReasonField.ipm_discarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm_discarded
  * @constant
  * @type {number}
  */
-export const ipm_discarded = NonReceiptReasonField_ipm_discarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ipm_discarded: _enum_for_NonReceiptReasonField.ipm_discarded = NonReceiptReasonField_ipm_discarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NonReceiptReasonField_ipm_auto_forwarded
  * @constant
  * @type {number}
  */
-export const NonReceiptReasonField_ipm_auto_forwarded = _enum_for_NonReceiptReasonField.ipm_auto_forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+export const NonReceiptReasonField_ipm_auto_forwarded: _enum_for_NonReceiptReasonField.ipm_auto_forwarded = _enum_for_NonReceiptReasonField.ipm_auto_forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipm_auto_forwarded
  * @constant
  * @type {number}
  */
-export const ipm_auto_forwarded = NonReceiptReasonField_ipm_auto_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ipm_auto_forwarded: _enum_for_NonReceiptReasonField.ipm_auto_forwarded = NonReceiptReasonField_ipm_auto_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_NonReceiptReasonField = $._decodeEnumerated;
+export const _decode_NonReceiptReasonField: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_NonReceiptReasonField = $._encodeEnumerated;
+export const _encode_NonReceiptReasonField: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -29,7 +29,7 @@ export type HOBRole = INTEGER;
  * @constant
  * @type {number}
  */
-export const HOBRole_superior = 0 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE */
+export const HOBRole_superior: 0 = 0 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HOBRole_superior
@@ -41,7 +41,7 @@ export const HOBRole_superior = 0 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const superior = HOBRole_superior; /* SHORT_NAMED_INTEGER_VALUE */
+export const superior: 0 = HOBRole_superior; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HOBRole_subordinate
@@ -52,7 +52,7 @@ export const superior = HOBRole_superior; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const HOBRole_subordinate = 1 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE */
+export const HOBRole_subordinate: 1 = 1 satisfies HOBRole; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HOBRole_subordinate
@@ -63,13 +63,13 @@ export const HOBRole_subordinate = 1 satisfies HOBRole; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const subordinate = HOBRole_subordinate; /* SHORT_NAMED_INTEGER_VALUE */
+export const subordinate: 1 = HOBRole_subordinate; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_HOBRole = $._decodeInteger;
+export const _decode_HOBRole: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_HOBRole = $._encodeInteger;
+export const _encode_HOBRole: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

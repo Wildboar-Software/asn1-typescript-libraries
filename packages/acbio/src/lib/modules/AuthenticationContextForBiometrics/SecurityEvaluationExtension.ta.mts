@@ -28,12 +28,12 @@ export type SecurityEvaluationExtension = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_SecurityEvaluationExtension = $._decodeOctetString;
+export const _decode_SecurityEvaluationExtension: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_SecurityEvaluationExtension = $._encodeOctetString;
+export const _encode_SecurityEvaluationExtension: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

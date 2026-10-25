@@ -58,14 +58,14 @@ export type CancelProblem = _enum_for_CancelProblem;
  *
  * @enum {number}
  */
-export const CancelProblem = _enum_for_CancelProblem;
+export const CancelProblem: typeof _enum_for_CancelProblem = _enum_for_CancelProblem;
 
 /**
  * @summary CancelProblem_unknownInvocation
  * @constant
  * @type {number}
  */
-export const CancelProblem_unknownInvocation =
+export const CancelProblem_unknownInvocation: _enum_for_CancelProblem.unknownInvocation =
   CancelProblem.unknownInvocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -73,7 +73,7 @@ export const CancelProblem_unknownInvocation =
  * @constant
  * @type {number}
  */
-export const unknownInvocation =
+export const unknownInvocation: _enum_for_CancelProblem.unknownInvocation =
   CancelProblem.unknownInvocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const unknownInvocation =
  * @constant
  * @type {number}
  */
-export const CancelProblem_tooLate =
+export const CancelProblem_tooLate: _enum_for_CancelProblem.tooLate =
   CancelProblem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const CancelProblem_tooLate =
  * @constant
  * @type {number}
  */
-export const tooLate =
+export const tooLate: _enum_for_CancelProblem.tooLate =
   CancelProblem.tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const tooLate =
  * @constant
  * @type {number}
  */
-export const CancelProblem_notCancellable =
+export const CancelProblem_notCancellable: _enum_for_CancelProblem.notCancellable =
   CancelProblem.notCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,14 +105,14 @@ export const CancelProblem_notCancellable =
  * @constant
  * @type {number}
  */
-export const notCancellable =
+export const notCancellable: _enum_for_CancelProblem.notCancellable =
   CancelProblem.notCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CancelProblem = $._decodeEnumerated;
+export const _decode_CancelProblem: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_CancelProblem = $._encodeEnumerated;
+export const _encode_CancelProblem: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

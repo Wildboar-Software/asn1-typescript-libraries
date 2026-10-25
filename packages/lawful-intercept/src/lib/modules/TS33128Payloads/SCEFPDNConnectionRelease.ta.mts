@@ -246,7 +246,7 @@ class SCEFPDNConnectionRelease {
          * @static
          */
 
-    public static _enum_for_releaseCause = _enum_for_SCEFReleaseCause;
+    public static _enum_for_releaseCause: typeof _enum_for_SCEFReleaseCause = _enum_for_SCEFReleaseCause;
 }
 
 /**

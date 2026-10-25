@@ -203,13 +203,13 @@ class SendGroupCallInfoArg {
          * @static
          */
 
-    public static _enum_for_requestedInfo = _enum_for_RequestedInfo;        /**
+    public static _enum_for_requestedInfo: typeof _enum_for_RequestedInfo = _enum_for_RequestedInfo;        /**
          * @summary The enum used as the type of the component `talkerPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_talkerPriority = _enum_for_TalkerPriority;
+    public static _enum_for_talkerPriority: typeof _enum_for_TalkerPriority = _enum_for_TalkerPriority;
 }
 
 /**

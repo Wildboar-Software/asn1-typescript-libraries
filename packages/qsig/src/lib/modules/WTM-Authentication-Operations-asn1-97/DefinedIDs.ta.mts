@@ -44,7 +44,7 @@ type DefinedIDs = INTEGER;
  * @type {number}
  */
 export
-const DefinedIDs_ct2 = 0 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_ct2: 0 = 0 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_ct2
@@ -53,7 +53,7 @@ const DefinedIDs_ct2 = 0 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ct2 = DefinedIDs_ct2; /* SHORT_NAMED_INTEGER_VALUE */
+const ct2: 0 = DefinedIDs_ct2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_dect
@@ -64,7 +64,7 @@ const ct2 = DefinedIDs_ct2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_dect = 1 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_dect: 1 = 1 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_dect
@@ -73,7 +73,7 @@ const DefinedIDs_dect = 1 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dect = DefinedIDs_dect; /* SHORT_NAMED_INTEGER_VALUE */
+const dect: 1 = DefinedIDs_dect; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_gsm
@@ -83,7 +83,7 @@ const dect = DefinedIDs_dect; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_gsm = 2 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_gsm: 2 = 2 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_gsm
@@ -92,7 +92,7 @@ const DefinedIDs_gsm = 2 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const gsm = DefinedIDs_gsm; /* SHORT_NAMED_INTEGER_VALUE */
+const gsm: 2 = DefinedIDs_gsm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pci
@@ -102,7 +102,7 @@ const gsm = DefinedIDs_gsm; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_pci = 3 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_pci: 3 = 3 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pci
@@ -111,7 +111,7 @@ const DefinedIDs_pci = 3 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pci = DefinedIDs_pci; /* SHORT_NAMED_INTEGER_VALUE */
+const pci: 3 = DefinedIDs_pci; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pwt
@@ -121,7 +121,7 @@ const pci = DefinedIDs_pci; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_pwt = 4 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_pwt: 4 = 4 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_pwt
@@ -130,7 +130,7 @@ const DefinedIDs_pwt = 4 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pwt = DefinedIDs_pwt; /* SHORT_NAMED_INTEGER_VALUE */
+const pwt: 4 = DefinedIDs_pwt; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_us_gsm
@@ -141,7 +141,7 @@ const pwt = DefinedIDs_pwt; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_us_gsm = 5 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_us_gsm: 5 = 5 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_us_gsm
@@ -150,7 +150,7 @@ const DefinedIDs_us_gsm = 5 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const us_gsm = DefinedIDs_us_gsm; /* SHORT_NAMED_INTEGER_VALUE */
+const us_gsm: 5 = DefinedIDs_us_gsm; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_phs
@@ -160,7 +160,7 @@ const us_gsm = DefinedIDs_us_gsm; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_phs = 6 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_phs: 6 = 6 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_phs
@@ -169,7 +169,7 @@ const DefinedIDs_phs = 6 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const phs = DefinedIDs_phs; /* SHORT_NAMED_INTEGER_VALUE */
+const phs: 6 = DefinedIDs_phs; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_tetra
@@ -180,7 +180,7 @@ const phs = DefinedIDs_phs; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DefinedIDs_tetra = 7 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
+const DefinedIDs_tetra: 7 = 7 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DefinedIDs_tetra
@@ -189,7 +189,7 @@ const DefinedIDs_tetra = 7 satisfies DefinedIDs; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const tetra = DefinedIDs_tetra; /* SHORT_NAMED_INTEGER_VALUE */
+const tetra: 7 = DefinedIDs_tetra; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_DefinedIDs = (el: _Element): DefinedIDs => {

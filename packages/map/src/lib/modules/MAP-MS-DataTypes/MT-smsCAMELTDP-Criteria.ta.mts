@@ -90,7 +90,7 @@ class MT_smsCAMELTDP_Criteria {
          * @static
          */
 
-    public static _enum_for_sms_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;
+    public static _enum_for_sms_TriggerDetectionPoint: typeof _enum_for_SMS_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;
 }
 
 /**

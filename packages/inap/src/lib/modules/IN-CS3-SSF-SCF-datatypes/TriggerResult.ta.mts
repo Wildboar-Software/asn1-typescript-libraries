@@ -90,13 +90,13 @@ class TriggerResult {
          * @static
          */
 
-    public static _enum_for_actionPerformed = _enum_for_ActionPerformed;        /**
+    public static _enum_for_actionPerformed: typeof _enum_for_ActionPerformed = _enum_for_ActionPerformed;        /**
          * @summary The enum used as the type of the component `dPName`
          * @public
          * @static
          */
 
-    public static _enum_for_dPName = _enum_for_EventTypeBCSM;
+    public static _enum_for_dPName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

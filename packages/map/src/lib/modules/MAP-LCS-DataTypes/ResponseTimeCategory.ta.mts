@@ -44,7 +44,7 @@ type ResponseTimeCategory = _enum_for_ResponseTimeCategory | ENUMERATED;
  * @type {number}
  */
 export
-const ResponseTimeCategory_lowdelay = _enum_for_ResponseTimeCategory.lowdelay; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseTimeCategory_lowdelay: _enum_for_ResponseTimeCategory.lowdelay = _enum_for_ResponseTimeCategory.lowdelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lowdelay
@@ -56,7 +56,7 @@ const ResponseTimeCategory_lowdelay = _enum_for_ResponseTimeCategory.lowdelay; /
  * @type {number}
  */
 export
-const lowdelay = ResponseTimeCategory_lowdelay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lowdelay: _enum_for_ResponseTimeCategory.lowdelay = ResponseTimeCategory_lowdelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResponseTimeCategory_delaytolerant
@@ -68,7 +68,7 @@ const lowdelay = ResponseTimeCategory_lowdelay; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const ResponseTimeCategory_delaytolerant = _enum_for_ResponseTimeCategory.delaytolerant; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResponseTimeCategory_delaytolerant: _enum_for_ResponseTimeCategory.delaytolerant = _enum_for_ResponseTimeCategory.delaytolerant; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delaytolerant
@@ -80,7 +80,7 @@ const ResponseTimeCategory_delaytolerant = _enum_for_ResponseTimeCategory.delayt
  * @type {number}
  */
 export
-const delaytolerant = ResponseTimeCategory_delaytolerant; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delaytolerant: _enum_for_ResponseTimeCategory.delaytolerant = ResponseTimeCategory_delaytolerant; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponseTimeCategory
@@ -88,7 +88,7 @@ const delaytolerant = ResponseTimeCategory_delaytolerant; /* SHORT_NAMED_ENUMERA
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ResponseTimeCategory = $._decodeEnumerated;
+export const _decode_ResponseTimeCategory: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ResponseTimeCategory into an ASN.1 Element.
@@ -97,7 +97,7 @@ export const _decode_ResponseTimeCategory = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResponseTimeCategory, encoded as an ASN.1 Element.
  */
-export const _encode_ResponseTimeCategory = $._encodeEnumerated;
+export const _encode_ResponseTimeCategory: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

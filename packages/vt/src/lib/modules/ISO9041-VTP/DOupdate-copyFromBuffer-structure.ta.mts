@@ -42,7 +42,7 @@ type DOupdate_copyFromBuffer_structure = INTEGER;
  * @type {number}
  */
 export
-const DOupdate_copyFromBuffer_structure_none = 0 satisfies DOupdate_copyFromBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
+const DOupdate_copyFromBuffer_structure_none: 0 = 0 satisfies DOupdate_copyFromBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_none
@@ -55,7 +55,7 @@ const DOupdate_copyFromBuffer_structure_none = 0 satisfies DOupdate_copyFromBuff
  * @type {number}
  */
 export
-const none = DOupdate_copyFromBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 0 = DOupdate_copyFromBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_x
@@ -67,7 +67,7 @@ const none = DOupdate_copyFromBuffer_structure_none; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const DOupdate_copyFromBuffer_structure_x = 1 satisfies DOupdate_copyFromBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
+const DOupdate_copyFromBuffer_structure_x: 1 = 1 satisfies DOupdate_copyFromBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_x
@@ -79,7 +79,7 @@ const DOupdate_copyFromBuffer_structure_x = 1 satisfies DOupdate_copyFromBuffer_
  * @type {number}
  */
 export
-const x = DOupdate_copyFromBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
+const x: 1 = DOupdate_copyFromBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_xAndy
@@ -91,7 +91,7 @@ const x = DOupdate_copyFromBuffer_structure_x; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DOupdate_copyFromBuffer_structure_xAndy = 2 satisfies DOupdate_copyFromBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
+const DOupdate_copyFromBuffer_structure_xAndy: 2 = 2 satisfies DOupdate_copyFromBuffer_structure; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DOupdate_copyFromBuffer_structure_xAndy
@@ -103,9 +103,9 @@ const DOupdate_copyFromBuffer_structure_xAndy = 2 satisfies DOupdate_copyFromBuf
  * @type {number}
  */
 export
-const xAndy = DOupdate_copyFromBuffer_structure_xAndy; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DOupdate_copyFromBuffer_structure = $._decodeInteger;
-export const _encode_DOupdate_copyFromBuffer_structure = $._encodeInteger;
+const xAndy: 2 = DOupdate_copyFromBuffer_structure_xAndy; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DOupdate_copyFromBuffer_structure: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DOupdate_copyFromBuffer_structure: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

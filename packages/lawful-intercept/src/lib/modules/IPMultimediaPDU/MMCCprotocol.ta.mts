@@ -83,7 +83,7 @@ type MMCCprotocol = _enum_for_MMCCprotocol | ENUMERATED;
  * @type {number}
  */
 export
-const MMCCprotocol_rTP = _enum_for_MMCCprotocol.rTP; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMCCprotocol_rTP: _enum_for_MMCCprotocol.rTP = _enum_for_MMCCprotocol.rTP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rTP
@@ -97,7 +97,7 @@ const MMCCprotocol_rTP = _enum_for_MMCCprotocol.rTP; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const rTP = MMCCprotocol_rTP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rTP: _enum_for_MMCCprotocol.rTP = MMCCprotocol_rTP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMCCprotocol_mSRP
@@ -111,7 +111,7 @@ const rTP = MMCCprotocol_rTP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMCCprotocol_mSRP = _enum_for_MMCCprotocol.mSRP; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMCCprotocol_mSRP: _enum_for_MMCCprotocol.mSRP = _enum_for_MMCCprotocol.mSRP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mSRP
@@ -125,7 +125,7 @@ const MMCCprotocol_mSRP = _enum_for_MMCCprotocol.mSRP; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const mSRP = MMCCprotocol_mSRP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mSRP: _enum_for_MMCCprotocol.mSRP = MMCCprotocol_mSRP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMCCprotocol_uDPTL
@@ -139,7 +139,7 @@ const mSRP = MMCCprotocol_mSRP; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMCCprotocol_uDPTL = _enum_for_MMCCprotocol.uDPTL; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMCCprotocol_uDPTL: _enum_for_MMCCprotocol.uDPTL = _enum_for_MMCCprotocol.uDPTL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uDPTL
@@ -153,7 +153,7 @@ const MMCCprotocol_uDPTL = _enum_for_MMCCprotocol.uDPTL; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const uDPTL = MMCCprotocol_uDPTL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uDPTL: _enum_for_MMCCprotocol.uDPTL = MMCCprotocol_uDPTL; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMCCprotocol: $.ASN1Decoder<MMCCprotocol> = $._decodeEnumerated;
 export const _encode_MMCCprotocol: $.ASN1Encoder<MMCCprotocol> = $._encodeEnumerated;
 

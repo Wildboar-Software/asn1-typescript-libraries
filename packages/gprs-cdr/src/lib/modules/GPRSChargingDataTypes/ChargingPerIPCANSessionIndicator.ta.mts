@@ -81,7 +81,7 @@ type ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicat
  * @enum {number}
  */
 export
-const ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicator;
+const ChargingPerIPCANSessionIndicator: typeof _enum_for_ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicator;
 
 /**
  * @summary ChargingPerIPCANSessionIndicator_inactive
@@ -89,7 +89,7 @@ const ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndica
  * @type {number}
  */
 export
-const ChargingPerIPCANSessionIndicator_inactive = ChargingPerIPCANSessionIndicator.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingPerIPCANSessionIndicator_inactive: _enum_for_ChargingPerIPCANSessionIndicator.inactive = ChargingPerIPCANSessionIndicator.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -97,7 +97,7 @@ const ChargingPerIPCANSessionIndicator_inactive = ChargingPerIPCANSessionIndicat
  * @type {number}
  */
 export
-const inactive = ChargingPerIPCANSessionIndicator.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive: _enum_for_ChargingPerIPCANSessionIndicator.inactive = ChargingPerIPCANSessionIndicator.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingPerIPCANSessionIndicator_active
@@ -105,7 +105,7 @@ const inactive = ChargingPerIPCANSessionIndicator.inactive; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ChargingPerIPCANSessionIndicator_active = ChargingPerIPCANSessionIndicator.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingPerIPCANSessionIndicator_active: _enum_for_ChargingPerIPCANSessionIndicator.active = ChargingPerIPCANSessionIndicator.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -113,7 +113,7 @@ const ChargingPerIPCANSessionIndicator_active = ChargingPerIPCANSessionIndicator
  * @type {number}
  */
 export
-const active = ChargingPerIPCANSessionIndicator.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: _enum_for_ChargingPerIPCANSessionIndicator.active = ChargingPerIPCANSessionIndicator.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargingPerIPCANSessionIndicator: $.ASN1Decoder<ChargingPerIPCANSessionIndicator> = $._decodeEnumerated;

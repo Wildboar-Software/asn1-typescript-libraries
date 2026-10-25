@@ -60,9 +60,9 @@ export class ExtensionField {
         return new ExtensionField(_o.type_, _o.criticality, _o.value, _o._unrecognizedExtensionsList);
     }
 
-    public static get _default_value_for_criticality () { return ignore; }
+    public static get _default_value_for_criticality (): _enum_for_CriticalityType { return ignore; }
 
-    public static _enum_for_criticality = _enum_for_CriticalityType;
+    public static _enum_for_criticality: typeof _enum_for_CriticalityType = _enum_for_CriticalityType;
 }
 
 export const _root_component_type_list_1_spec_for_ExtensionField: $.ComponentSpec[] = [

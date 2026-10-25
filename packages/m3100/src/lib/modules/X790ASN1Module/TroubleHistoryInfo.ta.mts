@@ -288,7 +288,7 @@ export class TroubleHistoryInfo {
      * @static
      */
 
-    public static _enum_for_closeOutVerification = _enum_for_CloseOutVerification;
+    public static _enum_for_closeOutVerification: typeof _enum_for_CloseOutVerification = _enum_for_CloseOutVerification;
 }
 
 

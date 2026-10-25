@@ -192,7 +192,7 @@ export class DynamicSimpleScanArgument {
      * @static
      */
 
-    public static _enum_for_timeStampReportMode = _enum_for_TimeStampReportMode;
+    public static _enum_for_timeStampReportMode: typeof _enum_for_TimeStampReportMode = _enum_for_TimeStampReportMode;
 }
 
 /**

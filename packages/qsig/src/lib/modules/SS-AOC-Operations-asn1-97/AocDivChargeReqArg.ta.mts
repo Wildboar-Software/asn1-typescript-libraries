@@ -116,7 +116,7 @@ class AocDivChargeReqArg {
          * @static
          */
 
-    public static _enum_for_diversionType = _enum_for_DiversionType;
+    public static _enum_for_diversionType: typeof _enum_for_DiversionType = _enum_for_DiversionType;
 }
 
 /**

@@ -381,14 +381,14 @@ export class Heading {
      * @static
      */
 
-    public static _enum_for_importance = _enum_for_ImportanceField;
+    public static _enum_for_importance: typeof _enum_for_ImportanceField = _enum_for_ImportanceField;
     /**
      * @summary The enum used as the type of the component `sensitivity`
      * @public
      * @static
      */
 
-    public static _enum_for_sensitivity = _enum_for_SensitivityField;
+    public static _enum_for_sensitivity: typeof _enum_for_SensitivityField = _enum_for_SensitivityField;
 }
 
 /**

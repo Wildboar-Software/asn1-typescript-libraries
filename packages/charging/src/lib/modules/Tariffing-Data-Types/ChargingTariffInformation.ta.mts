@@ -160,7 +160,7 @@ class ChargingTariffInformation {
          * @static
          */
 
-    public static _enum_for_currency = _enum_for_Currency;
+    public static _enum_for_currency: typeof _enum_for_Currency = _enum_for_Currency;
 }
 
 /**

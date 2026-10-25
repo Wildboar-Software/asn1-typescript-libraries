@@ -28,12 +28,12 @@ export type Channel = INTEGER;
 
 
 
-export const _decode_Channel = $._decodeInteger;
+export const _decode_Channel: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Channel = $._encodeInteger;
+export const _encode_Channel: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

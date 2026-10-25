@@ -27,5 +27,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type Carrier = OCTET_STRING;
-export const _decode_Carrier = $._decodeOctetString;
-export const _encode_Carrier = $._encodeOctetString;
+export const _decode_Carrier: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_Carrier: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

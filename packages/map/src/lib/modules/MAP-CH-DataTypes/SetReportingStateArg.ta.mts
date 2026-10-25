@@ -116,7 +116,7 @@ class SetReportingStateArg {
          * @static
          */
 
-    public static _enum_for_ccbs_Monitoring = _enum_for_ReportingState;
+    public static _enum_for_ccbs_Monitoring: typeof _enum_for_ReportingState = _enum_for_ReportingState;
 }
 
 /**

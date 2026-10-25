@@ -264,7 +264,7 @@ class LocationData {
          * @static
          */
 
-    public static _enum_for_accuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
+    public static _enum_for_accuracyFulfilmentIndicator: typeof _enum_for_AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
 }
 
 /**

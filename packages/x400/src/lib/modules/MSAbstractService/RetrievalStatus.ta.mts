@@ -32,48 +32,48 @@ export type RetrievalStatus = INTEGER;
  * @constant
  * @type {number}
  */
-export const RetrievalStatus_new_ = 0 satisfies RetrievalStatus; /* LONG_NAMED_INTEGER_VALUE */
+export const RetrievalStatus_new_: 0 = 0 satisfies RetrievalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_new_
  * @constant
  * @type {number}
  */
-export const new_ = RetrievalStatus_new_; /* SHORT_NAMED_INTEGER_VALUE */
+export const new_: 0 = RetrievalStatus_new_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_listed
  * @constant
  * @type {number}
  */
-export const RetrievalStatus_listed = 1 satisfies RetrievalStatus; /* LONG_NAMED_INTEGER_VALUE */
+export const RetrievalStatus_listed: 1 = 1 satisfies RetrievalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_listed
  * @constant
  * @type {number}
  */
-export const listed = RetrievalStatus_listed; /* SHORT_NAMED_INTEGER_VALUE */
+export const listed: 1 = RetrievalStatus_listed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_processed
  * @constant
  * @type {number}
  */
-export const RetrievalStatus_processed = 2 satisfies RetrievalStatus; /* LONG_NAMED_INTEGER_VALUE */
+export const RetrievalStatus_processed: 2 = 2 satisfies RetrievalStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrievalStatus_processed
  * @constant
  * @type {number}
  */
-export const processed = RetrievalStatus_processed; /* SHORT_NAMED_INTEGER_VALUE */
+export const processed: 2 = RetrievalStatus_processed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_RetrievalStatus = $._decodeInteger;
+export const _decode_RetrievalStatus: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RetrievalStatus = $._encodeInteger;
+export const _encode_RetrievalStatus: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

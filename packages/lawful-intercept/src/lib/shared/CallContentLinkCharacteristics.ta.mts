@@ -175,7 +175,7 @@ class CallContentLinkCharacteristics {
          * @static
          */
 
-    public static _enum_for_cCLink_State = _enum_for_CCLink_State;
+    public static _enum_for_cCLink_State: typeof _enum_for_CCLink_State = _enum_for_CCLink_State;
 }
 
 /**

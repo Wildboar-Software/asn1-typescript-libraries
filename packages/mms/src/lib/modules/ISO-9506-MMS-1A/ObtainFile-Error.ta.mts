@@ -51,7 +51,7 @@ type ObtainFile_Error = INTEGER;
  * @type {number}
  */
 export
-const ObtainFile_Error_source_file = 0 satisfies ObtainFile_Error; /* LONG_NAMED_INTEGER_VALUE */
+const ObtainFile_Error_source_file: 0 = 0 satisfies ObtainFile_Error; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObtainFile_Error_source_file
@@ -65,7 +65,7 @@ const ObtainFile_Error_source_file = 0 satisfies ObtainFile_Error; /* LONG_NAMED
  * @type {number}
  */
 export
-const source_file = ObtainFile_Error_source_file; /* SHORT_NAMED_INTEGER_VALUE */
+const source_file: 0 = ObtainFile_Error_source_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObtainFile_Error_destination_file
@@ -79,7 +79,7 @@ const source_file = ObtainFile_Error_source_file; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const ObtainFile_Error_destination_file = 1 satisfies ObtainFile_Error; /* LONG_NAMED_INTEGER_VALUE */
+const ObtainFile_Error_destination_file: 1 = 1 satisfies ObtainFile_Error; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObtainFile_Error_destination_file
@@ -93,9 +93,9 @@ const ObtainFile_Error_destination_file = 1 satisfies ObtainFile_Error; /* LONG_
  * @type {number}
  */
 export
-const destination_file = ObtainFile_Error_destination_file; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ObtainFile_Error = $._decodeInteger;
-export const _encode_ObtainFile_Error = $._encodeInteger;
+const destination_file: 1 = ObtainFile_Error_destination_file; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ObtainFile_Error: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ObtainFile_Error: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -140,12 +140,12 @@ export const setIntersection: number = MatchesFor_setIntersection; /* SHORT_NAME
 
 
 
-export const _decode_MatchesFor = $._decodeBitString;
+export const _decode_MatchesFor: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_MatchesFor = $._encodeBitString;
+export const _encode_MatchesFor: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

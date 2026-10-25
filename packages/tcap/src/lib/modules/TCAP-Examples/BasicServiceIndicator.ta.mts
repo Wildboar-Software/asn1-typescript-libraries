@@ -54,14 +54,14 @@ export type BasicServiceIndicator = _enum_for_BasicServiceIndicator;
  *
  * @enum {number}
  */
-export const BasicServiceIndicator = _enum_for_BasicServiceIndicator;
+export const BasicServiceIndicator: typeof _enum_for_BasicServiceIndicator = _enum_for_BasicServiceIndicator;
 
 /**
  * @summary BasicServiceIndicator_speech
  * @constant
  * @type {number}
  */
-export const BasicServiceIndicator_speech =
+export const BasicServiceIndicator_speech: _enum_for_BasicServiceIndicator.speech =
     BasicServiceIndicator.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -69,7 +69,7 @@ export const BasicServiceIndicator_speech =
  * @constant
  * @type {number}
  */
-export const speech =
+export const speech: _enum_for_BasicServiceIndicator.speech =
     BasicServiceIndicator.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const speech =
  * @constant
  * @type {number}
  */
-export const BasicServiceIndicator_unrestrictedDigital =
+export const BasicServiceIndicator_unrestrictedDigital: _enum_for_BasicServiceIndicator.unrestrictedDigital =
     BasicServiceIndicator.unrestrictedDigital; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,14 +85,14 @@ export const BasicServiceIndicator_unrestrictedDigital =
  * @constant
  * @type {number}
  */
-export const unrestrictedDigital =
+export const unrestrictedDigital: _enum_for_BasicServiceIndicator.unrestrictedDigital =
     BasicServiceIndicator.unrestrictedDigital; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_BasicServiceIndicator = $._decodeEnumerated;
+export const _decode_BasicServiceIndicator: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_BasicServiceIndicator = $._encodeEnumerated;
+export const _encode_BasicServiceIndicator: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

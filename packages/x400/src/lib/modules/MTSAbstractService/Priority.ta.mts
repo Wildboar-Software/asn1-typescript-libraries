@@ -54,21 +54,21 @@ export type Priority = _enum_for_Priority;
  * @constant
  * @type {number}
  */
-export const Priority_normal = _enum_for_Priority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Priority_normal: _enum_for_Priority.normal = _enum_for_Priority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_non_urgent
  * @constant
  * @type {number}
  */
-export const Priority_non_urgent = _enum_for_Priority.non_urgent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Priority_non_urgent: _enum_for_Priority.non_urgent = _enum_for_Priority.non_urgent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_urgent
  * @constant
  * @type {number}
  */
-export const Priority_urgent = _enum_for_Priority.urgent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Priority_urgent: _enum_for_Priority.urgent = _enum_for_Priority.urgent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,21 +76,21 @@ export const Priority_urgent = _enum_for_Priority.urgent; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
- export const normal = _enum_for_Priority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+ export const normal: _enum_for_Priority.normal = _enum_for_Priority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
- export const non_urgent = _enum_for_Priority.non_urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
+ export const non_urgent: _enum_for_Priority.non_urgent = _enum_for_Priority.non_urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
- export const urgent = _enum_for_Priority.urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
+ export const urgent: _enum_for_Priority.urgent = _enum_for_Priority.urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 

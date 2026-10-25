@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type EncryptionOptions = BOOLEAN; // BooleanType
 
 
-export const _decode_EncryptionOptions = $._decodeBoolean;
+export const _decode_EncryptionOptions: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_EncryptionOptions = $._encodeBoolean;
+export const _encode_EncryptionOptions: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

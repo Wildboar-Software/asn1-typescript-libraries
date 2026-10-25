@@ -85,7 +85,7 @@ class UnknownSubscriberParam {
          * @static
          */
 
-    public static _enum_for_unknownSubscriberDiagnostic = _enum_for_UnknownSubscriberDiagnostic;
+    public static _enum_for_unknownSubscriberDiagnostic: typeof _enum_for_UnknownSubscriberDiagnostic = _enum_for_UnknownSubscriberDiagnostic;
 }
 
 /**

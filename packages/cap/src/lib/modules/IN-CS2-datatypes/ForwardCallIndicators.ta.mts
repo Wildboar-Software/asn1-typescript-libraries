@@ -34,7 +34,7 @@ export const _decode_ForwardCallIndicators = (el: _Element): ForwardCallIndicato
     }
     return value;
 };
-export const _encode_ForwardCallIndicators = $._encodeOctetString;
+export const _encode_ForwardCallIndicators: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -24,5 +24,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type TimerValue = INTEGER;
-export const _decode_TimerValue = $._decodeInteger;
-export const _encode_TimerValue = $._encodeInteger;
+export const _decode_TimerValue: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_TimerValue: $.ASN1Encoder<INTEGER> = $._encodeInteger;

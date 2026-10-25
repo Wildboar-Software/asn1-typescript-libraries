@@ -44,7 +44,7 @@ type P_AbortCause = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_unrecognisedDseApdu = 0 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_unrecognisedDseApdu: 0 = 0 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedDseApdu
@@ -53,7 +53,7 @@ const P_AbortCause_unrecognisedDseApdu = 0 satisfies P_AbortCause; /* LONG_NAMED
  * @type {number}
  */
 export
-const unrecognisedDseApdu = P_AbortCause_unrecognisedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedDseApdu: 0 = P_AbortCause_unrecognisedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_unrecognisedDialogId
@@ -66,7 +66,7 @@ const unrecognisedDseApdu = P_AbortCause_unrecognisedDseApdu; /* SHORT_NAMED_INT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_unrecognisedDialogId = 1 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_unrecognisedDialogId: 1 = 1 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedDialogId
@@ -75,7 +75,7 @@ const P_AbortCause_unrecognisedDialogId = 1 satisfies P_AbortCause; /* LONG_NAME
  * @type {number}
  */
 export
-const unrecognisedDialogId = P_AbortCause_unrecognisedDialogId; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedDialogId: 1 = P_AbortCause_unrecognisedDialogId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_badlyFormattedDseApdu
@@ -88,7 +88,7 @@ const unrecognisedDialogId = P_AbortCause_unrecognisedDialogId; /* SHORT_NAMED_I
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_badlyFormattedDseApdu = 2 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_badlyFormattedDseApdu: 2 = 2 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary badlyFormattedDseApdu
@@ -97,7 +97,7 @@ const P_AbortCause_badlyFormattedDseApdu = 2 satisfies P_AbortCause; /* LONG_NAM
  * @type {number}
  */
 export
-const badlyFormattedDseApdu = P_AbortCause_badlyFormattedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
+const badlyFormattedDseApdu: 2 = P_AbortCause_badlyFormattedDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_incorrectDseApdu
@@ -110,7 +110,7 @@ const badlyFormattedDseApdu = P_AbortCause_badlyFormattedDseApdu; /* SHORT_NAMED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_incorrectDseApdu = 3 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_incorrectDseApdu: 3 = 3 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary incorrectDseApdu
@@ -119,7 +119,7 @@ const P_AbortCause_incorrectDseApdu = 3 satisfies P_AbortCause; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const incorrectDseApdu = P_AbortCause_incorrectDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectDseApdu: 3 = P_AbortCause_incorrectDseApdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_AbortCause_resourceLimitation
@@ -132,7 +132,7 @@ const incorrectDseApdu = P_AbortCause_incorrectDseApdu; /* SHORT_NAMED_INTEGER_V
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const P_AbortCause_resourceLimitation = 4 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
+const P_AbortCause_resourceLimitation: 4 = 4 satisfies P_AbortCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary resourceLimitation
@@ -141,7 +141,7 @@ const P_AbortCause_resourceLimitation = 4 satisfies P_AbortCause; /* LONG_NAMED_
  * @type {number}
  */
 export
-const resourceLimitation = P_AbortCause_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
+const resourceLimitation: 4 = P_AbortCause_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_P_AbortCause: $.ASN1Decoder<P_AbortCause> | null = null;
 

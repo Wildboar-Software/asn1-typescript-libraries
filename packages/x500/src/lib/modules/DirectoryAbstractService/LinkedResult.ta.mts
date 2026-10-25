@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type LinkedResult = NULL; // NullType
 
 
-export const _decode_LinkedResult = $._decodeNull;
+export const _decode_LinkedResult: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_LinkedResult = $._encodeNull;
+export const _encode_LinkedResult: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

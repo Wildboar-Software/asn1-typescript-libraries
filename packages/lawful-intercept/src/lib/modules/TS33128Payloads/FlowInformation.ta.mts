@@ -120,7 +120,7 @@ class FlowInformation {
          * @static
          */
 
-    public static _enum_for_flowDirection = _enum_for_FlowDirection;
+    public static _enum_for_flowDirection: typeof _enum_for_FlowDirection = _enum_for_FlowDirection;
 }
 
 /**

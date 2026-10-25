@@ -96,7 +96,7 @@ type V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
  * @enum {number}
  */
 export
-const V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
+const V2XUEAuthorizationIndicator: typeof _enum_for_V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
 
 /**
  * @summary V2XUEAuthorizationIndicator_authorized
@@ -110,7 +110,7 @@ const V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
  * @type {number}
  */
 export
-const V2XUEAuthorizationIndicator_authorized = V2XUEAuthorizationIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const V2XUEAuthorizationIndicator_authorized: _enum_for_V2XUEAuthorizationIndicator.authorized = V2XUEAuthorizationIndicator.authorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorized
@@ -124,7 +124,7 @@ const V2XUEAuthorizationIndicator_authorized = V2XUEAuthorizationIndicator.autho
  * @type {number}
  */
 export
-const authorized = V2XUEAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorized: _enum_for_V2XUEAuthorizationIndicator.authorized = V2XUEAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V2XUEAuthorizationIndicator_notAuthorized
@@ -138,7 +138,7 @@ const authorized = V2XUEAuthorizationIndicator.authorized; /* SHORT_NAMED_ENUMER
  * @type {number}
  */
 export
-const V2XUEAuthorizationIndicator_notAuthorized = V2XUEAuthorizationIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const V2XUEAuthorizationIndicator_notAuthorized: _enum_for_V2XUEAuthorizationIndicator.notAuthorized = V2XUEAuthorizationIndicator.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAuthorized
@@ -152,7 +152,7 @@ const V2XUEAuthorizationIndicator_notAuthorized = V2XUEAuthorizationIndicator.no
  * @type {number}
  */
 export
-const notAuthorized = V2XUEAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAuthorized: _enum_for_V2XUEAuthorizationIndicator.notAuthorized = V2XUEAuthorizationIndicator.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_V2XUEAuthorizationIndicator: $.ASN1Decoder<V2XUEAuthorizationIndicator> = $._decodeEnumerated;
 export const _encode_V2XUEAuthorizationIndicator: $.ASN1Encoder<V2XUEAuthorizationIndicator> = $._encodeEnumerated;
 

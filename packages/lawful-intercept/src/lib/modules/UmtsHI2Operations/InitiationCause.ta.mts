@@ -58,7 +58,7 @@ type InitiationCause = _enum_for_InitiationCause | ENUMERATED;
  * @type {number}
  */
 export
-const InitiationCause_requests = _enum_for_InitiationCause.requests; /* LONG_NAMED_ENUMERATED_VALUE */
+const InitiationCause_requests: _enum_for_InitiationCause.requests = _enum_for_InitiationCause.requests; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requests
@@ -69,7 +69,7 @@ const InitiationCause_requests = _enum_for_InitiationCause.requests; /* LONG_NAM
  * @type {number}
  */
 export
-const requests = InitiationCause_requests; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requests: _enum_for_InitiationCause.requests = InitiationCause_requests; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InitiationCause_received
@@ -83,7 +83,7 @@ const requests = InitiationCause_requests; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const InitiationCause_received = _enum_for_InitiationCause.received; /* LONG_NAMED_ENUMERATED_VALUE */
+const InitiationCause_received: _enum_for_InitiationCause.received = _enum_for_InitiationCause.received; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary received
@@ -94,7 +94,7 @@ const InitiationCause_received = _enum_for_InitiationCause.received; /* LONG_NAM
  * @type {number}
  */
 export
-const received = InitiationCause_received; /* SHORT_NAMED_ENUMERATED_VALUE */
+const received: _enum_for_InitiationCause.received = InitiationCause_received; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InitiationCause_pTCOriginatingId
@@ -109,7 +109,7 @@ const received = InitiationCause_received; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const InitiationCause_pTCOriginatingId = _enum_for_InitiationCause.pTCOriginatingId; /* LONG_NAMED_ENUMERATED_VALUE */
+const InitiationCause_pTCOriginatingId: _enum_for_InitiationCause.pTCOriginatingId = _enum_for_InitiationCause.pTCOriginatingId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pTCOriginatingId
@@ -121,7 +121,7 @@ const InitiationCause_pTCOriginatingId = _enum_for_InitiationCause.pTCOriginatin
  * @type {number}
  */
 export
-const pTCOriginatingId = InitiationCause_pTCOriginatingId; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pTCOriginatingId: _enum_for_InitiationCause.pTCOriginatingId = InitiationCause_pTCOriginatingId; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_InitiationCause: $.ASN1Decoder<InitiationCause> = $._decodeEnumerated;
 export const _encode_InitiationCause: $.ASN1Encoder<InitiationCause> = $._encodeEnumerated;
 

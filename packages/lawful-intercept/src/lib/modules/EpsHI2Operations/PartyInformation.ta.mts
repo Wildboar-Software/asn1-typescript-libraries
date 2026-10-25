@@ -167,7 +167,7 @@ class PartyInformation {
          * @static
          */
 
-    public static _enum_for_party_Qualifier = _enum_for_PartyInformation_party_Qualifier;
+    public static _enum_for_party_Qualifier: typeof _enum_for_PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifier;
 }
 
 /**

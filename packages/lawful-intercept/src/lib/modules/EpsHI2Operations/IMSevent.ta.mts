@@ -91,7 +91,7 @@ type IMSevent = _enum_for_IMSevent | ENUMERATED;
  * @type {number}
  */
 export
-const IMSevent_unfilteredSIPmessage = _enum_for_IMSevent.unfilteredSIPmessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_unfilteredSIPmessage: _enum_for_IMSevent.unfilteredSIPmessage = _enum_for_IMSevent.unfilteredSIPmessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unfilteredSIPmessage
@@ -103,7 +103,7 @@ const IMSevent_unfilteredSIPmessage = _enum_for_IMSevent.unfilteredSIPmessage; /
  * @type {number}
  */
 export
-const unfilteredSIPmessage = IMSevent_unfilteredSIPmessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unfilteredSIPmessage: _enum_for_IMSevent.unfilteredSIPmessage = IMSevent_unfilteredSIPmessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_sIPheaderOnly
@@ -117,7 +117,7 @@ const unfilteredSIPmessage = IMSevent_unfilteredSIPmessage; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const IMSevent_sIPheaderOnly = _enum_for_IMSevent.sIPheaderOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_sIPheaderOnly: _enum_for_IMSevent.sIPheaderOnly = _enum_for_IMSevent.sIPheaderOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sIPheaderOnly
@@ -129,7 +129,7 @@ const IMSevent_sIPheaderOnly = _enum_for_IMSevent.sIPheaderOnly; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const sIPheaderOnly = IMSevent_sIPheaderOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sIPheaderOnly: _enum_for_IMSevent.sIPheaderOnly = IMSevent_sIPheaderOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_decryptionKeysAvailable
@@ -142,7 +142,7 @@ const sIPheaderOnly = IMSevent_sIPheaderOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IMSevent_decryptionKeysAvailable = _enum_for_IMSevent.decryptionKeysAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_decryptionKeysAvailable: _enum_for_IMSevent.decryptionKeysAvailable = _enum_for_IMSevent.decryptionKeysAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decryptionKeysAvailable
@@ -154,7 +154,7 @@ const IMSevent_decryptionKeysAvailable = _enum_for_IMSevent.decryptionKeysAvaila
  * @type {number}
  */
 export
-const decryptionKeysAvailable = IMSevent_decryptionKeysAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decryptionKeysAvailable: _enum_for_IMSevent.decryptionKeysAvailable = IMSevent_decryptionKeysAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_startOfInterceptionForIMSEstablishedSession
@@ -168,7 +168,7 @@ const decryptionKeysAvailable = IMSevent_decryptionKeysAvailable; /* SHORT_NAMED
  * @type {number}
  */
 export
-const IMSevent_startOfInterceptionForIMSEstablishedSession = _enum_for_IMSevent.startOfInterceptionForIMSEstablishedSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_startOfInterceptionForIMSEstablishedSession: _enum_for_IMSevent.startOfInterceptionForIMSEstablishedSession = _enum_for_IMSevent.startOfInterceptionForIMSEstablishedSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionForIMSEstablishedSession
@@ -180,7 +180,7 @@ const IMSevent_startOfInterceptionForIMSEstablishedSession = _enum_for_IMSevent.
  * @type {number}
  */
 export
-const startOfInterceptionForIMSEstablishedSession = IMSevent_startOfInterceptionForIMSEstablishedSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionForIMSEstablishedSession: _enum_for_IMSevent.startOfInterceptionForIMSEstablishedSession = IMSevent_startOfInterceptionForIMSEstablishedSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_xCAPRequest
@@ -193,7 +193,7 @@ const startOfInterceptionForIMSEstablishedSession = IMSevent_startOfInterception
  * @type {number}
  */
 export
-const IMSevent_xCAPRequest = _enum_for_IMSevent.xCAPRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_xCAPRequest: _enum_for_IMSevent.xCAPRequest = _enum_for_IMSevent.xCAPRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPRequest
@@ -205,7 +205,7 @@ const IMSevent_xCAPRequest = _enum_for_IMSevent.xCAPRequest; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const xCAPRequest = IMSevent_xCAPRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xCAPRequest: _enum_for_IMSevent.xCAPRequest = IMSevent_xCAPRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_xCAPResponse
@@ -217,7 +217,7 @@ const xCAPRequest = IMSevent_xCAPRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IMSevent_xCAPResponse = _enum_for_IMSevent.xCAPResponse; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_xCAPResponse: _enum_for_IMSevent.xCAPResponse = _enum_for_IMSevent.xCAPResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xCAPResponse
@@ -229,7 +229,7 @@ const IMSevent_xCAPResponse = _enum_for_IMSevent.xCAPResponse; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const xCAPResponse = IMSevent_xCAPResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xCAPResponse: _enum_for_IMSevent.xCAPResponse = IMSevent_xCAPResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_ccUnavailable
@@ -242,7 +242,7 @@ const xCAPResponse = IMSevent_xCAPResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IMSevent_ccUnavailable = _enum_for_IMSevent.ccUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_ccUnavailable: _enum_for_IMSevent.ccUnavailable = _enum_for_IMSevent.ccUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ccUnavailable
@@ -254,7 +254,7 @@ const IMSevent_ccUnavailable = _enum_for_IMSevent.ccUnavailable; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const ccUnavailable = IMSevent_ccUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ccUnavailable: _enum_for_IMSevent.ccUnavailable = IMSevent_ccUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_sMSOverIMS
@@ -267,7 +267,7 @@ const ccUnavailable = IMSevent_ccUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IMSevent_sMSOverIMS = _enum_for_IMSevent.sMSOverIMS; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_sMSOverIMS: _enum_for_IMSevent.sMSOverIMS = _enum_for_IMSevent.sMSOverIMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMSOverIMS
@@ -279,7 +279,7 @@ const IMSevent_sMSOverIMS = _enum_for_IMSevent.sMSOverIMS; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const sMSOverIMS = IMSevent_sMSOverIMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMSOverIMS: _enum_for_IMSevent.sMSOverIMS = IMSevent_sMSOverIMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_servingSystem
@@ -291,7 +291,7 @@ const sMSOverIMS = IMSevent_sMSOverIMS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IMSevent_servingSystem = _enum_for_IMSevent.servingSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_servingSystem: _enum_for_IMSevent.servingSystem = _enum_for_IMSevent.servingSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary servingSystem
@@ -303,7 +303,7 @@ const IMSevent_servingSystem = _enum_for_IMSevent.servingSystem; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const servingSystem = IMSevent_servingSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const servingSystem: _enum_for_IMSevent.servingSystem = IMSevent_servingSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_subscriberRecordChange
@@ -315,7 +315,7 @@ const servingSystem = IMSevent_servingSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IMSevent_subscriberRecordChange = _enum_for_IMSevent.subscriberRecordChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_subscriberRecordChange: _enum_for_IMSevent.subscriberRecordChange = _enum_for_IMSevent.subscriberRecordChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriberRecordChange
@@ -327,7 +327,7 @@ const IMSevent_subscriberRecordChange = _enum_for_IMSevent.subscriberRecordChang
  * @type {number}
  */
 export
-const subscriberRecordChange = IMSevent_subscriberRecordChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriberRecordChange: _enum_for_IMSevent.subscriberRecordChange = IMSevent_subscriberRecordChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_registrationTermination
@@ -339,7 +339,7 @@ const subscriberRecordChange = IMSevent_subscriberRecordChange; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const IMSevent_registrationTermination = _enum_for_IMSevent.registrationTermination; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_registrationTermination: _enum_for_IMSevent.registrationTermination = _enum_for_IMSevent.registrationTermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registrationTermination
@@ -351,7 +351,7 @@ const IMSevent_registrationTermination = _enum_for_IMSevent.registrationTerminat
  * @type {number}
  */
 export
-const registrationTermination = IMSevent_registrationTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registrationTermination: _enum_for_IMSevent.registrationTermination = IMSevent_registrationTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IMSevent_locationInformationRequest
@@ -363,7 +363,7 @@ const registrationTermination = IMSevent_registrationTermination; /* SHORT_NAMED
  * @type {number}
  */
 export
-const IMSevent_locationInformationRequest = _enum_for_IMSevent.locationInformationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const IMSevent_locationInformationRequest: _enum_for_IMSevent.locationInformationRequest = _enum_for_IMSevent.locationInformationRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationInformationRequest
@@ -375,7 +375,7 @@ const IMSevent_locationInformationRequest = _enum_for_IMSevent.locationInformati
  * @type {number}
  */
 export
-const locationInformationRequest = IMSevent_locationInformationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationInformationRequest: _enum_for_IMSevent.locationInformationRequest = IMSevent_locationInformationRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IMSevent: $.ASN1Decoder<IMSevent> = $._decodeEnumerated;
 export const _encode_IMSevent: $.ASN1Encoder<IMSevent> = $._encodeEnumerated;
 

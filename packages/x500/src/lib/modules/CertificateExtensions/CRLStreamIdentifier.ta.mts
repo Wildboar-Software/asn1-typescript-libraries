@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type CRLStreamIdentifier = INTEGER;
 
 
-export const _decode_CRLStreamIdentifier = $._decodeInteger;
+export const _decode_CRLStreamIdentifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_CRLStreamIdentifier = $._encodeInteger;
+export const _encode_CRLStreamIdentifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

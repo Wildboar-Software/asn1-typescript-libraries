@@ -77,7 +77,7 @@ class ScfTaskRefusedParameter_Type {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_ScfTaskRefusedParameter_Type_reason;
+    public static _enum_for_reason: typeof _enum_for_ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Type_reason;
 }
 
 /**

@@ -64,14 +64,14 @@ export type RecipientReassignmentProhibited = _enum_for_RecipientReassignmentPro
  *
  * @enum {number}
  */
-export const RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
+export const RecipientReassignmentProhibited: typeof _enum_for_RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
 
 /**
  * @summary RecipientReassignmentProhibited_recipient_reassignment_allowed
  * @constant
  * @type {number}
  */
-export const RecipientReassignmentProhibited_recipient_reassignment_allowed =
+export const RecipientReassignmentProhibited_recipient_reassignment_allowed: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_allowed =
     RecipientReassignmentProhibited.recipient_reassignment_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const RecipientReassignmentProhibited_recipient_reassignment_allowed =
  * @constant
  * @type {number}
  */
-export const recipient_reassignment_allowed =
+export const recipient_reassignment_allowed: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_allowed =
     RecipientReassignmentProhibited.recipient_reassignment_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const recipient_reassignment_allowed =
  * @constant
  * @type {number}
  */
-export const RecipientReassignmentProhibited_recipient_reassignment_prohibited =
+export const RecipientReassignmentProhibited_recipient_reassignment_prohibited: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_prohibited =
     RecipientReassignmentProhibited.recipient_reassignment_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const RecipientReassignmentProhibited_recipient_reassignment_prohibited =
  * @constant
  * @type {number}
  */
-export const recipient_reassignment_prohibited =
+export const recipient_reassignment_prohibited: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_prohibited =
     RecipientReassignmentProhibited.recipient_reassignment_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RecipientReassignmentProhibited: $.ASN1Decoder<RecipientReassignmentProhibited> | null = null;

@@ -34,12 +34,12 @@ export type Sap1Address = INTEGER;
 
 
 
-export const _decode_Sap1Address = $._decodeInteger;
+export const _decode_Sap1Address: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Sap1Address = $._encodeInteger;
+export const _encode_Sap1Address: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

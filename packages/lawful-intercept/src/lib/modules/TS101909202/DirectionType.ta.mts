@@ -98,7 +98,7 @@ type DirectionType = _enum_for_DirectionType;
  * @enum {number}
  */
 export
-const DirectionType = _enum_for_DirectionType;
+const DirectionType: typeof _enum_for_DirectionType = _enum_for_DirectionType;
 
 /**
  * @summary DirectionType_toTarget
@@ -113,7 +113,7 @@ const DirectionType = _enum_for_DirectionType;
  * @type {number}
  */
 export
-const DirectionType_toTarget = DirectionType.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const DirectionType_toTarget: _enum_for_DirectionType.toTarget = DirectionType.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -128,7 +128,7 @@ const DirectionType_toTarget = DirectionType.toTarget; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const toTarget = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget: _enum_for_DirectionType.toTarget = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DirectionType_fromTarget
@@ -143,7 +143,7 @@ const toTarget = DirectionType.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DirectionType_fromTarget = DirectionType.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const DirectionType_fromTarget: _enum_for_DirectionType.fromTarget = DirectionType.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -158,7 +158,7 @@ const DirectionType_fromTarget = DirectionType.fromTarget; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const fromTarget = DirectionType.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget: _enum_for_DirectionType.fromTarget = DirectionType.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DirectionType_unknown
@@ -173,7 +173,7 @@ const fromTarget = DirectionType.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DirectionType_unknown = DirectionType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const DirectionType_unknown: _enum_for_DirectionType.unknown = DirectionType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -188,7 +188,7 @@ const DirectionType_unknown = DirectionType.unknown; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const unknown = DirectionType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_DirectionType.unknown = DirectionType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DirectionType: $.ASN1Decoder<DirectionType> = $._decodeEnumerated;
 export const _encode_DirectionType: $.ASN1Encoder<DirectionType> = $._encodeEnumerated;
 

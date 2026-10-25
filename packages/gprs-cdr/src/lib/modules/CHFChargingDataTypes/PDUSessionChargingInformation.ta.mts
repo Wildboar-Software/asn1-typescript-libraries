@@ -404,31 +404,31 @@ class PDUSessionChargingInformation {
          * @static
          */
 
-    public static _enum_for_userRoamerInOut = _enum_for_RoamerInOut;        /**
+    public static _enum_for_userRoamerInOut: typeof _enum_for_RoamerInOut = _enum_for_RoamerInOut;        /**
          * @summary The enum used as the type of the component `pDUType`
          * @public
          * @static
          */
 
-    public static _enum_for_pDUType = _enum_for_PDUSessionType;        /**
+    public static _enum_for_pDUType: typeof _enum_for_PDUSessionType = _enum_for_PDUSessionType;        /**
          * @summary The enum used as the type of the component `chChSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;        /**
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;        /**
          * @summary The enum used as the type of the component `dNNSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_dNNSelectionMode = _enum_for_DNNSelectionMode;
+    public static _enum_for_dNNSelectionMode: typeof _enum_for_DNNSelectionMode = _enum_for_DNNSelectionMode;
 }
 
 /**

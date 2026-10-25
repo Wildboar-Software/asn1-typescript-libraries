@@ -43,7 +43,7 @@ export type IntegerDataType = INTEGER;
  * @constant
  * @type {number}
  */
-export const IntegerDataType_allBitOn = 0 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
+export const IntegerDataType_allBitOn: 0 = 0 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_allBitOn
@@ -53,7 +53,7 @@ export const IntegerDataType_allBitOn = 0 satisfies IntegerDataType; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const allBitOn = IntegerDataType_allBitOn; /* SHORT_NAMED_INTEGER_VALUE */
+export const allBitOn: 0 = IntegerDataType_allBitOn; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_allBitOff
@@ -63,7 +63,7 @@ export const allBitOn = IntegerDataType_allBitOn; /* SHORT_NAMED_INTEGER_VALUE *
  * @constant
  * @type {number}
  */
-export const IntegerDataType_allBitOff = 1 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
+export const IntegerDataType_allBitOff: 1 = 1 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_allBitOff
@@ -73,7 +73,7 @@ export const IntegerDataType_allBitOff = 1 satisfies IntegerDataType; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const allBitOff = IntegerDataType_allBitOff; /* SHORT_NAMED_INTEGER_VALUE */
+export const allBitOff: 1 = IntegerDataType_allBitOff; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_incrementNumber
@@ -83,7 +83,7 @@ export const allBitOff = IntegerDataType_allBitOff; /* SHORT_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const IntegerDataType_incrementNumber = 2 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
+export const IntegerDataType_incrementNumber: 2 = 2 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_incrementNumber
@@ -93,7 +93,7 @@ export const IntegerDataType_incrementNumber = 2 satisfies IntegerDataType; /* L
  * @constant
  * @type {number}
  */
-export const incrementNumber = IntegerDataType_incrementNumber; /* SHORT_NAMED_INTEGER_VALUE */
+export const incrementNumber: 2 = IntegerDataType_incrementNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_pn11
@@ -103,7 +103,7 @@ export const incrementNumber = IntegerDataType_incrementNumber; /* SHORT_NAMED_I
  * @constant
  * @type {number}
  */
-export const IntegerDataType_pn11 = 3 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
+export const IntegerDataType_pn11: 3 = 3 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_pn11
@@ -113,7 +113,7 @@ export const IntegerDataType_pn11 = 3 satisfies IntegerDataType; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const pn11 = IntegerDataType_pn11; /* SHORT_NAMED_INTEGER_VALUE */
+export const pn11: 3 = IntegerDataType_pn11; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_pn15
@@ -123,7 +123,7 @@ export const pn11 = IntegerDataType_pn11; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const IntegerDataType_pn15 = 4 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
+export const IntegerDataType_pn15: 4 = 4 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_pn15
@@ -133,7 +133,7 @@ export const IntegerDataType_pn15 = 4 satisfies IntegerDataType; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const pn15 = IntegerDataType_pn15; /* SHORT_NAMED_INTEGER_VALUE */
+export const pn15: 4 = IntegerDataType_pn15; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_pn20
@@ -143,7 +143,7 @@ export const pn15 = IntegerDataType_pn15; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const IntegerDataType_pn20 = 5 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
+export const IntegerDataType_pn20: 5 = 5 satisfies IntegerDataType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IntegerDataType_pn20
@@ -153,13 +153,13 @@ export const IntegerDataType_pn20 = 5 satisfies IntegerDataType; /* LONG_NAMED_I
  * @constant
  * @type {number}
  */
-export const pn20 = IntegerDataType_pn20; /* SHORT_NAMED_INTEGER_VALUE */
+export const pn20: 5 = IntegerDataType_pn20; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_IntegerDataType = $._decodeInteger;
+export const _decode_IntegerDataType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_IntegerDataType = $._encodeInteger;
+export const _encode_IntegerDataType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

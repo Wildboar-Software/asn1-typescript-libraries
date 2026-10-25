@@ -102,7 +102,7 @@ class LCSClientName {
          * @static
          */
 
-    public static _enum_for_lcs_FormatIndicator = _enum_for_LCS_FormatIndicator;
+    public static _enum_for_lcs_FormatIndicator: typeof _enum_for_LCS_FormatIndicator = _enum_for_LCS_FormatIndicator;
 }
 
 /**

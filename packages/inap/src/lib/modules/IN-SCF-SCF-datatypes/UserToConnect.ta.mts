@@ -52,7 +52,7 @@ type UserToConnect = _enum_for_UserToConnect;
  * @enum {number}
  */
 export
-const UserToConnect = _enum_for_UserToConnect;
+const UserToConnect: typeof _enum_for_UserToConnect = _enum_for_UserToConnect;
 
 /**
  * @summary UserToConnect_first
@@ -60,7 +60,7 @@ const UserToConnect = _enum_for_UserToConnect;
  * @type {number}
  */
 export
-const UserToConnect_first = UserToConnect.first; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_first: _enum_for_UserToConnect.first = UserToConnect.first; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary first
@@ -68,7 +68,7 @@ const UserToConnect_first = UserToConnect.first; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const first = UserToConnect.first; /* SHORT_NAMED_ENUMERATED_VALUE */
+const first: _enum_for_UserToConnect.first = UserToConnect.first; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserToConnect_nofirst
@@ -76,7 +76,7 @@ const first = UserToConnect.first; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UserToConnect_nofirst = UserToConnect.nofirst; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_nofirst: _enum_for_UserToConnect.nofirst = UserToConnect.nofirst; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nofirst
@@ -84,7 +84,7 @@ const UserToConnect_nofirst = UserToConnect.nofirst; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const nofirst = UserToConnect.nofirst; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nofirst: _enum_for_UserToConnect.nofirst = UserToConnect.nofirst; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserToConnect_newone
@@ -92,7 +92,7 @@ const nofirst = UserToConnect.nofirst; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UserToConnect_newone = UserToConnect.newone; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_newone: _enum_for_UserToConnect.newone = UserToConnect.newone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newone
@@ -100,7 +100,7 @@ const UserToConnect_newone = UserToConnect.newone; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const newone = UserToConnect.newone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newone: _enum_for_UserToConnect.newone = UserToConnect.newone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserToConnect_previous
@@ -108,7 +108,7 @@ const newone = UserToConnect.newone; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const UserToConnect_previous = UserToConnect.previous; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_previous: _enum_for_UserToConnect.previous = UserToConnect.previous; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary previous
@@ -116,7 +116,7 @@ const UserToConnect_previous = UserToConnect.previous; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const previous = UserToConnect.previous; /* SHORT_NAMED_ENUMERATED_VALUE */
+const previous: _enum_for_UserToConnect.previous = UserToConnect.previous; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_UserToConnect(el: _Element): UserToConnect {

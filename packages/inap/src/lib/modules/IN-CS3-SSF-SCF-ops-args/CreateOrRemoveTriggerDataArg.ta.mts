@@ -158,32 +158,32 @@ class CreateOrRemoveTriggerDataArg {
      * @static
      * @method
      */
-    public static get _default_value_for_createOrRemove () { return CreateOrRemoveIndicator_create; }
+    public static get _default_value_for_createOrRemove (): _enum_for_CreateOrRemoveIndicator.create { return CreateOrRemoveIndicator_create; }
     /**
      * @summary Getter that returns the default value for `triggerDPType`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_triggerDPType () { return TriggerDPType_tdp_r; }        /**
+    public static get _default_value_for_triggerDPType (): _enum_for_TriggerDPType.tdp_r { return TriggerDPType_tdp_r; }        /**
          * @summary The enum used as the type of the component `createOrRemove`
          * @public
          * @static
          */
 
-    public static _enum_for_createOrRemove = _enum_for_CreateOrRemoveIndicator;        /**
+    public static _enum_for_createOrRemove: typeof _enum_for_CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;        /**
          * @summary The enum used as the type of the component `dPName`
          * @public
          * @static
          */
 
-    public static _enum_for_dPName = _enum_for_EventTypeBCSM;        /**
+    public static _enum_for_dPName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;        /**
          * @summary The enum used as the type of the component `triggerDPType`
          * @public
          * @static
          */
 
-    public static _enum_for_triggerDPType = _enum_for_TriggerDPType;
+    public static _enum_for_triggerDPType: typeof _enum_for_TriggerDPType = _enum_for_TriggerDPType;
 }
 
 /**

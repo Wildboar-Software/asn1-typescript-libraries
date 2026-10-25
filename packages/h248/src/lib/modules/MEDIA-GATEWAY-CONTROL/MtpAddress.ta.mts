@@ -33,7 +33,7 @@ export const _decode_MtpAddress = (el: _Element): MtpAddress => {
     }
     return value;
 };
-export const _encode_MtpAddress = $._encodeOctetString;
+export const _encode_MtpAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

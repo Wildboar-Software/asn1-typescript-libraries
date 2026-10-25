@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FunctionalUnitPackageId = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_FunctionalUnitPackageId = $._decodeObjectIdentifier;
+export const _decode_FunctionalUnitPackageId: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_FunctionalUnitPackageId = $._encodeObjectIdentifier;
+export const _encode_FunctionalUnitPackageId: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

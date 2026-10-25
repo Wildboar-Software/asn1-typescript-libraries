@@ -38,8 +38,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ModalityPolicy = UniversalString; // UniversalString
-export const _decode_ModalityPolicy = $._decodeUniversalString;
-export const _encode_ModalityPolicy = $._encodeUniversalString;
+export const _decode_ModalityPolicy: $.ASN1Decoder<string> = $._decodeUniversalString;
+export const _encode_ModalityPolicy: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

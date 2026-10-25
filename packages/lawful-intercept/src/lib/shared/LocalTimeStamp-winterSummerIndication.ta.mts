@@ -107,7 +107,7 @@ type LocalTimeStamp_winterSummerIndication = _enum_for_LocalTimeStamp_winterSumm
  * @type {number}
  */
 export
-const LocalTimeStamp_winterSummerIndication_notProvided = _enum_for_LocalTimeStamp_winterSummerIndication.notProvided; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocalTimeStamp_winterSummerIndication_notProvided: _enum_for_LocalTimeStamp_winterSummerIndication.notProvided = _enum_for_LocalTimeStamp_winterSummerIndication.notProvided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notProvided
@@ -123,7 +123,7 @@ const LocalTimeStamp_winterSummerIndication_notProvided = _enum_for_LocalTimeSta
  * @type {number}
  */
 export
-const notProvided = LocalTimeStamp_winterSummerIndication_notProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notProvided: _enum_for_LocalTimeStamp_winterSummerIndication.notProvided = LocalTimeStamp_winterSummerIndication_notProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocalTimeStamp_winterSummerIndication_winterTime
@@ -139,7 +139,7 @@ const notProvided = LocalTimeStamp_winterSummerIndication_notProvided; /* SHORT_
  * @type {number}
  */
 export
-const LocalTimeStamp_winterSummerIndication_winterTime = _enum_for_LocalTimeStamp_winterSummerIndication.winterTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocalTimeStamp_winterSummerIndication_winterTime: _enum_for_LocalTimeStamp_winterSummerIndication.winterTime = _enum_for_LocalTimeStamp_winterSummerIndication.winterTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary winterTime
@@ -155,7 +155,7 @@ const LocalTimeStamp_winterSummerIndication_winterTime = _enum_for_LocalTimeStam
  * @type {number}
  */
 export
-const winterTime = LocalTimeStamp_winterSummerIndication_winterTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const winterTime: _enum_for_LocalTimeStamp_winterSummerIndication.winterTime = LocalTimeStamp_winterSummerIndication_winterTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocalTimeStamp_winterSummerIndication_summerTime
@@ -171,7 +171,7 @@ const winterTime = LocalTimeStamp_winterSummerIndication_winterTime; /* SHORT_NA
  * @type {number}
  */
 export
-const LocalTimeStamp_winterSummerIndication_summerTime = _enum_for_LocalTimeStamp_winterSummerIndication.summerTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocalTimeStamp_winterSummerIndication_summerTime: _enum_for_LocalTimeStamp_winterSummerIndication.summerTime = _enum_for_LocalTimeStamp_winterSummerIndication.summerTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary summerTime
@@ -187,7 +187,7 @@ const LocalTimeStamp_winterSummerIndication_summerTime = _enum_for_LocalTimeStam
  * @type {number}
  */
 export
-const summerTime = LocalTimeStamp_winterSummerIndication_summerTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const summerTime: _enum_for_LocalTimeStamp_winterSummerIndication.summerTime = LocalTimeStamp_winterSummerIndication_summerTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LocalTimeStamp_winterSummerIndication: $.ASN1Decoder<LocalTimeStamp_winterSummerIndication> = $._decodeEnumerated;
 export const _encode_LocalTimeStamp_winterSummerIndication: $.ASN1Encoder<LocalTimeStamp_winterSummerIndication> = $._encodeEnumerated;
 

@@ -290,19 +290,19 @@ class NEFPDUSessionModification {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_Initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_Initiator = _enum_for_Initiator;        /**
          * @summary The enum used as the type of the component `rDSAction`
          * @public
          * @static
          */
 
-    public static _enum_for_rDSAction = _enum_for_RDSAction;        /**
+    public static _enum_for_rDSAction: typeof _enum_for_RDSAction = _enum_for_RDSAction;        /**
          * @summary The enum used as the type of the component `serializationFormat`
          * @public
          * @static
          */
 
-    public static _enum_for_serializationFormat = _enum_for_SerializationFormat;
+    public static _enum_for_serializationFormat: typeof _enum_for_SerializationFormat = _enum_for_SerializationFormat;
 }
 
 /**

@@ -106,7 +106,7 @@ type MMSRetrieveStatus = _enum_for_MMSRetrieveStatus;
  * @enum {number}
  */
 export
-const MMSRetrieveStatus = _enum_for_MMSRetrieveStatus;
+const MMSRetrieveStatus: typeof _enum_for_MMSRetrieveStatus = _enum_for_MMSRetrieveStatus;
 
 /**
  * @summary MMSRetrieveStatus_success
@@ -114,7 +114,7 @@ const MMSRetrieveStatus = _enum_for_MMSRetrieveStatus;
  * @type {number}
  */
 export
-const MMSRetrieveStatus_success = MMSRetrieveStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_success: _enum_for_MMSRetrieveStatus.success = MMSRetrieveStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -122,7 +122,7 @@ const MMSRetrieveStatus_success = MMSRetrieveStatus.success; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const success = MMSRetrieveStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success: _enum_for_MMSRetrieveStatus.success = MMSRetrieveStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorTransientFailure
@@ -130,7 +130,7 @@ const success = MMSRetrieveStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorTransientFailure = MMSRetrieveStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorTransientFailure: _enum_for_MMSRetrieveStatus.errorTransientFailure = MMSRetrieveStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientFailure
@@ -138,7 +138,7 @@ const MMSRetrieveStatus_errorTransientFailure = MMSRetrieveStatus.errorTransient
  * @type {number}
  */
 export
-const errorTransientFailure = MMSRetrieveStatus.errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientFailure: _enum_for_MMSRetrieveStatus.errorTransientFailure = MMSRetrieveStatus.errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorTransientMessageNotFound
@@ -146,7 +146,7 @@ const errorTransientFailure = MMSRetrieveStatus.errorTransientFailure; /* SHORT_
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorTransientMessageNotFound = MMSRetrieveStatus.errorTransientMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorTransientMessageNotFound: _enum_for_MMSRetrieveStatus.errorTransientMessageNotFound = MMSRetrieveStatus.errorTransientMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientMessageNotFound
@@ -154,7 +154,7 @@ const MMSRetrieveStatus_errorTransientMessageNotFound = MMSRetrieveStatus.errorT
  * @type {number}
  */
 export
-const errorTransientMessageNotFound = MMSRetrieveStatus.errorTransientMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientMessageNotFound: _enum_for_MMSRetrieveStatus.errorTransientMessageNotFound = MMSRetrieveStatus.errorTransientMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorTransientNetworkProblem
@@ -162,7 +162,7 @@ const errorTransientMessageNotFound = MMSRetrieveStatus.errorTransientMessageNot
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorTransientNetworkProblem = MMSRetrieveStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorTransientNetworkProblem: _enum_for_MMSRetrieveStatus.errorTransientNetworkProblem = MMSRetrieveStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientNetworkProblem
@@ -170,7 +170,7 @@ const MMSRetrieveStatus_errorTransientNetworkProblem = MMSRetrieveStatus.errorTr
  * @type {number}
  */
 export
-const errorTransientNetworkProblem = MMSRetrieveStatus.errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientNetworkProblem: _enum_for_MMSRetrieveStatus.errorTransientNetworkProblem = MMSRetrieveStatus.errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorPermanentFailure
@@ -178,7 +178,7 @@ const errorTransientNetworkProblem = MMSRetrieveStatus.errorTransientNetworkProb
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorPermanentFailure = MMSRetrieveStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorPermanentFailure: _enum_for_MMSRetrieveStatus.errorPermanentFailure = MMSRetrieveStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentFailure
@@ -186,7 +186,7 @@ const MMSRetrieveStatus_errorPermanentFailure = MMSRetrieveStatus.errorPermanent
  * @type {number}
  */
 export
-const errorPermanentFailure = MMSRetrieveStatus.errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentFailure: _enum_for_MMSRetrieveStatus.errorPermanentFailure = MMSRetrieveStatus.errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorPermanentServiceDenied
@@ -194,7 +194,7 @@ const errorPermanentFailure = MMSRetrieveStatus.errorPermanentFailure; /* SHORT_
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorPermanentServiceDenied = MMSRetrieveStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorPermanentServiceDenied: _enum_for_MMSRetrieveStatus.errorPermanentServiceDenied = MMSRetrieveStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentServiceDenied
@@ -202,7 +202,7 @@ const MMSRetrieveStatus_errorPermanentServiceDenied = MMSRetrieveStatus.errorPer
  * @type {number}
  */
 export
-const errorPermanentServiceDenied = MMSRetrieveStatus.errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentServiceDenied: _enum_for_MMSRetrieveStatus.errorPermanentServiceDenied = MMSRetrieveStatus.errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorPermanentMessageNotFound
@@ -210,7 +210,7 @@ const errorPermanentServiceDenied = MMSRetrieveStatus.errorPermanentServiceDenie
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorPermanentMessageNotFound = MMSRetrieveStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorPermanentMessageNotFound: _enum_for_MMSRetrieveStatus.errorPermanentMessageNotFound = MMSRetrieveStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageNotFound
@@ -218,7 +218,7 @@ const MMSRetrieveStatus_errorPermanentMessageNotFound = MMSRetrieveStatus.errorP
  * @type {number}
  */
 export
-const errorPermanentMessageNotFound = MMSRetrieveStatus.errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageNotFound: _enum_for_MMSRetrieveStatus.errorPermanentMessageNotFound = MMSRetrieveStatus.errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSRetrieveStatus_errorPermanentContentUnsupported
@@ -226,7 +226,7 @@ const errorPermanentMessageNotFound = MMSRetrieveStatus.errorPermanentMessageNot
  * @type {number}
  */
 export
-const MMSRetrieveStatus_errorPermanentContentUnsupported = MMSRetrieveStatus.errorPermanentContentUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSRetrieveStatus_errorPermanentContentUnsupported: _enum_for_MMSRetrieveStatus.errorPermanentContentUnsupported = MMSRetrieveStatus.errorPermanentContentUnsupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentContentUnsupported
@@ -234,7 +234,7 @@ const MMSRetrieveStatus_errorPermanentContentUnsupported = MMSRetrieveStatus.err
  * @type {number}
  */
 export
-const errorPermanentContentUnsupported = MMSRetrieveStatus.errorPermanentContentUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentContentUnsupported: _enum_for_MMSRetrieveStatus.errorPermanentContentUnsupported = MMSRetrieveStatus.errorPermanentContentUnsupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSRetrieveStatus: $.ASN1Decoder<MMSRetrieveStatus> = $._decodeEnumerated;
 export const _encode_MMSRetrieveStatus: $.ASN1Encoder<MMSRetrieveStatus> = $._encodeEnumerated;
 

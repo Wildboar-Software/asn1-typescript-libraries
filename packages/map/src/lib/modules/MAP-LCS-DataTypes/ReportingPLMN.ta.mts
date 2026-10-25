@@ -101,7 +101,7 @@ class ReportingPLMN {
          * @static
          */
 
-    public static _enum_for_ran_Technology = _enum_for_RAN_Technology;
+    public static _enum_for_ran_Technology: typeof _enum_for_RAN_Technology = _enum_for_RAN_Technology;
 }
 
 /**

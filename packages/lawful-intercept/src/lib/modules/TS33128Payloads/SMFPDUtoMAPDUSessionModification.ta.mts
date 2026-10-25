@@ -447,31 +447,31 @@ class SMFPDUtoMAPDUSessionModification {
          * @static
          */
 
-    public static _enum_for_requestType = _enum_for_FiveGSMRequestType;        /**
+    public static _enum_for_requestType: typeof _enum_for_FiveGSMRequestType = _enum_for_FiveGSMRequestType;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;        /**
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;        /**
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;        /**
          * @summary The enum used as the type of the component `requestIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_requestIndication = _enum_for_RequestIndication;        /**
+    public static _enum_for_requestIndication: typeof _enum_for_RequestIndication = _enum_for_RequestIndication;        /**
          * @summary The enum used as the type of the component `handoverState`
          * @public
          * @static
          */
 
-    public static _enum_for_handoverState = _enum_for_HandoverState;
+    public static _enum_for_handoverState: typeof _enum_for_HandoverState = _enum_for_HandoverState;
 }
 
 /**

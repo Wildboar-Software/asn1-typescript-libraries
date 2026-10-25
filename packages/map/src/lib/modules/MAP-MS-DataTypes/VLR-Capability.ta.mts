@@ -267,7 +267,7 @@ class VLR_Capability {
          * @static
          */
 
-    public static _enum_for_istSupportIndicator = _enum_for_IST_SupportIndicator;
+    public static _enum_for_istSupportIndicator: typeof _enum_for_IST_SupportIndicator = _enum_for_IST_SupportIndicator;
 }
 
 /**

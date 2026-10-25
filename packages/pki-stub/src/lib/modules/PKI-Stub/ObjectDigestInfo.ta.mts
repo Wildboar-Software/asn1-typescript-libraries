@@ -154,7 +154,7 @@ export class ObjectDigestInfo {
      * @static
      */
 
-    public static _enum_for_digestedObjectType =
+    public static _enum_for_digestedObjectType: typeof _enum_for_ObjectDigestInfo_digestedObjectType =
         _enum_for_ObjectDigestInfo_digestedObjectType;
 
     /**

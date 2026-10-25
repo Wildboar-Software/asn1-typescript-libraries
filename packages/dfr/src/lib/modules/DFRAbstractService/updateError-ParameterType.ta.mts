@@ -82,7 +82,7 @@ class updateError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_UpdateProblem;
+    public static _enum_for_problem: typeof _enum_for_UpdateProblem = _enum_for_UpdateProblem;
 }
 
 /**

@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type ExpiredCertsOnCRL = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_ExpiredCertsOnCRL = $._decodeGeneralizedTime;
+export const _decode_ExpiredCertsOnCRL: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_ExpiredCertsOnCRL = $._encodeGeneralizedTime;
+export const _encode_ExpiredCertsOnCRL: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

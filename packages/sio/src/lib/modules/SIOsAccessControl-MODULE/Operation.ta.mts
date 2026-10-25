@@ -28,7 +28,7 @@ export type Operation = INTEGER;
  * @constant
  * @type {number}
  */
-export const Operation_onlyOne = 1 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE */
+export const Operation_onlyOne: 1 = 1 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -37,7 +37,7 @@ export const Operation_onlyOne = 1 satisfies Operation; /* LONG_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const onlyOne = Operation_onlyOne; /* SHORT_NAMED_INTEGER_VALUE */
+export const onlyOne: 1 = Operation_onlyOne; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -46,7 +46,7 @@ export const onlyOne = Operation_onlyOne; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Operation_oneOrMore = 2 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE */
+export const Operation_oneOrMore: 2 = 2 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const Operation_oneOrMore = 2 satisfies Operation; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const oneOrMore = Operation_oneOrMore; /* SHORT_NAMED_INTEGER_VALUE */
+export const oneOrMore: 2 = Operation_oneOrMore; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const oneOrMore = Operation_oneOrMore; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Operation_all = 3 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE */
+export const Operation_all: 3 = 3 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,17 +73,17 @@ export const Operation_all = 3 satisfies Operation; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const all = Operation_all; /* SHORT_NAMED_INTEGER_VALUE */
+export const all: 3 = Operation_all; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Operation = $._decodeInteger;
+export const _decode_Operation: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Operation = $._encodeInteger;
+export const _encode_Operation: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

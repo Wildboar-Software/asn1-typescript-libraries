@@ -78,7 +78,7 @@ class SMAddress {
          * @static
          */
 
-    public static _enum_for_sMAddressType = _enum_for_SMAddressType;
+    public static _enum_for_sMAddressType: typeof _enum_for_SMAddressType = _enum_for_SMAddressType;
 }
 
 /**

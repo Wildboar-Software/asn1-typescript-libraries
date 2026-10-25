@@ -704,25 +704,25 @@ class GetSwitchingFunctionCapsResult {
          * @static
          */
 
-    public static _enum_for_ignoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;        /**
+    public static _enum_for_ignoreUnsupportedParameters: typeof _enum_for_IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;        /**
          * @summary The enum used as the type of the component `securityMode`
          * @public
          * @static
          */
 
-    public static _enum_for_securityMode = _enum_for_SecurityMode;        /**
+    public static _enum_for_securityMode: typeof _enum_for_SecurityMode = _enum_for_SecurityMode;        /**
          * @summary The enum used as the type of the component `dynamicFeatureSupported`
          * @public
          * @static
          */
 
-    public static _enum_for_dynamicFeatureSupported = _enum_for_DynamicFeatureSupported;        /**
+    public static _enum_for_dynamicFeatureSupported: typeof _enum_for_DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;        /**
          * @summary The enum used as the type of the component `connectionView`
          * @public
          * @static
          */
 
-    public static _enum_for_connectionView = _enum_for_ConnectionView;
+    public static _enum_for_connectionView: typeof _enum_for_ConnectionView = _enum_for_ConnectionView;
 }
 
 /**

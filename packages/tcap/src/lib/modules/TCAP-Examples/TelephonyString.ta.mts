@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TelephonyString = IA5String; // IA5String
 
 
-export const _decode_TelephonyString = $._decodeIA5String;
+export const _decode_TelephonyString: $.ASN1Decoder<string> = $._decodeIA5String;
 
 
-export const _encode_TelephonyString = $._encodeIA5String;
+export const _encode_TelephonyString: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

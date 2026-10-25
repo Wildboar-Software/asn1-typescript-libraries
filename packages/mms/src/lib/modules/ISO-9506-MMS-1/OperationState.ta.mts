@@ -53,7 +53,7 @@ type OperationState = INTEGER;
  * @type {number}
  */
 export
-const OperationState_idle = 0 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_idle: 0 = 0 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_idle
@@ -66,7 +66,7 @@ const OperationState_idle = 0 satisfies OperationState; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const idle = OperationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
+const idle: 0 = OperationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_loaded
@@ -79,7 +79,7 @@ const idle = OperationState_idle; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const OperationState_loaded = 1 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_loaded: 1 = 1 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_loaded
@@ -92,7 +92,7 @@ const OperationState_loaded = 1 satisfies OperationState; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const loaded = OperationState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
+const loaded: 1 = OperationState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_ready
@@ -105,7 +105,7 @@ const loaded = OperationState_loaded; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const OperationState_ready = 2 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_ready: 2 = 2 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_ready
@@ -118,7 +118,7 @@ const OperationState_ready = 2 satisfies OperationState; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const ready = OperationState_ready; /* SHORT_NAMED_INTEGER_VALUE */
+const ready: 2 = OperationState_ready; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_executing
@@ -131,7 +131,7 @@ const ready = OperationState_ready; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const OperationState_executing = 3 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_executing: 3 = 3 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_executing
@@ -144,7 +144,7 @@ const OperationState_executing = 3 satisfies OperationState; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const executing = OperationState_executing; /* SHORT_NAMED_INTEGER_VALUE */
+const executing: 3 = OperationState_executing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_motion_paused
@@ -157,7 +157,7 @@ const executing = OperationState_executing; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const OperationState_motion_paused = 4 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_motion_paused: 4 = 4 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_motion_paused
@@ -170,7 +170,7 @@ const OperationState_motion_paused = 4 satisfies OperationState; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const motion_paused = OperationState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
+const motion_paused: 4 = OperationState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_manualInterventionRequired
@@ -183,7 +183,7 @@ const motion_paused = OperationState_motion_paused; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const OperationState_manualInterventionRequired = 5 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
+const OperationState_manualInterventionRequired: 5 = 5 satisfies OperationState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OperationState_manualInterventionRequired
@@ -196,9 +196,9 @@ const OperationState_manualInterventionRequired = 5 satisfies OperationState; /*
  * @type {number}
  */
 export
-const manualInterventionRequired = OperationState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_OperationState = $._decodeInteger;
-export const _encode_OperationState = $._encodeInteger;
+const manualInterventionRequired: 5 = OperationState_manualInterventionRequired; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_OperationState: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_OperationState: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SubsystemId = GraphicString; // GraphicString
 
 
-export const _decode_SubsystemId = $._decodeGraphicString;
+export const _decode_SubsystemId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_SubsystemId = $._encodeGraphicString;
+export const _encode_SubsystemId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

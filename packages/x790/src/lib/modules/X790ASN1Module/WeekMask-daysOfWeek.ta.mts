@@ -124,8 +124,8 @@ const WeekMask_daysOfWeek_saturday: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const saturday: number = WeekMask_daysOfWeek_saturday; /* SHORT_NAMED_BIT */
-export const _decode_WeekMask_daysOfWeek = $._decodeBitString;
-export const _encode_WeekMask_daysOfWeek = $._encodeBitString;
+export const _decode_WeekMask_daysOfWeek: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_WeekMask_daysOfWeek: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

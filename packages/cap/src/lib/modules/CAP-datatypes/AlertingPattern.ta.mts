@@ -30,4 +30,4 @@ export const _decode_AlertingPattern = (el: _Element): AlertingPattern => {
     }
     return value;
 };
-export const _encode_AlertingPattern = $._encodeOctetString;
+export const _encode_AlertingPattern: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

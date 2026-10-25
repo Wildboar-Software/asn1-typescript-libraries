@@ -53,7 +53,7 @@ type Function = _enum_for_Function | ENUMERATED;
  * @type {number}
  */
 export
-const Function_acquisition = _enum_for_Function.acquisition; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_acquisition: _enum_for_Function.acquisition = _enum_for_Function.acquisition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary acquisition
@@ -61,7 +61,7 @@ const Function_acquisition = _enum_for_Function.acquisition; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const acquisition = Function_acquisition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const acquisition: _enum_for_Function.acquisition = Function_acquisition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Function_enrolment
@@ -69,7 +69,7 @@ const acquisition = Function_acquisition; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Function_enrolment = _enum_for_Function.enrolment; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_enrolment: _enum_for_Function.enrolment = _enum_for_Function.enrolment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enrolment
@@ -77,7 +77,7 @@ const Function_enrolment = _enum_for_Function.enrolment; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const enrolment = Function_enrolment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enrolment: _enum_for_Function.enrolment = Function_enrolment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Function_verification
@@ -85,7 +85,7 @@ const enrolment = Function_enrolment; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Function_verification = _enum_for_Function.verification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_verification: _enum_for_Function.verification = _enum_for_Function.verification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verification
@@ -93,7 +93,7 @@ const Function_verification = _enum_for_Function.verification; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const verification = Function_verification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const verification: _enum_for_Function.verification = Function_verification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Function_identification
@@ -101,7 +101,7 @@ const verification = Function_verification; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Function_identification = _enum_for_Function.identification; /* LONG_NAMED_ENUMERATED_VALUE */
+const Function_identification: _enum_for_Function.identification = _enum_for_Function.identification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary identification
@@ -109,7 +109,7 @@ const Function_identification = _enum_for_Function.identification; /* LONG_NAMED
  * @type {number}
  */
 export
-const identification = Function_identification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const identification: _enum_for_Function.identification = Function_identification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ const identification = Function_identification; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Function = $._decodeEnumerated;
+export const _decode_Function: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -128,7 +128,7 @@ export const _decode_Function = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Function, encoded as an ASN.1 Element.
  */
-export const _encode_Function = $._encodeEnumerated;
+export const _encode_Function: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

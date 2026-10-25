@@ -122,7 +122,7 @@ class MuxDescriptor {
          * @static
          */
 
-    public static _enum_for_muxType = _enum_for_MuxType;
+    public static _enum_for_muxType: typeof _enum_for_MuxType = _enum_for_MuxType;
 }
 
 /**

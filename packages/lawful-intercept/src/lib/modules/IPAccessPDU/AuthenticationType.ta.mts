@@ -58,7 +58,7 @@ type AuthenticationType = _enum_for_AuthenticationType | ENUMERATED;
  * @type {number}
  */
 export
-const AuthenticationType_unknown = _enum_for_AuthenticationType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthenticationType_unknown: _enum_for_AuthenticationType.unknown = _enum_for_AuthenticationType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -70,7 +70,7 @@ const AuthenticationType_unknown = _enum_for_AuthenticationType.unknown; /* LONG
  * @type {number}
  */
 export
-const unknown = AuthenticationType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_AuthenticationType.unknown = AuthenticationType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthenticationType_static_
@@ -86,7 +86,7 @@ const unknown = AuthenticationType_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AuthenticationType_static_ = _enum_for_AuthenticationType.static_; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthenticationType_static_: _enum_for_AuthenticationType.static_ = _enum_for_AuthenticationType.static_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary static_
@@ -98,7 +98,7 @@ const AuthenticationType_static_ = _enum_for_AuthenticationType.static_; /* LONG
  * @type {number}
  */
 export
-const static_ = AuthenticationType_static_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const static_: _enum_for_AuthenticationType.static_ = AuthenticationType_static_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthenticationType_radiusAAA
@@ -112,7 +112,7 @@ const static_ = AuthenticationType_static_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AuthenticationType_radiusAAA = _enum_for_AuthenticationType.radiusAAA; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthenticationType_radiusAAA: _enum_for_AuthenticationType.radiusAAA = _enum_for_AuthenticationType.radiusAAA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary radiusAAA
@@ -124,7 +124,7 @@ const AuthenticationType_radiusAAA = _enum_for_AuthenticationType.radiusAAA; /* 
  * @type {number}
  */
 export
-const radiusAAA = AuthenticationType_radiusAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const radiusAAA: _enum_for_AuthenticationType.radiusAAA = AuthenticationType_radiusAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthenticationType_dhcpAAA
@@ -138,7 +138,7 @@ const radiusAAA = AuthenticationType_radiusAAA; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const AuthenticationType_dhcpAAA = _enum_for_AuthenticationType.dhcpAAA; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthenticationType_dhcpAAA: _enum_for_AuthenticationType.dhcpAAA = _enum_for_AuthenticationType.dhcpAAA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dhcpAAA
@@ -150,7 +150,7 @@ const AuthenticationType_dhcpAAA = _enum_for_AuthenticationType.dhcpAAA; /* LONG
  * @type {number}
  */
 export
-const dhcpAAA = AuthenticationType_dhcpAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dhcpAAA: _enum_for_AuthenticationType.dhcpAAA = AuthenticationType_dhcpAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthenticationType_diameterAAA
@@ -163,7 +163,7 @@ const dhcpAAA = AuthenticationType_dhcpAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const AuthenticationType_diameterAAA = _enum_for_AuthenticationType.diameterAAA; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthenticationType_diameterAAA: _enum_for_AuthenticationType.diameterAAA = _enum_for_AuthenticationType.diameterAAA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary diameterAAA
@@ -175,7 +175,7 @@ const AuthenticationType_diameterAAA = _enum_for_AuthenticationType.diameterAAA;
  * @type {number}
  */
 export
-const diameterAAA = AuthenticationType_diameterAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const diameterAAA: _enum_for_AuthenticationType.diameterAAA = AuthenticationType_diameterAAA; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AuthenticationType: $.ASN1Decoder<AuthenticationType> = $._decodeEnumerated;
 export const _encode_AuthenticationType: $.ASN1Encoder<AuthenticationType> = $._encodeEnumerated;
 

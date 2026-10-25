@@ -71,7 +71,7 @@ class GapOnService {
          * @static
          */
 
-    public static _enum_for_dpCriteria = _enum_for_EventTypeBCSM;
+    public static _enum_for_dpCriteria: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

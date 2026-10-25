@@ -135,7 +135,7 @@ export const _decode_MME_EventList = (el: _Element): MME_EventList => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MME_EventList, encoded as an ASN.1 Element.
  */
-export const _encode_MME_EventList = $._encodeBitString;
+export const _encode_MME_EventList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

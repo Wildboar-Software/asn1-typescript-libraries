@@ -96,7 +96,7 @@ class attributeError_ParameterType_problems_Item {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_AttributeProblem;
+    public static _enum_for_problem: typeof _enum_for_AttributeProblem = _enum_for_AttributeProblem;
 }
 
 /**

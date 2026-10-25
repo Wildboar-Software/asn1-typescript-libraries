@@ -891,13 +891,13 @@ class InsertSubscriberDataArg {
          * @static
          */
 
-    public static _enum_for_subscriberStatus = _enum_for_SubscriberStatus;        /**
+    public static _enum_for_subscriberStatus: typeof _enum_for_SubscriberStatus = _enum_for_SubscriberStatus;        /**
          * @summary The enum used as the type of the component `networkAccessMode`
          * @public
          * @static
          */
 
-    public static _enum_for_networkAccessMode = _enum_for_NetworkAccessMode;
+    public static _enum_for_networkAccessMode: typeof _enum_for_NetworkAccessMode = _enum_for_NetworkAccessMode;
 }
 
 /**

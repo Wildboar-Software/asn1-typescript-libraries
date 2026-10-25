@@ -61,7 +61,7 @@ export type AutoSwitchReason = _enum_for_AutoSwitchReason;
  *
  * @enum {number}
  */
-export const AutoSwitchReason = _enum_for_AutoSwitchReason;
+export const AutoSwitchReason: typeof _enum_for_AutoSwitchReason = _enum_for_AutoSwitchReason;
 
 
 /**
@@ -69,7 +69,7 @@ export const AutoSwitchReason = _enum_for_AutoSwitchReason;
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_waitToRestore =
+export const AutoSwitchReason_waitToRestore: _enum_for_AutoSwitchReason.waitToRestore =
     AutoSwitchReason.waitToRestore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const AutoSwitchReason_waitToRestore =
  * @constant
  * @type {number}
  */
-export const waitToRestore =
+export const waitToRestore: _enum_for_AutoSwitchReason.waitToRestore =
     AutoSwitchReason.waitToRestore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const waitToRestore =
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_resourceDegrade =
+export const AutoSwitchReason_resourceDegrade: _enum_for_AutoSwitchReason.resourceDegrade =
     AutoSwitchReason.resourceDegrade; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const AutoSwitchReason_resourceDegrade =
  * @constant
  * @type {number}
  */
-export const resourceDegrade =
+export const resourceDegrade: _enum_for_AutoSwitchReason.resourceDegrade =
     AutoSwitchReason.resourceDegrade; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const resourceDegrade =
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_resourceFailed =
+export const AutoSwitchReason_resourceFailed: _enum_for_AutoSwitchReason.resourceFailed =
     AutoSwitchReason.resourceFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const AutoSwitchReason_resourceFailed =
  * @constant
  * @type {number}
  */
-export const resourceFailed =
+export const resourceFailed: _enum_for_AutoSwitchReason.resourceFailed =
     AutoSwitchReason.resourceFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

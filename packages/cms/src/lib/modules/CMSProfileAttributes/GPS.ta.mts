@@ -20,12 +20,12 @@ export type GPS = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_GPS = $._decodeOctetString;
+export const _decode_GPS: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_GPS = $._encodeOctetString;
+export const _encode_GPS: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

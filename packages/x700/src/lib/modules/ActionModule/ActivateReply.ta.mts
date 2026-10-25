@@ -128,7 +128,7 @@ export class ActivateReply {
      * @static
      */
 
-    public static _enum_for_operationalStatus = _enum_for_OperationalState;
+    public static _enum_for_operationalStatus: typeof _enum_for_OperationalState = _enum_for_OperationalState;
 }
 
 /**

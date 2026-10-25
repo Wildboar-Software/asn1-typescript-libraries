@@ -126,7 +126,7 @@ class RunUserScriptArg_Type {
          * @static
          */
 
-    public static _enum_for_userToConnect = _enum_for_UserToConnect;
+    public static _enum_for_userToConnect: typeof _enum_for_UserToConnect = _enum_for_UserToConnect;
 }
 
 /**

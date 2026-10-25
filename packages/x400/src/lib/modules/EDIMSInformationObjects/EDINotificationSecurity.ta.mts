@@ -74,10 +74,10 @@ export const EDINotificationSecurity_non_repudiation: number = 1; /* LONG_NAMED_
 export const non_repudiation: number = EDINotificationSecurity_non_repudiation; /* SHORT_NAMED_BIT */
 
 
-export const _decode_EDINotificationSecurity = $._decodeBitString;
+export const _decode_EDINotificationSecurity: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_EDINotificationSecurity = $._encodeBitString;
+export const _encode_EDINotificationSecurity: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -58,14 +58,14 @@ export type EDIMSEntryType = _enum_for_EDIMSEntryType;
  *
  * @enum {number}
  */
-export const EDIMSEntryType = _enum_for_EDIMSEntryType;
+export const EDIMSEntryType: typeof _enum_for_EDIMSEntryType = _enum_for_EDIMSEntryType;
 
 /**
  * @summary EDIMSEntryType_edim
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_edim =
+export const EDIMSEntryType_edim: _enum_for_EDIMSEntryType.edim =
     EDIMSEntryType.edim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -73,7 +73,7 @@ export const EDIMSEntryType_edim =
  * @constant
  * @type {number}
  */
-export const edim =
+export const edim: _enum_for_EDIMSEntryType.edim =
     EDIMSEntryType.edim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const edim =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_pn =
+export const EDIMSEntryType_pn: _enum_for_EDIMSEntryType.pn =
     EDIMSEntryType.pn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const EDIMSEntryType_pn =
  * @constant
  * @type {number}
  */
-export const pn =
+export const pn: _enum_for_EDIMSEntryType.pn =
     EDIMSEntryType.pn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const pn =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_nn =
+export const EDIMSEntryType_nn: _enum_for_EDIMSEntryType.nn =
     EDIMSEntryType.nn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const EDIMSEntryType_nn =
  * @constant
  * @type {number}
  */
-export const nn =
+export const nn: _enum_for_EDIMSEntryType.nn =
     EDIMSEntryType.nn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const nn =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_fn =
+export const EDIMSEntryType_fn: _enum_for_EDIMSEntryType.fn =
     EDIMSEntryType.fn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const EDIMSEntryType_fn =
  * @constant
  * @type {number}
  */
-export const fn =
+export const fn: _enum_for_EDIMSEntryType.fn =
     EDIMSEntryType.fn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

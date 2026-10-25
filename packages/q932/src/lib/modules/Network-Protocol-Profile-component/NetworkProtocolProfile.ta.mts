@@ -47,7 +47,7 @@ type NetworkProtocolProfile = INTEGER;
  * @type {number}
  */
 export
-const NetworkProtocolProfile_acse = 19 satisfies NetworkProtocolProfile; /* LONG_NAMED_INTEGER_VALUE */
+const NetworkProtocolProfile_acse: 19 = 19 satisfies NetworkProtocolProfile; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NetworkProtocolProfile_acse
@@ -60,7 +60,7 @@ const NetworkProtocolProfile_acse = 19 satisfies NetworkProtocolProfile; /* LONG
  * @type {number}
  */
 export
-const acse = NetworkProtocolProfile_acse; /* SHORT_NAMED_INTEGER_VALUE */
+const acse: 19 = NetworkProtocolProfile_acse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NetworkProtocolProfile_dse
@@ -73,7 +73,7 @@ const acse = NetworkProtocolProfile_acse; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const NetworkProtocolProfile_dse = 32 satisfies NetworkProtocolProfile; /* LONG_NAMED_INTEGER_VALUE */
+const NetworkProtocolProfile_dse: 32 = 32 satisfies NetworkProtocolProfile; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NetworkProtocolProfile_dse
@@ -86,7 +86,7 @@ const NetworkProtocolProfile_dse = 32 satisfies NetworkProtocolProfile; /* LONG_
  * @type {number}
  */
 export
-const dse = NetworkProtocolProfile_dse; /* SHORT_NAMED_INTEGER_VALUE */
+const dse: 32 = NetworkProtocolProfile_dse; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_NetworkProtocolProfile: $.ASN1Decoder<NetworkProtocolProfile> | null = null;
 

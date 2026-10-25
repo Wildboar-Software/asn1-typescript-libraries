@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TerminationReason = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_TerminationReason = $._decodeObjectIdentifier;
+export const _decode_TerminationReason: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_TerminationReason = $._encodeObjectIdentifier;
+export const _encode_TerminationReason: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

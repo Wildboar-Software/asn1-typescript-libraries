@@ -31,8 +31,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type VMDReset_Request = BOOLEAN; // BooleanType
-export const _decode_VMDReset_Request = $._decodeBoolean;
-export const _encode_VMDReset_Request = $._encodeBoolean;
+export const _decode_VMDReset_Request: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_VMDReset_Request: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

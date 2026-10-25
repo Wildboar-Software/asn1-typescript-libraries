@@ -31,34 +31,34 @@ export type Encipherment = INTEGER;
  * @constant
  * @type {number}
  */
-export const Encipherment_encrypted = 1 satisfies Encipherment; /* LONG_NAMED_INTEGER_VALUE */
+export const Encipherment_encrypted: 1 = 1 satisfies Encipherment; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Encipherment_encrypted
  * @constant
  * @type {number}
  */
-export const encrypted = Encipherment_encrypted; /* SHORT_NAMED_INTEGER_VALUE */
+export const encrypted: 1 = Encipherment_encrypted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Encipherment_clear
  * @constant
  * @type {number}
  */
-export const Encipherment_clear = 2 satisfies Encipherment; /* LONG_NAMED_INTEGER_VALUE */
+export const Encipherment_clear: 2 = 2 satisfies Encipherment; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Encipherment_clear
  * @constant
  * @type {number}
  */
-export const clear = Encipherment_clear; /* SHORT_NAMED_INTEGER_VALUE */
+export const clear: 2 = Encipherment_clear; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Encipherment = $._decodeInteger;
+export const _decode_Encipherment: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Encipherment = $._encodeInteger;
+export const _encode_Encipherment: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

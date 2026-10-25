@@ -30,7 +30,7 @@ export const _decode_SecurityParmIndex = (el: _Element): SecurityParmIndex => {
     }
     return value;
 };
-export const _encode_SecurityParmIndex = $._encodeOctetString;
+export const _encode_SecurityParmIndex: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

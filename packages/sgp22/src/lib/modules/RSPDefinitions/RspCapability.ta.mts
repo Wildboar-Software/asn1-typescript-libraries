@@ -273,8 +273,8 @@ const RspCapability_rspServerTestProfileAllowlistCheckSupport: number = 28; /* L
  */
 export
 const rspServerTestProfileAllowlistCheckSupport: number = RspCapability_rspServerTestProfileAllowlistCheckSupport; /* SHORT_NAMED_BIT */
-export const _decode_RspCapability = $._decodeBitString;
-export const _encode_RspCapability = $._encodeBitString;
+export const _decode_RspCapability: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_RspCapability: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

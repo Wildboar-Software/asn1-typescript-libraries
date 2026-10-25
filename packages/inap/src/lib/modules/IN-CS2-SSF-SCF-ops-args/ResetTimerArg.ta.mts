@@ -104,13 +104,13 @@ class ResetTimerArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return TimerID_tssf; }        /**
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return TimerID_tssf; }        /**
          * @summary The enum used as the type of the component `timerID`
          * @public
          * @static
          */
 
-    public static _enum_for_timerID = _enum_for_TimerID;
+    public static _enum_for_timerID: typeof _enum_for_TimerID = _enum_for_TimerID;
 }
 
 /**

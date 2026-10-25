@@ -69,7 +69,7 @@ export class subscription_error_ParameterType {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_SubscriptionProblem;
+    public static _enum_for_problem: typeof _enum_for_SubscriptionProblem = _enum_for_SubscriptionProblem;
 }
 
 /**

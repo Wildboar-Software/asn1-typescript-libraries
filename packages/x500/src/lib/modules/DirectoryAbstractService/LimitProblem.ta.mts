@@ -30,7 +30,7 @@ export type LimitProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const LimitProblem_timeLimitExceeded = 0 satisfies LimitProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const LimitProblem_timeLimitExceeded: 0 = 0 satisfies LimitProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_timeLimitExceeded
@@ -41,7 +41,7 @@ export const LimitProblem_timeLimitExceeded = 0 satisfies LimitProblem; /* LONG_
  * @constant
  * @type {number}
  */
-export const timeLimitExceeded = LimitProblem_timeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const timeLimitExceeded: 0 = LimitProblem_timeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_sizeLimitExceeded
@@ -52,7 +52,7 @@ export const timeLimitExceeded = LimitProblem_timeLimitExceeded; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const LimitProblem_sizeLimitExceeded = 1 satisfies LimitProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const LimitProblem_sizeLimitExceeded: 1 = 1 satisfies LimitProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_sizeLimitExceeded
@@ -63,7 +63,7 @@ export const LimitProblem_sizeLimitExceeded = 1 satisfies LimitProblem; /* LONG_
  * @constant
  * @type {number}
  */
-export const sizeLimitExceeded = LimitProblem_sizeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const sizeLimitExceeded: 1 = LimitProblem_sizeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_administrativeLimitExceeded
@@ -74,7 +74,7 @@ export const sizeLimitExceeded = LimitProblem_sizeLimitExceeded; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const LimitProblem_administrativeLimitExceeded = 2 satisfies LimitProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const LimitProblem_administrativeLimitExceeded: 2 = 2 satisfies LimitProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary LimitProblem_administrativeLimitExceeded
@@ -85,13 +85,13 @@ export const LimitProblem_administrativeLimitExceeded = 2 satisfies LimitProblem
  * @constant
  * @type {number}
  */
-export const administrativeLimitExceeded = LimitProblem_administrativeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const administrativeLimitExceeded: 2 = LimitProblem_administrativeLimitExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_LimitProblem = $._decodeInteger;
+export const _decode_LimitProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_LimitProblem = $._encodeInteger;
+export const _encode_LimitProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

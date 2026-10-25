@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type IncompleteCopyField = BOOLEAN; // BooleanType
 
 
-export const _decode_IncompleteCopyField = $._decodeBoolean;
+export const _decode_IncompleteCopyField: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_IncompleteCopyField = $._encodeBoolean;
+export const _encode_IncompleteCopyField: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

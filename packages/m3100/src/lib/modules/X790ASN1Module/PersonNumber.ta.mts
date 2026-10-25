@@ -28,12 +28,12 @@ export type PersonNumber = GraphicString; // GraphicString
 
 
 
-export const _decode_PersonNumber = $._decodeGraphicString;
+export const _decode_PersonNumber: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_PersonNumber = $._encodeGraphicString;
+export const _encode_PersonNumber: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

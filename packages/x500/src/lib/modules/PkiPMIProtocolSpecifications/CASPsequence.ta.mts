@@ -15,10 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type CASPsequence = INTEGER;
 
 
-export const _decode_CASPsequence = $._decodeInteger;
+export const _decode_CASPsequence: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_CASPsequence = $._encodeInteger;
+export const _encode_CASPsequence: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type TotalNumberOfORAddresses = INTEGER;
 
 
-export const _decode_TotalNumberOfORAddresses = $._decodeInteger;
+export const _decode_TotalNumberOfORAddresses: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TotalNumberOfORAddresses = $._encodeInteger;
+export const _encode_TotalNumberOfORAddresses: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

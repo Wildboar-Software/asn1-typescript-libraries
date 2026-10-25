@@ -23,12 +23,12 @@ export type Hash = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_Hash = $._decodeOctetString;
+export const _decode_Hash: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_Hash = $._encodeOctetString;
+export const _encode_Hash: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -75,7 +75,7 @@ export type NeighbourSystemType = _enum_for_NeighbourSystemType;
  *
  * @enum {number}
  */
-export const NeighbourSystemType = _enum_for_NeighbourSystemType;
+export const NeighbourSystemType: typeof _enum_for_NeighbourSystemType = _enum_for_NeighbourSystemType;
 
 /**
  * @summary NeighbourSystemType_unknown
@@ -88,7 +88,7 @@ export const NeighbourSystemType = _enum_for_NeighbourSystemType;
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_unknown =
+export const NeighbourSystemType_unknown: _enum_for_NeighbourSystemType.unknown =
   NeighbourSystemType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const NeighbourSystemType_unknown =
  * @constant
  * @type {number}
  */
-export const unknown =
+export const unknown: _enum_for_NeighbourSystemType.unknown =
   NeighbourSystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const unknown =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_endSystem =
+export const NeighbourSystemType_endSystem: _enum_for_NeighbourSystemType.endSystem =
   NeighbourSystemType.endSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const NeighbourSystemType_endSystem =
  * @constant
  * @type {number}
  */
-export const endSystem =
+export const endSystem: _enum_for_NeighbourSystemType.endSystem =
   NeighbourSystemType.endSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const endSystem =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_intermediateSystem =
+export const NeighbourSystemType_intermediateSystem: _enum_for_NeighbourSystemType.intermediateSystem =
   NeighbourSystemType.intermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -140,7 +140,7 @@ export const NeighbourSystemType_intermediateSystem =
  * @constant
  * @type {number}
  */
-export const intermediateSystem =
+export const intermediateSystem: _enum_for_NeighbourSystemType.intermediateSystem =
   NeighbourSystemType.intermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const intermediateSystem =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l1IntermediateSystem =
+export const NeighbourSystemType_l1IntermediateSystem: _enum_for_NeighbourSystemType.l1IntermediateSystem =
   NeighbourSystemType.l1IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const NeighbourSystemType_l1IntermediateSystem =
  * @constant
  * @type {number}
  */
-export const l1IntermediateSystem =
+export const l1IntermediateSystem: _enum_for_NeighbourSystemType.l1IntermediateSystem =
   NeighbourSystemType.l1IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +176,7 @@ export const l1IntermediateSystem =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l2IntermediateSystem =
+export const NeighbourSystemType_l2IntermediateSystem: _enum_for_NeighbourSystemType.l2IntermediateSystem =
   NeighbourSystemType.l2IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -184,7 +184,7 @@ export const NeighbourSystemType_l2IntermediateSystem =
  * @constant
  * @type {number}
  */
-export const l2IntermediateSystem =
+export const l2IntermediateSystem: _enum_for_NeighbourSystemType.l2IntermediateSystem =
   NeighbourSystemType.l2IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

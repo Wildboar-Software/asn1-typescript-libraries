@@ -168,7 +168,7 @@ class AuditoryApparatusList_Item {
          * @static
          */
 
-    public static _enum_for_auditoryApparatusType = _enum_for_AuditoryApparatusList_Item_auditoryApparatusType;
+    public static _enum_for_auditoryApparatusType: typeof _enum_for_AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryApparatusList_Item_auditoryApparatusType;
 }
 
 /**

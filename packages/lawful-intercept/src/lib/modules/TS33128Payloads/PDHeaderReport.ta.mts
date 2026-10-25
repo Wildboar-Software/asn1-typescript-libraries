@@ -264,7 +264,7 @@ class PDHeaderReport {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_Direction;
+    public static _enum_for_direction: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

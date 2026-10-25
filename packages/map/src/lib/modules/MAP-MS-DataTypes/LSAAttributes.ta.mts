@@ -46,7 +46,7 @@ export const _decode_LSAAttributes = (el: _Element): LSAAttributes => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LSAAttributes, encoded as an ASN.1 Element.
  */
-export const _encode_LSAAttributes = $._encodeOctetString;
+export const _encode_LSAAttributes: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

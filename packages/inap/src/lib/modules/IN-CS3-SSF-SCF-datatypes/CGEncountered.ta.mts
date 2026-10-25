@@ -54,7 +54,7 @@ type CGEncountered = _enum_for_CGEncountered;
  * @enum {number}
  */
 export
-const CGEncountered = _enum_for_CGEncountered;
+const CGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;
 
 /**
  * @summary CGEncountered_noCGencountered
@@ -62,7 +62,7 @@ const CGEncountered = _enum_for_CGEncountered;
  * @type {number}
  */
 export
-const CGEncountered_noCGencountered = CGEncountered.noCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CGEncountered_noCGencountered: _enum_for_CGEncountered.noCGencountered = CGEncountered.noCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCGencountered
@@ -70,7 +70,7 @@ const CGEncountered_noCGencountered = CGEncountered.noCGencountered; /* LONG_NAM
  * @type {number}
  */
 export
-const noCGencountered = CGEncountered.noCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCGencountered: _enum_for_CGEncountered.noCGencountered = CGEncountered.noCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CGEncountered_manualCGencountered
@@ -78,7 +78,7 @@ const noCGencountered = CGEncountered.noCGencountered; /* SHORT_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const CGEncountered_manualCGencountered = CGEncountered.manualCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CGEncountered_manualCGencountered: _enum_for_CGEncountered.manualCGencountered = CGEncountered.manualCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manualCGencountered
@@ -86,7 +86,7 @@ const CGEncountered_manualCGencountered = CGEncountered.manualCGencountered; /* 
  * @type {number}
  */
 export
-const manualCGencountered = CGEncountered.manualCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manualCGencountered: _enum_for_CGEncountered.manualCGencountered = CGEncountered.manualCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CGEncountered_sCPOverload
@@ -94,7 +94,7 @@ const manualCGencountered = CGEncountered.manualCGencountered; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const CGEncountered_sCPOverload = CGEncountered.sCPOverload; /* LONG_NAMED_ENUMERATED_VALUE */
+const CGEncountered_sCPOverload: _enum_for_CGEncountered.sCPOverload = CGEncountered.sCPOverload; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCPOverload
@@ -102,7 +102,7 @@ const CGEncountered_sCPOverload = CGEncountered.sCPOverload; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const sCPOverload = CGEncountered.sCPOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCPOverload: _enum_for_CGEncountered.sCPOverload = CGEncountered.sCPOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 function _decode_CGEncountered(el: _Element): CGEncountered {

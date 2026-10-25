@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type SuspectIntervals = INTEGER;
 
 
-export const _decode_SuspectIntervals = $._decodeInteger;
+export const _decode_SuspectIntervals: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SuspectIntervals = $._encodeInteger;
+export const _encode_SuspectIntervals: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

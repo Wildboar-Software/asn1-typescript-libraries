@@ -34,10 +34,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Stratum = INTEGER;
 
 
-export const _decode_Stratum = $._decodeInteger;
+export const _decode_Stratum: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Stratum = $._encodeInteger;
+export const _encode_Stratum: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

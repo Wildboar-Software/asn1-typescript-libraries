@@ -160,19 +160,19 @@ class EventReportBCSMArg {
      * @static
      * @method
      */
-    public static get _default_value_for_miscCallInfo () { return new MiscCallInfo(MiscCallInfo._enum_for_messageType.request, undefined); }        /**
+    public static get _default_value_for_miscCallInfo (): MiscCallInfo { return new MiscCallInfo(MiscCallInfo._enum_for_messageType.request, undefined); }        /**
          * @summary The enum used as the type of the component `eventTypeBCSM`
          * @public
          * @static
          */
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;        /**
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;
 }
 
 /**

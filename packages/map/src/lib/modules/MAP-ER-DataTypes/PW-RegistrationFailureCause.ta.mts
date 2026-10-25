@@ -74,7 +74,7 @@ type PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
  * @enum {number}
  */
 export
-const PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
+const PW_RegistrationFailureCause: typeof _enum_for_PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
 
 /**
  * @summary PW_RegistrationFailureCause_undetermined
@@ -87,7 +87,7 @@ const PW_RegistrationFailureCause = _enum_for_PW_RegistrationFailureCause;
  * @type {number}
  */
 export
-const PW_RegistrationFailureCause_undetermined = PW_RegistrationFailureCause.undetermined; /* LONG_NAMED_ENUMERATED_VALUE */
+const PW_RegistrationFailureCause_undetermined: _enum_for_PW_RegistrationFailureCause.undetermined = PW_RegistrationFailureCause.undetermined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undetermined
@@ -100,7 +100,7 @@ const PW_RegistrationFailureCause_undetermined = PW_RegistrationFailureCause.und
  * @type {number}
  */
 export
-const undetermined = PW_RegistrationFailureCause.undetermined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undetermined: _enum_for_PW_RegistrationFailureCause.undetermined = PW_RegistrationFailureCause.undetermined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PW_RegistrationFailureCause_invalidFormat
@@ -113,7 +113,7 @@ const undetermined = PW_RegistrationFailureCause.undetermined; /* SHORT_NAMED_EN
  * @type {number}
  */
 export
-const PW_RegistrationFailureCause_invalidFormat = PW_RegistrationFailureCause.invalidFormat; /* LONG_NAMED_ENUMERATED_VALUE */
+const PW_RegistrationFailureCause_invalidFormat: _enum_for_PW_RegistrationFailureCause.invalidFormat = PW_RegistrationFailureCause.invalidFormat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidFormat
@@ -126,7 +126,7 @@ const PW_RegistrationFailureCause_invalidFormat = PW_RegistrationFailureCause.in
  * @type {number}
  */
 export
-const invalidFormat = PW_RegistrationFailureCause.invalidFormat; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidFormat: _enum_for_PW_RegistrationFailureCause.invalidFormat = PW_RegistrationFailureCause.invalidFormat; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PW_RegistrationFailureCause_newPasswordsMismatch
@@ -139,7 +139,7 @@ const invalidFormat = PW_RegistrationFailureCause.invalidFormat; /* SHORT_NAMED_
  * @type {number}
  */
 export
-const PW_RegistrationFailureCause_newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
+const PW_RegistrationFailureCause_newPasswordsMismatch: _enum_for_PW_RegistrationFailureCause.newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newPasswordsMismatch
@@ -152,7 +152,7 @@ const PW_RegistrationFailureCause_newPasswordsMismatch = PW_RegistrationFailureC
  * @type {number}
  */
 export
-const newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newPasswordsMismatch: _enum_for_PW_RegistrationFailureCause.newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PW_RegistrationFailureCause
@@ -160,7 +160,7 @@ const newPasswordsMismatch = PW_RegistrationFailureCause.newPasswordsMismatch; /
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_PW_RegistrationFailureCause = $._decodeEnumerated;
+export const _decode_PW_RegistrationFailureCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PW_RegistrationFailureCause into an ASN.1 Element.
@@ -169,7 +169,7 @@ export const _decode_PW_RegistrationFailureCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PW_RegistrationFailureCause, encoded as an ASN.1 Element.
  */
-export const _encode_PW_RegistrationFailureCause = $._encodeEnumerated;
+export const _encode_PW_RegistrationFailureCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

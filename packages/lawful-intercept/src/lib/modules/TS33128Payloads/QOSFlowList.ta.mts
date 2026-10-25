@@ -134,7 +134,7 @@ class QOSFlowList {
          * @static
          */
 
-    public static _enum_for_associatedANType = _enum_for_AccessType;
+    public static _enum_for_associatedANType: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

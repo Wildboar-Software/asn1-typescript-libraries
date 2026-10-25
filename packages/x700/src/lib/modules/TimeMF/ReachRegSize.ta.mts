@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ReachRegSize = INTEGER;
 
 
-export const _decode_ReachRegSize = $._decodeInteger;
+export const _decode_ReachRegSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ReachRegSize = $._encodeInteger;
+export const _encode_ReachRegSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

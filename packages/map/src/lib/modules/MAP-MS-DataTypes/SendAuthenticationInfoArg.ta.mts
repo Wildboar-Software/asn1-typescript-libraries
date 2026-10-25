@@ -245,7 +245,7 @@ class SendAuthenticationInfoArg {
          * @static
          */
 
-    public static _enum_for_requestingNodeType = _enum_for_RequestingNodeType;
+    public static _enum_for_requestingNodeType: typeof _enum_for_RequestingNodeType = _enum_for_RequestingNodeType;
 }
 
 /**

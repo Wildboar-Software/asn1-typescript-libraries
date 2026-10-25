@@ -29,7 +29,7 @@ type RoutingAction = INTEGER;
  * @type {number}
  */
 export
-const RoutingAction_roua_route_set = 0 satisfies RoutingAction; /* LONG_NAMED_INTEGER_VALUE */
+const RoutingAction_roua_route_set: 0 = 0 satisfies RoutingAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoutingAction_roua_route_set
@@ -37,7 +37,7 @@ const RoutingAction_roua_route_set = 0 satisfies RoutingAction; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const roua_route_set = RoutingAction_roua_route_set; /* SHORT_NAMED_INTEGER_VALUE */
+const roua_route_set: 0 = RoutingAction_roua_route_set; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoutingAction_roua_route_get
@@ -45,7 +45,7 @@ const roua_route_set = RoutingAction_roua_route_set; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const RoutingAction_roua_route_get = 1 satisfies RoutingAction; /* LONG_NAMED_INTEGER_VALUE */
+const RoutingAction_roua_route_get: 1 = 1 satisfies RoutingAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoutingAction_roua_route_get
@@ -53,7 +53,7 @@ const RoutingAction_roua_route_get = 1 satisfies RoutingAction; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const roua_route_get = RoutingAction_roua_route_get; /* SHORT_NAMED_INTEGER_VALUE */
+const roua_route_get: 1 = RoutingAction_roua_route_get; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoutingAction_roua_route_result
@@ -61,7 +61,7 @@ const roua_route_get = RoutingAction_roua_route_get; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const RoutingAction_roua_route_result = 2 satisfies RoutingAction; /* LONG_NAMED_INTEGER_VALUE */
+const RoutingAction_roua_route_result: 2 = 2 satisfies RoutingAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoutingAction_roua_route_result
@@ -69,9 +69,9 @@ const RoutingAction_roua_route_result = 2 satisfies RoutingAction; /* LONG_NAMED
  * @type {number}
  */
 export
-const roua_route_result = RoutingAction_roua_route_result; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RoutingAction = $._decodeInteger;
-export const _encode_RoutingAction = $._encodeInteger;
+const roua_route_result: 2 = RoutingAction_roua_route_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RoutingAction: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RoutingAction: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

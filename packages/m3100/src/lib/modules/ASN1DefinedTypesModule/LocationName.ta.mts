@@ -28,12 +28,12 @@ export type LocationName = GraphicString; // GraphicString
 
 
 
-export const _decode_LocationName = $._decodeGraphicString;
+export const _decode_LocationName: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_LocationName = $._encodeGraphicString;
+export const _encode_LocationName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

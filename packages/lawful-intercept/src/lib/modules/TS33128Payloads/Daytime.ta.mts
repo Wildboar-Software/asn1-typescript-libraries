@@ -89,7 +89,7 @@ class Daytime {
          * @static
          */
 
-    public static _enum_for_daysOfWeek = _enum_for_Day;
+    public static _enum_for_daysOfWeek: typeof _enum_for_Day = _enum_for_Day;
 }
 
 /**

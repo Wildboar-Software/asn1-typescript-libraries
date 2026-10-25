@@ -128,7 +128,7 @@ class ClearCallArgument {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

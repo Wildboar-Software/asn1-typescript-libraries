@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Currency = PrintableString; // PrintableString
 
 
-export const _decode_Currency = $._decodePrintableString;
+export const _decode_Currency: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_Currency = $._encodePrintableString;
+export const _encode_Currency: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

@@ -259,7 +259,7 @@ export const _decode_SpecificCSI_Withdraw = (el: _Element): SpecificCSI_Withdraw
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SpecificCSI_Withdraw, encoded as an ASN.1 Element.
  */
-export const _encode_SpecificCSI_Withdraw = $._encodeBitString;
+export const _encode_SpecificCSI_Withdraw: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

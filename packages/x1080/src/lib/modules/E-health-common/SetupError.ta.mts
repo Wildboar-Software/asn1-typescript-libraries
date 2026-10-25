@@ -64,7 +64,7 @@ export type SetupError = _enum_for_SetupError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SetupError_setupNotAllowed = _enum_for_SetupError.setupNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_setupNotAllowed: _enum_for_SetupError.setupNotAllowed = _enum_for_SetupError.setupNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const SetupError_setupNotAllowed = _enum_for_SetupError.setupNotAllowed; 
  * @constant
  * @type {number}
  */
-export const setupNotAllowed = SetupError_setupNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const setupNotAllowed: _enum_for_SetupError.setupNotAllowed = SetupError_setupNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const setupNotAllowed = SetupError_setupNotAllowed; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const SetupError_facilityTemporarilyUnavailable = _enum_for_SetupError.facilityTemporarilyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_facilityTemporarilyUnavailable: _enum_for_SetupError.facilityTemporarilyUnavailable = _enum_for_SetupError.facilityTemporarilyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const SetupError_facilityTemporarilyUnavailable = _enum_for_SetupError.fa
  * @constant
  * @type {number}
  */
-export const facilityTemporarilyUnavailable = SetupError_facilityTemporarilyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const facilityTemporarilyUnavailable: _enum_for_SetupError.facilityTemporarilyUnavailable = SetupError_facilityTemporarilyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,7 +117,7 @@ export const facilityTemporarilyUnavailable = SetupError_facilityTemporarilyUnav
  * @constant
  * @type {number}
  */
-export const SetupError_facilityPermanentlyUnavailable = _enum_for_SetupError.facilityPermanentlyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_facilityPermanentlyUnavailable: _enum_for_SetupError.facilityPermanentlyUnavailable = _enum_for_SetupError.facilityPermanentlyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -131,7 +131,7 @@ export const SetupError_facilityPermanentlyUnavailable = _enum_for_SetupError.fa
  * @constant
  * @type {number}
  */
-export const facilityPermanentlyUnavailable = SetupError_facilityPermanentlyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const facilityPermanentlyUnavailable: _enum_for_SetupError.facilityPermanentlyUnavailable = SetupError_facilityPermanentlyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -144,7 +144,7 @@ export const facilityPermanentlyUnavailable = SetupError_facilityPermanentlyUnav
  * @constant
  * @type {number}
  */
-export const SetupError_unknownSessionType = _enum_for_SetupError.unknownSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_unknownSessionType: _enum_for_SetupError.unknownSessionType = _enum_for_SetupError.unknownSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -157,7 +157,7 @@ export const SetupError_unknownSessionType = _enum_for_SetupError.unknownSession
  * @constant
  * @type {number}
  */
-export const unknownSessionType = SetupError_unknownSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownSessionType: _enum_for_SetupError.unknownSessionType = SetupError_unknownSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -170,7 +170,7 @@ export const unknownSessionType = SetupError_unknownSessionType; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const SetupError_sessionTypeNotSupported = _enum_for_SetupError.sessionTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_sessionTypeNotSupported: _enum_for_SetupError.sessionTypeNotSupported = _enum_for_SetupError.sessionTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -183,7 +183,7 @@ export const SetupError_sessionTypeNotSupported = _enum_for_SetupError.sessionTy
  * @constant
  * @type {number}
  */
-export const sessionTypeNotSupported = SetupError_sessionTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sessionTypeNotSupported: _enum_for_SetupError.sessionTypeNotSupported = SetupError_sessionTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -197,7 +197,7 @@ export const sessionTypeNotSupported = SetupError_sessionTypeNotSupported; /* SH
  * @constant
  * @type {number}
  */
-export const SetupError_batchModeNotSupported = _enum_for_SetupError.batchModeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_batchModeNotSupported: _enum_for_SetupError.batchModeNotSupported = _enum_for_SetupError.batchModeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -211,7 +211,7 @@ export const SetupError_batchModeNotSupported = _enum_for_SetupError.batchModeNo
  * @constant
  * @type {number}
  */
-export const batchModeNotSupported = SetupError_batchModeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const batchModeNotSupported: _enum_for_SetupError.batchModeNotSupported = SetupError_batchModeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -225,7 +225,7 @@ export const batchModeNotSupported = SetupError_batchModeNotSupported; /* SHORT_
  * @constant
  * @type {number}
  */
-export const SetupError_continuousReturnNotSupported = _enum_for_SetupError.continuousReturnNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_continuousReturnNotSupported: _enum_for_SetupError.continuousReturnNotSupported = _enum_for_SetupError.continuousReturnNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -239,7 +239,7 @@ export const SetupError_continuousReturnNotSupported = _enum_for_SetupError.cont
  * @constant
  * @type {number}
  */
-export const continuousReturnNotSupported = SetupError_continuousReturnNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const continuousReturnNotSupported: _enum_for_SetupError.continuousReturnNotSupported = SetupError_continuousReturnNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -252,7 +252,7 @@ export const continuousReturnNotSupported = SetupError_continuousReturnNotSuppor
  * @constant
  * @type {number}
  */
-export const SetupError_sensorTemporarilyUnavailable = _enum_for_SetupError.sensorTemporarilyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_sensorTemporarilyUnavailable: _enum_for_SetupError.sensorTemporarilyUnavailable = _enum_for_SetupError.sensorTemporarilyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -265,7 +265,7 @@ export const SetupError_sensorTemporarilyUnavailable = _enum_for_SetupError.sens
  * @constant
  * @type {number}
  */
-export const sensorTemporarilyUnavailable = SetupError_sensorTemporarilyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensorTemporarilyUnavailable: _enum_for_SetupError.sensorTemporarilyUnavailable = SetupError_sensorTemporarilyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -278,7 +278,7 @@ export const sensorTemporarilyUnavailable = SetupError_sensorTemporarilyUnavaila
  * @constant
  * @type {number}
  */
-export const SetupError_sensorPermanentlyUnavailable = _enum_for_SetupError.sensorPermanentlyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SetupError_sensorPermanentlyUnavailable: _enum_for_SetupError.sensorPermanentlyUnavailable = _enum_for_SetupError.sensorPermanentlyUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -291,17 +291,17 @@ export const SetupError_sensorPermanentlyUnavailable = _enum_for_SetupError.sens
  * @constant
  * @type {number}
  */
-export const sensorPermanentlyUnavailable = SetupError_sensorPermanentlyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensorPermanentlyUnavailable: _enum_for_SetupError.sensorPermanentlyUnavailable = SetupError_sensorPermanentlyUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_SetupError = $._decodeEnumerated;
+export const _decode_SetupError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_SetupError = $._encodeEnumerated;
+export const _encode_SetupError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -92,7 +92,7 @@ export const _decode_AllowedServices = (el: _Element): AllowedServices => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AllowedServices, encoded as an ASN.1 Element.
  */
-export const _encode_AllowedServices = $._encodeBitString;
+export const _encode_AllowedServices: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

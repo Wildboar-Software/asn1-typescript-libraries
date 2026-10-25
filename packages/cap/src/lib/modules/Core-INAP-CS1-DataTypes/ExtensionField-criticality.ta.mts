@@ -68,7 +68,7 @@ type ExtensionField_criticality = _enum_for_ExtensionField_criticality;
  * @enum {number}
  */
 export
-const ExtensionField_criticality = _enum_for_ExtensionField_criticality;
+const ExtensionField_criticality: typeof _enum_for_ExtensionField_criticality = _enum_for_ExtensionField_criticality;
 
 /**
  * @summary ExtensionField_criticality_ignore
@@ -76,7 +76,7 @@ const ExtensionField_criticality = _enum_for_ExtensionField_criticality;
  * @type {number}
  */
 export
-const ExtensionField_criticality_ignore = ExtensionField_criticality.ignore; /* LONG_NAMED_ENUMERATED_VALUE */
+const ExtensionField_criticality_ignore: _enum_for_ExtensionField_criticality.ignore = ExtensionField_criticality.ignore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ignore
@@ -84,7 +84,7 @@ const ExtensionField_criticality_ignore = ExtensionField_criticality.ignore; /* 
  * @type {number}
  */
 export
-const ignore = ExtensionField_criticality.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignore: _enum_for_ExtensionField_criticality.ignore = ExtensionField_criticality.ignore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ExtensionField_criticality_abort
@@ -92,7 +92,7 @@ const ignore = ExtensionField_criticality.ignore; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ExtensionField_criticality_abort = ExtensionField_criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
+const ExtensionField_criticality_abort: _enum_for_ExtensionField_criticality.abort = ExtensionField_criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abort
@@ -100,9 +100,9 @@ const ExtensionField_criticality_abort = ExtensionField_criticality.abort; /* LO
  * @type {number}
  */
 export
-const abort = ExtensionField_criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ExtensionField_criticality = $._decodeEnumerated;
-export const _encode_ExtensionField_criticality = $._encodeEnumerated;
+const abort: _enum_for_ExtensionField_criticality.abort = ExtensionField_criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ExtensionField_criticality: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ExtensionField_criticality: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

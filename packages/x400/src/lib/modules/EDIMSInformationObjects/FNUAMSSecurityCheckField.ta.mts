@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FNUAMSSecurityCheckField = BOOLEAN; // BooleanType
 
 
-export const _decode_FNUAMSSecurityCheckField = $._decodeBoolean;
+export const _decode_FNUAMSSecurityCheckField: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_FNUAMSSecurityCheckField = $._encodeBoolean;
+export const _encode_FNUAMSSecurityCheckField: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

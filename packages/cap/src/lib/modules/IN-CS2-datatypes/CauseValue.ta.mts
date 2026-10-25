@@ -35,7 +35,7 @@ export const _decode_CauseValue = (el: _Element): CauseValue => {
     }
     return value;
 };
-export const _encode_CauseValue = $._encodeOctetString;
+export const _encode_CauseValue: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

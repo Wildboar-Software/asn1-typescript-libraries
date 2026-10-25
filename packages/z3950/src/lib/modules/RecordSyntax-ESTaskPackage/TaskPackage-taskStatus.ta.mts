@@ -41,7 +41,7 @@ type TaskPackage_taskStatus = INTEGER;
  * @type {number}
  */
 export
-const TaskPackage_taskStatus_pending = 0 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackage_taskStatus_pending: 0 = 0 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_pending
@@ -52,7 +52,7 @@ const TaskPackage_taskStatus_pending = 0 satisfies TaskPackage_taskStatus; /* LO
  * @type {number}
  */
 export
-const pending = TaskPackage_taskStatus_pending; /* SHORT_NAMED_INTEGER_VALUE */
+const pending: 0 = TaskPackage_taskStatus_pending; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_active
@@ -64,7 +64,7 @@ const pending = TaskPackage_taskStatus_pending; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const TaskPackage_taskStatus_active = 1 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackage_taskStatus_active: 1 = 1 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_active
@@ -75,7 +75,7 @@ const TaskPackage_taskStatus_active = 1 satisfies TaskPackage_taskStatus; /* LON
  * @type {number}
  */
 export
-const active = TaskPackage_taskStatus_active; /* SHORT_NAMED_INTEGER_VALUE */
+const active: 1 = TaskPackage_taskStatus_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_complete
@@ -87,7 +87,7 @@ const active = TaskPackage_taskStatus_active; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const TaskPackage_taskStatus_complete = 2 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackage_taskStatus_complete: 2 = 2 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_complete
@@ -98,7 +98,7 @@ const TaskPackage_taskStatus_complete = 2 satisfies TaskPackage_taskStatus; /* L
  * @type {number}
  */
 export
-const complete = TaskPackage_taskStatus_complete; /* SHORT_NAMED_INTEGER_VALUE */
+const complete: 2 = TaskPackage_taskStatus_complete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_aborted
@@ -110,7 +110,7 @@ const complete = TaskPackage_taskStatus_complete; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const TaskPackage_taskStatus_aborted = 3 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
+const TaskPackage_taskStatus_aborted: 3 = 3 satisfies TaskPackage_taskStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TaskPackage_taskStatus_aborted
@@ -121,7 +121,7 @@ const TaskPackage_taskStatus_aborted = 3 satisfies TaskPackage_taskStatus; /* LO
  * @type {number}
  */
 export
-const aborted = TaskPackage_taskStatus_aborted; /* SHORT_NAMED_INTEGER_VALUE */
+const aborted: 3 = TaskPackage_taskStatus_aborted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_TaskPackage_taskStatus: $.ASN1Decoder<TaskPackage_taskStatus> = $._decodeInteger;
 export const _encode_TaskPackage_taskStatus: $.ASN1Encoder<TaskPackage_taskStatus> = $._encodeInteger;
 

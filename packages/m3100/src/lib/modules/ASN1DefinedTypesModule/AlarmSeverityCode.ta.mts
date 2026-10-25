@@ -63,7 +63,7 @@ export type AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  *
  * @enum {number}
  */
-export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
+export const AlarmSeverityCode: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
 
 
 /**
@@ -71,7 +71,7 @@ export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_non_alarmed =
+export const AlarmSeverityCode_non_alarmed: _enum_for_AlarmSeverityCode.non_alarmed =
     AlarmSeverityCode.non_alarmed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -80,7 +80,7 @@ export const AlarmSeverityCode_non_alarmed =
  * @constant
  * @type {number}
  */
-export const non_alarmed =
+export const non_alarmed: _enum_for_AlarmSeverityCode.non_alarmed =
     AlarmSeverityCode.non_alarmed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -89,7 +89,7 @@ export const non_alarmed =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_minor =
+export const AlarmSeverityCode_minor: _enum_for_AlarmSeverityCode.minor =
     AlarmSeverityCode.minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +98,7 @@ export const AlarmSeverityCode_minor =
  * @constant
  * @type {number}
  */
-export const minor =
+export const minor: _enum_for_AlarmSeverityCode.minor =
     AlarmSeverityCode.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -107,7 +107,7 @@ export const minor =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_major =
+export const AlarmSeverityCode_major: _enum_for_AlarmSeverityCode.major =
     AlarmSeverityCode.major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -116,7 +116,7 @@ export const AlarmSeverityCode_major =
  * @constant
  * @type {number}
  */
-export const major =
+export const major: _enum_for_AlarmSeverityCode.major =
     AlarmSeverityCode.major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -125,7 +125,7 @@ export const major =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_critical =
+export const AlarmSeverityCode_critical: _enum_for_AlarmSeverityCode.critical =
     AlarmSeverityCode.critical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -134,7 +134,7 @@ export const AlarmSeverityCode_critical =
  * @constant
  * @type {number}
  */
-export const critical =
+export const critical: _enum_for_AlarmSeverityCode.critical =
     AlarmSeverityCode.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -143,7 +143,7 @@ export const critical =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_warning =
+export const AlarmSeverityCode_warning: _enum_for_AlarmSeverityCode.warning =
     AlarmSeverityCode.warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -152,7 +152,7 @@ export const AlarmSeverityCode_warning =
  * @constant
  * @type {number}
  */
-export const warning =
+export const warning: _enum_for_AlarmSeverityCode.warning =
     AlarmSeverityCode.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

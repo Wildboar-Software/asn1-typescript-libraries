@@ -1557,49 +1557,49 @@ class PGWRecord {
          * @static
          */
 
-    public static _enum_for_apnSelectionMode = _enum_for_APNSelectionMode;        /**
+    public static _enum_for_apnSelectionMode: typeof _enum_for_APNSelectionMode = _enum_for_APNSelectionMode;        /**
          * @summary The enum used as the type of the component `chChSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `cNOperatorSelectionEnt`
          * @public
          * @static
          */
 
-    public static _enum_for_cNOperatorSelectionEnt = _enum_for_CNOperatorSelectionEntity;        /**
+    public static _enum_for_cNOperatorSelectionEnt: typeof _enum_for_CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;        /**
          * @summary The enum used as the type of the component `nBIFOMMode`
          * @public
          * @static
          */
 
-    public static _enum_for_nBIFOMMode = _enum_for_NBIFOMMode;        /**
+    public static _enum_for_nBIFOMMode: typeof _enum_for_NBIFOMMode = _enum_for_NBIFOMMode;        /**
          * @summary The enum used as the type of the component `nBIFOMSupport`
          * @public
          * @static
          */
 
-    public static _enum_for_nBIFOMSupport = _enum_for_NBIFOMSupport;        /**
+    public static _enum_for_nBIFOMSupport: typeof _enum_for_NBIFOMSupport = _enum_for_NBIFOMSupport;        /**
          * @summary The enum used as the type of the component `sGiPtPTunnellingMethod`
          * @public
          * @static
          */
 
-    public static _enum_for_sGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;        /**
+    public static _enum_for_sGiPtPTunnellingMethod: typeof _enum_for_SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;        /**
          * @summary The enum used as the type of the component `chargingPerIPCANSessionIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_chargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicator;        /**
+    public static _enum_for_chargingPerIPCANSessionIndicator: typeof _enum_for_ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicator;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
 }
 
 /**

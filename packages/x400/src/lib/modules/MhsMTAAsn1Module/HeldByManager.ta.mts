@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type HeldByManager = BOOLEAN; // BooleanType
 
 
-export const _decode_HeldByManager = $._decodeBoolean;
+export const _decode_HeldByManager: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_HeldByManager = $._encodeBoolean;
+export const _encode_HeldByManager: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

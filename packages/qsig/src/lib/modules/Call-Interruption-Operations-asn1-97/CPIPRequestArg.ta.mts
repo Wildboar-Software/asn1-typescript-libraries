@@ -86,7 +86,7 @@ class CPIPRequestArg {
          * @static
          */
 
-    public static _enum_for_cpiProtectionLevel = _enum_for_CPIProtectionLevel;
+    public static _enum_for_cpiProtectionLevel: typeof _enum_for_CPIProtectionLevel = _enum_for_CPIProtectionLevel;
 }
 
 /**

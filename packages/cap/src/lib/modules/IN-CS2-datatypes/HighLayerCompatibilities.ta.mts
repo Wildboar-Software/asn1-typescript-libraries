@@ -198,8 +198,8 @@ const HighLayerCompatibilities_audioVisual: number = 11; /* LONG_NAMED_BIT */
  */
 export
 const audioVisual: number = HighLayerCompatibilities_audioVisual; /* SHORT_NAMED_BIT */
-export const _decode_HighLayerCompatibilities = $._decodeBitString;
-export const _encode_HighLayerCompatibilities = $._encodeBitString;
+export const _decode_HighLayerCompatibilities: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_HighLayerCompatibilities: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

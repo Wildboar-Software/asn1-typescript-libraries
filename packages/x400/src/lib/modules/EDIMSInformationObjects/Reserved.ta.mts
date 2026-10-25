@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Reserved = OCTET_STRING; // OctetStringType
 
 
-export const _decode_Reserved = $._decodeOctetString;
+export const _decode_Reserved: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_Reserved = $._encodeOctetString;
+export const _encode_Reserved: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

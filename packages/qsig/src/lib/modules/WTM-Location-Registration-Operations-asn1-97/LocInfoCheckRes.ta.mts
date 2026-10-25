@@ -84,7 +84,7 @@ class LocInfoCheckRes {
          * @static
          */
 
-    public static _enum_for_checkResult = _enum_for_CheckResult;
+    public static _enum_for_checkResult: typeof _enum_for_CheckResult = _enum_for_CheckResult;
 }
 
 /**

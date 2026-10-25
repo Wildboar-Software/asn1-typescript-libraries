@@ -37,12 +37,12 @@ export type DefaultIndex = INTEGER;
 
 
 
-export const _decode_DefaultIndex = $._decodeInteger;
+export const _decode_DefaultIndex: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DefaultIndex = $._encodeInteger;
+export const _encode_DefaultIndex: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

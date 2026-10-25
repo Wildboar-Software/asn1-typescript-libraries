@@ -335,14 +335,14 @@ export class GUISelectEventInfo {
    * @static
    */
 
-  public static _enum_for_operation = _enum_for_BioAPI_GUI_OPERATION;
+  public static _enum_for_operation: typeof _enum_for_BioAPI_GUI_OPERATION = _enum_for_BioAPI_GUI_OPERATION;
   /**
    * @summary The enum used as the type of the component `moment`
    * @public
    * @static
    */
 
-  public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
+  public static _enum_for_moment: typeof _enum_for_BioAPI_GUI_MOMENT = _enum_for_BioAPI_GUI_MOMENT;
 }
 
 

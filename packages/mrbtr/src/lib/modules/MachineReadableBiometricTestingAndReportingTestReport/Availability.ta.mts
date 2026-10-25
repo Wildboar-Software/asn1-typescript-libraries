@@ -85,7 +85,7 @@ type Availability = _enum_for_Availability;
  * @enum {number}
  */
 export
-const Availability = _enum_for_Availability;
+const Availability: typeof _enum_for_Availability = _enum_for_Availability;
 
 /**
  * @summary Availability_public_
@@ -93,7 +93,7 @@ const Availability = _enum_for_Availability;
  * @type {number}
  */
 export
-const Availability_public_ = Availability.public_; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_public_: _enum_for_Availability.public_ = Availability.public_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary public_
@@ -101,7 +101,7 @@ const Availability_public_ = Availability.public_; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const public_ = Availability.public_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const public_: _enum_for_Availability.public_ = Availability.public_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Availability_restricted
@@ -109,7 +109,7 @@ const public_ = Availability.public_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Availability_restricted = Availability.restricted; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_restricted: _enum_for_Availability.restricted = Availability.restricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restricted
@@ -117,7 +117,7 @@ const Availability_restricted = Availability.restricted; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const restricted = Availability.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restricted: _enum_for_Availability.restricted = Availability.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Availability_unavailable
@@ -125,7 +125,7 @@ const restricted = Availability.restricted; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Availability_unavailable = Availability.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_unavailable: _enum_for_Availability.unavailable = Availability.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailable
@@ -133,7 +133,7 @@ const Availability_unavailable = Availability.unavailable; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const unavailable = Availability.unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unavailable: _enum_for_Availability.unavailable = Availability.unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Availability_superseded
@@ -141,7 +141,7 @@ const unavailable = Availability.unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Availability_superseded = Availability.superseded; /* LONG_NAMED_ENUMERATED_VALUE */
+const Availability_superseded: _enum_for_Availability.superseded = Availability.superseded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary superseded
@@ -149,7 +149,7 @@ const Availability_superseded = Availability.superseded; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const superseded = Availability.superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const superseded: _enum_for_Availability.superseded = Availability.superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -158,7 +158,7 @@ const superseded = Availability.superseded; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Availability = $._decodeEnumerated;
+export const _decode_Availability: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -168,7 +168,7 @@ export const _decode_Availability = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Availability, encoded as an ASN.1 Element.
  */
-export const _encode_Availability = $._encodeEnumerated;
+export const _encode_Availability: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -150,19 +150,19 @@ class RemoteUEContext {
          * @static
          */
 
-    public static _enum_for_remoteUEIDFormat = _enum_for_RemoteUEIDFormat;        /**
+    public static _enum_for_remoteUEIDFormat: typeof _enum_for_RemoteUEIDFormat = _enum_for_RemoteUEIDFormat;        /**
          * @summary The enum used as the type of the component `remoteUEIDType`
          * @public
          * @static
          */
 
-    public static _enum_for_remoteUEIDType = _enum_for_RemoteUEIDType;        /**
+    public static _enum_for_remoteUEIDType: typeof _enum_for_RemoteUEIDType = _enum_for_RemoteUEIDType;        /**
          * @summary The enum used as the type of the component `protocolUsedByRemoteUE`
          * @public
          * @static
          */
 
-    public static _enum_for_protocolUsedByRemoteUE = _enum_for_ProtocolUsedByRemoteUE;
+    public static _enum_for_protocolUsedByRemoteUE: typeof _enum_for_ProtocolUsedByRemoteUE = _enum_for_ProtocolUsedByRemoteUE;
 }
 
 /**

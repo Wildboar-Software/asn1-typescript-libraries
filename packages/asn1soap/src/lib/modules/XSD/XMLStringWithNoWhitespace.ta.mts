@@ -35,12 +35,12 @@ export type XMLStringWithNoWhitespace = UTF8String; // UTF8String
 
 
 
-export const _decode_XMLStringWithNoWhitespace = $._decodeUTF8String;
+export const _decode_XMLStringWithNoWhitespace: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_XMLStringWithNoWhitespace = $._encodeUTF8String;
+export const _encode_XMLStringWithNoWhitespace: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

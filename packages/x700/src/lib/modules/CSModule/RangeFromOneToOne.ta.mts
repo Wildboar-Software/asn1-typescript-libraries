@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RangeFromOneToOne = INTEGER;
 
 
-export const _decode_RangeFromOneToOne = $._decodeInteger;
+export const _decode_RangeFromOneToOne: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_RangeFromOneToOne = $._encodeInteger;
+export const _encode_RangeFromOneToOne: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

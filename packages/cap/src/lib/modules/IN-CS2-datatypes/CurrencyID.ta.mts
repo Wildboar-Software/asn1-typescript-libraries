@@ -34,7 +34,7 @@ export const _decode_CurrencyID = (el: _Element): CurrencyID => {
     }
     return value;
 };
-export const _encode_CurrencyID = $._encodePrintableString;
+export const _encode_CurrencyID: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

@@ -91,7 +91,7 @@ export class Data_Field_Item {
    * @static
    */
 
-  public static _enum_for_field_type = _enum_for_Data_Field_Item_field_type;
+  public static _enum_for_field_type: typeof _enum_for_Data_Field_Item_field_type = _enum_for_Data_Field_Item_field_type;
 }
 
 

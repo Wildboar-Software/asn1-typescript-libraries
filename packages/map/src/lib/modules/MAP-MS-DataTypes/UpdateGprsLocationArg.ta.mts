@@ -499,19 +499,19 @@ class UpdateGprsLocationArg {
          * @static
          */
 
-    public static _enum_for_usedRAT_Type = _enum_for_Used_RAT_Type;        /**
+    public static _enum_for_usedRAT_Type: typeof _enum_for_Used_RAT_Type = _enum_for_Used_RAT_Type;        /**
          * @summary The enum used as the type of the component `ue_srvcc_Capability`
          * @public
          * @static
          */
 
-    public static _enum_for_ue_srvcc_Capability = _enum_for_UE_SRVCC_Capability;        /**
+    public static _enum_for_ue_srvcc_Capability: typeof _enum_for_UE_SRVCC_Capability = _enum_for_UE_SRVCC_Capability;        /**
          * @summary The enum used as the type of the component `smsRegisterRequest`
          * @public
          * @static
          */
 
-    public static _enum_for_smsRegisterRequest = _enum_for_SMSRegisterRequest;
+    public static _enum_for_smsRegisterRequest: typeof _enum_for_SMSRegisterRequest = _enum_for_SMSRegisterRequest;
 }
 
 /**

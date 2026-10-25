@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type GenericConversion = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_GenericConversion = $._decodeObjectIdentifier;
+export const _decode_GenericConversion: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_GenericConversion = $._encodeObjectIdentifier;
+export const _encode_GenericConversion: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

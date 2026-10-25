@@ -33,34 +33,34 @@ export type FNPDAUBasicCodeField = INTEGER;
  * @constant
  * @type {number}
  */
-export const FNPDAUBasicCodeField_unspecified = 0 satisfies FNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNPDAUBasicCodeField_unspecified: 0 = 0 satisfies FNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified = FNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified: 0 = FNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery
  * @constant
  * @type {number}
  */
-export const FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery = 1 satisfies FNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
+export const FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery: 1 = 1 satisfies FNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery
  * @constant
  * @type {number}
  */
-export const forwarded_for_physical_rendition_and_delivery = FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_for_physical_rendition_and_delivery: 1 = FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_FNPDAUBasicCodeField = $._decodeInteger;
+export const _decode_FNPDAUBasicCodeField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_FNPDAUBasicCodeField = $._encodeInteger;
+export const _encode_FNPDAUBasicCodeField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -32,8 +32,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type FileRename_Response = NULL; // NullType
-export const _decode_FileRename_Response = $._decodeNull;
-export const _encode_FileRename_Response = $._encodeNull;
+export const _decode_FileRename_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_FileRename_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

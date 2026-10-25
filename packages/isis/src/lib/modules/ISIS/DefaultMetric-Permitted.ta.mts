@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DefaultMetric_Permitted = INTEGER;
 
 
-export const _decode_DefaultMetric_Permitted = $._decodeInteger;
+export const _decode_DefaultMetric_Permitted: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DefaultMetric_Permitted = $._encodeInteger;
+export const _encode_DefaultMetric_Permitted: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

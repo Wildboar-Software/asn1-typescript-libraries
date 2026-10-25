@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type DurationInSeconds = INTEGER;
 
 
-export const _decode_DurationInSeconds = $._decodeInteger;
+export const _decode_DurationInSeconds: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DurationInSeconds = $._encodeInteger;
+export const _encode_DurationInSeconds: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

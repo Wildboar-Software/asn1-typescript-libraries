@@ -78,7 +78,7 @@ export class CertUpdateOK_Item_not_ok {
      * @static
      */
 
-    public static _enum_for_status = _enum_for_CASP_CertStatusCode;
+    public static _enum_for_status: typeof _enum_for_CASP_CertStatusCode = _enum_for_CASP_CertStatusCode;
 }
 
 /**

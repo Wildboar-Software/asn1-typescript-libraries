@@ -64,12 +64,12 @@ export const multipleCapture: number = BioAPI_GUI_ENROLL_TYPE_multipleCapture; /
 
 
 
-export const _decode_BioAPI_GUI_ENROLL_TYPE = $._decodeBitString;
+export const _decode_BioAPI_GUI_ENROLL_TYPE: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_GUI_ENROLL_TYPE = $._encodeBitString;
+export const _encode_BioAPI_GUI_ENROLL_TYPE: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

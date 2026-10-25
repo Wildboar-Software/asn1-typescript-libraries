@@ -71,12 +71,12 @@ export const echoControl: number = TransmissionCharacteristics_echoControl; /* S
 
 
 
-export const _decode_TransmissionCharacteristics = $._decodeBitString;
+export const _decode_TransmissionCharacteristics: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_TransmissionCharacteristics = $._encodeBitString;
+export const _encode_TransmissionCharacteristics: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

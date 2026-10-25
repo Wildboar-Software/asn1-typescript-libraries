@@ -28,12 +28,12 @@ export type ConnectorType = INTEGER;
 
 
 
-export const _decode_ConnectorType = $._decodeInteger;
+export const _decode_ConnectorType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ConnectorType = $._encodeInteger;
+export const _encode_ConnectorType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

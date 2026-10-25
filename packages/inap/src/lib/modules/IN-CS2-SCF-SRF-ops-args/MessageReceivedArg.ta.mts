@@ -104,7 +104,7 @@ class MessageReceivedArg {
          * @static
          */
 
-    public static _enum_for_receivedStatus = _enum_for_ReceivedStatus;
+    public static _enum_for_receivedStatus: typeof _enum_for_ReceivedStatus = _enum_for_ReceivedStatus;
 }
 
 /**

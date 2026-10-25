@@ -35,7 +35,7 @@ export type SubsequentMessage = INTEGER;
  * @constant
  * @type {number}
  */
-export const SubsequentMessage_encrCert = 0 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
+export const SubsequentMessage_encrCert: 0 = 0 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const SubsequentMessage_encrCert = 0 satisfies SubsequentMessage; /* LONG
  * @constant
  * @type {number}
  */
-export const encrCert = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
+export const encrCert: 0 = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const encrCert = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const SubsequentMessage_challengeResp = 1 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
+export const SubsequentMessage_challengeResp: 1 = 1 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,17 +75,17 @@ export const SubsequentMessage_challengeResp = 1 satisfies SubsequentMessage; /*
  * @constant
  * @type {number}
  */
-export const challengeResp = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
+export const challengeResp: 1 = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_SubsequentMessage = $._decodeInteger;
+export const _decode_SubsequentMessage: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_SubsequentMessage = $._encodeInteger;
+export const _encode_SubsequentMessage: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -41,7 +41,7 @@ export type MaxCounterSize = INTEGER;
  * @constant
  * @type {number}
  */
-export const MaxCounterSize_unlimited = 0 satisfies MaxCounterSize; /* LONG_NAMED_INTEGER_VALUE */
+export const MaxCounterSize_unlimited: 0 = 0 satisfies MaxCounterSize; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MaxCounterSize_unlimited
@@ -53,13 +53,13 @@ export const MaxCounterSize_unlimited = 0 satisfies MaxCounterSize; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const unlimited = MaxCounterSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
+export const unlimited: 0 = MaxCounterSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_MaxCounterSize = $._decodeInteger;
+export const _decode_MaxCounterSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MaxCounterSize = $._encodeInteger;
+export const _encode_MaxCounterSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

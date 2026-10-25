@@ -81,13 +81,13 @@ class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality () { return Criticality_ignored; }        /**
+    public static get _default_value_for_criticality (): _enum_for_Criticality.ignored { return Criticality_ignored; }        /**
          * @summary The enum used as the type of the component `criticality`
          * @public
          * @static
          */
 
-    public static _enum_for_criticality = _enum_for_Criticality;
+    public static _enum_for_criticality: typeof _enum_for_Criticality = _enum_for_Criticality;
 }
 
 /**

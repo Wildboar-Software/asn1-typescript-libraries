@@ -85,7 +85,7 @@ class CIGetCIPLRes {
          * @static
          */
 
-    public static _enum_for_ciProtectionLevel = _enum_for_CIProtectionLevel;
+    public static _enum_for_ciProtectionLevel: typeof _enum_for_CIProtectionLevel = _enum_for_CIProtectionLevel;
 }
 
 /**

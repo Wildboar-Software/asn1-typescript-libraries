@@ -15,10 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type Implementation_data = GraphicString; // GraphicString
 
 
-export const _decode_Implementation_data = $._decodeGraphicString;
+export const _decode_Implementation_data: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_Implementation_data = $._encodeGraphicString;
+export const _encode_Implementation_data: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

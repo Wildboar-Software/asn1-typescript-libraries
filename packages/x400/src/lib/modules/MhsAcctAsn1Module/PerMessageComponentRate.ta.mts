@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PerMessageComponentRate = INTEGER;
 
 
-export const _decode_PerMessageComponentRate = $._decodeInteger;
+export const _decode_PerMessageComponentRate: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_PerMessageComponentRate = $._encodeInteger;
+export const _encode_PerMessageComponentRate: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

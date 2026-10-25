@@ -108,21 +108,21 @@ export class AlarmSeverityAssignment {
      * @static
      */
 
-    public static _enum_for_severityAssignedServiceAffecting = _enum_for_AlarmSeverityCode;
+    public static _enum_for_severityAssignedServiceAffecting: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
     /**
      * @summary The enum used as the type of the component `severityAssignedNonServiceAffecting`
      * @public
      * @static
      */
 
-    public static _enum_for_severityAssignedNonServiceAffecting = _enum_for_AlarmSeverityCode;
+    public static _enum_for_severityAssignedNonServiceAffecting: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
     /**
      * @summary The enum used as the type of the component `severityAssignedServiceIndependent`
      * @public
      * @static
      */
 
-    public static _enum_for_severityAssignedServiceIndependent = _enum_for_AlarmSeverityCode;
+    public static _enum_for_severityAssignedServiceIndependent: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
 }
 
 

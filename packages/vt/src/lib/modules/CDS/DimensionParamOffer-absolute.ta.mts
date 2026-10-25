@@ -73,8 +73,8 @@ const DimensionParamOffer_absolute_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = DimensionParamOffer_absolute_no; /* SHORT_NAMED_BIT */
-export const _decode_DimensionParamOffer_absolute = $._decodeBitString;
-export const _encode_DimensionParamOffer_absolute = $._encodeBitString;
+export const _decode_DimensionParamOffer_absolute: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_DimensionParamOffer_absolute: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

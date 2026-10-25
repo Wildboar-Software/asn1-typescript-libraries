@@ -212,7 +212,7 @@ export class TestRequestControlledInfo {
      * @static
      */
 
-    public static _enum_for_controlledTestRequestType = _enum_for_ControlledTestRequestType;
+    public static _enum_for_controlledTestRequestType: typeof _enum_for_ControlledTestRequestType = _enum_for_ControlledTestRequestType;
 }
 
 /**

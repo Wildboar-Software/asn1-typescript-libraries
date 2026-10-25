@@ -47,7 +47,7 @@ export const _decode_TimeZone = (el: _Element): TimeZone => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TimeZone, encoded as an ASN.1 Element.
  */
-export const _encode_TimeZone = $._encodeOctetString;
+export const _encode_TimeZone: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

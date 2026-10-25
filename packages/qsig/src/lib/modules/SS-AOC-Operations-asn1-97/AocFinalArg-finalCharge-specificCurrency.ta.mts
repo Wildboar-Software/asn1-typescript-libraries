@@ -83,7 +83,7 @@ class AocFinalArg_finalCharge_specificCurrency {
          * @static
          */
 
-    public static _enum_for_finalBillingId = _enum_for_FinalBillingId;
+    public static _enum_for_finalBillingId: typeof _enum_for_FinalBillingId = _enum_for_FinalBillingId;
 }
 
 /**

@@ -209,19 +209,19 @@ class NWDAFEventsSubscription {
          * @static
          */
 
-    public static _enum_for_nWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;        /**
+    public static _enum_for_nWDAFConsumerNFType: typeof _enum_for_NWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;        /**
          * @summary The enum used as the type of the component `nWDAFEventsSubscriptionOpType`
          * @public
          * @static
          */
 
-    public static _enum_for_nWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;        /**
+    public static _enum_for_nWDAFEventsSubscriptionOpType: typeof _enum_for_NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;        /**
          * @summary The enum used as the type of the component `nWDAFEventsSubscriptionResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_nWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResponseCode;
+    public static _enum_for_nWDAFEventsSubscriptionResponseCode: typeof _enum_for_NWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResponseCode;
 }
 
 /**

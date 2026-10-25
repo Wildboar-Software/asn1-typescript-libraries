@@ -110,7 +110,7 @@ type RangeClass = _enum_for_RangeClass;
  * @enum {number}
  */
 export
-const RangeClass = _enum_for_RangeClass;
+const RangeClass: typeof _enum_for_RangeClass = _enum_for_RangeClass;
 
 /**
  * @summary RangeClass_reserved
@@ -122,7 +122,7 @@ const RangeClass = _enum_for_RangeClass;
  * @type {number}
  */
 export
-const RangeClass_reserved = RangeClass.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const RangeClass_reserved: _enum_for_RangeClass.reserved = RangeClass.reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved
@@ -134,7 +134,7 @@ const RangeClass_reserved = RangeClass.reserved; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const reserved = RangeClass.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved: _enum_for_RangeClass.reserved = RangeClass.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RangeClass_fiftyMeter
@@ -148,7 +148,7 @@ const reserved = RangeClass.reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RangeClass_fiftyMeter = RangeClass.fiftyMeter; /* LONG_NAMED_ENUMERATED_VALUE */
+const RangeClass_fiftyMeter: _enum_for_RangeClass.fiftyMeter = RangeClass.fiftyMeter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiftyMeter
@@ -160,7 +160,7 @@ const RangeClass_fiftyMeter = RangeClass.fiftyMeter; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const fiftyMeter = RangeClass.fiftyMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiftyMeter: _enum_for_RangeClass.fiftyMeter = RangeClass.fiftyMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RangeClass_onehundredMeter
@@ -174,7 +174,7 @@ const fiftyMeter = RangeClass.fiftyMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RangeClass_onehundredMeter = RangeClass.onehundredMeter; /* LONG_NAMED_ENUMERATED_VALUE */
+const RangeClass_onehundredMeter: _enum_for_RangeClass.onehundredMeter = RangeClass.onehundredMeter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onehundredMeter
@@ -186,7 +186,7 @@ const RangeClass_onehundredMeter = RangeClass.onehundredMeter; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const onehundredMeter = RangeClass.onehundredMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onehundredMeter: _enum_for_RangeClass.onehundredMeter = RangeClass.onehundredMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RangeClass_twohundredMeter
@@ -200,7 +200,7 @@ const onehundredMeter = RangeClass.onehundredMeter; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RangeClass_twohundredMeter = RangeClass.twohundredMeter; /* LONG_NAMED_ENUMERATED_VALUE */
+const RangeClass_twohundredMeter: _enum_for_RangeClass.twohundredMeter = RangeClass.twohundredMeter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary twohundredMeter
@@ -212,7 +212,7 @@ const RangeClass_twohundredMeter = RangeClass.twohundredMeter; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const twohundredMeter = RangeClass.twohundredMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const twohundredMeter: _enum_for_RangeClass.twohundredMeter = RangeClass.twohundredMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RangeClass_fivehundredMeter
@@ -226,7 +226,7 @@ const twohundredMeter = RangeClass.twohundredMeter; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const RangeClass_fivehundredMeter = RangeClass.fivehundredMeter; /* LONG_NAMED_ENUMERATED_VALUE */
+const RangeClass_fivehundredMeter: _enum_for_RangeClass.fivehundredMeter = RangeClass.fivehundredMeter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fivehundredMeter
@@ -238,7 +238,7 @@ const RangeClass_fivehundredMeter = RangeClass.fivehundredMeter; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const fivehundredMeter = RangeClass.fivehundredMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fivehundredMeter: _enum_for_RangeClass.fivehundredMeter = RangeClass.fivehundredMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RangeClass_onethousandMeter
@@ -252,7 +252,7 @@ const fivehundredMeter = RangeClass.fivehundredMeter; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const RangeClass_onethousandMeter = RangeClass.onethousandMeter; /* LONG_NAMED_ENUMERATED_VALUE */
+const RangeClass_onethousandMeter: _enum_for_RangeClass.onethousandMeter = RangeClass.onethousandMeter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onethousandMeter
@@ -264,7 +264,7 @@ const RangeClass_onethousandMeter = RangeClass.onethousandMeter; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const onethousandMeter = RangeClass.onethousandMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onethousandMeter: _enum_for_RangeClass.onethousandMeter = RangeClass.onethousandMeter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_RangeClass: $.ASN1Decoder<RangeClass> = $._decodeEnumerated;

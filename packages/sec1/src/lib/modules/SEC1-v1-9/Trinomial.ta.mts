@@ -32,10 +32,10 @@ export
 type Trinomial = INTEGER;
 
 
-export const _decode_Trinomial = $._decodeInteger;
+export const _decode_Trinomial: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Trinomial = $._encodeInteger;
+export const _encode_Trinomial: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

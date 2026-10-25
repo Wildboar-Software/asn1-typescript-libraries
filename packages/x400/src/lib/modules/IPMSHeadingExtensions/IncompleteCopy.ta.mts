@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type IncompleteCopy = NULL; // NullType
 
 
-export const _decode_IncompleteCopy = $._decodeNull;
+export const _decode_IncompleteCopy: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_IncompleteCopy = $._encodeNull;
+export const _encode_IncompleteCopy: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

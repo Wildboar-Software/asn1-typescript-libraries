@@ -85,12 +85,12 @@ export const redirection: number = ISO9542Subsets_redirection; /* SHORT_NAMED_BI
 
 
 
-export const _decode_ISO9542Subsets = $._decodeBitString;
+export const _decode_ISO9542Subsets: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_ISO9542Subsets = $._encodeBitString;
+export const _encode_ISO9542Subsets: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

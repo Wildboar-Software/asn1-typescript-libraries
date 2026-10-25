@@ -83,7 +83,7 @@ type Initiator = _enum_for_Initiator;
  * @enum {number}
  */
 export
-const Initiator = _enum_for_Initiator;
+const Initiator: typeof _enum_for_Initiator = _enum_for_Initiator;
 
 /**
  * @summary Initiator_uE
@@ -91,7 +91,7 @@ const Initiator = _enum_for_Initiator;
  * @type {number}
  */
 export
-const Initiator_uE = Initiator.uE; /* LONG_NAMED_ENUMERATED_VALUE */
+const Initiator_uE: _enum_for_Initiator.uE = Initiator.uE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uE
@@ -99,7 +99,7 @@ const Initiator_uE = Initiator.uE; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const uE = Initiator.uE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uE: _enum_for_Initiator.uE = Initiator.uE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Initiator_network
@@ -107,7 +107,7 @@ const uE = Initiator.uE; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Initiator_network = Initiator.network; /* LONG_NAMED_ENUMERATED_VALUE */
+const Initiator_network: _enum_for_Initiator.network = Initiator.network; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary network
@@ -115,7 +115,7 @@ const Initiator_network = Initiator.network; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const network = Initiator.network; /* SHORT_NAMED_ENUMERATED_VALUE */
+const network: _enum_for_Initiator.network = Initiator.network; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Initiator_unknown
@@ -123,7 +123,7 @@ const network = Initiator.network; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Initiator_unknown = Initiator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const Initiator_unknown: _enum_for_Initiator.unknown = Initiator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -131,7 +131,7 @@ const Initiator_unknown = Initiator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const unknown = Initiator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_Initiator.unknown = Initiator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Initiator: $.ASN1Decoder<Initiator> = $._decodeEnumerated;
 export const _encode_Initiator: $.ASN1Encoder<Initiator> = $._encodeEnumerated;
 

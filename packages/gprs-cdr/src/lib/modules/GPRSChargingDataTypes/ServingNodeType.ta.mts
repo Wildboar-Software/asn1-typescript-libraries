@@ -102,7 +102,7 @@ type ServingNodeType = _enum_for_ServingNodeType;
  * @enum {number}
  */
 export
-const ServingNodeType = _enum_for_ServingNodeType;
+const ServingNodeType: typeof _enum_for_ServingNodeType = _enum_for_ServingNodeType;
 
 /**
  * @summary ServingNodeType_sGSN
@@ -110,7 +110,7 @@ const ServingNodeType = _enum_for_ServingNodeType;
  * @type {number}
  */
 export
-const ServingNodeType_sGSN = ServingNodeType.sGSN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_sGSN: _enum_for_ServingNodeType.sGSN = ServingNodeType.sGSN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGSN
@@ -118,7 +118,7 @@ const ServingNodeType_sGSN = ServingNodeType.sGSN; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const sGSN = ServingNodeType.sGSN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGSN: _enum_for_ServingNodeType.sGSN = ServingNodeType.sGSN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServingNodeType_pMIPSGW
@@ -126,7 +126,7 @@ const sGSN = ServingNodeType.sGSN; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServingNodeType_pMIPSGW = ServingNodeType.pMIPSGW; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_pMIPSGW: _enum_for_ServingNodeType.pMIPSGW = ServingNodeType.pMIPSGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pMIPSGW
@@ -134,7 +134,7 @@ const ServingNodeType_pMIPSGW = ServingNodeType.pMIPSGW; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const pMIPSGW = ServingNodeType.pMIPSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pMIPSGW: _enum_for_ServingNodeType.pMIPSGW = ServingNodeType.pMIPSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServingNodeType_gTPSGW
@@ -142,7 +142,7 @@ const pMIPSGW = ServingNodeType.pMIPSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServingNodeType_gTPSGW = ServingNodeType.gTPSGW; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_gTPSGW: _enum_for_ServingNodeType.gTPSGW = ServingNodeType.gTPSGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gTPSGW
@@ -150,7 +150,7 @@ const ServingNodeType_gTPSGW = ServingNodeType.gTPSGW; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const gTPSGW = ServingNodeType.gTPSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gTPSGW: _enum_for_ServingNodeType.gTPSGW = ServingNodeType.gTPSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServingNodeType_ePDG
@@ -158,7 +158,7 @@ const gTPSGW = ServingNodeType.gTPSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServingNodeType_ePDG = ServingNodeType.ePDG; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_ePDG: _enum_for_ServingNodeType.ePDG = ServingNodeType.ePDG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePDG
@@ -166,7 +166,7 @@ const ServingNodeType_ePDG = ServingNodeType.ePDG; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ePDG = ServingNodeType.ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePDG: _enum_for_ServingNodeType.ePDG = ServingNodeType.ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServingNodeType_hSGW
@@ -174,7 +174,7 @@ const ePDG = ServingNodeType.ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServingNodeType_hSGW = ServingNodeType.hSGW; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_hSGW: _enum_for_ServingNodeType.hSGW = ServingNodeType.hSGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSGW
@@ -182,7 +182,7 @@ const ServingNodeType_hSGW = ServingNodeType.hSGW; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const hSGW = ServingNodeType.hSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSGW: _enum_for_ServingNodeType.hSGW = ServingNodeType.hSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServingNodeType_mME
@@ -190,7 +190,7 @@ const hSGW = ServingNodeType.hSGW; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServingNodeType_mME = ServingNodeType.mME; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_mME: _enum_for_ServingNodeType.mME = ServingNodeType.mME; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mME
@@ -198,7 +198,7 @@ const ServingNodeType_mME = ServingNodeType.mME; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const mME = ServingNodeType.mME; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mME: _enum_for_ServingNodeType.mME = ServingNodeType.mME; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServingNodeType_tWAN
@@ -206,7 +206,7 @@ const mME = ServingNodeType.mME; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServingNodeType_tWAN = ServingNodeType.tWAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServingNodeType_tWAN: _enum_for_ServingNodeType.tWAN = ServingNodeType.tWAN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tWAN
@@ -214,7 +214,7 @@ const ServingNodeType_tWAN = ServingNodeType.tWAN; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const tWAN = ServingNodeType.tWAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tWAN: _enum_for_ServingNodeType.tWAN = ServingNodeType.tWAN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ServingNodeType: $.ASN1Decoder<ServingNodeType> = $._decodeEnumerated;

@@ -86,7 +86,7 @@ class PTCSessionInfo {
          * @static
          */
 
-    public static _enum_for_pTCSessionType = _enum_for_PTCSessionType;
+    public static _enum_for_pTCSessionType: typeof _enum_for_PTCSessionType = _enum_for_PTCSessionType;
 }
 
 /**

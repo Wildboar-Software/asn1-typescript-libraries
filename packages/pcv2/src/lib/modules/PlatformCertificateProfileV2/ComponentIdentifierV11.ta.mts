@@ -275,7 +275,7 @@ class ComponentIdentifierV11 {
          * @static
          */
 
-    public static _enum_for_status = _enum_for_AttributeStatus;
+    public static _enum_for_status: typeof _enum_for_AttributeStatus = _enum_for_AttributeStatus;
 }
 
 /**

@@ -34,7 +34,7 @@ export const _decode_NumberingPlan = (el: _Element): NumberingPlan => {
     }
     return value;
 };
-export const _encode_NumberingPlan = $._encodeOctetString;
+export const _encode_NumberingPlan: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

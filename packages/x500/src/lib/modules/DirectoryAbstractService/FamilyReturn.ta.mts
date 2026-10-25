@@ -104,7 +104,7 @@ export class FamilyReturn {
      * @static
      */
 
-    public static _enum_for_memberSelect = _enum_for_FamilyReturn_memberSelect;
+    public static _enum_for_memberSelect: typeof _enum_for_FamilyReturn_memberSelect = _enum_for_FamilyReturn_memberSelect;
 }
 
 /**

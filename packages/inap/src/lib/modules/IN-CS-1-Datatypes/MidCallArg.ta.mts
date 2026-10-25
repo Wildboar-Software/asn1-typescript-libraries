@@ -148,7 +148,7 @@ class MidCallArg {
          * @static
          */
 
-    public static _enum_for_featureRequestIndicator = _enum_for_FeatureRequestIndicator;
+    public static _enum_for_featureRequestIndicator: typeof _enum_for_FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;
 }
 
 /**

@@ -299,14 +299,14 @@ export class RemoveEntryArgumentData implements CommonArguments {
      * @static
      */
 
-    public static _enum_for_referenceType = _enum_for_ReferenceType;
+    public static _enum_for_referenceType: typeof _enum_for_ReferenceType = _enum_for_ReferenceType;
     /**
      * @summary The enum used as the type of the component `familyGrouping`
      * @public
      * @static
      */
 
-    public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static _enum_for_familyGrouping: typeof _enum_for_FamilyGrouping = _enum_for_FamilyGrouping;
 }
 
 /**

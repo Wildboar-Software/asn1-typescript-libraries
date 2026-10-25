@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type LocalIPMIdentifier = PrintableString; // PrintableString
 
 
-export const _decode_LocalIPMIdentifier = $._decodePrintableString;
+export const _decode_LocalIPMIdentifier: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_LocalIPMIdentifier = $._encodePrintableString;
+export const _encode_LocalIPMIdentifier: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

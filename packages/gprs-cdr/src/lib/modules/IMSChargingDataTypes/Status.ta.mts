@@ -86,7 +86,7 @@ type Status = _enum_for_Status;
  * @enum {number}
  */
 export
-const Status = _enum_for_Status;
+const Status: typeof _enum_for_Status = _enum_for_Status;
 
 /**
  * @summary Status_fourxx
@@ -99,7 +99,7 @@ const Status = _enum_for_Status;
  * @type {number}
  */
 export
-const Status_fourxx = Status.fourxx; /* LONG_NAMED_ENUMERATED_VALUE */
+const Status_fourxx: _enum_for_Status.fourxx = Status.fourxx; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fourxx
@@ -112,7 +112,7 @@ const Status_fourxx = Status.fourxx; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const fourxx = Status.fourxx; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fourxx: _enum_for_Status.fourxx = Status.fourxx; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Status_fivexx
@@ -125,7 +125,7 @@ const fourxx = Status.fourxx; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Status_fivexx = Status.fivexx; /* LONG_NAMED_ENUMERATED_VALUE */
+const Status_fivexx: _enum_for_Status.fivexx = Status.fivexx; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fivexx
@@ -138,7 +138,7 @@ const Status_fivexx = Status.fivexx; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const fivexx = Status.fivexx; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fivexx: _enum_for_Status.fivexx = Status.fivexx; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Status_time_out
@@ -152,7 +152,7 @@ const fivexx = Status.fivexx; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Status_time_out = Status.time_out; /* LONG_NAMED_ENUMERATED_VALUE */
+const Status_time_out: _enum_for_Status.time_out = Status.time_out; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary time_out
@@ -166,7 +166,7 @@ const Status_time_out = Status.time_out; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const time_out = Status.time_out; /* SHORT_NAMED_ENUMERATED_VALUE */
+const time_out: _enum_for_Status.time_out = Status.time_out; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Status: $.ASN1Decoder<Status> = $._decodeEnumerated;

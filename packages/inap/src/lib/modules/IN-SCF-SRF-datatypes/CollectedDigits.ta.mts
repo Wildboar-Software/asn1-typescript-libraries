@@ -178,7 +178,7 @@ class CollectedDigits {
      * @static
      * @method
      */
-    public static get _default_value_for_errorTreatment () { return ErrorTreatment_reportErrorToScf; }
+    public static get _default_value_for_errorTreatment (): _enum_for_ErrorTreatment { return ErrorTreatment_reportErrorToScf; }
     /**
      * @summary Getter that returns the default value for `interruptableAnnInd`.
      * @public
@@ -212,7 +212,7 @@ class CollectedDigits {
          * @static
          */
 
-    public static _enum_for_errorTreatment = _enum_for_ErrorTreatment;
+    public static _enum_for_errorTreatment: typeof _enum_for_ErrorTreatment = _enum_for_ErrorTreatment;
 }
 
 /**

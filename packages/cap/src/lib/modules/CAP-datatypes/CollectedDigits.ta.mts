@@ -170,12 +170,12 @@ export class CollectedDigits {
     }
 
     public static get _default_value_for_minimumNbOfDigits () { return 1; }
-    public static get _default_value_for_errorTreatment () { return stdErrorAndInfo; }
+    public static get _default_value_for_errorTreatment (): _enum_for_ErrorTreatment { return stdErrorAndInfo; }
     public static get _default_value_for_interruptableAnnInd () { return true; }
     public static get _default_value_for_voiceInformation () { return false; }
     public static get _default_value_for_voiceBack () { return false; }
 
-    public static _enum_for_errorTreatment = _enum_for_ErrorTreatment;
+    public static _enum_for_errorTreatment: typeof _enum_for_ErrorTreatment = _enum_for_ErrorTreatment;
 }
 
 export const _root_component_type_list_1_spec_for_CollectedDigits: $.ComponentSpec[] = [

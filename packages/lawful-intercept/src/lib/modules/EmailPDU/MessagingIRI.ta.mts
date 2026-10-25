@@ -296,19 +296,19 @@ class MessagingIRI {
          * @static
          */
 
-    public static _enum_for_system_type = _enum_for_Messaging_System_Type;        /**
+    public static _enum_for_system_type: typeof _enum_for_Messaging_System_Type = _enum_for_Messaging_System_Type;        /**
          * @summary The enum used as the type of the component `status`
          * @public
          * @static
          */
 
-    public static _enum_for_status = _enum_for_Messaging_Status;        /**
+    public static _enum_for_status: typeof _enum_for_Messaging_Status = _enum_for_Messaging_Status;        /**
          * @summary The enum used as the type of the component `trigger`
          * @public
          * @static
          */
 
-    public static _enum_for_trigger = _enum_for_Messaging_Trigger;
+    public static _enum_for_trigger: typeof _enum_for_Messaging_Trigger = _enum_for_Messaging_Trigger;
 }
 
 /**

@@ -60,7 +60,7 @@ type InfoType = _enum_for_InfoType;
  * @enum {number}
  */
 export
-const InfoType = _enum_for_InfoType;
+const InfoType: typeof _enum_for_InfoType = _enum_for_InfoType;
 
 /**
  * @summary InfoType_numericString
@@ -68,7 +68,7 @@ const InfoType = _enum_for_InfoType;
  * @type {number}
  */
 export
-const InfoType_numericString = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_numericString: _enum_for_InfoType.numericString = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numericString
@@ -76,7 +76,7 @@ const InfoType_numericString = InfoType.numericString; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const numericString = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numericString: _enum_for_InfoType.numericString = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_characterString
@@ -84,7 +84,7 @@ const numericString = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const InfoType_characterString = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_characterString: _enum_for_InfoType.characterString = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterString
@@ -92,7 +92,7 @@ const InfoType_characterString = InfoType.characterString; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const characterString = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const characterString: _enum_for_InfoType.characterString = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_iA5String
@@ -100,7 +100,7 @@ const characterString = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const InfoType_iA5String = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_iA5String: _enum_for_InfoType.iA5String = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iA5String
@@ -108,9 +108,9 @@ const InfoType_iA5String = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iA5String = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_InfoType = $._decodeEnumerated;
-export const _encode_InfoType = $._encodeEnumerated;
+const iA5String: _enum_for_InfoType.iA5String = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_InfoType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_InfoType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

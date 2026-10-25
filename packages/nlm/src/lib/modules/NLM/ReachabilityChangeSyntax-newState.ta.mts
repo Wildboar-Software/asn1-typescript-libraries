@@ -71,7 +71,7 @@ export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSynt
  *
  * @enum {number}
  */
-export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
+export const ReachabilityChangeSyntax_newState: typeof _enum_for_ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
 
 
 /**
@@ -85,7 +85,7 @@ export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyn
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_newState_down =
+export const ReachabilityChangeSyntax_newState_down: 0 =
     ReachabilityChangeSyntax_newState.down; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const ReachabilityChangeSyntax_newState_down =
  * @constant
  * @type {number}
  */
-export const down =
+export const down: 0 =
     ReachabilityChangeSyntax_newState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const down =
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_newState_up =
+export const ReachabilityChangeSyntax_newState_up: 1 =
     ReachabilityChangeSyntax_newState.up; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -130,7 +130,7 @@ export const ReachabilityChangeSyntax_newState_up =
  * @constant
  * @type {number}
  */
-export const up =
+export const up: 1 =
     ReachabilityChangeSyntax_newState.up; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

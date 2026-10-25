@@ -135,13 +135,13 @@ class ChangeOfService {
          * @static
          */
 
-    public static _enum_for_transparencyInd = _enum_for_TransparencyInd;        /**
+    public static _enum_for_transparencyInd: typeof _enum_for_TransparencyInd = _enum_for_TransparencyInd;        /**
          * @summary The enum used as the type of the component `fnur`
          * @public
          * @static
          */
 
-    public static _enum_for_fnur = _enum_for_Fnur;
+    public static _enum_for_fnur: typeof _enum_for_Fnur = _enum_for_Fnur;
 }
 
 /**

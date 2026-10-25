@@ -92,7 +92,7 @@ export class ms_bind_error_ParameterType_qualified_error {
      * @static
      */
 
-    public static _enum_for_bind_problem = _enum_for_BindProblem;
+    public static _enum_for_bind_problem: typeof _enum_for_BindProblem = _enum_for_BindProblem;
 }
 
 /**

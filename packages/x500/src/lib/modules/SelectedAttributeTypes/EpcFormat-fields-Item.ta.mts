@@ -107,7 +107,7 @@ export class EpcFormat_fields_Item {
      * @static
      */
 
-    public static _enum_for_result = _enum_for_EpcFormat_fields_Item_result;
+    public static _enum_for_result: typeof _enum_for_EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_result;
 }
 
 /**

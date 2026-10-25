@@ -52,7 +52,7 @@ type LCSClientIdentity_lcsClientInternalID = _enum_for_LCSClientIdentity_lcsClie
  * @type {number}
  */
 export
-const LCSClientIdentity_lcsClientInternalID_broadcastService = _enum_for_LCSClientIdentity_lcsClientInternalID.broadcastService; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientIdentity_lcsClientInternalID_broadcastService: _enum_for_LCSClientIdentity_lcsClientInternalID.broadcastService = _enum_for_LCSClientIdentity_lcsClientInternalID.broadcastService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary broadcastService
@@ -60,7 +60,7 @@ const LCSClientIdentity_lcsClientInternalID_broadcastService = _enum_for_LCSClie
  * @type {number}
  */
 export
-const broadcastService = LCSClientIdentity_lcsClientInternalID_broadcastService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const broadcastService: _enum_for_LCSClientIdentity_lcsClientInternalID.broadcastService = LCSClientIdentity_lcsClientInternalID_broadcastService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN
@@ -68,7 +68,7 @@ const broadcastService = LCSClientIdentity_lcsClientInternalID_broadcastService;
  * @type {number}
  */
 export
-const LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN = _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_HPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN: _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_HPLMN = _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_HPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary o_andM_HPLMN
@@ -76,7 +76,7 @@ const LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN = _enum_for_LCSClientId
  * @type {number}
  */
 export
-const o_andM_HPLMN = LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const o_andM_HPLMN: _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_HPLMN = LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN
@@ -84,7 +84,7 @@ const o_andM_HPLMN = LCSClientIdentity_lcsClientInternalID_o_andM_HPLMN; /* SHOR
  * @type {number}
  */
 export
-const LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN = _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_VPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN: _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_VPLMN = _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_VPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary o_andM_VPLMN
@@ -92,7 +92,7 @@ const LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN = _enum_for_LCSClientId
  * @type {number}
  */
 export
-const o_andM_VPLMN = LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const o_andM_VPLMN: _enum_for_LCSClientIdentity_lcsClientInternalID.o_andM_VPLMN = LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientIdentity_lcsClientInternalID_anonymousLocation
@@ -100,7 +100,7 @@ const o_andM_VPLMN = LCSClientIdentity_lcsClientInternalID_o_andM_VPLMN; /* SHOR
  * @type {number}
  */
 export
-const LCSClientIdentity_lcsClientInternalID_anonymousLocation = _enum_for_LCSClientIdentity_lcsClientInternalID.anonymousLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientIdentity_lcsClientInternalID_anonymousLocation: _enum_for_LCSClientIdentity_lcsClientInternalID.anonymousLocation = _enum_for_LCSClientIdentity_lcsClientInternalID.anonymousLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anonymousLocation
@@ -108,7 +108,7 @@ const LCSClientIdentity_lcsClientInternalID_anonymousLocation = _enum_for_LCSCli
  * @type {number}
  */
 export
-const anonymousLocation = LCSClientIdentity_lcsClientInternalID_anonymousLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anonymousLocation: _enum_for_LCSClientIdentity_lcsClientInternalID.anonymousLocation = LCSClientIdentity_lcsClientInternalID_anonymousLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService
@@ -116,7 +116,7 @@ const anonymousLocation = LCSClientIdentity_lcsClientInternalID_anonymousLocatio
  * @type {number}
  */
 export
-const LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService = _enum_for_LCSClientIdentity_lcsClientInternalID.targetMSsubscribedService; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService: _enum_for_LCSClientIdentity_lcsClientInternalID.targetMSsubscribedService = _enum_for_LCSClientIdentity_lcsClientInternalID.targetMSsubscribedService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetMSsubscribedService
@@ -124,7 +124,7 @@ const LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService = _enum_fo
  * @type {number}
  */
 export
-const targetMSsubscribedService = LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetMSsubscribedService: _enum_for_LCSClientIdentity_lcsClientInternalID.targetMSsubscribedService = LCSClientIdentity_lcsClientInternalID_targetMSsubscribedService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_LCSClientIdentity_lcsClientInternalID: $.ASN1Decoder<LCSClientIdentity_lcsClientInternalID> = $._decodeEnumerated;

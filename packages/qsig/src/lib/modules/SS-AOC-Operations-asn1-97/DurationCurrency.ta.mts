@@ -123,7 +123,7 @@ class DurationCurrency {
          * @static
          */
 
-    public static _enum_for_dChargingType = _enum_for_ChargingType;
+    public static _enum_for_dChargingType: typeof _enum_for_ChargingType = _enum_for_ChargingType;
 }
 
 /**

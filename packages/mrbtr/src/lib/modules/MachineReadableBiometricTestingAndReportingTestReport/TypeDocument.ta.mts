@@ -100,7 +100,7 @@ type TypeDocument = _enum_for_TypeDocument;
  * @enum {number}
  */
 export
-const TypeDocument = _enum_for_TypeDocument;
+const TypeDocument: typeof _enum_for_TypeDocument = _enum_for_TypeDocument;
 
 /**
  * @summary TypeDocument_article
@@ -108,7 +108,7 @@ const TypeDocument = _enum_for_TypeDocument;
  * @type {number}
  */
 export
-const TypeDocument_article = TypeDocument.article; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_article: _enum_for_TypeDocument.article = TypeDocument.article; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary article
@@ -116,7 +116,7 @@ const TypeDocument_article = TypeDocument.article; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const article = TypeDocument.article; /* SHORT_NAMED_ENUMERATED_VALUE */
+const article: _enum_for_TypeDocument.article = TypeDocument.article; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeDocument_technical_report
@@ -124,7 +124,7 @@ const article = TypeDocument.article; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TypeDocument_technical_report = TypeDocument.technical_report; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_technical_report: _enum_for_TypeDocument.technical_report = TypeDocument.technical_report; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary technical_report
@@ -132,7 +132,7 @@ const TypeDocument_technical_report = TypeDocument.technical_report; /* LONG_NAM
  * @type {number}
  */
 export
-const technical_report = TypeDocument.technical_report; /* SHORT_NAMED_ENUMERATED_VALUE */
+const technical_report: _enum_for_TypeDocument.technical_report = TypeDocument.technical_report; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeDocument_in_proceedings
@@ -140,7 +140,7 @@ const technical_report = TypeDocument.technical_report; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TypeDocument_in_proceedings = TypeDocument.in_proceedings; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_in_proceedings: _enum_for_TypeDocument.in_proceedings = TypeDocument.in_proceedings; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary in_proceedings
@@ -148,7 +148,7 @@ const TypeDocument_in_proceedings = TypeDocument.in_proceedings; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const in_proceedings = TypeDocument.in_proceedings; /* SHORT_NAMED_ENUMERATED_VALUE */
+const in_proceedings: _enum_for_TypeDocument.in_proceedings = TypeDocument.in_proceedings; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeDocument_abstract
@@ -156,7 +156,7 @@ const in_proceedings = TypeDocument.in_proceedings; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const TypeDocument_abstract = TypeDocument.abstract; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_abstract: _enum_for_TypeDocument.abstract = TypeDocument.abstract; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abstract
@@ -164,7 +164,7 @@ const TypeDocument_abstract = TypeDocument.abstract; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const abstract = TypeDocument.abstract; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abstract: _enum_for_TypeDocument.abstract = TypeDocument.abstract; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeDocument_book
@@ -172,7 +172,7 @@ const abstract = TypeDocument.abstract; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TypeDocument_book = TypeDocument.book; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_book: _enum_for_TypeDocument.book = TypeDocument.book; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary book
@@ -180,7 +180,7 @@ const TypeDocument_book = TypeDocument.book; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const book = TypeDocument.book; /* SHORT_NAMED_ENUMERATED_VALUE */
+const book: _enum_for_TypeDocument.book = TypeDocument.book; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeDocument_in_book
@@ -188,7 +188,7 @@ const book = TypeDocument.book; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TypeDocument_in_book = TypeDocument.in_book; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_in_book: _enum_for_TypeDocument.in_book = TypeDocument.in_book; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary in_book
@@ -196,7 +196,7 @@ const TypeDocument_in_book = TypeDocument.in_book; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const in_book = TypeDocument.in_book; /* SHORT_NAMED_ENUMERATED_VALUE */
+const in_book: _enum_for_TypeDocument.in_book = TypeDocument.in_book; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeDocument_collection
@@ -204,7 +204,7 @@ const in_book = TypeDocument.in_book; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TypeDocument_collection = TypeDocument.collection; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeDocument_collection: _enum_for_TypeDocument.collection = TypeDocument.collection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary collection
@@ -212,7 +212,7 @@ const TypeDocument_collection = TypeDocument.collection; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const collection = TypeDocument.collection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const collection: _enum_for_TypeDocument.collection = TypeDocument.collection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -221,7 +221,7 @@ const collection = TypeDocument.collection; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TypeDocument = $._decodeEnumerated;
+export const _decode_TypeDocument: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -231,7 +231,7 @@ export const _decode_TypeDocument = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TypeDocument, encoded as an ASN.1 Element.
  */
-export const _encode_TypeDocument = $._encodeEnumerated;
+export const _encode_TypeDocument: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

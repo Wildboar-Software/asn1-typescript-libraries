@@ -22,5 +22,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type ScfID = OCTET_STRING;
-export const _decode_ScfID = $._decodeOctetString;
-export const _encode_ScfID = $._encodeOctetString;
+export const _decode_ScfID: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_ScfID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

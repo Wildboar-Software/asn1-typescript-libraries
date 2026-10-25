@@ -88,7 +88,7 @@ class AocCompleteRes {
          * @static
          */
 
-    public static _enum_for_chargingOption = _enum_for_ChargingOption;
+    public static _enum_for_chargingOption: typeof _enum_for_ChargingOption = _enum_for_ChargingOption;
 }
 
 /**

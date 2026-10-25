@@ -28,12 +28,12 @@ export type TroubleReportStatusTime = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_TroubleReportStatusTime = $._decodeGeneralizedTime;
+export const _decode_TroubleReportStatusTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_TroubleReportStatusTime = $._encodeGeneralizedTime;
+export const _encode_TroubleReportStatusTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

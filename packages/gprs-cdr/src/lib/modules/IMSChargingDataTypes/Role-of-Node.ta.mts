@@ -88,7 +88,7 @@ type Role_of_Node = _enum_for_Role_of_Node;
  * @enum {number}
  */
 export
-const Role_of_Node = _enum_for_Role_of_Node;
+const Role_of_Node: typeof _enum_for_Role_of_Node = _enum_for_Role_of_Node;
 
 /**
  * @summary Role_of_Node_originating
@@ -100,7 +100,7 @@ const Role_of_Node = _enum_for_Role_of_Node;
  * @type {number}
  */
 export
-const Role_of_Node_originating = Role_of_Node.originating; /* LONG_NAMED_ENUMERATED_VALUE */
+const Role_of_Node_originating: _enum_for_Role_of_Node.originating = Role_of_Node.originating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originating
@@ -112,7 +112,7 @@ const Role_of_Node_originating = Role_of_Node.originating; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const originating = Role_of_Node.originating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originating: _enum_for_Role_of_Node.originating = Role_of_Node.originating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Role_of_Node_terminating
@@ -125,7 +125,7 @@ const originating = Role_of_Node.originating; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Role_of_Node_terminating = Role_of_Node.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
+const Role_of_Node_terminating: _enum_for_Role_of_Node.terminating = Role_of_Node.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating
@@ -138,7 +138,7 @@ const Role_of_Node_terminating = Role_of_Node.terminating; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const terminating = Role_of_Node.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating: _enum_for_Role_of_Node.terminating = Role_of_Node.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Role_of_Node: $.ASN1Decoder<Role_of_Node> = $._decodeEnumerated;

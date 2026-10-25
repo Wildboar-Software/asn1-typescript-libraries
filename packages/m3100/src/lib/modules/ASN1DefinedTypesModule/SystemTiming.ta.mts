@@ -85,7 +85,7 @@ export class SystemTiming {
      * @static
      */
 
-    public static _enum_for_sourceType = _enum_for_SystemTiming_sourceType;
+    public static _enum_for_sourceType: typeof _enum_for_SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
 }
 
 

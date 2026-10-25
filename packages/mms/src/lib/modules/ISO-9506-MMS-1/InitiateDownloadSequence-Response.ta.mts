@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type InitiateDownloadSequence_Response = NULL; // NullType
-export const _decode_InitiateDownloadSequence_Response = $._decodeNull;
-export const _encode_InitiateDownloadSequence_Response = $._encodeNull;
+export const _decode_InitiateDownloadSequence_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_InitiateDownloadSequence_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

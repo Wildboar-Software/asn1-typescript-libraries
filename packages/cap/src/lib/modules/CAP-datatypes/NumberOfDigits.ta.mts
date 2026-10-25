@@ -28,4 +28,4 @@ export const _decode_NumberOfDigits = (el: _Element): NumberOfDigits => {
     }
     return value;
 };
-export const _encode_NumberOfDigits = $._encodeInteger;
+export const _encode_NumberOfDigits: $.ASN1Encoder<INTEGER> = $._encodeInteger;

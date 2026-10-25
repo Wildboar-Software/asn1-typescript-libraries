@@ -102,14 +102,14 @@ export class CertSubscribeOK_Item_ok {
      * @static
      */
 
-    public static _enum_for_status = _enum_for_CertStatus;
+    public static _enum_for_status: typeof _enum_for_CertStatus = _enum_for_CertStatus;
     /**
      * @summary The enum used as the type of the component `revokeReason`
      * @public
      * @static
      */
 
-    public static _enum_for_revokeReason = _enum_for_CRLReason;
+    public static _enum_for_revokeReason: typeof _enum_for_CRLReason = _enum_for_CRLReason;
 }
 
 /**

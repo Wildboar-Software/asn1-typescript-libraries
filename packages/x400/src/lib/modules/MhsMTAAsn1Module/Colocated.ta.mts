@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Colocated = BOOLEAN; // BooleanType
 
 
-export const _decode_Colocated = $._decodeBoolean;
+export const _decode_Colocated: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_Colocated = $._encodeBoolean;
+export const _encode_Colocated: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

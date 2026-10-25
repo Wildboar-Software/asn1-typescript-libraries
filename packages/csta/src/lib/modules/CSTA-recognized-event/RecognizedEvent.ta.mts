@@ -156,7 +156,7 @@ class RecognizedEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

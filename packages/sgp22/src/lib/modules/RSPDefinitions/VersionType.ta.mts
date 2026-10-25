@@ -33,7 +33,7 @@ export function _decode_VersionType (el: _Element): VersionType {
     }
     return value;
 }
-export const _encode_VersionType = $._encodeOctetString;
+export const _encode_VersionType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -669,13 +669,13 @@ class PFDCRecord {
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `causeForRecClosing`
          * @public
          * @static
          */
 
-    public static _enum_for_causeForRecClosing = _enum_for_ProSeCauseForRecClosing;
+    public static _enum_for_causeForRecClosing: typeof _enum_for_ProSeCauseForRecClosing = _enum_for_ProSeCauseForRecClosing;
 }
 
 /**

@@ -55,7 +55,7 @@ type LocationType_locationEstimateType = _enum_for_LocationType_locationEstimate
  * @type {number}
  */
 export
-const LocationType_locationEstimateType_currentLocation = _enum_for_LocationType_locationEstimateType.currentLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_locationEstimateType_currentLocation: _enum_for_LocationType_locationEstimateType.currentLocation = _enum_for_LocationType_locationEstimateType.currentLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentLocation
@@ -63,7 +63,7 @@ const LocationType_locationEstimateType_currentLocation = _enum_for_LocationType
  * @type {number}
  */
 export
-const currentLocation = LocationType_locationEstimateType_currentLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentLocation: _enum_for_LocationType_locationEstimateType.currentLocation = LocationType_locationEstimateType_currentLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_locationEstimateType_currentOrLastKnownLocation
@@ -71,7 +71,7 @@ const currentLocation = LocationType_locationEstimateType_currentLocation; /* SH
  * @type {number}
  */
 export
-const LocationType_locationEstimateType_currentOrLastKnownLocation = _enum_for_LocationType_locationEstimateType.currentOrLastKnownLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_locationEstimateType_currentOrLastKnownLocation: _enum_for_LocationType_locationEstimateType.currentOrLastKnownLocation = _enum_for_LocationType_locationEstimateType.currentOrLastKnownLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentOrLastKnownLocation
@@ -79,7 +79,7 @@ const LocationType_locationEstimateType_currentOrLastKnownLocation = _enum_for_L
  * @type {number}
  */
 export
-const currentOrLastKnownLocation = LocationType_locationEstimateType_currentOrLastKnownLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentOrLastKnownLocation: _enum_for_LocationType_locationEstimateType.currentOrLastKnownLocation = LocationType_locationEstimateType_currentOrLastKnownLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_locationEstimateType_initialLocation
@@ -87,7 +87,7 @@ const currentOrLastKnownLocation = LocationType_locationEstimateType_currentOrLa
  * @type {number}
  */
 export
-const LocationType_locationEstimateType_initialLocation = _enum_for_LocationType_locationEstimateType.initialLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_locationEstimateType_initialLocation: _enum_for_LocationType_locationEstimateType.initialLocation = _enum_for_LocationType_locationEstimateType.initialLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialLocation
@@ -95,7 +95,7 @@ const LocationType_locationEstimateType_initialLocation = _enum_for_LocationType
  * @type {number}
  */
 export
-const initialLocation = LocationType_locationEstimateType_initialLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialLocation: _enum_for_LocationType_locationEstimateType.initialLocation = LocationType_locationEstimateType_initialLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_locationEstimateType_activateDeferredLocation
@@ -103,7 +103,7 @@ const initialLocation = LocationType_locationEstimateType_initialLocation; /* SH
  * @type {number}
  */
 export
-const LocationType_locationEstimateType_activateDeferredLocation = _enum_for_LocationType_locationEstimateType.activateDeferredLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_locationEstimateType_activateDeferredLocation: _enum_for_LocationType_locationEstimateType.activateDeferredLocation = _enum_for_LocationType_locationEstimateType.activateDeferredLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activateDeferredLocation
@@ -111,7 +111,7 @@ const LocationType_locationEstimateType_activateDeferredLocation = _enum_for_Loc
  * @type {number}
  */
 export
-const activateDeferredLocation = LocationType_locationEstimateType_activateDeferredLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activateDeferredLocation: _enum_for_LocationType_locationEstimateType.activateDeferredLocation = LocationType_locationEstimateType_activateDeferredLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_locationEstimateType_cancelDeferredLocation
@@ -119,7 +119,7 @@ const activateDeferredLocation = LocationType_locationEstimateType_activateDefer
  * @type {number}
  */
 export
-const LocationType_locationEstimateType_cancelDeferredLocation = _enum_for_LocationType_locationEstimateType.cancelDeferredLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_locationEstimateType_cancelDeferredLocation: _enum_for_LocationType_locationEstimateType.cancelDeferredLocation = _enum_for_LocationType_locationEstimateType.cancelDeferredLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelDeferredLocation
@@ -127,7 +127,7 @@ const LocationType_locationEstimateType_cancelDeferredLocation = _enum_for_Locat
  * @type {number}
  */
 export
-const cancelDeferredLocation = LocationType_locationEstimateType_cancelDeferredLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelDeferredLocation: _enum_for_LocationType_locationEstimateType.cancelDeferredLocation = LocationType_locationEstimateType_cancelDeferredLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_locationEstimateType_notificationVerificationOnly
@@ -135,7 +135,7 @@ const cancelDeferredLocation = LocationType_locationEstimateType_cancelDeferredL
  * @type {number}
  */
 export
-const LocationType_locationEstimateType_notificationVerificationOnly = _enum_for_LocationType_locationEstimateType.notificationVerificationOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_locationEstimateType_notificationVerificationOnly: _enum_for_LocationType_locationEstimateType.notificationVerificationOnly = _enum_for_LocationType_locationEstimateType.notificationVerificationOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notificationVerificationOnly
@@ -143,7 +143,7 @@ const LocationType_locationEstimateType_notificationVerificationOnly = _enum_for
  * @type {number}
  */
 export
-const notificationVerificationOnly = LocationType_locationEstimateType_notificationVerificationOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notificationVerificationOnly: _enum_for_LocationType_locationEstimateType.notificationVerificationOnly = LocationType_locationEstimateType_notificationVerificationOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_LocationType_locationEstimateType: $.ASN1Decoder<LocationType_locationEstimateType> = $._decodeEnumerated;

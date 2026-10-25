@@ -31,12 +31,12 @@ export type CommonReference = UTCTime; // UTCTime
 
 
 
-export const _decode_CommonReference = $._decodeUTCTime;
+export const _decode_CommonReference: $.ASN1Decoder<Date> = $._decodeUTCTime;
 
 
 
 
-export const _encode_CommonReference = $._encodeUTCTime;
+export const _encode_CommonReference: $.ASN1Encoder<Date> = $._encodeUTCTime;
 
 
 /* eslint-enable */

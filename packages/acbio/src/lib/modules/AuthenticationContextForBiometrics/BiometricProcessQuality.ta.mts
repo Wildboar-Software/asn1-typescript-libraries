@@ -28,12 +28,12 @@ export type BiometricProcessQuality = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_BiometricProcessQuality = $._decodeOctetString;
+export const _decode_BiometricProcessQuality: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_BiometricProcessQuality = $._encodeOctetString;
+export const _encode_BiometricProcessQuality: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

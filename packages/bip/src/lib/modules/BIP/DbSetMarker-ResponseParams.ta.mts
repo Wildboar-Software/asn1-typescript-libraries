@@ -32,12 +32,12 @@ export type DbSetMarker_ResponseParams = NULL; // NullType
 
 
 
-export const _decode_DbSetMarker_ResponseParams = $._decodeNull;
+export const _decode_DbSetMarker_ResponseParams: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_DbSetMarker_ResponseParams = $._encodeNull;
+export const _encode_DbSetMarker_ResponseParams: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

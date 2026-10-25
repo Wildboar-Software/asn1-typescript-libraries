@@ -97,8 +97,8 @@ const EUICCInfo2_treProperties_usesRemoteMemory: number = 2; /* LONG_NAMED_BIT *
  */
 export
 const usesRemoteMemory: number = EUICCInfo2_treProperties_usesRemoteMemory; /* SHORT_NAMED_BIT */
-export const _decode_EUICCInfo2_treProperties = $._decodeBitString;
-export const _encode_EUICCInfo2_treProperties = $._encodeBitString;
+export const _decode_EUICCInfo2_treProperties: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_EUICCInfo2_treProperties: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

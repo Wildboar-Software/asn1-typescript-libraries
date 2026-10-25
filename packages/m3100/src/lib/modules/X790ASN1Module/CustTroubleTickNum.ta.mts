@@ -28,12 +28,12 @@ export type CustTroubleTickNum = GraphicString; // GraphicString
 
 
 
-export const _decode_CustTroubleTickNum = $._decodeGraphicString;
+export const _decode_CustTroubleTickNum: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CustTroubleTickNum = $._encodeGraphicString;
+export const _encode_CustTroubleTickNum: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

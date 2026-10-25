@@ -58,7 +58,7 @@ export type PointDirectionality = _enum_for_PointDirectionality;
  *
  * @enum {number}
  */
-export const PointDirectionality = _enum_for_PointDirectionality;
+export const PointDirectionality: typeof _enum_for_PointDirectionality = _enum_for_PointDirectionality;
 
 
 /**
@@ -66,7 +66,7 @@ export const PointDirectionality = _enum_for_PointDirectionality;
  * @constant
  * @type {number}
  */
-export const PointDirectionality_sink =
+export const PointDirectionality_sink: _enum_for_PointDirectionality.sink =
     PointDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const PointDirectionality_sink =
  * @constant
  * @type {number}
  */
-export const sink =
+export const sink: _enum_for_PointDirectionality.sink =
     PointDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const sink =
  * @constant
  * @type {number}
  */
-export const PointDirectionality_source =
+export const PointDirectionality_source: _enum_for_PointDirectionality.source =
     PointDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const PointDirectionality_source =
  * @constant
  * @type {number}
  */
-export const source =
+export const source: _enum_for_PointDirectionality.source =
     PointDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const source =
  * @constant
  * @type {number}
  */
-export const PointDirectionality_bidirectional =
+export const PointDirectionality_bidirectional: _enum_for_PointDirectionality.bidirectional =
     PointDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const PointDirectionality_bidirectional =
  * @constant
  * @type {number}
  */
-export const bidirectional =
+export const bidirectional: _enum_for_PointDirectionality.bidirectional =
     PointDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -88,7 +88,7 @@ class AbsentSubscriberParam {
          * @static
          */
 
-    public static _enum_for_absentSubscriberReason = _enum_for_AbsentSubscriberReason;
+    public static _enum_for_absentSubscriberReason: typeof _enum_for_AbsentSubscriberReason = _enum_for_AbsentSubscriberReason;
 }
 
 /**

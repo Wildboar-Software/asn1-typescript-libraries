@@ -37,7 +37,7 @@ export type SecurityProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const SecurityProblem_inappropriateAuthentication = 1 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_inappropriateAuthentication: 1 = 1 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_inappropriateAuthentication
@@ -48,7 +48,7 @@ export const SecurityProblem_inappropriateAuthentication = 1 satisfies SecurityP
  * @constant
  * @type {number}
  */
-export const inappropriateAuthentication = SecurityProblem_inappropriateAuthentication; /* SHORT_NAMED_INTEGER_VALUE */
+export const inappropriateAuthentication: 1 = SecurityProblem_inappropriateAuthentication; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_invalidCredentials
@@ -59,7 +59,7 @@ export const inappropriateAuthentication = SecurityProblem_inappropriateAuthenti
  * @constant
  * @type {number}
  */
-export const SecurityProblem_invalidCredentials = 2 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_invalidCredentials: 2 = 2 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_invalidCredentials
@@ -70,7 +70,7 @@ export const SecurityProblem_invalidCredentials = 2 satisfies SecurityProblem; /
  * @constant
  * @type {number}
  */
-export const invalidCredentials = SecurityProblem_invalidCredentials; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidCredentials: 2 = SecurityProblem_invalidCredentials; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_insufficientAccessRights
@@ -81,7 +81,7 @@ export const invalidCredentials = SecurityProblem_invalidCredentials; /* SHORT_N
  * @constant
  * @type {number}
  */
-export const SecurityProblem_insufficientAccessRights = 3 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_insufficientAccessRights: 3 = 3 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_insufficientAccessRights
@@ -92,7 +92,7 @@ export const SecurityProblem_insufficientAccessRights = 3 satisfies SecurityProb
  * @constant
  * @type {number}
  */
-export const insufficientAccessRights = SecurityProblem_insufficientAccessRights; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientAccessRights: 3 = SecurityProblem_insufficientAccessRights; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_invalidSignature
@@ -103,7 +103,7 @@ export const insufficientAccessRights = SecurityProblem_insufficientAccessRights
  * @constant
  * @type {number}
  */
-export const SecurityProblem_invalidSignature = 4 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_invalidSignature: 4 = 4 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_invalidSignature
@@ -114,7 +114,7 @@ export const SecurityProblem_invalidSignature = 4 satisfies SecurityProblem; /* 
  * @constant
  * @type {number}
  */
-export const invalidSignature = SecurityProblem_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalidSignature: 4 = SecurityProblem_invalidSignature; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_protectionRequired
@@ -125,7 +125,7 @@ export const invalidSignature = SecurityProblem_invalidSignature; /* SHORT_NAMED
  * @constant
  * @type {number}
  */
-export const SecurityProblem_protectionRequired = 5 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_protectionRequired: 5 = 5 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_protectionRequired
@@ -136,7 +136,7 @@ export const SecurityProblem_protectionRequired = 5 satisfies SecurityProblem; /
  * @constant
  * @type {number}
  */
-export const protectionRequired = SecurityProblem_protectionRequired; /* SHORT_NAMED_INTEGER_VALUE */
+export const protectionRequired: 5 = SecurityProblem_protectionRequired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_noInformation
@@ -147,7 +147,7 @@ export const protectionRequired = SecurityProblem_protectionRequired; /* SHORT_N
  * @constant
  * @type {number}
  */
-export const SecurityProblem_noInformation = 6 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_noInformation: 6 = 6 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_noInformation
@@ -158,7 +158,7 @@ export const SecurityProblem_noInformation = 6 satisfies SecurityProblem; /* LON
  * @constant
  * @type {number}
  */
-export const noInformation = SecurityProblem_noInformation; /* SHORT_NAMED_INTEGER_VALUE */
+export const noInformation: 6 = SecurityProblem_noInformation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_blockedCredentials
@@ -170,7 +170,7 @@ export const noInformation = SecurityProblem_noInformation; /* SHORT_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const SecurityProblem_blockedCredentials = 7 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_blockedCredentials: 7 = 7 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_blockedCredentials
@@ -182,7 +182,7 @@ export const SecurityProblem_blockedCredentials = 7 satisfies SecurityProblem; /
  * @constant
  * @type {number}
  */
-export const blockedCredentials = SecurityProblem_blockedCredentials; /* SHORT_NAMED_INTEGER_VALUE */
+export const blockedCredentials: 7 = SecurityProblem_blockedCredentials; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_spkmError
@@ -193,7 +193,7 @@ export const blockedCredentials = SecurityProblem_blockedCredentials; /* SHORT_N
  * @constant
  * @type {number}
  */
-export const SecurityProblem_spkmError = 9 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_spkmError: 9 = 9 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_spkmError
@@ -204,7 +204,7 @@ export const SecurityProblem_spkmError = 9 satisfies SecurityProblem; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const spkmError = SecurityProblem_spkmError; /* SHORT_NAMED_INTEGER_VALUE */
+export const spkmError: 9 = SecurityProblem_spkmError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unsupportedAuthenticationMethod
@@ -215,7 +215,7 @@ export const spkmError = SecurityProblem_spkmError; /* SHORT_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const SecurityProblem_unsupportedAuthenticationMethod = 10 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_unsupportedAuthenticationMethod: 10 = 10 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_unsupportedAuthenticationMethod
@@ -226,7 +226,7 @@ export const SecurityProblem_unsupportedAuthenticationMethod = 10 satisfies Secu
  * @constant
  * @type {number}
  */
-export const unsupportedAuthenticationMethod = SecurityProblem_unsupportedAuthenticationMethod; /* SHORT_NAMED_INTEGER_VALUE */
+export const unsupportedAuthenticationMethod: 10 = SecurityProblem_unsupportedAuthenticationMethod; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_passwordExpired
@@ -237,7 +237,7 @@ export const unsupportedAuthenticationMethod = SecurityProblem_unsupportedAuthen
  * @constant
  * @type {number}
  */
-export const SecurityProblem_passwordExpired = 11 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_passwordExpired: 11 = 11 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_passwordExpired
@@ -248,7 +248,7 @@ export const SecurityProblem_passwordExpired = 11 satisfies SecurityProblem; /* 
  * @constant
  * @type {number}
  */
-export const passwordExpired = SecurityProblem_passwordExpired; /* SHORT_NAMED_INTEGER_VALUE */
+export const passwordExpired: 11 = SecurityProblem_passwordExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_inappropriateAlgorithms
@@ -261,7 +261,7 @@ export const passwordExpired = SecurityProblem_passwordExpired; /* SHORT_NAMED_I
  * @constant
  * @type {number}
  */
-export const SecurityProblem_inappropriateAlgorithms = 12 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityProblem_inappropriateAlgorithms: 12 = 12 satisfies SecurityProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SecurityProblem_inappropriateAlgorithms
@@ -274,13 +274,13 @@ export const SecurityProblem_inappropriateAlgorithms = 12 satisfies SecurityProb
  * @constant
  * @type {number}
  */
-export const inappropriateAlgorithms = SecurityProblem_inappropriateAlgorithms; /* SHORT_NAMED_INTEGER_VALUE */
+export const inappropriateAlgorithms: 12 = SecurityProblem_inappropriateAlgorithms; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_SecurityProblem = $._decodeInteger;
+export const _decode_SecurityProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_SecurityProblem = $._encodeInteger;
+export const _encode_SecurityProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

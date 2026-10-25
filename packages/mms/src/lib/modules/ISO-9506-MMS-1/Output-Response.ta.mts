@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Output_Response = NULL; // NullType
-export const _decode_Output_Response = $._decodeNull;
-export const _encode_Output_Response = $._encodeNull;
+export const _decode_Output_Response: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_Output_Response: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

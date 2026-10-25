@@ -60,14 +60,14 @@ export type EDINInitiatorField = _enum_for_EDINInitiatorField;
  *
  * @enum {number}
  */
-export const EDINInitiatorField = _enum_for_EDINInitiatorField;
+export const EDINInitiatorField: typeof _enum_for_EDINInitiatorField = _enum_for_EDINInitiatorField;
 
 /**
  * @summary EDINInitiatorField_internal_ua
  * @constant
  * @type {number}
  */
-export const EDINInitiatorField_internal_ua =
+export const EDINInitiatorField_internal_ua: _enum_for_EDINInitiatorField.internal_ua =
     EDINInitiatorField.internal_ua; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -75,7 +75,7 @@ export const EDINInitiatorField_internal_ua =
  * @constant
  * @type {number}
  */
-export const internal_ua =
+export const internal_ua: _enum_for_EDINInitiatorField.internal_ua =
     EDINInitiatorField.internal_ua; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -83,7 +83,7 @@ export const internal_ua =
  * @constant
  * @type {number}
  */
-export const EDINInitiatorField_external_ua =
+export const EDINInitiatorField_external_ua: _enum_for_EDINInitiatorField.external_ua =
     EDINInitiatorField.external_ua; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -91,7 +91,7 @@ export const EDINInitiatorField_external_ua =
  * @constant
  * @type {number}
  */
-export const external_ua =
+export const external_ua: _enum_for_EDINInitiatorField.external_ua =
     EDINInitiatorField.external_ua; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const external_ua =
  * @constant
  * @type {number}
  */
-export const EDINInitiatorField_internal_ms =
+export const EDINInitiatorField_internal_ms: _enum_for_EDINInitiatorField.internal_ms =
     EDINInitiatorField.internal_ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const EDINInitiatorField_internal_ms =
  * @constant
  * @type {number}
  */
-export const internal_ms =
+export const internal_ms: _enum_for_EDINInitiatorField.internal_ms =
     EDINInitiatorField.internal_ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

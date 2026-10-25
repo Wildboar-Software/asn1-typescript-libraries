@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FilterSize = INTEGER;
 
 
-export const _decode_FilterSize = $._decodeInteger;
+export const _decode_FilterSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_FilterSize = $._encodeInteger;
+export const _encode_FilterSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

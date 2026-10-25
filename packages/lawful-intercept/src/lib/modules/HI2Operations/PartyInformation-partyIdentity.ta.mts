@@ -327,7 +327,7 @@ class PartyInformation_partyIdentity {
          * @static
          */
 
-    public static _enum_for_party_Validity = _enum_for_PartyInformation_partyIdentity_party_Validity;
+    public static _enum_for_party_Validity: typeof _enum_for_PartyInformation_partyIdentity_party_Validity = _enum_for_PartyInformation_partyIdentity_party_Validity;
 }
 
 /**

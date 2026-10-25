@@ -71,7 +71,7 @@ export type MappingType = _enum_for_MappingType;
  *
  * @enum {number}
  */
-export const MappingType = _enum_for_MappingType;
+export const MappingType: typeof _enum_for_MappingType = _enum_for_MappingType;
 
 /**
  * @summary MappingType_none
@@ -84,7 +84,7 @@ export const MappingType = _enum_for_MappingType;
  * @constant
  * @type {number}
  */
-export const MappingType_none =
+export const MappingType_none: _enum_for_MappingType.none =
   MappingType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -92,7 +92,7 @@ export const MappingType_none =
  * @constant
  * @type {number}
  */
-export const none =
+export const none: _enum_for_MappingType.none =
   MappingType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const none =
  * @constant
  * @type {number}
  */
-export const MappingType_explicit =
+export const MappingType_explicit: _enum_for_MappingType.explicit =
   MappingType.explicit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const MappingType_explicit =
  * @constant
  * @type {number}
  */
-export const explicit =
+export const explicit: _enum_for_MappingType.explicit =
   MappingType.explicit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const explicit =
  * @constant
  * @type {number}
  */
-export const MappingType_extractIDI =
+export const MappingType_extractIDI: _enum_for_MappingType.extractIDI =
   MappingType.extractIDI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const MappingType_extractIDI =
  * @constant
  * @type {number}
  */
-export const extractIDI =
+export const extractIDI: _enum_for_MappingType.extractIDI =
   MappingType.extractIDI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +153,7 @@ export const extractIDI =
  * @constant
  * @type {number}
  */
-export const MappingType_extractDSP =
+export const MappingType_extractDSP: _enum_for_MappingType.extractDSP =
   MappingType.extractDSP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -161,7 +161,7 @@ export const MappingType_extractDSP =
  * @constant
  * @type {number}
  */
-export const extractDSP =
+export const extractDSP: _enum_for_MappingType.extractDSP =
   MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

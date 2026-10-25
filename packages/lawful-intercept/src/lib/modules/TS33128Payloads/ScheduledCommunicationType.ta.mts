@@ -83,7 +83,7 @@ type ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;
  * @enum {number}
  */
 export
-const ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;
+const ScheduledCommunicationType: typeof _enum_for_ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;
 
 /**
  * @summary ScheduledCommunicationType_downlinkOnly
@@ -91,7 +91,7 @@ const ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;
  * @type {number}
  */
 export
-const ScheduledCommunicationType_downlinkOnly = ScheduledCommunicationType.downlinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScheduledCommunicationType_downlinkOnly: _enum_for_ScheduledCommunicationType.downlinkOnly = ScheduledCommunicationType.downlinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downlinkOnly
@@ -99,7 +99,7 @@ const ScheduledCommunicationType_downlinkOnly = ScheduledCommunicationType.downl
  * @type {number}
  */
 export
-const downlinkOnly = ScheduledCommunicationType.downlinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downlinkOnly: _enum_for_ScheduledCommunicationType.downlinkOnly = ScheduledCommunicationType.downlinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScheduledCommunicationType_uplinkOnly
@@ -107,7 +107,7 @@ const downlinkOnly = ScheduledCommunicationType.downlinkOnly; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ScheduledCommunicationType_uplinkOnly = ScheduledCommunicationType.uplinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScheduledCommunicationType_uplinkOnly: _enum_for_ScheduledCommunicationType.uplinkOnly = ScheduledCommunicationType.uplinkOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uplinkOnly
@@ -115,7 +115,7 @@ const ScheduledCommunicationType_uplinkOnly = ScheduledCommunicationType.uplinkO
  * @type {number}
  */
 export
-const uplinkOnly = ScheduledCommunicationType.uplinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uplinkOnly: _enum_for_ScheduledCommunicationType.uplinkOnly = ScheduledCommunicationType.uplinkOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScheduledCommunicationType_bidirectional
@@ -123,7 +123,7 @@ const uplinkOnly = ScheduledCommunicationType.uplinkOnly; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const ScheduledCommunicationType_bidirectional = ScheduledCommunicationType.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScheduledCommunicationType_bidirectional: _enum_for_ScheduledCommunicationType.bidirectional = ScheduledCommunicationType.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bidirectional
@@ -131,7 +131,7 @@ const ScheduledCommunicationType_bidirectional = ScheduledCommunicationType.bidi
  * @type {number}
  */
 export
-const bidirectional = ScheduledCommunicationType.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bidirectional: _enum_for_ScheduledCommunicationType.bidirectional = ScheduledCommunicationType.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ScheduledCommunicationType: $.ASN1Decoder<ScheduledCommunicationType> = $._decodeEnumerated;
 export const _encode_ScheduledCommunicationType: $.ASN1Encoder<ScheduledCommunicationType> = $._encodeEnumerated;
 

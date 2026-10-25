@@ -320,14 +320,14 @@ export class SearchRule implements SearchRuleId {
      * @static
      */
 
-    public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static _enum_for_familyGrouping: typeof _enum_for_FamilyGrouping = _enum_for_FamilyGrouping;
     /**
      * @summary The enum used as the type of the component `imposedSubset`
      * @public
      * @static
      */
 
-    public static _enum_for_imposedSubset = _enum_for_ImposedSubset;
+    public static _enum_for_imposedSubset: typeof _enum_for_ImposedSubset = _enum_for_ImposedSubset;
 }
 
 /**

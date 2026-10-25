@@ -115,7 +115,7 @@ class ExternalSignalInfo {
          * @static
          */
 
-    public static _enum_for_protocolId = _enum_for_ProtocolId;
+    public static _enum_for_protocolId: typeof _enum_for_ProtocolId = _enum_for_ProtocolId;
 }
 
 /**

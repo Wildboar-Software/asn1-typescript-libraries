@@ -70,7 +70,7 @@ class LegInformation {
          * @static
          */
 
-    public static _enum_for_legStatus = _enum_for_LegStatus;
+    public static _enum_for_legStatus: typeof _enum_for_LegStatus = _enum_for_LegStatus;
 }
 
 /**

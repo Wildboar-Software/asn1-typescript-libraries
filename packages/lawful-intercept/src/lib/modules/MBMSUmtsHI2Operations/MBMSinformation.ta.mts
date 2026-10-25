@@ -270,19 +270,19 @@ class MBMSinformation {
          * @static
          */
 
-    public static _enum_for_mbms_Mode = _enum_for_MBMSinformation_mbms_Mode;        /**
+    public static _enum_for_mbms_Mode: typeof _enum_for_MBMSinformation_mbms_Mode = _enum_for_MBMSinformation_mbms_Mode;        /**
          * @summary The enum used as the type of the component `mbmsLeavingReason`
          * @public
          * @static
          */
 
-    public static _enum_for_mbmsLeavingReason = _enum_for_MBMSinformation_mbmsLeavingReason;        /**
+    public static _enum_for_mbmsLeavingReason: typeof _enum_for_MBMSinformation_mbmsLeavingReason = _enum_for_MBMSinformation_mbmsLeavingReason;        /**
          * @summary The enum used as the type of the component `mbmsSubsTermReason`
          * @public
          * @static
          */
 
-    public static _enum_for_mbmsSubsTermReason = _enum_for_MBMSinformation_mbmsSubsTermReason;
+    public static _enum_for_mbmsSubsTermReason: typeof _enum_for_MBMSinformation_mbmsSubsTermReason = _enum_for_MBMSinformation_mbmsSubsTermReason;
 }
 
 /**

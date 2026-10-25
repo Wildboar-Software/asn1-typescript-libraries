@@ -132,7 +132,7 @@ class flowControl_ArgumentType {
          * @static
          */
 
-    public static _enum_for_controlReceiver = _enum_for_flowControl_ArgumentType_controlReceiver;
+    public static _enum_for_controlReceiver: typeof _enum_for_flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentType_controlReceiver;
 }
 
 /**

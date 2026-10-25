@@ -400,13 +400,13 @@ class VoiceAttributesChangeEvent {
          * @static
          */
 
-    public static _enum_for_mode = _enum_for_VoiceAttributesChangeEvent_mode;        /**
+    public static _enum_for_mode: typeof _enum_for_VoiceAttributesChangeEvent_mode = _enum_for_VoiceAttributesChangeEvent_mode;        /**
          * @summary The enum used as the type of the component `cause`
          * @public
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

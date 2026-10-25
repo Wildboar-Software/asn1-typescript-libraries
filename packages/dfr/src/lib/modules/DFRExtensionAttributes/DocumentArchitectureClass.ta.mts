@@ -45,7 +45,7 @@ type DocumentArchitectureClass = INTEGER;
  * @type {number}
  */
 export
-const DocumentArchitectureClass_formatted = 0 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentArchitectureClass_formatted: 0 = 0 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted
@@ -56,7 +56,7 @@ const DocumentArchitectureClass_formatted = 0 satisfies DocumentArchitectureClas
  * @type {number}
  */
 export
-const formatted = DocumentArchitectureClass_formatted; /* SHORT_NAMED_INTEGER_VALUE */
+const formatted: 0 = DocumentArchitectureClass_formatted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_processable
@@ -67,7 +67,7 @@ const formatted = DocumentArchitectureClass_formatted; /* SHORT_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const DocumentArchitectureClass_processable = 1 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentArchitectureClass_processable: 1 = 1 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_processable
@@ -78,7 +78,7 @@ const DocumentArchitectureClass_processable = 1 satisfies DocumentArchitectureCl
  * @type {number}
  */
 export
-const processable = DocumentArchitectureClass_processable; /* SHORT_NAMED_INTEGER_VALUE */
+const processable: 1 = DocumentArchitectureClass_processable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
@@ -89,7 +89,7 @@ const processable = DocumentArchitectureClass_processable; /* SHORT_NAMED_INTEGE
  * @type {number}
  */
 export
-const DocumentArchitectureClass_formatted_processable = 2 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentArchitectureClass_formatted_processable: 2 = 2 satisfies DocumentArchitectureClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DocumentArchitectureClass_formatted_processable
@@ -100,9 +100,9 @@ const DocumentArchitectureClass_formatted_processable = 2 satisfies DocumentArch
  * @type {number}
  */
 export
-const formatted_processable = DocumentArchitectureClass_formatted_processable; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DocumentArchitectureClass = $._decodeInteger;
-export const _encode_DocumentArchitectureClass = $._encodeInteger;
+const formatted_processable: 2 = DocumentArchitectureClass_formatted_processable; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DocumentArchitectureClass: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DocumentArchitectureClass: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

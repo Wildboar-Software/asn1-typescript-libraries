@@ -52,7 +52,7 @@ type FspProductionStatus = INTEGER;
  * @type {number}
  */
 export
-const FspProductionStatus_configured = 0 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const FspProductionStatus_configured: 0 = 0 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_configured
@@ -64,7 +64,7 @@ const FspProductionStatus_configured = 0 satisfies FspProductionStatus; /* LONG_
  * @type {number}
  */
 export
-const configured = FspProductionStatus_configured; /* SHORT_NAMED_INTEGER_VALUE */
+const configured: 0 = FspProductionStatus_configured; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_operationalBd
@@ -80,7 +80,7 @@ const configured = FspProductionStatus_configured; /* SHORT_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const FspProductionStatus_operationalBd = 1 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const FspProductionStatus_operationalBd: 1 = 1 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_operationalBd
@@ -92,7 +92,7 @@ const FspProductionStatus_operationalBd = 1 satisfies FspProductionStatus; /* LO
  * @type {number}
  */
 export
-const operationalBd = FspProductionStatus_operationalBd; /* SHORT_NAMED_INTEGER_VALUE */
+const operationalBd: 1 = FspProductionStatus_operationalBd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_operationalAdAndBd
@@ -107,7 +107,7 @@ const operationalBd = FspProductionStatus_operationalBd; /* SHORT_NAMED_INTEGER_
  * @type {number}
  */
 export
-const FspProductionStatus_operationalAdAndBd = 2 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const FspProductionStatus_operationalAdAndBd: 2 = 2 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_operationalAdAndBd
@@ -119,7 +119,7 @@ const FspProductionStatus_operationalAdAndBd = 2 satisfies FspProductionStatus; 
  * @type {number}
  */
 export
-const operationalAdAndBd = FspProductionStatus_operationalAdAndBd; /* SHORT_NAMED_INTEGER_VALUE */
+const operationalAdAndBd: 2 = FspProductionStatus_operationalAdAndBd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_operationalAdSuspended
@@ -135,7 +135,7 @@ const operationalAdAndBd = FspProductionStatus_operationalAdAndBd; /* SHORT_NAME
  * @type {number}
  */
 export
-const FspProductionStatus_operationalAdSuspended = 3 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const FspProductionStatus_operationalAdSuspended: 3 = 3 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_operationalAdSuspended
@@ -147,7 +147,7 @@ const FspProductionStatus_operationalAdSuspended = 3 satisfies FspProductionStat
  * @type {number}
  */
 export
-const operationalAdSuspended = FspProductionStatus_operationalAdSuspended; /* SHORT_NAMED_INTEGER_VALUE */
+const operationalAdSuspended: 3 = FspProductionStatus_operationalAdSuspended; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_interrupted
@@ -163,7 +163,7 @@ const operationalAdSuspended = FspProductionStatus_operationalAdSuspended; /* SH
  * @type {number}
  */
 export
-const FspProductionStatus_interrupted = 4 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const FspProductionStatus_interrupted: 4 = 4 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_interrupted
@@ -175,7 +175,7 @@ const FspProductionStatus_interrupted = 4 satisfies FspProductionStatus; /* LONG
  * @type {number}
  */
 export
-const interrupted = FspProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted: 4 = FspProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_halted
@@ -190,7 +190,7 @@ const interrupted = FspProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const FspProductionStatus_halted = 5 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
+const FspProductionStatus_halted: 5 = 5 satisfies FspProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FspProductionStatus_halted
@@ -202,7 +202,7 @@ const FspProductionStatus_halted = 5 satisfies FspProductionStatus; /* LONG_NAME
  * @type {number}
  */
 export
-const halted = FspProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
+const halted: 5 = FspProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_FspProductionStatus: $.ASN1Decoder<FspProductionStatus> = $._decodeInteger;
 export const _encode_FspProductionStatus: $.ASN1Encoder<FspProductionStatus> = $._encodeInteger;
 

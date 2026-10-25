@@ -163,7 +163,7 @@ export const _decode_DeferredLocationEventType = (el: _Element): DeferredLocatio
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeferredLocationEventType, encoded as an ASN.1 Element.
  */
-export const _encode_DeferredLocationEventType = $._encodeBitString;
+export const _encode_DeferredLocationEventType: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

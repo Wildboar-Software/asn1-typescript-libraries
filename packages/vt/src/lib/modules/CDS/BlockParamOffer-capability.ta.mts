@@ -74,8 +74,8 @@ const BlockParamOffer_capability_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = BlockParamOffer_capability_no; /* SHORT_NAMED_BIT */
-export const _decode_BlockParamOffer_capability = $._decodeBitString;
-export const _encode_BlockParamOffer_capability = $._encodeBitString;
+export const _decode_BlockParamOffer_capability: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_BlockParamOffer_capability: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

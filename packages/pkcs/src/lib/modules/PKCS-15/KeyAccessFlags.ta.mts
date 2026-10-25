@@ -88,12 +88,12 @@ export const local: number = KeyAccessFlags_local; /* SHORT_NAMED_BIT */
 
 
 
-export const _decode_KeyAccessFlags = $._decodeBitString;
+export const _decode_KeyAccessFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_KeyAccessFlags = $._encodeBitString;
+export const _encode_KeyAccessFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

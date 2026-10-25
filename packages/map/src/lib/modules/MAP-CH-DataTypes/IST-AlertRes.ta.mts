@@ -115,7 +115,7 @@ class IST_AlertRes {
          * @static
          */
 
-    public static _enum_for_callTerminationIndicator = _enum_for_CallTerminationIndicator;
+    public static _enum_for_callTerminationIndicator: typeof _enum_for_CallTerminationIndicator = _enum_for_CallTerminationIndicator;
 }
 
 /**

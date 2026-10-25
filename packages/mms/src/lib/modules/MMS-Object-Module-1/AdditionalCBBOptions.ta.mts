@@ -109,8 +109,8 @@ const AdditionalCBBOptions_recl: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const recl: number = AdditionalCBBOptions_recl; /* SHORT_NAMED_BIT */
-export const _decode_AdditionalCBBOptions = $._decodeBitString;
-export const _encode_AdditionalCBBOptions = $._encodeBitString;
+export const _decode_AdditionalCBBOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AdditionalCBBOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

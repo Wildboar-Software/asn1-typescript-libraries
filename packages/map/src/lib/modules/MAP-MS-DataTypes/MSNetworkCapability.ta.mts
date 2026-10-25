@@ -45,7 +45,7 @@ export const _decode_MSNetworkCapability = (el: _Element): MSNetworkCapability =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MSNetworkCapability, encoded as an ASN.1 Element.
  */
-export const _encode_MSNetworkCapability = $._encodeOctetString;
+export const _encode_MSNetworkCapability: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -123,7 +123,7 @@ class IMAPAAAInformation {
          * @static
          */
 
-    public static _enum_for_aAAResult = _enum_for_AAAResult;
+    public static _enum_for_aAAResult: typeof _enum_for_AAAResult = _enum_for_AAAResult;
 }
 
 /**

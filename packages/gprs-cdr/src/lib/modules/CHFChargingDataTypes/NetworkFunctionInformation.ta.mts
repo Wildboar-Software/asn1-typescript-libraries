@@ -123,7 +123,7 @@ class NetworkFunctionInformation {
          * @static
          */
 
-    public static _enum_for_networkFunctionality = _enum_for_NetworkFunctionality;
+    public static _enum_for_networkFunctionality: typeof _enum_for_NetworkFunctionality = _enum_for_NetworkFunctionality;
 }
 
 /**

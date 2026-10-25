@@ -140,7 +140,7 @@ class EthFlowDescription {
          * @static
          */
 
-    public static _enum_for_fDir = _enum_for_FDir;
+    public static _enum_for_fDir: typeof _enum_for_FDir = _enum_for_FDir;
 }
 
 /**

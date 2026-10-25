@@ -77,7 +77,7 @@ type FiveGSUserState = _enum_for_FiveGSUserState;
  * @enum {number}
  */
 export
-const FiveGSUserState = _enum_for_FiveGSUserState;
+const FiveGSUserState: typeof _enum_for_FiveGSUserState = _enum_for_FiveGSUserState;
 
 /**
  * @summary FiveGSUserState_deregistered
@@ -85,7 +85,7 @@ const FiveGSUserState = _enum_for_FiveGSUserState;
  * @type {number}
  */
 export
-const FiveGSUserState_deregistered = FiveGSUserState.deregistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSUserState_deregistered: _enum_for_FiveGSUserState.deregistered = FiveGSUserState.deregistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deregistered
@@ -93,7 +93,7 @@ const FiveGSUserState_deregistered = FiveGSUserState.deregistered; /* LONG_NAMED
  * @type {number}
  */
 export
-const deregistered = FiveGSUserState.deregistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deregistered: _enum_for_FiveGSUserState.deregistered = FiveGSUserState.deregistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSUserState_registeredNotReachableForPaging
@@ -101,7 +101,7 @@ const deregistered = FiveGSUserState.deregistered; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const FiveGSUserState_registeredNotReachableForPaging = FiveGSUserState.registeredNotReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSUserState_registeredNotReachableForPaging: _enum_for_FiveGSUserState.registeredNotReachableForPaging = FiveGSUserState.registeredNotReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registeredNotReachableForPaging
@@ -109,7 +109,7 @@ const FiveGSUserState_registeredNotReachableForPaging = FiveGSUserState.register
  * @type {number}
  */
 export
-const registeredNotReachableForPaging = FiveGSUserState.registeredNotReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registeredNotReachableForPaging: _enum_for_FiveGSUserState.registeredNotReachableForPaging = FiveGSUserState.registeredNotReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSUserState_registeredReachableForPaging
@@ -117,7 +117,7 @@ const registeredNotReachableForPaging = FiveGSUserState.registeredNotReachableFo
  * @type {number}
  */
 export
-const FiveGSUserState_registeredReachableForPaging = FiveGSUserState.registeredReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSUserState_registeredReachableForPaging: _enum_for_FiveGSUserState.registeredReachableForPaging = FiveGSUserState.registeredReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registeredReachableForPaging
@@ -125,7 +125,7 @@ const FiveGSUserState_registeredReachableForPaging = FiveGSUserState.registeredR
  * @type {number}
  */
 export
-const registeredReachableForPaging = FiveGSUserState.registeredReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registeredReachableForPaging: _enum_for_FiveGSUserState.registeredReachableForPaging = FiveGSUserState.registeredReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSUserState_connectedNotReachableForPaging
@@ -133,7 +133,7 @@ const registeredReachableForPaging = FiveGSUserState.registeredReachableForPagin
  * @type {number}
  */
 export
-const FiveGSUserState_connectedNotReachableForPaging = FiveGSUserState.connectedNotReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSUserState_connectedNotReachableForPaging: _enum_for_FiveGSUserState.connectedNotReachableForPaging = FiveGSUserState.connectedNotReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedNotReachableForPaging
@@ -141,7 +141,7 @@ const FiveGSUserState_connectedNotReachableForPaging = FiveGSUserState.connected
  * @type {number}
  */
 export
-const connectedNotReachableForPaging = FiveGSUserState.connectedNotReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedNotReachableForPaging: _enum_for_FiveGSUserState.connectedNotReachableForPaging = FiveGSUserState.connectedNotReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSUserState_connectedReachableForPaging
@@ -149,7 +149,7 @@ const connectedNotReachableForPaging = FiveGSUserState.connectedNotReachableForP
  * @type {number}
  */
 export
-const FiveGSUserState_connectedReachableForPaging = FiveGSUserState.connectedReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSUserState_connectedReachableForPaging: _enum_for_FiveGSUserState.connectedReachableForPaging = FiveGSUserState.connectedReachableForPaging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedReachableForPaging
@@ -157,7 +157,7 @@ const FiveGSUserState_connectedReachableForPaging = FiveGSUserState.connectedRea
  * @type {number}
  */
 export
-const connectedReachableForPaging = FiveGSUserState.connectedReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedReachableForPaging: _enum_for_FiveGSUserState.connectedReachableForPaging = FiveGSUserState.connectedReachableForPaging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGSUserState_notProvidedFromAMF
@@ -165,7 +165,7 @@ const connectedReachableForPaging = FiveGSUserState.connectedReachableForPaging;
  * @type {number}
  */
 export
-const FiveGSUserState_notProvidedFromAMF = FiveGSUserState.notProvidedFromAMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGSUserState_notProvidedFromAMF: _enum_for_FiveGSUserState.notProvidedFromAMF = FiveGSUserState.notProvidedFromAMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notProvidedFromAMF
@@ -173,7 +173,7 @@ const FiveGSUserState_notProvidedFromAMF = FiveGSUserState.notProvidedFromAMF; /
  * @type {number}
  */
 export
-const notProvidedFromAMF = FiveGSUserState.notProvidedFromAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notProvidedFromAMF: _enum_for_FiveGSUserState.notProvidedFromAMF = FiveGSUserState.notProvidedFromAMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGSUserState: $.ASN1Decoder<FiveGSUserState> = $._decodeEnumerated;
 export const _encode_FiveGSUserState: $.ASN1Encoder<FiveGSUserState> = $._encodeEnumerated;
 

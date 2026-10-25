@@ -35,7 +35,7 @@ type RetrieveNotificationsListResponse_notificationsListResultError = INTEGER;
  * @type {number}
  */
 export
-const RetrieveNotificationsListResponse_notificationsListResultError_undefinedError = 127 satisfies RetrieveNotificationsListResponse_notificationsListResultError; /* LONG_NAMED_INTEGER_VALUE */
+const RetrieveNotificationsListResponse_notificationsListResultError_undefinedError: 127 = 127 satisfies RetrieveNotificationsListResponse_notificationsListResultError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RetrieveNotificationsListResponse_notificationsListResultError_undefinedError
@@ -47,9 +47,9 @@ const RetrieveNotificationsListResponse_notificationsListResultError_undefinedEr
  * @type {number}
  */
 export
-const undefinedError = RetrieveNotificationsListResponse_notificationsListResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RetrieveNotificationsListResponse_notificationsListResultError = $._decodeInteger;
-export const _encode_RetrieveNotificationsListResponse_notificationsListResultError = $._encodeInteger;
+const undefinedError: 127 = RetrieveNotificationsListResponse_notificationsListResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RetrieveNotificationsListResponse_notificationsListResultError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RetrieveNotificationsListResponse_notificationsListResultError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

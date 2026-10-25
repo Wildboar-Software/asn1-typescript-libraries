@@ -34,7 +34,7 @@ export type PredefinedBiometricType = INTEGER;
  * @constant
  * @type {number}
  */
-export const PredefinedBiometricType_picture = 0 satisfies PredefinedBiometricType; /* LONG_NAMED_INTEGER_VALUE */
+export const PredefinedBiometricType_picture: 0 = 0 satisfies PredefinedBiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const PredefinedBiometricType_picture = 0 satisfies PredefinedBiometricTy
  * @constant
  * @type {number}
  */
-export const picture = PredefinedBiometricType_picture; /* SHORT_NAMED_INTEGER_VALUE */
+export const picture: 0 = PredefinedBiometricType_picture; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const picture = PredefinedBiometricType_picture; /* SHORT_NAMED_INTEGER_V
  * @constant
  * @type {number}
  */
-export const PredefinedBiometricType_handwritten_signature = 1 satisfies PredefinedBiometricType; /* LONG_NAMED_INTEGER_VALUE */
+export const PredefinedBiometricType_handwritten_signature: 1 = 1 satisfies PredefinedBiometricType; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,17 +75,17 @@ export const PredefinedBiometricType_handwritten_signature = 1 satisfies Predefi
  * @constant
  * @type {number}
  */
-export const handwritten_signature = PredefinedBiometricType_handwritten_signature; /* SHORT_NAMED_INTEGER_VALUE */
+export const handwritten_signature: 1 = PredefinedBiometricType_handwritten_signature; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_PredefinedBiometricType = $._decodeInteger;
+export const _decode_PredefinedBiometricType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_PredefinedBiometricType = $._encodeInteger;
+export const _encode_PredefinedBiometricType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

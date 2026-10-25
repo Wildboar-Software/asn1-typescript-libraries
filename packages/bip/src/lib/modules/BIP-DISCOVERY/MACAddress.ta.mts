@@ -32,12 +32,12 @@ export type MACAddress = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_MACAddress = $._decodeOctetString;
+export const _decode_MACAddress: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_MACAddress = $._encodeOctetString;
+export const _encode_MACAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

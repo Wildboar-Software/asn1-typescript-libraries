@@ -202,13 +202,13 @@ class StartLocationTrackingSessionArgument {
          * @static
          */
 
-    public static _enum_for_collectionType = _enum_for_CollectionType;        /**
+    public static _enum_for_collectionType: typeof _enum_for_CollectionType = _enum_for_CollectionType;        /**
          * @summary The enum used as the type of the component `reportingType`
          * @public
          * @static
          */
 
-    public static _enum_for_reportingType = _enum_for_ReportingType;
+    public static _enum_for_reportingType: typeof _enum_for_ReportingType = _enum_for_ReportingType;
 }
 
 /**

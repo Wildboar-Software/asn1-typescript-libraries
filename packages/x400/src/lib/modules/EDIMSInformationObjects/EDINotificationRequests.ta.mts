@@ -97,10 +97,10 @@ export const EDINotificationRequests_fn: number = 2; /* LONG_NAMED_BIT */
 export const fn: number = EDINotificationRequests_fn; /* SHORT_NAMED_BIT */
 
 
-export const _decode_EDINotificationRequests = $._decodeBitString;
+export const _decode_EDINotificationRequests: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_EDINotificationRequests = $._encodeBitString;
+export const _encode_EDINotificationRequests: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

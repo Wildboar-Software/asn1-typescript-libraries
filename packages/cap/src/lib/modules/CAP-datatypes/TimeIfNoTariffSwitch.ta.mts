@@ -29,4 +29,4 @@ export const _decode_TimeIfNoTariffSwitch = (el: _Element): TimeIfNoTariffSwitch
     }
     return value;
 };
-export const _encode_TimeIfNoTariffSwitch = $._encodeInteger;
+export const _encode_TimeIfNoTariffSwitch: $.ASN1Encoder<INTEGER> = $._encodeInteger;

@@ -97,7 +97,7 @@ type UDMDeregReason = _enum_for_UDMDeregReason;
  * @enum {number}
  */
 export
-const UDMDeregReason = _enum_for_UDMDeregReason;
+const UDMDeregReason: typeof _enum_for_UDMDeregReason = _enum_for_UDMDeregReason;
 
 /**
  * @summary UDMDeregReason_uEInitialRegistration
@@ -105,7 +105,7 @@ const UDMDeregReason = _enum_for_UDMDeregReason;
  * @type {number}
  */
 export
-const UDMDeregReason_uEInitialRegistration = UDMDeregReason.uEInitialRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_uEInitialRegistration: _enum_for_UDMDeregReason.uEInitialRegistration = UDMDeregReason.uEInitialRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEInitialRegistration
@@ -113,7 +113,7 @@ const UDMDeregReason_uEInitialRegistration = UDMDeregReason.uEInitialRegistratio
  * @type {number}
  */
 export
-const uEInitialRegistration = UDMDeregReason.uEInitialRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEInitialRegistration: _enum_for_UDMDeregReason.uEInitialRegistration = UDMDeregReason.uEInitialRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_uERegistrationAreaChange
@@ -121,7 +121,7 @@ const uEInitialRegistration = UDMDeregReason.uEInitialRegistration; /* SHORT_NAM
  * @type {number}
  */
 export
-const UDMDeregReason_uERegistrationAreaChange = UDMDeregReason.uERegistrationAreaChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_uERegistrationAreaChange: _enum_for_UDMDeregReason.uERegistrationAreaChange = UDMDeregReason.uERegistrationAreaChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uERegistrationAreaChange
@@ -129,7 +129,7 @@ const UDMDeregReason_uERegistrationAreaChange = UDMDeregReason.uERegistrationAre
  * @type {number}
  */
 export
-const uERegistrationAreaChange = UDMDeregReason.uERegistrationAreaChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uERegistrationAreaChange: _enum_for_UDMDeregReason.uERegistrationAreaChange = UDMDeregReason.uERegistrationAreaChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_subscriptionWithdrawn
@@ -137,7 +137,7 @@ const uERegistrationAreaChange = UDMDeregReason.uERegistrationAreaChange; /* SHO
  * @type {number}
  */
 export
-const UDMDeregReason_subscriptionWithdrawn = UDMDeregReason.subscriptionWithdrawn; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_subscriptionWithdrawn: _enum_for_UDMDeregReason.subscriptionWithdrawn = UDMDeregReason.subscriptionWithdrawn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionWithdrawn
@@ -145,7 +145,7 @@ const UDMDeregReason_subscriptionWithdrawn = UDMDeregReason.subscriptionWithdraw
  * @type {number}
  */
 export
-const subscriptionWithdrawn = UDMDeregReason.subscriptionWithdrawn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionWithdrawn: _enum_for_UDMDeregReason.subscriptionWithdrawn = UDMDeregReason.subscriptionWithdrawn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_fiveGSToEPSMobility
@@ -153,7 +153,7 @@ const subscriptionWithdrawn = UDMDeregReason.subscriptionWithdrawn; /* SHORT_NAM
  * @type {number}
  */
 export
-const UDMDeregReason_fiveGSToEPSMobility = UDMDeregReason.fiveGSToEPSMobility; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_fiveGSToEPSMobility: _enum_for_UDMDeregReason.fiveGSToEPSMobility = UDMDeregReason.fiveGSToEPSMobility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiveGSToEPSMobility
@@ -161,7 +161,7 @@ const UDMDeregReason_fiveGSToEPSMobility = UDMDeregReason.fiveGSToEPSMobility; /
  * @type {number}
  */
 export
-const fiveGSToEPSMobility = UDMDeregReason.fiveGSToEPSMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiveGSToEPSMobility: _enum_for_UDMDeregReason.fiveGSToEPSMobility = UDMDeregReason.fiveGSToEPSMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_fiveGSToEPSMobilityUeInitialRegistration
@@ -169,7 +169,7 @@ const fiveGSToEPSMobility = UDMDeregReason.fiveGSToEPSMobility; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const UDMDeregReason_fiveGSToEPSMobilityUeInitialRegistration = UDMDeregReason.fiveGSToEPSMobilityUeInitialRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_fiveGSToEPSMobilityUeInitialRegistration: _enum_for_UDMDeregReason.fiveGSToEPSMobilityUeInitialRegistration = UDMDeregReason.fiveGSToEPSMobilityUeInitialRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiveGSToEPSMobilityUeInitialRegistration
@@ -177,7 +177,7 @@ const UDMDeregReason_fiveGSToEPSMobilityUeInitialRegistration = UDMDeregReason.f
  * @type {number}
  */
 export
-const fiveGSToEPSMobilityUeInitialRegistration = UDMDeregReason.fiveGSToEPSMobilityUeInitialRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiveGSToEPSMobilityUeInitialRegistration: _enum_for_UDMDeregReason.fiveGSToEPSMobilityUeInitialRegistration = UDMDeregReason.fiveGSToEPSMobilityUeInitialRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_reregistrationRequired
@@ -185,7 +185,7 @@ const fiveGSToEPSMobilityUeInitialRegistration = UDMDeregReason.fiveGSToEPSMobil
  * @type {number}
  */
 export
-const UDMDeregReason_reregistrationRequired = UDMDeregReason.reregistrationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_reregistrationRequired: _enum_for_UDMDeregReason.reregistrationRequired = UDMDeregReason.reregistrationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reregistrationRequired
@@ -193,7 +193,7 @@ const UDMDeregReason_reregistrationRequired = UDMDeregReason.reregistrationRequi
  * @type {number}
  */
 export
-const reregistrationRequired = UDMDeregReason.reregistrationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reregistrationRequired: _enum_for_UDMDeregReason.reregistrationRequired = UDMDeregReason.reregistrationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_sMFContextTransferred
@@ -201,7 +201,7 @@ const reregistrationRequired = UDMDeregReason.reregistrationRequired; /* SHORT_N
  * @type {number}
  */
 export
-const UDMDeregReason_sMFContextTransferred = UDMDeregReason.sMFContextTransferred; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_sMFContextTransferred: _enum_for_UDMDeregReason.sMFContextTransferred = UDMDeregReason.sMFContextTransferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMFContextTransferred
@@ -209,7 +209,7 @@ const UDMDeregReason_sMFContextTransferred = UDMDeregReason.sMFContextTransferre
  * @type {number}
  */
 export
-const sMFContextTransferred = UDMDeregReason.sMFContextTransferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMFContextTransferred: _enum_for_UDMDeregReason.sMFContextTransferred = UDMDeregReason.sMFContextTransferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_duplicatePDUSession
@@ -217,7 +217,7 @@ const sMFContextTransferred = UDMDeregReason.sMFContextTransferred; /* SHORT_NAM
  * @type {number}
  */
 export
-const UDMDeregReason_duplicatePDUSession = UDMDeregReason.duplicatePDUSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_duplicatePDUSession: _enum_for_UDMDeregReason.duplicatePDUSession = UDMDeregReason.duplicatePDUSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicatePDUSession
@@ -225,7 +225,7 @@ const UDMDeregReason_duplicatePDUSession = UDMDeregReason.duplicatePDUSession; /
  * @type {number}
  */
 export
-const duplicatePDUSession = UDMDeregReason.duplicatePDUSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const duplicatePDUSession: _enum_for_UDMDeregReason.duplicatePDUSession = UDMDeregReason.duplicatePDUSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_fiveGSRVCCToUTRANMobility
@@ -233,7 +233,7 @@ const duplicatePDUSession = UDMDeregReason.duplicatePDUSession; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const UDMDeregReason_fiveGSRVCCToUTRANMobility = UDMDeregReason.fiveGSRVCCToUTRANMobility; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_fiveGSRVCCToUTRANMobility: _enum_for_UDMDeregReason.fiveGSRVCCToUTRANMobility = UDMDeregReason.fiveGSRVCCToUTRANMobility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiveGSRVCCToUTRANMobility
@@ -241,7 +241,7 @@ const UDMDeregReason_fiveGSRVCCToUTRANMobility = UDMDeregReason.fiveGSRVCCToUTRA
  * @type {number}
  */
 export
-const fiveGSRVCCToUTRANMobility = UDMDeregReason.fiveGSRVCCToUTRANMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiveGSRVCCToUTRANMobility: _enum_for_UDMDeregReason.fiveGSRVCCToUTRANMobility = UDMDeregReason.fiveGSRVCCToUTRANMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_pDUSessionReactivationRequired
@@ -249,7 +249,7 @@ const fiveGSRVCCToUTRANMobility = UDMDeregReason.fiveGSRVCCToUTRANMobility; /* S
  * @type {number}
  */
 export
-const UDMDeregReason_pDUSessionReactivationRequired = UDMDeregReason.pDUSessionReactivationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_pDUSessionReactivationRequired: _enum_for_UDMDeregReason.pDUSessionReactivationRequired = UDMDeregReason.pDUSessionReactivationRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionReactivationRequired
@@ -257,7 +257,7 @@ const UDMDeregReason_pDUSessionReactivationRequired = UDMDeregReason.pDUSessionR
  * @type {number}
  */
 export
-const pDUSessionReactivationRequired = UDMDeregReason.pDUSessionReactivationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionReactivationRequired: _enum_for_UDMDeregReason.pDUSessionReactivationRequired = UDMDeregReason.pDUSessionReactivationRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDeregReason_disasterConditionTerminated
@@ -265,7 +265,7 @@ const pDUSessionReactivationRequired = UDMDeregReason.pDUSessionReactivationRequ
  * @type {number}
  */
 export
-const UDMDeregReason_disasterConditionTerminated = UDMDeregReason.disasterConditionTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDeregReason_disasterConditionTerminated: _enum_for_UDMDeregReason.disasterConditionTerminated = UDMDeregReason.disasterConditionTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disasterConditionTerminated
@@ -273,7 +273,7 @@ const UDMDeregReason_disasterConditionTerminated = UDMDeregReason.disasterCondit
  * @type {number}
  */
 export
-const disasterConditionTerminated = UDMDeregReason.disasterConditionTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disasterConditionTerminated: _enum_for_UDMDeregReason.disasterConditionTerminated = UDMDeregReason.disasterConditionTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMDeregReason: $.ASN1Decoder<UDMDeregReason> = $._decodeEnumerated;
 export const _encode_UDMDeregReason: $.ASN1Encoder<UDMDeregReason> = $._encodeEnumerated;
 

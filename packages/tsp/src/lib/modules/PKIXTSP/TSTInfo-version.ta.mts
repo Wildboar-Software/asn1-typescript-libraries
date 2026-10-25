@@ -29,7 +29,7 @@ export type TSTInfo_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const TSTInfo_version_v1 = 1 satisfies TSTInfo_version; /* LONG_NAMED_INTEGER_VALUE */
+export const TSTInfo_version_v1: 1 = 1 satisfies TSTInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TSTInfo_version_v1
@@ -41,13 +41,13 @@ export const TSTInfo_version_v1 = 1 satisfies TSTInfo_version; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const v1 = TSTInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 1 = TSTInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TSTInfo_version = $._decodeInteger;
+export const _decode_TSTInfo_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TSTInfo_version = $._encodeInteger;
+export const _encode_TSTInfo_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

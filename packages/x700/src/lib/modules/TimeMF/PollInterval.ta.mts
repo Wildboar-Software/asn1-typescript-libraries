@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type PollInterval = INTEGER;
 
 
-export const _decode_PollInterval = $._decodeInteger;
+export const _decode_PollInterval: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_PollInterval = $._encodeInteger;
+export const _encode_PollInterval: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

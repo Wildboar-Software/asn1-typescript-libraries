@@ -98,7 +98,7 @@ export class DTEAddress {
      * @static
      */
 
-    public static _enum_for_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
+    public static _enum_for_numberingPlanId: typeof _enum_for_DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
 }
 
 

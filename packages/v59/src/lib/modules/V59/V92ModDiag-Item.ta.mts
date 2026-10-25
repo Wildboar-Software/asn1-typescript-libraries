@@ -781,7 +781,7 @@ class V92ModDiag_Item {
          * @static
          */
 
-    public static _enum_for_lastMOHaction = _enum_for_V92ModDiag_Item_lastMOHaction;
+    public static _enum_for_lastMOHaction: typeof _enum_for_V92ModDiag_Item_lastMOHaction = _enum_for_V92ModDiag_Item_lastMOHaction;
 }
 
 /**

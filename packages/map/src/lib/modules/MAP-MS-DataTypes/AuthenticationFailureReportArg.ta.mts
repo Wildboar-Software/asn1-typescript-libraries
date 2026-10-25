@@ -178,13 +178,13 @@ class AuthenticationFailureReportArg {
          * @static
          */
 
-    public static _enum_for_failureCause = _enum_for_FailureCause;        /**
+    public static _enum_for_failureCause: typeof _enum_for_FailureCause = _enum_for_FailureCause;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

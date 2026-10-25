@@ -145,13 +145,13 @@ class ForwardList_Item {
          * @static
          */
 
-    public static _enum_for_forwardingType = _enum_for_ForwardingType;        /**
+    public static _enum_for_forwardingType: typeof _enum_for_ForwardingType = _enum_for_ForwardingType;        /**
          * @summary The enum used as the type of the component `forwardDefault`
          * @public
          * @static
          */
 
-    public static _enum_for_forwardDefault = _enum_for_ForwardDefault;
+    public static _enum_for_forwardDefault: typeof _enum_for_ForwardDefault = _enum_for_ForwardDefault;
 }
 
 /**

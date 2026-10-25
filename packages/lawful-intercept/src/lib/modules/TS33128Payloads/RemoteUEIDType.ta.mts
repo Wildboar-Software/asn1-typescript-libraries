@@ -69,7 +69,7 @@ type RemoteUEIDType = _enum_for_RemoteUEIDType;
  * @enum {number}
  */
 export
-const RemoteUEIDType = _enum_for_RemoteUEIDType;
+const RemoteUEIDType: typeof _enum_for_RemoteUEIDType = _enum_for_RemoteUEIDType;
 
 /**
  * @summary RemoteUEIDType_uPPRUKID
@@ -77,7 +77,7 @@ const RemoteUEIDType = _enum_for_RemoteUEIDType;
  * @type {number}
  */
 export
-const RemoteUEIDType_uPPRUKID = RemoteUEIDType.uPPRUKID; /* LONG_NAMED_ENUMERATED_VALUE */
+const RemoteUEIDType_uPPRUKID: _enum_for_RemoteUEIDType.uPPRUKID = RemoteUEIDType.uPPRUKID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uPPRUKID
@@ -85,7 +85,7 @@ const RemoteUEIDType_uPPRUKID = RemoteUEIDType.uPPRUKID; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const uPPRUKID = RemoteUEIDType.uPPRUKID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uPPRUKID: _enum_for_RemoteUEIDType.uPPRUKID = RemoteUEIDType.uPPRUKID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RemoteUEIDType_cPPRUKID
@@ -93,7 +93,7 @@ const uPPRUKID = RemoteUEIDType.uPPRUKID; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RemoteUEIDType_cPPRUKID = RemoteUEIDType.cPPRUKID; /* LONG_NAMED_ENUMERATED_VALUE */
+const RemoteUEIDType_cPPRUKID: _enum_for_RemoteUEIDType.cPPRUKID = RemoteUEIDType.cPPRUKID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cPPRUKID
@@ -101,7 +101,7 @@ const RemoteUEIDType_cPPRUKID = RemoteUEIDType.cPPRUKID; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const cPPRUKID = RemoteUEIDType.cPPRUKID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cPPRUKID: _enum_for_RemoteUEIDType.cPPRUKID = RemoteUEIDType.cPPRUKID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RemoteUEIDType_iMEI
@@ -109,7 +109,7 @@ const cPPRUKID = RemoteUEIDType.cPPRUKID; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RemoteUEIDType_iMEI = RemoteUEIDType.iMEI; /* LONG_NAMED_ENUMERATED_VALUE */
+const RemoteUEIDType_iMEI: _enum_for_RemoteUEIDType.iMEI = RemoteUEIDType.iMEI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMEI
@@ -117,7 +117,7 @@ const RemoteUEIDType_iMEI = RemoteUEIDType.iMEI; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const iMEI = RemoteUEIDType.iMEI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMEI: _enum_for_RemoteUEIDType.iMEI = RemoteUEIDType.iMEI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RemoteUEIDType_iMEISV
@@ -125,7 +125,7 @@ const iMEI = RemoteUEIDType.iMEI; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const RemoteUEIDType_iMEISV = RemoteUEIDType.iMEISV; /* LONG_NAMED_ENUMERATED_VALUE */
+const RemoteUEIDType_iMEISV: _enum_for_RemoteUEIDType.iMEISV = RemoteUEIDType.iMEISV; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMEISV
@@ -133,7 +133,7 @@ const RemoteUEIDType_iMEISV = RemoteUEIDType.iMEISV; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const iMEISV = RemoteUEIDType.iMEISV; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMEISV: _enum_for_RemoteUEIDType.iMEISV = RemoteUEIDType.iMEISV; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RemoteUEIDType: $.ASN1Decoder<RemoteUEIDType> = $._decodeEnumerated;
 export const _encode_RemoteUEIDType: $.ASN1Encoder<RemoteUEIDType> = $._encodeEnumerated;
 

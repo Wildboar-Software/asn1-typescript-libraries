@@ -126,7 +126,7 @@ class SetLocationInformationArgument {
          * @static
          */
 
-    public static _enum_for_replaceMode = _enum_for_ReplaceMode;
+    public static _enum_for_replaceMode: typeof _enum_for_ReplaceMode = _enum_for_ReplaceMode;
 }
 
 /**
