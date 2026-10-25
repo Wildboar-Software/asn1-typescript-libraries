@@ -7,29 +7,31 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_MuxType {
+const _enum_for_MuxType = {
     /**
      * ITU-T H.221 frame multiplex (clause 7.1.3).
      */
-    h221 = 0,
+    h221: 0,
     /**
      * ITU-T H.223 multiplex (clause 7.1.3).
      */
-    h223 = 1,
+    h223: 1,
     /**
      * ITU-T H.226 multiplex (clause 7.1.3).
      */
-    h226 = 2,
+    h226: 2,
     /**
      * ITU-T V.76 multiplex (clause 7.1.3).
      */
-    v76 = 3,
+    v76: 3,
     /**
      * N x 64 kbit/s service. One wideband stream toward the context; each
      * bearer termination is 64 kbit/s (clause 7.1.3).
      */
-    nx64k = 4,
-}
+    nx64k: 4,
+} as const;
+
+export type _enum_for_MuxType = (typeof _enum_for_MuxType)[keyof typeof _enum_for_MuxType];
 
 /**
  * @summary MuxType
@@ -72,7 +74,7 @@ type MuxType = _enum_for_MuxType | ENUMERATED;
  * @type {number}
  */
 export
-const MuxType_h221: _enum_for_MuxType.h221 = _enum_for_MuxType.h221; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_h221: 0 = _enum_for_MuxType.h221; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary h221
@@ -80,7 +82,7 @@ const MuxType_h221: _enum_for_MuxType.h221 = _enum_for_MuxType.h221; /* LONG_NAM
  * @type {number}
  */
 export
-const h221: _enum_for_MuxType.h221 = MuxType_h221; /* SHORT_NAMED_ENUMERATED_VALUE */
+const h221: 0 = MuxType_h221; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_h223
@@ -92,7 +94,7 @@ const h221: _enum_for_MuxType.h221 = MuxType_h221; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const MuxType_h223: _enum_for_MuxType.h223 = _enum_for_MuxType.h223; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_h223: 1 = _enum_for_MuxType.h223; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary h223
@@ -100,7 +102,7 @@ const MuxType_h223: _enum_for_MuxType.h223 = _enum_for_MuxType.h223; /* LONG_NAM
  * @type {number}
  */
 export
-const h223: _enum_for_MuxType.h223 = MuxType_h223; /* SHORT_NAMED_ENUMERATED_VALUE */
+const h223: 1 = MuxType_h223; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_h226
@@ -112,7 +114,7 @@ const h223: _enum_for_MuxType.h223 = MuxType_h223; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const MuxType_h226: _enum_for_MuxType.h226 = _enum_for_MuxType.h226; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_h226: 2 = _enum_for_MuxType.h226; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary h226
@@ -120,7 +122,7 @@ const MuxType_h226: _enum_for_MuxType.h226 = _enum_for_MuxType.h226; /* LONG_NAM
  * @type {number}
  */
 export
-const h226: _enum_for_MuxType.h226 = MuxType_h226; /* SHORT_NAMED_ENUMERATED_VALUE */
+const h226: 2 = MuxType_h226; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_v76
@@ -132,7 +134,7 @@ const h226: _enum_for_MuxType.h226 = MuxType_h226; /* SHORT_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const MuxType_v76: _enum_for_MuxType.v76 = _enum_for_MuxType.v76; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_v76: 3 = _enum_for_MuxType.v76; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v76
@@ -140,7 +142,7 @@ const MuxType_v76: _enum_for_MuxType.v76 = _enum_for_MuxType.v76; /* LONG_NAMED_
  * @type {number}
  */
 export
-const v76: _enum_for_MuxType.v76 = MuxType_v76; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v76: 3 = MuxType_v76; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MuxType_nx64k
@@ -153,7 +155,7 @@ const v76: _enum_for_MuxType.v76 = MuxType_v76; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MuxType_nx64k: _enum_for_MuxType.nx64k = _enum_for_MuxType.nx64k; /* LONG_NAMED_ENUMERATED_VALUE */
+const MuxType_nx64k: 4 = _enum_for_MuxType.nx64k; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nx64k
@@ -161,9 +163,9 @@ const MuxType_nx64k: _enum_for_MuxType.nx64k = _enum_for_MuxType.nx64k; /* LONG_
  * @type {number}
  */
 export
-const nx64k: _enum_for_MuxType.nx64k = MuxType_nx64k; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_MuxType: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_MuxType: $.ASN1Encoder<number> = $._encodeEnumerated;
+const nx64k: 4 = MuxType_nx64k; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_MuxType: $.ASN1Decoder<MuxType> = $._decodeEnumerated as $.ASN1Decoder<MuxType>;
+export const _encode_MuxType: $.ASN1Encoder<MuxType> = $._encodeEnumerated as $.ASN1Encoder<MuxType>;
 
 
 /* eslint-enable */

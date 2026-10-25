@@ -13,9 +13,11 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_DeleteError_deleteErrorInfo {
-  accessDenied = 2,
-}
+export const _enum_for_DeleteError_deleteErrorInfo = {
+  accessDenied: 2,
+} as const;
+
+export type _enum_for_DeleteError_deleteErrorInfo = (typeof _enum_for_DeleteError_deleteErrorInfo)[keyof typeof _enum_for_DeleteError_deleteErrorInfo];
 
 
 /**
@@ -45,7 +47,7 @@ export type DeleteError_deleteErrorInfo =
  * @constant
  * @type {number}
  */
-export const DeleteError_deleteErrorInfo_accessDenied: _enum_for_DeleteError_deleteErrorInfo.accessDenied = _enum_for_DeleteError_deleteErrorInfo.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteError_deleteErrorInfo_accessDenied: 2 = _enum_for_DeleteError_deleteErrorInfo.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,17 +55,17 @@ export const DeleteError_deleteErrorInfo_accessDenied: _enum_for_DeleteError_del
  * @constant
  * @type {number}
  */
-export const accessDenied: _enum_for_DeleteError_deleteErrorInfo.accessDenied = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied: 2 = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DeleteError_deleteErrorInfo: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_DeleteError_deleteErrorInfo: $.ASN1Decoder<DeleteError_deleteErrorInfo> = $._decodeEnumerated as $.ASN1Decoder<DeleteError_deleteErrorInfo>;
 
 
 
 
-export const _encode_DeleteError_deleteErrorInfo: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_DeleteError_deleteErrorInfo: $.ASN1Encoder<DeleteError_deleteErrorInfo> = $._encodeEnumerated as $.ASN1Encoder<DeleteError_deleteErrorInfo>;
 
 
 /* eslint-enable */

@@ -29,10 +29,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_DesignatedISChange {
-  resigned = 0,
-  elected = 1,
-}
+export const _enum_for_DesignatedISChange = {
+  resigned: 0,
+  elected: 1,
+} as const;
+
+export type _enum_for_DesignatedISChange = (typeof _enum_for_DesignatedISChange)[keyof typeof _enum_for_DesignatedISChange];
 
 /**
  * @summary DesignatedISChange
@@ -85,7 +87,7 @@ export const DesignatedISChange: typeof _enum_for_DesignatedISChange = _enum_for
  * @constant
  * @type {number}
  */
-export const DesignatedISChange_resigned: _enum_for_DesignatedISChange.resigned =
+export const DesignatedISChange_resigned: 0 =
   DesignatedISChange.resigned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +95,7 @@ export const DesignatedISChange_resigned: _enum_for_DesignatedISChange.resigned 
  * @constant
  * @type {number}
  */
-export const resigned: _enum_for_DesignatedISChange.resigned =
+export const resigned: 0 =
   DesignatedISChange.resigned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +109,7 @@ export const resigned: _enum_for_DesignatedISChange.resigned =
  * @constant
  * @type {number}
  */
-export const DesignatedISChange_elected: _enum_for_DesignatedISChange.elected =
+export const DesignatedISChange_elected: 1 =
   DesignatedISChange.elected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +117,7 @@ export const DesignatedISChange_elected: _enum_for_DesignatedISChange.elected =
  * @constant
  * @type {number}
  */
-export const elected: _enum_for_DesignatedISChange.elected =
+export const elected: 1 =
   DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

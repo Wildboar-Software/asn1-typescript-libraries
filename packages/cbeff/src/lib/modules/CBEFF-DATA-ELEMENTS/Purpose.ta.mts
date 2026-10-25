@@ -25,15 +25,17 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_Purpose {
-  no_value_available = 0,
-  verify = 1,
-  identify = 2,
-  enroll = 3,
-  enroll_verify = 4,
-  enroll_identify = 5,
-  audit = 6,
-}
+export const _enum_for_Purpose = {
+  no_value_available: 0,
+  verify: 1,
+  identify: 2,
+  enroll: 3,
+  enroll_verify: 4,
+  enroll_identify: 5,
+  audit: 6,
+} as const;
+
+export type _enum_for_Purpose = (typeof _enum_for_Purpose)[keyof typeof _enum_for_Purpose];
 
 /**
  * @summary Purpose
@@ -72,7 +74,7 @@ export const Purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
  * @constant
  * @type {number}
  */
-export const Purpose_no_value_available: _enum_for_Purpose.no_value_available =
+export const Purpose_no_value_available: 0 =
   Purpose.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +82,7 @@ export const Purpose_no_value_available: _enum_for_Purpose.no_value_available =
  * @constant
  * @type {number}
  */
-export const no_value_available: _enum_for_Purpose.no_value_available =
+export const no_value_available: 0 =
   Purpose.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +90,7 @@ export const no_value_available: _enum_for_Purpose.no_value_available =
  * @constant
  * @type {number}
  */
-export const Purpose_verify: _enum_for_Purpose.verify =
+export const Purpose_verify: 1 =
   Purpose.verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +98,7 @@ export const Purpose_verify: _enum_for_Purpose.verify =
  * @constant
  * @type {number}
  */
-export const verify: _enum_for_Purpose.verify =
+export const verify: 1 =
   Purpose.verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +106,7 @@ export const verify: _enum_for_Purpose.verify =
  * @constant
  * @type {number}
  */
-export const Purpose_identify: _enum_for_Purpose.identify =
+export const Purpose_identify: 2 =
   Purpose.identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +114,7 @@ export const Purpose_identify: _enum_for_Purpose.identify =
  * @constant
  * @type {number}
  */
-export const identify: _enum_for_Purpose.identify =
+export const identify: 2 =
   Purpose.identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +122,7 @@ export const identify: _enum_for_Purpose.identify =
  * @constant
  * @type {number}
  */
-export const Purpose_enroll: _enum_for_Purpose.enroll =
+export const Purpose_enroll: 3 =
   Purpose.enroll; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,7 +130,7 @@ export const Purpose_enroll: _enum_for_Purpose.enroll =
  * @constant
  * @type {number}
  */
-export const enroll: _enum_for_Purpose.enroll =
+export const enroll: 3 =
   Purpose.enroll; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -136,7 +138,7 @@ export const enroll: _enum_for_Purpose.enroll =
  * @constant
  * @type {number}
  */
-export const Purpose_enroll_verify: _enum_for_Purpose.enroll_verify =
+export const Purpose_enroll_verify: 4 =
   Purpose.enroll_verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -144,7 +146,7 @@ export const Purpose_enroll_verify: _enum_for_Purpose.enroll_verify =
  * @constant
  * @type {number}
  */
-export const enroll_verify: _enum_for_Purpose.enroll_verify =
+export const enroll_verify: 4 =
   Purpose.enroll_verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +154,7 @@ export const enroll_verify: _enum_for_Purpose.enroll_verify =
  * @constant
  * @type {number}
  */
-export const Purpose_enroll_identify: _enum_for_Purpose.enroll_identify =
+export const Purpose_enroll_identify: 5 =
   Purpose.enroll_identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -160,7 +162,7 @@ export const Purpose_enroll_identify: _enum_for_Purpose.enroll_identify =
  * @constant
  * @type {number}
  */
-export const enroll_identify: _enum_for_Purpose.enroll_identify =
+export const enroll_identify: 5 =
   Purpose.enroll_identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -168,7 +170,7 @@ export const enroll_identify: _enum_for_Purpose.enroll_identify =
  * @constant
  * @type {number}
  */
-export const Purpose_audit: _enum_for_Purpose.audit =
+export const Purpose_audit: 6 =
   Purpose.audit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,13 +178,13 @@ export const Purpose_audit: _enum_for_Purpose.audit =
  * @constant
  * @type {number}
  */
-export const audit: _enum_for_Purpose.audit = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const audit: 6 = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Purpose: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_Purpose: $.ASN1Decoder<Purpose> = $._decodeEnumerated as $.ASN1Decoder<Purpose>;
 
 
-export const _encode_Purpose: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_Purpose: $.ASN1Encoder<Purpose> = $._encodeEnumerated as $.ASN1Encoder<Purpose>;
 
 
 /* eslint-enable */

@@ -1,5 +1,5 @@
 import { ASN1Element } from "@wildboar/asn1";
-import SubstringSelection from "./SubstringSelection.mjs";
+import type { SubstringSelection } from "./SubstringSelection.mjs";
 
 /**
  * @summary A function that matches a substrings match according to a substrings matching rule.

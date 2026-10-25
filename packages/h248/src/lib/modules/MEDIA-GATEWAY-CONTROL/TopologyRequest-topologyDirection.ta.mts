@@ -26,25 +26,27 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_TopologyRequest_topologyDirection {
+const _enum_for_TopologyRequest_topologyDirection = {
     /**
      * Each side receives the other's media. A termination that matches both T1
      * and T2 does not loop back to itself (clause 7.1.18.3). This is the
      * default association for a termination added to a context.
      */
-    bothway = 0,
+    bothway: 0,
     /**
      * Neither side receives media from the other (clause 7.1.18.3).
      */
-    isolate = 1,
+    isolate: 1,
     /**
      * Terminations matching T2 receive media from terminations matching T1, and
      * not the reverse. ALL may match one side without matching the other.
      * Implemented so that other terminations in the context do not observe the
      * change (clauses 7.1.18.3 and 7.1.18.6).
      */
-    oneway = 2,
-}
+    oneway: 2,
+} as const;
+
+export type _enum_for_TopologyRequest_topologyDirection = (typeof _enum_for_TopologyRequest_topologyDirection)[keyof typeof _enum_for_TopologyRequest_topologyDirection];
 
 /**
  * @summary TopologyRequest_topologyDirection
@@ -108,7 +110,7 @@ const TopologyRequest_topologyDirection: typeof _enum_for_TopologyRequest_topolo
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirection_bothway: _enum_for_TopologyRequest_topologyDirection.bothway = TopologyRequest_topologyDirection.bothway; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirection_bothway: 0 = TopologyRequest_topologyDirection.bothway; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothway
@@ -116,7 +118,7 @@ const TopologyRequest_topologyDirection_bothway: _enum_for_TopologyRequest_topol
  * @type {number}
  */
 export
-const bothway: _enum_for_TopologyRequest_topologyDirection.bothway = TopologyRequest_topologyDirection.bothway; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothway: 0 = TopologyRequest_topologyDirection.bothway; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TopologyRequest_topologyDirection_isolate
@@ -128,7 +130,7 @@ const bothway: _enum_for_TopologyRequest_topologyDirection.bothway = TopologyReq
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirection_isolate: _enum_for_TopologyRequest_topologyDirection.isolate = TopologyRequest_topologyDirection.isolate; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirection_isolate: 1 = TopologyRequest_topologyDirection.isolate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isolate
@@ -136,7 +138,7 @@ const TopologyRequest_topologyDirection_isolate: _enum_for_TopologyRequest_topol
  * @type {number}
  */
 export
-const isolate: _enum_for_TopologyRequest_topologyDirection.isolate = TopologyRequest_topologyDirection.isolate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isolate: 1 = TopologyRequest_topologyDirection.isolate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TopologyRequest_topologyDirection_oneway
@@ -151,7 +153,7 @@ const isolate: _enum_for_TopologyRequest_topologyDirection.isolate = TopologyReq
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirection_oneway: _enum_for_TopologyRequest_topologyDirection.oneway = TopologyRequest_topologyDirection.oneway; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirection_oneway: 2 = TopologyRequest_topologyDirection.oneway; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneway
@@ -159,9 +161,9 @@ const TopologyRequest_topologyDirection_oneway: _enum_for_TopologyRequest_topolo
  * @type {number}
  */
 export
-const oneway: _enum_for_TopologyRequest_topologyDirection.oneway = TopologyRequest_topologyDirection.oneway; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_TopologyRequest_topologyDirection: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_TopologyRequest_topologyDirection: $.ASN1Encoder<number> = $._encodeEnumerated;
+const oneway: 2 = TopologyRequest_topologyDirection.oneway; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_TopologyRequest_topologyDirection: $.ASN1Decoder<TopologyRequest_topologyDirection> = $._decodeEnumerated as $.ASN1Decoder<TopologyRequest_topologyDirection>;
+export const _encode_TopologyRequest_topologyDirection: $.ASN1Encoder<TopologyRequest_topologyDirection> = $._encodeEnumerated as $.ASN1Encoder<TopologyRequest_topologyDirection>;
 
 
 /* eslint-enable */

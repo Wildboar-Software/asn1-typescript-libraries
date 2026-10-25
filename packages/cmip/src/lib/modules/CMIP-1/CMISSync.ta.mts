@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_CMISSync {
-  bestEffort = 0,
-  atomic = 1,
-}
+export const _enum_for_CMISSync = {
+  bestEffort: 0,
+  atomic: 1,
+} as const;
+
+export type _enum_for_CMISSync = (typeof _enum_for_CMISSync)[keyof typeof _enum_for_CMISSync];
 
 
 /**
@@ -75,7 +77,7 @@ export const CMISSync: typeof _enum_for_CMISSync = _enum_for_CMISSync;
  * @constant
  * @type {number}
  */
-export const CMISSync_bestEffort: _enum_for_CMISSync.bestEffort =
+export const CMISSync_bestEffort: 0 =
   CMISSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +86,7 @@ export const CMISSync_bestEffort: _enum_for_CMISSync.bestEffort =
  * @constant
  * @type {number}
  */
-export const bestEffort: _enum_for_CMISSync.bestEffort =
+export const bestEffort: 0 =
   CMISSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +100,7 @@ export const bestEffort: _enum_for_CMISSync.bestEffort =
  * @constant
  * @type {number}
  */
-export const CMISSync_atomic: _enum_for_CMISSync.atomic =
+export const CMISSync_atomic: 1 =
   CMISSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -107,18 +109,18 @@ export const CMISSync_atomic: _enum_for_CMISSync.atomic =
  * @constant
  * @type {number}
  */
-export const atomic: _enum_for_CMISSync.atomic =
+export const atomic: 1 =
   CMISSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CMISSync: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_CMISSync: $.ASN1Decoder<CMISSync> = $._decodeEnumerated as $.ASN1Decoder<CMISSync>;
 
 
 
 
-export const _encode_CMISSync: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_CMISSync: $.ASN1Encoder<CMISSync> = $._encodeEnumerated as $.ASN1Encoder<CMISSync>;
 
 
 /* eslint-enable */

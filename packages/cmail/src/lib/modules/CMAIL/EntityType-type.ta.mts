@@ -27,16 +27,18 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_EntityType_type {
+export const _enum_for_EntityType_type = {
   /** Originator (`MAIL FROM`). ASN.1 `from`. */
-  from_ = 0,
+  from_: 0,
   /** Primary recipient (`RCPT TO`). */
-  to = 1,
+  to: 1,
   /** Carbon-copy recipient. */
-  cc = 2,
+  cc: 2,
   /** Transit Cmail server (inter-server hop). */
-  transit = 3,
-}
+  transit: 3,
+} as const;
+
+export type _enum_for_EntityType_type = (typeof _enum_for_EntityType_type)[keyof typeof _enum_for_EntityType_type];
 
 
 /**
@@ -81,7 +83,7 @@ export const EntityType_type: typeof _enum_for_EntityType_type = _enum_for_Entit
  * @constant
  * @type {number}
  */
-export const EntityType_type_from_: _enum_for_EntityType_type.from_ =
+export const EntityType_type_from_: 0 =
   EntityType_type.from_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +93,7 @@ export const EntityType_type_from_: _enum_for_EntityType_type.from_ =
  * @constant
  * @type {number}
  */
-export const from_: _enum_for_EntityType_type.from_ =
+export const from_: 0 =
   EntityType_type.from_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -101,7 +103,7 @@ export const from_: _enum_for_EntityType_type.from_ =
  * @constant
  * @type {number}
  */
-export const EntityType_type_to: _enum_for_EntityType_type.to =
+export const EntityType_type_to: 1 =
   EntityType_type.to; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +113,7 @@ export const EntityType_type_to: _enum_for_EntityType_type.to =
  * @constant
  * @type {number}
  */
-export const to: _enum_for_EntityType_type.to =
+export const to: 1 =
   EntityType_type.to; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +123,7 @@ export const to: _enum_for_EntityType_type.to =
  * @constant
  * @type {number}
  */
-export const EntityType_type_cc: _enum_for_EntityType_type.cc =
+export const EntityType_type_cc: 2 =
   EntityType_type.cc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +133,7 @@ export const EntityType_type_cc: _enum_for_EntityType_type.cc =
  * @constant
  * @type {number}
  */
-export const cc: _enum_for_EntityType_type.cc =
+export const cc: 2 =
   EntityType_type.cc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -141,7 +143,7 @@ export const cc: _enum_for_EntityType_type.cc =
  * @constant
  * @type {number}
  */
-export const EntityType_type_transit: _enum_for_EntityType_type.transit =
+export const EntityType_type_transit: 3 =
   EntityType_type.transit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -151,18 +153,18 @@ export const EntityType_type_transit: _enum_for_EntityType_type.transit =
  * @constant
  * @type {number}
  */
-export const transit: _enum_for_EntityType_type.transit =
+export const transit: 3 =
   EntityType_type.transit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_EntityType_type: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_EntityType_type: $.ASN1Decoder<EntityType_type> = $._decodeEnumerated as $.ASN1Decoder<EntityType_type>;
 
 
 
 
-export const _encode_EntityType_type: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_EntityType_type: $.ASN1Encoder<EntityType_type> = $._encodeEnumerated as $.ASN1Encoder<EntityType_type>;
 
 
 /* eslint-enable */

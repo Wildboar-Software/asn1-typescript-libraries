@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_MetricType {
-  internal = 0,
-  external = 1,
-}
+export const _enum_for_MetricType = {
+  internal: 0,
+  external: 1,
+} as const;
+
+export type _enum_for_MetricType = (typeof _enum_for_MetricType)[keyof typeof _enum_for_MetricType];
 
 /**
  * @summary MetricType
@@ -89,7 +91,7 @@ export const MetricType: typeof _enum_for_MetricType = _enum_for_MetricType;
  * @constant
  * @type {number}
  */
-export const MetricType_internal: _enum_for_MetricType.internal =
+export const MetricType_internal: 0 =
   MetricType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +99,7 @@ export const MetricType_internal: _enum_for_MetricType.internal =
  * @constant
  * @type {number}
  */
-export const internal: _enum_for_MetricType.internal =
+export const internal: 0 =
   MetricType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +113,7 @@ export const internal: _enum_for_MetricType.internal =
  * @constant
  * @type {number}
  */
-export const MetricType_external: _enum_for_MetricType.external =
+export const MetricType_external: 1 =
   MetricType.external; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +121,7 @@ export const MetricType_external: _enum_for_MetricType.external =
  * @constant
  * @type {number}
  */
-export const external: _enum_for_MetricType.external =
+export const external: 1 =
   MetricType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

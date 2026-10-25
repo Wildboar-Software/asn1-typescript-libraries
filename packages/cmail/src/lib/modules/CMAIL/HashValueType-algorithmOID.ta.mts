@@ -28,12 +28,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_HashValueType_algorithmOID {
+export const _enum_for_HashValueType_algorithmOID = {
   /** SHA-1. XER text `1.3.14.3.2.26`. */
-  sha_1 = 0,
+  sha_1: 0,
   /** SHA-256. XER text `2.16.840.1.101.3.4.2.1`. */
-  sha_256 = 1,
-}
+  sha_256: 1,
+} as const;
+
+export type _enum_for_HashValueType_algorithmOID = (typeof _enum_for_HashValueType_algorithmOID)[keyof typeof _enum_for_HashValueType_algorithmOID];
 
 
 /**
@@ -78,7 +80,7 @@ export const HashValueType_algorithmOID: typeof _enum_for_HashValueType_algorith
  * @constant
  * @type {number}
  */
-export const HashValueType_algorithmOID_sha_1: _enum_for_HashValueType_algorithmOID.sha_1 =
+export const HashValueType_algorithmOID_sha_1: 0 =
   HashValueType_algorithmOID.sha_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -88,7 +90,7 @@ export const HashValueType_algorithmOID_sha_1: _enum_for_HashValueType_algorithm
  * @constant
  * @type {number}
  */
-export const sha_1: _enum_for_HashValueType_algorithmOID.sha_1 =
+export const sha_1: 0 =
   HashValueType_algorithmOID.sha_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +100,7 @@ export const sha_1: _enum_for_HashValueType_algorithmOID.sha_1 =
  * @constant
  * @type {number}
  */
-export const HashValueType_algorithmOID_sha_256: _enum_for_HashValueType_algorithmOID.sha_256 =
+export const HashValueType_algorithmOID_sha_256: 1 =
   HashValueType_algorithmOID.sha_256; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -108,18 +110,18 @@ export const HashValueType_algorithmOID_sha_256: _enum_for_HashValueType_algorit
  * @constant
  * @type {number}
  */
-export const sha_256: _enum_for_HashValueType_algorithmOID.sha_256 =
+export const sha_256: 1 =
   HashValueType_algorithmOID.sha_256; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_HashValueType_algorithmOID: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_HashValueType_algorithmOID: $.ASN1Decoder<HashValueType_algorithmOID> = $._decodeEnumerated as $.ASN1Decoder<HashValueType_algorithmOID>;
 
 
 
 
-export const _encode_HashValueType_algorithmOID: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_HashValueType_algorithmOID: $.ASN1Encoder<HashValueType_algorithmOID> = $._encodeEnumerated as $.ASN1Encoder<HashValueType_algorithmOID>;
 
 
 /* eslint-enable */

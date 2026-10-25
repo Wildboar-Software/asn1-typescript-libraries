@@ -29,12 +29,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_AdjacencyUsage {
-  undefined = 0,
-  level1 = 1,
-  level2 = 2,
-  level1and2 = 3,
-}
+export const _enum_for_AdjacencyUsage = {
+  undefined: 0,
+  level1: 1,
+  level2: 2,
+  level1and2: 3,
+} as const;
+
+export type _enum_for_AdjacencyUsage = (typeof _enum_for_AdjacencyUsage)[keyof typeof _enum_for_AdjacencyUsage];
 
 /**
  * @summary AdjacencyUsage
@@ -87,7 +89,7 @@ export const AdjacencyUsage: typeof _enum_for_AdjacencyUsage = _enum_for_Adjacen
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_undefined: _enum_for_AdjacencyUsage.undefined =
+export const AdjacencyUsage_undefined: 0 =
   AdjacencyUsage.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +97,7 @@ export const AdjacencyUsage_undefined: _enum_for_AdjacencyUsage.undefined =
  * @constant
  * @type {number}
  */
-export const undefined: _enum_for_AdjacencyUsage.undefined =
+export const undefined: 0 =
   AdjacencyUsage.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +111,7 @@ export const undefined: _enum_for_AdjacencyUsage.undefined =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1: _enum_for_AdjacencyUsage.level1 =
+export const AdjacencyUsage_level1: 1 =
   AdjacencyUsage.level1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,7 +119,7 @@ export const AdjacencyUsage_level1: _enum_for_AdjacencyUsage.level1 =
  * @constant
  * @type {number}
  */
-export const level1: _enum_for_AdjacencyUsage.level1 =
+export const level1: 1 =
   AdjacencyUsage.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -131,7 +133,7 @@ export const level1: _enum_for_AdjacencyUsage.level1 =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level2: _enum_for_AdjacencyUsage.level2 =
+export const AdjacencyUsage_level2: 2 =
   AdjacencyUsage.level2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -139,7 +141,7 @@ export const AdjacencyUsage_level2: _enum_for_AdjacencyUsage.level2 =
  * @constant
  * @type {number}
  */
-export const level2: _enum_for_AdjacencyUsage.level2 =
+export const level2: 2 =
   AdjacencyUsage.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +155,7 @@ export const level2: _enum_for_AdjacencyUsage.level2 =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1and2: _enum_for_AdjacencyUsage.level1and2 =
+export const AdjacencyUsage_level1and2: 3 =
   AdjacencyUsage.level1and2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -161,7 +163,7 @@ export const AdjacencyUsage_level1and2: _enum_for_AdjacencyUsage.level1and2 =
  * @constant
  * @type {number}
  */
-export const level1and2: _enum_for_AdjacencyUsage.level1and2 =
+export const level1and2: 3 =
   AdjacencyUsage.level1and2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

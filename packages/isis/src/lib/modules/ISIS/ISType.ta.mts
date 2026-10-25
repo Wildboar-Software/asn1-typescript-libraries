@@ -29,10 +29,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ISType {
-  level1IS = 1,
-  level2IS = 2,
-}
+export const _enum_for_ISType = {
+  level1IS: 1,
+  level2IS: 2,
+} as const;
+
+export type _enum_for_ISType = (typeof _enum_for_ISType)[keyof typeof _enum_for_ISType];
 
 /**
  * @summary ISType
@@ -85,7 +87,7 @@ export const ISType: typeof _enum_for_ISType = _enum_for_ISType;
  * @constant
  * @type {number}
  */
-export const ISType_level1IS: _enum_for_ISType.level1IS =
+export const ISType_level1IS: 1 =
   ISType.level1IS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +95,7 @@ export const ISType_level1IS: _enum_for_ISType.level1IS =
  * @constant
  * @type {number}
  */
-export const level1IS: _enum_for_ISType.level1IS =
+export const level1IS: 1 =
   ISType.level1IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +109,7 @@ export const level1IS: _enum_for_ISType.level1IS =
  * @constant
  * @type {number}
  */
-export const ISType_level2IS: _enum_for_ISType.level2IS =
+export const ISType_level2IS: 2 =
   ISType.level2IS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +117,7 @@ export const ISType_level2IS: _enum_for_ISType.level2IS =
  * @constant
  * @type {number}
  */
-export const level2IS: _enum_for_ISType.level2IS =
+export const level2IS: 2 =
   ISType.level2IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

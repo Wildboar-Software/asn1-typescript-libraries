@@ -7,13 +7,13 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_EventBufferControl {
+const _enum_for_EventBufferControl = {
     /**
      * Events are processed immediately against the active Events descriptor.
      * This is the default. Setting Off discards anything already buffered
      * (clauses 7.1.5.1.2 and 7.1.9.4).
      */
-    off = 0,
+    off: 0,
     /**
      * After a recognized event, further events that are listed in the
      * EventBuffer descriptor are queued, with detection time, until a new
@@ -21,8 +21,10 @@ enum _enum_for_EventBufferControl {
      * timestamp is the detection time, not the time the new descriptor was
      * loaded.
      */
-    lockStep = 1,
-}
+    lockStep: 1,
+} as const;
+
+export type _enum_for_EventBufferControl = (typeof _enum_for_EventBufferControl)[keyof typeof _enum_for_EventBufferControl];
 
 /**
  * @summary EventBufferControl
@@ -66,7 +68,7 @@ type EventBufferControl = _enum_for_EventBufferControl | ENUMERATED;
  * @type {number}
  */
 export
-const EventBufferControl_off: _enum_for_EventBufferControl.off = _enum_for_EventBufferControl.off; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventBufferControl_off: 0 = _enum_for_EventBufferControl.off; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary off
@@ -74,7 +76,7 @@ const EventBufferControl_off: _enum_for_EventBufferControl.off = _enum_for_Event
  * @type {number}
  */
 export
-const off: _enum_for_EventBufferControl.off = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
+const off: 0 = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventBufferControl_lockStep
@@ -89,7 +91,7 @@ const off: _enum_for_EventBufferControl.off = EventBufferControl_off; /* SHORT_N
  * @type {number}
  */
 export
-const EventBufferControl_lockStep: _enum_for_EventBufferControl.lockStep = _enum_for_EventBufferControl.lockStep; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventBufferControl_lockStep: 1 = _enum_for_EventBufferControl.lockStep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lockStep
@@ -97,9 +99,9 @@ const EventBufferControl_lockStep: _enum_for_EventBufferControl.lockStep = _enum
  * @type {number}
  */
 export
-const lockStep: _enum_for_EventBufferControl.lockStep = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EventBufferControl: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_EventBufferControl: $.ASN1Encoder<number> = $._encodeEnumerated;
+const lockStep: 1 = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_EventBufferControl: $.ASN1Decoder<EventBufferControl> = $._decodeEnumerated as $.ASN1Decoder<EventBufferControl>;
+export const _encode_EventBufferControl: $.ASN1Encoder<EventBufferControl> = $._encodeEnumerated as $.ASN1Encoder<EventBufferControl>;
 
 
 /* eslint-enable */

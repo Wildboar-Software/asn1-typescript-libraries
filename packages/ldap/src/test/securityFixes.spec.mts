@@ -12,7 +12,7 @@ import stringifyFilter from "../lib/filterToString.mjs";
 import evaluateFilter, { type EvaluateFilterOptions } from "../lib/evaluateFilter.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { integer as decodeInteger } from "../lib/syntaxDecoders.mjs";
-import SubstringSelection from "../lib/types/SubstringSelection.mjs";
+import { SubstringSelection } from "../lib/types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 

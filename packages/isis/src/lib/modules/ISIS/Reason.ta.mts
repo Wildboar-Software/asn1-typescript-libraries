@@ -33,19 +33,21 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_Reason {
-  holdingTimerExpired = 0,
-  checksumError = 1,
-  oneWayConnectivity = 2,
-  callRejected = 3,
-  reserveTimerExpired = 4,
-  circuitDisabled = 5,
-  versionSkew = 6,
-  areaMismatch = 7,
-  maximumBroadcastIntermediateSystemsExceeded = 8,
-  maximumBroadcastEndSystemsExceeded = 9,
-  wrongSystemType = 10,
-}
+export const _enum_for_Reason = {
+  holdingTimerExpired: 0,
+  checksumError: 1,
+  oneWayConnectivity: 2,
+  callRejected: 3,
+  reserveTimerExpired: 4,
+  circuitDisabled: 5,
+  versionSkew: 6,
+  areaMismatch: 7,
+  maximumBroadcastIntermediateSystemsExceeded: 8,
+  maximumBroadcastEndSystemsExceeded: 9,
+  wrongSystemType: 10,
+} as const;
+
+export type _enum_for_Reason = (typeof _enum_for_Reason)[keyof typeof _enum_for_Reason];
 
 /**
  * @summary Reason
@@ -106,7 +108,7 @@ export const Reason: typeof _enum_for_Reason = _enum_for_Reason;
  * @constant
  * @type {number}
  */
-export const Reason_holdingTimerExpired: _enum_for_Reason.holdingTimerExpired =
+export const Reason_holdingTimerExpired: 0 =
   Reason.holdingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +116,7 @@ export const Reason_holdingTimerExpired: _enum_for_Reason.holdingTimerExpired =
  * @constant
  * @type {number}
  */
-export const holdingTimerExpired: _enum_for_Reason.holdingTimerExpired =
+export const holdingTimerExpired: 0 =
   Reason.holdingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,7 +130,7 @@ export const holdingTimerExpired: _enum_for_Reason.holdingTimerExpired =
  * @constant
  * @type {number}
  */
-export const Reason_checksumError: _enum_for_Reason.checksumError =
+export const Reason_checksumError: 1 =
   Reason.checksumError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -136,7 +138,7 @@ export const Reason_checksumError: _enum_for_Reason.checksumError =
  * @constant
  * @type {number}
  */
-export const checksumError: _enum_for_Reason.checksumError =
+export const checksumError: 1 =
   Reason.checksumError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +152,7 @@ export const checksumError: _enum_for_Reason.checksumError =
  * @constant
  * @type {number}
  */
-export const Reason_oneWayConnectivity: _enum_for_Reason.oneWayConnectivity =
+export const Reason_oneWayConnectivity: 2 =
   Reason.oneWayConnectivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,7 +160,7 @@ export const Reason_oneWayConnectivity: _enum_for_Reason.oneWayConnectivity =
  * @constant
  * @type {number}
  */
-export const oneWayConnectivity: _enum_for_Reason.oneWayConnectivity =
+export const oneWayConnectivity: 2 =
   Reason.oneWayConnectivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -172,7 +174,7 @@ export const oneWayConnectivity: _enum_for_Reason.oneWayConnectivity =
  * @constant
  * @type {number}
  */
-export const Reason_callRejected: _enum_for_Reason.callRejected =
+export const Reason_callRejected: 3 =
   Reason.callRejected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -180,7 +182,7 @@ export const Reason_callRejected: _enum_for_Reason.callRejected =
  * @constant
  * @type {number}
  */
-export const callRejected: _enum_for_Reason.callRejected =
+export const callRejected: 3 =
   Reason.callRejected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -194,7 +196,7 @@ export const callRejected: _enum_for_Reason.callRejected =
  * @constant
  * @type {number}
  */
-export const Reason_reserveTimerExpired: _enum_for_Reason.reserveTimerExpired =
+export const Reason_reserveTimerExpired: 4 =
   Reason.reserveTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -202,7 +204,7 @@ export const Reason_reserveTimerExpired: _enum_for_Reason.reserveTimerExpired =
  * @constant
  * @type {number}
  */
-export const reserveTimerExpired: _enum_for_Reason.reserveTimerExpired =
+export const reserveTimerExpired: 4 =
   Reason.reserveTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -216,7 +218,7 @@ export const reserveTimerExpired: _enum_for_Reason.reserveTimerExpired =
  * @constant
  * @type {number}
  */
-export const Reason_circuitDisabled: _enum_for_Reason.circuitDisabled =
+export const Reason_circuitDisabled: 5 =
   Reason.circuitDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -224,7 +226,7 @@ export const Reason_circuitDisabled: _enum_for_Reason.circuitDisabled =
  * @constant
  * @type {number}
  */
-export const circuitDisabled: _enum_for_Reason.circuitDisabled =
+export const circuitDisabled: 5 =
   Reason.circuitDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -238,7 +240,7 @@ export const circuitDisabled: _enum_for_Reason.circuitDisabled =
  * @constant
  * @type {number}
  */
-export const Reason_versionSkew: _enum_for_Reason.versionSkew =
+export const Reason_versionSkew: 6 =
   Reason.versionSkew; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -246,7 +248,7 @@ export const Reason_versionSkew: _enum_for_Reason.versionSkew =
  * @constant
  * @type {number}
  */
-export const versionSkew: _enum_for_Reason.versionSkew =
+export const versionSkew: 6 =
   Reason.versionSkew; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -260,7 +262,7 @@ export const versionSkew: _enum_for_Reason.versionSkew =
  * @constant
  * @type {number}
  */
-export const Reason_areaMismatch: _enum_for_Reason.areaMismatch =
+export const Reason_areaMismatch: 7 =
   Reason.areaMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -268,7 +270,7 @@ export const Reason_areaMismatch: _enum_for_Reason.areaMismatch =
  * @constant
  * @type {number}
  */
-export const areaMismatch: _enum_for_Reason.areaMismatch =
+export const areaMismatch: 7 =
   Reason.areaMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -282,7 +284,7 @@ export const areaMismatch: _enum_for_Reason.areaMismatch =
  * @constant
  * @type {number}
  */
-export const Reason_maximumBroadcastIntermediateSystemsExceeded: _enum_for_Reason.maximumBroadcastIntermediateSystemsExceeded =
+export const Reason_maximumBroadcastIntermediateSystemsExceeded: 8 =
   Reason.maximumBroadcastIntermediateSystemsExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -290,7 +292,7 @@ export const Reason_maximumBroadcastIntermediateSystemsExceeded: _enum_for_Reaso
  * @constant
  * @type {number}
  */
-export const maximumBroadcastIntermediateSystemsExceeded: _enum_for_Reason.maximumBroadcastIntermediateSystemsExceeded =
+export const maximumBroadcastIntermediateSystemsExceeded: 8 =
   Reason.maximumBroadcastIntermediateSystemsExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -304,7 +306,7 @@ export const maximumBroadcastIntermediateSystemsExceeded: _enum_for_Reason.maxim
  * @constant
  * @type {number}
  */
-export const Reason_maximumBroadcastEndSystemsExceeded: _enum_for_Reason.maximumBroadcastEndSystemsExceeded =
+export const Reason_maximumBroadcastEndSystemsExceeded: 9 =
   Reason.maximumBroadcastEndSystemsExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -312,7 +314,7 @@ export const Reason_maximumBroadcastEndSystemsExceeded: _enum_for_Reason.maximum
  * @constant
  * @type {number}
  */
-export const maximumBroadcastEndSystemsExceeded: _enum_for_Reason.maximumBroadcastEndSystemsExceeded =
+export const maximumBroadcastEndSystemsExceeded: 9 =
   Reason.maximumBroadcastEndSystemsExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -326,7 +328,7 @@ export const maximumBroadcastEndSystemsExceeded: _enum_for_Reason.maximumBroadca
  * @constant
  * @type {number}
  */
-export const Reason_wrongSystemType: _enum_for_Reason.wrongSystemType =
+export const Reason_wrongSystemType: 10 =
   Reason.wrongSystemType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -334,7 +336,7 @@ export const Reason_wrongSystemType: _enum_for_Reason.wrongSystemType =
  * @constant
  * @type {number}
  */
-export const wrongSystemType: _enum_for_Reason.wrongSystemType =
+export const wrongSystemType: 10 =
   Reason.wrongSystemType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

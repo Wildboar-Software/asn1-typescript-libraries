@@ -13,18 +13,20 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_GUI_RESPONSE {
-  default_ = 0,
-  opComplete = 1,
-  opCancel = 2,
-  cycleStart = 3,
-  cycleRestart = 4,
-  subopStart = 5,
-  subopNext = 6,
-  progressContinue = 7,
-  progressCancel = 8,
-  recapture = 9,
-}
+export const _enum_for_BioAPI_GUI_RESPONSE = {
+  default_: 0,
+  opComplete: 1,
+  opCancel: 2,
+  cycleStart: 3,
+  cycleRestart: 4,
+  subopStart: 5,
+  subopNext: 6,
+  progressContinue: 7,
+  progressCancel: 8,
+  recapture: 9,
+} as const;
+
+export type _enum_for_BioAPI_GUI_RESPONSE = (typeof _enum_for_BioAPI_GUI_RESPONSE)[keyof typeof _enum_for_BioAPI_GUI_RESPONSE];
 
 
 /**
@@ -58,7 +60,7 @@ export type BioAPI_GUI_RESPONSE = _enum_for_BioAPI_GUI_RESPONSE | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_default_: _enum_for_BioAPI_GUI_RESPONSE.default_ = _enum_for_BioAPI_GUI_RESPONSE.default_; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_default_: 0 = _enum_for_BioAPI_GUI_RESPONSE.default_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +68,7 @@ export const BioAPI_GUI_RESPONSE_default_: _enum_for_BioAPI_GUI_RESPONSE.default
  * @constant
  * @type {number}
  */
-export const default_: _enum_for_BioAPI_GUI_RESPONSE.default_ = BioAPI_GUI_RESPONSE_default_; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const default_: 0 = BioAPI_GUI_RESPONSE_default_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +76,7 @@ export const default_: _enum_for_BioAPI_GUI_RESPONSE.default_ = BioAPI_GUI_RESPO
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_opComplete: _enum_for_BioAPI_GUI_RESPONSE.opComplete = _enum_for_BioAPI_GUI_RESPONSE.opComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_opComplete: 1 = _enum_for_BioAPI_GUI_RESPONSE.opComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +84,7 @@ export const BioAPI_GUI_RESPONSE_opComplete: _enum_for_BioAPI_GUI_RESPONSE.opCom
  * @constant
  * @type {number}
  */
-export const opComplete: _enum_for_BioAPI_GUI_RESPONSE.opComplete = BioAPI_GUI_RESPONSE_opComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const opComplete: 1 = BioAPI_GUI_RESPONSE_opComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +92,7 @@ export const opComplete: _enum_for_BioAPI_GUI_RESPONSE.opComplete = BioAPI_GUI_R
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_opCancel: _enum_for_BioAPI_GUI_RESPONSE.opCancel = _enum_for_BioAPI_GUI_RESPONSE.opCancel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_opCancel: 2 = _enum_for_BioAPI_GUI_RESPONSE.opCancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -98,7 +100,7 @@ export const BioAPI_GUI_RESPONSE_opCancel: _enum_for_BioAPI_GUI_RESPONSE.opCance
  * @constant
  * @type {number}
  */
-export const opCancel: _enum_for_BioAPI_GUI_RESPONSE.opCancel = BioAPI_GUI_RESPONSE_opCancel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const opCancel: 2 = BioAPI_GUI_RESPONSE_opCancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -106,7 +108,7 @@ export const opCancel: _enum_for_BioAPI_GUI_RESPONSE.opCancel = BioAPI_GUI_RESPO
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_cycleStart: _enum_for_BioAPI_GUI_RESPONSE.cycleStart = _enum_for_BioAPI_GUI_RESPONSE.cycleStart; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_cycleStart: 3 = _enum_for_BioAPI_GUI_RESPONSE.cycleStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -114,7 +116,7 @@ export const BioAPI_GUI_RESPONSE_cycleStart: _enum_for_BioAPI_GUI_RESPONSE.cycle
  * @constant
  * @type {number}
  */
-export const cycleStart: _enum_for_BioAPI_GUI_RESPONSE.cycleStart = BioAPI_GUI_RESPONSE_cycleStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cycleStart: 3 = BioAPI_GUI_RESPONSE_cycleStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -122,7 +124,7 @@ export const cycleStart: _enum_for_BioAPI_GUI_RESPONSE.cycleStart = BioAPI_GUI_R
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_cycleRestart: _enum_for_BioAPI_GUI_RESPONSE.cycleRestart = _enum_for_BioAPI_GUI_RESPONSE.cycleRestart; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_cycleRestart: 4 = _enum_for_BioAPI_GUI_RESPONSE.cycleRestart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -130,7 +132,7 @@ export const BioAPI_GUI_RESPONSE_cycleRestart: _enum_for_BioAPI_GUI_RESPONSE.cyc
  * @constant
  * @type {number}
  */
-export const cycleRestart: _enum_for_BioAPI_GUI_RESPONSE.cycleRestart = BioAPI_GUI_RESPONSE_cycleRestart; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cycleRestart: 4 = BioAPI_GUI_RESPONSE_cycleRestart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -138,7 +140,7 @@ export const cycleRestart: _enum_for_BioAPI_GUI_RESPONSE.cycleRestart = BioAPI_G
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_subopStart: _enum_for_BioAPI_GUI_RESPONSE.subopStart = _enum_for_BioAPI_GUI_RESPONSE.subopStart; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_subopStart: 5 = _enum_for_BioAPI_GUI_RESPONSE.subopStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -146,7 +148,7 @@ export const BioAPI_GUI_RESPONSE_subopStart: _enum_for_BioAPI_GUI_RESPONSE.subop
  * @constant
  * @type {number}
  */
-export const subopStart: _enum_for_BioAPI_GUI_RESPONSE.subopStart = BioAPI_GUI_RESPONSE_subopStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const subopStart: 5 = BioAPI_GUI_RESPONSE_subopStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +156,7 @@ export const subopStart: _enum_for_BioAPI_GUI_RESPONSE.subopStart = BioAPI_GUI_R
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_subopNext: _enum_for_BioAPI_GUI_RESPONSE.subopNext = _enum_for_BioAPI_GUI_RESPONSE.subopNext; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_subopNext: 6 = _enum_for_BioAPI_GUI_RESPONSE.subopNext; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -162,7 +164,7 @@ export const BioAPI_GUI_RESPONSE_subopNext: _enum_for_BioAPI_GUI_RESPONSE.subopN
  * @constant
  * @type {number}
  */
-export const subopNext: _enum_for_BioAPI_GUI_RESPONSE.subopNext = BioAPI_GUI_RESPONSE_subopNext; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const subopNext: 6 = BioAPI_GUI_RESPONSE_subopNext; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -170,7 +172,7 @@ export const subopNext: _enum_for_BioAPI_GUI_RESPONSE.subopNext = BioAPI_GUI_RES
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_progressContinue: _enum_for_BioAPI_GUI_RESPONSE.progressContinue = _enum_for_BioAPI_GUI_RESPONSE.progressContinue; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_progressContinue: 7 = _enum_for_BioAPI_GUI_RESPONSE.progressContinue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,7 +180,7 @@ export const BioAPI_GUI_RESPONSE_progressContinue: _enum_for_BioAPI_GUI_RESPONSE
  * @constant
  * @type {number}
  */
-export const progressContinue: _enum_for_BioAPI_GUI_RESPONSE.progressContinue = BioAPI_GUI_RESPONSE_progressContinue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const progressContinue: 7 = BioAPI_GUI_RESPONSE_progressContinue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -190,7 +192,7 @@ export const progressContinue: _enum_for_BioAPI_GUI_RESPONSE.progressContinue = 
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_progressCancel: _enum_for_BioAPI_GUI_RESPONSE.progressCancel = _enum_for_BioAPI_GUI_RESPONSE.progressCancel; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_progressCancel: 8 = _enum_for_BioAPI_GUI_RESPONSE.progressCancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -202,7 +204,7 @@ export const BioAPI_GUI_RESPONSE_progressCancel: _enum_for_BioAPI_GUI_RESPONSE.p
  * @constant
  * @type {number}
  */
-export const progressCancel: _enum_for_BioAPI_GUI_RESPONSE.progressCancel = BioAPI_GUI_RESPONSE_progressCancel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const progressCancel: 8 = BioAPI_GUI_RESPONSE_progressCancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -210,7 +212,7 @@ export const progressCancel: _enum_for_BioAPI_GUI_RESPONSE.progressCancel = BioA
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_RESPONSE_recapture: _enum_for_BioAPI_GUI_RESPONSE.recapture = _enum_for_BioAPI_GUI_RESPONSE.recapture; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_RESPONSE_recapture: 9 = _enum_for_BioAPI_GUI_RESPONSE.recapture; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -218,17 +220,17 @@ export const BioAPI_GUI_RESPONSE_recapture: _enum_for_BioAPI_GUI_RESPONSE.recapt
  * @constant
  * @type {number}
  */
-export const recapture: _enum_for_BioAPI_GUI_RESPONSE.recapture = BioAPI_GUI_RESPONSE_recapture; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const recapture: 9 = BioAPI_GUI_RESPONSE_recapture; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_GUI_RESPONSE: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_BioAPI_GUI_RESPONSE: $.ASN1Decoder<BioAPI_GUI_RESPONSE> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_GUI_RESPONSE>;
 
 
 
 
-export const _encode_BioAPI_GUI_RESPONSE: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_BioAPI_GUI_RESPONSE: $.ASN1Encoder<BioAPI_GUI_RESPONSE> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_GUI_RESPONSE>;
 
 
 /* eslint-enable */

@@ -9,6 +9,7 @@
     ],
     "strict": true,
     "strictNullChecks": true,
+    "erasableSyntaxOnly": true,
     "noUnusedLocals": true,
     "exactOptionalPropertyTypes": true,
     "noUncheckedIndexedAccess": true,

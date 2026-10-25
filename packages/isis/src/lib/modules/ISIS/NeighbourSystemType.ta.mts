@@ -29,13 +29,15 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_NeighbourSystemType {
-  unknown = 0,
-  endSystem = 1,
-  intermediateSystem = 2,
-  l1IntermediateSystem = 3,
-  l2IntermediateSystem = 4,
-}
+export const _enum_for_NeighbourSystemType = {
+  unknown: 0,
+  endSystem: 1,
+  intermediateSystem: 2,
+  l1IntermediateSystem: 3,
+  l2IntermediateSystem: 4,
+} as const;
+
+export type _enum_for_NeighbourSystemType = (typeof _enum_for_NeighbourSystemType)[keyof typeof _enum_for_NeighbourSystemType];
 
 /**
  * @summary NeighbourSystemType
@@ -88,7 +90,7 @@ export const NeighbourSystemType: typeof _enum_for_NeighbourSystemType = _enum_f
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_unknown: _enum_for_NeighbourSystemType.unknown =
+export const NeighbourSystemType_unknown: 0 =
   NeighbourSystemType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +98,7 @@ export const NeighbourSystemType_unknown: _enum_for_NeighbourSystemType.unknown 
  * @constant
  * @type {number}
  */
-export const unknown: _enum_for_NeighbourSystemType.unknown =
+export const unknown: 0 =
   NeighbourSystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +112,7 @@ export const unknown: _enum_for_NeighbourSystemType.unknown =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_endSystem: _enum_for_NeighbourSystemType.endSystem =
+export const NeighbourSystemType_endSystem: 1 =
   NeighbourSystemType.endSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +120,7 @@ export const NeighbourSystemType_endSystem: _enum_for_NeighbourSystemType.endSys
  * @constant
  * @type {number}
  */
-export const endSystem: _enum_for_NeighbourSystemType.endSystem =
+export const endSystem: 1 =
   NeighbourSystemType.endSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +134,7 @@ export const endSystem: _enum_for_NeighbourSystemType.endSystem =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_intermediateSystem: _enum_for_NeighbourSystemType.intermediateSystem =
+export const NeighbourSystemType_intermediateSystem: 2 =
   NeighbourSystemType.intermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -140,7 +142,7 @@ export const NeighbourSystemType_intermediateSystem: _enum_for_NeighbourSystemTy
  * @constant
  * @type {number}
  */
-export const intermediateSystem: _enum_for_NeighbourSystemType.intermediateSystem =
+export const intermediateSystem: 2 =
   NeighbourSystemType.intermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +156,7 @@ export const intermediateSystem: _enum_for_NeighbourSystemType.intermediateSyste
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l1IntermediateSystem: _enum_for_NeighbourSystemType.l1IntermediateSystem =
+export const NeighbourSystemType_l1IntermediateSystem: 3 =
   NeighbourSystemType.l1IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +164,7 @@ export const NeighbourSystemType_l1IntermediateSystem: _enum_for_NeighbourSystem
  * @constant
  * @type {number}
  */
-export const l1IntermediateSystem: _enum_for_NeighbourSystemType.l1IntermediateSystem =
+export const l1IntermediateSystem: 3 =
   NeighbourSystemType.l1IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +178,7 @@ export const l1IntermediateSystem: _enum_for_NeighbourSystemType.l1IntermediateS
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l2IntermediateSystem: _enum_for_NeighbourSystemType.l2IntermediateSystem =
+export const NeighbourSystemType_l2IntermediateSystem: 4 =
   NeighbourSystemType.l2IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -184,7 +186,7 @@ export const NeighbourSystemType_l2IntermediateSystem: _enum_for_NeighbourSystem
  * @constant
  * @type {number}
  */
-export const l2IntermediateSystem: _enum_for_NeighbourSystemType.l2IntermediateSystem =
+export const l2IntermediateSystem: 4 =
   NeighbourSystemType.l2IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

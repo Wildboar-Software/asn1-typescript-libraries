@@ -7,24 +7,26 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_SignalType {
+const _enum_for_SignalType = {
     /**
      * Plays out on its own. No duration is required. The signal remains in the
      * descriptor until removed, but a replacement descriptor is not guaranteed
      * to stop it (clause 7.1.11.7).
      */
-    brief = 0,
+    brief: 0,
     /**
      * Continues until an empty Signals descriptor, or a replacement that omits
      * it, turns it off (clause 7.1.11.7). A duration, if present, is ignored.
      */
-    onOff = 1,
+    onOff: 1,
     /**
      * Continues until turned off or until `duration` elapses. Stays in the
      * Signals descriptor until explicitly removed (clause 7.1.11.7).
      */
-    timeOut = 2,
-}
+    timeOut: 2,
+} as const;
+
+export type _enum_for_SignalType = (typeof _enum_for_SignalType)[keyof typeof _enum_for_SignalType];
 
 /**
  * @summary SignalType
@@ -68,7 +70,7 @@ type SignalType = _enum_for_SignalType | ENUMERATED;
  * @type {number}
  */
 export
-const SignalType_brief: _enum_for_SignalType.brief = _enum_for_SignalType.brief; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_brief: 0 = _enum_for_SignalType.brief; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary brief
@@ -76,7 +78,7 @@ const SignalType_brief: _enum_for_SignalType.brief = _enum_for_SignalType.brief;
  * @type {number}
  */
 export
-const brief: _enum_for_SignalType.brief = SignalType_brief; /* SHORT_NAMED_ENUMERATED_VALUE */
+const brief: 0 = SignalType_brief; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalType_onOff
@@ -89,7 +91,7 @@ const brief: _enum_for_SignalType.brief = SignalType_brief; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const SignalType_onOff: _enum_for_SignalType.onOff = _enum_for_SignalType.onOff; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_onOff: 1 = _enum_for_SignalType.onOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onOff
@@ -97,7 +99,7 @@ const SignalType_onOff: _enum_for_SignalType.onOff = _enum_for_SignalType.onOff;
  * @type {number}
  */
 export
-const onOff: _enum_for_SignalType.onOff = SignalType_onOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onOff: 1 = SignalType_onOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalType_timeOut
@@ -110,7 +112,7 @@ const onOff: _enum_for_SignalType.onOff = SignalType_onOff; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const SignalType_timeOut: _enum_for_SignalType.timeOut = _enum_for_SignalType.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_timeOut: 2 = _enum_for_SignalType.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOut
@@ -118,9 +120,9 @@ const SignalType_timeOut: _enum_for_SignalType.timeOut = _enum_for_SignalType.ti
  * @type {number}
  */
 export
-const timeOut: _enum_for_SignalType.timeOut = SignalType_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SignalType: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_SignalType: $.ASN1Encoder<number> = $._encodeEnumerated;
+const timeOut: 2 = SignalType_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_SignalType: $.ASN1Decoder<SignalType> = $._decodeEnumerated as $.ASN1Decoder<SignalType>;
+export const _encode_SignalType: $.ASN1Encoder<SignalType> = $._encodeEnumerated as $.ASN1Encoder<SignalType>;
 
 
 /* eslint-enable */

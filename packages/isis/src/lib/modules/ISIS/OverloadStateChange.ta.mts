@@ -29,10 +29,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_OverloadStateChange {
-  on = 0,
-  waiting = 1,
-}
+export const _enum_for_OverloadStateChange = {
+  on: 0,
+  waiting: 1,
+} as const;
+
+export type _enum_for_OverloadStateChange = (typeof _enum_for_OverloadStateChange)[keyof typeof _enum_for_OverloadStateChange];
 
 /**
  * @summary OverloadStateChange
@@ -85,7 +87,7 @@ export const OverloadStateChange: typeof _enum_for_OverloadStateChange = _enum_f
  * @constant
  * @type {number}
  */
-export const OverloadStateChange_on: _enum_for_OverloadStateChange.on =
+export const OverloadStateChange_on: 0 =
   OverloadStateChange.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +95,7 @@ export const OverloadStateChange_on: _enum_for_OverloadStateChange.on =
  * @constant
  * @type {number}
  */
-export const on: _enum_for_OverloadStateChange.on =
+export const on: 0 =
   OverloadStateChange.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +109,7 @@ export const on: _enum_for_OverloadStateChange.on =
  * @constant
  * @type {number}
  */
-export const OverloadStateChange_waiting: _enum_for_OverloadStateChange.waiting =
+export const OverloadStateChange_waiting: 1 =
   OverloadStateChange.waiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +117,7 @@ export const OverloadStateChange_waiting: _enum_for_OverloadStateChange.waiting 
  * @constant
  * @type {number}
  */
-export const waiting: _enum_for_OverloadStateChange.waiting =
+export const waiting: 1 =
   OverloadStateChange.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

@@ -7,44 +7,46 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_ModemType {
+const _enum_for_ModemType = {
     /**
      * ITU-T V.18 (clause 7.1.2). The Modem descriptor itself is deprecated.
      */
-    v18 = 0,
+    v18: 0,
     /**
      * ITU-T V.22 (clause 7.1.2).
      */
-    v22 = 1,
+    v22: 1,
     /**
      * ITU-T V.22 bis (clause 7.1.2).
      */
-    v22bis = 2,
+    v22bis: 2,
     /**
      * ITU-T V.32 (clause 7.1.2).
      */
-    v32 = 3,
+    v32: 3,
     /**
      * ITU-T V.32 bis (clause 7.1.2).
      */
-    v32bis = 4,
+    v32bis: 4,
     /**
      * ITU-T V.34 (clause 7.1.2).
      */
-    v34 = 5,
+    v34: 5,
     /**
      * ITU-T V.90 (clause 7.1.2).
      */
-    v90 = 6,
+    v90: 6,
     /**
      * ITU-T V.91 (clause 7.1.2).
      */
-    v91 = 7,
+    v91: 7,
     /**
      * Synchronous ISDN modem (clause 7.1.2).
      */
-    synchISDN = 8,
-}
+    synchISDN: 8,
+} as const;
+
+export type _enum_for_ModemType = (typeof _enum_for_ModemType)[keyof typeof _enum_for_ModemType];
 
 /**
  * @summary ModemType
@@ -88,7 +90,7 @@ type ModemType = _enum_for_ModemType | ENUMERATED;
  * @type {number}
  */
 export
-const ModemType_v18: _enum_for_ModemType.v18 = _enum_for_ModemType.v18; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v18: 0 = _enum_for_ModemType.v18; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v18
@@ -96,7 +98,7 @@ const ModemType_v18: _enum_for_ModemType.v18 = _enum_for_ModemType.v18; /* LONG_
  * @type {number}
  */
 export
-const v18: _enum_for_ModemType.v18 = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v18: 0 = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v22
@@ -108,7 +110,7 @@ const v18: _enum_for_ModemType.v18 = ModemType_v18; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ModemType_v22: _enum_for_ModemType.v22 = _enum_for_ModemType.v22; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v22: 1 = _enum_for_ModemType.v22; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v22
@@ -116,7 +118,7 @@ const ModemType_v22: _enum_for_ModemType.v22 = _enum_for_ModemType.v22; /* LONG_
  * @type {number}
  */
 export
-const v22: _enum_for_ModemType.v22 = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v22: 1 = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v22bis
@@ -128,7 +130,7 @@ const v22: _enum_for_ModemType.v22 = ModemType_v22; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ModemType_v22bis: _enum_for_ModemType.v22bis = _enum_for_ModemType.v22bis; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v22bis: 2 = _enum_for_ModemType.v22bis; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v22bis
@@ -136,7 +138,7 @@ const ModemType_v22bis: _enum_for_ModemType.v22bis = _enum_for_ModemType.v22bis;
  * @type {number}
  */
 export
-const v22bis: _enum_for_ModemType.v22bis = ModemType_v22bis; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v22bis: 2 = ModemType_v22bis; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v32
@@ -148,7 +150,7 @@ const v22bis: _enum_for_ModemType.v22bis = ModemType_v22bis; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const ModemType_v32: _enum_for_ModemType.v32 = _enum_for_ModemType.v32; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v32: 3 = _enum_for_ModemType.v32; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v32
@@ -156,7 +158,7 @@ const ModemType_v32: _enum_for_ModemType.v32 = _enum_for_ModemType.v32; /* LONG_
  * @type {number}
  */
 export
-const v32: _enum_for_ModemType.v32 = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v32: 3 = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v32bis
@@ -168,7 +170,7 @@ const v32: _enum_for_ModemType.v32 = ModemType_v32; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ModemType_v32bis: _enum_for_ModemType.v32bis = _enum_for_ModemType.v32bis; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v32bis: 4 = _enum_for_ModemType.v32bis; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v32bis
@@ -176,7 +178,7 @@ const ModemType_v32bis: _enum_for_ModemType.v32bis = _enum_for_ModemType.v32bis;
  * @type {number}
  */
 export
-const v32bis: _enum_for_ModemType.v32bis = ModemType_v32bis; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v32bis: 4 = ModemType_v32bis; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v34
@@ -188,7 +190,7 @@ const v32bis: _enum_for_ModemType.v32bis = ModemType_v32bis; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const ModemType_v34: _enum_for_ModemType.v34 = _enum_for_ModemType.v34; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v34: 5 = _enum_for_ModemType.v34; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v34
@@ -196,7 +198,7 @@ const ModemType_v34: _enum_for_ModemType.v34 = _enum_for_ModemType.v34; /* LONG_
  * @type {number}
  */
 export
-const v34: _enum_for_ModemType.v34 = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v34: 5 = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v90
@@ -208,7 +210,7 @@ const v34: _enum_for_ModemType.v34 = ModemType_v34; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ModemType_v90: _enum_for_ModemType.v90 = _enum_for_ModemType.v90; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v90: 6 = _enum_for_ModemType.v90; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v90
@@ -216,7 +218,7 @@ const ModemType_v90: _enum_for_ModemType.v90 = _enum_for_ModemType.v90; /* LONG_
  * @type {number}
  */
 export
-const v90: _enum_for_ModemType.v90 = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v90: 6 = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_v91
@@ -228,7 +230,7 @@ const v90: _enum_for_ModemType.v90 = ModemType_v90; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ModemType_v91: _enum_for_ModemType.v91 = _enum_for_ModemType.v91; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_v91: 7 = _enum_for_ModemType.v91; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v91
@@ -236,7 +238,7 @@ const ModemType_v91: _enum_for_ModemType.v91 = _enum_for_ModemType.v91; /* LONG_
  * @type {number}
  */
 export
-const v91: _enum_for_ModemType.v91 = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v91: 7 = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModemType_synchISDN
@@ -248,7 +250,7 @@ const v91: _enum_for_ModemType.v91 = ModemType_v91; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ModemType_synchISDN: _enum_for_ModemType.synchISDN = _enum_for_ModemType.synchISDN; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModemType_synchISDN: 8 = _enum_for_ModemType.synchISDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary synchISDN
@@ -256,9 +258,9 @@ const ModemType_synchISDN: _enum_for_ModemType.synchISDN = _enum_for_ModemType.s
  * @type {number}
  */
 export
-const synchISDN: _enum_for_ModemType.synchISDN = ModemType_synchISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ModemType: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_ModemType: $.ASN1Encoder<number> = $._encodeEnumerated;
+const synchISDN: 8 = ModemType_synchISDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ModemType: $.ASN1Decoder<ModemType> = $._decodeEnumerated as $.ASN1Decoder<ModemType>;
+export const _encode_ModemType: $.ASN1Encoder<ModemType> = $._encodeEnumerated as $.ASN1Encoder<ModemType>;
 
 
 /* eslint-enable */

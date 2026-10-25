@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_POWER_MODE {
-  normal = 0,
-  detect = 1,
-  sleep = 2,
-}
+export const _enum_for_BioAPI_POWER_MODE = {
+  normal: 0,
+  detect: 1,
+  sleep: 2,
+} as const;
+
+export type _enum_for_BioAPI_POWER_MODE = (typeof _enum_for_BioAPI_POWER_MODE)[keyof typeof _enum_for_BioAPI_POWER_MODE];
 
 
 /**
@@ -47,7 +49,7 @@ export type BioAPI_POWER_MODE = _enum_for_BioAPI_POWER_MODE | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_normal: _enum_for_BioAPI_POWER_MODE.normal = _enum_for_BioAPI_POWER_MODE.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_normal: 0 = _enum_for_BioAPI_POWER_MODE.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -55,7 +57,7 @@ export const BioAPI_POWER_MODE_normal: _enum_for_BioAPI_POWER_MODE.normal = _enu
  * @constant
  * @type {number}
  */
-export const normal: _enum_for_BioAPI_POWER_MODE.normal = BioAPI_POWER_MODE_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const normal: 0 = BioAPI_POWER_MODE_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,7 +65,7 @@ export const normal: _enum_for_BioAPI_POWER_MODE.normal = BioAPI_POWER_MODE_norm
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_detect: _enum_for_BioAPI_POWER_MODE.detect = _enum_for_BioAPI_POWER_MODE.detect; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_detect: 1 = _enum_for_BioAPI_POWER_MODE.detect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +73,7 @@ export const BioAPI_POWER_MODE_detect: _enum_for_BioAPI_POWER_MODE.detect = _enu
  * @constant
  * @type {number}
  */
-export const detect: _enum_for_BioAPI_POWER_MODE.detect = BioAPI_POWER_MODE_detect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const detect: 1 = BioAPI_POWER_MODE_detect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +81,7 @@ export const detect: _enum_for_BioAPI_POWER_MODE.detect = BioAPI_POWER_MODE_dete
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_sleep: _enum_for_BioAPI_POWER_MODE.sleep = _enum_for_BioAPI_POWER_MODE.sleep; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_sleep: 2 = _enum_for_BioAPI_POWER_MODE.sleep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,17 +89,17 @@ export const BioAPI_POWER_MODE_sleep: _enum_for_BioAPI_POWER_MODE.sleep = _enum_
  * @constant
  * @type {number}
  */
-export const sleep: _enum_for_BioAPI_POWER_MODE.sleep = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sleep: 2 = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_POWER_MODE: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_BioAPI_POWER_MODE: $.ASN1Decoder<BioAPI_POWER_MODE> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_POWER_MODE>;
 
 
 
 
-export const _encode_BioAPI_POWER_MODE: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_BioAPI_POWER_MODE: $.ASN1Encoder<BioAPI_POWER_MODE> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_POWER_MODE>;
 
 
 /* eslint-enable */

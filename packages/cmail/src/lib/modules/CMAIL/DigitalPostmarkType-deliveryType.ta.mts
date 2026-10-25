@@ -19,10 +19,12 @@ import * as $ from '@wildboar/asn1/functional';
  * XER text is `CertifiedMail`. ITU-T Rec. X.1341 (09/2015)
  * Table 1, §8.3, Annex B.
  */
-export enum _enum_for_DigitalPostmarkType_deliveryType {
+export const _enum_for_DigitalPostmarkType_deliveryType = {
   /** Sole named mode; CMTP `DELV certifiedMail`. */
-  certifiedMail = 0,
-}
+  certifiedMail: 0,
+} as const;
+
+export type _enum_for_DigitalPostmarkType_deliveryType = (typeof _enum_for_DigitalPostmarkType_deliveryType)[keyof typeof _enum_for_DigitalPostmarkType_deliveryType];
 
 
 /**
@@ -52,7 +54,7 @@ export type DigitalPostmarkType_deliveryType =
  * @constant
  * @type {number}
  */
-export const DigitalPostmarkType_deliveryType_certifiedMail: _enum_for_DigitalPostmarkType_deliveryType.certifiedMail = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DigitalPostmarkType_deliveryType_certifiedMail: 0 = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,17 +63,17 @@ export const DigitalPostmarkType_deliveryType_certifiedMail: _enum_for_DigitalPo
  * @constant
  * @type {number}
  */
-export const certifiedMail: _enum_for_DigitalPostmarkType_deliveryType.certifiedMail = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certifiedMail: 0 = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DigitalPostmarkType_deliveryType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_DigitalPostmarkType_deliveryType: $.ASN1Decoder<DigitalPostmarkType_deliveryType> = $._decodeEnumerated as $.ASN1Decoder<DigitalPostmarkType_deliveryType>;
 
 
 
 
-export const _encode_DigitalPostmarkType_deliveryType: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_DigitalPostmarkType_deliveryType: $.ASN1Encoder<DigitalPostmarkType_deliveryType> = $._encodeEnumerated as $.ASN1Encoder<DigitalPostmarkType_deliveryType>;
 
 
 /* eslint-enable */

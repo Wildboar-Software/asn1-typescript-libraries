@@ -28,12 +28,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_MappingType {
-  none = 0,
-  explicit = 1,
-  extractIDI = 2,
-  extractDSP = 3,
-}
+export const _enum_for_MappingType = {
+  none: 0,
+  explicit: 1,
+  extractIDI: 2,
+  extractDSP: 3,
+} as const;
+
+export type _enum_for_MappingType = (typeof _enum_for_MappingType)[keyof typeof _enum_for_MappingType];
 
 /**
  * @summary MappingType
@@ -84,7 +86,7 @@ export const MappingType: typeof _enum_for_MappingType = _enum_for_MappingType;
  * @constant
  * @type {number}
  */
-export const MappingType_none: _enum_for_MappingType.none =
+export const MappingType_none: 0 =
   MappingType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -92,7 +94,7 @@ export const MappingType_none: _enum_for_MappingType.none =
  * @constant
  * @type {number}
  */
-export const none: _enum_for_MappingType.none =
+export const none: 0 =
   MappingType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +109,7 @@ export const none: _enum_for_MappingType.none =
  * @constant
  * @type {number}
  */
-export const MappingType_explicit: _enum_for_MappingType.explicit =
+export const MappingType_explicit: 1 =
   MappingType.explicit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +117,7 @@ export const MappingType_explicit: _enum_for_MappingType.explicit =
  * @constant
  * @type {number}
  */
-export const explicit: _enum_for_MappingType.explicit =
+export const explicit: 1 =
   MappingType.explicit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +132,7 @@ export const explicit: _enum_for_MappingType.explicit =
  * @constant
  * @type {number}
  */
-export const MappingType_extractIDI: _enum_for_MappingType.extractIDI =
+export const MappingType_extractIDI: 2 =
   MappingType.extractIDI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +140,7 @@ export const MappingType_extractIDI: _enum_for_MappingType.extractIDI =
  * @constant
  * @type {number}
  */
-export const extractIDI: _enum_for_MappingType.extractIDI =
+export const extractIDI: 2 =
   MappingType.extractIDI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +155,7 @@ export const extractIDI: _enum_for_MappingType.extractIDI =
  * @constant
  * @type {number}
  */
-export const MappingType_extractDSP: _enum_for_MappingType.extractDSP =
+export const MappingType_extractDSP: 3 =
   MappingType.extractDSP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -161,7 +163,7 @@ export const MappingType_extractDSP: _enum_for_MappingType.extractDSP =
  * @constant
  * @type {number}
  */
-export const extractDSP: _enum_for_MappingType.extractDSP =
+export const extractDSP: 3 =
   MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

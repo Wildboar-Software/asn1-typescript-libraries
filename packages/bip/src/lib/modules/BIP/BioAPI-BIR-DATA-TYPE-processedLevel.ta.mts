@@ -13,11 +13,13 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel {
-  raw = 0,
-  intermediate = 1,
-  processed = 2,
-}
+export const _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel = {
+  raw: 0,
+  intermediate: 1,
+  processed: 2,
+} as const;
+
+export type _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel = (typeof _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel)[keyof typeof _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel];
 
 
 /**
@@ -50,7 +52,7 @@ export type BioAPI_BIR_DATA_TYPE_processedLevel =
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_DATA_TYPE_processedLevel_raw: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.raw = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.raw; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_DATA_TYPE_processedLevel_raw: 0 = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.raw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -58,7 +60,7 @@ export const BioAPI_BIR_DATA_TYPE_processedLevel_raw: _enum_for_BioAPI_BIR_DATA_
  * @constant
  * @type {number}
  */
-export const raw: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.raw = BioAPI_BIR_DATA_TYPE_processedLevel_raw; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const raw: 0 = BioAPI_BIR_DATA_TYPE_processedLevel_raw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +68,7 @@ export const raw: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.raw = BioAPI_BIR
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_DATA_TYPE_processedLevel_intermediate: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.intermediate = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.intermediate; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_DATA_TYPE_processedLevel_intermediate: 1 = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.intermediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +76,7 @@ export const BioAPI_BIR_DATA_TYPE_processedLevel_intermediate: _enum_for_BioAPI_
  * @constant
  * @type {number}
  */
-export const intermediate: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.intermediate = BioAPI_BIR_DATA_TYPE_processedLevel_intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const intermediate: 1 = BioAPI_BIR_DATA_TYPE_processedLevel_intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +84,7 @@ export const intermediate: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.interme
  * @constant
  * @type {number}
  */
-export const BioAPI_BIR_DATA_TYPE_processedLevel_processed: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.processed = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.processed; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_BIR_DATA_TYPE_processedLevel_processed: 2 = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.processed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,7 +92,7 @@ export const BioAPI_BIR_DATA_TYPE_processedLevel_processed: _enum_for_BioAPI_BIR
  * @constant
  * @type {number}
  */
-export const processed: _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel.processed = BioAPI_BIR_DATA_TYPE_processedLevel_processed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const processed: 2 = BioAPI_BIR_DATA_TYPE_processedLevel_processed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_BioAPI_BIR_DATA_TYPE_processedLevel: $.ASN1Decoder<BioAPI_BIR_DATA_TYPE_processedLevel> | null = null;

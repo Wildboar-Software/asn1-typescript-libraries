@@ -7,25 +7,27 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_ServiceState {
+const _enum_for_ServiceState = {
     /**
      * The termination is being tested (clause 7.1.5.1.1). Entered and left only
      * by Modify from the MGC. While in Test the MG sends only Forced or
      * Graceful ServiceChange (Annex F.6).
      */
-    test = 0,
+    test: 0,
     /**
      * The termination is out of service and cannot carry traffic (clause
      * 7.1.5.1.1). Add and Move are not used. Reaching this state from InService
      * is a ServiceChange, not a Modify.
      */
-    outOfSvc = 1,
+    outOfSvc: 1,
     /**
      * The termination is in service. This is the default (clause 7.1.5.1.1). On
      * Root, a Restart ServiceChange marks every termination InService.
      */
-    inSvc = 2,
-}
+    inSvc: 2,
+} as const;
+
+export type _enum_for_ServiceState = (typeof _enum_for_ServiceState)[keyof typeof _enum_for_ServiceState];
 
 /**
  * @summary ServiceState
@@ -72,7 +74,7 @@ type ServiceState = _enum_for_ServiceState | ENUMERATED;
  * @type {number}
  */
 export
-const ServiceState_test: _enum_for_ServiceState.test = _enum_for_ServiceState.test; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_test: 0 = _enum_for_ServiceState.test; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary test
@@ -80,7 +82,7 @@ const ServiceState_test: _enum_for_ServiceState.test = _enum_for_ServiceState.te
  * @type {number}
  */
 export
-const test: _enum_for_ServiceState.test = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
+const test: 0 = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceState_outOfSvc
@@ -94,7 +96,7 @@ const test: _enum_for_ServiceState.test = ServiceState_test; /* SHORT_NAMED_ENUM
  * @type {number}
  */
 export
-const ServiceState_outOfSvc: _enum_for_ServiceState.outOfSvc = _enum_for_ServiceState.outOfSvc; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_outOfSvc: 1 = _enum_for_ServiceState.outOfSvc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfSvc
@@ -102,7 +104,7 @@ const ServiceState_outOfSvc: _enum_for_ServiceState.outOfSvc = _enum_for_Service
  * @type {number}
  */
 export
-const outOfSvc: _enum_for_ServiceState.outOfSvc = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outOfSvc: 1 = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceState_inSvc
@@ -115,7 +117,7 @@ const outOfSvc: _enum_for_ServiceState.outOfSvc = ServiceState_outOfSvc; /* SHOR
  * @type {number}
  */
 export
-const ServiceState_inSvc: _enum_for_ServiceState.inSvc = _enum_for_ServiceState.inSvc; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_inSvc: 2 = _enum_for_ServiceState.inSvc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inSvc
@@ -123,9 +125,9 @@ const ServiceState_inSvc: _enum_for_ServiceState.inSvc = _enum_for_ServiceState.
  * @type {number}
  */
 export
-const inSvc: _enum_for_ServiceState.inSvc = ServiceState_inSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ServiceState: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_ServiceState: $.ASN1Encoder<number> = $._encodeEnumerated;
+const inSvc: 2 = ServiceState_inSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ServiceState: $.ASN1Decoder<ServiceState> = $._decodeEnumerated as $.ASN1Decoder<ServiceState>;
+export const _encode_ServiceState: $.ASN1Encoder<ServiceState> = $._encodeEnumerated as $.ASN1Encoder<ServiceState>;
 
 
 /* eslint-enable */

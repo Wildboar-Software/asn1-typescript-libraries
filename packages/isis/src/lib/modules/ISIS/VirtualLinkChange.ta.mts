@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_VirtualLinkChange {
-  deleted = 0,
-  created = 1,
-}
+export const _enum_for_VirtualLinkChange = {
+  deleted: 0,
+  created: 1,
+} as const;
+
+export type _enum_for_VirtualLinkChange = (typeof _enum_for_VirtualLinkChange)[keyof typeof _enum_for_VirtualLinkChange];
 
 /**
  * @summary VirtualLinkChange
@@ -88,7 +90,7 @@ export const VirtualLinkChange: typeof _enum_for_VirtualLinkChange = _enum_for_V
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_deleted: _enum_for_VirtualLinkChange.deleted =
+export const VirtualLinkChange_deleted: 0 =
   VirtualLinkChange.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +98,7 @@ export const VirtualLinkChange_deleted: _enum_for_VirtualLinkChange.deleted =
  * @constant
  * @type {number}
  */
-export const deleted: _enum_for_VirtualLinkChange.deleted =
+export const deleted: 0 =
   VirtualLinkChange.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +112,7 @@ export const deleted: _enum_for_VirtualLinkChange.deleted =
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_created: _enum_for_VirtualLinkChange.created =
+export const VirtualLinkChange_created: 1 =
   VirtualLinkChange.created; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +120,7 @@ export const VirtualLinkChange_created: _enum_for_VirtualLinkChange.created =
  * @constant
  * @type {number}
  */
-export const created: _enum_for_VirtualLinkChange.created =
+export const created: 1 =
   VirtualLinkChange.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

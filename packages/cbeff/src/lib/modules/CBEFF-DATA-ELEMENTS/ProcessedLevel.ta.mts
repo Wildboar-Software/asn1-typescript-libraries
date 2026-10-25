@@ -24,12 +24,14 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_ProcessedLevel {
-  no_value_available = 0,
-  raw = 1,
-  intermediate = 2,
-  processed = 3,
-}
+export const _enum_for_ProcessedLevel = {
+  no_value_available: 0,
+  raw: 1,
+  intermediate: 2,
+  processed: 3,
+} as const;
+
+export type _enum_for_ProcessedLevel = (typeof _enum_for_ProcessedLevel)[keyof typeof _enum_for_ProcessedLevel];
 
 /**
  * @summary ProcessedLevel
@@ -66,7 +68,7 @@ export const ProcessedLevel: typeof _enum_for_ProcessedLevel = _enum_for_Process
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_no_value_available: _enum_for_ProcessedLevel.no_value_available =
+export const ProcessedLevel_no_value_available: 0 =
   ProcessedLevel.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -74,7 +76,7 @@ export const ProcessedLevel_no_value_available: _enum_for_ProcessedLevel.no_valu
  * @constant
  * @type {number}
  */
-export const no_value_available: _enum_for_ProcessedLevel.no_value_available =
+export const no_value_available: 0 =
   ProcessedLevel.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +84,7 @@ export const no_value_available: _enum_for_ProcessedLevel.no_value_available =
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_raw: _enum_for_ProcessedLevel.raw =
+export const ProcessedLevel_raw: 1 =
   ProcessedLevel.raw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +92,7 @@ export const ProcessedLevel_raw: _enum_for_ProcessedLevel.raw =
  * @constant
  * @type {number}
  */
-export const raw: _enum_for_ProcessedLevel.raw =
+export const raw: 1 =
   ProcessedLevel.raw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +100,7 @@ export const raw: _enum_for_ProcessedLevel.raw =
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_intermediate: _enum_for_ProcessedLevel.intermediate =
+export const ProcessedLevel_intermediate: 2 =
   ProcessedLevel.intermediate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +108,7 @@ export const ProcessedLevel_intermediate: _enum_for_ProcessedLevel.intermediate 
  * @constant
  * @type {number}
  */
-export const intermediate: _enum_for_ProcessedLevel.intermediate =
+export const intermediate: 2 =
   ProcessedLevel.intermediate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +116,7 @@ export const intermediate: _enum_for_ProcessedLevel.intermediate =
  * @constant
  * @type {number}
  */
-export const ProcessedLevel_processed: _enum_for_ProcessedLevel.processed =
+export const ProcessedLevel_processed: 3 =
   ProcessedLevel.processed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,14 +124,14 @@ export const ProcessedLevel_processed: _enum_for_ProcessedLevel.processed =
  * @constant
  * @type {number}
  */
-export const processed: _enum_for_ProcessedLevel.processed =
+export const processed: 3 =
   ProcessedLevel.processed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ProcessedLevel: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_ProcessedLevel: $.ASN1Decoder<ProcessedLevel> = $._decodeEnumerated as $.ASN1Decoder<ProcessedLevel>;
 
 
-export const _encode_ProcessedLevel: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_ProcessedLevel: $.ASN1Encoder<ProcessedLevel> = $._encodeEnumerated as $.ASN1Encoder<ProcessedLevel>;
 
 
 /* eslint-enable */

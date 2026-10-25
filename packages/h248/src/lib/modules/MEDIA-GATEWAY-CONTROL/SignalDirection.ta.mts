@@ -7,23 +7,25 @@ import * as $ from "@wildboar/asn1/functional";
 
 
 export
-enum _enum_for_SignalDirection {
+const _enum_for_SignalDirection = {
     /**
      * The signal is played into the context, toward the other terminations
      * (clause 7.1.11.9).
      */
-    internal = 0,
+    internal: 0,
     /**
      * The signal is sent from the MG toward an external point. This is the
      * usual default (clause 7.1.11.9).
      */
-    external = 1,
+    external: 1,
     /**
      * The signal is sent both into the context and toward the outside (clause
      * 7.1.11.9). The Recommendation's prose calls this "bothway".
      */
-    both = 2,
-}
+    both: 2,
+} as const;
+
+export type _enum_for_SignalDirection = (typeof _enum_for_SignalDirection)[keyof typeof _enum_for_SignalDirection];
 
 /**
  * @summary SignalDirection
@@ -65,7 +67,7 @@ type SignalDirection = _enum_for_SignalDirection | ENUMERATED;
  * @type {number}
  */
 export
-const SignalDirection_internal: _enum_for_SignalDirection.internal = _enum_for_SignalDirection.internal; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalDirection_internal: 0 = _enum_for_SignalDirection.internal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal
@@ -73,7 +75,7 @@ const SignalDirection_internal: _enum_for_SignalDirection.internal = _enum_for_S
  * @type {number}
  */
 export
-const internal: _enum_for_SignalDirection.internal = SignalDirection_internal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internal: 0 = SignalDirection_internal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalDirection_external
@@ -86,7 +88,7 @@ const internal: _enum_for_SignalDirection.internal = SignalDirection_internal; /
  * @type {number}
  */
 export
-const SignalDirection_external: _enum_for_SignalDirection.external = _enum_for_SignalDirection.external; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalDirection_external: 1 = _enum_for_SignalDirection.external; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary external
@@ -94,7 +96,7 @@ const SignalDirection_external: _enum_for_SignalDirection.external = _enum_for_S
  * @type {number}
  */
 export
-const external: _enum_for_SignalDirection.external = SignalDirection_external; /* SHORT_NAMED_ENUMERATED_VALUE */
+const external: 1 = SignalDirection_external; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalDirection_both
@@ -107,7 +109,7 @@ const external: _enum_for_SignalDirection.external = SignalDirection_external; /
  * @type {number}
  */
 export
-const SignalDirection_both: _enum_for_SignalDirection.both = _enum_for_SignalDirection.both; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalDirection_both: 2 = _enum_for_SignalDirection.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
@@ -115,9 +117,9 @@ const SignalDirection_both: _enum_for_SignalDirection.both = _enum_for_SignalDir
  * @type {number}
  */
 export
-const both: _enum_for_SignalDirection.both = SignalDirection_both; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SignalDirection: $.ASN1Decoder<number> = $._decodeEnumerated;
-export const _encode_SignalDirection: $.ASN1Encoder<number> = $._encodeEnumerated;
+const both: 2 = SignalDirection_both; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_SignalDirection: $.ASN1Decoder<SignalDirection> = $._decodeEnumerated as $.ASN1Decoder<SignalDirection>;
+export const _encode_SignalDirection: $.ASN1Encoder<SignalDirection> = $._encodeEnumerated as $.ASN1Encoder<SignalDirection>;
 
 
 /* eslint-enable */

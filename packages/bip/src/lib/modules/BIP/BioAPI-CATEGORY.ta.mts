@@ -13,12 +13,14 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_BioAPI_CATEGORY {
-  archive = 0,
-  comparisonAlgorithm = 1,
-  processingAlgorithm = 2,
-  sensor = 3,
-}
+export const _enum_for_BioAPI_CATEGORY = {
+  archive: 0,
+  comparisonAlgorithm: 1,
+  processingAlgorithm: 2,
+  sensor: 3,
+} as const;
+
+export type _enum_for_BioAPI_CATEGORY = (typeof _enum_for_BioAPI_CATEGORY)[keyof typeof _enum_for_BioAPI_CATEGORY];
 
 
 /**
@@ -52,7 +54,7 @@ export type BioAPI_CATEGORY = _enum_for_BioAPI_CATEGORY | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_archive: _enum_for_BioAPI_CATEGORY.archive = _enum_for_BioAPI_CATEGORY.archive; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_archive: 0 = _enum_for_BioAPI_CATEGORY.archive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +62,7 @@ export const BioAPI_CATEGORY_archive: _enum_for_BioAPI_CATEGORY.archive = _enum_
  * @constant
  * @type {number}
  */
-export const archive: _enum_for_BioAPI_CATEGORY.archive = BioAPI_CATEGORY_archive; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const archive: 0 = BioAPI_CATEGORY_archive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +70,7 @@ export const archive: _enum_for_BioAPI_CATEGORY.archive = BioAPI_CATEGORY_archiv
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_comparisonAlgorithm: _enum_for_BioAPI_CATEGORY.comparisonAlgorithm = _enum_for_BioAPI_CATEGORY.comparisonAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_comparisonAlgorithm: 1 = _enum_for_BioAPI_CATEGORY.comparisonAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +78,7 @@ export const BioAPI_CATEGORY_comparisonAlgorithm: _enum_for_BioAPI_CATEGORY.comp
  * @constant
  * @type {number}
  */
-export const comparisonAlgorithm: _enum_for_BioAPI_CATEGORY.comparisonAlgorithm = BioAPI_CATEGORY_comparisonAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const comparisonAlgorithm: 1 = BioAPI_CATEGORY_comparisonAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +86,7 @@ export const comparisonAlgorithm: _enum_for_BioAPI_CATEGORY.comparisonAlgorithm 
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_processingAlgorithm: _enum_for_BioAPI_CATEGORY.processingAlgorithm = _enum_for_BioAPI_CATEGORY.processingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_processingAlgorithm: 2 = _enum_for_BioAPI_CATEGORY.processingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +94,7 @@ export const BioAPI_CATEGORY_processingAlgorithm: _enum_for_BioAPI_CATEGORY.proc
  * @constant
  * @type {number}
  */
-export const processingAlgorithm: _enum_for_BioAPI_CATEGORY.processingAlgorithm = BioAPI_CATEGORY_processingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const processingAlgorithm: 2 = BioAPI_CATEGORY_processingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -100,7 +102,7 @@ export const processingAlgorithm: _enum_for_BioAPI_CATEGORY.processingAlgorithm 
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_sensor: _enum_for_BioAPI_CATEGORY.sensor = _enum_for_BioAPI_CATEGORY.sensor; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_sensor: 3 = _enum_for_BioAPI_CATEGORY.sensor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -108,17 +110,17 @@ export const BioAPI_CATEGORY_sensor: _enum_for_BioAPI_CATEGORY.sensor = _enum_fo
  * @constant
  * @type {number}
  */
-export const sensor: _enum_for_BioAPI_CATEGORY.sensor = BioAPI_CATEGORY_sensor; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensor: 3 = BioAPI_CATEGORY_sensor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_CATEGORY: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_BioAPI_CATEGORY: $.ASN1Decoder<BioAPI_CATEGORY> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_CATEGORY>;
 
 
 
 
-export const _encode_BioAPI_CATEGORY: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_BioAPI_CATEGORY: $.ASN1Encoder<BioAPI_CATEGORY> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_CATEGORY>;
 
 
 /* eslint-enable */

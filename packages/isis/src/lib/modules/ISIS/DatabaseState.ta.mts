@@ -30,11 +30,13 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_DatabaseState {
-  off = 0,
-  on = 1,
-  waiting = 2,
-}
+export const _enum_for_DatabaseState = {
+  off: 0,
+  on: 1,
+  waiting: 2,
+} as const;
+
+export type _enum_for_DatabaseState = (typeof _enum_for_DatabaseState)[keyof typeof _enum_for_DatabaseState];
 
 /**
  * @summary DatabaseState
@@ -89,7 +91,7 @@ export const DatabaseState: typeof _enum_for_DatabaseState = _enum_for_DatabaseS
  * @constant
  * @type {number}
  */
-export const DatabaseState_off: _enum_for_DatabaseState.off =
+export const DatabaseState_off: 0 =
   DatabaseState.off; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +99,7 @@ export const DatabaseState_off: _enum_for_DatabaseState.off =
  * @constant
  * @type {number}
  */
-export const off: _enum_for_DatabaseState.off =
+export const off: 0 =
   DatabaseState.off; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +114,7 @@ export const off: _enum_for_DatabaseState.off =
  * @constant
  * @type {number}
  */
-export const DatabaseState_on: _enum_for_DatabaseState.on =
+export const DatabaseState_on: 1 =
   DatabaseState.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +122,7 @@ export const DatabaseState_on: _enum_for_DatabaseState.on =
  * @constant
  * @type {number}
  */
-export const on: _enum_for_DatabaseState.on =
+export const on: 1 =
   DatabaseState.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -136,7 +138,7 @@ export const on: _enum_for_DatabaseState.on =
  * @constant
  * @type {number}
  */
-export const DatabaseState_waiting: _enum_for_DatabaseState.waiting =
+export const DatabaseState_waiting: 2 =
   DatabaseState.waiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -144,7 +146,7 @@ export const DatabaseState_waiting: _enum_for_DatabaseState.waiting =
  * @constant
  * @type {number}
  */
-export const waiting: _enum_for_DatabaseState.waiting =
+export const waiting: 2 =
   DatabaseState.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 

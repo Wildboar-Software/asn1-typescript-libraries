@@ -30,10 +30,12 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * @enum {number}
  */
-export enum _enum_for_CMIPAbortSource {
-  cmiseServiceUser = 0,
-  cmiseServiceProvider = 1,
-}
+export const _enum_for_CMIPAbortSource = {
+  cmiseServiceUser: 0,
+  cmiseServiceProvider: 1,
+} as const;
+
+export type _enum_for_CMIPAbortSource = (typeof _enum_for_CMIPAbortSource)[keyof typeof _enum_for_CMIPAbortSource];
 
 
 /**
@@ -76,7 +78,7 @@ export const CMIPAbortSource: typeof _enum_for_CMIPAbortSource = _enum_for_CMIPA
  * @constant
  * @type {number}
  */
-export const CMIPAbortSource_cmiseServiceUser: _enum_for_CMIPAbortSource.cmiseServiceUser =
+export const CMIPAbortSource_cmiseServiceUser: 0 =
   CMIPAbortSource.cmiseServiceUser; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -89,7 +91,7 @@ export const CMIPAbortSource_cmiseServiceUser: _enum_for_CMIPAbortSource.cmiseSe
  * @constant
  * @type {number}
  */
-export const cmiseServiceUser: _enum_for_CMIPAbortSource.cmiseServiceUser =
+export const cmiseServiceUser: 0 =
   CMIPAbortSource.cmiseServiceUser; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -103,7 +105,7 @@ export const cmiseServiceUser: _enum_for_CMIPAbortSource.cmiseServiceUser =
  * @constant
  * @type {number}
  */
-export const CMIPAbortSource_cmiseServiceProvider: _enum_for_CMIPAbortSource.cmiseServiceProvider =
+export const CMIPAbortSource_cmiseServiceProvider: 1 =
   CMIPAbortSource.cmiseServiceProvider; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -116,18 +118,18 @@ export const CMIPAbortSource_cmiseServiceProvider: _enum_for_CMIPAbortSource.cmi
  * @constant
  * @type {number}
  */
-export const cmiseServiceProvider: _enum_for_CMIPAbortSource.cmiseServiceProvider =
+export const cmiseServiceProvider: 1 =
   CMIPAbortSource.cmiseServiceProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CMIPAbortSource: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_CMIPAbortSource: $.ASN1Decoder<CMIPAbortSource> = $._decodeEnumerated as $.ASN1Decoder<CMIPAbortSource>;
 
 
 
 
-export const _encode_CMIPAbortSource: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_CMIPAbortSource: $.ASN1Encoder<CMIPAbortSource> = $._encodeEnumerated as $.ASN1Encoder<CMIPAbortSource>;
 
 
 /* eslint-enable */

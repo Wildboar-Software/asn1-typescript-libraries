@@ -13,10 +13,12 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 
 
-export enum _enum_for_AttributeIdError_errorStatus {
-  accessDenied = 2,
-  noSuchAttribute = 5,
-}
+export const _enum_for_AttributeIdError_errorStatus = {
+  accessDenied: 2,
+  noSuchAttribute: 5,
+} as const;
+
+export type _enum_for_AttributeIdError_errorStatus = (typeof _enum_for_AttributeIdError_errorStatus)[keyof typeof _enum_for_AttributeIdError_errorStatus];
 
 
 /**
@@ -45,7 +47,7 @@ export type AttributeIdError_errorStatus =
  * @constant
  * @type {number}
  */
-export const AttributeIdError_errorStatus_accessDenied: _enum_for_AttributeIdError_errorStatus.accessDenied = _enum_for_AttributeIdError_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeIdError_errorStatus_accessDenied: 2 = _enum_for_AttributeIdError_errorStatus.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,7 +55,7 @@ export const AttributeIdError_errorStatus_accessDenied: _enum_for_AttributeIdErr
  * @constant
  * @type {number}
  */
-export const accessDenied: _enum_for_AttributeIdError_errorStatus.accessDenied = AttributeIdError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied: 2 = AttributeIdError_errorStatus_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +63,7 @@ export const accessDenied: _enum_for_AttributeIdError_errorStatus.accessDenied =
  * @constant
  * @type {number}
  */
-export const AttributeIdError_errorStatus_noSuchAttribute: _enum_for_AttributeIdError_errorStatus.noSuchAttribute = _enum_for_AttributeIdError_errorStatus.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AttributeIdError_errorStatus_noSuchAttribute: 5 = _enum_for_AttributeIdError_errorStatus.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,17 +71,17 @@ export const AttributeIdError_errorStatus_noSuchAttribute: _enum_for_AttributeId
  * @constant
  * @type {number}
  */
-export const noSuchAttribute: _enum_for_AttributeIdError_errorStatus.noSuchAttribute = AttributeIdError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAttribute: 5 = AttributeIdError_errorStatus_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AttributeIdError_errorStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _decode_AttributeIdError_errorStatus: $.ASN1Decoder<AttributeIdError_errorStatus> = $._decodeEnumerated as $.ASN1Decoder<AttributeIdError_errorStatus>;
 
 
 
 
-export const _encode_AttributeIdError_errorStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
+export const _encode_AttributeIdError_errorStatus: $.ASN1Encoder<AttributeIdError_errorStatus> = $._encodeEnumerated as $.ASN1Encoder<AttributeIdError_errorStatus>;
 
 
 /* eslint-enable */
