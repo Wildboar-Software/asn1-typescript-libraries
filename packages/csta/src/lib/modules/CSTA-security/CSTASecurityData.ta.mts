@@ -6,7 +6,7 @@ import {
     type INTEGER,
     type SEQUENCE,
     type SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";

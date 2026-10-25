@@ -5,7 +5,7 @@ import {
     type NULL,
     type OCTET_STRING,
     type OPTIONAL,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError

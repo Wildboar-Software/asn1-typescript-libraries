@@ -6,7 +6,7 @@ import {
     type SEQUENCE,
     type SET,
     type IA5String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { type GlobalCallLinkageID, _decode_GlobalCallLinkageID, _encode_GlobalCallLinkageID } from "../CSTA-call-control/GlobalCallLinkageID.ta.mjs";

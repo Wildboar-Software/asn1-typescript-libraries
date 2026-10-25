@@ -5,7 +5,7 @@ import {
     type OBJECT_IDENTIFIER,
     type SEQUENCE,
     type SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";

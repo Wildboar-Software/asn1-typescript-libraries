@@ -2,7 +2,7 @@ import {
     type OPTIONAL,
     type BOOLEAN,
     type INTEGER,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";

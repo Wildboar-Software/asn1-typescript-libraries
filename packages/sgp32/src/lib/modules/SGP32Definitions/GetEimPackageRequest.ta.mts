@@ -3,7 +3,7 @@ import {
     type NULL,
     type OCTET_STRING,
     type OPTIONAL,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";

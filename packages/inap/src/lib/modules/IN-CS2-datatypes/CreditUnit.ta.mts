@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import { maxCreditUnit } from "./maxCreditUnit.va.mjs";

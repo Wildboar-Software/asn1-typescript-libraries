@@ -6,7 +6,7 @@ import {
     type SEQUENCE,
     type SET,
     type IA5String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { type DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";

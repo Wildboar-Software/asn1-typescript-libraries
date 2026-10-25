@@ -3,7 +3,7 @@ import {
     type INTEGER,
     type OPTIONAL,
     type VisibleString,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";

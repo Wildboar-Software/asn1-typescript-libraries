@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     type SEQUENCE,
     type SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { type PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CSTA-capability-exchange/PrivateEvent.ta.mjs";

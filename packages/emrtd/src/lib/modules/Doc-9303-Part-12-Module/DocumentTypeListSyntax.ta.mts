@@ -2,7 +2,7 @@
 import {
     ASN1CharactersError,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
     isPrintableCharacter,

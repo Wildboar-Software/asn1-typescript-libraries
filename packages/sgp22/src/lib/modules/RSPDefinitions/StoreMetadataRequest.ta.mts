@@ -4,7 +4,7 @@ import {
     type OCTET_STRING,
     type OPTIONAL,
     type UTF8String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1ConstructionError } from "@wildboar/asn1";

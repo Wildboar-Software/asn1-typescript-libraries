@@ -68,7 +68,7 @@ function _decode_ServiceChangeAddress (el: _Element): ServiceChangeAddress {
     "CONTEXT 5": [ "mtpAddress", $._decode_implicit<MtpAddress>(() => _decode_MtpAddress) ]
 }); }
     const value = _cached_decoder_for_ServiceChangeAddress(el);
-    if (!(value instanceof _Element) && "portNumber" in value) {
+    if (!(_Element.isElement(value)) && "portNumber" in value) {
         const n = typeof value.portNumber === "bigint" ? value.portNumber : BigInt(value.portNumber);
         if (n < 0n || n > 65535n) {
             throw new ASN1OverflowError("ServiceChangeAddress.portNumber violates INTEGER range");

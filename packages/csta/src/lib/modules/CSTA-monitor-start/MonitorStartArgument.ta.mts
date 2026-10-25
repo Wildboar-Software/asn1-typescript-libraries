@@ -5,7 +5,7 @@ import {
     type OPTIONAL,
     type SEQUENCE,
     type SET,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { type MonitorObject, _decode_MonitorObject, _encode_MonitorObject } from "../CSTA-status-reporting/MonitorObject.ta.mjs";

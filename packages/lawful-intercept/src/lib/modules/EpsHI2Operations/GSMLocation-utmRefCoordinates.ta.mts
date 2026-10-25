@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type PrintableString,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     type EXTERNAL,
     type OCTET_STRING
 } from "@wildboar/asn1";

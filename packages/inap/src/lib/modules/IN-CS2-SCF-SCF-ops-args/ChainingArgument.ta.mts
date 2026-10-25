@@ -2,7 +2,7 @@
 import {
     type OPTIONAL,
     type UTCTime,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     BERElement
 } from "@wildboar/asn1";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     type BOOLEAN,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,

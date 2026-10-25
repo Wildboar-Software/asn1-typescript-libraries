@@ -4,7 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     type INTEGER,
     type IA5String,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { EncodingAlgorithm, _decode_EncodingAlgorithm, _encode_EncodingAlgorithm } from "../CSTA-device-feature-types/EncodingAlgorithm.ta.mjs";
