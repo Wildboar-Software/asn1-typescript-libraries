@@ -1,11 +1,13 @@
+import { ASN1Element } from "@wildboar/asn1";
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.mjs";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 import type { AttributeValue } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.mjs";
+import type { SubstringFilter_substrings_substring } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.mjs";
 import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue.mjs";
 import type EqualityMatcher from "../lib/types/EqualityMatcher.mjs";
-import SubstringSelection from "../lib/types/SubstringSelection.mjs";
 import type SubstringsMatcher from "../lib/types/SubstringsMatcher.mjs";
+import type { DecodedSubstrings } from "../lib/types/SubstringsMatcher.mjs";
 import type OrderingMatcher from "../lib/types/OrderingMatcher.mjs";
 import type ApproxMatcher from "../lib/types/ApproxMatcher.mjs";
 import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder.mjs";
@@ -139,6 +141,54 @@ const DEFAULT_RECURSION_TTL: number = 20;
  *  if it could not be determined whether the entry matches or not.
  * @function
  */
+
+/**
+ * Decode every substring of an LDAP `SubstringFilter` with the
+ * attribute's equality assertion decoder. `initial` must be first,
+ * `final` must be last, and at least one piece must be present.
+ * An illegal sequence is Undefined.
+ */
+function decodeSubstringFilter (
+    substrings: readonly SubstringFilter_substrings_substring[],
+    decode: (value: Uint8Array) => ASN1Element,
+): DecodedSubstrings | undefined {
+    if (substrings.length === 0) {
+        return undefined;
+    }
+    let initial: ASN1Element | undefined;
+    const any: ASN1Element[] = [];
+    let final: ASN1Element | undefined;
+    for (let i = 0; i < substrings.length; i++) {
+        const component = substrings[i];
+        if (ASN1Element.isElement(component)) {
+            return undefined;
+        }
+        if ("initial" in component) {
+            if (i !== 0 || initial) {
+                return undefined;
+            }
+            initial = decode(component.initial);
+            continue;
+        }
+        if ("final" in component) {
+            if (i !== substrings.length - 1 || final) {
+                return undefined;
+            }
+            final = decode(component.final);
+            continue;
+        }
+        if ("any_" in component) {
+            any.push(decode(component.any_));
+            continue;
+        }
+        return undefined;
+    }
+    if (!initial && any.length === 0 && !final) {
+        return undefined;
+    }
+    return { initial, any, final };
+}
+
 export
 function evaluateFilter (
     filter: Filter,
@@ -222,34 +272,23 @@ function evaluateFilter (
             if (!options.permittedToMatch(sf.type_)) {
                 return undefined;
             }
+            if (!assertionDecoder) {
+                return undefined;
+            }
+            const assertion = decodeSubstringFilter(sf.substrings, assertionDecoder);
+            if (!assertion) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(attr.type_, sf.type_))
                 .some((attr) => attr.vals
-                    .some((val) => sf.substrings
-                        .every((ss) => {
-                            if (!options.permittedToMatch(sf.type_, val)) {
-                                return false;
-                            }
-                            const decode = assertionDecoder
-                                ? assertionDecoder
-                                : options.getLDAPSyntaxDecoder(attr.type_);
-                            if (!decode) {
-                                return undefined;
-                            }
-                            const decodedValue = decode(val);
-                            if ("initial" in ss) {
-                                const decodedAssertion = decode(ss.initial);
-                                return matcher(decodedAssertion, decodedValue, SubstringSelection.initial);
-                            } else if ("any_" in ss) {
-                                const decodedAssertion = decode(ss.any_);
-                                return matcher(decodedAssertion, decodedValue, SubstringSelection.any_);
-                            } else if ("final" in ss) {
-                                const decodedAssertion = decode(ss.final);
-                                return matcher(decodedAssertion, decodedValue, SubstringSelection.final);
-                            } else {
-                                return undefined;
-                            }
-                        })));
+                    .some((val) => {
+                        if (!options.permittedToMatch(sf.type_, val)) {
+                            return false;
+                        }
+                        const decodedValue = assertionDecoder(val);
+                        return matcher(assertion, decodedValue);
+                    }));
         } catch {
             return undefined;
         }

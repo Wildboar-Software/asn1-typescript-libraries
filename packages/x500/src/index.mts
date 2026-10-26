@@ -76,7 +76,6 @@ export type { ResultOrError } from "./lib/types/ResultOrError.mjs";
 export type { Result } from "./lib/types/Result.mjs";
 export type { StringDecoder } from "./lib/types/StringDecoder.mjs";
 export type { StringEncoder } from "./lib/types/StringEncoder.mjs";
-export { SubstringSelection } from "./lib/types/SubstringSelection.mjs";
 export type { SubstringsMatcher } from "./lib/types/SubstringsMatcher.mjs";
 export {
     bacACDF,

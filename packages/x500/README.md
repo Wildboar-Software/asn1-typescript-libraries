@@ -191,10 +191,13 @@ equal, or whether the first or second value is greater. This `number` is used
 in the same way that the return value from the predicate function used in
 JavaScript's `Array.sort(predicate)` is used.
 
-Each function within `substring` has type `SubstringsMatcher`. Each function
-takes two `ASN1Elements`s and the type of substring selection (`initial`,
-`final`, `any`, etc.) and returns a `boolean` indicating whether that substring
-is present.
+Each function within `substring` has type `SubstringsMatcher`. A DAP
+`FilterItem` substrings alternative is converted with `fromFilter` into the
+rule's assertion (`SubstringAssertion` or `OctetSubstringAssertion`). The
+function then compares that whole assertion with one stored value, the same
+way an equality rule does. `initial`, `any`, and `final` pieces are consumed
+left to right and do not overlap. The assertion and the stored value may each
+be an encoded element or an already decoded value.
 
 ## Stringifiers
 
@@ -231,8 +234,7 @@ are either deprecated or not intended for external use:
 - `ProtectedItem.mts` - A type representing the object of an authorization request.
 - `StringDecoder.mts` - A function that converts an LDAP string into an `ASN1Element`
 - `StringEncoder.mts` - A function that converts an `ASN1Element` to an LDAP string
-- `SubstringSelection.mts` - An enum describing a subset of a string to be matched in a substrings match.
-- `SubstringsMatcher.mts` - A function that evaluates an substrings matching rule against a value.
+- `SubstringsMatcher.mts` - A substrings rule: `fromFilter` builds the assertion, and the function evaluates that assertion against one stored value.
 
 ## Utilities
 

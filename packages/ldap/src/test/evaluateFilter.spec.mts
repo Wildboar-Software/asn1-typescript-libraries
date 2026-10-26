@@ -9,7 +9,7 @@ import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
-import { SubstringSelection } from "../lib/types/SubstringSelection";
+import type { DecodedSubstrings } from "../lib/types/SubstringsMatcher.mjs";
 
 // Filter ::= CHOICE {
 //     and              [0]  SET SIZE (1..MAX) OF filter Filter,
@@ -101,23 +101,35 @@ const options: EvaluateFilterOptions = {
         };
     },
     getSubstringsMatcher: (ad: LDAPString) => {
-        return function (assertion: ASN1Element, value: ASN1Element, selection: SubstringSelection): boolean {
-            const a = assertion.utf8String;
-            const v = value.utf8String;
-            switch (selection) {
-            case (SubstringSelection.initial): {
-                return v.startsWith(a);
+        return function (assertion: DecodedSubstrings, value: ASN1Element): boolean {
+            const stored = value.utf8String;
+            let cursor = 0;
+            if (assertion.initial) {
+                const needle = assertion.initial.utf8String;
+                if (needle.length === 0 || !stored.startsWith(needle)) {
+                    return false;
+                }
+                cursor = needle.length;
             }
-            case (SubstringSelection.any_): {
-                return (v.indexOf(a) > -1);
+            for (const piece of assertion.any) {
+                const needle = piece.utf8String;
+                const found = stored.indexOf(needle, cursor);
+                if (found < 0) {
+                    return false;
+                }
+                cursor = found + needle.length;
             }
-            case (SubstringSelection.final): {
-                return v.endsWith(a);
+            if (assertion.final) {
+                const needle = assertion.final.utf8String;
+                if (
+                    needle.length === 0
+                    || !stored.endsWith(needle)
+                    || stored.length - needle.length < cursor
+                ) {
+                    return false;
+                }
             }
-            default: {
-                throw new Error();
-            }
-            }
+            return true;
         };
     },
     getOrderingMatcher: (ad: LDAPString) => {
@@ -185,10 +197,10 @@ describe("evaluateFilter()", () => {
                         initial: Buffer.from("ASD"),
                     },
                     {
-                        final: Buffer.from("234"),
+                        any_: Buffer.from("F12"),
                     },
                     {
-                        any_: Buffer.from("DF12"),
+                        final: Buffer.from("34"),
                     },
                 ],
             ),

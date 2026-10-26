@@ -1,4 +1,4 @@
-import { DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
+import { ASN1Element, DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
 import octetStringSubstringsMatch from "./octetStringSubstringsMatch.mjs";
 import { _encode_OctetSubstringAssertion } from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
@@ -14,7 +14,7 @@ function octetString(bytes: number[]): DERElement {
 
 function assertion (
     items: Parameters<typeof _encode_OctetSubstringAssertion>[0],
-): DERElement {
+): ASN1Element {
     return _encode_OctetSubstringAssertion(items, DER);
 }
 
@@ -84,5 +84,17 @@ describe("octetStringSubstringsMatch", () => {
             ]),
             value,
         )).toBe(false);
+    });
+
+    it("does not let successive any pieces overlap", () => {
+        const overlapped = new Uint8Array([0x61, 0x62, 0x63, 0x64]);
+        const separated = new Uint8Array([0x61, 0x62, 0x63, 0x62, 0x63, 0x64]);
+        const pieces = [
+            { any_: new Uint8Array([0x61, 0x62, 0x63]) },
+            { any_: new Uint8Array([0x62, 0x63, 0x64]) },
+        ];
+        expect(octetStringSubstringsMatch(pieces, separated)).toBe(true);
+        expect(octetStringSubstringsMatch(pieces, overlapped)).toBe(false);
+        expect(octetStringSubstringsMatch(assertion(pieces), overlapped)).toBe(false);
     });
 });

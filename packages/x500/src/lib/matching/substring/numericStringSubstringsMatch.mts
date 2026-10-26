@@ -1,58 +1,83 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import SubstringSelection from "../../types/SubstringSelection.mjs";
+import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import {
+    readSubstringAssertion,
+    type PreparedSubstring,
+    type SubstringAssertionInput,
+} from "../readValue.mjs";
+import { matchStringPieces } from "./matchInOrder.mjs";
+import {
+    prepareNumericPieces,
+    stripNumeric,
+} from "./prepareSubstring.mjs";
+import {
+    attachFromFilter,
+    readNumericStringComponent,
+    substringAssertionFromFilter,
+} from "./substringAssertionFromFilter.mjs";
+
+/**
+ * `numericStringSubstringsMatch` on pieces and a numeric string.
+ * All spaces are removed from both sides before the ordered scan.
+ *
+ * @param assertion Presented pieces, still containing spaces.
+ * @param value Stored numeric string, still containing spaces.
+ * @returns `true` when the digit pieces match in order without overlap.
+ */
+export
+function numericStringSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    const pieces = prepareNumericPieces(assertion);
+    const prepared = stripNumeric(value);
+    if (!pieces || prepared.length === 0) {
+        return false;
+    }
+    return matchStringPieces(pieces, prepared);
+}
+
+/**
+ * Convert a DAP substrings filter whose components are `NumericString`
+ * into a `SubstringAssertion`. Each component becomes a printable string.
+ *
+ * @param item `FilterItem` substrings alternative.
+ * @returns The assertion, or `undefined` when a component is not numeric.
+ */
+export
+function numericStringSubstringsFromFilter (
+    item: FilterItem_substrings,
+): SubstringAssertion | undefined {
+    return substringAssertionFromFilter(item, readNumericStringComponent);
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.6
  * `numericStringSubstringsMatch`.
  *
- * Same as `caseIgnoreSubstringsMatch` except all spaces are
- * removed from both strings (clause 7.6.2).
+ * Same ordered, non-overlapping partition as `caseIgnoreSubstringsMatch`,
+ * except every space is removed (clause 7.6.2). `control` is ignored.
  *
- * Each string argument may be an `ASN1Element` or a string.
+ * `assertion` is an encoded `SubstringAssertion` or the decoded array.
+ * `value` is a numeric-string element or a JavaScript string.
  */
-export
 function numericStringSubstringsMatch (
-    assertion: ASN1Element | string,
+    assertion: SubstringAssertionInput,
     value: ASN1Element | string,
-    selection?: SubstringSelection,
 ): boolean {
+    const stored = typeof value === "string" ? value : value.numericString;
     return numericStringSubstringsMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.numericString,
-        typeof value === "string" ? value : value.numericString,
-        selection ?? SubstringSelection.any_,
+        readSubstringAssertion(assertion),
+        stored,
     );
 }
 
-/**
- * `numericStringSubstringsMatch` on two numeric strings.
- *
- * @param assertion Presented substring.
- * @param value Stored numeric string.
- * @param selection Which part of `value` must contain `assertion`.
- * @returns `true` when the selected containment holds.
- */
-export
-function numericStringSubstringsMatchTyped (
-    assertion: string,
-    value: string,
-    selection: SubstringSelection,
-): boolean {
-    const a: string = assertion.replace(/\s+/g, "");
-    const v: string = value.replace(/\s+/g, "");
-    switch (selection) {
-        case (SubstringSelection.initial): {
-            return v.startsWith(a);
-        }
-        case (SubstringSelection.any_): {
-            return (v.indexOf(a) > -1);
-        }
-        case (SubstringSelection.final): {
-            return v.endsWith(a);
-        }
-        default: {
-            return false;
-        }
-    }
-}
+const numericStringSubstringsRule = attachFromFilter(
+    numericStringSubstringsMatch,
+    numericStringSubstringsFromFilter,
+);
 
-export default numericStringSubstringsMatch;
+export { numericStringSubstringsRule as numericStringSubstringsMatch };
+
+export default numericStringSubstringsRule;

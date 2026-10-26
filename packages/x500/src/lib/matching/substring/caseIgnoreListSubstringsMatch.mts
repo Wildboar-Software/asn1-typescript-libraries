@@ -1,34 +1,75 @@
-import type SubstringSelection from "../../types/SubstringSelection.mjs";
-import type {
-    DirectoryStringListInput,
-    PreparedSubstring,
-    SubstringAssertionInput,
-} from "../readValue.mjs";
+import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import type { DirectoryStringListInput } from "../readValue.mjs";
 import {
     readDirectoryStringList,
     readSubstringAssertion,
+    type PreparedSubstring,
+    type SubstringAssertionInput,
 } from "../readValue.mjs";
+import { matchStringListPieces } from "./matchInOrder.mjs";
+import {
+    prepareDirectoryLines,
+    prepareDirectoryPieces,
+} from "./prepareSubstring.mjs";
+import {
+    attachFromFilter,
+    readCaseIgnoreListComponent,
+    substringAssertionFromFilter,
+} from "./substringAssertionFromFilter.mjs";
+
+/**
+ * `caseIgnoreListSubstringsMatch` on pieces and stored lines.
+ * Each line is prepared as for `caseIgnoreMatch`. A piece must not
+ * cross a line boundary, and pieces do not overlap.
+ *
+ * @param assertion Presented pieces, not yet prepared.
+ * @param value Stored lines, not yet prepared.
+ * @returns `true` when every piece matches inside one line, in order.
+ */
+export
+function caseIgnoreListSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: readonly string[],
+): boolean {
+    const pieces = prepareDirectoryPieces(assertion, true);
+    const lines = prepareDirectoryLines(value);
+    if (!pieces || !lines) {
+        return false;
+    }
+    return matchStringListPieces(pieces, lines);
+}
+
+/**
+ * Convert a DAP substrings filter for a directory-string list.
+ * A one-line `PostalAddress` contributes that line. A multi-line
+ * component is rejected, because one assertion piece is one string.
+ *
+ * @param item `FilterItem` substrings alternative.
+ * @returns The assertion, or `undefined` when a component is unusable.
+ */
+export
+function caseIgnoreListSubstringsFromFilter (
+    item: FilterItem_substrings,
+): SubstringAssertion | undefined {
+    return substringAssertionFromFilter(item, readCaseIgnoreListComponent);
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.8
  * `caseIgnoreListSubstringsMatch`.
  *
- * Presented `SubstringAssertion` is matched against the
- * concatenation of stored `UnboundedDirectoryString` values, using
- * `caseIgnoreSubstringsMatch`. An `initial`/`any`/`final` piece
- * must not span more than one stored string.
+ * The stored `UnboundedDirectoryString` values are concatenated with
+ * no separator and then matched as `caseIgnoreSubstringsMatch`, except
+ * that no presented piece may span two stored strings.
  *
- * `assertion` is an element or a `SubstringAssertion` (directory
- * strings or JavaScript strings). `value` is an element, a
- * `PostalAddress` / `CaseIgnoreList`, or an array of strings.
- * `selection` is accepted for `SubstringsMatcher` and is not used;
- * the assertion carries initial, any, and final itself.
+ * `assertion` is an encoded `SubstringAssertion` or the decoded array.
+ * `value` is an element, a `PostalAddress` / `CaseIgnoreList`, or an
+ * array of directory strings and/or JavaScript strings.
  */
-export
 function caseIgnoreListSubstringsMatch (
     assertion: SubstringAssertionInput,
     value: DirectoryStringListInput,
-    _selection?: SubstringSelection,
 ): boolean {
     return caseIgnoreListSubstringsMatchTyped(
         readSubstringAssertion(assertion),
@@ -36,51 +77,11 @@ function caseIgnoreListSubstringsMatch (
     );
 }
 
-/**
- * `caseIgnoreListSubstringsMatch` on prepared pieces and stored
- * lines. `initial` is tested against the first line and `final`
- * against the last. `any` may match any line.
- *
- * @param assertion Presented substring pieces.
- * @param value Stored lines.
- * @returns `true` when every piece matches.
- */
-export
-function caseIgnoreListSubstringsMatchTyped (
-    assertion: readonly PreparedSubstring[],
-    value: readonly string[],
-): boolean {
-    if (value.length === 0) {
-        return false;
-    }
-    const firstStr: string = value[0];
-    const lastStr: string = value[value.length - 1];
-    for (const substr of assertion) {
-        if (substr.kind === "any") {
-            const s: string = substr.value;
-            let matched: boolean = false;
-            for (const str of value) {
-                if (str.indexOf(s) >= 0) {
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) {
-                return false;
-            }
-        } else if (substr.kind === "initial") {
-            if (!firstStr.startsWith(substr.value)) {
-                return false;
-            }
-        } else if (substr.kind === "final") {
-            if (!lastStr.endsWith(substr.value)) {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-    return true;
-}
+const caseIgnoreListSubstringsRule = attachFromFilter(
+    caseIgnoreListSubstringsMatch,
+    caseIgnoreListSubstringsFromFilter,
+);
 
-export default caseIgnoreListSubstringsMatch;
+export { caseIgnoreListSubstringsRule as caseIgnoreListSubstringsMatch };
+
+export default caseIgnoreListSubstringsRule;

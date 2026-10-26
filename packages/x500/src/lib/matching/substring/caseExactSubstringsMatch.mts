@@ -1,64 +1,85 @@
-import SubstringSelection from "../../types/SubstringSelection.mjs";
+import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import { prepString } from "../../utils/prepString.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
-import { readDirectoryString } from "../readValue.mjs";
+import {
+    readDirectoryString,
+    readSubstringAssertion,
+    type PreparedSubstring,
+    type SubstringAssertionInput,
+} from "../readValue.mjs";
+import { matchStringPieces } from "./matchInOrder.mjs";
+import { prepareDirectoryPieces } from "./prepareSubstring.mjs";
+import {
+    attachFromFilter,
+    readUnboundedDirectoryStringComponent,
+    substringAssertionFromFilter,
+} from "./substringAssertionFromFilter.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
- * `caseExactSubstringsMatch`.
+ * `caseExactSubstringsMatch` on pieces and a stored string.
+ * Insignificant spaces are removed; case is significant.
  *
- * TRUE if the stored `DirectoryString` can be partitioned so that
- * presented `initial`/`any`/`final` substrings match distinct
- * portions in order (`initial` prefixes, `final` suffixes). Case
- * is significant; insignificant spaces are removed (clause 7.6).
- * At most one `initial` and one `final`; `control` is ignored.
- * Corresponding characters (including combining sequences) must
- * be identical.
- *
- * `assertion` and `value` may each be an element, a directory
- * string, or a JavaScript string. This entry point compares one
- * substring component; `selection` chooses initial, any, or final.
+ * @param assertion Presented pieces, not yet prepared.
+ * @param value Stored directory string, not yet prepared.
+ * @returns `true` when the pieces match in order without overlap.
  */
 export
-function caseExactSubstringsMatch (
-    assertion: DirectoryStringInput,
-    value: DirectoryStringInput,
-    selection?: SubstringSelection,
+function caseExactSubstringsMatchTyped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
 ): boolean {
-    return caseExactSubstringsMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-        selection ?? SubstringSelection.any_,
+    const pieces = prepareDirectoryPieces(assertion, false);
+    const prepared = prepString(value);
+    if (!pieces || prepared === undefined) {
+        return false;
+    }
+    return matchStringPieces(pieces, prepared);
+}
+
+/**
+ * Convert a DAP substrings filter whose components are directory
+ * strings into a `SubstringAssertion` for `caseExactSubstringsMatch`.
+ *
+ * @param item `FilterItem` substrings alternative.
+ * @returns The assertion, or `undefined` when the filter is unusable.
+ */
+export
+function caseExactSubstringsFromFilter (
+    item: FilterItem_substrings,
+): SubstringAssertion | undefined {
+    return substringAssertionFromFilter(
+        item,
+        readUnboundedDirectoryStringComponent,
     );
 }
 
 /**
- * `caseExactSubstringsMatch` on two strings.
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.3 `caseExactSubstringsMatch`.
  *
- * @param assertion Presented substring.
- * @param value Stored string.
- * @param selection Which part of `value` must contain `assertion`.
- * @returns `true` when the selected containment holds.
+ * Same partitioning as `caseIgnoreSubstringsMatch`, except case is
+ * significant. Insignificant spaces are removed (clause 7.6).
+ * `control` is ignored.
+ *
+ * `assertion` is an encoded `SubstringAssertion` or the decoded array.
+ * `value` is an element, a directory string, or a JavaScript string.
  */
-export
-function caseExactSubstringsMatchTyped (
-    assertion: string,
-    value: string,
-    selection: SubstringSelection,
+function caseExactSubstringsMatch (
+    assertion: SubstringAssertionInput,
+    value: DirectoryStringInput,
 ): boolean {
-    switch (selection) {
-        case (SubstringSelection.initial): {
-            return value.startsWith(assertion);
-        }
-        case (SubstringSelection.any_): {
-            return (value.indexOf(assertion) > -1);
-        }
-        case (SubstringSelection.final): {
-            return value.endsWith(assertion);
-        }
-        default: {
-            return false;
-        }
-    }
+    return caseExactSubstringsMatchTyped(
+        readSubstringAssertion(assertion),
+        readDirectoryString(value),
+    );
 }
 
-export default caseExactSubstringsMatch;
+const caseExactSubstringsRule = attachFromFilter(
+    caseExactSubstringsMatch,
+    caseExactSubstringsFromFilter,
+);
+
+export { caseExactSubstringsRule as caseExactSubstringsMatch };
+
+export default caseExactSubstringsRule;

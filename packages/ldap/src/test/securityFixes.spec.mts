@@ -12,7 +12,7 @@ import stringifyFilter from "../lib/filterToString.mjs";
 import evaluateFilter, { type EvaluateFilterOptions } from "../lib/evaluateFilter.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { integer as decodeInteger } from "../lib/syntaxDecoders.mjs";
-import { SubstringSelection } from "../lib/types/SubstringSelection.mjs";
+import type { DecodedSubstrings } from "../lib/types/SubstringsMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 
@@ -261,19 +261,32 @@ describe("LDAP security regressions", () => {
                 getLDAPSyntaxDecoder: () => (value: Uint8Array): ASN1Element => utf8Element(Buffer.from(value).toString("utf-8")),
                 getEqualityMatcher: () => undefined,
                 getSubstringsMatcher: () => (
-                    assertion: ASN1Element,
+                    assertion: DecodedSubstrings,
                     value: ASN1Element,
-                    selection: SubstringSelection,
                 ) => {
-                    const a = assertion.utf8String;
-                    const v = value.utf8String;
-                    if (selection === SubstringSelection.final) {
-                        return v.endsWith(a);
+                    const stored = value.utf8String;
+                    let cursor = 0;
+                    if (assertion.initial) {
+                        const needle = assertion.initial.utf8String;
+                        if (!stored.startsWith(needle)) {
+                            return false;
+                        }
+                        cursor = needle.length;
                     }
-                    if (selection === SubstringSelection.initial) {
-                        return v.startsWith(a);
+                    for (const piece of assertion.any) {
+                        const needle = piece.utf8String;
+                        const found = stored.indexOf(needle, cursor);
+                        if (found < 0) {
+                            return false;
+                        }
+                        cursor = found + needle.length;
                     }
-                    return v.includes(a);
+                    if (assertion.final) {
+                        const needle = assertion.final.utf8String;
+                        return stored.endsWith(needle)
+                            && stored.length - needle.length >= cursor;
+                    }
+                    return true;
                 },
                 getOrderingMatcher: () => undefined,
                 getApproxMatcher: () => undefined,
