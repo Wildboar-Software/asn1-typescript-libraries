@@ -5,13 +5,13 @@ import type EqualityMatcher from "./EqualityMatcher.mjs";
  * The assertion is already prepared for this matching rule.
  * Preparation (stringprep, space removal, hyphen removal) is skipped.
  */
-export const MATCH_FLAG_ASSERTION_PREPPED = 1 << 0;
+export const MATCH_FLAG_ASSERTION_PREPPED: number = 1 << 0;
 
 /**
  * The stored value is already prepared for this matching rule.
  * The same bit is defined by `@wildboar/ldap`.
  */
-export const MATCH_FLAG_VALUE_PREPPED = 1 << 1;
+export const MATCH_FLAG_VALUE_PREPPED: number = 1 << 1;
 
 /**
  * Retrieves the equality rule for an attribute type nested in a value.
