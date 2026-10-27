@@ -726,19 +726,19 @@ function evaluateSubstring (
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
     const rule = options.getSubstringsMatcher(sub.type_);
-    if (!rule || typeof rule.fromFilter !== "function") {
+    if (!rule) {
         return undefined;
     }
     if (!options.permittedToMatch(sub.type_)) {
         return undefined;
     }
-    let assertion: ReturnType<SubstringsMatcher["fromFilter"]>;
+    // A filter that cannot be converted returns undefined before the
+    // stored value is read, including when the entry has no values.
     try {
-        assertion = rule.fromFilter(sub);
+        if (rule(sub, undefined as unknown as ASN1Element) === undefined) {
+            return undefined;
+        }
     } catch {
-        return undefined;
-    }
-    if (assertion === undefined) {
         return undefined;
     }
     const matcher = handleErrors(rule);
@@ -749,7 +749,7 @@ function evaluateSubstring (
         if (!options.permittedToMatch(attributeType, value)) {
             return false;
         }
-        return matcher(assertion as ASN1Element, value) === true;
+        return matcher(sub, value) === true;
     };
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
     const matchedValues: MatchedValue[] = [];

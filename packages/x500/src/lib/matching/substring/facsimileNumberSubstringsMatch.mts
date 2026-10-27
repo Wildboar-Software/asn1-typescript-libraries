@@ -3,7 +3,7 @@ import {
     ASN1TagClass,
     ASN1UniversalType,
 } from "@wildboar/asn1";
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { FacsimileTelephoneNumber } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { _decode_TelephoneNumber } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
@@ -14,7 +14,6 @@ import {
 } from "../readValue.mjs";
 import { telephoneNumberSubstringsMatchTyped } from "./telephoneNumberSubstringsMatch.mjs";
 import {
-    attachFromFilter,
     readFacsimileNumberComponent,
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
@@ -79,25 +78,28 @@ function facsimileNumberSubstringsFromFilter (
  * The `telephoneNumber` component is matched as
  * `telephoneNumberSubstringsMatch`. `parameters` is not evaluated.
  *
- * `assertion` is an encoded `SubstringAssertion` or the decoded array.
- * `value` is a facsimile element, a `FacsimileTelephoneNumber`, or the
- * telephone-number string.
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is a facsimile
+ * element, a `FacsimileTelephoneNumber`, or the telephone-number string.
  */
+export
 function facsimileNumberSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: ASN1Element | FacsimileTelephoneNumber | string,
-): boolean {
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: ASN1Element | FacsimileTelephoneNumber | string,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? facsimileNumberSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     return facsimileNumberSubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertion(decoded),
         readStoredFacsimileNumber(value),
     );
 }
 
-const facsimileNumberSubstringsRule = attachFromFilter(
-    facsimileNumberSubstringsMatch,
-    facsimileNumberSubstringsFromFilter,
-);
-
-export { facsimileNumberSubstringsRule as facsimileNumberSubstringsMatch };
-
-export default facsimileNumberSubstringsRule;
+export default facsimileNumberSubstringsMatch;

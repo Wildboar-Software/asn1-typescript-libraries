@@ -92,84 +92,75 @@ const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (a
 // This will only work for INTEGERs within [0,127].
 const INTEGER_ORDERING_RULE: OrderingMatcher = (assertion, value) => (assertion.value[0] - value.value[0]);
 
-type Utf8SubstringPiece =
-    | { readonly initial: asn1.ASN1Element }
-    | { readonly any_: asn1.ASN1Element }
-    | { readonly final: asn1.ASN1Element };
-
 /**
- * Ordered, non-overlapping UTF-8 substring hook. `fromFilter` keeps the
- * filter components; `evaluateSubstring` passes that array back in.
+ * Ordered, non-overlapping UTF-8 substring hook. The assertion is the
+ * DAP substrings filter item. An unusable item is Undefined.
  */
-const UTF8_SUBSTRING_RULE: SubstringsMatcher = Object.assign(
-    (assertion: asn1.ASN1Element, value: asn1.ASN1Element): boolean => {
-        const pieces = assertion as unknown as readonly Utf8SubstringPiece[];
-        const stored = value.utf8String;
-        if (pieces.length === 0) {
+const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value) => {
+    if (!(assertion instanceof FilterItem_substrings)) {
+        return false;
+    }
+    const pieces = assertion.strings;
+    if (pieces.length === 0) {
+        return undefined;
+    }
+    for (let i = 0; i < pieces.length; i++) {
+        const component = pieces[i];
+        if (asn1.ASN1Element.isElement(component)) {
+            return undefined;
+        }
+        if ("initial" in component && i !== 0) {
+            return undefined;
+        }
+        if ("final" in component && i !== pieces.length - 1) {
+            return undefined;
+        }
+    }
+    if (!value) {
+        return false;
+    }
+    const stored = value.utf8String;
+    let cursor = 0;
+    let index = 0;
+    const first = pieces[0];
+    if (!asn1.ASN1Element.isElement(first) && "initial" in first) {
+        const needle = first.initial.utf8String;
+        if (needle.length === 0 || !stored.startsWith(needle)) {
             return false;
         }
-        let cursor = 0;
-        let index = 0;
-        const first = pieces[0];
-        if ("initial" in first) {
-            const needle = first.initial.utf8String;
-            if (needle.length === 0 || !stored.startsWith(needle)) {
-                return false;
-            }
-            cursor = needle.length;
-            index = 1;
+        cursor = needle.length;
+        index = 1;
+    }
+    let end = pieces.length;
+    const last = pieces[pieces.length - 1];
+    const hasFinal = !asn1.ASN1Element.isElement(last) && "final" in last;
+    if (hasFinal) {
+        end--;
+    }
+    for (; index < end; index++) {
+        const piece = pieces[index];
+        if (asn1.ASN1Element.isElement(piece) || !("any_" in piece)) {
+            return false;
         }
-        let end = pieces.length;
-        const last = pieces[pieces.length - 1];
-        const hasFinal = "final" in last;
-        if (hasFinal) {
-            end--;
+        const needle = piece.any_.utf8String;
+        const found = stored.indexOf(needle, cursor);
+        if (found < 0) {
+            return false;
         }
-        for (; index < end; index++) {
-            const piece = pieces[index];
-            if (!("any_" in piece)) {
-                return false;
-            }
-            const needle = piece.any_.utf8String;
-            const found = stored.indexOf(needle, cursor);
-            if (found < 0) {
-                return false;
-            }
-            cursor = found + needle.length;
+        cursor = found + needle.length;
+    }
+    if (hasFinal && !asn1.ASN1Element.isElement(last) && "final" in last) {
+        const needle = last.final.utf8String;
+        if (
+            needle.length === 0
+            || !stored.endsWith(needle)
+            || stored.length - needle.length < cursor
+        ) {
+            return false;
         }
-        if (hasFinal && "final" in last) {
-            const needle = last.final.utf8String;
-            if (
-                needle.length === 0
-                || !stored.endsWith(needle)
-                || stored.length - needle.length < cursor
-            ) {
-                return false;
-            }
-        }
-        return true;
-    },
-    {
-        fromFilter (item: FilterItem_substrings) {
-            if (item.strings.length === 0) {
-                return undefined;
-            }
-            for (let i = 0; i < item.strings.length; i++) {
-                const component = item.strings[i];
-                if (asn1.ASN1Element.isElement(component)) {
-                    return undefined;
-                }
-                if ("initial" in component && i !== 0) {
-                    return undefined;
-                }
-                if ("final" in component && i !== item.strings.length - 1) {
-                    return undefined;
-                }
-            }
-            return item.strings as unknown as ReturnType<SubstringsMatcher["fromFilter"]>;
-        },
-    },
-);
+    }
+    return true;
+};
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;
 const NO_SUBTYPING: EvaluateFilterSettings["isAttributeSubtype"] = (

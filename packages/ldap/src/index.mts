@@ -37,7 +37,7 @@ export type { default as StringDecoderGetter } from "./lib/types/StringDecoderGe
 export type { default as StringDecoder } from "./lib/types/StringDecoder.mjs";
 export type { default as StringEncoderGetter } from "./lib/types/StringEncoderGetter.mjs";
 export type { default as StringEncoder } from "./lib/types/StringEncoder.mjs";
-export type { DecodedSubstrings, default as SubstringsMatcher } from "./lib/types/SubstringsMatcher.mjs";
+export type { default as SubstringsMatcher } from "./lib/types/SubstringsMatcher.mjs";
 export { default as compareAttributeDescription } from "./lib/compareAttributeDescription.mjs";
 export * as controls from "./lib/controls.mjs";
 export { default as decodeLDAPOID } from "./lib/decodeLDAPOID.mjs";

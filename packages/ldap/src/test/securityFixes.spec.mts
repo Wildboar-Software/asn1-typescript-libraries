@@ -5,15 +5,13 @@ import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Ac
 import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
 import { PartialAttribute } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs";
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
-import { BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ObjectIdentifier, ASN1ConstructionError } from "@wildboar/asn1";
+import { ASN1Element, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ObjectIdentifier, ASN1ConstructionError } from "@wildboar/asn1";
 import { _decode_Filter, _encode_Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 import destringifyFilter from "../lib/filterFromString.mjs";
 import stringifyFilter from "../lib/filterToString.mjs";
 import evaluateFilter, { type EvaluateFilterOptions } from "../lib/evaluateFilter.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { integer as decodeInteger } from "../lib/syntaxDecoders.mjs";
-import type { DecodedSubstrings } from "../lib/types/SubstringsMatcher.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 
 function utf8Element (str: string): BERElement {
@@ -261,30 +259,38 @@ describe("LDAP security regressions", () => {
                 getLDAPSyntaxDecoder: () => (value: Uint8Array): ASN1Element => utf8Element(Buffer.from(value).toString("utf-8")),
                 getEqualityMatcher: () => undefined,
                 getSubstringsMatcher: () => (
-                    assertion: DecodedSubstrings,
+                    assertion: ASN1Element | SubstringFilter,
                     value: ASN1Element,
                 ) => {
+                    if (ASN1Element.isElement(assertion)) {
+                        return value.utf8String.endsWith(assertion.utf8String);
+                    }
                     const stored = value.utf8String;
                     let cursor = 0;
-                    if (assertion.initial) {
-                        const needle = assertion.initial.utf8String;
-                        if (!stored.startsWith(needle)) {
+                    for (const component of assertion.substrings) {
+                        if (ASN1Element.isElement(component)) {
                             return false;
                         }
-                        cursor = needle.length;
-                    }
-                    for (const piece of assertion.any) {
-                        const needle = piece.utf8String;
-                        const found = stored.indexOf(needle, cursor);
-                        if (found < 0) {
+                        const raw = "initial" in component
+                            ? component.initial
+                            : "any_" in component
+                                ? component.any_
+                                : component.final;
+                        const needle = Buffer.from(raw).toString("utf-8");
+                        if ("initial" in component) {
+                            if (!stored.startsWith(needle)) {
+                                return false;
+                            }
+                            cursor = needle.length;
+                        } else if ("any_" in component) {
+                            const found = stored.indexOf(needle, cursor);
+                            if (found < 0) {
+                                return false;
+                            }
+                            cursor = found + needle.length;
+                        } else if (!stored.endsWith(needle) || stored.length - needle.length < cursor) {
                             return false;
                         }
-                        cursor = found + needle.length;
-                    }
-                    if (assertion.final) {
-                        const needle = assertion.final.utf8String;
-                        return stored.endsWith(needle)
-                            && stored.length - needle.length >= cursor;
                     }
                     return true;
                 },

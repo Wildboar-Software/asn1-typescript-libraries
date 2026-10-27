@@ -7,7 +7,6 @@ import type { SubstringFilter_substrings_substring } from "../lib/modules/Lightw
 import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue.mjs";
 import type EqualityMatcher from "../lib/types/EqualityMatcher.mjs";
 import type SubstringsMatcher from "../lib/types/SubstringsMatcher.mjs";
-import type { DecodedSubstrings } from "../lib/types/SubstringsMatcher.mjs";
 import type OrderingMatcher from "../lib/types/OrderingMatcher.mjs";
 import type ApproxMatcher from "../lib/types/ApproxMatcher.mjs";
 import type LDAPSyntaxDecoder from "../lib/types/LDAPSyntaxDecoder.mjs";
@@ -143,50 +142,39 @@ const DEFAULT_RECURSION_TTL: number = 20;
  */
 
 /**
- * Decode every substring of an LDAP `SubstringFilter` with the
- * attribute's equality assertion decoder. `initial` must be first,
- * `final` must be last, and at least one piece must be present.
- * An illegal sequence is Undefined.
+ * `initial` is first, `final` is last, and at least one piece is present.
+ * LDAP has no `control`, so a leading `initial` is required when that
+ * alternative is used.
  */
-function decodeSubstringFilter (
+function substringFilterIsUsable (
     substrings: readonly SubstringFilter_substrings_substring[],
-    decode: (value: Uint8Array) => ASN1Element,
-): DecodedSubstrings | undefined {
+): boolean {
     if (substrings.length === 0) {
-        return undefined;
+        return false;
     }
-    let initial: ASN1Element | undefined;
-    const any: ASN1Element[] = [];
-    let final: ASN1Element | undefined;
+    let substantive = 0;
     for (let i = 0; i < substrings.length; i++) {
         const component = substrings[i];
         if (ASN1Element.isElement(component)) {
-            return undefined;
+            return false;
         }
         if ("initial" in component) {
-            if (i !== 0 || initial) {
-                return undefined;
+            if (i !== 0) {
+                return false;
             }
-            initial = decode(component.initial);
-            continue;
-        }
-        if ("final" in component) {
-            if (i !== substrings.length - 1 || final) {
-                return undefined;
+            substantive++;
+        } else if ("final" in component) {
+            if (i !== substrings.length - 1) {
+                return false;
             }
-            final = decode(component.final);
-            continue;
+            substantive++;
+        } else if ("any_" in component) {
+            substantive++;
+        } else {
+            return false;
         }
-        if ("any_" in component) {
-            any.push(decode(component.any_));
-            continue;
-        }
-        return undefined;
     }
-    if (!initial && any.length === 0 && !final) {
-        return undefined;
-    }
-    return { initial, any, final };
+    return substantive > 0;
 }
 
 export
@@ -275,8 +263,7 @@ function evaluateFilter (
             if (!assertionDecoder) {
                 return undefined;
             }
-            const assertion = decodeSubstringFilter(sf.substrings, assertionDecoder);
-            if (!assertion) {
+            if (!substringFilterIsUsable(sf.substrings)) {
                 return undefined;
             }
             return entry
@@ -287,7 +274,7 @@ function evaluateFilter (
                             return false;
                         }
                         const decodedValue = assertionDecoder(val);
-                        return matcher(assertion, decodedValue);
+                        return matcher(sf, decodedValue);
                     }));
         } catch {
             return undefined;

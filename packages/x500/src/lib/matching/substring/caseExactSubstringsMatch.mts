@@ -1,4 +1,4 @@
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
@@ -9,9 +9,8 @@ import {
     type SubstringAssertionInput,
 } from "../readValue.mjs";
 import { matchStringPieces } from "./matchInOrder.mjs";
-import { prepareDirectoryPieces } from "./prepareSubstring.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
-    attachFromFilter,
     readUnboundedDirectoryStringComponent,
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
@@ -30,9 +29,23 @@ function caseExactSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const pieces = prepareDirectoryPieces(assertion, false);
+    if (!substringAnchorsAreValid(assertion)) {
+        return false;
+    }
+    const mapped = assertion
+        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
+            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
+        ))
+        .map((piece) => {
+            const prepared = prepString(piece.value);
+            return prepared ? { kind: piece.kind, value: prepared } : undefined;
+        });
+    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
+    if (pieces.length !== mapped.length) {
+        return false;
+    }
     const prepared = prepString(value);
-    if (!pieces || prepared === undefined) {
+    if (prepared === undefined) {
         return false;
     }
     return matchStringPieces(pieces, prepared);
@@ -62,24 +75,28 @@ function caseExactSubstringsFromFilter (
  * significant. Insignificant spaces are removed (clause 7.6).
  * `control` is ignored.
  *
- * `assertion` is an encoded `SubstringAssertion` or the decoded array.
- * `value` is an element, a directory string, or a JavaScript string.
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is an element,
+ * a directory string, or a JavaScript string.
  */
+export
 function caseExactSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: DirectoryStringInput,
-): boolean {
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: DirectoryStringInput,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? caseExactSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     return caseExactSubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertion(decoded),
         readDirectoryString(value),
     );
 }
 
-const caseExactSubstringsRule = attachFromFilter(
-    caseExactSubstringsMatch,
-    caseExactSubstringsFromFilter,
-);
-
-export { caseExactSubstringsRule as caseExactSubstringsMatch };
-
-export default caseExactSubstringsRule;
+export default caseExactSubstringsMatch;

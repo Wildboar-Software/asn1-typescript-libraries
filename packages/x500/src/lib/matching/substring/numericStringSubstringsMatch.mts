@@ -1,5 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import {
     readSubstringAssertion,
@@ -7,12 +7,8 @@ import {
     type SubstringAssertionInput,
 } from "../readValue.mjs";
 import { matchStringPieces } from "./matchInOrder.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
-    prepareNumericPieces,
-    stripNumeric,
-} from "./prepareSubstring.mjs";
-import {
-    attachFromFilter,
     readNumericStringComponent,
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
@@ -30,9 +26,20 @@ function numericStringSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const pieces = prepareNumericPieces(assertion);
-    const prepared = stripNumeric(value);
-    if (!pieces || prepared.length === 0) {
+    if (!substringAnchorsAreValid(assertion)) {
+        return false;
+    }
+    const mapped = assertion
+        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
+            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
+        ))
+        .map((piece) => {
+            const prepared = piece.value.replace(/\s+/g, "");
+            return prepared ? { kind: piece.kind, value: prepared } : undefined;
+        });
+    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
+    const prepared = value.replace(/\s+/g, "");
+    if (pieces.length !== mapped.length || prepared.length === 0) {
         return false;
     }
     return matchStringPieces(pieces, prepared);
@@ -59,25 +66,29 @@ function numericStringSubstringsFromFilter (
  * Same ordered, non-overlapping partition as `caseIgnoreSubstringsMatch`,
  * except every space is removed (clause 7.6.2). `control` is ignored.
  *
- * `assertion` is an encoded `SubstringAssertion` or the decoded array.
- * `value` is a numeric-string element or a JavaScript string.
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is a numeric-string
+ * element or a JavaScript string.
  */
+export
 function numericStringSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: ASN1Element | string,
-): boolean {
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: ASN1Element | string,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? numericStringSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     const stored = typeof value === "string" ? value : value.numericString;
     return numericStringSubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertion(decoded),
         stored,
     );
 }
 
-const numericStringSubstringsRule = attachFromFilter(
-    numericStringSubstringsMatch,
-    numericStringSubstringsFromFilter,
-);
-
-export { numericStringSubstringsRule as numericStringSubstringsMatch };
-
-export default numericStringSubstringsRule;
+export default numericStringSubstringsMatch;

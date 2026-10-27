@@ -1,5 +1,5 @@
 import { ASN1Element, ASN1TagClass, ASN1UniversalType } from "@wildboar/asn1";
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { OctetSubstringAssertion } from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 import type { OctetSubstringAssertion_Item } from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
 import {
@@ -8,11 +8,7 @@ import {
     type PreparedOctetSubstring,
 } from "../readValue.mjs";
 import { matchOctetPieces } from "./matchInOrder.mjs";
-import { prepareOctetPieces } from "./prepareSubstring.mjs";
-import {
-    attachFromFilter,
-    classifyFilterSubstrings,
-} from "./substringAssertionFromFilter.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 
 /**
  * `octetStringSubstringsMatch` on pieces and a stored octet string.
@@ -27,8 +23,18 @@ function octetStringSubstringsMatchTyped (
     assertion: readonly PreparedOctetSubstring[],
     value: Uint8Array,
 ): boolean {
-    const pieces = prepareOctetPieces(assertion);
-    if (!pieces) {
+    if (!substringAnchorsAreValid(assertion)) {
+        return false;
+    }
+    const mapped = assertion
+        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: Uint8Array } => (
+            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
+        ))
+        .map((piece) => (
+            piece.value.length > 0 ? { kind: piece.kind, value: piece.value } : undefined
+        ));
+    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: Uint8Array } => !!piece);
+    if (pieces.length !== mapped.length) {
         return false;
     }
     return matchOctetPieces(pieces, value);
@@ -47,29 +53,34 @@ export
 function octetStringSubstringsFromFilter (
     item: FilterItem_substrings,
 ): OctetSubstringAssertion | undefined {
-    const classified = classifyFilterSubstrings(item);
-    if (!classified) {
+    if (!substringAnchorsAreValid(item.strings)) {
         return undefined;
     }
     const out: OctetSubstringAssertion_Item[] = [];
-    for (let i = 0; i < classified.length; i++) {
-        const part = classified[i];
-        if (part.kind === "control") {
+    for (let i = 0; i < item.strings.length; i++) {
+        const part = item.strings[i];
+        if (ASN1Element.isElement(part)) {
+            return undefined;
+        }
+        if ("control" in part) {
             continue;
         }
+        const element = "initial" in part
+            ? part.initial
+            : "any_" in part
+                ? part.any_
+                : part.final;
         if (
-            part.element.tagClass !== ASN1TagClass.universal
-            || part.element.tagNumber !== ASN1UniversalType.octetString
+            element.tagClass !== ASN1TagClass.universal
+            || element.tagNumber !== ASN1UniversalType.octetString
+            || element.octetString.length === 0
         ) {
             return undefined;
         }
-        const octets = part.element.octetString;
-        if (octets.length === 0) {
-            return undefined;
-        }
-        if (part.kind === "initial") {
+        const octets = element.octetString;
+        if ("initial" in part) {
             out.push({ initial: octets });
-        } else if (part.kind === "any") {
+        } else if ("any_" in part) {
             out.push({ any_: octets });
         } else {
             out.push({ final: octets });
@@ -89,25 +100,28 @@ function octetStringSubstringsFromFilter (
  * `OctetSubstringAssertion` with the same ordered, non-overlapping
  * partition as the string substring rules.
  *
- * `assertion` is an element or an octet substring assertion.
- * `value` is an element or a `Uint8Array`.
+ * `assertion` is a `FilterItem` substrings alternative, an element,
+ * or an octet substring assertion. `value` is an element or a `Uint8Array`.
  */
+export
 function octetStringSubstringsMatch (
-    assertion: OctetSubstringAssertionInput,
-    value: ASN1Element | Uint8Array,
-): boolean {
+    assertion: OctetSubstringAssertionInput | FilterItem_substrings,
+    value?: ASN1Element | Uint8Array,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? octetStringSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     const stored = ASN1Element.isElement(value) ? value.octetString : value;
     return octetStringSubstringsMatchTyped(
-        readOctetSubstringAssertion(assertion),
+        readOctetSubstringAssertion(decoded),
         stored,
     );
 }
 
-const octetStringSubstringsRule = attachFromFilter(
-    octetStringSubstringsMatch,
-    octetStringSubstringsFromFilter,
-);
-
-export { octetStringSubstringsRule as octetStringSubstringsMatch };
-
-export default octetStringSubstringsRule;
+export default octetStringSubstringsMatch;

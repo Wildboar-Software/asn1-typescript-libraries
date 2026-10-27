@@ -1,5 +1,6 @@
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import { prepString } from "../../utils/prepString.mjs";
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import {
     readDirectoryStringList,
@@ -8,15 +9,13 @@ import {
     type SubstringAssertionInput,
 } from "../readValue.mjs";
 import { matchStringListPieces } from "./matchInOrder.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
-    prepareDirectoryLines,
-    prepareDirectoryPieces,
-} from "./prepareSubstring.mjs";
-import {
-    attachFromFilter,
     readCaseIgnoreListComponent,
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
+
+const CASE_FOLD = { caseFold: true } as const;
 
 /**
  * `caseIgnoreListSubstringsMatch` on pieces and stored lines.
@@ -32,12 +31,26 @@ function caseIgnoreListSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: readonly string[],
 ): boolean {
-    const pieces = prepareDirectoryPieces(assertion, true);
-    const lines = prepareDirectoryLines(value);
-    if (!pieces || !lines) {
+    if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    return matchStringListPieces(pieces, lines);
+    const mapped = assertion
+        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
+            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
+        ))
+        .map((piece) => {
+            const prepared = prepString(piece.value, CASE_FOLD);
+            return prepared ? { kind: piece.kind, value: prepared } : undefined;
+        });
+    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
+    if (pieces.length !== mapped.length || value.length === 0) {
+        return false;
+    }
+    const lines = value.map((line) => prepString(line, CASE_FOLD));
+    if (lines.some((line) => line === undefined)) {
+        return false;
+    }
+    return matchStringListPieces(pieces, lines as string[]);
 }
 
 /**
@@ -63,25 +76,29 @@ function caseIgnoreListSubstringsFromFilter (
  * no separator and then matched as `caseIgnoreSubstringsMatch`, except
  * that no presented piece may span two stored strings.
  *
- * `assertion` is an encoded `SubstringAssertion` or the decoded array.
- * `value` is an element, a `PostalAddress` / `CaseIgnoreList`, or an
- * array of directory strings and/or JavaScript strings.
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is an element,
+ * a `PostalAddress` / `CaseIgnoreList`, or an array of directory
+ * strings and/or JavaScript strings.
  */
+export
 function caseIgnoreListSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: DirectoryStringListInput,
-): boolean {
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: DirectoryStringListInput,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? caseIgnoreListSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     return caseIgnoreListSubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertion(decoded),
         readDirectoryStringList(value),
     );
 }
 
-const caseIgnoreListSubstringsRule = attachFromFilter(
-    caseIgnoreListSubstringsMatch,
-    caseIgnoreListSubstringsFromFilter,
-);
-
-export { caseIgnoreListSubstringsRule as caseIgnoreListSubstringsMatch };
-
-export default caseIgnoreListSubstringsRule;
+export default caseIgnoreListSubstringsMatch;

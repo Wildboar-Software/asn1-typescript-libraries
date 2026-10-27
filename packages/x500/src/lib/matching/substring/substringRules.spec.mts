@@ -213,13 +213,20 @@ describe("substring assertion rules", () => {
 
     it("copies control and ignores it while matching", () => {
         const control = new Attribute(TYPE, [ utf8("x") ], undefined);
-        const assertion = caseIgnoreSubstringsFromFilter(filterItem([
-            { any_: utf8("ab") },
+        const item = filterItem([
             { control },
+            { initial: utf8("ab") },
             { any_: utf8("cd") },
-        ]));
-        expect(assertion?.[1]).toEqual({ control });
+        ]);
+        const assertion = caseIgnoreSubstringsFromFilter(item);
+        expect(assertion?.[0]).toEqual({ control });
+        expect(assertion?.[1]).toEqual({ initial: { uTF8String: "ab" } });
         expect(caseIgnoreSubstringsMatch(assertion!, "abcd")).toBe(true);
+        expect(caseIgnoreSubstringsMatch(item, "abcd")).toBe(true);
+        expect(caseIgnoreSubstringsMatch(filterItem([
+            { initial: utf8("a") },
+            { initial: utf8("b") },
+        ]))).toBeUndefined();
     });
 
     it("rejects an empty filter, an empty piece, a second initial, and a bad component", () => {

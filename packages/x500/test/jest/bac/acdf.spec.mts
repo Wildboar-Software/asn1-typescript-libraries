@@ -289,10 +289,7 @@ function getSettings (
     return {
         getEqualityMatcher: matcherGetter,
         getOrderingMatcher: () => () => 1,
-        getSubstringsMatcher: () => Object.assign(
-            () => true,
-            { fromFilter: () => undefined },
-        ),
+        getSubstringsMatcher: () => () => true,
         getApproximateMatcher: () => () => true,
         getContextMatcher: () => () => true,
         determineAbsentMatch: () => true,

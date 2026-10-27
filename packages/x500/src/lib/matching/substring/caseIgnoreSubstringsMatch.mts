@@ -1,4 +1,4 @@
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
@@ -9,9 +9,8 @@ import {
     type SubstringAssertionInput,
 } from "../readValue.mjs";
 import { matchStringPieces } from "./matchInOrder.mjs";
-import { prepareDirectoryPieces } from "./prepareSubstring.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
-    attachFromFilter,
     readUnboundedDirectoryStringComponent,
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
@@ -32,9 +31,23 @@ function caseIgnoreSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const pieces = prepareDirectoryPieces(assertion, true);
+    if (!substringAnchorsAreValid(assertion)) {
+        return false;
+    }
+    const mapped = assertion
+        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
+            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
+        ))
+        .map((piece) => {
+            const prepared = prepString(piece.value, CASE_FOLD);
+            return prepared ? { kind: piece.kind, value: prepared } : undefined;
+        });
+    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
+    if (pieces.length !== mapped.length) {
+        return false;
+    }
     const prepared = prepString(value, CASE_FOLD);
-    if (!pieces || prepared === undefined) {
+    if (prepared === undefined) {
         return false;
     }
     return matchStringPieces(pieces, prepared);
@@ -65,24 +78,29 @@ function caseIgnoreSubstringsFromFilter (
  * portions in order, without overlap. Case is ignored and
  * insignificant spaces are removed (clause 7). `control` is ignored.
  *
- * `assertion` is an encoded `SubstringAssertion` or the decoded array.
- * `value` is an element, a directory string, or a JavaScript string.
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is an element,
+ * a directory string, or a JavaScript string. `undefined` means a
+ * filter item could not be converted.
  */
+export
 function caseIgnoreSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: DirectoryStringInput,
-): boolean {
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: DirectoryStringInput,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? caseIgnoreSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     return caseIgnoreSubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertion(decoded),
         readDirectoryString(value),
     );
 }
 
-const caseIgnoreSubstringsRule = attachFromFilter(
-    caseIgnoreSubstringsMatch,
-    caseIgnoreSubstringsFromFilter,
-);
-
-export { caseIgnoreSubstringsRule as caseIgnoreSubstringsMatch };
-
-export default caseIgnoreSubstringsRule;
+export default caseIgnoreSubstringsMatch;

@@ -9,7 +9,6 @@ import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
-import type { DecodedSubstrings } from "../lib/types/SubstringsMatcher.mjs";
 
 // Filter ::= CHOICE {
 //     and              [0]  SET SIZE (1..MAX) OF filter Filter,
@@ -101,27 +100,34 @@ const options: EvaluateFilterOptions = {
         };
     },
     getSubstringsMatcher: (ad: LDAPString) => {
-        return function (assertion: DecodedSubstrings, value: ASN1Element): boolean {
+        return function (assertion: ASN1Element | SubstringFilter, value: ASN1Element): boolean {
+            if (ASN1Element.isElement(assertion)) {
+                return value.utf8String.includes(assertion.utf8String);
+            }
             const stored = value.utf8String;
             let cursor = 0;
-            if (assertion.initial) {
-                const needle = assertion.initial.utf8String;
-                if (needle.length === 0 || !stored.startsWith(needle)) {
+            for (const component of assertion.substrings) {
+                if (ASN1Element.isElement(component)) {
                     return false;
                 }
-                cursor = needle.length;
-            }
-            for (const piece of assertion.any) {
-                const needle = piece.utf8String;
-                const found = stored.indexOf(needle, cursor);
-                if (found < 0) {
-                    return false;
-                }
-                cursor = found + needle.length;
-            }
-            if (assertion.final) {
-                const needle = assertion.final.utf8String;
-                if (
+                const raw = "initial" in component
+                    ? component.initial
+                    : "any_" in component
+                        ? component.any_
+                        : component.final;
+                const needle = Buffer.from(raw).toString("utf-8");
+                if ("initial" in component) {
+                    if (needle.length === 0 || !stored.startsWith(needle)) {
+                        return false;
+                    }
+                    cursor = needle.length;
+                } else if ("any_" in component) {
+                    const found = stored.indexOf(needle, cursor);
+                    if (found < 0) {
+                        return false;
+                    }
+                    cursor = found + needle.length;
+                } else if (
                     needle.length === 0
                     || !stored.endsWith(needle)
                     || stored.length - needle.length < cursor

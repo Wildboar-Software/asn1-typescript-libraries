@@ -1,5 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import type { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
@@ -8,9 +8,8 @@ import {
     type SubstringAssertionInput,
 } from "../readValue.mjs";
 import { matchStringPieces } from "./matchInOrder.mjs";
-import { prepareDirectoryPieces } from "./prepareSubstring.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
-    attachFromFilter,
     readIA5StringComponent,
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
@@ -30,9 +29,23 @@ function caseIgnoreIA5SubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
 ): boolean {
-    const pieces = prepareDirectoryPieces(assertion, true);
+    if (!substringAnchorsAreValid(assertion)) {
+        return false;
+    }
+    const mapped = assertion
+        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
+            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
+        ))
+        .map((piece) => {
+            const prepared = prepString(piece.value, CASE_FOLD);
+            return prepared ? { kind: piece.kind, value: prepared } : undefined;
+        });
+    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
+    if (pieces.length !== mapped.length) {
+        return false;
+    }
     const prepared = prepString(value, CASE_FOLD);
-    if (!pieces || prepared === undefined) {
+    if (prepared === undefined) {
         return false;
     }
     return matchStringPieces(pieces, prepared);
@@ -60,25 +73,29 @@ function caseIgnoreIA5SubstringsFromFilter (
  * with the same ordered, non-overlapping partition as
  * `caseIgnoreSubstringsMatch`. `control` is ignored.
  *
- * `assertion` is an encoded `SubstringAssertion` or the decoded array.
- * `value` is an IA5 element or a JavaScript string.
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is an IA5
+ * element or a JavaScript string.
  */
+export
 function caseIgnoreIA5SubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: ASN1Element | string,
-): boolean {
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: ASN1Element | string,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? caseIgnoreIA5SubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
     const stored = typeof value === "string" ? value : value.ia5String;
     return caseIgnoreIA5SubstringsMatchTyped(
-        readSubstringAssertion(assertion),
+        readSubstringAssertion(decoded),
         stored,
     );
 }
 
-const caseIgnoreIA5SubstringsRule = attachFromFilter(
-    caseIgnoreIA5SubstringsMatch,
-    caseIgnoreIA5SubstringsFromFilter,
-);
-
-export { caseIgnoreIA5SubstringsRule as caseIgnoreIA5SubstringsMatch };
-
-export default caseIgnoreIA5SubstringsRule;
+export default caseIgnoreIA5SubstringsMatch;
