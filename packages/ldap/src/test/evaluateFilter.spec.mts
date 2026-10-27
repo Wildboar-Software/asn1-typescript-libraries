@@ -214,6 +214,40 @@ describe("evaluateFilter()", () => {
         expect(evaluateFilter(filter, dn, entry, options)).toBeTruthy();
     });
 
+    it("allows an initial substring that is not the first component", () => {
+        const filter: Filter = {
+            substrings: new SubstringFilter(
+                encodeLDAPOID(serialNumber),
+                [
+                    {
+                        any_: Buffer.from("A"),
+                    },
+                    {
+                        initial: Buffer.from("ASD"),
+                    },
+                ],
+            ),
+        };
+        expect(evaluateFilter(filter, dn, entry, options)).toBeTruthy();
+    });
+
+    it("rejects two initial substrings", () => {
+        const filter: Filter = {
+            substrings: new SubstringFilter(
+                encodeLDAPOID(serialNumber),
+                [
+                    {
+                        initial: Buffer.from("A"),
+                    },
+                    {
+                        initial: Buffer.from("S"),
+                    },
+                ],
+            ),
+        };
+        expect(evaluateFilter(filter, dn, entry, options)).toBeUndefined();
+    });
+
     it("evalutes a greaterOrEqual filter against a match", () => {
         const filter: Filter = {
             greaterOrEqual: new AttributeValueAssertion(

@@ -7,6 +7,7 @@ import {
     type OctetSubstringAssertionInput,
     type PreparedOctetSubstring,
 } from "../readValue.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
 import { matchOctetPieces } from "./matchInOrder.mjs";
 import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 
@@ -26,18 +27,7 @@ function octetStringSubstringsMatchTyped (
     if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    const mapped = assertion
-        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: Uint8Array } => (
-            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
-        ))
-        .map((piece) => (
-            piece.value.length > 0 ? { kind: piece.kind, value: piece.value } : undefined
-        ));
-    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: Uint8Array } => !!piece);
-    if (pieces.length !== mapped.length) {
-        return false;
-    }
-    return matchOctetPieces(pieces, value);
+    return matchOctetPieces(assertion, value);
 }
 
 /**
@@ -107,6 +97,7 @@ export
 function octetStringSubstringsMatch (
     assertion: OctetSubstringAssertionInput | FilterItem_substrings,
     value?: ASN1Element | Uint8Array,
+    _getEqualityMatcher?: EqualityMatcherGetter,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? octetStringSubstringsFromFilter(assertion)

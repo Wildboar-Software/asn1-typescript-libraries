@@ -20,7 +20,12 @@ import { _encode_SubstringAssertion } from "../../modules/SelectedAttributeTypes
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { _encode_UnboundedDirectoryString } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import {
+    MATCH_FLAG_ASSERTION_PREPPED,
+    MATCH_FLAG_VALUE_PREPPED,
+} from "../../types/MatchFlags.mjs";
+import {
     caseExactSubstringsMatch,
+    caseExactSubstringsMatchPrepped,
     caseExactSubstringsFromFilter,
 } from "./caseExactSubstringsMatch.mjs";
 import {
@@ -349,5 +354,60 @@ describe("substring assertion rules", () => {
             [{ initial: "Main" }, { any_: "Main" }],
             [ "Main Street" ],
         )).toBe(false);
+    });
+
+    it("returns undefined when a substring contains a prohibited character", () => {
+        expect(caseExactSubstringsMatch([{ any_: "a\uFFFD" }], "a")).toBeUndefined();
+        expect(caseExactSubstringsMatch([{ any_: "a" }], "a\uFFFD")).toBeUndefined();
+        expect(caseIgnoreSubstringsMatch([
+            { any_: "ell" },
+            { any_: "a\uFFFD" },
+        ], "Hello")).toBeUndefined();
+        expect(caseIgnoreSubstringsMatch([
+            { any_: "ell" },
+            { any_: "\u00AD" },
+        ], "Hello")).toBe(false);
+    });
+
+    it("skips preparation when the prepped flags are set", () => {
+        const both = MATCH_FLAG_ASSERTION_PREPPED | MATCH_FLAG_VALUE_PREPPED;
+        expect(caseIgnoreSubstringsMatch(
+            [{ any_: "Hello" }],
+            "hello",
+            undefined,
+            both,
+        )).toBe(false);
+        expect(caseIgnoreSubstringsMatch(
+            [{ any_: "hello" }],
+            "hello",
+            undefined,
+            both,
+        )).toBe(true);
+        expect(caseIgnoreSubstringsMatch(
+            [{ any_: "HELLO" }],
+            "hello",
+            undefined,
+            MATCH_FLAG_VALUE_PREPPED,
+        )).toBe(true);
+        expect(caseExactSubstringsMatchPrepped(
+            [{ kind: "any", value: "ELL" }],
+            "HELLO",
+        )).toBe(true);
+        expect(caseExactSubstringsMatchPrepped(
+            [{ kind: "any", value: "ell" }],
+            "HELLO",
+        )).toBe(false);
+        expect(numericStringSubstringsMatch(
+            [{ any_: "1 2" }],
+            "12",
+            undefined,
+            both,
+        )).toBe(false);
+        expect(numericStringSubstringsMatch(
+            [{ any_: "12" }],
+            "12",
+            undefined,
+            both,
+        )).toBe(true);
     });
 });

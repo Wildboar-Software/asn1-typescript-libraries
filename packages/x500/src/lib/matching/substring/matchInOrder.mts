@@ -1,133 +1,186 @@
 import { Buffer } from "node:buffer";
+import {
+    prepString,
+    prohibitedCharacters,
+    type PrepStringOptions,
+} from "../../utils/prepString.mjs";
 
 /**
- * One prepared substring piece. `initial` is a prefix, `final` is a
- * suffix, and `any` is sought at or after the cursor.
+ * One substring component. `control` has no `value` and is skipped.
+ * `initial` is a prefix, `final` is a suffix, and `any` is sought
+ * at or after the cursor.
  */
-export type OrderedStringPiece = {
-    readonly kind: "initial" | "any" | "final";
-    readonly value: string;
+export type ScannableStringPiece = {
+    readonly kind: string;
+    readonly value?: string;
 };
 
 /**
- * One prepared octet substring piece.
+ * One octet substring component.
  */
-export type OrderedOctetPiece = {
-    readonly kind: "initial" | "any" | "final";
-    readonly value: Uint8Array;
+export type ScannableOctetPiece = {
+    readonly kind: string;
+    readonly value?: Uint8Array;
 };
 
 /**
- * Match prepared string pieces left to right without overlap.
+ * Prepare one directory or IA5 substring.
  *
- * Each piece is consumed: the next search starts at the end of the
- * previous match. `any` `"abc"` then `any` `"bcd"` matches `"abcbcd"`
- * and does not match `"abcd"`.
+ * A prohibited character yields `undefined`: the match is Undefined.
+ * A string that maps to nothing yields `""`: the match is FALSE.
+ * The scan applies this to one component at a time.
  *
- * @param pieces Non-empty pieces in anchor order. Values are non-empty.
- * @param value Prepared stored string.
- * @returns `true` when every piece matches in order.
+ * @param text Presented or stored string.
+ * @param options `caseFold` selects case-ignore preparation.
+ * @returns The prepared string, `""` when nothing remains, or
+ *  `undefined` when a character is prohibited.
  */
 export
-function matchStringPieces (
-    pieces: readonly OrderedStringPiece[],
-    value: string,
-): boolean {
-    let cursor = 0;
-    let index = 0;
-    if (pieces[0]?.kind === "initial") {
-        const needle = pieces[0].value;
-        if (needle.length === 0 || !value.startsWith(needle)) {
-            return false;
-        }
-        cursor = needle.length;
-        index = 1;
+function prepareSubstringComponent (
+    text: string,
+    options?: PrepStringOptions,
+): string | undefined {
+    if (prohibitedCharacters.test(text)) {
+        return undefined;
     }
-    let end = pieces.length;
-    if (pieces[pieces.length - 1]?.kind === "final") {
-        end--;
-    }
-    for (; index < end; index++) {
-        const piece = pieces[index];
-        if (piece.kind !== "any" || piece.value.length === 0) {
-            return false;
-        }
-        const found = value.indexOf(piece.value, cursor);
-        if (found < 0) {
-            return false;
-        }
-        cursor = found + piece.value.length;
-    }
-    const last = pieces[pieces.length - 1];
-    if (last?.kind === "final") {
-        const needle = last.value;
-        if (needle.length === 0 || !value.endsWith(needle)) {
-            return false;
-        }
-        if (value.length - needle.length < cursor) {
-            return false;
-        }
-    }
-    return pieces.length > 0;
+    return prepString(text, options) ?? "";
 }
 
 /**
- * Match prepared octet pieces left to right without overlap.
- * Same cursor rule as {@link matchStringPieces}.
+ * Match string pieces left to right without overlap.
  *
- * @param pieces Non-empty pieces in anchor order.
+ * `control` is skipped in place. Each remaining piece is consumed:
+ * the next search starts at the end of the previous match. `any`
+ * `"abc"` then `any` `"bcd"` matches `"abcbcd"` and does not match
+ * `"abcd"`. An empty needle is FALSE. When `prepare` returns
+ * `undefined`, this returns `undefined` immediately.
+ *
+ * @param pieces Components in assertion order.
+ * @param value Prepared stored string.
+ * @param prepare Prepares one assertion component. Omitted when the
+ *  assertion is already prepared.
+ * @returns `true` when every substantive piece matches in order.
+ */
+export
+function matchStringPieces (
+    pieces: readonly ScannableStringPiece[],
+    value: string,
+    prepare?: (text: string) => string | undefined,
+): boolean | undefined {
+    let cursor = 0;
+    let substantive = 0;
+    let finalNeedle: string | undefined;
+    for (let i = 0; i < pieces.length; i++) {
+        const piece = pieces[i];
+        if (piece.kind === "control") {
+            continue;
+        }
+        if (piece.kind !== "initial" && piece.kind !== "any" && piece.kind !== "final") {
+            return false;
+        }
+        if (piece.value === undefined) {
+            return false;
+        }
+        const needle = prepare ? prepare(piece.value) : piece.value;
+        if (needle === undefined) {
+            return undefined;
+        }
+        if (needle.length === 0) {
+            return false;
+        }
+        if (piece.kind === "initial") {
+            if (substantive !== 0 || !value.startsWith(needle)) {
+                return false;
+            }
+            cursor = needle.length;
+        } else if (piece.kind === "final") {
+            if (i !== pieces.length - 1) {
+                return false;
+            }
+            finalNeedle = needle;
+        } else {
+            const found = value.indexOf(needle, cursor);
+            if (found < 0) {
+                return false;
+            }
+            cursor = found + needle.length;
+        }
+        substantive++;
+    }
+    if (finalNeedle !== undefined) {
+        if (!value.endsWith(finalNeedle) || value.length - finalNeedle.length < cursor) {
+            return false;
+        }
+    }
+    return substantive > 0;
+}
+
+/**
+ * Match octet pieces left to right without overlap.
+ * Same cursor rule as {@link matchStringPieces}. `control` is skipped.
+ * An empty piece is FALSE.
+ *
+ * @param pieces Components in assertion order.
  * @param value Stored octets.
- * @returns `true` when every piece matches in order.
+ * @returns `true` when every substantive piece matches in order.
  */
 export
 function matchOctetPieces (
-    pieces: readonly OrderedOctetPiece[],
+    pieces: readonly ScannableOctetPiece[],
     value: Uint8Array,
 ): boolean {
     const haystack = Buffer.from(value.buffer, value.byteOffset, value.byteLength);
     let cursor = 0;
-    let index = 0;
-    if (pieces[0]?.kind === "initial") {
-        const needle = pieces[0].value;
-        if (needle.length === 0 || needle.length > value.length) {
+    let substantive = 0;
+    let finalNeedle: Uint8Array | undefined;
+    for (let i = 0; i < pieces.length; i++) {
+        const piece = pieces[i];
+        if (piece.kind === "control") {
+            continue;
+        }
+        if (piece.kind !== "initial" && piece.kind !== "any" && piece.kind !== "final") {
             return false;
         }
-        if (haystack.compare(needle, 0, needle.length, 0, needle.length) !== 0) {
+        const needle = piece.value;
+        if (!needle || needle.length === 0) {
             return false;
         }
-        cursor = needle.length;
-        index = 1;
+        if (piece.kind === "initial") {
+            if (
+                substantive !== 0
+                || needle.length > value.length
+                || haystack.compare(needle, 0, needle.length, 0, needle.length) !== 0
+            ) {
+                return false;
+            }
+            cursor = needle.length;
+        } else if (piece.kind === "final") {
+            if (i !== pieces.length - 1) {
+                return false;
+            }
+            finalNeedle = needle;
+        } else {
+            const found = haystack.indexOf(needle, cursor);
+            if (found < 0) {
+                return false;
+            }
+            cursor = found + needle.length;
+        }
+        substantive++;
     }
-    let end = pieces.length;
-    if (pieces[pieces.length - 1]?.kind === "final") {
-        end--;
-    }
-    for (; index < end; index++) {
-        const piece = pieces[index];
-        if (piece.kind !== "any" || piece.value.length === 0) {
+    if (finalNeedle) {
+        if (finalNeedle.length > value.length) {
             return false;
         }
-        const found = haystack.indexOf(piece.value, cursor);
-        if (found < 0) {
-            return false;
-        }
-        cursor = found + piece.value.length;
-    }
-    const last = pieces[pieces.length - 1];
-    if (last?.kind === "final") {
-        const needle = last.value;
-        if (needle.length === 0 || needle.length > value.length) {
-            return false;
-        }
-        const start = value.length - needle.length;
-        if (start < cursor) {
-            return false;
-        }
-        if (haystack.compare(needle, 0, needle.length, start, value.length) !== 0) {
+        const start = value.length - finalNeedle.length;
+        if (
+            start < cursor
+            || haystack.compare(finalNeedle, 0, finalNeedle.length, start, value.length) !== 0
+        ) {
             return false;
         }
     }
-    return pieces.length > 0;
+    return substantive > 0;
 }
 
 /**
@@ -156,58 +209,74 @@ function findInLines (
 /**
  * `caseIgnoreListSubstringsMatch` scan. Pieces are matched in order
  * against the concatenation of `lines` with no separator, and each
- * piece must lie inside a single line.
+ * piece must lie inside a single line. `control` is skipped.
  *
- * @param pieces Prepared pieces in anchor order.
- * @param lines Prepared stored lines. Not empty.
- * @returns `true` when every piece matches without spanning a line.
+ * @param pieces Components in assertion order.
+ * @param lines Prepared stored lines.
+ * @param prepare Prepares one assertion component. Omitted when the
+ *  assertion is already prepared.
+ * @returns `true` when every substantive piece matches without spanning a line.
  */
 export
 function matchStringListPieces (
-    pieces: readonly OrderedStringPiece[],
+    pieces: readonly ScannableStringPiece[],
     lines: readonly string[],
-): boolean {
-    if (lines.length === 0 || pieces.length === 0) {
+    prepare?: (text: string) => string | undefined,
+): boolean | undefined {
+    if (lines.length === 0) {
         return false;
     }
     let line = 0;
     let offset = 0;
-    let index = 0;
-    if (pieces[0].kind === "initial") {
-        const needle = pieces[0].value;
-        if (needle.length === 0 || !lines[0].startsWith(needle)) {
+    let substantive = 0;
+    let finalNeedle: string | undefined;
+    for (let i = 0; i < pieces.length; i++) {
+        const piece = pieces[i];
+        if (piece.kind === "control") {
+            continue;
+        }
+        if (piece.kind !== "initial" && piece.kind !== "any" && piece.kind !== "final") {
             return false;
         }
-        offset = needle.length;
-        index = 1;
-    }
-    let end = pieces.length;
-    if (pieces[pieces.length - 1].kind === "final") {
-        end--;
-    }
-    for (; index < end; index++) {
-        const piece = pieces[index];
-        if (piece.kind !== "any") {
+        if (piece.value === undefined) {
             return false;
         }
-        const found = findInLines(lines, piece.value, line, offset);
-        if (!found) {
+        const needle = prepare ? prepare(piece.value) : piece.value;
+        if (needle === undefined) {
+            return undefined;
+        }
+        if (needle.length === 0) {
             return false;
         }
-        line = found.line;
-        offset = found.offset;
+        if (piece.kind === "initial") {
+            if (substantive !== 0 || !lines[0].startsWith(needle)) {
+                return false;
+            }
+            offset = needle.length;
+        } else if (piece.kind === "final") {
+            if (i !== pieces.length - 1) {
+                return false;
+            }
+            finalNeedle = needle;
+        } else {
+            const found = findInLines(lines, needle, line, offset);
+            if (!found) {
+                return false;
+            }
+            line = found.line;
+            offset = found.offset;
+        }
+        substantive++;
     }
-    const last = pieces[pieces.length - 1];
-    if (last.kind === "final") {
-        const needle = last.value;
+    if (finalNeedle !== undefined) {
         const lastLine = lines.length - 1;
         const stored = lines[lastLine];
-        if (needle.length === 0 || !stored.endsWith(needle)) {
-            return false;
-        }
-        if (line === lastLine && stored.length - needle.length < offset) {
+        if (
+            !stored.endsWith(finalNeedle)
+            || (line === lastLine && stored.length - finalNeedle.length < offset)
+        ) {
             return false;
         }
     }
-    return true;
+    return substantive > 0;
 }

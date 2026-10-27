@@ -1,6 +1,5 @@
 import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-import { prepString } from "../../utils/prepString.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
 import {
     readDirectoryString,
@@ -8,7 +7,15 @@ import {
     type PreparedSubstring,
     type SubstringAssertionInput,
 } from "../readValue.mjs";
-import { matchStringPieces } from "./matchInOrder.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
+import {
+    matchStringPieces,
+    prepareSubstringComponent,
+} from "./matchInOrder.mjs";
 import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
     readUnboundedDirectoryStringComponent,
@@ -16,39 +23,57 @@ import {
 } from "./substringAssertionFromFilter.mjs";
 
 /**
+ * `caseExactSubstringsMatch` on strings that are already prepared.
+ * The scan does not allocate a piece list and does not call `prepString`.
+ *
+ * @param assertion Prepared pieces, including any `control`.
+ * @param value Prepared stored directory string.
+ * @returns `true` when the pieces match in order without overlap.
+ */
+export
+function caseExactSubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return matchStringPieces(assertion, value) === true;
+}
+
+/**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
  * `caseExactSubstringsMatch` on pieces and a stored string.
  * Insignificant spaces are removed; case is significant.
+ * A prohibited character in the assertion makes the match Undefined.
  *
- * @param assertion Presented pieces, not yet prepared.
- * @param value Stored directory string, not yet prepared.
+ * @param assertion Presented pieces.
+ * @param value Stored directory string.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip preparation of that side.
  * @returns `true` when the pieces match in order without overlap.
  */
 export
 function caseExactSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
-): boolean {
+    flags: number = 0,
+): boolean | undefined {
     if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    const mapped = assertion
-        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
-            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
-        ))
-        .map((piece) => {
-            const prepared = prepString(piece.value);
-            return prepared ? { kind: piece.kind, value: prepared } : undefined;
-        });
-    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
-    if (pieces.length !== mapped.length) {
-        return false;
+    let stored = value;
+    if (!valueAlreadyPrepped(flags)) {
+        const prepared = prepareSubstringComponent(value);
+        if (prepared === undefined) {
+            return undefined;
+        }
+        if (prepared.length === 0) {
+            return false;
+        }
+        stored = prepared;
     }
-    const prepared = prepString(value);
-    if (prepared === undefined) {
-        return false;
+    if (assertionAlreadyPrepped(flags)) {
+        return caseExactSubstringsMatchPrepped(assertion, stored);
     }
-    return matchStringPieces(pieces, prepared);
+    return matchStringPieces(assertion, stored, (text) => prepareSubstringComponent(text));
 }
 
 /**
@@ -83,6 +108,8 @@ export
 function caseExactSubstringsMatch (
     assertion: SubstringAssertionInput | FilterItem_substrings,
     value?: DirectoryStringInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? caseExactSubstringsFromFilter(assertion)
@@ -96,6 +123,7 @@ function caseExactSubstringsMatch (
     return caseExactSubstringsMatchTyped(
         readSubstringAssertion(decoded),
         readDirectoryString(value),
+        flags,
     );
 }
 

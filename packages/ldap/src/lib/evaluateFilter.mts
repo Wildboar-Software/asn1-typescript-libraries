@@ -142,9 +142,9 @@ const DEFAULT_RECURSION_TTL: number = 20;
  */
 
 /**
- * `initial` is first, `final` is last, and at least one piece is present.
- * LDAP has no `control`, so a leading `initial` is required when that
- * alternative is used.
+ * At most one `initial`, `final` is last, and at least one piece is
+ * present. `initial` does not have to be index 0: a control attribute
+ * can appear first.
  */
 function substringFilterIsUsable (
     substrings: readonly SubstringFilter_substrings_substring[],
@@ -153,15 +153,17 @@ function substringFilterIsUsable (
         return false;
     }
     let substantive = 0;
+    let seenInitial = false;
     for (let i = 0; i < substrings.length; i++) {
         const component = substrings[i];
         if (ASN1Element.isElement(component)) {
             return false;
         }
         if ("initial" in component) {
-            if (i !== 0) {
+            if (seenInitial) {
                 return false;
             }
+            seenInitial = true;
             substantive++;
         } else if ("final" in component) {
             if (i !== substrings.length - 1) {
@@ -252,7 +254,7 @@ function evaluateFilter (
     } else if ("substrings" in filter) {
         try {
             const sf = filter.substrings;
-            const assertionDecoder = options.getLDAPSyntaxDecoder(sf.type_);
+            const valueDecoder = options.getLDAPSyntaxDecoder(sf.type_);
             const matcher = options.getSubstringsMatcher(sf.type_);
             if (!matcher) {
                 return undefined;
@@ -260,7 +262,7 @@ function evaluateFilter (
             if (!options.permittedToMatch(sf.type_)) {
                 return undefined;
             }
-            if (!assertionDecoder) {
+            if (!valueDecoder) {
                 return undefined;
             }
             if (!substringFilterIsUsable(sf.substrings)) {
@@ -273,7 +275,7 @@ function evaluateFilter (
                         if (!options.permittedToMatch(sf.type_, val)) {
                             return false;
                         }
-                        const decodedValue = assertionDecoder(val);
+                        const decodedValue = valueDecoder(val);
                         return matcher(sf, decodedValue);
                     }));
         } catch {

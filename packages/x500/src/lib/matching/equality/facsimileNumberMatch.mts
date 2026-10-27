@@ -9,6 +9,7 @@ import {
 import type {
     FacsimileTelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
 import { telephoneNumberMatchTyped } from "./telephoneNumberMatch.mjs";
 
 /** Element, decoded facsimile number, or the telephone number string. */
@@ -51,10 +52,13 @@ export
 function facsimileNumberMatch (
     assertion: FacsimileNumberInput,
     value: FacsimileNumberInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean {
     return telephoneNumberMatchTyped(
         readFacsimileNumber(assertion),
         readFacsimileNumber(value),
+        flags,
     );
 }
 

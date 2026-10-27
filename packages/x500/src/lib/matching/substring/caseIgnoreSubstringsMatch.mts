@@ -1,6 +1,5 @@
 import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-import { prepString } from "../../utils/prepString.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
 import {
     readDirectoryString,
@@ -8,7 +7,15 @@ import {
     type PreparedSubstring,
     type SubstringAssertionInput,
 } from "../readValue.mjs";
-import { matchStringPieces } from "./matchInOrder.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
+import {
+    matchStringPieces,
+    prepareSubstringComponent,
+} from "./matchInOrder.mjs";
 import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
     readUnboundedDirectoryStringComponent,
@@ -18,39 +25,61 @@ import {
 const CASE_FOLD = { caseFold: true } as const;
 
 /**
- * Rec. ITU-T X.520 (10/2019), clause 8.1.3
- * `caseIgnoreSubstringsMatch` on prepared pieces and a stored string.
- * Case is folded and insignificant spaces are removed here.
+ * `caseIgnoreSubstringsMatch` on strings that are already prepared.
+ * Case is already folded. The scan does not allocate a piece list.
  *
- * @param assertion Presented pieces, not yet prepared.
- * @param value Stored directory string, not yet prepared.
+ * @param assertion Prepared pieces, including any `control`.
+ * @param value Prepared stored directory string.
+ * @returns `true` when the pieces match in order without overlap.
+ */
+export
+function caseIgnoreSubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return matchStringPieces(assertion, value) === true;
+}
+
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.1.3
+ * `caseIgnoreSubstringsMatch` on pieces and a stored string.
+ * Case is folded and insignificant spaces are removed here.
+ * A prohibited character in the assertion makes the match Undefined.
+ *
+ * @param assertion Presented pieces.
+ * @param value Stored directory string.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip preparation of that side.
  * @returns `true` when the pieces match in order without overlap.
  */
 export
 function caseIgnoreSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
-): boolean {
+    flags: number = 0,
+): boolean | undefined {
     if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    const mapped = assertion
-        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
-            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
-        ))
-        .map((piece) => {
-            const prepared = prepString(piece.value, CASE_FOLD);
-            return prepared ? { kind: piece.kind, value: prepared } : undefined;
-        });
-    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
-    if (pieces.length !== mapped.length) {
-        return false;
+    let stored = value;
+    if (!valueAlreadyPrepped(flags)) {
+        const prepared = prepareSubstringComponent(value, CASE_FOLD);
+        if (prepared === undefined) {
+            return undefined;
+        }
+        if (prepared.length === 0) {
+            return false;
+        }
+        stored = prepared;
     }
-    const prepared = prepString(value, CASE_FOLD);
-    if (prepared === undefined) {
-        return false;
+    if (assertionAlreadyPrepped(flags)) {
+        return caseIgnoreSubstringsMatchPrepped(assertion, stored);
     }
-    return matchStringPieces(pieces, prepared);
+    return matchStringPieces(
+        assertion,
+        stored,
+        (text) => prepareSubstringComponent(text, CASE_FOLD),
+    );
 }
 
 /**
@@ -87,6 +116,8 @@ export
 function caseIgnoreSubstringsMatch (
     assertion: SubstringAssertionInput | FilterItem_substrings,
     value?: DirectoryStringInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? caseIgnoreSubstringsFromFilter(assertion)
@@ -100,6 +131,7 @@ function caseIgnoreSubstringsMatch (
     return caseIgnoreSubstringsMatchTyped(
         readSubstringAssertion(decoded),
         readDirectoryString(value),
+        flags,
     );
 }
 

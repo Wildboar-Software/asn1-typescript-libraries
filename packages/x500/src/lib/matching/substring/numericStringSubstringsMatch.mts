@@ -6,6 +6,11 @@ import {
     type PreparedSubstring,
     type SubstringAssertionInput,
 } from "../readValue.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
 import { matchStringPieces } from "./matchInOrder.mjs";
 import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
@@ -13,36 +18,54 @@ import {
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
 
+function stripSpaces (text: string): string {
+    return text.replace(/\s+/g, "");
+}
+
+/**
+ * `numericStringSubstringsMatch` on digit strings that already have
+ * spaces removed.
+ *
+ * @param assertion Prepared pieces, including any `control`.
+ * @param value Stored digits, with spaces already removed.
+ * @returns `true` when the digit pieces match in order without overlap.
+ */
+export
+function numericStringSubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return matchStringPieces(assertion, value) === true;
+}
+
 /**
  * `numericStringSubstringsMatch` on pieces and a numeric string.
  * All spaces are removed from both sides before the ordered scan.
+ * A component that is only spaces is FALSE.
  *
  * @param assertion Presented pieces, still containing spaces.
  * @param value Stored numeric string, still containing spaces.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip space removal of that side.
  * @returns `true` when the digit pieces match in order without overlap.
  */
 export
 function numericStringSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
+    flags: number = 0,
 ): boolean {
     if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    const mapped = assertion
-        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
-            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
-        ))
-        .map((piece) => {
-            const prepared = piece.value.replace(/\s+/g, "");
-            return prepared ? { kind: piece.kind, value: prepared } : undefined;
-        });
-    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
-    const prepared = value.replace(/\s+/g, "");
-    if (pieces.length !== mapped.length || prepared.length === 0) {
+    const stored = valueAlreadyPrepped(flags) ? value : stripSpaces(value);
+    if (stored.length === 0) {
         return false;
     }
-    return matchStringPieces(pieces, prepared);
+    if (assertionAlreadyPrepped(flags)) {
+        return numericStringSubstringsMatchPrepped(assertion, stored);
+    }
+    return matchStringPieces(assertion, stored, stripSpaces) === true;
 }
 
 /**
@@ -74,6 +97,8 @@ export
 function numericStringSubstringsMatch (
     assertion: SubstringAssertionInput | FilterItem_substrings,
     value?: ASN1Element | string,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? numericStringSubstringsFromFilter(assertion)
@@ -88,6 +113,7 @@ function numericStringSubstringsMatch (
     return numericStringSubstringsMatchTyped(
         readSubstringAssertion(decoded),
         stored,
+        flags,
     );
 }
 

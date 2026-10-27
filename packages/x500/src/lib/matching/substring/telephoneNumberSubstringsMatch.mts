@@ -6,6 +6,11 @@ import {
     type PreparedSubstring,
     type SubstringAssertionInput,
 } from "../readValue.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
 import { matchStringPieces } from "./matchInOrder.mjs";
 import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
@@ -13,36 +18,53 @@ import {
     substringAssertionFromFilter,
 } from "./substringAssertionFromFilter.mjs";
 
+function stripTelephone (text: string): string {
+    return text.replace(/[- ]/g, "");
+}
+
+/**
+ * `telephoneNumberSubstringsMatch` on numbers that already have
+ * spaces and hyphens removed.
+ *
+ * @param assertion Prepared pieces, including any `control`.
+ * @param value Stored number, already normalized.
+ * @returns `true` when the pieces match in order without overlap.
+ */
+export
+function telephoneNumberSubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return matchStringPieces(assertion, value) === true;
+}
+
 /**
  * `telephoneNumberSubstringsMatch` on pieces and a telephone number.
  * Spaces and hyphens are removed from both sides before the scan.
  *
  * @param assertion Presented pieces, still containing spaces and hyphens.
  * @param value Stored telephone number.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip hyphen and space removal of that side.
  * @returns `true` when the pieces match in order without overlap.
  */
 export
 function telephoneNumberSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
+    flags: number = 0,
 ): boolean {
     if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    const mapped = assertion
-        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
-            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
-        ))
-        .map((piece) => {
-            const prepared = piece.value.replace(/[- ]/g, "");
-            return prepared ? { kind: piece.kind, value: prepared } : undefined;
-        });
-    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
-    const prepared = value.replace(/[- ]/g, "");
-    if (pieces.length !== mapped.length || prepared.length === 0) {
+    const stored = valueAlreadyPrepped(flags) ? value : stripTelephone(value);
+    if (stored.length === 0) {
         return false;
     }
-    return matchStringPieces(pieces, prepared);
+    if (assertionAlreadyPrepped(flags)) {
+        return telephoneNumberSubstringsMatchPrepped(assertion, stored);
+    }
+    return matchStringPieces(assertion, stored, stripTelephone) === true;
 }
 
 /**
@@ -74,6 +96,8 @@ export
 function telephoneNumberSubstringsMatch (
     assertion: SubstringAssertionInput | FilterItem_substrings,
     value?: ASN1Element | string,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? telephoneNumberSubstringsFromFilter(assertion)
@@ -88,6 +112,7 @@ function telephoneNumberSubstringsMatch (
     return telephoneNumberSubstringsMatchTyped(
         readSubstringAssertion(decoded),
         stored,
+        flags,
     );
 }
 

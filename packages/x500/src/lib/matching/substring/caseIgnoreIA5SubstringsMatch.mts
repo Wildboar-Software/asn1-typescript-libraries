@@ -1,13 +1,20 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
 import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-import { prepString } from "../../utils/prepString.mjs";
 import {
     readSubstringAssertion,
     type PreparedSubstring,
     type SubstringAssertionInput,
 } from "../readValue.mjs";
-import { matchStringPieces } from "./matchInOrder.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
+import {
+    matchStringPieces,
+    prepareSubstringComponent,
+} from "./matchInOrder.mjs";
 import { substringAnchorsAreValid } from "./substringAnchors.mjs";
 import {
     readIA5StringComponent,
@@ -17,38 +24,59 @@ import {
 const CASE_FOLD = { caseFold: true } as const;
 
 /**
+ * `caseIgnoreIA5SubstringsMatch` on strings that are already prepared.
+ *
+ * @param assertion Prepared pieces, including any `control`.
+ * @param value Prepared stored IA5 string.
+ * @returns `true` when the pieces match in order without overlap.
+ */
+export
+function caseIgnoreIA5SubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return matchStringPieces(assertion, value) === true;
+}
+
+/**
  * `caseIgnoreIA5SubstringsMatch` on pieces and an IA5 string.
  * Preparation matches `caseIgnoreIA5Match`, including case folding.
+ * A prohibited character in the assertion makes the match Undefined.
  *
- * @param assertion Presented pieces, not yet prepared.
- * @param value Stored IA5 string, not yet prepared.
+ * @param assertion Presented pieces.
+ * @param value Stored IA5 string.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip preparation of that side.
  * @returns `true` when the pieces match in order without overlap.
  */
 export
 function caseIgnoreIA5SubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
-): boolean {
+    flags: number = 0,
+): boolean | undefined {
     if (!substringAnchorsAreValid(assertion)) {
         return false;
     }
-    const mapped = assertion
-        .filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => (
-            piece.kind === "initial" || piece.kind === "any" || piece.kind === "final"
-        ))
-        .map((piece) => {
-            const prepared = prepString(piece.value, CASE_FOLD);
-            return prepared ? { kind: piece.kind, value: prepared } : undefined;
-        });
-    const pieces = mapped.filter((piece): piece is { kind: "initial" | "any" | "final"; value: string } => !!piece);
-    if (pieces.length !== mapped.length) {
-        return false;
+    let stored = value;
+    if (!valueAlreadyPrepped(flags)) {
+        const prepared = prepareSubstringComponent(value, CASE_FOLD);
+        if (prepared === undefined) {
+            return undefined;
+        }
+        if (prepared.length === 0) {
+            return false;
+        }
+        stored = prepared;
     }
-    const prepared = prepString(value, CASE_FOLD);
-    if (prepared === undefined) {
-        return false;
+    if (assertionAlreadyPrepped(flags)) {
+        return caseIgnoreIA5SubstringsMatchPrepped(assertion, stored);
     }
-    return matchStringPieces(pieces, prepared);
+    return matchStringPieces(
+        assertion,
+        stored,
+        (text) => prepareSubstringComponent(text, CASE_FOLD),
+    );
 }
 
 /**
@@ -81,6 +109,8 @@ export
 function caseIgnoreIA5SubstringsMatch (
     assertion: SubstringAssertionInput | FilterItem_substrings,
     value?: ASN1Element | string,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? caseIgnoreIA5SubstringsFromFilter(assertion)
@@ -95,6 +125,7 @@ function caseIgnoreIA5SubstringsMatch (
     return caseIgnoreIA5SubstringsMatchTyped(
         readSubstringAssertion(decoded),
         stored,
+        flags,
     );
 }
 

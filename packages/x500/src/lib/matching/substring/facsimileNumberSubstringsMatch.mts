@@ -12,7 +12,11 @@ import {
     type PreparedSubstring,
     type SubstringAssertionInput,
 } from "../readValue.mjs";
-import { telephoneNumberSubstringsMatchTyped } from "./telephoneNumberSubstringsMatch.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    telephoneNumberSubstringsMatchPrepped,
+    telephoneNumberSubstringsMatchTyped,
+} from "./telephoneNumberSubstringsMatch.mjs";
 import {
     readFacsimileNumberComponent,
     substringAssertionFromFilter,
@@ -42,19 +46,38 @@ function readStoredFacsimileNumber (
 }
 
 /**
+ * `facsimileNumberSubstringsMatch` on a number that already has
+ * spaces and hyphens removed.
+ *
+ * @param assertion Prepared pieces.
+ * @param value Stored telephone number, already normalized.
+ * @returns `true` when the pieces match the number in order.
+ */
+export
+function facsimileNumberSubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return telephoneNumberSubstringsMatchPrepped(assertion, value);
+}
+
+/**
  * `facsimileNumberSubstringsMatch` on pieces and the telephone number.
  * Spaces and hyphens are removed, as for `telephoneNumberSubstringsMatch`.
  *
  * @param assertion Presented pieces.
  * @param value Stored telephone number.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip hyphen and space removal of that side.
  * @returns `true` when the pieces match the number in order.
  */
 export
 function facsimileNumberSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
+    flags: number = 0,
 ): boolean {
-    return telephoneNumberSubstringsMatchTyped(assertion, value);
+    return telephoneNumberSubstringsMatchTyped(assertion, value, flags);
 }
 
 /**
@@ -86,6 +109,8 @@ export
 function facsimileNumberSubstringsMatch (
     assertion: SubstringAssertionInput | FilterItem_substrings,
     value?: ASN1Element | FacsimileTelephoneNumber | string,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean | undefined {
     const decoded = assertion instanceof FilterItem_substrings
         ? facsimileNumberSubstringsFromFilter(assertion)
@@ -99,6 +124,7 @@ function facsimileNumberSubstringsMatch (
     return facsimileNumberSubstringsMatchTyped(
         readSubstringAssertion(decoded),
         readStoredFacsimileNumber(value),
+        flags,
     );
 }
 
