@@ -13,21 +13,21 @@
     "date-fns": "^4.1.0"
   },
   "devDependencies": {
-    "@nx/js": "23.1.0",
-    "@nx/vite": "23.1.0",
-    "@nx/vitest": "23.1.0",
+    "@nx/js": "24.0.1",
+    "@nx/vite": "24.0.1",
+    "@nx/vitest": "24.0.1",
     "@swc/helpers": "~0.5.18",
     "@types/node": "25.5.0",
-    "@vitest/coverage-v8": "4.1.1",
+    "@vitest/coverage-v8": "5.0.5",
     "benchmark": "^2.1.4",
     "jsdom": "^27.1.0",
-    "nx": "23.1.0",
+    "nx": "24.0.1",
     "organize-imports-cli": "^1.0.2",
     "ts-morph": "^26.0.0",
     "tslib": "^2.3.0",
     "typescript": "6.0.2",
     "vite": "8.1.5",
-    "vitest": "4.1.1"
+    "vitest": "5.0.5"
   },
   "workspaces": [
     "packages/*"
