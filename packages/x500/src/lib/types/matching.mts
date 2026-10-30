@@ -141,7 +141,8 @@ function createEqualityMatcher<A>(
             ? new Attribute(valueOrValues.type_, [ valueOrValues.value ])
             : valueOrValues;
         const constantTime = (flags & MATCH_FLAG_CONSTANT_TIME);
-        let deferredResult: boolean = false;
+        let allUndefined: boolean = true;
+        let deferredResult: boolean | undefined = false;
         for (let i = 0; i < attr.values.length; i++) {
             const value = attr.values[i];
             try {
@@ -151,10 +152,11 @@ function createEqualityMatcher<A>(
                     getEqualityMatcher,
                     flags,
                 );
-                if (result === undefined) {
-                    // TODO: Should there be a separate flag for debug undefined?
-                    continue;
+
+                if (result !== undefined) {
+                    allUndefined = false;
                 }
+                
                 if (result === true) {
                     if (matchedValues) {
                         matchedValues.values.push(value);
@@ -165,13 +167,18 @@ function createEqualityMatcher<A>(
                     } else {
                         return true;
                     }
-                }                  
+                } else if (deferredResult !== true) {
+                    // UNDEFINED takes precedence over FALSE as a reflection of
+                    // the fact that the value _could_ have matched, but we are
+                    // unsure. A TRUE already found must stay TRUE.
+                    deferredResult = (deferredResult === undefined) ? undefined : result;
+                }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
                 if (debug) {
                     console.error(valueErrorMessage(false, i, attr.type_, e));
                 }
-                // Value decoding error treated as UNDEFINED. Continuing.
+                deferredResult = deferredResult || undefined;
                 continue;
             }
         }
@@ -186,10 +193,11 @@ function createEqualityMatcher<A>(
                     getEqualityMatcher,
                     flags,
                 );
-                if (result === undefined) {
-                    // TODO: Should there be a separate flag for debug undefined?
-                    continue;
+
+                if (result !== undefined) {
+                    allUndefined = false;
                 }
+                
                 if (result === true) {
                     if (matchedValues) {
                         if (matchedValues.valuesWithContext) {
@@ -204,15 +212,23 @@ function createEqualityMatcher<A>(
                     } else {
                         return true;
                     }
-                }                  
+                } else if (deferredResult !== true) {
+                    // UNDEFINED takes precedence over FALSE as a reflection of
+                    // the fact that the value _could_ have matched, but we are
+                    // unsure. A TRUE already found must stay TRUE.
+                    deferredResult = (deferredResult === undefined) ? undefined : result;
+                }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
                 if (debug) {
                     console.error(valueErrorMessage(false, i, attr.type_, e));
                 }
-                // Value decoding error treated as UNDEFINED. Continuing.
+                deferredResult = deferredResult || undefined;
                 continue;
             }
+        }
+        if (allUndefined) {
+            return undefined;
         }
         if (
             matchedValues

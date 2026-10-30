@@ -9,6 +9,7 @@ import {
     MATCH_FLAG_NONE,
     MATCH_FLAG_CONSTANT_TIME,
     createSubstringsMatcher,
+    createEqualityMatcher,
     type TypedEquationFunction,
     type AssertedSubstring,
     getStringSubstringsMatcher,
@@ -230,5 +231,101 @@ suite("caseIgnoreSubstringsMatch for testing matching utilities", () => {
     test("basic case", () => {
         substringsBasicCaseTest(false);
         substringsBasicCaseTest(true);
+    });
+});
+
+// Per-value outcomes for the precedence matcher below.
+const VALUE_MATCHES = 1;
+const VALUE_DOES_NOT_MATCH = 0;
+const VALUE_UNDEFINED = -1;
+const VALUE_THROWS = 2;
+
+function precedenceValueMatcher (
+    _assertion: ASN1Element,
+    value: ASN1Element,
+): boolean | undefined {
+    const v = Number(value.integer);
+    if (v === VALUE_MATCHES) {
+        return true;
+    }
+    if (v === VALUE_DOES_NOT_MATCH) {
+        return false;
+    }
+    if (v === VALUE_UNDEFINED) {
+        return undefined;
+    }
+    throw new Error("value could not be evaluated");
+}
+
+const precedenceMatch = createEqualityMatcher(
+    (el) => el,
+    precedenceValueMatcher,
+);
+
+function precedenceAttribute (values: number[], contexts: number[] = []): Attribute {
+    return new Attribute(
+        oidC["&id"],
+        values.map(integer),
+        contexts.map((v) => new Attribute_valuesWithContext_Item(integer(v), [])),
+    );
+}
+
+const valueResultPrecedenceTest = (constantTime: boolean) => {
+    const flags = constantTime
+        ? MATCH_FLAG_CONSTANT_TIME
+        : MATCH_FLAG_NONE
+        ;
+    const match = (
+        values: number[],
+        expected: boolean | undefined,
+        contexts?: number[],
+    ) => {
+        expect(precedenceMatch(
+            integer(0),
+            precedenceAttribute(values, contexts),
+            undefined,
+            flags,
+        )).toBe(expected);
+    };
+
+    // TRUE wins, whichever value produces it and whichever loop holds it.
+    match([VALUE_MATCHES, VALUE_DOES_NOT_MATCH], true);
+    match([VALUE_DOES_NOT_MATCH, VALUE_MATCHES], true);
+    match([VALUE_MATCHES, VALUE_UNDEFINED], true);
+    match([VALUE_UNDEFINED, VALUE_MATCHES], true);
+    match([VALUE_DOES_NOT_MATCH, VALUE_UNDEFINED, VALUE_MATCHES], true);
+    match([VALUE_MATCHES, VALUE_THROWS], true);
+    match([VALUE_THROWS, VALUE_MATCHES], true);
+    match([VALUE_DOES_NOT_MATCH], true, [VALUE_MATCHES]);
+    match([VALUE_MATCHES], true, [VALUE_DOES_NOT_MATCH]);
+    match([VALUE_UNDEFINED], true, [VALUE_MATCHES]);
+    match([VALUE_MATCHES], true, [VALUE_UNDEFINED]);
+    match([VALUE_THROWS], true, [VALUE_MATCHES]);
+    match([VALUE_MATCHES], true, [VALUE_THROWS]);
+
+    // With no TRUE, UNDEFINED wins over FALSE. A thrown value is UNDEFINED.
+    match([VALUE_DOES_NOT_MATCH, VALUE_UNDEFINED], undefined);
+    match([VALUE_UNDEFINED, VALUE_DOES_NOT_MATCH], undefined);
+    match([VALUE_DOES_NOT_MATCH, VALUE_THROWS], undefined);
+    match([VALUE_THROWS, VALUE_DOES_NOT_MATCH], undefined);
+    match([VALUE_UNDEFINED], undefined);
+    match([VALUE_UNDEFINED, VALUE_UNDEFINED], undefined);
+    match([VALUE_THROWS], undefined);
+    match([VALUE_THROWS, VALUE_THROWS], undefined);
+    match([VALUE_DOES_NOT_MATCH], undefined, [VALUE_UNDEFINED]);
+    match([VALUE_UNDEFINED], undefined, [VALUE_DOES_NOT_MATCH]);
+    match([VALUE_DOES_NOT_MATCH], undefined, [VALUE_THROWS]);
+    match([VALUE_THROWS], undefined, [VALUE_DOES_NOT_MATCH]);
+
+    // FALSE only when every evaluated value is FALSE.
+    match([VALUE_DOES_NOT_MATCH], false);
+    match([VALUE_DOES_NOT_MATCH, VALUE_DOES_NOT_MATCH], false);
+    match([VALUE_DOES_NOT_MATCH], false, [VALUE_DOES_NOT_MATCH]);
+};
+
+suite("filter-item result precedence", () => {
+    test("TRUE, then UNDEFINED, then FALSE", () => {
+        valueResultPrecedenceTest(false);
+        valueResultPrecedenceTest(true);
     });
 });
