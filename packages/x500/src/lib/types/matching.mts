@@ -175,7 +175,7 @@ function createEqualityMatcher<A>(
                 }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
-                if (debug) {
+                if (debug && !constantTime) {
                     console.error(valueErrorMessage(false, i, attr.type_, e));
                 }
                 deferredResult = deferredResult || undefined;
@@ -220,7 +220,7 @@ function createEqualityMatcher<A>(
                 }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
-                if (debug) {
+                if (debug && !constantTime) {
                     console.error(valueErrorMessage(false, i, attr.type_, e));
                 }
                 deferredResult = deferredResult || undefined;
@@ -267,6 +267,98 @@ function createSubstringsMatcher<A>(
     );
 }
 
+/**
+ * @returns 1 when `haystack` contains `needle` at `start`, otherwise 0.
+ * The loop always runs `needle.length` times. Out-of-range positions still
+ * read a haystack character, so a needle that overhangs does not skip the reads.
+ * 
+ * This returns an integer instead of a boolean so it can be used in branchless
+ * programming.
+ */
+function ctEqualAt (haystack: string, start: number, needle: string): number {
+    const n = needle.length;
+    const hlen = haystack.length;
+    let mismatch = (start >= 0 && (start + n) <= hlen) ? 0 : 1;
+    for (let j = 0; j < n; j++) {
+        const pos = start + j;
+        const inPos = (pos >= 0 && pos < hlen) ? 1 : 0;
+        const hc = hlen === 0 ? 0 : haystack.charCodeAt(inPos ? pos : 0);
+        mismatch |= (hc ^ needle.charCodeAt(j)) | (inPos ^ 1);
+    }
+    return mismatch === 0 ? 1 : 0;
+}
+
+/**
+ * Earliest index of `needle` at or after `from` and ending at or before `end`.
+ * One alignment is tried per haystack index, including indexes where `needle`
+ * overhangs the end. Stopping at `haystack.length - needle.length` would skip
+ * the loop entirely whenever the needle is longer than the haystack, so
+ * shortening that needle until the loop starts would reveal the haystack length.
+ * Returns -1 on a miss.
+ */
+function ctIndexOf (
+    haystack: string,
+    needle: string,
+    from: number,
+    end: number,
+): number {
+    const needleLength = needle.length;
+    const haystackLength = haystack.length;
+    let earliestIndex = -1;
+    for (let index = 0; index <= haystackLength; index++) {
+        const needleMatchesHere = ctEqualAt(haystack, index, needle);
+        const startsAtOrAfterWindow = index >= from ? 1 : 0;
+        const endsAtOrBeforeWindow = (index + needleLength) <= end ? 1 : 0;
+        const noEarlierMatch = earliestIndex < 0 ? 1 : 0;
+        const useThisIndex = needleMatchesHere
+            & startsAtOrAfterWindow
+            & endsAtOrBeforeWindow
+            & noEarlierMatch;
+        // useThisIndex is 1 or 0, so this sets earliestIndex to index on the
+        // first in-window hit and leaves it unchanged on every other iteration.
+        earliestIndex += useThisIndex * (index - earliestIndex);
+    }
+    return earliestIndex;
+}
+
+/**
+ * Same partition as the early-exit substring walk. Each component scans the
+ * whole prepared string, so a miss does not return early and does not shrink
+ * the amount of work left for the next component.
+ */
+function matchSubstringsConstantTime (
+    prepared: string,
+    assertion: AssertedSubstring<string>[],
+): boolean {
+    let cursor = 0;
+    let end = prepared.length;
+    let matched = 1;
+    for (let i = 0; i < assertion.length; i++) {
+        const subass = assertion[i];
+        if ("any_" in subass) {
+            const needle = subass.any_;
+            const found = ctIndexOf(prepared, needle, cursor, end);
+            const hit = found >= 0 ? 1 : 0;
+            matched &= hit;
+            cursor += hit * (found + needle.length - cursor);
+        } else if ("initial" in subass) {
+            const needle = subass.initial;
+            const hit = ctEqualAt(prepared, cursor, needle)
+                & ((cursor + needle.length) <= end ? 1 : 0);
+            matched &= hit;
+            cursor += hit * needle.length;
+        } else if ("final" in subass) {
+            const needle = subass.final;
+            const start = end - needle.length;
+            const hit = ctEqualAt(prepared, start, needle)
+                & (start >= cursor ? 1 : 0);
+            matched &= hit;
+            end -= hit * needle.length;
+        }
+    }
+    return matched === 1;
+}
+
 export
 function getStringSubstringsMatcher (
     valuePrepper: (value: ASN1Element) => string,
@@ -277,45 +369,34 @@ function getStringSubstringsMatcher (
         _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
         flags: number = 0,
     ): boolean | undefined {
-        const constantTime = (flags & MATCH_FLAG_CONSTANT_TIME);
-        let v = valuePrepper(value);
-        let deferredResult: boolean = true;
+        const prepared = valuePrepper(value);
+        if (flags & MATCH_FLAG_CONSTANT_TIME) {
+            return matchSubstringsConstantTime(prepared, assertion);
+        }
+        let v = prepared;
         for (let i = 0; i < assertion.length; i++) {
             const subass = assertion[i];
             if ("any_" in subass) {
                 const idx = v.indexOf(subass.any_);
                 if (idx >= 0) {
                     v = v.slice(idx + subass.any_.length);
-                } else if (constantTime) {
-                    v = v.slice(subass.any_.length); // Slice as though it did match.
-                    deferredResult = false; // Did not match, but don't return yet.
                 } else {
-                    return false; // Did not match, bail out now.
+                    return false;
                 }
             } else if ("initial" in subass) {
                 if (v.startsWith(subass.initial)) {
                     v = v.slice(subass.initial.length);
-                } else if (constantTime) {
-                    v = v.slice(subass.initial.length); // Slice as though it did match.
-                    deferredResult = false; // Did not match, but don't return yet.
                 } else {
-                    return false; // Did not match, bail out now.q
+                    return false;
                 }
             } else if ("final" in subass) {
                 if (v.endsWith(subass.final)) {
                     v = v.slice(0, v.length - subass.final.length);
-                } else if (constantTime) {
-                    if (subass.final.length > v.length) {
-                        v = ""; // Slice as though it did match.
-                    } else {
-                        v = v.slice(0, v.length - subass.final.length); // Slice as though it did match.
-                    }
-                    deferredResult = false; // Did not match, but don't return yet.
                 } else {
-                    return false; // Did not match, bail out now.
+                    return false;
                 }
             }
         }
-        return deferredResult;
+        return true;
     };
 }
