@@ -39,7 +39,6 @@ import { evaluateFilter, type EvaluateFilterSettings } from "../../src/lib/utils
 import type EqualityMatcher from "../../src/lib/types/EqualityMatcher.mjs";
 import type OrderingMatcher from "../../src/lib/types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../../src/lib/types/SubstringsMatcher.mjs";
-import SubstringSelection from "../../src/lib/types/SubstringSelection.mjs";
 import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 const TRUE_ELEMENT = new asn1.DERElement(
@@ -93,23 +92,74 @@ const BOOLEAN_EQUALITY_MATCHING_RULE: EqualityMatcher = (assertion, value) => (a
 // This will only work for INTEGERs within [0,127].
 const INTEGER_ORDERING_RULE: OrderingMatcher = (assertion, value) => (assertion.value[0] - value.value[0]);
 
-const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value, selection) => {
-    switch (selection) {
-    case (SubstringSelection.initial): {
-        return (value.utf8String.startsWith(assertion.utf8String));
+/**
+ * Ordered, non-overlapping UTF-8 substring hook. The assertion is the
+ * DAP substrings filter item. An unusable item is Undefined.
+ */
+const UTF8_SUBSTRING_RULE: SubstringsMatcher = (assertion, value) => {
+    if (!(assertion instanceof FilterItem_substrings)) {
+        return false;
     }
-    case (SubstringSelection.any_): {
-        return (value.utf8String.indexOf(assertion.utf8String) > -1);
+    const pieces = assertion.strings;
+    if (pieces.length === 0) {
+        return undefined;
     }
-    case (SubstringSelection.final): {
-        const val = value.utf8String;
-        const ass = assertion.utf8String;
-        return (val.indexOf(ass) === (val.length - ass.length - 1));
+    for (let i = 0; i < pieces.length; i++) {
+        const component = pieces[i];
+        if (asn1.ASN1Element.isElement(component)) {
+            return undefined;
+        }
+        if ("initial" in component && i !== 0) {
+            return undefined;
+        }
+        if ("final" in component && i !== pieces.length - 1) {
+            return undefined;
+        }
     }
-    default: {
-        throw new Error();
+    if (!value) {
+        return false;
     }
+    const stored = value.utf8String;
+    let cursor = 0;
+    let index = 0;
+    const first = pieces[0];
+    if (!asn1.ASN1Element.isElement(first) && "initial" in first) {
+        const needle = first.initial.utf8String;
+        if (needle.length === 0 || !stored.startsWith(needle)) {
+            return false;
+        }
+        cursor = needle.length;
+        index = 1;
     }
+    let end = pieces.length;
+    const last = pieces[pieces.length - 1];
+    const hasFinal = !asn1.ASN1Element.isElement(last) && "final" in last;
+    if (hasFinal) {
+        end--;
+    }
+    for (; index < end; index++) {
+        const piece = pieces[index];
+        if (asn1.ASN1Element.isElement(piece) || !("any_" in piece)) {
+            return false;
+        }
+        const needle = piece.any_.utf8String;
+        const found = stored.indexOf(needle, cursor);
+        if (found < 0) {
+            return false;
+        }
+        cursor = found + needle.length;
+    }
+    if (hasFinal && !asn1.ASN1Element.isElement(last) && "final" in last) {
+        const needle = last.final.utf8String;
+        if (
+            needle.length === 0
+            || !stored.endsWith(needle)
+            || stored.length - needle.length < cursor
+        ) {
+            return false;
+        }
+    }
+    return true;
 };
 
 const ALWAYS_COMPATIBLE: EvaluateFilterSettings["isMatchingRuleCompatibleWithAttributeType"] = () => true;

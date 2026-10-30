@@ -1,6 +1,11 @@
 import { DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
-import caseIgnoreMatch from "./caseIgnoreMatch.mjs";
+import {
+    MATCH_FLAG_ASSERTION_PREPPED,
+    MATCH_FLAG_VALUE_PREPPED,
+} from "../../types/MatchFlags.mjs";
+import caseIgnoreMatch, { caseIgnoreMatchPrepped } from "./caseIgnoreMatch.mjs";
 import caseExactMatch from "./caseExactMatch.mjs";
+import caseIgnoreOrderingMatch from "../ordering/caseIgnoreOrderingMatch.mjs";
 
 function utf8 (s: string): DERElement {
     return new DERElement(
@@ -30,5 +35,20 @@ describe("caseExactMatch", () => {
     it("treats case as significant", () => {
         expect(caseExactMatch(utf8("Dundee"), utf8("Dundee"))).toBe(true);
         expect(caseExactMatch(utf8("Dundee"), utf8("DUNDEE"))).toBe(false);
+    });
+});
+
+describe("preparation flags", () => {
+    const both = MATCH_FLAG_ASSERTION_PREPPED | MATCH_FLAG_VALUE_PREPPED;
+
+    it("skips case folding when both sides are already prepared", () => {
+        expect(caseIgnoreMatch("Hello", "hello", undefined, both)).toBe(false);
+        expect(caseIgnoreMatch("hello", "hello", undefined, both)).toBe(true);
+        expect(caseIgnoreMatchPrepped("hello", "hello")).toBe(true);
+    });
+
+    it("skips case folding in ordering when both sides are already prepared", () => {
+        expect(caseIgnoreOrderingMatch("B", "a")).toBeGreaterThan(0);
+        expect(caseIgnoreOrderingMatch("B", "a", both)).toBeLessThan(0);
     });
 });

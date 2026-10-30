@@ -1,4 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
 
@@ -15,10 +16,13 @@ export
 function intEmailMatch (
     assertion: ASN1Element | string,
     value: ASN1Element | string,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean {
     return intEmailMatchTyped(
         typeof assertion === "string" ? assertion : assertion.utf8String,
         typeof value === "string" ? value : value.utf8String,
+        flags,
     );
 }
 
@@ -30,7 +34,11 @@ function intEmailMatch (
  * @returns `true` when the local-part and domain both match.
  */
 export
-function intEmailMatchTyped (assertion: string, value: string): boolean {
+function intEmailMatchTyped (
+    assertion: string,
+    value: string,
+    flags: number = 0,
+): boolean {
     // The domain cannot contain `@`, so the last `@` is the separator.
     const aAt: number = assertion.lastIndexOf("@");
     const vAt: number = value.lastIndexOf("@");
@@ -40,11 +48,12 @@ function intEmailMatchTyped (assertion: string, value: string): boolean {
     const localsMatch: boolean = caseIgnoreMatchTyped(
         assertion.slice(0, aAt),
         value.slice(0, vAt),
+        flags,
     );
     if (!localsMatch) {
         return false;
     }
-    return dnsNameMatchTyped(assertion.slice(aAt + 1), value.slice(vAt + 1));
+    return dnsNameMatchTyped(assertion.slice(aAt + 1), value.slice(vAt + 1), flags);
 }
 
 export default intEmailMatch;

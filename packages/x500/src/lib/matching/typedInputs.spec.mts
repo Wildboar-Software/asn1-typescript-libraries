@@ -89,8 +89,14 @@ describe("typed matching inputs", () => {
     it("orders and substring-matches a string against an encoded directory string", () => {
         expect(caseIgnoreOrderingMatch("b", { uTF8String: "A" })).toBeGreaterThan(0);
         expect(caseIgnoreOrderingMatch({ printableString: "A" }, "b")).toBeLessThan(0);
-        expect(caseIgnoreSubstringsMatch("ELL", uds("Hello"))).toBe(true);
-        expect(caseIgnoreSubstringsMatch(uds("xyz"), "Hello")).toBe(false);
+        expect(caseIgnoreSubstringsMatch(
+            [{ any_: { uTF8String: "ell" } }],
+            uds("Hello"),
+        )).toBe(true);
+        expect(caseIgnoreSubstringsMatch(
+            [{ any_: { uTF8String: "xyz" } }],
+            "Hello",
+        )).toBe(false);
         expect(storedPrefixMatch("7035551212", "703")).toBe(true);
     });
 

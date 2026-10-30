@@ -5,15 +5,13 @@ import { AttributeValueAssertion } from "../lib/modules/Lightweight-Directory-Ac
 import { MatchingRuleAssertion } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/MatchingRuleAssertion.ta.mjs";
 import { PartialAttribute } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs";
 import { SubstringFilter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs";
-import { BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ObjectIdentifier, ASN1ConstructionError } from "@wildboar/asn1";
+import { ASN1Element, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ObjectIdentifier, ASN1ConstructionError } from "@wildboar/asn1";
 import { _decode_Filter, _encode_Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 import destringifyFilter from "../lib/filterFromString.mjs";
 import stringifyFilter from "../lib/filterToString.mjs";
 import evaluateFilter, { type EvaluateFilterOptions } from "../lib/evaluateFilter.mjs";
 import encodeLDAPOID from "../lib/encodeLDAPOID.mjs";
 import { integer as decodeInteger } from "../lib/syntaxDecoders.mjs";
-import { SubstringSelection } from "../lib/types/SubstringSelection.mjs";
-import type { ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 
 function utf8Element (str: string): BERElement {
@@ -261,19 +259,40 @@ describe("LDAP security regressions", () => {
                 getLDAPSyntaxDecoder: () => (value: Uint8Array): ASN1Element => utf8Element(Buffer.from(value).toString("utf-8")),
                 getEqualityMatcher: () => undefined,
                 getSubstringsMatcher: () => (
-                    assertion: ASN1Element,
+                    assertion: ASN1Element | SubstringFilter,
                     value: ASN1Element,
-                    selection: SubstringSelection,
                 ) => {
-                    const a = assertion.utf8String;
-                    const v = value.utf8String;
-                    if (selection === SubstringSelection.final) {
-                        return v.endsWith(a);
+                    if (ASN1Element.isElement(assertion)) {
+                        return value.utf8String.endsWith(assertion.utf8String);
                     }
-                    if (selection === SubstringSelection.initial) {
-                        return v.startsWith(a);
+                    const stored = value.utf8String;
+                    let cursor = 0;
+                    for (const component of assertion.substrings) {
+                        if (ASN1Element.isElement(component)) {
+                            return false;
+                        }
+                        const raw = "initial" in component
+                            ? component.initial
+                            : "any_" in component
+                                ? component.any_
+                                : component.final;
+                        const needle = Buffer.from(raw).toString("utf-8");
+                        if ("initial" in component) {
+                            if (!stored.startsWith(needle)) {
+                                return false;
+                            }
+                            cursor = needle.length;
+                        } else if ("any_" in component) {
+                            const found = stored.indexOf(needle, cursor);
+                            if (found < 0) {
+                                return false;
+                            }
+                            cursor = found + needle.length;
+                        } else if (!stored.endsWith(needle) || stored.length - needle.length < cursor) {
+                            return false;
+                        }
                     }
-                    return v.includes(a);
+                    return true;
                 },
                 getOrderingMatcher: () => undefined,
                 getApproxMatcher: () => undefined,

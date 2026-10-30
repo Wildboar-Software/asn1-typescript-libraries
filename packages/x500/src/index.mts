@@ -76,8 +76,12 @@ export type { ResultOrError } from "./lib/types/ResultOrError.mjs";
 export type { Result } from "./lib/types/Result.mjs";
 export type { StringDecoder } from "./lib/types/StringDecoder.mjs";
 export type { StringEncoder } from "./lib/types/StringEncoder.mjs";
-export { SubstringSelection } from "./lib/types/SubstringSelection.mjs";
 export type { SubstringsMatcher } from "./lib/types/SubstringsMatcher.mjs";
+export {
+    MATCH_FLAG_ASSERTION_PREPPED,
+    MATCH_FLAG_VALUE_PREPPED,
+} from "./lib/types/MatchFlags.mjs";
+export type { EqualityMatcherGetter } from "./lib/types/MatchFlags.mjs";
 export {
     bacACDF,
     PERMISSION_CATEGORY_ADD,

@@ -37,7 +37,6 @@ import type OrderingMatcher from "../types/OrderingMatcher.mjs";
 import type SubstringsMatcher from "../types/SubstringsMatcher.mjs";
 import type ApproxMatcher from "../types/ApproxMatcher.mjs";
 import type ContextMatcher from "../types/ContextMatcher.mjs";
-import SubstringSelection from "../types/SubstringSelection.mjs";
 import evaluateContextAssertion from "./evaluateContextAssertion.mjs";
 import { id_mr_nullMatch } from "../modules/SelectedAttributeTypes/id-mr-nullMatch.va.mjs";
 import { id_mr_approximateStringMatch } from "../modules/SelectedAttributeTypes/id-mr-approximateStringMatch.va.mjs";
@@ -726,28 +725,33 @@ function evaluateSubstring (
     entry: EntryInformation,
     options: EvaluateFilterSettings,
 ): MatchedValue[] | boolean | undefined {
-    const matcher = handleErrors(options.getSubstringsMatcher(sub.type_));
-    if (!matcher) {
+    const rule = options.getSubstringsMatcher(sub.type_);
+    if (!rule) {
         return undefined;
     }
     if (!options.permittedToMatch(sub.type_)) {
         return undefined;
     }
+    // A filter that cannot be converted returns undefined before the
+    // stored value is read, including when the entry has no values.
+    try {
+        if (rule(sub, undefined as unknown as ASN1Element) === undefined) {
+            return undefined;
+        }
+    } catch {
+        return undefined;
+    }
+    const matcher = handleErrors(rule);
+    if (!matcher) {
+        return undefined;
+    }
+    const matchesStored = (attributeType: OBJECT_IDENTIFIER, value: ASN1Element): boolean => {
+        if (!options.permittedToMatch(attributeType, value)) {
+            return false;
+        }
+        return matcher(sub, value) === true;
+    };
     const attributes = getAttributesFromEntry(entry, options.dnAttribute);
-    const assertions: [ ASN1Element, SubstringSelection ][] = sub.strings
-        .map((str) => {
-            if ("initial" in str) {
-                return [ str.initial, SubstringSelection.initial ];
-            } else if ("any_" in str) {
-                return [ str.any_, SubstringSelection.any_ ];
-            } else if ("final" in str) {
-                return [ str.final, SubstringSelection.final ];
-            } else {
-                // Control attributes will not be supported. These are way too complex.
-                return undefined;
-            }
-        })
-        .filter((a): a is [ ASN1Element, SubstringSelection ] => !!a);
     const matchedValues: MatchedValue[] = [];
     const friendTypes: OBJECT_IDENTIFIER[] = [
         sub.type_,
@@ -770,13 +774,7 @@ function evaluateSubstring (
             // NOTE: This does not consider entryType at all, because it is undocumented entirely.
             const default_values = profile.defaultValues.flatMap((dv) => dv.values);
             for (const default_value of default_values) {
-                if (!options.permittedToMatch(profile.attributeType, default_value)) {
-                    continue;
-                }
-                if (!assertions.every(([ assertion, selection ]) => (
-                    options.permittedToMatch(profile.attributeType, default_value)
-                    && matcher!(assertion, default_value, selection)
-                ))) {
+                if (!matchesStored(profile.attributeType, default_value)) {
                     continue;
                 }
                 matchedValues.push({
@@ -796,10 +794,7 @@ function evaluateSubstring (
     }
     for (const attr of relevantAttributes) {
         for (const value of attr.values) {
-            if (assertions.every(([ assertion, selection ]) => (
-                options.permittedToMatch(attr.type_, value)
-                && matcher!(assertion, value, selection)
-            ))) {
+            if (matchesStored(attr.type_, value)) {
                 matchedValues.push({
                     type: attr.type_,
                     value,
@@ -810,10 +805,7 @@ function evaluateSubstring (
             }
         }
         for (const vwc of attr.valuesWithContext ?? []) {
-            if (assertions.every(([ assertion, selection ]) => (
-                options.permittedToMatch(attr.type_, vwc.value)
-                && matcher!(assertion, vwc.value, selection)
-            ))) {
+            if (matchesStored(attr.type_, vwc.value)) {
                 matchedValues.push({
                     type: attr.type_,
                     value: vwc.value,

@@ -9,7 +9,6 @@ import evaluateFilter, { EvaluateFilterOptions } from "../lib/evaluateFilter";
 import encodeLDAPOID from "../lib/encodeLDAPOID";
 import { ObjectIdentifier, BERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType, ASN1Element } from "@wildboar/asn1";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
-import { SubstringSelection } from "../lib/types/SubstringSelection";
 
 // Filter ::= CHOICE {
 //     and              [0]  SET SIZE (1..MAX) OF filter Filter,
@@ -101,23 +100,42 @@ const options: EvaluateFilterOptions = {
         };
     },
     getSubstringsMatcher: (ad: LDAPString) => {
-        return function (assertion: ASN1Element, value: ASN1Element, selection: SubstringSelection): boolean {
-            const a = assertion.utf8String;
-            const v = value.utf8String;
-            switch (selection) {
-            case (SubstringSelection.initial): {
-                return v.startsWith(a);
+        return function (assertion: ASN1Element | SubstringFilter, value: ASN1Element): boolean {
+            if (ASN1Element.isElement(assertion)) {
+                return value.utf8String.includes(assertion.utf8String);
             }
-            case (SubstringSelection.any_): {
-                return (v.indexOf(a) > -1);
+            const stored = value.utf8String;
+            let cursor = 0;
+            for (const component of assertion.substrings) {
+                if (ASN1Element.isElement(component)) {
+                    return false;
+                }
+                const raw = "initial" in component
+                    ? component.initial
+                    : "any_" in component
+                        ? component.any_
+                        : component.final;
+                const needle = Buffer.from(raw).toString("utf-8");
+                if ("initial" in component) {
+                    if (needle.length === 0 || !stored.startsWith(needle)) {
+                        return false;
+                    }
+                    cursor = needle.length;
+                } else if ("any_" in component) {
+                    const found = stored.indexOf(needle, cursor);
+                    if (found < 0) {
+                        return false;
+                    }
+                    cursor = found + needle.length;
+                } else if (
+                    needle.length === 0
+                    || !stored.endsWith(needle)
+                    || stored.length - needle.length < cursor
+                ) {
+                    return false;
+                }
             }
-            case (SubstringSelection.final): {
-                return v.endsWith(a);
-            }
-            default: {
-                throw new Error();
-            }
-            }
+            return true;
         };
     },
     getOrderingMatcher: (ad: LDAPString) => {
@@ -185,15 +203,49 @@ describe("evaluateFilter()", () => {
                         initial: Buffer.from("ASD"),
                     },
                     {
-                        final: Buffer.from("234"),
+                        any_: Buffer.from("F12"),
                     },
                     {
-                        any_: Buffer.from("DF12"),
+                        final: Buffer.from("34"),
                     },
                 ],
             ),
         };
         expect(evaluateFilter(filter, dn, entry, options)).toBeTruthy();
+    });
+
+    it("allows an initial substring that is not the first component", () => {
+        const filter: Filter = {
+            substrings: new SubstringFilter(
+                encodeLDAPOID(serialNumber),
+                [
+                    {
+                        any_: Buffer.from("A"),
+                    },
+                    {
+                        initial: Buffer.from("ASD"),
+                    },
+                ],
+            ),
+        };
+        expect(evaluateFilter(filter, dn, entry, options)).toBeTruthy();
+    });
+
+    it("rejects two initial substrings", () => {
+        const filter: Filter = {
+            substrings: new SubstringFilter(
+                encodeLDAPOID(serialNumber),
+                [
+                    {
+                        initial: Buffer.from("A"),
+                    },
+                    {
+                        initial: Buffer.from("S"),
+                    },
+                ],
+            ),
+        };
+        expect(evaluateFilter(filter, dn, entry, options)).toBeUndefined();
     });
 
     it("evalutes a greaterOrEqual filter against a match", () => {

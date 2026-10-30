@@ -3,6 +3,7 @@ import {
     readDirectoryString,
     readFirstDirectoryString,
 } from "../readValue.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 
 /**
@@ -22,6 +23,8 @@ export
 function directoryStringFirstComponentMatch (
     assertion: DirectoryStringInput,
     value: DirectoryStringInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean {
     const first = readFirstDirectoryString(value);
     if (first === undefined) {
@@ -30,6 +33,7 @@ function directoryStringFirstComponentMatch (
     return directoryStringFirstComponentMatchTyped(
         readDirectoryString(assertion),
         first,
+        flags,
     );
 }
 
@@ -45,8 +49,9 @@ export
 function directoryStringFirstComponentMatchTyped (
     assertion: string,
     value: string,
+    flags: number = 0,
 ): boolean {
-    return caseIgnoreMatchTyped(assertion, value);
+    return caseIgnoreMatchTyped(assertion, value, flags);
 }
 
 export default directoryStringFirstComponentMatch;

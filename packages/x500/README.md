@@ -191,10 +191,15 @@ equal, or whether the first or second value is greater. This `number` is used
 in the same way that the return value from the predicate function used in
 JavaScript's `Array.sort(predicate)` is used.
 
-Each function within `substring` has type `SubstringsMatcher`. Each function
-takes two `ASN1Elements`s and the type of substring selection (`initial`,
-`final`, `any`, etc.) and returns a `boolean` indicating whether that substring
-is present.
+Each function within `substring` has type `SubstringsMatcher`. Pass an encoded
+assertion or a DAP `FilterItem` substrings alternative. `*FromFilter`, exported
+beside the match function, converts that filter item into `SubstringAssertion`
+or `OctetSubstringAssertion`. The match then compares the whole assertion with
+one stored value, the same way an equality rule does. `initial`, `any`, and
+`final` pieces are consumed left to right and do not overlap. `*MatchPrepped`
+compares strings that are already prepared. `MATCH_FLAG_ASSERTION_PREPPED` and
+`MATCH_FLAG_VALUE_PREPPED` skip preparation of that side. A prohibited character
+in a substring assertion makes the match `undefined`.
 
 ## Stringifiers
 
@@ -231,8 +236,8 @@ are either deprecated or not intended for external use:
 - `ProtectedItem.mts` - A type representing the object of an authorization request.
 - `StringDecoder.mts` - A function that converts an LDAP string into an `ASN1Element`
 - `StringEncoder.mts` - A function that converts an `ASN1Element` to an LDAP string
-- `SubstringSelection.mts` - An enum describing a subset of a string to be matched in a substrings match.
-- `SubstringsMatcher.mts` - A function that evaluates an substrings matching rule against a value.
+- `SubstringsMatcher.mts` - A function that matches an encoded assertion or a `FilterItem` substrings alternative against one stored value. The fourth argument is preparation `flags`.
+- `MatchFlags.mts` - `MATCH_FLAG_ASSERTION_PREPPED` and `MATCH_FLAG_VALUE_PREPPED`.
 
 ## Utilities
 

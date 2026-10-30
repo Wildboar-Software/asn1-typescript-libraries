@@ -19,6 +19,10 @@ import { ASN1Element } from "@wildboar/asn1";
  * @function
  */
 export
-type OrderingMatcher = (assertion: ASN1Element, value: ASN1Element) => number;
+type OrderingMatcher = (
+    assertion: ASN1Element,
+    value: ASN1Element,
+    flags?: number,
+) => number;
 
 export type { OrderingMatcher as default };

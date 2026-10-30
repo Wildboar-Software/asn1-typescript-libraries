@@ -3,6 +3,13 @@ import type {
 } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
+
+const CASE_FOLD = { caseFold: true } as const;
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.1 `caseIgnoreMatch`.
@@ -24,32 +31,52 @@ export
 function caseIgnoreMatch (
     assertion: DirectoryStringInput,
     value: DirectoryStringInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean {
     return caseIgnoreMatchTyped(
         readDirectoryString(assertion),
         readDirectoryString(value),
+        flags,
     );
 }
 
 /**
+ * `caseIgnoreMatch` on two strings that are already prepared and
+ * case-folded.
+ *
+ * @param assertion Prepared presented string.
+ * @param value Prepared stored string.
+ * @returns `true` when the strings are equal.
+ */
+export
+function caseIgnoreMatchPrepped (assertion: string, value: string): boolean {
+    return assertion === value;
+}
+
+/**
  * `caseIgnoreMatch` on two strings. String preparation and case
- * folding happen here so this function stays monomorphic.
+ * folding happen here so this function stays monomorphic, unless
+ * `flags` says that side is already prepared.
  *
  * @param assertion Presented string.
  * @param value Stored string.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip preparation of that side.
  * @returns `true` when the prepared strings are equal ignoring case.
  */
 export
-function caseIgnoreMatchTyped (assertion: string, value: string): boolean {
-    const a: string | undefined = prepString(assertion, { caseFold: true });
-    const v: string | undefined = prepString(value, { caseFold: true });
-    if (a === undefined) {
+function caseIgnoreMatchTyped (
+    assertion: string,
+    value: string,
+    flags: number = 0,
+): boolean {
+    const a = assertionAlreadyPrepped(flags) ? assertion : prepString(assertion, CASE_FOLD);
+    const v = valueAlreadyPrepped(flags) ? value : prepString(value, CASE_FOLD);
+    if (a === undefined || v === undefined) {
         return false;
     }
-    if (v === undefined) {
-        return false;
-    }
-    return (a === v);
+    return caseIgnoreMatchPrepped(a, v);
 }
 
 export default caseIgnoreMatch;

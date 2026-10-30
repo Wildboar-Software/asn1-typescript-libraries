@@ -1,6 +1,54 @@
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
+
+const CASE_FOLD = { caseFold: true } as const;
+
+/**
+ * `storedPrefixMatch` on two strings that are already prepared.
+ * `value` is the stored prefix.
+ *
+ * @param assertion Prepared presented string.
+ * @param value Prepared stored prefix.
+ * @returns `true` when the stored string is a prefix.
+ */
+export
+function storedPrefixMatchPrepped (assertion: string, value: string): boolean {
+    return assertion.startsWith(value);
+}
+
+/**
+ * `storedPrefixMatch` on two strings. `value` is the stored prefix.
+ * Preparation that fails is FALSE.
+ *
+ * @param assertion Presented string.
+ * @param value Stored prefix.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip preparation of that side.
+ * @returns `true` when the stored string is a prefix.
+ */
+export
+function storedPrefixMatchTyped (
+    assertion: string,
+    value: string,
+    flags: number = 0,
+): boolean {
+    const preparedA = assertionAlreadyPrepped(flags)
+        ? assertion
+        : prepString(assertion, CASE_FOLD);
+    const preparedV = valueAlreadyPrepped(flags)
+        ? value
+        : prepString(value, CASE_FOLD);
+    if (preparedA === undefined || preparedV === undefined) {
+        return false;
+    }
+    return storedPrefixMatchPrepped(preparedA, preparedV);
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.9 `storedPrefixMatch`.
@@ -18,28 +66,14 @@ export
 function storedPrefixMatch (
     assertion: DirectoryStringInput,
     value: DirectoryStringInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean {
     return storedPrefixMatchTyped(
         readDirectoryString(assertion),
         readDirectoryString(value),
+        flags,
     );
-}
-
-/**
- * `storedPrefixMatch` on two strings. `value` is the stored prefix.
- *
- * @param assertion Presented string.
- * @param value Stored prefix.
- * @returns `true` when the stored string is a prefix.
- */
-export
-function storedPrefixMatchTyped (assertion: string, value: string): boolean {
-    const preparedA = prepString(assertion, { caseFold: true });
-    const preparedV = prepString(value, { caseFold: true });
-    if (preparedA === undefined || preparedV === undefined) {
-        return false;
-    }
-    return preparedA.startsWith(preparedV);
 }
 
 export default storedPrefixMatch;

@@ -1,6 +1,11 @@
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prepString as ps } from "../../utils/prepString.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
 
 function isWordChar(c: string | undefined): boolean {
     return !!c && /[\p{L}\p{N}_]/u.test(c);
@@ -44,8 +49,30 @@ export
 function wordMatch (
     assertion: DirectoryStringInput,
     value: DirectoryStringInput,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
 ): boolean {
-    return wordMatchTyped(readDirectoryString(assertion), readDirectoryString(value));
+    return wordMatchTyped(
+        readDirectoryString(assertion),
+        readDirectoryString(value),
+        flags,
+    );
+}
+
+/**
+ * `wordMatch` on two strings that are already prepared and uppercased.
+ *
+ * @param assertion Prepared presented word.
+ * @param value Prepared stored text.
+ * @returns `true` when the word occurs in the text.
+ */
+export
+function wordMatchPrepped (assertion: string, value: string): boolean {
+    return containsWord(value, assertion);
+}
+
+function prepareWord (text: string): string | undefined {
+    return ps(text.trim())?.toUpperCase();
 }
 
 /**
@@ -53,16 +80,22 @@ function wordMatch (
  *
  * @param assertion Presented word.
  * @param value Stored text.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip preparation of that side.
  * @returns `true` when the word occurs in the text.
  */
 export
-function wordMatchTyped (assertion: string, value: string): boolean {
-    const astr: string | undefined = ps(assertion.trim())?.toUpperCase();
-    const vstr: string | undefined = ps(value.trim())?.toUpperCase();
+function wordMatchTyped (
+    assertion: string,
+    value: string,
+    flags: number = 0,
+): boolean {
+    const astr = assertionAlreadyPrepped(flags) ? assertion : prepareWord(assertion);
+    const vstr = valueAlreadyPrepped(flags) ? value : prepareWord(value);
     if (!astr || !vstr) {
         return false;
     }
-    return containsWord(vstr, astr);
+    return wordMatchPrepped(astr, vstr);
 }
 
 export default wordMatch;

@@ -1,61 +1,119 @@
-import type SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import type {
-    PreparedSubstring,
-    SubstringAssertionInput,
-} from "../readValue.mjs";
-import { readSubstringAssertion } from "../readValue.mjs";
+import { FilterItem_substrings } from "../../modules/DirectoryAbstractService/FilterItem-substrings.ta.mjs";
+import type { SubstringAssertion } from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import {
-    _decode_TelephoneNumber,
-} from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+    readSubstringAssertion,
+    type PreparedSubstring,
+    type SubstringAssertionInput,
+} from "../readValue.mjs";
+import type { EqualityMatcherGetter } from "../../types/MatchFlags.mjs";
+import {
+    assertionAlreadyPrepped,
+    valueAlreadyPrepped,
+} from "../../types/MatchFlags.mjs";
+import { matchStringPieces } from "./matchInOrder.mjs";
+import { substringAnchorsAreValid } from "./substringAnchors.mjs";
+import {
+    readTelephoneNumberComponent,
+    substringAssertionFromFilter,
+} from "./substringAssertionFromFilter.mjs";
 
-/**
- * Rec. ITU-T X.520 (10/2019), clause 8.2.9
- * `telephoneNumberSubstringsMatch`.
- *
- * Substring match of a telephone-number `PrintableString`. Same as
- * `caseExactSubstringsMatch` except hyphens and spaces are
- * insignificant and are removed during character removal.
- *
- * `assertion` is an element or a substring assertion. `value` is
- * an element or the telephone-number string. `selection` is unused.
- */
-export
-function telephoneNumberSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: ASN1Element | string,
-    _selection?: SubstringSelection,
-): boolean {
-    const stored = typeof value === "string" ? value : _decode_TelephoneNumber(value);
-    return telephoneNumberSubstringsMatchTyped(readSubstringAssertion(assertion), stored);
+function stripTelephone (text: string): string {
+    return text.replace(/[- ]/g, "");
 }
 
 /**
- * `telephoneNumberSubstringsMatch` on prepared pieces and a
- * telephone number. Digits are kept from the stored number; the
- * presented pieces are not rewritten.
+ * `telephoneNumberSubstringsMatch` on numbers that already have
+ * spaces and hyphens removed.
  *
- * @param assertion Presented substring pieces.
+ * @param assertion Prepared pieces, including any `control`.
+ * @param value Stored number, already normalized.
+ * @returns `true` when the pieces match in order without overlap.
+ */
+export
+function telephoneNumberSubstringsMatchPrepped (
+    assertion: readonly PreparedSubstring[],
+    value: string,
+): boolean {
+    return matchStringPieces(assertion, value) === true;
+}
+
+/**
+ * `telephoneNumberSubstringsMatch` on pieces and a telephone number.
+ * Spaces and hyphens are removed from both sides before the scan.
+ *
+ * @param assertion Presented pieces, still containing spaces and hyphens.
  * @param value Stored telephone number.
- * @returns `true` when every piece matches the digit string.
+ * @param flags `MATCH_FLAG_ASSERTION_PREPPED` and
+ *  `MATCH_FLAG_VALUE_PREPPED` skip hyphen and space removal of that side.
+ * @returns `true` when the pieces match in order without overlap.
  */
 export
 function telephoneNumberSubstringsMatchTyped (
     assertion: readonly PreparedSubstring[],
     value: string,
+    flags: number = 0,
 ): boolean {
-    const v: string = value.replace(/\D/g, "");
-    return assertion.every((str) => {
-        if (str.kind === "initial") {
-            return v.startsWith(str.value);
-        } else if (str.kind === "any") {
-            return (v.indexOf(str.value) > -1);
-        } else if (str.kind === "final") {
-            return v.endsWith(str.value);
-        } else {
-            return false;
-        }
-    });
+    if (!substringAnchorsAreValid(assertion)) {
+        return false;
+    }
+    const stored = valueAlreadyPrepped(flags) ? value : stripTelephone(value);
+    if (stored.length === 0) {
+        return false;
+    }
+    if (assertionAlreadyPrepped(flags)) {
+        return telephoneNumberSubstringsMatchPrepped(assertion, stored);
+    }
+    return matchStringPieces(assertion, stored, stripTelephone) === true;
+}
+
+/**
+ * Convert a DAP substrings filter whose components are `TelephoneNumber`
+ * into a `SubstringAssertion`.
+ *
+ * @param item `FilterItem` substrings alternative.
+ * @returns The assertion, or `undefined` when a component is not printable.
+ */
+export
+function telephoneNumberSubstringsFromFilter (
+    item: FilterItem_substrings,
+): SubstringAssertion | undefined {
+    return substringAssertionFromFilter(item, readTelephoneNumberComponent);
+}
+
+/**
+ * Rec. ITU-T X.520 (10/2019), clause 8.2.9
+ * `telephoneNumberSubstringsMatch`.
+ *
+ * Same ordered, non-overlapping partition as `caseExactSubstringsMatch`,
+ * except hyphens and spaces are insignificant. `control` is ignored.
+ *
+ * `assertion` is a `FilterItem` substrings alternative, an encoded
+ * `SubstringAssertion`, or the decoded array. `value` is a printable-string
+ * element or a JavaScript string.
+ */
+export
+function telephoneNumberSubstringsMatch (
+    assertion: SubstringAssertionInput | FilterItem_substrings,
+    value?: ASN1Element | string,
+    _getEqualityMatcher?: EqualityMatcherGetter,
+    flags: number = 0,
+): boolean | undefined {
+    const decoded = assertion instanceof FilterItem_substrings
+        ? telephoneNumberSubstringsFromFilter(assertion)
+        : assertion;
+    if (!decoded) {
+        return undefined;
+    }
+    if (value === undefined) {
+        return false;
+    }
+    const stored = typeof value === "string" ? value : value.printableString;
+    return telephoneNumberSubstringsMatchTyped(
+        readSubstringAssertion(decoded),
+        stored,
+        flags,
+    );
 }
 
 export default telephoneNumberSubstringsMatch;

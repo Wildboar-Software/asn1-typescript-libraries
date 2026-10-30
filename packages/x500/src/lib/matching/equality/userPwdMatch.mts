@@ -20,6 +20,7 @@ function userPwdMatchTyped (
     encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,
     assertion: UserPwd,
     value: UserPwd,
+    flags: number = 0,
 ): boolean {
     if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
         return false;
@@ -28,7 +29,7 @@ function userPwdMatchTyped (
         return compareElements(assertion, value as ASN1Element);
     }
     if (("clear" in assertion) && ("clear" in value)) {
-        return caseExactMatchTyped(assertion.clear, value.clear);
+        return caseExactMatchTyped(assertion.clear, value.clear, flags);
     }
     if (("encrypted" in assertion) && ("encrypted" in value)) {
         return (
@@ -84,14 +85,19 @@ function createUserPwdMatch (
 ): (
     assertion: ASN1Element | UserPwd,
     value: ASN1Element | UserPwd,
+    _getEqualityMatcher?: unknown,
+    flags?: number,
 ) => boolean {
     return (
         assertion: ASN1Element | UserPwd,
         value: ASN1Element | UserPwd,
+        _getEqualityMatcher?: unknown,
+        flags?: number,
     ): boolean => userPwdMatchTyped(
         encrypter,
         readDecoded(assertion, _decode_UserPwd),
         readDecoded(value, _decode_UserPwd),
+        flags ?? 0,
     );
 }
 

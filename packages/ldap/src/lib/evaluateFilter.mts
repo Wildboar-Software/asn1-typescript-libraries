@@ -1,10 +1,11 @@
+import { ASN1Element } from "@wildboar/asn1";
 import type { Filter } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs";
 import type { PartialAttributeList } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.mjs";
 import type { LDAPString } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs";
 import type { AttributeValue } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.mjs";
+import type { SubstringFilter_substrings_substring } from "../lib/modules/Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.mjs";
 import type AttributeTypeAndValue from "../lib/types/AttributeTypeAndValue.mjs";
 import type EqualityMatcher from "../lib/types/EqualityMatcher.mjs";
-import SubstringSelection from "../lib/types/SubstringSelection.mjs";
 import type SubstringsMatcher from "../lib/types/SubstringsMatcher.mjs";
 import type OrderingMatcher from "../lib/types/OrderingMatcher.mjs";
 import type ApproxMatcher from "../lib/types/ApproxMatcher.mjs";
@@ -139,6 +140,45 @@ const DEFAULT_RECURSION_TTL: number = 20;
  *  if it could not be determined whether the entry matches or not.
  * @function
  */
+
+/**
+ * At most one `initial`, `final` is last, and at least one piece is
+ * present. `initial` does not have to be index 0: a control attribute
+ * can appear first.
+ */
+function substringFilterIsUsable (
+    substrings: readonly SubstringFilter_substrings_substring[],
+): boolean {
+    if (substrings.length === 0) {
+        return false;
+    }
+    let substantive = 0;
+    let seenInitial = false;
+    for (let i = 0; i < substrings.length; i++) {
+        const component = substrings[i];
+        if (ASN1Element.isElement(component)) {
+            return false;
+        }
+        if ("initial" in component) {
+            if (seenInitial) {
+                return false;
+            }
+            seenInitial = true;
+            substantive++;
+        } else if ("final" in component) {
+            if (i !== substrings.length - 1) {
+                return false;
+            }
+            substantive++;
+        } else if ("any_" in component) {
+            substantive++;
+        } else {
+            return false;
+        }
+    }
+    return substantive > 0;
+}
+
 export
 function evaluateFilter (
     filter: Filter,
@@ -214,7 +254,7 @@ function evaluateFilter (
     } else if ("substrings" in filter) {
         try {
             const sf = filter.substrings;
-            const assertionDecoder = options.getLDAPSyntaxDecoder(sf.type_);
+            const valueDecoder = options.getLDAPSyntaxDecoder(sf.type_);
             const matcher = options.getSubstringsMatcher(sf.type_);
             if (!matcher) {
                 return undefined;
@@ -222,34 +262,22 @@ function evaluateFilter (
             if (!options.permittedToMatch(sf.type_)) {
                 return undefined;
             }
+            if (!valueDecoder) {
+                return undefined;
+            }
+            if (!substringFilterIsUsable(sf.substrings)) {
+                return undefined;
+            }
             return entry
                 .filter((attr) => options.isSubtype(attr.type_, sf.type_))
                 .some((attr) => attr.vals
-                    .some((val) => sf.substrings
-                        .every((ss) => {
-                            if (!options.permittedToMatch(sf.type_, val)) {
-                                return false;
-                            }
-                            const decode = assertionDecoder
-                                ? assertionDecoder
-                                : options.getLDAPSyntaxDecoder(attr.type_);
-                            if (!decode) {
-                                return undefined;
-                            }
-                            const decodedValue = decode(val);
-                            if ("initial" in ss) {
-                                const decodedAssertion = decode(ss.initial);
-                                return matcher(decodedAssertion, decodedValue, SubstringSelection.initial);
-                            } else if ("any_" in ss) {
-                                const decodedAssertion = decode(ss.any_);
-                                return matcher(decodedAssertion, decodedValue, SubstringSelection.any_);
-                            } else if ("final" in ss) {
-                                const decodedAssertion = decode(ss.final);
-                                return matcher(decodedAssertion, decodedValue, SubstringSelection.final);
-                            } else {
-                                return undefined;
-                            }
-                        })));
+                    .some((val) => {
+                        if (!options.permittedToMatch(sf.type_, val)) {
+                            return false;
+                        }
+                        const decodedValue = valueDecoder(val);
+                        return matcher(sf, decodedValue);
+                    }));
         } catch {
             return undefined;
         }
