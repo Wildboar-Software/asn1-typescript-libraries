@@ -16,7 +16,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeSpecification-time-absolute ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeSpecification-time-absolute ::= SEQUENCE {
+ *   startTime [0]  GeneralizedTime OPTIONAL,
+ *   endTime   [1]  GeneralizedTime OPTIONAL,
+ *   ... }
  * ```
  * 
  * @class

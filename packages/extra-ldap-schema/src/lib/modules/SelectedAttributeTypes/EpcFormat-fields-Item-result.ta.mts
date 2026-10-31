@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EpcFormat-fields-Item-result ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EpcFormat-fields-Item-result ::= ENUMERATED {
+ *   numericPad  (0),
+ *   numeric     (1),
+ *   alpha7bits  (2) }
  * ```
  * 
  * @enum {number}
@@ -39,7 +42,10 @@ type _enum_for_EpcFormat_fields_Item_result = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EpcFormat-fields-Item-result ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EpcFormat-fields-Item-result ::= ENUMERATED {
+ *   numericPad  (0),
+ *   numeric     (1),
+ *   alpha7bits  (2) }
  * ```
  * 
  * @enum {number}
@@ -54,7 +60,10 @@ type EpcFormat_fields_Item_result = _enum_for_EpcFormat_fields_Item_result;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EpcFormat-fields-Item-result ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * EpcFormat-fields-Item-result ::= ENUMERATED {
+ *   numericPad  (0),
+ *   numeric     (1),
+ *   alpha7bits  (2) }
  * ```
  * 
  * @enum {number}

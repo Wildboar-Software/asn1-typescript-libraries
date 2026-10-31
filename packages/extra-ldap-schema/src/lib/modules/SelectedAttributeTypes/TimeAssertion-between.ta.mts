@@ -17,7 +17,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeAssertion-between ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeAssertion-between ::= SEQUENCE {
+ *   startTime  [0]  GeneralizedTime,
+ *   endTime    [1]  GeneralizedTime OPTIONAL,
+ *   entirely        BOOLEAN DEFAULT FALSE,
+ *   ... }
  * ```
  * 
  * @class

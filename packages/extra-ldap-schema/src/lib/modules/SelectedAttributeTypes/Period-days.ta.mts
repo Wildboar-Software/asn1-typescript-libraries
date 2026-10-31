@@ -17,7 +17,18 @@ import { type XDayOf, _decode_XDayOf, _encode_XDayOf } from "../SelectedAttribut
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-days ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Period-days ::= CHOICE {
+ *   intDay  SET OF INTEGER,
+ *   bitDay  BIT STRING {
+ *     sunday    (0),
+ *     monday    (1),
+ *     tuesday   (2),
+ *     wednesday (3),
+ *     thursday  (4),
+ *     friday    (5),
+ *     saturday  (6) },
+ *   dayOf   XDayOf,
+ *   ... }
  * ```
  */
 export

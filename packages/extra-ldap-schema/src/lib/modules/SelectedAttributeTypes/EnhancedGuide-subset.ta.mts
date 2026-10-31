@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EnhancedGuide-subset ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * EnhancedGuide-subset ::= INTEGER {
+ *   baseObject   (0),
+ *   oneLevel     (1),
+ *   wholeSubtree (2) }
  * ```
  */
 export

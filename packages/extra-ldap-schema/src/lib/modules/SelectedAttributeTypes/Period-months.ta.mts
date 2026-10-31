@@ -16,7 +16,23 @@ import { type Period_months_bitMonth, _decode_Period_months_bitMonth, _encode_Pe
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-months ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Period-months ::= CHOICE {
+ *   allMonths  NULL,
+ *   intMonth   SET OF INTEGER,
+ *   bitMonth   BIT STRING {
+ *     january   (0),
+ *     february  (1),
+ *     march     (2),
+ *     april     (3),
+ *     may       (4),
+ *     june      (5),
+ *     july      (6),
+ *     august    (7),
+ *     september (8),
+ *     october   (9),
+ *     november  (10),
+ *     december  (11) },
+ *   ... }
  * ```
  */
 export

@@ -17,7 +17,10 @@ import { type DistinguishedName, _decode_DistinguishedName, _encode_Distinguishe
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TBSCertAVL-entries-Item-idType ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TBSCertAVL-entries-Item-idType ::= CHOICE {
+ *   certIdentifier  [0]  PKCertIdentifier,
+ *   entityGroup          DistinguishedName, -- only for constrained = FALSE
+ *   ... }
  * ```
  */
 export

@@ -20,7 +20,14 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../Auth
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TBSCertAVL-entries-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * TBSCertAVL-entries-Item ::= SEQUENCE {
+ *   idType            CHOICE {
+ *     certIdentifier  [0]  PKCertIdentifier,
+ *     entityGroup          DistinguishedName, -- only for constrained = FALSE
+ *     ... },
+ *   scope             [0]  IMPLICIT ScopeRestrictions OPTIONAL,
+ *   entryExtensions   [1]  IMPLICIT Extensions OPTIONAL,
+ *   ... }
  * ```
  * 
  * @class

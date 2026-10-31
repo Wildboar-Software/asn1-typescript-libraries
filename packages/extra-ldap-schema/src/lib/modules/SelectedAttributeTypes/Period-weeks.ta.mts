@@ -16,7 +16,16 @@ import { _decode_Period_weeks_bitWeek, _encode_Period_weeks_bitWeek, type Period
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-weeks ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Period-weeks ::= CHOICE {
+ *   allWeeks  NULL,
+ *   intWeek   SET OF INTEGER,
+ *   bitWeek   BIT STRING {
+ *     week1 (0),
+ *     week2 (1),
+ *     week3 (2),
+ *     week4 (3),
+ *     week5 (4) },
+ *   ... }
  * ```
  */
 export
