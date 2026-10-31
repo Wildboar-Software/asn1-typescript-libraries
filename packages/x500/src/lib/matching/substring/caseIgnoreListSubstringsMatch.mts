@@ -1,13 +1,5 @@
-import {
-    ASN1Element,
-    ASN1TagClass,
-    ASN1UniversalType,
-} from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import {
-    _decode_UnboundedDirectoryString,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import {
@@ -18,7 +10,7 @@ import {
 } from "../../types/matching.mjs";
 import {
     directoryAssertionPieces,
-    filterPieces,
+    directoryFilterPieces,
     prepareStored,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
@@ -27,27 +19,6 @@ const RULE = "caseIgnoreListSubstringsMatch";
 
 /** Same preparation as `caseIgnoreMatch`, per address line. */
 const prepareIgnore: StringPreparer = (raw) => prepString(raw, { caseFold: true });
-
-/**
- * One postal-address line. A `SEQUENCE OF` is that one line; more
- * than one line is an assertion error because one piece is one
- * string. A directory string is that line already.
- */
-function readListComponent (el: ASN1Element): string {
-    if (
-        el.tagClass === ASN1TagClass.universal
-        && el.tagNumber === ASN1UniversalType.sequence
-    ) {
-        const lines = el.sequenceOf;
-        if (lines.length !== 1) {
-            throw new Error(
-                `${RULE}: a substring component must be a single line`,
-            );
-        }
-        return directoryStringToString(_decode_UnboundedDirectoryString(lines[0]));
-    }
-    return directoryStringToString(_decode_UnboundedDirectoryString(el));
-}
 
 /**
  * Pieces match in order and do not overlap. A piece lies entirely
@@ -151,14 +122,14 @@ caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubst
 
 /**
  * `caseIgnoreListSubstringsMatch` as a `Matcher`. The assertion is
- * a `SubstringAssertion`. A filter component is one directory
- * string, or a one-line postal address.
+ * a `SubstringAssertion`. Each filter component is one directory
+ * string, matched against the stored lines.
  */
 export
 const caseIgnoreListSubstringsMatch: Matcher = createSubstringsMatcher(
     (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
     caseIgnoreListSubstringsMatchTyped,
-    (items) => filterPieces(items, readListComponent, prepareIgnore, RULE),
+    (items) => directoryFilterPieces(items, prepareIgnore, RULE),
 );
 
 export default caseIgnoreListSubstringsMatch;

@@ -206,15 +206,11 @@ describe("caseIgnoreListSubstringsMatch", () => {
         )).toBe(false);
     });
 
-    it("rejects a filter component that is more than one line", () => {
+    it("reads a directory-string filter component", () => {
         const filter: FilterSubstring[] = [
-            {
-                initial: _encode_PostalAddress([
-                    { uTF8String: "Main" },
-                    { uTF8String: "Street" },
-                ], DER),
-            },
+            { initial: utf8("main") },
+            { final: utf8("field") },
         ];
-        expect(() => caseIgnoreListSubstringsMatch(filter, atav)).toThrow(Error);
+        expect(caseIgnoreListSubstringsMatch(filter, atav)).toBe(true);
     });
 });
