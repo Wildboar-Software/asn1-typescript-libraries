@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import { domainToUnicode } from "node:url";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
@@ -8,15 +8,42 @@ import {
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 
+/**
+ * `domainToUnicode`, then prepare each label with `prepString`.
+ * A leftmost `*` is kept so `dnsNameMatch` can still wildcard.
+ * An empty name is `""`; a label that cannot be prepared throws.
+ */
+export
+function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
+    const unicode = domainToUnicode(domain.trim());
+    if (unicode === "") {
+        return "";
+    }
+    const labels = unicode.split(".");
+    const prepared = new Array<string>(labels.length);
+    for (let i = 0; i < labels.length; i++) {
+        const label = labels[i];
+        if (label === "*" && i === 0) {
+            prepared[i] = "*";
+            continue;
+        }
+        const folded = prepString(label, { caseFold: true });
+        if (folded === undefined) {
+            throw new ASN1CharactersError(
+                "dnsNameMatch assertion failed string preparation",
+                el,
+            );
+        }
+        prepared[i] = folded;
+    }
+    return prepared.join(".");
+}
+
 function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean | undefined {
     if (a === "*" || b === "*") {
         return wildcardAllowed;
     }
-    const prepared = prepString(a, { caseFold: true });
-    if (prepared === undefined) {
-        return undefined;
-    }
-    return caseIgnoreMatchTyped(prepared, b);
+    return caseIgnoreMatchTyped(a, b);
 }
 
 /**
@@ -32,7 +59,8 @@ function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean
  * matches `a.example.com` but not `a.b.example.com` or
  * `example.com`.
  *
- * @param assertion Presented domain.
+ * @param assertion Presented domain, already converted with
+ *  `domainToUnicode` and with each label prepared.
  * @param value Stored domain, or that domain already decoded.
  */
 export
@@ -41,8 +69,8 @@ function dnsNameMatchTyped (
     value: string | ASN1Element,
 ): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
-    // I checked: this preserves asterisks and periods.
-    const a = domainToUnicode(assertion.trim());
+    // The assertion is prepared once. `domainToUnicode` preserves `*` and `.`.
+    const a = assertion;
     const v = domainToUnicode(stored.trim());
     if (a === "" || v === "") {
         return false;
@@ -87,7 +115,7 @@ dnsNameMatchTyped satisfies TypedEquationFunction<string>;
  */
 export
 const dnsNameMatch: Matcher = createEqualityMatcher(
-    (el) => el.utf8String,
+    (el) => prepareDnsAssertion(el.utf8String, el),
     dnsNameMatchTyped,
 );
 

@@ -1,7 +1,7 @@
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import type { ASN1Element } from "@wildboar/asn1";
 import { dnsNameMatch as dnsNameMatch_ } from "./dnsNameMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const dnsNameMatch = onStoredValue(dnsNameMatch_);
 

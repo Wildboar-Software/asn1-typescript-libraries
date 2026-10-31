@@ -13,7 +13,7 @@ import {
     _encode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import protocolInformationMatch_ from "./protocolInformationMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const protocolInformationMatch = onStoredValue(protocolInformationMatch_);
 

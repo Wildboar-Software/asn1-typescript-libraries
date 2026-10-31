@@ -1,7 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import uriMatch_ from "./uriMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const uriMatch = onStoredValue(uriMatch_);
 

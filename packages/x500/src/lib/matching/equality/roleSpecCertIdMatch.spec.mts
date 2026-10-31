@@ -20,7 +20,7 @@ import {
 } from "../../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import roleSpecCertIdMatch_ from "./roleSpecCertIdMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const roleSpecCertIdMatch = onStoredValue(roleSpecCertIdMatch_);
 

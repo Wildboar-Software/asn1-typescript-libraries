@@ -9,7 +9,7 @@ import {
     _encode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import uniqueMemberMatch_ from "./uniqueMemberMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const uniqueMemberMatch = onStoredValue(uniqueMemberMatch_);
 

@@ -26,7 +26,7 @@ function userPwdMatchTyped (
     encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,
     assertion: UserPwd,
     value: UserPwd,
-): boolean {
+): boolean | undefined {
     if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
         return false;
     }
@@ -36,9 +36,9 @@ function userPwdMatchTyped (
     if (("clear" in assertion) && ("clear" in value)) {
         const prepared = prepString(assertion.clear);
         if (prepared === undefined) {
-            return false;
+            return undefined;
         }
-        return caseExactMatchTyped(prepared, value.clear) === true;
+        return caseExactMatchTyped(prepared, value.clear);
     }
     if (("encrypted" in assertion) && ("encrypted" in value)) {
         return (

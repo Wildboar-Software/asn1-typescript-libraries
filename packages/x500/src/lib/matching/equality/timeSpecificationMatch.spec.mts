@@ -19,7 +19,7 @@ import {
 import { Period } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { Period_days_bitDay_monday } from "../../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
 import timeSpecificationMatch_ from "./timeSpecificationMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const timeSpecificationMatch = onStoredValue(timeSpecificationMatch_);
 

@@ -8,7 +8,7 @@ import { _encode_TelephoneNumber } from "../../modules/SelectedAttributeTypes/Te
 import facsimileNumberMatch_, {
     facsimileNumberMatchTyped,
 } from "./facsimileNumberMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const facsimileNumberMatch = onStoredValue(facsimileNumberMatch_);
 

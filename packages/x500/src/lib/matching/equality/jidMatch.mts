@@ -1,11 +1,12 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
+import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 
+export
 interface JidParts {
     local?: string;
     domain: string;
@@ -47,6 +48,18 @@ function parseJid (raw: string): JidParts | undefined {
     return { local, domain: rest, resource };
 }
 
+function decodeJid (el: ASN1Element): JidParts {
+    const parsed = parseJid(el.utf8String);
+    if (!parsed) {
+        throw new Error("jidMatch assertion is not a JID");
+    }
+    if (parsed.local !== undefined) {
+        parsed.local = parsed.local.toLowerCase();
+    }
+    parsed.domain = prepareDnsAssertion(parsed.domain, el);
+    return parsed;
+}
+
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.9.4 `jidMatch`.
  *
@@ -55,52 +68,53 @@ function parseJid (raw: string): JidParts | undefined {
  * must be the same format and identical octet-by-octet. Presence of
  * localpart and resourcepart must agree on both values. The
  * resourcepart is case-sensitive (OpaqueString); the localpart is
- * compared case-insensitively (UsernameCaseMapped). Invalid JIDs are
- * unequal rather than thrown.
+ * compared case-insensitively (UsernameCaseMapped). An assertion
+ * that is not a JID throws. A stored value that is not a JID is FALSE.
  *
- * @param assertion Presented JID.
+ * @param assertion Presented JID, already parsed. The localpart is
+ *  lower-case and the domain is prepared for `dnsNameMatch`.
  * @param value Stored JID, or that JID already decoded.
  */
 export
 function jidMatchTyped (
-    assertion: string,
+    assertion: JidParts,
     value: string | ASN1Element,
 ): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
-    const a = parseJid(assertion);
     const v = parseJid(stored);
-    if (!a || !v) {
+    if (!v) {
         return false;
     }
-    if (Boolean(a.local) !== Boolean(v.local)) {
+    if (Boolean(assertion.local) !== Boolean(v.local)) {
         return false;
     }
-    if (Boolean(a.resource) !== Boolean(v.resource)) {
+    if (Boolean(assertion.resource) !== Boolean(v.resource)) {
         return false;
     }
-    if (dnsNameMatchTyped(a.domain, v.domain) !== true) {
-        return false;
+    const domains = dnsNameMatchTyped(assertion.domain, v.domain);
+    if (domains !== true) {
+        return domains;
     }
     if (
-        (a.local !== undefined)
-        && (a.local.toLowerCase() !== v.local!.toLowerCase())
+        (assertion.local !== undefined)
+        && (assertion.local !== v.local!.toLowerCase())
     ) {
         return false;
     }
-    if ((a.resource !== undefined) && (a.resource !== v.resource)) {
+    if ((assertion.resource !== undefined) && (assertion.resource !== v.resource)) {
         return false;
     }
     return true;
 }
 
-jidMatchTyped satisfies TypedEquationFunction<string>;
+jidMatchTyped satisfies TypedEquationFunction<JidParts>;
 
 /**
  * `jidMatch` as a `Matcher`.
  */
 export
 const jidMatch: Matcher = createEqualityMatcher(
-    (el) => el.utf8String,
+    decodeJid,
     jidMatchTyped,
 );
 

@@ -2,7 +2,7 @@ import type { ASN1Element } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
 import { _encode_TelephoneNumber } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 import telephoneNumberMatch_ from "./telephoneNumberMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const telephoneNumberMatch = onStoredValue(telephoneNumberMatch_);
 

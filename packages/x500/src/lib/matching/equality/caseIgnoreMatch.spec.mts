@@ -1,7 +1,7 @@
 import { DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
 import caseIgnoreMatch_ from "./caseIgnoreMatch.mjs";
 import caseExactMatch_ from "./caseExactMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const caseIgnoreMatch = onStoredValue(caseIgnoreMatch_);
 const caseExactMatch = onStoredValue(caseExactMatch_);

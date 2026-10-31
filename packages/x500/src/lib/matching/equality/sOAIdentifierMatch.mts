@@ -1,4 +1,11 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import {
+    ASN1Construction,
+    ASN1Error,
+    ASN1TagClass,
+    ASN1UniversalType,
+    type ASN1Element,
+} from "@wildboar/asn1";
+import { _decodeNull } from "@wildboar/asn1/functional";
 import { readDecoded } from "../readValue.mjs";
 import {
     type Certificate,
@@ -34,8 +41,16 @@ function sOAIdentifierMatchTyped (
 
 sOAIdentifierMatchTyped satisfies TypedEquationFunction<null>;
 
-function decodeNullAssertion (_el: ASN1Element): null {
-    return null;
+function decodeNullAssertion (el: ASN1Element): null {
+    if (
+        el.tagClass !== ASN1TagClass.universal
+        || el.construction !== ASN1Construction.primitive
+        || el.tagNumber !== ASN1UniversalType.nill
+        || el.value.length !== 0
+    ) {
+        throw new ASN1Error("sOAIdentifierMatch assertion is not NULL", el);
+    }
+    return _decodeNull(el);
 }
 
 /**

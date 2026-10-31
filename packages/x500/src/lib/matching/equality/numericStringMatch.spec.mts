@@ -1,7 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeNumericString } from "@wildboar/asn1/functional";
 import numericStringMatch_ from "./numericStringMatch.mjs";
-import { onStoredValue } from "./onStoredValue.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const numericStringMatch = onStoredValue(numericStringMatch_);
 
