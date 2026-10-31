@@ -3,6 +3,7 @@ import { DER, _encodeNumericString } from "@wildboar/asn1/functional";
 import {
     AttributeTypeAndValue,
 } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
 import numericStringOrderingMatch, {
     numericStringOrderingMatchTyped,
 } from "./numericStringOrderingMatch.mjs";
@@ -22,6 +23,13 @@ describe("numericStringOrderingMatch", () => {
         expect(numericStringOrderingMatchTyped("100", numeric("9 9"))).toBeLessThan(0);
         expect(numericStringOrderingMatchTyped("100", numeric("1 0 0"))).toBe(0);
         expect(numericStringOrderingMatchTyped("1515", numeric("1515"))).toBe(0);
+        expect(numericStringOrderingMatchTyped("10", "1 0")).toBe(0);
+        expect(numericStringOrderingMatchTyped(
+            "10",
+            "1 0",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBeGreaterThan(0);
     });
 
     it("is TRUE when the stored numeric string is less than the assertion", () => {

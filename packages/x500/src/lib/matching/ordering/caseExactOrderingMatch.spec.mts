@@ -9,6 +9,7 @@ import {
 import {
     AttributeTypeAndValue,
 } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
 import caseExactOrderingMatch, {
     caseExactOrderingMatchTyped,
 } from "./caseExactOrderingMatch.mjs";
@@ -38,6 +39,13 @@ describe("caseExactOrderingMatch", () => {
         expect("Z".localeCompare("a")).toBeGreaterThan(0);
         expect(caseExactOrderingMatch(utf8("a"), stored("Z"))).toBe(true);
         expect(caseExactOrderingMatch(utf8("Z"), stored("a"))).toBe(false);
+        expect(caseExactOrderingMatchTyped("a b", "a  b")).toBe(0);
+        expect(caseExactOrderingMatchTyped(
+            "a b",
+            "a  b",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBeGreaterThan(0);
     });
 
     it("throws when the assertion cannot be prepared", () => {
@@ -56,7 +64,13 @@ describe("caseExactOrderingMatch", () => {
 describe("caseIgnoreOrderingMatch", () => {
     it("folds case before ordering", () => {
         expect(caseIgnoreOrderingMatchTyped("b", utf8("A"))).toBeGreaterThan(0);
-        expect(caseIgnoreOrderingMatchTyped("a", utf8("a"))).toBe(0);
+        expect(caseIgnoreOrderingMatchTyped("a", "A")).toBe(0);
+        expect(caseIgnoreOrderingMatchTyped(
+            "a",
+            "A",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBeGreaterThan(0);
         expect(caseIgnoreOrderingMatch(utf8("b"), stored("A"))).toBe(true);
         // 'C' precedes 'b' in code-point order. TRUE means the
         // assertion was case-folded before comparison.

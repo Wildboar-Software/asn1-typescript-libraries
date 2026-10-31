@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     createOrderingMatcher,
     type Matcher,
@@ -14,14 +14,15 @@ import {
  * presented time.
  *
  * @param assertion Presented time.
- * @param value Stored UTCTime.
+ * @param value Stored UTCTime, or that instant already decoded.
  */
 export
 function uTCTimeOrderingMatchTyped (
     assertion: Date,
-    value: ASN1Element,
+    value: Date | ASN1Element,
 ): number | undefined {
-    return assertion.valueOf() - value.utcTime.valueOf();
+    const stored = ASN1Element.isElement(value) ? value.utcTime : value;
+    return assertion.valueOf() - stored.valueOf();
 }
 
 uTCTimeOrderingMatchTyped satisfies TypedOrderingFunction<Date>;

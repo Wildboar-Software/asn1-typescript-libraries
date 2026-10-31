@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { compareCodePoints } from "../../utils/prepString.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -24,15 +26,19 @@ function stripSpaces (numeric: string): string {
  *
  * @param assertion Presented numeric string, with spaces already
  *  removed.
- * @param value Stored `NumericString`.
+ * @param value Stored `NumericString`, or that string with spaces
+ *  already removed. `MATCH_FLAG_VALUE_NORMALIZED` skips removal.
  */
 export
 function numericStringOrderingMatchTyped (
     assertion: string,
-    value: ASN1Element,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): number | undefined {
-    const v: string = stripSpaces(value.numericString);
-    return compareCodePoints(assertion, v);
+    const raw = typeof value === "string" ? value : value.numericString;
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
+    return compareCodePoints(assertion, stored);
 }
 
 numericStringOrderingMatchTyped satisfies TypedOrderingFunction<string>;

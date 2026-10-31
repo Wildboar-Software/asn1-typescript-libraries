@@ -1,5 +1,5 @@
 import { Buffer } from "node:buffer";
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     createOrderingMatcher,
     type Matcher,
@@ -17,14 +17,15 @@ import {
  * precede the stored octets.
  *
  * @param assertion Presented octets.
- * @param value Stored `OCTET STRING`.
+ * @param value Stored `OCTET STRING`, or those octets already decoded.
  */
 export
 function octetStringOrderingMatchTyped (
     assertion: Uint8Array,
-    value: ASN1Element,
+    value: Uint8Array | ASN1Element,
 ): number | undefined {
-    return Buffer.compare(assertion, value.octetString);
+    const stored = ASN1Element.isElement(value) ? value.octetString : value;
+    return Buffer.compare(assertion, stored);
 }
 
 octetStringOrderingMatchTyped satisfies TypedOrderingFunction<Uint8Array>;

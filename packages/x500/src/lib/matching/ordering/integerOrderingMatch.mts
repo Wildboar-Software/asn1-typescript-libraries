@@ -15,12 +15,12 @@ import {
  * `Number.MAX_SAFE_INTEGER` keep their order.
  *
  * @param assertion Presented INTEGER.
- * @param value Stored INTEGER.
+ * @param value Stored INTEGER, or that integer already decoded.
  */
 export
 function integerOrderingMatchTyped (
     assertion: INTEGER,
-    value: ASN1Element,
+    value: INTEGER | ASN1Element,
 ): number | undefined {
     return Number(readInteger(assertion) - readInteger(value));
 }

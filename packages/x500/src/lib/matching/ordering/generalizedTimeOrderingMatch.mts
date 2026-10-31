@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
 import {
     createOrderingMatcher,
     type Matcher,
@@ -14,14 +14,15 @@ import {
  * earlier than the presented time.
  *
  * @param assertion Presented time.
- * @param value Stored GeneralizedTime.
+ * @param value Stored GeneralizedTime, or that instant already decoded.
  */
 export
 function generalizedTimeOrderingMatchTyped (
     assertion: Date,
-    value: ASN1Element,
+    value: Date | ASN1Element,
 ): number | undefined {
-    return assertion.valueOf() - value.generalizedTime.valueOf();
+    const stored = ASN1Element.isElement(value) ? value.generalizedTime : value;
+    return assertion.valueOf() - stored.valueOf();
 }
 
 generalizedTimeOrderingMatchTyped satisfies TypedOrderingFunction<Date>;

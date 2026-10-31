@@ -16,6 +16,7 @@ const attributeType = ObjectIdentifier.fromParts([ 1, 1, 1, 1 ]);
 describe("integerOrderingMatch", () => {
     it("orders by the signed difference, including values past MAX_SAFE_INTEGER", () => {
         expect(integerOrderingMatchTyped(5, integer(1))).toBeGreaterThan(0);
+        expect(integerOrderingMatchTyped(5, 1)).toBeGreaterThan(0);
         expect(integerOrderingMatchTyped(0, integer(-1))).toBeGreaterThan(0);
         expect(integerOrderingMatchTyped(-1, integer(-8))).toBeGreaterThan(0);
         expect(integerOrderingMatchTyped(1, integer(5))).toBeLessThan(0);

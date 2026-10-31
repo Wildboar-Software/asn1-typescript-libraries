@@ -8,9 +8,15 @@ import {
 import {
     AttributeTypeAndValue,
 } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import generalizedTimeOrderingMatch from "./generalizedTimeOrderingMatch.mjs";
-import octetStringOrderingMatch from "./octetStringOrderingMatch.mjs";
-import uTCTimeOrderingMatch from "./uTCTimeOrderingMatch.mjs";
+import generalizedTimeOrderingMatch, {
+    generalizedTimeOrderingMatchTyped,
+} from "./generalizedTimeOrderingMatch.mjs";
+import octetStringOrderingMatch, {
+    octetStringOrderingMatchTyped,
+} from "./octetStringOrderingMatch.mjs";
+import uTCTimeOrderingMatch, {
+    uTCTimeOrderingMatchTyped,
+} from "./uTCTimeOrderingMatch.mjs";
 
 const type_ = ObjectIdentifier.fromParts([ 1, 1, 1, 1 ]);
 
@@ -34,6 +40,7 @@ describe("generalizedTimeOrderingMatch", () => {
             _encodeGeneralizedTime(earlier, DER),
             stored(_encodeGeneralizedTime(earlier, DER)),
         )).toBe(false);
+        expect(generalizedTimeOrderingMatchTyped(later, earlier)).toBeGreaterThan(0);
     });
 });
 
@@ -49,6 +56,7 @@ describe("uTCTimeOrderingMatch", () => {
             _encodeUTCTime(earlier, DER),
             stored(_encodeUTCTime(later, DER)),
         )).toBe(false);
+        expect(uTCTimeOrderingMatchTyped(later, earlier)).toBeGreaterThan(0);
     });
 });
 
@@ -62,5 +70,9 @@ describe("octetStringOrderingMatch", () => {
             _encodeOctetString(new Uint8Array([ 1, 0 ]), DER),
             stored(_encodeOctetString(new Uint8Array([ 1, 2 ]), DER)),
         )).toBe(false);
+        expect(octetStringOrderingMatchTyped(
+            new Uint8Array([ 1, 2, 3 ]),
+            new Uint8Array([ 1, 2 ]),
+        )).toBeGreaterThan(0);
     });
 });

@@ -1,8 +1,10 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -34,21 +36,25 @@ function prepareCaseIgnoreAssertion (el: ASN1Element): string {
  * failure of a stored value is UNDEFINED.
  *
  * @param assertion Presented string, already prepared and case-folded.
- * @param value Stored directory string.
+ * @param value Stored directory string, or that string already
+ *  prepared. `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
 function caseIgnoreOrderingMatchTyped (
     assertion: string,
-    value: ASN1Element,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): number | undefined {
-    const v: string | undefined = prepString(
-        readDirectoryString(value),
-        { caseFold: true },
-    );
-    if (v === undefined) {
+    const raw = readDirectoryString(value);
+    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
+        return compareCodePoints(assertion, raw);
+    }
+    const prepared = prepString(raw, { caseFold: true });
+    if (prepared === undefined) {
         return undefined;
     }
-    return compareCodePoints(assertion, v);
+    return compareCodePoints(assertion, prepared);
 }
 
 caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string>;
