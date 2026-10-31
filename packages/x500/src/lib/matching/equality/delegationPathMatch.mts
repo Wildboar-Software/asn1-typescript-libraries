@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     type AttCertPath,
@@ -27,39 +33,39 @@ import compareHolder from "../../comparators/compareHolder.mjs";
  * `assertion` may be an element or a `DelMatchSyntax`. `value` may
  * be an element or an `AttCertPath`.
  */
-export
-function delegationPathMatch (
-    assertion: ASN1Element | DelMatchSyntax,
-    value: ASN1Element | AttCertPath,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return delegationPathMatchTyped(
-        readDecoded(assertion, _decode_DelMatchSyntax),
-        readDecoded(value, _decode_AttCertPath),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `delegationPathMatch` on decoded values.
  *
  * @param a Presented endpoints.
- * @param v Stored attribute-certificate path.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored attribute-certificate path, or that path already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the first issuer and last holder match.
  */
 export
 function delegationPathMatchTyped (
     a: DelMatchSyntax,
-    v: AttCertPath,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: AttCertPath | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_AttCertPath);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
-    if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer)) {
+    if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)) {
         return false;
     }
     return compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getEqualityMatcher);
 }
+
+delegationPathMatchTyped satisfies TypedEquationFunction<DelMatchSyntax>;
+
+/**
+ * `delegationPathMatch` as a `Matcher`.
+ */
+export
+const delegationPathMatch: Matcher = createEqualityMatcher(
+    _decode_DelMatchSyntax,
+    delegationPathMatchTyped,
+);
 
 export default delegationPathMatch;

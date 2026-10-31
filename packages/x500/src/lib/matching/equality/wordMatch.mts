@@ -1,6 +1,13 @@
-import type { DirectoryStringInput } from "../readValue.mjs";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
-import { prepString as ps } from "../../utils/prepString.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 function isWordChar(c: string | undefined): boolean {
     return !!c && /[\p{L}\p{N}_]/u.test(c);
@@ -29,40 +36,61 @@ function containsWord (haystack: string, needle: string): boolean {
 }
 
 /**
+ * Prepare a word the same way `wordMatch` prepares both sides:
+ * trim, string preparation, then upper-case.
+ */
+function prepareWord (text: string): string | undefined {
+    return prepString(text.trim())?.toUpperCase();
+}
+
+function prepareWordAssertion (el: ASN1Element): string {
+    const prepared = prepareWord(readDirectoryString(el));
+    if (!prepared) {
+        throw new ASN1CharactersError(
+            "wordMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
+
+/**
  * Rec. ITU-T X.520 (10/2019), clause 8.5.1 `wordMatch`.
  *
  * TRUE if the presented word matches any word in a
  * `DirectoryString` attribute value. Individual words are compared
- * as for `caseIgnoreMatch`. The precise definition of a "word" is
- * a local matter; `containsWord` treats a match as a prepared,
- * case-folded substring bounded by non-word characters.
+ * as for `caseIgnoreMatch`. Preparation failure of a stored value
+ * is UNDEFINED.
  *
- * Each argument may be an `ASN1Element`, a directory string, or a
- * JavaScript string.
+ * @param assertion Presented word, already prepared and upper-cased.
+ * @param value Stored text, or that text already prepared.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
-function wordMatch (
-    assertion: DirectoryStringInput,
-    value: DirectoryStringInput,
-): boolean {
-    return wordMatchTyped(readDirectoryString(assertion), readDirectoryString(value));
+function wordMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = readDirectoryString(value);
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepareWord(raw);
+    if (!stored) {
+        return undefined;
+    }
+    return containsWord(stored, assertion);
 }
 
+wordMatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `wordMatch` on two strings.
- *
- * @param assertion Presented word.
- * @param value Stored text.
- * @returns `true` when the word occurs in the text.
+ * `wordMatch` as a `Matcher`. An assertion that cannot be prepared
+ * throws `ASN1CharactersError`.
  */
 export
-function wordMatchTyped (assertion: string, value: string): boolean {
-    const astr: string | undefined = ps(assertion.trim())?.toUpperCase();
-    const vstr: string | undefined = ps(value.trim())?.toUpperCase();
-    if (!astr || !vstr) {
-        return false;
-    }
-    return containsWord(vstr, astr);
-}
+const wordMatch: Matcher = createEqualityMatcher(
+    prepareWordAssertion,
+    wordMatchTyped,
+);
 
 export default wordMatch;

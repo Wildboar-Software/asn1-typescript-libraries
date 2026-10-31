@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     AttributeCertificateAssertion,
@@ -26,33 +32,22 @@ import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
  * the AC validity period; each asserted `attType` present in the
  * AC `attributes`. At least one component shall be present.
  */
-export
-function attributeCertificateMatch (
-    assertion: ASN1Element | AttributeCertificateAssertion,
-    value: ASN1Element | AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return attributeCertificateMatchTyped(
-        readDecoded(assertion, _decode_AttributeCertificateAssertion),
-        readDecoded(value, _decode_AttributeCertificate),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `attributeCertificateMatch` on decoded values.
  *
  * @param a Presented assertion.
- * @param v Stored attribute certificate.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored attribute certificate, or that certificate already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when every present component matches.
  */
 export
 function attributeCertificateMatchTyped (
     a: AttributeCertificateAssertion,
-    v: AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: AttributeCertificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_AttributeCertificate);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     if (a.holder) {
         if (("baseCertificateID" in a.holder)) {
             if (!v.toBeSigned.holder.baseCertificateID) {
@@ -97,5 +92,16 @@ function attributeCertificateMatchTyped (
     }
     return true;
 }
+
+attributeCertificateMatchTyped satisfies TypedEquationFunction<AttributeCertificateAssertion>;
+
+/**
+ * `attributeCertificateMatch` as a `Matcher`.
+ */
+export
+const attributeCertificateMatch: Matcher = createEqualityMatcher(
+    _decode_AttributeCertificateAssertion,
+    attributeCertificateMatchTyped,
+);
 
 export default attributeCertificateMatch;

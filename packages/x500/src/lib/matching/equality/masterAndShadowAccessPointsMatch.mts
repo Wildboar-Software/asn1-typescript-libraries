@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { _decodeSetOf } from "@wildboar/asn1/functional";
 import {
@@ -25,37 +31,23 @@ function scoreName (name: Name): number {
  * (same count, each pair matching via `distinguishedNameMatch`
  * after ordering the SET OF elements in any convenient fashion).
  */
-export
-function masterAndShadowAccessPointsMatch (
-    assertion: ASN1Element | readonly Name[],
-    value: ASN1Element | MasterAndShadowAccessPoints,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    const a: readonly Name[] = ASN1Element.isElement(assertion)
-        ? _decodeSetOf<Name>(() => _decode_Name)(assertion)
-        : assertion;
-    return masterAndShadowAccessPointsMatchTyped(
-        a,
-        readDecoded(value, _decode_MasterAndShadowAccessPoints),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `masterAndShadowAccessPointsMatch` on decoded names and access
  * points. The name arrays are copied before sorting.
  *
  * @param a Presented ae-titles.
- * @param v Stored access points.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored access points, or those points already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the ae-title sets match.
  */
 export
 function masterAndShadowAccessPointsMatchTyped (
     a: readonly Name[],
-    v: MasterAndShadowAccessPoints,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: MasterAndShadowAccessPoints | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_MasterAndShadowAccessPoints);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     if (a.length !== v.length) {
         return false;
     }
@@ -68,5 +60,16 @@ function masterAndShadowAccessPointsMatchTyped (
     }
     return true;
 }
+
+masterAndShadowAccessPointsMatchTyped satisfies TypedEquationFunction<readonly Name[]>;
+
+/**
+ * `masterAndShadowAccessPointsMatch` as a `Matcher`.
+ */
+export
+const masterAndShadowAccessPointsMatch: Matcher = createEqualityMatcher(
+    _decodeSetOf<Name>(() => _decode_Name),
+    masterAndShadowAccessPointsMatchTyped,
+);
 
 export default masterAndShadowAccessPointsMatch;

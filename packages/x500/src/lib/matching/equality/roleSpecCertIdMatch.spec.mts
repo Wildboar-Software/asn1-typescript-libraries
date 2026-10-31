@@ -19,7 +19,10 @@ import {
     _encode_RoleSpecCertIdentifierSyntax,
 } from "../../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import roleSpecCertIdMatch from "./roleSpecCertIdMatch.mjs";
+import roleSpecCertIdMatch_ from "./roleSpecCertIdMatch.mjs";
+import { onStoredValue } from "./onStoredValue.mjs";
+
+const roleSpecCertIdMatch = onStoredValue(roleSpecCertIdMatch_);
 
 const ALG = new AlgorithmIdentifier(ObjectIdentifier.fromString("1.2.840.113549.1.1.11"));
 

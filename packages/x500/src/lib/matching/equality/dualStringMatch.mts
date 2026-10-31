@@ -1,4 +1,4 @@
-import { ASN1Element } from "@wildboar/asn1";
+import { ASN1Element, ASN1CharactersError } from "@wildboar/asn1";
 import {
     DualStringSyntax,
     _decode_DualStringSyntax,
@@ -9,6 +9,11 @@ import type {
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /** Element, `DualStringSyntax`, or the two strings already extracted. */
 export type DualStringInput =
@@ -19,7 +24,12 @@ export type DualStringInput =
         readonly object: UnboundedDirectoryString | string;
     };
 
-function readDual (value: DualStringInput): { operation: string; object: string } {
+interface DualStrings {
+    readonly operation: string;
+    readonly object: string;
+}
+
+function readDual (value: DualStringInput): DualStrings {
     if (ASN1Element.isElement(value)) {
         const decoded = _decode_DualStringSyntax(value);
         return {
@@ -33,6 +43,20 @@ function readDual (value: DualStringInput): { operation: string; object: string 
     };
 }
 
+function prepareDualAssertion (el: ASN1Element): DualStrings {
+    const decoded = readDual(el);
+    if (
+        prohibitedCharacters.test(decoded.operation)
+        || prohibitedCharacters.test(decoded.object)
+    ) {
+        throw new ASN1CharactersError(
+            "dualStringMatch assertion contains a prohibited character",
+            el,
+        );
+    }
+    return decoded;
+}
+
 /**
  * Rec. ITU-T X.509 (10/2019), clause 16.8.2 `dualStringMatch`.
  *
@@ -40,49 +64,37 @@ function readDual (value: DualStringInput): { operation: string; object: string 
  * `operation` and `object` strings must each equal the stored
  * pair. Used with the `permission` attribute (clause 16.8.1);
  * operation and object names are specified as case sensitive.
+ * A prohibited character in a stored string is UNDEFINED.
  *
- * Each argument may be an element, a `DualStringSyntax`, or
- * `{ operation, object }` whose fields are directory strings or
- * JavaScript strings.
- */
-export
-function dualStringMatch (
-    assertion: DualStringInput,
-    value: DualStringInput,
-): boolean {
-    const a = readDual(assertion);
-    const v = readDual(value);
-    return dualStringMatchTyped(a.operation, a.object, v.operation, v.object);
-}
-
-/**
- * `dualStringMatch` on the four character strings. Prohibited
- * characters reject the match; the comparison itself is
- * case-sensitive and unprepared.
- *
- * @param assertionOperation Presented operation.
- * @param assertionObject Presented object.
- * @param valueOperation Stored operation.
- * @param valueObject Stored object.
- * @returns `true` when both pairs are equal.
+ * @param assertion Presented operation and object.
+ * @param value Stored pair, or that pair already decoded.
  */
 export
 function dualStringMatchTyped (
-    assertionOperation: string,
-    assertionObject: string,
-    valueOperation: string,
-    valueObject: string,
-): boolean {
+    assertion: DualStrings,
+    value: DualStringInput,
+): boolean | undefined {
+    const stored = readDual(value);
     if (
-        prohibitedCharacters.test(assertionOperation)
-        || prohibitedCharacters.test(valueOperation)
-        || prohibitedCharacters.test(assertionObject)
-        || prohibitedCharacters.test(valueObject)
+        prohibitedCharacters.test(stored.operation)
+        || prohibitedCharacters.test(stored.object)
     ) {
-        return false;
+        return undefined;
     }
-    return assertionOperation === valueOperation
-        && assertionObject === valueObject;
+    return assertion.operation === stored.operation
+        && assertion.object === stored.object;
 }
+
+dualStringMatchTyped satisfies TypedEquationFunction<DualStrings>;
+
+/**
+ * `dualStringMatch` as a `Matcher`. A prohibited character in the
+ * assertion throws `ASN1CharactersError`.
+ */
+export
+const dualStringMatch: Matcher = createEqualityMatcher(
+    prepareDualAssertion,
+    dualStringMatchTyped,
+);
 
 export default dualStringMatch;

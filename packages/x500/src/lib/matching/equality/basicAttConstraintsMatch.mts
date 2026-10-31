@@ -1,6 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
     id_ce_basicAttConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va.mjs";
 import {
@@ -25,29 +30,19 @@ import { DERElement } from "@wildboar/asn1";
  * `BasicAttConstraintsSyntax` matches the corresponding stored
  * component (`authority`, optional `pathLenConstraint`).
  */
-export
-function basicAttConstraintsMatch (
-    assertion: ASN1Element | BasicAttConstraintsSyntax,
-    value: ASN1Element | AttributeCertificate,
-): boolean {
-    return basicAttConstraintsMatchTyped(
-        readDecoded(assertion, _decode_BasicAttConstraintsSyntax),
-        readDecoded(value, _decode_AttributeCertificate),
-    );
-}
-
 /**
  * `basicAttConstraintsMatch` on decoded values.
  *
  * @param a Presented constraints.
- * @param v Stored attribute certificate.
+ * @param value Stored attribute certificate, or that certificate already decoded.
  * @returns `true` when authority and path length match.
  */
 export
 function basicAttConstraintsMatchTyped (
     a: BasicAttConstraintsSyntax,
-    v: AttributeCertificate,
+    value: AttributeCertificate | ASN1Element,
 ): boolean {
+    const v = readDecoded(value, _decode_AttributeCertificate);
     const ext: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {
@@ -61,5 +56,16 @@ function basicAttConstraintsMatchTyped (
     }
     return (a.pathLenConstraint === storedValue.pathLenConstraint);
 }
+
+basicAttConstraintsMatchTyped satisfies TypedEquationFunction<BasicAttConstraintsSyntax>;
+
+/**
+ * `basicAttConstraintsMatch` as a `Matcher`.
+ */
+export
+const basicAttConstraintsMatch: Matcher = createEqualityMatcher(
+    _decode_BasicAttConstraintsSyntax,
+    basicAttConstraintsMatchTyped,
+);
 
 export default basicAttConstraintsMatch;

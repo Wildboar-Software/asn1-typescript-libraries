@@ -1,12 +1,15 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
-import uriMatch from "./uriMatch.mjs";
+import uriMatch_ from "./uriMatch.mjs";
+import { onStoredValue } from "./onStoredValue.mjs";
+
+const uriMatch = onStoredValue(uriMatch_);
 
 function utf8 (value: string): ASN1Element {
     return _encodeUTF8String(value, DER);
 }
 
-function match (assertion: string, value: string): boolean {
+function match (assertion: string, value: string): boolean | undefined {
     return uriMatch(utf8(assertion), utf8(value));
 }
 
@@ -374,11 +377,11 @@ describe("uriMatch", () => {
             );
         });
 
-        it("throws when only one operand is unclosed", () => {
-            expect(() => match(
+        it("is UNDEFINED for an unclosed stored host and throws for an unclosed assertion", () => {
+            expect(match(
                 "http://[::1]/",
                 "http://[::1",
-            )).toThrow("Unterminated IP-literal in URI host");
+            )).toBeUndefined();
             expect(() => match(
                 "HTTP://[2001:DB8::1",
                 "http://[2001:db8:0:0:0:0:0:1]/",

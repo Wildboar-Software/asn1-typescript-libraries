@@ -9,23 +9,26 @@ import {
     _decode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
 import { compareNSAP } from "../../comparators/compareNSAPs.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
-function assertedNAddress (
-    assertion: ASN1Element | ProtocolInformation | Uint8Array,
-): OCTET_STRING {
-    if (assertion instanceof Uint8Array) {
-        return assertion;
+function readNAddress (value: ASN1Element | ProtocolInformation | Uint8Array): OCTET_STRING {
+    if (value instanceof Uint8Array) {
+        return value;
     }
-    if (!ASN1Element.isElement(assertion)) {
-        return assertion.nAddress;
+    if (!ASN1Element.isElement(value)) {
+        return value.nAddress;
     }
     if (
-        assertion.tagClass === ASN1TagClass.universal
-        && assertion.tagNumber === ASN1UniversalType.sequence
+        value.tagClass === ASN1TagClass.universal
+        && value.tagNumber === ASN1UniversalType.sequence
     ) {
-        return _decode_ProtocolInformation(assertion).nAddress;
+        return _decode_ProtocolInformation(value).nAddress;
     }
-    return assertion.octetString;
+    return value.octetString;
 }
 
 /**
@@ -35,26 +38,29 @@ function assertedNAddress (
  * Assertion syntax is the `nAddress` OCTET STRING of
  * `ProtocolInformation`. TRUE iff that presented NSAP matches the
  * stored `nAddress` under `compareNSAP`. Stored `profiles` are
- * ignored.
+ * ignored. A presented `ProtocolInformation` is also accepted;
+ * only its `nAddress` is compared.
  *
- * A presented `ProtocolInformation` is also accepted, although
- * that is not the assertion syntax of this matching rule. Only
- * its `nAddress` is compared; its `profiles` are ignored.
+ * @param assertion Presented NSAP.
+ * @param value Stored protocol information, NSAP, or that NSAP already decoded.
  */
 export
-function protocolInformationMatch (
-    assertion: ASN1Element | ProtocolInformation | Uint8Array,
+function protocolInformationMatchTyped (
+    assertion: Uint8Array,
     value: ASN1Element | ProtocolInformation | Uint8Array,
-): boolean {
-    let stored: Uint8Array;
-    if (value instanceof Uint8Array) {
-        stored = value;
-    } else if (ASN1Element.isElement(value)) {
-        stored = _decode_ProtocolInformation(value).nAddress;
-    } else {
-        stored = value.nAddress;
-    }
-    return compareNSAP(assertedNAddress(assertion), stored);
+): boolean | undefined {
+    return compareNSAP(assertion, readNAddress(value));
 }
+
+protocolInformationMatchTyped satisfies TypedEquationFunction<Uint8Array>;
+
+/**
+ * `protocolInformationMatch` as a `Matcher`.
+ */
+export
+const protocolInformationMatch: Matcher = createEqualityMatcher(
+    readNAddress,
+    protocolInformationMatchTyped,
+);
 
 export default protocolInformationMatch;

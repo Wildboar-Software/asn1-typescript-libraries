@@ -3,6 +3,7 @@ import {
     ASN1TagClass,
     ASN1UniversalType,
 } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
@@ -10,6 +11,11 @@ import type {
     FacsimileTelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { telephoneNumberMatchTyped } from "./telephoneNumberMatch.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /** Element, decoded facsimile number, or the telephone number string. */
 type FacsimileNumberInput = ASN1Element | FacsimileTelephoneNumber | string;
@@ -35,6 +41,10 @@ function readFacsimileNumber (value: FacsimileNumberInput): string {
     return value.printableString;
 }
 
+function normalizeTelephoneNumber (telephoneNumber: string): string {
+    return telephoneNumber.replace(/[- ]/g, "");
+}
+
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.13 `facsimileNumberMatch`.
  *
@@ -43,19 +53,35 @@ function readFacsimileNumber (value: FacsimileNumberInput): string {
  * a `FacsimileTelephoneNumber` is not evaluated. Matching of that
  * number is as for `telephoneNumberMatch`.
  *
- * Each argument may be an `ASN1Element` (`TelephoneNumber` or
- * `FacsimileTelephoneNumber`), a `FacsimileTelephoneNumber`, or
- * the telephone number string.
+ * @param assertion Presented number, with hyphens and spaces already removed.
+ * @param value Stored facsimile or telephone number. A decoded
+ *  `FacsimileTelephoneNumber` is accepted.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips hyphen and space removal.
  */
 export
-function facsimileNumberMatch (
-    assertion: FacsimileNumberInput,
+function facsimileNumberMatchTyped (
+    assertion: string,
     value: FacsimileNumberInput,
-): boolean {
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
     return telephoneNumberMatchTyped(
-        readFacsimileNumber(assertion),
+        assertion,
         readFacsimileNumber(value),
+        getEqualityMatcher,
+        flags,
     );
 }
+
+facsimileNumberMatchTyped satisfies TypedEquationFunction<string>;
+
+/**
+ * `facsimileNumberMatch` as a `Matcher`.
+ */
+export
+const facsimileNumberMatch: Matcher = createEqualityMatcher(
+    (el) => normalizeTelephoneNumber(readFacsimileNumber(el)),
+    facsimileNumberMatchTyped,
+);
 
 export default facsimileNumberMatch;

@@ -7,6 +7,11 @@ import {
 import {
     id_ce_sOAIdentifier,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-sOAIdentifier.va.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 17.3.2.1.2
@@ -14,25 +19,32 @@ import {
  *
  * Assertion syntax is NULL. TRUE iff the stored public-key
  * certificate contains a `sOAIdentifier` extension.
+ *
+ * @param _assertion Presented NULL. Ignored.
+ * @param value Stored certificate, or that certificate already decoded.
  */
 export
-function sOAIdentifierMatch (
-    _assertion: ASN1Element | null,
-    value: ASN1Element | Certificate,
-): boolean {
-    return sOAIdentifierMatchTyped(readDecoded(value, _decode_Certificate));
+function sOAIdentifierMatchTyped (
+    _assertion: null,
+    value: Certificate | ASN1Element,
+): boolean | undefined {
+    const certificate = readDecoded(value, _decode_Certificate);
+    return Boolean(certificate.toBeSigned.extensions?.some((ext) => ext.extnId.isEqualTo(id_ce_sOAIdentifier)));
+}
+
+sOAIdentifierMatchTyped satisfies TypedEquationFunction<null>;
+
+function decodeNullAssertion (_el: ASN1Element): null {
+    return null;
 }
 
 /**
- * `sOAIdentifierMatch` on a decoded certificate. The NULL assertion
- * is ignored.
- *
- * @param value Stored certificate.
- * @returns `true` when the `sOAIdentifier` extension is present.
+ * `sOAIdentifierMatch` as a `Matcher`.
  */
 export
-function sOAIdentifierMatchTyped (value: Certificate): boolean {
-    return Boolean(value.toBeSigned.extensions?.some((ext) => ext.extnId.isEqualTo(id_ce_sOAIdentifier)));
-}
+const sOAIdentifierMatch: Matcher = createEqualityMatcher(
+    decodeNullAssertion,
+    sOAIdentifierMatchTyped,
+);
 
 export default sOAIdentifierMatch;

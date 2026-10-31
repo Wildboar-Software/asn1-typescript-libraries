@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     type ConsumerInformation,
@@ -23,19 +29,6 @@ import { compareName } from "@wildboar/dn";
  * be an element or `ConsumerInformation` (a subset of
  * `SupplierInformation`).
  */
-export
-function supplierOrConsumerInformationMatch (
-    assertion: ASN1Element | AssertionType,
-    value: ASN1Element | ConsumerInformation,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return supplierOrConsumerInformationMatchTyped(
-        readDecoded(assertion, _decode_AssertionType),
-        readDecoded(value, _decode_ConsumerInformation),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `supplierOrConsumerInformationMatch` on decoded values.
  *
@@ -44,20 +37,33 @@ function supplierOrConsumerInformationMatch (
  * this matching rule.
  *
  * @param a Presented assertion.
- * @param v Stored consumer information.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored consumer information, or that value already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the agreement id and names match.
  */
 export
 function supplierOrConsumerInformationMatchTyped (
     a: AssertionType,
-    v: ConsumerInformation,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: ConsumerInformation | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_ConsumerInformation);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     if (a.agreement_identifier !== v.agreementID.identifier) {
         return false;
     }
     return compareName(a.ae_title, v.ae_title, getEqualityMatcher);
 }
+
+supplierOrConsumerInformationMatchTyped satisfies TypedEquationFunction<AssertionType>;
+
+/**
+ * `supplierOrConsumerInformationMatch` as a `Matcher`.
+ */
+export
+const supplierOrConsumerInformationMatch: Matcher = createEqualityMatcher(
+    _decode_AssertionType,
+    supplierOrConsumerInformationMatchTyped,
+);
 
 export default supplierOrConsumerInformationMatch;

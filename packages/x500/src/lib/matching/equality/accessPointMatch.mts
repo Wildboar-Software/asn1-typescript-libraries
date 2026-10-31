@@ -1,10 +1,15 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import {
     ASN1Element,
     ASN1TagClass,
     ASN1UniversalType,
-    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     type Name,
@@ -47,41 +52,41 @@ function readAssertedName (assertion: ASN1Element | Name): Name | null {
  * (`ae-title`) component of the access point. TRUE iff those names
  * match as distinguished names.
  *
- * `assertion` may be an element or a `Name`. `value` may be an
- * element or an `AccessPoint`.
- */
-export
-function accessPointMatch (
-    assertion: ASN1Element | Name,
-    value: ASN1Element | AccessPoint,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    const name = readAssertedName(assertion);
-    if (!name) {
-        return false;
-    }
-    return accessPointMatchTyped(
-        name,
-        readDecoded(value, _decode_AccessPoint),
-        getEqualityMatcher,
-    );
-}
-
-/**
- * `accessPointMatch` on a decoded name and access point.
+ * A presented `AccessPoint` SET is also accepted: `ae-title` is
+ * context-specific tag 0, EXPLICIT. A missing ae-title is an
+ * assertion error.
  *
  * @param assertion Presented `ae-title`.
- * @param value Stored access point.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
- * @returns `true` when the names match.
+ * @param value Stored access point, or that access point already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  */
 export
 function accessPointMatchTyped (
     assertion: Name,
-    value: AccessPoint,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return compareName(assertion, value.ae_title, getEqualityMatcher);
+    value: AccessPoint | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+): boolean | undefined {
+    const stored = readDecoded(value, _decode_AccessPoint);
+    return compareName(assertion, stored.ae_title, valueEqualityMatcher(getMatcher));
 }
+
+accessPointMatchTyped satisfies TypedEquationFunction<Name>;
+
+function decodeAccessPointAssertion (el: ASN1Element): Name {
+    const name = readAssertedName(el);
+    if (!name) {
+        throw new Error("accessPointMatch assertion has no ae-title");
+    }
+    return name;
+}
+
+/**
+ * `accessPointMatch` as a `Matcher`.
+ */
+export
+const accessPointMatch: Matcher = createEqualityMatcher(
+    decodeAccessPointAssertion,
+    accessPointMatchTyped,
+);
 
 export default accessPointMatch;

@@ -1,5 +1,9 @@
 import { ASN1Element, DERElement } from "@wildboar/asn1";
-import { readDecoded } from "../readValue.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {
     type AttributeCertificate,
@@ -74,14 +78,22 @@ function certificateExtensions (
     }
 }
 
+/**
+ * `timeSpecificationMatch` on a presented time specification and a
+ * stored time specification, attribute certificate, or public-key
+ * certificate.
+ *
+ * @param assertion Presented time specification.
+ * @param value Stored time specification or certificate.
+ * @returns `true` when every presented component matches.
+ */
 export
-function timeSpecificationMatch (
-    assertion: ASN1Element | TimeSpecification,
+function timeSpecificationMatchTyped (
+    assertion: TimeSpecification,
     value: ASN1Element | AttributeCertificate | Certificate | TimeSpecification,
-): boolean {
-    const assertedTime = readDecoded(assertion, _decode_TimeSpecification);
+): boolean | undefined {
     if (!ASN1Element.isElement(value) && "time" in value && !("toBeSigned" in value)) {
-        return timeSpecificationMatchTyped(assertedTime, value);
+        return timeSpecificationsEqual(assertion, value);
     }
     const ext: Extension | undefined = certificateExtensions(value)
         ?.find((item: Extension): boolean => item.extnId.isEqualTo(id_ce_timeSpecification));
@@ -90,18 +102,28 @@ function timeSpecificationMatch (
     }
     const el: DERElement = new DERElement();
     el.fromBytes(ext.extnValue);
-    return timeSpecificationMatchTyped(assertedTime, _decode_TimeSpecification(el));
+    return timeSpecificationsEqual(assertion, _decode_TimeSpecification(el));
 }
 
+timeSpecificationMatchTyped satisfies TypedEquationFunction<TimeSpecification>;
+
 /**
- * `timeSpecificationMatch` on two decoded time specifications.
+ * `timeSpecificationMatch` as a `Matcher`.
+ */
+export
+const timeSpecificationMatch: Matcher = createEqualityMatcher(
+    _decode_TimeSpecification,
+    timeSpecificationMatchTyped,
+);
+
+/**
+ * Compare two decoded time specifications.
  *
  * @param assertedTime Presented time specification.
  * @param storedTime Stored time specification.
  * @returns `true` when every presented component matches.
  */
-export
-function timeSpecificationMatchTyped (
+function timeSpecificationsEqual (
     assertedTime: TimeSpecification,
     storedTime: TimeSpecification,
 ): boolean {

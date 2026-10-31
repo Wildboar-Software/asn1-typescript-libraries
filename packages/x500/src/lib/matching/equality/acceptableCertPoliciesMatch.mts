@@ -1,6 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
     id_ce_acceptableCertPolicies,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-acceptableCertPolicies.va.mjs";
 import {
@@ -24,29 +29,19 @@ import { DERElement } from "@wildboar/asn1";
  * every component present in the presented
  * `AcceptableCertPoliciesSyntax` matches the stored policy set.
  */
-export
-function acceptableCertPoliciesMatch (
-    assertion: ASN1Element | AcceptableCertPoliciesSyntax,
-    value: ASN1Element | AttributeCertificate,
-): boolean {
-    return acceptableCertPoliciesMatchTyped(
-        readDecoded(assertion, _decode_AcceptableCertPoliciesSyntax),
-        readDecoded(value, _decode_AttributeCertificate),
-    );
-}
-
 /**
  * `acceptableCertPoliciesMatch` on a decoded policy list and AC.
  *
  * @param a Presented acceptable policies.
- * @param v Stored attribute certificate.
+ * @param value Stored attribute certificate, or that certificate already decoded.
  * @returns `true` when every presented policy is stored.
  */
 export
 function acceptableCertPoliciesMatchTyped (
     a: AcceptableCertPoliciesSyntax,
-    v: AttributeCertificate,
+    value: AttributeCertificate | ASN1Element,
 ): boolean {
+    const v = readDecoded(value, _decode_AttributeCertificate);
     const ext: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_acceptableCertPolicies));
     if (!ext) {
@@ -58,5 +53,16 @@ function acceptableCertPoliciesMatchTyped (
     const storedPolicies: Set<string> = new Set(storedValue.map((oid) => oid.toString()));
     return a.every((oid) => storedPolicies.has(oid.toString()));
 }
+
+acceptableCertPoliciesMatchTyped satisfies TypedEquationFunction<AcceptableCertPoliciesSyntax>;
+
+/**
+ * `acceptableCertPoliciesMatch` as a `Matcher`.
+ */
+export
+const acceptableCertPoliciesMatch: Matcher = createEqualityMatcher(
+    _decode_AcceptableCertPoliciesSyntax,
+    acceptableCertPoliciesMatchTyped,
+);
 
 export default acceptableCertPoliciesMatch;

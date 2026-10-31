@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     HolderIssuerAssertion,
@@ -22,33 +28,22 @@ import compareHolder from "../../comparators/compareHolder.mjs";
  * `assertion` may be an element or a `HolderIssuerAssertion`.
  * `value` may be an element or an `AttributeCertificate`.
  */
-export
-function holderIssuerMatch (
-    assertion: ASN1Element | HolderIssuerAssertion,
-    value: ASN1Element | AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return holderIssuerMatchTyped(
-        readDecoded(assertion, _decode_HolderIssuerAssertion),
-        readDecoded(value, _decode_AttributeCertificate),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `holderIssuerMatch` on decoded values.
  *
  * @param a Presented holder and issuer.
- * @param v Stored attribute certificate.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored attribute certificate, or that certificate already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when every present component matches.
  */
 export
 function holderIssuerMatchTyped (
     a: HolderIssuerAssertion,
-    v: AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: AttributeCertificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_AttributeCertificate);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     if (a.holder && !compareHolder(a.holder, v.toBeSigned.holder, getEqualityMatcher)) {
         return false;
     }
@@ -57,5 +52,16 @@ function holderIssuerMatchTyped (
     }
     return true;
 }
+
+holderIssuerMatchTyped satisfies TypedEquationFunction<HolderIssuerAssertion>;
+
+/**
+ * `holderIssuerMatch` as a `Matcher`.
+ */
+export
+const holderIssuerMatch: Matcher = createEqualityMatcher(
+    _decode_HolderIssuerAssertion,
+    holderIssuerMatchTyped,
+);
 
 export default holderIssuerMatch;
