@@ -1,9 +1,25 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_x_kmc_Person } from "../LdapKmc/id-oc-x-kmc-Person.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_x_kmc_Person } from "../LdapKmc/id-oc-x-kmc-Person.va.mjs";
+import { x_kmc_AddressIsPublic } from "./x-kmc-AddressIsPublic.oa.mjs";
+import { x_kmc_Alias } from "./x-kmc-Alias.oa.mjs";
+import { x_kmc_DiscordUserID } from "./x-kmc-DiscordUserID.oa.mjs";
+import { x_kmc_Generation } from "./x-kmc-Generation.oa.mjs";
+import { x_kmc_IsKUMember } from "./x-kmc-IsKUMember.oa.mjs";
+import { x_kmc_KUDepartment } from "./x-kmc-KUDepartment.oa.mjs";
+import { x_kmc_KUStudentNumber } from "./x-kmc-KUStudentNumber.oa.mjs";
+import { x_kmc_LastModified } from "./x-kmc-LastModified.oa.mjs";
+import { x_kmc_Lodging } from "./x-kmc-Lodging.oa.mjs";
+import { x_kmc_MailForwardingAddress } from "./x-kmc-MailForwardingAddress.oa.mjs";
+import { x_kmc_MailNotificationAddress } from "./x-kmc-MailNotificationAddress.oa.mjs";
+import { x_kmc_PhoneticGivenName } from "./x-kmc-PhoneticGivenName.oa.mjs";
+import { x_kmc_PhoneticSurname } from "./x-kmc-PhoneticSurname.oa.mjs";
+import { x_kmc_SlackUserID } from "./x-kmc-SlackUserID.oa.mjs";
+import { x_kmc_UniversityDepartment } from "./x-kmc-UniversityDepartment.oa.mjs";
+import { x_kmc_UniversityMatricYear } from "./x-kmc-UniversityMatricYear.oa.mjs";
+import { x_kmc_UniversityStatus } from "./x-kmc-UniversityStatus.oa.mjs";
 
 /**
  * @summary x_kmc_Person
@@ -42,6 +58,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const x_kmc_Person: OBJECT_CLASS = undefined;
+const x_kmc_Person: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [x_kmc_LastModified, x_kmc_PhoneticSurname, x_kmc_PhoneticGivenName, x_kmc_Generation, x_kmc_Alias, x_kmc_Lodging, x_kmc_UniversityDepartment, x_kmc_UniversityStatus, x_kmc_UniversityMatricYear, x_kmc_MailForwardingAddress, x_kmc_MailNotificationAddress, x_kmc_DiscordUserID, x_kmc_SlackUserID, x_kmc_AddressIsPublic, x_kmc_IsKUMember, x_kmc_KUDepartment, x_kmc_KUStudentNumber] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["x-kmc-Person"],
+    "&ldapDesc": "Additional informations for a member of KMC" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_x_kmc_Person /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

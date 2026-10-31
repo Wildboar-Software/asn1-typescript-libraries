@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE} from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { admissionRate } from "../OrganizationAndGroupSchema/admissionRate.oa.mjs";
 // export { admissionRate } from "../OrganizationAndGroupSchema/admissionRate.oa.mjs";

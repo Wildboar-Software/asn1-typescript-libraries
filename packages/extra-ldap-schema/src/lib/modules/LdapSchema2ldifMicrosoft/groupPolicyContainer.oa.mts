@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { container } from "../LdapSchema2ldifMicrosoft/container.oa.mjs";
-// export { id_oc_groupPolicyContainer } from "../LdapSchema2ldifMicrosoft/id-oc-groupPolicyContainer.va.mjs";
-
+import { container } from "../LdapSchema2ldifMicrosoft/container.oa.mjs";
+import { id_oc_groupPolicyContainer } from "../LdapSchema2ldifMicrosoft/id-oc-groupPolicyContainer.va.mjs";
+import { flags } from "../MSUser/flags.oa.mjs";
+import { gPCFileSysPath } from "../MSUser/gPCFileSysPath.oa.mjs";
+import { gPCFunctionalityVersion } from "../MSUser/gPCFunctionalityVersion.oa.mjs";
+import { gPCMachineExtensionNames } from "../MSUser/gPCMachineExtensionNames.oa.mjs";
+import { gPCUserExtensionNames } from "../MSUser/gPCUserExtensionNames.oa.mjs";
+import { versionNumber } from "../MSUser/versionNumber.oa.mjs";
 
 /**
  * @summary groupPolicyContainer
@@ -29,6 +33,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const groupPolicyContainer: OBJECT_CLASS = undefined;
+const groupPolicyContainer: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [container] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [flags, versionNumber, gPCFunctionalityVersion, gPCFileSysPath, gPCMachineExtensionNames, gPCUserExtensionNames] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["groupPolicyContainer"],
+    "&id": id_oc_groupPolicyContainer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

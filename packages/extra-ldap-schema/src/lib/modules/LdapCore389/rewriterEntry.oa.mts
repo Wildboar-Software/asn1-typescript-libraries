@@ -1,10 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { nsslapd_libPath } from "../LdapCore389/nsslapd-libPath.oa.mjs";
-// export { id_oc_rewriterEntry } from "../LdapCore389/id-oc-rewriterEntry.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_rewriterEntry } from "../LdapCore389/id-oc-rewriterEntry.va.mjs";
+import { nsslapd_libPath } from "../LdapCore389/nsslapd-libPath.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nsslapd_filterrewriter } from "./nsslapd-filterrewriter.oa.mjs";
+import { nsslapd_returnedAttrRewriter } from "./nsslapd-returnedAttrRewriter.oa.mjs";
 
 /**
  * @summary rewriterEntry
@@ -28,6 +29,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rewriterEntry: OBJECT_CLASS = undefined;
+const rewriterEntry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [nsslapd_libPath] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [commonName, nsslapd_filterrewriter, nsslapd_returnedAttrRewriter] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rewriterEntry"],
+    "&id": id_oc_rewriterEntry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

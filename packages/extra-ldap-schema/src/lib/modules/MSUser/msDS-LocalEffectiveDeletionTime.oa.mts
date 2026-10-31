@@ -1,9 +1,10 @@
 /* eslint-disable */
+import { type GeneralizedTime } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
-// export { id_at_msDS_LocalEffectiveDeletionTime } from "../MSUser/id-at-msDS-LocalEffectiveDeletionTime.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_msDS_LocalEffectiveDeletionTime } from "../MSUser/id-at-msDS-LocalEffectiveDeletionTime.va.mjs";
+import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 
 /**
  * @summary msDS_LocalEffectiveDeletionTime
@@ -22,10 +23,28 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<GeneralizedTime>}
+ * @implements {ATTRIBUTE<GeneralizedTime>}
  */
 export
-const msDS_LocalEffectiveDeletionTime: ATTRIBUTE = undefined;
+const msDS_LocalEffectiveDeletionTime: ATTRIBUTE<GeneralizedTime> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": $._decodeGeneralizedTime,
+    },
+    encoderFor: {
+        "&Type": $._encodeGeneralizedTime,
+    },
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
+    "&no-user-modification": true /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": generalizedTime["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["msDS-LocalEffectiveDeletionTime"],
+    "&id": id_at_msDS_LocalEffectiveDeletionTime /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

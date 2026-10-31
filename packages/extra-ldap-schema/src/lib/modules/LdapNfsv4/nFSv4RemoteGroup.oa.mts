@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nFSv4RemoteGroup } from "../LdapNfsv4/id-oc-nFSv4RemoteGroup.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nFSv4RemoteGroup } from "../LdapNfsv4/id-oc-nFSv4RemoteGroup.va.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { nFSv4Name } from "./nFSv4Name.oa.mjs";
 
 /**
  * @summary nFSv4RemoteGroup
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nFSv4RemoteGroup: OBJECT_CLASS = undefined;
+const nFSv4RemoteGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [gidNumber, nFSv4Name] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [commonName, memberUid, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["NFSv4RemoteGroup"],
+    "&ldapDesc": "NFS version4 group from remote NFSv4 Domain" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nFSv4RemoteGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

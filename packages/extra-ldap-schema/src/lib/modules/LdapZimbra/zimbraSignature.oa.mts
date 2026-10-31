@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
+import { zimbraCreateTimestamp } from "./zimbraCreateTimestamp.oa.mjs";
+import { zimbraPrefMailSignature } from "./zimbraPrefMailSignature.oa.mjs";
+import { zimbraPrefMailSignatureContactId } from "./zimbraPrefMailSignatureContactId.oa.mjs";
+import { zimbraPrefMailSignatureHTML } from "./zimbraPrefMailSignatureHTML.oa.mjs";
+import { zimbraSignatureId } from "./zimbraSignatureId.oa.mjs";
+import { zimbraSignatureName } from "./zimbraSignatureName.oa.mjs";
 
 /**
  * @summary zimbraSignature
@@ -30,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const zimbraSignature: OBJECT_CLASS = undefined;
+const zimbraSignature: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [zimbraSignatureId, zimbraSignatureName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [zimbraCreateTimestamp, zimbraPrefMailSignature, zimbraPrefMailSignatureContactId, zimbraPrefMailSignatureHTML] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["zimbraSignature"],
+    "&ldapDesc": "Account Email Signature information" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zimbraSignature /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

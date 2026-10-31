@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_rbacSession } from "../LdapApacheFortressRbac/id-oc-rbacSession.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_rbacSession } from "../LdapApacheFortressRbac/id-oc-rbacSession.va.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { rbacRoleConstraints } from "./rbacRoleConstraints.oa.mjs";
+import { rbacRoles } from "./rbacRoles.oa.mjs";
+import { rbacSessid } from "./rbacSessid.oa.mjs";
+import { rbacUserDN } from "./rbacUserDN.oa.mjs";
+import { tenantid } from "./tenantid.oa.mjs";
 
 /**
  * @summary rbacSession
@@ -30,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rbacSession: OBJECT_CLASS = undefined;
+const rbacSession: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [rbacSessid, uid, tenantid] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [rbacUserDN, rbacRoles, rbacRoleConstraints] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rbacSession"],
+    "&ldapDesc": "RBAC Session Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_rbacSession /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

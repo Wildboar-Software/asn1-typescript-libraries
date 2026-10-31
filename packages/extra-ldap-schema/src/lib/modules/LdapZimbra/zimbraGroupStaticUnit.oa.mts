@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_zimbraGroupStaticUnit } from "../LdapZimbra/id-oc-zimbraGroupStaticUnit.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_zimbraGroupStaticUnit } from "../LdapZimbra/id-oc-zimbraGroupStaticUnit.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraCreateTimestamp } from "./zimbraCreateTimestamp.oa.mjs";
+import { zimbraGroupId } from "./zimbraGroupId.oa.mjs";
+import { zimbraId } from "./zimbraId.oa.mjs";
+import { zimbraMailForwardingAddress } from "./zimbraMailForwardingAddress.oa.mjs";
 
 /**
  * @summary zimbraGroupStaticUnit
@@ -30,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const zimbraGroupStaticUnit: OBJECT_CLASS = undefined;
+const zimbraGroupStaticUnit: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, zimbraGroupId, zimbraId] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, zimbraCreateTimestamp, zimbraMailForwardingAddress] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["zimbraGroupStaticUnit"],
+    "&ldapDesc": "hold attributes for the static entry of dynamic groups." /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zimbraGroupStaticUnit /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

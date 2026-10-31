@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
-// export { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type Jid,
+    _decode_Jid,
+    _encode_Jid,
+} from "../SelectedAttributeTypes/Jid.ta.mjs";
+import { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.mjs";
 
 /**
  * @summary jidString
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<Jid>}
+ * @implements {SYNTAX_NAME<Jid>}
  */
 export
-const jidString: SYNTAX_NAME = undefined;
+const jidString: SYNTAX_NAME<Jid> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_Jid,
+    },
+    encoderFor: {
+        "&Type": _encode_Jid,
+    },
+    "&ldapDesc": "Jabber identifier" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_jidString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

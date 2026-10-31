@@ -1,7 +1,8 @@
 /* eslint-disable */
-// export { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.mjs";
+import { type IA5String } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import { id_lsx_ia5String } from "../SelectedAttributeTypes/id-lsx-ia5String.va.mjs";
 
 /**
  * @summary ia5String
@@ -17,10 +18,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<IA5String>}
+ * @implements {SYNTAX_NAME<IA5String>}
  */
 export
-const ia5String: SYNTAX_NAME = undefined;
+const ia5String: SYNTAX_NAME<IA5String> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": $._decodeIA5String,
+    },
+    encoderFor: {
+        "&Type": $._encodeIA5String,
+    },
+    "&ldapDesc": "IA5 String" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_ia5String /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

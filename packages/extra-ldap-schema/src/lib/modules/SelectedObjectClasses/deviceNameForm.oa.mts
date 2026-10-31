@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { device } from "../SelectedObjectClasses/device.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { device } from "../SelectedObjectClasses/device.oa.mjs";
+import { id_nf_deviceNameForm } from "../SelectedObjectClasses/id-nf-deviceNameForm.va.mjs";
 
 /**
  * @summary deviceNameForm
@@ -23,6 +22,13 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const deviceNameForm: NAME_FORM = undefined;
+const deviceNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": device /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_deviceNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,8 +1,12 @@
 /* eslint-disable */
-// export { BootParameterSyntax, _decode_BootParameterSyntax, _encode_BootParameterSyntax } from "../NIS/BootParameterSyntax.ta.mjs";
-// export { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    _decode_BootParameterSyntax,
+    _encode_BootParameterSyntax,
+    BootParameterSyntax,
+} from "../NIS/BootParameterSyntax.ta.mjs";
+import { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
 
 /**
  * @summary bootParameterSyntax
@@ -18,10 +22,23 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<BootParameterSyntax>}
+ * @implements {SYNTAX_NAME<BootParameterSyntax>}
  */
 export
-const bootParameterSyntax: SYNTAX_NAME = undefined;
+const bootParameterSyntax: SYNTAX_NAME<BootParameterSyntax> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_BootParameterSyntax,
+    },
+    encoderFor: {
+        "&Type": _encode_BootParameterSyntax,
+    },
+    "&ldapDesc": "Boot parameter" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        1,
+    ], id_nis_lsx) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

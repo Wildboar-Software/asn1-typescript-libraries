@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
-// export { id_oc_rpcProfileElement } from "../LdapSchema2ldifMicrosoft/id-oc-rpcProfileElement.va.mjs";
-
+import { id_oc_rpcProfileElement } from "../LdapSchema2ldifMicrosoft/id-oc-rpcProfileElement.va.mjs";
+import { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
+import { rpcNsAnnotation } from "../MSUser/rpcNsAnnotation.oa.mjs";
+import { rpcNsInterfaceID } from "../MSUser/rpcNsInterfaceID.oa.mjs";
+import { rpcNsPriority } from "../MSUser/rpcNsPriority.oa.mjs";
+import { rpcNsProfileEntry } from "../MSUser/rpcNsProfileEntry.oa.mjs";
 
 /**
  * @summary rpcProfileElement
@@ -27,6 +29,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rpcProfileElement: OBJECT_CLASS = undefined;
+const rpcProfileElement: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [rpcEntry] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [rpcNsInterfaceID, rpcNsPriority] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [rpcNsProfileEntry, rpcNsAnnotation] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rpcProfileElement"],
+    "&id": id_oc_rpcProfileElement /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

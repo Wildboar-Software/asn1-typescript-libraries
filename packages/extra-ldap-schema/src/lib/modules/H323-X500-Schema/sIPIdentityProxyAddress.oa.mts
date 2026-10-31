@@ -1,8 +1,13 @@
 /* eslint-disable */
+import {
+    type IA5String,
+    ObjectIdentifier as _OID,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+import { sip_id_at } from "../H323-X500-Schema/sip-id-at.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { sip_id_at } from "../H323-X500-Schema/sip-id-at.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { caseIgnoreIA5Match } from "../SelectedAttributeTypes/caseIgnoreIA5Match.oa.mjs";
 
 /**
  * @summary sIPIdentityProxyAddress
@@ -19,10 +24,29 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<IA5String>}
+ * @implements {ATTRIBUTE<IA5String>}
  */
 export
-const sIPIdentityProxyAddress: ATTRIBUTE = undefined;
+const sIPIdentityProxyAddress: ATTRIBUTE<IA5String> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": $._decodeIA5String,
+    },
+    encoderFor: {
+        "&Type": $._encodeIA5String,
+    },
+    "&equality-match": caseIgnoreIA5Match /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        3,
+    ], sip_id_at) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

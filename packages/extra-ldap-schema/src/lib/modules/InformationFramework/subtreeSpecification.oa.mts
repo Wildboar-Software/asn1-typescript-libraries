@@ -1,10 +1,13 @@
 /* eslint-disable */
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { SubtreeSpecification, _decode_SubtreeSpecification, _encode_SubtreeSpecification } from "../InformationFramework/SubtreeSpecification.ta.mjs";
-// export { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa.mjs";
-// export { id_oa_subtreeSpecification } from "../InformationFramework/id-oa-subtreeSpecification.va.mjs";
-
+import { directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
+import {
+    _decode_SubtreeSpecification,
+    _encode_SubtreeSpecification,
+    SubtreeSpecification,
+} from "../InformationFramework/SubtreeSpecification.ta.mjs";
+import { id_oa_subtreeSpecification } from "../InformationFramework/id-oa-subtreeSpecification.va.mjs";
+import { subtreeSpec } from "../SelectedAttributeTypes/subtreeSpec.oa.mjs";
+import { type ATTRIBUTE } from "./ATTRIBUTE.oca.mjs";
 
 /**
  * @summary subtreeSpecification
@@ -22,10 +25,28 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<SubtreeSpecification>}
+ * @implements {ATTRIBUTE<SubtreeSpecification>}
  */
 export
-const subtreeSpecification: ATTRIBUTE = undefined;
+const subtreeSpecification: ATTRIBUTE<SubtreeSpecification> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_SubtreeSpecification,
+    },
+    encoderFor: {
+        "&Type": _encode_SubtreeSpecification,
+    },
+    "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": subtreeSpec["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["subtreeSpecification"],
+    "&id": id_oa_subtreeSpecification /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

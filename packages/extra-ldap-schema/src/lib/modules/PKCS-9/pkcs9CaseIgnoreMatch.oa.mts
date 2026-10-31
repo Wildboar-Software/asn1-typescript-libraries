@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
-// export { pkcs_9_ub_match } from "../PKCS-9/pkcs-9-ub-match.va.mjs";
-// export { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va.mjs";
-
+import {
+    type PKCS9String,
+    _decode_PKCS9String,
+    _encode_PKCS9String,
+} from "../PKCS-9/PKCS9String.ta.mjs";
+import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va.mjs";
 
 /**
  * @summary pkcs9CaseIgnoreMatch
@@ -19,10 +21,20 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<PKCS9String>}
+ * @implements {MATCHING_RULE<PKCS9String>}
  */
 export
-const pkcs9CaseIgnoreMatch: MATCHING_RULE = undefined;
+const pkcs9CaseIgnoreMatch: MATCHING_RULE<PKCS9String> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_PKCS9String,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_PKCS9String,
+    },
+    "&id": pkcs_9_mr_caseIgnoreMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

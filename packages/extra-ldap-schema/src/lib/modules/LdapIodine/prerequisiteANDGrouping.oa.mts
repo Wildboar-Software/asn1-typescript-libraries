@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { prerequisiteGrouping } from "../LdapIodine/prerequisiteGrouping.oa.mjs";
-// export { id_oc_prerequisiteANDGrouping } from "../LdapIodine/id-oc-prerequisiteANDGrouping.va.mjs";
-
+import { id_oc_prerequisiteANDGrouping } from "../LdapIodine/id-oc-prerequisiteANDGrouping.va.mjs";
+import { prerequisiteGrouping } from "../LdapIodine/prerequisiteGrouping.oa.mjs";
 
 /**
  * @summary prerequisiteANDGrouping
@@ -23,6 +21,13 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const prerequisiteANDGrouping: OBJECT_CLASS = undefined;
+const prerequisiteANDGrouping: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [prerequisiteGrouping] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["prerequisiteANDGrouping"],
+    "&id": id_oc_prerequisiteANDGrouping /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

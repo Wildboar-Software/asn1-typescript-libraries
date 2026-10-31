@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
-// export { id_oc_rpcServer } from "../LdapSchema2ldifMicrosoft/id-oc-rpcServer.va.mjs";
-
+import { id_oc_rpcServer } from "../LdapSchema2ldifMicrosoft/id-oc-rpcServer.va.mjs";
+import { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
+import { rpcNsCodeset } from "../MSUser/rpcNsCodeset.oa.mjs";
+import { rpcNsEntryFlags } from "../MSUser/rpcNsEntryFlags.oa.mjs";
+import { rpcNsObjectID } from "../MSUser/rpcNsObjectID.oa.mjs";
 
 /**
  * @summary rpcServer
@@ -26,6 +27,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rpcServer: OBJECT_CLASS = undefined;
+const rpcServer: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [rpcEntry] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [rpcNsObjectID, rpcNsCodeset, rpcNsEntryFlags] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rpcServer"],
+    "&id": id_oc_rpcServer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

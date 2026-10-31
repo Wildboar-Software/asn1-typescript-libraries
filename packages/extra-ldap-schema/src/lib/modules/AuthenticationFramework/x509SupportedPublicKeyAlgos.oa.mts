@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { SupportedPublicKeyAlgorithms, _decode_SupportedPublicKeyAlgorithms, _encode_SupportedPublicKeyAlgorithms } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
-// export { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.mjs";
+import {
+    _decode_SupportedPublicKeyAlgorithms,
+    _encode_SupportedPublicKeyAlgorithms,
+    SupportedPublicKeyAlgorithms,
+} from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
+import { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary x509SupportedPublicKeyAlgos
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<SupportedPublicKeyAlgorithms>}
+ * @implements {SYNTAX_NAME<SupportedPublicKeyAlgorithms>}
  */
 export
-const x509SupportedPublicKeyAlgos: SYNTAX_NAME = undefined;
+const x509SupportedPublicKeyAlgos: SYNTAX_NAME<SupportedPublicKeyAlgorithms> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_SupportedPublicKeyAlgorithms,
+    },
+    encoderFor: {
+        "&Type": _encode_SupportedPublicKeyAlgorithms,
+    },
+    "&ldapDesc": "X.509 supported publiv key algorithms" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_x509SupportedPublicKeyAlgos /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

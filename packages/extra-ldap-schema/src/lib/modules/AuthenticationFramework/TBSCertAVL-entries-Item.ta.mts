@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TBSCertAVL_entries_Item_idType, _decode_TBSCertAVL_entries_Item_idType, _encode_TBSCertAVL_entries_Item_idType } from "../AuthenticationFramework/TBSCertAVL-entries-Item-idType.ta.mjs";
+import { type TBSCertAVL_entries_Item_idType, _decode_TBSCertAVL_entries_Item_idType, _encode_TBSCertAVL_entries_Item_idType } from "../AuthenticationFramework/TBSCertAVL-entries-Item-idType.ta.mjs";
 // export { TBSCertAVL_entries_Item_idType, _decode_TBSCertAVL_entries_Item_idType, _encode_TBSCertAVL_entries_Item_idType } from "../AuthenticationFramework/TBSCertAVL-entries-Item-idType.ta.mjs";
-import { ScopeRestrictions, _decode_ScopeRestrictions, _encode_ScopeRestrictions } from "../AuthenticationFramework/ScopeRestrictions.ta.mjs";
+import { type ScopeRestrictions, _decode_ScopeRestrictions, _encode_ScopeRestrictions } from "../AuthenticationFramework/ScopeRestrictions.ta.mjs";
 // export { ScopeRestrictions, _decode_ScopeRestrictions, _encode_ScopeRestrictions } from "../AuthenticationFramework/ScopeRestrictions.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
 
 

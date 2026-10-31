@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-// export { id_oc_sunservicecomponent } from "../Ldapmigration70sunSchema2/id-oc-sunservicecomponent.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_sunservicecomponent } from "../Ldapmigration70sunSchema2/id-oc-sunservicecomponent.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { sunkeyvalue } from "./sunkeyvalue.oa.mjs";
+import { sunserviceid } from "./sunserviceid.oa.mjs";
+import { sunsmspriority } from "./sunsmspriority.oa.mjs";
+import { sunxmlkeyvalue } from "./sunxmlkeyvalue.oa.mjs";
 
 /**
  * @summary sunservicecomponent
@@ -31,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const sunservicecomponent: OBJECT_CLASS = undefined;
+const sunservicecomponent: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [organizationalUnitName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [sunserviceid, sunsmspriority, sunkeyvalue, sunxmlkeyvalue, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["sunservicecomponent"],
+    "&ldapDesc": "Sub-components of the service" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_sunservicecomponent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

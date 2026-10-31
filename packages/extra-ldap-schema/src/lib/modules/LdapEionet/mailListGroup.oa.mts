@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_mailListGroup } from "../LdapEionet/id-oc-mailListGroup.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_mailListGroup } from "../LdapEionet/id-oc-mailListGroup.va.mjs";
+import { permittedPerson } from "./permittedPerson.oa.mjs";
+import { permittedSender } from "./permittedSender.oa.mjs";
 
 /**
  * @summary mailListGroup
@@ -27,6 +28,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const mailListGroup: OBJECT_CLASS = undefined;
+const mailListGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [permittedSender, permittedPerson] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["mailListGroup"],
+    "&ldapDesc": "Identifies a mail list associated with a group." /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_mailListGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

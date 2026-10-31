@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
-// export { id_oc_rpcProfile } from "../LdapSchema2ldifMicrosoft/id-oc-rpcProfile.va.mjs";
-
+import { id_oc_rpcProfile } from "../LdapSchema2ldifMicrosoft/id-oc-rpcProfile.va.mjs";
+import { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
 
 /**
  * @summary rpcProfile
@@ -23,6 +21,13 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rpcProfile: OBJECT_CLASS = undefined;
+const rpcProfile: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [rpcEntry] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rpcProfile"],
+    "&id": id_oc_rpcProfile /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

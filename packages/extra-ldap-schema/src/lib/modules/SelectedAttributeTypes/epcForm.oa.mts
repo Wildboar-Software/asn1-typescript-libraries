@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { EpcFormat, _decode_EpcFormat, _encode_EpcFormat } from "../SelectedAttributeTypes/EpcFormat.ta.mjs";
-// export { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    _decode_EpcFormat,
+    _encode_EpcFormat,
+    EpcFormat,
+} from "../SelectedAttributeTypes/EpcFormat.ta.mjs";
+import { id_asx_epcForm } from "../SelectedAttributeTypes/id-asx-epcForm.va.mjs";
 
 /**
  * @summary epcForm
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<EpcFormat>}
+ * @implements {SYNTAX_NAME<EpcFormat>}
  */
 export
-const epcForm: SYNTAX_NAME = undefined;
+const epcForm: SYNTAX_NAME<EpcFormat> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_EpcFormat,
+    },
+    encoderFor: {
+        "&Type": _encode_EpcFormat,
+    },
+    "&ldapDesc": "EPC Format" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_epcForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

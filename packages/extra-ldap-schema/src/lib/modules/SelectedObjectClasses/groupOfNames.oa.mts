@@ -1,9 +1,15 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_groupOfNames } from "../SelectedObjectClasses/id-oc-groupOfNames.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { id_oc_groupOfNames } from "../SelectedObjectClasses/id-oc-groupOfNames.va.mjs";
 
 /**
  * @summary groupOfNames
@@ -30,6 +36,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const groupOfNames: OBJECT_CLASS = undefined;
+const groupOfNames: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, member] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, organizationName, organizationalUnitName, owner, seeAlso, businessCategory] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["groupOfNames"],
+    "&id": id_oc_groupOfNames /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,10 +1,9 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
-// export { telexNr } from "../SelectedAttributeTypes/telexNr.oa.mjs";
-// export { id_at_collectiveTelexNumber } from "../SelectedAttributeTypes/id-at-collectiveTelexNumber.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_collectiveTelexNumber } from "../SelectedAttributeTypes/id-at-collectiveTelexNumber.va.mjs";
+import { telexNr } from "../SelectedAttributeTypes/telexNr.oa.mjs";
+import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
 
 /**
  * @summary collectiveTelexNumber
@@ -26,6 +25,21 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * @implements {ATTRIBUTE}
  */
 export
-const collectiveTelexNumber: ATTRIBUTE = undefined;
+const collectiveTelexNumber: ATTRIBUTE = {
+    class: "ATTRIBUTE",
+    decoderFor: {},
+    encoderFor: {},
+    "&derivation": telexNumber /* OBJECT_FIELD_SETTING */,
+    "&collective": true /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": telexNr["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["c-TelexNumber"],
+    "&id": id_at_collectiveTelexNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

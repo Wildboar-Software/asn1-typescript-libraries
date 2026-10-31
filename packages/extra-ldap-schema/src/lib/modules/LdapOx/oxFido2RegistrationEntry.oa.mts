@@ -1,10 +1,20 @@
 /* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_oxFido2RegistrationEntry } from "../LdapOx/id-oc-oxFido2RegistrationEntry.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_oxFido2RegistrationEntry } from "../LdapOx/id-oc-oxFido2RegistrationEntry.va.mjs";
+import { creationDate } from "./creationDate.oa.mjs";
+import { oxCodeChallenge } from "./oxCodeChallenge.oa.mjs";
+import { oxCodeChallengeHash } from "./oxCodeChallengeHash.oa.mjs";
+import { oxCounter } from "./oxCounter.oa.mjs";
+import { oxDeviceNotificationConf } from "./oxDeviceNotificationConf.oa.mjs";
+import { oxId } from "./oxId.oa.mjs";
+import { oxPublicKeyId } from "./oxPublicKeyId.oa.mjs";
+import { oxRegistrationData } from "./oxRegistrationData.oa.mjs";
+import { oxSessionStateId } from "./oxSessionStateId.oa.mjs";
+import { oxStatus } from "./oxStatus.oa.mjs";
+import { personInum } from "./personInum.oa.mjs";
 
 /**
  * @summary oxFido2RegistrationEntry
@@ -37,6 +47,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oxFido2RegistrationEntry: OBJECT_CLASS = undefined;
+const oxFido2RegistrationEntry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [oxId, creationDate, displayName, oxSessionStateId, oxCodeChallenge, oxCodeChallengeHash, oxPublicKeyId, personInum, oxRegistrationData, oxDeviceNotificationConf, oxCounter, oxStatus] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oxFido2RegistrationEntry"],
+    "&id": id_oc_oxFido2RegistrationEntry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

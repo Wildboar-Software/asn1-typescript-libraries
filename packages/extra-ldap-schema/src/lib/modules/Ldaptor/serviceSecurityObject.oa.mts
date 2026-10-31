@@ -1,9 +1,12 @@
 /* eslint-disable */
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_serviceSecurityObject } from "../Ldaptor/id-oc-serviceSecurityObject.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_serviceSecurityObject } from "../Ldaptor/id-oc-serviceSecurityObject.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { validFrom } from "./validFrom.oa.mjs";
+import { validUntil } from "./validUntil.oa.mjs";
 
 /**
  * @summary serviceSecurityObject
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const serviceSecurityObject: OBJECT_CLASS = undefined;
+const serviceSecurityObject: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, owner, userPassword] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [validFrom, validUntil] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["serviceSecurityObject"],
+    "&ldapDesc": "A service-specific authentication method" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_serviceSecurityObject /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

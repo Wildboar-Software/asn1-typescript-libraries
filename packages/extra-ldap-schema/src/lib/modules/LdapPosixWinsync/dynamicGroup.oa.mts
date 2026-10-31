@@ -1,10 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { posixGroup } from "../NIS/posixGroup.oa.mjs";
-// export { dsOnlyMemberUid } from "../LdapPosixWinsync/dsOnlyMemberUid.oa.mjs";
-// export { id_oc_dynamicGroup } from "../LdapPosixWinsync/id-oc-dynamicGroup.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { dsOnlyMemberUid } from "../LdapPosixWinsync/dsOnlyMemberUid.oa.mjs";
+import { id_oc_dynamicGroup } from "../LdapPosixWinsync/id-oc-dynamicGroup.va.mjs";
+import { posixGroup } from "../NIS/posixGroup.oa.mjs";
 
 /**
  * @summary dynamicGroup
@@ -27,6 +26,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const dynamicGroup: OBJECT_CLASS = undefined;
+const dynamicGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [posixGroup] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [dsOnlyMemberUid] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["dynamicGroup"],
+    "&ldapDesc": "Group containing internal dynamically-generated members" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_dynamicGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

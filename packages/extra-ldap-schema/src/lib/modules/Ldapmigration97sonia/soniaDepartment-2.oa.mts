@@ -1,10 +1,17 @@
 /* eslint-disable */
+import { departmentNumber } from "../InetOrgPerson/departmentNumber.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_oc_soniaDepartment_2 } from "../Ldapmigration97sonia/id-oc-soniaDepartment-2.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { manager } from "../LdapSchema2ldifCosine/manager.oa.mjs";
+import { secretary } from "../LdapSchema2ldifCosine/secretary.oa.mjs";
+import { id_oc_soniaDepartment_2 } from "../Ldapmigration97sonia/id-oc-soniaDepartment-2.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { name } from "../SelectedAttributeTypes/name.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { soniaDepartmentNumber } from "./soniaDepartmentNumber.oa.mjs";
+import { soniaDepartmentSAMail } from "./soniaDepartmentSAMail.oa.mjs";
+import { soniaDepartmentToken } from "./soniaDepartmentToken.oa.mjs";
 
 /**
  * @summary soniaDepartment_2
@@ -34,6 +41,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const soniaDepartment_2: OBJECT_CLASS = undefined;
+const soniaDepartment_2: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [departmentNumber, description, manager, name, secretary, seeAlso, soniaDepartmentNumber, soniaDepartmentToken, soniaDepartmentSAMail] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["soniaDepartment"],
+    "&id": id_oc_soniaDepartment_2 /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

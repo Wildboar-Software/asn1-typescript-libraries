@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
 // export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-import { ForwardCertificationPath, _decode_ForwardCertificationPath, _encode_ForwardCertificationPath } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
+import { type ForwardCertificationPath, _decode_ForwardCertificationPath, _encode_ForwardCertificationPath } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
 // export { ForwardCertificationPath, _decode_ForwardCertificationPath, _encode_ForwardCertificationPath } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
 
 

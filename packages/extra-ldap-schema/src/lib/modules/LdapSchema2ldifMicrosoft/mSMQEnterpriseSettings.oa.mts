@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_mSMQEnterpriseSettings } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQEnterpriseSettings.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_mSMQEnterpriseSettings } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQEnterpriseSettings.va.mjs";
+import { mSMQCSPName } from "../MSUser/mSMQCSPName.oa.mjs";
+import { mSMQInterval1 } from "../MSUser/mSMQInterval1.oa.mjs";
+import { mSMQInterval2 } from "../MSUser/mSMQInterval2.oa.mjs";
+import { mSMQLongLived } from "../MSUser/mSMQLongLived.oa.mjs";
+import { mSMQNameStyle } from "../MSUser/mSMQNameStyle.oa.mjs";
+import { mSMQVersion } from "../MSUser/mSMQVersion.oa.mjs";
 
 /**
  * @summary mSMQEnterpriseSettings
@@ -29,6 +33,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const mSMQEnterpriseSettings: OBJECT_CLASS = undefined;
+const mSMQEnterpriseSettings: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [mSMQNameStyle, mSMQCSPName, mSMQLongLived, mSMQVersion, mSMQInterval1, mSMQInterval2] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["mSMQEnterpriseSettings"],
+    "&id": id_oc_mSMQEnterpriseSettings /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

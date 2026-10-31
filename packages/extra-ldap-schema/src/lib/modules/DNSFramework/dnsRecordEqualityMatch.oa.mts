@@ -1,8 +1,11 @@
 /* eslint-disable */
+import {
+    _decode_DNSRecordAssertion,
+    _encode_DNSRecordAssertion,
+    DNSRecordAssertion,
+} from "../DNSFramework/DNSRecordAssertion.ta.mjs";
+import { id_mr_dnsRecordEqualityMatch } from "../DNSFramework/id-mr-dnsRecordEqualityMatch.va.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { DNSRecordAssertion, _decode_DNSRecordAssertion, _encode_DNSRecordAssertion } from "../DNSFramework/DNSRecordAssertion.ta.mjs";
-// export { id_mr_dnsRecordEqualityMatch } from "../DNSFramework/id-mr-dnsRecordEqualityMatch.va.mjs";
-
 
 /**
  * @summary dnsRecordEqualityMatch
@@ -20,10 +23,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<DNSRecordAssertion>}
+ * @implements {MATCHING_RULE<DNSRecordAssertion>}
  */
 export
-const dnsRecordEqualityMatch: MATCHING_RULE = undefined;
+const dnsRecordEqualityMatch: MATCHING_RULE<DNSRecordAssertion> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_DNSRecordAssertion,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_DNSRecordAssertion,
+    },
+    "&ldapName": ["dnsRecordEqualityMatch"],
+    "&ldapDesc": "DNS Record Equality Matching Rule" /* OBJECT_FIELD_SETTING */,
+    "&id": id_mr_dnsRecordEqualityMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

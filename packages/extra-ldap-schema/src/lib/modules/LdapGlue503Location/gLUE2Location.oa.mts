@@ -1,10 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2LocationID } from "../LdapGlue503Location/gLUE2LocationID.oa.mjs";
-// export { id_oc_gLUE2Location } from "../LdapGlue503Location/id-oc-gLUE2Location.va.mjs";
-
+import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
+import { gLUE2LocationID } from "../LdapGlue503Location/gLUE2LocationID.oa.mjs";
+import { id_oc_gLUE2Location } from "../LdapGlue503Location/id-oc-gLUE2Location.va.mjs";
+import { gLUE2LocationAddress } from "./gLUE2LocationAddress.oa.mjs";
+import { gLUE2LocationCountry } from "./gLUE2LocationCountry.oa.mjs";
+import { gLUE2LocationDomainForeignKey } from "./gLUE2LocationDomainForeignKey.oa.mjs";
+import { gLUE2LocationLatitude } from "./gLUE2LocationLatitude.oa.mjs";
+import { gLUE2LocationLongitude } from "./gLUE2LocationLongitude.oa.mjs";
+import { gLUE2LocationPlace } from "./gLUE2LocationPlace.oa.mjs";
+import { gLUE2LocationPostCode } from "./gLUE2LocationPostCode.oa.mjs";
+import { gLUE2LocationServiceForeignKey } from "./gLUE2LocationServiceForeignKey.oa.mjs";
 
 /**
  * @summary gLUE2Location
@@ -34,6 +40,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2Location: OBJECT_CLASS = undefined;
+const gLUE2Location: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Entity] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [gLUE2LocationID] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gLUE2LocationAddress, gLUE2LocationPlace, gLUE2LocationCountry, gLUE2LocationPostCode, gLUE2LocationLatitude, gLUE2LocationLongitude, gLUE2LocationServiceForeignKey, gLUE2LocationDomainForeignKey] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2Location"],
+    "&ldapDesc": "A geographical position" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2Location /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

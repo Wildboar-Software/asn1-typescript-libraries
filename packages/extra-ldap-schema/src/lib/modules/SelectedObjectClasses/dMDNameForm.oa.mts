@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
-// export { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
-// export { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
+import { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
+import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
 
 /**
  * @summary dMDNameForm
@@ -23,6 +22,13 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const dMDNameForm: NAME_FORM = undefined;
+const dMDNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": dMD /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [dmdName] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_dMDNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

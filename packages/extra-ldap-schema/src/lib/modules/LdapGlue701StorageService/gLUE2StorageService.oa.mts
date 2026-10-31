@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Service } from "../LdapGlue506Service/gLUE2Service.oa.mjs";
-// export { id_oc_gLUE2StorageService } from "../LdapGlue701StorageService/id-oc-gLUE2StorageService.va.mjs";
-
+import { gLUE2Service } from "../LdapGlue506Service/gLUE2Service.oa.mjs";
+import { id_oc_gLUE2StorageService } from "../LdapGlue701StorageService/id-oc-gLUE2StorageService.va.mjs";
 
 /**
  * @summary gLUE2StorageService
@@ -24,6 +22,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2StorageService: OBJECT_CLASS = undefined;
+const gLUE2StorageService: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Service] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2StorageService"],
+    "&ldapDesc": "Description of the size and state of an homogeneous storage extent" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2StorageService /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,11 +1,16 @@
 /* eslint-disable */
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { UUID, _decode_UUID, _encode_UUID } from "../SelectedAttributeTypes/UUID.ta.mjs";
-// export { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
-// export { octetStringOrderingMatch } from "../SelectedAttributeTypes/octetStringOrderingMatch.oa.mjs";
-// export { octetStringSubstringsMatch } from "../SelectedAttributeTypes/octetStringSubstringsMatch.oa.mjs";
-
+import { dSAOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
+import {
+    type UUID,
+    _decode_UUID,
+    _encode_UUID,
+} from "../SelectedAttributeTypes/UUID.ta.mjs";
+import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
+import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
+import { octetStringOrderingMatch } from "../SelectedAttributeTypes/octetStringOrderingMatch.oa.mjs";
+import { octetStringSubstringsMatch } from "../SelectedAttributeTypes/octetStringSubstringsMatch.oa.mjs";
 
 /**
  * @summary syncreplCookie
@@ -30,10 +35,43 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<UUID>}
+ * @implements {ATTRIBUTE<UUID>}
  */
 export
-const syncreplCookie: ATTRIBUTE = undefined;
+const syncreplCookie: ATTRIBUTE<UUID> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_UUID,
+    },
+    encoderFor: {
+        "&Type": _encode_UUID,
+    },
+    "&equality-match": octetStringMatch /* OBJECT_FIELD_SETTING */,
+    "&ordering-match": octetStringOrderingMatch /* OBJECT_FIELD_SETTING */,
+    "&substrings-match": octetStringSubstringsMatch /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
+    "&no-user-modification": true /* OBJECT_FIELD_SETTING */,
+    "&usage": dSAOperation /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": octetString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["syncreplCookie"],
+    "&ldapDesc": "syncrepl Cookie for shadow copy" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        1,
+        3,
+        6,
+        1,
+        4,
+        1,
+        4203,
+        666,
+        1,
+        23,
+    ]) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

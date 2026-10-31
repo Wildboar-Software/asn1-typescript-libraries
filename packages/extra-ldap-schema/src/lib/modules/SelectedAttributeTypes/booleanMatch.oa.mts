@@ -1,8 +1,9 @@
 /* eslint-disable */
+import { type BOOLEAN } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
-// export { id_mr_booleanMatch } from "../SelectedAttributeTypes/id-mr-booleanMatch.va.mjs";
-
+import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
+import { id_mr_booleanMatch } from "../SelectedAttributeTypes/id-mr-booleanMatch.va.mjs";
 
 /**
  * @summary booleanMatch
@@ -19,10 +20,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<BOOLEAN>}
+ * @implements {MATCHING_RULE<BOOLEAN>}
  */
 export
-const booleanMatch: MATCHING_RULE = undefined;
+const booleanMatch: MATCHING_RULE<BOOLEAN> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": $._decodeBoolean,
+    },
+    encoderFor: {
+        "&AssertionType": $._encodeBoolean,
+    },
+    "&ldapSyntax": bitString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["booleanMatch"],
+    "&id": id_mr_booleanMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

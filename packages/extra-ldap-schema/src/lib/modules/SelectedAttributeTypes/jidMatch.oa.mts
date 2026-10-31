@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
-// export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
-// export { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va.mjs";
-
+import {
+    type Jid,
+    _decode_Jid,
+    _encode_Jid,
+} from "../SelectedAttributeTypes/Jid.ta.mjs";
+import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
+import { id_mr_jidMatch } from "../SelectedAttributeTypes/id-mr-jidMatch.va.mjs";
 
 /**
  * @summary jidMatch
@@ -20,10 +23,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<Jid>}
+ * @implements {MATCHING_RULE<Jid>}
  */
 export
-const jidMatch: MATCHING_RULE = undefined;
+const jidMatch: MATCHING_RULE<Jid> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_Jid,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_Jid,
+    },
+    "&ldapSyntax": dnsString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["jidMatch"],
+    "&id": id_mr_jidMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

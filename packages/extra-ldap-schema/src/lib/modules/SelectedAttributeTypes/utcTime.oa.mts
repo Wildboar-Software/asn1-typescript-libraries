@@ -1,7 +1,8 @@
 /* eslint-disable */
-// export { id_lsx_utcTime } from "../SelectedAttributeTypes/id-lsx-utcTime.va.mjs";
+import { type UTCTime } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import { id_lsx_utcTime } from "../SelectedAttributeTypes/id-lsx-utcTime.va.mjs";
 
 /**
  * @summary utcTime
@@ -17,10 +18,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<UTCTime>}
+ * @implements {SYNTAX_NAME<UTCTime>}
  */
 export
-const utcTime: SYNTAX_NAME = undefined;
+const utcTime: SYNTAX_NAME<UTCTime> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": $._decodeUTCTime,
+    },
+    encoderFor: {
+        "&Type": $._encodeUTCTime,
+    },
+    "&ldapDesc": "UTC Time" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_utcTime /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

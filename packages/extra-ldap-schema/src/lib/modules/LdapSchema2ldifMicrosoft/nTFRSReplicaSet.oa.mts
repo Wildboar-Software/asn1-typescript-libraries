@@ -1,9 +1,22 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nTFRSReplicaSet } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSReplicaSet.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nTFRSReplicaSet } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSReplicaSet.va.mjs";
+import { fRSDSPoll } from "../MSUser/fRSDSPoll.oa.mjs";
+import { fRSDirectoryFilter } from "../MSUser/fRSDirectoryFilter.oa.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { fRSFileFilter } from "../MSUser/fRSFileFilter.oa.mjs";
+import { fRSFlags } from "../MSUser/fRSFlags.oa.mjs";
+import { fRSLevelLimit } from "../MSUser/fRSLevelLimit.oa.mjs";
+import { fRSPartnerAuthLevel } from "../MSUser/fRSPartnerAuthLevel.oa.mjs";
+import { fRSPrimaryMember } from "../MSUser/fRSPrimaryMember.oa.mjs";
+import { fRSReplicaSetGUID } from "../MSUser/fRSReplicaSetGUID.oa.mjs";
+import { fRSReplicaSetType } from "../MSUser/fRSReplicaSetType.oa.mjs";
+import { fRSRootSecurity } from "../MSUser/fRSRootSecurity.oa.mjs";
+import { fRSServiceCommand } from "../MSUser/fRSServiceCommand.oa.mjs";
+import { fRSVersionGUID } from "../MSUser/fRSVersionGUID.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
 
 /**
  * @summary nTFRSReplicaSet
@@ -38,6 +51,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nTFRSReplicaSet: OBJECT_CLASS = undefined;
+const nTFRSReplicaSet: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [fRSReplicaSetType, fRSVersionGUID, schedule, fRSFileFilter, fRSDirectoryFilter, fRSDSPoll, fRSServiceCommand, fRSReplicaSetGUID, fRSLevelLimit, fRSRootSecurity, fRSExtensions, managedBy, fRSFlags, fRSPartnerAuthLevel, fRSPrimaryMember] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nTFRSReplicaSet"],
+    "&id": id_oc_nTFRSReplicaSet /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

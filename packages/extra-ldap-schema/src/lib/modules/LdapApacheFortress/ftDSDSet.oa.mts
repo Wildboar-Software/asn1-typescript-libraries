@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { id_oc_ftDSDSet } from "../LdapApacheFortress/id-oc-ftDSDSet.va.mjs";
-
+import { id_oc_ftDSDSet } from "../LdapApacheFortress/id-oc-ftDSDSet.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
+import { ftId } from "./ftId.oa.mjs";
+import { ftRoles } from "./ftRoles.oa.mjs";
+import { ftSetCardinality } from "./ftSetCardinality.oa.mjs";
+import { ftSetName } from "./ftSetName.oa.mjs";
 
 /**
  * @summary ftDSDSet
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ftDSDSet: OBJECT_CLASS = undefined;
+const ftDSDSet: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [organizationalRole] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ftId, ftSetName, ftSetCardinality] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ftRoles, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ftDSDSet"],
+    "&ldapDesc": "Fortress Role Dynamic Separation of Duty Set Structural Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ftDSDSet /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-// export { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type IntEmail,
+    _decode_IntEmail,
+    _encode_IntEmail,
+} from "../SelectedAttributeTypes/IntEmail.ta.mjs";
+import { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.mjs";
 
 /**
  * @summary intEmailString
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<IntEmail>}
+ * @implements {SYNTAX_NAME<IntEmail>}
  */
 export
-const intEmailString: SYNTAX_NAME = undefined;
+const intEmailString: SYNTAX_NAME<IntEmail> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_IntEmail,
+    },
+    encoderFor: {
+        "&Type": _encode_IntEmail,
+    },
+    "&ldapDesc": "Internationalized Email" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_intEmailString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

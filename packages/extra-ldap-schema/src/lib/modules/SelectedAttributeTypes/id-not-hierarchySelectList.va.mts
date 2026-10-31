@@ -3,6 +3,7 @@ import {
     ObjectIdentifier as _OID,
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
+import { id_not } from "../UsefulDefinitions/id-not.va.mjs";
 
 
 

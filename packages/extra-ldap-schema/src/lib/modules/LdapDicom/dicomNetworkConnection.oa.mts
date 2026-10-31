@@ -1,10 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { dicomHostname } from "../LdapDicom/dicomHostname.oa.mjs";
-// export { id_oc_dicomNetworkConnection } from "../LdapDicom/id-oc-dicomNetworkConnection.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { dicomHostname } from "../LdapDicom/dicomHostname.oa.mjs";
+import { id_oc_dicomNetworkConnection } from "../LdapDicom/id-oc-dicomNetworkConnection.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { dicomInstalled } from "./dicomInstalled.oa.mjs";
+import { dicomPort } from "./dicomPort.oa.mjs";
+import { dicomTLSCipherSuite } from "./dicomTLSCipherSuite.oa.mjs";
 
 /**
  * @summary dicomNetworkConnection
@@ -30,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const dicomNetworkConnection: OBJECT_CLASS = undefined;
+const dicomNetworkConnection: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [dicomHostname] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [commonName, dicomPort, dicomTLSCipherSuite, dicomInstalled] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["dicomNetworkConnection"],
+    "&ldapDesc": "DICOM Network Connection information" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_dicomNetworkConnection /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

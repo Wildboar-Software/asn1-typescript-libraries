@@ -6,11 +6,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DNS_RR_Type, _decode_DNS_RR_Type, _encode_DNS_RR_Type } from "../DNSFramework/DNS-RR-Type.ta.mjs";
+import { type DNS_RR_Type, _decode_DNS_RR_Type, _encode_DNS_RR_Type } from "../DNSFramework/DNS-RR-Type.ta.mjs";
 // export { DNS_RR_Type, _decode_DNS_RR_Type, _encode_DNS_RR_Type } from "../DNSFramework/DNS-RR-Type.ta.mjs";
-import { DNSClass, _decode_DNSClass, _encode_DNSClass } from "../DNSFramework/DNSClass.ta.mjs";
+import { type DNSClass, _decode_DNSClass, _encode_DNSClass } from "../DNSFramework/DNSClass.ta.mjs";
 // export { DNSClass, _decode_DNSClass, _encode_DNSClass } from "../DNSFramework/DNSClass.ta.mjs";
-import { TTL, _decode_TTL, _encode_TTL } from "../DNSFramework/TTL.ta.mjs";
+import { type TTL, _decode_TTL, _encode_TTL } from "../DNSFramework/TTL.ta.mjs";
 // export { TTL, _decode_TTL, _encode_TTL } from "../DNSFramework/TTL.ta.mjs";
 
 

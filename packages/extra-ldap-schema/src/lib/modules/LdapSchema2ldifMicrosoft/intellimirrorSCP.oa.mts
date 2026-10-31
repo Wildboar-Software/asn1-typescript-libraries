@@ -1,9 +1,20 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { serviceAdministrationPoint } from "../LdapSchema2ldifMicrosoft/serviceAdministrationPoint.oa.mjs";
-// export { id_oc_intellimirrorSCP } from "../LdapSchema2ldifMicrosoft/id-oc-intellimirrorSCP.va.mjs";
-
+import { id_oc_intellimirrorSCP } from "../LdapSchema2ldifMicrosoft/id-oc-intellimirrorSCP.va.mjs";
+import { serviceAdministrationPoint } from "../LdapSchema2ldifMicrosoft/serviceAdministrationPoint.oa.mjs";
+import { netbootAllowNewClients } from "../MSUser/netbootAllowNewClients.oa.mjs";
+import { netbootAnswerOnlyValidClients } from "../MSUser/netbootAnswerOnlyValidClients.oa.mjs";
+import { netbootAnswerRequests } from "../MSUser/netbootAnswerRequests.oa.mjs";
+import { netbootCurrentClientCount } from "../MSUser/netbootCurrentClientCount.oa.mjs";
+import { netbootIntelliMirrorOSes } from "../MSUser/netbootIntelliMirrorOSes.oa.mjs";
+import { netbootLimitClients } from "../MSUser/netbootLimitClients.oa.mjs";
+import { netbootLocallyInstalledOSes } from "../MSUser/netbootLocallyInstalledOSes.oa.mjs";
+import { netbootMachineFilePath } from "../MSUser/netbootMachineFilePath.oa.mjs";
+import { netbootMaxClients } from "../MSUser/netbootMaxClients.oa.mjs";
+import { netbootNewMachineNamingPolicy } from "../MSUser/netbootNewMachineNamingPolicy.oa.mjs";
+import { netbootNewMachineOU } from "../MSUser/netbootNewMachineOU.oa.mjs";
+import { netbootServer } from "../MSUser/netbootServer.oa.mjs";
+import { netbootTools } from "../MSUser/netbootTools.oa.mjs";
 
 /**
  * @summary intellimirrorSCP
@@ -36,6 +47,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const intellimirrorSCP: OBJECT_CLASS = undefined;
+const intellimirrorSCP: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [serviceAdministrationPoint] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [netbootMachineFilePath, netbootAllowNewClients, netbootLimitClients, netbootMaxClients, netbootCurrentClientCount, netbootAnswerRequests, netbootAnswerOnlyValidClients, netbootNewMachineNamingPolicy, netbootNewMachineOU, netbootIntelliMirrorOSes, netbootTools, netbootLocallyInstalledOSes, netbootServer] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["intellimirrorSCP"],
+    "&id": id_oc_intellimirrorSCP /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

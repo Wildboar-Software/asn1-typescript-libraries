@@ -1,8 +1,9 @@
 /* eslint-disable */
+import { type BIT_STRING } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
-// export { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va.mjs";
-
+import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
+import { id_mr_bitStringMatch } from "../SelectedAttributeTypes/id-mr-bitStringMatch.va.mjs";
 
 /**
  * @summary bitStringMatch
@@ -19,10 +20,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<BIT_STRING>}
+ * @implements {MATCHING_RULE<BIT_STRING>}
  */
 export
-const bitStringMatch: MATCHING_RULE = undefined;
+const bitStringMatch: MATCHING_RULE<BIT_STRING> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": $._decodeBitString,
+    },
+    encoderFor: {
+        "&AssertionType": $._encodeBitString,
+    },
+    "&ldapSyntax": bitString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["bitStringMatch"],
+    "&id": id_mr_bitStringMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

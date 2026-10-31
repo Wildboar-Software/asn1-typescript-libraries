@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nsSchemaPolicy } from "../LdapCore389/id-oc-nsSchemaPolicy.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nsSchemaPolicy } from "../LdapCore389/id-oc-nsSchemaPolicy.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { schemaUpdateAttributeAccept } from "./schemaUpdateAttributeAccept.oa.mjs";
+import { schemaUpdateAttributeReject } from "./schemaUpdateAttributeReject.oa.mjs";
+import { schemaUpdateObjectclassAccept } from "./schemaUpdateObjectclassAccept.oa.mjs";
+import { schemaUpdateObjectclassReject } from "./schemaUpdateObjectclassReject.oa.mjs";
 
 /**
  * @summary nsSchemaPolicy
@@ -29,6 +32,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nsSchemaPolicy: OBJECT_CLASS = undefined;
+const nsSchemaPolicy: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [commonName, schemaUpdateObjectclassAccept, schemaUpdateObjectclassReject, schemaUpdateAttributeAccept, schemaUpdateAttributeReject] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nsSchemaPolicy"],
+    "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nsSchemaPolicy /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

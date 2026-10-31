@@ -1,10 +1,10 @@
 /* eslint-disable */
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { sambaShareName } from "../SambaV3Schema/sambaShareName.oa.mjs";
-// export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-
+import { structural } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { sambaShareName } from "../SambaV3Schema/sambaShareName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 
 /**
  * @summary sambaShare
@@ -29,6 +29,28 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const sambaShare: OBJECT_CLASS = undefined;
+const sambaShare: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [sambaShareName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["sambaShare"],
+    "&ldapDesc": "Samba Share Section" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        1,
+        3,
+        6,
+        1,
+        4,
+        1,
+        7165,
+        2,
+        2,
+        11,
+    ]) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

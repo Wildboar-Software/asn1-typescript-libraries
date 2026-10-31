@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
-// export { id_oc_storage } from "../LdapSchema2ldifMicrosoft/id-oc-storage.va.mjs";
-
+import { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
+import { id_oc_storage } from "../LdapSchema2ldifMicrosoft/id-oc-storage.va.mjs";
+import { iconPath } from "../MSUser/iconPath.oa.mjs";
+import { moniker } from "../MSUser/moniker.oa.mjs";
+import { monikerDisplayName } from "../MSUser/monikerDisplayName.oa.mjs";
 
 /**
  * @summary storage
@@ -26,6 +27,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const storage: OBJECT_CLASS = undefined;
+const storage: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [connectionPoint] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [moniker, monikerDisplayName, iconPath] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["storage"],
+    "&id": id_oc_storage /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

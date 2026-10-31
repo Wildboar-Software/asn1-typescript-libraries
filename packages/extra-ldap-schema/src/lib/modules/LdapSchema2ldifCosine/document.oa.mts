@@ -1,10 +1,19 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { documentIdentifier } from "../LdapSchema2ldifCosine/documentIdentifier.oa.mjs";
-// export { id_oc_document } from "../LdapSchema2ldifCosine/id-oc-document.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { documentIdentifier } from "../LdapSchema2ldifCosine/documentIdentifier.oa.mjs";
+import { id_oc_document } from "../LdapSchema2ldifCosine/id-oc-document.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { documentAuthor } from "./documentAuthor.oa.mjs";
+import { documentLocation } from "./documentLocation.oa.mjs";
+import { documentPublisher } from "./documentPublisher.oa.mjs";
+import { documentTitle } from "./documentTitle.oa.mjs";
+import { documentVersion } from "./documentVersion.oa.mjs";
 
 /**
  * @summary document
@@ -36,6 +45,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const document: OBJECT_CLASS = undefined;
+const document: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [documentIdentifier] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [commonName, description, seeAlso, localityName, organizationName, organizationalUnitName, documentTitle, documentVersion, documentAuthor, documentLocation, documentPublisher] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["document"],
+    "&id": id_oc_document /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

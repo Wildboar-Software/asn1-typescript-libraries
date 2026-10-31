@@ -1,9 +1,15 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { alias } from "../InformationFramework/alias.oa.mjs";
-// export { id_oc_iodineAlias } from "../LdapIodine/id-oc-iodineAlias.va.mjs";
-
+import { alias } from "../InformationFramework/alias.oa.mjs";
+import { id_oc_iodineAlias } from "../LdapIodine/id-oc-iodineAlias.va.mjs";
+import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { iodineUid } from "./iodineUid.oa.mjs";
+import { tjhsstActivityId } from "./tjhsstActivityId.oa.mjs";
+import { tjhsstClassId } from "./tjhsstClassId.oa.mjs";
+import { tjhsstGroupId } from "./tjhsstGroupId.oa.mjs";
+import { tjhsstSectionId } from "./tjhsstSectionId.oa.mjs";
+import { tjhsstStudentId } from "./tjhsstStudentId.oa.mjs";
 
 /**
  * @summary iodineAlias
@@ -31,6 +37,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const iodineAlias: OBJECT_CLASS = undefined;
+const iodineAlias: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [alias] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [iodineUid, tjhsstGroupId, tjhsstActivityId, tjhsstStudentId, tjhsstSectionId, tjhsstClassId, roomNumber, uid] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["iodineAlias"],
+    "&id": id_oc_iodineAlias /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

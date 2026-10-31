@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { UtmCoordinates, _decode_UtmCoordinates, _encode_UtmCoordinates } from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
-// export { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    _decode_UtmCoordinates,
+    _encode_UtmCoordinates,
+    UtmCoordinates,
+} from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
+import { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.mjs";
 
 /**
  * @summary utmCoords
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<UtmCoordinates>}
+ * @implements {SYNTAX_NAME<UtmCoordinates>}
  */
 export
-const utmCoords: SYNTAX_NAME = undefined;
+const utmCoords: SYNTAX_NAME<UtmCoordinates> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_UtmCoordinates,
+    },
+    encoderFor: {
+        "&Type": _encode_UtmCoordinates,
+    },
+    "&ldapDesc": "UTM Coordinates" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_utmCoords /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

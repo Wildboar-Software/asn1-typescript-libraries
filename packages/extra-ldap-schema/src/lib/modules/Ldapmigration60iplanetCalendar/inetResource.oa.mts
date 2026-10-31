@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_oc_inetResource } from "../Ldapmigration60iplanetCalendar/id-oc-inetResource.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { id_oc_inetResource } from "../Ldapmigration60iplanetCalendar/id-oc-inetResource.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { inetResourceStatus } from "./inetResourceStatus.oa.mjs";
 
 /**
  * @summary inetResource
@@ -31,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const inetResource: OBJECT_CLASS = undefined;
+const inetResource: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [telephoneNumber, facsimileTelephoneNumber, mail, postalAddress, inetResourceStatus] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["inetResource"],
+    "&ldapDesc": "Standard Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_inetResource /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

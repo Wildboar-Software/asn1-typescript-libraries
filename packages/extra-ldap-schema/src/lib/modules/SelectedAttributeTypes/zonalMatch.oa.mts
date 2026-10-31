@@ -1,8 +1,7 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.mjs";
-// export { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.mjs";
-
+import { id_mr_zonalMatch } from "../SelectedAttributeTypes/id-mr-zonalMatch.va.mjs";
+import { multipleMatchingLocalities } from "../SelectedAttributeTypes/multipleMatchingLocalities.oa.mjs";
 
 /**
  * @summary zonalMatch
@@ -21,6 +20,13 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * @implements {MATCHING_RULE}
  */
 export
-const zonalMatch: MATCHING_RULE = undefined;
+const zonalMatch: MATCHING_RULE = {
+    class: "MATCHING-RULE",
+    decoderFor: {},
+    encoderFor: {},
+    "&uniqueMatchIndicator": multipleMatchingLocalities /* OBJECT_FIELD_SETTING */,
+    "&id": id_mr_zonalMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,8 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { id_oc_usStateOrEquivalent } from "../LdapSchema2ldifNadf/id-oc-usStateOrEquivalent.va.mjs";
-
+import { id_oc_usStateOrEquivalent } from "../LdapSchema2ldifNadf/id-oc-usStateOrEquivalent.va.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
+import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
+import { fipsStateAlphaCode } from "./fipsStateAlphaCode.oa.mjs";
+import { fipsStateNumericCode } from "./fipsStateNumericCode.oa.mjs";
+import { nadfObject } from "./nadfObject.oa.mjs";
 
 /**
  * @summary usStateOrEquivalent
@@ -27,6 +31,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const usStateOrEquivalent: OBJECT_CLASS = undefined;
+const usStateOrEquivalent: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [locality, nadfObject] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [localityName, fipsStateNumericCode, fipsStateAlphaCode, stateOrProvinceName] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["usStateOrEquivalent"],
+    "&id": id_oc_usStateOrEquivalent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

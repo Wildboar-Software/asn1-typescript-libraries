@@ -1,9 +1,27 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_roundcubeMail } from "../LdapSchema2ldifRoundCube/id-oc-roundcubeMail.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_roundcubeMail } from "../LdapSchema2ldifRoundCube/id-oc-roundcubeMail.va.mjs";
+import { rcAIM } from "./rcAIM.oa.mjs";
+import { rcAssistant } from "./rcAssistant.oa.mjs";
+import { rcBirthday } from "./rcBirthday.oa.mjs";
+import { rcBlogURL } from "./rcBlogURL.oa.mjs";
+import { rcCountry } from "./rcCountry.oa.mjs";
+import { rcGender } from "./rcGender.oa.mjs";
+import { rcHomeFax } from "./rcHomeFax.oa.mjs";
+import { rcHomeMail } from "./rcHomeMail.oa.mjs";
+import { rcHomeURL } from "./rcHomeURL.oa.mjs";
+import { rcICQ } from "./rcICQ.oa.mjs";
+import { rcJabber } from "./rcJabber.oa.mjs";
+import { rcManager } from "./rcManager.oa.mjs";
+import { rcNickname } from "./rcNickname.oa.mjs";
+import { rcProfileURL } from "./rcProfileURL.oa.mjs";
+import { rcRegion } from "./rcRegion.oa.mjs";
+import { rcSkype } from "./rcSkype.oa.mjs";
+import { rcWorkFax } from "./rcWorkFax.oa.mjs";
+import { rcWorkMail } from "./rcWorkMail.oa.mjs";
+import { rcWorkURL } from "./rcWorkURL.oa.mjs";
 
 /**
  * @summary roundcubeMail
@@ -43,6 +61,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const roundcubeMail: OBJECT_CLASS = undefined;
+const roundcubeMail: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [rcNickname, rcBirthday, rcGender, rcHomeMail, rcWorkMail, rcHomeFax, rcWorkFax, rcHomeURL, rcWorkURL, rcBlogURL, rcProfileURL, rcSkype, rcJabber, rcAIM, rcICQ, rcRegion, rcCountry, rcManager, rcAssistant] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["RoundcubeMail"],
+    "&id": id_oc_roundcubeMail /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,10 +1,22 @@
 /* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { defaultScope } from "./defaultScope.oa.mjs";
+import { del } from "./del.oa.mjs";
+import { exp } from "./exp.oa.mjs";
+import { inum } from "./inum.oa.mjs";
+import { oxAttributes } from "./oxAttributes.oa.mjs";
+import { oxAuthClaim } from "./oxAuthClaim.oa.mjs";
+import { oxAuthGroupClaims } from "./oxAuthGroupClaims.oa.mjs";
+import { oxIconUrl } from "./oxIconUrl.oa.mjs";
+import { oxId } from "./oxId.oa.mjs";
+import { oxScopeType } from "./oxScopeType.oa.mjs";
+import { oxScriptDn } from "./oxScriptDn.oa.mjs";
+import { oxUmaPolicyScriptDn } from "./oxUmaPolicyScriptDn.oa.mjs";
 
 /**
  * @summary oxAuthCustomScope
@@ -39,6 +51,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oxAuthCustomScope: OBJECT_CLASS = undefined;
+const oxAuthCustomScope: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [defaultScope, description, displayName, inum, oxScopeType, oxAuthClaim, oxScriptDn, oxAuthGroupClaims, oxId, oxIconUrl, oxUmaPolicyScriptDn, oxAttributes, exp, del] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oxAuthCustomScope"],
+    "&id": id_oc_oxAuthCustomScope /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { id_oc_gLUE2ApplicationHandle } from "../LdapGlue608ApplicationHandle/id-oc-gLUE2ApplicationHandle.va.mjs";
-
+import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
+import { id_oc_gLUE2ApplicationHandle } from "../LdapGlue608ApplicationHandle/id-oc-gLUE2ApplicationHandle.va.mjs";
+import { gLUE2ApplicationHandleApplicationEnvironmentForeignKey } from "./gLUE2ApplicationHandleApplicationEnvironmentForeignKey.oa.mjs";
+import { gLUE2ApplicationHandleID } from "./gLUE2ApplicationHandleID.oa.mjs";
+import { gLUE2ApplicationHandleType } from "./gLUE2ApplicationHandleType.oa.mjs";
+import { gLUE2ApplicationHandleValue } from "./gLUE2ApplicationHandleValue.oa.mjs";
 
 /**
  * @summary gLUE2ApplicationHandle
@@ -28,6 +30,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2ApplicationHandle: OBJECT_CLASS = undefined;
+const gLUE2ApplicationHandle: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Entity] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [gLUE2ApplicationHandleID, gLUE2ApplicationHandleType, gLUE2ApplicationHandleValue, gLUE2ApplicationHandleApplicationEnvironmentForeignKey] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2ApplicationHandle"],
+    "&ldapDesc": "Technique for bootstrapping and/or accessing the application" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2ApplicationHandle /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,10 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_oxLink } from "../LdapOx/id-oc-oxLink.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_oxLink } from "../LdapOx/id-oc-oxLink.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { oxGuid } from "./oxGuid.oa.mjs";
+import { oxLinkCreator } from "./oxLinkCreator.oa.mjs";
+import { oxLinkExpirationDate } from "./oxLinkExpirationDate.oa.mjs";
+import { oxLinkLinktrack } from "./oxLinkLinktrack.oa.mjs";
+import { oxLinkModerated } from "./oxLinkModerated.oa.mjs";
+import { oxLinkModerators } from "./oxLinkModerators.oa.mjs";
+import { oxLinkPending } from "./oxLinkPending.oa.mjs";
 
 /**
  * @summary oxLink
@@ -33,6 +39,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oxLink: OBJECT_CLASS = undefined;
+const oxLink: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, oxGuid, oxLinkCreator, oxLinkExpirationDate, oxLinkLinktrack, oxLinkModerated, oxLinkModerators, oxLinkPending] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oxLink"],
+    "&id": id_oc_oxLink /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

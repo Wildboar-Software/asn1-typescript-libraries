@@ -1,9 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { id_oc_ftOperation } from "../LdapApacheFortress/id-oc-ftOperation.va.mjs";
-
+import { id_oc_ftOperation } from "../LdapApacheFortress/id-oc-ftOperation.va.mjs";
+import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
+import { ftId } from "./ftId.oa.mjs";
+import { ftObjId } from "./ftObjId.oa.mjs";
+import { ftObjNm } from "./ftObjNm.oa.mjs";
+import { ftOpNm } from "./ftOpNm.oa.mjs";
+import { ftPASet } from "./ftPASet.oa.mjs";
+import { ftPermName } from "./ftPermName.oa.mjs";
+import { ftRoles } from "./ftRoles.oa.mjs";
+import { ftType } from "./ftType.oa.mjs";
+import { ftUsers } from "./ftUsers.oa.mjs";
 
 /**
  * @summary ftOperation
@@ -33,6 +40,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ftOperation: OBJECT_CLASS = undefined;
+const ftOperation: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [organizationalRole] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ftId, ftPermName, ftObjNm, ftOpNm] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ftObjId, ftRoles, ftUsers, ftType, ftPASet] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ftOperation"],
+    "&ldapDesc": "Fortress Permission Operation Structural Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ftOperation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

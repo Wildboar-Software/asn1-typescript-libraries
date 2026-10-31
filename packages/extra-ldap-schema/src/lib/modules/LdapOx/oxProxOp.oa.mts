@@ -1,10 +1,16 @@
 /* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_oxProxOp } from "../LdapOx/id-oc-oxProxOp.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_oxProxOp } from "../LdapOx/id-oc-oxProxOp.va.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { inum } from "./inum.oa.mjs";
+import { oxDomain } from "./oxDomain.oa.mjs";
+import { oxId } from "./oxId.oa.mjs";
+import { oxX509PEM } from "./oxX509PEM.oa.mjs";
+import { oxX509URL } from "./oxX509URL.oa.mjs";
 
 /**
  * @summary oxProxOp
@@ -33,6 +39,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oxProxOp: OBJECT_CLASS = undefined;
+const oxProxOp: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [countryName, displayName, inum, localityName, oxDomain, oxId, oxX509PEM, oxX509URL] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oxProxOp"],
+    "&id": id_oc_oxProxOp /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

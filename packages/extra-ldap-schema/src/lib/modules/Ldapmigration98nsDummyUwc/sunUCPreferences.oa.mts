@@ -1,9 +1,23 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_sunUCPreferences } from "../Ldapmigration98nsDummyUwc/id-oc-sunUCPreferences.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { nswmExtendedUserPrefs } from "../Ldapmigration50nsMail/nswmExtendedUserPrefs.oa.mjs";
+import { icsExtendedUserPrefs } from "../Ldapmigration55imsIcal/icsExtendedUserPrefs.oa.mjs";
+import { id_oc_sunUCPreferences } from "../Ldapmigration98nsDummyUwc/id-oc-sunUCPreferences.va.mjs";
+import { abEventNotificationDestination } from "./abEventNotificationDestination.oa.mjs";
+import { sunAbExtendedUserPrefs } from "./sunAbExtendedUserPrefs.oa.mjs";
+import { sunUCColorScheme } from "./sunUCColorScheme.oa.mjs";
+import { sunUCDateDelimiter } from "./sunUCDateDelimiter.oa.mjs";
+import { sunUCDateFormat } from "./sunUCDateFormat.oa.mjs";
+import { sunUCDefaultApplication } from "./sunUCDefaultApplication.oa.mjs";
+import { sunUCDefaultEmailHandler } from "./sunUCDefaultEmailHandler.oa.mjs";
+import { sunUCExtendedClientPrefs } from "./sunUCExtendedClientPrefs.oa.mjs";
+import { sunUCExtendedUserPrefs } from "./sunUCExtendedUserPrefs.oa.mjs";
+import { sunUCExternalMailProfile } from "./sunUCExternalMailProfile.oa.mjs";
+import { sunUCMailSendProfiles } from "./sunUCMailSendProfiles.oa.mjs";
+import { sunUCTheme } from "./sunUCTheme.oa.mjs";
+import { sunUCTimeFormat } from "./sunUCTimeFormat.oa.mjs";
+import { sunUCTimeZone } from "./sunUCTimeZone.oa.mjs";
 
 /**
  * @summary sunUCPreferences
@@ -40,6 +54,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const sunUCPreferences: OBJECT_CLASS = undefined;
+const sunUCPreferences: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [sunUCDefaultApplication, sunUCTheme, sunUCColorScheme, sunUCDefaultEmailHandler, sunUCDateFormat, sunUCDateDelimiter, sunUCTimeFormat, sunUCTimeZone, sunUCMailSendProfiles, sunUCExtendedUserPrefs, nswmExtendedUserPrefs, icsExtendedUserPrefs, sunAbExtendedUserPrefs, sunUCExtendedClientPrefs, sunUCExternalMailProfile, abEventNotificationDestination] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["sunUCPreferences"],
+    "&ldapDesc": "UWC object class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_sunUCPreferences /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    TYPE_IDENTIFIER
+    type TYPE_IDENTIFIER
 } from "@wildboar/asn1";
 
 

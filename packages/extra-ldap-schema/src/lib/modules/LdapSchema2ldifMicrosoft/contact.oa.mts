@@ -1,11 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { notes } from "../MSUser/notes.oa.mjs";
-// export { id_oc_contact } from "../LdapSchema2ldifMicrosoft/id-oc-contact.va.mjs";
-
+import { id_oc_contact } from "../LdapSchema2ldifMicrosoft/id-oc-contact.va.mjs";
+import { notes } from "../MSUser/notes.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
 
 /**
  * @summary contact
@@ -27,6 +25,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const contact: OBJECT_CLASS = undefined;
+const contact: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [organizationalPerson] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [notes] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["contact"],
+    "&id": id_oc_contact /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

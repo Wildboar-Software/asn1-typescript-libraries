@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ldapSubEntry } from "../LdapSubentry/ldapSubEntry.oa.mjs";
-// export { id_oc_nsRoleDefinition } from "../LdapCommon389/id-oc-nsRoleDefinition.va.mjs";
-
+import { id_oc_nsRoleDefinition } from "../LdapCommon389/id-oc-nsRoleDefinition.va.mjs";
+import { ldapSubEntry } from "../LdapSubentry/ldapSubEntry.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { nsRoleScopeDN } from "./nsRoleScopeDN.oa.mjs";
 
 /**
  * @summary nsRoleDefinition
@@ -26,6 +26,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nsRoleDefinition: OBJECT_CLASS = undefined;
+const nsRoleDefinition: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [ldapSubEntry] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, nsRoleScopeDN] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nsRoleDefinition"],
+    "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nsRoleDefinition /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

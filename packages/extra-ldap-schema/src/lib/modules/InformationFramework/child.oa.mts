@@ -1,8 +1,7 @@
 /* eslint-disable */
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { id_oc_child } from "../InformationFramework/id-oc-child.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { id_oc_child } from "../InformationFramework/id-oc-child.va.mjs";
+import { type OBJECT_CLASS } from "./OBJECT-CLASS.oca.mjs";
 
 /**
  * @summary child
@@ -21,6 +20,12 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const child: OBJECT_CLASS = undefined;
+const child: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_child /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

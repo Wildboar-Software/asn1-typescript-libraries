@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { UiiFormat, _decode_UiiFormat, _encode_UiiFormat } from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
-// export { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    _decode_UiiFormat,
+    _encode_UiiFormat,
+    UiiFormat,
+} from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
+import { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.mjs";
 
 /**
  * @summary uiiForm
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<UiiFormat>}
+ * @implements {SYNTAX_NAME<UiiFormat>}
  */
 export
-const uiiForm: SYNTAX_NAME = undefined;
+const uiiForm: SYNTAX_NAME<UiiFormat> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_UiiFormat,
+    },
+    encoderFor: {
+        "&Type": _encode_UiiFormat,
+    },
+    "&ldapDesc": "UII Format" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_uiiForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_schacLinkageIdentifiers } from "../LdapSchac/id-oc-schacLinkageIdentifiers.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_schacLinkageIdentifiers } from "../LdapSchac/id-oc-schacLinkageIdentifiers.va.mjs";
+import { schacPersonalUniqueCode } from "./schacPersonalUniqueCode.oa.mjs";
+import { schacPersonalUniqueID } from "./schacPersonalUniqueID.oa.mjs";
 
 /**
  * @summary schacLinkageIdentifiers
@@ -27,6 +28,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const schacLinkageIdentifiers: OBJECT_CLASS = undefined;
+const schacLinkageIdentifiers: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [schacPersonalUniqueCode, schacPersonalUniqueID] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["schacLinkageIdentifiers"],
+    "&ldapDesc": "Used to link a directory entry with records in external data stores or other directory entries" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_schacLinkageIdentifiers /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

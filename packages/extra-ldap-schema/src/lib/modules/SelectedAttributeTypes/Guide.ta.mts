@@ -7,7 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
+import { type Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
 // export { Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
 
 

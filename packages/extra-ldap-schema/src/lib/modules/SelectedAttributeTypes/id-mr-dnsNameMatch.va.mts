@@ -3,6 +3,7 @@ import {
     ObjectIdentifier as _OID,
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
+import { id_mr } from "../UsefulDefinitions/id-mr.va.mjs";
 
 
 

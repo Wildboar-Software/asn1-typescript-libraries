@@ -1,10 +1,9 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { memberNoun } from "../OrganizationAndGroupSchema/memberNoun.oa.mjs";
-// export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-// export { id_at_memberPluralNoun } from "../OrganizationAndGroupSchema/id-at-memberPluralNoun.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_memberPluralNoun } from "../OrganizationAndGroupSchema/id-at-memberPluralNoun.va.mjs";
+import { memberNoun } from "../OrganizationAndGroupSchema/memberNoun.oa.mjs";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 
 /**
  * @summary memberPluralNoun
@@ -27,6 +26,22 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * @implements {ATTRIBUTE}
  */
 export
-const memberPluralNoun: ATTRIBUTE = undefined;
+const memberPluralNoun: ATTRIBUTE = {
+    class: "ATTRIBUTE",
+    decoderFor: {},
+    encoderFor: {},
+    "&derivation": memberNoun /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["memberPluralNoun"],
+    "&ldapDesc": "Plural noun used as a term for members of this group, such as 'Goobers'" /* OBJECT_FIELD_SETTING */,
+    "&id": id_at_memberPluralNoun /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

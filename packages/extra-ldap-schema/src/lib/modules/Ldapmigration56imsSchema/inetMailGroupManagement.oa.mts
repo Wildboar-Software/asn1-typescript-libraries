@@ -1,9 +1,17 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_inetMailGroupManagement } from "../Ldapmigration56imsSchema/id-oc-inetMailGroupManagement.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
+import { id_oc_inetMailGroupManagement } from "../Ldapmigration56imsSchema/id-oc-inetMailGroupManagement.va.mjs";
+import { mgmanAllowSubscribe } from "./mgmanAllowSubscribe.oa.mjs";
+import { mgmanDenySubscribe } from "./mgmanDenySubscribe.oa.mjs";
+import { mgmanGoodbyeText } from "./mgmanGoodbyeText.oa.mjs";
+import { mgmanHidden } from "./mgmanHidden.oa.mjs";
+import { mgmanIntroText } from "./mgmanIntroText.oa.mjs";
+import { mgmanJoinability } from "./mgmanJoinability.oa.mjs";
+import { mgmanMemberVisibility } from "./mgmanMemberVisibility.oa.mjs";
+import { mgmanVisibility } from "./mgmanVisibility.oa.mjs";
 
 /**
  * @summary inetMailGroupManagement
@@ -34,6 +42,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const inetMailGroupManagement: OBJECT_CLASS = undefined;
+const inetMailGroupManagement: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [mgmanAllowSubscribe, mgmanDenySubscribe, mgmanHidden, mgmanJoinability, mgmanVisibility, mgmanMemberVisibility, mgmanIntroText, mgmanGoodbyeText, multiLineDescription] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["inetMailGroupManagement"],
+    "&ldapDesc": "auxiliary class for managed mailing lists" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_inetMailGroupManagement /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

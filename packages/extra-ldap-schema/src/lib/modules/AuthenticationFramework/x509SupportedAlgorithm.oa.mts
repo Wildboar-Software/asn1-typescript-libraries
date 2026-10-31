@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { SupportedAlgorithm, _decode_SupportedAlgorithm, _encode_SupportedAlgorithm } from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
-// export { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va.mjs";
+import {
+    _decode_SupportedAlgorithm,
+    _encode_SupportedAlgorithm,
+    SupportedAlgorithm,
+} from "../AuthenticationFramework/SupportedAlgorithm.ta.mjs";
+import { id_lsx_x509SupportedAlgorithm } from "../AuthenticationFramework/id-lsx-x509SupportedAlgorithm.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary x509SupportedAlgorithm
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<SupportedAlgorithm>}
+ * @implements {SYNTAX_NAME<SupportedAlgorithm>}
  */
 export
-const x509SupportedAlgorithm: SYNTAX_NAME = undefined;
+const x509SupportedAlgorithm: SYNTAX_NAME<SupportedAlgorithm> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_SupportedAlgorithm,
+    },
+    encoderFor: {
+        "&Type": _encode_SupportedAlgorithm,
+    },
+    "&ldapDesc": "X.509 Supported Algorithm" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_x509SupportedAlgorithm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

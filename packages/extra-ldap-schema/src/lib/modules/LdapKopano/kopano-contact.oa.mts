@@ -1,9 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_kopano_contact } from "../LdapKopano/id-oc-kopano-contact.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_kopano_contact } from "../LdapKopano/id-oc-kopano-contact.va.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { kopanoAccount } from "./kopanoAccount.oa.mjs";
+import { kopanoAliases } from "./kopanoAliases.oa.mjs";
+import { kopanoHidden } from "./kopanoHidden.oa.mjs";
+import { kopanoSendAsPrivilege } from "./kopanoSendAsPrivilege.oa.mjs";
 
 /**
  * @summary kopano_contact
@@ -31,6 +36,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const kopano_contact: OBJECT_CLASS = undefined;
+const kopano_contact: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, uidNumber] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [kopanoSendAsPrivilege, kopanoHidden, kopanoAliases, kopanoAccount] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["kopano-contact"],
+    "&ldapDesc": "KOPANO: a contact of Kopano" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_kopano_contact /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

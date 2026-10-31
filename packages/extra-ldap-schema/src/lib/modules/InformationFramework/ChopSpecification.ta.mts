@@ -5,9 +5,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
+import { type ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
 // export { ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-import { BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
+import { type BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
 // export { BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
 
 

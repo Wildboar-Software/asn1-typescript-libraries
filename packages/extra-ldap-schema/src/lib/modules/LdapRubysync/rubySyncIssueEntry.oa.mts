@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { rubySyncAssociation } from "../LdapRubysync/rubySyncAssociation.oa.mjs";
-// export { id_oc_rubySyncIssueEntry } from "../LdapRubysync/id-oc-rubySyncIssueEntry.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_rubySyncIssueEntry } from "../LdapRubysync/id-oc-rubySyncIssueEntry.va.mjs";
+import { rubySyncAssociation } from "../LdapRubysync/rubySyncAssociation.oa.mjs";
+import { rubySyncIssueScore } from "./rubySyncIssueScore.oa.mjs";
+import { rubySyncIssueStatus } from "./rubySyncIssueStatus.oa.mjs";
+import { rubySyncMatchValue } from "./rubySyncMatchValue.oa.mjs";
+import { rubySyncSourceInfo } from "./rubySyncSourceInfo.oa.mjs";
+import { rubySyncTargetInfo } from "./rubySyncTargetInfo.oa.mjs";
 
 /**
  * @summary rubySyncIssueEntry
@@ -30,6 +33,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rubySyncIssueEntry: OBJECT_CLASS = undefined;
+const rubySyncIssueEntry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [rubySyncAssociation] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [rubySyncIssueScore, rubySyncIssueStatus, rubySyncMatchValue, rubySyncSourceInfo, rubySyncTargetInfo] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rubySyncIssueEntry"],
+    "&id": id_oc_rubySyncIssueEntry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,10 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
-// export { id_oc_domain } from "../LdapSchema2ldifMicrosoft/id-oc-domain.va.mjs";
-
+import { abstract } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_domain } from "../LdapSchema2ldifMicrosoft/id-oc-domain.va.mjs";
+import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 
 /**
  * @summary domain
@@ -26,6 +25,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const domain: OBJECT_CLASS = undefined;
+const domain: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": abstract /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [dc] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["domain"],
+    "&id": id_oc_domain /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

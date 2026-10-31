@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { id_mr_systemProposedMatch } from "../SelectedAttributeTypes/id-mr-systemProposedMatch.va.mjs";
-
+import { id_mr_systemProposedMatch } from "../SelectedAttributeTypes/id-mr-systemProposedMatch.va.mjs";
 
 /**
  * @summary systemProposedMatch
@@ -19,6 +18,12 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * @implements {MATCHING_RULE}
  */
 export
-const systemProposedMatch: MATCHING_RULE = undefined;
+const systemProposedMatch: MATCHING_RULE = {
+    class: "MATCHING-RULE",
+    decoderFor: {},
+    encoderFor: {},
+    "&id": id_mr_systemProposedMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

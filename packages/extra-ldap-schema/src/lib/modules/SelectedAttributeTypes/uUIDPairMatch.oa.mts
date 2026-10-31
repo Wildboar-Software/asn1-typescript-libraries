@@ -1,8 +1,11 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { UUIDPair, _decode_UUIDPair, _encode_UUIDPair } from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
-// export { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.mjs";
-
+import {
+    _decode_UUIDPair,
+    _encode_UUIDPair,
+    UUIDPair,
+} from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
+import { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.mjs";
 
 /**
  * @summary uUIDPairMatch
@@ -17,10 +20,20 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<UUIDPair>}
+ * @implements {MATCHING_RULE<UUIDPair>}
  */
 export
-const uUIDPairMatch: MATCHING_RULE = undefined;
+const uUIDPairMatch: MATCHING_RULE<UUIDPair> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_UUIDPair,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_UUIDPair,
+    },
+    "&id": id_mr_uuidpairmatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

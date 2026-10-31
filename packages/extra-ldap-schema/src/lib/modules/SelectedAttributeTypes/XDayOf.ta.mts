@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NamedDay, _decode_NamedDay, _encode_NamedDay } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
+import { type NamedDay, _decode_NamedDay, _encode_NamedDay } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
 // export { NamedDay, _decode_NamedDay, _encode_NamedDay } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
 
 

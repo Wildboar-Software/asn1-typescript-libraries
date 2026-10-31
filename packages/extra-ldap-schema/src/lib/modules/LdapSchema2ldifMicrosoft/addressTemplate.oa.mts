@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { displayTemplate } from "../LdapSchema2ldifMicrosoft/displayTemplate.oa.mjs";
-// export { displayName } from "../LdapSchema2ldifMicrosoft/displayName.oa.mjs";
-// export { id_oc_addressTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-addressTemplate.va.mjs";
-
+import { displayName } from "../LdapSchema2ldifMicrosoft/displayName.oa.mjs";
+import { displayTemplate } from "../LdapSchema2ldifMicrosoft/displayTemplate.oa.mjs";
+import { id_oc_addressTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-addressTemplate.va.mjs";
+import { addressSyntax } from "../MSUser/addressSyntax.oa.mjs";
+import { addressType } from "../MSUser/addressType.oa.mjs";
+import { perMsgDialogDisplayTable } from "../MSUser/perMsgDialogDisplayTable.oa.mjs";
+import { perRecipDialogDisplayTable } from "../MSUser/perRecipDialogDisplayTable.oa.mjs";
+import { proxyGenerationEnabled } from "../MSUser/proxyGenerationEnabled.oa.mjs";
 
 /**
  * @summary addressTemplate
@@ -30,6 +33,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const addressTemplate: OBJECT_CLASS = undefined;
+const addressTemplate: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [displayTemplate] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [displayName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [addressSyntax, perMsgDialogDisplayTable, perRecipDialogDisplayTable, addressType, proxyGenerationEnabled] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["addressTemplate"],
+    "&id": id_oc_addressTemplate /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

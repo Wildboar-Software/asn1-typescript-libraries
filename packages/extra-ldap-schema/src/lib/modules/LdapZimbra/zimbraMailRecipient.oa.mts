@@ -1,9 +1,21 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_zimbraMailRecipient } from "../LdapZimbra/id-oc-zimbraMailRecipient.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_zimbraMailRecipient } from "../LdapZimbra/id-oc-zimbraMailRecipient.va.mjs";
+import { zimbraHideInGal } from "./zimbraHideInGal.oa.mjs";
+import { zimbraLocale } from "./zimbraLocale.oa.mjs";
+import { zimbraMailAddress } from "./zimbraMailAddress.oa.mjs";
+import { zimbraMailAlias } from "./zimbraMailAlias.oa.mjs";
+import { zimbraMailCanonicalAddress } from "./zimbraMailCanonicalAddress.oa.mjs";
+import { zimbraMailCatchAllAddress } from "./zimbraMailCatchAllAddress.oa.mjs";
+import { zimbraMailCatchAllCanonicalAddress } from "./zimbraMailCatchAllCanonicalAddress.oa.mjs";
+import { zimbraMailCatchAllForwardingAddress } from "./zimbraMailCatchAllForwardingAddress.oa.mjs";
+import { zimbraMailDeliveryAddress } from "./zimbraMailDeliveryAddress.oa.mjs";
+import { zimbraMailForwardingAddress } from "./zimbraMailForwardingAddress.oa.mjs";
+import { zimbraMailHost } from "./zimbraMailHost.oa.mjs";
+import { zimbraMailStatus } from "./zimbraMailStatus.oa.mjs";
+import { zimbraMailTransport } from "./zimbraMailTransport.oa.mjs";
 
 /**
  * @summary zimbraMailRecipient
@@ -38,6 +50,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const zimbraMailRecipient: OBJECT_CLASS = undefined;
+const zimbraMailRecipient: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [zimbraHideInGal, zimbraLocale, zimbraMailAddress, zimbraMailAlias, zimbraMailCanonicalAddress, zimbraMailCatchAllAddress, zimbraMailCatchAllCanonicalAddress, zimbraMailCatchAllForwardingAddress, zimbraMailDeliveryAddress, zimbraMailForwardingAddress, zimbraMailHost, zimbraMailStatus, zimbraMailTransport] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["zimbraMailRecipient"],
+    "&ldapDesc": "Mail recipient object" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zimbraMailRecipient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

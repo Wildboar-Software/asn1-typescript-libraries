@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { URI, _decode_URI, _encode_URI } from "../SelectedAttributeTypes/URI.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../SelectedAttributeTypes/URI.ta.mjs";
 // export { URI, _decode_URI, _encode_URI } from "../SelectedAttributeTypes/URI.ta.mjs";
 import { UiiFormat_subset, UiiFormat_subset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_UiiFormat_subset, _encode_UiiFormat_subset, _enum_for_UiiFormat_subset } from "../SelectedAttributeTypes/UiiFormat-subset.ta.mjs";
 // export { UiiFormat_subset, _enum_for_UiiFormat_subset, UiiFormat_subset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */, baseObject /* IMPORTED_SHORT_ENUMERATION_ITEM */, UiiFormat_subset_oneLevel /* IMPORTED_LONG_ENUMERATION_ITEM */, oneLevel /* IMPORTED_SHORT_ENUMERATION_ITEM */, UiiFormat_subset_wholeSubtree /* IMPORTED_LONG_ENUMERATION_ITEM */, wholeSubtree /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UiiFormat_subset, _encode_UiiFormat_subset } from "../SelectedAttributeTypes/UiiFormat-subset.ta.mjs";
-import { UiiFormat_next, _decode_UiiFormat_next, _encode_UiiFormat_next } from "../SelectedAttributeTypes/UiiFormat-next.ta.mjs";
+import { type UiiFormat_next, _decode_UiiFormat_next, _encode_UiiFormat_next } from "../SelectedAttributeTypes/UiiFormat-next.ta.mjs";
 // export { UiiFormat_next, _decode_UiiFormat_next, _encode_UiiFormat_next } from "../SelectedAttributeTypes/UiiFormat-next.ta.mjs";
 
 

@@ -7,9 +7,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
+import { type Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
 // export { Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
-import { EnhancedGuide_subset, _decode_EnhancedGuide_subset, _encode_EnhancedGuide_subset, oneLevel /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../SelectedAttributeTypes/EnhancedGuide-subset.ta.mjs";
+import { type EnhancedGuide_subset, _decode_EnhancedGuide_subset, _encode_EnhancedGuide_subset, oneLevel /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../SelectedAttributeTypes/EnhancedGuide-subset.ta.mjs";
 // export { EnhancedGuide_subset, EnhancedGuide_subset_baseObject /* IMPORTED_LONG_NAMED_INTEGER */, baseObject /* IMPORTED_SHORT_NAMED_INTEGER */, EnhancedGuide_subset_oneLevel /* IMPORTED_LONG_NAMED_INTEGER */, oneLevel /* IMPORTED_SHORT_NAMED_INTEGER */, EnhancedGuide_subset_wholeSubtree /* IMPORTED_LONG_NAMED_INTEGER */, wholeSubtree /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EnhancedGuide_subset, _encode_EnhancedGuide_subset } from "../SelectedAttributeTypes/EnhancedGuide-subset.ta.mjs";
 
 

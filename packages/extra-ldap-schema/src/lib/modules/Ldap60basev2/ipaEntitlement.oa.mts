@@ -1,10 +1,11 @@
 /* eslint-disable */
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { ipaEntitlementId } from "../Ldap60basev2/ipaEntitlementId.oa.mjs";
-// export { id_oc_ipaEntitlement } from "../Ldap60basev2/id-oc-ipaEntitlement.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_ipaEntitlement } from "../Ldap60basev2/id-oc-ipaEntitlement.va.mjs";
+import { ipaEntitlementId } from "../Ldap60basev2/ipaEntitlementId.oa.mjs";
+import { userPKCS12 } from "../PKCS-9/userPKCS12.oa.mjs";
 
 /**
  * @summary ipaEntitlement
@@ -29,6 +30,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ipaEntitlement: OBJECT_CLASS = undefined;
+const ipaEntitlement: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ipaEntitlementId] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [userPKCS12, userCertificate] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ipaEntitlement"],
+    "&ldapDesc": "IPA Entitlement object" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ipaEntitlement /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

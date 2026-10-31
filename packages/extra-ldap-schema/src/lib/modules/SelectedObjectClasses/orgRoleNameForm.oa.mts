@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_nf_orgRoleNameForm } from "../SelectedObjectClasses/id-nf-orgRoleNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { id_nf_orgRoleNameForm } from "../SelectedObjectClasses/id-nf-orgRoleNameForm.va.mjs";
+import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 
 /**
  * @summary orgRoleNameForm
@@ -23,6 +22,13 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const orgRoleNameForm: NAME_FORM = undefined;
+const orgRoleNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": organizationalRole /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_orgRoleNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

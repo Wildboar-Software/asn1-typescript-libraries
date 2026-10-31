@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { SupportedCurves, _decode_SupportedCurves, _encode_SupportedCurves } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
-// export { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";
-import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
+import {
+    type SupportedCurves,
+    _decode_SupportedCurves,
+    _encode_SupportedCurves,
+} from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
+import { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";
+import { type ALGORITHM } from "./ALGORITHM.oca.mjs";
 
 /**
  * @summary ecPublicKey
@@ -17,10 +20,20 @@ import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ALGORITHM}
- * @implements {ALGORITHM}
+ * @type {ALGORITHM<SupportedCurves>}
+ * @implements {ALGORITHM<SupportedCurves>}
  */
 export
-const ecPublicKey: ALGORITHM = undefined;
+const ecPublicKey: ALGORITHM<SupportedCurves> = {
+    class: "ALGORITHM",
+    decoderFor: {
+        "&Type": _decode_SupportedCurves,
+    },
+    encoderFor: {
+        "&Type": _encode_SupportedCurves,
+    },
+    "&id": id_ecPublicKey /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

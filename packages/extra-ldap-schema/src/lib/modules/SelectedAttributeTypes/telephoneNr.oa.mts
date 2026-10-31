@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-// export { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type TelephoneNumber,
+    _decode_TelephoneNumber,
+    _encode_TelephoneNumber,
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.mjs";
 
 /**
  * @summary telephoneNr
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<TelephoneNumber>}
+ * @implements {SYNTAX_NAME<TelephoneNumber>}
  */
 export
-const telephoneNr: SYNTAX_NAME = undefined;
+const telephoneNr: SYNTAX_NAME<TelephoneNumber> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_TelephoneNumber,
+    },
+    encoderFor: {
+        "&Type": _encode_TelephoneNumber,
+    },
+    "&ldapDesc": "Telephone Number" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_telephoneNr /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -2,6 +2,7 @@
 import {
     type INTEGER
 } from "@wildboar/asn1";
+import { ub_name } from "./ub-name.va.mjs";
 
 
 

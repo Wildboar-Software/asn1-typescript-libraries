@@ -1,7 +1,8 @@
 /* eslint-disable */
-// export { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va.mjs";
+import { type OCTET_STRING } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import { id_lsx_octetString } from "../SelectedAttributeTypes/id-lsx-octetString.va.mjs";
 
 /**
  * @summary octetString
@@ -17,10 +18,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<OCTET_STRING>}
+ * @implements {SYNTAX_NAME<OCTET_STRING>}
  */
 export
-const octetString: SYNTAX_NAME = undefined;
+const octetString: SYNTAX_NAME<OCTET_STRING> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": $._decodeOctetString,
+    },
+    encoderFor: {
+        "&Type": $._encodeOctetString,
+    },
+    "&ldapDesc": "Octet String" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_octetString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

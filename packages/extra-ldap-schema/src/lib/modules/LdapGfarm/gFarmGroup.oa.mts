@@ -1,11 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { groupname } from "../LdapGfarm/groupname.oa.mjs";
-// export { groupusers } from "../LdapGfarm/groupusers.oa.mjs";
-// export { id_oc_gFarmGroup } from "../LdapGfarm/id-oc-gFarmGroup.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { groupname } from "../LdapGfarm/groupname.oa.mjs";
+import { groupusers } from "../LdapGfarm/groupusers.oa.mjs";
+import { id_oc_gFarmGroup } from "../LdapGfarm/id-oc-gFarmGroup.va.mjs";
 
 /**
  * @summary gFarmGroup
@@ -27,6 +25,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gFarmGroup: OBJECT_CLASS = undefined;
+const gFarmGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [groupname] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [groupusers] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GFarmGroup"],
+    "&id": id_oc_gFarmGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,10 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
-// export { gLUE2StorageEndpointStorageServiceForeignKey } from "../LdapGlue704StorageEndpoint/gLUE2StorageEndpointStorageServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2StorageEndpoint } from "../LdapGlue704StorageEndpoint/id-oc-gLUE2StorageEndpoint.va.mjs";
-
+import { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
+import { gLUE2StorageEndpointStorageServiceForeignKey } from "../LdapGlue704StorageEndpoint/gLUE2StorageEndpointStorageServiceForeignKey.oa.mjs";
+import { id_oc_gLUE2StorageEndpoint } from "../LdapGlue704StorageEndpoint/id-oc-gLUE2StorageEndpoint.va.mjs";
 
 /**
  * @summary gLUE2StorageEndpoint
@@ -26,6 +24,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2StorageEndpoint: OBJECT_CLASS = undefined;
+const gLUE2StorageEndpoint: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Endpoint] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gLUE2StorageEndpointStorageServiceForeignKey] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2StorageEndpoint"],
+    "&ldapDesc": "A network location having a well-defined interface and exposing the service functionalities" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2StorageEndpoint /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

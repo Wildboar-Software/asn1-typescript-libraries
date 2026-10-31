@@ -1,9 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { officePerson } from "../LdapExtension/officePerson.oa.mjs";
-// export { id_oc_zillaPerson } from "../LdapExtension/id-oc-zillaPerson.va.mjs";
-
+import { id_oc_zillaPerson } from "../LdapExtension/id-oc-zillaPerson.va.mjs";
+import { officePerson } from "../LdapExtension/officePerson.oa.mjs";
+import { mobile } from "../LdapSchema2ldifCosine/mobile.oa.mjs";
+import { pager } from "../LdapSchema2ldifCosine/pager.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { uRL } from "./uRL.oa.mjs";
+import { xmozillanickname } from "./xmozillanickname.oa.mjs";
+import { xmozillausehtmlmail } from "./xmozillausehtmlmail.oa.mjs";
 
 /**
  * @summary zillaPerson
@@ -31,6 +36,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const zillaPerson: OBJECT_CLASS = undefined;
+const zillaPerson: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [officePerson] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [mobile, pager, description, uRL, telephoneNumber, xmozillanickname, xmozillausehtmlmail] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["zillaPerson"],
+    "&ldapDesc": "Netscape Communicator Extensions" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zillaPerson /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-// export { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.mjs";
-// export { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va.mjs";
-
+import {
+    type TelephoneNumber,
+    _decode_TelephoneNumber,
+    _encode_TelephoneNumber,
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { id_mr_telephoneNumberMatch } from "../SelectedAttributeTypes/id-mr-telephoneNumberMatch.va.mjs";
+import { telephoneNr } from "../SelectedAttributeTypes/telephoneNr.oa.mjs";
 
 /**
  * @summary telephoneNumberMatch
@@ -20,10 +23,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<TelephoneNumber>}
+ * @implements {MATCHING_RULE<TelephoneNumber>}
  */
 export
-const telephoneNumberMatch: MATCHING_RULE = undefined;
+const telephoneNumberMatch: MATCHING_RULE<TelephoneNumber> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_TelephoneNumber,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_TelephoneNumber,
+    },
+    "&ldapSyntax": telephoneNr["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["telephoneNumberMatch"],
+    "&id": id_mr_telephoneNumberMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

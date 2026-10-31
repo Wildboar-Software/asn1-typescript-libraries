@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-// export { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
-// export { id_nf_sOPNameForm } from "../SelectedObjectClasses/id-nf-sOPNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
+import { id_nf_sOPNameForm } from "../SelectedObjectClasses/id-nf-sOPNameForm.va.mjs";
+import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
 
 /**
  * @summary sOPNameForm
@@ -23,6 +22,13 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const sOPNameForm: NAME_FORM = undefined;
+const sOPNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": locality /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [stateOrProvinceName] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_sOPNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

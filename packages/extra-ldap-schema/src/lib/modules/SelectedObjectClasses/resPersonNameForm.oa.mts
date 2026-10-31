@@ -1,10 +1,9 @@
 /* eslint-disable */
-// export { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
-// export { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
+import { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
+import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
 
 /**
  * @summary resPersonNameForm
@@ -25,6 +24,14 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const resPersonNameForm: NAME_FORM = undefined;
+const resPersonNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": residentialPerson /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [streetAddress] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_resPersonNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

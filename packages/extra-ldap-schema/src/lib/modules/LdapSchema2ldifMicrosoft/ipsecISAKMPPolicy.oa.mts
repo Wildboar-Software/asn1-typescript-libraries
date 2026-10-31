@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ipsecBase } from "../LdapSchema2ldifMicrosoft/ipsecBase.oa.mjs";
-// export { id_oc_ipsecISAKMPPolicy } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecISAKMPPolicy.va.mjs";
-
+import { id_oc_ipsecISAKMPPolicy } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecISAKMPPolicy.va.mjs";
+import { ipsecBase } from "../LdapSchema2ldifMicrosoft/ipsecBase.oa.mjs";
 
 /**
  * @summary ipsecISAKMPPolicy
@@ -23,6 +21,13 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ipsecISAKMPPolicy: OBJECT_CLASS = undefined;
+const ipsecISAKMPPolicy: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [ipsecBase] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ipsecISAKMPPolicy"],
+    "&id": id_oc_ipsecISAKMPPolicy /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

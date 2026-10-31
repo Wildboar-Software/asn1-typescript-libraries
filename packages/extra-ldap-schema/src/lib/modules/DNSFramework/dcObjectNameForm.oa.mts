@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { dcObject } from "../DNSFramework/dcObject.oa.mjs";
-// export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
-// export { id_nf_dcObjectNameForm } from "../DNSFramework/id-nf-dcObjectNameForm.va.mjs";
+import { dcObject } from "../DNSFramework/dcObject.oa.mjs";
+import { id_nf_dcObjectNameForm } from "../DNSFramework/id-nf-dcObjectNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 
 /**
  * @summary dcObjectNameForm
@@ -25,6 +24,14 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const dcObjectNameForm: NAME_FORM = undefined;
+const dcObjectNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": dcObject /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [dc] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["dcObjectNameForm"],
+    "&id": id_nf_dcObjectNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

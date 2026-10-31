@@ -1,9 +1,18 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nsslapdPlugin } from "../LdapCore389/id-oc-nsslapdPlugin.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nsslapdPlugin } from "../LdapCore389/id-oc-nsslapdPlugin.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nsslapd_plugin_depends_on_type } from "./nsslapd-plugin-depends-on-type.oa.mjs";
+import { nsslapd_pluginConfigArea } from "./nsslapd-pluginConfigArea.oa.mjs";
+import { nsslapd_pluginDescription } from "./nsslapd-pluginDescription.oa.mjs";
+import { nsslapd_pluginEnabled } from "./nsslapd-pluginEnabled.oa.mjs";
+import { nsslapd_pluginId } from "./nsslapd-pluginId.oa.mjs";
+import { nsslapd_pluginInitfunc } from "./nsslapd-pluginInitfunc.oa.mjs";
+import { nsslapd_pluginPath } from "./nsslapd-pluginPath.oa.mjs";
+import { nsslapd_pluginType } from "./nsslapd-pluginType.oa.mjs";
+import { nsslapd_pluginVendor } from "./nsslapd-pluginVendor.oa.mjs";
+import { nsslapd_pluginVersion } from "./nsslapd-pluginVersion.oa.mjs";
 
 /**
  * @summary nsslapdPlugin
@@ -35,6 +44,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nsslapdPlugin: OBJECT_CLASS = undefined;
+const nsslapdPlugin: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, nsslapd_pluginPath, nsslapd_pluginInitfunc, nsslapd_pluginType, nsslapd_pluginId, nsslapd_pluginVersion, nsslapd_pluginVendor, nsslapd_pluginDescription, nsslapd_pluginEnabled] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [nsslapd_pluginConfigArea, nsslapd_plugin_depends_on_type] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nsslapdPlugin"],
+    "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nsslapdPlugin /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */
