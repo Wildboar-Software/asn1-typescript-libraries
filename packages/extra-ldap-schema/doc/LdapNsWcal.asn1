@@ -1,0 +1,109 @@
+-- Derived from data/ldap-schema/ns-wcal.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 9 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+LdapNsWcal DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, directoryString, givenName, surname, uid,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  preferredLanguage
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  nsLicensedFor
+    FROM LdapCommon389
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-nswcalCALID OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 537 }
+id-at-nswcalExtendedUserPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 538 }
+id-at-nswcalDisallowAccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 539 }
+id-at-nswcalHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 540 }
+id-at-nswcalQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 541 }
+id-oc-nswcalUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 83 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Web Calendaring"
+nswcalCALID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nswcalCALID"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nswcalCALID }
+
+-- X-ORIGIN: "iPlanet Web Calendaring"
+nswcalExtendedUserPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nswcalExtendedUserPrefs"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nswcalExtendedUserPrefs }
+
+-- X-ORIGIN: "iPlanet Web Calendaring"
+nswcalDisallowAccess ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nswcalDisallowAccess"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nswcalDisallowAccess }
+
+-- X-ORIGIN: "iPlanet Web Calendaring"
+nswcalHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nswcalHost"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nswcalHost }
+
+-- X-ORIGIN: "iPlanet Web Calendaring"
+nswcalQuota ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nswcalQuota"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nswcalQuota }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet Web Calendaring"
+nswcalUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { commonName
+                              | givenName
+                              | mail
+                              | preferredLanguage
+                              | surname
+                              | uid
+                              | userPassword
+                              | nswcalCALID
+                              | nswcalDisallowAccess
+                              | nswcalExtendedUserPrefs
+                              | nsLicensedFor
+                              | nswcalHost
+                              | nswcalQuota }
+  LDAP-NAME                 {"nswcalUser"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-nswcalUser }
+END

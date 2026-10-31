@@ -1,0 +1,224 @@
+-- Derived from data/ldap-schema/ldapmigration/20subscriber.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 1 elements were omitted because another source file in this corpus defines the same OID.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+Ldapmigration20subscriber DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS,
+    objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString, dn, ia5String,
+    uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  preferredLanguage
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  memberOf
+    FROM OrganizationAndGroupSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) org-group-schema(166)} WITH SUCCESSORS
+
+  aci
+    FROM LdapAci ;
+
+-- Object identifiers
+
+id-at-adminRole OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 601 }
+id-at-parentOrganization OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 1466 101 120 41 }
+id-at-preferredLocale OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 1466 101 120 42 }
+id-at-preferredTimeZone OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 1466 101 120 43 }
+id-at-inetDomainBaseDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 690 }
+id-at-inetDomainStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 691 }
+id-at-inetUserStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 692 }
+id-at-inetUserHttpURL OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 693 }
+id-at-inetSubscriberAccountId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 694 }
+id-at-inetSubscriberChallenge OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 695 }
+id-at-inetSubscriberResponse OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 696 }
+id-oc-inetDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 129 }
+id-oc-inetUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 130 }
+id-oc-iPlanetLinkedOrganization OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 1466 101 121 141 }
+id-oc-iPlanetPreferences OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 1466 101 121 142 }
+id-oc-inetSubscriber OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 134 }
+id-oc-inetAdmin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 112 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Delegated Administrator"
+adminRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"adminRole"}
+  LDAP-DESC                 "Administrative role"
+  ID                        id-at-adminRole }
+
+-- X-ORIGIN: "iPlanet"
+parentOrganization ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"parentOrganization"}
+  ID                        id-at-parentOrganization }
+
+-- X-ORIGIN: "iPlanet"
+preferredLocale ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"preferredLocale"}
+  LDAP-DESC                 "preferred locale for a person"
+  ID                        id-at-preferredLocale }
+
+-- X-ORIGIN: "iPlanet"
+preferredTimeZone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"preferredTimeZone"}
+  LDAP-DESC                 "preferred time zone for a person"
+  ID                        id-at-preferredTimeZone }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetDomainBaseDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"inetDomainBaseDN"}
+  LDAP-DESC                 "Base DN of user subtree for a DNS domain"
+  ID                        id-at-inetDomainBaseDN }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetDomainStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetDomainStatus"}
+  LDAP-DESC                 """active"", ""inactive"", or ""deleted"" status of a domain"
+  ID                        id-at-inetDomainStatus }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetUserStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetUserStatus"}
+  LDAP-DESC                 """active"", ""inactive"", or ""deleted"" status of a user"
+  ID                        id-at-inetUserStatus }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetUserHttpURL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"inetUserHttpURL"}
+  LDAP-DESC                 "A users Web addresses"
+  ID                        id-at-inetUserHttpURL }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetSubscriberAccountId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetSubscriberAccountId"}
+  LDAP-DESC                 "A unique attribute linking the subscriber to a billing system"
+  ID                        id-at-inetSubscriberAccountId }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetSubscriberChallenge ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"inetSubscriberChallenge"}
+  LDAP-DESC                 "Used to confirm subscriberIdentity. This attribute holds the challenge phrase and is used in conjunction with the inetSubscriberResponse"
+  ID                        id-at-inetSubscriberChallenge }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetSubscriberResponse ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"inetSubscriberResponse"}
+  LDAP-DESC                 "Used to confirm subscriberIdentity. This attribute holds the response phrase and is used in conjunction with the inetSubscriberChallenge"
+  ID                        id-at-inetSubscriberResponse }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { inetDomainBaseDN
+                              | inetDomainStatus }
+  LDAP-NAME                 {"inetDomain"}
+  LDAP-DESC                 "Auxiliary class for virtual domain nodes"
+  ID                        id-oc-inetDomain }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { uid
+                              | inetUserStatus
+                              | inetUserHttpURL
+                              | userPassword
+                              | memberOf }
+  LDAP-NAME                 {"inetUser"}
+  LDAP-DESC                 "Auxiliary class which must be present in an entry for delivery of subscriber services"
+  ID                        id-oc-inetUser }
+
+-- X-ORIGIN: "iPlanet"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+iPlanetLinkedOrganization OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { parentOrganization }
+  LDAP-NAME                 {"iPlanetLinkedOrganization"}
+  ID                        id-oc-iPlanetLinkedOrganization }
+
+-- X-ORIGIN: "iPlanet"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+iPlanetPreferences OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { preferredLanguage
+                              | preferredLocale
+                              | preferredTimeZone }
+  LDAP-NAME                 {"iPlanetPreferences"}
+  ID                        id-oc-iPlanetPreferences }
+
+-- X-ORIGIN: "iPlanet subscriber interoperability"
+inetSubscriber OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { inetSubscriberAccountId
+                              | inetSubscriberChallenge
+                              | inetSubscriberResponse }
+  LDAP-NAME                 {"inetSubscriber"}
+  ID                        id-oc-inetSubscriber }
+
+-- X-ORIGIN: "iPlanet Delegated Administrator"
+inetAdmin OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { aci
+                              | memberOf
+                              | adminRole }
+  LDAP-NAME                 {"inetAdmin"}
+  LDAP-DESC                 "Marker for an administrative group or user"
+  ID                        id-oc-inetAdmin }
+END

@@ -1,0 +1,275 @@
+-- Derived from data/ldap-schema/ldapmigration/50ns-delegated-admin.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 2 elements were omitted because another source file in this corpus defines the same OID.
+Ldapmigration50nsDelegatedAdmin DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  directoryString, dn, integer, owner, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  groupOfUniqueNames
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  memberOf
+    FROM OrganizationAndGroupSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) org-group-schema(166)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-nsNumDepts OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 556 }
+id-at-nsMaxDomains OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 561 }
+id-at-nsNumMailLists OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 558 }
+id-at-nsNumUsers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 554 }
+id-at-nsDefaultMaxDeptSize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 562 }
+id-at-nsMaxDepts OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 557 }
+id-at-nsdaCapability OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 563 }
+id-at-nsMaxUsers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 555 }
+id-at-nsMaxMailLists OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 559 }
+id-at-nsNumDomains OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 560 }
+id-at-nsdaModifiableBy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 565 }
+id-at-nsSearchFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 564 }
+id-at-nsDADomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 600 }
+id-oc-nsManagedISP OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 85 }
+id-oc-nsManagedDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 86 }
+id-oc-nsManagedOrgUnit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 87 }
+id-oc-nsManagedDept OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 88 }
+id-oc-nsManagedFamilyGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 89 }
+id-oc-nsManagedMailList OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 90 }
+id-oc-nsManagedPerson OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 91 }
+id-oc-nsManagedDeptAdminGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 111 }
+id-oc-nsUniquenessDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 115 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsNumDepts ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsNumDepts"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsNumDepts }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsMaxDomains ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsMaxDomains"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsMaxDomains }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsNumMailLists ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsNumMailLists"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsNumMailLists }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsNumUsers ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsNumUsers"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsNumUsers }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsDefaultMaxDeptSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsDefaultMaxDeptSize"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsDefaultMaxDeptSize }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsMaxDepts ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsMaxDepts"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsMaxDepts }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsdaCapability ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsdaCapability"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsdaCapability }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsMaxUsers ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsMaxUsers"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsMaxUsers }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsMaxMailLists ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsMaxMailLists"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsMaxMailLists }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsNumDomains ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsNumDomains"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsNumDomains }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsdaModifiableBy ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsdaModifiableBy"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsdaModifiableBy }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsSearchFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsSearchFilter"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsSearchFilter }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsDADomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsDADomain"}
+  LDAP-DESC                 "iPlanet Delegated Adminstrator defined attribute"
+  ID                        id-at-nsDADomain }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedISP OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsNumDomains }
+  LDAP-NAME                 {"nsManagedISP"}
+  LDAP-DESC                 "Delegated Admin marker for hosted root"
+  ID                        id-oc-nsManagedISP }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsNumUsers
+                              | nsMaxUsers
+                              | nsNumDepts
+                              | nsMaxDepts
+                              | nsNumMailLists
+                              | nsMaxMailLists
+                              | nsNumDomains
+                              | nsMaxDomains
+                              | nsDefaultMaxDeptSize
+                              | owner
+                              | nsdaModifiableBy }
+  LDAP-NAME                 {"nsManagedDomain"}
+  LDAP-DESC                 "Delegated Admin marker for managed domain"
+  ID                        id-oc-nsManagedDomain }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedOrgUnit OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { owner
+                              | nsdaModifiableBy }
+  LDAP-NAME                 {"nsManagedOrgUnit"}
+  LDAP-DESC                 "Delegated Admin marker for managed organizationunit"
+  ID                        id-oc-nsManagedOrgUnit }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedDept OBJECT-CLASS ::= {
+  SUBCLASS OF               { groupOfUniqueNames }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsNumUsers
+                              | nsMaxUsers
+                              | nsNumDepts
+                              | nsMaxDepts
+                              | owner
+                              | nsdaModifiableBy }
+  LDAP-NAME                 {"nsManagedDept"}
+  LDAP-DESC                 "Delegated Admin marker for managed department"
+  ID                        id-oc-nsManagedDept }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedFamilyGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsNumUsers
+                              | nsMaxUsers
+                              | owner
+                              | nsdaModifiableBy }
+  LDAP-NAME                 {"nsManagedFamilyGroup"}
+  LDAP-DESC                 "Delegated Admin marker for managed familygroup"
+  ID                        id-oc-nsManagedFamilyGroup }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedMailList OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsNumUsers
+                              | nsMaxUsers
+                              | owner
+                              | nsdaModifiableBy }
+  LDAP-NAME                 {"nsManagedMailList"}
+  LDAP-DESC                 "Delegated Admin marker for managed mailing list"
+  ID                        id-oc-nsManagedMailList }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { memberOf
+                              | nsDADomain
+                              | nsdaCapability
+                              | nsSearchFilter
+                              | owner
+                              | nsdaModifiableBy }
+  LDAP-NAME                 {"nsManagedPerson"}
+  LDAP-DESC                 "Delegated Admin marker for managed person"
+  ID                        id-oc-nsManagedPerson }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsManagedDeptAdminGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  LDAP-NAME                 {"nsManagedDeptAdminGroup"}
+  LDAP-DESC                 "Delegated Admin marker for managed department admin group"
+  ID                        id-oc-nsManagedDeptAdminGroup }
+
+-- X-ORIGIN: "iPlanet Delegated Adminstrator"
+nsUniquenessDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  LDAP-NAME                 {"nsUniquenessDomain"}
+  LDAP-DESC                 "Delegated Admin marker for uniqueness domain"
+  ID                        id-oc-nsUniquenessDomain }
+END

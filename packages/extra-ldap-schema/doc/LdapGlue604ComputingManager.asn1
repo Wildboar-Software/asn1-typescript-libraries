@@ -1,0 +1,347 @@
+-- Derived from data/ldap-schema/glue/6-04-ComputingManager.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue604ComputingManager DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Manager
+    FROM LdapGlue509Manager ;
+
+-- Object identifiers
+
+id-at-gLUE2ComputingManagerReservation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 1 }
+id-at-gLUE2ComputingManagerBulkSubmission OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 2 }
+id-at-gLUE2ComputingManagerTotalPhysicalCPUs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 3 }
+id-at-gLUE2ComputingManagerTotalLogicalCPUs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 4 }
+id-at-gLUE2ComputingManagerTotalSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 5 }
+id-at-gLUE2ComputingManagerSlotsUsedByLocalJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 6 }
+id-at-gLUE2ComputingManagerSlotsUsedByGridJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 7 }
+id-at-gLUE2ComputingManagerHomogeneous OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 8 }
+id-at-gLUE2ComputingManagerNetworkInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 9 }
+id-at-gLUE2ComputingManagerLogicalCPUDistribution OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 10 }
+id-at-gLUE2ComputingManagerWorkingAreaShared OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 11 }
+id-at-gLUE2ComputingManagerWorkingAreaGuaranteed OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 12 }
+id-at-gLUE2ComputingManagerWorkingAreaTotal OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 13 }
+id-at-gLUE2ComputingManagerWorkingAreaFree OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 14 }
+id-at-gLUE2ComputingManagerWorkingAreaLifeTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 15 }
+id-at-gLUE2ComputingManagerWorkingAreaMultiSlotTotal OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 16 }
+id-at-gLUE2ComputingManagerWorkingAreaMultiSlotFree OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 17 }
+id-at-gLUE2ComputingManagerWorkingAreaMultiSlotLifeTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 18 }
+id-at-gLUE2ComputingManagerCacheTotal OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 19 }
+id-at-gLUE2ComputingManagerCacheFree OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 20 }
+id-at-gLUE2ComputingManagerTmpDir OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 21 }
+id-at-gLUE2ComputingManagerScratchDir OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 22 }
+id-at-gLUE2ComputingManagerApplicationDir OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 23 }
+id-at-gLUE2ComputingManagerComputingServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 24 }
+id-oc-gLUE2ComputingManager OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 20 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ComputingManagerReservation" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerReservation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerReservation"}
+  LDAP-DESC                 "True if the computing manager (i.e, LRMS) supports advance reservation"
+  ID                        id-at-gLUE2ComputingManagerReservation }
+
+-- initial capital of "GLUE2ComputingManagerBulkSubmission" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerBulkSubmission ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerBulkSubmission"}
+  LDAP-DESC                 "True if the computing manager (i.e, LRMS) supports the bulk submission"
+  ID                        id-at-gLUE2ComputingManagerBulkSubmission }
+
+-- initial capital of "GLUE2ComputingManagerTotalPhysicalCPUs" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerTotalPhysicalCPUs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerTotalPhysicalCPUs"}
+  LDAP-DESC                 "Number of managed physical CPUs accessible via any of the available endpoints (there is one physical CPU per socket)"
+  ID                        id-at-gLUE2ComputingManagerTotalPhysicalCPUs }
+
+-- initial capital of "GLUE2ComputingManagerTotalLogicalCPUs" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerTotalLogicalCPUs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerTotalLogicalCPUs"}
+  LDAP-DESC                 "Number of managed logical CPUs accessible via any of the available endpoints (a logical CPU corresponds to a CPU visible to the operating system)"
+  ID                        id-at-gLUE2ComputingManagerTotalLogicalCPUs }
+
+-- initial capital of "GLUE2ComputingManagerTotalSlots" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerTotalSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerTotalSlots"}
+  LDAP-DESC                 "Number of managed slots"
+  ID                        id-at-gLUE2ComputingManagerTotalSlots }
+
+-- initial capital of "GLUE2ComputingManagerSlotsUsedByLocalJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerSlotsUsedByLocalJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerSlotsUsedByLocalJobs"}
+  LDAP-DESC                 "Number of slots used by jobs submitted via local interface"
+  ID                        id-at-gLUE2ComputingManagerSlotsUsedByLocalJobs }
+
+-- initial capital of "GLUE2ComputingManagerSlotsUsedByGridJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerSlotsUsedByGridJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerSlotsUsedByGridJobs"}
+  LDAP-DESC                 "Number of slots used by jobs submitted via a Grid interface"
+  ID                        id-at-gLUE2ComputingManagerSlotsUsedByGridJobs }
+
+-- initial capital of "GLUE2ComputingManagerHomogeneous" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerHomogeneous ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerHomogeneous"}
+  LDAP-DESC                 "True if the computing manager has only one type of execution environment"
+  ID                        id-at-gLUE2ComputingManagerHomogeneous }
+
+-- initial capital of "GLUE2ComputingManagerNetworkInfo" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerNetworkInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerNetworkInfo"}
+  LDAP-DESC                 "Type of internal network available among all the managed execution environment instances"
+  ID                        id-at-gLUE2ComputingManagerNetworkInfo }
+
+-- initial capital of "GLUE2ComputingManagerLogicalCPUDistribution" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerLogicalCPUDistribution ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerLogicalCPUDistribution"}
+  LDAP-DESC                 "Syntax: X1:Y1, …, Xn:Yn where Xi is the number of logical CPUs and Yi is the number of boxes for the execution environment i"
+  ID                        id-at-gLUE2ComputingManagerLogicalCPUDistribution }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaShared" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaShared ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaShared"}
+  LDAP-DESC                 "A working area is an allocated storage extent that holds the home directories of the Grid jobs; this property is true if the working area is shared across different execution environment instances (i.e., cluster nodes)"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaShared }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaGuaranteed" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaGuaranteed ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaGuaranteed"}
+  LDAP-DESC                 "True if the job is guaranteed the full extent of the WorkingAreaTotal attribute"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaGuaranteed }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaTotal" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaTotal ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaTotal"}
+  LDAP-DESC                 "Total size of working area available to all the Grid jobs either as a shared area across all the execution environments (WorkingAreaShared is true) or local to a certain execution environment (WorkingAreaShared is false); even if individual quota per job is enforced, this is not advertised"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaTotal }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaFree" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaFree ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaFree"}
+  LDAP-DESC                 "Free size of working area available to all the Grid jobs either as a shared area across all the execution environments (WorkingAreaShared is true) or local to a certain execution environment (WorkingAreaShared is false); (even if individual quota per job is enforced, this is not advertised)"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaFree }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaLifeTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaLifeTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaLifeTime"}
+  LDAP-DESC                 "Lifetime of the Grid job files present in the working area; the lifetime is related to the end time of thejob"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaLifeTime }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaMultiSlotTotal" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaMultiSlotTotal ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaMultiSlotTotal"}
+  LDAP-DESC                 "Total size of working area available to all the multi-slot Grid jobs either as a shared area across all the execution environments (WorkingAreaShared is true) or local to a certain execution environment (WorkingAreaShared is false); even if individual quota per job is enforced, this is not advertised"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaMultiSlotTotal }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaMultiSlotFree" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaMultiSlotFree ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaMultiSlotFree"}
+  LDAP-DESC                 "Free size of working area available to all the multi-slot Grid jobs either as a shared area across all the execution environments (WorkingAreaShared is true) or local to a certain execution environment (WorkingAreaShared is false); (even if individual quota per job is enforced, this is not advertised)"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaMultiSlotFree }
+
+-- initial capital of "GLUE2ComputingManagerWorkingAreaMultiSlotLifeTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerWorkingAreaMultiSlotLifeTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerWorkingAreaMultiSlotLifeTime"}
+  LDAP-DESC                 "Lifetime of the multi-slot Grid job files present in the working area; the lifetime is related to the end time of the job"
+  ID                        id-at-gLUE2ComputingManagerWorkingAreaMultiSlotLifeTime }
+
+-- initial capital of "GLUE2ComputingManagerCacheTotal" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerCacheTotal ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerCacheTotal"}
+  LDAP-DESC                 "Total size of a temporary storage area where frequently accessed data can be stored for rapid access by consequent Grid jobs"
+  ID                        id-at-gLUE2ComputingManagerCacheTotal }
+
+-- initial capital of "GLUE2ComputingManagerCacheFree" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerCacheFree ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerCacheFree"}
+  LDAP-DESC                 "Free size of a temporary storage area where frequently accessed data can be stored for rapid access by consequent Grid jobs; in the computation of the free size, files which are not claimed by any job can be considered as deleted"
+  ID                        id-at-gLUE2ComputingManagerCacheFree }
+
+-- initial capital of "GLUE2ComputingManagerTmpDir" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerTmpDir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerTmpDir"}
+  LDAP-DESC                 "The absolute path of a temporary directory local to an execution environment instance (i.e., worker node). This directory must be available to programs using the normal file access primitives (open/read/write/close)"
+  ID                        id-at-gLUE2ComputingManagerTmpDir }
+
+-- initial capital of "GLUE2ComputingManagerScratchDir" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerScratchDir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerScratchDir"}
+  LDAP-DESC                 "The absolute path for a shared directory available for application data. Typically a POSIX accessible transient disk space shared between the execution environment instances. It may be used by MPI applications or to store intermediate files that need further processing by local jobs or as staging area, specially if the execution environment instances have no Internet connectivity"
+  ID                        id-at-gLUE2ComputingManagerScratchDir }
+
+-- initial capital of "GLUE2ComputingManagerApplicationDir" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerApplicationDir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerApplicationDir"}
+  LDAP-DESC                 "The path of the directory available for application installation. Typically a PO-SIX accessible disk space with transient to permanent allocation to the users"
+  ID                        id-at-gLUE2ComputingManagerApplicationDir }
+
+-- initial capital of "GLUE2ComputingManagerComputingServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingManagerComputingServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingManagerComputingServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingManagerComputingServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ComputingManager" lowercased so the assignment is a valuereference.
+gLUE2ComputingManager OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Manager }
+  MAY CONTAIN               { gLUE2ComputingManagerReservation
+                              | gLUE2ComputingManagerBulkSubmission
+                              | gLUE2ComputingManagerTotalPhysicalCPUs
+                              | gLUE2ComputingManagerTotalLogicalCPUs
+                              | gLUE2ComputingManagerTotalSlots
+                              | gLUE2ComputingManagerSlotsUsedByLocalJobs
+                              | gLUE2ComputingManagerSlotsUsedByGridJobs
+                              | gLUE2ComputingManagerHomogeneous
+                              | gLUE2ComputingManagerNetworkInfo
+                              | gLUE2ComputingManagerLogicalCPUDistribution
+                              | gLUE2ComputingManagerWorkingAreaShared
+                              | gLUE2ComputingManagerWorkingAreaGuaranteed
+                              | gLUE2ComputingManagerWorkingAreaTotal
+                              | gLUE2ComputingManagerWorkingAreaFree
+                              | gLUE2ComputingManagerWorkingAreaLifeTime
+                              | gLUE2ComputingManagerWorkingAreaMultiSlotTotal
+                              | gLUE2ComputingManagerWorkingAreaMultiSlotFree
+                              | gLUE2ComputingManagerWorkingAreaMultiSlotLifeTime
+                              | gLUE2ComputingManagerCacheTotal
+                              | gLUE2ComputingManagerCacheFree
+                              | gLUE2ComputingManagerTmpDir
+                              | gLUE2ComputingManagerScratchDir
+                              | gLUE2ComputingManagerApplicationDir
+                              | gLUE2ComputingManagerComputingServiceForeignKey }
+  LDAP-NAME                 {"GLUE2ComputingManager"}
+  LDAP-DESC                 "A software component locally managing one or more execution environments. It can describe also aggregated information about the managed resources. The computing manager is also known as Local Resource Management System (LRMS)."
+  ID                        id-oc-gLUE2ComputingManager }
+END

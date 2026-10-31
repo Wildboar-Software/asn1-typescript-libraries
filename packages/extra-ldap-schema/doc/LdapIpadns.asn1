@@ -1,0 +1,545 @@
+-- Derived from data/ldap-schema/ipadns.ldif
+-- Upstream: https://github.com/hatchetation/freeipa/blob/6c55f2a5af508a08c19f07d913c491192ea0f0bb/install/share/60ipadns.ldif#L7
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 5 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapIpadns DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+    commonName, ia5String, integer, integerMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  aRecord, cNAMERecord, mDRecord, mxRecord, nSRecord
+    FROM DNSFramework
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) dns(2)} WITH SUCCESSORS
+
+  managedBy
+    FROM Ldap60basev2 ;
+
+-- Object identifiers
+
+id-at-dNSTTL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 0 0 }
+id-at-dNSClass OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 0 1 }
+id-at-pTRRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 12 }
+id-at-hInfoRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 13 }
+id-at-mInfoRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 14 }
+id-at-tXTRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 16 }
+id-at-aFSDBRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 18 }
+id-at-sigRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 24 }
+id-at-keyRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 25 }
+id-at-aAAARecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 28 }
+id-at-locRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 29 }
+id-at-nXTRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 30 }
+id-at-sRVRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 33 }
+id-at-nAPTRRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 35 }
+id-at-kXRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 36 }
+id-at-certRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 37 }
+id-at-a6Record OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 38 }
+id-at-dNameRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 39 }
+id-at-dSRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 43 }
+id-at-sSHFPRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 44 }
+id-at-rRSIGRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 46 }
+id-at-nSECRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 2428 20 1 47 }
+id-at-idnsName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 0 }
+id-at-idnsAllowDynUpdate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 1 }
+id-at-idnsZoneActive OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 2 }
+id-at-idnsSOAmName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 3 }
+id-at-idnsSOArName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 4 }
+id-at-idnsSOAserial OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 5 }
+id-at-idnsSOArefresh OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 6 }
+id-at-idnsSOAretry OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 7 }
+id-at-idnsSOAexpire OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 8 }
+id-at-idnsSOAminimum OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 9 }
+id-at-idnsUpdatePolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 10 }
+id-at-idnsAllowQuery OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 11 }
+id-at-idnsAllowTransfer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 12 }
+id-at-idnsAllowSyncPTR OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 13 }
+id-at-idnsForwardPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 14 }
+id-at-idnsForwarders OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 15 }
+id-at-idnsZoneRefresh OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 16 }
+id-at-idnsPersistentSearch OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 5 17 }
+id-oc-idnsRecord OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 6 0 }
+id-oc-idnsZone OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 6 1 }
+id-oc-idnsConfigObject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 6 2 }
+id-oc-ipaDNSZone OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 18 }
+
+-- Attribute types
+
+dNSTTL ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"dNSTTL"}
+  LDAP-DESC                 "An integer denoting time to live"
+  ID                        id-at-dNSTTL }
+
+dNSClass ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dNSClass"}
+  LDAP-DESC                 "The class of a resource record"
+  ID                        id-at-dNSClass }
+
+pTRRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"pTRRecord"}
+  LDAP-DESC                 "domain name pointer, RFC 1035"
+  ID                        id-at-pTRRecord }
+
+hInfoRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"hInfoRecord"}
+  LDAP-DESC                 "host information, RFC 1035"
+  ID                        id-at-hInfoRecord }
+
+mInfoRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mInfoRecord"}
+  LDAP-DESC                 "mailbox or mail list information, RFC 1035"
+  ID                        id-at-mInfoRecord }
+
+tXTRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"tXTRecord"}
+  LDAP-DESC                 "text string, RFC 1035"
+  ID                        id-at-tXTRecord }
+
+aFSDBRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"aFSDBRecord"}
+  LDAP-DESC                 "for AFS Data Base location, RFC 1183"
+  ID                        id-at-aFSDBRecord }
+
+-- initial capital of "SigRecord" lowercased so the assignment is a valuereference.
+sigRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"SigRecord"}
+  LDAP-DESC                 "Signature, RFC 2535"
+  ID                        id-at-sigRecord }
+
+-- initial capital of "KeyRecord" lowercased so the assignment is a valuereference.
+keyRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"KeyRecord"}
+  LDAP-DESC                 "Key, RFC 2535"
+  ID                        id-at-keyRecord }
+
+aAAARecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"aAAARecord"}
+  LDAP-DESC                 "IPv6 address, RFC 1886"
+  ID                        id-at-aAAARecord }
+
+-- initial capital of "LocRecord" lowercased so the assignment is a valuereference.
+locRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"LocRecord"}
+  LDAP-DESC                 "Location, RFC 1876"
+  ID                        id-at-locRecord }
+
+nXTRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nXTRecord"}
+  LDAP-DESC                 "non-existant, RFC 2535"
+  ID                        id-at-nXTRecord }
+
+sRVRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"sRVRecord"}
+  LDAP-DESC                 "service location, RFC 2782"
+  ID                        id-at-sRVRecord }
+
+nAPTRRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nAPTRRecord"}
+  LDAP-DESC                 "Naming Authority Pointer, RFC 2915"
+  ID                        id-at-nAPTRRecord }
+
+kXRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"kXRecord"}
+  LDAP-DESC                 "Key Exchange Delegation, RFC 2230"
+  ID                        id-at-kXRecord }
+
+certRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"certRecord"}
+  LDAP-DESC                 "certificate, RFC 2538"
+  ID                        id-at-certRecord }
+
+a6Record ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"a6Record"}
+  LDAP-DESC                 "A6 Record Type, RFC 2874"
+  ID                        id-at-a6Record }
+
+dNameRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dNameRecord"}
+  LDAP-DESC                 "Non-Terminal DNS Name Redirection, RFC 2672"
+  ID                        id-at-dNameRecord }
+
+dSRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dSRecord"}
+  LDAP-DESC                 "Delegation Signer, RFC 3658"
+  ID                        id-at-dSRecord }
+
+sSHFPRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"sSHFPRecord"}
+  LDAP-DESC                 "SSH Key Fingerprint, draft-ietf-secsh-dns-05.txt"
+  ID                        id-at-sSHFPRecord }
+
+rRSIGRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"rRSIGRecord"}
+  LDAP-DESC                 "RRSIG, RFC 3755"
+  ID                        id-at-rRSIGRecord }
+
+nSECRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nSECRecord"}
+  LDAP-DESC                 "NSEC, RFC 3755"
+  ID                        id-at-nSECRecord }
+
+-- X-ORIGIN: "IPA v2"
+idnsName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsName"}
+  LDAP-DESC                 "DNS FQDN"
+  ID                        id-at-idnsName }
+
+-- X-ORIGIN: "IPA v2"
+idnsAllowDynUpdate ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"idnsAllowDynUpdate"}
+  LDAP-DESC                 "permit dynamic updates on this zone"
+  ID                        id-at-idnsAllowDynUpdate }
+
+-- X-ORIGIN: "IPA v2"
+idnsZoneActive ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"idnsZoneActive"}
+  LDAP-DESC                 "define if the zone is considered in use"
+  ID                        id-at-idnsZoneActive }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOAmName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOAmName"}
+  LDAP-DESC                 "SOA Name"
+  ID                        id-at-idnsSOAmName }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOArName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOArName"}
+  LDAP-DESC                 "SOA root Name"
+  ID                        id-at-idnsSOArName }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOAserial ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOAserial"}
+  LDAP-DESC                 "SOA serial number"
+  ID                        id-at-idnsSOAserial }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOArefresh ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOArefresh"}
+  LDAP-DESC                 "SOA refresh value"
+  ID                        id-at-idnsSOArefresh }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOAretry ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOAretry"}
+  LDAP-DESC                 "SOA retry value"
+  ID                        id-at-idnsSOAretry }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOAexpire ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOAexpire"}
+  LDAP-DESC                 "SOA expire value"
+  ID                        id-at-idnsSOAexpire }
+
+-- X-ORIGIN: "IPA v2"
+idnsSOAminimum ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsSOAminimum"}
+  LDAP-DESC                 "SOA minimum value"
+  ID                        id-at-idnsSOAminimum }
+
+-- X-ORIGIN: "IPA v2"
+idnsUpdatePolicy ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsUpdatePolicy"}
+  LDAP-DESC                 "DNS dynamic updates policy"
+  ID                        id-at-idnsUpdatePolicy }
+
+-- X-ORIGIN: "IPA v2"
+idnsAllowQuery ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsAllowQuery"}
+  LDAP-DESC                 "BIND9 allow-query ACL element"
+  ID                        id-at-idnsAllowQuery }
+
+-- X-ORIGIN: "IPA v2"
+idnsAllowTransfer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsAllowTransfer"}
+  LDAP-DESC                 "BIND9 allow-transfer ACL element"
+  ID                        id-at-idnsAllowTransfer }
+
+-- X-ORIGIN: "IPA v2"
+idnsAllowSyncPTR ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"idnsAllowSyncPTR"}
+  LDAP-DESC                 "permit synchronization of PTR records"
+  ID                        id-at-idnsAllowSyncPTR }
+
+-- X-ORIGIN: "IPA v2"
+idnsForwardPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsForwardPolicy"}
+  LDAP-DESC                 "forward policy: only or first"
+  ID                        id-at-idnsForwardPolicy }
+
+-- X-ORIGIN: "IPA v2"
+idnsForwarders ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"idnsForwarders"}
+  LDAP-DESC                 "list of forwarders"
+  ID                        id-at-idnsForwarders }
+
+-- X-ORIGIN: "IPA v2"
+idnsZoneRefresh ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"idnsZoneRefresh"}
+  LDAP-DESC                 "zone refresh interval"
+  ID                        id-at-idnsZoneRefresh }
+
+-- X-ORIGIN: "IPA v2"
+idnsPersistentSearch ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"idnsPersistentSearch"}
+  LDAP-DESC                 "allow persistent searches"
+  ID                        id-at-idnsPersistentSearch }
+
+-- Object classes
+
+idnsRecord OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { idnsName }
+  MAY CONTAIN               { commonName
+                              | idnsAllowDynUpdate
+                              | dNSTTL
+                              | dNSClass
+                              | aRecord
+                              | aAAARecord
+                              | a6Record
+                              | nSRecord
+                              | cNAMERecord
+                              | pTRRecord
+                              | sRVRecord
+                              | tXTRecord
+                              | mxRecord
+                              | mDRecord
+                              | hInfoRecord
+                              | mInfoRecord
+                              | aFSDBRecord
+                              | sigRecord
+                              | keyRecord
+                              | locRecord
+                              | nXTRecord
+                              | nAPTRRecord
+                              | kXRecord
+                              | certRecord
+                              | dNameRecord
+                              | dSRecord
+                              | sSHFPRecord
+                              | rRSIGRecord
+                              | nSECRecord }
+  LDAP-NAME                 {"idnsRecord"}
+  LDAP-DESC                 "dns Record, usually a host"
+  ID                        id-oc-idnsRecord }
+
+idnsZone OBJECT-CLASS ::= {
+  SUBCLASS OF               { idnsRecord }
+  MUST CONTAIN              { idnsName
+                              | idnsZoneActive
+                              | idnsSOAmName
+                              | idnsSOArName
+                              | idnsSOAserial
+                              | idnsSOArefresh
+                              | idnsSOAretry
+                              | idnsSOAexpire
+                              | idnsSOAminimum }
+  MAY CONTAIN               { idnsUpdatePolicy
+                              | idnsAllowQuery
+                              | idnsAllowTransfer
+                              | idnsAllowSyncPTR
+                              | idnsForwardPolicy
+                              | idnsForwarders }
+  LDAP-NAME                 {"idnsZone"}
+  LDAP-DESC                 "Zone class"
+  ID                        id-oc-idnsZone }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+idnsConfigObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { idnsForwardPolicy
+                              | idnsForwarders
+                              | idnsAllowSyncPTR
+                              | idnsZoneRefresh
+                              | idnsPersistentSearch }
+  LDAP-NAME                 {"idnsConfigObject"}
+  LDAP-DESC                 "DNS global config options"
+  ID                        id-oc-idnsConfigObject }
+
+-- X-ORIGIN: "IPA v3"
+ipaDNSZone OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { idnsName }
+  MAY CONTAIN               { managedBy }
+  LDAP-NAME                 {"ipaDNSZone"}
+  ID                        id-oc-ipaDNSZone }
+END

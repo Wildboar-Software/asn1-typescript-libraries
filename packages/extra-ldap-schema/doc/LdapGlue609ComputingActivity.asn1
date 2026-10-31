@@ -1,0 +1,537 @@
+-- Derived from data/ldap-schema/glue/6-09-ComputingActivity.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapGlue609ComputingActivity DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-gLUE2ComputingActivityType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 1 }
+id-at-gLUE2ComputingActivityIDFromEndpoint OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 2 }
+id-at-gLUE2ComputingActivityLocalIDFromManager OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 3 }
+id-at-gLUE2ComputingActivityJobDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 4 }
+id-at-gLUE2ComputingActivityState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 5 }
+id-at-gLUE2ComputingActivityRestartState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 6 }
+id-at-gLUE2ComputingActivityExitCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 7 }
+id-at-gLUE2ComputingActivityComputingManagerExitCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 8 }
+id-at-gLUE2ComputingActivityError OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 9 }
+id-at-gLUE2ComputingActivityWaitingPosition OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 10 }
+id-at-gLUE2ComputingActivityUserDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 11 }
+id-at-gLUE2ComputingActivityOwner OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 12 }
+id-at-gLUE2ComputingActivityLocalOwner OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 13 }
+id-at-gLUE2ComputingActivityRequestedTotalWallTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 14 }
+id-at-gLUE2ComputingActivityRequestedTotalCPUTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 15 }
+id-at-gLUE2ComputingActivityRequestedSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 16 }
+id-at-gLUE2ComputingActivityRequestedApplicationEnvironment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 17 }
+id-at-gLUE2ComputingActivityStdIn OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 18 }
+id-at-gLUE2ComputingActivityStdOut OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 19 }
+id-at-gLUE2ComputingActivityStdErr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 20 }
+id-at-gLUE2ComputingActivityLogDir OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 21 }
+id-at-gLUE2ComputingActivityExecutionNode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 22 }
+id-at-gLUE2ComputingActivityQueue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 23 }
+id-at-gLUE2ComputingActivityUsedTotalWallTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 24 }
+id-at-gLUE2ComputingActivityUsedTotalCPUTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 25 }
+id-at-gLUE2ComputingActivityUsedMainMemory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 26 }
+id-at-gLUE2ComputingActivitySubmissionTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 27 }
+id-at-gLUE2ComputingActivityComputingManagerSubmissionTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 28 }
+id-at-gLUE2ComputingActivityStartTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 29 }
+id-at-gLUE2ComputingActivityComputingManagerEndTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 30 }
+id-at-gLUE2ComputingActivityEndTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 31 }
+id-at-gLUE2ComputingActivityWorkingAreaEraseTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 32 }
+id-at-gLUE2ComputingActivityProxyExpirationTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 33 }
+id-at-gLUE2ComputingActivitySubmissionHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 34 }
+id-at-gLUE2ComputingActivitySubmissionClientName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 35 }
+id-at-gLUE2ComputingActivityOtherMessages OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 36 }
+id-at-gLUE2ComputingActivityComputingEndpointForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 37 }
+id-at-gLUE2ComputingActivityComputingShareForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 38 }
+id-at-gLUE2ComputingActivityExecutionEnvironmentForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 39 }
+id-oc-gLUE2ComputingActivity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 25 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ComputingActivityType" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityType"}
+  LDAP-DESC                 "Type of computing activity"
+  ID                        id-at-gLUE2ComputingActivityType }
+
+-- initial capital of "GLUE2ComputingActivityIDFromEndpoint" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityIDFromEndpoint ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityIDFromEndpoint"}
+  LDAP-DESC                 "The job ID as assigned by the computing endpoint"
+  ID                        id-at-gLUE2ComputingActivityIDFromEndpoint }
+
+-- initial capital of "GLUE2ComputingActivityLocalIDFromManager" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityLocalIDFromManager ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityLocalIDFromManager"}
+  LDAP-DESC                 "The local ID of the job as assigned by the computing manager (i.e., LRMS)"
+  ID                        id-at-gLUE2ComputingActivityLocalIDFromManager }
+
+-- initial capital of "GLUE2ComputingActivityJobDescription" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityJobDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityJobDescription"}
+  LDAP-DESC                 "Job description language used to specify the job request"
+  ID                        id-at-gLUE2ComputingActivityJobDescription }
+
+-- initial capital of "GLUE2ComputingActivityState" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityState"}
+  LDAP-DESC                 "The state of the job according to the Grid state model for jobs"
+  ID                        id-at-gLUE2ComputingActivityState }
+
+-- initial capital of "GLUE2ComputingActivityRestartState" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityRestartState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityRestartState"}
+  LDAP-DESC                 "The state from which a failed job can restart upon a client request"
+  ID                        id-at-gLUE2ComputingActivityRestartState }
+
+-- initial capital of "GLUE2ComputingActivityExitCode" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityExitCode ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityExitCode"}
+  LDAP-DESC                 "The exit code as returned by the executable of the job"
+  ID                        id-at-gLUE2ComputingActivityExitCode }
+
+-- initial capital of "GLUE2ComputingActivityComputingManagerExitCode" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityComputingManagerExitCode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityComputingManagerExitCode"}
+  LDAP-DESC                 "The exit code provided by the computing manager (i.e., LRMS)"
+  ID                        id-at-gLUE2ComputingActivityComputingManagerExitCode }
+
+-- initial capital of "GLUE2ComputingActivityError" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityError ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityError"}
+  LDAP-DESC                 "Error messages as provided by the software components involved in the management of the job"
+  ID                        id-at-gLUE2ComputingActivityError }
+
+-- initial capital of "GLUE2ComputingActivityWaitingPosition" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityWaitingPosition ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityWaitingPosition"}
+  LDAP-DESC                 "For a waiting job in the computing manager (i.e., LRMS), the position of the job in the queue"
+  ID                        id-at-gLUE2ComputingActivityWaitingPosition }
+
+-- initial capital of "GLUE2ComputingActivityUserDomain" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityUserDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityUserDomain"}
+  LDAP-DESC                 "User domain selected by the job owner in the job submission request (an owner can belong to several user domains, it should decide which one to choose when submitting a job)"
+  ID                        id-at-gLUE2ComputingActivityUserDomain }
+
+-- initial capital of "GLUE2ComputingActivityOwner" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityOwner ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityOwner"}
+  LDAP-DESC                 "The Grid identity of the jobs owner; in case of anonymity is required, the value CONFIDENTIAL should be advertised"
+  ID                        id-at-gLUE2ComputingActivityOwner }
+
+-- initial capital of "GLUE2ComputingActivityLocalOwner" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityLocalOwner ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityLocalOwner"}
+  LDAP-DESC                 "The local user name to which the jobs owner is mapped into"
+  ID                        id-at-gLUE2ComputingActivityLocalOwner }
+
+-- initial capital of "GLUE2ComputingActivityRequestedTotalWallTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityRequestedTotalWallTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityRequestedTotalWallTime"}
+  LDAP-DESC                 "The total wall clock time requested by the job; for multi-slot jobs, it represents the sum of wall clock time needed in each required slot"
+  ID                        id-at-gLUE2ComputingActivityRequestedTotalWallTime }
+
+-- initial capital of "GLUE2ComputingActivityRequestedTotalCPUTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityRequestedTotalCPUTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityRequestedTotalCPUTime"}
+  LDAP-DESC                 "The total CPU time requested by the job for multi-slot jobs, it represents the sum of CPU time needed in each required slot"
+  ID                        id-at-gLUE2ComputingActivityRequestedTotalCPUTime }
+
+-- initial capital of "GLUE2ComputingActivityRequestedSlots" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityRequestedSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityRequestedSlots"}
+  LDAP-DESC                 "The number of requested slots"
+  ID                        id-at-gLUE2ComputingActivityRequestedSlots }
+
+-- initial capital of "GLUE2ComputingActivityRequestedApplicationEnvironment" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityRequestedApplicationEnvironment ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityRequestedApplicationEnvironment"}
+  LDAP-DESC                 "Serialization of the Name and Version of the requested Application Environment to match the Name and Version properties of the Application Environment (the serialization of the Name and Version is delegated to the implementers)"
+  ID                        id-at-gLUE2ComputingActivityRequestedApplicationEnvironment }
+
+-- initial capital of "GLUE2ComputingActivityStdIn" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityStdIn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityStdIn"}
+  LDAP-DESC                 "The name of the file which is used as the standard input of the job"
+  ID                        id-at-gLUE2ComputingActivityStdIn }
+
+-- initial capital of "GLUE2ComputingActivityStdOut" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityStdOut ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityStdOut"}
+  LDAP-DESC                 "The name of the file which contains the standard output of the job"
+  ID                        id-at-gLUE2ComputingActivityStdOut }
+
+-- initial capital of "GLUE2ComputingActivityStdErr" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityStdErr ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityStdErr"}
+  LDAP-DESC                 "The name of the file which contains the standard error of the job"
+  ID                        id-at-gLUE2ComputingActivityStdErr }
+
+-- initial capital of "GLUE2ComputingActivityLogDir" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityLogDir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityLogDir"}
+  LDAP-DESC                 "The name of the directory which contains the logs related to the job and generated by the Grid layer (usually the directory is private to the job)"
+  ID                        id-at-gLUE2ComputingActivityLogDir }
+
+-- initial capital of "GLUE2ComputingActivityExecutionNode" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityExecutionNode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityExecutionNode"}
+  LDAP-DESC                 "Hostname associated to the execution environment instance (i.e., worker node) running the job; multi-node jobs are described by several instances of this attribute"
+  ID                        id-at-gLUE2ComputingActivityExecutionNode }
+
+-- initial capital of "GLUE2ComputingActivityQueue" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityQueue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityQueue"}
+  LDAP-DESC                 "The name of the Computing Manager (i.e, LRMS) queue to which this job was queued"
+  ID                        id-at-gLUE2ComputingActivityQueue }
+
+-- initial capital of "GLUE2ComputingActivityUsedTotalWallTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityUsedTotalWallTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityUsedTotalWallTime"}
+  LDAP-DESC                 "The totally consumed wall clock time by the job (in case of multi-slot jobs, this value refers to the sum of the wall clock time consumed in each slot)"
+  ID                        id-at-gLUE2ComputingActivityUsedTotalWallTime }
+
+-- initial capital of "GLUE2ComputingActivityUsedTotalCPUTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityUsedTotalCPUTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityUsedTotalCPUTime"}
+  LDAP-DESC                 "The totally consumed CPU time by the job (in case of multi-slot jobs, this value refers to the sum of the consumed CPU time in each slot)"
+  ID                        id-at-gLUE2ComputingActivityUsedTotalCPUTime }
+
+-- initial capital of "GLUE2ComputingActivityUsedMainMemory" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityUsedMainMemory ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityUsedMainMemory"}
+  LDAP-DESC                 "The RAM used by the job"
+  ID                        id-at-gLUE2ComputingActivityUsedMainMemory }
+
+-- initial capital of "GLUE2ComputingActivitySubmissionTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivitySubmissionTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivitySubmissionTime"}
+  LDAP-DESC                 "Time when the job was submitted to a computing endpoint"
+  ID                        id-at-gLUE2ComputingActivitySubmissionTime }
+
+-- initial capital of "GLUE2ComputingActivityComputingManagerSubmissionTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityComputingManagerSubmissionTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityComputingManagerSubmissionTime"}
+  LDAP-DESC                 "Time when the job was submitted to the Computing Manager (i.e., LRMS) by the Grid layer"
+  ID                        id-at-gLUE2ComputingActivityComputingManagerSubmissionTime }
+
+-- initial capital of "GLUE2ComputingActivityStartTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityStartTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityStartTime"}
+  LDAP-DESC                 "Time when the job entered in the Computing Manager (i.e., LRMS) running state"
+  ID                        id-at-gLUE2ComputingActivityStartTime }
+
+-- initial capital of "GLUE2ComputingActivityComputingManagerEndTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityComputingManagerEndTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityComputingManagerEndTime"}
+  LDAP-DESC                 "Time when the job entered its final Computing Manager (i.e., LRMS) state"
+  ID                        id-at-gLUE2ComputingActivityComputingManagerEndTime }
+
+-- initial capital of "GLUE2ComputingActivityEndTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityEndTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityEndTime"}
+  LDAP-DESC                 "Time when the job entered its final Grid state"
+  ID                        id-at-gLUE2ComputingActivityEndTime }
+
+-- initial capital of "GLUE2ComputingActivityWorkingAreaEraseTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityWorkingAreaEraseTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityWorkingAreaEraseTime"}
+  LDAP-DESC                 "A working area is an allocated storage extent that holds the home directories of the Grid jobs; the time when the dedicated working area of this job will be removed"
+  ID                        id-at-gLUE2ComputingActivityWorkingAreaEraseTime }
+
+-- initial capital of "GLUE2ComputingActivityProxyExpirationTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityProxyExpirationTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityProxyExpirationTime"}
+  LDAP-DESC                 "The expiration time of the proxy related to the job"
+  ID                        id-at-gLUE2ComputingActivityProxyExpirationTime }
+
+-- initial capital of "GLUE2ComputingActivitySubmissionHost" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivitySubmissionHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivitySubmissionHost"}
+  LDAP-DESC                 "The name of the host from which the job was submitted (e.g., IP address, port and host name)"
+  ID                        id-at-gLUE2ComputingActivitySubmissionHost }
+
+-- initial capital of "GLUE2ComputingActivitySubmissionClientName" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivitySubmissionClientName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivitySubmissionClientName"}
+  LDAP-DESC                 "The name of the software client which was used to submit the job"
+  ID                        id-at-gLUE2ComputingActivitySubmissionClientName }
+
+-- initial capital of "GLUE2ComputingActivityOtherMessages" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityOtherMessages ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityOtherMessages"}
+  LDAP-DESC                 "Optional job messages provided by either the Grid Layer or the Computing Manager"
+  ID                        id-at-gLUE2ComputingActivityOtherMessages }
+
+-- initial capital of "GLUE2ComputingActivityComputingEndpointForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityComputingEndpointForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityComputingEndpointForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingActivityComputingEndpointForeignKey }
+
+-- initial capital of "GLUE2ComputingActivityComputingShareForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityComputingShareForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityComputingShareForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingActivityComputingShareForeignKey }
+
+-- initial capital of "GLUE2ComputingActivityExecutionEnvironmentForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingActivityExecutionEnvironmentForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingActivityExecutionEnvironmentForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingActivityExecutionEnvironmentForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ComputingActivity" lowercased so the assignment is a valuereference.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+gLUE2ComputingActivity OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gLUE2ComputingActivityState
+                              | gLUE2ComputingActivityOwner }
+  MAY CONTAIN               { gLUE2ComputingActivityType
+                              | gLUE2ComputingActivityIDFromEndpoint
+                              | gLUE2ComputingActivityLocalIDFromManager
+                              | gLUE2ComputingActivityJobDescription
+                              | gLUE2ComputingActivityRestartState
+                              | gLUE2ComputingActivityExitCode
+                              | gLUE2ComputingActivityComputingManagerExitCode
+                              | gLUE2ComputingActivityError
+                              | gLUE2ComputingActivityWaitingPosition
+                              | gLUE2ComputingActivityUserDomain
+                              | gLUE2ComputingActivityLocalOwner
+                              | gLUE2ComputingActivityRequestedTotalWallTime
+                              | gLUE2ComputingActivityRequestedTotalCPUTime
+                              | gLUE2ComputingActivityRequestedSlots
+                              | gLUE2ComputingActivityRequestedApplicationEnvironment
+                              | gLUE2ComputingActivityStdIn
+                              | gLUE2ComputingActivityStdOut
+                              | gLUE2ComputingActivityStdErr
+                              | gLUE2ComputingActivityLogDir
+                              | gLUE2ComputingActivityExecutionNode
+                              | gLUE2ComputingActivityQueue
+                              | gLUE2ComputingActivityUsedTotalWallTime
+                              | gLUE2ComputingActivityUsedTotalCPUTime
+                              | gLUE2ComputingActivityUsedMainMemory
+                              | gLUE2ComputingActivitySubmissionTime
+                              | gLUE2ComputingActivityComputingManagerSubmissionTime
+                              | gLUE2ComputingActivityStartTime
+                              | gLUE2ComputingActivityComputingManagerEndTime
+                              | gLUE2ComputingActivityEndTime
+                              | gLUE2ComputingActivityWorkingAreaEraseTime
+                              | gLUE2ComputingActivityProxyExpirationTime
+                              | gLUE2ComputingActivitySubmissionHost
+                              | gLUE2ComputingActivitySubmissionClientName
+                              | gLUE2ComputingActivityOtherMessages
+                              | gLUE2ComputingActivityComputingEndpointForeignKey
+                              | gLUE2ComputingActivityComputingShareForeignKey
+                              | gLUE2ComputingActivityExecutionEnvironmentForeignKey }
+  LDAP-NAME                 {"GLUE2ComputingActivity"}
+  LDAP-DESC                 "An activity managed by an OGSA execution capability service"
+  ID                        id-oc-gLUE2ComputingActivity }
+END

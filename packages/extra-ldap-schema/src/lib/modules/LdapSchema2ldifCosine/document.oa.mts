@@ -1,0 +1,41 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
+// export { top } from "../InformationFramework/top.oa.mjs";
+// export { documentIdentifier } from "../LdapSchema2ldifCosine/documentIdentifier.oa.mjs";
+// export { id_oc_document } from "../LdapSchema2ldifCosine/id-oc-document.va.mjs";
+
+
+/**
+ * @summary document
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * document OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   MUST CONTAIN              { documentIdentifier }
+ *   MAY CONTAIN               { commonName
+ *                               | description
+ *                               | seeAlso
+ *                               | localityName
+ *                               | organizationName
+ *                               | organizationalUnitName
+ *                               | documentTitle
+ *                               | documentVersion
+ *                               | documentAuthor
+ *                               | documentLocation
+ *                               | documentPublisher }
+ *   LDAP-NAME                 {"document"}
+ *   ID                        id-oc-document }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const document: OBJECT_CLASS = undefined;
+
+/* eslint-enable */
