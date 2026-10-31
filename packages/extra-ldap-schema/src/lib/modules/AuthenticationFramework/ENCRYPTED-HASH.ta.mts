@@ -22,8 +22,6 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type ENCRYPTED_HASH<ToBeSigned> = BIT_STRING;
 
-let _cached_decoder_for_ENCRYPTED_HASH: $.ASN1Decoder<ENCRYPTED_HASH<ToBeSigned>> | null = null;
-
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) ENCRYPTED_HASH
  * @function
@@ -33,8 +31,6 @@ export
 function _get_decoder_for_ENCRYPTED_HASH<ToBeSigned>(_decode_ToBeSigned: $.ASN1Decoder<ToBeSigned>): $.ASN1Decoder<ENCRYPTED_HASH<ToBeSigned>> {
     return $._decodeBitString;
 }
-
-let _cached_encoder_for_ENCRYPTED_HASH: $.ASN1Encoder<ENCRYPTED_HASH<ToBeSigned>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) ENCRYPTED_HASH into an ASN.1 Element.

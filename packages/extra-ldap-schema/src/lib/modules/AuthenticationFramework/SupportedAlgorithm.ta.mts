@@ -5,6 +5,14 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type CertificatePoliciesSyntax,
+    _decode_CertificatePoliciesSyntax,
+    _encode_CertificatePoliciesSyntax,
+    type KeyUsage,
+    _decode_KeyUsage,
+    _encode_KeyUsage,
+} from "@wildboar/x500/CertificateExtensions";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 // export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 

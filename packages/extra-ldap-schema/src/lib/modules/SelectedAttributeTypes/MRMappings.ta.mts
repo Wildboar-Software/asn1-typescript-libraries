@@ -3,6 +3,11 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type MRMapping,
+    _decode_MRMapping,
+    _encode_MRMapping,
+} from "@wildboar/x500/ServiceAdministration";
 
 
 

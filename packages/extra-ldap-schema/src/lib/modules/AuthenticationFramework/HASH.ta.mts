@@ -117,8 +117,6 @@ const _extension_additions_list_spec_for_HASH: $.ComponentSpec[] = [
     
 ];
 
-let _cached_decoder_for_HASH: $.ASN1Decoder<HASH<ToBeHashed>> | null = null;
-
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) HASH
  * @function
@@ -144,8 +142,6 @@ function _get_decoder_for_HASH<ToBeHashed>(_decode_ToBeHashed: $.ASN1Decoder<ToB
     );
 };
 }
-
-let _cached_encoder_for_HASH: $.ASN1Encoder<HASH<ToBeHashed>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) HASH into an ASN.1 Element.

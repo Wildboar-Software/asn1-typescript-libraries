@@ -5,6 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type GeneralNames,
+    _decode_GeneralNames,
+    _encode_GeneralNames,
+} from "@wildboar/pki-stub";
 import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../AuthenticationFramework/HASH.ta.mjs";
 // export { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../AuthenticationFramework/HASH.ta.mjs";
 import { type HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
@@ -86,7 +91,7 @@ class InfoSyntax_pointer {
  */
 export
 const _root_component_type_list_1_spec_for_InfoSyntax_pointer: $.ComponentSpec[] = [
-    /* FIXME: name COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("name", false, $.hasTag(_TagClass.universal, 16)),
     new $.ComponentSpec("hash", true, $.hasTag(_TagClass.universal, 16))
 ];
 

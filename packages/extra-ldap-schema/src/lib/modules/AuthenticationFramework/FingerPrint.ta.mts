@@ -115,8 +115,6 @@ const _extension_additions_list_spec_for_FingerPrint: $.ComponentSpec[] = [
     
 ];
 
-let _cached_decoder_for_FingerPrint: $.ASN1Decoder<FingerPrint<ToBeFingerprinted>> | null = null;
-
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) FingerPrint
  * @function
@@ -142,8 +140,6 @@ function _get_decoder_for_FingerPrint<ToBeFingerprinted>(_decode_ToBeFingerprint
     );
 };
 }
-
-let _cached_encoder_for_FingerPrint: $.ASN1Encoder<FingerPrint<ToBeFingerprinted>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) FingerPrint into an ASN.1 Element.

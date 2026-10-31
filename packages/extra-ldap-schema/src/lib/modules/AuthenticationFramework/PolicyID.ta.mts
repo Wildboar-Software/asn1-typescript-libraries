@@ -1,5 +1,10 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type CertPolicyId,
+    _decode_CertPolicyId,
+    _encode_CertPolicyId,
+} from "@wildboar/x500/CertificateExtensions";
 
 
 

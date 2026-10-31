@@ -151,8 +151,6 @@ const _extension_additions_list_spec_for_SIGNED: $.ComponentSpec[] = [
     new $.ComponentSpec("altSignature", true, $.hasTag(_TagClass.universal, 3), 0, 4)
 ];
 
-let _cached_decoder_for_SIGNED: $.ASN1Decoder<SIGNED<ToBeSigned>> | null = null;
-
 /**
  * @summary Returns a function that will decode an ASN.1 element into a(n) SIGNED
  * @function
@@ -190,8 +188,6 @@ function _get_decoder_for_SIGNED<ToBeSigned>(_decode_ToBeSigned: $.ASN1Decoder<T
     );
 };
 }
-
-let _cached_encoder_for_SIGNED: $.ASN1Encoder<SIGNED<ToBeSigned>> | null = null;
 
 /**
  * @summary Returns a function that will encode a(n) SIGNED into an ASN.1 Element.
