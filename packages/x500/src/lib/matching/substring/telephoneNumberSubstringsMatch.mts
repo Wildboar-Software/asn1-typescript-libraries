@@ -1,61 +1,74 @@
-import type SubstringSelection from "../../types/SubstringSelection.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
-import type {
-    PreparedSubstring,
-    SubstringAssertionInput,
-} from "../readValue.mjs";
-import { readSubstringAssertion } from "../readValue.mjs";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     _decode_TelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import {
+    createSubstringsMatcher,
+    type AssertedSubstring,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
+    directoryAssertionPieces,
+    filterPieces,
+    matchPreparedString,
+    normalizeTelephoneNumber,
+    prepareStored,
+    type StringPreparer,
+} from "./prepareSubstrings.mjs";
+
+const RULE = "telephoneNumberSubstringsMatch";
+
+/** Same insignificant-character removal as `telephoneNumberMatch`. */
+const prepareTelephone: StringPreparer = (raw) => {
+    const normalized = normalizeTelephoneNumber(raw);
+    return normalized.length > 0 ? normalized : undefined;
+};
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.9
  * `telephoneNumberSubstringsMatch`.
  *
- * Substring match of a telephone-number `PrintableString`. Same as
- * `caseExactSubstringsMatch` except hyphens and spaces are
- * insignificant and are removed during character removal.
+ * Same partitioning as `caseExactSubstringsMatch`, except hyphens
+ * and spaces are insignificant. `+` and other characters remain,
+ * as in `telephoneNumberMatch`. The assertion syntax is
+ * `SubstringAssertion`. Filter components are telephone numbers
+ * (`PrintableString`). `control` is ignored.
  *
- * `assertion` is an element or a substring assertion. `value` is
- * an element or the telephone-number string. `selection` is unused.
- */
-export
-function telephoneNumberSubstringsMatch (
-    assertion: SubstringAssertionInput,
-    value: ASN1Element | string,
-    _selection?: SubstringSelection,
-): boolean {
-    const stored = typeof value === "string" ? value : _decode_TelephoneNumber(value);
-    return telephoneNumberSubstringsMatchTyped(readSubstringAssertion(assertion), stored);
-}
-
-/**
- * `telephoneNumberSubstringsMatch` on prepared pieces and a
- * telephone number. Digits are kept from the stored number; the
- * presented pieces are not rewritten.
- *
- * @param assertion Presented substring pieces.
- * @param value Stored telephone number.
- * @returns `true` when every piece matches the digit string.
+ * @param assertion Presented pieces, with hyphens and spaces removed.
+ * @param value Stored `TelephoneNumber`.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips hyphen and space removal.
  */
 export
 function telephoneNumberSubstringsMatchTyped (
-    assertion: readonly PreparedSubstring[],
-    value: string,
-): boolean {
-    const v: string = value.replace(/\D/g, "");
-    return assertion.every((str) => {
-        if (str.kind === "initial") {
-            return v.startsWith(str.value);
-        } else if (str.kind === "any") {
-            return (v.indexOf(str.value) > -1);
-        } else if (str.kind === "final") {
-            return v.endsWith(str.value);
-        } else {
-            return false;
-        }
-    });
+    assertion: AssertedSubstring<string>[],
+    value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const prepared = prepareStored(_decode_TelephoneNumber(value), prepareTelephone, flags);
+    if (prepared === undefined) {
+        return undefined;
+    }
+    return matchPreparedString(assertion, prepared, value, flags);
 }
+
+telephoneNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
+
+/**
+ * `telephoneNumberSubstringsMatch` as a `Matcher`.
+ */
+export
+const telephoneNumberSubstringsMatch: Matcher = createSubstringsMatcher(
+    (el) => directoryAssertionPieces(el, prepareTelephone, RULE),
+    telephoneNumberSubstringsMatchTyped,
+    (items) => filterPieces(
+        items,
+        (el) => _decode_TelephoneNumber(el),
+        prepareTelephone,
+        RULE,
+    ),
+);
 
 export default telephoneNumberSubstringsMatch;
