@@ -1,12 +1,18 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { type OBJECT_IDENTIFIER, compareBitStrings } from "@wildboar/asn1";
 import type { ASN1Element } from "@wildboar/asn1";
+import { compareBitStrings } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import { compareRDNSequence } from "@wildboar/dn";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.11 `uniqueMemberMatch`.
@@ -18,35 +24,18 @@ import { compareRDNSequence } from "@wildboar/dn";
  * value has none. `UniqueIdentifier` has no `NamedBitList`, so
  * trailing zero bits are significant.
  *
- * Each argument may be an `ASN1Element` or a `NameAndOptionalUID`.
- */
-export
-function uniqueMemberMatch (
-    assertion: ASN1Element | NameAndOptionalUID,
-    value: ASN1Element | NameAndOptionalUID,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return uniqueMemberMatchTyped(
-        readDecoded(assertion, _decode_NameAndOptionalUID),
-        readDecoded(value, _decode_NameAndOptionalUID),
-        getEqualityMatcher,
-    );
-}
-
-/**
- * `uniqueMemberMatch` on two decoded `NameAndOptionalUID` values.
- *
  * @param a Presented name and optional UID.
- * @param v Stored name and optional UID.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
- * @returns `true` when the distinguished names and UIDs match.
+ * @param value Stored name and optional UID, or that value already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  */
 export
 function uniqueMemberMatchTyped (
     a: NameAndOptionalUID,
-    v: NameAndOptionalUID,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
+    value: NameAndOptionalUID | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+): boolean | undefined {
+    const v = readDecoded(value, _decode_NameAndOptionalUID);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     if (!compareRDNSequence(a.dn, v.dn, getEqualityMatcher)) {
         return false;
     }
@@ -59,5 +48,16 @@ function uniqueMemberMatchTyped (
     }
     return compareBitStrings(a.uid, v.uid);
 }
+
+uniqueMemberMatchTyped satisfies TypedEquationFunction<NameAndOptionalUID>;
+
+/**
+ * `uniqueMemberMatch` as a `Matcher`.
+ */
+export
+const uniqueMemberMatch: Matcher = createEqualityMatcher(
+    _decode_NameAndOptionalUID,
+    uniqueMemberMatchTyped,
+);
 
 export default uniqueMemberMatch;

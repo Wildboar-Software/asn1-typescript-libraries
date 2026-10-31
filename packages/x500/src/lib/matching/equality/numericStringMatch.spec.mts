@@ -1,6 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeNumericString } from "@wildboar/asn1/functional";
-import numericStringMatch from "./numericStringMatch.mjs";
+import numericStringMatch_ from "./numericStringMatch.mjs";
+import { onStoredValue } from "./onStoredValue.mjs";
+
+const numericStringMatch = onStoredValue(numericStringMatch_);
 
 function numeric (value: string): ASN1Element {
     return _encodeNumericString(value, DER);

@@ -1,7 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
 import { _encode_IntEmail } from "../../modules/SelectedAttributeTypes/IntEmail.ta.mjs";
-import intEmailMatch from "./intEmailMatch.mjs";
+import intEmailMatch_ from "./intEmailMatch.mjs";
+import { onStoredValue } from "./onStoredValue.mjs";
+
+const intEmailMatch = onStoredValue(intEmailMatch_);
 
 function email (value: string): ASN1Element {
     return _encode_IntEmail(value, DER);

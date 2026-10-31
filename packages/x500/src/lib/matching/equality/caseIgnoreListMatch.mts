@@ -1,6 +1,33 @@
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Prepare and case-fold every presented line once.
+ */
+function prepareCaseIgnoreListAssertion (el: ASN1Element): string[] {
+    const lines = readDirectoryStringList(el);
+    const prepared = new Array<string>(lines.length);
+    for (let i = 0; i < lines.length; i++) {
+        const line = prepString(lines[i], { caseFold: true });
+        if (line === undefined) {
+            throw new ASN1CharactersError(
+                "caseIgnoreListMatch assertion failed string preparation",
+                el,
+            );
+        }
+        prepared[i] = line;
+    }
+    return prepared;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.7 `caseIgnoreListMatch`.
@@ -8,53 +35,49 @@ import { prepString } from "../../utils/prepString.mjs";
  * Equality of a SEQUENCE OF `UnboundedDirectoryString` (e.g.
  * postal address lines). TRUE iff both sequences have the same
  * number of strings and corresponding strings match as for
- * `caseIgnoreMatch` (case and insignificant spaces ignored).
+ * `caseIgnoreMatch`. Preparation failure of a stored line is
+ * UNDEFINED.
  *
- * Each argument may be an `ASN1Element`, a `PostalAddress` or
- * `CaseIgnoreList`, or an array of directory strings and/or
- * JavaScript strings.
- */
-export
-function caseIgnoreListMatch (
-    assertion: DirectoryStringListInput,
-    value: DirectoryStringListInput,
-): boolean {
-    return caseIgnoreListMatchTyped(
-        readDirectoryStringList(assertion),
-        readDirectoryStringList(value),
-    );
-}
-
-/**
- * `caseIgnoreListMatch` on two lists of strings. Each line is
- * prepared with case folding, matching `caseIgnoreMatch`.
- *
- * @param assertion Presented lines.
- * @param value Stored lines.
- * @returns `true` when every corresponding line matches.
+ * @param assertion Presented lines, already prepared and case-folded.
+ * @param value Stored list, or those lines already prepared.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
 function caseIgnoreListMatchTyped (
     assertion: readonly string[],
-    value: readonly string[],
-): boolean {
-    if (assertion.length !== value.length) {
+    value: DirectoryStringListInput,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const lines = readDirectoryStringList(value);
+    if (assertion.length !== lines.length) {
         return false;
     }
+    const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
     for (let i = 0; i < assertion.length; i++) {
-        const a: string | undefined = prepString(assertion[i], { caseFold: true });
-        const v: string | undefined = prepString(value[i], { caseFold: true });
-        if (a === undefined) {
-            return false;
+        const stored = normalized
+            ? lines[i]
+            : prepString(lines[i], { caseFold: true });
+        if (stored === undefined) {
+            return undefined;
         }
-        if (v === undefined) {
-            return false;
-        }
-        if (a !== v) {
+        if (assertion[i] !== stored) {
             return false;
         }
     }
     return true;
 }
+
+caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;
+
+/**
+ * `caseIgnoreListMatch` as a `Matcher`. An assertion line that
+ * cannot be prepared throws `ASN1CharactersError`.
+ */
+export
+const caseIgnoreListMatch: Matcher = createEqualityMatcher(
+    prepareCaseIgnoreListAssertion,
+    caseIgnoreListMatchTyped,
+);
 
 export default caseIgnoreListMatch;

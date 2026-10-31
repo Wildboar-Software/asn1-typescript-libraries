@@ -19,13 +19,16 @@ import {
 import { _encode_UnboundedDirectoryString } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { TimeSpecification } from "../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { UUIDPair } from "../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
-import { booleanMatch } from "./equality/booleanMatch.mjs";
-import { caseIgnoreListMatch } from "./equality/caseIgnoreListMatch.mjs";
-import { caseIgnoreMatch, caseIgnoreMatchTyped } from "./equality/caseIgnoreMatch.mjs";
-import { integerMatch } from "./equality/integerMatch.mjs";
-import { objectIdentifierMatch } from "./equality/objectIdentifierMatch.mjs";
-import { octetStringMatch } from "./equality/octetStringMatch.mjs";
-import { uUIDPairMatch } from "./equality/uUIDPairMatch.mjs";
+import { booleanMatchTyped } from "./equality/booleanMatch.mjs";
+import { caseIgnoreListMatchTyped } from "./equality/caseIgnoreListMatch.mjs";
+import caseIgnoreMatch, { caseIgnoreMatchTyped } from "./equality/caseIgnoreMatch.mjs";
+import integerMatch, { integerMatchTyped } from "./equality/integerMatch.mjs";
+import { objectIdentifierMatchTyped } from "./equality/objectIdentifierMatch.mjs";
+import { octetStringMatchTyped } from "./equality/octetStringMatch.mjs";
+import { uUIDPairMatchTyped } from "./equality/uUIDPairMatch.mjs";
+import {
+    AttributeTypeAndValue,
+} from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { caseIgnoreSubstringsMatch } from "./substring/caseIgnoreSubstringsMatch.mjs";
 import { storedPrefixMatch } from "./substring/storedPrefixMatch.mjs";
 import { evaluateLanguageContext } from "./context/languageContext.mjs";
@@ -38,32 +41,36 @@ function uds (value: string): ASN1Element {
     );
 }
 
+const attributeType = ObjectIdentifier.fromParts([ 1, 1, 1, 1 ]);
+
 describe("typed matching inputs", () => {
     it("compares directory strings across string, choice, and element", () => {
-        expect(caseIgnoreMatch("Hello", "hello")).toBe(true);
-        expect(caseIgnoreMatch("Hello", { uTF8String: "hello" })).toBe(true);
-        expect(caseIgnoreMatch({ printableString: "Hello" }, "hello")).toBe(true);
-        expect(caseIgnoreMatch("Hello", uds("hello"))).toBe(true);
-        expect(caseIgnoreMatch(uds("Hello"), { uTF8String: "world" })).toBe(false);
-        expect(caseIgnoreMatch(_encodeIA5String("Hello", DER), "hello")).toBe(true);
-        expect(caseIgnoreMatch("world", _encodeIA5String("Hello", DER))).toBe(false);
-        expect(caseIgnoreMatch(_encodeVisibleString("Hello", DER), "hello")).toBe(true);
-        expect(caseIgnoreMatch(_encodeObjectDescriptor("Hello", DER), "hello")).toBe(true);
-        expect(caseIgnoreMatchTyped("Hello", "hello")).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", "hello")).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", { uTF8String: "hello" })).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", uds("hello"))).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", { uTF8String: "world" })).toBe(false);
+        expect(caseIgnoreMatchTyped("hello", _encodeIA5String("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped("world", _encodeIA5String("Hello", DER))).toBe(false);
+        expect(caseIgnoreMatchTyped("hello", _encodeVisibleString("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodeObjectDescriptor("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatch(
+            uds("Hello"),
+            new AttributeTypeAndValue(attributeType, uds("hello")),
+        )).toBe(true);
     });
 
     it("compares integers across number, bigint, and element", () => {
         const two = _encodeInteger(2, DER);
-        expect(integerMatch(2, 2n)).toBe(true);
-        expect(integerMatch(two, 2)).toBe(true);
-        expect(integerMatch(2n, two)).toBe(true);
-        expect(integerMatch(2, 3n)).toBe(false);
-        expect(integerMatch(2n, 2n)).toBe(true);
+        expect(integerMatchTyped(2, 2n)).toBe(true);
+        expect(integerMatchTyped(2n, two)).toBe(true);
+        expect(integerMatchTyped(2, 3n)).toBe(false);
+        expect(integerMatchTyped(2n, 2n)).toBe(true);
+        expect(integerMatch(two, new AttributeTypeAndValue(attributeType, two))).toBe(true);
     });
 
     it("compares booleans, object identifiers, and octet strings heterogeneously", () => {
-        expect(booleanMatch(true, _encodeBoolean(true, DER))).toBe(true);
-        expect(booleanMatch(false, _encodeBoolean(true, DER))).toBe(false);
+        expect(booleanMatchTyped(true, _encodeBoolean(true, DER))).toBe(true);
+        expect(booleanMatchTyped(false, true)).toBe(false);
 
         const oid = ObjectIdentifier.fromString("2.5.4.3");
         const encoded = new DERElement(
@@ -72,13 +79,13 @@ describe("typed matching inputs", () => {
             ASN1UniversalType.objectIdentifier,
             oid,
         );
-        expect(objectIdentifierMatch("2.5.4.3", oid)).toBe(true);
-        expect(objectIdentifierMatch(oid, encoded)).toBe(true);
-        expect(objectIdentifierMatch("2.5.4.4", encoded)).toBe(false);
+        expect(objectIdentifierMatchTyped(oid, "2.5.4.3")).toBe(true);
+        expect(objectIdentifierMatchTyped(oid, encoded)).toBe(true);
+        expect(objectIdentifierMatchTyped(ObjectIdentifier.fromString("2.5.4.4"), encoded)).toBe(false);
 
         const bytes = new Uint8Array([ 1, 2, 3 ]);
-        expect(octetStringMatch(bytes, _encodeOctetString(bytes, DER))).toBe(true);
-        expect(octetStringMatch(new Uint8Array([ 1, 2 ]), bytes)).toBe(false);
+        expect(octetStringMatchTyped(bytes, _encodeOctetString(bytes, DER))).toBe(true);
+        expect(octetStringMatchTyped(new Uint8Array([ 1, 2 ]), bytes)).toBe(false);
     });
 
     it("substring-matches a string against an encoded directory string", () => {
@@ -88,12 +95,12 @@ describe("typed matching inputs", () => {
     });
 
     it("matches a string list against directory-string lines", () => {
-        expect(caseIgnoreListMatch(
-            [ "Main Street" ],
+        expect(caseIgnoreListMatchTyped(
+            [ "main street" ],
             [ { uTF8String: "main street" } ],
         )).toBe(true);
-        expect(caseIgnoreListMatch(
-            [ "Main Street" ],
+        expect(caseIgnoreListMatchTyped(
+            [ "main street" ],
             [ { printableString: "Other" } ],
         )).toBe(false);
     });
@@ -121,7 +128,7 @@ describe("typed matching inputs", () => {
         const pair = new UUIDPair(issuer, subject);
         const same = new UUIDPair(Uint8Array.from(issuer), Uint8Array.from(subject));
         const other = new UUIDPair(issuer, issuer);
-        expect(uUIDPairMatch(pair, same)).toBe(true);
-        expect(uUIDPairMatch(pair, other)).toBe(false);
+        expect(uUIDPairMatchTyped(pair, same)).toBe(true);
+        expect(uUIDPairMatchTyped(pair, other)).toBe(false);
     });
 });

@@ -1,51 +1,70 @@
-import type {
-    DirectoryStringInput,
-} from "../readValue.mjs";
-import { readDirectoryString } from "../readValue.mjs";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { readDirectoryString, type DirectoryStringInput } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Prepare the presented directory string once. `prepString` returns
+ * `undefined` for a prohibited character or a string that maps to
+ * empty. That is an assertion error, not UNDEFINED.
+ */
+function prepareCaseExactAssertion (el: ASN1Element): string {
+    const prepared = prepString(readDirectoryString(el));
+    if (prepared === undefined) {
+        throw new ASN1CharactersError(
+            "caseExactMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.1 `caseExactMatch`.
  *
- * Equality match of `UnboundedDirectoryString` /
- * `DirectoryString` after string preparation (clause 7). Case is
- * significant. Insignificant spaces are removed (clause 7.6). TRUE
- * iff the prepared strings have the same length and identical
- * corresponding characters.
+ * Equality of `UnboundedDirectoryString` / `DirectoryString` after
+ * string preparation (clause 7). Case is significant. Insignificant
+ * spaces are removed (clause 7.6). Preparation failure of a stored
+ * value is UNDEFINED.
  *
- * `assertion` and `value` are read independently. Each may be an
- * `ASN1Element`, a `DirectoryString` / `UnboundedDirectoryString`,
- * or a JavaScript `string`.
+ * @param assertion Presented string, already prepared.
+ * @param value Stored directory string, or that string already
+ *  prepared. `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
-function caseExactMatch (
-    assertion: DirectoryStringInput,
+function caseExactMatchTyped (
+    assertion: string,
     value: DirectoryStringInput,
-): boolean {
-    return caseExactMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-    );
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = readDirectoryString(value);
+    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
+        return assertion === raw;
+    }
+    const prepared = prepString(raw);
+    if (prepared === undefined) {
+        return undefined;
+    }
+    return assertion === prepared;
 }
 
+caseExactMatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `caseExactMatch` on two strings. Preparation happens here.
- *
- * @param assertion Presented string.
- * @param value Stored string.
- * @returns `true` when the prepared strings are equal.
+ * `caseExactMatch` as a `Matcher`. An assertion that cannot be
+ * prepared throws `ASN1CharactersError`.
  */
 export
-function caseExactMatchTyped (assertion: string, value: string): boolean {
-    const a: string | undefined = prepString(assertion);
-    const v: string | undefined = prepString(value);
-    if (a === undefined) {
-        return false;
-    }
-    if (v === undefined) {
-        return false;
-    }
-    return (a === v);
-}
+const caseExactMatch: Matcher = createEqualityMatcher(
+    prepareCaseExactAssertion,
+    caseExactMatchTyped,
+);
 
 export default caseExactMatch;

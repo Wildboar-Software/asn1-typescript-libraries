@@ -1,5 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 interface JidParts {
     local?: string;
@@ -53,16 +58,16 @@ function parseJid (raw: string): JidParts | undefined {
  * compared case-insensitively (UsernameCaseMapped). Invalid JIDs are
  * unequal rather than thrown.
  *
- * Each argument may be an `ASN1Element` or a string.
+ * @param assertion Presented JID.
+ * @param value Stored JID, or that JID already decoded.
  */
 export
-function jidMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    const presented = typeof assertion === "string" ? assertion : assertion.utf8String;
+function jidMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
-    const a = parseJid(presented);
+    const a = parseJid(assertion);
     const v = parseJid(stored);
     if (!a || !v) {
         return false;
@@ -73,7 +78,7 @@ function jidMatch (
     if (Boolean(a.resource) !== Boolean(v.resource)) {
         return false;
     }
-    if (!dnsNameMatchTyped(a.domain, v.domain)) {
+    if (dnsNameMatchTyped(a.domain, v.domain) !== true) {
         return false;
     }
     if (
@@ -87,5 +92,16 @@ function jidMatch (
     }
     return true;
 }
+
+jidMatchTyped satisfies TypedEquationFunction<string>;
+
+/**
+ * `jidMatch` as a `Matcher`.
+ */
+export
+const jidMatch: Matcher = createEqualityMatcher(
+    (el) => el.utf8String,
+    jidMatchTyped,
+);
 
 export default jidMatch;
