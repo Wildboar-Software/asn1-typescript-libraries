@@ -1,0 +1,56 @@
+-- Derived from data/ldap-schema/zimbra-hsm.schema
+-- Upstream: https://github.com/Zimbra/zm-ldap-utilities/blob/d5469669e350618d5f554b199bfe6dc06e44e4cd/conf/ldap/zimbra-hsm.schema#L8
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- ZimbraRoot (1.3.6.1.4.1.19348) and ZimbraLDAP (ZimbraRoot:2) are not in this file. They were supplied from the Zimbra enterprise number so these arcs resolve.
+-- objectIdentifier zimbraHsmAge is commented out in this file. It was restored as ZimbraHsmAttrType:20 so the attribute does not take zimbra.schema's ZimbraAttrType:8 arc.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapZimbraHsm DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreIA5Match, ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-zimbraHsmAge OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 19348 2 4 20 }
+id-oc-zimbraHsmGlobalConfig OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 19348 2 4 1 }
+id-oc-zimbraHsmServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 19348 2 4 2 }
+
+-- Attribute types
+
+-- objectIdentifier zimbraHsmAge is still commented out in zimbra-hsm.schema. It was restored as ZimbraHsmAttrType:20, which is 1.3.6.1.4.1.19348.2.4.20. zimbra.schema assigns the same LDAP name to ZimbraAttrType:8.
+zimbraHsmAge ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..32))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"zimbraHsmAge"}
+  LDAP-DESC                 "minimum age of mail items whose filesystem data will be moved to secondary storage (nnnnn[hmsd])"
+  ID                        id-at-zimbraHsmAge }
+
+-- Object classes
+
+zimbraHsmGlobalConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { zimbraHsmAge }
+  LDAP-NAME                 {"zimbraHsmGlobalConfig"}
+  LDAP-DESC                 "global configuration for HSM"
+  ID                        id-oc-zimbraHsmGlobalConfig }
+
+zimbraHsmServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { zimbraHsmGlobalConfig }
+  KIND                      auxiliary
+  MAY CONTAIN               { zimbraHsmAge }
+  LDAP-NAME                 {"zimbraHsmServer"}
+  LDAP-DESC                 "Server-specific configuration for HSM"
+  ID                        id-oc-zimbraHsmServer }
+END

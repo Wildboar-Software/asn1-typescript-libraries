@@ -1,0 +1,32 @@
+-- Derived from data/ldap-schema/schema2ldif/inetorgperson.schema
+-- Upstream: http://www.openldap.org/">http://www.openldap.org/</a>&gt
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 9 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+LdapSchema2ldifInetorgperson DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  jpeg
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-jpegPhoto OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 60 }
+
+-- Attribute types
+
+-- X.520 models the JPEG syntax as NULL. Represented as OCTET STRING. LDAP-SYNTAX remains jpeg.&id.
+jpegPhoto ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               jpeg.&id
+  LDAP-NAME                 {"jpegPhoto"}
+  LDAP-DESC                 "RFC2798: a JPEG image"
+  ID                        id-at-jpegPhoto }
+END

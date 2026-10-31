@@ -1,0 +1,60 @@
+-- Derived from data/ldap-schema/schema2ldif/pgp-recon.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapSchema2ldifPgpRecon DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString, octetString,
+    owner, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-pgpReconData OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3401 8 2 6 }
+id-at-pgpReconCertID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3401 8 2 7 }
+id-oc-pgpReconElement OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 3401 8 2 5 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Pretty Good Privacy (PGP)"
+pgpReconData ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"pgpReconData"}
+  LDAP-DESC                 "PGP defined attributed containing reconstruction data"
+  ID                        id-at-pgpReconData }
+
+-- X-ORIGIN: "Pretty Good Privacy (PGP)"
+pgpReconCertID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pgpReconCertID"}
+  LDAP-DESC                 "PGP defined attribute containing the certID of the key"
+  ID                        id-at-pgpReconCertID }
+
+-- Object classes
+
+-- X-ORIGIN: "Pretty Good Privacy (PGP)"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+pgpReconElement OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { pgpReconCertID
+                              | pgpReconData
+                              | owner }
+  LDAP-NAME                 {"pgpReconElement"}
+  LDAP-DESC                 "PGP defined objectclass of a reconstruction data object"
+  ID                        id-oc-pgpReconElement }
+END

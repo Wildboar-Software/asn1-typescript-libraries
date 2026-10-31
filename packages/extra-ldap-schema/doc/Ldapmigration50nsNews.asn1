@@ -1,0 +1,106 @@
+-- Derived from data/ldap-schema/ldapmigration/50ns-news.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+Ldapmigration50nsNews DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  description, directoryString, dn, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  subtreeACI
+    FROM LdapSubtreeAci ;
+
+-- Object identifiers
+
+id-at-nsnewsACL OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 191 }
+id-at-nsaclrole OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 192 }
+id-at-nsprettyname OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 193 }
+id-at-nsflags OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 194 }
+id-at-nscreator OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 195 }
+id-at-ngcomponent OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 196 }
+id-oc-nginfo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 26 }
+id-oc-netscapeNewsServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 27 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+nsnewsACL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsnewsACL"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsnewsACL }
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+nsaclrole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsaclrole"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsaclrole }
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+nsprettyname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsprettyname"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsprettyname }
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+nsflags ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsflags"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsflags }
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+nscreator ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nscreator"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nscreator }
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+ngcomponent ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"ngcomponent"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-ngcomponent }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+nginfo OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass
+                              | ngcomponent }
+  MAY CONTAIN               { nsnewsACL
+                              | subtreeACI
+                              | description
+                              | nsaclrole
+                              | nsprettyname
+                              | nsflags
+                              | nscreator }
+  LDAP-NAME                 {"nginfo"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-nginfo }
+
+-- X-ORIGIN: "iPlanet Collabra Server"
+netscapeNewsServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  LDAP-NAME                 {"netscapeNewsServer"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-netscapeNewsServer }
+END

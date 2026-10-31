@@ -1,0 +1,550 @@
+-- Derived from data/ldap-schema/kopano.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapKopano DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, commonName, directoryString,
+    integer, integerMatch, octetString, octetStringMatch,
+    organizationalUnitName, printableString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gidNumber, uidNumber
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-kopanoQuotaOverride OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 1 }
+id-at-kopanoQuotaWarn OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 2 }
+id-at-kopanoQuotaSoft OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 3 }
+id-at-kopanoQuotaHard OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 4 }
+id-at-kopanoUserDefaultQuotaOverride OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 5 }
+id-at-kopanoUserDefaultQuotaWarn OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 6 }
+id-at-kopanoUserDefaultQuotaSoft OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 7 }
+id-at-kopanoUserDefaultQuotaHard OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 1 8 }
+id-at-kopanoAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 1 }
+id-at-kopanoSharedStoreOnly OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 2 }
+id-at-kopanoAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 3 }
+id-at-kopanoSendAsPrivilege OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 4 }
+id-at-kopanoMrAccept OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 5 }
+id-at-kopanoMrDeclineConflict OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 6 }
+id-at-kopanoMrDeclineRecurring OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 7 }
+id-at-kopanoId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 8 }
+id-at-kopanoResourceType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 9 }
+id-at-kopanoResourceCapacity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 10 }
+id-at-kopanoHidden OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 11 }
+id-at-kopanoEnabledFeatures OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 13 }
+id-at-kopanoDisabledFeatures OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 2 14 }
+id-at-kopanoAliases OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 3 1 }
+id-at-kopanoUserServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 4 1 }
+id-at-kopanoUserArchiveServers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 6 1 }
+id-at-kopanoUserArchiveCouplings OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 6 2 }
+id-oc-kopano-user OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 1 0 0 }
+id-oc-kopano-contact OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 6 0 0 }
+id-at-kopanoSecurityGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 2 2 1 }
+id-oc-kopano-group OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 2 0 0 }
+id-at-kopanoViewPrivilege OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 2 4 }
+id-at-kopanoAdminPrivilege OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 2 5 }
+id-at-kopanoSystemAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 2 6 }
+id-at-kopanoQuotaUserWarningRecipients OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 1 5 }
+id-at-kopanoQuotaCompanyWarningRecipients OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 1 6 }
+id-at-kopanoCompanyServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 4 1 }
+id-oc-kopano-company OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 3 0 0 }
+id-at-kopanoHttpPort OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 4 4 1 }
+id-at-kopanoSslPort OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 4 4 2 }
+id-at-kopanoFilePath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 4 4 3 }
+id-at-kopanoContainsPublic OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 4 4 4 }
+id-at-kopanoProxyURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 4 4 6 }
+id-oc-kopano-server OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 4 0 0 }
+id-at-kopanoFilter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 5 5 1 }
+id-at-kopanoBase OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 5 5 2 }
+id-oc-kopano-addresslist OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 5 0 0 }
+id-oc-kopano-dynamicgroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 47732 1 7 0 0 }
+
+-- Attribute types
+
+kopanoQuotaOverride ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoQuotaOverride"}
+  LDAP-DESC                 "KOPANO: Override child quota"
+  ID                        id-at-kopanoQuotaOverride }
+
+kopanoQuotaWarn ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoQuotaWarn"}
+  LDAP-DESC                 "KOPANO: Warning quota size in MB"
+  ID                        id-at-kopanoQuotaWarn }
+
+kopanoQuotaSoft ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoQuotaSoft"}
+  LDAP-DESC                 "KOPANO: Soft quota size in MB"
+  ID                        id-at-kopanoQuotaSoft }
+
+kopanoQuotaHard ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoQuotaHard"}
+  LDAP-DESC                 "KOPANO: Hard quota size in MB"
+  ID                        id-at-kopanoQuotaHard }
+
+kopanoUserDefaultQuotaOverride ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoUserDefaultQuotaOverride"}
+  LDAP-DESC                 "KOPANO: Override User default quota for children"
+  ID                        id-at-kopanoUserDefaultQuotaOverride }
+
+kopanoUserDefaultQuotaWarn ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoUserDefaultQuotaWarn"}
+  LDAP-DESC                 "KOPANO: User default warning quota size in MB"
+  ID                        id-at-kopanoUserDefaultQuotaWarn }
+
+kopanoUserDefaultQuotaSoft ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoUserDefaultQuotaSoft"}
+  LDAP-DESC                 "KOPANO: User default soft quota size in MB"
+  ID                        id-at-kopanoUserDefaultQuotaSoft }
+
+kopanoUserDefaultQuotaHard ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoUserDefaultQuotaHard"}
+  LDAP-DESC                 "KOPANO: User default hard quota size in MB"
+  ID                        id-at-kopanoUserDefaultQuotaHard }
+
+kopanoAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoAdmin"}
+  LDAP-DESC                 "KOPANO: Administrator of kopano"
+  ID                        id-at-kopanoAdmin }
+
+kopanoSharedStoreOnly ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoSharedStoreOnly"}
+  LDAP-DESC                 "KOPANO: is store a shared store"
+  ID                        id-at-kopanoSharedStoreOnly }
+
+kopanoAccount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoAccount"}
+  LDAP-DESC                 "KOPANO: entry is a part of kopano"
+  ID                        id-at-kopanoAccount }
+
+kopanoSendAsPrivilege ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoSendAsPrivilege"}
+  LDAP-DESC                 "KOPANO: Users may directly send email as this user"
+  ID                        id-at-kopanoSendAsPrivilege }
+
+kopanoMrAccept ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoMrAccept"}
+  LDAP-DESC                 "KOPANO: user should auto-accept meeting requests"
+  ID                        id-at-kopanoMrAccept }
+
+kopanoMrDeclineConflict ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoMrDeclineConflict"}
+  LDAP-DESC                 "KOPANO: user should automatically decline conflicting meeting requests"
+  ID                        id-at-kopanoMrDeclineConflict }
+
+kopanoMrDeclineRecurring ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoMrDeclineRecurring"}
+  LDAP-DESC                 "KOPANO: user should automatically decline recurring meeting requests"
+  ID                        id-at-kopanoMrDeclineRecurring }
+
+kopanoId ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"kopanoId"}
+  LDAP-DESC                 "KOPANO: Generic unique ID"
+  ID                        id-at-kopanoId }
+
+kopanoResourceType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoResourceType"}
+  LDAP-DESC                 "KOPANO: for shared stores, resource is type Room or Equipment"
+  ID                        id-at-kopanoResourceType }
+
+kopanoResourceCapacity ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoResourceCapacity"}
+  LDAP-DESC                 "KOPANO: number of rooms or equipment available"
+  ID                        id-at-kopanoResourceCapacity }
+
+kopanoHidden ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoHidden"}
+  LDAP-DESC                 "KOPANO: This object should be hidden from address book"
+  ID                        id-at-kopanoHidden }
+
+kopanoEnabledFeatures ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"kopanoEnabledFeatures"}
+  LDAP-DESC                 "KOPANO: This user has these features explicitly enabled"
+  ID                        id-at-kopanoEnabledFeatures }
+
+kopanoDisabledFeatures ATTRIBUTE ::= {
+  WITH SYNTAX               PrintableString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               printableString.&id
+  LDAP-NAME                 {"kopanoDisabledFeatures"}
+  LDAP-DESC                 "KOPANO: This user has these features explicitly disabled"
+  ID                        id-at-kopanoDisabledFeatures }
+
+kopanoAliases ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoAliases"}
+  LDAP-DESC                 "KOPANO: All other email addresses for this user"
+  ID                        id-at-kopanoAliases }
+
+kopanoUserServer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoUserServer"}
+  LDAP-DESC                 "KOPANO: Home server for the user"
+  ID                        id-at-kopanoUserServer }
+
+kopanoUserArchiveServers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoUserArchiveServers"}
+  LDAP-DESC                 "KOPANO: List of server names that contain an archive store for the user"
+  ID                        id-at-kopanoUserArchiveServers }
+
+kopanoUserArchiveCouplings ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoUserArchiveCouplings"}
+  LDAP-DESC                 "KOPANO: List of username:foldername pairs that specify many-to-one archive locations"
+  ID                        id-at-kopanoUserArchiveCouplings }
+
+kopanoSecurityGroup ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoSecurityGroup"}
+  LDAP-DESC                 "KOPANO: group has security possibilities"
+  ID                        id-at-kopanoSecurityGroup }
+
+kopanoViewPrivilege ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoViewPrivilege"}
+  LDAP-DESC                 "KOPANO: Companies with view privileges over selected company"
+  ID                        id-at-kopanoViewPrivilege }
+
+kopanoAdminPrivilege ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoAdminPrivilege"}
+  LDAP-DESC                 "KOPANO: Users from different companies which are administrator over selected company"
+  ID                        id-at-kopanoAdminPrivilege }
+
+kopanoSystemAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoSystemAdmin"}
+  LDAP-DESC                 "KOPANO: The user who is the system administrator for this company"
+  ID                        id-at-kopanoSystemAdmin }
+
+kopanoQuotaUserWarningRecipients ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoQuotaUserWarningRecipients"}
+  LDAP-DESC                 "KOPANO: Users who will receive a notification email when a user exceeds his quota"
+  ID                        id-at-kopanoQuotaUserWarningRecipients }
+
+kopanoQuotaCompanyWarningRecipients ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoQuotaCompanyWarningRecipients"}
+  LDAP-DESC                 "KOPANO: Users who will receive a notification email when a company exceeds its quota"
+  ID                        id-at-kopanoQuotaCompanyWarningRecipients }
+
+kopanoCompanyServer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoCompanyServer"}
+  LDAP-DESC                 "KOPANO: Home server for the public folders for a company"
+  ID                        id-at-kopanoCompanyServer }
+
+kopanoHttpPort ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoHttpPort"}
+  LDAP-DESC                 "KOPANO: Port for the http connection"
+  ID                        id-at-kopanoHttpPort }
+
+kopanoSslPort ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoSslPort"}
+  LDAP-DESC                 "KOPANO: Port for the ssl connection"
+  ID                        id-at-kopanoSslPort }
+
+kopanoFilePath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoFilePath"}
+  LDAP-DESC                 "KOPANO: The Unix socket or named pipe to the server"
+  ID                        id-at-kopanoFilePath }
+
+kopanoContainsPublic ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"kopanoContainsPublic"}
+  LDAP-DESC                 "KOPANO: This server contains the public store"
+  ID                        id-at-kopanoContainsPublic }
+
+kopanoProxyURL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoProxyURL"}
+  LDAP-DESC                 "KOPANO: Full proxy URL for this server"
+  ID                        id-at-kopanoProxyURL }
+
+kopanoFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoFilter"}
+  LDAP-DESC                 "KOPANO: LDAP Filter to apply"
+  ID                        id-at-kopanoFilter }
+
+kopanoBase ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"kopanoBase"}
+  LDAP-DESC                 "KOPANO: LDAP Search base to apply"
+  ID                        id-at-kopanoBase }
+
+-- Object classes
+
+kopano-user OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { kopanoQuotaOverride
+                              | kopanoQuotaWarn
+                              | kopanoQuotaSoft
+                              | kopanoSendAsPrivilege
+                              | kopanoQuotaHard
+                              | kopanoAdmin
+                              | kopanoSharedStoreOnly
+                              | kopanoResourceType
+                              | kopanoResourceCapacity
+                              | kopanoAccount
+                              | kopanoHidden
+                              | kopanoAliases
+                              | kopanoUserServer
+                              | kopanoEnabledFeatures
+                              | kopanoDisabledFeatures
+                              | kopanoUserArchiveServers
+                              | kopanoUserArchiveCouplings
+                              | uidNumber }
+  LDAP-NAME                 {"kopano-user"}
+  LDAP-DESC                 "KOPANO: an user of Kopano"
+  ID                        id-oc-kopano-user }
+
+kopano-contact OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | uidNumber }
+  MAY CONTAIN               { kopanoSendAsPrivilege
+                              | kopanoHidden
+                              | kopanoAliases
+                              | kopanoAccount }
+  LDAP-NAME                 {"kopano-contact"}
+  LDAP-DESC                 "KOPANO: a contact of Kopano"
+  ID                        id-oc-kopano-contact }
+
+kopano-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { kopanoAccount
+                              | kopanoHidden
+                              | mail
+                              | kopanoAliases
+                              | kopanoSecurityGroup
+                              | kopanoSendAsPrivilege
+                              | gidNumber }
+  LDAP-NAME                 {"kopano-group"}
+  LDAP-DESC                 "KOPANO: a group of Kopano"
+  ID                        id-oc-kopano-group }
+
+kopano-company OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { kopanoAccount
+                              | kopanoHidden
+                              | kopanoViewPrivilege
+                              | kopanoAdminPrivilege
+                              | kopanoSystemAdmin
+                              | kopanoQuotaOverride
+                              | kopanoQuotaWarn
+                              | kopanoUserDefaultQuotaOverride
+                              | kopanoUserDefaultQuotaWarn
+                              | kopanoUserDefaultQuotaSoft
+                              | kopanoUserDefaultQuotaHard
+                              | kopanoQuotaUserWarningRecipients
+                              | kopanoQuotaCompanyWarningRecipients
+                              | kopanoCompanyServer }
+  LDAP-NAME                 {"kopano-company"}
+  LDAP-DESC                 "KOPANO: a company of Kopano"
+  ID                        id-oc-kopano-company }
+
+kopano-server OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { kopanoAccount
+                              | kopanoHidden
+                              | kopanoHttpPort
+                              | kopanoSslPort
+                              | kopanoFilePath
+                              | kopanoContainsPublic
+                              | kopanoProxyURL }
+  LDAP-NAME                 {"kopano-server"}
+  LDAP-DESC                 "KOPANO: a Kopano server"
+  ID                        id-oc-kopano-server }
+
+kopano-addresslist OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { kopanoAccount
+                              | kopanoHidden
+                              | kopanoFilter
+                              | kopanoBase }
+  LDAP-NAME                 {"kopano-addresslist"}
+  LDAP-DESC                 "KOPANO: a Kopano Addresslist"
+  ID                        id-oc-kopano-addresslist }
+
+kopano-dynamicgroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { kopanoAccount
+                              | kopanoHidden
+                              | mail
+                              | kopanoAliases
+                              | kopanoFilter
+                              | kopanoBase }
+  LDAP-NAME                 {"kopano-dynamicgroup"}
+  LDAP-DESC                 "KOPANO: a Kopano dynamic group"
+  ID                        id-oc-kopano-dynamicgroup }
+END

@@ -1,0 +1,336 @@
+-- Derived from data/ldap-schema/mailinglist.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 2 elements share a numeric OID with another element that was also kept. See the comments on those elements.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapMailinglist DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactMatch, caseExactSubstringsMatch,
+    caseIgnoreMatch, caseIgnoreSubstringsMatch, commonName, description,
+    directoryString, DirectoryString, generalizedTime, generalizedTimeMatch,
+    generalizedTimeOrderingMatch, integer, integerMatch, integerOrderingMatch,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+-- OID 1.3.6.1.4.1.4203.666.100.1 is also used by officePerson (OBJECT-CLASS) in extension.schema. The LDAP names differ, so each definition was kept.
+id-at-mlidNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 1 }
+id-at-mailinglistAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 2 }
+id-at-mailinglistDistributionAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 3 }
+id-at-mailinglistArchiveAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 4 }
+-- OID 1.3.6.1.4.1.4203.666.100.5 is also used by zillaPerson (OBJECT-CLASS) in extension.schema. The LDAP names differ, so each definition was kept.
+id-at-mailinglistPublic OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 5 }
+id-at-mailinglistArchiveEnabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 6 }
+id-at-mailinglistModerationEnabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 7 }
+id-at-principalId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 8 }
+id-at-inboxPrincipalId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 9 }
+id-at-archivePrincipalId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 10 }
+id-at-createdAt OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 11 }
+id-at-updatedAt OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 12 }
+id-at-mailinglistToken OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 13 }
+id-at-mailinglistAction OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 14 }
+id-at-mailinglistMessageId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 15 }
+id-at-mailinglistSubject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 16 }
+id-at-mailinglistSender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 17 }
+id-at-sentAt OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 18 }
+id-at-textBody OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 19 }
+id-at-htmlBody OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 20 }
+id-at-mailinglistStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 21 }
+id-at-decidedAt OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 100 22 }
+id-oc-freenitMailingList OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 101 1 }
+id-oc-freenitPendingSubscriber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 101 2 }
+id-oc-freenitModerationMessage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 101 3 }
+id-oc-freenitMailingListIdNext OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 666 101 4 }
+
+-- Attribute types
+
+-- OID 1.3.6.1.4.1.4203.666.100.1 is also used by officePerson (OBJECT-CLASS) in extension.schema. The LDAP names differ, so each definition was kept.
+mlidNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mlidNumber"}
+  LDAP-DESC                 "Freenit mailing list numeric identifier"
+  ID                        id-at-mlidNumber }
+
+mailinglistAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistAddress"}
+  LDAP-DESC                 "Primary mailing list email address"
+  ID                        id-at-mailinglistAddress }
+
+mailinglistDistributionAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistDistributionAddress"}
+  LDAP-DESC                 "Mailing list distribution email address"
+  ID                        id-at-mailinglistDistributionAddress }
+
+mailinglistArchiveAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistArchiveAddress"}
+  LDAP-DESC                 "Mailing list archive email address"
+  ID                        id-at-mailinglistArchiveAddress }
+
+-- OID 1.3.6.1.4.1.4203.666.100.5 is also used by zillaPerson (OBJECT-CLASS) in extension.schema. The LDAP names differ, so each definition was kept.
+mailinglistPublic ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"mailinglistPublic"}
+  LDAP-DESC                 "Whether the mailing list is publicly visible"
+  ID                        id-at-mailinglistPublic }
+
+mailinglistArchiveEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"mailinglistArchiveEnabled"}
+  LDAP-DESC                 "Whether the archive is enabled"
+  ID                        id-at-mailinglistArchiveEnabled }
+
+mailinglistModerationEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"mailinglistModerationEnabled"}
+  LDAP-DESC                 "Whether moderation is enabled"
+  ID                        id-at-mailinglistModerationEnabled }
+
+principalId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"principalId"}
+  LDAP-DESC                 "Stalwart list principal identifier"
+  ID                        id-at-principalId }
+
+inboxPrincipalId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"inboxPrincipalId"}
+  LDAP-DESC                 "Stalwart inbox principal identifier"
+  ID                        id-at-inboxPrincipalId }
+
+archivePrincipalId ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"archivePrincipalId"}
+  LDAP-DESC                 "Stalwart archive principal identifier"
+  ID                        id-at-archivePrincipalId }
+
+createdAt ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"createdAt"}
+  LDAP-DESC                 "Entry creation timestamp"
+  ID                        id-at-createdAt }
+
+updatedAt ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"updatedAt"}
+  LDAP-DESC                 "Entry last update timestamp"
+  ID                        id-at-updatedAt }
+
+mailinglistToken ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistToken"}
+  LDAP-DESC                 "Pending subscriber confirmation token"
+  ID                        id-at-mailinglistToken }
+
+mailinglistAction ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistAction"}
+  LDAP-DESC                 "Pending action type (subscribe or unsubscribe)"
+  ID                        id-at-mailinglistAction }
+
+mailinglistMessageId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistMessageId"}
+  LDAP-DESC                 "Original Message-ID header"
+  ID                        id-at-mailinglistMessageId }
+
+mailinglistSubject ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistSubject"}
+  LDAP-DESC                 "Message subject"
+  ID                        id-at-mailinglistSubject }
+
+mailinglistSender ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistSender"}
+  LDAP-DESC                 "Message sender email address"
+  ID                        id-at-mailinglistSender }
+
+sentAt ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"sentAt"}
+  LDAP-DESC                 "Original message sent timestamp"
+  ID                        id-at-sentAt }
+
+-- LDAP syntax length {1048576} rendered as DirectoryString{1048576}.
+textBody ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1048576}
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"textBody"}
+  LDAP-DESC                 "Plain text message body"
+  ID                        id-at-textBody }
+
+-- LDAP syntax length {1048576} rendered as DirectoryString{1048576}.
+htmlBody ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{1048576}
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"htmlBody"}
+  LDAP-DESC                 "HTML message body"
+  ID                        id-at-htmlBody }
+
+mailinglistStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailinglistStatus"}
+  LDAP-DESC                 "Moderation message status (pending/approved/rejected)"
+  ID                        id-at-mailinglistStatus }
+
+decidedAt ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"decidedAt"}
+  LDAP-DESC                 "Moderation decision timestamp"
+  ID                        id-at-decidedAt }
+
+-- Object classes
+
+freenitMailingList OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | mlidNumber
+                              | mailinglistAddress
+                              | mailinglistDistributionAddress
+                              | mailinglistArchiveAddress }
+  MAY CONTAIN               { description
+                              | mailinglistPublic
+                              | mailinglistArchiveEnabled
+                              | mailinglistModerationEnabled
+                              | principalId
+                              | inboxPrincipalId
+                              | archivePrincipalId
+                              | createdAt
+                              | updatedAt }
+  LDAP-NAME                 {"freenitMailingList"}
+  LDAP-DESC                 "Freenit mailing list entry"
+  ID                        id-oc-freenitMailingList }
+
+freenitPendingSubscriber OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | mlidNumber
+                              | mail
+                              | mailinglistToken
+                              | mailinglistAction
+                              | createdAt }
+  LDAP-NAME                 {"freenitPendingSubscriber"}
+  LDAP-DESC                 "Freenit pending mailing list subscriber"
+  ID                        id-oc-freenitPendingSubscriber }
+
+freenitModerationMessage OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | mlidNumber
+                              | createdAt }
+  MAY CONTAIN               { mailinglistMessageId
+                              | mailinglistSubject
+                              | mailinglistSender
+                              | sentAt
+                              | textBody
+                              | htmlBody
+                              | mailinglistStatus
+                              | decidedAt }
+  LDAP-NAME                 {"freenitModerationMessage"}
+  LDAP-DESC                 "Freenit moderation message entry"
+  ID                        id-oc-freenitModerationMessage }
+
+freenitMailingListIdNext OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | mlidNumber }
+  LDAP-NAME                 {"freenitMailingListIdNext"}
+  LDAP-DESC                 "Freenit mailing list ID counter"
+  ID                        id-oc-freenitMailingListIdNext }
+END

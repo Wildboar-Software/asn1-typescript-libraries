@@ -1,0 +1,1737 @@
+-- Derived from data/ldap-schema/common389.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 17 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 2 elements share a numeric OID with another element that was also kept. See the comments on those elements.
+LdapCommon389 DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, businessCategory, commonName, description,
+    directoryString, dn, generalizedTime, ia5String, integer, localityName,
+    organizationalUnitName, organizationName, owner, seeAlso, uid,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  aci
+    FROM LdapAci
+
+  multiLineDescription, nsds50ruv, nsds5BeginReplicaRefresh,
+    nsds5debugreplicatimeout, nsDS5ReplicaBindDN, nsDS5ReplicaBindMethod,
+    nsds5replicaBusyWaitTime, nsds5replicaChangesSentSinceStartup,
+    nsDS5ReplicaCredentials, nsds5ReplicaEnabled, nsDS5ReplicaHost,
+    nsds5replicaLastInitEnd, nsds5replicaLastInitStart,
+    nsds5replicaLastInitStatus, nsds5replicaLastUpdateEnd,
+    nsds5replicaLastUpdateStart, nsds5replicaLastUpdateStatus,
+    nsDS5ReplicaPort, nsDS5ReplicaRoot, nsds5replicaSessionPauseTime,
+    nsDS5ReplicatedAttributeList, nsds5replicaTimeout,
+    nsDS5ReplicaTransportInfo, nsds5replicaUpdateInProgress,
+    nsDS5ReplicaUpdateSchedule, nsruvReplicaLastModified
+    FROM LdapCore389
+
+  ldapSubEntry
+    FROM LdapSubentry ;
+
+-- Object identifiers
+
+-- OID 2.16.840.1.113730.3.1.36 is also used by thumbnailLogo (ATTRIBUTE) in schema2ldif/microsoft.std.schema. The LDAP names differ, so each definition was kept.
+id-at-nsLicensedFor OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 36 }
+id-at-nsLicenseStartTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 37 }
+id-at-nsLicenseEndTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 38 }
+id-at-serverRoot OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 70 }
+id-at-serverProductName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 71 }
+id-at-serverVersionNumber OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 72 }
+id-at-installationTimeStamp OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 73 }
+id-at-administratorContactInfo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 74 }
+id-at-adminUrl OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 75 }
+id-at-serverHostName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 76 }
+id-at-passwordExpirationTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 91 }
+id-at-passwordExpWarned OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 92 }
+id-at-passwordRetryCount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 93 }
+id-at-retryCountResetTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 94 }
+id-at-accountUnlockTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 95 }
+id-at-passwordHistory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 96 }
+id-at-passwordMaxAge OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 97 }
+id-at-passwordExp OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 98 }
+id-at-passwordMinLength OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 99 }
+id-at-passwordKeepHistory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 100 }
+id-at-passwordInHistory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 101 }
+id-at-passwordChange OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 102 }
+id-at-passwordCheckSyntax OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 103 }
+id-at-passwordWarning OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 104 }
+id-at-passwordLockout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 105 }
+id-at-passwordMaxFailure OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 106 }
+id-at-passwordResetDuration OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 107 }
+id-at-passwordUnlock OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 108 }
+id-at-passwordLockoutDuration OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 109 }
+id-at-pwdpolicysubentry OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 997 }
+id-at-passwordGraceUserTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 998 }
+id-at-passwordGraceLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 999 }
+id-at-passwordMinDigits OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2075 }
+id-at-passwordMinAlphas OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2076 }
+id-at-passwordMinUppers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2077 }
+id-at-passwordMinLowers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2078 }
+id-at-passwordMinSpecials OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2079 }
+id-at-passwordMin8bit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2080 }
+id-at-passwordMaxRepeats OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2081 }
+id-at-passwordMinCategories OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2082 }
+id-at-passwordMinTokenLength OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2083 }
+id-at-passwordAdminDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2153 }
+id-at-passwordTrackUpdateTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2140 }
+id-at-passwordSendExpiringTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2329 }
+id-at-passwordPalindrome OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2345 }
+id-at-passwordMaxSequence OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2346 }
+id-at-passwordMaxSeqSets OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2347 }
+id-at-passwordMaxClassChars OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2348 }
+id-at-passwordDictCheck OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2349 }
+id-at-passwordDictPath OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2350 }
+id-at-passwordUserAttributes OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2351 }
+id-at-passwordBadWords OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2352 }
+id-at-passwordBreachCheck OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 3024 }
+id-at-passwordBreachDbUrl OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 3025 }
+id-at-passwordBreachDbTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 3026 }
+id-at-pwdReset OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2366 }
+id-at-pwdTPRReset OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2378 }
+id-at-pwdTPRUseCount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2379 }
+id-at-pwdTPRValidFrom OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2380 }
+id-at-pwdTPRExpireAt OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2381 }
+id-at-passwordTPRMaxUse OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2382 }
+id-at-passwordTPRDelayExpireAt OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2383 }
+id-at-passwordTPRDelayValidFrom OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2384 }
+id-at-memberCertificateDescription OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 199 }
+id-at-vlvBase OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 207 }
+id-at-vlvScope OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 208 }
+id-at-vlvFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 209 }
+id-at-vlvSort OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 210 }
+id-at-vlvEnabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 213 }
+id-at-passwordAllowChangeTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 214 }
+id-at-vlvUses OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 219 }
+id-at-passwordMustChange OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 220 }
+id-at-passwordStorageScheme OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 221 }
+id-at-passwordMinAge OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 222 }
+id-at-passwordResetFailureCount OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 223 }
+id-at-cosAttribute OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 550 }
+id-at-cosspecifier OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 551 }
+id-at-costargettree OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 552 }
+id-at-costemplatedn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 553 }
+-- OID 2.16.840.1.113730.3.1.35 is also used by thumbnailPhoto (ATTRIBUTE) in schema2ldif/microsoft.std.schema. The LDAP names differ, so each definition was kept.
+id-at-changeLog OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 35 }
+id-at-changeLogMaximumAge OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 200 }
+id-at-changeLogMaximumSize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 201 }
+id-at-changeLogMaximumConcurrentWrites OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 205 }
+id-at-ttl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 250 1 60 }
+id-at-generation OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 612 }
+id-at-cosPriority OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 569 }
+id-at-nsLookThroughLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 570 }
+id-at-nsSizeLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 571 }
+id-at-nsTimeLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 572 }
+id-at-nsIdleTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 573 }
+id-at-nsIDListScanLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2106 }
+id-at-nsPagedSizeLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2107 }
+id-at-nsPagedLookThroughLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2108 }
+id-at-nsPagedIDListScanLimit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2109 }
+id-at-nsRole OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 574 }
+id-at-nsRoleDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 575 }
+id-at-nsRoleFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 576 }
+id-at-cosIndirectSpecifier OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 577 }
+id-at-nsAccountLock OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 610 }
+id-at-copiedFrom OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 613 }
+id-at-copyingFrom OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 614 }
+id-at-nsBackendSuffix OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 803 }
+id-at-nsds5ReplConflict OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 973 }
+id-at-nsds7WindowsReplicaSubtree OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1000 }
+id-at-nsds7DirectoryReplicaSubtree OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1001 }
+id-at-nsds7NewWinUserSyncEnabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1002 }
+id-at-nsds7NewWinGroupSyncEnabled OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1003 }
+id-at-nsds7WindowsDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1004 }
+id-at-nsds7DirsyncCookie OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1005 }
+id-at-winSyncInterval OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1099 }
+id-at-oneWaySync OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1100 }
+id-at-nsRoleScopeDN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1101 }
+id-at-winSyncMoveAction OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2139 }
+id-at-winSyncDirectoryFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2162 }
+id-at-winSyncWindowsFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2163 }
+id-at-winSyncSubtreePair OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2164 }
+id-at-nsViewFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 3023 }
+id-at-nsEncryptionAlgorithm OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2063 }
+id-at-nsslapd-parent-suffix OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2094 }
+id-at-conflictCSN OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2401 }
+id-at-isReplicated OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2085 }
+id-at-nsTaskLog OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2354 }
+id-at-nsTaskStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2355 }
+id-at-nsTaskExitCode OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2356 }
+id-at-nsTaskCurrentItem OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2357 }
+id-at-nsTaskTotalItems OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2358 }
+id-at-nsTaskCreated OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2359 }
+id-at-nsTaskWarning OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2375 }
+id-at-winSyncFlattenTree OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2389 }
+id-at-passwordAdminSkipInfoUpdate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2395 }
+id-oc-groupOfCertificates OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 31 }
+id-oc-lDAPServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 35 }
+id-oc-cacheObject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 250 3 18 }
+id-oc-netscapeServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 10 }
+id-oc-nsLicenseUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 7 }
+id-oc-passwordObject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 12 }
+id-oc-passwordPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 13 }
+id-oc-netscapeMachineData OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 32 }
+id-oc-vlvSearch OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 38 }
+id-oc-vlvIndex OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 42 }
+id-oc-cosDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 84 }
+id-oc-nsRoleDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 93 }
+id-oc-nsSimpleRoleDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 94 }
+id-oc-nsComplexRoleDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 95 }
+id-oc-nsManagedRoleDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 96 }
+id-oc-nsFilteredRoleDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 97 }
+id-oc-nsNestedRoleDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 98 }
+id-oc-cosSuperDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 99 }
+id-oc-cosClassicDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 100 }
+id-oc-cosPointerDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 101 }
+id-oc-cosIndirectDefinition OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 102 }
+id-oc-nsDSWindowsReplicationAgreement OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 503 }
+id-oc-costemplate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 128 }
+id-oc-nsView OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 304 }
+id-oc-nsAttributeEncryption OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 316 }
+id-oc-nsSlapiTask OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 335 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Administration Services"
+-- OID 2.16.840.1.113730.3.1.36 is also used by thumbnailLogo (ATTRIBUTE) in schema2ldif/microsoft.std.schema. The LDAP names differ, so each definition was kept.
+nsLicensedFor ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsLicensedFor"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsLicensedFor }
+
+-- X-ORIGIN: "Netscape Administration Services"
+nsLicenseStartTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsLicenseStartTime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsLicenseStartTime }
+
+-- X-ORIGIN: "Netscape Administration Services"
+nsLicenseEndTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsLicenseEndTime"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsLicenseEndTime }
+
+-- X-ORIGIN: "Netscape Administration Services"
+serverRoot ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"serverRoot"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-serverRoot }
+
+-- X-ORIGIN: "Netscape Administration Services"
+serverProductName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"serverProductName"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-serverProductName }
+
+-- X-ORIGIN: "Netscape Administration Services"
+serverVersionNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"serverVersionNumber"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-serverVersionNumber }
+
+-- X-ORIGIN: "Netscape Administration Services"
+installationTimeStamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"installationTimeStamp"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-installationTimeStamp }
+
+-- X-ORIGIN: "Netscape Administration Services"
+administratorContactInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"administratorContactInfo"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-administratorContactInfo }
+
+-- X-ORIGIN: "Netscape Administration Services"
+adminUrl ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"adminUrl"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-adminUrl }
+
+-- X-ORIGIN: "Netscape Administration Services"
+serverHostName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"serverHostName"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-serverHostName }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordExpirationTime ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"passwordExpirationTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordExpirationTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordExpWarned ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordExpWarned", "pwdExpirationWarned"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordExpWarned }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordRetryCount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordRetryCount"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordRetryCount }
+
+-- X-ORIGIN: "Netscape Directory Server"
+retryCountResetTime ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"retryCountResetTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-retryCountResetTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+accountUnlockTime ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"accountUnlockTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-accountUnlockTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+passwordHistory ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"passwordHistory", "pwdHistory"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordHistory }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMaxAge ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMaxAge", "pwdMaxAge"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMaxAge }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordExp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordExp"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordExp }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinLength ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinLength", "pwdMinLength"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinLength }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordKeepHistory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordKeepHistory"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordKeepHistory }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordInHistory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordInHistory", "pwdInHistory"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordInHistory }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordChange ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordChange", "pwdAllowUserChange"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordChange }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordCheckSyntax ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordCheckSyntax", "pwdCheckSyntax"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordCheckSyntax }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordWarning ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordWarning", "pwdExpireWarning"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordWarning }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordLockout ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordLockout", "pwdLockOut"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordLockout }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMaxFailure ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMaxFailure", "pwdMaxFailure"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMaxFailure }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordResetDuration ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordResetDuration"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordResetDuration }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordUnlock ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordUnlock"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordUnlock }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordLockoutDuration ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordLockoutDuration", "pwdLockoutDuration"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordLockoutDuration }
+
+-- X-ORIGIN: "Netscape Directory Server"
+pwdpolicysubentry ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"pwdpolicysubentry"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-pwdpolicysubentry }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordGraceUserTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordGraceUserTime", "pwdGraceUserTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordGraceUserTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordGraceLimit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordGraceLimit", "pwdGraceLoginLimit", "pwdGraceAuthNLimit"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordGraceLimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinDigits ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinDigits", "pwdMinDigits"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinDigits }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinAlphas ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinAlphas", "pwdMinAlphas"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinAlphas }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinUppers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinUppers", "pwdMinUppers"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinUppers }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinLowers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinLowers", "pwdMinLowers"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinLowers }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinSpecials ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinSpecials", "pwdMinSpecials"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinSpecials }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMin8bit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMin8bit", "pwdMin8bit"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMin8bit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMaxRepeats ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMaxRepeats", "pwdMaxRepeats"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMaxRepeats }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinCategories ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinCategories", "pwdMinCategories"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinCategories }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinTokenLength ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinTokenLength", "pwdMinTokenLength"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinTokenLength }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordAdminDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"passwordAdminDN", "pwdAdminDN"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordAdminDN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordTrackUpdateTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordTrackUpdateTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordTrackUpdateTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordSendExpiringTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordSendExpiringTime", "pwdSendExpiringTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordSendExpiringTime }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordPalindrome ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordPalindrome", "pwdPalindrome"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordPalindrome }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordMaxSequence ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordMaxSequence", "pwdMaxSequence"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordMaxSequence }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordMaxSeqSets ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordMaxSeqSets", "pwdMaxSeqSets"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordMaxSeqSets }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordMaxClassChars ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordMaxClassChars", "pwdMaxClassChars"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordMaxClassChars }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordDictCheck ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordDictCheck", "pwdDictCheck"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordDictCheck }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordDictPath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordDictPath", "pwdDictPath"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordDictPath }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordUserAttributes ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"passwordUserAttributes", "pwdUserAttributes"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordUserAttributes }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordBadWords ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"passwordBadWords", "pwdBadWords"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordBadWords }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordBreachCheck ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordBreachCheck", "pwdBreachCheck"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordBreachCheck }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordBreachDbUrl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordBreachDbUrl", "pwdBreachDbUrl"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordBreachDbUrl }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordBreachDbTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordBreachDbTimeout", "pwdBreachDbTimeout"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordBreachDbTimeout }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdReset ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"pwdReset"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-pwdReset }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdTPRReset ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"pwdTPRReset"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-pwdTPRReset }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdTPRUseCount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"pwdTPRUseCount"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-pwdTPRUseCount }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdTPRValidFrom ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pwdTPRValidFrom"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-pwdTPRValidFrom }
+
+-- X-ORIGIN: "389 Directory Server"
+pwdTPRExpireAt ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pwdTPRExpireAt"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-pwdTPRExpireAt }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordTPRMaxUse ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordTPRMaxUse"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordTPRMaxUse }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordTPRDelayExpireAt ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordTPRDelayExpireAt"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordTPRDelayExpireAt }
+
+-- X-ORIGIN: "389 Directory Server"
+passwordTPRDelayValidFrom ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"passwordTPRDelayValidFrom"}
+  LDAP-DESC                 "389 Directory Server password policy attribute type"
+  ID                        id-at-passwordTPRDelayValidFrom }
+
+-- X-ORIGIN: "Netscape Directory Server"
+memberCertificateDescription ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"memberCertificateDescription"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-memberCertificateDescription }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvBase ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"vlvBase"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-vlvBase }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvScope ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"vlvScope"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-vlvScope }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvFilter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"vlvFilter"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-vlvFilter }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvSort ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"vlvSort"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-vlvSort }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"vlvEnabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-vlvEnabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordAllowChangeTime ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"passwordAllowChangeTime"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordAllowChangeTime }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvUses ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"vlvUses"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-vlvUses }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMustChange ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMustChange", "pwdMustChange"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMustChange }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordStorageScheme ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordStorageScheme"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordStorageScheme }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordMinAge ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordMinAge", "pwdMinAge"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordMinAge }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordResetFailureCount ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordResetFailureCount", "pwdFailureCountInterval"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordResetFailureCount }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosAttribute ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"cosAttribute"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-cosAttribute }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosspecifier ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"cosspecifier"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-cosspecifier }
+
+-- X-ORIGIN: "Netscape Directory Server"
+costargettree ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"costargettree"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-costargettree }
+
+-- X-ORIGIN: "Netscape Directory Server"
+costemplatedn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"costemplatedn"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-costemplatedn }
+
+-- X-ORIGIN: "Changelog Internet Draft"
+-- OID 2.16.840.1.113730.3.1.35 is also used by thumbnailPhoto (ATTRIBUTE) in schema2ldif/microsoft.std.schema. The LDAP names differ, so each definition was kept.
+changeLog ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"changeLog"}
+  LDAP-DESC                 "the distinguished name of the entry which contains the set of entries comprising this servers changelog"
+  ID                        id-at-changeLog }
+
+-- X-ORIGIN: "Netscape Directory Server"
+changeLogMaximumAge ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"changeLogMaximumAge"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-changeLogMaximumAge }
+
+-- X-ORIGIN: "Netscape Directory Server"
+changeLogMaximumSize ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"changeLogMaximumSize"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-changeLogMaximumSize }
+
+-- X-ORIGIN: "Netscape Directory Server"
+changeLogMaximumConcurrentWrites ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"changeLogMaximumConcurrentWrites"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-changeLogMaximumConcurrentWrites }
+
+-- X-ORIGIN: "LDAP Caching Internet Draft"
+ttl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ttl", "timeToLive"}
+  LDAP-DESC                 "time to live in seconds for cached objects"
+  ID                        id-at-ttl }
+
+-- X-ORIGIN: "Netscape Directory Server"
+generation ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"generation"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-generation }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosPriority ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"cosPriority"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-cosPriority }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsLookThroughLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsLookThroughLimit"}
+  LDAP-DESC                 "Binder-based search operation look through limit (candidate entries)"
+  ID                        id-at-nsLookThroughLimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSizeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsSizeLimit"}
+  LDAP-DESC                 "Binder-based search operation size limit (entries)"
+  ID                        id-at-nsSizeLimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsTimeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsTimeLimit"}
+  LDAP-DESC                 "Binder-based search operation time limit (seconds)"
+  ID                        id-at-nsTimeLimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsIdleTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsIdleTimeout"}
+  LDAP-DESC                 "Binder-based connection idle timeout (seconds)"
+  ID                        id-at-nsIdleTimeout }
+
+-- X-ORIGIN: "389"
+nsIDListScanLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsIDListScanLimit"}
+  LDAP-DESC                 "Binder-based search operation ID list scan limit (candidate entries)"
+  ID                        id-at-nsIDListScanLimit }
+
+-- X-ORIGIN: "389"
+nsPagedSizeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsPagedSizeLimit"}
+  LDAP-DESC                 "Binder-based simple paged search operation size limit"
+  ID                        id-at-nsPagedSizeLimit }
+
+-- X-ORIGIN: "389"
+nsPagedLookThroughLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsPagedLookThroughLimit"}
+  LDAP-DESC                 "Binder-based simple paged search operation look through limit"
+  ID                        id-at-nsPagedLookThroughLimit }
+
+-- X-ORIGIN: "389"
+nsPagedIDListScanLimit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsPagedIDListScanLimit"}
+  LDAP-DESC                 "Binder-based simple paged search operation ID list scan limit"
+  ID                        id-at-nsPagedIDListScanLimit }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsRole ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsRole"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsRole }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsRoleDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsRoleDN"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsRoleDN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsRoleFilter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nsRoleFilter"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsRoleFilter }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosIndirectSpecifier ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"cosIndirectSpecifier"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-cosIndirectSpecifier }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsAccountLock ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsAccountLock"}
+  LDAP-DESC                 "Operational attribute for Account Inactivation"
+  ID                        id-at-nsAccountLock }
+
+-- X-ORIGIN: "Netscape Directory Server"
+copiedFrom ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"copiedFrom"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-copiedFrom }
+
+-- X-ORIGIN: "Netscape Directory Server"
+copyingFrom ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"copyingFrom"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-copyingFrom }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsBackendSuffix ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsBackendSuffix"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsBackendSuffix }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds5ReplConflict ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds5ReplConflict"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds5ReplConflict }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds7WindowsReplicaSubtree ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds7WindowsReplicaSubtree"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds7WindowsReplicaSubtree }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds7DirectoryReplicaSubtree ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds7DirectoryReplicaSubtree"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds7DirectoryReplicaSubtree }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds7NewWinUserSyncEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds7NewWinUserSyncEnabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds7NewWinUserSyncEnabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds7NewWinGroupSyncEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds7NewWinGroupSyncEnabled"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds7NewWinGroupSyncEnabled }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsds7WindowsDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsds7WindowsDomain"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds7WindowsDomain }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsds7DirsyncCookie ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsds7DirsyncCookie"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsds7DirsyncCookie }
+
+-- X-ORIGIN: "Netscape Directory Server"
+winSyncInterval ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"winSyncInterval"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-winSyncInterval }
+
+-- X-ORIGIN: "Netscape Directory Server"
+oneWaySync ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"oneWaySync"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-oneWaySync }
+
+-- X-ORIGIN: "389 Directory Server"
+nsRoleScopeDN ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsRoleScopeDN"}
+  LDAP-DESC                 "Scope of a role"
+  ID                        id-at-nsRoleScopeDN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+winSyncMoveAction ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"winSyncMoveAction"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-winSyncMoveAction }
+
+-- X-ORIGIN: "Netscape Directory Server"
+winSyncDirectoryFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"winSyncDirectoryFilter"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-winSyncDirectoryFilter }
+
+-- X-ORIGIN: "Netscape Directory Server"
+winSyncWindowsFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"winSyncWindowsFilter"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-winSyncWindowsFilter }
+
+-- X-ORIGIN: "Netscape Directory Server"
+winSyncSubtreePair ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"winSyncSubtreePair"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-winSyncSubtreePair }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsViewFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsViewFilter"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsViewFilter }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsEncryptionAlgorithm ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsEncryptionAlgorithm"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsEncryptionAlgorithm }
+
+-- X-ORIGIN: "Netscape"
+nsslapd-parent-suffix ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"nsslapd-parent-suffix"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsslapd-parent-suffix }
+
+-- initial capital of "ConflictCSN" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "Netscape Directory Server"
+conflictCSN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ConflictCSN"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-conflictCSN }
+
+-- X-ORIGIN: "Netscape Directory Server"
+isReplicated ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"isReplicated"}
+  LDAP-DESC                 "Changelog attribute type"
+  ID                        id-at-isReplicated }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskLog ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsTaskLog"}
+  LDAP-DESC                 "Slapi Task log"
+  ID                        id-at-nsTaskLog }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsTaskStatus"}
+  LDAP-DESC                 "Slapi Task status"
+  ID                        id-at-nsTaskStatus }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskExitCode ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsTaskExitCode"}
+  LDAP-DESC                 "Slapi Task exit code"
+  ID                        id-at-nsTaskExitCode }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskCurrentItem ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsTaskCurrentItem"}
+  LDAP-DESC                 "Slapi Task item"
+  ID                        id-at-nsTaskCurrentItem }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskTotalItems ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsTaskTotalItems"}
+  LDAP-DESC                 "Slapi Task total items"
+  ID                        id-at-nsTaskTotalItems }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskCreated ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"nsTaskCreated"}
+  LDAP-DESC                 "Slapi Task creation date"
+  ID                        id-at-nsTaskCreated }
+
+-- X-ORIGIN: "389 Directory Server"
+nsTaskWarning ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"nsTaskWarning"}
+  LDAP-DESC                 "Slapi Task warning code"
+  ID                        id-at-nsTaskWarning }
+
+-- X-ORIGIN: "389 Directory Server"
+winSyncFlattenTree ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"winSyncFlattenTree"}
+  LDAP-DESC                 "When set to on, will flatten tree structure in AD replication"
+  ID                        id-at-winSyncFlattenTree }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordAdminSkipInfoUpdate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"passwordAdminSkipInfoUpdate", "pwdAdminSkipInfoUpdate"}
+  LDAP-DESC                 "Netscape defined password policy attribute type"
+  ID                        id-at-passwordAdminSkipInfoUpdate }
+
+-- Object classes
+
+-- X-ORIGIN: "Netscape Directory Server"
+groupOfCertificates OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { memberCertificateDescription
+                              | businessCategory
+                              | description
+                              | organizationName
+                              | organizationalUnitName
+                              | owner
+                              | seeAlso }
+  LDAP-NAME                 {"groupOfCertificates"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-groupOfCertificates }
+
+-- initial capital of "LDAPServer" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "Netscape Directory Server"
+lDAPServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | localityName
+                              | organizationalUnitName
+                              | seeAlso
+                              | generation
+                              | changeLogMaximumAge
+                              | changeLogMaximumSize }
+  LDAP-NAME                 {"LDAPServer"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-lDAPServer }
+
+-- X-ORIGIN: "LDAP Caching Internet Draft"
+cacheObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { ttl }
+  LDAP-NAME                 {"cacheObject"}
+  LDAP-DESC                 "object that contains the TTL (time to live) attribute type"
+  ID                        id-oc-cacheObject }
+
+-- X-ORIGIN: "Netscape Administration Services"
+netscapeServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | serverRoot
+                              | serverProductName
+                              | serverVersionNumber
+                              | installationTimeStamp
+                              | administratorContactInfo
+                              | userPassword
+                              | adminUrl
+                              | serverHostName }
+  LDAP-NAME                 {"netscapeServer"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-netscapeServer }
+
+-- X-ORIGIN: "Netscape Administration Services"
+nsLicenseUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { nsLicensedFor
+                              | nsLicenseStartTime
+                              | nsLicenseEndTime }
+  LDAP-NAME                 {"nsLicenseUser"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsLicenseUser }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { pwdpolicysubentry
+                              | passwordExpirationTime
+                              | passwordExpWarned
+                              | passwordRetryCount
+                              | retryCountResetTime
+                              | accountUnlockTime
+                              | passwordHistory
+                              | passwordAllowChangeTime
+                              | passwordGraceUserTime
+                              | pwdReset
+                              | pwdTPRReset
+                              | pwdTPRUseCount
+                              | pwdTPRValidFrom
+                              | pwdTPRExpireAt }
+  LDAP-NAME                 {"passwordObject"}
+  LDAP-DESC                 "Netscape defined password policy objectclass"
+  ID                        id-oc-passwordObject }
+
+-- X-ORIGIN: "Netscape Directory Server"
+passwordPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { passwordMaxAge
+                              | passwordExp
+                              | passwordMinLength
+                              | passwordKeepHistory
+                              | passwordInHistory
+                              | passwordChange
+                              | passwordWarning
+                              | passwordLockout
+                              | passwordMaxFailure
+                              | passwordResetDuration
+                              | passwordUnlock
+                              | passwordLockoutDuration
+                              | passwordCheckSyntax
+                              | passwordMustChange
+                              | passwordStorageScheme
+                              | passwordMinAge
+                              | passwordResetFailureCount
+                              | passwordGraceLimit
+                              | passwordMinDigits
+                              | passwordMinAlphas
+                              | passwordMinUppers
+                              | passwordMinLowers
+                              | passwordMinSpecials
+                              | passwordMin8bit
+                              | passwordMaxRepeats
+                              | passwordMinCategories
+                              | passwordMinTokenLength
+                              | passwordTrackUpdateTime
+                              | passwordAdminDN
+                              | passwordDictCheck
+                              | passwordDictPath
+                              | passwordPalindrome
+                              | passwordMaxSequence
+                              | passwordMaxClassChars
+                              | passwordMaxSeqSets
+                              | passwordBadWords
+                              | passwordUserAttributes
+                              | passwordSendExpiringTime
+                              | passwordTPRMaxUse
+                              | passwordTPRDelayExpireAt
+                              | passwordTPRDelayValidFrom
+                              | passwordAdminSkipInfoUpdate
+                              | passwordBreachCheck
+                              | passwordBreachDbUrl
+                              | passwordBreachDbTimeout }
+  LDAP-NAME                 {"passwordPolicy"}
+  LDAP-DESC                 "Netscape defined password policy objectclass"
+  ID                        id-oc-passwordPolicy }
+
+-- X-ORIGIN: "Netscape Directory Server"
+netscapeMachineData OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"netscapeMachineData"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-netscapeMachineData }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvSearch OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | vlvBase
+                              | vlvScope
+                              | vlvFilter }
+  MAY CONTAIN               { multiLineDescription }
+  LDAP-NAME                 {"vlvSearch"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-vlvSearch }
+
+-- X-ORIGIN: "Netscape Directory Server"
+vlvIndex OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | vlvSort }
+  MAY CONTAIN               { vlvEnabled
+                              | vlvUses }
+  LDAP-NAME                 {"vlvIndex"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-vlvIndex }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { costargettree
+                              | costemplatedn
+                              | cosspecifier
+                              | cosAttribute
+                              | aci
+                              | commonName
+                              | uid }
+  LDAP-NAME                 {"cosDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-cosDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsRoleDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { ldapSubEntry }
+  MAY CONTAIN               { description
+                              | nsRoleScopeDN }
+  LDAP-NAME                 {"nsRoleDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsRoleDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsSimpleRoleDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { nsRoleDefinition }
+  LDAP-NAME                 {"nsSimpleRoleDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsSimpleRoleDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsComplexRoleDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { nsRoleDefinition }
+  LDAP-NAME                 {"nsComplexRoleDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsComplexRoleDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsManagedRoleDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { nsSimpleRoleDefinition }
+  LDAP-NAME                 {"nsManagedRoleDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsManagedRoleDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsFilteredRoleDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { nsComplexRoleDefinition }
+  MUST CONTAIN              { nsRoleFilter }
+  LDAP-NAME                 {"nsFilteredRoleDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsFilteredRoleDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsNestedRoleDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { nsComplexRoleDefinition }
+  MUST CONTAIN              { nsRoleDN }
+  LDAP-NAME                 {"nsNestedRoleDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsNestedRoleDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosSuperDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { ldapSubEntry }
+  MUST CONTAIN              { cosAttribute }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"cosSuperDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-cosSuperDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosClassicDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { cosSuperDefinition }
+  MAY CONTAIN               { costemplatedn
+                              | cosspecifier }
+  LDAP-NAME                 {"cosClassicDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-cosClassicDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosPointerDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { cosSuperDefinition }
+  MAY CONTAIN               { costemplatedn }
+  LDAP-NAME                 {"cosPointerDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-cosPointerDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+cosIndirectDefinition OBJECT-CLASS ::= {
+  SUBCLASS OF               { cosSuperDefinition }
+  MAY CONTAIN               { cosIndirectSpecifier }
+  LDAP-NAME                 {"cosIndirectDefinition"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-cosIndirectDefinition }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsDSWindowsReplicationAgreement OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { nsDS5ReplicaHost
+                              | nsDS5ReplicaPort
+                              | nsDS5ReplicaTransportInfo
+                              | nsDS5ReplicaBindDN
+                              | nsDS5ReplicaCredentials
+                              | nsDS5ReplicaBindMethod
+                              | nsDS5ReplicaRoot
+                              | nsDS5ReplicatedAttributeList
+                              | nsDS5ReplicaUpdateSchedule
+                              | nsds5BeginReplicaRefresh
+                              | description
+                              | nsds50ruv
+                              | nsruvReplicaLastModified
+                              | nsds5replicaTimeout
+                              | nsds5replicaChangesSentSinceStartup
+                              | nsds5replicaLastUpdateEnd
+                              | nsds5replicaLastUpdateStart
+                              | nsds5replicaLastUpdateStatus
+                              | nsds5replicaUpdateInProgress
+                              | nsds5replicaLastInitEnd
+                              | nsds5replicaLastInitStart
+                              | nsds5replicaLastInitStatus
+                              | nsds5debugreplicatimeout
+                              | nsds5replicaBusyWaitTime
+                              | nsds5replicaSessionPauseTime
+                              | nsds7WindowsReplicaSubtree
+                              | nsds7DirectoryReplicaSubtree
+                              | nsds7NewWinUserSyncEnabled
+                              | nsds7NewWinGroupSyncEnabled
+                              | nsds7WindowsDomain
+                              | nsds7DirsyncCookie
+                              | winSyncInterval
+                              | oneWaySync
+                              | winSyncMoveAction
+                              | nsds5ReplicaEnabled
+                              | winSyncDirectoryFilter
+                              | winSyncWindowsFilter
+                              | winSyncSubtreePair
+                              | winSyncFlattenTree }
+  LDAP-NAME                 {"nsDSWindowsReplicationAgreement"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsDSWindowsReplicationAgreement }
+
+-- X-ORIGIN: "Netscape Directory Server"
+costemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName
+                              | cosPriority }
+  LDAP-NAME                 {"costemplate"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-costemplate }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsView OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsViewFilter
+                              | description }
+  LDAP-NAME                 {"nsView"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsView }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsAttributeEncryption OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nsEncryptionAlgorithm }
+  LDAP-NAME                 {"nsAttributeEncryption"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsAttributeEncryption }
+
+-- X-ORIGIN: "389 Directory Server"
+nsSlapiTask OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { ttl
+                              | nsTaskLog
+                              | nsTaskStatus
+                              | nsTaskExitCode
+                              | nsTaskCurrentItem
+                              | nsTaskTotalItems
+                              | nsTaskCreated
+                              | nsTaskWarning }
+  LDAP-NAME                 {"nsSlapiTask"}
+  LDAP-DESC                 "Slapi_Task objectclass"
+  ID                        id-oc-nsSlapiTask }
+END

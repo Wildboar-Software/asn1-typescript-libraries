@@ -1,0 +1,1856 @@
+-- Derived from data/ldap-schema/schema2ldif/microsoft.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 785 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 3 elements were omitted because another source file in this corpus defines the same OID.
+LdapSchema2ldifMicrosoft DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, dc, description, directoryString, serialNumber, telephoneNumber,
+    UnboundedDirectoryString, utcTime
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  locality, organizationalPerson
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  cACertificate, userCertificate
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  privateKey
+    FROM ApacheDirectorySchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) apache-directory-schema(36)} WITH SUCCESSORS
+
+  userSMIMECertificate
+    FROM H323-X500-Schema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) h323-x500-schema(1000)} WITH SUCCESSORS
+
+  accountNameHistory, aCSAggregateTokenRatePerUser, aCSAllocableRSVPBandwidth,
+    aCSCacheTimeout, aCSDirection, aCSDSBMDeadTime, aCSDSBMPriority,
+    aCSDSBMRefresh, aCSEnableACSService, aCSEnableRSVPAccounting,
+    aCSEnableRSVPMessageLogging, aCSEventLogLevel, aCSIdentityName,
+    aCSMaxAggregatePeakRatePerUser, aCSMaxDurationPerFlow, aCSMaximumSDUSize,
+    aCSMaxNoOfAccountFiles, aCSMaxNoOfLogFiles, aCSMaxPeakBandwidth,
+    aCSMaxPeakBandwidthPerFlow, aCSMaxSizeOfRSVPAccountFile,
+    aCSMaxSizeOfRSVPLogFile, aCSMaxTokenBucketPerFlow, aCSMaxTokenRatePerFlow,
+    aCSMinimumDelayVariation, aCSMinimumLatency, aCSMinimumPolicedSize,
+    aCSNonReservedMaxSDUSize, aCSNonReservedMinPolicedSize,
+    aCSNonReservedPeakRate, aCSNonReservedTokenSize, aCSNonReservedTxLimit,
+    aCSNonReservedTxSize, aCSPermissionBits, aCSPriority,
+    aCSRSVPAccountFilesLocation, aCSRSVPLogFilesLocation, aCSServerList,
+    aCSServiceType, aCSTimeOfDay, aCSTotalNoOfFlows,
+    additionalTrustedServiceNames, addressBookRoots, addressEntryDisplayTable,
+    addressEntryDisplayTableMSDOS, addressSyntax, addressType,
+    adminContextMenu, adminPropertyPages, altSecurityIdentities,
+    applicationName, appliesTo, appSchemaVersion, assetNumber,
+    attributeDisplayNames, attributeID, attributeSecurityGUID, attributeSyntax,
+    auditingPolicy, authenticationOptions, auxiliaryClass, birthLocation,
+    bridgeheadTransportList, builtinCreationTime, builtinModifiedCount,
+    bytesPerMinute, cACertificateDN, canUpgradeScript, categories, categoryId,
+    certificateTemplates, classDisplayName, cOMClassID, cOMCLSID,
+    cOMInterfaceID, cOMOtherProgId, cOMProgID, cOMTreatAsClassId, cOMTypelibId,
+    cOMUniqueLIBID, contentIndexingAllowed, contextMenu, controlAccessRights,
+    cost, createDialog, createWizardExt, creationTime, creationWizard, creator,
+    currentLocation, currentValue, currMachineId, defaultClassStore,
+    defaultHidingValue, defaultLocalPolicyObject, defaultObjectCategory,
+    defaultPriority, defaultSecurityDescriptor, desktopProfile, dhcpClasses,
+    dhcpFlags, dhcpIdentification, dhcpMask, dhcpMaxKey, dhcpObjDescription,
+    dhcpObjName, dhcpOptions, dhcpProperties, dhcpRanges, dhcpReservations,
+    dhcpServers, dhcpSites, dhcpState, dhcpSubnets, dhcpType, dhcpUniqueKey,
+    dhcpUpdateTime, dMDLocation, dNReferenceUpdate, dnsAllowDynamic,
+    dnsAllowXFR, dNSHostName, dnsNotifySecondaries, dNSProperty, dnsRecord,
+    dnsRoot, dnsSecureSecondaries, dNSTombstoned, domainCAs, domainCrossRef,
+    domainIdentifier, domainPolicyObject, domainPolicyReference, domainReplica,
+    domainWidePolicy, driverName, driverVersion, dSHeuristics,
+    dSUIAdminMaximum, dSUIAdminNotification, dSUIShellMaximum, eFSPolicy,
+    enabled, enabledConnection, enrollmentProviders, extendedCharsAllowed,
+    fileExtPriority, flags, flatName, forceLogoff, foreignIdentifier,
+    friendlyNames, fromServer, frsComputerReference, fRSControlDataCreation,
+    fRSControlInboundBacklog, fRSControlOutboundBacklog, fRSDirectoryFilter,
+    fRSDSPoll, fRSExtensions, fRSFaultCondition, fRSFileFilter, fRSFlags,
+    fRSLevelLimit, fRSMemberReference, fRSPartnerAuthLevel, fRSPrimaryMember,
+    fRSReplicaSetGUID, fRSReplicaSetType, fRSRootPath, fRSRootSecurity,
+    fRSServiceCommand, fRSServiceCommandStatus, fRSStagingPath,
+    fRSUpdateTimeout, fRSVersion, fRSVersionGUID, fRSWorkingPath,
+    garbageCollPeriod, generatedConnection, globalAddressList, governsID,
+    gPCFileSysPath, gPCFunctionalityVersion, gPCMachineExtensionNames,
+    gPCUserExtensionNames, gPLink, gPOptions, hasMasterNCs,
+    hasPartialReplicaNCs, helpData16, helpData32, helpFileName, iconPath,
+    implementedCategories, indexedScopes, initialAuthIncoming,
+    initialAuthOutgoing, installUiLevel, interSiteTopologyFailover,
+    interSiteTopologyGenerator, interSiteTopologyRenew, invocationId,
+    ipsecData, ipsecDataType, ipsecFilterReference, ipsecID,
+    ipsecISAKMPReference, ipsecName, iPSECNegotiationPolicyAction,
+    ipsecNegotiationPolicyReference, iPSECNegotiationPolicyType,
+    ipsecNFAReference, ipsecOwnersReference, ipsecPolicyReference, isDefunct,
+    isEphemeral, isMemberOfPartialAttributeSet, isSingleValued,
+    lastBackupRestorationTime, lastContentIndexed, lastSetTime,
+    lastUpdateSequence, lDAPAdminLimits, lDAPDisplayName, lDAPIPDenyList,
+    legacyExchangeDN, linkID, linkTrackSecret, localeID, localizationDisplayId,
+    localizedDescription, location, lockoutDuration, lockOutObservationWindow,
+    lockoutThreshold, lSACreationTime, lSAModifiedCount, machineArchitecture,
+    mailAddress, managedBy, mAPIID, marshalledInterface, maxPwdAge,
+    maxRenewAge, maxTicketAge, mayContain, meetingAdvertiseScope,
+    meetingApplication, meetingBandwidth, meetingBlob, meetingContactInfo,
+    meetingDescription, meetingID, meetingIP, meetingIsEncrypted,
+    meetingKeyword, meetingLanguage, meetingLocation, meetingMaxParticipants,
+    meetingName, meetingOriginator, meetingOwner, meetingProtocol,
+    meetingRating, meetingRecurrence, meetingScope, meetingType, meetingURL,
+    minPwdAge, minPwdLength, minTicketAge, modifiedCount,
+    modifiedCountAtLastProm, moniker, monikerDisplayName, moveTreeState,
+    ms-DS-MachineAccountQuota, mS-DS-ReplicatesNCReason, mS-SQL-Alias,
+    mS-SQL-AllowAnonymousSubscription,
+    mS-SQL-AllowImmediateUpdatingSubscription,
+    mS-SQL-AllowKnownPullSubscription, mS-SQL-AllowQueuedUpdatingSubscription,
+    mS-SQL-AllowSnapshotFilesFTPDownloading, mS-SQL-AppleTalk,
+    mS-SQL-Applications, mS-SQL-Build, mS-SQL-CharacterSet, mS-SQL-Clustered,
+    mS-SQL-ConnectionURL, mS-SQL-Contact, mS-SQL-CreationDate, mS-SQL-Database,
+    mS-SQL-Description, mS-SQL-GPSHeight, mS-SQL-GPSLatitude,
+    mS-SQL-GPSLongitude, mS-SQL-InformationDirectory, mS-SQL-InformationURL,
+    mS-SQL-Keywords, mS-SQL-Language, mS-SQL-LastBackupDate,
+    mS-SQL-LastDiagnosticDate, mS-SQL-LastUpdatedDate, mS-SQL-Location,
+    mS-SQL-Memory, mS-SQL-MultiProtocol, mS-SQL-Name, mS-SQL-NamedPipe,
+    mS-SQL-PublicationURL, mS-SQL-Publisher, mS-SQL-RegisteredOwner,
+    mS-SQL-ServiceAccount, mS-SQL-Size, mS-SQL-SortOrder, mS-SQL-SPX,
+    mS-SQL-Status, mS-SQL-TCPIP, mS-SQL-ThirdParty, mS-SQL-Type,
+    mS-SQL-UnicodeSortOrder, mS-SQL-Version, mS-SQL-Vines, mscopeId,
+    msiFileList, msiScript, msiScriptName, msiScriptPath, msiScriptSize,
+    mSMQAuthenticate, mSMQBasePriority, mSMQComputerType, mSMQCost,
+    mSMQCSPName, mSMQDependentClientService, mSMQDependentClientServices,
+    mSMQDigests, mSMQDigestsMig, mSMQDsService, mSMQDsServices, mSMQEncryptKey,
+    mSMQForeign, mSMQInRoutingServers, mSMQInterval1, mSMQInterval2,
+    mSMQJournal, mSMQJournalQuota, mSMQLabel, mSMQLongLived, mSMQMigrated,
+    mSMQNameStyle, mSMQNt4Flags, mSMQNt4Stub, mSMQOSType,
+    mSMQOutRoutingServers, mSMQOwnerID, mSMQPrivacyLevel, mSMQQMID,
+    mSMQQueueJournalQuota, mSMQQueueNameExt, mSMQQueueQuota, mSMQQueueType,
+    mSMQQuota, mSMQRoutingService, mSMQRoutingServices, mSMQServices,
+    mSMQServiceType, mSMQSignCertificates, mSMQSignCertificatesMig,
+    mSMQSignKey, mSMQSite1, mSMQSite2, mSMQSiteForeign, mSMQSiteGates,
+    mSMQSiteGatesMig, mSMQSiteID, mSMQSiteName, mSMQSites, mSMQTransactional,
+    mSMQUserSid, mSMQVersion, msRRASAttribute, msRRASVendorAttributeEntry,
+    mustContain, nameServiceFlags, nCName, nETBIOSName, netbootAllowNewClients,
+    netbootAnswerOnlyValidClients, netbootAnswerRequests,
+    netbootCurrentClientCount, netbootIntelliMirrorOSes, netbootLimitClients,
+    netbootLocallyInstalledOSes, netbootMachineFilePath, netbootMaxClients,
+    netbootNewMachineNamingPolicy, netbootNewMachineOU, netbootServer,
+    netbootTools, networkAddress, nextLevelStore, nextRid, notes,
+    notificationList, nTMixedDomain, nTSecurityDescriptor, objectClassCategory,
+    objectCount, objectSid, oEMInformation, oMObjectClass, oMSyntax, oMTGuid,
+    oMTIndxGuid, operatingSystem, operatingSystemHotfix,
+    operatingSystemServicePack, operatingSystemVersion, optionDescription,
+    options, optionsLocation, originalDisplayTable, originalDisplayTableMSDOS,
+    packageFlags, packageName, packageType, pekKeyChangeInterval, pekList,
+    perMsgDialogDisplayTable, perRecipDialogDisplayTable,
+    physicalLocationObject, pKICriticalExtensions, pKIDefaultCSPs,
+    pKIDefaultKeySpec, pKIEnrollmentAccess, pKIExpirationPeriod,
+    pKIExtendedKeyUsage, pKIKeyUsage, pKIMaxIssuingDepth, pKIOverlapPeriod,
+    pKT, pKTGuid, portName, possSuperiors, prefixMap, printAttributes,
+    printBinNames, printCollate, printColor, printDuplexSupported,
+    printEndTime, printerName, printFormName, printKeepPrintedJobs,
+    printLanguage, printMACAddress, printMaxCopies,
+    printMaxResolutionSupported, printMaxXExtent, printMaxYExtent,
+    printMediaReady, printMediaSupported, printMemory, printMinXExtent,
+    printMinYExtent, printNetworkAddress, printNotify, printNumberUp,
+    printOrientationsSupported, printOwner, printPagesPerMinute, printRate,
+    printRateUnit, printSeparatorFile, printShareName, printSpooling,
+    printStaplingSupported, printStartTime, printStatus, priority,
+    priorSetTime, priorValue, productCode, proxyGenerationEnabled,
+    proxyLifetime, publicKeyPolicy, purportedSearch, pwdHistoryLength,
+    pwdProperties, qualityOfService, queryFilter, queryPoint,
+    queryPolicyObject, rangeLower, rangeUpper, rDNAttID, remoteServerName,
+    remoteSource, remoteSourceType, remoteStorageGUID, replicaSource,
+    replInterval, replTopologyStayOfExecution, requiredCategories,
+    retiredReplDSASignatures, revision, rIDAllocationPool, rIDAvailablePool,
+    rIDManagerReference, rIDNextRID, rIDPreviousAllocationPool, rIDUsedPool,
+    rightsGuid, rootTrust, rpcNsAnnotation, rpcNsBindings, rpcNsCodeset,
+    rpcNsEntryFlags, rpcNsGroup, rpcNsInterfaceID, rpcNsObjectID,
+    rpcNsPriority, rpcNsProfileEntry, rpcNsTransferSyntax, sAMAccountName,
+    sAMAccountType, schedule, schemaFlagsEx, schemaIDGUID, schemaInfo,
+    schemaUpdate, schemaVersion, scopeFlags, searchFlags, securityIdentifier,
+    seqNotification, serverName, serverReference, serverRole, serverState,
+    serviceClassID, serviceClassInfo, serviceInstanceVersion, setupCommand,
+    shellContextMenu, shellPropertyPages, shortServerName, showInAddressBook,
+    sIDHistory, signatureAlgorithms, siteLinkList, siteList, siteObject,
+    siteServer, sPNMappings, subClassOf, superiorDNSRoot,
+    superScopeDescription, superScopes, supplementalCredentials,
+    systemAuxiliaryClass, systemMayContain, systemMustContain, systemOnly,
+    systemPossSuperiors, templateRoots, timeRefresh, timeVolChange,
+    tokenGroups, tokenGroupsGlobalAndUniversal, tokenGroupsNoGCAcceptable,
+    tombstoneLifetime, transportAddressAttribute, transportDLLName,
+    transportType, treatAsLeaf, treeName, trustAttributes, trustAuthIncoming,
+    trustAuthOutgoing, trustDirection, trustParent, trustPartner,
+    trustPosixOffset, trustType, uASCompat, uNCName, upgradeProductCode,
+    uPNSuffixes, userCert, validAccesses, vendor, versionNumber,
+    versionNumberHi, versionNumberLo, volTableGUID, volTableIdxGUID,
+    winsockAddresses
+    FROM MSUser
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) msuser(26)} WITH SUCCESSORS
+
+  rid
+    FROM SambaSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) samba-schema(58)} WITH SUCCESSORS
+
+  textEncodedORAddress
+    FROM LdapSchema2ldifCosine
+
+  connectionPoint, leaf, serviceConnectionPoint
+    FROM LdapSchema2ldifFmserver ;
+
+-- Object identifiers
+
+id-oc-remoteMailRecipient OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 24 }
+id-oc-packageRegistration OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 49 }
+id-oc-mSMQQueue OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 161 }
+id-oc-rpcServer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 81 }
+id-oc-samServer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 5 }
+id-oc-rRASAdministrationDictionary OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 156 }
+id-oc-aCSSubnet OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 138 }
+id-oc-aCSPolicy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 137 }
+id-oc-nTFRSSubscriptions OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 154 }
+id-oc-msExchConfigurationContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 176 }
+id-oc-interSiteTransport OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 141 }
+id-oc-container OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 23 }
+id-oc-domainDNS OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 67 }
+id-oc-samDomain OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 3 }
+id-oc-intellimirrorGroup OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 152 }
+id-oc-dHCPClass OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 132 }
+id-oc-ipsecBase OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 7000 56 }
+id-oc-comConnectionPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 11 }
+id-oc-controlAccessRight OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 77 }
+id-oc-indexServerCatalog OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 130 }
+id-oc-interSiteTransportContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 140 }
+id-oc-rpcEntry OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 27 }
+id-oc-rpcGroup OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 80 }
+id-oc-mS-SQL-OLAPDatabase OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 189 }
+id-oc-crossRef OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 11 }
+id-oc-siteLink OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 147 }
+id-oc-ipsecNFA OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 121 }
+id-oc-linkTrackVolEntry OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 92 }
+id-oc-linkTrackOMTEntry OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 93 }
+id-oc-securityPrincipal OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 6 }
+id-oc-mSMQConfiguration OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 162 }
+id-oc-classRegistration OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 10 }
+id-oc-aCSResourceLimits OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 191 }
+id-oc-crossRefContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 7000 53 }
+id-oc-ipsecISAKMPPolicy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 120 }
+id-oc-rpcProfileElement OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 26 }
+id-oc-mS-SQL-SQLDatabase OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 188 }
+id-oc-serviceAdministrationPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 94 }
+id-oc-dnsZone OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 85 }
+id-oc-storage OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 33 }
+id-oc-nTDSDSA OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 7000 47 }
+id-oc-contact OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 15 }
+id-oc-dnsNode OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 86 }
+id-oc-meeting OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 104 }
+id-oc-nTDSSiteSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 69 }
+id-oc-intellimirrorSCP OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 151 }
+id-oc-serversContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 7000 48 }
+id-oc-mS-SQL-OLAPServer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 185 }
+id-oc-mSMQMigratedUser OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 179 }
+id-oc-rpcServerElement OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 73 }
+id-oc-physicalLocation OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 97 }
+id-oc-dfsConfiguration OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 42 }
+id-oc-displaySpecifier OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 84 }
+id-oc-fileLinkTracking OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 52 }
+id-oc-remoteStorageServicePoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 146 }
+id-oc-volume OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 36 }
+id-oc-server OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 17 }
+id-oc-subnet OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 96 }
+id-oc-rIDSet OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 129 }
+id-oc-secret OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 28 }
+id-oc-domain OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 66 }
+id-oc-mS-SQL-SQLServer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 184 }
+id-oc-nTFRSSubscriber OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 155 }
+id-oc-nTFRSReplicaSet OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 102 }
+id-oc-subnetContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 95 }
+id-oc-displayTemplate OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 59 }
+id-oc-serviceInstance OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 30 }
+id-oc-attributeSchema OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 14 }
+id-oc-addressTemplate OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 58 }
+id-oc-foreignSecurityPrincipal OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 76 }
+id-oc-fTDfs OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 43 }
+id-oc-linkTrackObjectMoveTable OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 91 }
+id-oc-rRASAdministrationConnectionPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 150 }
+id-oc-securityObject OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 1 }
+id-oc-sitesContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 107 }
+id-oc-nTDSConnection OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 71 }
+id-oc-mS-SQL-OLAPCube OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 190 }
+id-oc-siteLinkBridge OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 148 }
+id-oc-applicationSiteSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 68 }
+id-oc-site OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 31 }
+id-oc-nTFRSSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 89 }
+id-oc-trustedDomain OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 34 }
+id-oc-configuration OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 12 }
+id-oc-mSMQEnterpriseSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 163 }
+id-oc-builtinDomain OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 4 }
+id-oc-mailRecipient OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 46 }
+id-oc-samDomainBase OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 2 }
+id-oc-ipsecNegotiationPolicy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 119 }
+id-oc-dMD OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 9 }
+id-oc-mSMQSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 165 }
+id-oc-dSUISettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 183 }
+id-oc-pKICertificateTemplate OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 177 }
+id-oc-mSMQSiteLink OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 164 }
+id-oc-lostAndFound OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 139 }
+id-oc-rpcContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 136 }
+id-oc-domainPolicy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 18 }
+id-oc-serviceClass OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 29 }
+id-oc-licensingSiteSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 78 }
+id-oc-fileLinkTrackingEntry OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 59 }
+id-oc-queryPolicy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 106 }
+id-oc-typeLibrary OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 53 }
+id-oc-nTDSService OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 72 }
+id-oc-nTFRSMember OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 153 }
+id-oc-ipsecPolicy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 98 }
+id-oc-ipsecFilter OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 118 }
+id-oc-classSchema OBJECT IDENTIFIER ::= { 1 2 840 113556 1 3 13 }
+id-oc-infrastructureUpdate OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 175 }
+id-oc-groupPolicyContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 157 }
+id-oc-categoryRegistration OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 74 }
+id-oc-pKIEnrollmentService OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 178 }
+id-oc-mS-SQL-SQLPublication OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 187 }
+id-oc-linkTrackVolumeTable OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 90 }
+id-oc-addressBookContainer OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 125 }
+id-oc-printQueue OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 23 }
+id-oc-classStore OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 44 }
+id-oc-mS-SQL-SQLRepository OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 186 }
+id-oc-rpcProfile OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 82 }
+id-oc-rIDManager OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 83 }
+id-oc-applicationSettings OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 7000 49 }
+id-at-fRSTimeLastCommand OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 880 }
+id-at-homePostalAddress OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 617 }
+id-at-meetingStartTime OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 587 }
+id-at-employeeNumber OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 610 }
+id-at-meetingEndTime OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 588 }
+id-at-personalTitle OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 615 }
+id-at-homeDirectory OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 44 }
+id-at-streetAddress OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 256 }
+id-at-employeeType OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 613 }
+id-at-otherMailbox OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 651 }
+id-at-displayName OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 13 }
+id-at-dmdName OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 598 }
+id-at-info OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 81 }
+id-at-name OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 1 }
+id-at-fRSTimeLastConfigChange OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 881 }
+id-at-co OBJECT IDENTIFIER ::= { 1 2 840 113556 1 2 131 }
+
+-- Attribute types
+
+fRSTimeLastCommand ATTRIBUTE ::= {
+  WITH SYNTAX               UTCTime
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               utcTime.&id
+  LDAP-NAME                 {"fRSTimeLastCommand"}
+  ID                        id-at-fRSTimeLastCommand }
+
+homePostalAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"homePostalAddress"}
+  ID                        id-at-homePostalAddress }
+
+meetingStartTime ATTRIBUTE ::= {
+  WITH SYNTAX               UTCTime
+  LDAP-SYNTAX               utcTime.&id
+  LDAP-NAME                 {"meetingStartTime"}
+  ID                        id-at-meetingStartTime }
+
+employeeNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"employeeNumber"}
+  ID                        id-at-employeeNumber }
+
+meetingEndTime ATTRIBUTE ::= {
+  WITH SYNTAX               UTCTime
+  LDAP-SYNTAX               utcTime.&id
+  LDAP-NAME                 {"meetingEndTime"}
+  ID                        id-at-meetingEndTime }
+
+personalTitle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"personalTitle"}
+  ID                        id-at-personalTitle }
+
+homeDirectory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"homeDirectory"}
+  ID                        id-at-homeDirectory }
+
+streetAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"streetAddress"}
+  ID                        id-at-streetAddress }
+
+employeeType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"employeeType"}
+  ID                        id-at-employeeType }
+
+otherMailbox ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"otherMailbox"}
+  ID                        id-at-otherMailbox }
+
+displayName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"displayName"}
+  ID                        id-at-displayName }
+
+dmdName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dmdName"}
+  ID                        id-at-dmdName }
+
+info ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"info"}
+  ID                        id-at-info }
+
+name ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"name"}
+  ID                        id-at-name }
+
+fRSTimeLastConfigChange ATTRIBUTE ::= {
+  WITH SYNTAX               UTCTime
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               utcTime.&id
+  LDAP-NAME                 {"fRSTimeLastConfigChange"}
+  ID                        id-at-fRSTimeLastConfigChange }
+
+co ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"co"}
+  ID                        id-at-co }
+
+-- Object classes
+
+remoteMailRecipient OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { remoteSource
+                              | remoteSourceType
+                              | managedBy }
+  LDAP-NAME                 {"remoteMailRecipient"}
+  ID                        id-oc-remoteMailRecipient }
+
+packageRegistration OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { msiScriptPath
+                              | cOMClassID
+                              | cOMInterfaceID
+                              | cOMProgID
+                              | localeID
+                              | machineArchitecture
+                              | iconPath
+                              | cOMTypelibId
+                              | vendor
+                              | packageType
+                              | setupCommand
+                              | packageName
+                              | packageFlags
+                              | versionNumberHi
+                              | versionNumberLo
+                              | lastUpdateSequence
+                              | managedBy
+                              | msiFileList
+                              | categories
+                              | upgradeProductCode
+                              | msiScript
+                              | canUpgradeScript
+                              | fileExtPriority
+                              | productCode
+                              | msiScriptName
+                              | msiScriptSize
+                              | installUiLevel }
+  LDAP-NAME                 {"packageRegistration"}
+  ID                        id-oc-packageRegistration }
+
+mSMQQueue OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mSMQQueueType
+                              | mSMQJournal
+                              | mSMQBasePriority
+                              | mSMQLabel
+                              | mSMQAuthenticate
+                              | mSMQPrivacyLevel
+                              | mSMQOwnerID
+                              | mSMQTransactional
+                              | mSMQQueueQuota
+                              | mSMQQueueJournalQuota
+                              | mSMQQueueNameExt }
+  LDAP-NAME                 {"mSMQQueue"}
+  ID                        id-oc-mSMQQueue }
+
+rpcServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { rpcEntry }
+  MAY CONTAIN               { rpcNsObjectID
+                              | rpcNsCodeset
+                              | rpcNsEntryFlags }
+  LDAP-NAME                 {"rpcServer"}
+  ID                        id-oc-rpcServer }
+
+samServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { securityObject }
+  LDAP-NAME                 {"samServer"}
+  ID                        id-oc-samServer }
+
+rRASAdministrationDictionary OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { msRRASVendorAttributeEntry }
+  LDAP-NAME                 {"rRASAdministrationDictionary"}
+  ID                        id-oc-rRASAdministrationDictionary }
+
+aCSSubnet OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { aCSMaxTokenRatePerFlow
+                              | aCSMaxPeakBandwidthPerFlow
+                              | aCSMaxDurationPerFlow
+                              | aCSAllocableRSVPBandwidth
+                              | aCSMaxPeakBandwidth
+                              | aCSEnableRSVPMessageLogging
+                              | aCSEventLogLevel
+                              | aCSEnableACSService
+                              | aCSRSVPLogFilesLocation
+                              | aCSMaxNoOfLogFiles
+                              | aCSMaxSizeOfRSVPLogFile
+                              | aCSDSBMPriority
+                              | aCSDSBMRefresh
+                              | aCSDSBMDeadTime
+                              | aCSCacheTimeout
+                              | aCSNonReservedTxLimit
+                              | aCSNonReservedTxSize
+                              | aCSEnableRSVPAccounting
+                              | aCSRSVPAccountFilesLocation
+                              | aCSMaxNoOfAccountFiles
+                              | aCSMaxSizeOfRSVPAccountFile
+                              | aCSServerList
+                              | aCSNonReservedPeakRate
+                              | aCSNonReservedTokenSize
+                              | aCSNonReservedMaxSDUSize
+                              | aCSNonReservedMinPolicedSize }
+  LDAP-NAME                 {"aCSSubnet"}
+  ID                        id-oc-aCSSubnet }
+
+aCSPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { aCSTimeOfDay
+                              | aCSDirection
+                              | aCSMaxTokenRatePerFlow
+                              | aCSMaxPeakBandwidthPerFlow
+                              | aCSAggregateTokenRatePerUser
+                              | aCSMaxDurationPerFlow
+                              | aCSServiceType
+                              | aCSTotalNoOfFlows
+                              | aCSPriority
+                              | aCSPermissionBits
+                              | aCSIdentityName
+                              | aCSMaxAggregatePeakRatePerUser
+                              | aCSMaxTokenBucketPerFlow
+                              | aCSMaximumSDUSize
+                              | aCSMinimumPolicedSize
+                              | aCSMinimumLatency
+                              | aCSMinimumDelayVariation }
+  LDAP-NAME                 {"aCSPolicy"}
+  ID                        id-oc-aCSPolicy }
+
+nTFRSSubscriptions OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { fRSWorkingPath
+                              | fRSExtensions
+                              | fRSVersion }
+  LDAP-NAME                 {"nTFRSSubscriptions"}
+  ID                        id-oc-nTFRSSubscriptions }
+
+msExchConfigurationContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { container }
+  MAY CONTAIN               { addressBookRoots
+                              | globalAddressList
+                              | templateRoots }
+  LDAP-NAME                 {"msExchConfigurationContainer"}
+  ID                        id-oc-msExchConfigurationContainer }
+
+interSiteTransport OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { transportDLLName
+                              | transportAddressAttribute }
+  MAY CONTAIN               { options
+                              | replInterval }
+  LDAP-NAME                 {"interSiteTransport"}
+  ID                        id-oc-interSiteTransport }
+
+container OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { schemaVersion
+                              | defaultClassStore }
+  LDAP-NAME                 {"container"}
+  ID                        id-oc-container }
+
+domainDNS OBJECT-CLASS ::= {
+  SUBCLASS OF               { domain }
+  MAY CONTAIN               { managedBy }
+  LDAP-NAME                 {"domainDNS"}
+  ID                        id-oc-domainDNS }
+
+samDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { description
+                              | cACertificate
+                              | builtinCreationTime
+                              | builtinModifiedCount
+                              | creationTime
+                              | domainPolicyObject
+                              | defaultLocalPolicyObject
+                              | lockoutDuration
+                              | lockOutObservationWindow
+                              | lSACreationTime
+                              | lSAModifiedCount
+                              | lockoutThreshold
+                              | maxPwdAge
+                              | minPwdAge
+                              | minPwdLength
+                              | modifiedCountAtLastProm
+                              | nETBIOSName
+                              | nextRid
+                              | pwdProperties
+                              | pwdHistoryLength
+                              | privateKey
+                              | replicaSource
+                              | controlAccessRights
+                              | auditingPolicy
+                              | eFSPolicy
+                              | desktopProfile
+                              | nTMixedDomain
+                              | rIDManagerReference
+                              | treeName
+                              | pekList
+                              | pekKeyChangeInterval
+                              | gPLink
+                              | gPOptions
+                              | ms-DS-MachineAccountQuota }
+  LDAP-NAME                 {"samDomain"}
+  ID                        id-oc-samDomain }
+
+intellimirrorGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"intellimirrorGroup"}
+  ID                        id-oc-intellimirrorGroup }
+
+dHCPClass OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dhcpUniqueKey
+                              | dhcpType
+                              | dhcpFlags
+                              | dhcpIdentification }
+  MAY CONTAIN               { networkAddress
+                              | dhcpObjName
+                              | dhcpObjDescription
+                              | dhcpServers
+                              | dhcpSubnets
+                              | dhcpMask
+                              | dhcpRanges
+                              | dhcpSites
+                              | dhcpReservations
+                              | superScopes
+                              | superScopeDescription
+                              | optionDescription
+                              | optionsLocation
+                              | dhcpOptions
+                              | dhcpClasses
+                              | mscopeId
+                              | dhcpState
+                              | dhcpProperties
+                              | dhcpMaxKey
+                              | dhcpUpdateTime }
+  LDAP-NAME                 {"dHCPClass"}
+  ID                        id-oc-dHCPClass }
+
+ipsecBase OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MAY CONTAIN               { ipsecName
+                              | ipsecID
+                              | ipsecDataType
+                              | ipsecData
+                              | ipsecOwnersReference }
+  LDAP-NAME                 {"ipsecBase"}
+  ID                        id-oc-ipsecBase }
+
+comConnectionPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { marshalledInterface
+                              | moniker
+                              | monikerDisplayName }
+  LDAP-NAME                 {"comConnectionPoint"}
+  ID                        id-oc-comConnectionPoint }
+
+controlAccessRight OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { rightsGuid
+                              | appliesTo
+                              | localizationDisplayId
+                              | validAccesses }
+  LDAP-NAME                 {"controlAccessRight"}
+  ID                        id-oc-controlAccessRight }
+
+indexServerCatalog OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { creator }
+  MAY CONTAIN               { uNCName
+                              | queryPoint
+                              | indexedScopes
+                              | friendlyNames }
+  LDAP-NAME                 {"indexServerCatalog"}
+  ID                        id-oc-indexServerCatalog }
+
+interSiteTransportContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"interSiteTransportContainer"}
+  ID                        id-oc-interSiteTransportContainer }
+
+rpcEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  KIND                      abstract
+  LDAP-NAME                 {"rpcEntry"}
+  ID                        id-oc-rpcEntry }
+
+rpcGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { rpcEntry }
+  MAY CONTAIN               { rpcNsGroup
+                              | rpcNsObjectID }
+  LDAP-NAME                 {"rpcGroup"}
+  ID                        id-oc-rpcGroup }
+
+mS-SQL-OLAPDatabase OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-Contact
+                              | mS-SQL-Status
+                              | mS-SQL-LastUpdatedDate
+                              | mS-SQL-InformationURL
+                              | mS-SQL-ConnectionURL
+                              | mS-SQL-PublicationURL
+                              | mS-SQL-Description
+                              | mS-SQL-Type
+                              | mS-SQL-Size
+                              | mS-SQL-LastBackupDate
+                              | mS-SQL-Applications
+                              | mS-SQL-Keywords }
+  LDAP-NAME                 {"mS-SQL-OLAPDatabase"}
+  ID                        id-oc-mS-SQL-OLAPDatabase }
+
+crossRef OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | nCName
+                              | dnsRoot }
+  MAY CONTAIN               { enabled
+                              | nETBIOSName
+                              | trustParent
+                              | superiorDNSRoot
+                              | rootTrust }
+  LDAP-NAME                 {"crossRef"}
+  ID                        id-oc-crossRef }
+
+siteLink OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { siteList }
+  MAY CONTAIN               { cost
+                              | schedule
+                              | options
+                              | replInterval }
+  LDAP-NAME                 {"siteLink"}
+  ID                        id-oc-siteLink }
+
+ipsecNFA OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipsecBase }
+  MAY CONTAIN               { ipsecNegotiationPolicyReference
+                              | ipsecFilterReference }
+  LDAP-NAME                 {"ipsecNFA"}
+  ID                        id-oc-ipsecNFA }
+
+linkTrackVolEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { linkTrackSecret
+                              | volTableIdxGUID
+                              | volTableGUID
+                              | currMachineId
+                              | timeVolChange
+                              | timeRefresh
+                              | seqNotification
+                              | objectCount }
+  LDAP-NAME                 {"linkTrackVolEntry"}
+  ID                        id-oc-linkTrackVolEntry }
+
+linkTrackOMTEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { birthLocation
+                              | oMTIndxGuid
+                              | currentLocation
+                              | timeRefresh
+                              | oMTGuid }
+  LDAP-NAME                 {"linkTrackOMTEntry"}
+  ID                        id-oc-linkTrackOMTEntry }
+
+securityPrincipal OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { objectSid
+                              | sAMAccountName }
+  MAY CONTAIN               { nTSecurityDescriptor
+                              | securityIdentifier
+                              | supplementalCredentials
+                              | rid
+                              | sAMAccountType
+                              | sIDHistory
+                              | altSecurityIdentities
+                              | tokenGroups
+                              | tokenGroupsNoGCAcceptable
+                              | accountNameHistory
+                              | tokenGroupsGlobalAndUniversal }
+  LDAP-NAME                 {"securityPrincipal"}
+  ID                        id-oc-securityPrincipal }
+
+mSMQConfiguration OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mSMQQuota
+                              | mSMQJournalQuota
+                              | mSMQOwnerID
+                              | mSMQSites
+                              | mSMQOutRoutingServers
+                              | mSMQInRoutingServers
+                              | mSMQServiceType
+                              | mSMQComputerType
+                              | mSMQForeign
+                              | mSMQOSType
+                              | mSMQEncryptKey
+                              | mSMQSignKey
+                              | mSMQDependentClientServices
+                              | mSMQRoutingServices
+                              | mSMQDsServices }
+  LDAP-NAME                 {"mSMQConfiguration"}
+  ID                        id-oc-mSMQConfiguration }
+
+classRegistration OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { cOMInterfaceID
+                              | cOMProgID
+                              | cOMCLSID
+                              | cOMTreatAsClassId
+                              | cOMOtherProgId
+                              | implementedCategories
+                              | requiredCategories
+                              | managedBy }
+  LDAP-NAME                 {"classRegistration"}
+  ID                        id-oc-classRegistration }
+
+aCSResourceLimits OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { aCSMaxTokenRatePerFlow
+                              | aCSMaxPeakBandwidthPerFlow
+                              | aCSServiceType
+                              | aCSAllocableRSVPBandwidth
+                              | aCSMaxPeakBandwidth }
+  LDAP-NAME                 {"aCSResourceLimits"}
+  ID                        id-oc-aCSResourceLimits }
+
+crossRefContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { uPNSuffixes }
+  LDAP-NAME                 {"crossRefContainer"}
+  ID                        id-oc-crossRefContainer }
+
+ipsecISAKMPPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipsecBase }
+  LDAP-NAME                 {"ipsecISAKMPPolicy"}
+  ID                        id-oc-ipsecISAKMPPolicy }
+
+rpcProfileElement OBJECT-CLASS ::= {
+  SUBCLASS OF               { rpcEntry }
+  MUST CONTAIN              { rpcNsInterfaceID
+                              | rpcNsPriority }
+  MAY CONTAIN               { rpcNsProfileEntry
+                              | rpcNsAnnotation }
+  LDAP-NAME                 {"rpcProfileElement"}
+  ID                        id-oc-rpcProfileElement }
+
+mS-SQL-SQLDatabase OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-Contact
+                              | mS-SQL-Status
+                              | mS-SQL-InformationURL
+                              | mS-SQL-Description
+                              | mS-SQL-Alias
+                              | mS-SQL-Size
+                              | mS-SQL-CreationDate
+                              | mS-SQL-LastBackupDate
+                              | mS-SQL-LastDiagnosticDate
+                              | mS-SQL-Applications
+                              | mS-SQL-Keywords }
+  LDAP-NAME                 {"mS-SQL-SQLDatabase"}
+  ID                        id-oc-mS-SQL-SQLDatabase }
+
+serviceAdministrationPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { serviceConnectionPoint }
+  LDAP-NAME                 {"serviceAdministrationPoint"}
+  ID                        id-oc-serviceAdministrationPoint }
+
+dnsZone OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dc }
+  MAY CONTAIN               { dnsAllowDynamic
+                              | dnsAllowXFR
+                              | dnsSecureSecondaries
+                              | dnsNotifySecondaries
+                              | managedBy
+                              | dNSProperty }
+  LDAP-NAME                 {"dnsZone"}
+  ID                        id-oc-dnsZone }
+
+storage OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MAY CONTAIN               { moniker
+                              | monikerDisplayName
+                              | iconPath }
+  LDAP-NAME                 {"storage"}
+  ID                        id-oc-storage }
+
+nTDSDSA OBJECT-CLASS ::= {
+  SUBCLASS OF               { applicationSettings }
+  MAY CONTAIN               { hasMasterNCs
+                              | hasPartialReplicaNCs
+                              | dMDLocation
+                              | invocationId
+                              | networkAddress
+                              | options
+                              | fRSRootPath
+                              | serverReference
+                              | lastBackupRestorationTime
+                              | queryPolicyObject
+                              | managedBy
+                              | retiredReplDSASignatures }
+  LDAP-NAME                 {"nTDSDSA"}
+  ID                        id-oc-nTDSDSA }
+
+contact OBJECT-CLASS ::= {
+  SUBCLASS OF               { organizationalPerson }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { notes }
+  LDAP-NAME                 {"contact"}
+  ID                        id-oc-contact }
+
+dnsNode OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dc }
+  MAY CONTAIN               { dnsRecord
+                              | dNSProperty
+                              | dNSTombstoned }
+  LDAP-NAME                 {"dnsNode"}
+  ID                        id-oc-dnsNode }
+
+meeting OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { meetingName }
+  MAY CONTAIN               { meetingID
+                              | meetingDescription
+                              | meetingKeyword
+                              | meetingLocation
+                              | meetingProtocol
+                              | meetingType
+                              | meetingApplication
+                              | meetingLanguage
+                              | meetingMaxParticipants
+                              | meetingOriginator
+                              | meetingContactInfo
+                              | meetingOwner
+                              | meetingIP
+                              | meetingScope
+                              | meetingAdvertiseScope
+                              | meetingURL
+                              | meetingRating
+                              | meetingIsEncrypted
+                              | meetingRecurrence
+                              | meetingStartTime
+                              | meetingEndTime
+                              | meetingBandwidth
+                              | meetingBlob }
+  LDAP-NAME                 {"meeting"}
+  ID                        id-oc-meeting }
+
+nTDSSiteSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { applicationSiteSettings }
+  MAY CONTAIN               { schedule
+                              | options
+                              | queryPolicyObject
+                              | managedBy
+                              | interSiteTopologyGenerator
+                              | interSiteTopologyRenew
+                              | interSiteTopologyFailover }
+  LDAP-NAME                 {"nTDSSiteSettings"}
+  ID                        id-oc-nTDSSiteSettings }
+
+intellimirrorSCP OBJECT-CLASS ::= {
+  SUBCLASS OF               { serviceAdministrationPoint }
+  MAY CONTAIN               { netbootMachineFilePath
+                              | netbootAllowNewClients
+                              | netbootLimitClients
+                              | netbootMaxClients
+                              | netbootCurrentClientCount
+                              | netbootAnswerRequests
+                              | netbootAnswerOnlyValidClients
+                              | netbootNewMachineNamingPolicy
+                              | netbootNewMachineOU
+                              | netbootIntelliMirrorOSes
+                              | netbootTools
+                              | netbootLocallyInstalledOSes
+                              | netbootServer }
+  LDAP-NAME                 {"intellimirrorSCP"}
+  ID                        id-oc-intellimirrorSCP }
+
+serversContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"serversContainer"}
+  ID                        id-oc-serversContainer }
+
+mS-SQL-OLAPServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { serviceConnectionPoint }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-RegisteredOwner
+                              | mS-SQL-Contact
+                              | mS-SQL-Build
+                              | mS-SQL-ServiceAccount
+                              | mS-SQL-Status
+                              | mS-SQL-InformationURL
+                              | mS-SQL-PublicationURL
+                              | mS-SQL-Version
+                              | mS-SQL-Language
+                              | mS-SQL-Keywords }
+  LDAP-NAME                 {"mS-SQL-OLAPServer"}
+  ID                        id-oc-mS-SQL-OLAPServer }
+
+mSMQMigratedUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { objectSid
+                              | mSMQSignCertificates
+                              | mSMQDigests
+                              | mSMQDigestsMig
+                              | mSMQSignCertificatesMig
+                              | mSMQUserSid }
+  LDAP-NAME                 {"mSMQMigratedUser"}
+  ID                        id-oc-mSMQMigratedUser }
+
+rpcServerElement OBJECT-CLASS ::= {
+  SUBCLASS OF               { rpcEntry }
+  MUST CONTAIN              { rpcNsBindings
+                              | rpcNsInterfaceID
+                              | rpcNsTransferSyntax }
+  LDAP-NAME                 {"rpcServerElement"}
+  ID                        id-oc-rpcServerElement }
+
+physicalLocation OBJECT-CLASS ::= {
+  SUBCLASS OF               { locality }
+  MAY CONTAIN               { managedBy }
+  LDAP-NAME                 {"physicalLocation"}
+  ID                        id-oc-physicalLocation }
+
+dfsConfiguration OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"dfsConfiguration"}
+  ID                        id-oc-dfsConfiguration }
+
+displaySpecifier OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { iconPath
+                              | creationWizard
+                              | contextMenu
+                              | adminPropertyPages
+                              | shellPropertyPages
+                              | classDisplayName
+                              | adminContextMenu
+                              | shellContextMenu
+                              | attributeDisplayNames
+                              | treatAsLeaf
+                              | createDialog
+                              | createWizardExt
+                              | scopeFlags
+                              | queryFilter }
+  LDAP-NAME                 {"displaySpecifier"}
+  ID                        id-oc-displaySpecifier }
+
+fileLinkTracking OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"fileLinkTracking"}
+  ID                        id-oc-fileLinkTracking }
+
+remoteStorageServicePoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { serviceAdministrationPoint }
+  MAY CONTAIN               { remoteStorageGUID }
+  LDAP-NAME                 {"remoteStorageServicePoint"}
+  ID                        id-oc-remoteStorageServicePoint }
+
+volume OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { uNCName }
+  MAY CONTAIN               { contentIndexingAllowed
+                              | lastContentIndexed }
+  LDAP-NAME                 {"volume"}
+  ID                        id-oc-volume }
+
+server OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { serialNumber
+                              | serverReference
+                              | dNSHostName
+                              | managedBy
+                              | mailAddress
+                              | bridgeheadTransportList }
+  LDAP-NAME                 {"server"}
+  ID                        id-oc-server }
+
+subnet OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { location
+                              | siteObject
+                              | physicalLocationObject }
+  LDAP-NAME                 {"subnet"}
+  ID                        id-oc-subnet }
+
+rIDSet OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { rIDAllocationPool
+                              | rIDPreviousAllocationPool
+                              | rIDUsedPool
+                              | rIDNextRID }
+  LDAP-NAME                 {"rIDSet"}
+  ID                        id-oc-rIDSet }
+
+secret OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { currentValue
+                              | lastSetTime
+                              | priorSetTime
+                              | priorValue }
+  LDAP-NAME                 {"secret"}
+  ID                        id-oc-secret }
+
+domain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MUST CONTAIN              { dc }
+  LDAP-NAME                 {"domain"}
+  ID                        id-oc-domain }
+
+mS-SQL-SQLServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { serviceConnectionPoint }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-RegisteredOwner
+                              | mS-SQL-Contact
+                              | mS-SQL-Location
+                              | mS-SQL-Memory
+                              | mS-SQL-Build
+                              | mS-SQL-ServiceAccount
+                              | mS-SQL-CharacterSet
+                              | mS-SQL-SortOrder
+                              | mS-SQL-UnicodeSortOrder
+                              | mS-SQL-Clustered
+                              | mS-SQL-NamedPipe
+                              | mS-SQL-MultiProtocol
+                              | mS-SQL-SPX
+                              | mS-SQL-TCPIP
+                              | mS-SQL-AppleTalk
+                              | mS-SQL-Vines
+                              | mS-SQL-Status
+                              | mS-SQL-LastUpdatedDate
+                              | mS-SQL-InformationURL
+                              | mS-SQL-GPSLatitude
+                              | mS-SQL-GPSLongitude
+                              | mS-SQL-GPSHeight
+                              | mS-SQL-Keywords }
+  LDAP-NAME                 {"mS-SQL-SQLServer"}
+  ID                        id-oc-mS-SQL-SQLServer }
+
+nTFRSSubscriber OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { fRSRootPath
+                              | fRSStagingPath }
+  MAY CONTAIN               { schedule
+                              | fRSUpdateTimeout
+                              | fRSFaultCondition
+                              | fRSServiceCommand
+                              | fRSExtensions
+                              | fRSFlags
+                              | fRSMemberReference
+                              | fRSServiceCommandStatus
+                              | fRSTimeLastCommand
+                              | fRSTimeLastConfigChange }
+  LDAP-NAME                 {"nTFRSSubscriber"}
+  ID                        id-oc-nTFRSSubscriber }
+
+nTFRSReplicaSet OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { fRSReplicaSetType
+                              | fRSVersionGUID
+                              | schedule
+                              | fRSFileFilter
+                              | fRSDirectoryFilter
+                              | fRSDSPoll
+                              | fRSServiceCommand
+                              | fRSReplicaSetGUID
+                              | fRSLevelLimit
+                              | fRSRootSecurity
+                              | fRSExtensions
+                              | managedBy
+                              | fRSFlags
+                              | fRSPartnerAuthLevel
+                              | fRSPrimaryMember }
+  LDAP-NAME                 {"nTFRSReplicaSet"}
+  ID                        id-oc-nTFRSReplicaSet }
+
+subnetContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"subnetContainer"}
+  ID                        id-oc-subnetContainer }
+
+displayTemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { helpData32
+                              | originalDisplayTableMSDOS
+                              | addressEntryDisplayTable
+                              | helpFileName
+                              | addressEntryDisplayTableMSDOS
+                              | helpData16
+                              | originalDisplayTable }
+  LDAP-NAME                 {"displayTemplate"}
+  ID                        id-oc-displayTemplate }
+
+serviceInstance OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { displayName
+                              | serviceClassID }
+  MAY CONTAIN               { winsockAddresses
+                              | serviceInstanceVersion }
+  LDAP-NAME                 {"serviceInstance"}
+  ID                        id-oc-serviceInstance }
+
+attributeSchema OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | attributeID
+                              | attributeSyntax
+                              | isSingleValued
+                              | oMSyntax
+                              | lDAPDisplayName
+                              | schemaIDGUID }
+  MAY CONTAIN               { rangeLower
+                              | rangeUpper
+                              | mAPIID
+                              | linkID
+                              | oMObjectClass
+                              | searchFlags
+                              | extendedCharsAllowed
+                              | schemaFlagsEx
+                              | attributeSecurityGUID
+                              | systemOnly
+                              | classDisplayName
+                              | isMemberOfPartialAttributeSet
+                              | isDefunct
+                              | isEphemeral }
+  LDAP-NAME                 {"attributeSchema"}
+  ID                        id-oc-attributeSchema }
+
+addressTemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { displayTemplate }
+  MUST CONTAIN              { displayName }
+  MAY CONTAIN               { addressSyntax
+                              | perMsgDialogDisplayTable
+                              | perRecipDialogDisplayTable
+                              | addressType
+                              | proxyGenerationEnabled }
+  LDAP-NAME                 {"addressTemplate"}
+  ID                        id-oc-addressTemplate }
+
+foreignSecurityPrincipal OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectSid }
+  MAY CONTAIN               { foreignIdentifier }
+  LDAP-NAME                 {"foreignSecurityPrincipal"}
+  ID                        id-oc-foreignSecurityPrincipal }
+
+fTDfs OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { remoteServerName
+                              | pKTGuid
+                              | pKT }
+  LDAP-NAME                 {"fTDfs"}
+  ID                        id-oc-fTDfs }
+
+linkTrackObjectMoveTable OBJECT-CLASS ::= {
+  SUBCLASS OF               { fileLinkTracking }
+  LDAP-NAME                 {"linkTrackObjectMoveTable"}
+  ID                        id-oc-linkTrackObjectMoveTable }
+
+rRASAdministrationConnectionPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { serviceAdministrationPoint }
+  MAY CONTAIN               { msRRASAttribute }
+  LDAP-NAME                 {"rRASAdministrationConnectionPoint"}
+  ID                        id-oc-rRASAdministrationConnectionPoint }
+
+securityObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MUST CONTAIN              { commonName }
+  LDAP-NAME                 {"securityObject"}
+  ID                        id-oc-securityObject }
+
+sitesContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"sitesContainer"}
+  ID                        id-oc-sitesContainer }
+
+nTDSConnection OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MUST CONTAIN              { enabledConnection
+                              | fromServer
+                              | options }
+  MAY CONTAIN               { generatedConnection
+                              | schedule
+                              | transportType
+                              | mS-DS-ReplicatesNCReason }
+  LDAP-NAME                 {"nTDSConnection"}
+  ID                        id-oc-nTDSConnection }
+
+mS-SQL-OLAPCube OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-Contact
+                              | mS-SQL-Status
+                              | mS-SQL-LastUpdatedDate
+                              | mS-SQL-InformationURL
+                              | mS-SQL-PublicationURL
+                              | mS-SQL-Description
+                              | mS-SQL-Size
+                              | mS-SQL-Keywords }
+  LDAP-NAME                 {"mS-SQL-OLAPCube"}
+  ID                        id-oc-mS-SQL-OLAPCube }
+
+siteLinkBridge OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { siteLinkList }
+  LDAP-NAME                 {"siteLinkBridge"}
+  ID                        id-oc-siteLinkBridge }
+
+applicationSiteSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MAY CONTAIN               { applicationName
+                              | notificationList }
+  LDAP-NAME                 {"applicationSiteSettings"}
+  ID                        id-oc-applicationSiteSettings }
+
+site OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { location
+                              | notificationList
+                              | managedBy
+                              | gPLink
+                              | gPOptions
+                              | mSMQSiteID
+                              | mSMQNt4Stub
+                              | mSMQSiteForeign
+                              | mSMQInterval1
+                              | mSMQInterval2 }
+  LDAP-NAME                 {"site"}
+  ID                        id-oc-site }
+
+nTFRSSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { applicationSettings }
+  MAY CONTAIN               { fRSExtensions
+                              | managedBy }
+  LDAP-NAME                 {"nTFRSSettings"}
+  ID                        id-oc-nTFRSSettings }
+
+trustedDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { securityIdentifier
+                              | trustAuthIncoming
+                              | trustDirection
+                              | trustPartner
+                              | trustPosixOffset
+                              | trustAuthOutgoing
+                              | trustType
+                              | trustAttributes
+                              | domainCrossRef
+                              | flatName
+                              | initialAuthIncoming
+                              | initialAuthOutgoing
+                              | domainIdentifier
+                              | additionalTrustedServiceNames }
+  LDAP-NAME                 {"trustedDomain"}
+  ID                        id-oc-trustedDomain }
+
+configuration OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  LDAP-NAME                 {"configuration"}
+  ID                        id-oc-configuration }
+
+mSMQEnterpriseSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mSMQNameStyle
+                              | mSMQCSPName
+                              | mSMQLongLived
+                              | mSMQVersion
+                              | mSMQInterval1
+                              | mSMQInterval2 }
+  LDAP-NAME                 {"mSMQEnterpriseSettings"}
+  ID                        id-oc-mSMQEnterpriseSettings }
+
+builtinDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"builtinDomain"}
+  ID                        id-oc-builtinDomain }
+
+mailRecipient OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { telephoneNumber
+                              | userCertificate
+                              | info
+                              | garbageCollPeriod
+                              | showInAddressBook
+                              | userCert
+                              | legacyExchangeDN
+                              | userSMIMECertificate
+                              | textEncodedORAddress }
+  LDAP-NAME                 {"mailRecipient"}
+  ID                        id-oc-mailRecipient }
+
+samDomainBase OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nTSecurityDescriptor
+                              | creationTime
+                              | forceLogoff
+                              | lockoutDuration
+                              | lockOutObservationWindow
+                              | lockoutThreshold
+                              | maxPwdAge
+                              | minPwdAge
+                              | minPwdLength
+                              | modifiedCountAtLastProm
+                              | nextRid
+                              | pwdProperties
+                              | pwdHistoryLength
+                              | revision
+                              | objectSid
+                              | oEMInformation
+                              | serverState
+                              | uASCompat
+                              | serverRole
+                              | domainReplica
+                              | modifiedCount }
+  LDAP-NAME                 {"samDomainBase"}
+  ID                        id-oc-samDomainBase }
+
+ipsecNegotiationPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipsecBase }
+  MAY CONTAIN               { iPSECNegotiationPolicyType
+                              | iPSECNegotiationPolicyAction }
+  LDAP-NAME                 {"ipsecNegotiationPolicy"}
+  ID                        id-oc-ipsecNegotiationPolicy }
+
+dMD OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { dmdName
+                              | schemaUpdate
+                              | prefixMap
+                              | schemaInfo }
+  LDAP-NAME                 {"dMD"}
+  ID                        id-oc-dMD }
+
+mSMQSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mSMQOwnerID
+                              | mSMQServices
+                              | mSMQQMID
+                              | mSMQMigrated
+                              | mSMQNt4Flags
+                              | mSMQSiteName
+                              | mSMQRoutingService
+                              | mSMQDsService
+                              | mSMQDependentClientService }
+  LDAP-NAME                 {"mSMQSettings"}
+  ID                        id-oc-mSMQSettings }
+
+dSUISettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { dSUIAdminNotification
+                              | dSUIAdminMaximum
+                              | dSUIShellMaximum }
+  LDAP-NAME                 {"dSUISettings"}
+  ID                        id-oc-dSUISettings }
+
+pKICertificateTemplate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { displayName
+                              | flags
+                              | pKIDefaultKeySpec
+                              | pKIKeyUsage
+                              | pKIMaxIssuingDepth
+                              | pKICriticalExtensions
+                              | pKIExpirationPeriod
+                              | pKIOverlapPeriod
+                              | pKIExtendedKeyUsage
+                              | pKIDefaultCSPs
+                              | pKIEnrollmentAccess }
+  LDAP-NAME                 {"pKICertificateTemplate"}
+  ID                        id-oc-pKICertificateTemplate }
+
+mSMQSiteLink OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { mSMQSite1
+                              | mSMQSite2
+                              | mSMQCost }
+  MAY CONTAIN               { mSMQSiteGates
+                              | mSMQSiteGatesMig }
+  LDAP-NAME                 {"mSMQSiteLink"}
+  ID                        id-oc-mSMQSiteLink }
+
+lostAndFound OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { moveTreeState }
+  LDAP-NAME                 {"lostAndFound"}
+  ID                        id-oc-lostAndFound }
+
+rpcContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { container }
+  MAY CONTAIN               { nameServiceFlags }
+  LDAP-NAME                 {"rpcContainer"}
+  ID                        id-oc-rpcContainer }
+
+domainPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { authenticationOptions
+                              | forceLogoff
+                              | defaultLocalPolicyObject
+                              | lockoutDuration
+                              | lockOutObservationWindow
+                              | lockoutThreshold
+                              | maxPwdAge
+                              | maxRenewAge
+                              | maxTicketAge
+                              | minPwdAge
+                              | minPwdLength
+                              | minTicketAge
+                              | pwdProperties
+                              | pwdHistoryLength
+                              | proxyLifetime
+                              | eFSPolicy
+                              | publicKeyPolicy
+                              | domainWidePolicy
+                              | domainPolicyReference
+                              | qualityOfService
+                              | ipsecPolicyReference
+                              | managedBy
+                              | domainCAs }
+  LDAP-NAME                 {"domainPolicy"}
+  ID                        id-oc-domainPolicy }
+
+serviceClass OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MUST CONTAIN              { displayName
+                              | serviceClassID }
+  MAY CONTAIN               { serviceClassInfo }
+  LDAP-NAME                 {"serviceClass"}
+  ID                        id-oc-serviceClass }
+
+licensingSiteSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { applicationSiteSettings }
+  MAY CONTAIN               { siteServer }
+  LDAP-NAME                 {"licensingSiteSettings"}
+  ID                        id-oc-licensingSiteSettings }
+
+fileLinkTrackingEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"fileLinkTrackingEntry"}
+  ID                        id-oc-fileLinkTrackingEntry }
+
+queryPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { lDAPAdminLimits
+                              | lDAPIPDenyList }
+  LDAP-NAME                 {"queryPolicy"}
+  ID                        id-oc-queryPolicy }
+
+typeLibrary OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { cOMClassID
+                              | cOMInterfaceID
+                              | cOMUniqueLIBID }
+  LDAP-NAME                 {"typeLibrary"}
+  ID                        id-oc-typeLibrary }
+
+nTDSService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { tombstoneLifetime
+                              | dSHeuristics
+                              | garbageCollPeriod
+                              | replTopologyStayOfExecution
+                              | sPNMappings }
+  LDAP-NAME                 {"nTDSService"}
+  ID                        id-oc-nTDSService }
+
+nTFRSMember OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { fRSUpdateTimeout
+                              | fRSServiceCommand
+                              | serverReference
+                              | fRSRootSecurity
+                              | fRSExtensions
+                              | frsComputerReference
+                              | fRSControlDataCreation
+                              | fRSControlInboundBacklog
+                              | fRSControlOutboundBacklog
+                              | fRSFlags
+                              | fRSPartnerAuthLevel }
+  LDAP-NAME                 {"nTFRSMember"}
+  ID                        id-oc-nTFRSMember }
+
+ipsecPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipsecBase }
+  MAY CONTAIN               { ipsecISAKMPReference
+                              | ipsecNFAReference }
+  LDAP-NAME                 {"ipsecPolicy"}
+  ID                        id-oc-ipsecPolicy }
+
+ipsecFilter OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipsecBase }
+  LDAP-NAME                 {"ipsecFilter"}
+  ID                        id-oc-ipsecFilter }
+
+classSchema OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | subClassOf
+                              | governsID
+                              | objectClassCategory
+                              | schemaIDGUID
+                              | defaultObjectCategory }
+  MAY CONTAIN               { possSuperiors
+                              | mustContain
+                              | mayContain
+                              | rDNAttID
+                              | auxiliaryClass
+                              | lDAPDisplayName
+                              | schemaFlagsEx
+                              | systemOnly
+                              | systemPossSuperiors
+                              | systemMayContain
+                              | systemMustContain
+                              | systemAuxiliaryClass
+                              | defaultSecurityDescriptor
+                              | defaultHidingValue
+                              | classDisplayName
+                              | isDefunct }
+  LDAP-NAME                 {"classSchema"}
+  ID                        id-oc-classSchema }
+
+infrastructureUpdate OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { dNReferenceUpdate }
+  LDAP-NAME                 {"infrastructureUpdate"}
+  ID                        id-oc-infrastructureUpdate }
+
+groupPolicyContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { container }
+  MAY CONTAIN               { flags
+                              | versionNumber
+                              | gPCFunctionalityVersion
+                              | gPCFileSysPath
+                              | gPCMachineExtensionNames
+                              | gPCUserExtensionNames }
+  LDAP-NAME                 {"groupPolicyContainer"}
+  ID                        id-oc-groupPolicyContainer }
+
+categoryRegistration OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MAY CONTAIN               { localeID
+                              | categoryId
+                              | managedBy
+                              | localizedDescription }
+  LDAP-NAME                 {"categoryRegistration"}
+  ID                        id-oc-categoryRegistration }
+
+pKIEnrollmentService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { cACertificate
+                              | dNSHostName
+                              | cACertificateDN
+                              | certificateTemplates
+                              | signatureAlgorithms
+                              | enrollmentProviders }
+  LDAP-NAME                 {"pKIEnrollmentService"}
+  ID                        id-oc-pKIEnrollmentService }
+
+mS-SQL-SQLPublication OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-Status
+                              | mS-SQL-Description
+                              | mS-SQL-Type
+                              | mS-SQL-Database
+                              | mS-SQL-AllowAnonymousSubscription
+                              | mS-SQL-Publisher
+                              | mS-SQL-AllowKnownPullSubscription
+                              | mS-SQL-AllowImmediateUpdatingSubscription
+                              | mS-SQL-AllowQueuedUpdatingSubscription
+                              | mS-SQL-AllowSnapshotFilesFTPDownloading
+                              | mS-SQL-ThirdParty }
+  LDAP-NAME                 {"mS-SQL-SQLPublication"}
+  ID                        id-oc-mS-SQL-SQLPublication }
+
+linkTrackVolumeTable OBJECT-CLASS ::= {
+  SUBCLASS OF               { fileLinkTracking }
+  LDAP-NAME                 {"linkTrackVolumeTable"}
+  ID                        id-oc-linkTrackVolumeTable }
+
+addressBookContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { displayName }
+  MAY CONTAIN               { purportedSearch }
+  LDAP-NAME                 {"addressBookContainer"}
+  ID                        id-oc-addressBookContainer }
+
+printQueue OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { uNCName
+                              | versionNumber
+                              | serverName
+                              | printerName
+                              | shortServerName }
+  MAY CONTAIN               { location
+                              | portName
+                              | driverName
+                              | printSeparatorFile
+                              | priority
+                              | defaultPriority
+                              | printStartTime
+                              | printEndTime
+                              | printFormName
+                              | printBinNames
+                              | printMaxResolutionSupported
+                              | printOrientationsSupported
+                              | printMaxCopies
+                              | printCollate
+                              | printColor
+                              | printLanguage
+                              | printAttributes
+                              | printShareName
+                              | printOwner
+                              | printNotify
+                              | printStatus
+                              | printSpooling
+                              | printKeepPrintedJobs
+                              | driverVersion
+                              | printMaxXExtent
+                              | printMaxYExtent
+                              | printMinXExtent
+                              | printMinYExtent
+                              | printStaplingSupported
+                              | printMemory
+                              | assetNumber
+                              | bytesPerMinute
+                              | printRate
+                              | printRateUnit
+                              | printNetworkAddress
+                              | printMACAddress
+                              | printMediaReady
+                              | printNumberUp
+                              | printMediaSupported
+                              | operatingSystem
+                              | operatingSystemVersion
+                              | operatingSystemServicePack
+                              | operatingSystemHotfix
+                              | physicalLocationObject
+                              | printPagesPerMinute
+                              | printDuplexSupported }
+  LDAP-NAME                 {"printQueue"}
+  ID                        id-oc-printQueue }
+
+classStore OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { versionNumber
+                              | nextLevelStore
+                              | lastUpdateSequence
+                              | appSchemaVersion }
+  LDAP-NAME                 {"classStore"}
+  ID                        id-oc-classStore }
+
+mS-SQL-SQLRepository OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { mS-SQL-Name
+                              | mS-SQL-Contact
+                              | mS-SQL-Build
+                              | mS-SQL-Status
+                              | mS-SQL-Version
+                              | mS-SQL-Description
+                              | mS-SQL-InformationDirectory }
+  LDAP-NAME                 {"mS-SQL-SQLRepository"}
+  ID                        id-oc-mS-SQL-SQLRepository }
+
+rpcProfile OBJECT-CLASS ::= {
+  SUBCLASS OF               { rpcEntry }
+  LDAP-NAME                 {"rpcProfile"}
+  ID                        id-oc-rpcProfile }
+
+rIDManager OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { rIDAvailablePool }
+  LDAP-NAME                 {"rIDManager"}
+  ID                        id-oc-rIDManager }
+
+applicationSettings OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MAY CONTAIN               { applicationName
+                              | notificationList }
+  LDAP-NAME                 {"applicationSettings"}
+  ID                        id-oc-applicationSettings }
+END

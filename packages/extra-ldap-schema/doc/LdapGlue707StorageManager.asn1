@@ -1,0 +1,48 @@
+-- Derived from data/ldap-schema/glue/7-07-StorageManager.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapGlue707StorageManager DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-gLUE2StorageManagerStorageServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 33 1 }
+id-oc-gLUE2StorageManager OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 33 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2StorageManagerStorageServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2StorageManagerStorageServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageManagerStorageServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2StorageManagerStorageServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2StorageManager" lowercased so the assignment is a valuereference.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+gLUE2StorageManager OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { gLUE2StorageManagerStorageServiceForeignKey }
+  LDAP-NAME                 {"GLUE2StorageManager"}
+  LDAP-DESC                 "The primary software component locally managing one or more storage resources. It can describe also aggregated information about the managed resources."
+  ID                        id-oc-gLUE2StorageManager }
+END

@@ -1,0 +1,467 @@
+DNSFramework {
+    iso(1) identified-organization(3) dod(6) internet(1) private(4)
+    enterprise(1) wildboar(56490) module(1) dns(2)
+}
+DEFINITIONS
+EXPLICIT TAGS
+::=
+BEGIN
+
+EXPORTS ALL;
+
+IMPORTS
+
+    id-at, id-mr, id-nf, id-oc, id-lsx
+        FROM Wildboar
+        {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+        enterprise(1) wildboar(56490) module(1) wildboar(1)}
+        WITH SUCCESSORS
+
+    ATTRIBUTE, MATCHING-RULE, OBJECT-CLASS, NAME-FORM, SYNTAX-NAME
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+        WITH SUCCESSORS
+
+    dc, dnsName, ia5String, DomainName, dnsNameMatch, dnsString, integer,
+    integerOrderingMatch, integer, boolean, booleanMatch, url, directoryString
+        FROM SelectedAttributeTypes
+        {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9}
+        WITH SUCCESSORS
+    ;
+
+-- Object Identifiers
+
+id-mr-dnsRecordEqualityMatch    OBJECT IDENTIFIER ::= { id-mr 1 }
+id-mr-dnsRecordSubstringsMatch  OBJECT IDENTIFIER ::= { id-mr 2 }
+
+id-at-dns-record                OBJECT IDENTIFIER ::= { id-at 1 }
+id-at-dnsServiceURL             OBJECT IDENTIFIER ::= { id-at 6811 }
+id-at-dnsSearchDomain           OBJECT IDENTIFIER ::= { id-at 6812 }
+id-at-dnsRequestAttempts        OBJECT IDENTIFIER ::= { id-at 6813 }
+id-at-dnsTimeoutInMilliseconds  OBJECT IDENTIFIER ::= { id-at 6814 }
+id-at-dnsResolverRotation       OBJECT IDENTIFIER ::= { id-at 6815 }
+id-at-dnsIPv6First              OBJECT IDENTIFIER ::= { id-at 6816 }
+id-at-dnsNoTLDQuery             OBJECT IDENTIFIER ::= { id-at 6817 }
+
+id-lsx-dnsRec		            OBJECT IDENTIFIER ::= { id-lsx 71 }
+id-oc-dnsConfiguration		    OBJECT IDENTIFIER ::= { id-oc 948 }
+
+id-nf-domainNameForm            OBJECT IDENTIFIER ::= { id-nf 1 }
+id-nf-dcObjectNameForm          OBJECT IDENTIFIER ::= { id-nf 2 }
+
+-- Types
+
+DNSClass    ::= INTEGER (0..65535)
+DNS-RR-Type ::= INTEGER (0..65535)
+TTL         ::= INTEGER (0..4294967295)
+
+DNSRecord ::= SEQUENCE {
+    /* Though the DNS wire format does not include the type first, this syntax
+    does so that the existing integerFirstComponentMatch matching rule can be
+    used to select DNS record types. */
+    type    DNS-RR-Type,
+    class   DNSClass,
+    ttl     TTL,
+    data    OCTET STRING
+}
+
+DNSRecordAssertion ::= SEQUENCE {
+    type    DNS-RR-Type OPTIONAL,
+    class   [0] DNSClass OPTIONAL,
+    ttl     [1] TTL OPTIONAL,
+    data    OCTET STRING OPTIONAL
+}
+
+DNSResolverRotation ::= ENUMERATED {
+    inOrder (0),
+    roundRobin (1),
+    random (2),
+    meritocracy (3), -- lowest latency or some other metric
+    ...
+}
+
+-- Values
+
+id-a            DNS-RR-Type ::= 1       -- ipv4
+id-ns           DNS-RR-Type ::= 2       -- name
+id-md           DNS-RR-Type ::= 3       -- obsolete
+id-mf           DNS-RR-Type ::= 4       -- obsolete
+id-cname        DNS-RR-Type ::= 5       -- name
+id-soa          DNS-RR-Type ::= 6       -- name, name, dec, dec, dec, dec, dec
+id-mb           DNS-RR-Type ::= 7       -- obsolete (or will be)
+id-mg           DNS-RR-Type ::= 8       -- obsolete (or will be)
+id-mr           DNS-RR-Type ::= 9       -- obsolete (or will be)
+id-null         DNS-RR-Type ::= 10      -- obsolete (or will be)
+id-wks          DNS-RR-Type ::= 11      -- obsolete (or will be)
+id-ptr          DNS-RR-Type ::= 12      -- name
+id-hinfo        DNS-RR-Type ::= 13      -- Two strings
+id-minfo        DNS-RR-Type ::= 14      -- obsolete (or will be)
+id-mx           DNS-RR-Type ::= 15      -- preference + whitespace + name
+id-txt          DNS-RR-Type ::= 16      -- Only if printable ASCII
+id-rp           DNS-RR-Type ::= 17      -- Two names
+id-afsdb        DNS-RR-Type ::= 18
+id-x25          DNS-RR-Type ::= 19
+id-isdn         DNS-RR-Type ::= 20
+id-rt           DNS-RR-Type ::= 21
+id-nsap         DNS-RR-Type ::= 22
+id-nsap-ptr     DNS-RR-Type ::= 23
+id-sig          DNS-RR-Type ::= 24
+id-key          DNS-RR-Type ::= 25
+id-px           DNS-RR-Type ::= 26
+id-gpos         DNS-RR-Type ::= 27      -- GPS e.g. -32.6882 116.8652 10.0 (It is not clear how this is actually encoded)
+id-aaaa         DNS-RR-Type ::= 28      -- ipv6
+id-loc          DNS-RR-Type ::= 29
+id-nxt          DNS-RR-Type ::= 30
+id-eid          DNS-RR-Type ::= 31
+id-nimloc       DNS-RR-Type ::= 32
+id-srv          DNS-RR-Type ::= 33      -- decimal dec dec name
+id-atma         DNS-RR-Type ::= 34
+id-naptr        DNS-RR-Type ::= 35
+id-kx           DNS-RR-Type ::= 36
+id-cert         DNS-RR-Type ::= 37
+id-a6           DNS-RR-Type ::= 38
+id-dname        DNS-RR-Type ::= 39      -- name
+id-sink         DNS-RR-Type ::= 40
+id-opt          DNS-RR-Type ::= 41
+id-apl          DNS-RR-Type ::= 42      -- Printed as specified in IETF RFC 3123, but only IP (AFI=1) must be supported.
+id-ds           DNS-RR-Type ::= 43
+id-sshfp        DNS-RR-Type ::= 44      -- decimal decimal hex rfc4255#section-3.1
+id-ipseckey     DNS-RR-Type ::= 45
+id-rrsig        DNS-RR-Type ::= 46
+id-nsec         DNS-RR-Type ::= 47
+id-dnskey       DNS-RR-Type ::= 48
+id-dhcid        DNS-RR-Type ::= 49
+id-nsec3        DNS-RR-Type ::= 50
+id-nsec3param   DNS-RR-Type ::= 51
+id-tlsa         DNS-RR-Type ::= 52      -- IETF RFC 6698, Section 2.3
+id-smimea       DNS-RR-Type ::= 53
+id-hip          DNS-RR-Type ::= 55
+id-ninfo        DNS-RR-Type ::= 56
+id-rkey         DNS-RR-Type ::= 57
+id-talink       DNS-RR-Type ::= 58
+id-cds          DNS-RR-Type ::= 59
+id-cdnskey      DNS-RR-Type ::= 60
+id-openpgpkey   DNS-RR-Type ::= 61
+id-csync        DNS-RR-Type ::= 62
+id-zonemd       DNS-RR-Type ::= 63
+id-svcb         DNS-RR-Type ::= 64
+id-https        DNS-RR-Type ::= 65
+id-spf          DNS-RR-Type ::= 99
+id-uinfo        DNS-RR-Type ::= 100
+id-uid          DNS-RR-Type ::= 101
+id-gid          DNS-RR-Type ::= 102
+id-unspec       DNS-RR-Type ::= 103
+id-nid          DNS-RR-Type ::= 104
+id-l32          DNS-RR-Type ::= 105
+id-l64          DNS-RR-Type ::= 106
+id-lp           DNS-RR-Type ::= 107
+id-eui48        DNS-RR-Type ::= 108     -- eui48
+id-eui64        DNS-RR-Type ::= 109     -- eui64
+id-tkey         DNS-RR-Type ::= 249
+id-tsig         DNS-RR-Type ::= 250
+id-ixfr         DNS-RR-Type ::= 251
+id-axfr         DNS-RR-Type ::= 252
+id-mailb        DNS-RR-Type ::= 253     -- obsolete (or will be)
+id-maila        DNS-RR-Type ::= 254     -- obsolete
+id-uri          DNS-RR-Type ::= 256     -- url
+id-caa          DNS-RR-Type ::= 257     -- Printed according to RFC 6844, Section 5.1.1, but the value only as a character-string if it contains only non-control ASCII
+id-avc          DNS-RR-Type ::= 258
+id-doa          DNS-RR-Type ::= 259
+id-amtrelay     DNS-RR-Type ::= 260
+id-ta           DNS-RR-Type ::= 32768
+id-dlv          DNS-RR-Type ::= 32769
+
+-- LDAP Syntaxes
+
+/*
+A DNS record, displayed loosely according to IETF RFC 1035, Section 5, per the
+following rules:
+
+The syntax of this is the class, followed by the TTL, followed by the type,
+followed by the RDATA.
+
+The "class" field shall be displayed as "IN", "CH", or "HS" for values 1, 3, and
+4, respectively. All other values shall be displayed as decimal. The LDAP syntax
+shall tolerate values 1, 3, 4 as well as "in", "ch", and "hs".
+
+The "TTL" field shall be displayed as decimal.
+
+The "type" field shall be displayed according to the mnemonic defined for that
+record type if the record is one of the record types listed above in this
+schema. Otherwise, the type may be displayed as a decimal. The mnemonic form
+SHALL be displayed in uppercased letters. Decoding of LDAP values of this syntax
+MUST tolerate lowercased letters.
+
+The "rdata" field shall be displayed as hexadecimal, starting with a literal
+"0x", unless it is one of a few select record types as described as follows:
+
+- The A record RDATA shall be displayed as a decimal IPv4 address
+- The AAAA record RDATA shall be displayed as a standard IPv6 address
+- The EUI48 and EUI64 records' RDATA shall be displayed as hexadecimal, with
+  colons separating each encoded octet
+- The NS, PTR, CNAME, and DNAME records' RDATA shall be displayed as the DNS
+  name string.
+- The SOA record RDATA shall be displayed as two DNS name strings, followed by
+  five decimal numbers, each separated by a single SPACE character.
+- The HINFO record RDATA shall be displayed as two strings, both enclosed by
+  double-quotes and separated by a single SPACE character.
+- The MX record RDATA shall be displayed as a decimal number, followed by a
+  single SPACE character, followed by a DNS host name.
+- The TXT record RDATA shall be displayed as a string enclosed in double-quotes
+  or single-quotes, only if all characters form value UTF-8 that contain only
+  graphic characters, and if there are no single-quote characters in this
+  string. Single-quotes MUST be used if the encoded string contains
+  double-quotes. There is no string escaping; strings not displayable using this
+  syntax must be displayed as hexadecimal values.
+- The RP record RDATA shall be displayed as two DNS names, separated by a single
+  SPACE character.
+- The GPOS record RDATA shall be displayed as three decimal reals
+  (e.g. "-32.6882 116.8652 10.0") each separated by a single SPACE
+- The SRV record RDATA shall be displayed as three decimal integers, followed
+  by a DNS name string, each separated by a single SPACE.
+- The APL record RDATA shall be displayed as specified in IETF RFC 3123, but
+  only IP (AFI=1) must be supported.
+- The SSHFP record RDATA shall be displayed as two decimal integers, followed by
+  hexadecimal, per IETF RFC 4255, Section 3.1.
+- The TLSA record RDATA shall be displayed per IETF RFC 6698, Section 2.3.
+- The URI record RDATA shall be displayed as a URI / URL / URN.
+- The CAA record RDATA shall be displayed according to RFC 6844, Section 5.1.1,
+  but the value only as a character-string if it contains only graphic ASCII.
+
+Regardless of the above, the "rdata" field is permitted to use the hexadecimal
+syntax for all record types.
+*/
+dnsRec SYNTAX-NAME ::= {
+    LDAP-DESC			"DNS Record, displayed loosely according to IETF RFC 1035, Section 5."
+    DIRECTORY SYNTAX    DNSRecord
+    ID					id-lsx-dnsRec
+}
+
+-- Attribute Types
+
+dns-record ATTRIBUTE ::= {
+    WITH SYNTAX DNSRecord
+    EQUALITY MATCHING RULE dnsRecordEqualityMatch
+    SUBSTRINGS MATCHING RULE dnsRecordSubstringsMatch
+    LDAP-NAME {"dns-record"}
+    LDAP-DESC "DNS Record"
+    ID id-at-dns-record
+}
+
+/*
+A URL is really the only appropriate way to represent a DNS service, because:
+
+1. New DNS transports are being defined every four years or so, it seems, so
+   we need flexibility where new transports can be used in the directory.
+2. DNS-over-HTTPS (DoH) requires a URL template to be locatable: not just an IP and port.
+3. DNSCrypt defines "sdns://" URL schemes for each known transport.
+4. It is preferable for a very important attribute like this to have a simple
+   syntax that is understood by directory tooling everywhere.
+
+For plain DNS, use a URL like: udp://ip:port
+For DNS over TLS (DoT), use a URL like: tls://ip:port
+For DNS over HTTPS (DoH), use the template URL
+DNSCrypt, use the "sdns://" formatted URLS, described here: https://dnscrypt.info/stamps-specifications/
+For DNS over QUIC (DoQ), use a URL like: quic://ip:port
+For all of the above, DNSCrypt "sdns://" "stamp" URLs may be used, if they are
+defined. Again, see: https://dnscrypt.info/stamps-specifications/.
+
+*/
+dnsServiceURL ATTRIBUTE ::= {
+    SUBTYPE OF              url
+    LDAP-SYNTAX             directoryString.&id
+    LDAP-NAME               {"dnsServiceURL"}
+    ID                      id-at-dnsServiceURL
+}
+
+dnsSearchDomain ATTRIBUTE ::= {
+    WITH SYNTAX             DomainName
+    EQUALITY MATCHING RULE  dnsNameMatch
+    LDAP-SYNTAX             dnsString.&id
+    LDAP-NAME               {"DNS search domain"}
+    ID                      id-at-dnsSearchDomain
+}
+
+dnsRequestAttempts ATTRIBUTE ::= {
+    WITH SYNTAX			    INTEGER
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    LDAP-SYNTAX			    integer.&id
+    LDAP-NAME			    {"dnsRequestAttempts"}
+    LDAP-DESC			    "Number of attempts to try a DNS request before returning failure"
+    ID					    id-at-dnsRequestAttempts
+}
+
+dnsTimeoutInMilliseconds ATTRIBUTE ::= {
+    WITH SYNTAX			    INTEGER
+    EQUALITY MATCHING RULE  integerMatch
+    ORDERING MATCHING RULE  integerOrderingMatch
+    LDAP-SYNTAX			    integer.&id
+    LDAP-NAME			    {"dnsTimeoutInMilliseconds"}
+    LDAP-DESC			    "DNS request timeout in milliseconds (ms)"
+    ID					    id-at-dnsTimeoutInMilliseconds
+}
+
+dnsResolverRotation ATTRIBUTE ::= {
+    WITH SYNTAX			    DNSResolverRotation
+    EQUALITY MATCHING RULE  integerMatch
+    LDAP-SYNTAX			    integer.&id
+    LDAP-NAME			    {"dnsResolverRotation"}
+    LDAP-DESC			    "DNS Resolver Rotation Algorithm"
+    ID					    id-at-dnsResolverRotation
+}
+
+dnsIPv6First ATTRIBUTE ::= {
+    WITH SYNTAX				BOOLEAN
+    EQUALITY MATCHING RULE	booleanMatch
+    LDAP-SYNTAX				boolean.&id
+    LDAP-NAME				{"dnsIPv6First"}
+    LDAP-DESC				"Whether to query IPv6 DNS records first, such as AAAA"
+    ID						id-at-dnsIPv6First
+}
+
+dnsNoTLDQuery ATTRIBUTE ::= {
+    WITH SYNTAX				BOOLEAN
+    EQUALITY MATCHING RULE	booleanMatch
+    LDAP-SYNTAX				boolean.&id
+    LDAP-NAME				{"dnsNoTLDQuery"}
+    LDAP-DESC				"Whether to avoid querying for unqualified DNS names"
+    ID						id-at-dnsNoTLDQuery
+}
+
+-- Attribute Types defined in IETF RFC 1274:
+
+aRecord ATTRIBUTE ::= {
+    WITH SYNTAX             IA5String
+    LDAP-SYNTAX             ia5String.&id
+    LDAP-NAME               {"aRecord"}
+    ID                      { 0 9 2342 19200300 100 1 26 }
+}
+
+mDRecord ATTRIBUTE ::= {
+    WITH SYNTAX             IA5String
+    LDAP-SYNTAX             ia5String.&id
+    LDAP-NAME               {"mDRecord"}
+    ID                      { 0 9 2342 19200300 100 1 27 }
+}
+
+mxRecord ATTRIBUTE ::= {
+    WITH SYNTAX             IA5String
+    LDAP-SYNTAX             ia5String.&id
+    LDAP-NAME               {"mxRecord"}
+    ID                      { 0 9 2342 19200300 100 1 28 }
+}
+
+nSRecord ATTRIBUTE ::= {
+    WITH SYNTAX             IA5String
+    LDAP-SYNTAX             ia5String.&id
+    LDAP-NAME               {"nSRecord"}
+    ID                      { 0 9 2342 19200300 100 1 29 }
+}
+
+sOARecord ATTRIBUTE ::= {
+    WITH SYNTAX             IA5String
+    LDAP-SYNTAX             ia5String.&id
+    LDAP-NAME               {"sOARecord"}
+    ID                      { 0 9 2342 19200300 100 1 30 }
+}
+
+cNAMERecord ATTRIBUTE ::= {
+    WITH SYNTAX             IA5String
+    LDAP-SYNTAX             ia5String.&id
+    LDAP-NAME               {"cNAMERecord"}
+    ID                      { 0 9 2342 19200300 100 1 31 }
+}
+
+-- Matching Rules
+
+dnsRecordEqualityMatch MATCHING-RULE ::= {
+    SYNTAX      DNSRecordAssertion
+    LDAP-NAME   {"dnsRecordEqualityMatch"}
+    LDAP-DESC   "DNS Record Equality Matching Rule"
+    ID          id-mr-dnsRecordEqualityMatch
+}
+
+dnsRecordSubstringsMatch MATCHING-RULE ::= {
+    SYNTAX      OctetSubstringAssertion
+    LDAP-NAME   {"dnsRecordSubstringsMatch"}
+    LDAP-DESC   "DNS Record Substrings Matching Rule"
+    ID          id-mr-dnsRecordSubstringsMatch
+}
+
+-- Attribute Sets
+
+DNSConfigurationAttributes ATTRIBUTE ::= {
+    dnsServiceURL
+    | dnsSearchDomain
+    | dnsRequestAttempts
+    | dnsTimeoutInMilliseconds
+    | dnsResolverRotation
+    | dnsIPv6First
+    | dnsNoTLDQuery,
+    ...
+}
+
+-- Object Classes
+
+id-oc-dns-zone OBJECT IDENTIFIER ::= { id-oc 1 }
+dns-zone OBJECT-CLASS ::= {
+    SUBCLASS OF     {top}
+    KIND            auxiliary
+    MAY CONTAIN     {
+        dns-record
+        | dnsName
+        | dc
+        | aRecord
+        | mDRecord
+        | mxRecord
+        | nSRecord
+        | sOARecord
+        | cNAMERecord
+    }
+    LDAP-NAME       {"DNS Zone"}
+    LDAP-DESC       "A DNS Zone"
+    ID              id-oc-dns-zone
+}
+
+id-oc-dcObject OBJECT IDENTIFIER ::= { id-oc 2 }
+dcObject OBJECT-CLASS ::= {
+    SUBCLASS OF     {top}
+    KIND            auxiliary
+    MUST CONTAIN    {dc}
+    LDAP-NAME       {"Domain Component Object"}
+    LDAP-DESC       "A DNS Domain Component Object"
+    ID              { 1 3 6 1 4 1 1466 344 }
+}
+
+dnsConfiguration OBJECT-CLASS ::= {
+    SUBCLASS OF	    {top}
+    KIND		    auxiliary
+    MAY CONTAIN	    {DNSConfigurationAttributes}
+    LDAP-NAME	    {"dnsConfiguration"}
+    LDAP-DESC	    "Something configured with DNS parameters"
+    ID			    id-oc-dnsConfiguration
+}
+
+-- Name Forms
+
+-- // FIXME: Remove this (not a structural object class)
+dns-zone-nameForm NAME-FORM ::= {
+    NAMES               dns-zone
+    WITH ATTRIBUTES     {dc}
+    LDAP-NAME           {"dns-zone-nameForm"}
+    ID                  id-nf-domainNameForm
+}
+
+-- // FIXME: Remove this (not a structural object class)
+dcObjectNameForm NAME-FORM ::= {
+    NAMES               dcObject
+    WITH ATTRIBUTES     {dc}
+    LDAP-NAME           {"dcObjectNameForm"}
+    ID                  id-nf-dcObjectNameForm
+}
+
+-- From https://www.rfc-editor.org/rfc/rfc2247.html
+-- // TODO: ( 1.3.6.1.4.1.1466.345 NAME 'domainNameForm' OC domain MUST ( dc ) )
+
+END

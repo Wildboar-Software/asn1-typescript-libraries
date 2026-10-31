@@ -1,0 +1,300 @@
+-- Derived from data/ldap-schema/schema2ldif/RoundCube.schema
+-- Upstream: http://www.typomedia.org/
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapSchema2ldifRoundCube DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString, DirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-rcNickname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 110 }
+id-at-rcBirthday OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 120 }
+id-at-rcGender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 130 }
+id-at-rcHomeMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 210 }
+id-at-rcWorkMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 220 }
+id-at-rcHomeFax OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 310 }
+id-at-rcWorkFax OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 320 }
+id-at-rcHomeURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 410 }
+id-at-rcWorkURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 420 }
+id-at-rcBlogURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 430 }
+id-at-rcProfileURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 440 }
+id-at-rcSkype OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 510 }
+id-at-rcJabber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 520 }
+id-at-rcAIM OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 530 }
+id-at-rcICQ OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 540 }
+id-at-rcRegion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 610 }
+id-at-rcCountry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 620 }
+id-at-rcManager OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 710 }
+id-at-rcAssistant OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 2 720 }
+id-oc-roundcubeMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42766 4 2 1 3 1 }
+
+-- Attribute types
+
+-- OID written as RoundcubeAttributeType:110 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcNickname ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcNickname"}
+  LDAP-DESC                 "Nickname"
+  ID                        id-at-rcNickname }
+
+-- OID written as RoundcubeAttributeType:120 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {16} rendered as DirectoryString{16}.
+rcBirthday ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{16}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcBirthday"}
+  LDAP-DESC                 "Birthday"
+  ID                        id-at-rcBirthday }
+
+-- OID written as RoundcubeAttributeType:130 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {16} rendered as DirectoryString{16}.
+rcGender ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{16}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcGender"}
+  LDAP-DESC                 "Gender"
+  ID                        id-at-rcGender }
+
+-- OID written as RoundcubeAttributeType:210 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcHomeMail ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcHomeMail"}
+  LDAP-DESC                 "Homemail"
+  ID                        id-at-rcHomeMail }
+
+-- OID written as RoundcubeAttributeType:220 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcWorkMail ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcWorkMail"}
+  LDAP-DESC                 "Workmail"
+  ID                        id-at-rcWorkMail }
+
+-- OID written as RoundcubeAttributeType:310 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcHomeFax ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcHomeFax"}
+  LDAP-DESC                 "Homefax"
+  ID                        id-at-rcHomeFax }
+
+-- OID written as RoundcubeAttributeType:320 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcWorkFax ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcWorkFax"}
+  LDAP-DESC                 "Workfax"
+  ID                        id-at-rcWorkFax }
+
+-- OID written as RoundcubeAttributeType:410 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcHomeURL ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcHomeURL"}
+  LDAP-DESC                 "Website Private"
+  ID                        id-at-rcHomeURL }
+
+-- OID written as RoundcubeAttributeType:420 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcWorkURL ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcWorkURL"}
+  LDAP-DESC                 "Website Work"
+  ID                        id-at-rcWorkURL }
+
+-- OID written as RoundcubeAttributeType:430 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcBlogURL ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcBlogURL"}
+  LDAP-DESC                 "Weblog"
+  ID                        id-at-rcBlogURL }
+
+-- OID written as RoundcubeAttributeType:440 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcProfileURL ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcProfileURL"}
+  LDAP-DESC                 "Profile"
+  ID                        id-at-rcProfileURL }
+
+-- OID written as RoundcubeAttributeType:510 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcSkype ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcSkype"}
+  LDAP-DESC                 "Skype"
+  ID                        id-at-rcSkype }
+
+-- OID written as RoundcubeAttributeType:520 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcJabber ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcJabber"}
+  LDAP-DESC                 "Jabber"
+  ID                        id-at-rcJabber }
+
+-- OID written as RoundcubeAttributeType:530 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcAIM ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcAIM"}
+  LDAP-DESC                 "AIM"
+  ID                        id-at-rcAIM }
+
+-- OID written as RoundcubeAttributeType:540 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcICQ ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcICQ"}
+  LDAP-DESC                 "ICQ"
+  ID                        id-at-rcICQ }
+
+-- OID written as RoundcubeAttributeType:610 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcRegion ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcRegion"}
+  LDAP-DESC                 "Region"
+  ID                        id-at-rcRegion }
+
+-- OID written as RoundcubeAttributeType:620 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcCountry ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcCountry"}
+  LDAP-DESC                 "Country"
+  ID                        id-at-rcCountry }
+
+-- OID written as RoundcubeAttributeType:710 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcManager ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcManager"}
+  LDAP-DESC                 "Manager"
+  ID                        id-at-rcManager }
+
+-- OID written as RoundcubeAttributeType:720 and expanded with this file's objectidentifier macros.
+-- LDAP syntax length {64} rendered as DirectoryString{64}.
+rcAssistant ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{64}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rcAssistant"}
+  LDAP-DESC                 "Assistant"
+  ID                        id-at-rcAssistant }
+
+-- Object classes
+
+-- initial capital of "RoundcubeMail" lowercased so the assignment is a valuereference.
+-- OID written as RoundcubeObjectClass:1 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+roundcubeMail OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { rcNickname
+                              | rcBirthday
+                              | rcGender
+                              | rcHomeMail
+                              | rcWorkMail
+                              | rcHomeFax
+                              | rcWorkFax
+                              | rcHomeURL
+                              | rcWorkURL
+                              | rcBlogURL
+                              | rcProfileURL
+                              | rcSkype
+                              | rcJabber
+                              | rcAIM
+                              | rcICQ
+                              | rcRegion
+                              | rcCountry
+                              | rcManager
+                              | rcAssistant }
+  LDAP-NAME                 {"RoundcubeMail"}
+  ID                        id-oc-roundcubeMail }
+END

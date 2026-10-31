@@ -1,0 +1,181 @@
+-- Derived from data/ldap-schema/presence.ldif
+-- Upstream: https://github.com/leto/389-ds/blob/091c749adcc53ef3332cab6d34b25dadcb69c696/ldap/schema/10presence.ldif#L44
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapPresence DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  directoryString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-nsAIMid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2013 }
+id-at-nsICQid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2014 }
+id-at-nsYIMid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2015 }
+id-at-nsMSNid OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2016 }
+id-at-nsAIMStatusText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2017 }
+id-at-nsAIMStatusGraphic OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2018 }
+id-at-nsYIMStatusText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2019 }
+id-at-nsYIMStatusGraphic OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2020 }
+id-at-nsICQStatusText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2021 }
+id-at-nsICQStatusGraphic OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2022 }
+id-oc-nsAIMpresence OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 300 }
+id-oc-nsICQpresence OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 301 }
+id-oc-nsYIMpresence OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 302 }
+id-oc-nsMSNpresence OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 303 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsAIMid ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               { 2 16 840 1 113730 3 7 1 }
+  LDAP-NAME                 {"nsAIMid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsAIMid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsICQid ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               { 2 16 840 1 113730 3 7 1 }
+  LDAP-NAME                 {"nsICQid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsICQid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsYIMid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsYIMid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsYIMid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsMSNid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsMSNid"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsMSNid }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsAIMStatusText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsAIMStatusText"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsAIMStatusText }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsAIMStatusGraphic ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsAIMStatusGraphic"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsAIMStatusGraphic }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsYIMStatusText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsYIMStatusText"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsYIMStatusText }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsYIMStatusGraphic ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsYIMStatusGraphic"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsYIMStatusGraphic }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsICQStatusText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsICQStatusText"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsICQStatusText }
+
+-- X-ORIGIN: "Netscape Directory Server"
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+nsICQStatusGraphic ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  NO USER MODIFICATION      TRUE
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"nsICQStatusGraphic"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-nsICQStatusGraphic }
+
+-- Object classes
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsAIMpresence OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsAIMid
+                              | nsAIMStatusGraphic
+                              | nsAIMStatusText }
+  LDAP-NAME                 {"nsAIMpresence"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsAIMpresence }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsICQpresence OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsICQid
+                              | nsICQStatusGraphic
+                              | nsICQStatusText }
+  LDAP-NAME                 {"nsICQpresence"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsICQpresence }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsYIMpresence OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsYIMid
+                              | nsYIMStatusGraphic
+                              | nsYIMStatusText }
+  LDAP-NAME                 {"nsYIMpresence"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsYIMpresence }
+
+-- X-ORIGIN: "Netscape Directory Server"
+nsMSNpresence OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { nsMSNid }
+  LDAP-NAME                 {"nsMSNpresence"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-nsMSNpresence }
+END
