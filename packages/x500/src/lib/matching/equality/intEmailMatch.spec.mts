@@ -105,17 +105,32 @@ describe("intEmailMatch", () => {
         )).toBe(false);
     });
 
-    it("returns false when either address has no local-part and domain-part", () => {
-        expect(intEmailMatch(
+    it("throws when the assertion has no local-part or domain-part", () => {
+        expect(() => intEmailMatch(
             email("userexample.com"),
-            email("userexample.com"),
-        )).toBe(false);
-        expect(intEmailMatch(
+            email("user@example.com"),
+        )).toThrow("intEmailMatch assertion is not an IntEmail");
+        expect(() => intEmailMatch(
             email("@example.com"),
-            email("@example.com"),
-        )).toBe(false);
-        expect(intEmailMatch(
+            email("user@example.com"),
+        )).toThrow("intEmailMatch assertion is not an IntEmail");
+        expect(() => intEmailMatch(
             email("user@"),
+            email("user@example.com"),
+        )).toThrow("intEmailMatch assertion is not an IntEmail");
+    });
+
+    it("returns false when the stored address has no local-part or domain-part", () => {
+        expect(intEmailMatch(
+            email("user@example.com"),
+            email("userexample.com"),
+        )).toBe(false);
+        expect(intEmailMatch(
+            email("user@example.com"),
+            email("@example.com"),
+        )).toBe(false);
+        expect(intEmailMatch(
+            email("user@example.com"),
             email("user@"),
         )).toBe(false);
     });

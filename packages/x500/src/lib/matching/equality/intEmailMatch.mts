@@ -1,4 +1,4 @@
-import { ASN1CharactersError, ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, ASN1Element, ASN1Error } from "@wildboar/asn1";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
@@ -73,8 +73,16 @@ function intEmailMatchTyped (
 
 intEmailMatchTyped satisfies TypedEquationFunction<PreparedIntEmail | string | ASN1Element>;
 
-function decodeIntEmail (el: ASN1Element): PreparedIntEmail | string {
-    return prepareIntEmail(el.utf8String, el) ?? el.utf8String;
+/**
+ * A missing local-part or domain-part is a malformed assertion.
+ * Returning the raw string would send it through `prepareIntEmail` again.
+ */
+function decodeIntEmail (el: ASN1Element): PreparedIntEmail {
+    const prepared = prepareIntEmail(el.utf8String, el);
+    if (!prepared) {
+        throw new ASN1Error("intEmailMatch assertion is not an IntEmail", el);
+    }
+    return prepared;
 }
 
 /**
