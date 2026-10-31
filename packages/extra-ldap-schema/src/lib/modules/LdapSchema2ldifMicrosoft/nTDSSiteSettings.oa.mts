@@ -1,9 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
-// export { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
-
+import { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
+import { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
+import { interSiteTopologyFailover } from "../MSUser/interSiteTopologyFailover.oa.mjs";
+import { interSiteTopologyGenerator } from "../MSUser/interSiteTopologyGenerator.oa.mjs";
+import { interSiteTopologyRenew } from "../MSUser/interSiteTopologyRenew.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { queryPolicyObject } from "../MSUser/queryPolicyObject.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
 
 /**
  * @summary nTDSSiteSettings
@@ -30,6 +35,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nTDSSiteSettings: OBJECT_CLASS = undefined;
+const nTDSSiteSettings: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [applicationSiteSettings] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [schedule, options, queryPolicyObject, managedBy, interSiteTopologyGenerator, interSiteTopologyRenew, interSiteTopologyFailover] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nTDSSiteSettings"],
+    "&id": id_oc_nTDSSiteSettings /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

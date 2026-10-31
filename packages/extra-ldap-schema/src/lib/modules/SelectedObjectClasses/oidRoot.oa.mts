@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { alias } from "../InformationFramework/alias.oa.mjs";
-// export { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.mjs";
-
+import { alias } from "../InformationFramework/alias.oa.mjs";
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
+import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
+import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
+import { id_oidRoot } from "../SelectedObjectClasses/id-oidRoot.va.mjs";
 
 /**
  * @summary oidRoot
@@ -24,6 +25,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oidRoot: OBJECT_CLASS = undefined;
+const oidRoot: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [alias] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [oidC1, oidC2, oidC] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oidRoot"],
+    "&id": id_oidRoot /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

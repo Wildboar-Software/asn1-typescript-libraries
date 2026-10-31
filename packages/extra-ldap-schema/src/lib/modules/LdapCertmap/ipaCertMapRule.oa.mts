@@ -1,10 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_oc_ipaCertMapRule } from "../LdapCertmap/id-oc-ipaCertMapRule.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { ipaEnabledFlag } from "../Ldap60basev2/ipaEnabledFlag.oa.mjs";
+import { id_oc_ipaCertMapRule } from "../LdapCertmap/id-oc-ipaCertMapRule.va.mjs";
+import { associatedDomain } from "../MIXERAddressMapping/associatedDomain.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { ipaCertMapMapRule } from "./ipaCertMapMapRule.oa.mjs";
+import { ipaCertMapMatchRule } from "./ipaCertMapMatchRule.oa.mjs";
+import { ipaCertMapPriority } from "./ipaCertMapPriority.oa.mjs";
 
 /**
  * @summary ipaCertMapRule
@@ -32,6 +36,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ipaCertMapRule: OBJECT_CLASS = undefined;
+const ipaCertMapRule: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, ipaCertMapMapRule, ipaCertMapMatchRule, associatedDomain, ipaCertMapPriority, ipaEnabledFlag] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ipaCertMapRule"],
+    "&ldapDesc": "IPA Certificate Mapping rule" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ipaCertMapRule /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

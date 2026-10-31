@@ -4,9 +4,9 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Period_days_bitDay, _decode_Period_days_bitDay, _encode_Period_days_bitDay } from "../SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
+import { type Period_days_bitDay, _decode_Period_days_bitDay, _encode_Period_days_bitDay } from "../SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
 // export { Period_days_bitDay, Period_days_bitDay_sunday /* IMPORTED_LONG_NAMED_BIT */, sunday /* IMPORTED_SHORT_NAMED_BIT */, Period_days_bitDay_monday /* IMPORTED_LONG_NAMED_BIT */, monday /* IMPORTED_SHORT_NAMED_BIT */, Period_days_bitDay_tuesday /* IMPORTED_LONG_NAMED_BIT */, tuesday /* IMPORTED_SHORT_NAMED_BIT */, Period_days_bitDay_wednesday /* IMPORTED_LONG_NAMED_BIT */, wednesday /* IMPORTED_SHORT_NAMED_BIT */, Period_days_bitDay_thursday /* IMPORTED_LONG_NAMED_BIT */, thursday /* IMPORTED_SHORT_NAMED_BIT */, Period_days_bitDay_friday /* IMPORTED_LONG_NAMED_BIT */, friday /* IMPORTED_SHORT_NAMED_BIT */, Period_days_bitDay_saturday /* IMPORTED_LONG_NAMED_BIT */, saturday /* IMPORTED_SHORT_NAMED_BIT */, _decode_Period_days_bitDay, _encode_Period_days_bitDay } from "../SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
-import { XDayOf, _decode_XDayOf, _encode_XDayOf } from "../SelectedAttributeTypes/XDayOf.ta.mjs";
+import { type XDayOf, _decode_XDayOf, _encode_XDayOf } from "../SelectedAttributeTypes/XDayOf.ta.mjs";
 // export { XDayOf, _decode_XDayOf, _encode_XDayOf } from "../SelectedAttributeTypes/XDayOf.ta.mjs";
 
 
@@ -17,7 +17,18 @@ import { XDayOf, _decode_XDayOf, _encode_XDayOf } from "../SelectedAttributeType
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-days ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Period-days ::= CHOICE {
+ *   intDay  SET OF INTEGER,
+ *   bitDay  BIT STRING {
+ *     sunday    (0),
+ *     monday    (1),
+ *     tuesday   (2),
+ *     wednesday (3),
+ *     thursday  (4),
+ *     friday    (5),
+ *     saturday  (6) },
+ *   dayOf   XDayOf,
+ *   ... }
  * ```
  */
 export

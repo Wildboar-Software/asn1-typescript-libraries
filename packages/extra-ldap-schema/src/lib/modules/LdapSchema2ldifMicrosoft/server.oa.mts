@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_server } from "../LdapSchema2ldifMicrosoft/id-oc-server.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_server } from "../LdapSchema2ldifMicrosoft/id-oc-server.va.mjs";
+import { bridgeheadTransportList } from "../MSUser/bridgeheadTransportList.oa.mjs";
+import { dNSHostName } from "../MSUser/dNSHostName.oa.mjs";
+import { mailAddress } from "../MSUser/mailAddress.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { serverReference } from "../MSUser/serverReference.oa.mjs";
+import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 
 /**
  * @summary server
@@ -29,6 +33,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const server: OBJECT_CLASS = undefined;
+const server: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [serialNumber, serverReference, dNSHostName, managedBy, mailAddress, bridgeheadTransportList] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["server"],
+    "&id": id_oc_server /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

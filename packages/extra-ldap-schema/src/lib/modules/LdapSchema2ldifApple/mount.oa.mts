@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_oc_mount } from "../LdapSchema2ldifApple/id-oc-mount.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_mount } from "../LdapSchema2ldifApple/id-oc-mount.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mountDirectory } from "./mountDirectory.oa.mjs";
+import { mountDumpFrequency } from "./mountDumpFrequency.oa.mjs";
+import { mountOption } from "./mountOption.oa.mjs";
+import { mountPassNo } from "./mountPassNo.oa.mjs";
+import { mountType } from "./mountType.oa.mjs";
 
 /**
  * @summary mount
@@ -30,6 +33,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const mount: OBJECT_CLASS = undefined;
+const mount: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [mountDirectory, mountType, mountOption, mountDumpFrequency, mountPassNo] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["mount"],
+    "&id": id_oc_mount /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

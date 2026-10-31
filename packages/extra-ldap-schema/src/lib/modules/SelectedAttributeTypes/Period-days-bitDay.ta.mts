@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-days-bitDay ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * Period-days-bitDay ::= BIT STRING {
+ *   sunday    (0),
+ *   monday    (1),
+ *   tuesday   (2),
+ *   wednesday (3),
+ *   thursday  (4),
+ *   friday    (5),
+ *   saturday  (6) }
  * ```
  */
 export

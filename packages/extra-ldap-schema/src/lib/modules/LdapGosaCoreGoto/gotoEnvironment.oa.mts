@@ -1,9 +1,17 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_gotoEnvironment } from "../LdapGosaCoreGoto/id-oc-gotoEnvironment.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { gotoXResolution } from "../LdapGosaCoreGosystem/gotoXResolution.oa.mjs";
+import { id_oc_gotoEnvironment } from "../LdapGosaCoreGoto/id-oc-gotoEnvironment.va.mjs";
+import { gotoHotplugDevice } from "./gotoHotplugDevice.oa.mjs";
+import { gotoHotplugDeviceDN } from "./gotoHotplugDeviceDN.oa.mjs";
+import { gotoKioskProfile } from "./gotoKioskProfile.oa.mjs";
+import { gotoLogonScript } from "./gotoLogonScript.oa.mjs";
+import { gotoProfileFlags } from "./gotoProfileFlags.oa.mjs";
+import { gotoProfileQuota } from "./gotoProfileQuota.oa.mjs";
+import { gotoProfileServer } from "./gotoProfileServer.oa.mjs";
+import { gotoShare } from "./gotoShare.oa.mjs";
 
 /**
  * @summary gotoEnvironment
@@ -34,6 +42,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gotoEnvironment: OBJECT_CLASS = undefined;
+const gotoEnvironment: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gotoProfileServer, gotoProfileFlags, gotoXResolution, gotoShare, gotoLogonScript, gotoKioskProfile, gotoHotplugDevice, gotoProfileQuota, gotoHotplugDeviceDN] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["gotoEnvironment"],
+    "&ldapDesc": "GOto - contains environment settings (v2.7)" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gotoEnvironment /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

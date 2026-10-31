@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { PreferredDeliveryMethod, _decode_PreferredDeliveryMethod, _encode_PreferredDeliveryMethod } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
-// export { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type PreferredDeliveryMethod,
+    _decode_PreferredDeliveryMethod,
+    _encode_PreferredDeliveryMethod,
+} from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
+import { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.mjs";
 
 /**
  * @summary deliveryMethod
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<PreferredDeliveryMethod>}
+ * @implements {SYNTAX_NAME<PreferredDeliveryMethod>}
  */
 export
-const deliveryMethod: SYNTAX_NAME = undefined;
+const deliveryMethod: SYNTAX_NAME<PreferredDeliveryMethod> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_PreferredDeliveryMethod,
+    },
+    encoderFor: {
+        "&Type": _encode_PreferredDeliveryMethod,
+    },
+    "&ldapDesc": "Delevery Method" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_deliveryMethod /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

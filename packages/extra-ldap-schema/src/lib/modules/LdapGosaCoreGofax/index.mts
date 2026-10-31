@@ -1,0 +1,31 @@
+/**
+ * ASN.1 module `LdapGosaCoreGofax`.
+ */
+export * from "./facsimileAlternateTelephoneNumber.oa.mjs";
+export * from "./goFaxAccount.oa.mjs";
+export * from "./goFaxDeliveryMode.oa.mjs";
+export * from "./goFaxDivertNumber.oa.mjs";
+export * from "./goFaxFormat.oa.mjs";
+export * from "./goFaxIsEnabled.oa.mjs";
+export * from "./goFaxLanguage.oa.mjs";
+export * from "./goFaxPrinter.oa.mjs";
+export * from "./goFaxRBlock.oa.mjs";
+export * from "./goFaxRBlockgroups.oa.mjs";
+export * from "./goFaxRBlocklist.oa.mjs";
+export * from "./goFaxSBlock.oa.mjs";
+export * from "./goFaxSBlockgroups.oa.mjs";
+export * from "./goFaxSBlocklist.oa.mjs";
+export * from "./id-at-facsimileAlternateTelephoneNumber.va.mjs";
+export * from "./id-at-goFaxDeliveryMode.va.mjs";
+export * from "./id-at-goFaxDivertNumber.va.mjs";
+export * from "./id-at-goFaxFormat.va.mjs";
+export * from "./id-at-goFaxIsEnabled.va.mjs";
+export * from "./id-at-goFaxLanguage.va.mjs";
+export * from "./id-at-goFaxPrinter.va.mjs";
+export * from "./id-at-goFaxRBlockgroups.va.mjs";
+export * from "./id-at-goFaxRBlocklist.va.mjs";
+export * from "./id-at-goFaxSBlockgroups.va.mjs";
+export * from "./id-at-goFaxSBlocklist.va.mjs";
+export * from "./id-oc-goFaxAccount.va.mjs";
+export * from "./id-oc-goFaxRBlock.va.mjs";
+export * from "./id-oc-goFaxSBlock.va.mjs";

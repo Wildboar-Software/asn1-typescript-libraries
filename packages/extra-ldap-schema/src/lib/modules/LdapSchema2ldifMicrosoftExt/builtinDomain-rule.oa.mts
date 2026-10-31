@@ -1,8 +1,7 @@
 /* eslint-disable */
-// export { builtinDomain } from "../LdapSchema2ldifMicrosoft/builtinDomain.oa.mjs";
-// export { samDomainBase } from "../LdapSchema2ldifMicrosoft/samDomainBase.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
-
+import { builtinDomain } from "../LdapSchema2ldifMicrosoft/builtinDomain.oa.mjs";
+import { samDomainBase } from "../LdapSchema2ldifMicrosoft/samDomainBase.oa.mjs";
 
 /**
  * @summary builtinDomain_rule
@@ -21,6 +20,12 @@ import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs"
  * @implements {CONTENT_RULE}
  */
 export
-const builtinDomain_rule: CONTENT_RULE = undefined;
+const builtinDomain_rule: CONTENT_RULE = {
+    class: "CONTENT-RULE",
+    decoderFor: {},
+    encoderFor: {},
+    "&structuralClass": builtinDomain["&id"] /* OBJECT_FIELD_SETTING */,
+    "&Auxiliaries": [samDomainBase] /* OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

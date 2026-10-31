@@ -1,8 +1,11 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { PresentationAddress, _decode_PresentationAddress, _encode_PresentationAddress } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-// export { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va.mjs";
-
+import {
+    _decode_PresentationAddress,
+    _encode_PresentationAddress,
+    PresentationAddress,
+} from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
+import { id_mr_presentationAddressMatch } from "../SelectedAttributeTypes/id-mr-presentationAddressMatch.va.mjs";
 
 /**
  * @summary presentationAddressMatch
@@ -17,10 +20,20 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<PresentationAddress>}
+ * @implements {MATCHING_RULE<PresentationAddress>}
  */
 export
-const presentationAddressMatch: MATCHING_RULE = undefined;
+const presentationAddressMatch: MATCHING_RULE<PresentationAddress> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_PresentationAddress,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_PresentationAddress,
+    },
+    "&id": id_mr_presentationAddressMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

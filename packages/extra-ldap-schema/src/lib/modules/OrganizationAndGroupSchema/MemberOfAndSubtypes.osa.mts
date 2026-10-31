@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE} from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { memberOf } from "../OrganizationAndGroupSchema/memberOf.oa.mjs";
 // export { memberOf } from "../OrganizationAndGroupSchema/memberOf.oa.mjs";

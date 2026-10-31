@@ -1,0 +1,19 @@
+/**
+ * ASN.1 module `LdapVmwperson`.
+ */
+export * from "./createdBy.oa.mjs";
+export * from "./customernumber.oa.mjs";
+export * from "./id-at-createdBy.va.mjs";
+export * from "./id-at-customernumber.va.mjs";
+export * from "./id-at-jiveID.va.mjs";
+export * from "./id-at-modifiedBy.va.mjs";
+export * from "./id-at-userStatus.va.mjs";
+export * from "./id-at-userType.va.mjs";
+export * from "./id-at-vmwEnrollmentFlag.va.mjs";
+export * from "./id-oc-vmwPerson.va.mjs";
+export * from "./jiveID.oa.mjs";
+export * from "./modifiedBy.oa.mjs";
+export * from "./userStatus.oa.mjs";
+export * from "./userType.oa.mjs";
+export * from "./vmwEnrollmentFlag.oa.mjs";
+export * from "./vmwPerson.oa.mjs";

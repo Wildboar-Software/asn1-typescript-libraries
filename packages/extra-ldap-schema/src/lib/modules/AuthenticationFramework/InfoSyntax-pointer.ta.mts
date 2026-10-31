@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../AuthenticationFramework/HASH.ta.mjs";
 // export { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../AuthenticationFramework/HASH.ta.mjs";
-import { HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
+import { type HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
 // export { HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
 
 
@@ -18,7 +18,10 @@ import { HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InfoSyntax-pointer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * InfoSyntax-pointer ::= SEQUENCE {
+ *   name  GeneralNames,
+ *   hash  HASH{HashedPolicyInfo} OPTIONAL,
+ *   ... }
  * ```
  * 
  * @class

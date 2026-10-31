@@ -1,9 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
-// export { id_oc_gLUE2ComputingEndpoint } from "../LdapGlue602ComputingEndpoint/id-oc-gLUE2ComputingEndpoint.va.mjs";
-
+import { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
+import { id_oc_gLUE2ComputingEndpoint } from "../LdapGlue602ComputingEndpoint/id-oc-gLUE2ComputingEndpoint.va.mjs";
+import { gLUE2ComputingEndpointComputingServiceForeignKey } from "./gLUE2ComputingEndpointComputingServiceForeignKey.oa.mjs";
+import { gLUE2ComputingEndpointJobDescription } from "./gLUE2ComputingEndpointJobDescription.oa.mjs";
+import { gLUE2ComputingEndpointPreLRMSWaitingJobs } from "./gLUE2ComputingEndpointPreLRMSWaitingJobs.oa.mjs";
+import { gLUE2ComputingEndpointRunningJobs } from "./gLUE2ComputingEndpointRunningJobs.oa.mjs";
+import { gLUE2ComputingEndpointStaging } from "./gLUE2ComputingEndpointStaging.oa.mjs";
+import { gLUE2ComputingEndpointStagingJobs } from "./gLUE2ComputingEndpointStagingJobs.oa.mjs";
+import { gLUE2ComputingEndpointSuspendedJobs } from "./gLUE2ComputingEndpointSuspendedJobs.oa.mjs";
+import { gLUE2ComputingEndpointTotalJobs } from "./gLUE2ComputingEndpointTotalJobs.oa.mjs";
+import { gLUE2ComputingEndpointWaitingJobs } from "./gLUE2ComputingEndpointWaitingJobs.oa.mjs";
 
 /**
  * @summary gLUE2ComputingEndpoint
@@ -33,6 +40,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2ComputingEndpoint: OBJECT_CLASS = undefined;
+const gLUE2ComputingEndpoint: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Endpoint] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gLUE2ComputingEndpointStaging, gLUE2ComputingEndpointJobDescription, gLUE2ComputingEndpointTotalJobs, gLUE2ComputingEndpointRunningJobs, gLUE2ComputingEndpointWaitingJobs, gLUE2ComputingEndpointStagingJobs, gLUE2ComputingEndpointSuspendedJobs, gLUE2ComputingEndpointPreLRMSWaitingJobs, gLUE2ComputingEndpointComputingServiceForeignKey] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2ComputingEndpoint"],
+    "&ldapDesc": "Endpoint for creating, monitoring, and controlling computational activities called jobs; it can be used to expose also complementary capabilities (e.g., reservation, proxy manipulation)" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2ComputingEndpoint /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

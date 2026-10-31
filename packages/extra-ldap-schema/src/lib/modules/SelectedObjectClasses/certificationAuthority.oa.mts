@@ -1,10 +1,12 @@
 /* eslint-disable */
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
+import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
-// export { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va.mjs";
 
 /**
  * @summary certificationAuthority
@@ -30,6 +32,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const certificationAuthority: OBJECT_CLASS = undefined;
+const certificationAuthority: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [cACertificate, certificateRevocationList, authorityRevocationList] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [crossCertificatePair] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["certificationAuthority"],
+    "&ldapDesc": "X.509 certificate authority" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_certificationAuthority /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

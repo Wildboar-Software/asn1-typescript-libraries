@@ -4,9 +4,9 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
+import { type RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
 // export { RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
-import { DomainName, _decode_DomainName, _encode_DomainName } from "../InformationFramework/DomainName.ta.mjs";
+import { type DomainName, _decode_DomainName, _encode_DomainName } from "../InformationFramework/DomainName.ta.mjs";
 // export { DomainName, _decode_DomainName, _encode_DomainName } from "../InformationFramework/DomainName.ta.mjs";
 
 

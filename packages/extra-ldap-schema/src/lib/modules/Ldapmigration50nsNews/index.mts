@@ -1,0 +1,19 @@
+/**
+ * ASN.1 module `Ldapmigration50nsNews`.
+ */
+export * from "./id-at-ngcomponent.va.mjs";
+export * from "./id-at-nsaclrole.va.mjs";
+export * from "./id-at-nscreator.va.mjs";
+export * from "./id-at-nsflags.va.mjs";
+export * from "./id-at-nsnewsACL.va.mjs";
+export * from "./id-at-nsprettyname.va.mjs";
+export * from "./id-oc-netscapeNewsServer.va.mjs";
+export * from "./id-oc-nginfo.va.mjs";
+export * from "./netscapeNewsServer.oa.mjs";
+export * from "./ngcomponent.oa.mjs";
+export * from "./nginfo.oa.mjs";
+export * from "./nsaclrole.oa.mjs";
+export * from "./nscreator.oa.mjs";
+export * from "./nsflags.oa.mjs";
+export * from "./nsnewsACL.oa.mjs";
+export * from "./nsprettyname.oa.mjs";

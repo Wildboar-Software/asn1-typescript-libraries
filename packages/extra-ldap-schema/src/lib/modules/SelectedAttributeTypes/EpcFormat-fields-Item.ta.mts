@@ -6,7 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EpcFormat_fields_Item_charField, _decode_EpcFormat_fields_Item_charField, _encode_EpcFormat_fields_Item_charField } from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";
+import { type EpcFormat_fields_Item_charField, _decode_EpcFormat_fields_Item_charField, _encode_EpcFormat_fields_Item_charField } from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";
 // export { EpcFormat_fields_Item_charField, _decode_EpcFormat_fields_Item_charField, _encode_EpcFormat_fields_Item_charField } from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";
 import { EpcFormat_fields_Item_result, EpcFormat_fields_Item_result_numericPad /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EpcFormat_fields_Item_result, _encode_EpcFormat_fields_Item_result, _enum_for_EpcFormat_fields_Item_result } from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.mjs";
 // export { EpcFormat_fields_Item_result, _enum_for_EpcFormat_fields_Item_result, EpcFormat_fields_Item_result_numericPad /* IMPORTED_LONG_ENUMERATION_ITEM */, numericPad /* IMPORTED_SHORT_ENUMERATION_ITEM */, EpcFormat_fields_Item_result_numeric /* IMPORTED_LONG_ENUMERATION_ITEM */, numeric /* IMPORTED_SHORT_ENUMERATION_ITEM */, EpcFormat_fields_Item_result_alpha7bits /* IMPORTED_LONG_ENUMERATION_ITEM */, alpha7bits /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EpcFormat_fields_Item_result, _encode_EpcFormat_fields_Item_result } from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.mjs";
@@ -19,7 +19,15 @@ import { EpcFormat_fields_Item_result, EpcFormat_fields_Item_result_numericPad /
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EpcFormat-fields-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EpcFormat-fields-Item ::= SEQUENCE {
+ *   bits       INTEGER,
+ *   charField  CHOICE {
+ *     characters  [0] INTEGER,
+ *     maxValue    [1] INTEGER },
+ *   result     ENUMERATED {
+ *     numericPad  (0),
+ *     numeric     (1),
+ *     alpha7bits  (2) } DEFAULT numericPad }
  * ```
  * 
  * @class

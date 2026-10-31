@@ -1,9 +1,17 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { id_oc_ftAttribute } from "../LdapApacheFortress/id-oc-ftAttribute.va.mjs";
-
+import { id_oc_ftAttribute } from "../LdapApacheFortress/id-oc-ftAttribute.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
+import { ftId } from "./ftId.oa.mjs";
+import { ftPA } from "./ftPA.oa.mjs";
+import { ftPADataType } from "./ftPADataType.oa.mjs";
+import { ftPADefaultOperator } from "./ftPADefaultOperator.oa.mjs";
+import { ftPADefaultStrategy } from "./ftPADefaultStrategy.oa.mjs";
+import { ftPADefaultValue } from "./ftPADefaultValue.oa.mjs";
+import { ftPASet } from "./ftPASet.oa.mjs";
+import { ftPAValidVals } from "./ftPAValidVals.oa.mjs";
 
 /**
  * @summary ftAttribute
@@ -34,6 +42,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ftAttribute: OBJECT_CLASS = undefined;
+const ftAttribute: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [organizationalRole] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ftId, ftPASet, ftPA, commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ftPADataType, ftPADefaultValue, ftPADefaultStrategy, ftPADefaultOperator, ftPAValidVals, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ftAttribute"],
+    "&ldapDesc": "Fortress Attribute Structural Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ftAttribute /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

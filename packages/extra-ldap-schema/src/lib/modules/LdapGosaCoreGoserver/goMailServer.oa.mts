@@ -1,10 +1,22 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_oc_goMailServer } from "../LdapGosaCoreGoserver/id-oc-goMailServer.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_goMailServer } from "../LdapGosaCoreGoserver/id-oc-goMailServer.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goMailServerStatus } from "./goMailServerStatus.oa.mjs";
+import { postfixHeaderSizeLimit } from "./postfixHeaderSizeLimit.oa.mjs";
+import { postfixMailboxSizeLimit } from "./postfixMailboxSizeLimit.oa.mjs";
+import { postfixMessageSizeLimit } from "./postfixMessageSizeLimit.oa.mjs";
+import { postfixMyDestinations } from "./postfixMyDestinations.oa.mjs";
+import { postfixMyDomain } from "./postfixMyDomain.oa.mjs";
+import { postfixMyHostname } from "./postfixMyHostname.oa.mjs";
+import { postfixMyNetworks } from "./postfixMyNetworks.oa.mjs";
+import { postfixRecipientRestrictions } from "./postfixRecipientRestrictions.oa.mjs";
+import { postfixRelayhost } from "./postfixRelayhost.oa.mjs";
+import { postfixSenderRestrictions } from "./postfixSenderRestrictions.oa.mjs";
+import { postfixTransportTable } from "./postfixTransportTable.oa.mjs";
 
 /**
  * @summary goMailServer
@@ -40,6 +52,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const goMailServer: OBJECT_CLASS = undefined;
+const goMailServer: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, goMailServerStatus, postfixHeaderSizeLimit, postfixMailboxSizeLimit, postfixMessageSizeLimit, postfixMyDestinations, postfixMyDomain, postfixMyHostname, postfixMyNetworks, postfixRelayhost, postfixTransportTable, postfixSenderRestrictions, postfixRecipientRestrictions] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["goMailServer"],
+    "&ldapDesc": "Mail server definition (v2.7)" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_goMailServer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -5,11 +5,11 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
+import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 // export { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-import { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
 // export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
 
 
@@ -20,7 +20,11 @@ import { Extensions, _decode_Extensions, _encode_Extensions } from "../Authentic
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CertificateListContent-revokedCertificates-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CertificateListContent-revokedCertificates-Item ::= SEQUENCE {
+ *   serialNumber        CertificateSerialNumber,
+ *   revocationDate      Time,
+ *   crlEntryExtensions  Extensions OPTIONAL,
+ *   ... }
  * ```
  * 
  * @class

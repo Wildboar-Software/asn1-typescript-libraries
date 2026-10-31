@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { RandomNonce, _decode_RandomNonce, _encode_RandomNonce } from "../PKCS-9/RandomNonce.ta.mjs";
-// export { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
-// export { pkcs_9_at_randomNonce } from "../PKCS-9/pkcs-9-at-randomNonce.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import {
+    type RandomNonce,
+    _decode_RandomNonce,
+    _encode_RandomNonce,
+} from "../PKCS-9/RandomNonce.ta.mjs";
+import { pkcs_9_at_randomNonce } from "../PKCS-9/pkcs-9-at-randomNonce.va.mjs";
+import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
 
 /**
  * @summary randomNonce
@@ -22,10 +25,27 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<RandomNonce>}
+ * @implements {ATTRIBUTE<RandomNonce>}
  */
 export
-const randomNonce: ATTRIBUTE = undefined;
+const randomNonce: ATTRIBUTE<RandomNonce> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_RandomNonce,
+    },
+    encoderFor: {
+        "&Type": _encode_RandomNonce,
+    },
+    "&equality-match": octetStringMatch /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
+    "&id": pkcs_9_at_randomNonce /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

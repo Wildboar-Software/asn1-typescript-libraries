@@ -1,9 +1,18 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_qldapAdmin } from "../LdapQmailNew/id-oc-qldapAdmin.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_qldapAdmin } from "../LdapQmailNew/id-oc-qldapAdmin.va.mjs";
+import { qlaDomainList } from "./qlaDomainList.oa.mjs";
+import { qlaMailHostList } from "./qlaMailHostList.oa.mjs";
+import { qlaMailMStorePrefix } from "./qlaMailMStorePrefix.oa.mjs";
+import { qlaMailQuotaCount } from "./qlaMailQuotaCount.oa.mjs";
+import { qlaMailQuotaSize } from "./qlaMailQuotaSize.oa.mjs";
+import { qlaMailSizeMax } from "./qlaMailSizeMax.oa.mjs";
+import { qlaQmailGid } from "./qlaQmailGid.oa.mjs";
+import { qlaQmailUid } from "./qlaQmailUid.oa.mjs";
+import { qlaUidPrefix } from "./qlaUidPrefix.oa.mjs";
+import { qladnmanager } from "./qladnmanager.oa.mjs";
 
 /**
  * @summary qldapAdmin
@@ -35,6 +44,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const qldapAdmin: OBJECT_CLASS = undefined;
+const qldapAdmin: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [qladnmanager, qlaDomainList, qlaMailMStorePrefix, qlaMailHostList] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [qlaUidPrefix, qlaQmailUid, qlaQmailGid, qlaMailQuotaSize, qlaMailQuotaCount, qlaMailSizeMax] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["qldapAdmin"],
+    "&ldapDesc": "QMail-LDAP Subtree Admin" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_qldapAdmin /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

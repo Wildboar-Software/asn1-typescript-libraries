@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { id_lsx_directoryString } from "../SelectedAttributeTypes/id-lsx-directoryString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type UnboundedDirectoryString,
+    _decode_UnboundedDirectoryString,
+    _encode_UnboundedDirectoryString,
+} from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { id_lsx_directoryString } from "../SelectedAttributeTypes/id-lsx-directoryString.va.mjs";
 
 /**
  * @summary directoryString
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<UnboundedDirectoryString>}
+ * @implements {SYNTAX_NAME<UnboundedDirectoryString>}
  */
 export
-const directoryString: SYNTAX_NAME = undefined;
+const directoryString: SYNTAX_NAME<UnboundedDirectoryString> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_UnboundedDirectoryString,
+    },
+    encoderFor: {
+        "&Type": _encode_UnboundedDirectoryString,
+    },
+    "&ldapDesc": "Directory String" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_directoryString /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

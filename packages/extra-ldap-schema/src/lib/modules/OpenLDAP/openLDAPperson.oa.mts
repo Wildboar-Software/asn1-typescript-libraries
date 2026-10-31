@@ -1,8 +1,15 @@
 /* eslint-disable */
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
+import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
-
+import { structural } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { pilotPerson } from "../LdapSchema2ldifCosine/pilotPerson.oa.mjs";
+import { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 
 /**
  * @summary openLDAPperson
@@ -27,6 +34,19 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const openLDAPperson: OBJECT_CLASS = undefined;
+const openLDAPperson: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [pilotPerson, inetOrgPerson] /* OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [uid, commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [givenName, labeledURI, organizationName] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["OpenLDAPperson"],
+    "&ldapDesc": "OpenLDAP Person" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        5,
+    ], id_openldap_oc) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

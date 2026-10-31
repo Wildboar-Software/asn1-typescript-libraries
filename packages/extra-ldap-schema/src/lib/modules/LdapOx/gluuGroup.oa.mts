@@ -1,10 +1,24 @@
 /* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_gluuGroup } from "../LdapOx/id-oc-gluuGroup.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_gluuGroup } from "../LdapOx/id-oc-gluuGroup.va.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { gluuGroupType } from "./gluuGroupType.oa.mjs";
+import { gluuGroupVisibility } from "./gluuGroupVisibility.oa.mjs";
+import { gluuStatus } from "./gluuStatus.oa.mjs";
+import { iname } from "./iname.oa.mjs";
+import { inum } from "./inum.oa.mjs";
+import { oxTrustMetaCreated } from "./oxTrustMetaCreated.oa.mjs";
+import { oxTrustMetaLastModified } from "./oxTrustMetaLastModified.oa.mjs";
+import { oxTrustMetaLocation } from "./oxTrustMetaLocation.oa.mjs";
+import { oxTrustMetaVersion } from "./oxTrustMetaVersion.oa.mjs";
 
 /**
  * @summary gluuGroup
@@ -41,6 +55,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gluuGroup: OBJECT_CLASS = undefined;
+const gluuGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [countryName, description, displayName, gluuGroupType, gluuGroupVisibility, gluuStatus, iname, inum, member, organizationName, owner, seeAlso, oxTrustMetaCreated, oxTrustMetaLastModified, oxTrustMetaLocation, oxTrustMetaVersion] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["gluuGroup"],
+    "&id": id_oc_gluuGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

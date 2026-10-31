@@ -1,9 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_sunManagedOrganization } from "../Ldapmigration70sunSchema2/id-oc-sunManagedOrganization.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { inetDomainStatus } from "../Ldapmigration20subscriber/inetDomainStatus.oa.mjs";
+import { id_oc_sunManagedOrganization } from "../Ldapmigration70sunSchema2/id-oc-sunManagedOrganization.va.mjs";
+import { associatedDomain } from "../MIXERAddressMapping/associatedDomain.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { sunAdditionalTemplates } from "./sunAdditionalTemplates.oa.mjs";
+import { sunOverrideTemplates } from "./sunOverrideTemplates.oa.mjs";
+import { sunPreferredDomain } from "./sunPreferredDomain.oa.mjs";
+import { sunPreferredOrganization } from "./sunPreferredOrganization.oa.mjs";
+import { sunRegisteredServiceName } from "./sunRegisteredServiceName.oa.mjs";
 
 /**
  * @summary sunManagedOrganization
@@ -33,6 +40,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const sunManagedOrganization: OBJECT_CLASS = undefined;
+const sunManagedOrganization: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [inetDomainStatus, sunPreferredDomain, associatedDomain, sunPreferredOrganization, sunAdditionalTemplates, sunOverrideTemplates, sunRegisteredServiceName, organizationName] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["sunManagedOrganization"],
+    "&ldapDesc": "Auxiliary class which must be present in an organization entry" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_sunManagedOrganization /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

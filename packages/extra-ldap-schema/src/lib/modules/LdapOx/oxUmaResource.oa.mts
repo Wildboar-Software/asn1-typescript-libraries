@@ -1,10 +1,24 @@
 /* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_oxUmaResource } from "../LdapOx/id-oc-oxUmaResource.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_oxUmaResource } from "../LdapOx/id-oc-oxUmaResource.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { del } from "./del.oa.mjs";
+import { exp } from "./exp.oa.mjs";
+import { iat } from "./iat.oa.mjs";
+import { inum } from "./inum.oa.mjs";
+import { oxAssociatedClient } from "./oxAssociatedClient.oa.mjs";
+import { oxAuthUmaScope } from "./oxAuthUmaScope.oa.mjs";
+import { oxFaviconImage } from "./oxFaviconImage.oa.mjs";
+import { oxGroup } from "./oxGroup.oa.mjs";
+import { oxId } from "./oxId.oa.mjs";
+import { oxResource } from "./oxResource.oa.mjs";
+import { oxRevision } from "./oxRevision.oa.mjs";
+import { oxScopeExpression } from "./oxScopeExpression.oa.mjs";
+import { oxType } from "./oxType.oa.mjs";
 
 /**
  * @summary oxUmaResource
@@ -41,6 +55,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oxUmaResource: OBJECT_CLASS = undefined;
+const oxUmaResource: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [displayName, inum, owner, oxAssociatedClient, oxAuthUmaScope, oxFaviconImage, oxGroup, oxId, oxResource, oxRevision, oxType, oxScopeExpression, iat, exp, del, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oxUmaResource"],
+    "&id": id_oc_oxUmaResource /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,9 +1,23 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_solarisNamingProfile } from "../LdapNisclient/id-oc-solarisNamingProfile.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_solarisNamingProfile } from "../LdapNisclient/id-oc-solarisNamingProfile.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { solarisAuthMethod } from "./solarisAuthMethod.oa.mjs";
+import { solarisBindDN } from "./solarisBindDN.oa.mjs";
+import { solarisBindPassword } from "./solarisBindPassword.oa.mjs";
+import { solarisCacheTTL } from "./solarisCacheTTL.oa.mjs";
+import { solarisCertificatePassword } from "./solarisCertificatePassword.oa.mjs";
+import { solarisCertificatePath } from "./solarisCertificatePath.oa.mjs";
+import { solarisDataSearchDN } from "./solarisDataSearchDN.oa.mjs";
+import { solarisLDAPServers } from "./solarisLDAPServers.oa.mjs";
+import { solarisPreferredServer } from "./solarisPreferredServer.oa.mjs";
+import { solarisPreferredServerOnly } from "./solarisPreferredServerOnly.oa.mjs";
+import { solarisSearchBaseDN } from "./solarisSearchBaseDN.oa.mjs";
+import { solarisSearchReferral } from "./solarisSearchReferral.oa.mjs";
+import { solarisSearchScope } from "./solarisSearchScope.oa.mjs";
+import { solarisSearchTimeLimit } from "./solarisSearchTimeLimit.oa.mjs";
+import { solarisTransportSecurity } from "./solarisTransportSecurity.oa.mjs";
 
 /**
  * @summary solarisNamingProfile
@@ -39,6 +53,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const solarisNamingProfile: OBJECT_CLASS = undefined;
+const solarisNamingProfile: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, solarisLDAPServers, solarisSearchBaseDN] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [solarisAuthMethod, solarisBindDN, solarisBindPassword, solarisCacheTTL, solarisCertificatePassword, solarisCertificatePath, solarisDataSearchDN, solarisPreferredServer, solarisPreferredServerOnly, solarisSearchReferral, solarisSearchScope, solarisSearchTimeLimit, solarisTransportSecurity] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["SolarisNamingProfile"],
+    "&id": id_oc_solarisNamingProfile /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

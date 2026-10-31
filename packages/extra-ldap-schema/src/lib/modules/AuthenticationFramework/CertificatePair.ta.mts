@@ -2,10 +2,11 @@
 import {
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
 // export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
 
 
@@ -52,6 +53,9 @@ class CertificatePair {
         issuedByThisCA: OPTIONAL<Certificate>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
+        if (issuedToThisCA === undefined && issuedByThisCA === undefined) {
+            throw new ASN1ConstructionError("CertificatePair requires issuedToThisCA or issuedByThisCA");
+        }
         this.issuedToThisCA = issuedToThisCA;
         this.issuedByThisCA = issuedByThisCA;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;

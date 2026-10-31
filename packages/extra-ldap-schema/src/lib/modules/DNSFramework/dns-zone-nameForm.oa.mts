@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { dns_zone } from "../DNSFramework/dns-zone.oa.mjs";
-// export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
-// export { id_nf_domainNameForm } from "../DNSFramework/id-nf-domainNameForm.va.mjs";
+import { dns_zone } from "../DNSFramework/dns-zone.oa.mjs";
+import { id_nf_domainNameForm } from "../DNSFramework/id-nf-domainNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 
 /**
  * @summary dns_zone_nameForm
@@ -25,6 +24,14 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const dns_zone_nameForm: NAME_FORM = undefined;
+const dns_zone_nameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": dns_zone /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [dc] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["dns-zone-nameForm"],
+    "&id": id_nf_domainNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

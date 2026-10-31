@@ -1,7 +1,11 @@
 /* eslint-disable */
-// export { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
+import {
+    type INTEGER,
+    ObjectIdentifier as _OID,
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
+import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 
 /**
  * @summary integerBitAndMatch
@@ -19,10 +23,30 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<INTEGER>}
+ * @implements {MATCHING_RULE<INTEGER>}
  */
 export
-const integerBitAndMatch: MATCHING_RULE = undefined;
+const integerBitAndMatch: MATCHING_RULE<INTEGER> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": $._decodeInteger,
+    },
+    encoderFor: {
+        "&AssertionType": $._encodeInteger,
+    },
+    "&ldapSyntax": integer["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["integerBitAndMatch"],
+    "&id": _OID.fromParts([
+        1,
+        2,
+        840,
+        113556,
+        1,
+        4,
+        803,
+    ]) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

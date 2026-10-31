@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_oxProxAccessToken } from "../LdapOx/id-oc-oxProxAccessToken.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_oxProxAccessToken } from "../LdapOx/id-oc-oxProxAccessToken.va.mjs";
+import { del } from "./del.oa.mjs";
+import { exp } from "./exp.oa.mjs";
+import { iat } from "./iat.oa.mjs";
+import { oxProxyAccessToken } from "./oxProxyAccessToken.oa.mjs";
+import { oxProxyClientId } from "./oxProxyClientId.oa.mjs";
 
 /**
  * @summary oxProxAccessToken
@@ -30,6 +33,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oxProxAccessToken: OBJECT_CLASS = undefined;
+const oxProxAccessToken: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [iat, exp, del, oxProxyAccessToken, oxProxyClientId] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oxProxAccessToken"],
+    "&id": id_oc_oxProxAccessToken /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

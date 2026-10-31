@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
-
+import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
+import { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
+import { gLUE2BenchmarkComputingManagerForeignKey } from "./gLUE2BenchmarkComputingManagerForeignKey.oa.mjs";
+import { gLUE2BenchmarkExecutionEnvironmentForeignKey } from "./gLUE2BenchmarkExecutionEnvironmentForeignKey.oa.mjs";
+import { gLUE2BenchmarkID } from "./gLUE2BenchmarkID.oa.mjs";
+import { gLUE2BenchmarkType } from "./gLUE2BenchmarkType.oa.mjs";
+import { gLUE2BenchmarkValue } from "./gLUE2BenchmarkValue.oa.mjs";
 
 /**
  * @summary gLUE2Benchmark
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2Benchmark: OBJECT_CLASS = undefined;
+const gLUE2Benchmark: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Entity] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [gLUE2BenchmarkID, gLUE2BenchmarkType, gLUE2BenchmarkValue] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gLUE2BenchmarkExecutionEnvironmentForeignKey, gLUE2BenchmarkComputingManagerForeignKey] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2Benchmark"],
+    "&ldapDesc": "Benchmark information about an entity providing computing capacity" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2Benchmark /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

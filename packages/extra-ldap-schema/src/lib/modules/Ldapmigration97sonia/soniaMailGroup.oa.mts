@@ -1,10 +1,10 @@
 /* eslint-disable */
+import { mailGroup } from "../InetMailSchema/mailGroup.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { mailGroup } from "../InetMailSchema/mailGroup.oa.mjs";
-// export { soniaMailGroupUid } from "../Ldapmigration97sonia/soniaMailGroupUid.oa.mjs";
-// export { id_oc_soniaMailGroup } from "../Ldapmigration97sonia/id-oc-soniaMailGroup.va.mjs";
-
+import { id_oc_soniaMailGroup } from "../Ldapmigration97sonia/id-oc-soniaMailGroup.va.mjs";
+import { soniaMailGroupUid } from "../Ldapmigration97sonia/soniaMailGroupUid.oa.mjs";
+import { soniaMailGroupStatus } from "./soniaMailGroupStatus.oa.mjs";
+import { soniaMailGroupSubscribeType } from "./soniaMailGroupSubscribeType.oa.mjs";
 
 /**
  * @summary soniaMailGroup
@@ -27,6 +27,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const soniaMailGroup: OBJECT_CLASS = undefined;
+const soniaMailGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [mailGroup] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [soniaMailGroupUid] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [soniaMailGroupStatus, soniaMailGroupSubscribeType] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["soniaMailGroup"],
+    "&id": id_oc_soniaMailGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

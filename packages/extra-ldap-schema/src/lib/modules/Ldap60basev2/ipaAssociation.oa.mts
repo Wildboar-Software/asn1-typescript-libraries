@@ -1,9 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_ipaAssociation } from "../Ldap60basev2/id-oc-ipaAssociation.va.mjs";
-
+import { abstract } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_ipaAssociation } from "../Ldap60basev2/id-oc-ipaAssociation.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { hostCategory } from "./hostCategory.oa.mjs";
+import { ipaEnabledFlag } from "./ipaEnabledFlag.oa.mjs";
+import { ipaUniqueID } from "./ipaUniqueID.oa.mjs";
+import { memberHost } from "./memberHost.oa.mjs";
+import { memberUser } from "./memberUser.oa.mjs";
+import { userCategory } from "./userCategory.oa.mjs";
 
 /**
  * @summary ipaAssociation
@@ -32,6 +39,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ipaAssociation: OBJECT_CLASS = undefined;
+const ipaAssociation: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": abstract /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ipaUniqueID, commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [memberUser, userCategory, memberHost, hostCategory, ipaEnabledFlag, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ipaAssociation"],
+    "&id": id_oc_ipaAssociation /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

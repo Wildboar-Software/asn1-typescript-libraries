@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type DNSClass = INTEGER;
 
-export
-const _decode_DNSClass: $.ASN1Decoder<DNSClass> = $._decodeInteger;
+export function _decode_DNSClass (el: _Element): DNSClass {
+    const value = $._decodeInteger(el);
+    if (value < 0 || value > 65535) {
+        throw new ASN1OverflowError("DNSClass violates INTEGER range");
+    }
+    return value;
+}
 
 export
 const _encode_DNSClass: $.ASN1Encoder<DNSClass> = $._encodeInteger;

@@ -1,10 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { schacExpiryDate } from "../LdapSchac/schacExpiryDate.oa.mjs";
-// export { id_oc_schacEntryMetadata } from "../LdapSchac/id-oc-schacEntryMetadata.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_schacEntryMetadata } from "../LdapSchac/id-oc-schacEntryMetadata.va.mjs";
+import { schacExpiryDate } from "../LdapSchac/schacExpiryDate.oa.mjs";
 
 /**
  * @summary schacEntryMetadata
@@ -27,6 +26,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const schacEntryMetadata: OBJECT_CLASS = undefined;
+const schacEntryMetadata: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [schacExpiryDate] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["schacEntryMetadata"],
+    "&ldapDesc": "Used to contain information about the entry itself, often its status, birth, and death" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_schacEntryMetadata /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

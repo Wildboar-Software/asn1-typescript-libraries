@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { person } from "../SelectedObjectClasses/person.oa.mjs";
-// export { id_oc_organizationalPerson } from "../SelectedObjectClasses/id-oc-organizationalPerson.va.mjs";
-
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { title } from "../SelectedAttributeTypes/title.oa.mjs";
+import { id_oc_organizationalPerson } from "../SelectedObjectClasses/id-oc-organizationalPerson.va.mjs";
+import { person } from "../SelectedObjectClasses/person.oa.mjs";
+import { LocaleAttributeSet } from "./LocaleAttributeSet.osa.mjs";
+import { PostalAttributeSet } from "./PostalAttributeSet.osa.mjs";
+import { TelecommunicationAttributeSet } from "./TelecommunicationAttributeSet.osa.mjs";
 
 /**
  * @summary organizationalPerson
@@ -28,6 +31,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const organizationalPerson: OBJECT_CLASS = undefined;
+const organizationalPerson: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [person] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [...LocaleAttributeSet, ...PostalAttributeSet, ...TelecommunicationAttributeSet, organizationalUnitName, title] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["organizationalPerson"],
+    "&id": id_oc_organizationalPerson /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

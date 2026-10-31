@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type SequenceNumber = INTEGER;
 
-export
-const _decode_SequenceNumber: $.ASN1Decoder<SequenceNumber> = $._decodeInteger;
+export function _decode_SequenceNumber (el: _Element): SequenceNumber {
+    const value = $._decodeInteger(el);
+    if (value < 1) {
+        throw new ASN1OverflowError("SequenceNumber violates INTEGER range");
+    }
+    return value;
+}
 
 export
 const _encode_SequenceNumber: $.ASN1Encoder<SequenceNumber> = $._encodeInteger;

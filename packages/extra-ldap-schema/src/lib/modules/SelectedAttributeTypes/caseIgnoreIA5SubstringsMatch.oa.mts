@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-// export { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.mjs";
-// export { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va.mjs";
-
+import {
+    type SubstringAssertion,
+    _decode_SubstringAssertion,
+    _encode_SubstringAssertion,
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import { id_lmr_caseIgnoreIA5Match } from "../SelectedAttributeTypes/id-lmr-caseIgnoreIA5Match.va.mjs";
+import { substringAssertion } from "../SelectedAttributeTypes/substringAssertion.oa.mjs";
 
 /**
  * @summary caseIgnoreIA5SubstringsMatch
@@ -20,10 +23,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<SubstringAssertion>}
+ * @implements {MATCHING_RULE<SubstringAssertion>}
  */
 export
-const caseIgnoreIA5SubstringsMatch: MATCHING_RULE = undefined;
+const caseIgnoreIA5SubstringsMatch: MATCHING_RULE<SubstringAssertion> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_SubstringAssertion,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_SubstringAssertion,
+    },
+    "&ldapSyntax": substringAssertion["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["caseIgnoreIA5SubstringsMatch"],
+    "&id": id_lmr_caseIgnoreIA5Match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

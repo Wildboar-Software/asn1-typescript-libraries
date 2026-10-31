@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_mSMQMigratedUser } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQMigratedUser.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_mSMQMigratedUser } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQMigratedUser.va.mjs";
+import { mSMQDigests } from "../MSUser/mSMQDigests.oa.mjs";
+import { mSMQDigestsMig } from "../MSUser/mSMQDigestsMig.oa.mjs";
+import { mSMQSignCertificates } from "../MSUser/mSMQSignCertificates.oa.mjs";
+import { mSMQSignCertificatesMig } from "../MSUser/mSMQSignCertificatesMig.oa.mjs";
+import { mSMQUserSid } from "../MSUser/mSMQUserSid.oa.mjs";
+import { objectSid } from "../MSUser/objectSid.oa.mjs";
 
 /**
  * @summary mSMQMigratedUser
@@ -29,6 +33,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const mSMQMigratedUser: OBJECT_CLASS = undefined;
+const mSMQMigratedUser: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [objectSid, mSMQSignCertificates, mSMQDigests, mSMQDigestsMig, mSMQSignCertificatesMig, mSMQUserSid] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["mSMQMigratedUser"],
+    "&id": id_oc_mSMQMigratedUser /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

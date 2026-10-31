@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
-// export { id_oc_nTFRSSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSSettings.va.mjs";
-
+import { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
+import { id_oc_nTFRSSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSSettings.va.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
 
 /**
  * @summary nTFRSSettings
@@ -25,6 +25,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nTFRSSettings: OBJECT_CLASS = undefined;
+const nTFRSSettings: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [applicationSettings] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [fRSExtensions, managedBy] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nTFRSSettings"],
+    "&id": id_oc_nTFRSSettings /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

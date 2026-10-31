@@ -1,9 +1,21 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_goImapServer } from "../LdapGosaCoreGoserver/id-oc-goImapServer.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_goImapServer } from "../LdapGosaCoreGoserver/id-oc-goImapServer.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { cyrusImap } from "./cyrusImap.oa.mjs";
+import { cyrusImapSSL } from "./cyrusImapSSL.oa.mjs";
+import { cyrusPop3 } from "./cyrusPop3.oa.mjs";
+import { cyrusPop3SSL } from "./cyrusPop3SSL.oa.mjs";
+import { goImapAdmin } from "./goImapAdmin.oa.mjs";
+import { goImapConnect } from "./goImapConnect.oa.mjs";
+import { goImapName } from "./goImapName.oa.mjs";
+import { goImapPassword } from "./goImapPassword.oa.mjs";
+import { goImapServerStatus } from "./goImapServerStatus.oa.mjs";
+import { goImapSievePort } from "./goImapSievePort.oa.mjs";
+import { goImapSieveServer } from "./goImapSieveServer.oa.mjs";
 
 /**
  * @summary goImapServer
@@ -38,6 +50,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const goImapServer: OBJECT_CLASS = undefined;
+const goImapServer: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, goImapName, goImapConnect, goImapAdmin, goImapPassword] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [goImapSieveServer, goImapSievePort, description, goImapServerStatus, cyrusImap, cyrusImapSSL, cyrusPop3, cyrusPop3SSL] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["goImapServer"],
+    "&ldapDesc": "IMAP server description (v2.7)" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_goImapServer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

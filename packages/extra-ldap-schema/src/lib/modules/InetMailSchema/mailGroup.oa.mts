@@ -1,8 +1,12 @@
 /* eslint-disable */
+import { id_oc_mailGroup } from "../InetMailSchema/id-oc-mailGroup.va.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { id_oc_mailGroup } from "../InetMailSchema/id-oc-mailGroup.va.mjs";
-
+import { structural } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
+import { mailRoutingAddress } from "./mailRoutingAddress.oa.mjs";
 
 /**
  * @summary mailGroup
@@ -26,6 +30,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const mailGroup: OBJECT_CLASS = undefined;
+const mailGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&kind": structural /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, mail] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [mailRoutingAddress, member, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["mailGroup"],
+    "&ldapDesc": "E-Mail Group" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_mailGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

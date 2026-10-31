@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { NameAndOptionalUID, _decode_NameAndOptionalUID, _encode_NameAndOptionalUID } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-// export { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa.mjs";
-// export { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va.mjs";
-
+import {
+    _decode_NameAndOptionalUID,
+    _encode_NameAndOptionalUID,
+    NameAndOptionalUID,
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
+import { id_mr_uniqueMemberMatch } from "../SelectedAttributeTypes/id-mr-uniqueMemberMatch.va.mjs";
+import { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa.mjs";
 
 /**
  * @summary uniqueMemberMatch
@@ -20,10 +23,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<NameAndOptionalUID>}
+ * @implements {MATCHING_RULE<NameAndOptionalUID>}
  */
 export
-const uniqueMemberMatch: MATCHING_RULE = undefined;
+const uniqueMemberMatch: MATCHING_RULE<NameAndOptionalUID> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": _decode_NameAndOptionalUID,
+    },
+    encoderFor: {
+        "&AssertionType": _encode_NameAndOptionalUID,
+    },
+    "&ldapSyntax": nameAndOptionalUID["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["uniqueMemberMatch"],
+    "&id": id_mr_uniqueMemberMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

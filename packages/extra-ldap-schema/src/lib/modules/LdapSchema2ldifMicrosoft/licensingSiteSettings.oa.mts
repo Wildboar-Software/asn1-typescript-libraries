@@ -1,10 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
-// export { siteServer } from "../MSUser/siteServer.oa.mjs";
-// export { id_oc_licensingSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-licensingSiteSettings.va.mjs";
-
+import { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
+import { id_oc_licensingSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-licensingSiteSettings.va.mjs";
+import { siteServer } from "../MSUser/siteServer.oa.mjs";
 
 /**
  * @summary licensingSiteSettings
@@ -25,6 +23,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const licensingSiteSettings: OBJECT_CLASS = undefined;
+const licensingSiteSettings: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [applicationSiteSettings] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [siteServer] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["licensingSiteSettings"],
+    "&id": id_oc_licensingSiteSettings /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

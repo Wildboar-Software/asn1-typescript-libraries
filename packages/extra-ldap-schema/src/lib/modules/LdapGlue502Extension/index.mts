@@ -1,0 +1,13 @@
+/**
+ * ASN.1 module `LdapGlue502Extension`.
+ */
+export * from "./gLUE2Extension.oa.mjs";
+export * from "./gLUE2ExtensionEntityForeignKey.oa.mjs";
+export * from "./gLUE2ExtensionKey.oa.mjs";
+export * from "./gLUE2ExtensionLocalID.oa.mjs";
+export * from "./gLUE2ExtensionValue.oa.mjs";
+export * from "./id-at-gLUE2ExtensionEntityForeignKey.va.mjs";
+export * from "./id-at-gLUE2ExtensionKey.va.mjs";
+export * from "./id-at-gLUE2ExtensionLocalID.va.mjs";
+export * from "./id-at-gLUE2ExtensionValue.va.mjs";
+export * from "./id-oc-gLUE2Extension.va.mjs";

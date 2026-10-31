@@ -1,10 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { ttl } from "../LdapCommon389/ttl.oa.mjs";
-// export { id_oc_cacheObject } from "../LdapCommon389/id-oc-cacheObject.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_cacheObject } from "../LdapCommon389/id-oc-cacheObject.va.mjs";
+import { ttl } from "../LdapCommon389/ttl.oa.mjs";
 
 /**
  * @summary cacheObject
@@ -26,6 +24,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const cacheObject: OBJECT_CLASS = undefined;
+const cacheObject: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ttl] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["cacheObject"],
+    "&ldapDesc": "object that contains the TTL (time to live) attribute type" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_cacheObject /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

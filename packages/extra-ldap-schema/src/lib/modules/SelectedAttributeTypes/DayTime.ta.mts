@@ -3,7 +3,8 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
-    type OPTIONAL
+    type OPTIONAL,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -58,6 +59,15 @@ class DayTime {
         second: OPTIONAL<INTEGER>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
+        if (hour < 0 || hour > 23) {
+            throw new ASN1OverflowError("DayTime.hour violates INTEGER range");
+        }
+        if (minute !== undefined && (minute < 0 || minute > 59)) {
+            throw new ASN1OverflowError("DayTime.minute violates INTEGER range");
+        }
+        if (second !== undefined && (second < 0 || second > 59)) {
+            throw new ASN1OverflowError("DayTime.second violates INTEGER range");
+        }
         this.hour = hour;
         this.minute = minute;
         this.second = second;

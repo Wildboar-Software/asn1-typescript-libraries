@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_puppetClient } from "../LdapPuppet/id-oc-puppetClient.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_puppetClient } from "../LdapPuppet/id-oc-puppetClient.va.mjs";
+import { environment } from "./environment.oa.mjs";
+import { parentNode } from "./parentNode.oa.mjs";
+import { puppetClass } from "./puppetClass.oa.mjs";
+import { puppetVar } from "./puppetVar.oa.mjs";
 
 /**
  * @summary puppetClient
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const puppetClient: OBJECT_CLASS = undefined;
+const puppetClient: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [puppetClass, parentNode, environment, puppetVar] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["puppetClient"],
+    "&ldapDesc": "Puppet Client objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_puppetClient /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

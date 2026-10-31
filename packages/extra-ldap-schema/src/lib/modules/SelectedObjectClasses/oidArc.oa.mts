@@ -1,10 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { alias } from "../InformationFramework/alias.oa.mjs";
-// export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-// export { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va.mjs";
-
+import { alias } from "../InformationFramework/alias.oa.mjs";
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
+import { id_oidArc } from "../SelectedObjectClasses/id-oidArc.va.mjs";
 
 /**
  * @summary oidArc
@@ -25,6 +23,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const oidArc: OBJECT_CLASS = undefined;
+const oidArc: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [alias] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [oidC] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["oidArc"],
+    "&id": id_oidArc /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

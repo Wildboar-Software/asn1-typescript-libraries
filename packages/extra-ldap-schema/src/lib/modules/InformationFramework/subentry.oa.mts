@@ -1,9 +1,10 @@
 /* eslint-disable */
-import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va.mjs";
-
+import { structural } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { id_sc_subentry } from "../InformationFramework/id-sc-subentry.va.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { type OBJECT_CLASS } from "./OBJECT-CLASS.oca.mjs";
+import { subtreeSpecification } from "./subtreeSpecification.oa.mjs";
 
 /**
  * @summary subentry
@@ -26,6 +27,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const subentry: OBJECT_CLASS = undefined;
+const subentry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, subtreeSpecification] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["subentry"],
+    "&id": id_sc_subentry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

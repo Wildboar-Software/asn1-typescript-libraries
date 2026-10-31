@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE} from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { chiefExecutiveOfficerDN } from "../OrganizationAndGroupSchema/chiefExecutiveOfficerDN.oa.mjs";
 // export { chiefExecutiveOfficerDN } from "../OrganizationAndGroupSchema/chiefExecutiveOfficerDN.oa.mjs";

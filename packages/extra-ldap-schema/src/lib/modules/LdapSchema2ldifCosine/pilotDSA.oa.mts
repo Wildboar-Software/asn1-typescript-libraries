@@ -1,10 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { dSA } from "../SelectedObjectClasses/dSA.oa.mjs";
-// export { dSAQuality } from "../LdapSchema2ldifCosine/dSAQuality.oa.mjs";
-// export { id_oc_pilotDSA } from "../LdapSchema2ldifCosine/id-oc-pilotDSA.va.mjs";
-
+import { dSAQuality } from "../LdapSchema2ldifCosine/dSAQuality.oa.mjs";
+import { id_oc_pilotDSA } from "../LdapSchema2ldifCosine/id-oc-pilotDSA.va.mjs";
+import { dSA } from "../SelectedObjectClasses/dSA.oa.mjs";
 
 /**
  * @summary pilotDSA
@@ -25,6 +23,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const pilotDSA: OBJECT_CLASS = undefined;
+const pilotDSA: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [dSA] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [dSAQuality] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["pilotDSA"],
+    "&id": id_oc_pilotDSA /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

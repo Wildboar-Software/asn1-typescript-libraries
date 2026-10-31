@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { zimbraDataSource } from "../LdapZimbra/zimbraDataSource.oa.mjs";
-// export { id_oc_zimbraImapDataSource } from "../LdapZimbra/id-oc-zimbraImapDataSource.va.mjs";
-
+import { id_oc_zimbraImapDataSource } from "../LdapZimbra/id-oc-zimbraImapDataSource.va.mjs";
+import { zimbraDataSource } from "../LdapZimbra/zimbraDataSource.oa.mjs";
+import { zimbraDataSourceAuthMechanism } from "./zimbraDataSourceAuthMechanism.oa.mjs";
+import { zimbraDataSourceAuthorizationId } from "./zimbraDataSourceAuthorizationId.oa.mjs";
+import { zimbraDataSourceConnectionType } from "./zimbraDataSourceConnectionType.oa.mjs";
+import { zimbraDataSourceHost } from "./zimbraDataSourceHost.oa.mjs";
+import { zimbraDataSourcePort } from "./zimbraDataSourcePort.oa.mjs";
 
 /**
  * @summary zimbraImapDataSource
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const zimbraImapDataSource: OBJECT_CLASS = undefined;
+const zimbraImapDataSource: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [zimbraDataSource] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [zimbraDataSourceConnectionType, zimbraDataSourceHost, zimbraDataSourcePort] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [zimbraDataSourceAuthMechanism, zimbraDataSourceAuthorizationId] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["zimbraImapDataSource"],
+    "&ldapDesc": "IMAP data source object" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zimbraImapDataSource /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

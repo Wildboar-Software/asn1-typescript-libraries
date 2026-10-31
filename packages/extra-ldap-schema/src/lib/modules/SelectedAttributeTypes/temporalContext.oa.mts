@@ -1,9 +1,16 @@
 /* eslint-disable */
-// export { TimeSpecification, _decode_TimeSpecification, _encode_TimeSpecification } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-// export { TimeAssertion, _decode_TimeAssertion, _encode_TimeAssertion } from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";
-// export { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";
 import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
+import {
+    type TimeAssertion,
+    _decode_TimeAssertion,
+    _encode_TimeAssertion,
+} from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";
+import {
+    _decode_TimeSpecification,
+    _encode_TimeSpecification,
+    TimeSpecification,
+} from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
+import { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";
 
 /**
  * @summary temporalContext
@@ -19,10 +26,24 @@ import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
  * ```
  * 
  * @constant
- * @type {CONTEXT}
- * @implements {CONTEXT}
+ * @type {CONTEXT<TimeSpecification, TimeAssertion>}
+ * @implements {CONTEXT<TimeSpecification, TimeAssertion>}
  */
 export
-const temporalContext: CONTEXT = undefined;
+const temporalContext: CONTEXT<TimeSpecification, TimeAssertion> = {
+    class: "CONTEXT",
+    decoderFor: {
+        "&Type": _decode_TimeSpecification,
+        "&Assertion": _decode_TimeAssertion,
+    },
+    encoderFor: {
+        "&Type": _encode_TimeSpecification,
+        "&Assertion": _encode_TimeAssertion,
+    },
+    "&id": id_avc_temporal /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&absentMatch": true /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

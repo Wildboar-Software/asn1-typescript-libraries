@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type OCTET_STRING
+    type OCTET_STRING,
+    type ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type RandomNonce = OCTET_STRING; // OctetStringType
 
-export
-const _decode_RandomNonce: $.ASN1Decoder<RandomNonce> = $._decodeOctetString;
+export function _decode_RandomNonce (el: _Element): RandomNonce {
+    const value = $._decodeOctetString(el);
+    if (value.length < 4) {
+        throw new ASN1SizeError("RandomNonce violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_RandomNonce: $.ASN1Encoder<RandomNonce> = $._encodeOctetString;

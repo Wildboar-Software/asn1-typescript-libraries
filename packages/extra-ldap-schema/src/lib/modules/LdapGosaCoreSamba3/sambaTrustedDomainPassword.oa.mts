@@ -1,10 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { sambaPreviousClearTextPassword } from "../LdapGosaCoreSamba3/sambaPreviousClearTextPassword.oa.mjs";
-// export { id_oc_sambaTrustedDomainPassword } from "../LdapGosaCoreSamba3/id-oc-sambaTrustedDomainPassword.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_sambaTrustedDomainPassword } from "../LdapGosaCoreSamba3/id-oc-sambaTrustedDomainPassword.va.mjs";
+import { sambaPreviousClearTextPassword } from "../LdapGosaCoreSamba3/sambaPreviousClearTextPassword.oa.mjs";
+import { sambaDomainName } from "../SambaV3Schema/sambaDomainName.oa.mjs";
+import { sambaPwdLastSet } from "../SambaV3Schema/sambaPwdLastSet.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
+import { sambaClearTextPassword } from "./sambaClearTextPassword.oa.mjs";
 
 /**
  * @summary sambaTrustedDomainPassword
@@ -30,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const sambaTrustedDomainPassword: OBJECT_CLASS = undefined;
+const sambaTrustedDomainPassword: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [sambaDomainName, sambaSID, sambaClearTextPassword, sambaPwdLastSet] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [sambaPreviousClearTextPassword] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["sambaTrustedDomainPassword"],
+    "&ldapDesc": "Samba Trusted Domain Password" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_sambaTrustedDomainPassword /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

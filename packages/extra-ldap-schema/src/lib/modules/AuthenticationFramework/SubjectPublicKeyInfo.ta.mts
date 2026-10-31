@@ -7,7 +7,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 // export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-import { PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
+import { type PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
 // export { PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
 
 

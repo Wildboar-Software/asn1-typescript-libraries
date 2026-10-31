@@ -1,10 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { nsComplexRoleDefinition } from "../LdapCommon389/nsComplexRoleDefinition.oa.mjs";
-// export { nsRoleDN } from "../LdapCommon389/nsRoleDN.oa.mjs";
-// export { id_oc_nsNestedRoleDefinition } from "../LdapCommon389/id-oc-nsNestedRoleDefinition.va.mjs";
-
+import { id_oc_nsNestedRoleDefinition } from "../LdapCommon389/id-oc-nsNestedRoleDefinition.va.mjs";
+import { nsComplexRoleDefinition } from "../LdapCommon389/nsComplexRoleDefinition.oa.mjs";
+import { nsRoleDN } from "../LdapCommon389/nsRoleDN.oa.mjs";
 
 /**
  * @summary nsNestedRoleDefinition
@@ -26,6 +24,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nsNestedRoleDefinition: OBJECT_CLASS = undefined;
+const nsNestedRoleDefinition: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [nsComplexRoleDefinition] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [nsRoleDN] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nsNestedRoleDefinition"],
+    "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nsNestedRoleDefinition /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

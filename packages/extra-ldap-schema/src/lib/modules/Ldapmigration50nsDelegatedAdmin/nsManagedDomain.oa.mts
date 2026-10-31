@@ -1,9 +1,19 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nsManagedDomain } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedDomain.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nsManagedDomain } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedDomain.va.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { nsDefaultMaxDeptSize } from "./nsDefaultMaxDeptSize.oa.mjs";
+import { nsMaxDepts } from "./nsMaxDepts.oa.mjs";
+import { nsMaxDomains } from "./nsMaxDomains.oa.mjs";
+import { nsMaxMailLists } from "./nsMaxMailLists.oa.mjs";
+import { nsMaxUsers } from "./nsMaxUsers.oa.mjs";
+import { nsNumDepts } from "./nsNumDepts.oa.mjs";
+import { nsNumDomains } from "./nsNumDomains.oa.mjs";
+import { nsNumMailLists } from "./nsNumMailLists.oa.mjs";
+import { nsNumUsers } from "./nsNumUsers.oa.mjs";
+import { nsdaModifiableBy } from "./nsdaModifiableBy.oa.mjs";
 
 /**
  * @summary nsManagedDomain
@@ -36,6 +46,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nsManagedDomain: OBJECT_CLASS = undefined;
+const nsManagedDomain: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [nsNumUsers, nsMaxUsers, nsNumDepts, nsMaxDepts, nsNumMailLists, nsMaxMailLists, nsNumDomains, nsMaxDomains, nsDefaultMaxDeptSize, owner, nsdaModifiableBy] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nsManagedDomain"],
+    "&ldapDesc": "Delegated Admin marker for managed domain" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nsManagedDomain /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

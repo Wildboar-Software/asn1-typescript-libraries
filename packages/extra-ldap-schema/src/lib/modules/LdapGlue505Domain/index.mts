@@ -1,0 +1,29 @@
+/**
+ * ASN.1 module `LdapGlue505Domain`.
+ */
+export * from "./gLUE2AdminDomain.oa.mjs";
+export * from "./gLUE2AdminDomainAdminDomainForeignKey.oa.mjs";
+export * from "./gLUE2AdminDomainDistributed.oa.mjs";
+export * from "./gLUE2AdminDomainOwner.oa.mjs";
+export * from "./gLUE2Domain.oa.mjs";
+export * from "./gLUE2DomainDescription.oa.mjs";
+export * from "./gLUE2DomainID.oa.mjs";
+export * from "./gLUE2DomainWWW.oa.mjs";
+export * from "./gLUE2UserDomain.oa.mjs";
+export * from "./gLUE2UserDomainLevel.oa.mjs";
+export * from "./gLUE2UserDomainMember.oa.mjs";
+export * from "./gLUE2UserDomainUserDomainForeignKey.oa.mjs";
+export * from "./gLUE2UserDomainUserManager.oa.mjs";
+export * from "./id-at-gLUE2AdminDomainAdminDomainForeignKey.va.mjs";
+export * from "./id-at-gLUE2AdminDomainDistributed.va.mjs";
+export * from "./id-at-gLUE2AdminDomainOwner.va.mjs";
+export * from "./id-at-gLUE2DomainDescription.va.mjs";
+export * from "./id-at-gLUE2DomainID.va.mjs";
+export * from "./id-at-gLUE2DomainWWW.va.mjs";
+export * from "./id-at-gLUE2UserDomainLevel.va.mjs";
+export * from "./id-at-gLUE2UserDomainMember.va.mjs";
+export * from "./id-at-gLUE2UserDomainUserDomainForeignKey.va.mjs";
+export * from "./id-at-gLUE2UserDomainUserManager.va.mjs";
+export * from "./id-oc-gLUE2AdminDomain.va.mjs";
+export * from "./id-oc-gLUE2Domain.va.mjs";
+export * from "./id-oc-gLUE2UserDomain.va.mjs";

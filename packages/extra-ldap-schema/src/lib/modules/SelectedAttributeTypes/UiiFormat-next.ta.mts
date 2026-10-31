@@ -4,7 +4,7 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
+import { type UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
 // export { UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
 
 
@@ -15,7 +15,9 @@ import { UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../SelectedAttr
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UiiFormat-next ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * UiiFormat-next ::= CHOICE {
+ *   length  INTEGER,
+ *   filter  UiiFilter }
  * ```
  */
 export

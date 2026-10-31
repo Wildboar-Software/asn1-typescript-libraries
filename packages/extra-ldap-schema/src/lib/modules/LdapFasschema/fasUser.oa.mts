@@ -1,9 +1,22 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_fasUser } from "../LdapFasschema/id-oc-fasUser.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_fasUser } from "../LdapFasschema/id-oc-fasUser.va.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
+import { fasCreationTime } from "./fasCreationTime.oa.mjs";
+import { fasGPGKeyId } from "./fasGPGKeyId.oa.mjs";
+import { fasGitHubUsername } from "./fasGitHubUsername.oa.mjs";
+import { fasGitLabUsername } from "./fasGitLabUsername.oa.mjs";
+import { fasIRCNick } from "./fasIRCNick.oa.mjs";
+import { fasIsPrivate } from "./fasIsPrivate.oa.mjs";
+import { fasLocale } from "./fasLocale.oa.mjs";
+import { fasPronoun } from "./fasPronoun.oa.mjs";
+import { fasRHBZEmail } from "./fasRHBZEmail.oa.mjs";
+import { fasRssUrl } from "./fasRssUrl.oa.mjs";
+import { fasStatusNote } from "./fasStatusNote.oa.mjs";
+import { fasTimezone } from "./fasTimezone.oa.mjs";
+import { fasWebsiteUrl } from "./fasWebsiteUrl.oa.mjs";
 
 /**
  * @summary fasUser
@@ -39,6 +52,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const fasUser: OBJECT_CLASS = undefined;
+const fasUser: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [fasTimezone, fasLocale, fasIRCNick, fasGPGKeyId, fasCreationTime, fasStatusNote, fasRHBZEmail, fasGitHubUsername, fasGitLabUsername, fasWebsiteUrl, fasIsPrivate, fasPronoun, fasRssUrl, countryName] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["fasUser"],
+    "&ldapDesc": "FAS user objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_fasUser /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,9 +1,16 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nsSNMP } from "../LdapCore389/id-oc-nsSNMP.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nsSNMP } from "../LdapCore389/id-oc-nsSNMP.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nsSNMPContact } from "./nsSNMPContact.oa.mjs";
+import { nsSNMPDescription } from "./nsSNMPDescription.oa.mjs";
+import { nsSNMPEnabled } from "./nsSNMPEnabled.oa.mjs";
+import { nsSNMPLocation } from "./nsSNMPLocation.oa.mjs";
+import { nsSNMPMasterHost } from "./nsSNMPMasterHost.oa.mjs";
+import { nsSNMPMasterPort } from "./nsSNMPMasterPort.oa.mjs";
+import { nsSNMPName } from "./nsSNMPName.oa.mjs";
+import { nsSNMPOrganization } from "./nsSNMPOrganization.oa.mjs";
 
 /**
  * @summary nsSNMP
@@ -33,6 +40,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nsSNMP: OBJECT_CLASS = undefined;
+const nsSNMP: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName, nsSNMPEnabled] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [nsSNMPOrganization, nsSNMPLocation, nsSNMPContact, nsSNMPDescription, nsSNMPName, nsSNMPMasterHost, nsSNMPMasterPort] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nsSNMP"],
+    "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nsSNMP /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

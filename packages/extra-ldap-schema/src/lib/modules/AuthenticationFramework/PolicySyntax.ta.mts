@@ -4,9 +4,9 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
+import { type PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
 // export { PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
-import { InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
+import { type InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
 // export { InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
 
 

@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-// export { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
+import {
+    type DistinguishedName,
+    _decode_DistinguishedName,
+    _encode_DistinguishedName,
+} from "../InformationFramework/DistinguishedName.ta.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
 
 /**
  * @summary dn
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<DistinguishedName>}
+ * @implements {SYNTAX_NAME<DistinguishedName>}
  */
 export
-const dn: SYNTAX_NAME = undefined;
+const dn: SYNTAX_NAME<DistinguishedName> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_DistinguishedName,
+    },
+    encoderFor: {
+        "&Type": _encode_DistinguishedName,
+    },
+    "&ldapDesc": "DN" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_dn /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

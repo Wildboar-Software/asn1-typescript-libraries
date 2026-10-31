@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
+import { type CONTEXT} from "../InformationFramework/CONTEXT.oca.mjs";
 // export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 
 

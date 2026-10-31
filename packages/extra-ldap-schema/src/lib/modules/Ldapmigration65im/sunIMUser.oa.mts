@@ -1,9 +1,18 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_sunIMUser } from "../Ldapmigration65im/id-oc-sunIMUser.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_sunIMUser } from "../Ldapmigration65im/id-oc-sunIMUser.va.mjs";
+import { sunIMConferenceRoster } from "./sunIMConferenceRoster.oa.mjs";
+import { sunIMNewsRoster } from "./sunIMNewsRoster.oa.mjs";
+import { sunIMPrivateSettings } from "./sunIMPrivateSettings.oa.mjs";
+import { sunIMProperties } from "./sunIMProperties.oa.mjs";
+import { sunIMRoster } from "./sunIMRoster.oa.mjs";
+import { sunIMUserConferenceRoster } from "./sunIMUserConferenceRoster.oa.mjs";
+import { sunIMUserNewsRoster } from "./sunIMUserNewsRoster.oa.mjs";
+import { sunIMUserPrivateSettings } from "./sunIMUserPrivateSettings.oa.mjs";
+import { sunIMUserProperties } from "./sunIMUserProperties.oa.mjs";
+import { sunIMUserRoster } from "./sunIMUserRoster.oa.mjs";
 
 /**
  * @summary sunIMUser
@@ -35,6 +44,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const sunIMUser: OBJECT_CLASS = undefined;
+const sunIMUser: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [sunIMUserPrivateSettings, sunIMUserProperties, sunIMUserRoster, sunIMUserConferenceRoster, sunIMUserNewsRoster, sunIMPrivateSettings, sunIMProperties, sunIMRoster, sunIMConferenceRoster, sunIMNewsRoster] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["sunIMUser"],
+    "&ldapDesc": "Instant Message Service User" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_sunIMUser /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

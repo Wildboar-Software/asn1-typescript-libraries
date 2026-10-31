@@ -1,10 +1,11 @@
 /* eslint-disable */
+import { type UTF8String } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
-// export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-// export { id_at_uiiInUrn } from "../SelectedAttributeTypes/id-at-uiiInUrn.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
+import { id_at_uiiInUrn } from "../SelectedAttributeTypes/id-at-uiiInUrn.va.mjs";
 
 /**
  * @summary uiiInUrn
@@ -23,10 +24,29 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<UTF8String>}
+ * @implements {ATTRIBUTE<UTF8String>}
  */
 export
-const uiiInUrn: ATTRIBUTE = undefined;
+const uiiInUrn: ATTRIBUTE<UTF8String> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": $._decodeUTF8String,
+    },
+    encoderFor: {
+        "&Type": $._encodeUTF8String,
+    },
+    "&equality-match": caseExactMatch /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["uiiInUrn"],
+    "&id": id_at_uiiInUrn /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -77,14 +77,14 @@ class DayTimeBand {
      * @static
      * @method
      */
-    public static get _default_value_for_startDayTime () { return DayTime._from_object({ hour: 0 }); }
+    public static get _default_value_for_startDayTime () { return DayTime._from_object({ hour: 0, minute: 0, second: 0, _unrecognizedExtensionsList: [] }); }
     /**
      * @summary Getter that returns the default value for `endDayTime`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_endDayTime () { return DayTime._from_object({ hour: 23, minute: 59, second: 59 }); }
+    public static get _default_value_for_endDayTime () { return DayTime._from_object({ hour: 23, minute: 59, second: 59, _unrecognizedExtensionsList: [] }); }
 }
 
 /**

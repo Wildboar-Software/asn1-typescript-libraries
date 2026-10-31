@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type AvlSerialNumber = INTEGER;
 
-export
-const _decode_AvlSerialNumber: $.ASN1Decoder<AvlSerialNumber> = $._decodeInteger;
+export function _decode_AvlSerialNumber (el: _Element): AvlSerialNumber {
+    const value = $._decodeInteger(el);
+    if (value < 0) {
+        throw new ASN1OverflowError("AvlSerialNumber violates INTEGER range");
+    }
+    return value;
+}
 
 export
 const _encode_AvlSerialNumber: $.ASN1Encoder<AvlSerialNumber> = $._encodeInteger;

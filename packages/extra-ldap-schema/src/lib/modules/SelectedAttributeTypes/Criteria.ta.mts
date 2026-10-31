@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CriteriaItem, _decode_CriteriaItem, _encode_CriteriaItem } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
+import { type CriteriaItem, _decode_CriteriaItem, _encode_CriteriaItem } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
 // export { CriteriaItem, _decode_CriteriaItem, _encode_CriteriaItem } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
 
 

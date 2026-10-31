@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { AttributeOptionList, _decode_AttributeOptionList, _encode_AttributeOptionList } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
-// export { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
 import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
+import {
+    type AttributeOptionList,
+    _decode_AttributeOptionList,
+    _encode_AttributeOptionList,
+} from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
+import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
 
 /**
  * @summary ldapAttributeOptionContext
@@ -19,10 +22,24 @@ import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
  * ```
  * 
  * @constant
- * @type {CONTEXT}
- * @implements {CONTEXT}
+ * @type {CONTEXT<AttributeOptionList, AttributeOptionList>}
+ * @implements {CONTEXT<AttributeOptionList, AttributeOptionList>}
  */
 export
-const ldapAttributeOptionContext: CONTEXT = undefined;
+const ldapAttributeOptionContext: CONTEXT<AttributeOptionList, AttributeOptionList> = {
+    class: "CONTEXT",
+    decoderFor: {
+        "&Type": _decode_AttributeOptionList,
+        "&Assertion": _decode_AttributeOptionList,
+    },
+    encoderFor: {
+        "&Type": _encode_AttributeOptionList,
+        "&Assertion": _encode_AttributeOptionList,
+    },
+    "&absentMatch": false /* OBJECT_FIELD_SETTING */,
+    "&id": id_avc_ldapAttributeOption /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&Assertion": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

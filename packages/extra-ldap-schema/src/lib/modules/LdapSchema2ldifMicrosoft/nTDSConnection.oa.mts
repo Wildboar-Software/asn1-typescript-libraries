@@ -1,9 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
-// export { id_oc_nTDSConnection } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSConnection.va.mjs";
-
+import { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
+import { id_oc_nTDSConnection } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSConnection.va.mjs";
+import { enabledConnection } from "../MSUser/enabledConnection.oa.mjs";
+import { fromServer } from "../MSUser/fromServer.oa.mjs";
+import { generatedConnection } from "../MSUser/generatedConnection.oa.mjs";
+import { mS_DS_ReplicatesNCReason } from "../MSUser/mS-DS-ReplicatesNCReason.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { transportType } from "../MSUser/transportType.oa.mjs";
 
 /**
  * @summary nTDSConnection
@@ -30,6 +35,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nTDSConnection: OBJECT_CLASS = undefined;
+const nTDSConnection: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [leaf] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [enabledConnection, fromServer, options] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [generatedConnection, schedule, transportType, mS_DS_ReplicatesNCReason] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nTDSConnection"],
+    "&id": id_oc_nTDSConnection /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

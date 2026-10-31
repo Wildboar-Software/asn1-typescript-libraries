@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { id_oc_kmr_orgRole } from "../LdapUser/id-oc-kmr-orgRole.va.mjs";
-
+import { id_oc_kmr_orgRole } from "../LdapUser/id-oc-kmr-orgRole.va.mjs";
+import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
+import { locationCode } from "./locationCode.oa.mjs";
+import { orgCode } from "./orgCode.oa.mjs";
 
 /**
  * @summary kmr_orgRole
@@ -25,6 +25,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const kmr_orgRole: OBJECT_CLASS = undefined;
+const kmr_orgRole: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [organizationalRole] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [orgCode, locationCode] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["kmr-orgRole"],
+    "&id": id_oc_kmr_orgRole /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

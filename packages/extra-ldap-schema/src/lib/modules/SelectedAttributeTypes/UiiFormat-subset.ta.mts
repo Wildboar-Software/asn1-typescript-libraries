@@ -13,7 +13,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UiiFormat-subset ::= ENUMERATED {
+ *   baseObject   (0),
+ *   oneLevel     (1),
+ *   wholeSubtree (2) }
  * ```
  * 
  * @enum {number}
@@ -39,7 +42,10 @@ type _enum_for_UiiFormat_subset = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UiiFormat-subset ::= ENUMERATED {
+ *   baseObject   (0),
+ *   oneLevel     (1),
+ *   wholeSubtree (2) }
  * ```
  * 
  * @enum {number}
@@ -54,7 +60,10 @@ type UiiFormat_subset = _enum_for_UiiFormat_subset;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UiiFormat-subset ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * UiiFormat-subset ::= ENUMERATED {
+ *   baseObject   (0),
+ *   oneLevel     (1),
+ *   wholeSubtree (2) }
  * ```
  * 
  * @enum {number}

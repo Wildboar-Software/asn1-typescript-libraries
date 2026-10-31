@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
-// export { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type PostalAddress,
+    _decode_PostalAddress,
+    _encode_PostalAddress,
+} from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
+import { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.mjs";
 
 /**
  * @summary postalAddr
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<PostalAddress>}
+ * @implements {SYNTAX_NAME<PostalAddress>}
  */
 export
-const postalAddr: SYNTAX_NAME = undefined;
+const postalAddr: SYNTAX_NAME<PostalAddress> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_PostalAddress,
+    },
+    encoderFor: {
+        "&Type": _encode_PostalAddress,
+    },
+    "&ldapDesc": "Postal Address" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_postalAddr /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

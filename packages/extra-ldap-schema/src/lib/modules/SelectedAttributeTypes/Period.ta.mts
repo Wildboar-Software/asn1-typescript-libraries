@@ -8,11 +8,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DayTimeBand, _decode_DayTimeBand, _encode_DayTimeBand } from "../SelectedAttributeTypes/DayTimeBand.ta.mjs";
 // export { DayTimeBand, _decode_DayTimeBand, _encode_DayTimeBand } from "../SelectedAttributeTypes/DayTimeBand.ta.mjs";
-import { Period_days, _decode_Period_days, _encode_Period_days } from "../SelectedAttributeTypes/Period-days.ta.mjs";
+import { type Period_days, _decode_Period_days, _encode_Period_days } from "../SelectedAttributeTypes/Period-days.ta.mjs";
 // export { Period_days, _decode_Period_days, _encode_Period_days } from "../SelectedAttributeTypes/Period-days.ta.mjs";
-import { Period_weeks, _decode_Period_weeks, _encode_Period_weeks } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
+import { type Period_weeks, _decode_Period_weeks, _encode_Period_weeks } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
 // export { Period_weeks, _decode_Period_weeks, _encode_Period_weeks } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
-import { Period_months, _decode_Period_months, _encode_Period_months } from "../SelectedAttributeTypes/Period-months.ta.mjs";
+import { type Period_months, _decode_Period_months, _encode_Period_months } from "../SelectedAttributeTypes/Period-months.ta.mjs";
 // export { Period_months, _decode_Period_months, _encode_Period_months } from "../SelectedAttributeTypes/Period-months.ta.mjs";
 
 

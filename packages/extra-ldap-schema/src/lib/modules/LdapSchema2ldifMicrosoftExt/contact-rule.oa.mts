@@ -1,8 +1,7 @@
 /* eslint-disable */
-// export { contact } from "../LdapSchema2ldifMicrosoft/contact.oa.mjs";
-// export { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
-
+import { contact } from "../LdapSchema2ldifMicrosoft/contact.oa.mjs";
+import { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
 
 /**
  * @summary contact_rule
@@ -21,6 +20,12 @@ import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs"
  * @implements {CONTENT_RULE}
  */
 export
-const contact_rule: CONTENT_RULE = undefined;
+const contact_rule: CONTENT_RULE = {
+    class: "CONTENT-RULE",
+    decoderFor: {},
+    encoderFor: {},
+    "&structuralClass": contact["&id"] /* OBJECT_FIELD_SETTING */,
+    "&Auxiliaries": [mailRecipient] /* OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

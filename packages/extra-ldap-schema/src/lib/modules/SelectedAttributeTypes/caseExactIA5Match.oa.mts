@@ -1,8 +1,9 @@
 /* eslint-disable */
+import { type IA5String } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
-// export { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";
-
+import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
+import { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";
 
 /**
  * @summary caseExactIA5Match
@@ -19,10 +20,22 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * ```
  * 
  * @constant
- * @type {MATCHING_RULE}
- * @implements {MATCHING_RULE}
+ * @type {MATCHING_RULE<IA5String>}
+ * @implements {MATCHING_RULE<IA5String>}
  */
 export
-const caseExactIA5Match: MATCHING_RULE = undefined;
+const caseExactIA5Match: MATCHING_RULE<IA5String> = {
+    class: "MATCHING-RULE",
+    decoderFor: {
+        "&AssertionType": $._decodeIA5String,
+    },
+    encoderFor: {
+        "&AssertionType": $._encodeIA5String,
+    },
+    "&ldapSyntax": ia5String["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["caseExactIA5Match"],
+    "&id": id_lmr_caseExactIA5Match /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

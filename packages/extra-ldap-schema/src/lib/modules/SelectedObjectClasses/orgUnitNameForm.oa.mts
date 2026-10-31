@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
-// export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-// export { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.mjs";
+import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
 
 /**
  * @summary orgUnitNameForm
@@ -23,6 +22,13 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const orgUnitNameForm: NAME_FORM = undefined;
+const orgUnitNameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": organizationalUnit /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [organizationalUnitName] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_orgUnitNameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

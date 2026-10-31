@@ -1,11 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { device } from "../SelectedObjectClasses/device.oa.mjs";
-// export { ejbcaDeviceCertificate } from "../LdapEjbca/ejbcaDeviceCertificate.oa.mjs";
-// export { description } from "../SelectedAttributeTypes/description.oa.mjs";
-// export { id_oc_ejbcaDevice } from "../LdapEjbca/id-oc-ejbcaDevice.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { ejbcaDeviceCertificate } from "../LdapEjbca/ejbcaDeviceCertificate.oa.mjs";
+import { id_oc_ejbcaDevice } from "../LdapEjbca/id-oc-ejbcaDevice.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { device } from "../SelectedObjectClasses/device.oa.mjs";
 
 /**
  * @summary ejbcaDevice
@@ -29,6 +28,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ejbcaDevice: OBJECT_CLASS = undefined;
+const ejbcaDevice: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [device] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ejbcaDeviceCertificate] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ejbcaDevice"],
+    "&ldapDesc": "subclass for adding certificates to devices" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ejbcaDevice /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

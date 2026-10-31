@@ -1,12 +1,15 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-// export { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa.mjs";
-// export { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa.mjs";
-// export { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
-// export { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import {
+    type TelephoneNumber,
+    _decode_TelephoneNumber,
+    _encode_TelephoneNumber,
+} from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { id_at_telephoneNumber } from "../SelectedAttributeTypes/id-at-telephoneNumber.va.mjs";
+import { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
+import { telephoneNumberMatch } from "../SelectedAttributeTypes/telephoneNumberMatch.oa.mjs";
+import { telephoneNumberSubstringsMatch } from "../SelectedAttributeTypes/telephoneNumberSubstringsMatch.oa.mjs";
 
 /**
  * @summary telephoneNumber
@@ -25,10 +28,30 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<TelephoneNumber>}
+ * @implements {ATTRIBUTE<TelephoneNumber>}
  */
 export
-const telephoneNumber: ATTRIBUTE = undefined;
+const telephoneNumber: ATTRIBUTE<TelephoneNumber> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_TelephoneNumber,
+    },
+    encoderFor: {
+        "&Type": _encode_TelephoneNumber,
+    },
+    "&equality-match": telephoneNumberMatch /* OBJECT_FIELD_SETTING */,
+    "&substrings-match": telephoneNumberSubstringsMatch /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": printableString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["telephoneNumber"],
+    "&id": id_at_telephoneNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -15,7 +15,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * OctetSubstringAssertion-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * OctetSubstringAssertion-Item ::= CHOICE {
+ *   initial  [0]  OCTET STRING,
+ *   any      [1]  OCTET STRING,
+ *   final    [2]  OCTET STRING,
+ *   ... } -- at most one initial and one final component
  * ```
  */
 export

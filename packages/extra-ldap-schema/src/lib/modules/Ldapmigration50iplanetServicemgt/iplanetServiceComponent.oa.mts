@@ -1,10 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-// export { id_oc_iplanetServiceComponent } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetServiceComponent.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_iplanetServiceComponent } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetServiceComponent.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { iplanetKeyValue } from "./iplanetKeyValue.oa.mjs";
+import { iplanetSMSPriority } from "./iplanetSMSPriority.oa.mjs";
+import { iplanetServiceID } from "./iplanetServiceID.oa.mjs";
+import { iplanetXMLKeyValue } from "./iplanetXMLKeyValue.oa.mjs";
 
 /**
  * @summary iplanetServiceComponent
@@ -31,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const iplanetServiceComponent: OBJECT_CLASS = undefined;
+const iplanetServiceComponent: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [organizationalUnitName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [iplanetServiceID, iplanetSMSPriority, iplanetKeyValue, iplanetXMLKeyValue, description] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["iplanetServiceComponent"],
+    "&ldapDesc": "sub-components of a service" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_iplanetServiceComponent /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

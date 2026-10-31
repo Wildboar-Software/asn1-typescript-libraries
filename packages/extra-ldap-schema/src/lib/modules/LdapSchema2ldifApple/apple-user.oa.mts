@@ -1,9 +1,40 @@
 /* eslint-disable */
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_apple_user } from "../LdapSchema2ldifApple/id-oc-apple-user.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_apple_user } from "../LdapSchema2ldifApple/id-oc-apple-user.va.mjs";
+import { acctFlags } from "../SambaSchema/acctFlags.oa.mjs";
+import { homeDrive } from "../SambaSchema/homeDrive.oa.mjs";
+import { kickoffTime } from "../SambaSchema/kickoffTime.oa.mjs";
+import { logoffTime } from "../SambaSchema/logoffTime.oa.mjs";
+import { logonTime } from "../SambaSchema/logonTime.oa.mjs";
+import { primaryGroupID } from "../SambaSchema/primaryGroupID.oa.mjs";
+import { profilePath } from "../SambaSchema/profilePath.oa.mjs";
+import { pwdLastSet } from "../SambaSchema/pwdLastSet.oa.mjs";
+import { rid } from "../SambaSchema/rid.oa.mjs";
+import { scriptPath } from "../SambaSchema/scriptPath.oa.mjs";
+import { smbHome } from "../SambaSchema/smbHome.oa.mjs";
+import { userWorkstations } from "../SambaSchema/userWorkstations.oa.mjs";
+import { sambaPrimaryGroupSID } from "../SambaV3Schema/sambaPrimaryGroupSID.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
+import { apple_generateduid } from "./apple-generateduid.oa.mjs";
+import { apple_imhandle } from "./apple-imhandle.oa.mjs";
+import { apple_keyword } from "./apple-keyword.oa.mjs";
+import { apple_mcxflags } from "./apple-mcxflags.oa.mjs";
+import { apple_mcxsettings } from "./apple-mcxsettings.oa.mjs";
+import { apple_user_adminlimits } from "./apple-user-adminlimits.oa.mjs";
+import { apple_user_authenticationhint } from "./apple-user-authenticationhint.oa.mjs";
+import { apple_user_class } from "./apple-user-class.oa.mjs";
+import { apple_user_homequota } from "./apple-user-homequota.oa.mjs";
+import { apple_user_homesoftquota } from "./apple-user-homesoftquota.oa.mjs";
+import { apple_user_homeurl } from "./apple-user-homeurl.oa.mjs";
+import { apple_user_mailattribute } from "./apple-user-mailattribute.oa.mjs";
+import { apple_user_passwordpolicy } from "./apple-user-passwordpolicy.oa.mjs";
+import { apple_user_picture } from "./apple-user-picture.oa.mjs";
+import { apple_user_printattribute } from "./apple-user-printattribute.oa.mjs";
+import { apple_webloguri } from "./apple-webloguri.oa.mjs";
+import { authAuthority } from "./authAuthority.oa.mjs";
 
 /**
  * @summary apple_user
@@ -57,6 +88,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const apple_user: OBJECT_CLASS = undefined;
+const apple_user: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [apple_user_homeurl, apple_user_class, apple_user_homequota, apple_user_mailattribute, apple_user_printattribute, apple_mcxflags, apple_mcxsettings, apple_user_adminlimits, apple_user_picture, apple_user_authenticationhint, apple_user_homesoftquota, apple_user_passwordpolicy, apple_keyword, apple_generateduid, apple_imhandle, apple_webloguri, authAuthority, acctFlags, pwdLastSet, logonTime, logoffTime, kickoffTime, homeDrive, scriptPath, profilePath, userWorkstations, smbHome, rid, primaryGroupID, sambaSID, sambaPrimaryGroupSID, userCertificate] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["apple-user"],
+    "&ldapDesc": "apple user account" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_apple_user /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

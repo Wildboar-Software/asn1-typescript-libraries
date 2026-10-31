@@ -1,7 +1,8 @@
 /* eslint-disable */
-// export { id_lsx_integer } from "../SelectedAttributeTypes/id-lsx-integer.va.mjs";
+import { type INTEGER } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import { id_lsx_integer } from "../SelectedAttributeTypes/id-lsx-integer.va.mjs";
 
 /**
  * @summary integer
@@ -17,10 +18,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<INTEGER>}
+ * @implements {SYNTAX_NAME<INTEGER>}
  */
 export
-const integer: SYNTAX_NAME = undefined;
+const integer: SYNTAX_NAME<INTEGER> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": $._decodeInteger,
+    },
+    encoderFor: {
+        "&Type": $._encodeInteger,
+    },
+    "&ldapDesc": "INTEGER" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_integer /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

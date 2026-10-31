@@ -1,11 +1,14 @@
 /* eslint-disable */
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { HierarchyLevel, _decode_HierarchyLevel, _encode_HierarchyLevel } from "../InformationFramework/HierarchyLevel.ta.mjs";
-// export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
-// export { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
-// export { id_oa_hierarchyLevel } from "../InformationFramework/id-oa-hierarchyLevel.va.mjs";
-
+import { directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
+import {
+    type HierarchyLevel,
+    _decode_HierarchyLevel,
+    _encode_HierarchyLevel,
+} from "../InformationFramework/HierarchyLevel.ta.mjs";
+import { id_oa_hierarchyLevel } from "../InformationFramework/id-oa-hierarchyLevel.va.mjs";
+import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
+import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
+import { type ATTRIBUTE } from "./ATTRIBUTE.oca.mjs";
 
 /**
  * @summary hierarchyLevel
@@ -25,10 +28,28 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<HierarchyLevel>}
+ * @implements {ATTRIBUTE<HierarchyLevel>}
  */
 export
-const hierarchyLevel: ATTRIBUTE = undefined;
+const hierarchyLevel: ATTRIBUTE<HierarchyLevel> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_HierarchyLevel,
+    },
+    encoderFor: {
+        "&Type": _encode_HierarchyLevel,
+    },
+    "&equality-match": integerMatch /* OBJECT_FIELD_SETTING */,
+    "&ordering-match": integerOrderingMatch /* OBJECT_FIELD_SETTING */,
+    "&single-valued": true /* OBJECT_FIELD_SETTING */,
+    "&no-user-modification": true /* OBJECT_FIELD_SETTING */,
+    "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
+    "&id": id_oa_hierarchyLevel /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

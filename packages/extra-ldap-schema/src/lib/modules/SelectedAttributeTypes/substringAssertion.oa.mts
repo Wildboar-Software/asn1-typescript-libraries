@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-// export { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type SubstringAssertion,
+    _decode_SubstringAssertion,
+    _encode_SubstringAssertion,
+} from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.mjs";
 
 /**
  * @summary substringAssertion
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<SubstringAssertion>}
+ * @implements {SYNTAX_NAME<SubstringAssertion>}
  */
 export
-const substringAssertion: SYNTAX_NAME = undefined;
+const substringAssertion: SYNTAX_NAME<SubstringAssertion> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_SubstringAssertion,
+    },
+    encoderFor: {
+        "&Type": _encode_SubstringAssertion,
+    },
+    "&ldapDesc": "Substring Assertion" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_substringAssertion /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

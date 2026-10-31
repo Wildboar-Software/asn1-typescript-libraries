@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { id_oc_ftRls } from "../LdapApacheFortress/id-oc-ftRls.va.mjs";
-
+import { id_oc_ftRls } from "../LdapApacheFortress/id-oc-ftRls.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
+import { ftCstr } from "./ftCstr.oa.mjs";
+import { ftId } from "./ftId.oa.mjs";
+import { ftParents } from "./ftParents.oa.mjs";
+import { ftRoleName } from "./ftRoleName.oa.mjs";
 
 /**
  * @summary ftRls
@@ -29,6 +32,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ftRls: OBJECT_CLASS = undefined;
+const ftRls: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [organizationalRole] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ftId, ftRoleName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, ftCstr, ftParents] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ftRls"],
+    "&ldapDesc": "Fortress Role Structural Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ftRls /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { gLUE2Domain } from "../LdapGlue505Domain/gLUE2Domain.oa.mjs";
-// export { id_oc_gLUE2UserDomain } from "../LdapGlue505Domain/id-oc-gLUE2UserDomain.va.mjs";
-
+import { gLUE2Domain } from "../LdapGlue505Domain/gLUE2Domain.oa.mjs";
+import { id_oc_gLUE2UserDomain } from "../LdapGlue505Domain/id-oc-gLUE2UserDomain.va.mjs";
+import { gLUE2UserDomainLevel } from "./gLUE2UserDomainLevel.oa.mjs";
+import { gLUE2UserDomainMember } from "./gLUE2UserDomainMember.oa.mjs";
+import { gLUE2UserDomainUserDomainForeignKey } from "./gLUE2UserDomainUserDomainForeignKey.oa.mjs";
+import { gLUE2UserDomainUserManager } from "./gLUE2UserDomainUserManager.oa.mjs";
 
 /**
  * @summary gLUE2UserDomain
@@ -28,6 +30,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gLUE2UserDomain: OBJECT_CLASS = undefined;
+const gLUE2UserDomain: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [gLUE2Domain] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gLUE2UserDomainLevel, gLUE2UserDomainUserManager, gLUE2UserDomainMember, gLUE2UserDomainUserDomainForeignKey] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GLUE2UserDomain"],
+    "&ldapDesc": "A collection of actors that can be assigned with user roles and privileges to services or shares via policies" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gLUE2UserDomain /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

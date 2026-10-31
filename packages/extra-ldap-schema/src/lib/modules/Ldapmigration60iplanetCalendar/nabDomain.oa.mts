@@ -1,9 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_nabDomain } from "../Ldapmigration60iplanetCalendar/id-oc-nabDomain.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_nabDomain } from "../Ldapmigration60iplanetCalendar/id-oc-nabDomain.va.mjs";
+import { davAllowedServices } from "./davAllowedServices.oa.mjs";
+import { nabDomainAcl } from "./nabDomainAcl.oa.mjs";
+import { nabDomainNames } from "./nabDomainNames.oa.mjs";
+import { nabStatus } from "./nabStatus.oa.mjs";
+import { nabStore } from "./nabStore.oa.mjs";
 
 /**
  * @summary nabDomain
@@ -30,6 +34,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const nabDomain: OBJECT_CLASS = undefined;
+const nabDomain: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [nabDomainNames, nabStatus, davAllowedServices, nabDomainAcl, nabStore] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["nabDomain"],
+    "&ldapDesc": "NAB Domain Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_nabDomain /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

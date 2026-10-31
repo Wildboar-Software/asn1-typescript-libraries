@@ -1,9 +1,10 @@
 /* eslint-disable */
+import { type UTCTime } from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { utcTime } from "../SelectedAttributeTypes/utcTime.oa.mjs";
-// export { id_at_lastModifiedTime } from "../LdapSchema2ldifCosine/id-at-lastModifiedTime.va.mjs";
-
+import { directoryOperation } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_lastModifiedTime } from "../LdapSchema2ldifCosine/id-at-lastModifiedTime.va.mjs";
+import { utcTime } from "../SelectedAttributeTypes/utcTime.oa.mjs";
 
 /**
  * @summary lastModifiedTime
@@ -23,10 +24,29 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<UTCTime>}
+ * @implements {ATTRIBUTE<UTCTime>}
  */
 export
-const lastModifiedTime: ATTRIBUTE = undefined;
+const lastModifiedTime: ATTRIBUTE<UTCTime> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": $._decodeUTCTime,
+    },
+    encoderFor: {
+        "&Type": $._encodeUTCTime,
+    },
+    "&usage": directoryOperation /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": utcTime["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["lastModifiedTime"],
+    "&ldapDesc": "RFC1274: time of last modify, replaced by modifyTimestamp" /* OBJECT_FIELD_SETTING */,
+    "&obsolete": true /* OBJECT_FIELD_SETTING */,
+    "&id": id_at_lastModifiedTime /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

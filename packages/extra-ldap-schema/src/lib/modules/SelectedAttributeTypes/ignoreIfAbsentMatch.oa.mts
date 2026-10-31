@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { id_mr_ignoreIfAbsentMatch } from "../SelectedAttributeTypes/id-mr-ignoreIfAbsentMatch.va.mjs";
-
+import { id_mr_ignoreIfAbsentMatch } from "../SelectedAttributeTypes/id-mr-ignoreIfAbsentMatch.va.mjs";
 
 /**
  * @summary ignoreIfAbsentMatch
@@ -19,6 +18,12 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
  * @implements {MATCHING_RULE}
  */
 export
-const ignoreIfAbsentMatch: MATCHING_RULE = undefined;
+const ignoreIfAbsentMatch: MATCHING_RULE = {
+    class: "MATCHING-RULE",
+    decoderFor: {},
+    encoderFor: {},
+    "&id": id_mr_ignoreIfAbsentMatch /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&AssertionType": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

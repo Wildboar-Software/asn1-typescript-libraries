@@ -1,8 +1,12 @@
 /* eslint-disable */
-// export { NISNetgroupTripleSyntax, _decode_NISNetgroupTripleSyntax, _encode_NISNetgroupTripleSyntax } from "../NIS/NISNetgroupTripleSyntax.ta.mjs";
-// export { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    _decode_NISNetgroupTripleSyntax,
+    _encode_NISNetgroupTripleSyntax,
+    NISNetgroupTripleSyntax,
+} from "../NIS/NISNetgroupTripleSyntax.ta.mjs";
+import { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
 
 /**
  * @summary nisNetgroupTripleSyntax
@@ -18,10 +22,23 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<NISNetgroupTripleSyntax>}
+ * @implements {SYNTAX_NAME<NISNetgroupTripleSyntax>}
  */
 export
-const nisNetgroupTripleSyntax: SYNTAX_NAME = undefined;
+const nisNetgroupTripleSyntax: SYNTAX_NAME<NISNetgroupTripleSyntax> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_NISNetgroupTripleSyntax,
+    },
+    encoderFor: {
+        "&Type": _encode_NISNetgroupTripleSyntax,
+    },
+    "&ldapDesc": "NIS netgroup triple" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        0,
+    ], id_nis_lsx) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

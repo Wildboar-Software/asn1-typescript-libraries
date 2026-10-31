@@ -1,10 +1,18 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { groupid } from "../Ldapmigration56imsSchema/groupid.oa.mjs";
-// export { id_oc_icsCalendarGroup } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarGroup.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { groupid } from "../Ldapmigration56imsSchema/groupid.oa.mjs";
+import { id_oc_icsCalendarGroup } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarGroup.va.mjs";
+import { icsAutoaccept } from "./icsAutoaccept.oa.mjs";
+import { icsCalendar } from "./icsCalendar.oa.mjs";
+import { icsDWPHost } from "./icsDWPHost.oa.mjs";
+import { icsDefaultacl } from "./icsDefaultacl.oa.mjs";
+import { icsDoublebooking } from "./icsDoublebooking.oa.mjs";
+import { icsSecondaryowners } from "./icsSecondaryowners.oa.mjs";
+import { icsStatus } from "./icsStatus.oa.mjs";
+import { icsTimezone } from "./icsTimezone.oa.mjs";
 
 /**
  * @summary icsCalendarGroup
@@ -36,6 +44,17 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const icsCalendarGroup: OBJECT_CLASS = undefined;
+const icsCalendarGroup: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [groupid] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [icsSecondaryowners, icsDefaultacl, icsCalendar, icsStatus, icsTimezone, icsDWPHost, icsDoublebooking, icsAutoaccept, mail] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["icsCalendarGroup"],
+    "&ldapDesc": "Calendar Group object" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_icsCalendarGroup /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

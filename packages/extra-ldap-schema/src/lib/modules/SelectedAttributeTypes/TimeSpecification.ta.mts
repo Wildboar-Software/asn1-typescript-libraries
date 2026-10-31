@@ -6,9 +6,9 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeSpecification_time, _decode_TimeSpecification_time, _encode_TimeSpecification_time } from "../SelectedAttributeTypes/TimeSpecification-time.ta.mjs";
+import { type TimeSpecification_time, _decode_TimeSpecification_time, _encode_TimeSpecification_time } from "../SelectedAttributeTypes/TimeSpecification-time.ta.mjs";
 // export { TimeSpecification_time, _decode_TimeSpecification_time, _encode_TimeSpecification_time } from "../SelectedAttributeTypes/TimeSpecification-time.ta.mjs";
-import { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../SelectedAttributeTypes/TimeZone.ta.mjs";
+import { type TimeZone, _decode_TimeZone, _encode_TimeZone } from "../SelectedAttributeTypes/TimeZone.ta.mjs";
 // export { TimeZone, _decode_TimeZone, _encode_TimeZone } from "../SelectedAttributeTypes/TimeZone.ta.mjs";
 
 

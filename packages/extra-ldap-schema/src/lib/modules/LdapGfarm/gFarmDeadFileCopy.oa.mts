@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_gFarmDeadFileCopy } from "../LdapGfarm/id-oc-gFarmDeadFileCopy.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_gFarmDeadFileCopy } from "../LdapGfarm/id-oc-gFarmDeadFileCopy.va.mjs";
+import { hostname } from "./hostname.oa.mjs";
+import { igen } from "./igen.oa.mjs";
+import { inumber } from "./inumber.oa.mjs";
 
 /**
  * @summary gFarmDeadFileCopy
@@ -26,6 +27,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gFarmDeadFileCopy: OBJECT_CLASS = undefined;
+const gFarmDeadFileCopy: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [inumber, igen, hostname] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["GFarmDeadFileCopy"],
+    "&id": id_oc_gFarmDeadFileCopy /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

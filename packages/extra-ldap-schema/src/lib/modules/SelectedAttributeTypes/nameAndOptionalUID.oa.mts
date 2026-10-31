@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { NameAndOptionalUID, _decode_NameAndOptionalUID, _encode_NameAndOptionalUID } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-// export { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    _decode_NameAndOptionalUID,
+    _encode_NameAndOptionalUID,
+    NameAndOptionalUID,
+} from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
+import { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va.mjs";
 
 /**
  * @summary nameAndOptionalUID
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<NameAndOptionalUID>}
+ * @implements {SYNTAX_NAME<NameAndOptionalUID>}
  */
 export
-const nameAndOptionalUID: SYNTAX_NAME = undefined;
+const nameAndOptionalUID: SYNTAX_NAME<NameAndOptionalUID> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_NameAndOptionalUID,
+    },
+    encoderFor: {
+        "&Type": _encode_NameAndOptionalUID,
+    },
+    "&ldapDesc": "Name And Optional UID" /* OBJECT_FIELD_SETTING */,
+    "&id": id_lsx_nameAndOptionalUID /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

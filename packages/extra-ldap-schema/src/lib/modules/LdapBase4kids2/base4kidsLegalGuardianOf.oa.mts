@@ -1,9 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { member } from "../SelectedAttributeTypes/member.oa.mjs";
-// export { id_at_base4kidsLegalGuardianOf } from "../LdapBase4kids2/id-at-base4kidsLegalGuardianOf.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_base4kidsLegalGuardianOf } from "../LdapBase4kids2/id-at-base4kidsLegalGuardianOf.va.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
 
 /**
  * @summary base4kidsLegalGuardianOf
@@ -24,6 +23,21 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * @implements {ATTRIBUTE}
  */
 export
-const base4kidsLegalGuardianOf: ATTRIBUTE = undefined;
+const base4kidsLegalGuardianOf: ATTRIBUTE = {
+    class: "ATTRIBUTE",
+    decoderFor: {},
+    encoderFor: {},
+    "&derivation": member /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["base4kidsLegalGuardianOf"],
+    "&ldapDesc": "References to DNs for which this person is a legal guardian" /* OBJECT_FIELD_SETTING */,
+    "&id": id_at_base4kidsLegalGuardianOf /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

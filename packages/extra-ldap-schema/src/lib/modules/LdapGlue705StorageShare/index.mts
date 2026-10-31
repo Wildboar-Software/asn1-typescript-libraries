@@ -1,0 +1,31 @@
+/**
+ * ASN.1 module `LdapGlue705StorageShare`.
+ */
+export * from "./gLUE2StorageShare.oa.mjs";
+export * from "./gLUE2StorageShareAccessLatency.oa.mjs";
+export * from "./gLUE2StorageShareAccessMode.oa.mjs";
+export * from "./gLUE2StorageShareDataStoreForeignKey.oa.mjs";
+export * from "./gLUE2StorageShareDefaultLifeTime.oa.mjs";
+export * from "./gLUE2StorageShareExpirationMode.oa.mjs";
+export * from "./gLUE2StorageShareMaximumLifeTime.oa.mjs";
+export * from "./gLUE2StorageSharePath.oa.mjs";
+export * from "./gLUE2StorageShareRetentionPolicy.oa.mjs";
+export * from "./gLUE2StorageShareServingState.oa.mjs";
+export * from "./gLUE2StorageShareSharingID.oa.mjs";
+export * from "./gLUE2StorageShareStorageEndpointForeignKey.oa.mjs";
+export * from "./gLUE2StorageShareStorageServiceForeignKey.oa.mjs";
+export * from "./gLUE2StorageShareTag.oa.mjs";
+export * from "./id-at-gLUE2StorageShareAccessLatency.va.mjs";
+export * from "./id-at-gLUE2StorageShareAccessMode.va.mjs";
+export * from "./id-at-gLUE2StorageShareDataStoreForeignKey.va.mjs";
+export * from "./id-at-gLUE2StorageShareDefaultLifeTime.va.mjs";
+export * from "./id-at-gLUE2StorageShareExpirationMode.va.mjs";
+export * from "./id-at-gLUE2StorageShareMaximumLifeTime.va.mjs";
+export * from "./id-at-gLUE2StorageSharePath.va.mjs";
+export * from "./id-at-gLUE2StorageShareRetentionPolicy.va.mjs";
+export * from "./id-at-gLUE2StorageShareServingState.va.mjs";
+export * from "./id-at-gLUE2StorageShareSharingID.va.mjs";
+export * from "./id-at-gLUE2StorageShareStorageEndpointForeignKey.va.mjs";
+export * from "./id-at-gLUE2StorageShareStorageServiceForeignKey.va.mjs";
+export * from "./id-at-gLUE2StorageShareTag.va.mjs";
+export * from "./id-oc-gLUE2StorageShare.va.mjs";

@@ -1,12 +1,15 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { InternationalISDNNumber, _decode_InternationalISDNNumber, _encode_InternationalISDNNumber } from "../SelectedAttributeTypes/InternationalISDNNumber.ta.mjs";
-// export { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
-// export { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
-// export { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
-// export { id_at_internationalISDNNumber } from "../SelectedAttributeTypes/id-at-internationalISDNNumber.va.mjs";
-
+import { userApplications } from "../InformationFramework/AttributeUsage.ta.mjs";
+import {
+    type InternationalISDNNumber,
+    _decode_InternationalISDNNumber,
+    _encode_InternationalISDNNumber,
+} from "../SelectedAttributeTypes/InternationalISDNNumber.ta.mjs";
+import { id_at_internationalISDNNumber } from "../SelectedAttributeTypes/id-at-internationalISDNNumber.va.mjs";
+import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
+import { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
+import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
 
 /**
  * @summary internationalISDNNumber
@@ -25,10 +28,30 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```
  * 
  * @constant
- * @type {ATTRIBUTE}
- * @implements {ATTRIBUTE}
+ * @type {ATTRIBUTE<InternationalISDNNumber>}
+ * @implements {ATTRIBUTE<InternationalISDNNumber>}
  */
 export
-const internationalISDNNumber: ATTRIBUTE = undefined;
+const internationalISDNNumber: ATTRIBUTE<InternationalISDNNumber> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_InternationalISDNNumber,
+    },
+    encoderFor: {
+        "&Type": _encode_InternationalISDNNumber,
+    },
+    "&equality-match": numericStringMatch /* OBJECT_FIELD_SETTING */,
+    "&substrings-match": numericStringSubstringsMatch /* OBJECT_FIELD_SETTING */,
+    "&ldapSyntax": numericString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["internationalISDNNumber"],
+    "&id": id_at_internationalISDNNumber /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

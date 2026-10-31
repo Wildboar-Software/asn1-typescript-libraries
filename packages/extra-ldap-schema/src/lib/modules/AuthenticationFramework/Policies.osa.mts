@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { POLICY } from "../AuthenticationFramework/POLICY.oca.mjs";
+import { type POLICY} from "../AuthenticationFramework/POLICY.oca.mjs";
 // export { POLICY } from "../AuthenticationFramework/POLICY.oca.mjs";
 
 

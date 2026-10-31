@@ -1,10 +1,10 @@
 /* eslint-disable */
+import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { macAddress } from "../NIS/macAddress.oa.mjs";
-// export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { macAddress } from "../NIS/macAddress.oa.mjs";
 
 /**
  * @summary ieee802Device
@@ -28,6 +28,18 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const ieee802Device: OBJECT_CLASS = undefined;
+const ieee802Device: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [macAddress] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["ieee802Device"],
+    "&ldapDesc": "A device with a MAC address" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([
+        11,
+    ], id_nis_oc) /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

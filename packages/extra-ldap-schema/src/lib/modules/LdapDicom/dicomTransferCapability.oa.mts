@@ -1,10 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { id_oc_dicomTransferCapability } from "../LdapDicom/id-oc-dicomTransferCapability.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_dicomTransferCapability } from "../LdapDicom/id-oc-dicomTransferCapability.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { dicomSOPClass } from "./dicomSOPClass.oa.mjs";
+import { dicomTransferRole } from "./dicomTransferRole.oa.mjs";
+import { dicomTransferSyntax } from "./dicomTransferSyntax.oa.mjs";
 
 /**
  * @summary dicomTransferCapability
@@ -29,6 +30,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const dicomTransferCapability: OBJECT_CLASS = undefined;
+const dicomTransferCapability: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [dicomSOPClass, dicomTransferRole, dicomTransferSyntax] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["dicomTransferCapability"],
+    "&ldapDesc": "Transfer Capabilities for an Application Entity" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_dicomTransferCapability /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

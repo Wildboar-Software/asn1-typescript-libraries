@@ -1,9 +1,8 @@
 /* eslint-disable */
-// export { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
-// export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-// export { id_nf_oidC1NameForm } from "../SelectedObjectClasses/id-nf-oidC1NameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
+import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
+import { id_nf_oidC1NameForm } from "../SelectedObjectClasses/id-nf-oidC1NameForm.va.mjs";
+import { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
 
 /**
  * @summary oidC1NameForm
@@ -23,6 +22,13 @@ import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
  * @implements {NAME_FORM}
  */
 export
-const oidC1NameForm: NAME_FORM = undefined;
+const oidC1NameForm: NAME_FORM = {
+    class: "NAME-FORM",
+    decoderFor: {},
+    encoderFor: {},
+    "&namedObjectClass": oidCobj /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [oidC] /* OBJECT_FIELD_SETTING */,
+    "&id": id_nf_oidC1NameForm /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

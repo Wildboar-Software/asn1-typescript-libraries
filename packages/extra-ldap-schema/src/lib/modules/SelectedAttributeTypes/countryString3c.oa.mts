@@ -1,8 +1,11 @@
 /* eslint-disable */
-// export { CountryCode3c, _decode_CountryCode3c, _encode_CountryCode3c } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
-// export { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
+import {
+    type CountryCode3c,
+    _decode_CountryCode3c,
+    _encode_CountryCode3c,
+} from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
+import { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.mjs";
 
 /**
  * @summary countryString3c
@@ -18,10 +21,21 @@ import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
  * ```
  * 
  * @constant
- * @type {SYNTAX_NAME}
- * @implements {SYNTAX_NAME}
+ * @type {SYNTAX_NAME<CountryCode3c>}
+ * @implements {SYNTAX_NAME<CountryCode3c>}
  */
 export
-const countryString3c: SYNTAX_NAME = undefined;
+const countryString3c: SYNTAX_NAME<CountryCode3c> = {
+    class: "SYNTAX-NAME",
+    decoderFor: {
+        "&Type": _decode_CountryCode3c,
+    },
+    encoderFor: {
+        "&Type": _encode_CountryCode3c,
+    },
+    "&ldapDesc": "Country String 3 characters" /* OBJECT_FIELD_SETTING */,
+    "&id": id_asx_countryString3c /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+};
 
 /* eslint-enable */

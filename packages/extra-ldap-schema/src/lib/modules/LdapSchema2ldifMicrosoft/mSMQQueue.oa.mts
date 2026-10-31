@@ -1,9 +1,18 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_mSMQQueue } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQQueue.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_mSMQQueue } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQQueue.va.mjs";
+import { mSMQAuthenticate } from "../MSUser/mSMQAuthenticate.oa.mjs";
+import { mSMQBasePriority } from "../MSUser/mSMQBasePriority.oa.mjs";
+import { mSMQJournal } from "../MSUser/mSMQJournal.oa.mjs";
+import { mSMQLabel } from "../MSUser/mSMQLabel.oa.mjs";
+import { mSMQOwnerID } from "../MSUser/mSMQOwnerID.oa.mjs";
+import { mSMQPrivacyLevel } from "../MSUser/mSMQPrivacyLevel.oa.mjs";
+import { mSMQQueueJournalQuota } from "../MSUser/mSMQQueueJournalQuota.oa.mjs";
+import { mSMQQueueNameExt } from "../MSUser/mSMQQueueNameExt.oa.mjs";
+import { mSMQQueueQuota } from "../MSUser/mSMQQueueQuota.oa.mjs";
+import { mSMQQueueType } from "../MSUser/mSMQQueueType.oa.mjs";
+import { mSMQTransactional } from "../MSUser/mSMQTransactional.oa.mjs";
 
 /**
  * @summary mSMQQueue
@@ -34,6 +43,14 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const mSMQQueue: OBJECT_CLASS = undefined;
+const mSMQQueue: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [mSMQQueueType, mSMQJournal, mSMQBasePriority, mSMQLabel, mSMQAuthenticate, mSMQPrivacyLevel, mSMQOwnerID, mSMQTransactional, mSMQQueueQuota, mSMQQueueJournalQuota, mSMQQueueNameExt] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["mSMQQueue"],
+    "&id": id_oc_mSMQQueue /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

@@ -4,7 +4,8 @@ import {
     type OPTIONAL,
     type UTF8String,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EpcFormat_fields_Item, _decode_EpcFormat_fields_Item, _encode_EpcFormat_fields_Item } from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.mjs";
@@ -68,6 +69,9 @@ class EpcFormat {
         checkCalc?: OPTIONAL<INTEGER>,
         urnPrefix?: OPTIONAL<UTF8String>
     ) {
+        if (fields.length < 1) {
+            throw new ASN1SizeError("EpcFormat.fields violates SIZE constraint");
+        }
         this.fields = fields;
         this.digitShift = digitShift;
         this.checkCalc = checkCalc;

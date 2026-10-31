@@ -1,9 +1,16 @@
 /* eslint-disable */
+import { changeNumber } from "../DSEE/changeNumber.oa.mjs";
+import { changeType } from "../DSEE/changeType.oa.mjs";
+import { changes } from "../DSEE/changes.oa.mjs";
+import { deleteOldRdn } from "../DSEE/deleteOldRdn.oa.mjs";
+import { newRdn } from "../DSEE/newRdn.oa.mjs";
+import { newSuperior } from "../DSEE/newSuperior.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { id_oc_rubySyncChangeLogEntry } from "../LdapRubysync/id-oc-rubySyncChangeLogEntry.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_rubySyncChangeLogEntry } from "../LdapRubysync/id-oc-rubySyncChangeLogEntry.va.mjs";
+import { rubySyncContext } from "./rubySyncContext.oa.mjs";
+import { rubySyncDumpEntry } from "./rubySyncDumpEntry.oa.mjs";
+import { rubySyncSourceInfo } from "./rubySyncSourceInfo.oa.mjs";
 
 /**
  * @summary rubySyncChangeLogEntry
@@ -33,6 +40,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const rubySyncChangeLogEntry: OBJECT_CLASS = undefined;
+const rubySyncChangeLogEntry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [changeNumber, changeType, rubySyncSourceInfo] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [rubySyncContext, rubySyncDumpEntry, changes, newRdn, deleteOldRdn, newSuperior] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["rubySyncChangeLogEntry"],
+    "&ldapDesc": "Useful for LDAP server without native public changelog support (see https://opends.dev.java.net/public/standards/draft-good-ldap-changelog.txt)" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_rubySyncChangeLogEntry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

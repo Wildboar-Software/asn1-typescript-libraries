@@ -1,10 +1,33 @@
 /* eslint-disable */
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { id_oc_gluuAttribute } from "../LdapOx/id-oc-gluuAttribute.va.mjs";
-
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_gluuAttribute } from "../LdapOx/id-oc-gluuAttribute.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { gluuAttributeEditType } from "./gluuAttributeEditType.oa.mjs";
+import { gluuAttributeName } from "./gluuAttributeName.oa.mjs";
+import { gluuAttributeOrigin } from "./gluuAttributeOrigin.oa.mjs";
+import { gluuAttributeSystemEditType } from "./gluuAttributeSystemEditType.oa.mjs";
+import { gluuAttributeType } from "./gluuAttributeType.oa.mjs";
+import { gluuAttributeUsageType } from "./gluuAttributeUsageType.oa.mjs";
+import { gluuAttributeViewType } from "./gluuAttributeViewType.oa.mjs";
+import { gluuCategory } from "./gluuCategory.oa.mjs";
+import { gluuRegExp } from "./gluuRegExp.oa.mjs";
+import { gluuSAML1URI } from "./gluuSAML1URI.oa.mjs";
+import { gluuSAML2URI } from "./gluuSAML2URI.oa.mjs";
+import { gluuStatus } from "./gluuStatus.oa.mjs";
+import { gluuTooltip } from "./gluuTooltip.oa.mjs";
+import { iname } from "./iname.oa.mjs";
+import { inum } from "./inum.oa.mjs";
+import { oxAuthClaimName } from "./oxAuthClaimName.oa.mjs";
+import { oxMultivaluedAttribute } from "./oxMultivaluedAttribute.oa.mjs";
+import { oxNameIdType } from "./oxNameIdType.oa.mjs";
+import { oxSCIMCustomAttribute } from "./oxSCIMCustomAttribute.oa.mjs";
+import { oxSourceAttribute } from "./oxSourceAttribute.oa.mjs";
+import { oxValidation } from "./oxValidation.oa.mjs";
+import { urn } from "./urn.oa.mjs";
 
 /**
  * @summary gluuAttribute
@@ -50,6 +73,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gluuAttribute: OBJECT_CLASS = undefined;
+const gluuAttribute: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [objectClass] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [description, displayName, gluuAttributeEditType, gluuAttributeName, gluuAttributeOrigin, gluuAttributeSystemEditType, gluuAttributeType, oxAuthClaimName, gluuAttributeUsageType, gluuAttributeViewType, gluuCategory, gluuSAML1URI, gluuSAML2URI, gluuStatus, iname, inum, oxMultivaluedAttribute, oxNameIdType, oxSCIMCustomAttribute, oxSourceAttribute, seeAlso, urn, gluuRegExp, gluuTooltip, oxValidation] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["gluuAttribute"],
+    "&id": id_oc_gluuAttribute /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

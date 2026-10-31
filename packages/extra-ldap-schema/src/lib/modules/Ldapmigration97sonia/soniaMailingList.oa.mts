@@ -1,9 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { inetMailGroup } from "../Ldapmigration56imsSchema/inetMailGroup.oa.mjs";
-// export { id_oc_soniaMailingList } from "../Ldapmigration97sonia/id-oc-soniaMailingList.va.mjs";
-
+import { auxiliary } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { inetMailGroup } from "../Ldapmigration56imsSchema/inetMailGroup.oa.mjs";
+import { id_oc_soniaMailingList } from "../Ldapmigration97sonia/id-oc-soniaMailingList.va.mjs";
+import { soniaMailingListAdministrator } from "./soniaMailingListAdministrator.oa.mjs";
+import { soniaMailingListAllowedBroadcaster } from "./soniaMailingListAllowedBroadcaster.oa.mjs";
+import { soniaMailingListBroadcastType } from "./soniaMailingListBroadcastType.oa.mjs";
+import { soniaMailingListJoinabilityFilter } from "./soniaMailingListJoinabilityFilter.oa.mjs";
 
 /**
  * @summary soniaMailingList
@@ -28,6 +31,15 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const soniaMailingList: OBJECT_CLASS = undefined;
+const soniaMailingList: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [inetMailGroup] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [soniaMailingListBroadcastType, soniaMailingListAdministrator, soniaMailingListJoinabilityFilter, soniaMailingListAllowedBroadcaster] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["soniaMailingList"],
+    "&id": id_oc_soniaMailingList /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */

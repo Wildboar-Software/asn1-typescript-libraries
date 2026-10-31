@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     type INTEGER,
-    NULL,
+    type NULL,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Period_months_bitMonth, _decode_Period_months_bitMonth, _encode_Period_months_bitMonth } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
+import { type Period_months_bitMonth, _decode_Period_months_bitMonth, _encode_Period_months_bitMonth } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
 // export { Period_months_bitMonth, Period_months_bitMonth_january /* IMPORTED_LONG_NAMED_BIT */, january /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_february /* IMPORTED_LONG_NAMED_BIT */, february /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_march /* IMPORTED_LONG_NAMED_BIT */, march /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_april /* IMPORTED_LONG_NAMED_BIT */, april /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_may /* IMPORTED_LONG_NAMED_BIT */, may /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_june /* IMPORTED_LONG_NAMED_BIT */, june /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_july /* IMPORTED_LONG_NAMED_BIT */, july /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_august /* IMPORTED_LONG_NAMED_BIT */, august /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_september /* IMPORTED_LONG_NAMED_BIT */, september /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_october /* IMPORTED_LONG_NAMED_BIT */, october /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_november /* IMPORTED_LONG_NAMED_BIT */, november /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_december /* IMPORTED_LONG_NAMED_BIT */, december /* IMPORTED_SHORT_NAMED_BIT */, _decode_Period_months_bitMonth, _encode_Period_months_bitMonth } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
 
 
@@ -16,7 +16,23 @@ import { Period_months_bitMonth, _decode_Period_months_bitMonth, _encode_Period_
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-months ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * Period-months ::= CHOICE {
+ *   allMonths  NULL,
+ *   intMonth   SET OF INTEGER,
+ *   bitMonth   BIT STRING {
+ *     january   (0),
+ *     february  (1),
+ *     march     (2),
+ *     april     (3),
+ *     may       (4),
+ *     june      (5),
+ *     july      (6),
+ *     august    (7),
+ *     september (8),
+ *     october   (9),
+ *     november  (10),
+ *     december  (11) },
+ *   ... }
  * ```
  */
 export

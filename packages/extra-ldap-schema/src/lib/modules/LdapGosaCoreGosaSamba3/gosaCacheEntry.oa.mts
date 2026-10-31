@@ -1,11 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { gosaUser } from "../LdapGosaCoreGosaSamba3/gosaUser.oa.mjs";
-// export { id_oc_gosaCacheEntry } from "../LdapGosaCoreGosaSamba3/id-oc-gosaCacheEntry.va.mjs";
-
+import { top } from "../InformationFramework/top.oa.mjs";
+import { gosaUser } from "../LdapGosaCoreGosaSamba3/gosaUser.oa.mjs";
+import { id_oc_gosaCacheEntry } from "../LdapGosaCoreGosaSamba3/id-oc-gosaCacheEntry.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 
 /**
  * @summary gosaCacheEntry
@@ -28,6 +26,16 @@ import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs"
  * @implements {OBJECT_CLASS}
  */
 export
-const gosaCacheEntry: OBJECT_CLASS = undefined;
+const gosaCacheEntry: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {},
+    encoderFor: {},
+    "&Superclasses": [top] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [commonName] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [gosaUser] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": ["gosaCacheEntry"],
+    "&ldapDesc": "Class for GOsa caching (v2.7)" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_gosaCacheEntry /* OBJECT_FIELD_SETTING */ /* UNIQUE_OBJECT_FIELD_SETTING */,
+};
 
 /* eslint-enable */
