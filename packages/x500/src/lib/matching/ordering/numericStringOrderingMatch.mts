@@ -1,38 +1,58 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { compareCodePoints } from "../../utils/prepString.mjs";
+import {
+    createOrderingMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedOrderingFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Remove every space (X.520 clause 7.6.2).
+ */
+function stripSpaces (numeric: string): string {
+    return numeric.replace(/\s+/g, "");
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.5
  * `numericStringOrderingMatch`.
  *
  * Same as `caseIgnoreOrderingMatch` except all spaces are removed
- * (clause 7.6.2). Directory TRUE iff the stored `NumericString` is
- * less than the presented value.
+ * (clause 7.6.2). The signed result is negative when the presented
+ * numeric string is less than the stored string under Unicode
+ * code-point order, the same collation as `caseIgnoreOrderingMatch`.
  *
- * Each argument may be an `ASN1Element` or a string.
+ * @param assertion Presented numeric string, with spaces already
+ *  removed.
+ * @param value Stored `NumericString`, or that string with spaces
+ *  already removed. `MATCH_FLAG_VALUE_NORMALIZED` skips removal.
  */
 export
-function numericStringOrderingMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): number {
-    return numericStringOrderingMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.numericString,
-        typeof value === "string" ? value : value.numericString,
-    );
+function numericStringOrderingMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): number | undefined {
+    const raw = typeof value === "string" ? value : value.numericString;
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
+    return compareCodePoints(assertion, stored);
 }
 
+numericStringOrderingMatchTyped satisfies TypedOrderingFunction<string>;
+
 /**
- * `numericStringOrderingMatch` on two numeric strings.
- *
- * @param assertion Presented numeric string.
- * @param value Stored numeric string.
- * @returns Negative when `assertion` is less than `value`.
+ * `numericStringOrderingMatch` as a `Matcher`. TRUE iff the stored
+ * `NumericString` is less than the presented value.
+ * `MATCH_FLAG_ORDERING_GREATER` and `MATCH_FLAG_ORDERING_OR_EQUAL`
+ * select the other orderings.
  */
 export
-function numericStringOrderingMatchTyped (assertion: string, value: string): number {
-    const a: string = assertion.replace(/\s+/g, "");
-    const v: string = value.replace(/\s+/g, "");
-    return a.localeCompare(v);
-}
+const numericStringOrderingMatch: Matcher = createOrderingMatcher(
+    (el) => stripSpaces(el.numericString),
+    numericStringOrderingMatchTyped,
+);
 
 export default numericStringOrderingMatch;

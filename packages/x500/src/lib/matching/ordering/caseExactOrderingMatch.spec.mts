@@ -1,6 +1,23 @@
-import { DERElement, ASN1TagClass, ASN1Construction, ASN1UniversalType } from "@wildboar/asn1";
-import caseExactOrderingMatch from "./caseExactOrderingMatch.mjs";
-import caseIgnoreOrderingMatch from "./caseIgnoreOrderingMatch.mjs";
+import {
+    ASN1CharactersError,
+    DERElement,
+    ASN1TagClass,
+    ASN1Construction,
+    ASN1UniversalType,
+    ObjectIdentifier,
+} from "@wildboar/asn1";
+import {
+    AttributeTypeAndValue,
+} from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
+import caseExactOrderingMatch, {
+    caseExactOrderingMatchTyped,
+} from "./caseExactOrderingMatch.mjs";
+import caseIgnoreOrderingMatch, {
+    caseIgnoreOrderingMatchTyped,
+} from "./caseIgnoreOrderingMatch.mjs";
+
+const type_ = ObjectIdentifier.fromParts([ 1, 1, 1, 1 ]);
 
 function utf8 (s: string): DERElement {
     return new DERElement(
@@ -11,26 +28,64 @@ function utf8 (s: string): DERElement {
     );
 }
 
+function stored (s: string): AttributeTypeAndValue {
+    return new AttributeTypeAndValue(type_, utf8(s));
+}
+
 describe("caseExactOrderingMatch", () => {
     it("uses Unicode code-point order, not localeCompare", () => {
         // U+005A 'Z' precedes U+0061 'a'
-        expect(caseExactOrderingMatch(utf8("Z"), utf8("a"))).toBeLessThan(0);
+        expect(caseExactOrderingMatchTyped("Z", utf8("a"))).toBeLessThan(0);
         expect("Z".localeCompare("a")).toBeGreaterThan(0);
+        expect(caseExactOrderingMatch(utf8("a"), stored("Z"))).toBe(true);
+        expect(caseExactOrderingMatch(utf8("Z"), stored("a"))).toBe(false);
+        expect(caseExactOrderingMatchTyped("a b", "a  b")).toBe(0);
+        expect(caseExactOrderingMatchTyped(
+            "a b",
+            "a  b",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBeGreaterThan(0);
     });
 
-    it("sorts a string that fails preparation after a prepared string", () => {
-        expect(caseExactOrderingMatch(utf8("\uFFFD"), utf8("Z"))).toBe(1);
-        expect(caseExactOrderingMatch(utf8("Z"), utf8("\uFFFD"))).toBe(-1);
-        expect(caseExactOrderingMatch(utf8(""), utf8("Z"))).toBe(1);
-        expect(caseExactOrderingMatch(utf8("Z"), utf8(""))).toBe(-1);
+    it("throws when the assertion cannot be prepared", () => {
+        expect(() => caseExactOrderingMatch(utf8("\uFFFD"), stored("Z")))
+            .toThrow(ASN1CharactersError);
+        expect(() => caseExactOrderingMatch(utf8(""), stored("Z")))
+            .toThrow(ASN1CharactersError);
+    });
+
+    it("is UNDEFINED when the stored value cannot be prepared", () => {
+        expect(caseExactOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
+        expect(caseExactOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
 });
 
 describe("caseIgnoreOrderingMatch", () => {
-    it("sorts a string that fails preparation after a prepared string", () => {
-        expect(caseIgnoreOrderingMatch(utf8("\uFFFD"), utf8("Z"))).toBe(1);
-        expect(caseIgnoreOrderingMatch(utf8("Z"), utf8("\uFFFD"))).toBe(-1);
-        expect(caseIgnoreOrderingMatch(utf8(""), utf8("Z"))).toBe(1);
-        expect(caseIgnoreOrderingMatch(utf8("Z"), utf8(""))).toBe(-1);
+    it("folds case before ordering", () => {
+        expect(caseIgnoreOrderingMatchTyped("b", utf8("A"))).toBeGreaterThan(0);
+        expect(caseIgnoreOrderingMatchTyped("a", "A")).toBe(0);
+        expect(caseIgnoreOrderingMatchTyped(
+            "a",
+            "A",
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBeGreaterThan(0);
+        expect(caseIgnoreOrderingMatch(utf8("b"), stored("A"))).toBe(true);
+        // 'C' precedes 'b' in code-point order. TRUE means the
+        // assertion was case-folded before comparison.
+        expect(caseIgnoreOrderingMatch(utf8("C"), stored("b"))).toBe(true);
+    });
+
+    it("throws when the assertion cannot be prepared", () => {
+        expect(() => caseIgnoreOrderingMatch(utf8("\uFFFD"), stored("Z")))
+            .toThrow(ASN1CharactersError);
+        expect(() => caseIgnoreOrderingMatch(utf8(""), stored("Z")))
+            .toThrow(ASN1CharactersError);
+    });
+
+    it("is UNDEFINED when the stored value cannot be prepared", () => {
+        expect(caseIgnoreOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
+        expect(caseIgnoreOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
 });

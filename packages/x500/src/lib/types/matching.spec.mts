@@ -46,9 +46,9 @@ function integerATAV (value: number | bigint): AttributeTypeAndValue {
 
 function integerOrderingMatchTyped (
     assertion: INTEGER,
-    value: ASN1Element,
+    value: INTEGER | ASN1Element,
 ): number | undefined {
-    const v = value.integer;
+    const v = ASN1Element.isElement(value) ? value.integer : value;
     return (Number(assertion) - Number(v));
 }
 

@@ -205,7 +205,7 @@ type TypedEquationFunction<A> = (
 export
 type TypedOrderingFunction<A> = (
     assertion: A,
-    value: ASN1Element,
+    value: A | ASN1Element,
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags?: number,
 ) => number | undefined;

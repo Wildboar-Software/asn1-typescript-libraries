@@ -26,8 +26,6 @@ import { integerMatch } from "./equality/integerMatch.mjs";
 import { objectIdentifierMatch } from "./equality/objectIdentifierMatch.mjs";
 import { octetStringMatch } from "./equality/octetStringMatch.mjs";
 import { uUIDPairMatch } from "./equality/uUIDPairMatch.mjs";
-import { caseIgnoreOrderingMatch } from "./ordering/caseIgnoreOrderingMatch.mjs";
-import { integerOrderingMatch } from "./ordering/integerOrderingMatch.mjs";
 import { caseIgnoreSubstringsMatch } from "./substring/caseIgnoreSubstringsMatch.mjs";
 import { storedPrefixMatch } from "./substring/storedPrefixMatch.mjs";
 import { evaluateLanguageContext } from "./context/languageContext.mjs";
@@ -61,9 +59,6 @@ describe("typed matching inputs", () => {
         expect(integerMatch(2n, two)).toBe(true);
         expect(integerMatch(2, 3n)).toBe(false);
         expect(integerMatch(2n, 2n)).toBe(true);
-        expect(integerOrderingMatch(1, 2n)).toBeLessThan(0);
-        expect(integerOrderingMatch(two, 1)).toBeGreaterThan(0);
-        expect(integerOrderingMatch(2n, two)).toBe(0);
     });
 
     it("compares booleans, object identifiers, and octet strings heterogeneously", () => {
@@ -86,9 +81,7 @@ describe("typed matching inputs", () => {
         expect(octetStringMatch(new Uint8Array([ 1, 2 ]), bytes)).toBe(false);
     });
 
-    it("orders and substring-matches a string against an encoded directory string", () => {
-        expect(caseIgnoreOrderingMatch("b", { uTF8String: "A" })).toBeGreaterThan(0);
-        expect(caseIgnoreOrderingMatch({ printableString: "A" }, "b")).toBeLessThan(0);
+    it("substring-matches a string against an encoded directory string", () => {
         expect(caseIgnoreSubstringsMatch("ELL", uds("Hello"))).toBe(true);
         expect(caseIgnoreSubstringsMatch(uds("xyz"), "Hello")).toBe(false);
         expect(storedPrefixMatch("7035551212", "703")).toBe(true);

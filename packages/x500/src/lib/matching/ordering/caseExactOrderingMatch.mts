@@ -1,53 +1,76 @@
-import type { DirectoryStringInput } from "../readValue.mjs";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
+import {
+    createOrderingMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedOrderingFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Prepare the presented directory string once. `prepString` returns
+ * `undefined` for a prohibited character or a string that maps to
+ * empty. That is an assertion error, not UNDEFINED.
+ */
+function prepareCaseExactAssertion (el: ASN1Element): string {
+    const prepared = prepString(readDirectoryString(el));
+    if (prepared === undefined) {
+        throw new ASN1CharactersError(
+            "caseExactOrderingMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
  * `caseExactOrderingMatch`.
  *
  * Directory ordering of `UnboundedDirectoryString` after removing
- * insignificant spaces (clause 7.6). TRUE in the Directory sense
- * iff the stored value is less than (appears earlier than) the
- * presented value under Unicode code-point collation. This
- * function returns a signed comparison (assertion vs stored).
+ * insignificant spaces (clause 7.6). The signed result is negative
+ * when the presented string is less than the stored string under
+ * Unicode code-point collation. Preparation failure of a stored
+ * value is UNDEFINED.
  *
  * Language-specific collation is outside the scope of X.520.
  *
- * Each argument may be an `ASN1Element`, a directory string, or a
- * JavaScript string.
+ * @param assertion Presented string, already prepared.
+ * @param value Stored directory string, or that string already
+ *  prepared. `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
-function caseExactOrderingMatch (
-    assertion: DirectoryStringInput,
-    value: DirectoryStringInput,
-): number {
-    return caseExactOrderingMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-    );
+function caseExactOrderingMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): number | undefined {
+    const raw = readDirectoryString(value);
+    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
+        return compareCodePoints(assertion, raw);
+    }
+    const prepared = prepString(raw);
+    if (prepared === undefined) {
+        return undefined;
+    }
+    return compareCodePoints(assertion, prepared);
 }
 
+caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string>;
+
 /**
- * `caseExactOrderingMatch` on two strings.
- *
- * @param assertion Presented string.
- * @param value Stored string.
- * @returns Negative when `assertion` is less than `value`. A string that
- *  fails preparation sorts after any prepared string (`Array.sort`
- *  treats `NaN` as `+0`, so it cannot be used for this).
+ * `caseExactOrderingMatch` as a `Matcher`. TRUE iff the stored value
+ * is less than the presented value. `MATCH_FLAG_ORDERING_GREATER`
+ * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
+ * An assertion that cannot be prepared throws `ASN1CharactersError`.
  */
 export
-function caseExactOrderingMatchTyped (assertion: string, value: string): number {
-    const a: string | undefined = prepString(assertion);
-    if (a === undefined) {
-        return 1;
-    }
-    const v: string | undefined = prepString(value);
-    if (v === undefined) {
-        return -1;
-    }
-    return compareCodePoints(a, v);
-}
+const caseExactOrderingMatch: Matcher = createOrderingMatcher(
+    prepareCaseExactAssertion,
+    caseExactOrderingMatchTyped,
+);
 
 export default caseExactOrderingMatch;
