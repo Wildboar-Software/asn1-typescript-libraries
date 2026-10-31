@@ -40,9 +40,9 @@ describe("caseExactOrderingMatch", () => {
     });
 
     it("is UNDEFINED when preparation fails", () => {
-        expect(caseExactOrderingMatchTyped("\uFFFD", utf8("Z"))).toBeUndefined();
+        expect(caseExactOrderingMatch(utf8("\uFFFD"), stored("Z"))).toBeUndefined();
+        expect(caseExactOrderingMatch(utf8(""), stored("Z"))).toBeUndefined();
         expect(caseExactOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
-        expect(caseExactOrderingMatchTyped("", utf8("Z"))).toBeUndefined();
         expect(caseExactOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
 });
@@ -50,14 +50,17 @@ describe("caseExactOrderingMatch", () => {
 describe("caseIgnoreOrderingMatch", () => {
     it("folds case before ordering", () => {
         expect(caseIgnoreOrderingMatchTyped("b", utf8("A"))).toBeGreaterThan(0);
-        expect(caseIgnoreOrderingMatchTyped("A", utf8("a"))).toBe(0);
+        expect(caseIgnoreOrderingMatchTyped("a", utf8("a"))).toBe(0);
         expect(caseIgnoreOrderingMatch(utf8("b"), stored("A"))).toBe(true);
+        // 'C' precedes 'b' in code-point order. TRUE means the
+        // assertion was case-folded before comparison.
+        expect(caseIgnoreOrderingMatch(utf8("C"), stored("b"))).toBe(true);
     });
 
     it("is UNDEFINED when preparation fails", () => {
-        expect(caseIgnoreOrderingMatchTyped("\uFFFD", utf8("Z"))).toBeUndefined();
+        expect(caseIgnoreOrderingMatch(utf8("\uFFFD"), stored("Z"))).toBeUndefined();
+        expect(caseIgnoreOrderingMatch(utf8(""), stored("Z"))).toBeUndefined();
         expect(caseIgnoreOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
-        expect(caseIgnoreOrderingMatchTyped("", utf8("Z"))).toBeUndefined();
         expect(caseIgnoreOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
 });

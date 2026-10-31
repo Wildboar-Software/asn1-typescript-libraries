@@ -17,16 +17,16 @@ import {
  * presented string is less than the stored string. Preparation
  * failure is UNDEFINED.
  *
- * @param assertion Presented string, not yet prepared.
+ * @param assertion Presented string, already prepared and
+ *  case-folded. `undefined` when preparation of the assertion failed.
  * @param value Stored directory string.
  */
 export
 function caseIgnoreOrderingMatchTyped (
-    assertion: string,
+    assertion: string | undefined,
     value: ASN1Element,
 ): number | undefined {
-    const a: string | undefined = prepString(assertion, { caseFold: true });
-    if (a === undefined) {
+    if (assertion === undefined) {
         return undefined;
     }
     const v: string | undefined = prepString(
@@ -36,10 +36,10 @@ function caseIgnoreOrderingMatchTyped (
     if (v === undefined) {
         return undefined;
     }
-    return compareCodePoints(a, v);
+    return compareCodePoints(assertion, v);
 }
 
-caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string>;
+caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string | undefined>;
 
 /**
  * `caseIgnoreOrderingMatch` as a `Matcher`. TRUE iff the stored value
@@ -48,7 +48,7 @@ caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string>;
  */
 export
 const caseIgnoreOrderingMatch: Matcher = createOrderingMatcher(
-    readDirectoryString,
+    (el) => prepString(readDirectoryString(el), { caseFold: true }),
     caseIgnoreOrderingMatchTyped,
 );
 

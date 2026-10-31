@@ -18,26 +18,26 @@ import {
  *
  * Language-specific collation is outside the scope of X.520.
  *
- * @param assertion Presented string, not yet prepared.
+ * @param assertion Presented string, already prepared. `undefined`
+ *  when preparation of the assertion failed.
  * @param value Stored directory string.
  */
 export
 function caseExactOrderingMatchTyped (
-    assertion: string,
+    assertion: string | undefined,
     value: ASN1Element,
 ): number | undefined {
-    const a: string | undefined = prepString(assertion);
-    if (a === undefined) {
+    if (assertion === undefined) {
         return undefined;
     }
     const v: string | undefined = prepString(readDirectoryString(value));
     if (v === undefined) {
         return undefined;
     }
-    return compareCodePoints(a, v);
+    return compareCodePoints(assertion, v);
 }
 
-caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string>;
+caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string | undefined>;
 
 /**
  * `caseExactOrderingMatch` as a `Matcher`. TRUE iff the stored value
@@ -46,7 +46,7 @@ caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string>;
  */
 export
 const caseExactOrderingMatch: Matcher = createOrderingMatcher(
-    readDirectoryString,
+    (el) => prepString(readDirectoryString(el)),
     caseExactOrderingMatchTyped,
 );
 
