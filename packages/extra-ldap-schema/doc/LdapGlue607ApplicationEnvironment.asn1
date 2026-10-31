@@ -1,0 +1,268 @@
+-- Derived from data/ldap-schema/glue/6-07-ApplicationEnvironment.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue607ApplicationEnvironment DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2ApplicationEnvironmentID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 1 }
+id-at-gLUE2ApplicationEnvironmentAppName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 2 }
+id-at-gLUE2ApplicationEnvironmentAppVersion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 3 }
+id-at-gLUE2ApplicationEnvironmentRepository OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 4 }
+id-at-gLUE2ApplicationEnvironmentState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 5 }
+id-at-gLUE2ApplicationEnvironmentRemovalDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 6 }
+id-at-gLUE2ApplicationEnvironmentLicense OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 7 }
+id-at-gLUE2ApplicationEnvironmentDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 8 }
+id-at-gLUE2ApplicationEnvironmentBestBenchmark OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 9 }
+id-at-gLUE2ApplicationEnvironmentParallelSupport OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 10 }
+id-at-gLUE2ApplicationEnvironmentMaxSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 11 }
+id-at-gLUE2ApplicationEnvironmentMaxJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 12 }
+id-at-gLUE2ApplicationEnvironmentMaxUserSeats OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 13 }
+id-at-gLUE2ApplicationEnvironmentFreeSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 14 }
+id-at-gLUE2ApplicationEnvironmentFreeJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 15 }
+id-at-gLUE2ApplicationEnvironmentFreeUserSeats OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 16 }
+id-at-gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 17 }
+id-at-gLUE2ApplicationEnvironmentComputingManagerForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 18 }
+id-oc-gLUE2ApplicationEnvironment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 23 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ApplicationEnvironmentID" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2ApplicationEnvironmentID }
+
+-- initial capital of "GLUE2ApplicationEnvironmentAppName" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentAppName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentAppName"}
+  LDAP-DESC                 "Name of the application environment"
+  ID                        id-at-gLUE2ApplicationEnvironmentAppName }
+
+-- initial capital of "GLUE2ApplicationEnvironmentAppVersion" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentAppVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentAppVersion"}
+  LDAP-DESC                 "Version of the application environment"
+  ID                        id-at-gLUE2ApplicationEnvironmentAppVersion }
+
+-- initial capital of "GLUE2ApplicationEnvironmentRepository" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentRepository ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentRepository"}
+  LDAP-DESC                 "URL of a service which offers a repository and/or a name service for this application environment"
+  ID                        id-at-gLUE2ApplicationEnvironmentRepository }
+
+-- initial capital of "GLUE2ApplicationEnvironmentState" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentState"}
+  LDAP-DESC                 "State about the installation"
+  ID                        id-at-gLUE2ApplicationEnvironmentState }
+
+-- initial capital of "GLUE2ApplicationEnvironmentRemovalDate" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentRemovalDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentRemovalDate"}
+  LDAP-DESC                 "Date and time after which the application can be removed"
+  ID                        id-at-gLUE2ApplicationEnvironmentRemovalDate }
+
+-- initial capital of "GLUE2ApplicationEnvironmentLicense" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentLicense ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentLicense"}
+  LDAP-DESC                 "The type of license"
+  ID                        id-at-gLUE2ApplicationEnvironmentLicense }
+
+-- initial capital of "GLUE2ApplicationEnvironmentDescription" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentDescription"}
+  LDAP-DESC                 "The description of this application environment"
+  ID                        id-at-gLUE2ApplicationEnvironmentDescription }
+
+-- initial capital of "GLUE2ApplicationEnvironmentBestBenchmark" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentBestBenchmark ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentBestBenchmark"}
+  LDAP-DESC                 "Type of benchmark which best identify the sensitivity of this application to the performance aspect"
+  ID                        id-at-gLUE2ApplicationEnvironmentBestBenchmark }
+
+-- initial capital of "GLUE2ApplicationEnvironmentParallelSupport" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentParallelSupport ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentParallelSupport"}
+  LDAP-DESC                 "The type of supported parallel execution framework"
+  ID                        id-at-gLUE2ApplicationEnvironmentParallelSupport }
+
+-- initial capital of "GLUE2ApplicationEnvironmentMaxSlots" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentMaxSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentMaxSlots"}
+  LDAP-DESC                 "Maximum number of slots that can be used to run jobs using the application environment at the same time"
+  ID                        id-at-gLUE2ApplicationEnvironmentMaxSlots }
+
+-- initial capital of "GLUE2ApplicationEnvironmentMaxJobs" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentMaxJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentMaxJobs"}
+  LDAP-DESC                 "Maximum number of jobs that can use the application environment at the same time"
+  ID                        id-at-gLUE2ApplicationEnvironmentMaxJobs }
+
+-- initial capital of "GLUE2ApplicationEnvironmentMaxUserSeats" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentMaxUserSeats ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentMaxUserSeats"}
+  LDAP-DESC                 "Maximum number of user seats that can use the application environment at the same time"
+  ID                        id-at-gLUE2ApplicationEnvironmentMaxUserSeats }
+
+-- initial capital of "GLUE2ApplicationEnvironmentFreeSlots" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentFreeSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentFreeSlots"}
+  LDAP-DESC                 "Available number slots that can be used to run jobs using the application environment at the same time"
+  ID                        id-at-gLUE2ApplicationEnvironmentFreeSlots }
+
+-- initial capital of "GLUE2ApplicationEnvironmentFreeJobs" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentFreeJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentFreeJobs"}
+  LDAP-DESC                 "Number of new jobs that could start their execution and use the application environment at the same time"
+  ID                        id-at-gLUE2ApplicationEnvironmentFreeJobs }
+
+-- initial capital of "GLUE2ApplicationEnvironmentFreeUserSeats" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentFreeUserSeats ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentFreeUserSeats"}
+  LDAP-DESC                 "Free seats for additional users that can use the application environment at the same time"
+  ID                        id-at-gLUE2ApplicationEnvironmentFreeUserSeats }
+
+-- initial capital of "GLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey }
+
+-- initial capital of "GLUE2ApplicationEnvironmentComputingManagerForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironmentComputingManagerForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ApplicationEnvironmentComputingManagerForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ApplicationEnvironmentComputingManagerForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ApplicationEnvironment" lowercased so the assignment is a valuereference.
+gLUE2ApplicationEnvironment OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2ApplicationEnvironmentID
+                              | gLUE2ApplicationEnvironmentAppName
+                              | gLUE2ApplicationEnvironmentComputingManagerForeignKey }
+  MAY CONTAIN               { gLUE2ApplicationEnvironmentAppVersion
+                              | gLUE2ApplicationEnvironmentRepository
+                              | gLUE2ApplicationEnvironmentState
+                              | gLUE2ApplicationEnvironmentRemovalDate
+                              | gLUE2ApplicationEnvironmentLicense
+                              | gLUE2ApplicationEnvironmentDescription
+                              | gLUE2ApplicationEnvironmentBestBenchmark
+                              | gLUE2ApplicationEnvironmentParallelSupport
+                              | gLUE2ApplicationEnvironmentMaxSlots
+                              | gLUE2ApplicationEnvironmentMaxJobs
+                              | gLUE2ApplicationEnvironmentMaxUserSeats
+                              | gLUE2ApplicationEnvironmentFreeSlots
+                              | gLUE2ApplicationEnvironmentFreeJobs
+                              | gLUE2ApplicationEnvironmentFreeUserSeats
+                              | gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey }
+  LDAP-NAME                 {"GLUE2ApplicationEnvironment"}
+  LDAP-DESC                 "Description of the application software or environment characteristic available within one or more execution environments"
+  ID                        id-oc-gLUE2ApplicationEnvironment }
+END

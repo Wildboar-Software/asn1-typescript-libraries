@@ -1,0 +1,589 @@
+-- Derived from data/ldap-schema/60basev2.ldif
+-- Upstream: https://github.com/freeipa/freeipa/blob/master/install/share/60basev2.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 2 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 3 elements were omitted because another source file in this corpus defines the same OID.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+Ldap60basev2 DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactMatch, caseIgnoreMatch,
+    caseIgnoreOrderingMatch, caseIgnoreSubstringsMatch, commonName,
+    description, directoryString, distinguishedName, dn, integer, integerMatch,
+    member, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  groupOfNames
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  userCertificate, userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  memberOf
+    FROM MSUser
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) msuser(26)} WITH SUCCESSORS
+
+  userPKCS12
+    FROM PKCS-9
+      {iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-9(9) modules(0) pkcs-9(1)} WITH SUCCESSORS
+
+  passwordGraceLimit
+    FROM LdapCommon389
+
+  userClass
+    FROM LdapSchema2ldifCosine ;
+
+-- Object identifiers
+
+id-at-ipaUniqueID OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 1 }
+id-at-ipaClientVersion OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 2 }
+id-at-enrolledBy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 3 }
+id-at-fqdn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 4 }
+id-at-managedBy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 18 }
+id-at-ipaEntitlementId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 24 }
+id-at-ipaKrbAuthzData OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 11 37 }
+id-at-ipaAssignedIDView OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 12 33 }
+id-oc-ipaHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 1 }
+id-oc-ipaObject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 12 }
+id-oc-ipaEntitlement OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 14 }
+id-oc-ipaPermission OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 15 }
+id-oc-ipaService OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 2 }
+id-oc-nestedGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 3 }
+id-at-memberManager OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 1 }
+id-oc-ipaUserGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 4 }
+id-oc-ipaHostGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 5 }
+id-at-memberUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 5 }
+id-at-userCategory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 6 }
+id-at-memberHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 7 }
+id-at-hostCategory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 8 }
+id-at-serviceCategory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 19 }
+id-at-memberService OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 20 }
+id-at-ipaPermissionType OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 25 }
+id-at-ipaEnabledFlag OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 9 }
+id-oc-ipaAssociation OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 6 }
+id-at-sourceHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 10 }
+id-at-externalHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 11 }
+id-at-sourceHostCategory OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 12 }
+id-at-accessRuleType OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 13 }
+id-at-accessTime OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 14 }
+id-oc-ipaHBACRule OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 7 }
+id-at-nisDomainName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 15 }
+id-oc-ipaNISNetgroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 8 }
+id-at-hostCApolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 3 17 }
+id-oc-ipaCAaccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 9 }
+id-oc-ipaHBACService OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 10 }
+id-oc-ipaHBACServiceGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 4 11 }
+id-at-ipaPwdMaxRepeat OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 2 }
+id-at-ipaPwdMaxSequence OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 3 }
+id-at-ipaPwdDictCheck OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 4 }
+id-at-ipaPwdUserCheck OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 5 }
+id-at-ipaPwdDcredit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 28 }
+id-at-ipaPwdUcredit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 29 }
+id-at-ipaPwdLcredit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 30 }
+id-at-ipaPwdOcredit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 23 31 }
+id-oc-ipaPwdPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 8 24 1 }
+
+-- Attribute types
+
+-- X-ORIGIN: "IPA v2"
+ipaUniqueID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaUniqueID"}
+  LDAP-DESC                 "Unique identifier"
+  ID                        id-at-ipaUniqueID }
+
+-- X-ORIGIN: "IPA v2"
+ipaClientVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaClientVersion"}
+  LDAP-DESC                 "Text string describing client version of the IPA software installed"
+  ID                        id-at-ipaClientVersion }
+
+-- X-ORIGIN: "IPA v2"
+enrolledBy ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"enrolledBy"}
+  LDAP-DESC                 "DN of administrator who performed manual enrollment of the host"
+  ID                        id-at-enrolledBy }
+
+-- X-ORIGIN: "IPA v2"
+fqdn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fqdn"}
+  LDAP-DESC                 "FQDN"
+  ID                        id-at-fqdn }
+
+-- X-ORIGIN: "IPA v2"
+managedBy ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"managedBy"}
+  LDAP-DESC                 "DNs of entries allowed to manage"
+  ID                        id-at-managedBy }
+
+-- X-ORIGIN: "IPA v2"
+ipaEntitlementId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaEntitlementId"}
+  LDAP-DESC                 "Entitlement Unique identifier"
+  ID                        id-at-ipaEntitlementId }
+
+-- X-ORIGIN: "IPA v3"
+ipaKrbAuthzData ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaKrbAuthzData"}
+  LDAP-DESC                 "type of PAC preferred by a service"
+  ID                        id-at-ipaKrbAuthzData }
+
+-- X-ORIGIN: "IPA v4"
+ipaAssignedIDView ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"ipaAssignedIDView"}
+  LDAP-DESC                 "DN of view assigned to this particular host"
+  ID                        id-at-ipaAssignedIDView }
+
+-- X-ORIGIN: "IPA v4"
+memberManager ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"memberManager"}
+  LDAP-DESC                 "DNs of entries allowed to manage group membership"
+  ID                        id-at-memberManager }
+
+-- X-ORIGIN: "IPA v2"
+memberUser ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"memberUser"}
+  LDAP-DESC                 "Reference to a principal that performs an action (usually user)."
+  ID                        id-at-memberUser }
+
+-- X-ORIGIN: "IPA v2"
+userCategory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"userCategory"}
+  LDAP-DESC                 "Additional classification for users"
+  ID                        id-at-userCategory }
+
+-- X-ORIGIN: "IPA v2"
+memberHost ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"memberHost"}
+  LDAP-DESC                 "Reference to a device where the operation takes place (usually host)."
+  ID                        id-at-memberHost }
+
+-- X-ORIGIN: "IPA v2"
+hostCategory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"hostCategory"}
+  LDAP-DESC                 "Additional classification for hosts"
+  ID                        id-at-hostCategory }
+
+-- X-ORIGIN: "IPA v2"
+serviceCategory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"serviceCategory"}
+  LDAP-DESC                 "Additional classification for services"
+  ID                        id-at-serviceCategory }
+
+-- X-ORIGIN: "IPA v2"
+memberService ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"memberService"}
+  LDAP-DESC                 "Reference to the pam service of this operation."
+  ID                        id-at-memberService }
+
+-- X-ORIGIN: "IPA v2"
+ipaPermissionType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"ipaPermissionType"}
+  LDAP-DESC                 "IPA permission flags"
+  ID                        id-at-ipaPermissionType }
+
+-- X-ORIGIN: "IPA v2"
+ipaEnabledFlag ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"ipaEnabledFlag"}
+  LDAP-DESC                 "The flag to show if the association is active or should be ignored"
+  ID                        id-at-ipaEnabledFlag }
+
+-- X-ORIGIN: "IPA v2"
+sourceHost ATTRIBUTE ::= {
+  SUBTYPE OF                memberHost
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"sourceHost"}
+  LDAP-DESC                 "Link to a host or group of hosts"
+  ID                        id-at-sourceHost }
+
+-- X-ORIGIN: "IPA v2"
+externalHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"externalHost"}
+  LDAP-DESC                 "Multivalue string attribute that allows storing host names."
+  ID                        id-at-externalHost }
+
+-- X-ORIGIN: "IPA v2"
+sourceHostCategory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sourceHostCategory"}
+  LDAP-DESC                 "Additional classification for hosts"
+  ID                        id-at-sourceHostCategory }
+
+-- X-ORIGIN: "IPA v2"
+accessRuleType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"accessRuleType"}
+  LDAP-DESC                 "The flag to represent if it is allow or deny rule."
+  ID                        id-at-accessRuleType }
+
+-- X-ORIGIN: "IPA v2"
+accessTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"accessTime"}
+  LDAP-DESC                 "Access time"
+  ID                        id-at-accessTime }
+
+-- X-ORIGIN: "IPA v2"
+nisDomainName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nisDomainName"}
+  LDAP-DESC                 "NIS domain name."
+  ID                        id-at-nisDomainName }
+
+-- X-ORIGIN: "IPA v2"
+hostCApolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  ORDERING MATCHING RULE    caseIgnoreOrderingMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"hostCApolicy"}
+  LDAP-DESC                 "Policy on how to treat host requests for cert operations."
+  ID                        id-at-hostCApolicy }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdMaxRepeat ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaPwdMaxRepeat"}
+  ID                        id-at-ipaPwdMaxRepeat }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdMaxSequence ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaPwdMaxSequence"}
+  ID                        id-at-ipaPwdMaxSequence }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdDictCheck ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"ipaPwdDictCheck"}
+  ID                        id-at-ipaPwdDictCheck }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdUserCheck ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"ipaPwdUserCheck"}
+  ID                        id-at-ipaPwdUserCheck }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdDcredit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaPwdDcredit"}
+  ID                        id-at-ipaPwdDcredit }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdUcredit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaPwdUcredit"}
+  ID                        id-at-ipaPwdUcredit }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdLcredit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaPwdLcredit"}
+  ID                        id-at-ipaPwdLcredit }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdOcredit ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"ipaPwdOcredit"}
+  ID                        id-at-ipaPwdOcredit }
+
+-- Object classes
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { fqdn }
+  MAY CONTAIN               { userPassword
+                              | ipaClientVersion
+                              | enrolledBy
+                              | memberOf
+                              | userClass
+                              | ipaAssignedIDView }
+  LDAP-NAME                 {"ipaHost"}
+  ID                        id-oc-ipaHost }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { ipaUniqueID }
+  LDAP-NAME                 {"ipaObject"}
+  LDAP-DESC                 "IPA objectclass"
+  ID                        id-oc-ipaObject }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaEntitlement OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { ipaEntitlementId }
+  MAY CONTAIN               { userPKCS12
+                              | userCertificate }
+  LDAP-NAME                 {"ipaEntitlement"}
+  LDAP-DESC                 "IPA Entitlement object"
+  ID                        id-oc-ipaEntitlement }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaPermission OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { ipaPermissionType }
+  LDAP-NAME                 {"ipaPermission"}
+  LDAP-DESC                 "IPA Permission objectclass"
+  ID                        id-oc-ipaPermission }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { memberOf
+                              | managedBy
+                              | ipaKrbAuthzData }
+  LDAP-NAME                 {"ipaService"}
+  LDAP-DESC                 "IPA service objectclass"
+  ID                        id-oc-ipaService }
+
+-- X-ORIGIN: "IPA v2"
+nestedGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { groupOfNames }
+  MAY CONTAIN               { memberOf }
+  LDAP-NAME                 {"nestedGroup"}
+  LDAP-DESC                 "Group that supports nesting"
+  ID                        id-oc-nestedGroup }
+
+-- X-ORIGIN: "IPA v2"
+ipaUserGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { nestedGroup }
+  MAY CONTAIN               { memberManager }
+  LDAP-NAME                 {"ipaUserGroup"}
+  LDAP-DESC                 "IPA user group object class"
+  ID                        id-oc-ipaUserGroup }
+
+-- X-ORIGIN: "IPA v2"
+ipaHostGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { nestedGroup }
+  MAY CONTAIN               { memberManager }
+  LDAP-NAME                 {"ipaHostGroup"}
+  LDAP-DESC                 "IPA host group object class"
+  ID                        id-oc-ipaHostGroup }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaAssociation OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      abstract
+  MUST CONTAIN              { ipaUniqueID
+                              | commonName }
+  MAY CONTAIN               { memberUser
+                              | userCategory
+                              | memberHost
+                              | hostCategory
+                              | ipaEnabledFlag
+                              | description }
+  LDAP-NAME                 {"ipaAssociation"}
+  ID                        id-oc-ipaAssociation }
+
+-- X-ORIGIN: "IPA v2"
+ipaHBACRule OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipaAssociation }
+  MUST CONTAIN              { accessRuleType }
+  MAY CONTAIN               { sourceHost
+                              | sourceHostCategory
+                              | serviceCategory
+                              | memberService
+                              | externalHost
+                              | accessTime }
+  LDAP-NAME                 {"ipaHBACRule"}
+  ID                        id-oc-ipaHBACRule }
+
+-- X-ORIGIN: "IPA v2"
+ipaNISNetgroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipaAssociation }
+  MAY CONTAIN               { externalHost
+                              | nisDomainName
+                              | member
+                              | memberOf }
+  LDAP-NAME                 {"ipaNISNetgroup"}
+  LDAP-DESC                 "IPA version of NIS netgroup"
+  ID                        id-oc-ipaNISNetgroup }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaCAaccess OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { member
+                              | hostCApolicy }
+  LDAP-NAME                 {"ipaCAaccess"}
+  ID                        id-oc-ipaCAaccess }
+
+-- X-ORIGIN: "IPA v2"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+ipaHBACService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | memberOf }
+  LDAP-NAME                 {"ipaHBACService"}
+  ID                        id-oc-ipaHBACService }
+
+-- X-ORIGIN: "IPA v2"
+ipaHBACServiceGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { groupOfNames }
+  LDAP-NAME                 {"ipaHBACServiceGroup"}
+  LDAP-DESC                 "IPA HBAC service group object class"
+  ID                        id-oc-ipaHBACServiceGroup }
+
+-- X-ORIGIN: "IPA v4"
+ipaPwdPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { ipaPwdMaxRepeat
+                              | ipaPwdMaxSequence
+                              | ipaPwdDictCheck
+                              | ipaPwdUserCheck
+                              | ipaPwdDcredit
+                              | ipaPwdUcredit
+                              | ipaPwdLcredit
+                              | ipaPwdOcredit
+                              | passwordGraceLimit }
+  LDAP-NAME                 {"ipaPwdPolicy"}
+  LDAP-DESC                 "IPA Password policy object class"
+  ID                        id-oc-ipaPwdPolicy }
+END

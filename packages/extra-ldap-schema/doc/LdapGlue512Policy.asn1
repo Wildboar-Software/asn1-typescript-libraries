@@ -1,0 +1,129 @@
+-- Derived from data/ldap-schema/glue/5-12-Policy.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapGlue512Policy DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2PolicyID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 14 1 }
+id-at-gLUE2PolicyScheme OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 14 2 }
+id-at-gLUE2PolicyRule OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 14 3 }
+id-at-gLUE2PolicyUserDomainForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 14 4 }
+id-oc-gLUE2Policy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 14 }
+id-at-gLUE2AccessPolicyEndpointForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 15 1 }
+id-oc-gLUE2AccessPolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 15 }
+id-at-gLUE2MappingPolicyShareForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 16 1 }
+id-oc-gLUE2MappingPolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 16 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2PolicyID" lowercased so the assignment is a valuereference.
+gLUE2PolicyID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2PolicyID"}
+  LDAP-DESC                 "Scheme adopted to define the policy rules"
+  ID                        id-at-gLUE2PolicyID }
+
+-- initial capital of "GLUE2PolicyScheme" lowercased so the assignment is a valuereference.
+gLUE2PolicyScheme ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2PolicyScheme"}
+  LDAP-DESC                 "Scheme adopted to define the policy rules"
+  ID                        id-at-gLUE2PolicyScheme }
+
+-- initial capital of "GLUE2PolicyRule" lowercased so the assignment is a valuereference.
+gLUE2PolicyRule ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2PolicyRule"}
+  LDAP-DESC                 "A policy rule"
+  ID                        id-at-gLUE2PolicyRule }
+
+-- initial capital of "GLUE2PolicyUserDomainForeignKey" lowercased so the assignment is a valuereference.
+gLUE2PolicyUserDomainForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2PolicyUserDomainForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2PolicyUserDomainForeignKey }
+
+-- initial capital of "GLUE2AccessPolicyEndpointForeignKey" lowercased so the assignment is a valuereference.
+gLUE2AccessPolicyEndpointForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2AccessPolicyEndpointForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2AccessPolicyEndpointForeignKey }
+
+-- initial capital of "GLUE2MappingPolicyShareForeignKey" lowercased so the assignment is a valuereference.
+gLUE2MappingPolicyShareForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2MappingPolicyShareForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2MappingPolicyShareForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2Policy" lowercased so the assignment is a valuereference.
+gLUE2Policy OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2PolicyID
+                              | gLUE2PolicyScheme
+                              | gLUE2PolicyRule }
+  MAY CONTAIN               { gLUE2PolicyUserDomainForeignKey }
+  LDAP-NAME                 {"GLUE2Policy"}
+  LDAP-DESC                 "A policy"
+  ID                        id-oc-gLUE2Policy }
+
+-- initial capital of "GLUE2AccessPolicy" lowercased so the assignment is a valuereference.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+gLUE2AccessPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gLUE2AccessPolicyEndpointForeignKey }
+  LDAP-NAME                 {"GLUE2AccessPolicy"}
+  LDAP-DESC                 "Statements, rules or assertions that provide coarse-granularity information about the authorization of access by groups of actors to an Endpoint"
+  ID                        id-oc-gLUE2AccessPolicy }
+
+-- initial capital of "GLUE2MappingPolicy" lowercased so the assignment is a valuereference.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+gLUE2MappingPolicy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gLUE2MappingPolicyShareForeignKey }
+  LDAP-NAME                 {"GLUE2MappingPolicy"}
+  LDAP-DESC                 "Statements, rules or assertions that provide coarse-granularity information about the mapping or UserDomain requests to a Share"
+  ID                        id-oc-gLUE2MappingPolicy }
+END

@@ -1,0 +1,127 @@
+-- Derived from data/ldap-schema/glue/7-02-StorageServiceCapacity.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue702StorageServiceCapacity DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2StorageServiceCapacityID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 1 }
+id-at-gLUE2StorageServiceCapacityType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 2 }
+id-at-gLUE2StorageServiceCapacityTotalSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 3 }
+id-at-gLUE2StorageServiceCapacityFreeSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 4 }
+id-at-gLUE2StorageServiceCapacityUsedSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 5 }
+id-at-gLUE2StorageServiceCapacityReservedSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 6 }
+id-at-gLUE2StorageServiceCapacityStorageServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 7 }
+id-oc-gLUE2StorageServiceCapacity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 28 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2StorageServiceCapacityID" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2StorageServiceCapacityID }
+
+-- initial capital of "GLUE2StorageServiceCapacityType" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityType"}
+  LDAP-DESC                 "Type of storage capacity"
+  ID                        id-at-gLUE2StorageServiceCapacityType }
+
+-- initial capital of "GLUE2StorageServiceCapacityTotalSize" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityTotalSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityTotalSize"}
+  LDAP-DESC                 "Size of dedicated storage extent"
+  ID                        id-at-gLUE2StorageServiceCapacityTotalSize }
+
+-- initial capital of "GLUE2StorageServiceCapacityFreeSize" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityFreeSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityFreeSize"}
+  LDAP-DESC                 "Size of free storage extent"
+  ID                        id-at-gLUE2StorageServiceCapacityFreeSize }
+
+-- initial capital of "GLUE2StorageServiceCapacityUsedSize" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityUsedSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityUsedSize"}
+  LDAP-DESC                 "Size of used storage extent"
+  ID                        id-at-gLUE2StorageServiceCapacityUsedSize }
+
+-- initial capital of "GLUE2StorageServiceCapacityReservedSize" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityReservedSize ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityReservedSize"}
+  LDAP-DESC                 "Size of reserved storage extent"
+  ID                        id-at-gLUE2StorageServiceCapacityReservedSize }
+
+-- initial capital of "GLUE2StorageServiceCapacityStorageServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacityStorageServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageServiceCapacityStorageServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2StorageServiceCapacityStorageServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2StorageServiceCapacity" lowercased so the assignment is a valuereference.
+gLUE2StorageServiceCapacity OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2StorageServiceCapacityID
+                              | gLUE2StorageServiceCapacityType
+                              | gLUE2StorageServiceCapacityStorageServiceForeignKey }
+  MAY CONTAIN               { gLUE2StorageServiceCapacityTotalSize
+                              | gLUE2StorageServiceCapacityFreeSize
+                              | gLUE2StorageServiceCapacityUsedSize
+                              | gLUE2StorageServiceCapacityReservedSize }
+  LDAP-NAME                 {"GLUE2StorageServiceCapacity"}
+  LDAP-DESC                 "Description of the size and state of an homogeneous storage extent"
+  ID                        id-oc-gLUE2StorageServiceCapacity }
+END

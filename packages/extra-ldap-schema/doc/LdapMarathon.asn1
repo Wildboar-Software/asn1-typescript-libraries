@@ -1,0 +1,54 @@
+-- Derived from data/ldap-schema/marathon.schema
+-- Upstream: https://github.com/ContainX/marathon-ldap/blob/ce469b5d9f748c71a83dc1c18c0f4261eafae0ff/ldap/marathon.schema#L4
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapMarathon DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, commonName, directoryString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-marathonAccessRule OBJECT IDENTIFIER ::= { 2 5 6 9 1 1 }
+id-oc-marathonAccess OBJECT IDENTIFIER ::= { 2 5 6 9 1 }
+id-oc-marathonUser OBJECT IDENTIFIER ::= { 2 5 6 9 2 }
+
+-- Attribute types
+
+marathonAccessRule ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"marathonAccessRule"}
+  LDAP-DESC                 "marathon-ldap permissions in json format."
+  ID                        id-at-marathonAccessRule }
+
+-- Object classes
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+marathonAccess OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { marathonAccessRule
+                              | commonName }
+  LDAP-NAME                 {"marathonAccess"}
+  LDAP-DESC                 "marathon-ldap group with permissions"
+  ID                        id-oc-marathonAccess }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+marathonUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  LDAP-NAME                 {"marathonUser"}
+  LDAP-DESC                 "marathon User"
+  ID                        id-oc-marathonUser }
+END

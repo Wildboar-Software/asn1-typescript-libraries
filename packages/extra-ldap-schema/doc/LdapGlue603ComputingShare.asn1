@@ -1,0 +1,644 @@
+-- Derived from data/ldap-schema/glue/6-03-ComputingShare.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue603ComputingShare DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Share
+    FROM LdapGlue508Share ;
+
+-- Object identifiers
+
+id-at-gLUE2ComputingShareMappingQueue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 1 }
+id-at-gLUE2ComputingShareMaxWallTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 2 }
+id-at-gLUE2ComputingShareMaxMultiSlotWallTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 3 }
+id-at-gLUE2ComputingShareMinWallTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 4 }
+id-at-gLUE2ComputingShareDefaultWallTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 5 }
+id-at-gLUE2ComputingShareMaxCPUTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 6 }
+id-at-gLUE2ComputingShareMaxTotalCPUTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 7 }
+id-at-gLUE2ComputingShareMinCPUTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 8 }
+id-at-gLUE2ComputingShareDefaultCPUTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 9 }
+id-at-gLUE2ComputingShareMaxTotalJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 10 }
+id-at-gLUE2ComputingShareMaxRunningJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 11 }
+id-at-gLUE2ComputingShareMaxWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 12 }
+id-at-gLUE2ComputingShareMaxPreLRMSWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 13 }
+id-at-gLUE2ComputingShareMaxUserRunningJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 14 }
+id-at-gLUE2ComputingShareMaxSlotsPerJob OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 15 }
+id-at-gLUE2ComputingShareMaxStageInStreams OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 16 }
+id-at-gLUE2ComputingShareMaxStageOutStreams OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 17 }
+id-at-gLUE2ComputingShareSchedulingPolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 18 }
+id-at-gLUE2ComputingShareMaxMainMemory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 19 }
+id-at-gLUE2ComputingShareGuaranteedMainMemory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 20 }
+id-at-gLUE2ComputingShareMaxVirtualMemory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 21 }
+id-at-gLUE2ComputingShareGuaranteedVirtualMemory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 22 }
+id-at-gLUE2ComputingShareMaxDiskSpace OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 23 }
+id-at-gLUE2ComputingShareDefaultStorageService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 24 }
+id-at-gLUE2ComputingSharePreemption OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 25 }
+id-at-gLUE2ComputingShareServingState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 26 }
+id-at-gLUE2ComputingShareTotalJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 27 }
+id-at-gLUE2ComputingShareRunningJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 28 }
+id-at-gLUE2ComputingShareLocalRunningJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 29 }
+id-at-gLUE2ComputingShareWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 30 }
+id-at-gLUE2ComputingShareLocalWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 31 }
+id-at-gLUE2ComputingShareSuspendedJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 32 }
+id-at-gLUE2ComputingShareLocalSuspendedJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 33 }
+id-at-gLUE2ComputingShareStagingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 34 }
+id-at-gLUE2ComputingShareLocalStagingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 35 }
+id-at-gLUE2ComputingSharePreLRMSWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 36 }
+id-at-gLUE2ComputingShareEstimatedAverageWaitingTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 37 }
+id-at-gLUE2ComputingShareEstimatedWorstWaitingTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 38 }
+id-at-gLUE2ComputingShareFreeSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 39 }
+id-at-gLUE2ComputingShareFreeSlotsWithDuration OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 40 }
+id-at-gLUE2ComputingShareUsedSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 41 }
+id-at-gLUE2ComputingShareRequestedSlots OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 42 }
+id-at-gLUE2ComputingShareReservationPolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 43 }
+id-at-gLUE2ComputingShareTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 44 }
+id-at-gLUE2ComputingShareComputingEndpointForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 45 }
+id-at-gLUE2ComputingShareExecutionEnvironmentForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 46 }
+id-at-gLUE2ComputingShareComputingServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 47 }
+id-oc-gLUE2ComputingShare OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 19 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ComputingShareMappingQueue" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMappingQueue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMappingQueue"}
+  LDAP-DESC                 "Name of a queue available in the underlying computing manager (i.e., LRMS) where jobs of this share are submitted (different shares can be mapped into the same queue; it is not foreseen that a single share can be mapped into many different queues)"
+  ID                        id-at-gLUE2ComputingShareMappingQueue }
+
+-- initial capital of "GLUE2ComputingShareMaxWallTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxWallTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxWallTime"}
+  LDAP-DESC                 "The maximum obtainable wall clock time per slot that can be granted to the job upon user request (unnormalized value)"
+  ID                        id-at-gLUE2ComputingShareMaxWallTime }
+
+-- initial capital of "GLUE2ComputingShareMaxMultiSlotWallTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxMultiSlotWallTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxMultiSlotWallTime"}
+  LDAP-DESC                 "The maximum obtainable wall clock time limit that MAY be granted to a multi-slot job upon user request"
+  ID                        id-at-gLUE2ComputingShareMaxMultiSlotWallTime }
+
+-- initial capital of "GLUE2ComputingShareMinWallTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMinWallTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMinWallTime"}
+  LDAP-DESC                 "The minimum wall clock time per slot for a job (unnormalized value); if a job requests a lower time, than it can be rejected; if a job requests at least this value, but runs for a shorter time, than it might be accounted for this value"
+  ID                        id-at-gLUE2ComputingShareMinWallTime }
+
+-- initial capital of "GLUE2ComputingShareDefaultWallTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareDefaultWallTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareDefaultWallTime"}
+  LDAP-DESC                 "The default wall clock time per slot allowed to a job by the computing manager (i.e., LRMS) if no limit is requested in the job submission description. Once this time is expired the job will most likely be killed or removed from the queue (unnormalized value)"
+  ID                        id-at-gLUE2ComputingShareDefaultWallTime }
+
+-- initial capital of "GLUE2ComputingShareMaxCPUTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxCPUTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxCPUTime"}
+  LDAP-DESC                 "The maximum obtainable CPU time that can be granted to the job upon user request per slot (unnormalized value)"
+  ID                        id-at-gLUE2ComputingShareMaxCPUTime }
+
+-- initial capital of "GLUE2ComputingShareMaxTotalCPUTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxTotalCPUTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxTotalCPUTime"}
+  LDAP-DESC                 "The maximum obtainable CPU time that can be granted to the job upon user request across all assigned slots; this property is a limit for the sum of the CPU time used in all the slots occupied by a multi-slot job (unnormalized value)"
+  ID                        id-at-gLUE2ComputingShareMaxTotalCPUTime }
+
+-- initial capital of "GLUE2ComputingShareMinCPUTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMinCPUTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMinCPUTime"}
+  LDAP-DESC                 "The minimum CPU time per slot for a job (unnormalized value); if a job requests a lower time, than it can be rejected; if a job requests at least this value, but uses the CPU for a shorter time, than it might be accounted for this value"
+  ID                        id-at-gLUE2ComputingShareMinCPUTime }
+
+-- initial capital of "GLUE2ComputingShareDefaultCPUTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareDefaultCPUTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareDefaultCPUTime"}
+  LDAP-DESC                 "The default CPU time per slot allowed to each job by the computing manager (i.e., LRMS ) if no limit is requested in the job submission description (unnormalized value)"
+  ID                        id-at-gLUE2ComputingShareDefaultCPUTime }
+
+-- initial capital of "GLUE2ComputingShareMaxTotalJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxTotalJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxTotalJobs"}
+  LDAP-DESC                 "The maximum allowed number of jobs in this share"
+  ID                        id-at-gLUE2ComputingShareMaxTotalJobs }
+
+-- initial capital of "GLUE2ComputingShareMaxRunningJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxRunningJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxRunningJobs"}
+  LDAP-DESC                 "The maximum allowed number of jobs in running state in this share"
+  ID                        id-at-gLUE2ComputingShareMaxRunningJobs }
+
+-- initial capital of "GLUE2ComputingShareMaxWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxWaitingJobs"}
+  LDAP-DESC                 "The maximum allowed number of jobs in waiting state in this share"
+  ID                        id-at-gLUE2ComputingShareMaxWaitingJobs }
+
+-- initial capital of "GLUE2ComputingShareMaxPreLRMSWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxPreLRMSWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxPreLRMSWaitingJobs"}
+  LDAP-DESC                 "The maximum allowed number of jobs that are in the Grid layer waiting to be passed to the underlying computing manager (i.e., LRMS) for this share"
+  ID                        id-at-gLUE2ComputingShareMaxPreLRMSWaitingJobs }
+
+-- initial capital of "GLUE2ComputingShareMaxUserRunningJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxUserRunningJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxUserRunningJobs"}
+  LDAP-DESC                 "The maximum allowed number of jobs in running state per Grid user in this share"
+  ID                        id-at-gLUE2ComputingShareMaxUserRunningJobs }
+
+-- initial capital of "GLUE2ComputingShareMaxSlotsPerJob" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxSlotsPerJob ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxSlotsPerJob"}
+  LDAP-DESC                 "The maximum number of slots which could be allocated to a single job (defined to be 1 for a computing service accepting only single-slot jobs)"
+  ID                        id-at-gLUE2ComputingShareMaxSlotsPerJob }
+
+-- initial capital of "GLUE2ComputingShareMaxStageInStreams" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxStageInStreams ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxStageInStreams"}
+  LDAP-DESC                 "The maximum number of streams to stage files in"
+  ID                        id-at-gLUE2ComputingShareMaxStageInStreams }
+
+-- initial capital of "GLUE2ComputingShareMaxStageOutStreams" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxStageOutStreams ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxStageOutStreams"}
+  LDAP-DESC                 "The maximum number of streams to stage files out"
+  ID                        id-at-gLUE2ComputingShareMaxStageOutStreams }
+
+-- initial capital of "GLUE2ComputingShareSchedulingPolicy" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareSchedulingPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareSchedulingPolicy"}
+  LDAP-DESC                 "Implied scheduling policy of the share"
+  ID                        id-at-gLUE2ComputingShareSchedulingPolicy }
+
+-- initial capital of "GLUE2ComputingShareMaxMainMemory" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxMainMemory ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxMainMemory"}
+  LDAP-DESC                 "The maximum RAM that a job can use"
+  ID                        id-at-gLUE2ComputingShareMaxMainMemory }
+
+-- initial capital of "GLUE2ComputingShareGuaranteedMainMemory" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareGuaranteedMainMemory ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareGuaranteedMainMemory"}
+  LDAP-DESC                 "The amount of physical RAM that a job is guaranteed to have available for its use"
+  ID                        id-at-gLUE2ComputingShareGuaranteedMainMemory }
+
+-- initial capital of "GLUE2ComputingShareMaxVirtualMemory" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxVirtualMemory ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxVirtualMemory"}
+  LDAP-DESC                 "The maximum virtual memory that a job can use"
+  ID                        id-at-gLUE2ComputingShareMaxVirtualMemory }
+
+-- initial capital of "GLUE2ComputingShareGuaranteedVirtualMemory" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareGuaranteedVirtualMemory ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareGuaranteedVirtualMemory"}
+  LDAP-DESC                 "The amount of virtual memory that a job is guaranteed to have available for its use"
+  ID                        id-at-gLUE2ComputingShareGuaranteedVirtualMemory }
+
+-- initial capital of "GLUE2ComputingShareMaxDiskSpace" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareMaxDiskSpace ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareMaxDiskSpace"}
+  LDAP-DESC                 "The maximum disk space that a job can use excluding shared area such as cache"
+  ID                        id-at-gLUE2ComputingShareMaxDiskSpace }
+
+-- initial capital of "GLUE2ComputingShareDefaultStorageService" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareDefaultStorageService ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareDefaultStorageService"}
+  LDAP-DESC                 "ID of the default Storage Service to be used to store files by jobs in case no destination Storage Service is explicitly stated"
+  ID                        id-at-gLUE2ComputingShareDefaultStorageService }
+
+-- initial capital of "GLUE2ComputingSharePreemption" lowercased so the assignment is a valuereference.
+gLUE2ComputingSharePreemption ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingSharePreemption"}
+  LDAP-DESC                 "True if the computing manager (i.e., LRMS) enables preemption of jobs; a preempted job is supposed to be automatically resumed"
+  ID                        id-at-gLUE2ComputingSharePreemption }
+
+-- initial capital of "GLUE2ComputingShareServingState" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareServingState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareServingState"}
+  LDAP-DESC                 "A state specifying if the share is open to place new requests and if it is open to offer the already present requests for execution"
+  ID                        id-at-gLUE2ComputingShareServingState }
+
+-- initial capital of "GLUE2ComputingShareTotalJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareTotalJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareTotalJobs"}
+  LDAP-DESC                 "Number of total jobs in any state"
+  ID                        id-at-gLUE2ComputingShareTotalJobs }
+
+-- initial capital of "GLUE2ComputingShareRunningJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareRunningJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareRunningJobs"}
+  LDAP-DESC                 "Number of running jobs submitted via any type of interface (local and Grid)"
+  ID                        id-at-gLUE2ComputingShareRunningJobs }
+
+-- initial capital of "GLUE2ComputingShareLocalRunningJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareLocalRunningJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareLocalRunningJobs"}
+  LDAP-DESC                 "Number of running jobs submitted via a local interface"
+  ID                        id-at-gLUE2ComputingShareLocalRunningJobs }
+
+-- initial capital of "GLUE2ComputingShareWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareWaitingJobs"}
+  LDAP-DESC                 "Number of jobs waiting in the underlying computing managers (i.e., LRMS) submitted via any type of interface (local and Grid)"
+  ID                        id-at-gLUE2ComputingShareWaitingJobs }
+
+-- initial capital of "GLUE2ComputingShareLocalWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareLocalWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareLocalWaitingJobs"}
+  LDAP-DESC                 "Number of jobs waiting in the underlying computing managers (i.e., LRMS) submitted via a local interface"
+  ID                        id-at-gLUE2ComputingShareLocalWaitingJobs }
+
+-- initial capital of "GLUE2ComputingShareSuspendedJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareSuspendedJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareSuspendedJobs"}
+  LDAP-DESC                 "Number of jobs which started their execution, but are suspended (e.g., for preemption)"
+  ID                        id-at-gLUE2ComputingShareSuspendedJobs }
+
+-- initial capital of "GLUE2ComputingShareLocalSuspendedJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareLocalSuspendedJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareLocalSuspendedJobs"}
+  LDAP-DESC                 "Number of local jobs which started their execution, but are suspended (e.g., for preemption)"
+  ID                        id-at-gLUE2ComputingShareLocalSuspendedJobs }
+
+-- initial capital of "GLUE2ComputingShareStagingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareStagingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareStagingJobs"}
+  LDAP-DESC                 "Number of jobs that are staging files in/out"
+  ID                        id-at-gLUE2ComputingShareStagingJobs }
+
+-- initial capital of "GLUE2ComputingShareLocalStagingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareLocalStagingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareLocalStagingJobs"}
+  LDAP-DESC                 "Number of local jobs that are staging files in/out"
+  ID                        id-at-gLUE2ComputingShareLocalStagingJobs }
+
+-- initial capital of "GLUE2ComputingSharePreLRMSWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingSharePreLRMSWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingSharePreLRMSWaitingJobs"}
+  LDAP-DESC                 "Number of jobs that are in the Grid layer waiting to be passed to the underlying computing manager (i.e., LRMS)"
+  ID                        id-at-gLUE2ComputingSharePreLRMSWaitingJobs }
+
+-- initial capital of "GLUE2ComputingShareEstimatedAverageWaitingTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareEstimatedAverageWaitingTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareEstimatedAverageWaitingTime"}
+  LDAP-DESC                 "Estimated time to last for a new job from the acceptance to the start of its execution"
+  ID                        id-at-gLUE2ComputingShareEstimatedAverageWaitingTime }
+
+-- initial capital of "GLUE2ComputingShareEstimatedWorstWaitingTime" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareEstimatedWorstWaitingTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareEstimatedWorstWaitingTime"}
+  LDAP-DESC                 "Estimated worst waiting time assuming that all jobs run for the maximum wall time"
+  ID                        id-at-gLUE2ComputingShareEstimatedWorstWaitingTime }
+
+-- initial capital of "GLUE2ComputingShareFreeSlots" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareFreeSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareFreeSlots"}
+  LDAP-DESC                 "Number of free slots"
+  ID                        id-at-gLUE2ComputingShareFreeSlots }
+
+-- initial capital of "GLUE2ComputingShareFreeSlotsWithDuration" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareFreeSlotsWithDuration ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareFreeSlotsWithDuration"}
+  LDAP-DESC                 "Number of free slots with their time limits. Syntax: ns[:t] [ns:t]* where the pair ns:t means that there are ns free slots for the duration of t (expressed in seconds); the time limit information is optional"
+  ID                        id-at-gLUE2ComputingShareFreeSlotsWithDuration }
+
+-- initial capital of "GLUE2ComputingShareUsedSlots" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareUsedSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareUsedSlots"}
+  LDAP-DESC                 "Number of slots used by running jobs"
+  ID                        id-at-gLUE2ComputingShareUsedSlots }
+
+-- initial capital of "GLUE2ComputingShareRequestedSlots" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareRequestedSlots ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingShareRequestedSlots"}
+  LDAP-DESC                 "Number of slots which are needed to execute all waiting and staging jobs"
+  ID                        id-at-gLUE2ComputingShareRequestedSlots }
+
+-- initial capital of "GLUE2ComputingShareReservationPolicy" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareReservationPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareReservationPolicy"}
+  LDAP-DESC                 "Type of reservation policy"
+  ID                        id-at-gLUE2ComputingShareReservationPolicy }
+
+-- initial capital of "GLUE2ComputingShareTag" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareTag ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareTag"}
+  LDAP-DESC                 "UserDomain-defined tag (the values SHOULD use namespace to avoid collision)"
+  ID                        id-at-gLUE2ComputingShareTag }
+
+-- initial capital of "GLUE2ComputingShareComputingEndpointForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareComputingEndpointForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareComputingEndpointForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingShareComputingEndpointForeignKey }
+
+-- initial capital of "GLUE2ComputingShareExecutionEnvironmentForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareExecutionEnvironmentForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareExecutionEnvironmentForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingShareExecutionEnvironmentForeignKey }
+
+-- initial capital of "GLUE2ComputingShareComputingServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingShareComputingServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingShareComputingServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingShareComputingServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ComputingShare" lowercased so the assignment is a valuereference.
+gLUE2ComputingShare OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Share }
+  MUST CONTAIN              { gLUE2ComputingShareServingState }
+  MAY CONTAIN               { gLUE2ComputingShareMappingQueue
+                              | gLUE2ComputingShareMaxWallTime
+                              | gLUE2ComputingShareMaxMultiSlotWallTime
+                              | gLUE2ComputingShareMinWallTime
+                              | gLUE2ComputingShareDefaultWallTime
+                              | gLUE2ComputingShareMaxCPUTime
+                              | gLUE2ComputingShareMaxTotalCPUTime
+                              | gLUE2ComputingShareMinCPUTime
+                              | gLUE2ComputingShareDefaultCPUTime
+                              | gLUE2ComputingShareMaxTotalJobs
+                              | gLUE2ComputingShareMaxRunningJobs
+                              | gLUE2ComputingShareMaxWaitingJobs
+                              | gLUE2ComputingShareMaxPreLRMSWaitingJobs
+                              | gLUE2ComputingShareMaxUserRunningJobs
+                              | gLUE2ComputingShareMaxSlotsPerJob
+                              | gLUE2ComputingShareMaxStageInStreams
+                              | gLUE2ComputingShareMaxStageOutStreams
+                              | gLUE2ComputingShareSchedulingPolicy
+                              | gLUE2ComputingShareMaxMainMemory
+                              | gLUE2ComputingShareGuaranteedMainMemory
+                              | gLUE2ComputingShareMaxVirtualMemory
+                              | gLUE2ComputingShareGuaranteedVirtualMemory
+                              | gLUE2ComputingShareMaxDiskSpace
+                              | gLUE2ComputingShareDefaultStorageService
+                              | gLUE2ComputingSharePreemption
+                              | gLUE2ComputingShareTotalJobs
+                              | gLUE2ComputingShareRunningJobs
+                              | gLUE2ComputingShareLocalRunningJobs
+                              | gLUE2ComputingShareWaitingJobs
+                              | gLUE2ComputingShareLocalWaitingJobs
+                              | gLUE2ComputingShareSuspendedJobs
+                              | gLUE2ComputingShareLocalSuspendedJobs
+                              | gLUE2ComputingShareStagingJobs
+                              | gLUE2ComputingShareLocalStagingJobs
+                              | gLUE2ComputingSharePreLRMSWaitingJobs
+                              | gLUE2ComputingShareEstimatedAverageWaitingTime
+                              | gLUE2ComputingShareEstimatedWorstWaitingTime
+                              | gLUE2ComputingShareFreeSlots
+                              | gLUE2ComputingShareFreeSlotsWithDuration
+                              | gLUE2ComputingShareUsedSlots
+                              | gLUE2ComputingShareRequestedSlots
+                              | gLUE2ComputingShareReservationPolicy
+                              | gLUE2ComputingShareTag
+                              | gLUE2ComputingShareComputingEndpointForeignKey
+                              | gLUE2ComputingShareExecutionEnvironmentForeignKey
+                              | gLUE2ComputingShareComputingServiceForeignKey }
+  LDAP-NAME                 {"GLUE2ComputingShare"}
+  LDAP-DESC                 "A utilization target for a set of execution environments defined by a set of configuration parameters and characterized by status information"
+  ID                        id-oc-gLUE2ComputingShare }
+END

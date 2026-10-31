@@ -1,0 +1,128 @@
+-- Derived from data/ldap-schema/vmwperson.ldif
+-- Upstream: https://github.com/vmware-automation/solutions/blob/86a84e699f849cfa1f6e883e8489090d7a806b00/IDM_OID_Blueprint/mod_vmwperson.ldif#L4
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapVmwperson DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  organizationalPerson, person
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  inetOrgPerson
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-customernumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 25 }
+id-at-createdBy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 2 15 }
+id-at-userType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 1 }
+id-at-userStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 2 }
+id-at-jiveID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 10 }
+id-at-modifiedBy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 20 }
+id-at-vmwEnrollmentFlag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 30 }
+id-oc-vmwPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 971 21 1 2 80 }
+
+-- Attribute types
+
+customernumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"customernumber"}
+  LDAP-DESC                 "VMware user type attribute for external users. Modified by Anas Perwez of Oracle Corporation on 10/2/2009."
+  ID                        id-at-customernumber }
+
+createdBy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"createdBy"}
+  LDAP-DESC                 "CreatedBy attribute for WebServices & IDM auditing. Created by Steve Tout of Oracle Corporation on 8/14/2007."
+  ID                        id-at-createdBy }
+
+userType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"userType"}
+  LDAP-DESC                 "VMware user type attribute for external users. Modified by Praveena of Oracle Corporation on 8/14/2007."
+  ID                        id-at-userType }
+
+userStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"userStatus"}
+  LDAP-DESC                 "VMware user status attribute for users. Created by Steve Tout of Oracle Corporation on 8/14/2007."
+  ID                        id-at-userStatus }
+
+jiveID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"jiveID"}
+  LDAP-DESC                 "VMware jiveID attribute for external users. Created by Steve Tout of Oracle Corporation on 8/14/2007."
+  ID                        id-at-jiveID }
+
+modifiedBy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"modifiedBy"}
+  LDAP-DESC                 "VMware modifiedBy attribute for external users. Created by Steve Tout of Oracle Corporation on 8/14/2007."
+  ID                        id-at-modifiedBy }
+
+vmwEnrollmentFlag ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"vmwEnrollmentFlag"}
+  LDAP-DESC                 "attribute to specify whether the user is Enrolled or not. Created by Anas Perwez for 2-step registration"
+  ID                        id-at-vmwEnrollmentFlag }
+
+-- Object classes
+
+vmwPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson
+                              | organizationalPerson
+                              | person
+                              | top }
+  KIND                      auxiliary
+  MAY CONTAIN               { jiveID
+                              | userStatus
+                              | userType
+                              | createdBy
+                              | modifiedBy
+                              | customernumber
+                              | vmwEnrollmentFlag }
+  LDAP-NAME                 {"vmwPerson"}
+  LDAP-DESC                 "VMware defined objectclass"
+  ID                        id-oc-vmwPerson }
+END

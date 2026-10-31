@@ -1,0 +1,32 @@
+/* eslint-disable */
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
+// export { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
+// export { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
+// export { id_oa_administrativeRole } from "../InformationFramework/id-oa-administrativeRole.va.mjs";
+
+
+/**
+ * @summary administrativeRole
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * administrativeRole ATTRIBUTE ::= {
+ *   WITH SYNTAX             OBJECT-CLASS.&id
+ *   EQUALITY MATCHING RULE  objectIdentifierMatch
+ *   USAGE                   directoryOperation
+ *   LDAP-SYNTAX             oid.&id
+ *   LDAP-NAME               {"administrativeRole"}
+ *   ID                      id-oa-administrativeRole }
+ * ```
+ * 
+ * @constant
+ * @type {ATTRIBUTE}
+ * @implements {ATTRIBUTE}
+ */
+export
+const administrativeRole: ATTRIBUTE = undefined;
+
+/* eslint-enable */

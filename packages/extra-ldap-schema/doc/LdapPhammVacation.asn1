@@ -1,0 +1,112 @@
+-- Derived from data/ldap-schema/phamm-vacation.schema
+-- Upstream: https://github.com/lota/phamm/blob/214387becc629e9d5b8aad10de1664c75ba7b0fe/schema/phamm-vacation.schema#L20
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapPhammVacation DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+    ia5String, octetString, octetStringMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-vacationActive OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 1 }
+id-at-vacationInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 2 }
+id-at-vacationStart OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 3 }
+id-at-vacationEnd OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 4 }
+id-at-vacationForward OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 5 }
+id-at-vacationSubject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 6 }
+id-at-vacationReminder OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 1 7 }
+id-oc-vacation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22339 2 2 1 }
+
+-- Attribute types
+
+vacationActive ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"vacationActive"}
+  LDAP-DESC                 "A flag, for marking the user as being away"
+  ID                        id-at-vacationActive }
+
+vacationInfo ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"vacationInfo"}
+  LDAP-DESC                 "Absentee note to leave behind, while on vacation"
+  ID                        id-at-vacationInfo }
+
+vacationStart ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"vacationStart"}
+  LDAP-DESC                 "Beginning of vacation"
+  ID                        id-at-vacationStart }
+
+vacationEnd ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"vacationEnd"}
+  LDAP-DESC                 "End of vacation"
+  ID                        id-at-vacationEnd }
+
+vacationForward ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"vacationForward"}
+  LDAP-DESC                 "RFC1274: RFC822 Mailbox"
+  ID                        id-at-vacationForward }
+
+vacationSubject ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"vacationSubject"}
+  LDAP-DESC                 "Subject for the vacation message"
+  ID                        id-at-vacationSubject }
+
+vacationReminder ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"vacationReminder"}
+  LDAP-DESC                 "How many hours we should wait before a second email from someone will cause another vacation message to be sent to that email address"
+  ID                        id-at-vacationReminder }
+
+-- Object classes
+
+-- initial capital of "Vacation" lowercased so the assignment is a valuereference.
+vacation OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { vacationActive }
+  MAY CONTAIN               { vacationInfo
+                              | vacationStart
+                              | vacationEnd
+                              | vacationForward
+                              | vacationSubject
+                              | vacationReminder }
+  LDAP-NAME                 {"Vacation"}
+  LDAP-DESC                 "Users vacation status information"
+  ID                        id-oc-vacation }
+END

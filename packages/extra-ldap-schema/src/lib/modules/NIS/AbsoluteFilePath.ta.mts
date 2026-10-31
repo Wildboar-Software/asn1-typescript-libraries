@@ -1,0 +1,28 @@
+/* eslint-disable */
+import {
+    type IA5String
+} from "@wildboar/asn1";
+import * as $ from "@wildboar/asn1/functional";
+
+
+
+/**
+ * @summary AbsoluteFilePath
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * AbsoluteFilePath  ::=  IA5String (SIZE (1..4096))
+ * ```
+ */
+export
+type AbsoluteFilePath = IA5String; // IA5String
+
+export
+const _decode_AbsoluteFilePath: $.ASN1Decoder<AbsoluteFilePath> = $._decodeIA5String;
+
+export
+const _encode_AbsoluteFilePath: $.ASN1Encoder<AbsoluteFilePath> = $._encodeIA5String;
+
+/* eslint-enable */
