@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type DNS_RR_Type = INTEGER;
 
-export
-const _decode_DNS_RR_Type: $.ASN1Decoder<DNS_RR_Type> = $._decodeInteger;
+export function _decode_DNS_RR_Type (el: _Element): DNS_RR_Type {
+    const value = $._decodeInteger(el);
+    if (value < 0 || value > 65535) {
+        throw new ASN1OverflowError("DNS_RR_Type violates INTEGER range");
+    }
+    return value;
+}
 
 export
 const _encode_DNS_RR_Type: $.ASN1Encoder<DNS_RR_Type> = $._encodeInteger;

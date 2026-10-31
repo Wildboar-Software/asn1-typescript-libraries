@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TTL = INTEGER;
 
-export
-const _decode_TTL: $.ASN1Decoder<TTL> = $._decodeInteger;
+export function _decode_TTL (el: _Element): TTL {
+    const value = $._decodeInteger(el);
+    if (value < 0 || value > 4294967295) {
+        throw new ASN1OverflowError("TTL violates INTEGER range");
+    }
+    return value;
+}
 
 export
 const _encode_TTL: $.ASN1Encoder<TTL> = $._encodeInteger;

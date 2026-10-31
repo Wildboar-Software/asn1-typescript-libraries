@@ -1,0 +1,15 @@
+/**
+ * ASN.1 module `LdapGlue508Share`.
+ */
+export * from "./gLUE2Share.oa.mjs";
+export * from "./gLUE2ShareDescription.oa.mjs";
+export * from "./gLUE2ShareEndpointForeignKey.oa.mjs";
+export * from "./gLUE2ShareID.oa.mjs";
+export * from "./gLUE2ShareResourceForeignKey.oa.mjs";
+export * from "./gLUE2ShareServiceForeignKey.oa.mjs";
+export * from "./id-at-gLUE2ShareDescription.va.mjs";
+export * from "./id-at-gLUE2ShareEndpointForeignKey.va.mjs";
+export * from "./id-at-gLUE2ShareID.va.mjs";
+export * from "./id-at-gLUE2ShareResourceForeignKey.va.mjs";
+export * from "./id-at-gLUE2ShareServiceForeignKey.va.mjs";
+export * from "./id-oc-gLUE2Share.va.mjs";

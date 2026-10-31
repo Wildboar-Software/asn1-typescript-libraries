@@ -1,0 +1,15 @@
+/**
+ * ASN.1 module `LdapGlue605Benchmark`.
+ */
+export * from "./gLUE2Benchmark.oa.mjs";
+export * from "./gLUE2BenchmarkComputingManagerForeignKey.oa.mjs";
+export * from "./gLUE2BenchmarkExecutionEnvironmentForeignKey.oa.mjs";
+export * from "./gLUE2BenchmarkID.oa.mjs";
+export * from "./gLUE2BenchmarkType.oa.mjs";
+export * from "./gLUE2BenchmarkValue.oa.mjs";
+export * from "./id-at-gLUE2BenchmarkComputingManagerForeignKey.va.mjs";
+export * from "./id-at-gLUE2BenchmarkExecutionEnvironmentForeignKey.va.mjs";
+export * from "./id-at-gLUE2BenchmarkID.va.mjs";
+export * from "./id-at-gLUE2BenchmarkType.va.mjs";
+export * from "./id-at-gLUE2BenchmarkValue.va.mjs";
+export * from "./id-oc-gLUE2Benchmark.va.mjs";

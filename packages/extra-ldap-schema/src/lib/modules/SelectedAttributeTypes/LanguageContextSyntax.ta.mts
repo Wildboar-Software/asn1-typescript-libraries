@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type PrintableString
+    type PrintableString,
+    type ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type LanguageContextSyntax = PrintableString; // PrintableString
 
-export
-const _decode_LanguageContextSyntax: $.ASN1Decoder<LanguageContextSyntax> = $._decodePrintableString;
+export function _decode_LanguageContextSyntax (el: _Element): LanguageContextSyntax {
+    const value = $._decodePrintableString(el);
+    if (value.length < 2 || value.length > 3) {
+        throw new ASN1SizeError("LanguageContextSyntax violates SIZE constraint");
+    }
+    return value;
+}
 
 export
 const _encode_LanguageContextSyntax: $.ASN1Encoder<LanguageContextSyntax> = $._encodePrintableString;

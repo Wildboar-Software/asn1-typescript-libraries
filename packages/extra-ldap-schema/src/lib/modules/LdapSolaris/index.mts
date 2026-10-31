@@ -1,0 +1,17 @@
+/**
+ * ASN.1 module `LdapSolaris`.
+ */
+export * from "./id-at-mgrpRFC822MailMember.va.mjs";
+export * from "./id-at-nisDomain.va.mjs";
+export * from "./id-at-nisNetIdGroup.va.mjs";
+export * from "./id-at-nisNetIdHost.va.mjs";
+export * from "./id-at-nisNetIdUser.va.mjs";
+export * from "./id-oc-nisDomainObject.va.mjs";
+export * from "./id-oc-nisNetId.va.mjs";
+export * from "./mgrpRFC822MailMember.oa.mjs";
+export * from "./nisDomain.oa.mjs";
+export * from "./nisDomainObject.oa.mjs";
+export * from "./nisNetId.oa.mjs";
+export * from "./nisNetIdGroup.oa.mjs";
+export * from "./nisNetIdHost.oa.mjs";
+export * from "./nisNetIdUser.oa.mjs";

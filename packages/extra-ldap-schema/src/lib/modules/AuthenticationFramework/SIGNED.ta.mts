@@ -3,7 +3,8 @@ import {
     type BIT_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
-    ASN1TagClass as _TagClass
+    ASN1TagClass as _TagClass,
+    ASN1ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
@@ -78,6 +79,9 @@ class SIGNED<ToBeSigned> {
         altSignature: OPTIONAL<BIT_STRING>,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
+        if ((altAlgorithmIdentifier === undefined) !== (altSignature === undefined)) {
+            throw new ASN1ConstructionError("SIGNED requires altAlgorithmIdentifier and altSignature to be both present or both absent");
+        }
         this.toBeSigned = toBeSigned;
         this.algorithmIdentifier = algorithmIdentifier;
         this.signature = signature;

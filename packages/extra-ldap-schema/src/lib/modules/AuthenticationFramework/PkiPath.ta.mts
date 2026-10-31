@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    type ASN1Element as _Element
+    type ASN1Element as _Element,
+    ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
@@ -31,7 +32,11 @@ let _cached_decoder_for_PkiPath: $.ASN1Decoder<PkiPath> | null = null;
 export
 function _decode_PkiPath (el: _Element): PkiPath {
     if (!_cached_decoder_for_PkiPath) { _cached_decoder_for_PkiPath = $._decodeSequenceOf<Certificate>(() => _decode_Certificate); }
-    return _cached_decoder_for_PkiPath(el);
+    const value = _cached_decoder_for_PkiPath(el);
+    if (value.length < 1) {
+        throw new ASN1SizeError("PkiPath violates SIZE constraint");
+    }
+    return value;
 }
 
 let _cached_encoder_for_PkiPath: $.ASN1Encoder<PkiPath> | null = null;

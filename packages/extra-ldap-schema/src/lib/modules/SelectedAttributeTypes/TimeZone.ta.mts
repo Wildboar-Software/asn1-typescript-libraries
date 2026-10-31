@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -19,8 +21,13 @@ import * as $ from "@wildboar/asn1/functional";
 export
 type TimeZone = INTEGER;
 
-export
-const _decode_TimeZone: $.ASN1Decoder<TimeZone> = $._decodeInteger;
+export function _decode_TimeZone (el: _Element): TimeZone {
+    const value = $._decodeInteger(el);
+    if (value < -12 || value > 12) {
+        throw new ASN1OverflowError("TimeZone violates INTEGER range");
+    }
+    return value;
+}
 
 export
 const _encode_TimeZone: $.ASN1Encoder<TimeZone> = $._encodeInteger;
