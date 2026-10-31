@@ -1,38 +1,50 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Remove every space (X.520 clause 7.6.2).
+ */
+function stripSpaces (numeric: string): string {
+    return numeric.replace(/\s+/g, "");
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.4 `numericStringMatch`.
  *
  * Equality of `NumericString` after removing all spaces (clause
- * 7.6.2). Otherwise the same as `caseIgnoreMatch` (case is
- * irrelevant because the characters are numeric).
+ * 7.6.2). Otherwise the same as `caseIgnoreMatch`.
  *
- * Each argument may be an `ASN1Element` or a string.
+ * @param assertion Presented numeric string, with spaces already removed.
+ * @param value Stored `NumericString`, or that string with spaces
+ *  already removed. `MATCH_FLAG_VALUE_NORMALIZED` skips removal.
  */
 export
-function numericStringMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    return numericStringMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.numericString,
-        typeof value === "string" ? value : value.numericString,
-    );
+function numericStringMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = typeof value === "string" ? value : value.numericString;
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
+    return assertion === stored;
 }
 
+numericStringMatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `numericStringMatch` on two numeric strings. Spaces are removed
- * here.
- *
- * @param assertion Presented numeric string.
- * @param value Stored numeric string.
- * @returns `true` when the digit sequences are equal.
+ * `numericStringMatch` as a `Matcher`.
  */
 export
-function numericStringMatchTyped (assertion: string, value: string): boolean {
-    const a: string = assertion.replace(/\s+/g, "");
-    const v: string = value.replace(/\s+/g, "");
-    return (a === v);
-}
+const numericStringMatch: Matcher = createEqualityMatcher(
+    (el) => stripSpaces(el.numericString),
+    numericStringMatchTyped,
+);
 
 export default numericStringMatch;

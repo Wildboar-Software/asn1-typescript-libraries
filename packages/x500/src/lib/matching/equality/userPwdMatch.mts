@@ -4,8 +4,14 @@ import { type UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/User
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
 import { Buffer } from "node:buffer";
+import { prepString } from "../../utils/prepString.mjs";
 import { caseExactMatchTyped } from "./caseExactMatch.mjs";
 import { readDecoded } from "../readValue.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * `userPwdMatch` on two decoded `UserPwd` values.
@@ -20,7 +26,7 @@ function userPwdMatchTyped (
     encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,
     assertion: UserPwd,
     value: UserPwd,
-): boolean {
+): boolean | undefined {
     if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
         return false;
     }
@@ -28,7 +34,11 @@ function userPwdMatchTyped (
         return compareElements(assertion, value as ASN1Element);
     }
     if (("clear" in assertion) && ("clear" in value)) {
-        return caseExactMatchTyped(assertion.clear, value.clear);
+        const prepared = prepString(assertion.clear);
+        if (prepared === undefined) {
+            return undefined;
+        }
+        return caseExactMatchTyped(prepared, value.clear);
     }
     if (("encrypted" in assertion) && ("encrypted" in value)) {
         return (
@@ -75,24 +85,19 @@ function userPwdMatchTyped (
  * `encrypter` supplies the encryption for mixed clear/encrypted
  * cases; returning `null` means the algorithm is not understood.
  *
- * The returned matcher accepts an `ASN1Element` or a `UserPwd` on
- * each side, independently.
+ * The returned value is a `Matcher`. The assertion is decoded once;
+ * each stored value may be an element or an already decoded `UserPwd`.
  */
 export
 function createUserPwdMatch (
     encrypter: (alg: AlgorithmIdentifier, clear: string) => Uint8Array | null,
-): (
-    assertion: ASN1Element | UserPwd,
-    value: ASN1Element | UserPwd,
-) => boolean {
-    return (
-        assertion: ASN1Element | UserPwd,
-        value: ASN1Element | UserPwd,
-    ): boolean => userPwdMatchTyped(
+): Matcher {
+    const match: TypedEquationFunction<UserPwd> = (assertion, value) => userPwdMatchTyped(
         encrypter,
-        readDecoded(assertion, _decode_UserPwd),
+        assertion,
         readDecoded(value, _decode_UserPwd),
     );
+    return createEqualityMatcher(_decode_UserPwd, match);
 }
 
 export default createUserPwdMatch;

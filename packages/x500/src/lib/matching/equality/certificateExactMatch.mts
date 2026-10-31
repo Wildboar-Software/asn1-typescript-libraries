@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { compareName } from "@wildboar/dn";
 import {
@@ -20,37 +26,37 @@ import { Buffer } from "node:buffer";
  * and issuer `Name` in `CertificateExactAssertion` equal those in
  * the stored certificate.
  */
-export
-function certificateExactMatch (
-    assertion: ASN1Element | CertificateExactAssertion,
-    value: ASN1Element | Certificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return certificateExactMatchTyped(
-        readDecoded(assertion, _decode_CertificateExactAssertion),
-        readDecoded(value, _decode_Certificate),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `certificateExactMatch` on a decoded assertion and certificate.
  *
  * @param a Presented serial number and issuer.
- * @param v Stored certificate.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored certificate, or that certificate already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the serial number and issuer match.
  */
 export
 function certificateExactMatchTyped (
     a: CertificateExactAssertion,
-    v: Certificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: Certificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_Certificate);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     if (Buffer.compare(v.toBeSigned.serialNumber, a.serialNumber)) {
         return false;
     }
     return compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher);
 }
+
+certificateExactMatchTyped satisfies TypedEquationFunction<CertificateExactAssertion>;
+
+/**
+ * `certificateExactMatch` as a `Matcher`.
+ */
+export
+const certificateExactMatch: Matcher = createEqualityMatcher(
+    _decode_CertificateExactAssertion,
+    certificateExactMatchTyped,
+);
 
 export default certificateExactMatch;

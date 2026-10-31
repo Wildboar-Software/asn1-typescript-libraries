@@ -1,55 +1,70 @@
-import type {
-    DirectoryStringInput,
-} from "../readValue.mjs";
-import { readDirectoryString } from "../readValue.mjs";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { readDirectoryString, type DirectoryStringInput } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Prepare and case-fold the presented directory string once.
+ * `prepString` returns `undefined` for a prohibited character or a
+ * string that maps to empty. That is an assertion error, not UNDEFINED.
+ */
+function prepareCaseIgnoreAssertion (el: ASN1Element): string {
+    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+    if (prepared === undefined) {
+        throw new ASN1CharactersError(
+            "caseIgnoreMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.1 `caseIgnoreMatch`.
  *
- * Equality match of `UnboundedDirectoryString` /
- * `DirectoryString` after string preparation (clause 7). Case is
- * ignored (upper-case folded as in clause 7.2) and insignificant
- * spaces are removed (clause 7.6). TRUE iff the prepared strings
- * have the same length and identical corresponding characters.
+ * Equality of `UnboundedDirectoryString` / `DirectoryString` after
+ * string preparation (clause 7). Case is ignored (upper-case folded
+ * as in clause 7.2) and insignificant spaces are removed (clause 7.6).
+ * Preparation failure of a stored value is UNDEFINED.
  *
- * Used as the equality rule for many selected attribute types
- * (e.g. `commonName`, `organizationName`).
- *
- * `assertion` and `value` are read independently. Each may be an
- * `ASN1Element`, a `DirectoryString` / `UnboundedDirectoryString`,
- * or a JavaScript `string`.
+ * @param assertion Presented string, already prepared and case-folded.
+ * @param value Stored directory string, or that string already
+ *  prepared. `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
-function caseIgnoreMatch (
-    assertion: DirectoryStringInput,
+function caseIgnoreMatchTyped (
+    assertion: string,
     value: DirectoryStringInput,
-): boolean {
-    return caseIgnoreMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-    );
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = readDirectoryString(value);
+    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
+        return assertion === raw;
+    }
+    const prepared = prepString(raw, { caseFold: true });
+    if (prepared === undefined) {
+        return undefined;
+    }
+    return assertion === prepared;
 }
 
+caseIgnoreMatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `caseIgnoreMatch` on two strings. String preparation and case
- * folding happen here so this function stays monomorphic.
- *
- * @param assertion Presented string.
- * @param value Stored string.
- * @returns `true` when the prepared strings are equal ignoring case.
+ * `caseIgnoreMatch` as a `Matcher`. An assertion that cannot be
+ * prepared throws `ASN1CharactersError`.
  */
 export
-function caseIgnoreMatchTyped (assertion: string, value: string): boolean {
-    const a: string | undefined = prepString(assertion, { caseFold: true });
-    const v: string | undefined = prepString(value, { caseFold: true });
-    if (a === undefined) {
-        return false;
-    }
-    if (v === undefined) {
-        return false;
-    }
-    return (a === v);
-}
+const caseIgnoreMatch: Matcher = createEqualityMatcher(
+    prepareCaseIgnoreAssertion,
+    caseIgnoreMatchTyped,
+);
 
 export default caseIgnoreMatch;

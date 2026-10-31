@@ -1,6 +1,4 @@
 import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { readObjectIdentifier } from "../readValue.mjs";
-import type { ObjectIdentifierInput } from "../readValue.mjs";
 import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import type { CertificateList } from "../../modules/AuthenticationFramework/CertificateList.ta.mjs";
 import type { AttributeCertificate } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
@@ -11,6 +9,11 @@ import {
     type Extensions,
     _decode_Extensions,
 } from "../../modules/AuthenticationFramework/Extensions.ta.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 19.3.5
@@ -61,28 +64,30 @@ function extensionsOf (
     return undefined;
 }
 
-export
-function extensionPresenceMatch (
-    assertion: ObjectIdentifierInput,
-    value: ASN1Element | Certificate | CertificateList | AttributeCertificate,
-): boolean {
-    return extensionPresenceMatchTyped(readObjectIdentifier(assertion), extensionsOf(value));
-}
+type StoredCertificate = ASN1Element | Certificate | CertificateList | AttributeCertificate;
 
 /**
- * `extensionPresenceMatch` on an extension OID and the certificate's
- * extension list.
- *
  * @param assertion Presented extension OID.
- * @param extensions Stored extensions, if the certificate has any.
+ * @param value Stored certificate, CRL, or attribute certificate.
  * @returns `true` when an extension has that OID.
  */
 export
 function extensionPresenceMatchTyped (
     assertion: OBJECT_IDENTIFIER,
-    extensions: readonly Extension[] | undefined,
-): boolean {
-    return Boolean(extensions?.some((ext: Extension): boolean => ext.extnId.isEqualTo(assertion)));
+    value: StoredCertificate,
+): boolean | undefined {
+    return Boolean(extensionsOf(value)?.some((ext: Extension): boolean => ext.extnId.isEqualTo(assertion)));
 }
+
+extensionPresenceMatchTyped satisfies TypedEquationFunction<OBJECT_IDENTIFIER>;
+
+/**
+ * `extensionPresenceMatch` as a `Matcher`.
+ */
+export
+const extensionPresenceMatch: Matcher = createEqualityMatcher(
+    (el) => el.objectIdentifier,
+    extensionPresenceMatchTyped,
+);
 
 export default extensionPresenceMatch;

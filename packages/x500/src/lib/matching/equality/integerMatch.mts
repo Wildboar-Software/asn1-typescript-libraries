@@ -1,5 +1,10 @@
-import type { IntegerInput } from "../readValue.mjs";
+import type { ASN1Element, INTEGER } from "@wildboar/asn1";
 import { readInteger } from "../readValue.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.2 `integerMatch`.
@@ -7,14 +12,26 @@ import { readInteger } from "../readValue.mjs";
  * TRUE iff a presented INTEGER or ENUMERATED value equals the
  * stored INTEGER or ENUMERATED value.
  *
- * Each argument may be an `ASN1Element`, a `number`, or a `bigint`.
+ * @param assertion Presented INTEGER.
+ * @param value Stored INTEGER, or that integer already decoded.
  */
 export
-function integerMatch (
-    assertion: IntegerInput,
-    value: IntegerInput,
-): boolean {
+function integerMatchTyped (
+    assertion: INTEGER,
+    value: INTEGER | ASN1Element,
+): boolean | undefined {
     return readInteger(assertion) === readInteger(value);
 }
+
+integerMatchTyped satisfies TypedEquationFunction<INTEGER>;
+
+/**
+ * `integerMatch` as a `Matcher`.
+ */
+export
+const integerMatch: Matcher = createEqualityMatcher(
+    (el) => el.integer,
+    integerMatchTyped,
+);
 
 export default integerMatch;

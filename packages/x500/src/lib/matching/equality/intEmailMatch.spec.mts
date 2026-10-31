@@ -1,7 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { DER } from "@wildboar/asn1/functional";
 import { _encode_IntEmail } from "../../modules/SelectedAttributeTypes/IntEmail.ta.mjs";
-import intEmailMatch from "./intEmailMatch.mjs";
+import intEmailMatch_ from "./intEmailMatch.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const intEmailMatch = onStoredValue(intEmailMatch_);
 
 function email (value: string): ASN1Element {
     return _encode_IntEmail(value, DER);
@@ -102,17 +105,32 @@ describe("intEmailMatch", () => {
         )).toBe(false);
     });
 
-    it("returns false when either address has no local-part and domain-part", () => {
-        expect(intEmailMatch(
+    it("throws when the assertion has no local-part or domain-part", () => {
+        expect(() => intEmailMatch(
             email("userexample.com"),
-            email("userexample.com"),
-        )).toBe(false);
-        expect(intEmailMatch(
+            email("user@example.com"),
+        )).toThrow("intEmailMatch assertion is not an IntEmail");
+        expect(() => intEmailMatch(
             email("@example.com"),
-            email("@example.com"),
-        )).toBe(false);
-        expect(intEmailMatch(
+            email("user@example.com"),
+        )).toThrow("intEmailMatch assertion is not an IntEmail");
+        expect(() => intEmailMatch(
             email("user@"),
+            email("user@example.com"),
+        )).toThrow("intEmailMatch assertion is not an IntEmail");
+    });
+
+    it("returns false when the stored address has no local-part or domain-part", () => {
+        expect(intEmailMatch(
+            email("user@example.com"),
+            email("userexample.com"),
+        )).toBe(false);
+        expect(intEmailMatch(
+            email("user@example.com"),
+            email("@example.com"),
+        )).toBe(false);
+        expect(intEmailMatch(
+            email("user@example.com"),
             email("user@"),
         )).toBe(false);
     });

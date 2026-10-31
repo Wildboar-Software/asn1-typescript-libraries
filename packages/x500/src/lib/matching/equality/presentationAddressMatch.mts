@@ -1,6 +1,11 @@
 import type { ASN1Element, OCTET_STRING } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
     PresentationAddress,
     _decode_PresentationAddress,
 } from "../../modules/SelectedAttributeTypes/PresentationAddress.ta.mjs";
@@ -21,31 +26,16 @@ function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefin
  * `PresentationAddress` are equal and the presented `nAddresses`
  * are a subset of the stored ones.
  *
- * Each argument may be an `ASN1Element` or a `PresentationAddress`.
- */
-export
-function presentationAddressMatch (
-    assertion: ASN1Element | PresentationAddress,
-    value: ASN1Element | PresentationAddress,
-): boolean {
-    return presentationAddressMatchTyped(
-        readDecoded(assertion, _decode_PresentationAddress),
-        readDecoded(value, _decode_PresentationAddress),
-    );
-}
-
-/**
- * `presentationAddressMatch` on two decoded presentation addresses.
- *
  * @param a Presented address.
- * @param v Stored address.
+ * @param value Stored address, or that address already decoded.
  * @returns `true` when selectors match and asserted NSAPs are stored.
  */
 export
 function presentationAddressMatchTyped (
     a: PresentationAddress,
-    v: PresentationAddress,
+    value: PresentationAddress | ASN1Element,
 ): boolean {
+    const v = readDecoded(value, _decode_PresentationAddress);
     const storedNAddresses: Set<string> = new Set<string>(
         v.nAddresses.map((naddr: OCTET_STRING): string => naddr.toString())
     );
@@ -58,5 +48,16 @@ function presentationAddressMatchTyped (
         )
     );
 }
+
+presentationAddressMatchTyped satisfies TypedEquationFunction<PresentationAddress>;
+
+/**
+ * `presentationAddressMatch` as a `Matcher`.
+ */
+export
+const presentationAddressMatch: Matcher = createEqualityMatcher(
+    _decode_PresentationAddress,
+    presentationAddressMatchTyped,
+);
 
 export default presentationAddressMatch;

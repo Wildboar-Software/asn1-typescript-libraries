@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     id_ce_basicAttConstraints,
@@ -26,33 +32,22 @@ import compareIssuerSerial from "../../comparators/compareIssuerSerial.mjs";
  * `AuthorityAttributeIdentifierSyntax` matches the stored
  * `IssuerSerial` pointers.
  */
-export
-function authAttIdMatch (
-    assertion: ASN1Element | AuthorityAttributeIdentifierSyntax,
-    value: ASN1Element | AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return authAttIdMatchTyped(
-        readDecoded(assertion, _decode_AuthorityAttributeIdentifierSyntax),
-        readDecoded(value, _decode_AttributeCertificate),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `authAttIdMatch` on decoded values.
  *
  * @param ass Presented authority attribute identifiers.
- * @param val Stored attribute certificate.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored attribute certificate, or that certificate already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the issuer-serial lists match.
  */
 export
 function authAttIdMatchTyped (
     ass: AuthorityAttributeIdentifierSyntax,
-    val: AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: AttributeCertificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const val = readDecoded(value, _decode_AttributeCertificate);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const ext: Extension | undefined = val.toBeSigned.extensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_basicAttConstraints)));
     if (!ext) {
@@ -75,5 +70,16 @@ function authAttIdMatchTyped (
     ));
     return aSorted.every((a, i) => compareIssuerSerial(a, bSorted[i], getEqualityMatcher));
 }
+
+authAttIdMatchTyped satisfies TypedEquationFunction<AuthorityAttributeIdentifierSyntax>;
+
+/**
+ * `authAttIdMatch` as a `Matcher`.
+ */
+export
+const authAttIdMatch: Matcher = createEqualityMatcher(
+    _decode_AuthorityAttributeIdentifierSyntax,
+    authAttIdMatchTyped,
+);
 
 export default authAttIdMatch;

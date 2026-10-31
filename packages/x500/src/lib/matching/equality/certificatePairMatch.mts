@@ -1,6 +1,12 @@
 import { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { evaluateCertificateAssertion } from "./certificateMatch.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import {
     CertificatePairAssertion,
     _decode_CertificatePairAssertion,
@@ -19,29 +25,21 @@ import {
  * as for `certificateMatch` (clause 13.3.2). At least one of those
  * assertion components must be present.
  */
-export
-function certificatePairMatch (
-    assertion: ASN1Element | CertificatePairAssertion,
-    value: ASN1Element | CertificatePair,
-): boolean {
-    return certificatePairMatchTyped(
-        readDecoded(assertion, _decode_CertificatePairAssertion),
-        readDecoded(value, _decode_CertificatePair),
-    );
-}
-
 /**
  * `certificatePairMatch` on decoded values.
  *
  * @param a Presented pair assertion.
- * @param v Stored certificate pair.
+ * @param value Stored certificate pair, or that pair already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes inside certificates.
  * @returns `true` when every present component matches.
  */
 export
 function certificatePairMatchTyped (
     a: CertificatePairAssertion,
-    v: CertificatePair,
+    value: CertificatePair | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_CertificatePair);
     if (v.isEmpty()) {
         return false;
     }
@@ -50,9 +48,20 @@ function certificatePairMatchTyped (
     const issuedByCert = v.issuedByThisCA;
     const issuedToCert = v.issuedToThisCA;
     return (
-        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert)))
-        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert)))
+        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert, getMatcher)))
+        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert, getMatcher)))
     );
 }
+
+certificatePairMatchTyped satisfies TypedEquationFunction<CertificatePairAssertion>;
+
+/**
+ * `certificatePairMatch` as a `Matcher`.
+ */
+export
+const certificatePairMatch: Matcher = createEqualityMatcher(
+    _decode_CertificatePairAssertion,
+    certificatePairMatchTyped,
+);
 
 export default certificatePairMatch;
