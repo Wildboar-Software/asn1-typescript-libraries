@@ -12,7 +12,10 @@ import {
     ProtocolInformation,
     _encode_ProtocolInformation,
 } from "../../modules/SelectedAttributeTypes/ProtocolInformation.ta.mjs";
-import protocolInformationMatch from "./protocolInformationMatch.mjs";
+import protocolInformationMatch_ from "./protocolInformationMatch.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const protocolInformationMatch = onStoredValue(protocolInformationMatch_);
 
 const PROFILE_A = ObjectIdentifier.fromParts([1, 2, 3]);
 const PROFILE_B = ObjectIdentifier.fromParts([1, 2, 4]);

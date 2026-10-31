@@ -1,5 +1,12 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.9.1 `uriMatch`.
@@ -26,30 +33,36 @@ import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
  * empty-host forms such as `ldap:///`, and relative references
  * are compared the same way.
  *
- * Each argument may be an `ASN1Element` or a string.
+ * @param assertion Presented URI, already normalized.
+ * @param value Stored URI, or that URI already normalized.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips normalization. A stored URI
+ *  that cannot be normalized throws; the `Matcher` reports that as
+ *  UNDEFINED.
  */
 export
-function uriMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    return uriMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.utf8String,
-        typeof value === "string" ? value : value.utf8String,
-    );
+function uriMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = typeof value === "string" ? value : value.utf8String;
+    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
+        return assertion === raw;
+    }
+    return assertion === normalizeUri(raw);
 }
 
+uriMatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `uriMatch` on two URI strings.
- *
- * @param assertion Presented URI.
- * @param value Stored URI.
- * @returns `true` when the normalized URIs are equal.
+ * `uriMatch` as a `Matcher`. An assertion that cannot be normalized throws.
  */
 export
-function uriMatchTyped (assertion: string, value: string): boolean {
-    return normalizeUri(assertion) === normalizeUri(value);
-}
+const uriMatch: Matcher = createEqualityMatcher(
+    (el) => normalizeUri(el.utf8String),
+    uriMatchTyped,
+);
 
 export default uriMatch;
 

@@ -1,8 +1,45 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import { domainToUnicode } from "node:url";
+import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
-function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean {
+/**
+ * `domainToUnicode`, then prepare each label with `prepString`.
+ * A leftmost `*` is kept so `dnsNameMatch` can still wildcard.
+ * An empty name is `""`; a label that cannot be prepared throws.
+ */
+export
+function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
+    const unicode = domainToUnicode(domain.trim());
+    if (unicode === "") {
+        return "";
+    }
+    const labels = unicode.split(".");
+    const prepared = new Array<string>(labels.length);
+    for (let i = 0; i < labels.length; i++) {
+        const label = labels[i];
+        if (label === "*" && i === 0) {
+            prepared[i] = "*";
+            continue;
+        }
+        const folded = prepString(label, { caseFold: true });
+        if (folded === undefined) {
+            throw new ASN1CharactersError(
+                "dnsNameMatch assertion failed string preparation",
+                el,
+            );
+        }
+        prepared[i] = folded;
+    }
+    return prepared.join(".");
+}
+
+function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean | undefined {
     if (a === "*" || b === "*") {
         return wildcardAllowed;
     }
@@ -22,31 +59,19 @@ function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean
  * matches `a.example.com` but not `a.b.example.com` or
  * `example.com`.
  *
- * Each argument may be an `ASN1Element` or a domain string.
+ * @param assertion Presented domain, already converted with
+ *  `domainToUnicode` and with each label prepared.
+ * @param value Stored domain, or that domain already decoded.
  */
 export
-function dnsNameMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    return dnsNameMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.utf8String,
-        typeof value === "string" ? value : value.utf8String,
-    );
-}
-
-/**
- * `dnsNameMatch` on two domain names.
- *
- * @param assertion Presented domain.
- * @param value Stored domain.
- * @returns `true` when the labels match.
- */
-export
-function dnsNameMatchTyped (assertion: string, value: string): boolean {
-    // I checked: this preserves asterisks and periods.
-    const a = domainToUnicode(assertion.trim());
-    const v = domainToUnicode(value.trim());
+function dnsNameMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+): boolean | undefined {
+    const stored = typeof value === "string" ? value : value.utf8String;
+    // The assertion is prepared once. `domainToUnicode` preserves `*` and `.`.
+    const a = assertion;
+    const v = domainToUnicode(stored.trim());
     if (a === "" || v === "") {
         return false;
     }
@@ -64,15 +89,17 @@ function dnsNameMatchTyped (assertion: string, value: string): boolean {
         if (nextDotA === -1) {
             const labelA = a.slice(startA);
             const labelV = v.slice(startV);
-            if (!compareLabels(labelA, labelV, wildcardAllowed)) {
-                return false;
+            const labels = compareLabels(labelA, labelV, wildcardAllowed);
+            if (labels !== true) {
+                return labels;
             }
             break;
         }
         const labelA = a.slice(startA, nextDotA);
         const labelV = v.slice(startV, nextDotV);
-        if (!compareLabels(labelA, labelV, wildcardAllowed)) {
-            return false;
+        const labels = compareLabels(labelA, labelV, wildcardAllowed);
+        if (labels !== true) {
+            return labels;
         }
         startA = nextDotA + 1;
         startV = nextDotV + 1;
@@ -80,5 +107,16 @@ function dnsNameMatchTyped (assertion: string, value: string): boolean {
     }
     return true;
 }
+
+dnsNameMatchTyped satisfies TypedEquationFunction<string>;
+
+/**
+ * `dnsNameMatch` as a `Matcher`.
+ */
+export
+const dnsNameMatch: Matcher = createEqualityMatcher(
+    (el) => prepareDnsAssertion(el.utf8String, el),
+    dnsNameMatchTyped,
+);
 
 export default dnsNameMatch;

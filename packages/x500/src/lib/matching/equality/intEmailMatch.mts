@@ -1,6 +1,38 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, ASN1Element, ASN1Error } from "@wildboar/asn1";
+import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
-import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
+import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/** Prepared local-part and prepared domain-part. */
+export type PreparedIntEmail = readonly [local: string, domain: string];
+
+/**
+ * Split on the last `@` and prepare both parts. `undefined` means
+ * the address has no local-part or no domain-part, which is FALSE.
+ * A local-part or domain that cannot be prepared throws.
+ */
+function prepareIntEmail (
+    raw: string,
+    el?: ASN1Element,
+): PreparedIntEmail | undefined {
+    const at = raw.lastIndexOf("@");
+    if (at <= 0 || at >= raw.length - 1) {
+        return undefined;
+    }
+    const local = prepString(raw.slice(0, at), { caseFold: true });
+    if (local === undefined) {
+        throw new ASN1CharactersError(
+            "intEmailMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return [ local, prepareDnsAssertion(raw.slice(at + 1), el) ];
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.9.3 `intEmailMatch`.
@@ -9,42 +41,57 @@ import { dnsNameMatchTyped } from "./dnsNameMatch.mjs";
  * match. The local-part uses `caseIgnoreMatch`; the domain-part
  * uses `dnsNameMatch` (clause 8.9.2).
  *
- * Each argument may be an `ASN1Element` or a string.
+ * @param assertion Presented address. A `[local, domain]` pair is
+ *  already prepared. A string or element is split and prepared here.
+ * @param value Stored address, or that address already decoded.
  */
 export
-function intEmailMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    return intEmailMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.utf8String,
-        typeof value === "string" ? value : value.utf8String,
-    );
+function intEmailMatchTyped (
+    assertion: PreparedIntEmail | string | ASN1Element,
+    value: string | ASN1Element,
+): boolean | undefined {
+    const presented = typeof assertion === "string"
+        ? prepareIntEmail(assertion)
+        : ASN1Element.isElement(assertion)
+            ? prepareIntEmail(assertion.utf8String)
+            : assertion;
+    if (!presented) {
+        return false;
+    }
+    const stored = typeof value === "string" ? value : value.utf8String;
+    // The domain cannot contain `@`, so the last `@` is the separator.
+    const vAt: number = stored.lastIndexOf("@");
+    if (vAt <= 0 || vAt >= stored.length - 1) {
+        return false;
+    }
+    const localsMatch = caseIgnoreMatchTyped(presented[0], stored.slice(0, vAt));
+    if (localsMatch !== true) {
+        return localsMatch;
+    }
+    return dnsNameMatchTyped(presented[1], stored.slice(vAt + 1));
+}
+
+intEmailMatchTyped satisfies TypedEquationFunction<PreparedIntEmail | string | ASN1Element>;
+
+/**
+ * A missing local-part or domain-part is a malformed assertion.
+ * Returning the raw string would send it through `prepareIntEmail` again.
+ */
+function decodeIntEmail (el: ASN1Element): PreparedIntEmail {
+    const prepared = prepareIntEmail(el.utf8String, el);
+    if (!prepared) {
+        throw new ASN1Error("intEmailMatch assertion is not an IntEmail", el);
+    }
+    return prepared;
 }
 
 /**
- * `intEmailMatch` on two internationalized email addresses.
- *
- * @param assertion Presented address.
- * @param value Stored address.
- * @returns `true` when the local-part and domain both match.
+ * `intEmailMatch` as a `Matcher`.
  */
 export
-function intEmailMatchTyped (assertion: string, value: string): boolean {
-    // The domain cannot contain `@`, so the last `@` is the separator.
-    const aAt: number = assertion.lastIndexOf("@");
-    const vAt: number = value.lastIndexOf("@");
-    if (aAt <= 0 || vAt <= 0 || aAt >= assertion.length - 1 || vAt >= value.length - 1) {
-        return false;
-    }
-    const localsMatch: boolean = caseIgnoreMatchTyped(
-        assertion.slice(0, aAt),
-        value.slice(0, vAt),
-    );
-    if (!localsMatch) {
-        return false;
-    }
-    return dnsNameMatchTyped(assertion.slice(aAt + 1), value.slice(vAt + 1));
-}
+const intEmailMatch: Matcher = createEqualityMatcher(
+    decodeIntEmail,
+    intEmailMatchTyped,
+);
 
 export default intEmailMatch;

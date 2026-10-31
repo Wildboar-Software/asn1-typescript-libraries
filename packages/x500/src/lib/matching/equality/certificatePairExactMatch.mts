@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { compareName } from "@wildboar/dn";
 import {
@@ -22,33 +28,22 @@ import { Buffer } from "node:buffer";
  * `certificateExactMatch`. At least one of those components must
  * be present.
  */
-export
-function certificatePairExactMatch (
-    assertion: ASN1Element | CertificatePairExactAssertion,
-    value: ASN1Element | CertificatePair,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return certificatePairExactMatchTyped(
-        readDecoded(assertion, _decode_CertificatePairExactAssertion),
-        readDecoded(value, _decode_CertificatePair),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `certificatePairExactMatch` on decoded values.
  *
  * @param a Presented exact assertion.
- * @param v Stored certificate pair.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored certificate pair, or that pair already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when every present component matches.
  */
 export
 function certificatePairExactMatchTyped (
     a: CertificatePairExactAssertion,
-    v: CertificatePair,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: CertificatePair | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_CertificatePair);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const issuedTo = a.issuedToThisCAAssertion;
     const issuedBy = a.issuedByThisCAAssertion;
     if (!issuedTo && !issuedBy) {
@@ -80,5 +75,16 @@ function certificatePairExactMatchTyped (
     }
     return true;
 }
+
+certificatePairExactMatchTyped satisfies TypedEquationFunction<CertificatePairExactAssertion>;
+
+/**
+ * `certificatePairExactMatch` as a `Matcher`.
+ */
+export
+const certificatePairExactMatch: Matcher = createEqualityMatcher(
+    _decode_CertificatePairExactAssertion,
+    certificatePairExactMatchTyped,
+);
 
 export default certificatePairExactMatch;

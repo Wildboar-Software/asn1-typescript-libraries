@@ -1,9 +1,30 @@
-import type { DirectoryStringInput } from "../readValue.mjs";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     readDirectoryString,
     readFirstDirectoryString,
 } from "../readValue.mjs";
+import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Prepare and case-fold the presented directory string once.
+ */
+function prepareAssertion (el: ASN1Element): string {
+    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+    if (prepared === undefined) {
+        throw new ASN1CharactersError(
+            "directoryStringFirstComponentMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.3
@@ -11,42 +32,37 @@ import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
  *
  * Compares a presented `UnboundedDirectoryString` with a SEQUENCE
  * whose first component is a mandatory `DirectoryString`. TRUE iff
- * that first component matches via `caseIgnoreMatch`. The
- * assertion syntax is derived from the first SEQUENCE component.
+ * that first component matches via `caseIgnoreMatch`. A missing
+ * first component is FALSE. Preparation failure of the stored
+ * component is UNDEFINED.
  *
- * `assertion` is an element, directory string, or string. `value`
- * is that same set, or a SEQUENCE element whose first component is
- * the directory string. A missing first component is FALSE.
- */
-export
-function directoryStringFirstComponentMatch (
-    assertion: DirectoryStringInput,
-    value: DirectoryStringInput,
-): boolean {
-    const first = readFirstDirectoryString(value);
-    if (first === undefined) {
-        return false;
-    }
-    return directoryStringFirstComponentMatchTyped(
-        readDirectoryString(assertion),
-        first,
-    );
-}
-
-/**
- * `directoryStringFirstComponentMatch` on the presented string and
- * the stored first component. Comparison is `caseIgnoreMatch`.
- *
- * @param assertion Presented directory string.
- * @param value Stored first component.
- * @returns `true` when `caseIgnoreMatch` holds.
+ * @param assertion Presented string, already prepared and case-folded.
+ * @param value Stored SEQUENCE, or the first component already read.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips preparation of that component.
  */
 export
 function directoryStringFirstComponentMatchTyped (
     assertion: string,
-    value: string,
-): boolean {
-    return caseIgnoreMatchTyped(assertion, value);
+    value: string | ASN1Element,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const first = readFirstDirectoryString(value);
+    if (first === undefined) {
+        return false;
+    }
+    return caseIgnoreMatchTyped(assertion, first, getEqualityMatcher, flags);
 }
+
+directoryStringFirstComponentMatchTyped satisfies TypedEquationFunction<string>;
+
+/**
+ * `directoryStringFirstComponentMatch` as a `Matcher`.
+ */
+export
+const directoryStringFirstComponentMatch: Matcher = createEqualityMatcher(
+    prepareAssertion,
+    directoryStringFirstComponentMatchTyped,
+);
 
 export default directoryStringFirstComponentMatch;
