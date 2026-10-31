@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 import {
@@ -8,6 +8,22 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Prepare and case-fold the presented directory string once.
+ * `prepString` returns `undefined` for a prohibited character or a
+ * string that maps to empty. That is an assertion error, not UNDEFINED.
+ */
+function prepareCaseIgnoreAssertion (el: ASN1Element): string {
+    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+    if (prepared === undefined) {
+        throw new ASN1CharactersError(
+            "caseIgnoreOrderingMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
+
+/**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
  * `caseIgnoreOrderingMatch`.
  *
@@ -15,20 +31,16 @@ import {
  * during string preparation (clause 7.2). Insignificant spaces are
  * ignored (clause 7.6). The signed result is negative when the
  * presented string is less than the stored string. Preparation
- * failure is UNDEFINED.
+ * failure of a stored value is UNDEFINED.
  *
- * @param assertion Presented string, already prepared and
- *  case-folded. `undefined` when preparation of the assertion failed.
+ * @param assertion Presented string, already prepared and case-folded.
  * @param value Stored directory string.
  */
 export
 function caseIgnoreOrderingMatchTyped (
-    assertion: string | undefined,
+    assertion: string,
     value: ASN1Element,
 ): number | undefined {
-    if (assertion === undefined) {
-        return undefined;
-    }
     const v: string | undefined = prepString(
         readDirectoryString(value),
         { caseFold: true },
@@ -39,16 +51,17 @@ function caseIgnoreOrderingMatchTyped (
     return compareCodePoints(assertion, v);
 }
 
-caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string | undefined>;
+caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string>;
 
 /**
  * `caseIgnoreOrderingMatch` as a `Matcher`. TRUE iff the stored value
  * is less than the presented value. `MATCH_FLAG_ORDERING_GREATER`
  * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
+ * An assertion that cannot be prepared throws `ASN1CharactersError`.
  */
 export
 const caseIgnoreOrderingMatch: Matcher = createOrderingMatcher(
-    (el) => prepString(readDirectoryString(el), { caseFold: true }),
+    prepareCaseIgnoreAssertion,
     caseIgnoreOrderingMatchTyped,
 );
 

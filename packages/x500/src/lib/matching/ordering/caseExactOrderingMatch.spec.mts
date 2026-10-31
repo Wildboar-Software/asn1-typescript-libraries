@@ -1,4 +1,5 @@
 import {
+    ASN1CharactersError,
     DERElement,
     ASN1TagClass,
     ASN1Construction,
@@ -39,9 +40,14 @@ describe("caseExactOrderingMatch", () => {
         expect(caseExactOrderingMatch(utf8("Z"), stored("a"))).toBe(false);
     });
 
-    it("is UNDEFINED when preparation fails", () => {
-        expect(caseExactOrderingMatch(utf8("\uFFFD"), stored("Z"))).toBeUndefined();
-        expect(caseExactOrderingMatch(utf8(""), stored("Z"))).toBeUndefined();
+    it("throws when the assertion cannot be prepared", () => {
+        expect(() => caseExactOrderingMatch(utf8("\uFFFD"), stored("Z")))
+            .toThrow(ASN1CharactersError);
+        expect(() => caseExactOrderingMatch(utf8(""), stored("Z")))
+            .toThrow(ASN1CharactersError);
+    });
+
+    it("is UNDEFINED when the stored value cannot be prepared", () => {
         expect(caseExactOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
         expect(caseExactOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
@@ -57,9 +63,14 @@ describe("caseIgnoreOrderingMatch", () => {
         expect(caseIgnoreOrderingMatch(utf8("C"), stored("b"))).toBe(true);
     });
 
-    it("is UNDEFINED when preparation fails", () => {
-        expect(caseIgnoreOrderingMatch(utf8("\uFFFD"), stored("Z"))).toBeUndefined();
-        expect(caseIgnoreOrderingMatch(utf8(""), stored("Z"))).toBeUndefined();
+    it("throws when the assertion cannot be prepared", () => {
+        expect(() => caseIgnoreOrderingMatch(utf8("\uFFFD"), stored("Z")))
+            .toThrow(ASN1CharactersError);
+        expect(() => caseIgnoreOrderingMatch(utf8(""), stored("Z")))
+            .toThrow(ASN1CharactersError);
+    });
+
+    it("is UNDEFINED when the stored value cannot be prepared", () => {
         expect(caseIgnoreOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
         expect(caseIgnoreOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
