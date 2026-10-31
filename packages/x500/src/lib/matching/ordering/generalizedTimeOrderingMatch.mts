@@ -1,23 +1,41 @@
-import { ASN1Element } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import {
+    createOrderingMatcher,
+    type Matcher,
+    type TypedOrderingFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.3.4
  * `generalizedTimeOrderingMatch`.
  *
- * Directory TRUE iff the stored GeneralizedTime is earlier than
- * the presented time. Absent minutes or seconds are treated as
- * zero.
+ * Signed comparison of two GeneralizedTime instants. Absent minutes
+ * or seconds are treated as zero. Positive when the stored time is
+ * earlier than the presented time.
  *
- * Each argument may be an `ASN1Element` or a `Date`.
+ * @param assertion Presented time.
+ * @param value Stored GeneralizedTime.
  */
 export
-function generalizedTimeOrderingMatch (
-    assertion: ASN1Element | Date,
-    value: ASN1Element | Date,
-): number {
-    const presented = ASN1Element.isElement(assertion) ? assertion.generalizedTime : assertion;
-    const stored = ASN1Element.isElement(value) ? value.generalizedTime : value;
-    return presented.valueOf() - stored.valueOf();
+function generalizedTimeOrderingMatchTyped (
+    assertion: Date,
+    value: ASN1Element,
+): number | undefined {
+    return assertion.valueOf() - value.generalizedTime.valueOf();
 }
+
+generalizedTimeOrderingMatchTyped satisfies TypedOrderingFunction<Date>;
+
+/**
+ * `generalizedTimeOrderingMatch` as a `Matcher`. TRUE iff the stored
+ * GeneralizedTime is earlier than the presented time.
+ * `MATCH_FLAG_ORDERING_GREATER` and `MATCH_FLAG_ORDERING_OR_EQUAL`
+ * select the other orderings.
+ */
+export
+const generalizedTimeOrderingMatch: Matcher = createOrderingMatcher(
+    (el) => el.generalizedTime,
+    generalizedTimeOrderingMatchTyped,
+);
 
 export default generalizedTimeOrderingMatch;

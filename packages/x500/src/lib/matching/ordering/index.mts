@@ -1,8 +1,8 @@
 /**
  * Ordering matching-rule implementations from Rec. ITU-T X.520
- * clause 8. Directory ordering is TRUE iff the stored value is
- * less than / earlier than the presented value. Each export is an
- * `OrderingMatcher` returning a signed comparison.
+ * clause 8. The rule functions are `Matcher`s from
+ * `createOrderingMatcher`. Directory ordering is TRUE iff the
+ * stored value is less than / earlier than the presented value.
  */
 export * from "./caseExactOrderingMatch.mjs";
 export * from "./caseIgnoreOrderingMatch.mjs";

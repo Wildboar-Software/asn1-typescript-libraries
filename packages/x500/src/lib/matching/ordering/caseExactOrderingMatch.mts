@@ -1,53 +1,53 @@
-import type { DirectoryStringInput } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
 import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
+import {
+    createOrderingMatcher,
+    type Matcher,
+    type TypedOrderingFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.2
  * `caseExactOrderingMatch`.
  *
  * Directory ordering of `UnboundedDirectoryString` after removing
- * insignificant spaces (clause 7.6). TRUE in the Directory sense
- * iff the stored value is less than (appears earlier than) the
- * presented value under Unicode code-point collation. This
- * function returns a signed comparison (assertion vs stored).
+ * insignificant spaces (clause 7.6). The signed result is negative
+ * when the presented string is less than the stored string under
+ * Unicode code-point collation. Preparation failure is UNDEFINED.
  *
  * Language-specific collation is outside the scope of X.520.
  *
- * Each argument may be an `ASN1Element`, a directory string, or a
- * JavaScript string.
+ * @param assertion Presented string, not yet prepared.
+ * @param value Stored directory string.
  */
 export
-function caseExactOrderingMatch (
-    assertion: DirectoryStringInput,
-    value: DirectoryStringInput,
-): number {
-    return caseExactOrderingMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-    );
-}
-
-/**
- * `caseExactOrderingMatch` on two strings.
- *
- * @param assertion Presented string.
- * @param value Stored string.
- * @returns Negative when `assertion` is less than `value`. A string that
- *  fails preparation sorts after any prepared string (`Array.sort`
- *  treats `NaN` as `+0`, so it cannot be used for this).
- */
-export
-function caseExactOrderingMatchTyped (assertion: string, value: string): number {
+function caseExactOrderingMatchTyped (
+    assertion: string,
+    value: ASN1Element,
+): number | undefined {
     const a: string | undefined = prepString(assertion);
     if (a === undefined) {
-        return 1;
+        return undefined;
     }
-    const v: string | undefined = prepString(value);
+    const v: string | undefined = prepString(readDirectoryString(value));
     if (v === undefined) {
-        return -1;
+        return undefined;
     }
     return compareCodePoints(a, v);
 }
+
+caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string>;
+
+/**
+ * `caseExactOrderingMatch` as a `Matcher`. TRUE iff the stored value
+ * is less than the presented value. `MATCH_FLAG_ORDERING_GREATER`
+ * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
+ */
+export
+const caseExactOrderingMatch: Matcher = createOrderingMatcher(
+    readDirectoryString,
+    caseExactOrderingMatchTyped,
+);
 
 export default caseExactOrderingMatch;
