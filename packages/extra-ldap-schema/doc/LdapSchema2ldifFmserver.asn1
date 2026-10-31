@@ -1,0 +1,121 @@
+-- Derived from data/ldap-schema/schema2ldif/fmserver.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapSchema2ldifFmserver DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseExactMatch, caseIgnoreIA5Match, commonName,
+    description, directoryString, ia5String, localityName, name, owner,
+    telephoneNumber, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-serviceClassName OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 509 }
+id-at-serviceBindingInformation OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 510 }
+id-at-managedBy OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 653 }
+id-at-serviceDNSName OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 657 }
+id-at-serviceDNSNameType OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 659 }
+id-at-keywords OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 48 }
+id-oc-leaf OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 20 }
+id-oc-connectionPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 14 }
+id-oc-serviceConnectionPoint OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 126 }
+
+-- Attribute types
+
+serviceClassName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"serviceClassName"}
+  LDAP-DESC                 "MSDS serviceClassName"
+  ID                        id-at-serviceClassName }
+
+serviceBindingInformation ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"serviceBindingInformation"}
+  LDAP-DESC                 "MSDS serviceBindingInformation"
+  ID                        id-at-serviceBindingInformation }
+
+managedBy ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"managedBy"}
+  LDAP-DESC                 "MSDS managedBy"
+  ID                        id-at-managedBy }
+
+serviceDNSName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"serviceDNSName"}
+  LDAP-DESC                 "Microsoft Active Directory Attribute"
+  ID                        id-at-serviceDNSName }
+
+serviceDNSNameType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"serviceDNSNameType"}
+  LDAP-DESC                 "Microsoft Active Directory Attribute"
+  ID                        id-at-serviceDNSNameType }
+
+keywords ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"keywords"}
+  LDAP-DESC                 "Microsoft Active Directory Attribute"
+  ID                        id-at-keywords }
+
+-- Object classes
+
+leaf OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"leaf"}
+  LDAP-DESC                 "Microsoft Active Directory Leaf Object"
+  ID                        id-oc-leaf }
+
+connectionPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { leaf }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { keywords
+                              | managedBy }
+  LDAP-NAME                 {"connectionPoint"}
+  LDAP-DESC                 "Microsoft Active Directory ConnectPoint Object"
+  ID                        id-oc-connectionPoint }
+
+serviceConnectionPoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { connectionPoint }
+  MUST CONTAIN              { name
+                              | serviceBindingInformation }
+  MAY CONTAIN               { localityName
+                              | mail
+                              | owner
+                              | serviceClassName
+                              | serviceDNSName
+                              | serviceDNSNameType
+                              | telephoneNumber
+                              | description }
+  LDAP-NAME                 {"serviceConnectionPoint"}
+  LDAP-DESC                 "Microsoft Active Directory ServiceConnectionPoint Object"
+  ID                        id-oc-serviceConnectionPoint }
+END

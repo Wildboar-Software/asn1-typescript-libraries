@@ -1,0 +1,45 @@
+-- Derived from data/ldap-schema/samaccountname.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 1 element shares a numeric OID with another element that was also kept. See the comment on that element.
+LdapSamaccountname DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, description, directoryString, member, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-sAMAccountName OBJECT IDENTIFIER ::= { 1 2 840 113556 1 4 221 }
+-- OID 1.2.840.113556.1.5.8 is also used by group (CONTENT-RULE) in schema2ldif/microsoft.ext.schema. The names match, but the element kinds differ, so each definition was kept.
+id-oc-group OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 8 }
+
+-- Attribute types
+
+sAMAccountName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sAMAccountName"}
+  ID                        id-at-sAMAccountName }
+
+-- Object classes
+
+-- OID 1.2.840.113556.1.5.8 is also used by group (CONTENT-RULE) in schema2ldif/microsoft.ext.schema. The names match, but the element kinds differ, so each definition was kept.
+group OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { member
+                              | sAMAccountName
+                              | description }
+  LDAP-NAME                 {"group"}
+  LDAP-DESC                 "a group of users"
+  ID                        id-oc-group }
+END

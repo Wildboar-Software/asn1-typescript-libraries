@@ -1,0 +1,31 @@
+-- Derived from data/ldap-schema/subtree-aci.ldif
+-- Upstream: https://github.com/Syslifters/offsec-tools/blob/9248a78f1f56a742d79fe746aa6e7d9dad34ee4a/bin/impacket-tools/python/Lib/site-packages/ldap3/protocol/schemas/ds389.py#L481
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapSubtreeAci DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-subtreeACI OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 69 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Directory Server 1.0"
+subtreeACI ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"subtreeACI"}
+  LDAP-DESC                 "Netscape defined attribute type"
+  ID                        id-at-subtreeACI }
+END

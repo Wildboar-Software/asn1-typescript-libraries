@@ -1,0 +1,9 @@
+{
+  "name": "@wildboar/extra-ldap-schema",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/extra-ldap-schema/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project @wildboar/extra-ldap-schema --web",
+  "targets": {}
+}

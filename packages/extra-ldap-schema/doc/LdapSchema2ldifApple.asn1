@@ -1,0 +1,1011 @@
+-- Derived from data/ldap-schema/schema2ldif/apple.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 2 elements were omitted because another source file in this corpus defines the same OID.
+LdapSchema2ldifApple DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseExactMatch, caseExactSubstringsMatch,
+    caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString,
+    ia5String, integer, integerMatch, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userCertificate, userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  gidNumber, homeDirectory, ipHostNumber, loginShell, macAddress, memberUid,
+    shadowExpire, shadowLastChange, uidNumber
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  caseExactIA5SubstringsMatch
+    FROM OpenLDAP
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap(28)} WITH SUCCESSORS
+
+  acctFlags, homeDrive, kickoffTime, logoffTime, logonTime, primaryGroupID,
+    profilePath, pwdLastSet, rid, scriptPath, smbHome, userWorkstations
+    FROM SambaSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) samba-schema(58)} WITH SUCCESSORS
+
+  sambaPrimaryGroupSID, sambaSID
+    FROM SambaV3Schema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) samba-v3-schema(45)} WITH SUCCESSORS
+
+  ttl
+    FROM LdapCommon389
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-apple-user-homeurl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 6 }
+id-at-apple-user-class OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 7 }
+id-at-apple-user-homequota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 8 }
+id-at-apple-user-mailattribute OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 9 }
+id-at-apple-mcxflags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 10 }
+id-at-apple-mcxsettings OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 16 }
+id-at-apple-user-picture OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 12 }
+id-at-apple-user-printattribute OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 13 }
+id-at-apple-user-adminlimits OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 14 }
+id-at-apple-user-authenticationhint OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 15 }
+id-at-apple-user-homesoftquota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 17 }
+id-at-apple-user-passwordpolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 18 }
+id-at-apple-keyword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 19 }
+id-at-apple-generateduid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 20 }
+id-at-apple-imhandle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 21 }
+id-at-apple-webloguri OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 1 22 }
+id-oc-apple-user OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 1 }
+id-at-apple-group-homeurl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 14 1 }
+id-at-apple-group-homeowner OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 14 2 }
+id-at-apple-group-realname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 14 5 }
+id-at-apple-group-nestedgroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 14 6 }
+id-at-apple-group-memberguid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 14 7 }
+id-oc-apple-group OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 14 }
+id-at-apple-machine-software OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 3 8 }
+id-at-apple-machine-hardware OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 3 9 }
+id-at-apple-machine-serves OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 3 10 }
+id-at-apple-machine-suffix OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 3 11 }
+id-at-apple-machine-contactperson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 3 12 }
+id-oc-apple-machine OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 3 }
+id-at-mountDirectory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 8 1 }
+id-at-mountType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 8 2 }
+id-at-mountOption OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 8 3 }
+id-at-mountDumpFrequency OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 8 4 }
+id-at-mountPassNo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 8 5 }
+id-oc-mount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 8 }
+id-at-apple-printer-attributes OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 9 1 }
+id-at-apple-printer-lprhost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 9 2 }
+id-at-apple-printer-lprqueue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 9 3 }
+id-at-apple-printer-type OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 9 4 }
+id-at-apple-printer-note OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 9 5 }
+id-oc-apple-printer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 9 }
+id-at-apple-realname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 10 2 }
+id-at-apple-networkview OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 10 3 }
+id-at-apple-category OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 10 4 }
+id-at-apple-computers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 11 3 }
+id-at-apple-computer-list-groups OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 11 4 }
+id-at-apple-xmlplist OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 17 1 }
+id-at-apple-service-url OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 19 2 }
+id-oc-apple-computer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 10 }
+id-oc-apple-computer-list OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 11 }
+id-at-apple-password-server-location OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 1 }
+id-at-apple-data-stamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 2 }
+id-at-apple-config-realname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 3 }
+id-at-apple-password-server-list OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 4 }
+id-at-apple-ldap-replica OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 5 }
+id-at-apple-ldap-writable-replica OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 6 }
+id-at-apple-kdc-authkey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 7 }
+id-at-apple-kdc-configdata OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 12 8 }
+id-oc-apple-configuration OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 12 }
+id-oc-apple-preset-computer-list OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 13 }
+id-oc-apple-preset-group OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 3 14 }
+id-at-apple-preset-user-is-admin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 15 1 }
+id-oc-apple-preset-user OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 15 }
+-- Commented out in apple.schema while live classes still listed authAuthority. The definition at 1.3.6.1.4.1.63.1000.1.1.2.16.1 was restored. A second block at 1.3.6.1.4.1.63.1000.1.1.2.16.2 was left commented because it gives the same name another OID.
+id-at-authAuthority OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 16 1 }
+id-oc-authAuthorityObject OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 16 }
+id-oc-apple-serverassistant-config OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 17 }
+id-at-apple-dns-domain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 18 1 }
+id-at-apple-dns-nameserver OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 18 2 }
+id-oc-apple-location OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 18 }
+id-at-apple-service-type OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 19 1 }
+id-at-apple-service-port OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 19 3 }
+id-at-apple-dnsname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 19 4 }
+id-at-apple-service-location OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 19 5 }
+id-oc-apple-service OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 19 }
+id-at-apple-nodepathxml OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 20 1 }
+id-at-apple-neighborhoodalias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 20 2 }
+id-at-apple-computeralias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 20 3 }
+id-oc-apple-neighborhood OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 20 }
+-- Commented out in apple.schema while apple-acl still required it. The definition was restored.
+id-at-apple-acl-entry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 1 21 1 }
+id-oc-apple-acl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 63 1000 1 1 2 21 }
+
+-- Attribute types
+
+apple-user-homeurl ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-user-homeurl"}
+  LDAP-DESC                 "home directory URL"
+  ID                        id-at-apple-user-homeurl }
+
+apple-user-class ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-user-class"}
+  LDAP-DESC                 "user class"
+  ID                        id-at-apple-user-class }
+
+apple-user-homequota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-user-homequota"}
+  LDAP-DESC                 "home directory quota"
+  ID                        id-at-apple-user-homequota }
+
+apple-user-mailattribute ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-user-mailattribute"}
+  LDAP-DESC                 "mail attribute"
+  ID                        id-at-apple-user-mailattribute }
+
+apple-mcxflags ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-mcxflags"}
+  LDAP-DESC                 "mcx flags"
+  ID                        id-at-apple-mcxflags }
+
+apple-mcxsettings ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-mcxsettings", "apple-mcxsettings2"}
+  LDAP-DESC                 "mcx settings"
+  ID                        id-at-apple-mcxsettings }
+
+apple-user-picture ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-user-picture"}
+  LDAP-DESC                 "picture"
+  ID                        id-at-apple-user-picture }
+
+apple-user-printattribute ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-user-printattribute"}
+  LDAP-DESC                 "print attribute"
+  ID                        id-at-apple-user-printattribute }
+
+apple-user-adminlimits ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-user-adminlimits"}
+  LDAP-DESC                 "admin limits"
+  ID                        id-at-apple-user-adminlimits }
+
+apple-user-authenticationhint ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-user-authenticationhint"}
+  LDAP-DESC                 "password hint"
+  ID                        id-at-apple-user-authenticationhint }
+
+apple-user-homesoftquota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-user-homesoftquota"}
+  LDAP-DESC                 "home directory soft quota"
+  ID                        id-at-apple-user-homesoftquota }
+
+apple-user-passwordpolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-user-passwordpolicy"}
+  LDAP-DESC                 "password policy options"
+  ID                        id-at-apple-user-passwordpolicy }
+
+apple-keyword ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-keyword"}
+  LDAP-DESC                 "keywords"
+  ID                        id-at-apple-keyword }
+
+apple-generateduid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-generateduid"}
+  LDAP-DESC                 "generated unique ID"
+  ID                        id-at-apple-generateduid }
+
+apple-imhandle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-imhandle"}
+  LDAP-DESC                 "IM handle (service:account name)"
+  ID                        id-at-apple-imhandle }
+
+apple-webloguri ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-webloguri"}
+  LDAP-DESC                 "Weblog URI"
+  ID                        id-at-apple-webloguri }
+
+apple-group-homeurl ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-group-homeurl"}
+  LDAP-DESC                 "group home url"
+  ID                        id-at-apple-group-homeurl }
+
+apple-group-homeowner ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-group-homeowner"}
+  LDAP-DESC                 "group home owner settings"
+  ID                        id-at-apple-group-homeowner }
+
+apple-group-realname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-group-realname"}
+  LDAP-DESC                 "group real name"
+  ID                        id-at-apple-group-realname }
+
+apple-group-nestedgroup ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-group-nestedgroup"}
+  LDAP-DESC                 "group real name"
+  ID                        id-at-apple-group-nestedgroup }
+
+apple-group-memberguid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-group-memberguid"}
+  LDAP-DESC                 "group real name"
+  ID                        id-at-apple-group-memberguid }
+
+apple-machine-software ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-machine-software"}
+  LDAP-DESC                 "installed system software"
+  ID                        id-at-apple-machine-software }
+
+apple-machine-hardware ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-machine-hardware"}
+  LDAP-DESC                 "system hardware description"
+  ID                        id-at-apple-machine-hardware }
+
+apple-machine-serves ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-machine-serves"}
+  LDAP-DESC                 "NetInfo Domain Server Binding"
+  ID                        id-at-apple-machine-serves }
+
+apple-machine-suffix ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-machine-suffix"}
+  LDAP-DESC                 "DIT suffix"
+  ID                        id-at-apple-machine-suffix }
+
+apple-machine-contactperson ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-machine-contactperson"}
+  LDAP-DESC                 "Name of contact person/owner of this machine"
+  ID                        id-at-apple-machine-contactperson }
+
+mountDirectory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mountDirectory"}
+  LDAP-DESC                 "mount path"
+  ID                        id-at-mountDirectory }
+
+mountType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mountType"}
+  LDAP-DESC                 "mount VFS type"
+  ID                        id-at-mountType }
+
+mountOption ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mountOption"}
+  LDAP-DESC                 "mount options"
+  ID                        id-at-mountOption }
+
+mountDumpFrequency ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mountDumpFrequency"}
+  LDAP-DESC                 "mount dump frequency"
+  ID                        id-at-mountDumpFrequency }
+
+mountPassNo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mountPassNo"}
+  LDAP-DESC                 "mount passno"
+  ID                        id-at-mountPassNo }
+
+apple-printer-attributes ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-printer-attributes"}
+  LDAP-DESC                 "printer attributes in /etc/printcap format"
+  ID                        id-at-apple-printer-attributes }
+
+apple-printer-lprhost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-printer-lprhost"}
+  LDAP-DESC                 "printer LPR host name"
+  ID                        id-at-apple-printer-lprhost }
+
+apple-printer-lprqueue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-printer-lprqueue"}
+  LDAP-DESC                 "printer LPR queue"
+  ID                        id-at-apple-printer-lprqueue }
+
+apple-printer-type ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-printer-type"}
+  LDAP-DESC                 "printer type"
+  ID                        id-at-apple-printer-type }
+
+apple-printer-note ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-printer-note"}
+  LDAP-DESC                 "printer note"
+  ID                        id-at-apple-printer-note }
+
+apple-realname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-realname"}
+  LDAP-DESC                 "real name"
+  ID                        id-at-apple-realname }
+
+apple-networkview ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-networkview"}
+  LDAP-DESC                 "Network view for the computer"
+  ID                        id-at-apple-networkview }
+
+apple-category ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-category"}
+  LDAP-DESC                 "Category for the computer or neighborhood"
+  ID                        id-at-apple-category }
+
+apple-computers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-computers"}
+  LDAP-DESC                 "computers"
+  ID                        id-at-apple-computers }
+
+apple-computer-list-groups ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-computer-list-groups"}
+  LDAP-DESC                 "groups"
+  ID                        id-at-apple-computer-list-groups }
+
+apple-xmlplist ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-xmlplist"}
+  LDAP-DESC                 "XML plist data"
+  ID                        id-at-apple-xmlplist }
+
+apple-service-url ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-service-url"}
+  LDAP-DESC                 "URL of service"
+  ID                        id-at-apple-service-url }
+
+apple-password-server-location ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-password-server-location"}
+  LDAP-DESC                 "password server location"
+  ID                        id-at-apple-password-server-location }
+
+apple-data-stamp ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-data-stamp"}
+  LDAP-DESC                 "data stamp"
+  ID                        id-at-apple-data-stamp }
+
+apple-config-realname ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-config-realname"}
+  LDAP-DESC                 "config real name"
+  ID                        id-at-apple-config-realname }
+
+apple-password-server-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-password-server-list"}
+  LDAP-DESC                 "password server replication plist"
+  ID                        id-at-apple-password-server-list }
+
+apple-ldap-replica ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-ldap-replica"}
+  LDAP-DESC                 "LDAP replication list"
+  ID                        id-at-apple-ldap-replica }
+
+apple-ldap-writable-replica ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-ldap-writable-replica"}
+  LDAP-DESC                 "LDAP writable replication list"
+  ID                        id-at-apple-ldap-writable-replica }
+
+apple-kdc-authkey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-kdc-authkey"}
+  LDAP-DESC                 "KDC master key RSA encrypted with realm public key"
+  ID                        id-at-apple-kdc-authkey }
+
+apple-kdc-configdata ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-kdc-configdata"}
+  LDAP-DESC                 "Contents of the kdc.conf file"
+  ID                        id-at-apple-kdc-configdata }
+
+apple-preset-user-is-admin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-preset-user-is-admin"}
+  LDAP-DESC                 "flag indicating whether the preset user is an administrator"
+  ID                        id-at-apple-preset-user-is-admin }
+
+-- Commented out in apple.schema while live classes still listed authAuthority. The definition at 1.3.6.1.4.1.63.1000.1.1.2.16.1 was restored. A second block at 1.3.6.1.4.1.63.1000.1.1.2.16.2 was left commented because it gives the same name another OID.
+authAuthority ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"authAuthority"}
+  LDAP-DESC                 "password server authentication authority"
+  ID                        id-at-authAuthority }
+
+apple-dns-domain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-dns-domain"}
+  LDAP-DESC                 "DNS domain"
+  ID                        id-at-apple-dns-domain }
+
+apple-dns-nameserver ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-dns-nameserver"}
+  LDAP-DESC                 "DNS name server list"
+  ID                        id-at-apple-dns-nameserver }
+
+apple-service-type ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"apple-service-type"}
+  LDAP-DESC                 "type of service"
+  ID                        id-at-apple-service-type }
+
+apple-service-port ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"apple-service-port"}
+  LDAP-DESC                 "Service port number"
+  ID                        id-at-apple-service-port }
+
+apple-dnsname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-dnsname"}
+  LDAP-DESC                 "DNS name"
+  ID                        id-at-apple-dnsname }
+
+apple-service-location ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-service-location"}
+  LDAP-DESC                 "Service location"
+  ID                        id-at-apple-service-location }
+
+apple-nodepathxml ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-nodepathxml"}
+  LDAP-DESC                 "XML plist of directory node path"
+  ID                        id-at-apple-nodepathxml }
+
+apple-neighborhoodalias ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-neighborhoodalias"}
+  LDAP-DESC                 "XML plist referring to another neighborhood record"
+  ID                        id-at-apple-neighborhoodalias }
+
+apple-computeralias ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-computeralias"}
+  LDAP-DESC                 "XML plist referring to a computer record"
+  ID                        id-at-apple-computeralias }
+
+-- Commented out in apple.schema while apple-acl still required it. The definition was restored.
+apple-acl-entry ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"apple-acl-entry"}
+  LDAP-DESC                 "acl entry"
+  ID                        id-at-apple-acl-entry }
+
+-- Object classes
+
+apple-user OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { apple-user-homeurl
+                              | apple-user-class
+                              | apple-user-homequota
+                              | apple-user-mailattribute
+                              | apple-user-printattribute
+                              | apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-user-adminlimits
+                              | apple-user-picture
+                              | apple-user-authenticationhint
+                              | apple-user-homesoftquota
+                              | apple-user-passwordpolicy
+                              | apple-keyword
+                              | apple-generateduid
+                              | apple-imhandle
+                              | apple-webloguri
+                              | authAuthority
+                              | acctFlags
+                              | pwdLastSet
+                              | logonTime
+                              | logoffTime
+                              | kickoffTime
+                              | homeDrive
+                              | scriptPath
+                              | profilePath
+                              | userWorkstations
+                              | smbHome
+                              | rid
+                              | primaryGroupID
+                              | sambaSID
+                              | sambaPrimaryGroupSID
+                              | userCertificate }
+  LDAP-NAME                 {"apple-user"}
+  LDAP-DESC                 "apple user account"
+  ID                        id-oc-apple-user }
+
+apple-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { apple-group-homeurl
+                              | apple-group-homeowner
+                              | apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-group-realname
+                              | apple-user-picture
+                              | apple-keyword
+                              | apple-generateduid
+                              | apple-group-nestedgroup
+                              | apple-group-memberguid
+                              | mail
+                              | rid
+                              | sambaSID
+                              | ttl }
+  LDAP-NAME                 {"apple-group"}
+  LDAP-DESC                 "group account"
+  ID                        id-oc-apple-group }
+
+apple-machine OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { apple-machine-software
+                              | apple-machine-hardware
+                              | apple-machine-serves
+                              | apple-machine-suffix
+                              | apple-machine-contactperson }
+  LDAP-NAME                 {"apple-machine"}
+  ID                        id-oc-apple-machine }
+
+mount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { mountDirectory
+                              | mountType
+                              | mountOption
+                              | mountDumpFrequency
+                              | mountPassNo }
+  LDAP-NAME                 {"mount"}
+  ID                        id-oc-mount }
+
+apple-printer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { apple-printer-attributes
+                              | apple-printer-lprhost
+                              | apple-printer-lprqueue
+                              | apple-printer-type
+                              | apple-printer-note }
+  LDAP-NAME                 {"apple-printer"}
+  ID                        id-oc-apple-printer }
+
+apple-computer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { apple-realname
+                              | description
+                              | macAddress
+                              | apple-category
+                              | apple-computer-list-groups
+                              | apple-keyword
+                              | apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-networkview
+                              | apple-xmlplist
+                              | apple-service-url
+                              | authAuthority
+                              | uidNumber
+                              | gidNumber
+                              | apple-generateduid
+                              | ttl
+                              | acctFlags
+                              | pwdLastSet
+                              | logonTime
+                              | logoffTime
+                              | kickoffTime
+                              | rid
+                              | primaryGroupID
+                              | sambaSID
+                              | sambaPrimaryGroupSID }
+  LDAP-NAME                 {"apple-computer"}
+  LDAP-DESC                 "computer"
+  ID                        id-oc-apple-computer }
+
+apple-computer-list OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-computer-list-groups
+                              | apple-computers
+                              | apple-generateduid
+                              | apple-keyword }
+  LDAP-NAME                 {"apple-computer-list"}
+  LDAP-DESC                 "computer list"
+  ID                        id-oc-apple-computer-list }
+
+apple-configuration OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName
+                              | apple-config-realname
+                              | apple-data-stamp
+                              | apple-password-server-location
+                              | apple-password-server-list
+                              | apple-ldap-replica
+                              | apple-ldap-writable-replica
+                              | apple-keyword
+                              | apple-kdc-authkey
+                              | apple-kdc-configdata
+                              | apple-xmlplist
+                              | ttl }
+  LDAP-NAME                 {"apple-configuration"}
+  LDAP-DESC                 "configuration"
+  ID                        id-oc-apple-configuration }
+
+apple-preset-computer-list OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-computer-list-groups
+                              | apple-keyword }
+  LDAP-NAME                 {"apple-preset-computer-list"}
+  LDAP-DESC                 "preset computer list"
+  ID                        id-oc-apple-preset-computer-list }
+
+apple-preset-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { memberUid
+                              | gidNumber
+                              | description
+                              | apple-group-homeurl
+                              | apple-group-homeowner
+                              | apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-group-realname
+                              | apple-keyword
+                              | apple-group-nestedgroup
+                              | apple-group-memberguid
+                              | ttl }
+  LDAP-NAME                 {"apple-preset-group"}
+  LDAP-DESC                 "preset group"
+  ID                        id-oc-apple-preset-group }
+
+apple-preset-user OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { uid
+                              | memberUid
+                              | gidNumber
+                              | homeDirectory
+                              | apple-user-homeurl
+                              | apple-user-homequota
+                              | apple-user-homesoftquota
+                              | apple-user-mailattribute
+                              | apple-user-printattribute
+                              | apple-mcxflags
+                              | apple-mcxsettings
+                              | apple-user-adminlimits
+                              | apple-user-passwordpolicy
+                              | userPassword
+                              | apple-user-picture
+                              | apple-keyword
+                              | loginShell
+                              | description
+                              | shadowLastChange
+                              | shadowExpire
+                              | authAuthority
+                              | homeDrive
+                              | scriptPath
+                              | profilePath
+                              | smbHome
+                              | apple-preset-user-is-admin }
+  LDAP-NAME                 {"apple-preset-user"}
+  LDAP-DESC                 "preset user"
+  ID                        id-oc-apple-preset-user }
+
+authAuthorityObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { authAuthority }
+  LDAP-NAME                 {"authAuthorityObject"}
+  ID                        id-oc-authAuthorityObject }
+
+apple-serverassistant-config OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { apple-xmlplist }
+  LDAP-NAME                 {"apple-serverassistant-config"}
+  ID                        id-oc-apple-serverassistant-config }
+
+apple-location OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { apple-dns-domain
+                              | apple-dns-nameserver }
+  LDAP-NAME                 {"apple-location"}
+  ID                        id-oc-apple-location }
+
+apple-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | apple-service-type }
+  MAY CONTAIN               { ipHostNumber
+                              | description
+                              | apple-service-location
+                              | apple-service-url
+                              | apple-service-port
+                              | apple-dnsname
+                              | apple-keyword }
+  LDAP-NAME                 {"apple-service"}
+  ID                        id-oc-apple-service }
+
+apple-neighborhood OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | apple-generateduid
+                              | apple-category
+                              | apple-nodepathxml
+                              | apple-neighborhoodalias
+                              | apple-computeralias
+                              | apple-keyword
+                              | apple-realname
+                              | apple-xmlplist
+                              | ttl }
+  LDAP-NAME                 {"apple-neighborhood"}
+  ID                        id-oc-apple-neighborhood }
+
+apple-acl OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | apple-acl-entry }
+  LDAP-NAME                 {"apple-acl"}
+  ID                        id-oc-apple-acl }
+END

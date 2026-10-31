@@ -1,0 +1,32 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
+// export { top } from "../InformationFramework/top.oa.mjs";
+// export { objectSid } from "../LdapSchema2ldifMicrosoft/objectSid.oa.mjs";
+// export { foreignIdentifier } from "../LdapSchema2ldifMicrosoft/foreignIdentifier.oa.mjs";
+// export { id_oc_foreignSecurityPrincipal } from "../LdapSchema2ldifMicrosoft/id-oc-foreignSecurityPrincipal.va.mjs";
+
+
+/**
+ * @summary foreignSecurityPrincipal
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * foreignSecurityPrincipal OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   MUST CONTAIN              { objectSid }
+ *   MAY CONTAIN               { foreignIdentifier }
+ *   LDAP-NAME                 {"foreignSecurityPrincipal"}
+ *   ID                        id-oc-foreignSecurityPrincipal }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const foreignSecurityPrincipal: OBJECT_CLASS = undefined;
+
+/* eslint-enable */

@@ -1,0 +1,117 @@
+-- Derived from data/ldap-schema/plugpen.schema
+-- Upstream: https://github.com/plugorgau/ugmm/blob/25686a14340c8953916880d1c3ea5989ce3a26a9/plugpen.schema#L4
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapPlugpen DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, description, directoryString, generalizedTime,
+    generalizedTimeMatch, generalizedTimeOrderingMatch, ia5String, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-x-plug-paymentDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 101 }
+id-at-x-plug-paymentID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 102 }
+id-at-x-plug-paymentAmount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 103 }
+id-at-x-plug-paymentType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 104 }
+id-at-x-plug-paymentDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 105 }
+id-at-x-plug-paymentYears OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 106 }
+id-oc-x-plug-payment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 10 }
+id-at-mailForward OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 107 }
+id-oc-mailForwardingAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 37966 20 }
+
+-- Attribute types
+
+x-plug-paymentDate ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"x-plug-paymentDate"}
+  LDAP-DESC                 "Date of Payment"
+  ID                        id-at-x-plug-paymentDate }
+
+x-plug-paymentID ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"x-plug-paymentID"}
+  LDAP-DESC                 "Payment uniqueID"
+  ID                        id-at-x-plug-paymentID }
+
+x-plug-paymentAmount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"x-plug-paymentAmount"}
+  LDAP-DESC                 "Payment amount (in cents)"
+  ID                        id-at-x-plug-paymentAmount }
+
+x-plug-paymentType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-plug-paymentType"}
+  LDAP-DESC                 "Type of Payment (Full, Concession, Family)"
+  ID                        id-at-x-plug-paymentType }
+
+x-plug-paymentDescription ATTRIBUTE ::= {
+  SUBTYPE OF                description
+  LDAP-NAME                 {"x-plug-paymentDescription"}
+  LDAP-DESC                 "Payment Description"
+  ID                        id-at-x-plug-paymentDescription }
+
+x-plug-paymentYears ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"x-plug-paymentYears"}
+  LDAP-DESC                 "How many years is the payment for?"
+  ID                        id-at-x-plug-paymentYears }
+
+mailForward ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailForward"}
+  LDAP-DESC                 "RFC1274: RFC822 Mailbox"
+  ID                        id-at-mailForward }
+
+-- Object classes
+
+x-plug-payment OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { x-plug-paymentDate
+                              | x-plug-paymentID
+                              | x-plug-paymentAmount
+                              | x-plug-paymentType
+                              | x-plug-paymentYears }
+  MAY CONTAIN               { x-plug-paymentDescription }
+  LDAP-NAME                 {"x-plug-payment"}
+  LDAP-DESC                 "Payment"
+  ID                        id-oc-x-plug-payment }
+
+mailForwardingAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mailForward }
+  LDAP-NAME                 {"mailForwardingAccount"}
+  LDAP-DESC                 "Allows mail forwarding address"
+  ID                        id-oc-mailForwardingAccount }
+END

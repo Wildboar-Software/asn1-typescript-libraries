@@ -1,0 +1,83 @@
+-- Derived from data/ldap-schema/schema2ldif/microsoft.ext.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 7 elements share a numeric OID with another element that was also kept. See the comments on those elements.
+LdapSchema2ldifMicrosoftExt DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  CONTENT-RULE
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  group
+    FROM LdapSamaccountname
+
+  builtinDomain, contact, domainDNS, mailRecipient, remoteMailRecipient,
+    samDomain, samDomainBase, securityPrincipal, user
+    FROM LdapSchema2ldifMicrosoft ;
+
+-- Object identifiers
+
+-- OID 1.2.840.113556.1.5.24 is also used by remoteMailRecipient (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-remoteMailRecipient OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 24 }
+-- OID 1.2.840.113556.1.5.67 is also used by domainDNS (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-domainDNS OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 67 }
+-- OID 1.2.840.113556.1.5.3 is also used by samDomain (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-samDomain OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 3 }
+-- OID 1.2.840.113556.1.5.15 is also used by contact (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-contact OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 15 }
+-- OID 1.2.840.113556.1.5.8 is also used by group (OBJECT-CLASS) in samaccountname.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-group OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 8 }
+-- OID 1.2.840.113556.1.5.9 is also used by user (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-user OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 9 }
+-- OID 1.2.840.113556.1.5.4 is also used by builtinDomain (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+id-cr-builtinDomain OBJECT IDENTIFIER ::= { 1 2 840 113556 1 5 4 }
+
+-- DIT content rules
+
+-- valuereference suffixed -rule so it does not hide object class remoteMailRecipient, which this module imports
+-- OID 1.2.840.113556.1.5.24 is also used by remoteMailRecipient (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+remoteMailRecipient-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   remoteMailRecipient.&id
+  AUXILIARY OBJECT-CLASSES  { mailRecipient } }
+
+-- valuereference suffixed -rule so it does not hide object class domainDNS, which this module imports
+-- OID 1.2.840.113556.1.5.67 is also used by domainDNS (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+domainDNS-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   domainDNS.&id
+  AUXILIARY OBJECT-CLASSES  { samDomain } }
+
+-- valuereference suffixed -rule so it does not hide object class samDomain, which this module imports
+-- OID 1.2.840.113556.1.5.3 is also used by samDomain (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+samDomain-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   samDomain.&id
+  AUXILIARY OBJECT-CLASSES  { samDomainBase } }
+
+-- valuereference suffixed -rule so it does not hide object class contact, which this module imports
+-- OID 1.2.840.113556.1.5.15 is also used by contact (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+contact-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   contact.&id
+  AUXILIARY OBJECT-CLASSES  { mailRecipient } }
+
+-- valuereference suffixed -rule so it does not hide object class group, which this module imports
+-- OID 1.2.840.113556.1.5.8 is also used by group (OBJECT-CLASS) in samaccountname.schema. The names match, but the element kinds differ, so each definition was kept.
+group-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   group.&id
+  AUXILIARY OBJECT-CLASSES  { securityPrincipal
+                              | mailRecipient } }
+
+-- valuereference suffixed -rule so it does not hide object class user, which this module imports
+-- OID 1.2.840.113556.1.5.9 is also used by user (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+user-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   user.&id
+  AUXILIARY OBJECT-CLASSES  { mailRecipient
+                              | securityPrincipal } }
+
+-- valuereference suffixed -rule so it does not hide object class builtinDomain, which this module imports
+-- OID 1.2.840.113556.1.5.4 is also used by builtinDomain (OBJECT-CLASS) in schema2ldif/microsoft.schema. The names match, but the element kinds differ, so each definition was kept.
+builtinDomain-rule CONTENT-RULE ::= {
+  STRUCTURAL OBJECT-CLASS   builtinDomain.&id
+  AUXILIARY OBJECT-CLASSES  { samDomainBase } }
+END

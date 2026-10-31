@@ -1,0 +1,44 @@
+-- Derived from data/ldap-schema/schema2ldif/microsoft.std.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 69 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 7 elements were omitted because another source file in this corpus defines the same OID.
+-- 2 elements share a numeric OID with another element that was also kept. See the comments on those elements.
+LdapSchema2ldifMicrosoftStd DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+-- OID 2.16.840.1.113730.3.1.35 is also used by changeLog (ATTRIBUTE) in common389.ldif. The LDAP names differ, so each definition was kept.
+id-at-thumbnailPhoto OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 35 }
+-- OID 2.16.840.1.113730.3.1.36 is also used by nsLicensedFor (ATTRIBUTE) in common389.ldif. The LDAP names differ, so each definition was kept.
+id-at-thumbnailLogo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 36 }
+id-at-userSMIMECertificate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 140 }
+
+-- Attribute types
+
+-- OID 2.16.840.1.113730.3.1.35 is also used by changeLog (ATTRIBUTE) in common389.ldif. The LDAP names differ, so each definition was kept.
+-- This attribute declares neither a supertype nor a syntax.
+thumbnailPhoto ATTRIBUTE ::= {
+  SINGLE VALUE              TRUE
+  LDAP-NAME                 {"thumbnailPhoto"}
+  ID                        id-at-thumbnailPhoto }
+
+-- OID 2.16.840.1.113730.3.1.36 is also used by nsLicensedFor (ATTRIBUTE) in common389.ldif. The LDAP names differ, so each definition was kept.
+-- This attribute declares neither a supertype nor a syntax.
+thumbnailLogo ATTRIBUTE ::= {
+  SINGLE VALUE              TRUE
+  LDAP-NAME                 {"thumbnailLogo"}
+  ID                        id-at-thumbnailLogo }
+
+-- This attribute declares neither a supertype nor a syntax.
+userSMIMECertificate ATTRIBUTE ::= {
+  LDAP-NAME                 {"userSMIMECertificate"}
+  ID                        id-at-userSMIMECertificate }
+END
