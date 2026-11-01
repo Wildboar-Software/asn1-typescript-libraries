@@ -1,0 +1,26 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    type OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+
+
+
+/**
+ * @summary id_nf_orgUnitNameForm
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-nf-orgUnitNameForm          OBJECT IDENTIFIER ::= {id-nf 4}
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_nf_orgUnitNameForm: OBJECT_IDENTIFIER = _OID.fromParts([
+    4,
+], id_nf);
+
+/* eslint-enable */

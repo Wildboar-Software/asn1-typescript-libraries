@@ -1,0 +1,51 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
+// export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+// export { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftParents } from "../LdapApacheFortress/ftParents.oa.mjs";
+// export { ftParents } from "../LdapApacheFortress/ftParents.oa.mjs";
+import { id_oc_ftOrgUnit } from "../LdapApacheFortress/id-oc-ftOrgUnit.va.mjs";
+// export { id_oc_ftOrgUnit } from "../LdapApacheFortress/id-oc-ftOrgUnit.va.mjs";
+
+
+/**
+ * @summary ftOrgUnit
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * ftOrgUnit OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { organizationalUnit }
+ *   MUST CONTAIN              { ftId }
+ *   MAY CONTAIN               { ftParents }
+ *   LDAP-NAME                 {"ftOrgUnit"}
+ *   LDAP-DESC                 "Fortress OrgUnit Structural Object Class"
+ *   ID                        id-oc-ftOrgUnit }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const ftOrgUnit: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ organizationalUnit, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftParents, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "ftOrgUnit" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "Fortress OrgUnit Structural Object Class" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_ftOrgUnit /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

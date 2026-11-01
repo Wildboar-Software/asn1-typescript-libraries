@@ -1,0 +1,113 @@
+-- Derived from data/ldap-schema/glue/7-09-ToComputingService.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue709ToComputingService DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2ToComputingServiceID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 1 }
+id-at-gLUE2ToComputingServiceNetworkInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 2 }
+id-at-gLUE2ToComputingServiceBandwidth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 3 }
+id-at-gLUE2ToComputingServiceStorageAccessProtocolForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 4 }
+id-at-gLUE2ToComputingServiceComputingServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 5 }
+id-at-gLUE2ToComputingServiceStorageServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 6 }
+id-oc-gLUE2ToComputingService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 35 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ToComputingServiceID" lowercased so the assignment is a valuereference.
+gLUE2ToComputingServiceID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ToComputingServiceID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2ToComputingServiceID }
+
+-- initial capital of "GLUE2ToComputingServiceNetworkInfo" lowercased so the assignment is a valuereference.
+gLUE2ToComputingServiceNetworkInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ToComputingServiceNetworkInfo"}
+  LDAP-DESC                 "Type of network available among the storage service and computing service"
+  ID                        id-at-gLUE2ToComputingServiceNetworkInfo }
+
+-- initial capital of "GLUE2ToComputingServiceBandwidth" lowercased so the assignment is a valuereference.
+gLUE2ToComputingServiceBandwidth ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ToComputingServiceBandwidth"}
+  LDAP-DESC                 "The nominal bandwidth available between the storage service and computing service"
+  ID                        id-at-gLUE2ToComputingServiceBandwidth }
+
+-- initial capital of "GLUE2ToComputingServiceStorageAccessProtocolForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ToComputingServiceStorageAccessProtocolForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ToComputingServiceStorageAccessProtocolForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ToComputingServiceStorageAccessProtocolForeignKey }
+
+-- initial capital of "GLUE2ToComputingServiceComputingServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ToComputingServiceComputingServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ToComputingServiceComputingServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ToComputingServiceComputingServiceForeignKey }
+
+-- initial capital of "GLUE2ToComputingServiceStorageServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ToComputingServiceStorageServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ToComputingServiceStorageServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ToComputingServiceStorageServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ToComputingService" lowercased so the assignment is a valuereference.
+gLUE2ToComputingService OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2ToComputingServiceID
+                              | gLUE2ToComputingServiceComputingServiceForeignKey
+                              | gLUE2ToComputingServiceStorageServiceForeignKey }
+  MAY CONTAIN               { gLUE2ToComputingServiceNetworkInfo
+                              | gLUE2ToComputingServiceBandwidth
+                              | gLUE2ToComputingServiceStorageAccessProtocolForeignKey }
+  LDAP-NAME                 {"GLUE2ToComputingService"}
+  LDAP-DESC                 "Description of the network link quality of a storage service to a computing service"
+  ID                        id-oc-gLUE2ToComputingService }
+END

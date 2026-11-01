@@ -1,0 +1,28 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID
+} from "@wildboar/asn1";
+import { ID } from "../VOPerson/ID.ta.mjs";
+// export { ID, _decode_ID, _encode_ID } from "../VOPerson/ID.ta.mjs";
+import { id_voPersonObjectClass } from "../VOPerson/id-voPersonObjectClass.va.mjs";
+// export { id_voPersonObjectClass } from "../VOPerson/id-voPersonObjectClass.va.mjs";
+
+
+/**
+ * @summary id_at_voPersonApplicationPassword
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-at-voPersonApplicationPassword   ID ::= { id-voPersonObjectClass 13 }
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_at_voPersonApplicationPassword: ID = _OID.fromParts([
+    13,
+], id_voPersonObjectClass);
+
+/* eslint-enable */

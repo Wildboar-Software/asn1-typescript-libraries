@@ -1,0 +1,217 @@
+-- InetOrgPerson (RFC2798)
+InetOrgPerson {
+    iso(1) identified-organization(3) dod(6) internet(1) private(4)
+    enterprise(1) wildboar(56490) module(1) inetorgperson(5)
+}
+DEFINITIONS ::= BEGIN
+
+EXPORTS ALL;
+
+IMPORTS
+
+    id-nf
+        FROM Wildboar
+        {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+        enterprise(1) wildboar(56490) module(1) wildboar(1)}
+        WITH SUCCESSORS
+
+    ATTRIBUTE, OBJECT-CLASS, NAME-FORM, DistinguishedName, top
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+        WITH SUCCESSORS
+
+	directoryString, dn, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+	ia5String, caseIgnoreListMatch, caseIgnoreListSubstringsMatch,
+	caseIgnoreMatch, caseIgnoreOrderingMatch, caseIgnoreSubstringsMatch,
+	commonName, UnboundedDirectoryString, jpeg, businessCategory, givenName,
+    initials, organizationName, uid, uniqueIdentifier
+		FROM SelectedAttributeTypes
+		{joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9}
+		WITH SUCCESSORS
+
+    organizationalPerson
+        FROM SelectedObjectClasses
+        {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9}
+        WITH SUCCESSORS
+
+    audio, homeTelephoneNumber, homePostalAddress, manager,
+    mobileTelephoneNumber, pagerTelephoneNumber, roomNumber, secretary
+        FROM Cosine
+        {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+        enterprise(1) wildboar(56490) module(1) cosine(3)}
+        WITH SUCCESSORS
+
+    labeledURI, mail
+        FROM OpenLDAPCoreSchema
+        {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+        enterprise(1) wildboar(56490) module(1) openldap-core(6)}
+
+    userCertificate
+        FROM AuthenticationFramework
+        {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9}
+        WITH SUCCESSORS
+
+    ;
+
+-- Object Identifiers
+
+id-netscape OBJECT IDENTIFIER ::= {
+    joint-iso-itu-t(2)
+    country(16)
+    us(840)
+    organization(1)
+    netscape(113730)
+}
+
+id-netscapeDirectory            OBJECT IDENTIFIER ::= { id-netscape directory(3) }
+
+id-netscapeAttrTypes            OBJECT IDENTIFIER ::= { id-netscapeDirectory 1 }
+id-netscapeObjClass             OBJECT IDENTIFIER ::= { id-netscapeDirectory 2 }
+
+id-at-carLicense                OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 1 }
+id-at-departmentNumber          OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 2 }
+id-at-employeeNumber            OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 3 }
+id-at-employeeType              OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 4 }
+id-at-preferredLanguage         OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 39 }
+id-at-userSMIMECertificate      OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 40 }
+id-at-jpegPhoto                 OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 60 }
+id-at-userPKCS12                OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 216 }
+id-at-displayName               OBJECT IDENTIFIER ::= { id-netscapeAttrTypes 241 }
+
+id-oc-inetOrgPerson             OBJECT IDENTIFIER ::= { id-netscapeObjClass 2 }
+
+id-nf-inetOrgPersonNameForm     OBJECT IDENTIFIER ::= { id-nf 10 }
+
+-- Attribute Types
+
+carLicense ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+	ORDERING MATCHING RULE		caseIgnoreOrderingMatch
+	SUBSTRINGS MATCHING RULE 	caseIgnoreSubstringsMatch
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"carLicense"}
+	LDAP-DESC					"RFC2798: vehicle license or registration plate"
+    ID                          id-at-carLicense
+}
+
+departmentNumber ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+	ORDERING MATCHING RULE		caseIgnoreOrderingMatch
+	SUBSTRINGS MATCHING RULE 	caseIgnoreSubstringsMatch
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"departmentNumber"}
+	LDAP-DESC					"RFC2798: identifies a department within an organization"
+    ID                          id-at-departmentNumber
+}
+
+employeeNumber ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+	ORDERING MATCHING RULE		caseIgnoreOrderingMatch
+	SUBSTRINGS MATCHING RULE 	caseIgnoreSubstringsMatch
+    SINGLE VALUE                TRUE
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"employeeNumber"}
+	LDAP-DESC					"RFC2798: numerically identifies an employee within an organization"
+    ID                          id-at-employeeNumber
+}
+
+employeeType ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+	ORDERING MATCHING RULE		caseIgnoreOrderingMatch
+	SUBSTRINGS MATCHING RULE 	caseIgnoreSubstringsMatch
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"employeeType"}
+	LDAP-DESC					"RFC2798: type of employment for a person"
+    ID                          id-at-employeeType
+}
+
+preferredLanguage ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+	ORDERING MATCHING RULE		caseIgnoreOrderingMatch
+	SUBSTRINGS MATCHING RULE 	caseIgnoreSubstringsMatch
+    SINGLE VALUE                TRUE
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"preferredLanguage"}
+	LDAP-DESC					"RFC2798: preferred written or spoken language for a person"
+    ID                          id-at-preferredLanguage
+}
+
+-- Not supported by X.500 directories.
+-- jpegPhoto ATTRIBUTE ::= {
+--     WITH SYNTAX 				UnboundedDirectoryString
+-- 	LDAP-SYNTAX 				jpeg.&id
+-- 	LDAP-NAME 					{"jpegPhoto"}
+-- 	LDAP-DESC					"RFC2798: a JPEG image"
+--     ID { 0 9 2342 19200300 100 1 60 }
+-- }
+
+displayName ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+	ORDERING MATCHING RULE		caseIgnoreOrderingMatch
+	SUBSTRINGS MATCHING RULE 	caseIgnoreSubstringsMatch
+    SINGLE VALUE                TRUE
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"displayName"}
+	LDAP-DESC					"RFC2798: preferred name to be used when displaying entries"
+    ID                          id-at-displayName
+}
+
+-- userSMIMECertificate and userPKCS12 are skipped, because their syntax is
+-- "binary," which is undefined (and frankly, a weakly-typed way to store files
+-- like these.)
+
+-- Object Classes
+
+inetOrgPerson OBJECT-CLASS ::= {
+	SUBCLASS OF 	{organizationalPerson}
+	KIND			structural
+	MAY CONTAIN		{
+		audio
+        | businessCategory
+        | carLicense
+        | departmentNumber
+        | displayName
+        | employeeNumber
+        | employeeType
+        | givenName
+        | homeTelephoneNumber
+        | homePostalAddress
+        | initials
+        -- | jpegPhoto
+        | labeledURI
+        | mail
+        | manager
+        | mobileTelephoneNumber
+        | organizationName
+        | pagerTelephoneNumber
+        -- | photo
+        | roomNumber
+        | secretary
+        | uid
+        | userCertificate
+        | uniqueIdentifier
+        | preferredLanguage
+        -- | userSMIMECertificate
+        -- | userPKCS12
+	}
+	LDAP-NAME		{"inetOrgPerson"}
+	LDAP-DESC		"RFC2798: Internet Organizational Person"
+	ID				id-oc-inetOrgPerson
+}
+
+-- Name Forms
+
+inetOrgPersonNameForm NAME-FORM ::= {
+	NAMES		    inetOrgPerson
+	WITH ATTRIBUTES {commonName}
+	LDAP-NAME       {"inetOrgPersonNameForm"}
+	ID		        id-nf-inetOrgPersonNameForm
+}
+
+END

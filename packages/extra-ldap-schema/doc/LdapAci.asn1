@@ -1,0 +1,32 @@
+-- Derived from data/ldap-schema/aci.ldif
+-- Upstream: https://github.com/389ds/389-ds-base/blob/3f456044e6996f6404bb44ad9dec48b9f453e128/ldap/schema/00core.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapAci DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  directoryString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-aci OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 55 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Directory Server"
+aci ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"aci"}
+  LDAP-DESC                 "Netscape defined access control information attribute type"
+  ID                        id-at-aci }
+END
