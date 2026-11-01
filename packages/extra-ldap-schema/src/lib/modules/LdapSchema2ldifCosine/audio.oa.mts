@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    type OCTET_STRING
+    type OCTET_STRING,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -30,11 +32,19 @@ import { id_at_audio } from "../LdapSchema2ldifCosine/id-at-audio.va.mjs";
  * @type {ATTRIBUTE<OCTET_STRING>}
  * @implements {ATTRIBUTE<OCTET_STRING>}
  */
+const _decode_audio_Type = (el: _Element): OCTET_STRING => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 25000) {
+        throw new ASN1SizeError("audio violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const audio: ATTRIBUTE<OCTET_STRING> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeOctetString,
+        "&Type": _decode_audio_Type,
     },
     encoderFor: {
         "&Type": $._encodeOctetString,

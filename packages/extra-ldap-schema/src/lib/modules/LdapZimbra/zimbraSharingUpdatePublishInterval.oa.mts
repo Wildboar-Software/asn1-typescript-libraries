@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type IA5String
+    type IA5String,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -35,11 +37,19 @@ import { id_at_zimbraSharingUpdatePublishInterval } from "../LdapZimbra/id-at-zi
  * @type {ATTRIBUTE<IA5String>}
  * @implements {ATTRIBUTE<IA5String>}
  */
+const _decode_zimbraSharingUpdatePublishInterval_Type = (el: _Element): IA5String => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 32) {
+        throw new ASN1SizeError("zimbraSharingUpdatePublishInterval violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const zimbraSharingUpdatePublishInterval: ATTRIBUTE<IA5String> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeIA5String,
+        "&Type": _decode_zimbraSharingUpdatePublishInterval_Type,
     },
     encoderFor: {
         "&Type": $._encodeIA5String,

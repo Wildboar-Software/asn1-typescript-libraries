@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type NumericString
+    type NumericString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -31,11 +33,19 @@ import { id_at_resetPasswordTokenCtime } from "../LdapCloudos/id-at-resetPasswor
  * @type {ATTRIBUTE<NumericString>}
  * @implements {ATTRIBUTE<NumericString>}
  */
+const _decode_resetPasswordTokenCtime_Type = (el: _Element): NumericString => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 1 || value.length > 256) {
+        throw new ASN1SizeError("resetPasswordTokenCtime violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const resetPasswordTokenCtime: ATTRIBUTE<NumericString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeNumericString,
+        "&Type": _decode_resetPasswordTokenCtime_Type,
     },
     encoderFor: {
         "&Type": $._encodeNumericString,

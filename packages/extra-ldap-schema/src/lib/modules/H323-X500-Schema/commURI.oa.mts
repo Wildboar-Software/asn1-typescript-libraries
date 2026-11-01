@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    ObjectIdentifier as _OID
+    ObjectIdentifier as _OID,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
@@ -31,11 +33,31 @@ import { cu_at } from "../H323-X500-Schema/cu-at.va.mjs";
  * @type {ATTRIBUTE<DirectoryString>}
  * @implements {ATTRIBUTE<DirectoryString>}
  */
+const _decode_commURI_Type = (el: _Element): DirectoryString => {
+    const value = _decode_DirectoryString(el);
+    let text: string;
+    if ("teletexString" in value) {
+        text = value.teletexString;
+    } else if ("printableString" in value) {
+        text = value.printableString;
+    } else if ("bmpString" in value) {
+        text = value.bmpString;
+    } else if ("universalString" in value) {
+        text = value.universalString;
+    } else {
+        text = value.uTF8String;
+    }
+    if (text.length < 1 || text.length > 256) {
+        throw new ASN1SizeError("commURI violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const commURI: ATTRIBUTE<DirectoryString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_DirectoryString,
+        "&Type": _decode_commURI_Type,
     },
     encoderFor: {
         "&Type": _encode_DirectoryString,

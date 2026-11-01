@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    type IA5String
+    type IA5String,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -30,11 +32,19 @@ import { caseIgnoreIA5Match } from "../SelectedAttributeTypes/caseIgnoreIA5Match
  * @type {ATTRIBUTE<IA5String>}
  * @implements {ATTRIBUTE<IA5String>}
  */
+const _decode_h320IdentitySN_Type = (el: _Element): IA5String => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 15) {
+        throw new ASN1SizeError("h320IdentitySN violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const h320IdentitySN: ATTRIBUTE<IA5String> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeIA5String,
+        "&Type": _decode_h320IdentitySN_Type,
     },
     encoderFor: {
         "&Type": $._encodeIA5String,

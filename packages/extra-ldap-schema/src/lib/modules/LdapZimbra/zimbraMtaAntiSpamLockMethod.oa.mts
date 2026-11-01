@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type IA5String
+    type IA5String,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -38,11 +40,19 @@ import { id_at_zimbraMtaAntiSpamLockMethod } from "../LdapZimbra/id-at-zimbraMta
  * @type {ATTRIBUTE<IA5String>}
  * @implements {ATTRIBUTE<IA5String>}
  */
+const _decode_zimbraMtaAntiSpamLockMethod_Type = (el: _Element): IA5String => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 64) {
+        throw new ASN1SizeError("zimbraMtaAntiSpamLockMethod violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const zimbraMtaAntiSpamLockMethod: ATTRIBUTE<IA5String> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeIA5String,
+        "&Type": _decode_zimbraMtaAntiSpamLockMethod_Type,
     },
     encoderFor: {
         "&Type": $._encodeIA5String,

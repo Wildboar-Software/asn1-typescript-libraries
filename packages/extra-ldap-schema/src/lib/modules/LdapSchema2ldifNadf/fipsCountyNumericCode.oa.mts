@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type NumericString
+    type NumericString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -33,11 +35,19 @@ import { id_at_fipsCountyNumericCode } from "../LdapSchema2ldifNadf/id-at-fipsCo
  * @type {ATTRIBUTE<NumericString>}
  * @implements {ATTRIBUTE<NumericString>}
  */
+const _decode_fipsCountyNumericCode_Type = (el: _Element): NumericString => {
+    const value = $._decodeNumericString(el);
+    if (value.length < 1 || value.length > 5) {
+        throw new ASN1SizeError("fipsCountyNumericCode violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const fipsCountyNumericCode: ATTRIBUTE<NumericString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeNumericString,
+        "&Type": _decode_fipsCountyNumericCode_Type,
     },
     encoderFor: {
         "&Type": $._encodeNumericString,

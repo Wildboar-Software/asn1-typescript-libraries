@@ -1,4 +1,9 @@
 /* eslint-disable */
+import {
+    type ASN1Element as _Element,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import { pkcs_9_ub_signingDescription } from "../PKCS-9/pkcs-9-ub-signingDescription.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 // export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
@@ -30,11 +35,31 @@ import { pkcs_9_at_signingDescription } from "../PKCS-9/pkcs-9-at-signingDescrip
  * @type {ATTRIBUTE<DirectoryString>}
  * @implements {ATTRIBUTE<DirectoryString>}
  */
+const _decode_signingDescription_Type = (el: _Element): DirectoryString => {
+    const value = _decode_DirectoryString(el);
+    let text: string;
+    if ("teletexString" in value) {
+        text = value.teletexString;
+    } else if ("printableString" in value) {
+        text = value.printableString;
+    } else if ("bmpString" in value) {
+        text = value.bmpString;
+    } else if ("universalString" in value) {
+        text = value.universalString;
+    } else {
+        text = value.uTF8String;
+    }
+    if (text.length < 1 || (typeof pkcs_9_ub_signingDescription === "bigint" ? BigInt(text.length) > pkcs_9_ub_signingDescription : text.length > pkcs_9_ub_signingDescription)) {
+        throw new ASN1SizeError("signingDescription violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const signingDescription: ATTRIBUTE<DirectoryString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_DirectoryString,
+        "&Type": _decode_signingDescription_Type,
     },
     encoderFor: {
         "&Type": _encode_DirectoryString,

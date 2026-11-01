@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type OCTET_STRING
+    type OCTET_STRING,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -31,11 +33,19 @@ import { id_at_photo } from "../LdapSchema2ldifCosine/id-at-photo.va.mjs";
  * @type {ATTRIBUTE<OCTET_STRING>}
  * @implements {ATTRIBUTE<OCTET_STRING>}
  */
+const _decode_photo_Type = (el: _Element): OCTET_STRING => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 25000) {
+        throw new ASN1SizeError("photo violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const photo: ATTRIBUTE<OCTET_STRING> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeOctetString,
+        "&Type": _decode_photo_Type,
     },
     encoderFor: {
         "&Type": $._encodeOctetString,

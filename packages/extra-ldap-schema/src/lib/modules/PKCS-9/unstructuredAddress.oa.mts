@@ -1,4 +1,9 @@
 /* eslint-disable */
+import {
+    type ASN1Element as _Element,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import { pkcs_9_ub_unstructuredAddress } from "../PKCS-9/pkcs-9-ub-unstructuredAddress.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 // export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
@@ -29,11 +34,31 @@ import { pkcs_9_at_unstructuredAddress } from "../PKCS-9/pkcs-9-at-unstructuredA
  * @type {ATTRIBUTE<DirectoryString>}
  * @implements {ATTRIBUTE<DirectoryString>}
  */
+const _decode_unstructuredAddress_Type = (el: _Element): DirectoryString => {
+    const value = _decode_DirectoryString(el);
+    let text: string;
+    if ("teletexString" in value) {
+        text = value.teletexString;
+    } else if ("printableString" in value) {
+        text = value.printableString;
+    } else if ("bmpString" in value) {
+        text = value.bmpString;
+    } else if ("universalString" in value) {
+        text = value.universalString;
+    } else {
+        text = value.uTF8String;
+    }
+    if (text.length < 1 || (typeof pkcs_9_ub_unstructuredAddress === "bigint" ? BigInt(text.length) > pkcs_9_ub_unstructuredAddress : text.length > pkcs_9_ub_unstructuredAddress)) {
+        throw new ASN1SizeError("unstructuredAddress violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const unstructuredAddress: ATTRIBUTE<DirectoryString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_DirectoryString,
+        "&Type": _decode_unstructuredAddress_Type,
     },
     encoderFor: {
         "&Type": _encode_DirectoryString,

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type OCTET_STRING
+    type OCTET_STRING,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -34,11 +36,19 @@ import { id_at_zimbraCsrfTokenKey } from "../LdapZimbra/id-at-zimbraCsrfTokenKey
  * @type {ATTRIBUTE<OCTET_STRING>}
  * @implements {ATTRIBUTE<OCTET_STRING>}
  */
+const _decode_zimbraCsrfTokenKey_Type = (el: _Element): OCTET_STRING => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 128) {
+        throw new ASN1SizeError("zimbraCsrfTokenKey violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const zimbraCsrfTokenKey: ATTRIBUTE<OCTET_STRING> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeOctetString,
+        "&Type": _decode_zimbraCsrfTokenKey_Type,
     },
     encoderFor: {
         "&Type": $._encodeOctetString,

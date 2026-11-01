@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type PrintableString
+    type PrintableString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -37,11 +39,19 @@ import { id_at_yubikeyID } from "../LdapYubi/id-at-yubikeyID.va.mjs";
  * @type {ATTRIBUTE<PrintableString>}
  * @implements {ATTRIBUTE<PrintableString>}
  */
+const _decode_yubikeyID_Type = (el: _Element): PrintableString => {
+    const value = $._decodePrintableString(el);
+    if (value.length < 1 || value.length > 12) {
+        throw new ASN1SizeError("yubikeyID violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const yubikeyID: ATTRIBUTE<PrintableString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodePrintableString,
+        "&Type": _decode_yubikeyID_Type,
     },
     encoderFor: {
         "&Type": $._encodePrintableString,

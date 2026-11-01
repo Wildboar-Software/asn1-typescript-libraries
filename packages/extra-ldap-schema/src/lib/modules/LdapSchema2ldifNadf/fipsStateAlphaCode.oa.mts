@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type PrintableString
+    type PrintableString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -33,11 +35,19 @@ import { id_at_fipsStateAlphaCode } from "../LdapSchema2ldifNadf/id-at-fipsState
  * @type {ATTRIBUTE<PrintableString>}
  * @implements {ATTRIBUTE<PrintableString>}
  */
+const _decode_fipsStateAlphaCode_Type = (el: _Element): PrintableString => {
+    const value = $._decodePrintableString(el);
+    if (value.length < 1 || value.length > 2) {
+        throw new ASN1SizeError("fipsStateAlphaCode violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const fipsStateAlphaCode: ATTRIBUTE<PrintableString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodePrintableString,
+        "&Type": _decode_fipsStateAlphaCode_Type,
     },
     encoderFor: {
         "&Type": $._encodePrintableString,

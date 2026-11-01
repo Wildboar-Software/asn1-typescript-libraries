@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -40,11 +42,19 @@ import { id_at3 } from "../QMailSchema/id-at3.va.mjs";
  * @type {ATTRIBUTE<INTEGER>}
  * @implements {ATTRIBUTE<INTEGER>}
  */
+const _decode_qlaMailQuotaCount_Type = (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value < 0n : value < 0)) {
+        throw new ASN1OverflowError("qlaMailQuotaCount violates INTEGER constraint");
+    }
+    return value;
+};
+
 export
 const qlaMailQuotaCount: ATTRIBUTE<INTEGER> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeInteger,
+        "&Type": _decode_qlaMailQuotaCount_Type,
     },
     encoderFor: {
         "&Type": $._encodeInteger,

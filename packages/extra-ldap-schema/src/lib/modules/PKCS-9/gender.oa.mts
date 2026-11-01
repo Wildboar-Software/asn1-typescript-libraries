@@ -1,6 +1,9 @@
 /* eslint-disable */
 import {
-    type PrintableString
+    type PrintableString,
+    type ASN1Element as _Element,
+    ASN1SizeError,
+    ASN1CharactersError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -32,11 +35,24 @@ import { pkcs_9_at_gender } from "../PKCS-9/pkcs-9-at-gender.va.mjs";
  * @type {ATTRIBUTE<PrintableString>}
  * @implements {ATTRIBUTE<PrintableString>}
  */
+const _decode_gender_Type = (el: _Element): PrintableString => {
+    const value = $._decodePrintableString(el);
+    if (value.length !== 1) {
+        throw new ASN1SizeError("gender violates SIZE constraint");
+    }
+    for (let i = 0; i < value.length; i++) {
+        if (!"MFmf".includes(value.charAt(i))) {
+            throw new ASN1CharactersError("gender violates permitted alphabet");
+        }
+    }
+    return value;
+};
+
 export
 const gender: ATTRIBUTE<PrintableString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodePrintableString,
+        "&Type": _decode_gender_Type,
     },
     encoderFor: {
         "&Type": $._encodePrintableString,

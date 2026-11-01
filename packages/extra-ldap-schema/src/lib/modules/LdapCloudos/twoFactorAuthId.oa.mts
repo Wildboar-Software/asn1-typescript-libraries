@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type IA5String
+    type IA5String,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -37,11 +39,19 @@ import { id_at_twoFactorAuthId } from "../LdapCloudos/id-at-twoFactorAuthId.va.m
  * @type {ATTRIBUTE<IA5String>}
  * @implements {ATTRIBUTE<IA5String>}
  */
+const _decode_twoFactorAuthId_Type = (el: _Element): IA5String => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || value.length > 256) {
+        throw new ASN1SizeError("twoFactorAuthId violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const twoFactorAuthId: ATTRIBUTE<IA5String> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeIA5String,
+        "&Type": _decode_twoFactorAuthId_Type,
     },
     encoderFor: {
         "&Type": $._encodeIA5String,

@@ -1,6 +1,8 @@
 /* eslint-disable */
 import {
-    type PrintableString
+    type PrintableString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -32,11 +34,19 @@ import { pkcs_9_at_countryOfResidence } from "../PKCS-9/pkcs-9-at-countryOfResid
  * @type {ATTRIBUTE<PrintableString>}
  * @implements {ATTRIBUTE<PrintableString>}
  */
+const _decode_countryOfResidence_Type = (el: _Element): PrintableString => {
+    const value = $._decodePrintableString(el);
+    if (value.length !== 2) {
+        throw new ASN1SizeError("countryOfResidence violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const countryOfResidence: ATTRIBUTE<PrintableString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodePrintableString,
+        "&Type": _decode_countryOfResidence_Type,
     },
     encoderFor: {
         "&Type": $._encodePrintableString,

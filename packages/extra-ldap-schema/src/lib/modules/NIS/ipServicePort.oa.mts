@@ -1,7 +1,9 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
@@ -39,11 +41,19 @@ import { id_nis_at } from "../NIS/id-nis-at.va.mjs";
  * @type {ATTRIBUTE<INTEGER>}
  * @implements {ATTRIBUTE<INTEGER>}
  */
+const _decode_ipServicePort_Type = (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value < 0n : value < 0) || (typeof value === "bigint" ? value > 65535n : value > 65535)) {
+        throw new ASN1OverflowError("ipServicePort violates INTEGER constraint");
+    }
+    return value;
+};
+
 export
 const ipServicePort: ATTRIBUTE<INTEGER> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeInteger,
+        "&Type": _decode_ipServicePort_Type,
     },
     encoderFor: {
         "&Type": $._encodeInteger,

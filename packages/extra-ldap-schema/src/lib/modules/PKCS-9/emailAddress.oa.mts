@@ -1,7 +1,10 @@
 /* eslint-disable */
 import {
-    type IA5String
+    type IA5String,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
+import { pkcs_9_ub_emailAddress } from "../PKCS-9/pkcs-9-ub-emailAddress.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
@@ -30,11 +33,19 @@ import { pkcs_9_at_emailAddress } from "../PKCS-9/pkcs-9-at-emailAddress.va.mjs"
  * @type {ATTRIBUTE<IA5String>}
  * @implements {ATTRIBUTE<IA5String>}
  */
+const _decode_emailAddress_Type = (el: _Element): IA5String => {
+    const value = $._decodeIA5String(el);
+    if (value.length < 1 || (typeof pkcs_9_ub_emailAddress === "bigint" ? BigInt(value.length) > pkcs_9_ub_emailAddress : value.length > pkcs_9_ub_emailAddress)) {
+        throw new ASN1SizeError("emailAddress violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const emailAddress: ATTRIBUTE<IA5String> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeIA5String,
+        "&Type": _decode_emailAddress_Type,
     },
     encoderFor: {
         "&Type": $._encodeIA5String,
