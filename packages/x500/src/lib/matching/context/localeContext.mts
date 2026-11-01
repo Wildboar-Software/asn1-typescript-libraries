@@ -1,5 +1,6 @@
 import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
     _decode_LocaleContextSyntax,
@@ -90,6 +91,7 @@ const localeContext: ContextMatcher = (
     return matchAnyContextValue(
         values,
         (value) => evaluateLocaleContext(presented, value),
+        id_avc_locale,
         flags,
     );
 };

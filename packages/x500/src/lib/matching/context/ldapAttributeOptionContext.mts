@@ -1,5 +1,6 @@
 import { ASN1Element } from "@wildboar/asn1";
 import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_ldapAttributeOption } from "../../modules/SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
     _decode_AttributeOptionList,
@@ -71,6 +72,7 @@ const ldapAttributeOptionContext: ContextMatcher = (
             presented,
             _decode_AttributeOptionList(value),
         ),
+        id_avc_ldapAttributeOption,
         flags,
     );
 };

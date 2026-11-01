@@ -14,6 +14,7 @@ import {
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { _encode_TimeAssertion } from "../../modules/SelectedAttributeTypes/TimeAssertion.ta.mjs";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
+import { id_avc_language } from "../../modules/SelectedAttributeTypes/id-avc-language.va.mjs";
 import {
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
@@ -62,8 +63,11 @@ describe("context matchers", () => {
         try {
             expect(languageContext(en, [bad, bad].values(), undefined, MATCH_FLAG_DEBUG)).toBe(false);
             expect(spy).toHaveBeenCalledTimes(2);
+            const contextType = id_avc_language.dotDelimitedNotation;
             expect(String(spy.mock.calls[0][0])).toContain("index 0");
+            expect(String(spy.mock.calls[0][0])).toContain(contextType);
             expect(String(spy.mock.calls[1][0])).toContain("index 1");
+            expect(String(spy.mock.calls[1][0])).toContain(contextType);
 
             spy.mockClear();
             let earlyPulls = 0;
@@ -99,7 +103,9 @@ describe("context matchers", () => {
             )).toBe(true);
             // Three values, then the iterator reports that it is done.
             expect(pulls).toBe(4);
-            expect(spy).not.toHaveBeenCalled();
+            expect(spy).toHaveBeenCalledTimes(1);
+            expect(String(spy.mock.calls[0][0])).toContain("index 2");
+            expect(String(spy.mock.calls[0][0])).toContain(id_avc_language.dotDelimitedNotation);
         } finally {
             spy.mockRestore();
         }

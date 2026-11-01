@@ -1,5 +1,6 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_language } from "../../modules/SelectedAttributeTypes/id-avc-language.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 
 /**
@@ -41,6 +42,7 @@ const languageContext: ContextMatcher = (
     return matchAnyContextValue(
         values,
         (value) => evaluateLanguageContext(presented, value),
+        id_avc_language,
         flags,
     );
 };

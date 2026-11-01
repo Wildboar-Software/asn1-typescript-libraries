@@ -1,5 +1,6 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_temporal } from "../../modules/SelectedAttributeTypes/id-avc-temporal.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
@@ -316,6 +317,7 @@ const temporalContext: ContextMatcher = (
     return matchAnyContextValue(
         values,
         (value) => evaluateTemporalContext(presented, value),
+        id_avc_temporal,
         flags,
     );
 };

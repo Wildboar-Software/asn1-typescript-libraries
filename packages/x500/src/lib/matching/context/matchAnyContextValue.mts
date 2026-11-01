@@ -1,4 +1,4 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { type ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
@@ -8,18 +8,20 @@ import {
  * TRUE iff `matches` accepts any stored context value.
  *
  * A thrown value is ignored and the scan continues. `MATCH_FLAG_DEBUG`
- * logs that value. `MATCH_FLAG_CONSTANT_TIME` reads every value before
- * returning, and suppresses the debug log so the log itself is not a
- * timing signal. Same pairing as `createEqualityMatcher`.
+ * logs that value and `contextType`. `MATCH_FLAG_CONSTANT_TIME` reads
+ * every value before returning. The two flags are independent: a
+ * constant-time scan still logs invalid values when debugging is on.
  *
  * @param values Stored context values.
  * @param matches Comparison of one stored value. Throw to reject it as invalid.
+ * @param contextType Context type whose value failed to match.
  * @param flags `MATCH_FLAG_DEBUG` and `MATCH_FLAG_CONSTANT_TIME`.
  */
 export
 function matchAnyContextValue (
     values: IterableIterator<ASN1Element>,
     matches: (value: ASN1Element) => boolean,
+    contextType: OBJECT_IDENTIFIER,
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
@@ -35,10 +37,10 @@ function matchAnyContextValue (
                 }
             }
         } catch (e) {
-            if (debug && !constantTime) {
+            if (debug) {
                 console.error(
                     "@wildboar/x500: debug: context value matching error: value"
-                    + ` at index ${i}: ${e}`,
+                    + ` at index ${i} of context type ${contextType.dotDelimitedNotation}: ${e}`,
                 );
             }
             continue;
