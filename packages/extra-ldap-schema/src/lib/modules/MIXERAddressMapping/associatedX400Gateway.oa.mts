@@ -2,6 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { at_associated_x400_gateway } from "../MIXERAddressMapping/at-associated-x400-gateway.va.mjs";
+import { mhs_or_addresses } from "@wildboar/x400/MHSDirectoryObjectsAndAttributes";
 
 /**
  * @summary associatedX400Gateway

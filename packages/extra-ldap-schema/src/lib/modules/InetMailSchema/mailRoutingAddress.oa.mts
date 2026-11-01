@@ -2,6 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_mailRoutingAddress } from "../InetMailSchema/id-at-mailRoutingAddress.va.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 
 /**
  * @summary mailRoutingAddress

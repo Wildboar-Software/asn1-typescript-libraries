@@ -20,7 +20,7 @@ describe("TimeSpecification", () => {
                                 new DayTime(17, 0, 0),
                             ),
                         ],
-                        { intDay: [1, 15] },
+                        { intDay: [1, 5] },
                         { allWeeks: null },
                         { intMonth: [1, 6] },
                         [2026],

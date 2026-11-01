@@ -27,7 +27,10 @@
     "module": "./src/index.mjs",
     "main": "./src/index.mjs",
     "dependencies": {
-        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x"
+        "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/pkcs": "npm:@jsr/wildboar__pkcs@2.x.x",
+        "@wildboar/x400": "npm:@jsr/wildboar__x400@2.x.x",
+        "@wildboar/x500": "npm:@jsr/wildboar__x500@2.x.x"
     },
     "exports": {
         ".": "./src/index.mts",
@@ -203,7 +206,6 @@
         "./NIS": "./src/lib/modules/NIS/index.mjs",
         "./OpenLDAP": "./src/lib/modules/OpenLDAP/index.mjs",
         "./OpenLDAPCoreSchema": "./src/lib/modules/OpenLDAPCoreSchema/index.mjs",
-        "./OrganizationAndGroupSchema": "./src/lib/modules/OrganizationAndGroupSchema/index.mjs",
         "./PKCS-9": "./src/lib/modules/PKCS-9/index.mjs",
         "./QMailSchema": "./src/lib/modules/QMailSchema/index.mjs",
         "./RFC2307bis": "./src/lib/modules/RFC2307bis/index.mjs",
@@ -211,8 +213,6 @@
         "./SambaSchema": "./src/lib/modules/SambaSchema/index.mjs",
         "./SambaV3Schema": "./src/lib/modules/SambaV3Schema/index.mjs",
         "./SelectedAttributeTypes": "./src/lib/modules/SelectedAttributeTypes/index.mjs",
-        "./SelectedObjectClasses": "./src/lib/modules/SelectedObjectClasses/index.mjs",
-        "./UpperBounds": "./src/lib/modules/UpperBounds/index.mjs",
-        "./UsefulDefinitions": "./src/lib/modules/UsefulDefinitions/index.mjs"
+        "./SelectedObjectClasses": "./src/lib/modules/SelectedObjectClasses/index.mjs"
     }
 }

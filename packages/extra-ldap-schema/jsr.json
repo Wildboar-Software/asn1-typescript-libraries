@@ -176,7 +176,6 @@
     "./NIS": "./src/lib/modules/NIS/index.mts",
     "./OpenLDAP": "./src/lib/modules/OpenLDAP/index.mts",
     "./OpenLDAPCoreSchema": "./src/lib/modules/OpenLDAPCoreSchema/index.mts",
-    "./OrganizationAndGroupSchema": "./src/lib/modules/OrganizationAndGroupSchema/index.mts",
     "./PKCS-9": "./src/lib/modules/PKCS-9/index.mts",
     "./QMailSchema": "./src/lib/modules/QMailSchema/index.mts",
     "./RFC2307bis": "./src/lib/modules/RFC2307bis/index.mts",
@@ -184,9 +183,7 @@
     "./SambaSchema": "./src/lib/modules/SambaSchema/index.mts",
     "./SambaV3Schema": "./src/lib/modules/SambaV3Schema/index.mts",
     "./SelectedAttributeTypes": "./src/lib/modules/SelectedAttributeTypes/index.mts",
-    "./SelectedObjectClasses": "./src/lib/modules/SelectedObjectClasses/index.mts",
-    "./UpperBounds": "./src/lib/modules/UpperBounds/index.mts",
-    "./UsefulDefinitions": "./src/lib/modules/UsefulDefinitions/index.mts"
+    "./SelectedObjectClasses": "./src/lib/modules/SelectedObjectClasses/index.mts"
   },
   "publish": {
     "include": [

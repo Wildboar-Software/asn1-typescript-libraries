@@ -5,6 +5,7 @@ import {
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
+import { distinguishedName } from "../SelectedAttributeTypes/distinguishedName.oa.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 import { id_dynGroupAttr } from "../DynGroup/id-dynGroupAttr.va.mjs";
 

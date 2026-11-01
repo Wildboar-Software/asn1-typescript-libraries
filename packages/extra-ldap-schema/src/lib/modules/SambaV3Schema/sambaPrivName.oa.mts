@@ -9,6 +9,7 @@ import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mj
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 
 import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
+import { name } from "../SelectedAttributeTypes/name.oa.mjs";
 /**
  * @summary sambaPrivName
  * @description
