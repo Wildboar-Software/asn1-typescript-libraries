@@ -1,7 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -79,32 +82,37 @@ export
 function jidMatchTyped (
     assertion: JidParts,
     value: string | ASN1Element,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
     const v = parseJid(stored);
     if (!v) {
         return false;
     }
-    if (Boolean(assertion.local) !== Boolean(v.local)) {
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    const localPresenceMatch = Boolean(assertion.local) === Boolean(v.local);
+    const resourcePresenceMatch = Boolean(assertion.resource) === Boolean(v.resource);
+    if (!constantTime && (!localPresenceMatch || !resourcePresenceMatch)) {
         return false;
     }
-    if (Boolean(assertion.resource) !== Boolean(v.resource)) {
-        return false;
-    }
-    const domains = dnsNameMatchTyped(assertion.domain, v.domain);
-    if (domains !== true) {
+    const domains = dnsNameMatchTyped(assertion.domain, v.domain, getEqualityMatcher, flags);
+    if (domains !== true && !constantTime) {
         return domains;
     }
-    if (
-        (assertion.local !== undefined)
-        && (assertion.local !== v.local!.toLowerCase())
-    ) {
+    const localMatch = (assertion.local === undefined)
+        ? v.local === undefined
+        : stringsEqual(assertion.local, (v.local ?? "").toLowerCase(), constantTime);
+    if (!localMatch && !constantTime) {
         return false;
     }
-    if ((assertion.resource !== undefined) && (assertion.resource !== v.resource)) {
-        return false;
+    const resourceMatch = (assertion.resource === undefined)
+        ? v.resource === undefined
+        : stringsEqual(assertion.resource, v.resource ?? "", constantTime);
+    if (domains === undefined) {
+        return undefined;
     }
-    return true;
+    return localPresenceMatch && resourcePresenceMatch && domains && localMatch && resourceMatch;
 }
 
 jidMatchTyped satisfies TypedEquationFunction<JidParts>;

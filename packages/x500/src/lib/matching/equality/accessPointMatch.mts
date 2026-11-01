@@ -65,9 +65,10 @@ function accessPointMatchTyped (
     assertion: Name,
     value: AccessPoint | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = readDecoded(value, _decode_AccessPoint);
-    return compareName(assertion, stored.ae_title, valueEqualityMatcher(getMatcher));
+    return compareName(assertion, stored.ae_title, valueEqualityMatcher(getMatcher, flags));
 }
 
 accessPointMatchTyped satisfies TypedEquationFunction<Name>;

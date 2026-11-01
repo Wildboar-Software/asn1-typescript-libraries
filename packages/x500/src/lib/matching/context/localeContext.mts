@@ -1,6 +1,10 @@
 import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    type ContextMatcher,
+} from "../../types/matching.mjs";
 import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
+import { bytesEqual, stringsEqual } from "../constantTime.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
     _decode_LocaleContextSyntax,
@@ -58,15 +62,22 @@ export
 function evaluateLocaleContext (
     assertion: LocaleContextInput,
     value: LocaleContextInput,
+    flags: number = 0,
 ): boolean {
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const a = readLocale(assertion);
     const v = readLocale(value);
     if (("localeID1" in a) && ("localeID1" in v)) {
-        return a.localeID1.isEqualTo(v.localeID1);
+        return constantTime
+            ? bytesEqual(a.localeID1.toBytesUnsafe(), v.localeID1.toBytesUnsafe(), constantTime)
+            : a.localeID1.isEqualTo(v.localeID1);
     }
     if (("localeID2" in a) && ("localeID2" in v)) {
-        return directoryStringToString(a.localeID2)
-            === directoryStringToString(v.localeID2);
+        return stringsEqual(
+            directoryStringToString(a.localeID2),
+            directoryStringToString(v.localeID2),
+            constantTime,
+        );
     }
     if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
         return compareElements(assertion, value);
@@ -90,7 +101,7 @@ const localeContext: ContextMatcher = (
     const presented = _decode_LocaleContextSyntax(assertion);
     return matchAnyContextValue(
         values,
-        (value) => evaluateLocaleContext(presented, value),
+        (value) => evaluateLocaleContext(presented, value, flags),
         id_avc_locale,
         flags,
     );

@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -45,20 +46,26 @@ function masterAndShadowAccessPointsMatchTyped (
     a: readonly Name[],
     value: MasterAndShadowAccessPoints | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_MasterAndShadowAccessPoints);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (a.length !== v.length) {
         return false;
     }
     const sortedAssertedNames: Name[] = a.slice().sort((a, b) => (scoreName(a) - scoreName(b)));
     const sortedStoredNames: Name[] = v.map((n) => n.ae_title).sort((a, b) => (scoreName(a) - scoreName(b)));
+    let matched = true;
     for (let i = 0; i < sortedAssertedNames.length; i++) {
         if (!compareName(sortedAssertedNames[i], sortedStoredNames[i], getEqualityMatcher)) {
-            return false;
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
     }
-    return true;
+    return matched;
 }
 
 masterAndShadowAccessPointsMatchTyped satisfies TypedEquationFunction<readonly Name[]>;

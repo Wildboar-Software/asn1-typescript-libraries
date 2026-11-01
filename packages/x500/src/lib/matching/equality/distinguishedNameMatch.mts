@@ -31,11 +31,12 @@ function distinguishedNameMatchTyped (
     assertion: DistinguishedName,
     value: DistinguishedName | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     return compareRDNSequence(
         assertion,
         readDecoded(value, _decode_DistinguishedName),
-        valueEqualityMatcher(getMatcher),
+        valueEqualityMatcher(getMatcher, flags),
     );
 }
 

@@ -2,8 +2,10 @@ import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
+import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedOrderingFunction,
@@ -47,14 +49,17 @@ function caseIgnoreOrderingMatchTyped (
     flags: number = 0,
 ): number | undefined {
     const raw = readDirectoryString(value);
+    const compare = (flags & MATCH_FLAG_CONSTANT_TIME)
+        ? ctCompareCodePoints
+        : compareCodePoints;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return compareCodePoints(assertion, raw);
+        return compare(assertion, raw);
     }
     const prepared = prepString(raw, { caseFold: true });
     if (prepared === undefined) {
         return undefined;
     }
-    return compareCodePoints(assertion, prepared);
+    return compare(assertion, prepared);
 }
 
 caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string>;

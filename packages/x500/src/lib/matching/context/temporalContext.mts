@@ -1,5 +1,8 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    type ContextMatcher,
+} from "../../types/matching.mjs";
 import { id_avc_temporal } from "../../modules/SelectedAttributeTypes/id-avc-temporal.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import { readDecoded } from "../readValue.mjs";
@@ -165,7 +168,11 @@ function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | u
 }
 
 /** `now`/`at` evaluation: the instant must lie in the specification. */
-function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification): boolean {
+function timeFallsWithinTimeSpecification (
+    time: Date,
+    spec: TimeSpecification,
+    constantTime: boolean = false,
+): boolean {
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
@@ -182,7 +189,16 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
                 && (time.valueOf() <= end.valueOf())
             );
         } else if ("periodic" in spec.time) {
-            return spec.time.periodic.some((period) => timeFallsWithinPeriod(time, period, timezone));
+            let matched = false;
+            for (const period of spec.time.periodic) {
+                if (timeFallsWithinPeriod(time, period, timezone)) {
+                    if (!constantTime) {
+                        return true;
+                    }
+                    matched = true;
+                }
+            }
+            return matched;
         } else {
             throw new Error(); // There is no other option.
         }
@@ -196,7 +212,13 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
  * occurrences, not of a single occurrence. `notThisTime` inverts the
  * result (clause 10.2).
  */
-function timeSpecificationContains (spec: TimeSpecification, start: Date, end: Date, entirely: boolean = false): boolean {
+function timeSpecificationContains (
+    spec: TimeSpecification,
+    start: Date,
+    end: Date,
+    entirely: boolean = false,
+    constantTime: boolean = false,
+): boolean {
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
@@ -225,10 +247,11 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             if (entirely) {
                 return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd);
             }
-            return spec.time.periodic.some((period) => {
+            let matched = false;
+            for (const period of spec.time.periodic) {
                 const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart).next().value ?? null;
                 if (!boundaries) {
-                    return false;
+                    continue;
                 }
                 const [ lower, upper ] = boundaries;
                 const startWithinBounds: boolean = (
@@ -239,8 +262,14 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
                     (adjustedEnd.valueOf() >= lower.valueOf())
                     && (adjustedEnd.valueOf() <= upper.valueOf())
                 );
-                return (startWithinBounds || endWithinBounds);
-            });
+                if (startWithinBounds || endWithinBounds) {
+                    if (!constantTime) {
+                        return true;
+                    }
+                    matched = true;
+                }
+            }
+            return matched;
         } else {
             throw new Error(); // There is no other option.
         }
@@ -254,20 +283,29 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
  *
  * @param a Presented time assertion.
  * @param v Stored time specification.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`.
  * @returns `true` when the assertion overlaps the specification.
  */
 export
 function evaluateTemporalContextTyped (
     a: TimeAssertion,
     v: TimeSpecification,
+    flags: number = 0,
 ): boolean {
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     if ("now" in a) {
         const now = new Date();
-        return timeFallsWithinTimeSpecification(now, v);
+        return timeFallsWithinTimeSpecification(now, v, constantTime);
     } else if ("at" in a) {
-        return timeFallsWithinTimeSpecification(a.at, v);
+        return timeFallsWithinTimeSpecification(a.at, v, constantTime);
     } else if ("between" in a) {
-        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
+        return timeSpecificationContains(
+            v,
+            a.between.startTime,
+            a.between.endTime ?? MAX_DATE,
+            a.between.entirely,
+            constantTime,
+        );
     } else {
         return false;
     }
@@ -294,11 +332,12 @@ export
 function evaluateTemporalContext (
     assertion: ASN1Element | TimeAssertion | Date,
     value: ASN1Element | TimeSpecification,
+    flags: number = 0,
 ): boolean {
     const a: TimeAssertion = assertion instanceof Date
         ? { at: assertion }
         : readDecoded(assertion, _decode_TimeAssertion);
-    return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification));
+    return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification), flags);
 }
 
 /**
@@ -316,7 +355,7 @@ const temporalContext: ContextMatcher = (
     const presented = _decode_TimeAssertion(assertion);
     return matchAnyContextValue(
         values,
-        (value) => evaluateTemporalContext(presented, value),
+        (value) => evaluateTemporalContext(presented, value, flags),
         id_avc_temporal,
         flags,
     );

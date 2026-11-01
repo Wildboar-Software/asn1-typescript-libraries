@@ -1,6 +1,7 @@
 import { DERElement, type ASN1Element } from "@wildboar/asn1";
 import { _encode_UnboundedDirectoryString } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import storedPrefixMatch from "./storedPrefixMatch.mjs";
+import { MATCH_FLAG_CONSTANT_TIME, MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
+import storedPrefixMatch, { storedPrefixMatchTyped } from "./storedPrefixMatch.mjs";
 
 function uds (value: string): ASN1Element {
     return _encode_UnboundedDirectoryString(
@@ -51,5 +52,36 @@ describe("storedPrefixMatch", () => {
     it("returns false when preparation prohibits a character", () => {
         expect(storedPrefixMatch(uds("703\uFFFD"), uds("703"))).toBe(false);
         expect(storedPrefixMatch(uds("703555"), uds("703\uFFFD"))).toBe(false);
+    });
+
+    it("honors MATCH_FLAG_CONSTANT_TIME and MATCH_FLAG_VALUE_NORMALIZED", () => {
+        expect(storedPrefixMatch(
+            uds("7035551212"),
+            uds("703"),
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(true);
+        expect(storedPrefixMatch(
+            uds("703"),
+            uds("7035551212"),
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(false);
+        expect(storedPrefixMatch(
+            uds("7045551212"),
+            uds("703"),
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(false);
+        expect(storedPrefixMatchTyped(
+            "703555",
+            "703",
+            MATCH_FLAG_CONSTANT_TIME | MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(true);
+        expect(storedPrefixMatchTyped(
+            "703555",
+            "703 ",
+            MATCH_FLAG_CONSTANT_TIME | MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(false);
     });
 });

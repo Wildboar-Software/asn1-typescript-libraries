@@ -107,15 +107,17 @@ function evaluateCertificateAssertion (
     assertion: CertificateAssertion,
     value: Certificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     if (ASN1Element.isElement(value)) {
         return evaluateCertificateAssertion(
             assertion,
             _decode_Certificate(value),
             getMatcher,
+            flags,
         );
     }
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const tbs = value.toBeSigned;
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;

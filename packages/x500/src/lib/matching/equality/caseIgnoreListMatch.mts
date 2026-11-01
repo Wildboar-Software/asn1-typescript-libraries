@@ -3,8 +3,10 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -50,22 +52,46 @@ function caseIgnoreListMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const lines = readDirectoryStringList(value);
-    if (assertion.length !== lines.length) {
-        return false;
-    }
     const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
-    for (let i = 0; i < assertion.length; i++) {
-        const stored = normalized
-            ? lines[i]
-            : prepString(lines[i], { caseFold: true });
-        if (stored === undefined) {
-            return undefined;
-        }
-        if (assertion[i] !== stored) {
+    const constantTime = (flags & MATCH_FLAG_CONSTANT_TIME) !== 0;
+    if (!constantTime) {
+        if (assertion.length !== lines.length) {
             return false;
         }
+        for (let i = 0; i < assertion.length; i++) {
+            const stored = normalized
+                ? lines[i]
+                : prepString(lines[i], { caseFold: true });
+            if (stored === undefined) {
+                return undefined;
+            }
+            if (assertion[i] !== stored) {
+                return false;
+            }
+        }
+        return true;
     }
-    return true;
+    let matched = assertion.length === lines.length;
+    let sawUndefined = false;
+    const count = Math.max(assertion.length, lines.length);
+    for (let i = 0; i < count; i++) {
+        const rawLine = i < lines.length ? lines[i] : "";
+        const stored = i < lines.length
+            ? (normalized ? rawLine : prepString(rawLine, { caseFold: true }))
+            : "";
+        if (stored === undefined) {
+            sawUndefined = true;
+            continue;
+        }
+        const aLine = i < assertion.length ? assertion[i] : "";
+        if (!ctStringsEqual(aLine, stored)) {
+            matched = false;
+        }
+    }
+    if (sawUndefined) {
+        return undefined;
+    }
+    return matched;
 }
 
 caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;

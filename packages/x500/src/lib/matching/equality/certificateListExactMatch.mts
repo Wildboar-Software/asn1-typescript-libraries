@@ -55,9 +55,10 @@ function certificateListExactMatchTyped (
     a: CertificateListExactAssertion,
     value: CertificateList | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_CertificateList);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher)) {
         return false;
     }

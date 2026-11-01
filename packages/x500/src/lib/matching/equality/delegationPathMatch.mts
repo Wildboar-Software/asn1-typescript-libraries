@@ -46,9 +46,10 @@ function delegationPathMatchTyped (
     a: DelMatchSyntax,
     value: AttCertPath | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttCertPath);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
     if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)) {

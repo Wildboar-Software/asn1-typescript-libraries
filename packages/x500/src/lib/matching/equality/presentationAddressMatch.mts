@@ -1,7 +1,10 @@
 import type { ASN1Element, OCTET_STRING } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -11,11 +14,15 @@ import {
 } from "../../modules/SelectedAttributeTypes/PresentationAddress.ta.mjs";
 import { Buffer } from "node:buffer";
 
-function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefined): boolean {
+function bothUndefinedOrSame (
+    a: Uint8Array | undefined,
+    b: Uint8Array | undefined,
+    constantTime: boolean | number = 0,
+): boolean {
     if (a === undefined || b === undefined) {
         return a === undefined && b === undefined;
     }
-    return Buffer.compare(a, b) === 0;
+    return bytesEqual(a, b, constantTime);
 }
 
 /**
@@ -53,17 +60,30 @@ export
 function presentationAddressMatchTyped (
     a: PresentationAddress,
     value: PresentationAddress | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_PresentationAddress);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const storedNAddresses: Set<string> = new Set<string>(v.nAddresses.map(nsapToKey));
-    return (
-        (
+    if (!constantTime) {
+        return (
             bothUndefinedOrSame(a.pSelector, v.pSelector)
             && bothUndefinedOrSame(a.sSelector, v.sSelector)
             && bothUndefinedOrSame(a.tSelector, v.tSelector)
             && a.nAddresses.every((naddr: OCTET_STRING) => storedNAddresses.has(nsapToKey(naddr)))
-        )
-    );
+        );
+    }
+    const pSame = bothUndefinedOrSame(a.pSelector, v.pSelector, constantTime);
+    const sSame = bothUndefinedOrSame(a.sSelector, v.sSelector, constantTime);
+    const tSame = bothUndefinedOrSame(a.tSelector, v.tSelector, constantTime);
+    let nAddressesMatch = true;
+    for (let i = 0; i < a.nAddresses.length; i++) {
+        if (!storedNAddresses.has(nsapToKey(a.nAddresses[i]))) {
+            nAddressesMatch = false;
+        }
+    }
+    return pSame && sSame && tSame && nAddressesMatch;
 }
 
 presentationAddressMatchTyped satisfies TypedEquationFunction<PresentationAddress>;

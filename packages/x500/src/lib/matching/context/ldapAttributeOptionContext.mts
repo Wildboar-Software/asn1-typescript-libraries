@@ -1,5 +1,8 @@
 import { ASN1Element } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    type ContextMatcher,
+} from "../../types/matching.mjs";
 import { id_avc_ldapAttributeOption } from "../../modules/SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
@@ -23,10 +26,11 @@ export
 function evaluateLDAPAttributeOptionContext (
     assertion: ASN1Element | readonly string[],
     value: ASN1Element | readonly string[],
+    flags: number = 0,
 ): boolean {
     const a = ASN1Element.isElement(assertion) ? _decode_AttributeOptionList(assertion) : assertion;
     const v = ASN1Element.isElement(value) ? _decode_AttributeOptionList(value) : value;
-    return evaluateLDAPAttributeOptionContextTyped(a, v);
+    return evaluateLDAPAttributeOptionContextTyped(a, v, flags);
 }
 
 /**
@@ -35,21 +39,28 @@ function evaluateLDAPAttributeOptionContext (
  *
  * @param assertion Presented options.
  * @param value Stored options.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`.
  * @returns `true` when every asserted option is stored.
  */
 export
 function evaluateLDAPAttributeOptionContextTyped (
     assertion: readonly string[],
     value: readonly string[],
+    flags: number = 0,
 ): boolean {
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     const storedValues: Set<string> = new Set(value.map((str) => str.toLowerCase()));
+    let matched = true;
     for (let i = 0; i < assertion.length; i++) {
         const assertedValue: string = assertion[i].toLowerCase();
         if (!storedValues.has(assertedValue)) {
-            return false;
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
     }
-    return true;
+    return matched;
 }
 
 /**
@@ -71,6 +82,7 @@ const ldapAttributeOptionContext: ContextMatcher = (
         (value) => evaluateLDAPAttributeOptionContextTyped(
             presented,
             _decode_AttributeOptionList(value),
+            flags,
         ),
         id_avc_ldapAttributeOption,
         flags,

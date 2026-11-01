@@ -1,7 +1,8 @@
-import { Buffer } from "node:buffer";
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -9,6 +10,7 @@ import {
     UUIDPair,
     _decode_UUIDPair,
 } from "../../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import { readDecoded } from "../readValue.mjs";
 
 /**
@@ -26,12 +28,17 @@ export
 function uUIDPairMatchTyped (
     assertion: UUIDPair,
     value: UUIDPair | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const stored = readDecoded(value, _decode_UUIDPair);
-    return (
-        Buffer.compare(assertion.issuerUUID, stored.issuerUUID) === 0
-        && Buffer.compare(assertion.subjectUUID, stored.subjectUUID) === 0
-    );
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    const issuerMatch = bytesEqual(assertion.issuerUUID, stored.issuerUUID, constantTime);
+    if (!issuerMatch && !constantTime) {
+        return false;
+    }
+    const subjectMatch = bytesEqual(assertion.subjectUUID, stored.subjectUUID, constantTime);
+    return issuerMatch && subjectMatch;
 }
 
 uUIDPairMatchTyped satisfies TypedEquationFunction<UUIDPair>;

@@ -1,9 +1,11 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { domainToUnicode } from "node:url";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -39,11 +41,16 @@ function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
     return prepared.join(".");
 }
 
-function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean | undefined {
+function compareLabels (
+    a: string,
+    b: string,
+    wildcardAllowed: boolean,
+    flags: number,
+): boolean | undefined {
     if (a === "*" || b === "*") {
         return wildcardAllowed;
     }
-    return caseIgnoreMatchTyped(a, b);
+    return caseIgnoreMatchTyped(a, b, undefined, flags);
 }
 
 /**
@@ -67,6 +74,8 @@ export
 function dnsNameMatchTyped (
     assertion: string,
     value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
     // The assertion is prepared once. `domainToUnicode` preserves `*` and `.`.
@@ -75,6 +84,9 @@ function dnsNameMatchTyped (
     if (a === "" || v === "") {
         return false;
     }
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    let matched = true;
+    let sawUndefined = false;
 
     let i = 0;
     let startA = 0;
@@ -84,28 +96,40 @@ function dnsNameMatchTyped (
             (startA === 0)
             && (startV === 0)
         );
-        const nextDotA = a.indexOf('.', startA);
-        const nextDotV = v.indexOf('.', startV);
+        const nextDotA = a.indexOf(".", startA);
+        const nextDotV = v.indexOf(".", startV);
         if (nextDotA === -1) {
             const labelA = a.slice(startA);
             const labelV = v.slice(startV);
-            const labels = compareLabels(labelA, labelV, wildcardAllowed);
-            if (labels !== true) {
-                return labels;
+            const labels = compareLabels(labelA, labelV, wildcardAllowed, flags);
+            if (labels === undefined) {
+                sawUndefined = true;
+            } else if (!labels) {
+                matched = false;
             }
             break;
         }
         const labelA = a.slice(startA, nextDotA);
         const labelV = v.slice(startV, nextDotV);
-        const labels = compareLabels(labelA, labelV, wildcardAllowed);
+        const labels = compareLabels(labelA, labelV, wildcardAllowed, flags);
         if (labels !== true) {
-            return labels;
+            if (!constantTime) {
+                return labels;
+            }
+            if (labels === undefined) {
+                sawUndefined = true;
+            } else {
+                matched = false;
+            }
         }
         startA = nextDotA + 1;
-        startV = nextDotV + 1;
+        startV = nextDotV === -1 ? v.length : nextDotV + 1;
         i++;
     }
-    return true;
+    if (sawUndefined) {
+        return undefined;
+    }
+    return matched;
 }
 
 dnsNameMatchTyped satisfies TypedEquationFunction<string>;

@@ -1,9 +1,11 @@
 import { ASN1CharactersError, ASN1Element, ASN1Error } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -49,6 +51,8 @@ export
 function intEmailMatchTyped (
     assertion: PreparedIntEmail | string | ASN1Element,
     value: string | ASN1Element,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const presented = typeof assertion === "string"
         ? prepareIntEmail(assertion)
@@ -64,11 +68,25 @@ function intEmailMatchTyped (
     if (vAt <= 0 || vAt >= stored.length - 1) {
         return false;
     }
-    const localsMatch = caseIgnoreMatchTyped(presented[0], stored.slice(0, vAt));
-    if (localsMatch !== true) {
+    const localsMatch = caseIgnoreMatchTyped(
+        presented[0],
+        stored.slice(0, vAt),
+        getEqualityMatcher,
+        flags,
+    );
+    if (localsMatch !== true && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return localsMatch;
     }
-    return dnsNameMatchTyped(presented[1], stored.slice(vAt + 1));
+    const domainsMatch = dnsNameMatchTyped(
+        presented[1],
+        stored.slice(vAt + 1),
+        getEqualityMatcher,
+        flags,
+    );
+    if (localsMatch === undefined || domainsMatch === undefined) {
+        return undefined;
+    }
+    return localsMatch && domainsMatch;
 }
 
 intEmailMatchTyped satisfies TypedEquationFunction<PreparedIntEmail | string | ASN1Element>;

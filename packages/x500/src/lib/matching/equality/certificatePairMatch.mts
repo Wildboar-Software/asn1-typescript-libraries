@@ -38,6 +38,7 @@ function certificatePairMatchTyped (
     a: CertificatePairAssertion,
     value: CertificatePair | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_CertificatePair);
     if (v.isEmpty()) {
@@ -48,8 +49,8 @@ function certificatePairMatchTyped (
     const issuedByCert = v.issuedByThisCA;
     const issuedToCert = v.issuedToThisCA;
     return (
-        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert, getMatcher)))
-        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert, getMatcher)))
+        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert, getMatcher, flags)))
+        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert, getMatcher, flags)))
     );
 }
 

@@ -1,4 +1,5 @@
 import { ASN1Element, ASN1CharactersError } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     DualStringSyntax,
     _decode_DualStringSyntax,
@@ -9,8 +10,10 @@ import type {
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
+import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -73,13 +76,19 @@ export
 function dualStringMatchTyped (
     assertion: DualStrings,
     value: DualStringInput,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = readDual(value);
-    if (
-        prohibitedCharacters.test(stored.operation)
-        || prohibitedCharacters.test(stored.object)
-    ) {
+    const badOperation = prohibitedCharacters.test(stored.operation);
+    const badObject = prohibitedCharacters.test(stored.object);
+    if (badOperation || badObject) {
         return undefined;
+    }
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        const opEqual = ctStringsEqual(assertion.operation, stored.operation);
+        const objEqual = ctStringsEqual(assertion.object, stored.object);
+        return opEqual && objEqual;
     }
     return assertion.operation === stored.operation
         && assertion.object === stored.object;

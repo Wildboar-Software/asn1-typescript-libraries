@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -41,15 +42,18 @@ function pkiPathMatchTyped (
     a: PkiPathMatchSyntax,
     value: PkiPath | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_PkiPath);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];
-    return (
-        compareName(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)
-        && compareName(a.lastSubject, lastCert.toBeSigned.subject, getEqualityMatcher)
-    );
+    const firstMatches = compareName(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher);
+    if (!firstMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
+        return false;
+    }
+    const lastMatches = compareName(a.lastSubject, lastCert.toBeSigned.subject, getEqualityMatcher);
+    return firstMatches && lastMatches;
 }
 
 pkiPathMatchTyped satisfies TypedEquationFunction<PkiPathMatchSyntax>;
