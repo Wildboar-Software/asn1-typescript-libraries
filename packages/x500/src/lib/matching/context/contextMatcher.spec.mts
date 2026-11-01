@@ -14,6 +14,10 @@ import {
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { _encode_TimeAssertion } from "../../modules/SelectedAttributeTypes/TimeAssertion.ta.mjs";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
+} from "../../types/matching.mjs";
 import { languageContext } from "./languageContext.mjs";
 import { ldapAttributeOptionContext } from "./ldapAttributeOptionContext.mjs";
 import { localeContext } from "./localeContext.mjs";
@@ -44,6 +48,61 @@ describe("context matchers", () => {
         expect(languageContext(en, [fr].values())).toBe(false);
         expect(languageContext(en, [].values())).toBe(false);
         expect(() => languageContext(_encodeInteger(1, DER), [en].values())).toThrow();
+
+        const bad = _encodeInteger(1, DER);
+        expect(languageContext(en, [bad, en].values())).toBe(true);
+        expect(languageContext(en, [bad].values())).toBe(false);
+    });
+
+    it("logs an invalid context value, and still reads every value in constant time", () => {
+        const en = _encodePrintableString("en", DER);
+        const fr = _encodePrintableString("fr", DER);
+        const bad = _encodeInteger(1, DER);
+        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+        try {
+            expect(languageContext(en, [bad, bad].values(), undefined, MATCH_FLAG_DEBUG)).toBe(false);
+            expect(spy).toHaveBeenCalledTimes(2);
+            expect(String(spy.mock.calls[0][0])).toContain("index 0");
+            expect(String(spy.mock.calls[1][0])).toContain("index 1");
+
+            spy.mockClear();
+            let earlyPulls = 0;
+            const earlySource = [fr, en, bad].values();
+            const earlyValues: IterableIterator<ASN1Element> = {
+                next () {
+                    earlyPulls += 1;
+                    return earlySource.next();
+                },
+                [Symbol.iterator] () {
+                    return this;
+                },
+            };
+            expect(languageContext(en, earlyValues)).toBe(true);
+            expect(earlyPulls).toBe(2);
+
+            let pulls = 0;
+            const source = [fr, en, bad].values();
+            const values: IterableIterator<ASN1Element> = {
+                next () {
+                    pulls += 1;
+                    return source.next();
+                },
+                [Symbol.iterator] () {
+                    return this;
+                },
+            };
+            expect(languageContext(
+                en,
+                values,
+                undefined,
+                MATCH_FLAG_DEBUG | MATCH_FLAG_CONSTANT_TIME,
+            )).toBe(true);
+            // Three values, then the iterator reports that it is done.
+            expect(pulls).toBe(4);
+            expect(spy).not.toHaveBeenCalled();
+        } finally {
+            spy.mockRestore();
+        }
     });
 
     it("matches an LDAP option list that is a subset of any stored list", () => {
@@ -52,6 +111,10 @@ describe("context matchers", () => {
         const fr = _encode_AttributeOptionList([ "lang-fr", "x" ], DER);
         expect(ldapAttributeOptionContext(assertion, [en, fr].values())).toBe(true);
         expect(ldapAttributeOptionContext(assertion, [en].values())).toBe(false);
+        expect(ldapAttributeOptionContext(
+            assertion,
+            [_encodeInteger(1, DER), fr].values(),
+        )).toBe(true);
     });
 
     it("matches a locale against any stored value, including an unrecognized alternative", () => {

@@ -1,5 +1,6 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { type ContextMatcher } from "../../types/matching.mjs";
+import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 10.1 `languageContext`.
@@ -26,22 +27,22 @@ function evaluateLanguageContext (
 /**
  * `languageContext` as a `ContextMatcher`. TRUE iff any stored
  * language code has the same characters as the presented code.
- * A malformed assertion throws. An empty value list is FALSE.
+ * A malformed assertion throws. An invalid stored value is skipped.
+ * An empty value list is FALSE.
  */
 export
-function languageContext (
-    assertion: ASN1Element,
-    values: IterableIterator<ASN1Element>,
-): boolean {
+const languageContext: ContextMatcher = (
+    assertion,
+    values,
+    _getEqualityMatcher,
+    flags = 0,
+) => {
     const presented = assertion.printableString;
-    for (const value of values) {
-        if (evaluateLanguageContext(presented, value)) {
-            return true;
-        }
-    }
-    return false;
-}
-
-languageContext satisfies ContextMatcher;
+    return matchAnyContextValue(
+        values,
+        (value) => evaluateLanguageContext(presented, value),
+        flags,
+    );
+};
 
 export default languageContext;
