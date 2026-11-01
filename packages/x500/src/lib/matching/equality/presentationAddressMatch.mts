@@ -19,6 +19,25 @@ function bothUndefinedOrSame (a: Uint8Array | undefined, b: Uint8Array | undefin
 }
 
 /**
+ * Real NSAPs are at most 20 octets (ITU-T X.213), but decoded values are
+ * untrusted, and `Function.prototype.apply()` throws a `RangeError` when
+ * given too many arguments.
+ */
+const MAX_FROM_CHAR_CODE_LENGTH: number = 256;
+
+/**
+ * Maps each octet to one Latin-1 code unit, so equal keys iff equal octets.
+ * This is much faster and shorter than `Uint8Array.prototype.toString()`,
+ * which produces comma-separated decimal octets.
+ */
+function nsapToKey (naddr: OCTET_STRING): string {
+    if (naddr.length <= MAX_FROM_CHAR_CODE_LENGTH) {
+        return String.fromCharCode.apply(null, naddr as unknown as number[]);
+    }
+    return Buffer.from(naddr.buffer, naddr.byteOffset, naddr.byteLength).toString("latin1");
+}
+
+/**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.10
  * `presentationAddressMatch`.
  *
@@ -36,15 +55,13 @@ function presentationAddressMatchTyped (
     value: PresentationAddress | ASN1Element,
 ): boolean {
     const v = readDecoded(value, _decode_PresentationAddress);
-    const storedNAddresses: Set<string> = new Set<string>(
-        v.nAddresses.map((naddr: OCTET_STRING): string => naddr.toString())
-    );
+    const storedNAddresses: Set<string> = new Set<string>(v.nAddresses.map(nsapToKey));
     return (
         (
             bothUndefinedOrSame(a.pSelector, v.pSelector)
             && bothUndefinedOrSame(a.sSelector, v.sSelector)
             && bothUndefinedOrSame(a.tSelector, v.tSelector)
-            && a.nAddresses.every((naddr: OCTET_STRING) => storedNAddresses.has(naddr.toString()))
+            && a.nAddresses.every((naddr: OCTET_STRING) => storedNAddresses.has(nsapToKey(naddr)))
         )
     );
 }
