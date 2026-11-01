@@ -1,18 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { x_plug_paymentDescription } from "../LdapPlugpen/x-plug-paymentDescription.oa.mjs";
-// export { x_plug_paymentDescription } from "../LdapPlugpen/x-plug-paymentDescription.oa.mjs";
 import { id_oc_x_plug_payment } from "../LdapPlugpen/id-oc-x-plug-payment.va.mjs";
 import { x_plug_paymentDate } from "../LdapPlugpen/x-plug-paymentDate.oa.mjs";
 import { x_plug_paymentID } from "../LdapPlugpen/x-plug-paymentID.oa.mjs";
 import { x_plug_paymentAmount } from "../LdapPlugpen/x-plug-paymentAmount.oa.mjs";
 import { x_plug_paymentType } from "../LdapPlugpen/x-plug-paymentType.oa.mjs";
 import { x_plug_paymentYears } from "../LdapPlugpen/x-plug-paymentYears.oa.mjs";
-// export { id_oc_x_plug_payment } from "../LdapPlugpen/id-oc-x-plug-payment.va.mjs";
 
 
 /**
@@ -56,3 +52,4 @@ const x_plug_payment: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,18 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { domainName } from "../LdapExcisionMail/domainName.oa.mjs";
-// export { domainName } from "../LdapExcisionMail/domainName.oa.mjs";
 import { id_oc_mailDomain } from "../LdapExcisionMail/id-oc-mailDomain.va.mjs";
 import { blockList } from "../LdapExcisionMail/blockList.oa.mjs";
 import { allowList } from "../LdapExcisionMail/allowList.oa.mjs";
 import { domainAdmin } from "../LdapExcisionMail/domainAdmin.oa.mjs";
 import { domainStatus } from "../LdapExcisionMail/domainStatus.oa.mjs";
 import { domainDefaultQuota } from "../LdapExcisionMail/domainDefaultQuota.oa.mjs";
-// export { id_oc_mailDomain } from "../LdapExcisionMail/id-oc-mailDomain.va.mjs";
 
 
 /**
@@ -56,3 +52,4 @@ const mailDomain: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

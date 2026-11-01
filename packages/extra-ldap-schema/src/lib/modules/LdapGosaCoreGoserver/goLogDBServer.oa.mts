@@ -1,17 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { goLogDBServerStatus } from "../LdapGosaCoreGoserver/goLogDBServerStatus.oa.mjs";
-// export { goLogDBServerStatus } from "../LdapGosaCoreGoserver/goLogDBServerStatus.oa.mjs";
 import { id_oc_goLogDBServer } from "../LdapGosaCoreGoserver/id-oc-goLogDBServer.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { gosaLogDB } from "../LdapGosaCoreGoserver/gosaLogDB.oa.mjs";
 import { goLogAdmin } from "../LdapGosaCoreGoserver/goLogAdmin.oa.mjs";
 import { goLogPassword } from "../LdapGosaCoreGoserver/goLogPassword.oa.mjs";
-// export { id_oc_goLogDBServer } from "../LdapGosaCoreGoserver/id-oc-goLogDBServer.va.mjs";
 
 
 /**
@@ -55,3 +51,4 @@ const goLogDBServer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { group } from "../MSUser/group.oa.mjs";
-// export { group } from "../MSUser/group.oa.mjs";
 import { securityPrincipal } from "../LdapSchema2ldifMicrosoft/securityPrincipal.oa.mjs";
-// export { securityPrincipal } from "../LdapSchema2ldifMicrosoft/securityPrincipal.oa.mjs";
 import { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
-// export { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
 
 
@@ -37,3 +34,4 @@ const group_rule: CONTENT_RULE = {
 };
 
 /* eslint-enable */
+

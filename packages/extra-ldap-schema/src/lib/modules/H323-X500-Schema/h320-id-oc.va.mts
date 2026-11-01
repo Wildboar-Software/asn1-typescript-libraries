@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { h320_Id } from "../H323-X500-Schema/h320-Id.va.mjs";
-// export { h320_Id } from "../H323-X500-Schema/h320-Id.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const h320_id_oc: OBJECT_IDENTIFIER = _OID.fromParts([
 ], h320_Id);
 
 /* eslint-enable */
+

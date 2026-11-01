@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_displaySpecifier } from "../LdapSchema2ldifMicrosoft/id-oc-displaySpecifier.va.mjs";
 import { iconPath } from "../MSUser/iconPath.oa.mjs";
 import { creationWizard } from "../MSUser/creationWizard.oa.mjs";
@@ -19,7 +17,6 @@ import { createDialog } from "../MSUser/createDialog.oa.mjs";
 import { createWizardExt } from "../MSUser/createWizardExt.oa.mjs";
 import { scopeFlags } from "../MSUser/scopeFlags.oa.mjs";
 import { queryFilter } from "../MSUser/queryFilter.oa.mjs";
-// export { id_oc_displaySpecifier } from "../LdapSchema2ldifMicrosoft/id-oc-displaySpecifier.va.mjs";
 
 
 /**
@@ -68,3 +65,4 @@ const displaySpecifier: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_personalInterestProfile } from "../Ldapmigration50nsCompass/id-oc-personalInterestProfile.va.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { pipuid } from "../Ldapmigration50nsCompass/pipuid.oa.mjs";
@@ -59,7 +57,6 @@ import { pipreservedcis6 } from "../Ldapmigration50nsCompass/pipreservedcis6.oa.
 import { pipreservedces1 } from "../Ldapmigration50nsCompass/pipreservedces1.oa.mjs";
 import { pipreservedces2 } from "../Ldapmigration50nsCompass/pipreservedces2.oa.mjs";
 import { pipreservedces3 } from "../Ldapmigration50nsCompass/pipreservedces3.oa.mjs";
-// export { id_oc_personalInterestProfile } from "../Ldapmigration50nsCompass/id-oc-personalInterestProfile.va.mjs";
 
 
 /**
@@ -151,3 +148,4 @@ const personalInterestProfile: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

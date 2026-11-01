@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_davEntity } from "../Ldapmigration60iplanetCalendar/id-oc-davEntity.va.mjs";
 import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 import { davStore } from "../Ldapmigration60iplanetCalendar/davStore.oa.mjs";
@@ -12,7 +10,6 @@ import { davEventNotification } from "../Ldapmigration60iplanetCalendar/davEvent
 import { davEventNotificationDestination } from "../Ldapmigration60iplanetCalendar/davEventNotificationDestination.oa.mjs";
 import { davTimezone } from "../Ldapmigration60iplanetCalendar/davTimezone.oa.mjs";
 import { davUniqueId } from "../Ldapmigration60iplanetCalendar/davUniqueId.oa.mjs";
-// export { id_oc_davEntity } from "../Ldapmigration60iplanetCalendar/id-oc-davEntity.va.mjs";
 
 
 /**
@@ -57,3 +54,4 @@ const davEntity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

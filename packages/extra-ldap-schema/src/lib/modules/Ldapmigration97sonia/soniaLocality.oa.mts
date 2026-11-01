@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-// export { locality } from "../SelectedObjectClasses/locality.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_soniaLocality } from "../Ldapmigration97sonia/id-oc-soniaLocality.va.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
@@ -25,7 +22,6 @@ import { soniaLocalityPermissions } from "../Ldapmigration97sonia/soniaLocalityP
 import { soniaLocalityPager } from "../Ldapmigration97sonia/soniaLocalityPager.oa.mjs";
 import { soniaLocalityNickname } from "../Ldapmigration97sonia/soniaLocalityNickname.oa.mjs";
 import { soniaLocalityTimestamp } from "../Ldapmigration97sonia/soniaLocalityTimestamp.oa.mjs";
-// export { id_oc_soniaLocality } from "../Ldapmigration97sonia/id-oc-soniaLocality.va.mjs";
 
 
 /**
@@ -80,3 +76,4 @@ const soniaLocality: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

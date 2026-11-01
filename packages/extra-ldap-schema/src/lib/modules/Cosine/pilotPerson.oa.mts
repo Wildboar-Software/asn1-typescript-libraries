@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { person } from "../SelectedObjectClasses/person.oa.mjs";
-// export { person } from "../SelectedObjectClasses/person.oa.mjs";
 import { id_oc_pilotPerson } from "../Cosine/id-oc-pilotPerson.va.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { textEncodedORAddress } from "../Cosine/textEncodedORAddress.oa.mjs";
@@ -22,7 +20,6 @@ import { mobileTelephoneNumber } from "../Cosine/mobileTelephoneNumber.oa.mjs";
 import { pagerTelephoneNumber } from "../Cosine/pagerTelephoneNumber.oa.mjs";
 import { organizationalStatus } from "../Cosine/organizationalStatus.oa.mjs";
 import { mailPreferenceOption } from "../Cosine/mailPreferenceOption.oa.mjs";
-// export { id_oc_pilotPerson } from "../Cosine/id-oc-pilotPerson.va.mjs";
 
 
 /**
@@ -80,3 +77,4 @@ const pilotPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

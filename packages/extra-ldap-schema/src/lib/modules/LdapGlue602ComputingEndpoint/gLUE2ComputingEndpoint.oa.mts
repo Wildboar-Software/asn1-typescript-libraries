@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
-// export { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
 import { id_oc_gLUE2ComputingEndpoint } from "../LdapGlue602ComputingEndpoint/id-oc-gLUE2ComputingEndpoint.va.mjs";
 import { gLUE2ComputingEndpointStaging } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointStaging.oa.mjs";
 import { gLUE2ComputingEndpointJobDescription } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointJobDescription.oa.mjs";
@@ -14,7 +12,6 @@ import { gLUE2ComputingEndpointStagingJobs } from "../LdapGlue602ComputingEndpoi
 import { gLUE2ComputingEndpointSuspendedJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointSuspendedJobs.oa.mjs";
 import { gLUE2ComputingEndpointPreLRMSWaitingJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointPreLRMSWaitingJobs.oa.mjs";
 import { gLUE2ComputingEndpointComputingServiceForeignKey } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointComputingServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2ComputingEndpoint } from "../LdapGlue602ComputingEndpoint/id-oc-gLUE2ComputingEndpoint.va.mjs";
 
 
 /**
@@ -60,3 +57,4 @@ const gLUE2ComputingEndpoint: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

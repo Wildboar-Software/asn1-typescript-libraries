@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
-// export { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
 import { id_oc_inetOrgPerson } from "../InetOrgPerson/id-oc-inetOrgPerson.va.mjs";
 import { audio } from "../Cosine/audio.oa.mjs";
 import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
@@ -28,7 +26,6 @@ import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
 import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
 import { preferredLanguage } from "../InetOrgPerson/preferredLanguage.oa.mjs";
-// export { id_oc_inetOrgPerson } from "../InetOrgPerson/id-oc-inetOrgPerson.va.mjs";
 
 
 /**
@@ -96,3 +93,4 @@ const inetOrgPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

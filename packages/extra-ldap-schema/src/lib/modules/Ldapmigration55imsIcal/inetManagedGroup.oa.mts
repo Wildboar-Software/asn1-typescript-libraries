@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_inetManagedGroup } from "../Ldapmigration55imsIcal/id-oc-inetManagedGroup.va.mjs";
 import { mnggrpDeletionPolicy } from "../Ldapmigration55imsIcal/mnggrpDeletionPolicy.oa.mjs";
 import { mnggrpAdditionPolicy } from "../Ldapmigration55imsIcal/mnggrpAdditionPolicy.oa.mjs";
@@ -19,7 +16,6 @@ import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { nsdaModifiableBy } from "../Ldapmigration50nsDelegatedAdmin/nsdaModifiableBy.oa.mjs";
 import { mnggrpUserClassOfServices } from "../Ldapmigration55imsIcal/mnggrpUserClassOfServices.oa.mjs";
 import { mailSieveRuleSource } from "../Ldapmigration55imsIcal/mailSieveRuleSource.oa.mjs";
-// export { id_oc_inetManagedGroup } from "../Ldapmigration55imsIcal/id-oc-inetManagedGroup.va.mjs";
 
 
 /**
@@ -71,3 +67,4 @@ const inetManagedGroup: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

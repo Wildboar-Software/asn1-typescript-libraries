@@ -1,16 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2Contact } from "../LdapGlue504Contact/id-oc-gLUE2Contact.va.mjs";
 import { gLUE2ContactID } from "../LdapGlue504Contact/gLUE2ContactID.oa.mjs";
 import { gLUE2ContactDetail } from "../LdapGlue504Contact/gLUE2ContactDetail.oa.mjs";
 import { gLUE2ContactType } from "../LdapGlue504Contact/gLUE2ContactType.oa.mjs";
 import { gLUE2ContactServiceForeignKey } from "../LdapGlue504Contact/gLUE2ContactServiceForeignKey.oa.mjs";
 import { gLUE2ContactDomainForeignKey } from "../LdapGlue504Contact/gLUE2ContactDomainForeignKey.oa.mjs";
-// export { id_oc_gLUE2Contact } from "../LdapGlue504Contact/id-oc-gLUE2Contact.va.mjs";
 
 
 /**
@@ -53,3 +50,4 @@ const gLUE2Contact: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

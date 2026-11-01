@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_goVirusServer } from "../LdapGosaCoreGoserver/id-oc-goVirusServer.va.mjs";
 import { avMaxThreads } from "../LdapGosaCoreGoserver/avMaxThreads.oa.mjs";
 import { avMaxDirectoryRecursions } from "../LdapGosaCoreGoserver/avMaxDirectoryRecursions.oa.mjs";
@@ -18,7 +15,6 @@ import { avDatabaseMirror } from "../LdapGosaCoreGoserver/avDatabaseMirror.oa.mj
 import { avChecksPerDay } from "../LdapGosaCoreGoserver/avChecksPerDay.oa.mjs";
 import { avHttpProxyURL } from "../LdapGosaCoreGoserver/avHttpProxyURL.oa.mjs";
 import { avStatus } from "../LdapGosaCoreGoserver/avStatus.oa.mjs";
-// export { id_oc_goVirusServer } from "../LdapGosaCoreGoserver/id-oc-goVirusServer.va.mjs";
 
 
 /**
@@ -69,3 +65,4 @@ const goVirusServer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

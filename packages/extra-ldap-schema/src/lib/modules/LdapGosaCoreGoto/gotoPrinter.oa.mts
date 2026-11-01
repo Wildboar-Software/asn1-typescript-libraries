@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gotoPrinter } from "../LdapGosaCoreGoto/id-oc-gotoPrinter.va.mjs";
 import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
@@ -17,7 +14,6 @@ import { gotoUserPrinter } from "../LdapGosaCoreGoto/gotoUserPrinter.oa.mjs";
 import { gotoUserAdminPrinter } from "../LdapGosaCoreGoto/gotoUserAdminPrinter.oa.mjs";
 import { gotoGroupPrinter } from "../LdapGosaCoreGoto/gotoGroupPrinter.oa.mjs";
 import { gotoGroupAdminPrinter } from "../LdapGosaCoreGoto/gotoGroupAdminPrinter.oa.mjs";
-// export { id_oc_gotoPrinter } from "../LdapGosaCoreGoto/id-oc-gotoPrinter.va.mjs";
 
 
 /**
@@ -66,3 +62,4 @@ const gotoPrinter: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

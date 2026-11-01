@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_pKIEnrollmentService } from "../LdapSchema2ldifMicrosoft/id-oc-pKIEnrollmentService.va.mjs";
 import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
 import { dNSHostName } from "../MSUser/dNSHostName.oa.mjs";
@@ -11,7 +9,6 @@ import { cACertificateDN } from "../MSUser/cACertificateDN.oa.mjs";
 import { certificateTemplates } from "../MSUser/certificateTemplates.oa.mjs";
 import { signatureAlgorithms } from "../MSUser/signatureAlgorithms.oa.mjs";
 import { enrollmentProviders } from "../MSUser/enrollmentProviders.oa.mjs";
-// export { id_oc_pKIEnrollmentService } from "../LdapSchema2ldifMicrosoft/id-oc-pKIEnrollmentService.va.mjs";
 
 
 /**
@@ -52,3 +49,4 @@ const pKIEnrollmentService: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

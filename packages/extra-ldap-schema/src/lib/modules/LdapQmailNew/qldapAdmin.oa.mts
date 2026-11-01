@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_qldapAdmin } from "../LdapQmailNew/id-oc-qldapAdmin.va.mjs";
 import { qladnmanager } from "../LdapQmailNew/qladnmanager.oa.mjs";
 import { qlaDomainList } from "../LdapQmailNew/qlaDomainList.oa.mjs";
@@ -15,7 +13,6 @@ import { qlaQmailGid } from "../LdapQmailNew/qlaQmailGid.oa.mjs";
 import { qlaMailQuotaSize } from "../LdapQmailNew/qlaMailQuotaSize.oa.mjs";
 import { qlaMailQuotaCount } from "../LdapQmailNew/qlaMailQuotaCount.oa.mjs";
 import { qlaMailSizeMax } from "../LdapQmailNew/qlaMailSizeMax.oa.mjs";
-// export { id_oc_qldapAdmin } from "../LdapQmailNew/id-oc-qldapAdmin.va.mjs";
 
 
 /**
@@ -64,3 +61,4 @@ const qldapAdmin: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

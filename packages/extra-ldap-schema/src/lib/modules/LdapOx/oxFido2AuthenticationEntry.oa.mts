@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxFido2AuthenticationEntry } from "../LdapOx/id-oc-oxFido2AuthenticationEntry.va.mjs";
 import { oxId } from "../LdapOx/oxId.oa.mjs";
 import { creationDate } from "../LdapOx/creationDate.oa.mjs";
@@ -14,7 +11,6 @@ import { oxCodeChallenge } from "../LdapOx/oxCodeChallenge.oa.mjs";
 import { personInum } from "../LdapOx/personInum.oa.mjs";
 import { oxAuthenticationData } from "../LdapOx/oxAuthenticationData.oa.mjs";
 import { oxStatus } from "../LdapOx/oxStatus.oa.mjs";
-// export { id_oc_oxFido2AuthenticationEntry } from "../LdapOx/id-oc-oxFido2AuthenticationEntry.va.mjs";
 
 
 /**
@@ -58,3 +54,4 @@ const oxFido2AuthenticationEntry: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

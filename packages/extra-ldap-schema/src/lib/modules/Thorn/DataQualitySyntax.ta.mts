@@ -7,11 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DataQualitySyntax_namespace_completeness, _decode_DataQualitySyntax_namespace_completeness, _encode_DataQualitySyntax_namespace_completeness, _enum_for_DataQualitySyntax_namespace_completeness } from "../Thorn/DataQualitySyntax-namespace-completeness.ta.mjs";
-// export { DataQualitySyntax_namespace_completeness, _enum_for_DataQualitySyntax_namespace_completeness, DataQualitySyntax_namespace_completeness_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataQualitySyntax_namespace_completeness_sample /* IMPORTED_LONG_ENUMERATION_ITEM */, sample /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataQualitySyntax_namespace_completeness_selected /* IMPORTED_LONG_ENUMERATION_ITEM */, selected /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataQualitySyntax_namespace_completeness_substantial /* IMPORTED_LONG_ENUMERATION_ITEM */, substantial /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataQualitySyntax_namespace_completeness_full /* IMPORTED_LONG_ENUMERATION_ITEM */, full /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DataQualitySyntax_namespace_completeness, _encode_DataQualitySyntax_namespace_completeness } from "../Thorn/DataQualitySyntax-namespace-completeness.ta.mjs";
 import { AttributeQuality, _decode_AttributeQuality, _encode_AttributeQuality } from "../Thorn/AttributeQuality.ta.mjs";
-// export { AttributeQuality, _decode_AttributeQuality, _encode_AttributeQuality } from "../Thorn/AttributeQuality.ta.mjs";
 import { DataQualitySyntax_attributeQuality_Item, _decode_DataQualitySyntax_attributeQuality_Item, _encode_DataQualitySyntax_attributeQuality_Item } from "../Thorn/DataQualitySyntax-attributeQuality-Item.ta.mjs";
-// export { DataQualitySyntax_attributeQuality_Item, _decode_DataQualitySyntax_attributeQuality_Item, _encode_DataQualitySyntax_attributeQuality_Item } from "../Thorn/DataQualitySyntax-attributeQuality-Item.ta.mjs";
 
 
 /**
@@ -228,3 +225,4 @@ function _encode_DataQualitySyntax (value: DataQualitySyntax, elGetter: $.ASN1En
 
 
 /* eslint-enable */
+

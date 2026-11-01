@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
-// export { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
 import { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
 import { schedule } from "../MSUser/schedule.oa.mjs";
 import { options } from "../MSUser/options.oa.mjs";
@@ -12,7 +10,6 @@ import { managedBy } from "../MSUser/managedBy.oa.mjs";
 import { interSiteTopologyGenerator } from "../MSUser/interSiteTopologyGenerator.oa.mjs";
 import { interSiteTopologyRenew } from "../MSUser/interSiteTopologyRenew.oa.mjs";
 import { interSiteTopologyFailover } from "../MSUser/interSiteTopologyFailover.oa.mjs";
-// export { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
 
 
 /**
@@ -54,3 +51,4 @@ const nTDSSiteSettings: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

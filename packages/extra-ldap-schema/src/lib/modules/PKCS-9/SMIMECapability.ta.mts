@@ -6,8 +6,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-// export { SMIMEv3Algorithms } from "../PKCS-9/SMIMEv3Algorithms.osa.mjs";
 
 
 /**
@@ -159,3 +157,4 @@ function _encode_SMIMECapability (value: SMIMECapability, elGetter: $.ASN1Encode
 
 
 /* eslint-enable */
+

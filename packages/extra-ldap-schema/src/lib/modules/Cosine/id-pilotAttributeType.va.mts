@@ -3,7 +3,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { pilotAttributeType } from "../Cosine/pilotAttributeType.va.mjs";
-// export { pilotAttributeType } from "../Cosine/pilotAttributeType.va.mjs";
 
 
 /**
@@ -22,3 +21,4 @@ export
 const id_pilotAttributeType: OBJECT_IDENTIFIER = pilotAttributeType;
 
 /* eslint-enable */
+

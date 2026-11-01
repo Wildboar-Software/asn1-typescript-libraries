@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_eduCourse } from "../EduCourseSchema/id-eduCourse.va.mjs";
-// export { id_eduCourse } from "../EduCourseSchema/id-eduCourse.va.mjs";
 
 
 /**
@@ -26,3 +25,4 @@ const id_oc_eduCourse: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_eduCourse);
 
 /* eslint-enable */
+

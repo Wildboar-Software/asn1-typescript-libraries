@@ -1,17 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
-// export { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
 import { id_oc_vlvSearch } from "../LdapCommon389/id-oc-vlvSearch.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { vlvBase } from "../LdapCommon389/vlvBase.oa.mjs";
 import { vlvScope } from "../LdapCommon389/vlvScope.oa.mjs";
 import { vlvFilter } from "../LdapCommon389/vlvFilter.oa.mjs";
-// export { id_oc_vlvSearch } from "../LdapCommon389/id-oc-vlvSearch.va.mjs";
 
 
 /**
@@ -54,3 +50,4 @@ const vlvSearch: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

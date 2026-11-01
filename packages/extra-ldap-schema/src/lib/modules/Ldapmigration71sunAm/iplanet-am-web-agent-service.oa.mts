@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_iplanet_am_web_agent_service } from "../Ldapmigration71sunAm/id-oc-iplanet-am-web-agent-service.va.mjs";
 import { iplanet_am_web_agent_access_allow_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-allow-list.oa.mjs";
 import { iplanet_am_web_agent_access_deny_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-deny-list.oa.mjs";
 import { iplanet_am_web_agent_access_not_enforced_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-not-enforced-list.oa.mjs";
 import { iplanet_am_web_agent_service_status } from "../Ldapmigration71sunAm/iplanet-am-web-agent-service-status.oa.mjs";
-// export { id_oc_iplanet_am_web_agent_service } from "../Ldapmigration71sunAm/id-oc-iplanet-am-web-agent-service.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const iplanet_am_web_agent_service: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

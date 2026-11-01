@@ -1,7 +1,6 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { id_oc_user } from "../MSUser/id-oc-user.va.mjs";
 import { mstop } from "../MSUser/mstop.oa.mjs";
 import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
@@ -159,7 +158,6 @@ import { userPKCS12 } from "../PKCS-9/userPKCS12.oa.mjs";
 import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 import { msSFU30Name } from "../MSUser/msSFU30Name.oa.mjs";
 import { msSFU30NisDomain } from "../MSUser/msSFU30NisDomain.oa.mjs";
-// export { id_oc_user } from "../MSUser/id-oc-user.va.mjs";
 
 
 /**
@@ -349,3 +347,4 @@ const user: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

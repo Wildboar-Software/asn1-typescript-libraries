@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { domain } from "../Cosine/domain.oa.mjs";
-// export { domain } from "../Cosine/domain.oa.mjs";
 import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
-// export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 import { id_nf_domainNameForm } from "../Cosine/id-nf-domainNameForm.va.mjs";
-// export { id_nf_domainNameForm } from "../Cosine/id-nf-domainNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const domainNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

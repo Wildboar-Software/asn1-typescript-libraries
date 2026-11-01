@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_openldapRoot } from "../OpenLDAP/id-openldapRoot.va.mjs";
-// export { id_openldapRoot } from "../OpenLDAP/id-openldapRoot.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_openldap: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_openldapRoot);
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gFarmINode } from "../LdapGfarm/id-oc-gFarmINode.va.mjs";
 import { inumber } from "../LdapGfarm/inumber.oa.mjs";
 import { igen } from "../LdapGfarm/igen.oa.mjs";
@@ -20,7 +18,6 @@ import { ctimesec } from "../LdapGfarm/ctimesec.oa.mjs";
 import { ctimensec } from "../LdapGfarm/ctimensec.oa.mjs";
 import { checksumType } from "../LdapGfarm/checksumType.oa.mjs";
 import { checksum } from "../LdapGfarm/checksum.oa.mjs";
-// export { id_oc_gFarmINode } from "../LdapGfarm/id-oc-gFarmINode.va.mjs";
 
 
 /**
@@ -71,3 +68,4 @@ const gFarmINode: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

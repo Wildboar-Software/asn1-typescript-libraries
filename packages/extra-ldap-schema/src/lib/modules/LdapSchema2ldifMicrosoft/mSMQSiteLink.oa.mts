@@ -1,16 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_mSMQSiteLink } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQSiteLink.va.mjs";
 import { mSMQSite1 } from "../MSUser/mSMQSite1.oa.mjs";
 import { mSMQSite2 } from "../MSUser/mSMQSite2.oa.mjs";
 import { mSMQCost } from "../MSUser/mSMQCost.oa.mjs";
 import { mSMQSiteGates } from "../MSUser/mSMQSiteGates.oa.mjs";
 import { mSMQSiteGatesMig } from "../MSUser/mSMQSiteGatesMig.oa.mjs";
-// export { id_oc_mSMQSiteLink } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQSiteLink.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const mSMQSiteLink: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

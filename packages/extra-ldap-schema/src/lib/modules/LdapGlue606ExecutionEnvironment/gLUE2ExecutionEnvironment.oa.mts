@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Resource } from "../LdapGlue510Resource/gLUE2Resource.oa.mjs";
-// export { gLUE2Resource } from "../LdapGlue510Resource/gLUE2Resource.oa.mjs";
 import { id_oc_gLUE2ExecutionEnvironment } from "../LdapGlue606ExecutionEnvironment/id-oc-gLUE2ExecutionEnvironment.va.mjs";
 import { gLUE2ExecutionEnvironmentPlatform } from "../LdapGlue606ExecutionEnvironment/gLUE2ExecutionEnvironmentPlatform.oa.mjs";
 import { gLUE2ExecutionEnvironmentMainMemorySize } from "../LdapGlue606ExecutionEnvironment/gLUE2ExecutionEnvironmentMainMemorySize.oa.mjs";
@@ -28,7 +26,6 @@ import { gLUE2ExecutionEnvironmentOSName } from "../LdapGlue606ExecutionEnvironm
 import { gLUE2ExecutionEnvironmentOSVersion } from "../LdapGlue606ExecutionEnvironment/gLUE2ExecutionEnvironmentOSVersion.oa.mjs";
 import { gLUE2ExecutionEnvironmentNetworkInfo } from "../LdapGlue606ExecutionEnvironment/gLUE2ExecutionEnvironmentNetworkInfo.oa.mjs";
 import { gLUE2ExecutionEnvironmentComputingManagerForeignKey } from "../LdapGlue606ExecutionEnvironment/gLUE2ExecutionEnvironmentComputingManagerForeignKey.oa.mjs";
-// export { id_oc_gLUE2ExecutionEnvironment } from "../LdapGlue606ExecutionEnvironment/id-oc-gLUE2ExecutionEnvironment.va.mjs";
 
 
 /**
@@ -89,3 +86,4 @@ const gLUE2ExecutionEnvironment: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

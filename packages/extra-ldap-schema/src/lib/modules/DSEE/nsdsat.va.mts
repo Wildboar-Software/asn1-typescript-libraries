@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { netscapeDS } from "../DSEE/netscapeDS.va.mjs";
-// export { netscapeDS } from "../DSEE/netscapeDS.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const nsdsat: OBJECT_IDENTIFIER = _OID.fromParts([
 ], netscapeDS);
 
 /* eslint-enable */
+

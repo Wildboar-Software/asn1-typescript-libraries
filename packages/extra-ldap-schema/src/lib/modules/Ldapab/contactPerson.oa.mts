@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_contactPerson } from "../Ldapab/id-oc-contactPerson.va.mjs";
 import { anniversary } from "../Ldapab/anniversary.oa.mjs";
 import { marker } from "../Ldapab/marker.oa.mjs";
@@ -13,7 +11,6 @@ import { custom2 } from "../Ldapab/custom2.oa.mjs";
 import { custom3 } from "../Ldapab/custom3.oa.mjs";
 import { custom4 } from "../Ldapab/custom4.oa.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
-// export { id_oc_contactPerson } from "../Ldapab/id-oc-contactPerson.va.mjs";
 
 
 /**
@@ -59,3 +56,4 @@ const contactPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

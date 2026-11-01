@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
-// export { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
 import { id_oc_configGroup } from "../LdapApacheFortress/id-oc-configGroup.va.mjs";
 import { configProtocol } from "../LdapApacheFortress/configProtocol.oa.mjs";
 import { ftType } from "../LdapApacheFortress/ftType.oa.mjs";
 import { configParameter } from "../LdapApacheFortress/configParameter.oa.mjs";
 import { ftProps } from "../LdapApacheFortress/ftProps.oa.mjs";
-// export { id_oc_configGroup } from "../LdapApacheFortress/id-oc-configGroup.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const configGroup: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

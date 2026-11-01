@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gLUE2Extension } from "../LdapGlue502Extension/id-oc-gLUE2Extension.va.mjs";
 import { gLUE2ExtensionLocalID } from "../LdapGlue502Extension/gLUE2ExtensionLocalID.oa.mjs";
 import { gLUE2ExtensionKey } from "../LdapGlue502Extension/gLUE2ExtensionKey.oa.mjs";
 import { gLUE2ExtensionValue } from "../LdapGlue502Extension/gLUE2ExtensionValue.oa.mjs";
 import { gLUE2ExtensionEntityForeignKey } from "../LdapGlue502Extension/gLUE2ExtensionEntityForeignKey.oa.mjs";
-// export { id_oc_gLUE2Extension } from "../LdapGlue502Extension/id-oc-gLUE2Extension.va.mjs";
 
 
 /**
@@ -50,3 +47,4 @@ const gLUE2Extension: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

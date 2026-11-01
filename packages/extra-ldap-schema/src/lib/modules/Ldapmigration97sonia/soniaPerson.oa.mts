@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { soniaAccount } from "../Ldapmigration97sonia/soniaAccount.oa.mjs";
-// export { soniaAccount } from "../Ldapmigration97sonia/soniaAccount.oa.mjs";
 import { id_oc_soniaPerson } from "../Ldapmigration97sonia/id-oc-soniaPerson.va.mjs";
 import { soniaCommonTimestamp } from "../Ldapmigration97sonia/soniaCommonTimestamp.oa.mjs";
 import { soniaAcademicTitle } from "../Ldapmigration97sonia/soniaAcademicTitle.oa.mjs";
@@ -47,7 +45,6 @@ import { soniaIssueId } from "../Ldapmigration97sonia/soniaIssueId.oa.mjs";
 import { soniaChipcardHistory } from "../Ldapmigration97sonia/soniaChipcardHistory.oa.mjs";
 import { soniaSocialSecurityNumber } from "../Ldapmigration97sonia/soniaSocialSecurityNumber.oa.mjs";
 import { soniaSapCentralPerson } from "../Ldapmigration97sonia/soniaSapCentralPerson.oa.mjs";
-// export { id_oc_soniaPerson } from "../Ldapmigration97sonia/id-oc-soniaPerson.va.mjs";
 
 
 /**
@@ -124,3 +121,4 @@ const soniaPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

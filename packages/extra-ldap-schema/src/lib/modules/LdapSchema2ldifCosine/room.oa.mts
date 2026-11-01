@@ -1,17 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_room } from "../LdapSchema2ldifCosine/id-oc-room.va.mjs";
 import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
-// export { id_oc_room } from "../LdapSchema2ldifCosine/id-oc-room.va.mjs";
 
 
 /**
@@ -52,3 +48,4 @@ const room: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dicomDevice } from "../LdapDicom/id-oc-dicomDevice.va.mjs";
 import { dicomDeviceName } from "../LdapDicom/dicomDeviceName.oa.mjs";
 import { dicomInstalled } from "../LdapDicom/dicomInstalled.oa.mjs";
@@ -22,7 +20,6 @@ import { dicomPrimaryDeviceType } from "../LdapDicom/dicomPrimaryDeviceType.oa.m
 import { dicomRelatedDeviceReference } from "../LdapDicom/dicomRelatedDeviceReference.oa.mjs";
 import { dicomAuthorizedNodeCertificateReference } from "../LdapDicom/dicomAuthorizedNodeCertificateReference.oa.mjs";
 import { dicomThisNodeCertificateReference } from "../LdapDicom/dicomThisNodeCertificateReference.oa.mjs";
-// export { id_oc_dicomDevice } from "../LdapDicom/id-oc-dicomDevice.va.mjs";
 
 
 /**
@@ -77,3 +74,4 @@ const dicomDevice: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

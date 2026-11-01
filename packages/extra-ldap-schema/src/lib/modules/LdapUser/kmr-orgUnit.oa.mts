@@ -1,13 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
-// export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
 import { id_oc_kmr_orgUnit } from "../LdapUser/id-oc-kmr-orgUnit.va.mjs";
 import { orgCode } from "../LdapUser/orgCode.oa.mjs";
 import { locationCode } from "../LdapUser/locationCode.oa.mjs";
-// export { id_oc_kmr_orgUnit } from "../LdapUser/id-oc-kmr-orgUnit.va.mjs";
 
 
 /**
@@ -44,3 +41,4 @@ const kmr_orgUnit: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,16 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_ipsecBase } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecBase.va.mjs";
 import { ipsecName } from "../MSUser/ipsecName.oa.mjs";
 import { ipsecID } from "../MSUser/ipsecID.oa.mjs";
 import { ipsecDataType } from "../MSUser/ipsecDataType.oa.mjs";
 import { ipsecData } from "../MSUser/ipsecData.oa.mjs";
 import { ipsecOwnersReference } from "../MSUser/ipsecOwnersReference.oa.mjs";
-// export { id_oc_ipsecBase } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecBase.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const ipsecBase: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

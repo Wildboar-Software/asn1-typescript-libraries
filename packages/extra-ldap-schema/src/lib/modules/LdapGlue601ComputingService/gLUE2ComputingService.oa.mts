@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Service } from "../LdapGlue506Service/gLUE2Service.oa.mjs";
-// export { gLUE2Service } from "../LdapGlue506Service/gLUE2Service.oa.mjs";
 import { id_oc_gLUE2ComputingService } from "../LdapGlue601ComputingService/id-oc-gLUE2ComputingService.va.mjs";
 import { gLUE2ComputingServiceTotalJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceTotalJobs.oa.mjs";
 import { gLUE2ComputingServiceRunningJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceRunningJobs.oa.mjs";
@@ -11,7 +9,6 @@ import { gLUE2ComputingServiceWaitingJobs } from "../LdapGlue601ComputingService
 import { gLUE2ComputingServiceStagingJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceStagingJobs.oa.mjs";
 import { gLUE2ComputingServiceSuspendedJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceSuspendedJobs.oa.mjs";
 import { gLUE2ComputingServicePreLRMSWaitingJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServicePreLRMSWaitingJobs.oa.mjs";
-// export { id_oc_gLUE2ComputingService } from "../LdapGlue601ComputingService/id-oc-gLUE2ComputingService.va.mjs";
 
 
 /**
@@ -54,3 +51,4 @@ const gLUE2ComputingService: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

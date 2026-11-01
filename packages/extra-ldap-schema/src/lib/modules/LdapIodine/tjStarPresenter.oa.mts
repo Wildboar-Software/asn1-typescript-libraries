@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
-// export { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { id_oc_tjStarPresenter } from "../LdapIodine/id-oc-tjStarPresenter.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { iodineUid } from "../LdapIodine/iodineUid.oa.mjs";
@@ -52,7 +50,6 @@ import { perm_showtelephone } from "../LdapIodine/perm-showtelephone.oa.mjs";
 import { perm_showbirthday } from "../LdapIodine/perm-showbirthday.oa.mjs";
 import { perm_showpictures } from "../LdapIodine/perm-showpictures.oa.mjs";
 import { is_admin } from "../LdapIodine/is-admin.oa.mjs";
-// export { id_oc_tjStarPresenter } from "../LdapIodine/id-oc-tjStarPresenter.va.mjs";
 
 
 /**
@@ -139,3 +136,4 @@ const tjStarPresenter: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

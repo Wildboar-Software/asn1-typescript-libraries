@@ -1,16 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
 import { gLUE2BenchmarkID } from "../LdapGlue605Benchmark/gLUE2BenchmarkID.oa.mjs";
 import { gLUE2BenchmarkType } from "../LdapGlue605Benchmark/gLUE2BenchmarkType.oa.mjs";
 import { gLUE2BenchmarkValue } from "../LdapGlue605Benchmark/gLUE2BenchmarkValue.oa.mjs";
 import { gLUE2BenchmarkExecutionEnvironmentForeignKey } from "../LdapGlue605Benchmark/gLUE2BenchmarkExecutionEnvironmentForeignKey.oa.mjs";
 import { gLUE2BenchmarkComputingManagerForeignKey } from "../LdapGlue605Benchmark/gLUE2BenchmarkComputingManagerForeignKey.oa.mjs";
-// export { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
 
 
 /**
@@ -53,3 +50,4 @@ const gLUE2Benchmark: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

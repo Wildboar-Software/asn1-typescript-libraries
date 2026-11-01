@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { person } from "../SelectedObjectClasses/person.oa.mjs";
-// export { person } from "../SelectedObjectClasses/person.oa.mjs";
 import { id_oc_pilotPerson } from "../LdapSchema2ldifCosine/id-oc-pilotPerson.va.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { textEncodedORAddress } from "../LdapSchema2ldifCosine/textEncodedORAddress.oa.mjs";
@@ -24,7 +22,6 @@ import { pager } from "../LdapSchema2ldifCosine/pager.oa.mjs";
 import { organizationalStatus } from "../LdapSchema2ldifCosine/organizationalStatus.oa.mjs";
 import { mailPreferenceOption } from "../LdapSchema2ldifCosine/mailPreferenceOption.oa.mjs";
 import { personalSignature } from "../LdapSchema2ldifCosine/personalSignature.oa.mjs";
-// export { id_oc_pilotPerson } from "../LdapSchema2ldifCosine/id-oc-pilotPerson.va.mjs";
 
 
 /**
@@ -78,3 +75,4 @@ const pilotPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

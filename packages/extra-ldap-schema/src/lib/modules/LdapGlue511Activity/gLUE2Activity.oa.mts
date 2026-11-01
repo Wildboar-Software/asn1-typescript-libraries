@@ -1,18 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2ActivityID } from "../LdapGlue511Activity/gLUE2ActivityID.oa.mjs";
-// export { gLUE2ActivityID } from "../LdapGlue511Activity/gLUE2ActivityID.oa.mjs";
 import { id_oc_gLUE2Activity } from "../LdapGlue511Activity/id-oc-gLUE2Activity.va.mjs";
 import { gLUE2ActivityUserDomainForeignKey } from "../LdapGlue511Activity/gLUE2ActivityUserDomainForeignKey.oa.mjs";
 import { gLUE2ActivityEndpointForeignKey } from "../LdapGlue511Activity/gLUE2ActivityEndpointForeignKey.oa.mjs";
 import { gLUE2ActivityShareForeignKey } from "../LdapGlue511Activity/gLUE2ActivityShareForeignKey.oa.mjs";
 import { gLUE2ActivityResourceForeignKey } from "../LdapGlue511Activity/gLUE2ActivityResourceForeignKey.oa.mjs";
 import { gLUE2ActivityActivityForeignKey } from "../LdapGlue511Activity/gLUE2ActivityActivityForeignKey.oa.mjs";
-// export { id_oc_gLUE2Activity } from "../LdapGlue511Activity/id-oc-gLUE2Activity.va.mjs";
 
 
 /**
@@ -56,3 +52,4 @@ const gLUE2Activity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

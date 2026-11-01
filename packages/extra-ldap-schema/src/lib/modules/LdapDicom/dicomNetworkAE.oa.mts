@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dicomNetworkAE } from "../LdapDicom/id-oc-dicomNetworkAE.va.mjs";
 import { dicomAETitle } from "../LdapDicom/dicomAETitle.oa.mjs";
 import { dicomNetworkConnectionReference } from "../LdapDicom/dicomNetworkConnectionReference.oa.mjs";
@@ -16,7 +14,6 @@ import { dicomPreferredCalledAETitle } from "../LdapDicom/dicomPreferredCalledAE
 import { dicomPreferredCallingAETitle } from "../LdapDicom/dicomPreferredCallingAETitle.oa.mjs";
 import { dicomSupportedCharacterSet } from "../LdapDicom/dicomSupportedCharacterSet.oa.mjs";
 import { dicomInstalled } from "../LdapDicom/dicomInstalled.oa.mjs";
-// export { id_oc_dicomNetworkAE } from "../LdapDicom/id-oc-dicomNetworkAE.va.mjs";
 
 
 /**
@@ -65,3 +62,4 @@ const dicomNetworkAE: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

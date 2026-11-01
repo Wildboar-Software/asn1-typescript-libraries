@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { sip_id_oc } from "../H323-X500-Schema/sip-id-oc.va.mjs";
 import { sIPIdentitySIPURI } from "../H323-X500-Schema/sIPIdentitySIPURI.oa.mjs";
 import { sIPIdentityRegistrarAddress } from "../H323-X500-Schema/sIPIdentityRegistrarAddress.oa.mjs";
@@ -16,7 +14,6 @@ import { sIPIdentityPassword } from "../H323-X500-Schema/sIPIdentityPassword.oa.
 import { sIPIdentityUserName } from "../H323-X500-Schema/sIPIdentityUserName.oa.mjs";
 import { sIPIdentityServiceLevel } from "../H323-X500-Schema/sIPIdentityServiceLevel.oa.mjs";
 import { userSMIMECertificate } from "../H323-X500-Schema/userSMIMECertificate.oa.mjs";
-// export { sip_id_oc } from "../H323-X500-Schema/sip-id-oc.va.mjs";
 
 
 /**
@@ -54,3 +51,4 @@ const sIPIdentity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

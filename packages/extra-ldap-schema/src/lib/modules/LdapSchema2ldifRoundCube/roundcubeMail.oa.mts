@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_roundcubeMail } from "../LdapSchema2ldifRoundCube/id-oc-roundcubeMail.va.mjs";
 import { rcNickname } from "../LdapSchema2ldifRoundCube/rcNickname.oa.mjs";
 import { rcBirthday } from "../LdapSchema2ldifRoundCube/rcBirthday.oa.mjs";
@@ -24,7 +22,6 @@ import { rcRegion } from "../LdapSchema2ldifRoundCube/rcRegion.oa.mjs";
 import { rcCountry } from "../LdapSchema2ldifRoundCube/rcCountry.oa.mjs";
 import { rcManager } from "../LdapSchema2ldifRoundCube/rcManager.oa.mjs";
 import { rcAssistant } from "../LdapSchema2ldifRoundCube/rcAssistant.oa.mjs";
-// export { id_oc_roundcubeMail } from "../LdapSchema2ldifRoundCube/id-oc-roundcubeMail.va.mjs";
 
 
 /**
@@ -79,3 +76,4 @@ const roundcubeMail: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

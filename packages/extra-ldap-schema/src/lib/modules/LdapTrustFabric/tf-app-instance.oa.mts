@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_tf_app_instance } from "../LdapTrustFabric/id-oc-tf-app-instance.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { tf_app_instance_id } from "../LdapTrustFabric/tf-app-instance-id.oa.mjs";
@@ -16,7 +14,6 @@ import { tf_software_repository } from "../LdapTrustFabric/tf-software-repositor
 import { tf_software_image } from "../LdapTrustFabric/tf-software-image.oa.mjs";
 import { tf_issue_repository } from "../LdapTrustFabric/tf-issue-repository.oa.mjs";
 import { tf_creator } from "../LdapTrustFabric/tf-creator.oa.mjs";
-// export { id_oc_tf_app_instance } from "../LdapTrustFabric/id-oc-tf-app-instance.va.mjs";
 
 
 /**
@@ -63,3 +60,4 @@ const tf_app_instance: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

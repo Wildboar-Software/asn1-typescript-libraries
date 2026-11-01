@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsChangelogConfig } from "../LdapCore389/id-oc-nsChangelogConfig.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { nsslapd_changelogdir } from "../LdapCore389/nsslapd-changelogdir.oa.mjs";
@@ -14,7 +12,6 @@ import { nsslapd_changelogsuffix } from "../LdapCore389/nsslapd-changelogsuffix.
 import { nsslapd_changelogcompactdb_interval } from "../LdapCore389/nsslapd-changelogcompactdb-interval.oa.mjs";
 import { nsslapd_encryptionalgorithm } from "../LdapCore389/nsslapd-encryptionalgorithm.oa.mjs";
 import { nsSymmetricKey } from "../LdapCore389/nsSymmetricKey.oa.mjs";
-// export { id_oc_nsChangelogConfig } from "../LdapCore389/id-oc-nsChangelogConfig.va.mjs";
 
 
 /**
@@ -61,3 +58,4 @@ const nsChangelogConfig: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

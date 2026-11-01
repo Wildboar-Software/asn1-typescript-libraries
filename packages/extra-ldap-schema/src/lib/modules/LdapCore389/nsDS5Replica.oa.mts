@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsDS5Replica } from "../LdapCore389/id-oc-nsDS5Replica.va.mjs";
 import { nsDS5ReplicaRoot } from "../LdapCore389/nsDS5ReplicaRoot.oa.mjs";
 import { nsDS5ReplicaId } from "../LdapCore389/nsDS5ReplicaId.oa.mjs";
@@ -30,7 +28,6 @@ import { nsds5ReplicaBackoffMax } from "../LdapCore389/nsds5ReplicaBackoffMax.oa
 import { nsds5ReplicaReleaseTimeout } from "../LdapCore389/nsds5ReplicaReleaseTimeout.oa.mjs";
 import { nsDS5ReplicaBindDnGroupCheckInterval } from "../LdapCore389/nsDS5ReplicaBindDnGroupCheckInterval.oa.mjs";
 import { nsds5ReplicaKeepAliveUpdateInterval } from "../LdapCore389/nsds5ReplicaKeepAliveUpdateInterval.oa.mjs";
-// export { id_oc_nsDS5Replica } from "../LdapCore389/id-oc-nsDS5Replica.va.mjs";
 
 
 /**
@@ -93,3 +90,4 @@ const nsDS5Replica: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

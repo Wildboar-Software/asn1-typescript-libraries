@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { co } from "../H323-X500-Schema/co.va.mjs";
-// export { co } from "../H323-X500-Schema/co.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const co_oc: OBJECT_IDENTIFIER = _OID.fromParts([
 ], co);
 
 /* eslint-enable */
+

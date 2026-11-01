@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { ipaUserGroup } from "../Ldap60basev2/ipaUserGroup.oa.mjs";
-// export { ipaUserGroup } from "../Ldap60basev2/ipaUserGroup.oa.mjs";
 import { id_oc_fasGroup } from "../LdapFasschema/id-oc-fasGroup.va.mjs";
 import { fasURL } from "../LdapFasschema/fasURL.oa.mjs";
 import { fasMailingList } from "../LdapFasschema/fasMailingList.oa.mjs";
 import { fasIRCChannel } from "../LdapFasschema/fasIRCChannel.oa.mjs";
 import { fasDiscussionURL } from "../LdapFasschema/fasDiscussionURL.oa.mjs";
-// export { id_oc_fasGroup } from "../LdapFasschema/id-oc-fasGroup.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const fasGroup: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

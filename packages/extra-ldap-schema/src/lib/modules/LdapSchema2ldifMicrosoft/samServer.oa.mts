@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { securityObject } from "../LdapSchema2ldifMicrosoft/securityObject.oa.mjs";
-// export { securityObject } from "../LdapSchema2ldifMicrosoft/securityObject.oa.mjs";
 import { id_oc_samServer } from "../LdapSchema2ldifMicrosoft/id-oc-samServer.va.mjs";
-// export { id_oc_samServer } from "../LdapSchema2ldifMicrosoft/id-oc-samServer.va.mjs";
 
 
 /**
@@ -39,3 +36,4 @@ const samServer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2ApplicationEnvironment } from "../LdapGlue607ApplicationEnvironment/id-oc-gLUE2ApplicationEnvironment.va.mjs";
 import { gLUE2ApplicationEnvironmentID } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentID.oa.mjs";
 import { gLUE2ApplicationEnvironmentAppName } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentAppName.oa.mjs";
@@ -23,7 +21,6 @@ import { gLUE2ApplicationEnvironmentFreeSlots } from "../LdapGlue607ApplicationE
 import { gLUE2ApplicationEnvironmentFreeJobs } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentFreeJobs.oa.mjs";
 import { gLUE2ApplicationEnvironmentFreeUserSeats } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentFreeUserSeats.oa.mjs";
 import { gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey.oa.mjs";
-// export { id_oc_gLUE2ApplicationEnvironment } from "../LdapGlue607ApplicationEnvironment/id-oc-gLUE2ApplicationEnvironment.va.mjs";
 
 
 /**
@@ -79,3 +76,4 @@ const gLUE2ApplicationEnvironment: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_euro_oc_orgPerson } from "../ISSS-Schema/id-euro-oc-orgPerson.va.mjs";
 import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
 import { initials } from "../SelectedAttributeTypes/initials.oa.mjs";
@@ -26,7 +24,6 @@ import { floor } from "../ISSS-Schema/floor.oa.mjs";
 import { floorEntity } from "../ISSS-Schema/floorEntity.oa.mjs";
 import { fax } from "../ISSS-Schema/fax.oa.mjs";
 import { telExten } from "../ISSS-Schema/telExten.oa.mjs";
-// export { id_euro_oc_orgPerson } from "../ISSS-Schema/id-euro-oc-orgPerson.va.mjs";
 
 
 /**
@@ -86,3 +83,4 @@ const euroOrgPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

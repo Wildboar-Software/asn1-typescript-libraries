@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2Service } from "../LdapGlue506Service/id-oc-gLUE2Service.va.mjs";
 import { gLUE2ServiceID } from "../LdapGlue506Service/gLUE2ServiceID.oa.mjs";
 import { gLUE2ServiceType } from "../LdapGlue506Service/gLUE2ServiceType.oa.mjs";
@@ -13,7 +11,6 @@ import { gLUE2ServiceCapability } from "../LdapGlue506Service/gLUE2ServiceCapabi
 import { gLUE2ServiceStatusInfo } from "../LdapGlue506Service/gLUE2ServiceStatusInfo.oa.mjs";
 import { gLUE2ServiceComplexity } from "../LdapGlue506Service/gLUE2ServiceComplexity.oa.mjs";
 import { gLUE2ServiceServiceForeignKey } from "../LdapGlue506Service/gLUE2ServiceServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2Service } from "../LdapGlue506Service/id-oc-gLUE2Service.va.mjs";
 
 
 /**
@@ -59,3 +56,4 @@ const gLUE2Service: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

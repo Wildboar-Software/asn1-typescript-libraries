@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_eduPerson } from "../Ldappc/id-oc-eduPerson.va.mjs";
 import { eduPersonAffiliation } from "../Ldappc/eduPersonAffiliation.oa.mjs";
 import { eduPersonNickname } from "../Ldappc/eduPersonNickname.oa.mjs";
@@ -14,7 +12,6 @@ import { eduPersonPrincipalName } from "../Ldappc/eduPersonPrincipalName.oa.mjs"
 import { eduPersonEntitlement } from "../Ldappc/eduPersonEntitlement.oa.mjs";
 import { eduPersonPrimaryOrgUnitDN } from "../Ldappc/eduPersonPrimaryOrgUnitDN.oa.mjs";
 import { eduPersonScopedAffiliation } from "../Ldappc/eduPersonScopedAffiliation.oa.mjs";
-// export { id_oc_eduPerson } from "../Ldappc/id-oc-eduPerson.va.mjs";
 
 
 /**
@@ -59,3 +56,4 @@ const eduPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

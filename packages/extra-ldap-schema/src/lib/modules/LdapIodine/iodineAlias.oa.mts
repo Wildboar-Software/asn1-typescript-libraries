@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { alias } from "../InformationFramework/alias.oa.mjs";
-// export { alias } from "../InformationFramework/alias.oa.mjs";
 import { id_oc_iodineAlias } from "../LdapIodine/id-oc-iodineAlias.va.mjs";
 import { iodineUid } from "../LdapIodine/iodineUid.oa.mjs";
 import { tjhsstGroupId } from "../LdapIodine/tjhsstGroupId.oa.mjs";
@@ -13,7 +11,6 @@ import { tjhsstSectionId } from "../LdapIodine/tjhsstSectionId.oa.mjs";
 import { tjhsstClassId } from "../LdapIodine/tjhsstClassId.oa.mjs";
 import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
-// export { id_oc_iodineAlias } from "../LdapIodine/id-oc-iodineAlias.va.mjs";
 
 
 /**
@@ -56,3 +53,4 @@ const iodineAlias: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

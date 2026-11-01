@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Manager } from "../LdapGlue509Manager/gLUE2Manager.oa.mjs";
-// export { gLUE2Manager } from "../LdapGlue509Manager/gLUE2Manager.oa.mjs";
 import { id_oc_gLUE2ComputingManager } from "../LdapGlue604ComputingManager/id-oc-gLUE2ComputingManager.va.mjs";
 import { gLUE2ComputingManagerReservation } from "../LdapGlue604ComputingManager/gLUE2ComputingManagerReservation.oa.mjs";
 import { gLUE2ComputingManagerBulkSubmission } from "../LdapGlue604ComputingManager/gLUE2ComputingManagerBulkSubmission.oa.mjs";
@@ -29,7 +27,6 @@ import { gLUE2ComputingManagerTmpDir } from "../LdapGlue604ComputingManager/gLUE
 import { gLUE2ComputingManagerScratchDir } from "../LdapGlue604ComputingManager/gLUE2ComputingManagerScratchDir.oa.mjs";
 import { gLUE2ComputingManagerApplicationDir } from "../LdapGlue604ComputingManager/gLUE2ComputingManagerApplicationDir.oa.mjs";
 import { gLUE2ComputingManagerComputingServiceForeignKey } from "../LdapGlue604ComputingManager/gLUE2ComputingManagerComputingServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2ComputingManager } from "../LdapGlue604ComputingManager/id-oc-gLUE2ComputingManager.va.mjs";
 
 
 /**
@@ -90,3 +87,4 @@ const gLUE2ComputingManager: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

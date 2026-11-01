@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gLUE2ComputingActivity } from "../LdapGlue609ComputingActivity/id-oc-gLUE2ComputingActivity.va.mjs";
 import { gLUE2ComputingActivityState } from "../LdapGlue609ComputingActivity/gLUE2ComputingActivityState.oa.mjs";
 import { gLUE2ComputingActivityOwner } from "../LdapGlue609ComputingActivity/gLUE2ComputingActivityOwner.oa.mjs";
@@ -44,7 +42,6 @@ import { gLUE2ComputingActivityOtherMessages } from "../LdapGlue609ComputingActi
 import { gLUE2ComputingActivityComputingEndpointForeignKey } from "../LdapGlue609ComputingActivity/gLUE2ComputingActivityComputingEndpointForeignKey.oa.mjs";
 import { gLUE2ComputingActivityComputingShareForeignKey } from "../LdapGlue609ComputingActivity/gLUE2ComputingActivityComputingShareForeignKey.oa.mjs";
 import { gLUE2ComputingActivityExecutionEnvironmentForeignKey } from "../LdapGlue609ComputingActivity/gLUE2ComputingActivityExecutionEnvironmentForeignKey.oa.mjs";
-// export { id_oc_gLUE2ComputingActivity } from "../LdapGlue609ComputingActivity/id-oc-gLUE2ComputingActivity.va.mjs";
 
 
 /**
@@ -121,3 +118,4 @@ const gLUE2ComputingActivity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

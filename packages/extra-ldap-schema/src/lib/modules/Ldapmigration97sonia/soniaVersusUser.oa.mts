@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_soniaVersusUser } from "../Ldapmigration97sonia/id-oc-soniaVersusUser.va.mjs";
 import { versusOrgChangeOrigin } from "../Ldapmigration97sonia/versusOrgChangeOrigin.oa.mjs";
 import { versusOrgChangeTarget } from "../Ldapmigration97sonia/versusOrgChangeTarget.oa.mjs";
 import { versusOrgChangeRequest } from "../Ldapmigration97sonia/versusOrgChangeRequest.oa.mjs";
 import { versusOrgChangeRequestor } from "../Ldapmigration97sonia/versusOrgChangeRequestor.oa.mjs";
-// export { id_oc_soniaVersusUser } from "../Ldapmigration97sonia/id-oc-soniaVersusUser.va.mjs";
 
 
 /**
@@ -49,3 +46,4 @@ const soniaVersusUser: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

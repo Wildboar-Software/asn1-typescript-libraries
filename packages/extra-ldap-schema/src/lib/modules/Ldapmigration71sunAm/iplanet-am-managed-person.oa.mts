@@ -1,14 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_iplanet_am_managed_person } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-person.va.mjs";
 import { iplanet_am_modifiable_by } from "../Ldapmigration71sunAm/iplanet-am-modifiable-by.oa.mjs";
 import { iplanet_am_static_group_dn } from "../Ldapmigration71sunAm/iplanet-am-static-group-dn.oa.mjs";
 import { iplanet_am_user_account_life } from "../Ldapmigration71sunAm/iplanet-am-user-account-life.oa.mjs";
-// export { id_oc_iplanet_am_managed_person } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-person.va.mjs";
 
 
 /**
@@ -49,3 +46,4 @@ const iplanet_am_managed_person: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dnaSharedConfig } from "../LdapDnaPlugin/id-oc-dnaSharedConfig.va.mjs";
 import { dnaHostname } from "../LdapDnaPlugin/dnaHostname.oa.mjs";
 import { dnaPortNum } from "../LdapDnaPlugin/dnaPortNum.oa.mjs";
@@ -11,7 +9,6 @@ import { dnaSecurePortNum } from "../LdapDnaPlugin/dnaSecurePortNum.oa.mjs";
 import { dnaRemoteBindMethod } from "../LdapDnaPlugin/dnaRemoteBindMethod.oa.mjs";
 import { dnaRemoteConnProtocol } from "../LdapDnaPlugin/dnaRemoteConnProtocol.oa.mjs";
 import { dnaRemainingValues } from "../LdapDnaPlugin/dnaRemainingValues.oa.mjs";
-// export { id_oc_dnaSharedConfig } from "../LdapDnaPlugin/id-oc-dnaSharedConfig.va.mjs";
 
 
 /**
@@ -55,3 +52,4 @@ const dnaSharedConfig: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

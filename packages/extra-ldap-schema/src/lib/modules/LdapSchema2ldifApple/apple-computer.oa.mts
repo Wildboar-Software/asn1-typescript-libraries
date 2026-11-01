@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_apple_computer } from "../LdapSchema2ldifApple/id-oc-apple-computer.va.mjs";
 import { apple_realname } from "../LdapSchema2ldifApple/apple-realname.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
@@ -32,7 +29,6 @@ import { rid } from "../SambaSchema/rid.oa.mjs";
 import { primaryGroupID } from "../SambaSchema/primaryGroupID.oa.mjs";
 import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
 import { sambaPrimaryGroupSID } from "../SambaV3Schema/sambaPrimaryGroupSID.oa.mjs";
-// export { id_oc_apple_computer } from "../LdapSchema2ldifApple/id-oc-apple-computer.va.mjs";
 
 
 /**
@@ -96,3 +92,4 @@ const apple_computer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

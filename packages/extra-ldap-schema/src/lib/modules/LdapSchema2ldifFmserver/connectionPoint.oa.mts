@@ -1,15 +1,11 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
-// export { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_connectionPoint } from "../LdapSchema2ldifFmserver/id-oc-connectionPoint.va.mjs";
 import { keywords } from "../MSUser/keywords.oa.mjs";
 import { managedBy } from "../MSUser/managedBy.oa.mjs";
-// export { id_oc_connectionPoint } from "../LdapSchema2ldifFmserver/id-oc-connectionPoint.va.mjs";
 
 
 /**
@@ -50,3 +46,4 @@ const connectionPoint: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

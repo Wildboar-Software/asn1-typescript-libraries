@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_soniaSequence } from "../Ldapmigration97sonia/id-oc-soniaSequence.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { soniaSequenceMinValue } from "../Ldapmigration97sonia/soniaSequenceMinValue.oa.mjs";
@@ -12,7 +10,6 @@ import { soniaSequenceIncrementBy } from "../Ldapmigration97sonia/soniaSequenceI
 import { soniaSequenceCycleIsEnabled } from "../Ldapmigration97sonia/soniaSequenceCycleIsEnabled.oa.mjs";
 import { soniaSequenceIsLocked } from "../Ldapmigration97sonia/soniaSequenceIsLocked.oa.mjs";
 import { soniaSequenceLastValue } from "../Ldapmigration97sonia/soniaSequenceLastValue.oa.mjs";
-// export { id_oc_soniaSequence } from "../Ldapmigration97sonia/id-oc-soniaSequence.va.mjs";
 
 
 /**
@@ -55,3 +52,4 @@ const soniaSequence: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

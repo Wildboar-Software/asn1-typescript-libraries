@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_soniaDepartment_2 } from "../Ldapmigration97sonia/id-oc-soniaDepartment-2.va.mjs";
 import { departmentNumber } from "../InetOrgPerson/departmentNumber.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
@@ -16,7 +13,6 @@ import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 import { soniaDepartmentNumber } from "../Ldapmigration97sonia/soniaDepartmentNumber.oa.mjs";
 import { soniaDepartmentToken } from "../Ldapmigration97sonia/soniaDepartmentToken.oa.mjs";
 import { soniaDepartmentSAMail } from "../Ldapmigration97sonia/soniaDepartmentSAMail.oa.mjs";
-// export { id_oc_soniaDepartment_2 } from "../Ldapmigration97sonia/id-oc-soniaDepartment-2.va.mjs";
 
 
 /**
@@ -62,3 +58,4 @@ const soniaDepartment_2: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

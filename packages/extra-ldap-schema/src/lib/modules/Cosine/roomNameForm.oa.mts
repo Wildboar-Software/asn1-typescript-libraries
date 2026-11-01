@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { room } from "../Cosine/room.oa.mjs";
-// export { room } from "../Cosine/room.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_roomNameForm } from "../Cosine/id-nf-roomNameForm.va.mjs";
-// export { id_nf_roomNameForm } from "../Cosine/id-nf-roomNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const roomNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

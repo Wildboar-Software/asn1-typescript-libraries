@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2Endpoint } from "../LdapGlue507Endpoint/id-oc-gLUE2Endpoint.va.mjs";
 import { gLUE2EndpointID } from "../LdapGlue507Endpoint/gLUE2EndpointID.oa.mjs";
 import { gLUE2EndpointURL } from "../LdapGlue507Endpoint/gLUE2EndpointURL.oa.mjs";
@@ -30,7 +28,6 @@ import { gLUE2EndpointDowntimeAnnounce } from "../LdapGlue507Endpoint/gLUE2Endpo
 import { gLUE2EndpointDowntimeStart } from "../LdapGlue507Endpoint/gLUE2EndpointDowntimeStart.oa.mjs";
 import { gLUE2EndpointDowntimeEnd } from "../LdapGlue507Endpoint/gLUE2EndpointDowntimeEnd.oa.mjs";
 import { gLUE2EndpointDowntimeInfo } from "../LdapGlue507Endpoint/gLUE2EndpointDowntimeInfo.oa.mjs";
-// export { id_oc_gLUE2Endpoint } from "../LdapGlue507Endpoint/id-oc-gLUE2Endpoint.va.mjs";
 
 
 /**
@@ -93,3 +90,4 @@ const gLUE2Endpoint: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxAuthUmaRPT } from "../LdapOx/id-oc-oxAuthUmaRPT.va.mjs";
 import { authnTime } from "../LdapOx/authnTime.oa.mjs";
 import { clnId } from "../LdapOx/clnId.oa.mjs";
@@ -16,7 +13,6 @@ import { tknCde } from "../LdapOx/tknCde.oa.mjs";
 import { oxAuthUserId } from "../LdapOx/oxAuthUserId.oa.mjs";
 import { oxUmaPermission } from "../LdapOx/oxUmaPermission.oa.mjs";
 import { uuid } from "../LdapOx/uuid.oa.mjs";
-// export { id_oc_oxAuthUmaRPT } from "../LdapOx/id-oc-oxAuthUmaRPT.va.mjs";
 
 
 /**
@@ -62,3 +58,4 @@ const oxAuthUmaRPT: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

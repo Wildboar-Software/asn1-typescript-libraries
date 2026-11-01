@@ -1,13 +1,10 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { ldapSubEntry } from "../LdapSubentry/ldapSubEntry.oa.mjs";
-// export { ldapSubEntry } from "../LdapSubentry/ldapSubEntry.oa.mjs";
 import { id_oc_nsRoleDefinition } from "../LdapCommon389/id-oc-nsRoleDefinition.va.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { nsRoleScopeDN } from "../LdapCommon389/nsRoleScopeDN.oa.mjs";
-// export { id_oc_nsRoleDefinition } from "../LdapCommon389/id-oc-nsRoleDefinition.va.mjs";
 
 
 /**
@@ -46,3 +43,4 @@ const nsRoleDefinition: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

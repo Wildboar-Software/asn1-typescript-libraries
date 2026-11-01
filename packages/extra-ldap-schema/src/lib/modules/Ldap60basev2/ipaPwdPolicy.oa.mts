@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_ipaPwdPolicy } from "../Ldap60basev2/id-oc-ipaPwdPolicy.va.mjs";
 import { ipaPwdMaxRepeat } from "../Ldap60basev2/ipaPwdMaxRepeat.oa.mjs";
 import { ipaPwdMaxSequence } from "../Ldap60basev2/ipaPwdMaxSequence.oa.mjs";
@@ -14,7 +12,6 @@ import { ipaPwdUcredit } from "../Ldap60basev2/ipaPwdUcredit.oa.mjs";
 import { ipaPwdLcredit } from "../Ldap60basev2/ipaPwdLcredit.oa.mjs";
 import { ipaPwdOcredit } from "../Ldap60basev2/ipaPwdOcredit.oa.mjs";
 import { passwordGraceLimit } from "../LdapCommon389/passwordGraceLimit.oa.mjs";
-// export { id_oc_ipaPwdPolicy } from "../Ldap60basev2/id-oc-ipaPwdPolicy.va.mjs";
 
 
 /**
@@ -60,3 +57,4 @@ const ipaPwdPolicy: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

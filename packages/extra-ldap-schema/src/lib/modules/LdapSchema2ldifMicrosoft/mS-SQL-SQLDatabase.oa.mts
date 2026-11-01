@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_mS_SQL_SQLDatabase } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-SQLDatabase.va.mjs";
 import { mS_SQL_Name } from "../MSUser/mS-SQL-Name.oa.mjs";
 import { mS_SQL_Contact } from "../MSUser/mS-SQL-Contact.oa.mjs";
@@ -17,7 +15,6 @@ import { mS_SQL_LastBackupDate } from "../MSUser/mS-SQL-LastBackupDate.oa.mjs";
 import { mS_SQL_LastDiagnosticDate } from "../MSUser/mS-SQL-LastDiagnosticDate.oa.mjs";
 import { mS_SQL_Applications } from "../MSUser/mS-SQL-Applications.oa.mjs";
 import { mS_SQL_Keywords } from "../MSUser/mS-SQL-Keywords.oa.mjs";
-// export { id_oc_mS_SQL_SQLDatabase } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-SQLDatabase.va.mjs";
 
 
 /**
@@ -64,3 +61,4 @@ const mS_SQL_SQLDatabase: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

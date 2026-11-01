@@ -4,16 +4,13 @@ import {
 } from "@wildboar/asn1";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { ipHostNumber } from "../NIS/ipHostNumber.oa.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { manager } from "../Cosine/manager.oa.mjs";
-// export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
 /**
@@ -55,3 +52,4 @@ const ipHost: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

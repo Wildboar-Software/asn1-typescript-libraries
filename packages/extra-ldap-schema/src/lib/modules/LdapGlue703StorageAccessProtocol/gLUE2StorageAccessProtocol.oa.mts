@@ -1,17 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2StorageAccessProtocolMaxStreams } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolMaxStreams.oa.mjs";
-// export { gLUE2StorageAccessProtocolMaxStreams } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolMaxStreams.oa.mjs";
 import { id_oc_gLUE2StorageAccessProtocol } from "../LdapGlue703StorageAccessProtocol/id-oc-gLUE2StorageAccessProtocol.va.mjs";
 import { gLUE2StorageAccessProtocolID } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolID.oa.mjs";
 import { gLUE2StorageAccessProtocolType } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolType.oa.mjs";
 import { gLUE2StorageAccessProtocolVersion } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolVersion.oa.mjs";
 import { gLUE2StorageAccessProtocolStorageServiceForeignKey } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolStorageServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2StorageAccessProtocol } from "../LdapGlue703StorageAccessProtocol/id-oc-gLUE2StorageAccessProtocol.va.mjs";
 
 
 /**
@@ -54,3 +50,4 @@ const gLUE2StorageAccessProtocol: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

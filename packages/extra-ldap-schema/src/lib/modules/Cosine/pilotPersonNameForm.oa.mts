@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { pilotPerson } from "../Cosine/pilotPerson.oa.mjs";
-// export { pilotPerson } from "../Cosine/pilotPerson.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_pilotPersonNameForm } from "../Cosine/id-nf-pilotPersonNameForm.va.mjs";
-// export { id_nf_pilotPersonNameForm } from "../Cosine/id-nf-pilotPersonNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const pilotPersonNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_apple_preset_user } from "../LdapSchema2ldifApple/id-oc-apple-preset-user.va.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { memberUid } from "../NIS/memberUid.oa.mjs";
@@ -33,7 +30,6 @@ import { scriptPath } from "../SambaSchema/scriptPath.oa.mjs";
 import { profilePath } from "../SambaSchema/profilePath.oa.mjs";
 import { smbHome } from "../SambaSchema/smbHome.oa.mjs";
 import { apple_preset_user_is_admin } from "../LdapSchema2ldifApple/apple-preset-user-is-admin.oa.mjs";
-// export { id_oc_apple_preset_user } from "../LdapSchema2ldifApple/id-oc-apple-preset-user.va.mjs";
 
 
 /**
@@ -98,3 +94,4 @@ const apple_preset_user: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

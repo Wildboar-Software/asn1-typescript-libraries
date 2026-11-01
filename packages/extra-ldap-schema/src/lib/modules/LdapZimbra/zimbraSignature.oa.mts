@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
 import { zimbraSignatureId } from "../LdapZimbra/zimbraSignatureId.oa.mjs";
 import { zimbraSignatureName } from "../LdapZimbra/zimbraSignatureName.oa.mjs";
@@ -11,7 +9,6 @@ import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mj
 import { zimbraPrefMailSignature } from "../LdapZimbra/zimbraPrefMailSignature.oa.mjs";
 import { zimbraPrefMailSignatureContactId } from "../LdapZimbra/zimbraPrefMailSignatureContactId.oa.mjs";
 import { zimbraPrefMailSignatureHTML } from "../LdapZimbra/zimbraPrefMailSignatureHTML.oa.mjs";
-// export { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
 
 
 /**
@@ -55,3 +52,4 @@ const zimbraSignature: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

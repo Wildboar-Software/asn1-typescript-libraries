@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
-// export { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { id_oc_tjhsstStudent } from "../LdapIodine/id-oc-tjhsstStudent.va.mjs";
 import { graduationYear } from "../LdapIodine/graduationYear.oa.mjs";
 import { iodineUid } from "../LdapIodine/iodineUid.oa.mjs";
@@ -67,7 +65,6 @@ import { loginShell } from "../NIS/loginShell.oa.mjs";
 import { is_student_admin } from "../LdapIodine/is-student-admin.oa.mjs";
 import { is_admin } from "../LdapIodine/is-admin.oa.mjs";
 import { eighthAgreement } from "../LdapIodine/eighthAgreement.oa.mjs";
-// export { id_oc_tjhsstStudent } from "../LdapIodine/id-oc-tjhsstStudent.va.mjs";
 
 
 /**
@@ -165,3 +162,4 @@ const tjhsstStudent: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

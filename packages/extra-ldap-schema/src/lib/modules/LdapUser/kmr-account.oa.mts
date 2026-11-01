@@ -1,16 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_kmr_account } from "../LdapUser/id-oc-kmr-account.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { uidNumber } from "../NIS/uidNumber.oa.mjs";
 import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
-// export { id_oc_kmr_account } from "../LdapUser/id-oc-kmr-account.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const kmr_account: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

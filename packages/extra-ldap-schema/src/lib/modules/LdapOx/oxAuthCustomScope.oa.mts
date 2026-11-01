@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
 import { defaultScope } from "../LdapOx/defaultScope.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
@@ -21,7 +18,6 @@ import { oxUmaPolicyScriptDn } from "../LdapOx/oxUmaPolicyScriptDn.oa.mjs";
 import { oxAttributes } from "../LdapOx/oxAttributes.oa.mjs";
 import { exp } from "../LdapOx/exp.oa.mjs";
 import { del } from "../LdapOx/del.oa.mjs";
-// export { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
 
 
 /**
@@ -72,3 +68,4 @@ const oxAuthCustomScope: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

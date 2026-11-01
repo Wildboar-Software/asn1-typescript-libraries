@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_pIPUserInfo } from "../Ldapmigration50nsCompass/id-oc-pIPUserInfo.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
@@ -13,7 +10,6 @@ import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { pipcompassservers } from "../Ldapmigration50nsCompass/pipcompassservers.oa.mjs";
 import { pipuniqueid } from "../Ldapmigration50nsCompass/pipuniqueid.oa.mjs";
-// export { id_oc_pIPUserInfo } from "../Ldapmigration50nsCompass/id-oc-pIPUserInfo.va.mjs";
 
 
 /**
@@ -58,3 +54,4 @@ const pIPUserInfo: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

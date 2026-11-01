@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
-// export { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
 import { id_oc_serviceInstance } from "../LdapSchema2ldifMicrosoft/id-oc-serviceInstance.va.mjs";
 import { displayName } from "../LdapSchema2ldifMicrosoft/displayName.oa.mjs";
 import { serviceClassID } from "../MSUser/serviceClassID.oa.mjs";
 import { winsockAddresses } from "../MSUser/winsockAddresses.oa.mjs";
 import { serviceInstanceVersion } from "../MSUser/serviceInstanceVersion.oa.mjs";
-// export { id_oc_serviceInstance } from "../LdapSchema2ldifMicrosoft/id-oc-serviceInstance.va.mjs";
 
 
 /**
@@ -49,3 +46,4 @@ const serviceInstance: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,18 +1,14 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { gosaProxyAcctFlags } from "../LdapGosaCoreGosaSamba3/gosaProxyAcctFlags.oa.mjs";
-// export { gosaProxyAcctFlags } from "../LdapGosaCoreGosaSamba3/gosaProxyAcctFlags.oa.mjs";
 import { id_oc_gosaProxyAccount } from "../LdapGosaCoreGosaSamba3/id-oc-gosaProxyAccount.va.mjs";
 import { gosaProxyID } from "../LdapGosaCoreGosaSamba3/gosaProxyID.oa.mjs";
 import { gosaProxyWorkingStart } from "../LdapGosaCoreGosaSamba3/gosaProxyWorkingStart.oa.mjs";
 import { gosaProxyWorkingStop } from "../LdapGosaCoreGosaSamba3/gosaProxyWorkingStop.oa.mjs";
 import { gosaProxyQuota } from "../LdapGosaCoreGosaSamba3/gosaProxyQuota.oa.mjs";
 import { gosaProxyQuotaPeriod } from "../LdapGosaCoreGosaSamba3/gosaProxyQuotaPeriod.oa.mjs";
-// export { id_oc_gosaProxyAccount } from "../LdapGosaCoreGosaSamba3/id-oc-gosaProxyAccount.va.mjs";
 
 
 /**
@@ -57,3 +53,4 @@ const gosaProxyAccount: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_goImapServer } from "../LdapGosaCoreGoserver/id-oc-goImapServer.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { goImapName } from "../LdapGosaCoreGoserver/goImapName.oa.mjs";
@@ -18,7 +16,6 @@ import { cyrusImap } from "../LdapGosaCoreGoserver/cyrusImap.oa.mjs";
 import { cyrusImapSSL } from "../LdapGosaCoreGoserver/cyrusImapSSL.oa.mjs";
 import { cyrusPop3 } from "../LdapGosaCoreGoserver/cyrusPop3.oa.mjs";
 import { cyrusPop3SSL } from "../LdapGosaCoreGoserver/cyrusPop3SSL.oa.mjs";
-// export { id_oc_goImapServer } from "../LdapGosaCoreGoserver/id-oc-goImapServer.va.mjs";
 
 
 /**
@@ -70,3 +67,4 @@ const goImapServer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

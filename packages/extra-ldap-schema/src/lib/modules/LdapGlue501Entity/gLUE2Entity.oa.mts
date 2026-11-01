@@ -1,15 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gLUE2Entity } from "../LdapGlue501Entity/id-oc-gLUE2Entity.va.mjs";
 import { gLUE2EntityName } from "../LdapGlue501Entity/gLUE2EntityName.oa.mjs";
 import { gLUE2EntityOtherInfo } from "../LdapGlue501Entity/gLUE2EntityOtherInfo.oa.mjs";
 import { gLUE2EntityCreationTime } from "../LdapGlue501Entity/gLUE2EntityCreationTime.oa.mjs";
 import { gLUE2EntityValidity } from "../LdapGlue501Entity/gLUE2EntityValidity.oa.mjs";
-// export { id_oc_gLUE2Entity } from "../LdapGlue501Entity/id-oc-gLUE2Entity.va.mjs";
 
 
 /**
@@ -51,3 +48,4 @@ const gLUE2Entity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

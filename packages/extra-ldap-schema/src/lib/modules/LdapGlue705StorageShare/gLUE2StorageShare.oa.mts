@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Share } from "../LdapGlue508Share/gLUE2Share.oa.mjs";
-// export { gLUE2Share } from "../LdapGlue508Share/gLUE2Share.oa.mjs";
 import { id_oc_gLUE2StorageShare } from "../LdapGlue705StorageShare/id-oc-gLUE2StorageShare.va.mjs";
 import { gLUE2StorageShareServingState } from "../LdapGlue705StorageShare/gLUE2StorageShareServingState.oa.mjs";
 import { gLUE2StorageShareSharingID } from "../LdapGlue705StorageShare/gLUE2StorageShareSharingID.oa.mjs";
@@ -18,7 +16,6 @@ import { gLUE2StorageShareTag } from "../LdapGlue705StorageShare/gLUE2StorageSha
 import { gLUE2StorageShareStorageEndpointForeignKey } from "../LdapGlue705StorageShare/gLUE2StorageShareStorageEndpointForeignKey.oa.mjs";
 import { gLUE2StorageShareDataStoreForeignKey } from "../LdapGlue705StorageShare/gLUE2StorageShareDataStoreForeignKey.oa.mjs";
 import { gLUE2StorageShareStorageServiceForeignKey } from "../LdapGlue705StorageShare/gLUE2StorageShareStorageServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2StorageShare } from "../LdapGlue705StorageShare/id-oc-gLUE2StorageShare.va.mjs";
 
 
 /**
@@ -69,3 +66,4 @@ const gLUE2StorageShare: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

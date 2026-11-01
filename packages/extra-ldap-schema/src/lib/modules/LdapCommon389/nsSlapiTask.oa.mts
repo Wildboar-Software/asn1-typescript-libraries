@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_nsSlapiTask } from "../LdapCommon389/id-oc-nsSlapiTask.va.mjs";
 import { ttl } from "../LdapCommon389/ttl.oa.mjs";
 import { nsTaskLog } from "../LdapCommon389/nsTaskLog.oa.mjs";
@@ -15,7 +12,6 @@ import { nsTaskCurrentItem } from "../LdapCommon389/nsTaskCurrentItem.oa.mjs";
 import { nsTaskTotalItems } from "../LdapCommon389/nsTaskTotalItems.oa.mjs";
 import { nsTaskCreated } from "../LdapCommon389/nsTaskCreated.oa.mjs";
 import { nsTaskWarning } from "../LdapCommon389/nsTaskWarning.oa.mjs";
-// export { id_oc_nsSlapiTask } from "../LdapCommon389/id-oc-nsSlapiTask.va.mjs";
 
 
 /**
@@ -62,3 +58,4 @@ const nsSlapiTask: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

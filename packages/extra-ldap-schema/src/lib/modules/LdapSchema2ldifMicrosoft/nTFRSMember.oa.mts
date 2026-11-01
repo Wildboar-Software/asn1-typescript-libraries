@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nTFRSMember } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSMember.va.mjs";
 import { fRSUpdateTimeout } from "../MSUser/fRSUpdateTimeout.oa.mjs";
 import { fRSServiceCommand } from "../MSUser/fRSServiceCommand.oa.mjs";
@@ -16,7 +14,6 @@ import { fRSControlInboundBacklog } from "../MSUser/fRSControlInboundBacklog.oa.
 import { fRSControlOutboundBacklog } from "../MSUser/fRSControlOutboundBacklog.oa.mjs";
 import { fRSFlags } from "../MSUser/fRSFlags.oa.mjs";
 import { fRSPartnerAuthLevel } from "../MSUser/fRSPartnerAuthLevel.oa.mjs";
-// export { id_oc_nTFRSMember } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSMember.va.mjs";
 
 
 /**
@@ -62,3 +59,4 @@ const nTFRSMember: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

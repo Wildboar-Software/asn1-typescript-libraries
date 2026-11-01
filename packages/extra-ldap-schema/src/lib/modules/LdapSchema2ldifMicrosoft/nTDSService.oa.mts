@@ -1,16 +1,13 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nTDSService } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSService.va.mjs";
 import { tombstoneLifetime } from "../MSUser/tombstoneLifetime.oa.mjs";
 import { dSHeuristics } from "../MSUser/dSHeuristics.oa.mjs";
 import { garbageCollPeriod } from "../MSUser/garbageCollPeriod.oa.mjs";
 import { replTopologyStayOfExecution } from "../MSUser/replTopologyStayOfExecution.oa.mjs";
 import { sPNMappings } from "../MSUser/sPNMappings.oa.mjs";
-// export { id_oc_nTDSService } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSService.va.mjs";
 
 
 /**
@@ -50,3 +47,4 @@ const nTDSService: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

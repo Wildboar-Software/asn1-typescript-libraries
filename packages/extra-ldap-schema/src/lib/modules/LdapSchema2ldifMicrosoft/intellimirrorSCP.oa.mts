@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { serviceAdministrationPoint } from "../LdapSchema2ldifMicrosoft/serviceAdministrationPoint.oa.mjs";
-// export { serviceAdministrationPoint } from "../LdapSchema2ldifMicrosoft/serviceAdministrationPoint.oa.mjs";
 import { id_oc_intellimirrorSCP } from "../LdapSchema2ldifMicrosoft/id-oc-intellimirrorSCP.va.mjs";
 import { netbootMachineFilePath } from "../MSUser/netbootMachineFilePath.oa.mjs";
 import { netbootAllowNewClients } from "../MSUser/netbootAllowNewClients.oa.mjs";
@@ -18,7 +16,6 @@ import { netbootIntelliMirrorOSes } from "../MSUser/netbootIntelliMirrorOSes.oa.
 import { netbootTools } from "../MSUser/netbootTools.oa.mjs";
 import { netbootLocallyInstalledOSes } from "../MSUser/netbootLocallyInstalledOSes.oa.mjs";
 import { netbootServer } from "../MSUser/netbootServer.oa.mjs";
-// export { id_oc_intellimirrorSCP } from "../LdapSchema2ldifMicrosoft/id-oc-intellimirrorSCP.va.mjs";
 
 
 /**
@@ -66,3 +63,4 @@ const intellimirrorSCP: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

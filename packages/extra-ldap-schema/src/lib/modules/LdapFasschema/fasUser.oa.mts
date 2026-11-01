@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_fasUser } from "../LdapFasschema/id-oc-fasUser.va.mjs";
 import { fasTimezone } from "../LdapFasschema/fasTimezone.oa.mjs";
 import { fasLocale } from "../LdapFasschema/fasLocale.oa.mjs";
@@ -19,7 +17,6 @@ import { fasIsPrivate } from "../LdapFasschema/fasIsPrivate.oa.mjs";
 import { fasPronoun } from "../LdapFasschema/fasPronoun.oa.mjs";
 import { fasRssUrl } from "../LdapFasschema/fasRssUrl.oa.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
-// export { id_oc_fasUser } from "../LdapFasschema/id-oc-fasUser.va.mjs";
 
 
 /**
@@ -71,3 +68,4 @@ const fasUser: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

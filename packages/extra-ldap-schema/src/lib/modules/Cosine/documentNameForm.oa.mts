@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { document } from "../Cosine/document.oa.mjs";
-// export { document } from "../Cosine/document.oa.mjs";
 import { documentIdentifier } from "../Cosine/documentIdentifier.oa.mjs";
-// export { documentIdentifier } from "../Cosine/documentIdentifier.oa.mjs";
 import { id_nf_documentNameForm } from "../Cosine/id-nf-documentNameForm.va.mjs";
-// export { id_nf_documentNameForm } from "../Cosine/id-nf-documentNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const documentNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

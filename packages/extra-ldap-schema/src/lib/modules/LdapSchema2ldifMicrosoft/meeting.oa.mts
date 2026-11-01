@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { meetingName } from "../MSUser/meetingName.oa.mjs";
-// export { meetingName } from "../MSUser/meetingName.oa.mjs";
 import { id_oc_meeting } from "../LdapSchema2ldifMicrosoft/id-oc-meeting.va.mjs";
 import { meetingID } from "../MSUser/meetingID.oa.mjs";
 import { meetingDescription } from "../MSUser/meetingDescription.oa.mjs";
@@ -30,7 +27,6 @@ import { meetingStartTime } from "../LdapSchema2ldifMicrosoft/meetingStartTime.o
 import { meetingEndTime } from "../LdapSchema2ldifMicrosoft/meetingEndTime.oa.mjs";
 import { meetingBandwidth } from "../MSUser/meetingBandwidth.oa.mjs";
 import { meetingBlob } from "../MSUser/meetingBlob.oa.mjs";
-// export { id_oc_meeting } from "../LdapSchema2ldifMicrosoft/id-oc-meeting.va.mjs";
 
 
 /**
@@ -90,3 +86,4 @@ const meeting: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

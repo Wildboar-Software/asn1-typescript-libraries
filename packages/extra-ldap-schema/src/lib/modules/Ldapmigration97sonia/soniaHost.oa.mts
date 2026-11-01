@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { ipHost } from "../NIS/ipHost.oa.mjs";
-// export { ipHost } from "../NIS/ipHost.oa.mjs";
 import { id_oc_soniaHost } from "../Ldapmigration97sonia/id-oc-soniaHost.va.mjs";
 import { soniaHostMacAddress } from "../Ldapmigration97sonia/soniaHostMacAddress.oa.mjs";
 import { soniaHostSubdomainName } from "../Ldapmigration97sonia/soniaHostSubdomainName.oa.mjs";
@@ -19,7 +17,6 @@ import { soniaHostIsInstallServer } from "../Ldapmigration97sonia/soniaHostIsIns
 import { soniaHostIsUpdateServer } from "../Ldapmigration97sonia/soniaHostIsUpdateServer.oa.mjs";
 import { soniaHostAquisitionDate } from "../Ldapmigration97sonia/soniaHostAquisitionDate.oa.mjs";
 import { soniaHostWarrentyUntil } from "../Ldapmigration97sonia/soniaHostWarrentyUntil.oa.mjs";
-// export { id_oc_soniaHost } from "../Ldapmigration97sonia/id-oc-soniaHost.va.mjs";
 
 
 /**
@@ -68,3 +65,4 @@ const soniaHost: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

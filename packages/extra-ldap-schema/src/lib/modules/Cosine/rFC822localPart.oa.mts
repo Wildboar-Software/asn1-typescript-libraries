@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { domain } from "../Cosine/domain.oa.mjs";
-// export { domain } from "../Cosine/domain.oa.mjs";
 import { id_oc_rFC822localPart } from "../Cosine/id-oc-rFC822localPart.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
@@ -22,7 +20,6 @@ import { surname } from "../SelectedAttributeTypes/surname.oa.mjs";
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
 import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
-// export { id_oc_rFC822localPart } from "../Cosine/id-oc-rFC822localPart.va.mjs";
 
 
 /**
@@ -79,3 +76,4 @@ const rFC822localPart: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxAuthSessionId_2 } from "../LdapOx/id-oc-oxAuthSessionId-2.va.mjs";
 import { oxId } from "../LdapOx/oxId.oa.mjs";
 import { sid } from "../LdapOx/sid.oa.mjs";
@@ -23,7 +20,6 @@ import { oxJwt } from "../LdapOx/oxJwt.oa.mjs";
 import { oxAuthPermissionGrantedMap } from "../LdapOx/oxAuthPermissionGrantedMap.oa.mjs";
 import { oxInvolvedClients } from "../LdapOx/oxInvolvedClients.oa.mjs";
 import { oxAuthSessionAttribute } from "../LdapOx/oxAuthSessionAttribute.oa.mjs";
-// export { id_oc_oxAuthSessionId_2 } from "../LdapOx/id-oc-oxAuthSessionId-2.va.mjs";
 
 
 /**
@@ -76,3 +72,4 @@ const oxAuthSessionId_2: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
-// export { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
 import { id_oc_ftUserAttrs } from "../LdapApacheFortress/id-oc-ftUserAttrs.va.mjs";
 import { ftRC } from "../LdapApacheFortress/ftRC.oa.mjs";
 import { ftRA } from "../LdapApacheFortress/ftRA.oa.mjs";
@@ -13,7 +10,6 @@ import { ftARC } from "../LdapApacheFortress/ftARC.oa.mjs";
 import { ftARA } from "../LdapApacheFortress/ftARA.oa.mjs";
 import { ftCstr } from "../LdapApacheFortress/ftCstr.oa.mjs";
 import { ftSystem } from "../LdapApacheFortress/ftSystem.oa.mjs";
-// export { id_oc_ftUserAttrs } from "../LdapApacheFortress/id-oc-ftUserAttrs.va.mjs";
 
 
 /**
@@ -59,3 +55,4 @@ const ftUserAttrs: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

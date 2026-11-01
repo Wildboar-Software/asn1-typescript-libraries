@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_passwordObject } from "../LdapCommon389/id-oc-passwordObject.va.mjs";
 import { pwdpolicysubentry } from "../LdapCommon389/pwdpolicysubentry.oa.mjs";
 import { passwordExpirationTime } from "../LdapCommon389/passwordExpirationTime.oa.mjs";
@@ -19,7 +17,6 @@ import { pwdTPRReset } from "../LdapCommon389/pwdTPRReset.oa.mjs";
 import { pwdTPRUseCount } from "../LdapCommon389/pwdTPRUseCount.oa.mjs";
 import { pwdTPRValidFrom } from "../LdapCommon389/pwdTPRValidFrom.oa.mjs";
 import { pwdTPRExpireAt } from "../LdapCommon389/pwdTPRExpireAt.oa.mjs";
-// export { id_oc_passwordObject } from "../LdapCommon389/id-oc-passwordObject.va.mjs";
 
 
 /**
@@ -70,3 +67,4 @@ const passwordObject: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

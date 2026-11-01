@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { zimbraPrefIdentityName } from "../LdapZimbra/zimbraPrefIdentityName.oa.mjs";
-// export { zimbraPrefIdentityName } from "../LdapZimbra/zimbraPrefIdentityName.oa.mjs";
 import { id_oc_zimbraIdentity } from "../LdapZimbra/id-oc-zimbraIdentity.va.mjs";
 import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
 import { zimbraPrefBccAddress } from "../LdapZimbra/zimbraPrefBccAddress.oa.mjs";
@@ -39,7 +36,6 @@ import { zimbraPrefWhenInFolderIds } from "../LdapZimbra/zimbraPrefWhenInFolderI
 import { zimbraPrefWhenInFoldersEnabled } from "../LdapZimbra/zimbraPrefWhenInFoldersEnabled.oa.mjs";
 import { zimbraPrefWhenSentToAddresses } from "../LdapZimbra/zimbraPrefWhenSentToAddresses.oa.mjs";
 import { zimbraPrefWhenSentToEnabled } from "../LdapZimbra/zimbraPrefWhenSentToEnabled.oa.mjs";
-// export { id_oc_zimbraIdentity } from "../LdapZimbra/id-oc-zimbraIdentity.va.mjs";
 
 
 /**
@@ -110,3 +106,4 @@ const zimbraIdentity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

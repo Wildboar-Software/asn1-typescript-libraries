@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { msoc } from "../RFC2739Calendar/msoc.va.mjs";
 import { calCalURI } from "../RFC2739Calendar/calCalURI.oa.mjs";
 import { calFBURL } from "../RFC2739Calendar/calFBURL.oa.mjs";
@@ -16,7 +14,6 @@ import { calOtherCalURIs } from "../RFC2739Calendar/calOtherCalURIs.oa.mjs";
 import { calOtherFBURLs } from "../RFC2739Calendar/calOtherFBURLs.oa.mjs";
 import { calOtherCAPURIs } from "../RFC2739Calendar/calOtherCAPURIs.oa.mjs";
 import { calOtherCalAdrURIs } from "../RFC2739Calendar/calOtherCalAdrURIs.oa.mjs";
-// export { msoc } from "../RFC2739Calendar/msoc.va.mjs";
 
 
 /**
@@ -65,3 +62,4 @@ const calEntry: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

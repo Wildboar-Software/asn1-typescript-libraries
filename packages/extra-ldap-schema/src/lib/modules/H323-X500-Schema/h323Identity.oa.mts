@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { h323_id_oc } from "../H323-X500-Schema/h323-id-oc.va.mjs";
 import { h323IdentityGKDomain } from "../H323-X500-Schema/h323IdentityGKDomain.oa.mjs";
 import { h323Identityh323_ID } from "../H323-X500-Schema/h323Identityh323-ID.oa.mjs";
@@ -18,7 +16,6 @@ import { h323IdentitypartyNumber } from "../H323-X500-Schema/h323IdentitypartyNu
 import { h323IdentitymobileUIM } from "../H323-X500-Schema/h323IdentitymobileUIM.oa.mjs";
 import { h323IdentityEndpointType } from "../H323-X500-Schema/h323IdentityEndpointType.oa.mjs";
 import { h323IdentityServiceLevel } from "../H323-X500-Schema/h323IdentityServiceLevel.oa.mjs";
-// export { h323_id_oc } from "../H323-X500-Schema/h323-id-oc.va.mjs";
 
 
 /**
@@ -57,3 +54,4 @@ const h323Identity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

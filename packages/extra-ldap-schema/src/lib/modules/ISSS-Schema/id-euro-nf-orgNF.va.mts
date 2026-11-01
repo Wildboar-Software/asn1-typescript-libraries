@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { euro_nf } from "../ISSS-Schema/euro-nf.va.mjs";
-// export { euro_nf } from "../ISSS-Schema/euro-nf.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_euro_nf_orgNF: OBJECT_IDENTIFIER = _OID.fromParts([
 ], euro_nf);
 
 /* eslint-enable */
+

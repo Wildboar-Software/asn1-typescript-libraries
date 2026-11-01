@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { user } from "../MSUser/user.oa.mjs";
-// export { user } from "../MSUser/user.oa.mjs";
 import { id_oc_computer } from "../MSUser/id-oc-computer.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { networkAddress } from "../MSUser/networkAddress.oa.mjs";
@@ -60,7 +58,6 @@ import { msSFU30Name } from "../MSUser/msSFU30Name.oa.mjs";
 import { msSFU30Aliases } from "../MSUser/msSFU30Aliases.oa.mjs";
 import { msSFU30NisDomain } from "../MSUser/msSFU30NisDomain.oa.mjs";
 import { nisMapName } from "../NIS/nisMapName.oa.mjs";
-// export { id_oc_computer } from "../MSUser/id-oc-computer.va.mjs";
 
 
 /**
@@ -150,3 +147,4 @@ const computer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

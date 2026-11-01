@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { ID } from "../VOPerson/ID.ta.mjs";
-// export { ID, _decode_ID, _encode_ID } from "../VOPerson/ID.ta.mjs";
 import { id_voPersonObjectClass } from "../VOPerson/id-voPersonObjectClass.va.mjs";
-// export { id_voPersonObjectClass } from "../VOPerson/id-voPersonObjectClass.va.mjs";
 
 
 /**
@@ -21,3 +19,4 @@ export
 const id_oc_voPersonObjectClass: ID = id_voPersonObjectClass;
 
 /* eslint-enable */
+

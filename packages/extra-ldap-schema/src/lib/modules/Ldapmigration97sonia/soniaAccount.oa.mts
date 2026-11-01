@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
-// export { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { id_oc_soniaAccount } from "../Ldapmigration97sonia/id-oc-soniaAccount.va.mjs";
 import { employeeType } from "../InetOrgPerson/employeeType.oa.mjs";
 import { soniaUid } from "../Ldapmigration97sonia/soniaUid.oa.mjs";
@@ -32,7 +30,6 @@ import { soniaFileHost } from "../Ldapmigration97sonia/soniaFileHost.oa.mjs";
 import { soniaUserPrefs } from "../Ldapmigration97sonia/soniaUserPrefs.oa.mjs";
 import { soniaMailDelegatedAddress } from "../Ldapmigration97sonia/soniaMailDelegatedAddress.oa.mjs";
 import { soniaVoIPPIN } from "../Ldapmigration97sonia/soniaVoIPPIN.oa.mjs";
-// export { id_oc_soniaAccount } from "../Ldapmigration97sonia/id-oc-soniaAccount.va.mjs";
 
 
 /**
@@ -95,3 +92,4 @@ const soniaAccount: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

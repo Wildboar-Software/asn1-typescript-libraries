@@ -5,7 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
-// export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 
 
@@ -44,3 +43,4 @@ const caseExactIA5SubstringsMatch: MATCHING_RULE<IA5String> = {
 };
 
 /* eslint-enable */
+

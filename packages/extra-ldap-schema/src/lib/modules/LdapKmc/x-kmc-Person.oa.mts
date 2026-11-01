@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_x_kmc_Person } from "../LdapKmc/id-oc-x-kmc-Person.va.mjs";
 import { x_kmc_LastModified } from "../LdapKmc/x-kmc-LastModified.oa.mjs";
 import { x_kmc_PhoneticSurname } from "../LdapKmc/x-kmc-PhoneticSurname.oa.mjs";
@@ -22,7 +20,6 @@ import { x_kmc_AddressIsPublic } from "../LdapKmc/x-kmc-AddressIsPublic.oa.mjs";
 import { x_kmc_IsKUMember } from "../LdapKmc/x-kmc-IsKUMember.oa.mjs";
 import { x_kmc_KUDepartment } from "../LdapKmc/x-kmc-KUDepartment.oa.mjs";
 import { x_kmc_KUStudentNumber } from "../LdapKmc/x-kmc-KUStudentNumber.oa.mjs";
-// export { id_oc_x_kmc_Person } from "../LdapKmc/id-oc-x-kmc-Person.va.mjs";
 
 
 /**
@@ -77,3 +74,4 @@ const x_kmc_Person: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

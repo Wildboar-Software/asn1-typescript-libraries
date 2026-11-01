@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DSAQualitySyntax_serviceQuality, _encode_DSAQualitySyntax_serviceQuality, _enum_for_DSAQualitySyntax_serviceQuality, DSAQualitySyntax_serviceQuality } from "../Thorn/DSAQualitySyntax-serviceQuality.ta.mjs";
-// export { DSAQualitySyntax_serviceQuality, _enum_for_DSAQualitySyntax_serviceQuality, DSAQualitySyntax_serviceQuality_defunct /* IMPORTED_LONG_ENUMERATION_ITEM */, defunct /* IMPORTED_SHORT_ENUMERATION_ITEM */, DSAQualitySyntax_serviceQuality_experimental /* IMPORTED_LONG_ENUMERATION_ITEM */, experimental /* IMPORTED_SHORT_ENUMERATION_ITEM */, DSAQualitySyntax_serviceQuality_best_effort /* IMPORTED_LONG_ENUMERATION_ITEM */, best_effort /* IMPORTED_SHORT_ENUMERATION_ITEM */, DSAQualitySyntax_serviceQuality_pilot_service /* IMPORTED_LONG_ENUMERATION_ITEM */, pilot_service /* IMPORTED_SHORT_ENUMERATION_ITEM */, DSAQualitySyntax_serviceQuality_full_service /* IMPORTED_LONG_ENUMERATION_ITEM */, full_service /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DSAQualitySyntax_serviceQuality, _encode_DSAQualitySyntax_serviceQuality } from "../Thorn/DSAQualitySyntax-serviceQuality.ta.mjs";
 
 
 /**
@@ -192,3 +191,4 @@ function _encode_DSAQualitySyntax (value: DSAQualitySyntax, elGetter: $.ASN1Enco
 
 
 /* eslint-enable */
+

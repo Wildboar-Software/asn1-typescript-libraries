@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_tjhsstClass } from "../LdapIodine/id-oc-tjhsstClass.va.mjs";
 import { tjhsstClassId } from "../LdapIodine/tjhsstClassId.oa.mjs";
 import { tjhsstSectionId } from "../LdapIodine/tjhsstSectionId.oa.mjs";
@@ -18,7 +16,6 @@ import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 import { enrolledStudent } from "../LdapIodine/enrolledStudent.oa.mjs";
 import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
-// export { id_oc_tjhsstClass } from "../LdapIodine/id-oc-tjhsstClass.va.mjs";
 
 
 /**
@@ -67,3 +64,4 @@ const tjhsstClass: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

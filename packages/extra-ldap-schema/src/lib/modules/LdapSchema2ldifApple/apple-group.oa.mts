@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_apple_group } from "../LdapSchema2ldifApple/id-oc-apple-group.va.mjs";
 import { apple_group_homeurl } from "../LdapSchema2ldifApple/apple-group-homeurl.oa.mjs";
 import { apple_group_homeowner } from "../LdapSchema2ldifApple/apple-group-homeowner.oa.mjs";
@@ -19,7 +17,6 @@ import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 import { rid } from "../SambaSchema/rid.oa.mjs";
 import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
 import { ttl } from "../LdapCommon389/ttl.oa.mjs";
-// export { id_oc_apple_group } from "../LdapSchema2ldifApple/id-oc-apple-group.va.mjs";
 
 
 /**
@@ -71,3 +68,4 @@ const apple_group: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

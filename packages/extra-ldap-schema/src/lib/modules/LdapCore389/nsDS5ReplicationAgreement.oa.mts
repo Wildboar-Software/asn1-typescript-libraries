@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_nsDS5ReplicationAgreement } from "../LdapCore389/id-oc-nsDS5ReplicationAgreement.va.mjs";
 import { nsds5ReplicaCleanRUVNotified } from "../LdapCore389/nsds5ReplicaCleanRUVNotified.oa.mjs";
 import { nsDS5ReplicaHost } from "../LdapCore389/nsDS5ReplicaHost.oa.mjs";
@@ -45,7 +42,6 @@ import { nsDS5ReplicaBootstrapBindDN } from "../LdapCore389/nsDS5ReplicaBootstra
 import { nsDS5ReplicaBootstrapCredentials } from "../LdapCore389/nsDS5ReplicaBootstrapCredentials.oa.mjs";
 import { nsDS5ReplicaBootstrapBindMethod } from "../LdapCore389/nsDS5ReplicaBootstrapBindMethod.oa.mjs";
 import { nsDS5ReplicaBootstrapTransportInfo } from "../LdapCore389/nsDS5ReplicaBootstrapTransportInfo.oa.mjs";
-// export { id_oc_nsDS5ReplicationAgreement } from "../LdapCore389/id-oc-nsDS5ReplicationAgreement.va.mjs";
 
 
 /**
@@ -122,3 +118,4 @@ const nsDS5ReplicationAgreement: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

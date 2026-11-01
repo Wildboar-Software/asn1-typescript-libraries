@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_iplanet_am_managed_org_unit } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-org-unit.va.mjs";
 import { sunPreferredDomain } from "../Ldapmigration70sunSchema2/sunPreferredDomain.oa.mjs";
 import { associatedDomain } from "../MIXERAddressMapping/associatedDomain.oa.mjs";
@@ -12,7 +10,6 @@ import { sunAdditionalTemplates } from "../Ldapmigration70sunSchema2/sunAddition
 import { sunOverrideTemplates } from "../Ldapmigration70sunSchema2/sunOverrideTemplates.oa.mjs";
 import { sunRegisteredServiceName } from "../Ldapmigration70sunSchema2/sunRegisteredServiceName.oa.mjs";
 import { sunIdentityServerSupportedTypes } from "../Ldapmigration71sunAm/sunIdentityServerSupportedTypes.oa.mjs";
-// export { id_oc_iplanet_am_managed_org_unit } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-org-unit.va.mjs";
 
 
 /**
@@ -57,3 +54,4 @@ const iplanet_am_managed_org_unit: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

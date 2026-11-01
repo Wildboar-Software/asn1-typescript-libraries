@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { account } from "../Cosine/account.oa.mjs";
-// export { account } from "../Cosine/account.oa.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
-// export { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { id_nf_accountNameForm } from "../Cosine/id-nf-accountNameForm.va.mjs";
-// export { id_nf_accountNameForm } from "../Cosine/id-nf-accountNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const accountNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

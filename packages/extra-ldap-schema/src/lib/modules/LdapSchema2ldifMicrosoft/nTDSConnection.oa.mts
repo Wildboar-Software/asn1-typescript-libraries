@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
-// export { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 import { id_oc_nTDSConnection } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSConnection.va.mjs";
 import { enabledConnection } from "../MSUser/enabledConnection.oa.mjs";
 import { fromServer } from "../MSUser/fromServer.oa.mjs";
@@ -12,7 +10,6 @@ import { generatedConnection } from "../MSUser/generatedConnection.oa.mjs";
 import { schedule } from "../MSUser/schedule.oa.mjs";
 import { transportType } from "../MSUser/transportType.oa.mjs";
 import { mS_DS_ReplicatesNCReason } from "../MSUser/mS-DS-ReplicatesNCReason.oa.mjs";
-// export { id_oc_nTDSConnection } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSConnection.va.mjs";
 
 
 /**
@@ -55,3 +52,4 @@ const nTDSConnection: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_doublePrecision } from "../InetMailSchema/id-doublePrecision.va.mjs";
-// export { id_doublePrecision } from "../InetMailSchema/id-doublePrecision.va.mjs";
 
 
 /**
@@ -27,3 +26,4 @@ const id_at_mailbox: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_doublePrecision);
 
 /* eslint-enable */
+

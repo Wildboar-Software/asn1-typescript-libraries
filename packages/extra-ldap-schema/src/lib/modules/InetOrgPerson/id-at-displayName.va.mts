@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_netscapeAttrTypes } from "../InetOrgPerson/id-netscapeAttrTypes.va.mjs";
-// export { id_netscapeAttrTypes } from "../InetOrgPerson/id-netscapeAttrTypes.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_at_displayName: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_netscapeAttrTypes);
 
 /* eslint-enable */
+

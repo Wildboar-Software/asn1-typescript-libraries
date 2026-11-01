@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_eduOrg } from "../EduOrgSchema/id-eduOrg.va.mjs";
-// export { id_eduOrg } from "../EduOrgSchema/id-eduOrg.va.mjs";
 
 
 /**
@@ -26,3 +25,4 @@ const id_at_eduOrgSuperiorURI: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_eduOrg);
 
 /* eslint-enable */
+

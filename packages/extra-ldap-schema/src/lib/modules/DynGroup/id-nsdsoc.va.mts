@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_nsds } from "../DynGroup/id-nsds.va.mjs";
-// export { id_nsds } from "../DynGroup/id-nsds.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_nsdsoc: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_nsds);
 
 /* eslint-enable */
+

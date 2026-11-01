@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { sunroot } from "../DSEE/sunroot.va.mjs";
-// export { sunroot } from "../DSEE/sunroot.va.mjs";
 
 
 /**
@@ -26,3 +25,4 @@ const sunds: OBJECT_IDENTIFIER = _OID.fromParts([
 ], sunroot);
 
 /* eslint-enable */
+

@@ -1,7 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
 
 
 /**
@@ -24,3 +23,4 @@ export
 const _encode_SigningTime: $.ASN1Encoder<SigningTime> = _encode_Time;
 
 /* eslint-enable */
+

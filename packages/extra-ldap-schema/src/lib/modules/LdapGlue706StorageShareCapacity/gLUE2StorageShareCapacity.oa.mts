@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2StorageShareCapacity } from "../LdapGlue706StorageShareCapacity/id-oc-gLUE2StorageShareCapacity.va.mjs";
 import { gLUE2StorageShareCapacityID } from "../LdapGlue706StorageShareCapacity/gLUE2StorageShareCapacityID.oa.mjs";
 import { gLUE2StorageShareCapacityType } from "../LdapGlue706StorageShareCapacity/gLUE2StorageShareCapacityType.oa.mjs";
@@ -12,7 +10,6 @@ import { gLUE2StorageShareCapacityTotalSize } from "../LdapGlue706StorageShareCa
 import { gLUE2StorageShareCapacityFreeSize } from "../LdapGlue706StorageShareCapacity/gLUE2StorageShareCapacityFreeSize.oa.mjs";
 import { gLUE2StorageShareCapacityUsedSize } from "../LdapGlue706StorageShareCapacity/gLUE2StorageShareCapacityUsedSize.oa.mjs";
 import { gLUE2StorageShareCapacityReservedSize } from "../LdapGlue706StorageShareCapacity/gLUE2StorageShareCapacityReservedSize.oa.mjs";
-// export { id_oc_gLUE2StorageShareCapacity } from "../LdapGlue706StorageShareCapacity/id-oc-gLUE2StorageShareCapacity.va.mjs";
 
 
 /**
@@ -57,3 +54,4 @@ const gLUE2StorageShareCapacity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,16 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { dKIMSelector } from "../LdapOpendkim/dKIMSelector.oa.mjs";
-// export { dKIMSelector } from "../LdapOpendkim/dKIMSelector.oa.mjs";
 import { id_oc_dKIM } from "../LdapOpendkim/id-oc-dKIM.va.mjs";
 import { dKIMIdentity } from "../LdapOpendkim/dKIMIdentity.oa.mjs";
 import { dKIMDomain } from "../LdapOpendkim/dKIMDomain.oa.mjs";
 import { dKIMKey } from "../LdapOpendkim/dKIMKey.oa.mjs";
-// export { id_oc_dKIM } from "../LdapOpendkim/id-oc-dKIM.va.mjs";
 
 
 /**
@@ -53,3 +49,4 @@ const dKIM: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

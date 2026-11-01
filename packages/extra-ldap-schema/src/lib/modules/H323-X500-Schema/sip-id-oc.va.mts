@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { sip_Id } from "../H323-X500-Schema/sip-Id.va.mjs";
-// export { sip_Id } from "../H323-X500-Schema/sip-Id.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const sip_id_oc: OBJECT_IDENTIFIER = _OID.fromParts([
 ], sip_Id);
 
 /* eslint-enable */
+

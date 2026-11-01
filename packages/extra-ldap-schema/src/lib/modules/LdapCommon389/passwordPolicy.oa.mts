@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_passwordPolicy } from "../LdapCommon389/id-oc-passwordPolicy.va.mjs";
 import { passwordMaxAge } from "../LdapCommon389/passwordMaxAge.oa.mjs";
 import { passwordExp } from "../LdapCommon389/passwordExp.oa.mjs";
@@ -50,7 +48,6 @@ import { passwordAdminSkipInfoUpdate } from "../LdapCommon389/passwordAdminSkipI
 import { passwordBreachCheck } from "../LdapCommon389/passwordBreachCheck.oa.mjs";
 import { passwordBreachDbUrl } from "../LdapCommon389/passwordBreachDbUrl.oa.mjs";
 import { passwordBreachDbTimeout } from "../LdapCommon389/passwordBreachDbTimeout.oa.mjs";
-// export { id_oc_passwordPolicy } from "../LdapCommon389/id-oc-passwordPolicy.va.mjs";
 
 
 /**
@@ -132,3 +129,4 @@ const passwordPolicy: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { ietf_at } from "../PKCS-9/ietf-at.va.mjs";
-// export { ietf_at } from "../PKCS-9/ietf-at.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const pkcs_9_at_countryOfResidence: OBJECT_IDENTIFIER = _OID.fromParts([
 ], ietf_at);
 
 /* eslint-enable */
+

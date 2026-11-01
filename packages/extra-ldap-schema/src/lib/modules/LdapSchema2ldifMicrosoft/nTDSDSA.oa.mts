@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
-// export { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
 import { id_oc_nTDSDSA } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSDSA.va.mjs";
 import { hasMasterNCs } from "../MSUser/hasMasterNCs.oa.mjs";
 import { hasPartialReplicaNCs } from "../MSUser/hasPartialReplicaNCs.oa.mjs";
@@ -17,7 +15,6 @@ import { lastBackupRestorationTime } from "../MSUser/lastBackupRestorationTime.o
 import { queryPolicyObject } from "../MSUser/queryPolicyObject.oa.mjs";
 import { managedBy } from "../MSUser/managedBy.oa.mjs";
 import { retiredReplDSASignatures } from "../MSUser/retiredReplDSASignatures.oa.mjs";
-// export { id_oc_nTDSDSA } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSDSA.va.mjs";
 
 
 /**
@@ -64,3 +61,4 @@ const nTDSDSA: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

@@ -1,11 +1,8 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Share } from "../LdapGlue508Share/gLUE2Share.oa.mjs";
-// export { gLUE2Share } from "../LdapGlue508Share/gLUE2Share.oa.mjs";
 import { gLUE2ComputingShareServingState } from "../LdapGlue603ComputingShare/gLUE2ComputingShareServingState.oa.mjs";
-// export { gLUE2ComputingShareServingState } from "../LdapGlue603ComputingShare/gLUE2ComputingShareServingState.oa.mjs";
 import { id_oc_gLUE2ComputingShare } from "../LdapGlue603ComputingShare/id-oc-gLUE2ComputingShare.va.mjs";
 import { gLUE2ComputingShareMappingQueue } from "../LdapGlue603ComputingShare/gLUE2ComputingShareMappingQueue.oa.mjs";
 import { gLUE2ComputingShareMaxWallTime } from "../LdapGlue603ComputingShare/gLUE2ComputingShareMaxWallTime.oa.mjs";
@@ -53,7 +50,6 @@ import { gLUE2ComputingShareTag } from "../LdapGlue603ComputingShare/gLUE2Comput
 import { gLUE2ComputingShareComputingEndpointForeignKey } from "../LdapGlue603ComputingShare/gLUE2ComputingShareComputingEndpointForeignKey.oa.mjs";
 import { gLUE2ComputingShareExecutionEnvironmentForeignKey } from "../LdapGlue603ComputingShare/gLUE2ComputingShareExecutionEnvironmentForeignKey.oa.mjs";
 import { gLUE2ComputingShareComputingServiceForeignKey } from "../LdapGlue603ComputingShare/gLUE2ComputingShareComputingServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2ComputingShare } from "../LdapGlue603ComputingShare/id-oc-gLUE2ComputingShare.va.mjs";
 
 
 /**
@@ -138,3 +134,4 @@ const gLUE2ComputingShare: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

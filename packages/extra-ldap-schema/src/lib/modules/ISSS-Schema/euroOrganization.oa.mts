@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_euro_oc_organization } from "../ISSS-Schema/id-euro-oc-organization.va.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 import { secretary } from "../Cosine/secretary.oa.mjs";
@@ -15,7 +13,6 @@ import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 import { area } from "../ISSS-Schema/area.oa.mjs";
 import { fax } from "../ISSS-Schema/fax.oa.mjs";
 import { vATName } from "../ISSS-Schema/vATName.oa.mjs";
-// export { id_euro_oc_organization } from "../ISSS-Schema/id-euro-oc-organization.va.mjs";
 
 
 /**
@@ -62,3 +59,4 @@ const euroOrganization: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

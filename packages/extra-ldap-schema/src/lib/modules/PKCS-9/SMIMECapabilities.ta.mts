@@ -4,7 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMIMECapability, _decode_SMIMECapability, _encode_SMIMECapability } from "../PKCS-9/SMIMECapability.ta.mjs";
-// export { SMIMECapability, _decode_SMIMECapability, _encode_SMIMECapability } from "../PKCS-9/SMIMECapability.ta.mjs";
 
 
 /**
@@ -51,3 +50,4 @@ function _encode_SMIMECapabilities (value: SMIMECapabilities, elGetter: $.ASN1En
 
 
 /* eslint-enable */
+

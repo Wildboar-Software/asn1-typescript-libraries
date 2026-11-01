@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
-// export { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
 import { id_oc_serviceConnectionPoint } from "../LdapSchema2ldifFmserver/id-oc-serviceConnectionPoint.va.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
 import { serviceBindingInformation } from "../MSUser/serviceBindingInformation.oa.mjs";
@@ -15,7 +13,6 @@ import { serviceDNSName } from "../MSUser/serviceDNSName.oa.mjs";
 import { serviceDNSNameType } from "../MSUser/serviceDNSNameType.oa.mjs";
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
-// export { id_oc_serviceConnectionPoint } from "../LdapSchema2ldifFmserver/id-oc-serviceConnectionPoint.va.mjs";
 
 
 /**
@@ -63,3 +60,4 @@ const serviceConnectionPoint: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

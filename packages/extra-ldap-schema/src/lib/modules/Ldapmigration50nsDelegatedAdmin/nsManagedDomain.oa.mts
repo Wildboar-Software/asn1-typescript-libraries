@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsManagedDomain } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedDomain.va.mjs";
 import { nsNumUsers } from "../Ldapmigration50nsDelegatedAdmin/nsNumUsers.oa.mjs";
 import { nsMaxUsers } from "../Ldapmigration50nsDelegatedAdmin/nsMaxUsers.oa.mjs";
@@ -16,7 +14,6 @@ import { nsMaxDomains } from "../Ldapmigration50nsDelegatedAdmin/nsMaxDomains.oa
 import { nsDefaultMaxDeptSize } from "../Ldapmigration50nsDelegatedAdmin/nsDefaultMaxDeptSize.oa.mjs";
 import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 import { nsdaModifiableBy } from "../Ldapmigration50nsDelegatedAdmin/nsdaModifiableBy.oa.mjs";
-// export { id_oc_nsManagedDomain } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedDomain.va.mjs";
 
 
 /**
@@ -65,3 +62,4 @@ const nsManagedDomain: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

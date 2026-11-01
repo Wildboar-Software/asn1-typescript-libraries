@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_icsCalendarDomain } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarDomain.va.mjs";
 import { icsAllowedServiceAccess } from "../Ldapmigration60iplanetCalendar/icsAllowedServiceAccess.oa.mjs";
 import { icsAllowRights } from "../Ldapmigration60iplanetCalendar/icsAllowRights.oa.mjs";
@@ -31,7 +29,6 @@ import { icsStatus } from "../Ldapmigration60iplanetCalendar/icsStatus.oa.mjs";
 import { icsTimezone } from "../Ldapmigration60iplanetCalendar/icsTimezone.oa.mjs";
 import { davAllowedServices } from "../Ldapmigration60iplanetCalendar/davAllowedServices.oa.mjs";
 import { icsDomainAcl } from "../Ldapmigration60iplanetCalendar/icsDomainAcl.oa.mjs";
-// export { id_oc_icsCalendarDomain } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarDomain.va.mjs";
 
 
 /**
@@ -95,3 +92,4 @@ const icsCalendarDomain: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

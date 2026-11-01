@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_DocumentStoreSyntax_method, _encode_DocumentStoreSyntax_method, DocumentStoreSyntax_method } from "../Thorn/DocumentStoreSyntax-method.ta.mjs";
-// export { DocumentStoreSyntax_method, DocumentStoreSyntax_method_ftp /* IMPORTED_LONG_NAMED_INTEGER */, ftp /* IMPORTED_SHORT_NAMED_INTEGER */, DocumentStoreSyntax_method_ftam /* IMPORTED_LONG_NAMED_INTEGER */, ftam /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DocumentStoreSyntax_method, _encode_DocumentStoreSyntax_method } from "../Thorn/DocumentStoreSyntax-method.ta.mjs";
 
 
 /**
@@ -209,3 +208,4 @@ function _encode_DocumentStoreSyntax (value: DocumentStoreSyntax, elGetter: $.AS
 
 
 /* eslint-enable */
+

@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { container } from "../LdapSchema2ldifMicrosoft/container.oa.mjs";
-// export { container } from "../LdapSchema2ldifMicrosoft/container.oa.mjs";
 import { id_oc_groupPolicyContainer } from "../LdapSchema2ldifMicrosoft/id-oc-groupPolicyContainer.va.mjs";
 import { flags } from "../MSUser/flags.oa.mjs";
 import { versionNumber } from "../MSUser/versionNumber.oa.mjs";
@@ -11,7 +9,6 @@ import { gPCFunctionalityVersion } from "../MSUser/gPCFunctionalityVersion.oa.mj
 import { gPCFileSysPath } from "../MSUser/gPCFileSysPath.oa.mjs";
 import { gPCMachineExtensionNames } from "../MSUser/gPCMachineExtensionNames.oa.mjs";
 import { gPCUserExtensionNames } from "../MSUser/gPCUserExtensionNames.oa.mjs";
-// export { id_oc_groupPolicyContainer } from "../LdapSchema2ldifMicrosoft/id-oc-groupPolicyContainer.va.mjs";
 
 
 /**
@@ -52,3 +49,4 @@ const groupPolicyContainer: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

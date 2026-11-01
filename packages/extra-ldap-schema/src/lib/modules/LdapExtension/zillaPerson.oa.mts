@@ -1,9 +1,7 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { officePerson } from "../LdapExtension/officePerson.oa.mjs";
-// export { officePerson } from "../LdapExtension/officePerson.oa.mjs";
 import { id_oc_zillaPerson } from "../LdapExtension/id-oc-zillaPerson.va.mjs";
 import { mobile } from "../LdapSchema2ldifCosine/mobile.oa.mjs";
 import { pager } from "../LdapSchema2ldifCosine/pager.oa.mjs";
@@ -12,7 +10,6 @@ import { uRL } from "../LdapExtension/uRL.oa.mjs";
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { xmozillanickname } from "../LdapExtension/xmozillanickname.oa.mjs";
 import { xmozillausehtmlmail } from "../LdapExtension/xmozillausehtmlmail.oa.mjs";
-// export { id_oc_zillaPerson } from "../LdapExtension/id-oc-zillaPerson.va.mjs";
 
 
 /**
@@ -56,3 +53,4 @@ const zillaPerson: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

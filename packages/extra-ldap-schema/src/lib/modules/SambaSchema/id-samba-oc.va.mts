@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_samba } from "../SambaSchema/id-samba.va.mjs";
-// export { id_samba } from "../SambaSchema/id-samba.va.mjs";
 
 
 /**
@@ -26,3 +25,4 @@ const id_samba_oc: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_samba);
 
 /* eslint-enable */
+

@@ -1,16 +1,12 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2ManagerProductVersion } from "../LdapGlue509Manager/gLUE2ManagerProductVersion.oa.mjs";
-// export { gLUE2ManagerProductVersion } from "../LdapGlue509Manager/gLUE2ManagerProductVersion.oa.mjs";
 import { id_oc_gLUE2Manager } from "../LdapGlue509Manager/id-oc-gLUE2Manager.va.mjs";
 import { gLUE2ManagerID } from "../LdapGlue509Manager/gLUE2ManagerID.oa.mjs";
 import { gLUE2ManagerProductName } from "../LdapGlue509Manager/gLUE2ManagerProductName.oa.mjs";
 import { gLUE2ManagerServiceForeignKey } from "../LdapGlue509Manager/gLUE2ManagerServiceForeignKey.oa.mjs";
-// export { id_oc_gLUE2Manager } from "../LdapGlue509Manager/id-oc-gLUE2Manager.va.mjs";
 
 
 /**
@@ -52,3 +48,4 @@ const gLUE2Manager: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+
