@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { pKCS7PDU } from "../PKCS-9/pKCS7PDU.oa.mjs";
 import { userPKCS12 } from "../PKCS-9/userPKCS12.oa.mjs";
 import { pKCS15Token } from "../PKCS-9/pKCS15Token.oa.mjs";

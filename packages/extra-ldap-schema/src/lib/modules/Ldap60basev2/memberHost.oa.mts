@@ -2,7 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { distinguishedName } from "../SelectedAttributeTypes/distinguishedName.oa.mjs";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 import { id_at_memberHost } from "../Ldap60basev2/id-at-memberHost.va.mjs";

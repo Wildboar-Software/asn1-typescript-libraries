@@ -6,7 +6,7 @@ import {
 import { pkcs_9_ub_unstructuredName } from "../PKCS-9/pkcs-9-ub-unstructuredName.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
+import { type PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
 import { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa.mjs";
 import { pkcs_9_at_unstructuredName } from "../PKCS-9/pkcs-9-at-unstructuredName.va.mjs";
 
@@ -31,23 +31,21 @@ import { pkcs_9_at_unstructuredName } from "../PKCS-9/pkcs-9-at-unstructuredName
  */
 const _decode_unstructuredName_Type = (el: _Element): PKCS9String => {
     const value = _decode_PKCS9String(el);
-    let text: string;
+    let length: number;
     if ("ia5String" in value) {
-        text = value.ia5String;
+        length = value.ia5String.length;
+    } else if ("teletexString" in value.directoryString) {
+        length = value.directoryString.teletexString.length;
+    } else if ("printableString" in value.directoryString) {
+        length = value.directoryString.printableString.length;
+    } else if ("bmpString" in value.directoryString) {
+        length = value.directoryString.bmpString.length;
+    } else if ("universalString" in value.directoryString) {
+        length = value.directoryString.universalString.length;
     } else {
-        if ("teletexString" in value.directoryString) {
-            text = value.directoryString.teletexString;
-        } else if ("printableString" in value.directoryString) {
-            text = value.directoryString.printableString;
-        } else if ("bmpString" in value.directoryString) {
-            text = value.directoryString.bmpString;
-        } else if ("universalString" in value.directoryString) {
-            text = value.directoryString.universalString;
-        } else {
-            text = value.directoryString.uTF8String;
-        }
+        length = value.directoryString.uTF8String.length;
     }
-    if (text.length < 1 || (typeof pkcs_9_ub_unstructuredName === "bigint" ? BigInt(text.length) > pkcs_9_ub_unstructuredName : text.length > pkcs_9_ub_unstructuredName)) {
+    if (length < 1 || (typeof pkcs_9_ub_unstructuredName === "bigint" ? BigInt(length) > pkcs_9_ub_unstructuredName : length > pkcs_9_ub_unstructuredName)) {
         throw new ASN1SizeError("unstructuredName violates SIZE constraint");
     }
     return value;

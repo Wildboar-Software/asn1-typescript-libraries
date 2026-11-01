@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { _decode_MailPreferenceOptionSyntax, _encode_MailPreferenceOptionSyntax, MailPreferenceOptionSyntax } from "../Cosine/MailPreferenceOptionSyntax.ta.mjs";
+import { _decode_MailPreferenceOptionSyntax, _encode_MailPreferenceOptionSyntax, type MailPreferenceOptionSyntax } from "../Cosine/MailPreferenceOptionSyntax.ta.mjs";
 import { id_at_mailPreferenceOption } from "../Cosine/id-at-mailPreferenceOption.va.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";

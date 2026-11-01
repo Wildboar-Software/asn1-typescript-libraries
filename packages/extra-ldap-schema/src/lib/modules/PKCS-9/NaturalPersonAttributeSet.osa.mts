@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { emailAddress } from "../PKCS-9/emailAddress.oa.mjs";
 import { unstructuredName } from "../PKCS-9/unstructuredName.oa.mjs";
 import { unstructuredAddress } from "../PKCS-9/unstructuredAddress.oa.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-import { SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
+import { type SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
 import { pkcs_9_mr_signingTimeMatch } from "../PKCS-9/pkcs-9-mr-signingTimeMatch.va.mjs";
 
 

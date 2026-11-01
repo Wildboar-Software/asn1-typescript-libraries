@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { cu_at } from "../H323-X500-Schema/cu-at.va.mjs";
 
@@ -31,19 +31,19 @@ import { cu_at } from "../H323-X500-Schema/cu-at.va.mjs";
  */
 const _decode_commURI_Type = (el: _Element): DirectoryString => {
     const value = _decode_DirectoryString(el);
-    let text: string;
+    let length: number;
     if ("teletexString" in value) {
-        text = value.teletexString;
+        length = value.teletexString.length;
     } else if ("printableString" in value) {
-        text = value.printableString;
+        length = value.printableString.length;
     } else if ("bmpString" in value) {
-        text = value.bmpString;
+        length = value.bmpString.length;
     } else if ("universalString" in value) {
-        text = value.universalString;
+        length = value.universalString.length;
     } else {
-        text = value.uTF8String;
+        length = value.uTF8String.length;
     }
-    if (text.length < 1 || text.length > 256) {
+    if (length < 1 || length > 256) {
         throw new ASN1SizeError("commURI violates SIZE constraint");
     }
     return value;

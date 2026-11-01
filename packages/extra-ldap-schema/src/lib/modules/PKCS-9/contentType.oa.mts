@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { ContentType, _decode_ContentType, _encode_ContentType } from "../PKCS-9/ContentType.ta.mjs";
+import { type ContentType, _decode_ContentType, _encode_ContentType } from "../PKCS-9/ContentType.ta.mjs";
 import { objectIdentifierMatch } from "../InformationFramework/objectIdentifierMatch.oa.mjs";
 import { pkcs_9_at_contentType } from "../PKCS-9/pkcs-9-at-contentType.va.mjs";
 

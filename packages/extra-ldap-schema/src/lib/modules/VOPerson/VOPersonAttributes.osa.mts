@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { voPersonAffiliation } from "../VOPerson/voPersonAffiliation.oa.mjs";
 import { voPersonApplicationPassword } from "../VOPerson/voPersonApplicationPassword.oa.mjs";
 import { voPersonApplicationUID } from "../VOPerson/voPersonApplicationUID.oa.mjs";

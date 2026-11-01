@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { Uint8, _decode_Uint8, _encode_Uint8 } from "../NIS/Uint8.ta.mjs";
+import { type Uint8, _decode_Uint8, _encode_Uint8 } from "../NIS/Uint8.ta.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";

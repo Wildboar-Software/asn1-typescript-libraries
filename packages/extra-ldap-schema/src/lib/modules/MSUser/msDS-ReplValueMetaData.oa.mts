@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_msDS_ReplValueMetaData } from "../MSUser/id-at-msDS-ReplValueMetaData.va.mjs";
 

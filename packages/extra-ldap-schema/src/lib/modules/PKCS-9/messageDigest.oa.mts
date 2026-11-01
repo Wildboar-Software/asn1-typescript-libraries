@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { MessageDigest, _decode_MessageDigest, _encode_MessageDigest } from "../PKCS-9/MessageDigest.ta.mjs";
+import { type MessageDigest, _decode_MessageDigest, _encode_MessageDigest } from "../PKCS-9/MessageDigest.ta.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
 import { pkcs_9_at_messageDigest } from "../PKCS-9/pkcs-9-at-messageDigest.va.mjs";
 

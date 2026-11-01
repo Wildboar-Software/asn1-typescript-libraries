@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../PKCS-9/SequenceNumber.ta.mjs";
+import { type SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../PKCS-9/SequenceNumber.ta.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { pkcs_9_at_sequenceNumber } from "../PKCS-9/pkcs-9-at-sequenceNumber.va.mjs";
 

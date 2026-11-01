@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { SMIMECapabilities, _decode_SMIMECapabilities, _encode_SMIMECapabilities } from "../PKCS-9/SMIMECapabilities.ta.mjs";
+import { type SMIMECapabilities, _decode_SMIMECapabilities, _encode_SMIMECapabilities } from "../PKCS-9/SMIMECapabilities.ta.mjs";
 import { pkcs_9_at_smimeCapabilities } from "../PKCS-9/pkcs-9-at-smimeCapabilities.va.mjs";
 
 

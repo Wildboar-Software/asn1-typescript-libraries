@@ -6,7 +6,7 @@ import {
 import { pkcs_9_ub_placeOfBirth } from "../PKCS-9/pkcs-9-ub-placeOfBirth.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { pkcs_9_at_placeOfBirth } from "../PKCS-9/pkcs-9-at-placeOfBirth.va.mjs";
 
@@ -32,19 +32,19 @@ import { pkcs_9_at_placeOfBirth } from "../PKCS-9/pkcs-9-at-placeOfBirth.va.mjs"
  */
 const _decode_placeOfBirth_Type = (el: _Element): DirectoryString => {
     const value = _decode_DirectoryString(el);
-    let text: string;
+    let length: number;
     if ("teletexString" in value) {
-        text = value.teletexString;
+        length = value.teletexString.length;
     } else if ("printableString" in value) {
-        text = value.printableString;
+        length = value.printableString.length;
     } else if ("bmpString" in value) {
-        text = value.bmpString;
+        length = value.bmpString.length;
     } else if ("universalString" in value) {
-        text = value.universalString;
+        length = value.universalString.length;
     } else {
-        text = value.uTF8String;
+        length = value.uTF8String.length;
     }
-    if (text.length < 1 || (typeof pkcs_9_ub_placeOfBirth === "bigint" ? BigInt(text.length) > pkcs_9_ub_placeOfBirth : text.length > pkcs_9_ub_placeOfBirth)) {
+    if (length < 1 || (typeof pkcs_9_ub_placeOfBirth === "bigint" ? BigInt(length) > pkcs_9_ub_placeOfBirth : length > pkcs_9_ub_placeOfBirth)) {
         throw new ASN1SizeError("placeOfBirth violates SIZE constraint");
     }
     return value;

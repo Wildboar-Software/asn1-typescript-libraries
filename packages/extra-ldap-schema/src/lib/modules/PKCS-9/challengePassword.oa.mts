@@ -6,7 +6,7 @@ import {
 import { pkcs_9_ub_challengePassword } from "../PKCS-9/pkcs-9-ub-challengePassword.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { pkcs_9_at_challengePassword } from "../PKCS-9/pkcs-9-at-challengePassword.va.mjs";
 
@@ -32,19 +32,19 @@ import { pkcs_9_at_challengePassword } from "../PKCS-9/pkcs-9-at-challengePasswo
  */
 const _decode_challengePassword_Type = (el: _Element): DirectoryString => {
     const value = _decode_DirectoryString(el);
-    let text: string;
+    let length: number;
     if ("teletexString" in value) {
-        text = value.teletexString;
+        length = value.teletexString.length;
     } else if ("printableString" in value) {
-        text = value.printableString;
+        length = value.printableString.length;
     } else if ("bmpString" in value) {
-        text = value.bmpString;
+        length = value.bmpString.length;
     } else if ("universalString" in value) {
-        text = value.universalString;
+        length = value.universalString.length;
     } else {
-        text = value.uTF8String;
+        length = value.uTF8String.length;
     }
-    if (text.length < 1 || (typeof pkcs_9_ub_challengePassword === "bigint" ? BigInt(text.length) > pkcs_9_ub_challengePassword : text.length > pkcs_9_ub_challengePassword)) {
+    if (length < 1 || (typeof pkcs_9_ub_challengePassword === "bigint" ? BigInt(length) > pkcs_9_ub_challengePassword : length > pkcs_9_ub_challengePassword)) {
         throw new ASN1SizeError("challengePassword violates SIZE constraint");
     }
     return value;

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../VOPerson/ID.ta.mjs";
+import { type ID } from "../VOPerson/ID.ta.mjs";
 import { id_voPersonObjectClass } from "../VOPerson/id-voPersonObjectClass.va.mjs";
 
 

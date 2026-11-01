@@ -1,7 +1,5 @@
 export {
     _enum_for_AttributeQuality_attribute_completeness,
-    type _enum_for_AttributeQuality_attribute_completeness,
-    type AttributeQuality_attribute_completeness,
     AttributeQuality_attribute_completeness,
     AttributeQuality_attribute_completeness_none,
     AttributeQuality_attribute_completeness_sample,
@@ -18,8 +16,6 @@ export * from "./DSAQualitySyntax.ta.mjs";
 export * from "./DataQualitySyntax-attributeQuality-Item.ta.mjs";
 export {
     _enum_for_DataQualitySyntax_namespace_completeness,
-    type _enum_for_DataQualitySyntax_namespace_completeness,
-    type DataQualitySyntax_namespace_completeness,
     DataQualitySyntax_namespace_completeness,
     DataQualitySyntax_namespace_completeness_none,
     DataQualitySyntax_namespace_completeness_sample,

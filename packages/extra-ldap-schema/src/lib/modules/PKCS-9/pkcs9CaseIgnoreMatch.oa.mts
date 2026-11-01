@@ -5,7 +5,7 @@ import {
 } from "@wildboar/asn1";
 import { pkcs_9_ub_match } from "../PKCS-9/pkcs-9-ub-match.va.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-import { PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
+import { type PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
 import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va.mjs";
 
 
@@ -28,23 +28,21 @@ import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.v
  */
 const _decode_pkcs9CaseIgnoreMatch_AssertionType = (el: _Element): PKCS9String => {
     const value = _decode_PKCS9String(el);
-    let text: string;
+    let length: number;
     if ("ia5String" in value) {
-        text = value.ia5String;
+        length = value.ia5String.length;
+    } else if ("teletexString" in value.directoryString) {
+        length = value.directoryString.teletexString.length;
+    } else if ("printableString" in value.directoryString) {
+        length = value.directoryString.printableString.length;
+    } else if ("bmpString" in value.directoryString) {
+        length = value.directoryString.bmpString.length;
+    } else if ("universalString" in value.directoryString) {
+        length = value.directoryString.universalString.length;
     } else {
-        if ("teletexString" in value.directoryString) {
-            text = value.directoryString.teletexString;
-        } else if ("printableString" in value.directoryString) {
-            text = value.directoryString.printableString;
-        } else if ("bmpString" in value.directoryString) {
-            text = value.directoryString.bmpString;
-        } else if ("universalString" in value.directoryString) {
-            text = value.directoryString.universalString;
-        } else {
-            text = value.directoryString.uTF8String;
-        }
+        length = value.directoryString.uTF8String.length;
     }
-    if (text.length < 1 || (typeof pkcs_9_ub_match === "bigint" ? BigInt(text.length) > pkcs_9_ub_match : text.length > pkcs_9_ub_match)) {
+    if (length < 1 || (typeof pkcs_9_ub_match === "bigint" ? BigInt(length) > pkcs_9_ub_match : length > pkcs_9_ub_match)) {
         throw new ASN1SizeError("pkcs9CaseIgnoreMatch violates SIZE constraint");
     }
     return value;

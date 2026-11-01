@@ -4,7 +4,7 @@ import {
 } from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { AbsoluteFilePath, _decode_AbsoluteFilePath, _encode_AbsoluteFilePath } from "../NIS/AbsoluteFilePath.ta.mjs";
+import { type AbsoluteFilePath, _decode_AbsoluteFilePath, _encode_AbsoluteFilePath } from "../NIS/AbsoluteFilePath.ta.mjs";
 import { caseExactIA5Match } from "../SelectedAttributeTypes/caseExactIA5Match.oa.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_nis_at } from "../NIS/id-nis-at.va.mjs";

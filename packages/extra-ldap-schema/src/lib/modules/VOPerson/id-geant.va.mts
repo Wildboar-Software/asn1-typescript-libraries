@@ -3,7 +3,7 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { ldap_enterprise as id_pen } from "@wildboar/x500/UsefulDefinitions";
-import { ID } from "../VOPerson/ID.ta.mjs";
+import { type ID } from "../VOPerson/ID.ta.mjs";
 
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { RandomNonce, _decode_RandomNonce, _encode_RandomNonce } from "../PKCS-9/RandomNonce.ta.mjs";
+import { type RandomNonce, _decode_RandomNonce, _encode_RandomNonce } from "../PKCS-9/RandomNonce.ta.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
 import { pkcs_9_at_randomNonce } from "../PKCS-9/pkcs-9-at-randomNonce.va.mjs";
 

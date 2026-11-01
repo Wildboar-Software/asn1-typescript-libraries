@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
+import { type SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
 import { signingTimeMatch } from "../PKCS-9/signingTimeMatch.oa.mjs";
 import { pkcs_9_at_signingTime } from "../PKCS-9/pkcs-9-at-signingTime.va.mjs";
 

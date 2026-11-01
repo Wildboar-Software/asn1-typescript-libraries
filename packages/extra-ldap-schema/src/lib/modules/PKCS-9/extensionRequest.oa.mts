@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { ExtensionRequest, _decode_ExtensionRequest, _encode_ExtensionRequest } from "../PKCS-9/ExtensionRequest.ta.mjs";
+import { type ExtensionRequest, _decode_ExtensionRequest, _encode_ExtensionRequest } from "../PKCS-9/ExtensionRequest.ta.mjs";
 import { pkcs_9_at_extensionRequest } from "../PKCS-9/pkcs-9-at-extensionRequest.va.mjs";
 
 
