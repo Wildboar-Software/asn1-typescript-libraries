@@ -1,5 +1,7 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
+    ASN1SizeError,
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -123,6 +125,16 @@ class Period {
         this.months = months;
         this.years = years;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.timesOfDay !== undefined && this.timesOfDay.length < 1) {
+            throw new ASN1SizeError("Period.timesOfDay violates SIZE constraint");
+        }
+        if (this.years !== undefined) {
+            for (const year of this.years) {
+                if (typeof year === "bigint" ? year < 1000n : year < 1000) {
+                    throw new ASN1OverflowError("Period.years violates INTEGER constraint");
+                }
+            }
+        }
     }
 
     /**

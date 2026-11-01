@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type BOOLEAN,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -117,6 +118,9 @@ class TBSCertAVL {
         this.entries = entries;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         this.avlExtensions = avlExtensions;
+        if (this.entries.length < 1) {
+            throw new ASN1SizeError("TBSCertAVL.entries violates SIZE constraint");
+        }
     }
 
     /**

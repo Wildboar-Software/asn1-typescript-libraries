@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,11 @@ let _cached_decoder_for_PostalAddress: $.ASN1Decoder<PostalAddress> | null = nul
 export
 function _decode_PostalAddress (el: _Element): PostalAddress {
     if (!_cached_decoder_for_PostalAddress) { _cached_decoder_for_PostalAddress = $._decodeSequenceOf<UnboundedDirectoryString>(() => _decode_UnboundedDirectoryString); }
-    return _cached_decoder_for_PostalAddress(el);
+    const _decoded = _cached_decoder_for_PostalAddress(el);
+    if (_decoded.length < 1) {
+        throw new ASN1SizeError("PostalAddress violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_PostalAddress: $.ASN1Encoder<PostalAddress> | null = null;

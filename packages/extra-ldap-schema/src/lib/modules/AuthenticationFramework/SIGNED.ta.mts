@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
     type BIT_STRING,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -84,6 +85,11 @@ class SIGNED<ToBeSigned> {
         this.altAlgorithmIdentifier = altAlgorithmIdentifier;
         this.altSignature = altSignature;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        const _altIdentifierPresent = this.altAlgorithmIdentifier !== undefined;
+        const _altSignaturePresent = this.altSignature !== undefined;
+        if (_altIdentifierPresent !== _altSignaturePresent) {
+            throw new ASN1ConstructionError("SIGNED requires altAlgorithmIdentifier and altSignature both present or both absent");
+        }
     }
 
     /**

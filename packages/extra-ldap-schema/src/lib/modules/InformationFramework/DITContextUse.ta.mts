@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER,
@@ -63,6 +64,12 @@ class DITContextUse {
         this.mandatoryContexts = mandatoryContexts;
         this.optionalContexts = optionalContexts;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.mandatoryContexts !== undefined && this.mandatoryContexts.length < 1) {
+            throw new ASN1SizeError("DITContextUse.mandatoryContexts violates SIZE constraint");
+        }
+        if (this.optionalContexts !== undefined && this.optionalContexts.length < 1) {
+            throw new ASN1SizeError("DITContextUse.optionalContexts violates SIZE constraint");
+        }
     }
 
     /**

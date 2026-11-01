@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER
@@ -48,7 +49,14 @@ function _decode_Refinement (el: _Element): Refinement {
     "CONTEXT 2": [ "or", $._decode_explicit<Refinement[]>(() => $._decodeSetOf<Refinement>(() => _decode_Refinement)) ],
     "CONTEXT 3": [ "not", $._decode_explicit<Refinement>(() => _decode_Refinement) ]
 }); }
-    return _cached_decoder_for_Refinement(el);
+    const _decoded = _cached_decoder_for_Refinement(el);
+    if ("and" in _decoded && _decoded.and.length < 1) {
+        throw new ASN1SizeError("Refinement.and violates SIZE constraint");
+    }
+    if ("or" in _decoded && _decoded.or.length < 1) {
+        throw new ASN1SizeError("Refinement.or violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_Refinement: $.ASN1Encoder<Refinement> | null = null;

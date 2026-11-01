@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,11 @@ let _cached_decoder_for_ForwardCertificationPath: $.ASN1Decoder<ForwardCertifica
 export
 function _decode_ForwardCertificationPath (el: _Element): ForwardCertificationPath {
     if (!_cached_decoder_for_ForwardCertificationPath) { _cached_decoder_for_ForwardCertificationPath = $._decodeSequenceOf<CrossCertificates>(() => _decode_CrossCertificates); }
-    return _cached_decoder_for_ForwardCertificationPath(el);
+    const _decoded = _cached_decoder_for_ForwardCertificationPath(el);
+    if (_decoded.length < 1) {
+        throw new ASN1SizeError("ForwardCertificationPath violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_ForwardCertificationPath: $.ASN1Encoder<ForwardCertificationPath> | null = null;

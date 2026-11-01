@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -38,7 +39,17 @@ let _cached_decoder_for_SubstringAssertion: $.ASN1Decoder<SubstringAssertion> | 
 export
 function _decode_SubstringAssertion (el: _Element): SubstringAssertion {
     if (!_cached_decoder_for_SubstringAssertion) { _cached_decoder_for_SubstringAssertion = $._decodeSequenceOf<SubstringAssertion_Item>(() => _decode_SubstringAssertion_Item); }
-    return _cached_decoder_for_SubstringAssertion(el);
+    const _decoded = _cached_decoder_for_SubstringAssertion(el);
+    let _initial = 0;
+    let _final = 0;
+    for (const item of _decoded) {
+        if (Object.hasOwn(item, "initial")) _initial++;
+        if (Object.hasOwn(item, "final")) _final++;
+    }
+    if (_initial > 1 || _final > 1) {
+        throw new ASN1ConstructionError("SubstringAssertion has more than one initial or final component");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_SubstringAssertion: $.ASN1Encoder<SubstringAssertion> | null = null;

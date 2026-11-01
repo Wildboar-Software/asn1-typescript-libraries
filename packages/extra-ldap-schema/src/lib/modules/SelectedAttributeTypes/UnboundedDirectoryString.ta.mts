@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element,
     type BMPString,
     type PrintableString,
@@ -51,7 +52,17 @@ function _decode_UnboundedDirectoryString (el: _Element): UnboundedDirectoryStri
     "UNIVERSAL 28": [ "universalString", $._decodeUniversalString ],
     "UNIVERSAL 12": [ "uTF8String", $._decodeUTF8String ]
 }); }
-    return _cached_decoder_for_UnboundedDirectoryString(el);
+    const _decoded = _cached_decoder_for_UnboundedDirectoryString(el);
+    let _length: number | undefined;
+    if ("teletexString" in _decoded) _length = _decoded.teletexString.length;
+    else if ("printableString" in _decoded) _length = _decoded.printableString.length;
+    else if ("bmpString" in _decoded) _length = _decoded.bmpString.length;
+    else if ("universalString" in _decoded) _length = _decoded.universalString.length;
+    else if ("uTF8String" in _decoded) _length = _decoded.uTF8String.length;
+    if (_length !== undefined && _length < 1) {
+        throw new ASN1SizeError("UnboundedDirectoryString violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_UnboundedDirectoryString: $.ASN1Encoder<UnboundedDirectoryString> | null = null;

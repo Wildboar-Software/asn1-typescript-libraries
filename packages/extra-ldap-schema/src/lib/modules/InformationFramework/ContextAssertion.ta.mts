@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
@@ -55,6 +56,9 @@ class ContextAssertion {
         this.contextType = contextType;
         this.contextValues = contextValues;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.contextValues.length < 1) {
+            throw new ASN1SizeError("ContextAssertion.contextValues violates SIZE constraint");
+        }
     }
 
     /**

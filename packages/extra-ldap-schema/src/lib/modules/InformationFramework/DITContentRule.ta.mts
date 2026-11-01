@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OBJECT_IDENTIFIER,
@@ -81,6 +82,18 @@ class DITContentRule {
         this.optional = optional;
         this.precluded = precluded;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.auxiliaries !== undefined && this.auxiliaries.length < 1) {
+            throw new ASN1SizeError("DITContentRule.auxiliaries violates SIZE constraint");
+        }
+        if (this.mandatory !== undefined && this.mandatory.length < 1) {
+            throw new ASN1SizeError("DITContentRule.mandatory violates SIZE constraint");
+        }
+        if (this.optional !== undefined && this.optional.length < 1) {
+            throw new ASN1SizeError("DITContentRule.optional violates SIZE constraint");
+        }
+        if (this.precluded !== undefined && this.precluded.length < 1) {
+            throw new ASN1SizeError("DITContentRule.precluded violates SIZE constraint");
+        }
     }
 
     /**

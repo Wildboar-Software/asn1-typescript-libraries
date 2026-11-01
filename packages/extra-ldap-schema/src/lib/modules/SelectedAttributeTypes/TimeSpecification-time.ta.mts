@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -43,7 +44,11 @@ function _decode_TimeSpecification_time (el: _Element): TimeSpecification_time {
     "UNIVERSAL 16": [ "absolute", _decode_TimeSpecification_time_absolute ],
     "UNIVERSAL 17": [ "periodic", $._decodeSetOf<Period>(() => _decode_Period) ]
 }); }
-    return _cached_decoder_for_TimeSpecification_time(el);
+    const _decoded = _cached_decoder_for_TimeSpecification_time(el);
+    if ("periodic" in _decoded && _decoded.periodic.length < 1) {
+        throw new ASN1SizeError("TimeSpecification.time.periodic violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_TimeSpecification_time: $.ASN1Encoder<TimeSpecification_time> | null = null;

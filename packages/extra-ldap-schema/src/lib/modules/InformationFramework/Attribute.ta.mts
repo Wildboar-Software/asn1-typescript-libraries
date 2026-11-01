@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -67,6 +68,9 @@ class Attribute {
         this.values = values;
         this.valuesWithContext = valuesWithContext;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.valuesWithContext !== undefined && this.valuesWithContext.length < 1) {
+            throw new ASN1SizeError("Attribute.valuesWithContext violates SIZE constraint");
+        }
     }
 
     /**

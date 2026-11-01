@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,11 @@ let _cached_decoder_for_CrossCertificates: $.ASN1Decoder<CrossCertificates> | nu
 export
 function _decode_CrossCertificates (el: _Element): CrossCertificates {
     if (!_cached_decoder_for_CrossCertificates) { _cached_decoder_for_CrossCertificates = $._decodeSetOf<Certificate>(() => _decode_Certificate); }
-    return _cached_decoder_for_CrossCertificates(el);
+    const _decoded = _cached_decoder_for_CrossCertificates(el);
+    if (_decoded.length < 1) {
+        throw new ASN1SizeError("CrossCertificates violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_CrossCertificates: $.ASN1Encoder<CrossCertificates> | null = null;

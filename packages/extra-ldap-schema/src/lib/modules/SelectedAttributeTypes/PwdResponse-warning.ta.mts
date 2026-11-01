@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER
@@ -41,7 +42,14 @@ function _decode_PwdResponse_warning (el: _Element): PwdResponse_warning {
     "CONTEXT 0": [ "timeleft", $._decode_explicit<INTEGER>(() => $._decodeInteger) ],
     "CONTEXT 1": [ "graceRemaining", $._decode_explicit<INTEGER>(() => $._decodeInteger) ]
 }); }
-    return _cached_decoder_for_PwdResponse_warning(el);
+    const _decoded = _cached_decoder_for_PwdResponse_warning(el);
+    let _bounded: INTEGER | undefined;
+    if ("timeleft" in _decoded) _bounded = _decoded.timeleft;
+    else if ("graceRemaining" in _decoded) _bounded = _decoded.graceRemaining;
+    if (_bounded !== undefined && (typeof _bounded === "bigint" ? _bounded < 0n : _bounded < 0)) {
+        throw new ASN1OverflowError("PwdResponse-warning violates INTEGER constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_PwdResponse_warning: $.ASN1Encoder<PwdResponse_warning> | null = null;

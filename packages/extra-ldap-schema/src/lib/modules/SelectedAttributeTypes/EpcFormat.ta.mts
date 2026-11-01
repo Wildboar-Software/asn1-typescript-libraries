@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type INTEGER,
     type OPTIONAL,
     type UTF8String,
@@ -72,6 +73,9 @@ class EpcFormat {
         this.digitShift = digitShift;
         this.checkCalc = checkCalc;
         this.urnPrefix = urnPrefix;
+        if (this.fields.length < 1) {
+            throw new ASN1SizeError("EpcFormat.fields violates SIZE constraint");
+        }
     }
 
     /**

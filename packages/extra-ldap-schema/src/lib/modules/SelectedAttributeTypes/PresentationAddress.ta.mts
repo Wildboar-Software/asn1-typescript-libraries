@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OCTET_STRING,
@@ -71,6 +72,9 @@ class PresentationAddress {
         this.tSelector = tSelector;
         this.nAddresses = nAddresses;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.nAddresses.length < 1) {
+            throw new ASN1SizeError("PresentationAddress.nAddresses violates SIZE constraint");
+        }
     }
 
     /**

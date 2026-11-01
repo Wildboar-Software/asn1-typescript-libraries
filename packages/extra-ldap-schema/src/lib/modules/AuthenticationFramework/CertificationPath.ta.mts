@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -55,6 +56,9 @@ class CertificationPath {
         this.userCertificate = userCertificate;
         this.theCACertificates = theCACertificates;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.theCACertificates !== undefined && this.theCACertificates.length < 1) {
+            throw new ASN1SizeError("CertificationPath.theCACertificates violates SIZE constraint");
+        }
     }
 
     /**

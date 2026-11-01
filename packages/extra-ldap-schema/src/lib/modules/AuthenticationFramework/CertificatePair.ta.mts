@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -55,6 +56,9 @@ class CertificatePair {
         this.issuedToThisCA = issuedToThisCA;
         this.issuedByThisCA = issuedByThisCA;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.issuedToThisCA === undefined && this.issuedByThisCA === undefined) {
+            throw new ASN1ConstructionError("CertificatePair requires issuedToThisCA or issuedByThisCA");
+        }
     }
 
     /**

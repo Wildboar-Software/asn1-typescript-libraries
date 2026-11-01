@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type INTEGER,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -65,6 +66,9 @@ class SupportedPublicKeyAlgorithms {
         this.minKeySize = minKeySize;
         this.extensions = extensions;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.extensions !== undefined && this.extensions.length < 1) {
+            throw new ASN1SizeError("SupportedPublicKeyAlgorithms.extensions violates SIZE constraint");
+        }
     }
 
     /**

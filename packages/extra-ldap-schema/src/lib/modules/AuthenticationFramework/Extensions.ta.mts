@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,7 +32,11 @@ let _cached_decoder_for_Extensions: $.ASN1Decoder<Extensions> | null = null;
 export
 function _decode_Extensions (el: _Element): Extensions {
     if (!_cached_decoder_for_Extensions) { _cached_decoder_for_Extensions = $._decodeSequenceOf<Extension>(() => _decode_Extension); }
-    return _cached_decoder_for_Extensions(el);
+    const _decoded = _cached_decoder_for_Extensions(el);
+    if (_decoded.length < 1) {
+        throw new ASN1SizeError("Extensions violates SIZE constraint");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_Extensions: $.ASN1Encoder<Extensions> | null = null;

@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type OPTIONAL,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass
@@ -64,6 +65,9 @@ class ChopSpecification {
         this.minimum = minimum;
         this.maximum = maximum;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.specificExclusions !== undefined && this.specificExclusions.length < 1) {
+            throw new ASN1SizeError("ChopSpecification.specificExclusions violates SIZE constraint");
+        }
     }
 
     /**

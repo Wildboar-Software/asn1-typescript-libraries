@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1OverflowError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type INTEGER,
@@ -62,6 +63,13 @@ class DayTime {
         this.minute = minute;
         this.second = second;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (
+            (typeof this.hour === "bigint" ? (this.hour < 0n || this.hour > 23n) : (this.hour < 0 || this.hour > 23))
+            || (this.minute !== undefined && (typeof this.minute === "bigint" ? (this.minute < 0n || this.minute > 59n) : (this.minute < 0 || this.minute > 59)))
+            || (this.second !== undefined && (typeof this.second === "bigint" ? (this.second < 0n || this.second > 59n) : (this.second < 0 || this.second > 59)))
+        ) {
+            throw new ASN1OverflowError("DayTime violates INTEGER constraint");
+        }
     }
 
     /**

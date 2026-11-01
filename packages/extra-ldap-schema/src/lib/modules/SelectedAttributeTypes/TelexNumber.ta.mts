@@ -1,10 +1,15 @@
 /* eslint-disable */
 import {
+    ASN1CharactersError,
+    ASN1SizeError,
     ASN1ConstructionError as _ConstructionError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type PrintableString
 } from "@wildboar/asn1";
+import { ub_answerback } from "../SelectedAttributeTypes/ub-answerback.va.mjs";
+import { ub_country_code } from "../SelectedAttributeTypes/ub-country-code.va.mjs";
+import { ub_telex_number } from "../SelectedAttributeTypes/ub-telex-number.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -62,6 +67,20 @@ class TelexNumber {
         this.countryCode = countryCode;
         this.answerback = answerback;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        const _printable = /^[A-Za-z0-9 '()+,.\/:?=\-]*$/u;
+        const _components: [string, string, number][] = [
+            ["telexNumber", this.telexNumber, ub_telex_number],
+            ["countryCode", this.countryCode, ub_country_code],
+            ["answerback", this.answerback, ub_answerback],
+        ];
+        for (const [name, value, upper] of _components) {
+            if (!_printable.test(value)) {
+                throw new ASN1CharactersError("TelexNumber." + name + " violates PrintableString constraint");
+            }
+            if (value.length < 1 || value.length > upper) {
+                throw new ASN1SizeError("TelexNumber." + name + " violates SIZE constraint");
+            }
+        }
     }
 
     /**

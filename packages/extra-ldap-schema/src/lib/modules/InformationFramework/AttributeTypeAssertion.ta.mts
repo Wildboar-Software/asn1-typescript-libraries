@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -56,6 +57,9 @@ class AttributeTypeAssertion {
         this.type_ = type_;
         this.assertedContexts = assertedContexts;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.assertedContexts !== undefined && this.assertedContexts.length < 1) {
+            throw new ASN1SizeError("AttributeTypeAssertion.assertedContexts violates SIZE constraint");
+        }
     }
 
     /**

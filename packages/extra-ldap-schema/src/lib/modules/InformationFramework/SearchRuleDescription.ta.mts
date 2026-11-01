@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     itu_t,
     itu_r,
     ccitt,
@@ -118,6 +119,9 @@ class SearchRuleDescription {
         this.name = name;
         this.description = description;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.name !== undefined && this.name.length < 1) {
+            throw new ASN1SizeError("SearchRuleDescription.name violates SIZE constraint");
+        }
     }
 
     /**

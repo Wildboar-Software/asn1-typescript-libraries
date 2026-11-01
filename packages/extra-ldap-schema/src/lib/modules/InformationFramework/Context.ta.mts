@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type BOOLEAN,
@@ -65,6 +66,9 @@ class Context {
         this.contextValues = contextValues;
         this.fallback = fallback;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.contextValues.length < 1) {
+            throw new ASN1SizeError("Context.contextValues violates SIZE constraint");
+        }
     }
 
     /**

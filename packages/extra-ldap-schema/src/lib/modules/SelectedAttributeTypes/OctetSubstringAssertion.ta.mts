@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1ConstructionError,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -35,7 +36,17 @@ let _cached_decoder_for_OctetSubstringAssertion: $.ASN1Decoder<OctetSubstringAss
 export
 function _decode_OctetSubstringAssertion (el: _Element): OctetSubstringAssertion {
     if (!_cached_decoder_for_OctetSubstringAssertion) { _cached_decoder_for_OctetSubstringAssertion = $._decodeSequenceOf<OctetSubstringAssertion_Item>(() => _decode_OctetSubstringAssertion_Item); }
-    return _cached_decoder_for_OctetSubstringAssertion(el);
+    const _decoded = _cached_decoder_for_OctetSubstringAssertion(el);
+    let _initial = 0;
+    let _final = 0;
+    for (const item of _decoded) {
+        if (Object.hasOwn(item, "initial")) _initial++;
+        if (Object.hasOwn(item, "final")) _final++;
+    }
+    if (_initial > 1 || _final > 1) {
+        throw new ASN1ConstructionError("OctetSubstringAssertion has more than one initial or final component");
+    }
+    return _decoded;
 }
 
 let _cached_encoder_for_OctetSubstringAssertion: $.ASN1Encoder<OctetSubstringAssertion> | null = null;

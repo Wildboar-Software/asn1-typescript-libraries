@@ -1,7 +1,10 @@
 /* eslint-disable */
 import {
+    type ASN1Element as _Element,
+    ASN1OverflowError,
     type INTEGER
 } from "@wildboar/asn1";
+import { maxUint16 } from "../NIS/maxUint16.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -20,7 +23,15 @@ export
 type Uint16 = INTEGER;
 
 export
-const _decode_Uint16: $.ASN1Decoder<Uint16> = $._decodeInteger;
+function _decode_Uint16 (el: _Element): Uint16 {
+    const value = $._decodeInteger(el);
+    const below = typeof value === "bigint" ? value < 0n : value < 0;
+    const above = typeof value === "bigint" ? value > BigInt(maxUint16) : value > maxUint16;
+    if (below || above) {
+        throw new ASN1OverflowError("Uint16 violates INTEGER constraint");
+    }
+    return value;
+}
 
 export
 const _encode_Uint16: $.ASN1Encoder<Uint16> = $._encodeInteger;

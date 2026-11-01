@@ -1,5 +1,6 @@
 /* eslint-disable */
 import {
+    ASN1SizeError,
     type OBJECT_IDENTIFIER,
     type OPTIONAL,
     type ASN1Element as _Element,
@@ -65,6 +66,9 @@ class DITStructureRule {
         this.nameForm = nameForm;
         this.superiorStructureRules = superiorStructureRules;
         this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        if (this.superiorStructureRules !== undefined && this.superiorStructureRules.length < 1) {
+            throw new ASN1SizeError("DITStructureRule.superiorStructureRules violates SIZE constraint");
+        }
     }
 
     /**
