@@ -1,0 +1,155 @@
+-- Derived from data/ldap-schema/schema2ldif/postfix-book.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapSchema2ldifPostfixBook DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactIA5Match, caseIgnoreIA5Match,
+    caseIgnoreIA5SubstringsMatch, ia5String, integer, integerMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-mailHomeDirectory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 1 }
+id-at-mailAlias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 2 }
+id-at-mailUidNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 3 }
+id-at-mailGidNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 4 }
+id-at-mailEnabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 5 }
+id-at-mailGroupMember OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 6 }
+id-at-mailQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 7 }
+id-at-mailStorageDirectory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 8 }
+id-at-mailSieveRuleSource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 9 }
+id-at-mailForwardingAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 10 10 }
+id-oc-postfixBookMailAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 2 2 1 }
+id-oc-postfixBookMailForward OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 1 2 2 2 }
+
+-- Attribute types
+
+mailHomeDirectory ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailHomeDirectory"}
+  LDAP-DESC                 "The absolute path to the mail user home directory"
+  ID                        id-at-mailHomeDirectory }
+
+mailAlias ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailAlias"}
+  LDAP-DESC                 "RFC822 Mailbox - mail alias"
+  ID                        id-at-mailAlias }
+
+mailUidNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailUidNumber"}
+  LDAP-DESC                 "UID required to access the mailbox"
+  ID                        id-at-mailUidNumber }
+
+mailGidNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailGidNumber"}
+  LDAP-DESC                 "GID required to access the mailbox"
+  ID                        id-at-mailGidNumber }
+
+mailEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"mailEnabled"}
+  LDAP-DESC                 "TRUE to enable, FALSE to disable account"
+  ID                        id-at-mailEnabled }
+
+mailGroupMember ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailGroupMember"}
+  LDAP-DESC                 "Name of a mail distribution list"
+  ID                        id-at-mailGroupMember }
+
+mailQuota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailQuota"}
+  LDAP-DESC                 "Mail quota limit in kilobytes"
+  ID                        id-at-mailQuota }
+
+mailStorageDirectory ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailStorageDirectory"}
+  LDAP-DESC                 "The absolute path to the mail users mailbox"
+  ID                        id-at-mailStorageDirectory }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailSieveRuleSource ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailSieveRuleSource"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailSieveRuleSource }
+
+mailForwardingAddress ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..320))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailForwardingAddress"}
+  LDAP-DESC                 "Address(es) to forward all incoming messages to."
+  ID                        id-at-mailForwardingAddress }
+
+-- Object classes
+
+-- initial capital of "PostfixBookMailAccount" lowercased so the assignment is a valuereference.
+postfixBookMailAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mail }
+  MAY CONTAIN               { mailHomeDirectory
+                              | mailAlias
+                              | mailGroupMember
+                              | mailUidNumber
+                              | mailGidNumber
+                              | mailEnabled
+                              | mailQuota
+                              | mailStorageDirectory
+                              | mailSieveRuleSource }
+  LDAP-NAME                 {"PostfixBookMailAccount"}
+  LDAP-DESC                 "Mail account used in Postfix Book"
+  ID                        id-oc-postfixBookMailAccount }
+
+-- initial capital of "PostfixBookMailForward" lowercased so the assignment is a valuereference.
+postfixBookMailForward OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mail
+                              | mailAlias }
+  MAY CONTAIN               { mailForwardingAddress }
+  LDAP-NAME                 {"PostfixBookMailForward"}
+  LDAP-DESC                 "Mail forward used in Postfix Book"
+  ID                        id-oc-postfixBookMailForward }
+END

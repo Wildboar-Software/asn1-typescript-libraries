@@ -1,0 +1,432 @@
+-- Derived from data/ldap-schema/gfarm.schema
+-- Upstream: https://github.com/oss-tsukuba/gfarm/blob/6c4e78bced99602263718679324df0ffd6b12cdf/gftool/config-gfarm/gfarm.schema#L22
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGfarm DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseExactMatch, caseIgnoreIA5Match, directoryString,
+    ia5String, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-hostname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 1 }
+id-at-port OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 2 }
+id-at-hostaliases OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 3 }
+id-at-architecture OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 4 }
+id-at-ncpu OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 5 }
+id-at-flags OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 6 }
+id-at-username OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 7 }
+id-at-homedir OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 8 }
+id-at-realname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 9 }
+id-at-gsiDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 10 }
+id-at-groupname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 11 }
+id-at-groupusers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 12 }
+id-at-inumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 13 }
+id-at-igen OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 14 }
+id-at-nlink OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 15 }
+id-at-size-type OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 16 }
+id-at-mode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 17 }
+id-at-atimesec OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 18 }
+id-at-atimensec OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 19 }
+id-at-mtimesec OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 20 }
+id-at-mtimensec OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 21 }
+id-at-ctimesec OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 22 }
+id-at-ctimensec OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 23 }
+id-at-checksumType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 24 }
+id-at-checksum OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 25 }
+id-at-entryName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 100 2 26 }
+id-at-entryINumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 27 }
+id-at-sourcePath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 100 2 28 }
+id-at-attrname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 29 }
+id-at-attrvalue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 30 }
+id-at-fsngroupname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 31 }
+id-at-authIDType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 32 }
+id-at-authUserId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 2 33 }
+id-oc-gFarmHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 1 }
+id-oc-gFarmUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 2 }
+id-oc-gFarmGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 3 }
+id-oc-gFarmINode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 4 }
+id-oc-gFarmFileCopy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 6 }
+id-oc-gFarmDeadFileCopy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 7 }
+id-oc-gFarmDirEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 5 }
+id-oc-gFarmSymlink OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 8 }
+id-oc-xAttr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 9 }
+id-oc-gFarmUserAuth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 13122 2 1 2924 101 3 10 }
+
+-- Attribute types
+
+hostname ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"hostname"}
+  ID                        id-at-hostname }
+
+port ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"port"}
+  ID                        id-at-port }
+
+hostaliases ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"hostaliases"}
+  ID                        id-at-hostaliases }
+
+architecture ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"architecture"}
+  ID                        id-at-architecture }
+
+ncpu ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ncpu"}
+  ID                        id-at-ncpu }
+
+flags ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"flags"}
+  ID                        id-at-flags }
+
+username ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"username"}
+  ID                        id-at-username }
+
+homedir ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"homedir"}
+  ID                        id-at-homedir }
+
+realname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"realname"}
+  ID                        id-at-realname }
+
+gsiDN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gsiDN"}
+  ID                        id-at-gsiDN }
+
+groupname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"groupname"}
+  ID                        id-at-groupname }
+
+groupusers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"groupusers"}
+  ID                        id-at-groupusers }
+
+inumber ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"inumber"}
+  ID                        id-at-inumber }
+
+igen ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"igen"}
+  ID                        id-at-igen }
+
+nlink ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nlink"}
+  ID                        id-at-nlink }
+
+-- "size" is an ASN.1 reserved word; suffixed -type.
+size-type ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"size"}
+  ID                        id-at-size-type }
+
+mode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mode"}
+  ID                        id-at-mode }
+
+atimesec ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"atimesec"}
+  ID                        id-at-atimesec }
+
+atimensec ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"atimensec"}
+  ID                        id-at-atimensec }
+
+mtimesec ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mtimesec"}
+  ID                        id-at-mtimesec }
+
+mtimensec ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mtimensec"}
+  ID                        id-at-mtimensec }
+
+ctimesec ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ctimesec"}
+  ID                        id-at-ctimesec }
+
+ctimensec ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ctimensec"}
+  ID                        id-at-ctimensec }
+
+checksumType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"checksumType"}
+  ID                        id-at-checksumType }
+
+checksum ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"checksum"}
+  ID                        id-at-checksum }
+
+entryName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"entryName"}
+  ID                        id-at-entryName }
+
+entryINumber ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"entryINumber"}
+  ID                        id-at-entryINumber }
+
+sourcePath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sourcePath"}
+  ID                        id-at-sourcePath }
+
+attrname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"attrname"}
+  ID                        id-at-attrname }
+
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+attrvalue ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"attrvalue"}
+  ID                        id-at-attrvalue }
+
+fsngroupname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fsngroupname"}
+  ID                        id-at-fsngroupname }
+
+authIDType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"authIDType"}
+  ID                        id-at-authIDType }
+
+authUserId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"authUserId"}
+  ID                        id-at-authUserId }
+
+-- Object classes
+
+-- initial capital of "GFarmHost" lowercased so the assignment is a valuereference.
+gFarmHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { hostname
+                              | port
+                              | architecture
+                              | ncpu
+                              | flags }
+  MAY CONTAIN               { hostaliases
+                              | fsngroupname }
+  LDAP-NAME                 {"GFarmHost"}
+  ID                        id-oc-gFarmHost }
+
+-- initial capital of "GFarmUser" lowercased so the assignment is a valuereference.
+gFarmUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { username
+                              | homedir }
+  MAY CONTAIN               { realname
+                              | gsiDN }
+  LDAP-NAME                 {"GFarmUser"}
+  ID                        id-oc-gFarmUser }
+
+-- initial capital of "GFarmGroup" lowercased so the assignment is a valuereference.
+gFarmGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { groupname }
+  MAY CONTAIN               { groupusers }
+  LDAP-NAME                 {"GFarmGroup"}
+  ID                        id-oc-gFarmGroup }
+
+-- initial capital of "GFarmINode" lowercased so the assignment is a valuereference.
+gFarmINode OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { inumber
+                              | igen
+                              | nlink
+                              | size-type
+                              | mode
+                              | username
+                              | groupname
+                              | atimesec
+                              | atimensec
+                              | mtimesec
+                              | mtimensec
+                              | ctimesec
+                              | ctimensec }
+  MAY CONTAIN               { checksumType
+                              | checksum }
+  LDAP-NAME                 {"GFarmINode"}
+  ID                        id-oc-gFarmINode }
+
+-- initial capital of "GFarmFileCopy" lowercased so the assignment is a valuereference.
+gFarmFileCopy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { inumber
+                              | hostname }
+  LDAP-NAME                 {"GFarmFileCopy"}
+  ID                        id-oc-gFarmFileCopy }
+
+-- initial capital of "GFarmDeadFileCopy" lowercased so the assignment is a valuereference.
+gFarmDeadFileCopy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { inumber
+                              | igen
+                              | hostname }
+  LDAP-NAME                 {"GFarmDeadFileCopy"}
+  ID                        id-oc-gFarmDeadFileCopy }
+
+-- initial capital of "GFarmDirEntry" lowercased so the assignment is a valuereference.
+gFarmDirEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { inumber
+                              | entryName
+                              | entryINumber }
+  LDAP-NAME                 {"GFarmDirEntry"}
+  ID                        id-oc-gFarmDirEntry }
+
+-- initial capital of "GFarmSymlink" lowercased so the assignment is a valuereference.
+gFarmSymlink OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { sourcePath }
+  LDAP-NAME                 {"GFarmSymlink"}
+  ID                        id-oc-gFarmSymlink }
+
+-- initial capital of "XAttr" lowercased so the assignment is a valuereference.
+xAttr OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { inumber
+                              | attrname
+                              | attrvalue }
+  LDAP-NAME                 {"XAttr"}
+  ID                        id-oc-xAttr }
+
+-- initial capital of "GFarmUserAuth" lowercased so the assignment is a valuereference.
+gFarmUserAuth OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { username
+                              | authIDType
+                              | authUserId }
+  LDAP-NAME                 {"GFarmUserAuth"}
+  ID                        id-oc-gFarmUserAuth }
+END

@@ -1,0 +1,201 @@
+-- Derived from data/ldap-schema/glue/7-05-StorageShare.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue705StorageShare DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Share
+    FROM LdapGlue508Share ;
+
+-- Object identifiers
+
+id-at-gLUE2StorageShareServingState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 1 }
+id-at-gLUE2StorageSharePath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 2 }
+id-at-gLUE2StorageShareAccessMode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 3 }
+id-at-gLUE2StorageShareSharingID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 4 }
+id-at-gLUE2StorageShareAccessLatency OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 5 }
+id-at-gLUE2StorageShareRetentionPolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 6 }
+id-at-gLUE2StorageShareExpirationMode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 7 }
+id-at-gLUE2StorageShareDefaultLifeTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 8 }
+id-at-gLUE2StorageShareMaximumLifeTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 9 }
+id-at-gLUE2StorageShareTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 10 }
+id-at-gLUE2StorageShareStorageEndpointForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 11 }
+id-at-gLUE2StorageShareDataStoreForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 12 }
+id-at-gLUE2StorageShareStorageServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 13 }
+id-oc-gLUE2StorageShare OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 31 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2StorageShareServingState" lowercased so the assignment is a valuereference.
+gLUE2StorageShareServingState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareServingState"}
+  LDAP-DESC                 "A state specifying if the share is open to place new requests and if it is open to offer the already present requests for execution"
+  ID                        id-at-gLUE2StorageShareServingState }
+
+-- initial capital of "GLUE2StorageSharePath" lowercased so the assignment is a valuereference.
+gLUE2StorageSharePath ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageSharePath"}
+  LDAP-DESC                 "A namespace where files are logically assigned to when they are stored into this share"
+  ID                        id-at-gLUE2StorageSharePath }
+
+-- initial capital of "GLUE2StorageShareAccessMode" lowercased so the assignment is a valuereference.
+gLUE2StorageShareAccessMode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareAccessMode"}
+  LDAP-DESC                 "An identifier for the type of access and usage allowed for this share"
+  ID                        id-at-gLUE2StorageShareAccessMode }
+
+-- initial capital of "GLUE2StorageShareSharingID" lowercased so the assignment is a valuereference.
+gLUE2StorageShareSharingID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareSharingID"}
+  LDAP-DESC                 "Local ID common to the storage shares which use the same storage share capacities (dedicated is a reserved term and means that the storage share capacities are not shared with other storage share capacities part of different storage shares)"
+  ID                        id-at-gLUE2StorageShareSharingID }
+
+-- initial capital of "GLUE2StorageShareAccessLatency" lowercased so the assignment is a valuereference.
+gLUE2StorageShareAccessLatency ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareAccessLatency"}
+  LDAP-DESC                 "The maximum latency category for a file stored in this share to be made available for reading"
+  ID                        id-at-gLUE2StorageShareAccessLatency }
+
+-- initial capital of "GLUE2StorageShareRetentionPolicy" lowercased so the assignment is a valuereference.
+gLUE2StorageShareRetentionPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareRetentionPolicy"}
+  LDAP-DESC                 "The quality of retention, which indicates the probability of the storage system losing a file"
+  ID                        id-at-gLUE2StorageShareRetentionPolicy }
+
+-- initial capital of "GLUE2StorageShareExpirationMode" lowercased so the assignment is a valuereference.
+gLUE2StorageShareExpirationMode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareExpirationMode"}
+  LDAP-DESC                 "Support for files with infinite and/or finite lifetimes, and what actions the storage service may take upon the expiration of a file"
+  ID                        id-at-gLUE2StorageShareExpirationMode }
+
+-- initial capital of "GLUE2StorageShareDefaultLifeTime" lowercased so the assignment is a valuereference.
+gLUE2StorageShareDefaultLifeTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageShareDefaultLifeTime"}
+  LDAP-DESC                 "The default lifetime assigned to the file if no explicit lifetime is specified"
+  ID                        id-at-gLUE2StorageShareDefaultLifeTime }
+
+-- initial capital of "GLUE2StorageShareMaximumLifeTime" lowercased so the assignment is a valuereference.
+gLUE2StorageShareMaximumLifeTime ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2StorageShareMaximumLifeTime"}
+  LDAP-DESC                 "The maximum lifetime that can be requested for a file"
+  ID                        id-at-gLUE2StorageShareMaximumLifeTime }
+
+-- initial capital of "GLUE2StorageShareTag" lowercased so the assignment is a valuereference.
+gLUE2StorageShareTag ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareTag"}
+  LDAP-DESC                 "A user defined tag for additional information"
+  ID                        id-at-gLUE2StorageShareTag }
+
+-- initial capital of "GLUE2StorageShareStorageEndpointForeignKey" lowercased so the assignment is a valuereference.
+gLUE2StorageShareStorageEndpointForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareStorageEndpointForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2StorageShareStorageEndpointForeignKey }
+
+-- initial capital of "GLUE2StorageShareDataStoreForeignKey" lowercased so the assignment is a valuereference.
+gLUE2StorageShareDataStoreForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareDataStoreForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2StorageShareDataStoreForeignKey }
+
+-- initial capital of "GLUE2StorageShareStorageServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2StorageShareStorageServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2StorageShareStorageServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2StorageShareStorageServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2StorageShare" lowercased so the assignment is a valuereference.
+gLUE2StorageShare OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Share }
+  MUST CONTAIN              { gLUE2StorageShareServingState
+                              | gLUE2StorageShareSharingID
+                              | gLUE2StorageShareAccessLatency }
+  MAY CONTAIN               { gLUE2StorageSharePath
+                              | gLUE2StorageShareAccessMode
+                              | gLUE2StorageShareRetentionPolicy
+                              | gLUE2StorageShareExpirationMode
+                              | gLUE2StorageShareDefaultLifeTime
+                              | gLUE2StorageShareMaximumLifeTime
+                              | gLUE2StorageShareTag
+                              | gLUE2StorageShareStorageEndpointForeignKey
+                              | gLUE2StorageShareDataStoreForeignKey
+                              | gLUE2StorageShareStorageServiceForeignKey }
+  LDAP-NAME                 {"GLUE2StorageShare"}
+  LDAP-DESC                 "A utilization target for a set of storage resources defined by a set of configuration parameters and characterized by status information"
+  ID                        id-oc-gLUE2StorageShare }
+END

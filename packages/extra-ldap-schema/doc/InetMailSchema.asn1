@@ -1,0 +1,172 @@
+InetMailSchema {
+    iso(1) identified-organization(3) dod(6) internet(1) private(4)
+    enterprise(1) wildboar(56490) module(1) inet-mail-schema(49)
+}
+DEFINITIONS ::= BEGIN
+
+EXPORTS ALL;
+
+IMPORTS
+
+    id-nf, id-pen
+        FROM Wildboar
+        {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+        enterprise(1) wildboar(56490) module(1) wildboar(1)}
+        WITH SUCCESSORS
+
+    ATTRIBUTE, OBJECT-CLASS
+        FROM InformationFramework
+        {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9}
+        WITH SUCCESSORS
+
+	name, UnboundedDirectoryString, description, dn, directoryString, ia5String,
+    caseIgnoreMatch, caseIgnoreOrderingMatch, caseIgnoreSubstringsMatch,
+    caseExactIA5Match, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch
+		FROM SelectedAttributeTypes
+		{joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9}
+		WITH SUCCESSORS
+
+    mail
+        FROM OpenLDAPCoreSchema
+        {iso(1) identified-organization(3) dod(6) internet(1) private(4)
+        enterprise(1) wildboar(56490) module(1) openldap-core(6)}
+        WITH SUCCESSORS
+
+    ;
+
+-- Attribute Types
+
+id-igh OBJECT IDENTIFIER ::= { id-pen 15347 } -- IGH Ingenieurgesellschaft Höpfner mbH
+id-doublePrecision OBJECT IDENTIFIER ::= { id-pen 10018 } -- Double Precision, Inc.
+-- // TODO: Circle back and check this OID subtree for schema I missed.
+id-netscape OBJECT IDENTIFIER ::= {
+    joint-iso-itu-t(2)
+    country(16)
+    us(840)
+    organization(1)
+    netscape(113730)
+}
+
+id-at-mailRoutingAddress        OBJECT IDENTIFIER ::= { id-netscape directory(3) 1 24 }
+id-at-transport                 OBJECT IDENTIFIER ::= { id-igh 2 102 }
+id-at-maildest                  OBJECT IDENTIFIER ::= { id-igh 2 110 }
+id-at-mailaccess                OBJECT IDENTIFIER ::= { id-igh 2 111 }
+id-at-maildrop                  OBJECT IDENTIFIER ::= { id-igh 2 100 }
+id-at-mailbox                   OBJECT IDENTIFIER ::= { id-doublePrecision 1 1 1 }
+
+id-oc-mailUser                  OBJECT IDENTIFIER ::= { id-igh 2 1 }
+id-oc-transportTable            OBJECT IDENTIFIER ::= { id-igh 2 3 }
+id-oc-mailGroup                 OBJECT IDENTIFIER ::= { id-netscape directory(3) 2 4 }
+
+id-nf-mailGroupCommonNameForm   OBJECT IDENTIFIER ::= { id-nf 13 }
+id-nf-mailGroupMailNameForm     OBJECT IDENTIFIER ::= { id-nf 14 }
+id-nf-transportTableNameForm    OBJECT IDENTIFIER ::= { id-nf 15 }
+
+-- Attribute Types
+
+transport ATTRIBUTE ::= {
+    SUBTYPE OF                  name
+	LDAP-NAME 					{"transport"}
+    ID                          id-at-transport
+}
+
+mailRoutingAddress ATTRIBUTE ::= {
+    SUBTYPE OF                  mail
+	LDAP-NAME 					{"mailRoutingAddress"}
+    ID                          id-at-mailRoutingAddress
+}
+
+maildest ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+    ORDERING MATCHING RULE      caseIgnoreOrderingMatch
+    SUBSTRINGS MATCHING RULE    caseIgnoreSubstringsMatch
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"maildest"}
+    LDAP-DESC                   "Restricted to send only to local network"
+    ID                          id-at-maildest
+}
+
+mailaccess ATTRIBUTE ::= {
+    WITH SYNTAX 				UnboundedDirectoryString
+    EQUALITY MATCHING RULE 		caseIgnoreMatch
+    ORDERING MATCHING RULE      caseIgnoreOrderingMatch
+    SUBSTRINGS MATCHING RULE    caseIgnoreSubstringsMatch
+	LDAP-SYNTAX 				directoryString.&id
+	LDAP-NAME 					{"mailaccess"}
+    LDAP-DESC                   "Can be mailed to restricted groups"
+    ID                          id-at-mailaccess
+}
+
+maildrop ATTRIBUTE ::= {
+    WITH SYNTAX 				IA5String
+    EQUALITY MATCHING RULE 		caseIgnoreIA5Match
+    SUBSTRINGS MATCHING RULE    caseIgnoreIA5SubstringsMatch
+	LDAP-SYNTAX 				ia5String.&id
+	LDAP-NAME 					{"maildrop"}
+    LDAP-DESC                   "RFC1274: RFC822 Mailbox"
+    ID                          id-at-maildrop
+}
+
+mailbox ATTRIBUTE ::= {
+    WITH SYNTAX 				IA5String
+    EQUALITY MATCHING RULE 		caseExactIA5Match
+    SINGLE VALUE                TRUE
+	LDAP-SYNTAX 				ia5String.&id
+	LDAP-NAME 					{"mailbox"}
+    LDAP-DESC                   "The absolute path to the mailbox for a mail account in a non-default location"
+    ID                          id-at-mailbox
+}
+
+-- Object Classes
+
+mailUser OBJECT-CLASS ::= {
+	KIND            auxiliary
+    MUST CONTAIN    {uid | mail | maildrop}
+	MAY CONTAIN     {commonName | mailbox | maildest | mailaccess}
+	LDAP-NAME       {"mailUser"}
+    LDAP-DESC       "E-Mail User"
+	ID              id-oc-mailUser
+}
+
+mailGroup OBJECT-CLASS ::= {
+	KIND            structural
+    MUST CONTAIN    {commonName | mail}
+	MAY CONTAIN     {mailRoutingAddress | member | description}
+	LDAP-NAME       {"mailGroup"}
+    LDAP-DESC       "E-Mail Group"
+	ID              id-oc-mailGroup
+}
+
+transportTable OBJECT-CLASS ::= {
+	KIND            structural
+    MUST CONTAIN    {commonName | transport}
+	LDAP-NAME       {"transportTable"}
+    LDAP-DESC       "MTA Transport Table"
+	ID              id-oc-transportTable
+}
+
+-- Name Forms
+
+mailGroupCommonNameForm NAME-FORM ::= {
+	NAMES				mailGroup
+	WITH ATTRIBUTES		{commonName}
+	LDAP-NAME			{"mailGroupCommonNameForm"}
+	ID					id-nf-mailGroupCommonNameForm
+}
+
+mailGroupMailNameForm NAME-FORM ::= {
+	NAMES				mailGroup
+	WITH ATTRIBUTES		{mail}
+	LDAP-NAME			{"mailGroupMailNameForm"}
+	ID					id-nf-mailGroupMailNameForm
+}
+
+transportTableNameForm NAME-FORM ::= {
+	NAMES				transportTable
+	WITH ATTRIBUTES		{commonName}
+	LDAP-NAME			{"transportTableNameForm"}
+	ID					id-nf-transportTableNameForm
+}
+
+END

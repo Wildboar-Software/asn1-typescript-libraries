@@ -1,0 +1,218 @@
+-- Derived from data/ldap-schema/schema2ldif/courier.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 1 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapSchema2ldifCourier DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+    commonName, description, ia5String, uid
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  mailbox
+    FROM InetMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inet-mail-schema(49)} WITH SUCCESSORS
+
+  gecos, gidNumber, homeDirectory, loginShell, uidNumber
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-quota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 2 }
+id-at-clearPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 3 }
+id-at-maildrop OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 4 }
+id-at-mailsource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 5 }
+id-at-virtualdomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 6 }
+id-at-virtualdomainuser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 7 }
+id-at-defaultdelivery OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 8 }
+id-at-disableimap OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 9 }
+id-at-disablepop3 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 10 }
+id-at-disablewebmail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 11 }
+id-at-sharedgroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 12 }
+id-at-disableshared OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 13 }
+id-at-mailhost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 1 14 }
+id-oc-courierMailAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 2 1 }
+id-oc-courierMailAlias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 2 2 }
+id-oc-courierDomainAlias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10018 1 2 3 }
+
+-- Attribute types
+
+quota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"quota"}
+  LDAP-DESC                 "A string that represents the quota on a mailbox"
+  ID                        id-at-quota }
+
+clearPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..128))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"clearPassword"}
+  LDAP-DESC                 "A separate text that stores the mail account password in clear text"
+  ID                        id-at-clearPassword }
+
+maildrop ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"maildrop"}
+  LDAP-DESC                 "RFC822 Mailbox - mail alias"
+  ID                        id-at-maildrop }
+
+mailsource ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailsource"}
+  LDAP-DESC                 "Message source"
+  ID                        id-at-mailsource }
+
+virtualdomain ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"virtualdomain"}
+  LDAP-DESC                 "A mail domain that is mapped to a single mail account"
+  ID                        id-at-virtualdomain }
+
+virtualdomainuser ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"virtualdomainuser"}
+  LDAP-DESC                 "Mailbox that receives mail for a mail domain"
+  ID                        id-at-virtualdomainuser }
+
+defaultdelivery ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"defaultdelivery"}
+  LDAP-DESC                 "Default mail delivery instructions"
+  ID                        id-at-defaultdelivery }
+
+disableimap ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"disableimap"}
+  LDAP-DESC                 "Set this attribute to 1 to disable IMAP access"
+  ID                        id-at-disableimap }
+
+disablepop3 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"disablepop3"}
+  LDAP-DESC                 "Set this attribute to 1 to disable POP3 access"
+  ID                        id-at-disablepop3 }
+
+disablewebmail ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"disablewebmail"}
+  LDAP-DESC                 "Set this attribute to 1 to disable IMAP access"
+  ID                        id-at-disablewebmail }
+
+sharedgroup ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"sharedgroup"}
+  LDAP-DESC                 "Virtual shared group"
+  ID                        id-at-sharedgroup }
+
+disableshared ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"disableshared"}
+  LDAP-DESC                 "Set this attribute to 1 to disable shared mailbox usage"
+  ID                        id-at-disableshared }
+
+mailhost ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailhost"}
+  LDAP-DESC                 "Host to which incoming POP/IMAP connections should be proxied"
+  ID                        id-at-mailhost }
+
+-- Object classes
+
+-- initial capital of "CourierMailAccount" lowercased so the assignment is a valuereference.
+courierMailAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mail
+                              | homeDirectory }
+  MAY CONTAIN               { uidNumber
+                              | gidNumber
+                              | mailbox
+                              | uid
+                              | commonName
+                              | gecos
+                              | description
+                              | loginShell
+                              | quota
+                              | userPassword
+                              | clearPassword
+                              | defaultdelivery
+                              | disableimap
+                              | disablepop3
+                              | disablewebmail
+                              | sharedgroup
+                              | disableshared
+                              | mailhost }
+  LDAP-NAME                 {"CourierMailAccount"}
+  LDAP-DESC                 "Mail account object as used by the Courier mail server"
+  ID                        id-oc-courierMailAccount }
+
+-- initial capital of "CourierMailAlias" lowercased so the assignment is a valuereference.
+courierMailAlias OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mail
+                              | maildrop }
+  MAY CONTAIN               { mailsource
+                              | description }
+  LDAP-NAME                 {"CourierMailAlias"}
+  LDAP-DESC                 "Mail aliasing/forwarding entry"
+  ID                        id-oc-courierMailAlias }
+
+-- initial capital of "CourierDomainAlias" lowercased so the assignment is a valuereference.
+courierDomainAlias OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { virtualdomain
+                              | virtualdomainuser }
+  MAY CONTAIN               { mailsource
+                              | description }
+  LDAP-NAME                 {"CourierDomainAlias"}
+  LDAP-DESC                 "Domain mail aliasing/forwarding entry"
+  ID                        id-oc-courierDomainAlias }
+END

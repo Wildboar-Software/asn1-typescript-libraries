@@ -1,0 +1,86 @@
+-- Derived from data/ldap-schema/glue/5-02-Extension.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapGlue502Extension DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-gLUE2ExtensionLocalID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 2 1 }
+id-at-gLUE2ExtensionKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 2 2 }
+id-at-gLUE2ExtensionValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 2 3 }
+id-at-gLUE2ExtensionEntityForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 2 4 }
+id-oc-gLUE2Extension OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 2 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ExtensionLocalID" lowercased so the assignment is a valuereference.
+gLUE2ExtensionLocalID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ExtensionLocalID"}
+  LDAP-DESC                 "A local identifier unique within the class instance to which it is associated"
+  ID                        id-at-gLUE2ExtensionLocalID }
+
+-- initial capital of "GLUE2ExtensionKey" lowercased so the assignment is a valuereference.
+gLUE2ExtensionKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ExtensionKey"}
+  LDAP-DESC                 "An identifier local to the container class instance"
+  ID                        id-at-gLUE2ExtensionKey }
+
+-- initial capital of "GLUE2ExtensionValue" lowercased so the assignment is a valuereference.
+gLUE2ExtensionValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ExtensionValue"}
+  LDAP-DESC                 "A value for the attribute named by the key"
+  ID                        id-at-gLUE2ExtensionValue }
+
+-- initial capital of "GLUE2ExtensionEntityForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ExtensionEntityForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ExtensionEntityForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ExtensionEntityForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2Extension" lowercased so the assignment is a valuereference.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+gLUE2Extension OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { gLUE2ExtensionLocalID
+                              | gLUE2ExtensionKey
+                              | gLUE2ExtensionValue
+                              | gLUE2ExtensionEntityForeignKey }
+  LDAP-NAME                 {"GLUE2Extension"}
+  LDAP-DESC                 "A key/value pair enabling the association of extra information"
+  ID                        id-oc-gLUE2Extension }
+END

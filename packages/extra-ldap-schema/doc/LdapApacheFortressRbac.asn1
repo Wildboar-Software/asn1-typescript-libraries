@@ -1,0 +1,305 @@
+-- Derived from data/ldap-schema/apache-fortress-rbac.schema
+-- Upstream: https://github.com/apache/directory-fortress-core/blob/48123c0c3137c6e0bfdc1377bd333daacb156cff/ldap/schema/rbac.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapApacheFortressRbac DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, commonName, directoryString, uid,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-rbacSessid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 1 }
+id-at-rbacRoles OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 2 }
+id-at-rbacRoleConstraints OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 3 }
+id-at-rbacUserDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 4 }
+id-at-rbacOpName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 5 }
+id-at-rbacObjName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 6 }
+id-at-rbacRoleName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 7 }
+id-at-tenantid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 8 }
+id-at-rbacAuditOp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 9 }
+id-at-rbacAuditRoles OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 10 }
+id-at-rbacAuditRequestedRoles OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 11 }
+id-at-rbacAuditResources OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 12 }
+id-at-rbacAuditResult OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 13 }
+id-at-rbacAuditProperties OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 14 }
+id-at-rbacAuditTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 15 }
+id-at-rbacAuditMessages OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 16 }
+id-at-rbacAuditObjects OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 17 }
+id-at-rbacAuditOperations OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 18 }
+id-at-rbacAuditId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 3 19 }
+id-oc-rbacSession OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 4 1 }
+id-oc-rbacPermission OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 4 2 }
+id-oc-rbacAudit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 4 3 }
+id-oc-rbacContainer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 4203 1000 4 4 }
+
+-- Attribute types
+
+-- OID written as RBACattributeType:1 and expanded with this file's objectidentifier macros.
+rbacSessid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacSessid"}
+  LDAP-DESC                 "RBAC Session ID"
+  ID                        id-at-rbacSessid }
+
+-- OID written as RBACattributeType:2 and expanded with this file's objectidentifier macros.
+rbacRoles ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacRoles"}
+  LDAP-DESC                 "RBAC User Role Assignments"
+  ID                        id-at-rbacRoles }
+
+-- OID written as RBACattributeType:3 and expanded with this file's objectidentifier macros.
+rbacRoleConstraints ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacRoleConstraints"}
+  LDAP-DESC                 "RBAC User Role Constraints"
+  ID                        id-at-rbacRoleConstraints }
+
+-- OID written as RBACattributeType:4 and expanded with this file's objectidentifier macros.
+rbacUserDN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacUserDN"}
+  LDAP-DESC                 "RBAC User DN"
+  ID                        id-at-rbacUserDN }
+
+-- OID written as RBACattributeType:5 and expanded with this file's objectidentifier macros.
+rbacOpName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacOpName"}
+  LDAP-DESC                 "RBAC Permission Operation Name"
+  ID                        id-at-rbacOpName }
+
+-- OID written as RBACattributeType:6 and expanded with this file's objectidentifier macros.
+rbacObjName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacObjName"}
+  LDAP-DESC                 "RBAC Permission Object Name"
+  ID                        id-at-rbacObjName }
+
+-- OID written as RBACattributeType:7 and expanded with this file's objectidentifier macros.
+rbacRoleName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacRoleName"}
+  LDAP-DESC                 "RBAC Role Name"
+  ID                        id-at-rbacRoleName }
+
+-- OID written as RBACattributeType:8 and expanded with this file's objectidentifier macros.
+tenantid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"tenantid"}
+  LDAP-DESC                 "RBAC tenant id"
+  ID                        id-at-tenantid }
+
+-- OID written as RBACattributeType:9 and expanded with this file's objectidentifier macros.
+rbacAuditOp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditOp"}
+  LDAP-DESC                 "RBAC operation id"
+  ID                        id-at-rbacAuditOp }
+
+-- OID written as RBACattributeType:10 and expanded with this file's objectidentifier macros.
+rbacAuditRoles ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditRoles"}
+  LDAP-DESC                 "RBAC Roles in a session"
+  ID                        id-at-rbacAuditRoles }
+
+-- OID written as RBACattributeType:11 and expanded with this file's objectidentifier macros.
+rbacAuditRequestedRoles ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditRequestedRoles"}
+  LDAP-DESC                 "RBAC Roles in a request"
+  ID                        id-at-rbacAuditRequestedRoles }
+
+-- OID written as RBACattributeType:12 and expanded with this file's objectidentifier macros.
+rbacAuditResources ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditResources"}
+  LDAP-DESC                 "RBAC audit resources"
+  ID                        id-at-rbacAuditResources }
+
+-- OID written as RBACattributeType:13 and expanded with this file's objectidentifier macros.
+rbacAuditResult ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditResult"}
+  LDAP-DESC                 "RBAC operation result"
+  ID                        id-at-rbacAuditResult }
+
+-- OID written as RBACattributeType:14 and expanded with this file's objectidentifier macros.
+rbacAuditProperties ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditProperties"}
+  LDAP-DESC                 "RBAC operation result"
+  ID                        id-at-rbacAuditProperties }
+
+-- OID written as RBACattributeType:15 and expanded with this file's objectidentifier macros.
+rbacAuditTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditTimestamp"}
+  LDAP-DESC                 "RBAC audit timestamp"
+  ID                        id-at-rbacAuditTimestamp }
+
+-- OID written as RBACattributeType:16 and expanded with this file's objectidentifier macros.
+rbacAuditMessages ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditMessages"}
+  LDAP-DESC                 "RBAC audit messages"
+  ID                        id-at-rbacAuditMessages }
+
+-- OID written as RBACattributeType:17 and expanded with this file's objectidentifier macros.
+rbacAuditObjects ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditObjects"}
+  LDAP-DESC                 "RBAC audit objects"
+  ID                        id-at-rbacAuditObjects }
+
+-- OID written as RBACattributeType:18 and expanded with this file's objectidentifier macros.
+rbacAuditOperations ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditOperations"}
+  LDAP-DESC                 "RBAC audit operations"
+  ID                        id-at-rbacAuditOperations }
+
+-- OID written as RBACattributeType:19 and expanded with this file's objectidentifier macros.
+rbacAuditId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"rbacAuditId"}
+  LDAP-DESC                 "RBAC audit id"
+  ID                        id-at-rbacAuditId }
+
+-- Object classes
+
+-- OID written as RBACobjectClass:1 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rbacSession OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { rbacSessid
+                              | uid
+                              | tenantid }
+  MAY CONTAIN               { rbacUserDN
+                              | rbacRoles
+                              | rbacRoleConstraints }
+  LDAP-NAME                 {"rbacSession"}
+  LDAP-DESC                 "RBAC Session Object Class"
+  ID                        id-oc-rbacSession }
+
+-- OID written as RBACobjectClass:2 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rbacPermission OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { rbacRoles
+                              | rbacObjName
+                              | rbacOpName
+                              | uid }
+  LDAP-NAME                 {"rbacPermission"}
+  LDAP-DESC                 "RBAC Permission Object Class"
+  ID                        id-oc-rbacPermission }
+
+-- OID written as RBACobjectClass:3 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rbacAudit OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { uid
+                              | rbacAuditId
+                              | rbacSessid
+                              | rbacAuditOp
+                              | rbacAuditRoles
+                              | rbacAuditRequestedRoles
+                              | rbacAuditObjects
+                              | rbacAuditOperations
+                              | rbacAuditResult
+                              | rbacAuditResources
+                              | rbacAuditProperties
+                              | rbacAuditTimestamp
+                              | rbacAuditMessages }
+  LDAP-NAME                 {"rbacAudit"}
+  LDAP-DESC                 "RBAC Audit Object Class"
+  ID                        id-oc-rbacAudit }
+
+-- OID written as RBACobjectClass:4 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+rbacContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { commonName }
+  LDAP-NAME                 {"rbacContainer"}
+  LDAP-DESC                 "RBAC Container Object Class"
+  ID                        id-oc-rbacContainer }
+END

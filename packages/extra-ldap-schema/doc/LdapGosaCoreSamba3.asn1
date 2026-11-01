@@ -1,0 +1,67 @@
+-- Derived from data/ldap-schema/gosa-core/samba3.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 54 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+LdapGosaCoreSamba3 DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  description, octetString, octetStringMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  sambaDomainName, sambaPwdLastSet, sambaSID
+    FROM SambaV3Schema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) samba-v3-schema(45)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-sambaClearTextPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 68 }
+id-at-sambaPreviousClearTextPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 1 69 }
+id-oc-sambaTrustedDomainPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 2 15 }
+id-oc-sambaConfig OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 7165 2 2 10 }
+
+-- Attribute types
+
+sambaClearTextPassword ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"sambaClearTextPassword"}
+  LDAP-DESC                 "Clear text password (used for trusted domain passwords)"
+  ID                        id-at-sambaClearTextPassword }
+
+sambaPreviousClearTextPassword ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  EQUALITY MATCHING RULE    octetStringMatch
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"sambaPreviousClearTextPassword"}
+  LDAP-DESC                 "Previous clear text password (used for trusted domain passwords)"
+  ID                        id-at-sambaPreviousClearTextPassword }
+
+-- Object classes
+
+sambaTrustedDomainPassword OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { sambaDomainName
+                              | sambaSID
+                              | sambaClearTextPassword
+                              | sambaPwdLastSet }
+  MAY CONTAIN               { sambaPreviousClearTextPassword }
+  LDAP-NAME                 {"sambaTrustedDomainPassword"}
+  LDAP-DESC                 "Samba Trusted Domain Password"
+  ID                        id-oc-sambaTrustedDomainPassword }
+
+sambaConfig OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"sambaConfig"}
+  LDAP-DESC                 "Samba Configuration Section"
+  ID                        id-oc-sambaConfig }
+END

@@ -1,0 +1,385 @@
+-- Derived from data/ldap-schema/ldapmigration/50ns-calendar.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+Ldapmigration50nsCalendar DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, countryName, directoryString, facsimileTelephoneNumber,
+    generationQualifier, givenName, initials, organizationalUnitName,
+    organizationName, postalAddress, surname, telephoneNumber,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  employeeNumber
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-nsCalAccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 112 }
+id-at-nsCalAccessDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 113 }
+id-at-nsCalAdmd OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 114 }
+id-at-nsCalDefaultNoteReminder OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 115 }
+id-at-nsCalDefaultReminder OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 116 }
+id-at-nsCalDefaultTaskReminder OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 117 }
+id-at-nsCalDisplayPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 118 }
+id-at-nsCalFlags OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 119 }
+id-at-nsCalHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 120 }
+id-at-nsCalLanguageId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 121 }
+id-at-nsCalNodeAlias OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 122 }
+id-at-nsCalNotifMechanism OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 123 }
+id-at-nsCalOperatingPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 124 }
+id-at-nsCalOrgUnit2 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 125 }
+id-at-nsCalOrgUnit3 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 126 }
+id-at-nsCalOrgUnit4 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 127 }
+id-at-nsCalPasswordRequired OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 128 }
+id-at-nsCalPrmd OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 129 }
+id-at-nsCalRefreshPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 130 }
+id-at-nsCalResourceCapacity OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 131 }
+id-at-nsCalResourceNumber OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 132 }
+id-at-nsCalServerVersion OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 133 }
+id-at-nsCalSysopCanWritePassword OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 134 }
+id-at-nsCalTimezone OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 135 }
+id-at-nsCalXItemId OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 136 }
+id-oc-nsCalUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 14 }
+id-oc-nsCalAdmin OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 15 }
+id-oc-nsCalResource OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 16 }
+id-oc-netscapeCalendarServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 17 }
+
+-- Attribute types
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalAccess ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalAccess"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalAccess }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalAccessDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalAccessDomain"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalAccessDomain }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalAdmd ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalAdmd"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalAdmd }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalDefaultNoteReminder ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalDefaultNoteReminder"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalDefaultNoteReminder }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalDefaultReminder ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalDefaultReminder"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalDefaultReminder }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalDefaultTaskReminder ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalDefaultTaskReminder"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalDefaultTaskReminder }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalDisplayPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalDisplayPrefs"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalDisplayPrefs }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalFlags ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalFlags"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalFlags }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalHost"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalHost }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalLanguageId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalLanguageId"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalLanguageId }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalNodeAlias ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalNodeAlias"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalNodeAlias }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalNotifMechanism ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalNotifMechanism"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalNotifMechanism }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalOperatingPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalOperatingPrefs"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalOperatingPrefs }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalOrgUnit2 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalOrgUnit2"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalOrgUnit2 }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalOrgUnit3 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalOrgUnit3"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalOrgUnit3 }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalOrgUnit4 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalOrgUnit4"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalOrgUnit4 }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalPasswordRequired ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalPasswordRequired"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalPasswordRequired }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalPrmd ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalPrmd"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalPrmd }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalRefreshPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalRefreshPrefs"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalRefreshPrefs }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalResourceCapacity ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalResourceCapacity"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalResourceCapacity }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalResourceNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalResourceNumber"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalResourceNumber }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalServerVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalServerVersion"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalServerVersion }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalSysopCanWritePassword ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalSysopCanWritePassword"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalSysopCanWritePassword }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalTimezone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalTimezone"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalTimezone }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalXItemId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nsCalXItemId"}
+  LDAP-DESC                 "iPlanet defined attribute type"
+  ID                        id-at-nsCalXItemId }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { countryName
+                              | employeeNumber
+                              | generationQualifier
+                              | givenName
+                              | initials
+                              | mail
+                              | organizationName
+                              | organizationalUnitName
+                              | nsCalAccess
+                              | nsCalAccessDomain
+                              | nsCalAdmd
+                              | nsCalDefaultNoteReminder
+                              | nsCalDefaultReminder
+                              | nsCalDefaultTaskReminder
+                              | nsCalDisplayPrefs
+                              | nsCalFlags
+                              | nsCalHost
+                              | nsCalLanguageId
+                              | nsCalNodeAlias
+                              | nsCalNotifMechanism
+                              | nsCalOperatingPrefs
+                              | nsCalOrgUnit2
+                              | nsCalOrgUnit3
+                              | nsCalOrgUnit4
+                              | nsCalPasswordRequired
+                              | nsCalPrmd
+                              | nsCalRefreshPrefs
+                              | nsCalServerVersion
+                              | nsCalSysopCanWritePassword
+                              | nsCalTimezone
+                              | nsCalXItemId }
+  LDAP-NAME                 {"nsCalUser"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-nsCalUser }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalAdmin OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { countryName
+                              | commonName
+                              | facsimileTelephoneNumber
+                              | generationQualifier
+                              | givenName
+                              | initials
+                              | mail
+                              | organizationName
+                              | organizationalUnitName
+                              | postalAddress
+                              | surname
+                              | telephoneNumber
+                              | userPassword
+                              | nsCalAccess
+                              | nsCalAccessDomain
+                              | nsCalAdmd
+                              | nsCalFlags
+                              | nsCalHost
+                              | nsCalLanguageId
+                              | nsCalNodeAlias
+                              | nsCalOrgUnit2
+                              | nsCalOrgUnit3
+                              | nsCalOrgUnit4
+                              | nsCalPasswordRequired
+                              | nsCalPrmd
+                              | nsCalServerVersion
+                              | nsCalSysopCanWritePassword
+                              | nsCalXItemId }
+  LDAP-NAME                 {"nsCalAdmin"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-nsCalAdmin }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+nsCalResource OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { commonName
+                              | facsimileTelephoneNumber
+                              | givenName
+                              | mail
+                              | postalAddress
+                              | surname
+                              | telephoneNumber
+                              | userPassword
+                              | nsCalAccess
+                              | nsCalAccessDomain
+                              | nsCalDefaultNoteReminder
+                              | nsCalDefaultReminder
+                              | nsCalDefaultTaskReminder
+                              | nsCalDisplayPrefs
+                              | nsCalFlags
+                              | nsCalHost
+                              | nsCalLanguageId
+                              | nsCalNodeAlias
+                              | nsCalNotifMechanism
+                              | nsCalOperatingPrefs
+                              | nsCalPasswordRequired
+                              | nsCalRefreshPrefs
+                              | nsCalResourceCapacity
+                              | nsCalResourceNumber
+                              | nsCalServerVersion
+                              | nsCalSysopCanWritePassword
+                              | nsCalTimezone
+                              | nsCalXItemId }
+  LDAP-NAME                 {"nsCalResource"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-nsCalResource }
+
+-- X-ORIGIN: "iPlanet Calendar Server"
+netscapeCalendarServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  LDAP-NAME                 {"netscapeCalendarServer"}
+  LDAP-DESC                 "iPlanet defined objectclass"
+  ID                        id-oc-netscapeCalendarServer }
+END

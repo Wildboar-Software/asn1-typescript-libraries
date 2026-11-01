@@ -1,0 +1,27 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    type OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import { cu } from "../H323-X500-Schema/cu.va.mjs";
+// export { cu } from "../H323-X500-Schema/cu.va.mjs";
+
+
+/**
+ * @summary cu_at
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * cu-at OBJECT IDENTIFIER ::= {cu at(1)}
+ * ```
+ * 
+ * @constant
+ */
+export
+const cu_at: OBJECT_IDENTIFIER = _OID.fromParts([
+    /* at */ 1,
+], cu);
+
+/* eslint-enable */

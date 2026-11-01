@@ -1,0 +1,188 @@
+-- Derived from data/ldap-schema/ldapmigration/98ns-dummy-uwc.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 1 elements were omitted because another source file in this corpus defines the same OID.
+Ldapmigration98nsDummyUwc DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  directoryString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  nswmExtendedUserPrefs
+    FROM Ldapmigration50nsMail
+
+  icsExtendedUserPrefs
+    FROM Ldapmigration55imsIcal ;
+
+-- Object identifiers
+
+id-at-sunUCDefaultApplication OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 920 }
+id-at-sunUCTheme OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 921 }
+id-at-sunUCColorScheme OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 922 }
+id-at-sunUCDefaultEmailHandler OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 923 }
+id-at-sunUCDateFormat OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 924 }
+id-at-sunUCDateDelimiter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 925 }
+id-at-sunUCTimeFormat OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 926 }
+id-at-sunUCTimeZone OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 927 }
+id-at-sunUCMailSendProfiles OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 928 }
+id-at-sunUCExtendedUserPrefs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 929 }
+id-at-sunAbExtendedUserPrefs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 930 }
+id-at-sunUCExtendedClientPrefs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 931 }
+id-at-sunUCExternalMailProfile OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 933 }
+id-at-abEventNotificationDestination OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 941 }
+id-oc-sunUCPreferences OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 143 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCDefaultApplication ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCDefaultApplication"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCDefaultApplication }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCTheme ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCTheme"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCTheme }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCColorScheme ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCColorScheme"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCColorScheme }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCDefaultEmailHandler ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCDefaultEmailHandler"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCDefaultEmailHandler }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCDateFormat ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCDateFormat"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCDateFormat }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCDateDelimiter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCDateDelimiter"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCDateDelimiter }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCTimeFormat ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCTimeFormat"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCTimeFormat }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCTimeZone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCTimeZone"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCTimeZone }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCMailSendProfiles ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCMailSendProfiles"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCMailSendProfiles }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunUCExtendedUserPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCExtendedUserPrefs"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunUCExtendedUserPrefs }
+
+-- X-ORIGIN: "Sun Communications Express"
+sunAbExtendedUserPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunAbExtendedUserPrefs"}
+  LDAP-DESC                 "Sun UWC attribute"
+  ID                        id-at-sunAbExtendedUserPrefs }
+
+-- X-ORIGIN: "Sun Communication Center"
+sunUCExtendedClientPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCExtendedClientPrefs"}
+  LDAP-DESC                 "Sun CC attribute"
+  ID                        id-at-sunUCExtendedClientPrefs }
+
+-- X-ORIGIN: "Sun convergence server"
+sunUCExternalMailProfile ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunUCExternalMailProfile"}
+  LDAP-DESC                 "Sun Convergence attribute to represent user external mail server profile details"
+  ID                        id-at-sunUCExternalMailProfile }
+
+-- X-ORIGIN: "Sun Communications Express"
+abEventNotificationDestination ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"abEventNotificationDestination"}
+  LDAP-DESC                 "Destination for AB event notifications"
+  ID                        id-at-abEventNotificationDestination }
+
+-- Object classes
+
+-- X-ORIGIN: "Sun Unified Web Client"
+sunUCPreferences OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { sunUCDefaultApplication
+                              | sunUCTheme
+                              | sunUCColorScheme
+                              | sunUCDefaultEmailHandler
+                              | sunUCDateFormat
+                              | sunUCDateDelimiter
+                              | sunUCTimeFormat
+                              | sunUCTimeZone
+                              | sunUCMailSendProfiles
+                              | sunUCExtendedUserPrefs
+                              | nswmExtendedUserPrefs
+                              | icsExtendedUserPrefs
+                              | sunAbExtendedUserPrefs
+                              | sunUCExtendedClientPrefs
+                              | sunUCExternalMailProfile
+                              | abEventNotificationDestination }
+  LDAP-NAME                 {"sunUCPreferences"}
+  LDAP-DESC                 "UWC object class"
+  ID                        id-oc-sunUCPreferences }
+END

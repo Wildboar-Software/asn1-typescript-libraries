@@ -1,0 +1,1194 @@
+-- Derived from data/ldap-schema/ldapmigration/71sun-am.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 7 elements were omitted because another source file in this corpus defines the same OID.
+Ldapmigration71sunAm DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, description, directoryString, dn, organizationalUnitName,
+    organizationName, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  associatedDomain
+    FROM MIXERAddressMapping
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) mixer-address-mapping(9)} WITH SUCCESSORS
+
+  labeledURI
+    FROM OpenLDAPCoreSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap-core(6)} WITH SUCCESSORS
+
+  inetgroupstatus
+    FROM Ldapmigration70delgatedAdmin
+
+  sunAdditionalTemplates, sunkeyvalue, sunOverrideTemplates,
+    sunPreferredDomain, sunPreferredOrganization, sunRegisteredServiceName,
+    sunxmlkeyvalue
+    FROM Ldapmigration70sunSchema2 ;
+
+-- Object identifiers
+
+id-at-iplanet-am-session-service-status OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1053 }
+id-at-iplanet-am-session-max-session-time OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1065 }
+id-at-iplanet-am-session-max-idle-time OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1066 }
+id-at-iplanet-am-session-max-caching-time OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1067 }
+id-at-iplanet-am-session-quota-limit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 752 }
+id-at-iplanet-am-session-get-valid-sessions OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1068 }
+id-at-iplanet-am-session-destroy-sessions OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1069 }
+id-at-iplanet-am-session-add-session-listener-on-all-sessions OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1070 }
+id-at-iplanet-am-user-auth-modules OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1071 }
+id-at-iplanet-am-user-admin-start-dn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1072 }
+id-at-iplanet-am-user-service-status OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1073 }
+id-at-iplanet-am-user-login-status OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1074 }
+id-at-iplanet-am-web-agent-access-allow-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1075 }
+id-at-iplanet-am-web-agent-service-status OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1076 }
+id-at-iplanet-am-web-agent-access-deny-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1077 }
+id-at-iplanet-am-web-agent-access-not-enforced-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1078 }
+id-at-iplanet-am-role-type OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1079 }
+id-at-iplanet-am-role-description OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1080 }
+id-at-iplanet-am-role-aci-description OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1081 }
+id-at-iplanet-am-role-aci-list OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1082 }
+id-at-iplanet-am-role-service-options OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1083 }
+id-at-iplanet-am-role-any-options OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1084 }
+id-at-iplanet-am-group-subscribable OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1085 }
+id-at-iplanet-am-role-display-options OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1088 }
+id-at-iplanet-am-modifiable-by OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1094 }
+id-at-iplanet-am-static-group-dn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 1096 }
+id-at-iplanet-am-named-policy-dn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 974 }
+id-at-iplanet-am-domain-url-access-allow OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 975 }
+id-at-iplanet-am-user-account-life OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 976 }
+id-at-iplanet-am-role-managed-container-dn OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 977 }
+id-at-iplanet-am-user-auth-config OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 58 }
+id-at-iplanet-am-user-alias-list OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 59 }
+id-at-iplanet-am-saml-user OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 60 }
+id-at-iplanet-am-saml-password OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 61 }
+id-at-iplanet-am-auth-configuration OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 62 }
+id-at-iplanet-am-auth-login-success-url OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 63 }
+id-at-iplanet-am-auth-login-failure-url OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 64 }
+id-at-iplanet-am-auth-post-login-process-class OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 65 }
+id-at-sunAMAuthInvalidAttemptsData OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 793 }
+id-at-iplanet-am-user-success-url OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 71 }
+id-at-iplanet-am-user-failure-url OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 72 }
+id-at-iplanet-am-user-federation-info-key OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 73 }
+id-at-iplanet-am-user-federation-info OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 74 }
+id-at-sunserviceschema OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 78 }
+id-at-sunpluginid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 80 }
+id-at-sunpluginschema OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 82 }
+id-at-iplanet-am-user-password-reset-options OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 589 }
+id-at-iplanet-am-user-password-reset-question-answer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 590 }
+id-at-iplanet-am-user-password-reset-force-reset OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 591 }
+id-at-sunIdentityServerDiscoEntries OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 821 }
+id-at-sunIdentityServerDynamicDiscoEntries OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 822 }
+id-at-sunIdentityMSISDNNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 823 }
+id-at-sunOrganizationAlias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 824 }
+id-at-sunIdentityServerPPCommonNameCN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 825 }
+id-at-sunIdentityServerPPCommonNameFN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 826 }
+id-at-sunIdentityServerPPCommonNameSN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 827 }
+id-at-sunIdentityServerPPCommonNameMN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 828 }
+id-at-sunIdentityServerPPCommonNameAltCN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 829 }
+id-at-sunIdentityServerPPCommonNamePT OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 830 }
+id-at-sunIdentityServerPPInformalName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 831 }
+id-at-sunIdentityServerPPLegalIdentityLegalName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 832 }
+id-at-sunIdentityServerPPLegalIdentityDOB OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 833 }
+id-at-sunIdentityServerPPLegalIdentityMaritalStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 834 }
+id-at-sunIdentityServerPPLegalIdentityGender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 835 }
+id-at-sunIdentityServerPPLegalIdentityAltIDType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 836 }
+id-at-sunIdentityServerPPLegalIdentityAltIDValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 837 }
+id-at-sunIdentityServerPPLegalIdentityVATIDType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 838 }
+id-at-sunIdentityServerPPLegalIdentityVATIDValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 839 }
+id-at-sunIdentityServerPPEmploymentIdentityJobTitle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 840 }
+id-at-sunIdentityServerPPEmploymentIdentityOrg OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 841 }
+id-at-sunIdentityServerPPEmploymentIdentityAltO OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 842 }
+id-at-sunIdentityServerDeviceVersion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 843 }
+id-at-sunIdentityServerDeviceType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 844 }
+id-at-sunIdentityServerDeviceKeyValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 845 }
+id-at-sunIdentityServerDeviceStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 846 }
+id-at-sunIdentityServerSupportedTypes OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 847 }
+id-at-sunIdentityServerPPAddressCard OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 848 }
+id-at-sunIdentityServerPPMsgContact OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 849 }
+id-at-sunIdentityServerPPFacadeMugShot OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 850 }
+id-at-sunIdentityServerPPFacadeWebSite OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 851 }
+id-at-sunIdentityServerPPFacadeNamePronounced OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 852 }
+id-at-sunIdentityServerPPFacadeGreetSound OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 853 }
+id-at-sunIdentityServerPPFacadeGreetMeSound OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 854 }
+id-at-sunIdentityServerPPDemographicsDisplayLanguage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 855 }
+id-at-sunIdentityServerPPDemographicsLanguage OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 856 }
+id-at-sunIdentityServerPPDemographicsAge OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 857 }
+id-at-sunIdentityServerPPDemographicsBirthday OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 858 }
+id-at-sunIdentityServerPPDemographicsTimeZone OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 859 }
+id-at-sunIdentityServerPPSignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 860 }
+id-at-sunIdentityServerPPEncryptKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 861 }
+id-at-sunIdentityServerPPEmergencyContact OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 862 }
+id-oc-iplanet-am-session-service OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 175 }
+id-oc-iplanet-am-user-service OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 176 }
+id-oc-iplanet-am-web-agent-service OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 177 }
+id-oc-iplanet-am-managed-role OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 179 }
+id-oc-iplanet-am-managed-group OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 180 }
+id-oc-iplanet-am-managed-filtered-group OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 181 }
+id-oc-iplanet-am-managed-assignable-group OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 182 }
+id-oc-iplanet-am-managed-static-group OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 183 }
+id-oc-iplanet-am-managed-person OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 184 }
+id-oc-iplanet-am-managed-org-unit OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 186 }
+id-oc-iplanet-am-managed-people-container OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 187 }
+id-oc-iplanet-am-managed-group-container OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 189 }
+id-oc-iplanet-am-managed-policy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 166 }
+id-oc-iplanet-am-domain-url-access-service OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 167 }
+id-oc-iplanet-am-saml-service OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 22 }
+id-oc-iplanet-am-auth-configuration-service OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 23 }
+id-oc-sunAMAuthAccountLockout OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 118 }
+id-oc-sunservice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 25 }
+id-oc-iplanet-am-managed-filtered-role OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 74 }
+id-oc-sunISManagedOrganization OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 125 }
+id-oc-sunIdentityServerDiscoveryService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 126 }
+id-oc-sunIdentityServerLibertyPPService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 127 }
+id-oc-sunIdentityServerDevice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 128 }
+id-oc-sunRealmService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 104 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-service-status ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-service-status"}
+  LDAP-DESC                 "Session Service Status"
+  ID                        id-at-iplanet-am-session-service-status }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-max-session-time ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-max-session-time"}
+  LDAP-DESC                 "Max Service Time"
+  ID                        id-at-iplanet-am-session-max-session-time }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-max-idle-time ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-max-idle-time"}
+  LDAP-DESC                 "Max Session Idle Time"
+  ID                        id-at-iplanet-am-session-max-idle-time }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-max-caching-time ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-max-caching-time"}
+  LDAP-DESC                 "Max Session Caching Time"
+  ID                        id-at-iplanet-am-session-max-caching-time }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-quota-limit ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-quota-limit"}
+  LDAP-DESC                 "Session Quota Constraints"
+  ID                        id-at-iplanet-am-session-quota-limit }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-get-valid-sessions ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-get-valid-sessions"}
+  LDAP-DESC                 "Get Valid Sessions"
+  ID                        id-at-iplanet-am-session-get-valid-sessions }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-destroy-sessions ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-destroy-sessions"}
+  LDAP-DESC                 "Destroy Session"
+  ID                        id-at-iplanet-am-session-destroy-sessions }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-add-session-listener-on-all-sessions ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-session-add-session-listener-on-all-sessions"}
+  LDAP-DESC                 "Add Session Listener on All Sessions"
+  ID                        id-at-iplanet-am-session-add-session-listener-on-all-sessions }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-auth-modules ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-auth-modules"}
+  LDAP-DESC                 "User Auth Modules"
+  ID                        id-at-iplanet-am-user-auth-modules }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-admin-start-dn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-admin-start-dn"}
+  LDAP-DESC                 "Starting DN for Admin User"
+  ID                        id-at-iplanet-am-user-admin-start-dn }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-service-status ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-service-status"}
+  LDAP-DESC                 "User Service Status"
+  ID                        id-at-iplanet-am-user-service-status }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-login-status ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-login-status"}
+  LDAP-DESC                 "User Login Status"
+  ID                        id-at-iplanet-am-user-login-status }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-web-agent-access-allow-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-web-agent-access-allow-list"}
+  LDAP-DESC                 "Allow Access List for Web Agent"
+  ID                        id-at-iplanet-am-web-agent-access-allow-list }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-web-agent-service-status ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-web-agent-service-status"}
+  LDAP-DESC                 "Agent Service Status"
+  ID                        id-at-iplanet-am-web-agent-service-status }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-web-agent-access-deny-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-web-agent-access-deny-list"}
+  LDAP-DESC                 "Deny Access List for Web Agent"
+  ID                        id-at-iplanet-am-web-agent-access-deny-list }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-web-agent-access-not-enforced-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-web-agent-access-not-enforced-list"}
+  LDAP-DESC                 "Access Not Enforced List for Web Agent"
+  ID                        id-at-iplanet-am-web-agent-access-not-enforced-list }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-type ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-type"}
+  LDAP-DESC                 "Role Type"
+  ID                        id-at-iplanet-am-role-type }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-description ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-description"}
+  LDAP-DESC                 "Role Description"
+  ID                        id-at-iplanet-am-role-description }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-aci-description ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-aci-description"}
+  LDAP-DESC                 "Role ACI Description"
+  ID                        id-at-iplanet-am-role-aci-description }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-aci-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-aci-list"}
+  LDAP-DESC                 "Role ACI List"
+  ID                        id-at-iplanet-am-role-aci-list }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-service-options ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-service-options"}
+  LDAP-DESC                 "Role Service Options"
+  ID                        id-at-iplanet-am-role-service-options }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-any-options ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-any-options"}
+  LDAP-DESC                 "role any options"
+  ID                        id-at-iplanet-am-role-any-options }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-group-subscribable ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-group-subscribable"}
+  LDAP-DESC                 "group subscribable by user"
+  ID                        id-at-iplanet-am-group-subscribable }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-display-options ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-display-options"}
+  LDAP-DESC                 "role based display options"
+  ID                        id-at-iplanet-am-role-display-options }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-modifiable-by ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"iplanet-am-modifiable-by"}
+  LDAP-DESC                 "Attribute Modified by"
+  ID                        id-at-iplanet-am-modifiable-by }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-static-group-dn ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"iplanet-am-static-group-dn"}
+  LDAP-DESC                 "Static group DN"
+  ID                        id-at-iplanet-am-static-group-dn }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-named-policy-dn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-named-policy-dn"}
+  LDAP-DESC                 "Named Policy DN"
+  ID                        id-at-iplanet-am-named-policy-dn }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-domain-url-access-allow ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-domain-url-access-allow"}
+  LDAP-DESC                 "Allow Domain URL Access"
+  ID                        id-at-iplanet-am-domain-url-access-allow }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-account-life ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-account-life"}
+  LDAP-DESC                 "User Account Life"
+  ID                        id-at-iplanet-am-user-account-life }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-role-managed-container-dn ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-role-managed-container-dn"}
+  LDAP-DESC                 "Role Container DN"
+  ID                        id-at-iplanet-am-role-managed-container-dn }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-auth-config ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-auth-config"}
+  LDAP-DESC                 "User Authentication Configuration"
+  ID                        id-at-iplanet-am-user-auth-config }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-alias-list ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-alias-list"}
+  LDAP-DESC                 "User Alias Names List"
+  ID                        id-at-iplanet-am-user-alias-list }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-saml-user ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-saml-user"}
+  LDAP-DESC                 "SAML User ID"
+  ID                        id-at-iplanet-am-saml-user }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-saml-password ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-saml-password"}
+  LDAP-DESC                 "SAML User Password"
+  ID                        id-at-iplanet-am-saml-password }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-auth-configuration ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-auth-configuration"}
+  LDAP-DESC                 "Authentication Configuration"
+  ID                        id-at-iplanet-am-auth-configuration }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-auth-login-success-url ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-auth-login-success-url"}
+  LDAP-DESC                 "Redirection URL After Successful Login"
+  ID                        id-at-iplanet-am-auth-login-success-url }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-auth-login-failure-url ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-auth-login-failure-url"}
+  LDAP-DESC                 "Redirection URL for Failed User Authentication"
+  ID                        id-at-iplanet-am-auth-login-failure-url }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-auth-post-login-process-class ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-auth-post-login-process-class"}
+  LDAP-DESC                 "Class Name for Post Authentication Processing"
+  ID                        id-at-iplanet-am-auth-post-login-process-class }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunAMAuthInvalidAttemptsData ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunAMAuthInvalidAttemptsData"}
+  LDAP-DESC                 "XML data for Invalid Login Attempts"
+  ID                        id-at-sunAMAuthInvalidAttemptsData }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-success-url ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-success-url"}
+  LDAP-DESC                 "Redirection URL for Successful User Authentication"
+  ID                        id-at-iplanet-am-user-success-url }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-failure-url ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-failure-url"}
+  LDAP-DESC                 "Redirection URL for Failed User Authentication"
+  ID                        id-at-iplanet-am-user-failure-url }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-federation-info-key ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-federation-info-key"}
+  LDAP-DESC                 "User Federation Information Key"
+  ID                        id-at-iplanet-am-user-federation-info-key }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-federation-info ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-federation-info"}
+  LDAP-DESC                 "User Federation Information"
+  ID                        id-at-iplanet-am-user-federation-info }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunserviceschema ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunserviceschema"}
+  LDAP-DESC                 "SMS Attribute to Store xml schema of a particular service"
+  ID                        id-at-sunserviceschema }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunpluginid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunpluginid"}
+  LDAP-DESC                 "Attribute to store reference to the plugin configuration"
+  ID                        id-at-sunpluginid }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunpluginschema ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunpluginschema"}
+  LDAP-DESC                 "To store the plugin schema information"
+  ID                        id-at-sunpluginschema }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-password-reset-options ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-password-reset-options"}
+  LDAP-DESC                 "Password Reset Options"
+  ID                        id-at-iplanet-am-user-password-reset-options }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-password-reset-question-answer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-password-reset-question-answer"}
+  LDAP-DESC                 "Password Reset User Question Answer"
+  ID                        id-at-iplanet-am-user-password-reset-question-answer }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-password-reset-force-reset ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"iplanet-am-user-password-reset-force-reset"}
+  LDAP-DESC                 "Password Reset Force Reset password"
+  ID                        id-at-iplanet-am-user-password-reset-force-reset }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDiscoEntries ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerDiscoEntries"}
+  LDAP-DESC                 "User DiscoEntries"
+  ID                        id-at-sunIdentityServerDiscoEntries }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDynamicDiscoEntries ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerDynamicDiscoEntries"}
+  LDAP-DESC                 "Dynamic DiscoEntries"
+  ID                        id-at-sunIdentityServerDynamicDiscoEntries }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityMSISDNNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityMSISDNNumber"}
+  LDAP-DESC                 "User MSISDN Number"
+  ID                        id-at-sunIdentityMSISDNNumber }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunOrganizationAlias ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunOrganizationAlias"}
+  LDAP-DESC                 "Attribute to define aliases for organization identifier"
+  ID                        id-at-sunOrganizationAlias }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPCommonNameCN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPCommonNameCN"}
+  LDAP-DESC                 "Liberty PP CommonName CN"
+  ID                        id-at-sunIdentityServerPPCommonNameCN }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPCommonNameFN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPCommonNameFN"}
+  LDAP-DESC                 "Liberty PP CommonName FN"
+  ID                        id-at-sunIdentityServerPPCommonNameFN }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPCommonNameSN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPCommonNameSN"}
+  LDAP-DESC                 "Liberty PP CommonName SN"
+  ID                        id-at-sunIdentityServerPPCommonNameSN }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPCommonNameMN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPCommonNameMN"}
+  LDAP-DESC                 "Liberty PP CommonName MN"
+  ID                        id-at-sunIdentityServerPPCommonNameMN }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPCommonNameAltCN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPCommonNameAltCN"}
+  LDAP-DESC                 "Liberty PP CommonName Alt CN"
+  ID                        id-at-sunIdentityServerPPCommonNameAltCN }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPCommonNamePT ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPCommonNamePT"}
+  LDAP-DESC                 "Liberty PP CommonName PersonalTitle"
+  ID                        id-at-sunIdentityServerPPCommonNamePT }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPInformalName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPInformalName"}
+  LDAP-DESC                 "Liberty PP InformalName"
+  ID                        id-at-sunIdentityServerPPInformalName }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityLegalName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityLegalName"}
+  LDAP-DESC                 "Liberty PP LegalName"
+  ID                        id-at-sunIdentityServerPPLegalIdentityLegalName }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityDOB ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityDOB"}
+  LDAP-DESC                 "Liberty PP Date of Birth"
+  ID                        id-at-sunIdentityServerPPLegalIdentityDOB }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityMaritalStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityMaritalStatus"}
+  LDAP-DESC                 "Liberty PP Marital Status"
+  ID                        id-at-sunIdentityServerPPLegalIdentityMaritalStatus }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityGender ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityGender"}
+  LDAP-DESC                 "Liberty PP Gender"
+  ID                        id-at-sunIdentityServerPPLegalIdentityGender }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityAltIDType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityAltIDType"}
+  LDAP-DESC                 "Liberty PP AltID Type"
+  ID                        id-at-sunIdentityServerPPLegalIdentityAltIDType }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityAltIDValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityAltIDValue"}
+  LDAP-DESC                 "Liberty PP AltID Type"
+  ID                        id-at-sunIdentityServerPPLegalIdentityAltIDValue }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityVATIDType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityVATIDType"}
+  LDAP-DESC                 "Liberty PP IDType"
+  ID                        id-at-sunIdentityServerPPLegalIdentityVATIDType }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPLegalIdentityVATIDValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPLegalIdentityVATIDValue"}
+  LDAP-DESC                 "Liberty PP IDValue"
+  ID                        id-at-sunIdentityServerPPLegalIdentityVATIDValue }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPEmploymentIdentityJobTitle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPEmploymentIdentityJobTitle"}
+  LDAP-DESC                 "Liberty PP JobTitle"
+  ID                        id-at-sunIdentityServerPPEmploymentIdentityJobTitle }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPEmploymentIdentityOrg ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPEmploymentIdentityOrg"}
+  LDAP-DESC                 "Liberty PP Org"
+  ID                        id-at-sunIdentityServerPPEmploymentIdentityOrg }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPEmploymentIdentityAltO ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPEmploymentIdentityAltO"}
+  LDAP-DESC                 "Liberty PP Alt Orgs"
+  ID                        id-at-sunIdentityServerPPEmploymentIdentityAltO }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDeviceVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerDeviceVersion"}
+  LDAP-DESC                 "Device Version"
+  ID                        id-at-sunIdentityServerDeviceVersion }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDeviceType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerDeviceType"}
+  LDAP-DESC                 "Device Type"
+  ID                        id-at-sunIdentityServerDeviceType }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDeviceKeyValue ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerDeviceKeyValue"}
+  LDAP-DESC                 "Device Key Value Pair"
+  ID                        id-at-sunIdentityServerDeviceKeyValue }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDeviceStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerDeviceStatus"}
+  LDAP-DESC                 "Device Status"
+  ID                        id-at-sunIdentityServerDeviceStatus }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerSupportedTypes ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerSupportedTypes"}
+  LDAP-DESC                 "Container Supported Types"
+  ID                        id-at-sunIdentityServerSupportedTypes }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPAddressCard ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPAddressCard"}
+  LDAP-DESC                 "Liberty PP AddressCard"
+  ID                        id-at-sunIdentityServerPPAddressCard }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPMsgContact ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPMsgContact"}
+  LDAP-DESC                 "Liberty PP MsgContact"
+  ID                        id-at-sunIdentityServerPPMsgContact }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPFacadeMugShot ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPFacadeMugShot"}
+  LDAP-DESC                 "Liberty PP FacadeMugShot"
+  ID                        id-at-sunIdentityServerPPFacadeMugShot }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPFacadeWebSite ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPFacadeWebSite"}
+  LDAP-DESC                 "Liberty PP FacadeWebSite"
+  ID                        id-at-sunIdentityServerPPFacadeWebSite }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPFacadeNamePronounced ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPFacadeNamePronounced"}
+  LDAP-DESC                 "Liberty PP FacadeNamePronounced"
+  ID                        id-at-sunIdentityServerPPFacadeNamePronounced }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPFacadeGreetSound ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPFacadeGreetSound"}
+  LDAP-DESC                 "Liberty PP FacadeGreetSound"
+  ID                        id-at-sunIdentityServerPPFacadeGreetSound }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPFacadeGreetMeSound ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPFacadeGreetMeSound"}
+  LDAP-DESC                 "Liberty PP FacadeMeGreetSound"
+  ID                        id-at-sunIdentityServerPPFacadeGreetMeSound }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPDemographicsDisplayLanguage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPDemographicsDisplayLanguage"}
+  LDAP-DESC                 "Liberty PP DemographicsDisplayLanguage"
+  ID                        id-at-sunIdentityServerPPDemographicsDisplayLanguage }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPDemographicsLanguage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPDemographicsLanguage"}
+  LDAP-DESC                 "Liberty PP DemographicsLanguage"
+  ID                        id-at-sunIdentityServerPPDemographicsLanguage }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPDemographicsAge ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPDemographicsAge"}
+  LDAP-DESC                 "Liberty PP DemographicsAge"
+  ID                        id-at-sunIdentityServerPPDemographicsAge }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPDemographicsBirthday ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPDemographicsBirthday"}
+  LDAP-DESC                 "Liberty PP DemographicsBirthday"
+  ID                        id-at-sunIdentityServerPPDemographicsBirthday }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPDemographicsTimeZone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPDemographicsTimeZone"}
+  LDAP-DESC                 "Liberty PP DemographicsTimeZone"
+  ID                        id-at-sunIdentityServerPPDemographicsTimeZone }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPSignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPSignKey"}
+  LDAP-DESC                 "Liberty PP SignKey"
+  ID                        id-at-sunIdentityServerPPSignKey }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPEncryptKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPEncryptKey"}
+  LDAP-DESC                 "Liberty PP EncryptKey"
+  ID                        id-at-sunIdentityServerPPEncryptKey }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerPPEmergencyContact ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sunIdentityServerPPEmergencyContact"}
+  LDAP-DESC                 "Liberty PP EmergencyContact"
+  ID                        id-at-sunIdentityServerPPEmergencyContact }
+
+-- Object classes
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-session-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-session-max-session-time
+                              | iplanet-am-session-max-idle-time
+                              | iplanet-am-session-max-caching-time
+                              | iplanet-am-session-quota-limit
+                              | iplanet-am-session-get-valid-sessions
+                              | iplanet-am-session-destroy-sessions
+                              | iplanet-am-session-add-session-listener-on-all-sessions
+                              | iplanet-am-session-service-status }
+  LDAP-NAME                 {"iplanet-am-session-service"}
+  LDAP-DESC                 "Session Service OC"
+  ID                        id-oc-iplanet-am-session-service }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-user-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-user-auth-modules
+                              | iplanet-am-user-login-status
+                              | iplanet-am-user-admin-start-dn
+                              | iplanet-am-user-auth-config
+                              | iplanet-am-user-alias-list
+                              | iplanet-am-user-success-url
+                              | iplanet-am-user-failure-url
+                              | iplanet-am-user-federation-info-key
+                              | iplanet-am-user-federation-info
+                              | iplanet-am-user-password-reset-options
+                              | iplanet-am-user-password-reset-question-answer
+                              | iplanet-am-user-password-reset-force-reset
+                              | sunIdentityServerDiscoEntries
+                              | sunIdentityMSISDNNumber }
+  LDAP-NAME                 {"iplanet-am-user-service"}
+  LDAP-DESC                 "User Service OC"
+  ID                        id-oc-iplanet-am-user-service }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-web-agent-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-web-agent-access-allow-list
+                              | iplanet-am-web-agent-access-deny-list
+                              | iplanet-am-web-agent-access-not-enforced-list
+                              | iplanet-am-web-agent-service-status }
+  LDAP-NAME                 {"iplanet-am-web-agent-service"}
+  LDAP-DESC                 "Web Agent Service OC"
+  ID                        id-oc-iplanet-am-web-agent-service }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-role OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-role-type
+                              | iplanet-am-role-description
+                              | iplanet-am-role-aci-description
+                              | iplanet-am-role-aci-list
+                              | iplanet-am-role-service-options
+                              | iplanet-am-role-any-options
+                              | iplanet-am-role-managed-container-dn
+                              | iplanet-am-role-display-options }
+  LDAP-NAME                 {"iplanet-am-managed-role"}
+  LDAP-DESC                 "Managed Role OC"
+  ID                        id-oc-iplanet-am-managed-role }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-group-subscribable
+                              | inetgroupstatus }
+  LDAP-NAME                 {"iplanet-am-managed-group"}
+  LDAP-DESC                 "Managed Group OC"
+  ID                        id-oc-iplanet-am-managed-group }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-filtered-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { iplanet-am-managed-group }
+  KIND                      auxiliary
+  LDAP-NAME                 {"iplanet-am-managed-filtered-group"}
+  LDAP-DESC                 "Managed Filter Group OC"
+  ID                        id-oc-iplanet-am-managed-filtered-group }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-assignable-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { iplanet-am-managed-group }
+  KIND                      auxiliary
+  LDAP-NAME                 {"iplanet-am-managed-assignable-group"}
+  LDAP-DESC                 "Managed Assignable Group OC"
+  ID                        id-oc-iplanet-am-managed-assignable-group }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-static-group OBJECT-CLASS ::= {
+  SUBCLASS OF               { iplanet-am-managed-group }
+  KIND                      auxiliary
+  LDAP-NAME                 {"iplanet-am-managed-static-group"}
+  LDAP-DESC                 "Managed Static Group OC"
+  ID                        id-oc-iplanet-am-managed-static-group }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-person OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-modifiable-by
+                              | iplanet-am-static-group-dn
+                              | iplanet-am-user-account-life }
+  LDAP-NAME                 {"iplanet-am-managed-person"}
+  LDAP-DESC                 "Managed Person OC"
+  ID                        id-oc-iplanet-am-managed-person }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-org-unit OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { sunPreferredDomain
+                              | associatedDomain
+                              | sunPreferredOrganization
+                              | sunAdditionalTemplates
+                              | sunOverrideTemplates
+                              | sunRegisteredServiceName
+                              | sunIdentityServerSupportedTypes }
+  LDAP-NAME                 {"iplanet-am-managed-org-unit"}
+  LDAP-DESC                 "Managed OrganizationalUnit OC"
+  ID                        id-oc-iplanet-am-managed-org-unit }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-people-container OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  LDAP-NAME                 {"iplanet-am-managed-people-container"}
+  LDAP-DESC                 "Managed People Container OC"
+  ID                        id-oc-iplanet-am-managed-people-container }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-group-container OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  LDAP-NAME                 {"iplanet-am-managed-group-container"}
+  LDAP-DESC                 "Managed Group Container OC"
+  ID                        id-oc-iplanet-am-managed-group-container }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-policy OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-named-policy-dn }
+  LDAP-NAME                 {"iplanet-am-managed-policy"}
+  LDAP-DESC                 "Managed Name Policy OC"
+  ID                        id-oc-iplanet-am-managed-policy }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-domain-url-access-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-domain-url-access-allow }
+  LDAP-NAME                 {"iplanet-am-domain-url-access-service"}
+  LDAP-DESC                 "Domain URL Access Service OC"
+  ID                        id-oc-iplanet-am-domain-url-access-service }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-saml-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-saml-user
+                              | iplanet-am-saml-password }
+  LDAP-NAME                 {"iplanet-am-saml-service"}
+  LDAP-DESC                 "SAML Service OC"
+  ID                        id-oc-iplanet-am-saml-service }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-auth-configuration-service OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { iplanet-am-auth-configuration
+                              | iplanet-am-auth-login-success-url
+                              | iplanet-am-auth-login-failure-url
+                              | iplanet-am-auth-post-login-process-class }
+  LDAP-NAME                 {"iplanet-am-auth-configuration-service"}
+  LDAP-DESC                 "Authentication Configuration Service OC"
+  ID                        id-oc-iplanet-am-auth-configuration-service }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunAMAuthAccountLockout OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { sunAMAuthInvalidAttemptsData }
+  LDAP-NAME                 {"sunAMAuthAccountLockout"}
+  LDAP-DESC                 "Invalid Login Attempts Object Class"
+  ID                        id-oc-sunAMAuthAccountLockout }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunservice OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { labeledURI
+                              | sunserviceschema
+                              | sunkeyvalue
+                              | sunxmlkeyvalue
+                              | sunpluginschema
+                              | description }
+  LDAP-NAME                 {"sunservice"}
+  LDAP-DESC                 "object containing service information"
+  ID                        id-oc-sunservice }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+iplanet-am-managed-filtered-role OBJECT-CLASS ::= {
+  SUBCLASS OF               { iplanet-am-managed-role }
+  KIND                      auxiliary
+  LDAP-NAME                 {"iplanet-am-managed-filtered-role"}
+  LDAP-DESC                 "Managed Filtered Role OC"
+  ID                        id-oc-iplanet-am-managed-filtered-role }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunISManagedOrganization OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { sunOrganizationAlias }
+  LDAP-NAME                 {"sunISManagedOrganization"}
+  LDAP-DESC                 "Sun Java System objectclass to identify organizations"
+  ID                        id-oc-sunISManagedOrganization }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDiscoveryService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { sunIdentityServerDynamicDiscoEntries }
+  LDAP-NAME                 {"sunIdentityServerDiscoveryService"}
+  LDAP-DESC                 "Discovery Service OC"
+  ID                        id-oc-sunIdentityServerDiscoveryService }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerLibertyPPService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { sunIdentityServerPPCommonNameCN
+                              | sunIdentityServerPPCommonNameAltCN
+                              | sunIdentityServerPPCommonNameFN
+                              | sunIdentityServerPPCommonNameSN
+                              | sunIdentityServerPPCommonNamePT
+                              | sunIdentityServerPPCommonNameMN
+                              | sunIdentityServerPPInformalName
+                              | sunIdentityServerPPLegalIdentityLegalName
+                              | sunIdentityServerPPLegalIdentityDOB
+                              | sunIdentityServerPPLegalIdentityMaritalStatus
+                              | sunIdentityServerPPLegalIdentityGender
+                              | sunIdentityServerPPLegalIdentityAltIDType
+                              | sunIdentityServerPPLegalIdentityAltIDValue
+                              | sunIdentityServerPPLegalIdentityVATIDType
+                              | sunIdentityServerPPLegalIdentityVATIDValue
+                              | sunIdentityServerPPEmploymentIdentityJobTitle
+                              | sunIdentityServerPPEmploymentIdentityOrg
+                              | sunIdentityServerPPEmploymentIdentityAltO
+                              | sunIdentityServerPPAddressCard
+                              | sunIdentityServerPPMsgContact
+                              | sunIdentityServerPPFacadeMugShot
+                              | sunIdentityServerPPFacadeWebSite
+                              | sunIdentityServerPPFacadeNamePronounced
+                              | sunIdentityServerPPFacadeGreetSound
+                              | sunIdentityServerPPFacadeGreetMeSound
+                              | sunIdentityServerPPDemographicsDisplayLanguage
+                              | sunIdentityServerPPDemographicsLanguage
+                              | sunIdentityServerPPDemographicsBirthday
+                              | sunIdentityServerPPDemographicsAge
+                              | sunIdentityServerPPDemographicsTimeZone
+                              | sunIdentityServerPPSignKey
+                              | sunIdentityServerPPEncryptKey
+                              | sunIdentityServerPPEmergencyContact }
+  LDAP-NAME                 {"sunIdentityServerLibertyPPService"}
+  LDAP-DESC                 "sunIdentityServerLibertyPPService OC"
+  ID                        id-oc-sunIdentityServerLibertyPPService }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunIdentityServerDevice OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { commonName
+                              | uid
+                              | sunIdentityServerDeviceVersion
+                              | sunIdentityServerDeviceType
+                              | userPassword
+                              | sunIdentityServerDeviceKeyValue
+                              | sunxmlkeyvalue
+                              | description
+                              | sunIdentityServerDeviceStatus }
+  LDAP-NAME                 {"sunIdentityServerDevice"}
+  LDAP-DESC                 "Device OC"
+  ID                        id-oc-sunIdentityServerDevice }
+
+-- X-ORIGIN: "Sun Java System Identity Management"
+sunRealmService OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MAY CONTAIN               { organizationName
+                              | labeledURI
+                              | sunkeyvalue
+                              | sunxmlkeyvalue
+                              | description }
+  LDAP-NAME                 {"sunRealmService"}
+  LDAP-DESC                 "object containing service information for realms"
+  ID                        id-oc-sunRealmService }
+END
