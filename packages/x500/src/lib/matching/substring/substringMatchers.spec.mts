@@ -1,5 +1,6 @@
 import {
     ASN1CharactersError,
+    ASN1Error,
     ObjectIdentifier,
     type ASN1Element,
 } from "@wildboar/asn1";
@@ -28,7 +29,9 @@ import caseIgnoreSubstringsMatch, {
     caseIgnoreSubstringsMatchTyped,
 } from "./caseIgnoreSubstringsMatch.mjs";
 import caseIgnoreIA5SubstringsMatch from "./caseIgnoreIA5SubstringsMatch.mjs";
-import caseIgnoreListSubstringsMatch from "./caseIgnoreListSubstringsMatch.mjs";
+import caseIgnoreListSubstringsMatch, {
+    caseIgnoreListSubstringsMatchTyped,
+} from "./caseIgnoreListSubstringsMatch.mjs";
 import telephoneNumberSubstringsMatch from "./telephoneNumberSubstringsMatch.mjs";
 import facsimileNumberSubstringsMatch from "./facsimileNumberSubstringsMatch.mjs";
 
@@ -182,10 +185,19 @@ describe("facsimileNumberSubstringsMatch", () => {
 });
 
 describe("caseIgnoreListSubstringsMatch", () => {
-    const atav = stored(_encode_PostalAddress([
-        { uTF8String: "Main Street" },
-        { uTF8String: "Springfield" },
-    ], DER));
+    function postal (lines: string[]): ASN1Element {
+        return _encode_PostalAddress(
+            lines.map((line) => ({ uTF8String: line })),
+            DER,
+        );
+    }
+
+    const atav = stored(postal([ "Main Street", "Springfield" ]));
+    const adjacent = stored(postal([
+        "123 S. Main St.",
+        "Tampa, FL",
+        "United States",
+    ]));
 
     it("matches within lines and does not cross a boundary", () => {
         expect(caseIgnoreListSubstringsMatch(
@@ -197,8 +209,24 @@ describe("caseIgnoreListSubstringsMatch", () => {
             atav,
         )).toBe(true);
         expect(caseIgnoreListSubstringsMatch(
+            assertion([
+                { initial: "main" },
+                { any_: "spring" },
+                { final: "field" },
+            ]),
+            atav,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
             assertion([{ any_: "tS" }]),
             atav,
+        )).toBe(false);
+        expect(caseIgnoreListSubstringsMatch(
+            assertion([{ any_: "tSpr" }]),
+            atav,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
         )).toBe(false);
         expect(caseIgnoreListSubstringsMatch(
             assertion([{ initial: "Spring" }]),
@@ -206,15 +234,113 @@ describe("caseIgnoreListSubstringsMatch", () => {
         )).toBe(false);
     });
 
-    it("rejects a filter component that is more than one line", () => {
-        const filter: FilterSubstring[] = [
-            {
-                initial: _encode_PostalAddress([
-                    { uTF8String: "Main" },
-                    { uTF8String: "Street" },
-                ], DER),
-            },
-        ];
-        expect(() => caseIgnoreListSubstringsMatch(filter, atav)).toThrow(Error);
+    it("joins a postal-address filter component so lines stay adjacent", () => {
+        const lines = postal([ "123 S. Main St.", "Tampa, FL" ]);
+        const filter: FilterSubstring[] = [{ any_: lines }];
+        expect(caseIgnoreListSubstringsMatch(filter, adjacent)).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            filter,
+            adjacent,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            [{ initial: postal([ "123 S. Main St.", "Tampa" ]) }],
+            adjacent,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            [{ final: postal([ "Tampa, FL", "United States" ]) }],
+            adjacent,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(filter, stored(postal([
+            "123 S. Main St.",
+            "P.O. Box 44",
+            "Tampa, FL",
+        ])))).toBe(false);
+        expect(caseIgnoreListSubstringsMatch(
+            filter,
+            stored(postal([ "123 S. Main St.Tampa, FL" ])),
+        )).toBe(false);
+        expect(caseIgnoreListSubstringsMatch(
+            [{ any_: postal([ "Street", "Spring" ]) }],
+            atav,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            [{ any_: postal([ "Street", "field" ]) }],
+            atav,
+        )).toBe(false);
+    });
+
+    it("folds case and spaces per line and keeps a dollar sign", () => {
+        const addressed = stored(postal([ "123 $ Main St.", "Tampa, FL" ]));
+        expect(caseIgnoreListSubstringsMatch(
+            [{ any_: postal([ "123 $ MAIN   St.", "tampa, fl" ]) }],
+            addressed,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            assertion([{ any_: "123 $ main" }]),
+            addressed,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            [{ initial: postal([ "Main" ]) }],
+            atav,
+        )).toBe(true);
+        expect(() => caseIgnoreListSubstringsMatch(
+            [{ initial: _encodePrintableString("main", DER) }],
+            atav,
+        )).toThrow(ASN1Error);
+    });
+
+    it("does not reuse characters across joined lines", () => {
+        expect(caseIgnoreListSubstringsMatch(
+            [
+                { any_: postal([ "Street", "Spring" ]) },
+                { any_: postal([ "Springfield" ]) },
+            ],
+            atav,
+        )).toBe(false);
+        expect(caseIgnoreListSubstringsMatch(
+            [
+                { any_: postal([ "Street" ]) },
+                { any_: postal([ "field" ]) },
+            ],
+            atav,
+        )).toBe(true);
+    });
+
+    it("throws when an asserted line cannot be prepared and is UNDEFINED for a bad value", () => {
+        expect(() => caseIgnoreListSubstringsMatch(
+            [{ any_: postal([ "\uFFFD" ]) }],
+            atav,
+        )).toThrow(ASN1CharactersError);
+        expect(() => caseIgnoreListSubstringsMatch(
+            [{ any_: postal([]) }],
+            atav,
+        )).toThrow(ASN1CharactersError);
+        expect(caseIgnoreListSubstringsMatchTyped(
+            [{ any_: "a" }],
+            postal([ "Main", "\uFFFD" ]),
+        )).toBeUndefined();
+        expect(caseIgnoreListSubstringsMatch(assertion([]), atav)).toBeUndefined();
+    });
+
+    it("skips value preparation when each line is already normalized", () => {
+        const value = postal([ "MAIN  STREET", "Springfield" ]);
+        expect(caseIgnoreListSubstringsMatchTyped(
+            [{ initial: "main street" }],
+            value,
+        )).toBe(true);
+        expect(caseIgnoreListSubstringsMatchTyped(
+            [{ initial: "main street" }],
+            value,
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(false);
+        expect(caseIgnoreListSubstringsMatchTyped(
+            [{ any_: "main street\u001Fspring" }],
+            postal([ "main street", "springfield" ]),
+            undefined,
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(true);
     });
 });
