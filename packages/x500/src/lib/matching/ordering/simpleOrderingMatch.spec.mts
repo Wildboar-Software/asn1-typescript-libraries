@@ -1,4 +1,11 @@
-import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
+import {
+    ASN1Construction,
+    ASN1TagClass,
+    ASN1UniversalType,
+    BERElement,
+    ObjectIdentifier,
+    type ASN1Element,
+} from "@wildboar/asn1";
 import {
     DER,
     _encodeGeneralizedTime,
@@ -41,6 +48,31 @@ describe("generalizedTimeOrderingMatch", () => {
             stored(_encodeGeneralizedTime(earlier, DER)),
         )).toBe(false);
         expect(generalizedTimeOrderingMatchTyped(later, earlier)).toBeGreaterThan(0);
+    });
+
+    it("ignores a fractional second", () => {
+        const whole = new Date("2020-01-01T00:00:00.000Z");
+        const fraction = new Date("2020-01-01T00:00:00.900Z");
+        const next = new Date("2020-01-01T00:00:01.000Z");
+        expect(generalizedTimeOrderingMatchTyped(fraction, whole)).toBe(0);
+        expect(generalizedTimeOrderingMatchTyped(next, whole)).toBeGreaterThan(0);
+
+        const encoded = (text: string): BERElement => {
+            const el = new BERElement();
+            el.tagClass = ASN1TagClass.universal;
+            el.construction = ASN1Construction.primitive;
+            el.tagNumber = ASN1UniversalType.generalizedTime;
+            el.value = new Uint8Array(Buffer.from(text, "ascii"));
+            return el;
+        };
+        expect(generalizedTimeOrderingMatch(
+            encoded("20200101000000.900Z"),
+            stored(encoded("20200101000000Z")),
+        )).toBe(false);
+        expect(generalizedTimeOrderingMatch(
+            encoded("20200101000001Z"),
+            stored(encoded("20200101000000.900Z")),
+        )).toBe(true);
     });
 });
 
