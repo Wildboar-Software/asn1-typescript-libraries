@@ -18,7 +18,11 @@ import { AttributeQuality, _decode_AttributeQuality, _encode_AttributeQuality } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DataQualitySyntax-attributeQuality-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DataQualitySyntax-attributeQuality-Item ::= SEQUENCE {
+ *     type        AttributeType,
+ *     quality     AttributeQuality,
+ *     ...
+ * }
  * ```
  * 
  * @class
