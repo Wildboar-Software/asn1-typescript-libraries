@@ -6,12 +6,22 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * UTC seconds since the epoch. A fractional second is dropped, including
+ * milliseconds carried on a `Date`. Floor division keeps a time before
+ * 1970 in its UTC second.
+ */
+function utcSeconds (time: Date): number {
+    return Math.floor(time.getTime() / 1000);
+}
+
+/**
  * Rec. ITU-T X.520 (10/2019), clause 8.3.4
  * `generalizedTimeOrderingMatch`.
  *
- * Signed comparison of two GeneralizedTime instants. Absent minutes
- * or seconds are treated as zero. Positive when the stored time is
- * earlier than the presented time.
+ * Signed comparison of two GeneralizedTime values to a precision of
+ * one second. Absent minutes or seconds are treated as zero. A
+ * fractional second does not order one value before the other.
+ * Positive when the stored time is earlier than the presented time.
  *
  * @param assertion Presented time.
  * @param value Stored GeneralizedTime, or that instant already decoded.
@@ -22,7 +32,7 @@ function generalizedTimeOrderingMatchTyped (
     value: Date | ASN1Element,
 ): number | undefined {
     const stored = ASN1Element.isElement(value) ? value.generalizedTime : value;
-    return assertion.valueOf() - stored.valueOf();
+    return utcSeconds(assertion) - utcSeconds(stored);
 }
 
 generalizedTimeOrderingMatchTyped satisfies TypedOrderingFunction<Date>;
