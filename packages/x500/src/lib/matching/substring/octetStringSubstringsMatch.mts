@@ -1,69 +1,118 @@
 import { Buffer } from "node:buffer";
 import { ASN1Element } from "@wildboar/asn1";
-import type SubstringSelection from "../../types/SubstringSelection.mjs";
-import type {
-    OctetSubstringAssertionInput,
-    PreparedOctetSubstring,
-} from "../readValue.mjs";
-import { readOctetSubstringAssertion } from "../readValue.mjs";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import {
+    _decode_OctetSubstringAssertion,
+} from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
+import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
+import {
+    createSubstringsMatcher,
+    type AssertedSubstring,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import { mapSubstringChoices } from "./prepareSubstrings.mjs";
+
+const RULE = "octetStringSubstringsMatch";
+
+function nonEmpty (bytes: Uint8Array): Uint8Array {
+    if (bytes.length === 0) {
+        throw new Error(`${RULE}: empty substring`);
+    }
+    return bytes;
+}
+
+function octetAssertion (el: ASN1Element): AssertedSubstring<Uint8Array>[] {
+    return mapSubstringChoices(
+        _decode_OctetSubstringAssertion(el),
+        nonEmpty,
+        RULE,
+    );
+}
+
+function octetFilter (
+    items: readonly FilterItem_substrings_strings_Item[],
+): AssertedSubstring<Uint8Array>[] {
+    return mapSubstringChoices(
+        items,
+        (el) => nonEmpty(el.octetString),
+        RULE,
+    );
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.2.7
  * `octetStringSubstringsMatch`.
  *
- * TRUE iff the stored OCTET STRING contains the presented
- * `OctetSubstringAssertion` octets with the same initial/any/final
- * partitioning as `caseIgnoreSubstringsMatch`.
- *
- * `assertion` is an element or an octet substring assertion.
- * `value` is an element or a `Uint8Array`. `selection` is unused.
- */
-export
-function octetStringSubstringsMatch (
-    assertion: OctetSubstringAssertionInput,
-    value: ASN1Element | Uint8Array,
-    _selection?: SubstringSelection,
-): boolean {
-    return octetStringSubstringsMatchTyped(
-        readOctetSubstringAssertion(assertion),
-        ASN1Element.isElement(value) ? value.octetString : value,
-    );
-}
-
-/**
- * `octetStringSubstringsMatch` on prepared octet pieces and a
- * stored octet string.
+ * TRUE when the stored OCTET STRING can be partitioned so the
+ * presented `initial` / `any` / `final` octets match successive
+ * portions in order. A later piece cannot reuse octets already
+ * consumed. An assertion with no pieces is UNDEFINED.
  *
  * @param assertion Presented octet pieces.
- * @param value Stored octets.
- * @returns `true` when every piece matches.
+ * @param value Stored `OCTET STRING`.
  */
 export
 function octetStringSubstringsMatchTyped (
-    assertion: readonly PreparedOctetSubstring[],
-    value: Uint8Array,
-): boolean {
-    const buf: Buffer = Buffer.from(value);
-    return assertion.every((o) => {
-        if (o.kind === "initial") {
-            if (o.value.length > value.length) {
-                return false;
-            }
-            return Buffer.compare(value.subarray(0, o.value.length), o.value) === 0;
-        } else if (o.kind === "any") {
-            return (buf.indexOf(o.value) > -1);
-        } else if (o.kind === "final") {
-            if (o.value.length > value.length) {
-                return false;
-            }
-            return Buffer.compare(
-                value.subarray(value.length - o.value.length),
-                o.value,
-            ) === 0;
-        } else {
-            return false;
+    assertion: AssertedSubstring<Uint8Array>[],
+    value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+): boolean | undefined {
+    const stored = value.octetString;
+    const buf = Buffer.from(stored);
+    let start = 0;
+    let end = stored.length;
+    let sawPiece = false;
+    for (let i = 0; i < assertion.length; i++) {
+        const piece = assertion[i];
+        if ("control" in piece) {
+            continue;
         }
-    });
+        sawPiece = true;
+        if ("initial" in piece) {
+            const needle = piece.initial;
+            const next = start + needle.length;
+            if (next > end || Buffer.compare(stored.subarray(start, next), needle) !== 0) {
+                return false;
+            }
+            start = next;
+        } else if ("any_" in piece) {
+            const needle = piece.any_;
+            const idx = buf.indexOf(needle, start);
+            if (idx < 0 || (idx + needle.length) > end) {
+                return false;
+            }
+            start = idx + needle.length;
+        } else if ("final" in piece) {
+            const needle = piece.final;
+            const finalStart = end - needle.length;
+            if (
+                finalStart < start
+                || Buffer.compare(stored.subarray(finalStart, end), needle) !== 0
+            ) {
+                return false;
+            }
+            end = finalStart;
+        }
+    }
+    if (!sawPiece) {
+        return undefined;
+    }
+    return true;
 }
+
+octetStringSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<Uint8Array>[]>;
+
+/**
+ * `octetStringSubstringsMatch` as a `Matcher`. The assertion is an
+ * `OctetSubstringAssertion`, or filter components that are octet
+ * strings.
+ */
+export
+const octetStringSubstringsMatch: Matcher = createSubstringsMatcher(
+    octetAssertion,
+    octetStringSubstringsMatchTyped,
+    octetFilter,
+);
 
 export default octetStringSubstringsMatch;

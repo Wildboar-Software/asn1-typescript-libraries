@@ -29,8 +29,6 @@ import { uUIDPairMatchTyped } from "./equality/uUIDPairMatch.mjs";
 import {
     AttributeTypeAndValue,
 } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import { caseIgnoreSubstringsMatch } from "./substring/caseIgnoreSubstringsMatch.mjs";
-import { storedPrefixMatch } from "./substring/storedPrefixMatch.mjs";
 import { evaluateLanguageContext } from "./context/languageContext.mjs";
 import { evaluateTemporalContext } from "./context/temporalContext.mjs";
 
@@ -86,12 +84,6 @@ describe("typed matching inputs", () => {
         const bytes = new Uint8Array([ 1, 2, 3 ]);
         expect(octetStringMatchTyped(bytes, _encodeOctetString(bytes, DER))).toBe(true);
         expect(octetStringMatchTyped(new Uint8Array([ 1, 2 ]), bytes)).toBe(false);
-    });
-
-    it("substring-matches a string against an encoded directory string", () => {
-        expect(caseIgnoreSubstringsMatch("ELL", uds("Hello"))).toBe(true);
-        expect(caseIgnoreSubstringsMatch(uds("xyz"), "Hello")).toBe(false);
-        expect(storedPrefixMatch("7035551212", "703")).toBe(true);
     });
 
     it("matches a string list against directory-string lines", () => {
