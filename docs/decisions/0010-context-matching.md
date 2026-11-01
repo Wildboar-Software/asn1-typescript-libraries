@@ -11,17 +11,18 @@ nav_order: 10
 
 ## Context and Problem Statement
 
-The recently planned changes to the `EqualityMatcher` type means that it cannot
-be used for matching context values anymore, since it explicitly makes
-reference to attribute types, and takes a `matchedValues` out parameter of type
-`Attribute` for providing `matchedValuesOnly` service. Such a type signature no
-longer makes sense for comparing context values.
+The recently planned changes to the `EqualityMatcher` / `Matcher` type means
+that it cannot be used for matching context values anymore, since it explicitly
+makes reference to attribute types, and takes a `matchedValues` out parameter of
+type `Attribute` for providing `matchedValuesOnly` service. Such a type
+signature no longer makes sense for comparing context values.
 
 ## Considered Options
 
 1. Whether to pass in the context type OID or not.
 2. Whether `fallback` needs to be considered.
 3. Whether to pass in the whole context object or not.
+4. Whether a context matcher can return `undefined`.
 
 ## Decision Outcome
 
@@ -34,10 +35,10 @@ type AttributeType = OBJECT_IDENTIFIER;
 
 type ContextMatcher = (
     assertion: ASN1Element,
-    values: IteratableIterator<ASN1Element>,
+    values: IterableIterator<ASN1Element>,
     getEqualityMatcher?: (attributeType: AttributeType) => EqualityMatcher | undefined,
     flags?: number,
-) => boolean | undefined;
+) => boolean;
 ```
 
 Regarding the options considered above:
@@ -49,6 +50,9 @@ Regarding the options considered above:
    failed to match, so context matchers do not need to consider this.
 3. In light of the prior two points, the whole context object does not need to
    be passed in either: all that remains is the values.
+4. Context matchers will not return `undefined`. Context matcher seem to have
+   no such ternary concept: there is either a match or not. Malformed values
+   should just throw or be ignored.
 
 In addition to this, the values do not need to be an array. Anything iterable
 will suffice.

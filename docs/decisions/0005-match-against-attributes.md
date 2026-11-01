@@ -63,37 +63,3 @@ The boilerplate in the matcher functions saves us from more boilerplate that
 we would likely have to write at every call site anyway. The runtime engine
 deoptimization is a speculated scenario, and these functions could have an
 "inner" function that stays optimized.
-
-Therefore, type signatures for matchers will look something like this
-(based on the current plan):
-
-```typescript
-import type { ASN1Element } from "@wildboar/asn1";
-import type {
-    AttributeTypeAndValue,
-    Attribute,
-} from "@wildboar/x500/InformationFramework";
-
-type AttributeType = OBJECT_IDENTIFIER;
-
-type EqualityMatcher = (
-    assertion: ASN1Element,
-    valueOrValues: AttributeTypeAndValue | Attribute,
-    getEqualityMatcher?: (attributeType: AttributeType) => EqualityMatcher | undefined,
-    flags?: number,
-) => boolean | undefined;
-
-type OrderingMatcher = (
-    assertion: ASN1Element,
-    valueOrValues: AttributeTypeAndValue | Attribute,
-    getOrderingMatcher?: (attributeType: AttributeType) => OrderingMatcher | undefined,
-    flags?: number,
-) => number | undefined;
-
-type SubstringsMatcher = (
-    assertion: ASN1Element | FilterItem_substrings_strings_Item[],
-    valueOrValues: AttributeTypeAndValue | Attribute,
-    getEqualityMatcher?: (attributeType: AttributeType) => EqualityMatcher | undefined,
-    flags?: number,
-) => boolean | undefined;
-```

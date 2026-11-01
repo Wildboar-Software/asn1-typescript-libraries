@@ -136,6 +136,13 @@ performance sensitive: they are invoked repeatedly, perhaps millions or
 billions of times, within a search operation. So optimizations like this
 are _required_.
 
+On further consideration, I realized that this only applies per-value. As far
+as the evaluation of an entire attribute is concerned, it can still only return
+`TRUE`, `FALSE`, or `UNDEFINED`. Hence, I think an "inner" function that
+evaluates an individual value ought to return a `number` and an "outer"
+function ought to use this number to determine whether any particular value
+matched.
+
 ### Substrings Matchers
 
 Substrings matchers also present a peculiar problem for matching rule
@@ -210,9 +217,15 @@ to populate a `SubstringAssertion` without any encoding.
 
 ## Decision Outcome
 
-There SHOULD be three separate type signatures for the three types of matching
-rule implementations, even though it is theoretically possible to have a single
-type signature that covers all three.
+There SHOULD NOT be three separate type signatures for the three types of
+matching rule implementations. The only exposed differentiation between them is
+that a substrings matcher can also take `FilterItem_substrings_strings_Item[]`
+as the assertion. This can be trivially handled by throwing an error if a
+`FilterItem_substrings_strings_Item[]` is passed into an equality matching rule
+or ordering matching rule. This might result in an extra statement per matching
+rule implementation, in theory, but we are going to use some higher-order APIs
+to construct matcher functions that will largely take care of this case in one
+place.
 
 The type signature will look something like this:
 
@@ -221,28 +234,17 @@ import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 
 type AttributeType = OBJECT_IDENTIFIER;
 
-type EqualityMatcher = (
-    type_: AttributeType,
-    assertion: ASN1Element,
-    value: ASN1Element,
-    getEqualityMatcher?: (attributeType: AttributeType) => EqualityMatcher | undefined,
-    flags?: number,
-) => boolean | undefined;
-
-type OrderingMatcher = (
-    assertion: ASN1Element,
-    value: ASN1Element,
-    getOrderingMatcher?: (attributeType: AttributeType) => OrderingMatcher | undefined,
-    flags?: number,
-) => number | undefined;
-
-type SubstringsMatcher = (
+type Matcher = (
     assertion: ASN1Element | FilterItem_substrings_strings_Item[],
-    value: ASN1Element,
+    valueOrValues: AttributeTypeAndValue | Attribute,
     getEqualityMatcher?: (attributeType: AttributeType) => EqualityMatcher | undefined,
     flags?: number,
 ) => boolean | undefined;
+
+type EqualityMatcher = Matcher;
+type OrderingMatcher = Matcher;
+type SubstringsMatcher = Matcher;
 ```
 
-The type of the "getter" function passed in as the third parameter will be determined
-elsewhere.
+The type of the "getter" function passed in as the third parameter will be
+determined elsewhere.
