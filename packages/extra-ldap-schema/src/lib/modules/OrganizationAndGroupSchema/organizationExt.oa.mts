@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,7 @@ import { id_oc_organizationExt } from "../OrganizationAndGroupSchema/id-oc-organ
 // export { id_oc_organizationExt } from "../OrganizationAndGroupSchema/id-oc-organizationExt.va.mjs";
 
 
+import { ExtOrganizationalAttributes } from "../OrganizationAndGroupSchema/ExtOrganizationalAttributes.osa.mjs";
 /**
  * @summary organizationExt
  * @description
@@ -106,7 +107,7 @@ const organizationExt: OBJECT_CLASS = {
     },
     "&Superclasses": [ organization, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ...ExtOrganizationalAttributes, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "organizationExt" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "An organization" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_organizationExt /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

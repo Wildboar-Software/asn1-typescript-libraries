@@ -6,6 +6,7 @@ import {
 
 
 
+import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
 /**
  * @summary id_sc_accessControlSubentry
  * @description

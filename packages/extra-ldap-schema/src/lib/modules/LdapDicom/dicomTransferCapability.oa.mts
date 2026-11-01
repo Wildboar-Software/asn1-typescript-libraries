@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_dicomTransferCapability } from "../LdapDicom/id-oc-dicomTransferC
 // export { id_oc_dicomTransferCapability } from "../LdapDicom/id-oc-dicomTransferCapability.va.mjs";
 
 
+import { dicomSOPClass } from "../LdapDicom/dicomSOPClass.oa.mjs";
+import { dicomTransferRole } from "../LdapDicom/dicomTransferRole.oa.mjs";
+import { dicomTransferSyntax } from "../LdapDicom/dicomTransferSyntax.oa.mjs";
 /**
  * @summary dicomTransferCapability
  * @description
@@ -108,7 +111,7 @@ const dicomTransferCapability: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ dicomSOPClass, dicomTransferRole, dicomTransferSyntax, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dicomTransferCapability" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Transfer Capabilities for an Application Entity" /* OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_nsSaslMapping } from "../LdapCore389/id-oc-nsSaslMapping.va.mjs";
 // export { id_oc_nsSaslMapping } from "../LdapCore389/id-oc-nsSaslMapping.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nsSaslMapRegexString } from "../LdapCore389/nsSaslMapRegexString.oa.mjs";
+import { nsSaslMapBaseDNTemplate } from "../LdapCore389/nsSaslMapBaseDNTemplate.oa.mjs";
+import { nsSaslMapFilterTemplate } from "../LdapCore389/nsSaslMapFilterTemplate.oa.mjs";
 /**
  * @summary nsSaslMapping
  * @description
@@ -109,7 +113,7 @@ const nsSaslMapping: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, nsSaslMapRegexString, nsSaslMapBaseDNTemplate, nsSaslMapFilterTemplate, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ nsSaslMapPriority, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsSaslMapping" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,

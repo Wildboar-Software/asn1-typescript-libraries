@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,18 @@ import { id_oc_nTFRSSubscriber } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSSu
 // export { id_oc_nTFRSSubscriber } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSSubscriber.va.mjs";
 
 
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { fRSUpdateTimeout } from "../MSUser/fRSUpdateTimeout.oa.mjs";
+import { fRSFaultCondition } from "../MSUser/fRSFaultCondition.oa.mjs";
+import { fRSServiceCommand } from "../MSUser/fRSServiceCommand.oa.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { fRSFlags } from "../MSUser/fRSFlags.oa.mjs";
+import { fRSMemberReference } from "../MSUser/fRSMemberReference.oa.mjs";
+import { fRSServiceCommandStatus } from "../MSUser/fRSServiceCommandStatus.oa.mjs";
+import { fRSTimeLastCommand } from "../LdapSchema2ldifMicrosoft/fRSTimeLastCommand.oa.mjs";
+import { fRSTimeLastConfigChange } from "../LdapSchema2ldifMicrosoft/fRSTimeLastConfigChange.oa.mjs";
+import { fRSRootPath } from "../MSUser/fRSRootPath.oa.mjs";
+import { fRSStagingPath } from "../MSUser/fRSStagingPath.oa.mjs";
 /**
  * @summary nTFRSSubscriber
  * @description
@@ -113,8 +125,8 @@ const nTFRSSubscriber: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ fRSRootPath, fRSStagingPath, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schedule, fRSUpdateTimeout, fRSFaultCondition, fRSServiceCommand, fRSExtensions, fRSFlags, fRSMemberReference, fRSServiceCommandStatus, fRSTimeLastCommand, fRSTimeLastConfigChange, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTFRSSubscriber" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTFRSSubscriber /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

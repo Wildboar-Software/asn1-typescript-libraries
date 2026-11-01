@@ -14,6 +14,7 @@ import { id_at_dnsTimeoutInMilliseconds } from "../DNSFramework/id-at-dnsTimeout
 // export { id_at_dnsTimeoutInMilliseconds } from "../DNSFramework/id-at-dnsTimeoutInMilliseconds.va.mjs";
 
 
+import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 /**
  * @summary dnsTimeoutInMilliseconds
  * @description

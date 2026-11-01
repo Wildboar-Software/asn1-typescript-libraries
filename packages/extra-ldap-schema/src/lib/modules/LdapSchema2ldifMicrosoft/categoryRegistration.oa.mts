@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_categoryRegistration } from "../LdapSchema2ldifMicrosoft/id-oc-ca
 // export { id_oc_categoryRegistration } from "../LdapSchema2ldifMicrosoft/id-oc-categoryRegistration.va.mjs";
 
 
+import { localeID } from "../MSUser/localeID.oa.mjs";
+import { categoryId } from "../MSUser/categoryId.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { localizedDescription } from "../MSUser/localizedDescription.oa.mjs";
 /**
  * @summary categoryRegistration
  * @description
@@ -105,7 +109,7 @@ const categoryRegistration: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ localeID, categoryId, managedBy, localizedDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "categoryRegistration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_categoryRegistration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

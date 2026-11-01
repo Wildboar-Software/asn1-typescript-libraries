@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { h320_id_oc } from "../H323-X500-Schema/h320-id-oc.va.mjs";
 // export { h320_id_oc } from "../H323-X500-Schema/h320-id-oc.va.mjs";
 
 
+import { h320IdentityCC } from "../H323-X500-Schema/h320IdentityCC.oa.mjs";
+import { h320IdentityNDC } from "../H323-X500-Schema/h320IdentityNDC.oa.mjs";
+import { h320IdentitySN } from "../H323-X500-Schema/h320IdentitySN.oa.mjs";
+import { h320IdentityServiceLevel } from "../H323-X500-Schema/h320IdentityServiceLevel.oa.mjs";
+import { h320IdentityExtension } from "../H323-X500-Schema/h320IdentityExtension.oa.mjs";
 /**
  * @summary h320Identity
  * @description
@@ -104,7 +109,7 @@ const h320Identity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ h320IdentityCC, h320IdentityNDC, h320IdentitySN, h320IdentityServiceLevel, h320IdentityExtension, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], h320_id_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

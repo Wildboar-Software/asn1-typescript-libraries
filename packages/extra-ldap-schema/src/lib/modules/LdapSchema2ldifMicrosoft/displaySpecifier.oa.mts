@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,20 @@ import { id_oc_displaySpecifier } from "../LdapSchema2ldifMicrosoft/id-oc-displa
 // export { id_oc_displaySpecifier } from "../LdapSchema2ldifMicrosoft/id-oc-displaySpecifier.va.mjs";
 
 
+import { iconPath } from "../MSUser/iconPath.oa.mjs";
+import { creationWizard } from "../MSUser/creationWizard.oa.mjs";
+import { contextMenu } from "../MSUser/contextMenu.oa.mjs";
+import { adminPropertyPages } from "../MSUser/adminPropertyPages.oa.mjs";
+import { shellPropertyPages } from "../MSUser/shellPropertyPages.oa.mjs";
+import { classDisplayName } from "../MSUser/classDisplayName.oa.mjs";
+import { adminContextMenu } from "../MSUser/adminContextMenu.oa.mjs";
+import { shellContextMenu } from "../MSUser/shellContextMenu.oa.mjs";
+import { attributeDisplayNames } from "../MSUser/attributeDisplayNames.oa.mjs";
+import { treatAsLeaf } from "../MSUser/treatAsLeaf.oa.mjs";
+import { createDialog } from "../MSUser/createDialog.oa.mjs";
+import { createWizardExt } from "../MSUser/createWizardExt.oa.mjs";
+import { scopeFlags } from "../MSUser/scopeFlags.oa.mjs";
+import { queryFilter } from "../MSUser/queryFilter.oa.mjs";
 /**
  * @summary displaySpecifier
  * @description
@@ -115,7 +129,7 @@ const displaySpecifier: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iconPath, creationWizard, contextMenu, adminPropertyPages, shellPropertyPages, classDisplayName, adminContextMenu, shellContextMenu, attributeDisplayNames, treatAsLeaf, createDialog, createWizardExt, scopeFlags, queryFilter, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "displaySpecifier" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_displaySpecifier /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

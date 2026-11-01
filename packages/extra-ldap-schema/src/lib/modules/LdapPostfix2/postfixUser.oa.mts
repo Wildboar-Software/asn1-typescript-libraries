@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_postfixUser } from "../LdapPostfix2/id-oc-postfixUser.va.mjs";
 // export { id_oc_postfixUser } from "../LdapPostfix2/id-oc-postfixUser.va.mjs";
 
 
+import { mailacceptinggeneralid } from "../LdapPostfix2/mailacceptinggeneralid.oa.mjs";
+import { maildrop } from "../LdapPostfix2/maildrop.oa.mjs";
 /**
  * @summary postfixUser
  * @description
@@ -106,7 +108,7 @@ const postfixUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailacceptinggeneralid, maildrop, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "postfixUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Postfix mail user class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_postfixUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

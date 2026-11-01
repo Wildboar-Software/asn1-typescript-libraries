@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,18 @@ import { id_oc_nTDSDSA } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSDSA.va.mjs"
 // export { id_oc_nTDSDSA } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSDSA.va.mjs";
 
 
+import { hasMasterNCs } from "../MSUser/hasMasterNCs.oa.mjs";
+import { hasPartialReplicaNCs } from "../MSUser/hasPartialReplicaNCs.oa.mjs";
+import { dMDLocation } from "../MSUser/dMDLocation.oa.mjs";
+import { invocationId } from "../MSUser/invocationId.oa.mjs";
+import { networkAddress } from "../MSUser/networkAddress.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { fRSRootPath } from "../MSUser/fRSRootPath.oa.mjs";
+import { serverReference } from "../MSUser/serverReference.oa.mjs";
+import { lastBackupRestorationTime } from "../MSUser/lastBackupRestorationTime.oa.mjs";
+import { queryPolicyObject } from "../MSUser/queryPolicyObject.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { retiredReplDSASignatures } from "../MSUser/retiredReplDSASignatures.oa.mjs";
 /**
  * @summary nTDSDSA
  * @description
@@ -113,7 +125,7 @@ const nTDSDSA: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ applicationSettings, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ hasMasterNCs, hasPartialReplicaNCs, dMDLocation, invocationId, networkAddress, options, fRSRootPath, serverReference, lastBackupRestorationTime, queryPolicyObject, managedBy, retiredReplDSASignatures, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTDSDSA" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTDSDSA /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
+import { type PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
 // export { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
 import { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.mjs";
 // export { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.mjs";

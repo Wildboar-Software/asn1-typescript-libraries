@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_linkTrackVolEntry } from "../LdapSchema2ldifMicrosoft/id-oc-linkT
 // export { id_oc_linkTrackVolEntry } from "../LdapSchema2ldifMicrosoft/id-oc-linkTrackVolEntry.va.mjs";
 
 
+import { linkTrackSecret } from "../MSUser/linkTrackSecret.oa.mjs";
+import { volTableIdxGUID } from "../MSUser/volTableIdxGUID.oa.mjs";
+import { volTableGUID } from "../MSUser/volTableGUID.oa.mjs";
+import { currMachineId } from "../MSUser/currMachineId.oa.mjs";
+import { timeVolChange } from "../MSUser/timeVolChange.oa.mjs";
+import { timeRefresh } from "../MSUser/timeRefresh.oa.mjs";
+import { seqNotification } from "../MSUser/seqNotification.oa.mjs";
+import { objectCount } from "../MSUser/objectCount.oa.mjs";
 /**
  * @summary linkTrackVolEntry
  * @description
@@ -109,7 +117,7 @@ const linkTrackVolEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ linkTrackSecret, volTableIdxGUID, volTableGUID, currMachineId, timeVolChange, timeRefresh, seqNotification, objectCount, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "linkTrackVolEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_linkTrackVolEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

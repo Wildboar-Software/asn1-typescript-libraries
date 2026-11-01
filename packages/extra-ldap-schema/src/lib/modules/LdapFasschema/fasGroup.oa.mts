@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_fasGroup } from "../LdapFasschema/id-oc-fasGroup.va.mjs";
 // export { id_oc_fasGroup } from "../LdapFasschema/id-oc-fasGroup.va.mjs";
 
 
+import { fasURL } from "../LdapFasschema/fasURL.oa.mjs";
+import { fasMailingList } from "../LdapFasschema/fasMailingList.oa.mjs";
+import { fasIRCChannel } from "../LdapFasschema/fasIRCChannel.oa.mjs";
+import { fasDiscussionURL } from "../LdapFasschema/fasDiscussionURL.oa.mjs";
 /**
  * @summary fasGroup
  * @description
@@ -108,7 +112,7 @@ const fasGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ ipaUserGroup, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fasURL, fasMailingList, fasIRCChannel, fasDiscussionURL, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "fasGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "FAS group objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_fasGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_mSMQMigratedUser } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQMi
 // export { id_oc_mSMQMigratedUser } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQMigratedUser.va.mjs";
 
 
+import { objectSid } from "../MSUser/objectSid.oa.mjs";
+import { mSMQSignCertificates } from "../MSUser/mSMQSignCertificates.oa.mjs";
+import { mSMQDigests } from "../MSUser/mSMQDigests.oa.mjs";
+import { mSMQDigestsMig } from "../MSUser/mSMQDigestsMig.oa.mjs";
+import { mSMQSignCertificatesMig } from "../MSUser/mSMQSignCertificatesMig.oa.mjs";
+import { mSMQUserSid } from "../MSUser/mSMQUserSid.oa.mjs";
 /**
  * @summary mSMQMigratedUser
  * @description
@@ -107,7 +113,7 @@ const mSMQMigratedUser: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ objectSid, mSMQSignCertificates, mSMQDigests, mSMQDigestsMig, mSMQSignCertificatesMig, mSMQUserSid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mSMQMigratedUser" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mSMQMigratedUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

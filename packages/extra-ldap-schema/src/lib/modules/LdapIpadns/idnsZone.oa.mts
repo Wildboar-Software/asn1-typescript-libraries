@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,21 @@ import { id_oc_idnsZone } from "../LdapIpadns/id-oc-idnsZone.va.mjs";
 // export { id_oc_idnsZone } from "../LdapIpadns/id-oc-idnsZone.va.mjs";
 
 
+import { idnsUpdatePolicy } from "../LdapIpadns/idnsUpdatePolicy.oa.mjs";
+import { idnsAllowQuery } from "../LdapIpadns/idnsAllowQuery.oa.mjs";
+import { idnsAllowTransfer } from "../LdapIpadns/idnsAllowTransfer.oa.mjs";
+import { idnsAllowSyncPTR } from "../LdapIpadns/idnsAllowSyncPTR.oa.mjs";
+import { idnsForwardPolicy } from "../LdapIpadns/idnsForwardPolicy.oa.mjs";
+import { idnsForwarders } from "../LdapIpadns/idnsForwarders.oa.mjs";
+import { idnsName } from "../LdapIpadns/idnsName.oa.mjs";
+import { idnsZoneActive } from "../LdapIpadns/idnsZoneActive.oa.mjs";
+import { idnsSOAmName } from "../LdapIpadns/idnsSOAmName.oa.mjs";
+import { idnsSOArName } from "../LdapIpadns/idnsSOArName.oa.mjs";
+import { idnsSOAserial } from "../LdapIpadns/idnsSOAserial.oa.mjs";
+import { idnsSOArefresh } from "../LdapIpadns/idnsSOArefresh.oa.mjs";
+import { idnsSOAretry } from "../LdapIpadns/idnsSOAretry.oa.mjs";
+import { idnsSOAexpire } from "../LdapIpadns/idnsSOAexpire.oa.mjs";
+import { idnsSOAminimum } from "../LdapIpadns/idnsSOAminimum.oa.mjs";
 /**
  * @summary idnsZone
  * @description
@@ -117,8 +132,8 @@ const idnsZone: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ idnsRecord, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ idnsName, idnsZoneActive, idnsSOAmName, idnsSOArName, idnsSOAserial, idnsSOArefresh, idnsSOAretry, idnsSOAexpire, idnsSOAminimum, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ idnsUpdatePolicy, idnsAllowQuery, idnsAllowTransfer, idnsAllowSyncPTR, idnsForwardPolicy, idnsForwarders, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "idnsZone" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Zone class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_idnsZone /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

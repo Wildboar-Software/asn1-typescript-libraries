@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 
 
+import { sambaPwdLastSet } from "../SambaV3Schema/sambaPwdLastSet.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
+import { sambaDomainName } from "../SambaV3Schema/sambaDomainName.oa.mjs";
+import { sambaNTPassword } from "../SambaV3Schema/sambaNTPassword.oa.mjs";
+import { sambaTrustFlags } from "../SambaV3Schema/sambaTrustFlags.oa.mjs";
 /**
  * @summary sambaTrustPassword
  * @description
@@ -103,8 +108,8 @@ const sambaTrustPassword: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ sambaDomainName, sambaNTPassword, sambaTrustFlags, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sambaPwdLastSet, sambaSID, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sambaTrustPassword" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Samba Trust Password" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7165, 2, 2, 14,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

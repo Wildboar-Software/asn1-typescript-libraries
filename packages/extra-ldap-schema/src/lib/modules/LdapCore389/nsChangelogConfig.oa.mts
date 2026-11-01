@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_nsChangelogConfig } from "../LdapCore389/id-oc-nsChangelogConfig.
 // export { id_oc_nsChangelogConfig } from "../LdapCore389/id-oc-nsChangelogConfig.va.mjs";
 
 
+import { nsslapd_changelogmaxage } from "../LdapCore389/nsslapd-changelogmaxage.oa.mjs";
+import { nsslapd_changelogtrim_interval } from "../LdapCore389/nsslapd-changelogtrim-interval.oa.mjs";
+import { nsslapd_changelogmaxentries } from "../LdapCore389/nsslapd-changelogmaxentries.oa.mjs";
+import { nsslapd_changelogsuffix } from "../LdapCore389/nsslapd-changelogsuffix.oa.mjs";
+import { nsslapd_changelogcompactdb_interval } from "../LdapCore389/nsslapd-changelogcompactdb-interval.oa.mjs";
+import { nsslapd_encryptionalgorithm } from "../LdapCore389/nsslapd-encryptionalgorithm.oa.mjs";
+import { nsSymmetricKey } from "../LdapCore389/nsSymmetricKey.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nsslapd_changelogdir } from "../LdapCore389/nsslapd-changelogdir.oa.mjs";
 /**
  * @summary nsChangelogConfig
  * @description
@@ -111,8 +120,8 @@ const nsChangelogConfig: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, nsslapd_changelogdir, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsslapd_changelogmaxage, nsslapd_changelogtrim_interval, nsslapd_changelogmaxentries, nsslapd_changelogsuffix, nsslapd_changelogcompactdb_interval, nsslapd_encryptionalgorithm, nsSymmetricKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsChangelogConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Configuration of the changelog5 object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsChangelogConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_serviceInstance } from "../LdapSchema2ldifMicrosoft/id-oc-service
 // export { id_oc_serviceInstance } from "../LdapSchema2ldifMicrosoft/id-oc-serviceInstance.va.mjs";
 
 
+import { winsockAddresses } from "../MSUser/winsockAddresses.oa.mjs";
+import { serviceInstanceVersion } from "../MSUser/serviceInstanceVersion.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { serviceClassID } from "../MSUser/serviceClassID.oa.mjs";
 /**
  * @summary serviceInstance
  * @description
@@ -105,8 +109,8 @@ const serviceInstance: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ connectionPoint, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ displayName, serviceClassID, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ winsockAddresses, serviceInstanceVersion, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "serviceInstance" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_serviceInstance /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

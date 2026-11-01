@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_gLUE2Share } from "../LdapGlue508Share/id-oc-gLUE2Share.va.mjs";
 // export { id_oc_gLUE2Share } from "../LdapGlue508Share/id-oc-gLUE2Share.va.mjs";
 
 
+import { gLUE2ShareDescription } from "../LdapGlue508Share/gLUE2ShareDescription.oa.mjs";
+import { gLUE2ShareEndpointForeignKey } from "../LdapGlue508Share/gLUE2ShareEndpointForeignKey.oa.mjs";
+import { gLUE2ShareResourceForeignKey } from "../LdapGlue508Share/gLUE2ShareResourceForeignKey.oa.mjs";
+import { gLUE2ShareID } from "../LdapGlue508Share/gLUE2ShareID.oa.mjs";
+import { gLUE2ShareServiceForeignKey } from "../LdapGlue508Share/gLUE2ShareServiceForeignKey.oa.mjs";
 /**
  * @summary gLUE2Share
  * @description
@@ -107,8 +112,8 @@ const gLUE2Share: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ShareID, gLUE2ShareServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ShareDescription, gLUE2ShareEndpointForeignKey, gLUE2ShareResourceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Share" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A share" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Share /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

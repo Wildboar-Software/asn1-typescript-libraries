@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,15 @@ import { id_oc_netscapeServer } from "../LdapCommon389/id-oc-netscapeServer.va.m
 // export { id_oc_netscapeServer } from "../LdapCommon389/id-oc-netscapeServer.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { serverRoot } from "../LdapCommon389/serverRoot.oa.mjs";
+import { serverProductName } from "../LdapCommon389/serverProductName.oa.mjs";
+import { serverVersionNumber } from "../LdapCommon389/serverVersionNumber.oa.mjs";
+import { installationTimeStamp } from "../LdapCommon389/installationTimeStamp.oa.mjs";
+import { administratorContactInfo } from "../LdapCommon389/administratorContactInfo.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { adminUrl } from "../LdapCommon389/adminUrl.oa.mjs";
+import { serverHostName } from "../LdapCommon389/serverHostName.oa.mjs";
 /**
  * @summary netscapeServer
  * @description
@@ -115,7 +124,7 @@ const netscapeServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, serverRoot, serverProductName, serverVersionNumber, installationTimeStamp, administratorContactInfo, userPassword, adminUrl, serverHostName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "netscapeServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_netscapeServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

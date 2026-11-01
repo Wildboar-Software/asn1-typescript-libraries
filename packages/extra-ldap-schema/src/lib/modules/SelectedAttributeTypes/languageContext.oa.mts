@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { LanguageContextSyntax, _decode_LanguageContextSyntax, _encode_LanguageContextSyntax } from "../SelectedAttributeTypes/LanguageContextSyntax.ta.mjs";
+import { type LanguageContextSyntax, _decode_LanguageContextSyntax, _encode_LanguageContextSyntax } from "../SelectedAttributeTypes/LanguageContextSyntax.ta.mjs";
 // export { LanguageContextSyntax, _decode_LanguageContextSyntax, _encode_LanguageContextSyntax } from "../SelectedAttributeTypes/LanguageContextSyntax.ta.mjs";
 import { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va.mjs";
 // export { id_avc_language } from "../SelectedAttributeTypes/id-avc-language.va.mjs";

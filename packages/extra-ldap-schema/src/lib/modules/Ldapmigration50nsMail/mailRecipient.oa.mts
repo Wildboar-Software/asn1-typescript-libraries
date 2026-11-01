@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,22 @@ import { id_oc_mailRecipient } from "../Ldapmigration50nsMail/id-oc-mailRecipien
 // export { id_oc_mailRecipient } from "../Ldapmigration50nsMail/id-oc-mailRecipient.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailAlternateAddress } from "../QMailSchema/mailAlternateAddress.oa.mjs";
+import { mailHost } from "../QMailSchema/mailHost.oa.mjs";
+import { mailRoutingAddress } from "../InetMailSchema/mailRoutingAddress.oa.mjs";
+import { mailAccessDomain } from "../Ldapmigration50nsMail/mailAccessDomain.oa.mjs";
+import { mailAutoReplyMode } from "../Ldapmigration50nsMail/mailAutoReplyMode.oa.mjs";
+import { mailAutoReplyText } from "../Ldapmigration50nsMail/mailAutoReplyText.oa.mjs";
+import { mailDeliveryOption } from "../Ldapmigration50nsMail/mailDeliveryOption.oa.mjs";
+import { mailForwardingAddress } from "../Ldapmigration50nsMail/mailForwardingAddress.oa.mjs";
+import { mailMessageStore } from "../Ldapmigration50nsMail/mailMessageStore.oa.mjs";
+import { mailProgramDeliveryInfo } from "../Ldapmigration50nsMail/mailProgramDeliveryInfo.oa.mjs";
+import { mailQuota } from "../Ldapmigration50nsMail/mailQuota.oa.mjs";
+import { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 /**
  * @summary mailRecipient
  * @description
@@ -123,7 +139,7 @@ const mailRecipient: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, mail, mailAlternateAddress, mailHost, mailRoutingAddress, mailAccessDomain, mailAutoReplyMode, mailAutoReplyText, mailDeliveryOption, mailForwardingAddress, mailMessageStore, mailProgramDeliveryInfo, mailQuota, multiLineDescription, uid, userPassword, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailRecipient" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailRecipient /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

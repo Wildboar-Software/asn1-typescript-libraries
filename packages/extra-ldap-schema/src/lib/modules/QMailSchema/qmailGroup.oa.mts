@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -72,6 +72,22 @@ import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /*
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 
 
+import { dnmember } from "../QMailSchema/dnmember.oa.mjs";
+import { rfc822member } from "../QMailSchema/rfc822member.oa.mjs";
+import { filtermember } from "../QMailSchema/filtermember.oa.mjs";
+import { senderconfirm } from "../QMailSchema/senderconfirm.oa.mjs";
+import { membersonly } from "../QMailSchema/membersonly.oa.mjs";
+import { confirmtext } from "../QMailSchema/confirmtext.oa.mjs";
+import { dnmoderator } from "../QMailSchema/dnmoderator.oa.mjs";
+import { rfc822moderator } from "../QMailSchema/rfc822moderator.oa.mjs";
+import { moderatortext } from "../QMailSchema/moderatortext.oa.mjs";
+import { dnsender } from "../QMailSchema/dnsender.oa.mjs";
+import { rfc822sender } from "../QMailSchema/rfc822sender.oa.mjs";
+import { filtersender } from "../QMailSchema/filtersender.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailAlternateAddress } from "../QMailSchema/mailAlternateAddress.oa.mjs";
+import { mailMessageStore } from "../QMailSchema/mailMessageStore.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
 /**
  * @summary qmailGroup
  * @description
@@ -120,8 +136,8 @@ const qmailGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, mailAlternateAddress, mailMessageStore, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnmember, rfc822member, filtermember, senderconfirm, membersonly, confirmtext, dnmoderator, rfc822moderator, moderatortext, dnsender, rfc822sender, filtersender, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "qmailGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "QMail-LDAP Group" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7914, 1, 3, 2, 1,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

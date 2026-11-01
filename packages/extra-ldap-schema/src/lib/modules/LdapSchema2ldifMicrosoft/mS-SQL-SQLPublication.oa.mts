@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,18 @@ import { id_oc_mS_SQL_SQLPublication } from "../LdapSchema2ldifMicrosoft/id-oc-m
 // export { id_oc_mS_SQL_SQLPublication } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-SQLPublication.va.mjs";
 
 
+import { mS_SQL_Name } from "../MSUser/mS-SQL-Name.oa.mjs";
+import { mS_SQL_Status } from "../MSUser/mS-SQL-Status.oa.mjs";
+import { mS_SQL_Description } from "../MSUser/mS-SQL-Description.oa.mjs";
+import { mS_SQL_Type } from "../MSUser/mS-SQL-Type.oa.mjs";
+import { mS_SQL_Database } from "../MSUser/mS-SQL-Database.oa.mjs";
+import { mS_SQL_AllowAnonymousSubscription } from "../MSUser/mS-SQL-AllowAnonymousSubscription.oa.mjs";
+import { mS_SQL_Publisher } from "../MSUser/mS-SQL-Publisher.oa.mjs";
+import { mS_SQL_AllowKnownPullSubscription } from "../MSUser/mS-SQL-AllowKnownPullSubscription.oa.mjs";
+import { mS_SQL_AllowImmediateUpdatingSubscription } from "../MSUser/mS-SQL-AllowImmediateUpdatingSubscription.oa.mjs";
+import { mS_SQL_AllowQueuedUpdatingSubscription } from "../MSUser/mS-SQL-AllowQueuedUpdatingSubscription.oa.mjs";
+import { mS_SQL_AllowSnapshotFilesFTPDownloading } from "../MSUser/mS-SQL-AllowSnapshotFilesFTPDownloading.oa.mjs";
+import { mS_SQL_ThirdParty } from "../MSUser/mS-SQL-ThirdParty.oa.mjs";
 /**
  * @summary mS_SQL_SQLPublication
  * @description
@@ -113,7 +125,7 @@ const mS_SQL_SQLPublication: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mS_SQL_Name, mS_SQL_Status, mS_SQL_Description, mS_SQL_Type, mS_SQL_Database, mS_SQL_AllowAnonymousSubscription, mS_SQL_Publisher, mS_SQL_AllowKnownPullSubscription, mS_SQL_AllowImmediateUpdatingSubscription, mS_SQL_AllowQueuedUpdatingSubscription, mS_SQL_AllowSnapshotFilesFTPDownloading, mS_SQL_ThirdParty, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mS-SQL-SQLPublication" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mS_SQL_SQLPublication /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

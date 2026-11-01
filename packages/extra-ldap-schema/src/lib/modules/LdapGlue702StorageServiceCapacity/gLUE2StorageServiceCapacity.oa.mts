@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_gLUE2StorageServiceCapacity } from "../LdapGlue702StorageServiceC
 // export { id_oc_gLUE2StorageServiceCapacity } from "../LdapGlue702StorageServiceCapacity/id-oc-gLUE2StorageServiceCapacity.va.mjs";
 
 
+import { gLUE2StorageServiceCapacityTotalSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityTotalSize.oa.mjs";
+import { gLUE2StorageServiceCapacityFreeSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityFreeSize.oa.mjs";
+import { gLUE2StorageServiceCapacityUsedSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityUsedSize.oa.mjs";
+import { gLUE2StorageServiceCapacityReservedSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityReservedSize.oa.mjs";
+import { gLUE2StorageServiceCapacityID } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityID.oa.mjs";
+import { gLUE2StorageServiceCapacityType } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityType.oa.mjs";
+import { gLUE2StorageServiceCapacityStorageServiceForeignKey } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityStorageServiceForeignKey.oa.mjs";
 /**
  * @summary gLUE2StorageServiceCapacity
  * @description
@@ -109,8 +116,8 @@ const gLUE2StorageServiceCapacity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2StorageServiceCapacityID, gLUE2StorageServiceCapacityType, gLUE2StorageServiceCapacityStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2StorageServiceCapacityTotalSize, gLUE2StorageServiceCapacityFreeSize, gLUE2StorageServiceCapacityUsedSize, gLUE2StorageServiceCapacityReservedSize, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2StorageServiceCapacity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Description of the size and state of an homogeneous storage extent" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2StorageServiceCapacity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

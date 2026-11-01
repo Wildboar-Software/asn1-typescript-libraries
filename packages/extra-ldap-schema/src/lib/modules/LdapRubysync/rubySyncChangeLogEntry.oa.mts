@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_rubySyncChangeLogEntry } from "../LdapRubysync/id-oc-rubySyncChan
 // export { id_oc_rubySyncChangeLogEntry } from "../LdapRubysync/id-oc-rubySyncChangeLogEntry.va.mjs";
 
 
+import { rubySyncContext } from "../LdapRubysync/rubySyncContext.oa.mjs";
+import { rubySyncDumpEntry } from "../LdapRubysync/rubySyncDumpEntry.oa.mjs";
+import { changes } from "../DSEE/changes.oa.mjs";
+import { newRdn } from "../DSEE/newRdn.oa.mjs";
+import { deleteOldRdn } from "../DSEE/deleteOldRdn.oa.mjs";
+import { newSuperior } from "../DSEE/newSuperior.oa.mjs";
+import { changeNumber } from "../DSEE/changeNumber.oa.mjs";
+import { changeType } from "../DSEE/changeType.oa.mjs";
+import { rubySyncSourceInfo } from "../LdapRubysync/rubySyncSourceInfo.oa.mjs";
 /**
  * @summary rubySyncChangeLogEntry
  * @description
@@ -111,8 +120,8 @@ const rubySyncChangeLogEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ changeNumber, changeType, rubySyncSourceInfo, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rubySyncContext, rubySyncDumpEntry, changes, newRdn, deleteOldRdn, newSuperior, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rubySyncChangeLogEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Useful for LDAP server without native public changelog support (see https://opends.dev.java.net/public/standards/draft-good-ldap-changelog.txt)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rubySyncChangeLogEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

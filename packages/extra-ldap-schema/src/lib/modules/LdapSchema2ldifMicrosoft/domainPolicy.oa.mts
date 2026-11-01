@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,29 @@ import { id_oc_domainPolicy } from "../LdapSchema2ldifMicrosoft/id-oc-domainPoli
 // export { id_oc_domainPolicy } from "../LdapSchema2ldifMicrosoft/id-oc-domainPolicy.va.mjs";
 
 
+import { authenticationOptions } from "../MSUser/authenticationOptions.oa.mjs";
+import { forceLogoff } from "../MSUser/forceLogoff.oa.mjs";
+import { defaultLocalPolicyObject } from "../MSUser/defaultLocalPolicyObject.oa.mjs";
+import { lockoutDuration } from "../MSUser/lockoutDuration.oa.mjs";
+import { lockOutObservationWindow } from "../MSUser/lockOutObservationWindow.oa.mjs";
+import { lockoutThreshold } from "../MSUser/lockoutThreshold.oa.mjs";
+import { maxPwdAge } from "../MSUser/maxPwdAge.oa.mjs";
+import { maxRenewAge } from "../MSUser/maxRenewAge.oa.mjs";
+import { maxTicketAge } from "../MSUser/maxTicketAge.oa.mjs";
+import { minPwdAge } from "../MSUser/minPwdAge.oa.mjs";
+import { minPwdLength } from "../MSUser/minPwdLength.oa.mjs";
+import { minTicketAge } from "../MSUser/minTicketAge.oa.mjs";
+import { pwdProperties } from "../MSUser/pwdProperties.oa.mjs";
+import { pwdHistoryLength } from "../MSUser/pwdHistoryLength.oa.mjs";
+import { proxyLifetime } from "../MSUser/proxyLifetime.oa.mjs";
+import { eFSPolicy } from "../MSUser/eFSPolicy.oa.mjs";
+import { publicKeyPolicy } from "../MSUser/publicKeyPolicy.oa.mjs";
+import { domainWidePolicy } from "../MSUser/domainWidePolicy.oa.mjs";
+import { domainPolicyReference } from "../MSUser/domainPolicyReference.oa.mjs";
+import { qualityOfService } from "../MSUser/qualityOfService.oa.mjs";
+import { ipsecPolicyReference } from "../MSUser/ipsecPolicyReference.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { domainCAs } from "../MSUser/domainCAs.oa.mjs";
 /**
  * @summary domainPolicy
  * @description
@@ -124,7 +147,7 @@ const domainPolicy: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ authenticationOptions, forceLogoff, defaultLocalPolicyObject, lockoutDuration, lockOutObservationWindow, lockoutThreshold, maxPwdAge, maxRenewAge, maxTicketAge, minPwdAge, minPwdLength, minTicketAge, pwdProperties, pwdHistoryLength, proxyLifetime, eFSPolicy, publicKeyPolicy, domainWidePolicy, domainPolicyReference, qualityOfService, ipsecPolicyReference, managedBy, domainCAs, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "domainPolicy" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_domainPolicy /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

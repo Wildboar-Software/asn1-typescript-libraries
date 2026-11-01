@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_dnaSharedConfig } from "../LdapDnaPlugin/id-oc-dnaSharedConfig.va
 // export { id_oc_dnaSharedConfig } from "../LdapDnaPlugin/id-oc-dnaSharedConfig.va.mjs";
 
 
+import { dnaHostname } from "../LdapDnaPlugin/dnaHostname.oa.mjs";
+import { dnaPortNum } from "../LdapDnaPlugin/dnaPortNum.oa.mjs";
+import { dnaSecurePortNum } from "../LdapDnaPlugin/dnaSecurePortNum.oa.mjs";
+import { dnaRemoteBindMethod } from "../LdapDnaPlugin/dnaRemoteBindMethod.oa.mjs";
+import { dnaRemoteConnProtocol } from "../LdapDnaPlugin/dnaRemoteConnProtocol.oa.mjs";
+import { dnaRemainingValues } from "../LdapDnaPlugin/dnaRemainingValues.oa.mjs";
 /**
  * @summary dnaSharedConfig
  * @description
@@ -110,7 +116,7 @@ const dnaSharedConfig: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnaHostname, dnaPortNum, dnaSecurePortNum, dnaRemoteBindMethod, dnaRemoteConnProtocol, dnaRemainingValues, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dnaSharedConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DNA Shared Configuration" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dnaSharedConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

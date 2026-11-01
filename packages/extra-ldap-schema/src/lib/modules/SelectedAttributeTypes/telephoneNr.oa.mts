@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { type TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 // export { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 import { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.mjs";
 // export { id_lsx_telephoneNr } from "../SelectedAttributeTypes/id-lsx-telephoneNr.va.mjs";

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,22 @@ import { id_oc_dnaPluginConfig } from "../LdapDnaPlugin/id-oc-dnaPluginConfig.va
 // export { id_oc_dnaPluginConfig } from "../LdapDnaPlugin/id-oc-dnaPluginConfig.va.mjs";
 
 
+import { dnaType } from "../LdapDnaPlugin/dnaType.oa.mjs";
+import { dnaPrefix } from "../LdapDnaPlugin/dnaPrefix.oa.mjs";
+import { dnaNextValue } from "../LdapDnaPlugin/dnaNextValue.oa.mjs";
+import { dnaMaxValue } from "../LdapDnaPlugin/dnaMaxValue.oa.mjs";
+import { dnaInterval } from "../LdapDnaPlugin/dnaInterval.oa.mjs";
+import { dnaMagicRegen } from "../LdapDnaPlugin/dnaMagicRegen.oa.mjs";
+import { dnaFilter } from "../LdapDnaPlugin/dnaFilter.oa.mjs";
+import { dnaScope } from "../LdapDnaPlugin/dnaScope.oa.mjs";
+import { dnaExcludeScope } from "../LdapDnaPlugin/dnaExcludeScope.oa.mjs";
+import { dnaSharedCfgDN } from "../LdapDnaPlugin/dnaSharedCfgDN.oa.mjs";
+import { dnaThreshold } from "../LdapDnaPlugin/dnaThreshold.oa.mjs";
+import { dnaNextRange } from "../LdapDnaPlugin/dnaNextRange.oa.mjs";
+import { dnaRangeRequestTimeout } from "../LdapDnaPlugin/dnaRangeRequestTimeout.oa.mjs";
+import { dnaRemoteBindDN } from "../LdapDnaPlugin/dnaRemoteBindDN.oa.mjs";
+import { dnaRemoteBindCred } from "../LdapDnaPlugin/dnaRemoteBindCred.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary dnaPluginConfig
  * @description
@@ -120,7 +136,7 @@ const dnaPluginConfig: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnaType, dnaPrefix, dnaNextValue, dnaMaxValue, dnaInterval, dnaMagicRegen, dnaFilter, dnaScope, dnaExcludeScope, dnaSharedCfgDN, dnaThreshold, dnaNextRange, dnaRangeRequestTimeout, dnaRemoteBindDN, dnaRemoteBindCred, commonName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dnaPluginConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DNA plugin configuration" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dnaPluginConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

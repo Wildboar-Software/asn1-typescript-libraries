@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_gLUE2Manager } from "../LdapGlue509Manager/id-oc-gLUE2Manager.va.
 // export { id_oc_gLUE2Manager } from "../LdapGlue509Manager/id-oc-gLUE2Manager.va.mjs";
 
 
+import { gLUE2ManagerID } from "../LdapGlue509Manager/gLUE2ManagerID.oa.mjs";
+import { gLUE2ManagerProductName } from "../LdapGlue509Manager/gLUE2ManagerProductName.oa.mjs";
+import { gLUE2ManagerServiceForeignKey } from "../LdapGlue509Manager/gLUE2ManagerServiceForeignKey.oa.mjs";
 /**
  * @summary gLUE2Manager
  * @description
@@ -108,7 +111,7 @@ const gLUE2Manager: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ManagerID, gLUE2ManagerProductName, gLUE2ManagerServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gLUE2ManagerProductVersion, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Manager" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A manager" /* OBJECT_FIELD_SETTING */,

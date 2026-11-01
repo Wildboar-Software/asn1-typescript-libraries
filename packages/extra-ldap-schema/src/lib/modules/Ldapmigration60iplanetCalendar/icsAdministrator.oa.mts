@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_icsAdministrator } from "../Ldapmigration60iplanetCalendar/id-oc-
 // export { id_oc_icsAdministrator } from "../Ldapmigration60iplanetCalendar/id-oc-icsAdministrator.va.mjs";
 
 
+import { icsAdminRole } from "../Ldapmigration60iplanetCalendar/icsAdminRole.oa.mjs";
+import { icsExtended } from "../Ldapmigration60iplanetCalendar/icsExtended.oa.mjs";
+import { icsExtendedGroupPrefs } from "../Ldapmigration60iplanetCalendar/icsExtendedGroupPrefs.oa.mjs";
 /**
  * @summary icsAdministrator
  * @description
@@ -105,7 +108,7 @@ const icsAdministrator: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ icsAdminRole, icsExtended, icsExtendedGroupPrefs, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "icsAdministrator" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Standard Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_icsAdministrator /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

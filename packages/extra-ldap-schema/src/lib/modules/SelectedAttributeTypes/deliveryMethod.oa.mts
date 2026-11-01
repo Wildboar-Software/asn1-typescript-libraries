@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { PreferredDeliveryMethod, _decode_PreferredDeliveryMethod, _encode_PreferredDeliveryMethod } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
+import { type PreferredDeliveryMethod, _decode_PreferredDeliveryMethod, _encode_PreferredDeliveryMethod } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
 // export { PreferredDeliveryMethod, _decode_PreferredDeliveryMethod, _encode_PreferredDeliveryMethod } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";
 import { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.mjs";
 // export { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.mjs";

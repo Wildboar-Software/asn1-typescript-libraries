@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_ftMods } from "../LdapApacheFortress/id-oc-ftMods.va.mjs";
 // export { id_oc_ftMods } from "../LdapApacheFortress/id-oc-ftMods.va.mjs";
 
 
+import { ftModifier } from "../LdapApacheFortress/ftModifier.oa.mjs";
+import { ftModCode } from "../LdapApacheFortress/ftModCode.oa.mjs";
+import { ftModId } from "../LdapApacheFortress/ftModId.oa.mjs";
 /**
  * @summary ftMods
  * @description
@@ -107,7 +110,7 @@ const ftMods: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftModifier, ftModCode, ftModId, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftMods" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Modifiers AUX Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftMods /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

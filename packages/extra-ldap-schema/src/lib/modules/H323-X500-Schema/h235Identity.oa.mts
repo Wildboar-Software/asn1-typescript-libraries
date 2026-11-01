@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { h235_id_oc } from "../H323-X500-Schema/h235-id-oc.va.mjs";
 // export { h235_id_oc } from "../H323-X500-Schema/h235-id-oc.va.mjs";
 
 
+import { h235IdentityEndpointID } from "../H323-X500-Schema/h235IdentityEndpointID.oa.mjs";
+import { h235IdentityPassword } from "../H323-X500-Schema/h235IdentityPassword.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
+import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
 /**
  * @summary h235Identity
  * @description
@@ -105,7 +112,7 @@ const h235Identity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ h235IdentityEndpointID, h235IdentityPassword, userCertificate, cACertificate, authorityRevocationList, certificateRevocationList, crossCertificatePair, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], h235_id_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

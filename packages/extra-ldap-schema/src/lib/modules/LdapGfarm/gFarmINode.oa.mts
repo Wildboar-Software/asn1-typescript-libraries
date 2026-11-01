@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,21 @@ import { id_oc_gFarmINode } from "../LdapGfarm/id-oc-gFarmINode.va.mjs";
 // export { id_oc_gFarmINode } from "../LdapGfarm/id-oc-gFarmINode.va.mjs";
 
 
+import { checksumType } from "../LdapGfarm/checksumType.oa.mjs";
+import { checksum } from "../LdapGfarm/checksum.oa.mjs";
+import { inumber } from "../LdapGfarm/inumber.oa.mjs";
+import { igen } from "../LdapGfarm/igen.oa.mjs";
+import { nlink } from "../LdapGfarm/nlink.oa.mjs";
+import { size_type } from "../LdapGfarm/size-type.oa.mjs";
+import { mode } from "../LdapGfarm/mode.oa.mjs";
+import { username } from "../LdapGfarm/username.oa.mjs";
+import { groupname } from "../LdapGfarm/groupname.oa.mjs";
+import { atimesec } from "../LdapGfarm/atimesec.oa.mjs";
+import { atimensec } from "../LdapGfarm/atimensec.oa.mjs";
+import { mtimesec } from "../LdapGfarm/mtimesec.oa.mjs";
+import { mtimensec } from "../LdapGfarm/mtimensec.oa.mjs";
+import { ctimesec } from "../LdapGfarm/ctimesec.oa.mjs";
+import { ctimensec } from "../LdapGfarm/ctimensec.oa.mjs";
 /**
  * @summary gFarmINode
  * @description
@@ -116,8 +131,8 @@ const gFarmINode: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ inumber, igen, nlink, size_type, mode, username, groupname, atimesec, atimensec, mtimesec, mtimensec, ctimesec, ctimensec, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ checksumType, checksum, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GFarmINode" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gFarmINode /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,13 @@ import { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
 // export { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
 
 
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { pilotPerson } from "../LdapSchema2ldifCosine/pilotPerson.oa.mjs";
+import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 /**
  * @summary openLDAPperson
  * @description
@@ -103,10 +110,10 @@ const openLDAPperson: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ pilotPerson, inetOrgPerson, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, commonName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ givenName, labeledURI, organizationName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "OpenLDAPperson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "OpenLDAP Person" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([5,], id_openldap_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

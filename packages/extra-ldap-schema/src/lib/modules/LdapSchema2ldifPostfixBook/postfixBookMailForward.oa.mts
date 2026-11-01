@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_oc_postfixBookMailForward } from "../LdapSchema2ldifPostfixBook/id-o
 // export { id_oc_postfixBookMailForward } from "../LdapSchema2ldifPostfixBook/id-oc-postfixBookMailForward.va.mjs";
 
 
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailAlias } from "../LdapSchema2ldifPostfixBook/mailAlias.oa.mjs";
 /**
  * @summary postfixBookMailForward
  * @description
@@ -109,7 +111,7 @@ const postfixBookMailForward: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, mailAlias, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ mailForwardingAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "PostfixBookMailForward" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Mail forward used in Postfix Book" /* OBJECT_FIELD_SETTING */,

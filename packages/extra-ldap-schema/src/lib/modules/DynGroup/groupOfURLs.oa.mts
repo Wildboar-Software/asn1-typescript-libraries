@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,13 @@ import { id_nsdsoc } from "../DynGroup/id-nsdsoc.va.mjs";
 // export { id_nsdsoc } from "../DynGroup/id-nsdsoc.va.mjs";
 
 
+import { memberURL } from "../DynGroup/memberURL.oa.mjs";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 /**
  * @summary groupOfURLs
  * @description
@@ -117,7 +124,7 @@ const groupOfURLs: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ memberURL, businessCategory, description, organizationName, organizationalUnitName, owner, seeAlso, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "groupOfURLs" ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([33,], id_nsdsoc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

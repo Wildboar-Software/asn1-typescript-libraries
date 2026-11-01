@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_dicomNetworkConnection } from "../LdapDicom/id-oc-dicomNetworkCon
 // export { id_oc_dicomNetworkConnection } from "../LdapDicom/id-oc-dicomNetworkConnection.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { dicomPort } from "../LdapDicom/dicomPort.oa.mjs";
+import { dicomTLSCipherSuite } from "../LdapDicom/dicomTLSCipherSuite.oa.mjs";
+import { dicomInstalled } from "../LdapDicom/dicomInstalled.oa.mjs";
 /**
  * @summary dicomNetworkConnection
  * @description
@@ -110,7 +114,7 @@ const dicomNetworkConnection: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ dicomHostname, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, dicomPort, dicomTLSCipherSuite, dicomInstalled, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dicomNetworkConnection" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DICOM Network Connection information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dicomNetworkConnection /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

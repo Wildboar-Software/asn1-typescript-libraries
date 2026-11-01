@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_gLUE2ToStorageService } from "../LdapGlue610ToStorageService/id-o
 // export { id_oc_gLUE2ToStorageService } from "../LdapGlue610ToStorageService/id-oc-gLUE2ToStorageService.va.mjs";
 
 
+import { gLUE2ToStorageServiceID } from "../LdapGlue610ToStorageService/gLUE2ToStorageServiceID.oa.mjs";
+import { gLUE2ToStorageServiceLocalPath } from "../LdapGlue610ToStorageService/gLUE2ToStorageServiceLocalPath.oa.mjs";
+import { gLUE2ToStorageServiceRemotePath } from "../LdapGlue610ToStorageService/gLUE2ToStorageServiceRemotePath.oa.mjs";
+import { gLUE2ToStorageServiceComputingServiceForeignKey } from "../LdapGlue610ToStorageService/gLUE2ToStorageServiceComputingServiceForeignKey.oa.mjs";
+import { gLUE2ToStorageServiceStorageServiceForeignKey } from "../LdapGlue610ToStorageService/gLUE2ToStorageServiceStorageServiceForeignKey.oa.mjs";
 /**
  * @summary gLUE2ToStorageService
  * @description
@@ -107,7 +112,7 @@ const gLUE2ToStorageService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ToStorageServiceID, gLUE2ToStorageServiceLocalPath, gLUE2ToStorageServiceRemotePath, gLUE2ToStorageServiceComputingServiceForeignKey, gLUE2ToStorageServiceStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2ToStorageService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Description of a POSIX access via a file system technology enabling the computing service to access the associated storage service" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2ToStorageService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

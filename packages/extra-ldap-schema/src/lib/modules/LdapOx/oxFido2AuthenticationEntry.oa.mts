@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,13 @@ import { id_oc_oxFido2AuthenticationEntry } from "../LdapOx/id-oc-oxFido2Authent
 // export { id_oc_oxFido2AuthenticationEntry } from "../LdapOx/id-oc-oxFido2AuthenticationEntry.va.mjs";
 
 
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { creationDate } from "../LdapOx/creationDate.oa.mjs";
+import { oxSessionStateId } from "../LdapOx/oxSessionStateId.oa.mjs";
+import { oxCodeChallenge } from "../LdapOx/oxCodeChallenge.oa.mjs";
+import { personInum } from "../LdapOx/personInum.oa.mjs";
+import { oxAuthenticationData } from "../LdapOx/oxAuthenticationData.oa.mjs";
+import { oxStatus } from "../LdapOx/oxStatus.oa.mjs";
 /**
  * @summary oxFido2AuthenticationEntry
  * @description
@@ -112,7 +119,7 @@ const oxFido2AuthenticationEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ oxId, creationDate, oxSessionStateId, oxCodeChallenge, personInum, oxAuthenticationData, oxStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxFido2AuthenticationEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxFido2AuthenticationEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

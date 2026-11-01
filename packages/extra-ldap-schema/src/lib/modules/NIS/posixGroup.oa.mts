@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
 /**
  * @summary posixGroup
  * @description
@@ -114,8 +119,8 @@ const posixGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, gidNumber, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPassword, memberUid, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "posixGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of a group of accounts" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([2,], id_nis_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_freenitModerationMessage } from "../LdapMailinglist/id-oc-freenit
 // export { id_oc_freenitModerationMessage } from "../LdapMailinglist/id-oc-freenitModerationMessage.va.mjs";
 
 
+import { mailinglistMessageId } from "../LdapMailinglist/mailinglistMessageId.oa.mjs";
+import { mailinglistSubject } from "../LdapMailinglist/mailinglistSubject.oa.mjs";
+import { mailinglistSender } from "../LdapMailinglist/mailinglistSender.oa.mjs";
+import { sentAt } from "../LdapMailinglist/sentAt.oa.mjs";
+import { textBody } from "../LdapMailinglist/textBody.oa.mjs";
+import { htmlBody } from "../LdapMailinglist/htmlBody.oa.mjs";
+import { mailinglistStatus } from "../LdapMailinglist/mailinglistStatus.oa.mjs";
+import { decidedAt } from "../LdapMailinglist/decidedAt.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mlidNumber } from "../LdapMailinglist/mlidNumber.oa.mjs";
+import { createdAt } from "../LdapMailinglist/createdAt.oa.mjs";
 /**
  * @summary freenitModerationMessage
  * @description
@@ -113,8 +124,8 @@ const freenitModerationMessage: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, mlidNumber, createdAt, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailinglistMessageId, mailinglistSubject, mailinglistSender, sentAt, textBody, htmlBody, mailinglistStatus, decidedAt, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "freenitModerationMessage" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Freenit moderation message entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_freenitModerationMessage /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

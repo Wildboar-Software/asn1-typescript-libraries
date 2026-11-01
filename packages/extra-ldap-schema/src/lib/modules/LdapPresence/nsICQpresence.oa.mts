@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_nsICQpresence } from "../LdapPresence/id-oc-nsICQpresence.va.mjs"
 // export { id_oc_nsICQpresence } from "../LdapPresence/id-oc-nsICQpresence.va.mjs";
 
 
+import { nsICQid } from "../LdapPresence/nsICQid.oa.mjs";
+import { nsICQStatusGraphic } from "../LdapPresence/nsICQStatusGraphic.oa.mjs";
+import { nsICQStatusText } from "../LdapPresence/nsICQStatusText.oa.mjs";
 /**
  * @summary nsICQpresence
  * @description
@@ -107,7 +110,7 @@ const nsICQpresence: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsICQid, nsICQStatusGraphic, nsICQStatusText, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsICQpresence" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsICQpresence /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

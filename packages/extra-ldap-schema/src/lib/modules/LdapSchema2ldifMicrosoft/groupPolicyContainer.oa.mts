@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_groupPolicyContainer } from "../LdapSchema2ldifMicrosoft/id-oc-gr
 // export { id_oc_groupPolicyContainer } from "../LdapSchema2ldifMicrosoft/id-oc-groupPolicyContainer.va.mjs";
 
 
+import { flags } from "../MSUser/flags.oa.mjs";
+import { versionNumber } from "../MSUser/versionNumber.oa.mjs";
+import { gPCFunctionalityVersion } from "../MSUser/gPCFunctionalityVersion.oa.mjs";
+import { gPCFileSysPath } from "../MSUser/gPCFileSysPath.oa.mjs";
+import { gPCMachineExtensionNames } from "../MSUser/gPCMachineExtensionNames.oa.mjs";
+import { gPCUserExtensionNames } from "../MSUser/gPCUserExtensionNames.oa.mjs";
 /**
  * @summary groupPolicyContainer
  * @description
@@ -107,7 +113,7 @@ const groupPolicyContainer: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ container, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ flags, versionNumber, gPCFunctionalityVersion, gPCFileSysPath, gPCMachineExtensionNames, gPCUserExtensionNames, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "groupPolicyContainer" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_groupPolicyContainer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

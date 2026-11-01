@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_oc_ipaEntitlement } from "../Ldap60basev2/id-oc-ipaEntitlement.va.mj
 // export { id_oc_ipaEntitlement } from "../Ldap60basev2/id-oc-ipaEntitlement.va.mjs";
 
 
+import { userPKCS12 } from "../PKCS-9/userPKCS12.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
 /**
  * @summary ipaEntitlement
  * @description
@@ -110,7 +112,7 @@ const ipaEntitlement: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ ipaEntitlementId, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPKCS12, userCertificate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaEntitlement" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "IPA Entitlement object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaEntitlement /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

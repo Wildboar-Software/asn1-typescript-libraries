@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_ipaAssociation } from "../Ldap60basev2/id-oc-ipaAssociation.va.mj
 // export { id_oc_ipaAssociation } from "../Ldap60basev2/id-oc-ipaAssociation.va.mjs";
 
 
+import { memberUser } from "../Ldap60basev2/memberUser.oa.mjs";
+import { userCategory } from "../Ldap60basev2/userCategory.oa.mjs";
+import { memberHost } from "../Ldap60basev2/memberHost.oa.mjs";
+import { hostCategory } from "../Ldap60basev2/hostCategory.oa.mjs";
+import { ipaEnabledFlag } from "../Ldap60basev2/ipaEnabledFlag.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { ipaUniqueID } from "../Ldap60basev2/ipaUniqueID.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary ipaAssociation
  * @description
@@ -111,8 +119,8 @@ const ipaAssociation: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ipaUniqueID, commonName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ memberUser, userCategory, memberHost, hostCategory, ipaEnabledFlag, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaAssociation" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaAssociation /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

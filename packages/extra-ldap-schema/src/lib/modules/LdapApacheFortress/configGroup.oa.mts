@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_configGroup } from "../LdapApacheFortress/id-oc-configGroup.va.mj
 // export { id_oc_configGroup } from "../LdapApacheFortress/id-oc-configGroup.va.mjs";
 
 
+import { configParameter } from "../LdapApacheFortress/configParameter.oa.mjs";
+import { ftProps } from "../LdapApacheFortress/ftProps.oa.mjs";
+import { configProtocol } from "../LdapApacheFortress/configProtocol.oa.mjs";
+import { ftType } from "../LdapApacheFortress/ftType.oa.mjs";
 /**
  * @summary configGroup
  * @description
@@ -106,8 +110,8 @@ const configGroup: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ groupOfNames, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ configProtocol, ftType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ configParameter, ftProps, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "configGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "LDAP Configuration Group" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_configGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

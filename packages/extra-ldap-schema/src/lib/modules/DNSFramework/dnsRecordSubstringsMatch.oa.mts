@@ -4,6 +4,7 @@ import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mj
 // export { id_mr_dnsRecordSubstringsMatch } from "../DNSFramework/id-mr-dnsRecordSubstringsMatch.va.mjs";
 
 
+import { type OctetSubstringAssertion, _decode_OctetSubstringAssertion, _encode_OctetSubstringAssertion } from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 /**
  * @summary dnsRecordSubstringsMatch
  * @description

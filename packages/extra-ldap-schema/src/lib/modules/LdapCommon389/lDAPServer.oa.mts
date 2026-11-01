@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,13 @@ import { id_oc_lDAPServer } from "../LdapCommon389/id-oc-lDAPServer.va.mjs";
 // export { id_oc_lDAPServer } from "../LdapCommon389/id-oc-lDAPServer.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { generation } from "../LdapCommon389/generation.oa.mjs";
+import { changeLogMaximumAge } from "../LdapCommon389/changeLogMaximumAge.oa.mjs";
+import { changeLogMaximumSize } from "../LdapCommon389/changeLogMaximumSize.oa.mjs";
 /**
  * @summary lDAPServer
  * @description
@@ -113,7 +120,7 @@ const lDAPServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, localityName, organizationalUnitName, seeAlso, generation, changeLogMaximumAge, changeLogMaximumSize, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "LDAPServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_lDAPServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

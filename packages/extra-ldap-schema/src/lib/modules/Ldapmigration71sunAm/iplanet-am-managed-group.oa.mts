@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_iplanet_am_managed_group } from "../Ldapmigration71sunAm/id-oc-ip
 // export { id_oc_iplanet_am_managed_group } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-group.va.mjs";
 
 
+import { iplanet_am_group_subscribable } from "../Ldapmigration71sunAm/iplanet-am-group-subscribable.oa.mjs";
+import { inetgroupstatus } from "../Ldapmigration70delgatedAdmin/inetgroupstatus.oa.mjs";
 /**
  * @summary iplanet_am_managed_group
  * @description
@@ -106,7 +108,7 @@ const iplanet_am_managed_group: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanet_am_group_subscribable, inetgroupstatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-managed-group" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Managed Group OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_managed_group /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

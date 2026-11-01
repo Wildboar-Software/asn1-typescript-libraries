@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_ftDSDSet } from "../LdapApacheFortress/id-oc-ftDSDSet.va.mjs";
 // export { id_oc_ftDSDSet } from "../LdapApacheFortress/id-oc-ftDSDSet.va.mjs";
 
 
+import { ftRoles } from "../LdapApacheFortress/ftRoles.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftSetName } from "../LdapApacheFortress/ftSetName.oa.mjs";
+import { ftSetCardinality } from "../LdapApacheFortress/ftSetCardinality.oa.mjs";
 /**
  * @summary ftDSDSet
  * @description
@@ -107,8 +112,8 @@ const ftDSDSet: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ftSetName, ftSetCardinality, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftRoles, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftDSDSet" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Role Dynamic Separation of Duty Set Structural Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftDSDSet /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

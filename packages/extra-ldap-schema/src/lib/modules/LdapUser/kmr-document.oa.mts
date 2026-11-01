@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_kmr_document } from "../LdapUser/id-oc-kmr-document.va.mjs";
 // export { id_oc_kmr_document } from "../LdapUser/id-oc-kmr-document.va.mjs";
 
 
+import { documentExpirationTime } from "../LdapUser/documentExpirationTime.oa.mjs";
+import { documentStatus } from "../LdapUser/documentStatus.oa.mjs";
 /**
  * @summary kmr_document
  * @description
@@ -103,7 +105,7 @@ const kmr_document: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ document, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ documentExpirationTime, documentStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kmr-document" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kmr_document /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

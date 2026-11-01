@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,28 @@ import { id_oc_classSchema } from "../LdapSchema2ldifMicrosoft/id-oc-classSchema
 // export { id_oc_classSchema } from "../LdapSchema2ldifMicrosoft/id-oc-classSchema.va.mjs";
 
 
+import { possSuperiors } from "../MSUser/possSuperiors.oa.mjs";
+import { mustContain } from "../MSUser/mustContain.oa.mjs";
+import { mayContain } from "../MSUser/mayContain.oa.mjs";
+import { rDNAttID } from "../MSUser/rDNAttID.oa.mjs";
+import { auxiliaryClass } from "../MSUser/auxiliaryClass.oa.mjs";
+import { lDAPDisplayName } from "../MSUser/lDAPDisplayName.oa.mjs";
+import { schemaFlagsEx } from "../MSUser/schemaFlagsEx.oa.mjs";
+import { systemOnly } from "../MSUser/systemOnly.oa.mjs";
+import { systemPossSuperiors } from "../MSUser/systemPossSuperiors.oa.mjs";
+import { systemMayContain } from "../MSUser/systemMayContain.oa.mjs";
+import { systemMustContain } from "../MSUser/systemMustContain.oa.mjs";
+import { systemAuxiliaryClass } from "../MSUser/systemAuxiliaryClass.oa.mjs";
+import { defaultSecurityDescriptor } from "../MSUser/defaultSecurityDescriptor.oa.mjs";
+import { defaultHidingValue } from "../MSUser/defaultHidingValue.oa.mjs";
+import { classDisplayName } from "../MSUser/classDisplayName.oa.mjs";
+import { isDefunct } from "../MSUser/isDefunct.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { subClassOf } from "../MSUser/subClassOf.oa.mjs";
+import { governsID } from "../MSUser/governsID.oa.mjs";
+import { objectClassCategory } from "../MSUser/objectClassCategory.oa.mjs";
+import { schemaIDGUID } from "../MSUser/schemaIDGUID.oa.mjs";
+import { defaultObjectCategory } from "../MSUser/defaultObjectCategory.oa.mjs";
 /**
  * @summary classSchema
  * @description
@@ -123,8 +145,8 @@ const classSchema: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, subClassOf, governsID, objectClassCategory, schemaIDGUID, defaultObjectCategory, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ possSuperiors, mustContain, mayContain, rDNAttID, auxiliaryClass, lDAPDisplayName, schemaFlagsEx, systemOnly, systemPossSuperiors, systemMayContain, systemMustContain, systemAuxiliaryClass, defaultSecurityDescriptor, defaultHidingValue, classDisplayName, isDefunct, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "classSchema" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_classSchema /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

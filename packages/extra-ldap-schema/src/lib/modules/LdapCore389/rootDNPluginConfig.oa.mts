@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,13 @@ import { id_oc_rootDNPluginConfig } from "../LdapCore389/id-oc-rootDNPluginConfi
 // export { id_oc_rootDNPluginConfig } from "../LdapCore389/id-oc-rootDNPluginConfig.va.mjs";
 
 
+import { rootdn_open_time } from "../LdapCore389/rootdn-open-time.oa.mjs";
+import { rootdn_close_time } from "../LdapCore389/rootdn-close-time.oa.mjs";
+import { rootdn_days_allowed } from "../LdapCore389/rootdn-days-allowed.oa.mjs";
+import { rootdn_allow_host } from "../LdapCore389/rootdn-allow-host.oa.mjs";
+import { rootdn_deny_host } from "../LdapCore389/rootdn-deny-host.oa.mjs";
+import { rootdn_allow_ip } from "../LdapCore389/rootdn-allow-ip.oa.mjs";
+import { rootdn_deny_ip } from "../LdapCore389/rootdn-deny-ip.oa.mjs";
 /**
  * @summary rootDNPluginConfig
  * @description
@@ -113,7 +120,7 @@ const rootDNPluginConfig: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rootdn_open_time, rootdn_close_time, rootdn_days_allowed, rootdn_allow_host, rootdn_deny_host, rootdn_allow_ip, rootdn_deny_ip, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rootDNPluginConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rootDNPluginConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

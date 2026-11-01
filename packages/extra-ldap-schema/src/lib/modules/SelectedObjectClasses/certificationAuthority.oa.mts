@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-cer
 // export { id_oc_certificationAuthority } from "../SelectedObjectClasses/id-oc-certificationAuthority.va.mjs";
 
 
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
 /**
  * @summary certificationAuthority
  * @description
@@ -110,10 +113,10 @@ const certificationAuthority: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ cACertificate, certificateRevocationList, authorityRevocationList, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ crossCertificatePair, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "certificationAuthority" ] /* OBJECT_FIELD_SETTING */,
-    "&ldapDesc": [ "X.509 certificate authority" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "X.509 certificate authority" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_certificationAuthority /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

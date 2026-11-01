@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_zimbraUCService } from "../LdapZimbra/id-oc-zimbraUCService.va.mj
 // export { id_oc_zimbraUCService } from "../LdapZimbra/id-oc-zimbraUCService.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraACE } from "../LdapZimbra/zimbraACE.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraUCCallControlURL } from "../LdapZimbra/zimbraUCCallControlURL.oa.mjs";
+import { zimbraUCPresenceSessionId } from "../LdapZimbra/zimbraUCPresenceSessionId.oa.mjs";
+import { zimbraUCPresenceURL } from "../LdapZimbra/zimbraUCPresenceURL.oa.mjs";
+import { zimbraUCUserURL } from "../LdapZimbra/zimbraUCUserURL.oa.mjs";
+import { zimbraUCVoicemailURL } from "../LdapZimbra/zimbraUCVoicemailURL.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { zimbraId } from "../LdapZimbra/zimbraId.oa.mjs";
+import { zimbraUCProvider } from "../LdapZimbra/zimbraUCProvider.oa.mjs";
 /**
  * @summary zimbraUCService
  * @description
@@ -113,8 +124,8 @@ const zimbraUCService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraId, zimbraUCProvider, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraACE, zimbraCreateTimestamp, zimbraUCCallControlURL, zimbraUCPresenceSessionId, zimbraUCPresenceURL, zimbraUCUserURL, zimbraUCVoicemailURL, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraUCService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Unified Communication service in the cluster" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraUCService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

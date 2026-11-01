@@ -3,7 +3,7 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SubstringAssertion_Item, _decode_SubstringAssertion_Item, _encode_SubstringAssertion_Item } from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
+import { type SubstringAssertion_Item, _decode_SubstringAssertion_Item, _encode_SubstringAssertion_Item } from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
 // export { SubstringAssertion_Item, _decode_SubstringAssertion_Item, _encode_SubstringAssertion_Item } from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
 
 

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSi
 // export { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
 
 
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { queryPolicyObject } from "../MSUser/queryPolicyObject.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { interSiteTopologyGenerator } from "../MSUser/interSiteTopologyGenerator.oa.mjs";
+import { interSiteTopologyRenew } from "../MSUser/interSiteTopologyRenew.oa.mjs";
+import { interSiteTopologyFailover } from "../MSUser/interSiteTopologyFailover.oa.mjs";
 /**
  * @summary nTDSSiteSettings
  * @description
@@ -108,7 +115,7 @@ const nTDSSiteSettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ applicationSiteSettings, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schedule, options, queryPolicyObject, managedBy, interSiteTopologyGenerator, interSiteTopologyRenew, interSiteTopologyFailover, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTDSSiteSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTDSSiteSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_classStore } from "../LdapSchema2ldifMicrosoft/id-oc-classStore.v
 // export { id_oc_classStore } from "../LdapSchema2ldifMicrosoft/id-oc-classStore.va.mjs";
 
 
+import { versionNumber } from "../MSUser/versionNumber.oa.mjs";
+import { nextLevelStore } from "../MSUser/nextLevelStore.oa.mjs";
+import { lastUpdateSequence } from "../MSUser/lastUpdateSequence.oa.mjs";
+import { appSchemaVersion } from "../MSUser/appSchemaVersion.oa.mjs";
 /**
  * @summary classStore
  * @description
@@ -105,7 +109,7 @@ const classStore: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ versionNumber, nextLevelStore, lastUpdateSequence, appSchemaVersion, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "classStore" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_classStore /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,12 @@ import { id_oc_oxTrustConfiguration } from "../LdapOx/id-oc-oxTrustConfiguration
 // export { id_oc_oxTrustConfiguration } from "../LdapOx/id-oc-oxTrustConfiguration.va.mjs";
 
 
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { oxTrustConfApplication } from "../LdapOx/oxTrustConfApplication.oa.mjs";
+import { oxTrustConfCacheRefresh } from "../LdapOx/oxTrustConfCacheRefresh.oa.mjs";
+import { oxRevision } from "../LdapOx/oxRevision.oa.mjs";
+import { oxTrustConfImportPerson } from "../LdapOx/oxTrustConfImportPerson.oa.mjs";
+import { oxTrustConfAttributeResolver } from "../LdapOx/oxTrustConfAttributeResolver.oa.mjs";
 /**
  * @summary oxTrustConfiguration
  * @description
@@ -111,7 +117,7 @@ const oxTrustConfiguration: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ organizationalUnitName, oxTrustConfApplication, oxTrustConfCacheRefresh, oxRevision, oxTrustConfImportPerson, oxTrustConfAttributeResolver, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxTrustConfiguration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxTrustConfiguration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

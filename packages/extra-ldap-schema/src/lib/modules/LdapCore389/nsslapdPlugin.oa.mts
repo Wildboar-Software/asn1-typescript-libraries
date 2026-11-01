@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_nsslapdPlugin } from "../LdapCore389/id-oc-nsslapdPlugin.va.mjs";
 // export { id_oc_nsslapdPlugin } from "../LdapCore389/id-oc-nsslapdPlugin.va.mjs";
 
 
+import { nsslapd_pluginConfigArea } from "../LdapCore389/nsslapd-pluginConfigArea.oa.mjs";
+import { nsslapd_plugin_depends_on_type } from "../LdapCore389/nsslapd-plugin-depends-on-type.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nsslapd_pluginPath } from "../LdapCore389/nsslapd-pluginPath.oa.mjs";
+import { nsslapd_pluginInitfunc } from "../LdapCore389/nsslapd-pluginInitfunc.oa.mjs";
+import { nsslapd_pluginType } from "../LdapCore389/nsslapd-pluginType.oa.mjs";
+import { nsslapd_pluginId } from "../LdapCore389/nsslapd-pluginId.oa.mjs";
+import { nsslapd_pluginVersion } from "../LdapCore389/nsslapd-pluginVersion.oa.mjs";
+import { nsslapd_pluginVendor } from "../LdapCore389/nsslapd-pluginVendor.oa.mjs";
+import { nsslapd_pluginDescription } from "../LdapCore389/nsslapd-pluginDescription.oa.mjs";
+import { nsslapd_pluginEnabled } from "../LdapCore389/nsslapd-pluginEnabled.oa.mjs";
 /**
  * @summary nsslapdPlugin
  * @description
@@ -113,8 +124,8 @@ const nsslapdPlugin: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, nsslapd_pluginPath, nsslapd_pluginInitfunc, nsslapd_pluginType, nsslapd_pluginId, nsslapd_pluginVersion, nsslapd_pluginVendor, nsslapd_pluginDescription, nsslapd_pluginEnabled, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsslapd_pluginConfigArea, nsslapd_plugin_depends_on_type, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsslapdPlugin" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsslapdPlugin /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

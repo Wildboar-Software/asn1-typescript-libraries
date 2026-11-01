@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_iplanet_am_web_agent_service } from "../Ldapmigration71sunAm/id-o
 // export { id_oc_iplanet_am_web_agent_service } from "../Ldapmigration71sunAm/id-oc-iplanet-am-web-agent-service.va.mjs";
 
 
+import { iplanet_am_web_agent_access_allow_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-allow-list.oa.mjs";
+import { iplanet_am_web_agent_access_deny_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-deny-list.oa.mjs";
+import { iplanet_am_web_agent_access_not_enforced_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-not-enforced-list.oa.mjs";
+import { iplanet_am_web_agent_service_status } from "../Ldapmigration71sunAm/iplanet-am-web-agent-service-status.oa.mjs";
 /**
  * @summary iplanet_am_web_agent_service
  * @description
@@ -108,7 +112,7 @@ const iplanet_am_web_agent_service: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanet_am_web_agent_access_allow_list, iplanet_am_web_agent_access_deny_list, iplanet_am_web_agent_access_not_enforced_list, iplanet_am_web_agent_service_status, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-web-agent-service" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Web Agent Service OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_web_agent_service /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

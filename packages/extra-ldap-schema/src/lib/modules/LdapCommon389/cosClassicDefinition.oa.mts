@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_cosClassicDefinition } from "../LdapCommon389/id-oc-cosClassicDef
 // export { id_oc_cosClassicDefinition } from "../LdapCommon389/id-oc-cosClassicDefinition.va.mjs";
 
 
+import { costemplatedn } from "../LdapCommon389/costemplatedn.oa.mjs";
+import { cosspecifier } from "../LdapCommon389/cosspecifier.oa.mjs";
 /**
  * @summary cosClassicDefinition
  * @description
@@ -104,7 +106,7 @@ const cosClassicDefinition: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ cosSuperDefinition, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ costemplatedn, cosspecifier, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cosClassicDefinition" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cosClassicDefinition /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_soniaPropertyEntry } from "../Ldapmigration97sonia/id-oc-soniaPro
 // export { id_oc_soniaPropertyEntry } from "../Ldapmigration97sonia/id-oc-soniaPropertyEntry.va.mjs";
 
 
+import { soniaProperty } from "../Ldapmigration97sonia/soniaProperty.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 /**
  * @summary soniaPropertyEntry
  * @description
@@ -105,7 +107,7 @@ const soniaPropertyEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaProperty, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaPropertyEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaPropertyEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

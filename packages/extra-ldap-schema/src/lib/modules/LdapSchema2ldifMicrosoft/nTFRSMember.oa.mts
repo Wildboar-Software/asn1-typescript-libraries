@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_nTFRSMember } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSMember
 // export { id_oc_nTFRSMember } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSMember.va.mjs";
 
 
+import { fRSUpdateTimeout } from "../MSUser/fRSUpdateTimeout.oa.mjs";
+import { fRSServiceCommand } from "../MSUser/fRSServiceCommand.oa.mjs";
+import { serverReference } from "../MSUser/serverReference.oa.mjs";
+import { fRSRootSecurity } from "../MSUser/fRSRootSecurity.oa.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { frsComputerReference } from "../MSUser/frsComputerReference.oa.mjs";
+import { fRSControlDataCreation } from "../MSUser/fRSControlDataCreation.oa.mjs";
+import { fRSControlInboundBacklog } from "../MSUser/fRSControlInboundBacklog.oa.mjs";
+import { fRSControlOutboundBacklog } from "../MSUser/fRSControlOutboundBacklog.oa.mjs";
+import { fRSFlags } from "../MSUser/fRSFlags.oa.mjs";
+import { fRSPartnerAuthLevel } from "../MSUser/fRSPartnerAuthLevel.oa.mjs";
 /**
  * @summary nTFRSMember
  * @description
@@ -112,7 +123,7 @@ const nTFRSMember: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fRSUpdateTimeout, fRSServiceCommand, serverReference, fRSRootSecurity, fRSExtensions, frsComputerReference, fRSControlDataCreation, fRSControlInboundBacklog, fRSControlOutboundBacklog, fRSFlags, fRSPartnerAuthLevel, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTFRSMember" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTFRSMember /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -4,6 +4,7 @@ import { groupOfUniqueNamesExt } from "../OrganizationAndGroupSchema/groupOfUniq
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary groupOfUniqueNamesExtNameForm
  * @description

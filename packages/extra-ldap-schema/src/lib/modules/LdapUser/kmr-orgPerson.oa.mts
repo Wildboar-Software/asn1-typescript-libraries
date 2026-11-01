@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_kmr_orgPerson } from "../LdapUser/id-oc-kmr-orgPerson.va.mjs";
 // export { id_oc_kmr_orgPerson } from "../LdapUser/id-oc-kmr-orgPerson.va.mjs";
 
 
+import { languages } from "../LdapUser/languages.oa.mjs";
+import { gender } from "../LdapUser/gender.oa.mjs";
+import { orgCode } from "../LdapUser/orgCode.oa.mjs";
+import { locationCode } from "../LdapUser/locationCode.oa.mjs";
+import { preferredContactMethod } from "../LdapUser/preferredContactMethod.oa.mjs";
+import { npi } from "../LdapUser/npi.oa.mjs";
+import { providerTaxonomy } from "../LdapUser/providerTaxonomy.oa.mjs";
 /**
  * @summary kmr_orgPerson
  * @description
@@ -108,7 +115,7 @@ const kmr_orgPerson: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ inetOrgPerson, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ languages, gender, orgCode, locationCode, preferredContactMethod, npi, providerTaxonomy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kmr-orgPerson" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kmr_orgPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_gLUE2Entity } from "../LdapGlue501Entity/id-oc-gLUE2Entity.va.mjs
 // export { id_oc_gLUE2Entity } from "../LdapGlue501Entity/id-oc-gLUE2Entity.va.mjs";
 
 
+import { gLUE2EntityName } from "../LdapGlue501Entity/gLUE2EntityName.oa.mjs";
+import { gLUE2EntityOtherInfo } from "../LdapGlue501Entity/gLUE2EntityOtherInfo.oa.mjs";
+import { gLUE2EntityCreationTime } from "../LdapGlue501Entity/gLUE2EntityCreationTime.oa.mjs";
+import { gLUE2EntityValidity } from "../LdapGlue501Entity/gLUE2EntityValidity.oa.mjs";
 /**
  * @summary gLUE2Entity
  * @description
@@ -108,7 +112,7 @@ const gLUE2Entity: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2EntityName, gLUE2EntityOtherInfo, gLUE2EntityCreationTime, gLUE2EntityValidity, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Entity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Base class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Entity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

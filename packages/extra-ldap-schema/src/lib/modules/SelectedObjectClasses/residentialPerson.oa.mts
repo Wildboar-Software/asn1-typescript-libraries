@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_residentialPerson } from "../SelectedObjectClasses/id-oc-resident
 // export { id_oc_residentialPerson } from "../SelectedObjectClasses/id-oc-residentialPerson.va.mjs";
 
 
+import { LocaleAttributeSet } from "../SelectedObjectClasses/LocaleAttributeSet.osa.mjs";
+import { PostalAttributeSet } from "../SelectedObjectClasses/PostalAttributeSet.osa.mjs";
+import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
+import { TelecommunicationAttributeSet } from "../SelectedObjectClasses/TelecommunicationAttributeSet.osa.mjs";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
 /**
  * @summary residentialPerson
  * @description
@@ -110,7 +115,7 @@ const residentialPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ person, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ localityName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ...LocaleAttributeSet, ...PostalAttributeSet, preferredDeliveryMethod, ...TelecommunicationAttributeSet, businessCategory, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "residentialPerson" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_residentialPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

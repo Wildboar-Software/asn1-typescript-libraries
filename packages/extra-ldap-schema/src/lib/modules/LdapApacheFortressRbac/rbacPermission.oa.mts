@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_rbacPermission } from "../LdapApacheFortressRbac/id-oc-rbacPermis
 // export { id_oc_rbacPermission } from "../LdapApacheFortressRbac/id-oc-rbacPermission.va.mjs";
 
 
+import { rbacRoles } from "../LdapApacheFortressRbac/rbacRoles.oa.mjs";
+import { rbacObjName } from "../LdapApacheFortressRbac/rbacObjName.oa.mjs";
+import { rbacOpName } from "../LdapApacheFortressRbac/rbacOpName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 /**
  * @summary rbacPermission
  * @description
@@ -106,7 +110,7 @@ const rbacPermission: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rbacRoles, rbacObjName, rbacOpName, uid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rbacPermission" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "RBAC Permission Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rbacPermission /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

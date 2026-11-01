@@ -4,7 +4,7 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 // export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
 // export { name } from "../SelectedAttributeTypes/name.oa.mjs";
-import { CountryCode3n, _decode_CountryCode3n, _encode_CountryCode3n } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
+import { type CountryCode3n, _decode_CountryCode3n, _encode_CountryCode3n } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
 // export { CountryCode3n, _decode_CountryCode3n, _encode_CountryCode3n } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
 import { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa.mjs";
 // export { countryString3n } from "../SelectedAttributeTypes/countryString3n.oa.mjs";

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_dbmailForwardingAddress } from "../LdapDbmail/id-oc-dbmailForward
 // export { id_oc_dbmailForwardingAddress } from "../LdapDbmail/id-oc-dbmailForwardingAddress.va.mjs";
 
 
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailForwardingAddress } from "../LdapDbmail/mailForwardingAddress.oa.mjs";
 /**
  * @summary dbmailForwardingAddress
  * @description
@@ -106,7 +108,7 @@ const dbmailForwardingAddress: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, mailForwardingAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dbmailForwardingAddress" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DBMail-LDAP Forwarding Address" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dbmailForwardingAddress /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

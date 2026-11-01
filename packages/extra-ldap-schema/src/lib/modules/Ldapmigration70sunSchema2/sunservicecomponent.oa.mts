@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_sunservicecomponent } from "../Ldapmigration70sunSchema2/id-oc-su
 // export { id_oc_sunservicecomponent } from "../Ldapmigration70sunSchema2/id-oc-sunservicecomponent.va.mjs";
 
 
+import { sunserviceid } from "../Ldapmigration70sunSchema2/sunserviceid.oa.mjs";
+import { sunsmspriority } from "../Ldapmigration70sunSchema2/sunsmspriority.oa.mjs";
+import { sunkeyvalue } from "../Ldapmigration70sunSchema2/sunkeyvalue.oa.mjs";
+import { sunxmlkeyvalue } from "../Ldapmigration70sunSchema2/sunxmlkeyvalue.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 /**
  * @summary sunservicecomponent
  * @description
@@ -111,7 +116,7 @@ const sunservicecomponent: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunserviceid, sunsmspriority, sunkeyvalue, sunxmlkeyvalue, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunservicecomponent" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Sub-components of the service" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunservicecomponent /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

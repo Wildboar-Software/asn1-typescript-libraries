@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_oxLink } from "../LdapOx/id-oc-oxLink.va.mjs";
 // export { id_oc_oxLink } from "../LdapOx/id-oc-oxLink.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { oxGuid } from "../LdapOx/oxGuid.oa.mjs";
+import { oxLinkCreator } from "../LdapOx/oxLinkCreator.oa.mjs";
+import { oxLinkExpirationDate } from "../LdapOx/oxLinkExpirationDate.oa.mjs";
+import { oxLinkLinktrack } from "../LdapOx/oxLinkLinktrack.oa.mjs";
+import { oxLinkModerated } from "../LdapOx/oxLinkModerated.oa.mjs";
+import { oxLinkModerators } from "../LdapOx/oxLinkModerators.oa.mjs";
+import { oxLinkPending } from "../LdapOx/oxLinkPending.oa.mjs";
 /**
  * @summary oxLink
  * @description
@@ -113,7 +121,7 @@ const oxLink: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, oxGuid, oxLinkCreator, oxLinkExpirationDate, oxLinkLinktrack, oxLinkModerated, oxLinkModerators, oxLinkPending, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxLink" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxLink /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

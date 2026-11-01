@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { uniqueMember } from "../SelectedAttributeTypes/uniqueMember.oa.mjs";
 // export { uniqueMember } from "../SelectedAttributeTypes/uniqueMember.oa.mjs";

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,15 @@ import { id_oc_postfixBookMailAccount } from "../LdapSchema2ldifPostfixBook/id-o
 // export { id_oc_postfixBookMailAccount } from "../LdapSchema2ldifPostfixBook/id-oc-postfixBookMailAccount.va.mjs";
 
 
+import { mailHomeDirectory } from "../LdapSchema2ldifPostfixBook/mailHomeDirectory.oa.mjs";
+import { mailAlias } from "../LdapSchema2ldifPostfixBook/mailAlias.oa.mjs";
+import { mailGroupMember } from "../LdapSchema2ldifPostfixBook/mailGroupMember.oa.mjs";
+import { mailUidNumber } from "../LdapSchema2ldifPostfixBook/mailUidNumber.oa.mjs";
+import { mailGidNumber } from "../LdapSchema2ldifPostfixBook/mailGidNumber.oa.mjs";
+import { mailEnabled } from "../LdapSchema2ldifPostfixBook/mailEnabled.oa.mjs";
+import { mailQuota } from "../LdapSchema2ldifPostfixBook/mailQuota.oa.mjs";
+import { mailStorageDirectory } from "../LdapSchema2ldifPostfixBook/mailStorageDirectory.oa.mjs";
+import { mailSieveRuleSource } from "../LdapSchema2ldifPostfixBook/mailSieveRuleSource.oa.mjs";
 /**
  * @summary postfixBookMailAccount
  * @description
@@ -117,7 +126,7 @@ const postfixBookMailAccount: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ mail, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailHomeDirectory, mailAlias, mailGroupMember, mailUidNumber, mailGidNumber, mailEnabled, mailQuota, mailStorageDirectory, mailSieveRuleSource, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "PostfixBookMailAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Mail account used in Postfix Book" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_postfixBookMailAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

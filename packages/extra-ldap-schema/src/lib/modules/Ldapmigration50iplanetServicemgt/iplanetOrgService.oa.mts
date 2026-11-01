@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_iplanetOrgService } from "../Ldapmigration50iplanetServicemgt/id-
 // export { id_oc_iplanetOrgService } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetOrgService.va.mjs";
 
 
+import { iplanetKeyValue } from "../Ldapmigration50iplanetServicemgt/iplanetKeyValue.oa.mjs";
+import { iplanetXMLKeyValue } from "../Ldapmigration50iplanetServicemgt/iplanetXMLKeyValue.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 /**
  * @summary iplanetOrgService
  * @description
@@ -109,7 +112,7 @@ const iplanetOrgService: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanetKeyValue, iplanetXMLKeyValue, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanetOrgService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "service information specific to organizations" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanetOrgService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

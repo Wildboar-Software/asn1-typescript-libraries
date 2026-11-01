@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,19 @@ import { id_oc_dbmailUser } from "../LdapDbmail/id-oc-dbmailUser.va.mjs";
 // export { id_oc_dbmailUser } from "../LdapDbmail/id-oc-dbmailUser.va.mjs";
 
 
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { mailQuota } from "../LdapDbmail/mailQuota.oa.mjs";
+import { mailForwardingAddress } from "../LdapDbmail/mailForwardingAddress.oa.mjs";
+import { mailHost } from "../LdapDbmail/mailHost.oa.mjs";
+import { mailAlternateAddress } from "../LdapDbmail/mailAlternateAddress.oa.mjs";
+import { dbmailUID } from "../LdapDbmail/dbmailUID.oa.mjs";
+import { dbmailGID } from "../LdapDbmail/dbmailGID.oa.mjs";
+import { deliveryMode } from "../LdapDbmail/deliveryMode.oa.mjs";
+import { accountStatus } from "../LdapDbmail/accountStatus.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 /**
  * @summary dbmailUser
  * @description
@@ -117,8 +130,8 @@ const dbmailUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, mail, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPassword, uidNumber, gidNumber, mailQuota, mailForwardingAddress, mailHost, mailAlternateAddress, dbmailUID, dbmailGID, deliveryMode, accountStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dbmailUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DBMail-LDAP User" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dbmailUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

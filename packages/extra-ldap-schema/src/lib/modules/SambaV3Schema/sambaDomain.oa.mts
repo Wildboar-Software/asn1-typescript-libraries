@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,22 @@ import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 
 
+import { sambaAlgorithmicRidBase } from "../SambaV3Schema/sambaAlgorithmicRidBase.oa.mjs";
+import { sambaForceLogoff } from "../SambaV3Schema/sambaForceLogoff.oa.mjs";
+import { sambaLockoutDuration } from "../SambaV3Schema/sambaLockoutDuration.oa.mjs";
+import { sambaLockoutObservationWindow } from "../SambaV3Schema/sambaLockoutObservationWindow.oa.mjs";
+import { sambaLockoutThreshold } from "../SambaV3Schema/sambaLockoutThreshold.oa.mjs";
+import { sambaLogonToChgPwd } from "../SambaV3Schema/sambaLogonToChgPwd.oa.mjs";
+import { sambaMaxPwdAge } from "../SambaV3Schema/sambaMaxPwdAge.oa.mjs";
+import { sambaMinPwdAge } from "../SambaV3Schema/sambaMinPwdAge.oa.mjs";
+import { sambaMinPwdLength } from "../SambaV3Schema/sambaMinPwdLength.oa.mjs";
+import { sambaNextGroupRid } from "../SambaV3Schema/sambaNextGroupRid.oa.mjs";
+import { sambaNextRid } from "../SambaV3Schema/sambaNextRid.oa.mjs";
+import { sambaNextUserRid } from "../SambaV3Schema/sambaNextUserRid.oa.mjs";
+import { sambaPwdHistoryLength } from "../SambaV3Schema/sambaPwdHistoryLength.oa.mjs";
+import { sambaRefuseMachinePwdChange } from "../SambaV3Schema/sambaRefuseMachinePwdChange.oa.mjs";
+import { sambaDomainName } from "../SambaV3Schema/sambaDomainName.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
 /**
  * @summary sambaDomain
  * @description
@@ -105,8 +121,8 @@ const sambaDomain: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ sambaDomainName, sambaSID, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sambaAlgorithmicRidBase, sambaForceLogoff, sambaLockoutDuration, sambaLockoutObservationWindow, sambaLockoutThreshold, sambaLogonToChgPwd, sambaMaxPwdAge, sambaMinPwdAge, sambaMinPwdLength, sambaNextGroupRid, sambaNextRid, sambaNextUserRid, sambaPwdHistoryLength, sambaRefuseMachinePwdChange, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sambaDomain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Samba Domain Information" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7165, 2, 2, 5,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

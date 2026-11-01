@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_nginfo } from "../Ldapmigration50nsNews/id-oc-nginfo.va.mjs";
 // export { id_oc_nginfo } from "../Ldapmigration50nsNews/id-oc-nginfo.va.mjs";
 
 
+import { nsnewsACL } from "../Ldapmigration50nsNews/nsnewsACL.oa.mjs";
+import { subtreeACI } from "../LdapSubtreeAci/subtreeACI.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { nsaclrole } from "../Ldapmigration50nsNews/nsaclrole.oa.mjs";
+import { nsprettyname } from "../Ldapmigration50nsNews/nsprettyname.oa.mjs";
+import { nsflags } from "../Ldapmigration50nsNews/nsflags.oa.mjs";
+import { nscreator } from "../Ldapmigration50nsNews/nscreator.oa.mjs";
+import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
+import { ngcomponent } from "../Ldapmigration50nsNews/ngcomponent.oa.mjs";
 /**
  * @summary nginfo
  * @description
@@ -111,8 +120,8 @@ const nginfo: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ objectClass, ngcomponent, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsnewsACL, subtreeACI, description, nsaclrole, nsprettyname, nsflags, nscreator, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nginfo" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "iPlanet defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nginfo /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

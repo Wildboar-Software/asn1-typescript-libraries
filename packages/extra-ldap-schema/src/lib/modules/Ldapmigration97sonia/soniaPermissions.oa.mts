@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_soniaPermissions } from "../Ldapmigration97sonia/id-oc-soniaPermi
 // export { id_oc_soniaPermissions } from "../Ldapmigration97sonia/id-oc-soniaPermissions.va.mjs";
 
 
+import { soniaPermissionRead } from "../Ldapmigration97sonia/soniaPermissionRead.oa.mjs";
+import { soniaPermissionWrite } from "../Ldapmigration97sonia/soniaPermissionWrite.oa.mjs";
+import { soniaPermissionOwner } from "../Ldapmigration97sonia/soniaPermissionOwner.oa.mjs";
+import { soniaPermissionAdmin } from "../Ldapmigration97sonia/soniaPermissionAdmin.oa.mjs";
+import { soniaPermissionMaxAssignments } from "../Ldapmigration97sonia/soniaPermissionMaxAssignments.oa.mjs";
+import { soniaPermissionAssignmentFilter } from "../Ldapmigration97sonia/soniaPermissionAssignmentFilter.oa.mjs";
 /**
  * @summary soniaPermissions
  * @description
@@ -109,7 +115,7 @@ const soniaPermissions: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaPermissionRead, soniaPermissionWrite, soniaPermissionOwner, soniaPermissionAdmin, soniaPermissionMaxAssignments, soniaPermissionAssignmentFilter, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaPermissions" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaPermissions /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

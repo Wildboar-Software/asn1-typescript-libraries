@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_kmr_account } from "../LdapUser/id-oc-kmr-account.va.mjs";
 // export { id_oc_kmr_account } from "../LdapUser/id-oc-kmr-account.va.mjs";
 
 
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 /**
  * @summary kmr_account
  * @description
@@ -106,8 +111,8 @@ const kmr_account: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, uid, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uidNumber, userPassword, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kmr-account" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kmr_account /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

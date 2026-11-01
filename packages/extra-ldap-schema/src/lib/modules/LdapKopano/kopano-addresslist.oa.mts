@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_kopano_addresslist } from "../LdapKopano/id-oc-kopano-addresslist
 // export { id_oc_kopano_addresslist } from "../LdapKopano/id-oc-kopano-addresslist.va.mjs";
 
 
+import { kopanoAccount } from "../LdapKopano/kopanoAccount.oa.mjs";
+import { kopanoHidden } from "../LdapKopano/kopanoHidden.oa.mjs";
+import { kopanoFilter } from "../LdapKopano/kopanoFilter.oa.mjs";
+import { kopanoBase } from "../LdapKopano/kopanoBase.oa.mjs";
 /**
  * @summary kopano_addresslist
  * @description
@@ -110,7 +114,7 @@ const kopano_addresslist: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ kopanoAccount, kopanoHidden, kopanoFilter, kopanoBase, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kopano-addresslist" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "KOPANO: a Kopano Addresslist" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kopano_addresslist /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

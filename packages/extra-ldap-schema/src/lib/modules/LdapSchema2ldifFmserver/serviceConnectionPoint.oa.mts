@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,16 @@ import { id_oc_serviceConnectionPoint } from "../LdapSchema2ldifFmserver/id-oc-s
 // export { id_oc_serviceConnectionPoint } from "../LdapSchema2ldifFmserver/id-oc-serviceConnectionPoint.va.mjs";
 
 
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { serviceClassName } from "../MSUser/serviceClassName.oa.mjs";
+import { serviceDNSName } from "../MSUser/serviceDNSName.oa.mjs";
+import { serviceDNSNameType } from "../MSUser/serviceDNSNameType.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { name } from "../SelectedAttributeTypes/name.oa.mjs";
+import { serviceBindingInformation } from "../MSUser/serviceBindingInformation.oa.mjs";
 /**
  * @summary serviceConnectionPoint
  * @description
@@ -112,8 +122,8 @@ const serviceConnectionPoint: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ connectionPoint, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ name, serviceBindingInformation, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ localityName, mail, owner, serviceClassName, serviceDNSName, serviceDNSNameType, telephoneNumber, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "serviceConnectionPoint" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Microsoft Active Directory ServiceConnectionPoint Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_serviceConnectionPoint /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

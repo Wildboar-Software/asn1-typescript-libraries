@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_addressTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-address
 // export { id_oc_addressTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-addressTemplate.va.mjs";
 
 
+import { addressSyntax } from "../MSUser/addressSyntax.oa.mjs";
+import { perMsgDialogDisplayTable } from "../MSUser/perMsgDialogDisplayTable.oa.mjs";
+import { perRecipDialogDisplayTable } from "../MSUser/perRecipDialogDisplayTable.oa.mjs";
+import { addressType } from "../MSUser/addressType.oa.mjs";
+import { proxyGenerationEnabled } from "../MSUser/proxyGenerationEnabled.oa.mjs";
 /**
  * @summary addressTemplate
  * @description
@@ -110,7 +115,7 @@ const addressTemplate: OBJECT_CLASS = {
     },
     "&Superclasses": [ displayTemplate, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ displayName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ addressSyntax, perMsgDialogDisplayTable, perRecipDialogDisplayTable, addressType, proxyGenerationEnabled, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "addressTemplate" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_addressTemplate /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

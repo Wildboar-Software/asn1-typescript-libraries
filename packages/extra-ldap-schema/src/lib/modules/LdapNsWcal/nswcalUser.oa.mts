@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,19 @@ import { id_oc_nswcalUser } from "../LdapNsWcal/id-oc-nswcalUser.va.mjs";
 // export { id_oc_nswcalUser } from "../LdapNsWcal/id-oc-nswcalUser.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { preferredLanguage } from "../InetOrgPerson/preferredLanguage.oa.mjs";
+import { surname } from "../SelectedAttributeTypes/surname.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { nswcalCALID } from "../LdapNsWcal/nswcalCALID.oa.mjs";
+import { nswcalDisallowAccess } from "../LdapNsWcal/nswcalDisallowAccess.oa.mjs";
+import { nswcalExtendedUserPrefs } from "../LdapNsWcal/nswcalExtendedUserPrefs.oa.mjs";
+import { nsLicensedFor } from "../LdapCommon389/nsLicensedFor.oa.mjs";
+import { nswcalHost } from "../LdapNsWcal/nswcalHost.oa.mjs";
+import { nswcalQuota } from "../LdapNsWcal/nswcalQuota.oa.mjs";
 /**
  * @summary nswcalUser
  * @description
@@ -119,7 +132,7 @@ const nswcalUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, givenName, mail, preferredLanguage, surname, uid, userPassword, nswcalCALID, nswcalDisallowAccess, nswcalExtendedUserPrefs, nsLicensedFor, nswcalHost, nswcalQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nswcalUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "iPlanet defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nswcalUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

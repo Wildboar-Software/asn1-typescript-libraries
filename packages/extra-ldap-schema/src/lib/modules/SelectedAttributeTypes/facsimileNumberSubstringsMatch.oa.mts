@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-import { SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
+import { type SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 // export { SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { id_mr_facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberSubstringsMatch.va.mjs";
 // export { id_mr_facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/id-mr-facsimileNumberSubstringsMatch.va.mjs";

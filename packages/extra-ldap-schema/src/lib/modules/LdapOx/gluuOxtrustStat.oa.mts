@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,15 @@ import { id_oc_gluuOxtrustStat } from "../LdapOx/id-oc-gluuOxtrustStat.va.mjs";
 // export { id_oc_gluuOxtrustStat } from "../LdapOx/id-oc-gluuOxtrustStat.va.mjs";
 
 
+import { gluuFreeDiskSpace } from "../LdapOx/gluuFreeDiskSpace.oa.mjs";
+import { gluuFreeMemory } from "../LdapOx/gluuFreeMemory.oa.mjs";
+import { gluuFreeSwap } from "../LdapOx/gluuFreeSwap.oa.mjs";
+import { gluuGroupCount } from "../LdapOx/gluuGroupCount.oa.mjs";
+import { gluuIpAddress } from "../LdapOx/gluuIpAddress.oa.mjs";
+import { gluuLoadAvg } from "../LdapOx/gluuLoadAvg.oa.mjs";
+import { gluuPersonCount } from "../LdapOx/gluuPersonCount.oa.mjs";
+import { gluuSystemUptime } from "../LdapOx/gluuSystemUptime.oa.mjs";
+import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
 /**
  * @summary gluuOxtrustStat
  * @description
@@ -114,7 +123,7 @@ const gluuOxtrustStat: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gluuFreeDiskSpace, gluuFreeMemory, gluuFreeSwap, gluuGroupCount, gluuIpAddress, gluuLoadAvg, gluuPersonCount, gluuSystemUptime, uniqueIdentifier, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gluuOxtrustStat" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gluuOxtrustStat /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

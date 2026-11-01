@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,16 @@ import { id_oc_dns_zone } from "../DNSFramework/id-oc-dns-zone.va.mjs";
 // export { id_oc_dns_zone } from "../DNSFramework/id-oc-dns-zone.va.mjs";
 
 
+import { dns_record } from "../DNSFramework/dns-record.oa.mjs";
+import { dnsName } from "../SelectedAttributeTypes/dnsName.oa.mjs";
+import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
+import { aRecord } from "../DNSFramework/aRecord.oa.mjs";
+import { mDRecord } from "../DNSFramework/mDRecord.oa.mjs";
+import { mxRecord } from "../DNSFramework/mxRecord.oa.mjs";
+import { nSRecord } from "../DNSFramework/nSRecord.oa.mjs";
+import { sOARecord } from "../DNSFramework/sOARecord.oa.mjs";
+import { cNAMERecord } from "../DNSFramework/cNAMERecord.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
 /**
  * @summary dns_zone
  * @description
@@ -114,7 +124,7 @@ const dns_zone: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dns_record, dnsName, dc, aRecord, mDRecord, mxRecord, nSRecord, sOARecord, cNAMERecord, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "DNS Zone" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A DNS Zone" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dns_zone /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

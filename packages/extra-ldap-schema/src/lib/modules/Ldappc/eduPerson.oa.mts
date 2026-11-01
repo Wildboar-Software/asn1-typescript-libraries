@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_eduPerson } from "../Ldappc/id-oc-eduPerson.va.mjs";
 // export { id_oc_eduPerson } from "../Ldappc/id-oc-eduPerson.va.mjs";
 
 
+import { eduPersonAffiliation } from "../Ldappc/eduPersonAffiliation.oa.mjs";
+import { eduPersonNickname } from "../Ldappc/eduPersonNickname.oa.mjs";
+import { eduPersonOrgDN } from "../Ldappc/eduPersonOrgDN.oa.mjs";
+import { eduPersonOrgUnitDN } from "../Ldappc/eduPersonOrgUnitDN.oa.mjs";
+import { eduPersonPrimaryAffiliation } from "../Ldappc/eduPersonPrimaryAffiliation.oa.mjs";
+import { eduPersonPrincipalName } from "../Ldappc/eduPersonPrincipalName.oa.mjs";
+import { eduPersonEntitlement } from "../Ldappc/eduPersonEntitlement.oa.mjs";
+import { eduPersonPrimaryOrgUnitDN } from "../Ldappc/eduPersonPrimaryOrgUnitDN.oa.mjs";
+import { eduPersonScopedAffiliation } from "../Ldappc/eduPersonScopedAffiliation.oa.mjs";
 /**
  * @summary eduPerson
  * @description
@@ -112,7 +121,7 @@ const eduPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ eduPersonAffiliation, eduPersonNickname, eduPersonOrgDN, eduPersonOrgUnitDN, eduPersonPrimaryAffiliation, eduPersonPrincipalName, eduPersonEntitlement, eduPersonPrimaryOrgUnitDN, eduPersonScopedAffiliation, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "eduPerson" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_eduPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

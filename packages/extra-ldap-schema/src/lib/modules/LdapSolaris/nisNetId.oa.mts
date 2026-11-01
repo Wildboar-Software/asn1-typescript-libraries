@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_nisNetId } from "../LdapSolaris/id-oc-nisNetId.va.mjs";
 // export { id_oc_nisNetId } from "../LdapSolaris/id-oc-nisNetId.va.mjs";
 
 
+import { nisNetIdUser } from "../LdapSolaris/nisNetIdUser.oa.mjs";
+import { nisNetIdGroup } from "../LdapSolaris/nisNetIdGroup.oa.mjs";
+import { nisNetIdHost } from "../LdapSolaris/nisNetIdHost.oa.mjs";
 /**
  * @summary nisNetId
  * @description
@@ -109,7 +112,7 @@ const nisNetId: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nisNetIdUser, nisNetIdGroup, nisNetIdHost, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nisNetId" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "nisNetId" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nisNetId /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

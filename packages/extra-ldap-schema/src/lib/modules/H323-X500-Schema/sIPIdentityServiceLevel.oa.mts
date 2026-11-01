@@ -11,6 +11,8 @@ import { sip_id_at } from "../H323-X500-Schema/sip-id-at.va.mjs";
 // export { sip_id_at } from "../H323-X500-Schema/sip-id-at.va.mjs";
 
 
+import { caseIgnoreIA5Match } from "../SelectedAttributeTypes/caseIgnoreIA5Match.oa.mjs";
+import { caseIgnoreIA5SubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreIA5SubstringsMatch.oa.mjs";
 /**
  * @summary sIPIdentityServiceLevel
  * @description

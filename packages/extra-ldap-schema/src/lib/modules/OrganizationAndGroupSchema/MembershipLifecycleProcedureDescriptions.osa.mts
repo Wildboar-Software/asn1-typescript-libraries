@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { vettingProcedureDescription } from "../OrganizationAndGroupSchema/vettingProcedureDescription.oa.mjs";
 // export { vettingProcedureDescription } from "../OrganizationAndGroupSchema/vettingProcedureDescription.oa.mjs";

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,28 @@ import { id_oc_zimbraDistributionList } from "../LdapZimbra/id-oc-zimbraDistribu
 // export { id_oc_zimbraDistributionList } from "../LdapZimbra/id-oc-zimbraDistributionList.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { zimbraACE } from "../LdapZimbra/zimbraACE.oa.mjs";
+import { zimbraAdminConsoleUIComponents } from "../LdapZimbra/zimbraAdminConsoleUIComponents.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraDistributionListSendShareMessageFromAddress } from "../LdapZimbra/zimbraDistributionListSendShareMessageFromAddress.oa.mjs";
+import { zimbraDistributionListSendShareMessageToNewMembers } from "../LdapZimbra/zimbraDistributionListSendShareMessageToNewMembers.oa.mjs";
+import { zimbraDistributionListSubscriptionPolicy } from "../LdapZimbra/zimbraDistributionListSubscriptionPolicy.oa.mjs";
+import { zimbraDistributionListUnsubscriptionPolicy } from "../LdapZimbra/zimbraDistributionListUnsubscriptionPolicy.oa.mjs";
+import { zimbraGroupId } from "../LdapZimbra/zimbraGroupId.oa.mjs";
+import { zimbraIsAdminGroup } from "../LdapZimbra/zimbraIsAdminGroup.oa.mjs";
+import { zimbraLocale } from "../LdapZimbra/zimbraLocale.oa.mjs";
+import { zimbraNotes } from "../LdapZimbra/zimbraNotes.oa.mjs";
+import { zimbraPrefAllowAddressForDelegatedSender } from "../LdapZimbra/zimbraPrefAllowAddressForDelegatedSender.oa.mjs";
+import { zimbraPrefReplyToAddress } from "../LdapZimbra/zimbraPrefReplyToAddress.oa.mjs";
+import { zimbraPrefReplyToDisplay } from "../LdapZimbra/zimbraPrefReplyToDisplay.oa.mjs";
+import { zimbraPrefReplyToEnabled } from "../LdapZimbra/zimbraPrefReplyToEnabled.oa.mjs";
+import { zimbraShareInfo } from "../LdapZimbra/zimbraShareInfo.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { zimbraId } from "../LdapZimbra/zimbraId.oa.mjs";
 /**
  * @summary zimbraDistributionList
  * @description
@@ -124,8 +146,8 @@ const zimbraDistributionList: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, zimbraId, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, description, displayName, mail, zimbraACE, zimbraAdminConsoleUIComponents, zimbraCreateTimestamp, zimbraDistributionListSendShareMessageFromAddress, zimbraDistributionListSendShareMessageToNewMembers, zimbraDistributionListSubscriptionPolicy, zimbraDistributionListUnsubscriptionPolicy, zimbraGroupId, zimbraIsAdminGroup, zimbraLocale, zimbraNotes, zimbraPrefAllowAddressForDelegatedSender, zimbraPrefReplyToAddress, zimbraPrefReplyToDisplay, zimbraPrefReplyToEnabled, zimbraShareInfo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraDistributionList" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Distribution List object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraDistributionList /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

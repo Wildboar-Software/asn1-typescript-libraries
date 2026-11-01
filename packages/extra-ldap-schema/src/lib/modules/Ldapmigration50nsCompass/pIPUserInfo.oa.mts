@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,12 @@ import { id_oc_pIPUserInfo } from "../Ldapmigration50nsCompass/id-oc-pIPUserInfo
 // export { id_oc_pIPUserInfo } from "../Ldapmigration50nsCompass/id-oc-pIPUserInfo.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { pipcompassservers } from "../Ldapmigration50nsCompass/pipcompassservers.oa.mjs";
+import { pipuniqueid } from "../Ldapmigration50nsCompass/pipuniqueid.oa.mjs";
 /**
  * @summary pIPUserInfo
  * @description
@@ -112,7 +118,7 @@ const pIPUserInfo: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, mail, userPassword, description, pipcompassservers, pipuniqueid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "PIPUserInfo" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pIPUserInfo /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_oc_connectionPoint } from "../LdapSchema2ldifFmserver/id-oc-connecti
 // export { id_oc_connectionPoint } from "../LdapSchema2ldifFmserver/id-oc-connectionPoint.va.mjs";
 
 
+import { keywords } from "../MSUser/keywords.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
 /**
  * @summary connectionPoint
  * @description
@@ -108,7 +110,7 @@ const connectionPoint: OBJECT_CLASS = {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ keywords, managedBy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "connectionPoint" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Microsoft Active Directory ConnectPoint Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_connectionPoint /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

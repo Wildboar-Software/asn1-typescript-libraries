@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,16 @@ import { h323_id_oc } from "../H323-X500-Schema/h323-id-oc.va.mjs";
 // export { h323_id_oc } from "../H323-X500-Schema/h323-id-oc.va.mjs";
 
 
+import { h323IdentityGKDomain } from "../H323-X500-Schema/h323IdentityGKDomain.oa.mjs";
+import { h323Identityh323_ID } from "../H323-X500-Schema/h323Identityh323-ID.oa.mjs";
+import { h323IdentitydialedDigits } from "../H323-X500-Schema/h323IdentitydialedDigits.oa.mjs";
+import { h323Identityemail_ID } from "../H323-X500-Schema/h323Identityemail-ID.oa.mjs";
+import { h323IdentityURL_ID } from "../H323-X500-Schema/h323IdentityURL-ID.oa.mjs";
+import { h323IdentitytransportID } from "../H323-X500-Schema/h323IdentitytransportID.oa.mjs";
+import { h323IdentitypartyNumber } from "../H323-X500-Schema/h323IdentitypartyNumber.oa.mjs";
+import { h323IdentitymobileUIM } from "../H323-X500-Schema/h323IdentitymobileUIM.oa.mjs";
+import { h323IdentityEndpointType } from "../H323-X500-Schema/h323IdentityEndpointType.oa.mjs";
+import { h323IdentityServiceLevel } from "../H323-X500-Schema/h323IdentityServiceLevel.oa.mjs";
 /**
  * @summary h323Identity
  * @description
@@ -106,7 +116,7 @@ const h323Identity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ h323IdentityGKDomain, h323Identityh323_ID, h323IdentitydialedDigits, h323Identityemail_ID, h323IdentityURL_ID, h323IdentitytransportID, h323IdentitypartyNumber, h323IdentitymobileUIM, h323IdentityEndpointType, h323IdentityServiceLevel, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], h323_id_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_tacacsAccount } from "../LdapTacacs/id-oc-tacacsAccount.va.mjs";
 // export { id_oc_tacacsAccount } from "../LdapTacacs/id-oc-tacacsAccount.va.mjs";
 
 
+import { tacacsClient } from "../LdapTacacs/tacacsClient.oa.mjs";
+import { tacacsMember } from "../LdapTacacs/tacacsMember.oa.mjs";
+import { tacacsProfile } from "../LdapTacacs/tacacsProfile.oa.mjs";
+import { tacacsFlag } from "../LdapTacacs/tacacsFlag.oa.mjs";
 /**
  * @summary tacacsAccount
  * @description
@@ -112,7 +116,7 @@ const tacacsAccount: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tacacsClient, tacacsMember, tacacsProfile, tacacsFlag, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tacacsAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Tacacs user object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tacacsAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

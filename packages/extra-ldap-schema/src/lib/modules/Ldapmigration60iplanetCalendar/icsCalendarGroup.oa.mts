@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,15 @@ import { id_oc_icsCalendarGroup } from "../Ldapmigration60iplanetCalendar/id-oc-
 // export { id_oc_icsCalendarGroup } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarGroup.va.mjs";
 
 
+import { icsSecondaryowners } from "../Ldapmigration60iplanetCalendar/icsSecondaryowners.oa.mjs";
+import { icsDefaultacl } from "../Ldapmigration60iplanetCalendar/icsDefaultacl.oa.mjs";
+import { icsCalendar } from "../Ldapmigration60iplanetCalendar/icsCalendar.oa.mjs";
+import { icsStatus } from "../Ldapmigration60iplanetCalendar/icsStatus.oa.mjs";
+import { icsTimezone } from "../Ldapmigration60iplanetCalendar/icsTimezone.oa.mjs";
+import { icsDWPHost } from "../Ldapmigration60iplanetCalendar/icsDWPHost.oa.mjs";
+import { icsDoublebooking } from "../Ldapmigration60iplanetCalendar/icsDoublebooking.oa.mjs";
+import { icsAutoaccept } from "../Ldapmigration60iplanetCalendar/icsAutoaccept.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 /**
  * @summary icsCalendarGroup
  * @description
@@ -117,7 +126,7 @@ const icsCalendarGroup: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ groupid, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ icsSecondaryowners, icsDefaultacl, icsCalendar, icsStatus, icsTimezone, icsDWPHost, icsDoublebooking, icsAutoaccept, mail, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "icsCalendarGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Calendar Group object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_icsCalendarGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

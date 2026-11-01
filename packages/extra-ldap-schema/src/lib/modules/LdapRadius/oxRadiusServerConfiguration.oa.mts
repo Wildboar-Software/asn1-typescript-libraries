@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,16 @@ import { id_oc_oxRadiusServerConfiguration } from "../LdapRadius/id-oc-oxRadiusS
 // export { id_oc_oxRadiusServerConfiguration } from "../LdapRadius/id-oc-oxRadiusServerConfiguration.va.mjs";
 
 
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { oxRadiusListenInterface } from "../LdapRadius/oxRadiusListenInterface.oa.mjs";
+import { oxRadiusAuthenticationPort } from "../LdapRadius/oxRadiusAuthenticationPort.oa.mjs";
+import { oxRadiusAccountingPort } from "../LdapRadius/oxRadiusAccountingPort.oa.mjs";
+import { oxRadiusOpenIdBaseUrl } from "../LdapRadius/oxRadiusOpenIdBaseUrl.oa.mjs";
+import { oxRadiusOpenidUsername } from "../LdapRadius/oxRadiusOpenidUsername.oa.mjs";
+import { oxRadiusOpenidPassword } from "../LdapRadius/oxRadiusOpenidPassword.oa.mjs";
+import { oxRadiusAcrValue } from "../LdapRadius/oxRadiusAcrValue.oa.mjs";
+import { oxRadiusAuthScope } from "../LdapRadius/oxRadiusAuthScope.oa.mjs";
+import { oxRadiusAuthenticationTimeout } from "../LdapRadius/oxRadiusAuthenticationTimeout.oa.mjs";
 /**
  * @summary oxRadiusServerConfiguration
  * @description
@@ -115,7 +125,7 @@ const oxRadiusServerConfiguration: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ organizationalUnitName, oxRadiusListenInterface, oxRadiusAuthenticationPort, oxRadiusAccountingPort, oxRadiusOpenIdBaseUrl, oxRadiusOpenidUsername, oxRadiusOpenidPassword, oxRadiusAcrValue, oxRadiusAuthScope, oxRadiusAuthenticationTimeout, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxRadiusServerConfiguration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxRadiusServerConfiguration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

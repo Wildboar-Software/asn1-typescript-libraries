@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_dSUISettings } from "../LdapSchema2ldifMicrosoft/id-oc-dSUISettin
 // export { id_oc_dSUISettings } from "../LdapSchema2ldifMicrosoft/id-oc-dSUISettings.va.mjs";
 
 
+import { dSUIAdminNotification } from "../MSUser/dSUIAdminNotification.oa.mjs";
+import { dSUIAdminMaximum } from "../MSUser/dSUIAdminMaximum.oa.mjs";
+import { dSUIShellMaximum } from "../MSUser/dSUIShellMaximum.oa.mjs";
 /**
  * @summary dSUISettings
  * @description
@@ -104,7 +107,7 @@ const dSUISettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dSUIAdminNotification, dSUIAdminMaximum, dSUIShellMaximum, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dSUISettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dSUISettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_ipUser } from "../Ldapmigration55imsIcal/id-oc-ipUser.va.mjs";
 // export { id_oc_ipUser } from "../Ldapmigration55imsIcal/id-oc-ipUser.va.mjs";
 
 
+import { pabURI } from "../Ldapmigration55imsIcal/pabURI.oa.mjs";
+import { memberOfManagedGroup } from "../Ldapmigration55imsIcal/memberOfManagedGroup.oa.mjs";
+import { maxPabEntries } from "../Ldapmigration55imsIcal/maxPabEntries.oa.mjs";
+import { inetCOS } from "../Ldapmigration55imsIcal/inetCOS.oa.mjs";
+import { psRoot } from "../Ldapmigration55imsIcal/psRoot.oa.mjs";
+import { psIncludeInGAB } from "../Ldapmigration55imsIcal/psIncludeInGAB.oa.mjs";
 /**
  * @summary ipUser
  * @description
@@ -110,7 +116,7 @@ const ipUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ pabURI, memberOfManagedGroup, maxPabEntries, inetCOS, psRoot, psIncludeInGAB, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for extending a inetuser entry. Used by calendar and messaging servers" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

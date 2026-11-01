@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,20 @@ import { id_oc_trustedDomain } from "../LdapSchema2ldifMicrosoft/id-oc-trustedDo
 // export { id_oc_trustedDomain } from "../LdapSchema2ldifMicrosoft/id-oc-trustedDomain.va.mjs";
 
 
+import { securityIdentifier } from "../MSUser/securityIdentifier.oa.mjs";
+import { trustAuthIncoming } from "../MSUser/trustAuthIncoming.oa.mjs";
+import { trustDirection } from "../MSUser/trustDirection.oa.mjs";
+import { trustPartner } from "../MSUser/trustPartner.oa.mjs";
+import { trustPosixOffset } from "../MSUser/trustPosixOffset.oa.mjs";
+import { trustAuthOutgoing } from "../MSUser/trustAuthOutgoing.oa.mjs";
+import { trustType } from "../MSUser/trustType.oa.mjs";
+import { trustAttributes } from "../MSUser/trustAttributes.oa.mjs";
+import { domainCrossRef } from "../MSUser/domainCrossRef.oa.mjs";
+import { flatName } from "../MSUser/flatName.oa.mjs";
+import { initialAuthIncoming } from "../MSUser/initialAuthIncoming.oa.mjs";
+import { initialAuthOutgoing } from "../MSUser/initialAuthOutgoing.oa.mjs";
+import { domainIdentifier } from "../MSUser/domainIdentifier.oa.mjs";
+import { additionalTrustedServiceNames } from "../MSUser/additionalTrustedServiceNames.oa.mjs";
 /**
  * @summary trustedDomain
  * @description
@@ -115,7 +129,7 @@ const trustedDomain: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ securityIdentifier, trustAuthIncoming, trustDirection, trustPartner, trustPosixOffset, trustAuthOutgoing, trustType, trustAttributes, domainCrossRef, flatName, initialAuthIncoming, initialAuthOutgoing, domainIdentifier, additionalTrustedServiceNames, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "trustedDomain" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_trustedDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

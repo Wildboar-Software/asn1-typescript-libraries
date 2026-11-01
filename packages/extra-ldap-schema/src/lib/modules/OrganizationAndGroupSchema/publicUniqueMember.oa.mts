@@ -8,6 +8,7 @@ import { id_at_publicUniqueMember } from "../OrganizationAndGroupSchema/id-at-pu
 // export { id_at_publicUniqueMember } from "../OrganizationAndGroupSchema/id-at-publicUniqueMember.va.mjs";
 
 
+import { nameAndOptionalUID } from "../SelectedAttributeTypes/nameAndOptionalUID.oa.mjs";
 /**
  * @summary publicUniqueMember
  * @description

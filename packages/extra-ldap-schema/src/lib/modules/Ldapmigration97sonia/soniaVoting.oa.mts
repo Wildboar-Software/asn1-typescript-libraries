@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,17 @@ import { id_oc_soniaVoting } from "../Ldapmigration97sonia/id-oc-soniaVoting.va.
 // export { id_oc_soniaVoting } from "../Ldapmigration97sonia/id-oc-soniaVoting.va.mjs";
 
 
+import { soniaVotingDescription } from "../Ldapmigration97sonia/soniaVotingDescription.oa.mjs";
+import { soniaVotingStartDate } from "../Ldapmigration97sonia/soniaVotingStartDate.oa.mjs";
+import { soniaVotingEndDate } from "../Ldapmigration97sonia/soniaVotingEndDate.oa.mjs";
+import { soniaVotingAccessFilter } from "../Ldapmigration97sonia/soniaVotingAccessFilter.oa.mjs";
+import { soniaVotingResultViewer } from "../Ldapmigration97sonia/soniaVotingResultViewer.oa.mjs";
+import { soniaVotingMinChoice } from "../Ldapmigration97sonia/soniaVotingMinChoice.oa.mjs";
+import { soniaVotingMaxChoice } from "../Ldapmigration97sonia/soniaVotingMaxChoice.oa.mjs";
+import { soniaVotingSeat } from "../Ldapmigration97sonia/soniaVotingSeat.oa.mjs";
+import { soniaVotingSucceedCount } from "../Ldapmigration97sonia/soniaVotingSucceedCount.oa.mjs";
+import { soniaVotingFailedCount } from "../Ldapmigration97sonia/soniaVotingFailedCount.oa.mjs";
+import { soniaVotingEnabledCount } from "../Ldapmigration97sonia/soniaVotingEnabledCount.oa.mjs";
 /**
  * @summary soniaVoting
  * @description
@@ -116,7 +127,7 @@ const soniaVoting: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaVotingDescription, soniaVotingStartDate, soniaVotingEndDate, soniaVotingAccessFilter, soniaVotingResultViewer, soniaVotingMinChoice, soniaVotingMaxChoice, soniaVotingSeat, soniaVotingSucceedCount, soniaVotingFailedCount, soniaVotingEnabledCount, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaVoting" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaVoting /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

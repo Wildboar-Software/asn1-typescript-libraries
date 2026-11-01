@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-import { Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
+import { type Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
 // export { Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
 import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
 // export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";

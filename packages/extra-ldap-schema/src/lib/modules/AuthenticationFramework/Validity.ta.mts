@@ -4,7 +4,7 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
 // export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
 
 

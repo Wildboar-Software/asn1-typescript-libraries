@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,17 @@ import { id_oc_pIPUser } from "../Ldapmigration50nsCompass/id-oc-pIPUser.va.mjs"
 // export { id_oc_pIPUser } from "../Ldapmigration50nsCompass/id-oc-pIPUser.va.mjs";
 
 
+import { pipuniqueid } from "../Ldapmigration50nsCompass/pipuniqueid.oa.mjs";
+import { pipcompassservers } from "../Ldapmigration50nsCompass/pipcompassservers.oa.mjs";
+import { pipreservedcis1 } from "../Ldapmigration50nsCompass/pipreservedcis1.oa.mjs";
+import { pipreservedcis2 } from "../Ldapmigration50nsCompass/pipreservedcis2.oa.mjs";
+import { pipreservedcis3 } from "../Ldapmigration50nsCompass/pipreservedcis3.oa.mjs";
+import { pipreservedcis4 } from "../Ldapmigration50nsCompass/pipreservedcis4.oa.mjs";
+import { pipreservedcis5 } from "../Ldapmigration50nsCompass/pipreservedcis5.oa.mjs";
+import { pipreservedcis6 } from "../Ldapmigration50nsCompass/pipreservedcis6.oa.mjs";
+import { pipreservedces1 } from "../Ldapmigration50nsCompass/pipreservedces1.oa.mjs";
+import { pipreservedces2 } from "../Ldapmigration50nsCompass/pipreservedces2.oa.mjs";
+import { pipreservedces3 } from "../Ldapmigration50nsCompass/pipreservedces3.oa.mjs";
 /**
  * @summary pIPUser
  * @description
@@ -117,7 +128,7 @@ const pIPUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ pipuniqueid, pipcompassservers, pipreservedcis1, pipreservedcis2, pipreservedcis3, pipreservedcis4, pipreservedcis5, pipreservedcis6, pipreservedces1, pipreservedces2, pipreservedces3, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "PIPUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pIPUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

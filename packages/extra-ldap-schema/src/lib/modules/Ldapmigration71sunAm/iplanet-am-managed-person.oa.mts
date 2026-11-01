@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_iplanet_am_managed_person } from "../Ldapmigration71sunAm/id-oc-i
 // export { id_oc_iplanet_am_managed_person } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-person.va.mjs";
 
 
+import { iplanet_am_modifiable_by } from "../Ldapmigration71sunAm/iplanet-am-modifiable-by.oa.mjs";
+import { iplanet_am_static_group_dn } from "../Ldapmigration71sunAm/iplanet-am-static-group-dn.oa.mjs";
+import { iplanet_am_user_account_life } from "../Ldapmigration71sunAm/iplanet-am-user-account-life.oa.mjs";
 /**
  * @summary iplanet_am_managed_person
  * @description
@@ -107,7 +110,7 @@ const iplanet_am_managed_person: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanet_am_modifiable_by, iplanet_am_static_group_dn, iplanet_am_user_account_life, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-managed-person" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Managed Person OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_managed_person /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

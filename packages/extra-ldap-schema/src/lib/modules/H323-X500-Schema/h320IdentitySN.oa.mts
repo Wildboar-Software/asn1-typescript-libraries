@@ -11,6 +11,7 @@ import { h320_id_at } from "../H323-X500-Schema/h320-id-at.va.mjs";
 // export { h320_id_at } from "../H323-X500-Schema/h320-id-at.va.mjs";
 
 
+import { caseIgnoreIA5Match } from "../SelectedAttributeTypes/caseIgnoreIA5Match.oa.mjs";
 /**
  * @summary h320IdentitySN
  * @description

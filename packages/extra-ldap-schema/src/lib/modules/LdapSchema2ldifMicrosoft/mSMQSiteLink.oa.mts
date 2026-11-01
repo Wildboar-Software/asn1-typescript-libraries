@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_mSMQSiteLink } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQSiteLi
 // export { id_oc_mSMQSiteLink } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQSiteLink.va.mjs";
 
 
+import { mSMQSiteGates } from "../MSUser/mSMQSiteGates.oa.mjs";
+import { mSMQSiteGatesMig } from "../MSUser/mSMQSiteGatesMig.oa.mjs";
+import { mSMQSite1 } from "../MSUser/mSMQSite1.oa.mjs";
+import { mSMQSite2 } from "../MSUser/mSMQSite2.oa.mjs";
+import { mSMQCost } from "../MSUser/mSMQCost.oa.mjs";
 /**
  * @summary mSMQSiteLink
  * @description
@@ -106,8 +111,8 @@ const mSMQSiteLink: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mSMQSite1, mSMQSite2, mSMQCost, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mSMQSiteGates, mSMQSiteGatesMig, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mSMQSiteLink" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mSMQSiteLink /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

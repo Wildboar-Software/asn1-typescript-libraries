@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_dnsNode } from "../LdapSchema2ldifMicrosoft/id-oc-dnsNode.va.mjs"
 // export { id_oc_dnsNode } from "../LdapSchema2ldifMicrosoft/id-oc-dnsNode.va.mjs";
 
 
+import { dnsRecord } from "../MSUser/dnsRecord.oa.mjs";
+import { dNSProperty } from "../MSUser/dNSProperty.oa.mjs";
+import { dNSTombstoned } from "../MSUser/dNSTombstoned.oa.mjs";
 /**
  * @summary dnsNode
  * @description
@@ -108,7 +111,7 @@ const dnsNode: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ dc, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnsRecord, dNSProperty, dNSTombstoned, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dnsNode" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dnsNode /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

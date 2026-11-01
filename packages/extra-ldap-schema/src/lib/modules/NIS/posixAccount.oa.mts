@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { loginShell } from "../NIS/loginShell.oa.mjs";
+import { gecos } from "../NIS/gecos.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
 /**
  * @summary posixAccount
  * @description
@@ -118,8 +127,8 @@ const posixAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, uid, uidNumber, gidNumber, homeDirectory, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPassword, loginShell, gecos, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "posixAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of an account with POSIX attributes" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([0,], id_nis_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

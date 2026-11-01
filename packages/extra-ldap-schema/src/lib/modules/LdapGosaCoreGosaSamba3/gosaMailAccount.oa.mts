@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,20 @@ import { id_oc_gosaMailAccount } from "../LdapGosaCoreGosaSamba3/id-oc-gosaMailA
 // export { id_oc_gosaMailAccount } from "../LdapGosaCoreGosaSamba3/id-oc-gosaMailAccount.va.mjs";
 
 
+import { gosaMailQuota } from "../LdapGosaCoreGosaSamba3/gosaMailQuota.oa.mjs";
+import { gosaMailAlternateAddress } from "../LdapGosaCoreGosaSamba3/gosaMailAlternateAddress.oa.mjs";
+import { gosaMailForwardingAddress } from "../LdapGosaCoreGosaSamba3/gosaMailForwardingAddress.oa.mjs";
+import { gosaMailMaxSize } from "../LdapGosaCoreGosaSamba3/gosaMailMaxSize.oa.mjs";
+import { gosaSpamSortLevel } from "../LdapGosaCoreGosaSamba3/gosaSpamSortLevel.oa.mjs";
+import { gosaSpamMailbox } from "../LdapGosaCoreGosaSamba3/gosaSpamMailbox.oa.mjs";
+import { gosaVacationMessage } from "../LdapGosaCoreGosaSamba3/gosaVacationMessage.oa.mjs";
+import { gosaVacationStart } from "../LdapGosaCoreGosaSamba3/gosaVacationStart.oa.mjs";
+import { gosaVacationStop } from "../LdapGosaCoreGosaSamba3/gosaVacationStop.oa.mjs";
+import { gosaSharedFolderTarget } from "../LdapGosaCoreGosaSamba3/gosaSharedFolderTarget.oa.mjs";
+import { acl } from "../LdapGosaCoreGosaSamba3/acl.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { gosaMailServer } from "../LdapGosaCoreGosaSamba3/gosaMailServer.oa.mjs";
+import { gosaMailDeliveryMode } from "../LdapGosaCoreGosaSamba3/gosaMailDeliveryMode.oa.mjs";
 /**
  * @summary gosaMailAccount
  * @description
@@ -118,8 +132,8 @@ const gosaMailAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, gosaMailServer, gosaMailDeliveryMode, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gosaMailQuota, gosaMailAlternateAddress, gosaMailForwardingAddress, gosaMailMaxSize, gosaSpamSortLevel, gosaSpamMailbox, gosaVacationMessage, gosaVacationStart, gosaVacationStop, gosaSharedFolderTarget, acl, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaMailAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Class to mark MailAccounts for GOsa (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gosaMailAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_lsx_otherMailbox } from "../SelectedAttributeTypes/id-lsx-otherMailbox.va.mjs";

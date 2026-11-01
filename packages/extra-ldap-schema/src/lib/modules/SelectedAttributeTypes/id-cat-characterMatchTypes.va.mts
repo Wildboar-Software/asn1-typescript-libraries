@@ -6,6 +6,7 @@ import {
 
 
 
+import { id_cat } from "../UsefulDefinitions/id-cat.va.mjs";
 /**
  * @summary id_cat_characterMatchTypes
  * @description

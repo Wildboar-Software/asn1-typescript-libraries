@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,22 @@ import { id_oc_sunUCPreferences } from "../Ldapmigration98nsDummyUwc/id-oc-sunUC
 // export { id_oc_sunUCPreferences } from "../Ldapmigration98nsDummyUwc/id-oc-sunUCPreferences.va.mjs";
 
 
+import { sunUCDefaultApplication } from "../Ldapmigration98nsDummyUwc/sunUCDefaultApplication.oa.mjs";
+import { sunUCTheme } from "../Ldapmigration98nsDummyUwc/sunUCTheme.oa.mjs";
+import { sunUCColorScheme } from "../Ldapmigration98nsDummyUwc/sunUCColorScheme.oa.mjs";
+import { sunUCDefaultEmailHandler } from "../Ldapmigration98nsDummyUwc/sunUCDefaultEmailHandler.oa.mjs";
+import { sunUCDateFormat } from "../Ldapmigration98nsDummyUwc/sunUCDateFormat.oa.mjs";
+import { sunUCDateDelimiter } from "../Ldapmigration98nsDummyUwc/sunUCDateDelimiter.oa.mjs";
+import { sunUCTimeFormat } from "../Ldapmigration98nsDummyUwc/sunUCTimeFormat.oa.mjs";
+import { sunUCTimeZone } from "../Ldapmigration98nsDummyUwc/sunUCTimeZone.oa.mjs";
+import { sunUCMailSendProfiles } from "../Ldapmigration98nsDummyUwc/sunUCMailSendProfiles.oa.mjs";
+import { sunUCExtendedUserPrefs } from "../Ldapmigration98nsDummyUwc/sunUCExtendedUserPrefs.oa.mjs";
+import { nswmExtendedUserPrefs } from "../Ldapmigration50nsMail/nswmExtendedUserPrefs.oa.mjs";
+import { icsExtendedUserPrefs } from "../Ldapmigration55imsIcal/icsExtendedUserPrefs.oa.mjs";
+import { sunAbExtendedUserPrefs } from "../Ldapmigration98nsDummyUwc/sunAbExtendedUserPrefs.oa.mjs";
+import { sunUCExtendedClientPrefs } from "../Ldapmigration98nsDummyUwc/sunUCExtendedClientPrefs.oa.mjs";
+import { sunUCExternalMailProfile } from "../Ldapmigration98nsDummyUwc/sunUCExternalMailProfile.oa.mjs";
+import { abEventNotificationDestination } from "../Ldapmigration98nsDummyUwc/abEventNotificationDestination.oa.mjs";
 /**
  * @summary sunUCPreferences
  * @description
@@ -118,7 +134,7 @@ const sunUCPreferences: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunUCDefaultApplication, sunUCTheme, sunUCColorScheme, sunUCDefaultEmailHandler, sunUCDateFormat, sunUCDateDelimiter, sunUCTimeFormat, sunUCTimeZone, sunUCMailSendProfiles, sunUCExtendedUserPrefs, nswmExtendedUserPrefs, icsExtendedUserPrefs, sunAbExtendedUserPrefs, sunUCExtendedClientPrefs, sunUCExternalMailProfile, abEventNotificationDestination, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunUCPreferences" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "UWC object class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunUCPreferences /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

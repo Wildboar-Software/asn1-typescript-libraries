@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,18 @@ import { id_oc_apple_preset_group } from "../LdapSchema2ldifApple/id-oc-apple-pr
 // export { id_oc_apple_preset_group } from "../LdapSchema2ldifApple/id-oc-apple-preset-group.va.mjs";
 
 
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { apple_group_homeurl } from "../LdapSchema2ldifApple/apple-group-homeurl.oa.mjs";
+import { apple_group_homeowner } from "../LdapSchema2ldifApple/apple-group-homeowner.oa.mjs";
+import { apple_mcxflags } from "../LdapSchema2ldifApple/apple-mcxflags.oa.mjs";
+import { apple_mcxsettings } from "../LdapSchema2ldifApple/apple-mcxsettings.oa.mjs";
+import { apple_group_realname } from "../LdapSchema2ldifApple/apple-group-realname.oa.mjs";
+import { apple_keyword } from "../LdapSchema2ldifApple/apple-keyword.oa.mjs";
+import { apple_group_nestedgroup } from "../LdapSchema2ldifApple/apple-group-nestedgroup.oa.mjs";
+import { apple_group_memberguid } from "../LdapSchema2ldifApple/apple-group-memberguid.oa.mjs";
+import { ttl } from "../LdapCommon389/ttl.oa.mjs";
 /**
  * @summary apple_preset_group
  * @description
@@ -118,7 +130,7 @@ const apple_preset_group: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ memberUid, gidNumber, description, apple_group_homeurl, apple_group_homeowner, apple_mcxflags, apple_mcxsettings, apple_group_realname, apple_keyword, apple_group_nestedgroup, apple_group_memberguid, ttl, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-preset-group" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "preset group" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_preset_group /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

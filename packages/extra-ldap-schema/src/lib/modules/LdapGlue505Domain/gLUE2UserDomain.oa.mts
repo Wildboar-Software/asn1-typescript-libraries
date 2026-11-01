@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_gLUE2UserDomain } from "../LdapGlue505Domain/id-oc-gLUE2UserDomai
 // export { id_oc_gLUE2UserDomain } from "../LdapGlue505Domain/id-oc-gLUE2UserDomain.va.mjs";
 
 
+import { gLUE2UserDomainLevel } from "../LdapGlue505Domain/gLUE2UserDomainLevel.oa.mjs";
+import { gLUE2UserDomainUserManager } from "../LdapGlue505Domain/gLUE2UserDomainUserManager.oa.mjs";
+import { gLUE2UserDomainMember } from "../LdapGlue505Domain/gLUE2UserDomainMember.oa.mjs";
+import { gLUE2UserDomainUserDomainForeignKey } from "../LdapGlue505Domain/gLUE2UserDomainUserDomainForeignKey.oa.mjs";
 /**
  * @summary gLUE2UserDomain
  * @description
@@ -106,7 +110,7 @@ const gLUE2UserDomain: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Domain, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2UserDomainLevel, gLUE2UserDomainUserManager, gLUE2UserDomainMember, gLUE2UserDomainUserDomainForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2UserDomain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A collection of actors that can be assigned with user roles and privileges to services or shares via policies" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2UserDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

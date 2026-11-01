@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_tf_application } from "../LdapTrustFabric/id-oc-tf-application.va
 // export { id_oc_tf_application } from "../LdapTrustFabric/id-oc-tf-application.va.mjs";
 
 
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { tf_source_repository } from "../LdapTrustFabric/tf-source-repository.oa.mjs";
+import { tf_software_repository } from "../LdapTrustFabric/tf-software-repository.oa.mjs";
+import { tf_issue_repository } from "../LdapTrustFabric/tf-issue-repository.oa.mjs";
+import { tf_creator } from "../LdapTrustFabric/tf-creator.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { tf_application_id } from "../LdapTrustFabric/tf-application-id.oa.mjs";
 /**
  * @summary tf_application
  * @description
@@ -110,8 +119,8 @@ const tf_application: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ organizationalUnitName, tf_application_id, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ displayName, seeAlso, description, tf_source_repository, tf_software_repository, tf_issue_repository, tf_creator, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tf-application" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tf_application /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

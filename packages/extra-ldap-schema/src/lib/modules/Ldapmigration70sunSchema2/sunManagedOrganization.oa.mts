@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_sunManagedOrganization } from "../Ldapmigration70sunSchema2/id-oc
 // export { id_oc_sunManagedOrganization } from "../Ldapmigration70sunSchema2/id-oc-sunManagedOrganization.va.mjs";
 
 
+import { inetDomainStatus } from "../Ldapmigration20subscriber/inetDomainStatus.oa.mjs";
+import { sunPreferredDomain } from "../Ldapmigration70sunSchema2/sunPreferredDomain.oa.mjs";
+import { associatedDomain } from "../MIXERAddressMapping/associatedDomain.oa.mjs";
+import { sunPreferredOrganization } from "../Ldapmigration70sunSchema2/sunPreferredOrganization.oa.mjs";
+import { sunAdditionalTemplates } from "../Ldapmigration70sunSchema2/sunAdditionalTemplates.oa.mjs";
+import { sunOverrideTemplates } from "../Ldapmigration70sunSchema2/sunOverrideTemplates.oa.mjs";
+import { sunRegisteredServiceName } from "../Ldapmigration70sunSchema2/sunRegisteredServiceName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 /**
  * @summary sunManagedOrganization
  * @description
@@ -112,7 +120,7 @@ const sunManagedOrganization: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ inetDomainStatus, sunPreferredDomain, associatedDomain, sunPreferredOrganization, sunAdditionalTemplates, sunOverrideTemplates, sunRegisteredServiceName, organizationName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunManagedOrganization" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auxiliary class which must be present in an organization entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunManagedOrganization /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

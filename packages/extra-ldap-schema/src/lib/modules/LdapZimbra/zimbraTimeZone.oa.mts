@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_zimbraTimeZone } from "../LdapZimbra/id-oc-zimbraTimeZone.va.mjs"
 // export { id_oc_zimbraTimeZone } from "../LdapZimbra/id-oc-zimbraTimeZone.va.mjs";
 
 
+import { zimbraTimeZoneDaylightDtStart } from "../LdapZimbra/zimbraTimeZoneDaylightDtStart.oa.mjs";
+import { zimbraTimeZoneDaylightOffset } from "../LdapZimbra/zimbraTimeZoneDaylightOffset.oa.mjs";
+import { zimbraTimeZoneDaylightRRule } from "../LdapZimbra/zimbraTimeZoneDaylightRRule.oa.mjs";
+import { zimbraTimeZoneStandardRRule } from "../LdapZimbra/zimbraTimeZoneStandardRRule.oa.mjs";
+import { zimbraTimeZoneStandardDtStart } from "../LdapZimbra/zimbraTimeZoneStandardDtStart.oa.mjs";
+import { zimbraTimeZoneStandardOffset } from "../LdapZimbra/zimbraTimeZoneStandardOffset.oa.mjs";
 /**
  * @summary zimbraTimeZone
  * @description
@@ -108,8 +114,8 @@ const zimbraTimeZone: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraTimeZoneStandardDtStart, zimbraTimeZoneStandardOffset, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraTimeZoneDaylightDtStart, zimbraTimeZoneDaylightOffset, zimbraTimeZoneDaylightRRule, zimbraTimeZoneStandardRRule, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraTimeZone" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Time Zone info" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraTimeZone /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

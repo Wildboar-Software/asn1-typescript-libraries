@@ -2,7 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 // export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { _decode_DNSResolverRotation, _encode_DNSResolverRotation, DNSResolverRotation } from "../DNSFramework/DNSResolverRotation.ta.mjs";
+import { _decode_DNSResolverRotation, _encode_DNSResolverRotation, type DNSResolverRotation } from "../DNSFramework/DNSResolverRotation.ta.mjs";
 // export { DNSResolverRotation, _enum_for_DNSResolverRotation, DNSResolverRotation_inOrder /* IMPORTED_LONG_ENUMERATION_ITEM */, inOrder /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNSResolverRotation_roundRobin /* IMPORTED_LONG_ENUMERATION_ITEM */, roundRobin /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNSResolverRotation_random /* IMPORTED_LONG_ENUMERATION_ITEM */, random /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNSResolverRotation_meritocracy /* IMPORTED_LONG_ENUMERATION_ITEM */, meritocracy /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DNSResolverRotation, _encode_DNSResolverRotation } from "../DNSFramework/DNSResolverRotation.ta.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 // export { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
@@ -10,6 +10,7 @@ import { id_at_dnsResolverRotation } from "../DNSFramework/id-at-dnsResolverRota
 // export { id_at_dnsResolverRotation } from "../DNSFramework/id-at-dnsResolverRotation.va.mjs";
 
 
+import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 /**
  * @summary dnsResolverRotation
  * @description

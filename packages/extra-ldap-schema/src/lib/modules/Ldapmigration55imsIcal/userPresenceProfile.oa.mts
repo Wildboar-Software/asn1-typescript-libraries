@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_userPresenceProfile } from "../Ldapmigration55imsIcal/id-oc-userP
 // export { id_oc_userPresenceProfile } from "../Ldapmigration55imsIcal/id-oc-userPresenceProfile.va.mjs";
 
 
+import { vacationstartdate } from "../Ldapmigration50nsMail/vacationstartdate.oa.mjs";
+import { vacationenddate } from "../Ldapmigration50nsMail/vacationenddate.oa.mjs";
 /**
  * @summary userPresenceProfile
  * @description
@@ -106,7 +108,7 @@ const userPresenceProfile: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ vacationstartdate, vacationenddate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "userPresenceProfile" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for vacation start end dates" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_userPresenceProfile /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

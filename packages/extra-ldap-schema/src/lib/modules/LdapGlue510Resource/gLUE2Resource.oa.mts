@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_gLUE2Resource } from "../LdapGlue510Resource/id-oc-gLUE2Resource.
 // export { id_oc_gLUE2Resource } from "../LdapGlue510Resource/id-oc-gLUE2Resource.va.mjs";
 
 
+import { gLUE2ResourceID } from "../LdapGlue510Resource/gLUE2ResourceID.oa.mjs";
+import { gLUE2ResourceManagerForeignKey } from "../LdapGlue510Resource/gLUE2ResourceManagerForeignKey.oa.mjs";
 /**
  * @summary gLUE2Resource
  * @description
@@ -104,7 +106,7 @@ const gLUE2Resource: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ResourceID, gLUE2ResourceManagerForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Resource" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A resource" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Resource /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

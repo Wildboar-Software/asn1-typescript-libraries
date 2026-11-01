@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_x_plug_payment } from "../LdapPlugpen/id-oc-x-plug-payment.va.mjs
 // export { id_oc_x_plug_payment } from "../LdapPlugpen/id-oc-x-plug-payment.va.mjs";
 
 
+import { x_plug_paymentDate } from "../LdapPlugpen/x-plug-paymentDate.oa.mjs";
+import { x_plug_paymentID } from "../LdapPlugpen/x-plug-paymentID.oa.mjs";
+import { x_plug_paymentAmount } from "../LdapPlugpen/x-plug-paymentAmount.oa.mjs";
+import { x_plug_paymentType } from "../LdapPlugpen/x-plug-paymentType.oa.mjs";
+import { x_plug_paymentYears } from "../LdapPlugpen/x-plug-paymentYears.oa.mjs";
 /**
  * @summary x_plug_payment
  * @description
@@ -110,7 +115,7 @@ const x_plug_payment: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ x_plug_paymentDate, x_plug_paymentID, x_plug_paymentAmount, x_plug_paymentType, x_plug_paymentYears, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ x_plug_paymentDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "x-plug-payment" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Payment" /* OBJECT_FIELD_SETTING */,

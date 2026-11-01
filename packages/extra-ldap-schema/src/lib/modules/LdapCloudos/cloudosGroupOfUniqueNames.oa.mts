@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_cloudosGroupOfUniqueNames } from "../LdapCloudos/id-oc-cloudosGro
 // export { id_oc_cloudosGroupOfUniqueNames } from "../LdapCloudos/id-oc-cloudosGroupOfUniqueNames.va.mjs";
 
 
+import { entryUUID } from "../LdapCloudos/entryUUID.oa.mjs";
+import { mirror } from "../LdapCloudos/mirror.oa.mjs";
+import { storageQuota } from "../LdapCloudos/storageQuota.oa.mjs";
 /**
  * @summary cloudosGroupOfUniqueNames
  * @description
@@ -107,7 +110,7 @@ const cloudosGroupOfUniqueNames: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ entryUUID, mirror, storageQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cloudosGroupOfUniqueNames" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "cloudos group of names" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cloudosGroupOfUniqueNames /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

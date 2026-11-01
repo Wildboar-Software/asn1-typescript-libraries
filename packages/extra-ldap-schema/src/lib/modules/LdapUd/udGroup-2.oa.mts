@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,20 @@ import { id_oc_udGroup_2 } from "../LdapUd/id-oc-udGroup-2.va.mjs";
 // export { id_oc_udGroup_2 } from "../LdapUd/id-oc-udGroup-2.va.mjs";
 
 
+import { udSerial } from "../LdapUd/udSerial.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { policyClass } from "../LdapUd/policyClass.oa.mjs";
+import { policyClassDisabled } from "../LdapUd/policyClassDisabled.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { unixGroup } from "../LdapUd/unixGroup.oa.mjs";
+import { udGroup } from "../LdapUd/udGroup.oa.mjs";
+import { udMemberSerial } from "../LdapUd/udMemberSerial.oa.mjs";
+import { udMemberContainer } from "../LdapUd/udMemberContainer.oa.mjs";
+import { fQDN } from "../LdapUd/fQDN.oa.mjs";
+import { uSID } from "../LdapUd/uSID.oa.mjs";
 /**
  * @summary udGroup_2
  * @description
@@ -123,7 +137,7 @@ const udGroup_2: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ udSerial, description, organizationalUnitName, policyClass, policyClassDisabled, uid, uidNumber, gidNumber, unixGroup, udGroup, udMemberSerial, udMemberContainer, fQDN, uSID, udMemberSerial, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "udGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "group container for multiple purpose (users, group of group etc)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_udGroup_2 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_gLUE2AdminDomain } from "../LdapGlue505Domain/id-oc-gLUE2AdminDom
 // export { id_oc_gLUE2AdminDomain } from "../LdapGlue505Domain/id-oc-gLUE2AdminDomain.va.mjs";
 
 
+import { gLUE2AdminDomainDistributed } from "../LdapGlue505Domain/gLUE2AdminDomainDistributed.oa.mjs";
+import { gLUE2AdminDomainOwner } from "../LdapGlue505Domain/gLUE2AdminDomainOwner.oa.mjs";
+import { gLUE2AdminDomainAdminDomainForeignKey } from "../LdapGlue505Domain/gLUE2AdminDomainAdminDomainForeignKey.oa.mjs";
 /**
  * @summary gLUE2AdminDomain
  * @description
@@ -105,7 +108,7 @@ const gLUE2AdminDomain: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Domain, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2AdminDomainDistributed, gLUE2AdminDomainOwner, gLUE2AdminDomainAdminDomainForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2AdminDomain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A collection of actors that can be assigned with administrative roles and privileges to services via policies. An AdminDomain manages services that can be geographically distributed, nevertheless a primary location should be identified." /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2AdminDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

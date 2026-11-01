@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,34 @@ import { id_oc_inetMailUser } from "../Ldapmigration56imsSchema/id-oc-inetMailUs
 // export { id_oc_inetMailUser } from "../Ldapmigration56imsSchema/id-oc-inetMailUser.va.mjs";
 
 
+import { mailAutoReplyTimeout } from "../Ldapmigration56imsSchema/mailAutoReplyTimeout.oa.mjs";
+import { mailAutoReplySubject } from "../Ldapmigration56imsSchema/mailAutoReplySubject.oa.mjs";
+import { mailAutoReplyText } from "../Ldapmigration50nsMail/mailAutoReplyText.oa.mjs";
+import { mailAutoReplyTextInternal } from "../Ldapmigration56imsSchema/mailAutoReplyTextInternal.oa.mjs";
+import { mailAutoReplyMode } from "../Ldapmigration50nsMail/mailAutoReplyMode.oa.mjs";
+import { mailDeliveryOption } from "../Ldapmigration50nsMail/mailDeliveryOption.oa.mjs";
+import { mailForwardingAddress } from "../QMailSchema/mailForwardingAddress.oa.mjs";
+import { mailMessageStore } from "../QMailSchema/mailMessageStore.oa.mjs";
+import { mailProgramDeliveryInfo } from "../Ldapmigration50nsMail/mailProgramDeliveryInfo.oa.mjs";
+import { mailQuota } from "../LdapDbmail/mailQuota.oa.mjs";
+import { mailMsgQuota } from "../Ldapmigration56imsSchema/mailMsgQuota.oa.mjs";
+import { mailSieveRuleSource } from "../LdapSchema2ldifPostfixBook/mailSieveRuleSource.oa.mjs";
+import { mailSMTPSubmitChannel } from "../Ldapmigration56imsSchema/mailSMTPSubmitChannel.oa.mjs";
+import { nswmExtendedUserPrefs } from "../Ldapmigration50nsMail/nswmExtendedUserPrefs.oa.mjs";
+import { mailAllowedServiceAccess } from "../Ldapmigration56imsSchema/mailAllowedServiceAccess.oa.mjs";
+import { mailUserStatus } from "../Ldapmigration56imsSchema/mailUserStatus.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { dataSource } from "../Ldapmigration56imsSchema/dataSource.oa.mjs";
+import { mailEquivalentAddress } from "../Ldapmigration56imsSchema/mailEquivalentAddress.oa.mjs";
+import { mailMsgMaxBlocks } from "../Ldapmigration56imsSchema/mailMsgMaxBlocks.oa.mjs";
+import { mailConversionTag } from "../Ldapmigration56imsSchema/mailConversionTag.oa.mjs";
+import { mailDeferProcessing } from "../Ldapmigration56imsSchema/mailDeferProcessing.oa.mjs";
+import { mailAntiUBEService } from "../Ldapmigration56imsSchema/mailAntiUBEService.oa.mjs";
+import { mailFolderDefaultAcl } from "../Ldapmigration56imsSchema/mailFolderDefaultAcl.oa.mjs";
+import { aclGroupAddr } from "../Ldapmigration56imsSchema/aclGroupAddr.oa.mjs";
+import { mailParentalControl } from "../Ldapmigration56imsSchema/mailParentalControl.oa.mjs";
+import { mailSieveRuleRef } from "../Ldapmigration56imsSchema/mailSieveRuleRef.oa.mjs";
+import { mailEventNotificationDestination } from "../Ldapmigration56imsSchema/mailEventNotificationDestination.oa.mjs";
 /**
  * @summary inetMailUser
  * @description
@@ -132,7 +160,7 @@ const inetMailUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailAutoReplyTimeout, mailAutoReplySubject, mailAutoReplyText, mailAutoReplyTextInternal, mailAutoReplyMode, mailDeliveryOption, mailForwardingAddress, mailMessageStore, mailProgramDeliveryInfo, mailQuota, mailMsgQuota, mailSieveRuleSource, mailSMTPSubmitChannel, nswmExtendedUserPrefs, mailAllowedServiceAccess, mailUserStatus, commonName, dataSource, mailEquivalentAddress, mailMsgMaxBlocks, mailConversionTag, mailDeferProcessing, mailAntiUBEService, mailFolderDefaultAcl, aclGroupAddr, mailParentalControl, mailSieveRuleRef, mailEventNotificationDestination, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetMailUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for a messaging server user" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetMailUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

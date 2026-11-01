@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_goFonServer } from "../LdapGosaCoreGoserver/id-oc-goFonServer.va.
 // export { id_oc_goFonServer } from "../LdapGosaCoreGoserver/id-oc-goFonServer.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goFonServerStatus } from "../LdapGosaCoreGoserver/goFonServerStatus.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { goFonAdmin } from "../LdapGosaCoreGoserver/goFonAdmin.oa.mjs";
+import { goFonPassword } from "../LdapGosaCoreGoserver/goFonPassword.oa.mjs";
+import { goFonAreaCode } from "../LdapGosaCoreGoserver/goFonAreaCode.oa.mjs";
+import { goFonCountryCode } from "../LdapGosaCoreGoserver/goFonCountryCode.oa.mjs";
 /**
  * @summary goFonServer
  * @description
@@ -111,8 +118,8 @@ const goFonServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, goFonAdmin, goFonPassword, goFonAreaCode, goFonCountryCode, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, goFonServerStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goFonServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fon server description (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goFonServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

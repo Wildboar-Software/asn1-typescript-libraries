@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_iodineAlias } from "../LdapIodine/id-oc-iodineAlias.va.mjs";
 // export { id_oc_iodineAlias } from "../LdapIodine/id-oc-iodineAlias.va.mjs";
 
 
+import { iodineUid } from "../LdapIodine/iodineUid.oa.mjs";
+import { tjhsstGroupId } from "../LdapIodine/tjhsstGroupId.oa.mjs";
+import { tjhsstActivityId } from "../LdapIodine/tjhsstActivityId.oa.mjs";
+import { tjhsstStudentId } from "../LdapIodine/tjhsstStudentId.oa.mjs";
+import { tjhsstSectionId } from "../LdapIodine/tjhsstSectionId.oa.mjs";
+import { tjhsstClassId } from "../LdapIodine/tjhsstClassId.oa.mjs";
+import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 /**
  * @summary iodineAlias
  * @description
@@ -109,7 +117,7 @@ const iodineAlias: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ alias, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iodineUid, tjhsstGroupId, tjhsstActivityId, tjhsstStudentId, tjhsstSectionId, tjhsstClassId, roomNumber, uid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iodineAlias" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iodineAlias /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,20 @@ import { id_oc_passwordObject } from "../LdapCommon389/id-oc-passwordObject.va.m
 // export { id_oc_passwordObject } from "../LdapCommon389/id-oc-passwordObject.va.mjs";
 
 
+import { pwdpolicysubentry } from "../LdapCommon389/pwdpolicysubentry.oa.mjs";
+import { passwordExpirationTime } from "../LdapCommon389/passwordExpirationTime.oa.mjs";
+import { passwordExpWarned } from "../LdapCommon389/passwordExpWarned.oa.mjs";
+import { passwordRetryCount } from "../LdapCommon389/passwordRetryCount.oa.mjs";
+import { retryCountResetTime } from "../LdapCommon389/retryCountResetTime.oa.mjs";
+import { accountUnlockTime } from "../LdapCommon389/accountUnlockTime.oa.mjs";
+import { passwordHistory } from "../LdapCommon389/passwordHistory.oa.mjs";
+import { passwordAllowChangeTime } from "../LdapCommon389/passwordAllowChangeTime.oa.mjs";
+import { passwordGraceUserTime } from "../LdapCommon389/passwordGraceUserTime.oa.mjs";
+import { pwdReset } from "../LdapCommon389/pwdReset.oa.mjs";
+import { pwdTPRReset } from "../LdapCommon389/pwdTPRReset.oa.mjs";
+import { pwdTPRUseCount } from "../LdapCommon389/pwdTPRUseCount.oa.mjs";
+import { pwdTPRValidFrom } from "../LdapCommon389/pwdTPRValidFrom.oa.mjs";
+import { pwdTPRExpireAt } from "../LdapCommon389/pwdTPRExpireAt.oa.mjs";
 /**
  * @summary passwordObject
  * @description
@@ -116,7 +130,7 @@ const passwordObject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ pwdpolicysubentry, passwordExpirationTime, passwordExpWarned, passwordRetryCount, retryCountResetTime, accountUnlockTime, passwordHistory, passwordAllowChangeTime, passwordGraceUserTime, pwdReset, pwdTPRReset, pwdTPRUseCount, pwdTPRValidFrom, pwdTPRExpireAt, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "passwordObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined password policy objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_passwordObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

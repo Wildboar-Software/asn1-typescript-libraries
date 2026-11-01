@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_autoMemberDefinition } from "../LdapAutoMemberPlugin/id-oc-autoMe
 // export { id_oc_autoMemberDefinition } from "../LdapAutoMemberPlugin/id-oc-autoMemberDefinition.va.mjs";
 
 
+import { autoMemberDefaultGroup } from "../LdapAutoMemberPlugin/autoMemberDefaultGroup.oa.mjs";
+import { autoMemberDisabled } from "../LdapAutoMemberPlugin/autoMemberDisabled.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { autoMemberScope } from "../LdapAutoMemberPlugin/autoMemberScope.oa.mjs";
+import { autoMemberFilter } from "../LdapAutoMemberPlugin/autoMemberFilter.oa.mjs";
+import { autoMemberGroupingAttr } from "../LdapAutoMemberPlugin/autoMemberGroupingAttr.oa.mjs";
 /**
  * @summary autoMemberDefinition
  * @description
@@ -108,8 +114,8 @@ const autoMemberDefinition: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, autoMemberScope, autoMemberFilter, autoMemberGroupingAttr, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ autoMemberDefaultGroup, autoMemberDisabled, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "autoMemberDefinition" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auto Membership Config Definition Entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_autoMemberDefinition /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

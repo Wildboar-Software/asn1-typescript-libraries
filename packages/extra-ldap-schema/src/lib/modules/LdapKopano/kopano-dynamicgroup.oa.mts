@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,12 @@ import { id_oc_kopano_dynamicgroup } from "../LdapKopano/id-oc-kopano-dynamicgro
 // export { id_oc_kopano_dynamicgroup } from "../LdapKopano/id-oc-kopano-dynamicgroup.va.mjs";
 
 
+import { kopanoAccount } from "../LdapKopano/kopanoAccount.oa.mjs";
+import { kopanoHidden } from "../LdapKopano/kopanoHidden.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { kopanoAliases } from "../LdapKopano/kopanoAliases.oa.mjs";
+import { kopanoFilter } from "../LdapKopano/kopanoFilter.oa.mjs";
+import { kopanoBase } from "../LdapKopano/kopanoBase.oa.mjs";
 /**
  * @summary kopano_dynamicgroup
  * @description
@@ -112,7 +118,7 @@ const kopano_dynamicgroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ kopanoAccount, kopanoHidden, mail, kopanoAliases, kopanoFilter, kopanoBase, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kopano-dynamicgroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "KOPANO: a Kopano dynamic group" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kopano_dynamicgroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

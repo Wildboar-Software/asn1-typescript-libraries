@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_mailPublicFolder } from "../Ldapmigration56imsSchema/id-oc-mailPu
 // export { id_oc_mailPublicFolder } from "../Ldapmigration56imsSchema/id-oc-mailPublicFolder.va.mjs";
 
 
+import { mailMessageStore } from "../QMailSchema/mailMessageStore.oa.mjs";
+import { mailFolderDefaultAcl } from "../Ldapmigration56imsSchema/mailFolderDefaultAcl.oa.mjs";
+import { mailDeliveryOption } from "../Ldapmigration50nsMail/mailDeliveryOption.oa.mjs";
+import { mailQuota } from "../LdapDbmail/mailQuota.oa.mjs";
+import { mailMsgQuota } from "../Ldapmigration56imsSchema/mailMsgQuota.oa.mjs";
 /**
  * @summary mailPublicFolder
  * @description
@@ -111,7 +116,7 @@ const mailPublicFolder: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ mailFolderName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailMessageStore, mailFolderDefaultAcl, mailDeliveryOption, mailQuota, mailMsgQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailPublicFolder" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "structural class for defining public folders" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailPublicFolder /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

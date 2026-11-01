@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_oxU2fRequest } from "../LdapOx/id-oc-oxU2fRequest.va.mjs";
 // export { id_oc_oxU2fRequest } from "../LdapOx/id-oc-oxU2fRequest.va.mjs";
 
 
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { oxRequestId } from "../LdapOx/oxRequestId.oa.mjs";
+import { oxRequest } from "../LdapOx/oxRequest.oa.mjs";
+import { oxSessionStateId } from "../LdapOx/oxSessionStateId.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { personInum } from "../LdapOx/personInum.oa.mjs";
+import { creationDate } from "../LdapOx/creationDate.oa.mjs";
 /**
  * @summary oxU2fRequest
  * @description
@@ -113,7 +121,7 @@ const oxU2fRequest: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ oxId, oxRequestId, oxRequest, oxSessionStateId, del, exp, personInum, creationDate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxU2fRequest" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxU2fRequest /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

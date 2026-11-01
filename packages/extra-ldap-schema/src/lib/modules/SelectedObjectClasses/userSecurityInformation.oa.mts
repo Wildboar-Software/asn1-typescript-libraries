@@ -41,7 +41,7 @@ const userSecurityInformation: OBJECT_CLASS = {
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ supportedAlgorithms, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "userSecurityInformation" ] /* OBJECT_FIELD_SETTING */,
-    "&ldapDesc": [ "X.521 user security information" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "X.521 user security information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_userSecurityInformation /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_gluuInvoice } from "../LdapOx/id-oc-gluuInvoice.va.mjs";
 // export { id_oc_gluuInvoice } from "../LdapOx/id-oc-gluuInvoice.va.mjs";
 
 
+import { gluuInvoiceAmount } from "../LdapOx/gluuInvoiceAmount.oa.mjs";
+import { gluuInvoiceDate } from "../LdapOx/gluuInvoiceDate.oa.mjs";
+import { gluuInvoiceLineItemName } from "../LdapOx/gluuInvoiceLineItemName.oa.mjs";
+import { gluuInvoiceNumber } from "../LdapOx/gluuInvoiceNumber.oa.mjs";
+import { gluuInvoiceProductNumber } from "../LdapOx/gluuInvoiceProductNumber.oa.mjs";
+import { gluuInvoiceQuantity } from "../LdapOx/gluuInvoiceQuantity.oa.mjs";
+import { gluuInvoiceStatus } from "../LdapOx/gluuInvoiceStatus.oa.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
 /**
  * @summary gluuInvoice
  * @description
@@ -113,7 +121,7 @@ const gluuInvoice: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gluuInvoiceAmount, gluuInvoiceDate, gluuInvoiceLineItemName, gluuInvoiceNumber, gluuInvoiceProductNumber, gluuInvoiceQuantity, gluuInvoiceStatus, inum, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gluuInvoice" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gluuInvoice /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

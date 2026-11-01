@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,21 @@ import { id_oc_nTFRSReplicaSet } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSRe
 // export { id_oc_nTFRSReplicaSet } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSReplicaSet.va.mjs";
 
 
+import { fRSReplicaSetType } from "../MSUser/fRSReplicaSetType.oa.mjs";
+import { fRSVersionGUID } from "../MSUser/fRSVersionGUID.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { fRSFileFilter } from "../MSUser/fRSFileFilter.oa.mjs";
+import { fRSDirectoryFilter } from "../MSUser/fRSDirectoryFilter.oa.mjs";
+import { fRSDSPoll } from "../MSUser/fRSDSPoll.oa.mjs";
+import { fRSServiceCommand } from "../MSUser/fRSServiceCommand.oa.mjs";
+import { fRSReplicaSetGUID } from "../MSUser/fRSReplicaSetGUID.oa.mjs";
+import { fRSLevelLimit } from "../MSUser/fRSLevelLimit.oa.mjs";
+import { fRSRootSecurity } from "../MSUser/fRSRootSecurity.oa.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { fRSFlags } from "../MSUser/fRSFlags.oa.mjs";
+import { fRSPartnerAuthLevel } from "../MSUser/fRSPartnerAuthLevel.oa.mjs";
+import { fRSPrimaryMember } from "../MSUser/fRSPrimaryMember.oa.mjs";
 /**
  * @summary nTFRSReplicaSet
  * @description
@@ -116,7 +131,7 @@ const nTFRSReplicaSet: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fRSReplicaSetType, fRSVersionGUID, schedule, fRSFileFilter, fRSDirectoryFilter, fRSDSPoll, fRSServiceCommand, fRSReplicaSetGUID, fRSLevelLimit, fRSRootSecurity, fRSExtensions, managedBy, fRSFlags, fRSPartnerAuthLevel, fRSPrimaryMember, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTFRSReplicaSet" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTFRSReplicaSet /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

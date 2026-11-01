@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_inetResource } from "../Ldapmigration60iplanetCalendar/id-oc-inet
 // export { id_oc_inetResource } from "../Ldapmigration60iplanetCalendar/id-oc-inetResource.va.mjs";
 
 
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
+import { inetResourceStatus } from "../Ldapmigration60iplanetCalendar/inetResourceStatus.oa.mjs";
 /**
  * @summary inetResource
  * @description
@@ -111,7 +116,7 @@ const inetResource: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ telephoneNumber, facsimileTelephoneNumber, mail, postalAddress, inetResourceStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetResource" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Standard Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetResource /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

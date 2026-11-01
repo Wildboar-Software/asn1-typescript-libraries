@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { co_oc } from "../H323-X500-Schema/co-oc.va.mjs";
 // export { co_oc } from "../H323-X500-Schema/co-oc.va.mjs";
 
 
+import { commOwner } from "../H323-X500-Schema/commOwner.oa.mjs";
+import { commPrivate } from "../H323-X500-Schema/commPrivate.oa.mjs";
 /**
  * @summary commObject
  * @description
@@ -106,7 +108,7 @@ const commObject: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commUniqueId, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commOwner, commPrivate, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], co_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

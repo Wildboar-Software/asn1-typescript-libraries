@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_sunRealmService } from "../Ldapmigration71sunAm/id-oc-sunRealmSer
 // export { id_oc_sunRealmService } from "../Ldapmigration71sunAm/id-oc-sunRealmService.va.mjs";
 
 
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { sunkeyvalue } from "../Ldapmigration70sunSchema2/sunkeyvalue.oa.mjs";
+import { sunxmlkeyvalue } from "../Ldapmigration70sunSchema2/sunxmlkeyvalue.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 /**
  * @summary sunRealmService
  * @description
@@ -107,7 +112,7 @@ const sunRealmService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ organizationName, labeledURI, sunkeyvalue, sunxmlkeyvalue, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunRealmService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "object containing service information for realms" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunRealmService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

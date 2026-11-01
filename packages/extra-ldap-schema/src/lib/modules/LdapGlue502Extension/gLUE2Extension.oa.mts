@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_gLUE2Extension } from "../LdapGlue502Extension/id-oc-gLUE2Extensi
 // export { id_oc_gLUE2Extension } from "../LdapGlue502Extension/id-oc-gLUE2Extension.va.mjs";
 
 
+import { gLUE2ExtensionLocalID } from "../LdapGlue502Extension/gLUE2ExtensionLocalID.oa.mjs";
+import { gLUE2ExtensionKey } from "../LdapGlue502Extension/gLUE2ExtensionKey.oa.mjs";
+import { gLUE2ExtensionValue } from "../LdapGlue502Extension/gLUE2ExtensionValue.oa.mjs";
+import { gLUE2ExtensionEntityForeignKey } from "../LdapGlue502Extension/gLUE2ExtensionEntityForeignKey.oa.mjs";
 /**
  * @summary gLUE2Extension
  * @description
@@ -106,7 +110,7 @@ const gLUE2Extension: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ExtensionLocalID, gLUE2ExtensionKey, gLUE2ExtensionValue, gLUE2ExtensionEntityForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Extension" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A key/value pair enabling the association of extra information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Extension /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

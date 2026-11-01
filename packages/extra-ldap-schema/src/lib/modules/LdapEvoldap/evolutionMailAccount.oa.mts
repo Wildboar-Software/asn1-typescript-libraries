@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_evolutionMailAccount } from "../LdapEvoldap/id-oc-evolutionMailAc
 // export { id_oc_evolutionMailAccount } from "../LdapEvoldap/id-oc-evolutionMailAccount.va.mjs";
 
 
+import { evolutionMailSourceURI } from "../LdapEvoldap/evolutionMailSourceURI.oa.mjs";
+import { evolutionMailTransportURI } from "../LdapEvoldap/evolutionMailTransportURI.oa.mjs";
 /**
  * @summary evolutionMailAccount
  * @description
@@ -106,7 +108,7 @@ const evolutionMailAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ evolutionMailSourceURI, evolutionMailTransportURI, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "evolutionMailAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Evolution mail account" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_evolutionMailAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

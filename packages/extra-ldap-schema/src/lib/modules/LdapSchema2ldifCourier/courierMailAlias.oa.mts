@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_courierMailAlias } from "../LdapSchema2ldifCourier/id-oc-courierM
 // export { id_oc_courierMailAlias } from "../LdapSchema2ldifCourier/id-oc-courierMailAlias.va.mjs";
 
 
+import { mailsource } from "../LdapSchema2ldifCourier/mailsource.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { maildrop } from "../LdapSchema2ldifCourier/maildrop.oa.mjs";
 /**
  * @summary courierMailAlias
  * @description
@@ -108,8 +112,8 @@ const courierMailAlias: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, maildrop, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailsource, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "CourierMailAlias" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Mail aliasing/forwarding entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_courierMailAlias /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

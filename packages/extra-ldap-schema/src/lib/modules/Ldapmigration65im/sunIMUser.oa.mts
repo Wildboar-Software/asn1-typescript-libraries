@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,16 @@ import { id_oc_sunIMUser } from "../Ldapmigration65im/id-oc-sunIMUser.va.mjs";
 // export { id_oc_sunIMUser } from "../Ldapmigration65im/id-oc-sunIMUser.va.mjs";
 
 
+import { sunIMUserPrivateSettings } from "../Ldapmigration65im/sunIMUserPrivateSettings.oa.mjs";
+import { sunIMUserProperties } from "../Ldapmigration65im/sunIMUserProperties.oa.mjs";
+import { sunIMUserRoster } from "../Ldapmigration65im/sunIMUserRoster.oa.mjs";
+import { sunIMUserConferenceRoster } from "../Ldapmigration65im/sunIMUserConferenceRoster.oa.mjs";
+import { sunIMUserNewsRoster } from "../Ldapmigration65im/sunIMUserNewsRoster.oa.mjs";
+import { sunIMPrivateSettings } from "../Ldapmigration65im/sunIMPrivateSettings.oa.mjs";
+import { sunIMProperties } from "../Ldapmigration65im/sunIMProperties.oa.mjs";
+import { sunIMRoster } from "../Ldapmigration65im/sunIMRoster.oa.mjs";
+import { sunIMConferenceRoster } from "../Ldapmigration65im/sunIMConferenceRoster.oa.mjs";
+import { sunIMNewsRoster } from "../Ldapmigration65im/sunIMNewsRoster.oa.mjs";
 /**
  * @summary sunIMUser
  * @description
@@ -114,7 +124,7 @@ const sunIMUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunIMUserPrivateSettings, sunIMUserProperties, sunIMUserRoster, sunIMUserConferenceRoster, sunIMUserNewsRoster, sunIMPrivateSettings, sunIMProperties, sunIMRoster, sunIMConferenceRoster, sunIMNewsRoster, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunIMUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Instant Message Service User" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunIMUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

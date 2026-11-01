@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,10 @@ import { id_oc_usPlace } from "../LdapSchema2ldifNadf/id-oc-usPlace.va.mjs";
 // export { id_oc_usPlace } from "../LdapSchema2ldifNadf/id-oc-usPlace.va.mjs";
 
 
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { fipsPlaceNumericCode } from "../LdapSchema2ldifNadf/fipsPlaceNumericCode.oa.mjs";
+import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
+import { nadfObject } from "../LdapSchema2ldifNadf/nadfObject.oa.mjs";
 /**
  * @summary usPlace
  * @description
@@ -101,8 +105,8 @@ const usPlace: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ locality, nadfObject, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ localityName, fipsPlaceNumericCode, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "usPlace" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_usPlace /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

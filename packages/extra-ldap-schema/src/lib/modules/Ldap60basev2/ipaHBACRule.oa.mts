@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,12 @@ import { id_oc_ipaHBACRule } from "../Ldap60basev2/id-oc-ipaHBACRule.va.mjs";
 // export { id_oc_ipaHBACRule } from "../Ldap60basev2/id-oc-ipaHBACRule.va.mjs";
 
 
+import { sourceHost } from "../Ldap60basev2/sourceHost.oa.mjs";
+import { sourceHostCategory } from "../Ldap60basev2/sourceHostCategory.oa.mjs";
+import { serviceCategory } from "../Ldap60basev2/serviceCategory.oa.mjs";
+import { memberService } from "../Ldap60basev2/memberService.oa.mjs";
+import { externalHost } from "../Ldap60basev2/externalHost.oa.mjs";
+import { accessTime } from "../Ldap60basev2/accessTime.oa.mjs";
 /**
  * @summary ipaHBACRule
  * @description
@@ -111,7 +117,7 @@ const ipaHBACRule: OBJECT_CLASS = {
     },
     "&Superclasses": [ ipaAssociation, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ accessRuleType, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sourceHost, sourceHostCategory, serviceCategory, memberService, externalHost, accessTime, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaHBACRule" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaHBACRule /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

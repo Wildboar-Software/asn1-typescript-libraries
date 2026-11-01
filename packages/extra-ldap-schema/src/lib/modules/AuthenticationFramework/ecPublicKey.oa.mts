@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { SupportedCurves, _decode_SupportedCurves, _encode_SupportedCurves } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
+import { type SupportedCurves, _decode_SupportedCurves, _encode_SupportedCurves } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
 // export { SupportedCurves, _decode_SupportedCurves, _encode_SupportedCurves } from "../AuthenticationFramework/SupportedCurves.vsa.mjs";
 import { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";
 // export { id_ecPublicKey } from "../AuthenticationFramework/id-ecPublicKey.va.mjs";

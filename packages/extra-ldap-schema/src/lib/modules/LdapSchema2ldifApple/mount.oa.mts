@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_mount } from "../LdapSchema2ldifApple/id-oc-mount.va.mjs";
 // export { id_oc_mount } from "../LdapSchema2ldifApple/id-oc-mount.va.mjs";
 
 
+import { mountDirectory } from "../LdapSchema2ldifApple/mountDirectory.oa.mjs";
+import { mountType } from "../LdapSchema2ldifApple/mountType.oa.mjs";
+import { mountOption } from "../LdapSchema2ldifApple/mountOption.oa.mjs";
+import { mountDumpFrequency } from "../LdapSchema2ldifApple/mountDumpFrequency.oa.mjs";
+import { mountPassNo } from "../LdapSchema2ldifApple/mountPassNo.oa.mjs";
 /**
  * @summary mount
  * @description
@@ -110,7 +115,7 @@ const mount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mountDirectory, mountType, mountOption, mountDumpFrequency, mountPassNo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mount" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

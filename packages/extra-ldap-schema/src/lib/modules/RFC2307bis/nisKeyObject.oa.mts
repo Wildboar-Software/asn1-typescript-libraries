@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 
 
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nisPublicKey } from "../RFC2307bis/nisPublicKey.oa.mjs";
+import { nisSecretKey } from "../RFC2307bis/nisSecretKey.oa.mjs";
 /**
  * @summary nisKeyObject
  * @description
@@ -105,8 +110,8 @@ const nisKeyObject: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, nisPublicKey, nisSecretKey, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uidNumber, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nisKeyObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "An object with a public and secret key" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 1, 1, 2, 14,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

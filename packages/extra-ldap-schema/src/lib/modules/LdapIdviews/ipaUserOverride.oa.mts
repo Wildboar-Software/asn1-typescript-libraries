@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_ipaUserOverride } from "../LdapIdviews/id-oc-ipaUserOverride.va.m
 // export { id_oc_ipaUserOverride } from "../LdapIdviews/id-oc-ipaUserOverride.va.mjs";
 
 
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
+import { loginShell } from "../NIS/loginShell.oa.mjs";
+import { gecos } from "../NIS/gecos.oa.mjs";
+import { ipaOriginalUid } from "../LdapIdviews/ipaOriginalUid.oa.mjs";
 /**
  * @summary ipaUserOverride
  * @description
@@ -109,7 +116,7 @@ const ipaUserOverride: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ ipaOverrideAnchor, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uid, uidNumber, gidNumber, homeDirectory, loginShell, gecos, ipaOriginalUid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaUserOverride" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Override for User Attributes" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaUserOverride /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

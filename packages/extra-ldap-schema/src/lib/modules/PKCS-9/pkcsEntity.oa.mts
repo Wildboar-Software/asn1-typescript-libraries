@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,7 @@ import { pkcs_9_oc_pkcsEntity } from "../PKCS-9/pkcs-9-oc-pkcsEntity.va.mjs";
 // export { pkcs_9_oc_pkcsEntity } from "../PKCS-9/pkcs-9-oc-pkcsEntity.va.mjs";
 
 
+import { PKCSEntityAttributeSet } from "../PKCS-9/PKCSEntityAttributeSet.osa.mjs";
 /**
  * @summary pkcsEntity
  * @description
@@ -104,7 +105,7 @@ const pkcsEntity: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ...PKCSEntityAttributeSet, ] /* OBJECT_FIELD_SETTING */,
     "&id": pkcs_9_oc_pkcsEntity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

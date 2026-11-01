@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_gLUE2Location } from "../LdapGlue503Location/id-oc-gLUE2Location.
 // export { id_oc_gLUE2Location } from "../LdapGlue503Location/id-oc-gLUE2Location.va.mjs";
 
 
+import { gLUE2LocationAddress } from "../LdapGlue503Location/gLUE2LocationAddress.oa.mjs";
+import { gLUE2LocationPlace } from "../LdapGlue503Location/gLUE2LocationPlace.oa.mjs";
+import { gLUE2LocationCountry } from "../LdapGlue503Location/gLUE2LocationCountry.oa.mjs";
+import { gLUE2LocationPostCode } from "../LdapGlue503Location/gLUE2LocationPostCode.oa.mjs";
+import { gLUE2LocationLatitude } from "../LdapGlue503Location/gLUE2LocationLatitude.oa.mjs";
+import { gLUE2LocationLongitude } from "../LdapGlue503Location/gLUE2LocationLongitude.oa.mjs";
+import { gLUE2LocationServiceForeignKey } from "../LdapGlue503Location/gLUE2LocationServiceForeignKey.oa.mjs";
+import { gLUE2LocationDomainForeignKey } from "../LdapGlue503Location/gLUE2LocationDomainForeignKey.oa.mjs";
 /**
  * @summary gLUE2Location
  * @description
@@ -114,7 +122,7 @@ const gLUE2Location: OBJECT_CLASS = {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ gLUE2LocationID, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2LocationAddress, gLUE2LocationPlace, gLUE2LocationCountry, gLUE2LocationPostCode, gLUE2LocationLatitude, gLUE2LocationLongitude, gLUE2LocationServiceForeignKey, gLUE2LocationDomainForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Location" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A geographical position" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Location /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_mS_SQL_OLAPServer } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQ
 // export { id_oc_mS_SQL_OLAPServer } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-OLAPServer.va.mjs";
 
 
+import { mS_SQL_Name } from "../MSUser/mS-SQL-Name.oa.mjs";
+import { mS_SQL_RegisteredOwner } from "../MSUser/mS-SQL-RegisteredOwner.oa.mjs";
+import { mS_SQL_Contact } from "../MSUser/mS-SQL-Contact.oa.mjs";
+import { mS_SQL_Build } from "../MSUser/mS-SQL-Build.oa.mjs";
+import { mS_SQL_ServiceAccount } from "../MSUser/mS-SQL-ServiceAccount.oa.mjs";
+import { mS_SQL_Status } from "../MSUser/mS-SQL-Status.oa.mjs";
+import { mS_SQL_InformationURL } from "../MSUser/mS-SQL-InformationURL.oa.mjs";
+import { mS_SQL_PublicationURL } from "../MSUser/mS-SQL-PublicationURL.oa.mjs";
+import { mS_SQL_Version } from "../MSUser/mS-SQL-Version.oa.mjs";
+import { mS_SQL_Language } from "../MSUser/mS-SQL-Language.oa.mjs";
+import { mS_SQL_Keywords } from "../MSUser/mS-SQL-Keywords.oa.mjs";
 /**
  * @summary mS_SQL_OLAPServer
  * @description
@@ -112,7 +123,7 @@ const mS_SQL_OLAPServer: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ serviceConnectionPoint, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mS_SQL_Name, mS_SQL_RegisteredOwner, mS_SQL_Contact, mS_SQL_Build, mS_SQL_ServiceAccount, mS_SQL_Status, mS_SQL_InformationURL, mS_SQL_PublicationURL, mS_SQL_Version, mS_SQL_Language, mS_SQL_Keywords, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mS-SQL-OLAPServer" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mS_SQL_OLAPServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

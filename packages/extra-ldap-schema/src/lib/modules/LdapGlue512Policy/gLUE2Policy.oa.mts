@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_gLUE2Policy } from "../LdapGlue512Policy/id-oc-gLUE2Policy.va.mjs
 // export { id_oc_gLUE2Policy } from "../LdapGlue512Policy/id-oc-gLUE2Policy.va.mjs";
 
 
+import { gLUE2PolicyID } from "../LdapGlue512Policy/gLUE2PolicyID.oa.mjs";
+import { gLUE2PolicyScheme } from "../LdapGlue512Policy/gLUE2PolicyScheme.oa.mjs";
+import { gLUE2PolicyRule } from "../LdapGlue512Policy/gLUE2PolicyRule.oa.mjs";
 /**
  * @summary gLUE2Policy
  * @description
@@ -108,7 +111,7 @@ const gLUE2Policy: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2PolicyID, gLUE2PolicyScheme, gLUE2PolicyRule, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gLUE2PolicyUserDomainForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Policy" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A policy" /* OBJECT_FIELD_SETTING */,

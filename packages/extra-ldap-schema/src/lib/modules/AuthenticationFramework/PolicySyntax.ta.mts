@@ -1,12 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
+    ASN1TagClass as _TagClass,
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
+import { type PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
 // export { PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
-import { InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
+import { type InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
 // export { InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
 
 
@@ -85,7 +86,7 @@ class PolicySyntax {
  */
 export
 const _root_component_type_list_1_spec_for_PolicySyntax: $.ComponentSpec[] = [
-    /* FIXME: policyIdentifier COULD_NOT_RESOLVE_TYPE_DEF */,
+    new $.ComponentSpec("policyIdentifier", false, $.hasTag(_TagClass.universal, 6)),
     new $.ComponentSpec("policySyntax", false, $.hasAnyTag)
 ];
 

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_courierDomainAlias } from "../LdapSchema2ldifCourier/id-oc-courie
 // export { id_oc_courierDomainAlias } from "../LdapSchema2ldifCourier/id-oc-courierDomainAlias.va.mjs";
 
 
+import { mailsource } from "../LdapSchema2ldifCourier/mailsource.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { virtualdomain } from "../LdapSchema2ldifCourier/virtualdomain.oa.mjs";
+import { virtualdomainuser } from "../LdapSchema2ldifCourier/virtualdomainuser.oa.mjs";
 /**
  * @summary courierDomainAlias
  * @description
@@ -108,8 +112,8 @@ const courierDomainAlias: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ virtualdomain, virtualdomainuser, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailsource, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "CourierDomainAlias" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Domain mail aliasing/forwarding entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_courierDomainAlias /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

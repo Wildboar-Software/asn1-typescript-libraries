@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_oxUmaResourcePermission } from "../LdapOx/id-oc-oxUmaResourcePerm
 // export { id_oc_oxUmaResourcePermission } from "../LdapOx/id-oc-oxUmaResourcePermission.va.mjs";
 
 
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { oxAuthUmaScope } from "../LdapOx/oxAuthUmaScope.oa.mjs";
+import { oxConfigurationCode } from "../LdapOx/oxConfigurationCode.oa.mjs";
+import { oxResourceSetId } from "../LdapOx/oxResourceSetId.oa.mjs";
+import { oxAttributes } from "../LdapOx/oxAttributes.oa.mjs";
+import { oxTicket } from "../LdapOx/oxTicket.oa.mjs";
+import { oxStatus } from "../LdapOx/oxStatus.oa.mjs";
 /**
  * @summary oxUmaResourcePermission
  * @description
@@ -113,7 +121,7 @@ const oxUmaResourcePermission: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ exp, del, oxAuthUmaScope, oxConfigurationCode, oxResourceSetId, oxAttributes, oxTicket, oxStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxUmaResourcePermission" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxUmaResourcePermission /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

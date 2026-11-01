@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_ipsecBase } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecBase.va.
 // export { id_oc_ipsecBase } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecBase.va.mjs";
 
 
+import { ipsecName } from "../MSUser/ipsecName.oa.mjs";
+import { ipsecID } from "../MSUser/ipsecID.oa.mjs";
+import { ipsecDataType } from "../MSUser/ipsecDataType.oa.mjs";
+import { ipsecData } from "../MSUser/ipsecData.oa.mjs";
+import { ipsecOwnersReference } from "../MSUser/ipsecOwnersReference.oa.mjs";
 /**
  * @summary ipsecBase
  * @description
@@ -108,7 +113,7 @@ const ipsecBase: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ipsecName, ipsecID, ipsecDataType, ipsecData, ipsecOwnersReference, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipsecBase" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipsecBase /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

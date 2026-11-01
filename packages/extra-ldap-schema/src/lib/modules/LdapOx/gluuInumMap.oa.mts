@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_gluuInumMap } from "../LdapOx/id-oc-gluuInumMap.va.mjs";
 // export { id_oc_gluuInumMap } from "../LdapOx/id-oc-gluuInumMap.va.mjs";
 
 
+import { gluuStatus } from "../LdapOx/gluuStatus.oa.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { primaryKeyAttrName } from "../LdapOx/primaryKeyAttrName.oa.mjs";
+import { primaryKeyValue } from "../LdapOx/primaryKeyValue.oa.mjs";
+import { secondaryKeyAttrName } from "../LdapOx/secondaryKeyAttrName.oa.mjs";
+import { secondaryKeyValue } from "../LdapOx/secondaryKeyValue.oa.mjs";
+import { tertiaryKeyAttrName } from "../LdapOx/tertiaryKeyAttrName.oa.mjs";
+import { tertiaryKeyValue } from "../LdapOx/tertiaryKeyValue.oa.mjs";
 /**
  * @summary gluuInumMap
  * @description
@@ -113,7 +121,7 @@ const gluuInumMap: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gluuStatus, inum, primaryKeyAttrName, primaryKeyValue, secondaryKeyAttrName, secondaryKeyValue, tertiaryKeyAttrName, tertiaryKeyValue, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gluuInumMap" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gluuInumMap /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

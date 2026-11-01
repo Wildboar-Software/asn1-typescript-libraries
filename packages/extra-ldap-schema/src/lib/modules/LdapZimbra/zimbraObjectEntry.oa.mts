@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_zimbraObjectEntry } from "../LdapZimbra/id-oc-zimbraObjectEntry.v
 // export { id_oc_zimbraObjectEntry } from "../LdapZimbra/id-oc-zimbraObjectEntry.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraObjectHandlerClass } from "../LdapZimbra/zimbraObjectHandlerClass.oa.mjs";
+import { zimbraObjectHandlerConfig } from "../LdapZimbra/zimbraObjectHandlerConfig.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { zimbraObjectIndexingEnabled } from "../LdapZimbra/zimbraObjectIndexingEnabled.oa.mjs";
+import { zimbraObjectStoreMatched } from "../LdapZimbra/zimbraObjectStoreMatched.oa.mjs";
+import { zimbraObjectType } from "../LdapZimbra/zimbraObjectType.oa.mjs";
 /**
  * @summary zimbraObjectEntry
  * @description
@@ -109,8 +116,8 @@ const zimbraObjectEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraObjectIndexingEnabled, zimbraObjectStoreMatched, zimbraObjectType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraObjectHandlerClass, zimbraObjectHandlerConfig, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraObjectEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Object type info" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraObjectEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

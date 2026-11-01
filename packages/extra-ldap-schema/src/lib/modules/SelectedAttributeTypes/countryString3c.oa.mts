@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CountryCode3c, _decode_CountryCode3c, _encode_CountryCode3c } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
+import { type CountryCode3c, _decode_CountryCode3c, _encode_CountryCode3c } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
 // export { CountryCode3c, _decode_CountryCode3c, _encode_CountryCode3c } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
 import { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.mjs";
 // export { id_asx_countryString3c } from "../SelectedAttributeTypes/id-asx-countryString3c.va.mjs";

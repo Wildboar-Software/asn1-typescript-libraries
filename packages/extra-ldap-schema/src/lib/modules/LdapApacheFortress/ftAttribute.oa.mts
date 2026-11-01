@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,16 @@ import { id_oc_ftAttribute } from "../LdapApacheFortress/id-oc-ftAttribute.va.mj
 // export { id_oc_ftAttribute } from "../LdapApacheFortress/id-oc-ftAttribute.va.mjs";
 
 
+import { ftPADataType } from "../LdapApacheFortress/ftPADataType.oa.mjs";
+import { ftPADefaultValue } from "../LdapApacheFortress/ftPADefaultValue.oa.mjs";
+import { ftPADefaultStrategy } from "../LdapApacheFortress/ftPADefaultStrategy.oa.mjs";
+import { ftPADefaultOperator } from "../LdapApacheFortress/ftPADefaultOperator.oa.mjs";
+import { ftPAValidVals } from "../LdapApacheFortress/ftPAValidVals.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftPASet } from "../LdapApacheFortress/ftPASet.oa.mjs";
+import { ftPA } from "../LdapApacheFortress/ftPA.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary ftAttribute
  * @description
@@ -112,8 +122,8 @@ const ftAttribute: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ftPASet, ftPA, commonName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftPADataType, ftPADefaultValue, ftPADefaultStrategy, ftPADefaultOperator, ftPAValidVals, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftAttribute" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Attribute Structural Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftAttribute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

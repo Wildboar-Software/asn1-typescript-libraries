@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_mS_SQL_OLAPCube } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-
 // export { id_oc_mS_SQL_OLAPCube } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-OLAPCube.va.mjs";
 
 
+import { mS_SQL_Name } from "../MSUser/mS-SQL-Name.oa.mjs";
+import { mS_SQL_Contact } from "../MSUser/mS-SQL-Contact.oa.mjs";
+import { mS_SQL_Status } from "../MSUser/mS-SQL-Status.oa.mjs";
+import { mS_SQL_LastUpdatedDate } from "../MSUser/mS-SQL-LastUpdatedDate.oa.mjs";
+import { mS_SQL_InformationURL } from "../MSUser/mS-SQL-InformationURL.oa.mjs";
+import { mS_SQL_PublicationURL } from "../MSUser/mS-SQL-PublicationURL.oa.mjs";
+import { mS_SQL_Description } from "../MSUser/mS-SQL-Description.oa.mjs";
+import { mS_SQL_Size } from "../MSUser/mS-SQL-Size.oa.mjs";
+import { mS_SQL_Keywords } from "../MSUser/mS-SQL-Keywords.oa.mjs";
 /**
  * @summary mS_SQL_OLAPCube
  * @description
@@ -110,7 +119,7 @@ const mS_SQL_OLAPCube: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mS_SQL_Name, mS_SQL_Contact, mS_SQL_Status, mS_SQL_LastUpdatedDate, mS_SQL_InformationURL, mS_SQL_PublicationURL, mS_SQL_Description, mS_SQL_Size, mS_SQL_Keywords, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mS-SQL-OLAPCube" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mS_SQL_OLAPCube /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

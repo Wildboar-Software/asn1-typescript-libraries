@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,27 @@ import { id_oc_attributeSchema } from "../LdapSchema2ldifMicrosoft/id-oc-attribu
 // export { id_oc_attributeSchema } from "../LdapSchema2ldifMicrosoft/id-oc-attributeSchema.va.mjs";
 
 
+import { rangeLower } from "../MSUser/rangeLower.oa.mjs";
+import { rangeUpper } from "../MSUser/rangeUpper.oa.mjs";
+import { mAPIID } from "../MSUser/mAPIID.oa.mjs";
+import { linkID } from "../MSUser/linkID.oa.mjs";
+import { oMObjectClass } from "../MSUser/oMObjectClass.oa.mjs";
+import { searchFlags } from "../MSUser/searchFlags.oa.mjs";
+import { extendedCharsAllowed } from "../MSUser/extendedCharsAllowed.oa.mjs";
+import { schemaFlagsEx } from "../MSUser/schemaFlagsEx.oa.mjs";
+import { attributeSecurityGUID } from "../MSUser/attributeSecurityGUID.oa.mjs";
+import { systemOnly } from "../MSUser/systemOnly.oa.mjs";
+import { classDisplayName } from "../MSUser/classDisplayName.oa.mjs";
+import { isMemberOfPartialAttributeSet } from "../MSUser/isMemberOfPartialAttributeSet.oa.mjs";
+import { isDefunct } from "../MSUser/isDefunct.oa.mjs";
+import { isEphemeral } from "../MSUser/isEphemeral.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { attributeID } from "../MSUser/attributeID.oa.mjs";
+import { attributeSyntax } from "../MSUser/attributeSyntax.oa.mjs";
+import { isSingleValued } from "../MSUser/isSingleValued.oa.mjs";
+import { oMSyntax } from "../MSUser/oMSyntax.oa.mjs";
+import { lDAPDisplayName } from "../MSUser/lDAPDisplayName.oa.mjs";
+import { schemaIDGUID } from "../MSUser/schemaIDGUID.oa.mjs";
 /**
  * @summary attributeSchema
  * @description
@@ -122,8 +143,8 @@ const attributeSchema: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, attributeID, attributeSyntax, isSingleValued, oMSyntax, lDAPDisplayName, schemaIDGUID, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rangeLower, rangeUpper, mAPIID, linkID, oMObjectClass, searchFlags, extendedCharsAllowed, schemaFlagsEx, attributeSecurityGUID, systemOnly, classDisplayName, isMemberOfPartialAttributeSet, isDefunct, isEphemeral, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "attributeSchema" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_attributeSchema /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

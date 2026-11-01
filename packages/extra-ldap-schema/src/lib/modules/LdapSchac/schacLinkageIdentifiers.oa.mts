@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_schacLinkageIdentifiers } from "../LdapSchac/id-oc-schacLinkageId
 // export { id_oc_schacLinkageIdentifiers } from "../LdapSchac/id-oc-schacLinkageIdentifiers.va.mjs";
 
 
+import { schacPersonalUniqueCode } from "../LdapSchac/schacPersonalUniqueCode.oa.mjs";
+import { schacPersonalUniqueID } from "../LdapSchac/schacPersonalUniqueID.oa.mjs";
 /**
  * @summary schacLinkageIdentifiers
  * @description
@@ -106,7 +108,7 @@ const schacLinkageIdentifiers: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schacPersonalUniqueCode, schacPersonalUniqueID, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "schacLinkageIdentifiers" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Used to link a directory entry with records in external data stores or other directory entries" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_schacLinkageIdentifiers /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

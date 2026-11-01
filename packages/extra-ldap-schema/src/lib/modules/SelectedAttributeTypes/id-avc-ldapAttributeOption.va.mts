@@ -6,6 +6,7 @@ import {
 
 
 
+import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
 /**
  * @summary id_avc_ldapAttributeOption
  * @description

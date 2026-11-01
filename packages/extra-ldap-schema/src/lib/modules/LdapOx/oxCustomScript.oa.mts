@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,19 @@ import { id_oc_oxCustomScript } from "../LdapOx/id-oc-oxCustomScript.va.mjs";
 // export { id_oc_oxCustomScript } from "../LdapOx/id-oc-oxCustomScript.va.mjs";
 
 
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { oxScript } from "../LdapOx/oxScript.oa.mjs";
+import { oxScriptType } from "../LdapOx/oxScriptType.oa.mjs";
+import { programmingLanguage } from "../LdapOx/programmingLanguage.oa.mjs";
+import { oxModuleProperty } from "../LdapOx/oxModuleProperty.oa.mjs";
+import { oxConfigurationProperty } from "../LdapOx/oxConfigurationProperty.oa.mjs";
+import { oxLevel } from "../LdapOx/oxLevel.oa.mjs";
+import { oxRevision } from "../LdapOx/oxRevision.oa.mjs";
+import { oxEnabled } from "../LdapOx/oxEnabled.oa.mjs";
+import { oxScriptError } from "../LdapOx/oxScriptError.oa.mjs";
+import { oxAlias } from "../LdapOx/oxAlias.oa.mjs";
 /**
  * @summary oxCustomScript
  * @description
@@ -118,7 +131,7 @@ const oxCustomScript: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ inum, displayName, description, oxScript, oxScriptType, programmingLanguage, oxModuleProperty, oxConfigurationProperty, oxLevel, oxRevision, oxEnabled, oxScriptError, oxAlias, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxCustomScript" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxCustomScript /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

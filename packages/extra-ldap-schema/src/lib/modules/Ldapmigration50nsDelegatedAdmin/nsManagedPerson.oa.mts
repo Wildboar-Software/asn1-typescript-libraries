@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_nsManagedPerson } from "../Ldapmigration50nsDelegatedAdmin/id-oc-
 // export { id_oc_nsManagedPerson } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedPerson.va.mjs";
 
 
+import { memberOf } from "../MSUser/memberOf.oa.mjs";
+import { nsDADomain } from "../Ldapmigration50nsDelegatedAdmin/nsDADomain.oa.mjs";
+import { nsdaCapability } from "../Ldapmigration50nsDelegatedAdmin/nsdaCapability.oa.mjs";
+import { nsSearchFilter } from "../Ldapmigration50nsDelegatedAdmin/nsSearchFilter.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { nsdaModifiableBy } from "../Ldapmigration50nsDelegatedAdmin/nsdaModifiableBy.oa.mjs";
 /**
  * @summary nsManagedPerson
  * @description
@@ -110,7 +116,7 @@ const nsManagedPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ memberOf, nsDADomain, nsdaCapability, nsSearchFilter, owner, nsdaModifiableBy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsManagedPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Delegated Admin marker for managed person" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsManagedPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

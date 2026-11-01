@@ -10,6 +10,7 @@ import { id_at_admissionConsiderationAttribute } from "../OrganizationAndGroupSc
 // export { id_at_admissionConsiderationAttribute } from "../OrganizationAndGroupSchema/id-at-admissionConsiderationAttribute.va.mjs";
 
 
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 /**
  * @summary admissionConsiderationAttribute
  * @description

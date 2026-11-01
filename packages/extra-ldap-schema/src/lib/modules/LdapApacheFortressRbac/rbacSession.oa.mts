@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_rbacSession } from "../LdapApacheFortressRbac/id-oc-rbacSession.v
 // export { id_oc_rbacSession } from "../LdapApacheFortressRbac/id-oc-rbacSession.va.mjs";
 
 
+import { rbacUserDN } from "../LdapApacheFortressRbac/rbacUserDN.oa.mjs";
+import { rbacRoles } from "../LdapApacheFortressRbac/rbacRoles.oa.mjs";
+import { rbacRoleConstraints } from "../LdapApacheFortressRbac/rbacRoleConstraints.oa.mjs";
+import { rbacSessid } from "../LdapApacheFortressRbac/rbacSessid.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { tenantid } from "../LdapApacheFortressRbac/tenantid.oa.mjs";
 /**
  * @summary rbacSession
  * @description
@@ -108,8 +114,8 @@ const rbacSession: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ rbacSessid, uid, tenantid, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rbacUserDN, rbacRoles, rbacRoleConstraints, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rbacSession" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "RBAC Session Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rbacSession /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

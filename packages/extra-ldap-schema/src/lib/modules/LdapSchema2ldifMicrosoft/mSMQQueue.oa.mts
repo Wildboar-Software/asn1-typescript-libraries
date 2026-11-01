@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_mSMQQueue } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQQueue.va.
 // export { id_oc_mSMQQueue } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQQueue.va.mjs";
 
 
+import { mSMQQueueType } from "../MSUser/mSMQQueueType.oa.mjs";
+import { mSMQJournal } from "../MSUser/mSMQJournal.oa.mjs";
+import { mSMQBasePriority } from "../MSUser/mSMQBasePriority.oa.mjs";
+import { mSMQLabel } from "../MSUser/mSMQLabel.oa.mjs";
+import { mSMQAuthenticate } from "../MSUser/mSMQAuthenticate.oa.mjs";
+import { mSMQPrivacyLevel } from "../MSUser/mSMQPrivacyLevel.oa.mjs";
+import { mSMQOwnerID } from "../MSUser/mSMQOwnerID.oa.mjs";
+import { mSMQTransactional } from "../MSUser/mSMQTransactional.oa.mjs";
+import { mSMQQueueQuota } from "../MSUser/mSMQQueueQuota.oa.mjs";
+import { mSMQQueueJournalQuota } from "../MSUser/mSMQQueueJournalQuota.oa.mjs";
+import { mSMQQueueNameExt } from "../MSUser/mSMQQueueNameExt.oa.mjs";
 /**
  * @summary mSMQQueue
  * @description
@@ -112,7 +123,7 @@ const mSMQQueue: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mSMQQueueType, mSMQJournal, mSMQBasePriority, mSMQLabel, mSMQAuthenticate, mSMQPrivacyLevel, mSMQOwnerID, mSMQTransactional, mSMQQueueQuota, mSMQQueueJournalQuota, mSMQQueueNameExt, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mSMQQueue" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mSMQQueue /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

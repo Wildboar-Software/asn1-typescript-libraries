@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_sunIdentityServerDevice } from "../Ldapmigration71sunAm/id-oc-sun
 // export { id_oc_sunIdentityServerDevice } from "../Ldapmigration71sunAm/id-oc-sunIdentityServerDevice.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { sunIdentityServerDeviceVersion } from "../Ldapmigration71sunAm/sunIdentityServerDeviceVersion.oa.mjs";
+import { sunIdentityServerDeviceType } from "../Ldapmigration71sunAm/sunIdentityServerDeviceType.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { sunIdentityServerDeviceKeyValue } from "../Ldapmigration71sunAm/sunIdentityServerDeviceKeyValue.oa.mjs";
+import { sunxmlkeyvalue } from "../Ldapmigration70sunSchema2/sunxmlkeyvalue.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { sunIdentityServerDeviceStatus } from "../Ldapmigration71sunAm/sunIdentityServerDeviceStatus.oa.mjs";
 /**
  * @summary sunIdentityServerDevice
  * @description
@@ -113,7 +122,7 @@ const sunIdentityServerDevice: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, uid, sunIdentityServerDeviceVersion, sunIdentityServerDeviceType, userPassword, sunIdentityServerDeviceKeyValue, sunxmlkeyvalue, description, sunIdentityServerDeviceStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunIdentityServerDevice" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Device OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunIdentityServerDevice /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

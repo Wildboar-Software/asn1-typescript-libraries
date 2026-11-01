@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_nadfObject } from "../LdapSchema2ldifNadf/id-oc-nadfObject.va.mjs
 // export { id_oc_nadfObject } from "../LdapSchema2ldifNadf/id-oc-nadfObject.va.mjs";
 
 
+import { multiMediaInformation } from "../LdapSchema2ldifNadf/multiMediaInformation.oa.mjs";
+import { nadfSearchGuide } from "../LdapSchema2ldifNadf/nadfSearchGuide.oa.mjs";
+import { supplementaryInformation } from "../LdapSchema2ldifNadf/supplementaryInformation.oa.mjs";
 /**
  * @summary nadfObject
  * @description
@@ -110,7 +113,7 @@ const nadfObject: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ lastModifiedTime, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ multiMediaInformation, nadfSearchGuide, supplementaryInformation, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nadfObject" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nadfObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

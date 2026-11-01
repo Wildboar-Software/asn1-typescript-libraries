@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_ftPools } from "../LdapApacheFortress/id-oc-ftPools.va.mjs";
 // export { id_oc_ftPools } from "../LdapApacheFortress/id-oc-ftPools.va.mjs";
 
 
+import { ftOSU } from "../LdapApacheFortress/ftOSU.oa.mjs";
+import { ftOSP } from "../LdapApacheFortress/ftOSP.oa.mjs";
+import { ftRange } from "../LdapApacheFortress/ftRange.oa.mjs";
 /**
  * @summary ftPools
  * @description
@@ -107,7 +110,7 @@ const ftPools: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftOSU, ftOSP, ftRange, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftPools" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Pools AUX Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftPools /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

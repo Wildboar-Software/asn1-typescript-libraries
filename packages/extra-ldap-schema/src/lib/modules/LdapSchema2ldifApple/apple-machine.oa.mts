@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_apple_machine } from "../LdapSchema2ldifApple/id-oc-apple-machine
 // export { id_oc_apple_machine } from "../LdapSchema2ldifApple/id-oc-apple-machine.va.mjs";
 
 
+import { apple_machine_software } from "../LdapSchema2ldifApple/apple-machine-software.oa.mjs";
+import { apple_machine_hardware } from "../LdapSchema2ldifApple/apple-machine-hardware.oa.mjs";
+import { apple_machine_serves } from "../LdapSchema2ldifApple/apple-machine-serves.oa.mjs";
+import { apple_machine_suffix } from "../LdapSchema2ldifApple/apple-machine-suffix.oa.mjs";
+import { apple_machine_contactperson } from "../LdapSchema2ldifApple/apple-machine-contactperson.oa.mjs";
 /**
  * @summary apple_machine
  * @description
@@ -108,7 +113,7 @@ const apple_machine: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ apple_machine_software, apple_machine_hardware, apple_machine_serves, apple_machine_suffix, apple_machine_contactperson, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-machine" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_machine /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

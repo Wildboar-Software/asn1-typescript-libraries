@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_pgpElement } from "../LdapSchema2ldifPgpRemtePrefs/id-oc-pgpEleme
 // export { id_oc_pgpElement } from "../LdapSchema2ldifPgpRemtePrefs/id-oc-pgpElement.va.mjs";
 
 
+import { pgpElementType } from "../LdapSchema2ldifPgpRemtePrefs/pgpElementType.oa.mjs";
+import { pgpData } from "../LdapSchema2ldifPgpRemtePrefs/pgpData.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 /**
  * @summary pgpElement
  * @description
@@ -109,7 +112,7 @@ const pgpElement: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ pgpElementType, pgpData, owner, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pgpElement" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "PGP defined objectclass of a single admin pref object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pgpElement /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

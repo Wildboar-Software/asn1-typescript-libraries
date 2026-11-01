@@ -3,7 +3,7 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OctetSubstringAssertion_Item, _decode_OctetSubstringAssertion_Item, _encode_OctetSubstringAssertion_Item } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
+import { type OctetSubstringAssertion_Item, _decode_OctetSubstringAssertion_Item, _encode_OctetSubstringAssertion_Item } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
 // export { OctetSubstringAssertion_Item, _decode_OctetSubstringAssertion_Item, _encode_OctetSubstringAssertion_Item } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
 
 

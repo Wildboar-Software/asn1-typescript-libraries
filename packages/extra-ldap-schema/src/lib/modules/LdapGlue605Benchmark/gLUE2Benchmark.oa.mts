@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchma
 // export { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
 
 
+import { gLUE2BenchmarkExecutionEnvironmentForeignKey } from "../LdapGlue605Benchmark/gLUE2BenchmarkExecutionEnvironmentForeignKey.oa.mjs";
+import { gLUE2BenchmarkComputingManagerForeignKey } from "../LdapGlue605Benchmark/gLUE2BenchmarkComputingManagerForeignKey.oa.mjs";
+import { gLUE2BenchmarkID } from "../LdapGlue605Benchmark/gLUE2BenchmarkID.oa.mjs";
+import { gLUE2BenchmarkType } from "../LdapGlue605Benchmark/gLUE2BenchmarkType.oa.mjs";
+import { gLUE2BenchmarkValue } from "../LdapGlue605Benchmark/gLUE2BenchmarkValue.oa.mjs";
 /**
  * @summary gLUE2Benchmark
  * @description
@@ -107,8 +112,8 @@ const gLUE2Benchmark: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2BenchmarkID, gLUE2BenchmarkType, gLUE2BenchmarkValue, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2BenchmarkExecutionEnvironmentForeignKey, gLUE2BenchmarkComputingManagerForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Benchmark" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Benchmark information about an entity providing computing capacity" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Benchmark /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

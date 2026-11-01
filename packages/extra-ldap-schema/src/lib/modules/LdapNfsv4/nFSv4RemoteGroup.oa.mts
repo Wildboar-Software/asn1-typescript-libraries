@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_nFSv4RemoteGroup } from "../LdapNfsv4/id-oc-nFSv4RemoteGroup.va.m
 // export { id_oc_nFSv4RemoteGroup } from "../LdapNfsv4/id-oc-nFSv4RemoteGroup.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { nFSv4Name } from "../LdapNfsv4/nFSv4Name.oa.mjs";
 /**
  * @summary nFSv4RemoteGroup
  * @description
@@ -107,8 +112,8 @@ const nFSv4RemoteGroup: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gidNumber, nFSv4Name, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, memberUid, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "NFSv4RemoteGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "NFS version4 group from remote NFSv4 Domain" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nFSv4RemoteGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

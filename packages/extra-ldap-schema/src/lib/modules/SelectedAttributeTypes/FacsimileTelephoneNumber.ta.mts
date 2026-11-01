@@ -5,7 +5,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { type TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 // export { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 
 
@@ -85,7 +85,7 @@ class FacsimileTelephoneNumber {
 export
 const _root_component_type_list_1_spec_for_FacsimileTelephoneNumber: $.ComponentSpec[] = [
     new $.ComponentSpec("telephoneNumber", false, $.hasTag(_TagClass.universal, 19)),
-    /* FIXME: parameters COULD_NOT_RESOLVE_TYPE_DEF */
+    new $.ComponentSpec("parameters", true, $.hasTag(_TagClass.universal, 3))
 ];
 
 /**

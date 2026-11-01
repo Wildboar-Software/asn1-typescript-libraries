@@ -41,7 +41,7 @@ const strongAuthenticationUser: OBJECT_CLASS = {
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ userCertificate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "strongAuthenticationUser" ] /* OBJECT_FIELD_SETTING */,
-    "&ldapDesc": [ "X.521 strong authentication user" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "X.521 strong authentication user" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_strongAuthenticationUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

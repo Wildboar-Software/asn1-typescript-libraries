@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_mS_SQL_SQLRepository } from "../LdapSchema2ldifMicrosoft/id-oc-mS
 // export { id_oc_mS_SQL_SQLRepository } from "../LdapSchema2ldifMicrosoft/id-oc-mS-SQL-SQLRepository.va.mjs";
 
 
+import { mS_SQL_Name } from "../MSUser/mS-SQL-Name.oa.mjs";
+import { mS_SQL_Contact } from "../MSUser/mS-SQL-Contact.oa.mjs";
+import { mS_SQL_Build } from "../MSUser/mS-SQL-Build.oa.mjs";
+import { mS_SQL_Status } from "../MSUser/mS-SQL-Status.oa.mjs";
+import { mS_SQL_Version } from "../MSUser/mS-SQL-Version.oa.mjs";
+import { mS_SQL_Description } from "../MSUser/mS-SQL-Description.oa.mjs";
+import { mS_SQL_InformationDirectory } from "../MSUser/mS-SQL-InformationDirectory.oa.mjs";
 /**
  * @summary mS_SQL_SQLRepository
  * @description
@@ -108,7 +115,7 @@ const mS_SQL_SQLRepository: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mS_SQL_Name, mS_SQL_Contact, mS_SQL_Build, mS_SQL_Status, mS_SQL_Version, mS_SQL_Description, mS_SQL_InformationDirectory, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mS-SQL-SQLRepository" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mS_SQL_SQLRepository /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

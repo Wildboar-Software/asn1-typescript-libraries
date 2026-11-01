@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,17 @@ import { id_oc_document } from "../LdapSchema2ldifCosine/id-oc-document.va.mjs";
 // export { id_oc_document } from "../LdapSchema2ldifCosine/id-oc-document.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { documentTitle } from "../LdapSchema2ldifCosine/documentTitle.oa.mjs";
+import { documentVersion } from "../LdapSchema2ldifCosine/documentVersion.oa.mjs";
+import { documentAuthor } from "../LdapSchema2ldifCosine/documentAuthor.oa.mjs";
+import { documentLocation } from "../LdapSchema2ldifCosine/documentLocation.oa.mjs";
+import { documentPublisher } from "../LdapSchema2ldifCosine/documentPublisher.oa.mjs";
 /**
  * @summary document
  * @description
@@ -116,7 +127,7 @@ const document: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ documentIdentifier, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, description, seeAlso, localityName, organizationName, organizationalUnitName, documentTitle, documentVersion, documentAuthor, documentLocation, documentPublisher, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "document" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_document /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

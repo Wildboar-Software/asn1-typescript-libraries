@@ -4,7 +4,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
+import { type LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
 // export { LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
 
 

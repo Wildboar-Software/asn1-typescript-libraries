@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_oc_gosaRole } from "../LdapGosaCoreGosaSamba3/id-oc-gosaRole.va.mjs"
 // export { id_oc_gosaRole } from "../LdapGosaCoreGosaSamba3/id-oc-gosaRole.va.mjs";
 
 
+import { gosaAclTemplate } from "../LdapGosaCoreGosaSamba3/gosaAclTemplate.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary gosaRole
  * @description
@@ -107,7 +109,7 @@ const gosaRole: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gosaAclTemplate, commonName, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaRole" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "ACL container to define roles (v2.7)" /* OBJECT_FIELD_SETTING */,

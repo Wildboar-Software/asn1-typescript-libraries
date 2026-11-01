@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_siteLink } from "../LdapSchema2ldifMicrosoft/id-oc-siteLink.va.mj
 // export { id_oc_siteLink } from "../LdapSchema2ldifMicrosoft/id-oc-siteLink.va.mjs";
 
 
+import { cost } from "../MSUser/cost.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { replInterval } from "../MSUser/replInterval.oa.mjs";
 /**
  * @summary siteLink
  * @description
@@ -109,7 +113,7 @@ const siteLink: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ siteList, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ cost, schedule, options, replInterval, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "siteLink" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_siteLink /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

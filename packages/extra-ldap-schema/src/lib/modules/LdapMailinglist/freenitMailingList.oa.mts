@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,20 @@ import { id_oc_freenitMailingList } from "../LdapMailinglist/id-oc-freenitMailin
 // export { id_oc_freenitMailingList } from "../LdapMailinglist/id-oc-freenitMailingList.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { mailinglistPublic } from "../LdapMailinglist/mailinglistPublic.oa.mjs";
+import { mailinglistArchiveEnabled } from "../LdapMailinglist/mailinglistArchiveEnabled.oa.mjs";
+import { mailinglistModerationEnabled } from "../LdapMailinglist/mailinglistModerationEnabled.oa.mjs";
+import { principalId } from "../LdapMailinglist/principalId.oa.mjs";
+import { inboxPrincipalId } from "../LdapMailinglist/inboxPrincipalId.oa.mjs";
+import { archivePrincipalId } from "../LdapMailinglist/archivePrincipalId.oa.mjs";
+import { createdAt } from "../LdapMailinglist/createdAt.oa.mjs";
+import { updatedAt } from "../LdapMailinglist/updatedAt.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mlidNumber } from "../LdapMailinglist/mlidNumber.oa.mjs";
+import { mailinglistAddress } from "../LdapMailinglist/mailinglistAddress.oa.mjs";
+import { mailinglistDistributionAddress } from "../LdapMailinglist/mailinglistDistributionAddress.oa.mjs";
+import { mailinglistArchiveAddress } from "../LdapMailinglist/mailinglistArchiveAddress.oa.mjs";
 /**
  * @summary freenitMailingList
  * @description
@@ -116,8 +130,8 @@ const freenitMailingList: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, mlidNumber, mailinglistAddress, mailinglistDistributionAddress, mailinglistArchiveAddress, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, mailinglistPublic, mailinglistArchiveEnabled, mailinglistModerationEnabled, principalId, inboxPrincipalId, archivePrincipalId, createdAt, updatedAt, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "freenitMailingList" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Freenit mailing list entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_freenitMailingList /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

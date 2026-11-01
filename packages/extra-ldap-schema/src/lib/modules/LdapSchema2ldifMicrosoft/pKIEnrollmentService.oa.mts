@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_pKIEnrollmentService } from "../LdapSchema2ldifMicrosoft/id-oc-pK
 // export { id_oc_pKIEnrollmentService } from "../LdapSchema2ldifMicrosoft/id-oc-pKIEnrollmentService.va.mjs";
 
 
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { dNSHostName } from "../MSUser/dNSHostName.oa.mjs";
+import { cACertificateDN } from "../MSUser/cACertificateDN.oa.mjs";
+import { certificateTemplates } from "../MSUser/certificateTemplates.oa.mjs";
+import { signatureAlgorithms } from "../MSUser/signatureAlgorithms.oa.mjs";
+import { enrollmentProviders } from "../MSUser/enrollmentProviders.oa.mjs";
 /**
  * @summary pKIEnrollmentService
  * @description
@@ -107,7 +113,7 @@ const pKIEnrollmentService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ cACertificate, dNSHostName, cACertificateDN, certificateTemplates, signatureAlgorithms, enrollmentProviders, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pKIEnrollmentService" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pKIEnrollmentService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

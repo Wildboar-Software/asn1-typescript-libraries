@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,35 @@ import { id_oc_idnsRecord } from "../LdapIpadns/id-oc-idnsRecord.va.mjs";
 // export { id_oc_idnsRecord } from "../LdapIpadns/id-oc-idnsRecord.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { idnsAllowDynUpdate } from "../LdapIpadns/idnsAllowDynUpdate.oa.mjs";
+import { dNSTTL } from "../LdapIpadns/dNSTTL.oa.mjs";
+import { dNSClass } from "../LdapIpadns/dNSClass.oa.mjs";
+import { aRecord } from "../DNSFramework/aRecord.oa.mjs";
+import { aAAARecord } from "../LdapIpadns/aAAARecord.oa.mjs";
+import { a6Record } from "../LdapIpadns/a6Record.oa.mjs";
+import { nSRecord } from "../DNSFramework/nSRecord.oa.mjs";
+import { cNAMERecord } from "../DNSFramework/cNAMERecord.oa.mjs";
+import { pTRRecord } from "../LdapIpadns/pTRRecord.oa.mjs";
+import { sRVRecord } from "../LdapIpadns/sRVRecord.oa.mjs";
+import { tXTRecord } from "../LdapIpadns/tXTRecord.oa.mjs";
+import { mxRecord } from "../DNSFramework/mxRecord.oa.mjs";
+import { mDRecord } from "../DNSFramework/mDRecord.oa.mjs";
+import { hInfoRecord } from "../LdapIpadns/hInfoRecord.oa.mjs";
+import { mInfoRecord } from "../LdapIpadns/mInfoRecord.oa.mjs";
+import { aFSDBRecord } from "../LdapIpadns/aFSDBRecord.oa.mjs";
+import { sigRecord } from "../LdapIpadns/sigRecord.oa.mjs";
+import { keyRecord } from "../LdapIpadns/keyRecord.oa.mjs";
+import { locRecord } from "../LdapIpadns/locRecord.oa.mjs";
+import { nXTRecord } from "../LdapIpadns/nXTRecord.oa.mjs";
+import { nAPTRRecord } from "../LdapIpadns/nAPTRRecord.oa.mjs";
+import { kXRecord } from "../LdapIpadns/kXRecord.oa.mjs";
+import { certRecord } from "../LdapIpadns/certRecord.oa.mjs";
+import { dNameRecord } from "../LdapIpadns/dNameRecord.oa.mjs";
+import { dSRecord } from "../LdapIpadns/dSRecord.oa.mjs";
+import { sSHFPRecord } from "../LdapIpadns/sSHFPRecord.oa.mjs";
+import { rRSIGRecord } from "../LdapIpadns/rRSIGRecord.oa.mjs";
+import { nSECRecord } from "../LdapIpadns/nSECRecord.oa.mjs";
 /**
  * @summary idnsRecord
  * @description
@@ -135,7 +164,7 @@ const idnsRecord: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ idnsName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, idnsAllowDynUpdate, dNSTTL, dNSClass, aRecord, aAAARecord, a6Record, nSRecord, cNAMERecord, pTRRecord, sRVRecord, tXTRecord, mxRecord, mDRecord, hInfoRecord, mInfoRecord, aFSDBRecord, sigRecord, keyRecord, locRecord, nXTRecord, nAPTRRecord, kXRecord, certRecord, dNameRecord, dSRecord, sSHFPRecord, rRSIGRecord, nSECRecord, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "idnsRecord" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "dns Record, usually a host" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_idnsRecord /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

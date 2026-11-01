@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_goGlpiServer } from "../LdapGosaCoreGoserver/id-oc-goGlpiServer.v
 // export { id_oc_goGlpiServer } from "../LdapGosaCoreGoserver/id-oc-goGlpiServer.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goGlpiPassword } from "../LdapGosaCoreGoserver/goGlpiPassword.oa.mjs";
+import { goGlpiServerStatus } from "../LdapGosaCoreGoserver/goGlpiServerStatus.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { goGlpiAdmin } from "../LdapGosaCoreGoserver/goGlpiAdmin.oa.mjs";
+import { goGlpiDatabase } from "../LdapGosaCoreGoserver/goGlpiDatabase.oa.mjs";
 /**
  * @summary goGlpiServer
  * @description
@@ -110,8 +116,8 @@ const goGlpiServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, goGlpiAdmin, goGlpiDatabase, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, goGlpiPassword, goGlpiServerStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goGlpiServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Glpi server definition (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goGlpiServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

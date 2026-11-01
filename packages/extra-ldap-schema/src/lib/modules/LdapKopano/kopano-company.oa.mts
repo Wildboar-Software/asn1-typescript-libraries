@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,20 @@ import { id_oc_kopano_company } from "../LdapKopano/id-oc-kopano-company.va.mjs"
 // export { id_oc_kopano_company } from "../LdapKopano/id-oc-kopano-company.va.mjs";
 
 
+import { kopanoAccount } from "../LdapKopano/kopanoAccount.oa.mjs";
+import { kopanoHidden } from "../LdapKopano/kopanoHidden.oa.mjs";
+import { kopanoViewPrivilege } from "../LdapKopano/kopanoViewPrivilege.oa.mjs";
+import { kopanoAdminPrivilege } from "../LdapKopano/kopanoAdminPrivilege.oa.mjs";
+import { kopanoSystemAdmin } from "../LdapKopano/kopanoSystemAdmin.oa.mjs";
+import { kopanoQuotaOverride } from "../LdapKopano/kopanoQuotaOverride.oa.mjs";
+import { kopanoQuotaWarn } from "../LdapKopano/kopanoQuotaWarn.oa.mjs";
+import { kopanoUserDefaultQuotaOverride } from "../LdapKopano/kopanoUserDefaultQuotaOverride.oa.mjs";
+import { kopanoUserDefaultQuotaWarn } from "../LdapKopano/kopanoUserDefaultQuotaWarn.oa.mjs";
+import { kopanoUserDefaultQuotaSoft } from "../LdapKopano/kopanoUserDefaultQuotaSoft.oa.mjs";
+import { kopanoUserDefaultQuotaHard } from "../LdapKopano/kopanoUserDefaultQuotaHard.oa.mjs";
+import { kopanoQuotaUserWarningRecipients } from "../LdapKopano/kopanoQuotaUserWarningRecipients.oa.mjs";
+import { kopanoQuotaCompanyWarningRecipients } from "../LdapKopano/kopanoQuotaCompanyWarningRecipients.oa.mjs";
+import { kopanoCompanyServer } from "../LdapKopano/kopanoCompanyServer.oa.mjs";
 /**
  * @summary kopano_company
  * @description
@@ -122,7 +136,7 @@ const kopano_company: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ kopanoAccount, kopanoHidden, kopanoViewPrivilege, kopanoAdminPrivilege, kopanoSystemAdmin, kopanoQuotaOverride, kopanoQuotaWarn, kopanoUserDefaultQuotaOverride, kopanoUserDefaultQuotaWarn, kopanoUserDefaultQuotaSoft, kopanoUserDefaultQuotaHard, kopanoQuotaUserWarningRecipients, kopanoQuotaCompanyWarningRecipients, kopanoCompanyServer, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kopano-company" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "KOPANO: a company of Kopano" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kopano_company /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

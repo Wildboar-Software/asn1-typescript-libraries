@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_oc_gosaWebDAVAccount } from "../LdapGosaCoreGosaSamba3/id-oc-gosaWeb
 // export { id_oc_gosaWebDAVAccount } from "../LdapGosaCoreGosaSamba3/id-oc-gosaWebDAVAccount.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 /**
  * @summary gosaWebDAVAccount
  * @description
@@ -109,7 +111,7 @@ const gosaWebDAVAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, uid, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gosaWebDAVQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaWebDAVAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOsa webdav enabling account (v2.7)" /* OBJECT_FIELD_SETTING */,

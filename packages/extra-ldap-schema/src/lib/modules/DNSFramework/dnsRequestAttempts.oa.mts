@@ -14,6 +14,7 @@ import { id_at_dnsRequestAttempts } from "../DNSFramework/id-at-dnsRequestAttemp
 // export { id_at_dnsRequestAttempts } from "../DNSFramework/id-at-dnsRequestAttempts.va.mjs";
 
 
+import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 /**
  * @summary dnsRequestAttempts
  * @description

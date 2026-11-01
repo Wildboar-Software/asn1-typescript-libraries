@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_oxLiteralNode } from "../LdapOx/id-oc-oxLiteralNode.va.mjs";
 // export { id_oc_oxLiteralNode } from "../LdapOx/id-oc-oxLiteralNode.va.mjs";
 
 
+import { literalBinaryValue } from "../LdapOx/literalBinaryValue.oa.mjs";
+import { literalValue } from "../LdapOx/literalValue.oa.mjs";
+import { organizationalOwner } from "../LdapOx/organizationalOwner.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { targetRelationalXdiStatement } from "../LdapOx/targetRelationalXdiStatement.oa.mjs";
+import { x } from "../LdapOx/x.oa.mjs";
+import { xdiStatement } from "../LdapOx/xdiStatement.oa.mjs";
+import { xri } from "../LdapOx/xri.oa.mjs";
 /**
  * @summary oxLiteralNode
  * @description
@@ -113,7 +121,7 @@ const oxLiteralNode: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ literalBinaryValue, literalValue, organizationalOwner, owner, targetRelationalXdiStatement, x, xdiStatement, xri, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxLiteralNode" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxLiteralNode /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

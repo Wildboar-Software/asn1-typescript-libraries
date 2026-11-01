@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_nsManagedFamilyGroup } from "../Ldapmigration50nsDelegatedAdmin/i
 // export { id_oc_nsManagedFamilyGroup } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedFamilyGroup.va.mjs";
 
 
+import { nsNumUsers } from "../Ldapmigration50nsDelegatedAdmin/nsNumUsers.oa.mjs";
+import { nsMaxUsers } from "../Ldapmigration50nsDelegatedAdmin/nsMaxUsers.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { nsdaModifiableBy } from "../Ldapmigration50nsDelegatedAdmin/nsdaModifiableBy.oa.mjs";
 /**
  * @summary nsManagedFamilyGroup
  * @description
@@ -108,7 +112,7 @@ const nsManagedFamilyGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsNumUsers, nsMaxUsers, owner, nsdaModifiableBy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsManagedFamilyGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Delegated Admin marker for managed familygroup" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsManagedFamilyGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

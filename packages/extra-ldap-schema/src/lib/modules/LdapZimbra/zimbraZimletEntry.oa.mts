@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,23 @@ import { id_oc_zimbraZimletEntry } from "../LdapZimbra/id-oc-zimbraZimletEntry.v
 // export { id_oc_zimbraZimletEntry } from "../LdapZimbra/id-oc-zimbraZimletEntry.va.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraACE } from "../LdapZimbra/zimbraACE.oa.mjs";
+import { zimbraAdminExtDisableUIUndeploy } from "../LdapZimbra/zimbraAdminExtDisableUIUndeploy.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraZimletDescription } from "../LdapZimbra/zimbraZimletDescription.oa.mjs";
+import { zimbraZimletHandlerClass } from "../LdapZimbra/zimbraZimletHandlerClass.oa.mjs";
+import { zimbraZimletHandlerConfig } from "../LdapZimbra/zimbraZimletHandlerConfig.oa.mjs";
+import { zimbraZimletIndexingEnabled } from "../LdapZimbra/zimbraZimletIndexingEnabled.oa.mjs";
+import { zimbraZimletIsExtension } from "../LdapZimbra/zimbraZimletIsExtension.oa.mjs";
+import { zimbraZimletKeyword } from "../LdapZimbra/zimbraZimletKeyword.oa.mjs";
+import { zimbraZimletPriority } from "../LdapZimbra/zimbraZimletPriority.oa.mjs";
+import { zimbraZimletScript } from "../LdapZimbra/zimbraZimletScript.oa.mjs";
+import { zimbraZimletServerIndexRegex } from "../LdapZimbra/zimbraZimletServerIndexRegex.oa.mjs";
+import { zimbraZimletTarget } from "../LdapZimbra/zimbraZimletTarget.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { zimbraZimletEnabled } from "../LdapZimbra/zimbraZimletEnabled.oa.mjs";
+import { zimbraZimletVersion } from "../LdapZimbra/zimbraZimletVersion.oa.mjs";
 /**
  * @summary zimbraZimletEntry
  * @description
@@ -119,8 +136,8 @@ const zimbraZimletEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraZimletEnabled, zimbraZimletVersion, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraACE, zimbraAdminExtDisableUIUndeploy, zimbraCreateTimestamp, zimbraZimletDescription, zimbraZimletHandlerClass, zimbraZimletHandlerConfig, zimbraZimletIndexingEnabled, zimbraZimletIsExtension, zimbraZimletKeyword, zimbraZimletPriority, zimbraZimletScript, zimbraZimletServerIndexRegex, zimbraZimletTarget, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraZimletEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Zimlet info" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraZimletEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

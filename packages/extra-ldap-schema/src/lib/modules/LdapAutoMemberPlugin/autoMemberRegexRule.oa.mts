@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_autoMemberRegexRule } from "../LdapAutoMemberPlugin/id-oc-autoMem
 // export { id_oc_autoMemberRegexRule } from "../LdapAutoMemberPlugin/id-oc-autoMemberRegexRule.va.mjs";
 
 
+import { autoMemberExclusiveRegex } from "../LdapAutoMemberPlugin/autoMemberExclusiveRegex.oa.mjs";
+import { autoMemberInclusiveRegex } from "../LdapAutoMemberPlugin/autoMemberInclusiveRegex.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { autoMemberTargetGroup } from "../LdapAutoMemberPlugin/autoMemberTargetGroup.oa.mjs";
 /**
  * @summary autoMemberRegexRule
  * @description
@@ -107,8 +112,8 @@ const autoMemberRegexRule: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, autoMemberTargetGroup, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ autoMemberExclusiveRegex, autoMemberInclusiveRegex, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "autoMemberRegexRule" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auto Membership Regex Rule Entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_autoMemberRegexRule /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

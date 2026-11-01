@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_oc_gosaDepartment } from "../LdapGosaCoreGosaSamba3/id-oc-gosaDepart
 // export { id_oc_gosaDepartment } from "../LdapGosaCoreGosaSamba3/id-oc-gosaDepartment.va.mjs";
 
 
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 /**
  * @summary gosaDepartment
  * @description
@@ -109,7 +111,7 @@ const gosaDepartment: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ organizationalUnitName, description, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ manager, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaDepartment" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Class to mark Departments for GOsa (v2.7)" /* OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_zimbraPop3DataSource } from "../LdapZimbra/id-oc-zimbraPop3DataSo
 // export { id_oc_zimbraPop3DataSource } from "../LdapZimbra/id-oc-zimbraPop3DataSource.va.mjs";
 
 
+import { zimbraDataSourceConnectionType } from "../LdapZimbra/zimbraDataSourceConnectionType.oa.mjs";
+import { zimbraDataSourceHost } from "../LdapZimbra/zimbraDataSourceHost.oa.mjs";
+import { zimbraDataSourcePort } from "../LdapZimbra/zimbraDataSourcePort.oa.mjs";
 /**
  * @summary zimbraPop3DataSource
  * @description
@@ -108,7 +111,7 @@ const zimbraPop3DataSource: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ zimbraDataSource, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraDataSourceConnectionType, zimbraDataSourceHost, zimbraDataSourcePort, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ zimbraDataSourceLeaveOnServer, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraPop3DataSource" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "POP3 data source object" /* OBJECT_FIELD_SETTING */,

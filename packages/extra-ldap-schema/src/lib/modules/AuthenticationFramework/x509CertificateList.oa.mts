@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CertificateList, _decode_CertificateList, _encode_CertificateList } from "../AuthenticationFramework/CertificateList.ta.mjs";
+import { type CertificateList, _decode_CertificateList, _encode_CertificateList } from "../AuthenticationFramework/CertificateList.ta.mjs";
 // export { CertificateList, _decode_CertificateList, _encode_CertificateList } from "../AuthenticationFramework/CertificateList.ta.mjs";
 import { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va.mjs";
 // export { id_lsx_x509CertificateList } from "../AuthenticationFramework/id-lsx-x509CertificateList.va.mjs";

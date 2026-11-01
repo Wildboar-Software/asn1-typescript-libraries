@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_nsSlapiTask } from "../LdapCommon389/id-oc-nsSlapiTask.va.mjs";
 // export { id_oc_nsSlapiTask } from "../LdapCommon389/id-oc-nsSlapiTask.va.mjs";
 
 
+import { ttl } from "../LdapCommon389/ttl.oa.mjs";
+import { nsTaskLog } from "../LdapCommon389/nsTaskLog.oa.mjs";
+import { nsTaskStatus } from "../LdapCommon389/nsTaskStatus.oa.mjs";
+import { nsTaskExitCode } from "../LdapCommon389/nsTaskExitCode.oa.mjs";
+import { nsTaskCurrentItem } from "../LdapCommon389/nsTaskCurrentItem.oa.mjs";
+import { nsTaskTotalItems } from "../LdapCommon389/nsTaskTotalItems.oa.mjs";
+import { nsTaskCreated } from "../LdapCommon389/nsTaskCreated.oa.mjs";
+import { nsTaskWarning } from "../LdapCommon389/nsTaskWarning.oa.mjs";
 /**
  * @summary nsSlapiTask
  * @description
@@ -114,7 +122,7 @@ const nsSlapiTask: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ttl, nsTaskLog, nsTaskStatus, nsTaskExitCode, nsTaskCurrentItem, nsTaskTotalItems, nsTaskCreated, nsTaskWarning, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsSlapiTask" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Slapi_Task objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsSlapiTask /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

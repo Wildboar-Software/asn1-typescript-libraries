@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_file } from "../LdapIspenv2/id-oc-file.va.mjs";
 // export { id_oc_file } from "../LdapIspenv2/id-oc-file.va.mjs";
 
 
+import { filePath } from "../LdapIspenv2/filePath.oa.mjs";
+import { filePerm } from "../LdapIspenv2/filePerm.oa.mjs";
+import { fileContent } from "../LdapIspenv2/fileContent.oa.mjs";
+import { fileType } from "../LdapIspenv2/fileType.oa.mjs";
 /**
  * @summary file
  * @description
@@ -110,7 +114,7 @@ const file: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ fileName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ filePath, filePerm, fileContent, fileType, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "file" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Used to store files in LDAP" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_file /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

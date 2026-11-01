@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_marathonAccess } from "../LdapMarathon/id-oc-marathonAccess.va.mj
 // export { id_oc_marathonAccess } from "../LdapMarathon/id-oc-marathonAccess.va.mjs";
 
 
+import { marathonAccessRule } from "../LdapMarathon/marathonAccessRule.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**
  * @summary marathonAccess
  * @description
@@ -106,7 +108,7 @@ const marathonAccess: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ marathonAccessRule, commonName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "marathonAccess" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "marathon-ldap group with permissions" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_marathonAccess /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

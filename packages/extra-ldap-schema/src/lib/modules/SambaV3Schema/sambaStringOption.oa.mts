@@ -11,6 +11,7 @@ import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 // export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 
 
+import { caseExactIA5Match } from "../SelectedAttributeTypes/caseExactIA5Match.oa.mjs";
 /**
  * @summary sambaStringOption
  * @description

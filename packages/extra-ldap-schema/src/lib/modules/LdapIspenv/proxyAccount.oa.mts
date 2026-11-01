@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_proxyAccount } from "../LdapIspenv/id-oc-proxyAccount.va.mjs";
 // export { id_oc_proxyAccount } from "../LdapIspenv/id-oc-proxyAccount.va.mjs";
 
 
+import { webAccess } from "../LdapIspenv/webAccess.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 /**
  * @summary proxyAccount
  * @description
@@ -110,7 +113,7 @@ const proxyAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ webAccess, uid, userPassword, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ proxyHost, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "proxyAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Account for accessing the proxy server" /* OBJECT_FIELD_SETTING */,

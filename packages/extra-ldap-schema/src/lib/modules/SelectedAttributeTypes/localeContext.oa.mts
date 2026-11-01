@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { LocaleContextSyntax, _decode_LocaleContextSyntax, _encode_LocaleContextSyntax } from "../SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
+import { type LocaleContextSyntax, _decode_LocaleContextSyntax, _encode_LocaleContextSyntax } from "../SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
 // export { LocaleContextSyntax, _decode_LocaleContextSyntax, _encode_LocaleContextSyntax } from "../SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
 import { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.mjs";
 // export { id_avc_locale } from "../SelectedAttributeTypes/id-avc-locale.va.mjs";

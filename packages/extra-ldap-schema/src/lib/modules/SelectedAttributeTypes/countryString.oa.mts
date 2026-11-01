@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { CountryName, _decode_CountryName, _encode_CountryName } from "../SelectedAttributeTypes/CountryName.ta.mjs";
+import { type CountryName, _decode_CountryName, _encode_CountryName } from "../SelectedAttributeTypes/CountryName.ta.mjs";
 // export { CountryName, _decode_CountryName, _encode_CountryName } from "../SelectedAttributeTypes/CountryName.ta.mjs";
 import { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.mjs";
 // export { id_lsx_countryString } from "../SelectedAttributeTypes/id-lsx-countryString.va.mjs";

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_iplanet_am_managed_org_unit } from "../Ldapmigration71sunAm/id-oc
 // export { id_oc_iplanet_am_managed_org_unit } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-org-unit.va.mjs";
 
 
+import { sunPreferredDomain } from "../Ldapmigration70sunSchema2/sunPreferredDomain.oa.mjs";
+import { associatedDomain } from "../MIXERAddressMapping/associatedDomain.oa.mjs";
+import { sunPreferredOrganization } from "../Ldapmigration70sunSchema2/sunPreferredOrganization.oa.mjs";
+import { sunAdditionalTemplates } from "../Ldapmigration70sunSchema2/sunAdditionalTemplates.oa.mjs";
+import { sunOverrideTemplates } from "../Ldapmigration70sunSchema2/sunOverrideTemplates.oa.mjs";
+import { sunRegisteredServiceName } from "../Ldapmigration70sunSchema2/sunRegisteredServiceName.oa.mjs";
+import { sunIdentityServerSupportedTypes } from "../Ldapmigration71sunAm/sunIdentityServerSupportedTypes.oa.mjs";
 /**
  * @summary iplanet_am_managed_org_unit
  * @description
@@ -111,7 +118,7 @@ const iplanet_am_managed_org_unit: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunPreferredDomain, associatedDomain, sunPreferredOrganization, sunAdditionalTemplates, sunOverrideTemplates, sunRegisteredServiceName, sunIdentityServerSupportedTypes, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-managed-org-unit" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Managed OrganizationalUnit OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_managed_org_unit /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

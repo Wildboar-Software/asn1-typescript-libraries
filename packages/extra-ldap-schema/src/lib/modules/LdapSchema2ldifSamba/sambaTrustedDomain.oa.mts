@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,15 @@ import { id_oc_sambaTrustedDomain } from "../LdapSchema2ldifSamba/id-oc-sambaTru
 // export { id_oc_sambaTrustedDomain } from "../LdapSchema2ldifSamba/id-oc-sambaTrustedDomain.va.mjs";
 
 
+import { sambaTrustType } from "../LdapSchema2ldifSamba/sambaTrustType.oa.mjs";
+import { sambaTrustAttributes } from "../LdapSchema2ldifSamba/sambaTrustAttributes.oa.mjs";
+import { sambaTrustDirection } from "../LdapSchema2ldifSamba/sambaTrustDirection.oa.mjs";
+import { sambaTrustPartner } from "../LdapSchema2ldifSamba/sambaTrustPartner.oa.mjs";
+import { sambaFlatName } from "../LdapSchema2ldifSamba/sambaFlatName.oa.mjs";
+import { sambaTrustAuthOutgoing } from "../LdapSchema2ldifSamba/sambaTrustAuthOutgoing.oa.mjs";
+import { sambaTrustAuthIncoming } from "../LdapSchema2ldifSamba/sambaTrustAuthIncoming.oa.mjs";
+import { sambaSecurityIdentifier } from "../LdapSchema2ldifSamba/sambaSecurityIdentifier.oa.mjs";
+import { sambaTrustForestTrustInfo } from "../LdapSchema2ldifSamba/sambaTrustForestTrustInfo.oa.mjs";
 /**
  * @summary sambaTrustedDomain
  * @description
@@ -115,7 +124,7 @@ const sambaTrustedDomain: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sambaTrustType, sambaTrustAttributes, sambaTrustDirection, sambaTrustPartner, sambaFlatName, sambaTrustAuthOutgoing, sambaTrustAuthIncoming, sambaSecurityIdentifier, sambaTrustForestTrustInfo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sambaTrustedDomain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Samba Trusted Domain Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sambaTrustedDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { TimeSpecification, _decode_TimeSpecification, _encode_TimeSpecification } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
 // export { TimeSpecification, _decode_TimeSpecification, _encode_TimeSpecification } from "../SelectedAttributeTypes/TimeSpecification.ta.mjs";
-import { TimeAssertion, _decode_TimeAssertion, _encode_TimeAssertion } from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";
+import { type TimeAssertion, _decode_TimeAssertion, _encode_TimeAssertion } from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";
 // export { TimeAssertion, _decode_TimeAssertion, _encode_TimeAssertion } from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";
 import { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";
 // export { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";

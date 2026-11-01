@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_zillaPerson } from "../LdapExtension/id-oc-zillaPerson.va.mjs";
 // export { id_oc_zillaPerson } from "../LdapExtension/id-oc-zillaPerson.va.mjs";
 
 
+import { mobile } from "../LdapSchema2ldifCosine/mobile.oa.mjs";
+import { pager } from "../LdapSchema2ldifCosine/pager.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { uRL } from "../LdapExtension/uRL.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { xmozillanickname } from "../LdapExtension/xmozillanickname.oa.mjs";
+import { xmozillausehtmlmail } from "../LdapExtension/xmozillausehtmlmail.oa.mjs";
 /**
  * @summary zillaPerson
  * @description
@@ -109,7 +116,7 @@ const zillaPerson: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ officePerson, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mobile, pager, description, uRL, telephoneNumber, xmozillanickname, xmozillausehtmlmail, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zillaPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape Communicator Extensions" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zillaPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

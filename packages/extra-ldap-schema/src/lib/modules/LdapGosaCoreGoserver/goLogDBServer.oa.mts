@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_goLogDBServer } from "../LdapGosaCoreGoserver/id-oc-goLogDBServer
 // export { id_oc_goLogDBServer } from "../LdapGosaCoreGoserver/id-oc-goLogDBServer.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { gosaLogDB } from "../LdapGosaCoreGoserver/gosaLogDB.oa.mjs";
+import { goLogAdmin } from "../LdapGosaCoreGoserver/goLogAdmin.oa.mjs";
+import { goLogPassword } from "../LdapGosaCoreGoserver/goLogPassword.oa.mjs";
 /**
  * @summary goLogDBServer
  * @description
@@ -111,7 +115,7 @@ const goLogDBServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, gosaLogDB, goLogAdmin, goLogPassword, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ goLogDBServerStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goLogDBServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Log DB server description (v2.7)" /* OBJECT_FIELD_SETTING */,

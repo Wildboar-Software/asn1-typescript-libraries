@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,9 @@ import { id_oc_goNtpServer } from "../LdapGosaCoreGoserver/id-oc-goNtpServer.va.
 // export { id_oc_goNtpServer } from "../LdapGosaCoreGoserver/id-oc-goNtpServer.va.mjs";
 
 
+import { goTimeSource } from "../LdapGosaCoreGoserver/goTimeSource.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goNtpServerStatus } from "../LdapGosaCoreGoserver/goNtpServerStatus.oa.mjs";
 /**
  * @summary goNtpServer
  * @description
@@ -111,7 +114,7 @@ const goNtpServer: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ goTimeSource, description, goNtpServerStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goNtpServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Time server description (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goNtpServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

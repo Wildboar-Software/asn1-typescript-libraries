@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,12 @@ import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 
 
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { sambaSIDList } from "../SambaV3Schema/sambaSIDList.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { sambaGroupType } from "../SambaV3Schema/sambaGroupType.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
 /**
  * @summary sambaGroupMapping
  * @description
@@ -105,8 +111,8 @@ const sambaGroupMapping: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gidNumber, sambaGroupType, sambaSID, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, displayName, sambaSIDList, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sambaGroupMapping" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Samba Group Mapping" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7165, 2, 2, 4,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

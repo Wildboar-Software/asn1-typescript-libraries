@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,31 @@ import { id_oc_base4kidsPerson } from "../LdapBase4kids2/id-oc-base4kidsPerson.v
 // export { id_oc_base4kidsPerson } from "../LdapBase4kids2/id-oc-base4kidsPerson.va.mjs";
 
 
+import { base4kidsAppleId } from "../LdapBase4kids2/base4kidsAppleId.oa.mjs";
+import { base4kidsBusinessTelephoneNumber } from "../LdapBase4kids2/base4kidsBusinessTelephoneNumber.oa.mjs";
+import { base4kidsChatIsActive } from "../LdapBase4kids2/base4kidsChatIsActive.oa.mjs";
+import { base4kidsCloudStorageIsActive } from "../LdapBase4kids2/base4kidsCloudStorageIsActive.oa.mjs";
+import { base4kidsCountryCode } from "../LdapBase4kids2/base4kidsCountryCode.oa.mjs";
+import { base4kidsDateOfBirth } from "../LdapBase4kids2/base4kidsDateOfBirth.oa.mjs";
+import { base4kidsEgovId } from "../LdapBase4kids2/base4kidsEgovId.oa.mjs";
+import { base4kidsEportfolioIsActive } from "../LdapBase4kids2/base4kidsEportfolioIsActive.oa.mjs";
+import { base4kidsGender } from "../LdapBase4kids2/base4kidsGender.oa.mjs";
+import { base4kidsGroupwareIsActive } from "../LdapBase4kids2/base4kidsGroupwareIsActive.oa.mjs";
+import { base4kidsImapIsActive } from "../LdapBase4kids2/base4kidsImapIsActive.oa.mjs";
+import { base4kidsIsActive } from "../LdapBase4kids2/base4kidsIsActive.oa.mjs";
+import { base4kidsIsBlocked } from "../LdapBase4kids2/base4kidsIsBlocked.oa.mjs";
+import { base4kidsIsDisabled } from "../LdapBase4kids2/base4kidsIsDisabled.oa.mjs";
+import { base4kidsLearningPlatformIsActive } from "../LdapBase4kids2/base4kidsLearningPlatformIsActive.oa.mjs";
+import { base4kidsLegalGuardian } from "../LdapBase4kids2/base4kidsLegalGuardian.oa.mjs";
+import { base4kidsLegalGuardianOf } from "../LdapBase4kids2/base4kidsLegalGuardianOf.oa.mjs";
+import { base4kidsNextcloudUserQuota } from "../LdapBase4kids2/base4kidsNextcloudUserQuota.oa.mjs";
+import { base4kidsPersiskaNumber } from "../LdapBase4kids2/base4kidsPersiskaNumber.oa.mjs";
+import { base4kidsPlaceOfOrigin } from "../LdapBase4kids2/base4kidsPlaceOfOrigin.oa.mjs";
+import { base4kidsRole } from "../LdapBase4kids2/base4kidsRole.oa.mjs";
+import { base4kidsSchoolProgrammYear } from "../LdapBase4kids2/base4kidsSchoolProgrammYear.oa.mjs";
+import { base4kidsSmtpReceiveIsActive } from "../LdapBase4kids2/base4kidsSmtpReceiveIsActive.oa.mjs";
+import { base4kidsSmtpSubmissionIsActive } from "../LdapBase4kids2/base4kidsSmtpSubmissionIsActive.oa.mjs";
+import { base4kidsWebmailIsActive } from "../LdapBase4kids2/base4kidsWebmailIsActive.oa.mjs";
 /**
  * @summary base4kidsPerson
  * @description
@@ -129,7 +154,7 @@ const base4kidsPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ base4kidsAppleId, base4kidsBusinessTelephoneNumber, base4kidsChatIsActive, base4kidsCloudStorageIsActive, base4kidsCountryCode, base4kidsDateOfBirth, base4kidsEgovId, base4kidsEportfolioIsActive, base4kidsGender, base4kidsGroupwareIsActive, base4kidsImapIsActive, base4kidsIsActive, base4kidsIsBlocked, base4kidsIsDisabled, base4kidsLearningPlatformIsActive, base4kidsLegalGuardian, base4kidsLegalGuardianOf, base4kidsNextcloudUserQuota, base4kidsPersiskaNumber, base4kidsPlaceOfOrigin, base4kidsRole, base4kidsSchoolProgrammYear, base4kidsSmtpReceiveIsActive, base4kidsSmtpSubmissionIsActive, base4kidsWebmailIsActive, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "base4kidsPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Base4Kids person object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_base4kidsPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

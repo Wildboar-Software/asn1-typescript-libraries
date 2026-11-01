@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_schacGroupMembership } from "../LdapSchac/id-oc-schacGroupMembers
 // export { id_oc_schacGroupMembership } from "../LdapSchac/id-oc-schacGroupMembership.va.mjs";
 
 
+import { schacProjectMembership } from "../LdapSchac/schacProjectMembership.oa.mjs";
+import { schacProjectSpecificRole } from "../LdapSchac/schacProjectSpecificRole.oa.mjs";
 /**
  * @summary schacGroupMembership
  * @description
@@ -106,7 +108,7 @@ const schacGroupMembership: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schacProjectMembership, schacProjectSpecificRole, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "schacGroupMembership" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Groups used to provide/restrict authorization to entries and attributes" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_schacGroupMembership /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_ipsecNegotiationPolicy } from "../LdapSchema2ldifMicrosoft/id-oc-
 // export { id_oc_ipsecNegotiationPolicy } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecNegotiationPolicy.va.mjs";
 
 
+import { iPSECNegotiationPolicyType } from "../MSUser/iPSECNegotiationPolicyType.oa.mjs";
+import { iPSECNegotiationPolicyAction } from "../MSUser/iPSECNegotiationPolicyAction.oa.mjs";
 /**
  * @summary ipsecNegotiationPolicy
  * @description
@@ -103,7 +105,7 @@ const ipsecNegotiationPolicy: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ ipsecBase, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iPSECNegotiationPolicyType, iPSECNegotiationPolicyAction, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipsecNegotiationPolicy" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipsecNegotiationPolicy /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,25 @@ import { id_oc_zimbraGalDataSource } from "../LdapZimbra/id-oc-zimbraGalDataSour
 // export { id_oc_zimbraGalDataSource } from "../LdapZimbra/id-oc-zimbraGalDataSource.va.mjs";
 
 
+import { zimbraGalLastFailedSyncTimestamp } from "../LdapZimbra/zimbraGalLastFailedSyncTimestamp.oa.mjs";
+import { zimbraGalLastSuccessfulSyncTimestamp } from "../LdapZimbra/zimbraGalLastSuccessfulSyncTimestamp.oa.mjs";
+import { zimbraGalLdapAttrMap } from "../LdapZimbra/zimbraGalLdapAttrMap.oa.mjs";
+import { zimbraGalLdapGroupHandlerClass } from "../LdapZimbra/zimbraGalLdapGroupHandlerClass.oa.mjs";
+import { zimbraGalLdapValueMap } from "../LdapZimbra/zimbraGalLdapValueMap.oa.mjs";
+import { zimbraGalSyncIgnoredAttributes } from "../LdapZimbra/zimbraGalSyncIgnoredAttributes.oa.mjs";
+import { zimbraGalSyncLdapAuthMech } from "../LdapZimbra/zimbraGalSyncLdapAuthMech.oa.mjs";
+import { zimbraGalSyncLdapBindDn } from "../LdapZimbra/zimbraGalSyncLdapBindDn.oa.mjs";
+import { zimbraGalSyncLdapBindPassword } from "../LdapZimbra/zimbraGalSyncLdapBindPassword.oa.mjs";
+import { zimbraGalSyncLdapFilter } from "../LdapZimbra/zimbraGalSyncLdapFilter.oa.mjs";
+import { zimbraGalSyncLdapKerberos5Keytab } from "../LdapZimbra/zimbraGalSyncLdapKerberos5Keytab.oa.mjs";
+import { zimbraGalSyncLdapKerberos5Principal } from "../LdapZimbra/zimbraGalSyncLdapKerberos5Principal.oa.mjs";
+import { zimbraGalSyncLdapPageSize } from "../LdapZimbra/zimbraGalSyncLdapPageSize.oa.mjs";
+import { zimbraGalSyncLdapSearchBase } from "../LdapZimbra/zimbraGalSyncLdapSearchBase.oa.mjs";
+import { zimbraGalSyncLdapStartTlsEnabled } from "../LdapZimbra/zimbraGalSyncLdapStartTlsEnabled.oa.mjs";
+import { zimbraGalSyncLdapURL } from "../LdapZimbra/zimbraGalSyncLdapURL.oa.mjs";
+import { zimbraGalSyncTimestampFormat } from "../LdapZimbra/zimbraGalSyncTimestampFormat.oa.mjs";
+import { zimbraGalStatus } from "../LdapZimbra/zimbraGalStatus.oa.mjs";
+import { zimbraGalType } from "../LdapZimbra/zimbraGalType.oa.mjs";
 /**
  * @summary zimbraGalDataSource
  * @description
@@ -121,8 +140,8 @@ const zimbraGalDataSource: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ zimbraDataSource, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraGalStatus, zimbraGalType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraGalLastFailedSyncTimestamp, zimbraGalLastSuccessfulSyncTimestamp, zimbraGalLdapAttrMap, zimbraGalLdapGroupHandlerClass, zimbraGalLdapValueMap, zimbraGalSyncIgnoredAttributes, zimbraGalSyncLdapAuthMech, zimbraGalSyncLdapBindDn, zimbraGalSyncLdapBindPassword, zimbraGalSyncLdapFilter, zimbraGalSyncLdapKerberos5Keytab, zimbraGalSyncLdapKerberos5Principal, zimbraGalSyncLdapPageSize, zimbraGalSyncLdapSearchBase, zimbraGalSyncLdapStartTlsEnabled, zimbraGalSyncLdapURL, zimbraGalSyncTimestampFormat, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraGalDataSource" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GAL data source object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraGalDataSource /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

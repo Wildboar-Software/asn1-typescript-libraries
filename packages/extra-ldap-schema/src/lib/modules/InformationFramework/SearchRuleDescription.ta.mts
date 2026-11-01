@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -66,7 +66,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 // export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 
 
@@ -149,7 +149,7 @@ class SearchRuleDescription {
  */
 export
 const _root_component_type_list_1_spec_for_SearchRuleDescription: $.ComponentSpec[] = [
-    /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */,
+    /* FIXME: COULD_NOT_COMPILE_COMPONENTS_OF DefinedType */
     new $.ComponentSpec("name", true, $.hasTag(_TagClass.context, 28)),
     new $.ComponentSpec("description", true, $.hasTag(_TagClass.context, 29))
 ];
@@ -196,7 +196,7 @@ function _decode_SearchRuleDescription (el: _Element): SearchRuleDescription {
     let description: OPTIONAL<UnboundedDirectoryString>;
     const _unrecognizedExtensionsList: _Element[] = [];
     const callbacks: $.DecodingMap = {
-        /* COULD_NOT_GENERATE_CALLBACK_FOR_COMPONENTS_OF */,
+        /* COULD_NOT_GENERATE_CALLBACK_FOR_COMPONENTS_OF */
         "name": (_el: _Element): void => { name = $._decode_explicit<UnboundedDirectoryString[]>(() => $._decodeSetOf<UnboundedDirectoryString>(() => _decode_UnboundedDirectoryString))(_el); },
         "description": (_el: _Element): void => { description = $._decode_explicit<UnboundedDirectoryString>(() => _decode_UnboundedDirectoryString)(_el); }
     };

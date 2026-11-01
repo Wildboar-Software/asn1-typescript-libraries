@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_ftOperation } from "../LdapApacheFortress/id-oc-ftOperation.va.mj
 // export { id_oc_ftOperation } from "../LdapApacheFortress/id-oc-ftOperation.va.mjs";
 
 
+import { ftObjId } from "../LdapApacheFortress/ftObjId.oa.mjs";
+import { ftRoles } from "../LdapApacheFortress/ftRoles.oa.mjs";
+import { ftUsers } from "../LdapApacheFortress/ftUsers.oa.mjs";
+import { ftType } from "../LdapApacheFortress/ftType.oa.mjs";
+import { ftPASet } from "../LdapApacheFortress/ftPASet.oa.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftPermName } from "../LdapApacheFortress/ftPermName.oa.mjs";
+import { ftObjNm } from "../LdapApacheFortress/ftObjNm.oa.mjs";
+import { ftOpNm } from "../LdapApacheFortress/ftOpNm.oa.mjs";
 /**
  * @summary ftOperation
  * @description
@@ -111,8 +120,8 @@ const ftOperation: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ftPermName, ftObjNm, ftOpNm, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftObjId, ftRoles, ftUsers, ftType, ftPASet, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftOperation" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Permission Operation Structural Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftOperation /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

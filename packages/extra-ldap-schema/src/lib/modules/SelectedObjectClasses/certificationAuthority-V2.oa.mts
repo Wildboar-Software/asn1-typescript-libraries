@@ -41,7 +41,7 @@ const certificationAuthority_V2: OBJECT_CLASS = {
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ deltaRevocationList, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "certificationAuthority-V2" ] /* OBJECT_FIELD_SETTING */,
-    "&ldapDesc": [ "X.509 certificate authority, version 2" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "X.509 certificate authority, version 2" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_certificationAuthority_V2 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

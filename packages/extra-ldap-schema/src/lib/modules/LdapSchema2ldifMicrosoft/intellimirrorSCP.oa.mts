@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,19 @@ import { id_oc_intellimirrorSCP } from "../LdapSchema2ldifMicrosoft/id-oc-intell
 // export { id_oc_intellimirrorSCP } from "../LdapSchema2ldifMicrosoft/id-oc-intellimirrorSCP.va.mjs";
 
 
+import { netbootMachineFilePath } from "../MSUser/netbootMachineFilePath.oa.mjs";
+import { netbootAllowNewClients } from "../MSUser/netbootAllowNewClients.oa.mjs";
+import { netbootLimitClients } from "../MSUser/netbootLimitClients.oa.mjs";
+import { netbootMaxClients } from "../MSUser/netbootMaxClients.oa.mjs";
+import { netbootCurrentClientCount } from "../MSUser/netbootCurrentClientCount.oa.mjs";
+import { netbootAnswerRequests } from "../MSUser/netbootAnswerRequests.oa.mjs";
+import { netbootAnswerOnlyValidClients } from "../MSUser/netbootAnswerOnlyValidClients.oa.mjs";
+import { netbootNewMachineNamingPolicy } from "../MSUser/netbootNewMachineNamingPolicy.oa.mjs";
+import { netbootNewMachineOU } from "../MSUser/netbootNewMachineOU.oa.mjs";
+import { netbootIntelliMirrorOSes } from "../MSUser/netbootIntelliMirrorOSes.oa.mjs";
+import { netbootTools } from "../MSUser/netbootTools.oa.mjs";
+import { netbootLocallyInstalledOSes } from "../MSUser/netbootLocallyInstalledOSes.oa.mjs";
+import { netbootServer } from "../MSUser/netbootServer.oa.mjs";
 /**
  * @summary intellimirrorSCP
  * @description
@@ -114,7 +127,7 @@ const intellimirrorSCP: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ serviceAdministrationPoint, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ netbootMachineFilePath, netbootAllowNewClients, netbootLimitClients, netbootMaxClients, netbootCurrentClientCount, netbootAnswerRequests, netbootAnswerOnlyValidClients, netbootNewMachineNamingPolicy, netbootNewMachineOU, netbootIntelliMirrorOSes, netbootTools, netbootLocallyInstalledOSes, netbootServer, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "intellimirrorSCP" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_intellimirrorSCP /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

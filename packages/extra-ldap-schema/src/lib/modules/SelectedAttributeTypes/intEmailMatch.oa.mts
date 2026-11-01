@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-import { IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
+import { type IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
 // export { IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
 import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
 // export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";

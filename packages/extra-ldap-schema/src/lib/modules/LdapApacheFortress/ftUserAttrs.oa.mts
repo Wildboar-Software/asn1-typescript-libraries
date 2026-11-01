@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,12 @@ import { id_oc_ftUserAttrs } from "../LdapApacheFortress/id-oc-ftUserAttrs.va.mj
 // export { id_oc_ftUserAttrs } from "../LdapApacheFortress/id-oc-ftUserAttrs.va.mjs";
 
 
+import { ftRC } from "../LdapApacheFortress/ftRC.oa.mjs";
+import { ftRA } from "../LdapApacheFortress/ftRA.oa.mjs";
+import { ftARC } from "../LdapApacheFortress/ftARC.oa.mjs";
+import { ftARA } from "../LdapApacheFortress/ftARA.oa.mjs";
+import { ftCstr } from "../LdapApacheFortress/ftCstr.oa.mjs";
+import { ftSystem } from "../LdapApacheFortress/ftSystem.oa.mjs";
 /**
  * @summary ftUserAttrs
  * @description
@@ -114,7 +120,7 @@ const ftUserAttrs: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ ftId, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftRC, ftRA, ftARC, ftARA, ftCstr, ftSystem, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftUserAttrs" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress User Attribute AUX Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftUserAttrs /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

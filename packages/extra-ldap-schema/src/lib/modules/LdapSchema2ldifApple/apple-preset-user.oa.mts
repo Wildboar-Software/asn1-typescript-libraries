@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,32 @@ import { id_oc_apple_preset_user } from "../LdapSchema2ldifApple/id-oc-apple-pre
 // export { id_oc_apple_preset_user } from "../LdapSchema2ldifApple/id-oc-apple-preset-user.va.mjs";
 
 
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
+import { apple_user_homeurl } from "../LdapSchema2ldifApple/apple-user-homeurl.oa.mjs";
+import { apple_user_homequota } from "../LdapSchema2ldifApple/apple-user-homequota.oa.mjs";
+import { apple_user_homesoftquota } from "../LdapSchema2ldifApple/apple-user-homesoftquota.oa.mjs";
+import { apple_user_mailattribute } from "../LdapSchema2ldifApple/apple-user-mailattribute.oa.mjs";
+import { apple_user_printattribute } from "../LdapSchema2ldifApple/apple-user-printattribute.oa.mjs";
+import { apple_mcxflags } from "../LdapSchema2ldifApple/apple-mcxflags.oa.mjs";
+import { apple_mcxsettings } from "../LdapSchema2ldifApple/apple-mcxsettings.oa.mjs";
+import { apple_user_adminlimits } from "../LdapSchema2ldifApple/apple-user-adminlimits.oa.mjs";
+import { apple_user_passwordpolicy } from "../LdapSchema2ldifApple/apple-user-passwordpolicy.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { apple_user_picture } from "../LdapSchema2ldifApple/apple-user-picture.oa.mjs";
+import { apple_keyword } from "../LdapSchema2ldifApple/apple-keyword.oa.mjs";
+import { loginShell } from "../NIS/loginShell.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { shadowLastChange } from "../NIS/shadowLastChange.oa.mjs";
+import { shadowExpire } from "../NIS/shadowExpire.oa.mjs";
+import { authAuthority } from "../LdapSchema2ldifApple/authAuthority.oa.mjs";
+import { homeDrive } from "../SambaSchema/homeDrive.oa.mjs";
+import { scriptPath } from "../SambaSchema/scriptPath.oa.mjs";
+import { profilePath } from "../SambaSchema/profilePath.oa.mjs";
+import { smbHome } from "../SambaSchema/smbHome.oa.mjs";
+import { apple_preset_user_is_admin } from "../LdapSchema2ldifApple/apple-preset-user-is-admin.oa.mjs";
 /**
  * @summary apple_preset_user
  * @description
@@ -132,7 +158,7 @@ const apple_preset_user: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uid, memberUid, gidNumber, homeDirectory, apple_user_homeurl, apple_user_homequota, apple_user_homesoftquota, apple_user_mailattribute, apple_user_printattribute, apple_mcxflags, apple_mcxsettings, apple_user_adminlimits, apple_user_passwordpolicy, userPassword, apple_user_picture, apple_keyword, loginShell, description, shadowLastChange, shadowExpire, authAuthority, homeDrive, scriptPath, profilePath, smbHome, apple_preset_user_is_admin, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-preset-user" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "preset user" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_preset_user /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

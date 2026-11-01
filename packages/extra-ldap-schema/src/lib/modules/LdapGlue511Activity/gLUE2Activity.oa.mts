@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,11 @@ import { id_oc_gLUE2Activity } from "../LdapGlue511Activity/id-oc-gLUE2Activity.
 // export { id_oc_gLUE2Activity } from "../LdapGlue511Activity/id-oc-gLUE2Activity.va.mjs";
 
 
+import { gLUE2ActivityUserDomainForeignKey } from "../LdapGlue511Activity/gLUE2ActivityUserDomainForeignKey.oa.mjs";
+import { gLUE2ActivityEndpointForeignKey } from "../LdapGlue511Activity/gLUE2ActivityEndpointForeignKey.oa.mjs";
+import { gLUE2ActivityShareForeignKey } from "../LdapGlue511Activity/gLUE2ActivityShareForeignKey.oa.mjs";
+import { gLUE2ActivityResourceForeignKey } from "../LdapGlue511Activity/gLUE2ActivityResourceForeignKey.oa.mjs";
+import { gLUE2ActivityActivityForeignKey } from "../LdapGlue511Activity/gLUE2ActivityActivityForeignKey.oa.mjs";
 /**
  * @summary gLUE2Activity
  * @description
@@ -111,7 +116,7 @@ const gLUE2Activity: OBJECT_CLASS = {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ gLUE2ActivityID, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ActivityUserDomainForeignKey, gLUE2ActivityEndpointForeignKey, gLUE2ActivityShareForeignKey, gLUE2ActivityResourceForeignKey, gLUE2ActivityActivityForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Activity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "An activity is a unit of work managed by a Service and submitted via an Endpoint" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Activity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

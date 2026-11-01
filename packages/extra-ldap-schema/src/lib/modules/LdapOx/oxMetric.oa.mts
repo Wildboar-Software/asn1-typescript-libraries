@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,16 @@ import { id_oc_oxMetric } from "../LdapOx/id-oc-oxMetric.va.mjs";
 // export { id_oc_oxMetric } from "../LdapOx/id-oc-oxMetric.va.mjs";
 
 
+import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
+import { oxStartDate } from "../LdapOx/oxStartDate.oa.mjs";
+import { oxEndDate } from "../LdapOx/oxEndDate.oa.mjs";
+import { oxApplicationType } from "../LdapOx/oxApplicationType.oa.mjs";
+import { oxMetricType } from "../LdapOx/oxMetricType.oa.mjs";
+import { creationDate } from "../LdapOx/creationDate.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { oxData } from "../LdapOx/oxData.oa.mjs";
+import { oxHost } from "../LdapOx/oxHost.oa.mjs";
 /**
  * @summary oxMetric
  * @description
@@ -115,7 +125,7 @@ const oxMetric: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uniqueIdentifier, oxStartDate, oxEndDate, oxApplicationType, oxMetricType, creationDate, del, exp, oxData, oxHost, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxMetric" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxMetric /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

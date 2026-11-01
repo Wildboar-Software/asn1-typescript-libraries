@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_applicationSettings } from "../LdapSchema2ldifMicrosoft/id-oc-app
 // export { id_oc_applicationSettings } from "../LdapSchema2ldifMicrosoft/id-oc-applicationSettings.va.mjs";
 
 
+import { applicationName } from "../MSUser/applicationName.oa.mjs";
+import { notificationList } from "../MSUser/notificationList.oa.mjs";
 /**
  * @summary applicationSettings
  * @description
@@ -105,7 +107,7 @@ const applicationSettings: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ applicationName, notificationList, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "applicationSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_applicationSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

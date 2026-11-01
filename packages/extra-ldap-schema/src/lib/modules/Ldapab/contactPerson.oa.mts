@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_contactPerson } from "../Ldapab/id-oc-contactPerson.va.mjs";
 // export { id_oc_contactPerson } from "../Ldapab/id-oc-contactPerson.va.mjs";
 
 
+import { anniversary } from "../Ldapab/anniversary.oa.mjs";
+import { marker } from "../Ldapab/marker.oa.mjs";
+import { birthday } from "../Ldapab/birthday.oa.mjs";
+import { custom1 } from "../Ldapab/custom1.oa.mjs";
+import { custom2 } from "../Ldapab/custom2.oa.mjs";
+import { custom3 } from "../Ldapab/custom3.oa.mjs";
+import { custom4 } from "../Ldapab/custom4.oa.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 /**
  * @summary contactPerson
  * @description
@@ -112,7 +120,7 @@ const contactPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ anniversary, marker, birthday, custom1, custom2, custom3, custom4, countryName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "contactPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Contact - Addressbook entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_contactPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

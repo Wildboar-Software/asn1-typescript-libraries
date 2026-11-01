@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mj
 // export { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
 
 
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraPrefMailSignature } from "../LdapZimbra/zimbraPrefMailSignature.oa.mjs";
+import { zimbraPrefMailSignatureContactId } from "../LdapZimbra/zimbraPrefMailSignatureContactId.oa.mjs";
+import { zimbraPrefMailSignatureHTML } from "../LdapZimbra/zimbraPrefMailSignatureHTML.oa.mjs";
+import { zimbraSignatureId } from "../LdapZimbra/zimbraSignatureId.oa.mjs";
+import { zimbraSignatureName } from "../LdapZimbra/zimbraSignatureName.oa.mjs";
 /**
  * @summary zimbraSignature
  * @description
@@ -108,8 +114,8 @@ const zimbraSignature: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraSignatureId, zimbraSignatureName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraCreateTimestamp, zimbraPrefMailSignature, zimbraPrefMailSignatureContactId, zimbraPrefMailSignatureHTML, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraSignature" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Account Email Signature information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraSignature /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,12 @@ import { id_oc_gLUE2ToComputingService } from "../LdapGlue709ToComputingService/
 // export { id_oc_gLUE2ToComputingService } from "../LdapGlue709ToComputingService/id-oc-gLUE2ToComputingService.va.mjs";
 
 
+import { gLUE2ToComputingServiceNetworkInfo } from "../LdapGlue709ToComputingService/gLUE2ToComputingServiceNetworkInfo.oa.mjs";
+import { gLUE2ToComputingServiceBandwidth } from "../LdapGlue709ToComputingService/gLUE2ToComputingServiceBandwidth.oa.mjs";
+import { gLUE2ToComputingServiceStorageAccessProtocolForeignKey } from "../LdapGlue709ToComputingService/gLUE2ToComputingServiceStorageAccessProtocolForeignKey.oa.mjs";
+import { gLUE2ToComputingServiceID } from "../LdapGlue709ToComputingService/gLUE2ToComputingServiceID.oa.mjs";
+import { gLUE2ToComputingServiceComputingServiceForeignKey } from "../LdapGlue709ToComputingService/gLUE2ToComputingServiceComputingServiceForeignKey.oa.mjs";
+import { gLUE2ToComputingServiceStorageServiceForeignKey } from "../LdapGlue709ToComputingService/gLUE2ToComputingServiceStorageServiceForeignKey.oa.mjs";
 /**
  * @summary gLUE2ToComputingService
  * @description
@@ -108,8 +114,8 @@ const gLUE2ToComputingService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ToComputingServiceID, gLUE2ToComputingServiceComputingServiceForeignKey, gLUE2ToComputingServiceStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ToComputingServiceNetworkInfo, gLUE2ToComputingServiceBandwidth, gLUE2ToComputingServiceStorageAccessProtocolForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2ToComputingService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Description of the network link quality of a storage service to a computing service" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2ToComputingService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

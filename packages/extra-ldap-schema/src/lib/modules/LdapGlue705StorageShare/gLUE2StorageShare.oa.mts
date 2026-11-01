@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,19 @@ import { id_oc_gLUE2StorageShare } from "../LdapGlue705StorageShare/id-oc-gLUE2S
 // export { id_oc_gLUE2StorageShare } from "../LdapGlue705StorageShare/id-oc-gLUE2StorageShare.va.mjs";
 
 
+import { gLUE2StorageSharePath } from "../LdapGlue705StorageShare/gLUE2StorageSharePath.oa.mjs";
+import { gLUE2StorageShareAccessMode } from "../LdapGlue705StorageShare/gLUE2StorageShareAccessMode.oa.mjs";
+import { gLUE2StorageShareRetentionPolicy } from "../LdapGlue705StorageShare/gLUE2StorageShareRetentionPolicy.oa.mjs";
+import { gLUE2StorageShareExpirationMode } from "../LdapGlue705StorageShare/gLUE2StorageShareExpirationMode.oa.mjs";
+import { gLUE2StorageShareDefaultLifeTime } from "../LdapGlue705StorageShare/gLUE2StorageShareDefaultLifeTime.oa.mjs";
+import { gLUE2StorageShareMaximumLifeTime } from "../LdapGlue705StorageShare/gLUE2StorageShareMaximumLifeTime.oa.mjs";
+import { gLUE2StorageShareTag } from "../LdapGlue705StorageShare/gLUE2StorageShareTag.oa.mjs";
+import { gLUE2StorageShareStorageEndpointForeignKey } from "../LdapGlue705StorageShare/gLUE2StorageShareStorageEndpointForeignKey.oa.mjs";
+import { gLUE2StorageShareDataStoreForeignKey } from "../LdapGlue705StorageShare/gLUE2StorageShareDataStoreForeignKey.oa.mjs";
+import { gLUE2StorageShareStorageServiceForeignKey } from "../LdapGlue705StorageShare/gLUE2StorageShareStorageServiceForeignKey.oa.mjs";
+import { gLUE2StorageShareServingState } from "../LdapGlue705StorageShare/gLUE2StorageShareServingState.oa.mjs";
+import { gLUE2StorageShareSharingID } from "../LdapGlue705StorageShare/gLUE2StorageShareSharingID.oa.mjs";
+import { gLUE2StorageShareAccessLatency } from "../LdapGlue705StorageShare/gLUE2StorageShareAccessLatency.oa.mjs";
 /**
  * @summary gLUE2StorageShare
  * @description
@@ -115,8 +128,8 @@ const gLUE2StorageShare: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Share, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2StorageShareServingState, gLUE2StorageShareSharingID, gLUE2StorageShareAccessLatency, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2StorageSharePath, gLUE2StorageShareAccessMode, gLUE2StorageShareRetentionPolicy, gLUE2StorageShareExpirationMode, gLUE2StorageShareDefaultLifeTime, gLUE2StorageShareMaximumLifeTime, gLUE2StorageShareTag, gLUE2StorageShareStorageEndpointForeignKey, gLUE2StorageShareDataStoreForeignKey, gLUE2StorageShareStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2StorageShare" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A utilization target for a set of storage resources defined by a set of configuration parameters and characterized by status information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2StorageShare /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

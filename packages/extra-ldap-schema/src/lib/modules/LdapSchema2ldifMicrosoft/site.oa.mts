@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,16 @@ import { id_oc_site } from "../LdapSchema2ldifMicrosoft/id-oc-site.va.mjs";
 // export { id_oc_site } from "../LdapSchema2ldifMicrosoft/id-oc-site.va.mjs";
 
 
+import { location } from "../MSUser/location.oa.mjs";
+import { notificationList } from "../MSUser/notificationList.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { gPLink } from "../MSUser/gPLink.oa.mjs";
+import { gPOptions } from "../MSUser/gPOptions.oa.mjs";
+import { mSMQSiteID } from "../MSUser/mSMQSiteID.oa.mjs";
+import { mSMQNt4Stub } from "../MSUser/mSMQNt4Stub.oa.mjs";
+import { mSMQSiteForeign } from "../MSUser/mSMQSiteForeign.oa.mjs";
+import { mSMQInterval1 } from "../MSUser/mSMQInterval1.oa.mjs";
+import { mSMQInterval2 } from "../MSUser/mSMQInterval2.oa.mjs";
 /**
  * @summary site
  * @description
@@ -111,7 +121,7 @@ const site: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ location, notificationList, managedBy, gPLink, gPOptions, mSMQSiteID, mSMQNt4Stub, mSMQSiteForeign, mSMQInterval1, mSMQInterval2, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "site" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_site /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

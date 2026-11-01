@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { DomainName, _decode_DomainName, _encode_DomainName } from "../SelectedAttributeTypes/DomainName.ta.mjs";
+import { type DomainName, _decode_DomainName, _encode_DomainName } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 // export { DomainName, _decode_DomainName, _encode_DomainName } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 import { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.mjs";
 // export { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.mjs";

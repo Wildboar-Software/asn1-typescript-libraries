@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,11 @@ import { id_oc_tf_am_devops } from "../LdapTrustFabric/id-oc-tf-am-devops.va.mjs
 // export { id_oc_tf_am_devops } from "../LdapTrustFabric/id-oc-tf-am-devops.va.mjs";
 
 
+import { tf_developers } from "../LdapTrustFabric/tf-developers.oa.mjs";
+import { tf_maintainers } from "../LdapTrustFabric/tf-maintainers.oa.mjs";
+import { tf_rel_mangers } from "../LdapTrustFabric/tf-rel-mangers.oa.mjs";
+import { tf_approvers } from "../LdapTrustFabric/tf-approvers.oa.mjs";
+import { tf_owners } from "../LdapTrustFabric/tf-owners.oa.mjs";
 /**
  * @summary tf_am_devops
  * @description
@@ -108,7 +113,7 @@ const tf_am_devops: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tf_developers, tf_maintainers, tf_rel_mangers, tf_approvers, tf_owners, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tf-am-devops" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tf_am_devops /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

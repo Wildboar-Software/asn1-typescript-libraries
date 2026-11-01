@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,9 @@ import { id_oc_isoTagType } from "../SelectedObjectClasses/id-oc-isoTagType.va.m
 // export { id_oc_isoTagType } from "../SelectedObjectClasses/id-oc-isoTagType.va.mjs";
 
 
+import { tagOid } from "../SelectedAttributeTypes/tagOid.oa.mjs";
+import { tagAfi } from "../SelectedAttributeTypes/tagAfi.oa.mjs";
+import { uiiFormat } from "../SelectedAttributeTypes/uiiFormat.oa.mjs";
 /**
  * @summary isoTagType
  * @description
@@ -106,7 +109,7 @@ const isoTagType: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tagOid, tagAfi, uiiFormat, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "isoTagType" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_isoTagType /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

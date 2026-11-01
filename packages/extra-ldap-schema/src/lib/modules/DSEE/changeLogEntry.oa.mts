@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { nsdsoc } from "../DSEE/nsdsoc.va.mjs";
 // export { nsdsoc } from "../DSEE/nsdsoc.va.mjs";
 
 
+import { changes } from "../DSEE/changes.oa.mjs";
+import { newRdn } from "../DSEE/newRdn.oa.mjs";
+import { deleteOldRdn } from "../DSEE/deleteOldRdn.oa.mjs";
+import { newSuperior } from "../DSEE/newSuperior.oa.mjs";
+import { targetDn } from "../DSEE/targetDn.oa.mjs";
+import { changeTime } from "../DSEE/changeTime.oa.mjs";
+import { changeNumber } from "../DSEE/changeNumber.oa.mjs";
+import { changeType } from "../DSEE/changeType.oa.mjs";
 /**
  * @summary changeLogEntry
  * @description
@@ -106,8 +114,8 @@ const changeLogEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ targetDn, changeTime, changeNumber, changeType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ changes, newRdn, deleteOldRdn, newSuperior, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "changeLogEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], nsdsoc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

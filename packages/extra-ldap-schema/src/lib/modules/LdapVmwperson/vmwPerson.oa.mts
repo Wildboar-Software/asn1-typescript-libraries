@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -74,6 +74,17 @@ import { id_oc_vmwPerson } from "../LdapVmwperson/id-oc-vmwPerson.va.mjs";
 // export { id_oc_vmwPerson } from "../LdapVmwperson/id-oc-vmwPerson.va.mjs";
 
 
+import { jiveID } from "../LdapVmwperson/jiveID.oa.mjs";
+import { userStatus } from "../LdapVmwperson/userStatus.oa.mjs";
+import { userType } from "../LdapVmwperson/userType.oa.mjs";
+import { createdBy } from "../LdapVmwperson/createdBy.oa.mjs";
+import { modifiedBy } from "../LdapVmwperson/modifiedBy.oa.mjs";
+import { customernumber } from "../LdapVmwperson/customernumber.oa.mjs";
+import { vmwEnrollmentFlag } from "../LdapVmwperson/vmwEnrollmentFlag.oa.mjs";
+import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
+import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
+import { person } from "../SelectedObjectClasses/person.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
 /**
  * @summary vmwPerson
  * @description
@@ -110,9 +121,9 @@ const vmwPerson: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ inetOrgPerson, organizationalPerson, person, top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ jiveID, userStatus, userType, createdBy, modifiedBy, customernumber, vmwEnrollmentFlag, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "vmwPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "VMware defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_vmwPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

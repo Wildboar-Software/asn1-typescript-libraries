@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,15 @@ import { id_oc_apple_service } from "../LdapSchema2ldifApple/id-oc-apple-service
 // export { id_oc_apple_service } from "../LdapSchema2ldifApple/id-oc-apple-service.va.mjs";
 
 
+import { ipHostNumber } from "../NIS/ipHostNumber.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { apple_service_location } from "../LdapSchema2ldifApple/apple-service-location.oa.mjs";
+import { apple_service_url } from "../LdapSchema2ldifApple/apple-service-url.oa.mjs";
+import { apple_service_port } from "../LdapSchema2ldifApple/apple-service-port.oa.mjs";
+import { apple_dnsname } from "../LdapSchema2ldifApple/apple-dnsname.oa.mjs";
+import { apple_keyword } from "../LdapSchema2ldifApple/apple-keyword.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { apple_service_type } from "../LdapSchema2ldifApple/apple-service-type.oa.mjs";
 /**
  * @summary apple_service
  * @description
@@ -110,8 +119,8 @@ const apple_service: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, apple_service_type, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ipHostNumber, description, apple_service_location, apple_service_url, apple_service_port, apple_dnsname, apple_keyword, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-service" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_service /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

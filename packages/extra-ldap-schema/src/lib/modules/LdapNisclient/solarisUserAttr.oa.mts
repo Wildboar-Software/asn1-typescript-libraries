@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_solarisUserAttr } from "../LdapNisclient/id-oc-solarisUserAttr.va
 // export { id_oc_solarisUserAttr } from "../LdapNisclient/id-oc-solarisUserAttr.va.mjs";
 
 
+import { solarisAttrKeyValue } from "../LdapNisclient/solarisAttrKeyValue.oa.mjs";
+import { solarisAttrReserved1 } from "../LdapNisclient/solarisAttrReserved1.oa.mjs";
+import { solarisAttrReserved2 } from "../LdapNisclient/solarisAttrReserved2.oa.mjs";
+import { solarisUserQualifier } from "../LdapNisclient/solarisUserQualifier.oa.mjs";
 /**
  * @summary solarisUserAttr
  * @description
@@ -105,7 +109,7 @@ const solarisUserAttr: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ solarisAttrKeyValue, solarisAttrReserved1, solarisAttrReserved2, solarisUserQualifier, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "SolarisUserAttr" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_solarisUserAttr /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

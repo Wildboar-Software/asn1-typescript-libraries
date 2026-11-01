@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_cRLDistributionPoint } from "../AuthenticationFramework/id-oc-cRL
 // export { id_oc_cRLDistributionPoint } from "../AuthenticationFramework/id-oc-cRLDistributionPoint.va.mjs";
 
 
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
+import { eepkCertificateRevocationList } from "../AuthenticationFramework/eepkCertificateRevocationList.oa.mjs";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
+import { deltaRevocationList } from "../AuthenticationFramework/deltaRevocationList.oa.mjs";
 /**
  * @summary cRLDistributionPoint
  * @description
@@ -112,7 +116,7 @@ const cRLDistributionPoint: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ certificateRevocationList, eepkCertificateRevocationList, authorityRevocationList, deltaRevocationList, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cRLDistributionPoint" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "X.509 CRL distribution point" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cRLDistributionPoint /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

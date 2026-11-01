@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_gLUE2StorageAccessProtocol } from "../LdapGlue703StorageAccessPro
 // export { id_oc_gLUE2StorageAccessProtocol } from "../LdapGlue703StorageAccessProtocol/id-oc-gLUE2StorageAccessProtocol.va.mjs";
 
 
+import { gLUE2StorageAccessProtocolID } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolID.oa.mjs";
+import { gLUE2StorageAccessProtocolType } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolType.oa.mjs";
+import { gLUE2StorageAccessProtocolVersion } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolVersion.oa.mjs";
+import { gLUE2StorageAccessProtocolStorageServiceForeignKey } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolStorageServiceForeignKey.oa.mjs";
 /**
  * @summary gLUE2StorageAccessProtocol
  * @description
@@ -109,7 +113,7 @@ const gLUE2StorageAccessProtocol: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2StorageAccessProtocolID, gLUE2StorageAccessProtocolType, gLUE2StorageAccessProtocolVersion, gLUE2StorageAccessProtocolStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gLUE2StorageAccessProtocolMaxStreams, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2StorageAccessProtocol" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A type of protocol available to access the available storage capacities" /* OBJECT_FIELD_SETTING */,

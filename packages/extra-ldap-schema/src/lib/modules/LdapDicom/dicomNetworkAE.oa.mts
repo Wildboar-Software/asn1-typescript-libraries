@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,17 @@ import { id_oc_dicomNetworkAE } from "../LdapDicom/id-oc-dicomNetworkAE.va.mjs";
 // export { id_oc_dicomNetworkAE } from "../LdapDicom/id-oc-dicomNetworkAE.va.mjs";
 
 
+import { dicomDescription } from "../LdapDicom/dicomDescription.oa.mjs";
+import { dicomVendorData } from "../LdapDicom/dicomVendorData.oa.mjs";
+import { dicomApplicationCluster } from "../LdapDicom/dicomApplicationCluster.oa.mjs";
+import { dicomPreferredCalledAETitle } from "../LdapDicom/dicomPreferredCalledAETitle.oa.mjs";
+import { dicomPreferredCallingAETitle } from "../LdapDicom/dicomPreferredCallingAETitle.oa.mjs";
+import { dicomSupportedCharacterSet } from "../LdapDicom/dicomSupportedCharacterSet.oa.mjs";
+import { dicomInstalled } from "../LdapDicom/dicomInstalled.oa.mjs";
+import { dicomAETitle } from "../LdapDicom/dicomAETitle.oa.mjs";
+import { dicomNetworkConnectionReference } from "../LdapDicom/dicomNetworkConnectionReference.oa.mjs";
+import { dicomAssociationInitiator } from "../LdapDicom/dicomAssociationInitiator.oa.mjs";
+import { dicomAssociationAcceptor } from "../LdapDicom/dicomAssociationAcceptor.oa.mjs";
 /**
  * @summary dicomNetworkAE
  * @description
@@ -113,8 +124,8 @@ const dicomNetworkAE: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ dicomAETitle, dicomNetworkConnectionReference, dicomAssociationInitiator, dicomAssociationAcceptor, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dicomDescription, dicomVendorData, dicomApplicationCluster, dicomPreferredCalledAETitle, dicomPreferredCallingAETitle, dicomSupportedCharacterSet, dicomInstalled, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dicomNetworkAE" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DICOM Network AE related information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dicomNetworkAE /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

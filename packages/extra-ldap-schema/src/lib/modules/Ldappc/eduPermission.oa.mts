@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_eduPermission } from "../Ldappc/id-oc-eduPermission.va.mjs";
 // export { id_oc_eduPermission } from "../Ldappc/id-oc-eduPermission.va.mjs";
 
 
+import { eduPermissionScopeId } from "../Ldappc/eduPermissionScopeId.oa.mjs";
+import { eduPermissionScopeName } from "../Ldappc/eduPermissionScopeName.oa.mjs";
+import { eduPermissionLimit } from "../Ldappc/eduPermissionLimit.oa.mjs";
+import { eduPermissionLimitId } from "../Ldappc/eduPermissionLimitId.oa.mjs";
+import { eduPermissionSubsystemId } from "../Ldappc/eduPermissionSubsystemId.oa.mjs";
+import { eduPermissionFunctionId } from "../Ldappc/eduPermissionFunctionId.oa.mjs";
+import { eduPermissionId } from "../Ldappc/eduPermissionId.oa.mjs";
 /**
  * @summary eduPermission
  * @description
@@ -108,8 +115,8 @@ const eduPermission: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ eduPermissionSubsystemId, eduPermissionFunctionId, eduPermissionId, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ eduPermissionScopeId, eduPermissionScopeName, eduPermissionLimit, eduPermissionLimitId, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "eduPermission" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_eduPermission /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

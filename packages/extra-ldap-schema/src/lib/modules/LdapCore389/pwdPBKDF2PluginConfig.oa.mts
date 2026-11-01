@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,8 @@ import { id_oc_pwdPBKDF2PluginConfig } from "../LdapCore389/id-oc-pwdPBKDF2Plugi
 // export { id_oc_pwdPBKDF2PluginConfig } from "../LdapCore389/id-oc-pwdPBKDF2PluginConfig.va.mjs";
 
 
+import { nsslapd_pwdPBKDF2NumIterations } from "../LdapCore389/nsslapd-pwdPBKDF2NumIterations.oa.mjs";
+import { nsslapd_pwdPBKDF2AcceptMaxIterations } from "../LdapCore389/nsslapd-pwdPBKDF2AcceptMaxIterations.oa.mjs";
 /**
  * @summary pwdPBKDF2PluginConfig
  * @description
@@ -104,7 +106,7 @@ const pwdPBKDF2PluginConfig: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsslapd_pwdPBKDF2NumIterations, nsslapd_pwdPBKDF2AcceptMaxIterations, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pwdPBKDF2PluginConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "PBKDF2 Password Storage Plugin configuration" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pwdPBKDF2PluginConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

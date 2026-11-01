@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,8 @@ import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { oncRpcNumber } from "../NIS/oncRpcNumber.oa.mjs";
 /**
  * @summary oncRpc
  * @description
@@ -109,7 +111,7 @@ const oncRpc: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, oncRpcNumber, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oncRpc" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of an ONC/RPC binding" /* OBJECT_FIELD_SETTING */,

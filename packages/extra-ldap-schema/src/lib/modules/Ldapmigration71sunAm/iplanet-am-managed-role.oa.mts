@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_iplanet_am_managed_role } from "../Ldapmigration71sunAm/id-oc-ipl
 // export { id_oc_iplanet_am_managed_role } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-role.va.mjs";
 
 
+import { iplanet_am_role_type } from "../Ldapmigration71sunAm/iplanet-am-role-type.oa.mjs";
+import { iplanet_am_role_description } from "../Ldapmigration71sunAm/iplanet-am-role-description.oa.mjs";
+import { iplanet_am_role_aci_description } from "../Ldapmigration71sunAm/iplanet-am-role-aci-description.oa.mjs";
+import { iplanet_am_role_aci_list } from "../Ldapmigration71sunAm/iplanet-am-role-aci-list.oa.mjs";
+import { iplanet_am_role_service_options } from "../Ldapmigration71sunAm/iplanet-am-role-service-options.oa.mjs";
+import { iplanet_am_role_any_options } from "../Ldapmigration71sunAm/iplanet-am-role-any-options.oa.mjs";
+import { iplanet_am_role_managed_container_dn } from "../Ldapmigration71sunAm/iplanet-am-role-managed-container-dn.oa.mjs";
+import { iplanet_am_role_display_options } from "../Ldapmigration71sunAm/iplanet-am-role-display-options.oa.mjs";
 /**
  * @summary iplanet_am_managed_role
  * @description
@@ -112,7 +120,7 @@ const iplanet_am_managed_role: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanet_am_role_type, iplanet_am_role_description, iplanet_am_role_aci_description, iplanet_am_role_aci_list, iplanet_am_role_service_options, iplanet_am_role_any_options, iplanet_am_role_managed_container_dn, iplanet_am_role_display_options, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-managed-role" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Managed Role OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_managed_role /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

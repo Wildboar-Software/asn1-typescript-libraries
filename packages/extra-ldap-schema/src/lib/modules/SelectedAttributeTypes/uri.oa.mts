@@ -10,6 +10,7 @@ import { id_at_uri } from "../SelectedAttributeTypes/id-at-uri.va.mjs";
 // export { id_at_uri } from "../SelectedAttributeTypes/id-at-uri.va.mjs";
 
 
+import { type URI, _decode_URI, _encode_URI } from "../SelectedAttributeTypes/URI.ta.mjs";
 /**
  * @summary uri
  * @description

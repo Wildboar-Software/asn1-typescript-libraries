@@ -8,6 +8,7 @@ import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
 // export { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
 
 
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 /**
  * @summary admissionNonConsiderationAttribute
  * @description

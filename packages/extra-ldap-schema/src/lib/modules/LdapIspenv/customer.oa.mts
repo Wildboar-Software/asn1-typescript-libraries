@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,14 @@ import { id_oc_customer } from "../LdapIspenv/id-oc-customer.va.mjs";
 // export { id_oc_customer } from "../LdapIspenv/id-oc-customer.va.mjs";
 
 
+import { custID } from "../LdapIspenv/custID.oa.mjs";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
+import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 /**
  * @summary customer
  * @description
@@ -114,7 +122,7 @@ const customer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ custID, postalAddress, telephoneNumber, facsimileTelephoneNumber, streetAddress, postalCode, description, mail, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "customer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Customer information (container class)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_customer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

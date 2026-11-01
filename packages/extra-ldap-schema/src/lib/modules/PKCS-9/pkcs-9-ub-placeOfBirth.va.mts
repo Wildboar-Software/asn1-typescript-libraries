@@ -5,6 +5,7 @@ import {
 
 
 
+import { ub_name } from "../UpperBounds/ub-name.va.mjs";
 /**
  * @summary pkcs_9_ub_placeOfBirth
  * @description

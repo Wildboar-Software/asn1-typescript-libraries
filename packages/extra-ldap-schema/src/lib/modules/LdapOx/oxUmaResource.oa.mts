@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,22 @@ import { id_oc_oxUmaResource } from "../LdapOx/id-oc-oxUmaResource.va.mjs";
 // export { id_oc_oxUmaResource } from "../LdapOx/id-oc-oxUmaResource.va.mjs";
 
 
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { oxAssociatedClient } from "../LdapOx/oxAssociatedClient.oa.mjs";
+import { oxAuthUmaScope } from "../LdapOx/oxAuthUmaScope.oa.mjs";
+import { oxFaviconImage } from "../LdapOx/oxFaviconImage.oa.mjs";
+import { oxGroup } from "../LdapOx/oxGroup.oa.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { oxResource } from "../LdapOx/oxResource.oa.mjs";
+import { oxRevision } from "../LdapOx/oxRevision.oa.mjs";
+import { oxType } from "../LdapOx/oxType.oa.mjs";
+import { oxScopeExpression } from "../LdapOx/oxScopeExpression.oa.mjs";
+import { iat } from "../LdapOx/iat.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 /**
  * @summary oxUmaResource
  * @description
@@ -121,7 +137,7 @@ const oxUmaResource: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ displayName, inum, owner, oxAssociatedClient, oxAuthUmaScope, oxFaviconImage, oxGroup, oxId, oxResource, oxRevision, oxType, oxScopeExpression, iat, exp, del, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxUmaResource" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxUmaResource /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

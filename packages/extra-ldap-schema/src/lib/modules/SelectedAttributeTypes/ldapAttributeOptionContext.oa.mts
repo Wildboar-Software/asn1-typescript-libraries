@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { AttributeOptionList, _decode_AttributeOptionList, _encode_AttributeOptionList } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
+import { type AttributeOptionList, _decode_AttributeOptionList, _encode_AttributeOptionList } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
 // export { AttributeOptionList, _decode_AttributeOptionList, _encode_AttributeOptionList } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";
 import { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
 // export { id_avc_ldapAttributeOption } from "../SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";

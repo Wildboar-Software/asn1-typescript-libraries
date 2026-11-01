@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,10 @@ import { id_oc_controlAccessRight } from "../LdapSchema2ldifMicrosoft/id-oc-cont
 // export { id_oc_controlAccessRight } from "../LdapSchema2ldifMicrosoft/id-oc-controlAccessRight.va.mjs";
 
 
+import { rightsGuid } from "../MSUser/rightsGuid.oa.mjs";
+import { appliesTo } from "../MSUser/appliesTo.oa.mjs";
+import { localizationDisplayId } from "../MSUser/localizationDisplayId.oa.mjs";
+import { validAccesses } from "../MSUser/validAccesses.oa.mjs";
 /**
  * @summary controlAccessRight
  * @description
@@ -105,7 +109,7 @@ const controlAccessRight: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rightsGuid, appliesTo, localizationDisplayId, validAccesses, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "controlAccessRight" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_controlAccessRight /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

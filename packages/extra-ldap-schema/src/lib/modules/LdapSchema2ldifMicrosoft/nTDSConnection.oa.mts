@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,13 @@ import { id_oc_nTDSConnection } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSConn
 // export { id_oc_nTDSConnection } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSConnection.va.mjs";
 
 
+import { generatedConnection } from "../MSUser/generatedConnection.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { transportType } from "../MSUser/transportType.oa.mjs";
+import { mS_DS_ReplicatesNCReason } from "../MSUser/mS-DS-ReplicatesNCReason.oa.mjs";
+import { enabledConnection } from "../MSUser/enabledConnection.oa.mjs";
+import { fromServer } from "../MSUser/fromServer.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
 /**
  * @summary nTDSConnection
  * @description
@@ -108,8 +115,8 @@ const nTDSConnection: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ enabledConnection, fromServer, options, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ generatedConnection, schedule, transportType, mS_DS_ReplicatesNCReason, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTDSConnection" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTDSConnection /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

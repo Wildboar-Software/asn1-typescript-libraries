@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,16 @@ import { id_oc_dcExternalMailAccount } from "../LdapDovecot/id-oc-dcExternalMail
 // export { id_oc_dcExternalMailAccount } from "../LdapDovecot/id-oc-dcExternalMailAccount.va.mjs";
 
 
+import { dcSMTPServer } from "../LdapDovecot/dcSMTPServer.oa.mjs";
+import { dcSMTPLogin } from "../LdapDovecot/dcSMTPLogin.oa.mjs";
+import { dcSMTPPassword } from "../LdapDovecot/dcSMTPPassword.oa.mjs";
+import { dcPOP3Server } from "../LdapDovecot/dcPOP3Server.oa.mjs";
+import { dcPOP3Login } from "../LdapDovecot/dcPOP3Login.oa.mjs";
+import { dcPOP3Password } from "../LdapDovecot/dcPOP3Password.oa.mjs";
+import { dcMailQuota } from "../LdapDovecot/dcMailQuota.oa.mjs";
+import { dcMailSizeMax } from "../LdapDovecot/dcMailSizeMax.oa.mjs";
+import { dcSubMailAddress } from "../LdapDovecot/dcSubMailAddress.oa.mjs";
+import { dcAccountStatus } from "../LdapDovecot/dcAccountStatus.oa.mjs";
 /**
  * @summary dcExternalMailAccount
  * @description
@@ -112,8 +122,8 @@ const dcExternalMailAccount: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ dcSubMailAddress, dcAccountStatus, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dcSMTPServer, dcSMTPLogin, dcSMTPPassword, dcPOP3Server, dcPOP3Login, dcPOP3Password, dcMailQuota, dcMailSizeMax, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dcExternalMailAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Dovecot-LDAP external mail account" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dcExternalMailAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -3,7 +3,7 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CrossCertificates, _decode_CrossCertificates, _encode_CrossCertificates } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
+import { type CrossCertificates, _decode_CrossCertificates, _encode_CrossCertificates } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
 // export { CrossCertificates, _decode_CrossCertificates, _encode_CrossCertificates } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
 
 

@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,10 @@ import { id_oc_vlvSearch } from "../LdapCommon389/id-oc-vlvSearch.va.mjs";
 // export { id_oc_vlvSearch } from "../LdapCommon389/id-oc-vlvSearch.va.mjs";
 
 
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { vlvBase } from "../LdapCommon389/vlvBase.oa.mjs";
+import { vlvScope } from "../LdapCommon389/vlvScope.oa.mjs";
+import { vlvFilter } from "../LdapCommon389/vlvFilter.oa.mjs";
 /**
  * @summary vlvSearch
  * @description
@@ -109,7 +113,7 @@ const vlvSearch: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, vlvBase, vlvScope, vlvFilter, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ multiLineDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "vlvSearch" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,

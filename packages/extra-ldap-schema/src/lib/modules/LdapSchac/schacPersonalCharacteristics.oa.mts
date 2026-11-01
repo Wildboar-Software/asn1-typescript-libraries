@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,14 @@ import { id_oc_schacPersonalCharacteristics } from "../LdapSchac/id-oc-schacPers
 // export { id_oc_schacPersonalCharacteristics } from "../LdapSchac/id-oc-schacPersonalCharacteristics.va.mjs";
 
 
+import { schacMotherTongue } from "../LdapSchac/schacMotherTongue.oa.mjs";
+import { schacGender } from "../LdapSchac/schacGender.oa.mjs";
+import { schacDateOfBirth } from "../LdapSchac/schacDateOfBirth.oa.mjs";
+import { schacPlaceOfBirth } from "../LdapSchac/schacPlaceOfBirth.oa.mjs";
+import { schacCountryOfCitizenship } from "../LdapSchac/schacCountryOfCitizenship.oa.mjs";
+import { schacSn1 } from "../LdapSchac/schacSn1.oa.mjs";
+import { schacSn2 } from "../LdapSchac/schacSn2.oa.mjs";
+import { schacPersonalTitle } from "../LdapSchac/schacPersonalTitle.oa.mjs";
 /**
  * @summary schacPersonalCharacteristics
  * @description
@@ -112,7 +120,7 @@ const schacPersonalCharacteristics: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schacMotherTongue, schacGender, schacDateOfBirth, schacPlaceOfBirth, schacCountryOfCitizenship, schacSn1, schacSn2, schacPersonalTitle, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "schacPersonalCharacteristics" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Personal characteristics describe the individual person represented by the entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_schacPersonalCharacteristics /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

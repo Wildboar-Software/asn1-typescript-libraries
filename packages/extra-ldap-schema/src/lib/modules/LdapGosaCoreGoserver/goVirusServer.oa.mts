@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -78,6 +78,17 @@ import { id_oc_goVirusServer } from "../LdapGosaCoreGoserver/id-oc-goVirusServer
 // export { id_oc_goVirusServer } from "../LdapGosaCoreGoserver/id-oc-goVirusServer.va.mjs";
 
 
+import { avMaxThreads } from "../LdapGosaCoreGoserver/avMaxThreads.oa.mjs";
+import { avMaxDirectoryRecursions } from "../LdapGosaCoreGoserver/avMaxDirectoryRecursions.oa.mjs";
+import { avUser } from "../LdapGosaCoreGoserver/avUser.oa.mjs";
+import { avFlags } from "../LdapGosaCoreGoserver/avFlags.oa.mjs";
+import { avArchiveMaxFileSize } from "../LdapGosaCoreGoserver/avArchiveMaxFileSize.oa.mjs";
+import { avArchiveMaxRecursion } from "../LdapGosaCoreGoserver/avArchiveMaxRecursion.oa.mjs";
+import { avArchiveMaxCompressionRatio } from "../LdapGosaCoreGoserver/avArchiveMaxCompressionRatio.oa.mjs";
+import { avDatabaseMirror } from "../LdapGosaCoreGoserver/avDatabaseMirror.oa.mjs";
+import { avChecksPerDay } from "../LdapGosaCoreGoserver/avChecksPerDay.oa.mjs";
+import { avHttpProxyURL } from "../LdapGosaCoreGoserver/avHttpProxyURL.oa.mjs";
+import { avStatus } from "../LdapGosaCoreGoserver/avStatus.oa.mjs";
 /**
  * @summary goVirusServer
  * @description
@@ -119,7 +130,7 @@ const goVirusServer: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ avMaxThreads, avMaxDirectoryRecursions, avUser, avFlags, avArchiveMaxFileSize, avArchiveMaxRecursion, avArchiveMaxCompressionRatio, avDatabaseMirror, avChecksPerDay, avHttpProxyURL, avStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goVirusServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Virus server definition (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goVirusServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

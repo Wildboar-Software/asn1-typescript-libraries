@@ -11,6 +11,8 @@ import { co_at } from "../H323-X500-Schema/co-at.va.mjs";
 // export { co_at } from "../H323-X500-Schema/co-at.va.mjs";
 
 
+import { caseIgnoreIA5Match } from "../SelectedAttributeTypes/caseIgnoreIA5Match.oa.mjs";
+import { caseIgnoreIA5SubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreIA5SubstringsMatch.oa.mjs";
 /**
  * @summary commUniqueId
  * @description

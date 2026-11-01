@@ -8,7 +8,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 // export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 // export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-import { AttributeValueAssertion_assertedContexts, _decode_AttributeValueAssertion_assertedContexts, _encode_AttributeValueAssertion_assertedContexts } from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.mjs";
+import { type AttributeValueAssertion_assertedContexts, _decode_AttributeValueAssertion_assertedContexts, _encode_AttributeValueAssertion_assertedContexts } from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.mjs";
 // export { AttributeValueAssertion_assertedContexts, _decode_AttributeValueAssertion_assertedContexts, _encode_AttributeValueAssertion_assertedContexts } from "../InformationFramework/AttributeValueAssertion-assertedContexts.ta.mjs";
 
 

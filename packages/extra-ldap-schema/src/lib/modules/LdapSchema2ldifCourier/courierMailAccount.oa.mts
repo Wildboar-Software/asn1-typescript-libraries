@@ -11,7 +11,7 @@ import {
     type INTEGER,
     type BIT_STRING,
     type OCTET_STRING,
-    NULL,
+    type NULL,
     type OBJECT_IDENTIFIER,
     type ObjectDescriptor,
     type EXTERNAL,
@@ -54,8 +54,8 @@ import {
     PLUS_INFINITY,
     MINUS_INFINITY,
     NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
+    type TYPE_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -76,6 +76,26 @@ import { id_oc_courierMailAccount } from "../LdapSchema2ldifCourier/id-oc-courie
 // export { id_oc_courierMailAccount } from "../LdapSchema2ldifCourier/id-oc-courierMailAccount.va.mjs";
 
 
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { mailbox } from "../InetMailSchema/mailbox.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { gecos } from "../NIS/gecos.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { loginShell } from "../NIS/loginShell.oa.mjs";
+import { quota } from "../LdapSchema2ldifCourier/quota.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { clearPassword } from "../LdapSchema2ldifCourier/clearPassword.oa.mjs";
+import { defaultdelivery } from "../LdapSchema2ldifCourier/defaultdelivery.oa.mjs";
+import { disableimap } from "../LdapSchema2ldifCourier/disableimap.oa.mjs";
+import { disablepop3 } from "../LdapSchema2ldifCourier/disablepop3.oa.mjs";
+import { disablewebmail } from "../LdapSchema2ldifCourier/disablewebmail.oa.mjs";
+import { sharedgroup } from "../LdapSchema2ldifCourier/sharedgroup.oa.mjs";
+import { disableshared } from "../LdapSchema2ldifCourier/disableshared.oa.mjs";
+import { mailhost } from "../LdapSchema2ldifCourier/mailhost.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
 /**
  * @summary courierMailAccount
  * @description
@@ -124,8 +144,8 @@ const courierMailAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, homeDirectory, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uidNumber, gidNumber, mailbox, uid, commonName, gecos, description, loginShell, quota, userPassword, clearPassword, defaultdelivery, disableimap, disablepop3, disablewebmail, sharedgroup, disableshared, mailhost, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "CourierMailAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Mail account object as used by the Courier mail server" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_courierMailAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
