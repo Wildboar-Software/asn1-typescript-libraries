@@ -46,9 +46,10 @@ function supplierOrConsumerInformationMatchTyped (
     a: AssertionType,
     value: ConsumerInformation | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_ConsumerInformation);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (a.agreement_identifier !== v.agreementID.identifier) {
         return false;
     }

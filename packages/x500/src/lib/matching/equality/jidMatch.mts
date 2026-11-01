@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -79,10 +81,17 @@ export
 function jidMatchTyped (
     assertion: JidParts,
     value: string | ASN1Element,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
     const v = parseJid(stored);
     if (!v) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: jidMatch: stored value is not a JID",
+            );
+        }
         return false;
     }
     if (Boolean(assertion.local) !== Boolean(v.local)) {
@@ -91,7 +100,7 @@ function jidMatchTyped (
     if (Boolean(assertion.resource) !== Boolean(v.resource)) {
         return false;
     }
-    const domains = dnsNameMatchTyped(assertion.domain, v.domain);
+    const domains = dnsNameMatchTyped(assertion.domain, v.domain, getEqualityMatcher, flags);
     if (domains !== true) {
         return domains;
     }

@@ -4,6 +4,7 @@ import { readDirectoryString } from "../readValue.mjs";
 import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedOrderingFunction,
@@ -54,6 +55,11 @@ function caseExactOrderingMatchTyped (
     }
     const prepared = prepString(raw);
     if (prepared === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: caseExactOrderingMatch: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return compareCodePoints(assertion, prepared);

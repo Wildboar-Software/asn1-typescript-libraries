@@ -1,6 +1,7 @@
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import { MATCH_FLAG_DEBUG } from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.9 `storedPrefixMatch`.
@@ -18,10 +19,12 @@ export
 function storedPrefixMatch (
     assertion: DirectoryStringInput,
     value: DirectoryStringInput,
+    flags: number = 0,
 ): boolean {
     return storedPrefixMatchTyped(
         readDirectoryString(assertion),
         readDirectoryString(value),
+        flags,
     );
 }
 
@@ -30,13 +33,23 @@ function storedPrefixMatch (
  *
  * @param assertion Presented string.
  * @param value Stored prefix.
+ * @param flags `MATCH_FLAG_DEBUG`.
  * @returns `true` when the stored string is a prefix.
  */
 export
-function storedPrefixMatchTyped (assertion: string, value: string): boolean {
+function storedPrefixMatchTyped (
+    assertion: string,
+    value: string,
+    flags: number = 0,
+): boolean {
     const preparedA = prepString(assertion, { caseFold: true });
     const preparedV = prepString(value, { caseFold: true });
     if (preparedA === undefined || preparedV === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: storedPrefixMatch: string preparation failed",
+            );
+        }
         return false;
     }
     return preparedA.startsWith(preparedV);

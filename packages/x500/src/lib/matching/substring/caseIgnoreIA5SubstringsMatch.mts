@@ -41,11 +41,11 @@ function caseIgnoreIA5SubstringsMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const prepared = prepareStored(value.ia5String, prepareIgnore, flags);
+    const prepared = prepareStored(value.ia5String, prepareIgnore, flags, RULE);
     if (prepared === undefined) {
         return undefined;
     }
-    return matchPreparedString(assertion, prepared, value, flags);
+    return matchPreparedString(assertion, prepared, value, flags, RULE);
 }
 
 caseIgnoreIA5SubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;

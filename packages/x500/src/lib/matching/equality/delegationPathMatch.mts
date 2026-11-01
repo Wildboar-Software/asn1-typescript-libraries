@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -46,9 +47,18 @@ function delegationPathMatchTyped (
     a: DelMatchSyntax,
     value: AttCertPath | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttCertPath);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    if (v.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: delegationPathMatch: stored AttCertPath is empty",
+            );
+        }
+        return false;
+    }
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
     if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)) {

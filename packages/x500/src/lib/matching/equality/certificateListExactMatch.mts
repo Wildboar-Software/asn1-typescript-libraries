@@ -4,6 +4,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -55,9 +56,10 @@ function certificateListExactMatchTyped (
     a: CertificateListExactAssertion,
     value: CertificateList | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_CertificateList);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (!compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher)) {
         return false;
     }
@@ -103,6 +105,11 @@ function certificateListExactMatchTyped (
                 return false;
             }
         } else {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: certificateListExactMatch: unrecognized DistributionPointName alternative",
+                );
+            }
             if (!("tagClass" in a.distributionPoint)) {
                 return false;
             }

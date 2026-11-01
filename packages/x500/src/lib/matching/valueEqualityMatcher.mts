@@ -18,6 +18,7 @@ import {
 export
 function valueEqualityMatcher (
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => Matcher | undefined,
+    flags: number = 0,
 ): ((attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined) | undefined {
     if (!getEqualityMatcher) {
         return undefined;
@@ -31,7 +32,7 @@ function valueEqualityMatcher (
             assertion,
             new AttributeTypeAndValue(attributeType, value),
             getEqualityMatcher,
-            MATCH_FLAG_USED_FOR_NAME,
+            flags | MATCH_FLAG_USED_FOR_NAME,
         ) === true;
     };
 }

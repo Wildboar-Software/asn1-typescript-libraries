@@ -45,9 +45,10 @@ function masterAndShadowAccessPointsMatchTyped (
     a: readonly Name[],
     value: MasterAndShadowAccessPoints | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_MasterAndShadowAccessPoints);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (a.length !== v.length) {
         return false;
     }

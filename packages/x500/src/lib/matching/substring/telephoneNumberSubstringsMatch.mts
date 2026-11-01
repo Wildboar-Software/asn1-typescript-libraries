@@ -47,11 +47,11 @@ function telephoneNumberSubstringsMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const prepared = prepareStored(_decode_TelephoneNumber(value), prepareTelephone, flags);
+    const prepared = prepareStored(_decode_TelephoneNumber(value), prepareTelephone, flags, RULE);
     if (prepared === undefined) {
         return undefined;
     }
-    return matchPreparedString(assertion, prepared, value, flags);
+    return matchPreparedString(assertion, prepared, value, flags, RULE);
 }
 
 telephoneNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;

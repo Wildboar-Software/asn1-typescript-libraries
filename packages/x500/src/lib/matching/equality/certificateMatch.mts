@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -107,15 +108,17 @@ function evaluateCertificateAssertion (
     assertion: CertificateAssertion,
     value: Certificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     if (ASN1Element.isElement(value)) {
         return evaluateCertificateAssertion(
             assertion,
             _decode_Certificate(value),
             getMatcher,
+            flags,
         );
     }
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const tbs = value.toBeSigned;
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
@@ -267,6 +270,14 @@ function evaluateCertificateAssertion (
                 }
                 break;
             }
+            default: {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        `@wildboar/x500: debug: certificateMatch: unrecognized builtinNameForm ${altNameType}`,
+                    );
+                }
+                return false;
+            }
             }
         } else if ("otherNameForm" in subjectAltName) {
             const otherNameForm = subjectAltName.otherNameForm;
@@ -280,6 +291,11 @@ function evaluateCertificateAssertion (
                 return false;
             }
         } else {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: certificateMatch: unrecognized AltNameType alternative",
+                );
+            }
             return false;
         }
     }

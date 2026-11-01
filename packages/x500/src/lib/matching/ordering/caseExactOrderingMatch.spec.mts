@@ -9,7 +9,10 @@ import {
 import {
     AttributeTypeAndValue,
 } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
-import { MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
+import {
+    MATCH_FLAG_DEBUG,
+    MATCH_FLAG_VALUE_NORMALIZED,
+} from "../../types/matching.mjs";
 import caseExactOrderingMatch, {
     caseExactOrderingMatchTyped,
 } from "./caseExactOrderingMatch.mjs";
@@ -56,7 +59,14 @@ describe("caseExactOrderingMatch", () => {
     });
 
     it("is UNDEFINED when the stored value cannot be prepared", () => {
-        expect(caseExactOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
+        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+        try {
+            expect(caseExactOrderingMatchTyped("Z", utf8("\uFFFD"), undefined, MATCH_FLAG_DEBUG)).toBeUndefined();
+            expect(spy).toHaveBeenCalledTimes(1);
+            expect(String(spy.mock.calls[0][0])).toContain("caseExactOrderingMatch");
+        } finally {
+            spy.mockRestore();
+        }
         expect(caseExactOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
 });
@@ -85,7 +95,14 @@ describe("caseIgnoreOrderingMatch", () => {
     });
 
     it("is UNDEFINED when the stored value cannot be prepared", () => {
-        expect(caseIgnoreOrderingMatchTyped("Z", utf8("\uFFFD"))).toBeUndefined();
+        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+        try {
+            expect(caseIgnoreOrderingMatchTyped("Z", utf8("\uFFFD"), undefined, MATCH_FLAG_DEBUG)).toBeUndefined();
+            expect(spy).toHaveBeenCalledTimes(1);
+            expect(String(spy.mock.calls[0][0])).toContain("caseIgnoreOrderingMatch");
+        } finally {
+            spy.mockRestore();
+        }
         expect(caseIgnoreOrderingMatchTyped("Z", utf8(""))).toBeUndefined();
     });
 });

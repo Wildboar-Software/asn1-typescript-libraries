@@ -387,6 +387,12 @@ function createEqualityMatcher<A>(
             assertionSyntaxDiffersFromValueSyntax
             && (flags & MATCH_FLAG_USED_FOR_NAME)
         ) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                const oid = valueOrValues.type_.dotDelimitedNotation;
+                console.error(
+                    `@wildboar/x500: debug: matching rule with heterogeneous syntax cannot be used for name matching on attribute type ${oid}`,
+                );
+            }
             return undefined;
         }
         const attr: Attribute = (
@@ -430,7 +436,7 @@ function createEqualityMatcher<A>(
                 }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
-                if (debug && !constantTime) {
+                if (debug) {
                     console.error(valueErrorMessage(false, i, attr.type_, e));
                 }
                 deferredResult = deferredResult || undefined;
@@ -475,8 +481,8 @@ function createEqualityMatcher<A>(
                 }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
-                if (debug && !constantTime) {
-                    console.error(valueErrorMessage(false, i, attr.type_, e));
+                if (debug) {
+                    console.error(valueErrorMessage(true, i, attr.type_, e));
                 }
                 deferredResult = deferredResult || undefined;
                 continue;

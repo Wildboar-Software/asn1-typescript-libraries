@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -41,9 +42,18 @@ function pkiPathMatchTyped (
     a: PkiPathMatchSyntax,
     value: PkiPath | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_PkiPath);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    if (v.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: pkiPathMatch: stored PkiPath is empty",
+            );
+        }
+        return false;
+    }
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];
     return (

@@ -39,9 +39,10 @@ function certificateExactMatchTyped (
     a: CertificateExactAssertion,
     value: Certificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_Certificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (Buffer.compare(v.toBeSigned.serialNumber, a.serialNumber)) {
         return false;
     }

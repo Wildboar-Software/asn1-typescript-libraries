@@ -1,9 +1,11 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { domainToUnicode } from "node:url";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -39,11 +41,16 @@ function prepareDnsAssertion (domain: string, el?: ASN1Element): string {
     return prepared.join(".");
 }
 
-function compareLabels (a: string, b: string, wildcardAllowed: boolean): boolean | undefined {
+function compareLabels (
+    a: string,
+    b: string,
+    wildcardAllowed: boolean,
+    flags: number = 0,
+): boolean | undefined {
     if (a === "*" || b === "*") {
         return wildcardAllowed;
     }
-    return caseIgnoreMatchTyped(a, b);
+    return caseIgnoreMatchTyped(a, b, undefined, flags);
 }
 
 /**
@@ -67,12 +74,19 @@ export
 function dnsNameMatchTyped (
     assertion: string,
     value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = typeof value === "string" ? value : value.utf8String;
     // The assertion is prepared once. `domainToUnicode` preserves `*` and `.`.
     const a = assertion;
     const v = domainToUnicode(stored.trim());
     if (a === "" || v === "") {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: dnsNameMatch: empty or invalid domain name",
+            );
+        }
         return false;
     }
 
@@ -89,7 +103,7 @@ function dnsNameMatchTyped (
         if (nextDotA === -1) {
             const labelA = a.slice(startA);
             const labelV = v.slice(startV);
-            const labels = compareLabels(labelA, labelV, wildcardAllowed);
+            const labels = compareLabels(labelA, labelV, wildcardAllowed, flags);
             if (labels !== true) {
                 return labels;
             }
@@ -97,7 +111,7 @@ function dnsNameMatchTyped (
         }
         const labelA = a.slice(startA, nextDotA);
         const labelV = v.slice(startV, nextDotV);
-        const labels = compareLabels(labelA, labelV, wildcardAllowed);
+        const labels = compareLabels(labelA, labelV, wildcardAllowed, flags);
         if (labels !== true) {
             return labels;
         }

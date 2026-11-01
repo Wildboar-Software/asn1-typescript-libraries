@@ -1,7 +1,7 @@
 import { ObjectIdentifier } from "@wildboar/asn1";
 import { DER, _encodeInteger } from "@wildboar/asn1/functional";
 import type { Matcher } from "../types/matching.mjs";
-import { MATCH_FLAG_USED_FOR_NAME } from "../types/matching.mjs";
+import { MATCH_FLAG_DEBUG, MATCH_FLAG_USED_FOR_NAME } from "../types/matching.mjs";
 import { valueEqualityMatcher } from "./valueEqualityMatcher.mjs";
 
 describe("valueEqualityMatcher", () => {
@@ -23,8 +23,9 @@ describe("valueEqualityMatcher", () => {
         };
         const lookup = () => matcher;
 
-        expect(valueEqualityMatcher(lookup)?.(type_)?.(assertion, value)).toBe(true);
+        expect(valueEqualityMatcher(lookup, MATCH_FLAG_DEBUG)?.(type_)?.(assertion, value)).toBe(true);
         expect(receivedFlags & MATCH_FLAG_USED_FOR_NAME).toBeTruthy();
+        expect(receivedFlags & MATCH_FLAG_DEBUG).toBeTruthy();
         expect(receivedLookup).toBe(lookup);
     });
 });

@@ -92,7 +92,7 @@ function joinStoredLines (
 ): string | undefined {
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
-        const line = prepareStored(lines[i], prepareIgnore, flags);
+        const line = prepareStored(lines[i], prepareIgnore, flags, RULE);
         if (line === undefined) {
             return undefined;
         }
@@ -128,7 +128,7 @@ function caseIgnoreListSubstringsMatchTyped (
     if (joined === undefined) {
         return undefined;
     }
-    return matchPreparedString(assertion, joined, value, flags);
+    return matchPreparedString(assertion, joined, value, flags, RULE);
 }
 
 caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
