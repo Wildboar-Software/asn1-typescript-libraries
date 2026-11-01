@@ -60,6 +60,8 @@ export
 const sOAIdentifierMatch: Matcher = createEqualityMatcher(
     decodeNullAssertion,
     sOAIdentifierMatchTyped,
+    undefined,
+    true,
 );
 
 export default sOAIdentifierMatch;

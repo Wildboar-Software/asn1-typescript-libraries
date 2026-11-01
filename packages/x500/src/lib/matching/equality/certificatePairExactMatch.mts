@@ -92,6 +92,8 @@ export
 const certificatePairExactMatch: Matcher = createEqualityMatcher(
     _decode_CertificatePairExactAssertion,
     certificatePairExactMatchTyped,
+    undefined,
+    true,
 );
 
 export default certificatePairExactMatch;

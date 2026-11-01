@@ -70,6 +70,8 @@ export
 const delegatedNameConstraintsMatch: Matcher = createEqualityMatcher(
     _decode_NameConstraintsSyntax,
     delegatedNameConstraintsMatchTyped,
+    undefined,
+    true,
 );
 
 export default delegatedNameConstraintsMatch;

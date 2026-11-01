@@ -61,6 +61,8 @@ export
 const protocolInformationMatch: Matcher = createEqualityMatcher(
     readNAddress,
     protocolInformationMatchTyped,
+    undefined,
+    true,
 );
 
 export default protocolInformationMatch;

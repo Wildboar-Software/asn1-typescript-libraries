@@ -103,6 +103,8 @@ export
 const attributeCertificateMatch: Matcher = createEqualityMatcher(
     _decode_AttributeCertificateAssertion,
     attributeCertificateMatchTyped,
+    undefined,
+    true,
 );
 
 export default attributeCertificateMatch;

@@ -131,6 +131,8 @@ export
 const roleSpecCertIdMatch: Matcher = createEqualityMatcher(
     _decode_RoleSpecCertIdentifierSyntax,
     roleSpecCertIdMatchTyped,
+    undefined,
+    true,
 );
 
 export default roleSpecCertIdMatch;

@@ -49,6 +49,8 @@ export
 const distinguishedNameMatch: Matcher = createEqualityMatcher(
     _decode_DistinguishedName,
     distinguishedNameMatchTyped,
+    undefined,
+    true,
 );
 
 export default distinguishedNameMatch;

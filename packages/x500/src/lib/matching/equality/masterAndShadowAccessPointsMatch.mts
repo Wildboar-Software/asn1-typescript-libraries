@@ -71,6 +71,8 @@ export
 const masterAndShadowAccessPointsMatch: Matcher = createEqualityMatcher(
     _decodeSetOf<Name>(() => _decode_Name),
     masterAndShadowAccessPointsMatchTyped,
+    undefined,
+    true,
 );
 
 export default masterAndShadowAccessPointsMatch;

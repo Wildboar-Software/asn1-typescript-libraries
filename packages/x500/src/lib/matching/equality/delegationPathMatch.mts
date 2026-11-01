@@ -76,6 +76,8 @@ export
 const delegationPathMatch: Matcher = createEqualityMatcher(
     _decode_DelMatchSyntax,
     delegationPathMatchTyped,
+    undefined,
+    true,
 );
 
 export default delegationPathMatch;

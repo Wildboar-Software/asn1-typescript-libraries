@@ -69,6 +69,8 @@ export
 const directoryStringFirstComponentMatch: Matcher = createEqualityMatcher(
     prepareAssertion,
     directoryStringFirstComponentMatchTyped,
+    undefined,
+    true,
 );
 
 export default directoryStringFirstComponentMatch;

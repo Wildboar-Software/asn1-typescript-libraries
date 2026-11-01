@@ -17,10 +17,12 @@ const storedType = ObjectIdentifier.fromParts([ 1, 1, 1, 1 ]);
 export
 function onStoredValue (
     matcher: Matcher,
-): (assertion: ASN1Element, value: ASN1Element) => boolean | undefined {
-    return (assertion, value) => matcher(
+): (assertion: ASN1Element, value: ASN1Element, flags?: number) => boolean | undefined {
+    return (assertion, value, flags) => matcher(
         assertion,
         new AttributeTypeAndValue(storedType, value),
+        undefined,
+        flags,
     );
 }
 

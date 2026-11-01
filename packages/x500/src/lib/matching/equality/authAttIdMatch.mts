@@ -81,6 +81,8 @@ export
 const authAttIdMatch: Matcher = createEqualityMatcher(
     _decode_AuthorityAttributeIdentifierSyntax,
     authAttIdMatchTyped,
+    undefined,
+    true,
 );
 
 export default authAttIdMatch;

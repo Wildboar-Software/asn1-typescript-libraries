@@ -69,6 +69,8 @@ export
 const certificatePairMatch: Matcher = createEqualityMatcher(
     _decode_CertificatePairAssertion,
     certificatePairMatchTyped,
+    undefined,
+    true,
 );
 
 export default certificatePairMatch;

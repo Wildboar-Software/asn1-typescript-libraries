@@ -130,6 +130,8 @@ export
 const certificateListExactMatch: Matcher = createEqualityMatcher(
     _decode_CertificateListExactAssertion,
     certificateListExactMatchTyped,
+    undefined,
+    true,
 );
 
 export default certificateListExactMatch;
