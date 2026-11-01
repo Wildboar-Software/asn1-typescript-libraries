@@ -19,7 +19,15 @@ import { EpcFormat_fields_Item_result, EpcFormat_fields_Item_result_numericPad /
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EpcFormat-fields-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * EpcFormat-fields-Item ::= SEQUENCE {
+ *   bits       INTEGER,
+ *   charField  CHOICE {
+ *     characters  [0] INTEGER,
+ *     maxValue    [1] INTEGER },
+ *   result     ENUMERATED {
+ *     numericPad     (0),
+ *     numeric        (1),
+ *     alpha7bits     (2) } DEFAULT numericPad }
  * ```
  * 
  * @class

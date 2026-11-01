@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Period-weeks-bitWeek ::= BIT STRING { -- REMOVED_FROM_UNNESTING -- }
+ * Period-weeks-bitWeek ::= BIT STRING {
+ *   week1     (0),
+ *   week2     (1),
+ *   week3     (2),
+ *   week4     (3),
+ *   week5     (4)}
  * ```
  */
 export

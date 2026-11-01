@@ -16,7 +16,12 @@ import { Period, _decode_Period, _encode_Period } from "../SelectedAttributeType
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * TimeSpecification-time ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * TimeSpecification-time ::= CHOICE {
+ *   absolute  SEQUENCE {
+ *     startTime  [0]  GeneralizedTime OPTIONAL,
+ *     endTime    [1]  GeneralizedTime OPTIONAL,
+ *     ... },
+ *   periodic  SET SIZE (1..MAX) OF Period }
  * ```
  */
 export

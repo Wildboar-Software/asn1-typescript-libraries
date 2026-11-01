@@ -25,7 +25,10 @@ type _enum_for_PwdResponse_error = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PwdResponse-error ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * PwdResponse-error ::= ENUMERATED {
+ *   passwordExpired   (0),
+ *   changeAfterReset  (1),
+ *   ... }
  * ```
  * 
  * @enum {number}

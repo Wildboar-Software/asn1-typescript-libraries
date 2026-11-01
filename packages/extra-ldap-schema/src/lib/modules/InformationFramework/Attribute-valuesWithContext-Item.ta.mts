@@ -18,7 +18,10 @@ import { Context, _decode_Context, _encode_Context } from "../InformationFramewo
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * Attribute-valuesWithContext-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * Attribute-valuesWithContext-Item ::= SEQUENCE {
+ *   value        ATTRIBUTE.&Type({SupportedAttributes}{@type}),
+ *   contextList  SET SIZE (1..MAX) OF Context,
+ *   ... }
  * ```
  * 
  * @class

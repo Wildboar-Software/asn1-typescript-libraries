@@ -13,7 +13,14 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NamedDay-intNamedDays ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NamedDay-intNamedDays ::= ENUMERATED {
+ *   sunday     (1),
+ *   monday     (2),
+ *   tuesday    (3),
+ *   wednesday  (4),
+ *   thursday   (5),
+ *   friday     (6),
+ *   saturday   (7) }
  * ```
  * 
  * @enum {number}
@@ -47,7 +54,14 @@ type _enum_for_NamedDay_intNamedDays = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NamedDay-intNamedDays ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NamedDay-intNamedDays ::= ENUMERATED {
+ *   sunday     (1),
+ *   monday     (2),
+ *   tuesday    (3),
+ *   wednesday  (4),
+ *   thursday   (5),
+ *   friday     (6),
+ *   saturday   (7) }
  * ```
  * 
  * @enum {number}
@@ -62,7 +76,14 @@ type NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * NamedDay-intNamedDays ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * NamedDay-intNamedDays ::= ENUMERATED {
+ *   sunday     (1),
+ *   monday     (2),
+ *   tuesday    (3),
+ *   wednesday  (4),
+ *   thursday   (5),
+ *   friday     (6),
+ *   saturday   (7) }
  * ```
  * 
  * @enum {number}

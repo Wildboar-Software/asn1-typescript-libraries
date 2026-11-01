@@ -17,7 +17,14 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * SubstringAssertion-Item ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * SubstringAssertion-Item ::= CHOICE {
+ *   initial  [0]  UnboundedDirectoryString,
+ *   any      [1]  UnboundedDirectoryString,
+ *   final    [2]  UnboundedDirectoryString,
+ *     -- at most one initial and one final component
+ *   control       Attribute{{SupportedAttributes}},
+ *     -- Used to specify interpretation of the following items
+ *   ... }
  * ```
  */
 export

@@ -15,7 +15,9 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * EpcFormat-fields-Item-charField ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * EpcFormat-fields-Item-charField ::= CHOICE {
+ *   characters  [0] INTEGER,
+ *   maxValue    [1] INTEGER }
  * ```
  */
 export

@@ -18,7 +18,10 @@ import { type HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyIn
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * InfoSyntax-pointer ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * InfoSyntax-pointer ::= SEQUENCE {
+ *   name     GeneralNames,
+ *   hash     HASH{HashedPolicyInfo} OPTIONAL,
+ *   ... }
  * ```
  * 
  * @class

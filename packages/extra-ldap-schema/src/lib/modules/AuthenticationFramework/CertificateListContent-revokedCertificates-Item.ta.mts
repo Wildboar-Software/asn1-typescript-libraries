@@ -20,7 +20,11 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../Auth
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * CertificateListContent-revokedCertificates-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * CertificateListContent-revokedCertificates-Item ::= SEQUENCE {
+ *   serialNumber        CertificateSerialNumber,
+ *   revocationDate      Time,
+ *   crlEntryExtensions  Extensions OPTIONAL,
+ *   ... }
  * ```
  * 
  * @class

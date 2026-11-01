@@ -15,7 +15,9 @@ import { type UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../Selecte
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * UiiFormat-next ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * UiiFormat-next ::= CHOICE {
+ *   length  INTEGER,
+ *   filter  UiiFilter }
  * ```
  */
 export

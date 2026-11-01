@@ -16,7 +16,9 @@ import { ContextAssertion, _decode_ContextAssertion, _encode_ContextAssertion } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeValueAssertion-assertedContexts ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeValueAssertion-assertedContexts ::= CHOICE {
+ *   allContexts       [0]  NULL,
+ *   selectedContexts  [1]  SET SIZE (1..MAX) OF ContextAssertion }
  * ```
  */
 export

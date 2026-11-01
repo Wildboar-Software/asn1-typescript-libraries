@@ -15,7 +15,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * PwdResponse-warning ::= CHOICE { -- REMOVED_FROM_UNNESTING -- }
+ * PwdResponse-warning ::= CHOICE {
+ *   timeleft        [0]  INTEGER (0..MAX),
+ *   graceRemaining  [1]  INTEGER (0..MAX),
+ *   ... }
  * ```
  */
 export
