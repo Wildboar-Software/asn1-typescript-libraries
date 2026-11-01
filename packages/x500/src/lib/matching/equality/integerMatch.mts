@@ -1,4 +1,12 @@
-import type { ASN1Element, INTEGER } from "@wildboar/asn1";
+import { Buffer } from "node:buffer";
+import {
+    ASN1Construction,
+    ASN1ConstructionError,
+    ASN1PaddingError,
+    ASN1SizeError,
+    type ASN1Element,
+    type INTEGER,
+} from "@wildboar/asn1";
 import { readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
@@ -26,12 +34,59 @@ function integerMatchTyped (
 integerMatchTyped satisfies TypedEquationFunction<INTEGER>;
 
 /**
- * `integerMatch` as a `Matcher`.
+ * Validates an encoded INTEGER assertion without decoding it.
+ *
+ * X.690 requires INTEGER content octets to be the minimal two's
+ * complement encoding, so a valid encoding of a given integer is
+ * unique. Rejecting non-minimal assertions is what makes the
+ * octet-for-octet comparison in `integerMatch` correct.
+ *
+ * @param assertion Encoded INTEGER (or ENUMERATED) assertion.
+ * @returns The content octets of the assertion.
+ */
+function integerAssertionOctets (assertion: ASN1Element): Uint8Array {
+    if (assertion.construction !== ASN1Construction.primitive) {
+        throw new ASN1ConstructionError("INTEGER cannot be constructed.", assertion);
+    }
+    const octets = assertion.value;
+    if (octets.length === 0) {
+        throw new ASN1SizeError("INTEGER or ENUMERATED encoded on zero bytes", assertion);
+    }
+    if (
+        octets.length > 1
+        && (
+            (octets[0] === 0x00 && octets[1] < 0x80)
+            || (octets[0] === 0xFF && octets[1] >= 0x80)
+        )
+    ) {
+        throw new ASN1PaddingError("Unnecessary padding bytes on INTEGER or ENUMERATED.", assertion);
+    }
+    return octets;
+}
+
+/**
+ * Compares the content octets of a validated assertion with those of
+ * a stored INTEGER or ENUMERATED value. A non-minimally encoded value
+ * cannot equal a minimally encoded assertion, so the value is not
+ * validated.
+ */
+function integerMatchOctets (
+    assertion: Uint8Array,
+    value: ASN1Element,
+): boolean | undefined {
+    return Buffer.compare(assertion, value.value) === 0;
+}
+
+integerMatchOctets satisfies TypedEquationFunction<Uint8Array>;
+
+/**
+ * `integerMatch` as a `Matcher`. Neither the assertion nor the stored
+ * values are decoded: content octets are compared directly.
  */
 export
 const integerMatch: Matcher = createEqualityMatcher(
-    (el) => el.integer,
-    integerMatchTyped,
+    integerAssertionOctets,
+    integerMatchOctets,
 );
 
 export default integerMatch;
