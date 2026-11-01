@@ -11,8 +11,10 @@ import {
  * @summary caseIgnoreListSubstringsMatch
  * @description
  *
- * Concat stored strings, then caseIgnoreSubstringsMatch. initial/any/final
- * must not span stored-string boundaries.
+ * Stored lines are joined with U+001F, then matched as
+ * caseIgnoreSubstringsMatch. A directory-string piece cannot span
+ * a line. A postal-address filter component matches only adjacent
+ * lines.
  *
  * ### ASN.1 Definition:
  *
