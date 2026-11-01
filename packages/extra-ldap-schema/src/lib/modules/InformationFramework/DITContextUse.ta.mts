@@ -7,9 +7,6 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 
 /**
  * @summary DITContextUse
@@ -87,7 +84,6 @@ class DITContextUse {
     public static _from_object (_o: { [_K in keyof (DITContextUse)]: (DITContextUse)[_K] }): DITContextUse {
         return new DITContextUse(_o.attributeType, _o.mandatoryContexts, _o.optionalContexts, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -200,6 +196,5 @@ function _encode_DITContextUse (value: DITContextUse, elGetter: $.ASN1Encoder<an
 }; }
     return _cached_encoder_for_DITContextUse(value, elGetter);
 }
-
 
 /* eslint-enable */

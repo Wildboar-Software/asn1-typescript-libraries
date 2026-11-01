@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.mjs";
-// export { urnCobj } from "../SelectedObjectClasses/urnCobj.oa.mjs";
 import { urnC } from "../SelectedAttributeTypes/urnC.oa.mjs";
-// export { urnC } from "../SelectedAttributeTypes/urnC.oa.mjs";
 import { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.mjs";
-// export { id_nf_urnCNameForm } from "../SelectedObjectClasses/id-nf-urnCNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary urnCNameForm

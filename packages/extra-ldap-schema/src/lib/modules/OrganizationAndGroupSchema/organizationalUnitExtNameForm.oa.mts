@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { organizationalUnitExt } from "../OrganizationAndGroupSchema/organizationalUnitExt.oa.mjs";
-// export { organizationalUnitExt } from "../OrganizationAndGroupSchema/organizationalUnitExt.oa.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary organizationalUnitExtNameForm

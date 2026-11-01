@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_lsx_fax } from "../SelectedAttributeTypes/id-lsx-fax.va.mjs";
-// export { id_lsx_fax } from "../SelectedAttributeTypes/id-lsx-fax.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary fax

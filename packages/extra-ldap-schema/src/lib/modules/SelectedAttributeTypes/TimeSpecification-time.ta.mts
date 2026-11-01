@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute, _decode_TimeSpecification_time_absolute, _encode_TimeSpecification_time_absolute } from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
-// export { TimeSpecification_time_absolute, _decode_TimeSpecification_time_absolute, _encode_TimeSpecification_time_absolute } from "../SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
 import { Period, _decode_Period, _encode_Period } from "../SelectedAttributeTypes/Period.ta.mjs";
-// export { Period, _decode_Period, _encode_Period } from "../SelectedAttributeTypes/Period.ta.mjs";
-
 
 /**
  * @summary TimeSpecification_time
@@ -68,6 +65,5 @@ function _encode_TimeSpecification_time (value: TimeSpecification_time, elGetter
 }, $.BER); }
     return _cached_encoder_for_TimeSpecification_time(value, elGetter);
 }
-
 
 /* eslint-enable */

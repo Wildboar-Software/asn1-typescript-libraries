@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { DNSRecord, _decode_DNSRecord, _encode_DNSRecord } from "../DNSFramework/DNSRecord.ta.mjs";
-// export { DNSRecord, _decode_DNSRecord, _encode_DNSRecord } from "../DNSFramework/DNSRecord.ta.mjs";
 import { id_lsx_dnsRec } from "../DNSFramework/id-lsx-dnsRec.va.mjs";
-// export { id_lsx_dnsRec } from "../DNSFramework/id-lsx-dnsRec.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary dnsRec

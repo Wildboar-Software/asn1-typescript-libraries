@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-// export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
-// export { id_lsx_dn } from "../SelectedAttributeTypes/id-lsx-dn.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary dn

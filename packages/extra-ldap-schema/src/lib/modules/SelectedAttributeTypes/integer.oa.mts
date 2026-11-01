@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_lsx_integer } from "../SelectedAttributeTypes/id-lsx-integer.va.mjs";
-// export { id_lsx_integer } from "../SelectedAttributeTypes/id-lsx-integer.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary integer

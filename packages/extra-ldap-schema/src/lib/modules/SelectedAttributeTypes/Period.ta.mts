@@ -9,14 +9,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayTimeBand, _decode_DayTimeBand, _encode_DayTimeBand } from "../SelectedAttributeTypes/DayTimeBand.ta.mjs";
-// export { DayTimeBand, _decode_DayTimeBand, _encode_DayTimeBand } from "../SelectedAttributeTypes/DayTimeBand.ta.mjs";
 import { type Period_days, _decode_Period_days, _encode_Period_days } from "../SelectedAttributeTypes/Period-days.ta.mjs";
-// export { Period_days, _decode_Period_days, _encode_Period_days } from "../SelectedAttributeTypes/Period-days.ta.mjs";
 import { type Period_weeks, _decode_Period_weeks, _encode_Period_weeks } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
-// export { Period_weeks, _decode_Period_weeks, _encode_Period_weeks } from "../SelectedAttributeTypes/Period-weeks.ta.mjs";
 import { type Period_months, _decode_Period_months, _encode_Period_months } from "../SelectedAttributeTypes/Period-months.ta.mjs";
-// export { Period_months, _decode_Period_months, _encode_Period_months } from "../SelectedAttributeTypes/Period-months.ta.mjs";
-
 
 /**
  * @summary Period
@@ -153,7 +148,6 @@ class Period {
         return new Period(_o.timesOfDay, _o.days, _o.weeks, _o.months, _o.years, _o._unrecognizedExtensionsList);
     }
 
-
 }
 
 /**
@@ -281,6 +275,5 @@ function _encode_Period (value: Period, elGetter: $.ASN1Encoder<any>): _Element 
 }; }
     return _cached_encoder_for_Period(value, elGetter);
 }
-
 
 /* eslint-enable */

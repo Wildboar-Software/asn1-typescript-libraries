@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { UtmCoordinates, _decode_UtmCoordinates, _encode_UtmCoordinates } from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
-// export { UtmCoordinates, _decode_UtmCoordinates, _encode_UtmCoordinates } from "../SelectedAttributeTypes/UtmCoordinates.ta.mjs";
 import { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.mjs";
-// export { id_asx_utmCoords } from "../SelectedAttributeTypes/id-asx-utmCoords.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary utmCoords

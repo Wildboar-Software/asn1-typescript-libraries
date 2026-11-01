@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-// export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_mr_wordMatch } from "../SelectedAttributeTypes/id-mr-wordMatch.va.mjs";
-// export { id_mr_wordMatch } from "../SelectedAttributeTypes/id-mr-wordMatch.va.mjs";
-
 
 /**
  * @summary wordMatch

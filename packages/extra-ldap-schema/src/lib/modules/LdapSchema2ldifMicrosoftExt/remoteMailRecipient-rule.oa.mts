@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { remoteMailRecipient } from "../LdapSchema2ldifMicrosoft/remoteMailRecipient.oa.mjs";
-// export { remoteMailRecipient } from "../LdapSchema2ldifMicrosoft/remoteMailRecipient.oa.mjs";
 import { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
-// export { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
-
 
 /**
  * @summary remoteMailRecipient_rule

@@ -3,11 +3,8 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { BootParameterSyntax, _decode_BootParameterSyntax, _encode_BootParameterSyntax } from "../NIS/BootParameterSyntax.ta.mjs";
-// export { BootParameterSyntax, _decode_BootParameterSyntax, _encode_BootParameterSyntax } from "../NIS/BootParameterSyntax.ta.mjs";
 import { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
-// export { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary bootParameterSyntax

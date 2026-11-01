@@ -6,9 +6,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-// export { SMIMEv3Algorithms } from "../PKCS-9/SMIMEv3Algorithms.osa.mjs";
-
 
 /**
  * @summary SMIMECapability
@@ -63,7 +60,6 @@ class SMIMECapability {
     public static _from_object (_o: { [_K in keyof (SMIMECapability)]: (SMIMECapability)[_K] }): SMIMECapability {
         return new SMIMECapability(_o.algorithm, _o.parameters);
     }
-
 
 }
 
@@ -156,6 +152,5 @@ function _encode_SMIMECapability (value: SMIMECapability, elGetter: $.ASN1Encode
 }; }
     return _cached_encoder_for_SMIMECapability(value, elGetter);
 }
-
 
 /* eslint-enable */

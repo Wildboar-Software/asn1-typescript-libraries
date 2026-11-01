@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_doublePrecision } from "../InetMailSchema/id-doublePrecision.va.mjs";
-// export { id_doublePrecision } from "../InetMailSchema/id-doublePrecision.va.mjs";
-
 
 /**
  * @summary id_at_mailbox

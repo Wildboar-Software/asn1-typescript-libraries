@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-// export { TelephoneNumber, _decode_TelephoneNumber, _encode_TelephoneNumber } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-
 
 /**
  * @summary FacsimileTelephoneNumber
@@ -70,7 +68,6 @@ class FacsimileTelephoneNumber {
     public static _from_object (_o: { [_K in keyof (FacsimileTelephoneNumber)]: (FacsimileTelephoneNumber)[_K] }): FacsimileTelephoneNumber {
         return new FacsimileTelephoneNumber(_o.telephoneNumber, _o.parameters, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -176,6 +173,5 @@ function _encode_FacsimileTelephoneNumber (value: FacsimileTelephoneNumber, elGe
 }; }
     return _cached_encoder_for_FacsimileTelephoneNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

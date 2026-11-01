@@ -3,11 +3,8 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { NISNetgroupTripleSyntax, _decode_NISNetgroupTripleSyntax, _encode_NISNetgroupTripleSyntax } from "../NIS/NISNetgroupTripleSyntax.ta.mjs";
-// export { NISNetgroupTripleSyntax, _decode_NISNetgroupTripleSyntax, _encode_NISNetgroupTripleSyntax } from "../NIS/NISNetgroupTripleSyntax.ta.mjs";
 import { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
-// export { id_nis_lsx } from "../NIS/id-nis-lsx.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary nisNetgroupTripleSyntax

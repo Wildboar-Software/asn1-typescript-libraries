@@ -7,11 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
 import { ContextAssertion, _decode_ContextAssertion, _encode_ContextAssertion } from "../InformationFramework/ContextAssertion.ta.mjs";
-// export { ContextAssertion, _decode_ContextAssertion, _encode_ContextAssertion } from "../InformationFramework/ContextAssertion.ta.mjs";
-
 
 /**
  * @summary AttributeTypeAssertion
@@ -77,7 +73,6 @@ class AttributeTypeAssertion {
     public static _from_object (_o: { [_K in keyof (AttributeTypeAssertion)]: (AttributeTypeAssertion)[_K] }): AttributeTypeAssertion {
         return new AttributeTypeAssertion(_o.type_, _o.assertedContexts, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -183,6 +178,5 @@ function _encode_AttributeTypeAssertion (value: AttributeTypeAssertion, elGetter
 }; }
     return _cached_encoder_for_AttributeTypeAssertion(value, elGetter);
 }
-
 
 /* eslint-enable */

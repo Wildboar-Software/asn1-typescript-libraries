@@ -6,11 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
 import { Context, _decode_Context, _encode_Context } from "../InformationFramework/Context.ta.mjs";
-// export { Context, _decode_Context, _encode_Context } from "../InformationFramework/Context.ta.mjs";
-
 
 /**
  * @summary Attribute_valuesWithContext_Item
@@ -76,7 +72,6 @@ class Attribute_valuesWithContext_Item {
     public static _from_object (_o: { [_K in keyof (Attribute_valuesWithContext_Item)]: (Attribute_valuesWithContext_Item)[_K] }): Attribute_valuesWithContext_Item {
         return new Attribute_valuesWithContext_Item(_o.value, _o.contextList, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -176,6 +171,5 @@ function _encode_Attribute_valuesWithContext_Item (value: Attribute_valuesWithCo
 }; }
     return _cached_encoder_for_Attribute_valuesWithContext_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

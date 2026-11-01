@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { UiiFormat, _decode_UiiFormat, _encode_UiiFormat } from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
-// export { UiiFormat, _decode_UiiFormat, _encode_UiiFormat } from "../SelectedAttributeTypes/UiiFormat.ta.mjs";
 import { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.mjs";
-// export { id_asx_uiiForm } from "../SelectedAttributeTypes/id-asx-uiiForm.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary uiiForm

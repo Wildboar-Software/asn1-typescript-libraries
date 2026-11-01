@@ -1,8 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { type RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
-// export { RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
-
 
 /**
  * @summary DistinguishedName

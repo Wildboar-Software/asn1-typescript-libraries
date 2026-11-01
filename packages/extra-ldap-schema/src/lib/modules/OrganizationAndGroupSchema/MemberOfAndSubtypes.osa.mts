@@ -1,13 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { memberOf } from "../OrganizationAndGroupSchema/memberOf.oa.mjs";
-// export { memberOf } from "../OrganizationAndGroupSchema/memberOf.oa.mjs";
 import { publicMemberOf } from "../OrganizationAndGroupSchema/publicMemberOf.oa.mjs";
-// export { publicMemberOf } from "../OrganizationAndGroupSchema/publicMemberOf.oa.mjs";
 import { privateMemberOf } from "../OrganizationAndGroupSchema/privateMemberOf.oa.mjs";
-// export { privateMemberOf } from "../OrganizationAndGroupSchema/privateMemberOf.oa.mjs";
-
 
 /**
  * @summary MemberOfAndSubtypes

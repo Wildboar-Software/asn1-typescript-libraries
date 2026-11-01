@@ -1,13 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { MemberAndSubtypes } from "../OrganizationAndGroupSchema/MemberAndSubtypes.osa.mjs";
-// export { MemberAndSubtypes } from "../OrganizationAndGroupSchema/MemberAndSubtypes.osa.mjs";
 import { UniqueMemberAndSubtypes } from "../OrganizationAndGroupSchema/UniqueMemberAndSubtypes.osa.mjs";
-// export { UniqueMemberAndSubtypes } from "../OrganizationAndGroupSchema/UniqueMemberAndSubtypes.osa.mjs";
 import { MemberOfAndSubtypes } from "../OrganizationAndGroupSchema/MemberOfAndSubtypes.osa.mjs";
-// export { MemberOfAndSubtypes } from "../OrganizationAndGroupSchema/MemberOfAndSubtypes.osa.mjs";
-
 
 /**
  * @summary MembershipRelationAttributes

@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type NamedDay, _decode_NamedDay, _encode_NamedDay } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
-// export { NamedDay, _decode_NamedDay, _encode_NamedDay } from "../SelectedAttributeTypes/NamedDay.ta.mjs";
-
 
 /**
  * @summary XDayOf
@@ -71,6 +69,5 @@ function _encode_XDayOf (value: XDayOf, elGetter: $.ASN1Encoder<any>): _Element 
 }, $.BER); }
     return _cached_encoder_for_XDayOf(value, elGetter);
 }
-
 
 /* eslint-enable */

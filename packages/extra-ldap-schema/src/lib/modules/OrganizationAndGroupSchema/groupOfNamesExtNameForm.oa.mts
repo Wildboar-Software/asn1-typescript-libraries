@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { groupOfNamesExt } from "../OrganizationAndGroupSchema/groupOfNamesExt.oa.mjs";
-// export { groupOfNamesExt } from "../OrganizationAndGroupSchema/groupOfNamesExt.oa.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary groupOfNamesExtNameForm

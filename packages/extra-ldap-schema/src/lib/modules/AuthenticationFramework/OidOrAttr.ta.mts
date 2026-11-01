@@ -4,11 +4,7 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ExtAttributes } from "../AuthenticationFramework/ExtAttributes.osa.mjs";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
-// export { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
-
 
 /**
  * @summary OidOrAttr
@@ -63,6 +59,5 @@ function _encode_OidOrAttr (value: OidOrAttr, elGetter: $.ASN1Encoder<any>): _El
 }, $.BER); }
     return _cached_encoder_for_OidOrAttr(value, elGetter);
 }
-
 
 /* eslint-enable */

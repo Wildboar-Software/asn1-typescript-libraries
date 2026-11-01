@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
-// export { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_inetOrgPersonNameForm } from "../InetOrgPerson/id-nf-inetOrgPersonNameForm.va.mjs";
-// export { id_nf_inetOrgPersonNameForm } from "../InetOrgPerson/id-nf-inetOrgPersonNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary inetOrgPersonNameForm

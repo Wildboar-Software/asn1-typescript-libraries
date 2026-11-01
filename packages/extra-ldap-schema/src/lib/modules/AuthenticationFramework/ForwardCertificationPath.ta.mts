@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type CrossCertificates, _decode_CrossCertificates, _encode_CrossCertificates } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
-// export { CrossCertificates, _decode_CrossCertificates, _encode_CrossCertificates } from "../AuthenticationFramework/CrossCertificates.ta.mjs";
-
 
 /**
  * @summary ForwardCertificationPath
@@ -53,6 +51,5 @@ function _encode_ForwardCertificationPath (value: ForwardCertificationPath, elGe
     if (!_cached_encoder_for_ForwardCertificationPath) { _cached_encoder_for_ForwardCertificationPath = $._encodeSequenceOf<CrossCertificates>(() => _encode_CrossCertificates, $.BER); }
     return _cached_encoder_for_ForwardCertificationPath(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -5,10 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
-// export { oid } from "../SelectedAttributeTypes/oid.oa.mjs";
 import { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va.mjs";
-// export { id_mr_objectIdentifierMatch } from "../InformationFramework/id-mr-objectIdentifierMatch.va.mjs";
-
 
 /**
  * @summary objectIdentifierMatch

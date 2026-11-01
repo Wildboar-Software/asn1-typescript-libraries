@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { samDomain } from "../LdapSchema2ldifMicrosoft/samDomain.oa.mjs";
-// export { samDomain } from "../LdapSchema2ldifMicrosoft/samDomain.oa.mjs";
 import { samDomainBase } from "../LdapSchema2ldifMicrosoft/samDomainBase.oa.mjs";
-// export { samDomainBase } from "../LdapSchema2ldifMicrosoft/samDomainBase.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
-
 
 /**
  * @summary samDomain_rule

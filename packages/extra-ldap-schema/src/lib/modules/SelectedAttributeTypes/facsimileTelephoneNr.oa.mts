@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { FacsimileTelephoneNumber, _decode_FacsimileTelephoneNumber, _encode_FacsimileTelephoneNumber } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
-// export { FacsimileTelephoneNumber, _decode_FacsimileTelephoneNumber, _encode_FacsimileTelephoneNumber } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.mjs";
-// export { id_lsx_facsimileTelephoneNr } from "../SelectedAttributeTypes/id-lsx-facsimileTelephoneNr.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary facsimileTelephoneNr

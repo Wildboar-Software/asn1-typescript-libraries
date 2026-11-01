@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 
 /**
  * @summary HASH
@@ -73,7 +71,6 @@ class HASH<ToBeHashed> {
     public static _from_object (_o: { [_K in keyof (HASH<any>)]: (HASH<any>)[_K] }): HASH<any> {
         return new HASH(_o.algorithmIdentifier, _o.hashValue, _o._unrecognizedExtensionsList);
     }
-
 
 }
 

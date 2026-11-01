@@ -7,10 +7,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { Attribute_valuesWithContext_Item, _decode_Attribute_valuesWithContext_Item, _encode_Attribute_valuesWithContext_Item } from "../InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
-// export { Attribute_valuesWithContext_Item, _decode_Attribute_valuesWithContext_Item, _encode_Attribute_valuesWithContext_Item } from "../InformationFramework/Attribute-valuesWithContext-Item.ta.mjs";
-
 
 /**
  * @summary Attribute
@@ -88,7 +85,6 @@ class Attribute {
     public static _from_object (_o: { [_K in keyof (Attribute)]: (Attribute)[_K] }): Attribute {
         return new Attribute(_o.type_, _o.values, _o.valuesWithContext, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -199,6 +195,5 @@ function _encode_Attribute (value: Attribute, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_Attribute(value, elGetter);
 }
-
 
 /* eslint-enable */

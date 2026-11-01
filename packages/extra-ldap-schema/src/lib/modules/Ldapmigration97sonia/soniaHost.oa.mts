@@ -68,13 +68,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ipHost } from "../NIS/ipHost.oa.mjs";
-// export { ipHost } from "../NIS/ipHost.oa.mjs";
 import { id_oc_soniaHost } from "../Ldapmigration97sonia/id-oc-soniaHost.va.mjs";
-// export { id_oc_soniaHost } from "../Ldapmigration97sonia/id-oc-soniaHost.va.mjs";
-
 
 import { soniaHostMacAddress } from "../Ldapmigration97sonia/soniaHostMacAddress.oa.mjs";
 import { soniaHostSubdomainName } from "../Ldapmigration97sonia/soniaHostSubdomainName.oa.mjs";

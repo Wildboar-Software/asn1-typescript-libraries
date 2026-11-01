@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { InfoSyntax_pointer, _decode_InfoSyntax_pointer, _encode_InfoSyntax_pointer } from "../AuthenticationFramework/InfoSyntax-pointer.ta.mjs";
-// export { InfoSyntax_pointer, _decode_InfoSyntax_pointer, _encode_InfoSyntax_pointer } from "../AuthenticationFramework/InfoSyntax-pointer.ta.mjs";
-
 
 /**
  * @summary InfoSyntax
@@ -69,6 +66,5 @@ function _encode_InfoSyntax (value: InfoSyntax, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_InfoSyntax(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -7,9 +7,6 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-
 
 /**
  * @summary DITContentRule
@@ -111,7 +108,6 @@ class DITContentRule {
     public static _from_object (_o: { [_K in keyof (DITContentRule)]: (DITContentRule)[_K] }): DITContentRule {
         return new DITContentRule(_o.structuralObjectClass, _o.auxiliaries, _o.mandatory, _o.optional, _o.precluded, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -238,6 +234,5 @@ function _encode_DITContentRule (value: DITContentRule, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_DITContentRule(value, elGetter);
 }
-
 
 /* eslint-enable */

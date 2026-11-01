@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { organizationalRoleExt } from "../OrganizationAndGroupSchema/organizationalRoleExt.oa.mjs";
-// export { organizationalRoleExt } from "../OrganizationAndGroupSchema/organizationalRoleExt.oa.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary organizationalRoleExtNameForm

@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa.mjs";
-// export { applicationProcess } from "../SelectedObjectClasses/applicationProcess.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va.mjs";
-// export { id_nf_applProcessNameForm } from "../SelectedObjectClasses/id-nf-applProcessNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary applProcessNameForm

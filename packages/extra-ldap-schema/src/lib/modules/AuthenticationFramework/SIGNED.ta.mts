@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 
 /**
  * @summary SIGNED
@@ -107,7 +105,6 @@ class SIGNED<ToBeSigned> {
     public static _from_object (_o: { [_K in keyof (SIGNED<any>)]: (SIGNED<any>)[_K] }): SIGNED<any> {
         return new SIGNED(_o.toBeSigned, _o.algorithmIdentifier, _o.signature, _o.altAlgorithmIdentifier, _o.altSignature, _o._unrecognizedExtensionsList);
     }
-
 
 }
 

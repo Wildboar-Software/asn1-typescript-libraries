@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-// export { IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
 import { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.mjs";
-// export { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary intEmailString

@@ -68,8 +68,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 
 /**
  * @summary SearchRuleDescription
@@ -139,7 +137,6 @@ class SearchRuleDescription {
     public static _from_object (_o: { [_K in keyof (SearchRuleDescription)]: (SearchRuleDescription)[_K] }): SearchRuleDescription {
         return new SearchRuleDescription(_o._componentsOf_SearchRule, _o.name, _o.description, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -252,6 +249,5 @@ function _encode_SearchRuleDescription (value: SearchRuleDescription, elGetter: 
 }; }
     return _cached_encoder_for_SearchRuleDescription(value, elGetter);
 }
-
 
 /* eslint-enable */

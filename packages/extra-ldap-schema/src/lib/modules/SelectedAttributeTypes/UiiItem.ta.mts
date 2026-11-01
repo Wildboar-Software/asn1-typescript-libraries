@@ -7,8 +7,6 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-
 
 /**
  * @summary UiiItem
@@ -62,7 +60,6 @@ class UiiItem {
     public static _from_object (_o: { [_K in keyof (UiiItem)]: (UiiItem)[_K] }): UiiItem {
         return new UiiItem(_o.type_, _o.length);
     }
-
 
 }
 
@@ -158,6 +155,5 @@ function _encode_UiiItem (value: UiiItem, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_UiiItem(value, elGetter);
 }
-
 
 /* eslint-enable */

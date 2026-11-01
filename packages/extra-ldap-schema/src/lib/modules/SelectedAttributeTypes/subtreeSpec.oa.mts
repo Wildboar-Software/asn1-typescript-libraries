@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { SubtreeSpecification, _decode_SubtreeSpecification, _encode_SubtreeSpecification } from "../InformationFramework/SubtreeSpecification.ta.mjs";
-// export { SubtreeSpecification, _decode_SubtreeSpecification, _encode_SubtreeSpecification } from "../InformationFramework/SubtreeSpecification.ta.mjs";
 import { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va.mjs";
-// export { id_lsx_subtreeSpec } from "../SelectedAttributeTypes/id-lsx-subtreeSpec.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary subtreeSpec

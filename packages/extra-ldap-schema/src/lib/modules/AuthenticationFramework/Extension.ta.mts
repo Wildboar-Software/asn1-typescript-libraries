@@ -8,10 +8,6 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-// export { ExtensionSet } from "../AuthenticationFramework/ExtensionSet.osa.mjs";
-// export { der } from "../AuthenticationFramework/der.va.mjs";
-
 
 /**
  * @summary Extension
@@ -202,6 +198,5 @@ function _encode_Extension (value: Extension, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_Extension(value, elGetter);
 }
-
 
 /* eslint-enable */

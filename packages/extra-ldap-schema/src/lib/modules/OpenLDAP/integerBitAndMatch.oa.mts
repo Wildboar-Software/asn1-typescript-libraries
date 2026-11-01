@@ -5,9 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-// export { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 
 /**
  * @summary integerBitAndMatch

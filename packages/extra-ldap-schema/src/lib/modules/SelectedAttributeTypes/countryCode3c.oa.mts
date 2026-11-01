@@ -1,16 +1,10 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { name } from "../SelectedAttributeTypes/name.oa.mjs";
-// export { name } from "../SelectedAttributeTypes/name.oa.mjs";
 import { type CountryCode3c, _decode_CountryCode3c, _encode_CountryCode3c } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
-// export { CountryCode3c, _decode_CountryCode3c, _encode_CountryCode3c } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";
 import { countryString3c } from "../SelectedAttributeTypes/countryString3c.oa.mjs";
-// export { countryString3c } from "../SelectedAttributeTypes/countryString3c.oa.mjs";
 import { id_at_countryCode3c } from "../SelectedAttributeTypes/id-at-countryCode3c.va.mjs";
-// export { id_at_countryCode3c } from "../SelectedAttributeTypes/id-at-countryCode3c.va.mjs";
-
 
 /**
  * @summary countryCode3c

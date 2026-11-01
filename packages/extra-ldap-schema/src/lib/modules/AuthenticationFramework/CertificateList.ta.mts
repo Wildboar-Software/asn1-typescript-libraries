@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SIGNED, _get_decoder_for_SIGNED, _get_encoder_for_SIGNED } from "../AuthenticationFramework/SIGNED.ta.mjs";
-// export { SIGNED, _get_decoder_for_SIGNED, _get_encoder_for_SIGNED } from "../AuthenticationFramework/SIGNED.ta.mjs";
 import { CertificateListContent, _decode_CertificateListContent, _encode_CertificateListContent } from "../AuthenticationFramework/CertificateListContent.ta.mjs";
-// export { CertificateListContent, _decode_CertificateListContent, _encode_CertificateListContent } from "../AuthenticationFramework/CertificateListContent.ta.mjs";
-
 
 /**
  * @summary CertificateList
@@ -50,6 +47,5 @@ function _encode_CertificateList (value: CertificateList, elGetter: $.ASN1Encode
     if (!_cached_encoder_for_CertificateList) { _cached_encoder_for_CertificateList = _get_encoder_for_SIGNED<CertificateListContent>(_encode_CertificateListContent); }
     return _cached_encoder_for_CertificateList(value, elGetter);
 }
-
 
 /* eslint-enable */

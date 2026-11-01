@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { type CaseIgnoreList, _decode_CaseIgnoreList, _encode_CaseIgnoreList } from "../SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
-// export { CaseIgnoreList, _decode_CaseIgnoreList, _encode_CaseIgnoreList } from "../SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
 import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
-// export { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
 import { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.mjs";
-// export { id_mr_caseIgnoreListMatch } from "../SelectedAttributeTypes/id-mr-caseIgnoreListMatch.va.mjs";
-
 
 /**
  * @summary caseIgnoreListMatch

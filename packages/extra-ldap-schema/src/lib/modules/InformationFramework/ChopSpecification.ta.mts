@@ -7,10 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-// export { ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
 import { type BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
-// export { BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
-
 
 /**
  * @summary ChopSpecification
@@ -206,6 +203,5 @@ function _encode_ChopSpecification (value: ChopSpecification, elGetter: $.ASN1En
 }; }
     return _cached_encoder_for_ChopSpecification(value, elGetter);
 }
-
 
 /* eslint-enable */

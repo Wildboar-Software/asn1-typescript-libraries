@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { id_lsx_directoryString } from "../SelectedAttributeTypes/id-lsx-directoryString.va.mjs";
-// export { id_lsx_directoryString } from "../SelectedAttributeTypes/id-lsx-directoryString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary directoryString

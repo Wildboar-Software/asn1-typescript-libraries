@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { pkcs_9_mr } from "../PKCS-9/pkcs-9-mr.va.mjs";
-// export { pkcs_9_mr } from "../PKCS-9/pkcs-9-mr.va.mjs";
-
 
 /**
  * @summary pkcs_9_mr_caseIgnoreMatch

@@ -8,9 +8,6 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-// export { SupportedContexts } from "../InformationFramework/SupportedContexts.osa.mjs";
-
 
 /**
  * @summary Context
@@ -203,6 +200,5 @@ function _encode_Context (value: Context, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_Context(value, elGetter);
 }
-
 
 /* eslint-enable */

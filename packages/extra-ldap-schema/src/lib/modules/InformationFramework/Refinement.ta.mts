@@ -6,8 +6,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-
 
 // TODO: CHECK_RECURSIVE_DEFINITION
 /**
@@ -78,6 +76,5 @@ function _encode_Refinement (value: Refinement, elGetter: $.ASN1Encoder<any>): _
 }, $.BER); }
     return _cached_encoder_for_Refinement(value, elGetter);
 }
-
 
 /* eslint-enable */

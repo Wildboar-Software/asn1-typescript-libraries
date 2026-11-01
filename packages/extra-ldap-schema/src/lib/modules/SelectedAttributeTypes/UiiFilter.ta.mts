@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { UiiItem, _decode_UiiItem, _encode_UiiItem } from "../SelectedAttributeTypes/UiiItem.ta.mjs";
-// export { UiiItem, _decode_UiiItem, _encode_UiiItem } from "../SelectedAttributeTypes/UiiItem.ta.mjs";
-
 
 // TODO: CHECK_RECURSIVE_DEFINITION
 /**
@@ -68,6 +66,5 @@ function _encode_UiiFilter (value: UiiFilter, elGetter: $.ASN1Encoder<any>): _El
 }, $.BER); }
     return _cached_encoder_for_UiiFilter(value, elGetter);
 }
-
 
 /* eslint-enable */

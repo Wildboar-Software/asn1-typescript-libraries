@@ -68,15 +68,10 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2PolicyUserDomainForeignKey } from "../LdapGlue512Policy/gLUE2PolicyUserDomainForeignKey.oa.mjs";
-// export { gLUE2PolicyUserDomainForeignKey } from "../LdapGlue512Policy/gLUE2PolicyUserDomainForeignKey.oa.mjs";
 import { id_oc_gLUE2Policy } from "../LdapGlue512Policy/id-oc-gLUE2Policy.va.mjs";
-// export { id_oc_gLUE2Policy } from "../LdapGlue512Policy/id-oc-gLUE2Policy.va.mjs";
-
 
 import { gLUE2PolicyID } from "../LdapGlue512Policy/gLUE2PolicyID.oa.mjs";
 import { gLUE2PolicyScheme } from "../LdapGlue512Policy/gLUE2PolicyScheme.oa.mjs";

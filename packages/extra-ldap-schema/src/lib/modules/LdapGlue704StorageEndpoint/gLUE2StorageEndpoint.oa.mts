@@ -1,14 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
-// export { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
 import { gLUE2StorageEndpointStorageServiceForeignKey } from "../LdapGlue704StorageEndpoint/gLUE2StorageEndpointStorageServiceForeignKey.oa.mjs";
-// export { gLUE2StorageEndpointStorageServiceForeignKey } from "../LdapGlue704StorageEndpoint/gLUE2StorageEndpointStorageServiceForeignKey.oa.mjs";
 import { id_oc_gLUE2StorageEndpoint } from "../LdapGlue704StorageEndpoint/id-oc-gLUE2StorageEndpoint.va.mjs";
-// export { id_oc_gLUE2StorageEndpoint } from "../LdapGlue704StorageEndpoint/id-oc-gLUE2StorageEndpoint.va.mjs";
-
 
 /**
  * @summary gLUE2StorageEndpoint

@@ -1,13 +1,8 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { requiredContinentalRace } from "../OrganizationAndGroupSchema/requiredContinentalRace.oa.mjs";
-// export { requiredContinentalRace } from "../OrganizationAndGroupSchema/requiredContinentalRace.oa.mjs";
 import { requiredCountryRace } from "../OrganizationAndGroupSchema/requiredCountryRace.oa.mjs";
-// export { requiredCountryRace } from "../OrganizationAndGroupSchema/requiredCountryRace.oa.mjs";
 import { requiredRegionalRace } from "../OrganizationAndGroupSchema/requiredRegionalRace.oa.mjs";
-// export { requiredRegionalRace } from "../OrganizationAndGroupSchema/requiredRegionalRace.oa.mjs";
-
 
 /**
  * @summary RacialRequirements

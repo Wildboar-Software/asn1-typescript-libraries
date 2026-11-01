@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
-// export { Jid, _decode_Jid, _encode_Jid } from "../SelectedAttributeTypes/Jid.ta.mjs";
 import { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.mjs";
-// export { id_asx_jidString } from "../SelectedAttributeTypes/id-asx-jidString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary jidString

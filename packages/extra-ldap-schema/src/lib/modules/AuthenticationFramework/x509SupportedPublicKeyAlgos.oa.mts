@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { SupportedPublicKeyAlgorithms, _decode_SupportedPublicKeyAlgorithms, _encode_SupportedPublicKeyAlgorithms } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
-// export { SupportedPublicKeyAlgorithms, _decode_SupportedPublicKeyAlgorithms, _encode_SupportedPublicKeyAlgorithms } from "../AuthenticationFramework/SupportedPublicKeyAlgorithms.ta.mjs";
 import { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.mjs";
-// export { id_asx_x509SupportedPublicKeyAlgos } from "../AuthenticationFramework/id-asx-x509SupportedPublicKeyAlgos.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary x509SupportedPublicKeyAlgos

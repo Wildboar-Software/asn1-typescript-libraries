@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 
 /**
  * @summary SIGNATURE
@@ -71,7 +69,6 @@ class SIGNATURE {
     public static _from_object (_o: { [_K in keyof (SIGNATURE)]: (SIGNATURE)[_K] }): SIGNATURE {
         return new SIGNATURE(_o.algorithmIdentifier, _o.signature, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -171,6 +168,5 @@ function _encode_SIGNATURE (value: SIGNATURE, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_SIGNATURE(value, elGetter);
 }
-
 
 /* eslint-enable */

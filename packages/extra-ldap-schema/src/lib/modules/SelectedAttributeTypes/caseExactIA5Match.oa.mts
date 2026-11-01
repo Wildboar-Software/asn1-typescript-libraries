@@ -5,10 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
-// export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";
-// export { id_lmr_caseExactIA5Match } from "../SelectedAttributeTypes/id-lmr-caseExactIA5Match.va.mjs";
-
 
 /**
  * @summary caseExactIA5Match

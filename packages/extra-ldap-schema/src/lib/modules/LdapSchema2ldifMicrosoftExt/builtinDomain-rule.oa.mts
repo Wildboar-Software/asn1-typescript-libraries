@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { builtinDomain } from "../LdapSchema2ldifMicrosoft/builtinDomain.oa.mjs";
-// export { builtinDomain } from "../LdapSchema2ldifMicrosoft/builtinDomain.oa.mjs";
 import { samDomainBase } from "../LdapSchema2ldifMicrosoft/samDomainBase.oa.mjs";
-// export { samDomainBase } from "../LdapSchema2ldifMicrosoft/samDomainBase.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
-
 
 /**
  * @summary builtinDomain_rule

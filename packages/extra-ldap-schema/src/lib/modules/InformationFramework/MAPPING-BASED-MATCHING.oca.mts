@@ -5,9 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-
 
 /**
  * @summary MAPPING_BASED_MATCHING

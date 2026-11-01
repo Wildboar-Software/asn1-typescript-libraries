@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { DNSRecordAssertion, _decode_DNSRecordAssertion, _encode_DNSRecordAssertion } from "../DNSFramework/DNSRecordAssertion.ta.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { DNSRecordAssertion, _decode_DNSRecordAssertion, _encode_DNSRecordAssertion } from "../DNSFramework/DNSRecordAssertion.ta.mjs";
 import { id_mr_dnsRecordEqualityMatch } from "../DNSFramework/id-mr-dnsRecordEqualityMatch.va.mjs";
-// export { id_mr_dnsRecordEqualityMatch } from "../DNSFramework/id-mr-dnsRecordEqualityMatch.va.mjs";
-
 
 /**
  * @summary dnsRecordEqualityMatch

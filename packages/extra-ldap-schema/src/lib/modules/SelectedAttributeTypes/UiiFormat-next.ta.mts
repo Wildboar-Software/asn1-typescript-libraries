@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
-// export { UiiFilter, _decode_UiiFilter, _encode_UiiFilter } from "../SelectedAttributeTypes/UiiFilter.ta.mjs";
-
 
 /**
  * @summary UiiFormat_next
@@ -62,6 +60,5 @@ function _encode_UiiFormat_next (value: UiiFormat_next, elGetter: $.ASN1Encoder<
 }, $.BER); }
     return _cached_encoder_for_UiiFormat_next(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_openldap } from "../OpenLDAP/id-openldap.va.mjs";
-// export { id_openldap } from "../OpenLDAP/id-openldap.va.mjs";
-
 
 /**
  * @summary id_openldap_at

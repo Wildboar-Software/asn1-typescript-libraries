@@ -1,11 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { contributorDN } from "../OrganizationAndGroupSchema/contributorDN.oa.mjs";
-// export { contributorDN } from "../OrganizationAndGroupSchema/contributorDN.oa.mjs";
 import { topContributorDN } from "../OrganizationAndGroupSchema/topContributorDN.oa.mjs";
-// export { topContributorDN } from "../OrganizationAndGroupSchema/topContributorDN.oa.mjs";
-
 
 /**
  * @summary ContributionAttributes

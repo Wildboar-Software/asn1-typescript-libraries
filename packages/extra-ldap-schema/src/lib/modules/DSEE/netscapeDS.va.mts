@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { netscapeRoot } from "../DSEE/netscapeRoot.va.mjs";
-// export { netscapeRoot } from "../DSEE/netscapeRoot.va.mjs";
-
 
 /**
  * @summary netscapeDS

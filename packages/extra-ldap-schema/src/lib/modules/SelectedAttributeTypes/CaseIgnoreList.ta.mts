@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 
 /**
  * @summary CaseIgnoreList
@@ -48,6 +46,5 @@ function _encode_CaseIgnoreList (value: CaseIgnoreList, elGetter: $.ASN1Encoder<
     if (!_cached_encoder_for_CaseIgnoreList) { _cached_encoder_for_CaseIgnoreList = $._encodeSequenceOf<UnboundedDirectoryString>(() => _encode_UnboundedDirectoryString, $.BER); }
     return _cached_encoder_for_CaseIgnoreList(value, elGetter);
 }
-
 
 /* eslint-enable */

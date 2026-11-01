@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
-// export { PolicyID, _decode_PolicyID, _encode_PolicyID } from "../AuthenticationFramework/PolicyID.ta.mjs";
 import { type InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
-// export { InfoSyntax, _decode_InfoSyntax, _encode_InfoSyntax } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
-
 
 /**
  * @summary PolicySyntax
@@ -72,7 +69,6 @@ class PolicySyntax {
     public static _from_object (_o: { [_K in keyof (PolicySyntax)]: (PolicySyntax)[_K] }): PolicySyntax {
         return new PolicySyntax(_o.policyIdentifier, _o.policySyntax, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -172,6 +168,5 @@ function _encode_PolicySyntax (value: PolicySyntax, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_PolicySyntax(value, elGetter);
 }
-
 
 /* eslint-enable */

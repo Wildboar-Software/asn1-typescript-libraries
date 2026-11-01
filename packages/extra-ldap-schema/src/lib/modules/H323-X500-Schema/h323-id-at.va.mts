@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { h323_Id } from "../H323-X500-Schema/h323-Id.va.mjs";
-// export { h323_Id } from "../H323-X500-Schema/h323-Id.va.mjs";
-
 
 /**
  * @summary h323_id_at

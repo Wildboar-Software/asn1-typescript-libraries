@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { type OctetSubstringAssertion, _decode_OctetSubstringAssertion, _encode_OctetSubstringAssertion } from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
-// export { OctetSubstringAssertion, _decode_OctetSubstringAssertion, _encode_OctetSubstringAssertion } from "../SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 import { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va.mjs";
-// export { id_mr_octetStringSubstringsMatch } from "../SelectedAttributeTypes/id-mr-octetStringSubstringsMatch.va.mjs";
-
 
 /**
  * @summary octetStringSubstringsMatch

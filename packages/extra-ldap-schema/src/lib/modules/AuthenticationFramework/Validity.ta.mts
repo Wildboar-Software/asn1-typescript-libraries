@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-
 
 /**
  * @summary Validity
@@ -69,7 +67,6 @@ class Validity {
     public static _from_object (_o: { [_K in keyof (Validity)]: (Validity)[_K] }): Validity {
         return new Validity(_o.notBefore, _o.notAfter, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -169,6 +166,5 @@ function _encode_Validity (value: Validity, elGetter: $.ASN1Encoder<any>): _Elem
 }; }
     return _cached_encoder_for_Validity(value, elGetter);
 }
-
 
 /* eslint-enable */

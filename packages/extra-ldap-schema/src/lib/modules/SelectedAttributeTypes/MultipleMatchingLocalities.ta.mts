@@ -6,10 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { AttributeValueAssertion, _decode_AttributeValueAssertion, _encode_AttributeValueAssertion } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-// export { AttributeValueAssertion, _decode_AttributeValueAssertion, _encode_AttributeValueAssertion } from "../InformationFramework/AttributeValueAssertion.ta.mjs";
-
 
 /**
  * @summary MultipleMatchingLocalities
@@ -72,7 +69,6 @@ class MultipleMatchingLocalities {
     public static _from_object (_o: { [_K in keyof (MultipleMatchingLocalities)]: (MultipleMatchingLocalities)[_K] }): MultipleMatchingLocalities {
         return new MultipleMatchingLocalities(_o.matchingRuleUsed, _o.attributeList, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -178,6 +174,5 @@ function _encode_MultipleMatchingLocalities (value: MultipleMatchingLocalities, 
 }; }
     return _cached_encoder_for_MultipleMatchingLocalities(value, elGetter);
 }
-
 
 /* eslint-enable */

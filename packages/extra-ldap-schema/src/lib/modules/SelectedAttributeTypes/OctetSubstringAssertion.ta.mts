@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type OctetSubstringAssertion_Item, _decode_OctetSubstringAssertion_Item, _encode_OctetSubstringAssertion_Item } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
-// export { OctetSubstringAssertion_Item, _decode_OctetSubstringAssertion_Item, _encode_OctetSubstringAssertion_Item } from "../SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
-
 
 /**
  * @summary OctetSubstringAssertion
@@ -63,6 +61,5 @@ function _encode_OctetSubstringAssertion (value: OctetSubstringAssertion, elGett
     if (!_cached_encoder_for_OctetSubstringAssertion) { _cached_encoder_for_OctetSubstringAssertion = $._encodeSequenceOf<OctetSubstringAssertion_Item>(() => _encode_OctetSubstringAssertion_Item, $.BER); }
     return _cached_encoder_for_OctetSubstringAssertion(value, elGetter);
 }
-
 
 /* eslint-enable */

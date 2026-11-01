@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-// export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 
 /**
  * @summary SupportedAltAlgorithms

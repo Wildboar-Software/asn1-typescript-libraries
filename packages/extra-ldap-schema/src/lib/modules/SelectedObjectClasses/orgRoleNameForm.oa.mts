@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
-// export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_orgRoleNameForm } from "../SelectedObjectClasses/id-nf-orgRoleNameForm.va.mjs";
-// export { id_nf_orgRoleNameForm } from "../SelectedObjectClasses/id-nf-orgRoleNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary orgRoleNameForm

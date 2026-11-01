@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { subentry } from "../InformationFramework/subentry.oa.mjs";
-// export { subentry } from "../InformationFramework/subentry.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_subentryNameForm } from "../InformationFramework/id-nf-subentryNameForm.va.mjs";
-// export { id_nf_subentryNameForm } from "../InformationFramework/id-nf-subentryNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary subentryNameForm

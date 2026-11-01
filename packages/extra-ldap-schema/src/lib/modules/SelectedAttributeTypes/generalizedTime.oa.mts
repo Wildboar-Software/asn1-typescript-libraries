@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_lsx_generalizedTime } from "../SelectedAttributeTypes/id-lsx-generalizedTime.va.mjs";
-// export { id_lsx_generalizedTime } from "../SelectedAttributeTypes/id-lsx-generalizedTime.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary generalizedTime

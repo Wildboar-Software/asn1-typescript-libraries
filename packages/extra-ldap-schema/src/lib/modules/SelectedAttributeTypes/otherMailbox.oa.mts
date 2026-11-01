@@ -4,9 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_lsx_otherMailbox } from "../SelectedAttributeTypes/id-lsx-otherMailbox.va.mjs";
-// export { id_lsx_otherMailbox } from "../SelectedAttributeTypes/id-lsx-otherMailbox.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary otherMailbox

@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 
 /**
  * @summary FingerPrint
@@ -71,7 +69,6 @@ class FingerPrint<ToBeFingerprinted> {
     public static _from_object (_o: { [_K in keyof (FingerPrint<any>)]: (FingerPrint<any>)[_K] }): FingerPrint<any> {
         return new FingerPrint(_o.algorithmIdentifier, _o.fingerprint, _o._unrecognizedExtensionsList);
     }
-
 
 }
 

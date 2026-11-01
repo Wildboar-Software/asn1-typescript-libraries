@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { cu } from "../H323-X500-Schema/cu.va.mjs";
-// export { cu } from "../H323-X500-Schema/cu.va.mjs";
-
 
 /**
  * @summary cu_oc

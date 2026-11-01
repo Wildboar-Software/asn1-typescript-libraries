@@ -6,9 +6,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { SupportedAttributes } from "../InformationFramework/SupportedAttributes.osa.mjs";
-
 
 /**
  * @summary AttributeTypeAndValue
@@ -71,7 +68,6 @@ class AttributeTypeAndValue {
     public static _from_object (_o: { [_K in keyof (AttributeTypeAndValue)]: (AttributeTypeAndValue)[_K] }): AttributeTypeAndValue {
         return new AttributeTypeAndValue(_o.type_, _o.value, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -171,6 +167,5 @@ function _encode_AttributeTypeAndValue (value: AttributeTypeAndValue, elGetter: 
 }; }
     return _cached_encoder_for_AttributeTypeAndValue(value, elGetter);
 }
-
 
 /* eslint-enable */

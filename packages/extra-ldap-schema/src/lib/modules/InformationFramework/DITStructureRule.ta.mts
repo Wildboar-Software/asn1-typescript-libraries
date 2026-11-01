@@ -8,9 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type RuleIdentifier, _decode_RuleIdentifier, _encode_RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta.mjs";
-// export { RuleIdentifier, _decode_RuleIdentifier, _encode_RuleIdentifier } from "../InformationFramework/RuleIdentifier.ta.mjs";
-// export { NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary DITStructureRule
@@ -86,7 +83,6 @@ class DITStructureRule {
     public static _from_object (_o: { [_K in keyof (DITStructureRule)]: (DITStructureRule)[_K] }): DITStructureRule {
         return new DITStructureRule(_o.ruleIdentifier, _o.nameForm, _o.superiorStructureRules, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -197,6 +193,5 @@ function _encode_DITStructureRule (value: DITStructureRule, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_DITStructureRule(value, elGetter);
 }
-
 
 /* eslint-enable */

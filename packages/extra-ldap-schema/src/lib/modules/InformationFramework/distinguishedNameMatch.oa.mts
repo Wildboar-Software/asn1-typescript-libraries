@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
-// export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
-// export { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 import { id_mr_distinguishedNameMatch } from "../InformationFramework/id-mr-distinguishedNameMatch.va.mjs";
-// export { id_mr_distinguishedNameMatch } from "../InformationFramework/id-mr-distinguishedNameMatch.va.mjs";
-
 
 /**
  * @summary distinguishedNameMatch

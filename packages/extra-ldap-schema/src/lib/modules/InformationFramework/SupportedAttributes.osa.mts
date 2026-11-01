@@ -1,11 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
-// export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.mjs";
-// export { aliasedEntryName } from "../InformationFramework/aliasedEntryName.oa.mjs";
-
 
 /**
  * @summary SupportedAttributes

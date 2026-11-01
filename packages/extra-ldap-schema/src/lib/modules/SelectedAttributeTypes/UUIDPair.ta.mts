@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UUID, _decode_UUID, _encode_UUID } from "../SelectedAttributeTypes/UUID.ta.mjs";
-// export { UUID, _decode_UUID, _encode_UUID } from "../SelectedAttributeTypes/UUID.ta.mjs";
-
 
 /**
  * @summary UUIDPair
@@ -70,7 +68,6 @@ class UUIDPair {
     public static _from_object (_o: { [_K in keyof (UUIDPair)]: (UUIDPair)[_K] }): UUIDPair {
         return new UUIDPair(_o.issuerUUID, _o.subjectUUID, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -170,6 +167,5 @@ function _encode_UUIDPair (value: UUIDPair, elGetter: $.ASN1Encoder<any>): _Elem
 }; }
     return _cached_encoder_for_UUIDPair(value, elGetter);
 }
-
 
 /* eslint-enable */

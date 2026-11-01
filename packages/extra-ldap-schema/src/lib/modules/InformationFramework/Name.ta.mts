@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
-// export { RDNSequence, _decode_RDNSequence, _encode_RDNSequence } from "../InformationFramework/RDNSequence.ta.mjs";
 import { type DomainName, _decode_DomainName, _encode_DomainName } from "../InformationFramework/DomainName.ta.mjs";
-// export { DomainName, _decode_DomainName, _encode_DomainName } from "../InformationFramework/DomainName.ta.mjs";
-
 
 /**
  * @summary Name
@@ -65,6 +62,5 @@ function _encode_Name (value: Name, elGetter: $.ASN1Encoder<any>): _Element {
 }, $.BER); }
     return _cached_encoder_for_Name(value, elGetter);
 }
-
 
 /* eslint-enable */

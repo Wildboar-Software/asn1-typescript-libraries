@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeTypeAndValue, _decode_AttributeTypeAndValue, _encode_AttributeTypeAndValue } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-// export { AttributeTypeAndValue, _decode_AttributeTypeAndValue, _encode_AttributeTypeAndValue } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
-
 
 /**
  * @summary RelativeDistinguishedName
@@ -53,6 +51,5 @@ function _encode_RelativeDistinguishedName (value: RelativeDistinguishedName, el
     if (!_cached_encoder_for_RelativeDistinguishedName) { _cached_encoder_for_RelativeDistinguishedName = $._encodeSetOf<AttributeTypeAndValue>(() => _encode_AttributeTypeAndValue, $.BER); }
     return _cached_encoder_for_RelativeDistinguishedName(value, elGetter);
 }
-
 
 /* eslint-enable */

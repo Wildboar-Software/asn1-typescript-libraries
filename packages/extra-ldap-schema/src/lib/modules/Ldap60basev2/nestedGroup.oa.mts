@@ -1,14 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
-// export { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
 import { memberOf } from "../MSUser/memberOf.oa.mjs";
-// export { memberOf } from "../MSUser/memberOf.oa.mjs";
 import { id_oc_nestedGroup } from "../Ldap60basev2/id-oc-nestedGroup.va.mjs";
-// export { id_oc_nestedGroup } from "../Ldap60basev2/id-oc-nestedGroup.va.mjs";
-
 
 /**
  * @summary nestedGroup

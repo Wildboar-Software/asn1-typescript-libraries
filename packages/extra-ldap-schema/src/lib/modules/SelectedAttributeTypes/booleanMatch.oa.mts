@@ -5,10 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
-// export { bitString } from "../SelectedAttributeTypes/bitString.oa.mjs";
 import { id_mr_booleanMatch } from "../SelectedAttributeTypes/id-mr-booleanMatch.va.mjs";
-// export { id_mr_booleanMatch } from "../SelectedAttributeTypes/id-mr-booleanMatch.va.mjs";
-
 
 /**
  * @summary booleanMatch

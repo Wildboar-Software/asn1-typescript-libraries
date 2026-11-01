@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { type PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
-// export { PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
-
 
 /**
  * @summary SubjectPublicKeyInfo
@@ -72,7 +69,6 @@ class SubjectPublicKeyInfo {
     public static _from_object (_o: { [_K in keyof (SubjectPublicKeyInfo)]: (SubjectPublicKeyInfo)[_K] }): SubjectPublicKeyInfo {
         return new SubjectPublicKeyInfo(_o.algorithm, _o.subjectPublicKey, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -172,6 +168,5 @@ function _encode_SubjectPublicKeyInfo (value: SubjectPublicKeyInfo, elGetter: $.
 }; }
     return _cached_encoder_for_SubjectPublicKeyInfo(value, elGetter);
 }
-
 
 /* eslint-enable */

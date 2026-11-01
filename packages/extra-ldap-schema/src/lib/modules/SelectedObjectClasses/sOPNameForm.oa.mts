@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-// export { locality } from "../SelectedObjectClasses/locality.oa.mjs";
 import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
-// export { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
 import { id_nf_sOPNameForm } from "../SelectedObjectClasses/id-nf-sOPNameForm.va.mjs";
-// export { id_nf_sOPNameForm } from "../SelectedObjectClasses/id-nf-sOPNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary sOPNameForm

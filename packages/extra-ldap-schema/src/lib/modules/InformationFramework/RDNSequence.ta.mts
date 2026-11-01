@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type RelativeDistinguishedName, _decode_RelativeDistinguishedName, _encode_RelativeDistinguishedName } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-// export { RelativeDistinguishedName, _decode_RelativeDistinguishedName, _encode_RelativeDistinguishedName } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
-
 
 /**
  * @summary RDNSequence
@@ -48,6 +46,5 @@ function _encode_RDNSequence (value: RDNSequence, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_RDNSequence) { _cached_encoder_for_RDNSequence = $._encodeSequenceOf<RelativeDistinguishedName>(() => _encode_RelativeDistinguishedName, $.BER); }
     return _cached_encoder_for_RDNSequence(value, elGetter);
 }
-
 
 /* eslint-enable */

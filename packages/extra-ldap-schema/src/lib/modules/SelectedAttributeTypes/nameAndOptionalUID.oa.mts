@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { NameAndOptionalUID, _decode_NameAndOptionalUID, _encode_NameAndOptionalUID } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-// export { NameAndOptionalUID, _decode_NameAndOptionalUID, _encode_NameAndOptionalUID } from "../SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
 import { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va.mjs";
-// export { id_lsx_nameAndOptionalUID } from "../SelectedAttributeTypes/id-lsx-nameAndOptionalUID.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary nameAndOptionalUID

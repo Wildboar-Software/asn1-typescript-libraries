@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { PresentationAddress, _decode_PresentationAddress, _encode_PresentationAddress } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
-// export { PresentationAddress, _decode_PresentationAddress, _encode_PresentationAddress } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
 import { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va.mjs";
-// export { id_lsx_presentationAddr } from "../SelectedAttributeTypes/id-lsx-presentationAddr.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary presentationAddr

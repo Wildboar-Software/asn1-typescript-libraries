@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_netscapeObjClass } from "../InetOrgPerson/id-netscapeObjClass.va.mjs";
-// export { id_netscapeObjClass } from "../InetOrgPerson/id-netscapeObjClass.va.mjs";
-
 
 /**
  * @summary id_oc_inetOrgPerson

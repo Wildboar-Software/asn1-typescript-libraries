@@ -1,16 +1,10 @@
 /* eslint-disable */
 import { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.mjs";
-// export { oidRoot } from "../SelectedObjectClasses/oidRoot.oa.mjs";
 import { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
-// export { oidC1 } from "../SelectedAttributeTypes/oidC1.oa.mjs";
 import { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
-// export { oidC2 } from "../SelectedAttributeTypes/oidC2.oa.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-// export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.mjs";
-// export { id_oidRootNf } from "../SelectedObjectClasses/id-oidRootNf.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary oidRootNf

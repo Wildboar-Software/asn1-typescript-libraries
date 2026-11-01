@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { mhs_ds } from "../MIXERAddressMapping/mhs-ds.va.mjs";
-// export { mhs_ds } from "../MIXERAddressMapping/mhs-ds.va.mjs";
-
 
 /**
  * @summary mapping

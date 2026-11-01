@@ -1,14 +1,9 @@
 /* eslint-disable */
 import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
-// export { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
-// export { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
 import { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
-// export { id_nf_resPersonNameForm } from "../SelectedObjectClasses/id-nf-resPersonNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary resPersonNameForm

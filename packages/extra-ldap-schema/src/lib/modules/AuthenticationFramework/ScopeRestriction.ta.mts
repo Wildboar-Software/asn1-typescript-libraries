@@ -6,8 +6,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { SCOPE_RESTRICTION } from "../AuthenticationFramework/SCOPE-RESTRICTION.oca.mjs";
-
 
 /**
  * @summary ScopeRestriction
@@ -70,7 +68,6 @@ class ScopeRestriction {
     public static _from_object (_o: { [_K in keyof (ScopeRestriction)]: (ScopeRestriction)[_K] }): ScopeRestriction {
         return new ScopeRestriction(_o.id, _o.restriction, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -170,6 +167,5 @@ function _encode_ScopeRestriction (value: ScopeRestriction, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_ScopeRestriction(value, elGetter);
 }
-
 
 /* eslint-enable */

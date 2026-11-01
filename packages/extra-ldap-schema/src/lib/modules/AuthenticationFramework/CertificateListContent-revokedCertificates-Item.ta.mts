@@ -6,12 +6,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-// export { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import { type Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
-// export { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
-
 
 /**
  * @summary CertificateListContent_revokedCertificates_Item
@@ -83,7 +79,6 @@ class CertificateListContent_revokedCertificates_Item {
     public static _from_object (_o: { [_K in keyof (CertificateListContent_revokedCertificates_Item)]: (CertificateListContent_revokedCertificates_Item)[_K] }): CertificateListContent_revokedCertificates_Item {
         return new CertificateListContent_revokedCertificates_Item(_o.serialNumber, _o.revocationDate, _o.crlEntryExtensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -194,6 +189,5 @@ function _encode_CertificateListContent_revokedCertificates_Item (value: Certifi
 }; }
     return _cached_encoder_for_CertificateListContent_revokedCertificates_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

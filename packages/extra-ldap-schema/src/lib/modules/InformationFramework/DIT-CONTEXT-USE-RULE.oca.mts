@@ -3,10 +3,7 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-// export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-
 
 /**
  * @summary DIT_CONTEXT_USE_RULE

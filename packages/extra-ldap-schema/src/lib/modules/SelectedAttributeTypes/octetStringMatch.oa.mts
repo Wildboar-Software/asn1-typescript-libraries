@@ -5,10 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
-// export { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 import { id_mr_octetStringMatch } from "../SelectedAttributeTypes/id-mr-octetStringMatch.va.mjs";
-// export { id_mr_octetStringMatch } from "../SelectedAttributeTypes/id-mr-octetStringMatch.va.mjs";
-
 
 /**
  * @summary octetStringMatch

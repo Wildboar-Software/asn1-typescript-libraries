@@ -1,7 +1,5 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-// export { EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
-
 
 /**
  * @summary ExtensionSet

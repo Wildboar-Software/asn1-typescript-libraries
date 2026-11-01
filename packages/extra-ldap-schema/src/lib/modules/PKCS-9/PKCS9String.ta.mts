@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-// export { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-
 
 /**
  * @summary PKCS9String
@@ -64,6 +62,5 @@ function _encode_PKCS9String (value: PKCS9String, elGetter: $.ASN1Encoder<any>):
 }, $.BER); }
     return _cached_encoder_for_PKCS9String(value, elGetter);
 }
-
 
 /* eslint-enable */

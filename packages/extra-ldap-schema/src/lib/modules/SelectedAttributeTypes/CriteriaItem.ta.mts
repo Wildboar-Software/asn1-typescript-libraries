@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-
 
 /**
  * @summary CriteriaItem
@@ -73,6 +71,5 @@ function _encode_CriteriaItem (value: CriteriaItem, elGetter: $.ASN1Encoder<any>
 }, $.BER); }
     return _cached_encoder_for_CriteriaItem(value, elGetter);
 }
-
 
 /* eslint-enable */

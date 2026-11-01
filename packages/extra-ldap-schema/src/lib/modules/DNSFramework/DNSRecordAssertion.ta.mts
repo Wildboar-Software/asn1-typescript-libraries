@@ -7,12 +7,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type DNS_RR_Type, _decode_DNS_RR_Type, _encode_DNS_RR_Type } from "../DNSFramework/DNS-RR-Type.ta.mjs";
-// export { DNS_RR_Type, _decode_DNS_RR_Type, _encode_DNS_RR_Type } from "../DNSFramework/DNS-RR-Type.ta.mjs";
 import { type DNSClass, _decode_DNSClass, _encode_DNSClass } from "../DNSFramework/DNSClass.ta.mjs";
-// export { DNSClass, _decode_DNSClass, _encode_DNSClass } from "../DNSFramework/DNSClass.ta.mjs";
 import { type TTL, _decode_TTL, _encode_TTL } from "../DNSFramework/TTL.ta.mjs";
-// export { TTL, _decode_TTL, _encode_TTL } from "../DNSFramework/TTL.ta.mjs";
-
 
 /**
  * @summary DNSRecordAssertion
@@ -85,7 +81,6 @@ class DNSRecordAssertion {
     public static _from_object (_o: { [_K in keyof (DNSRecordAssertion)]: (DNSRecordAssertion)[_K] }): DNSRecordAssertion {
         return new DNSRecordAssertion(_o.type_, _o.class_, _o.ttl, _o.data);
     }
-
 
 }
 
@@ -197,6 +192,5 @@ function _encode_DNSRecordAssertion (value: DNSRecordAssertion, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_DNSRecordAssertion(value, elGetter);
 }
-
 
 /* eslint-enable */

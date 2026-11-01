@@ -1,18 +1,11 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { FacsimileTelephoneNumber, _decode_FacsimileTelephoneNumber, _encode_FacsimileTelephoneNumber } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
-// export { FacsimileTelephoneNumber, _decode_FacsimileTelephoneNumber, _encode_FacsimileTelephoneNumber } from "../SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { facsimileNumberMatch } from "../SelectedAttributeTypes/facsimileNumberMatch.oa.mjs";
-// export { facsimileNumberMatch } from "../SelectedAttributeTypes/facsimileNumberMatch.oa.mjs";
 import { facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/facsimileNumberSubstringsMatch.oa.mjs";
-// export { facsimileNumberSubstringsMatch } from "../SelectedAttributeTypes/facsimileNumberSubstringsMatch.oa.mjs";
 import { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa.mjs";
-// export { facsimileTelephoneNr } from "../SelectedAttributeTypes/facsimileTelephoneNr.oa.mjs";
 import { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va.mjs";
-// export { id_at_facsimileTelephoneNumber } from "../SelectedAttributeTypes/id-at-facsimileTelephoneNumber.va.mjs";
-
 
 /**
  * @summary facsimileTelephoneNumber

@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Extension, _decode_Extension, _encode_Extension } from "../AuthenticationFramework/Extension.ta.mjs";
-// export { Extension, _decode_Extension, _encode_Extension } from "../AuthenticationFramework/Extension.ta.mjs";
-
 
 /**
  * @summary Extensions
@@ -53,6 +51,5 @@ function _encode_Extensions (value: Extensions, elGetter: $.ASN1Encoder<any>): _
     if (!_cached_encoder_for_Extensions) { _cached_encoder_for_Extensions = $._encodeSequenceOf<Extension>(() => _encode_Extension, $.BER); }
     return _cached_encoder_for_Extensions(value, elGetter);
 }
-
 
 /* eslint-enable */

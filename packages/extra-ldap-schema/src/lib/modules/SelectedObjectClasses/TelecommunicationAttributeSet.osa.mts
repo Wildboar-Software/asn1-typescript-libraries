@@ -1,23 +1,13 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
-// export { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
 import { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.mjs";
-// export { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.mjs";
 import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
-// export { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
-// export { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
 import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
-// export { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
 import { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.mjs";
-// export { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.mjs";
 import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.mjs";
-// export { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.mjs";
 import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
-// export { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
-
 
 /**
  * @summary TelecommunicationAttributeSet

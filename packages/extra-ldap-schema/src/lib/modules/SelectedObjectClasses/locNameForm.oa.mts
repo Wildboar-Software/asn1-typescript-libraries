@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
-// export { locality } from "../SelectedObjectClasses/locality.oa.mjs";
 import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
-// export { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
 import { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.mjs";
-// export { id_nf_locNameForm } from "../SelectedObjectClasses/id-nf-locNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary locNameForm

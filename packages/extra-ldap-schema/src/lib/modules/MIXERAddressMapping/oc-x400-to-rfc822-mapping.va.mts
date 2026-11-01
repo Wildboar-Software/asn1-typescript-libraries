@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { oc } from "../MIXERAddressMapping/oc.va.mjs";
-// export { oc } from "../MIXERAddressMapping/oc.va.mjs";
-
 
 /**
  * @summary oc_x400_to_rfc822_mapping

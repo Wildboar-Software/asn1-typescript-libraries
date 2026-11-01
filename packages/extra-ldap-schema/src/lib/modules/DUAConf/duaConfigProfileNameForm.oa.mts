@@ -3,11 +3,8 @@ import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { duaConfigProfile } from "../DUAConf/duaConfigProfile.oa.mjs";
-// export { duaConfigProfile } from "../DUAConf/duaConfigProfile.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary duaConfigProfileNameForm

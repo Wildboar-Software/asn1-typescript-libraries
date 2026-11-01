@@ -7,10 +7,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type EpcFormat_fields_Item_charField, _decode_EpcFormat_fields_Item_charField, _encode_EpcFormat_fields_Item_charField } from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";
-// export { EpcFormat_fields_Item_charField, _decode_EpcFormat_fields_Item_charField, _encode_EpcFormat_fields_Item_charField } from "../SelectedAttributeTypes/EpcFormat-fields-Item-charField.ta.mjs";
 import { EpcFormat_fields_Item_result, EpcFormat_fields_Item_result_numericPad /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EpcFormat_fields_Item_result, _encode_EpcFormat_fields_Item_result, _enum_for_EpcFormat_fields_Item_result } from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.mjs";
-// export { EpcFormat_fields_Item_result, _enum_for_EpcFormat_fields_Item_result, EpcFormat_fields_Item_result_numericPad /* IMPORTED_LONG_ENUMERATION_ITEM */, numericPad /* IMPORTED_SHORT_ENUMERATION_ITEM */, EpcFormat_fields_Item_result_numeric /* IMPORTED_LONG_ENUMERATION_ITEM */, numeric /* IMPORTED_SHORT_ENUMERATION_ITEM */, EpcFormat_fields_Item_result_alpha7bits /* IMPORTED_LONG_ENUMERATION_ITEM */, alpha7bits /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EpcFormat_fields_Item_result, _encode_EpcFormat_fields_Item_result } from "../SelectedAttributeTypes/EpcFormat-fields-Item-result.ta.mjs";
-
 
 /**
  * @summary EpcFormat_fields_Item
@@ -191,6 +188,5 @@ function _encode_EpcFormat_fields_Item (value: EpcFormat_fields_Item, elGetter: 
 }; }
     return _cached_encoder_for_EpcFormat_fields_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

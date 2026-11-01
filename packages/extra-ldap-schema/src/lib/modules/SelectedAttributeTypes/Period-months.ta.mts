@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Period_months_bitMonth, _decode_Period_months_bitMonth, _encode_Period_months_bitMonth } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
-// export { Period_months_bitMonth, Period_months_bitMonth_january /* IMPORTED_LONG_NAMED_BIT */, january /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_february /* IMPORTED_LONG_NAMED_BIT */, february /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_march /* IMPORTED_LONG_NAMED_BIT */, march /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_april /* IMPORTED_LONG_NAMED_BIT */, april /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_may /* IMPORTED_LONG_NAMED_BIT */, may /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_june /* IMPORTED_LONG_NAMED_BIT */, june /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_july /* IMPORTED_LONG_NAMED_BIT */, july /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_august /* IMPORTED_LONG_NAMED_BIT */, august /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_september /* IMPORTED_LONG_NAMED_BIT */, september /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_october /* IMPORTED_LONG_NAMED_BIT */, october /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_november /* IMPORTED_LONG_NAMED_BIT */, november /* IMPORTED_SHORT_NAMED_BIT */, Period_months_bitMonth_december /* IMPORTED_LONG_NAMED_BIT */, december /* IMPORTED_SHORT_NAMED_BIT */, _decode_Period_months_bitMonth, _encode_Period_months_bitMonth } from "../SelectedAttributeTypes/Period-months-bitMonth.ta.mjs";
-
 
 /**
  * @summary Period_months
@@ -78,6 +76,5 @@ function _encode_Period_months (value: Period_months, elGetter: $.ASN1Encoder<an
 }, $.BER); }
     return _cached_encoder_for_Period_months(value, elGetter);
 }
-
 
 /* eslint-enable */

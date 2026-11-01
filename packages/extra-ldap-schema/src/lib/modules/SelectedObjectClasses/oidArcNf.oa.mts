@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { oidArc } from "../SelectedObjectClasses/oidArc.oa.mjs";
-// export { oidArc } from "../SelectedObjectClasses/oidArc.oa.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-// export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_oidArcNf } from "../SelectedObjectClasses/id-oidArcNf.va.mjs";
-// export { id_oidArcNf } from "../SelectedObjectClasses/id-oidArcNf.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary oidArcNf

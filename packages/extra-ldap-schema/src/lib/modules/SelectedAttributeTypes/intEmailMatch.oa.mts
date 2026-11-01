@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { type IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
-// export { IntEmail, _decode_IntEmail, _encode_IntEmail } from "../SelectedAttributeTypes/IntEmail.ta.mjs";
 import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
-// export { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
 import { id_mr_intEmailMatch } from "../SelectedAttributeTypes/id-mr-intEmailMatch.va.mjs";
-// export { id_mr_intEmailMatch } from "../SelectedAttributeTypes/id-mr-intEmailMatch.va.mjs";
-
 
 /**
  * @summary intEmailMatch

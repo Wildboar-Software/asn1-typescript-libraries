@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayTime, _decode_DayTime, _encode_DayTime } from "../SelectedAttributeTypes/DayTime.ta.mjs";
-// export { DayTime, _decode_DayTime, _encode_DayTime } from "../SelectedAttributeTypes/DayTime.ta.mjs";
-
 
 /**
  * @summary DayTimeBand
@@ -191,6 +189,5 @@ function _encode_DayTimeBand (value: DayTimeBand, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_DayTimeBand(value, elGetter);
 }
-
 
 /* eslint-enable */

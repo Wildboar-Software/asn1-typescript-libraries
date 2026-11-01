@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
-// export { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
-// export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.mjs";
-// export { id_nf_orgUnitNameForm } from "../SelectedObjectClasses/id-nf-orgUnitNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary orgUnitNameForm

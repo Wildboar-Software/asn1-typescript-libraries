@@ -7,9 +7,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
-// export { SupportedContexts } from "../InformationFramework/SupportedContexts.osa.mjs";
-
 
 /**
  * @summary ContextAssertion
@@ -76,7 +73,6 @@ class ContextAssertion {
     public static _from_object (_o: { [_K in keyof (ContextAssertion)]: (ContextAssertion)[_K] }): ContextAssertion {
         return new ContextAssertion(_o.contextType, _o.contextValues, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -176,6 +172,5 @@ function _encode_ContextAssertion (value: ContextAssertion, elGetter: $.ASN1Enco
 }; }
     return _cached_encoder_for_ContextAssertion(value, elGetter);
 }
-
 
 /* eslint-enable */

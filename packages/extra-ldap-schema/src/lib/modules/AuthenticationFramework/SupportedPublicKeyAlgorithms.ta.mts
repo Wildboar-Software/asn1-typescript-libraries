@@ -8,10 +8,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { type OidOrAttr, _decode_OidOrAttr, _encode_OidOrAttr } from "../AuthenticationFramework/OidOrAttr.ta.mjs";
-// export { OidOrAttr, _decode_OidOrAttr, _encode_OidOrAttr } from "../AuthenticationFramework/OidOrAttr.ta.mjs";
-
 
 /**
  * @summary SupportedPublicKeyAlgorithms
@@ -86,7 +83,6 @@ class SupportedPublicKeyAlgorithms {
     public static _from_object (_o: { [_K in keyof (SupportedPublicKeyAlgorithms)]: (SupportedPublicKeyAlgorithms)[_K] }): SupportedPublicKeyAlgorithms {
         return new SupportedPublicKeyAlgorithms(_o.algorithmIdentifier, _o.minKeySize, _o.extensions, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -197,6 +193,5 @@ function _encode_SupportedPublicKeyAlgorithms (value: SupportedPublicKeyAlgorith
 }; }
     return _cached_encoder_for_SupportedPublicKeyAlgorithms(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { dcObject } from "../DNSFramework/dcObject.oa.mjs";
-// export { dcObject } from "../DNSFramework/dcObject.oa.mjs";
 import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
-// export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 import { id_nf_dcObjectNameForm } from "../DNSFramework/id-nf-dcObjectNameForm.va.mjs";
-// export { id_nf_dcObjectNameForm } from "../DNSFramework/id-nf-dcObjectNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary dcObjectNameForm

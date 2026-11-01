@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { contact } from "../LdapSchema2ldifMicrosoft/contact.oa.mjs";
-// export { contact } from "../LdapSchema2ldifMicrosoft/contact.oa.mjs";
 import { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
-// export { mailRecipient } from "../LdapSchema2ldifMicrosoft/mailRecipient.oa.mjs";
 import { type CONTENT_RULE } from "../InformationFramework/CONTENT-RULE.oca.mjs";
-
 
 /**
  * @summary contact_rule

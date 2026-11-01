@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMIMECapability, _decode_SMIMECapability, _encode_SMIMECapability } from "../PKCS-9/SMIMECapability.ta.mjs";
-// export { SMIMECapability, _decode_SMIMECapability, _encode_SMIMECapability } from "../PKCS-9/SMIMECapability.ta.mjs";
-
 
 /**
  * @summary SMIMECapabilities
@@ -48,6 +46,5 @@ function _encode_SMIMECapabilities (value: SMIMECapabilities, elGetter: $.ASN1En
     if (!_cached_encoder_for_SMIMECapabilities) { _cached_encoder_for_SMIMECapabilities = $._encodeSequenceOf<SMIMECapability>(() => _encode_SMIMECapability, $.BER); }
     return _cached_encoder_for_SMIMECapabilities(value, elGetter);
 }
-
 
 /* eslint-enable */

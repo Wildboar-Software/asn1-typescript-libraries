@@ -5,10 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-// export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.mjs";
-// export { id_mr_uriMatch } from "../SelectedAttributeTypes/id-mr-uriMatch.va.mjs";
-
 
 /**
  * @summary uriMatch

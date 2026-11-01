@@ -6,18 +6,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Version, _decode_Version, _encode_Version } from "../AuthenticationFramework/Version.ta.mjs";
-// export { Version, Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */, v3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Version, _encode_Version } from "../AuthenticationFramework/Version.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { type Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
 import { CertificateListContent_revokedCertificates_Item, _decode_CertificateListContent_revokedCertificates_Item, _encode_CertificateListContent_revokedCertificates_Item } from "../AuthenticationFramework/CertificateListContent-revokedCertificates-Item.ta.mjs";
-// export { CertificateListContent_revokedCertificates_Item, _decode_CertificateListContent_revokedCertificates_Item, _encode_CertificateListContent_revokedCertificates_Item } from "../AuthenticationFramework/CertificateListContent-revokedCertificates-Item.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
-// export { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
-
 
 /**
  * @summary CertificateListContent
@@ -131,7 +124,6 @@ class CertificateListContent {
     public static _from_object (_o: { [_K in keyof (CertificateListContent)]: (CertificateListContent)[_K] }): CertificateListContent {
         return new CertificateListContent(_o.version, _o.signature, _o.issuer, _o.thisUpdate, _o.nextUpdate, _o.revokedCertificates, _o._unrecognizedExtensionsList, _o.crlExtensions);
     }
-
 
 }
 
@@ -267,6 +259,5 @@ function _encode_CertificateListContent (value: CertificateListContent, elGetter
 }; }
     return _cached_encoder_for_CertificateListContent(value, elGetter);
 }
-
 
 /* eslint-enable */

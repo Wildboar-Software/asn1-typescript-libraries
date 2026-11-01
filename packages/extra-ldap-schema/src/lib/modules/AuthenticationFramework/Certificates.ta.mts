@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
 import { type ForwardCertificationPath, _decode_ForwardCertificationPath, _encode_ForwardCertificationPath } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
-// export { ForwardCertificationPath, _decode_ForwardCertificationPath, _encode_ForwardCertificationPath } from "../AuthenticationFramework/ForwardCertificationPath.ta.mjs";
-
 
 /**
  * @summary Certificates
@@ -72,7 +69,6 @@ class Certificates {
     public static _from_object (_o: { [_K in keyof (Certificates)]: (Certificates)[_K] }): Certificates {
         return new Certificates(_o.userCertificate, _o.certificationPath, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -178,6 +174,5 @@ function _encode_Certificates (value: Certificates, elGetter: $.ASN1Encoder<any>
 }; }
     return _cached_encoder_for_Certificates(value, elGetter);
 }
-
 
 /* eslint-enable */

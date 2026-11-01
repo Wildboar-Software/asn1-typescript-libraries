@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_samba } from "../SambaSchema/id-samba.va.mjs";
-// export { id_samba } from "../SambaSchema/id-samba.va.mjs";
-
 
 /**
  * @summary id_samba_at

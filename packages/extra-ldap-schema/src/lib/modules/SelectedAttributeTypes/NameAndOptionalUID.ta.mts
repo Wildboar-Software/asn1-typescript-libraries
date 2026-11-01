@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-// export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { type UniqueIdentifier, _decode_UniqueIdentifier, _encode_UniqueIdentifier } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-// export { UniqueIdentifier, _decode_UniqueIdentifier, _encode_UniqueIdentifier } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
-
 
 /**
  * @summary NameAndOptionalUID
@@ -72,7 +69,6 @@ class NameAndOptionalUID {
     public static _from_object (_o: { [_K in keyof (NameAndOptionalUID)]: (NameAndOptionalUID)[_K] }): NameAndOptionalUID {
         return new NameAndOptionalUID(_o.dn, _o.uid, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -178,6 +174,5 @@ function _encode_NameAndOptionalUID (value: NameAndOptionalUID, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_NameAndOptionalUID(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { organization } from "../SelectedObjectClasses/organization.oa.mjs";
-// export { organization } from "../SelectedObjectClasses/organization.oa.mjs";
 import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
-// export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 import { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va.mjs";
-// export { id_nf_orgNameForm } from "../SelectedObjectClasses/id-nf-orgNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary orgNameForm

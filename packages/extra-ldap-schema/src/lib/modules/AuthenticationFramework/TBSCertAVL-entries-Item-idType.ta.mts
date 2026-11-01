@@ -5,10 +5,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type PKCertIdentifier, _decode_PKCertIdentifier, _encode_PKCertIdentifier } from "../AuthenticationFramework/PKCertIdentifier.ta.mjs";
-// export { PKCertIdentifier, _decode_PKCertIdentifier, _encode_PKCertIdentifier } from "../AuthenticationFramework/PKCertIdentifier.ta.mjs";
 import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-// export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-
 
 /**
  * @summary TBSCertAVL_entries_Item_idType
@@ -63,6 +60,5 @@ function _encode_TBSCertAVL_entries_Item_idType (value: TBSCertAVL_entries_Item_
 }, $.BER); }
     return _cached_encoder_for_TBSCertAVL_entries_Item_idType(value, elGetter);
 }
-
 
 /* eslint-enable */

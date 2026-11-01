@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 
 /**
  * @summary PostalAddress
@@ -53,6 +51,5 @@ function _encode_PostalAddress (value: PostalAddress, elGetter: $.ASN1Encoder<an
     if (!_cached_encoder_for_PostalAddress) { _cached_encoder_for_PostalAddress = $._encodeSequenceOf<UnboundedDirectoryString>(() => _encode_UnboundedDirectoryString, $.BER); }
     return _cached_encoder_for_PostalAddress(value, elGetter);
 }
-
 
 /* eslint-enable */

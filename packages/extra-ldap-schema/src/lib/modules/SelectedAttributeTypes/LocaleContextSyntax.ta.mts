@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-// export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-
 
 /**
  * @summary LocaleContextSyntax
@@ -65,6 +63,5 @@ function _encode_LocaleContextSyntax (value: LocaleContextSyntax, elGetter: $.AS
 }, $.BER); }
     return _cached_encoder_for_LocaleContextSyntax(value, elGetter);
 }
-
 
 /* eslint-enable */

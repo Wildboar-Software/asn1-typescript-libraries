@@ -6,10 +6,7 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { type Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
-// export { Criteria, _decode_Criteria, _encode_Criteria } from "../SelectedAttributeTypes/Criteria.ta.mjs";
-
 
 /**
  * @summary Guide
@@ -72,7 +69,6 @@ class Guide {
     public static _from_object (_o: { [_K in keyof (Guide)]: (Guide)[_K] }): Guide {
         return new Guide(_o.objectClass, _o.criteria, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -182,6 +178,5 @@ function _encode_Guide (value: Guide, elGetter: $.ASN1Encoder<any>): _Element {
 }; }
     return _cached_encoder_for_Guide(value, elGetter);
 }
-
 
 /* eslint-enable */

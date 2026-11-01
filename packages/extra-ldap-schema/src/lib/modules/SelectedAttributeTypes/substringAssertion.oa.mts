@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-// export { SubstringAssertion, _decode_SubstringAssertion, _encode_SubstringAssertion } from "../SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.mjs";
-// export { id_lsx_substringAssertion } from "../SelectedAttributeTypes/id-lsx-substringAssertion.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary substringAssertion

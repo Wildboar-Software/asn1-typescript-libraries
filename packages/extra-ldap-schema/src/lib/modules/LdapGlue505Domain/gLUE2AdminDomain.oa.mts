@@ -68,13 +68,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Domain } from "../LdapGlue505Domain/gLUE2Domain.oa.mjs";
-// export { gLUE2Domain } from "../LdapGlue505Domain/gLUE2Domain.oa.mjs";
 import { id_oc_gLUE2AdminDomain } from "../LdapGlue505Domain/id-oc-gLUE2AdminDomain.va.mjs";
-// export { id_oc_gLUE2AdminDomain } from "../LdapGlue505Domain/id-oc-gLUE2AdminDomain.va.mjs";
-
 
 import { gLUE2AdminDomainDistributed } from "../LdapGlue505Domain/gLUE2AdminDomainDistributed.oa.mjs";
 import { gLUE2AdminDomainOwner } from "../LdapGlue505Domain/gLUE2AdminDomainOwner.oa.mjs";

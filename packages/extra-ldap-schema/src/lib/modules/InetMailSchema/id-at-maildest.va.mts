@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_igh } from "../InetMailSchema/id-igh.va.mjs";
-// export { id_igh } from "../InetMailSchema/id-igh.va.mjs";
-
 
 /**
  * @summary id_at_maildest

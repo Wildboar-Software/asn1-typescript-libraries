@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-
 
 /**
  * @summary ZonalSelect
@@ -48,6 +46,5 @@ function _encode_ZonalSelect (value: ZonalSelect, elGetter: $.ASN1Encoder<any>):
     if (!_cached_encoder_for_ZonalSelect) { _cached_encoder_for_ZonalSelect = $._encodeSequenceOf<AttributeType>(() => _encode_AttributeType, $.BER); }
     return _cached_encoder_for_ZonalSelect(value, elGetter);
 }
-
 
 /* eslint-enable */

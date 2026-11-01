@@ -4,10 +4,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SIGNED, _get_decoder_for_SIGNED, _get_encoder_for_SIGNED } from "../AuthenticationFramework/SIGNED.ta.mjs";
-// export { SIGNED, _get_decoder_for_SIGNED, _get_encoder_for_SIGNED } from "../AuthenticationFramework/SIGNED.ta.mjs";
 import { TBSCertAVL, _decode_TBSCertAVL, _encode_TBSCertAVL } from "../AuthenticationFramework/TBSCertAVL.ta.mjs";
-// export { TBSCertAVL, _decode_TBSCertAVL, _encode_TBSCertAVL } from "../AuthenticationFramework/TBSCertAVL.ta.mjs";
-
 
 /**
  * @summary CertAVL
@@ -50,6 +47,5 @@ function _encode_CertAVL (value: CertAVL, elGetter: $.ASN1Encoder<any>): _Elemen
     if (!_cached_encoder_for_CertAVL) { _cached_encoder_for_CertAVL = _get_encoder_for_SIGNED<TBSCertAVL>(_encode_TBSCertAVL); }
     return _cached_encoder_for_CertAVL(value, elGetter);
 }
-
 
 /* eslint-enable */

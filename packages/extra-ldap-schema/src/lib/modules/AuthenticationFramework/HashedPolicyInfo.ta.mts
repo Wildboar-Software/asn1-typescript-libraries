@@ -3,9 +3,6 @@ import {
     type ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { POLICY } from "../AuthenticationFramework/POLICY.oca.mjs";
-// export { Policies } from "../AuthenticationFramework/Policies.osa.mjs";
-
 
 /**
  * @summary HashedPolicyInfo

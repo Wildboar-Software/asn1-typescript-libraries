@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
-// export { LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
-
 
 /**
  * @summary ChopSpecification_specificExclusions_Item
@@ -61,6 +59,5 @@ function _encode_ChopSpecification_specificExclusions_Item (value: ChopSpecifica
 }, $.BER); }
     return _cached_encoder_for_ChopSpecification_specificExclusions_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

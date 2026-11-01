@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.mjs";
-// export { applicationEntity } from "../SelectedObjectClasses/applicationEntity.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va.mjs";
-// export { id_nf_applEntityNameForm } from "../SelectedObjectClasses/id-nf-applEntityNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary applEntityNameForm

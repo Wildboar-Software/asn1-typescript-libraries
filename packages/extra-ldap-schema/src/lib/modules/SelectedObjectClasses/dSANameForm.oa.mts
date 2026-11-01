@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { dSA } from "../SelectedObjectClasses/dSA.oa.mjs";
-// export { dSA } from "../SelectedObjectClasses/dSA.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va.mjs";
-// export { id_nf_dSANameForm } from "../SelectedObjectClasses/id-nf-dSANameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary dSANameForm

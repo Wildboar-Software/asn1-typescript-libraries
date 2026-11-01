@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../AuthenticationFramework/HASH.ta.mjs";
-// export { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../AuthenticationFramework/HASH.ta.mjs";
 import { type HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
-// export { HashedPolicyInfo, _decode_HashedPolicyInfo, _encode_HashedPolicyInfo } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
-
 
 /**
  * @summary InfoSyntax_pointer
@@ -72,7 +69,6 @@ class InfoSyntax_pointer {
     public static _from_object (_o: { [_K in keyof (InfoSyntax_pointer)]: (InfoSyntax_pointer)[_K] }): InfoSyntax_pointer {
         return new InfoSyntax_pointer(_o.name, _o.hash, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -178,6 +174,5 @@ function _encode_InfoSyntax_pointer (value: InfoSyntax_pointer, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_InfoSyntax_pointer(value, elGetter);
 }
-
 
 /* eslint-enable */

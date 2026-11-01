@@ -8,18 +8,11 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../AuthenticationFramework/Version.ta.mjs";
-// export { Version, Version_v1 /* IMPORTED_LONG_NAMED_INTEGER */, v1 /* IMPORTED_SHORT_NAMED_INTEGER */, Version_v2 /* IMPORTED_LONG_NAMED_INTEGER */, v2 /* IMPORTED_SHORT_NAMED_INTEGER */, Version_v3 /* IMPORTED_LONG_NAMED_INTEGER */, v3 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_Version, _encode_Version } from "../AuthenticationFramework/Version.ta.mjs";
 import { type AvlSerialNumber, _decode_AvlSerialNumber, _encode_AvlSerialNumber } from "../AuthenticationFramework/AvlSerialNumber.ta.mjs";
-// export { AvlSerialNumber, _decode_AvlSerialNumber, _encode_AvlSerialNumber } from "../AuthenticationFramework/AvlSerialNumber.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { TBSCertAVL_entries_Item, _decode_TBSCertAVL_entries_Item, _encode_TBSCertAVL_entries_Item } from "../AuthenticationFramework/TBSCertAVL-entries-Item.ta.mjs";
-// export { TBSCertAVL_entries_Item, _decode_TBSCertAVL_entries_Item, _encode_TBSCertAVL_entries_Item } from "../AuthenticationFramework/TBSCertAVL-entries-Item.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
-// export { Extensions, _decode_Extensions, _encode_Extensions } from "../AuthenticationFramework/Extensions.ta.mjs";
-
 
 /**
  * @summary TBSCertAVL
@@ -278,6 +271,5 @@ function _encode_TBSCertAVL (value: TBSCertAVL, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_TBSCertAVL(value, elGetter);
 }
-
 
 /* eslint-enable */

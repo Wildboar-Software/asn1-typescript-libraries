@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type CountryCode3n, _decode_CountryCode3n, _encode_CountryCode3n } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
-// export { CountryCode3n, _decode_CountryCode3n, _encode_CountryCode3n } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";
 import { id_asx_countryString3n } from "../SelectedAttributeTypes/id-asx-countryString3n.va.mjs";
-// export { id_asx_countryString3n } from "../SelectedAttributeTypes/id-asx-countryString3n.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary countryString3n

@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type CriteriaItem, _decode_CriteriaItem, _encode_CriteriaItem } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
-// export { CriteriaItem, _decode_CriteriaItem, _encode_CriteriaItem } from "../SelectedAttributeTypes/CriteriaItem.ta.mjs";
-
 
 // TODO: CHECK_RECURSIVE_DEFINITION
 /**
@@ -70,6 +68,5 @@ function _encode_Criteria (value: Criteria, elGetter: $.ASN1Encoder<any>): _Elem
 }, $.BER); }
     return _cached_encoder_for_Criteria(value, elGetter);
 }
-
 
 /* eslint-enable */

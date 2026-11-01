@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_dynGroupBase } from "../DynGroup/id-dynGroupBase.va.mjs";
-// export { id_dynGroupBase } from "../DynGroup/id-dynGroupBase.va.mjs";
-
 
 /**
  * @summary id_dynGroupAttr

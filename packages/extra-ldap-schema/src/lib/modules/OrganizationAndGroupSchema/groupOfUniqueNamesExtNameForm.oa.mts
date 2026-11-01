@@ -1,8 +1,6 @@
 /* eslint-disable */
 import { groupOfUniqueNamesExt } from "../OrganizationAndGroupSchema/groupOfUniqueNamesExt.oa.mjs";
-// export { groupOfUniqueNamesExt } from "../OrganizationAndGroupSchema/groupOfUniqueNamesExt.oa.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 /**

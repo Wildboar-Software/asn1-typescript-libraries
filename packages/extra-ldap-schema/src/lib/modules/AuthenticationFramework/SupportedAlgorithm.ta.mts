@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-// export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
-
 
 /**
  * @summary SupportedAlgorithm
@@ -79,7 +77,6 @@ class SupportedAlgorithm {
     public static _from_object (_o: { [_K in keyof (SupportedAlgorithm)]: (SupportedAlgorithm)[_K] }): SupportedAlgorithm {
         return new SupportedAlgorithm(_o.algorithmIdentifier, _o.intendedUsage, _o.intendedCertificatePolicies, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -192,6 +189,5 @@ function _encode_SupportedAlgorithm (value: SupportedAlgorithm, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_SupportedAlgorithm(value, elGetter);
 }
-
 
 /* eslint-enable */

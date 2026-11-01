@@ -6,15 +6,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
-// export { LocalName, _decode_LocalName, _encode_LocalName } from "../InformationFramework/LocalName.ta.mjs";
-// export { ChopSpecification, _decode_ChopSpecification, _encode_ChopSpecification } from "../InformationFramework/ChopSpecification.ta.mjs";
 import { type Refinement, _decode_Refinement, _encode_Refinement } from "../InformationFramework/Refinement.ta.mjs";
-// export { Refinement, _decode_Refinement, _encode_Refinement } from "../InformationFramework/Refinement.ta.mjs";
 import { type ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
-// export { ChopSpecification_specificExclusions_Item, _decode_ChopSpecification_specificExclusions_Item, _encode_ChopSpecification_specificExclusions_Item } from "../InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
 import { type BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
-// export { BaseDistance, _decode_BaseDistance, _encode_BaseDistance } from "../InformationFramework/BaseDistance.ta.mjs";
-
 
 /**
  * @summary SubtreeSpecification
@@ -244,6 +238,5 @@ function _encode_SubtreeSpecification (value: SubtreeSpecification, elGetter: $.
 }; }
     return _cached_encoder_for_SubtreeSpecification(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ScopeRestriction, _decode_ScopeRestriction, _encode_ScopeRestriction } from "../AuthenticationFramework/ScopeRestriction.ta.mjs";
-// export { ScopeRestriction, _decode_ScopeRestriction, _encode_ScopeRestriction } from "../AuthenticationFramework/ScopeRestriction.ta.mjs";
-
 
 /**
  * @summary ScopeRestrictions
@@ -48,6 +46,5 @@ function _encode_ScopeRestrictions (value: ScopeRestrictions, elGetter: $.ASN1En
     if (!_cached_encoder_for_ScopeRestrictions) { _cached_encoder_for_ScopeRestrictions = $._encodeSequenceOf<ScopeRestriction>(() => _encode_ScopeRestriction, $.BER); }
     return _cached_encoder_for_ScopeRestrictions(value, elGetter);
 }
-
 
 /* eslint-enable */

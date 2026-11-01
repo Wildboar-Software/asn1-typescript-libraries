@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
-// export { dMD } from "../SelectedObjectClasses/dMD.oa.mjs";
 import { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
-// export { dmdName } from "../SelectedAttributeTypes/dmdName.oa.mjs";
 import { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
-// export { id_nf_dMDNameForm } from "../SelectedObjectClasses/id-nf-dMDNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary dMDNameForm

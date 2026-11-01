@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_nsds } from "../DynGroup/id-nsds.va.mjs";
-// export { id_nsds } from "../DynGroup/id-nsds.va.mjs";
-
 
 /**
  * @summary id_nsdsat

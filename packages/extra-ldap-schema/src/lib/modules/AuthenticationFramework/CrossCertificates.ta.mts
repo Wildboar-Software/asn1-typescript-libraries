@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-
 
 /**
  * @summary CrossCertificates
@@ -53,6 +51,5 @@ function _encode_CrossCertificates (value: CrossCertificates, elGetter: $.ASN1En
     if (!_cached_encoder_for_CrossCertificates) { _cached_encoder_for_CrossCertificates = $._encodeSetOf<Certificate>(() => _encode_Certificate, $.BER); }
     return _cached_encoder_for_CrossCertificates(value, elGetter);
 }
-
 
 /* eslint-enable */

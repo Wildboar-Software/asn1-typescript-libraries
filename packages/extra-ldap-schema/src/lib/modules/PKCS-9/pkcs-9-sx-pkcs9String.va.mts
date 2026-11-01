@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { pkcs_9_sx } from "../PKCS-9/pkcs-9-sx.va.mjs";
-// export { pkcs_9_sx } from "../PKCS-9/pkcs-9-sx.va.mjs";
-
 
 /**
  * @summary pkcs_9_sx_pkcs9String

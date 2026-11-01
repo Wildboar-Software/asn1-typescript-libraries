@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { call_Id } from "../H323-X500-Schema/call-Id.va.mjs";
-// export { call_Id } from "../H323-X500-Schema/call-Id.va.mjs";
-
 
 /**
  * @summary call_id_oc

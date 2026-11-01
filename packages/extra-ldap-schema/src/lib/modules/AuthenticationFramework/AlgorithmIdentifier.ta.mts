@@ -6,8 +6,6 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-// export { ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
-
 
 /**
  * @summary AlgorithmIdentifier
@@ -70,7 +68,6 @@ class AlgorithmIdentifier {
     public static _from_object (_o: { [_K in keyof (AlgorithmIdentifier)]: (AlgorithmIdentifier)[_K] }): AlgorithmIdentifier {
         return new AlgorithmIdentifier(_o.algorithm, _o.parameters, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -176,6 +173,5 @@ function _encode_AlgorithmIdentifier (value: AlgorithmIdentifier, elGetter: $.AS
 }; }
     return _cached_encoder_for_AlgorithmIdentifier(value, elGetter);
 }
-
 
 /* eslint-enable */

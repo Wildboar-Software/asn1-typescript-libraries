@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { EnhancedGuide, _decode_EnhancedGuide, _encode_EnhancedGuide } from "../SelectedAttributeTypes/EnhancedGuide.ta.mjs";
-// export { EnhancedGuide, _decode_EnhancedGuide, _encode_EnhancedGuide } from "../SelectedAttributeTypes/EnhancedGuide.ta.mjs";
 import { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va.mjs";
-// export { id_lsx_enhancedGuide } from "../SelectedAttributeTypes/id-lsx-enhancedGuide.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary enhancedGuide

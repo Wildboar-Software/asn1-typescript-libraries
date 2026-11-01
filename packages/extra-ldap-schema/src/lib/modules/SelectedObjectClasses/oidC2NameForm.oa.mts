@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
-// export { oidCobj } from "../SelectedObjectClasses/oidCobj.oa.mjs";
 import { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
-// export { oidC } from "../SelectedAttributeTypes/oidC.oa.mjs";
 import { id_nf_oidC2NameForm } from "../SelectedObjectClasses/id-nf-oidC2NameForm.va.mjs";
-// export { id_nf_oidC2NameForm } from "../SelectedObjectClasses/id-nf-oidC2NameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary oidC2NameForm

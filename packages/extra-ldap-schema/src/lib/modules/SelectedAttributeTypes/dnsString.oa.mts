@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type DomainName, _decode_DomainName, _encode_DomainName } from "../SelectedAttributeTypes/DomainName.ta.mjs";
-// export { DomainName, _decode_DomainName, _encode_DomainName } from "../SelectedAttributeTypes/DomainName.ta.mjs";
 import { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.mjs";
-// export { id_asx_dnsString } from "../SelectedAttributeTypes/id-asx-dnsString.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary dnsString

@@ -5,14 +5,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IssuerSerialNumber, _decode_IssuerSerialNumber, _encode_IssuerSerialNumber } from "../AuthenticationFramework/IssuerSerialNumber.ta.mjs";
-// export { IssuerSerialNumber, _decode_IssuerSerialNumber, _encode_IssuerSerialNumber } from "../AuthenticationFramework/IssuerSerialNumber.ta.mjs";
 import { FingerPrint, _get_decoder_for_FingerPrint, _get_encoder_for_FingerPrint } from "../AuthenticationFramework/FingerPrint.ta.mjs";
-// export { FingerPrint, _get_decoder_for_FingerPrint, _get_encoder_for_FingerPrint } from "../AuthenticationFramework/FingerPrint.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
 import { type PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
-// export { PublicKey, _decode_PublicKey, _encode_PublicKey } from "../AuthenticationFramework/PublicKey.ta.mjs";
-
 
 /**
  * @summary PKCertIdentifier
@@ -71,6 +66,5 @@ function _encode_PKCertIdentifier (value: PKCertIdentifier, elGetter: $.ASN1Enco
 }, $.BER); }
     return _cached_encoder_for_PKCertIdentifier(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { country } from "../SelectedObjectClasses/country.oa.mjs";
-// export { country } from "../SelectedObjectClasses/country.oa.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
-// export { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.mjs";
-// export { id_nf_countryNameForm } from "../SelectedObjectClasses/id-nf-countryNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary countryNameForm

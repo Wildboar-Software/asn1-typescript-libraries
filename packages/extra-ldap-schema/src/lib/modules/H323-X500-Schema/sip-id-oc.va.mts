@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { sip_Id } from "../H323-X500-Schema/sip-Id.va.mjs";
-// export { sip_Id } from "../H323-X500-Schema/sip-Id.va.mjs";
-
 
 /**
  * @summary sip_id_oc

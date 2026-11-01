@@ -1,27 +1,15 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { emailAddress } from "../PKCS-9/emailAddress.oa.mjs";
-// export { emailAddress } from "../PKCS-9/emailAddress.oa.mjs";
 import { unstructuredName } from "../PKCS-9/unstructuredName.oa.mjs";
-// export { unstructuredName } from "../PKCS-9/unstructuredName.oa.mjs";
 import { unstructuredAddress } from "../PKCS-9/unstructuredAddress.oa.mjs";
-// export { unstructuredAddress } from "../PKCS-9/unstructuredAddress.oa.mjs";
 import { dateOfBirth } from "../PKCS-9/dateOfBirth.oa.mjs";
-// export { dateOfBirth } from "../PKCS-9/dateOfBirth.oa.mjs";
 import { placeOfBirth } from "../PKCS-9/placeOfBirth.oa.mjs";
-// export { placeOfBirth } from "../PKCS-9/placeOfBirth.oa.mjs";
 import { gender } from "../PKCS-9/gender.oa.mjs";
-// export { gender } from "../PKCS-9/gender.oa.mjs";
 import { countryOfCitizenship } from "../PKCS-9/countryOfCitizenship.oa.mjs";
-// export { countryOfCitizenship } from "../PKCS-9/countryOfCitizenship.oa.mjs";
 import { countryOfResidence } from "../PKCS-9/countryOfResidence.oa.mjs";
-// export { countryOfResidence } from "../PKCS-9/countryOfResidence.oa.mjs";
 import { pseudonym } from "../PKCS-9/pseudonym.oa.mjs";
-// export { pseudonym } from "../PKCS-9/pseudonym.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
-// export { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
-
 
 /**
  * @summary NaturalPersonAttributeSet

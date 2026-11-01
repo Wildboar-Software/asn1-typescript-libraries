@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-// export { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-
 
 /**
  * @summary PkiPath
@@ -53,6 +51,5 @@ function _encode_PkiPath (value: PkiPath, elGetter: $.ASN1Encoder<any>): _Elemen
     if (!_cached_encoder_for_PkiPath) { _cached_encoder_for_PkiPath = $._encodeSequenceOf<Certificate>(() => _encode_Certificate, $.BER); }
     return _cached_encoder_for_PkiPath(value, elGetter);
 }
-
 
 /* eslint-enable */

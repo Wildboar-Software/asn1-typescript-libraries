@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type SubstringAssertion_Item, _decode_SubstringAssertion_Item, _encode_SubstringAssertion_Item } from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
-// export { SubstringAssertion_Item, _decode_SubstringAssertion_Item, _encode_SubstringAssertion_Item } from "../SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
-
 
 /**
  * @summary SubstringAssertion
@@ -66,6 +64,5 @@ function _encode_SubstringAssertion (value: SubstringAssertion, elGetter: $.ASN1
     if (!_cached_encoder_for_SubstringAssertion) { _cached_encoder_for_SubstringAssertion = $._encodeSequenceOf<SubstringAssertion_Item>(() => _encode_SubstringAssertion_Item, $.BER); }
     return _cached_encoder_for_SubstringAssertion(value, elGetter);
 }
-
 
 /* eslint-enable */

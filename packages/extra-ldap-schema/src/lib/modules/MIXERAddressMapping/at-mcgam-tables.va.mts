@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { at } from "../MIXERAddressMapping/at.va.mjs";
-// export { at } from "../MIXERAddressMapping/at.va.mjs";
-
 
 /**
  * @summary at_mcgam_tables

@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-// export { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-// export { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
-
 
 /**
  * @summary IssuerSerialNumber
@@ -72,7 +69,6 @@ class IssuerSerialNumber {
     public static _from_object (_o: { [_K in keyof (IssuerSerialNumber)]: (IssuerSerialNumber)[_K] }): IssuerSerialNumber {
         return new IssuerSerialNumber(_o.issuer, _o.serialNumber, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -172,6 +168,5 @@ function _encode_IssuerSerialNumber (value: IssuerSerialNumber, elGetter: $.ASN1
 }; }
     return _cached_encoder_for_IssuerSerialNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -9,8 +9,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EpcFormat_fields_Item, _decode_EpcFormat_fields_Item, _encode_EpcFormat_fields_Item } from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.mjs";
-// export { EpcFormat_fields_Item, _decode_EpcFormat_fields_Item, _encode_EpcFormat_fields_Item } from "../SelectedAttributeTypes/EpcFormat-fields-Item.ta.mjs";
-
 
 /**
  * @summary EpcFormat
@@ -93,7 +91,6 @@ class EpcFormat {
     public static _from_object (_o: { [_K in keyof (EpcFormat)]: (EpcFormat)[_K] }): EpcFormat {
         return new EpcFormat(_o.fields, _o.digitShift, _o.checkCalc, _o.urnPrefix);
     }
-
 
 }
 
@@ -203,6 +200,5 @@ function _encode_EpcFormat (value: EpcFormat, elGetter: $.ASN1Encoder<any>): _El
 }; }
     return _cached_encoder_for_EpcFormat(value, elGetter);
 }
-
 
 /* eslint-enable */

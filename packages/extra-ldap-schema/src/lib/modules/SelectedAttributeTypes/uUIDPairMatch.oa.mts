@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { UUIDPair, _decode_UUIDPair, _encode_UUIDPair } from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
-// export { UUIDPair, _decode_UUIDPair, _encode_UUIDPair } from "../SelectedAttributeTypes/UUIDPair.ta.mjs";
 import { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.mjs";
-// export { id_mr_uuidpairmatch } from "../SelectedAttributeTypes/id-mr-uuidpairmatch.va.mjs";
-
 
 /**
  * @summary uUIDPairMatch

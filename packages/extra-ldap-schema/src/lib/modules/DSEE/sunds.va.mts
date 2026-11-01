@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { sunroot } from "../DSEE/sunroot.va.mjs";
-// export { sunroot } from "../DSEE/sunroot.va.mjs";
-
 
 /**
  * @summary sunds

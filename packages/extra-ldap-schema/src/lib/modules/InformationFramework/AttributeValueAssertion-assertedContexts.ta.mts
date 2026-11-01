@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextAssertion, _decode_ContextAssertion, _encode_ContextAssertion } from "../InformationFramework/ContextAssertion.ta.mjs";
-// export { ContextAssertion, _decode_ContextAssertion, _encode_ContextAssertion } from "../InformationFramework/ContextAssertion.ta.mjs";
-
 
 /**
  * @summary AttributeValueAssertion_assertedContexts
@@ -60,6 +58,5 @@ function _encode_AttributeValueAssertion_assertedContexts (value: AttributeValue
 }, $.BER); }
     return _cached_encoder_for_AttributeValueAssertion_assertedContexts(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_PreferredDeliveryMethod_Item, _encode_PreferredDeliveryMethod_Item, type PreferredDeliveryMethod_Item } from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta.mjs";
-// export { PreferredDeliveryMethod_Item, PreferredDeliveryMethod_Item_any_delivery_method /* IMPORTED_LONG_NAMED_INTEGER */, any_delivery_method /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_mhs_delivery /* IMPORTED_LONG_NAMED_INTEGER */, mhs_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_physical_delivery /* IMPORTED_LONG_NAMED_INTEGER */, physical_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_telex_delivery /* IMPORTED_LONG_NAMED_INTEGER */, telex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_teletex_delivery /* IMPORTED_LONG_NAMED_INTEGER */, teletex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_g3_facsimile_delivery /* IMPORTED_LONG_NAMED_INTEGER */, g3_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_g4_facsimile_delivery /* IMPORTED_LONG_NAMED_INTEGER */, g4_facsimile_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_ia5_terminal_delivery /* IMPORTED_LONG_NAMED_INTEGER */, ia5_terminal_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_videotex_delivery /* IMPORTED_LONG_NAMED_INTEGER */, videotex_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, PreferredDeliveryMethod_Item_telephone_delivery /* IMPORTED_LONG_NAMED_INTEGER */, telephone_delivery /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_PreferredDeliveryMethod_Item, _encode_PreferredDeliveryMethod_Item } from "../SelectedAttributeTypes/PreferredDeliveryMethod-Item.ta.mjs";
-
 
 /**
  * @summary PreferredDeliveryMethod
@@ -58,6 +56,5 @@ function _encode_PreferredDeliveryMethod (value: PreferredDeliveryMethod, elGett
     if (!_cached_encoder_for_PreferredDeliveryMethod) { _cached_encoder_for_PreferredDeliveryMethod = $._encodeSequenceOf<PreferredDeliveryMethod_Item>(() => _encode_PreferredDeliveryMethod_Item, $.BER); }
     return _cached_encoder_for_PreferredDeliveryMethod(value, elGetter);
 }
-
 
 /* eslint-enable */

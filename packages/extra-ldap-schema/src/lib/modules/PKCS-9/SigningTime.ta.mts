@@ -1,8 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { type Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-// export { Time, _decode_Time, _encode_Time } from "../AuthenticationFramework/Time.ta.mjs";
-
 
 /**
  * @summary SigningTime

@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
-// export { groupOfNames } from "../SelectedObjectClasses/groupOfNames.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nf_gONNameForm } from "../SelectedObjectClasses/id-nf-gONNameForm.va.mjs";
-// export { id_nf_gONNameForm } from "../SelectedObjectClasses/id-nf-gONNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
-
 
 /**
  * @summary gONNameForm

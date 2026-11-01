@@ -6,10 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type PwdResponse_warning, _decode_PwdResponse_warning, _encode_PwdResponse_warning } from "../SelectedAttributeTypes/PwdResponse-warning.ta.mjs";
-// export { PwdResponse_warning, _decode_PwdResponse_warning, _encode_PwdResponse_warning } from "../SelectedAttributeTypes/PwdResponse-warning.ta.mjs";
 import { type PwdResponse_error, _decode_PwdResponse_error, _encode_PwdResponse_error, _enum_for_PwdResponse_error } from "../SelectedAttributeTypes/PwdResponse-error.ta.mjs";
-// export { PwdResponse_error, _enum_for_PwdResponse_error, PwdResponse_error_passwordExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, passwordExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, PwdResponse_error_changeAfterReset /* IMPORTED_LONG_ENUMERATION_ITEM */, changeAfterReset /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PwdResponse_error, _encode_PwdResponse_error } from "../SelectedAttributeTypes/PwdResponse-error.ta.mjs";
-
 
 /**
  * @summary PwdResponse
@@ -173,6 +170,5 @@ function _encode_PwdResponse (value: PwdResponse, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_PwdResponse(value, elGetter);
 }
-
 
 /* eslint-enable */

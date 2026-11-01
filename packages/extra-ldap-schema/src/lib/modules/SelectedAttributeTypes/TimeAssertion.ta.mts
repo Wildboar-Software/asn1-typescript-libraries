@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimeAssertion_between, _decode_TimeAssertion_between, _encode_TimeAssertion_between } from "../SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
-// export { TimeAssertion_between, _decode_TimeAssertion_between, _encode_TimeAssertion_between } from "../SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
-
 
 /**
  * @summary TimeAssertion
@@ -70,6 +68,5 @@ function _encode_TimeAssertion (value: TimeAssertion, elGetter: $.ASN1Encoder<an
 }, $.BER); }
     return _cached_encoder_for_TimeAssertion(value, elGetter);
 }
-
 
 /* eslint-enable */

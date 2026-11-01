@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_netscapeRoot } from "../DynGroup/id-netscapeRoot.va.mjs";
-// export { id_netscapeRoot } from "../DynGroup/id-netscapeRoot.va.mjs";
-
 
 /**
  * @summary id_nsds

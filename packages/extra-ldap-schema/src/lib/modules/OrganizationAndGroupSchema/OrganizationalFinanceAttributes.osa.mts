@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
-// export { ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { topDonorDN } from "../OrganizationAndGroupSchema/topDonorDN.oa.mjs";
-// export { topDonorDN } from "../OrganizationAndGroupSchema/topDonorDN.oa.mjs";
-
 
 /**
  * @summary OrganizationalFinanceAttributes

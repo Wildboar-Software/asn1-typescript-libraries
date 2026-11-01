@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { Guide, _decode_Guide, _encode_Guide } from "../SelectedAttributeTypes/Guide.ta.mjs";
-// export { Guide, _decode_Guide, _encode_Guide } from "../SelectedAttributeTypes/Guide.ta.mjs";
 import { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.mjs";
-// export { id_lsx_guide } from "../SelectedAttributeTypes/id-lsx-guide.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary guide

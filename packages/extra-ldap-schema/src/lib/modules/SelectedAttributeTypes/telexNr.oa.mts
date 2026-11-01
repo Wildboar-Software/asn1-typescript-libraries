@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { TelexNumber, _decode_TelexNumber, _encode_TelexNumber } from "../SelectedAttributeTypes/TelexNumber.ta.mjs";
-// export { TelexNumber, _decode_TelexNumber, _encode_TelexNumber } from "../SelectedAttributeTypes/TelexNumber.ta.mjs";
 import { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va.mjs";
-// export { id_lsx_telexNr } from "../SelectedAttributeTypes/id-lsx-telexNr.va.mjs";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
-
 
 /**
  * @summary telexNr
