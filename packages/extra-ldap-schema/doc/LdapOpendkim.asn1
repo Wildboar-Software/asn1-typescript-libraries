@@ -1,0 +1,92 @@
+-- Derived from data/ldap-schema/opendkim.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 2 elements were omitted because the OID is invalid or unresolved.
+LdapOpendkim DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-dKIMSelector OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 2 2 1 1 }
+id-at-dKIMKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 2 2 1 2 }
+id-at-dKIMIdentity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 2 2 1 3 }
+id-at-dKIMDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 2 2 1 4 }
+id-at-dKIMRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 2 2 1 5 }
+id-oc-dKIM OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 29426 2 2 2 1 }
+
+-- Attribute types
+
+-- initial capital of "DKIMSelector" lowercased so the assignment is a valuereference.
+dKIMSelector ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"DKIMSelector"}
+  LDAP-DESC                 "Selector name associated with DKIM signing key"
+  ID                        id-at-dKIMSelector }
+
+-- initial capital of "DKIMKey" lowercased so the assignment is a valuereference.
+dKIMKey ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"DKIMKey"}
+  LDAP-DESC                 "DKIM signing key"
+  ID                        id-at-dKIMKey }
+
+-- initial capital of "DKIMIdentity" lowercased so the assignment is a valuereference.
+dKIMIdentity ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"DKIMIdentity"}
+  LDAP-DESC                 "The Agent or User Identifier (AUID)"
+  ID                        id-at-dKIMIdentity }
+
+-- initial capital of "DKIMDomain" lowercased so the assignment is a valuereference.
+dKIMDomain ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"DKIMDomain"}
+  LDAP-DESC                 "DKIMsender domain"
+  ID                        id-at-dKIMDomain }
+
+-- initial capital of "DKIMRecord" lowercased so the assignment is a valuereference.
+dKIMRecord ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"DKIMRecord"}
+  LDAP-DESC                 "DKIM Pubkey Record"
+  ID                        id-at-dKIMRecord }
+
+-- Object classes
+
+-- initial capital of "DKIM" lowercased so the assignment is a valuereference.
+dKIM OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { dKIMSelector }
+  MAY CONTAIN               { dKIMIdentity
+                              | dKIMDomain
+                              | dKIMKey }
+  LDAP-NAME                 {"DKIM"}
+  LDAP-DESC                 "DKIM Selector and Key container"
+  ID                        id-oc-dKIM }
+END

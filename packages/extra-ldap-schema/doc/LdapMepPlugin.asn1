@@ -1,0 +1,103 @@
+-- Derived from data/ldap-schema/mep-plugin.ldif
+-- Upstream: https://github.com/leto/389-ds/blob/091c749adcc53ef3332cab6d34b25dadcb69c696/ldap/schema/10mep-plugin.ldif#L46
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapMepPlugin DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, directoryString, dn, octetString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-mepManagedBy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2086 }
+id-at-mepManagedEntry OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2087 }
+id-at-mepStaticAttr OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2088 }
+id-at-mepMappedAttr OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2089 }
+id-at-mepRDNAttr OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 2090 }
+id-oc-mepManagedEntry-2 OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 319 }
+id-oc-mepOriginEntry OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 320 }
+id-oc-mepTemplateEntry OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 321 }
+
+-- Attribute types
+
+-- X-ORIGIN: "389 Directory Server"
+mepManagedBy ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"mepManagedBy"}
+  LDAP-DESC                 "Managed Entries backpointer"
+  ID                        id-at-mepManagedBy }
+
+-- X-ORIGIN: "389 Directory Server"
+mepManagedEntry ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"mepManagedEntry"}
+  LDAP-DESC                 "Managed Entries pointer"
+  ID                        id-at-mepManagedEntry }
+
+-- X-ORIGIN: "389 Directory Server"
+mepStaticAttr ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"mepStaticAttr"}
+  LDAP-DESC                 "Managed Entries static attribute"
+  ID                        id-at-mepStaticAttr }
+
+-- X-ORIGIN: "389 Directory Server"
+mepMappedAttr ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               octetString.&id
+  LDAP-NAME                 {"mepMappedAttr"}
+  LDAP-DESC                 "Managed Entries mapped attribute"
+  ID                        id-at-mepMappedAttr }
+
+-- X-ORIGIN: "389 Directory Server"
+mepRDNAttr ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mepRDNAttr"}
+  LDAP-DESC                 "Managed Entries RDN attribute"
+  ID                        id-at-mepRDNAttr }
+
+-- Object classes
+
+-- disambiguated mepManagedEntry to mepManagedEntry-2 inside LdapMepPlugin.
+-- X-ORIGIN: "389 Directory Server"
+mepManagedEntry-2 OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mepManagedBy }
+  LDAP-NAME                 {"mepManagedEntry"}
+  LDAP-DESC                 "Managed Entries Managed Entry"
+  ID                        id-oc-mepManagedEntry-2 }
+
+-- X-ORIGIN: "389 Directory Server"
+mepOriginEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mepManagedEntry }
+  LDAP-NAME                 {"mepOriginEntry"}
+  LDAP-DESC                 "Managed Entries Origin Entry"
+  ID                        id-oc-mepOriginEntry }
+
+-- X-ORIGIN: "389 Directory Server"
+mepTemplateEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { commonName
+                              | mepStaticAttr
+                              | mepMappedAttr
+                              | mepRDNAttr }
+  LDAP-NAME                 {"mepTemplateEntry"}
+  LDAP-DESC                 "Managed Entries Template Entry"
+  ID                        id-oc-mepTemplateEntry }
+END

@@ -308,6 +308,9 @@
     },
     {
       "path": "./packages/pcv2"
+    },
+    {
+      "path": "./packages/extra-ldap-schema"
     }
   ],
   "compilerOptions": {

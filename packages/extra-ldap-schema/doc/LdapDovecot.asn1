@@ -1,0 +1,214 @@
+-- Derived from data/ldap-schema/dovecot.schema
+-- Upstream: https://github.com/Analyst997/ldap-mail-schema/blob/1fe6c77604b772b07eb6dca0d26bcb862ae11176/dovecot.schema#L48
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapDovecot DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+    ia5String, integer, integerMatch
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  labeledURI
+    FROM OpenLDAPCoreSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap-core(6)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-dcMailMessageStore OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 1 1 1 }
+id-at-dcSubMailAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 1 }
+id-at-dcAccountStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 2 }
+id-at-dcSMTPServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 3 }
+id-at-dcSMTPLogin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 4 }
+id-at-dcSMTPPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 5 }
+id-at-dcPOP3Server OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 6 }
+id-at-dcPOP3Login OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 7 }
+id-at-dcPOP3Password OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 8 }
+id-at-dcMailQuota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 9 }
+id-at-dcMailSizeMax OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 1 10 }
+id-at-dcMailAlternateAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 3 1 1 }
+id-at-dcMailForwardingAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 3 1 2 }
+id-at-dcPosixOwnerURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 4 1 1 }
+id-oc-dcMailUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 1 2 1 }
+id-oc-dcExternalMailAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 2 2 1 }
+id-oc-dcMailAlias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 3 2 1 }
+id-oc-dcPosixSubAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 32589 1 4 2 1 }
+
+-- Attribute types
+
+dcMailMessageStore ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcMailMessageStore"}
+  LDAP-DESC                 "Path to the maildir/mbox on the mail system"
+  ID                        id-at-dcMailMessageStore }
+
+dcSubMailAddress ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcSubMailAddress"}
+  LDAP-DESC                 "A users secondary e-mail address for which mail from on another Mailserver has to be fetched"
+  ID                        id-at-dcSubMailAddress }
+
+dcAccountStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcAccountStatus"}
+  LDAP-DESC                 "The status of a user account: active, noaccess, disabled, deleted"
+  ID                        id-at-dcAccountStatus }
+
+dcSMTPServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcSMTPServer"}
+  LDAP-DESC                 "Outgoing mails should be delivered to this Mailserver via SMTP."
+  ID                        id-at-dcSMTPServer }
+
+dcSMTPLogin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcSMTPLogin"}
+  LDAP-DESC                 "Login credential to send Mail with the SMTP server"
+  ID                        id-at-dcSMTPLogin }
+
+dcSMTPPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcSMTPPassword"}
+  LDAP-DESC                 "A separate text that stores the SMTP account password in clear text"
+  ID                        id-at-dcSMTPPassword }
+
+dcPOP3Server ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcPOP3Server"}
+  LDAP-DESC                 "Incoming mails have to be downloaded from this server via POP3."
+  ID                        id-at-dcPOP3Server }
+
+dcPOP3Login ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcPOP3Login"}
+  LDAP-DESC                 "Login credential to receive Mail from the POP3 server"
+  ID                        id-at-dcPOP3Login }
+
+dcPOP3Password ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcPOP3Password"}
+  LDAP-DESC                 "A separate text that stores the POP3 account password in clear text"
+  ID                        id-at-dcPOP3Password }
+
+dcMailQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"dcMailQuota"}
+  LDAP-DESC                 "The size of space the user can have until further messages get bounced."
+  ID                        id-at-dcMailQuota }
+
+dcMailSizeMax ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"dcMailSizeMax"}
+  LDAP-DESC                 "The maximum size of a single messages the user accepts."
+  ID                        id-at-dcMailSizeMax }
+
+dcMailAlternateAddress ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcMailAlternateAddress"}
+  LDAP-DESC                 "Secondary (alias) mailaddresses for the same user"
+  ID                        id-at-dcMailAlternateAddress }
+
+dcMailForwardingAddress ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dcMailForwardingAddress"}
+  LDAP-DESC                 "Any mails addressed to aliases should be forwarded to this mail address"
+  ID                        id-at-dcMailForwardingAddress }
+
+dcPosixOwnerURL ATTRIBUTE ::= {
+  SUBTYPE OF                labeledURI
+  LDAP-NAME                 {"dcPosixOwnerURL"}
+  LDAP-DESC                 "Identifies an URL associated with the posixOwner of the entry. Any type of labeled URL can be used."
+  ID                        id-at-dcPosixOwnerURL }
+
+-- Object classes
+
+dcMailUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { dcMailMessageStore }
+  LDAP-NAME                 {"dcMailUser"}
+  LDAP-DESC                 "Dovecot-LDAP User"
+  ID                        id-oc-dcMailUser }
+
+dcExternalMailAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dcSubMailAddress
+                              | dcAccountStatus }
+  MAY CONTAIN               { dcSMTPServer
+                              | dcSMTPLogin
+                              | dcSMTPPassword
+                              | dcPOP3Server
+                              | dcPOP3Login
+                              | dcPOP3Password
+                              | dcMailQuota
+                              | dcMailSizeMax }
+  LDAP-NAME                 {"dcExternalMailAccount"}
+  LDAP-DESC                 "Dovecot-LDAP external mail account"
+  ID                        id-oc-dcExternalMailAccount }
+
+dcMailAlias OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dcMailAlternateAddress }
+  MAY CONTAIN               { dcMailForwardingAddress }
+  LDAP-NAME                 {"dcMailAlias"}
+  LDAP-DESC                 "Dovecot Mail Alias"
+  ID                        id-oc-dcMailAlias }
+
+dcPosixSubAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { dcPosixOwnerURL }
+  LDAP-NAME                 {"dcPosixSubAccount"}
+  LDAP-DESC                 "LDAP-URL for retrieving the respective posixAccount of an entry"
+  ID                        id-oc-dcPosixSubAccount }
+END

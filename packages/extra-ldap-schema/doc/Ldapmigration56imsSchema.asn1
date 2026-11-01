@@ -1,0 +1,1096 @@
+-- Derived from data/ldap-schema/ldapmigration/56ims-schema.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 3 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 20 elements were omitted because another source file in this corpus defines the same OID.
+Ldapmigration56imsSchema DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, commonName, directoryString, dn, ia5String, integer,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  preferredLanguage
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  mailForwardingAddress, mailMessageStore
+    FROM QMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) qmail-schema(55)} WITH SUCCESSORS
+
+  multiLineDescription
+    FROM LdapCore389
+
+  mailQuota
+    FROM LdapDbmail
+
+  mailAutoReplyMode, mailAutoReplyText, mailDeliveryOption,
+    mailProgramDeliveryInfo, mgrpAddHeader, mgrpAllowedBroadcaster,
+    mgrpAllowedDomain, mgrpBroadcasterPolicy, mgrpDeliverTo, mgrpErrorsTo,
+    mgrpModerator, mgrpMsgMaxSize, mgrpMsgRejectAction, mgrpMsgRejectText,
+    mgrpNoDuplicateChecks, mgrpRemoveHeader, nswmExtendedUserPrefs
+    FROM Ldapmigration50nsMail
+
+  mail
+    FROM LdapSchema2ldifCore
+
+  mailSieveRuleSource
+    FROM LdapSchema2ldifPostfixBook
+
+  mgrpRFC822MailMember
+    FROM LdapSolaris ;
+
+-- Object identifiers
+
+id-at-mgmanIntroText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 796 }
+id-at-mgmanDenySubscribe OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 791 }
+id-at-mailDomainAllowedServiceAccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 764 }
+id-at-mailDomainWelcomeMessage OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 765 }
+id-at-mailDomainMsgQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 767 }
+id-at-mailAutoReplyTimeout OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 771 }
+id-at-mgmanMemberVisibility OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 795 }
+id-at-mailRoutingSmartHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 760 }
+id-at-mailDomainDiskQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 766 }
+id-at-mailAccessProxyPreAuth OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 769 }
+id-at-mgrpDisallowedDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 784 }
+id-at-mgmanVisibility OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 794 }
+id-at-mailAutoReplySubject OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 772 }
+id-at-mgrpAuthPassword OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 783 }
+id-at-mailRoutingHosts OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 759 }
+id-at-mailAdminRole OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 780 }
+id-at-mailDomainStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 770 }
+id-at-preferredMailHost OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 761 }
+id-at-mgrpRequestTo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 782 }
+id-at-inetMailGroupStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 786 }
+id-at-mailAccessProxyReplay OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 763 }
+id-at-mailUserStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 778 }
+id-at-mgrpDisallowedBroadcaster OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 785 }
+id-at-mailAutoReplyTextInternal OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 773 }
+id-at-dataSource OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 779 }
+id-at-mgmanJoinability OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 793 }
+id-at-mailAllowedServiceAccess OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 777 }
+id-at-mgmanAllowSubscribe OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 790 }
+id-at-preferredMailMessageStore OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 762 }
+id-at-mailMsgQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 774 }
+id-at-mailSMTPSubmitChannel OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 776 }
+id-at-mailClientAttachmentQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 768 }
+id-at-msgVanityDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 799 }
+id-at-mailDeliveryFileURL OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 787 }
+id-at-mgmanHidden OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 792 }
+id-at-mgmanGoodbyeText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 797 }
+id-at-mailDomainReportAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 970 }
+id-at-mailDomainMsgMaxBlocks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 971 }
+id-at-mailDomainSieveRuleSource OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 972 }
+id-at-mailDomainConversionTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 973 }
+id-at-mailDomainCatchAllAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 974 }
+id-at-mailEquivalentAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 975 }
+id-at-mailMsgMaxBlocks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 976 }
+id-at-mailAntiUBEService OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 977 }
+id-at-mailConversionTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 978 }
+id-at-mailDeferProcessing OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 979 }
+id-at-mgrpMsgPrefixText OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 980 }
+id-at-mgrpMsgSuffixText OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 981 }
+id-at-msgCRLMappingRecord OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 982 }
+id-at-mailFolderName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 983 }
+id-at-mailFolderDefaultAcl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 984 }
+id-at-aclGroupAddr OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 686 }
+id-at-mailParentalControl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 985 }
+id-at-mailSieveRuleRef OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 986 }
+id-at-mailEventNotificationDestination OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 935 }
+id-oc-mailDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 151 }
+id-oc-inetMailUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 146 }
+id-oc-inetMailAdministrator OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 148 }
+id-oc-inetMailGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 117 }
+id-oc-inetMailGroupManagement OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 149 }
+id-oc-msgVanityDomainUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 150 }
+id-oc-msgCRLMappingTable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 146 }
+id-oc-mailPublicFolder OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 147 }
+id-at-groupid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 784 }
+id-at-mgrpUniqueId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 942 }
+id-at-mgrpDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 943 }
+id-at-mgrpDelayNotifications OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 944 }
+id-at-mgrpDigestInterval OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 945 }
+id-at-mgrpMaxMessagesPerDay OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 946 }
+id-at-mgrpAdvertised OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 947 }
+id-at-mgrpPublicRoster OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 948 }
+id-at-mgrpSubscribePolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 949 }
+id-at-mgrpUnsubscribePolicy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 950 }
+id-at-mgrpJettisonBroadcasters OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 951 }
+id-at-mgrpJettisonDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 952 }
+id-at-mgrpTrustNewMembers OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 953 }
+id-at-mgrpListTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 954 }
+id-oc-inetMailingListUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 144 }
+id-at-mluserUniqueId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 955 }
+id-at-mluserPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 956 }
+id-at-mluserJoinDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 957 }
+id-at-mluserJoinIPAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 958 }
+id-oc-inetMailingListSubscription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 2 145 }
+id-at-mlsubListIdentifier OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 959 }
+id-at-mlsubMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 960 }
+id-at-mlsubRole OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 961 }
+id-at-mlsubDigest OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 962 }
+id-at-mlsubReceiveMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 963 }
+id-at-mlsubSuppressDuplicates OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 964 }
+id-at-mlsubJoinDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 965 }
+id-at-mlsubJoinIPAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 966 }
+id-at-mlsubTentativeEmail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 967 }
+id-at-mlsubTrack OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 968 }
+id-at-mlsubActionKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 969 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanIntroText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanIntroText"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanIntroText }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanDenySubscribe ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanDenySubscribe"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanDenySubscribe }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainAllowedServiceAccess ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainAllowedServiceAccess"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainAllowedServiceAccess }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainWelcomeMessage ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainWelcomeMessage"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainWelcomeMessage }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainMsgQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailDomainMsgQuota"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainMsgQuota }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAutoReplyTimeout ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailAutoReplyTimeout"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAutoReplyTimeout }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanMemberVisibility ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanMemberVisibility"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanMemberVisibility }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailRoutingSmartHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailRoutingSmartHost"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailRoutingSmartHost }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainDiskQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailDomainDiskQuota"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainDiskQuota }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAccessProxyPreAuth ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAccessProxyPreAuth"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAccessProxyPreAuth }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgrpDisallowedDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpDisallowedDomain"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgrpDisallowedDomain }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanVisibility ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanVisibility"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanVisibility }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAutoReplySubject ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAutoReplySubject"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAutoReplySubject }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgrpAuthPassword ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpAuthPassword"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgrpAuthPassword }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailRoutingHosts ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailRoutingHosts"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailRoutingHosts }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAdminRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAdminRole"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAdminRole }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainStatus"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainStatus }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+preferredMailHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"preferredMailHost"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-preferredMailHost }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgrpRequestTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpRequestTo"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgrpRequestTo }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+inetMailGroupStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetMailGroupStatus"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-inetMailGroupStatus }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAccessProxyReplay ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAccessProxyReplay"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAccessProxyReplay }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailUserStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailUserStatus"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailUserStatus }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgrpDisallowedBroadcaster ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpDisallowedBroadcaster"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgrpDisallowedBroadcaster }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAutoReplyTextInternal ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAutoReplyTextInternal"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAutoReplyTextInternal }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+dataSource ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dataSource"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-dataSource }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanJoinability ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanJoinability"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanJoinability }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAllowedServiceAccess ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAllowedServiceAccess"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAllowedServiceAccess }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanAllowSubscribe ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanAllowSubscribe"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanAllowSubscribe }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+preferredMailMessageStore ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"preferredMailMessageStore"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-preferredMailMessageStore }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailMsgQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailMsgQuota"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailMsgQuota }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailSMTPSubmitChannel ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailSMTPSubmitChannel"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailSMTPSubmitChannel }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailClientAttachmentQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailClientAttachmentQuota"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailClientAttachmentQuota }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+msgVanityDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"msgVanityDomain"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-msgVanityDomain }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDeliveryFileURL ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailDeliveryFileURL"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDeliveryFileURL }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanHidden ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanHidden"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanHidden }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgmanGoodbyeText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgmanGoodbyeText"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgmanGoodbyeText }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainReportAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainReportAddress"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainReportAddress }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainMsgMaxBlocks ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailDomainMsgMaxBlocks"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainMsgMaxBlocks }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainSieveRuleSource ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainSieveRuleSource"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainSieveRuleSource }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainConversionTag ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainConversionTag"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainConversionTag }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomainCatchAllAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDomainCatchAllAddress"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDomainCatchAllAddress }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailEquivalentAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailEquivalentAddress"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailEquivalentAddress }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailMsgMaxBlocks ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailMsgMaxBlocks"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailMsgMaxBlocks }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailAntiUBEService ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAntiUBEService"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailAntiUBEService }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailConversionTag ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailConversionTag"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailConversionTag }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDeferProcessing ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDeferProcessing"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailDeferProcessing }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgrpMsgPrefixText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpMsgPrefixText"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgrpMsgPrefixText }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mgrpMsgSuffixText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpMsgSuffixText"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mgrpMsgSuffixText }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+msgCRLMappingRecord ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"msgCRLMappingRecord"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-msgCRLMappingRecord }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailFolderName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailFolderName"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailFolderName }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailFolderDefaultAcl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailFolderDefaultAcl"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailFolderDefaultAcl }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+aclGroupAddr ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"aclGroupAddr"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-aclGroupAddr }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailParentalControl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailParentalControl"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailParentalControl }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailSieveRuleRef ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"mailSieveRuleRef"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailSieveRuleRef }
+
+-- X-ORIGIN: "Sun Java System Messaging Server 7.x"
+mailEventNotificationDestination ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailEventNotificationDestination"}
+  LDAP-DESC                 "Destination for store event notifications"
+  ID                        id-at-mailEventNotificationDestination }
+
+-- X-ORIGIN: "JES Calendar"
+groupid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"groupid"}
+  LDAP-DESC                 "name of group"
+  ID                        id-at-groupid }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpUniqueId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpUniqueId"}
+  LDAP-DESC                 "unique identifier for the group"
+  ID                        id-at-mgrpUniqueId }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpDescription"}
+  LDAP-DESC                 "description for the group"
+  ID                        id-at-mgrpDescription }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpDelayNotifications ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpDelayNotifications"}
+  LDAP-DESC                 "should NOTIFY=DELAY be set on list messages?"
+  ID                        id-at-mgrpDelayNotifications }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpDigestInterval ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpDigestInterval"}
+  LDAP-DESC                 "interval between digest list postings in vCalendar recurrence string format"
+  ID                        id-at-mgrpDigestInterval }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpMaxMessagesPerDay ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mgrpMaxMessagesPerDay"}
+  LDAP-DESC                 "Max messages allowed per day"
+  ID                        id-at-mgrpMaxMessagesPerDay }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpAdvertised ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpAdvertised"}
+  LDAP-DESC                 "advertise the list in the mailserv GUI?"
+  ID                        id-at-mgrpAdvertised }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpPublicRoster ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpPublicRoster"}
+  LDAP-DESC                 "should the membership list be visible to anyone, members of admins_only"
+  ID                        id-at-mgrpPublicRoster }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpSubscribePolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpSubscribePolicy"}
+  LDAP-DESC                 "policy for subscribe requests"
+  ID                        id-at-mgrpSubscribePolicy }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpUnsubscribePolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpUnsubscribePolicy"}
+  LDAP-DESC                 "policy for unsubscribe requests"
+  ID                        id-at-mgrpUnsubscribePolicy }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpJettisonBroadcasters ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpJettisonBroadcasters"}
+  LDAP-DESC                 "discard mail from these addresses"
+  ID                        id-at-mgrpJettisonBroadcasters }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpJettisonDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpJettisonDomain"}
+  LDAP-DESC                 "discard mail from these domains"
+  ID                        id-at-mgrpJettisonDomain }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpTrustNewMembers ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpTrustNewMembers"}
+  LDAP-DESC                 "policy for new members of a moderated list"
+  ID                        id-at-mgrpTrustNewMembers }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mgrpListTag ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpListTag"}
+  LDAP-DESC                 "tag string to be inserted into list message subject lines"
+  ID                        id-at-mgrpListTag }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mluserUniqueId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mluserUniqueId"}
+  LDAP-DESC                 "autogenerated unique identifier"
+  ID                        id-at-mluserUniqueId }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mluserPassword ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mluserPassword"}
+  LDAP-DESC                 "password to access mailing list services"
+  ID                        id-at-mluserPassword }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mluserJoinDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mluserJoinDate"}
+  LDAP-DESC                 "time user signed up for mailing list services unique identifier"
+  ID                        id-at-mluserJoinDate }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mluserJoinIPAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mluserJoinIPAddress"}
+  LDAP-DESC                 "IP address user originally joined from"
+  ID                        id-at-mluserJoinIPAddress }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubListIdentifier ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubListIdentifier"}
+  LDAP-DESC                 "list unique id for this subscription"
+  ID                        id-at-mlsubListIdentifier }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubMail ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubMail"}
+  LDAP-DESC                 "address that this subscription should be sent to"
+  ID                        id-at-mlsubMail }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubRole"}
+  LDAP-DESC                 "role user has for this list"
+  ID                        id-at-mlsubRole }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubDigest ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubDigest"}
+  LDAP-DESC                 "control use of digest format"
+  ID                        id-at-mlsubDigest }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubReceiveMail ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubReceiveMail"}
+  LDAP-DESC                 "control sending of list messages"
+  ID                        id-at-mlsubReceiveMail }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubSuppressDuplicates ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubSuppressDuplicates"}
+  LDAP-DESC                 "control suppression of possible duplicate messages"
+  ID                        id-at-mlsubSuppressDuplicates }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubJoinDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubJoinDate"}
+  LDAP-DESC                 "time list was joined"
+  ID                        id-at-mlsubJoinDate }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubJoinIPAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubJoinIPAddress"}
+  LDAP-DESC                 "ip address used when list was joined"
+  ID                        id-at-mlsubJoinIPAddress }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubTentativeEmail ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubTentativeEmail"}
+  LDAP-DESC                 "storage for email address during change processing"
+  ID                        id-at-mlsubTentativeEmail }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubTrack ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubTrack"}
+  LDAP-DESC                 "tracking state for change processing"
+  ID                        id-at-mlsubTrack }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+mlsubActionKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mlsubActionKey"}
+  LDAP-DESC                 "key used in generated confirmations"
+  ID                        id-at-mlsubActionKey }
+
+-- Object classes
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mailRoutingHosts
+                              | mailRoutingSmartHost
+                              | preferredMailHost
+                              | preferredMailMessageStore
+                              | mailAccessProxyReplay
+                              | mailDomainAllowedServiceAccess
+                              | mailDomainWelcomeMessage
+                              | mailDomainDiskQuota
+                              | mailDomainMsgQuota
+                              | mailClientAttachmentQuota
+                              | mailQuota
+                              | mailAccessProxyPreAuth
+                              | mailDomainStatus
+                              | preferredLanguage
+                              | mailDomainReportAddress
+                              | mailDomainMsgMaxBlocks
+                              | mailDomainSieveRuleSource
+                              | mailDomainConversionTag
+                              | mailDomainCatchAllAddress
+                              | mailAntiUBEService
+                              | mailFolderDefaultAcl }
+  LDAP-NAME                 {"mailDomain"}
+  LDAP-DESC                 "auxiliary class for a messaging server hosted domain"
+  ID                        id-oc-mailDomain }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+inetMailUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mailAutoReplyTimeout
+                              | mailAutoReplySubject
+                              | mailAutoReplyText
+                              | mailAutoReplyTextInternal
+                              | mailAutoReplyMode
+                              | mailDeliveryOption
+                              | mailForwardingAddress
+                              | mailMessageStore
+                              | mailProgramDeliveryInfo
+                              | mailQuota
+                              | mailMsgQuota
+                              | mailSieveRuleSource
+                              | mailSMTPSubmitChannel
+                              | nswmExtendedUserPrefs
+                              | mailAllowedServiceAccess
+                              | mailUserStatus
+                              | commonName
+                              | dataSource
+                              | mailEquivalentAddress
+                              | mailMsgMaxBlocks
+                              | mailConversionTag
+                              | mailDeferProcessing
+                              | mailAntiUBEService
+                              | mailFolderDefaultAcl
+                              | aclGroupAddr
+                              | mailParentalControl
+                              | mailSieveRuleRef
+                              | mailEventNotificationDestination }
+  LDAP-NAME                 {"inetMailUser"}
+  LDAP-DESC                 "auxiliary class for a messaging server user"
+  ID                        id-oc-inetMailUser }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+inetMailAdministrator OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mailAdminRole }
+  LDAP-NAME                 {"inetMailAdministrator"}
+  LDAP-DESC                 "auxiliary class for defining messaging server administrators"
+  ID                        id-oc-inetMailAdministrator }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+inetMailGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mgrpErrorsTo
+                              | mgrpAddHeader
+                              | mgrpRemoveHeader
+                              | mgrpModerator
+                              | mgrpRequestTo
+                              | mgrpAuthPassword
+                              | mgrpAllowedDomain
+                              | mgrpDisallowedDomain
+                              | mgrpAllowedBroadcaster
+                              | mgrpDisallowedBroadcaster
+                              | inetMailGroupStatus
+                              | mailDeliveryFileURL
+                              | mailDeliveryOption
+                              | mailProgramDeliveryInfo
+                              | mgrpRFC822MailMember
+                              | mgrpDeliverTo
+                              | mgrpBroadcasterPolicy
+                              | mgrpMsgMaxSize
+                              | mgrpMsgRejectAction
+                              | mgrpMsgRejectText
+                              | mgrpNoDuplicateChecks
+                              | preferredLanguage
+                              | dataSource
+                              | mailEquivalentAddress
+                              | mailMsgMaxBlocks
+                              | mailConversionTag
+                              | mailDeferProcessing
+                              | mgrpMsgPrefixText
+                              | mgrpMsgSuffixText
+                              | mailSieveRuleSource
+                              | groupid
+                              | mgrpUniqueId
+                              | commonName
+                              | mgrpDescription
+                              | mgrpDelayNotifications
+                              | mgrpDigestInterval
+                              | mgrpMaxMessagesPerDay
+                              | mgrpAdvertised
+                              | mgrpPublicRoster
+                              | mgrpSubscribePolicy
+                              | mgrpUnsubscribePolicy
+                              | mgrpJettisonBroadcasters
+                              | mgrpJettisonDomain
+                              | mgrpTrustNewMembers
+                              | mail
+                              | mgrpListTag }
+  LDAP-NAME                 {"inetMailGroup"}
+  LDAP-DESC                 "auxiliary class for mailing lists"
+  ID                        id-oc-inetMailGroup }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+inetMailGroupManagement OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { mgmanAllowSubscribe
+                              | mgmanDenySubscribe
+                              | mgmanHidden
+                              | mgmanJoinability
+                              | mgmanVisibility
+                              | mgmanMemberVisibility
+                              | mgmanIntroText
+                              | mgmanGoodbyeText
+                              | multiLineDescription }
+  LDAP-NAME                 {"inetMailGroupManagement"}
+  LDAP-DESC                 "auxiliary class for managed mailing lists"
+  ID                        id-oc-inetMailGroupManagement }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+msgVanityDomainUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { msgVanityDomain }
+  LDAP-NAME                 {"msgVanityDomainUser"}
+  LDAP-DESC                 "auxiliary class for defining users in a vality domain"
+  ID                        id-oc-msgVanityDomainUser }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+msgCRLMappingTable OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { msgCRLMappingRecord }
+  LDAP-NAME                 {"msgCRLMappingTable"}
+  LDAP-DESC                 "auxiliary class for setting CRL mapping"
+  ID                        id-oc-msgCRLMappingTable }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailPublicFolder OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { mailFolderName }
+  MAY CONTAIN               { mailMessageStore
+                              | mailFolderDefaultAcl
+                              | mailDeliveryOption
+                              | mailQuota
+                              | mailMsgQuota }
+  LDAP-NAME                 {"mailPublicFolder"}
+  LDAP-DESC                 "structural class for defining public folders"
+  ID                        id-oc-mailPublicFolder }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+inetMailingListUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mail
+                              | mluserUniqueId }
+  MAY CONTAIN               { mluserPassword
+                              | commonName
+                              | mluserJoinDate
+                              | mluserJoinIPAddress }
+  LDAP-NAME                 {"inetMailingListUser"}
+  LDAP-DESC                 "auxiliary class for mailing list users"
+  ID                        id-oc-inetMailingListUser }
+
+-- X-ORIGIN: "Messaging Server 7u3"
+inetMailingListSubscription OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { mlsubListIdentifier
+                              | mlsubRole }
+  MAY CONTAIN               { mlsubMail
+                              | mlsubDigest
+                              | mlsubReceiveMail
+                              | mlsubSuppressDuplicates
+                              | mlsubJoinDate
+                              | mlsubJoinIPAddress
+                              | mlsubTentativeEmail
+                              | mlsubTrack
+                              | mlsubActionKey }
+  LDAP-NAME                 {"inetMailingListSubscription"}
+  LDAP-DESC                 "auxiliary class for mailing list subscriptions"
+  ID                        id-oc-inetMailingListSubscription }
+END

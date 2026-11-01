@@ -1,0 +1,89 @@
+-- Derived from data/ldap-schema/eionet.schema
+-- Upstream: https://github.com/eea/eea.mailexpander/blob/3a8c59f55f463785dbd19a6122e252f3cd7f0807/misc/eionet.schema#L29
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapEionet DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  businessCategory, commonName, description, destinationIndicator,
+    distinguishedName, facsimileTelephoneNumber, internationalISDNNumber,
+    localityName, organizationalUnitName, organizationName, owner,
+    physicalDeliveryOfficeName, postalAddress, postalCode, postOfficeBox,
+    preferredDeliveryMethod, registeredAddress, seeAlso, stateOrProvinceName,
+    streetAddress, telephoneNumber, telexNumber
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  teletexTerminalIdentifier
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-permittedSender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26314 3 1 198 }
+id-at-permittedPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26314 3 1 199 }
+id-oc-mailListGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26314 3 2 31 }
+id-oc-organizationGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26314 3 2 33 }
+
+-- Attribute types
+
+-- OID written as EionetLDAPattributeType:198 and expanded with this file's objectidentifier macros.
+-- This attribute declares neither a supertype nor a syntax.
+permittedSender ATTRIBUTE ::= {
+  LDAP-NAME                 {"permittedSender"}
+  LDAP-DESC                 "Identifies a sender expression associated with a group."
+  ID                        id-at-permittedSender }
+
+-- OID written as EionetLDAPattributeType:199 and expanded with this file's objectidentifier macros.
+permittedPerson ATTRIBUTE ::= {
+  SUBTYPE OF                distinguishedName
+  LDAP-NAME                 {"permittedPerson"}
+  LDAP-DESC                 "A reference (DN) to a person that is allowed to send to this mailing list"
+  ID                        id-at-permittedPerson }
+
+-- Object classes
+
+-- OID written as EionetLDAPobjectClass:31 and expanded with this file's objectidentifier macros.
+mailListGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { permittedSender
+                              | permittedPerson }
+  LDAP-NAME                 {"mailListGroup"}
+  LDAP-DESC                 "Identifies a mail list associated with a group."
+  ID                        id-oc-mailListGroup }
+
+-- OID written as EionetLDAPobjectClass:33 and expanded with this file's objectidentifier macros.
+organizationGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { seeAlso
+                              | businessCategory
+                              | organizationName
+                              | organizationalUnitName
+                              | owner
+                              | registeredAddress
+                              | destinationIndicator
+                              | preferredDeliveryMethod
+                              | telexNumber
+                              | teletexTerminalIdentifier
+                              | telephoneNumber
+                              | internationalISDNNumber
+                              | facsimileTelephoneNumber
+                              | streetAddress
+                              | postOfficeBox
+                              | postalCode
+                              | postalAddress
+                              | physicalDeliveryOfficeName
+                              | stateOrProvinceName
+                              | localityName
+                              | description }
+  LDAP-NAME                 {"organizationGroup"}
+  ID                        id-oc-organizationGroup }
+END

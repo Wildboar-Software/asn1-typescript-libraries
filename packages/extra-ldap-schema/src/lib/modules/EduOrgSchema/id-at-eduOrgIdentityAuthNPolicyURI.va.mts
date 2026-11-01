@@ -1,0 +1,28 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID,
+    type OBJECT_IDENTIFIER
+} from "@wildboar/asn1";
+import { id_eduOrg } from "../EduOrgSchema/id-eduOrg.va.mjs";
+// export { id_eduOrg } from "../EduOrgSchema/id-eduOrg.va.mjs";
+
+
+/**
+ * @summary id_at_eduOrgIdentityAuthNPolicyURI
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * id-at-eduOrgIdentityAuthNPolicyURI  OBJECT IDENTIFIER ::= { id-eduOrg 1 3 }
+ * ```
+ * 
+ * @constant
+ */
+export
+const id_at_eduOrgIdentityAuthNPolicyURI: OBJECT_IDENTIFIER = _OID.fromParts([
+    1,
+    3,
+], id_eduOrg);
+
+/* eslint-enable */

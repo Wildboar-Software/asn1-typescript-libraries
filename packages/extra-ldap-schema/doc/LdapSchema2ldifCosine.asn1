@@ -1,0 +1,608 @@
+-- Derived from data/ldap-schema/schema2ldif/cosine.schema
+-- Upstream: http://www.openldap.org/
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 6 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapSchema2ldifCosine DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  businessCategory, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+    caseIgnoreListMatch, caseIgnoreListSubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, dc, description,
+    destinationIndicator, directoryString, DirectoryString, dn,
+    facsimileTelephoneNumber, fax, ia5String, integer, internationalISDNNumber,
+    localityName, organizationalUnitName, organizationName,
+    physicalDeliveryOfficeName, postalAddr, postalAddress, PostalAddress,
+    postalCode, postOfficeBox, preferredDeliveryMethod, registeredAddress,
+    searchGuide, seeAlso, stateOrProvinceName, streetAddress, surname,
+    telephoneNr, telephoneNumber, TelephoneNumber, telephoneNumberMatch,
+    telephoneNumberSubstringsMatch, telexNumber, uid, UnboundedDirectoryString,
+    utcTime, x121Address
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  country, dSA, organization, organizationalUnit, person
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  aRecord, cNAMERecord, mDRecord, mxRecord, nSRecord, sOARecord
+    FROM Cosine
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) cosine(3)} WITH SUCCESSORS
+
+  associatedDomain
+    FROM MIXERAddressMapping
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) mixer-address-mapping(9)} WITH SUCCESSORS
+
+  mail, teletexTerminalIdentifier
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-textEncodedORAddress OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 2 }
+id-at-info OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 4 }
+id-at-drink OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 5 }
+id-at-roomNumber OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 6 }
+id-at-photo OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 7 }
+id-at-userClass OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 8 }
+id-at-host OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 9 }
+id-at-manager OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 10 }
+id-at-documentIdentifier OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 11 }
+id-at-documentTitle OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 12 }
+id-at-documentVersion OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 13 }
+id-at-documentAuthor OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 14 }
+id-at-documentLocation OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 15 }
+id-at-homePhone OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 20 }
+id-at-secretary OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 21 }
+id-at-otherMailbox OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 22 }
+-- Commented out in cosine.schema and marked OBSOLETE. Restored because nadf.schema requires lastModifiedTime. OBSOLETE was kept.
+id-at-lastModifiedTime OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 23 }
+id-at-associatedName OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 38 }
+id-at-homePostalAddress OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 39 }
+id-at-personalTitle OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 40 }
+id-at-mobile OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 41 }
+id-at-pager OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 42 }
+id-at-co OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 43 }
+id-at-uniqueIdentifier OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 44 }
+id-at-organizationalStatus OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 45 }
+id-at-janetMailbox OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 46 }
+id-at-mailPreferenceOption OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 47 }
+id-at-buildingName OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 48 }
+id-at-dSAQuality OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 49 }
+id-at-singleLevelQuality OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 50 }
+id-at-subtreeMinimumQuality OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 51 }
+id-at-subtreeMaximumQuality OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 52 }
+id-at-personalSignature OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 53 }
+id-at-dITRedirect OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 54 }
+id-at-audio OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 55 }
+id-at-documentPublisher OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 1 56 }
+id-oc-pilotPerson OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 4 }
+id-oc-account OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 5 }
+id-oc-document OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 6 }
+id-oc-room OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 7 }
+id-oc-documentSeries OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 9 }
+id-oc-domain OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 13 }
+id-oc-rFC822localPart OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 14 }
+id-oc-dNSDomain OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 15 }
+id-oc-domainRelatedObject OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 17 }
+id-oc-friendlyCountry OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 18 }
+id-oc-pilotOrganization OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 20 }
+id-oc-pilotDSA OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 21 }
+id-oc-qualityLabelledData OBJECT IDENTIFIER ::= { 0 9 2342 19200300 100 4 22 }
+
+-- Attribute types
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+textEncodedORAddress ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"textEncodedORAddress"}
+  ID                        id-at-textEncodedORAddress }
+
+-- LDAP syntax length {2048} rendered as DirectoryString{2048}.
+info ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{2048}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"info"}
+  LDAP-DESC                 "RFC1274: general information"
+  ID                        id-at-info }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+drink ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"drink", "favouriteDrink"}
+  LDAP-DESC                 "RFC1274: favorite drink"
+  ID                        id-at-drink }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+roomNumber ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"roomNumber"}
+  LDAP-DESC                 "RFC1274: room number"
+  ID                        id-at-roomNumber }
+
+-- X.520 models the fax syntax as NULL. Represented as OCTET STRING so a Directory value has a type. LDAP-SYNTAX remains fax.&id.
+photo ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING (SIZE (1..25000))
+  LDAP-SYNTAX               fax.&id
+  LDAP-NAME                 {"photo"}
+  LDAP-DESC                 "RFC1274: photo (G3 fax)"
+  ID                        id-at-photo }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+userClass ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"userClass"}
+  LDAP-DESC                 "RFC1274: category of user"
+  ID                        id-at-userClass }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+host ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"host"}
+  LDAP-DESC                 "RFC1274: host computer"
+  ID                        id-at-host }
+
+manager ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"manager"}
+  LDAP-DESC                 "RFC1274: DN of manager"
+  ID                        id-at-manager }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+documentIdentifier ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"documentIdentifier"}
+  LDAP-DESC                 "RFC1274: unique identifier of document"
+  ID                        id-at-documentIdentifier }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+documentTitle ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"documentTitle"}
+  LDAP-DESC                 "RFC1274: title of document"
+  ID                        id-at-documentTitle }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+documentVersion ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"documentVersion"}
+  LDAP-DESC                 "RFC1274: version of document"
+  ID                        id-at-documentVersion }
+
+documentAuthor ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"documentAuthor"}
+  LDAP-DESC                 "RFC1274: DN of author of document"
+  ID                        id-at-documentAuthor }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+documentLocation ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"documentLocation"}
+  LDAP-DESC                 "RFC1274: location of document original"
+  ID                        id-at-documentLocation }
+
+homePhone ATTRIBUTE ::= {
+  WITH SYNTAX               TelephoneNumber
+  EQUALITY MATCHING RULE    telephoneNumberMatch
+  SUBSTRINGS MATCHING RULE  telephoneNumberSubstringsMatch
+  LDAP-SYNTAX               telephoneNr.&id
+  LDAP-NAME                 {"homePhone", "homeTelephoneNumber"}
+  LDAP-DESC                 "RFC1274: home telephone number"
+  ID                        id-at-homePhone }
+
+secretary ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"secretary"}
+  LDAP-DESC                 "RFC1274: DN of secretary"
+  ID                        id-at-secretary }
+
+-- LDAP-SYNTAX uses a numeric OID because otherMailbox is already an identifier in this module.
+-- X.520 models the otherMailbox syntax as NULL. Represented as OCTET STRING. LDAP-SYNTAX remains otherMailbox.&id.
+otherMailbox ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 39 }
+  LDAP-NAME                 {"otherMailbox"}
+  ID                        id-at-otherMailbox }
+
+-- Commented out in cosine.schema and marked OBSOLETE. Restored because nadf.schema requires lastModifiedTime. OBSOLETE was kept.
+lastModifiedTime ATTRIBUTE ::= {
+  WITH SYNTAX               UTCTime
+  USAGE                     directoryOperation
+  LDAP-SYNTAX               utcTime.&id
+  LDAP-NAME                 {"lastModifiedTime"}
+  LDAP-DESC                 "RFC1274: time of last modify, replaced by modifyTimestamp"
+  OBSOLETE                  TRUE
+  ID                        id-at-lastModifiedTime }
+
+associatedName ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"associatedName"}
+  LDAP-DESC                 "RFC1274: DN of entry associated with domain"
+  ID                        id-at-associatedName }
+
+homePostalAddress ATTRIBUTE ::= {
+  WITH SYNTAX               PostalAddress
+  EQUALITY MATCHING RULE    caseIgnoreListMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreListSubstringsMatch
+  LDAP-SYNTAX               postalAddr.&id
+  LDAP-NAME                 {"homePostalAddress"}
+  LDAP-DESC                 "RFC1274: home postal address"
+  ID                        id-at-homePostalAddress }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+personalTitle ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"personalTitle"}
+  LDAP-DESC                 "RFC1274: personal title"
+  ID                        id-at-personalTitle }
+
+mobile ATTRIBUTE ::= {
+  WITH SYNTAX               TelephoneNumber
+  EQUALITY MATCHING RULE    telephoneNumberMatch
+  SUBSTRINGS MATCHING RULE  telephoneNumberSubstringsMatch
+  LDAP-SYNTAX               telephoneNr.&id
+  LDAP-NAME                 {"mobile", "mobileTelephoneNumber"}
+  LDAP-DESC                 "RFC1274: mobile telephone number"
+  ID                        id-at-mobile }
+
+pager ATTRIBUTE ::= {
+  WITH SYNTAX               TelephoneNumber
+  EQUALITY MATCHING RULE    telephoneNumberMatch
+  SUBSTRINGS MATCHING RULE  telephoneNumberSubstringsMatch
+  LDAP-SYNTAX               telephoneNr.&id
+  LDAP-NAME                 {"pager", "pagerTelephoneNumber"}
+  LDAP-DESC                 "RFC1274: pager telephone number"
+  ID                        id-at-pager }
+
+co ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"co", "friendlyCountryName"}
+  LDAP-DESC                 "RFC1274: friendly country name"
+  ID                        id-at-co }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+uniqueIdentifier ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"uniqueIdentifier"}
+  LDAP-DESC                 "RFC1274: unique identifer"
+  ID                        id-at-uniqueIdentifier }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+organizationalStatus ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"organizationalStatus"}
+  LDAP-DESC                 "RFC1274: organizational status"
+  ID                        id-at-organizationalStatus }
+
+janetMailbox ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"janetMailbox"}
+  LDAP-DESC                 "RFC1274: Janet mailbox"
+  ID                        id-at-janetMailbox }
+
+mailPreferenceOption ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mailPreferenceOption"}
+  LDAP-DESC                 "RFC1274: mail preference option"
+  ID                        id-at-mailPreferenceOption }
+
+-- LDAP syntax length {256} rendered as DirectoryString{256}.
+buildingName ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{256}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"buildingName"}
+  LDAP-DESC                 "RFC1274: name of building"
+  ID                        id-at-buildingName }
+
+dSAQuality ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 19 }
+  LDAP-NAME                 {"dSAQuality"}
+  LDAP-DESC                 "RFC1274: DSA Quality"
+  ID                        id-at-dSAQuality }
+
+singleLevelQuality ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 13 }
+  LDAP-NAME                 {"singleLevelQuality"}
+  LDAP-DESC                 "RFC1274: Single Level Quality"
+  ID                        id-at-singleLevelQuality }
+
+subtreeMinimumQuality ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 13 }
+  LDAP-NAME                 {"subtreeMinimumQuality"}
+  LDAP-DESC                 "RFC1274: Subtree Mininum Quality"
+  ID                        id-at-subtreeMinimumQuality }
+
+subtreeMaximumQuality ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 13 }
+  LDAP-NAME                 {"subtreeMaximumQuality"}
+  LDAP-DESC                 "RFC1274: Subtree Maximun Quality"
+  ID                        id-at-subtreeMaximumQuality }
+
+-- X.520 models the fax syntax as NULL. Represented as OCTET STRING so a Directory value has a type. LDAP-SYNTAX remains fax.&id.
+personalSignature ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               fax.&id
+  LDAP-NAME                 {"personalSignature"}
+  LDAP-DESC                 "RFC1274: Personal Signature (G3 fax)"
+  ID                        id-at-personalSignature }
+
+dITRedirect ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dITRedirect"}
+  LDAP-DESC                 "RFC1274: DIT Redirect"
+  ID                        id-at-dITRedirect }
+
+-- LDAP audio syntax has no X.500 directory type here. Represented as OCTET STRING.
+audio ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING (SIZE (1..25000))
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 4 }
+  LDAP-NAME                 {"audio"}
+  LDAP-DESC                 "RFC1274: audio (u-law)"
+  ID                        id-at-audio }
+
+documentPublisher ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"documentPublisher"}
+  LDAP-DESC                 "RFC1274: publisher of document"
+  ID                        id-at-documentPublisher }
+
+-- Object classes
+
+-- MAY userid: LDAP name "userid" was taken as uid. schema2ldif/core.schema lists it on 0.9.2342.19200300.100.1.1, which is already uid in SelectedAttributeTypes.
+pilotPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { person }
+  MAY CONTAIN               { uid
+                              | textEncodedORAddress
+                              | mail
+                              | drink
+                              | roomNumber
+                              | userClass
+                              | homePhone
+                              | homePostalAddress
+                              | secretary
+                              | personalTitle
+                              | preferredDeliveryMethod
+                              | businessCategory
+                              | janetMailbox
+                              | otherMailbox
+                              | mobile
+                              | pager
+                              | organizationalStatus
+                              | mailPreferenceOption
+                              | personalSignature }
+  LDAP-NAME                 {"pilotPerson", "newPilotPerson"}
+  ID                        id-oc-pilotPerson }
+
+-- MUST userid: LDAP name "userid" was taken as uid. schema2ldif/core.schema lists it on 0.9.2342.19200300.100.1.1, which is already uid in SelectedAttributeTypes.
+account OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { uid }
+  MAY CONTAIN               { description
+                              | seeAlso
+                              | localityName
+                              | organizationName
+                              | organizationalUnitName
+                              | host }
+  LDAP-NAME                 {"account"}
+  ID                        id-oc-account }
+
+document OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { documentIdentifier }
+  MAY CONTAIN               { commonName
+                              | description
+                              | seeAlso
+                              | localityName
+                              | organizationName
+                              | organizationalUnitName
+                              | documentTitle
+                              | documentVersion
+                              | documentAuthor
+                              | documentLocation
+                              | documentPublisher }
+  LDAP-NAME                 {"document"}
+  ID                        id-oc-document }
+
+room OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { roomNumber
+                              | description
+                              | seeAlso
+                              | telephoneNumber }
+  LDAP-NAME                 {"room"}
+  ID                        id-oc-room }
+
+documentSeries OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description
+                              | seeAlso
+                              | telephoneNumber
+                              | localityName
+                              | organizationName
+                              | organizationalUnitName }
+  LDAP-NAME                 {"documentSeries"}
+  ID                        id-oc-documentSeries }
+
+-- MUST domainComponent: LDAP name "domainComponent" was taken as dc. schema2ldif/core.schema lists it on 0.9.2342.19200300.100.1.25, which is already dc in SelectedAttributeTypes.
+domain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dc }
+  MAY CONTAIN               { associatedName
+                              | organizationName
+                              | description
+                              | businessCategory
+                              | seeAlso
+                              | searchGuide
+                              | userPassword
+                              | localityName
+                              | stateOrProvinceName
+                              | streetAddress
+                              | physicalDeliveryOfficeName
+                              | postalAddress
+                              | postalCode
+                              | postOfficeBox
+                              | streetAddress
+                              | facsimileTelephoneNumber
+                              | internationalISDNNumber
+                              | telephoneNumber
+                              | teletexTerminalIdentifier
+                              | telexNumber
+                              | preferredDeliveryMethod
+                              | destinationIndicator
+                              | registeredAddress
+                              | x121Address }
+  LDAP-NAME                 {"domain"}
+  ID                        id-oc-domain }
+
+-- initial capital of "RFC822localPart" lowercased so the assignment is a valuereference.
+rFC822localPart OBJECT-CLASS ::= {
+  SUBCLASS OF               { domain }
+  MAY CONTAIN               { commonName
+                              | surname
+                              | description
+                              | seeAlso
+                              | telephoneNumber
+                              | physicalDeliveryOfficeName
+                              | postalAddress
+                              | postalCode
+                              | postOfficeBox
+                              | streetAddress
+                              | facsimileTelephoneNumber
+                              | internationalISDNNumber
+                              | telephoneNumber
+                              | teletexTerminalIdentifier
+                              | telexNumber
+                              | preferredDeliveryMethod
+                              | destinationIndicator
+                              | registeredAddress
+                              | x121Address }
+  LDAP-NAME                 {"RFC822localPart"}
+  ID                        id-oc-rFC822localPart }
+
+dNSDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { domain }
+  MAY CONTAIN               { aRecord
+                              | mDRecord
+                              | mxRecord
+                              | nSRecord
+                              | sOARecord
+                              | cNAMERecord }
+  LDAP-NAME                 {"dNSDomain"}
+  ID                        id-oc-dNSDomain }
+
+domainRelatedObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { associatedDomain }
+  LDAP-NAME                 {"domainRelatedObject"}
+  LDAP-DESC                 "RFC1274: an object related to an domain"
+  ID                        id-oc-domainRelatedObject }
+
+friendlyCountry OBJECT-CLASS ::= {
+  SUBCLASS OF               { country }
+  MUST CONTAIN              { co }
+  LDAP-NAME                 {"friendlyCountry"}
+  ID                        id-oc-friendlyCountry }
+
+pilotOrganization OBJECT-CLASS ::= {
+  SUBCLASS OF               { organization
+                              | organizationalUnit }
+  MAY CONTAIN               { buildingName }
+  LDAP-NAME                 {"pilotOrganization"}
+  ID                        id-oc-pilotOrganization }
+
+pilotDSA OBJECT-CLASS ::= {
+  SUBCLASS OF               { dSA }
+  MAY CONTAIN               { dSAQuality }
+  LDAP-NAME                 {"pilotDSA"}
+  ID                        id-oc-pilotDSA }
+
+qualityLabelledData OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { dSAQuality }
+  MAY CONTAIN               { subtreeMinimumQuality
+                              | subtreeMaximumQuality }
+  LDAP-NAME                 {"qualityLabelledData"}
+  ID                        id-oc-qualityLabelledData }
+END

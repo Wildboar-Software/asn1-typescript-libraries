@@ -1,0 +1,57 @@
+-- Derived from data/ldap-schema/sbac.ldif
+-- Upstream: https://github.com/SmarterApp/RDW_DataWarehouse/blob/141b81136a9f676c91989566ac774184688e4821/resource/98-sbac.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapSbac DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  directoryString, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  inetOrgPerson
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-sbacUUID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26037 1 999 1000 }
+id-at-sbacTenancyChain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26037 1 999 1001 }
+id-oc-sbac OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 26037 1 999 2000 }
+
+-- Attribute types
+
+-- X-ORIGIN: "SBAC1"
+sbacUUID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sbacUUID", "SBACUUDI"}
+  LDAP-DESC                 "SBAC UUID"
+  ID                        id-at-sbacUUID }
+
+-- X-ORIGIN: "SBAC1"
+sbacTenancyChain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"sbacTenancyChain", "SBACTENANCYCHAIN"}
+  LDAP-DESC                 "SBAC Tenancy Chain"
+  ID                        id-at-sbacTenancyChain }
+
+-- Object classes
+
+-- X-ORIGIN: "SBAC1"
+sbac OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MAY CONTAIN               { sbacUUID
+                              | sbacTenancyChain }
+  LDAP-NAME                 {"sbac"}
+  LDAP-DESC                 "sbac custom"
+  ID                        id-oc-sbac }
+END
