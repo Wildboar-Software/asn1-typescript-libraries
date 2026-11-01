@@ -7,13 +7,14 @@
     "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": true,
     "importHelpers": true,
     "types": [
       "node"
     ]
   },
   "include": [
-    "src/**/*.ts"
+    "**/*.mts"
   ],
   "references": [],
   "exclude": [
@@ -22,6 +23,9 @@
     "vitest.config.ts",
     "vitest.config.mts",
     "src/**/*.test.ts",
+    "src/**/*.test.mts",
+    "**/*.test.mts",
+    "**/*.spec.mts",
     "src/**/*.spec.ts",
     "src/**/*.test.tsx",
     "src/**/*.spec.tsx",
