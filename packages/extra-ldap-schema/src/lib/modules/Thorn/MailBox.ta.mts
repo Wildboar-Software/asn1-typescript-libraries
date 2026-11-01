@@ -133,10 +133,8 @@ function _decode_MailBox (el: _Element): MailBox {
     }
     sequence[0].name = "mailboxType";
     sequence[1].name = "mailbox";
-    let mailboxType!: PrintableString;
-    let mailbox!: IA5String;
-    mailboxType = $._decodePrintableString(sequence[0]);
-    mailbox = $._decodeIA5String(sequence[1]);
+    const mailboxType: PrintableString = $._decodePrintableString(sequence[0]);
+    const mailbox: IA5String = $._decodeIA5String(sequence[1]);
     return new MailBox(
         mailboxType,
         mailbox,

@@ -2,8 +2,8 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
-import { ID } from "../VOPerson/ID.ta.mjs";
-// export { ID, _decode_ID, _encode_ID } from "../VOPerson/ID.ta.mjs";
+import { ldap_enterprise as id_pen } from "@wildboar/x500/UsefulDefinitions";
+import { type ID } from "../VOPerson/ID.ta.mjs";
 
 
 /**
@@ -24,3 +24,4 @@ const id_geant: ID = _OID.fromParts([
 ], id_pen);
 
 /* eslint-enable */
+

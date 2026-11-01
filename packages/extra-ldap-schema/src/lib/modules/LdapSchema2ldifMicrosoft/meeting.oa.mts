@@ -1,81 +1,32 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    type OPTIONAL,
-    type BOOLEAN,
-    type INTEGER,
-    type BIT_STRING,
-    type OCTET_STRING,
-    NULL,
-    type OBJECT_IDENTIFIER,
-    type ObjectDescriptor,
-    type EXTERNAL,
-    type REAL,
-    type INSTANCE_OF,
-    type ENUMERATED,
-    type EMBEDDED_PDV,
-    type UTF8String,
-    type RELATIVE_OID,
-    type SEQUENCE,
-    type SEQUENCE_OF,
-    type SET,
-    type SET_OF,
-    type GraphicString,
-    type NumericString,
-    type VisibleString,
-    type PrintableString,
-    type ISO646String,
-    type TeletexString,
-    type GeneralString,
-    type T61String,
-    type UniversalString,
-    type VideotexString,
-    type BMPString,
-    type IA5String,
-    type CharacterString,
-    type UTCTime,
-    type GeneralizedTime,
-    type TIME,
-    type DATE,
-    type TIME_OF_DAY,
-    type DATE_TIME,
-    type DURATION,
-    type OID_IRI,
-    type RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    type ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { meetingName } from "../MSUser/meetingName.oa.mjs";
-// export { meetingName } from "../MSUser/meetingName.oa.mjs";
 import { id_oc_meeting } from "../LdapSchema2ldifMicrosoft/id-oc-meeting.va.mjs";
-// export { id_oc_meeting } from "../LdapSchema2ldifMicrosoft/id-oc-meeting.va.mjs";
+import { meetingID } from "../MSUser/meetingID.oa.mjs";
+import { meetingDescription } from "../MSUser/meetingDescription.oa.mjs";
+import { meetingKeyword } from "../MSUser/meetingKeyword.oa.mjs";
+import { meetingLocation } from "../MSUser/meetingLocation.oa.mjs";
+import { meetingProtocol } from "../MSUser/meetingProtocol.oa.mjs";
+import { meetingType } from "../MSUser/meetingType.oa.mjs";
+import { meetingApplication } from "../MSUser/meetingApplication.oa.mjs";
+import { meetingLanguage } from "../MSUser/meetingLanguage.oa.mjs";
+import { meetingMaxParticipants } from "../MSUser/meetingMaxParticipants.oa.mjs";
+import { meetingOriginator } from "../MSUser/meetingOriginator.oa.mjs";
+import { meetingContactInfo } from "../MSUser/meetingContactInfo.oa.mjs";
+import { meetingOwner } from "../MSUser/meetingOwner.oa.mjs";
+import { meetingIP } from "../MSUser/meetingIP.oa.mjs";
+import { meetingScope } from "../MSUser/meetingScope.oa.mjs";
+import { meetingAdvertiseScope } from "../MSUser/meetingAdvertiseScope.oa.mjs";
+import { meetingURL } from "../MSUser/meetingURL.oa.mjs";
+import { meetingRating } from "../MSUser/meetingRating.oa.mjs";
+import { meetingIsEncrypted } from "../MSUser/meetingIsEncrypted.oa.mjs";
+import { meetingRecurrence } from "../MSUser/meetingRecurrence.oa.mjs";
+import { meetingStartTime } from "../LdapSchema2ldifMicrosoft/meetingStartTime.oa.mjs";
+import { meetingEndTime } from "../LdapSchema2ldifMicrosoft/meetingEndTime.oa.mjs";
+import { meetingBandwidth } from "../MSUser/meetingBandwidth.oa.mjs";
+import { meetingBlob } from "../MSUser/meetingBlob.oa.mjs";
 
 
 /**
@@ -128,10 +79,11 @@ const meeting: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ meetingName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ meetingID, meetingDescription, meetingKeyword, meetingLocation, meetingProtocol, meetingType, meetingApplication, meetingLanguage, meetingMaxParticipants, meetingOriginator, meetingContactInfo, meetingOwner, meetingIP, meetingScope, meetingAdvertiseScope, meetingURL, meetingRating, meetingIsEncrypted, meetingRecurrence, meetingStartTime, meetingEndTime, meetingBandwidth, meetingBlob, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "meeting" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_meeting /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 
 /* eslint-enable */
+

@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_pen_internet2 } from "../EduMemberSchema/id-pen-internet2.va.mjs";
-// export { id_pen_internet2 } from "../EduMemberSchema/id-pen-internet2.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_mace: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_pen_internet2);
 
 /* eslint-enable */
+

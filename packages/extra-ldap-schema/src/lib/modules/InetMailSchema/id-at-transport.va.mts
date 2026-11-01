@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_igh } from "../InetMailSchema/id-igh.va.mjs";
-// export { id_igh } from "../InetMailSchema/id-igh.va.mjs";
 
 
 /**
@@ -26,3 +25,4 @@ const id_at_transport: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_igh);
 
 /* eslint-enable */
+

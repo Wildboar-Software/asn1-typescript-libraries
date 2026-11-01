@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { euro_oc } from "../ISSS-Schema/euro-oc.va.mjs";
-// export { euro_oc } from "../ISSS-Schema/euro-oc.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_euro_oc_resPerson: OBJECT_IDENTIFIER = _OID.fromParts([
 ], euro_oc);
 
 /* eslint-enable */
+

@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { organization } from "../SelectedObjectClasses/organization.oa.mjs";
-// export { organization } from "../SelectedObjectClasses/organization.oa.mjs";
 import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
-// export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
-// export { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 import { id_euro_nf_orgNF } from "../ISSS-Schema/id-euro-nf-orgNF.va.mjs";
-// export { id_euro_nf_orgNF } from "../ISSS-Schema/id-euro-nf-orgNF.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -44,3 +40,4 @@ const euroOrgNF: NAME_FORM = {
 };
 
 /* eslint-enable */
+

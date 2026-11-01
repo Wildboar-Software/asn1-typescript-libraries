@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_pilotAttributeType } from "../Cosine/id-pilotAttributeType.va.mjs";
-// export { id_pilotAttributeType } from "../Cosine/id-pilotAttributeType.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_at_documentTitle: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_pilotAttributeType);
 
 /* eslint-enable */
+

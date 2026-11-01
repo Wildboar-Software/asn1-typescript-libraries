@@ -1,20 +1,17 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    type INTEGER
+    type INTEGER,
+    type ASN1Element as _Element,
+    ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
-// export { integerMatch } from "../SelectedAttributeTypes/integerMatch.oa.mjs";
 import { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
-// export { integerOrderingMatch } from "../SelectedAttributeTypes/integerOrderingMatch.oa.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
-// export { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
 import { duaConfSchemaOID } from "../DUAConf/duaConfSchemaOID.va.mjs";
-// export { duaConfSchemaOID } from "../DUAConf/duaConfSchemaOID.va.mjs";
 
 
 /**
@@ -40,11 +37,19 @@ import { duaConfSchemaOID } from "../DUAConf/duaConfSchemaOID.va.mjs";
  * @type {ATTRIBUTE<INTEGER>}
  * @implements {ATTRIBUTE<INTEGER>}
  */
+const _decode_profileTTL_Type = (el: _Element): INTEGER => {
+    const value = $._decodeInteger(el);
+    if ((typeof value === "bigint" ? value < 0n : value < 0)) {
+        throw new ASN1OverflowError("profileTTL violates INTEGER constraint");
+    }
+    return value;
+};
+
 export
 const profileTTL: ATTRIBUTE<INTEGER> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeInteger,
+        "&Type": _decode_profileTTL_Type,
     },
     encoderFor: {
         "&Type": $._encodeInteger,
@@ -65,3 +70,4 @@ const profileTTL: ATTRIBUTE<INTEGER> = {
 };
 
 /* eslint-enable */
+

@@ -1,13 +1,9 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
-// export { SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
+import { type SigningTime, _decode_SigningTime, _encode_SigningTime } from "../PKCS-9/SigningTime.ta.mjs";
 import { signingTimeMatch } from "../PKCS-9/signingTimeMatch.oa.mjs";
-// export { signingTimeMatch } from "../PKCS-9/signingTimeMatch.oa.mjs";
 import { pkcs_9_at_signingTime } from "../PKCS-9/pkcs-9-at-signingTime.va.mjs";
-// export { pkcs_9_at_signingTime } from "../PKCS-9/pkcs-9-at-signingTime.va.mjs";
 
 
 /**
@@ -50,3 +46,4 @@ const signingTime: ATTRIBUTE<SigningTime> = {
 };
 
 /* eslint-enable */
+

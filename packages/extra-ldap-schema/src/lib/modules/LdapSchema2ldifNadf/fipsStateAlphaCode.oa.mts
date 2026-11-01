@@ -1,17 +1,15 @@
 /* eslint-disable */
 import {
-    type PrintableString
+    type PrintableString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
-// export { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
-// export { printableString } from "../SelectedAttributeTypes/printableString.oa.mjs";
 import { id_at_fipsStateAlphaCode } from "../LdapSchema2ldifNadf/id-at-fipsStateAlphaCode.va.mjs";
-// export { id_at_fipsStateAlphaCode } from "../LdapSchema2ldifNadf/id-at-fipsStateAlphaCode.va.mjs";
 
 
 /**
@@ -33,11 +31,19 @@ import { id_at_fipsStateAlphaCode } from "../LdapSchema2ldifNadf/id-at-fipsState
  * @type {ATTRIBUTE<PrintableString>}
  * @implements {ATTRIBUTE<PrintableString>}
  */
+const _decode_fipsStateAlphaCode_Type = (el: _Element): PrintableString => {
+    const value = $._decodePrintableString(el);
+    if (value.length < 1 || value.length > 2) {
+        throw new ASN1SizeError("fipsStateAlphaCode violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const fipsStateAlphaCode: ATTRIBUTE<PrintableString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodePrintableString,
+        "&Type": _decode_fipsStateAlphaCode_Type,
     },
     encoderFor: {
         "&Type": $._encodePrintableString,
@@ -56,3 +62,4 @@ const fipsStateAlphaCode: ATTRIBUTE<PrintableString> = {
 };
 
 /* eslint-enable */
+

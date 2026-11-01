@@ -5,10 +5,8 @@ import {
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-// export { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 import { AttributeQuality, _decode_AttributeQuality, _encode_AttributeQuality } from "../Thorn/AttributeQuality.ta.mjs";
-// export { AttributeQuality, _decode_AttributeQuality, _encode_AttributeQuality } from "../Thorn/AttributeQuality.ta.mjs";
 
 
 /**
@@ -18,7 +16,11 @@ import { AttributeQuality, _decode_AttributeQuality, _encode_AttributeQuality } 
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DataQualitySyntax-attributeQuality-Item ::= SEQUENCE { -- REMOVED_FROM_UNNESTING -- }
+ * DataQualitySyntax-attributeQuality-Item ::= SEQUENCE {
+ *     type        AttributeType,
+ *     quality     AttributeQuality,
+ *     ...
+ * }
  * ```
  * 
  * @class
@@ -130,10 +132,8 @@ function _decode_DataQualitySyntax_attributeQuality_Item (el: _Element): DataQua
     }
     sequence[0].name = "type";
     sequence[1].name = "quality";
-    let type_!: AttributeType;
-    let quality!: AttributeQuality;
-    type_ = _decode_AttributeType(sequence[0]);
-    quality = _decode_AttributeQuality(sequence[1]);
+    const type_: AttributeType = _decode_AttributeType(sequence[0]);
+    const quality: AttributeQuality = _decode_AttributeQuality(sequence[1]);
     return new DataQualitySyntax_attributeQuality_Item(
         type_,
         quality,
@@ -172,3 +172,4 @@ function _encode_DataQualitySyntax_attributeQuality_Item (value: DataQualitySynt
 
 
 /* eslint-enable */
+

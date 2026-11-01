@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_netscape } from "../InetMailSchema/id-netscape.va.mjs";
-// export { id_netscape } from "../InetMailSchema/id-netscape.va.mjs";
 
 
 /**
@@ -27,3 +26,4 @@ const id_oc_mailGroup: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_netscape);
 
 /* eslint-enable */
+

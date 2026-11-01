@@ -1,12 +1,8 @@
 /* eslint-disable */
 import { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
-// export { residentialPerson } from "../SelectedObjectClasses/residentialPerson.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
-// export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
-// export { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
 import { id_euro_nf_resPersNF } from "../ISSS-Schema/id-euro-nf-resPersNF.va.mjs";
-// export { id_euro_nf_resPersNF } from "../ISSS-Schema/id-euro-nf-resPersNF.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -44,3 +40,4 @@ const euroResPersNF: NAME_FORM = {
 };
 
 /* eslint-enable */
+

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    type BMPString
+    type BMPString,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
+import { pkcs_9_ub_friendlyName } from "../PKCS-9/pkcs-9-ub-friendlyName.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
-// export { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { pkcs_9_at_friendlyName } from "../PKCS-9/pkcs-9-at-friendlyName.va.mjs";
-// export { pkcs_9_at_friendlyName } from "../PKCS-9/pkcs-9-at-friendlyName.va.mjs";
 
 
 /**
@@ -31,11 +31,19 @@ import { pkcs_9_at_friendlyName } from "../PKCS-9/pkcs-9-at-friendlyName.va.mjs"
  * @type {ATTRIBUTE<BMPString>}
  * @implements {ATTRIBUTE<BMPString>}
  */
+const _decode_friendlyName_Type = (el: _Element): BMPString => {
+    const value = $._decodeBMPString(el);
+    if (value.length < 1 || (typeof pkcs_9_ub_friendlyName === "bigint" ? BigInt(value.length) > pkcs_9_ub_friendlyName : value.length > pkcs_9_ub_friendlyName)) {
+        throw new ASN1SizeError("friendlyName violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const friendlyName: ATTRIBUTE<BMPString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeBMPString,
+        "&Type": _decode_friendlyName_Type,
     },
     encoderFor: {
         "&Type": $._encodeBMPString,
@@ -52,3 +60,4 @@ const friendlyName: ATTRIBUTE<BMPString> = {
 };
 
 /* eslint-enable */
+

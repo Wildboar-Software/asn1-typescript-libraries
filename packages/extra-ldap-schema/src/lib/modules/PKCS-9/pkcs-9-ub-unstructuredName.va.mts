@@ -3,7 +3,6 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 import { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va.mjs";
-// export { pkcs_9_ub_pkcs9String } from "../PKCS-9/pkcs-9-ub-pkcs9String.va.mjs";
 
 
 /**
@@ -22,3 +21,4 @@ export
 const pkcs_9_ub_unstructuredName: INTEGER = pkcs_9_ub_pkcs9String;
 
 /* eslint-enable */
+

@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_netscapeRoot } from "../DynGroup/id-netscapeRoot.va.mjs";
-// export { id_netscapeRoot } from "../DynGroup/id-netscapeRoot.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_nsds: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_netscapeRoot);
 
 /* eslint-enable */
+

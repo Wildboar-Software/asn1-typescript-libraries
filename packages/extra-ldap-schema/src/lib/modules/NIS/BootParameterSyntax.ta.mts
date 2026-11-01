@@ -142,12 +142,9 @@ function _decode_BootParameterSyntax (el: _Element): BootParameterSyntax {
     sequence[0].name = "key";
     sequence[1].name = "server";
     sequence[2].name = "path";
-    let key!: IA5String;
-    let server!: IA5String;
-    let path!: IA5String;
-    key = $._decodeIA5String(sequence[0]);
-    server = $._decodeIA5String(sequence[1]);
-    path = $._decodeIA5String(sequence[2]);
+    const key: IA5String = $._decodeIA5String(sequence[0]);
+    const server: IA5String = $._decodeIA5String(sequence[1]);
+    const path: IA5String = $._decodeIA5String(sequence[2]);
     return new BootParameterSyntax(
         key,
         server,

@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { friendlyCountry } from "../Cosine/friendlyCountry.oa.mjs";
-// export { friendlyCountry } from "../Cosine/friendlyCountry.oa.mjs";
 import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
-// export { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 import { id_nf_friendlyCountryNameForm } from "../Cosine/id-nf-friendlyCountryNameForm.va.mjs";
-// export { id_nf_friendlyCountryNameForm } from "../Cosine/id-nf-friendlyCountryNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const friendlyCountryNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

@@ -1,13 +1,9 @@
 /* eslint-disable */
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { serviceAdministrationPoint } from "../LdapSchema2ldifMicrosoft/serviceAdministrationPoint.oa.mjs";
-// export { serviceAdministrationPoint } from "../LdapSchema2ldifMicrosoft/serviceAdministrationPoint.oa.mjs";
 import { msRRASAttribute } from "../MSUser/msRRASAttribute.oa.mjs";
-// export { msRRASAttribute } from "../MSUser/msRRASAttribute.oa.mjs";
 import { id_oc_rRASAdministrationConnectionPoint } from "../LdapSchema2ldifMicrosoft/id-oc-rRASAdministrationConnectionPoint.va.mjs";
-// export { id_oc_rRASAdministrationConnectionPoint } from "../LdapSchema2ldifMicrosoft/id-oc-rRASAdministrationConnectionPoint.va.mjs";
 
 
 /**
@@ -43,3 +39,4 @@ const rRASAdministrationConnectionPoint: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

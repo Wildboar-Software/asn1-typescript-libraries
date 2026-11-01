@@ -1,81 +1,33 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    type OPTIONAL,
-    type BOOLEAN,
-    type INTEGER,
-    type BIT_STRING,
-    type OCTET_STRING,
-    NULL,
-    type OBJECT_IDENTIFIER,
-    type ObjectDescriptor,
-    type EXTERNAL,
-    type REAL,
-    type INSTANCE_OF,
-    type ENUMERATED,
-    type EMBEDDED_PDV,
-    type UTF8String,
-    type RELATIVE_OID,
-    type SEQUENCE,
-    type SEQUENCE_OF,
-    type SET,
-    type SET_OF,
-    type GraphicString,
-    type NumericString,
-    type VisibleString,
-    type PrintableString,
-    type ISO646String,
-    type TeletexString,
-    type GeneralString,
-    type T61String,
-    type UniversalString,
-    type VideotexString,
-    type BMPString,
-    type IA5String,
-    type CharacterString,
-    type UTCTime,
-    type GeneralizedTime,
-    type TIME,
-    type DATE,
-    type TIME_OF_DAY,
-    type DATE_TIME,
-    type DURATION,
-    type OID_IRI,
-    type RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    type ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { mstop } from "../MSUser/mstop.oa.mjs";
-// export { mstop } from "../MSUser/mstop.oa.mjs";
 import { groupType } from "../MSUser/groupType.oa.mjs";
-// export { groupType } from "../MSUser/groupType.oa.mjs";
 import { id_oc_group } from "../MSUser/id-oc-group.va.mjs";
-// export { id_oc_group } from "../MSUser/id-oc-group.va.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
+import { nTGroupMembers } from "../MSUser/nTGroupMembers.oa.mjs";
+import { operatorCount } from "../MSUser/operatorCount.oa.mjs";
+import { adminCount } from "../MSUser/adminCount.oa.mjs";
+import { groupAttributes } from "../MSUser/groupAttributes.oa.mjs";
+import { groupMembershipSAM } from "../MSUser/groupMembershipSAM.oa.mjs";
+import { controlAccessRights } from "../MSUser/controlAccessRights.oa.mjs";
+import { desktopProfile } from "../MSUser/desktopProfile.oa.mjs";
+import { nonSecurityMember } from "../MSUser/nonSecurityMember.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { primaryGroupToken } from "../MSUser/primaryGroupToken.oa.mjs";
+import { msDS_AzLDAPQuery } from "../MSUser/msDS-AzLDAPQuery.oa.mjs";
+import { msDS_NonMembers } from "../MSUser/msDS-NonMembers.oa.mjs";
+import { msDS_AzBizRule } from "../MSUser/msDS-AzBizRule.oa.mjs";
+import { msDS_AzBizRuleLanguage } from "../MSUser/msDS-AzBizRuleLanguage.oa.mjs";
+import { msDS_AzLastImportedBizRulePath } from "../MSUser/msDS-AzLastImportedBizRulePath.oa.mjs";
+import { msDS_AzApplicationData } from "../MSUser/msDS-AzApplicationData.oa.mjs";
+import { msDS_AzObjectGuid } from "../MSUser/msDS-AzObjectGuid.oa.mjs";
+import { msDS_AzGenericData } from "../MSUser/msDS-AzGenericData.oa.mjs";
+import { msDS_PrimaryComputer } from "../MSUser/msDS-PrimaryComputer.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { msSFU30Name } from "../MSUser/msSFU30Name.oa.mjs";
+import { msSFU30NisDomain } from "../MSUser/msSFU30NisDomain.oa.mjs";
+import { msSFU30PosixMember } from "../MSUser/msSFU30PosixMember.oa.mjs";
 
 
 /**
@@ -129,10 +81,11 @@ const group: OBJECT_CLASS = {
     },
     "&Superclasses": [ mstop, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ groupType, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ member, nTGroupMembers, operatorCount, adminCount, groupAttributes, groupMembershipSAM, controlAccessRights, desktopProfile, nonSecurityMember, managedBy, primaryGroupToken, msDS_AzLDAPQuery, msDS_NonMembers, msDS_AzBizRule, msDS_AzBizRuleLanguage, msDS_AzLastImportedBizRulePath, msDS_AzApplicationData, msDS_AzObjectGuid, msDS_AzGenericData, msDS_PrimaryComputer, mail, msSFU30Name, msSFU30NisDomain, msSFU30PosixMember, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "group" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_group /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 
 /* eslint-enable */
+

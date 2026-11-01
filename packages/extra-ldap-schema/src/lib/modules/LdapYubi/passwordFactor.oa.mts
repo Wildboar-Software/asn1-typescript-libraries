@@ -1,17 +1,15 @@
 /* eslint-disable */
 import {
-    type OCTET_STRING
+    type OCTET_STRING,
+    type ASN1Element as _Element,
+    ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
-// export { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
 import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
-// export { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 import { id_at_passwordFactor } from "../LdapYubi/id-at-passwordFactor.va.mjs";
-// export { id_at_passwordFactor } from "../LdapYubi/id-at-passwordFactor.va.mjs";
 
 
 /**
@@ -34,11 +32,19 @@ import { id_at_passwordFactor } from "../LdapYubi/id-at-passwordFactor.va.mjs";
  * @type {ATTRIBUTE<OCTET_STRING>}
  * @implements {ATTRIBUTE<OCTET_STRING>}
  */
+const _decode_passwordFactor_Type = (el: _Element): OCTET_STRING => {
+    const value = $._decodeOctetString(el);
+    if (value.length < 1 || value.length > 128) {
+        throw new ASN1SizeError("passwordFactor violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const passwordFactor: ATTRIBUTE<OCTET_STRING> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": $._decodeOctetString,
+        "&Type": _decode_passwordFactor_Type,
     },
     encoderFor: {
         "&Type": $._encodeOctetString,
@@ -58,3 +64,4 @@ const passwordFactor: ATTRIBUTE<OCTET_STRING> = {
 };
 
 /* eslint-enable */
+

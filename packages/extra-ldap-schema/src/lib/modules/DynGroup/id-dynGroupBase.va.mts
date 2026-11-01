@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_openldap_exp11 } from "../DynGroup/id-openldap-exp11.va.mjs";
-// export { id_openldap_exp11 } from "../DynGroup/id-openldap-exp11.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_dynGroupBase: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_openldap_exp11);
 
 /* eslint-enable */
+

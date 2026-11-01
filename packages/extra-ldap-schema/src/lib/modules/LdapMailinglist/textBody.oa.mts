@@ -1,17 +1,15 @@
 /* eslint-disable */
+import {
+    type ASN1Element as _Element,
+    ASN1SizeError,
+} from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-// export { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
-// export { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { caseExactSubstringsMatch } from "../SelectedAttributeTypes/caseExactSubstringsMatch.oa.mjs";
-// export { caseExactSubstringsMatch } from "../SelectedAttributeTypes/caseExactSubstringsMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-// export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_textBody } from "../LdapMailinglist/id-at-textBody.va.mjs";
-// export { id_at_textBody } from "../LdapMailinglist/id-at-textBody.va.mjs";
 
 
 /**
@@ -36,11 +34,31 @@ import { id_at_textBody } from "../LdapMailinglist/id-at-textBody.va.mjs";
  * @type {ATTRIBUTE<DirectoryString>}
  * @implements {ATTRIBUTE<DirectoryString>}
  */
+const _decode_textBody_Type = (el: _Element): DirectoryString => {
+    const value = _decode_DirectoryString(el);
+    let length: number;
+    if ("teletexString" in value) {
+        length = value.teletexString.length;
+    } else if ("printableString" in value) {
+        length = value.printableString.length;
+    } else if ("bmpString" in value) {
+        length = value.bmpString.length;
+    } else if ("universalString" in value) {
+        length = value.universalString.length;
+    } else {
+        length = value.uTF8String.length;
+    }
+    if (length < 1 || length > 1048576) {
+        throw new ASN1SizeError("textBody violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const textBody: ATTRIBUTE<DirectoryString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_DirectoryString,
+        "&Type": _decode_textBody_Type,
     },
     encoderFor: {
         "&Type": _encode_DirectoryString,
@@ -61,3 +79,4 @@ const textBody: ATTRIBUTE<DirectoryString> = {
 };
 
 /* eslint-enable */
+

@@ -1,79 +1,15 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    type OPTIONAL,
-    type BOOLEAN,
-    type INTEGER,
-    type BIT_STRING,
-    type OCTET_STRING,
-    NULL,
-    type OBJECT_IDENTIFIER,
-    type ObjectDescriptor,
-    type EXTERNAL,
-    type REAL,
-    type INSTANCE_OF,
-    type ENUMERATED,
-    type EMBEDDED_PDV,
-    type UTF8String,
-    type RELATIVE_OID,
-    type SEQUENCE,
-    type SEQUENCE_OF,
-    type SET,
-    type SET_OF,
-    type GraphicString,
-    type NumericString,
-    type VisibleString,
-    type PrintableString,
-    type ISO646String,
-    type TeletexString,
-    type GeneralString,
-    type T61String,
-    type UniversalString,
-    type VideotexString,
-    type BMPString,
-    type IA5String,
-    type CharacterString,
-    type UTCTime,
-    type GeneralizedTime,
-    type TIME,
-    type DATE,
-    type TIME_OF_DAY,
-    type DATE_TIME,
-    type DURATION,
-    type OID_IRI,
-    type RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    type ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
-// export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2StorageServiceCapacity } from "../LdapGlue702StorageServiceCapacity/id-oc-gLUE2StorageServiceCapacity.va.mjs";
-// export { id_oc_gLUE2StorageServiceCapacity } from "../LdapGlue702StorageServiceCapacity/id-oc-gLUE2StorageServiceCapacity.va.mjs";
+import { gLUE2StorageServiceCapacityID } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityID.oa.mjs";
+import { gLUE2StorageServiceCapacityType } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityType.oa.mjs";
+import { gLUE2StorageServiceCapacityStorageServiceForeignKey } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityStorageServiceForeignKey.oa.mjs";
+import { gLUE2StorageServiceCapacityTotalSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityTotalSize.oa.mjs";
+import { gLUE2StorageServiceCapacityFreeSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityFreeSize.oa.mjs";
+import { gLUE2StorageServiceCapacityUsedSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityUsedSize.oa.mjs";
+import { gLUE2StorageServiceCapacityReservedSize } from "../LdapGlue702StorageServiceCapacity/gLUE2StorageServiceCapacityReservedSize.oa.mjs";
 
 
 /**
@@ -109,8 +45,8 @@ const gLUE2StorageServiceCapacity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2StorageServiceCapacityID, gLUE2StorageServiceCapacityType, gLUE2StorageServiceCapacityStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2StorageServiceCapacityTotalSize, gLUE2StorageServiceCapacityFreeSize, gLUE2StorageServiceCapacityUsedSize, gLUE2StorageServiceCapacityReservedSize, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2StorageServiceCapacity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Description of the size and state of an homogeneous storage extent" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2StorageServiceCapacity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
@@ -118,3 +54,4 @@ const gLUE2StorageServiceCapacity: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

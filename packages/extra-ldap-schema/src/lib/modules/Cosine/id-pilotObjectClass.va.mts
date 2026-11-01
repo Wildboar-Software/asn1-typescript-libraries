@@ -3,7 +3,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { pilotObjectClass } from "../Cosine/pilotObjectClass.va.mjs";
-// export { pilotObjectClass } from "../Cosine/pilotObjectClass.va.mjs";
 
 
 /**
@@ -22,3 +21,4 @@ export
 const id_pilotObjectClass: OBJECT_IDENTIFIER = pilotObjectClass;
 
 /* eslint-enable */
+

@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { pkcs_9_oc } from "../PKCS-9/pkcs-9-oc.va.mjs";
-// export { pkcs_9_oc } from "../PKCS-9/pkcs-9-oc.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const pkcs_9_oc_pkcsEntity: OBJECT_IDENTIFIER = _OID.fromParts([
 ], pkcs_9_oc);
 
 /* eslint-enable */
+

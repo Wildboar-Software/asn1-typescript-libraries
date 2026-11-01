@@ -1,79 +1,27 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    type OPTIONAL,
-    type BOOLEAN,
-    type INTEGER,
-    type BIT_STRING,
-    type OCTET_STRING,
-    NULL,
-    type OBJECT_IDENTIFIER,
-    type ObjectDescriptor,
-    type EXTERNAL,
-    type REAL,
-    type INSTANCE_OF,
-    type ENUMERATED,
-    type EMBEDDED_PDV,
-    type UTF8String,
-    type RELATIVE_OID,
-    type SEQUENCE,
-    type SEQUENCE_OF,
-    type SET,
-    type SET_OF,
-    type GraphicString,
-    type NumericString,
-    type VisibleString,
-    type PrintableString,
-    type ISO646String,
-    type TeletexString,
-    type GeneralString,
-    type T61String,
-    type UniversalString,
-    type VideotexString,
-    type BMPString,
-    type IA5String,
-    type CharacterString,
-    type UTCTime,
-    type GeneralizedTime,
-    type TIME,
-    type DATE,
-    type TIME_OF_DAY,
-    type DATE_TIME,
-    type DURATION,
-    type OID_IRI,
-    type RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    type ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { zimbraDataSource } from "../LdapZimbra/zimbraDataSource.oa.mjs";
-// export { zimbraDataSource } from "../LdapZimbra/zimbraDataSource.oa.mjs";
 import { id_oc_zimbraGalDataSource } from "../LdapZimbra/id-oc-zimbraGalDataSource.va.mjs";
-// export { id_oc_zimbraGalDataSource } from "../LdapZimbra/id-oc-zimbraGalDataSource.va.mjs";
+import { zimbraGalStatus } from "../LdapZimbra/zimbraGalStatus.oa.mjs";
+import { zimbraGalType } from "../LdapZimbra/zimbraGalType.oa.mjs";
+import { zimbraGalLastFailedSyncTimestamp } from "../LdapZimbra/zimbraGalLastFailedSyncTimestamp.oa.mjs";
+import { zimbraGalLastSuccessfulSyncTimestamp } from "../LdapZimbra/zimbraGalLastSuccessfulSyncTimestamp.oa.mjs";
+import { zimbraGalLdapAttrMap } from "../LdapZimbra/zimbraGalLdapAttrMap.oa.mjs";
+import { zimbraGalLdapGroupHandlerClass } from "../LdapZimbra/zimbraGalLdapGroupHandlerClass.oa.mjs";
+import { zimbraGalLdapValueMap } from "../LdapZimbra/zimbraGalLdapValueMap.oa.mjs";
+import { zimbraGalSyncIgnoredAttributes } from "../LdapZimbra/zimbraGalSyncIgnoredAttributes.oa.mjs";
+import { zimbraGalSyncLdapAuthMech } from "../LdapZimbra/zimbraGalSyncLdapAuthMech.oa.mjs";
+import { zimbraGalSyncLdapBindDn } from "../LdapZimbra/zimbraGalSyncLdapBindDn.oa.mjs";
+import { zimbraGalSyncLdapBindPassword } from "../LdapZimbra/zimbraGalSyncLdapBindPassword.oa.mjs";
+import { zimbraGalSyncLdapFilter } from "../LdapZimbra/zimbraGalSyncLdapFilter.oa.mjs";
+import { zimbraGalSyncLdapKerberos5Keytab } from "../LdapZimbra/zimbraGalSyncLdapKerberos5Keytab.oa.mjs";
+import { zimbraGalSyncLdapKerberos5Principal } from "../LdapZimbra/zimbraGalSyncLdapKerberos5Principal.oa.mjs";
+import { zimbraGalSyncLdapPageSize } from "../LdapZimbra/zimbraGalSyncLdapPageSize.oa.mjs";
+import { zimbraGalSyncLdapSearchBase } from "../LdapZimbra/zimbraGalSyncLdapSearchBase.oa.mjs";
+import { zimbraGalSyncLdapStartTlsEnabled } from "../LdapZimbra/zimbraGalSyncLdapStartTlsEnabled.oa.mjs";
+import { zimbraGalSyncLdapURL } from "../LdapZimbra/zimbraGalSyncLdapURL.oa.mjs";
+import { zimbraGalSyncTimestampFormat } from "../LdapZimbra/zimbraGalSyncTimestampFormat.oa.mjs";
 
 
 /**
@@ -121,8 +69,8 @@ const zimbraGalDataSource: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ zimbraDataSource, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraGalStatus, zimbraGalType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraGalLastFailedSyncTimestamp, zimbraGalLastSuccessfulSyncTimestamp, zimbraGalLdapAttrMap, zimbraGalLdapGroupHandlerClass, zimbraGalLdapValueMap, zimbraGalSyncIgnoredAttributes, zimbraGalSyncLdapAuthMech, zimbraGalSyncLdapBindDn, zimbraGalSyncLdapBindPassword, zimbraGalSyncLdapFilter, zimbraGalSyncLdapKerberos5Keytab, zimbraGalSyncLdapKerberos5Principal, zimbraGalSyncLdapPageSize, zimbraGalSyncLdapSearchBase, zimbraGalSyncLdapStartTlsEnabled, zimbraGalSyncLdapURL, zimbraGalSyncTimestampFormat, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraGalDataSource" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GAL data source object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraGalDataSource /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
@@ -130,3 +78,4 @@ const zimbraGalDataSource: OBJECT_CLASS = {
 };
 
 /* eslint-enable */
+

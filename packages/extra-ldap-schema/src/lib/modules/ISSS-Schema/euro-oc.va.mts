@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { euroDir } from "../ISSS-Schema/euroDir.va.mjs";
-// export { euroDir } from "../ISSS-Schema/euroDir.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const euro_oc: OBJECT_IDENTIFIER = _OID.fromParts([
 ], euroDir);
 
 /* eslint-enable */
+

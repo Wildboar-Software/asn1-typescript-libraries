@@ -1,14 +1,14 @@
 /* eslint-disable */
+import {
+    type ASN1Element as _Element,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import { pkcs_9_ub_placeOfBirth } from "../PKCS-9/pkcs-9-ub-placeOfBirth.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-// export { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-// export { pkcs_9_ub_placeOfBirth } from "../PKCS-9/pkcs-9-ub-placeOfBirth.va.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
-// export { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { pkcs_9_at_placeOfBirth } from "../PKCS-9/pkcs-9-at-placeOfBirth.va.mjs";
-// export { pkcs_9_at_placeOfBirth } from "../PKCS-9/pkcs-9-at-placeOfBirth.va.mjs";
 
 
 /**
@@ -30,11 +30,31 @@ import { pkcs_9_at_placeOfBirth } from "../PKCS-9/pkcs-9-at-placeOfBirth.va.mjs"
  * @type {ATTRIBUTE<DirectoryString>}
  * @implements {ATTRIBUTE<DirectoryString>}
  */
+const _decode_placeOfBirth_Type = (el: _Element): DirectoryString => {
+    const value = _decode_DirectoryString(el);
+    let length: number;
+    if ("teletexString" in value) {
+        length = value.teletexString.length;
+    } else if ("printableString" in value) {
+        length = value.printableString.length;
+    } else if ("bmpString" in value) {
+        length = value.bmpString.length;
+    } else if ("universalString" in value) {
+        length = value.universalString.length;
+    } else {
+        length = value.uTF8String.length;
+    }
+    if (length < 1 || (typeof pkcs_9_ub_placeOfBirth === "bigint" ? BigInt(length) > pkcs_9_ub_placeOfBirth : length > pkcs_9_ub_placeOfBirth)) {
+        throw new ASN1SizeError("placeOfBirth violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const placeOfBirth: ATTRIBUTE<DirectoryString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_DirectoryString,
+        "&Type": _decode_placeOfBirth_Type,
     },
     encoderFor: {
         "&Type": _encode_DirectoryString,
@@ -51,3 +71,4 @@ const placeOfBirth: ATTRIBUTE<DirectoryString> = {
 };
 
 /* eslint-enable */
+

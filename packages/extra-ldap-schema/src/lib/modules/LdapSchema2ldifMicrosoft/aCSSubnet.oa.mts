@@ -1,79 +1,34 @@
 /* eslint-disable */
-import {
-    itu_t,
-    itu_r,
-    ccitt,
-    iso,
-    joint_iso_itu_t,
-    joint_iso_ccitt,
-    type OPTIONAL,
-    type BOOLEAN,
-    type INTEGER,
-    type BIT_STRING,
-    type OCTET_STRING,
-    NULL,
-    type OBJECT_IDENTIFIER,
-    type ObjectDescriptor,
-    type EXTERNAL,
-    type REAL,
-    type INSTANCE_OF,
-    type ENUMERATED,
-    type EMBEDDED_PDV,
-    type UTF8String,
-    type RELATIVE_OID,
-    type SEQUENCE,
-    type SEQUENCE_OF,
-    type SET,
-    type SET_OF,
-    type GraphicString,
-    type NumericString,
-    type VisibleString,
-    type PrintableString,
-    type ISO646String,
-    type TeletexString,
-    type GeneralString,
-    type T61String,
-    type UniversalString,
-    type VideotexString,
-    type BMPString,
-    type IA5String,
-    type CharacterString,
-    type UTCTime,
-    type GeneralizedTime,
-    type TIME,
-    type DATE,
-    type TIME_OF_DAY,
-    type DATE_TIME,
-    type DURATION,
-    type OID_IRI,
-    type RELATIVE_OID_IRI,
-    TRUE,
-    FALSE,
-    TRUE_BIT,
-    FALSE_BIT,
-    PLUS_INFINITY,
-    MINUS_INFINITY,
-    NOT_A_NUMBER,
-    TYPE_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    type ASN1Element as _Element,
-    ASN1TagClass as _TagClass,
-    ASN1Construction as _Construction,
-    ASN1UniversalType as _UniversalType,
-    ObjectIdentifier as _OID,
-    External as _External,
-    EmbeddedPDV as _PDV,
-    ASN1ConstructionError as _ConstructionError,
-} from "@wildboar/asn1";
-import * as $ from "@wildboar/asn1/functional";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-// export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
-import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
-// export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_aCSSubnet } from "../LdapSchema2ldifMicrosoft/id-oc-aCSSubnet.va.mjs";
-// export { id_oc_aCSSubnet } from "../LdapSchema2ldifMicrosoft/id-oc-aCSSubnet.va.mjs";
+import { aCSMaxTokenRatePerFlow } from "../MSUser/aCSMaxTokenRatePerFlow.oa.mjs";
+import { aCSMaxPeakBandwidthPerFlow } from "../MSUser/aCSMaxPeakBandwidthPerFlow.oa.mjs";
+import { aCSMaxDurationPerFlow } from "../MSUser/aCSMaxDurationPerFlow.oa.mjs";
+import { aCSAllocableRSVPBandwidth } from "../MSUser/aCSAllocableRSVPBandwidth.oa.mjs";
+import { aCSMaxPeakBandwidth } from "../MSUser/aCSMaxPeakBandwidth.oa.mjs";
+import { aCSEnableRSVPMessageLogging } from "../MSUser/aCSEnableRSVPMessageLogging.oa.mjs";
+import { aCSEventLogLevel } from "../MSUser/aCSEventLogLevel.oa.mjs";
+import { aCSEnableACSService } from "../MSUser/aCSEnableACSService.oa.mjs";
+import { aCSRSVPLogFilesLocation } from "../MSUser/aCSRSVPLogFilesLocation.oa.mjs";
+import { aCSMaxNoOfLogFiles } from "../MSUser/aCSMaxNoOfLogFiles.oa.mjs";
+import { aCSMaxSizeOfRSVPLogFile } from "../MSUser/aCSMaxSizeOfRSVPLogFile.oa.mjs";
+import { aCSDSBMPriority } from "../MSUser/aCSDSBMPriority.oa.mjs";
+import { aCSDSBMRefresh } from "../MSUser/aCSDSBMRefresh.oa.mjs";
+import { aCSDSBMDeadTime } from "../MSUser/aCSDSBMDeadTime.oa.mjs";
+import { aCSCacheTimeout } from "../MSUser/aCSCacheTimeout.oa.mjs";
+import { aCSNonReservedTxLimit } from "../MSUser/aCSNonReservedTxLimit.oa.mjs";
+import { aCSNonReservedTxSize } from "../MSUser/aCSNonReservedTxSize.oa.mjs";
+import { aCSEnableRSVPAccounting } from "../MSUser/aCSEnableRSVPAccounting.oa.mjs";
+import { aCSRSVPAccountFilesLocation } from "../MSUser/aCSRSVPAccountFilesLocation.oa.mjs";
+import { aCSMaxNoOfAccountFiles } from "../MSUser/aCSMaxNoOfAccountFiles.oa.mjs";
+import { aCSMaxSizeOfRSVPAccountFile } from "../MSUser/aCSMaxSizeOfRSVPAccountFile.oa.mjs";
+import { aCSServerList } from "../MSUser/aCSServerList.oa.mjs";
+import { aCSNonReservedPeakRate } from "../MSUser/aCSNonReservedPeakRate.oa.mjs";
+import { aCSNonReservedTokenSize } from "../MSUser/aCSNonReservedTokenSize.oa.mjs";
+import { aCSNonReservedMaxSDUSize } from "../MSUser/aCSNonReservedMaxSDUSize.oa.mjs";
+import { aCSNonReservedMinPolicedSize } from "../MSUser/aCSNonReservedMinPolicedSize.oa.mjs";
 
 
 /**
@@ -127,10 +82,11 @@ const aCSSubnet: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ aCSMaxTokenRatePerFlow, aCSMaxPeakBandwidthPerFlow, aCSMaxDurationPerFlow, aCSAllocableRSVPBandwidth, aCSMaxPeakBandwidth, aCSEnableRSVPMessageLogging, aCSEventLogLevel, aCSEnableACSService, aCSRSVPLogFilesLocation, aCSMaxNoOfLogFiles, aCSMaxSizeOfRSVPLogFile, aCSDSBMPriority, aCSDSBMRefresh, aCSDSBMDeadTime, aCSCacheTimeout, aCSNonReservedTxLimit, aCSNonReservedTxSize, aCSEnableRSVPAccounting, aCSRSVPAccountFilesLocation, aCSMaxNoOfAccountFiles, aCSMaxSizeOfRSVPAccountFile, aCSServerList, aCSNonReservedPeakRate, aCSNonReservedTokenSize, aCSNonReservedMaxSDUSize, aCSNonReservedMinPolicedSize, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "aCSSubnet" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_aCSSubnet /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };
 
 /* eslint-enable */
+

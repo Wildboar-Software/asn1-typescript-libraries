@@ -1,14 +1,14 @@
 /* eslint-disable */
+import {
+    type ASN1Element as _Element,
+    ASN1SizeError,
+} from "@wildboar/asn1";
+import { pkcs_9_ub_unstructuredName } from "../PKCS-9/pkcs-9-ub-unstructuredName.va.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
-// export { PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
-// export { pkcs_9_ub_unstructuredName } from "../PKCS-9/pkcs-9-ub-unstructuredName.va.mjs";
+import { type PKCS9String, _decode_PKCS9String, _encode_PKCS9String } from "../PKCS-9/PKCS9String.ta.mjs";
 import { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa.mjs";
-// export { pkcs9CaseIgnoreMatch } from "../PKCS-9/pkcs9CaseIgnoreMatch.oa.mjs";
 import { pkcs_9_at_unstructuredName } from "../PKCS-9/pkcs-9-at-unstructuredName.va.mjs";
-// export { pkcs_9_at_unstructuredName } from "../PKCS-9/pkcs-9-at-unstructuredName.va.mjs";
 
 
 /**
@@ -29,11 +29,33 @@ import { pkcs_9_at_unstructuredName } from "../PKCS-9/pkcs-9-at-unstructuredName
  * @type {ATTRIBUTE<PKCS9String>}
  * @implements {ATTRIBUTE<PKCS9String>}
  */
+const _decode_unstructuredName_Type = (el: _Element): PKCS9String => {
+    const value = _decode_PKCS9String(el);
+    let length: number;
+    if ("ia5String" in value) {
+        length = value.ia5String.length;
+    } else if ("teletexString" in value.directoryString) {
+        length = value.directoryString.teletexString.length;
+    } else if ("printableString" in value.directoryString) {
+        length = value.directoryString.printableString.length;
+    } else if ("bmpString" in value.directoryString) {
+        length = value.directoryString.bmpString.length;
+    } else if ("universalString" in value.directoryString) {
+        length = value.directoryString.universalString.length;
+    } else {
+        length = value.directoryString.uTF8String.length;
+    }
+    if (length < 1 || (typeof pkcs_9_ub_unstructuredName === "bigint" ? BigInt(length) > pkcs_9_ub_unstructuredName : length > pkcs_9_ub_unstructuredName)) {
+        throw new ASN1SizeError("unstructuredName violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const unstructuredName: ATTRIBUTE<PKCS9String> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_PKCS9String,
+        "&Type": _decode_unstructuredName_Type,
     },
     encoderFor: {
         "&Type": _encode_PKCS9String,
@@ -50,3 +72,4 @@ const unstructuredName: ATTRIBUTE<PKCS9String> = {
 };
 
 /* eslint-enable */
+

@@ -1,17 +1,15 @@
 /* eslint-disable */
+import {
+    type ASN1Element as _Element,
+    ASN1SizeError,
+} from "@wildboar/asn1";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-// export { AttributeUsage, _enum_for_AttributeUsage, AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */, userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_directoryOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, directoryOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_distributedOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, distributedOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, AttributeUsage_dSAOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AttributeUsage, _encode_AttributeUsage } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
-// export { DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
+import { type DirectoryString, _decode_DirectoryString, _encode_DirectoryString } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
-// export { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
-// export { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
-// export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_documentStatus } from "../LdapUser/id-at-documentStatus.va.mjs";
-// export { id_at_documentStatus } from "../LdapUser/id-at-documentStatus.va.mjs";
 
 
 /**
@@ -35,11 +33,31 @@ import { id_at_documentStatus } from "../LdapUser/id-at-documentStatus.va.mjs";
  * @type {ATTRIBUTE<DirectoryString>}
  * @implements {ATTRIBUTE<DirectoryString>}
  */
+const _decode_documentStatus_Type = (el: _Element): DirectoryString => {
+    const value = _decode_DirectoryString(el);
+    let length: number;
+    if ("teletexString" in value) {
+        length = value.teletexString.length;
+    } else if ("printableString" in value) {
+        length = value.printableString.length;
+    } else if ("bmpString" in value) {
+        length = value.bmpString.length;
+    } else if ("universalString" in value) {
+        length = value.universalString.length;
+    } else {
+        length = value.uTF8String.length;
+    }
+    if (length < 1 || length > 256) {
+        throw new ASN1SizeError("documentStatus violates SIZE constraint");
+    }
+    return value;
+};
+
 export
 const documentStatus: ATTRIBUTE<DirectoryString> = {
     class: "ATTRIBUTE",
     decoderFor: {
-        "&Type": _decode_DirectoryString,
+        "&Type": _decode_documentStatus_Type,
     },
     encoderFor: {
         "&Type": _encode_DirectoryString,
@@ -59,3 +77,4 @@ const documentStatus: ATTRIBUTE<DirectoryString> = {
 };
 
 /* eslint-enable */
+

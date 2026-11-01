@@ -1,10 +1,7 @@
 /* eslint-disable */
 import { pilotOrganization } from "../Cosine/pilotOrganization.oa.mjs";
-// export { pilotOrganization } from "../Cosine/pilotOrganization.oa.mjs";
 import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
-// export { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 import { id_nf_pilotOrganizationNameForm } from "../Cosine/id-nf-pilotOrganizationNameForm.va.mjs";
-// export { id_nf_pilotOrganizationNameForm } from "../Cosine/id-nf-pilotOrganizationNameForm.va.mjs";
 import { type NAME_FORM } from "../InformationFramework/NAME-FORM.oca.mjs";
 
 
@@ -41,3 +38,4 @@ const pilotOrganizationNameForm: NAME_FORM = {
 };
 
 /* eslint-enable */
+

@@ -4,7 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_dynGroupBase } from "../DynGroup/id-dynGroupBase.va.mjs";
-// export { id_dynGroupBase } from "../DynGroup/id-dynGroupBase.va.mjs";
 
 
 /**
@@ -25,3 +24,4 @@ const id_dynGroupOC: OBJECT_IDENTIFIER = _OID.fromParts([
 ], id_dynGroupBase);
 
 /* eslint-enable */
+
