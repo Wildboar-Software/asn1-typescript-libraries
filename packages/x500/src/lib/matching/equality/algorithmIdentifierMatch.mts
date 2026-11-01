@@ -43,6 +43,8 @@ export
 const algorithmIdentifierMatch: Matcher = createEqualityMatcher(
     _decode_AlgorithmIdentifier,
     algorithmIdentifierMatchTyped,
+    undefined,
+    true,
 );
 
 export default algorithmIdentifierMatch;
