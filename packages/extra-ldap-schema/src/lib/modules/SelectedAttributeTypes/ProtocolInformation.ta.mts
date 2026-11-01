@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary ProtocolInformation
  * @description
@@ -62,7 +60,6 @@ class ProtocolInformation {
     public static _from_object (_o: { [_K in keyof (ProtocolInformation)]: (ProtocolInformation)[_K] }): ProtocolInformation {
         return new ProtocolInformation(_o.nAddress, _o.profiles);
     }
-
 
 }
 
@@ -155,6 +152,5 @@ function _encode_ProtocolInformation (value: ProtocolInformation, elGetter: $.AS
 }; }
     return _cached_encoder_for_ProtocolInformation(value, elGetter);
 }
-
 
 /* eslint-enable */

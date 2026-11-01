@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_ar } from "../UsefulDefinitions/id-ar.va.mjs";
 /**
  * @summary id_ar_pwdAdminSpecificArea

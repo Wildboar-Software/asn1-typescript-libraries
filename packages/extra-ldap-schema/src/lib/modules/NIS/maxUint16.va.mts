@@ -3,8 +3,6 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 
-
-
 /**
  * @summary maxUint16
  * @description

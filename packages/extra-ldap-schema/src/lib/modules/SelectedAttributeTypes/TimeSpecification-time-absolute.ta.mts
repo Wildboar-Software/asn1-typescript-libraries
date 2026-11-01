@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary TimeSpecification_time_absolute
  * @description
@@ -70,7 +68,6 @@ class TimeSpecification_time_absolute {
     public static _from_object (_o: { [_K in keyof (TimeSpecification_time_absolute)]: (TimeSpecification_time_absolute)[_K] }): TimeSpecification_time_absolute {
         return new TimeSpecification_time_absolute(_o.startTime, _o.endTime, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -178,6 +175,5 @@ function _encode_TimeSpecification_time_absolute (value: TimeSpecification_time_
 }; }
     return _cached_encoder_for_TimeSpecification_time_absolute(value, elGetter);
 }
-
 
 /* eslint-enable */

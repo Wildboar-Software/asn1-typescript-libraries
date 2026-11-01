@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_lsx } from "../UsefulDefinitions/id-lsx.va.mjs";
 /**
  * @summary id_lsx_matchingRuleDescription

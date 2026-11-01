@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary TimeAssertion_between
  * @description
@@ -199,6 +197,5 @@ function _encode_TimeAssertion_between (value: TimeAssertion_between, elGetter: 
 }; }
     return _cached_encoder_for_TimeAssertion_between(value, elGetter);
 }
-
 
 /* eslint-enable */

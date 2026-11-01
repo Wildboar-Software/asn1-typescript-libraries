@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary AttributeOptionList
  * @description
@@ -48,6 +46,5 @@ function _encode_AttributeOptionList (value: AttributeOptionList, elGetter: $.AS
     if (!_cached_encoder_for_AttributeOptionList) { _cached_encoder_for_AttributeOptionList = $._encodeSequenceOf<UTF8String>(() => $._encodeUTF8String, $.BER); }
     return _cached_encoder_for_AttributeOptionList(value, elGetter);
 }
-
 
 /* eslint-enable */

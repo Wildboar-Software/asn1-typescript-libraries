@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 /**
  * @summary id_at_nsslapd_minssf_exclude_rootdse
  * @description

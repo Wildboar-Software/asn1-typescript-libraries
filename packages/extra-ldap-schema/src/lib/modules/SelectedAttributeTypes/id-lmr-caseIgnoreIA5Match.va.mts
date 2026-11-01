@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_lmr } from "../UsefulDefinitions/id-lmr.va.mjs";
 /**
  * @summary id_lmr_caseIgnoreIA5Match

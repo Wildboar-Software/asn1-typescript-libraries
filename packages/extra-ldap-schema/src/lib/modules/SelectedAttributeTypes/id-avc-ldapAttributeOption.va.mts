@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_avc } from "../UsefulDefinitions/id-avc.va.mjs";
 /**
  * @summary id_avc_ldapAttributeOption

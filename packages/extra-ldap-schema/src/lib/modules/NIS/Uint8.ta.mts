@@ -7,8 +7,6 @@ import {
 import { maxUint8 } from "../NIS/maxUint8.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary Uint8
  * @description

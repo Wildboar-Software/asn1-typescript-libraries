@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary PresentationAddress
  * @description
@@ -92,7 +90,6 @@ class PresentationAddress {
     public static _from_object (_o: { [_K in keyof (PresentationAddress)]: (PresentationAddress)[_K] }): PresentationAddress {
         return new PresentationAddress(_o.pSelector, _o.sSelector, _o.tSelector, _o.nAddresses, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -212,6 +209,5 @@ function _encode_PresentationAddress (value: PresentationAddress, elGetter: $.AS
 }; }
     return _cached_encoder_for_PresentationAddress(value, elGetter);
 }
-
 
 /* eslint-enable */

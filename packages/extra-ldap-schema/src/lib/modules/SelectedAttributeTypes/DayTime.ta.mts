@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary DayTime
  * @description
@@ -213,6 +211,5 @@ function _encode_DayTime (value: DayTime, elGetter: $.ASN1Encoder<any>): _Elemen
 }; }
     return _cached_encoder_for_DayTime(value, elGetter);
 }
-
 
 /* eslint-enable */

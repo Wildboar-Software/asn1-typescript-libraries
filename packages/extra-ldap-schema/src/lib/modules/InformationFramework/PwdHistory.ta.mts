@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary PwdHistory
  * @description
@@ -70,7 +68,6 @@ class PwdHistory {
     public static _from_object (_o: { [_K in keyof (PwdHistory)]: (PwdHistory)[_K] }): PwdHistory {
         return new PwdHistory(_o.time, _o.password, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -170,6 +167,5 @@ function _encode_PwdHistory (value: PwdHistory, elGetter: $.ASN1Encoder<any>): _
 }; }
     return _cached_encoder_for_PwdHistory(value, elGetter);
 }
-
 
 /* eslint-enable */

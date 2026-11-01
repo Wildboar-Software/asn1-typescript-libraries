@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 export
 const _enum_for_SequenceMatchType: {
     readonly sequenceExact: 0;

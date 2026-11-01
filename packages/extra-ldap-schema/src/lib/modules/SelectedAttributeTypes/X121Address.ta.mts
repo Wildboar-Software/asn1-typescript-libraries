@@ -8,8 +8,6 @@ import {
 import { ub_x121_address } from "../SelectedAttributeTypes/ub-x121-address.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary X121Address
  * @description

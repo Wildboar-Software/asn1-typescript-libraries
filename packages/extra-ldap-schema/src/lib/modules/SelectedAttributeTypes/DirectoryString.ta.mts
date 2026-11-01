@@ -10,8 +10,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary DirectoryString
  * @description
@@ -85,6 +83,5 @@ function _encode_DirectoryString (value: DirectoryString, elGetter: $.ASN1Encode
 }, $.BER); }
     return _cached_encoder_for_DirectoryString(value, elGetter);
 }
-
 
 /* eslint-enable */

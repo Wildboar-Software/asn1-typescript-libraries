@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary BootParameterSyntax
  * @description
@@ -79,7 +77,6 @@ class BootParameterSyntax {
     public static _from_object (_o: { [_K in keyof (BootParameterSyntax)]: (BootParameterSyntax)[_K] }): BootParameterSyntax {
         return new BootParameterSyntax(_o.key, _o.server, _o.path, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -185,6 +182,5 @@ function _encode_BootParameterSyntax (value: BootParameterSyntax, elGetter: $.AS
 }; }
     return _cached_encoder_for_BootParameterSyntax(value, elGetter);
 }
-
 
 /* eslint-enable */

@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary Time
  * @description
@@ -59,6 +57,5 @@ function _encode_Time (value: Time, elGetter: $.ASN1Encoder<any>): _Element {
 }, $.BER); }
     return _cached_encoder_for_Time(value, elGetter);
 }
-
 
 /* eslint-enable */

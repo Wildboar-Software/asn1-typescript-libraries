@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 /**
  * @summary id_at_iplanet_am_user_password_reset_options
  * @description

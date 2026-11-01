@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id } from "../UsefulDefinitions/id.va.mjs";
 /**
  * @summary id_oidC2

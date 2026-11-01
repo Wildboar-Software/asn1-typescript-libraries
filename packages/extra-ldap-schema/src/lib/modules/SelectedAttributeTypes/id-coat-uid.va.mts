@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_coat } from "../UsefulDefinitions/id-coat.va.mjs";
 /**
  * @summary id_coat_uid

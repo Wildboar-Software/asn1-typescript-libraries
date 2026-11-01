@@ -7,8 +7,6 @@ import {
 import { maxUint32 } from "../NIS/maxUint32.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary Uint32
  * @description

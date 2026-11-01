@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 /**
  * @summary id_at_nsslapd_outbound_ldap_io_timeout
  * @description

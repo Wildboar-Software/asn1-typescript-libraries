@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary OctetSubstringAssertion_Item
  * @description
@@ -65,6 +63,5 @@ function _encode_OctetSubstringAssertion_Item (value: OctetSubstringAssertion_It
 }, $.BER); }
     return _cached_encoder_for_OctetSubstringAssertion_Item(value, elGetter);
 }
-
 
 /* eslint-enable */

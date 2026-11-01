@@ -3,8 +3,6 @@ import {
     type INTEGER
 } from "@wildboar/asn1";
 
-
-
 /**
  * @summary ub_telex_number
  * @description

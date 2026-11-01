@@ -8,8 +8,6 @@ import {
 import { ub_telephone_number } from "../SelectedAttributeTypes/ub-telephone-number.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary TelephoneNumber
  * @description

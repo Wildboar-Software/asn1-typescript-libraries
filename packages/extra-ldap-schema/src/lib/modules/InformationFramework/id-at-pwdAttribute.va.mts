@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_at } from "../UsefulDefinitions/id-at.va.mjs";
 /**
  * @summary id_at_pwdAttribute

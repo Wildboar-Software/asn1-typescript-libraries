@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_oa } from "../UsefulDefinitions/id-oa.va.mjs";
 /**
  * @summary id_oa_serviceAdminSubentryList

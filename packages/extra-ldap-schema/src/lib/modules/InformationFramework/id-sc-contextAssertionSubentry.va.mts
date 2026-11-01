@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_sc } from "../UsefulDefinitions/id-sc.va.mjs";
 /**
  * @summary id_sc_contextAssertionSubentry

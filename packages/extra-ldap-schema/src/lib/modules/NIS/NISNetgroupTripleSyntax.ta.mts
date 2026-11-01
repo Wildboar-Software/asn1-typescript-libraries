@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary NISNetgroupTripleSyntax
  * @description
@@ -79,7 +77,6 @@ class NISNetgroupTripleSyntax {
     public static _from_object (_o: { [_K in keyof (NISNetgroupTripleSyntax)]: (NISNetgroupTripleSyntax)[_K] }): NISNetgroupTripleSyntax {
         return new NISNetgroupTripleSyntax(_o.hostname, _o.username, _o.domainname, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -194,6 +191,5 @@ function _encode_NISNetgroupTripleSyntax (value: NISNetgroupTripleSyntax, elGett
 }; }
     return _cached_encoder_for_NISNetgroupTripleSyntax(value, elGetter);
 }
-
 
 /* eslint-enable */

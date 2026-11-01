@@ -12,8 +12,6 @@ import { ub_country_code } from "../SelectedAttributeTypes/ub-country-code.va.mj
 import { ub_telex_number } from "../SelectedAttributeTypes/ub-telex-number.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary TelexNumber
  * @description
@@ -98,7 +96,6 @@ class TelexNumber {
     public static _from_object (_o: { [_K in keyof (TelexNumber)]: (TelexNumber)[_K] }): TelexNumber {
         return new TelexNumber(_o.telexNumber, _o.countryCode, _o.answerback, _o._unrecognizedExtensionsList);
     }
-
 
 }
 
@@ -204,6 +201,5 @@ function _encode_TelexNumber (value: TelexNumber, elGetter: $.ASN1Encoder<any>):
 }; }
     return _cached_encoder_for_TelexNumber(value, elGetter);
 }
-
 
 /* eslint-enable */

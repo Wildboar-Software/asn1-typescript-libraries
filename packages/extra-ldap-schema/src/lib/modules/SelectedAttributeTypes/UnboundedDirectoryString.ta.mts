@@ -10,8 +10,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary UnboundedDirectoryString
  * @description
@@ -85,6 +83,5 @@ function _encode_UnboundedDirectoryString (value: UnboundedDirectoryString, elGe
 }, $.BER); }
     return _cached_encoder_for_UnboundedDirectoryString(value, elGetter);
 }
-
 
 /* eslint-enable */

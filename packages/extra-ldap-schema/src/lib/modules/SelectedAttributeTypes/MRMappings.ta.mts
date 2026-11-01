@@ -4,8 +4,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary MRMappings
  * @description
@@ -47,6 +45,5 @@ function _encode_MRMappings (value: MRMappings, elGetter: $.ASN1Encoder<any>): _
     if (!_cached_encoder_for_MRMappings) { _cached_encoder_for_MRMappings = $._encodeSequenceOf<MRMapping>(() => _encode_MRMapping, $.BER); }
     return _cached_encoder_for_MRMappings(value, elGetter);
 }
-
 
 /* eslint-enable */

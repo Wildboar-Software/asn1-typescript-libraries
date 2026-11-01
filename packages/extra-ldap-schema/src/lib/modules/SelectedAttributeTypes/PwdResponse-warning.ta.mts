@@ -7,8 +7,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary PwdResponse_warning
  * @description
@@ -69,6 +67,5 @@ function _encode_PwdResponse_warning (value: PwdResponse_warning, elGetter: $.AS
 }, $.BER); }
     return _cached_encoder_for_PwdResponse_warning(value, elGetter);
 }
-
 
 /* eslint-enable */

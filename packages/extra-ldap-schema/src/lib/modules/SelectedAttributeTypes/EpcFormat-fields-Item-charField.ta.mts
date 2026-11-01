@@ -6,8 +6,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary EpcFormat_fields_Item_charField
  * @description
@@ -59,6 +57,5 @@ function _encode_EpcFormat_fields_Item_charField (value: EpcFormat_fields_Item_c
 }, $.BER); }
     return _cached_encoder_for_EpcFormat_fields_Item_charField(value, elGetter);
 }
-
 
 /* eslint-enable */

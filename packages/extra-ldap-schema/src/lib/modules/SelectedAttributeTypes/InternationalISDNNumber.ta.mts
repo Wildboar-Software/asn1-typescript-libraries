@@ -8,8 +8,6 @@ import {
 import { ub_international_isdn_number } from "../SelectedAttributeTypes/ub-international-isdn-number.va.mjs";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary InternationalISDNNumber
  * @description

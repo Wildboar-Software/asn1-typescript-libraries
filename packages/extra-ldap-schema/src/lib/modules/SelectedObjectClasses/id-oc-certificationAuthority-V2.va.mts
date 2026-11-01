@@ -4,8 +4,6 @@ import {
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 
-
-
 import { id_oc } from "../UsefulDefinitions/id-oc.va.mjs";
 /**
  * @summary id_oc_certificationAuthority_V2

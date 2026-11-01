@@ -5,8 +5,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary SYNTAX_NAME
  * @description

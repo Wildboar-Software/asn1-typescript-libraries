@@ -8,8 +8,6 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-
-
 /**
  * @summary UtmCoordinates
  * @description
@@ -71,7 +69,6 @@ class UtmCoordinates {
     public static _from_object (_o: { [_K in keyof (UtmCoordinates)]: (UtmCoordinates)[_K] }): UtmCoordinates {
         return new UtmCoordinates(_o.zone, _o.easting, _o.northing);
     }
-
 
 }
 
@@ -170,6 +167,5 @@ function _encode_UtmCoordinates (value: UtmCoordinates, elGetter: $.ASN1Encoder<
 }; }
     return _cached_encoder_for_UtmCoordinates(value, elGetter);
 }
-
 
 /* eslint-enable */
