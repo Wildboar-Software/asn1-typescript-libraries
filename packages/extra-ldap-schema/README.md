@@ -1,8 +1,7 @@
-# Telebiometrics Authentication Infrastructure (TAI) ASN.1 Data Structures in TypeScript
+# Extra LDAP schema in TypeScript
 
-Data structures from the ASN.1 definitions defined in
-[ITU-T Recommendation X.1089](https://www.itu.int/rec/T-REC-X.1089) for use in
-Telebiometrics Authentication Infrastructure (TAI).
+ASN.1 data structures derived from LDAP schema published on the Web. The modules
+under `doc/` were written from those schema definitions.
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -21,5 +20,9 @@ programming languages, or if you have any other questions, please contact us at
 
 ## ESM-Only
 
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
+This module is ESM-only.
+
+## AI Usage Statement
+
+This package was onboarded from the raw compiler outputs using AI (Grok 4.7)
+on 1 November 2026.
