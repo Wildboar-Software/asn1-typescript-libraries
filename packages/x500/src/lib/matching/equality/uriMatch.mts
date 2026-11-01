@@ -50,6 +50,9 @@ function uriMatchTyped (
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
         return assertion === raw;
     }
+    if (assertion === raw) {
+        return true;
+    }
     return assertion === normalizeUri(raw);
 }
 
