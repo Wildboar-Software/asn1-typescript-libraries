@@ -64,20 +64,14 @@ describe("integerOrderingMatch", () => {
         }
     });
 
-    it("tolerates a redundant sign octet in a two-octet INTEGER", () => {
-        expect(integerOrderingMatchTyped(raw([ 0x00, 0x05 ]), integer(5))).toBe(0);
-        expect(integerOrderingMatchTyped(raw([ 0xFF, 0xFF ]), integer(-1))).toBe(0);
-        expect(integerOrderingMatchTyped(raw([ 0x00, 0x05 ]), integer(6))).toBeLessThan(0);
-        expect(integerOrderingMatchTyped(raw([ 0xFF, 0x80 ]), integer(-129))).toBeGreaterThan(0);
-    });
-
-    it("rejects malformed INTEGERs", () => {
-        expect(() => integerOrderingMatchTyped(raw([]), integer(1))).toThrow();
+    it("rejects malformed stored INTEGERs", () => {
+        expect(() => integerOrderingMatchTyped(integer(1), raw([]))).toThrow();
+        expect(() => integerOrderingMatchTyped(integer(1), raw([ 0x00, 0x05 ]))).toThrow();
+        expect(() => integerOrderingMatchTyped(integer(1), raw([ 0xFF, 0xFF ]))).toThrow();
         expect(() => integerOrderingMatchTyped(integer(1), raw([ 0x00, 0x00, 0x01 ]))).toThrow();
-        expect(() => integerOrderingMatchTyped(integer(1), raw([ 0xFF, 0xFF, 0xFF ]))).toThrow();
         const constructed = integer(1);
         constructed.construction = ASN1Construction.constructed;
-        expect(() => integerOrderingMatchTyped(constructed, integer(1))).toThrow();
+        expect(() => integerOrderingMatchTyped(integer(1), constructed)).toThrow();
     });
 
     it("is TRUE when the stored value is less than the assertion", () => {
@@ -105,7 +99,11 @@ describe("integerOrderingMatch", () => {
     it("throws on a malformed assertion and is UNDEFINED for a malformed value", () => {
         const stored = new AttributeTypeAndValue(attributeType, integer(1));
         expect(() => integerOrderingMatch(raw([]), stored)).toThrow();
+        expect(() => integerOrderingMatch(raw([ 0x00, 0x05 ]), stored)).toThrow();
         expect(() => integerOrderingMatch(raw([ 0x00, 0x00, 0x01 ]), stored)).toThrow();
+        const constructed = integer(1);
+        constructed.construction = ASN1Construction.constructed;
+        expect(() => integerOrderingMatch(constructed, stored)).toThrow();
         const malformed = new AttributeTypeAndValue(attributeType, raw([ 0x00, 0x00, 0x01 ]));
         expect(integerOrderingMatch(integer(5), malformed)).toBeUndefined();
     });

@@ -14,62 +14,50 @@ import {
 } from "../../types/matching.mjs";
 
 /**
- * Offset of the first significant content octet of an encoded INTEGER.
- *
- * Rejects exactly what `ASN1Element.integer` rejects, which tolerates one
- * redundant sign octet in a two-octet encoding (e.g. `00 05`), so that
- * octet is skipped rather than rejected.
+ * Throws unless `el` is a primitive INTEGER encoded on the fewest octets
+ * possible, as ITU-T X.690, clause 8.3.2 requires.
  */
-function significantOffset (el: ASN1Element): number {
+function validateEncodedInteger (el: ASN1Element): void {
     if (el.construction !== ASN1Construction.primitive) {
         throw new ASN1ConstructionError("INTEGER cannot be constructed.", el);
     }
     const bytes = el.value;
-    const len = bytes.length;
-    if (len === 0) {
+    if (bytes.length === 0) {
         throw new ASN1SizeError("INTEGER encoded on zero bytes", el);
     }
-    if (len === 1) {
-        return 0;
+    if (
+        bytes.length > 1
+        && (
+            (bytes[0] === 0x00 && bytes[1] < 0x80)
+            || (bytes[0] === 0xFF && bytes[1] >= 0x80)
+        )
+    ) {
+        throw new ASN1PaddingError("Unnecessary padding bytes on INTEGER.", el);
     }
-    const b0 = bytes[0];
-    const b1 = bytes[1];
-    if ((b0 === 0x00 && b1 < 0x80) || (b0 === 0xFF && b1 >= 0x80)) {
-        if (len > 2) {
-            throw new ASN1PaddingError("Unnecessary padding bytes on INTEGER.", el);
-        }
-        return 1;
-    }
-    return 0;
 }
 
 /**
- * Compares two encoded INTEGERs without decoding them.
+ * Compares two minimally-encoded INTEGERs without decoding them.
  *
- * Once the redundant sign octet is skipped, both encodings are minimal, so
- * a negative value is less than a non-negative one; among values of the same
- * sign, more octets mean a larger magnitude; and two's complement values of
- * the same sign and width order the same way as their unsigned octets.
+ * A negative value is less than a non-negative one; among values of the
+ * same sign, more octets mean a larger magnitude; and two's complement
+ * values of the same sign and width order the same way as their unsigned
+ * octets.
  *
  * @returns A negative number, zero, or a positive number as `a` is less
  *  than, equal to, or greater than `b`.
  */
-function compareEncodedIntegers (a: ASN1Element, b: ASN1Element): number {
-    const aStart = significantOffset(a);
-    const bStart = significantOffset(b);
-    const aBytes = a.value;
-    const bBytes = b.value;
-    const aNegative = aBytes[aStart] >= 0x80;
-    if (aNegative !== (bBytes[bStart] >= 0x80)) {
+function compareEncodedIntegers (a: Uint8Array, b: Uint8Array): number {
+    const aNegative = a[0] >= 0x80;
+    if (aNegative !== (b[0] >= 0x80)) {
         return aNegative ? -1 : 1;
     }
-    const aLen = aBytes.length - aStart;
-    const bLen = bBytes.length - bStart;
-    if (aLen !== bLen) {
-        return ((aLen > bLen) !== aNegative) ? 1 : -1;
+    const len = a.length;
+    if (len !== b.length) {
+        return ((len > b.length) !== aNegative) ? 1 : -1;
     }
-    for (let i = 0; i < aLen; i++) {
-        const diff = aBytes[aStart + i] - bBytes[bStart + i];
+    for (let i = 0; i < len; i++) {
+        const diff = a[i] - b[i];
         if (diff !== 0) {
             return diff;
         }
@@ -86,7 +74,9 @@ function compareEncodedIntegers (a: ASN1Element, b: ASN1Element): number {
  * without decoding either. Otherwise, the difference is taken in `bigint`
  * so values outside `Number.MAX_SAFE_INTEGER` keep their order.
  *
- * @param assertion Presented INTEGER, encoded or already decoded.
+ * @param assertion Presented INTEGER, encoded or already decoded. An encoded
+ *  assertion is not validated here, so the caller must have already checked
+ *  that it is a primitive, minimally-encoded INTEGER.
  * @param value Stored INTEGER, encoded or already decoded.
  */
 export
@@ -95,7 +85,8 @@ function integerOrderingMatchTyped (
     value: INTEGER | ASN1Element,
 ): number | undefined {
     if (typeof assertion === "object" && typeof value === "object") {
-        return compareEncodedIntegers(assertion, value);
+        validateEncodedInteger(value);
+        return compareEncodedIntegers(assertion.value, value.value);
     }
     return Number(readInteger(assertion) - readInteger(value));
 }
@@ -110,7 +101,7 @@ integerOrderingMatchTyped satisfies TypedOrderingFunction<INTEGER>;
 export
 const integerOrderingMatch: Matcher = createOrderingMatcher<INTEGER | ASN1Element>(
     (el) => {
-        significantOffset(el);
+        validateEncodedInteger(el);
         return el;
     },
     integerOrderingMatchTyped,
