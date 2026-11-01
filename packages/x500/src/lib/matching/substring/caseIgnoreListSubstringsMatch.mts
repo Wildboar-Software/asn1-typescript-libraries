@@ -1,16 +1,15 @@
 import {
     ASN1CharactersError,
     ASN1Element,
+    ASN1Error,
     ASN1TagClass,
     ASN1UniversalType,
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
+import { _decode_PostalAddress } from "../../modules/SelectedAttributeTypes/PostalAddress.ta.mjs";
 import { prepString } from "../../utils/prepString.mjs";
-import {
-    readDirectoryString,
-    readDirectoryStringList,
-} from "../readValue.mjs";
+import { readDirectoryStringList } from "../readValue.mjs";
 import {
     createSubstringsMatcher,
     type AssertedSubstring,
@@ -41,18 +40,19 @@ const LINE_SEPARATOR = "\u001F";
 const prepareIgnore: StringPreparer = (raw) => prepString(raw, { caseFold: true });
 
 /**
- * A filter component uses the attribute syntax. For
- * `PostalAddress` that is a `SEQUENCE OF` directory string. A
- * bare directory string is that one line.
+ * A filter component is a `PostalAddress` and nothing else.
  */
 function componentLines (el: ASN1Element): readonly string[] {
     if (
-        el.tagClass === ASN1TagClass.universal
-        && el.tagNumber === ASN1UniversalType.sequence
+        el.tagClass !== ASN1TagClass.universal
+        || el.tagNumber !== ASN1UniversalType.sequence
     ) {
-        return readDirectoryStringList(el);
+        throw new ASN1Error(
+            `${RULE}: a substring component must be a PostalAddress`,
+            el,
+        );
     }
-    return [readDirectoryString(el)];
+    return readDirectoryStringList(_decode_PostalAddress(el));
 }
 
 /**
@@ -136,8 +136,8 @@ caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubst
 /**
  * `caseIgnoreListSubstringsMatch` as a `Matcher`. The assertion is
  * a `SubstringAssertion` of directory strings. A filter component
- * is a `PostalAddress` (or one directory string). Its lines are
- * joined with U+001F into that one piece.
+ * is a `PostalAddress`. Its lines are joined with U+001F into
+ * that one piece.
  */
 export
 const caseIgnoreListSubstringsMatch: Matcher = createSubstringsMatcher(

@@ -1,5 +1,6 @@
 import {
     ASN1CharactersError,
+    ASN1Error,
     ObjectIdentifier,
     type ASN1Element,
 } from "@wildboar/asn1";
@@ -280,10 +281,14 @@ describe("caseIgnoreListSubstringsMatch", () => {
             assertion([{ any_: "123 $ main" }]),
             addressed,
         )).toBe(true);
-        const filter: FilterSubstring[] = [
-            { initial: _encodePrintableString("main", DER) },
-        ];
-        expect(caseIgnoreListSubstringsMatch(filter, atav)).toBe(true);
+        expect(caseIgnoreListSubstringsMatch(
+            [{ initial: postal([ "Main" ]) }],
+            atav,
+        )).toBe(true);
+        expect(() => caseIgnoreListSubstringsMatch(
+            [{ initial: _encodePrintableString("main", DER) }],
+            atav,
+        )).toThrow(ASN1Error);
     });
 
     it("does not reuse characters across joined lines", () => {
