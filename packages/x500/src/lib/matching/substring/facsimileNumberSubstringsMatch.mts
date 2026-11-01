@@ -65,11 +65,11 @@ function facsimileNumberSubstringsMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const prepared = prepareStored(readFacsimileNumber(value), prepareTelephone, flags);
+    const prepared = prepareStored(readFacsimileNumber(value), prepareTelephone, flags, RULE);
     if (prepared === undefined) {
         return undefined;
     }
-    return matchPreparedString(assertion, prepared, value, flags);
+    return matchPreparedString(assertion, prepared, value, flags, RULE);
 }
 
 facsimileNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;

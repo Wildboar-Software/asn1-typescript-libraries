@@ -1,6 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import {
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type ContextMatcher,
 } from "../../types/matching.mjs";
 import { id_avc_temporal } from "../../modules/SelectedAttributeTypes/id-avc-temporal.va.mjs";
@@ -133,7 +134,12 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
  * @function
  * @author Cursor Grok 4.6
  */
-function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date): boolean {
+function periodsEntirelyCoverInterval (
+    periods: Period[],
+    start: Date,
+    end: Date,
+    flags: number = 0,
+): boolean {
     if (start.valueOf() > end.valueOf()) {
         return false;
     }
@@ -142,6 +148,11 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
     while (t.valueOf() <= end.valueOf()) {
         steps += 1;
         if (steps > MAX_ENTIRELY_COVER_STEPS) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: temporalContext: exceeded ${MAX_ENTIRELY_COVER_STEPS} cover steps`,
+                );
+            }
             return false;
         }
         const farthestEnd: Date | null = farthestOccurrenceEndCovering(periods, t);
@@ -217,8 +228,9 @@ function timeSpecificationContains (
     start: Date,
     end: Date,
     entirely: boolean = false,
-    constantTime: boolean = false,
+    flags: number = 0,
 ): boolean {
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
@@ -245,7 +257,7 @@ function timeSpecificationContains (
             const adjustedStart = inSpecTimeZone(start, timezone);
             const adjustedEnd = inSpecTimeZone(end, timezone);
             if (entirely) {
-                return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd);
+                return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd, flags);
             }
             let matched = false;
             for (const period of spec.time.periodic) {
@@ -304,9 +316,14 @@ function evaluateTemporalContextTyped (
             a.between.startTime,
             a.between.endTime ?? MAX_DATE,
             a.between.entirely,
-            constantTime,
+            flags,
         );
     } else {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: temporalContext: unrecognized TimeAssertion alternative",
+            );
+        }
         return false;
     }
 }

@@ -3,6 +3,8 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -49,13 +51,23 @@ function delegationPathMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttCertPath);
+    if (v.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: delegationPathMatch: stored AttCertPath is empty",
+            );
+        }
+        return false;
+    }
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
-    if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)) {
+    const firstMatches = compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher);
+    if (!firstMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return false;
     }
-    return compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getEqualityMatcher);
+    const lastMatches = compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getEqualityMatcher);
+    return firstMatches && lastMatches;
 }
 
 delegationPathMatchTyped satisfies TypedEquationFunction<DelMatchSyntax>;

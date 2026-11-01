@@ -6,6 +6,7 @@ import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -45,7 +46,7 @@ function compareLabels (
     a: string,
     b: string,
     wildcardAllowed: boolean,
-    flags: number,
+    flags: number = 0,
 ): boolean | undefined {
     if (a === "*" || b === "*") {
         return wildcardAllowed;
@@ -82,6 +83,11 @@ function dnsNameMatchTyped (
     const a = assertion;
     const v = domainToUnicode(stored.trim());
     if (a === "" || v === "") {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: dnsNameMatch: empty or invalid domain name",
+            );
+        }
         return false;
     }
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);

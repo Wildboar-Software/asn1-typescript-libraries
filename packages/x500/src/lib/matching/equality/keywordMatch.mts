@@ -9,6 +9,7 @@ import { containsWord } from "./wordMatch.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -60,6 +61,11 @@ function keywordMatchTyped (
     const raw = readKeyword(value);
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepareKeyword(raw);
     if (!stored) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: keywordMatch: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return containsWord(stored, assertion, flags & MATCH_FLAG_CONSTANT_TIME);

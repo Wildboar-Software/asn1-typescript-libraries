@@ -6,6 +6,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -53,6 +54,11 @@ function caseExactMatchTyped (
     }
     const prepared = prepString(raw);
     if (prepared === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: caseExactMatch: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return stringsEqual(assertion, prepared, constantTime);

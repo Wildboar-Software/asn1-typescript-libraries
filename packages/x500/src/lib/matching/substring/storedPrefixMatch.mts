@@ -3,6 +3,7 @@ import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
 } from "../../types/matching.mjs";
 
@@ -33,7 +34,6 @@ export
 function storedPrefixMatch (
     assertion: DirectoryStringInput,
     value: DirectoryStringInput,
-    _getEqualityMatcher?: unknown,
     flags: number = 0,
 ): boolean {
     return storedPrefixMatchTyped(
@@ -48,7 +48,7 @@ function storedPrefixMatch (
  *
  * @param assertion Presented string.
  * @param value Stored prefix.
- * @param flags `MATCH_FLAG_CONSTANT_TIME` and `MATCH_FLAG_VALUE_NORMALIZED`.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`, and `MATCH_FLAG_VALUE_NORMALIZED`.
  * @returns `true` when the stored string is a prefix.
  */
 export
@@ -62,6 +62,11 @@ function storedPrefixMatchTyped (
         ? value
         : prepString(value, { caseFold: true });
     if (preparedA === undefined || preparedV === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: storedPrefixMatch: string preparation failed",
+            );
+        }
         return false;
     }
     if (flags & MATCH_FLAG_CONSTANT_TIME) {

@@ -4,6 +4,7 @@ import { readDecoded } from "../readValue.mjs";
 import { evaluateCertificateAssertion } from "./certificateMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -42,6 +43,11 @@ function certificatePairMatchTyped (
 ): boolean {
     const v = readDecoded(value, _decode_CertificatePair);
     if (v.isEmpty()) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: certificatePairMatch: stored CertificatePair is empty",
+            );
+        }
         return false;
     }
     const issuedBy = a.issuedByThisCAAssertion;

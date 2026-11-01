@@ -4,6 +4,7 @@ import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -45,6 +46,14 @@ function pkiPathMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_PkiPath);
+    if (v.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: pkiPathMatch: stored PkiPath is empty",
+            );
+        }
+        return false;
+    }
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];

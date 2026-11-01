@@ -5,6 +5,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -88,6 +89,11 @@ function jidMatchTyped (
     const stored = typeof value === "string" ? value : value.utf8String;
     const v = parseJid(stored);
     if (!v) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: jidMatch: stored value is not a JID",
+            );
+        }
         return false;
     }
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;

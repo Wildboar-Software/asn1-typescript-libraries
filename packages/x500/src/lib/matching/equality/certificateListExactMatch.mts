@@ -4,6 +4,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -104,6 +105,11 @@ function certificateListExactMatchTyped (
                 return false;
             }
         } else {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: certificateListExactMatch: unrecognized DistributionPointName alternative",
+                );
+            }
             if (!("tagClass" in a.distributionPoint)) {
                 return false;
             }

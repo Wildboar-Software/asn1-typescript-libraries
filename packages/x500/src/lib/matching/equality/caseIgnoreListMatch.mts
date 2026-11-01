@@ -7,6 +7,7 @@ import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -63,6 +64,11 @@ function caseIgnoreListMatchTyped (
                 ? lines[i]
                 : prepString(lines[i], { caseFold: true });
             if (stored === undefined) {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        `@wildboar/x500: debug: caseIgnoreListMatch: stored line at index ${i} failed string preparation`,
+                    );
+                }
                 return undefined;
             }
             if (assertion[i] !== stored) {
@@ -80,6 +86,11 @@ function caseIgnoreListMatchTyped (
             ? (normalized ? rawLine : prepString(rawLine, { caseFold: true }))
             : "";
         if (stored === undefined) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: caseIgnoreListMatch: stored line at index ${i} failed string preparation`,
+                );
+            }
             sawUndefined = true;
             continue;
         }

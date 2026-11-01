@@ -1,6 +1,7 @@
 import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type ContextMatcher,
 } from "../../types/matching.mjs";
 import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
@@ -80,6 +81,11 @@ function evaluateLocaleContext (
         );
     }
     if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: localeContext: unrecognized LocaleContextSyntax alternative",
+            );
+        }
         return compareElements(assertion, value);
     }
     return false;

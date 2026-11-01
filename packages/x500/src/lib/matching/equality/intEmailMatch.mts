@@ -6,6 +6,7 @@ import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -60,12 +61,22 @@ function intEmailMatchTyped (
             ? prepareIntEmail(assertion.utf8String)
             : assertion;
     if (!presented) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: intEmailMatch: assertion is not an IntEmail",
+            );
+        }
         return false;
     }
     const stored = typeof value === "string" ? value : value.utf8String;
     // The domain cannot contain `@`, so the last `@` is the separator.
     const vAt: number = stored.lastIndexOf("@");
     if (vAt <= 0 || vAt >= stored.length - 1) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: intEmailMatch: stored value is not an IntEmail",
+            );
+        }
         return false;
     }
     const localsMatch = caseIgnoreMatchTyped(

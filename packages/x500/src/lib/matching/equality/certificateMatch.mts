@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -269,6 +270,14 @@ function evaluateCertificateAssertion (
                 }
                 break;
             }
+            default: {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        `@wildboar/x500: debug: certificateMatch: unrecognized builtinNameForm ${altNameType}`,
+                    );
+                }
+                return false;
+            }
             }
         } else if ("otherNameForm" in subjectAltName) {
             const otherNameForm = subjectAltName.otherNameForm;
@@ -282,6 +291,11 @@ function evaluateCertificateAssertion (
                 return false;
             }
         } else {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: certificateMatch: unrecognized AltNameType alternative",
+                );
+            }
             return false;
         }
     }

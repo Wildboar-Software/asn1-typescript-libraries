@@ -5,6 +5,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -104,6 +105,11 @@ function wordMatchTyped (
     const raw = readDirectoryString(value);
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepareWord(raw);
     if (!stored) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: wordMatch: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return containsWord(stored, assertion, flags & MATCH_FLAG_CONSTANT_TIME);

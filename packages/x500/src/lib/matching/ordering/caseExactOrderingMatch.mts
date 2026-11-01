@@ -6,6 +6,7 @@ import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedOrderingFunction,
@@ -59,6 +60,11 @@ function caseExactOrderingMatchTyped (
     }
     const prepared = prepString(raw);
     if (prepared === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: caseExactOrderingMatch: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return compare(assertion, prepared);

@@ -8,6 +8,7 @@ import type { FilterItem_substrings_strings_Item } from "../../modules/Directory
 import {
     createSubstringsMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type AssertedSubstring,
     type Matcher,
     type TypedEquationFunction,
@@ -48,6 +49,7 @@ function octetFilter (
 function matchOctetSubstringsConstantTime (
     stored: Uint8Array,
     assertion: AssertedSubstring<Uint8Array>[],
+    flags: number = 0,
 ): boolean | undefined {
     let cursor = 0;
     let end = stored.length;
@@ -56,6 +58,11 @@ function matchOctetSubstringsConstantTime (
     for (let i = 0; i < assertion.length; i++) {
         const piece = assertion[i];
         if ("control" in piece) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: octetStringSubstringsMatch: ignoring control attribute in substring assertion",
+                );
+            }
             continue;
         }
         sawPiece = true;
@@ -81,6 +88,11 @@ function matchOctetSubstringsConstantTime (
         }
     }
     if (!sawPiece) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: octetStringSubstringsMatch: assertion contains no initial, any, or final substring",
+            );
+        }
         return undefined;
     }
     return matched === 1;
@@ -107,7 +119,7 @@ function octetStringSubstringsMatchTyped (
 ): boolean | undefined {
     const stored = value.octetString;
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
-        return matchOctetSubstringsConstantTime(stored, assertion);
+        return matchOctetSubstringsConstantTime(stored, assertion, flags);
     }
     const buf = Buffer.from(stored);
     let start = 0;
@@ -116,6 +128,11 @@ function octetStringSubstringsMatchTyped (
     for (let i = 0; i < assertion.length; i++) {
         const piece = assertion[i];
         if ("control" in piece) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: octetStringSubstringsMatch: ignoring control attribute in substring assertion",
+                );
+            }
             continue;
         }
         sawPiece = true;
@@ -146,6 +163,11 @@ function octetStringSubstringsMatchTyped (
         }
     }
     if (!sawPiece) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: octetStringSubstringsMatch: assertion contains no initial, any, or final substring",
+            );
+        }
         return undefined;
     }
     return true;

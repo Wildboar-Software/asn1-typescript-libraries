@@ -5,6 +5,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -50,6 +51,11 @@ function caseIgnoreIA5MatchTyped (
     }
     const prepared = prepString(raw, { caseFold: true });
     if (prepared === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: caseIgnoreIA5Match: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return stringsEqual(assertion, prepared, constantTime);

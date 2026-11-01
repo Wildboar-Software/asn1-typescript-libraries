@@ -14,6 +14,7 @@ import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -83,6 +84,11 @@ function dualStringMatchTyped (
     const badOperation = prohibitedCharacters.test(stored.operation);
     const badObject = prohibitedCharacters.test(stored.object);
     if (badOperation || badObject) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: dualStringMatch: stored string contains a prohibited character",
+            );
+        }
         return undefined;
     }
     if (flags & MATCH_FLAG_CONSTANT_TIME) {

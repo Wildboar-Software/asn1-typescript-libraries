@@ -14,6 +14,7 @@ import type { UnboundedDirectoryString } from "../../modules/SelectedAttributeTy
 import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
 import {
     getStringSubstringsMatcher,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type AssertedSubstring,
 } from "../../types/matching.mjs";
@@ -71,12 +72,18 @@ function prepareStored (
     raw: string,
     prepare: StringPreparer,
     flags: number,
+    rule?: string,
 ): string | undefined {
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
         return raw;
     }
     const prepared = prepare(raw);
     if (prepared === undefined || prepared.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                `@wildboar/x500: debug: ${rule ?? "substringMatch"}: stored value failed string preparation`,
+            );
+        }
         return undefined;
     }
     return prepared;
@@ -226,14 +233,32 @@ function filterPieces (
     );
 }
 
-function hasMatchPiece (assertion: readonly AssertedSubstring<string>[]): boolean {
+function hasMatchPiece (
+    assertion: readonly AssertedSubstring<string>[],
+    flags: number = 0,
+    rule?: string,
+): boolean {
+    let sawPiece = false;
+    let sawControl = false;
     for (let i = 0; i < assertion.length; i++) {
         const piece = assertion[i];
         if ("initial" in piece || "any_" in piece || "final" in piece) {
-            return true;
+            sawPiece = true;
+        } else if ("control" in piece) {
+            sawControl = true;
         }
     }
-    return false;
+    if (sawControl && (flags & MATCH_FLAG_DEBUG)) {
+        console.error(
+            `@wildboar/x500: debug: ${rule ?? "substringMatch"}: ignoring control attribute in substring assertion`,
+        );
+    }
+    if (!sawPiece && (flags & MATCH_FLAG_DEBUG)) {
+        console.error(
+            `@wildboar/x500: debug: ${rule ?? "substringMatch"}: assertion contains no initial, any, or final substring`,
+        );
+    }
+    return sawPiece;
 }
 
 /**
@@ -248,8 +273,9 @@ function matchPreparedString (
     prepared: string,
     value: ASN1Element,
     flags: number,
+    rule?: string,
 ): boolean | undefined {
-    if (!hasMatchPiece(assertion)) {
+    if (!hasMatchPiece(assertion, flags, rule)) {
         return undefined;
     }
     return getStringSubstringsMatcher(() => prepared)(

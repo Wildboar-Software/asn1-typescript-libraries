@@ -45,11 +45,11 @@ function caseIgnoreSubstringsMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = directoryStringToString(_decode_UnboundedDirectoryString(value));
-    const prepared = prepareStored(raw, prepareIgnore, flags);
+    const prepared = prepareStored(raw, prepareIgnore, flags, RULE);
     if (prepared === undefined) {
         return undefined;
     }
-    return matchPreparedString(assertion, prepared, value, flags);
+    return matchPreparedString(assertion, prepared, value, flags, RULE);
 }
 
 caseIgnoreSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;

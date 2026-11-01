@@ -4,6 +4,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -128,6 +129,7 @@ const timeSpecificationMatch: Matcher = createEqualityMatcher(
  *
  * @param assertedTime Presented time specification.
  * @param storedTime Stored time specification.
+ * @param flags `MATCH_FLAG_DEBUG`.
  * @returns `true` when every presented component matches.
  */
 function timeSpecificationsEqual (
@@ -155,6 +157,11 @@ function timeSpecificationsEqual (
     const storedTimeExts = storedTime._unrecognizedExtensionsList;
     const assertedTimeExts = assertedTime._unrecognizedExtensionsList;
     if (storedTimeExts.length < assertedTimeExts.length) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: timeSpecificationMatch: asserted unrecognized extension in TimeSpecification",
+            );
+        }
         return false; // Asserted a component we don't recognize.
     }
 
@@ -163,6 +170,11 @@ function timeSpecificationsEqual (
         const staexts = storedTime.time.absolute._unrecognizedExtensionsList;
         const ataexts = assertedTime.time.absolute._unrecognizedExtensionsList;
         if (staexts.length < ataexts.length) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: timeSpecificationMatch: asserted unrecognized extension in absolute time",
+                );
+            }
             return false; // Asserted a component we don't recognize.
         }
 

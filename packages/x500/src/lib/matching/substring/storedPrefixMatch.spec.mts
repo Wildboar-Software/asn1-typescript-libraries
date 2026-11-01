@@ -58,19 +58,16 @@ describe("storedPrefixMatch", () => {
         expect(storedPrefixMatch(
             uds("7035551212"),
             uds("703"),
-            undefined,
             MATCH_FLAG_CONSTANT_TIME,
         )).toBe(true);
         expect(storedPrefixMatch(
             uds("703"),
             uds("7035551212"),
-            undefined,
             MATCH_FLAG_CONSTANT_TIME,
         )).toBe(false);
         expect(storedPrefixMatch(
             uds("7045551212"),
             uds("703"),
-            undefined,
             MATCH_FLAG_CONSTANT_TIME,
         )).toBe(false);
         expect(storedPrefixMatchTyped(

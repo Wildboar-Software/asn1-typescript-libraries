@@ -5,6 +5,7 @@ import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -50,6 +51,11 @@ function certificatePairExactMatchTyped (
     const issuedTo = a.issuedToThisCAAssertion;
     const issuedBy = a.issuedByThisCAAssertion;
     if (!issuedTo && !issuedBy) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: certificatePairExactMatch: assertion has neither issuedToThisCAAssertion nor issuedByThisCAAssertion",
+            );
+        }
         return false;
     }
     let matched = true;

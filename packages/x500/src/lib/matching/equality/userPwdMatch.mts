@@ -11,6 +11,7 @@ import { readDecoded } from "../readValue.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -21,7 +22,8 @@ import {
  * @param encrypter Encrypts a clear password when the other side is encrypted.
  * @param assertion Presented password.
  * @param value Stored password.
- * @param flags `MATCH_FLAG_CONSTANT_TIME` and `MATCH_FLAG_VALUE_NORMALIZED`.
+ * @param getEqualityMatcher Unused; present for `TypedEquationFunction` symmetry.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`, and `MATCH_FLAG_VALUE_NORMALIZED`.
  * @returns `true` when the passwords match under clause 8.10.1.
  */
 export
@@ -37,11 +39,21 @@ function userPwdMatchTyped (
         return false;
     }
     if (ASN1Element.isElement(assertion)) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: userPwdMatch: unrecognized UserPwd alternative",
+            );
+        }
         return compareElements(assertion, value as ASN1Element);
     }
     if (("clear" in assertion) && ("clear" in value)) {
         const prepared = prepString(assertion.clear);
         if (prepared === undefined) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: userPwdMatch: clear assertion failed string preparation",
+                );
+            }
             return undefined;
         }
         return caseExactMatchTyped(prepared, value.clear, getEqualityMatcher, flags);
@@ -65,6 +77,11 @@ function userPwdMatchTyped (
         const alg = assertion.encrypted.algorithmIdentifier;
         const result = encrypter(alg, value.clear);
         if (!result) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: userPwdMatch: unrecognized encryption algorithm ${alg.algorithm.dotDelimitedNotation}`,
+                );
+            }
             return false; // Algorithm not understood.
         }
         return bytesEqual(assertion.encrypted.encryptedString, result, constantTime);
@@ -73,6 +90,11 @@ function userPwdMatchTyped (
         const alg = value.encrypted.algorithmIdentifier;
         const result = encrypter(alg, assertion.clear);
         if (!result) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: userPwdMatch: unrecognized encryption algorithm ${alg.algorithm.dotDelimitedNotation}`,
+                );
+            }
             return false; // Algorithm not understood.
         }
         return bytesEqual(result, value.encrypted.encryptedString, constantTime);
