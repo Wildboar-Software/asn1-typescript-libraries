@@ -58,6 +58,8 @@ export
 const pwdEncAlgMatch: Matcher = createEqualityMatcher(
     _decode_PwdEncAlg,
     pwdEncAlgMatchTyped,
+    undefined,
+    true,
 );
 
 export default pwdEncAlgMatch;

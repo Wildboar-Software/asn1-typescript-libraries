@@ -5,6 +5,7 @@ import {
     _encode_FacsimileTelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { _encode_TelephoneNumber } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { MATCH_FLAG_USED_FOR_NAME } from "../../types/matching.mjs";
 import facsimileNumberMatch_, {
     facsimileNumberMatchTyped,
 } from "./facsimileNumberMatch.mjs";
@@ -91,5 +92,17 @@ describe("facsimileNumberMatch", () => {
             telephone("+17035551212"),
             facsimile("+1-703-555-1213", FINE_RESOLUTION),
         )).toBe(false);
+    });
+
+    it("rejects heterogeneous syntaxes when used for name matching", () => {
+        expect(facsimileNumberMatch(
+            telephone("+17035551212"),
+            facsimile("+17035551212"),
+        )).toBe(true);
+        expect(facsimileNumberMatch(
+            telephone("+17035551212"),
+            facsimile("+17035551212"),
+            MATCH_FLAG_USED_FOR_NAME,
+        )).toBeUndefined();
     });
 });

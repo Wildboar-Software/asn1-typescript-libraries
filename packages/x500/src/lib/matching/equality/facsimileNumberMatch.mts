@@ -82,6 +82,8 @@ export
 const facsimileNumberMatch: Matcher = createEqualityMatcher(
     (el) => normalizeTelephoneNumber(readFacsimileNumber(el)),
     facsimileNumberMatchTyped,
+    undefined,
+    true,
 );
 
 export default facsimileNumberMatch;

@@ -36,6 +36,8 @@ export
 const integerFirstComponentMatch: Matcher = createEqualityMatcher(
     (el) => el.integer,
     integerFirstComponentMatchTyped,
+    undefined,
+    true,
 );
 
 export default integerFirstComponentMatch;

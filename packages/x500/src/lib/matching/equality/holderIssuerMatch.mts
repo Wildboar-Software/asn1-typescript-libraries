@@ -62,6 +62,8 @@ export
 const holderIssuerMatch: Matcher = createEqualityMatcher(
     _decode_HolderIssuerAssertion,
     holderIssuerMatchTyped,
+    undefined,
+    true,
 );
 
 export default holderIssuerMatch;

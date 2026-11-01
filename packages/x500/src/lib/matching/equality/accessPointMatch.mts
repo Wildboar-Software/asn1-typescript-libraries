@@ -87,6 +87,8 @@ export
 const accessPointMatch: Matcher = createEqualityMatcher(
     decodeAccessPointAssertion,
     accessPointMatchTyped,
+    undefined,
+    true,
 );
 
 export default accessPointMatch;

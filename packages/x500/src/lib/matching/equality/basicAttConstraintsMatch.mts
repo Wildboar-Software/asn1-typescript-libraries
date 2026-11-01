@@ -66,6 +66,8 @@ export
 const basicAttConstraintsMatch: Matcher = createEqualityMatcher(
     _decode_BasicAttConstraintsSyntax,
     basicAttConstraintsMatchTyped,
+    undefined,
+    true,
 );
 
 export default basicAttConstraintsMatch;
