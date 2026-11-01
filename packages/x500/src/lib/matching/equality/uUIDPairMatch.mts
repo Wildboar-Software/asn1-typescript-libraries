@@ -1,6 +1,11 @@
 import { Buffer } from "node:buffer";
 import type { ASN1Element } from "@wildboar/asn1";
 import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
     UUIDPair,
     _decode_UUIDPair,
 } from "../../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
@@ -13,32 +18,31 @@ import { readDecoded } from "../readValue.mjs";
  * corresponding component of the stored pair (same length and
  * identical octets).
  *
- * Each argument may be an `ASN1Element` or a `UUIDPair`.
- */
-export
-function uUIDPairMatch (
-    assertion: ASN1Element | UUIDPair,
-    value: ASN1Element | UUIDPair,
-): boolean {
-    return uUIDPairMatchTyped(
-        readDecoded(assertion, _decode_UUIDPair),
-        readDecoded(value, _decode_UUIDPair),
-    );
-}
-
-/**
- * `uUIDPairMatch` on two decoded pairs.
- *
  * @param assertion Presented pair.
- * @param value Stored pair.
+ * @param value Stored pair, or that pair already decoded.
  * @returns `true` when both UUID components are equal.
  */
 export
-function uUIDPairMatchTyped (assertion: UUIDPair, value: UUIDPair): boolean {
+function uUIDPairMatchTyped (
+    assertion: UUIDPair,
+    value: UUIDPair | ASN1Element,
+): boolean {
+    const stored = readDecoded(value, _decode_UUIDPair);
     return (
-        Buffer.compare(assertion.issuerUUID, value.issuerUUID) === 0
-        && Buffer.compare(assertion.subjectUUID, value.subjectUUID) === 0
+        Buffer.compare(assertion.issuerUUID, stored.issuerUUID) === 0
+        && Buffer.compare(assertion.subjectUUID, stored.subjectUUID) === 0
     );
 }
+
+uUIDPairMatchTyped satisfies TypedEquationFunction<UUIDPair>;
+
+/**
+ * `uUIDPairMatch` as a `Matcher`.
+ */
+export
+const uUIDPairMatch: Matcher = createEqualityMatcher(
+    _decode_UUIDPair,
+    uUIDPairMatchTyped,
+);
 
 export default uUIDPairMatch;

@@ -5,7 +5,12 @@ import {
     _encode_FacsimileTelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import { _encode_TelephoneNumber } from "../../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
-import facsimileNumberMatch from "./facsimileNumberMatch.mjs";
+import facsimileNumberMatch_, {
+    facsimileNumberMatchTyped,
+} from "./facsimileNumberMatch.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const facsimileNumberMatch = onStoredValue(facsimileNumberMatch_);
 
 const FINE_RESOLUTION = new Uint8ClampedArray([
     FALSE_BIT, FALSE_BIT, FALSE_BIT, FALSE_BIT,
@@ -70,12 +75,11 @@ describe("facsimileNumberMatch", () => {
     });
 
     it("accepts a FacsimileTelephoneNumber on either side", () => {
-        const presented = new FacsimileTelephoneNumber("+1 703-555-1212", FINE_RESOLUTION);
         const stored = new FacsimileTelephoneNumber("+17035551212");
-        expect(facsimileNumberMatch(presented, stored)).toBe(true);
-        expect(facsimileNumberMatch(presented, facsimile("+17035551212"))).toBe(true);
-        expect(facsimileNumberMatch(telephone("+17035551212"), stored)).toBe(true);
-        expect(facsimileNumberMatch(presented, facsimile("+1-703-555-1213"))).toBe(false);
+        expect(facsimileNumberMatchTyped("+17035551212", stored)).toBe(true);
+        expect(facsimileNumberMatchTyped("+17035551212", facsimile("+17035551212"))).toBe(true);
+        expect(facsimileNumberMatchTyped("+17035551212", stored)).toBe(true);
+        expect(facsimileNumberMatchTyped("+17035551212", facsimile("+1-703-555-1213"))).toBe(false);
     });
 
     it("does not evaluate facsimile parameters", () => {

@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { compareName } from "@wildboar/dn";
 import {
     CertificateAssertion,
@@ -99,9 +105,17 @@ const ANY_POLICY_OID: string = anyPolicy.toString();
 export
 function evaluateCertificateAssertion (
     assertion: CertificateAssertion,
-    value: Certificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: Certificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    if (ASN1Element.isElement(value)) {
+        return evaluateCertificateAssertion(
+            assertion,
+            _decode_Certificate(value),
+            getMatcher,
+        );
+    }
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const tbs = value.toBeSigned;
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
@@ -417,6 +431,8 @@ function evaluateCertificateAssertion (
  * `certificateMatch` on a decoded assertion and certificate.
  * Alias of {@link evaluateCertificateAssertion}.
  */
+evaluateCertificateAssertion satisfies TypedEquationFunction<CertificateAssertion>;
+
 export const certificateMatchTyped: typeof evaluateCertificateAssertion = evaluateCertificateAssertion;
 
 /**
@@ -428,16 +444,9 @@ export const certificateMatchTyped: typeof evaluateCertificateAssertion = evalua
  * {@link evaluateCertificateAssertion}.
  */
 export
-function certificateMatch (
-    assertion: ASN1Element | CertificateAssertion,
-    value: ASN1Element | Certificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return certificateMatchTyped(
-        ASN1Element.isElement(assertion) ? _decode_CertificateAssertion(assertion) : assertion,
-        ASN1Element.isElement(value) ? _decode_Certificate(value) : value,
-        getEqualityMatcher,
-    );
-}
+const certificateMatch: Matcher = createEqualityMatcher(
+    _decode_CertificateAssertion,
+    evaluateCertificateAssertion,
+);
 
 export default certificateMatch;

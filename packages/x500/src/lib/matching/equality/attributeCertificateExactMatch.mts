@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { Buffer } from "node:buffer";
 import { readDecoded } from "../readValue.mjs";
 import {
@@ -30,42 +36,42 @@ import compareAttCertIssuer from "../../comparators/compareAttCertIssuer.mjs";
  * `AttributeCertificateExactAssertion`. `value` may be an element
  * or an `AttributeCertificate`.
  */
-export
-function attributeCertificateExactMatch (
-    assertion: ASN1Element | AttributeCertificateExactAssertion,
-    value: ASN1Element | AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return attributeCertificateExactMatchTyped(
-        readDecoded(assertion, _decode_AttributeCertificateExactAssertion),
-        readDecoded(value, _decode_AttributeCertificate),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `attributeCertificateExactMatch` on a decoded assertion and
  * attribute certificate.
  *
  * @param assertion Presented serial number and issuer.
- * @param value Stored attribute certificate.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored attribute certificate, or that certificate already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the serial number and issuer match.
  */
 export
 function attributeCertificateExactMatchTyped (
     assertion: AttributeCertificateExactAssertion,
-    value: AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: AttributeCertificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
-    if (Buffer.compare(value.toBeSigned.serialNumber, assertion.serialNumber) !== 0) {
+    const stored = readDecoded(value, _decode_AttributeCertificate);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    if (Buffer.compare(stored.toBeSigned.serialNumber, assertion.serialNumber) !== 0) {
         return false;
     }
     return compareAttCertIssuer(
         assertion.issuer,
-        value.toBeSigned.issuer,
+        stored.toBeSigned.issuer,
         getEqualityMatcher,
     );
 }
+
+attributeCertificateExactMatchTyped satisfies TypedEquationFunction<AttributeCertificateExactAssertion>;
+
+/**
+ * `attributeCertificateExactMatch` as a `Matcher`.
+ */
+export
+const attributeCertificateExactMatch: Matcher = createEqualityMatcher(
+    _decode_AttributeCertificateExactAssertion,
+    attributeCertificateExactMatchTyped,
+);
 
 export default attributeCertificateExactMatch;

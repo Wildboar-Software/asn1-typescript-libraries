@@ -1,6 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
     type PwdEncAlg,
     _decode_PwdEncAlg,
 } from "../../modules/PasswordPolicy/PwdEncAlg.ta.mjs";
@@ -18,26 +23,19 @@ import compareElements from "../../comparators/compareElements.mjs";
  * parameters must be equal. Fails if the stored `UserPwd` is not
  * encrypted.
  */
-export
-function pwdEncAlgMatch (
-    assertion: ASN1Element | PwdEncAlg,
-    value: ASN1Element | UserPwd,
-): boolean {
-    return pwdEncAlgMatchTyped(
-        readDecoded(assertion, _decode_PwdEncAlg),
-        readDecoded(value, _decode_UserPwd),
-    );
-}
-
 /**
  * `pwdEncAlgMatch` on a decoded algorithm and password.
  *
  * @param a Presented encryption algorithm.
- * @param v Stored user password.
+ * @param value Stored user password, or that password already decoded.
  * @returns `true` when the stored password is encrypted with `a`.
  */
 export
-function pwdEncAlgMatchTyped (a: PwdEncAlg, v: UserPwd): boolean {
+function pwdEncAlgMatchTyped (
+    a: PwdEncAlg,
+    value: UserPwd | ASN1Element,
+): boolean {
+    const v = readDecoded(value, _decode_UserPwd);
     if (!("encrypted" in v)) {
         return false;
     }
@@ -50,5 +48,16 @@ function pwdEncAlgMatchTyped (a: PwdEncAlg, v: UserPwd): boolean {
         );
     return sameParameters && alg.algorithm.isEqualTo(a.algorithm);
 }
+
+pwdEncAlgMatchTyped satisfies TypedEquationFunction<PwdEncAlg>;
+
+/**
+ * `pwdEncAlgMatch` as a `Matcher`.
+ */
+export
+const pwdEncAlgMatch: Matcher = createEqualityMatcher(
+    _decode_PwdEncAlg,
+    pwdEncAlgMatchTyped,
+);
 
 export default pwdEncAlgMatch;

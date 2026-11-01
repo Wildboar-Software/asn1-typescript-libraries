@@ -1,4 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 function normalizeTelephoneNumber (telephoneNumber: string): string {
     return telephoneNumber.replace(/[- ]/g, "");
@@ -14,31 +21,31 @@ function normalizeTelephoneNumber (telephoneNumber: string): string {
  * DEVIATION: We do not lowercase the telephone number, because it is forbidden
  * from containing alphabetic characters anyway.
  *
- * Each argument may be an `ASN1Element` or a string.
- * `TelephoneNumber` decodes to `PrintableString`.
+ * @param assertion Presented number, with hyphens and spaces already removed.
+ * @param value Stored `TelephoneNumber`, or that number already
+ *  normalized. `MATCH_FLAG_VALUE_NORMALIZED` skips removal.
  */
 export
-function telephoneNumberMatch (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    return telephoneNumberMatchTyped(
-        typeof assertion === "string" ? assertion : assertion.printableString,
-        typeof value === "string" ? value : value.printableString,
-    );
+function telephoneNumberMatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = typeof value === "string" ? value : value.printableString;
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : normalizeTelephoneNumber(raw);
+    return assertion === stored;
 }
 
+telephoneNumberMatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `telephoneNumberMatch` on two telephone numbers. Hyphens and
- * spaces are removed here.
- *
- * @param assertion Presented number.
- * @param value Stored number.
- * @returns `true` when the normalized numbers are equal.
+ * `telephoneNumberMatch` as a `Matcher`.
  */
 export
-function telephoneNumberMatchTyped (assertion: string, value: string): boolean {
-    return normalizeTelephoneNumber(assertion) === normalizeTelephoneNumber(value);
-}
+const telephoneNumberMatch: Matcher = createEqualityMatcher(
+    (el) => normalizeTelephoneNumber(el.printableString),
+    telephoneNumberMatchTyped,
+);
 
 export default telephoneNumberMatch;

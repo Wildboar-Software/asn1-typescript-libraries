@@ -8,7 +8,10 @@ import {
     NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
-import uniqueMemberMatch from "./uniqueMemberMatch.mjs";
+import uniqueMemberMatch_ from "./uniqueMemberMatch.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const uniqueMemberMatch = onStoredValue(uniqueMemberMatch_);
 
 function dn (label: string): NameAndOptionalUID["dn"] {
     return [[

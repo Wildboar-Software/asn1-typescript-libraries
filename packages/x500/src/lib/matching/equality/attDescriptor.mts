@@ -1,6 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
     AttributeDescriptorSyntax,
     _decode_AttributeDescriptorSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
@@ -16,29 +21,19 @@ import { Buffer } from "node:buffer";
  * `AttributeDescriptorSyntax` matches the corresponding stored
  * component.
  */
-export
-function attDescriptor (
-    assertion: ASN1Element | AttributeDescriptorSyntax,
-    value: ASN1Element | AttributeDescriptorSyntax,
-): boolean {
-    return attDescriptorTyped(
-        readDecoded(assertion, _decode_AttributeDescriptorSyntax),
-        readDecoded(value, _decode_AttributeDescriptorSyntax),
-    );
-}
-
 /**
  * `attDescriptor` on two decoded attribute descriptors.
  *
  * @param a Presented descriptor.
- * @param v Stored descriptor.
+ * @param value Stored descriptor, or that descriptor already decoded.
  * @returns `true` when the compared components match.
  */
 export
 function attDescriptorTyped (
     a: AttributeDescriptorSyntax,
-    v: AttributeDescriptorSyntax,
+    value: AttributeDescriptorSyntax | ASN1Element,
 ): boolean {
+    const v = readDecoded(value, _decode_AttributeDescriptorSyntax);
 
     if (a.identifier.toString() !== v.identifier.toString()) {
         return false;
@@ -75,5 +70,16 @@ function attDescriptorTyped (
 
     return true;
 }
+
+attDescriptorTyped satisfies TypedEquationFunction<AttributeDescriptorSyntax>;
+
+/**
+ * `attDescriptor` as a `Matcher`.
+ */
+export
+const attDescriptor: Matcher = createEqualityMatcher(
+    _decode_AttributeDescriptorSyntax,
+    attDescriptorTyped,
+);
 
 export default attDescriptor;

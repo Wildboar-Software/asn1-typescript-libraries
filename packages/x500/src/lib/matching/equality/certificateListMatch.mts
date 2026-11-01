@@ -1,6 +1,12 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, type INTEGER, TRUE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { compareName } from "@wildboar/dn";
 import {
     CertificateListAssertion,
@@ -48,33 +54,22 @@ import { compareRelativeDistinguishedName } from "@wildboar/dn";
  * key identifier. Missing CRL number or `nextUpdate` where
  * required is not a match.
  */
-export
-function certificateListMatch (
-    assertion: ASN1Element | CertificateListAssertion,
-    value: ASN1Element | CertificateList,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return certificateListMatchTyped(
-        readDecoded(assertion, _decode_CertificateListAssertion),
-        readDecoded(value, _decode_CertificateList),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `certificateListMatch` on a decoded assertion and CRL.
  *
  * @param a Presented CRL assertion.
- * @param v Stored certificate list.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored certificate list, or that list already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when every present component matches.
  */
 export
 function certificateListMatchTyped (
     a: CertificateListAssertion,
-    v: CertificateList,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: CertificateList | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_CertificateList);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const crlNumberExt: Extension | undefined = v.toBeSigned.crlExtensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_cRLNumber)));
     const idpExt: Extension | undefined = v.toBeSigned.crlExtensions
@@ -186,5 +181,16 @@ function certificateListMatchTyped (
 
     return true;
 }
+
+certificateListMatchTyped satisfies TypedEquationFunction<CertificateListAssertion>;
+
+/**
+ * `certificateListMatch` as a `Matcher`.
+ */
+export
+const certificateListMatch: Matcher = createEqualityMatcher(
+    _decode_CertificateListAssertion,
+    certificateListMatchTyped,
+);
 
 export default certificateListMatch;

@@ -1,6 +1,9 @@
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
 import type { ASN1Element } from "@wildboar/asn1";
-import { dnsNameMatch } from "./dnsNameMatch.mjs";
+import { dnsNameMatch as dnsNameMatch_ } from "./dnsNameMatch.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const dnsNameMatch = onStoredValue(dnsNameMatch_);
 
 function dns (value: string): ASN1Element {
     return _encodeUTF8String(value, DER);

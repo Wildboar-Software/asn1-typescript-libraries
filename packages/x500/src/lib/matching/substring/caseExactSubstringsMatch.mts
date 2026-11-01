@@ -1,64 +1,71 @@
-import SubstringSelection from "../../types/SubstringSelection.mjs";
-import type { DirectoryStringInput } from "../readValue.mjs";
-import { readDirectoryString } from "../readValue.mjs";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import {
+    _decode_UnboundedDirectoryString,
+} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
+import { prepString } from "../../utils/prepString.mjs";
+import {
+    createSubstringsMatcher,
+    type AssertedSubstring,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+import {
+    directoryAssertionPieces,
+    directoryFilterPieces,
+    matchPreparedString,
+    prepareStored,
+    type StringPreparer,
+} from "./prepareSubstrings.mjs";
+
+const RULE = "caseExactSubstringsMatch";
+
+/** Insignificant spaces removed; case is significant (clause 7.6). */
+const prepareExact: StringPreparer = (raw) => prepString(raw);
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.3
  * `caseExactSubstringsMatch`.
  *
- * TRUE if the stored `DirectoryString` can be partitioned so that
- * presented `initial`/`any`/`final` substrings match distinct
- * portions in order (`initial` prefixes, `final` suffixes). Case
- * is significant; insignificant spaces are removed (clause 7.6).
- * At most one `initial` and one `final`; `control` is ignored.
- * Corresponding characters (including combining sequences) must
- * be identical.
+ * TRUE when the stored `DirectoryString` can be partitioned so the
+ * presented `initial` / `any` / `final` pieces match successive
+ * portions in order. Pieces do not overlap. Case is significant.
+ * Insignificant spaces are removed (clause 7.6). `control` is
+ * ignored. Preparation failure of a stored value is UNDEFINED.
+ * An assertion that cannot be prepared throws `ASN1CharactersError`.
  *
- * `assertion` and `value` may each be an element, a directory
- * string, or a JavaScript string. This entry point compares one
- * substring component; `selection` chooses initial, any, or final.
- */
-export
-function caseExactSubstringsMatch (
-    assertion: DirectoryStringInput,
-    value: DirectoryStringInput,
-    selection?: SubstringSelection,
-): boolean {
-    return caseExactSubstringsMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-        selection ?? SubstringSelection.any_,
-    );
-}
-
-/**
- * `caseExactSubstringsMatch` on two strings.
- *
- * @param assertion Presented substring.
- * @param value Stored string.
- * @param selection Which part of `value` must contain `assertion`.
- * @returns `true` when the selected containment holds.
+ * @param assertion Presented pieces, already prepared.
+ * @param value Stored directory string.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
 function caseExactSubstringsMatchTyped (
-    assertion: string,
-    value: string,
-    selection: SubstringSelection,
-): boolean {
-    switch (selection) {
-        case (SubstringSelection.initial): {
-            return value.startsWith(assertion);
-        }
-        case (SubstringSelection.any_): {
-            return (value.indexOf(assertion) > -1);
-        }
-        case (SubstringSelection.final): {
-            return value.endsWith(assertion);
-        }
-        default: {
-            return false;
-        }
+    assertion: AssertedSubstring<string>[],
+    value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = directoryStringToString(_decode_UnboundedDirectoryString(value));
+    const prepared = prepareStored(raw, prepareExact, flags);
+    if (prepared === undefined) {
+        return undefined;
     }
+    return matchPreparedString(assertion, prepared, value, flags);
 }
+
+caseExactSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
+
+/**
+ * `caseExactSubstringsMatch` as a `Matcher`. The assertion is a
+ * `SubstringAssertion`, or the `strings` of a substrings filter
+ * item (directory strings).
+ */
+export
+const caseExactSubstringsMatch: Matcher = createSubstringsMatcher(
+    (el) => directoryAssertionPieces(el, prepareExact, RULE),
+    caseExactSubstringsMatchTyped,
+    (items) => directoryFilterPieces(items, prepareExact, RULE),
+);
 
 export default caseExactSubstringsMatch;

@@ -1,46 +1,67 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import {
+    createEqualityMatcher,
+    MATCH_FLAG_VALUE_NORMALIZED,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
+
+/**
+ * Prepare and case-fold the presented IA5 string once.
+ */
+function prepareCaseIgnoreIA5Assertion (el: ASN1Element): string {
+    const prepared = prepString(el.ia5String, { caseFold: true });
+    if (prepared === undefined) {
+        throw new ASN1CharactersError(
+            "caseIgnoreIA5Match assertion failed string preparation",
+            el,
+        );
+    }
+    return prepared;
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.11.2
  * `caseIgnoreIA5Match` (LDAP-defined).
  *
  * Compares IA5String values after string preparation (clause 7.2).
- * TRUE iff the prepared strings have the same number of characters
- * and corresponding characters have the same code point after case
- * mapping.
+ * TRUE iff the prepared strings are equal after case mapping.
+ * Preparation failure of a stored value is UNDEFINED.
  *
- * Each argument may be an `ASN1Element` or a string.
+ * @param assertion Presented string, already prepared and case-folded.
+ * @param value Stored IA5String, or that string already prepared.
+ *  `MATCH_FLAG_VALUE_NORMALIZED` skips preparation.
  */
 export
-function caseIgnoreIA5Match (
-    assertion: ASN1Element | string,
-    value: ASN1Element | string,
-): boolean {
-    return caseIgnoreIA5MatchTyped(
-        typeof assertion === "string" ? assertion : assertion.ia5String,
-        typeof value === "string" ? value : value.ia5String,
-    );
+function caseIgnoreIA5MatchTyped (
+    assertion: string,
+    value: string | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
+): boolean | undefined {
+    const raw = typeof value === "string" ? value : value.ia5String;
+    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
+        return assertion === raw;
+    }
+    const prepared = prepString(raw, { caseFold: true });
+    if (prepared === undefined) {
+        return undefined;
+    }
+    return assertion === prepared;
 }
 
+caseIgnoreIA5MatchTyped satisfies TypedEquationFunction<string>;
+
 /**
- * `caseIgnoreIA5Match` on two IA5 strings.
- *
- * @param assertion Presented string.
- * @param value Stored string.
- * @returns `true` when the prepared strings are equal ignoring case.
+ * `caseIgnoreIA5Match` as a `Matcher`. An assertion that cannot be
+ * prepared throws `ASN1CharactersError`.
  */
 export
-function caseIgnoreIA5MatchTyped (assertion: string, value: string): boolean {
-    const a: string | undefined = prepString(assertion, { caseFold: true });
-    const v: string | undefined = prepString(value, { caseFold: true });
-    if (a === undefined) {
-        return false;
-    }
-    if (v === undefined) {
-        return false;
-    }
-    return (a === v);
-}
+const caseIgnoreIA5Match: Matcher = createEqualityMatcher(
+    prepareCaseIgnoreIA5Assertion,
+    caseIgnoreIA5MatchTyped,
+);
 
 export default caseIgnoreIA5Match;

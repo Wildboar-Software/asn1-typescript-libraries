@@ -18,7 +18,10 @@ import {
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { Period } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { Period_days_bitDay_monday } from "../../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
-import timeSpecificationMatch from "./timeSpecificationMatch.mjs";
+import timeSpecificationMatch_ from "./timeSpecificationMatch.mjs";
+import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const timeSpecificationMatch = onStoredValue(timeSpecificationMatch_);
 
 const ALG = new AlgorithmIdentifier(ObjectIdentifier.fromString("1.2.840.113549.1.1.11"));
 

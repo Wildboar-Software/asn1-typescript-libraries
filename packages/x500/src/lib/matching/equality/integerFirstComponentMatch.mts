@@ -1,5 +1,11 @@
+import type { INTEGER } from "@wildboar/asn1";
 import type { IntegerInput } from "../readValue.mjs";
 import { readInteger, readLeadingInteger } from "../readValue.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.1
@@ -7,19 +13,29 @@ import { readInteger, readLeadingInteger } from "../readValue.mjs";
  *
  * Compares a presented INTEGER with a SEQUENCE whose first
  * component is a mandatory INTEGER. TRUE iff that first component
- * equals the presented integer. The assertion syntax is derived
- * from the first SEQUENCE component.
+ * equals the presented integer.
  *
- * `assertion` is an element, `number`, or `bigint`. `value` is a
- * SEQUENCE element, or that integer already (element, `number`, or
- * `bigint`).
+ * @param assertion Presented INTEGER.
+ * @param value Stored SEQUENCE, or that leading integer already
+ *  decoded (`ASN1Element`, `number`, or `bigint`).
  */
 export
-function integerFirstComponentMatch (
-    assertion: IntegerInput,
+function integerFirstComponentMatchTyped (
+    assertion: INTEGER,
     value: IntegerInput,
-): boolean {
+): boolean | undefined {
     return readInteger(assertion) === readLeadingInteger(value);
 }
+
+integerFirstComponentMatchTyped satisfies TypedEquationFunction<INTEGER>;
+
+/**
+ * `integerFirstComponentMatch` as a `Matcher`.
+ */
+export
+const integerFirstComponentMatch: Matcher = createEqualityMatcher(
+    (el) => el.integer,
+    integerFirstComponentMatchTyped,
+);
 
 export default integerFirstComponentMatch;

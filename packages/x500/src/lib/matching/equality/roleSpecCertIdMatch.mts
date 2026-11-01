@@ -1,5 +1,12 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     id_ce_roleSpecCertIdentifier,
@@ -79,33 +86,22 @@ function assertRoleSpecCertIdentifier (
  * `RoleSpecCertIdentifierSyntax` matches the corresponding stored
  * component.
  */
-export
-function roleSpecCertIdMatch (
-    assertion: ASN1Element | RoleSpecCertIdentifierSyntax,
-    value: ASN1Element | AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return roleSpecCertIdMatchTyped(
-        readDecoded(assertion, _decode_RoleSpecCertIdentifierSyntax),
-        readDecoded(value, _decode_AttributeCertificate),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `roleSpecCertIdMatch` on decoded values.
  *
  * @param a Presented role-specification certificate identifiers.
- * @param v Stored attribute certificate.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored attribute certificate, or that certificate already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the stored extension matches.
  */
 export
 function roleSpecCertIdMatchTyped (
     a: RoleSpecCertIdentifierSyntax,
-    v: AttributeCertificate,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: AttributeCertificate | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_AttributeCertificate);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const rsci: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
     if (!rsci) {
@@ -124,5 +120,16 @@ function roleSpecCertIdMatchTyped (
     }
     return true;
 }
+
+roleSpecCertIdMatchTyped satisfies TypedEquationFunction<RoleSpecCertIdentifierSyntax>;
+
+/**
+ * `roleSpecCertIdMatch` as a `Matcher`.
+ */
+export
+const roleSpecCertIdMatch: Matcher = createEqualityMatcher(
+    _decode_RoleSpecCertIdentifierSyntax,
+    roleSpecCertIdMatchTyped,
+);
 
 export default roleSpecCertIdMatch;

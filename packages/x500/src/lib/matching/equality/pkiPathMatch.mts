@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     type PkiPath,
@@ -22,33 +28,22 @@ import { compareName } from "@wildboar/dn";
  * the first certificate in the SEQUENCE and `lastSubject` matches
  * the subject of the last. FALSE if either comparison fails.
  */
-export
-function pkiPathMatch (
-    assertion: ASN1Element | PkiPathMatchSyntax,
-    value: ASN1Element | PkiPath,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return pkiPathMatchTyped(
-        readDecoded(assertion, _decode_PkiPathMatchSyntax),
-        readDecoded(value, _decode_PkiPath),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `pkiPathMatch` on decoded values.
  *
  * @param a Presented endpoints.
- * @param v Stored PKI path.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored PKI path, or that path already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the first issuer and last subject match.
  */
 export
 function pkiPathMatchTyped (
     a: PkiPathMatchSyntax,
-    v: PkiPath,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    value: PkiPath | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
 ): boolean {
+    const v = readDecoded(value, _decode_PkiPath);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];
     return (
@@ -56,5 +51,16 @@ function pkiPathMatchTyped (
         && compareName(a.lastSubject, lastCert.toBeSigned.subject, getEqualityMatcher)
     );
 }
+
+pkiPathMatchTyped satisfies TypedEquationFunction<PkiPathMatchSyntax>;
+
+/**
+ * `pkiPathMatch` as a `Matcher`.
+ */
+export
+const pkiPathMatch: Matcher = createEqualityMatcher(
+    _decode_PkiPathMatchSyntax,
+    pkiPathMatchTyped,
+);
 
 export default pkiPathMatch;

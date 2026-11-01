@@ -1,5 +1,11 @@
-import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import {
+    createEqualityMatcher,
+    type Matcher,
+    type TypedEquationFunction,
+} from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     SupplierAndConsumers,
@@ -21,34 +27,33 @@ import { compareName } from "@wildboar/dn";
  * `assertion` may be an element or a `Name`. `value` may be an
  * element or a `SupplierAndConsumers`.
  */
-export
-function supplierAndConsumersMatch (
-    assertion: ASN1Element | Name,
-    value: ASN1Element | SupplierAndConsumers,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return supplierAndConsumersMatchTyped(
-        readDecoded(assertion, _decode_Name),
-        readDecoded(value, _decode_SupplierAndConsumers),
-        getEqualityMatcher,
-    );
-}
-
 /**
  * `supplierAndConsumersMatch` on a decoded name and value.
  *
  * @param assertion Presented `ae-title`.
- * @param value Stored supplier and consumers.
- * @param getEqualityMatcher Equality rule lookup for naming attributes.
+ * @param value Stored supplier and consumers, or that value already decoded.
+ * @param getMatcher Equality rule lookup for naming attributes.
  * @returns `true` when the names match.
  */
 export
 function supplierAndConsumersMatchTyped (
     assertion: Name,
-    value: SupplierAndConsumers,
-    getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
-): boolean {
-    return compareName(assertion, value.ae_title, getEqualityMatcher);
+    value: SupplierAndConsumers | ASN1Element,
+    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+): boolean | undefined {
+    const stored = readDecoded(value, _decode_SupplierAndConsumers);
+    return compareName(assertion, stored.ae_title, valueEqualityMatcher(getMatcher));
 }
+
+supplierAndConsumersMatchTyped satisfies TypedEquationFunction<Name>;
+
+/**
+ * `supplierAndConsumersMatch` as a `Matcher`.
+ */
+export
+const supplierAndConsumersMatch: Matcher = createEqualityMatcher(
+    _decode_Name,
+    supplierAndConsumersMatchTyped,
+);
 
 export default supplierAndConsumersMatch;

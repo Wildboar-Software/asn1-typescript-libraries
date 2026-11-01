@@ -1,7 +1,7 @@
 /**
  * Equality matching-rule implementations from Rec. ITU-T X.501,
- * X.509, and X.520. Each export is an `EqualityMatcher`: presented
- * assertion vs stored attribute value.
+ * X.509, and X.520. The rule functions are `Matcher`s from
+ * `createEqualityMatcher`.
  */
 export * from "./acceptableCertPoliciesMatch.mjs";
 export * from "./accessPointMatch.mjs";
