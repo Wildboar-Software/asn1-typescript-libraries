@@ -147,6 +147,41 @@ type Matcher = (
     matchedValues?: Attribute,
 ) => boolean | undefined;
 
+/** Matching rule implementation for an equality matching rule. */
+export type EqualityMatcher = Matcher;
+/** Matching rule implementation for an ordering matching rule. */
+export type OrderingMatcher = Matcher;
+/** Matching rule implementation for a substrings matching rule. */
+export type SubstringsMatcher = Matcher;
+
+/**
+ * Matching rule implementation for a context matching rule.
+ * 
+ * `assertion` is an assertion of the syntax specified by the context type.
+ * 
+ * `values` are the values of the context.
+ * 
+ * `getEqualityMatcher` is a function that takes an attribute type and returns
+ * the corresponding value equality matcher. This is generally so that
+ * distinguished names within a value can be matched, such as in a
+ * `NameAndOptionalUID`.
+ * 
+ * `flags` contains flags that modulate matching behavior, generally in ways
+ * that do not make the matching incorrect, such as enabling debugging output,
+ * performing constant-time matching, skipping string preparation, etc. These
+ * flags are generally used for enhanced security or performance.
+ * 
+ * Functions of this type signature return a `boolean` that indicates whether
+ * the values match the assertion. There is no `undefined` return value.
+ */
+export
+type ContextMatcher = (
+    assertion: ASN1Element,
+    values: IterableIterator<ASN1Element>,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags?: number,
+) => boolean;
+
 /**
  * A function that takes a typed assertion that is prepared for matching
  * already. The `value` is the value to be matched against the assertion.
