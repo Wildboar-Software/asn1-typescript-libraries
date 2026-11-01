@@ -8,6 +8,7 @@ import {
     NameAndOptionalUID,
     _encode_NameAndOptionalUID,
 } from "../../modules/SelectedAttributeTypes/NameAndOptionalUID.ta.mjs";
+import { MATCH_FLAG_USED_FOR_NAME } from "../../types/matching.mjs";
 import uniqueMemberMatch_ from "./uniqueMemberMatch.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
@@ -63,5 +64,13 @@ describe("uniqueMemberMatch", () => {
     it("rejects differing distinguished names even when the stored uid is absent", () => {
         expect(uniqueMemberMatch(member("alice", UID_A), member("bob"))).toBe(false);
         expect(uniqueMemberMatch(member("alice"), member("bob"))).toBe(false);
+    });
+
+    it("cannot be used for name matching", () => {
+        expect(uniqueMemberMatch(
+            member("alice"),
+            member("alice"),
+            MATCH_FLAG_USED_FOR_NAME,
+        )).toBeUndefined();
     });
 });

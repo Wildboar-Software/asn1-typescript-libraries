@@ -64,6 +64,8 @@ export
 const supplierOrConsumerInformationMatch: Matcher = createEqualityMatcher(
     _decode_AssertionType,
     supplierOrConsumerInformationMatchTyped,
+    undefined,
+    true,
 );
 
 export default supplierOrConsumerInformationMatch;

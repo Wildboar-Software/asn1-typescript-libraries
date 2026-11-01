@@ -114,6 +114,8 @@ export
 const timeSpecificationMatch: Matcher = createEqualityMatcher(
     _decode_TimeSpecification,
     timeSpecificationMatchTyped,
+    undefined,
+    true,
 );
 
 /**

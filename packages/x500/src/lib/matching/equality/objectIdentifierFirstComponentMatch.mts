@@ -37,6 +37,8 @@ export
 const objectIdentifierFirstComponentMatch: Matcher = createEqualityMatcher(
     (el) => el.objectIdentifier,
     objectIdentifierFirstComponentMatchTyped,
+    undefined,
+    true,
 );
 
 export default objectIdentifierFirstComponentMatch;

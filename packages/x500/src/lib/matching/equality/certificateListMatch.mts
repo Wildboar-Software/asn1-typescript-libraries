@@ -191,6 +191,8 @@ export
 const certificateListMatch: Matcher = createEqualityMatcher(
     _decode_CertificateListAssertion,
     certificateListMatchTyped,
+    undefined,
+    true,
 );
 
 export default certificateListMatch;

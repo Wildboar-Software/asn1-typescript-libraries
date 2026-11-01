@@ -1,7 +1,10 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import type { Matcher } from "../types/matching.mjs";
+import {
+    MATCH_FLAG_USED_FOR_NAME,
+    type Matcher,
+} from "../types/matching.mjs";
 
 /**
  * Present a `Matcher` lookup as the single-value equality lookup used
@@ -27,6 +30,8 @@ function valueEqualityMatcher (
         return (assertion, value) => matcher(
             assertion,
             new AttributeTypeAndValue(attributeType, value),
+            getEqualityMatcher,
+            MATCH_FLAG_USED_FOR_NAME,
         ) === true;
     };
 }

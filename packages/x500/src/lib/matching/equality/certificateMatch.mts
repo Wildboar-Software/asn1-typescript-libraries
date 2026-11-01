@@ -447,6 +447,8 @@ export
 const certificateMatch: Matcher = createEqualityMatcher(
     _decode_CertificateAssertion,
     evaluateCertificateAssertion,
+    undefined,
+    true,
 );
 
 export default certificateMatch;

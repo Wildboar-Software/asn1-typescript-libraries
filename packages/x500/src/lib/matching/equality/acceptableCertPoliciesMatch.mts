@@ -63,6 +63,8 @@ export
 const acceptableCertPoliciesMatch: Matcher = createEqualityMatcher(
     _decode_AcceptableCertPoliciesSyntax,
     acceptableCertPoliciesMatchTyped,
+    undefined,
+    true,
 );
 
 export default acceptableCertPoliciesMatch;

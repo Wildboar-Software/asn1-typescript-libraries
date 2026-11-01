@@ -333,6 +333,11 @@ function useOrderingAsEquality<A>(
  * The returned function also uses the `MATCH_FLAG_DEBUG` flag: if this flag is
  * set, the matcher will log debugging information to the console when an error is
  * thrown while matching a value.
+ *
+ * If `assertionSyntaxDiffersFromValueSyntax` is `true`, the returned function
+ * uses `MATCH_FLAG_USED_FOR_NAME` to reject the comparison as UNDEFINED. X.501
+ * requires equality rules used for naming to have identical assertion and value
+ * syntaxes.
  * 
  * All parameters of the returned function are used as they are described,
  * including the `matchedValues` parameter, to which the matched values are
@@ -344,6 +349,8 @@ function useOrderingAsEquality<A>(
  * @param subtringsConverter function that converts a list of substrings into a
  *  typed assertion. The returned matcher cannot be used for substrings matching if
  *  this argument is not provided.
+ * @param assertionSyntaxDiffersFromValueSyntax whether this rule normally compares
+ *  an assertion syntax with a different attribute-value syntax.
  * @returns function that takes an assertion and a value and returns a
  * `boolean` that indicates whether the value matches the assertion, or `undefined`.
  * @function
@@ -354,6 +361,7 @@ function createEqualityMatcher<A>(
     assertionDecoder: ASN1Decoder<A>,
     valueMatcher: TypedEquationFunction<A>,
     subtringsConverter?: (strings: FilterItem_substrings_strings_Item[]) => A,
+    assertionSyntaxDiffersFromValueSyntax: boolean = false,
 ): Matcher {
     return function (
         assertion: ASN1Element | FilterItem_substrings_strings_Item[],
@@ -374,6 +382,12 @@ function createEqualityMatcher<A>(
             decodedAssertion = subtringsConverter(assertion);
         } else {
             decodedAssertion = assertionDecoder(assertion);
+        }
+        if (
+            assertionSyntaxDiffersFromValueSyntax
+            && (flags & MATCH_FLAG_USED_FOR_NAME)
+        ) {
+            return undefined;
         }
         const attr: Attribute = (
             ("value" in valueOrValues)

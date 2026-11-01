@@ -54,6 +54,8 @@ export
 const supplierAndConsumersMatch: Matcher = createEqualityMatcher(
     _decode_Name,
     supplierAndConsumersMatchTyped,
+    undefined,
+    true,
 );
 
 export default supplierAndConsumersMatch;

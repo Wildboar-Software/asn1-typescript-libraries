@@ -57,6 +57,8 @@ export
 const certificateExactMatch: Matcher = createEqualityMatcher(
     _decode_CertificateExactAssertion,
     certificateExactMatchTyped,
+    undefined,
+    true,
 );
 
 export default certificateExactMatch;

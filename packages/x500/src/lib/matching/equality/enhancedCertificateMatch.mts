@@ -462,6 +462,8 @@ export
 const enhancedCertificateMatch: Matcher = createEqualityMatcher(
     _decode_EnhancedCertificateAssertion,
     evaluateEnhancedCertificateAssertion,
+    undefined,
+    true,
 );
 
 export default enhancedCertificateMatch;

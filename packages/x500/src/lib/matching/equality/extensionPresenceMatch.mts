@@ -88,6 +88,8 @@ export
 const extensionPresenceMatch: Matcher = createEqualityMatcher(
     (el) => el.objectIdentifier,
     extensionPresenceMatchTyped,
+    undefined,
+    true,
 );
 
 export default extensionPresenceMatch;

@@ -58,6 +58,8 @@ export
 const uniqueMemberMatch: Matcher = createEqualityMatcher(
     _decode_NameAndOptionalUID,
     uniqueMemberMatchTyped,
+    undefined,
+    true,
 );
 
 export default uniqueMemberMatch;

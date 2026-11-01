@@ -61,6 +61,8 @@ export
 const pkiPathMatch: Matcher = createEqualityMatcher(
     _decode_PkiPathMatchSyntax,
     pkiPathMatchTyped,
+    undefined,
+    true,
 );
 
 export default pkiPathMatch;

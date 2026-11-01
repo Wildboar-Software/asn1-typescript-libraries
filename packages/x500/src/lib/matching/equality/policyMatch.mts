@@ -36,6 +36,8 @@ export
 const policyMatch: Matcher = createEqualityMatcher(
     (el) => el.objectIdentifier,
     policyMatchTyped,
+    undefined,
+    true,
 );
 
 export default policyMatch;
