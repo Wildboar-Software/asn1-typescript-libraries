@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -56,10 +57,12 @@ function pkiPathMatchTyped (
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: Certificate = v[0];
     const lastCert: Certificate = v[v.length - 1];
-    return (
-        compareName(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)
-        && compareName(a.lastSubject, lastCert.toBeSigned.subject, getEqualityMatcher)
-    );
+    const firstMatches = compareName(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher);
+    if (!firstMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
+        return false;
+    }
+    const lastMatches = compareName(a.lastSubject, lastCert.toBeSigned.subject, getEqualityMatcher);
+    return firstMatches && lastMatches;
 }
 
 pkiPathMatchTyped satisfies TypedEquationFunction<PkiPathMatchSyntax>;

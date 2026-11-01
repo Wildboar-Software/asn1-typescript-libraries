@@ -5,6 +5,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -89,6 +90,9 @@ function dnsNameMatchTyped (
         }
         return false;
     }
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    let matched = true;
+    let sawUndefined = false;
 
     let i = 0;
     let startA = 0;
@@ -98,14 +102,16 @@ function dnsNameMatchTyped (
             (startA === 0)
             && (startV === 0)
         );
-        const nextDotA = a.indexOf('.', startA);
-        const nextDotV = v.indexOf('.', startV);
+        const nextDotA = a.indexOf(".", startA);
+        const nextDotV = v.indexOf(".", startV);
         if (nextDotA === -1) {
             const labelA = a.slice(startA);
             const labelV = v.slice(startV);
             const labels = compareLabels(labelA, labelV, wildcardAllowed, flags);
-            if (labels !== true) {
-                return labels;
+            if (labels === undefined) {
+                sawUndefined = true;
+            } else if (!labels) {
+                matched = false;
             }
             break;
         }
@@ -113,13 +119,23 @@ function dnsNameMatchTyped (
         const labelV = v.slice(startV, nextDotV);
         const labels = compareLabels(labelA, labelV, wildcardAllowed, flags);
         if (labels !== true) {
-            return labels;
+            if (!constantTime) {
+                return labels;
+            }
+            if (labels === undefined) {
+                sawUndefined = true;
+            } else {
+                matched = false;
+            }
         }
         startA = nextDotA + 1;
-        startV = nextDotV + 1;
+        startV = nextDotV === -1 ? v.length : nextDotV + 1;
         i++;
     }
-    return true;
+    if (sawUndefined) {
+        return undefined;
+    }
+    return matched;
 }
 
 dnsNameMatchTyped satisfies TypedEquationFunction<string>;

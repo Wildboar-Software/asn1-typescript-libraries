@@ -5,6 +5,7 @@ import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -78,11 +79,25 @@ function intEmailMatchTyped (
         }
         return false;
     }
-    const localsMatch = caseIgnoreMatchTyped(presented[0], stored.slice(0, vAt), getEqualityMatcher, flags);
-    if (localsMatch !== true) {
+    const localsMatch = caseIgnoreMatchTyped(
+        presented[0],
+        stored.slice(0, vAt),
+        getEqualityMatcher,
+        flags,
+    );
+    if (localsMatch !== true && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return localsMatch;
     }
-    return dnsNameMatchTyped(presented[1], stored.slice(vAt + 1), getEqualityMatcher, flags);
+    const domainsMatch = dnsNameMatchTyped(
+        presented[1],
+        stored.slice(vAt + 1),
+        getEqualityMatcher,
+        flags,
+    );
+    if (localsMatch === undefined || domainsMatch === undefined) {
+        return undefined;
+    }
+    return localsMatch && domainsMatch;
 }
 
 intEmailMatchTyped satisfies TypedEquationFunction<PreparedIntEmail | string | ASN1Element>;

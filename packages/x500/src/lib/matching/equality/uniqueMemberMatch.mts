@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { compareBitStrings } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { Buffer } from "node:buffer";
 import { readDecoded } from "../readValue.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     NameAndOptionalUID,
@@ -10,6 +12,7 @@ import {
 import { compareRDNSequence } from "@wildboar/dn";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -36,18 +39,27 @@ function uniqueMemberMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const v = readDecoded(value, _decode_NameAndOptionalUID);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    if (!compareRDNSequence(a.dn, v.dn, getEqualityMatcher)) {
+    const dnMatches = compareRDNSequence(a.dn, v.dn, getEqualityMatcher);
+    if (!dnMatches && !constantTime) {
         return false;
     }
     // Clause 8.2.11: a stored `uid` that is absent matches any presented `uid`.
     if (v.uid === undefined) {
-        return true;
+        return dnMatches;
     }
     if (a.uid === undefined) {
         return false;
     }
-    return compareBitStrings(a.uid, v.uid);
+    const uidMatches = constantTime
+        ? bytesEqual(
+            Buffer.from(a.uid.buffer, a.uid.byteOffset, a.uid.byteLength),
+            Buffer.from(v.uid.buffer, v.uid.byteOffset, v.uid.byteLength),
+            constantTime,
+        )
+        : compareBitStrings(a.uid, v.uid);
+    return dnMatches && uidMatches;
 }
 
 uniqueMemberMatchTyped satisfies TypedEquationFunction<NameAndOptionalUID>;

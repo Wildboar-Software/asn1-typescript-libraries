@@ -1,7 +1,10 @@
 import { Buffer } from "node:buffer";
 import { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { ctCompareBytes } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -23,8 +26,13 @@ export
 function octetStringOrderingMatchTyped (
     assertion: Uint8Array,
     value: Uint8Array | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): number | undefined {
     const stored = ASN1Element.isElement(value) ? value.octetString : value;
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return ctCompareBytes(assertion, stored);
+    }
     return Buffer.compare(assertion, stored);
 }
 

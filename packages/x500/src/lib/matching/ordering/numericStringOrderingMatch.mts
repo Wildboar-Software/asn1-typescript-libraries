@@ -1,8 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { compareCodePoints } from "../../utils/prepString.mjs";
+import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedOrderingFunction,
@@ -38,7 +40,10 @@ function numericStringOrderingMatchTyped (
 ): number | undefined {
     const raw = typeof value === "string" ? value : value.numericString;
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
-    return compareCodePoints(assertion, stored);
+    const compare = (flags & MATCH_FLAG_CONSTANT_TIME)
+        ? ctCompareCodePoints
+        : compareCodePoints;
+    return compare(assertion, stored);
 }
 
 numericStringOrderingMatchTyped satisfies TypedOrderingFunction<string>;

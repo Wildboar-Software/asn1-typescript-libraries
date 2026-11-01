@@ -1,7 +1,7 @@
 import type { OCTET_STRING } from "@wildboar/asn1";
 import { ipv4FromNSAP } from "../distributed/ipv4.mjs";
 import { uriFromNSAP } from "../distributed/uri.mjs";
-import { Buffer } from "node:buffer";
+import { bytesEqual, stringsEqual } from "../matching/constantTime.mjs";
 import { URL, domainToASCII } from "node:url";
 
 const commonPrefix: number[] = [
@@ -9,8 +9,12 @@ const commonPrefix: number[] = [
     0x00, 0x72, 0x87, 0x22, // The IDI
 ];
 
-function compareHostnames(a: string, b: string): boolean {
-    return (domainToASCII(a).toLowerCase() === domainToASCII(b).toLowerCase());
+function compareHostnames(a: string, b: string, constantTime: boolean | number = 0): boolean {
+    return stringsEqual(
+        domainToASCII(a).toLowerCase(),
+        domainToASCII(b).toLowerCase(),
+        constantTime,
+    );
 }
 
 const defaultPorts: Map<string, string> = new Map([
@@ -30,11 +34,16 @@ const defaultPorts: Map<string, string> = new Map([
  *
  * @param a One value
  * @param b The other
+ * @param constantTime Whether to compare in constant time
  * @returns {boolean} `true` if they match; `false` otherwise
  * @function
  */
 export
-function compareNSAP (a: OCTET_STRING, b: OCTET_STRING): boolean {
+function compareNSAP (
+    a: OCTET_STRING,
+    b: OCTET_STRING,
+    constantTime: boolean | number = 0,
+): boolean {
     if (a[0] !== b[0]) {
         return false; // Completely different formats.
     }
@@ -42,7 +51,7 @@ function compareNSAP (a: OCTET_STRING, b: OCTET_STRING): boolean {
         try {
             const [ , uria ] = uriFromNSAP(a);
             const [ , urib ] = uriFromNSAP(b);
-            if (uria.toLowerCase() === urib.toLowerCase()) {
+            if (!constantTime && uria.toLowerCase() === urib.toLowerCase()) {
                 return true;
             }
             const ua = URL.parse(uria);
@@ -51,11 +60,15 @@ function compareNSAP (a: OCTET_STRING, b: OCTET_STRING): boolean {
                 return false;
             }
             const protocol = ua.protocol.toLowerCase();
+            const protocolMatch = stringsEqual(protocol, ub.protocol.toLowerCase(), constantTime);
+            const hostMatch = compareHostnames(ua.hostname, ub.hostname, constantTime);
+            const userMatch = stringsEqual(ua.username, ub.username, constantTime);
+            const passMatch = stringsEqual(ua.password, ub.password, constantTime);
             if (
-                (protocol !== ub.protocol.toLowerCase())
-                || !compareHostnames(ua.hostname, ub.hostname)
-                || (ua.username !== ub.username)
-                || (ua.password !== ub.password)
+                !protocolMatch
+                || !hostMatch
+                || !userMatch
+                || !passMatch
                 // The path or query params don't matter for a transport address
                 // and they shouldn't even be present at all.
                 // I guess this could change if websockets are supported.
@@ -73,12 +86,13 @@ function compareNSAP (a: OCTET_STRING, b: OCTET_STRING): boolean {
     for (let i = 0; i < commonPrefix.length; i++) {
         if (a[i] !== commonPrefix[i]) {
             // If it is neither an IP address, nor a URL, we just do a byte-for-byte comparison.
-            return !Buffer.compare(a, b);
+            return bytesEqual(a, b, constantTime);
         }
     }
     let [ typea, ipv4a, porta ] = ipv4FromNSAP(a);
     let [ typeb, ipv4b, portb ] = ipv4FromNSAP(b);
-    if (typea !== typeb || Buffer.compare(ipv4a, ipv4b)) {
+    const ipMatch = bytesEqual(ipv4a, ipv4b, constantTime);
+    if (typea !== typeb || !ipMatch) {
         return false;
     }
 

@@ -2,8 +2,10 @@ import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString, type DirectoryStringInput } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -46,8 +48,9 @@ function caseExactMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = readDirectoryString(value);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return assertion === raw;
+        return stringsEqual(assertion, raw, constantTime);
     }
     const prepared = prepString(raw);
     if (prepared === undefined) {
@@ -58,7 +61,7 @@ function caseExactMatchTyped (
         }
         return undefined;
     }
-    return assertion === prepared;
+    return stringsEqual(assertion, prepared, constantTime);
 }
 
 caseExactMatchTyped satisfies TypedEquationFunction<string>;

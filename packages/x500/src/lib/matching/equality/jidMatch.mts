@@ -1,8 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -94,26 +96,29 @@ function jidMatchTyped (
         }
         return false;
     }
-    if (Boolean(assertion.local) !== Boolean(v.local)) {
-        return false;
-    }
-    if (Boolean(assertion.resource) !== Boolean(v.resource)) {
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    const localPresenceMatch = Boolean(assertion.local) === Boolean(v.local);
+    const resourcePresenceMatch = Boolean(assertion.resource) === Boolean(v.resource);
+    if (!constantTime && (!localPresenceMatch || !resourcePresenceMatch)) {
         return false;
     }
     const domains = dnsNameMatchTyped(assertion.domain, v.domain, getEqualityMatcher, flags);
-    if (domains !== true) {
+    if (domains !== true && !constantTime) {
         return domains;
     }
-    if (
-        (assertion.local !== undefined)
-        && (assertion.local !== v.local!.toLowerCase())
-    ) {
+    const localMatch = (assertion.local === undefined)
+        ? v.local === undefined
+        : stringsEqual(assertion.local, (v.local ?? "").toLowerCase(), constantTime);
+    if (!localMatch && !constantTime) {
         return false;
     }
-    if ((assertion.resource !== undefined) && (assertion.resource !== v.resource)) {
-        return false;
+    const resourceMatch = (assertion.resource === undefined)
+        ? v.resource === undefined
+        : stringsEqual(assertion.resource, v.resource ?? "", constantTime);
+    if (domains === undefined) {
+        return undefined;
     }
-    return true;
+    return localPresenceMatch && resourcePresenceMatch && domains && localMatch && resourceMatch;
 }
 
 jidMatchTyped satisfies TypedEquationFunction<JidParts>;

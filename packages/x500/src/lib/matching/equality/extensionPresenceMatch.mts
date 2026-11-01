@@ -11,6 +11,7 @@ import {
 } from "../../modules/AuthenticationFramework/Extensions.ta.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -75,8 +76,24 @@ export
 function extensionPresenceMatchTyped (
     assertion: OBJECT_IDENTIFIER,
     value: StoredCertificate,
+    _getEqualityMatcher?: unknown,
+    flags: number = 0,
 ): boolean | undefined {
-    return Boolean(extensionsOf(value)?.some((ext: Extension): boolean => ext.extnId.isEqualTo(assertion)));
+    const exts = extensionsOf(value);
+    if (!exts) {
+        return false;
+    }
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    let matched = false;
+    for (let i = 0; i < exts.length; i++) {
+        if (exts[i].extnId.isEqualTo(assertion)) {
+            if (!constantTime) {
+                return true;
+            }
+            matched = true;
+        }
+    }
+    return matched;
 }
 
 extensionPresenceMatchTyped satisfies TypedEquationFunction<OBJECT_IDENTIFIER>;

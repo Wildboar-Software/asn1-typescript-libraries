@@ -4,12 +4,13 @@ import type { AlgorithmIdentifier } from "../../modules/AuthenticationFramework/
 import { type UserPwd, _decode_UserPwd } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareAlgorithmIdentifier from "../../comparators/compareAlgorithmIdentifier.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
-import { Buffer } from "node:buffer";
 import { prepString } from "../../utils/prepString.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import { caseExactMatchTyped } from "./caseExactMatch.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -22,7 +23,7 @@ import {
  * @param assertion Presented password.
  * @param value Stored password.
  * @param getEqualityMatcher Unused; present for `TypedEquationFunction` symmetry.
- * @param flags `MATCH_FLAG_DEBUG` and `MATCH_FLAG_VALUE_NORMALIZED`.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`, and `MATCH_FLAG_VALUE_NORMALIZED`.
  * @returns `true` when the passwords match under clause 8.10.1.
  */
 export
@@ -33,6 +34,7 @@ function userPwdMatchTyped (
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     if (ASN1Element.isElement(assertion) !== ASN1Element.isElement(value)) {
         return false;
     }
@@ -57,13 +59,19 @@ function userPwdMatchTyped (
         return caseExactMatchTyped(prepared, value.clear, getEqualityMatcher, flags);
     }
     if (("encrypted" in assertion) && ("encrypted" in value)) {
-        return (
-            Buffer.compare(assertion.encrypted.encryptedString, value.encrypted.encryptedString) === 0
-            && compareAlgorithmIdentifier(
-                assertion.encrypted.algorithmIdentifier,
-                value.encrypted.algorithmIdentifier,
-            )
+        const sameString = bytesEqual(
+            assertion.encrypted.encryptedString,
+            value.encrypted.encryptedString,
+            constantTime,
         );
+        if (!sameString && !constantTime) {
+            return false;
+        }
+        const sameAlg = compareAlgorithmIdentifier(
+            assertion.encrypted.algorithmIdentifier,
+            value.encrypted.algorithmIdentifier,
+        );
+        return sameString && sameAlg;
     }
     if (("encrypted" in assertion) && ("clear" in value)) {
         const alg = assertion.encrypted.algorithmIdentifier;
@@ -76,7 +84,7 @@ function userPwdMatchTyped (
             }
             return false; // Algorithm not understood.
         }
-        return Buffer.compare(result, assertion.encrypted.encryptedString) === 0;
+        return bytesEqual(assertion.encrypted.encryptedString, result, constantTime);
     }
     if (("clear" in assertion) && ("encrypted" in value)) {
         const alg = value.encrypted.algorithmIdentifier;
@@ -89,7 +97,7 @@ function userPwdMatchTyped (
             }
             return false; // Algorithm not understood.
         }
-        return Buffer.compare(result, value.encrypted.encryptedString) === 0;
+        return bytesEqual(result, value.encrypted.encryptedString, constantTime);
     }
     return false;
 }
