@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetSubscriber } from "../Ldapmigration20subscriber/id-oc-inetSubscriber.va.mjs";
+import { inetSubscriberAccountId } from "../Ldapmigration20subscriber/inetSubscriberAccountId.oa.mjs";
+import { inetSubscriberChallenge } from "../Ldapmigration20subscriber/inetSubscriberChallenge.oa.mjs";
+import { inetSubscriberResponse } from "../Ldapmigration20subscriber/inetSubscriberResponse.oa.mjs";
 // export { id_oc_inetSubscriber } from "../Ldapmigration20subscriber/id-oc-inetSubscriber.va.mjs";
 
 
@@ -106,7 +109,7 @@ const inetSubscriber: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ inetSubscriberAccountId, inetSubscriberChallenge, inetSubscriberResponse, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetSubscriber" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetSubscriber /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

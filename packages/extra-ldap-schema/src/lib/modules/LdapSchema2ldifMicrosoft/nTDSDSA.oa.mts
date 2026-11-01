@@ -73,6 +73,18 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
 // export { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
 import { id_oc_nTDSDSA } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSDSA.va.mjs";
+import { hasMasterNCs } from "../MSUser/hasMasterNCs.oa.mjs";
+import { hasPartialReplicaNCs } from "../MSUser/hasPartialReplicaNCs.oa.mjs";
+import { dMDLocation } from "../MSUser/dMDLocation.oa.mjs";
+import { invocationId } from "../MSUser/invocationId.oa.mjs";
+import { networkAddress } from "../MSUser/networkAddress.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { fRSRootPath } from "../MSUser/fRSRootPath.oa.mjs";
+import { serverReference } from "../MSUser/serverReference.oa.mjs";
+import { lastBackupRestorationTime } from "../MSUser/lastBackupRestorationTime.oa.mjs";
+import { queryPolicyObject } from "../MSUser/queryPolicyObject.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { retiredReplDSASignatures } from "../MSUser/retiredReplDSASignatures.oa.mjs";
 // export { id_oc_nTDSDSA } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSDSA.va.mjs";
 
 
@@ -113,7 +125,7 @@ const nTDSDSA: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ applicationSettings, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ hasMasterNCs, hasPartialReplicaNCs, dMDLocation, invocationId, networkAddress, options, fRSRootPath, serverReference, lastBackupRestorationTime, queryPolicyObject, managedBy, retiredReplDSASignatures, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTDSDSA" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTDSDSA /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,22 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_solarisNamingProfile } from "../LdapNisclient/id-oc-solarisNamingProfile.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { solarisLDAPServers } from "../LdapNisclient/solarisLDAPServers.oa.mjs";
+import { solarisSearchBaseDN } from "../LdapNisclient/solarisSearchBaseDN.oa.mjs";
+import { solarisAuthMethod } from "../LdapNisclient/solarisAuthMethod.oa.mjs";
+import { solarisBindDN } from "../LdapNisclient/solarisBindDN.oa.mjs";
+import { solarisBindPassword } from "../LdapNisclient/solarisBindPassword.oa.mjs";
+import { solarisCacheTTL } from "../LdapNisclient/solarisCacheTTL.oa.mjs";
+import { solarisCertificatePassword } from "../LdapNisclient/solarisCertificatePassword.oa.mjs";
+import { solarisCertificatePath } from "../LdapNisclient/solarisCertificatePath.oa.mjs";
+import { solarisDataSearchDN } from "../LdapNisclient/solarisDataSearchDN.oa.mjs";
+import { solarisPreferredServer } from "../LdapNisclient/solarisPreferredServer.oa.mjs";
+import { solarisPreferredServerOnly } from "../LdapNisclient/solarisPreferredServerOnly.oa.mjs";
+import { solarisSearchReferral } from "../LdapNisclient/solarisSearchReferral.oa.mjs";
+import { solarisSearchScope } from "../LdapNisclient/solarisSearchScope.oa.mjs";
+import { solarisSearchTimeLimit } from "../LdapNisclient/solarisSearchTimeLimit.oa.mjs";
+import { solarisTransportSecurity } from "../LdapNisclient/solarisTransportSecurity.oa.mjs";
 // export { id_oc_solarisNamingProfile } from "../LdapNisclient/id-oc-solarisNamingProfile.va.mjs";
 
 
@@ -117,8 +133,8 @@ const solarisNamingProfile: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, solarisLDAPServers, solarisSearchBaseDN, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ solarisAuthMethod, solarisBindDN, solarisBindPassword, solarisCacheTTL, solarisCertificatePassword, solarisCertificatePath, solarisDataSearchDN, solarisPreferredServer, solarisPreferredServerOnly, solarisSearchReferral, solarisSearchScope, solarisSearchTimeLimit, solarisTransportSecurity, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "SolarisNamingProfile" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_solarisNamingProfile /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

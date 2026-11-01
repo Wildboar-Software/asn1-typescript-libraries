@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { ipServicePort } from "../NIS/ipServicePort.oa.mjs";
+import { ipServiceProtocol } from "../NIS/ipServiceProtocol.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -113,7 +116,7 @@ const ipService: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, ipServicePort, ipServiceProtocol, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction an Internet Protocol service" /* OBJECT_FIELD_SETTING */,

@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_pgpProfile } from "../LdapSchema2ldifPgpRemtePrefs/id-oc-pgpProfile.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 // export { id_oc_pgpProfile } from "../LdapSchema2ldifPgpRemtePrefs/id-oc-pgpProfile.va.mjs";
 
 
@@ -108,7 +110,7 @@ const pgpProfile: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, owner, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pgpProfile" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "PGP defined objectclass of a collection admin prefs" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pgpProfile /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

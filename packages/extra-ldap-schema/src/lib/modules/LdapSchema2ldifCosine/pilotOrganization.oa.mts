@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { buildingName } from "../LdapSchema2ldifCosine/buildingName.oa.mjs";
 // export { buildingName } from "../LdapSchema2ldifCosine/buildingName.oa.mjs";
 import { id_oc_pilotOrganization } from "../LdapSchema2ldifCosine/id-oc-pilotOrganization.va.mjs";
+import { organization } from "../SelectedObjectClasses/organization.oa.mjs";
+import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
 // export { id_oc_pilotOrganization } from "../LdapSchema2ldifCosine/id-oc-pilotOrganization.va.mjs";
 
 
@@ -102,7 +104,7 @@ const pilotOrganization: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ organization, organizationalUnit, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ buildingName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pilotOrganization" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pilotOrganization /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

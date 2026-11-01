@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gotoEnvironment } from "../LdapGosaCoreGoto/id-oc-gotoEnvironment.va.mjs";
+import { gotoProfileServer } from "../LdapGosaCoreGoto/gotoProfileServer.oa.mjs";
+import { gotoProfileFlags } from "../LdapGosaCoreGoto/gotoProfileFlags.oa.mjs";
+import { gotoXResolution } from "../LdapGosaCoreGosystem/gotoXResolution.oa.mjs";
+import { gotoShare } from "../LdapGosaCoreGoto/gotoShare.oa.mjs";
+import { gotoLogonScript } from "../LdapGosaCoreGoto/gotoLogonScript.oa.mjs";
+import { gotoKioskProfile } from "../LdapGosaCoreGoto/gotoKioskProfile.oa.mjs";
+import { gotoHotplugDevice } from "../LdapGosaCoreGoto/gotoHotplugDevice.oa.mjs";
+import { gotoProfileQuota } from "../LdapGosaCoreGoto/gotoProfileQuota.oa.mjs";
+import { gotoHotplugDeviceDN } from "../LdapGosaCoreGoto/gotoHotplugDeviceDN.oa.mjs";
 // export { id_oc_gotoEnvironment } from "../LdapGosaCoreGoto/id-oc-gotoEnvironment.va.mjs";
 
 
@@ -113,7 +122,7 @@ const gotoEnvironment: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gotoProfileServer, gotoProfileFlags, gotoXResolution, gotoShare, gotoLogonScript, gotoKioskProfile, gotoHotplugDevice, gotoProfileQuota, gotoHotplugDeviceDN, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gotoEnvironment" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOto - contains environment settings (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gotoEnvironment /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

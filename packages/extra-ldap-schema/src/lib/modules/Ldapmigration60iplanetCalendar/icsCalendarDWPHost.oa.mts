@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_icsCalendarDWPHost } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarDWPHost.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { icsDWPHost } from "../Ldapmigration60iplanetCalendar/icsDWPHost.oa.mjs";
+import { icsRegularExpressions } from "../Ldapmigration60iplanetCalendar/icsRegularExpressions.oa.mjs";
+import { icsExtended } from "../Ldapmigration60iplanetCalendar/icsExtended.oa.mjs";
+import { icsDomainNames } from "../Ldapmigration60iplanetCalendar/icsDomainNames.oa.mjs";
+import { icsStatus } from "../Ldapmigration60iplanetCalendar/icsStatus.oa.mjs";
 // export { id_oc_icsCalendarDWPHost } from "../Ldapmigration60iplanetCalendar/id-oc-icsCalendarDWPHost.va.mjs";
 
 
@@ -109,7 +116,7 @@ const icsCalendarDWPHost: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, description, icsDWPHost, icsRegularExpressions, icsExtended, icsDomainNames, icsStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "icsCalendarDWPHost" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Standard Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_icsCalendarDWPHost /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

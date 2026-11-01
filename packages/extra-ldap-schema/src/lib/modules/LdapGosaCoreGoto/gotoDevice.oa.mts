@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gotoDevice } from "../LdapGosaCoreGoto/id-oc-gotoDevice.va.mjs";
+import { gotoHotplugDevice } from "../LdapGosaCoreGoto/gotoHotplugDevice.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_gotoDevice } from "../LdapGosaCoreGoto/id-oc-gotoDevice.va.mjs";
 
 
@@ -108,7 +110,7 @@ const gotoDevice: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gotoHotplugDevice, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gotoDevice" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOto - contains environment settings (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gotoDevice /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

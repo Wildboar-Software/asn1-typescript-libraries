@@ -75,6 +75,17 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_soniaVoting } from "../Ldapmigration97sonia/id-oc-soniaVoting.va.mjs";
+import { soniaVotingDescription } from "../Ldapmigration97sonia/soniaVotingDescription.oa.mjs";
+import { soniaVotingStartDate } from "../Ldapmigration97sonia/soniaVotingStartDate.oa.mjs";
+import { soniaVotingEndDate } from "../Ldapmigration97sonia/soniaVotingEndDate.oa.mjs";
+import { soniaVotingAccessFilter } from "../Ldapmigration97sonia/soniaVotingAccessFilter.oa.mjs";
+import { soniaVotingResultViewer } from "../Ldapmigration97sonia/soniaVotingResultViewer.oa.mjs";
+import { soniaVotingMinChoice } from "../Ldapmigration97sonia/soniaVotingMinChoice.oa.mjs";
+import { soniaVotingMaxChoice } from "../Ldapmigration97sonia/soniaVotingMaxChoice.oa.mjs";
+import { soniaVotingSeat } from "../Ldapmigration97sonia/soniaVotingSeat.oa.mjs";
+import { soniaVotingSucceedCount } from "../Ldapmigration97sonia/soniaVotingSucceedCount.oa.mjs";
+import { soniaVotingFailedCount } from "../Ldapmigration97sonia/soniaVotingFailedCount.oa.mjs";
+import { soniaVotingEnabledCount } from "../Ldapmigration97sonia/soniaVotingEnabledCount.oa.mjs";
 // export { id_oc_soniaVoting } from "../Ldapmigration97sonia/id-oc-soniaVoting.va.mjs";
 
 
@@ -116,7 +127,7 @@ const soniaVoting: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaVotingDescription, soniaVotingStartDate, soniaVotingEndDate, soniaVotingAccessFilter, soniaVotingResultViewer, soniaVotingMinChoice, soniaVotingMaxChoice, soniaVotingSeat, soniaVotingSucceedCount, soniaVotingFailedCount, soniaVotingEnabledCount, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaVoting" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaVoting /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

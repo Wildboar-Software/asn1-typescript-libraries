@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_goFonMacro_2 } from "../LdapGosaCoreGofon/id-oc-goFonMacro-2.va.mjs";
+import { goFonMacroVisible } from "../LdapGosaCoreGofon/goFonMacroVisible.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { goFonMacroContent } from "../LdapGosaCoreGofon/goFonMacroContent.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goFonMacroParameter } from "../LdapGosaCoreGofon/goFonMacroParameter.oa.mjs";
 // export { id_oc_goFonMacro_2 } from "../LdapGosaCoreGofon/id-oc-goFonMacro-2.va.mjs";
 
 
@@ -111,7 +116,7 @@ const goFonMacro_2: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ goFonMacroVisible, displayName, goFonMacroContent, description, goFonMacroParameter, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goFonMacro" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Macro definitions for asterisk machines (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goFonMacro_2 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

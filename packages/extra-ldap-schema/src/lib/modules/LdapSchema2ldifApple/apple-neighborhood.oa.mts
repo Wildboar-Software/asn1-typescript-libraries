@@ -75,6 +75,16 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_apple_neighborhood } from "../LdapSchema2ldifApple/id-oc-apple-neighborhood.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { apple_generateduid } from "../LdapSchema2ldifApple/apple-generateduid.oa.mjs";
+import { apple_category } from "../LdapSchema2ldifApple/apple-category.oa.mjs";
+import { apple_nodepathxml } from "../LdapSchema2ldifApple/apple-nodepathxml.oa.mjs";
+import { apple_neighborhoodalias } from "../LdapSchema2ldifApple/apple-neighborhoodalias.oa.mjs";
+import { apple_computeralias } from "../LdapSchema2ldifApple/apple-computeralias.oa.mjs";
+import { apple_keyword } from "../LdapSchema2ldifApple/apple-keyword.oa.mjs";
+import { apple_realname } from "../LdapSchema2ldifApple/apple-realname.oa.mjs";
+import { apple_xmlplist } from "../LdapSchema2ldifApple/apple-xmlplist.oa.mjs";
+import { ttl } from "../LdapCommon389/ttl.oa.mjs";
 // export { id_oc_apple_neighborhood } from "../LdapSchema2ldifApple/id-oc-apple-neighborhood.va.mjs";
 
 
@@ -115,7 +125,7 @@ const apple_neighborhood: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, apple_generateduid, apple_category, apple_nodepathxml, apple_neighborhoodalias, apple_computeralias, apple_keyword, apple_realname, apple_xmlplist, ttl, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-neighborhood" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_neighborhood /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,20 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
+import { defaultScope } from "../LdapOx/defaultScope.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { oxScopeType } from "../LdapOx/oxScopeType.oa.mjs";
+import { oxAuthClaim } from "../LdapOx/oxAuthClaim.oa.mjs";
+import { oxScriptDn } from "../LdapOx/oxScriptDn.oa.mjs";
+import { oxAuthGroupClaims } from "../LdapOx/oxAuthGroupClaims.oa.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { oxIconUrl } from "../LdapOx/oxIconUrl.oa.mjs";
+import { oxUmaPolicyScriptDn } from "../LdapOx/oxUmaPolicyScriptDn.oa.mjs";
+import { oxAttributes } from "../LdapOx/oxAttributes.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
 // export { id_oc_oxAuthCustomScope } from "../LdapOx/id-oc-oxAuthCustomScope.va.mjs";
 
 
@@ -119,7 +133,7 @@ const oxAuthCustomScope: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ defaultScope, description, displayName, inum, oxScopeType, oxAuthClaim, oxScriptDn, oxAuthGroupClaims, oxId, oxIconUrl, oxUmaPolicyScriptDn, oxAttributes, exp, del, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxAuthCustomScope" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxAuthCustomScope /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

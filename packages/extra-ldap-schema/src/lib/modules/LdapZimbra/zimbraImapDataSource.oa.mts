@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { zimbraDataSource } from "../LdapZimbra/zimbraDataSource.oa.mjs";
 // export { zimbraDataSource } from "../LdapZimbra/zimbraDataSource.oa.mjs";
 import { id_oc_zimbraImapDataSource } from "../LdapZimbra/id-oc-zimbraImapDataSource.va.mjs";
+import { zimbraDataSourceConnectionType } from "../LdapZimbra/zimbraDataSourceConnectionType.oa.mjs";
+import { zimbraDataSourceHost } from "../LdapZimbra/zimbraDataSourceHost.oa.mjs";
+import { zimbraDataSourcePort } from "../LdapZimbra/zimbraDataSourcePort.oa.mjs";
+import { zimbraDataSourceAuthMechanism } from "../LdapZimbra/zimbraDataSourceAuthMechanism.oa.mjs";
+import { zimbraDataSourceAuthorizationId } from "../LdapZimbra/zimbraDataSourceAuthorizationId.oa.mjs";
 // export { id_oc_zimbraImapDataSource } from "../LdapZimbra/id-oc-zimbraImapDataSource.va.mjs";
 
 
@@ -107,8 +112,8 @@ const zimbraImapDataSource: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ zimbraDataSource, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraDataSourceConnectionType, zimbraDataSourceHost, zimbraDataSourcePort, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraDataSourceAuthMechanism, zimbraDataSourceAuthorizationId, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraImapDataSource" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "IMAP data source object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraImapDataSource /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,14 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxProxOp } from "../LdapOx/id-oc-oxProxOp.va.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { oxDomain } from "../LdapOx/oxDomain.oa.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { oxX509PEM } from "../LdapOx/oxX509PEM.oa.mjs";
+import { oxX509URL } from "../LdapOx/oxX509URL.oa.mjs";
 // export { id_oc_oxProxOp } from "../LdapOx/id-oc-oxProxOp.va.mjs";
 
 
@@ -113,7 +121,7 @@ const oxProxOp: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ countryName, displayName, inum, localityName, oxDomain, oxId, oxX509PEM, oxX509URL, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxProxOp" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxProxOp /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

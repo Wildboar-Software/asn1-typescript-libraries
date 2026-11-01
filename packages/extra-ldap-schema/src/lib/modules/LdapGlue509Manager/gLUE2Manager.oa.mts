@@ -75,6 +75,9 @@ import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2ManagerProductVersion } from "../LdapGlue509Manager/gLUE2ManagerProductVersion.oa.mjs";
 // export { gLUE2ManagerProductVersion } from "../LdapGlue509Manager/gLUE2ManagerProductVersion.oa.mjs";
 import { id_oc_gLUE2Manager } from "../LdapGlue509Manager/id-oc-gLUE2Manager.va.mjs";
+import { gLUE2ManagerID } from "../LdapGlue509Manager/gLUE2ManagerID.oa.mjs";
+import { gLUE2ManagerProductName } from "../LdapGlue509Manager/gLUE2ManagerProductName.oa.mjs";
+import { gLUE2ManagerServiceForeignKey } from "../LdapGlue509Manager/gLUE2ManagerServiceForeignKey.oa.mjs";
 // export { id_oc_gLUE2Manager } from "../LdapGlue509Manager/id-oc-gLUE2Manager.va.mjs";
 
 
@@ -108,7 +111,7 @@ const gLUE2Manager: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ManagerID, gLUE2ManagerProductName, gLUE2ManagerServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gLUE2ManagerProductVersion, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Manager" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A manager" /* OBJECT_FIELD_SETTING */,

@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { bootFile } from "../NIS/bootFile.oa.mjs";
+import { bootParameter } from "../NIS/bootParameter.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -106,7 +108,7 @@ const bootableDevice: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ bootFile, bootParameter, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "bootableDevice" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A device with boot parameters" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([12,], id_nis_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

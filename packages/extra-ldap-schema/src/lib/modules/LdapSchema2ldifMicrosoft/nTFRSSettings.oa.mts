@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
 // export { applicationSettings } from "../LdapSchema2ldifMicrosoft/applicationSettings.oa.mjs";
 import { id_oc_nTFRSSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSSettings.va.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
 // export { id_oc_nTFRSSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSSettings.va.mjs";
 
 
@@ -103,7 +105,7 @@ const nTFRSSettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ applicationSettings, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fRSExtensions, managedBy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTFRSSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTFRSSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

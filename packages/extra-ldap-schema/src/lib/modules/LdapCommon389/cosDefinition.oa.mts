@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_cosDefinition } from "../LdapCommon389/id-oc-cosDefinition.va.mjs";
+import { costargettree } from "../LdapCommon389/costargettree.oa.mjs";
+import { costemplatedn } from "../LdapCommon389/costemplatedn.oa.mjs";
+import { cosspecifier } from "../LdapCommon389/cosspecifier.oa.mjs";
+import { cosAttribute } from "../LdapCommon389/cosAttribute.oa.mjs";
+import { aci } from "../LdapAci/aci.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 // export { id_oc_cosDefinition } from "../LdapCommon389/id-oc-cosDefinition.va.mjs";
 
 
@@ -109,7 +116,7 @@ const cosDefinition: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ costargettree, costemplatedn, cosspecifier, cosAttribute, aci, commonName, uid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cosDefinition" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cosDefinition /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

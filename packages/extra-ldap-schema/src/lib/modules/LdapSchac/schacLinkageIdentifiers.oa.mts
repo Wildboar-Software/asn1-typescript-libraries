@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_schacLinkageIdentifiers } from "../LdapSchac/id-oc-schacLinkageIdentifiers.va.mjs";
+import { schacPersonalUniqueCode } from "../LdapSchac/schacPersonalUniqueCode.oa.mjs";
+import { schacPersonalUniqueID } from "../LdapSchac/schacPersonalUniqueID.oa.mjs";
 // export { id_oc_schacLinkageIdentifiers } from "../LdapSchac/id-oc-schacLinkageIdentifiers.va.mjs";
 
 
@@ -106,7 +108,7 @@ const schacLinkageIdentifiers: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schacPersonalUniqueCode, schacPersonalUniqueID, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "schacLinkageIdentifiers" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Used to link a directory entry with records in external data stores or other directory entries" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_schacLinkageIdentifiers /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

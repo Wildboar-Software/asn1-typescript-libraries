@@ -75,6 +75,8 @@ import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.
 import { ftType } from "../LdapApacheFortress/ftType.oa.mjs";
 // export { ftType } from "../LdapApacheFortress/ftType.oa.mjs";
 import { id_oc_ftObject } from "../LdapApacheFortress/id-oc-ftObject.va.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftObjNm } from "../LdapApacheFortress/ftObjNm.oa.mjs";
 // export { id_oc_ftObject } from "../LdapApacheFortress/id-oc-ftObject.va.mjs";
 
 
@@ -107,7 +109,7 @@ const ftObject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalUnit, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ftObjNm, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ ftType, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Permission Object Class" /* OBJECT_FIELD_SETTING */,

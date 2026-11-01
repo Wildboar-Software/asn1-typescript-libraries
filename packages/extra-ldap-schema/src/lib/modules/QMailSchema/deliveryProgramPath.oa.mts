@@ -10,6 +10,7 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 // export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 import { id_at } from "../QMailSchema/id-at.va.mjs";
+import { caseExactIA5Match } from "../SelectedAttributeTypes/caseExactIA5Match.oa.mjs";
 // export { id_at } from "../QMailSchema/id-at.va.mjs";
 
 

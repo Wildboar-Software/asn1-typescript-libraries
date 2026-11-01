@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_soniaVersusUser } from "../Ldapmigration97sonia/id-oc-soniaVersusUser.va.mjs";
+import { versusOrgChangeOrigin } from "../Ldapmigration97sonia/versusOrgChangeOrigin.oa.mjs";
+import { versusOrgChangeTarget } from "../Ldapmigration97sonia/versusOrgChangeTarget.oa.mjs";
+import { versusOrgChangeRequest } from "../Ldapmigration97sonia/versusOrgChangeRequest.oa.mjs";
+import { versusOrgChangeRequestor } from "../Ldapmigration97sonia/versusOrgChangeRequestor.oa.mjs";
 // export { id_oc_soniaVersusUser } from "../Ldapmigration97sonia/id-oc-soniaVersusUser.va.mjs";
 
 
@@ -107,7 +111,7 @@ const soniaVersusUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ versusOrgChangeOrigin, versusOrgChangeTarget, versusOrgChangeRequest, versusOrgChangeRequestor, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "SoniaVersusUser" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaVersusUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { goLogDBServerStatus } from "../LdapGosaCoreGoserver/goLogDBServerStatus.oa.mjs";
 // export { goLogDBServerStatus } from "../LdapGosaCoreGoserver/goLogDBServerStatus.oa.mjs";
 import { id_oc_goLogDBServer } from "../LdapGosaCoreGoserver/id-oc-goLogDBServer.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { gosaLogDB } from "../LdapGosaCoreGoserver/gosaLogDB.oa.mjs";
+import { goLogAdmin } from "../LdapGosaCoreGoserver/goLogAdmin.oa.mjs";
+import { goLogPassword } from "../LdapGosaCoreGoserver/goLogPassword.oa.mjs";
 // export { id_oc_goLogDBServer } from "../LdapGosaCoreGoserver/id-oc-goLogDBServer.va.mjs";
 
 
@@ -111,7 +115,7 @@ const goLogDBServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, gosaLogDB, goLogAdmin, goLogPassword, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ goLogDBServerStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goLogDBServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Log DB server description (v2.7)" /* OBJECT_FIELD_SETTING */,

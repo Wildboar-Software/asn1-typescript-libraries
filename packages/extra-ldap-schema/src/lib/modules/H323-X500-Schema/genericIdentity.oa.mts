@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { gi_oc } from "../H323-X500-Schema/gi-oc.va.mjs";
+import { genericIdentityProtocolIdentifier } from "../H323-X500-Schema/genericIdentityProtocolIdentifier.oa.mjs";
+import { genericIdentityMessage } from "../H323-X500-Schema/genericIdentityMessage.oa.mjs";
 // export { gi_oc } from "../H323-X500-Schema/gi-oc.va.mjs";
 
 
@@ -102,7 +104,7 @@ const genericIdentity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ genericIdentityProtocolIdentifier, genericIdentityMessage, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], gi_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsYIMpresence } from "../LdapPresence/id-oc-nsYIMpresence.va.mjs";
+import { nsYIMid } from "../LdapPresence/nsYIMid.oa.mjs";
+import { nsYIMStatusGraphic } from "../LdapPresence/nsYIMStatusGraphic.oa.mjs";
+import { nsYIMStatusText } from "../LdapPresence/nsYIMStatusText.oa.mjs";
 // export { id_oc_nsYIMpresence } from "../LdapPresence/id-oc-nsYIMpresence.va.mjs";
 
 
@@ -107,7 +110,7 @@ const nsYIMpresence: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsYIMid, nsYIMStatusGraphic, nsYIMStatusText, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsYIMpresence" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsYIMpresence /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

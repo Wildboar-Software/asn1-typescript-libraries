@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { oncRpcNumber } from "../NIS/oncRpcNumber.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -109,7 +111,7 @@ const oncRpc: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, oncRpcNumber, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oncRpc" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of an ONC/RPC binding" /* OBJECT_FIELD_SETTING */,

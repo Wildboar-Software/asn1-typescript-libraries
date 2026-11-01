@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_solarisProject } from "../LdapNisclient/id-oc-solarisProject.va.mjs";
+import { solarisProjectID } from "../LdapNisclient/solarisProjectID.oa.mjs";
+import { solarisProjectName } from "../LdapNisclient/solarisProjectName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { memberGid } from "../LdapNisclient/memberGid.oa.mjs";
+import { memberUid } from "../NIS/memberUid.oa.mjs";
+import { solarisProjectAttr } from "../LdapNisclient/solarisProjectAttr.oa.mjs";
 // export { id_oc_solarisProject } from "../LdapNisclient/id-oc-solarisProject.va.mjs";
 
 
@@ -107,8 +113,8 @@ const solarisProject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ solarisProjectID, solarisProjectName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, memberGid, memberUid, solarisProjectAttr, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "SolarisProject" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_solarisProject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

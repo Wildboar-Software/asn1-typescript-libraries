@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_schacContactLocation } from "../LdapSchac/id-oc-schacContactLocation.va.mjs";
+import { schacHomeOrganization } from "../LdapSchac/schacHomeOrganization.oa.mjs";
+import { schacHomeOrganizationType } from "../LdapSchac/schacHomeOrganizationType.oa.mjs";
+import { schacCountryOfResidence } from "../LdapSchac/schacCountryOfResidence.oa.mjs";
+import { schacUserPresenceID } from "../LdapSchac/schacUserPresenceID.oa.mjs";
 // export { id_oc_schacContactLocation } from "../LdapSchac/id-oc-schacContactLocation.va.mjs";
 
 
@@ -108,7 +112,7 @@ const schacContactLocation: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schacHomeOrganization, schacHomeOrganizationType, schacCountryOfResidence, schacUserPresenceID, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "schacContactLocation" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Primary means of locating and contacting potential collaborators and other persons-of-interest at peer institutions" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_schacContactLocation /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,21 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_cloudosInetOrgPerson } from "../LdapCloudos/id-oc-cloudosInetOrgPerson.va.mjs";
+import { entryUUID } from "../LdapCloudos/entryUUID.oa.mjs";
+import { ctime } from "../LdapCloudos/ctime.oa.mjs";
+import { resetPasswordToken } from "../LdapCloudos/resetPasswordToken.oa.mjs";
+import { resetPasswordTokenCtime } from "../LdapCloudos/resetPasswordTokenCtime.oa.mjs";
+import { emailVerified } from "../LdapCloudos/emailVerified.oa.mjs";
+import { emailVerificationCode } from "../LdapCloudos/emailVerificationCode.oa.mjs";
+import { emailVerificationCodeCtime } from "../LdapCloudos/emailVerificationCodeCtime.oa.mjs";
+import { mobilePhoneCountryCode } from "../LdapCloudos/mobilePhoneCountryCode.oa.mjs";
+import { mobilePhone } from "../LdapCloudos/mobilePhone.oa.mjs";
+import { admin } from "../LdapCloudos/admin.oa.mjs";
+import { suspended } from "../LdapCloudos/suspended.oa.mjs";
+import { twoFactor } from "../LdapCloudos/twoFactor.oa.mjs";
+import { twoFactorAuthId } from "../LdapCloudos/twoFactorAuthId.oa.mjs";
+import { lastLogin } from "../LdapCloudos/lastLogin.oa.mjs";
+import { storageQuota } from "../LdapCloudos/storageQuota.oa.mjs";
 // export { id_oc_cloudosInetOrgPerson } from "../LdapCloudos/id-oc-cloudosInetOrgPerson.va.mjs";
 
 
@@ -119,7 +134,7 @@ const cloudosInetOrgPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ entryUUID, ctime, resetPasswordToken, resetPasswordTokenCtime, emailVerified, emailVerificationCode, emailVerificationCodeCtime, mobilePhoneCountryCode, mobilePhone, admin, suspended, twoFactor, twoFactorAuthId, lastLogin, storageQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cloudosInetOrgPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "cloudos Internet Organizational Person" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cloudosInetOrgPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_tacacsAccount } from "../LdapTacacs/id-oc-tacacsAccount.va.mjs";
+import { tacacsClient } from "../LdapTacacs/tacacsClient.oa.mjs";
+import { tacacsMember } from "../LdapTacacs/tacacsMember.oa.mjs";
+import { tacacsProfile } from "../LdapTacacs/tacacsProfile.oa.mjs";
+import { tacacsFlag } from "../LdapTacacs/tacacsFlag.oa.mjs";
 // export { id_oc_tacacsAccount } from "../LdapTacacs/id-oc-tacacsAccount.va.mjs";
 
 
@@ -112,7 +116,7 @@ const tacacsAccount: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tacacsClient, tacacsMember, tacacsProfile, tacacsFlag, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tacacsAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Tacacs user object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tacacsAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

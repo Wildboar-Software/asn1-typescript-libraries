@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_container } from "../LdapSchema2ldifMicrosoft/id-oc-container.va.mjs";
+import { schemaVersion } from "../MSUser/schemaVersion.oa.mjs";
+import { defaultClassStore } from "../MSUser/defaultClassStore.oa.mjs";
 // export { id_oc_container } from "../LdapSchema2ldifMicrosoft/id-oc-container.va.mjs";
 
 
@@ -107,7 +109,7 @@ const container: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schemaVersion, defaultClassStore, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "container" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_container /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,8 @@ import { mailGroup } from "../InetMailSchema/mailGroup.oa.mjs";
 import { soniaMailGroupUid } from "../Ldapmigration97sonia/soniaMailGroupUid.oa.mjs";
 // export { soniaMailGroupUid } from "../Ldapmigration97sonia/soniaMailGroupUid.oa.mjs";
 import { id_oc_soniaMailGroup } from "../Ldapmigration97sonia/id-oc-soniaMailGroup.va.mjs";
+import { soniaMailGroupStatus } from "../Ldapmigration97sonia/soniaMailGroupStatus.oa.mjs";
+import { soniaMailGroupSubscribeType } from "../Ldapmigration97sonia/soniaMailGroupSubscribeType.oa.mjs";
 // export { id_oc_soniaMailGroup } from "../Ldapmigration97sonia/id-oc-soniaMailGroup.va.mjs";
 
 
@@ -107,7 +109,7 @@ const soniaMailGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ mailGroup, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ soniaMailGroupUid, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaMailGroupStatus, soniaMailGroupSubscribeType, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaMailGroup" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaMailGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

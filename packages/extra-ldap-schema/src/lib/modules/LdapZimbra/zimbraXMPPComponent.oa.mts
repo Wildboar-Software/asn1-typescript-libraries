@@ -73,6 +73,18 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_zimbraXMPPComponent } from "../LdapZimbra/id-oc-zimbraXMPPComponent.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { zimbraDomainId } from "../LdapZimbra/zimbraDomainId.oa.mjs";
+import { zimbraId } from "../LdapZimbra/zimbraId.oa.mjs";
+import { zimbraServerId } from "../LdapZimbra/zimbraServerId.oa.mjs";
+import { zimbraXMPPComponentCategory } from "../LdapZimbra/zimbraXMPPComponentCategory.oa.mjs";
+import { zimbraXMPPComponentClassName } from "../LdapZimbra/zimbraXMPPComponentClassName.oa.mjs";
+import { zimbraXMPPComponentType } from "../LdapZimbra/zimbraXMPPComponentType.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraACE } from "../LdapZimbra/zimbraACE.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraXMPPComponentFeatures } from "../LdapZimbra/zimbraXMPPComponentFeatures.oa.mjs";
+import { zimbraXMPPComponentName } from "../LdapZimbra/zimbraXMPPComponentName.oa.mjs";
 // export { id_oc_zimbraXMPPComponent } from "../LdapZimbra/id-oc-zimbraXMPPComponent.va.mjs";
 
 
@@ -114,8 +126,8 @@ const zimbraXMPPComponent: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraDomainId, zimbraId, zimbraServerId, zimbraXMPPComponentCategory, zimbraXMPPComponentClassName, zimbraXMPPComponentType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraACE, zimbraCreateTimestamp, zimbraXMPPComponentFeatures, zimbraXMPPComponentName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraXMPPComponent" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "XMPP Component Configuration Record" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraXMPPComponent /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

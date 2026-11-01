@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_zimbraAlias } from "../LdapZimbra/id-oc-zimbraAlias.va.mjs";
+import { zimbraAliasTargetId } from "../LdapZimbra/zimbraAliasTargetId.oa.mjs";
+import { zimbraId } from "../LdapZimbra/zimbraId.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraLocale } from "../LdapZimbra/zimbraLocale.oa.mjs";
 // export { id_oc_zimbraAlias } from "../LdapZimbra/id-oc-zimbraAlias.va.mjs";
 
 
@@ -108,8 +114,8 @@ const zimbraAlias: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraAliasTargetId, zimbraId, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, uid, zimbraCreateTimestamp, zimbraLocale, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraAlias" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "An alias to another zimbra object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraAlias /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
 // export { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
 import { id_oc_vlvSearch } from "../LdapCommon389/id-oc-vlvSearch.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { vlvBase } from "../LdapCommon389/vlvBase.oa.mjs";
+import { vlvScope } from "../LdapCommon389/vlvScope.oa.mjs";
+import { vlvFilter } from "../LdapCommon389/vlvFilter.oa.mjs";
 // export { id_oc_vlvSearch } from "../LdapCommon389/id-oc-vlvSearch.va.mjs";
 
 
@@ -109,7 +113,7 @@ const vlvSearch: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, vlvBase, vlvScope, vlvFilter, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ multiLineDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "vlvSearch" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,

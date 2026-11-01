@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_soniaVotingChoice } from "../Ldapmigration97sonia/id-oc-soniaVotingChoice.va.mjs";
+import { soniaVotingChoiceDescription } from "../Ldapmigration97sonia/soniaVotingChoiceDescription.oa.mjs";
+import { soniaVotingChoiceCount } from "../Ldapmigration97sonia/soniaVotingChoiceCount.oa.mjs";
 // export { id_oc_soniaVotingChoice } from "../Ldapmigration97sonia/id-oc-soniaVotingChoice.va.mjs";
 
 
@@ -107,7 +109,7 @@ const soniaVotingChoice: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaVotingChoiceDescription, soniaVotingChoiceCount, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaVotingChoice" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaVotingChoice /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

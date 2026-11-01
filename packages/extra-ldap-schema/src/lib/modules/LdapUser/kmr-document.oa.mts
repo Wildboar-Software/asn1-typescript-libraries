@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { document } from "../LdapSchema2ldifCosine/document.oa.mjs";
 // export { document } from "../LdapSchema2ldifCosine/document.oa.mjs";
 import { id_oc_kmr_document } from "../LdapUser/id-oc-kmr-document.va.mjs";
+import { documentExpirationTime } from "../LdapUser/documentExpirationTime.oa.mjs";
+import { documentStatus } from "../LdapUser/documentStatus.oa.mjs";
 // export { id_oc_kmr_document } from "../LdapUser/id-oc-kmr-document.va.mjs";
 
 
@@ -103,7 +105,7 @@ const kmr_document: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ document, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ documentExpirationTime, documentStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kmr-document" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kmr_document /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

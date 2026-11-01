@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { h235_id_oc } from "../H323-X500-Schema/h235-id-oc.va.mjs";
+import { h235IdentityEndpointID } from "../H323-X500-Schema/h235IdentityEndpointID.oa.mjs";
+import { h235IdentityPassword } from "../H323-X500-Schema/h235IdentityPassword.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { authorityRevocationList } from "../AuthenticationFramework/authorityRevocationList.oa.mjs";
+import { certificateRevocationList } from "../AuthenticationFramework/certificateRevocationList.oa.mjs";
+import { crossCertificatePair } from "../AuthenticationFramework/crossCertificatePair.oa.mjs";
 // export { h235_id_oc } from "../H323-X500-Schema/h235-id-oc.va.mjs";
 
 
@@ -105,7 +112,7 @@ const h235Identity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ h235IdentityEndpointID, h235IdentityPassword, userCertificate, cACertificate, authorityRevocationList, certificateRevocationList, crossCertificatePair, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], h235_id_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

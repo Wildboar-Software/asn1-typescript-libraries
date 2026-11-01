@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { cosSuperDefinition } from "../LdapCommon389/cosSuperDefinition.oa.mjs";
 // export { cosSuperDefinition } from "../LdapCommon389/cosSuperDefinition.oa.mjs";
 import { id_oc_cosClassicDefinition } from "../LdapCommon389/id-oc-cosClassicDefinition.va.mjs";
+import { costemplatedn } from "../LdapCommon389/costemplatedn.oa.mjs";
+import { cosspecifier } from "../LdapCommon389/cosspecifier.oa.mjs";
 // export { id_oc_cosClassicDefinition } from "../LdapCommon389/id-oc-cosClassicDefinition.va.mjs";
 
 
@@ -104,7 +106,7 @@ const cosClassicDefinition: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ cosSuperDefinition, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ costemplatedn, cosspecifier, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cosClassicDefinition" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cosClassicDefinition /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

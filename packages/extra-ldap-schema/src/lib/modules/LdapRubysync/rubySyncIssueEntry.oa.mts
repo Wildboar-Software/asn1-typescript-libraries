@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { rubySyncAssociation } from "../LdapRubysync/rubySyncAssociation.oa.mjs";
 // export { rubySyncAssociation } from "../LdapRubysync/rubySyncAssociation.oa.mjs";
 import { id_oc_rubySyncIssueEntry } from "../LdapRubysync/id-oc-rubySyncIssueEntry.va.mjs";
+import { rubySyncIssueScore } from "../LdapRubysync/rubySyncIssueScore.oa.mjs";
+import { rubySyncIssueStatus } from "../LdapRubysync/rubySyncIssueStatus.oa.mjs";
+import { rubySyncMatchValue } from "../LdapRubysync/rubySyncMatchValue.oa.mjs";
+import { rubySyncSourceInfo } from "../LdapRubysync/rubySyncSourceInfo.oa.mjs";
+import { rubySyncTargetInfo } from "../LdapRubysync/rubySyncTargetInfo.oa.mjs";
 // export { id_oc_rubySyncIssueEntry } from "../LdapRubysync/id-oc-rubySyncIssueEntry.va.mjs";
 
 
@@ -110,7 +115,7 @@ const rubySyncIssueEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ rubySyncAssociation, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rubySyncIssueScore, rubySyncIssueStatus, rubySyncMatchValue, rubySyncSourceInfo, rubySyncTargetInfo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rubySyncIssueEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rubySyncIssueEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

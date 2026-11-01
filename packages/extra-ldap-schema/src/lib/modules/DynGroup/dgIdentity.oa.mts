@@ -10,6 +10,7 @@ import { distinguishedNameMatch } from "../InformationFramework/distinguishedNam
 import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 // export { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 import { id_dynGroupAttr } from "../DynGroup/id-dynGroupAttr.va.mjs";
+import { distinguishedName } from "../SelectedAttributeTypes/distinguishedName.oa.mjs";
 // export { id_dynGroupAttr } from "../DynGroup/id-dynGroupAttr.va.mjs";
 
 

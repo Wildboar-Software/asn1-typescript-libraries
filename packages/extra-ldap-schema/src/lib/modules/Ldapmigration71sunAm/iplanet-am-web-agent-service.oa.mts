@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_iplanet_am_web_agent_service } from "../Ldapmigration71sunAm/id-oc-iplanet-am-web-agent-service.va.mjs";
+import { iplanet_am_web_agent_access_allow_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-allow-list.oa.mjs";
+import { iplanet_am_web_agent_access_deny_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-deny-list.oa.mjs";
+import { iplanet_am_web_agent_access_not_enforced_list } from "../Ldapmigration71sunAm/iplanet-am-web-agent-access-not-enforced-list.oa.mjs";
+import { iplanet_am_web_agent_service_status } from "../Ldapmigration71sunAm/iplanet-am-web-agent-service-status.oa.mjs";
 // export { id_oc_iplanet_am_web_agent_service } from "../Ldapmigration71sunAm/id-oc-iplanet-am-web-agent-service.va.mjs";
 
 
@@ -108,7 +112,7 @@ const iplanet_am_web_agent_service: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanet_am_web_agent_access_allow_list, iplanet_am_web_agent_access_deny_list, iplanet_am_web_agent_access_not_enforced_list, iplanet_am_web_agent_service_status, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-web-agent-service" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Web Agent Service OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_web_agent_service /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

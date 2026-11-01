@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_freenitPendingSubscriber } from "../LdapMailinglist/id-oc-freenitPendingSubscriber.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mlidNumber } from "../LdapMailinglist/mlidNumber.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailinglistToken } from "../LdapMailinglist/mailinglistToken.oa.mjs";
+import { mailinglistAction } from "../LdapMailinglist/mailinglistAction.oa.mjs";
+import { createdAt } from "../LdapMailinglist/createdAt.oa.mjs";
 // export { id_oc_freenitPendingSubscriber } from "../LdapMailinglist/id-oc-freenitPendingSubscriber.va.mjs";
 
 
@@ -108,7 +114,7 @@ const freenitPendingSubscriber: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, mlidNumber, mail, mailinglistToken, mailinglistAction, createdAt, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "freenitPendingSubscriber" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Freenit pending mailing list subscriber" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_freenitPendingSubscriber /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

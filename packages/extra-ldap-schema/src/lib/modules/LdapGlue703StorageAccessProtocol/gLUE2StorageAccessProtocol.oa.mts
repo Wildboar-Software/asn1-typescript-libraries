@@ -75,6 +75,10 @@ import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2StorageAccessProtocolMaxStreams } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolMaxStreams.oa.mjs";
 // export { gLUE2StorageAccessProtocolMaxStreams } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolMaxStreams.oa.mjs";
 import { id_oc_gLUE2StorageAccessProtocol } from "../LdapGlue703StorageAccessProtocol/id-oc-gLUE2StorageAccessProtocol.va.mjs";
+import { gLUE2StorageAccessProtocolID } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolID.oa.mjs";
+import { gLUE2StorageAccessProtocolType } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolType.oa.mjs";
+import { gLUE2StorageAccessProtocolVersion } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolVersion.oa.mjs";
+import { gLUE2StorageAccessProtocolStorageServiceForeignKey } from "../LdapGlue703StorageAccessProtocol/gLUE2StorageAccessProtocolStorageServiceForeignKey.oa.mjs";
 // export { id_oc_gLUE2StorageAccessProtocol } from "../LdapGlue703StorageAccessProtocol/id-oc-gLUE2StorageAccessProtocol.va.mjs";
 
 
@@ -109,7 +113,7 @@ const gLUE2StorageAccessProtocol: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2StorageAccessProtocolID, gLUE2StorageAccessProtocolType, gLUE2StorageAccessProtocolVersion, gLUE2StorageAccessProtocolStorageServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gLUE2StorageAccessProtocolMaxStreams, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2StorageAccessProtocol" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A type of protocol available to access the available storage capacities" /* OBJECT_FIELD_SETTING */,

@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { nisMapEntry } from "../NIS/nisMapEntry.oa.mjs";
+import { nisMapName } from "../NIS/nisMapName.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -109,7 +112,7 @@ const nisObject: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, nisMapEntry, nisMapName, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nisObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "An entry in a NIS map" /* OBJECT_FIELD_SETTING */,

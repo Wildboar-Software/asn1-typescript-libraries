@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_pilotObject } from "../Cosine/id-oc-pilotObject.va.mjs";
+import { info } from "../Cosine/info.oa.mjs";
+import { manager } from "../Cosine/manager.oa.mjs";
+import { uniqueIdentifier } from "../Cosine/uniqueIdentifier.oa.mjs";
+import { dITRedirect } from "../Cosine/dITRedirect.oa.mjs";
+import { audio } from "../Cosine/audio.oa.mjs";
 // export { id_oc_pilotObject } from "../Cosine/id-oc-pilotObject.va.mjs";
 
 
@@ -113,7 +118,7 @@ const pilotObject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ info, manager, uniqueIdentifier, dITRedirect, audio, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pilotObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "RFC1274: pilot object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pilotObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

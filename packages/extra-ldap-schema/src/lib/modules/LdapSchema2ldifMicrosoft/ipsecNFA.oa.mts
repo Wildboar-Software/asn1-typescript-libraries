@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ipsecBase } from "../LdapSchema2ldifMicrosoft/ipsecBase.oa.mjs";
 // export { ipsecBase } from "../LdapSchema2ldifMicrosoft/ipsecBase.oa.mjs";
 import { id_oc_ipsecNFA } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecNFA.va.mjs";
+import { ipsecNegotiationPolicyReference } from "../MSUser/ipsecNegotiationPolicyReference.oa.mjs";
+import { ipsecFilterReference } from "../MSUser/ipsecFilterReference.oa.mjs";
 // export { id_oc_ipsecNFA } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecNFA.va.mjs";
 
 
@@ -103,7 +105,7 @@ const ipsecNFA: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ ipsecBase, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ipsecNegotiationPolicyReference, ipsecFilterReference, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipsecNFA" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipsecNFA /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

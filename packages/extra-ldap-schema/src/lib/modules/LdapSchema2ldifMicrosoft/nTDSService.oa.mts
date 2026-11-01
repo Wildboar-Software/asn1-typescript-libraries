@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nTDSService } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSService.va.mjs";
+import { tombstoneLifetime } from "../MSUser/tombstoneLifetime.oa.mjs";
+import { dSHeuristics } from "../MSUser/dSHeuristics.oa.mjs";
+import { garbageCollPeriod } from "../MSUser/garbageCollPeriod.oa.mjs";
+import { replTopologyStayOfExecution } from "../MSUser/replTopologyStayOfExecution.oa.mjs";
+import { sPNMappings } from "../MSUser/sPNMappings.oa.mjs";
 // export { id_oc_nTDSService } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSService.va.mjs";
 
 
@@ -106,7 +111,7 @@ const nTDSService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tombstoneLifetime, dSHeuristics, garbageCollPeriod, replTopologyStayOfExecution, sPNMappings, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTDSService" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTDSService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

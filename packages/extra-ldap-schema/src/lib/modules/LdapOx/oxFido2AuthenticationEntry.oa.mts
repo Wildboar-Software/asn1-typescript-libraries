@@ -75,6 +75,13 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxFido2AuthenticationEntry } from "../LdapOx/id-oc-oxFido2AuthenticationEntry.va.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { creationDate } from "../LdapOx/creationDate.oa.mjs";
+import { oxSessionStateId } from "../LdapOx/oxSessionStateId.oa.mjs";
+import { oxCodeChallenge } from "../LdapOx/oxCodeChallenge.oa.mjs";
+import { personInum } from "../LdapOx/personInum.oa.mjs";
+import { oxAuthenticationData } from "../LdapOx/oxAuthenticationData.oa.mjs";
+import { oxStatus } from "../LdapOx/oxStatus.oa.mjs";
 // export { id_oc_oxFido2AuthenticationEntry } from "../LdapOx/id-oc-oxFido2AuthenticationEntry.va.mjs";
 
 
@@ -112,7 +119,7 @@ const oxFido2AuthenticationEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ oxId, creationDate, oxSessionStateId, oxCodeChallenge, personInum, oxAuthenticationData, oxStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxFido2AuthenticationEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxFido2AuthenticationEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

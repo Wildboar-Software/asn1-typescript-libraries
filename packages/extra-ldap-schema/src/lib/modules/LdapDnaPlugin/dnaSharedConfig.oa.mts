@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dnaSharedConfig } from "../LdapDnaPlugin/id-oc-dnaSharedConfig.va.mjs";
+import { dnaHostname } from "../LdapDnaPlugin/dnaHostname.oa.mjs";
+import { dnaPortNum } from "../LdapDnaPlugin/dnaPortNum.oa.mjs";
+import { dnaSecurePortNum } from "../LdapDnaPlugin/dnaSecurePortNum.oa.mjs";
+import { dnaRemoteBindMethod } from "../LdapDnaPlugin/dnaRemoteBindMethod.oa.mjs";
+import { dnaRemoteConnProtocol } from "../LdapDnaPlugin/dnaRemoteConnProtocol.oa.mjs";
+import { dnaRemainingValues } from "../LdapDnaPlugin/dnaRemainingValues.oa.mjs";
 // export { id_oc_dnaSharedConfig } from "../LdapDnaPlugin/id-oc-dnaSharedConfig.va.mjs";
 
 
@@ -110,7 +116,7 @@ const dnaSharedConfig: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnaHostname, dnaPortNum, dnaSecurePortNum, dnaRemoteBindMethod, dnaRemoteConnProtocol, dnaRemainingValues, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dnaSharedConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DNA Shared Configuration" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dnaSharedConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

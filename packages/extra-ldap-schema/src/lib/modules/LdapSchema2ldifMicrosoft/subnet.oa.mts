@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_subnet } from "../LdapSchema2ldifMicrosoft/id-oc-subnet.va.mjs";
+import { location } from "../MSUser/location.oa.mjs";
+import { siteObject } from "../MSUser/siteObject.oa.mjs";
+import { physicalLocationObject } from "../MSUser/physicalLocationObject.oa.mjs";
 // export { id_oc_subnet } from "../LdapSchema2ldifMicrosoft/id-oc-subnet.va.mjs";
 
 
@@ -104,7 +107,7 @@ const subnet: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ location, siteObject, physicalLocationObject, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "subnet" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_subnet /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

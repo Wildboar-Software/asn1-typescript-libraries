@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_userPresenceProfile } from "../Ldapmigration55imsIcal/id-oc-userPresenceProfile.va.mjs";
+import { vacationstartdate } from "../Ldapmigration50nsMail/vacationstartdate.oa.mjs";
+import { vacationenddate } from "../Ldapmigration50nsMail/vacationenddate.oa.mjs";
 // export { id_oc_userPresenceProfile } from "../Ldapmigration55imsIcal/id-oc-userPresenceProfile.va.mjs";
 
 
@@ -106,7 +108,7 @@ const userPresenceProfile: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ vacationstartdate, vacationenddate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "userPresenceProfile" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for vacation start end dates" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_userPresenceProfile /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

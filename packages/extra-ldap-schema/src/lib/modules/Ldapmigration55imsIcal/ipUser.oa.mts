@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_ipUser } from "../Ldapmigration55imsIcal/id-oc-ipUser.va.mjs";
+import { pabURI } from "../Ldapmigration55imsIcal/pabURI.oa.mjs";
+import { memberOfManagedGroup } from "../Ldapmigration55imsIcal/memberOfManagedGroup.oa.mjs";
+import { maxPabEntries } from "../Ldapmigration55imsIcal/maxPabEntries.oa.mjs";
+import { inetCOS } from "../Ldapmigration55imsIcal/inetCOS.oa.mjs";
+import { psRoot } from "../Ldapmigration55imsIcal/psRoot.oa.mjs";
+import { psIncludeInGAB } from "../Ldapmigration55imsIcal/psIncludeInGAB.oa.mjs";
 // export { id_oc_ipUser } from "../Ldapmigration55imsIcal/id-oc-ipUser.va.mjs";
 
 
@@ -110,7 +116,7 @@ const ipUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ pabURI, memberOfManagedGroup, maxPabEntries, inetCOS, psRoot, psIncludeInGAB, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for extending a inetuser entry. Used by calendar and messaging servers" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,16 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxMetric } from "../LdapOx/id-oc-oxMetric.va.mjs";
+import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
+import { oxStartDate } from "../LdapOx/oxStartDate.oa.mjs";
+import { oxEndDate } from "../LdapOx/oxEndDate.oa.mjs";
+import { oxApplicationType } from "../LdapOx/oxApplicationType.oa.mjs";
+import { oxMetricType } from "../LdapOx/oxMetricType.oa.mjs";
+import { creationDate } from "../LdapOx/creationDate.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { oxData } from "../LdapOx/oxData.oa.mjs";
+import { oxHost } from "../LdapOx/oxHost.oa.mjs";
 // export { id_oc_oxMetric } from "../LdapOx/id-oc-oxMetric.va.mjs";
 
 
@@ -115,7 +125,7 @@ const oxMetric: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uniqueIdentifier, oxStartDate, oxEndDate, oxApplicationType, oxMetricType, creationDate, del, exp, oxData, oxHost, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxMetric" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxMetric /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,19 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dbmailUser } from "../LdapDbmail/id-oc-dbmailUser.va.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { mailQuota } from "../LdapDbmail/mailQuota.oa.mjs";
+import { mailForwardingAddress } from "../LdapDbmail/mailForwardingAddress.oa.mjs";
+import { mailHost } from "../LdapDbmail/mailHost.oa.mjs";
+import { mailAlternateAddress } from "../LdapDbmail/mailAlternateAddress.oa.mjs";
+import { dbmailUID } from "../LdapDbmail/dbmailUID.oa.mjs";
+import { dbmailGID } from "../LdapDbmail/dbmailGID.oa.mjs";
+import { deliveryMode } from "../LdapDbmail/deliveryMode.oa.mjs";
+import { accountStatus } from "../LdapDbmail/accountStatus.oa.mjs";
 // export { id_oc_dbmailUser } from "../LdapDbmail/id-oc-dbmailUser.va.mjs";
 
 
@@ -117,8 +130,8 @@ const dbmailUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, mail, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPassword, uidNumber, gidNumber, mailQuota, mailForwardingAddress, mailHost, mailAlternateAddress, dbmailUID, dbmailGID, deliveryMode, accountStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dbmailUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DBMail-LDAP User" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dbmailUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

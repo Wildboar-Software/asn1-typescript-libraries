@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_zimbraGroupStaticUnit } from "../LdapZimbra/id-oc-zimbraGroupStaticUnit.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { zimbraGroupId } from "../LdapZimbra/zimbraGroupId.oa.mjs";
+import { zimbraId } from "../LdapZimbra/zimbraId.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraMailForwardingAddress } from "../LdapZimbra/zimbraMailForwardingAddress.oa.mjs";
 // export { id_oc_zimbraGroupStaticUnit } from "../LdapZimbra/id-oc-zimbraGroupStaticUnit.va.mjs";
 
 
@@ -108,8 +114,8 @@ const zimbraGroupStaticUnit: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraGroupId, zimbraId, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraCreateTimestamp, zimbraMailForwardingAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraGroupStaticUnit" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "hold attributes for the static entry of dynamic groups." /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraGroupStaticUnit /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

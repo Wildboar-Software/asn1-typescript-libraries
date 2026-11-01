@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_tf_am_baseroles } from "../LdapTrustFabric/id-oc-tf-am-baseroles.va.mjs";
+import { tf_maintainers } from "../LdapTrustFabric/tf-maintainers.oa.mjs";
+import { tf_approvers } from "../LdapTrustFabric/tf-approvers.oa.mjs";
+import { tf_owners } from "../LdapTrustFabric/tf-owners.oa.mjs";
 // export { id_oc_tf_am_baseroles } from "../LdapTrustFabric/id-oc-tf-am-baseroles.va.mjs";
 
 
@@ -106,7 +109,7 @@ const tf_am_baseroles: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tf_maintainers, tf_approvers, tf_owners, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tf-am-baseroles" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tf_am_baseroles /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

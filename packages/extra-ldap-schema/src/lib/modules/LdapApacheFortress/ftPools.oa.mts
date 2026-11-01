@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_ftPools } from "../LdapApacheFortress/id-oc-ftPools.va.mjs";
+import { ftOSU } from "../LdapApacheFortress/ftOSU.oa.mjs";
+import { ftOSP } from "../LdapApacheFortress/ftOSP.oa.mjs";
+import { ftRange } from "../LdapApacheFortress/ftRange.oa.mjs";
 // export { id_oc_ftPools } from "../LdapApacheFortress/id-oc-ftPools.va.mjs";
 
 
@@ -107,7 +110,7 @@ const ftPools: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftOSU, ftOSP, ftRange, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftPools" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Pools AUX Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftPools /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

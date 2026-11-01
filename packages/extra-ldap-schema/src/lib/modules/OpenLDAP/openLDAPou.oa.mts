@@ -71,6 +71,11 @@ import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /*
 // export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
+import { buildingName } from "../Cosine/buildingName.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnit } from "../SelectedObjectClasses/organizationalUnit.oa.mjs";
 // export { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
 
 
@@ -104,7 +109,7 @@ const openLDAPou: OBJECT_CLASS = {
     },
     "&Superclasses": [ organizationalUnit, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ buildingName, displayName, labeledURI, organizationName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "OpenLDAPou" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "OpenLDAP Organizational Unit Object" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([4,], id_openldap_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

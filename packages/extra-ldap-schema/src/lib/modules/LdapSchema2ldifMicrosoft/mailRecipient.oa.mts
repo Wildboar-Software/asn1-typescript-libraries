@@ -75,6 +75,15 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_mailRecipient } from "../LdapSchema2ldifMicrosoft/id-oc-mailRecipient.va.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
+import { info } from "../LdapSchema2ldifMicrosoft/info.oa.mjs";
+import { garbageCollPeriod } from "../MSUser/garbageCollPeriod.oa.mjs";
+import { showInAddressBook } from "../MSUser/showInAddressBook.oa.mjs";
+import { userCert } from "../MSUser/userCert.oa.mjs";
+import { legacyExchangeDN } from "../MSUser/legacyExchangeDN.oa.mjs";
+import { userSMIMECertificate } from "../H323-X500-Schema/userSMIMECertificate.oa.mjs";
+import { textEncodedORAddress } from "../LdapSchema2ldifCosine/textEncodedORAddress.oa.mjs";
 // export { id_oc_mailRecipient } from "../LdapSchema2ldifMicrosoft/id-oc-mailRecipient.va.mjs";
 
 
@@ -116,7 +125,7 @@ const mailRecipient: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ telephoneNumber, userCertificate, info, garbageCollPeriod, showInAddressBook, userCert, legacyExchangeDN, userSMIMECertificate, textEncodedORAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailRecipient" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailRecipient /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { siteList } from "../MSUser/siteList.oa.mjs";
 // export { siteList } from "../MSUser/siteList.oa.mjs";
 import { id_oc_siteLink } from "../LdapSchema2ldifMicrosoft/id-oc-siteLink.va.mjs";
+import { cost } from "../MSUser/cost.oa.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { replInterval } from "../MSUser/replInterval.oa.mjs";
 // export { id_oc_siteLink } from "../LdapSchema2ldifMicrosoft/id-oc-siteLink.va.mjs";
 
 
@@ -109,7 +113,7 @@ const siteLink: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ siteList, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ cost, schedule, options, replInterval, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "siteLink" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_siteLink /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

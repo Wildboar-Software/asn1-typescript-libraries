@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_soniaEmployeeType } from "../Ldapmigration97sonia/id-oc-soniaEmployeeType.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { employeeType } from "../InetOrgPerson/employeeType.oa.mjs";
+import { employeeNumber } from "../InetOrgPerson/employeeNumber.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { soniaEmployeeTypeIsVisible } from "../Ldapmigration97sonia/soniaEmployeeTypeIsVisible.oa.mjs";
 // export { id_oc_soniaEmployeeType } from "../Ldapmigration97sonia/id-oc-soniaEmployeeType.va.mjs";
 
 
@@ -106,8 +111,8 @@ const soniaEmployeeType: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, employeeType, employeeNumber, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, soniaEmployeeTypeIsVisible, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaEmployeeType" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaEmployeeType /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

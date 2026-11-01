@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
 // export { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.mjs";
 import { id_oc_storage } from "../LdapSchema2ldifMicrosoft/id-oc-storage.va.mjs";
+import { moniker } from "../MSUser/moniker.oa.mjs";
+import { monikerDisplayName } from "../MSUser/monikerDisplayName.oa.mjs";
+import { iconPath } from "../MSUser/iconPath.oa.mjs";
 // export { id_oc_storage } from "../LdapSchema2ldifMicrosoft/id-oc-storage.va.mjs";
 
 
@@ -104,7 +107,7 @@ const storage: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ connectionPoint, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ moniker, monikerDisplayName, iconPath, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "storage" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_storage /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

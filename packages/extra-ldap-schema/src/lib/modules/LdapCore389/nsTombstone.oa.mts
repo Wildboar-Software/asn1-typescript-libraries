@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsTombstone } from "../LdapCore389/id-oc-nsTombstone.va.mjs";
+import { nstombstonecsn } from "../LdapCore389/nstombstonecsn.oa.mjs";
+import { nsParentUniqueId } from "../LdapCore389/nsParentUniqueId.oa.mjs";
+import { nscpEntryDN } from "../LdapCore389/nscpEntryDN.oa.mjs";
 // export { id_oc_nsTombstone } from "../LdapCore389/id-oc-nsTombstone.va.mjs";
 
 
@@ -105,7 +108,7 @@ const nsTombstone: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nstombstonecsn, nsParentUniqueId, nscpEntryDN, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsTombstone" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsTombstone /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetDomainAuthInfo } from "../Ldapmigration55imsIcal/id-oc-inetDomainAuthInfo.va.mjs";
+import { inetDomainSearchFilter } from "../Ldapmigration55imsIcal/inetDomainSearchFilter.oa.mjs";
+import { inetDomainCertMap } from "../Ldapmigration55imsIcal/inetDomainCertMap.oa.mjs";
+import { domainUidSeparator } from "../Ldapmigration55imsIcal/domainUidSeparator.oa.mjs";
+import { inetCanonicalDomainName } from "../Ldapmigration55imsIcal/inetCanonicalDomainName.oa.mjs";
+import { externalAuthPreUrlTemplate } from "../Ldapmigration55imsIcal/externalAuthPreUrlTemplate.oa.mjs";
+import { externalAuthPostUrlTemplate } from "../Ldapmigration55imsIcal/externalAuthPostUrlTemplate.oa.mjs";
 // export { id_oc_inetDomainAuthInfo } from "../Ldapmigration55imsIcal/id-oc-inetDomainAuthInfo.va.mjs";
 
 
@@ -110,7 +116,7 @@ const inetDomainAuthInfo: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ inetDomainSearchFilter, inetDomainCertMap, domainUidSeparator, inetCanonicalDomainName, externalAuthPreUrlTemplate, externalAuthPostUrlTemplate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetDomainAuthInfo" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for misc hosted domain attributes" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetDomainAuthInfo /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

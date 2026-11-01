@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { species } from "../LdapWildlife/species.oa.mjs";
 // export { species } from "../LdapWildlife/species.oa.mjs";
 import { id_oc_aves } from "../LdapWildlife/id-oc-aves.va.mjs";
+import { populationCount } from "../LdapWildlife/populationCount.oa.mjs";
+import { extinct } from "../LdapWildlife/extinct.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { id_oc_aves } from "../LdapWildlife/id-oc-aves.va.mjs";
 
 
@@ -109,7 +112,7 @@ const aves: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ species, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ populationCount, extinct, commonName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "aves" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Birds" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_aves /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,13 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_displayTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-displayTemplate.va.mjs";
+import { helpData32 } from "../MSUser/helpData32.oa.mjs";
+import { originalDisplayTableMSDOS } from "../MSUser/originalDisplayTableMSDOS.oa.mjs";
+import { addressEntryDisplayTable } from "../MSUser/addressEntryDisplayTable.oa.mjs";
+import { helpFileName } from "../MSUser/helpFileName.oa.mjs";
+import { addressEntryDisplayTableMSDOS } from "../MSUser/addressEntryDisplayTableMSDOS.oa.mjs";
+import { helpData16 } from "../MSUser/helpData16.oa.mjs";
+import { originalDisplayTable } from "../MSUser/originalDisplayTable.oa.mjs";
 // export { id_oc_displayTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-displayTemplate.va.mjs";
 
 
@@ -112,7 +119,7 @@ const displayTemplate: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ helpData32, originalDisplayTableMSDOS, addressEntryDisplayTable, helpFileName, addressEntryDisplayTableMSDOS, helpData16, originalDisplayTable, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "displayTemplate" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_displayTemplate /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

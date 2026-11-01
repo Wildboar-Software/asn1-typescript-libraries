@@ -73,6 +73,20 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_fasUser } from "../LdapFasschema/id-oc-fasUser.va.mjs";
+import { fasTimezone } from "../LdapFasschema/fasTimezone.oa.mjs";
+import { fasLocale } from "../LdapFasschema/fasLocale.oa.mjs";
+import { fasIRCNick } from "../LdapFasschema/fasIRCNick.oa.mjs";
+import { fasGPGKeyId } from "../LdapFasschema/fasGPGKeyId.oa.mjs";
+import { fasCreationTime } from "../LdapFasschema/fasCreationTime.oa.mjs";
+import { fasStatusNote } from "../LdapFasschema/fasStatusNote.oa.mjs";
+import { fasRHBZEmail } from "../LdapFasschema/fasRHBZEmail.oa.mjs";
+import { fasGitHubUsername } from "../LdapFasschema/fasGitHubUsername.oa.mjs";
+import { fasGitLabUsername } from "../LdapFasschema/fasGitLabUsername.oa.mjs";
+import { fasWebsiteUrl } from "../LdapFasschema/fasWebsiteUrl.oa.mjs";
+import { fasIsPrivate } from "../LdapFasschema/fasIsPrivate.oa.mjs";
+import { fasPronoun } from "../LdapFasschema/fasPronoun.oa.mjs";
+import { fasRssUrl } from "../LdapFasschema/fasRssUrl.oa.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
 // export { id_oc_fasUser } from "../LdapFasschema/id-oc-fasUser.va.mjs";
 
 
@@ -118,7 +132,7 @@ const fasUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fasTimezone, fasLocale, fasIRCNick, fasGPGKeyId, fasCreationTime, fasStatusNote, fasRHBZEmail, fasGitHubUsername, fasGitLabUsername, fasWebsiteUrl, fasIsPrivate, fasPronoun, fasRssUrl, countryName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "fasUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "FAS user objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_fasUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_dMD } from "../LdapSchema2ldifMicrosoft/id-oc-dMD.va.mjs";
+import { dmdName } from "../LdapSchema2ldifMicrosoft/dmdName.oa.mjs";
+import { schemaUpdate } from "../MSUser/schemaUpdate.oa.mjs";
+import { prefixMap } from "../MSUser/prefixMap.oa.mjs";
+import { schemaInfo } from "../MSUser/schemaInfo.oa.mjs";
 // export { id_oc_dMD } from "../LdapSchema2ldifMicrosoft/id-oc-dMD.va.mjs";
 
 
@@ -109,7 +113,7 @@ const dMD: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dmdName, schemaUpdate, prefixMap, schemaInfo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dMD" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dMD /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

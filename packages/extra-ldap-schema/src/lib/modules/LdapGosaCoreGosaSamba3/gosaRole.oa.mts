@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { id_oc_gosaRole } from "../LdapGosaCoreGosaSamba3/id-oc-gosaRole.va.mjs";
+import { gosaAclTemplate } from "../LdapGosaCoreGosaSamba3/gosaAclTemplate.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { id_oc_gosaRole } from "../LdapGosaCoreGosaSamba3/id-oc-gosaRole.va.mjs";
 
 
@@ -107,7 +109,7 @@ const gosaRole: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gosaAclTemplate, commonName, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaRole" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "ACL container to define roles (v2.7)" /* OBJECT_FIELD_SETTING */,

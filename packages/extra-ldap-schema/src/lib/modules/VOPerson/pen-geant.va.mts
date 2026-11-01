@@ -1,4 +1,7 @@
 /* eslint-disable */
+import {
+    type INTEGER
+} from "@wildboar/asn1";
 
 
 
@@ -15,6 +18,6 @@
  * @constant
  */
 export
-const pen_geant: PrivateEnterpriseNumber = 25178;
+const pen_geant: number = 25178 satisfies INTEGER;
 
 /* eslint-enable */

@@ -75,6 +75,13 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nsdsoc } from "../DynGroup/id-nsdsoc.va.mjs";
+import { memberURL } from "../DynGroup/memberURL.oa.mjs";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
 // export { id_nsdsoc } from "../DynGroup/id-nsdsoc.va.mjs";
 
 
@@ -117,7 +124,7 @@ const groupOfURLs: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ memberURL, businessCategory, description, organizationName, organizationalUnitName, owner, seeAlso, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "groupOfURLs" ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([33,], id_nsdsoc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

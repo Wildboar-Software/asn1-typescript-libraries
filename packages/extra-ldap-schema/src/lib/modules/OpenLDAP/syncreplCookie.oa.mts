@@ -12,6 +12,7 @@ import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.
 import { octetStringOrderingMatch } from "../SelectedAttributeTypes/octetStringOrderingMatch.oa.mjs";
 // export { octetStringOrderingMatch } from "../SelectedAttributeTypes/octetStringOrderingMatch.oa.mjs";
 import { octetStringSubstringsMatch } from "../SelectedAttributeTypes/octetStringSubstringsMatch.oa.mjs";
+import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 // export { octetStringSubstringsMatch } from "../SelectedAttributeTypes/octetStringSubstringsMatch.oa.mjs";
 
 

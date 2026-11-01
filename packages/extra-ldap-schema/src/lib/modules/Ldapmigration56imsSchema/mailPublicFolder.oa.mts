@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { mailFolderName } from "../Ldapmigration56imsSchema/mailFolderName.oa.mjs";
 // export { mailFolderName } from "../Ldapmigration56imsSchema/mailFolderName.oa.mjs";
 import { id_oc_mailPublicFolder } from "../Ldapmigration56imsSchema/id-oc-mailPublicFolder.va.mjs";
+import { mailMessageStore } from "../QMailSchema/mailMessageStore.oa.mjs";
+import { mailFolderDefaultAcl } from "../Ldapmigration56imsSchema/mailFolderDefaultAcl.oa.mjs";
+import { mailDeliveryOption } from "../Ldapmigration50nsMail/mailDeliveryOption.oa.mjs";
+import { mailQuota } from "../LdapDbmail/mailQuota.oa.mjs";
+import { mailMsgQuota } from "../Ldapmigration56imsSchema/mailMsgQuota.oa.mjs";
 // export { id_oc_mailPublicFolder } from "../Ldapmigration56imsSchema/id-oc-mailPublicFolder.va.mjs";
 
 
@@ -111,7 +116,7 @@ const mailPublicFolder: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ mailFolderName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailMessageStore, mailFolderDefaultAcl, mailDeliveryOption, mailQuota, mailMsgQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailPublicFolder" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "structural class for defining public folders" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailPublicFolder /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

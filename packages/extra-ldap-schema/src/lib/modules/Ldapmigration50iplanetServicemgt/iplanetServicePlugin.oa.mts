@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 // export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_oc_iplanetServicePlugin } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetServicePlugin.va.mjs";
+import { iplanetPluginID } from "../Ldapmigration50iplanetServicemgt/iplanetPluginID.oa.mjs";
+import { iplanetKeyValue } from "../Ldapmigration50iplanetServicemgt/iplanetKeyValue.oa.mjs";
+import { iplanetXMLKeyValue } from "../Ldapmigration50iplanetServicemgt/iplanetXMLKeyValue.oa.mjs";
+import { iplanetSMSPriority } from "../Ldapmigration50iplanetServicemgt/iplanetSMSPriority.oa.mjs";
 // export { id_oc_iplanetServicePlugin } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetServicePlugin.va.mjs";
 
 
@@ -110,7 +114,7 @@ const iplanetServicePlugin: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanetPluginID, iplanetKeyValue, iplanetXMLKeyValue, iplanetSMSPriority, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanetServicePlugin" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Object that stores information specific to service plugins" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanetServicePlugin /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,16 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_sunIMUser } from "../Ldapmigration65im/id-oc-sunIMUser.va.mjs";
+import { sunIMUserPrivateSettings } from "../Ldapmigration65im/sunIMUserPrivateSettings.oa.mjs";
+import { sunIMUserProperties } from "../Ldapmigration65im/sunIMUserProperties.oa.mjs";
+import { sunIMUserRoster } from "../Ldapmigration65im/sunIMUserRoster.oa.mjs";
+import { sunIMUserConferenceRoster } from "../Ldapmigration65im/sunIMUserConferenceRoster.oa.mjs";
+import { sunIMUserNewsRoster } from "../Ldapmigration65im/sunIMUserNewsRoster.oa.mjs";
+import { sunIMPrivateSettings } from "../Ldapmigration65im/sunIMPrivateSettings.oa.mjs";
+import { sunIMProperties } from "../Ldapmigration65im/sunIMProperties.oa.mjs";
+import { sunIMRoster } from "../Ldapmigration65im/sunIMRoster.oa.mjs";
+import { sunIMConferenceRoster } from "../Ldapmigration65im/sunIMConferenceRoster.oa.mjs";
+import { sunIMNewsRoster } from "../Ldapmigration65im/sunIMNewsRoster.oa.mjs";
 // export { id_oc_sunIMUser } from "../Ldapmigration65im/id-oc-sunIMUser.va.mjs";
 
 
@@ -114,7 +124,7 @@ const sunIMUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunIMUserPrivateSettings, sunIMUserProperties, sunIMUserRoster, sunIMUserConferenceRoster, sunIMUserNewsRoster, sunIMPrivateSettings, sunIMProperties, sunIMRoster, sunIMConferenceRoster, sunIMNewsRoster, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunIMUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Instant Message Service User" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunIMUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

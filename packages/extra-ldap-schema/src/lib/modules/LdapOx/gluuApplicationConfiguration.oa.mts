@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_gluuApplicationConfiguration } from "../LdapOx/id-oc-gluuApplicationConfiguration.va.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { gluuConfDynamic } from "../LdapOx/gluuConfDynamic.oa.mjs";
+import { gluuConfStatic } from "../LdapOx/gluuConfStatic.oa.mjs";
+import { oxRevision } from "../LdapOx/oxRevision.oa.mjs";
 // export { id_oc_gluuApplicationConfiguration } from "../LdapOx/id-oc-gluuApplicationConfiguration.va.mjs";
 
 
@@ -109,7 +113,7 @@ const gluuApplicationConfiguration: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ organizationalUnitName, gluuConfDynamic, gluuConfStatic, oxRevision, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gluuApplicationConfiguration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gluuApplicationConfiguration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

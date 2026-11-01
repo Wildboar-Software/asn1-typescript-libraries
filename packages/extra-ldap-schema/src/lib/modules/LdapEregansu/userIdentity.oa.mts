@@ -73,6 +73,18 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_userIdentity } from "../LdapEregansu/id-oc-userIdentity.va.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userIRI } from "../LdapEregansu/userIRI.oa.mjs";
+import { userPermission } from "../LdapEregansu/userPermission.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { surname } from "../SelectedAttributeTypes/surname.oa.mjs";
+import { initials } from "../SelectedAttributeTypes/initials.oa.mjs";
+import { generationQualifier } from "../SelectedAttributeTypes/generationQualifier.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { photo } from "../LdapSchema2ldifCosine/photo.oa.mjs";
 // export { id_oc_userIdentity } from "../LdapEregansu/id-oc-userIdentity.va.mjs";
 
 
@@ -116,8 +128,8 @@ const userIdentity: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, userIRI, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPermission, givenName, surname, initials, generationQualifier, userPassword, userCertificate, cACertificate, mail, photo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "userIdentity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Eregansu user identity" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_userIdentity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

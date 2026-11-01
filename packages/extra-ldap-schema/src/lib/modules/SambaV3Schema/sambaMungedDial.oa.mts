@@ -8,6 +8,7 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 import { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 // export { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
+import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 // export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 
 

@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 // export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 import { id_oc_dnsNode } from "../LdapSchema2ldifMicrosoft/id-oc-dnsNode.va.mjs";
+import { dnsRecord } from "../MSUser/dnsRecord.oa.mjs";
+import { dNSProperty } from "../MSUser/dNSProperty.oa.mjs";
+import { dNSTombstoned } from "../MSUser/dNSTombstoned.oa.mjs";
 // export { id_oc_dnsNode } from "../LdapSchema2ldifMicrosoft/id-oc-dnsNode.va.mjs";
 
 
@@ -108,7 +111,7 @@ const dnsNode: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ dc, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnsRecord, dNSProperty, dNSTombstoned, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dnsNode" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dnsNode /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

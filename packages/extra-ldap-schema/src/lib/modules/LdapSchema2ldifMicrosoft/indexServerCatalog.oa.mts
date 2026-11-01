@@ -75,6 +75,10 @@ import { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.m
 import { creator } from "../MSUser/creator.oa.mjs";
 // export { creator } from "../MSUser/creator.oa.mjs";
 import { id_oc_indexServerCatalog } from "../LdapSchema2ldifMicrosoft/id-oc-indexServerCatalog.va.mjs";
+import { uNCName } from "../MSUser/uNCName.oa.mjs";
+import { queryPoint } from "../MSUser/queryPoint.oa.mjs";
+import { indexedScopes } from "../MSUser/indexedScopes.oa.mjs";
+import { friendlyNames } from "../MSUser/friendlyNames.oa.mjs";
 // export { id_oc_indexServerCatalog } from "../LdapSchema2ldifMicrosoft/id-oc-indexServerCatalog.va.mjs";
 
 
@@ -109,7 +113,7 @@ const indexServerCatalog: OBJECT_CLASS = {
     },
     "&Superclasses": [ connectionPoint, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ creator, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uNCName, queryPoint, indexedScopes, friendlyNames, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "indexServerCatalog" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_indexServerCatalog /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

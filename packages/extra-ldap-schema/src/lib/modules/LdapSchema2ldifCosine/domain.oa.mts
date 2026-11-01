@@ -75,6 +75,29 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 // export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 import { id_oc_domain } from "../LdapSchema2ldifCosine/id-oc-domain.va.mjs";
+import { associatedName } from "../LdapSchema2ldifCosine/associatedName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { businessCategory } from "../SelectedAttributeTypes/businessCategory.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { searchGuide } from "../SelectedAttributeTypes/searchGuide.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { stateOrProvinceName } from "../SelectedAttributeTypes/stateOrProvinceName.oa.mjs";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
+import { physicalDeliveryOfficeName } from "../SelectedAttributeTypes/physicalDeliveryOfficeName.oa.mjs";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
+import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";
+import { postOfficeBox } from "../SelectedAttributeTypes/postOfficeBox.oa.mjs";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
+import { internationalISDNNumber } from "../SelectedAttributeTypes/internationalISDNNumber.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { teletexTerminalIdentifier } from "../LdapSchema2ldifCore/teletexTerminalIdentifier.oa.mjs";
+import { telexNumber } from "../SelectedAttributeTypes/telexNumber.oa.mjs";
+import { preferredDeliveryMethod } from "../SelectedAttributeTypes/preferredDeliveryMethod.oa.mjs";
+import { destinationIndicator } from "../SelectedAttributeTypes/destinationIndicator.oa.mjs";
+import { registeredAddress } from "../SelectedAttributeTypes/registeredAddress.oa.mjs";
+import { x121Address } from "../SelectedAttributeTypes/x121Address.oa.mjs";
 // export { id_oc_domain } from "../LdapSchema2ldifCosine/id-oc-domain.va.mjs";
 
 
@@ -129,7 +152,7 @@ const domain: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ dc, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ associatedName, organizationName, description, businessCategory, seeAlso, searchGuide, userPassword, localityName, stateOrProvinceName, streetAddress, physicalDeliveryOfficeName, postalAddress, postalCode, postOfficeBox, streetAddress, facsimileTelephoneNumber, internationalISDNNumber, telephoneNumber, teletexTerminalIdentifier, telexNumber, preferredDeliveryMethod, destinationIndicator, registeredAddress, x121Address, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "domain" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_domain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

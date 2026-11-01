@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxProxClient } from "../LdapOx/id-oc-oxProxClient.va.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { oxProxyClaimMapping } from "../LdapOx/oxProxyClaimMapping.oa.mjs";
+import { oxProxyScope } from "../LdapOx/oxProxyScope.oa.mjs";
+import { oxProxyToOpClientMapping } from "../LdapOx/oxProxyToOpClientMapping.oa.mjs";
 // export { id_oc_oxProxClient } from "../LdapOx/id-oc-oxProxClient.va.mjs";
 
 
@@ -110,7 +115,7 @@ const oxProxClient: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ displayName, inum, oxProxyClaimMapping, oxProxyScope, oxProxyToOpClientMapping, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxProxClient" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxProxClient /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

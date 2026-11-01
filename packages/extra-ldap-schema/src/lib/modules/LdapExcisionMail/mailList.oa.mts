@@ -75,6 +75,12 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 // export { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 import { id_oc_mailList } from "../LdapExcisionMail/id-oc-mailList.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { memberURL } from "../DynGroup/memberURL.oa.mjs";
+import { accountStatus } from "../LdapExcisionMail/accountStatus.oa.mjs";
+import { blockList } from "../LdapExcisionMail/blockList.oa.mjs";
+import { allowList } from "../LdapExcisionMail/allowList.oa.mjs";
+import { mailSetting } from "../LdapExcisionMail/mailSetting.oa.mjs";
 // export { id_oc_mailList } from "../LdapExcisionMail/id-oc-mailList.va.mjs";
 
 
@@ -112,7 +118,7 @@ const mailList: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ mail, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, memberURL, accountStatus, blockList, allowList, mailSetting, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailList" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of a mailing list" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailList /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

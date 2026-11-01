@@ -75,6 +75,15 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxAuthUmaRPT } from "../LdapOx/id-oc-oxAuthUmaRPT.va.mjs";
+import { authnTime } from "../LdapOx/authnTime.oa.mjs";
+import { clnId } from "../LdapOx/clnId.oa.mjs";
+import { iat } from "../LdapOx/iat.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { tknCde } from "../LdapOx/tknCde.oa.mjs";
+import { oxAuthUserId } from "../LdapOx/oxAuthUserId.oa.mjs";
+import { oxUmaPermission } from "../LdapOx/oxUmaPermission.oa.mjs";
+import { uuid } from "../LdapOx/uuid.oa.mjs";
 // export { id_oc_oxAuthUmaRPT } from "../LdapOx/id-oc-oxAuthUmaRPT.va.mjs";
 
 
@@ -114,7 +123,7 @@ const oxAuthUmaRPT: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ authnTime, clnId, iat, exp, del, tknCde, oxAuthUserId, oxUmaPermission, uuid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxAuthUmaRPT" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxAuthUmaRPT /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,12 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_kopano_dynamicgroup } from "../LdapKopano/id-oc-kopano-dynamicgroup.va.mjs";
+import { kopanoAccount } from "../LdapKopano/kopanoAccount.oa.mjs";
+import { kopanoHidden } from "../LdapKopano/kopanoHidden.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { kopanoAliases } from "../LdapKopano/kopanoAliases.oa.mjs";
+import { kopanoFilter } from "../LdapKopano/kopanoFilter.oa.mjs";
+import { kopanoBase } from "../LdapKopano/kopanoBase.oa.mjs";
 // export { id_oc_kopano_dynamicgroup } from "../LdapKopano/id-oc-kopano-dynamicgroup.va.mjs";
 
 
@@ -112,7 +118,7 @@ const kopano_dynamicgroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ kopanoAccount, kopanoHidden, mail, kopanoAliases, kopanoFilter, kopanoBase, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kopano-dynamicgroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "KOPANO: a Kopano dynamic group" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kopano_dynamicgroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

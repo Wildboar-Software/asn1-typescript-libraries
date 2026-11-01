@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
 // export { gLUE2Endpoint } from "../LdapGlue507Endpoint/gLUE2Endpoint.oa.mjs";
 import { id_oc_gLUE2ComputingEndpoint } from "../LdapGlue602ComputingEndpoint/id-oc-gLUE2ComputingEndpoint.va.mjs";
+import { gLUE2ComputingEndpointStaging } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointStaging.oa.mjs";
+import { gLUE2ComputingEndpointJobDescription } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointJobDescription.oa.mjs";
+import { gLUE2ComputingEndpointTotalJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointTotalJobs.oa.mjs";
+import { gLUE2ComputingEndpointRunningJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointRunningJobs.oa.mjs";
+import { gLUE2ComputingEndpointWaitingJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointWaitingJobs.oa.mjs";
+import { gLUE2ComputingEndpointStagingJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointStagingJobs.oa.mjs";
+import { gLUE2ComputingEndpointSuspendedJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointSuspendedJobs.oa.mjs";
+import { gLUE2ComputingEndpointPreLRMSWaitingJobs } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointPreLRMSWaitingJobs.oa.mjs";
+import { gLUE2ComputingEndpointComputingServiceForeignKey } from "../LdapGlue602ComputingEndpoint/gLUE2ComputingEndpointComputingServiceForeignKey.oa.mjs";
 // export { id_oc_gLUE2ComputingEndpoint } from "../LdapGlue602ComputingEndpoint/id-oc-gLUE2ComputingEndpoint.va.mjs";
 
 
@@ -111,7 +120,7 @@ const gLUE2ComputingEndpoint: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Endpoint, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ComputingEndpointStaging, gLUE2ComputingEndpointJobDescription, gLUE2ComputingEndpointTotalJobs, gLUE2ComputingEndpointRunningJobs, gLUE2ComputingEndpointWaitingJobs, gLUE2ComputingEndpointStagingJobs, gLUE2ComputingEndpointSuspendedJobs, gLUE2ComputingEndpointPreLRMSWaitingJobs, gLUE2ComputingEndpointComputingServiceForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2ComputingEndpoint" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Endpoint for creating, monitoring, and controlling computational activities called jobs; it can be used to expose also complementary capabilities (e.g., reservation, proxy manipulation)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2ComputingEndpoint /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_soniaMapping } from "../Ldapmigration97sonia/id-oc-soniaMapping.va.mjs";
+import { soniaMappingKey } from "../Ldapmigration97sonia/soniaMappingKey.oa.mjs";
+import { soniaMappingName } from "../Ldapmigration97sonia/soniaMappingName.oa.mjs";
+import { soniaMappingDescription } from "../Ldapmigration97sonia/soniaMappingDescription.oa.mjs";
+import { soniaMappingTypeKey } from "../Ldapmigration97sonia/soniaMappingTypeKey.oa.mjs";
 // export { id_oc_soniaMapping } from "../Ldapmigration97sonia/id-oc-soniaMapping.va.mjs";
 
 
@@ -107,7 +111,7 @@ const soniaMapping: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaMappingKey, soniaMappingName, soniaMappingDescription, soniaMappingTypeKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaMapping" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaMapping /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

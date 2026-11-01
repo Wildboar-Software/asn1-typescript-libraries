@@ -73,6 +73,20 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_apple_group } from "../LdapSchema2ldifApple/id-oc-apple-group.va.mjs";
+import { apple_group_homeurl } from "../LdapSchema2ldifApple/apple-group-homeurl.oa.mjs";
+import { apple_group_homeowner } from "../LdapSchema2ldifApple/apple-group-homeowner.oa.mjs";
+import { apple_mcxflags } from "../LdapSchema2ldifApple/apple-mcxflags.oa.mjs";
+import { apple_mcxsettings } from "../LdapSchema2ldifApple/apple-mcxsettings.oa.mjs";
+import { apple_group_realname } from "../LdapSchema2ldifApple/apple-group-realname.oa.mjs";
+import { apple_user_picture } from "../LdapSchema2ldifApple/apple-user-picture.oa.mjs";
+import { apple_keyword } from "../LdapSchema2ldifApple/apple-keyword.oa.mjs";
+import { apple_generateduid } from "../LdapSchema2ldifApple/apple-generateduid.oa.mjs";
+import { apple_group_nestedgroup } from "../LdapSchema2ldifApple/apple-group-nestedgroup.oa.mjs";
+import { apple_group_memberguid } from "../LdapSchema2ldifApple/apple-group-memberguid.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { rid } from "../SambaSchema/rid.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
+import { ttl } from "../LdapCommon389/ttl.oa.mjs";
 // export { id_oc_apple_group } from "../LdapSchema2ldifApple/id-oc-apple-group.va.mjs";
 
 
@@ -118,7 +132,7 @@ const apple_group: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ apple_group_homeurl, apple_group_homeowner, apple_mcxflags, apple_mcxsettings, apple_group_realname, apple_user_picture, apple_keyword, apple_generateduid, apple_group_nestedgroup, apple_group_memberguid, mail, rid, sambaSID, ttl, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-group" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "group account" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_group /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

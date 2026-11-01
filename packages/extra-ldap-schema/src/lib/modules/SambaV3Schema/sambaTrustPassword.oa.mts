@@ -71,6 +71,11 @@ import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /*
 // export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
+import { sambaDomainName } from "../SambaV3Schema/sambaDomainName.oa.mjs";
+import { sambaNTPassword } from "../SambaV3Schema/sambaNTPassword.oa.mjs";
+import { sambaTrustFlags } from "../SambaV3Schema/sambaTrustFlags.oa.mjs";
+import { sambaPwdLastSet } from "../SambaV3Schema/sambaPwdLastSet.oa.mjs";
+import { sambaSID } from "../SambaV3Schema/sambaSID.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 
 
@@ -103,8 +108,8 @@ const sambaTrustPassword: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ sambaDomainName, sambaNTPassword, sambaTrustFlags, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sambaPwdLastSet, sambaSID, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sambaTrustPassword" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Samba Trust Password" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7165, 2, 2, 14,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

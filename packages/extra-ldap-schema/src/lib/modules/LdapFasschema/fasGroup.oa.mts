@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ipaUserGroup } from "../Ldap60basev2/ipaUserGroup.oa.mjs";
 // export { ipaUserGroup } from "../Ldap60basev2/ipaUserGroup.oa.mjs";
 import { id_oc_fasGroup } from "../LdapFasschema/id-oc-fasGroup.va.mjs";
+import { fasURL } from "../LdapFasschema/fasURL.oa.mjs";
+import { fasMailingList } from "../LdapFasschema/fasMailingList.oa.mjs";
+import { fasIRCChannel } from "../LdapFasschema/fasIRCChannel.oa.mjs";
+import { fasDiscussionURL } from "../LdapFasschema/fasDiscussionURL.oa.mjs";
 // export { id_oc_fasGroup } from "../LdapFasschema/id-oc-fasGroup.va.mjs";
 
 
@@ -108,7 +112,7 @@ const fasGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ ipaUserGroup, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fasURL, fasMailingList, fasIRCChannel, fasDiscussionURL, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "fasGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "FAS group objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_fasGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

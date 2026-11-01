@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
 // export { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
 import { id_oc_tjhsstRoom } from "../LdapIodine/id-oc-tjhsstRoom.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
 // export { id_oc_tjhsstRoom } from "../LdapIodine/id-oc-tjhsstRoom.va.mjs";
 
 
@@ -108,7 +111,7 @@ const tjhsstRoom: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ roomNumber, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, description, displayName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tjhsstRoom" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tjhsstRoom /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

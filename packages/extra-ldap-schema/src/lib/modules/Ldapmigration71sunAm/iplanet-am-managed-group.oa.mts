@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_iplanet_am_managed_group } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-group.va.mjs";
+import { iplanet_am_group_subscribable } from "../Ldapmigration71sunAm/iplanet-am-group-subscribable.oa.mjs";
+import { inetgroupstatus } from "../Ldapmigration70delgatedAdmin/inetgroupstatus.oa.mjs";
 // export { id_oc_iplanet_am_managed_group } from "../Ldapmigration71sunAm/id-oc-iplanet-am-managed-group.va.mjs";
 
 
@@ -106,7 +108,7 @@ const iplanet_am_managed_group: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanet_am_group_subscribable, inetgroupstatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanet-am-managed-group" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Managed Group OC" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanet_am_managed_group /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

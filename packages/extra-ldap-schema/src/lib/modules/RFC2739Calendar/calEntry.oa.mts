@@ -73,6 +73,14 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { msoc } from "../RFC2739Calendar/msoc.va.mjs";
+import { calCalURI } from "../RFC2739Calendar/calCalURI.oa.mjs";
+import { calFBURL } from "../RFC2739Calendar/calFBURL.oa.mjs";
+import { calCAPURI } from "../RFC2739Calendar/calCAPURI.oa.mjs";
+import { calCalAdrURI } from "../RFC2739Calendar/calCalAdrURI.oa.mjs";
+import { calOtherCalURIs } from "../RFC2739Calendar/calOtherCalURIs.oa.mjs";
+import { calOtherFBURLs } from "../RFC2739Calendar/calOtherFBURLs.oa.mjs";
+import { calOtherCAPURIs } from "../RFC2739Calendar/calOtherCAPURIs.oa.mjs";
+import { calOtherCalAdrURIs } from "../RFC2739Calendar/calOtherCalAdrURIs.oa.mjs";
 // export { msoc } from "../RFC2739Calendar/msoc.va.mjs";
 
 
@@ -115,7 +123,7 @@ const calEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ calCalURI, calFBURL, calCAPURI, calCalAdrURI, calOtherCalURIs, calOtherFBURLs, calOtherCAPURIs, calOtherCalAdrURIs, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "calEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Calendering and free/busy information" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([87,], msoc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

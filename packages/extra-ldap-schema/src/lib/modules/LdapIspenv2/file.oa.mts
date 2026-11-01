@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { fileName } from "../LdapIspenv2/fileName.oa.mjs";
 // export { fileName } from "../LdapIspenv2/fileName.oa.mjs";
 import { id_oc_file } from "../LdapIspenv2/id-oc-file.va.mjs";
+import { filePath } from "../LdapIspenv2/filePath.oa.mjs";
+import { filePerm } from "../LdapIspenv2/filePerm.oa.mjs";
+import { fileContent } from "../LdapIspenv2/fileContent.oa.mjs";
+import { fileType } from "../LdapIspenv2/fileType.oa.mjs";
 // export { id_oc_file } from "../LdapIspenv2/id-oc-file.va.mjs";
 
 
@@ -110,7 +114,7 @@ const file: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ fileName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ filePath, filePerm, fileContent, fileType, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "file" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Used to store files in LDAP" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_file /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsLicenseUser } from "../LdapCommon389/id-oc-nsLicenseUser.va.mjs";
+import { nsLicensedFor } from "../LdapCommon389/nsLicensedFor.oa.mjs";
+import { nsLicenseStartTime } from "../LdapCommon389/nsLicenseStartTime.oa.mjs";
+import { nsLicenseEndTime } from "../LdapCommon389/nsLicenseEndTime.oa.mjs";
 // export { id_oc_nsLicenseUser } from "../LdapCommon389/id-oc-nsLicenseUser.va.mjs";
 
 
@@ -105,7 +108,7 @@ const nsLicenseUser: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsLicensedFor, nsLicenseStartTime, nsLicenseEndTime, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsLicenseUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsLicenseUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

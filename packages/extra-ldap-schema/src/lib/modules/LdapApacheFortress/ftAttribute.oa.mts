@@ -73,6 +73,16 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 // export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 import { id_oc_ftAttribute } from "../LdapApacheFortress/id-oc-ftAttribute.va.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftPASet } from "../LdapApacheFortress/ftPASet.oa.mjs";
+import { ftPA } from "../LdapApacheFortress/ftPA.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { ftPADataType } from "../LdapApacheFortress/ftPADataType.oa.mjs";
+import { ftPADefaultValue } from "../LdapApacheFortress/ftPADefaultValue.oa.mjs";
+import { ftPADefaultStrategy } from "../LdapApacheFortress/ftPADefaultStrategy.oa.mjs";
+import { ftPADefaultOperator } from "../LdapApacheFortress/ftPADefaultOperator.oa.mjs";
+import { ftPAValidVals } from "../LdapApacheFortress/ftPAValidVals.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_ftAttribute } from "../LdapApacheFortress/id-oc-ftAttribute.va.mjs";
 
 
@@ -112,8 +122,8 @@ const ftAttribute: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ftPASet, ftPA, commonName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftPADataType, ftPADefaultValue, ftPADefaultStrategy, ftPADefaultOperator, ftPAValidVals, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftAttribute" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Attribute Structural Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftAttribute /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

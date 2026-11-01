@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_mSMQEnterpriseSettings } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQEnterpriseSettings.va.mjs";
+import { mSMQNameStyle } from "../MSUser/mSMQNameStyle.oa.mjs";
+import { mSMQCSPName } from "../MSUser/mSMQCSPName.oa.mjs";
+import { mSMQLongLived } from "../MSUser/mSMQLongLived.oa.mjs";
+import { mSMQVersion } from "../MSUser/mSMQVersion.oa.mjs";
+import { mSMQInterval1 } from "../MSUser/mSMQInterval1.oa.mjs";
+import { mSMQInterval2 } from "../MSUser/mSMQInterval2.oa.mjs";
 // export { id_oc_mSMQEnterpriseSettings } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQEnterpriseSettings.va.mjs";
 
 
@@ -107,7 +113,7 @@ const mSMQEnterpriseSettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mSMQNameStyle, mSMQCSPName, mSMQLongLived, mSMQVersion, mSMQInterval1, mSMQInterval2, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mSMQEnterpriseSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mSMQEnterpriseSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

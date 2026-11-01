@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Service } from "../LdapGlue506Service/gLUE2Service.oa.mjs";
 // export { gLUE2Service } from "../LdapGlue506Service/gLUE2Service.oa.mjs";
 import { id_oc_gLUE2ComputingService } from "../LdapGlue601ComputingService/id-oc-gLUE2ComputingService.va.mjs";
+import { gLUE2ComputingServiceTotalJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceTotalJobs.oa.mjs";
+import { gLUE2ComputingServiceRunningJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceRunningJobs.oa.mjs";
+import { gLUE2ComputingServiceWaitingJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceWaitingJobs.oa.mjs";
+import { gLUE2ComputingServiceStagingJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceStagingJobs.oa.mjs";
+import { gLUE2ComputingServiceSuspendedJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServiceSuspendedJobs.oa.mjs";
+import { gLUE2ComputingServicePreLRMSWaitingJobs } from "../LdapGlue601ComputingService/gLUE2ComputingServicePreLRMSWaitingJobs.oa.mjs";
 // export { id_oc_gLUE2ComputingService } from "../LdapGlue601ComputingService/id-oc-gLUE2ComputingService.va.mjs";
 
 
@@ -108,7 +114,7 @@ const gLUE2ComputingService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Service, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ComputingServiceTotalJobs, gLUE2ComputingServiceRunningJobs, gLUE2ComputingServiceWaitingJobs, gLUE2ComputingServiceStagingJobs, gLUE2ComputingServiceSuspendedJobs, gLUE2ComputingServicePreLRMSWaitingJobs, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2ComputingService" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "The computing service is autonomous and denotes a weak aggregation among computing endpoints, the underlying computing managers and related execution environments, and the defined computing shares. The computing service enables to identify the whole set of entities providing the computing functionality with a persistent name." /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2ComputingService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

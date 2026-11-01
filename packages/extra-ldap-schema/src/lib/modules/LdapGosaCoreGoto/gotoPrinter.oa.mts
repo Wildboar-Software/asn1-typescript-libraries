@@ -75,6 +75,16 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gotoPrinter } from "../LdapGosaCoreGoto/id-oc-gotoPrinter.va.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { gotoPrinterPPD } from "../LdapGosaCoreGoto/gotoPrinterPPD.oa.mjs";
+import { macAddress } from "../NIS/macAddress.oa.mjs";
+import { ipHostNumber } from "../NIS/ipHostNumber.oa.mjs";
+import { gotoUserPrinter } from "../LdapGosaCoreGoto/gotoUserPrinter.oa.mjs";
+import { gotoUserAdminPrinter } from "../LdapGosaCoreGoto/gotoUserAdminPrinter.oa.mjs";
+import { gotoGroupPrinter } from "../LdapGosaCoreGoto/gotoGroupPrinter.oa.mjs";
+import { gotoGroupAdminPrinter } from "../LdapGosaCoreGoto/gotoGroupAdminPrinter.oa.mjs";
 // export { id_oc_gotoPrinter } from "../LdapGosaCoreGoto/id-oc-gotoPrinter.va.mjs";
 
 
@@ -116,7 +126,7 @@ const gotoPrinter: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ labeledURI, description, localityName, gotoPrinterPPD, macAddress, ipHostNumber, gotoUserPrinter, gotoUserAdminPrinter, gotoGroupPrinter, gotoGroupAdminPrinter, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gotoPrinter" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOto - Gonicus Terminal Concept, objectclass (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gotoPrinter /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

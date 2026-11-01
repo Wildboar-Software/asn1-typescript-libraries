@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_aCSResourceLimits } from "../LdapSchema2ldifMicrosoft/id-oc-aCSResourceLimits.va.mjs";
+import { aCSMaxTokenRatePerFlow } from "../MSUser/aCSMaxTokenRatePerFlow.oa.mjs";
+import { aCSMaxPeakBandwidthPerFlow } from "../MSUser/aCSMaxPeakBandwidthPerFlow.oa.mjs";
+import { aCSServiceType } from "../MSUser/aCSServiceType.oa.mjs";
+import { aCSAllocableRSVPBandwidth } from "../MSUser/aCSAllocableRSVPBandwidth.oa.mjs";
+import { aCSMaxPeakBandwidth } from "../MSUser/aCSMaxPeakBandwidth.oa.mjs";
 // export { id_oc_aCSResourceLimits } from "../LdapSchema2ldifMicrosoft/id-oc-aCSResourceLimits.va.mjs";
 
 
@@ -106,7 +111,7 @@ const aCSResourceLimits: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ aCSMaxTokenRatePerFlow, aCSMaxPeakBandwidthPerFlow, aCSServiceType, aCSAllocableRSVPBandwidth, aCSMaxPeakBandwidth, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "aCSResourceLimits" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_aCSResourceLimits /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

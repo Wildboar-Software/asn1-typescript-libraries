@@ -3,6 +3,7 @@ import {
     ObjectIdentifier as _OID,
     type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
+import { ldap_enterprise as id_pen } from "@wildboar/x500/UsefulDefinitions";
 
 
 

@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 // export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2ApplicationHandle } from "../LdapGlue608ApplicationHandle/id-oc-gLUE2ApplicationHandle.va.mjs";
+import { gLUE2ApplicationHandleID } from "../LdapGlue608ApplicationHandle/gLUE2ApplicationHandleID.oa.mjs";
+import { gLUE2ApplicationHandleType } from "../LdapGlue608ApplicationHandle/gLUE2ApplicationHandleType.oa.mjs";
+import { gLUE2ApplicationHandleValue } from "../LdapGlue608ApplicationHandle/gLUE2ApplicationHandleValue.oa.mjs";
+import { gLUE2ApplicationHandleApplicationEnvironmentForeignKey } from "../LdapGlue608ApplicationHandle/gLUE2ApplicationHandleApplicationEnvironmentForeignKey.oa.mjs";
 // export { id_oc_gLUE2ApplicationHandle } from "../LdapGlue608ApplicationHandle/id-oc-gLUE2ApplicationHandle.va.mjs";
 
 
@@ -106,7 +110,7 @@ const gLUE2ApplicationHandle: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ApplicationHandleID, gLUE2ApplicationHandleType, gLUE2ApplicationHandleValue, gLUE2ApplicationHandleApplicationEnvironmentForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2ApplicationHandle" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Technique for bootstrapping and/or accessing the application" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2ApplicationHandle /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

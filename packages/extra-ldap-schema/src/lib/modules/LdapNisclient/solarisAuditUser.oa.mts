@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_solarisAuditUser } from "../LdapNisclient/id-oc-solarisAuditUser.va.mjs";
+import { solarisAuditAlways } from "../LdapNisclient/solarisAuditAlways.oa.mjs";
+import { solarisAuditNever } from "../LdapNisclient/solarisAuditNever.oa.mjs";
 // export { id_oc_solarisAuditUser } from "../LdapNisclient/id-oc-solarisAuditUser.va.mjs";
 
 
@@ -103,7 +105,7 @@ const solarisAuditUser: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ solarisAuditAlways, solarisAuditNever, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "SolarisAuditUser" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_solarisAuditUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_ftConfig } from "../LdapApacheFortress/id-oc-ftConfig.va.mjs";
+import { ftGidNumber } from "../LdapApacheFortress/ftGidNumber.oa.mjs";
+import { ftUidNumber } from "../LdapApacheFortress/ftUidNumber.oa.mjs";
 // export { id_oc_ftConfig } from "../LdapApacheFortress/id-oc-ftConfig.va.mjs";
 
 
@@ -106,7 +108,7 @@ const ftConfig: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftGidNumber, ftUidNumber, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Config Properties" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxProxConfiguration } from "../LdapOx/id-oc-oxProxConfiguration.va.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { oxScriptDn } from "../LdapOx/oxScriptDn.oa.mjs";
+import { oxProxConf } from "../LdapOx/oxProxConf.oa.mjs";
 // export { id_oc_oxProxConfiguration } from "../LdapOx/id-oc-oxProxConfiguration.va.mjs";
 
 
@@ -108,7 +111,7 @@ const oxProxConfiguration: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ organizationalUnitName, oxProxConf, oxScriptDn, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxProxConfiguration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxProxConfiguration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

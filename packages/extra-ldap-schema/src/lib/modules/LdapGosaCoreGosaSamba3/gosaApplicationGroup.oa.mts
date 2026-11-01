@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gosaApplicationGroup } from "../LdapGosaCoreGosaSamba3/id-oc-gosaApplicationGroup.va.mjs";
+import { gosaMemberApplication } from "../LdapGosaCoreGosaSamba3/gosaMemberApplication.oa.mjs";
+import { gosaApplicationParameter } from "../LdapGosaCoreGosaSamba3/gosaApplicationParameter.oa.mjs";
 // export { id_oc_gosaApplicationGroup } from "../LdapGosaCoreGosaSamba3/id-oc-gosaApplicationGroup.va.mjs";
 
 
@@ -110,7 +112,7 @@ const gosaApplicationGroup: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gosaMemberApplication, gosaApplicationParameter, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaApplicationGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Class for GOsa application groups (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gosaApplicationGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

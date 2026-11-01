@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxSectorIdentifier_2 } from "../LdapOx/id-oc-oxSectorIdentifier-2.va.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { oxAuthRedirectURI } from "../LdapOx/oxAuthRedirectURI.oa.mjs";
+import { oxAuthClientId } from "../LdapOx/oxAuthClientId.oa.mjs";
 // export { id_oc_oxSectorIdentifier_2 } from "../LdapOx/id-oc-oxSectorIdentifier-2.va.mjs";
 
 
@@ -109,7 +113,7 @@ const oxSectorIdentifier_2: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ oxId, description, oxAuthRedirectURI, oxAuthClientId, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxSectorIdentifier" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxSectorIdentifier_2 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

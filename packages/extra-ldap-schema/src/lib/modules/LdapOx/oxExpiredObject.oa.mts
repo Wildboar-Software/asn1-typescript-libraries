@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxExpiredObject } from "../LdapOx/id-oc-oxExpiredObject.va.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { dat } from "../LdapOx/dat.oa.mjs";
+import { iat } from "../LdapOx/iat.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { oxType } from "../LdapOx/oxType.oa.mjs";
 // export { id_oc_oxExpiredObject } from "../LdapOx/id-oc-oxExpiredObject.va.mjs";
 
 
@@ -110,7 +115,7 @@ const oxExpiredObject: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ oxId, dat, iat, exp, oxType, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxExpiredObject" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxExpiredObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

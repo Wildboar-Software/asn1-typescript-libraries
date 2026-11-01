@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ldapSubEntry } from "../LdapSubentry/ldapSubEntry.oa.mjs";
 // export { ldapSubEntry } from "../LdapSubentry/ldapSubEntry.oa.mjs";
 import { id_oc_nsRoleDefinition } from "../LdapCommon389/id-oc-nsRoleDefinition.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { nsRoleScopeDN } from "../LdapCommon389/nsRoleScopeDN.oa.mjs";
 // export { id_oc_nsRoleDefinition } from "../LdapCommon389/id-oc-nsRoleDefinition.va.mjs";
 
 
@@ -104,7 +106,7 @@ const nsRoleDefinition: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ ldapSubEntry, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, nsRoleScopeDN, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsRoleDefinition" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsRoleDefinition /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

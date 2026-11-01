@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { nisNetgroupTriple } from "../NIS/nisNetgroupTriple.oa.mjs";
+import { memberNisNetgroup } from "../NIS/memberNisNetgroup.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -114,7 +117,7 @@ const nisNetgroup: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nisNetgroupTriple, memberNisNetgroup, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nisNetgroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of a netgroup" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([8,], id_nis_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

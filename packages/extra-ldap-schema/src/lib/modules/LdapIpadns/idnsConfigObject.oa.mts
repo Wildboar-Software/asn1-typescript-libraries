@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_idnsConfigObject } from "../LdapIpadns/id-oc-idnsConfigObject.va.mjs";
+import { idnsForwardPolicy } from "../LdapIpadns/idnsForwardPolicy.oa.mjs";
+import { idnsForwarders } from "../LdapIpadns/idnsForwarders.oa.mjs";
+import { idnsAllowSyncPTR } from "../LdapIpadns/idnsAllowSyncPTR.oa.mjs";
+import { idnsZoneRefresh } from "../LdapIpadns/idnsZoneRefresh.oa.mjs";
+import { idnsPersistentSearch } from "../LdapIpadns/idnsPersistentSearch.oa.mjs";
 // export { id_oc_idnsConfigObject } from "../LdapIpadns/id-oc-idnsConfigObject.va.mjs";
 
 
@@ -107,7 +112,7 @@ const idnsConfigObject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ idnsForwardPolicy, idnsForwarders, idnsAllowSyncPTR, idnsZoneRefresh, idnsPersistentSearch, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "idnsConfigObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DNS global config options" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_idnsConfigObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_puppetClient } from "../LdapPuppet/id-oc-puppetClient.va.mjs";
+import { puppetClass } from "../LdapPuppet/puppetClass.oa.mjs";
+import { parentNode } from "../LdapPuppet/parentNode.oa.mjs";
+import { environment } from "../LdapPuppet/environment.oa.mjs";
+import { puppetVar } from "../LdapPuppet/puppetVar.oa.mjs";
 // export { id_oc_puppetClient } from "../LdapPuppet/id-oc-puppetClient.va.mjs";
 
 
@@ -108,7 +112,7 @@ const puppetClient: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ puppetClass, parentNode, environment, puppetVar, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "puppetClient" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Puppet Client objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_puppetClient /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

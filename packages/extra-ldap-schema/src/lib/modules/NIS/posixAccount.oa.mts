@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { loginShell } from "../NIS/loginShell.oa.mjs";
+import { gecos } from "../NIS/gecos.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -118,8 +127,8 @@ const posixAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, uid, uidNumber, gidNumber, homeDirectory, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPassword, loginShell, gecos, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "posixAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of an account with POSIX attributes" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([0,], id_nis_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

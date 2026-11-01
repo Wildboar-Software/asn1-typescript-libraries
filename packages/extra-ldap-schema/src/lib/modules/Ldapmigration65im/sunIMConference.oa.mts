@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_sunIMConference } from "../Ldapmigration65im/id-oc-sunIMConference.va.mjs";
+import { sunIMConferenceAffiliations } from "../Ldapmigration65im/sunIMConferenceAffiliations.oa.mjs";
+import { sunIMConferenceConfiguration } from "../Ldapmigration65im/sunIMConferenceConfiguration.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 // export { id_oc_sunIMConference } from "../Ldapmigration65im/id-oc-sunIMConference.va.mjs";
 
 
@@ -108,7 +112,7 @@ const sunIMConference: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunIMConferenceAffiliations, sunIMConferenceConfiguration, commonName, uid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunIMConference" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Conference Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunIMConference /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

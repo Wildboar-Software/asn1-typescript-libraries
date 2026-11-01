@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { groupOfUniqueNames } from "../SelectedObjectClasses/groupOfUniqueNames.oa.mjs";
 // export { groupOfUniqueNames } from "../SelectedObjectClasses/groupOfUniqueNames.oa.mjs";
 import { id_oc_nsManagedDept } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedDept.va.mjs";
+import { nsNumUsers } from "../Ldapmigration50nsDelegatedAdmin/nsNumUsers.oa.mjs";
+import { nsMaxUsers } from "../Ldapmigration50nsDelegatedAdmin/nsMaxUsers.oa.mjs";
+import { nsNumDepts } from "../Ldapmigration50nsDelegatedAdmin/nsNumDepts.oa.mjs";
+import { nsMaxDepts } from "../Ldapmigration50nsDelegatedAdmin/nsMaxDepts.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { nsdaModifiableBy } from "../Ldapmigration50nsDelegatedAdmin/nsdaModifiableBy.oa.mjs";
 // export { id_oc_nsManagedDept } from "../Ldapmigration50nsDelegatedAdmin/id-oc-nsManagedDept.va.mjs";
 
 
@@ -110,7 +116,7 @@ const nsManagedDept: OBJECT_CLASS = {
     },
     "&Superclasses": [ groupOfUniqueNames, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsNumUsers, nsMaxUsers, nsNumDepts, nsMaxDepts, owner, nsdaModifiableBy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsManagedDept" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Delegated Admin marker for managed department" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsManagedDept /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

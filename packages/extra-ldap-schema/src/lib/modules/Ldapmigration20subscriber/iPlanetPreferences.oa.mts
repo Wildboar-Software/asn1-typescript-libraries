@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_iPlanetPreferences } from "../Ldapmigration20subscriber/id-oc-iPlanetPreferences.va.mjs";
+import { preferredLanguage } from "../InetOrgPerson/preferredLanguage.oa.mjs";
+import { preferredLocale } from "../Ldapmigration20subscriber/preferredLocale.oa.mjs";
+import { preferredTimeZone } from "../Ldapmigration20subscriber/preferredTimeZone.oa.mjs";
 // export { id_oc_iPlanetPreferences } from "../Ldapmigration20subscriber/id-oc-iPlanetPreferences.va.mjs";
 
 
@@ -106,7 +109,7 @@ const iPlanetPreferences: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ preferredLanguage, preferredLocale, preferredTimeZone, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iPlanetPreferences" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iPlanetPreferences /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

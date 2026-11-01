@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_autoMemberDefinition } from "../LdapAutoMemberPlugin/id-oc-autoMemberDefinition.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { autoMemberScope } from "../LdapAutoMemberPlugin/autoMemberScope.oa.mjs";
+import { autoMemberFilter } from "../LdapAutoMemberPlugin/autoMemberFilter.oa.mjs";
+import { autoMemberGroupingAttr } from "../LdapAutoMemberPlugin/autoMemberGroupingAttr.oa.mjs";
+import { autoMemberDefaultGroup } from "../LdapAutoMemberPlugin/autoMemberDefaultGroup.oa.mjs";
+import { autoMemberDisabled } from "../LdapAutoMemberPlugin/autoMemberDisabled.oa.mjs";
 // export { id_oc_autoMemberDefinition } from "../LdapAutoMemberPlugin/id-oc-autoMemberDefinition.va.mjs";
 
 
@@ -108,8 +114,8 @@ const autoMemberDefinition: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, autoMemberScope, autoMemberFilter, autoMemberGroupingAttr, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ autoMemberDefaultGroup, autoMemberDisabled, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "autoMemberDefinition" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auto Membership Config Definition Entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_autoMemberDefinition /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

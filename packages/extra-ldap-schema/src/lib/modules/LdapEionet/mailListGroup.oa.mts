@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_mailListGroup } from "../LdapEionet/id-oc-mailListGroup.va.mjs";
+import { permittedSender } from "../LdapEionet/permittedSender.oa.mjs";
+import { permittedPerson } from "../LdapEionet/permittedPerson.oa.mjs";
 // export { id_oc_mailListGroup } from "../LdapEionet/id-oc-mailListGroup.va.mjs";
 
 
@@ -106,7 +108,7 @@ const mailListGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ permittedSender, permittedPerson, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailListGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Identifies a mail list associated with a group." /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailListGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { inetMailGroup } from "../Ldapmigration56imsSchema/inetMailGroup.oa.mjs";
 // export { inetMailGroup } from "../Ldapmigration56imsSchema/inetMailGroup.oa.mjs";
 import { id_oc_soniaMailingList } from "../Ldapmigration97sonia/id-oc-soniaMailingList.va.mjs";
+import { soniaMailingListBroadcastType } from "../Ldapmigration97sonia/soniaMailingListBroadcastType.oa.mjs";
+import { soniaMailingListAdministrator } from "../Ldapmigration97sonia/soniaMailingListAdministrator.oa.mjs";
+import { soniaMailingListJoinabilityFilter } from "../Ldapmigration97sonia/soniaMailingListJoinabilityFilter.oa.mjs";
+import { soniaMailingListAllowedBroadcaster } from "../Ldapmigration97sonia/soniaMailingListAllowedBroadcaster.oa.mjs";
 // export { id_oc_soniaMailingList } from "../Ldapmigration97sonia/id-oc-soniaMailingList.va.mjs";
 
 
@@ -107,7 +111,7 @@ const soniaMailingList: OBJECT_CLASS = {
     },
     "&Superclasses": [ inetMailGroup, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ soniaMailingListBroadcastType, soniaMailingListAdministrator, soniaMailingListJoinabilityFilter, soniaMailingListAllowedBroadcaster, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaMailingList" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaMailingList /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

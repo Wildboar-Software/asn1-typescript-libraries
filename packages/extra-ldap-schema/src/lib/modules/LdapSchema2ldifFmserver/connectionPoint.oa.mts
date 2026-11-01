@@ -75,6 +75,8 @@ import { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_connectionPoint } from "../LdapSchema2ldifFmserver/id-oc-connectionPoint.va.mjs";
+import { keywords } from "../MSUser/keywords.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
 // export { id_oc_connectionPoint } from "../LdapSchema2ldifFmserver/id-oc-connectionPoint.va.mjs";
 
 
@@ -108,7 +110,7 @@ const connectionPoint: OBJECT_CLASS = {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ keywords, managedBy, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "connectionPoint" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Microsoft Active Directory ConnectPoint Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_connectionPoint /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

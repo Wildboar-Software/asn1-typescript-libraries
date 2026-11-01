@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_pKIEnrollmentService } from "../LdapSchema2ldifMicrosoft/id-oc-pKIEnrollmentService.va.mjs";
+import { cACertificate } from "../AuthenticationFramework/cACertificate.oa.mjs";
+import { dNSHostName } from "../MSUser/dNSHostName.oa.mjs";
+import { cACertificateDN } from "../MSUser/cACertificateDN.oa.mjs";
+import { certificateTemplates } from "../MSUser/certificateTemplates.oa.mjs";
+import { signatureAlgorithms } from "../MSUser/signatureAlgorithms.oa.mjs";
+import { enrollmentProviders } from "../MSUser/enrollmentProviders.oa.mjs";
 // export { id_oc_pKIEnrollmentService } from "../LdapSchema2ldifMicrosoft/id-oc-pKIEnrollmentService.va.mjs";
 
 
@@ -107,7 +113,7 @@ const pKIEnrollmentService: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ cACertificate, dNSHostName, cACertificateDN, certificateTemplates, signatureAlgorithms, enrollmentProviders, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pKIEnrollmentService" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pKIEnrollmentService /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

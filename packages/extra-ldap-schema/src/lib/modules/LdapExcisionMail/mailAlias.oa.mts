@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 // export { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 import { id_oc_mailAlias } from "../LdapExcisionMail/id-oc-mailAlias.va.mjs";
+import { mailSetting } from "../LdapExcisionMail/mailSetting.oa.mjs";
+import { accountStatus } from "../LdapExcisionMail/accountStatus.oa.mjs";
 // export { id_oc_mailAlias } from "../LdapExcisionMail/id-oc-mailAlias.va.mjs";
 
 
@@ -108,7 +110,7 @@ const mailAlias: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ mail, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailSetting, accountStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mailAlias" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Abstraction of a mail alias" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mailAlias /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

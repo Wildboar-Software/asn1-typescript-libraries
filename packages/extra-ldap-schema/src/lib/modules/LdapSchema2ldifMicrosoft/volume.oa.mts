@@ -75,6 +75,8 @@ import { connectionPoint } from "../LdapSchema2ldifFmserver/connectionPoint.oa.m
 import { uNCName } from "../MSUser/uNCName.oa.mjs";
 // export { uNCName } from "../MSUser/uNCName.oa.mjs";
 import { id_oc_volume } from "../LdapSchema2ldifMicrosoft/id-oc-volume.va.mjs";
+import { contentIndexingAllowed } from "../MSUser/contentIndexingAllowed.oa.mjs";
+import { lastContentIndexed } from "../MSUser/lastContentIndexed.oa.mjs";
 // export { id_oc_volume } from "../LdapSchema2ldifMicrosoft/id-oc-volume.va.mjs";
 
 
@@ -107,7 +109,7 @@ const volume: OBJECT_CLASS = {
     },
     "&Superclasses": [ connectionPoint, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ uNCName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ contentIndexingAllowed, lastContentIndexed, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "volume" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_volume /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

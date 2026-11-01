@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
 // export { rpcEntry } from "../LdapSchema2ldifMicrosoft/rpcEntry.oa.mjs";
 import { id_oc_rpcServer } from "../LdapSchema2ldifMicrosoft/id-oc-rpcServer.va.mjs";
+import { rpcNsObjectID } from "../MSUser/rpcNsObjectID.oa.mjs";
+import { rpcNsCodeset } from "../MSUser/rpcNsCodeset.oa.mjs";
+import { rpcNsEntryFlags } from "../MSUser/rpcNsEntryFlags.oa.mjs";
 // export { id_oc_rpcServer } from "../LdapSchema2ldifMicrosoft/id-oc-rpcServer.va.mjs";
 
 
@@ -104,7 +107,7 @@ const rpcServer: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ rpcEntry, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rpcNsObjectID, rpcNsCodeset, rpcNsEntryFlags, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rpcServer" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rpcServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ipaOverrideAnchor } from "../LdapIdviews/ipaOverrideAnchor.oa.mjs";
 // export { ipaOverrideAnchor } from "../LdapIdviews/ipaOverrideAnchor.oa.mjs";
 import { id_oc_ipaGroupOverride } from "../LdapIdviews/id-oc-ipaGroupOverride.va.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { id_oc_ipaGroupOverride } from "../LdapIdviews/id-oc-ipaGroupOverride.va.mjs";
 
 
@@ -104,7 +106,7 @@ const ipaGroupOverride: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ ipaOverrideAnchor, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gidNumber, commonName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaGroupOverride" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Override for Group Attributes" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaGroupOverride /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { ipaAssociation } from "../Ldap60basev2/ipaAssociation.oa.mjs";
 // export { ipaAssociation } from "../Ldap60basev2/ipaAssociation.oa.mjs";
 import { id_oc_ipaNISNetgroup } from "../Ldap60basev2/id-oc-ipaNISNetgroup.va.mjs";
+import { externalHost } from "../Ldap60basev2/externalHost.oa.mjs";
+import { nisDomainName } from "../Ldap60basev2/nisDomainName.oa.mjs";
+import { member } from "../SelectedAttributeTypes/member.oa.mjs";
+import { memberOf } from "../MSUser/memberOf.oa.mjs";
 // export { id_oc_ipaNISNetgroup } from "../Ldap60basev2/id-oc-ipaNISNetgroup.va.mjs";
 
 
@@ -106,7 +110,7 @@ const ipaNISNetgroup: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ ipaAssociation, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ externalHost, nisDomainName, member, memberOf, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaNISNetgroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "IPA version of NIS netgroup" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaNISNetgroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

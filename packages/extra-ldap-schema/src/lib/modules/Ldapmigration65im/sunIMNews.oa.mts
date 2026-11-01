@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_sunIMNews } from "../Ldapmigration65im/id-oc-sunIMNews.va.mjs";
+import { sunIMNewsAffiliations } from "../Ldapmigration65im/sunIMNewsAffiliations.oa.mjs";
+import { sunIMNewsConfiguration } from "../Ldapmigration65im/sunIMNewsConfiguration.oa.mjs";
+import { sunIMNewsMetaData } from "../Ldapmigration65im/sunIMNewsMetaData.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 // export { id_oc_sunIMNews } from "../Ldapmigration65im/id-oc-sunIMNews.va.mjs";
 
 
@@ -109,7 +114,7 @@ const sunIMNews: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunIMNewsAffiliations, sunIMNewsConfiguration, sunIMNewsMetaData, commonName, uid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunIMNews" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Pubsub Channel Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunIMNews /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

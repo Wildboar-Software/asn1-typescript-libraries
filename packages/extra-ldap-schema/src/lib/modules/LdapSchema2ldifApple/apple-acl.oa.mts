@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_apple_acl } from "../LdapSchema2ldifApple/id-oc-apple-acl.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { apple_acl_entry } from "../LdapSchema2ldifApple/apple-acl-entry.oa.mjs";
 // export { id_oc_apple_acl } from "../LdapSchema2ldifApple/id-oc-apple-acl.va.mjs";
 
 
@@ -103,7 +105,7 @@ const apple_acl: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, apple_acl_entry, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-acl" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_acl /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

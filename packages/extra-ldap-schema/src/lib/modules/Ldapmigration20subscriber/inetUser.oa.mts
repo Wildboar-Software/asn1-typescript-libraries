@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetUser } from "../Ldapmigration20subscriber/id-oc-inetUser.va.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { inetUserStatus } from "../Ldapmigration20subscriber/inetUserStatus.oa.mjs";
+import { inetUserHttpURL } from "../Ldapmigration20subscriber/inetUserHttpURL.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { memberOf } from "../MSUser/memberOf.oa.mjs";
 // export { id_oc_inetUser } from "../Ldapmigration20subscriber/id-oc-inetUser.va.mjs";
 
 
@@ -109,7 +114,7 @@ const inetUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ uid, inetUserStatus, inetUserHttpURL, userPassword, memberOf, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auxiliary class which must be present in an entry for delivery of subscriber services" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

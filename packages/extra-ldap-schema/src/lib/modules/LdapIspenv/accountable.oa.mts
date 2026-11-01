@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_accountable } from "../LdapIspenv/id-oc-accountable.va.mjs";
+import { billPaid } from "../LdapIspenv/billPaid.oa.mjs";
+import { price } from "../LdapIspenv/price.oa.mjs";
+import { currency } from "../LdapIspenv/currency.oa.mjs";
+import { payperiod } from "../LdapIspenv/payperiod.oa.mjs";
+import { payday } from "../LdapIspenv/payday.oa.mjs";
+import { dunningCounter } from "../LdapIspenv/dunningCounter.oa.mjs";
+import { productcode } from "../LdapIspenv/productcode.oa.mjs";
 // export { id_oc_accountable } from "../LdapIspenv/id-oc-accountable.va.mjs";
 
 
@@ -111,7 +118,7 @@ const accountable: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ billPaid, price, currency, payperiod, payday, dunningCounter, productcode, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "accountable" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Marks a resource (an entry) as being subject to payment" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_accountable /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

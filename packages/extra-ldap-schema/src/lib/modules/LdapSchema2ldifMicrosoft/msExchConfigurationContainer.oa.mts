@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { container } from "../LdapSchema2ldifMicrosoft/container.oa.mjs";
 // export { container } from "../LdapSchema2ldifMicrosoft/container.oa.mjs";
 import { id_oc_msExchConfigurationContainer } from "../LdapSchema2ldifMicrosoft/id-oc-msExchConfigurationContainer.va.mjs";
+import { addressBookRoots } from "../MSUser/addressBookRoots.oa.mjs";
+import { globalAddressList } from "../MSUser/globalAddressList.oa.mjs";
+import { templateRoots } from "../MSUser/templateRoots.oa.mjs";
 // export { id_oc_msExchConfigurationContainer } from "../LdapSchema2ldifMicrosoft/id-oc-msExchConfigurationContainer.va.mjs";
 
 
@@ -104,7 +107,7 @@ const msExchConfigurationContainer: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ container, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ addressBookRoots, globalAddressList, templateRoots, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "msExchConfigurationContainer" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_msExchConfigurationContainer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

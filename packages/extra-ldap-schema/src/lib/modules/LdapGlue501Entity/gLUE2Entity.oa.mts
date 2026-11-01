@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gLUE2Entity } from "../LdapGlue501Entity/id-oc-gLUE2Entity.va.mjs";
+import { gLUE2EntityName } from "../LdapGlue501Entity/gLUE2EntityName.oa.mjs";
+import { gLUE2EntityOtherInfo } from "../LdapGlue501Entity/gLUE2EntityOtherInfo.oa.mjs";
+import { gLUE2EntityCreationTime } from "../LdapGlue501Entity/gLUE2EntityCreationTime.oa.mjs";
+import { gLUE2EntityValidity } from "../LdapGlue501Entity/gLUE2EntityValidity.oa.mjs";
 // export { id_oc_gLUE2Entity } from "../LdapGlue501Entity/id-oc-gLUE2Entity.va.mjs";
 
 
@@ -108,7 +112,7 @@ const gLUE2Entity: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2EntityName, gLUE2EntityOtherInfo, gLUE2EntityCreationTime, gLUE2EntityValidity, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Entity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Base class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Entity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

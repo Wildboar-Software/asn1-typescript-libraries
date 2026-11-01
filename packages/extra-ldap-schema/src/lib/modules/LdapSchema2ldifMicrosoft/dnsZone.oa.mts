@@ -75,6 +75,12 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 // export { dc } from "../SelectedAttributeTypes/dc.oa.mjs";
 import { id_oc_dnsZone } from "../LdapSchema2ldifMicrosoft/id-oc-dnsZone.va.mjs";
+import { dnsAllowDynamic } from "../MSUser/dnsAllowDynamic.oa.mjs";
+import { dnsAllowXFR } from "../MSUser/dnsAllowXFR.oa.mjs";
+import { dnsSecureSecondaries } from "../MSUser/dnsSecureSecondaries.oa.mjs";
+import { dnsNotifySecondaries } from "../MSUser/dnsNotifySecondaries.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { dNSProperty } from "../MSUser/dNSProperty.oa.mjs";
 // export { id_oc_dnsZone } from "../LdapSchema2ldifMicrosoft/id-oc-dnsZone.va.mjs";
 
 
@@ -111,7 +117,7 @@ const dnsZone: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ dc, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dnsAllowDynamic, dnsAllowXFR, dnsSecureSecondaries, dnsNotifySecondaries, managedBy, dNSProperty, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dnsZone" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dnsZone /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

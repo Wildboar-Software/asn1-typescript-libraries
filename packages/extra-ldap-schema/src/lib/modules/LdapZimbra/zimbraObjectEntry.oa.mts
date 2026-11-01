@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_zimbraObjectEntry } from "../LdapZimbra/id-oc-zimbraObjectEntry.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { zimbraObjectIndexingEnabled } from "../LdapZimbra/zimbraObjectIndexingEnabled.oa.mjs";
+import { zimbraObjectStoreMatched } from "../LdapZimbra/zimbraObjectStoreMatched.oa.mjs";
+import { zimbraObjectType } from "../LdapZimbra/zimbraObjectType.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { zimbraObjectHandlerClass } from "../LdapZimbra/zimbraObjectHandlerClass.oa.mjs";
+import { zimbraObjectHandlerConfig } from "../LdapZimbra/zimbraObjectHandlerConfig.oa.mjs";
 // export { id_oc_zimbraObjectEntry } from "../LdapZimbra/id-oc-zimbraObjectEntry.va.mjs";
 
 
@@ -109,8 +116,8 @@ const zimbraObjectEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, zimbraObjectIndexingEnabled, zimbraObjectStoreMatched, zimbraObjectType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, zimbraObjectHandlerClass, zimbraObjectHandlerConfig, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraObjectEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Object type info" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraObjectEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

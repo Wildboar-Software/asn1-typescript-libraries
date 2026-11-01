@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_kopano_addresslist } from "../LdapKopano/id-oc-kopano-addresslist.va.mjs";
+import { kopanoAccount } from "../LdapKopano/kopanoAccount.oa.mjs";
+import { kopanoHidden } from "../LdapKopano/kopanoHidden.oa.mjs";
+import { kopanoFilter } from "../LdapKopano/kopanoFilter.oa.mjs";
+import { kopanoBase } from "../LdapKopano/kopanoBase.oa.mjs";
 // export { id_oc_kopano_addresslist } from "../LdapKopano/id-oc-kopano-addresslist.va.mjs";
 
 
@@ -110,7 +114,7 @@ const kopano_addresslist: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ kopanoAccount, kopanoHidden, kopanoFilter, kopanoBase, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kopano-addresslist" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "KOPANO: a Kopano Addresslist" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kopano_addresslist /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

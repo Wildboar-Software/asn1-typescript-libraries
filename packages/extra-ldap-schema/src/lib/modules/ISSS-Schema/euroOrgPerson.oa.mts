@@ -73,6 +73,27 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_euro_oc_orgPerson } from "../ISSS-Schema/id-euro-oc-orgPerson.va.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { initials } from "../SelectedAttributeTypes/initials.oa.mjs";
+import { generationQualifier } from "../SelectedAttributeTypes/generationQualifier.oa.mjs";
+import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
+import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
+import { secretary } from "../Cosine/secretary.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { textEncodedORAddress } from "../Cosine/textEncodedORAddress.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { mobileTelephoneNumber } from "../Cosine/mobileTelephoneNumber.oa.mjs";
+import { homeTelephoneNumber } from "../Cosine/homeTelephoneNumber.oa.mjs";
+import { pagerTelephoneNumber } from "../Cosine/pagerTelephoneNumber.oa.mjs";
+import { homePostalAddress } from "../Cosine/homePostalAddress.oa.mjs";
+import { roomNumber } from "../Cosine/roomNumber.oa.mjs";
+import { buildingName } from "../Cosine/buildingName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { area } from "../ISSS-Schema/area.oa.mjs";
+import { floor } from "../ISSS-Schema/floor.oa.mjs";
+import { floorEntity } from "../ISSS-Schema/floorEntity.oa.mjs";
+import { fax } from "../ISSS-Schema/fax.oa.mjs";
+import { telExten } from "../ISSS-Schema/telExten.oa.mjs";
 // export { id_euro_oc_orgPerson } from "../ISSS-Schema/id-euro-oc-orgPerson.va.mjs";
 
 
@@ -127,7 +148,7 @@ const euroOrgPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ givenName, initials, generationQualifier, uniqueIdentifier, serialNumber, secretary, mail, textEncodedORAddress, uid, mobileTelephoneNumber, homeTelephoneNumber, pagerTelephoneNumber, homePostalAddress, roomNumber, buildingName, labeledURI, area, floor, floorEntity, fax, telExten, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "euroOrgPerson" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_euro_oc_orgPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

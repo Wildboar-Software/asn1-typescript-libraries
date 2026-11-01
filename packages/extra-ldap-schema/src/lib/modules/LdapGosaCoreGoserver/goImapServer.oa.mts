@@ -73,6 +73,19 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_goImapServer } from "../LdapGosaCoreGoserver/id-oc-goImapServer.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { goImapName } from "../LdapGosaCoreGoserver/goImapName.oa.mjs";
+import { goImapConnect } from "../LdapGosaCoreGoserver/goImapConnect.oa.mjs";
+import { goImapAdmin } from "../LdapGosaCoreGoserver/goImapAdmin.oa.mjs";
+import { goImapPassword } from "../LdapGosaCoreGoserver/goImapPassword.oa.mjs";
+import { goImapSieveServer } from "../LdapGosaCoreGoserver/goImapSieveServer.oa.mjs";
+import { goImapSievePort } from "../LdapGosaCoreGoserver/goImapSievePort.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goImapServerStatus } from "../LdapGosaCoreGoserver/goImapServerStatus.oa.mjs";
+import { cyrusImap } from "../LdapGosaCoreGoserver/cyrusImap.oa.mjs";
+import { cyrusImapSSL } from "../LdapGosaCoreGoserver/cyrusImapSSL.oa.mjs";
+import { cyrusPop3 } from "../LdapGosaCoreGoserver/cyrusPop3.oa.mjs";
+import { cyrusPop3SSL } from "../LdapGosaCoreGoserver/cyrusPop3SSL.oa.mjs";
 // export { id_oc_goImapServer } from "../LdapGosaCoreGoserver/id-oc-goImapServer.va.mjs";
 
 
@@ -117,8 +130,8 @@ const goImapServer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, goImapName, goImapConnect, goImapAdmin, goImapPassword, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ goImapSieveServer, goImapSievePort, description, goImapServerStatus, cyrusImap, cyrusImapSSL, cyrusPop3, cyrusPop3SSL, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goImapServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "IMAP server description (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goImapServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

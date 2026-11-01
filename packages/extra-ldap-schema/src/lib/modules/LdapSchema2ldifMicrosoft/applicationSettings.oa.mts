@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_applicationSettings } from "../LdapSchema2ldifMicrosoft/id-oc-applicationSettings.va.mjs";
+import { applicationName } from "../MSUser/applicationName.oa.mjs";
+import { notificationList } from "../MSUser/notificationList.oa.mjs";
 // export { id_oc_applicationSettings } from "../LdapSchema2ldifMicrosoft/id-oc-applicationSettings.va.mjs";
 
 
@@ -105,7 +107,7 @@ const applicationSettings: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ applicationName, notificationList, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "applicationSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_applicationSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

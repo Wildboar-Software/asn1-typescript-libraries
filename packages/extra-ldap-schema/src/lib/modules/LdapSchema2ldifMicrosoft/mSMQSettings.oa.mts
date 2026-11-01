@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_mSMQSettings } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQSettings.va.mjs";
+import { mSMQOwnerID } from "../MSUser/mSMQOwnerID.oa.mjs";
+import { mSMQServices } from "../MSUser/mSMQServices.oa.mjs";
+import { mSMQQMID } from "../MSUser/mSMQQMID.oa.mjs";
+import { mSMQMigrated } from "../MSUser/mSMQMigrated.oa.mjs";
+import { mSMQNt4Flags } from "../MSUser/mSMQNt4Flags.oa.mjs";
+import { mSMQSiteName } from "../MSUser/mSMQSiteName.oa.mjs";
+import { mSMQRoutingService } from "../MSUser/mSMQRoutingService.oa.mjs";
+import { mSMQDsService } from "../MSUser/mSMQDsService.oa.mjs";
+import { mSMQDependentClientService } from "../MSUser/mSMQDependentClientService.oa.mjs";
 // export { id_oc_mSMQSettings } from "../LdapSchema2ldifMicrosoft/id-oc-mSMQSettings.va.mjs";
 
 
@@ -110,7 +119,7 @@ const mSMQSettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mSMQOwnerID, mSMQServices, mSMQQMID, mSMQMigrated, mSMQNt4Flags, mSMQSiteName, mSMQRoutingService, mSMQDsService, mSMQDependentClientService, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mSMQSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mSMQSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

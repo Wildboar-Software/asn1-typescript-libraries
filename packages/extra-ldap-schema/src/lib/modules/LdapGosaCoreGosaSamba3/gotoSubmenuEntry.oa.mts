@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gotoSubmenuEntry } from "../LdapGosaCoreGosaSamba3/id-oc-gotoSubmenuEntry.va.mjs";
+import { gosaApplicationIcon } from "../LdapGosaCoreGosaSamba3/gosaApplicationIcon.oa.mjs";
+import { gosaApplicationPriority } from "../LdapGosaCoreGosaSamba3/gosaApplicationPriority.oa.mjs";
 // export { id_oc_gotoSubmenuEntry } from "../LdapGosaCoreGosaSamba3/id-oc-gotoSubmenuEntry.va.mjs";
 
 
@@ -108,7 +110,7 @@ const gotoSubmenuEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gosaApplicationIcon, gosaApplicationPriority, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gotoSubmenuEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOto - contains environment settings (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gotoSubmenuEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

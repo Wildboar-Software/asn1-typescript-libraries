@@ -73,6 +73,14 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { nsdsoc } from "../DSEE/nsdsoc.va.mjs";
+import { targetDn } from "../DSEE/targetDn.oa.mjs";
+import { changeTime } from "../DSEE/changeTime.oa.mjs";
+import { changeNumber } from "../DSEE/changeNumber.oa.mjs";
+import { changeType } from "../DSEE/changeType.oa.mjs";
+import { changes } from "../DSEE/changes.oa.mjs";
+import { newRdn } from "../DSEE/newRdn.oa.mjs";
+import { deleteOldRdn } from "../DSEE/deleteOldRdn.oa.mjs";
+import { newSuperior } from "../DSEE/newSuperior.oa.mjs";
 // export { nsdsoc } from "../DSEE/nsdsoc.va.mjs";
 
 
@@ -106,8 +114,8 @@ const changeLogEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ targetDn, changeTime, changeNumber, changeType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ changes, newRdn, deleteOldRdn, newSuperior, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "changeLogEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], nsdsoc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

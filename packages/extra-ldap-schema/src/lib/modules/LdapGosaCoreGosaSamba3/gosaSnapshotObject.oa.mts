@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { description } from "../SelectedAttributeTypes/description.oa.mjs";
 import { id_oc_gosaSnapshotObject } from "../LdapGosaCoreGosaSamba3/id-oc-gosaSnapshotObject.va.mjs";
+import { gosaSnapshotType } from "../LdapGosaCoreGosaSamba3/gosaSnapshotType.oa.mjs";
+import { gosaSnapshotTimestamp } from "../LdapGosaCoreGosaSamba3/gosaSnapshotTimestamp.oa.mjs";
+import { gosaSnapshotDN } from "../LdapGosaCoreGosaSamba3/gosaSnapshotDN.oa.mjs";
+import { gosaSnapshotData } from "../LdapGosaCoreGosaSamba3/gosaSnapshotData.oa.mjs";
 // export { id_oc_gosaSnapshotObject } from "../LdapGosaCoreGosaSamba3/id-oc-gosaSnapshotObject.va.mjs";
 
 
@@ -109,7 +113,7 @@ const gosaSnapshotObject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gosaSnapshotType, gosaSnapshotTimestamp, gosaSnapshotDN, gosaSnapshotData, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaSnapshotObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Container object for undo and snapshot data (v2.7)" /* OBJECT_FIELD_SETTING */,

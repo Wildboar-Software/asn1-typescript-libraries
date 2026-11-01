@@ -73,6 +73,17 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_pKICertificateTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-pKICertificateTemplate.va.mjs";
+import { displayName } from "../LdapSchema2ldifMicrosoft/displayName.oa.mjs";
+import { flags } from "../MSUser/flags.oa.mjs";
+import { pKIDefaultKeySpec } from "../MSUser/pKIDefaultKeySpec.oa.mjs";
+import { pKIKeyUsage } from "../MSUser/pKIKeyUsage.oa.mjs";
+import { pKIMaxIssuingDepth } from "../MSUser/pKIMaxIssuingDepth.oa.mjs";
+import { pKICriticalExtensions } from "../MSUser/pKICriticalExtensions.oa.mjs";
+import { pKIExpirationPeriod } from "../MSUser/pKIExpirationPeriod.oa.mjs";
+import { pKIOverlapPeriod } from "../MSUser/pKIOverlapPeriod.oa.mjs";
+import { pKIExtendedKeyUsage } from "../MSUser/pKIExtendedKeyUsage.oa.mjs";
+import { pKIDefaultCSPs } from "../MSUser/pKIDefaultCSPs.oa.mjs";
+import { pKIEnrollmentAccess } from "../MSUser/pKIEnrollmentAccess.oa.mjs";
 // export { id_oc_pKICertificateTemplate } from "../LdapSchema2ldifMicrosoft/id-oc-pKICertificateTemplate.va.mjs";
 
 
@@ -112,7 +123,7 @@ const pKICertificateTemplate: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ displayName, flags, pKIDefaultKeySpec, pKIKeyUsage, pKIMaxIssuingDepth, pKICriticalExtensions, pKIExpirationPeriod, pKIOverlapPeriod, pKIExtendedKeyUsage, pKIDefaultCSPs, pKIEnrollmentAccess, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pKICertificateTemplate" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pKICertificateTemplate /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

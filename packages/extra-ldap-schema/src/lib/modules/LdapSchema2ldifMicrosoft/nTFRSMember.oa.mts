@@ -73,6 +73,17 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nTFRSMember } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSMember.va.mjs";
+import { fRSUpdateTimeout } from "../MSUser/fRSUpdateTimeout.oa.mjs";
+import { fRSServiceCommand } from "../MSUser/fRSServiceCommand.oa.mjs";
+import { serverReference } from "../MSUser/serverReference.oa.mjs";
+import { fRSRootSecurity } from "../MSUser/fRSRootSecurity.oa.mjs";
+import { fRSExtensions } from "../MSUser/fRSExtensions.oa.mjs";
+import { frsComputerReference } from "../MSUser/frsComputerReference.oa.mjs";
+import { fRSControlDataCreation } from "../MSUser/fRSControlDataCreation.oa.mjs";
+import { fRSControlInboundBacklog } from "../MSUser/fRSControlInboundBacklog.oa.mjs";
+import { fRSControlOutboundBacklog } from "../MSUser/fRSControlOutboundBacklog.oa.mjs";
+import { fRSFlags } from "../MSUser/fRSFlags.oa.mjs";
+import { fRSPartnerAuthLevel } from "../MSUser/fRSPartnerAuthLevel.oa.mjs";
 // export { id_oc_nTFRSMember } from "../LdapSchema2ldifMicrosoft/id-oc-nTFRSMember.va.mjs";
 
 
@@ -112,7 +123,7 @@ const nTFRSMember: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ fRSUpdateTimeout, fRSServiceCommand, serverReference, fRSRootSecurity, fRSExtensions, frsComputerReference, fRSControlDataCreation, fRSControlInboundBacklog, fRSControlOutboundBacklog, fRSFlags, fRSPartnerAuthLevel, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTFRSMember" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTFRSMember /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

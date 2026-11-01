@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { mailForwardingAddress } from "../LdapSchema2ldifPostfixBook/mailForwardingAddress.oa.mjs";
 // export { mailForwardingAddress } from "../LdapSchema2ldifPostfixBook/mailForwardingAddress.oa.mjs";
 import { id_oc_postfixBookMailForward } from "../LdapSchema2ldifPostfixBook/id-oc-postfixBookMailForward.va.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailAlias } from "../LdapSchema2ldifPostfixBook/mailAlias.oa.mjs";
 // export { id_oc_postfixBookMailForward } from "../LdapSchema2ldifPostfixBook/id-oc-postfixBookMailForward.va.mjs";
 
 
@@ -109,7 +111,7 @@ const postfixBookMailForward: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, mailAlias, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ mailForwardingAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "PostfixBookMailForward" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Mail forward used in Postfix Book" /* OBJECT_FIELD_SETTING */,

@@ -75,6 +75,8 @@ import { inetMailUser } from "../Ldapmigration56imsSchema/inetMailUser.oa.mjs";
 import { soniaMailDelegatedAddress } from "../Ldapmigration97sonia/soniaMailDelegatedAddress.oa.mjs";
 // export { soniaMailDelegatedAddress } from "../Ldapmigration97sonia/soniaMailDelegatedAddress.oa.mjs";
 import { id_oc_soniaMailAccount } from "../Ldapmigration97sonia/id-oc-soniaMailAccount.va.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 // export { id_oc_soniaMailAccount } from "../Ldapmigration97sonia/id-oc-soniaMailAccount.va.mjs";
 
 
@@ -106,7 +108,7 @@ const soniaMailAccount: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ inetMailUser, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, mail, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ soniaMailDelegatedAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "soniaMailAccount" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaMailAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

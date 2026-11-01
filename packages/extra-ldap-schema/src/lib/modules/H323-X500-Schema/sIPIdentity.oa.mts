@@ -73,6 +73,14 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { sip_id_oc } from "../H323-X500-Schema/sip-id-oc.va.mjs";
+import { sIPIdentitySIPURI } from "../H323-X500-Schema/sIPIdentitySIPURI.oa.mjs";
+import { sIPIdentityRegistrarAddress } from "../H323-X500-Schema/sIPIdentityRegistrarAddress.oa.mjs";
+import { sIPIdentityProxyAddress } from "../H323-X500-Schema/sIPIdentityProxyAddress.oa.mjs";
+import { sIPIdentityAddress } from "../H323-X500-Schema/sIPIdentityAddress.oa.mjs";
+import { sIPIdentityPassword } from "../H323-X500-Schema/sIPIdentityPassword.oa.mjs";
+import { sIPIdentityUserName } from "../H323-X500-Schema/sIPIdentityUserName.oa.mjs";
+import { sIPIdentityServiceLevel } from "../H323-X500-Schema/sIPIdentityServiceLevel.oa.mjs";
+import { userSMIMECertificate } from "../H323-X500-Schema/userSMIMECertificate.oa.mjs";
 // export { sip_id_oc } from "../H323-X500-Schema/sip-id-oc.va.mjs";
 
 
@@ -105,7 +113,7 @@ const sIPIdentity: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sIPIdentitySIPURI, sIPIdentityRegistrarAddress, sIPIdentityProxyAddress, sIPIdentityAddress, sIPIdentityPassword, sIPIdentityUserName, sIPIdentityServiceLevel, userSMIMECertificate, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], sip_id_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

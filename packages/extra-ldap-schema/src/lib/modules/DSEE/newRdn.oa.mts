@@ -8,6 +8,8 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 // export { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 import { nsdsat } from "../DSEE/nsdsat.va.mjs";
+import { distinguishedNameMatch } from "../InformationFramework/distinguishedNameMatch.oa.mjs";
+import { dn } from "../SelectedAttributeTypes/dn.oa.mjs";
 // export { nsdsat } from "../DSEE/nsdsat.va.mjs";
 
 

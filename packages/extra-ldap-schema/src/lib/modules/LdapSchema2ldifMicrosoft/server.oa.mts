@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_server } from "../LdapSchema2ldifMicrosoft/id-oc-server.va.mjs";
+import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
+import { serverReference } from "../MSUser/serverReference.oa.mjs";
+import { dNSHostName } from "../MSUser/dNSHostName.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { mailAddress } from "../MSUser/mailAddress.oa.mjs";
+import { bridgeheadTransportList } from "../MSUser/bridgeheadTransportList.oa.mjs";
 // export { id_oc_server } from "../LdapSchema2ldifMicrosoft/id-oc-server.va.mjs";
 
 
@@ -107,7 +113,7 @@ const server: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ serialNumber, serverReference, dNSHostName, managedBy, mailAddress, bridgeheadTransportList, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "server" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_server /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

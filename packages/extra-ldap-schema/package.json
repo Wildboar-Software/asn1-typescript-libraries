@@ -28,7 +28,9 @@
     "main": "./src/index.mjs",
     "dependencies": {
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
+        "@wildboar/pkcs": "npm:@jsr/wildboar__pkcs@^2.0.3",
         "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@^2.0.4",
+        "@wildboar/x400": "npm:@jsr/wildboar__x400@^2.0.3",
         "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
     }
 }

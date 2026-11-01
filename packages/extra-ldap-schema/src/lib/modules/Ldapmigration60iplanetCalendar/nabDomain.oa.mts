@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nabDomain } from "../Ldapmigration60iplanetCalendar/id-oc-nabDomain.va.mjs";
+import { nabDomainNames } from "../Ldapmigration60iplanetCalendar/nabDomainNames.oa.mjs";
+import { nabStatus } from "../Ldapmigration60iplanetCalendar/nabStatus.oa.mjs";
+import { davAllowedServices } from "../Ldapmigration60iplanetCalendar/davAllowedServices.oa.mjs";
+import { nabDomainAcl } from "../Ldapmigration60iplanetCalendar/nabDomainAcl.oa.mjs";
+import { nabStore } from "../Ldapmigration60iplanetCalendar/nabStore.oa.mjs";
 // export { id_oc_nabDomain } from "../Ldapmigration60iplanetCalendar/id-oc-nabDomain.va.mjs";
 
 
@@ -109,7 +114,7 @@ const nabDomain: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nabDomainNames, nabStatus, davAllowedServices, nabDomainAcl, nabStore, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nabDomain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "NAB Domain Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nabDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

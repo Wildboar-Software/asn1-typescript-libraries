@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dSUISettings } from "../LdapSchema2ldifMicrosoft/id-oc-dSUISettings.va.mjs";
+import { dSUIAdminNotification } from "../MSUser/dSUIAdminNotification.oa.mjs";
+import { dSUIAdminMaximum } from "../MSUser/dSUIAdminMaximum.oa.mjs";
+import { dSUIShellMaximum } from "../MSUser/dSUIShellMaximum.oa.mjs";
 // export { id_oc_dSUISettings } from "../LdapSchema2ldifMicrosoft/id-oc-dSUISettings.va.mjs";
 
 
@@ -104,7 +107,7 @@ const dSUISettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ dSUIAdminNotification, dSUIAdminMaximum, dSUIShellMaximum, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dSUISettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dSUISettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

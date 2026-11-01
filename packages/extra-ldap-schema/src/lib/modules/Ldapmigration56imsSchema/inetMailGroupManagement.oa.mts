@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetMailGroupManagement } from "../Ldapmigration56imsSchema/id-oc-inetMailGroupManagement.va.mjs";
+import { mgmanAllowSubscribe } from "../Ldapmigration56imsSchema/mgmanAllowSubscribe.oa.mjs";
+import { mgmanDenySubscribe } from "../Ldapmigration56imsSchema/mgmanDenySubscribe.oa.mjs";
+import { mgmanHidden } from "../Ldapmigration56imsSchema/mgmanHidden.oa.mjs";
+import { mgmanJoinability } from "../Ldapmigration56imsSchema/mgmanJoinability.oa.mjs";
+import { mgmanVisibility } from "../Ldapmigration56imsSchema/mgmanVisibility.oa.mjs";
+import { mgmanMemberVisibility } from "../Ldapmigration56imsSchema/mgmanMemberVisibility.oa.mjs";
+import { mgmanIntroText } from "../Ldapmigration56imsSchema/mgmanIntroText.oa.mjs";
+import { mgmanGoodbyeText } from "../Ldapmigration56imsSchema/mgmanGoodbyeText.oa.mjs";
+import { multiLineDescription } from "../LdapCore389/multiLineDescription.oa.mjs";
 // export { id_oc_inetMailGroupManagement } from "../Ldapmigration56imsSchema/id-oc-inetMailGroupManagement.va.mjs";
 
 
@@ -113,7 +122,7 @@ const inetMailGroupManagement: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mgmanAllowSubscribe, mgmanDenySubscribe, mgmanHidden, mgmanJoinability, mgmanVisibility, mgmanMemberVisibility, mgmanIntroText, mgmanGoodbyeText, multiLineDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetMailGroupManagement" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for managed mailing lists" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetMailGroupManagement /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

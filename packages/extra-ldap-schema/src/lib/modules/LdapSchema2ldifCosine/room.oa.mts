@@ -75,6 +75,10 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_room } from "../LdapSchema2ldifCosine/id-oc-room.va.mjs";
+import { roomNumber } from "../LdapSchema2ldifCosine/roomNumber.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
 // export { id_oc_room } from "../LdapSchema2ldifCosine/id-oc-room.va.mjs";
 
 
@@ -109,7 +113,7 @@ const room: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ roomNumber, description, seeAlso, telephoneNumber, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "room" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_room /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commUniqueId } from "../H323-X500-Schema/commUniqueId.oa.mjs";
 // export { commUniqueId } from "../H323-X500-Schema/commUniqueId.oa.mjs";
 import { co_oc } from "../H323-X500-Schema/co-oc.va.mjs";
+import { commOwner } from "../H323-X500-Schema/commOwner.oa.mjs";
+import { commPrivate } from "../H323-X500-Schema/commPrivate.oa.mjs";
 // export { co_oc } from "../H323-X500-Schema/co-oc.va.mjs";
 
 
@@ -106,7 +108,7 @@ const commObject: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commUniqueId, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commOwner, commPrivate, ] /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], co_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
 };

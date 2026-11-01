@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
 // export { applicationSiteSettings } from "../LdapSchema2ldifMicrosoft/applicationSiteSettings.oa.mjs";
 import { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
+import { schedule } from "../MSUser/schedule.oa.mjs";
+import { options } from "../MSUser/options.oa.mjs";
+import { queryPolicyObject } from "../MSUser/queryPolicyObject.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { interSiteTopologyGenerator } from "../MSUser/interSiteTopologyGenerator.oa.mjs";
+import { interSiteTopologyRenew } from "../MSUser/interSiteTopologyRenew.oa.mjs";
+import { interSiteTopologyFailover } from "../MSUser/interSiteTopologyFailover.oa.mjs";
 // export { id_oc_nTDSSiteSettings } from "../LdapSchema2ldifMicrosoft/id-oc-nTDSSiteSettings.va.mjs";
 
 
@@ -108,7 +115,7 @@ const nTDSSiteSettings: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ applicationSiteSettings, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ schedule, options, queryPolicyObject, managedBy, interSiteTopologyGenerator, interSiteTopologyRenew, interSiteTopologyFailover, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nTDSSiteSettings" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nTDSSiteSettings /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

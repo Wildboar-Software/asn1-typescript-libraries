@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_goFonPickupGroup } from "../LdapGosaCoreGofon/id-oc-goFonPickupGroup.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
 // export { id_oc_goFonPickupGroup } from "../LdapGosaCoreGofon/id-oc-goFonPickupGroup.va.mjs";
 
 
@@ -106,7 +108,7 @@ const goFonPickupGroup: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, gidNumber, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goFonPickupGroup" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Additive for posixGroups (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goFonPickupGroup /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

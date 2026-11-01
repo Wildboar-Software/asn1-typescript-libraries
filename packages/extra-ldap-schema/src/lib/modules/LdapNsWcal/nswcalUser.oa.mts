@@ -75,6 +75,19 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_nswcalUser } from "../LdapNsWcal/id-oc-nswcalUser.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { preferredLanguage } from "../InetOrgPerson/preferredLanguage.oa.mjs";
+import { surname } from "../SelectedAttributeTypes/surname.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { nswcalCALID } from "../LdapNsWcal/nswcalCALID.oa.mjs";
+import { nswcalDisallowAccess } from "../LdapNsWcal/nswcalDisallowAccess.oa.mjs";
+import { nswcalExtendedUserPrefs } from "../LdapNsWcal/nswcalExtendedUserPrefs.oa.mjs";
+import { nsLicensedFor } from "../LdapCommon389/nsLicensedFor.oa.mjs";
+import { nswcalHost } from "../LdapNsWcal/nswcalHost.oa.mjs";
+import { nswcalQuota } from "../LdapNsWcal/nswcalQuota.oa.mjs";
 // export { id_oc_nswcalUser } from "../LdapNsWcal/id-oc-nswcalUser.va.mjs";
 
 
@@ -119,7 +132,7 @@ const nswcalUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, givenName, mail, preferredLanguage, surname, uid, userPassword, nswcalCALID, nswcalDisallowAccess, nswcalExtendedUserPrefs, nsLicensedFor, nswcalHost, nswcalQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nswcalUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "iPlanet defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nswcalUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

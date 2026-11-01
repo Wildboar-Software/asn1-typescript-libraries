@@ -10,6 +10,8 @@ import { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_Unb
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 // export { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
+import { name } from "../SelectedAttributeTypes/name.oa.mjs";
+import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
 // export { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 
 

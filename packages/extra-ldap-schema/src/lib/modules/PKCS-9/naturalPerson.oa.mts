@@ -73,6 +73,7 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { pkcs_9_oc_naturalPerson } from "../PKCS-9/pkcs-9-oc-naturalPerson.va.mjs";
+import { NaturalPersonAttributeSet } from "../PKCS-9/NaturalPersonAttributeSet.osa.mjs";
 // export { pkcs_9_oc_naturalPerson } from "../PKCS-9/pkcs-9-oc-naturalPerson.va.mjs";
 
 
@@ -104,7 +105,7 @@ const naturalPerson: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ...NaturalPersonAttributeSet, ] /* OBJECT_FIELD_SETTING */,
     "&id": pkcs_9_oc_naturalPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };
 

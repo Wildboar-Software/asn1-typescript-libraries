@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_cloudosGroupOfUniqueNames } from "../LdapCloudos/id-oc-cloudosGroupOfUniqueNames.va.mjs";
+import { entryUUID } from "../LdapCloudos/entryUUID.oa.mjs";
+import { mirror } from "../LdapCloudos/mirror.oa.mjs";
+import { storageQuota } from "../LdapCloudos/storageQuota.oa.mjs";
 // export { id_oc_cloudosGroupOfUniqueNames } from "../LdapCloudos/id-oc-cloudosGroupOfUniqueNames.va.mjs";
 
 
@@ -107,7 +110,7 @@ const cloudosGroupOfUniqueNames: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ entryUUID, mirror, storageQuota, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "cloudosGroupOfUniqueNames" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "cloudos group of names" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_cloudosGroupOfUniqueNames /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

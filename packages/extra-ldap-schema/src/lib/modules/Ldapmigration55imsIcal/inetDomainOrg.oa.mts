@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetDomainOrg } from "../Ldapmigration55imsIcal/id-oc-inetDomainOrg.va.mjs";
+import { domOrgMaxUsers } from "../Ldapmigration55imsIcal/domOrgMaxUsers.oa.mjs";
+import { domOrgNumUsers } from "../Ldapmigration55imsIcal/domOrgNumUsers.oa.mjs";
 // export { id_oc_inetDomainOrg } from "../Ldapmigration55imsIcal/id-oc-inetDomainOrg.va.mjs";
 
 
@@ -106,7 +108,7 @@ const inetDomainOrg: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ domOrgMaxUsers, domOrgNumUsers, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetDomainOrg" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for suborganizations in a domain" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetDomainOrg /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

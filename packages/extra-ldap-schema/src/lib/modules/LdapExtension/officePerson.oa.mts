@@ -73,6 +73,14 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 // export { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { id_oc_officePerson } from "../LdapExtension/id-oc-officePerson.va.mjs";
+import { countryName } from "../SelectedAttributeTypes/countryName.oa.mjs";
+import { rdn } from "../LdapExtension/rdn.oa.mjs";
+import { otherFacsimiletelephoneNumber } from "../LdapExtension/otherFacsimiletelephoneNumber.oa.mjs";
+import { iPPhone } from "../LdapExtension/iPPhone.oa.mjs";
+import { uRL } from "../LdapExtension/uRL.oa.mjs";
+import { comment } from "../LdapExtension/comment.oa.mjs";
+import { reports } from "../LdapExtension/reports.oa.mjs";
+import { conferenceInformation } from "../LdapExtension/conferenceInformation.oa.mjs";
 // export { id_oc_officePerson } from "../LdapExtension/id-oc-officePerson.va.mjs";
 
 
@@ -110,7 +118,7 @@ const officePerson: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ inetOrgPerson, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ countryName, rdn, otherFacsimiletelephoneNumber, iPPhone, uRL, comment, reports, conferenceInformation, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "officePerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Office employee or computer user" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_officePerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

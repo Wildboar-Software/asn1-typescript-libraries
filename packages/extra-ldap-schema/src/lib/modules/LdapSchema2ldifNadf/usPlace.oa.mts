@@ -71,6 +71,10 @@ import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /*
 // export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { id_oc_usPlace } from "../LdapSchema2ldifNadf/id-oc-usPlace.va.mjs";
+import { locality } from "../SelectedObjectClasses/locality.oa.mjs";
+import { nadfObject } from "../LdapSchema2ldifNadf/nadfObject.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { fipsPlaceNumericCode } from "../LdapSchema2ldifNadf/fipsPlaceNumericCode.oa.mjs";
 // export { id_oc_usPlace } from "../LdapSchema2ldifNadf/id-oc-usPlace.va.mjs";
 
 
@@ -101,8 +105,8 @@ const usPlace: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ locality, nadfObject, ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ localityName, fipsPlaceNumericCode, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "usPlace" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_usPlace /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

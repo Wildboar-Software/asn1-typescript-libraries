@@ -75,6 +75,8 @@ import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_ftHier } from "../LdapApacheFortress/id-oc-ftHier.va.mjs";
+import { ftRels } from "../LdapApacheFortress/ftRels.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_ftHier } from "../LdapApacheFortress/id-oc-ftHier.va.mjs";
 
 
@@ -108,7 +110,7 @@ const ftHier: OBJECT_CLASS = {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftRels, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftHier" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Hierarchy Structural Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftHier /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

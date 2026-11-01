@@ -75,6 +75,13 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_goFonConference } from "../LdapGosaCoreGofon/id-oc-goFonConference.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goFonConferenceOption } from "../LdapGosaCoreGofon/goFonConferenceOption.oa.mjs";
+import { goFonConferenceTimeOut } from "../LdapGosaCoreGofon/goFonConferenceTimeOut.oa.mjs";
+import { goFonPIN } from "../LdapGosaCoreGofon/goFonPIN.oa.mjs";
+import { goFonConferenceOwner } from "../LdapGosaCoreGofon/goFonConferenceOwner.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { goFonHomeServer } from "../LdapGosaCoreGofon/goFonHomeServer.oa.mjs";
 // export { id_oc_goFonConference } from "../LdapGosaCoreGofon/id-oc-goFonConference.va.mjs";
 
 
@@ -113,7 +120,7 @@ const goFonConference: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, goFonConferenceOption, goFonConferenceTimeOut, goFonPIN, goFonConferenceOwner, telephoneNumber, goFonHomeServer, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goFonConference" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Conference definitions for asterisk machines (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goFonConference /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 // export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 import { id_oc_ftSSDSet } from "../LdapApacheFortress/id-oc-ftSSDSet.va.mjs";
+import { ftId } from "../LdapApacheFortress/ftId.oa.mjs";
+import { ftSetName } from "../LdapApacheFortress/ftSetName.oa.mjs";
+import { ftSetCardinality } from "../LdapApacheFortress/ftSetCardinality.oa.mjs";
+import { ftRoles } from "../LdapApacheFortress/ftRoles.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_ftSSDSet } from "../LdapApacheFortress/id-oc-ftSSDSet.va.mjs";
 
 
@@ -107,8 +112,8 @@ const ftSSDSet: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ ftId, ftSetName, ftSetCardinality, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ftRoles, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ftSSDSet" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Fortress Role Static Separation of Duty Set Structural Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ftSSDSet /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

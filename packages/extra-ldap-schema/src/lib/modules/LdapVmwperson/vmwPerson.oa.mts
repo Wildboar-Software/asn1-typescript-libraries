@@ -71,6 +71,17 @@ import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /*
 // export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { id_oc_vmwPerson } from "../LdapVmwperson/id-oc-vmwPerson.va.mjs";
+import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
+import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
+import { person } from "../SelectedObjectClasses/person.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { jiveID } from "../LdapVmwperson/jiveID.oa.mjs";
+import { userStatus } from "../LdapVmwperson/userStatus.oa.mjs";
+import { userType } from "../LdapVmwperson/userType.oa.mjs";
+import { createdBy } from "../LdapVmwperson/createdBy.oa.mjs";
+import { modifiedBy } from "../LdapVmwperson/modifiedBy.oa.mjs";
+import { customernumber } from "../LdapVmwperson/customernumber.oa.mjs";
+import { vmwEnrollmentFlag } from "../LdapVmwperson/vmwEnrollmentFlag.oa.mjs";
 // export { id_oc_vmwPerson } from "../LdapVmwperson/id-oc-vmwPerson.va.mjs";
 
 
@@ -110,9 +121,9 @@ const vmwPerson: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ inetOrgPerson, organizationalPerson, person, top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ jiveID, userStatus, userType, createdBy, modifiedBy, customernumber, vmwEnrollmentFlag, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "vmwPerson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "VMware defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_vmwPerson /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

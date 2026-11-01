@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_amdmapTimestamp_2 } from "../LdapAmd/id-oc-amdmapTimestamp-2.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { amdmapName } from "../LdapAmd/amdmapName.oa.mjs";
+import { amdmapTimestamp } from "../LdapAmd/amdmapTimestamp.oa.mjs";
 // export { id_oc_amdmapTimestamp_2 } from "../LdapAmd/id-oc-amdmapTimestamp-2.va.mjs";
 
 
@@ -105,7 +108,7 @@ const amdmapTimestamp_2: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, amdmapName, amdmapTimestamp, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "amdmapTimestamp" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Timestamp for an AMD map" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_amdmapTimestamp_2 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

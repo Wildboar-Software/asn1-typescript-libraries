@@ -73,6 +73,16 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_goFonAccount } from "../LdapGosaCoreGofon/id-oc-goFonAccount.va.mjs";
+import { goFonDeliveryMode } from "../LdapGosaCoreGofon/goFonDeliveryMode.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { goFonFormat } from "../LdapGosaCoreGofon/goFonFormat.oa.mjs";
+import { goFonForwarding } from "../LdapGosaCoreGofon/goFonForwarding.oa.mjs";
+import { goFonHardware } from "../LdapGosaCoreGofon/goFonHardware.oa.mjs";
+import { goFonPIN } from "../LdapGosaCoreGofon/goFonPIN.oa.mjs";
+import { goFonVoicemailPIN } from "../LdapGosaCoreGofon/goFonVoicemailPIN.oa.mjs";
+import { goFonMacro } from "../LdapGosaCoreGofon/goFonMacro.oa.mjs";
+import { goFonHomeServer } from "../LdapGosaCoreGofon/goFonHomeServer.oa.mjs";
 // export { id_oc_goFonAccount } from "../LdapGosaCoreGofon/id-oc-goFonAccount.va.mjs";
 
 
@@ -114,8 +124,8 @@ const goFonAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ goFonDeliveryMode, telephoneNumber, uid, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ goFonFormat, goFonForwarding, goFonHardware, goFonPIN, goFonVoicemailPIN, goFonMacro, goFonHomeServer, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goFonAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOFon Account objectclass (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goFonAccount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

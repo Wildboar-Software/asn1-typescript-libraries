@@ -75,6 +75,15 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 // export { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { shadowLastChange } from "../NIS/shadowLastChange.oa.mjs";
+import { shadowMin } from "../NIS/shadowMin.oa.mjs";
+import { shadowMax } from "../NIS/shadowMax.oa.mjs";
+import { shadowWarning } from "../NIS/shadowWarning.oa.mjs";
+import { shadowInactive } from "../NIS/shadowInactive.oa.mjs";
+import { shadowExpire } from "../NIS/shadowExpire.oa.mjs";
+import { shadowFlag } from "../NIS/shadowFlag.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_nis_oc } from "../NIS/id-nis-oc.va.mjs";
 
 
@@ -120,7 +129,7 @@ const shadowAccount: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ uid, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPassword, shadowLastChange, shadowMin, shadowMax, shadowWarning, shadowInactive, shadowExpire, shadowFlag, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "shadowAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Additional attributes for shadow passwords" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1,], id_nis_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

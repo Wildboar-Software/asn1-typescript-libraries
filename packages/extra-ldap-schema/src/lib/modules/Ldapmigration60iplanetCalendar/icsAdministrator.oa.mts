@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_icsAdministrator } from "../Ldapmigration60iplanetCalendar/id-oc-icsAdministrator.va.mjs";
+import { icsAdminRole } from "../Ldapmigration60iplanetCalendar/icsAdminRole.oa.mjs";
+import { icsExtended } from "../Ldapmigration60iplanetCalendar/icsExtended.oa.mjs";
+import { icsExtendedGroupPrefs } from "../Ldapmigration60iplanetCalendar/icsExtendedGroupPrefs.oa.mjs";
 // export { id_oc_icsAdministrator } from "../Ldapmigration60iplanetCalendar/id-oc-icsAdministrator.va.mjs";
 
 
@@ -105,7 +108,7 @@ const icsAdministrator: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ icsAdminRole, icsExtended, icsExtendedGroupPrefs, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "icsAdministrator" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Standard Object Class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_icsAdministrator /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

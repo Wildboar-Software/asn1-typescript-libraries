@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { proxyHost } from "../LdapIspenv/proxyHost.oa.mjs";
 // export { proxyHost } from "../LdapIspenv/proxyHost.oa.mjs";
 import { id_oc_proxyAccount } from "../LdapIspenv/id-oc-proxyAccount.va.mjs";
+import { webAccess } from "../LdapIspenv/webAccess.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 // export { id_oc_proxyAccount } from "../LdapIspenv/id-oc-proxyAccount.va.mjs";
 
 
@@ -110,7 +113,7 @@ const proxyAccount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ webAccess, uid, userPassword, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ proxyHost, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "proxyAccount" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Account for accessing the proxy server" /* OBJECT_FIELD_SETTING */,

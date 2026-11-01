@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_goSyslogServer } from "../LdapGosaCoreGoserver/id-oc-goSyslogServer.va.mjs";
+import { goSyslogSection } from "../LdapGosaCoreGoserver/goSyslogSection.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { goSyslogServerStatus } from "../LdapGosaCoreGoserver/goSyslogServerStatus.oa.mjs";
 // export { id_oc_goSyslogServer } from "../LdapGosaCoreGoserver/id-oc-goSyslogServer.va.mjs";
 
 
@@ -111,7 +114,7 @@ const goSyslogServer: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ goSyslogSection, description, goSyslogServerStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "goSyslogServer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Syslog server description (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_goSyslogServer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

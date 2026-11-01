@@ -73,6 +73,13 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_davEntity } from "../Ldapmigration60iplanetCalendar/id-oc-davEntity.va.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { davStore } from "../Ldapmigration60iplanetCalendar/davStore.oa.mjs";
+import { davAllowedServices } from "../Ldapmigration60iplanetCalendar/davAllowedServices.oa.mjs";
+import { davEventNotification } from "../Ldapmigration60iplanetCalendar/davEventNotification.oa.mjs";
+import { davEventNotificationDestination } from "../Ldapmigration60iplanetCalendar/davEventNotificationDestination.oa.mjs";
+import { davTimezone } from "../Ldapmigration60iplanetCalendar/davTimezone.oa.mjs";
+import { davUniqueId } from "../Ldapmigration60iplanetCalendar/davUniqueId.oa.mjs";
 // export { id_oc_davEntity } from "../Ldapmigration60iplanetCalendar/id-oc-davEntity.va.mjs";
 
 
@@ -111,7 +118,7 @@ const davEntity: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mail, davStore, davAllowedServices, davEventNotification, davEventNotificationDestination, davTimezone, davUniqueId, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "davEntity" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Common dav object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_davEntity /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

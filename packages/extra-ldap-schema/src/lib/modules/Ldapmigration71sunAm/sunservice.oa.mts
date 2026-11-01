@@ -75,6 +75,12 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 // export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_oc_sunservice } from "../Ldapmigration71sunAm/id-oc-sunservice.va.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { sunserviceschema } from "../Ldapmigration71sunAm/sunserviceschema.oa.mjs";
+import { sunkeyvalue } from "../Ldapmigration70sunSchema2/sunkeyvalue.oa.mjs";
+import { sunxmlkeyvalue } from "../Ldapmigration70sunSchema2/sunxmlkeyvalue.oa.mjs";
+import { sunpluginschema } from "../Ldapmigration71sunAm/sunpluginschema.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_sunservice } from "../Ldapmigration71sunAm/id-oc-sunservice.va.mjs";
 
 
@@ -112,7 +118,7 @@ const sunservice: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ labeledURI, sunserviceschema, sunkeyvalue, sunxmlkeyvalue, sunpluginschema, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunservice" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "object containing service information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunservice /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

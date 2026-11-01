@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_mepTemplateEntry } from "../LdapMepPlugin/id-oc-mepTemplateEntry.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mepStaticAttr } from "../LdapMepPlugin/mepStaticAttr.oa.mjs";
+import { mepMappedAttr } from "../LdapMepPlugin/mepMappedAttr.oa.mjs";
+import { mepRDNAttr } from "../LdapMepPlugin/mepRDNAttr.oa.mjs";
 // export { id_oc_mepTemplateEntry } from "../LdapMepPlugin/id-oc-mepTemplateEntry.va.mjs";
 
 
@@ -108,7 +112,7 @@ const mepTemplateEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, mepStaticAttr, mepMappedAttr, mepRDNAttr, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mepTemplateEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Managed Entries Template Entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mepTemplateEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

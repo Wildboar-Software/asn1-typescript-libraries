@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 // export { organizationalRole } from "../SelectedObjectClasses/organizationalRole.oa.mjs";
 import { id_oc_kmr_orgRole } from "../LdapUser/id-oc-kmr-orgRole.va.mjs";
+import { orgCode } from "../LdapUser/orgCode.oa.mjs";
+import { locationCode } from "../LdapUser/locationCode.oa.mjs";
 // export { id_oc_kmr_orgRole } from "../LdapUser/id-oc-kmr-orgRole.va.mjs";
 
 
@@ -103,7 +105,7 @@ const kmr_orgRole: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ organizationalRole, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ orgCode, locationCode, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kmr-orgRole" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kmr_orgRole /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_rubySyncChangeLogEntry } from "../LdapRubysync/id-oc-rubySyncChangeLogEntry.va.mjs";
+import { changeNumber } from "../DSEE/changeNumber.oa.mjs";
+import { changeType } from "../DSEE/changeType.oa.mjs";
+import { rubySyncSourceInfo } from "../LdapRubysync/rubySyncSourceInfo.oa.mjs";
+import { rubySyncContext } from "../LdapRubysync/rubySyncContext.oa.mjs";
+import { rubySyncDumpEntry } from "../LdapRubysync/rubySyncDumpEntry.oa.mjs";
+import { changes } from "../DSEE/changes.oa.mjs";
+import { newRdn } from "../DSEE/newRdn.oa.mjs";
+import { deleteOldRdn } from "../DSEE/deleteOldRdn.oa.mjs";
+import { newSuperior } from "../DSEE/newSuperior.oa.mjs";
 // export { id_oc_rubySyncChangeLogEntry } from "../LdapRubysync/id-oc-rubySyncChangeLogEntry.va.mjs";
 
 
@@ -111,8 +120,8 @@ const rubySyncChangeLogEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ changeNumber, changeType, rubySyncSourceInfo, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ rubySyncContext, rubySyncDumpEntry, changes, newRdn, deleteOldRdn, newSuperior, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "rubySyncChangeLogEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Useful for LDAP server without native public changelog support (see https://opends.dev.java.net/public/standards/draft-good-ldap-changelog.txt)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_rubySyncChangeLogEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,16 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 // export { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
 import { id_oc_simpleUser } from "../LdapIodine/id-oc-simpleUser.va.mjs";
+import { iodineUid } from "../LdapIodine/iodineUid.oa.mjs";
+import { iodineUidNumber } from "../LdapIodine/iodineUidNumber.oa.mjs";
+import { startpage } from "../LdapIodine/startpage.oa.mjs";
+import { style } from "../LdapIodine/style.oa.mjs";
+import { chrome } from "../LdapIodine/chrome.oa.mjs";
+import { header } from "../LdapIodine/header.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { surname } from "../SelectedAttributeTypes/surname.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { is_admin } from "../LdapIodine/is-admin.oa.mjs";
 // export { id_oc_simpleUser } from "../LdapIodine/id-oc-simpleUser.va.mjs";
 
 
@@ -112,8 +122,8 @@ const simpleUser: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ inetOrgPerson, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ iodineUid, iodineUidNumber, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ startpage, style, chrome, header, startpage, givenName, surname, commonName, is_admin, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "simpleUser" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_simpleUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_fTDfs } from "../LdapSchema2ldifMicrosoft/id-oc-fTDfs.va.mjs";
+import { remoteServerName } from "../MSUser/remoteServerName.oa.mjs";
+import { pKTGuid } from "../MSUser/pKTGuid.oa.mjs";
+import { pKT } from "../MSUser/pKT.oa.mjs";
 // export { id_oc_fTDfs } from "../LdapSchema2ldifMicrosoft/id-oc-fTDfs.va.mjs";
 
 
@@ -104,7 +107,7 @@ const fTDfs: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ remoteServerName, pKTGuid, pKT, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "fTDfs" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_fTDfs /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

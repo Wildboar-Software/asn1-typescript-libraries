@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 // export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_oc_iplanetServiceComponent } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetServiceComponent.va.mjs";
+import { iplanetServiceID } from "../Ldapmigration50iplanetServicemgt/iplanetServiceID.oa.mjs";
+import { iplanetSMSPriority } from "../Ldapmigration50iplanetServicemgt/iplanetSMSPriority.oa.mjs";
+import { iplanetKeyValue } from "../Ldapmigration50iplanetServicemgt/iplanetKeyValue.oa.mjs";
+import { iplanetXMLKeyValue } from "../Ldapmigration50iplanetServicemgt/iplanetXMLKeyValue.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_iplanetServiceComponent } from "../Ldapmigration50iplanetServicemgt/id-oc-iplanetServiceComponent.va.mjs";
 
 
@@ -111,7 +116,7 @@ const iplanetServiceComponent: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ iplanetServiceID, iplanetSMSPriority, iplanetKeyValue, iplanetXMLKeyValue, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "iplanetServiceComponent" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "sub-components of a service" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_iplanetServiceComponent /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

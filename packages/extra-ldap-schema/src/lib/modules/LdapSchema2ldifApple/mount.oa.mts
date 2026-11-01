@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_mount } from "../LdapSchema2ldifApple/id-oc-mount.va.mjs";
+import { mountDirectory } from "../LdapSchema2ldifApple/mountDirectory.oa.mjs";
+import { mountType } from "../LdapSchema2ldifApple/mountType.oa.mjs";
+import { mountOption } from "../LdapSchema2ldifApple/mountOption.oa.mjs";
+import { mountDumpFrequency } from "../LdapSchema2ldifApple/mountDumpFrequency.oa.mjs";
+import { mountPassNo } from "../LdapSchema2ldifApple/mountPassNo.oa.mjs";
 // export { id_oc_mount } from "../LdapSchema2ldifApple/id-oc-mount.va.mjs";
 
 
@@ -110,7 +115,7 @@ const mount: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mountDirectory, mountType, mountOption, mountDumpFrequency, mountPassNo, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "mount" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_mount /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

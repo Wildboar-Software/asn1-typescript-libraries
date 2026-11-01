@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_serviceSecurityObject } from "../Ldaptor/id-oc-serviceSecurityObject.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { validFrom } from "../Ldaptor/validFrom.oa.mjs";
+import { validUntil } from "../Ldaptor/validUntil.oa.mjs";
 // export { id_oc_serviceSecurityObject } from "../Ldaptor/id-oc-serviceSecurityObject.va.mjs";
 
 
@@ -107,8 +112,8 @@ const serviceSecurityObject: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, owner, userPassword, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ validFrom, validUntil, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "serviceSecurityObject" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A service-specific authentication method" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_serviceSecurityObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

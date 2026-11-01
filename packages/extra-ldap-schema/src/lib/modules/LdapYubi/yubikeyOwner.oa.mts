@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_yubikeyOwner } from "../LdapYubi/id-oc-yubikeyOwner.va.mjs";
+import { yubikeyID } from "../LdapYubi/yubikeyID.oa.mjs";
+import { passwordFactor } from "../LdapYubi/passwordFactor.oa.mjs";
 // export { id_oc_yubikeyOwner } from "../LdapYubi/id-oc-yubikeyOwner.va.mjs";
 
 
@@ -106,7 +108,7 @@ const yubikeyOwner: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ yubikeyID, passwordFactor, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "yubikeyOwner" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Object that has a Yubikey" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_yubikeyOwner /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

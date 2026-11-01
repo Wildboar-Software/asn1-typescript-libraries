@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_tf_am_devops } from "../LdapTrustFabric/id-oc-tf-am-devops.va.mjs";
+import { tf_developers } from "../LdapTrustFabric/tf-developers.oa.mjs";
+import { tf_maintainers } from "../LdapTrustFabric/tf-maintainers.oa.mjs";
+import { tf_rel_mangers } from "../LdapTrustFabric/tf-rel-mangers.oa.mjs";
+import { tf_approvers } from "../LdapTrustFabric/tf-approvers.oa.mjs";
+import { tf_owners } from "../LdapTrustFabric/tf-owners.oa.mjs";
 // export { id_oc_tf_am_devops } from "../LdapTrustFabric/id-oc-tf-am-devops.va.mjs";
 
 
@@ -108,7 +113,7 @@ const tf_am_devops: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ tf_developers, tf_maintainers, tf_rel_mangers, tf_approvers, tf_owners, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tf-am-devops" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tf_am_devops /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

@@ -75,6 +75,8 @@ import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2DomainID } from "../LdapGlue505Domain/gLUE2DomainID.oa.mjs";
 // export { gLUE2DomainID } from "../LdapGlue505Domain/gLUE2DomainID.oa.mjs";
 import { id_oc_gLUE2Domain } from "../LdapGlue505Domain/id-oc-gLUE2Domain.va.mjs";
+import { gLUE2DomainDescription } from "../LdapGlue505Domain/gLUE2DomainDescription.oa.mjs";
+import { gLUE2DomainWWW } from "../LdapGlue505Domain/gLUE2DomainWWW.oa.mjs";
 // export { id_oc_gLUE2Domain } from "../LdapGlue505Domain/id-oc-gLUE2Domain.va.mjs";
 
 
@@ -108,7 +110,7 @@ const gLUE2Domain: OBJECT_CLASS = {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ gLUE2DomainID, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2DomainDescription, gLUE2DomainWWW, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Domain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A Domain" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Domain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

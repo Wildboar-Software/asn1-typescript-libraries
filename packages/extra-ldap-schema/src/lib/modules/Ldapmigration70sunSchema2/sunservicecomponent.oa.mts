@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 // export { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
 import { id_oc_sunservicecomponent } from "../Ldapmigration70sunSchema2/id-oc-sunservicecomponent.va.mjs";
+import { sunserviceid } from "../Ldapmigration70sunSchema2/sunserviceid.oa.mjs";
+import { sunsmspriority } from "../Ldapmigration70sunSchema2/sunsmspriority.oa.mjs";
+import { sunkeyvalue } from "../Ldapmigration70sunSchema2/sunkeyvalue.oa.mjs";
+import { sunxmlkeyvalue } from "../Ldapmigration70sunSchema2/sunxmlkeyvalue.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_sunservicecomponent } from "../Ldapmigration70sunSchema2/id-oc-sunservicecomponent.va.mjs";
 
 
@@ -111,7 +116,7 @@ const sunservicecomponent: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ organizationalUnitName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunserviceid, sunsmspriority, sunkeyvalue, sunxmlkeyvalue, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunservicecomponent" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Sub-components of the service" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunservicecomponent /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

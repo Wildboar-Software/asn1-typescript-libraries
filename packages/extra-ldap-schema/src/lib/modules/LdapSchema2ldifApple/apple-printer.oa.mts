@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_apple_printer } from "../LdapSchema2ldifApple/id-oc-apple-printer.va.mjs";
+import { apple_printer_attributes } from "../LdapSchema2ldifApple/apple-printer-attributes.oa.mjs";
+import { apple_printer_lprhost } from "../LdapSchema2ldifApple/apple-printer-lprhost.oa.mjs";
+import { apple_printer_lprqueue } from "../LdapSchema2ldifApple/apple-printer-lprqueue.oa.mjs";
+import { apple_printer_type } from "../LdapSchema2ldifApple/apple-printer-type.oa.mjs";
+import { apple_printer_note } from "../LdapSchema2ldifApple/apple-printer-note.oa.mjs";
 // export { id_oc_apple_printer } from "../LdapSchema2ldifApple/id-oc-apple-printer.va.mjs";
 
 
@@ -110,7 +115,7 @@ const apple_printer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ apple_printer_attributes, apple_printer_lprhost, apple_printer_lprqueue, apple_printer_type, apple_printer_note, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "apple-printer" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_apple_printer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

@@ -10,6 +10,7 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 import { caseExactIA5Match } from "../SelectedAttributeTypes/caseExactIA5Match.oa.mjs";
 // export { caseExactIA5Match } from "../SelectedAttributeTypes/caseExactIA5Match.oa.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
+import { caseExactIA5SubstringsMatch } from "../OpenLDAP/caseExactIA5SubstringsMatch.oa.mjs";
 // export { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
 
 

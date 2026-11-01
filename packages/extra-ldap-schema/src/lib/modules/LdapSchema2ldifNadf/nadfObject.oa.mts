@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { lastModifiedTime } from "../LdapSchema2ldifCosine/lastModifiedTime.oa.mjs";
 // export { lastModifiedTime } from "../LdapSchema2ldifCosine/lastModifiedTime.oa.mjs";
 import { id_oc_nadfObject } from "../LdapSchema2ldifNadf/id-oc-nadfObject.va.mjs";
+import { multiMediaInformation } from "../LdapSchema2ldifNadf/multiMediaInformation.oa.mjs";
+import { nadfSearchGuide } from "../LdapSchema2ldifNadf/nadfSearchGuide.oa.mjs";
+import { supplementaryInformation } from "../LdapSchema2ldifNadf/supplementaryInformation.oa.mjs";
 // export { id_oc_nadfObject } from "../LdapSchema2ldifNadf/id-oc-nadfObject.va.mjs";
 
 
@@ -110,7 +113,7 @@ const nadfObject: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ lastModifiedTime, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ multiMediaInformation, nadfSearchGuide, supplementaryInformation, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nadfObject" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nadfObject /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

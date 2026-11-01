@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_dicomTransferCapability } from "../LdapDicom/id-oc-dicomTransferCapability.va.mjs";
+import { dicomSOPClass } from "../LdapDicom/dicomSOPClass.oa.mjs";
+import { dicomTransferRole } from "../LdapDicom/dicomTransferRole.oa.mjs";
+import { dicomTransferSyntax } from "../LdapDicom/dicomTransferSyntax.oa.mjs";
 // export { id_oc_dicomTransferCapability } from "../LdapDicom/id-oc-dicomTransferCapability.va.mjs";
 
 
@@ -108,7 +111,7 @@ const dicomTransferCapability: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ dicomSOPClass, dicomTransferRole, dicomTransferSyntax, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dicomTransferCapability" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Transfer Capabilities for an Application Entity" /* OBJECT_FIELD_SETTING */,

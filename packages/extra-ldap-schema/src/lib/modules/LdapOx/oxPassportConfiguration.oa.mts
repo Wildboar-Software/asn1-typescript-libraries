@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxPassportConfiguration } from "../LdapOx/id-oc-oxPassportConfiguration.va.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { gluuPassportConfiguration } from "../LdapOx/gluuPassportConfiguration.oa.mjs";
+import { gluuStatus } from "../LdapOx/gluuStatus.oa.mjs";
 // export { id_oc_oxPassportConfiguration } from "../LdapOx/id-oc-oxPassportConfiguration.va.mjs";
 
 
@@ -108,7 +111,7 @@ const oxPassportConfiguration: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ organizationalUnitName, gluuPassportConfiguration, gluuStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxPassportConfiguration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxPassportConfiguration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

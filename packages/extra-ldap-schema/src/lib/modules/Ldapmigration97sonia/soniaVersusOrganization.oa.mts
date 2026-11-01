@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_soniaVersusOrganization } from "../Ldapmigration97sonia/id-oc-soniaVersusOrganization.va.mjs";
+import { versusLongSchoolName } from "../Ldapmigration97sonia/versusLongSchoolName.oa.mjs";
+import { versusShortSchoolName } from "../Ldapmigration97sonia/versusShortSchoolName.oa.mjs";
+import { versusSchoolAdministrationId } from "../Ldapmigration97sonia/versusSchoolAdministrationId.oa.mjs";
+import { versusAntaresSchoolId } from "../Ldapmigration97sonia/versusAntaresSchoolId.oa.mjs";
 // export { id_oc_soniaVersusOrganization } from "../Ldapmigration97sonia/id-oc-soniaVersusOrganization.va.mjs";
 
 
@@ -107,7 +111,7 @@ const soniaVersusOrganization: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ versusLongSchoolName, versusShortSchoolName, versusSchoolAdministrationId, versusAntaresSchoolId, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "SoniaVersusOrganization" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_soniaVersusOrganization /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

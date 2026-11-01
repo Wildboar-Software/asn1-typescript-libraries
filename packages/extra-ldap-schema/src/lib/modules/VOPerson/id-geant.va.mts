@@ -2,6 +2,7 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
+import { ldap_enterprise as id_pen } from "@wildboar/x500/UsefulDefinitions";
 import { ID } from "../VOPerson/ID.ta.mjs";
 // export { ID, _decode_ID, _encode_ID } from "../VOPerson/ID.ta.mjs";
 

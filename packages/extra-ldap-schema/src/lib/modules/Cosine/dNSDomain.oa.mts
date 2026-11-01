@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { domain } from "../Cosine/domain.oa.mjs";
 // export { domain } from "../Cosine/domain.oa.mjs";
 import { id_oc_dNSDomain } from "../Cosine/id-oc-dNSDomain.va.mjs";
+import { aRecord } from "../Cosine/aRecord.oa.mjs";
+import { mDRecord } from "../Cosine/mDRecord.oa.mjs";
+import { mxRecord } from "../Cosine/mxRecord.oa.mjs";
+import { nSRecord } from "../Cosine/nSRecord.oa.mjs";
+import { sOARecord } from "../Cosine/sOARecord.oa.mjs";
+import { cNAMERecord } from "../Cosine/cNAMERecord.oa.mjs";
 // export { id_oc_dNSDomain } from "../Cosine/id-oc-dNSDomain.va.mjs";
 
 
@@ -112,7 +118,7 @@ const dNSDomain: OBJECT_CLASS = {
     },
     "&Superclasses": [ domain, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ aRecord, mDRecord, mxRecord, nSRecord, sOARecord, cNAMERecord, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dNSDomain" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dNSDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

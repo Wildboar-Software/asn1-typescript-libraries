@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_pab } from "../Ldapmigration55imsIcal/id-oc-pab.va.mjs";
+import { un } from "../Ldapmigration55imsIcal/un.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_pab } from "../Ldapmigration55imsIcal/id-oc-pab.va.mjs";
 
 
@@ -108,7 +110,7 @@ const pab: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ un, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pab" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "structural class for defining a personal address book" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pab /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

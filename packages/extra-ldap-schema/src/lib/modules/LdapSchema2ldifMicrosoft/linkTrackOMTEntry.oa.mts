@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 // export { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 import { id_oc_linkTrackOMTEntry } from "../LdapSchema2ldifMicrosoft/id-oc-linkTrackOMTEntry.va.mjs";
+import { birthLocation } from "../MSUser/birthLocation.oa.mjs";
+import { oMTIndxGuid } from "../MSUser/oMTIndxGuid.oa.mjs";
+import { currentLocation } from "../MSUser/currentLocation.oa.mjs";
+import { timeRefresh } from "../MSUser/timeRefresh.oa.mjs";
+import { oMTGuid } from "../MSUser/oMTGuid.oa.mjs";
 // export { id_oc_linkTrackOMTEntry } from "../LdapSchema2ldifMicrosoft/id-oc-linkTrackOMTEntry.va.mjs";
 
 
@@ -106,7 +111,7 @@ const linkTrackOMTEntry: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ birthLocation, oMTIndxGuid, currentLocation, timeRefresh, oMTGuid, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "linkTrackOMTEntry" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_linkTrackOMTEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

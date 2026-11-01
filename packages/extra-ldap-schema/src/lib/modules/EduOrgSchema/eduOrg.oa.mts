@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_eduOrg } from "../EduOrgSchema/id-oc-eduOrg.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { eduOrgHomePageURI } from "../EduOrgSchema/eduOrgHomePageURI.oa.mjs";
+import { eduOrgIdentityAuthNPolicyURI } from "../EduOrgSchema/eduOrgIdentityAuthNPolicyURI.oa.mjs";
+import { eduOrgLegalName } from "../EduOrgSchema/eduOrgLegalName.oa.mjs";
+import { eduOrgSuperiorURI } from "../EduOrgSchema/eduOrgSuperiorURI.oa.mjs";
+import { eduOrgWhitePagesURI } from "../EduOrgSchema/eduOrgWhitePagesURI.oa.mjs";
 // export { id_oc_eduOrg } from "../EduOrgSchema/id-oc-eduOrg.va.mjs";
 
 
@@ -112,7 +118,7 @@ const eduOrg: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, eduOrgHomePageURI, eduOrgIdentityAuthNPolicyURI, eduOrgLegalName, eduOrgSuperiorURI, eduOrgWhitePagesURI, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "eduOrg" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_eduOrg /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

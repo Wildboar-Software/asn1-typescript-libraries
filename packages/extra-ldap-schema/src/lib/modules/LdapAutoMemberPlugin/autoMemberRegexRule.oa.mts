@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_autoMemberRegexRule } from "../LdapAutoMemberPlugin/id-oc-autoMemberRegexRule.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { autoMemberTargetGroup } from "../LdapAutoMemberPlugin/autoMemberTargetGroup.oa.mjs";
+import { autoMemberExclusiveRegex } from "../LdapAutoMemberPlugin/autoMemberExclusiveRegex.oa.mjs";
+import { autoMemberInclusiveRegex } from "../LdapAutoMemberPlugin/autoMemberInclusiveRegex.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_autoMemberRegexRule } from "../LdapAutoMemberPlugin/id-oc-autoMemberRegexRule.va.mjs";
 
 
@@ -107,8 +112,8 @@ const autoMemberRegexRule: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, autoMemberTargetGroup, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ autoMemberExclusiveRegex, autoMemberInclusiveRegex, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "autoMemberRegexRule" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auto Membership Regex Rule Entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_autoMemberRegexRule /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -71,6 +71,13 @@ import { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /*
 // export { ObjectClassKind, _enum_for_ObjectClassKind, ObjectClassKind_abstract /* IMPORTED_LONG_ENUMERATION_ITEM */, abstract /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_structural /* IMPORTED_LONG_ENUMERATION_ITEM */, structural /* IMPORTED_SHORT_ENUMERATION_ITEM */, ObjectClassKind_auxiliary /* IMPORTED_LONG_ENUMERATION_ITEM */, auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ObjectClassKind, _encode_ObjectClassKind } from "../InformationFramework/ObjectClassKind.ta.mjs";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
+import { pilotPerson } from "../Cosine/pilotPerson.oa.mjs";
+import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 // export { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
 
 
@@ -103,10 +110,10 @@ const openLDAPperson: OBJECT_CLASS = {
     },
     encoderFor: {
     },
-    "&Superclasses": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&Superclasses": [ pilotPerson, inetOrgPerson, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, commonName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ givenName, labeledURI, organizationName, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "OpenLDAPperson" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "OpenLDAP Person" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([5,], id_openldap_oc) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

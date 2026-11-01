@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { manager } from "../LdapSchema2ldifCosine/manager.oa.mjs";
 // export { manager } from "../LdapSchema2ldifCosine/manager.oa.mjs";
 import { id_oc_gosaDepartment } from "../LdapGosaCoreGosaSamba3/id-oc-gosaDepartment.va.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { id_oc_gosaDepartment } from "../LdapGosaCoreGosaSamba3/id-oc-gosaDepartment.va.mjs";
 
 
@@ -109,7 +111,7 @@ const gosaDepartment: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ organizationalUnitName, description, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ manager, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gosaDepartment" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Class to mark Departments for GOsa (v2.7)" /* OBJECT_FIELD_SETTING */,

@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_sunIMStoredMessage } from "../Ldapmigration65im/id-oc-sunIMStoredMessage.va.mjs";
+import { sunIMMessageID } from "../Ldapmigration65im/sunIMMessageID.oa.mjs";
+import { sunIMMessageContent } from "../Ldapmigration65im/sunIMMessageContent.oa.mjs";
 // export { id_oc_sunIMStoredMessage } from "../Ldapmigration65im/id-oc-sunIMStoredMessage.va.mjs";
 
 
@@ -106,7 +108,7 @@ const sunIMStoredMessage: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunIMMessageID, sunIMMessageContent, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunIMStoredMessage" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Stored Message Object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunIMStoredMessage /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

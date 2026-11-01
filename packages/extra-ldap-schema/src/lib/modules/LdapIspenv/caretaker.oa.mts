@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_caretaker } from "../LdapIspenv/id-oc-caretaker.va.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
 // export { id_oc_caretaker } from "../LdapIspenv/id-oc-caretaker.va.mjs";
 
 
@@ -106,8 +110,8 @@ const caretaker: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ uid, userPassword, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, owner, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "caretaker" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "For implementing administrative access control. This objectclass should be used to allow programs to bind to the LDAP tree." /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_caretaker /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,9 @@ import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { gLUE2PolicyUserDomainForeignKey } from "../LdapGlue512Policy/gLUE2PolicyUserDomainForeignKey.oa.mjs";
 // export { gLUE2PolicyUserDomainForeignKey } from "../LdapGlue512Policy/gLUE2PolicyUserDomainForeignKey.oa.mjs";
 import { id_oc_gLUE2Policy } from "../LdapGlue512Policy/id-oc-gLUE2Policy.va.mjs";
+import { gLUE2PolicyID } from "../LdapGlue512Policy/gLUE2PolicyID.oa.mjs";
+import { gLUE2PolicyScheme } from "../LdapGlue512Policy/gLUE2PolicyScheme.oa.mjs";
+import { gLUE2PolicyRule } from "../LdapGlue512Policy/gLUE2PolicyRule.oa.mjs";
 // export { id_oc_gLUE2Policy } from "../LdapGlue512Policy/id-oc-gLUE2Policy.va.mjs";
 
 
@@ -108,7 +111,7 @@ const gLUE2Policy: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2PolicyID, gLUE2PolicyScheme, gLUE2PolicyRule, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ gLUE2PolicyUserDomainForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Policy" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A policy" /* OBJECT_FIELD_SETTING */,

@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetMailingListUser } from "../Ldapmigration56imsSchema/id-oc-inetMailingListUser.va.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mluserUniqueId } from "../Ldapmigration56imsSchema/mluserUniqueId.oa.mjs";
+import { mluserPassword } from "../Ldapmigration56imsSchema/mluserPassword.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mluserJoinDate } from "../Ldapmigration56imsSchema/mluserJoinDate.oa.mjs";
+import { mluserJoinIPAddress } from "../Ldapmigration56imsSchema/mluserJoinIPAddress.oa.mjs";
 // export { id_oc_inetMailingListUser } from "../Ldapmigration56imsSchema/id-oc-inetMailingListUser.va.mjs";
 
 
@@ -110,8 +116,8 @@ const inetMailingListUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, mluserUniqueId, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mluserPassword, commonName, mluserJoinDate, mluserJoinIPAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetMailingListUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "auxiliary class for mailing list users" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetMailingListUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

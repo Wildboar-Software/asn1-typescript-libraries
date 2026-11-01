@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_inetDomain } from "../Ldapmigration20subscriber/id-oc-inetDomain.va.mjs";
+import { inetDomainBaseDN } from "../Ldapmigration20subscriber/inetDomainBaseDN.oa.mjs";
+import { inetDomainStatus } from "../Ldapmigration20subscriber/inetDomainStatus.oa.mjs";
 // export { id_oc_inetDomain } from "../Ldapmigration20subscriber/id-oc-inetDomain.va.mjs";
 
 
@@ -106,7 +108,7 @@ const inetDomain: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ inetDomainBaseDN, inetDomainStatus, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "inetDomain" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Auxiliary class for virtual domain nodes" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_inetDomain /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

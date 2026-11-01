@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
+import { zimbraSignatureId } from "../LdapZimbra/zimbraSignatureId.oa.mjs";
+import { zimbraSignatureName } from "../LdapZimbra/zimbraSignatureName.oa.mjs";
+import { zimbraCreateTimestamp } from "../LdapZimbra/zimbraCreateTimestamp.oa.mjs";
+import { zimbraPrefMailSignature } from "../LdapZimbra/zimbraPrefMailSignature.oa.mjs";
+import { zimbraPrefMailSignatureContactId } from "../LdapZimbra/zimbraPrefMailSignatureContactId.oa.mjs";
+import { zimbraPrefMailSignatureHTML } from "../LdapZimbra/zimbraPrefMailSignatureHTML.oa.mjs";
 // export { id_oc_zimbraSignature } from "../LdapZimbra/id-oc-zimbraSignature.va.mjs";
 
 
@@ -108,8 +114,8 @@ const zimbraSignature: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ zimbraSignatureId, zimbraSignatureName, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraCreateTimestamp, zimbraPrefMailSignature, zimbraPrefMailSignatureContactId, zimbraPrefMailSignatureHTML, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "zimbraSignature" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Account Email Signature information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_zimbraSignature /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

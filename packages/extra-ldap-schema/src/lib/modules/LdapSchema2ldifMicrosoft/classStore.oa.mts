@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_classStore } from "../LdapSchema2ldifMicrosoft/id-oc-classStore.va.mjs";
+import { versionNumber } from "../MSUser/versionNumber.oa.mjs";
+import { nextLevelStore } from "../MSUser/nextLevelStore.oa.mjs";
+import { lastUpdateSequence } from "../MSUser/lastUpdateSequence.oa.mjs";
+import { appSchemaVersion } from "../MSUser/appSchemaVersion.oa.mjs";
 // export { id_oc_classStore } from "../LdapSchema2ldifMicrosoft/id-oc-classStore.va.mjs";
 
 
@@ -105,7 +109,7 @@ const classStore: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ versionNumber, nextLevelStore, lastUpdateSequence, appSchemaVersion, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "classStore" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_classStore /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

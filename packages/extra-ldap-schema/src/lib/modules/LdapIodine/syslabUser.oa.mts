@@ -75,6 +75,12 @@ import { posixAccount } from "../NIS/posixAccount.oa.mjs";
 import { groupMembership } from "../LdapIodine/groupMembership.oa.mjs";
 // export { groupMembership } from "../LdapIodine/groupMembership.oa.mjs";
 import { id_oc_syslabUser } from "../LdapIodine/id-oc-syslabUser.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
+import { loginShell } from "../NIS/loginShell.oa.mjs";
 // export { id_oc_syslabUser } from "../LdapIodine/id-oc-syslabUser.va.mjs";
 
 
@@ -112,7 +118,7 @@ const syslabUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ posixAccount, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, uid, uidNumber, gidNumber, homeDirectory, loginShell, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ groupMembership, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "syslabUser" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_syslabUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

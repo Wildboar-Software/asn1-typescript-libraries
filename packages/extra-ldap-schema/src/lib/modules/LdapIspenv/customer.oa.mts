@@ -75,6 +75,14 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_customer } from "../LdapIspenv/id-oc-customer.va.mjs";
+import { custID } from "../LdapIspenv/custID.oa.mjs";
+import { postalAddress } from "../SelectedAttributeTypes/postalAddress.oa.mjs";
+import { telephoneNumber } from "../SelectedAttributeTypes/telephoneNumber.oa.mjs";
+import { facsimileTelephoneNumber } from "../SelectedAttributeTypes/facsimileTelephoneNumber.oa.mjs";
+import { streetAddress } from "../SelectedAttributeTypes/streetAddress.oa.mjs";
+import { postalCode } from "../SelectedAttributeTypes/postalCode.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
 // export { id_oc_customer } from "../LdapIspenv/id-oc-customer.va.mjs";
 
 
@@ -114,7 +122,7 @@ const customer: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ custID, postalAddress, telephoneNumber, facsimileTelephoneNumber, streetAddress, postalCode, description, mail, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "customer" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Customer information (container class)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_customer /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

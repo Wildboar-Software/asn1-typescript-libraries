@@ -73,6 +73,16 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_sunPresenceUser } from "../Ldapmigration65im/id-oc-sunPresenceUser.va.mjs";
+import { sunPresenceUserPrivacy } from "../Ldapmigration65im/sunPresenceUserPrivacy.oa.mjs";
+import { sunPresenceEntityDefaultAccess } from "../Ldapmigration65im/sunPresenceEntityDefaultAccess.oa.mjs";
+import { sunPresenceEntityAccessDenied } from "../Ldapmigration65im/sunPresenceEntityAccessDenied.oa.mjs";
+import { sunPresenceEntityAccessPermitted } from "../Ldapmigration65im/sunPresenceEntityAccessPermitted.oa.mjs";
+import { sunPresenceEntityDevices } from "../Ldapmigration65im/sunPresenceEntityDevices.oa.mjs";
+import { sunPresencePrivacy } from "../Ldapmigration65im/sunPresencePrivacy.oa.mjs";
+import { sunPresenceDefaultAccess } from "../Ldapmigration65im/sunPresenceDefaultAccess.oa.mjs";
+import { sunPresenceAccessDenied } from "../Ldapmigration65im/sunPresenceAccessDenied.oa.mjs";
+import { sunPresenceAccessPermitted } from "../Ldapmigration65im/sunPresenceAccessPermitted.oa.mjs";
+import { sunPresenceDevices } from "../Ldapmigration65im/sunPresenceDevices.oa.mjs";
 // export { id_oc_sunPresenceUser } from "../Ldapmigration65im/id-oc-sunPresenceUser.va.mjs";
 
 
@@ -114,7 +124,7 @@ const sunPresenceUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sunPresenceUserPrivacy, sunPresenceEntityDefaultAccess, sunPresenceEntityAccessDenied, sunPresenceEntityAccessPermitted, sunPresenceEntityDevices, sunPresencePrivacy, sunPresenceDefaultAccess, sunPresenceAccessDenied, sunPresenceAccessPermitted, sunPresenceDevices, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sunPresenceUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Presence Service User" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_sunPresenceUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

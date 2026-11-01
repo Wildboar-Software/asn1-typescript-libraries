@@ -73,6 +73,15 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_euro_oc_orgUnit } from "../ISSS-Schema/id-euro-oc-orgUnit.va.mjs";
+import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
+import { secretary } from "../Cosine/secretary.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { textEncodedORAddress } from "../Cosine/textEncodedORAddress.oa.mjs";
+import { mobileTelephoneNumber } from "../Cosine/mobileTelephoneNumber.oa.mjs";
+import { pagerTelephoneNumber } from "../Cosine/pagerTelephoneNumber.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { area } from "../ISSS-Schema/area.oa.mjs";
+import { fax } from "../ISSS-Schema/fax.oa.mjs";
 // export { id_euro_oc_orgUnit } from "../ISSS-Schema/id-euro-oc-orgUnit.va.mjs";
 
 
@@ -113,7 +122,7 @@ const euroOrgUnit: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ serialNumber, secretary, mail, textEncodedORAddress, mobileTelephoneNumber, pagerTelephoneNumber, labeledURI, area, fax, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "euroOrgUnit" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_euro_oc_orgUnit /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

@@ -73,6 +73,9 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_typeLibrary } from "../LdapSchema2ldifMicrosoft/id-oc-typeLibrary.va.mjs";
+import { cOMClassID } from "../MSUser/cOMClassID.oa.mjs";
+import { cOMInterfaceID } from "../MSUser/cOMInterfaceID.oa.mjs";
+import { cOMUniqueLIBID } from "../MSUser/cOMUniqueLIBID.oa.mjs";
 // export { id_oc_typeLibrary } from "../LdapSchema2ldifMicrosoft/id-oc-typeLibrary.va.mjs";
 
 
@@ -104,7 +107,7 @@ const typeLibrary: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ cOMClassID, cOMInterfaceID, cOMUniqueLIBID, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "typeLibrary" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_typeLibrary /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

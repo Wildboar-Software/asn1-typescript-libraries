@@ -75,6 +75,14 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxLiteralNode } from "../LdapOx/id-oc-oxLiteralNode.va.mjs";
+import { literalBinaryValue } from "../LdapOx/literalBinaryValue.oa.mjs";
+import { literalValue } from "../LdapOx/literalValue.oa.mjs";
+import { organizationalOwner } from "../LdapOx/organizationalOwner.oa.mjs";
+import { owner } from "../SelectedAttributeTypes/owner.oa.mjs";
+import { targetRelationalXdiStatement } from "../LdapOx/targetRelationalXdiStatement.oa.mjs";
+import { x } from "../LdapOx/x.oa.mjs";
+import { xdiStatement } from "../LdapOx/xdiStatement.oa.mjs";
+import { xri } from "../LdapOx/xri.oa.mjs";
 // export { id_oc_oxLiteralNode } from "../LdapOx/id-oc-oxLiteralNode.va.mjs";
 
 
@@ -113,7 +121,7 @@ const oxLiteralNode: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ literalBinaryValue, literalValue, organizationalOwner, owner, targetRelationalXdiStatement, x, xdiStatement, xri, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxLiteralNode" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxLiteralNode /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

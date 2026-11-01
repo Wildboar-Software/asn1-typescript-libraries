@@ -73,6 +73,17 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_freenitModerationMessage } from "../LdapMailinglist/id-oc-freenitModerationMessage.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { mlidNumber } from "../LdapMailinglist/mlidNumber.oa.mjs";
+import { createdAt } from "../LdapMailinglist/createdAt.oa.mjs";
+import { mailinglistMessageId } from "../LdapMailinglist/mailinglistMessageId.oa.mjs";
+import { mailinglistSubject } from "../LdapMailinglist/mailinglistSubject.oa.mjs";
+import { mailinglistSender } from "../LdapMailinglist/mailinglistSender.oa.mjs";
+import { sentAt } from "../LdapMailinglist/sentAt.oa.mjs";
+import { textBody } from "../LdapMailinglist/textBody.oa.mjs";
+import { htmlBody } from "../LdapMailinglist/htmlBody.oa.mjs";
+import { mailinglistStatus } from "../LdapMailinglist/mailinglistStatus.oa.mjs";
+import { decidedAt } from "../LdapMailinglist/decidedAt.oa.mjs";
 // export { id_oc_freenitModerationMessage } from "../LdapMailinglist/id-oc-freenitModerationMessage.va.mjs";
 
 
@@ -113,8 +124,8 @@ const freenitModerationMessage: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, mlidNumber, createdAt, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailinglistMessageId, mailinglistSubject, mailinglistSender, sentAt, textBody, htmlBody, mailinglistStatus, decidedAt, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "freenitModerationMessage" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Freenit moderation message entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_freenitModerationMessage /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_ipsecBase } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecBase.va.mjs";
+import { ipsecName } from "../MSUser/ipsecName.oa.mjs";
+import { ipsecID } from "../MSUser/ipsecID.oa.mjs";
+import { ipsecDataType } from "../MSUser/ipsecDataType.oa.mjs";
+import { ipsecData } from "../MSUser/ipsecData.oa.mjs";
+import { ipsecOwnersReference } from "../MSUser/ipsecOwnersReference.oa.mjs";
 // export { id_oc_ipsecBase } from "../LdapSchema2ldifMicrosoft/id-oc-ipsecBase.va.mjs";
 
 
@@ -108,7 +113,7 @@ const ipsecBase: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": abstract /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ipsecName, ipsecID, ipsecDataType, ipsecData, ipsecOwnersReference, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipsecBase" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipsecBase /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

@@ -73,6 +73,14 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_tf_workspace } from "../LdapTrustFabric/id-oc-tf-workspace.va.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { tf_workspace_id } from "../LdapTrustFabric/tf-workspace-id.oa.mjs";
+import { displayName } from "../InetOrgPerson/displayName.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { tf_source_repository } from "../LdapTrustFabric/tf-source-repository.oa.mjs";
+import { tf_issue_repository } from "../LdapTrustFabric/tf-issue-repository.oa.mjs";
+import { tf_creator } from "../LdapTrustFabric/tf-creator.oa.mjs";
 // export { id_oc_tf_workspace } from "../LdapTrustFabric/id-oc-tf-workspace.va.mjs";
 
 
@@ -109,8 +117,8 @@ const tf_workspace: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ organizationName, tf_workspace_id, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ displayName, seeAlso, description, tf_source_repository, tf_issue_repository, tf_creator, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "tf-workspace" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_tf_workspace /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

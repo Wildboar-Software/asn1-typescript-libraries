@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_postfixUser } from "../LdapPostfix2/id-oc-postfixUser.va.mjs";
+import { mailacceptinggeneralid } from "../LdapPostfix2/mailacceptinggeneralid.oa.mjs";
+import { maildrop } from "../LdapPostfix2/maildrop.oa.mjs";
 // export { id_oc_postfixUser } from "../LdapPostfix2/id-oc-postfixUser.va.mjs";
 
 
@@ -106,7 +108,7 @@ const postfixUser: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ mailacceptinggeneralid, maildrop, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "postfixUser" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Postfix mail user class" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_postfixUser /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

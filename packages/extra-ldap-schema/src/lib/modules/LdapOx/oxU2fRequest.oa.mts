@@ -75,6 +75,14 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxU2fRequest } from "../LdapOx/id-oc-oxU2fRequest.va.mjs";
+import { oxId } from "../LdapOx/oxId.oa.mjs";
+import { oxRequestId } from "../LdapOx/oxRequestId.oa.mjs";
+import { oxRequest } from "../LdapOx/oxRequest.oa.mjs";
+import { oxSessionStateId } from "../LdapOx/oxSessionStateId.oa.mjs";
+import { del } from "../LdapOx/del.oa.mjs";
+import { exp } from "../LdapOx/exp.oa.mjs";
+import { personInum } from "../LdapOx/personInum.oa.mjs";
+import { creationDate } from "../LdapOx/creationDate.oa.mjs";
 // export { id_oc_oxU2fRequest } from "../LdapOx/id-oc-oxU2fRequest.va.mjs";
 
 
@@ -113,7 +121,7 @@ const oxU2fRequest: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ oxId, oxRequestId, oxRequest, oxSessionStateId, del, exp, personInum, creationDate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxU2fRequest" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxU2fRequest /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

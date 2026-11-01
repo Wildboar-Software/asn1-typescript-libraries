@@ -75,6 +75,7 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { ID, _decode_ID, _encode_ID } from "../VOPerson/ID.ta.mjs";
 // export { ID, _decode_ID, _encode_ID } from "../VOPerson/ID.ta.mjs";
 import { id_oc_voPersonObjectClass } from "../VOPerson/id-oc-voPersonObjectClass.va.mjs";
+import { VOPersonAttributes } from "../VOPerson/VOPersonAttributes.osa.mjs";
 // export { id_oc_voPersonObjectClass } from "../VOPerson/id-oc-voPersonObjectClass.va.mjs";
 
 
@@ -108,7 +109,7 @@ const voPersonObjectClass: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ...VOPersonAttributes, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "voPersonObjectClass" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "REFEDS Virtual Organization Person" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_voPersonObjectClass /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

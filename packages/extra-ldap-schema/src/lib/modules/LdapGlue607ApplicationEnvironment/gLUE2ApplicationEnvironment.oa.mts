@@ -73,6 +73,24 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 // export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2ApplicationEnvironment } from "../LdapGlue607ApplicationEnvironment/id-oc-gLUE2ApplicationEnvironment.va.mjs";
+import { gLUE2ApplicationEnvironmentID } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentID.oa.mjs";
+import { gLUE2ApplicationEnvironmentAppName } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentAppName.oa.mjs";
+import { gLUE2ApplicationEnvironmentComputingManagerForeignKey } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentComputingManagerForeignKey.oa.mjs";
+import { gLUE2ApplicationEnvironmentAppVersion } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentAppVersion.oa.mjs";
+import { gLUE2ApplicationEnvironmentRepository } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentRepository.oa.mjs";
+import { gLUE2ApplicationEnvironmentState } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentState.oa.mjs";
+import { gLUE2ApplicationEnvironmentRemovalDate } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentRemovalDate.oa.mjs";
+import { gLUE2ApplicationEnvironmentLicense } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentLicense.oa.mjs";
+import { gLUE2ApplicationEnvironmentDescription } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentDescription.oa.mjs";
+import { gLUE2ApplicationEnvironmentBestBenchmark } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentBestBenchmark.oa.mjs";
+import { gLUE2ApplicationEnvironmentParallelSupport } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentParallelSupport.oa.mjs";
+import { gLUE2ApplicationEnvironmentMaxSlots } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentMaxSlots.oa.mjs";
+import { gLUE2ApplicationEnvironmentMaxJobs } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentMaxJobs.oa.mjs";
+import { gLUE2ApplicationEnvironmentMaxUserSeats } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentMaxUserSeats.oa.mjs";
+import { gLUE2ApplicationEnvironmentFreeSlots } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentFreeSlots.oa.mjs";
+import { gLUE2ApplicationEnvironmentFreeJobs } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentFreeJobs.oa.mjs";
+import { gLUE2ApplicationEnvironmentFreeUserSeats } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentFreeUserSeats.oa.mjs";
+import { gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey } from "../LdapGlue607ApplicationEnvironment/gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey.oa.mjs";
 // export { id_oc_gLUE2ApplicationEnvironment } from "../LdapGlue607ApplicationEnvironment/id-oc-gLUE2ApplicationEnvironment.va.mjs";
 
 
@@ -120,8 +138,8 @@ const gLUE2ApplicationEnvironment: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ApplicationEnvironmentID, gLUE2ApplicationEnvironmentAppName, gLUE2ApplicationEnvironmentComputingManagerForeignKey, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ApplicationEnvironmentAppVersion, gLUE2ApplicationEnvironmentRepository, gLUE2ApplicationEnvironmentState, gLUE2ApplicationEnvironmentRemovalDate, gLUE2ApplicationEnvironmentLicense, gLUE2ApplicationEnvironmentDescription, gLUE2ApplicationEnvironmentBestBenchmark, gLUE2ApplicationEnvironmentParallelSupport, gLUE2ApplicationEnvironmentMaxSlots, gLUE2ApplicationEnvironmentMaxJobs, gLUE2ApplicationEnvironmentMaxUserSeats, gLUE2ApplicationEnvironmentFreeSlots, gLUE2ApplicationEnvironmentFreeJobs, gLUE2ApplicationEnvironmentFreeUserSeats, gLUE2ApplicationEnvironmentExecutionEnvironmentForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2ApplicationEnvironment" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Description of the application software or environment characteristic available within one or more execution environments" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2ApplicationEnvironment /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

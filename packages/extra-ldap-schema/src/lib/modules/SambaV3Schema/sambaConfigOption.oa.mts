@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { sambaOptionName } from "../SambaV3Schema/sambaOptionName.oa.mjs";
+import { sambaBoolOption } from "../SambaV3Schema/sambaBoolOption.oa.mjs";
+import { sambaIntegerOption } from "../SambaV3Schema/sambaIntegerOption.oa.mjs";
+import { sambaStringListOption } from "../SambaV3Schema/sambaStringListOption.oa.mjs";
+import { sambaStringOption } from "../SambaV3Schema/sambaStringOption.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
 // export { sambaOptionName } from "../SambaV3Schema/sambaOptionName.oa.mjs";
 
 
@@ -108,7 +113,7 @@ const sambaConfigOption: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ sambaOptionName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ sambaBoolOption, sambaIntegerOption, sambaStringListOption, sambaStringOption, description, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "sambaConfigOption" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Samba Configuration Option" /* OBJECT_FIELD_SETTING */,
     "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7165, 2, 2, 12,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

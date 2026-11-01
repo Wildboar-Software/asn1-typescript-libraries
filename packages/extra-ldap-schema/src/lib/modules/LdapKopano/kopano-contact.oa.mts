@@ -73,6 +73,12 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_kopano_contact } from "../LdapKopano/id-oc-kopano-contact.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+import { kopanoSendAsPrivilege } from "../LdapKopano/kopanoSendAsPrivilege.oa.mjs";
+import { kopanoHidden } from "../LdapKopano/kopanoHidden.oa.mjs";
+import { kopanoAliases } from "../LdapKopano/kopanoAliases.oa.mjs";
+import { kopanoAccount } from "../LdapKopano/kopanoAccount.oa.mjs";
 // export { id_oc_kopano_contact } from "../LdapKopano/id-oc-kopano-contact.va.mjs";
 
 
@@ -110,8 +116,8 @@ const kopano_contact: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, uidNumber, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ kopanoSendAsPrivilege, kopanoHidden, kopanoAliases, kopanoAccount, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "kopano-contact" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "KOPANO: a contact of Kopano" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_kopano_contact /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

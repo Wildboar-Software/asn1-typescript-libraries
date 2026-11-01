@@ -75,6 +75,17 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { documentIdentifier } from "../Cosine/documentIdentifier.oa.mjs";
 // export { documentIdentifier } from "../Cosine/documentIdentifier.oa.mjs";
 import { id_oc_document } from "../Cosine/id-oc-document.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { seeAlso } from "../SelectedAttributeTypes/seeAlso.oa.mjs";
+import { localityName } from "../SelectedAttributeTypes/localityName.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
+import { organizationalUnitName } from "../SelectedAttributeTypes/organizationalUnitName.oa.mjs";
+import { documentTitle } from "../Cosine/documentTitle.oa.mjs";
+import { documentVersion } from "../Cosine/documentVersion.oa.mjs";
+import { documentAuthor } from "../Cosine/documentAuthor.oa.mjs";
+import { documentLocation } from "../Cosine/documentLocation.oa.mjs";
+import { documentPublisher } from "../Cosine/documentPublisher.oa.mjs";
 // export { id_oc_document } from "../Cosine/id-oc-document.va.mjs";
 
 
@@ -121,7 +132,7 @@ const document: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ documentIdentifier, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, description, seeAlso, localityName, organizationName, organizationalUnitName, documentTitle, documentVersion, documentAuthor, documentLocation, documentPublisher, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "document" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_document /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
 };

@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 // export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
+import { gLUE2BenchmarkID } from "../LdapGlue605Benchmark/gLUE2BenchmarkID.oa.mjs";
+import { gLUE2BenchmarkType } from "../LdapGlue605Benchmark/gLUE2BenchmarkType.oa.mjs";
+import { gLUE2BenchmarkValue } from "../LdapGlue605Benchmark/gLUE2BenchmarkValue.oa.mjs";
+import { gLUE2BenchmarkExecutionEnvironmentForeignKey } from "../LdapGlue605Benchmark/gLUE2BenchmarkExecutionEnvironmentForeignKey.oa.mjs";
+import { gLUE2BenchmarkComputingManagerForeignKey } from "../LdapGlue605Benchmark/gLUE2BenchmarkComputingManagerForeignKey.oa.mjs";
 // export { id_oc_gLUE2Benchmark } from "../LdapGlue605Benchmark/id-oc-gLUE2Benchmark.va.mjs";
 
 
@@ -107,8 +112,8 @@ const gLUE2Benchmark: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2BenchmarkID, gLUE2BenchmarkType, gLUE2BenchmarkValue, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2BenchmarkExecutionEnvironmentForeignKey, gLUE2BenchmarkComputingManagerForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Benchmark" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Benchmark information about an entity providing computing capacity" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Benchmark /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

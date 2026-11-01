@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_dbmailForwardingAddress } from "../LdapDbmail/id-oc-dbmailForwardingAddress.va.mjs";
+import { mail } from "../LdapSchema2ldifCore/mail.oa.mjs";
+import { mailForwardingAddress } from "../LdapDbmail/mailForwardingAddress.oa.mjs";
 // export { id_oc_dbmailForwardingAddress } from "../LdapDbmail/id-oc-dbmailForwardingAddress.va.mjs";
 
 
@@ -106,7 +108,7 @@ const dbmailForwardingAddress: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ mail, mailForwardingAddress, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "dbmailForwardingAddress" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "DBMail-LDAP Forwarding Address" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_dbmailForwardingAddress /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

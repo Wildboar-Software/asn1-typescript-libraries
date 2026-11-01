@@ -75,6 +75,9 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 // export { objectClass } from "../InformationFramework/objectClass.oa.mjs";
 import { id_oc_oxScript_2 } from "../LdapOx/id-oc-oxScript-2.va.mjs";
+import { inum } from "../LdapOx/inum.oa.mjs";
+import { oxScriptType } from "../LdapOx/oxScriptType.oa.mjs";
+import { oxScript } from "../LdapOx/oxScript.oa.mjs";
 // export { id_oc_oxScript_2 } from "../LdapOx/id-oc-oxScript-2.va.mjs";
 
 
@@ -108,7 +111,7 @@ const oxScript_2: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ objectClass, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ inum, oxScript, oxScriptType, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "oxScript" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_oxScript_2 /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

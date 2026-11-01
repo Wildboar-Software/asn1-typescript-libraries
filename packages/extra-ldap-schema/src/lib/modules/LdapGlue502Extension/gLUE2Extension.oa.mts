@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_gLUE2Extension } from "../LdapGlue502Extension/id-oc-gLUE2Extension.va.mjs";
+import { gLUE2ExtensionLocalID } from "../LdapGlue502Extension/gLUE2ExtensionLocalID.oa.mjs";
+import { gLUE2ExtensionKey } from "../LdapGlue502Extension/gLUE2ExtensionKey.oa.mjs";
+import { gLUE2ExtensionValue } from "../LdapGlue502Extension/gLUE2ExtensionValue.oa.mjs";
+import { gLUE2ExtensionEntityForeignKey } from "../LdapGlue502Extension/gLUE2ExtensionEntityForeignKey.oa.mjs";
 // export { id_oc_gLUE2Extension } from "../LdapGlue502Extension/id-oc-gLUE2Extension.va.mjs";
 
 
@@ -106,7 +110,7 @@ const gLUE2Extension: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ExtensionLocalID, gLUE2ExtensionKey, gLUE2ExtensionValue, gLUE2ExtensionEntityForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Extension" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "A key/value pair enabling the association of extra information" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Extension /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -73,6 +73,8 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_pwdPBKDF2PluginConfig } from "../LdapCore389/id-oc-pwdPBKDF2PluginConfig.va.mjs";
+import { nsslapd_pwdPBKDF2NumIterations } from "../LdapCore389/nsslapd-pwdPBKDF2NumIterations.oa.mjs";
+import { nsslapd_pwdPBKDF2AcceptMaxIterations } from "../LdapCore389/nsslapd-pwdPBKDF2AcceptMaxIterations.oa.mjs";
 // export { id_oc_pwdPBKDF2PluginConfig } from "../LdapCore389/id-oc-pwdPBKDF2PluginConfig.va.mjs";
 
 
@@ -104,7 +106,7 @@ const pwdPBKDF2PluginConfig: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ nsslapd_pwdPBKDF2NumIterations, nsslapd_pwdPBKDF2AcceptMaxIterations, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "pwdPBKDF2PluginConfig" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "PBKDF2 Password Storage Plugin configuration" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_pwdPBKDF2PluginConfig /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

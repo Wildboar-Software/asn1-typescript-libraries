@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_amdmap } from "../LdapAmd/id-oc-amdmap.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { amdmapName } from "../LdapAmd/amdmapName.oa.mjs";
+import { amdmapKey } from "../LdapAmd/amdmapKey.oa.mjs";
+import { amdmapValue } from "../LdapAmd/amdmapValue.oa.mjs";
 // export { id_oc_amdmap } from "../LdapAmd/id-oc-amdmap.va.mjs";
 
 
@@ -106,7 +110,7 @@ const amdmap: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ commonName, amdmapName, amdmapKey, amdmapValue, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "amdmap" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Defines an AMD map entry" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_amdmap /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

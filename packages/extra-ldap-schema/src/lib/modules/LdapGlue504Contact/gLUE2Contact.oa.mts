@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 // export { gLUE2Entity } from "../LdapGlue501Entity/gLUE2Entity.oa.mjs";
 import { id_oc_gLUE2Contact } from "../LdapGlue504Contact/id-oc-gLUE2Contact.va.mjs";
+import { gLUE2ContactID } from "../LdapGlue504Contact/gLUE2ContactID.oa.mjs";
+import { gLUE2ContactDetail } from "../LdapGlue504Contact/gLUE2ContactDetail.oa.mjs";
+import { gLUE2ContactType } from "../LdapGlue504Contact/gLUE2ContactType.oa.mjs";
+import { gLUE2ContactServiceForeignKey } from "../LdapGlue504Contact/gLUE2ContactServiceForeignKey.oa.mjs";
+import { gLUE2ContactDomainForeignKey } from "../LdapGlue504Contact/gLUE2ContactDomainForeignKey.oa.mjs";
 // export { id_oc_gLUE2Contact } from "../LdapGlue504Contact/id-oc-gLUE2Contact.va.mjs";
 
 
@@ -107,8 +112,8 @@ const gLUE2Contact: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ gLUE2Entity, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gLUE2ContactID, gLUE2ContactDetail, gLUE2ContactType, ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gLUE2ContactServiceForeignKey, gLUE2ContactDomainForeignKey, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "GLUE2Contact" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Information enabling to establish a communication with a person or group of persons part of a domain" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gLUE2Contact /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

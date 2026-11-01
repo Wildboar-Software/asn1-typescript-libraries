@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gotoMenuEntry } from "../LdapGosaCoreGosaSamba3/id-oc-gotoMenuEntry.va.mjs";
+import { gosaApplicationParameter } from "../LdapGosaCoreGosaSamba3/gosaApplicationParameter.oa.mjs";
+import { gosaApplicationPriority } from "../LdapGosaCoreGosaSamba3/gosaApplicationPriority.oa.mjs";
 // export { id_oc_gotoMenuEntry } from "../LdapGosaCoreGosaSamba3/id-oc-gotoMenuEntry.va.mjs";
 
 
@@ -108,7 +110,7 @@ const gotoMenuEntry: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ gosaApplicationParameter, gosaApplicationPriority, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gotoMenuEntry" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOto - defines a menu entry (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gotoMenuEntry /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

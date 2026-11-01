@@ -73,6 +73,11 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { top } from "../InformationFramework/top.oa.mjs";
 // export { top } from "../InformationFramework/top.oa.mjs";
 import { id_oc_nsSchemaPolicy } from "../LdapCore389/id-oc-nsSchemaPolicy.va.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
+import { schemaUpdateObjectclassAccept } from "../LdapCore389/schemaUpdateObjectclassAccept.oa.mjs";
+import { schemaUpdateObjectclassReject } from "../LdapCore389/schemaUpdateObjectclassReject.oa.mjs";
+import { schemaUpdateAttributeAccept } from "../LdapCore389/schemaUpdateAttributeAccept.oa.mjs";
+import { schemaUpdateAttributeReject } from "../LdapCore389/schemaUpdateAttributeReject.oa.mjs";
 // export { id_oc_nsSchemaPolicy } from "../LdapCore389/id-oc-nsSchemaPolicy.va.mjs";
 
 
@@ -107,7 +112,7 @@ const nsSchemaPolicy: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ commonName, schemaUpdateObjectclassAccept, schemaUpdateObjectclassReject, schemaUpdateAttributeAccept, schemaUpdateAttributeReject, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsSchemaPolicy" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Netscape defined objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsSchemaPolicy /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

@@ -75,6 +75,8 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { ipaEntitlementId } from "../Ldap60basev2/ipaEntitlementId.oa.mjs";
 // export { ipaEntitlementId } from "../Ldap60basev2/ipaEntitlementId.oa.mjs";
 import { id_oc_ipaEntitlement } from "../Ldap60basev2/id-oc-ipaEntitlement.va.mjs";
+import { userPKCS12 } from "../PKCS-9/userPKCS12.oa.mjs";
+import { userCertificate } from "../AuthenticationFramework/userCertificate.oa.mjs";
 // export { id_oc_ipaEntitlement } from "../Ldap60basev2/id-oc-ipaEntitlement.va.mjs";
 
 
@@ -110,7 +112,7 @@ const ipaEntitlement: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ ipaEntitlementId, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ userPKCS12, userCertificate, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "ipaEntitlement" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "IPA Entitlement object" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_ipaEntitlement /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

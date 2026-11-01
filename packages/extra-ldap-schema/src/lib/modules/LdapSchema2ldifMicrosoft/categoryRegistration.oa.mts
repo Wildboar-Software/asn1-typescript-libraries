@@ -73,6 +73,10 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 // export { leaf } from "../LdapSchema2ldifFmserver/leaf.oa.mjs";
 import { id_oc_categoryRegistration } from "../LdapSchema2ldifMicrosoft/id-oc-categoryRegistration.va.mjs";
+import { localeID } from "../MSUser/localeID.oa.mjs";
+import { categoryId } from "../MSUser/categoryId.oa.mjs";
+import { managedBy } from "../MSUser/managedBy.oa.mjs";
+import { localizedDescription } from "../MSUser/localizedDescription.oa.mjs";
 // export { id_oc_categoryRegistration } from "../LdapSchema2ldifMicrosoft/id-oc-categoryRegistration.va.mjs";
 
 
@@ -105,7 +109,7 @@ const categoryRegistration: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ leaf, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ localeID, categoryId, managedBy, localizedDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "categoryRegistration" ] /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_categoryRegistration /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
     "&kind": structural /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,

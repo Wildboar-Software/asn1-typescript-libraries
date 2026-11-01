@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_gotoTerminal } from "../LdapGosaCoreGoto/id-oc-gotoTerminal.va.mjs";
+import { description } from "../SelectedAttributeTypes/description.oa.mjs";
+import { macAddress } from "../NIS/macAddress.oa.mjs";
+import { ipHostNumber } from "../NIS/ipHostNumber.oa.mjs";
+import { gotoShare } from "../LdapGosaCoreGoto/gotoShare.oa.mjs";
+import { goFonHardware } from "../LdapGosaCoreGofon/goFonHardware.oa.mjs";
 // export { id_oc_gotoTerminal } from "../LdapGosaCoreGoto/id-oc-gotoTerminal.va.mjs";
 
 
@@ -113,7 +118,7 @@ const gotoTerminal: OBJECT_CLASS = {
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ description, macAddress, ipHostNumber, gotoShare, goFonHardware, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "gotoTerminal" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "GOto - Gonicus Terminal Concept, objectclass (v2.7)" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_gotoTerminal /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

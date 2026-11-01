@@ -75,6 +75,14 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 // export { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { id_oc_nsSlapiTask } from "../LdapCommon389/id-oc-nsSlapiTask.va.mjs";
+import { ttl } from "../LdapCommon389/ttl.oa.mjs";
+import { nsTaskLog } from "../LdapCommon389/nsTaskLog.oa.mjs";
+import { nsTaskStatus } from "../LdapCommon389/nsTaskStatus.oa.mjs";
+import { nsTaskExitCode } from "../LdapCommon389/nsTaskExitCode.oa.mjs";
+import { nsTaskCurrentItem } from "../LdapCommon389/nsTaskCurrentItem.oa.mjs";
+import { nsTaskTotalItems } from "../LdapCommon389/nsTaskTotalItems.oa.mjs";
+import { nsTaskCreated } from "../LdapCommon389/nsTaskCreated.oa.mjs";
+import { nsTaskWarning } from "../LdapCommon389/nsTaskWarning.oa.mjs";
 // export { id_oc_nsSlapiTask } from "../LdapCommon389/id-oc-nsSlapiTask.va.mjs";
 
 
@@ -114,7 +122,7 @@ const nsSlapiTask: OBJECT_CLASS = {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
     "&MandatoryAttributes": [ commonName, ] /* OBJECT_FIELD_SETTING */,
-    "&OptionalAttributes": [ ..., ..., ..., ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ ttl, nsTaskLog, nsTaskStatus, nsTaskExitCode, nsTaskCurrentItem, nsTaskTotalItems, nsTaskCreated, nsTaskWarning, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "nsSlapiTask" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Slapi_Task objectclass" /* OBJECT_FIELD_SETTING */,
     "&id": id_oc_nsSlapiTask /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,

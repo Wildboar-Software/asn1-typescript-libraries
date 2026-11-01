@@ -75,6 +75,11 @@ import { top } from "../InformationFramework/top.oa.mjs";
 import { x_plug_paymentDescription } from "../LdapPlugpen/x-plug-paymentDescription.oa.mjs";
 // export { x_plug_paymentDescription } from "../LdapPlugpen/x-plug-paymentDescription.oa.mjs";
 import { id_oc_x_plug_payment } from "../LdapPlugpen/id-oc-x-plug-payment.va.mjs";
+import { x_plug_paymentDate } from "../LdapPlugpen/x-plug-paymentDate.oa.mjs";
+import { x_plug_paymentID } from "../LdapPlugpen/x-plug-paymentID.oa.mjs";
+import { x_plug_paymentAmount } from "../LdapPlugpen/x-plug-paymentAmount.oa.mjs";
+import { x_plug_paymentType } from "../LdapPlugpen/x-plug-paymentType.oa.mjs";
+import { x_plug_paymentYears } from "../LdapPlugpen/x-plug-paymentYears.oa.mjs";
 // export { id_oc_x_plug_payment } from "../LdapPlugpen/id-oc-x-plug-payment.va.mjs";
 
 
@@ -110,7 +115,7 @@ const x_plug_payment: OBJECT_CLASS = {
     encoderFor: {
     },
     "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
-    "&MandatoryAttributes": [ ..., ..., ..., ..., ..., ] /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ x_plug_paymentDate, x_plug_paymentID, x_plug_paymentAmount, x_plug_paymentType, x_plug_paymentYears, ] /* OBJECT_FIELD_SETTING */,
     "&OptionalAttributes": [ x_plug_paymentDescription, ] /* OBJECT_FIELD_SETTING */,
     "&ldapName": [ "x-plug-payment" ] /* OBJECT_FIELD_SETTING */,
     "&ldapDesc": "Payment" /* OBJECT_FIELD_SETTING */,
