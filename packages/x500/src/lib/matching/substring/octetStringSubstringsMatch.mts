@@ -7,6 +7,7 @@ import {
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
     createSubstringsMatcher,
+    MATCH_FLAG_DEBUG,
     type AssertedSubstring,
     type Matcher,
     type TypedEquationFunction,
@@ -57,6 +58,7 @@ function octetStringSubstringsMatchTyped (
     assertion: AssertedSubstring<Uint8Array>[],
     value: ASN1Element,
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = value.octetString;
     const buf = Buffer.from(stored);
@@ -66,6 +68,11 @@ function octetStringSubstringsMatchTyped (
     for (let i = 0; i < assertion.length; i++) {
         const piece = assertion[i];
         if ("control" in piece) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: octetStringSubstringsMatch: ignoring control attribute in substring assertion",
+                );
+            }
             continue;
         }
         sawPiece = true;
@@ -96,6 +103,11 @@ function octetStringSubstringsMatchTyped (
         }
     }
     if (!sawPiece) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: octetStringSubstringsMatch: assertion contains no initial, any, or final substring",
+            );
+        }
         return undefined;
     }
     return true;

@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -41,12 +42,18 @@ function certificatePairExactMatchTyped (
     a: CertificatePairExactAssertion,
     value: CertificatePair | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_CertificatePair);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const issuedTo = a.issuedToThisCAAssertion;
     const issuedBy = a.issuedByThisCAAssertion;
     if (!issuedTo && !issuedBy) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: certificatePairExactMatch: assertion has neither issuedToThisCAAssertion nor issuedByThisCAAssertion",
+            );
+        }
         return false;
     }
     if (issuedTo) {

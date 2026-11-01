@@ -1,6 +1,8 @@
 import { ASN1Element, DERElement } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -91,9 +93,11 @@ export
 function timeSpecificationMatchTyped (
     assertion: TimeSpecification,
     value: ASN1Element | AttributeCertificate | Certificate | TimeSpecification,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     if (!ASN1Element.isElement(value) && "time" in value && !("toBeSigned" in value)) {
-        return timeSpecificationsEqual(assertion, value);
+        return timeSpecificationsEqual(assertion, value, flags);
     }
     const ext: Extension | undefined = certificateExtensions(value)
         ?.find((item: Extension): boolean => item.extnId.isEqualTo(id_ce_timeSpecification));
@@ -102,7 +106,7 @@ function timeSpecificationMatchTyped (
     }
     const el: DERElement = new DERElement();
     el.fromBytes(ext.extnValue);
-    return timeSpecificationsEqual(assertion, _decode_TimeSpecification(el));
+    return timeSpecificationsEqual(assertion, _decode_TimeSpecification(el), flags);
 }
 
 timeSpecificationMatchTyped satisfies TypedEquationFunction<TimeSpecification>;
@@ -121,11 +125,13 @@ const timeSpecificationMatch: Matcher = createEqualityMatcher(
  *
  * @param assertedTime Presented time specification.
  * @param storedTime Stored time specification.
+ * @param flags `MATCH_FLAG_DEBUG`.
  * @returns `true` when every presented component matches.
  */
 function timeSpecificationsEqual (
     assertedTime: TimeSpecification,
     storedTime: TimeSpecification,
+    flags: number = 0,
 ): boolean {
     if (
         (storedTime.notThisTime ?? TimeSpecification._default_value_for_notThisTime)
@@ -146,6 +152,11 @@ function timeSpecificationsEqual (
     const storedTimeExts = storedTime._unrecognizedExtensionsList;
     const assertedTimeExts = assertedTime._unrecognizedExtensionsList;
     if (storedTimeExts.length < assertedTimeExts.length) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: timeSpecificationMatch: asserted unrecognized extension in TimeSpecification",
+            );
+        }
         return false; // Asserted a component we don't recognize.
     }
 
@@ -153,6 +164,11 @@ function timeSpecificationsEqual (
         const staexts = storedTime.time.absolute._unrecognizedExtensionsList;
         const ataexts = assertedTime.time.absolute._unrecognizedExtensionsList;
         if (staexts.length < ataexts.length) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: timeSpecificationMatch: asserted unrecognized extension in absolute time",
+                );
+            }
             return false; // Asserted a component we don't recognize.
         }
 

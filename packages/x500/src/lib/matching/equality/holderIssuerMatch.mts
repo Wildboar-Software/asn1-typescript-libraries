@@ -41,9 +41,10 @@ function holderIssuerMatchTyped (
     a: HolderIssuerAssertion,
     value: AttributeCertificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (a.holder && !compareHolder(a.holder, v.toBeSigned.holder, getEqualityMatcher)) {
         return false;
     }

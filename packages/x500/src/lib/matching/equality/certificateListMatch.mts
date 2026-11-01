@@ -67,9 +67,10 @@ function certificateListMatchTyped (
     a: CertificateListAssertion,
     value: CertificateList | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_CertificateList);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const crlNumberExt: Extension | undefined = v.toBeSigned.crlExtensions
         ?.find((ext: Extension): boolean => (ext.extnId.isEqualTo(id_ce_cRLNumber)));
     const idpExt: Extension | undefined = v.toBeSigned.crlExtensions

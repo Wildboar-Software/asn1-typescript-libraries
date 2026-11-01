@@ -8,6 +8,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -49,6 +50,11 @@ function directoryStringFirstComponentMatchTyped (
 ): boolean | undefined {
     const first = readFirstDirectoryString(value);
     if (first === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: directoryStringFirstComponentMatch: stored sequence has no first component",
+            );
+        }
         return false;
     }
     return caseIgnoreMatchTyped(assertion, first, getEqualityMatcher, flags);

@@ -4,6 +4,7 @@ import { readDecoded } from "../readValue.mjs";
 import { evaluateCertificateAssertion } from "./certificateMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -38,9 +39,15 @@ function certificatePairMatchTyped (
     a: CertificatePairAssertion,
     value: CertificatePair | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_CertificatePair);
     if (v.isEmpty()) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: certificatePairMatch: stored CertificatePair is empty",
+            );
+        }
         return false;
     }
     const issuedBy = a.issuedByThisCAAssertion;
@@ -48,8 +55,8 @@ function certificatePairMatchTyped (
     const issuedByCert = v.issuedByThisCA;
     const issuedToCert = v.issuedToThisCA;
     return (
-        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert, getMatcher)))
-        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert, getMatcher)))
+        (!issuedBy || (!!issuedByCert && evaluateCertificateAssertion(issuedBy, issuedByCert, getMatcher, flags)))
+        && (!issuedTo || (!!issuedToCert && evaluateCertificateAssertion(issuedTo, issuedToCert, getMatcher, flags)))
     );
 }
 

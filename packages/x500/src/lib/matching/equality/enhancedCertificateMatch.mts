@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -105,15 +106,17 @@ function evaluateEnhancedCertificateAssertion (
     assertion: EnhancedCertificateAssertion,
     value: Certificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     if (ASN1Element.isElement(value)) {
         return evaluateEnhancedCertificateAssertion(
             assertion,
             _decode_Certificate(value),
             getMatcher,
+            flags,
         );
     }
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const tbs = value.toBeSigned;
     if (assertion.serialNumber && Buffer.compare(assertion.serialNumber, tbs.serialNumber)) {
         return false;
@@ -270,6 +273,14 @@ function evaluateEnhancedCertificateAssertion (
                 }
                 break;
             }
+            default: {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        `@wildboar/x500: debug: enhancedCertificateMatch: unrecognized builtinNameForm ${altNameType}`,
+                    );
+                }
+                return false;
+            }
             }
         } else if ("otherNameForm" in subjectAltName.altnameType) {
             const otherName = subjectAltName.altnameType.otherNameForm;
@@ -283,6 +294,11 @@ function evaluateEnhancedCertificateAssertion (
                 return false;
             }
         } else {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: enhancedCertificateMatch: unrecognized AltNameType alternative",
+                );
+            }
             return false;
         }
     }

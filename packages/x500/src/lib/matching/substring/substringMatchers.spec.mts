@@ -23,7 +23,11 @@ import {
     _encode_FacsimileTelephoneNumber,
 } from "../../modules/SelectedAttributeTypes/FacsimileTelephoneNumber.ta.mjs";
 import type { FilterItem_substrings_strings_Item as FilterSubstring } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-import { MATCH_FLAG_CONSTANT_TIME, MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
+    MATCH_FLAG_VALUE_NORMALIZED,
+} from "../../types/matching.mjs";
 import caseExactSubstringsMatch from "./caseExactSubstringsMatch.mjs";
 import caseIgnoreSubstringsMatch, {
     caseIgnoreSubstringsMatchTyped,
@@ -103,11 +107,24 @@ describe("caseIgnoreSubstringsMatch", () => {
     it("throws when the assertion cannot be prepared and is UNDEFINED for a bad value", () => {
         expect(() => caseIgnoreSubstringsMatch(assertion([{ any_: "\uFFFD" }]), atav))
             .toThrow(ASN1CharactersError);
-        expect(caseIgnoreSubstringsMatchTyped(
-            [{ any_: "a" }],
-            utf8("\uFFFD"),
-        )).toBeUndefined();
-        expect(caseIgnoreSubstringsMatch(assertion([]), atav)).toBeUndefined();
+        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+        try {
+            expect(caseIgnoreSubstringsMatchTyped(
+                [{ any_: "a" }],
+                utf8("\uFFFD"),
+                undefined,
+                MATCH_FLAG_DEBUG,
+            )).toBeUndefined();
+            expect(spy).toHaveBeenCalledTimes(1);
+            expect(String(spy.mock.calls[0][0])).toContain("caseIgnoreSubstringsMatch");
+            spy.mockClear();
+
+            expect(caseIgnoreSubstringsMatch(assertion([]), atav, undefined, MATCH_FLAG_DEBUG)).toBeUndefined();
+            expect(spy).toHaveBeenCalledTimes(1);
+            expect(String(spy.mock.calls[0][0])).toContain("caseIgnoreSubstringsMatch");
+        } finally {
+            spy.mockRestore();
+        }
     });
 
     it("skips value preparation when the value is already normalized", () => {

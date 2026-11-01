@@ -1,4 +1,5 @@
 import { ASN1Element, ASN1CharactersError } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     DualStringSyntax,
     _decode_DualStringSyntax,
@@ -11,6 +12,7 @@ import { readDirectoryString } from "../readValue.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -73,12 +75,19 @@ export
 function dualStringMatchTyped (
     assertion: DualStrings,
     value: DualStringInput,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = readDual(value);
     if (
         prohibitedCharacters.test(stored.operation)
         || prohibitedCharacters.test(stored.object)
     ) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: dualStringMatch: stored string contains a prohibited character",
+            );
+        }
         return undefined;
     }
     return assertion.operation === stored.operation

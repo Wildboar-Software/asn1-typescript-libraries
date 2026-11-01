@@ -40,9 +40,10 @@ function supplierAndConsumersMatchTyped (
     assertion: Name,
     value: SupplierAndConsumers | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = readDecoded(value, _decode_SupplierAndConsumers);
-    return compareName(assertion, stored.ae_title, valueEqualityMatcher(getMatcher));
+    return compareName(assertion, stored.ae_title, valueEqualityMatcher(getMatcher, flags));
 }
 
 supplierAndConsumersMatchTyped satisfies TypedEquationFunction<Name>;

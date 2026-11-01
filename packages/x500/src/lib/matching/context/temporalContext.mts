@@ -1,5 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import { MATCH_FLAG_DEBUG, type ContextMatcher } from "../../types/matching.mjs";
 import { id_avc_temporal } from "../../modules/SelectedAttributeTypes/id-avc-temporal.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import { readDecoded } from "../readValue.mjs";
@@ -130,7 +130,12 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
  * @function
  * @author Cursor Grok 4.6
  */
-function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date): boolean {
+function periodsEntirelyCoverInterval (
+    periods: Period[],
+    start: Date,
+    end: Date,
+    flags: number = 0,
+): boolean {
     if (start.valueOf() > end.valueOf()) {
         return false;
     }
@@ -139,6 +144,11 @@ function periodsEntirelyCoverInterval (periods: Period[], start: Date, end: Date
     while (t.valueOf() <= end.valueOf()) {
         steps += 1;
         if (steps > MAX_ENTIRELY_COVER_STEPS) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: temporalContext: exceeded ${MAX_ENTIRELY_COVER_STEPS} cover steps`,
+                );
+            }
             return false;
         }
         const farthestEnd: Date | null = farthestOccurrenceEndCovering(periods, t);
@@ -196,7 +206,13 @@ function timeFallsWithinTimeSpecification (time: Date, spec: TimeSpecification):
  * occurrences, not of a single occurrence. `notThisTime` inverts the
  * result (clause 10.2).
  */
-function timeSpecificationContains (spec: TimeSpecification, start: Date, end: Date, entirely: boolean = false): boolean {
+function timeSpecificationContains (
+    spec: TimeSpecification,
+    start: Date,
+    end: Date,
+    entirely: boolean = false,
+    flags: number = 0,
+): boolean {
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
@@ -223,7 +239,7 @@ function timeSpecificationContains (spec: TimeSpecification, start: Date, end: D
             const adjustedStart = inSpecTimeZone(start, timezone);
             const adjustedEnd = inSpecTimeZone(end, timezone);
             if (entirely) {
-                return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd);
+                return periodsEntirelyCoverInterval(spec.time.periodic, adjustedStart, adjustedEnd, flags);
             }
             return spec.time.periodic.some((period) => {
                 const boundaries: [ Date, Date ] | null = period.occurrences(adjustedStart).next().value ?? null;
@@ -260,6 +276,7 @@ export
 function evaluateTemporalContextTyped (
     a: TimeAssertion,
     v: TimeSpecification,
+    flags: number = 0,
 ): boolean {
     if ("now" in a) {
         const now = new Date();
@@ -267,8 +284,13 @@ function evaluateTemporalContextTyped (
     } else if ("at" in a) {
         return timeFallsWithinTimeSpecification(a.at, v);
     } else if ("between" in a) {
-        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely);
+        return timeSpecificationContains(v, a.between.startTime, a.between.endTime ?? MAX_DATE, a.between.entirely, flags);
     } else {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: temporalContext: unrecognized TimeAssertion alternative",
+            );
+        }
         return false;
     }
 }
@@ -294,11 +316,12 @@ export
 function evaluateTemporalContext (
     assertion: ASN1Element | TimeAssertion | Date,
     value: ASN1Element | TimeSpecification,
+    flags: number = 0,
 ): boolean {
     const a: TimeAssertion = assertion instanceof Date
         ? { at: assertion }
         : readDecoded(assertion, _decode_TimeAssertion);
-    return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification));
+    return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification), flags);
 }
 
 /**
@@ -316,7 +339,7 @@ const temporalContext: ContextMatcher = (
     const presented = _decode_TimeAssertion(assertion);
     return matchAnyContextValue(
         values,
-        (value) => evaluateTemporalContext(presented, value),
+        (value) => evaluateTemporalContext(presented, value, flags),
         id_avc_temporal,
         flags,
     );

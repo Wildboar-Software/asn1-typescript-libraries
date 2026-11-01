@@ -47,11 +47,11 @@ function caseExactSubstringsMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = directoryStringToString(_decode_UnboundedDirectoryString(value));
-    const prepared = prepareStored(raw, prepareExact, flags);
+    const prepared = prepareStored(raw, prepareExact, flags, RULE);
     if (prepared === undefined) {
         return undefined;
     }
-    return matchPreparedString(assertion, prepared, value, flags);
+    return matchPreparedString(assertion, prepared, value, flags, RULE);
 }
 
 caseExactSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;

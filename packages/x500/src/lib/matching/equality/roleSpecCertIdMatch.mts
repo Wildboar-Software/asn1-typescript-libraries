@@ -99,9 +99,10 @@ function roleSpecCertIdMatchTyped (
     a: RoleSpecCertIdentifierSyntax,
     value: AttributeCertificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const rsci: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
     if (!rsci) {

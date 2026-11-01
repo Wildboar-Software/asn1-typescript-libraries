@@ -1,5 +1,5 @@
 import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import { MATCH_FLAG_DEBUG, type ContextMatcher } from "../../types/matching.mjs";
 import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
@@ -58,6 +58,7 @@ export
 function evaluateLocaleContext (
     assertion: LocaleContextInput,
     value: LocaleContextInput,
+    flags: number = 0,
 ): boolean {
     const a = readLocale(assertion);
     const v = readLocale(value);
@@ -69,6 +70,11 @@ function evaluateLocaleContext (
             === directoryStringToString(v.localeID2);
     }
     if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: localeContext: unrecognized LocaleContextSyntax alternative",
+            );
+        }
         return compareElements(assertion, value);
     }
     return false;
@@ -90,7 +96,7 @@ const localeContext: ContextMatcher = (
     const presented = _decode_LocaleContextSyntax(assertion);
     return matchAnyContextValue(
         values,
-        (value) => evaluateLocaleContext(presented, value),
+        (value) => evaluateLocaleContext(presented, value, flags),
         id_avc_locale,
         flags,
     );

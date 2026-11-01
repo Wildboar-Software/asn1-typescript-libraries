@@ -4,6 +4,7 @@ import { readDirectoryString, type DirectoryStringInput } from "../readValue.mjs
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -50,6 +51,11 @@ function caseExactMatchTyped (
     }
     const prepared = prepString(raw);
     if (prepared === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: caseExactMatch: stored value failed string preparation",
+            );
+        }
         return undefined;
     }
     return assertion === prepared;

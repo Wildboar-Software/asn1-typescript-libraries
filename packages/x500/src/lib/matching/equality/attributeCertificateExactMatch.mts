@@ -50,9 +50,10 @@ function attributeCertificateExactMatchTyped (
     assertion: AttributeCertificateExactAssertion,
     value: AttributeCertificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const stored = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (Buffer.compare(stored.toBeSigned.serialNumber, assertion.serialNumber) !== 0) {
         return false;
     }

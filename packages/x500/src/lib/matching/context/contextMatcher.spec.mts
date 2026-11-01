@@ -144,6 +144,15 @@ describe("context matchers", () => {
         );
         expect(localeContext(ext, [other, ext].values())).toBe(true);
         expect(localeContext(ext, [other].values())).toBe(false);
+
+        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+        try {
+            expect(localeContext(ext, [ext].values(), undefined, MATCH_FLAG_DEBUG)).toBe(true);
+            expect(spy).toHaveBeenCalledTimes(1);
+            expect(String(spy.mock.calls[0][0])).toContain("localeContext");
+        } finally {
+            spy.mockRestore();
+        }
     });
 
     it("matches a time assertion against any stored specification", () => {

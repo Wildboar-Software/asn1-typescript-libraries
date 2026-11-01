@@ -416,7 +416,7 @@ function createEqualityMatcher<A>(
                 }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
-                if (debug && !constantTime) {
+                if (debug) {
                     console.error(valueErrorMessage(false, i, attr.type_, e));
                 }
                 deferredResult = deferredResult || undefined;
@@ -461,8 +461,8 @@ function createEqualityMatcher<A>(
                 }
             } catch (e) {
                 const debug = (flags & MATCH_FLAG_DEBUG);
-                if (debug && !constantTime) {
-                    console.error(valueErrorMessage(false, i, attr.type_, e));
+                if (debug) {
+                    console.error(valueErrorMessage(true, i, attr.type_, e));
                 }
                 deferredResult = deferredResult || undefined;
                 continue;

@@ -8,6 +8,7 @@ import {
     MATCH_FLAG_ORDERING_GREATER,
     MATCH_FLAG_NONE,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     createSubstringsMatcher,
     createEqualityMatcher,
     type TypedEquationFunction,
@@ -327,5 +328,24 @@ suite("filter-item result precedence", () => {
     test("TRUE, then UNDEFINED, then FALSE", () => {
         valueResultPrecedenceTest(false);
         valueResultPrecedenceTest(true);
+    });
+
+    test("logs thrown values with and without contexts when MATCH_FLAG_DEBUG is set", () => {
+        const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+        try {
+            expect(precedenceMatch(
+                integer(0),
+                precedenceAttribute([VALUE_THROWS], [VALUE_THROWS]),
+                undefined,
+                MATCH_FLAG_DEBUG | MATCH_FLAG_CONSTANT_TIME,
+            )).toBeUndefined();
+            expect(spy).toHaveBeenCalledTimes(2);
+            expect(String(spy.mock.calls[0][0])).toContain("(without contexts)");
+            expect(String(spy.mock.calls[0][0])).toContain("index 0");
+            expect(String(spy.mock.calls[1][0])).toContain("with contexts");
+            expect(String(spy.mock.calls[1][0])).toContain("index 0");
+        } finally {
+            spy.mockRestore();
+        }
     });
 });

@@ -1,9 +1,11 @@
 import { ASN1CharactersError, ASN1Element, ASN1Error } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -49,6 +51,8 @@ export
 function intEmailMatchTyped (
     assertion: PreparedIntEmail | string | ASN1Element,
     value: string | ASN1Element,
+    getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const presented = typeof assertion === "string"
         ? prepareIntEmail(assertion)
@@ -56,19 +60,29 @@ function intEmailMatchTyped (
             ? prepareIntEmail(assertion.utf8String)
             : assertion;
     if (!presented) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: intEmailMatch: assertion is not an IntEmail",
+            );
+        }
         return false;
     }
     const stored = typeof value === "string" ? value : value.utf8String;
     // The domain cannot contain `@`, so the last `@` is the separator.
     const vAt: number = stored.lastIndexOf("@");
     if (vAt <= 0 || vAt >= stored.length - 1) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: intEmailMatch: stored value is not an IntEmail",
+            );
+        }
         return false;
     }
-    const localsMatch = caseIgnoreMatchTyped(presented[0], stored.slice(0, vAt));
+    const localsMatch = caseIgnoreMatchTyped(presented[0], stored.slice(0, vAt), getEqualityMatcher, flags);
     if (localsMatch !== true) {
         return localsMatch;
     }
-    return dnsNameMatchTyped(presented[1], stored.slice(vAt + 1));
+    return dnsNameMatchTyped(presented[1], stored.slice(vAt + 1), getEqualityMatcher, flags);
 }
 
 intEmailMatchTyped satisfies TypedEquationFunction<PreparedIntEmail | string | ASN1Element>;

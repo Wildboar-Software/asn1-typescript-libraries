@@ -45,9 +45,10 @@ function attributeCertificateMatchTyped (
     a: AttributeCertificateAssertion,
     value: AttributeCertificate | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (a.holder) {
         if (("baseCertificateID" in a.holder)) {
             if (!v.toBeSigned.holder.baseCertificateID) {

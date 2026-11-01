@@ -33,9 +33,10 @@ function uniqueMemberMatchTyped (
     a: NameAndOptionalUID,
     value: NameAndOptionalUID | ASN1Element,
     getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const v = readDecoded(value, _decode_NameAndOptionalUID);
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher);
+    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     if (!compareRDNSequence(a.dn, v.dn, getEqualityMatcher)) {
         return false;
     }
