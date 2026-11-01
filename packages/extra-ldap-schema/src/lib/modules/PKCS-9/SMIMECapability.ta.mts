@@ -122,10 +122,8 @@ function _decode_SMIMECapability (el: _Element): SMIMECapability {
     }
     sequence[0].name = "algorithm";
     sequence[1].name = "parameters";
-    let algorithm!: OBJECT_IDENTIFIER;
-    let parameters!: _Element;
-    algorithm = $._decodeObjectIdentifier(sequence[0]);
-    parameters = $._decodeAny(sequence[1]);
+    const algorithm: OBJECT_IDENTIFIER = $._decodeObjectIdentifier(sequence[0]);
+    const parameters: _Element = $._decodeAny(sequence[1]);
     return new SMIMECapability(
         algorithm,
         parameters,

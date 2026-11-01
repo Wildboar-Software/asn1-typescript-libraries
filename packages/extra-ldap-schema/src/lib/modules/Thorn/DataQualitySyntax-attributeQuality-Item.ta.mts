@@ -132,10 +132,8 @@ function _decode_DataQualitySyntax_attributeQuality_Item (el: _Element): DataQua
     }
     sequence[0].name = "type";
     sequence[1].name = "quality";
-    let type_!: AttributeType;
-    let quality!: AttributeQuality;
-    type_ = _decode_AttributeType(sequence[0]);
-    quality = _decode_AttributeQuality(sequence[1]);
+    const type_: AttributeType = _decode_AttributeType(sequence[0]);
+    const quality: AttributeQuality = _decode_AttributeQuality(sequence[1]);
     return new DataQualitySyntax_attributeQuality_Item(
         type_,
         quality,
