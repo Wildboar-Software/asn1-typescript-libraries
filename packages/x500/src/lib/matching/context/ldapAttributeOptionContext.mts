@@ -1,4 +1,7 @@
 import { ASN1Element } from "@wildboar/asn1";
+import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_ldapAttributeOption } from "../../modules/SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
+import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
     _decode_AttributeOptionList,
 } from "../../modules/SelectedAttributeTypes/AttributeOptionList.ta.mjs";
@@ -49,4 +52,29 @@ function evaluateLDAPAttributeOptionContextTyped (
     return true;
 }
 
-export default evaluateLDAPAttributeOptionContext;
+/**
+ * `ldapAttributeOptionContext` as a `ContextMatcher`. TRUE iff the
+ * asserted option list is a case-insensitive subset of any stored
+ * list. A malformed assertion throws. An invalid stored value is
+ * skipped. An empty value list is FALSE.
+ */
+export
+const ldapAttributeOptionContext: ContextMatcher = (
+    assertion,
+    values,
+    _getEqualityMatcher,
+    flags = 0,
+) => {
+    const presented = _decode_AttributeOptionList(assertion);
+    return matchAnyContextValue(
+        values,
+        (value) => evaluateLDAPAttributeOptionContextTyped(
+            presented,
+            _decode_AttributeOptionList(value),
+        ),
+        id_avc_ldapAttributeOption,
+        flags,
+    );
+};
+
+export default ldapAttributeOptionContext;

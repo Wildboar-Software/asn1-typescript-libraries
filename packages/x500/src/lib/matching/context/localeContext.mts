@@ -1,4 +1,7 @@
 import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
+import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
     _decode_LocaleContextSyntax,
 } from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
@@ -71,4 +74,26 @@ function evaluateLocaleContext (
     return false;
 }
 
-export default evaluateLocaleContext;
+/**
+ * `localeContext` as a `ContextMatcher`. TRUE iff any stored locale
+ * uses the same alternative (object identifier or string) and is
+ * equal to the presented locale. An invalid stored value is skipped.
+ * An empty value list is FALSE.
+ */
+export
+const localeContext: ContextMatcher = (
+    assertion,
+    values,
+    _getEqualityMatcher,
+    flags = 0,
+) => {
+    const presented = _decode_LocaleContextSyntax(assertion);
+    return matchAnyContextValue(
+        values,
+        (value) => evaluateLocaleContext(presented, value),
+        id_avc_locale,
+        flags,
+    );
+};
+
+export default localeContext;

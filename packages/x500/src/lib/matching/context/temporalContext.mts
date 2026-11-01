@@ -1,4 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import { type ContextMatcher } from "../../types/matching.mjs";
+import { id_avc_temporal } from "../../modules/SelectedAttributeTypes/id-avc-temporal.va.mjs";
+import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     TimeSpecification,
@@ -298,4 +301,25 @@ function evaluateTemporalContext (
     return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification));
 }
 
-export default evaluateTemporalContext;
+/**
+ * `temporalContext` as a `ContextMatcher`. TRUE iff any stored
+ * `TimeSpecification` overlaps the presented `TimeAssertion`.
+ * An invalid stored value is skipped. An empty value list is FALSE.
+ */
+export
+const temporalContext: ContextMatcher = (
+    assertion,
+    values,
+    _getEqualityMatcher,
+    flags = 0,
+) => {
+    const presented = _decode_TimeAssertion(assertion);
+    return matchAnyContextValue(
+        values,
+        (value) => evaluateTemporalContext(presented, value),
+        id_avc_temporal,
+        flags,
+    );
+};
+
+export default temporalContext;
