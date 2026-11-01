@@ -54,7 +54,9 @@ function compareEncodedIntegers (a: Uint8Array, b: Uint8Array): number {
     }
     const len = a.length;
     if (len !== b.length) {
-        return ((len > b.length) !== aNegative) ? 1 : -1;
+        const isNegative = aNegative;
+        const aIsBiggerMagnitude = (len > b.length);
+        return (aIsBiggerMagnitude === isNegative) ? -1 : 1;
     }
     for (let i = 0; i < len; i++) {
         const diff = a[i] - b[i];
