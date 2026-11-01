@@ -36,8 +36,9 @@ import {
  * @param assertion Presented URI, already normalized.
  * @param value Stored URI, or that URI already normalized.
  *  `MATCH_FLAG_VALUE_NORMALIZED` skips normalization. A stored URI
- *  that cannot be normalized throws; the `Matcher` reports that as
- *  UNDEFINED.
+ *  equal to the normalized assertion is a match without being
+ *  parsed again. A stored URI that cannot be normalized throws;
+ *  the `Matcher` reports that as UNDEFINED.
  */
 export
 function uriMatchTyped (
@@ -46,22 +47,75 @@ function uriMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = typeof value === "string" ? value : value.utf8String;
-    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return assertion === raw;
-    }
-    return assertion === normalizeUri(raw);
+    return matchPresentedUri(
+        { raw: assertion, normalized: assertion },
+        value,
+        flags,
+    );
 }
 
 uriMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
- * `uriMatch` as a `Matcher`. An assertion that cannot be normalized throws.
+ * Presented URI. `normalized` is set once normalization has run.
+ * An unclosed IP-literal is normalized up front: that failure is
+ * an assertion error, and per-value matching would report it as
+ * UNDEFINED.
+ */
+interface PresentedUri {
+    raw: string;
+    normalized?: string;
+}
+
+/**
+ * Compare the character strings before normalizing. Many URIs are
+ * already lowercase and simple. Identical strings match whenever
+ * normalization would succeed, because normalization is a function.
+ * `MATCH_FLAG_VALUE_NORMALIZED` still compares the normalized
+ * assertion with the stored characters.
+ */
+function matchPresentedUri (
+    assertion: PresentedUri,
+    value: string | ASN1Element,
+    flags: number,
+): boolean | undefined {
+    const raw = typeof value === "string" ? value : value.utf8String;
+    if (!(flags & MATCH_FLAG_VALUE_NORMALIZED) && assertion.raw === raw) {
+        return true;
+    }
+    let normalized = assertion.normalized;
+    if (normalized === undefined) {
+        normalized = normalizeUri(assertion.raw);
+        assertion.normalized = normalized;
+    }
+    if ((flags & MATCH_FLAG_VALUE_NORMALIZED) || normalized === raw) {
+        return normalized === raw;
+    }
+    return normalized === normalizeUri(raw);
+}
+
+function presentedUri (el: ASN1Element): PresentedUri {
+    const raw = el.utf8String;
+    // Normalization throws only for an unclosed IP-literal.
+    if (raw.includes("[")) {
+        return { raw, normalized: normalizeUri(raw) };
+    }
+    return { raw };
+}
+
+/**
+ * `uriMatch` as a `Matcher`. An assertion that cannot be normalized
+ * throws. Identical character strings are compared before
+ * normalization.
  */
 export
 const uriMatch: Matcher = createEqualityMatcher(
-    (el) => normalizeUri(el.utf8String),
-    uriMatchTyped,
+    presentedUri,
+    (assertion, value, _getEqualityMatcher, flags = 0) => matchPresentedUri(
+        assertion,
+        value,
+        flags,
+    ),
 );
 
 export default uriMatch;

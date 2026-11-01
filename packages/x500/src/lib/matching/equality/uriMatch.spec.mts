@@ -1,7 +1,11 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import { ObjectIdentifier, type ASN1Element } from "@wildboar/asn1";
 import { DER, _encodeUTF8String } from "@wildboar/asn1/functional";
+import { AttributeTypeAndValue } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { MATCH_FLAG_VALUE_NORMALIZED } from "../../types/matching.mjs";
 import uriMatch_ from "./uriMatch.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
+
+const type_ = ObjectIdentifier.fromParts([ 1, 1, 1, 1 ]);
 
 const uriMatch = onStoredValue(uriMatch_);
 
@@ -13,11 +17,53 @@ function match (assertion: string, value: string): boolean | undefined {
     return uriMatch(utf8(assertion), utf8(value));
 }
 
+function matchFlag (
+    assertion: string,
+    value: string,
+    flags: number,
+): boolean | undefined {
+    return uriMatch_(
+        utf8(assertion),
+        new AttributeTypeAndValue(type_, utf8(value)),
+        undefined,
+        flags,
+    );
+}
+
 describe("uriMatch", () => {
     it("matches identical URI references", () => {
         expect(match(
             "http://example.com/a/b?x=1#y",
             "http://example.com/a/b?x=1#y",
+        )).toBe(true);
+    });
+
+    it("matches identical URIs that are not yet normalized", () => {
+        expect(match(
+            "HTTP://Example.COM/a/./b",
+            "HTTP://Example.COM/a/./b",
+        )).toBe(true);
+        expect(match(
+            "http://example.com:80/a/%7Euser",
+            "http://example.com:80/a/%7Euser",
+        )).toBe(true);
+    });
+
+    it("compares a flagged value with the normalized assertion", () => {
+        expect(matchFlag(
+            "HTTP://example.com/a",
+            "HTTP://example.com/a",
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(false);
+        expect(matchFlag(
+            "http://example.com/a",
+            "http://example.com/a",
+            MATCH_FLAG_VALUE_NORMALIZED,
+        )).toBe(true);
+        expect(matchFlag(
+            "http://example.com/a/./b",
+            "http://example.com/a/b",
+            MATCH_FLAG_VALUE_NORMALIZED,
         )).toBe(true);
     });
 
