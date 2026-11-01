@@ -1,4 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import { type ContextMatcher } from "../../types/matching.mjs";
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 10.1 `languageContext`.
@@ -22,4 +23,25 @@ function evaluateLanguageContext (
     return presented === stored;
 }
 
-export default evaluateLanguageContext;
+/**
+ * `languageContext` as a `ContextMatcher`. TRUE iff any stored
+ * language code has the same characters as the presented code.
+ * A malformed assertion throws. An empty value list is FALSE.
+ */
+export
+function languageContext (
+    assertion: ASN1Element,
+    values: IterableIterator<ASN1Element>,
+): boolean {
+    const presented = assertion.printableString;
+    for (const value of values) {
+        if (evaluateLanguageContext(presented, value)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+languageContext satisfies ContextMatcher;
+
+export default languageContext;

@@ -1,4 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import { type ContextMatcher } from "../../types/matching.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     TimeSpecification,
@@ -298,4 +299,25 @@ function evaluateTemporalContext (
     return evaluateTemporalContextTyped(a, readDecoded(value, _decode_TimeSpecification));
 }
 
-export default evaluateTemporalContext;
+/**
+ * `temporalContext` as a `ContextMatcher`. TRUE iff any stored
+ * `TimeSpecification` overlaps the presented `TimeAssertion`.
+ * An empty value list is FALSE.
+ */
+export
+function temporalContext (
+    assertion: ASN1Element,
+    values: IterableIterator<ASN1Element>,
+): boolean {
+    const presented = _decode_TimeAssertion(assertion);
+    for (const value of values) {
+        if (evaluateTemporalContext(presented, value)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+temporalContext satisfies ContextMatcher;
+
+export default temporalContext;
