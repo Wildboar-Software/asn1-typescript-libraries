@@ -12,10 +12,19 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented IA5 string without preparing it.
+ */
+export
+function decodeCaseExactIA5MatchAssertion (el: ASN1Element): string {
+    return el.ia5String;
+}
+
+/**
  * Prepare the presented IA5 string once.
  */
-function prepareCaseExactIA5Assertion (el: ASN1Element): string {
-    const prepared = prepString(el.ia5String);
+export
+function normalizeCaseExactIA5MatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactIA5Match assertion failed string preparation",
@@ -65,12 +74,16 @@ caseExactIA5MatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `caseExactIA5Match` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const caseExactIA5Match: Matcher = createEqualityMatcher(
-    prepareCaseExactIA5Assertion,
+    decodeCaseExactIA5MatchAssertion,
     caseExactIA5MatchTyped,
+    undefined,
+    false,
+    normalizeCaseExactIA5MatchAssertion,
 );
 
 export default caseExactIA5Match;

@@ -141,12 +141,33 @@ function dnsNameMatchTyped (
 dnsNameMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the presented domain name without preparing it.
+ */
+export
+function decodeDnsNameMatchAssertion (el: ASN1Element): string {
+    return el.utf8String;
+}
+
+/**
+ * Convert the presented domain name with `domainToUnicode` and prepare
+ * each label, as described for `prepareDnsAssertion`.
+ */
+export
+function normalizeDnsNameMatchAssertion (assertion: string, el?: ASN1Element): string {
+    return prepareDnsAssertion(assertion, el);
+}
+
+/**
  * `dnsNameMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const dnsNameMatch: Matcher = createEqualityMatcher(
-    (el) => prepareDnsAssertion(el.utf8String, el),
+    decodeDnsNameMatchAssertion,
     dnsNameMatchTyped,
+    undefined,
+    false,
+    normalizeDnsNameMatchAssertion,
 );
 
 export default dnsNameMatch;

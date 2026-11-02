@@ -13,12 +13,21 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented directory string without preparing it.
+ */
+export
+function decodeCaseExactMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
  * Prepare the presented directory string once. `prepString` returns
  * `undefined` for a prohibited character or a string that maps to
  * empty. That is an assertion error, not UNDEFINED.
  */
-function prepareCaseExactAssertion (el: ASN1Element): string {
-    const prepared = prepString(readDirectoryString(el));
+export
+function normalizeCaseExactMatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactMatch assertion failed string preparation",
@@ -68,12 +77,16 @@ caseExactMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `caseExactMatch` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const caseExactMatch: Matcher = createEqualityMatcher(
-    prepareCaseExactAssertion,
+    decodeCaseExactMatchAssertion,
     caseExactMatchTyped,
+    undefined,
+    false,
+    normalizeCaseExactMatchAssertion,
 );
 
 export default caseExactMatch;

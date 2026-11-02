@@ -14,10 +14,21 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented lines without preparing them.
+ */
+export
+function decodeCaseIgnoreListMatchAssertion (el: ASN1Element): readonly string[] {
+    return readDirectoryStringList(el);
+}
+
+/**
  * Prepare and case-fold every presented line once.
  */
-function prepareCaseIgnoreListAssertion (el: ASN1Element): string[] {
-    const lines = readDirectoryStringList(el);
+export
+function normalizeCaseIgnoreListMatchAssertion (
+    lines: readonly string[],
+    el?: ASN1Element,
+): readonly string[] {
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
         const line = prepString(lines[i], { caseFold: true });
@@ -128,11 +139,15 @@ caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;
 /**
  * `caseIgnoreListMatch` as a `Matcher`. An assertion line that
  * cannot be prepared throws `ASN1CharactersError`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const caseIgnoreListMatch: Matcher = createEqualityMatcher(
-    prepareCaseIgnoreListAssertion,
+    decodeCaseIgnoreListMatchAssertion,
     caseIgnoreListMatchTyped,
+    undefined,
+    false,
+    normalizeCaseIgnoreListMatchAssertion,
 );
 
 export default caseIgnoreListMatch;

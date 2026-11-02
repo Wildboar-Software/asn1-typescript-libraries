@@ -52,16 +52,30 @@ function parseJid (raw: string): JidParts | undefined {
     return { local, domain: rest, resource };
 }
 
-function decodeJid (el: ASN1Element): JidParts {
+/**
+ * Parse the presented JID without normalizing its parts. An assertion
+ * that is not a JID throws.
+ */
+export
+function decodeJidMatchAssertion (el: ASN1Element): JidParts {
     const parsed = parseJid(el.utf8String);
     if (!parsed) {
         throw new Error("jidMatch assertion is not a JID");
     }
-    if (parsed.local !== undefined) {
-        parsed.local = parsed.local.toLowerCase();
-    }
-    parsed.domain = prepareDnsAssertion(parsed.domain, el);
     return parsed;
+}
+
+/**
+ * Lower-case the localpart and prepare the domain for `dnsNameMatch`.
+ * The resourcepart is case-sensitive, so it is unchanged.
+ */
+export
+function normalizeJidMatchAssertion (assertion: JidParts, el?: ASN1Element): JidParts {
+    return {
+        local: assertion.local?.toLowerCase(),
+        domain: prepareDnsAssertion(assertion.domain, el),
+        resource: assertion.resource,
+    };
 }
 
 /**
@@ -125,11 +139,15 @@ jidMatchTyped satisfies TypedEquationFunction<JidParts>;
 
 /**
  * `jidMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips normalization of the assertion.
  */
 export
 const jidMatch: Matcher = createEqualityMatcher(
-    decodeJid,
+    decodeJidMatchAssertion,
     jidMatchTyped,
+    undefined,
+    false,
+    normalizeJidMatchAssertion,
 );
 
 export default jidMatch;

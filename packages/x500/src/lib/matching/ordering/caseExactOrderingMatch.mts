@@ -13,12 +13,24 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented directory string without preparing it.
+ */
+export
+function decodeCaseExactOrderingMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
  * Prepare the presented directory string once. `prepString` returns
  * `undefined` for a prohibited character or a string that maps to
  * empty. That is an assertion error, not UNDEFINED.
  */
-function prepareCaseExactAssertion (el: ASN1Element): string {
-    const prepared = prepString(readDirectoryString(el));
+export
+function normalizeCaseExactOrderingMatchAssertion (
+    assertion: string,
+    el?: ASN1Element,
+): string {
+    const prepared = prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactOrderingMatch assertion failed string preparation",
@@ -77,11 +89,13 @@ caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string>;
  * is less than the presented value. `MATCH_FLAG_ORDERING_GREATER`
  * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
  * An assertion that cannot be prepared throws `ASN1CharactersError`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const caseExactOrderingMatch: Matcher = createOrderingMatcher(
-    prepareCaseExactAssertion,
+    decodeCaseExactOrderingMatchAssertion,
     caseExactOrderingMatchTyped,
+    normalizeCaseExactOrderingMatchAssertion,
 );
 
 export default caseExactOrderingMatch;

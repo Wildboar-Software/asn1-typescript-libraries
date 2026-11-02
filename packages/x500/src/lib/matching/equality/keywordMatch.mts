@@ -26,8 +26,20 @@ function prepareKeyword (text: string): string | undefined {
     return prepString(text.trim())?.toUpperCase();
 }
 
-function prepareKeywordAssertion (el: ASN1Element): string {
-    const prepared = prepareKeyword(readKeyword(el));
+/**
+ * Decode the presented keyword without preparing it.
+ */
+export
+function decodeKeywordMatchAssertion (el: ASN1Element): string {
+    return readKeyword(el);
+}
+
+/**
+ * Trim, prepare, and upper-case the presented keyword once.
+ */
+export
+function normalizeKeywordMatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepareKeyword(assertion);
     if (!prepared) {
         throw new ASN1CharactersError(
             "keywordMatch assertion failed string preparation",
@@ -75,12 +87,16 @@ keywordMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `keywordMatch` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const keywordMatch: Matcher = createEqualityMatcher(
-    prepareKeywordAssertion,
+    decodeKeywordMatchAssertion,
     keywordMatchTyped,
+    undefined,
+    false,
+    normalizeKeywordMatchAssertion,
 );
 
 export default keywordMatch;
