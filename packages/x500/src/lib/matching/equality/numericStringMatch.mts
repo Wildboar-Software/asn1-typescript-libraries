@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -33,6 +35,9 @@ function numericStringMatchTyped (
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.numericString;
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualStrings(assertion, stored);
+    }
     return assertion === stored;
 }
 

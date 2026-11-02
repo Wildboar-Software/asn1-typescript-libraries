@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -74,11 +75,19 @@ function attributeCertificateMatchTyped (
     if (a.issuer && (!issuerName || !compareGeneralNames(a.issuer, issuerName, getEqualityMatcher))) {
         return false;
     }
+    const timeTol = (flags & MATCH_FLAG_APPROXIMATE) ? 1000 : 0;
     if (
         a.attCertValidity
         && (
-            (a.attCertValidity.valueOf() < v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf())
-            && (a.attCertValidity.valueOf() > v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf())
+            (flags & MATCH_FLAG_APPROXIMATE)
+                ? (
+                    (a.attCertValidity.valueOf() < v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf() - timeTol)
+                    || (a.attCertValidity.valueOf() > v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf() + timeTol)
+                )
+                : (
+                    (a.attCertValidity.valueOf() < v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf())
+                    && (a.attCertValidity.valueOf() > v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf())
+                )
         )
     ) {
         return false;

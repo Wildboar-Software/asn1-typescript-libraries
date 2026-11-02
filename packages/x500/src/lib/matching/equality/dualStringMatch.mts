@@ -9,9 +9,11 @@ import type {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -89,6 +91,10 @@ function dualStringMatchTyped (
             );
         }
         return undefined;
+    }
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualStrings(assertion.operation, stored.operation)
+            && approximatelyEqualStrings(assertion.object, stored.object);
     }
     return assertion.operation === stored.operation
         && assertion.object === stored.object;

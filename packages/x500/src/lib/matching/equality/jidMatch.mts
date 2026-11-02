@@ -1,8 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -104,13 +106,21 @@ function jidMatchTyped (
     if (domains !== true) {
         return domains;
     }
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     if (
         (assertion.local !== undefined)
-        && (assertion.local !== v.local!.toLowerCase())
+        && (approximate
+            ? !approximatelyEqualStrings(assertion.local, v.local!.toLowerCase())
+            : (assertion.local !== v.local!.toLowerCase()))
     ) {
         return false;
     }
-    if ((assertion.resource !== undefined) && (assertion.resource !== v.resource)) {
+    if (
+        (assertion.resource !== undefined)
+        && (approximate
+            ? !approximatelyEqualStrings(assertion.resource, v.resource!)
+            : (assertion.resource !== v.resource))
+    ) {
         return false;
     }
     return true;

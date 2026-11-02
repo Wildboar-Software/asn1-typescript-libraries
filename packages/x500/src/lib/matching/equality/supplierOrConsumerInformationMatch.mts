@@ -1,12 +1,14 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualBigInts } from "../approximate.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
-import { readDecoded } from "../readValue.mjs";
+import { readDecoded, readInteger } from "../readValue.mjs";
 import {
     type ConsumerInformation,
     _decode_ConsumerInformation,
@@ -50,7 +52,11 @@ function supplierOrConsumerInformationMatchTyped (
 ): boolean {
     const v = readDecoded(value, _decode_ConsumerInformation);
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    if (a.agreement_identifier !== v.agreementID.identifier) {
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        if (!approximatelyEqualBigInts(readInteger(a.agreement_identifier), readInteger(v.agreementID.identifier))) {
+            return false;
+        }
+    } else if (a.agreement_identifier !== v.agreementID.identifier) {
         return false;
     }
     return compareName(a.ae_title, v.ae_title, getEqualityMatcher);

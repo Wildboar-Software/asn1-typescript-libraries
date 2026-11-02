@@ -7,9 +7,12 @@ import {
     type ASN1Element,
     type INTEGER,
 } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualBigInts } from "../approximate.mjs";
 import { readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -27,8 +30,15 @@ export
 function integerMatchTyped (
     assertion: INTEGER,
     value: INTEGER | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
-    return readInteger(assertion) === readInteger(value);
+    const a = readInteger(assertion);
+    const v = readInteger(value);
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualBigInts(a, v);
+    }
+    return a === v;
 }
 
 integerMatchTyped satisfies TypedEquationFunction<INTEGER>;
@@ -73,8 +83,19 @@ function integerAssertionOctets (assertion: ASN1Element): Uint8Array {
 function integerMatchOctets (
     assertion: Uint8Array,
     value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
-    return Buffer.compare(assertion, value.value) === 0;
+    if (Buffer.compare(assertion, value.value) === 0) {
+        return true;
+    }
+    if (!(flags & MATCH_FLAG_APPROXIMATE)) {
+        return false;
+    }
+    const vOctets = integerAssertionOctets(value);
+    const aVal = BigInt.asIntN(assertion.length * 8, BigInt("0x" + Buffer.from(assertion).toString("hex")));
+    const vVal = BigInt.asIntN(vOctets.length * 8, BigInt("0x" + Buffer.from(vOctets).toString("hex")));
+    return approximatelyEqualBigInts(aVal, vVal);
 }
 
 integerMatchOctets satisfies TypedEquationFunction<Uint8Array>;

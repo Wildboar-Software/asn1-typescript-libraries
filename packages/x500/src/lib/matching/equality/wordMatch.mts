@@ -1,9 +1,11 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -21,7 +23,19 @@ function isWordChar(c: string | undefined): boolean {
  * underscore, bounded by other characters or the string edges.
  */
 export
-function containsWord (haystack: string, needle: string): boolean {
+function containsWord (haystack: string, needle: string, flags: number = 0): boolean {
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        const words = haystack.match(/[\p{L}\p{N}_]+/gu);
+        if (!words) {
+            return false;
+        }
+        for (let i = 0; i < words.length; i++) {
+            if (approximatelyEqualStrings(words[i], needle)) {
+                return true;
+            }
+        }
+        return false;
+    }
     let i = haystack.indexOf(needle);
     while (i >= 0) {
         const before = haystack[i - 1];
@@ -84,7 +98,7 @@ function wordMatchTyped (
         }
         return undefined;
     }
-    return containsWord(stored, assertion);
+    return containsWord(stored, assertion, flags);
 }
 
 wordMatchTyped satisfies TypedEquationFunction<string>;

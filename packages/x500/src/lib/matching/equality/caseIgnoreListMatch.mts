@@ -2,9 +2,11 @@ import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -55,6 +57,7 @@ function caseIgnoreListMatchTyped (
         return false;
     }
     const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     for (let i = 0; i < assertion.length; i++) {
         const stored = normalized
             ? lines[i]
@@ -67,7 +70,7 @@ function caseIgnoreListMatchTyped (
             }
             return undefined;
         }
-        if (assertion[i] !== stored) {
+        if (approximate ? !approximatelyEqualStrings(assertion[i], stored) : (assertion[i] !== stored)) {
             return false;
         }
     }

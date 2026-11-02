@@ -1,5 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
+import {
+    MATCH_FLAG_APPROXIMATE,
+    type ContextMatcher,
+} from "../../types/matching.mjs";
 import { id_avc_language } from "../../modules/SelectedAttributeTypes/id-avc-language.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 
@@ -19,9 +23,13 @@ export
 function evaluateLanguageContext (
     assertion: ASN1Element | string,
     value: ASN1Element | string,
+    flags: number = 0,
 ): boolean {
     const presented = typeof assertion === "string" ? assertion : assertion.printableString;
     const stored = typeof value === "string" ? value : value.printableString;
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualStrings(presented, stored);
+    }
     return presented === stored;
 }
 
@@ -41,7 +49,7 @@ const languageContext: ContextMatcher = (
     const presented = assertion.printableString;
     return matchAnyContextValue(
         values,
-        (value) => evaluateLanguageContext(presented, value),
+        (value) => evaluateLanguageContext(presented, value, flags),
         id_avc_language,
         flags,
     );

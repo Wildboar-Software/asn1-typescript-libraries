@@ -2,6 +2,7 @@ import { ASN1Element, DERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -142,17 +143,23 @@ function timeSpecificationsEqual (
         return false;
     }
 
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     if (
         // If the timezone was actually asserted.
         (typeof assertedTime.timeZone === "number")
         // And they don't match.
-        && (storedTime.timeZone !== assertedTime.timeZone)
+        && (
+            typeof storedTime.timeZone !== "number"
+            || (approximate
+                ? (Math.abs(storedTime.timeZone - assertedTime.timeZone) > 1)
+                : (storedTime.timeZone !== assertedTime.timeZone))
+        )
     ) {
         return false;
     }
 
-    const storedTimeExts = storedTime._unrecognizedExtensionsList;
-    const assertedTimeExts = assertedTime._unrecognizedExtensionsList;
+    const storedTimeExts = storedTime._unrecognizedExtensionsList ?? [];
+    const assertedTimeExts = assertedTime._unrecognizedExtensionsList ?? [];
     if (storedTimeExts.length < assertedTimeExts.length) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
@@ -163,8 +170,8 @@ function timeSpecificationsEqual (
     }
 
     if (("absolute" in storedTime.time) && ("absolute" in assertedTime.time)) {
-        const staexts = storedTime.time.absolute._unrecognizedExtensionsList;
-        const ataexts = assertedTime.time.absolute._unrecognizedExtensionsList;
+        const staexts = storedTime.time.absolute._unrecognizedExtensionsList ?? [];
+        const ataexts = assertedTime.time.absolute._unrecognizedExtensionsList ?? [];
         if (staexts.length < ataexts.length) {
             if (flags & MATCH_FLAG_DEBUG) {
                 console.error(
@@ -192,10 +199,20 @@ function timeSpecificationsEqual (
         if (typeof assertedEnd === "number") {
             assertedEnd = Math.trunc(assertedEnd / 1000);
         }
-        if (storedStart !== assertedStart) {
+        if (
+            approximate
+                ? (typeof storedStart !== typeof assertedStart
+                    || (typeof storedStart === "number" && Math.abs(storedStart - assertedStart!) > 1))
+                : (storedStart !== assertedStart)
+        ) {
             return false;
         }
-        if (storedEnd !== assertedEnd) {
+        if (
+            approximate
+                ? (typeof storedEnd !== typeof assertedEnd
+                    || (typeof storedEnd === "number" && Math.abs(storedEnd - assertedEnd!) > 1))
+                : (storedEnd !== assertedEnd)
+        ) {
             return false;
         }
         // Compare unrecognized extensions in absolute times

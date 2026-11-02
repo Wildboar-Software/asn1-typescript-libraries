@@ -1,9 +1,10 @@
-import { readDecoded } from "../readValue.mjs";
+import { readDecoded, readInteger } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, type INTEGER, TRUE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -95,11 +96,13 @@ function certificateListMatchTyped (
         return false;
     }
 
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
+
     if (a.minCRLNumber) {
         if (crlNumber === undefined) {
             return false;
         }
-        if (crlNumber < a.minCRLNumber) {
+        if (readInteger(crlNumber) < readInteger(a.minCRLNumber) - (approximate ? 1n : 0n)) {
             return false;
         }
     }
@@ -108,7 +111,7 @@ function certificateListMatchTyped (
         if (crlNumber === undefined) {
             return false;
         }
-        if (crlNumber > a.maxCRLNumber) {
+        if (readInteger(crlNumber) > readInteger(a.maxCRLNumber) + (approximate ? 1n : 0n)) {
             return false;
         }
     }
@@ -131,10 +134,11 @@ function certificateListMatchTyped (
         const date: Date = getDateFromTime(a.dateAndTime);
         const thisUpdate: Date = getDateFromTime(v.toBeSigned.thisUpdate);
         const nextUpdate: Date = getDateFromTime(v.toBeSigned.nextUpdate);
-        if (date.valueOf() < thisUpdate.valueOf()) {
+        const tol = approximate ? 1000 : 0;
+        if (date.valueOf() < thisUpdate.valueOf() - tol) {
             return false;
         }
-        if (date.valueOf() > nextUpdate.valueOf()) {
+        if (date.valueOf() > nextUpdate.valueOf() + tol) {
             return false;
         }
     }

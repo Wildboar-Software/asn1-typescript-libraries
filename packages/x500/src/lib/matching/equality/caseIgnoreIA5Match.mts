@@ -1,8 +1,10 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -43,11 +45,10 @@ function caseIgnoreIA5MatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.ia5String;
-    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return assertion === raw;
-    }
-    const prepared = prepString(raw, { caseFold: true });
-    if (prepared === undefined) {
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? raw
+        : prepString(raw, { caseFold: true });
+    if (stored === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: caseIgnoreIA5Match: stored value failed string preparation",
@@ -55,7 +56,10 @@ function caseIgnoreIA5MatchTyped (
         }
         return undefined;
     }
-    return assertion === prepared;
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualStrings(assertion, stored);
+    }
+    return assertion === stored;
 }
 
 caseIgnoreIA5MatchTyped satisfies TypedEquationFunction<string>;

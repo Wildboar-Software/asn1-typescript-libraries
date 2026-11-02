@@ -6,9 +6,11 @@ import {
     type ASN1Element,
     type INTEGER,
 } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readInteger } from "../readValue.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -85,10 +87,15 @@ export
 function integerOrderingMatchTyped (
     assertion: INTEGER | ASN1Element,
     value: INTEGER | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): number | undefined {
-    if (typeof assertion === "object" && typeof value === "object") {
+    if (typeof assertion === "object" && typeof value === "object" && !(flags & MATCH_FLAG_APPROXIMATE)) {
         validateEncodedInteger(value);
         return compareEncodedIntegers(assertion.value, value.value);
+    }
+    if (typeof value === "object") {
+        validateEncodedInteger(value);
     }
     return Number(readInteger(assertion) - readInteger(value));
 }

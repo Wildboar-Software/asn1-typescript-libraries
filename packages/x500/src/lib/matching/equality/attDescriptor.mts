@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
+import { approximatelyEqualBytes, approximatelyEqualStrings } from "../approximate.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -32,22 +34,45 @@ export
 function attDescriptorTyped (
     a: AttributeDescriptorSyntax,
     value: AttributeDescriptorSyntax | ASN1Element,
+    _getEqualityMatcher?: unknown,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeDescriptorSyntax);
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
 
     if (a.identifier.toString() !== v.identifier.toString()) {
         return false;
     }
 
-    if (Buffer.compare(a.attributeSyntax, v.attributeSyntax)) {
+    if (
+        approximate
+            ? !approximatelyEqualBytes(a.attributeSyntax, v.attributeSyntax)
+            : Buffer.compare(a.attributeSyntax, v.attributeSyntax) !== 0
+    ) {
         return false;
     }
 
-    if (a.name && (a.name !== v.name)) {
+    if (
+        a.name
+        && (
+            !v.name
+            || (approximate
+                ? !approximatelyEqualStrings(a.name, v.name)
+                : (a.name !== v.name))
+        )
+    ) {
         return false;
     }
 
-    if (a.description && (a.description !== v.description)) {
+    if (
+        a.description
+        && (
+            !v.description
+            || (approximate
+                ? !approximatelyEqualStrings(a.description, v.description)
+                : (a.description !== v.description))
+        )
+    ) {
         return false;
     }
 
@@ -61,7 +86,14 @@ function attDescriptorTyped (
     if (
         ("content" in aPol)
         && ("content" in vPol)
-        && (directoryStringToString(aPol.content) !== directoryStringToString(vPol.content))
+        && (
+            approximate
+                ? !approximatelyEqualStrings(
+                    directoryStringToString(aPol.content),
+                    directoryStringToString(vPol.content),
+                )
+                : (directoryStringToString(aPol.content) !== directoryStringToString(vPol.content))
+        )
     ) {
         return false;
     }

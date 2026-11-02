@@ -1,5 +1,9 @@
 import { ASN1Element } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
+import {
+    MATCH_FLAG_APPROXIMATE,
+    type ContextMatcher,
+} from "../../types/matching.mjs";
 import { id_avc_ldapAttributeOption } from "../../modules/SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
@@ -23,10 +27,11 @@ export
 function evaluateLDAPAttributeOptionContext (
     assertion: ASN1Element | readonly string[],
     value: ASN1Element | readonly string[],
+    flags: number = 0,
 ): boolean {
     const a = ASN1Element.isElement(assertion) ? _decode_AttributeOptionList(assertion) : assertion;
     const v = ASN1Element.isElement(value) ? _decode_AttributeOptionList(value) : value;
-    return evaluateLDAPAttributeOptionContextTyped(a, v);
+    return evaluateLDAPAttributeOptionContextTyped(a, v, flags);
 }
 
 /**
@@ -41,8 +46,19 @@ export
 function evaluateLDAPAttributeOptionContextTyped (
     assertion: readonly string[],
     value: readonly string[],
+    flags: number = 0,
 ): boolean {
-    const storedValues: Set<string> = new Set(value.map((str) => str.toLowerCase()));
+    const storedLower = value.map((str) => str.toLowerCase());
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        for (let i = 0; i < assertion.length; i++) {
+            const assertedValue: string = assertion[i].toLowerCase();
+            if (!storedLower.some((s) => approximatelyEqualStrings(assertedValue, s))) {
+                return false;
+            }
+        }
+        return true;
+    }
+    const storedValues: Set<string> = new Set(storedLower);
     for (let i = 0; i < assertion.length; i++) {
         const assertedValue: string = assertion[i].toLowerCase();
         if (!storedValues.has(assertedValue)) {
@@ -71,6 +87,7 @@ const ldapAttributeOptionContext: ContextMatcher = (
         (value) => evaluateLDAPAttributeOptionContextTyped(
             presented,
             _decode_AttributeOptionList(value),
+            flags,
         ),
         id_avc_ldapAttributeOption,
         flags,

@@ -67,7 +67,7 @@ function keywordMatchTyped (
         }
         return undefined;
     }
-    return containsWord(stored, assertion);
+    return containsWord(stored, assertion, flags);
 }
 
 keywordMatchTyped satisfies TypedEquationFunction<string>;

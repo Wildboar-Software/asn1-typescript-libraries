@@ -1,7 +1,10 @@
 import { Buffer } from "node:buffer";
 import type { ASN1Element, BIT_STRING } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualBytes } from "../approximate.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -21,8 +24,13 @@ export
 function bitStringMatchTyped (
     assertion: BIT_STRING,
     value: BIT_STRING | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = value instanceof Uint8ClampedArray ? value : value.bitString;
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualBytes(assertion, stored);
+    }
     return Buffer.compare(
         Buffer.from(assertion.buffer, assertion.byteOffset, assertion.byteLength),
         Buffer.from(stored.buffer, stored.byteOffset, stored.byteLength),
