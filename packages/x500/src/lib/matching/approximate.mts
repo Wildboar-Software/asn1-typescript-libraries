@@ -1,29 +1,54 @@
 /**
+ * True if two equal-length strings are identical or differ in at most 1 character.
+ */
+function stringsDifferByAtMostOneSubstitution (a: string, b: string): boolean {
+    let forgiven = false;
+    for (let i = 0; i < a.length; i++) {
+        if (a.charCodeAt(i) !== b.charCodeAt(i)) {
+            if (forgiven) {
+                return false;
+            }
+            forgiven = true;
+        }
+    }
+    return true;
+}
+
+/**
+ * True if `longer` (length N + 1) and `shorter` (length N) match when one
+ * character is removed from `longer`.
+ */
+function stringsDifferByOneInsertion (longer: string, shorter: string): boolean {
+    let forgiven = false;
+    for (let i = 0; i < shorter.length; i++) {
+        if (longer.charCodeAt(forgiven ? i + 1 : i) !== shorter.charCodeAt(i)) {
+            if (forgiven) {
+                return false;
+            }
+            forgiven = true;
+            i--;
+        }
+    }
+    return true;
+}
+
+/**
  * True if two strings are equal or differ by at most 1 edit
  * (1 substitution, 1 insertion, or 1 deletion).
  */
 export
 function approximatelyEqualStrings (a: string, b: string): boolean {
-    if (a === b) {
-        return true;
-    }
-    const lenA = a.length;
-    const lenB = b.length;
-    const diff = lenA - lenB;
-    if (diff > 1 || diff < -1) {
-        return false;
-    }
-    let i = 0;
-    const minLen = lenA < lenB ? lenA : lenB;
-    while (i < minLen && a.charCodeAt(i) === b.charCodeAt(i)) {
-        i++;
-    }
+    const diff = a.length - b.length;
     if (diff === 0) {
-        return a.slice(i + 1) === b.slice(i + 1);
+        return stringsDifferByAtMostOneSubstitution(a, b);
     }
-    return diff > 0
-        ? a.slice(i + 1) === b.slice(i)
-        : a.slice(i) === b.slice(i + 1);
+    if (diff === 1) {
+        return stringsDifferByOneInsertion(a, b);
+    }
+    if (diff === -1) {
+        return stringsDifferByOneInsertion(b, a);
+    }
+    return false;
 }
 
 /**
