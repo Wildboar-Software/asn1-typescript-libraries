@@ -8,6 +8,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import { containsWord } from "./wordMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,

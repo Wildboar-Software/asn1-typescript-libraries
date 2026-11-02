@@ -2,9 +2,11 @@ import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -59,7 +61,7 @@ function caseIgnoreIA5MatchTyped (
     if (flags & MATCH_FLAG_APPROXIMATE) {
         return approximatelyEqualStrings(assertion, stored);
     }
-    return assertion === stored;
+    return stringsEqual(assertion, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 caseIgnoreIA5MatchTyped satisfies TypedEquationFunction<string>;

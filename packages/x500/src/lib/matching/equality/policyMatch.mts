@@ -1,10 +1,13 @@
 import { ASN1Element, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     PolicySyntax,
     _decode_PolicySyntax,
 } from "../../modules/AuthenticationFramework/PolicySyntax.ta.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -22,8 +25,13 @@ export
 function policyMatchTyped (
     assertion: OBJECT_IDENTIFIER,
     value: PolicySyntax | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = ASN1Element.isElement(value) ? _decode_PolicySyntax(value) : value;
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return bytesEqual(assertion.toBytesUnsafe(), stored.policyIdentifier.toBytesUnsafe(), true);
+    }
     return stored.policyIdentifier.isEqualTo(assertion);
 }
 

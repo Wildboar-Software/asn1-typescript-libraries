@@ -1,8 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -16,7 +18,6 @@ import {
     type Certificate,
     _decode_Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
-import { Buffer } from "node:buffer";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.1
@@ -42,11 +43,14 @@ function certificateExactMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_Certificate);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    if (Buffer.compare(v.toBeSigned.serialNumber, a.serialNumber)) {
+    const serialMatches = bytesEqual(a.serialNumber, v.toBeSigned.serialNumber, constantTime);
+    if (!serialMatches && !constantTime) {
         return false;
     }
-    return compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher);
+    const issuerMatches = compareName(v.toBeSigned.issuer, a.issuer, getEqualityMatcher);
+    return serialMatches && issuerMatches;
 }
 
 certificateExactMatchTyped satisfies TypedEquationFunction<CertificateExactAssertion>;

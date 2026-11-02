@@ -8,9 +8,11 @@ import {
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readInteger } from "../readValue.mjs";
+import { ctCompareBytes } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -49,7 +51,11 @@ function validateEncodedInteger (el: ASN1Element): void {
  * @returns A negative number, zero, or a positive number as `a` is less
  *  than, equal to, or greater than `b`.
  */
-function compareEncodedIntegers (a: Uint8Array, b: Uint8Array): number {
+function compareEncodedIntegers (
+    a: Uint8Array,
+    b: Uint8Array,
+    constantTime: boolean | number = 0,
+): number {
     const aNegative = a[0] >= 0x80;
     if (aNegative !== (b[0] >= 0x80)) {
         return aNegative ? -1 : 1;
@@ -59,6 +65,9 @@ function compareEncodedIntegers (a: Uint8Array, b: Uint8Array): number {
         const isNegative = aNegative;
         const aIsBiggerMagnitude = (len > b.length);
         return (aIsBiggerMagnitude === isNegative) ? -1 : 1;
+    }
+    if (constantTime) {
+        return ctCompareBytes(a, b);
     }
     for (let i = 0; i < len; i++) {
         const diff = a[i] - b[i];
@@ -92,7 +101,11 @@ function integerOrderingMatchTyped (
 ): number | undefined {
     if (typeof assertion === "object" && typeof value === "object" && !(flags & MATCH_FLAG_APPROXIMATE)) {
         validateEncodedInteger(value);
-        return compareEncodedIntegers(assertion.value, value.value);
+        return compareEncodedIntegers(
+            assertion.value,
+            value.value,
+            flags & MATCH_FLAG_CONSTANT_TIME,
+        );
     }
     if (typeof value === "object") {
         validateEncodedInteger(value);

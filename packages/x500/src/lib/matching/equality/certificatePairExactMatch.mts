@@ -1,8 +1,11 @@
-import type { ASN1Element } from "@wildboar/asn1";
+import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import { bytesEqual, ctBytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -17,7 +20,77 @@ import {
     CertificatePair,
     _decode_CertificatePair,
 } from "../../modules/AuthenticationFramework/CertificatePair.ta.mjs";
-import { Buffer } from "node:buffer";
+
+type GetValueMatcher = ((attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined) | undefined;
+
+function matchCertificatePairFast (
+    a: CertificatePairExactAssertion,
+    v: CertificatePair,
+    getEqualityMatcher: GetValueMatcher,
+): boolean {
+    const issuedTo = a.issuedToThisCAAssertion;
+    const issuedBy = a.issuedByThisCAAssertion;
+    if (issuedTo) {
+        const cert = v.issuedToThisCA;
+        if (!cert) {
+            return false;
+        }
+        if (!bytesEqual(issuedTo.serialNumber, cert.toBeSigned.serialNumber, false)) {
+            return false;
+        }
+        if (!compareName(cert.toBeSigned.issuer, issuedTo.issuer, getEqualityMatcher)) {
+            return false;
+        }
+    }
+    if (issuedBy) {
+        const cert = v.issuedByThisCA;
+        if (!cert) {
+            return false;
+        }
+        if (!bytesEqual(issuedBy.serialNumber, cert.toBeSigned.serialNumber, false)) {
+            return false;
+        }
+        if (!compareName(cert.toBeSigned.issuer, issuedBy.issuer, getEqualityMatcher)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function matchCertificatePairConstantTime (
+    a: CertificatePairExactAssertion,
+    v: CertificatePair,
+    getEqualityMatcher: GetValueMatcher,
+): boolean {
+    const issuedTo = a.issuedToThisCAAssertion;
+    const issuedBy = a.issuedByThisCAAssertion;
+    let matched = true;
+    if (issuedTo) {
+        const cert = v.issuedToThisCA;
+        if (!cert) {
+            matched = false;
+        } else {
+            const serialOk = ctBytesEqual(issuedTo.serialNumber, cert.toBeSigned.serialNumber);
+            const issuerOk = compareName(cert.toBeSigned.issuer, issuedTo.issuer, getEqualityMatcher);
+            if (!serialOk || !issuerOk) {
+                matched = false;
+            }
+        }
+    }
+    if (issuedBy) {
+        const cert = v.issuedByThisCA;
+        if (!cert) {
+            matched = false;
+        } else {
+            const serialOk = ctBytesEqual(issuedBy.serialNumber, cert.toBeSigned.serialNumber);
+            const issuerOk = compareName(cert.toBeSigned.issuer, issuedBy.issuer, getEqualityMatcher);
+            if (!serialOk || !issuerOk) {
+                matched = false;
+            }
+        }
+    }
+    return matched;
+}
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.3
@@ -46,9 +119,7 @@ function certificatePairExactMatchTyped (
 ): boolean {
     const v = readDecoded(value, _decode_CertificatePair);
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    const issuedTo = a.issuedToThisCAAssertion;
-    const issuedBy = a.issuedByThisCAAssertion;
-    if (!issuedTo && !issuedBy) {
+    if (!a.issuedToThisCAAssertion && !a.issuedByThisCAAssertion) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: certificatePairExactMatch: assertion has neither issuedToThisCAAssertion nor issuedByThisCAAssertion",
@@ -56,31 +127,10 @@ function certificatePairExactMatchTyped (
         }
         return false;
     }
-    if (issuedTo) {
-        const cert = v.issuedToThisCA;
-        if (!cert) {
-            return false;
-        }
-        if (Buffer.compare(cert.toBeSigned.serialNumber, issuedTo.serialNumber)) {
-            return false;
-        }
-        if (!compareName(cert.toBeSigned.issuer, issuedTo.issuer, getEqualityMatcher)) {
-            return false;
-        }
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return matchCertificatePairConstantTime(a, v, getEqualityMatcher);
     }
-    if (issuedBy) {
-        const cert = v.issuedByThisCA;
-        if (!cert) {
-            return false;
-        }
-        if (Buffer.compare(cert.toBeSigned.serialNumber, issuedBy.serialNumber)) {
-            return false;
-        }
-        if (!compareName(cert.toBeSigned.issuer, issuedBy.issuer, getEqualityMatcher)) {
-            return false;
-        }
-    }
-    return true;
+    return matchCertificatePairFast(a, v, getEqualityMatcher);
 }
 
 certificatePairExactMatchTyped satisfies TypedEquationFunction<CertificatePairExactAssertion>;

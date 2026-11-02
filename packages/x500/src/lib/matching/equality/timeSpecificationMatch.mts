@@ -1,8 +1,10 @@
 import { ASN1Element, DERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -136,6 +138,7 @@ function timeSpecificationsEqual (
     storedTime: TimeSpecification,
     flags: number = 0,
 ): boolean {
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     if (
         (storedTime.notThisTime ?? TimeSpecification._default_value_for_notThisTime)
         !== (assertedTime.notThisTime ?? TimeSpecification._default_value_for_notThisTime)
@@ -169,6 +172,7 @@ function timeSpecificationsEqual (
         return false; // Asserted a component we don't recognize.
     }
 
+    let matched = true;
     if (("absolute" in storedTime.time) && ("absolute" in assertedTime.time)) {
         const staexts = storedTime.time.absolute._unrecognizedExtensionsList ?? [];
         const ataexts = assertedTime.time.absolute._unrecognizedExtensionsList ?? [];
@@ -205,7 +209,10 @@ function timeSpecificationsEqual (
                     || (typeof storedStart === "number" && Math.abs(storedStart - assertedStart!) > 1))
                 : (storedStart !== assertedStart)
         ) {
-            return false;
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
         if (
             approximate
@@ -213,12 +220,18 @@ function timeSpecificationsEqual (
                     || (typeof storedEnd === "number" && Math.abs(storedEnd - assertedEnd!) > 1))
                 : (storedEnd !== assertedEnd)
         ) {
-            return false;
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
         // Compare unrecognized extensions in absolute times
         for (let i = 0; i < ataexts.length; i++) {
             if (!compareElements(staexts[i], ataexts[i])) {
-                return false;
+                if (!constantTime) {
+                    return false;
+                }
+                matched = false;
             }
         }
     } else if (("periodic" in storedTime.time) && ("periodic" in assertedTime.time)) {
@@ -229,8 +242,11 @@ function timeSpecificationsEqual (
         const storedPeriods = storedTime.time.periodic.map(periodHashKey).sort();
         const assertedPeriods = assertedTime.time.periodic.map(periodHashKey).sort();
         for (let i = 0; i < len; i++) {
-            if (storedPeriods[i] !== assertedPeriods[i]) {
-                return false;
+            if (!stringsEqual(assertedPeriods[i], storedPeriods[i], constantTime)) {
+                if (!constantTime) {
+                    return false;
+                }
+                matched = false;
             }
         }
     } else {
@@ -238,10 +254,13 @@ function timeSpecificationsEqual (
     }
     for (let i = 0; i < assertedTimeExts.length; i++) {
         if (!compareElements(storedTimeExts[i], assertedTimeExts[i])) {
-            return false;
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
     }
-    return true;
+    return matched;
 }
 
 export default timeSpecificationMatch;

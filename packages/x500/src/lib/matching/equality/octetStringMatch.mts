@@ -1,10 +1,11 @@
-import { Buffer } from "node:buffer";
 import { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualBytes } from "../approximate.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -29,7 +30,7 @@ function octetStringMatchTyped (
     if (flags & MATCH_FLAG_APPROXIMATE) {
         return approximatelyEqualBytes(assertion, stored);
     }
-    return Buffer.compare(assertion, stored) === 0;
+    return bytesEqual(assertion, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 octetStringMatchTyped satisfies TypedEquationFunction<Uint8Array>;

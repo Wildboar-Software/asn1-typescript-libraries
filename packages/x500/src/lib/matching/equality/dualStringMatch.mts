@@ -11,9 +11,11 @@ import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
+import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -81,10 +83,9 @@ function dualStringMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const stored = readDual(value);
-    if (
-        prohibitedCharacters.test(stored.operation)
-        || prohibitedCharacters.test(stored.object)
-    ) {
+    const badOperation = prohibitedCharacters.test(stored.operation);
+    const badObject = prohibitedCharacters.test(stored.object);
+    if (badOperation || badObject) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: dualStringMatch: stored string contains a prohibited character",
@@ -93,8 +94,14 @@ function dualStringMatchTyped (
         return undefined;
     }
     if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualStrings(assertion.operation, stored.operation)
-            && approximatelyEqualStrings(assertion.object, stored.object);
+        const opEqual = approximatelyEqualStrings(assertion.operation, stored.operation);
+        const objEqual = approximatelyEqualStrings(assertion.object, stored.object);
+        return opEqual && objEqual;
+    }
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        const opEqual = ctStringsEqual(assertion.operation, stored.operation);
+        const objEqual = ctStringsEqual(assertion.object, stored.object);
+        return opEqual && objEqual;
     }
     return assertion.operation === stored.operation
         && assertion.object === stored.object;

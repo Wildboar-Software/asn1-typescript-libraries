@@ -1,9 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -39,7 +41,7 @@ function telephoneNumberMatchTyped (
     if (flags & MATCH_FLAG_APPROXIMATE) {
         return approximatelyEqualStrings(assertion, stored);
     }
-    return assertion === stored;
+    return stringsEqual(assertion, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 telephoneNumberMatchTyped satisfies TypedEquationFunction<string>;

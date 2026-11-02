@@ -2,10 +2,12 @@ import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar
 import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type ContextMatcher,
 } from "../../types/matching.mjs";
 import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
+import { bytesEqual, stringsEqual } from "../constantTime.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 import {
     _decode_LocaleContextSyntax,
@@ -65,10 +67,13 @@ function evaluateLocaleContext (
     value: LocaleContextInput,
     flags: number = 0,
 ): boolean {
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const a = readLocale(assertion);
     const v = readLocale(value);
     if (("localeID1" in a) && ("localeID1" in v)) {
-        return a.localeID1.isEqualTo(v.localeID1);
+        return constantTime
+            ? bytesEqual(a.localeID1.toBytesUnsafe(), v.localeID1.toBytesUnsafe(), constantTime)
+            : a.localeID1.isEqualTo(v.localeID1);
     }
     if (("localeID2" in a) && ("localeID2" in v)) {
         const strA = directoryStringToString(a.localeID2);
@@ -76,7 +81,7 @@ function evaluateLocaleContext (
         if (flags & MATCH_FLAG_APPROXIMATE) {
             return approximatelyEqualStrings(strA, strV);
         }
-        return strA === strV;
+        return stringsEqual(strA, strV, constantTime);
     }
     if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
         if (flags & MATCH_FLAG_DEBUG) {

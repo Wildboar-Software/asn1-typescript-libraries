@@ -10,6 +10,7 @@ import {
 import { compareRDNSequence } from "@wildboar/dn";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -36,18 +37,21 @@ function uniqueMemberMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const v = readDecoded(value, _decode_NameAndOptionalUID);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    if (!compareRDNSequence(a.dn, v.dn, getEqualityMatcher)) {
+    const dnMatches = compareRDNSequence(a.dn, v.dn, getEqualityMatcher);
+    if (!dnMatches && !constantTime) {
         return false;
     }
     // Clause 8.2.11: a stored `uid` that is absent matches any presented `uid`.
     if (v.uid === undefined) {
-        return true;
+        return dnMatches;
     }
     if (a.uid === undefined) {
         return false;
     }
-    return bitStringMatchTyped(a.uid, v.uid, getMatcher, flags);
+    const uidMatches = bitStringMatchTyped(a.uid, v.uid, getMatcher, flags) === true;
+    return dnMatches && uidMatches;
 }
 
 uniqueMemberMatchTyped satisfies TypedEquationFunction<NameAndOptionalUID>;

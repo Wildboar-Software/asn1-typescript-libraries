@@ -1,10 +1,12 @@
 import { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -49,20 +51,21 @@ function uriMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.utf8String;
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
         if (flags & MATCH_FLAG_APPROXIMATE) {
             return approximatelyEqualStrings(assertion, raw);
         }
-        return assertion === raw;
+        return stringsEqual(assertion, raw, constantTime);
     }
-    if (assertion === raw) {
+    if (!constantTime && assertion === raw) {
         return true;
     }
     const normalized = normalizeUri(raw);
     if (flags & MATCH_FLAG_APPROXIMATE) {
         return approximatelyEqualStrings(assertion, normalized);
     }
-    return assertion === normalized;
+    return stringsEqual(assertion, normalized, constantTime);
 }
 
 uriMatchTyped satisfies TypedEquationFunction<string>;

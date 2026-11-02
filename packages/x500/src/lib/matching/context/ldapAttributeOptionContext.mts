@@ -2,6 +2,7 @@ import { ASN1Element } from "@wildboar/asn1";
 import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     type ContextMatcher,
 } from "../../types/matching.mjs";
 import { id_avc_ldapAttributeOption } from "../../modules/SelectedAttributeTypes/id-avc-ldapAttributeOption.va.mjs";
@@ -40,6 +41,7 @@ function evaluateLDAPAttributeOptionContext (
  *
  * @param assertion Presented options.
  * @param value Stored options.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`.
  * @returns `true` when every asserted option is stored.
  */
 export
@@ -48,24 +50,33 @@ function evaluateLDAPAttributeOptionContextTyped (
     value: readonly string[],
     flags: number = 0,
 ): boolean {
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     const storedLower = value.map((str) => str.toLowerCase());
     if (flags & MATCH_FLAG_APPROXIMATE) {
+        let matched = true;
         for (let i = 0; i < assertion.length; i++) {
             const assertedValue: string = assertion[i].toLowerCase();
             if (!storedLower.some((s) => approximatelyEqualStrings(assertedValue, s))) {
-                return false;
+                if (!constantTime) {
+                    return false;
+                }
+                matched = false;
             }
         }
-        return true;
+        return matched;
     }
     const storedValues: Set<string> = new Set(storedLower);
+    let matched = true;
     for (let i = 0; i < assertion.length; i++) {
         const assertedValue: string = assertion[i].toLowerCase();
         if (!storedValues.has(assertedValue)) {
-            return false;
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
     }
-    return true;
+    return matched;
 }
 
 /**

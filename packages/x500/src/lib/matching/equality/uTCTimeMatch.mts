@@ -28,7 +28,7 @@ function uTCTimeMatchTyped (
         const diff = Math.floor(assertion.getTime() / 1000) - Math.floor(stored.getTime() / 1000);
         return diff >= -1 && diff <= 1;
     }
-    return assertion.toISOString() === stored.toISOString();
+    return assertion.getTime() === stored.getTime();
 }
 
 uTCTimeMatchTyped satisfies TypedEquationFunction<Date>;

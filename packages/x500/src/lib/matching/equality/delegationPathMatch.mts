@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -61,10 +62,12 @@ function delegationPathMatchTyped (
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const firstCert: AttributeCertificate = v[0];
     const lastCert: AttributeCertificate = v[v.length - 1];
-    if (!compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher)) {
+    const firstMatches = compareAttCertIssuer(a.firstIssuer, firstCert.toBeSigned.issuer, getEqualityMatcher);
+    if (!firstMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return false;
     }
-    return compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getEqualityMatcher);
+    const lastMatches = compareHolder(a.lastHolder, lastCert.toBeSigned.holder, getEqualityMatcher);
+    return firstMatches && lastMatches;
 }
 
 delegationPathMatchTyped satisfies TypedEquationFunction<DelMatchSyntax>;

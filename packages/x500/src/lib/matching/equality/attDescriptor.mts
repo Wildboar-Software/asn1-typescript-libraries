@@ -1,9 +1,12 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
 import { approximatelyEqualBytes, approximatelyEqualStrings } from "../approximate.mjs";
+import { bytesEqual, stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -12,7 +15,6 @@ import {
     _decode_AttributeDescriptorSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
-import { Buffer } from "node:buffer";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 17.3.2.2.2 `attDescriptor`.
@@ -34,22 +36,30 @@ export
 function attDescriptorTyped (
     a: AttributeDescriptorSyntax,
     value: AttributeDescriptorSyntax | ASN1Element,
-    _getEqualityMatcher?: unknown,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeDescriptorSyntax);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
+    let matched = true;
 
-    if (a.identifier.toString() !== v.identifier.toString()) {
-        return false;
+    if (!stringsEqual(a.identifier.toString(), v.identifier.toString(), constantTime)) {
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     if (
         approximate
             ? !approximatelyEqualBytes(a.attributeSyntax, v.attributeSyntax)
-            : Buffer.compare(a.attributeSyntax, v.attributeSyntax) !== 0
+            : !bytesEqual(a.attributeSyntax, v.attributeSyntax, constantTime)
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     if (
@@ -58,10 +68,13 @@ function attDescriptorTyped (
             !v.name
             || (approximate
                 ? !approximatelyEqualStrings(a.name, v.name)
-                : (a.name !== v.name))
+                : !stringsEqual(a.name, v.name, constantTime))
         )
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     if (
@@ -70,14 +83,20 @@ function attDescriptorTyped (
             !v.description
             || (approximate
                 ? !approximatelyEqualStrings(a.description, v.description)
-                : (a.description !== v.description))
+                : !stringsEqual(a.description, v.description, constantTime))
         )
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     if (a.dominationRule.privilegePolicy.isEqualTo(v.dominationRule.privilegePolicy)) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     const aPol = a.dominationRule.privPolSyntax;
@@ -92,15 +111,22 @@ function attDescriptorTyped (
                     directoryStringToString(aPol.content),
                     directoryStringToString(vPol.content),
                 )
-                : (directoryStringToString(aPol.content) !== directoryStringToString(vPol.content))
+                : !stringsEqual(
+                    directoryStringToString(aPol.content),
+                    directoryStringToString(vPol.content),
+                    constantTime,
+                )
         )
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     // dominationRule.privPolSyntax.pointer will not be checked for a match.
 
-    return true;
+    return matched;
 }
 
 attDescriptorTyped satisfies TypedEquationFunction<AttributeDescriptorSyntax>;

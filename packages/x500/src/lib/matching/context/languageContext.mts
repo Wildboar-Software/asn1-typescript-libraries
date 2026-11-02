@@ -2,9 +2,11 @@ import type { ASN1Element } from "@wildboar/asn1";
 import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     type ContextMatcher,
 } from "../../types/matching.mjs";
 import { id_avc_language } from "../../modules/SelectedAttributeTypes/id-avc-language.va.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 
 /**
@@ -30,7 +32,7 @@ function evaluateLanguageContext (
     if (flags & MATCH_FLAG_APPROXIMATE) {
         return approximatelyEqualStrings(presented, stored);
     }
-    return presented === stored;
+    return stringsEqual(presented, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 /**

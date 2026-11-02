@@ -10,9 +10,11 @@ import {
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualBigInts } from "../approximate.mjs";
 import { readInteger } from "../readValue.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -86,11 +88,9 @@ function integerMatchOctets (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    if (Buffer.compare(assertion, value.value) === 0) {
-        return true;
-    }
-    if (!(flags & MATCH_FLAG_APPROXIMATE)) {
-        return false;
+    const equal = bytesEqual(assertion, value.value, flags & MATCH_FLAG_CONSTANT_TIME);
+    if (equal || !(flags & MATCH_FLAG_APPROXIMATE)) {
+        return equal;
     }
     const vOctets = integerAssertionOctets(value);
     const aVal = BigInt.asIntN(assertion.length * 8, BigInt("0x" + Buffer.from(assertion).toString("hex")));
