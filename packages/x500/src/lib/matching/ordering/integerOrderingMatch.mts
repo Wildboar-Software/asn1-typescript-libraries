@@ -11,7 +11,6 @@ import { readInteger } from "../readValue.mjs";
 import { ctCompareBytes } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
-    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedOrderingFunction,
@@ -99,16 +98,13 @@ function integerOrderingMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): number | undefined {
-    if (typeof assertion === "object" && typeof value === "object" && !(flags & MATCH_FLAG_APPROXIMATE)) {
+    if (typeof assertion === "object" && typeof value === "object") {
         validateEncodedInteger(value);
         return compareEncodedIntegers(
             assertion.value,
             value.value,
             flags & MATCH_FLAG_CONSTANT_TIME,
         );
-    }
-    if (typeof value === "object") {
-        validateEncodedInteger(value);
     }
     return Number(readInteger(assertion) - readInteger(value));
 }

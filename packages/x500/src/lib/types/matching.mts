@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { ASN1Decoder } from "@wildboar/asn1/functional";
-import { approximatelyEqualStrings } from "../matching/approximate.mjs";
 import type {
     FilterItem_substrings_strings_Item,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
@@ -318,13 +317,6 @@ function useOrderingAsEquality<A>(
         }
         if (orEqual && (result === 0)) {
             return true;
-        }
-        if (flags & MATCH_FLAG_APPROXIMATE) {
-            return (
-                greaterThan
-                    ? (result <= 1)
-                    : (result >= -1)
-            );
         }
         return (
             greaterThan
@@ -670,53 +662,6 @@ function matchSubstringsConstantTime (
     return matched === 1;
 }
 
-function approxSubstringLengths (len: number): readonly number[] {
-    if (len <= 1) {
-        return [len, len + 1];
-    }
-    return [len, len - 1, len + 1];
-}
-
-function approxStartsWith (str: string, needle: string): number {
-    if (str.startsWith(needle)) {
-        return needle.length;
-    }
-    for (const k of approxSubstringLengths(needle.length)) {
-        if (k <= str.length && approximatelyEqualStrings(str.slice(0, k), needle)) {
-            return k;
-        }
-    }
-    return -1;
-}
-
-function approxEndsWith (str: string, needle: string): number {
-    if (str.endsWith(needle)) {
-        return needle.length;
-    }
-    for (const k of approxSubstringLengths(needle.length)) {
-        if (k <= str.length && approximatelyEqualStrings(str.slice(str.length - k), needle)) {
-            return k;
-        }
-    }
-    return -1;
-}
-
-function approxIndexOf (str: string, needle: string): [idx: number, len: number] {
-    const exact = str.indexOf(needle);
-    if (exact >= 0) {
-        return [exact, needle.length];
-    }
-    const lengths = approxSubstringLengths(needle.length);
-    for (let i = 0; i <= str.length; i++) {
-        for (const k of lengths) {
-            if (i + k <= str.length && approximatelyEqualStrings(str.slice(i, i + k), needle)) {
-                return [i, k];
-            }
-        }
-    }
-    return [-1, 0];
-}
-
 /**
  * @summary Create a function that performs substrings matching on a string-typed value.
  * @description
@@ -746,55 +691,27 @@ function getStringSubstringsMatcher (
         if (flags & MATCH_FLAG_CONSTANT_TIME) {
             return matchSubstringsConstantTime(prepared, assertion);
         }
-        const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
         let v = prepared;
         for (let i = 0; i < assertion.length; i++) {
             const subass = assertion[i];
             if ("any_" in subass) {
-                if (approximate) {
-                    const [idx, len] = approxIndexOf(v, subass.any_);
-                    if (idx >= 0) {
-                        v = v.slice(idx + len);
-                    } else {
-                        return false;
-                    }
+                const idx = v.indexOf(subass.any_);
+                if (idx >= 0) {
+                    v = v.slice(idx + subass.any_.length);
                 } else {
-                    const idx = v.indexOf(subass.any_);
-                    if (idx >= 0) {
-                        v = v.slice(idx + subass.any_.length);
-                    } else {
-                        return false;
-                    }
+                    return false;
                 }
             } else if ("initial" in subass) {
-                if (approximate) {
-                    const len = approxStartsWith(v, subass.initial);
-                    if (len >= 0) {
-                        v = v.slice(len);
-                    } else {
-                        return false;
-                    }
+                if (v.startsWith(subass.initial)) {
+                    v = v.slice(subass.initial.length);
                 } else {
-                    if (v.startsWith(subass.initial)) {
-                        v = v.slice(subass.initial.length);
-                    } else {
-                        return false;
-                    }
+                    return false;
                 }
             } else if ("final" in subass) {
-                if (approximate) {
-                    const len = approxEndsWith(v, subass.final);
-                    if (len >= 0) {
-                        v = v.slice(0, v.length - len);
-                    } else {
-                        return false;
-                    }
+                if (v.endsWith(subass.final)) {
+                    v = v.slice(0, v.length - subass.final.length);
                 } else {
-                    if (v.endsWith(subass.final)) {
-                        v = v.slice(0, v.length - subass.final.length);
-                    } else {
-                        return false;
-                    }
+                    return false;
                 }
             }
         }

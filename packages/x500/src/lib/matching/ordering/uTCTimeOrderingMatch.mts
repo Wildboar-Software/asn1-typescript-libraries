@@ -1,8 +1,6 @@
 import { ASN1Element } from "@wildboar/asn1";
-import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     createOrderingMatcher,
-    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -22,13 +20,8 @@ export
 function uTCTimeOrderingMatchTyped (
     assertion: Date,
     value: Date | ASN1Element,
-    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
-    flags: number = 0,
 ): number | undefined {
     const stored = ASN1Element.isElement(value) ? value.utcTime : value;
-    if (flags & MATCH_FLAG_APPROXIMATE) {
-        return Math.floor(assertion.getTime() / 1000) - Math.floor(stored.getTime() / 1000);
-    }
     return assertion.valueOf() - stored.valueOf();
 }
 

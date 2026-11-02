@@ -1,9 +1,7 @@
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
-import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
-    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -72,33 +70,9 @@ function storedPrefixMatchTyped (
         return false;
     }
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
-        if (ctStartsWith(preparedA, preparedV)) {
-            return true;
-        }
-        if (flags & MATCH_FLAG_APPROXIMATE) {
-            const lenV = preparedV.length;
-            let matched = false;
-            for (const k of [lenV - 1, lenV, lenV + 1]) {
-                if (k >= 0 && k <= preparedA.length && approximatelyEqualStrings(preparedA.slice(0, k), preparedV)) {
-                    matched = true;
-                }
-            }
-            return matched;
-        }
-        return false;
+        return ctStartsWith(preparedA, preparedV);
     }
-    if (preparedA.startsWith(preparedV)) {
-        return true;
-    }
-    if (flags & MATCH_FLAG_APPROXIMATE) {
-        const lenV = preparedV.length;
-        for (const k of [lenV - 1, lenV, lenV + 1]) {
-            if (k >= 0 && k <= preparedA.length && approximatelyEqualStrings(preparedA.slice(0, k), preparedV)) {
-                return true;
-            }
-        }
-    }
-    return false;
+    return preparedA.startsWith(preparedV);
 }
 
 export default storedPrefixMatch;

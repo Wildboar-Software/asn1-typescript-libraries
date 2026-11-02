@@ -25,8 +25,6 @@ import {
     AttributeTypeAndValue,
 } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { _encode_UnboundedDirectoryString } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import { _encode_SubstringAssertion } from "../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-import { _encode_OctetSubstringAssertion } from "../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 import { _encode_TelephoneNumber } from "../modules/SelectedAttributeTypes/TelephoneNumber.ta.mjs";
 import {
     FacsimileTelephoneNumber,
@@ -45,7 +43,6 @@ import {
 } from "../modules/AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import {
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ORDERING_GREATER,
     type Matcher,
 } from "../types/matching.mjs";
 import bitStringMatch, { bitStringMatchTyped } from "./equality/bitStringMatch.mjs";
@@ -77,13 +74,6 @@ import uniqueMemberMatch from "./equality/uniqueMemberMatch.mjs";
 import uriMatch, { uriMatchTyped } from "./equality/uriMatch.mjs";
 import uTCTimeMatch, { uTCTimeMatchTyped } from "./equality/uTCTimeMatch.mjs";
 import { wordMatch, wordMatchTyped } from "./equality/wordMatch.mjs";
-import generalizedTimeOrderingMatch from "./ordering/generalizedTimeOrderingMatch.mjs";
-import integerOrderingMatch from "./ordering/integerOrderingMatch.mjs";
-import uTCTimeOrderingMatch from "./ordering/uTCTimeOrderingMatch.mjs";
-import caseExactSubstringsMatch from "./substring/caseExactSubstringsMatch.mjs";
-import caseIgnoreSubstringsMatch from "./substring/caseIgnoreSubstringsMatch.mjs";
-import octetStringSubstringsMatch from "./substring/octetStringSubstringsMatch.mjs";
-import storedPrefixMatch from "./substring/storedPrefixMatch.mjs";
 
 const attrType = ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]);
 
@@ -363,96 +353,6 @@ describe("MATCH_FLAG_APPROXIMATE", () => {
             );
             expect(timeSpecificationMatchTyped(specA, specB)).toBe(false);
             expect(timeSpecificationMatchTyped(specA, specB, undefined, MATCH_FLAG_APPROXIMATE)).toBe(true);
-        });
-    });
-
-    describe("ordering matchers", () => {
-        it("relaxes strict inequality by 1 unit", () => {
-            const five = _encodeInteger(5, DER);
-            const six = _encodeInteger(6, DER);
-            const seven = _encodeInteger(7, DER);
-
-            // Default: stored < assertion (assertion - stored > 0). With APPROXIMATE: assertion - stored >= -1 (stored <= assertion + 1).
-            expect(integerOrderingMatch(five, atav(five))).toBe(false);
-            expect(integerOrderingMatch(five, atav(five), undefined, MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(integerOrderingMatch(five, atav(six), undefined, MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(integerOrderingMatch(five, atav(seven), undefined, MATCH_FLAG_APPROXIMATE)).toBe(false);
-
-            // Greater: stored > assertion (assertion - stored < 0). With APPROXIMATE: assertion - stored <= 1 (stored >= assertion - 1).
-            expect(integerOrderingMatch(six, atav(five), undefined, MATCH_FLAG_ORDERING_GREATER)).toBe(false);
-            expect(integerOrderingMatch(six, atav(five), undefined, MATCH_FLAG_ORDERING_GREATER | MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(integerOrderingMatch(seven, atav(five), undefined, MATCH_FLAG_ORDERING_GREATER | MATCH_FLAG_APPROXIMATE)).toBe(false);
-
-            const t0 = new Date("2026-01-01T12:00:00Z");
-            const t1 = new Date("2026-01-01T12:00:01Z");
-            const t2 = new Date("2026-01-01T12:00:02Z");
-            expect(generalizedTimeOrderingMatch(
-                _encodeGeneralizedTime(t0, DER),
-                atav(_encodeGeneralizedTime(t1, DER)),
-            )).toBe(false);
-            expect(generalizedTimeOrderingMatch(
-                _encodeGeneralizedTime(t0, DER),
-                atav(_encodeGeneralizedTime(t1, DER)),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(true);
-            expect(generalizedTimeOrderingMatch(
-                _encodeGeneralizedTime(t0, DER),
-                atav(_encodeGeneralizedTime(t2, DER)),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(false);
-
-            expect(uTCTimeOrderingMatch(
-                _encodeUTCTime(t0, DER),
-                atav(_encodeUTCTime(t1, DER)),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(true);
-            expect(uTCTimeOrderingMatch(
-                _encodeUTCTime(t0, DER),
-                atav(_encodeUTCTime(t2, DER)),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(false);
-        });
-    });
-
-    describe("substring matchers", () => {
-        it("tolerates 1 character edit per substring piece", () => {
-            const subAssertion = _encode_SubstringAssertion([
-                { initial: { uTF8String: "whax" } },
-                { any_: { uTF8String: "lookin" } },
-                { final: { uTF8String: "pucx?" } },
-            ], DER);
-            const value = atav(utf8("What are you looking at, you hockey puck?"));
-            expect(caseIgnoreSubstringsMatch(subAssertion, value)).toBe(false);
-            expect(caseIgnoreSubstringsMatch(subAssertion, value, undefined, MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(caseExactSubstringsMatch(subAssertion, value, undefined, MATCH_FLAG_APPROXIMATE)).toBe(false);
-
-            const exactSubAssertion = _encode_SubstringAssertion([
-                { initial: { uTF8String: "Whax" } },
-                { any_: { uTF8String: "lookin" } },
-                { final: { uTF8String: "pucx?" } },
-            ], DER);
-            expect(caseExactSubstringsMatch(exactSubAssertion, value, undefined, MATCH_FLAG_APPROXIMATE)).toBe(true);
-        });
-
-        it("tolerates 1 octet edit per piece on octetStringSubstringsMatch", () => {
-            const octAssertion = _encode_OctetSubstringAssertion([
-                { initial: new Uint8Array([ 1, 9 ]) },
-                { any_: new Uint8Array([ 3, 8 ]) },
-                { final: new Uint8Array([ 5 ]) },
-            ], DER);
-            const value = atav(_encodeOctetString(new Uint8Array([ 1, 2, 3, 4, 5 ]), DER));
-            expect(octetStringSubstringsMatch(octAssertion, value)).toBe(false);
-            expect(octetStringSubstringsMatch(octAssertion, value, undefined, MATCH_FLAG_APPROXIMATE)).toBe(true);
-        });
-
-        it("tolerates 1 character edit on storedPrefixMatch", () => {
-            expect(storedPrefixMatch("7035551212", "704")).toBe(false);
-            expect(storedPrefixMatch("7035551212", "704", MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(storedPrefixMatch("7035551212", "799", MATCH_FLAG_APPROXIMATE)).toBe(false);
         });
     });
 });
