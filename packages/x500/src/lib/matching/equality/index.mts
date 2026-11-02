@@ -61,4 +61,9 @@ export * from "./uriMatch.mjs";
 export * from "./userPwdMatch.mjs";
 export * from "./uTCTimeMatch.mjs";
 export * from "./uUIDPairMatch.mjs";
-export { wordMatch, wordMatchTyped } from "./wordMatch.mjs";
+export {
+    wordMatch,
+    wordMatchTyped,
+    decodeWordMatchAssertion,
+    normalizeWordMatchAssertion,
+} from "./wordMatch.mjs";

@@ -10,6 +10,7 @@ import {
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_USED_FOR_NAME,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     createSubstringsMatcher,
     createEqualityMatcher,
     type TypedEquationFunction,
@@ -138,6 +139,86 @@ test("name matching rejects rules with heterogeneous syntaxes", () => {
         undefined,
         MATCH_FLAG_USED_FOR_NAME,
     )).toBeUndefined();
+});
+
+suite("assertion normalizers", () => {
+    const negate = (assertion: INTEGER) => -BigInt(assertion);
+    const equalsValue = (assertion: INTEGER, value: ASN1Element) => (
+        BigInt(assertion) === BigInt(value.integer)
+    );
+
+    test("createEqualityMatcher normalizes unless MATCH_FLAG_ASSERTION_NORMALIZED is set", () => {
+        const normalizer = vi.fn(negate);
+        const match = createEqualityMatcher(
+            (el) => el.integer,
+            equalsValue,
+            undefined,
+            false,
+            normalizer,
+        );
+        const assertion = integer(5);
+        expect(match(assertion, integerATAV(-5))).toBe(true);
+        expect(match(assertion, integerATAV(5))).toBe(false);
+        expect(normalizer).toHaveBeenCalledTimes(2);
+        expect(normalizer).toHaveBeenLastCalledWith(5, assertion);
+
+        normalizer.mockClear();
+        expect(match(assertion, integerATAV(5), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(true);
+        expect(match(assertion, integerATAV(-5), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
+        expect(normalizer).not.toHaveBeenCalled();
+    });
+
+    test("createEqualityMatcher normalizes once per call, not once per value", () => {
+        const normalizer = vi.fn(negate);
+        const match = createEqualityMatcher(
+            (el) => el.integer,
+            equalsValue,
+            undefined,
+            false,
+            normalizer,
+        );
+        const attr = new Attribute(oidC["&id"], [ integer(1), integer(2), integer(-5) ]);
+        expect(match(integer(5), attr, undefined, MATCH_FLAG_CONSTANT_TIME)).toBe(true);
+        expect(normalizer).toHaveBeenCalledTimes(1);
+    });
+
+    test("createOrderingMatcher normalizes unless MATCH_FLAG_ASSERTION_NORMALIZED is set", () => {
+        const normalizer = vi.fn(negate);
+        const match = createOrderingMatcher(
+            (el) => el.integer,
+            integerOrderingMatchTyped,
+            normalizer,
+        );
+        // Without the flag, the assertion 5 is normalized to -5, and -8 < -5.
+        expect(match(integer(5), integerATAV(-8))).toBe(true);
+        expect(match(integer(5), integerATAV(1))).toBe(false);
+        expect(match(integer(5), integerATAV(1), undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(true);
+        expect(normalizer).toHaveBeenCalledTimes(2);
+    });
+
+    test("createSubstringsMatcher normalizes filter substrings without an element", () => {
+        const normalizer = vi.fn((pieces: AssertedSubstring<string>[], _el?: ASN1Element) => pieces.map((piece) => (
+            ("initial" in piece) ? { initial: piece.initial.toLowerCase() } : piece
+        )));
+        const match = createSubstringsMatcher<AssertedSubstring<string>[]>(
+            (el) => [{ initial: el.printableString }],
+            getStringSubstringsMatcher((value) => value.printableString),
+            (strings) => strings.map((s) => ({
+                initial: (s as { initial: ASN1Element }).initial.printableString,
+            })),
+            normalizer,
+        );
+        const value = new AttributeTypeAndValue(description["&id"], _encodePrintableString("hello world", DER));
+        const filter: FilterSubstring[] = [{ initial: _encodePrintableString("HELLO", DER) }];
+        expect(match(filter, value)).toBe(true);
+        expect(normalizer).toHaveBeenLastCalledWith([{ initial: "HELLO" }], undefined);
+        expect(match(filter, value, undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
+
+        const element = _encodePrintableString("HELLO", DER);
+        expect(match(element, value)).toBe(true);
+        expect(normalizer).toHaveBeenLastCalledWith([{ initial: "HELLO" }], element);
+        expect(match(element, value, undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
+    });
 });
 
 function substringsConverter(substrs: FilterSubstring[]): AssertedSubstring<string>[] {
