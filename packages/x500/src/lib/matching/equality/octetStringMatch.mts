@@ -1,8 +1,10 @@
 import { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualBytes } from "../approximate.mjs";
 import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
@@ -25,6 +27,9 @@ function octetStringMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const stored = ASN1Element.isElement(value) ? value.octetString : value;
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualBytes(assertion, stored);
+    }
     return bytesEqual(assertion, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 

@@ -1,7 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { readDecoded } from "../readValue.mjs";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualBigInts } from "../approximate.mjs";
+import { readDecoded, readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -41,6 +44,8 @@ export
 function basicAttConstraintsMatchTyped (
     a: BasicAttConstraintsSyntax,
     value: AttributeCertificate | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
     const ext: Extension | undefined = v.toBeSigned.extensions
@@ -53,6 +58,16 @@ function basicAttConstraintsMatchTyped (
     const storedValue: BasicAttConstraintsSyntax = _decode_BasicAttConstraintsSyntax(el);
     if (Boolean(a.authority) !== Boolean(storedValue.authority)) {
         return false;
+    }
+    if (
+        (flags & MATCH_FLAG_APPROXIMATE)
+        && a.pathLenConstraint !== undefined
+        && storedValue.pathLenConstraint !== undefined
+    ) {
+        return approximatelyEqualBigInts(
+            readInteger(a.pathLenConstraint),
+            readInteger(storedValue.pathLenConstraint),
+        );
     }
     return (a.pathLenConstraint === storedValue.pathLenConstraint);
 }

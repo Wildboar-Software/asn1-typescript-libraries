@@ -76,6 +76,13 @@ export const MATCH_FLAG_ORDERING_GREATER: MatchFlags =     1 << 8;
  * `lessOrEqual` or `greaterOrEqual` filter item evaluation.
  */
 export const MATCH_FLAG_ORDERING_OR_EQUAL: MatchFlags =    1 << 9;
+/**
+ * Perform approximate matching, or relax a matching restriction, where an
+ * approximate interpretation is defined (typically tolerating a difference
+ * of 1 in the rule's natural unit, such as 1 integer value, 1 second, 1 bit,
+ * 1 byte, or 1 character edit).
+ */
+export const MATCH_FLAG_APPROXIMATE: MatchFlags =          1 << 10;
 
 /**
  * A substring within a substrings matching assertion.

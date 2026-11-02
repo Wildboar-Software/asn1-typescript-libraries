@@ -1,10 +1,12 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString, type DirectoryStringInput } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -48,12 +50,8 @@ function caseExactMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = readDirectoryString(value);
-    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
-    if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return stringsEqual(assertion, raw, constantTime);
-    }
-    const prepared = prepString(raw);
-    if (prepared === undefined) {
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepString(raw);
+    if (stored === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: caseExactMatch: stored value failed string preparation",
@@ -61,7 +59,10 @@ function caseExactMatchTyped (
         }
         return undefined;
     }
-    return stringsEqual(assertion, prepared, constantTime);
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualStrings(assertion, stored);
+    }
+    return stringsEqual(assertion, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 caseExactMatchTyped satisfies TypedEquationFunction<string>;

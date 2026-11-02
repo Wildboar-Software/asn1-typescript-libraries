@@ -1,10 +1,8 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { compareBitStrings } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { Buffer } from "node:buffer";
 import { readDecoded } from "../readValue.mjs";
-import { bytesEqual } from "../constantTime.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import { bitStringMatchTyped } from "./bitStringMatch.mjs";
 import {
     NameAndOptionalUID,
     _decode_NameAndOptionalUID,
@@ -52,13 +50,7 @@ function uniqueMemberMatchTyped (
     if (a.uid === undefined) {
         return false;
     }
-    const uidMatches = constantTime
-        ? bytesEqual(
-            Buffer.from(a.uid.buffer, a.uid.byteOffset, a.uid.byteLength),
-            Buffer.from(v.uid.buffer, v.uid.byteOffset, v.uid.byteLength),
-            constantTime,
-        )
-        : compareBitStrings(a.uid, v.uid);
+    const uidMatches = bitStringMatchTyped(a.uid, v.uid, getMatcher, flags) === true;
     return dnMatches && uidMatches;
 }
 

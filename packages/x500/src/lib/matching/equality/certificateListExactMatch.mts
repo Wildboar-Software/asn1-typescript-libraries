@@ -4,6 +4,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -27,9 +28,10 @@ import {
     IssuingDistPointSyntax,
     _decode_IssuingDistPointSyntax,
 } from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
-import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
+import { compareGeneralNames } from "../../comparators/compareGeneralNames.mjs";
 import { compareRelativeDistinguishedName } from "@wildboar/dn";
 import compareElements from "../../comparators/compareElements.mjs";
+import { getDateFromTime } from "@wildboar/pki-stub";
 
 const SOUGHT_EXTENSION_OID: string = id_ce_issuingDistributionPoint.toString();
 
@@ -70,7 +72,12 @@ function certificateListExactMatchTyped (
             return a.thisUpdate.generalizedTime;
         }
     })();
-    if (time.valueOf() !== v.toBeSigned.thisUpdate.valueOf()) {
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        const storedThisUpdate = getDateFromTime(v.toBeSigned.thisUpdate);
+        if (Math.abs(Math.floor(time.getTime() / 1000) - Math.floor(storedThisUpdate.getTime() / 1000)) > 1) {
+            return false;
+        }
+    } else if (time.valueOf() !== v.toBeSigned.thisUpdate.valueOf()) {
         return false;
     }
     if (a.distributionPoint) {

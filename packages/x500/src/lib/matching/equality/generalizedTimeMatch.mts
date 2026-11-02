@@ -1,6 +1,8 @@
 import { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -29,9 +31,15 @@ export
 function generalizedTimeMatchTyped (
     assertion: Date,
     value: Date | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
     const stored = ASN1Element.isElement(value) ? value.generalizedTime : value;
-    return utcSeconds(assertion) === utcSeconds(stored);
+    const diff = utcSeconds(assertion) - utcSeconds(stored);
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return diff >= -1 && diff <= 1;
+    }
+    return diff === 0;
 }
 
 generalizedTimeMatchTyped satisfies TypedEquationFunction<Date>;

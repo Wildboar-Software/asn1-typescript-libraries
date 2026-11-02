@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -74,14 +75,19 @@ function attributeCertificateMatchTyped (
     if (a.issuer && (!issuerName || !compareGeneralNames(a.issuer, issuerName, getEqualityMatcher))) {
         return false;
     }
-    if (
-        a.attCertValidity
-        && (
-            (a.attCertValidity.valueOf() < v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf())
-            && (a.attCertValidity.valueOf() > v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf())
-        )
-    ) {
-        return false;
+    if (a.attCertValidity) {
+        const assertedTime = a.attCertValidity.valueOf();
+        const notBefore = v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf();
+        const notAfter = v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf();
+        if (flags & MATCH_FLAG_APPROXIMATE) {
+            if ((assertedTime < (notBefore - 1000)) || (assertedTime > (notAfter + 1000))) {
+                return false;
+            }
+        } else {
+            if ((assertedTime < notBefore) && (assertedTime > notAfter)) {
+                return false;
+            }
+        }
     }
     if (
         a.attType

@@ -1,9 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
+import { approximatelyEqualBytes, approximatelyEqualStrings } from "../approximate.mjs";
 import { bytesEqual, stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
@@ -39,6 +41,7 @@ function attDescriptorTyped (
 ): boolean {
     const v = readDecoded(value, _decode_AttributeDescriptorSyntax);
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     let matched = true;
 
     if (!stringsEqual(a.identifier.toString(), v.identifier.toString(), constantTime)) {
@@ -48,21 +51,41 @@ function attDescriptorTyped (
         matched = false;
     }
 
-    if (!bytesEqual(a.attributeSyntax, v.attributeSyntax, constantTime)) {
+    if (
+        approximate
+            ? !approximatelyEqualBytes(a.attributeSyntax, v.attributeSyntax)
+            : !bytesEqual(a.attributeSyntax, v.attributeSyntax, constantTime)
+    ) {
         if (!constantTime) {
             return false;
         }
         matched = false;
     }
 
-    if (a.name && (!v.name || !stringsEqual(a.name, v.name, constantTime))) {
+    if (
+        a.name
+        && (
+            !v.name
+            || (approximate
+                ? !approximatelyEqualStrings(a.name.trim().toLowerCase(), v.name.trim().toLowerCase())
+                : !stringsEqual(a.name, v.name, constantTime))
+        )
+    ) {
         if (!constantTime) {
             return false;
         }
         matched = false;
     }
 
-    if (a.description && (!v.description || !stringsEqual(a.description, v.description, constantTime))) {
+    if (
+        a.description
+        && (
+            !v.description
+            || (approximate
+                ? !approximatelyEqualStrings(a.description.trim().toLowerCase(), v.description.trim().toLowerCase())
+                : !stringsEqual(a.description, v.description, constantTime))
+        )
+    ) {
         if (!constantTime) {
             return false;
         }
@@ -82,10 +105,17 @@ function attDescriptorTyped (
     if (
         ("content" in aPol)
         && ("content" in vPol)
-        && !stringsEqual(
-            directoryStringToString(aPol.content),
-            directoryStringToString(vPol.content),
-            constantTime,
+        && (
+            approximate
+                ? !approximatelyEqualStrings(
+                    directoryStringToString(aPol.content),
+                    directoryStringToString(vPol.content),
+                )
+                : !stringsEqual(
+                    directoryStringToString(aPol.content),
+                    directoryStringToString(vPol.content),
+                    constantTime,
+                )
         )
     ) {
         if (!constantTime) {

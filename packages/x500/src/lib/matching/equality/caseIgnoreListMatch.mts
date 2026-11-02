@@ -2,10 +2,12 @@ import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -37,6 +39,7 @@ function matchListFast (
     lines: readonly string[],
     normalized: boolean,
     debug: boolean,
+    approximate: boolean,
 ): boolean | undefined {
     if (assertion.length !== lines.length) {
         return false;
@@ -53,7 +56,7 @@ function matchListFast (
             }
             return undefined;
         }
-        if (assertion[i] !== stored) {
+        if (approximate ? !approximatelyEqualStrings(assertion[i], stored) : (assertion[i] !== stored)) {
             return false;
         }
     }
@@ -65,6 +68,7 @@ function matchListConstantTime (
     lines: readonly string[],
     normalized: boolean,
     debug: boolean,
+    approximate: boolean,
 ): boolean | undefined {
     let matched = assertion.length === lines.length;
     let sawUndefined = false;
@@ -84,7 +88,7 @@ function matchListConstantTime (
             continue;
         }
         const aLine = assertion[i] ?? "";
-        if (!ctStringsEqual(aLine, stored)) {
+        if (approximate ? !approximatelyEqualStrings(aLine, stored) : !ctStringsEqual(aLine, stored)) {
             matched = false;
         }
     }
@@ -116,11 +120,12 @@ function caseIgnoreListMatchTyped (
 ): boolean | undefined {
     const lines = readDirectoryStringList(value);
     const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
+    const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     const debug = (flags & MATCH_FLAG_DEBUG) !== 0;
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
-        return matchListConstantTime(assertion, lines, normalized, debug);
+        return matchListConstantTime(assertion, lines, normalized, debug, approximate);
     }
-    return matchListFast(assertion, lines, normalized, debug);
+    return matchListFast(assertion, lines, normalized, debug, approximate);
 }
 
 caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;

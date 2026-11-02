@@ -3,6 +3,7 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -150,13 +151,15 @@ function evaluateEnhancedCertificateAssertion (
         }
     }
 
+    const timeTol = (flags & MATCH_FLAG_APPROXIMATE) ? 1000 : 0;
+
     if (assertion.certificateValid) {
         const queriedTime: Date = getDateFromTime(assertion.certificateValid);
         const storedNotBefore: Date = getDateFromTime(tbs.validity.notBefore);
         const storedNotAfter: Date = getDateFromTime(tbs.validity.notAfter);
         if (
-            (queriedTime.valueOf() < storedNotBefore.valueOf())
-            || (queriedTime.valueOf() > storedNotAfter.valueOf())
+            (queriedTime.valueOf() < storedNotBefore.valueOf() - timeTol)
+            || (queriedTime.valueOf() > storedNotAfter.valueOf() + timeTol)
         ) {
             return false;
         }
@@ -171,13 +174,13 @@ function evaluateEnhancedCertificateAssertion (
             const pkup: PrivateKeyUsagePeriod = _decode_PrivateKeyUsagePeriod(el);
             if (
                 pkup.notBefore
-                && (assertion.privateKeyValid.valueOf() < pkup.notBefore.valueOf())
+                && (assertion.privateKeyValid.valueOf() < pkup.notBefore.valueOf() - timeTol)
             ) {
                 return false;
             }
             if (
                 pkup.notAfter
-                && (assertion.privateKeyValid.valueOf() > pkup.notAfter.valueOf())
+                && (assertion.privateKeyValid.valueOf() > pkup.notAfter.valueOf() + timeTol)
             ) {
                 return false;
             }

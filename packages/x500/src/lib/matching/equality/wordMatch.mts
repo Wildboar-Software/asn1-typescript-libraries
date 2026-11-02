@@ -1,9 +1,11 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -45,9 +47,27 @@ export
 function containsWord (
     haystack: string,
     needle: string,
-    constantTime: boolean | number = false,
+    flags: boolean | number = false,
 ): boolean {
-    if (constantTime) {
+    const numFlags = typeof flags === "number" ? flags : (flags ? MATCH_FLAG_CONSTANT_TIME : 0);
+    if (numFlags & MATCH_FLAG_APPROXIMATE) {
+        const words = haystack.match(/[\p{L}\p{N}_]+/gu);
+        if (!words) {
+            return false;
+        }
+        let matched = false;
+        const constantTime = Boolean(numFlags & MATCH_FLAG_CONSTANT_TIME);
+        for (let i = 0; i < words.length; i++) {
+            if (approximatelyEqualStrings(words[i], needle)) {
+                if (!constantTime) {
+                    return true;
+                }
+                matched = true;
+            }
+        }
+        return matched;
+    }
+    if (typeof flags === "boolean" ? flags : (numFlags & MATCH_FLAG_CONSTANT_TIME)) {
         return ctContainsWord(haystack, needle);
     }
     let i = haystack.indexOf(needle);
@@ -112,7 +132,7 @@ function wordMatchTyped (
         }
         return undefined;
     }
-    return containsWord(stored, assertion, flags & MATCH_FLAG_CONSTANT_TIME);
+    return containsWord(stored, assertion, flags);
 }
 
 wordMatchTyped satisfies TypedEquationFunction<string>;

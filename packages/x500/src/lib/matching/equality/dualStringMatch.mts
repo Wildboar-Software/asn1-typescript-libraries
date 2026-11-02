@@ -9,10 +9,12 @@ import type {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
+import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
 import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
@@ -90,6 +92,11 @@ function dualStringMatchTyped (
             );
         }
         return undefined;
+    }
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        const opEqual = approximatelyEqualStrings(assertion.operation, stored.operation);
+        const objEqual = approximatelyEqualStrings(assertion.object, stored.object);
+        return opEqual && objEqual;
     }
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
         const opEqual = ctStringsEqual(assertion.operation, stored.operation);
