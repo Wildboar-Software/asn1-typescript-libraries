@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -40,6 +42,8 @@ export
 function acceptableCertPoliciesMatchTyped (
     a: AcceptableCertPoliciesSyntax,
     value: AttributeCertificate | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
     const ext: Extension | undefined = v.toBeSigned.extensions
@@ -51,7 +55,17 @@ function acceptableCertPoliciesMatchTyped (
     el.fromBytes(ext.extnValue);
     const storedValue: AcceptableCertPoliciesSyntax = _decode_AcceptableCertPoliciesSyntax(el);
     const storedPolicies: Set<string> = new Set(storedValue.map((oid) => oid.toString()));
-    return a.every((oid) => storedPolicies.has(oid.toString()));
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    let matched = true;
+    for (let i = 0; i < a.length; i++) {
+        if (!storedPolicies.has(a[i].toString())) {
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
+        }
+    }
+    return matched;
 }
 
 acceptableCertPoliciesMatchTyped satisfies TypedEquationFunction<AcceptableCertPoliciesSyntax>;

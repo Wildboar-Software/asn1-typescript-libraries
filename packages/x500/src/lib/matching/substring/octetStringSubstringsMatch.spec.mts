@@ -3,6 +3,7 @@ import { DER } from "@wildboar/asn1/functional";
 import {
     AttributeTypeAndValue,
 } from "../../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
+import { MATCH_FLAG_CONSTANT_TIME } from "../../types/matching.mjs";
 import octetStringSubstringsMatch from "./octetStringSubstringsMatch.mjs";
 import { _encode_OctetSubstringAssertion } from "../../modules/SelectedAttributeTypes/OctetSubstringAssertion.ta.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
@@ -101,5 +102,46 @@ describe("octetStringSubstringsMatch", () => {
             { final: octetString([5]) },
         ];
         expect(octetStringSubstringsMatch(filter, stored([1, 2, 3, 4, 5]))).toBe(true);
+    });
+
+    it("honors MATCH_FLAG_CONSTANT_TIME across initial, any, and final pieces", () => {
+        const value = stored([1, 2, 3, 4, 5]);
+        expect(octetStringSubstringsMatch(
+            assertion([
+                { initial: new Uint8Array([1, 2]) },
+                { any_: new Uint8Array([3]) },
+                { final: new Uint8Array([4, 5]) },
+            ]),
+            value,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(true);
+        expect(octetStringSubstringsMatch(
+            assertion([
+                { any_: new Uint8Array([1, 2, 3]) },
+                { any_: new Uint8Array([3, 4]) },
+            ]),
+            value,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(false);
+        expect(octetStringSubstringsMatch(
+            assertion([{ initial: new Uint8Array([2, 3]) }]),
+            value,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(false);
+        expect(octetStringSubstringsMatch(
+            assertion([{ final: new Uint8Array([3, 4]) }]),
+            value,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(false);
+        expect(octetStringSubstringsMatch(
+            assertion([]),
+            value,
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBeUndefined();
     });
 });

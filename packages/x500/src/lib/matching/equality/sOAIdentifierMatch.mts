@@ -16,6 +16,7 @@ import {
 } from "../../modules/AttributeCertificateDefinitions/id-ce-sOAIdentifier.va.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -34,9 +35,25 @@ export
 function sOAIdentifierMatchTyped (
     _assertion: null,
     value: Certificate | ASN1Element,
+    _getEqualityMatcher?: unknown,
+    flags: number = 0,
 ): boolean | undefined {
     const certificate = readDecoded(value, _decode_Certificate);
-    return Boolean(certificate.toBeSigned.extensions?.some((ext) => ext.extnId.isEqualTo(id_ce_sOAIdentifier)));
+    const exts = certificate.toBeSigned.extensions;
+    if (!exts) {
+        return false;
+    }
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
+    let matched = false;
+    for (let i = 0; i < exts.length; i++) {
+        if (exts[i].extnId.isEqualTo(id_ce_sOAIdentifier)) {
+            if (!constantTime) {
+                return true;
+            }
+            matched = true;
+        }
+    }
+    return matched;
 }
 
 sOAIdentifierMatchTyped satisfies TypedEquationFunction<null>;

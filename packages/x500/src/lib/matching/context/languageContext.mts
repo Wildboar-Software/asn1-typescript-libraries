@@ -1,6 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { type ContextMatcher } from "../../types/matching.mjs";
+import {
+    MATCH_FLAG_CONSTANT_TIME,
+    type ContextMatcher,
+} from "../../types/matching.mjs";
 import { id_avc_language } from "../../modules/SelectedAttributeTypes/id-avc-language.va.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
 
 /**
@@ -19,10 +23,11 @@ export
 function evaluateLanguageContext (
     assertion: ASN1Element | string,
     value: ASN1Element | string,
+    flags: number = 0,
 ): boolean {
     const presented = typeof assertion === "string" ? assertion : assertion.printableString;
     const stored = typeof value === "string" ? value : value.printableString;
-    return presented === stored;
+    return stringsEqual(presented, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 /**
@@ -41,7 +46,7 @@ const languageContext: ContextMatcher = (
     const presented = assertion.printableString;
     return matchAnyContextValue(
         values,
-        (value) => evaluateLanguageContext(presented, value),
+        (value) => evaluateLanguageContext(presented, value, flags),
         id_avc_language,
         flags,
     );

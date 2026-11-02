@@ -1,9 +1,11 @@
 import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -49,21 +51,32 @@ function assertRoleSpecCertIdentifier (
     a: RoleSpecCertIdentifier,
     b: RoleSpecCertIdentifier,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    constantTime: boolean | number = 0,
 ): boolean {
+    let matched = true;
     if (!compareGeneralName(a.roleName, b.roleName, getEqualityMatcher)) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
     if (!compareGeneralName(a.roleCertIssuer, b.roleCertIssuer, getEqualityMatcher)) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
     if (
         a.roleCertSerialNumber
         && !(
             b.roleCertSerialNumber
-            && !Buffer.compare(a.roleCertSerialNumber, b.roleCertSerialNumber)
+            && bytesEqual(a.roleCertSerialNumber, b.roleCertSerialNumber, constantTime)
         )
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
     if (
         a.roleCertLocator
@@ -72,9 +85,12 @@ function assertRoleSpecCertIdentifier (
             && compareGeneralNames(a.roleCertLocator, b.roleCertLocator, getEqualityMatcher)
         )
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
-    return true;
+    return matched;
 }
 
 /**
@@ -102,6 +118,7 @@ function roleSpecCertIdMatchTyped (
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeCertificate);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const rsci: Extension | undefined = v.toBeSigned.extensions
         ?.find((ext: Extension): boolean => ext.extnId.isEqualTo(id_ce_roleSpecCertIdentifier));
@@ -114,12 +131,16 @@ function roleSpecCertIdMatchTyped (
     if (a.length !== storedValue.length) {
         return false;
     }
+    let matched = true;
     for (let i = 0; i < a.length; i++) {
-        if (!assertRoleSpecCertIdentifier(a[i], storedValue[i], getEqualityMatcher)) {
-            return false;
+        if (!assertRoleSpecCertIdentifier(a[i], storedValue[i], getEqualityMatcher, constantTime)) {
+            if (!constantTime) {
+                return false;
+            }
+            matched = false;
         }
     }
-    return true;
+    return matched;
 }
 
 roleSpecCertIdMatchTyped satisfies TypedEquationFunction<RoleSpecCertIdentifierSyntax>;

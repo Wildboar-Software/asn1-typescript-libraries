@@ -1,7 +1,9 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -33,7 +35,7 @@ function numericStringMatchTyped (
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.numericString;
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : stripSpaces(raw);
-    return assertion === stored;
+    return stringsEqual(assertion, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 numericStringMatchTyped satisfies TypedEquationFunction<string>;

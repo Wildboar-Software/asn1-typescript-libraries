@@ -20,7 +20,7 @@ function uTCTimeMatchTyped (
     value: Date | ASN1Element,
 ): boolean | undefined {
     const stored = ASN1Element.isElement(value) ? value.utcTime : value;
-    return assertion.toISOString() === stored.toISOString();
+    return assertion.getTime() === stored.getTime();
 }
 
 uTCTimeMatchTyped satisfies TypedEquationFunction<Date>;

@@ -3,8 +3,10 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import type { DirectoryStringListInput } from "../readValue.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -30,6 +32,68 @@ function prepareCaseIgnoreListAssertion (el: ASN1Element): string[] {
     return prepared;
 }
 
+function matchListFast (
+    assertion: readonly string[],
+    lines: readonly string[],
+    normalized: boolean,
+    debug: boolean,
+): boolean | undefined {
+    if (assertion.length !== lines.length) {
+        return false;
+    }
+    for (let i = 0; i < assertion.length; i++) {
+        const stored = normalized
+            ? lines[i]
+            : prepString(lines[i], { caseFold: true });
+        if (stored === undefined) {
+            if (debug) {
+                console.error(
+                    `@wildboar/x500: debug: caseIgnoreListMatch: stored line at index ${i} failed string preparation`,
+                );
+            }
+            return undefined;
+        }
+        if (assertion[i] !== stored) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function matchListConstantTime (
+    assertion: readonly string[],
+    lines: readonly string[],
+    normalized: boolean,
+    debug: boolean,
+): boolean | undefined {
+    let matched = assertion.length === lines.length;
+    let sawUndefined = false;
+    const count = Math.max(assertion.length, lines.length);
+    for (let i = 0; i < count; i++) {
+        const rawLine = lines[i] ?? "";
+        const stored = i < lines.length
+            ? (normalized ? rawLine : prepString(rawLine, { caseFold: true }))
+            : "";
+        if (stored === undefined) {
+            if (debug) {
+                console.error(
+                    `@wildboar/x500: debug: caseIgnoreListMatch: stored line at index ${i} failed string preparation`,
+                );
+            }
+            sawUndefined = true;
+            continue;
+        }
+        const aLine = assertion[i] ?? "";
+        if (!ctStringsEqual(aLine, stored)) {
+            matched = false;
+        }
+    }
+    if (sawUndefined) {
+        return undefined;
+    }
+    return matched;
+}
+
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.1.7 `caseIgnoreListMatch`.
  *
@@ -51,27 +115,12 @@ function caseIgnoreListMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const lines = readDirectoryStringList(value);
-    if (assertion.length !== lines.length) {
-        return false;
-    }
     const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
-    for (let i = 0; i < assertion.length; i++) {
-        const stored = normalized
-            ? lines[i]
-            : prepString(lines[i], { caseFold: true });
-        if (stored === undefined) {
-            if (flags & MATCH_FLAG_DEBUG) {
-                console.error(
-                    `@wildboar/x500: debug: caseIgnoreListMatch: stored line at index ${i} failed string preparation`,
-                );
-            }
-            return undefined;
-        }
-        if (assertion[i] !== stored) {
-            return false;
-        }
+    const debug = (flags & MATCH_FLAG_DEBUG) !== 0;
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return matchListConstantTime(assertion, lines, normalized, debug);
     }
-    return true;
+    return matchListFast(assertion, lines, normalized, debug);
 }
 
 caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;

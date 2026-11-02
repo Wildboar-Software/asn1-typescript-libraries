@@ -1,7 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDecoded } from "../readValue.mjs";
+import { bytesEqual, stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -10,7 +13,6 @@ import {
     _decode_AttributeDescriptorSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AttributeDescriptorSyntax.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
-import { Buffer } from "node:buffer";
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 17.3.2.2.2 `attDescriptor`.
@@ -32,27 +34,46 @@ export
 function attDescriptorTyped (
     a: AttributeDescriptorSyntax,
     value: AttributeDescriptorSyntax | ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_AttributeDescriptorSyntax);
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
+    let matched = true;
 
-    if (a.identifier.toString() !== v.identifier.toString()) {
-        return false;
+    if (!stringsEqual(a.identifier.toString(), v.identifier.toString(), constantTime)) {
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
-    if (Buffer.compare(a.attributeSyntax, v.attributeSyntax)) {
-        return false;
+    if (!bytesEqual(a.attributeSyntax, v.attributeSyntax, constantTime)) {
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
-    if (a.name && (a.name !== v.name)) {
-        return false;
+    if (a.name && (!v.name || !stringsEqual(a.name, v.name, constantTime))) {
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
-    if (a.description && (a.description !== v.description)) {
-        return false;
+    if (a.description && (!v.description || !stringsEqual(a.description, v.description, constantTime))) {
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     if (a.dominationRule.privilegePolicy.isEqualTo(v.dominationRule.privilegePolicy)) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     const aPol = a.dominationRule.privPolSyntax;
@@ -61,14 +82,21 @@ function attDescriptorTyped (
     if (
         ("content" in aPol)
         && ("content" in vPol)
-        && (directoryStringToString(aPol.content) !== directoryStringToString(vPol.content))
+        && !stringsEqual(
+            directoryStringToString(aPol.content),
+            directoryStringToString(vPol.content),
+            constantTime,
+        )
     ) {
-        return false;
+        if (!constantTime) {
+            return false;
+        }
+        matched = false;
     }
 
     // dominationRule.privPolSyntax.pointer will not be checked for a match.
 
-    return true;
+    return matched;
 }
 
 attDescriptorTyped satisfies TypedEquationFunction<AttributeDescriptorSyntax>;

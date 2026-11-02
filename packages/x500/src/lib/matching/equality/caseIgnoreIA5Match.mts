@@ -1,8 +1,10 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { prepString } from "../../utils/prepString.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -43,8 +45,9 @@ function caseIgnoreIA5MatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.ia5String;
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return assertion === raw;
+        return stringsEqual(assertion, raw, constantTime);
     }
     const prepared = prepString(raw, { caseFold: true });
     if (prepared === undefined) {
@@ -55,7 +58,7 @@ function caseIgnoreIA5MatchTyped (
         }
         return undefined;
     }
-    return assertion === prepared;
+    return stringsEqual(assertion, prepared, constantTime);
 }
 
 caseIgnoreIA5MatchTyped satisfies TypedEquationFunction<string>;

@@ -1,8 +1,10 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { stringsEqual } from "../constantTime.mjs";
 import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
@@ -47,13 +49,14 @@ function uriMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const raw = typeof value === "string" ? value : value.utf8String;
+    const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return assertion === raw;
+        return stringsEqual(assertion, raw, constantTime);
     }
-    if (assertion === raw) {
+    if (!constantTime && assertion === raw) {
         return true;
     }
-    return assertion === normalizeUri(raw);
+    return stringsEqual(assertion, normalizeUri(raw), constantTime);
 }
 
 uriMatchTyped satisfies TypedEquationFunction<string>;

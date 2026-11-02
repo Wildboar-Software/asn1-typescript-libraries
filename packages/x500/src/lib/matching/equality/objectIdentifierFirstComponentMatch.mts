@@ -1,10 +1,13 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { ObjectIdentifierInput } from "../readValue.mjs";
 import {
     readLeadingObjectIdentifier,
 } from "../readValue.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -24,8 +27,14 @@ export
 function objectIdentifierFirstComponentMatchTyped (
     assertion: OBJECT_IDENTIFIER,
     value: ObjectIdentifierInput,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
-    return assertion.isEqualTo(readLeadingObjectIdentifier(value));
+    const stored = readLeadingObjectIdentifier(value);
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return bytesEqual(assertion.toBytesUnsafe(), stored.toBytesUnsafe(), true);
+    }
+    return assertion.isEqualTo(stored);
 }
 
 objectIdentifierFirstComponentMatchTyped satisfies TypedEquationFunction<OBJECT_IDENTIFIER>;

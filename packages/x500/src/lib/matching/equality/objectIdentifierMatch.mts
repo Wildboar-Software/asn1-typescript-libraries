@@ -1,4 +1,3 @@
-import { Buffer } from "node:buffer";
 import {
     ASN1Construction,
     ASN1ConstructionError,
@@ -7,10 +6,13 @@ import {
     type ASN1Element,
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { ObjectIdentifierInput } from "../readValue.mjs";
 import { readObjectIdentifier } from "../readValue.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -30,8 +32,14 @@ export
 function objectIdentifierMatchTyped (
     assertion: OBJECT_IDENTIFIER,
     value: ObjectIdentifierInput,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
-    return assertion.isEqualTo(readObjectIdentifier(value));
+    const stored = readObjectIdentifier(value);
+    if (flags & MATCH_FLAG_CONSTANT_TIME) {
+        return bytesEqual(assertion.toBytesUnsafe(), stored.toBytesUnsafe(), true);
+    }
+    return assertion.isEqualTo(stored);
 }
 
 objectIdentifierMatchTyped satisfies TypedEquationFunction<OBJECT_IDENTIFIER>;
@@ -75,8 +83,10 @@ function objectIdentifierAssertionOctets (assertion: ASN1Element): Uint8Array {
 function objectIdentifierMatchOctets (
     assertion: Uint8Array,
     value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
-    return Buffer.compare(assertion, value.value) === 0;
+    return bytesEqual(assertion, value.value, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 objectIdentifierMatchOctets satisfies TypedEquationFunction<Uint8Array>;

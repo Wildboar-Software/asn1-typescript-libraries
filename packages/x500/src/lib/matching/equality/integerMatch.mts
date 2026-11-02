@@ -1,4 +1,3 @@
-import { Buffer } from "node:buffer";
 import {
     ASN1Construction,
     ASN1ConstructionError,
@@ -7,9 +6,12 @@ import {
     type ASN1Element,
     type INTEGER,
 } from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readInteger } from "../readValue.mjs";
+import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -73,8 +75,10 @@ function integerAssertionOctets (assertion: ASN1Element): Uint8Array {
 function integerMatchOctets (
     assertion: Uint8Array,
     value: ASN1Element,
+    _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    flags: number = 0,
 ): boolean | undefined {
-    return Buffer.compare(assertion, value.value) === 0;
+    return bytesEqual(assertion, value.value, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
 integerMatchOctets satisfies TypedEquationFunction<Uint8Array>;
