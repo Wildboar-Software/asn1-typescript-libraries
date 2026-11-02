@@ -92,8 +92,20 @@ function prepareWord (text: string): string | undefined {
     return prepString(text.trim())?.toUpperCase();
 }
 
-function prepareWordAssertion (el: ASN1Element): string {
-    const prepared = prepareWord(readDirectoryString(el));
+/**
+ * Decode the presented word without preparing it.
+ */
+export
+function decodeWordMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
+ * Trim, prepare, and upper-case the presented word once.
+ */
+export
+function normalizeWordMatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepareWord(assertion);
     if (!prepared) {
         throw new ASN1CharactersError(
             "wordMatch assertion failed string preparation",
@@ -139,12 +151,16 @@ wordMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `wordMatch` as a `Matcher`. An assertion that cannot be prepared
- * throws `ASN1CharactersError`.
+ * throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED` skips
+ * preparation of the assertion.
  */
 export
 const wordMatch: Matcher = createEqualityMatcher(
-    prepareWordAssertion,
+    decodeWordMatchAssertion,
     wordMatchTyped,
+    undefined,
+    false,
+    normalizeWordMatchAssertion,
 );
 
 export default wordMatch;

@@ -46,12 +46,32 @@ function numericStringMatchTyped (
 numericStringMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the presented `NumericString` without removing spaces.
+ */
+export
+function decodeNumericStringMatchAssertion (el: ASN1Element): string {
+    return el.numericString;
+}
+
+/**
+ * Remove every space from the presented numeric string.
+ */
+export
+function normalizeNumericStringMatchAssertion (assertion: string): string {
+    return stripSpaces(assertion);
+}
+
+/**
  * `numericStringMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips space removal from the assertion.
  */
 export
 const numericStringMatch: Matcher = createEqualityMatcher(
-    (el) => stripSpaces(el.numericString),
+    decodeNumericStringMatchAssertion,
     numericStringMatchTyped,
+    undefined,
+    false,
+    normalizeNumericStringMatchAssertion,
 );
 
 export default numericStringMatch;

@@ -11,10 +11,14 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+import type {
+    FilterItem_substrings_strings_Item,
+} from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
-    directoryAssertionPieces,
-    directoryFilterPieces,
+    decodeDirectoryAssertionPieces,
+    decodeDirectoryFilterPieces,
     matchPreparedString,
+    normalizePieces,
     prepareStored,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
@@ -55,15 +59,46 @@ function caseIgnoreSubstringsMatchTyped (
 caseIgnoreSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
 
 /**
+ * Decode a `SubstringAssertion` without preparing its pieces.
+ */
+export
+function decodeCaseIgnoreSubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE);
+}
+
+/**
+ * Decode the `strings` of a substrings filter item without preparing them.
+ */
+export
+function decodeCaseIgnoreSubstringsMatchFilterPieces (
+    items: FilterItem_substrings_strings_Item[],
+): AssertedSubstring<string>[] {
+    return decodeDirectoryFilterPieces(items, RULE);
+}
+
+/**
+ * Prepare and case-fold each presented piece once.
+ */
+export
+function normalizeCaseIgnoreSubstringsMatchAssertion (
+    assertion: AssertedSubstring<string>[],
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    return normalizePieces(assertion, prepareIgnore, RULE, el);
+}
+
+/**
  * `caseIgnoreSubstringsMatch` as a `Matcher`. The assertion is a
  * `SubstringAssertion`, or the `strings` of a substrings filter
- * item (directory strings).
+ * item (directory strings). `MATCH_FLAG_ASSERTION_NORMALIZED` skips
+ * preparation of the assertion.
  */
 export
 const caseIgnoreSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
+    decodeCaseIgnoreSubstringsMatchAssertion,
     caseIgnoreSubstringsMatchTyped,
-    (items) => directoryFilterPieces(items, prepareIgnore, RULE),
+    decodeCaseIgnoreSubstringsMatchFilterPieces,
+    normalizeCaseIgnoreSubstringsMatchAssertion,
 );
 
 export default caseIgnoreSubstringsMatch;

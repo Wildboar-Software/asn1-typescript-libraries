@@ -76,14 +76,34 @@ function facsimileNumberMatchTyped (
 facsimileNumberMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the telephone number of the presented facsimile or telephone
+ * number without removing hyphens or spaces.
+ */
+export
+function decodeFacsimileNumberMatchAssertion (el: ASN1Element): string {
+    return readFacsimileNumber(el);
+}
+
+/**
+ * Remove hyphens and spaces from the presented telephone number.
+ */
+export
+function normalizeFacsimileNumberMatchAssertion (assertion: string): string {
+    return normalizeTelephoneNumber(assertion);
+}
+
+/**
  * `facsimileNumberMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips hyphen and space removal from
+ * the assertion.
  */
 export
 const facsimileNumberMatch: Matcher = createEqualityMatcher(
-    (el) => normalizeTelephoneNumber(readFacsimileNumber(el)),
+    decodeFacsimileNumberMatchAssertion,
     facsimileNumberMatchTyped,
     undefined,
     true,
+    normalizeFacsimileNumberMatchAssertion,
 );
 
 export default facsimileNumberMatch;

@@ -14,10 +14,22 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented directory string without preparing it.
+ */
+export
+function decodeDirectoryStringFirstComponentMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
  * Prepare and case-fold the presented directory string once.
  */
-function prepareAssertion (el: ASN1Element): string {
-    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+export
+function normalizeDirectoryStringFirstComponentMatchAssertion (
+    assertion: string,
+    el?: ASN1Element,
+): string {
+    const prepared = prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "directoryStringFirstComponentMatch assertion failed string preparation",
@@ -64,13 +76,15 @@ directoryStringFirstComponentMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `directoryStringFirstComponentMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const directoryStringFirstComponentMatch: Matcher = createEqualityMatcher(
-    prepareAssertion,
+    decodeDirectoryStringFirstComponentMatchAssertion,
     directoryStringFirstComponentMatchTyped,
     undefined,
     true,
+    normalizeDirectoryStringFirstComponentMatchAssertion,
 );
 
 export default directoryStringFirstComponentMatch;

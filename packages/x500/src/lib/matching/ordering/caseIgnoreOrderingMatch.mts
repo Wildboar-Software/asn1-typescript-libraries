@@ -13,12 +13,24 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented directory string without preparing it.
+ */
+export
+function decodeCaseIgnoreOrderingMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
  * Prepare and case-fold the presented directory string once.
  * `prepString` returns `undefined` for a prohibited character or a
  * string that maps to empty. That is an assertion error, not UNDEFINED.
  */
-function prepareCaseIgnoreAssertion (el: ASN1Element): string {
-    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+export
+function normalizeCaseIgnoreOrderingMatchAssertion (
+    assertion: string,
+    el?: ASN1Element,
+): string {
+    const prepared = prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreOrderingMatch assertion failed string preparation",
@@ -75,11 +87,13 @@ caseIgnoreOrderingMatchTyped satisfies TypedOrderingFunction<string>;
  * is less than the presented value. `MATCH_FLAG_ORDERING_GREATER`
  * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
  * An assertion that cannot be prepared throws `ASN1CharactersError`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const caseIgnoreOrderingMatch: Matcher = createOrderingMatcher(
-    prepareCaseIgnoreAssertion,
+    decodeCaseIgnoreOrderingMatchAssertion,
     caseIgnoreOrderingMatchTyped,
+    normalizeCaseIgnoreOrderingMatchAssertion,
 );
 
 export default caseIgnoreOrderingMatch;

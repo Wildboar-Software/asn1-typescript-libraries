@@ -49,15 +49,33 @@ function numericStringOrderingMatchTyped (
 numericStringOrderingMatchTyped satisfies TypedOrderingFunction<string>;
 
 /**
+ * Decode the presented `NumericString` without removing spaces.
+ */
+export
+function decodeNumericStringOrderingMatchAssertion (el: ASN1Element): string {
+    return el.numericString;
+}
+
+/**
+ * Remove every space from the presented numeric string.
+ */
+export
+function normalizeNumericStringOrderingMatchAssertion (assertion: string): string {
+    return stripSpaces(assertion);
+}
+
+/**
  * `numericStringOrderingMatch` as a `Matcher`. TRUE iff the stored
  * `NumericString` is less than the presented value.
  * `MATCH_FLAG_ORDERING_GREATER` and `MATCH_FLAG_ORDERING_OR_EQUAL`
  * select the other orderings.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips space removal from the assertion.
  */
 export
 const numericStringOrderingMatch: Matcher = createOrderingMatcher(
-    (el) => stripSpaces(el.numericString),
+    decodeNumericStringOrderingMatchAssertion,
     numericStringOrderingMatchTyped,
+    normalizeNumericStringOrderingMatchAssertion,
 );
 
 export default numericStringOrderingMatch;

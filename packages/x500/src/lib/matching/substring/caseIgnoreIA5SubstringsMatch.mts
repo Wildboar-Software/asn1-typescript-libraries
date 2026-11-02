@@ -7,10 +7,14 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+import type {
+    FilterItem_substrings_strings_Item,
+} from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
-    directoryAssertionPieces,
-    filterPieces,
+    decodeDirectoryAssertionPieces,
+    decodeFilterPieces,
     matchPreparedString,
+    normalizePieces,
     prepareStored,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
@@ -51,13 +55,44 @@ function caseIgnoreIA5SubstringsMatchTyped (
 caseIgnoreIA5SubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
 
 /**
+ * Decode a `SubstringAssertion` without preparing its pieces.
+ */
+export
+function decodeCaseIgnoreIA5SubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE);
+}
+
+/**
+ * Decode the IA5 `strings` of a substrings filter item without
+ * preparing them.
+ */
+export
+function decodeCaseIgnoreIA5SubstringsMatchFilterPieces (
+    items: FilterItem_substrings_strings_Item[],
+): AssertedSubstring<string>[] {
+    return decodeFilterPieces(items, (el) => el.ia5String, RULE);
+}
+
+/**
+ * Prepare and case-fold each presented piece once.
+ */
+export
+function normalizeCaseIgnoreIA5SubstringsMatchAssertion (
+    assertion: AssertedSubstring<string>[],
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    return normalizePieces(assertion, prepareIgnore, RULE, el);
+}
+
+/**
  * `caseIgnoreIA5SubstringsMatch` as a `Matcher`.
  */
 export
 const caseIgnoreIA5SubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
+    decodeCaseIgnoreIA5SubstringsMatchAssertion,
     caseIgnoreIA5SubstringsMatchTyped,
-    (items) => filterPieces(items, (el) => el.ia5String, prepareIgnore, RULE),
+    decodeCaseIgnoreIA5SubstringsMatchFilterPieces,
+    normalizeCaseIgnoreIA5SubstringsMatchAssertion,
 );
 
 export default caseIgnoreIA5SubstringsMatch;

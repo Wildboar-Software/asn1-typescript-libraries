@@ -47,12 +47,33 @@ function telephoneNumberMatchTyped (
 telephoneNumberMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the presented `TelephoneNumber` without removing hyphens or spaces.
+ */
+export
+function decodeTelephoneNumberMatchAssertion (el: ASN1Element): string {
+    return el.printableString;
+}
+
+/**
+ * Remove hyphens and spaces from the presented telephone number.
+ */
+export
+function normalizeTelephoneNumberMatchAssertion (assertion: string): string {
+    return normalizeTelephoneNumber(assertion);
+}
+
+/**
  * `telephoneNumberMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips hyphen and space removal from
+ * the assertion.
  */
 export
 const telephoneNumberMatch: Matcher = createEqualityMatcher(
-    (el) => normalizeTelephoneNumber(el.printableString),
+    decodeTelephoneNumberMatchAssertion,
     telephoneNumberMatchTyped,
+    undefined,
+    false,
+    normalizeTelephoneNumberMatchAssertion,
 );
 
 export default telephoneNumberMatch;
