@@ -1,6 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import {
-    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type ContextMatcher,
@@ -183,14 +182,12 @@ function timeFallsWithinPeriod (time: Date, period: Period, timezone: number | u
 function timeFallsWithinTimeSpecification (
     time: Date,
     spec: TimeSpecification,
-    flags: number = 0,
+    constantTime: boolean = false,
 ): boolean {
-    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     const result = ((): boolean => {
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
             : undefined;
-        const tol = (flags & MATCH_FLAG_APPROXIMATE) ? 1000 : 0;
         if ("absolute" in spec.time) {
             const start = spec.time.absolute.startTime
                 ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
@@ -199,19 +196,13 @@ function timeFallsWithinTimeSpecification (
                 ? addHours(spec.time.absolute.endTime, -(timezone ?? 0))
                 : MAX_DATE;
             return (
-                (time.valueOf() >= start.valueOf() - tol)
-                && (time.valueOf() <= end.valueOf() + tol)
+                (time.valueOf() >= start.valueOf())
+                && (time.valueOf() <= end.valueOf())
             );
         } else if ("periodic" in spec.time) {
             let matched = false;
             for (const period of spec.time.periodic) {
-                if (
-                    timeFallsWithinPeriod(time, period, timezone)
-                    || (tol > 0 && (
-                        timeFallsWithinPeriod(new Date(time.valueOf() - tol), period, timezone)
-                        || timeFallsWithinPeriod(new Date(time.valueOf() + tol), period, timezone)
-                    ))
-                ) {
+                if (timeFallsWithinPeriod(time, period, timezone)) {
                     if (!constantTime) {
                         return true;
                     }
@@ -244,7 +235,6 @@ function timeSpecificationContains (
         const timezone: number | undefined = (spec.timeZone !== undefined)
             ? Number(spec.timeZone)
             : undefined;
-        const tol = (flags & MATCH_FLAG_APPROXIMATE) ? 1000 : 0;
         if ("absolute" in spec.time) {
             const startSpec = spec.time.absolute.startTime
                 ? addHours(spec.time.absolute.startTime, -(timezone ?? 0))
@@ -254,13 +244,13 @@ function timeSpecificationContains (
                 : MAX_DATE;
             if (entirely) {
                 return (
-                    (start.valueOf() >= startSpec.valueOf() - tol)
-                    && (end.valueOf() <= endSpec.valueOf() + tol)
+                    (start.valueOf() >= startSpec.valueOf())
+                    && (end.valueOf() <= endSpec.valueOf())
                 );
             } else {
                 return (!(
-                    (start.valueOf() > endSpec.valueOf() + tol)
-                    || (end.valueOf() < startSpec.valueOf() - tol)
+                    (start.valueOf() > endSpec.valueOf())
+                    || (end.valueOf() < startSpec.valueOf())
                 ));
             }
         } else if ("periodic" in spec.time) {
@@ -277,12 +267,12 @@ function timeSpecificationContains (
                 }
                 const [ lower, upper ] = boundaries;
                 const startWithinBounds: boolean = (
-                    (adjustedStart.valueOf() >= lower.valueOf() - tol)
-                    && (adjustedStart.valueOf() <= upper.valueOf() + tol)
+                    (adjustedStart.valueOf() >= lower.valueOf())
+                    && (adjustedStart.valueOf() <= upper.valueOf())
                 );
                 const endWithinBounds: boolean = (
-                    (adjustedEnd.valueOf() >= lower.valueOf() - tol)
-                    && (adjustedEnd.valueOf() <= upper.valueOf() + tol)
+                    (adjustedEnd.valueOf() >= lower.valueOf())
+                    && (adjustedEnd.valueOf() <= upper.valueOf())
                 );
                 if (startWithinBounds || endWithinBounds) {
                     if (!constantTime) {
@@ -314,11 +304,12 @@ function evaluateTemporalContextTyped (
     v: TimeSpecification,
     flags: number = 0,
 ): boolean {
+    const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
     if ("now" in a) {
         const now = new Date();
-        return timeFallsWithinTimeSpecification(now, v, flags);
+        return timeFallsWithinTimeSpecification(now, v, constantTime);
     } else if ("at" in a) {
-        return timeFallsWithinTimeSpecification(a.at, v, flags);
+        return timeFallsWithinTimeSpecification(a.at, v, constantTime);
     } else if ("between" in a) {
         return timeSpecificationContains(
             v,

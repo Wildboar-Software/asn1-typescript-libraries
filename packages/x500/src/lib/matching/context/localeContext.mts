@@ -1,7 +1,5 @@
 import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
-    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type ContextMatcher,
@@ -76,12 +74,11 @@ function evaluateLocaleContext (
             : a.localeID1.isEqualTo(v.localeID1);
     }
     if (("localeID2" in a) && ("localeID2" in v)) {
-        const strA = directoryStringToString(a.localeID2);
-        const strV = directoryStringToString(v.localeID2);
-        if (flags & MATCH_FLAG_APPROXIMATE) {
-            return approximatelyEqualStrings(strA, strV);
-        }
-        return stringsEqual(strA, strV, constantTime);
+        return stringsEqual(
+            directoryStringToString(a.localeID2),
+            directoryStringToString(v.localeID2),
+            constantTime,
+        );
     }
     if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
         if (flags & MATCH_FLAG_DEBUG) {

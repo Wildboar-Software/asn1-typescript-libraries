@@ -1,7 +1,5 @@
 import { ASN1Element } from "@wildboar/asn1";
-import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
-    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     type ContextMatcher,
 } from "../../types/matching.mjs";
@@ -51,21 +49,7 @@ function evaluateLDAPAttributeOptionContextTyped (
     flags: number = 0,
 ): boolean {
     const constantTime = Boolean(flags & MATCH_FLAG_CONSTANT_TIME);
-    const storedLower = value.map((str) => str.toLowerCase());
-    if (flags & MATCH_FLAG_APPROXIMATE) {
-        let matched = true;
-        for (let i = 0; i < assertion.length; i++) {
-            const assertedValue: string = assertion[i].toLowerCase();
-            if (!storedLower.some((s) => approximatelyEqualStrings(assertedValue, s))) {
-                if (!constantTime) {
-                    return false;
-                }
-                matched = false;
-            }
-        }
-        return matched;
-    }
-    const storedValues: Set<string> = new Set(storedLower);
+    const storedValues: Set<string> = new Set(value.map((str) => str.toLowerCase()));
     let matched = true;
     for (let i = 0; i < assertion.length; i++) {
         const assertedValue: string = assertion[i].toLowerCase();

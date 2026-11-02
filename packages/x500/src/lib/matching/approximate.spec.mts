@@ -39,11 +39,7 @@ import {
 import { commonName } from "../modules/SelectedAttributeTypes/commonName.oa.mjs";
 import {
     TimeSpecification,
-    _encode_TimeSpecification,
 } from "../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
-import {
-    _encode_TimeAssertion,
-} from "../modules/SelectedAttributeTypes/TimeAssertion.ta.mjs";
 import {
     DualStringSyntax,
 } from "../modules/AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
@@ -88,10 +84,6 @@ import caseExactSubstringsMatch from "./substring/caseExactSubstringsMatch.mjs";
 import caseIgnoreSubstringsMatch from "./substring/caseIgnoreSubstringsMatch.mjs";
 import octetStringSubstringsMatch from "./substring/octetStringSubstringsMatch.mjs";
 import storedPrefixMatch from "./substring/storedPrefixMatch.mjs";
-import { languageContext, evaluateLanguageContext } from "./context/languageContext.mjs";
-import { ldapAttributeOptionContext, evaluateLDAPAttributeOptionContextTyped } from "./context/ldapAttributeOptionContext.mjs";
-import { evaluateLocaleContext } from "./context/localeContext.mjs";
-import { temporalContext, evaluateTemporalContextTyped } from "./context/temporalContext.mjs";
 
 const attrType = ObjectIdentifier.fromParts([ 2, 5, 4, 3 ]);
 
@@ -461,50 +453,6 @@ describe("MATCH_FLAG_APPROXIMATE", () => {
             expect(storedPrefixMatch("7035551212", "704")).toBe(false);
             expect(storedPrefixMatch("7035551212", "704", MATCH_FLAG_APPROXIMATE)).toBe(true);
             expect(storedPrefixMatch("7035551212", "799", MATCH_FLAG_APPROXIMATE)).toBe(false);
-        });
-    });
-
-    describe("context matchers", () => {
-        it("tolerates 1 unit difference in language, locale, ldapAttributeOption, and temporal contexts", () => {
-            expect(evaluateLanguageContext("en", "ex")).toBe(false);
-            expect(evaluateLanguageContext("en", "ex", MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(languageContext(
-                _encodePrintableString("en", DER),
-                [ _encodePrintableString("ex", DER) ].values(),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(true);
-
-            expect(evaluateLocaleContext("en_US", "en_UK")).toBe(false);
-            expect(evaluateLocaleContext("en_US", "en_UK", MATCH_FLAG_APPROXIMATE)).toBe(true);
-
-            expect(evaluateLDAPAttributeOptionContextTyped([ "lang-en" ], [ "lang-ex" ])).toBe(false);
-            expect(evaluateLDAPAttributeOptionContextTyped([ "lang-en" ], [ "lang-ex" ], MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(ldapAttributeOptionContext(
-                _encodeSequenceOf(() => _encodeUTF8String, DER)([ "lang-en" ]),
-                [ _encodeSequenceOf(() => _encodeUTF8String, DER)([ "lang-ex" ]) ].values(),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(true);
-
-            const spec = new TimeSpecification({
-                absolute: {
-                    startTime: new Date("2026-01-01T12:00:00Z"),
-                    endTime: new Date("2026-01-01T12:00:10Z"),
-                },
-            });
-            const atBefore = { at: new Date("2026-01-01T11:59:59Z") };
-            const atTooEarly = { at: new Date("2026-01-01T11:59:58Z") };
-            expect(evaluateTemporalContextTyped(atBefore, spec)).toBe(false);
-            expect(evaluateTemporalContextTyped(atBefore, spec, MATCH_FLAG_APPROXIMATE)).toBe(true);
-            expect(evaluateTemporalContextTyped(atTooEarly, spec, MATCH_FLAG_APPROXIMATE)).toBe(false);
-
-            expect(temporalContext(
-                _encode_TimeAssertion(atBefore, DER),
-                [ _encode_TimeSpecification(spec, DER) ].values(),
-                undefined,
-                MATCH_FLAG_APPROXIMATE,
-            )).toBe(true);
         });
     });
 });

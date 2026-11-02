@@ -1,7 +1,5 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import { approximatelyEqualStrings } from "../approximate.mjs";
 import {
-    MATCH_FLAG_APPROXIMATE,
     MATCH_FLAG_CONSTANT_TIME,
     type ContextMatcher,
 } from "../../types/matching.mjs";
@@ -29,9 +27,6 @@ function evaluateLanguageContext (
 ): boolean {
     const presented = typeof assertion === "string" ? assertion : assertion.printableString;
     const stored = typeof value === "string" ? value : value.printableString;
-    if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualStrings(presented, stored);
-    }
     return stringsEqual(presented, stored, flags & MATCH_FLAG_CONSTANT_TIME);
 }
 
