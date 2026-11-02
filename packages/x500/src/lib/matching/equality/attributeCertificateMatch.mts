@@ -75,22 +75,19 @@ function attributeCertificateMatchTyped (
     if (a.issuer && (!issuerName || !compareGeneralNames(a.issuer, issuerName, getEqualityMatcher))) {
         return false;
     }
-    const timeTol = (flags & MATCH_FLAG_APPROXIMATE) ? 1000 : 0;
-    if (
-        a.attCertValidity
-        && (
-            (flags & MATCH_FLAG_APPROXIMATE)
-                ? (
-                    (a.attCertValidity.valueOf() < v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf() - timeTol)
-                    || (a.attCertValidity.valueOf() > v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf() + timeTol)
-                )
-                : (
-                    (a.attCertValidity.valueOf() < v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf())
-                    && (a.attCertValidity.valueOf() > v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf())
-                )
-        )
-    ) {
-        return false;
+    if (a.attCertValidity) {
+        const assertedTime = a.attCertValidity.valueOf();
+        const notBefore = v.toBeSigned.attrCertValidityPeriod.notBeforeTime.valueOf();
+        const notAfter = v.toBeSigned.attrCertValidityPeriod.notAfterTime.valueOf();
+        if (flags & MATCH_FLAG_APPROXIMATE) {
+            if ((assertedTime < (notBefore - 1000)) || (assertedTime > (notAfter + 1000))) {
+                return false;
+            }
+        } else {
+            if ((assertedTime < notBefore) && (assertedTime > notAfter)) {
+                return false;
+            }
+        }
     }
     if (
         a.attType

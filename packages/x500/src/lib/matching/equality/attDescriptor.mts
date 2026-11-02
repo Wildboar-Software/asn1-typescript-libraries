@@ -67,7 +67,7 @@ function attDescriptorTyped (
         && (
             !v.name
             || (approximate
-                ? !approximatelyEqualStrings(a.name, v.name)
+                ? !approximatelyEqualStrings(a.name.trim().toLowerCase(), v.name.trim().toLowerCase())
                 : !stringsEqual(a.name, v.name, constantTime))
         )
     ) {
@@ -82,7 +82,7 @@ function attDescriptorTyped (
         && (
             !v.description
             || (approximate
-                ? !approximatelyEqualStrings(a.description, v.description)
+                ? !approximatelyEqualStrings(a.description.trim().toLowerCase(), v.description.trim().toLowerCase())
                 : !stringsEqual(a.description, v.description, constantTime))
         )
     ) {
