@@ -1,5 +1,55 @@
-import { timingSafeEqual } from "node:crypto";
 import { Buffer } from "node:buffer";
+
+export
+type TimingSafeEqual = (
+    a: Uint8Array,
+    b: Uint8Array,
+) => boolean;
+
+/**
+ * Cross-platform JavaScript-native constant-time byte comparison for
+ * two `Uint8Array`s of equal length.
+ */
+export
+function jsTimingSafeEqual (a: Uint8Array, b: Uint8Array): boolean {
+    if (a.byteLength !== b.byteLength) {
+        throw new RangeError("Input buffers must have the same byte length");
+    }
+    let diff = 0;
+    for (let i = 0; i < a.byteLength; i++) {
+        diff |= a[i] ^ b[i];
+    }
+    return diff === 0;
+}
+
+let timingSafeEqual: TimingSafeEqual = jsTimingSafeEqual;
+
+export
+function setTimingSafeEqual (fn: TimingSafeEqual): void {
+    timingSafeEqual = fn;
+}
+
+/**
+ * Below this byte length, an indexed JavaScript loop is faster than
+ * crossing the V8-to-native boundary for `Buffer.compare`.
+ */
+const SMALL_BYTES_EQUAL_THRESHOLD = 48;
+
+function fastBytesEqual (a: Uint8Array, b: Uint8Array): boolean {
+    const len = a.byteLength;
+    if (len !== b.byteLength) {
+        return false;
+    }
+    if (len <= SMALL_BYTES_EQUAL_THRESHOLD) {
+        for (let i = 0; i < len; i++) {
+            if (a[i] !== b[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    return Buffer.compare(a, b) === 0;
+}
 
 /**
  * Compare two strings in time proportional to `a.length`, without
@@ -38,10 +88,10 @@ function stringsEqual (
  * Compare two byte arrays in time proportional to `a.byteLength`,
  * without exiting on the first differing byte.
  *
- * When lengths match and are non-zero, `node:crypto`'s
- * `timingSafeEqual` compares the buffers in constant time. When
- * lengths differ, `a` is compared against itself so the comparison
- * still performs work proportional to `a.byteLength`.
+ * When lengths match and are non-zero, `timingSafeEqual` compares
+ * the buffers in constant time. When lengths differ, `a` is compared
+ * against itself so the comparison still performs work proportional
+ * to `a.byteLength`.
  */
 export
 function ctBytesEqual (a: Uint8Array, b: Uint8Array): boolean {
@@ -66,19 +116,19 @@ function bytesEqual (
 ): boolean {
     return constantTime
         ? ctBytesEqual(a, b)
-        : Buffer.compare(a, b) === 0;
+        : fastBytesEqual(a, b);
 }
 
 /**
  * Signed code-point (UTF-16 code unit) comparison of `a` and `b` in
- * time proportional to `Math.max(a.length, b.length)`, without
+ * time proportional to `Math.min(a.length, b.length)`, without
  * returning on the first differing code unit.
  */
 export
 function ctCompareCodePoints (a: string, b: string): number {
     const aLen = a.length;
     const bLen = b.length;
-    const minLen = aLen < bLen ? aLen : bLen;
+    const minLen = Math.min(aLen, bLen);
     let result = 0;
     for (let i = 0; i < minLen; i++) {
         const diff = a.charCodeAt(i) - b.charCodeAt(i);
@@ -106,7 +156,7 @@ export
 function ctCompareBytes (a: Uint8Array, b: Uint8Array): number {
     const aLen = a.length;
     const bLen = b.length;
-    const minLen = aLen < bLen ? aLen : bLen;
+    const minLen = Math.min(aLen, bLen);
     let result = 0;
     for (let i = 0; i < minLen; i++) {
         const diff = a[i] - b[i];

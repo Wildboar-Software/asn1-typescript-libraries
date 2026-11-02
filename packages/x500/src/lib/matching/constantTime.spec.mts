@@ -61,6 +61,8 @@ import {
     ctCompareBytes,
     ctCompareCodePoints,
     ctStringsEqual,
+    jsTimingSafeEqual,
+    setTimingSafeEqual,
     stringsEqual,
 } from "./constantTime.mjs";
 import caseExactMatch from "./equality/caseExactMatch.mjs";
@@ -130,6 +132,28 @@ describe("constantTime primitives", () => {
         expect(ctBytesEqual(a, d)).toBe(false);
         expect(bytesEqual(a, b, MATCH_FLAG_CONSTANT_TIME)).toBe(true);
         expect(bytesEqual(a, c, MATCH_FLAG_CONSTANT_TIME)).toBe(false);
+        expect(bytesEqual(a, b, 0)).toBe(true);
+        expect(bytesEqual(a, c, 0)).toBe(false);
+
+        const largeA = new Uint8Array(128).fill(7);
+        const largeB = new Uint8Array(128).fill(7);
+        const largeC = new Uint8Array(128).fill(7);
+        largeC[127] = 8;
+        expect(bytesEqual(largeA, largeB, 0)).toBe(true);
+        expect(bytesEqual(largeA, largeC, 0)).toBe(false);
+
+        let customCalls = 0;
+        setTimingSafeEqual((x, y) => {
+            customCalls += 1;
+            return jsTimingSafeEqual(x, y);
+        });
+        try {
+            expect(ctBytesEqual(a, b)).toBe(true);
+            expect(ctBytesEqual(a, d)).toBe(false);
+            expect(customCalls).toBe(2);
+        } finally {
+            setTimingSafeEqual(jsTimingSafeEqual);
+        }
     });
 
     it("orders strings and byte arrays in constant time", () => {
