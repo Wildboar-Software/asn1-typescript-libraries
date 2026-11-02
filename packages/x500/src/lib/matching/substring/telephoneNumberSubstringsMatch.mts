@@ -61,13 +61,14 @@ telephoneNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubs
  */
 export
 const telephoneNumberSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareTelephone, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareTelephone, RULE, flags),
     telephoneNumberSubstringsMatchTyped,
-    (items) => filterPieces(
+    (items, flags) => filterPieces(
         items,
         (el) => _decode_TelephoneNumber(el),
         prepareTelephone,
         RULE,
+        flags,
     ),
 );
 

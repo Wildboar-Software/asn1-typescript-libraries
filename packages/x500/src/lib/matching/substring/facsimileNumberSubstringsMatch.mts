@@ -79,9 +79,9 @@ facsimileNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubs
  */
 export
 const facsimileNumberSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareTelephone, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareTelephone, RULE, flags),
     facsimileNumberSubstringsMatchTyped,
-    (items) => filterPieces(items, readFacsimileNumber, prepareTelephone, RULE),
+    (items, flags) => filterPieces(items, readFacsimileNumber, prepareTelephone, RULE, flags),
 );
 
 export default facsimileNumberSubstringsMatch;

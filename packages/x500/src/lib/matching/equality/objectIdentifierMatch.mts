@@ -12,6 +12,7 @@ import { readObjectIdentifier } from "../readValue.mjs";
 import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
@@ -53,9 +54,13 @@ objectIdentifierMatchTyped satisfies TypedEquationFunction<OBJECT_IDENTIFIER>;
  * `objectIdentifierMatch` correct.
  *
  * @param assertion Encoded OBJECT IDENTIFIER assertion.
+ * @param flags `MATCH_FLAG_ASSERTION_VALIDATED` skips validation.
  * @returns The content octets of the assertion.
  */
-function objectIdentifierAssertionOctets (assertion: ASN1Element): Uint8Array {
+function objectIdentifierAssertionOctets (assertion: ASN1Element, flags: number): Uint8Array {
+    if (flags & MATCH_FLAG_ASSERTION_VALIDATED) {
+        return assertion.value;
+    }
     if (assertion.construction !== ASN1Construction.primitive) {
         throw new ASN1ConstructionError("OBJECT IDENTIFIER cannot be constructed.", assertion);
     }

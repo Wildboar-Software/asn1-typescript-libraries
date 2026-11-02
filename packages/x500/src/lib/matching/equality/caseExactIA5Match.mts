@@ -6,6 +6,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -15,9 +16,14 @@ import {
 
 /**
  * Prepare the presented IA5 string once.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
  */
-function prepareCaseExactIA5Assertion (el: ASN1Element): string {
-    const prepared = prepString(el.ia5String);
+function prepareCaseExactIA5Assertion (el: ASN1Element, flags: number): string {
+    const raw = el.ia5String;
+    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
+        return raw;
+    }
+    const prepared = prepString(raw);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactIA5Match assertion failed string preparation",

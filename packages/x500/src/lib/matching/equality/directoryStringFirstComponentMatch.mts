@@ -8,6 +8,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
@@ -15,9 +16,14 @@ import {
 
 /**
  * Prepare and case-fold the presented directory string once.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
  */
-function prepareAssertion (el: ASN1Element): string {
-    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+function prepareAssertion (el: ASN1Element, flags: number): string {
+    const raw = readDirectoryString(el);
+    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
+        return raw;
+    }
+    const prepared = prepString(raw, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "directoryStringFirstComponentMatch assertion failed string preparation",

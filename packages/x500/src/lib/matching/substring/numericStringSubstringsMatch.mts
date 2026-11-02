@@ -60,9 +60,9 @@ numericStringSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstr
  */
 export
 const numericStringSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareNumeric, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareNumeric, RULE, flags),
     numericStringSubstringsMatchTyped,
-    (items) => filterPieces(items, (el) => el.numericString, prepareNumeric, RULE),
+    (items, flags) => filterPieces(items, (el) => el.numericString, prepareNumeric, RULE, flags),
 );
 
 export default numericStringSubstringsMatch;

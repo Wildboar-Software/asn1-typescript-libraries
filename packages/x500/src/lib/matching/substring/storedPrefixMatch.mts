@@ -2,6 +2,7 @@ import type { DirectoryStringInput } from "../readValue.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -48,7 +49,8 @@ function storedPrefixMatch (
  *
  * @param assertion Presented string.
  * @param value Stored prefix.
- * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`, and `MATCH_FLAG_VALUE_NORMALIZED`.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`,
+ *  `MATCH_FLAG_ASSERTION_NORMALIZED`, and `MATCH_FLAG_VALUE_NORMALIZED`.
  * @returns `true` when the stored string is a prefix.
  */
 export
@@ -57,7 +59,9 @@ function storedPrefixMatchTyped (
     value: string,
     flags: number = 0,
 ): boolean {
-    const preparedA = prepString(assertion, { caseFold: true });
+    const preparedA = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? assertion
+        : prepString(assertion, { caseFold: true });
     const preparedV = (flags & MATCH_FLAG_VALUE_NORMALIZED)
         ? value
         : prepString(value, { caseFold: true });

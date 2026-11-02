@@ -5,6 +5,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -50,7 +51,9 @@ numericStringMatchTyped satisfies TypedEquationFunction<string>;
  */
 export
 const numericStringMatch: Matcher = createEqualityMatcher(
-    (el) => stripSpaces(el.numericString),
+    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? el.numericString
+        : stripSpaces(el.numericString),
     numericStringMatchTyped,
 );
 

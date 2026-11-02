@@ -14,6 +14,8 @@ import type { UnboundedDirectoryString } from "../../modules/SelectedAttributeTy
 import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
 import {
     getStringSubstringsMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type AssertedSubstring,
@@ -44,7 +46,8 @@ function normalizeTelephoneNumber (telephoneNumber: string): string {
 /**
  * Prepare `raw` for an assertion piece. Failure and an empty
  * result are assertion errors: an empty piece would match at every
- * cursor via `indexOf("")`.
+ * cursor via `indexOf("")`. `MATCH_FLAG_ASSERTION_NORMALIZED` keeps
+ * `raw`, but an empty piece is still rejected.
  */
 export
 function assertPrepared (
@@ -52,8 +55,11 @@ function assertPrepared (
     prepare: StringPreparer,
     rule: string,
     el?: ASN1Element,
+    flags: number = 0,
 ): string {
-    const prepared = prepare(raw);
+    const prepared = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? raw
+        : prepare(raw);
     if (prepared === undefined || prepared.length === 0) {
         throw new ASN1CharactersError(
             `${rule} assertion failed string preparation`,
@@ -137,13 +143,15 @@ function validateAnchors<T> (
 
 /**
  * Map substring CHOICE values to prepared pieces. An unrecognized
- * alternative is an assertion error.
+ * alternative is an assertion error. `MATCH_FLAG_ASSERTION_VALIDATED`
+ * skips checking the placement of `initial` and `final`.
  */
 export
 function mapSubstringChoices<T, U> (
     items: readonly SubstringChoice<T>[],
     convert: (component: T) => U,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<U>[] {
     const out: AssertedSubstring<U>[] = new Array(items.length);
     for (let i = 0; i < items.length; i++) {
@@ -163,7 +171,9 @@ function mapSubstringChoices<T, U> (
             throw anchorError(rule, "unrecognized substring alternative");
         }
     }
-    validateAnchors(out, rule);
+    if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED)) {
+        validateAnchors(out, rule);
+    }
     return out;
 }
 
@@ -172,8 +182,9 @@ function prepareDirectoryPiece (
     prepare: StringPreparer,
     rule: string,
     el?: ASN1Element,
+    flags: number = 0,
 ): string {
-    return assertPrepared(directoryStringToString(ds), prepare, rule, el);
+    return assertPrepared(directoryStringToString(ds), prepare, rule, el, flags);
 }
 
 /**
@@ -185,11 +196,13 @@ function directoryAssertionPieces (
     el: ASN1Element,
     prepare: StringPreparer,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(
         _decode_SubstringAssertion(el),
-        (ds) => prepareDirectoryPiece(ds, prepare, rule, el),
+        (ds) => prepareDirectoryPiece(ds, prepare, rule, el, flags),
         rule,
+        flags,
     );
 }
 
@@ -202,6 +215,7 @@ function directoryFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
     prepare: StringPreparer,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(
         items,
@@ -210,8 +224,10 @@ function directoryFilterPieces (
             prepare,
             rule,
             component,
+            flags,
         ),
         rule,
+        flags,
     );
 }
 
@@ -225,11 +241,13 @@ function filterPieces (
     read: (component: ASN1Element) => string,
     prepare: StringPreparer,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(
         items,
-        (component) => assertPrepared(read(component), prepare, rule, component),
+        (component) => assertPrepared(read(component), prepare, rule, component, flags),
         rule,
+        flags,
     );
 }
 

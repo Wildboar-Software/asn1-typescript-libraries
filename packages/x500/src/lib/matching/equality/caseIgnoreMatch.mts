@@ -7,6 +7,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -18,9 +19,14 @@ import {
  * Prepare and case-fold the presented directory string once.
  * `prepString` returns `undefined` for a prohibited character or a
  * string that maps to empty. That is an assertion error, not UNDEFINED.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
  */
-function prepareCaseIgnoreAssertion (el: ASN1Element): string {
-    const prepared = prepString(readDirectoryString(el), { caseFold: true });
+function prepareCaseIgnoreAssertion (el: ASN1Element, flags: number): string {
+    const raw = readDirectoryString(el);
+    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
+        return raw;
+    }
+    const prepared = prepString(raw, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreMatch assertion failed string preparation",

@@ -13,6 +13,7 @@ import type {
 import { telephoneNumberMatchTyped } from "./telephoneNumberMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -77,10 +78,13 @@ facsimileNumberMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `facsimileNumberMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips hyphen and space removal.
  */
 export
 const facsimileNumberMatch: Matcher = createEqualityMatcher(
-    (el) => normalizeTelephoneNumber(readFacsimileNumber(el)),
+    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? readFacsimileNumber(el)
+        : normalizeTelephoneNumber(readFacsimileNumber(el)),
     facsimileNumberMatchTyped,
     undefined,
     true,

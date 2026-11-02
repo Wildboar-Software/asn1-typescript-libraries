@@ -15,8 +15,10 @@ import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
+    MATCH_FLAG_VALUE_VALIDATED,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -49,11 +51,15 @@ function readDual (value: DualStringInput): DualStrings {
     };
 }
 
-function prepareDualAssertion (el: ASN1Element): DualStrings {
+/** `MATCH_FLAG_ASSERTION_VALIDATED` skips the prohibited-character check. */
+function prepareDualAssertion (el: ASN1Element, flags: number): DualStrings {
     const decoded = readDual(el);
     if (
-        prohibitedCharacters.test(decoded.operation)
-        || prohibitedCharacters.test(decoded.object)
+        !(flags & MATCH_FLAG_ASSERTION_VALIDATED)
+        && (
+            prohibitedCharacters.test(decoded.operation)
+            || prohibitedCharacters.test(decoded.object)
+        )
     ) {
         throw new ASN1CharactersError(
             "dualStringMatch assertion contains a prohibited character",
@@ -74,6 +80,7 @@ function prepareDualAssertion (el: ASN1Element): DualStrings {
  *
  * @param assertion Presented operation and object.
  * @param value Stored pair, or that pair already decoded.
+ *  `MATCH_FLAG_VALUE_VALIDATED` skips the prohibited-character check.
  */
 export
 function dualStringMatchTyped (
@@ -83,9 +90,13 @@ function dualStringMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const stored = readDual(value);
-    const badOperation = prohibitedCharacters.test(stored.operation);
-    const badObject = prohibitedCharacters.test(stored.object);
-    if (badOperation || badObject) {
+    if (
+        !(flags & MATCH_FLAG_VALUE_VALIDATED)
+        && (
+            prohibitedCharacters.test(stored.operation)
+            || prohibitedCharacters.test(stored.object)
+        )
+    ) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: dualStringMatch: stored string contains a prohibited character",
@@ -111,7 +122,8 @@ dualStringMatchTyped satisfies TypedEquationFunction<DualStrings>;
 
 /**
  * `dualStringMatch` as a `Matcher`. A prohibited character in the
- * assertion throws `ASN1CharactersError`.
+ * assertion throws `ASN1CharactersError`, unless
+ * `MATCH_FLAG_ASSERTION_VALIDATED` is set.
  */
 export
 const dualStringMatch: Matcher = createEqualityMatcher(

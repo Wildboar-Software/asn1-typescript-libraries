@@ -6,6 +6,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
@@ -54,10 +55,17 @@ function parseJid (raw: string): JidParts | undefined {
     return { local, domain: rest, resource };
 }
 
-function decodeJid (el: ASN1Element): JidParts {
+/**
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` parses without lower-casing the
+ * localpart or preparing the domain.
+ */
+function decodeJid (el: ASN1Element, flags: number): JidParts {
     const parsed = parseJid(el.utf8String);
     if (!parsed) {
         throw new Error("jidMatch assertion is not a JID");
+    }
+    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
+        return parsed;
     }
     if (parsed.local !== undefined) {
         parsed.local = parsed.local.toLowerCase();

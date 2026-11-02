@@ -28,21 +28,24 @@ function nonEmpty (bytes: Uint8Array): Uint8Array {
     return bytes;
 }
 
-function octetAssertion (el: ASN1Element): AssertedSubstring<Uint8Array>[] {
+function octetAssertion (el: ASN1Element, flags: number): AssertedSubstring<Uint8Array>[] {
     return mapSubstringChoices(
         _decode_OctetSubstringAssertion(el),
         nonEmpty,
         RULE,
+        flags,
     );
 }
 
 function octetFilter (
     items: readonly FilterItem_substrings_strings_Item[],
+    flags: number,
 ): AssertedSubstring<Uint8Array>[] {
     return mapSubstringChoices(
         items,
         (el) => nonEmpty(el.octetString),
         RULE,
+        flags,
     );
 }
 

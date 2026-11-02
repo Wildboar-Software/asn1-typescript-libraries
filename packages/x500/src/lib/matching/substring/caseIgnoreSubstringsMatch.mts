@@ -61,9 +61,9 @@ caseIgnoreSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring
  */
 export
 const caseIgnoreSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareIgnore, RULE, flags),
     caseIgnoreSubstringsMatchTyped,
-    (items) => directoryFilterPieces(items, prepareIgnore, RULE),
+    (items, flags) => directoryFilterPieces(items, prepareIgnore, RULE, flags),
 );
 
 export default caseIgnoreSubstringsMatch;

@@ -6,6 +6,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -92,8 +93,15 @@ function prepareWord (text: string): string | undefined {
     return prepString(text.trim())?.toUpperCase();
 }
 
-function prepareWordAssertion (el: ASN1Element): string {
-    const prepared = prepareWord(readDirectoryString(el));
+/**
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation. An empty word is
+ * always rejected, because `containsWord` never terminates on one.
+ */
+function prepareWordAssertion (el: ASN1Element, flags: number): string {
+    const raw = readDirectoryString(el);
+    const prepared = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? raw
+        : prepareWord(raw);
     if (!prepared) {
         throw new ASN1CharactersError(
             "wordMatch assertion failed string preparation",

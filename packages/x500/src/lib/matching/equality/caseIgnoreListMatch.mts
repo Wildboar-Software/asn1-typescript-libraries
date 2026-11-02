@@ -8,6 +8,7 @@ import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -17,9 +18,13 @@ import {
 
 /**
  * Prepare and case-fold every presented line once.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
  */
-function prepareCaseIgnoreListAssertion (el: ASN1Element): string[] {
+function prepareCaseIgnoreListAssertion (el: ASN1Element, flags: number): string[] {
     const lines = readDirectoryStringList(el);
+    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
+        return lines;
+    }
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
         const line = prepString(lines[i], { caseFold: true });

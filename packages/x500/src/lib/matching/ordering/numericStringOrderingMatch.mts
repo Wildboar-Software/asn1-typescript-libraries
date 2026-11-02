@@ -4,6 +4,7 @@ import { compareCodePoints } from "../../utils/prepString.mjs";
 import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -52,11 +53,14 @@ numericStringOrderingMatchTyped satisfies TypedOrderingFunction<string>;
  * `numericStringOrderingMatch` as a `Matcher`. TRUE iff the stored
  * `NumericString` is less than the presented value.
  * `MATCH_FLAG_ORDERING_GREATER` and `MATCH_FLAG_ORDERING_OR_EQUAL`
- * select the other orderings.
+ * select the other orderings. `MATCH_FLAG_ASSERTION_NORMALIZED` skips
+ * space removal from the assertion.
  */
 export
 const numericStringOrderingMatch: Matcher = createOrderingMatcher(
-    (el) => stripSpaces(el.numericString),
+    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? el.numericString
+        : stripSpaces(el.numericString),
     numericStringOrderingMatchTyped,
 );
 

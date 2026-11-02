@@ -5,6 +5,7 @@ import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
@@ -18,14 +19,19 @@ export type PreparedIntEmail = readonly [local: string, domain: string];
  * Split on the last `@` and prepare both parts. `undefined` means
  * the address has no local-part or no domain-part, which is FALSE.
  * A local-part or domain that cannot be prepared throws.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` splits without preparing.
  */
 function prepareIntEmail (
     raw: string,
     el?: ASN1Element,
+    flags: number = 0,
 ): PreparedIntEmail | undefined {
     const at = raw.lastIndexOf("@");
     if (at <= 0 || at >= raw.length - 1) {
         return undefined;
+    }
+    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
+        return [ raw.slice(0, at), raw.slice(at + 1) ];
     }
     const local = prepString(raw.slice(0, at), { caseFold: true });
     if (local === undefined) {
@@ -45,7 +51,8 @@ function prepareIntEmail (
  * uses `dnsNameMatch` (clause 8.9.2).
  *
  * @param assertion Presented address. A `[local, domain]` pair is
- *  already prepared. A string or element is split and prepared here.
+ *  already prepared. A string or element is split and prepared here,
+ *  unless `MATCH_FLAG_ASSERTION_NORMALIZED` is set.
  * @param value Stored address, or that address already decoded.
  */
 export
@@ -56,9 +63,9 @@ function intEmailMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const presented = typeof assertion === "string"
-        ? prepareIntEmail(assertion)
+        ? prepareIntEmail(assertion, undefined, flags)
         : ASN1Element.isElement(assertion)
-            ? prepareIntEmail(assertion.utf8String)
+            ? prepareIntEmail(assertion.utf8String, assertion, flags)
             : assertion;
     if (!presented) {
         if (flags & MATCH_FLAG_DEBUG) {
@@ -106,8 +113,8 @@ intEmailMatchTyped satisfies TypedEquationFunction<PreparedIntEmail | string | A
  * A missing local-part or domain-part is a malformed assertion.
  * Returning the raw string would send it through `prepareIntEmail` again.
  */
-function decodeIntEmail (el: ASN1Element): PreparedIntEmail {
-    const prepared = prepareIntEmail(el.utf8String, el);
+function decodeIntEmail (el: ASN1Element, flags: number): PreparedIntEmail {
+    const prepared = prepareIntEmail(el.utf8String, el, flags);
     if (!prepared) {
         throw new ASN1Error("intEmailMatch assertion is not an IntEmail", el);
     }

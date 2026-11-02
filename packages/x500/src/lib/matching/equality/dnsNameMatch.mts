@@ -5,6 +5,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
@@ -142,10 +143,13 @@ dnsNameMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `dnsNameMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const dnsNameMatch: Matcher = createEqualityMatcher(
-    (el) => prepareDnsAssertion(el.utf8String, el),
+    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? el.utf8String
+        : prepareDnsAssertion(el.utf8String, el),
     dnsNameMatchTyped,
 );
 

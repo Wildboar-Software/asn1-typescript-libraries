@@ -55,9 +55,9 @@ caseIgnoreIA5SubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstr
  */
 export
 const caseIgnoreIA5SubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareIgnore, RULE, flags),
     caseIgnoreIA5SubstringsMatchTyped,
-    (items) => filterPieces(items, (el) => el.ia5String, prepareIgnore, RULE),
+    (items, flags) => filterPieces(items, (el) => el.ia5String, prepareIgnore, RULE, flags),
 );
 
 export default caseIgnoreIA5SubstringsMatch;

@@ -63,9 +63,9 @@ caseExactSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<
  */
 export
 const caseExactSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareExact, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareExact, RULE, flags),
     caseExactSubstringsMatchTyped,
-    (items) => directoryFilterPieces(items, prepareExact, RULE),
+    (items, flags) => directoryFilterPieces(items, prepareExact, RULE, flags),
 );
 
 export default caseExactSubstringsMatch;

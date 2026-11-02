@@ -5,6 +5,7 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -48,10 +49,13 @@ telephoneNumberMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `telephoneNumberMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips hyphen and space removal.
  */
 export
 const telephoneNumberMatch: Matcher = createEqualityMatcher(
-    (el) => normalizeTelephoneNumber(el.printableString),
+    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? el.printableString
+        : normalizeTelephoneNumber(el.printableString),
     telephoneNumberMatchTyped,
 );
 

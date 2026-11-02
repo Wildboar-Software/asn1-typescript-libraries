@@ -12,6 +12,7 @@ import { prepString } from "../../utils/prepString.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import {
     createSubstringsMatcher,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     type AssertedSubstring,
     type Matcher,
     type TypedEquationFunction,
@@ -41,11 +42,15 @@ const prepareIgnore: StringPreparer = (raw) => prepString(raw, { caseFold: true 
 
 /**
  * A filter component is a `PostalAddress` and nothing else.
+ * `MATCH_FLAG_ASSERTION_VALIDATED` skips checking the tag.
  */
-function componentLines (el: ASN1Element): readonly string[] {
+function componentLines (el: ASN1Element, flags: number): readonly string[] {
     if (
-        el.tagClass !== ASN1TagClass.universal
-        || el.tagNumber !== ASN1UniversalType.sequence
+        !(flags & MATCH_FLAG_ASSERTION_VALIDATED)
+        && (
+            el.tagClass !== ASN1TagClass.universal
+            || el.tagNumber !== ASN1UniversalType.sequence
+        )
     ) {
         throw new ASN1Error(
             `${RULE}: a substring component must be a PostalAddress`,
@@ -60,8 +65,8 @@ function componentLines (el: ASN1Element): readonly string[] {
  * One `PostalAddress` component stays one substring, and it
  * matches only when those lines occur adjacently.
  */
-function joinAssertionLines (el: ASN1Element): string {
-    const lines = componentLines(el);
+function joinAssertionLines (el: ASN1Element, flags: number): string {
+    const lines = componentLines(el, flags);
     if (lines.length === 0) {
         throw new ASN1CharactersError(
             `${RULE} assertion failed string preparation`,
@@ -70,15 +75,21 @@ function joinAssertionLines (el: ASN1Element): string {
     }
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
-        prepared[i] = assertPrepared(lines[i], prepareIgnore, RULE, el);
+        prepared[i] = assertPrepared(lines[i], prepareIgnore, RULE, el, flags);
     }
     return prepared.join(LINE_SEPARATOR);
 }
 
 function listFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
+    flags: number,
 ): AssertedSubstring<string>[] {
-    return mapSubstringChoices(items, joinAssertionLines, RULE);
+    return mapSubstringChoices(
+        items,
+        (el) => joinAssertionLines(el, flags),
+        RULE,
+        flags,
+    );
 }
 
 /**
@@ -141,7 +152,7 @@ caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubst
  */
 export
 const caseIgnoreListSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareIgnore, RULE, flags),
     caseIgnoreListSubstringsMatchTyped,
     listFilterPieces,
 );
