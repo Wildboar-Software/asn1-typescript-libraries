@@ -7,6 +7,8 @@ import {
     MATCH_FLAG_ORDERING_OR_EQUAL,
     MATCH_FLAG_ORDERING_GREATER,
     MATCH_FLAG_NONE,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_USED_FOR_NAME,
@@ -120,6 +122,28 @@ test("integerOrderingMatch for testing matching utilities", () => {
     const matchedValues = new Attribute(oidC["&id"], [], []);
     expect(integerOrderingMatch(integer(5), attr3, undefined, MATCH_FLAG_NONE, matchedValues)).toBe(true);
     expect(matchedValues.values).toHaveLength(3);
+});
+
+test("createEqualityMatcher passes flags to the assertion decoder and substrings converter", () => {
+    const decoderFlags: number[] = [];
+    const converterFlags: number[] = [];
+    const matcher = createEqualityMatcher<INTEGER>(
+        (el, flags) => {
+            decoderFlags.push(flags);
+            return el.integer;
+        },
+        (assertion: INTEGER, value: ASN1Element) => (assertion === value.integer),
+        (_strings, flags) => {
+            converterFlags.push(flags);
+            return integer(5).integer;
+        },
+    );
+    const flags = MATCH_FLAG_ASSERTION_NORMALIZED | MATCH_FLAG_ASSERTION_VALIDATED;
+    expect(matcher(integer(5), integerATAV(5))).toBe(true);
+    expect(matcher(integer(5), integerATAV(5), undefined, flags)).toBe(true);
+    expect(matcher([], integerATAV(5), undefined, flags)).toBe(true);
+    expect(decoderFlags).toEqual([ MATCH_FLAG_NONE, flags ]);
+    expect(converterFlags).toEqual([ flags ]);
 });
 
 test("name matching rejects rules with heterogeneous syntaxes", () => {
