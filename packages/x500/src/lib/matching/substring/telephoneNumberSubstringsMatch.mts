@@ -9,10 +9,14 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+import type {
+    FilterItem_substrings_strings_Item,
+} from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
-    directoryAssertionPieces,
-    filterPieces,
+    decodeDirectoryAssertionPieces,
+    decodeFilterPieces,
     matchPreparedString,
+    normalizePieces,
     normalizeTelephoneNumber,
     prepareStored,
     type StringPreparer,
@@ -57,19 +61,51 @@ function telephoneNumberSubstringsMatchTyped (
 telephoneNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
 
 /**
+ * Decode a `SubstringAssertion` without removing hyphens or spaces
+ * from its pieces.
+ */
+export
+function decodeTelephoneNumberSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
+}
+
+/**
+ * Decode the `TelephoneNumber` `strings` of a substrings filter item
+ * without removing hyphens or spaces.
+ */
+export
+function decodeTelephoneNumberSubstringsMatchFilterPieces (
+    items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeFilterPieces(items, (el) => _decode_TelephoneNumber(el), RULE, flags);
+}
+
+/**
+ * Remove hyphens and spaces from each presented piece once.
+ */
+export
+function normalizeTelephoneNumberSubstringsMatchAssertion (
+    assertion: AssertedSubstring<string>[],
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    return normalizePieces(assertion, prepareTelephone, RULE, el);
+}
+
+/**
  * `telephoneNumberSubstringsMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips hyphen and space removal from
+ * the assertion.
  */
 export
 const telephoneNumberSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el, flags) => directoryAssertionPieces(el, prepareTelephone, RULE, flags),
+    decodeTelephoneNumberSubstringsMatchAssertion,
     telephoneNumberSubstringsMatchTyped,
-    (items, flags) => filterPieces(
-        items,
-        (el) => _decode_TelephoneNumber(el),
-        prepareTelephone,
-        RULE,
-        flags,
-    ),
+    decodeTelephoneNumberSubstringsMatchFilterPieces,
+    normalizeTelephoneNumberSubstringsMatchAssertion,
 );
 
 export default telephoneNumberSubstringsMatch;

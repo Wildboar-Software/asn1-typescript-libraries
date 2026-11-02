@@ -22,6 +22,12 @@ export const MATCH_FLAG_USED_FOR_NAME: MatchFlags =        1 << 0;
  * Assume the assertion is already "normalized," such as by being prepared
  * according to the string preparation procedures described in
  * ITU-T Recommendation X.520 (2019), Section 7.
+ *
+ * Matchers made by `createEqualityMatcher`, `createOrderingMatcher`, and
+ * `createSubstringsMatcher` skip their `AssertionNormalizer` when this flag
+ * is set, so the decoded assertion is compared as-is. The assertion should
+ * then be the encoding of the output of that rule's normalizer; anything
+ * else may produce incorrect results.
  */
 export const MATCH_FLAG_ASSERTION_NORMALIZED: MatchFlags = 1 << 1;
 /**
@@ -189,12 +195,11 @@ type ContextMatcher = (
 ) => boolean;
 
 /**
- * A function that decodes (and usually prepares) an assertion from its
+ * A function that decodes (and optionally validates) an assertion from its
  * ASN.1 encoding. Any `ASN1Decoder` from `@wildboar/asn1/functional` is also
  * an `AssertionDecoder`.
  * 
  * `flags` are the flags passed to the matcher. Decoders use
- * `MATCH_FLAG_ASSERTION_NORMALIZED` to skip preparation of the assertion and
  * `MATCH_FLAG_ASSERTION_VALIDATED` to skip validation of the assertion.
  * 
  * Malformed assertions are expected to throw errors.
@@ -211,6 +216,25 @@ type SubstringsConverter<A> = (
     strings: FilterItem_substrings_strings_Item[],
     flags: number,
 ) => A;
+
+/**
+ * A function that normalizes a decoded assertion so that it is ready to be
+ * compared with values, such as by performing the string preparation
+ * procedures described in ITU-T Recommendation X.520 (2019), Section 7.
+ *
+ * `assertion` is the output of a matching rule's assertion decoder or
+ * substrings converter. The return value has the same type, so a decoded
+ * assertion that is already normalized can be used without calling this.
+ *
+ * `element` is the encoded assertion, if the assertion was decoded from one.
+ * It is only used for error reporting. It is absent when the assertion came
+ * from the `strings` of a substrings `FilterItem`.
+ *
+ * An assertion that cannot be normalized is malformed, so functions of this
+ * type are expected to throw.
+ */
+export
+type AssertionNormalizer<A> = (assertion: A, element?: ASN1Element) => A;
 
 /**
  * A function that takes a typed assertion that is prepared for matching
@@ -354,8 +378,13 @@ function useOrderingAsEquality<A>(
  * @description
  * 
  * Create an equality matcher function from a function for decoding the assertion,
- * a function that compares the decoded assertion with a single value, and an optional
- * function that converts a list of substrings into a typed assertion.
+ * a function that compares the decoded assertion with a single value, an optional
+ * function that converts a list of substrings into a typed assertion, and an
+ * optional function that normalizes the typed assertion.
+ * 
+ * The returned function uses the `MATCH_FLAG_ASSERTION_NORMALIZED` flag: if this
+ * flag is set, `assertionNormalizer` is not called, and the decoded assertion is
+ * trusted to be normalized already.
  * 
  * The returned function uses the `MATCH_FLAG_CONSTANT_TIME` flag: if this flag is
  * set, the matcher iterates over all values, even if a match is found.
@@ -382,6 +411,9 @@ function useOrderingAsEquality<A>(
  *  this argument is not provided.
  * @param assertionSyntaxDiffersFromValueSyntax whether this rule normally compares
  *  an assertion syntax with a different attribute-value syntax.
+ * @param assertionNormalizer function that normalizes the output of
+ *  `assertionDecoder` or `subtringsConverter`, such as by preparing strings.
+ *  It is skipped when `MATCH_FLAG_ASSERTION_NORMALIZED` is set.
  * @returns function that takes an assertion and a value and returns a
  * `boolean` that indicates whether the value matches the assertion, or `undefined`.
  * @function
@@ -393,6 +425,7 @@ function createEqualityMatcher<A>(
     valueMatcher: TypedEquationFunction<A>,
     subtringsConverter?: SubstringsConverter<A>,
     assertionSyntaxDiffersFromValueSyntax: boolean = false,
+    assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
     return function (
         assertion: ASN1Element | FilterItem_substrings_strings_Item[],
@@ -413,6 +446,12 @@ function createEqualityMatcher<A>(
             decodedAssertion = subtringsConverter(assertion, flags);
         } else {
             decodedAssertion = assertionDecoder(assertion, flags);
+        }
+        if (assertionNormalizer && !(flags & MATCH_FLAG_ASSERTION_NORMALIZED)) {
+            decodedAssertion = assertionNormalizer(
+                decodedAssertion,
+                Array.isArray(assertion) ? undefined : assertion,
+            );
         }
         if (
             assertionSyntaxDiffersFromValueSyntax
@@ -544,6 +583,9 @@ function createEqualityMatcher<A>(
  * rule. For example, if this is an implementation of `integerOrderingMatch`, the
  * `number` returned would sort the integers in ascending order. This may return
  * `undefined`, which corresponds to the `UNDEFINED` outcome of the match.
+ * @param assertionNormalizer function that normalizes the output of
+ *  `assertionDecoder`. It is skipped when `MATCH_FLAG_ASSERTION_NORMALIZED`
+ *  is set.
  * @returns function that takes an assertion and a value and returns a
  * `boolean` that indicates whether the value matches the assertion, or `undefined`.
  * @function
@@ -553,10 +595,14 @@ export
 function createOrderingMatcher<A>(
     assertionDecoder: AssertionDecoder<A>,
     valueMatcher: TypedOrderingFunction<A>,
+    assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
     return createEqualityMatcher(
         assertionDecoder,
         useOrderingAsEquality(valueMatcher),
+        undefined,
+        false,
+        assertionNormalizer,
     );
 }
 
@@ -567,6 +613,9 @@ function createOrderingMatcher<A>(
  * `boolean` that indicates whether the value matches the assertion, or `undefined`.
  * @param subtringsConverter function that converts a list of substrings into a
  *  typed assertion.
+ * @param assertionNormalizer function that normalizes the output of
+ *  `assertionDecoder` or `subtringsConverter`. It is skipped when
+ *  `MATCH_FLAG_ASSERTION_NORMALIZED` is set.
  * @returns function that takes an assertion and a value and returns a
  * `boolean` that indicates whether the value matches the assertion, or `undefined`.
  * @function
@@ -577,11 +626,14 @@ function createSubstringsMatcher<A>(
     assertionDecoder: AssertionDecoder<A>,
     valueMatcher: TypedEquationFunction<A>,
     subtringsConverter: SubstringsConverter<A>,
+    assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
     return createEqualityMatcher(
         assertionDecoder,
         valueMatcher,
         subtringsConverter,
+        false,
+        assertionNormalizer,
     );
 }
 

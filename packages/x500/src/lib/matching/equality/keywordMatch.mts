@@ -8,7 +8,6 @@ import { prepString } from "../../utils/prepString.mjs";
 import { containsWord } from "./wordMatch.mjs";
 import {
     createEqualityMatcher,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -28,14 +27,27 @@ function prepareKeyword (text: string): string | undefined {
 }
 
 /**
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation. An empty keyword
+ * Decode the presented keyword without preparing it. An empty keyword
  * is always rejected, because `containsWord` never terminates on one.
  */
-function prepareKeywordAssertion (el: ASN1Element, flags: number): string {
+export
+function decodeKeywordMatchAssertion (el: ASN1Element): string {
     const raw = readKeyword(el);
-    const prepared = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
-        ? raw
-        : prepareKeyword(raw);
+    if (raw.length === 0) {
+        throw new ASN1CharactersError(
+            "keywordMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return raw;
+}
+
+/**
+ * Trim, prepare, and upper-case the presented keyword once.
+ */
+export
+function normalizeKeywordMatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepareKeyword(assertion);
     if (!prepared) {
         throw new ASN1CharactersError(
             "keywordMatch assertion failed string preparation",
@@ -83,12 +95,16 @@ keywordMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `keywordMatch` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const keywordMatch: Matcher = createEqualityMatcher(
-    prepareKeywordAssertion,
+    decodeKeywordMatchAssertion,
     keywordMatchTyped,
+    undefined,
+    false,
+    normalizeKeywordMatchAssertion,
 );
 
 export default keywordMatch;

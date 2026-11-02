@@ -6,7 +6,6 @@ import { prepString } from "../../utils/prepString.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -94,14 +93,27 @@ function prepareWord (text: string): string | undefined {
 }
 
 /**
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation. An empty word is
+ * Decode the presented word without preparing it. An empty word is
  * always rejected, because `containsWord` never terminates on one.
  */
-function prepareWordAssertion (el: ASN1Element, flags: number): string {
+export
+function decodeWordMatchAssertion (el: ASN1Element): string {
     const raw = readDirectoryString(el);
-    const prepared = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
-        ? raw
-        : prepareWord(raw);
+    if (raw.length === 0) {
+        throw new ASN1CharactersError(
+            "wordMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return raw;
+}
+
+/**
+ * Trim, prepare, and upper-case the presented word once.
+ */
+export
+function normalizeWordMatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepareWord(assertion);
     if (!prepared) {
         throw new ASN1CharactersError(
             "wordMatch assertion failed string preparation",
@@ -147,12 +159,16 @@ wordMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `wordMatch` as a `Matcher`. An assertion that cannot be prepared
- * throws `ASN1CharactersError`.
+ * throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED` skips
+ * preparation of the assertion.
  */
 export
 const wordMatch: Matcher = createEqualityMatcher(
-    prepareWordAssertion,
+    decodeWordMatchAssertion,
     wordMatchTyped,
+    undefined,
+    false,
+    normalizeWordMatchAssertion,
 );
 
 export default wordMatch;

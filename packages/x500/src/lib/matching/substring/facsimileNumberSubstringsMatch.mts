@@ -13,10 +13,14 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+import type {
+    FilterItem_substrings_strings_Item,
+} from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
-    directoryAssertionPieces,
-    filterPieces,
+    decodeDirectoryAssertionPieces,
+    decodeFilterPieces,
     matchPreparedString,
+    normalizePieces,
     normalizeTelephoneNumber,
     prepareStored,
     type StringPreparer,
@@ -75,13 +79,49 @@ function facsimileNumberSubstringsMatchTyped (
 facsimileNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
 
 /**
+ * Decode a `SubstringAssertion` without removing hyphens or spaces
+ * from its pieces.
+ */
+export
+function decodeFacsimileNumberSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
+}
+
+/**
+ * Decode the facsimile or telephone number `strings` of a substrings
+ * filter item without removing hyphens or spaces.
+ */
+export
+function decodeFacsimileNumberSubstringsMatchFilterPieces (
+    items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeFilterPieces(items, readFacsimileNumber, RULE, flags);
+}
+
+/**
+ * Remove hyphens and spaces from each presented piece once.
+ */
+export
+function normalizeFacsimileNumberSubstringsMatchAssertion (
+    assertion: AssertedSubstring<string>[],
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    return normalizePieces(assertion, prepareTelephone, RULE, el);
+}
+
+/**
  * `facsimileNumberSubstringsMatch` as a `Matcher`.
  */
 export
 const facsimileNumberSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el, flags) => directoryAssertionPieces(el, prepareTelephone, RULE, flags),
+    decodeFacsimileNumberSubstringsMatchAssertion,
     facsimileNumberSubstringsMatchTyped,
-    (items, flags) => filterPieces(items, readFacsimileNumber, prepareTelephone, RULE, flags),
+    decodeFacsimileNumberSubstringsMatchFilterPieces,
+    normalizeFacsimileNumberSubstringsMatchAssertion,
 );
 
 export default facsimileNumberSubstringsMatch;

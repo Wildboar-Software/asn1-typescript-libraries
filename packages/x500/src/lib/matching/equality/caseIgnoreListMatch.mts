@@ -8,7 +8,6 @@ import { ctStringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -17,14 +16,21 @@ import {
 } from "../../types/matching.mjs";
 
 /**
- * Prepare and case-fold every presented line once.
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
+ * Decode the presented lines without preparing them.
  */
-function prepareCaseIgnoreListAssertion (el: ASN1Element, flags: number): string[] {
-    const lines = readDirectoryStringList(el);
-    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
-        return lines;
-    }
+export
+function decodeCaseIgnoreListMatchAssertion (el: ASN1Element): readonly string[] {
+    return readDirectoryStringList(el);
+}
+
+/**
+ * Prepare and case-fold every presented line once.
+ */
+export
+function normalizeCaseIgnoreListMatchAssertion (
+    lines: readonly string[],
+    el?: ASN1Element,
+): readonly string[] {
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
         const line = prepString(lines[i], { caseFold: true });
@@ -138,11 +144,15 @@ caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;
 /**
  * `caseIgnoreListMatch` as a `Matcher`. An assertion line that
  * cannot be prepared throws `ASN1CharactersError`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const caseIgnoreListMatch: Matcher = createEqualityMatcher(
-    prepareCaseIgnoreListAssertion,
+    decodeCaseIgnoreListMatchAssertion,
     caseIgnoreListMatchTyped,
+    undefined,
+    false,
+    normalizeCaseIgnoreListMatchAssertion,
 );
 
 export default caseIgnoreListMatch;

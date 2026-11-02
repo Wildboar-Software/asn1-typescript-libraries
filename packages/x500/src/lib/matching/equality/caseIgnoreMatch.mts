@@ -7,7 +7,6 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -16,17 +15,21 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented directory string without preparing it.
+ */
+export
+function decodeCaseIgnoreMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
  * Prepare and case-fold the presented directory string once.
  * `prepString` returns `undefined` for a prohibited character or a
  * string that maps to empty. That is an assertion error, not UNDEFINED.
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
  */
-function prepareCaseIgnoreAssertion (el: ASN1Element, flags: number): string {
-    const raw = readDirectoryString(el);
-    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
-        return raw;
-    }
-    const prepared = prepString(raw, { caseFold: true });
+export
+function normalizeCaseIgnoreMatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreMatch assertion failed string preparation",
@@ -77,12 +80,16 @@ caseIgnoreMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `caseIgnoreMatch` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const caseIgnoreMatch: Matcher = createEqualityMatcher(
-    prepareCaseIgnoreAssertion,
+    decodeCaseIgnoreMatchAssertion,
     caseIgnoreMatchTyped,
+    undefined,
+    false,
+    normalizeCaseIgnoreMatchAssertion,
 );
 
 export default caseIgnoreMatch;

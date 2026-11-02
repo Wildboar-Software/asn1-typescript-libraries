@@ -6,10 +6,14 @@ import {
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+import type {
+    FilterItem_substrings_strings_Item,
+} from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import {
-    directoryAssertionPieces,
-    filterPieces,
+    decodeDirectoryAssertionPieces,
+    decodeFilterPieces,
     matchPreparedString,
+    normalizePieces,
     prepareStored,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
@@ -56,13 +60,48 @@ function numericStringSubstringsMatchTyped (
 numericStringSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<string>[]>;
 
 /**
+ * Decode a `SubstringAssertion` without removing spaces from its pieces.
+ */
+export
+function decodeNumericStringSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
+}
+
+/**
+ * Decode the `NumericString` `strings` of a substrings filter item
+ * without removing spaces.
+ */
+export
+function decodeNumericStringSubstringsMatchFilterPieces (
+    items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeFilterPieces(items, (el) => el.numericString, RULE, flags);
+}
+
+/**
+ * Remove every space from each presented piece once.
+ */
+export
+function normalizeNumericStringSubstringsMatchAssertion (
+    assertion: AssertedSubstring<string>[],
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    return normalizePieces(assertion, prepareNumeric, RULE, el);
+}
+
+/**
  * `numericStringSubstringsMatch` as a `Matcher`.
  */
 export
 const numericStringSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el, flags) => directoryAssertionPieces(el, prepareNumeric, RULE, flags),
+    decodeNumericStringSubstringsMatchAssertion,
     numericStringSubstringsMatchTyped,
-    (items, flags) => filterPieces(items, (el) => el.numericString, prepareNumeric, RULE, flags),
+    decodeNumericStringSubstringsMatchFilterPieces,
+    normalizeNumericStringSubstringsMatchAssertion,
 );
 
 export default numericStringSubstringsMatch;

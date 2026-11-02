@@ -6,7 +6,6 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -15,15 +14,19 @@ import {
 } from "../../types/matching.mjs";
 
 /**
- * Prepare and case-fold the presented IA5 string once.
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
+ * Decode the presented IA5 string without preparing it.
  */
-function prepareCaseIgnoreIA5Assertion (el: ASN1Element, flags: number): string {
-    const raw = el.ia5String;
-    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
-        return raw;
-    }
-    const prepared = prepString(raw, { caseFold: true });
+export
+function decodeCaseIgnoreIA5MatchAssertion (el: ASN1Element): string {
+    return el.ia5String;
+}
+
+/**
+ * Prepare and case-fold the presented IA5 string once.
+ */
+export
+function normalizeCaseIgnoreIA5MatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreIA5Match assertion failed string preparation",
@@ -74,12 +77,16 @@ caseIgnoreIA5MatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `caseIgnoreIA5Match` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const caseIgnoreIA5Match: Matcher = createEqualityMatcher(
-    prepareCaseIgnoreIA5Assertion,
+    decodeCaseIgnoreIA5MatchAssertion,
     caseIgnoreIA5MatchTyped,
+    undefined,
+    false,
+    normalizeCaseIgnoreIA5MatchAssertion,
 );
 
 export default caseIgnoreIA5Match;

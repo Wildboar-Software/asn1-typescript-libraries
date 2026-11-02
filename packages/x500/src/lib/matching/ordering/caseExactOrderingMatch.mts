@@ -5,7 +5,6 @@ import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
 import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -14,17 +13,24 @@ import {
 } from "../../types/matching.mjs";
 
 /**
+ * Decode the presented directory string without preparing it.
+ */
+export
+function decodeCaseExactOrderingMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
  * Prepare the presented directory string once. `prepString` returns
  * `undefined` for a prohibited character or a string that maps to
  * empty. That is an assertion error, not UNDEFINED.
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
  */
-function prepareCaseExactAssertion (el: ASN1Element, flags: number): string {
-    const raw = readDirectoryString(el);
-    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
-        return raw;
-    }
-    const prepared = prepString(raw);
+export
+function normalizeCaseExactOrderingMatchAssertion (
+    assertion: string,
+    el?: ASN1Element,
+): string {
+    const prepared = prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactOrderingMatch assertion failed string preparation",
@@ -83,11 +89,13 @@ caseExactOrderingMatchTyped satisfies TypedOrderingFunction<string>;
  * is less than the presented value. `MATCH_FLAG_ORDERING_GREATER`
  * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
  * An assertion that cannot be prepared throws `ASN1CharactersError`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const caseExactOrderingMatch: Matcher = createOrderingMatcher(
-    prepareCaseExactAssertion,
+    decodeCaseExactOrderingMatchAssertion,
     caseExactOrderingMatchTyped,
+    normalizeCaseExactOrderingMatchAssertion,
 );
 
 export default caseExactOrderingMatch;

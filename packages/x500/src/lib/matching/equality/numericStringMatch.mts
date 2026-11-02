@@ -5,7 +5,6 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -47,14 +46,32 @@ function numericStringMatchTyped (
 numericStringMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the presented `NumericString` without removing spaces.
+ */
+export
+function decodeNumericStringMatchAssertion (el: ASN1Element): string {
+    return el.numericString;
+}
+
+/**
+ * Remove every space from the presented numeric string.
+ */
+export
+function normalizeNumericStringMatchAssertion (assertion: string): string {
+    return stripSpaces(assertion);
+}
+
+/**
  * `numericStringMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips space removal from the assertion.
  */
 export
 const numericStringMatch: Matcher = createEqualityMatcher(
-    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
-        ? el.numericString
-        : stripSpaces(el.numericString),
+    decodeNumericStringMatchAssertion,
     numericStringMatchTyped,
+    undefined,
+    false,
+    normalizeNumericStringMatchAssertion,
 );
 
 export default numericStringMatch;

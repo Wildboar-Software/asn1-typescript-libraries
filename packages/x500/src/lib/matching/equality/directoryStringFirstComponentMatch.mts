@@ -8,22 +8,28 @@ import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 
 /**
- * Prepare and case-fold the presented directory string once.
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
+ * Decode the presented directory string without preparing it.
  */
-function prepareAssertion (el: ASN1Element, flags: number): string {
-    const raw = readDirectoryString(el);
-    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
-        return raw;
-    }
-    const prepared = prepString(raw, { caseFold: true });
+export
+function decodeDirectoryStringFirstComponentMatchAssertion (el: ASN1Element): string {
+    return readDirectoryString(el);
+}
+
+/**
+ * Prepare and case-fold the presented directory string once.
+ */
+export
+function normalizeDirectoryStringFirstComponentMatchAssertion (
+    assertion: string,
+    el?: ASN1Element,
+): string {
+    const prepared = prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "directoryStringFirstComponentMatch assertion failed string preparation",
@@ -70,13 +76,15 @@ directoryStringFirstComponentMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `directoryStringFirstComponentMatch` as a `Matcher`.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const directoryStringFirstComponentMatch: Matcher = createEqualityMatcher(
-    prepareAssertion,
+    decodeDirectoryStringFirstComponentMatchAssertion,
     directoryStringFirstComponentMatchTyped,
     undefined,
     true,
+    normalizeDirectoryStringFirstComponentMatchAssertion,
 );
 
 export default directoryStringFirstComponentMatch;

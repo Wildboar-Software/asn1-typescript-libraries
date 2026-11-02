@@ -5,7 +5,6 @@ import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
     createEqualityMatcher,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
@@ -142,15 +141,33 @@ function dnsNameMatchTyped (
 dnsNameMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the presented domain name without preparing it.
+ */
+export
+function decodeDnsNameMatchAssertion (el: ASN1Element): string {
+    return el.utf8String;
+}
+
+/**
+ * Convert the presented domain name with `domainToUnicode` and prepare
+ * each label, as described for `prepareDnsAssertion`.
+ */
+export
+function normalizeDnsNameMatchAssertion (assertion: string, el?: ASN1Element): string {
+    return prepareDnsAssertion(assertion, el);
+}
+
+/**
  * `dnsNameMatch` as a `Matcher`.
  * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation of the assertion.
  */
 export
 const dnsNameMatch: Matcher = createEqualityMatcher(
-    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
-        ? el.utf8String
-        : prepareDnsAssertion(el.utf8String, el),
+    decodeDnsNameMatchAssertion,
     dnsNameMatchTyped,
+    undefined,
+    false,
+    normalizeDnsNameMatchAssertion,
 );
 
 export default dnsNameMatch;

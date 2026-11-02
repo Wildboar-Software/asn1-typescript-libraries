@@ -6,7 +6,6 @@ import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -15,15 +14,19 @@ import {
 } from "../../types/matching.mjs";
 
 /**
- * Prepare the presented IA5 string once.
- * `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation.
+ * Decode the presented IA5 string without preparing it.
  */
-function prepareCaseExactIA5Assertion (el: ASN1Element, flags: number): string {
-    const raw = el.ia5String;
-    if (flags & MATCH_FLAG_ASSERTION_NORMALIZED) {
-        return raw;
-    }
-    const prepared = prepString(raw);
+export
+function decodeCaseExactIA5MatchAssertion (el: ASN1Element): string {
+    return el.ia5String;
+}
+
+/**
+ * Prepare the presented IA5 string once.
+ */
+export
+function normalizeCaseExactIA5MatchAssertion (assertion: string, el?: ASN1Element): string {
+    const prepared = prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactIA5Match assertion failed string preparation",
@@ -72,12 +75,16 @@ caseExactIA5MatchTyped satisfies TypedEquationFunction<string>;
 
 /**
  * `caseExactIA5Match` as a `Matcher`. An assertion that cannot be
- * prepared throws `ASN1CharactersError`.
+ * prepared throws `ASN1CharactersError`. `MATCH_FLAG_ASSERTION_NORMALIZED`
+ * skips preparation of the assertion.
  */
 export
 const caseExactIA5Match: Matcher = createEqualityMatcher(
-    prepareCaseExactIA5Assertion,
+    decodeCaseExactIA5MatchAssertion,
     caseExactIA5MatchTyped,
+    undefined,
+    false,
+    normalizeCaseExactIA5MatchAssertion,
 );
 
 export default caseExactIA5Match;

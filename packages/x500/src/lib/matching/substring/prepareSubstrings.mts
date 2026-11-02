@@ -10,11 +10,9 @@ import {
 import {
     _decode_UnboundedDirectoryString,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import type { UnboundedDirectoryString } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
 import {
     getStringSubstringsMatcher,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
@@ -46,8 +44,7 @@ function normalizeTelephoneNumber (telephoneNumber: string): string {
 /**
  * Prepare `raw` for an assertion piece. Failure and an empty
  * result are assertion errors: an empty piece would match at every
- * cursor via `indexOf("")`. `MATCH_FLAG_ASSERTION_NORMALIZED` keeps
- * `raw`, but an empty piece is still rejected.
+ * cursor via `indexOf("")`.
  */
 export
 function assertPrepared (
@@ -55,11 +52,8 @@ function assertPrepared (
     prepare: StringPreparer,
     rule: string,
     el?: ASN1Element,
-    flags: number = 0,
 ): string {
-    const prepared = (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
-        ? raw
-        : prepare(raw);
+    const prepared = prepare(raw);
     if (prepared === undefined || prepared.length === 0) {
         throw new ASN1CharactersError(
             `${rule} assertion failed string preparation`,
@@ -177,14 +171,34 @@ function mapSubstringChoices<T, U> (
     return out;
 }
 
-function prepareDirectoryPiece (
-    ds: UnboundedDirectoryString,
-    prepare: StringPreparer,
+/**
+ * An empty piece would match at every cursor via `indexOf("")`, so it
+ * is an assertion error even when the assertion is trusted to be
+ * normalized already.
+ */
+function nonEmptyPiece (raw: string, rule: string, el?: ASN1Element): string {
+    if (raw.length === 0) {
+        throw new ASN1CharactersError(`${rule}: empty substring`, el);
+    }
+    return raw;
+}
+
+/**
+ * Decode a `SubstringAssertion` into directory-string pieces without
+ * preparing them. `control` is copied through.
+ */
+export
+function decodeDirectoryAssertionPieces (
+    el: ASN1Element,
     rule: string,
-    el?: ASN1Element,
     flags: number = 0,
-): string {
-    return assertPrepared(directoryStringToString(ds), prepare, rule, el, flags);
+): AssertedSubstring<string>[] {
+    return mapSubstringChoices(
+        _decode_SubstringAssertion(el),
+        (ds) => nonEmptyPiece(directoryStringToString(ds), rule, el),
+        rule,
+        flags,
+    );
 }
 
 /**
@@ -198,57 +212,73 @@ function directoryAssertionPieces (
     rule: string,
     flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return mapSubstringChoices(
-        _decode_SubstringAssertion(el),
-        (ds) => prepareDirectoryPiece(ds, prepare, rule, el, flags),
-        rule,
-        flags,
-    );
+    return normalizePieces(decodeDirectoryAssertionPieces(el, rule, flags), prepare, rule, el);
 }
 
 /**
- * Prepare `FilterItem.substrings.strings` whose components are
- * `UnboundedDirectoryString` values.
+ * Decode `FilterItem.substrings.strings` whose components are
+ * `UnboundedDirectoryString` values, without preparing them.
  */
 export
-function directoryFilterPieces (
+function decodeDirectoryFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
-    prepare: StringPreparer,
     rule: string,
     flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return mapSubstringChoices(
+    return decodeFilterPieces(
         items,
-        (component) => assertPrepared(
-            directoryStringToString(_decode_UnboundedDirectoryString(component)),
-            prepare,
-            rule,
-            component,
-            flags,
-        ),
+        (component) => directoryStringToString(_decode_UnboundedDirectoryString(component)),
         rule,
         flags,
     );
 }
 
 /**
- * Prepare filter substring components with a rule-specific reader
- * (numeric string, IA5, telephone, facsimile, postal line).
+ * Decode filter substring components with a rule-specific reader
+ * (numeric string, IA5, telephone, facsimile, postal line), without
+ * preparing them.
  */
 export
-function filterPieces (
+function decodeFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
     read: (component: ASN1Element) => string,
-    prepare: StringPreparer,
     rule: string,
     flags: number = 0,
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(
         items,
-        (component) => assertPrepared(read(component), prepare, rule, component, flags),
+        (component) => nonEmptyPiece(read(component), rule, component),
         rule,
         flags,
     );
+}
+
+/**
+ * Prepare each decoded `initial` / `any` / `final` piece with
+ * `prepare`. `control` is copied through. A piece that cannot be
+ * prepared throws `ASN1CharactersError`.
+ */
+export
+function normalizePieces (
+    pieces: readonly AssertedSubstring<string>[],
+    prepare: StringPreparer,
+    rule: string,
+    el?: ASN1Element,
+): AssertedSubstring<string>[] {
+    const out: AssertedSubstring<string>[] = new Array(pieces.length);
+    for (let i = 0; i < pieces.length; i++) {
+        const piece = pieces[i];
+        if ("initial" in piece) {
+            out[i] = { initial: assertPrepared(piece.initial, prepare, rule, el) };
+        } else if ("any_" in piece) {
+            out[i] = { any_: assertPrepared(piece.any_, prepare, rule, el) };
+        } else if ("final" in piece) {
+            out[i] = { final: assertPrepared(piece.final, prepare, rule, el) };
+        } else {
+            out[i] = piece;
+        }
+    }
+    return out;
 }
 
 function hasMatchPiece (

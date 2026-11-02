@@ -75,7 +75,7 @@ function joinAssertionLines (el: ASN1Element, flags: number): string {
     }
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
-        prepared[i] = assertPrepared(lines[i], prepareIgnore, RULE, el, flags);
+        prepared[i] = assertPrepared(lines[i], prepareIgnore, RULE, el);
     }
     return prepared.join(LINE_SEPARATOR);
 }

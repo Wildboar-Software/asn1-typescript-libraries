@@ -51,6 +51,8 @@ function storedPrefixMatch (
  * @param value Stored prefix.
  * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`,
  *  `MATCH_FLAG_ASSERTION_NORMALIZED`, and `MATCH_FLAG_VALUE_NORMALIZED`.
+ *  The normalized flags skip preparation of the assertion and the stored
+ *  prefix, respectively.
  * @returns `true` when the stored string is a prefix.
  */
 export

@@ -6,7 +6,6 @@ import { urlSchemeDefaultPort } from "./urlSchemeDefaultPort.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
-    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_VALUE_NORMALIZED,
     type Matcher,
@@ -72,15 +71,33 @@ function uriMatchTyped (
 uriMatchTyped satisfies TypedEquationFunction<string>;
 
 /**
+ * Decode the presented URI without normalizing it.
+ */
+export
+function decodeUriMatchAssertion (el: ASN1Element): string {
+    return el.utf8String;
+}
+
+/**
+ * Normalize the presented URI as described for `uriMatchTyped`.
+ * A URI that cannot be normalized throws.
+ */
+export
+function normalizeUriMatchAssertion (assertion: string): string {
+    return normalizeUri(assertion);
+}
+
+/**
  * `uriMatch` as a `Matcher`. An assertion that cannot be normalized throws.
  * `MATCH_FLAG_ASSERTION_NORMALIZED` skips normalization of the assertion.
  */
 export
 const uriMatch: Matcher = createEqualityMatcher(
-    (el, flags) => (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
-        ? el.utf8String
-        : normalizeUri(el.utf8String),
+    decodeUriMatchAssertion,
     uriMatchTyped,
+    undefined,
+    false,
+    normalizeUriMatchAssertion,
 );
 
 export default uriMatch;
