@@ -17,10 +17,10 @@ import {
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 import {
-    decodeDirectoryAssertionPieces,
+    assertPrepared,
+    directoryAssertionPieces,
     mapSubstringChoices,
     matchPreparedString,
-    normalizePieces,
     prepareStored,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
@@ -40,38 +40,6 @@ const LINE_SEPARATOR = "\u001F";
 const prepareIgnore: StringPreparer = (raw) => prepString(raw, { caseFold: true });
 
 /**
- * Prepare each `LINE_SEPARATOR`-delimited line of a decoded piece and
- * join them again. Any line that fails preparation fails the piece.
- */
-const prepareJoinedLines: StringPreparer = (raw) => {
-    const lines = raw.split(LINE_SEPARATOR);
-    for (let i = 0; i < lines.length; i++) {
-        const prepared = prepareIgnore(lines[i]);
-        if (!prepared) {
-            return undefined;
-        }
-        lines[i] = prepared;
-    }
-    return lines.join(LINE_SEPARATOR);
-};
-
-/**
- * `prepString` deletes `LINE_SEPARATOR`, so removing it from a raw
- * line does not change the prepared line. It must be removed before
- * preparation so that it can only appear between joined lines.
- */
-function withoutSeparator (raw: string, el?: ASN1Element): string {
-    const stripped = raw.replaceAll(LINE_SEPARATOR, "");
-    if (stripped.length === 0) {
-        throw new ASN1CharactersError(
-            `${RULE} assertion failed string preparation`,
-            el,
-        );
-    }
-    return stripped;
-}
-
-/**
  * A filter component is a `PostalAddress` and nothing else.
  */
 function componentLines (el: ASN1Element): readonly string[] {
@@ -88,8 +56,8 @@ function componentLines (el: ASN1Element): readonly string[] {
 }
 
 /**
- * Join the asserted lines with `LINE_SEPARATOR` without preparing
- * them. One `PostalAddress` component stays one substring, and it
+ * Prepare each asserted line, then join with `LINE_SEPARATOR`.
+ * One `PostalAddress` component stays one substring, and it
  * matches only when those lines occur adjacently.
  */
 function joinAssertionLines (el: ASN1Element): string {
@@ -100,50 +68,17 @@ function joinAssertionLines (el: ASN1Element): string {
             el,
         );
     }
-    return lines
-        .map((line) => withoutSeparator(line, el))
-        .join(LINE_SEPARATOR);
+    const prepared = new Array<string>(lines.length);
+    for (let i = 0; i < lines.length; i++) {
+        prepared[i] = assertPrepared(lines[i], prepareIgnore, RULE, el);
+    }
+    return prepared.join(LINE_SEPARATOR);
 }
 
-/**
- * Decode a `SubstringAssertion` without preparing its pieces.
- */
-export
-function decodeCaseIgnoreListSubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
-    return decodeDirectoryAssertionPieces(el, RULE)
-        .map((piece) => {
-            if ("initial" in piece) {
-                return { initial: withoutSeparator(piece.initial, el) };
-            } else if ("any_" in piece) {
-                return { any_: withoutSeparator(piece.any_, el) };
-            } else if ("final" in piece) {
-                return { final: withoutSeparator(piece.final, el) };
-            }
-            return piece;
-        });
-}
-
-/**
- * Decode the `PostalAddress` `strings` of a substrings filter item
- * without preparing them. The lines of each component are joined with
- * U+001F into one piece.
- */
-export
-function decodeCaseIgnoreListSubstringsMatchFilterPieces (
-    items: FilterItem_substrings_strings_Item[],
+function listFilterPieces (
+    items: readonly FilterItem_substrings_strings_Item[],
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(items, joinAssertionLines, RULE);
-}
-
-/**
- * Prepare and case-fold each line of each presented piece once.
- */
-export
-function normalizeCaseIgnoreListSubstringsMatchAssertion (
-    assertion: AssertedSubstring<string>[],
-    el?: ASN1Element,
-): AssertedSubstring<string>[] {
-    return normalizePieces(assertion, prepareJoinedLines, RULE, el);
 }
 
 /**
@@ -202,15 +137,13 @@ caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubst
  * `caseIgnoreListSubstringsMatch` as a `Matcher`. The assertion is
  * a `SubstringAssertion` of directory strings. A filter component
  * is a `PostalAddress`. Its lines are joined with U+001F into
- * that one piece. `MATCH_FLAG_ASSERTION_NORMALIZED` skips preparation
- * of the assertion.
+ * that one piece.
  */
 export
 const caseIgnoreListSubstringsMatch: Matcher = createSubstringsMatcher(
-    decodeCaseIgnoreListSubstringsMatchAssertion,
+    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
     caseIgnoreListSubstringsMatchTyped,
-    decodeCaseIgnoreListSubstringsMatchFilterPieces,
-    normalizeCaseIgnoreListSubstringsMatchAssertion,
+    listFilterPieces,
 );
 
 export default caseIgnoreListSubstringsMatch;

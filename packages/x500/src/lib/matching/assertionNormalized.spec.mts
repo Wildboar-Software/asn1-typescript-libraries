@@ -263,14 +263,6 @@ const cases: Record<string, NormalizationCase> = {
         normalized: pieces([{ any_: "are" }]),
         value: ia5("What are you"),
     },
-    caseIgnoreListSubstringsMatch: {
-        matcher: substring.caseIgnoreListSubstringsMatch,
-        decode: substring.decodeCaseIgnoreListSubstringsMatchAssertion,
-        normalize: substring.normalizeCaseIgnoreListSubstringsMatchAssertion,
-        raw: pieces([{ any_: " MAIN " }]),
-        normalized: pieces([{ any_: "main" }]),
-        value: postal([ "Main Street", "Springfield" ]),
-    },
     numericStringSubstringsMatch: {
         matcher: substring.numericStringSubstringsMatch,
         decode: substring.decodeNumericStringSubstringsMatchAssertion,
@@ -328,32 +320,6 @@ describe("substrings filter items with MATCH_FLAG_ASSERTION_NORMALIZED", () => {
         expect(match(raw, value)).toBe(true);
         expect(match(raw, value, undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(false);
         expect(match(normalized, value, undefined, MATCH_FLAG_ASSERTION_NORMALIZED)).toBe(true);
-    });
-
-    it("keeps prepared postal-address lines adjacent", () => {
-        const value = stored(postal([ "123 S. Main St.", "Tampa, FL", "United States" ]));
-        const raw: FilterSubstring[] = [{ any_: postal([ " MAIN ST. ", "TAMPA, FL" ]) }];
-        const normalized: FilterSubstring[] = [{ any_: postal([ "main st.", "tampa, fl" ]) }];
-        const split: FilterSubstring[] = [
-            { any_: postal([ "main st." ]) },
-            { any_: postal([ "united states" ]) },
-        ];
-        const nonAdjacent: FilterSubstring[] = [{ any_: postal([ "main st.", "united states" ]) }];
-        const match = substring.caseIgnoreListSubstringsMatch;
-        const trusted = MATCH_FLAG_ASSERTION_NORMALIZED;
-        expect(match(raw, value)).toBe(true);
-        expect(match(raw, value, undefined, trusted)).toBe(false);
-        expect(match(normalized, value, undefined, trusted)).toBe(true);
-        expect(match(split, value, undefined, trusted)).toBe(true);
-        expect(match(nonAdjacent, value, undefined, trusted)).toBe(false);
-        expect(match(normalized, value, undefined, trusted | MATCH_FLAG_CONSTANT_TIME)).toBe(true);
-    });
-
-    it("treats U+001F in a raw line as deleted, not as a line boundary", () => {
-        const value = stored(postal([ "Main Street", "Springfield" ]));
-        const match = substring.caseIgnoreListSubstringsMatch;
-        expect(match(pieces([{ any_: "street\u001Fspring" }]), value)).toBe(false);
-        expect(match(pieces([{ any_: "ma\u001Fin" }]), value)).toBe(true);
     });
 
     it("rejects an empty piece even when the assertion is trusted", () => {

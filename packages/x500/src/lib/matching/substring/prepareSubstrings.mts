@@ -195,6 +195,19 @@ function decodeDirectoryAssertionPieces (
 }
 
 /**
+ * Decode a `SubstringAssertion` and prepare each directory-string
+ * piece. `control` is copied through.
+ */
+export
+function directoryAssertionPieces (
+    el: ASN1Element,
+    prepare: StringPreparer,
+    rule: string,
+): AssertedSubstring<string>[] {
+    return normalizePieces(decodeDirectoryAssertionPieces(el, rule), prepare, rule, el);
+}
+
+/**
  * Decode `FilterItem.substrings.strings` whose components are
  * `UnboundedDirectoryString` values, without preparing them.
  */
