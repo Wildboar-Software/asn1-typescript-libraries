@@ -93,11 +93,19 @@ function prepareWord (text: string): string | undefined {
 }
 
 /**
- * Decode the presented word without preparing it.
+ * Decode the presented word without preparing it. An empty word is
+ * always rejected, because `containsWord` never terminates on one.
  */
 export
 function decodeWordMatchAssertion (el: ASN1Element): string {
-    return readDirectoryString(el);
+    const raw = readDirectoryString(el);
+    if (raw.length === 0) {
+        throw new ASN1CharactersError(
+            "wordMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return raw;
 }
 
 /**

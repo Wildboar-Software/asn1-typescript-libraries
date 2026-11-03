@@ -5,6 +5,7 @@ import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import { dnsNameMatchTyped, prepareDnsAssertion } from "./dnsNameMatch.mjs";
 import {
     createEqualityMatcher,
+    MATCH_FLAG_ASSERTION_NORMALIZED,
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
     type Matcher,
@@ -52,10 +53,20 @@ function normalizeIntEmailMatchAssertion (
  * Split on the last `@` and prepare both parts. `undefined` means
  * the address has no local-part or no domain-part, which is FALSE.
  * A local-part or domain that cannot be prepared throws.
+ * `MATCH_FLAG_ASSERTION_NORMALIZED` splits without preparing.
  */
-function prepareIntEmail (raw: string): PreparedIntEmail | undefined {
+function prepareIntEmail (
+    raw: string,
+    el?: ASN1Element,
+    flags: number = 0,
+): PreparedIntEmail | undefined {
     const split = splitIntEmail(raw);
-    return split && normalizeIntEmailMatchAssertion(split);
+    if (!split) {
+        return undefined;
+    }
+    return (flags & MATCH_FLAG_ASSERTION_NORMALIZED)
+        ? split
+        : normalizeIntEmailMatchAssertion(split, el);
 }
 
 /**
@@ -66,7 +77,8 @@ function prepareIntEmail (raw: string): PreparedIntEmail | undefined {
  * uses `dnsNameMatch` (clause 8.9.2).
  *
  * @param assertion Presented address. A `[local, domain]` pair is
- *  already prepared. A string or element is split and prepared here.
+ *  already prepared. A string or element is split and prepared here,
+ *  unless `MATCH_FLAG_ASSERTION_NORMALIZED` is set.
  * @param value Stored address, or that address already decoded.
  */
 export
@@ -77,9 +89,9 @@ function intEmailMatchTyped (
     flags: number = 0,
 ): boolean | undefined {
     const presented = typeof assertion === "string"
-        ? prepareIntEmail(assertion)
+        ? prepareIntEmail(assertion, undefined, flags)
         : ASN1Element.isElement(assertion)
-            ? prepareIntEmail(assertion.utf8String)
+            ? prepareIntEmail(assertion.utf8String, assertion, flags)
             : assertion;
     if (!presented) {
         if (flags & MATCH_FLAG_DEBUG) {

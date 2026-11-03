@@ -2,6 +2,7 @@ import type { ASN1Element } from "@wildboar/asn1";
 import {
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
+    MATCH_FLAG_HIGH_WORK_BUDGET,
     type ContextMatcher,
 } from "../../types/matching.mjs";
 import { id_avc_temporal } from "../../modules/SelectedAttributeTypes/id-avc-temporal.va.mjs";
@@ -57,6 +58,11 @@ function inSpecTimeZone (instant: Date, timeZone: number | undefined): Date {
  * band could otherwise iterate without bound.
  */
 const MAX_ENTIRELY_COVER_STEPS = 1000;
+
+/**
+ * {@link MAX_ENTIRELY_COVER_STEPS} when `MATCH_FLAG_HIGH_WORK_BUDGET` is set.
+ */
+const MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET = 100_000;
 
 /**
  * @summary Instant one second after `instant`.
@@ -124,7 +130,8 @@ function farthestOccurrenceEndCovering (periods: Period[], t: Date): Date | null
  * Walk `t` from `start`; at each `t` take the farthest covering
  * occurrence end and continue at the next second. A hole, or more
  * than {@link MAX_ENTIRELY_COVER_STEPS} steps, fails. Open-ended
- * assertions use `MAX_DATE`.
+ * assertions use `MAX_DATE`. `MATCH_FLAG_HIGH_WORK_BUDGET` raises the
+ * cap to {@link MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET}.
  *
  * @param {Period[]} periods Stored `TimeSpecification.time.periodic`.
  * @param {Date} start Inclusive start of the asserted band (spec zone).
@@ -143,14 +150,17 @@ function periodsEntirelyCoverInterval (
     if (start.valueOf() > end.valueOf()) {
         return false;
     }
+    const maxSteps: number = (flags & MATCH_FLAG_HIGH_WORK_BUDGET)
+        ? MAX_ENTIRELY_COVER_STEPS_HIGH_WORK_BUDGET
+        : MAX_ENTIRELY_COVER_STEPS;
     let t: Date = start;
     let steps: number = 0;
     while (t.valueOf() <= end.valueOf()) {
         steps += 1;
-        if (steps > MAX_ENTIRELY_COVER_STEPS) {
+        if (steps > maxSteps) {
             if (flags & MATCH_FLAG_DEBUG) {
                 console.error(
-                    `@wildboar/x500: debug: temporalContext: exceeded ${MAX_ENTIRELY_COVER_STEPS} cover steps`,
+                    `@wildboar/x500: debug: temporalContext: exceeded ${maxSteps} cover steps`,
                 );
             }
             return false;
@@ -295,7 +305,8 @@ function timeSpecificationContains (
  *
  * @param a Presented time assertion.
  * @param v Stored time specification.
- * @param flags `MATCH_FLAG_CONSTANT_TIME`.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME`, `MATCH_FLAG_DEBUG`, and
+ *  `MATCH_FLAG_HIGH_WORK_BUDGET`.
  * @returns `true` when the assertion overlaps the specification.
  */
 export

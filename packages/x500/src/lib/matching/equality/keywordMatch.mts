@@ -27,11 +27,19 @@ function prepareKeyword (text: string): string | undefined {
 }
 
 /**
- * Decode the presented keyword without preparing it.
+ * Decode the presented keyword without preparing it. An empty keyword
+ * is always rejected, because `containsWord` never terminates on one.
  */
 export
 function decodeKeywordMatchAssertion (el: ASN1Element): string {
-    return readKeyword(el);
+    const raw = readKeyword(el);
+    if (raw.length === 0) {
+        throw new ASN1CharactersError(
+            "keywordMatch assertion failed string preparation",
+            el,
+        );
+    }
+    return raw;
 }
 
 /**

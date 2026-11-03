@@ -1,5 +1,4 @@
 import type { ASN1Element } from "@wildboar/asn1";
-import type { ASN1Decoder } from "@wildboar/asn1/functional";
 import type {
     FilterItem_substrings_strings_Item,
 } from "../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
@@ -196,6 +195,29 @@ type ContextMatcher = (
 ) => boolean;
 
 /**
+ * A function that decodes (and optionally validates) an assertion from its
+ * ASN.1 encoding. Any `ASN1Decoder` from `@wildboar/asn1/functional` is also
+ * an `AssertionDecoder`.
+ * 
+ * `flags` are the flags passed to the matcher. Decoders use
+ * `MATCH_FLAG_ASSERTION_VALIDATED` to skip validation of the assertion.
+ * 
+ * Malformed assertions are expected to throw errors.
+ */
+export
+type AssertionDecoder<A> = (el: ASN1Element, flags: number) => A;
+
+/**
+ * A function that converts the strings of a `substrings` filter item into a
+ * typed assertion. `flags` are used as in {@link AssertionDecoder}.
+ */
+export
+type SubstringsConverter<A> = (
+    strings: FilterItem_substrings_strings_Item[],
+    flags: number,
+) => A;
+
+/**
  * A function that normalizes a decoded assertion so that it is ready to be
  * compared with values, such as by performing the string preparation
  * procedures described in ITU-T Recommendation X.520 (2019), Section 7.
@@ -378,7 +400,8 @@ function useOrderingAsEquality<A>(
  * 
  * All parameters of the returned function are used as they are described,
  * including the `matchedValues` parameter, to which the matched values are
- * pushed, if provided.
+ * pushed, if provided. `flags` is also passed to `assertionDecoder` and
+ * `subtringsConverter`.
  * 
  * @param assertionDecoder function that decodes something from an ASN.1 encoding
  * @param valueMatcher function that takes a typed assertion and a value and returns a
@@ -398,9 +421,9 @@ function useOrderingAsEquality<A>(
  */
 export
 function createEqualityMatcher<A>(
-    assertionDecoder: ASN1Decoder<A>,
+    assertionDecoder: AssertionDecoder<A>,
     valueMatcher: TypedEquationFunction<A>,
-    subtringsConverter?: (strings: FilterItem_substrings_strings_Item[]) => A,
+    subtringsConverter?: SubstringsConverter<A>,
     assertionSyntaxDiffersFromValueSyntax: boolean = false,
     assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
@@ -420,9 +443,9 @@ function createEqualityMatcher<A>(
                     + `matching assertion for attribute type ${oid}`
                 );
             }
-            decodedAssertion = subtringsConverter(assertion);
+            decodedAssertion = subtringsConverter(assertion, flags);
         } else {
-            decodedAssertion = assertionDecoder(assertion);
+            decodedAssertion = assertionDecoder(assertion, flags);
         }
         if (assertionNormalizer && !(flags & MATCH_FLAG_ASSERTION_NORMALIZED)) {
             decodedAssertion = assertionNormalizer(
@@ -570,7 +593,7 @@ function createEqualityMatcher<A>(
  */
 export
 function createOrderingMatcher<A>(
-    assertionDecoder: ASN1Decoder<A>,
+    assertionDecoder: AssertionDecoder<A>,
     valueMatcher: TypedOrderingFunction<A>,
     assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
@@ -600,9 +623,9 @@ function createOrderingMatcher<A>(
  */
 export
 function createSubstringsMatcher<A>(
-    assertionDecoder: ASN1Decoder<A>,
+    assertionDecoder: AssertionDecoder<A>,
     valueMatcher: TypedEquationFunction<A>,
-    subtringsConverter: (strings: FilterItem_substrings_strings_Item[]) => A,
+    subtringsConverter: SubstringsConverter<A>,
     assertionNormalizer?: AssertionNormalizer<A>,
 ): Matcher {
     return createEqualityMatcher(

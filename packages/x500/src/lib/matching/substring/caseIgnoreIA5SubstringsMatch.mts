@@ -58,8 +58,11 @@ caseIgnoreIA5SubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstr
  * Decode a `SubstringAssertion` without preparing its pieces.
  */
 export
-function decodeCaseIgnoreIA5SubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
-    return decodeDirectoryAssertionPieces(el, RULE);
+function decodeCaseIgnoreIA5SubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
 }
 
 /**
@@ -69,8 +72,9 @@ function decodeCaseIgnoreIA5SubstringsMatchAssertion (el: ASN1Element): Asserted
 export
 function decodeCaseIgnoreIA5SubstringsMatchFilterPieces (
     items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return decodeFilterPieces(items, (el) => el.ia5String, RULE);
+    return decodeFilterPieces(items, (el) => el.ia5String, RULE, flags);
 }
 
 /**

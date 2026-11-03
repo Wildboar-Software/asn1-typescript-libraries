@@ -13,6 +13,7 @@ import {
 import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
 import {
     getStringSubstringsMatcher,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_DEBUG,
     MATCH_FLAG_VALUE_NORMALIZED,
     type AssertedSubstring,
@@ -136,13 +137,15 @@ function validateAnchors<T> (
 
 /**
  * Map substring CHOICE values to prepared pieces. An unrecognized
- * alternative is an assertion error.
+ * alternative is an assertion error. `MATCH_FLAG_ASSERTION_VALIDATED`
+ * skips checking the placement of `initial` and `final`.
  */
 export
 function mapSubstringChoices<T, U> (
     items: readonly SubstringChoice<T>[],
     convert: (component: T) => U,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<U>[] {
     const out: AssertedSubstring<U>[] = new Array(items.length);
     for (let i = 0; i < items.length; i++) {
@@ -162,7 +165,9 @@ function mapSubstringChoices<T, U> (
             throw anchorError(rule, "unrecognized substring alternative");
         }
     }
-    validateAnchors(out, rule);
+    if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED)) {
+        validateAnchors(out, rule);
+    }
     return out;
 }
 
@@ -186,11 +191,13 @@ export
 function decodeDirectoryAssertionPieces (
     el: ASN1Element,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(
         _decode_SubstringAssertion(el),
         (ds) => nonEmptyPiece(directoryStringToString(ds), rule, el),
         rule,
+        flags,
     );
 }
 
@@ -203,8 +210,9 @@ function directoryAssertionPieces (
     el: ASN1Element,
     prepare: StringPreparer,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return normalizePieces(decodeDirectoryAssertionPieces(el, rule), prepare, rule, el);
+    return normalizePieces(decodeDirectoryAssertionPieces(el, rule, flags), prepare, rule, el);
 }
 
 /**
@@ -215,11 +223,13 @@ export
 function decodeDirectoryFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
     return decodeFilterPieces(
         items,
         (component) => directoryStringToString(_decode_UnboundedDirectoryString(component)),
         rule,
+        flags,
     );
 }
 
@@ -233,11 +243,13 @@ function decodeFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
     read: (component: ASN1Element) => string,
     rule: string,
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
     return mapSubstringChoices(
         items,
         (component) => nonEmptyPiece(read(component), rule, component),
         rule,
+        flags,
     );
 }
 

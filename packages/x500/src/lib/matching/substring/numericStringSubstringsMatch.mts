@@ -63,8 +63,11 @@ numericStringSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstr
  * Decode a `SubstringAssertion` without removing spaces from its pieces.
  */
 export
-function decodeNumericStringSubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
-    return decodeDirectoryAssertionPieces(el, RULE);
+function decodeNumericStringSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
 }
 
 /**
@@ -74,8 +77,9 @@ function decodeNumericStringSubstringsMatchAssertion (el: ASN1Element): Asserted
 export
 function decodeNumericStringSubstringsMatchFilterPieces (
     items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return decodeFilterPieces(items, (el) => el.numericString, RULE);
+    return decodeFilterPieces(items, (el) => el.numericString, RULE, flags);
 }
 
 /**
