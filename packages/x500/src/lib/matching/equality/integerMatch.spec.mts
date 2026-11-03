@@ -7,7 +7,8 @@ import {
 } from "@wildboar/asn1";
 import { DER, _encodeEnumerated, _encodeInteger } from "@wildboar/asn1/functional";
 import { Attribute } from "../../modules/InformationFramework/Attribute.ta.mjs";
-import integerMatch from "./integerMatch.mjs";
+import integerMatch, { integerMatchTyped } from "./integerMatch.mjs";
+import { integerFirstComponentMatchTyped } from "./integerFirstComponentMatch.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const match = onStoredValue(integerMatch);
@@ -34,6 +35,14 @@ describe("integerMatch", () => {
         expect(match(_encodeInteger(1, DER), _encodeInteger(-1, DER))).toBe(false);
         expect(match(_encodeInteger(128, DER), _encodeInteger(-128, DER))).toBe(false);
         expect(match(_encodeInteger(255, DER), _encodeInteger(-1, DER))).toBe(false);
+    });
+
+    it("equates a number with the same bigint", () => {
+        expect(integerMatchTyped(5, 5n)).toBe(true);
+        expect(integerMatchTyped(5n, 5)).toBe(true);
+        expect(integerMatchTyped(5, 6n)).toBe(false);
+        expect(integerFirstComponentMatchTyped(5n, 5)).toBe(true);
+        expect(integerFirstComponentMatchTyped(5, 6n)).toBe(false);
     });
 
     it("matches integers larger than a JavaScript number", () => {

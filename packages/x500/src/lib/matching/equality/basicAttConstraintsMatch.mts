@@ -60,16 +60,23 @@ function basicAttConstraintsMatchTyped (
         return false;
     }
     if (
-        (flags & MATCH_FLAG_APPROXIMATE)
-        && a.pathLenConstraint !== undefined
-        && storedValue.pathLenConstraint !== undefined
+        (a.pathLenConstraint === undefined)
+        !== (storedValue.pathLenConstraint === undefined)
     ) {
-        return approximatelyEqualBigInts(
-            readInteger(a.pathLenConstraint),
-            readInteger(storedValue.pathLenConstraint),
-        );
+        return false;
     }
-    return (a.pathLenConstraint === storedValue.pathLenConstraint);
+    if (
+        (a.pathLenConstraint === undefined)
+        || (storedValue.pathLenConstraint === undefined)
+    ) {
+        return true;
+    }
+    const assertedLen = readInteger(a.pathLenConstraint);
+    const storedLen = readInteger(storedValue.pathLenConstraint);
+    if (flags & MATCH_FLAG_APPROXIMATE) {
+        return approximatelyEqualBigInts(assertedLen, storedLen);
+    }
+    return (assertedLen === storedLen);
 }
 
 basicAttConstraintsMatchTyped satisfies TypedEquationFunction<BasicAttConstraintsSyntax>;

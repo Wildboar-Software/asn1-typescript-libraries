@@ -53,9 +53,11 @@ function supplierOrConsumerInformationMatchTyped (
 ): boolean {
     const v = readDecoded(value, _decode_ConsumerInformation);
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
+    const assertedId = readInteger(a.agreement_identifier);
+    const storedId = readInteger(v.agreementID.identifier);
     const idMatches = (flags & MATCH_FLAG_APPROXIMATE)
-        ? approximatelyEqualBigInts(readInteger(a.agreement_identifier), readInteger(v.agreementID.identifier))
-        : (a.agreement_identifier === v.agreementID.identifier);
+        ? approximatelyEqualBigInts(assertedId, storedId)
+        : (assertedId === storedId);
     if (!idMatches && !(flags & MATCH_FLAG_CONSTANT_TIME)) {
         return false;
     }

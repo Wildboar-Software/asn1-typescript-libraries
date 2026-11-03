@@ -1,6 +1,8 @@
 import { ASN1Element, DERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { approximatelyEqualBigInts } from "../approximate.mjs";
 import { stringsEqual } from "../constantTime.mjs";
+import { readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
@@ -147,18 +149,18 @@ function timeSpecificationsEqual (
     }
 
     const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
-    if (
-        // If the timezone was actually asserted.
-        (typeof assertedTime.timeZone === "number")
-        // And they don't match.
-        && (
-            typeof storedTime.timeZone !== "number"
-            || (approximate
-                ? (Math.abs(storedTime.timeZone - assertedTime.timeZone) > 1)
-                : (storedTime.timeZone !== assertedTime.timeZone))
-        )
-    ) {
-        return false;
+    if (assertedTime.timeZone !== undefined) {
+        if (storedTime.timeZone === undefined) {
+            return false;
+        }
+        const assertedZone = readInteger(assertedTime.timeZone);
+        const storedZone = readInteger(storedTime.timeZone);
+        const zonesMatch = approximate
+            ? approximatelyEqualBigInts(storedZone, assertedZone)
+            : (assertedZone === storedZone);
+        if (!zonesMatch) {
+            return false;
+        }
     }
 
     const storedTimeExts = storedTime._unrecognizedExtensionsList ?? [];

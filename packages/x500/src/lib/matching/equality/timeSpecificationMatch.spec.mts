@@ -18,7 +18,10 @@ import {
 } from "../../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { Period } from "../../modules/SelectedAttributeTypes/Period.ta.mjs";
 import { Period_days_bitDay_monday } from "../../modules/SelectedAttributeTypes/Period-days-bitDay.ta.mjs";
-import timeSpecificationMatch_ from "./timeSpecificationMatch.mjs";
+import timeSpecificationMatch_, {
+    timeSpecificationMatchTyped,
+} from "./timeSpecificationMatch.mjs";
+import { MATCH_FLAG_APPROXIMATE } from "../../types/matching.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const timeSpecificationMatch = onStoredValue(timeSpecificationMatch_);
@@ -102,6 +105,45 @@ describe("timeSpecificationMatch() period normalization", () => {
         expect(timeSpecificationMatch(
             assertionWithPeriod(new Period(undefined, { intDay: [2] })),
             acWithPeriod(new Period(undefined, { intDay: [2] }, undefined, { allMonths: null })),
+        )).toBe(false);
+    });
+});
+
+describe("timeSpecificationMatchTyped() time zone", () => {
+    const period = new Period(undefined, { intDay: [2] });
+    const spec = (timeZone?: number | bigint) => new TimeSpecification(
+        { periodic: [period] },
+        undefined,
+        timeZone,
+    );
+
+    it("equates a number time zone with the same bigint", () => {
+        expect(timeSpecificationMatchTyped(spec(5), spec(5n))).toBe(true);
+        expect(timeSpecificationMatchTyped(spec(5n), spec(5))).toBe(true);
+        expect(timeSpecificationMatchTyped(spec(-12), spec(-12n))).toBe(true);
+    });
+
+    it("rejects a different time zone", () => {
+        expect(timeSpecificationMatchTyped(spec(5), spec(6n))).toBe(false);
+        expect(timeSpecificationMatchTyped(spec(5), spec())).toBe(false);
+    });
+
+    it("ignores the stored time zone when none is asserted", () => {
+        expect(timeSpecificationMatchTyped(spec(), spec(5n))).toBe(true);
+    });
+
+    it("treats time zones one hour apart as approximate", () => {
+        expect(timeSpecificationMatchTyped(
+            spec(5),
+            spec(6n),
+            undefined,
+            MATCH_FLAG_APPROXIMATE,
+        )).toBe(true);
+        expect(timeSpecificationMatchTyped(
+            spec(5n),
+            spec(7),
+            undefined,
+            MATCH_FLAG_APPROXIMATE,
         )).toBe(false);
     });
 });
