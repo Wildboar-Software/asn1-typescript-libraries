@@ -1,15 +1,16 @@
-import { Buffer } from "node:buffer";
 import {
     ASN1Construction,
     ASN1ConstructionError,
     ASN1PaddingError,
     ASN1SizeError,
+    ASN1TagClass,
+    ASN1UniversalType,
+    DERElement,
     type ASN1Element,
     type INTEGER,
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
-import { readInteger } from "../readValue.mjs";
+import { approximatelyEqualIntegers } from "../approximate.mjs";
 import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
@@ -35,12 +36,16 @@ function integerMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const a = readInteger(assertion);
-    const v = readInteger(value);
+    const stored = (
+        (typeof value === "number") || (typeof value === "bigint")
+    )
+        ? value
+        : value.integer;
     if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualBigInts(a, v);
+        return approximatelyEqualIntegers(assertion, stored);
     }
-    return a === v;
+    // `==` matches a number with the same bigint without allocating.
+    return assertion == stored;
 }
 
 integerMatchTyped satisfies TypedEquationFunction<INTEGER>;
@@ -93,9 +98,20 @@ function integerMatchOctets (
         return equal;
     }
     const vOctets = integerAssertionOctets(value);
-    const aVal = BigInt.asIntN(assertion.length * 8, BigInt("0x" + Buffer.from(assertion).toString("hex")));
-    const vVal = BigInt.asIntN(vOctets.length * 8, BigInt("0x" + Buffer.from(vOctets).toString("hex")));
-    return approximatelyEqualBigInts(aVal, vVal);
+    return approximatelyEqualIntegers(
+        integerFromContent(assertion),
+        integerFromContent(vOctets),
+    );
+}
+
+function integerFromContent (octets: Uint8Array): INTEGER {
+    const el = new DERElement(
+        ASN1TagClass.universal,
+        ASN1Construction.primitive,
+        ASN1UniversalType.integer,
+    );
+    el.value = octets;
+    return el.integer;
 }
 
 integerMatchOctets satisfies TypedEquationFunction<Uint8Array>;

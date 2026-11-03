@@ -1,3 +1,5 @@
+import type { INTEGER } from "@wildboar/asn1";
+
 /**
  * True if two equal-length strings are identical or differ in at most 1 character.
  */
@@ -120,4 +122,29 @@ export
 function approximatelyEqualBigInts (a: bigint, b: bigint): boolean {
     const diff = a - b;
     return diff >= -1n && diff <= 1n;
+}
+
+/**
+ * True if two `INTEGER` values are equal or differ by at most 1.
+ *
+ * `==` equates a `number` with the same `bigint` (`5 == 5n`) without
+ * allocating a bigint for a value that is already a number.
+ */
+export
+function approximatelyEqualIntegers (a: INTEGER, b: INTEGER): boolean {
+    if (a == b) {
+        return true;
+    }
+    if ((typeof a === "number") && (typeof b === "number")) {
+        return Math.abs(a - b) <= 1;
+    }
+    if ((typeof a === "bigint") && (typeof b === "bigint")) {
+        return approximatelyEqualBigInts(a, b);
+    }
+    const big = (typeof a === "bigint") ? a : b;
+    const other = (typeof a === "bigint") ? b : a;
+    if (typeof big !== "bigint") {
+        return false;
+    }
+    return (other == (big + 1n)) || (other == (big - 1n));
 }

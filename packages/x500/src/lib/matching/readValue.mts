@@ -143,29 +143,16 @@ function readFirstDirectoryString (value: DirectoryStringInput): string | undefi
 export type IntegerInput = ASN1Element | number | bigint;
 
 /**
- * @param value Element, `number`, or `bigint`.
- * @returns The integer as `bigint`.
- */
-export
-function readInteger (value: IntegerInput): bigint {
-    if (typeof value === "number") {
-        return BigInt(value);
-    }
-    if (typeof value === "bigint") {
-        return value;
-    }
-    const decoded: INTEGER = value.integer;
-    return typeof decoded === "bigint" ? decoded : BigInt(decoded);
-}
-
-/**
  * INTEGER assertion, or the INTEGER that is the first component of a
  * SEQUENCE. A `number` or `bigint` is that integer already.
+ *
+ * The decoded `number` or `bigint` is returned as-is. Equality uses `==`,
+ * which treats `5` and `5n` as the same integer.
  */
 export
-function readLeadingInteger (value: IntegerInput): bigint {
+function readLeadingInteger (value: IntegerInput): INTEGER {
     if (typeof value === "number" || typeof value === "bigint") {
-        return readInteger(value);
+        return value;
     }
     if (
         value.tagClass === ASN1TagClass.universal
@@ -174,11 +161,11 @@ function readLeadingInteger (value: IntegerInput): bigint {
             || value.tagNumber === ASN1UniversalType.enumerated
         )
     ) {
-        return readInteger(value);
+        return value.integer;
     }
     const inner = new BERElement();
     inner.fromBytes(value.value);
-    return readInteger(inner);
+    return inner.integer;
 }
 
 /**

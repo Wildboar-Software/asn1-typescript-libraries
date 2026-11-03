@@ -1,8 +1,7 @@
 import { ASN1Element, DERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
+import { approximatelyEqualIntegers } from "../approximate.mjs";
 import { stringsEqual } from "../constantTime.mjs";
-import { readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
@@ -153,11 +152,9 @@ function timeSpecificationsEqual (
         if (storedTime.timeZone === undefined) {
             return false;
         }
-        const assertedZone = readInteger(assertedTime.timeZone);
-        const storedZone = readInteger(storedTime.timeZone);
         const zonesMatch = approximate
-            ? approximatelyEqualBigInts(storedZone, assertedZone)
-            : (assertedZone === storedZone);
+            ? approximatelyEqualIntegers(assertedTime.timeZone, storedTime.timeZone)
+            : (assertedTime.timeZone == storedTime.timeZone);
         if (!zonesMatch) {
             return false;
         }

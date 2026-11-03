@@ -7,7 +7,6 @@ import {
     type INTEGER,
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { readInteger } from "../readValue.mjs";
 import { ctCompareBytes } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
@@ -83,8 +82,9 @@ function compareEncodedIntegers (
  * Signed comparison of a presented INTEGER with a stored INTEGER.
  * Positive when the stored value is less than the presented value.
  * When both are encoded, their content octets are compared directly
- * without decoding either. Otherwise, the difference is taken in `bigint`
- * so values outside `Number.MAX_SAFE_INTEGER` keep their order.
+ * without decoding either. Otherwise numbers are subtracted as numbers.
+ * A `bigint` is subtracted as a `bigint`, and only a paired `number` is
+ * converted, so values outside `Number.MAX_SAFE_INTEGER` keep their order.
  *
  * @param assertion Presented INTEGER, encoded or already decoded. An encoded
  *  assertion is not validated here, so the caller must have already checked
@@ -106,7 +106,27 @@ function integerOrderingMatchTyped (
             flags & MATCH_FLAG_CONSTANT_TIME,
         );
     }
-    return Number(readInteger(assertion) - readInteger(value));
+    return compareDecodedIntegers(
+        (typeof assertion === "object") ? assertion.integer : assertion,
+        (typeof value === "object") ? value.integer : value,
+    );
+}
+
+/**
+ * Signed `assertion - value`. Two numbers stay numbers. A mixed pair
+ * converts only the number, because relational operators throw on
+ * `number` mixed with `bigint`.
+ */
+function compareDecodedIntegers (assertion: INTEGER, value: INTEGER): number {
+    if ((typeof assertion === "number") && (typeof value === "number")) {
+        return assertion - value;
+    }
+    if ((typeof assertion === "bigint") && (typeof value === "bigint")) {
+        return Number(assertion - value);
+    }
+    const asserted = (typeof assertion === "bigint") ? assertion : BigInt(assertion);
+    const stored = (typeof value === "bigint") ? value : BigInt(value);
+    return Number(asserted - stored);
 }
 
 integerOrderingMatchTyped satisfies TypedOrderingFunction<INTEGER>;

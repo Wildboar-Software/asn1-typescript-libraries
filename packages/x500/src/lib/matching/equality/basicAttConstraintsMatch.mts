@@ -1,7 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
-import { readDecoded, readInteger } from "../readValue.mjs";
+import { approximatelyEqualIntegers } from "../approximate.mjs";
+import { readDecoded } from "../readValue.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
@@ -60,23 +60,17 @@ function basicAttConstraintsMatchTyped (
         return false;
     }
     if (
-        (a.pathLenConstraint === undefined)
-        !== (storedValue.pathLenConstraint === undefined)
+        (flags & MATCH_FLAG_APPROXIMATE)
+        && (a.pathLenConstraint !== undefined)
+        && (storedValue.pathLenConstraint !== undefined)
     ) {
-        return false;
+        return approximatelyEqualIntegers(
+            a.pathLenConstraint,
+            storedValue.pathLenConstraint,
+        );
     }
-    if (
-        (a.pathLenConstraint === undefined)
-        || (storedValue.pathLenConstraint === undefined)
-    ) {
-        return true;
-    }
-    const assertedLen = readInteger(a.pathLenConstraint);
-    const storedLen = readInteger(storedValue.pathLenConstraint);
-    if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualBigInts(assertedLen, storedLen);
-    }
-    return (assertedLen === storedLen);
+    // `==` matches a number with the same bigint. Absent matches absent.
+    return a.pathLenConstraint == storedValue.pathLenConstraint;
 }
 
 basicAttConstraintsMatchTyped satisfies TypedEquationFunction<BasicAttConstraintsSyntax>;

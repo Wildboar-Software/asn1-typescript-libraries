@@ -1,8 +1,8 @@
 import type { INTEGER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
+import { approximatelyEqualIntegers } from "../approximate.mjs";
 import type { IntegerInput } from "../readValue.mjs";
-import { readInteger, readLeadingInteger } from "../readValue.mjs";
+import { readLeadingInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
@@ -29,12 +29,12 @@ function integerFirstComponentMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const a = readInteger(assertion);
-    const v = readLeadingInteger(value);
+    const stored = readLeadingInteger(value);
     if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualBigInts(a, v);
+        return approximatelyEqualIntegers(assertion, stored);
     }
-    return a === v;
+    // `==` matches a number with the same bigint without allocating.
+    return assertion == stored;
 }
 
 integerFirstComponentMatchTyped satisfies TypedEquationFunction<INTEGER>;

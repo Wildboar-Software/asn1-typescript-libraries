@@ -1,4 +1,4 @@
-import { readDecoded, readInteger } from "../readValue.mjs";
+import { readDecoded } from "../readValue.mjs";
 import { ASN1Element, DERElement, FALSE_BIT, type INTEGER, TRUE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
@@ -42,6 +42,33 @@ import {
 } from "../../modules/CertificateExtensions/IssuingDistPointSyntax.ta.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 import { compareRelativeDistinguishedName } from "@wildboar/dn";
+
+/**
+ * `a < b` for `INTEGER`. Two numbers stay numbers. A mixed pair converts
+ * only the number, because `number < bigint` throws.
+ */
+function integerLessThan (a: INTEGER, b: INTEGER): boolean {
+    if ((typeof a === "number") && (typeof b === "number")) {
+        return a < b;
+    }
+    if ((typeof a === "bigint") && (typeof b === "bigint")) {
+        return a < b;
+    }
+    const av = (typeof a === "bigint") ? a : BigInt(a);
+    const bv = (typeof b === "bigint") ? b : BigInt(b);
+    return av < bv;
+}
+
+/** Add `delta` without changing a number into a bigint. */
+function shiftInteger (value: INTEGER, delta: number): INTEGER {
+    if (delta === 0) {
+        return value;
+    }
+    if (typeof value === "bigint") {
+        return value + BigInt(delta);
+    }
+    return value + delta;
+}
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.6 `certificateListMatch`.
@@ -102,7 +129,7 @@ function certificateListMatchTyped (
         if (crlNumber === undefined) {
             return false;
         }
-        if (readInteger(crlNumber) < (readInteger(a.minCRLNumber) - (approximate ? 1n : 0n))) {
+        if (integerLessThan(crlNumber, shiftInteger(a.minCRLNumber, approximate ? -1 : 0))) {
             return false;
         }
     }
@@ -111,7 +138,7 @@ function certificateListMatchTyped (
         if (crlNumber === undefined) {
             return false;
         }
-        if (readInteger(crlNumber) > (readInteger(a.maxCRLNumber) + (approximate ? 1n : 0n))) {
+        if (integerLessThan(shiftInteger(a.maxCRLNumber, approximate ? 1 : 0), crlNumber)) {
             return false;
         }
     }
