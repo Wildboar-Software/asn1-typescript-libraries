@@ -48,7 +48,6 @@ import jidMatch from "./equality/jidMatch.mjs";
 import keywordMatch from "./equality/keywordMatch.mjs";
 import numericStringMatch from "./equality/numericStringMatch.mjs";
 import objectIdentifierMatch from "./equality/objectIdentifierMatch.mjs";
-import sOAIdentifierMatch from "./equality/sOAIdentifierMatch.mjs";
 import telephoneNumberMatch from "./equality/telephoneNumberMatch.mjs";
 import uriMatch from "./equality/uriMatch.mjs";
 import wordMatch from "./equality/wordMatch.mjs";
@@ -251,13 +250,6 @@ describe("MATCH_FLAG_ASSERTION_VALIDATED", () => {
         const bad = dual("read\uFFFD", "file");
         expect(() => dualStringMatch(bad, atav(dual("read", "file")))).toThrow();
         expect(dualStringMatch(bad, atav(dual("read", "file")), undefined, AV)).toBe(false);
-    });
-
-    it("skips checking that a sOAIdentifierMatch assertion is NULL", () => {
-        const notNull = _encodeInteger(1, DER);
-        const value = atav(_encodeInteger(1, DER));
-        expect(() => sOAIdentifierMatch(notNull, value)).toThrow();
-        expect(() => sOAIdentifierMatch(notNull, value, undefined, AV)).not.toThrow();
     });
 
     it("still rejects an empty keyword or word assertion", () => {

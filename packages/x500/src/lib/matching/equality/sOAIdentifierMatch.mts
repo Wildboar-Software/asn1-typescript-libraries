@@ -16,7 +16,6 @@ import {
 } from "../../modules/AttributeCertificateDefinitions/id-ce-sOAIdentifier.va.mjs";
 import {
     createEqualityMatcher,
-    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_CONSTANT_TIME,
     type Matcher,
     type TypedEquationFunction,
@@ -59,11 +58,7 @@ function sOAIdentifierMatchTyped (
 
 sOAIdentifierMatchTyped satisfies TypedEquationFunction<null>;
 
-/** `MATCH_FLAG_ASSERTION_VALIDATED` skips checking that `el` is NULL. */
-function decodeNullAssertion (el: ASN1Element, flags: number): null {
-    if (flags & MATCH_FLAG_ASSERTION_VALIDATED) {
-        return null;
-    }
+function decodeNullAssertion (el: ASN1Element): null {
     if (
         el.tagClass !== ASN1TagClass.universal
         || el.construction !== ASN1Construction.primitive
