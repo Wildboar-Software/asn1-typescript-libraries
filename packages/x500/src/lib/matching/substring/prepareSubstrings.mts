@@ -10,6 +10,7 @@ import {
 } from "../../modules/InformationFramework/Attribute.ta.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
 import { readDirectoryString } from "../readValue.mjs";
+import type { PrepStringOptions } from "../../utils/prepString.mjs";
 import {
     getStringSubstringsMatcher,
     MATCH_FLAG_ASSERTION_VALIDATED,
@@ -234,17 +235,67 @@ function decodeDirectoryAssertionPieces (
 }
 
 /**
+ * Read each directory-string piece and prepare it from its
+ * alternative. `control` is decoded and copied through. Anchor
+ * placement is not checked.
+ */
+export
+function prepareDirectoryPiecesFromElement (
+    el: ASN1Element,
+    prep: PrepStringOptions,
+    rule: string,
+): AssertedSubstring<string>[] {
+    const items = el.sequenceOf;
+    const out: AssertedSubstring<string>[] = new Array(items.length);
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        if (item.tagClass === ASN1TagClass.context) {
+            const raw = readDirectoryString(item.inner);
+            nonEmptyPiece(raw, rule, el);
+            const prepared = readDirectoryString(item.inner, prep);
+            if (prepared === undefined || prepared.length === 0) {
+                throw new ASN1CharactersError(
+                    `${rule} assertion failed string preparation`,
+                    el,
+                );
+            }
+            if (item.tagNumber === 0) {
+                out[i] = { initial: prepared };
+            } else if (item.tagNumber === 1) {
+                out[i] = { any_: prepared };
+            } else if (item.tagNumber === 2) {
+                out[i] = { final: prepared };
+            } else {
+                throw anchorError(rule, "unrecognized substring alternative");
+            }
+        } else if (
+            item.tagClass === ASN1TagClass.universal
+            && item.tagNumber === ASN1UniversalType.sequence
+        ) {
+            out[i] = { control: _decode_Attribute(item) };
+        } else {
+            throw anchorError(rule, "unrecognized substring alternative");
+        }
+    }
+    return out;
+}
+
+/**
  * Decode a `SubstringAssertion` and prepare each directory-string
  * piece. `control` is copied through.
  */
 export
 function directoryAssertionPieces (
     el: ASN1Element,
-    prepare: StringPreparer,
+    prep: PrepStringOptions,
     rule: string,
     flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return normalizePieces(decodeDirectoryAssertionPieces(el, rule, flags), prepare, rule, el);
+    const pieces = prepareDirectoryPiecesFromElement(el, prep, rule);
+    if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED)) {
+        validateAnchors(pieces, rule);
+    }
+    return pieces;
 }
 
 /**

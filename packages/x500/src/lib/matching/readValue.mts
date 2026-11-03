@@ -32,6 +32,10 @@ import type {
     OctetSubstringAssertion_Item,
 } from "../modules/SelectedAttributeTypes/OctetSubstringAssertion-Item.ta.mjs";
 import directoryStringToString from "../stringifiers/directoryStringToString.mjs";
+import {
+    prepString,
+    type PrepStringOptions,
+} from "../utils/prepString.mjs";
 
 /**
  * Decode `value` when it is an element; otherwise return it unchanged.
@@ -94,13 +98,141 @@ function readEncodedDirectoryString (value: ASN1Element): string {
 }
 
 /**
+ * X.520 clause 7 preparation for a `PrintableString`.
+ *
+ * The type is ASCII letters, digits, space, and `'()+,-./:=?`.
+ * Those characters are already in NFKC, none are prohibited, and
+ * none are mapped to nothing, so this only removes insignificant
+ * spaces and, when requested, folds `A-Z` to `a-z`.
+ *
+ * Returns `false` when `str` contains a character outside that set,
+ * so the caller can fall back to `prepString`.
+ */
+function prepPrintableString (
+    str: string,
+    caseFold: boolean,
+): string | undefined | false {
+    if (str.length === 0) {
+        return undefined;
+    }
+    const chars: string[] = [];
+    let pendingSpace = false;
+    let started = false;
+    for (let i = 0; i < str.length; i++) {
+        const code = str.charCodeAt(i);
+        const printable = code === 0x20
+            || (code >= 0x27 && code <= 0x3A && code !== 0x2A)
+            || code === 0x3D
+            || code === 0x3F
+            || (code >= 0x41 && code <= 0x5A)
+            || (code >= 0x61 && code <= 0x7A);
+        if (!printable) {
+            return false;
+        }
+        if (code === 0x20) {
+            if (started) {
+                pendingSpace = true;
+            }
+            continue;
+        }
+        if (pendingSpace) {
+            chars.push(" ");
+            pendingSpace = false;
+        }
+        started = true;
+        const folded = caseFold && code >= 0x41 && code <= 0x5A
+            ? code + 0x20
+            : code;
+        chars.push(String.fromCharCode(folded));
+    }
+    if (!started) {
+        return " ";
+    }
+    return chars.join("");
+}
+
+function printableChoice (value: object): string | undefined {
+    if (!("printableString" in value)) {
+        return undefined;
+    }
+    const choice = value as {
+        readonly printableString?: unknown;
+        readonly uTF8String?: unknown;
+        readonly bmpString?: unknown;
+        readonly universalString?: unknown;
+        readonly teletexString?: unknown;
+    };
+    if (
+        choice.uTF8String !== undefined
+        || choice.bmpString !== undefined
+        || choice.universalString !== undefined
+        || choice.teletexString !== undefined
+        || typeof choice.printableString !== "string"
+    ) {
+        return undefined;
+    }
+    return choice.printableString;
+}
+
+function preparePrintable (str: string, prep: PrepStringOptions): string | undefined {
+    const prepared = prepPrintableString(str, prep.caseFold === true);
+    if (prepared === false) {
+        return prepString(str, prep);
+    }
+    return prepared;
+}
+
+/**
+ * Character contents, then X.520 string preparation.
+ * A `PrintableString` alternative skips Unicode map, prohibit,
+ * and NFKC. `undefined` means preparation failed.
+ */
+function readPreparedDirectoryString (
+    value: DirectoryStringInput,
+    prep: PrepStringOptions,
+): string | undefined {
+    if (typeof value === "string") {
+        return prepString(value, prep);
+    }
+    if (ASN1Element.isElement(value)) {
+        if (
+            value.tagClass === ASN1TagClass.universal
+            && value.tagNumber === ASN1UniversalType.printableString
+        ) {
+            return preparePrintable(value.printableString, prep);
+        }
+        return prepString(readEncodedDirectoryString(value), prep);
+    }
+    const printable = printableChoice(value);
+    if (printable !== undefined) {
+        return preparePrintable(printable, prep);
+    }
+    return prepString(directoryStringToString(value), prep);
+}
+
+/**
  * @param value Element, directory-string alternative, or string.
- * @returns The character contents.
+ * @param prep When set, apply X.520 string preparation while reading.
+ *  `undefined` means preparation failed.
+ * @returns The character contents, prepared when `prep` is set.
  */
 export
-function readDirectoryString (value: DirectoryStringInput): string {
+function readDirectoryString (value: DirectoryStringInput): string;
+export
+function readDirectoryString (
+    value: DirectoryStringInput,
+    prep: PrepStringOptions,
+): string | undefined;
+export
+function readDirectoryString (
+    value: DirectoryStringInput,
+    prep?: PrepStringOptions,
+): string | undefined {
     if (typeof value === "string") {
-        return value;
+        return prep === undefined ? value : prepString(value, prep);
+    }
+    if (prep !== undefined) {
+        return readPreparedDirectoryString(value, prep);
     }
     if (ASN1Element.isElement(value)) {
         return readEncodedDirectoryString(value);
@@ -120,21 +252,37 @@ export type DirectoryStringListInput =
 
 /**
  * @param value Encoded list or an already-decoded list.
+ * @param prep When set, prepare each element while reading it.
+ *  A slot is `undefined` when that element's preparation fails.
  * @returns One string per list element, in order.
  */
 export
-function readDirectoryStringList (value: DirectoryStringListInput): string[] {
+function readDirectoryStringList (value: DirectoryStringListInput): string[];
+export
+function readDirectoryStringList (
+    value: DirectoryStringListInput,
+    prep: PrepStringOptions,
+): (string | undefined)[];
+export
+function readDirectoryStringList (
+    value: DirectoryStringListInput,
+    prep?: PrepStringOptions,
+): (string | undefined)[] {
     if (ASN1Element.isElement(value)) {
         const elements = value.sequenceOf;
-        const out = new Array<string>(elements.length);
+        const out = new Array<string | undefined>(elements.length);
         for (let i = 0; i < elements.length; i++) {
-            out[i] = readDirectoryString(elements[i]);
+            out[i] = prep === undefined
+                ? readDirectoryString(elements[i])
+                : readDirectoryString(elements[i], prep);
         }
         return out;
     }
-    const out = new Array<string>(value.length);
+    const out = new Array<string | undefined>(value.length);
     for (let i = 0; i < value.length; i++) {
-        out[i] = readDirectoryString(value[i]);
+        out[i] = prep === undefined
+            ? readDirectoryString(value[i])
+            : readDirectoryString(value[i], prep);
     }
     return out;
 }

@@ -1,9 +1,11 @@
-import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
-import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
-    readDirectoryString,
-    readFirstDirectoryString,
-} from "../readValue.mjs";
+    ASN1CharactersError,
+    ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
+} from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { caseIgnoreMatchTyped } from "./caseIgnoreMatch.mjs";
 import {
@@ -29,7 +31,9 @@ function normalizeDirectoryStringFirstComponentMatchAssertion (
     assertion: string,
     el?: ASN1Element,
 ): string {
-    const prepared = prepString(assertion, { caseFold: true });
+    const prepared = el
+        ? readDirectoryString(el, { caseFold: true })
+        : prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "directoryStringFirstComponentMatch assertion failed string preparation",
@@ -60,16 +64,23 @@ function directoryStringFirstComponentMatchTyped (
     getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const first = readFirstDirectoryString(value);
-    if (first === undefined) {
-        if (flags & MATCH_FLAG_DEBUG) {
-            console.error(
-                "@wildboar/x500: debug: directoryStringFirstComponentMatch: stored sequence has no first component",
-            );
+    if (
+        ASN1Element.isElement(value)
+        && value.tagClass === ASN1TagClass.universal
+        && value.tagNumber === ASN1UniversalType.sequence
+    ) {
+        const first = value.sequence[0];
+        if (!first) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    "@wildboar/x500: debug: directoryStringFirstComponentMatch: stored sequence has no first component",
+                );
+            }
+            return false;
         }
-        return false;
+        return caseIgnoreMatchTyped(assertion, first, getEqualityMatcher, flags);
     }
-    return caseIgnoreMatchTyped(assertion, first, getEqualityMatcher, flags);
+    return caseIgnoreMatchTyped(assertion, value, getEqualityMatcher, flags);
 }
 
 directoryStringFirstComponentMatchTyped satisfies TypedEquationFunction<string>;

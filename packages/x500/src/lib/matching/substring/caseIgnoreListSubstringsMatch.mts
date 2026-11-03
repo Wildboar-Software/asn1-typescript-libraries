@@ -7,21 +7,19 @@ import {
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-import { prepString } from "../../utils/prepString.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import {
     createSubstringsMatcher,
+    MATCH_FLAG_DEBUG,
+    MATCH_FLAG_VALUE_NORMALIZED,
     type AssertedSubstring,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
 import {
-    assertPrepared,
     directoryAssertionPieces,
     mapSubstringChoices,
     matchPreparedString,
-    prepareStored,
-    type StringPreparer,
 } from "./prepareSubstrings.mjs";
 
 const RULE = "caseIgnoreListSubstringsMatch";
@@ -36,12 +34,9 @@ const RULE = "caseIgnoreListSubstringsMatch";
 const LINE_SEPARATOR = "\u001F";
 
 /** Same preparation as `caseIgnoreMatch`, per address line. */
-const prepareIgnore: StringPreparer = (raw) => prepString(raw, { caseFold: true });
+const PREP_IGNORE = { caseFold: true } as const;
 
-/**
- * A filter component is a `PostalAddress` and nothing else.
- */
-function componentLines (el: ASN1Element): readonly string[] {
+function requirePostalAddress (el: ASN1Element): void {
     if (
         el.tagClass !== ASN1TagClass.universal
         || el.tagNumber !== ASN1UniversalType.sequence
@@ -51,7 +46,19 @@ function componentLines (el: ASN1Element): readonly string[] {
             el,
         );
     }
-    return readDirectoryStringList(el);
+}
+
+function requirePreparedLine (
+    line: string | undefined,
+    el: ASN1Element,
+): string {
+    if (line === undefined || line.length === 0) {
+        throw new ASN1CharactersError(
+            `${RULE} assertion failed string preparation`,
+            el,
+        );
+    }
+    return line;
 }
 
 /**
@@ -60,7 +67,8 @@ function componentLines (el: ASN1Element): readonly string[] {
  * matches only when those lines occur adjacently.
  */
 function joinAssertionLines (el: ASN1Element): string {
-    const lines = componentLines(el);
+    requirePostalAddress(el);
+    const lines = readDirectoryStringList(el, PREP_IGNORE);
     if (lines.length === 0) {
         throw new ASN1CharactersError(
             `${RULE} assertion failed string preparation`,
@@ -69,7 +77,7 @@ function joinAssertionLines (el: ASN1Element): string {
     }
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
-        prepared[i] = assertPrepared(lines[i], prepareIgnore, RULE, el);
+        prepared[i] = requirePreparedLine(lines[i], el);
     }
     return prepared.join(LINE_SEPARATOR);
 }
@@ -87,13 +95,18 @@ function listFilterPieces (
  * `MATCH_FLAG_VALUE_NORMALIZED` skips preparation of each line.
  */
 function joinStoredLines (
-    lines: readonly string[],
+    lines: readonly (string | undefined)[],
     flags: number,
 ): string | undefined {
     const prepared = new Array<string>(lines.length);
     for (let i = 0; i < lines.length; i++) {
-        const line = prepareStored(lines[i], prepareIgnore, flags, RULE);
+        const line = lines[i];
         if (line === undefined) {
+            if (flags & MATCH_FLAG_DEBUG) {
+                console.error(
+                    `@wildboar/x500: debug: ${RULE}: stored value failed string preparation`,
+                );
+            }
             return undefined;
         }
         prepared[i] = line;
@@ -124,7 +137,10 @@ function caseIgnoreListSubstringsMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const joined = joinStoredLines(readDirectoryStringList(value), flags);
+    const lines = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? readDirectoryStringList(value)
+        : readDirectoryStringList(value, PREP_IGNORE);
+    const joined = joinStoredLines(lines, flags);
     if (joined === undefined) {
         return undefined;
     }
@@ -141,7 +157,7 @@ caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubst
  */
 export
 const caseIgnoreListSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el, flags) => directoryAssertionPieces(el, prepareIgnore, RULE, flags),
+    (el, flags) => directoryAssertionPieces(el, PREP_IGNORE, RULE, flags),
     caseIgnoreListSubstringsMatchTyped,
     listFilterPieces,
 );

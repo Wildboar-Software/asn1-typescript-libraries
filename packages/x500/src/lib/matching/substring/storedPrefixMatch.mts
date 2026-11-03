@@ -8,6 +8,8 @@ import {
     MATCH_FLAG_VALUE_NORMALIZED,
 } from "../../types/matching.mjs";
 
+const PREP_IGNORE = { caseFold: true } as const;
+
 function ctStartsWith (haystack: string, prefix: string): boolean {
     const pLen = prefix.length;
     const hLen = haystack.length;
@@ -37,10 +39,26 @@ function storedPrefixMatch (
     value: DirectoryStringInput,
     flags: number = 0,
 ): boolean {
+    const assertionNormalized = (flags & MATCH_FLAG_ASSERTION_NORMALIZED) !== 0;
+    const valueNormalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
+    const preparedA = assertionNormalized
+        ? readDirectoryString(assertion)
+        : readDirectoryString(assertion, PREP_IGNORE);
+    const preparedV = valueNormalized
+        ? readDirectoryString(value)
+        : readDirectoryString(value, PREP_IGNORE);
+    if (preparedA === undefined || preparedV === undefined) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                "@wildboar/x500: debug: storedPrefixMatch: string preparation failed",
+            );
+        }
+        return false;
+    }
     return storedPrefixMatchTyped(
-        readDirectoryString(assertion),
-        readDirectoryString(value),
-        flags,
+        preparedA,
+        preparedV,
+        flags | MATCH_FLAG_ASSERTION_NORMALIZED | MATCH_FLAG_VALUE_NORMALIZED,
     );
 }
 

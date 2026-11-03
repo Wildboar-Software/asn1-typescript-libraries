@@ -17,6 +17,7 @@ import {
     _encodeVisibleString,
 } from "@wildboar/asn1/functional";
 import { _encode_UnboundedDirectoryString } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { prepString } from "../utils/prepString.mjs";
 import { TimeSpecification } from "../modules/SelectedAttributeTypes/TimeSpecification.ta.mjs";
 import { UUIDPair } from "../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
 import { booleanMatchTyped } from "./equality/booleanMatch.mjs";
@@ -76,6 +77,33 @@ describe("typed matching inputs", () => {
         )).toBe(true);
         expect(() => caseIgnoreMatchTyped("a", _encodeInteger(1, DER)))
             .toThrow("Unrecognized CHOICE tag 'UNIVERSAL 2'.");
+    });
+
+    it("prepares a PrintableString with only space and ASCII case folding", () => {
+        const samples = [
+            "Hello",
+            "  Hello   World ",
+            "   ",
+            "A",
+            "O'Brien",
+            "A+B=C?",
+            "abc 123",
+        ];
+        for (const sample of samples) {
+            const exact = prepString(sample);
+            const folded = prepString(sample, { caseFold: true });
+            const element = _encode_UnboundedDirectoryString(
+                { printableString: sample },
+                DER,
+            );
+            expect(caseExactMatchTyped(exact!, element)).toBe(true);
+            expect(caseIgnoreMatchTyped(folded!, element)).toBe(true);
+            expect(caseIgnoreMatchTyped(folded!, { printableString: sample })).toBe(true);
+        }
+        expect(caseExactMatchTyped(
+            "hello",
+            _encode_UnboundedDirectoryString({ printableString: "Hello" }, DER),
+        )).toBe(false);
     });
 
     it("compares integers across number, bigint, and element", () => {

@@ -30,7 +30,9 @@ function normalizeCaseExactOrderingMatchAssertion (
     assertion: string,
     el?: ASN1Element,
 ): string {
-    const prepared = prepString(assertion);
+    const prepared = el
+        ? readDirectoryString(el, {})
+        : prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactOrderingMatch assertion failed string preparation",
@@ -63,14 +65,13 @@ function caseExactOrderingMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): number | undefined {
-    const raw = readDirectoryString(value);
     const compare = (flags & MATCH_FLAG_CONSTANT_TIME)
         ? ctCompareCodePoints
         : compareCodePoints;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return compare(assertion, raw);
+        return compare(assertion, readDirectoryString(value));
     }
-    const prepared = prepString(raw);
+    const prepared = readDirectoryString(value, {});
     if (prepared === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

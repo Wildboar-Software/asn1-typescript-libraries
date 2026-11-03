@@ -1,4 +1,9 @@
-import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import {
+    ASN1CharactersError,
+    ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
+} from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
@@ -16,8 +21,20 @@ function readKeyword (value: string | ASN1Element): string {
     return readDirectoryString(value);
 }
 
-function prepareKeyword (text: string): string | undefined {
-    return prepString(text.trim())?.toUpperCase();
+function isPrintableElement (value: ASN1Element): boolean {
+    return value.tagClass === ASN1TagClass.universal
+        && value.tagNumber === ASN1UniversalType.printableString;
+}
+
+/**
+ * Trim, prepare, and upper-case. A `PrintableString` is prepared
+ * from the element, which only has to fold ASCII case and spaces.
+ */
+function prepareKeyword (value: string | ASN1Element): string | undefined {
+    if (typeof value !== "string" && isPrintableElement(value)) {
+        return readDirectoryString(value, {})?.toUpperCase();
+    }
+    return prepString(readDirectoryString(value).trim())?.toUpperCase();
 }
 
 /**
@@ -41,7 +58,7 @@ function decodeKeywordMatchAssertion (el: ASN1Element): string {
  */
 export
 function normalizeKeywordMatchAssertion (assertion: string, el?: ASN1Element): string {
-    const prepared = prepareKeyword(assertion);
+    const prepared = prepareKeyword(el ?? assertion);
     if (!prepared) {
         throw new ASN1CharactersError(
             "keywordMatch assertion failed string preparation",
@@ -72,8 +89,9 @@ function keywordMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = readKeyword(value);
-    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepareKeyword(raw);
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? readKeyword(value)
+        : prepareKeyword(value);
     if (!stored) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

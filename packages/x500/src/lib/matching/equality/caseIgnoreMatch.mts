@@ -29,7 +29,9 @@ function decodeCaseIgnoreMatchAssertion (el: ASN1Element): string {
  */
 export
 function normalizeCaseIgnoreMatchAssertion (assertion: string, el?: ASN1Element): string {
-    const prepared = prepString(assertion, { caseFold: true });
+    const prepared = el
+        ? readDirectoryString(el, { caseFold: true })
+        : prepString(assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreMatch assertion failed string preparation",
@@ -58,10 +60,9 @@ function caseIgnoreMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = readDirectoryString(value);
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED)
-        ? raw
-        : prepString(raw, { caseFold: true });
+        ? readDirectoryString(value)
+        : readDirectoryString(value, { caseFold: true });
     if (stored === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

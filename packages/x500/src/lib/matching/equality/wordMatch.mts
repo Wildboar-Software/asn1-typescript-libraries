@@ -1,4 +1,9 @@
-import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
+import {
+    ASN1CharactersError,
+    ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
+} from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
@@ -86,10 +91,18 @@ function containsWord (
 
 /**
  * Prepare a word the same way `wordMatch` prepares both sides:
- * trim, string preparation, then upper-case.
+ * trim, string preparation, then upper-case. A `PrintableString`
+ * element skips the Unicode steps inside string preparation.
  */
-function prepareWord (text: string): string | undefined {
-    return prepString(text.trim())?.toUpperCase();
+function prepareWord (value: string | ASN1Element): string | undefined {
+    if (
+        typeof value !== "string"
+        && value.tagClass === ASN1TagClass.universal
+        && value.tagNumber === ASN1UniversalType.printableString
+    ) {
+        return readDirectoryString(value, {})?.toUpperCase();
+    }
+    return prepString(readDirectoryString(value).trim())?.toUpperCase();
 }
 
 /**
@@ -113,7 +126,7 @@ function decodeWordMatchAssertion (el: ASN1Element): string {
  */
 export
 function normalizeWordMatchAssertion (assertion: string, el?: ASN1Element): string {
-    const prepared = prepareWord(assertion);
+    const prepared = prepareWord(el ?? assertion);
     if (!prepared) {
         throw new ASN1CharactersError(
             "wordMatch assertion failed string preparation",
@@ -142,8 +155,9 @@ function wordMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = readDirectoryString(value);
-    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepareWord(raw);
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? readDirectoryString(value)
+        : prepareWord(value);
     if (!stored) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

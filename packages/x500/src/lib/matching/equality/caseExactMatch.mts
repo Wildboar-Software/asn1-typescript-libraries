@@ -29,7 +29,9 @@ function decodeCaseExactMatchAssertion (el: ASN1Element): string {
  */
 export
 function normalizeCaseExactMatchAssertion (assertion: string, el?: ASN1Element): string {
-    const prepared = prepString(assertion);
+    const prepared = el
+        ? readDirectoryString(el, {})
+        : prepString(assertion);
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactMatch assertion failed string preparation",
@@ -58,8 +60,9 @@ function caseExactMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = readDirectoryString(value);
-    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED) ? raw : prepString(raw);
+    const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? readDirectoryString(value)
+        : readDirectoryString(value, {});
     if (stored === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

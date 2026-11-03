@@ -31,9 +31,12 @@ function normalizeCaseIgnoreListMatchAssertion (
     lines: readonly string[],
     el?: ASN1Element,
 ): readonly string[] {
-    const prepared = new Array<string>(lines.length);
-    for (let i = 0; i < lines.length; i++) {
-        const line = prepString(lines[i], { caseFold: true });
+    const source: readonly (string | undefined)[] = el
+        ? readDirectoryStringList(el, { caseFold: true })
+        : lines;
+    const prepared = new Array<string>(source.length);
+    for (let i = 0; i < source.length; i++) {
+        const line = el ? source[i] : prepString(lines[i], { caseFold: true });
         if (line === undefined) {
             throw new ASN1CharactersError(
                 "caseIgnoreListMatch assertion failed string preparation",
@@ -47,8 +50,7 @@ function normalizeCaseIgnoreListMatchAssertion (
 
 function matchListFast (
     assertion: readonly string[],
-    lines: readonly string[],
-    normalized: boolean,
+    lines: readonly (string | undefined)[],
     debug: boolean,
     approximate: boolean,
 ): boolean | undefined {
@@ -56,9 +58,7 @@ function matchListFast (
         return false;
     }
     for (let i = 0; i < assertion.length; i++) {
-        const stored = normalized
-            ? lines[i]
-            : prepString(lines[i], { caseFold: true });
+        const stored = lines[i];
         if (stored === undefined) {
             if (debug) {
                 console.error(
@@ -76,8 +76,7 @@ function matchListFast (
 
 function matchListConstantTime (
     assertion: readonly string[],
-    lines: readonly string[],
-    normalized: boolean,
+    lines: readonly (string | undefined)[],
     debug: boolean,
     approximate: boolean,
 ): boolean | undefined {
@@ -85,10 +84,7 @@ function matchListConstantTime (
     let sawUndefined = false;
     const count = Math.max(assertion.length, lines.length);
     for (let i = 0; i < count; i++) {
-        const rawLine = lines[i] ?? "";
-        const stored = i < lines.length
-            ? (normalized ? rawLine : prepString(rawLine, { caseFold: true }))
-            : "";
+        const stored = i < lines.length ? lines[i] : "";
         if (stored === undefined) {
             if (debug) {
                 console.error(
@@ -129,14 +125,15 @@ function caseIgnoreListMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const lines = readDirectoryStringList(value);
-    const normalized = (flags & MATCH_FLAG_VALUE_NORMALIZED) !== 0;
+    const lines = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? readDirectoryStringList(value)
+        : readDirectoryStringList(value, { caseFold: true });
     const approximate = (flags & MATCH_FLAG_APPROXIMATE) !== 0;
     const debug = (flags & MATCH_FLAG_DEBUG) !== 0;
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
-        return matchListConstantTime(assertion, lines, normalized, debug, approximate);
+        return matchListConstantTime(assertion, lines, debug, approximate);
     }
-    return matchListFast(assertion, lines, normalized, debug, approximate);
+    return matchListFast(assertion, lines, debug, approximate);
 }
 
 caseIgnoreListMatchTyped satisfies TypedEquationFunction<readonly string[]>;

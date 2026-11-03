@@ -4,6 +4,8 @@ import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createSubstringsMatcher,
+    MATCH_FLAG_DEBUG,
+    MATCH_FLAG_VALUE_NORMALIZED,
     type AssertedSubstring,
     type Matcher,
     type TypedEquationFunction,
@@ -16,7 +18,7 @@ import {
     decodeDirectoryFilterPieces,
     matchPreparedString,
     normalizePieces,
-    prepareStored,
+    prepareDirectoryPiecesFromElement,
     type StringPreparer,
 } from "./prepareSubstrings.mjs";
 
@@ -45,9 +47,15 @@ function caseIgnoreSubstringsMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = readDirectoryString(value);
-    const prepared = prepareStored(raw, prepareIgnore, flags, RULE);
-    if (prepared === undefined) {
+    const prepared = (flags & MATCH_FLAG_VALUE_NORMALIZED)
+        ? readDirectoryString(value)
+        : readDirectoryString(value, { caseFold: true });
+    if (prepared === undefined || prepared.length === 0) {
+        if (flags & MATCH_FLAG_DEBUG) {
+            console.error(
+                `@wildboar/x500: debug: ${RULE}: stored value failed string preparation`,
+            );
+        }
         return undefined;
     }
     return matchPreparedString(assertion, prepared, value, flags, RULE);
@@ -85,6 +93,9 @@ function normalizeCaseIgnoreSubstringsMatchAssertion (
     assertion: AssertedSubstring<string>[],
     el?: ASN1Element,
 ): AssertedSubstring<string>[] {
+    if (el) {
+        return prepareDirectoryPiecesFromElement(el, { caseFold: true }, RULE);
+    }
     return normalizePieces(assertion, prepareIgnore, RULE, el);
 }
 
