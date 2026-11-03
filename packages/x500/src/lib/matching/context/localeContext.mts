@@ -1,4 +1,10 @@
-import { ASN1Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import {
+    ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
+    ObjectIdentifier,
+    type OBJECT_IDENTIFIER,
+} from "@wildboar/asn1";
 import {
     MATCH_FLAG_CONSTANT_TIME,
     MATCH_FLAG_DEBUG,
@@ -7,9 +13,6 @@ import {
 import { id_avc_locale } from "../../modules/SelectedAttributeTypes/id-avc-locale.va.mjs";
 import { bytesEqual, stringsEqual } from "../constantTime.mjs";
 import { matchAnyContextValue } from "./matchAnyContextValue.mjs";
-import {
-    _decode_LocaleContextSyntax,
-} from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
 import type {
     LocaleContextSyntax,
 } from "../../modules/SelectedAttributeTypes/LocaleContextSyntax.ta.mjs";
@@ -18,6 +21,7 @@ import type {
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import directoryStringToString from "../../stringifiers/directoryStringToString.mjs";
 import compareElements from "../../comparators/compareElements.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 
 /** Element, decoded choice, object identifier, or locale string. */
 export type LocaleContextInput =
@@ -31,20 +35,49 @@ function isLocaleSyntax (value: object): value is LocaleContextSyntax {
     return ("localeID1" in value) || ("localeID2" in value);
 }
 
-function readLocale (value: LocaleContextInput): LocaleContextSyntax {
+type ReadLocale =
+    | { readonly kind: "oid"; readonly id: OBJECT_IDENTIFIER }
+    | { readonly kind: "string"; readonly text: string }
+    | { readonly kind: "element"; readonly element: ASN1Element };
+
+function isDirectoryStringTag (tagNumber: number): boolean {
+    return tagNumber === ASN1UniversalType.utf8String
+        || tagNumber === ASN1UniversalType.printableString
+        || tagNumber === ASN1UniversalType.teletexString
+        || tagNumber === ASN1UniversalType.universalString
+        || tagNumber === ASN1UniversalType.bmpString;
+}
+
+function readLocale (value: LocaleContextInput): ReadLocale {
     if (typeof value === "string") {
-        return { localeID2: { uTF8String: value } };
+        return { kind: "string", text: value };
     }
     if (ASN1Element.isElement(value)) {
-        return _decode_LocaleContextSyntax(value);
+        if (value.tagClass === ASN1TagClass.universal) {
+            if (value.tagNumber === ASN1UniversalType.objectIdentifier) {
+                return { kind: "oid", id: value.objectIdentifier };
+            }
+            if (isDirectoryStringTag(value.tagNumber)) {
+                return { kind: "string", text: readDirectoryString(value) };
+            }
+        }
+        return { kind: "element", element: value };
     }
     if (ObjectIdentifier.isOID(value)) {
-        return { localeID1: value };
+        return { kind: "oid", id: value };
     }
     if (isLocaleSyntax(value)) {
-        return value;
+        if ("localeID1" in value) {
+            return { kind: "oid", id: value.localeID1 };
+        }
+        return {
+            kind: "string",
+            text: directoryStringToString(
+                (value as { localeID2: UnboundedDirectoryString }).localeID2,
+            ),
+        };
     }
-    return { localeID2: value };
+    return { kind: "string", text: directoryStringToString(value) };
 }
 
 /**
@@ -68,25 +101,21 @@ function evaluateLocaleContext (
     const constantTime = flags & MATCH_FLAG_CONSTANT_TIME;
     const a = readLocale(assertion);
     const v = readLocale(value);
-    if (("localeID1" in a) && ("localeID1" in v)) {
+    if (a.kind === "oid" && v.kind === "oid") {
         return constantTime
-            ? bytesEqual(a.localeID1.toBytesUnsafe(), v.localeID1.toBytesUnsafe(), constantTime)
-            : a.localeID1.isEqualTo(v.localeID1);
+            ? bytesEqual(a.id.toBytesUnsafe(), v.id.toBytesUnsafe(), constantTime)
+            : a.id.isEqualTo(v.id);
     }
-    if (("localeID2" in a) && ("localeID2" in v)) {
-        return stringsEqual(
-            directoryStringToString(a.localeID2),
-            directoryStringToString(v.localeID2),
-            constantTime,
-        );
+    if (a.kind === "string" && v.kind === "string") {
+        return stringsEqual(a.text, v.text, constantTime);
     }
-    if (ASN1Element.isElement(assertion) && ASN1Element.isElement(value)) {
+    if (a.kind === "element" && v.kind === "element") {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
                 "@wildboar/x500: debug: localeContext: unrecognized LocaleContextSyntax alternative",
             );
         }
-        return compareElements(assertion, value);
+        return compareElements(a.element, v.element);
     }
     return false;
 }
@@ -104,10 +133,9 @@ const localeContext: ContextMatcher = (
     _getEqualityMatcher,
     flags = 0,
 ) => {
-    const presented = _decode_LocaleContextSyntax(assertion);
     return matchAnyContextValue(
         values,
-        (value) => evaluateLocaleContext(presented, value, flags),
+        (value) => evaluateLocaleContext(assertion, value, flags),
         id_avc_locale,
         flags,
     );

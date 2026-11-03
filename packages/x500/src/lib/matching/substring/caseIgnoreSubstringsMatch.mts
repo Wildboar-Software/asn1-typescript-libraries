@@ -1,9 +1,6 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import {
-    _decode_UnboundedDirectoryString,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import {
     createSubstringsMatcher,
@@ -48,7 +45,7 @@ function caseIgnoreSubstringsMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = directoryStringToString(_decode_UnboundedDirectoryString(value));
+    const raw = readDirectoryString(value);
     const prepared = prepareStored(raw, prepareIgnore, flags, RULE);
     if (prepared === undefined) {
         return undefined;

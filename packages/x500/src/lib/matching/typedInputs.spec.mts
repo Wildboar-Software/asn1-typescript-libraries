@@ -22,6 +22,7 @@ import { UUIDPair } from "../modules/SelectedAttributeTypes/UUIDPair.ta.mjs";
 import { booleanMatchTyped } from "./equality/booleanMatch.mjs";
 import { caseIgnoreListMatchTyped } from "./equality/caseIgnoreListMatch.mjs";
 import caseIgnoreMatch, { caseIgnoreMatchTyped } from "./equality/caseIgnoreMatch.mjs";
+import { caseExactMatchTyped } from "./equality/caseExactMatch.mjs";
 import integerMatch, { integerMatchTyped } from "./equality/integerMatch.mjs";
 import { objectIdentifierMatchTyped } from "./equality/objectIdentifierMatch.mjs";
 import { octetStringMatchTyped } from "./equality/octetStringMatch.mjs";
@@ -55,6 +56,26 @@ describe("typed matching inputs", () => {
             uds("Hello"),
             new AttributeTypeAndValue(attributeType, uds("hello")),
         )).toBe(true);
+        expect(caseIgnoreMatchTyped(
+            "hello",
+            _encode_UnboundedDirectoryString({ printableString: "Hello" }, DER),
+        )).toBe(true);
+        expect(caseIgnoreMatchTyped(
+            "hello",
+            _encode_UnboundedDirectoryString({ bmpString: "Hello" }, DER),
+        )).toBe(true);
+        expect(caseIgnoreMatchTyped(
+            "hello",
+            _encode_UnboundedDirectoryString({ universalString: "Hello" }, DER),
+        )).toBe(true);
+        expect(caseExactMatchTyped(
+            "Hello",
+            _encode_UnboundedDirectoryString({
+                teletexString: new Uint8Array([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]),
+            }, DER),
+        )).toBe(true);
+        expect(() => caseIgnoreMatchTyped("a", _encodeInteger(1, DER)))
+            .toThrow("Unrecognized CHOICE tag 'UNIVERSAL 2'.");
     });
 
     it("compares integers across number, bigint, and element", () => {

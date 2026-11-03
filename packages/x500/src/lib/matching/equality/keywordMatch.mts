@@ -1,9 +1,6 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import {
-    _decode_UnboundedDirectoryString,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { containsWord } from "./wordMatch.mjs";
 import {
@@ -16,10 +13,7 @@ import {
 } from "../../types/matching.mjs";
 
 function readKeyword (value: string | ASN1Element): string {
-    if (typeof value === "string") {
-        return value;
-    }
-    return directoryStringToString(_decode_UnboundedDirectoryString(value));
+    return readDirectoryString(value);
 }
 
 function prepareKeyword (text: string): string | undefined {

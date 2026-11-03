@@ -95,6 +95,13 @@ describe("caseIgnoreSubstringsMatch", () => {
         )).toBe(false);
     });
 
+    it("reads a PrintableString stored value", () => {
+        expect(caseIgnoreSubstringsMatch(
+            assertion([ { any_: "hello" } ]),
+            stored(_encodePrintableString("Hello", DER)),
+        )).toBe(true);
+    });
+
     it("accepts directory-string filter components", () => {
         const filter: FilterSubstring[] = [
             { initial: _encodePrintableString("what", DER) },

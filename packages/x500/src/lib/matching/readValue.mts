@@ -7,9 +7,9 @@ import {
     type INTEGER,
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
-import {
-    _decode_UnboundedDirectoryString,
-} from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { tagClassName } from "@wildboar/asn1/functional";
+import teletexToString from "@wildboar/teletex";
+import { _decode_Attribute } from "../modules/InformationFramework/Attribute.ta.mjs";
 import type {
     UnboundedDirectoryString,
 } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -22,9 +22,6 @@ import type {
 import type {
     CaseIgnoreList,
 } from "../modules/SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
-import {
-    _decode_SubstringAssertion,
-} from "../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import type {
     SubstringAssertion_Item,
 } from "../modules/SelectedAttributeTypes/SubstringAssertion-Item.ta.mjs";
@@ -61,6 +58,42 @@ export type DirectoryStringInput =
     | string;
 
 /**
+ * Character contents of an encoded directory string.
+ *
+ * The five `UnboundedDirectoryString` alternatives are read from the
+ * element. `IA5String`, `VisibleString`, and `ObjectDescriptor` are
+ * accepted as well. An unrecognized tag raises the same error as
+ * `_decode_UnboundedDirectoryString`.
+ */
+function readEncodedDirectoryString (value: ASN1Element): string {
+    if (value.tagClass === ASN1TagClass.universal) {
+        switch (value.tagNumber) {
+        case ASN1UniversalType.utf8String:
+            return value.utf8String;
+        case ASN1UniversalType.printableString:
+            return value.printableString;
+        case ASN1UniversalType.teletexString:
+            return teletexToString(value.teletexString);
+        case ASN1UniversalType.universalString:
+            return value.universalString;
+        case ASN1UniversalType.bmpString:
+            return value.bmpString;
+        case ASN1UniversalType.ia5String:
+            return value.ia5String;
+        case ASN1UniversalType.visibleString:
+            return value.visibleString;
+        case ASN1UniversalType.objectDescriptor:
+            return value.objectDescriptor;
+        default:
+            break;
+        }
+    }
+    throw new Error(
+        `Unrecognized CHOICE tag '${tagClassName(value.tagClass)} ${value.tagNumber}'.`,
+    );
+}
+
+/**
  * @param value Element, directory-string alternative, or string.
  * @returns The character contents.
  */
@@ -70,18 +103,7 @@ function readDirectoryString (value: DirectoryStringInput): string {
         return value;
     }
     if (ASN1Element.isElement(value)) {
-        if (value.tagClass === ASN1TagClass.universal) {
-            if (value.tagNumber === ASN1UniversalType.ia5String) {
-                return value.ia5String;
-            }
-            if (value.tagNumber === ASN1UniversalType.visibleString) {
-                return value.visibleString;
-            }
-            if (value.tagNumber === ASN1UniversalType.objectDescriptor) {
-                return value.objectDescriptor;
-            }
-        }
-        return directoryStringToString(_decode_UnboundedDirectoryString(value));
+        return readEncodedDirectoryString(value);
     }
     return directoryStringToString(value);
 }
@@ -313,13 +335,48 @@ function readSubstringPieces<TIn, TOut> (
 }
 
 /**
+ * One `SubstringAssertion` component, read from its encoding.
+ * Directory-string alternatives become strings. `control` is decoded
+ * so a malformed attribute still fails. Anything else is `unknown`.
+ */
+function readEncodedSubstringItem (item: ASN1Element): PreparedSubstring {
+    if (item.tagClass === ASN1TagClass.context) {
+        if (item.tagNumber === 0) {
+            return { kind: "initial", value: readDirectoryString(item.inner) };
+        }
+        if (item.tagNumber === 1) {
+            return { kind: "any", value: readDirectoryString(item.inner) };
+        }
+        if (item.tagNumber === 2) {
+            return { kind: "final", value: readDirectoryString(item.inner) };
+        }
+        return { kind: "unknown" };
+    }
+    if (
+        item.tagClass === ASN1TagClass.universal
+        && item.tagNumber === ASN1UniversalType.sequence
+    ) {
+        _decode_Attribute(item);
+        return { kind: "control" };
+    }
+    return { kind: "unknown" };
+}
+
+/**
  * @param value Encoded or decoded substring assertion.
  * @returns Pieces whose payload is a JavaScript string.
  */
 export
 function readSubstringAssertion (value: SubstringAssertionInput): PreparedSubstring[] {
-    const items = ASN1Element.isElement(value) ? _decode_SubstringAssertion(value) : value;
-    return readSubstringPieces(items, (component) => (
+    if (ASN1Element.isElement(value)) {
+        const items = value.sequenceOf;
+        const out = new Array<PreparedSubstring>(items.length);
+        for (let i = 0; i < items.length; i++) {
+            out[i] = readEncodedSubstringItem(items[i]);
+        }
+        return out;
+    }
+    return readSubstringPieces(value, (component) => (
         typeof component === "string" ? component : directoryStringToString(component)
     ));
 }

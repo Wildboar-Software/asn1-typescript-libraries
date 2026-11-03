@@ -1,16 +1,15 @@
 import {
     ASN1CharactersError,
     ASN1Element,
+    ASN1TagClass,
+    ASN1UniversalType,
 } from "@wildboar/asn1";
-import type { Attribute } from "../../modules/InformationFramework/Attribute.ta.mjs";
+import {
+    _decode_Attribute,
+    type Attribute,
+} from "../../modules/InformationFramework/Attribute.ta.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-import {
-    _decode_SubstringAssertion,
-} from "../../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
-import {
-    _decode_UnboundedDirectoryString,
-} from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import { directoryStringToString } from "../../stringifiers/directoryStringToString.mjs";
+import { readDirectoryString } from "../readValue.mjs";
 import {
     getStringSubstringsMatcher,
     MATCH_FLAG_ASSERTION_VALIDATED,
@@ -184,6 +183,36 @@ function nonEmptyPiece (raw: string, rule: string, el?: ASN1Element): string {
 }
 
 /**
+ * One encoded `SubstringAssertion` CHOICE. The directory-string
+ * alternatives are read from the explicit inner element. `control`
+ * is still an `Attribute`.
+ */
+function readDirectorySubstringChoice (
+    item: ASN1Element,
+    rule: string,
+    el: ASN1Element,
+): AssertedSubstring<string> {
+    if (item.tagClass === ASN1TagClass.context) {
+        const text = nonEmptyPiece(readDirectoryString(item.inner), rule, el);
+        if (item.tagNumber === 0) {
+            return { initial: text };
+        }
+        if (item.tagNumber === 1) {
+            return { any_: text };
+        }
+        if (item.tagNumber === 2) {
+            return { final: text };
+        }
+    } else if (
+        item.tagClass === ASN1TagClass.universal
+        && item.tagNumber === ASN1UniversalType.sequence
+    ) {
+        return { control: _decode_Attribute(item) };
+    }
+    throw anchorError(rule, "unrecognized substring alternative");
+}
+
+/**
  * Decode a `SubstringAssertion` into directory-string pieces without
  * preparing them. `control` is copied through.
  */
@@ -193,12 +222,15 @@ function decodeDirectoryAssertionPieces (
     rule: string,
     flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return mapSubstringChoices(
-        _decode_SubstringAssertion(el),
-        (ds) => nonEmptyPiece(directoryStringToString(ds), rule, el),
-        rule,
-        flags,
-    );
+    const items = el.sequenceOf;
+    const out: AssertedSubstring<string>[] = new Array(items.length);
+    for (let i = 0; i < items.length; i++) {
+        out[i] = readDirectorySubstringChoice(items[i], rule, el);
+    }
+    if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED)) {
+        validateAnchors(out, rule);
+    }
+    return out;
 }
 
 /**
@@ -227,7 +259,7 @@ function decodeDirectoryFilterPieces (
 ): AssertedSubstring<string>[] {
     return decodeFilterPieces(
         items,
-        (component) => directoryStringToString(_decode_UnboundedDirectoryString(component)),
+        (component) => readDirectoryString(component),
         rule,
         flags,
     );

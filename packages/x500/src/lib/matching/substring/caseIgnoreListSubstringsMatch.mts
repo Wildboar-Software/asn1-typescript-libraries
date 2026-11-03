@@ -7,7 +7,6 @@ import {
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import type { FilterItem_substrings_strings_Item } from "../../modules/DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
-import { _decode_PostalAddress } from "../../modules/SelectedAttributeTypes/PostalAddress.ta.mjs";
 import { prepString } from "../../utils/prepString.mjs";
 import { readDirectoryStringList } from "../readValue.mjs";
 import {
@@ -52,7 +51,7 @@ function componentLines (el: ASN1Element): readonly string[] {
             el,
         );
     }
-    return readDirectoryStringList(_decode_PostalAddress(el));
+    return readDirectoryStringList(el);
 }
 
 /**

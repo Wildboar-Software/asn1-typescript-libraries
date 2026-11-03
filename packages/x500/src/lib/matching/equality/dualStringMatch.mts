@@ -1,14 +1,19 @@
-import { ASN1Element, ASN1CharactersError } from "@wildboar/asn1";
-import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import {
+    ASN1CharactersError,
+    ASN1ConstructionError,
+    ASN1Element,
+} from "@wildboar/asn1";
+import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
+import type {
     DualStringSyntax,
-    _decode_DualStringSyntax,
 } from "../../modules/AttributeCertificateDefinitions/DualStringSyntax.ta.mjs";
 import type {
     UnboundedDirectoryString,
 } from "../../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
-import type { DirectoryStringInput } from "../readValue.mjs";
-import { readDirectoryString } from "../readValue.mjs";
+import {
+    readDirectoryString,
+    type DirectoryStringInput,
+} from "../readValue.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
 import { prohibitedCharacters } from "../../utils/prepString.mjs";
 import { ctStringsEqual } from "../constantTime.mjs";
@@ -39,10 +44,18 @@ interface DualStrings {
 
 function readDual (value: DualStringInput): DualStrings {
     if (ASN1Element.isElement(value)) {
-        const decoded = _decode_DualStringSyntax(value);
+        const sequence = value.sequence;
+        if (sequence.length < 2) {
+            throw new ASN1ConstructionError(
+                "DualStringSyntax contained only "
+                    + sequence.length.toString()
+                    + " elements.",
+                value,
+            );
+        }
         return {
-            operation: readDirectoryString(decoded.operation),
-            object: readDirectoryString(decoded.object),
+            operation: readDirectoryString(sequence[0].inner),
+            object: readDirectoryString(sequence[1].inner),
         };
     }
     return {
