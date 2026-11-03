@@ -7,7 +7,7 @@ export const compareFalse = 5;
 export const compareTrue = 6;
 export const authMethodNotSupported = 7;
 export const strongerAuthRequired = 8;
-export const partialResults = 9;
+// 9 reserved (LDAPv2 partialResults)
 export const referral = 10;
 export const adminLimitExceeded = 11;
 export const unavailableCriticalExtension = 12;
@@ -22,7 +22,7 @@ export const invalidAttributeSyntax = 21;
 export const noSuchObject = 32;
 export const aliasProblem = 33;
 export const invalidDNSyntax = 34;
-export const isLeaf = 35;
+// 35 reserved (LDAPv2 isLeaf)
 export const aliasDereferencingProblem = 36;
 // export const reserved = 37-47;
 export const inappropriateAuthentication = 48;
@@ -39,7 +39,7 @@ export const notAllowedOnNonLeaf = 66;
 export const notAllowedOnRDN = 67;
 export const entryAlreadyExists = 68;
 export const objectClassModsProhibited = 69;
-export const resultsTooLarge = 70;
+// 70 reserved for CLDAP (resultsTooLarge)
 // export const reserved = 71-79;
 export const other = 80;
 export const lcupResourcesExhausted = 113;
