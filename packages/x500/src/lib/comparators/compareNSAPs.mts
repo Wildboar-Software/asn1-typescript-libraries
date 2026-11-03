@@ -11,18 +11,6 @@ import { URL, domainToASCII } from "node:url";
  */
 const ITOT_SERVICE_TYPE: number = 0x03;
 
-/** Octet index of the service type, immediately after the AFI/IDI. */
-const SERVICE_TYPE_INDEX: number = IPV4_AFI_IDI.length;
-
-/** First octet of the six-octet BCD IPv4 address in the DSP. */
-const IPV4_DSP_START: number = SERVICE_TYPE_INDEX + 1;
-
-/** Index just past the IPv4 DSP. Also the minimum length `ipv4FromNSAP` accepts. */
-const IPV4_DSP_END: number = IPV4_DSP_START + 6;
-
-/** Length of an IPv4 NSAP that includes the three-octet TCP/UDP port. */
-const IPV4_WITH_PORT_LENGTH: number = IPV4_DSP_END + 3;
-
 function compareHostnames(a: string, b: string, constantTime: boolean | number = 0): boolean {
     return stringsEqual(
         domainToASCII(a).toLowerCase(),
@@ -60,44 +48,6 @@ function hasIpv4Prefix (nsap: OCTET_STRING): boolean {
 }
 
 /**
- * Every nibble in `nsap[from..to)` is a decimal digit. The IPv4 DSP is then
- * a unique encoding, so differing octets are a different address.
- */
-function nibblesAreDecimal (nsap: OCTET_STRING, from: number, to: number): boolean {
-    for (let i = from; i < to; i++) {
-        if ((nsap[i] >>> 4) > 9 || (nsap[i] & 0x0F) > 9) {
-            return false;
-        }
-    }
-    return true;
-}
-
-/**
- * `true` when `a` and `b` are IPv4 NSAPs that cannot match, without
- * decoding BCD. `false` means the caller still has to decode.
- */
-function ipv4FastMismatch (a: OCTET_STRING, b: OCTET_STRING): boolean {
-    if (a.length < IPV4_DSP_END || b.length < IPV4_DSP_END) {
-        return false;
-    }
-    if (a[SERVICE_TYPE_INDEX] !== b[SERVICE_TYPE_INDEX]) {
-        return true;
-    }
-    const aHasPort = a.length >= IPV4_WITH_PORT_LENGTH;
-    const bHasPort = b.length >= IPV4_WITH_PORT_LENGTH;
-    if (a[SERVICE_TYPE_INDEX] !== ITOT_SERVICE_TYPE && aHasPort !== bHasPort) {
-        return true;
-    }
-    for (let i = IPV4_DSP_START; i < IPV4_DSP_END; i++) {
-        if (a[i] !== b[i]) {
-            return nibblesAreDecimal(a, IPV4_DSP_START, IPV4_DSP_END)
-                && nibblesAreDecimal(b, IPV4_DSP_START, IPV4_DSP_END);
-        }
-    }
-    return false;
-}
-
-/**
  * @summary Compare two X.213 NSAP values
  * @description
  *
@@ -105,9 +55,9 @@ function ipv4FastMismatch (a: OCTET_STRING, b: OCTET_STRING): boolean {
  * if they are missing and comparing DNS hostnames after converting to ASCII and
  * lowercasing.
  *
- * When `constantTime` is not set, the first proven mismatch returns
- * immediately. Constant-time comparison still evaluates every URL component
- * and decodes both IPv4 addresses.
+ * When `constantTime` is not set, a URL mismatch returns at the first
+ * differing component. Constant-time comparison still evaluates every
+ * URL component.
  *
  * @param a One value
  * @param b The other
@@ -175,9 +125,6 @@ function compareNSAP (
     if (!hasIpv4Prefix(a) || !hasIpv4Prefix(b)) {
         // If it is neither an IP address, nor a URL, compare the octets directly.
         return bytesEqual(a, b, constantTime);
-    }
-    if (!constantTime && ipv4FastMismatch(a, b)) {
-        return false;
     }
     let [ typea, ipv4a, porta ] = ipv4FromNSAP(a);
     let [ typeb, ipv4b, portb ] = ipv4FromNSAP(b);

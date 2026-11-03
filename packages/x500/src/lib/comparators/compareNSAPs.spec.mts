@@ -27,7 +27,7 @@ describe("compareNSAP()", () => {
         expectBothModes(a, b, false);
     });
 
-    it("rejects a different IPv4 service type or address before the port matters", () => {
+    it("rejects a different IPv4 service type or address", () => {
         const ldap = ipv4ToNSAP(0x11, HOST, 389);
         const idm = ipv4ToNSAP(0x10, HOST, 389);
         const otherHost = ipv4ToNSAP(0x11, new Uint8Array([192, 0, 2, 2]), 389);
