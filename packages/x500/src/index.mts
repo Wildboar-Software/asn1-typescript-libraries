@@ -122,10 +122,8 @@ export { compareRoleSpecCertIdentifier } from "./lib/comparators/compareRoleSpec
 export { compareTarget } from "./lib/comparators/compareTarget.mjs";
 export { codeToString } from "./lib/stringifiers/codeToString.mjs";
 export { directoryStringToString } from "./lib/stringifiers/directoryStringToString.mjs";
-export { compareSocketToNSAP } from "./lib/distributed/compareSocketToNSAP.mjs";
 export { IPV4_AFI_IDI } from "./lib/distributed/IPV4_AFI_IDI.mjs";
 export * from "./lib/distributed/ipv4.mjs";
-export { loopDetected } from "./lib/distributed/loopDetected.mjs";
 export { naddrToURI } from "./lib/distributed/naddrToURI.mjs";
 export * from "./lib/distributed/uri.mjs";
 export { checkNameForm } from "./lib/utils/checkNameForm.mjs";
@@ -133,7 +131,6 @@ export { compareCode } from "./lib/utils/compareCode.mjs";
 export { dateIsBetweenDayTimeBand } from "./lib/utils/dateIsBetweenDayTimeBand.mjs";
 export { defaultEntryInformationSelection } from "./lib/utils/defaultEntryInformationSelection.mjs";
 export { determineStructuralObjectClass } from "./lib/utils/determineStructuralObjectClass.mjs";
-export { dnWithinGeneralSubtree } from "./lib/utils/dnWithinGeneralSubtree.mjs";
 export { gnWithinGeneralSubtree, evaluateSRVNameConstraints } from "./lib/utils/gnWithinGeneralSubtree.mjs";
 export { dnWithinSubtreeSpecification } from "./lib/utils/dnWithinSubtreeSpecification.mjs";
 export { dnWithinSubtree } from "./lib/utils/dnWithinSubtree.mjs";
