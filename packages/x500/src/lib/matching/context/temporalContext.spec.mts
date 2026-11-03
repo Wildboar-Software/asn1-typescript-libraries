@@ -19,6 +19,7 @@ import {
     DayTime,
 } from "../../modules/SelectedAttributeTypes/DayTime.ta.mjs";
 import { evaluateTemporalContext } from "./temporalContext.mjs";
+import { MATCH_FLAG_HIGH_WORK_BUDGET } from "../../types/matching.mjs";
 import { DER } from "@wildboar/asn1/functional";
 import { TimeSpecification_time_absolute } from "../../modules/SelectedAttributeTypes/TimeSpecification-time-absolute.ta.mjs";
 import { TimeAssertion_between } from "../../modules/SelectedAttributeTypes/TimeAssertion-between.ta.mjs";
@@ -642,6 +643,32 @@ describe("evaluateTemporalContext", () => {
             _encode_TimeAssertion(assertion, DER),
             _encode_TimeSpecification(value, DER),
         )).toBe(true);
+    });
+
+    it("relaxes the between+entirely cover-step limit with MATCH_FLAG_HIGH_WORK_BUDGET", () => {
+        // Each day is covered by two occurrences, so 600 days take more
+        // than the default limit of 1000 cover steps.
+        const assertion = _encode_TimeAssertion({
+            between: new TimeAssertion_between(
+                new Date(2021, 0, 1, 0, 0, 0),
+                new Date(2021, 0, 601, 0, 0, 0),
+                TRUE,
+            ),
+        }, DER);
+        const value = _encode_TimeSpecification(new TimeSpecification(
+            {
+                periodic: [
+                    new Period([
+                        new DayTimeBand(new DayTime(0, 0, 0), new DayTime(12, 0, 0)),
+                    ]),
+                    new Period([
+                        new DayTimeBand(new DayTime(12, 0, 0), new DayTime(23, 59, 59)),
+                    ]),
+                ],
+            },
+        ), DER);
+        expect(evaluateTemporalContext(assertion, value)).toBe(false);
+        expect(evaluateTemporalContext(assertion, value, MATCH_FLAG_HIGH_WORK_BUDGET)).toBe(true);
     });
 
     it("matches between+entirely across abutting DayTimeBands from two Periods", () => {

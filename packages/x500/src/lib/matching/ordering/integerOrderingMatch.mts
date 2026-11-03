@@ -10,7 +10,9 @@ import type { AttributeType } from "../../modules/InformationFramework/index.mjs
 import { ctCompareBytes } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_VALUE_VALIDATED,
     type Matcher,
     type TypedOrderingFunction,
 } from "../../types/matching.mjs";
@@ -89,7 +91,8 @@ function compareEncodedIntegers (
  * @param assertion Presented INTEGER, encoded or already decoded. An encoded
  *  assertion is not validated here, so the caller must have already checked
  *  that it is a primitive, minimally-encoded INTEGER.
- * @param value Stored INTEGER, encoded or already decoded.
+ * @param value Stored INTEGER, encoded or already decoded. An encoded value
+ *  is validated unless `MATCH_FLAG_VALUE_VALIDATED` is set.
  */
 export
 function integerOrderingMatchTyped (
@@ -99,7 +102,9 @@ function integerOrderingMatchTyped (
     flags: number = 0,
 ): number | undefined {
     if (typeof assertion === "object" && typeof value === "object") {
-        validateEncodedInteger(value);
+        if (!(flags & MATCH_FLAG_VALUE_VALIDATED)) {
+            validateEncodedInteger(value);
+        }
         return compareEncodedIntegers(
             assertion.value,
             value.value,
@@ -135,11 +140,14 @@ integerOrderingMatchTyped satisfies TypedOrderingFunction<INTEGER>;
  * `integerOrderingMatch` as a `Matcher`. TRUE iff the stored INTEGER
  * is less than the presented INTEGER. `MATCH_FLAG_ORDERING_GREATER`
  * and `MATCH_FLAG_ORDERING_OR_EQUAL` select the other orderings.
+ * `MATCH_FLAG_ASSERTION_VALIDATED` skips validation of the assertion.
  */
 export
 const integerOrderingMatch: Matcher = createOrderingMatcher<INTEGER | ASN1Element>(
-    (el) => {
-        validateEncodedInteger(el);
+    (el, flags) => {
+        if (!(flags & MATCH_FLAG_ASSERTION_VALIDATED)) {
+            validateEncodedInteger(el);
+        }
         return el;
     },
     integerOrderingMatchTyped,

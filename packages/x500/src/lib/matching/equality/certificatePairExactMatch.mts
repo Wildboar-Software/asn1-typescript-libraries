@@ -100,7 +100,9 @@ function matchCertificatePairConstantTime (
  * `issuedToThisCAAssertion` / `issuedByThisCAAssertion` components
  * must match the corresponding certificates as for
  * `certificateExactMatch`. At least one of those components must
- * be present.
+ * be present. A stored pair with neither `issuedToThisCA` nor
+ * `issuedByThisCA` does not match. `MATCH_FLAG_DEBUG` logs either
+ * empty case.
  */
 /**
  * `certificatePairExactMatch` on decoded values.
@@ -108,6 +110,7 @@ function matchCertificatePairConstantTime (
  * @param a Presented exact assertion.
  * @param value Stored certificate pair, or that pair already decoded.
  * @param getMatcher Equality rule lookup for naming attributes.
+ * @param flags `MATCH_FLAG_DEBUG` and `MATCH_FLAG_CONSTANT_TIME`.
  * @returns `true` when every present component matches.
  */
 export
@@ -119,12 +122,21 @@ function certificatePairExactMatchTyped (
 ): boolean {
     const v = readDecoded(value, _decode_CertificatePair);
     const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
-    if (!a.issuedToThisCAAssertion && !a.issuedByThisCAAssertion) {
-        if (flags & MATCH_FLAG_DEBUG) {
+    const assertionEmpty = !a.issuedToThisCAAssertion && !a.issuedByThisCAAssertion;
+    const valueEmpty = v.isEmpty();
+    if (flags & MATCH_FLAG_DEBUG) {
+        if (assertionEmpty) {
             console.error(
                 "@wildboar/x500: debug: certificatePairExactMatch: assertion has neither issuedToThisCAAssertion nor issuedByThisCAAssertion",
             );
         }
+        if (valueEmpty) {
+            console.error(
+                "@wildboar/x500: debug: certificatePairExactMatch: value has neither issuedToThisCA nor issuedByThisCA",
+            );
+        }
+    }
+    if (assertionEmpty || valueEmpty) {
         return false;
     }
     if (flags & MATCH_FLAG_CONSTANT_TIME) {

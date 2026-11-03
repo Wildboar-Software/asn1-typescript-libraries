@@ -64,8 +64,11 @@ caseExactSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring<
  * Decode a `SubstringAssertion` without preparing its pieces.
  */
 export
-function decodeCaseExactSubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
-    return decodeDirectoryAssertionPieces(el, RULE);
+function decodeCaseExactSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
 }
 
 /**
@@ -74,8 +77,9 @@ function decodeCaseExactSubstringsMatchAssertion (el: ASN1Element): AssertedSubs
 export
 function decodeCaseExactSubstringsMatchFilterPieces (
     items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return decodeDirectoryFilterPieces(items, RULE);
+    return decodeDirectoryFilterPieces(items, RULE, flags);
 }
 
 /**

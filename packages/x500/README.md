@@ -163,13 +163,12 @@ Directory Access Protocol (DAP):
 Code for dealing with distributed operations can be found in
 `src/lib/distributed`.
 
-- `compareSocketToNSAP.mts` - Exports `compareSocketToNSAP`, which determines if
-  an NSAP matches a TCP socket.
 - `ipv4.mts` - Exports `ipv4FromNSAP` and `ipv4ToNSAP` which convert IPv4 addresses
   to NSAPs and back, respectively.
-- `loopDetected.mts` - Exports the function `loopDetected`, which takes
-  `TraceInformation` (as described in ITU Recommendation X.518) and returns a
-  boolean indicating whether that trace information indicates a loop.
+- `uri.mts` - Exports `uriFromNSAP` and `uriToNSAP`, which convert a URL-form
+  NSAP to a URI and back.
+- `naddrToURI.mts` - Exports `naddrToURI`, which converts a recognized NSAP
+  (IPv4 or URL form) to a URI.
 
 ## Matching Rules
 
@@ -242,7 +241,7 @@ are either deprecated or not intended for external use:
 - `dateIsBetweenDayTimeBand.mts` - Determine if a point in time occurs between a day time band
 - `defaultEntryInformationSelection.mts` - Convenience default value for EntryInformationSelection.
 - `determineStructuralObjectClass.mts` - Determine the structural object class among a set of object classes
-- `dnWithinGeneralSubtree.mts` - Determine whether a distinguished name falls within a `GeneralSubtree`.
+- `gnWithinGeneralSubtree.mts` - Determine whether a general name falls within a `GeneralSubtree`.
 - `dnWithinSubtree.mts` - Determine whether a distinguished name falls within a subtree
 - `dnWithinSubtreeSpecification.mts` - Determine whether a distinguished name falls within a subtree specification.
 - `evaluateContextAssertion.mts` - Evaluate a `ContextAssertion`

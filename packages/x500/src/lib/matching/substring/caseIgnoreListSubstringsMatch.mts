@@ -77,8 +77,9 @@ function joinAssertionLines (el: ASN1Element): string {
 
 function listFilterPieces (
     items: readonly FilterItem_substrings_strings_Item[],
+    flags: number,
 ): AssertedSubstring<string>[] {
-    return mapSubstringChoices(items, joinAssertionLines, RULE);
+    return mapSubstringChoices(items, joinAssertionLines, RULE, flags);
 }
 
 /**
@@ -141,7 +142,7 @@ caseIgnoreListSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubst
  */
 export
 const caseIgnoreListSubstringsMatch: Matcher = createSubstringsMatcher(
-    (el) => directoryAssertionPieces(el, prepareIgnore, RULE),
+    (el, flags) => directoryAssertionPieces(el, prepareIgnore, RULE, flags),
     caseIgnoreListSubstringsMatchTyped,
     listFilterPieces,
 );

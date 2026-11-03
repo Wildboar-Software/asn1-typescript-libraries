@@ -15,7 +15,9 @@ import { bytesEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
+    MATCH_FLAG_ASSERTION_VALIDATED,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_VALUE_VALIDATED,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -59,9 +61,13 @@ integerMatchTyped satisfies TypedEquationFunction<INTEGER>;
  * octet-for-octet comparison in `integerMatch` correct.
  *
  * @param assertion Encoded INTEGER (or ENUMERATED) assertion.
+ * @param flags `MATCH_FLAG_ASSERTION_VALIDATED` skips validation.
  * @returns The content octets of the assertion.
  */
-function integerAssertionOctets (assertion: ASN1Element): Uint8Array {
+function integerAssertionOctets (assertion: ASN1Element, flags: number = 0): Uint8Array {
+    if (flags & MATCH_FLAG_ASSERTION_VALIDATED) {
+        return assertion.value;
+    }
     if (assertion.construction !== ASN1Construction.primitive) {
         throw new ASN1ConstructionError("INTEGER cannot be constructed.", assertion);
     }
@@ -85,7 +91,8 @@ function integerAssertionOctets (assertion: ASN1Element): Uint8Array {
  * Compares the content octets of a validated assertion with those of
  * a stored INTEGER or ENUMERATED value. A non-minimally encoded value
  * cannot equal a minimally encoded assertion, so the value is not
- * validated.
+ * validated, except for approximate matching, which decodes it.
+ * `MATCH_FLAG_VALUE_VALIDATED` skips that validation.
  */
 function integerMatchOctets (
     assertion: Uint8Array,
@@ -97,7 +104,9 @@ function integerMatchOctets (
     if (equal || !(flags & MATCH_FLAG_APPROXIMATE)) {
         return equal;
     }
-    const vOctets = integerAssertionOctets(value);
+    const vOctets = (flags & MATCH_FLAG_VALUE_VALIDATED)
+        ? value.value
+        : integerAssertionOctets(value);
     return approximatelyEqualIntegers(
         integerFromContent(assertion),
         integerFromContent(vOctets),

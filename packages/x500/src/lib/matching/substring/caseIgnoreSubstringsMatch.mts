@@ -62,8 +62,11 @@ caseIgnoreSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubstring
  * Decode a `SubstringAssertion` without preparing its pieces.
  */
 export
-function decodeCaseIgnoreSubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
-    return decodeDirectoryAssertionPieces(el, RULE);
+function decodeCaseIgnoreSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
 }
 
 /**
@@ -72,8 +75,9 @@ function decodeCaseIgnoreSubstringsMatchAssertion (el: ASN1Element): AssertedSub
 export
 function decodeCaseIgnoreSubstringsMatchFilterPieces (
     items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return decodeDirectoryFilterPieces(items, RULE);
+    return decodeDirectoryFilterPieces(items, RULE, flags);
 }
 
 /**

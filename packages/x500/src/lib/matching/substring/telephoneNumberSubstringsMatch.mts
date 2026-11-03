@@ -65,8 +65,11 @@ telephoneNumberSubstringsMatchTyped satisfies TypedEquationFunction<AssertedSubs
  * from its pieces.
  */
 export
-function decodeTelephoneNumberSubstringsMatchAssertion (el: ASN1Element): AssertedSubstring<string>[] {
-    return decodeDirectoryAssertionPieces(el, RULE);
+function decodeTelephoneNumberSubstringsMatchAssertion (
+    el: ASN1Element,
+    flags: number = 0,
+): AssertedSubstring<string>[] {
+    return decodeDirectoryAssertionPieces(el, RULE, flags);
 }
 
 /**
@@ -76,8 +79,9 @@ function decodeTelephoneNumberSubstringsMatchAssertion (el: ASN1Element): Assert
 export
 function decodeTelephoneNumberSubstringsMatchFilterPieces (
     items: FilterItem_substrings_strings_Item[],
+    flags: number = 0,
 ): AssertedSubstring<string>[] {
-    return decodeFilterPieces(items, (el) => _decode_TelephoneNumber(el), RULE);
+    return decodeFilterPieces(items, (el) => _decode_TelephoneNumber(el), RULE, flags);
 }
 
 /**
