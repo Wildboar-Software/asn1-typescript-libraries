@@ -1,9 +1,9 @@
 import { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { valueEqualityMatcher } from "../valueEqualityMatcher.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_CONSTANT_TIME,
+    MATCH_FLAG_DEBUG,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
@@ -17,79 +17,29 @@ import {
     type MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
 } from "../../modules/DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
-import {
-    compareName,
-    nameToKey,
-    type GetDistinguishedValueMatcher,
-} from "@wildboar/dn";
+import { nameToKey } from "@wildboar/dn";
 
 /**
- * Remove one stored ae-title that matches `asserted`.
- *
- * `distinguishedNameMatch` is an equivalence, so the first match is a
- * correct representative of that class. Callers use this to test
- * multiset equality.
+ * Pair comparisons allowed by {@link matchInConstantTime}.
+ * 31 ae-titles is 961 comparisons; 32 is 1024 and stops.
  */
-function takeEqualName (
-    candidates: Name[] | undefined,
-    asserted: Name,
-    getEqualityMatcher: GetDistinguishedValueMatcher | undefined,
-): boolean {
-    if (!candidates) {
-        return false;
-    }
-    for (let i = 0; i < candidates.length; i++) {
-        if (compareName(asserted, candidates[i], getEqualityMatcher)) {
-            candidates.splice(i, 1);
-            return true;
-        }
-    }
-    return false;
-}
+const MAX_MATCH_ITERATIONS = 1000;
 
 /**
- * Multiset equality of ae-titles.
+ * Multiset equality of ae-title keys.
  *
- * `nameToKey` buckets names that the default distinguished-name
- * comparison would treat as equal, which makes the usual case one
- * hash lookup and one name comparison per element. A caller-supplied
- * equality rule can still equate names whose keys differ, so a miss
- * scans the other buckets. Keys are not trusted on their own:
- * `compareName` decides each pair.
+ * Two names match when {@link nameToKey} returns the same string.
+ * Sorting those strings orders the set; equal multisets then line
+ * up index by index.
  */
 function matchByNameKey (
     asserted: readonly Name[],
     stored: readonly Name[],
-    getEqualityMatcher: GetDistinguishedValueMatcher | undefined,
 ): boolean {
-    const buckets = new Map<string, Name[]>();
-    for (let i = 0; i < stored.length; i++) {
-        const storedName = stored[i];
-        const key = nameToKey(storedName);
-        const bucket = buckets.get(key);
-        if (bucket) {
-            bucket.push(storedName);
-        } else {
-            buckets.set(key, [ storedName ]);
-        }
-    }
-    for (let i = 0; i < asserted.length; i++) {
-        const name = asserted[i];
-        const key = nameToKey(name);
-        if (takeEqualName(buckets.get(key), name, getEqualityMatcher)) {
-            continue;
-        }
-        let found = false;
-        for (const [ otherKey, candidates ] of buckets) {
-            if (otherKey === key) {
-                continue;
-            }
-            if (takeEqualName(candidates, name, getEqualityMatcher)) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
+    const assertedKeys = asserted.map(nameToKey).sort();
+    const storedKeys = stored.map(nameToKey).sort();
+    for (let i = 0; i < assertedKeys.length; i++) {
+        if (assertedKeys[i] !== storedKeys[i]) {
             return false;
         }
     }
@@ -97,24 +47,36 @@ function matchByNameKey (
 }
 
 /**
- * Same multiset test, with one name comparison for every pair.
+ * Same key multiset, comparing every pair until
+ * {@link MAX_MATCH_ITERATIONS}.
  *
- * The number of `compareName` calls is `asserted.length ** 2` (the
- * lengths are equal). Each asserted name still consumes at most one
- * stored name.
+ * Each stored key is consumed at most once. Passing the iteration
+ * cap returns `false`.
  */
 function matchInConstantTime (
     asserted: readonly Name[],
     stored: readonly Name[],
-    getEqualityMatcher: GetDistinguishedValueMatcher | undefined,
+    flags: number,
 ): boolean {
-    const used: boolean[] = new Array(stored.length).fill(false);
+    const assertedKeys = asserted.map(nameToKey);
+    const storedKeys = stored.map(nameToKey);
+    const used: boolean[] = new Array(storedKeys.length).fill(false);
     let matched = true;
-    for (let i = 0; i < asserted.length; i++) {
+    let iterations = 0;
+    for (let i = 0; i < assertedKeys.length; i++) {
         let found = false;
-        for (let j = 0; j < stored.length; j++) {
-            const equal = compareName(asserted[i], stored[j], getEqualityMatcher);
-            if (equal && !used[j] && !found) {
+        for (let j = 0; j < storedKeys.length; j++) {
+            iterations += 1;
+            if (iterations > MAX_MATCH_ITERATIONS) {
+                if (flags & MATCH_FLAG_DEBUG) {
+                    console.error(
+                        "@wildboar/x500: debug: masterAndShadowAccessPointsMatch:"
+                        + ` exceeded ${MAX_MATCH_ITERATIONS} iterations`,
+                    );
+                }
+                return false;
+            }
+            if (assertedKeys[i] === storedKeys[j] && !used[j] && !found) {
                 used[j] = true;
                 found = true;
             }
@@ -131,10 +93,9 @@ function matchInConstantTime (
  * `masterAndShadowAccessPointsMatch`.
  *
  * Equality for `MasterAndShadowAccessPoints`. Category, address, and
- * chaining requirements are ignored. The ae-title values must be the
- * same multiset: the same count, and a bijection under which each
- * pair matches by `distinguishedNameMatch`. Component order is not
- * significant.
+ * chaining requirements are ignored. The ae-titles are the same
+ * multiset when {@link nameToKey} yields the same strings with the
+ * same counts. Component order is not significant.
  */
 /**
  * `masterAndShadowAccessPointsMatch` on decoded names and access
@@ -142,32 +103,28 @@ function matchInConstantTime (
  *
  * @param a Presented ae-titles.
  * @param value Stored access points, or those points already decoded.
- * @param getMatcher Equality rule lookup for naming attributes.
- * @returns `true` when the ae-title sets match.
+ * @param _getMatcher Accepted for the matcher signature. Ae-titles
+ *  are compared with `nameToKey`, so this lookup is not consulted.
+ * @param flags `MATCH_FLAG_CONSTANT_TIME` compares every pair, up to
+ *  1000 iterations.
+ * @returns `true` when the ae-title keys match.
  */
 export
 function masterAndShadowAccessPointsMatchTyped (
     a: readonly Name[],
     value: MasterAndShadowAccessPoints | ASN1Element,
-    getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
+    _getMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean {
     const v = readDecoded(value, _decode_MasterAndShadowAccessPoints);
     if (a.length !== v.length) {
         return false;
     }
-    if (a.length === 0) {
-        return true;
-    }
-    const getEqualityMatcher = valueEqualityMatcher(getMatcher, flags);
     const stored = v.map((point) => point.ae_title);
-    if (a.length === 1) {
-        return compareName(a[0], stored[0], getEqualityMatcher);
-    }
     if (flags & MATCH_FLAG_CONSTANT_TIME) {
-        return matchInConstantTime(a, stored, getEqualityMatcher);
+        return matchInConstantTime(a, stored, flags);
     }
-    return matchByNameKey(a, stored, getEqualityMatcher);
+    return matchByNameKey(a, stored);
 }
 
 masterAndShadowAccessPointsMatchTyped satisfies TypedEquationFunction<readonly Name[]>;

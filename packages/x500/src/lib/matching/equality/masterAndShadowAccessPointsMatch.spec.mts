@@ -27,7 +27,6 @@ import {
 import masterAndShadowAccessPointsMatch_, {
     masterAndShadowAccessPointsMatchTyped,
 } from "./masterAndShadowAccessPointsMatch.mjs";
-import caseExactMatch from "./caseExactMatch.mjs";
 import { onStoredValue } from "./onStoredValue.spec.mjs";
 
 const masterAndShadowAccessPointsMatch = onStoredValue(masterAndShadowAccessPointsMatch_);
@@ -161,24 +160,51 @@ describe("masterAndShadowAccessPointsMatch", () => {
         )).toBe(false);
     });
 
-    it("uses a supplied equality rule when it disagrees with name keys", () => {
+    it("matches on nameToKey and ignores a supplied equality rule", () => {
         const matchAll: Matcher = () => true;
         expect(masterAndShadowAccessPointsMatchTyped(
             [ alice, bob ],
             points([ carol, aliceFolded ]),
             () => matchAll,
-        )).toBe(true);
-
+        )).toBe(false);
         expect(masterAndShadowAccessPointsMatchTyped(
             [ aliceFolded, bob ],
             points([ alice, bob ]),
-            () => caseExactMatch,
-        )).toBe(false);
+            () => matchAll,
+        )).toBe(true);
         expect(masterAndShadowAccessPointsMatchTyped(
             [ alice, bob ],
             points([ bob, alice ]),
-            () => caseExactMatch,
+            () => matchAll,
             MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(true);
+    });
+
+    it("stops constant-time matching after 1000 pair comparisons", () => {
+        // 31 * 31 = 961 comparisons, within the cap. 32 * 32 = 1024.
+        const withinCap = Array.from(
+            { length: 31 },
+            (_, i) => name([ cn(`n${i}`) ]),
+        );
+        const overCap = Array.from(
+            { length: 32 },
+            (_, i) => name([ cn(`n${i}`) ]),
+        );
+        expect(masterAndShadowAccessPointsMatchTyped(
+            withinCap,
+            points(withinCap),
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(true);
+        expect(masterAndShadowAccessPointsMatchTyped(
+            overCap,
+            points(overCap),
+            undefined,
+            MATCH_FLAG_CONSTANT_TIME,
+        )).toBe(false);
+        expect(masterAndShadowAccessPointsMatchTyped(
+            overCap,
+            points(overCap),
         )).toBe(true);
     });
 
