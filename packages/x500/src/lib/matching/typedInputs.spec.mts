@@ -35,6 +35,7 @@ import {
 } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { evaluateLanguageContext } from "./context/languageContext.mjs";
 import { evaluateTemporalContext } from "./context/temporalContext.mjs";
+import { readDirectoryString } from "./readValue.mjs";
 
 function uds (value: string): ASN1Element {
     return _encode_UnboundedDirectoryString(
@@ -67,6 +68,31 @@ describe("typed matching inputs", () => {
             uds("Hello"),
             new AttributeTypeAndValue(attributeType, uds("hello")),
         )).toBe(true);
+    });
+
+    it("prepares PrintableString values with the ASCII fast path", () => {
+        const normalize = vi.spyOn(String.prototype, "normalize");
+        try {
+            const printable = _encodePrintableString("  Hello   WORLD  ", DER);
+            expect(readDirectoryString(printable, { caseFold: true })).toBe("hello world");
+            expect(readDirectoryString(
+                { printableString: "  Exact   Case  " },
+                {},
+            )).toBe("Exact Case");
+            expect(normalize).not.toHaveBeenCalled();
+
+            expect(readDirectoryString(
+                { printableString: "Hello\tWORLD" },
+                { caseFold: true },
+            )).toBe("hello world");
+            expect(readDirectoryString(
+                _encodeUTF8String("ＦＯＯ", DER),
+                { caseFold: true },
+            )).toBe("foo");
+            expect(normalize).toHaveBeenCalledTimes(2);
+        } finally {
+            normalize.mockRestore();
+        }
     });
 
     it("compares integers across number, bigint, and element", () => {

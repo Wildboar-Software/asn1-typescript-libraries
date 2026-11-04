@@ -24,6 +24,10 @@ import type {
     CaseIgnoreList,
 } from "../modules/SelectedAttributeTypes/CaseIgnoreList.ta.mjs";
 import {
+    prepString,
+    type PrepStringOptions,
+} from "../utils/prepString.mjs";
+import {
     _decode_SubstringAssertion,
 } from "../modules/SelectedAttributeTypes/SubstringAssertion.ta.mjs";
 import type {
@@ -61,39 +65,104 @@ export type DirectoryStringInput =
     | DirectoryString
     | string;
 
+const printableStringCharacters = /^[A-Za-z0-9 '()+,\-./:=?]*$/;
+
+/**
+ * String preparation for a valid PrintableString needs no Unicode
+ * mapping, normalization, prohibited-character check, or full case fold.
+ */
+function prepPrintableString (
+    value: string,
+    options: PrepStringOptions,
+    validated: boolean,
+): string | undefined {
+    if (!validated && !printableStringCharacters.test(value)) {
+        return prepString(value, options);
+    }
+    if (value.length === 0) {
+        return undefined;
+    }
+    const folded = options.caseFold ? value.toLowerCase() : value;
+    const trimmed = folded.replace(/ +/g, " ").trim();
+    return trimmed.length > 0 ? trimmed : " ";
+}
+
+function finishDirectoryString (
+    value: string,
+    printable: boolean,
+    preparation: PrepStringOptions | undefined,
+    printableValidated: boolean = false,
+): string | undefined {
+    if (preparation === undefined) {
+        return value;
+    }
+    return printable
+        ? prepPrintableString(value, preparation, printableValidated)
+        : prepString(value, preparation);
+}
+
 /**
  * @param value Element, directory-string alternative, or string.
- * @returns The character contents.
+ * @param preparation When present, prepare the decoded string for matching.
+ * @returns The character contents, or `undefined` if preparation fails.
  */
 export
-function readDirectoryString (value: DirectoryStringInput): string {
+function readDirectoryString (value: DirectoryStringInput): string;
+export
+function readDirectoryString (
+    value: DirectoryStringInput,
+    preparation: PrepStringOptions,
+): string | undefined;
+export
+function readDirectoryString (
+    value: DirectoryStringInput,
+    preparation?: PrepStringOptions,
+): string | undefined {
     if (typeof value === "string") {
-        return value;
+        return finishDirectoryString(value, false, preparation);
     }
     if (ASN1Element.isElement(value)) {
         if (value.tagClass === ASN1TagClass.universal) {
             switch (value.tagNumber) {
                 case ASN1UniversalType.utf8String:
-                    return value.utf8String;
+                    return finishDirectoryString(value.utf8String, false, preparation);
                 case ASN1UniversalType.printableString:
-                    return value.printableString;
+                    return finishDirectoryString(
+                        value.printableString,
+                        true,
+                        preparation,
+                        true,
+                    );
                 case ASN1UniversalType.teletexString:
-                    return teletexToString(value.teletexString);
+                    return finishDirectoryString(
+                        teletexToString(value.teletexString),
+                        false,
+                        preparation,
+                    );
                 case ASN1UniversalType.bmpString:
-                    return value.bmpString;
+                    return finishDirectoryString(value.bmpString, false, preparation);
                 case ASN1UniversalType.universalString:
-                    return value.universalString;
+                    return finishDirectoryString(value.universalString, false, preparation);
                 case ASN1UniversalType.ia5String:
-                    return value.ia5String;
+                    return finishDirectoryString(value.ia5String, false, preparation);
                 case ASN1UniversalType.visibleString:
-                    return value.visibleString;
+                    return finishDirectoryString(value.visibleString, false, preparation);
                 case ASN1UniversalType.objectDescriptor:
-                    return value.objectDescriptor;
+                    return finishDirectoryString(value.objectDescriptor, false, preparation);
             }
         }
-        return directoryStringToString(_decode_UnboundedDirectoryString(value));
+        const decoded = _decode_UnboundedDirectoryString(value);
+        return finishDirectoryString(
+            directoryStringToString(decoded),
+            "printableString" in decoded,
+            preparation,
+        );
     }
-    return directoryStringToString(value);
+    return finishDirectoryString(
+        directoryStringToString(value),
+        "printableString" in value,
+        preparation,
+    );
 }
 
 /**
