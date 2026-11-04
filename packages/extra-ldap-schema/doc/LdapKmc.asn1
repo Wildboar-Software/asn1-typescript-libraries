@@ -1,0 +1,244 @@
+-- Derived from data/ldap-schema/kmc.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+LdapKmc DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactMatch, caseExactSubstringsMatch,
+    caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, directoryString, generalizedTime,
+    generalizedTimeMatch, generalizedTimeOrderingMatch, ia5String, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-x-kmc-LastModified OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 1 }
+id-at-x-kmc-PhoneticSurname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 2 }
+id-at-x-kmc-PhoneticGivenName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 3 }
+id-at-x-kmc-Generation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 4 }
+id-at-x-kmc-Alias OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 5 }
+id-at-x-kmc-Lodging OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 6 }
+id-at-x-kmc-UniversityDepartment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 7 }
+id-at-x-kmc-UniversityStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 8 }
+id-at-x-kmc-UniversityMatricYear OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 9 }
+id-at-x-kmc-MailForwardingAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 10 }
+id-at-x-kmc-MailNotificationAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 11 }
+id-at-x-kmc-DiscordUserID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 12 }
+id-at-x-kmc-SlackUserID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 13 }
+id-at-x-kmc-AddressIsPublic OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 14 }
+id-at-x-kmc-IsKUMember OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 15 }
+id-at-x-kmc-KUStudentNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 16 }
+id-at-x-kmc-KUDepartment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 3 17 }
+id-oc-x-kmc-Person OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 43463 1 2 4 1 }
+
+-- Attribute types
+
+-- OID written as kmcAttributeType:1 and expanded with this file's objectidentifier macros.
+x-kmc-LastModified ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"x-kmc-LastModified"}
+  LDAP-DESC                 "the time when the information of the associated person is last modified"
+  ID                        id-at-x-kmc-LastModified }
+
+-- OID written as kmcAttributeType:2 and expanded with this file's objectidentifier macros.
+-- This attribute declares neither a supertype nor a syntax.
+x-kmc-PhoneticSurname ATTRIBUTE ::= {
+  LDAP-NAME                 {"x-kmc-PhoneticSurname", "SINGLE-VALUE"}
+  LDAP-DESC                 "the phonetic surname of the associated person"
+  ID                        id-at-x-kmc-PhoneticSurname }
+
+-- OID written as kmcAttributeType:3 and expanded with this file's objectidentifier macros.
+-- This attribute declares neither a supertype nor a syntax.
+x-kmc-PhoneticGivenName ATTRIBUTE ::= {
+  LDAP-NAME                 {"x-kmc-PhoneticGivenName", "SINGLE-VALUE"}
+  LDAP-DESC                 "the phonetic given name of the associated person"
+  ID                        id-at-x-kmc-PhoneticGivenName }
+
+-- OID written as kmcAttributeType:4 and expanded with this file's objectidentifier macros.
+x-kmc-Generation ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"x-kmc-Generation"}
+  LDAP-DESC                 "the generation of the associated person"
+  ID                        id-at-x-kmc-Generation }
+
+-- OID written as kmcAttributeType:5 and expanded with this file's objectidentifier macros.
+-- This attribute declares neither a supertype nor a syntax.
+x-kmc-Alias ATTRIBUTE ::= {
+  LDAP-NAME                 {"x-kmc-Alias"}
+  LDAP-DESC                 "the alias names of the associated person"
+  ID                        id-at-x-kmc-Alias }
+
+-- OID written as kmcAttributeType:6 and expanded with this file's objectidentifier macros.
+x-kmc-Lodging ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"x-kmc-Lodging"}
+  LDAP-DESC                 "whether the associated person is lodging"
+  ID                        id-at-x-kmc-Lodging }
+
+-- OID written as kmcAttributeType:7 and expanded with this file's objectidentifier macros.
+x-kmc-UniversityDepartment ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-kmc-UniversityDepartment"}
+  LDAP-DESC                 "the department at the university to which the associated person belongs"
+  ID                        id-at-x-kmc-UniversityDepartment }
+
+-- OID written as kmcAttributeType:8 and expanded with this file's objectidentifier macros.
+x-kmc-UniversityStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-kmc-UniversityStatus"}
+  LDAP-DESC                 "the status of the associated person in the university"
+  ID                        id-at-x-kmc-UniversityStatus }
+
+-- OID written as kmcAttributeType:9 and expanded with this file's objectidentifier macros.
+x-kmc-UniversityMatricYear ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"x-kmc-UniversityMatricYear"}
+  LDAP-DESC                 "the year when the associated person entered the university"
+  ID                        id-at-x-kmc-UniversityMatricYear }
+
+-- OID written as kmcAttributeType:10 and expanded with this file's objectidentifier macros.
+x-kmc-MailForwardingAddress ATTRIBUTE ::= {
+  SUBTYPE OF                mail
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"x-kmc-MailForwardingAddress"}
+  LDAP-DESC                 "Email address to forward messages"
+  ID                        id-at-x-kmc-MailForwardingAddress }
+
+-- OID written as kmcAttributeType:11 and expanded with this file's objectidentifier macros.
+x-kmc-MailNotificationAddress ATTRIBUTE ::= {
+  SUBTYPE OF                mail
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"x-kmc-MailNotificationAddress"}
+  LDAP-DESC                 "Email address to send notification messages"
+  ID                        id-at-x-kmc-MailNotificationAddress }
+
+-- OID written as kmcAttributeType:12 and expanded with this file's objectidentifier macros.
+x-kmc-DiscordUserID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-kmc-DiscordUserID"}
+  LDAP-DESC                 "Discord user id, username and discreminator of the person"
+  ID                        id-at-x-kmc-DiscordUserID }
+
+-- OID written as kmcAttributeType:13 and expanded with this file's objectidentifier macros.
+x-kmc-SlackUserID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-kmc-SlackUserID"}
+  LDAP-DESC                 "Slack user id"
+  ID                        id-at-x-kmc-SlackUserID }
+
+-- OID written as kmcAttributeType:14 and expanded with this file's objectidentifier macros.
+x-kmc-AddressIsPublic ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"x-kmc-AddressIsPublic"}
+  LDAP-DESC                 "Public postalcode and address to all users"
+  ID                        id-at-x-kmc-AddressIsPublic }
+
+-- OID written as kmcAttributeType:15 and expanded with this file's objectidentifier macros.
+x-kmc-IsKUMember ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"x-kmc-IsKUMember"}
+  LDAP-DESC                 "Whether the associated person belongs to Kyoto University"
+  ID                        id-at-x-kmc-IsKUMember }
+
+-- OID written as kmcAttributeType:16 and expanded with this file's objectidentifier macros.
+x-kmc-KUStudentNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-kmc-KUStudentNumber"}
+  LDAP-DESC                 "Kyoto University Student Number"
+  ID                        id-at-x-kmc-KUStudentNumber }
+
+-- OID written as kmcAttributeType:17 and expanded with this file's objectidentifier macros.
+x-kmc-KUDepartment ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"x-kmc-KUDepartment"}
+  LDAP-DESC                 "the department and faculty of Kyoto University to which the associated person belongs"
+  ID                        id-at-x-kmc-KUDepartment }
+
+-- Object classes
+
+-- OID written as kmcObjectClass:1 and expanded with this file's objectidentifier macros.
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+x-kmc-Person OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { x-kmc-LastModified
+                              | x-kmc-PhoneticSurname
+                              | x-kmc-PhoneticGivenName
+                              | x-kmc-Generation
+                              | x-kmc-Alias
+                              | x-kmc-Lodging
+                              | x-kmc-UniversityDepartment
+                              | x-kmc-UniversityStatus
+                              | x-kmc-UniversityMatricYear
+                              | x-kmc-MailForwardingAddress
+                              | x-kmc-MailNotificationAddress
+                              | x-kmc-DiscordUserID
+                              | x-kmc-SlackUserID
+                              | x-kmc-AddressIsPublic
+                              | x-kmc-IsKUMember
+                              | x-kmc-KUDepartment
+                              | x-kmc-KUStudentNumber }
+  LDAP-NAME                 {"x-kmc-Person"}
+  LDAP-DESC                 "Additional informations for a member of KMC"
+  ID                        id-oc-x-kmc-Person }
+END

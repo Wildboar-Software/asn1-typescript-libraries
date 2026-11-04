@@ -1,0 +1,446 @@
+-- Derived from data/ldap-schema/dicom.schema
+-- Upstream: https://dicom.nema.org/medical/dicom/current/output/chtml/part15/chapter_H.html#sect_H.1.3
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapDicom DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, distinguishedNameMatch, OBJECT-CLASS,
+    objectIdentifierMatch, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactIA5Match, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString, dn,
+    ia5String, integer, integerMatch, oid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-dicomDeviceName OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 1 }
+id-at-dicomDescription OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 2 }
+id-at-dicomManufacturer OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 3 }
+id-at-dicomManufacturerModelName OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 4 }
+id-at-dicomSoftwareVersion OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 5 }
+id-at-dicomVendorData OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 6 }
+id-at-dicomAETitle OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 7 }
+id-at-dicomNetworkConnectionReference OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 8 }
+id-at-dicomApplicationCluster OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 9 }
+id-at-dicomAssociationInitiator OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 10 }
+id-at-dicomAssociationAcceptor OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 11 }
+id-at-dicomHostname OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 12 }
+id-at-dicomPort OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 13 }
+id-at-dicomSOPClass OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 14 }
+id-at-dicomTransferRole OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 15 }
+id-at-dicomTransferSyntax OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 16 }
+id-at-dicomPrimaryDeviceType OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 17 }
+id-at-dicomRelatedDeviceReference OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 18 }
+id-at-dicomPreferredCalledAETitle OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 19 }
+id-at-dicomTLSCipherSuite OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 20 }
+id-at-dicomAuthorizedNodeCertificateReference OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 21 }
+id-at-dicomThisNodeCertificateReference OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 22 }
+id-at-dicomInstalled OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 23 }
+id-at-dicomStationName OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 24 }
+id-at-dicomDeviceSerialNumber OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 25 }
+id-at-dicomInstitutionName OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 26 }
+id-at-dicomInstitutionAddress OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 27 }
+id-at-dicomInstitutionDepartmentName OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 28 }
+id-at-dicomIssuerOfPatientID OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 29 }
+id-at-dicomPreferredCallingAETitle OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 30 }
+id-at-dicomSupportedCharacterSet OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 31 }
+-- The source published 1.2.840.10008.15.0.3.31 for both dicomSupportedCharacterSet and dicomInstitutionDepartmentType. The department-type attribute was changed to end in 32. The character-set attribute stays at 31.
+id-at-dicomInstitutionDepartmentType OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 3 32 }
+id-oc-dicomConfigurationRoot OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 1 }
+id-oc-dicomDevicesRoot OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 2 }
+id-oc-dicomUniqueAETitlesRegistryRoot OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 3 }
+id-oc-dicomDevice OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 4 }
+id-oc-dicomNetworkAE OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 5 }
+id-oc-dicomNetworkConnection OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 6 }
+id-oc-dicomUniqueAETitle OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 7 }
+id-oc-dicomTransferCapability OBJECT IDENTIFIER ::= { 1 2 840 10008 15 0 4 8 }
+
+-- Attribute types
+
+dicomDeviceName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomDeviceName"}
+  LDAP-DESC                 "The unique name for the device"
+  ID                        id-at-dicomDeviceName }
+
+dicomDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomDescription"}
+  LDAP-DESC                 "Textual description of the DICOM entity"
+  ID                        id-at-dicomDescription }
+
+dicomManufacturer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomManufacturer"}
+  LDAP-DESC                 "The device Manufacturer name"
+  ID                        id-at-dicomManufacturer }
+
+dicomManufacturerModelName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomManufacturerModelName"}
+  LDAP-DESC                 "The device Manufacturer Model Name"
+  ID                        id-at-dicomManufacturerModelName }
+
+dicomSoftwareVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomSoftwareVersion"}
+  LDAP-DESC                 "The device software version. Should be the same as the Values of Software Versions (0018,1020) in SOP instances created by this device."
+  ID                        id-at-dicomSoftwareVersion }
+
+-- LDAP binary syntax has no X.500 directory type here. Represented as OCTET STRING.
+dicomVendorData ATTRIBUTE ::= {
+  WITH SYNTAX               OCTET STRING
+  LDAP-SYNTAX               { 1 3 6 1 4 1 1466 115 121 1 5 }
+  LDAP-NAME                 {"dicomVendorData"}
+  LDAP-DESC                 "Arbitrary vendor-specific configuration information (binary data)"
+  ID                        id-at-dicomVendorData }
+
+dicomAETitle ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomAETitle"}
+  LDAP-DESC                 "Application Entity (AE) title"
+  ID                        id-at-dicomAETitle }
+
+dicomNetworkConnectionReference ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dicomNetworkConnectionReference"}
+  LDAP-DESC                 "The DN of a dicomNetworkConnection object used by an Application Entity"
+  ID                        id-at-dicomNetworkConnectionReference }
+
+dicomApplicationCluster ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomApplicationCluster"}
+  LDAP-DESC                 "Application cluster name for an Application Entity (e.g., ""Neuroradiology Research"")"
+  ID                        id-at-dicomApplicationCluster }
+
+dicomAssociationInitiator ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"dicomAssociationInitiator"}
+  LDAP-DESC                 "Indicates if an Application Entity is capable of initiating network associations"
+  ID                        id-at-dicomAssociationInitiator }
+
+dicomAssociationAcceptor ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"dicomAssociationAcceptor"}
+  LDAP-DESC                 "Indicates if an Application Entity is capable of accepting network associations"
+  ID                        id-at-dicomAssociationAcceptor }
+
+dicomHostname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomHostname"}
+  LDAP-DESC                 "DNS hostname"
+  ID                        id-at-dicomHostname }
+
+dicomPort ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"dicomPort"}
+  LDAP-DESC                 "TCP Port number"
+  ID                        id-at-dicomPort }
+
+dicomSOPClass ATTRIBUTE ::= {
+  WITH SYNTAX               OBJECT IDENTIFIER
+  EQUALITY MATCHING RULE    objectIdentifierMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               oid.&id
+  LDAP-NAME                 {"dicomSOPClass"}
+  LDAP-DESC                 "A SOP Class UID"
+  ID                        id-at-dicomSOPClass }
+
+dicomTransferRole ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomTransferRole"}
+  LDAP-DESC                 "Transfer role (either ""SCU"" or ""SCP"")"
+  ID                        id-at-dicomTransferRole }
+
+dicomTransferSyntax ATTRIBUTE ::= {
+  WITH SYNTAX               OBJECT IDENTIFIER
+  EQUALITY MATCHING RULE    objectIdentifierMatch
+  LDAP-SYNTAX               oid.&id
+  LDAP-NAME                 {"dicomTransferSyntax"}
+  LDAP-DESC                 "A Transfer Syntax UID"
+  ID                        id-at-dicomTransferSyntax }
+
+dicomPrimaryDeviceType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomPrimaryDeviceType"}
+  LDAP-DESC                 "The device Primary Device type"
+  ID                        id-at-dicomPrimaryDeviceType }
+
+dicomRelatedDeviceReference ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dicomRelatedDeviceReference"}
+  LDAP-DESC                 "The DN of a related device description outside the DICOM Configuration Hierachy"
+  ID                        id-at-dicomRelatedDeviceReference }
+
+dicomPreferredCalledAETitle ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomPreferredCalledAETitle"}
+  LDAP-DESC                 "AE Title(s) to which associations may be preferably initiated."
+  ID                        id-at-dicomPreferredCalledAETitle }
+
+dicomTLSCipherSuite ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomTLSCipherSuite"}
+  LDAP-DESC                 "The supported TLS CipherSuites"
+  ID                        id-at-dicomTLSCipherSuite }
+
+dicomAuthorizedNodeCertificateReference ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dicomAuthorizedNodeCertificateReference"}
+  LDAP-DESC                 "The DN of a Certificate for a DICOM node that is authorized to connect to this node"
+  ID                        id-at-dicomAuthorizedNodeCertificateReference }
+
+dicomThisNodeCertificateReference ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  EQUALITY MATCHING RULE    distinguishedNameMatch
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"dicomThisNodeCertificateReference"}
+  LDAP-DESC                 "The DN of a related device description outside the DICOM Configuration Hierachy"
+  ID                        id-at-dicomThisNodeCertificateReference }
+
+dicomInstalled ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"dicomInstalled"}
+  LDAP-DESC                 "Indicates if the DICOM object (device, Network AE, or Port) is presently installed"
+  ID                        id-at-dicomInstalled }
+
+dicomStationName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomStationName"}
+  LDAP-DESC                 "Station Name of the device. Should be the same as the value of Station Name (0008,1010) in SOP instances created by this device."
+  ID                        id-at-dicomStationName }
+
+dicomDeviceSerialNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomDeviceSerialNumber"}
+  LDAP-DESC                 "Serial number of the device. Should be the same as the value of Device Serial Number (0018,1000) in SOP instances created by this device."
+  ID                        id-at-dicomDeviceSerialNumber }
+
+dicomInstitutionName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomInstitutionName"}
+  LDAP-DESC                 "Institution name of the device. Should be the same as the value of Institution Name (0008,0080) in SOP Instances created by this device."
+  ID                        id-at-dicomInstitutionName }
+
+dicomInstitutionAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomInstitutionAddress"}
+  LDAP-DESC                 "Institution address of the device. Should be the same as the value of Institution Address (0008,0081) attribute in SOP Instances created by this device."
+  ID                        id-at-dicomInstitutionAddress }
+
+dicomInstitutionDepartmentName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomInstitutionDepartmentName"}
+  LDAP-DESC                 "Institution department name of the device. Should be the same as the value of Institutional Department Name (0008,1040) in SOP Instances created by this device."
+  ID                        id-at-dicomInstitutionDepartmentName }
+
+dicomIssuerOfPatientID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dicomIssuerOfPatientID"}
+  LDAP-DESC                 "Default value for the Issuer of Patient ID (0010,0021) for SOP Instances created by this device. May be overridden by the values received in a worklist or other source."
+  ID                        id-at-dicomIssuerOfPatientID }
+
+dicomPreferredCallingAETitle ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomPreferredCallingAETitle"}
+  LDAP-DESC                 "AE Title(s) to which associations may be preferably accepted."
+  ID                        id-at-dicomPreferredCallingAETitle }
+
+dicomSupportedCharacterSet ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomSupportedCharacterSet"}
+  LDAP-DESC                 "The Character Set(s) supported by the Network AE for Data Sets it receives."
+  ID                        id-at-dicomSupportedCharacterSet }
+
+-- The source published 1.2.840.10008.15.0.3.31 for both dicomSupportedCharacterSet and dicomInstitutionDepartmentType. The department-type attribute was changed to end in 32. The character-set attribute stays at 31.
+dicomInstitutionDepartmentType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"dicomInstitutionDepartmentType"}
+  LDAP-DESC                 "Institution department type of the device. Should be the same as the value of Institutional Department Type Code Sequence (0008,1041) in SOP Instances created by this device."
+  ID                        id-at-dicomInstitutionDepartmentType }
+
+-- Object classes
+
+dicomConfigurationRoot OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"dicomConfigurationRoot"}
+  LDAP-DESC                 "Root of the DICOM Configuration Hierarchy"
+  ID                        id-oc-dicomConfigurationRoot }
+
+dicomDevicesRoot OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"dicomDevicesRoot"}
+  LDAP-DESC                 "Root of the DICOM Devices Hierarchy"
+  ID                        id-oc-dicomDevicesRoot }
+
+dicomUniqueAETitlesRegistryRoot OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { description }
+  LDAP-NAME                 {"dicomUniqueAETitlesRegistryRoot"}
+  LDAP-DESC                 "Root of the Unique DICOM AE-Title Registry Hierarchy"
+  ID                        id-oc-dicomUniqueAETitlesRegistryRoot }
+
+dicomDevice OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dicomDeviceName
+                              | dicomInstalled }
+  MAY CONTAIN               { dicomDescription
+                              | dicomManufacturer
+                              | dicomManufacturerModelName
+                              | dicomSoftwareVersion
+                              | dicomStationName
+                              | dicomDeviceSerialNumber
+                              | dicomInstitutionName
+                              | dicomInstitutionAddress
+                              | dicomInstitutionDepartmentName
+                              | dicomIssuerOfPatientID
+                              | dicomVendorData
+                              | dicomPrimaryDeviceType
+                              | dicomRelatedDeviceReference
+                              | dicomAuthorizedNodeCertificateReference
+                              | dicomThisNodeCertificateReference }
+  LDAP-NAME                 {"dicomDevice"}
+  LDAP-DESC                 "DICOM Device related information"
+  ID                        id-oc-dicomDevice }
+
+dicomNetworkAE OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dicomAETitle
+                              | dicomNetworkConnectionReference
+                              | dicomAssociationInitiator
+                              | dicomAssociationAcceptor }
+  MAY CONTAIN               { dicomDescription
+                              | dicomVendorData
+                              | dicomApplicationCluster
+                              | dicomPreferredCalledAETitle
+                              | dicomPreferredCallingAETitle
+                              | dicomSupportedCharacterSet
+                              | dicomInstalled }
+  LDAP-NAME                 {"dicomNetworkAE"}
+  LDAP-DESC                 "DICOM Network AE related information"
+  ID                        id-oc-dicomNetworkAE }
+
+dicomNetworkConnection OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dicomHostname }
+  MAY CONTAIN               { commonName
+                              | dicomPort
+                              | dicomTLSCipherSuite
+                              | dicomInstalled }
+  LDAP-NAME                 {"dicomNetworkConnection"}
+  LDAP-DESC                 "DICOM Network Connection information"
+  ID                        id-oc-dicomNetworkConnection }
+
+dicomUniqueAETitle OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dicomAETitle }
+  LDAP-NAME                 {"dicomUniqueAETitle"}
+  LDAP-DESC                 "A Unique DICOM Application Entity title"
+  ID                        id-oc-dicomUniqueAETitle }
+
+dicomTransferCapability OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { dicomSOPClass
+                              | dicomTransferRole
+                              | dicomTransferSyntax }
+  MAY CONTAIN               { commonName }
+  LDAP-NAME                 {"dicomTransferCapability"}
+  LDAP-DESC                 "Transfer Capabilities for an Application Entity"
+  ID                        id-oc-dicomTransferCapability }
+END

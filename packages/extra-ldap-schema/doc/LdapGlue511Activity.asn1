@@ -1,0 +1,113 @@
+-- Derived from data/ldap-schema/glue/5-11-Activity.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue511Activity DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2ActivityID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 1 }
+id-at-gLUE2ActivityUserDomainForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 2 }
+id-at-gLUE2ActivityEndpointForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 3 }
+id-at-gLUE2ActivityShareForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 4 }
+id-at-gLUE2ActivityResourceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 5 }
+id-at-gLUE2ActivityActivityForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 6 }
+id-oc-gLUE2Activity OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 13 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ActivityID" lowercased so the assignment is a valuereference.
+gLUE2ActivityID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ActivityID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2ActivityID }
+
+-- initial capital of "GLUE2ActivityUserDomainForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ActivityUserDomainForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ActivityUserDomainForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ActivityUserDomainForeignKey }
+
+-- initial capital of "GLUE2ActivityEndpointForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ActivityEndpointForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ActivityEndpointForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ActivityEndpointForeignKey }
+
+-- initial capital of "GLUE2ActivityShareForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ActivityShareForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ActivityShareForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ActivityShareForeignKey }
+
+-- initial capital of "GLUE2ActivityResourceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ActivityResourceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ActivityResourceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ActivityResourceForeignKey }
+
+-- initial capital of "GLUE2ActivityActivityForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ActivityActivityForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ActivityActivityForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ActivityActivityForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2Activity" lowercased so the assignment is a valuereference.
+gLUE2Activity OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2ActivityID }
+  MAY CONTAIN               { gLUE2ActivityUserDomainForeignKey
+                              | gLUE2ActivityEndpointForeignKey
+                              | gLUE2ActivityShareForeignKey
+                              | gLUE2ActivityResourceForeignKey
+                              | gLUE2ActivityActivityForeignKey }
+  LDAP-NAME                 {"GLUE2Activity"}
+  LDAP-DESC                 "An activity is a unit of work managed by a Service and submitted via an Endpoint"
+  ID                        id-oc-gLUE2Activity }
+END

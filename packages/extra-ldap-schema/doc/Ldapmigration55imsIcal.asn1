@@ -1,0 +1,467 @@
+-- Derived from data/ldap-schema/ldapmigration/55ims-ical.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 1 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 3 elements were omitted because another source file in this corpus defines the same OID.
+Ldapmigration55imsIcal DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  alias, ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  commonName, dc, description, directoryString, dn, ia5String, integer,
+    organizationName, owner, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  inetOrgPerson
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  mailAlternateAddress
+    FROM QMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) qmail-schema(55)} WITH SUCCESSORS
+
+  calCalURI, calFBURL
+    FROM RFC2739Calendar
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) rfc-2739-calendar(8)} WITH SUCCESSORS
+
+  nsdaModifiableBy
+    FROM Ldapmigration50nsDelegatedAdmin
+
+  vacationenddate, vacationstartdate
+    FROM Ldapmigration50nsMail
+
+  co
+    FROM LdapSchema2ldifCosine ;
+
+-- Object identifiers
+
+id-at-externalAuthPreUrlTemplate OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 6 }
+id-at-externalAuthPostUrlTemplate OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 1 7 }
+id-at-domOrgMaxUsers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 697 }
+id-at-domOrgNumUsers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 698 }
+id-at-inetDomainSearchFilter OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 699 }
+id-at-inetDomainCertMap OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 700 }
+id-at-inetCanonicalDomainName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 701 }
+id-at-domainUidSeparator OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 702 }
+id-at-pabURI OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 703 }
+id-at-memberOfManagedGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 704 }
+id-at-maxPabEntries OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 705 }
+id-at-inetCOS OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 706 }
+id-at-mnggrpDeletionPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 709 }
+id-at-mnggrpAdditionPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 710 }
+id-at-mnggrpBillableUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 711 }
+id-at-mnggrpStatus OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 712 }
+id-at-mnggrpMaxUsers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 713 }
+id-at-mnggrpCurrentUsers OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 714 }
+id-at-mnggrpMailQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 715 }
+id-at-mnggrpUserClassOfServices OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 716 }
+id-at-un OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 717 }
+id-at-memberOfPAB OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 718 }
+id-at-memberOfPABGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 719 }
+id-at-nickname OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 720 }
+id-at-dateOfBirth OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 721 }
+id-at-organizationUnitName OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 722 }
+id-at-icsExtendedUserPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 742 }
+id-at-psRoot OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 987 }
+id-at-psIncludeInGAB OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 9 1 988 }
+id-at-mailSieveRuleSource OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 775 }
+id-oc-inetDomainAlias OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 131 }
+id-oc-inetDomainOrg OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 132 }
+id-oc-inetDomainAuthInfo OBJECT IDENTIFIER ::= { 2 16 840 1 113894 1009 1 2 4 }
+id-oc-ipUser OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 135 }
+id-oc-userPresenceProfile OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 136 }
+id-oc-inetManagedGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 137 }
+id-oc-pabPerson OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 138 }
+id-oc-pabGroup OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 139 }
+id-oc-pab OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 140 }
+
+-- Attribute types
+
+-- X-ORIGIN: "OCUCS Calendar"
+externalAuthPreUrlTemplate ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"externalAuthPreUrlTemplate"}
+  LDAP-DESC                 "LDAP URL for External Directory Server Auth Search"
+  ID                        id-at-externalAuthPreUrlTemplate }
+
+-- X-ORIGIN: "OCUCS Calendar"
+externalAuthPostUrlTemplate ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"externalAuthPostUrlTemplate"}
+  LDAP-DESC                 "LDAP URL for local mapping of External Directory Server Auth User"
+  ID                        id-at-externalAuthPostUrlTemplate }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+domOrgMaxUsers ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"domOrgMaxUsers"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-domOrgMaxUsers }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+domOrgNumUsers ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"domOrgNumUsers"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-domOrgNumUsers }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetDomainSearchFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetDomainSearchFilter"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-inetDomainSearchFilter }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetDomainCertMap ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetDomainCertMap"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-inetDomainCertMap }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetCanonicalDomainName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetCanonicalDomainName"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-inetCanonicalDomainName }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+domainUidSeparator ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"domainUidSeparator"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-domainUidSeparator }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+pabURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"pabURI"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-pabURI }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+memberOfManagedGroup ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"memberOfManagedGroup"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-memberOfManagedGroup }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+maxPabEntries ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"maxPabEntries"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-maxPabEntries }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetCOS ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"inetCOS"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-inetCOS }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpDeletionPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mnggrpDeletionPolicy"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpDeletionPolicy }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpAdditionPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mnggrpAdditionPolicy"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpAdditionPolicy }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpBillableUser ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"mnggrpBillableUser"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpBillableUser }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mnggrpStatus"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpStatus }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpMaxUsers ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mnggrpMaxUsers"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpMaxUsers }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpCurrentUsers ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mnggrpCurrentUsers"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpCurrentUsers }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpMailQuota ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"mnggrpMailQuota"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpMailQuota }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+mnggrpUserClassOfServices ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mnggrpUserClassOfServices"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-mnggrpUserClassOfServices }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+un ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"un"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-un }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+memberOfPAB ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"memberOfPAB"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-memberOfPAB }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+memberOfPABGroup ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"memberOfPABGroup"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-memberOfPABGroup }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+nickname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nickname"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-nickname }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+dateOfBirth ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"dateOfBirth"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-dateOfBirth }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+organizationUnitName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"organizationUnitName"}
+  LDAP-DESC                 "iPlanet Messaging Server defined attribute"
+  ID                        id-at-organizationUnitName }
+
+-- X-ORIGIN: "iPlanet Calendar Services"
+icsExtendedUserPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"icsExtendedUserPrefs"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-icsExtendedUserPrefs }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+psRoot ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"psRoot"}
+  LDAP-DESC                 "Standard Attribute"
+  ID                        id-at-psRoot }
+
+-- X-ORIGIN: "delegated admin"
+psIncludeInGAB ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"psIncludeInGAB"}
+  LDAP-DESC                 "DA defined attribute"
+  ID                        id-at-psIncludeInGAB }
+
+-- X-ORIGIN: "Sun ONE Messaging Server"
+mailSieveRuleSource ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailSieveRuleSource"}
+  LDAP-DESC                 "Sun ONE Messaging Server defined attribute"
+  ID                        id-at-mailSieveRuleSource }
+
+-- Object classes
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetDomainAlias OBJECT-CLASS ::= {
+  SUBCLASS OF               { alias }
+  MUST CONTAIN              { dc }
+  LDAP-NAME                 {"inetDomainAlias"}
+  LDAP-DESC                 "auxiliary class for hosted domain aliases"
+  ID                        id-oc-inetDomainAlias }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetDomainOrg OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { domOrgMaxUsers
+                              | domOrgNumUsers }
+  LDAP-NAME                 {"inetDomainOrg"}
+  LDAP-DESC                 "auxiliary class for suborganizations in a domain"
+  ID                        id-oc-inetDomainOrg }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetDomainAuthInfo OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { inetDomainSearchFilter
+                              | inetDomainCertMap
+                              | domainUidSeparator
+                              | inetCanonicalDomainName
+                              | externalAuthPreUrlTemplate
+                              | externalAuthPostUrlTemplate }
+  LDAP-NAME                 {"inetDomainAuthInfo"}
+  LDAP-DESC                 "auxiliary class for misc hosted domain attributes"
+  ID                        id-oc-inetDomainAuthInfo }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+ipUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { pabURI
+                              | memberOfManagedGroup
+                              | maxPabEntries
+                              | inetCOS
+                              | psRoot
+                              | psIncludeInGAB }
+  LDAP-NAME                 {"ipUser"}
+  LDAP-DESC                 "auxiliary class for extending a inetuser entry. Used by calendar and messaging servers"
+  ID                        id-oc-ipUser }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+userPresenceProfile OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { vacationstartdate
+                              | vacationenddate }
+  LDAP-NAME                 {"userPresenceProfile"}
+  LDAP-DESC                 "auxiliary class for vacation start end dates"
+  ID                        id-oc-userPresenceProfile }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+inetManagedGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { mnggrpDeletionPolicy
+                              | mnggrpAdditionPolicy
+                              | mnggrpBillableUser
+                              | description
+                              | mnggrpStatus
+                              | mnggrpMaxUsers
+                              | mnggrpCurrentUsers
+                              | mnggrpMailQuota
+                              | owner
+                              | nsdaModifiableBy
+                              | mnggrpUserClassOfServices
+                              | mailSieveRuleSource }
+  LDAP-NAME                 {"inetManagedGroup"}
+  LDAP-DESC                 "auxiliary class for a managed group used by family accounts"
+  ID                        id-oc-inetManagedGroup }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+pabPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MAY CONTAIN               { un
+                              | organizationName
+                              | organizationUnitName
+                              | co
+                              | mailAlternateAddress
+                              | dateOfBirth
+                              | memberOfPAB
+                              | memberOfPABGroup
+                              | nickname
+                              | calCalURI
+                              | calFBURL }
+  LDAP-NAME                 {"pabPerson"}
+  LDAP-DESC                 "structural class for creating personal address book entries"
+  ID                        id-oc-pabPerson }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+pabGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { un
+                              | memberOfPAB
+                              | nickname
+                              | description }
+  LDAP-NAME                 {"pabGroup"}
+  LDAP-DESC                 "structural class for defininig a PAB group"
+  ID                        id-oc-pabGroup }
+
+-- X-ORIGIN: "iPlanet Messaging Server"
+pab OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { un
+                              | description }
+  LDAP-NAME                 {"pab"}
+  LDAP-DESC                 "structural class for defining a personal address book"
+  ID                        id-oc-pab }
+END

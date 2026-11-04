@@ -1,0 +1,211 @@
+-- Derived from data/ldap-schema/ud.ldif
+-- Upstream: https://github.com/Cloudxtreme/unixdmoain/blob/68b66b18467ba02954fe0d9e98292b679eb6057b/lib/ldif/63-ud.ldif#L71
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapUd DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreMatch, caseIgnoreSubstringsMatch, commonName, description,
+    directoryString, integer, integerMatch, organizationalUnitName, uid,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gidNumber, uidNumber
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-policyClass OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 1 }
+id-at-udSerial OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 2 }
+id-at-udMemberSerial OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 3 }
+id-at-udGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 4 }
+id-at-fQDN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 5 }
+id-at-udMemberContainer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 6 }
+id-at-policyClassDisabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 7 }
+id-at-uSID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 8 }
+id-at-unixGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 9 }
+id-at-lastSeen OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 1 10 }
+id-oc-udHostContainer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 2 1 }
+id-oc-udHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 2 2 }
+id-oc-udDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 2 3 }
+id-oc-udGroup-2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 22865 10 4 2 4 }
+
+-- Attribute types
+
+policyClass ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"policyClass"}
+  LDAP-DESC                 "policy-engine class attribute/name/identifier"
+  ID                        id-at-policyClass }
+
+-- LDAP syntax length {1024} kept as a comment only; it is an encoded-length hint, not a value constraint.
+udSerial ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"udSerial"}
+  LDAP-DESC                 "unique integer serial to maintain group lists and identifiers"
+  ID                        id-at-udSerial }
+
+-- LDAP syntax length {1024} kept as a comment only; it is an encoded-length hint, not a value constraint.
+udMemberSerial ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"udMemberSerial"}
+  LDAP-DESC                 "member serials for reverse grouping"
+  ID                        id-at-udMemberSerial }
+
+udGroup ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"udGroup"}
+  LDAP-DESC                 "group may be member of other group(s)"
+  ID                        id-at-udGroup }
+
+-- initial capital of "FQDN" lowercased so the assignment is a valuereference.
+fQDN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"FQDN"}
+  LDAP-DESC                 "full qualified named of host"
+  ID                        id-at-fQDN }
+
+udMemberContainer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"udMemberContainer"}
+  LDAP-DESC                 "containers can also be grouped as members"
+  ID                        id-at-udMemberContainer }
+
+policyClassDisabled ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"policyClassDisabled"}
+  LDAP-DESC                 "disable policy classes defined through heritage"
+  ID                        id-at-policyClassDisabled }
+
+-- initial capital of "USID" lowercased so the assignment is a valuereference.
+uSID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"USID"}
+  LDAP-DESC                 "global unique system ID for hostmatching in inventory and monitoring"
+  ID                        id-at-uSID }
+
+unixGroup ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"unixGroup"}
+  LDAP-DESC                 "multi-value posix gid like uid"
+  ID                        id-at-unixGroup }
+
+-- LDAP syntax length {1024} kept as a comment only; it is an encoded-length hint, not a value constraint.
+lastSeen ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"lastSeen"}
+  LDAP-DESC                 "unique integer lastSeen value in format yearmonthdayhourminsec, ie 20091224010001"
+  ID                        id-at-lastSeen }
+
+-- Object classes
+
+udHostContainer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { udSerial
+                              | description
+                              | commonName
+                              | policyClass
+                              | policyClassDisabled
+                              | uid
+                              | uidNumber
+                              | gidNumber
+                              | unixGroup
+                              | udGroup
+                              | udMemberSerial
+                              | udMemberContainer }
+  LDAP-NAME                 {"udHostContainer"}
+  LDAP-DESC                 "base hostgroup container"
+  ID                        id-oc-udHostContainer }
+
+udHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName
+                              | udSerial
+                              | lastSeen }
+  MAY CONTAIN               { description
+                              | organizationalUnitName
+                              | policyClass
+                              | policyClassDisabled
+                              | uid
+                              | uidNumber
+                              | gidNumber
+                              | unixGroup
+                              | udGroup
+                              | udMemberSerial
+                              | fQDN
+                              | uSID }
+  LDAP-NAME                 {"udHost"}
+  LDAP-DESC                 "host object container"
+  ID                        id-oc-udHost }
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+udDomain OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  LDAP-NAME                 {"udDomain"}
+  LDAP-DESC                 "domain container for absolute base acl"
+  ID                        id-oc-udDomain }
+
+-- disambiguated udGroup to udGroup-2 inside LdapUd.
+udGroup-2 OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { udSerial
+                              | description
+                              | organizationalUnitName
+                              | policyClass
+                              | policyClassDisabled
+                              | uid
+                              | uidNumber
+                              | gidNumber
+                              | unixGroup
+                              | udGroup
+                              | udMemberSerial
+                              | udMemberContainer
+                              | fQDN
+                              | uSID
+                              | udMemberSerial }
+  LDAP-NAME                 {"udGroup"}
+  LDAP-DESC                 "group container for multiple purpose (users, group of group etc)"
+  ID                        id-oc-udGroup-2 }
+END

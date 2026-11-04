@@ -1,0 +1,152 @@
+-- Derived from data/ldap-schema/glue/6-02-ComputingEndpoint.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue602ComputingEndpoint DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString, integer,
+    integerMatch, integerOrderingMatch, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Endpoint
+    FROM LdapGlue507Endpoint ;
+
+-- Object identifiers
+
+id-at-gLUE2ComputingEndpointStaging OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 1 }
+id-at-gLUE2ComputingEndpointJobDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 2 }
+id-at-gLUE2ComputingEndpointTotalJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 3 }
+id-at-gLUE2ComputingEndpointRunningJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 4 }
+id-at-gLUE2ComputingEndpointWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 5 }
+id-at-gLUE2ComputingEndpointStagingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 6 }
+id-at-gLUE2ComputingEndpointSuspendedJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 7 }
+id-at-gLUE2ComputingEndpointPreLRMSWaitingJobs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 8 }
+id-at-gLUE2ComputingEndpointComputingServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 9 }
+id-oc-gLUE2ComputingEndpoint OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 18 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ComputingEndpointStaging" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointStaging ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointStaging"}
+  LDAP-DESC                 "Supported staging functionalities"
+  ID                        id-at-gLUE2ComputingEndpointStaging }
+
+-- initial capital of "GLUE2ComputingEndpointJobDescription" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointJobDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointJobDescription"}
+  LDAP-DESC                 "Supported type of job description language"
+  ID                        id-at-gLUE2ComputingEndpointJobDescription }
+
+-- initial capital of "GLUE2ComputingEndpointTotalJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointTotalJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointTotalJobs"}
+  LDAP-DESC                 "Number of total jobs"
+  ID                        id-at-gLUE2ComputingEndpointTotalJobs }
+
+-- initial capital of "GLUE2ComputingEndpointRunningJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointRunningJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointRunningJobs"}
+  LDAP-DESC                 "Number of running jobs"
+  ID                        id-at-gLUE2ComputingEndpointRunningJobs }
+
+-- initial capital of "GLUE2ComputingEndpointWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointWaitingJobs"}
+  LDAP-DESC                 "Number of jobs waiting in the underlying computing managers (i.e., Local Resource Manager System or LRMS)"
+  ID                        id-at-gLUE2ComputingEndpointWaitingJobs }
+
+-- initial capital of "GLUE2ComputingEndpointStagingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointStagingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointStagingJobs"}
+  LDAP-DESC                 "Number of jobs that are staging files in/out"
+  ID                        id-at-gLUE2ComputingEndpointStagingJobs }
+
+-- initial capital of "GLUE2ComputingEndpointSuspendedJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointSuspendedJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointSuspendedJobs"}
+  LDAP-DESC                 "Number of jobs which started their execution, but are suspended (e.g., for preemption)"
+  ID                        id-at-gLUE2ComputingEndpointSuspendedJobs }
+
+-- initial capital of "GLUE2ComputingEndpointPreLRMSWaitingJobs" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointPreLRMSWaitingJobs ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  EQUALITY MATCHING RULE    integerMatch
+  ORDERING MATCHING RULE    integerOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointPreLRMSWaitingJobs"}
+  LDAP-DESC                 "Number of jobs that are in the Grid layer waiting to be passed to the underlying computing manager (i.e.,LRMS)"
+  ID                        id-at-gLUE2ComputingEndpointPreLRMSWaitingJobs }
+
+-- initial capital of "GLUE2ComputingEndpointComputingServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpointComputingServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ComputingEndpointComputingServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ComputingEndpointComputingServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2ComputingEndpoint" lowercased so the assignment is a valuereference.
+gLUE2ComputingEndpoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Endpoint }
+  MAY CONTAIN               { gLUE2ComputingEndpointStaging
+                              | gLUE2ComputingEndpointJobDescription
+                              | gLUE2ComputingEndpointTotalJobs
+                              | gLUE2ComputingEndpointRunningJobs
+                              | gLUE2ComputingEndpointWaitingJobs
+                              | gLUE2ComputingEndpointStagingJobs
+                              | gLUE2ComputingEndpointSuspendedJobs
+                              | gLUE2ComputingEndpointPreLRMSWaitingJobs
+                              | gLUE2ComputingEndpointComputingServiceForeignKey }
+  LDAP-NAME                 {"GLUE2ComputingEndpoint"}
+  LDAP-DESC                 "Endpoint for creating, monitoring, and controlling computational activities called jobs; it can be used to expose also complementary capabilities (e.g., reservation, proxy manipulation)"
+  ID                        id-oc-gLUE2ComputingEndpoint }
+END

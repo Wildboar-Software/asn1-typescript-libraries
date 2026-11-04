@@ -1,0 +1,1807 @@
+-- Derived from data/ldap-schema/ldapmigration/97sonia.ldif
+-- Upstream: https://www.iana.org/assignments/enterprise-numbers/?q=17379
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+Ldapmigration97sonia DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, commonName, countryName, description, directoryString, dn,
+    facsimileTelephoneNumber, generalizedTime, generalizedTimeMatch,
+    generalizedTimeOrderingMatch, integer, localityName, name,
+    organizationalUnitName, seeAlso, telephoneNr, telephoneNumber,
+    TelephoneNumber, uid, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  locality
+    FROM SelectedObjectClasses
+      {joint-iso-itu-t ds(5) module(1) selectedObjectClasses(6) 9} WITH SUCCESSORS
+
+  mailGroup
+    FROM InetMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inet-mail-schema(49)} WITH SUCCESSORS
+
+  departmentNumber, employeeNumber, employeeType, inetOrgPerson
+    FROM InetOrgPerson
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inetorgperson(5)} WITH SUCCESSORS
+
+  ipHost
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS
+
+  inetMailGroup, inetMailUser
+    FROM Ldapmigration56imsSchema
+
+  mail
+    FROM LdapSchema2ldifCore
+
+  manager, secretary
+    FROM LdapSchema2ldifCosine ;
+
+-- Object identifiers
+
+id-at-soniaCustomerNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 2 }
+id-at-soniaStudentNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 3 }
+id-at-soniaChipCardNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 4 }
+id-at-soniaDoorAccessSystemNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 5 }
+id-at-soniaFaculty OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 6 }
+id-at-soniaEducationalDepartment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 7 }
+id-at-soniaInstitute OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 8 }
+id-at-soniaDepartment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 9 }
+id-at-soniaLaboratory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 10 }
+id-at-soniaCampus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 11 }
+id-at-soniaSalutation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 12 }
+id-at-soniaReceivingAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 46 }
+id-at-soniaHomeEqualsSemester OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 47 }
+id-at-soniaIsUnregistered OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 48 }
+id-at-soniaIsAlumni OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 49 }
+id-at-soniaIsDeletionPrepared OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 50 }
+id-at-soniaIsDeleted OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 51 }
+id-at-soniaAcademicTitle OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 52 }
+id-at-soniaGender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 53 }
+id-at-soniaEmailVisibility OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 54 }
+id-at-soniaAddressVisibility OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 55 }
+id-at-soniaPhotoVisibility OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 56 }
+id-at-soniaCommonTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 66 }
+id-at-soniaPasswordTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 67 }
+id-at-soniaIsLocked OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 69 }
+id-at-soniaInitialPlainPassword OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 70 }
+id-at-soniaIsLockedReason OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 71 }
+id-at-soniaIsLockedBy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 72 }
+id-at-soniaAnnotation OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 73 }
+id-at-soniaIsValidFrom OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 74 }
+id-at-soniaIsValidUntil OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 75 }
+id-at-soniaBirthday OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 76 }
+id-at-soniaChipcardCounter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 77 }
+id-at-soniaStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 78 }
+id-at-soniaIsLockedTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 79 }
+id-at-soniaUserLog OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 80 }
+id-at-soniaChipcardBarcode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 81 }
+id-at-soniaChipcardIsLocked OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 82 }
+id-at-soniaChipcardIsLockedBy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 83 }
+id-at-soniaChipcardIsLockedReason OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 84 }
+id-at-soniaChipcardIsLockedTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 85 }
+id-at-soniaChipcardIsIssued OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 86 }
+id-at-soniaChipcardIsIssuedBy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 87 }
+id-at-soniaChipcardIsIssuedTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 88 }
+id-at-soniaPasswordCrypt OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 89 }
+id-at-soniaPasswordMD5 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 90 }
+id-at-soniaPasswordSHA OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 91 }
+id-at-soniaPasswordLMPW OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 92 }
+id-at-soniaPasswordNTPW OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 93 }
+id-at-soniaChipcardDoorAccessAllowedZones OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 94 }
+id-at-soniaPasswordRndN16 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 95 }
+id-at-soniaVoted OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 96 }
+id-at-soniaIssueId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 97 }
+id-at-soniaUid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 98 }
+id-at-soniaFileHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 99 }
+id-at-soniaUserPrefs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 100 }
+id-at-soniaMailDelegatedAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 101 }
+id-at-soniaVoIPPIN OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 102 }
+id-at-soniaChipcardHistory OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 103 }
+id-at-soniaCreateTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 104 }
+id-at-soniaSocialSecurityNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 105 }
+id-at-soniaSapCentralPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 106 }
+id-at-soniaLocalityToken OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 2 }
+id-at-soniaLocalityNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 3 }
+id-at-soniaLocalityZip OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 4 }
+id-at-soniaLocalityCompany OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 5 }
+id-at-soniaLocalityDepartment OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 6 }
+id-at-soniaLocalityContactPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 7 }
+id-at-soniaLocalityMobile OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 8 }
+id-at-soniaLocalityMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 9 }
+id-at-soniaLocalityURI OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 10 }
+id-at-soniaLocalityCO OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 11 }
+id-at-soniaLocalityPermissions OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 12 }
+id-at-soniaLocalityPager OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 13 }
+id-at-soniaLocalityNickname OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 14 }
+id-at-soniaLocalityTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 15 }
+id-at-soniaDepartmentNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 3 2 }
+id-at-soniaDepartmentToken OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 3 3 }
+id-at-soniaDepartmentSAMail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 3 4 }
+id-at-soniaIsAccountFormPrinted OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 2 }
+id-at-soniaStudentStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 3 }
+id-at-soniaStudentUnregistrationTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 4 }
+id-at-soniaStudentUnregistrationReason OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 5 }
+id-at-soniaStudentValidityCode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 6 }
+id-at-soniaStudentProgram OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 7 }
+id-at-soniaSequenceMinValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 2 }
+id-at-soniaSequenceMaxValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 3 }
+id-at-soniaSequenceCycleIsEnabled OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 4 }
+id-at-soniaSequenceIncrementBy OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 5 }
+id-at-soniaSequenceIsLocked OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 6 }
+id-at-soniaSequenceLastValue OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 7 }
+id-at-soniaHostMacAddress OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 2 }
+id-at-soniaHostSubdomainName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 3 }
+id-at-soniaHostDefaultRouter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 4 }
+id-at-soniaHostDirectoryServiceType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 5 }
+id-at-soniaHostDnsEntryType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 6 }
+id-at-soniaHostDnsDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 7 }
+id-at-soniaHostNetgroupEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 8 }
+id-at-soniaHostHardwareType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 9 }
+id-at-soniaHostOsType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 10 }
+id-at-soniaHostNetbootType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 11 }
+id-at-soniaHostIsInstallServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 12 }
+id-at-soniaHostIsUpdateServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 13 }
+id-at-soniaHostAquisitionDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 14 }
+id-at-soniaHostWarrentyUntil OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 15 }
+id-at-soniaVotingDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 2 }
+id-at-soniaVotingStartDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 3 }
+id-at-soniaVotingEndDate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 4 }
+id-at-soniaVotingAccessFilter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 5 }
+id-at-soniaVotingResultViewer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 6 }
+id-at-soniaVotingMinChoice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 7 }
+id-at-soniaVotingMaxChoice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 8 }
+id-at-soniaVotingSeat OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 9 }
+id-at-soniaVotingSucceedCount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 10 }
+id-at-soniaVotingFailedCount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 11 }
+id-at-soniaVotingEnabledCount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 12 }
+id-at-soniaVotingChoiceDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 8 2 }
+id-at-soniaVotingChoiceCount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 8 3 }
+id-at-soniaSyncTimestamp OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 9 2 }
+id-at-soniaMailingListBroadcastType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 10 2 }
+id-at-soniaMailingListAdministrator OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 10 3 }
+id-at-soniaMailingListJoinabilityFilter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 10 4 }
+id-at-soniaMailingListAllowedBroadcaster OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 10 5 }
+id-at-soniaEmployeeTypeIsVisible OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 11 2 }
+id-at-soniaProperty OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 12 2 }
+id-at-versusLongSchoolName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 13 2 }
+id-at-versusShortSchoolName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 13 3 }
+id-at-versusSchoolAdministrationId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 13 4 }
+id-at-versusAntaresSchoolId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 13 5 }
+id-at-versusOrgChangeOrigin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 14 2 }
+id-at-versusOrgChangeTarget OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 14 3 }
+id-at-versusOrgChangeRequest OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 14 4 }
+id-at-versusOrgChangeRequestor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 14 5 }
+id-at-soniaMappingKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 15 2 }
+id-at-soniaMappingName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 15 3 }
+id-at-soniaMappingDescription OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 15 4 }
+id-at-soniaMappingTypeKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 15 5 }
+id-at-soniaPermissionRead OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 2 }
+id-at-soniaPermissionWrite OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 3 }
+id-at-soniaPermissionOwner OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 4 }
+id-at-soniaPermissionAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 5 }
+id-at-soniaPermissionMaxAssignments OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 6 }
+id-at-soniaPermissionAssignmentFilter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 7 }
+id-at-soniaMailGroupUid OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 19 2 }
+id-at-soniaMailGroupStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 19 3 }
+id-at-soniaMailGroupSubscribeType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 19 4 }
+id-oc-soniaAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 4 1 }
+id-oc-soniaPerson OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 1 1 }
+id-oc-soniaLocality OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 2 1 }
+id-oc-soniaDepartment-2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 3 1 }
+id-oc-soniaSequence OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 5 1 }
+id-oc-soniaHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 6 1 }
+id-oc-soniaVoting OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 7 1 }
+id-oc-soniaVotingChoice OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 8 1 }
+id-oc-soniaSync OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 9 1 }
+id-oc-soniaMailingList OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 10 1 }
+id-oc-soniaEmployeeType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 11 1 }
+id-oc-soniaPropertyEntry OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 12 1 }
+id-oc-soniaVersusOrganization OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 13 1 }
+id-oc-soniaVersusUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 14 1 }
+id-oc-soniaMapping OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 15 1 }
+id-oc-soniaMailAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 16 1 }
+id-oc-soniaPermissions OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 17 1 }
+id-oc-soniaOrganizationalAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 18 1 }
+id-oc-soniaMailGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 17379 1 19 1 }
+
+-- Attribute types
+
+-- X-ORIGIN: "SONIA"
+soniaCustomerNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaCustomerNumber"}
+  LDAP-DESC                 "Kunden Nummer"
+  ID                        id-at-soniaCustomerNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaStudentNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStudentNumber"}
+  LDAP-DESC                 "Matrikelnummer"
+  ID                        id-at-soniaStudentNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaChipCardNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipCardNumber"}
+  LDAP-DESC                 "Chipkarten ID"
+  ID                        id-at-soniaChipCardNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaDoorAccessSystemNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaDoorAccessSystemNumber"}
+  LDAP-DESC                 "Tuer Schliesssystem ID"
+  ID                        id-at-soniaDoorAccessSystemNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaFaculty ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaFaculty"}
+  LDAP-DESC                 "Fakultaet"
+  ID                        id-at-soniaFaculty }
+
+-- X-ORIGIN: "SONIA"
+soniaEducationalDepartment ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaEducationalDepartment"}
+  LDAP-DESC                 "Fachbereich"
+  ID                        id-at-soniaEducationalDepartment }
+
+-- X-ORIGIN: "SONIA"
+soniaInstitute ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaInstitute"}
+  LDAP-DESC                 "Institut"
+  ID                        id-at-soniaInstitute }
+
+-- X-ORIGIN: "SONIA"
+soniaDepartment ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaDepartment"}
+  LDAP-DESC                 "Zentrale und Sonstige Einrichtungen"
+  ID                        id-at-soniaDepartment }
+
+-- X-ORIGIN: "SONIA"
+soniaLaboratory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLaboratory"}
+  LDAP-DESC                 "Labor"
+  ID                        id-at-soniaLaboratory }
+
+-- X-ORIGIN: "SONIA"
+soniaCampus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaCampus"}
+  LDAP-DESC                 "Campus/Standort"
+  ID                        id-at-soniaCampus }
+
+-- X-ORIGIN: "SONIA"
+soniaSalutation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaSalutation"}
+  LDAP-DESC                 "Anrede"
+  ID                        id-at-soniaSalutation }
+
+-- X-ORIGIN: "SONIA"
+soniaReceivingAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaReceivingAddress"}
+  LDAP-DESC                 "Postalische empfaenger addresse (home,semester,work)"
+  ID                        id-at-soniaReceivingAddress }
+
+-- X-ORIGIN: "SONIA"
+soniaHomeEqualsSemester ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaHomeEqualsSemester"}
+  LDAP-DESC                 "heimat und semesteranschrift sind gleich"
+  ID                        id-at-soniaHomeEqualsSemester }
+
+-- X-ORIGIN: "SONIA"
+soniaIsUnregistered ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaIsUnregistered"}
+  LDAP-DESC                 "ist exmatrikuliert"
+  ID                        id-at-soniaIsUnregistered }
+
+-- X-ORIGIN: "SONIA"
+soniaIsAlumni ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaIsAlumni"}
+  LDAP-DESC                 "ist ein ehemaliger"
+  ID                        id-at-soniaIsAlumni }
+
+-- X-ORIGIN: "SONIA"
+soniaIsDeletionPrepared ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaIsDeletionPrepared"}
+  LDAP-DESC                 "Zur Loeschung vorbereitet"
+  ID                        id-at-soniaIsDeletionPrepared }
+
+-- X-ORIGIN: "SONIA"
+soniaIsDeleted ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaIsDeleted"}
+  LDAP-DESC                 "ist geloescht"
+  ID                        id-at-soniaIsDeleted }
+
+-- X-ORIGIN: "SONIA"
+soniaAcademicTitle ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaAcademicTitle"}
+  LDAP-DESC                 "akademischer title"
+  ID                        id-at-soniaAcademicTitle }
+
+-- X-ORIGIN: "SONIA"
+soniaGender ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaGender"}
+  LDAP-DESC                 "Geschlecht"
+  ID                        id-at-soniaGender }
+
+-- X-ORIGIN: "SONIA"
+soniaEmailVisibility ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaEmailVisibility"}
+  LDAP-DESC                 "Email Sichtbarkeit (public,intranet)"
+  ID                        id-at-soniaEmailVisibility }
+
+-- X-ORIGIN: "SONIA"
+soniaAddressVisibility ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaAddressVisibility"}
+  LDAP-DESC                 "Adressen Sichtbarkeit (public,intranet)"
+  ID                        id-at-soniaAddressVisibility }
+
+-- X-ORIGIN: "SONIA"
+soniaPhotoVisibility ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPhotoVisibility"}
+  LDAP-DESC                 "Foto Sichtbarkeit (public,intranet,none)"
+  ID                        id-at-soniaPhotoVisibility }
+
+-- X-ORIGIN: "SONIA"
+soniaCommonTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaCommonTimestamp"}
+  LDAP-DESC                 "Last common changes"
+  ID                        id-at-soniaCommonTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordTimestamp"}
+  LDAP-DESC                 "last password change"
+  ID                        id-at-soniaPasswordTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaIsLocked ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaIsLocked"}
+  LDAP-DESC                 "ist gesperrt"
+  ID                        id-at-soniaIsLocked }
+
+-- X-ORIGIN: "SONIA"
+soniaInitialPlainPassword ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaInitialPlainPassword"}
+  LDAP-DESC                 "Passwort nach Initialisierung/Entsperren"
+  ID                        id-at-soniaInitialPlainPassword }
+
+-- X-ORIGIN: "SONIA"
+soniaIsLockedReason ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaIsLockedReason"}
+  LDAP-DESC                 "gesperrt weil"
+  ID                        id-at-soniaIsLockedReason }
+
+-- X-ORIGIN: "SONIA"
+soniaIsLockedBy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaIsLockedBy"}
+  LDAP-DESC                 "gesperrt von"
+  ID                        id-at-soniaIsLockedBy }
+
+-- X-ORIGIN: "SONIA"
+soniaAnnotation ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaAnnotation"}
+  LDAP-DESC                 "Bemerkung, Notizen"
+  ID                        id-at-soniaAnnotation }
+
+-- X-ORIGIN: "SONIA"
+soniaIsValidFrom ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaIsValidFrom"}
+  LDAP-DESC                 "Ist gueltig von"
+  ID                        id-at-soniaIsValidFrom }
+
+-- X-ORIGIN: "SONIA"
+soniaIsValidUntil ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaIsValidUntil"}
+  LDAP-DESC                 "Ist gueltig bis"
+  ID                        id-at-soniaIsValidUntil }
+
+-- X-ORIGIN: "SONIA"
+soniaBirthday ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaBirthday"}
+  LDAP-DESC                 "Geburtsdatum"
+  ID                        id-at-soniaBirthday }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardCounter ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaChipcardCounter"}
+  LDAP-DESC                 "Anzahl der bisher erhaltenen chipkarten"
+  ID                        id-at-soniaChipcardCounter }
+
+-- X-ORIGIN: "SONIA"
+soniaStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStatus"}
+  LDAP-DESC                 "Allgemeine Status info"
+  ID                        id-at-soniaStatus }
+
+-- X-ORIGIN: "SONIA"
+soniaIsLockedTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaIsLockedTimestamp"}
+  LDAP-DESC                 "gesperrt seit"
+  ID                        id-at-soniaIsLockedTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaUserLog ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaUserLog"}
+  LDAP-DESC                 "Benutzer Aktions-Log"
+  ID                        id-at-soniaUserLog }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardBarcode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardBarcode"}
+  LDAP-DESC                 "Barcode Bibliotek"
+  ID                        id-at-soniaChipcardBarcode }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsLocked ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaChipcardIsLocked"}
+  LDAP-DESC                 "Chipkarte ist gesperrt"
+  ID                        id-at-soniaChipcardIsLocked }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsLockedBy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardIsLockedBy"}
+  LDAP-DESC                 "Chipkarte gesperrt von"
+  ID                        id-at-soniaChipcardIsLockedBy }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsLockedReason ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardIsLockedReason"}
+  LDAP-DESC                 "Chipkarte gesperrt weil"
+  ID                        id-at-soniaChipcardIsLockedReason }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsLockedTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardIsLockedTimestamp"}
+  LDAP-DESC                 "Chipkarte gesperrt seit"
+  ID                        id-at-soniaChipcardIsLockedTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsIssued ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaChipcardIsIssued"}
+  LDAP-DESC                 "Chipkarte herausgegeben"
+  ID                        id-at-soniaChipcardIsIssued }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsIssuedBy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardIsIssuedBy"}
+  LDAP-DESC                 "Chipkarte herausgegeben von"
+  ID                        id-at-soniaChipcardIsIssuedBy }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardIsIssuedTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardIsIssuedTimestamp"}
+  LDAP-DESC                 "Chipkarte herausgegeben am"
+  ID                        id-at-soniaChipcardIsIssuedTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordCrypt ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordCrypt"}
+  LDAP-DESC                 "unix crypt hashed password"
+  ID                        id-at-soniaPasswordCrypt }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordMD5 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordMD5"}
+  LDAP-DESC                 "md5 hashed password"
+  ID                        id-at-soniaPasswordMD5 }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordSHA ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordSHA"}
+  LDAP-DESC                 "sha hashed password"
+  ID                        id-at-soniaPasswordSHA }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordLMPW ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordLMPW"}
+  LDAP-DESC                 "lmpw hashed password"
+  ID                        id-at-soniaPasswordLMPW }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordNTPW ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordNTPW"}
+  LDAP-DESC                 "ntpw hashed password"
+  ID                        id-at-soniaPasswordNTPW }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardDoorAccessAllowedZones ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardDoorAccessAllowedZones"}
+  LDAP-DESC                 "mit der Chipkarte betretbare Bereiche"
+  ID                        id-at-soniaChipcardDoorAccessAllowedZones }
+
+-- X-ORIGIN: "SONIA"
+soniaPasswordRndN16 ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPasswordRndN16"}
+  LDAP-DESC                 "Random 16 Numbers password"
+  ID                        id-at-soniaPasswordRndN16 }
+
+-- X-ORIGIN: "SONIA"
+soniaVoted ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVoted"}
+  LDAP-DESC                 "Teilgenommene Abstimmungen (DN)"
+  ID                        id-at-soniaVoted }
+
+-- X-ORIGIN: "SONIA"
+soniaIssueId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaIssueId"}
+  LDAP-DESC                 "Eindeutige Id fuer Jira"
+  ID                        id-at-soniaIssueId }
+
+-- X-ORIGIN: "SONIA"
+soniaUid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaUid"}
+  LDAP-DESC                 "Never changing unique id"
+  ID                        id-at-soniaUid }
+
+-- X-ORIGIN: "SONIA"
+soniaFileHost ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaFileHost"}
+  LDAP-DESC                 "Preferred samba server"
+  ID                        id-at-soniaFileHost }
+
+-- X-ORIGIN: "SONIA"
+soniaUserPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaUserPrefs"}
+  LDAP-DESC                 "User preferences for some applications"
+  ID                        id-at-soniaUserPrefs }
+
+-- X-ORIGIN: "SONIA"
+soniaMailDelegatedAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailDelegatedAddress"}
+  LDAP-DESC                 "Attribute for granting send permissions"
+  ID                        id-at-soniaMailDelegatedAddress }
+
+-- X-ORIGIN: "SONIA"
+soniaVoIPPIN ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVoIPPIN"}
+  LDAP-DESC                 "Voice over IP PIN"
+  ID                        id-at-soniaVoIPPIN }
+
+-- X-ORIGIN: "SONIA"
+soniaChipcardHistory ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaChipcardHistory"}
+  LDAP-DESC                 "vorherige Chipkarten"
+  ID                        id-at-soniaChipcardHistory }
+
+-- X-ORIGIN: "SONIA"
+soniaCreateTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  ORDERING MATCHING RULE    generalizedTimeOrderingMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"soniaCreateTimestamp"}
+  LDAP-DESC                 "analog to standard attribute createTimestamp but will never been reset"
+  ID                        id-at-soniaCreateTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaSocialSecurityNumber ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaSocialSecurityNumber"}
+  LDAP-DESC                 "Social Security Number"
+  ID                        id-at-soniaSocialSecurityNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaSapCentralPerson ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaSapCentralPerson"}
+  LDAP-DESC                 "SAP Central Person ID"
+  ID                        id-at-soniaSapCentralPerson }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityToken ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityToken"}
+  LDAP-DESC                 "abbreviated locality name"
+  ID                        id-at-soniaLocalityToken }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaLocalityNumber"}
+  LDAP-DESC                 "sonia locality identification number"
+  ID                        id-at-soniaLocalityNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityZip ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityZip"}
+  LDAP-DESC                 "sonia locality zip code"
+  ID                        id-at-soniaLocalityZip }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityCompany ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityCompany"}
+  LDAP-DESC                 "company name"
+  ID                        id-at-soniaLocalityCompany }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityDepartment ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityDepartment"}
+  LDAP-DESC                 "department name"
+  ID                        id-at-soniaLocalityDepartment }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityContactPerson ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityContactPerson"}
+  LDAP-DESC                 "contact person"
+  ID                        id-at-soniaLocalityContactPerson }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityMobile ATTRIBUTE ::= {
+  WITH SYNTAX               TelephoneNumber
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               telephoneNr.&id
+  LDAP-NAME                 {"soniaLocalityMobile"}
+  LDAP-DESC                 "mobile phone number"
+  ID                        id-at-soniaLocalityMobile }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityMail ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityMail"}
+  LDAP-DESC                 "email address"
+  ID                        id-at-soniaLocalityMail }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityURI ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityURI"}
+  LDAP-DESC                 "web uri"
+  ID                        id-at-soniaLocalityURI }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityCO ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityCO"}
+  LDAP-DESC                 "c/o"
+  ID                        id-at-soniaLocalityCO }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityPermissions ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityPermissions"}
+  LDAP-DESC                 "user defined read permissions"
+  ID                        id-at-soniaLocalityPermissions }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityPager ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityPager"}
+  LDAP-DESC                 "pager number"
+  ID                        id-at-soniaLocalityPager }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityNickname ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityNickname"}
+  LDAP-DESC                 "nickname"
+  ID                        id-at-soniaLocalityNickname }
+
+-- X-ORIGIN: "SONIA"
+soniaLocalityTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaLocalityTimestamp"}
+  LDAP-DESC                 "last change timestamp"
+  ID                        id-at-soniaLocalityTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaDepartmentNumber ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaDepartmentNumber"}
+  ID                        id-at-soniaDepartmentNumber }
+
+-- X-ORIGIN: "SONIA"
+soniaDepartmentToken ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaDepartmentToken"}
+  LDAP-DESC                 "abbreviated department name"
+  ID                        id-at-soniaDepartmentToken }
+
+-- X-ORIGIN: "SONIA"
+soniaDepartmentSAMail ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaDepartmentSAMail"}
+  LDAP-DESC                 "Email fuer das I-Amt"
+  ID                        id-at-soniaDepartmentSAMail }
+
+-- X-ORIGIN: "SONIA"
+soniaIsAccountFormPrinted ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaIsAccountFormPrinted"}
+  LDAP-DESC                 "Benutzerschein ausgedruckt"
+  ID                        id-at-soniaIsAccountFormPrinted }
+
+-- X-ORIGIN: "SONIA"
+soniaStudentStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStudentStatus"}
+  LDAP-DESC                 "HIS Status (sos.status)"
+  ID                        id-at-soniaStudentStatus }
+
+-- X-ORIGIN: "SONIA"
+soniaStudentUnregistrationTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStudentUnregistrationTime"}
+  LDAP-DESC                 "HIS Exmatrikulationsdatum (sos.exmdat)"
+  ID                        id-at-soniaStudentUnregistrationTime }
+
+-- X-ORIGIN: "SONIA"
+soniaStudentUnregistrationReason ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStudentUnregistrationReason"}
+  LDAP-DESC                 "HIS Exmatrikulationsgrung (sos.exmgrund)"
+  ID                        id-at-soniaStudentUnregistrationReason }
+
+-- X-ORIGIN: "SONIA"
+soniaStudentValidityCode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStudentValidityCode"}
+  LDAP-DESC                 "HIS Semestergueltigkeit (sos.res13)"
+  ID                        id-at-soniaStudentValidityCode }
+
+-- X-ORIGIN: "SONIA"
+soniaStudentProgram ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaStudentProgram"}
+  LDAP-DESC                 "Studiengang"
+  ID                        id-at-soniaStudentProgram }
+
+-- X-ORIGIN: "SONIA"
+soniaSequenceMinValue ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaSequenceMinValue"}
+  LDAP-DESC                 "minimum value of the sequence"
+  ID                        id-at-soniaSequenceMinValue }
+
+-- X-ORIGIN: "SONIA"
+soniaSequenceMaxValue ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaSequenceMaxValue"}
+  LDAP-DESC                 "maximum value the sequence can generate"
+  ID                        id-at-soniaSequenceMaxValue }
+
+-- X-ORIGIN: "SONIA"
+soniaSequenceCycleIsEnabled ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaSequenceCycleIsEnabled"}
+  LDAP-DESC                 "continues to generate values after reaching either its maximum or minimum value"
+  ID                        id-at-soniaSequenceCycleIsEnabled }
+
+-- X-ORIGIN: "SONIA"
+soniaSequenceIncrementBy ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaSequenceIncrementBy"}
+  LDAP-DESC                 "interval between sequence numbers, value can be any positive or negative integer, but it cannot be 0"
+  ID                        id-at-soniaSequenceIncrementBy }
+
+-- X-ORIGIN: "SONIA"
+soniaSequenceIsLocked ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaSequenceIsLocked"}
+  LDAP-DESC                 "sequence is locked"
+  ID                        id-at-soniaSequenceIsLocked }
+
+-- X-ORIGIN: "SONIA"
+soniaSequenceLastValue ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaSequenceLastValue"}
+  LDAP-DESC                 "last value fetched"
+  ID                        id-at-soniaSequenceLastValue }
+
+-- X-ORIGIN: "SONIA"
+soniaHostMacAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostMacAddress"}
+  LDAP-DESC                 "MAC-Address of the primary NIC"
+  ID                        id-at-soniaHostMacAddress }
+
+-- X-ORIGIN: "SONIA"
+soniaHostSubdomainName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostSubdomainName"}
+  LDAP-DESC                 "Subdomain"
+  ID                        id-at-soniaHostSubdomainName }
+
+-- X-ORIGIN: "SONIA"
+soniaHostDefaultRouter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostDefaultRouter"}
+  LDAP-DESC                 "IP address of the default router"
+  ID                        id-at-soniaHostDefaultRouter }
+
+-- X-ORIGIN: "SONIA"
+soniaHostDirectoryServiceType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostDirectoryServiceType"}
+  LDAP-DESC                 "Type of directory service connection"
+  ID                        id-at-soniaHostDirectoryServiceType }
+
+-- X-ORIGIN: "SONIA"
+soniaHostDnsEntryType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostDnsEntryType"}
+  LDAP-DESC                 "DNS entry type"
+  ID                        id-at-soniaHostDnsEntryType }
+
+-- X-ORIGIN: "SONIA"
+soniaHostDnsDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostDnsDomain"}
+  LDAP-DESC                 "DNS domain name"
+  ID                        id-at-soniaHostDnsDomain }
+
+-- X-ORIGIN: "SONIA"
+soniaHostNetgroupEntry ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostNetgroupEntry"}
+  LDAP-DESC                 "name of NIS netgroup entry"
+  ID                        id-at-soniaHostNetgroupEntry }
+
+-- X-ORIGIN: "SONIA"
+soniaHostHardwareType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostHardwareType"}
+  LDAP-DESC                 "Hardware type and name"
+  ID                        id-at-soniaHostHardwareType }
+
+-- X-ORIGIN: "SONIA"
+soniaHostOsType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostOsType"}
+  LDAP-DESC                 "Operating system"
+  ID                        id-at-soniaHostOsType }
+
+-- X-ORIGIN: "SONIA"
+soniaHostNetbootType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostNetbootType"}
+  LDAP-DESC                 "Netboot option"
+  ID                        id-at-soniaHostNetbootType }
+
+-- X-ORIGIN: "SONIA"
+soniaHostIsInstallServer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostIsInstallServer"}
+  LDAP-DESC                 "true if host is an install server"
+  ID                        id-at-soniaHostIsInstallServer }
+
+-- X-ORIGIN: "SONIA"
+soniaHostIsUpdateServer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostIsUpdateServer"}
+  LDAP-DESC                 "true if host is an update server"
+  ID                        id-at-soniaHostIsUpdateServer }
+
+-- X-ORIGIN: "SONIA"
+soniaHostAquisitionDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostAquisitionDate"}
+  LDAP-DESC                 "Aquisition date of the host"
+  ID                        id-at-soniaHostAquisitionDate }
+
+-- X-ORIGIN: "SONIA"
+soniaHostWarrentyUntil ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaHostWarrentyUntil"}
+  LDAP-DESC                 "limit of warrenty validity"
+  ID                        id-at-soniaHostWarrentyUntil }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVotingDescription"}
+  LDAP-DESC                 "Beschreibung"
+  ID                        id-at-soniaVotingDescription }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingStartDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVotingStartDate"}
+  LDAP-DESC                 "Start Datum"
+  ID                        id-at-soniaVotingStartDate }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingEndDate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVotingEndDate"}
+  LDAP-DESC                 "End Datum"
+  ID                        id-at-soniaVotingEndDate }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingAccessFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVotingAccessFilter"}
+  LDAP-DESC                 "Benutzer die an der Abstimmung teilnehmen duerfen (Ldap-Filter)"
+  ID                        id-at-soniaVotingAccessFilter }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingResultViewer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVotingResultViewer"}
+  LDAP-DESC                 "Benutzer die das Ergebniss der Abstimmung sehen duerfen (DN)"
+  ID                        id-at-soniaVotingResultViewer }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingMinChoice ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingMinChoice"}
+  LDAP-DESC                 "Minimum Stimmen"
+  ID                        id-at-soniaVotingMinChoice }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingMaxChoice ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingMaxChoice"}
+  LDAP-DESC                 "Maximum Stimmen"
+  ID                        id-at-soniaVotingMaxChoice }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingSeat ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingSeat"}
+  LDAP-DESC                 "Anzahl Sitze"
+  ID                        id-at-soniaVotingSeat }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingSucceedCount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingSucceedCount"}
+  LDAP-DESC                 "Anzahl gueltiger Stimmen"
+  ID                        id-at-soniaVotingSucceedCount }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingFailedCount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingFailedCount"}
+  LDAP-DESC                 "Anzahl ungueltiger Stimmen"
+  ID                        id-at-soniaVotingFailedCount }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingEnabledCount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingEnabledCount"}
+  LDAP-DESC                 "Anzahl der Wahlberaechtigten"
+  ID                        id-at-soniaVotingEnabledCount }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingChoiceDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaVotingChoiceDescription"}
+  LDAP-DESC                 "Beschreibung"
+  ID                        id-at-soniaVotingChoiceDescription }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingChoiceCount ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaVotingChoiceCount"}
+  LDAP-DESC                 "Anzahl der Stimmen"
+  ID                        id-at-soniaVotingChoiceCount }
+
+-- X-ORIGIN: "SONIA"
+soniaSyncTimestamp ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"soniaSyncTimestamp"}
+  LDAP-DESC                 "Sonia-Sync-Timestamp"
+  ID                        id-at-soniaSyncTimestamp }
+
+-- X-ORIGIN: "SONIA"
+soniaMailingListBroadcastType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailingListBroadcastType"}
+  LDAP-DESC                 "mailinglist send rules"
+  ID                        id-at-soniaMailingListBroadcastType }
+
+-- X-ORIGIN: "SONIA"
+soniaMailingListAdministrator ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailingListAdministrator"}
+  LDAP-DESC                 "mailinglist administrators"
+  ID                        id-at-soniaMailingListAdministrator }
+
+-- X-ORIGIN: "SONIA"
+soniaMailingListJoinabilityFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailingListJoinabilityFilter"}
+  LDAP-DESC                 "mailinglist subscribe filter"
+  ID                        id-at-soniaMailingListJoinabilityFilter }
+
+-- X-ORIGIN: "SONIA"
+soniaMailingListAllowedBroadcaster ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailingListAllowedBroadcaster"}
+  LDAP-DESC                 "mailinglist allowed broadcaster"
+  ID                        id-at-soniaMailingListAllowedBroadcaster }
+
+-- X-ORIGIN: "SONIA"
+soniaEmployeeTypeIsVisible ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"soniaEmployeeTypeIsVisible"}
+  LDAP-DESC                 "sichtbar"
+  ID                        id-at-soniaEmployeeTypeIsVisible }
+
+-- X-ORIGIN: "SONIA"
+soniaProperty ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaProperty"}
+  LDAP-DESC                 "Properties for some applications"
+  ID                        id-at-soniaProperty }
+
+-- X-ORIGIN: "SONIA"
+versusLongSchoolName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"versusLongSchoolName"}
+  LDAP-DESC                 "Langform des Schul- oder Organisationsnamens"
+  ID                        id-at-versusLongSchoolName }
+
+-- X-ORIGIN: "SONIA"
+versusShortSchoolName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"versusShortSchoolName"}
+  LDAP-DESC                 "Kurzform des Schul- oder Organisationsnamens"
+  ID                        id-at-versusShortSchoolName }
+
+-- X-ORIGIN: "SONIA"
+versusSchoolAdministrationId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"versusSchoolAdministrationId"}
+  LDAP-DESC                 "Offizielle vom Land Niedersachsen vergebene Nummer der Schule"
+  ID                        id-at-versusSchoolAdministrationId }
+
+-- X-ORIGIN: "SONIA"
+versusAntaresSchoolId ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"versusAntaresSchoolId"}
+  LDAP-DESC                 "Von der Antares Mediendatanbank verwendete ID zur Identiifierung der Organisation"
+  ID                        id-at-versusAntaresSchoolId }
+
+-- X-ORIGIN: "SONIA"
+versusOrgChangeOrigin ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"versusOrgChangeOrigin"}
+  LDAP-DESC                 "Momentane Heimatorganisation des Benutzers"
+  ID                        id-at-versusOrgChangeOrigin }
+
+-- X-ORIGIN: "SONIA"
+versusOrgChangeTarget ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"versusOrgChangeTarget"}
+  LDAP-DESC                 "Organisation zu der der Benutzer wechseln soll"
+  ID                        id-at-versusOrgChangeTarget }
+
+-- X-ORIGIN: "SONIA"
+versusOrgChangeRequest ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"versusOrgChangeRequest"}
+  LDAP-DESC                 "True, wenn eine Anforderung zum Wechsel der Organisation vorliegt"
+  ID                        id-at-versusOrgChangeRequest }
+
+-- X-ORIGIN: "SONIA"
+versusOrgChangeRequestor ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"versusOrgChangeRequestor"}
+  LDAP-DESC                 "Die DN des Benutzers, der den Wechsel der Organisation angestossen hat"
+  ID                        id-at-versusOrgChangeRequestor }
+
+-- X-ORIGIN: "SONIA"
+soniaMappingKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMappingKey"}
+  LDAP-DESC                 "Attribute Mapping Schluessel"
+  ID                        id-at-soniaMappingKey }
+
+-- X-ORIGIN: "SONIA"
+soniaMappingName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMappingName"}
+  LDAP-DESC                 "Attribute Mapping Name"
+  ID                        id-at-soniaMappingName }
+
+-- X-ORIGIN: "SONIA"
+soniaMappingDescription ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMappingDescription"}
+  LDAP-DESC                 "Attribute Mapping Beschreibung"
+  ID                        id-at-soniaMappingDescription }
+
+-- X-ORIGIN: "SONIA"
+soniaMappingTypeKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMappingTypeKey"}
+  LDAP-DESC                 "Attribute Type Mapping Schluessel"
+  ID                        id-at-soniaMappingTypeKey }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissionRead ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"soniaPermissionRead"}
+  LDAP-DESC                 "List of object DNs with read permission"
+  ID                        id-at-soniaPermissionRead }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissionWrite ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"soniaPermissionWrite"}
+  LDAP-DESC                 "List of object DNs with write permission"
+  ID                        id-at-soniaPermissionWrite }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissionOwner ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"soniaPermissionOwner"}
+  LDAP-DESC                 "List of object DNs with owner permission"
+  ID                        id-at-soniaPermissionOwner }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissionAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"soniaPermissionAdmin"}
+  LDAP-DESC                 "List of object DNs with admin permission"
+  ID                        id-at-soniaPermissionAdmin }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissionMaxAssignments ATTRIBUTE ::= {
+  WITH SYNTAX               INTEGER
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               integer.&id
+  LDAP-NAME                 {"soniaPermissionMaxAssignments"}
+  LDAP-DESC                 "Limits the number of assignments for the object using this object class (soniaPermissions)"
+  ID                        id-at-soniaPermissionMaxAssignments }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissionAssignmentFilter ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaPermissionAssignmentFilter"}
+  LDAP-DESC                 "Limits with an ldap filter the assignements of the object using this object class (soniaPermissions)"
+  ID                        id-at-soniaPermissionAssignmentFilter }
+
+-- X-ORIGIN: "SONIA"
+soniaMailGroupUid ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailGroupUid"}
+  LDAP-DESC                 "Unique id for a mailgroup"
+  ID                        id-at-soniaMailGroupUid }
+
+-- X-ORIGIN: "SONIA"
+soniaMailGroupStatus ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailGroupStatus"}
+  LDAP-DESC                 "enabled or disabled state of a mailgroup"
+  ID                        id-at-soniaMailGroupStatus }
+
+-- X-ORIGIN: "SONIA"
+soniaMailGroupSubscribeType ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"soniaMailGroupSubscribeType"}
+  LDAP-DESC                 "Subscription type of a mailgroup"
+  ID                        id-at-soniaMailGroupSubscribeType }
+
+-- Object classes
+
+-- X-ORIGIN: "SONIA"
+soniaAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetOrgPerson }
+  MUST CONTAIN              { employeeType
+                              | soniaUid
+                              | soniaCreateTimestamp }
+  MAY CONTAIN               { soniaPasswordTimestamp
+                              | soniaIsDeletionPrepared
+                              | soniaIsDeleted
+                              | soniaIsLocked
+                              | soniaInitialPlainPassword
+                              | soniaIsLockedReason
+                              | soniaIsLockedBy
+                              | soniaAnnotation
+                              | soniaIsValidFrom
+                              | soniaIsValidUntil
+                              | soniaStatus
+                              | soniaIsLockedTimestamp
+                              | soniaUserLog
+                              | soniaPasswordCrypt
+                              | soniaPasswordMD5
+                              | soniaPasswordSHA
+                              | soniaPasswordLMPW
+                              | soniaPasswordNTPW
+                              | soniaPasswordRndN16
+                              | soniaIsAccountFormPrinted
+                              | soniaFileHost
+                              | soniaUserPrefs
+                              | soniaMailDelegatedAddress
+                              | soniaVoIPPIN }
+  LDAP-NAME                 {"soniaAccount"}
+  ID                        id-oc-soniaAccount }
+
+-- X-ORIGIN: "SONIA"
+soniaPerson OBJECT-CLASS ::= {
+  SUBCLASS OF               { soniaAccount }
+  MAY CONTAIN               { soniaCommonTimestamp
+                              | soniaAcademicTitle
+                              | soniaAddressVisibility
+                              | soniaCampus
+                              | soniaChipCardNumber
+                              | soniaCustomerNumber
+                              | soniaDepartment
+                              | soniaDoorAccessSystemNumber
+                              | soniaEducationalDepartment
+                              | soniaEmailVisibility
+                              | soniaFaculty
+                              | soniaGender
+                              | soniaHomeEqualsSemester
+                              | soniaInstitute
+                              | soniaIsAlumni
+                              | soniaIsUnregistered
+                              | soniaLaboratory
+                              | soniaPhotoVisibility
+                              | soniaReceivingAddress
+                              | soniaSalutation
+                              | soniaStudentNumber
+                              | soniaBirthday
+                              | soniaChipcardCounter
+                              | soniaChipcardBarcode
+                              | soniaChipcardIsLocked
+                              | soniaChipcardIsLockedBy
+                              | soniaChipcardIsLockedReason
+                              | soniaChipcardIsLockedTimestamp
+                              | soniaChipcardIsIssued
+                              | soniaChipcardIsIssuedBy
+                              | soniaChipcardIsIssuedTimestamp
+                              | soniaChipcardDoorAccessAllowedZones
+                              | soniaStudentStatus
+                              | soniaStudentUnregistrationTime
+                              | soniaStudentUnregistrationReason
+                              | soniaStudentValidityCode
+                              | soniaStudentProgram
+                              | soniaVoted
+                              | soniaIssueId
+                              | soniaChipcardHistory
+                              | soniaSocialSecurityNumber
+                              | soniaSapCentralPerson }
+  LDAP-NAME                 {"soniaPerson"}
+  ID                        id-oc-soniaPerson }
+
+-- X-ORIGIN: "SONIA"
+soniaLocality OBJECT-CLASS ::= {
+  SUBCLASS OF               { locality }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { countryName
+                              | facsimileTelephoneNumber
+                              | secretary
+                              | soniaLocalityNumber
+                              | soniaLocalityToken
+                              | soniaLocalityZip
+                              | telephoneNumber
+                              | soniaLocalityCompany
+                              | soniaLocalityDepartment
+                              | soniaLocalityContactPerson
+                              | soniaLocalityMobile
+                              | soniaLocalityMail
+                              | soniaLocalityURI
+                              | soniaLocalityCO
+                              | soniaLocalityPermissions
+                              | soniaLocalityPager
+                              | soniaLocalityNickname
+                              | soniaLocalityTimestamp }
+  LDAP-NAME                 {"soniaLocality"}
+  ID                        id-oc-soniaLocality }
+
+-- disambiguated soniaDepartment to soniaDepartment-2 inside Ldapmigration97sonia.
+-- X-ORIGIN: "SONIA"
+soniaDepartment-2 OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { departmentNumber
+                              | description
+                              | manager
+                              | name
+                              | secretary
+                              | seeAlso
+                              | soniaDepartmentNumber
+                              | soniaDepartmentToken
+                              | soniaDepartmentSAMail }
+  LDAP-NAME                 {"soniaDepartment"}
+  ID                        id-oc-soniaDepartment-2 }
+
+-- X-ORIGIN: "SONIA"
+soniaSequence OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | soniaSequenceMinValue
+                              | soniaSequenceMaxValue
+                              | soniaSequenceIncrementBy }
+  MAY CONTAIN               { soniaSequenceCycleIsEnabled
+                              | soniaSequenceIsLocked
+                              | soniaSequenceLastValue }
+  LDAP-NAME                 {"soniaSequence"}
+  ID                        id-oc-soniaSequence }
+
+-- X-ORIGIN: "SONIA"
+soniaHost OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipHost }
+  MAY CONTAIN               { soniaHostMacAddress
+                              | soniaHostSubdomainName
+                              | soniaHostDefaultRouter
+                              | soniaHostDirectoryServiceType
+                              | soniaHostDnsEntryType
+                              | soniaHostDnsDomain
+                              | soniaHostNetgroupEntry
+                              | soniaHostHardwareType
+                              | soniaHostOsType
+                              | soniaHostNetbootType
+                              | soniaHostIsInstallServer
+                              | soniaHostIsUpdateServer
+                              | soniaHostAquisitionDate
+                              | soniaHostWarrentyUntil }
+  LDAP-NAME                 {"soniaHost"}
+  ID                        id-oc-soniaHost }
+
+-- X-ORIGIN: "SONIA"
+soniaVoting OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { soniaVotingDescription
+                              | soniaVotingStartDate
+                              | soniaVotingEndDate
+                              | soniaVotingAccessFilter
+                              | soniaVotingResultViewer
+                              | soniaVotingMinChoice
+                              | soniaVotingMaxChoice
+                              | soniaVotingSeat
+                              | soniaVotingSucceedCount
+                              | soniaVotingFailedCount
+                              | soniaVotingEnabledCount }
+  LDAP-NAME                 {"soniaVoting"}
+  ID                        id-oc-soniaVoting }
+
+-- X-ORIGIN: "SONIA"
+soniaVotingChoice OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { soniaVotingChoiceDescription
+                              | soniaVotingChoiceCount }
+  LDAP-NAME                 {"soniaVotingChoice"}
+  ID                        id-oc-soniaVotingChoice }
+
+-- X-ORIGIN: "SONIA"
+soniaSync OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { soniaSyncTimestamp }
+  LDAP-NAME                 {"soniaSync"}
+  ID                        id-oc-soniaSync }
+
+-- X-ORIGIN: "SONIA"
+soniaMailingList OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetMailGroup }
+  KIND                      auxiliary
+  MAY CONTAIN               { soniaMailingListBroadcastType
+                              | soniaMailingListAdministrator
+                              | soniaMailingListJoinabilityFilter
+                              | soniaMailingListAllowedBroadcaster }
+  LDAP-NAME                 {"soniaMailingList"}
+  ID                        id-oc-soniaMailingList }
+
+-- X-ORIGIN: "SONIA"
+soniaEmployeeType OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName
+                              | employeeType
+                              | employeeNumber }
+  MAY CONTAIN               { description
+                              | soniaEmployeeTypeIsVisible }
+  LDAP-NAME                 {"soniaEmployeeType"}
+  ID                        id-oc-soniaEmployeeType }
+
+-- X-ORIGIN: "SONIA"
+soniaPropertyEntry OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { soniaProperty
+                              | description }
+  LDAP-NAME                 {"soniaPropertyEntry"}
+  ID                        id-oc-soniaPropertyEntry }
+
+-- initial capital of "SoniaVersusOrganization" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "SONIA"
+soniaVersusOrganization OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { versusLongSchoolName
+                              | versusShortSchoolName
+                              | versusSchoolAdministrationId
+                              | versusAntaresSchoolId }
+  LDAP-NAME                 {"SoniaVersusOrganization"}
+  ID                        id-oc-soniaVersusOrganization }
+
+-- initial capital of "SoniaVersusUser" lowercased so the assignment is a valuereference.
+-- X-ORIGIN: "SONIA"
+soniaVersusUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { versusOrgChangeOrigin
+                              | versusOrgChangeTarget
+                              | versusOrgChangeRequest
+                              | versusOrgChangeRequestor }
+  LDAP-NAME                 {"SoniaVersusUser"}
+  ID                        id-oc-soniaVersusUser }
+
+-- X-ORIGIN: "SONIA"
+soniaMapping OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { soniaMappingKey
+                              | soniaMappingName
+                              | soniaMappingDescription
+                              | soniaMappingTypeKey }
+  LDAP-NAME                 {"soniaMapping"}
+  ID                        id-oc-soniaMapping }
+
+-- X-ORIGIN: "SONIA"
+soniaMailAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { inetMailUser }
+  MUST CONTAIN              { uid
+                              | mail }
+  MAY CONTAIN               { soniaMailDelegatedAddress }
+  LDAP-NAME                 {"soniaMailAccount"}
+  ID                        id-oc-soniaMailAccount }
+
+-- X-ORIGIN: "SONIA"
+soniaPermissions OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { soniaPermissionRead
+                              | soniaPermissionWrite
+                              | soniaPermissionOwner
+                              | soniaPermissionAdmin
+                              | soniaPermissionMaxAssignments
+                              | soniaPermissionAssignmentFilter }
+  LDAP-NAME                 {"soniaPermissions"}
+  ID                        id-oc-soniaPermissions }
+
+-- X-ORIGIN: "SONIA"
+soniaOrganizationalAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { organizationalUnitName }
+  MAY CONTAIN               { soniaDepartment
+                              | soniaInstitute
+                              | soniaEducationalDepartment
+                              | soniaCampus
+                              | localityName }
+  LDAP-NAME                 {"soniaOrganizationalAccount"}
+  ID                        id-oc-soniaOrganizationalAccount }
+
+-- X-ORIGIN: "SONIA"
+soniaMailGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { mailGroup }
+  MUST CONTAIN              { soniaMailGroupUid }
+  MAY CONTAIN               { soniaMailGroupStatus
+                              | soniaMailGroupSubscribeType }
+  LDAP-NAME                 {"soniaMailGroup"}
+  ID                        id-oc-soniaMailGroup }
+END

@@ -1,0 +1,616 @@
+-- Derived from data/ldap-schema/gosa-core/gosystem.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGosaCoreGosystem DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, caseIgnoreMatch,
+    caseIgnoreSubstringsMatch, commonName, description, directoryString,
+    ia5String, localityName, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  ipHostNumber, macAddress
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-gotoSyslogServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 1 }
+id-at-gotoNtpServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 2 }
+id-at-gotoSwapServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 3 }
+id-at-gotoLpdServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 4 }
+id-at-gotoFontPath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 5 }
+id-at-gotoFilesystem OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 6 }
+id-at-gotoFloppyEnable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 7 }
+id-at-gotoCdromEnable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 8 }
+id-at-gotoLpdEnable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 9 }
+id-at-gotoScannerEnable OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 10 }
+id-at-gotoScannerClients OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 11 }
+id-at-gotoRootPasswd OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 14 }
+id-at-gotoXdmcpServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 15 }
+id-at-gotoXMethod OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 16 }
+id-at-gotoXMonitor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 17 }
+id-at-gotoXHsync OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 18 }
+id-at-gotoXVsync OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 19 }
+id-at-gotoXResolution OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 20 }
+id-at-gotoXColordepth OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 21 }
+id-at-gotoXMouseport OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 22 }
+id-at-gotoXMouseButtons OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 23 }
+id-at-gotoMode OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 24 }
+id-at-gotoXKbModel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 25 }
+id-at-gotoXKbLayout OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 26 }
+id-at-gotoXKbVariant OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 27 }
+id-at-gotoXDriver OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 28 }
+id-at-gotoSndModule OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 29 }
+id-at-gotoLastUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 30 }
+id-at-gotoAutoFs OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 31 }
+id-at-gotoModules OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 32 }
+id-at-gotoAdaptPath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 33 }
+id-at-gotoXMouseType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 34 }
+id-at-gotoKernelParameters OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 35 }
+id-at-gotoBootKernel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 36 }
+id-at-gotoTerminalPath OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 37 }
+id-at-gotoLdapServer OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 38 }
+id-at-gotoScannerBackend OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 39 }
+id-at-gotoScannerModel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 1 40 }
+id-at-ghCpuType OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 1 }
+id-at-ghMemSize OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 2 }
+id-at-ghUsbSupport OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 3 }
+id-at-ghIdeDev OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 4 }
+id-at-ghScsiDev OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 5 }
+id-at-ghSoundAdapter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 7 }
+id-at-ghNetNic OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 8 }
+id-at-ghGfxAdapter OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 9 }
+id-at-ghInventoryNumber OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 10 }
+id-at-gotoSysStatus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 11 }
+id-at-gotoHardwareChecksum OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 1 2 12 }
+id-oc-gOhard OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 10098 1 2 1 3 }
+
+-- Attribute types
+
+gotoSyslogServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoSyslogServer"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value syslogServer."
+  ID                        id-at-gotoSyslogServer }
+
+gotoNtpServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoNtpServer"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value ntpServer."
+  ID                        id-at-gotoNtpServer }
+
+gotoSwapServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoSwapServer"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value swapServer."
+  ID                        id-at-gotoSwapServer }
+
+gotoLpdServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoLpdServer"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value lpdServer."
+  ID                        id-at-gotoLpdServer }
+
+gotoFontPath ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoFontPath"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value fontPath."
+  ID                        id-at-gotoFontPath }
+
+gotoFilesystem ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoFilesystem"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value filesystem."
+  ID                        id-at-gotoFilesystem }
+
+gotoFloppyEnable ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoFloppyEnable"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value floppyEnable."
+  ID                        id-at-gotoFloppyEnable }
+
+gotoCdromEnable ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoCdromEnable"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value cdromEnable."
+  ID                        id-at-gotoCdromEnable }
+
+gotoLpdEnable ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoLpdEnable"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value lpdEnable."
+  ID                        id-at-gotoLpdEnable }
+
+gotoScannerEnable ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoScannerEnable"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value scannerEnable."
+  ID                        id-at-gotoScannerEnable }
+
+gotoScannerClients ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoScannerClients"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value scannerClients."
+  ID                        id-at-gotoScannerClients }
+
+gotoRootPasswd ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoRootPasswd"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value rootPasswd."
+  ID                        id-at-gotoRootPasswd }
+
+gotoXdmcpServer ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXdmcpServer"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xdmcpServer."
+  ID                        id-at-gotoXdmcpServer }
+
+gotoXMethod ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXMethod"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xMethod."
+  ID                        id-at-gotoXMethod }
+
+gotoXMonitor ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXMonitor"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xMonitor."
+  ID                        id-at-gotoXMonitor }
+
+gotoXHsync ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXHsync"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xHsync."
+  ID                        id-at-gotoXHsync }
+
+gotoXVsync ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXVsync"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xVsync."
+  ID                        id-at-gotoXVsync }
+
+gotoXResolution ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXResolution"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xResolution."
+  ID                        id-at-gotoXResolution }
+
+gotoXColordepth ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXColordepth"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xColordepth."
+  ID                        id-at-gotoXColordepth }
+
+gotoXMouseport ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXMouseport"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xMouseport."
+  ID                        id-at-gotoXMouseport }
+
+gotoXMouseButtons ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXMouseButtons"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xMouseButtons."
+  ID                        id-at-gotoXMouseButtons }
+
+gotoMode ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoMode"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, Terminal is active."
+  ID                        id-at-gotoMode }
+
+gotoXKbModel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXKbModel"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xKbmodel."
+  ID                        id-at-gotoXKbModel }
+
+gotoXKbLayout ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXKbLayout"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xKblayout."
+  ID                        id-at-gotoXKbLayout }
+
+gotoXKbVariant ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXKbVariant"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xKbvariant."
+  ID                        id-at-gotoXKbVariant }
+
+gotoXDriver ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXDriver"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value xDriver."
+  ID                        id-at-gotoXDriver }
+
+gotoSndModule ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoSndModule"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value sndModules."
+  ID                        id-at-gotoSndModule }
+
+gotoLastUser ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoLastUser"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value lastUser."
+  ID                        id-at-gotoLastUser }
+
+gotoAutoFs ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoAutoFs"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value autofs."
+  ID                        id-at-gotoAutoFs }
+
+gotoModules ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoModules"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value modules."
+  ID                        id-at-gotoModules }
+
+gotoAdaptPath ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoAdaptPath"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value adaptpath."
+  ID                        id-at-gotoAdaptPath }
+
+gotoXMouseType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoXMouseType"}
+  LDAP-DESC                 "Hardware definitions, value Maustyp"
+  ID                        id-at-gotoXMouseType }
+
+gotoKernelParameters ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoKernelParameters"}
+  LDAP-DESC                 "Kernel boot parameters"
+  ID                        id-at-gotoKernelParameters }
+
+gotoBootKernel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoBootKernel"}
+  LDAP-DESC                 "Kernel boot parameters"
+  ID                        id-at-gotoBootKernel }
+
+gotoTerminalPath ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoTerminalPath"}
+  LDAP-DESC                 "Kernel boot parameters"
+  ID                        id-at-gotoTerminalPath }
+
+gotoLdapServer ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"gotoLdapServer"}
+  LDAP-DESC                 "Kernel boot parameters"
+  ID                        id-at-gotoLdapServer }
+
+gotoScannerBackend ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoScannerBackend"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value scannerBackend."
+  ID                        id-at-gotoScannerBackend }
+
+gotoScannerModel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoScannerModel"}
+  LDAP-DESC                 "GOto - Gonicus Terminal Concept, value scannerModel."
+  ID                        id-at-gotoScannerModel }
+
+ghCpuType ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghCpuType"}
+  LDAP-DESC                 "Hardware definitions, value cpuType"
+  ID                        id-at-ghCpuType }
+
+ghMemSize ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghMemSize"}
+  LDAP-DESC                 "Hardware definitions, value memSize"
+  ID                        id-at-ghMemSize }
+
+ghUsbSupport ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghUsbSupport"}
+  LDAP-DESC                 "Hardware definitions, value usbSupport"
+  ID                        id-at-ghUsbSupport }
+
+ghIdeDev ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghIdeDev"}
+  LDAP-DESC                 "Hardware definitions, value ideDev"
+  ID                        id-at-ghIdeDev }
+
+ghScsiDev ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghScsiDev"}
+  LDAP-DESC                 "Hardware definitions, value scsiDev"
+  ID                        id-at-ghScsiDev }
+
+ghSoundAdapter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghSoundAdapter"}
+  LDAP-DESC                 "Hardware definitions, value soundAdapter"
+  ID                        id-at-ghSoundAdapter }
+
+ghNetNic ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghNetNic"}
+  LDAP-DESC                 "Hardware definitions, value Network Device"
+  ID                        id-at-ghNetNic }
+
+ghGfxAdapter ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghGfxAdapter"}
+  LDAP-DESC                 "Hardware definitions, value Grafikkarte"
+  ID                        id-at-ghGfxAdapter }
+
+ghInventoryNumber ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"ghInventoryNumber"}
+  LDAP-DESC                 "Unique number for inclusion in an inventory"
+  ID                        id-at-ghInventoryNumber }
+
+gotoSysStatus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoSysStatus"}
+  LDAP-DESC                 "Keeps current system status - info shown in GOsa"
+  ID                        id-at-gotoSysStatus }
+
+gotoHardwareChecksum ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"gotoHardwareChecksum"}
+  LDAP-DESC                 "GOto - quick way to see if something has changed"
+  ID                        id-at-gotoHardwareChecksum }
+
+-- Object classes
+
+-- initial capital of "GOhard" lowercased so the assignment is a valuereference.
+gOhard OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { ghGfxAdapter
+                              | ghNetNic
+                              | ghSoundAdapter
+                              | ghIdeDev
+                              | ghScsiDev
+                              | macAddress
+                              | ghUsbSupport
+                              | ghMemSize
+                              | ghCpuType
+                              | ghInventoryNumber
+                              | gotoSyslogServer
+                              | gotoNtpServer
+                              | gotoSwapServer
+                              | gotoLpdServer
+                              | gotoFontPath
+                              | gotoFilesystem
+                              | gotoFloppyEnable
+                              | gotoCdromEnable
+                              | gotoLpdEnable
+                              | gotoScannerEnable
+                              | gotoScannerClients
+                              | gotoRootPasswd
+                              | gotoXdmcpServer
+                              | gotoXMethod
+                              | gotoSndModule
+                              | gotoLastUser
+                              | gotoXMonitor
+                              | gotoXHsync
+                              | gotoXVsync
+                              | gotoXResolution
+                              | gotoXColordepth
+                              | gotoXMouseport
+                              | gotoXMouseButtons
+                              | gotoMode
+                              | gotoXKbModel
+                              | gotoXKbLayout
+                              | gotoXKbVariant
+                              | gotoXDriver
+                              | gotoXMouseType
+                              | macAddress
+                              | gotoAutoFs
+                              | gotoModules
+                              | gotoAdaptPath
+                              | gotoKernelParameters
+                              | gotoBootKernel
+                              | gotoTerminalPath
+                              | gotoLdapServer
+                              | gotoScannerModel
+                              | ipHostNumber
+                              | localityName
+                              | gotoSysStatus
+                              | description
+                              | gotoHardwareChecksum }
+  LDAP-NAME                 {"GOhard"}
+  LDAP-DESC                 "Gonicus Hardware definitions, objectclass (v2.7)"
+  ID                        id-oc-gOhard }
+END

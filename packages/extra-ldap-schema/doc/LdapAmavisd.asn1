@@ -1,0 +1,572 @@
+-- Derived from data/ldap-schema/amavisd.schema
+-- Upstream: https://raw.githubusercontent.com/Zimbra/zm-ldap-utilities/refs/heads/develop/conf/ldap/amavisd.schema
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapAmavisd DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseExactIA5Match, caseExactSubstringsMatch,
+    caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch, commonName, description,
+    ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-amavisVirusLover OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 1 }
+id-at-amavisBannedFilesLover OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 2 }
+id-at-amavisBypassVirusChecks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 3 }
+id-at-amavisBypassSpamChecks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 4 }
+id-at-amavisSpamTagLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 5 }
+id-at-amavisSpamTag2Level OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 6 }
+id-at-amavisSpamKillLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 7 }
+id-at-amavisSpamModifiesSubj OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 8 }
+id-at-amavisWhitelistSender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 9 }
+id-at-amavisBlacklistSender OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 10 }
+id-at-amavisSpamQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 11 }
+id-at-amavisSpamLover OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 12 }
+id-at-amavisBadHeaderLover OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 13 }
+id-at-amavisBypassBannedChecks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 14 }
+id-at-amavisBypassHeaderChecks OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 15 }
+id-at-amavisVirusQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 16 }
+id-at-amavisBannedQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 17 }
+id-at-amavisBadHeaderQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 18 }
+id-at-amavisLocal OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 19 }
+id-at-amavisMessageSizeLimit OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 20 }
+id-at-amavisWarnVirusRecip OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 21 }
+id-at-amavisWarnBannedRecip OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 22 }
+id-at-amavisWarnBadHeaderRecip OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 23 }
+id-at-amavisVirusAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 24 }
+id-at-amavisNewVirusAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 25 }
+id-at-amavisSpamAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 26 }
+id-at-amavisBannedAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 27 }
+id-at-amavisBadHeaderAdmin OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 28 }
+id-at-amavisBannedRuleNames OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 29 }
+id-at-amavisSpamDsnCutoffLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 30 }
+id-at-amavisSpamQuarantineCutoffLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 31 }
+id-at-amavisSpamSubjectTag OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 32 }
+id-at-amavisSpamSubjectTag2 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 33 }
+id-at-amavisArchiveQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 34 }
+id-at-amavisAddrExtensionVirus OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 35 }
+id-at-amavisAddrExtensionSpam OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 36 }
+id-at-amavisAddrExtensionBanned OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 37 }
+id-at-amavisAddrExtensionBadHeader OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 38 }
+id-at-amavisSpamTag3Level OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 39 }
+id-at-amavisSpamSubjectTag3 OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 40 }
+id-at-amavisUncheckedQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 41 }
+id-at-amavisCleanQuarantineTo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 42 }
+id-at-amavisUncheckedLover OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 43 }
+id-at-amavisForwardMethod OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 44 }
+id-at-amavisSaUserConf OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 45 }
+id-at-amavisSaUserName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 1 46 }
+id-oc-amavisAccount OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 15312 2 2 2 1 }
+
+-- Attribute types
+
+amavisVirusLover ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisVirusLover"}
+  LDAP-DESC                 "Virus Lover"
+  ID                        id-at-amavisVirusLover }
+
+amavisBannedFilesLover ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisBannedFilesLover"}
+  LDAP-DESC                 "Banned Files Lover"
+  ID                        id-at-amavisBannedFilesLover }
+
+amavisBypassVirusChecks ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisBypassVirusChecks"}
+  LDAP-DESC                 "Bypass Virus Check"
+  ID                        id-at-amavisBypassVirusChecks }
+
+amavisBypassSpamChecks ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisBypassSpamChecks"}
+  LDAP-DESC                 "Bypass Spam Check"
+  ID                        id-at-amavisBypassSpamChecks }
+
+amavisSpamTagLevel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamTagLevel"}
+  LDAP-DESC                 "Spam Tag Level"
+  ID                        id-at-amavisSpamTagLevel }
+
+amavisSpamTag2Level ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamTag2Level"}
+  LDAP-DESC                 "Spam Tag2 Level"
+  ID                        id-at-amavisSpamTag2Level }
+
+amavisSpamKillLevel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamKillLevel"}
+  LDAP-DESC                 "Spam Kill Level"
+  ID                        id-at-amavisSpamKillLevel }
+
+amavisSpamModifiesSubj ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisSpamModifiesSubj"}
+  LDAP-DESC                 "Modifies Subject on spam - no longer in use since 2.7.0"
+  ID                        id-at-amavisSpamModifiesSubj }
+
+amavisWhitelistSender ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisWhitelistSender"}
+  LDAP-DESC                 "White List Sender"
+  ID                        id-at-amavisWhitelistSender }
+
+amavisBlacklistSender ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisBlacklistSender"}
+  LDAP-DESC                 "Black List Sender"
+  ID                        id-at-amavisBlacklistSender }
+
+amavisSpamQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamQuarantineTo"}
+  LDAP-DESC                 "Spam Quarantine to"
+  ID                        id-at-amavisSpamQuarantineTo }
+
+amavisSpamLover ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisSpamLover"}
+  LDAP-DESC                 "Spam Lover"
+  ID                        id-at-amavisSpamLover }
+
+amavisBadHeaderLover ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisBadHeaderLover"}
+  LDAP-DESC                 "Bad Header Lover"
+  ID                        id-at-amavisBadHeaderLover }
+
+amavisBypassBannedChecks ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisBypassBannedChecks"}
+  LDAP-DESC                 "Bypass Banned Files Check"
+  ID                        id-at-amavisBypassBannedChecks }
+
+amavisBypassHeaderChecks ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisBypassHeaderChecks"}
+  LDAP-DESC                 "Bypass Header Check"
+  ID                        id-at-amavisBypassHeaderChecks }
+
+amavisVirusQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisVirusQuarantineTo"}
+  LDAP-DESC                 "Virus quarantine location"
+  ID                        id-at-amavisVirusQuarantineTo }
+
+amavisBannedQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisBannedQuarantineTo"}
+  LDAP-DESC                 "Banned Files quarantine location"
+  ID                        id-at-amavisBannedQuarantineTo }
+
+amavisBadHeaderQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisBadHeaderQuarantineTo"}
+  LDAP-DESC                 "Bad Header quarantine location"
+  ID                        id-at-amavisBadHeaderQuarantineTo }
+
+amavisLocal ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisLocal"}
+  LDAP-DESC                 "Is user considered local"
+  ID                        id-at-amavisLocal }
+
+amavisMessageSizeLimit ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisMessageSizeLimit"}
+  LDAP-DESC                 "Message size limit"
+  ID                        id-at-amavisMessageSizeLimit }
+
+amavisWarnVirusRecip ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisWarnVirusRecip"}
+  LDAP-DESC                 "Notify virus recipients"
+  ID                        id-at-amavisWarnVirusRecip }
+
+amavisWarnBannedRecip ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisWarnBannedRecip"}
+  LDAP-DESC                 "Notify banned file recipients"
+  ID                        id-at-amavisWarnBannedRecip }
+
+amavisWarnBadHeaderRecip ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisWarnBadHeaderRecip"}
+  LDAP-DESC                 "Notify bad header recipients"
+  ID                        id-at-amavisWarnBadHeaderRecip }
+
+amavisVirusAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisVirusAdmin"}
+  LDAP-DESC                 "Virus admin"
+  ID                        id-at-amavisVirusAdmin }
+
+amavisNewVirusAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisNewVirusAdmin"}
+  LDAP-DESC                 "New virus admin"
+  ID                        id-at-amavisNewVirusAdmin }
+
+amavisSpamAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamAdmin"}
+  LDAP-DESC                 "Spam admin"
+  ID                        id-at-amavisSpamAdmin }
+
+amavisBannedAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisBannedAdmin"}
+  LDAP-DESC                 "Banned file admin"
+  ID                        id-at-amavisBannedAdmin }
+
+amavisBadHeaderAdmin ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisBadHeaderAdmin"}
+  LDAP-DESC                 "Bad header admin"
+  ID                        id-at-amavisBadHeaderAdmin }
+
+amavisBannedRuleNames ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisBannedRuleNames"}
+  LDAP-DESC                 "Banned rule names"
+  ID                        id-at-amavisBannedRuleNames }
+
+amavisSpamDsnCutoffLevel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamDsnCutoffLevel"}
+  LDAP-DESC                 "Spam DSN Cutoff Level"
+  ID                        id-at-amavisSpamDsnCutoffLevel }
+
+amavisSpamQuarantineCutoffLevel ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamQuarantineCutoffLevel"}
+  LDAP-DESC                 "Spam Quarantine Cutoff Level"
+  ID                        id-at-amavisSpamQuarantineCutoffLevel }
+
+amavisSpamSubjectTag ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamSubjectTag"}
+  LDAP-DESC                 "Spam Subject Tag"
+  ID                        id-at-amavisSpamSubjectTag }
+
+amavisSpamSubjectTag2 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamSubjectTag2"}
+  LDAP-DESC                 "Spam Subject Tag2"
+  ID                        id-at-amavisSpamSubjectTag2 }
+
+amavisArchiveQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisArchiveQuarantineTo"}
+  LDAP-DESC                 "Archive quarantine location"
+  ID                        id-at-amavisArchiveQuarantineTo }
+
+amavisAddrExtensionVirus ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisAddrExtensionVirus"}
+  LDAP-DESC                 "Address Extension for Virus"
+  ID                        id-at-amavisAddrExtensionVirus }
+
+amavisAddrExtensionSpam ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisAddrExtensionSpam"}
+  LDAP-DESC                 "Address Extension for Spam"
+  ID                        id-at-amavisAddrExtensionSpam }
+
+amavisAddrExtensionBanned ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisAddrExtensionBanned"}
+  LDAP-DESC                 "Address Extension for Banned"
+  ID                        id-at-amavisAddrExtensionBanned }
+
+amavisAddrExtensionBadHeader ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisAddrExtensionBadHeader"}
+  LDAP-DESC                 "Address Extension for Bad Header"
+  ID                        id-at-amavisAddrExtensionBadHeader }
+
+amavisSpamTag3Level ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamTag3Level"}
+  LDAP-DESC                 "Spam Tag3 Level"
+  ID                        id-at-amavisSpamTag3Level }
+
+amavisSpamSubjectTag3 ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSpamSubjectTag3"}
+  LDAP-DESC                 "Spam Subject Tag3"
+  ID                        id-at-amavisSpamSubjectTag3 }
+
+amavisUncheckedQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisUncheckedQuarantineTo"}
+  LDAP-DESC                 "Virus quarantine location"
+  ID                        id-at-amavisUncheckedQuarantineTo }
+
+amavisCleanQuarantineTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisCleanQuarantineTo"}
+  LDAP-DESC                 "Clean quarantine location"
+  ID                        id-at-amavisCleanQuarantineTo }
+
+amavisUncheckedLover ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"amavisUncheckedLover"}
+  LDAP-DESC                 "Unchecked Files Lover"
+  ID                        id-at-amavisUncheckedLover }
+
+amavisForwardMethod ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisForwardMethod"}
+  LDAP-DESC                 "Forward / next hop destination"
+  ID                        id-at-amavisForwardMethod }
+
+amavisSaUserConf ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSaUserConf"}
+  LDAP-DESC                 "SpamAssassin user preferences configuration filename"
+  ID                        id-at-amavisSaUserConf }
+
+amavisSaUserName ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"amavisSaUserName"}
+  LDAP-DESC                 "SpamAssassin username (for Bayes and AWL lookups)"
+  ID                        id-at-amavisSaUserName }
+
+-- Object classes
+
+amavisAccount OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { amavisVirusLover
+                              | amavisBypassVirusChecks
+                              | amavisSpamLover
+                              | amavisBypassSpamChecks
+                              | amavisBannedFilesLover
+                              | amavisBypassBannedChecks
+                              | amavisBadHeaderLover
+                              | amavisBypassHeaderChecks
+                              | amavisSpamTagLevel
+                              | amavisSpamTag2Level
+                              | amavisSpamKillLevel
+                              | amavisWhitelistSender
+                              | amavisBlacklistSender
+                              | amavisSpamQuarantineTo
+                              | amavisVirusQuarantineTo
+                              | amavisBannedQuarantineTo
+                              | amavisBadHeaderQuarantineTo
+                              | amavisArchiveQuarantineTo
+                              | amavisSpamModifiesSubj
+                              | amavisLocal
+                              | amavisMessageSizeLimit
+                              | amavisWarnVirusRecip
+                              | amavisWarnBannedRecip
+                              | amavisWarnBadHeaderRecip
+                              | amavisVirusAdmin
+                              | amavisNewVirusAdmin
+                              | amavisSpamAdmin
+                              | amavisBannedAdmin
+                              | amavisBadHeaderAdmin
+                              | amavisBannedRuleNames
+                              | amavisSpamDsnCutoffLevel
+                              | amavisSpamQuarantineCutoffLevel
+                              | amavisSpamSubjectTag
+                              | amavisSpamSubjectTag2
+                              | amavisAddrExtensionVirus
+                              | amavisAddrExtensionSpam
+                              | amavisAddrExtensionBanned
+                              | amavisAddrExtensionBadHeader
+                              | amavisSpamTag3Level
+                              | amavisSpamSubjectTag3
+                              | amavisUncheckedQuarantineTo
+                              | amavisCleanQuarantineTo
+                              | amavisUncheckedLover
+                              | amavisForwardMethod
+                              | amavisSaUserConf
+                              | amavisSaUserName
+                              | commonName
+                              | description }
+  LDAP-NAME                 {"amavisAccount"}
+  LDAP-DESC                 "Amavisd Account"
+  ID                        id-oc-amavisAccount }
+END

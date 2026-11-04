@@ -1,0 +1,88 @@
+-- Derived from data/ldap-schema/glue/5-09-Manager.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue509Manager DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2ManagerID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 11 1 }
+id-at-gLUE2ManagerProductName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 11 2 }
+id-at-gLUE2ManagerProductVersion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 11 3 }
+id-at-gLUE2ManagerServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 11 4 }
+id-oc-gLUE2Manager OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 11 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2ManagerID" lowercased so the assignment is a valuereference.
+gLUE2ManagerID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ManagerID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2ManagerID }
+
+-- initial capital of "GLUE2ManagerProductName" lowercased so the assignment is a valuereference.
+gLUE2ManagerProductName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ManagerProductName"}
+  LDAP-DESC                 "The name of the software product which implements the Manager functionality"
+  ID                        id-at-gLUE2ManagerProductName }
+
+-- initial capital of "GLUE2ManagerProductVersion" lowercased so the assignment is a valuereference.
+gLUE2ManagerProductVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ManagerProductVersion"}
+  LDAP-DESC                 "The version of the software product which implements the Manager functionality"
+  ID                        id-at-gLUE2ManagerProductVersion }
+
+-- initial capital of "GLUE2ManagerServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2ManagerServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2ManagerServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2ManagerServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2Manager" lowercased so the assignment is a valuereference.
+gLUE2Manager OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2ManagerID
+                              | gLUE2ManagerProductName
+                              | gLUE2ManagerServiceForeignKey }
+  MAY CONTAIN               { gLUE2ManagerProductVersion }
+  LDAP-NAME                 {"GLUE2Manager"}
+  LDAP-DESC                 "A manager"
+  ID                        id-oc-gLUE2Manager }
+END

@@ -1,0 +1,48 @@
+/* eslint-disable */
+import {
+    ObjectIdentifier as _OID
+} from "@wildboar/asn1";
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { gidNumber } from "../NIS/gidNumber.oa.mjs";
+import { uidNumber } from "../NIS/uidNumber.oa.mjs";
+
+
+/**
+ * @summary sambaUnixIdPool
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * sambaUnixIdPool OBJECT-CLASS ::= {
+ *     SUBCLASS OF     {top}
+ *     KIND            auxiliary
+ *     MUST CONTAIN    {gidNumber | uidNumber}
+ *     LDAP-NAME       {"sambaUnixIdPool"}
+ *     LDAP-DESC       "Pool for allocating UNIX uids/gids"
+ *     ID              { 1 3 6 1 4 1 7165 2 2 7 }
+ * }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const sambaUnixIdPool: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&MandatoryAttributes": [ gidNumber, uidNumber, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "sambaUnixIdPool" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "Pool for allocating UNIX uids/gids" /* OBJECT_FIELD_SETTING */,
+    "&id": _OID.fromParts([1, 3, 6, 1, 4, 1, 7165, 2, 2, 7,]) /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

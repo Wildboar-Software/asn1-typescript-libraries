@@ -1,0 +1,50 @@
+/* eslint-disable */
+import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
+import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { id_at_iplanet_am_auth_post_login_process_class } from "../Ldapmigration71sunAm/id-at-iplanet-am-auth-post-login-process-class.va.mjs";
+import { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
+
+
+/**
+ * @summary iplanet_am_auth_post_login_process_class
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * iplanet-am-auth-post-login-process-class ATTRIBUTE ::= {
+ *   WITH SYNTAX               UnboundedDirectoryString
+ *   LDAP-SYNTAX               directoryString.&id
+ *   LDAP-NAME                 {"iplanet-am-auth-post-login-process-class"}
+ *   LDAP-DESC                 "Class Name for Post Authentication Processing"
+ *   ID                        id-at-iplanet-am-auth-post-login-process-class }
+ * ```
+ * 
+ * @constant
+ * @type {ATTRIBUTE<UnboundedDirectoryString>}
+ * @implements {ATTRIBUTE<UnboundedDirectoryString>}
+ */
+export
+const iplanet_am_auth_post_login_process_class: ATTRIBUTE<UnboundedDirectoryString> = {
+    class: "ATTRIBUTE",
+    decoderFor: {
+        "&Type": _decode_UnboundedDirectoryString,
+    },
+    encoderFor: {
+        "&Type": _encode_UnboundedDirectoryString,
+    },
+    "&ldapSyntax": directoryString["&id"] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "iplanet-am-auth-post-login-process-class" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "Class Name for Post Authentication Processing" /* OBJECT_FIELD_SETTING */,
+    "&id": id_at_iplanet_am_auth_post_login_process_class /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+    "&Type": 0 as never /* OBJECT_FIELD_SETTING OBJECT_TYPE_FIELD_SETTING */,
+    "&single-valued": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&collective": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&dummy": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&no-user-modification": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&usage": userApplications /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+    "&obsolete": false /* OBJECT_FIELD_SETTING DEFAULT_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

@@ -1,0 +1,355 @@
+-- Derived from data/ldap-schema/glue/5-07-Endpoint.schema
+-- Upstream: http://redmine.ogf.org/projects/glue-wg
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+LdapGlue507Endpoint DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactMatch, caseExactSubstringsMatch, directoryString,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  gLUE2Entity
+    FROM LdapGlue501Entity ;
+
+-- Object identifiers
+
+id-at-gLUE2EndpointID OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 1 }
+id-at-gLUE2EndpointURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 2 }
+id-at-gLUE2EndpointCapability OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 3 }
+id-at-gLUE2EndpointTechnology OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 4 }
+id-at-gLUE2EndpointInterfaceName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 5 }
+id-at-gLUE2EndpointInterfaceVersion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 6 }
+id-at-gLUE2EndpointInterfaceExtension OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 7 }
+id-at-gLUE2EndpointWSDL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 8 }
+id-at-gLUE2EndpointSupportedProfile OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 9 }
+id-at-gLUE2EndpointSemantics OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 10 }
+id-at-gLUE2EndpointImplementor OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 11 }
+id-at-gLUE2EndpointImplementationName OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 12 }
+id-at-gLUE2EndpointImplementationVersion OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 13 }
+id-at-gLUE2EndpointQualityLevel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 14 }
+id-at-gLUE2EndpointHealthState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 15 }
+id-at-gLUE2EndpointHealthStateInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 16 }
+id-at-gLUE2EndpointServingState OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 17 }
+id-at-gLUE2EndpointStartTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 18 }
+id-at-gLUE2EndpointIssuerCA OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 19 }
+id-at-gLUE2EndpointTrustedCA OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 20 }
+id-at-gLUE2EndpointDowntimeAnnounce OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 21 }
+id-at-gLUE2EndpointDowntimeStart OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 22 }
+id-at-gLUE2EndpointDowntimeEnd OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 23 }
+id-at-gLUE2EndpointDowntimeInfo OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 24 }
+id-at-gLUE2EndpointServiceForeignKey OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 25 }
+id-oc-gLUE2Endpoint OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 6757 100 1 1 9 }
+
+-- Attribute types
+
+-- initial capital of "GLUE2EndpointID" lowercased so the assignment is a valuereference.
+gLUE2EndpointID ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointID"}
+  LDAP-DESC                 "Globally unique ID"
+  ID                        id-at-gLUE2EndpointID }
+
+-- initial capital of "GLUE2EndpointURL" lowercased so the assignment is a valuereference.
+gLUE2EndpointURL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointURL"}
+  LDAP-DESC                 "Network location of the endpoint to contact the related service"
+  ID                        id-at-gLUE2EndpointURL }
+
+-- initial capital of "GLUE2EndpointCapability" lowercased so the assignment is a valuereference.
+gLUE2EndpointCapability ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointCapability"}
+  LDAP-DESC                 "The provided capability according to the OGSA architecture"
+  ID                        id-at-gLUE2EndpointCapability }
+
+-- initial capital of "GLUE2EndpointTechnology" lowercased so the assignment is a valuereference.
+gLUE2EndpointTechnology ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointTechnology"}
+  LDAP-DESC                 "Technology used to implement the endpoint"
+  ID                        id-at-gLUE2EndpointTechnology }
+
+-- initial capital of "GLUE2EndpointInterfaceName" lowercased so the assignment is a valuereference.
+gLUE2EndpointInterfaceName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointInterfaceName"}
+  LDAP-DESC                 "Identification of a type and version of the interface"
+  ID                        id-at-gLUE2EndpointInterfaceName }
+
+-- initial capital of "GLUE2EndpointInterfaceVersion" lowercased so the assignment is a valuereference.
+gLUE2EndpointInterfaceVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointInterfaceVersion"}
+  LDAP-DESC                 "The version of the primary interface protocol"
+  ID                        id-at-gLUE2EndpointInterfaceVersion }
+
+-- initial capital of "GLUE2EndpointInterfaceExtension" lowercased so the assignment is a valuereference.
+gLUE2EndpointInterfaceExtension ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointInterfaceExtension"}
+  LDAP-DESC                 "Identification of an extension to the interface"
+  ID                        id-at-gLUE2EndpointInterfaceExtension }
+
+-- initial capital of "GLUE2EndpointWSDL" lowercased so the assignment is a valuereference.
+gLUE2EndpointWSDL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointWSDL"}
+  LDAP-DESC                 "URL of the WSDL document describing the offered interface (applies to Web Services endpoint)"
+  ID                        id-at-gLUE2EndpointWSDL }
+
+-- initial capital of "GLUE2EndpointSupportedProfile" lowercased so the assignment is a valuereference.
+gLUE2EndpointSupportedProfile ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointSupportedProfile"}
+  LDAP-DESC                 "URI identifying a supported profile"
+  ID                        id-at-gLUE2EndpointSupportedProfile }
+
+-- initial capital of "GLUE2EndpointSemantics" lowercased so the assignment is a valuereference.
+gLUE2EndpointSemantics ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointSemantics"}
+  LDAP-DESC                 "URI of a document providing a human-readable description of the semantics of the endpoint functionalities"
+  ID                        id-at-gLUE2EndpointSemantics }
+
+-- initial capital of "GLUE2EndpointImplementor" lowercased so the assignment is a valuereference.
+gLUE2EndpointImplementor ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointImplementor"}
+  LDAP-DESC                 "Main organization implementing this software component"
+  ID                        id-at-gLUE2EndpointImplementor }
+
+-- initial capital of "GLUE2EndpointImplementationName" lowercased so the assignment is a valuereference.
+gLUE2EndpointImplementationName ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointImplementationName"}
+  LDAP-DESC                 "Name of the implementation"
+  ID                        id-at-gLUE2EndpointImplementationName }
+
+-- initial capital of "GLUE2EndpointImplementationVersion" lowercased so the assignment is a valuereference.
+gLUE2EndpointImplementationVersion ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointImplementationVersion"}
+  LDAP-DESC                 "Version of the implementation (e.g., major version.minor version.patch version)"
+  ID                        id-at-gLUE2EndpointImplementationVersion }
+
+-- initial capital of "GLUE2EndpointQualityLevel" lowercased so the assignment is a valuereference.
+gLUE2EndpointQualityLevel ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointQualityLevel"}
+  LDAP-DESC                 "Maturity of the endpoint in terms of quality of the software components"
+  ID                        id-at-gLUE2EndpointQualityLevel }
+
+-- initial capital of "GLUE2EndpointHealthState" lowercased so the assignment is a valuereference.
+gLUE2EndpointHealthState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointHealthState"}
+  LDAP-DESC                 "A state representing the health of the endpoint in terms of its capability of properly delivering the functionalities"
+  ID                        id-at-gLUE2EndpointHealthState }
+
+-- initial capital of "GLUE2EndpointHealthStateInfo" lowercased so the assignment is a valuereference.
+gLUE2EndpointHealthStateInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointHealthStateInfo"}
+  LDAP-DESC                 "Textual explanation of the state endpoint"
+  ID                        id-at-gLUE2EndpointHealthStateInfo }
+
+-- initial capital of "GLUE2EndpointServingState" lowercased so the assignment is a valuereference.
+gLUE2EndpointServingState ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointServingState"}
+  LDAP-DESC                 "A state specifying if the endpoint is accepting new requests and if it is serving the already accepted requests"
+  ID                        id-at-gLUE2EndpointServingState }
+
+-- initial capital of "GLUE2EndpointStartTime" lowercased so the assignment is a valuereference.
+gLUE2EndpointStartTime ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointStartTime"}
+  LDAP-DESC                 "The timestamp for the start time of the endpoint"
+  ID                        id-at-gLUE2EndpointStartTime }
+
+-- initial capital of "GLUE2EndpointIssuerCA" lowercased so the assignment is a valuereference.
+gLUE2EndpointIssuerCA ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointIssuerCA"}
+  LDAP-DESC                 "Distinguished name of Certification Authority issuing the certificate for the endpoint"
+  ID                        id-at-gLUE2EndpointIssuerCA }
+
+-- initial capital of "GLUE2EndpointTrustedCA" lowercased so the assignment is a valuereference.
+gLUE2EndpointTrustedCA ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointTrustedCA"}
+  LDAP-DESC                 "Distinguished name of the trusted Certification Authority"
+  ID                        id-at-gLUE2EndpointTrustedCA }
+
+-- initial capital of "GLUE2EndpointDowntimeAnnounce" lowercased so the assignment is a valuereference.
+gLUE2EndpointDowntimeAnnounce ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointDowntimeAnnounce"}
+  LDAP-DESC                 "The timestamp for the announcement of the next scheduled downtime"
+  ID                        id-at-gLUE2EndpointDowntimeAnnounce }
+
+-- initial capital of "GLUE2EndpointDowntimeStart" lowercased so the assignment is a valuereference.
+gLUE2EndpointDowntimeStart ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointDowntimeStart"}
+  LDAP-DESC                 "The starting timestamp of the next scheduled downtime"
+  ID                        id-at-gLUE2EndpointDowntimeStart }
+
+-- initial capital of "GLUE2EndpointDowntimeEnd" lowercased so the assignment is a valuereference.
+gLUE2EndpointDowntimeEnd ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointDowntimeEnd"}
+  LDAP-DESC                 "The ending timestamp of the next scheduled downtime"
+  ID                        id-at-gLUE2EndpointDowntimeEnd }
+
+-- initial capital of "GLUE2EndpointDowntimeInfo" lowercased so the assignment is a valuereference.
+gLUE2EndpointDowntimeInfo ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointDowntimeInfo"}
+  LDAP-DESC                 "Description of the next scheduled downtime"
+  ID                        id-at-gLUE2EndpointDowntimeInfo }
+
+-- initial capital of "GLUE2EndpointServiceForeignKey" lowercased so the assignment is a valuereference.
+gLUE2EndpointServiceForeignKey ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseExactMatch
+  SUBSTRINGS MATCHING RULE  caseExactSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"GLUE2EndpointServiceForeignKey"}
+  LDAP-DESC                 "ForeignKey"
+  ID                        id-at-gLUE2EndpointServiceForeignKey }
+
+-- Object classes
+
+-- initial capital of "GLUE2Endpoint" lowercased so the assignment is a valuereference.
+gLUE2Endpoint OBJECT-CLASS ::= {
+  SUBCLASS OF               { gLUE2Entity }
+  MUST CONTAIN              { gLUE2EndpointID
+                              | gLUE2EndpointURL
+                              | gLUE2EndpointInterfaceName
+                              | gLUE2EndpointQualityLevel
+                              | gLUE2EndpointHealthState
+                              | gLUE2EndpointServingState
+                              | gLUE2EndpointServiceForeignKey }
+  MAY CONTAIN               { gLUE2EndpointCapability
+                              | gLUE2EndpointTechnology
+                              | gLUE2EndpointInterfaceVersion
+                              | gLUE2EndpointInterfaceExtension
+                              | gLUE2EndpointWSDL
+                              | gLUE2EndpointSupportedProfile
+                              | gLUE2EndpointSemantics
+                              | gLUE2EndpointImplementor
+                              | gLUE2EndpointImplementationName
+                              | gLUE2EndpointImplementationVersion
+                              | gLUE2EndpointHealthStateInfo
+                              | gLUE2EndpointStartTime
+                              | gLUE2EndpointIssuerCA
+                              | gLUE2EndpointTrustedCA
+                              | gLUE2EndpointDowntimeAnnounce
+                              | gLUE2EndpointDowntimeStart
+                              | gLUE2EndpointDowntimeEnd
+                              | gLUE2EndpointDowntimeInfo }
+  LDAP-NAME                 {"GLUE2Endpoint"}
+  LDAP-DESC                 "A network location having a well-defined interface and exposing the service functionalities"
+  ID                        id-oc-gLUE2Endpoint }
+END

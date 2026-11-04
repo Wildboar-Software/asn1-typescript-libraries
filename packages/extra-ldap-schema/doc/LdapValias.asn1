@@ -1,0 +1,61 @@
+-- Derived from data/ldap-schema/valias.schema
+-- Upstream: https://github.com/brunonymous/vpopmail/blob/3ac73c4c1d41286225ab5bd3f8b4241cea3b5e31/ldap/valias.schema#L12
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapValias DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseIgnoreIA5Match, caseIgnoreIA5SubstringsMatch,
+    ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  caseExactIA5SubstringsMatch
+    FROM OpenLDAP
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) openldap(28)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-aa OBJECT IDENTIFIER ::= { 1 3 6 4 1 31234 1 1 1 }
+id-at-di OBJECT IDENTIFIER ::= { 1 3 6 4 1 31234 1 1 2 }
+id-oc-valias OBJECT IDENTIFIER ::= { 1 3 6 4 1 31234 1 1 }
+
+-- Attribute types
+
+aa ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..256))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  SUBSTRINGS MATCHING RULE  caseIgnoreIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"aa", "aliasAddress"}
+  LDAP-DESC                 "rfc822 alias address"
+  ID                        id-at-aa }
+
+di ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..512))
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  SUBSTRINGS MATCHING RULE  caseExactIA5SubstringsMatch
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"di", "deliveryInstruction"}
+  LDAP-DESC                 "delivery instruction"
+  ID                        id-at-di }
+
+-- Object classes
+
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+valias OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { aa }
+  MAY CONTAIN               { di }
+  LDAP-NAME                 {"valias"}
+  LDAP-DESC                 "valias entry"
+  ID                        id-oc-valias }
+END

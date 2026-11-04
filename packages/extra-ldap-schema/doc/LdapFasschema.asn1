@@ -1,0 +1,251 @@
+-- Derived from data/ldap-schema/fasschema.ldif
+-- Upstream: https://github.com/fedora-infra/freeipa-fas/blob/9c2e6681613c3c92d6ecd3be4874bde680e29174/schema.d/89-fasschema.ldif#L13
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- Object classes with no SUP were subclassed from top, the LDAP default (RFC 4512).
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapFasschema DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  boolean, booleanMatch, caseIgnoreMatch, caseIgnoreSubstringsMatch,
+    countryName, directoryString, DirectoryString, generalizedTime,
+    generalizedTimeMatch, member, UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  ipaAssociation, ipaUserGroup
+    FROM Ldap60basev2 ;
+
+-- Object identifiers
+
+id-at-fasTimezone OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 1 }
+id-at-fasLocale OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 2 }
+id-at-fasIRCNick OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 3 }
+id-at-fasGPGKeyId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 4 }
+id-at-fasCreationTime OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 5 }
+id-at-fasStatusNote OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 6 }
+id-at-fasRHBZEmail OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 7 }
+id-at-fasGitHubUsername OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 8 }
+id-at-fasGitLabUsername OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 9 }
+id-at-fasWebsiteUrl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 10 }
+id-at-fasIsPrivate OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 11 }
+id-at-fasPronoun OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 12 }
+id-at-fasRssUrl OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 13 }
+id-oc-fasUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 2 1 }
+id-at-fasURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 20 }
+id-at-fasMailingList OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 21 }
+id-at-fasIRCChannel OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 22 }
+id-at-fasDiscussionURL OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 1 23 }
+id-oc-fasGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 2 2 }
+id-oc-fasAgreement OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 30401 1 2 3 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Fedora Account System"
+fasTimezone ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasTimezone"}
+  ID                        id-at-fasTimezone }
+
+-- X-ORIGIN: "Fedora Account System"
+fasLocale ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasLocale"}
+  ID                        id-at-fasLocale }
+
+-- X-ORIGIN: "Fedora Account System"
+fasIRCNick ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasIRCNick"}
+  ID                        id-at-fasIRCNick }
+
+-- X-ORIGIN: "Fedora Account System"
+-- LDAP syntax length {40} rendered as DirectoryString{40}.
+fasGPGKeyId ATTRIBUTE ::= {
+  WITH SYNTAX               DirectoryString{40}
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasGPGKeyId"}
+  ID                        id-at-fasGPGKeyId }
+
+-- X-ORIGIN: "Fedora Account System"
+fasCreationTime ATTRIBUTE ::= {
+  WITH SYNTAX               GeneralizedTime
+  EQUALITY MATCHING RULE    generalizedTimeMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               generalizedTime.&id
+  LDAP-NAME                 {"fasCreationTime"}
+  ID                        id-at-fasCreationTime }
+
+-- X-ORIGIN: "Fedora Account System"
+fasStatusNote ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasStatusNote"}
+  ID                        id-at-fasStatusNote }
+
+-- X-ORIGIN: "Fedora Account System"
+fasRHBZEmail ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasRHBZEmail"}
+  ID                        id-at-fasRHBZEmail }
+
+-- X-ORIGIN: "Fedora Account System"
+fasGitHubUsername ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasGitHubUsername"}
+  ID                        id-at-fasGitHubUsername }
+
+-- X-ORIGIN: "Fedora Account System"
+fasGitLabUsername ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasGitLabUsername"}
+  ID                        id-at-fasGitLabUsername }
+
+-- X-ORIGIN: "Fedora Account System"
+fasWebsiteUrl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasWebsiteUrl"}
+  ID                        id-at-fasWebsiteUrl }
+
+-- X-ORIGIN: "Fedora Account System"
+fasIsPrivate ATTRIBUTE ::= {
+  WITH SYNTAX               BOOLEAN
+  EQUALITY MATCHING RULE    booleanMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               boolean.&id
+  LDAP-NAME                 {"fasIsPrivate"}
+  ID                        id-at-fasIsPrivate }
+
+-- X-ORIGIN: "Fedora Account System"
+fasPronoun ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasPronoun"}
+  ID                        id-at-fasPronoun }
+
+-- X-ORIGIN: "Fedora Account System"
+fasRssUrl ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasRssUrl"}
+  ID                        id-at-fasRssUrl }
+
+-- X-ORIGIN: "Fedora Account System"
+fasURL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasURL"}
+  ID                        id-at-fasURL }
+
+-- X-ORIGIN: "Fedora Account System"
+fasMailingList ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasMailingList"}
+  ID                        id-at-fasMailingList }
+
+-- X-ORIGIN: "Fedora Account System"
+fasIRCChannel ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasIRCChannel"}
+  ID                        id-at-fasIRCChannel }
+
+-- X-ORIGIN: "Fedora Account System"
+fasDiscussionURL ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  EQUALITY MATCHING RULE    caseIgnoreMatch
+  SUBSTRINGS MATCHING RULE  caseIgnoreSubstringsMatch
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"fasDiscussionURL"}
+  ID                        id-at-fasDiscussionURL }
+
+-- Object classes
+
+-- X-ORIGIN: "Fedora Account System"
+-- SUP was absent. RFC 4512 treats that as a subclass of top, so SUBCLASS OF { top } was added.
+fasUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MAY CONTAIN               { fasTimezone
+                              | fasLocale
+                              | fasIRCNick
+                              | fasGPGKeyId
+                              | fasCreationTime
+                              | fasStatusNote
+                              | fasRHBZEmail
+                              | fasGitHubUsername
+                              | fasGitLabUsername
+                              | fasWebsiteUrl
+                              | fasIsPrivate
+                              | fasPronoun
+                              | fasRssUrl
+                              | countryName }
+  LDAP-NAME                 {"fasUser"}
+  LDAP-DESC                 "FAS user objectclass"
+  ID                        id-oc-fasUser }
+
+-- X-ORIGIN: "Fedora Account System"
+fasGroup OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipaUserGroup }
+  KIND                      auxiliary
+  MAY CONTAIN               { fasURL
+                              | fasMailingList
+                              | fasIRCChannel
+                              | fasDiscussionURL }
+  LDAP-NAME                 {"fasGroup"}
+  LDAP-DESC                 "FAS group objectclass"
+  ID                        id-oc-fasGroup }
+
+-- X-ORIGIN: "Fedora Account System"
+fasAgreement OBJECT-CLASS ::= {
+  SUBCLASS OF               { ipaAssociation }
+  MAY CONTAIN               { member }
+  LDAP-NAME                 {"fasAgreement"}
+  LDAP-DESC                 "FAS agreement objectclass"
+  ID                        id-oc-fasAgreement }
+END

@@ -1,0 +1,28 @@
+-- Derived from data/ldap-schema/ns-certificate.ldif
+-- Upstream: https://github.com/leto/389-ds/blob/091c749adcc53ef3332cab6d34b25dadcb69c696/ldap/schema/50ns-certificate.ldif#L44
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 2 elements were omitted because the OID is invalid or unresolved.
+LdapNsCertificate DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-oc-netscapeCertificateServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 18 }
+
+-- Object classes
+
+-- X-ORIGIN: "Netscape Certificate Management System"
+netscapeCertificateServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { objectClass }
+  LDAP-NAME                 {"netscapeCertificateServer"}
+  LDAP-DESC                 "Netscape defined objectclass"
+  ID                        id-oc-netscapeCertificateServer }
+END

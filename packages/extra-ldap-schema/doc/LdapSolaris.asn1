@@ -1,0 +1,89 @@
+-- Derived from data/ldap-schema/solaris.schema
+-- Upstream: https://github.com/identityxx/penrose-server/blob/b25edf727f6a26b18842a165b8f55fcdcbb91c9e/schema/solaris.schema#L3
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 4 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+LdapSolaris DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseExactIA5Match, caseIgnoreIA5Match, commonName, ia5String
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-nisDomain OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 1 1 1 12 }
+id-at-mgrpRFC822MailMember OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 30 }
+id-at-nisNetIdUser OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 1 1 12 }
+id-at-nisNetIdGroup OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 1 1 13 }
+id-at-nisNetIdHost OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 1 1 14 }
+id-oc-nisDomainObject OBJECT IDENTIFIER ::= { 1 3 1 6 1 1 1 2 15 }
+id-oc-nisNetId OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 42 2 27 1 2 6 }
+
+-- Attribute types
+
+-- This attribute declares neither a supertype nor a syntax.
+nisDomain ATTRIBUTE ::= {
+  LDAP-NAME                 {"nisDomain"}
+  LDAP-DESC                 "NIS domain"
+  ID                        id-at-nisDomain }
+
+mgrpRFC822MailMember ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpRFC822MailMember"}
+  LDAP-DESC                 "mgrpRFC822MailMember"
+  ID                        id-at-mgrpRFC822MailMember }
+
+nisNetIdUser ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nisNetIdUser"}
+  LDAP-DESC                 "nisNetIdUser"
+  ID                        id-at-nisNetIdUser }
+
+nisNetIdGroup ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nisNetIdGroup"}
+  LDAP-DESC                 "nisNetIdGroup"
+  ID                        id-at-nisNetIdGroup }
+
+nisNetIdHost ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  EQUALITY MATCHING RULE    caseExactIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"nisNetIdHost"}
+  LDAP-DESC                 "nisNetIdHost"
+  ID                        id-at-nisNetIdHost }
+
+-- Object classes
+
+-- OID 1.3.1.6.1.1.1.2.15 is structurally legal but looks like a typo for an OID under 1.3.6. It was not rewritten.
+nisDomainObject OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { nisDomain }
+  LDAP-NAME                 {"nisDomainObject"}
+  LDAP-DESC                 "nisDomainObject"
+  ID                        id-oc-nisDomainObject }
+
+nisNetId OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  MUST CONTAIN              { commonName }
+  MAY CONTAIN               { nisNetIdUser
+                              | nisNetIdGroup
+                              | nisNetIdHost }
+  LDAP-NAME                 {"nisNetId"}
+  LDAP-DESC                 "nisNetId"
+  ID                        id-oc-nisNetId }
+END

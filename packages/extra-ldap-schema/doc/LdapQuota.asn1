@@ -1,0 +1,48 @@
+-- Derived from data/ldap-schema/quota.schema
+-- Upstream: https://github.com/Analyst997/ldap-mail-schema/blob/1fe6c77604b772b07eb6dca0d26bcb862ae11176/quota.schema#L10
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- LDAP {length} bounds on directory strings are DirectoryString{n}. Bounds on IA5String, PrintableString, NumericString, and OCTET STRING are SIZE (1..n). Other bounds stay comments because the LDAP figure is an encoded-length hint.
+LdapQuota DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, OBJECT-CLASS
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  caseIgnoreIA5Match, ia5String, uid
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  posixAccount
+    FROM NIS
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) nis(7)} WITH SUCCESSORS ;
+
+-- Object identifiers
+
+id-at-quota OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 19937 1 1 1 }
+id-oc-systemQuotas OBJECT IDENTIFIER ::= { 1 3 6 1 4 1 19937 1 2 1 }
+
+-- Attribute types
+
+quota ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String(SIZE (1..255))
+  EQUALITY MATCHING RULE    caseIgnoreIA5Match
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"quota"}
+  LDAP-DESC                 "Quotas (FileSystem:BlocksSoft,BlocksHard,InodesSoft,InodesHard)"
+  ID                        id-at-quota }
+
+-- Object classes
+
+systemQuotas OBJECT-CLASS ::= {
+  SUBCLASS OF               { posixAccount }
+  KIND                      auxiliary
+  MUST CONTAIN              { uid }
+  MAY CONTAIN               { quota }
+  LDAP-NAME                 {"systemQuotas"}
+  LDAP-DESC                 "System Quotas"
+  ID                        id-oc-systemQuotas }
+END

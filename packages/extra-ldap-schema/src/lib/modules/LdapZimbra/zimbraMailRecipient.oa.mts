@@ -1,0 +1,68 @@
+/* eslint-disable */
+import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
+import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { id_oc_zimbraMailRecipient } from "../LdapZimbra/id-oc-zimbraMailRecipient.va.mjs";
+import { zimbraHideInGal } from "../LdapZimbra/zimbraHideInGal.oa.mjs";
+import { zimbraLocale } from "../LdapZimbra/zimbraLocale.oa.mjs";
+import { zimbraMailAddress } from "../LdapZimbra/zimbraMailAddress.oa.mjs";
+import { zimbraMailAlias } from "../LdapZimbra/zimbraMailAlias.oa.mjs";
+import { zimbraMailCanonicalAddress } from "../LdapZimbra/zimbraMailCanonicalAddress.oa.mjs";
+import { zimbraMailCatchAllAddress } from "../LdapZimbra/zimbraMailCatchAllAddress.oa.mjs";
+import { zimbraMailCatchAllCanonicalAddress } from "../LdapZimbra/zimbraMailCatchAllCanonicalAddress.oa.mjs";
+import { zimbraMailCatchAllForwardingAddress } from "../LdapZimbra/zimbraMailCatchAllForwardingAddress.oa.mjs";
+import { zimbraMailDeliveryAddress } from "../LdapZimbra/zimbraMailDeliveryAddress.oa.mjs";
+import { zimbraMailForwardingAddress } from "../LdapZimbra/zimbraMailForwardingAddress.oa.mjs";
+import { zimbraMailHost } from "../LdapZimbra/zimbraMailHost.oa.mjs";
+import { zimbraMailStatus } from "../LdapZimbra/zimbraMailStatus.oa.mjs";
+import { zimbraMailTransport } from "../LdapZimbra/zimbraMailTransport.oa.mjs";
+
+
+/**
+ * @summary zimbraMailRecipient
+ * @description
+ * 
+ * ### ASN.1 Definition:
+ * 
+ * ```asn1
+ * zimbraMailRecipient OBJECT-CLASS ::= {
+ *   SUBCLASS OF               { top }
+ *   KIND                      auxiliary
+ *   MAY CONTAIN               { zimbraHideInGal
+ *                               | zimbraLocale
+ *                               | zimbraMailAddress
+ *                               | zimbraMailAlias
+ *                               | zimbraMailCanonicalAddress
+ *                               | zimbraMailCatchAllAddress
+ *                               | zimbraMailCatchAllCanonicalAddress
+ *                               | zimbraMailCatchAllForwardingAddress
+ *                               | zimbraMailDeliveryAddress
+ *                               | zimbraMailForwardingAddress
+ *                               | zimbraMailHost
+ *                               | zimbraMailStatus
+ *                               | zimbraMailTransport }
+ *   LDAP-NAME                 {"zimbraMailRecipient"}
+ *   LDAP-DESC                 "Mail recipient object"
+ *   ID                        id-oc-zimbraMailRecipient }
+ * ```
+ * 
+ * @constant
+ * @type {OBJECT_CLASS}
+ * @implements {OBJECT_CLASS}
+ */
+export
+const zimbraMailRecipient: OBJECT_CLASS = {
+    class: "OBJECT-CLASS",
+    decoderFor: {
+    },
+    encoderFor: {
+    },
+    "&Superclasses": [ top, ] /* OBJECT_FIELD_SETTING */,
+    "&kind": auxiliary /* OBJECT_FIELD_SETTING */,
+    "&OptionalAttributes": [ zimbraHideInGal, zimbraLocale, zimbraMailAddress, zimbraMailAlias, zimbraMailCanonicalAddress, zimbraMailCatchAllAddress, zimbraMailCatchAllCanonicalAddress, zimbraMailCatchAllForwardingAddress, zimbraMailDeliveryAddress, zimbraMailForwardingAddress, zimbraMailHost, zimbraMailStatus, zimbraMailTransport, ] /* OBJECT_FIELD_SETTING */,
+    "&ldapName": [ "zimbraMailRecipient" ] /* OBJECT_FIELD_SETTING */,
+    "&ldapDesc": "Mail recipient object" /* OBJECT_FIELD_SETTING */,
+    "&id": id_oc_zimbraMailRecipient /* OBJECT_FIELD_SETTING *//* UNIQUE_OBJECT_FIELD_SETTING */,
+};
+
+/* eslint-enable */

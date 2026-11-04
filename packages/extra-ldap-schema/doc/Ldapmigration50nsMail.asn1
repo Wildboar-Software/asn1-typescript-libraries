@@ -1,0 +1,340 @@
+-- Derived from data/ldap-schema/ldapmigration/50ns-mail.ldif
+-- This module is a container for LDAP schema. It has no module identifier.
+-- X- extension fields from the LDAP schema are comments. USAGE userApplications and structural KIND are omitted because they are the defaults.
+-- 4 elements were omitted because their OIDs are already defined. See CONVERSION-REPORT.txt.
+-- 1 elements were omitted because another source file in this corpus defines the same OID.
+-- 3 elements were omitted because the OID is invalid or unresolved.
+Ldapmigration50nsMail DEFINITIONS ::=
+BEGIN
+
+IMPORTS
+
+  ATTRIBUTE, DistinguishedName, OBJECT-CLASS, objectClass, top
+    FROM InformationFramework
+      {joint-iso-itu-t ds(5) module(1) informationFramework(1) 9} WITH SUCCESSORS
+
+  businessCategory, commonName, description, directoryString, dn, ia5String,
+    organizationalUnitName, organizationName, owner, seeAlso, uid,
+    UnboundedDirectoryString
+    FROM SelectedAttributeTypes
+      {joint-iso-itu-t ds(5) module(1) selectedAttributeTypes(5) 9} WITH SUCCESSORS
+
+  userPassword
+    FROM AuthenticationFramework
+      {joint-iso-itu-t ds(5) module(1) authenticationFramework(7) 9} WITH SUCCESSORS
+
+  mailRoutingAddress
+    FROM InetMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) inet-mail-schema(49)} WITH SUCCESSORS
+
+  mailAlternateAddress, mailHost
+    FROM QMailSchema
+      {iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) wildboar(56490) module(1) qmail-schema(55)} WITH SUCCESSORS
+
+  multiLineDescription
+    FROM LdapCore389
+
+  mail
+    FROM LdapSchema2ldifCore ;
+
+-- Object identifiers
+
+id-at-mailDeliveryOption OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 16 }
+id-at-vacationstartdate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 707 }
+id-at-mgrpModerator OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 33 }
+id-at-mgrpDeliverTo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 25 }
+id-at-mailEnhancedUniqueMember OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 31 }
+id-at-mgrpAddHeader OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 781 }
+id-at-mgrpAllowedBroadcaster OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 22 }
+id-at-vacationenddate OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 708 }
+id-at-mailProgramDeliveryInfo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 20 }
+id-at-mgrpRemoveHeader OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 801 }
+id-at-mailAccessDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 12 }
+id-at-mailAutoReplyMode OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 14 }
+id-at-mailAutoReplyText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 15 }
+id-at-mailQuota OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 21 }
+id-at-mgrpBroadcasterPolicy OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 788 }
+id-at-mailMessageStore OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 19 }
+id-at-nswmExtendedUserPrefs OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 520 }
+id-at-mgrpErrorsTo OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 26 }
+id-at-mgrpAllowedDomain OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 23 }
+id-at-mgrpMsgRejectAction OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 28 }
+id-at-mailForwardingAddress OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 17 }
+id-at-mgrpMsgMaxSize OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 32 }
+id-at-mgrpMsgRejectText OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 29 }
+id-at-mgrpNoDuplicateChecks OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 1 789 }
+id-oc-mailRecipient OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 3 }
+id-oc-nsMessagingServerUser OBJECT IDENTIFIER ::= { 2 16 840 113730 3 2 37 }
+id-oc-groupOfMailEnhancedUniqueNames OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 5 }
+id-oc-netscapeMailServer OBJECT IDENTIFIER ::= { 2 16 840 1 113730 3 2 24 }
+
+-- Attribute types
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailDeliveryOption ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailDeliveryOption"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailDeliveryOption }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+vacationstartdate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"vacationstartdate"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-vacationstartdate }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpModerator ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpModerator"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpModerator }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpDeliverTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpDeliverTo"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpDeliverTo }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailEnhancedUniqueMember ATTRIBUTE ::= {
+  WITH SYNTAX               DistinguishedName
+  LDAP-SYNTAX               dn.&id
+  LDAP-NAME                 {"mailEnhancedUniqueMember"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailEnhancedUniqueMember }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpAddHeader ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpAddHeader"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpAddHeader }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpAllowedBroadcaster ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpAllowedBroadcaster"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpAllowedBroadcaster }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+vacationenddate ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"vacationenddate"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-vacationenddate }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailProgramDeliveryInfo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mailProgramDeliveryInfo"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailProgramDeliveryInfo }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpRemoveHeader ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpRemoveHeader"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpRemoveHeader }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailAccessDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAccessDomain"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailAccessDomain }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailAutoReplyMode ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAutoReplyMode"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailAutoReplyMode }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailAutoReplyText ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailAutoReplyText"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailAutoReplyText }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailQuota ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailQuota"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailQuota }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpBroadcasterPolicy ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpBroadcasterPolicy"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpBroadcasterPolicy }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailMessageStore ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailMessageStore"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailMessageStore }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+nswmExtendedUserPrefs ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"nswmExtendedUserPrefs"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-nswmExtendedUserPrefs }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpErrorsTo ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpErrorsTo"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpErrorsTo }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpAllowedDomain ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpAllowedDomain"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpAllowedDomain }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpMsgRejectAction ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpMsgRejectAction"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpMsgRejectAction }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailForwardingAddress ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mailForwardingAddress"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mailForwardingAddress }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpMsgMaxSize ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpMsgMaxSize"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpMsgMaxSize }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpMsgRejectText ATTRIBUTE ::= {
+  WITH SYNTAX               IA5String
+  LDAP-SYNTAX               ia5String.&id
+  LDAP-NAME                 {"mgrpMsgRejectText"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpMsgRejectText }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mgrpNoDuplicateChecks ATTRIBUTE ::= {
+  WITH SYNTAX               UnboundedDirectoryString
+  SINGLE VALUE              TRUE
+  LDAP-SYNTAX               directoryString.&id
+  LDAP-NAME                 {"mgrpNoDuplicateChecks"}
+  LDAP-DESC                 "Netscape Messaging Server 4.x defined attribute"
+  ID                        id-at-mgrpNoDuplicateChecks }
+
+-- Object classes
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+mailRecipient OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { commonName
+                              | mail
+                              | mailAlternateAddress
+                              | mailHost
+                              | mailRoutingAddress
+                              | mailAccessDomain
+                              | mailAutoReplyMode
+                              | mailAutoReplyText
+                              | mailDeliveryOption
+                              | mailForwardingAddress
+                              | mailMessageStore
+                              | mailProgramDeliveryInfo
+                              | mailQuota
+                              | multiLineDescription
+                              | uid
+                              | userPassword }
+  LDAP-NAME                 {"mailRecipient"}
+  ID                        id-oc-mailRecipient }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+-- MAY nsmsgDisallowAccess was omitted; it is not defined in this corpus or the existing modules
+-- MAY nsmsgNumMsgQuota was omitted; it is not defined in this corpus or the existing modules
+nsMessagingServerUser OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { objectClass }
+  MAY CONTAIN               { commonName
+                              | mailAccessDomain
+                              | mailAutoReplyMode
+                              | mailAutoReplyText
+                              | mailDeliveryOption
+                              | mailForwardingAddress
+                              | mailMessageStore
+                              | mailProgramDeliveryInfo
+                              | mailQuota
+                              | nswmExtendedUserPrefs
+                              | vacationstartdate
+                              | vacationenddate }
+  LDAP-NAME                 {"nsMessagingServerUser"}
+  ID                        id-oc-nsMessagingServerUser }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+groupOfMailEnhancedUniqueNames OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { objectClass
+                              | commonName }
+  MAY CONTAIN               { businessCategory
+                              | description
+                              | mailEnhancedUniqueMember
+                              | organizationName
+                              | organizationalUnitName
+                              | owner
+                              | seeAlso }
+  LDAP-NAME                 {"groupOfMailEnhancedUniqueNames"}
+  ID                        id-oc-groupOfMailEnhancedUniqueNames }
+
+-- X-ORIGIN: "Netscape Messaging Server 4.x"
+netscapeMailServer OBJECT-CLASS ::= {
+  SUBCLASS OF               { top }
+  KIND                      auxiliary
+  MUST CONTAIN              { objectClass }
+  LDAP-NAME                 {"netscapeMailServer"}
+  ID                        id-oc-netscapeMailServer }
+END
