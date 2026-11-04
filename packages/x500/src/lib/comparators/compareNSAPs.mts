@@ -3,7 +3,11 @@ import { ipv4FromNSAP } from "../distributed/ipv4.mjs";
 import { IPV4_AFI_IDI } from "../distributed/IPV4_AFI_IDI.mjs";
 import { uriFromNSAP } from "../distributed/uri.mjs";
 import { bytesEqual, stringsEqual } from "../matching/constantTime.mjs";
-import { URL, domainToASCII } from "node:url";
+
+// Polyfill for Node.js so we can use fewer Node.js-specific APIs.
+function domainToASCII(domain: string): string {
+    return new URL(`http://${domain}`).hostname;
+}
 
 /**
  * DSP service type for ITOT. An omitted TCP port on this type means 102.
