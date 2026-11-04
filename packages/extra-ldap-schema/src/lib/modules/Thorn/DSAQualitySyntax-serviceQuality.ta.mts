@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DSAQualitySyntax-serviceQuality ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DSAQualitySyntax-serviceQuality ::= ENUMERATED {
+ *     defunct       (0),
+ *     experimental  (1),
+ *     best-effort   (2),
+ *     pilot-service (3),
+ *     full-service  (4) }
  * ```
  * 
  * @enum {number}
@@ -43,7 +48,12 @@ type _enum_for_DSAQualitySyntax_serviceQuality = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DSAQualitySyntax-serviceQuality ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DSAQualitySyntax-serviceQuality ::= ENUMERATED {
+ *     defunct       (0),
+ *     experimental  (1),
+ *     best-effort   (2),
+ *     pilot-service (3),
+ *     full-service  (4) }
  * ```
  * 
  * @enum {number}
@@ -58,7 +68,12 @@ type DSAQualitySyntax_serviceQuality = _enum_for_DSAQualitySyntax_serviceQuality
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DSAQualitySyntax-serviceQuality ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DSAQualitySyntax-serviceQuality ::= ENUMERATED {
+ *     defunct       (0),
+ *     experimental  (1),
+ *     best-effort   (2),
+ *     pilot-service (3),
+ *     full-service  (4) }
  * ```
  * 
  * @enum {number}

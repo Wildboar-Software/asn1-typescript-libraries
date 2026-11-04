@@ -13,7 +13,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DocumentStoreSyntax-method ::= INTEGER { -- REMOVED_FROM_UNNESTING -- }
+ * DocumentStoreSyntax-method ::= INTEGER { ftp(0), ftam(1) }
  * ```
  */
 export

@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeQuality-attribute-completeness ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeQuality-attribute-completeness ::= ENUMERATED {
+ *     none        (1),
+ *     sample      (2),
+ *     selected    (3),
+ *     substantial (4),
+ *     full        (5) }
  * ```
  * 
  * @enum {number}
@@ -43,7 +48,12 @@ type _enum_for_AttributeQuality_attribute_completeness = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeQuality-attribute-completeness ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeQuality-attribute-completeness ::= ENUMERATED {
+ *     none        (1),
+ *     sample      (2),
+ *     selected    (3),
+ *     substantial (4),
+ *     full        (5) }
  * ```
  * 
  * @enum {number}
@@ -58,7 +68,12 @@ type AttributeQuality_attribute_completeness = _enum_for_AttributeQuality_attrib
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeQuality-attribute-completeness ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeQuality-attribute-completeness ::= ENUMERATED {
+ *     none        (1),
+ *     sample      (2),
+ *     selected    (3),
+ *     substantial (4),
+ *     full        (5) }
  * ```
  * 
  * @enum {number}
