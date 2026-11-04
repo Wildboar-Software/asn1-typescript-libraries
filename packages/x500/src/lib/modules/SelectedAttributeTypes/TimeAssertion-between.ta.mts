@@ -29,7 +29,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position`. Present
  * bounds are inclusive. `entirely` is a matching flag, not a bound:
  * `contains` / `intersection` / `union` use the time interval only
@@ -310,62 +310,6 @@ export class TimeAssertion_between {
         return TimeAssertion_between._fromInterval(
             unionOf(this._interval(), other._interval()),
             this.entirely,
-        );
-    }
-
-    /**
-     * @summary Copy this band, replacing selected fields.
-     * @description
-     *
-     * Copies VS Code `Range.with`.
-     *
-     * @param {Date | object} [startOrChange] New `startTime`, or a
-     * change object with optional `startTime` / `endTime` /
-     * `entirely`.
-     * @param {Date} [end] New `endTime` when using positional args.
-     * @returns {TimeAssertion_between} A new band, or `this` if unchanged.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        startOrChange?: Date | {
-            startTime?: Date;
-            endTime?: Date;
-            entirely?: BOOLEAN;
-        },
-        end?: Date,
-    ): TimeAssertion_between {
-        let start = this.startTime;
-        let nextEnd = this.endTime;
-        let entirely = this.entirely;
-        if (startOrChange instanceof Date) {
-            start = startOrChange;
-            nextEnd = (end !== undefined) ? end : this.endTime;
-        } else if (startOrChange === undefined) {
-            nextEnd = (end !== undefined) ? end : this.endTime;
-        } else {
-            start = (startOrChange.startTime !== undefined)
-                ? startOrChange.startTime
-                : this.startTime;
-            nextEnd = (startOrChange.endTime !== undefined)
-                ? startOrChange.endTime
-                : this.endTime;
-            entirely = (startOrChange.entirely !== undefined)
-                ? startOrChange.entirely
-                : this.entirely;
-        }
-        if (
-            (start === this.startTime)
-            && (nextEnd === this.endTime)
-            && (entirely === this.entirely)
-        ) {
-            return this;
-        }
-        return new TimeAssertion_between(
-            start,
-            nextEnd,
-            entirely,
-            this._unrecognizedExtensionsList,
         );
     }
 }

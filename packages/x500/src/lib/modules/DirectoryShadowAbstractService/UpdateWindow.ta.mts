@@ -33,7 +33,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position` (`start` /
  * `stop` as `start` / `end`). Both bounds are inclusive. Unlike
  * VS Code `Range`, inverted bounds are **not** swapped.
@@ -251,51 +251,6 @@ export class UpdateWindow {
     public union (other: UpdateWindow): UpdateWindow {
         return UpdateWindow._fromInterval(
             unionOf(this._interval(), other._interval()),
-        );
-    }
-
-    /**
-     * @summary Copy this window, replacing start and/or stop.
-     * @description
-     *
-     * Copies VS Code `Range.with`.
-     *
-     * @param {Date | object} [startOrChange] New `start`, or a change
-     * object with optional `start` / `stop`.
-     * @param {Date} [stop] New `stop` when using positional args.
-     * @returns {UpdateWindow} A new window, or `this` if unchanged.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        startOrChange?: Date | {
-            start?: Date;
-            stop?: Date;
-        },
-        stop?: Date,
-    ): UpdateWindow {
-        let start = this.start;
-        let nextStop = this.stop;
-        if (startOrChange instanceof Date) {
-            start = startOrChange;
-            nextStop = (stop !== undefined) ? stop : this.stop;
-        } else if (startOrChange === undefined) {
-            nextStop = (stop !== undefined) ? stop : this.stop;
-        } else {
-            start = (startOrChange.start !== undefined)
-                ? startOrChange.start
-                : this.start;
-            nextStop = (startOrChange.stop !== undefined)
-                ? startOrChange.stop
-                : this.stop;
-        }
-        if ((start === this.start) && (nextStop === this.stop)) {
-            return this;
-        }
-        return new UpdateWindow(
-            start,
-            nextStop,
-            this._unrecognizedExtensionsList,
         );
     }
 }

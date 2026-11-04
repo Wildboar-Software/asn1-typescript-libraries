@@ -42,7 +42,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position`. `now` and
  * `explicitTermination` (and omitted components, which take those
  * DEFAULTs) are treated as unbounded that side — they are not a
@@ -468,44 +468,6 @@ export class Validity {
             throw new Error("Validity.union: unrecognized Time alternative");
         }
         return Validity._fromInterval(unionOf(a, b));
-    }
-
-    /**
-     * @summary Copy this lifetime, replacing start and/or end.
-     * @description
-     *
-     * Copies VS Code `Range.with`. The change-object form is used
-     * because the bounds are CHOICE values, not a single position
-     * type.
-     *
-     * @param {object} [change] Optional `validFrom` / `validUntil`.
-     * @returns {Validity} A new lifetime, or `this` if unchanged.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        change?: {
-            validFrom?: Validity_validFrom;
-            validUntil?: Validity_validUntil;
-        },
-    ): Validity {
-        if (change === undefined) {
-            return this;
-        }
-        const start = (change.validFrom !== undefined)
-            ? change.validFrom
-            : this.validFrom;
-        const nextEnd = (change.validUntil !== undefined)
-            ? change.validUntil
-            : this.validUntil;
-        if ((start === this.validFrom) && (nextEnd === this.validUntil)) {
-            return this;
-        }
-        return new Validity(
-            start,
-            nextEnd,
-            this._unrecognizedExtensionsList,
-        );
     }
 }
 

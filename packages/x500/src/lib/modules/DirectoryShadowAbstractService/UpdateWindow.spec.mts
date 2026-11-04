@@ -37,10 +37,4 @@ describe("UpdateWindow Range API", () => {
             t("2020-12-31T00:00:00.000Z"),
         ))).toBe(true);
     });
-
-    it("with() replaces start and/or stop", () => {
-        expect(year.with(jun).start.getTime()).toBe(jun.getTime());
-        expect(year.with({ stop: jul }).stop.getTime()).toBe(jul.getTime());
-        expect(year.with()).toBe(year);
-    });
 });

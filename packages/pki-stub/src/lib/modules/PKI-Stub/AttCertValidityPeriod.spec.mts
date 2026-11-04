@@ -37,11 +37,4 @@ describe("AttCertValidityPeriod Range API", () => {
         expect(year.union(mid).isEqualTo(new AttCertValidityPeriod(jan, next)))
             .toBe(true);
     });
-
-    it("with() replaces start and/or end", () => {
-        expect(year.with(jun).notBeforeTime.getTime()).toBe(jun.getTime());
-        expect(year.with({ notAfterTime: jul }).notAfterTime.getTime())
-            .toBe(jul.getTime());
-        expect(year.with()).toBe(year);
-    });
 });

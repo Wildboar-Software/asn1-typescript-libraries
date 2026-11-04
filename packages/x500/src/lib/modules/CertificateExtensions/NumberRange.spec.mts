@@ -86,10 +86,4 @@ describe("NumberRange Range API", () => {
         expect(flattened[1].isEqualTo(new NumberRange(n(1), n(20)))).toBe(true);
         expect(flattened[2].isEqualTo(late)).toBe(true);
     });
-
-    it("with() replaces start and/or end", () => {
-        expect(low.with(n(2)).contains(1)).toBe(false);
-        expect(low.with({ endingNumber: n(9) }).contains(8)).toBe(true);
-        expect(low.with()).toBe(low);
-    });
 });

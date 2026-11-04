@@ -30,7 +30,7 @@ export type AttCertValidityPeriodJSON = {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqual` / `isEqualTo`,
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position`
  * (`notBeforeTime` as `start`, `notAfterTime` as `end`). Both bounds
  * are inclusive. Unlike VS Code `Range`, inverted bounds are **not**
@@ -276,50 +276,6 @@ export class AttCertValidityPeriod {
             other.notAfterTime.getTime(),
         );
         return new AttCertValidityPeriod(new Date(startMs), new Date(endMs));
-    }
-
-    /**
-     * @summary Derive a new period from this one.
-     * @description
-     *
-     * Copies VS Code `Range.with`. Returns `this` if unchanged.
-     *
-     * @param {Date | object} [startOrChange] New `notBeforeTime`, or a
-     * change object with optional `notBeforeTime` / `notAfterTime`.
-     * @param {Date} [end] New `notAfterTime` when using positional args.
-     * @returns {AttCertValidityPeriod} A period with the given bounds.
-     * @method
-     */
-    public with(
-        startOrChange?: Date | {
-            notBeforeTime?: Date;
-            notAfterTime?: Date;
-        },
-        end?: Date,
-    ): AttCertValidityPeriod {
-        let start = this.notBeforeTime;
-        let nextEnd = this.notAfterTime;
-        if (startOrChange instanceof Date) {
-            start = startOrChange;
-            nextEnd = (end !== undefined) ? end : this.notAfterTime;
-        } else if (startOrChange === undefined) {
-            nextEnd = (end !== undefined) ? end : this.notAfterTime;
-        } else {
-            start = (startOrChange.notBeforeTime !== undefined)
-                ? startOrChange.notBeforeTime
-                : this.notBeforeTime;
-            nextEnd = (startOrChange.notAfterTime !== undefined)
-                ? startOrChange.notAfterTime
-                : this.notAfterTime;
-        }
-        if ((start === this.notBeforeTime) && (nextEnd === this.notAfterTime)) {
-            return this;
-        }
-        return new AttCertValidityPeriod(
-            start,
-            nextEnd,
-            this._unrecognizedExtensionsList,
-        );
     }
 }
 

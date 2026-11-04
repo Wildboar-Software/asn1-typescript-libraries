@@ -35,10 +35,4 @@ describe("TimeSpecification_time_absolute Range API", () => {
         expect(year.isEqualTo(new TimeSpecification_time_absolute(jan, dec)))
             .toBe(true);
     });
-
-    it("with() returns this if unchanged", () => {
-        expect(year.with({ startTime: jun }).startTime?.getTime())
-            .toBe(jun.getTime());
-        expect(year.with()).toBe(year);
-    });
 });

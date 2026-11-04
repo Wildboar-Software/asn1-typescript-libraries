@@ -30,7 +30,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `INTEGER` plays the role of VS Code `Position`. Both
  * bounds are inclusive. Unlike VS Code `Range`, inverted bounds are
  * **not** swapped. `isAdjacentTo` / `merge` / `flatten` follow
@@ -262,58 +262,6 @@ export class CertificateGroupNumberRange {
         other: CertificateGroupNumberRange,
     ): CertificateGroupNumberRange {
         return this.merge(other);
-    }
-
-    /**
-     * @summary Copy this range, replacing start and/or end.
-     * @description
-     *
-     * Copies VS Code `Range.with`.
-     *
-     * @param {INTEGER | object} [startOrChange] New `startingNumber`,
-     * or a change object with optional `startingNumber` /
-     * `endingNumber`.
-     * @param {INTEGER} [end] New `endingNumber` when using positional args.
-     * @returns {CertificateGroupNumberRange} A new range, or `this`.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        startOrChange?: INTEGER | {
-            startingNumber?: INTEGER;
-            endingNumber?: INTEGER;
-        },
-        end?: INTEGER,
-    ): CertificateGroupNumberRange {
-        let start = this.startingNumber;
-        let nextEnd = this.endingNumber;
-        if (
-            (typeof startOrChange === "number")
-            || (typeof startOrChange === "bigint")
-        ) {
-            start = startOrChange;
-            nextEnd = (end !== undefined) ? end : this.endingNumber;
-        } else if (startOrChange === undefined) {
-            nextEnd = (end !== undefined) ? end : this.endingNumber;
-        } else {
-            start = (startOrChange.startingNumber !== undefined)
-                ? startOrChange.startingNumber
-                : this.startingNumber;
-            nextEnd = (startOrChange.endingNumber !== undefined)
-                ? startOrChange.endingNumber
-                : this.endingNumber;
-        }
-        if (
-            (start === this.startingNumber)
-            && (nextEnd === this.endingNumber)
-        ) {
-            return this;
-        }
-        return new CertificateGroupNumberRange(
-            start,
-            nextEnd,
-            this._unrecognizedExtensionsList,
-        );
     }
 
     /**

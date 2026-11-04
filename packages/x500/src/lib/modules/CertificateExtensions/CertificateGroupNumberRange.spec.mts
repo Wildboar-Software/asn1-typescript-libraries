@@ -60,10 +60,4 @@ describe("CertificateGroupNumberRange Range API", () => {
             .toBe(true);
         expect(flattened[1].isEqualTo(late)).toBe(true);
     });
-
-    it("with() replaces start and/or end", () => {
-        expect(low.with(2).startingNumber).toBe(2);
-        expect(low.with({ endingNumber: 9 }).endingNumber).toBe(9);
-        expect(low.with()).toBe(low);
-    });
 });

@@ -40,9 +40,4 @@ describe("TimeAssertion_between Range API", () => {
         expect(year.union(openEnd).endTime).toBeUndefined();
         expect(year.union(openEnd).entirely).toBeUndefined();
     });
-
-    it("with() can replace entirely", () => {
-        expect(year.with({ entirely: true }).entirely).toBe(true);
-        expect(year.with()).toBe(year);
-    });
 });

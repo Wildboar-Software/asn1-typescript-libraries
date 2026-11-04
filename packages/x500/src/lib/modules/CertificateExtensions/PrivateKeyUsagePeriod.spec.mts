@@ -63,13 +63,4 @@ describe("PrivateKeyUsagePeriod Range API", () => {
         expect(openStart.union(openEnd).notBefore).toBeUndefined();
         expect(openStart.union(openEnd).notAfter).toBeUndefined();
     });
-
-    it("with() replaces start and/or end and returns this if unchanged", () => {
-        const laterStart = year.with(jun);
-        expect(laterStart.notBefore?.getTime()).toBe(jun.getTime());
-        expect(laterStart.notAfter?.getTime()).toBe(dec.getTime());
-        const earlierEnd = year.with({ notAfter: jul });
-        expect(earlierEnd.notAfter?.getTime()).toBe(jul.getTime());
-        expect(year.with()).toBe(year);
-    });
 });

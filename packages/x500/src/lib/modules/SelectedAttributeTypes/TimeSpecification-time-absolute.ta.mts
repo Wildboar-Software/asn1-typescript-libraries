@@ -28,7 +28,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position`. Both
  * present bounds are inclusive. Unlike VS Code `Range`, inverted
  * bounds are **not** swapped.
@@ -254,51 +254,6 @@ export class TimeSpecification_time_absolute {
     ): TimeSpecification_time_absolute {
         return TimeSpecification_time_absolute._fromInterval(
             unionOf(this._interval(), other._interval()),
-        );
-    }
-
-    /**
-     * @summary Copy this absolute time, replacing start and/or end.
-     * @description
-     *
-     * Copies VS Code `Range.with`.
-     *
-     * @param {Date | object} [startOrChange] New `startTime`, or a
-     * change object with optional `startTime` / `endTime`.
-     * @param {Date} [end] New `endTime` when using positional args.
-     * @returns {TimeSpecification_time_absolute} A new value, or `this`.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        startOrChange?: Date | {
-            startTime?: Date;
-            endTime?: Date;
-        },
-        end?: Date,
-    ): TimeSpecification_time_absolute {
-        let start = this.startTime;
-        let nextEnd = this.endTime;
-        if (startOrChange instanceof Date) {
-            start = startOrChange;
-            nextEnd = (end !== undefined) ? end : this.endTime;
-        } else if (startOrChange === undefined) {
-            nextEnd = (end !== undefined) ? end : this.endTime;
-        } else {
-            start = (startOrChange.startTime !== undefined)
-                ? startOrChange.startTime
-                : this.startTime;
-            nextEnd = (startOrChange.endTime !== undefined)
-                ? startOrChange.endTime
-                : this.endTime;
-        }
-        if ((start === this.startTime) && (nextEnd === this.endTime)) {
-            return this;
-        }
-        return new TimeSpecification_time_absolute(
-            start,
-            nextEnd,
-            this._unrecognizedExtensionsList,
         );
     }
 }

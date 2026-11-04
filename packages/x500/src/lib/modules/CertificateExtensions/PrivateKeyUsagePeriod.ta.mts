@@ -29,7 +29,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position`
  * (`notBefore` as `start`, `notAfter` as `end`). Both present bounds
  * are inclusive. An omitted bound is unbounded that side. Unlike
@@ -268,52 +268,6 @@ export class PrivateKeyUsagePeriod {
     public union (other: PrivateKeyUsagePeriod): PrivateKeyUsagePeriod {
         return PrivateKeyUsagePeriod._fromInterval(
             unionOf(this._interval(), other._interval()),
-        );
-    }
-
-    /**
-     * @summary Copy this period, replacing start and/or end.
-     * @description
-     *
-     * Copies VS Code `Range.with`. `undefined` keeps the current
-     * bound (including an omitted bound).
-     *
-     * @param {Date | object} [startOrChange] New `notBefore`, or a
-     * change object with optional `notBefore` / `notAfter`.
-     * @param {Date} [end] New `notAfter` when using positional args.
-     * @returns {PrivateKeyUsagePeriod} A new period, or `this` if unchanged.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        startOrChange?: Date | {
-            notBefore?: Date;
-            notAfter?: Date;
-        },
-        end?: Date,
-    ): PrivateKeyUsagePeriod {
-        let start = this.notBefore;
-        let nextEnd = this.notAfter;
-        if (startOrChange instanceof Date) {
-            start = startOrChange;
-            nextEnd = (end !== undefined) ? end : this.notAfter;
-        } else if (startOrChange === undefined) {
-            nextEnd = (end !== undefined) ? end : this.notAfter;
-        } else {
-            start = (startOrChange.notBefore !== undefined)
-                ? startOrChange.notBefore
-                : this.notBefore;
-            nextEnd = (startOrChange.notAfter !== undefined)
-                ? startOrChange.notAfter
-                : this.notAfter;
-        }
-        if ((start === this.notBefore) && (nextEnd === this.notAfter)) {
-            return this;
-        }
-        return new PrivateKeyUsagePeriod(
-            start,
-            nextEnd,
-            this._unrecognizedExtensionsList,
         );
     }
 }

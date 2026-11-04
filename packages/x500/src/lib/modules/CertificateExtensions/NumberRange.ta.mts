@@ -36,7 +36,7 @@ import {
  *
  * Range algebra copies what works from the VS Code `Range` API:
  * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
- * `intersection`, `union`, and `with` derive new values instead of
+ * `intersection`, and `union` derive new values instead of
  * mutating. The integer (after optional modulus) plays the role of
  * VS Code `Position`. Unlike VS Code `Range`, inverted bounds are
  * **not** swapped, and `endingNumber` is exclusive. `intersection`
@@ -361,61 +361,6 @@ export class NumberRange {
             throw new Error("NumberRange.union: modulus values differ");
         }
         return this.merge(other);
-    }
-
-    /**
-     * @summary Copy this range, replacing selected fields.
-     * @description
-     *
-     * Copies VS Code `Range.with`.
-     *
-     * @param {OCTET_STRING | object} [startOrChange] New
-     * `startingNumber`, or a change object.
-     * @param {OCTET_STRING} [end] New `endingNumber` when positional.
-     * @returns {NumberRange} A new range, or `this` if unchanged.
-     * @function
-     * @author Cursor Grok 4.6
-     */
-    public with (
-        startOrChange?: OCTET_STRING | {
-            startingNumber?: OCTET_STRING;
-            endingNumber?: OCTET_STRING;
-            modulus?: OCTET_STRING;
-        },
-        end?: OCTET_STRING,
-    ): NumberRange {
-        let start = this.startingNumber;
-        let nextEnd = this.endingNumber;
-        let modulus = this.modulus;
-        if (startOrChange instanceof Uint8Array) {
-            start = startOrChange;
-            nextEnd = (end !== undefined) ? end : this.endingNumber;
-        } else if (startOrChange === undefined) {
-            nextEnd = (end !== undefined) ? end : this.endingNumber;
-        } else {
-            start = (startOrChange.startingNumber !== undefined)
-                ? startOrChange.startingNumber
-                : this.startingNumber;
-            nextEnd = (startOrChange.endingNumber !== undefined)
-                ? startOrChange.endingNumber
-                : this.endingNumber;
-            modulus = (startOrChange.modulus !== undefined)
-                ? startOrChange.modulus
-                : this.modulus;
-        }
-        if (
-            (start === this.startingNumber)
-            && (nextEnd === this.endingNumber)
-            && (modulus === this.modulus)
-        ) {
-            return this;
-        }
-        return new NumberRange(
-            start,
-            nextEnd,
-            modulus,
-            this._unrecognizedExtensionsList,
-        );
     }
 
     /**

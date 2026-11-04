@@ -48,12 +48,4 @@ describe("OperationalBinding Validity Range API", () => {
         expect(year.union(fromNow).isEqualTo(fromNow)).toBe(true);
         expect(year.intersection(fromNow)?.isEqualTo(year)).toBe(true);
     });
-
-    it("with() replaces CHOICE bounds", () => {
-        const later = year.with({
-            validFrom: { time: { generalizedTime: jun } },
-        });
-        expect(later.contains(jan)).toBe(false);
-        expect(year.with()).toBe(year);
-    });
 });
