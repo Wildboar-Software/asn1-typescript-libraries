@@ -8,12 +8,16 @@ import {
 } from "@wildboar/asn1";
 import {
     DER,
+    _encodeBMPString,
     _encodeBoolean,
     _encodeIA5String,
     _encodeInteger,
     _encodeObjectDescriptor,
     _encodeOctetString,
     _encodePrintableString,
+    _encodeTeletexString,
+    _encodeUniversalString,
+    _encodeUTF8String,
     _encodeVisibleString,
 } from "@wildboar/asn1/functional";
 import { _encode_UnboundedDirectoryString } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -31,6 +35,7 @@ import {
 } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import { evaluateLanguageContext } from "./context/languageContext.mjs";
 import { evaluateTemporalContext } from "./context/temporalContext.mjs";
+import { readDirectoryString } from "./readValue.mjs";
 
 function uds (value: string): ASN1Element {
     return _encode_UnboundedDirectoryString(
@@ -47,6 +52,14 @@ describe("typed matching inputs", () => {
         expect(caseIgnoreMatchTyped("hello", { uTF8String: "hello" })).toBe(true);
         expect(caseIgnoreMatchTyped("hello", uds("hello"))).toBe(true);
         expect(caseIgnoreMatchTyped("hello", { uTF8String: "world" })).toBe(false);
+        expect(caseIgnoreMatchTyped("hello", _encodeUTF8String("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodePrintableString("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped(
+            "hello",
+            _encodeTeletexString(Uint8Array.from([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]), DER),
+        )).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodeBMPString("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodeUniversalString("Hello", DER))).toBe(true);
         expect(caseIgnoreMatchTyped("hello", _encodeIA5String("Hello", DER))).toBe(true);
         expect(caseIgnoreMatchTyped("world", _encodeIA5String("Hello", DER))).toBe(false);
         expect(caseIgnoreMatchTyped("hello", _encodeVisibleString("Hello", DER))).toBe(true);
@@ -55,6 +68,43 @@ describe("typed matching inputs", () => {
             uds("Hello"),
             new AttributeTypeAndValue(attributeType, uds("hello")),
         )).toBe(true);
+    });
+
+    it("prepares ASCII string types without Unicode normalization", () => {
+        const normalize = vi.spyOn(String.prototype, "normalize");
+        try {
+            const printable = _encodePrintableString("  Hello   WORLD  ", DER);
+            expect(readDirectoryString(printable, { caseFold: true })).toBe("hello world");
+            expect(readDirectoryString(
+                { printableString: "  Exact   Case  " },
+                { caseFold: false },
+            )).toBe("Exact Case");
+            expect(readDirectoryString(
+                _encodeIA5String("\t Hello\u0000   WORLD\r", DER),
+                { caseFold: true },
+            )).toBe("hello world");
+            expect(readDirectoryString(
+                _encodeVisibleString("  Visible   STRING  ", DER),
+                { caseFold: true },
+            )).toBe("visible string");
+            expect(readDirectoryString(
+                _encodeObjectDescriptor("  Object   DESCRIPTOR  ", DER),
+                { caseFold: true },
+            )).toBe("object descriptor");
+            expect(normalize).not.toHaveBeenCalled();
+
+            expect(readDirectoryString(
+                { printableString: "Hello\tWORLD" },
+                { caseFold: true },
+            )).toBeUndefined();
+            expect(readDirectoryString(
+                _encodeUTF8String("ＦＯＯ", DER),
+                { caseFold: true },
+            )).toBe("foo");
+            expect(normalize).toHaveBeenCalledTimes(1);
+        } finally {
+            normalize.mockRestore();
+        }
     });
 
     it("compares integers across number, bigint, and element", () => {

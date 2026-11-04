@@ -1,7 +1,7 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
-import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
+import { compareCodePoints } from "../../utils/prepString.mjs";
 import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
@@ -30,7 +30,7 @@ function normalizeCaseIgnoreOrderingMatchAssertion (
     assertion: string,
     el?: ASN1Element,
 ): string {
-    const prepared = prepString(assertion, { caseFold: true });
+    const prepared = readDirectoryString(el ?? assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreOrderingMatch assertion failed string preparation",
@@ -61,14 +61,13 @@ function caseIgnoreOrderingMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): number | undefined {
-    const raw = readDirectoryString(value);
     const compare = (flags & MATCH_FLAG_CONSTANT_TIME)
         ? ctCompareCodePoints
         : compareCodePoints;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return compare(assertion, raw);
+        return compare(assertion, readDirectoryString(value));
     }
-    const prepared = prepString(raw, { caseFold: true });
+    const prepared = readDirectoryString(value, { caseFold: true });
     if (prepared === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(
