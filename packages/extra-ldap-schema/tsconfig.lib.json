@@ -22,6 +22,9 @@
       "path": "../pkcs/tsconfig.lib.json"
     },
     {
+      "path": "../x400/tsconfig.lib.json"
+    },
+    {
       "path": "../x500/tsconfig.lib.json"
     }
   ],

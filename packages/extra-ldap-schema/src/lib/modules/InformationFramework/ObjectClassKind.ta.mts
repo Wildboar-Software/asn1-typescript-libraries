@@ -1,13 +1,11 @@
 export {
     ObjectClassKind,
-    type ObjectClassKind,
     ObjectClassKind_abstract,
     ObjectClassKind_auxiliary,
     ObjectClassKind_structural,
     _decode_ObjectClassKind,
     _encode_ObjectClassKind,
     _enum_for_ObjectClassKind,
-    type _enum_for_ObjectClassKind,
     abstract,
     auxiliary,
     structural,

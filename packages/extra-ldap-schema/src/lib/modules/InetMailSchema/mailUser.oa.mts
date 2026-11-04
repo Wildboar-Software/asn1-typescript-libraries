@@ -6,6 +6,9 @@ import { maildest } from "../InetMailSchema/maildest.oa.mjs";
 import { maildrop } from "../InetMailSchema/maildrop.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { auxiliary /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 
 
 /**

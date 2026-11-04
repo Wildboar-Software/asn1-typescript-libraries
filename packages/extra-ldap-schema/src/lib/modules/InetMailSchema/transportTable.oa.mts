@@ -3,6 +3,7 @@ import { id_oc_transportTable } from "../InetMailSchema/id-oc-transportTable.va.
 import { transport } from "../InetMailSchema/transport.oa.mjs";
 import { type OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
 import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/ObjectClassKind.ta.mjs";
+import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 
 
 /**

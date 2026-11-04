@@ -7,6 +7,8 @@ import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Infor
 import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { caseIgnoreMatch } from "../SelectedAttributeTypes/caseIgnoreMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
+import { name } from "../SelectedAttributeTypes/name.oa.mjs";
+import { caseIgnoreSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreSubstringsMatch.oa.mjs";
 
 
 /**

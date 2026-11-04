@@ -21,3 +21,6 @@ export * from "./superiorUUID.oa.mjs";
 export * from "./syncConsumerSubentry.oa.mjs";
 export * from "./syncTimestamp.oa.mjs";
 export * from "./syncreplCookie.oa.mjs";
+export * from "./uuid.oa.mjs";
+export * from "./uuidMatch.oa.mjs";
+export * from "./uuidOrderingMatch.oa.mjs";

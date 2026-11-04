@@ -6,6 +6,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { booleanMatch } from "../SelectedAttributeTypes/booleanMatch.oa.mjs";
+import { boolean_ } from "../SelectedAttributeTypes/boolean.oa.mjs";
 
 
 /**

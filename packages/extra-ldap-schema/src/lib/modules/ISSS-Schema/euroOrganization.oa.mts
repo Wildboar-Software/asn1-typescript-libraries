@@ -11,6 +11,8 @@ import { fax } from "../ISSS-Schema/fax.oa.mjs";
 import { id_euro_oc_organization } from "../ISSS-Schema/id-euro-oc-organization.va.mjs";
 import { vATName } from "../ISSS-Schema/vATName.oa.mjs";
 import { serialNumber } from "../SelectedAttributeTypes/serialNumber.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
 
 
 /**

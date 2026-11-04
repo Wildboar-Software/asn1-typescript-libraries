@@ -7,7 +7,6 @@ export {
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
-    type _enum_for_AttributeUsage,
     dSAOperation,
     directoryOperation,
     distributedOperation,

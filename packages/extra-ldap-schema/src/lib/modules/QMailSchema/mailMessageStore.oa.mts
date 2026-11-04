@@ -8,6 +8,7 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at } from "../QMailSchema/id-at.va.mjs";
 import { ia5String } from "../SelectedAttributeTypes/ia5String.oa.mjs";
+import { caseExactIA5Match } from "../SelectedAttributeTypes/caseExactIA5Match.oa.mjs";
 
 
 /**

@@ -4,6 +4,7 @@
   "license": "MIT",
   "exports": {
     ".": "./src/index.mts",
+    "./ApacheDirectorySchema": "./src/lib/modules/ApacheDirectorySchema/index.mts",
     "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
     "./Cosine": "./src/lib/modules/Cosine/index.mts",
     "./DSEE": "./src/lib/modules/DSEE/index.mts",

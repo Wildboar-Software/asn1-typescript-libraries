@@ -7,6 +7,11 @@ import { structural /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Information
 import { id_openldap_oc } from "../OpenLDAP/id-openldap-oc.va.mjs";
 import { commonName } from "../SelectedAttributeTypes/commonName.oa.mjs";
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { pilotPerson } from "../Cosine/pilotPerson.oa.mjs";
+import { inetOrgPerson } from "../InetOrgPerson/inetOrgPerson.oa.mjs";
+import { givenName } from "../SelectedAttributeTypes/givenName.oa.mjs";
+import { labeledURI } from "../OpenLDAPCoreSchema/labeledURI.oa.mjs";
+import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.mjs";
 
 
 /**
