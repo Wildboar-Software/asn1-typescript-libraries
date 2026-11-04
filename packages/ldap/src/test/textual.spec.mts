@@ -32,6 +32,8 @@ describe("RFC 4515 strings", () => {
             { initial: utf8("foo") },
         ]);
         expect(filter.toString()).toBe("(cn=foo*bar*b\\2az*qux)");
+        expect(new SubstringFilter(utf8("x-ä"), [{ initial: utf8("a") }]).toJSON().type)
+            .toBe("x-ä");
         expect(filter.toJSON()).toEqual({
             type: "cn",
             substrings: [
@@ -87,6 +89,8 @@ describe("RFC 4515 strings", () => {
         });
         expect(new MatchingRuleAssertion(undefined, utf8("cn"), value, false).toJSON())
             .toEqual({ type: "cn", matchValue: "A" });
+        expect(new MatchingRuleAssertion(utf8("x-ä"), undefined, value, false).toJSON())
+            .toEqual({ matchingRule: "x-ä", matchValue: "A" });
     });
 
     it("hex-encodes an assertion value that is not UTF-8", () => {

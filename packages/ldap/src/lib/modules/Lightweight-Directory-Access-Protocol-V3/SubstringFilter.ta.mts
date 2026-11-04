@@ -21,6 +21,7 @@ import {
   _encode_SubstringFilter_substrings_substring,
 } from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.mjs';
 import {
+  ldapString,
   octetsToJSON,
   rfc4515SubstringFilter,
   type OctetsJSON,
@@ -29,12 +30,13 @@ import {
 /**
  * JSON encoding of {@link SubstringFilter}.
  *
- * Each assertion value is UTF-8 text when that is lossless, otherwise
- * `{ hex }`. The choice key `any` is the ASN.1 identifier (`any_` in
- * TypeScript). Unrecognized substring choices are omitted.
+ * `type` is the attribute description decoded from UTF-8. Each assertion
+ * value is UTF-8 text when that is lossless, otherwise `{ hex }`. The
+ * choice key `any` is the ASN.1 identifier (`any_` in TypeScript).
+ * Unrecognized substring choices are omitted.
  */
 export type SubstringFilterJSON = {
-  type: OctetsJSON;
+  type: string;
   substrings: Array<
     | { initial: OctetsJSON }
     | { any: OctetsJSON }
@@ -149,8 +151,9 @@ export class SubstringFilter {
    * @summary JSON encoding of this substring filter.
    * @description
    *
-   * Preserves the SEQUENCE order. Unrecognized extensions and unrecognized
-   * substring choices are omitted.
+   * `type` is the attribute description as a UTF-8 string. Preserves the
+   * SEQUENCE order. Unrecognized extensions and unrecognized substring
+   * choices are omitted.
    *
    * @returns The JSON encoding
    * @public
@@ -167,7 +170,7 @@ export class SubstringFilter {
       }
     }
     return {
-      type: octetsToJSON(this.type_),
+      type: ldapString(this.type_),
       substrings,
     };
   }

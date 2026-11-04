@@ -28,6 +28,7 @@ import {
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
 import {
+  ldapString,
   octetsToJSON,
   rfc4515Extensible,
   type OctetsJSON,
@@ -36,13 +37,14 @@ import {
 /**
  * JSON encoding of {@link MatchingRuleAssertion}.
  *
- * Absent optional components are omitted. `dnAttributes` is omitted when it
- * is not `TRUE` (the DEFAULT). `matchValue` is UTF-8 text when that is
- * lossless, otherwise `{ hex }`.
+ * `matchingRule` and `type` are decoded from UTF-8. Absent optional
+ * components are omitted. `dnAttributes` is omitted when it is not `TRUE`
+ * (the DEFAULT). `matchValue` is UTF-8 text when that is lossless,
+ * otherwise `{ hex }`.
  */
 export type MatchingRuleAssertionJSON = {
-  matchingRule?: OctetsJSON;
-  type?: OctetsJSON;
+  matchingRule?: string;
+  type?: string;
   matchValue: OctetsJSON;
   dnAttributes?: true;
 };
@@ -194,7 +196,8 @@ export class MatchingRuleAssertion {
    * @summary JSON encoding of this extensible match.
    * @description
    *
-   * Unrecognized extensions are not represented.
+   * `matchingRule` and `type` are UTF-8 strings. Unrecognized extensions
+   * are not represented.
    *
    * @returns The JSON encoding
    * @public
@@ -204,10 +207,10 @@ export class MatchingRuleAssertion {
       matchValue: octetsToJSON(this.matchValue),
     };
     if (this.matchingRule) {
-      json.matchingRule = octetsToJSON(this.matchingRule);
+      json.matchingRule = ldapString(this.matchingRule);
     }
     if (this.type_) {
-      json.type = octetsToJSON(this.type_);
+      json.type = ldapString(this.type_);
     }
     if (this.dnAttributes) {
       json.dnAttributes = true;

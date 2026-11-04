@@ -34,11 +34,11 @@ import {
 /**
  * JSON encoding of {@link PartialAttribute}.
  *
- * `type` is the attribute description. Each value is UTF-8 text when that
- * is lossless, otherwise `{ hex }`.
+ * `type` is the attribute description decoded from UTF-8. Each value is
+ * UTF-8 text when that is lossless, otherwise `{ hex }`.
  */
 export type PartialAttributeJSON = {
-  type: OctetsJSON;
+  type: string;
   vals: OctetsJSON[];
 };
 
@@ -143,16 +143,17 @@ export class PartialAttribute {
    * @summary JSON encoding of this attribute.
    * @description
    *
-   * Unrecognized extensions are not represented. An empty `vals` array is
-   * kept, which matters for `typesOnly` search results and for modify
-   * delete/replace of a whole attribute.
+   * `type` is the attribute description as a UTF-8 string. Unrecognized
+   * extensions are not represented. An empty `vals` array is kept, which
+   * matters for `typesOnly` search results and for modify delete/replace
+   * of a whole attribute.
    *
    * @returns The JSON encoding
    * @public
    */
   public toJSON(): PartialAttributeJSON {
     return {
-      type: octetsToJSON(this.type_),
+      type: ldapString(this.type_),
       vals: this.vals.map((value) => octetsToJSON(value)),
     };
   }

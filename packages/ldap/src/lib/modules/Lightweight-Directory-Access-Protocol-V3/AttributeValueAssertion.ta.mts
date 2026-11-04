@@ -30,11 +30,11 @@ import {
 /**
  * JSON encoding of {@link AttributeValueAssertion}.
  *
- * `attributeDesc` is the UTF-8 attribute description. `assertionValue` is
- * UTF-8 text when that is lossless, otherwise `{ hex }`.
+ * `attributeDesc` is the attribute description decoded from UTF-8.
+ * `assertionValue` is UTF-8 text when that is lossless, otherwise `{ hex }`.
  */
 export type AttributeValueAssertionJSON = {
-  attributeDesc: OctetsJSON;
+  attributeDesc: string;
   assertionValue: OctetsJSON;
 };
 
@@ -145,7 +145,7 @@ export class AttributeValueAssertion {
    */
   public toJSON(): AttributeValueAssertionJSON {
     return {
-      attributeDesc: octetsToJSON(this.attributeDesc),
+      attributeDesc: ldapString(this.attributeDesc),
       assertionValue: octetsToJSON(this.assertionValue),
     };
   }
