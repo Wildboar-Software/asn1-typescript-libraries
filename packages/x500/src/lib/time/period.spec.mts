@@ -118,6 +118,19 @@ function testOccurrences (
 }
 
 describe("occurrences", () => {
+    test("timesOfDay uses civil clock hours on a 25-hour DST fall-back day", () => {
+        // 7 Nov 2021 in America/New_York is 25 hours. Elapsed-hours-from
+        // midnight would put this band at 11:00–12:00 instead of 12:00–13:00.
+        testOccurrences(
+            new Period([
+                new DayTimeBand(new DayTime(12, 0, 0), new DayTime(13, 0, 0)),
+            ]),
+            new Date(2021, 10, 7, 0, 0, 0),
+            new Date(2021, 10, 7, 23, 59, 59),
+            [ atHours(2021, 10, 7, 12, 13) ],
+        );
+    });
+
     test("all fields except weeks", () => {
         const p = new Period(
             [

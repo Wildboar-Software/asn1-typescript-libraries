@@ -38,9 +38,12 @@ import {
  * interval from start to end on that day's clock, so an inverted
  * band matches no instant.
  *
- * Containment, `intersection`, `union`, and `with` are inspired by
- * the VS Code `Range` API. Unlike VS Code `Range`, inverted bounds
- * are **not** swapped: `startDayTime` after `endDayTime` is empty.
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
+ * `intersection`, `union`, and `with` derive new values instead of
+ * mutating. `DayTime` plays the role of VS Code `Position`. Unlike
+ * VS Code `Range`, inverted bounds are **not** swapped:
+ * `startDayTime` after `endDayTime` is empty.
  *
  * @author Cursor Grok 4.6
  *

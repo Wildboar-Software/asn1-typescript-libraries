@@ -2,7 +2,6 @@ import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString, type DirectoryStringInput } from "../readValue.mjs";
 import { approximatelyEqualStrings } from "../approximate.mjs";
-import { prepString } from "../../utils/prepString.mjs";
 import { stringsEqual } from "../constantTime.mjs";
 import {
     createEqualityMatcher,
@@ -29,7 +28,7 @@ function decodeCaseIgnoreMatchAssertion (el: ASN1Element): string {
  */
 export
 function normalizeCaseIgnoreMatchAssertion (assertion: string, el?: ASN1Element): string {
-    const prepared = prepString(assertion, { caseFold: true });
+    const prepared = readDirectoryString(el ?? assertion, { caseFold: true });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseIgnoreMatch assertion failed string preparation",
@@ -58,10 +57,9 @@ function caseIgnoreMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): boolean | undefined {
-    const raw = readDirectoryString(value);
     const stored = (flags & MATCH_FLAG_VALUE_NORMALIZED)
-        ? raw
-        : prepString(raw, { caseFold: true });
+        ? readDirectoryString(value)
+        : readDirectoryString(value, { caseFold: true });
     if (stored === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

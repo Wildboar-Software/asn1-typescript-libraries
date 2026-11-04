@@ -252,6 +252,8 @@ are either deprecated or not intended for external use:
 - `getDateFromTime.mts` - Get a native ECMAScript `Date` from an X.509 `Time` value
 - `getMatchingRulesFromFilter.mts` - Get the OIDs of matching rules used in a `Filter`
 - `getOptionallyProtectedValue.mts` - Where `op` is `OPTIONALLY_PROTECTED<T>`, get `T`
+- `iterateListResultSubordinates.mts` - Yield subordinate entries from a `ListResult`, recursing into `uncorrelatedListInfo` up to 100 results deep
+- `iterateSearchResultEntries.mts` - Yield entries from a `SearchResult`, recursing into `uncorrelatedSearchInfo` up to 100 results deep
 - `getRDN.mts` - Get the relative distinguished name from a distinguished name.
 - `getValueTuplesFromAttribute.mts` - Get type-value-context tuples for an attribute
 - `groupByOID.mts` - Group items by object identifier
@@ -261,6 +263,7 @@ are either deprecated or not intended for external use:
 - `selectFromEntry.mts` - Select information from an entry to produce `EntryInformation`
 - `splitIntoMastersAndShadows.mts` - Group access points into masters and shadows
 - `validateObjectClasses.mts` - Validate a set of object classes
+- `validateTelephoneNumber.mts` - E.123 international telephone number (`+`, digits, spaces, hyphens separated by a digit; at most 32 characters)
 
 ## ESM-Only
 

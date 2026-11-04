@@ -172,7 +172,7 @@ export class EstablishOperationalBindingArgumentData {
      * @method
      */
     public static get _default_value_for_valid(): Validity {
-        return Validity._from_object({ _unrecognizedExtensionsList: [] });
+        return new Validity();
     }
 }
 

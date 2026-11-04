@@ -645,7 +645,34 @@ describe("evaluateTemporalContext", () => {
         )).toBe(true);
     });
 
-    // TODO: This is actually failing because of DST changes: a 25-hour day throws this off.
+    it("matches between+entirely across a 25-hour DST fall-back day", () => {
+        // 7 Nov 2021 in America/New_York: 02:00 EDT → 01:00 EST (25 hours).
+        // Two half-day bands must still cover the civil day with no hole.
+        const assertion: TimeAssertion = {
+            between: new TimeAssertion_between(
+                new Date(2021, 10, 7, 0, 0, 0),
+                new Date(2021, 10, 7, 23, 59, 59),
+                TRUE,
+            ),
+        };
+        const value = new TimeSpecification(
+            {
+                periodic: [
+                    new Period([
+                        new DayTimeBand(new DayTime(0, 0, 0), new DayTime(12, 0, 0)),
+                    ]),
+                    new Period([
+                        new DayTimeBand(new DayTime(12, 0, 0), new DayTime(23, 59, 59)),
+                    ]),
+                ],
+            },
+        );
+        expect(evaluateTemporalContext(
+            _encode_TimeAssertion(assertion, DER),
+            _encode_TimeSpecification(value, DER),
+        )).toBe(true);
+    });
+
     it("relaxes the between+entirely cover-step limit with MATCH_FLAG_HIGH_WORK_BUDGET", () => {
         // Each day is covered by two occurrences, so 600 days take more
         // than the default limit of 1000 cover steps.

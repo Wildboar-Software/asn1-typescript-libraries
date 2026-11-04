@@ -2,6 +2,14 @@
     "name": "@wildboar/spkac",
     "type": "module",
     "version": "2.0.1",
+    "description": "Signed Public Key and Challenge (SPKAC) in TypeScript",
+    "keywords": [
+        "spkac",
+        "signed",
+        "public",
+        "key",
+        "challenge"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"

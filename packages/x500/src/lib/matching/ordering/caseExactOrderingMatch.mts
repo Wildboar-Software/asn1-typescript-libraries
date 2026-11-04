@@ -1,7 +1,7 @@
 import { ASN1CharactersError, type ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { readDirectoryString } from "../readValue.mjs";
-import { compareCodePoints, prepString } from "../../utils/prepString.mjs";
+import { compareCodePoints } from "../../utils/prepString.mjs";
 import { ctCompareCodePoints } from "../constantTime.mjs";
 import {
     createOrderingMatcher,
@@ -30,7 +30,7 @@ function normalizeCaseExactOrderingMatchAssertion (
     assertion: string,
     el?: ASN1Element,
 ): string {
-    const prepared = prepString(assertion);
+    const prepared = readDirectoryString(el ?? assertion, { caseFold: false });
     if (prepared === undefined) {
         throw new ASN1CharactersError(
             "caseExactOrderingMatch assertion failed string preparation",
@@ -63,14 +63,13 @@ function caseExactOrderingMatchTyped (
     _getEqualityMatcher?: (attributeType: AttributeType) => Matcher | undefined,
     flags: number = 0,
 ): number | undefined {
-    const raw = readDirectoryString(value);
     const compare = (flags & MATCH_FLAG_CONSTANT_TIME)
         ? ctCompareCodePoints
         : compareCodePoints;
     if (flags & MATCH_FLAG_VALUE_NORMALIZED) {
-        return compare(assertion, raw);
+        return compare(assertion, readDirectoryString(value));
     }
-    const prepared = prepString(raw);
+    const prepared = readDirectoryString(value, { caseFold: false });
     if (prepared === undefined) {
         if (flags & MATCH_FLAG_DEBUG) {
             console.error(

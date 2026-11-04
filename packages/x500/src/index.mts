@@ -143,6 +143,8 @@ export { getAttributeTypesFromFilter } from "./lib/utils/getAttributeTypesFromFi
 export { getDateFromTime } from "./lib/utils/getDateFromTime.mjs";
 export { getMatchingRulesFromFilter } from "./lib/utils/getMatchingRulesFromFilter.mjs";
 export { getOptionallyProtectedValue } from "./lib/utils/getOptionallyProtectedValue.mjs";
+export { iterateListResultSubordinates } from "./lib/utils/iterateListResultSubordinates.mjs";
+export { iterateSearchResultEntries } from "./lib/utils/iterateSearchResultEntries.mjs";
 export { getRDN } from "./lib/utils/getRDN.mjs";
 export { getValueTuplesFromAttribute } from "./lib/utils/getValueTuplesFromAttribute.mjs";
 export { groupByOID } from "./lib/utils/groupByOID.mjs";
@@ -151,6 +153,7 @@ export { objectClassesWithinRefinement } from "./lib/utils/objectClassesWithinRe
 export { selectFromEntry } from "./lib/utils/selectFromEntry.mjs";
 export { splitIntoMastersAndShadows } from "./lib/utils/splitIntoMastersAndShadows.mjs";
 export { validateObjectClasses } from "./lib/utils/validateObjectClasses.mjs";
+export { validateTelephoneNumber } from "./lib/utils/validateTelephoneNumber.mjs";
 export { prepString } from "./lib/utils/prepString.mjs";
 export type { TimingSafeEqual } from "./lib/matching/constantTime.mjs";
 export { setTimingSafeEqual } from "./lib/matching/constantTime.mjs";

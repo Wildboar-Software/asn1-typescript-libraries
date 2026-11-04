@@ -142,6 +142,33 @@ export class Attribute {
         }
         return json;
     }
+
+    /**
+     * @summary Iterate over this attribute's values, ignoring contexts
+     * @description
+     *
+     * Yields each element of {@link values}, then the `value` of each
+     * {@link valuesWithContext} item. Contexts themselves are not yielded: a
+     * stored value appears in exactly one of the two sets, so this enumerates
+     * every value of the attribute exactly once.
+     *
+     * Both sets are unordered, so yield order is not significant. A
+     * transferred attribute may have zero values.
+     *
+     * @yields {_Element} One attribute value
+     * @returns An iterator over this attribute's values
+     * @public
+     * @method
+     * @generator
+     */
+    public *iterValuesOmittingContexts(): IterableIterator<_Element> {
+        yield* this.values;
+        if (this.valuesWithContext) {
+            for (const item of this.valuesWithContext) {
+                yield item.value;
+            }
+        }
+    }
 }
 
 /**

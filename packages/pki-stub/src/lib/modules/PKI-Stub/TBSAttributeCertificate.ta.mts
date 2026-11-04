@@ -236,11 +236,7 @@ export class TBSAttributeCertificate {
      * @method
      */
     public isWithinValidityPeriodAt(date: Date): boolean {
-        const t = date.getTime();
-        return (
-            (t >= this.attrCertValidityPeriod.notBeforeTime.getTime())
-            && (t <= this.attrCertValidityPeriod.notAfterTime.getTime())
-        );
+        return this.attrCertValidityPeriod.contains(date);
     }
 }
 
