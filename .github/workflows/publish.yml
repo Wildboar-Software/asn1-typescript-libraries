@@ -41,6 +41,7 @@ jobs:
           - "emrtd"
           - "ers"
           - "ess"
+          - "extra-ldap-schema"
           - "fast-infoset"
           - "ftam"
           - "gdt"
