@@ -1,8 +1,5 @@
 import {
     addDays,
-    addHours,
-    addMinutes,
-    addSeconds,
     addWeeks,
     endOfDay,
     endOfMonth,
@@ -349,28 +346,36 @@ function *days(p: Period, year: number, month?: number, week?: number): Iterable
     }
 }
 
+/**
+ * Instant on `date`'s civil calendar day at `time`'s clock.
+ *
+ * X.520 `DayTime` is hour/minute/second on a single civil day, not
+ * elapsed time from midnight. `addHours(startOfDay, 12)` is 11:00 on
+ * a 25-hour DST fall-back day.
+ */
+function atCivilDayTime (
+    date: Date,
+    time: { hour: number | bigint; minute?: number | bigint; second?: number | bigint },
+): Date {
+    return new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+        Number(time.hour),
+        Number(time.minute ?? 0),
+        Number(time.second ?? 0),
+    );
+}
+
 function *timeBands(date: Date, bands: DayTimeBand[] | undefined, startInstant?: Date): IterableIterator<[Date, Date]> {
     if (!bands) {
         return;
     }
     for (const band of bands) {
-        const sod = startOfDay(date);
         const sob = band.startDayTime ?? DayTimeBand._default_value_for_startDayTime;
         const eob = band.endDayTime ?? DayTimeBand._default_value_for_endDayTime;
-        let start = addHours(sod, Number(sob.hour));
-        let end = addHours(sod, Number(eob.hour));
-        if (sob.minute) {
-            start = addMinutes(start, Number(sob.minute));
-        }
-        if (eob.minute) {
-            end = addMinutes(end, Number(eob.minute));
-        }
-        if (sob.second) {
-            start = addSeconds(start, Number(sob.second));
-        }
-        if (eob.second) {
-            end = addSeconds(end, Number(eob.second));
-        }
+        const start = atCivilDayTime(date, sob);
+        const end = atCivilDayTime(date, eob);
         if (startInstant && end < startInstant) {
             continue;
         }
