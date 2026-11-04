@@ -22,16 +22,17 @@ import {
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeList.ta.mjs';
 import {
   formatLdifAttribute,
-  octetsToJSON,
-  type OctetsJSON,
+  ldapString,
 } from '../../textual.mjs';
 import type { PartialAttributeJSON } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
 
 /**
  * JSON encoding of {@link AddRequest}.
+ *
+ * `entry` is the DN decoded from its UTF-8 octets.
  */
 export type AddRequestJSON = {
-  entry: OctetsJSON;
+  entry: string;
   attributes: PartialAttributeJSON[];
 };
 
@@ -145,15 +146,15 @@ export class AddRequest {
    * @summary JSON encoding of this add request.
    * @description
    *
-   * Unrecognized extensions are not represented. Empty attribute value
-   * sets are kept.
+   * `entry` is the DN as a UTF-8 string. Unrecognized extensions are not
+   * represented. Empty attribute value sets are kept.
    *
    * @returns The JSON encoding
    * @public
    */
   public toJSON(): AddRequestJSON {
     return {
-      entry: octetsToJSON(this.entry),
+      entry: ldapString(this.entry),
       attributes: this.attributes.map((attribute) => attribute.toJSON()),
     };
   }

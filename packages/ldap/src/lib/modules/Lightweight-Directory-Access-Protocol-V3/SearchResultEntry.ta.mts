@@ -24,16 +24,17 @@ import {
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.mjs';
 import {
   formatLdifAttribute,
-  octetsToJSON,
-  type OctetsJSON,
+  ldapString,
 } from '../../textual.mjs';
 import type { PartialAttributeJSON } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
 
 /**
  * JSON encoding of {@link SearchResultEntry}.
+ *
+ * `objectName` is the DN decoded from its UTF-8 octets.
  */
 export type SearchResultEntryJSON = {
-  objectName: OctetsJSON;
+  objectName: string;
   attributes: PartialAttributeJSON[];
 };
 
@@ -147,15 +148,15 @@ export class SearchResultEntry {
    * @summary JSON encoding of this search result entry.
    * @description
    *
-   * Unrecognized extensions are not represented. Empty attribute value
-   * sets are kept.
+   * `objectName` is the DN as a UTF-8 string. Unrecognized extensions are
+   * not represented. Empty attribute value sets are kept.
    *
    * @returns The JSON encoding
    * @public
    */
   public toJSON(): SearchResultEntryJSON {
     return {
-      objectName: octetsToJSON(this.objectName),
+      objectName: ldapString(this.objectName),
       attributes: this.attributes.map((attribute) => attribute.toJSON()),
     };
   }

@@ -20,14 +20,16 @@ import {
   _decode_ModifyRequest_changes_change,
   _encode_ModifyRequest_changes_change,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change.ta.mjs';
-import { formatLdifAttribute, octetsToJSON, type OctetsJSON } from '../../textual.mjs';
+import { formatLdifAttribute, ldapString } from '../../textual.mjs';
 import type { ModifyRequest_changes_changeJSON } from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change.ta.mjs';
 
 /**
  * JSON encoding of {@link ModifyRequest}.
+ *
+ * `object` is the DN decoded from its UTF-8 octets.
  */
 export type ModifyRequestJSON = {
-  object: OctetsJSON;
+  object: string;
   changes: ModifyRequest_changes_changeJSON[];
 };
 
@@ -142,14 +144,15 @@ export class ModifyRequest {
    * @summary JSON encoding of this modify request.
    * @description
    *
-   * Unrecognized extensions are not represented. Change order is kept.
+   * `object` is the DN as a UTF-8 string. Unrecognized extensions are not
+   * represented. Change order is kept.
    *
    * @returns The JSON encoding
    * @public
    */
   public toJSON(): ModifyRequestJSON {
     return {
-      object: octetsToJSON(this.object),
+      object: ldapString(this.object),
       changes: this.changes.map((change) => change.toJSON()),
     };
   }

@@ -139,6 +139,9 @@ describe("LDIF", () => {
         const add = new AddRequest(utf8("cn=Ada"), [cn, empty]);
         expect(add.toString()).toBe("dn: cn=Ada\nchangetype: add\ncn: Ada\ncn: A");
         expect(add.toJSON().attributes).toHaveLength(2);
+        const nonAscii = new AddRequest(utf8("cn=Jäs"), []);
+        expect(nonAscii.toJSON().entry).toBe("cn=Jäs");
+        expect(new SearchResultEntry(utf8("cn=Jäs"), []).toJSON().objectName).toBe("cn=Jäs");
     });
 
     it("stringifies modify and moddn records", () => {

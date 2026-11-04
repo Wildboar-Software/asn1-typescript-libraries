@@ -24,20 +24,20 @@ import {
 } from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta.mjs';
 import {
   formatLdifAttribute,
-  octetsToJSON,
-  type OctetsJSON,
+  ldapString,
 } from '../../textual.mjs';
 
 /**
  * JSON encoding of {@link ModifyDNRequest}.
  *
+ * `entry`, `newrdn`, and `newSuperior` are decoded from their UTF-8 octets.
  * `newSuperior` is omitted when absent.
  */
 export type ModifyDNRequestJSON = {
-  entry: OctetsJSON;
-  newrdn: OctetsJSON;
+  entry: string;
+  newrdn: string;
   deleteoldrdn: boolean;
-  newSuperior?: OctetsJSON;
+  newSuperior?: string;
 };
 
 /**
@@ -179,19 +179,19 @@ export class ModifyDNRequest {
    * @summary JSON encoding of this modify-DN request.
    * @description
    *
-   * Unrecognized extensions are not represented.
+   * The DNs are UTF-8 strings. Unrecognized extensions are not represented.
    *
    * @returns The JSON encoding
    * @public
    */
   public toJSON(): ModifyDNRequestJSON {
     const json: ModifyDNRequestJSON = {
-      entry: octetsToJSON(this.entry),
-      newrdn: octetsToJSON(this.newrdn),
+      entry: ldapString(this.entry),
+      newrdn: ldapString(this.newrdn),
       deleteoldrdn: this.deleteoldrdn,
     };
     if (this.newSuperior) {
-      json.newSuperior = octetsToJSON(this.newSuperior);
+      json.newSuperior = ldapString(this.newSuperior);
     }
     return json;
   }
