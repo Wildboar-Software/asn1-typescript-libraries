@@ -2,7 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_homePostalAddress } from "../LdapSchema2ldifCosine/id-at-homePostalAddress.va.mjs";
-import { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
+import { type PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";
 import { caseIgnoreListMatch } from "../SelectedAttributeTypes/caseIgnoreListMatch.oa.mjs";
 import { caseIgnoreListSubstringsMatch } from "../SelectedAttributeTypes/caseIgnoreListSubstringsMatch.oa.mjs";
 import { postalAddr } from "../SelectedAttributeTypes/postalAddr.oa.mjs";
