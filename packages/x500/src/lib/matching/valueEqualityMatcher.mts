@@ -1,10 +1,15 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { AttributeTypeAndValue } from "../modules/InformationFramework/AttributeTypeAndValue.ta.mjs";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import {
-    MATCH_FLAG_USED_FOR_NAME,
-    type Matcher,
-} from "../types/matching.mjs";
+import type { Matcher } from "../types/matching.mjs";
+
+/**
+ * Same bit as `MATCH_FLAG_USED_FOR_NAME`. Inlined so this module does
+ * not load `types/matching.mts` (that file imports the Information
+ * Framework barrel, which cycles if a type wraps
+ * `subtreeIntersection`).
+ */
+const MATCH_FLAG_USED_FOR_NAME = 1 << 0;
 
 /**
  * Present a `Matcher` lookup as the single-value equality lookup used

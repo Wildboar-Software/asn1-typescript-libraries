@@ -173,7 +173,7 @@ describe("SubtreeSpecification.intersection()", () => {
             subtree_a,
             subtree_b,
         );
-        const viaMethod = subtree_a.intersection(subtree_b, namingMatcher);
+        const viaMethod = subtree_a.intersection(subtree_b, getEqualityMatcher);
         expect(viaFunction).toBeTruthy();
         expect(viaMethod).toBeTruthy();
         const [ functionSpec, functionRoot ] = viaFunction!;
@@ -188,7 +188,7 @@ describe("SubtreeSpecification.intersection()", () => {
     it("returns null when the bases do not overlap", () => {
         const a = new SubtreeSpecification();
         const b = new SubtreeSpecification();
-        expect(a.intersection(b, namingMatcher, root1, root2)).toBeNull();
+        expect(a.intersection(b, getEqualityMatcher, root1, root2)).toBeNull();
         expect(subtreeIntersection(
             getEqualityMatcher,
             a,

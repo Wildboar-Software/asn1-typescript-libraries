@@ -8,7 +8,6 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     asDITDescending,
     compareRDNSequence,
-    dnStartsWith,
     rdnSequenceToJSON,
     rdnSequenceToString,
     type DistinguishedName,
@@ -16,6 +15,9 @@ import {
     type RDNSequenceDescending,
     type RDNSequenceJSON,
 } from "@wildboar/dn";
+import type { AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import type { EqualityMatcher } from "../../types/matching.mjs";
+import { subtreeIntersection } from "../../utils/subtreeIntersection.mjs";
 import {
     type BaseDistance,
     _decode_BaseDistance,
@@ -475,8 +477,7 @@ export class SubtreeSpecification implements ChopSpecification {
      * descending) to which each specification is relative. Both
      * default to the root DSE.
      *
-     * This is the same algorithm as `subtreeIntersection`; that
-     * function wraps an X.500 `Matcher` lookup and calls this method.
+     * This method calls `subtreeIntersection`.
      *
      * There is no `union`: incompatible `base`, `minimum`, `maximum`,
      * and other components cannot collapse into one specification.
@@ -485,7 +486,7 @@ export class SubtreeSpecification implements ChopSpecification {
      * `Refinement` cannot be shown to be a subset of another.
      *
      * @param other The other subtree specification
-     * @param getMatcher Optional equality-matcher lookup for naming
+     * @param getEqualityMatcher Equality-matcher lookup for naming
      *  attribute types
      * @param thisRoot Context prefix of this specification
      * @param otherRoot Context prefix of `other`
@@ -496,112 +497,17 @@ export class SubtreeSpecification implements ChopSpecification {
      */
     public intersection (
         other: SubtreeSpecification,
-        getMatcher?: GetDistinguishedValueMatcher,
+        getEqualityMatcher: (attributeType: AttributeType) => EqualityMatcher | undefined,
         thisRoot: RDNSequenceDescending = asDITDescending([]),
         otherRoot: RDNSequenceDescending = asDITDescending([]),
     ): [ SubtreeSpecification, DistinguishedName ] | null {
-        const a_base_dn: RDNSequenceDescending = asDITDescending([
-            ...thisRoot,
-            ...(this.base ?? []),
-        ]);
-        const b_base_dn: RDNSequenceDescending = asDITDescending([
-            ...otherRoot,
-            ...(other.base ?? []),
-        ]);
-        const a_is_prefix = dnStartsWith(b_base_dn, a_base_dn, getMatcher);
-        const b_is_prefix = dnStartsWith(a_base_dn, b_base_dn, getMatcher);
-        if (!a_is_prefix && !b_is_prefix) {
-            // If neither base is a prefix of each other, there is no overlap.
-            return null;
-        }
-        const prefix_fqdn = a_is_prefix ? a_base_dn : b_base_dn;
-        const inner_fqdn  = a_is_prefix ? b_base_dn : a_base_dn;
-
-        const prefix_subtree = a_is_prefix ? this : other;
-        const inner_subtree  = a_is_prefix ? other : this;
-
-        // These need to be relative to the full Base DN so that they are comparable.
-        const a_min = a_base_dn.length + Number(this.minimum ?? 0);
-        const b_min = b_base_dn.length + Number(other.minimum ?? 0);
-        const a_max = a_base_dn.length + Number(this.maximum ?? Number.MAX_SAFE_INTEGER);
-        const b_max = b_base_dn.length + Number(other.maximum ?? Number.MAX_SAFE_INTEGER);
-
-        // Get the globally strictest (largest) minimum.
-        // then subtract the inner FQDN length to get the relative minimum.
-        const minimum = Math.max(a_min, b_min) - inner_fqdn.length;
-        const maximum = Math.min(a_max, b_max) - inner_fqdn.length;
-
-        /* This should be >, not >=. Think about it: a minimum of 1 means the
-        entries immediately below the base are included. A maximum of 1 means
-        that the one RDN below the base is accepted (an inclusive bound). That
-        means that there is overlap until minimum becomes 2 or more. */
-        if (minimum > maximum) {
-            // If minimum is greater than maximum, it means there is no "vertical"
-            // overlap between the subtrees.
-            return null;
-        }
-
-        // If any specific exclusion from the prefix subtree names the inner subtree, return null.
-        // In addition, we adjust the specific exclusions to make them relative to the inner base.
-        const prefix_specific_exclusions: SubtreeSpecification["specificExclusions"] = [];
-        for (const spex of prefix_subtree.specificExclusions ?? []) {
-            if ("chopBefore" in spex) {
-                const chop_fqdn = asDITDescending([ ...prefix_fqdn, ...spex.chopBefore ]);
-                if (dnStartsWith(inner_fqdn, chop_fqdn, getMatcher)) {
-                    // If the chop excludes the whole intersection, return null.
-                    return null;
-                }
-                // We have to make sure the chop actually appears in the intersection still.
-                if (dnStartsWith(chop_fqdn, inner_fqdn, getMatcher)) {
-                    const adjusted_chop = chop_fqdn.slice(inner_fqdn.length);
-                    if (adjusted_chop.length === 0) {
-                        return null; // The whole intersection is excluded by a chop.
-                    }
-                    prefix_specific_exclusions.push({ chopBefore: adjusted_chop });
-                }
-            }
-            else if ("chopAfter" in spex) {
-                const chop_fqdn = asDITDescending([ ...prefix_fqdn, ...spex.chopAfter ]);
-                if (dnStartsWith(asDITDescending(inner_fqdn.slice(0, -1)), chop_fqdn, getMatcher)) {
-                    // If the chop excludes the whole intersection, return null.
-                    return null;
-                }
-                // We have to make sure the chop actually appears in the intersection still.
-                if (dnStartsWith(chop_fqdn, inner_fqdn, getMatcher)) {
-                    const adjusted_chop = chop_fqdn.slice(inner_fqdn.length);
-                    prefix_specific_exclusions.push({ chopAfter: adjusted_chop });
-                }
-            }
-            else {
-                prefix_specific_exclusions.push(spex);
-            }
-        }
-
-        const refinement: Refinement | undefined = this.specificationFilter && other.specificationFilter
-            ? {
-                and: [ // There may be duplicated conditions here, but that does not matter.
-                    this.specificationFilter,
-                    other.specificationFilter,
-                ]
-            }
-            : this.specificationFilter ?? other.specificationFilter;
-        const adjusted_specific_exclusions = [
-            ...prefix_specific_exclusions, // The prefix subtree SEs can only be included after having been "re-based."
-            ...inner_subtree.specificExclusions ?? [], // The inner subtree SEs can remain.
-        ];
-
-        return [
-            new SubtreeSpecification(
-                undefined,
-                adjusted_specific_exclusions.length > 0
-                    ? adjusted_specific_exclusions
-                    : undefined,
-                minimum === 0 ? undefined : minimum,
-                maximum === Number.MAX_SAFE_INTEGER ? undefined : maximum,
-                refinement,
-            ),
-            inner_fqdn,
-        ];
+        return subtreeIntersection(
+            getEqualityMatcher,
+            this,
+            other,
+            thisRoot,
+            otherRoot,
+        );
     }
 
     /**
