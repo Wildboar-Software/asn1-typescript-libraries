@@ -22,6 +22,15 @@ import {
     overlapsInterval,
     unionOf,
 } from "../../utils/rangeAlgebra.mjs";
+import { isoInterval } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link UpdateWindow}.
+ */
+export type UpdateWindowJSON = {
+    start: string;
+    stop: string;
+};
 /**
  * @summary UpdateWindow
  * @description
@@ -252,6 +261,39 @@ export class UpdateWindow {
         return UpdateWindow._fromInterval(
             unionOf(this._interval(), other._interval()),
         );
+    }
+
+    /**
+     * @summary ISO 8601 time interval for this window
+     * @description
+     *
+     * `start/stop`, each an ISO 8601 instant in UTC. Both bounds are
+     * inclusive. Unrecognized extensions are omitted.
+     *
+     * @returns The interval `start/end`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return isoInterval(this.start, this.stop);
+    }
+
+    /**
+     * @summary Convert this `UpdateWindow` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `GeneralizedTime` values are ISO 8601 timestamps. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): UpdateWindowJSON {
+        return {
+            start: this.start.toISOString(),
+            stop: this.stop.toISOString(),
+        };
     }
 }
 

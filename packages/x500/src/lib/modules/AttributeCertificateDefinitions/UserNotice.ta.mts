@@ -12,9 +12,22 @@ import {
 } from "../AttributeCertificateDefinitions/DisplayText.ta.mjs";
 import {
     NoticeReference,
+    type NoticeReferenceJSON,
     _decode_NoticeReference,
     _encode_NoticeReference,
 } from "../AttributeCertificateDefinitions/NoticeReference.ta.mjs";
+import {
+    displayTextToJSON,
+    type DisplayTextJSON,
+} from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link UserNotice}.
+ */
+export type UserNoticeJSON = {
+    noticeRef?: NoticeReferenceJSON;
+    explicitText?: DisplayTextJSON;
+};
 /**
  * @summary UserNotice
  * @description
@@ -69,6 +82,27 @@ export class UserNotice {
         _o: { [_K in keyof UserNotice]: UserNotice[_K] }
     ): UserNotice {
         return new UserNotice(_o.noticeRef, _o.explicitText);
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Absent optional components are omitted.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): UserNoticeJSON {
+        const json: UserNoticeJSON = {};
+        if (this.noticeRef !== undefined) {
+            json.noticeRef = this.noticeRef.toJSON();
+        }
+        if (this.explicitText !== undefined) {
+            json.explicitText = displayTextToJSON(this.explicitText);
+        }
+        return json;
     }
 }
 

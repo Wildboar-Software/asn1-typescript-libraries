@@ -19,6 +19,16 @@ import {
     overlapsInterval,
     unionOf,
 } from "../../utils/rangeAlgebra.mjs";
+import { isoInterval } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link TimeAssertion_between}.
+ */
+export type TimeAssertion_betweenJSON = {
+    startTime: string;
+    endTime?: string;
+    entirely?: boolean;
+};
 
 /**
  * @summary TimeAssertion_between
@@ -311,6 +321,49 @@ export class TimeAssertion_between {
             unionOf(this._interval(), other._interval()),
             this.entirely,
         );
+    }
+
+    /**
+     * @summary ISO 8601 time interval for this assertion band
+     * @description
+     *
+     * `startTime/endTime`. A missing `endTime` is left empty. When
+     * `entirely` is TRUE, the interval is followed by ` entirely`.
+     * DEFAULT `entirely` FALSE is omitted. Unrecognized extensions
+     * are omitted.
+     *
+     * @returns The interval, optionally tagged `entirely`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const interval = isoInterval(this.startTime, this.endTime);
+        return this.entirelyValue() ? `${interval} entirely` : interval;
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `GeneralizedTime` values are ISO 8601 timestamps. DEFAULT
+     * `entirely` FALSE is omitted. Unrecognized extensions are not
+     * represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): TimeAssertion_betweenJSON {
+        const json: TimeAssertion_betweenJSON = {
+            startTime: this.startTime.toISOString(),
+        };
+        if (this.endTime !== undefined) {
+            json.endTime = this.endTime.toISOString();
+        }
+        if (this.entirelyValue()) {
+            json.entirely = true;
+        }
+        return json;
     }
 }
 

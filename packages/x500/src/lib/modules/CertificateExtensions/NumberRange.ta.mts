@@ -23,6 +23,19 @@ import {
     sameIntegerBytes,
     unionOf,
 } from "../../utils/rangeAlgebra.mjs";
+import {
+    integerBytesToJSON,
+    integerBytesToString,
+} from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link NumberRange}.
+ */
+export type NumberRangeJSON = {
+    startingNumber?: number | string;
+    endingNumber?: number | string;
+    modulus?: number | string;
+};
 
 /**
  * @summary NumberRange
@@ -443,6 +456,57 @@ export class NumberRange {
             }
         }
         return out;
+    }
+
+    /**
+     * @summary Half-open integer interval for this range
+     * @description
+     *
+     * `[startingNumber,endingNumber)` with an omitted bound left empty.
+     * When `modulus` is present, ` mod N` is appended. Unrecognized
+     * extensions are omitted.
+     *
+     * @returns The interval, optionally with a modulus
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const start = integerBytesToString(this.startingNumber);
+        const end = integerBytesToString(this.endingNumber);
+        let text = `[${start},${end})`;
+        if (this.modulus !== undefined) {
+            text += ` mod ${integerBytesToString(this.modulus)}`;
+        }
+        return text;
+    }
+
+    /**
+     * @summary Convert this `NumberRange` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * INTEGER components are JSON numbers, or decimal strings when they
+     * are not JSON-safe. Absent optional components are omitted.
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): NumberRangeJSON {
+        const json: NumberRangeJSON = {};
+        const startingNumber = integerBytesToJSON(this.startingNumber);
+        const endingNumber = integerBytesToJSON(this.endingNumber);
+        const modulus = integerBytesToJSON(this.modulus);
+        if (startingNumber !== undefined) {
+            json.startingNumber = startingNumber;
+        }
+        if (endingNumber !== undefined) {
+            json.endingNumber = endingNumber;
+        }
+        if (modulus !== undefined) {
+            json.modulus = modulus;
+        }
+        return json;
     }
 }
 

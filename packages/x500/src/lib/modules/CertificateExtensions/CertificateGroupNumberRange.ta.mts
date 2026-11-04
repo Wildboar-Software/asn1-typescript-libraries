@@ -19,6 +19,15 @@ import {
     overlapsInterval,
     unionOf,
 } from "../../utils/rangeAlgebra.mjs";
+import { integerToJSON, integerToString } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link CertificateGroupNumberRange}.
+ */
+export type CertificateGroupNumberRangeJSON = {
+    startingNumber: number | string;
+    endingNumber: number | string;
+};
 
 /**
  * @summary CertificateGroupNumberRange
@@ -339,6 +348,39 @@ export class CertificateGroupNumberRange {
             }
         }
         return out;
+    }
+
+    /**
+     * @summary Closed integer interval for this serial range
+     * @description
+     *
+     * `[startingNumber,endingNumber]`. Both bounds are inclusive.
+     * Unrecognized extensions are omitted.
+     *
+     * @returns The interval
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return `[${integerToString(this.startingNumber)},${integerToString(this.endingNumber)}]`;
+    }
+
+    /**
+     * @summary Convert this range to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * INTEGER components are JSON numbers, or decimal strings when they
+     * are not JSON-safe. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): CertificateGroupNumberRangeJSON {
+        return {
+            startingNumber: integerToJSON(this.startingNumber),
+            endingNumber: integerToJSON(this.endingNumber),
+        };
     }
 }
 

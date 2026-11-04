@@ -11,6 +11,19 @@ import {
     _decode_DisplayText,
     _encode_DisplayText,
 } from "../AttributeCertificateDefinitions/DisplayText.ta.mjs";
+import {
+    displayTextToJSON,
+    integerToJSON,
+    type DisplayTextJSON,
+} from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link NoticeReference}.
+ */
+export type NoticeReferenceJSON = {
+    organization: DisplayTextJSON;
+    noticeNumbers: Array<number | string>;
+};
 /**
  * @summary NoticeReference
  * @description
@@ -65,6 +78,24 @@ export class NoticeReference {
         _o: { [_K in keyof NoticeReference]: NoticeReference[_K] }
     ): NoticeReference {
         return new NoticeReference(_o.organization, _o.noticeNumbers);
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `organization` is the character content of `DisplayText`. Notice
+     * numbers that are not JSON-safe are decimal strings.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): NoticeReferenceJSON {
+        return {
+            organization: displayTextToJSON(this.organization),
+            noticeNumbers: this.noticeNumbers.map(integerToJSON),
+        };
     }
 }
 

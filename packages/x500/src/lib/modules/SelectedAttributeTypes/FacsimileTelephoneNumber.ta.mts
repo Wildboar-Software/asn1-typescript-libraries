@@ -7,6 +7,13 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import {
     type G3FacsimileNonBasicParameters,
+    two_dimensional,
+    fine_resolution,
+    unlimited_length,
+    b4_length,
+    a3_width,
+    b4_width,
+    uncompressed,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta.mjs";
@@ -15,6 +22,25 @@ import {
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
+import { bitStringToJSON, type BitStringJSON } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link FacsimileTelephoneNumber}.
+ */
+export type FacsimileTelephoneNumberJSON = {
+    telephoneNumber: string;
+    parameters?: BitStringJSON;
+};
+
+const RFC_4517_FAX_PARAMETERS: ReadonlyArray<[number, string]> = [
+    [ two_dimensional, "twoDimensional" ],
+    [ fine_resolution, "fineResolution" ],
+    [ unlimited_length, "unlimitedLength" ],
+    [ b4_length, "b4Length" ],
+    [ a3_width, "a3Width" ],
+    [ b4_width, "b4Width" ],
+    [ uncompressed, "uncompressed" ],
+];
 /**
  * @summary FacsimileTelephoneNumber
  * @description
@@ -95,6 +121,53 @@ export class FacsimileTelephoneNumber {
             _o.parameters,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary RFC 4517 Facsimile Telephone Number LDAP syntax
+     * @description
+     *
+     * `telephoneNumber` plus `$`-separated fax parameters from
+     * [IETF RFC 4517](https://www.rfc-editor.org/rfc/rfc4517) when
+     * those bits are set. Other G3 bits and unrecognized extensions
+     * are omitted.
+     *
+     * @returns The LDAP facsimile telephone number
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const parts: string[] = [ this.telephoneNumber ];
+        if (this.parameters) {
+            for (const [ bit, name ] of RFC_4517_FAX_PARAMETERS) {
+                if (this.parameters[bit]) {
+                    parts.push(name);
+                }
+            }
+        }
+        return parts.join("$");
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `parameters` is a `{ value, length }` bit string (X.697 clause
+     * 24.3). Absent optional components are omitted. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): FacsimileTelephoneNumberJSON {
+        const json: FacsimileTelephoneNumberJSON = {
+            telephoneNumber: this.telephoneNumber,
+        };
+        if (this.parameters !== undefined) {
+            json.parameters = bitStringToJSON(this.parameters);
+        }
+        return json;
     }
 }
 

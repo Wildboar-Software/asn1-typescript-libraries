@@ -15,6 +15,20 @@ import {
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../SelectedAttributeTypes/UniqueIdentifier.ta.mjs";
+import {
+    rdnSequenceToJSON,
+    rdnSequenceToString,
+    type RDNSequenceJSON,
+} from "@wildboar/dn";
+import { bitStringToJSON, bitStringToRfc4517, type BitStringJSON } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link NameAndOptionalUID}.
+ */
+export type NameAndOptionalUIDJSON = {
+    dn: RDNSequenceJSON;
+    uid?: BitStringJSON;
+};
 /**
  * @summary NameAndOptionalUID
  * @description
@@ -92,6 +106,50 @@ export class NameAndOptionalUID {
             _o.uid,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary RFC 4517 Name And Optional UID LDAP syntax
+     * @description
+     *
+     * The distinguished name is written with
+     * {@link rdnSequenceToString} (X.500 RDN order, not the reversed
+     * RFC 4514 order). When `uid` is present, `#` and an RFC 4517
+     * `'bits'B` bitstring are appended. Unrecognized extensions are
+     * omitted.
+     *
+     * @returns The name, optionally with a unique identifier
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const dn = rdnSequenceToString(this.dn);
+        if (this.uid === undefined) {
+            return dn;
+        }
+        return `${dn}#${bitStringToRfc4517(this.uid)}`;
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `dn` uses the reversible RDN JSON from `@wildboar/dn`. `uid` is
+     * a `{ value, length }` bit string. Absent optional components
+     * are omitted. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): NameAndOptionalUIDJSON {
+        const json: NameAndOptionalUIDJSON = {
+            dn: rdnSequenceToJSON(this.dn),
+        };
+        if (this.uid !== undefined) {
+            json.uid = bitStringToJSON(this.uid);
+        }
+        return json;
     }
 }
 

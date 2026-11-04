@@ -10,6 +10,18 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import {
+    unboundedDirectoryStringToJSON,
+    type UnboundedDirectoryStringJSON,
+} from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link DualStringSyntax}.
+ */
+export type DualStringSyntaxJSON = {
+    operation: UnboundedDirectoryStringJSON;
+    object: UnboundedDirectoryStringJSON;
+};
 /**
  * @summary DualStringSyntax
  * @description
@@ -77,6 +89,25 @@ export class DualStringSyntax {
             _o.object,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Each directory string is its character content. The CHOICE
+     * alternative is not preserved. Unrecognized extensions are not
+     * represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): DualStringSyntaxJSON {
+        return {
+            operation: unboundedDirectoryStringToJSON(this.operation),
+            object: unboundedDirectoryStringToJSON(this.object),
+        };
     }
 }
 

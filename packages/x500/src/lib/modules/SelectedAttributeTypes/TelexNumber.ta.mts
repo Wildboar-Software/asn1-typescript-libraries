@@ -8,6 +8,15 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 
 /**
+ * JSON Encoding Rules encoding of {@link TelexNumber}.
+ */
+export type TelexNumberJSON = {
+    telexNumber: string;
+    countryCode: string;
+    answerback: string;
+};
+
+/**
  * @summary TelexNumber
  * @description
  *
@@ -96,6 +105,39 @@ export class TelexNumber {
             _o.answerback,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary RFC 4517 Telex Number LDAP syntax
+     * @description
+     *
+     * `telexNumber$countryCode$answerback`. Unrecognized extensions
+     * are omitted.
+     *
+     * @returns The LDAP telex number
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return `${this.telexNumber}$${this.countryCode}$${this.answerback}`;
+    }
+
+    /**
+     * @summary Convert this `TelexNumber` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): TelexNumberJSON {
+        return {
+            telexNumber: this.telexNumber,
+            countryCode: this.countryCode,
+            answerback: this.answerback,
+        };
     }
 }
 
