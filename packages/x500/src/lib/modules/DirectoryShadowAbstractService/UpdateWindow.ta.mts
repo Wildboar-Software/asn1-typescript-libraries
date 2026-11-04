@@ -10,6 +10,18 @@ import {
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
+import {
+    type Interval,
+    boundToDate,
+    compareIntervals,
+    containsInterval,
+    containsPoint,
+    dateToBound,
+    intersectionOf,
+    isEmptyInterval,
+    overlapsInterval,
+    unionOf,
+} from "../../utils/rangeAlgebra.mjs";
 /**
  * @summary UpdateWindow
  * @description
@@ -18,6 +30,13 @@ import {
  * only if the agreement's `SchedulingParameters.othertimes` is TRUE. On
  * `shadowError`, present only with `unsuitableTiming`. Takes precedence
  * over `PeriodicStrategy` when `othertimes` is also TRUE.
+ *
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
+ * `intersection`, `union`, and `with` derive new values instead of
+ * mutating. `Date` plays the role of VS Code `Position` (`start` /
+ * `stop` as `start` / `end`). Both bounds are inclusive. Unlike
+ * VS Code `Range`, inverted bounds are **not** swapped.
  *
  * ### ASN.1 Definition:
  *
@@ -87,6 +106,196 @@ export class UpdateWindow {
             _o.start,
             _o.stop,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary This window as a 1-D interval.
+     * @returns {Interval} Inclusive `start` / `stop` bounds.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private _interval (): Interval {
+        return {
+            start: dateToBound(this.start),
+            end: dateToBound(this.stop),
+        };
+    }
+
+    /**
+     * @summary Build a window from 1-D interval bounds.
+     * @param {Interval} interval Inclusive bounds.
+     * @returns {UpdateWindow} The corresponding window.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _fromInterval (interval: Interval): UpdateWindow {
+        const start = boundToDate(interval.start);
+        const stop = boundToDate(interval.end);
+        if ((start === undefined) || (stop === undefined)) {
+            throw new Error("UpdateWindow bounds are required");
+        }
+        return new UpdateWindow(start, stop);
+    }
+
+    /**
+     * @summary Compare this window to another for ordering.
+     * @param {UpdateWindow} other The comparefn `b` argument.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: UpdateWindow): number {
+        return compareIntervals(this._interval(), other._interval());
+    }
+
+    /**
+     * @summary Whether two windows have the same start and stop.
+     * @description
+     *
+     * Copies VS Code `Range.isEqual` (named `isEqualTo` like
+     * `DayTimeBand`). Compared as instants, not object identity.
+     *
+     * @param {UpdateWindow} other The other window.
+     * @returns {boolean} `true` iff both bounds match.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: UpdateWindow): boolean {
+        return (this.compare(other) === 0);
+    }
+
+    /**
+     * @summary Whether start is after stop (matches no instant).
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` in spirit. A window covering a
+     * single instant is not empty.
+     *
+     * @returns {boolean} `true` iff `start` is after `stop`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEmpty (): boolean {
+        return isEmptyInterval(this._interval(), false);
+    }
+
+    /**
+     * @summary Whether this window contains a date or another window.
+     * @description
+     *
+     * Copies VS Code `Range.contains`. Closed interval.
+     *
+     * @param {Date | UpdateWindow} dateOrWindow A date or window.
+     * @returns {boolean} `true` iff every included instant is in this.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public contains (dateOrWindow: Date | UpdateWindow): boolean {
+        if (dateOrWindow instanceof UpdateWindow) {
+            return containsInterval(
+                this._interval(),
+                dateOrWindow._interval(),
+                false,
+            );
+        }
+        return containsPoint(
+            this._interval(),
+            BigInt(dateOrWindow.getTime()),
+            false,
+        );
+    }
+
+    /**
+     * @summary Whether this window shares any instant with `other`.
+     * @param {UpdateWindow} other The other window.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public overlaps (other: UpdateWindow): boolean {
+        return overlapsInterval(this._interval(), other._interval(), false);
+    }
+
+    /**
+     * @summary Overlap of this window and `other`, if any.
+     * @description
+     *
+     * Copies VS Code `Range.intersection`.
+     *
+     * @param {UpdateWindow} other The other window.
+     * @returns {UpdateWindow | undefined} The overlap, or `undefined`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public intersection (other: UpdateWindow): UpdateWindow | undefined {
+        const overlap = intersectionOf(
+            this._interval(),
+            other._interval(),
+            false,
+        );
+        return overlap ? UpdateWindow._fromInterval(overlap) : undefined;
+    }
+
+    /**
+     * @summary Smallest window covering this window and `other`.
+     * @description
+     *
+     * Copies VS Code `Range.union`. A gap is filled.
+     *
+     * @param {UpdateWindow} other The other window.
+     * @returns {UpdateWindow} One window spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public union (other: UpdateWindow): UpdateWindow {
+        return UpdateWindow._fromInterval(
+            unionOf(this._interval(), other._interval()),
+        );
+    }
+
+    /**
+     * @summary Copy this window, replacing start and/or stop.
+     * @description
+     *
+     * Copies VS Code `Range.with`.
+     *
+     * @param {Date | object} [startOrChange] New `start`, or a change
+     * object with optional `start` / `stop`.
+     * @param {Date} [stop] New `stop` when using positional args.
+     * @returns {UpdateWindow} A new window, or `this` if unchanged.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public with (
+        startOrChange?: Date | {
+            start?: Date;
+            stop?: Date;
+        },
+        stop?: Date,
+    ): UpdateWindow {
+        let start = this.start;
+        let nextStop = this.stop;
+        if (startOrChange instanceof Date) {
+            start = startOrChange;
+            nextStop = (stop !== undefined) ? stop : this.stop;
+        } else if (startOrChange === undefined) {
+            nextStop = (stop !== undefined) ? stop : this.stop;
+        } else {
+            start = (startOrChange.start !== undefined)
+                ? startOrChange.start
+                : this.start;
+            nextStop = (startOrChange.stop !== undefined)
+                ? startOrChange.stop
+                : this.stop;
+        }
+        if ((start === this.start) && (nextStop === this.stop)) {
+            return this;
+        }
+        return new UpdateWindow(
+            start,
+            nextStop,
+            this._unrecognizedExtensionsList,
         );
     }
 }

@@ -2,10 +2,27 @@
 import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    type INTEGER,
     type OCTET_STRING,
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type Interval,
+    adjacencyOf,
+    boundToIntegerBytes,
+    compareIntervals,
+    containsInterval,
+    containsPoint,
+    euclideanMod,
+    integerBytesToBound,
+    integerToBound,
+    intersectionOf,
+    isEmptyInterval,
+    overlapsInterval,
+    sameIntegerBytes,
+    unionOf,
+} from "../../utils/rangeAlgebra.mjs";
 
 /**
  * @summary NumberRange
@@ -16,6 +33,15 @@ import * as $ from "@wildboar/asn1/functional";
  * ending is exclusive (X.509). Omitted bound = unbounded that side. Serials
  * unique per issuer, not sequential. Contrast CertificateGroupNumberRange
  * (inclusive).
+ *
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
+ * `intersection`, `union`, and `with` derive new values instead of
+ * mutating. The integer (after optional modulus) plays the role of
+ * VS Code `Position`. Unlike VS Code `Range`, inverted bounds are
+ * **not** swapped, and `endingNumber` is exclusive. `intersection`
+ * and `union` require the same `modulus` (including both omitted);
+ * differing moduli cannot share one modular line.
  *
  * ### ASN.1 Definition:
  *
@@ -101,6 +127,377 @@ export class NumberRange {
             _o.modulus,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary This range as a 1-D interval in reduced space.
+     * @description
+     *
+     * Bounds are the encoded `startingNumber` / `endingNumber`
+     * themselves (already in post-modulus space per X.509).
+     *
+     * @returns {Interval} Half-open `[start, end)` bounds.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private _interval (): Interval {
+        return {
+            start: integerBytesToBound(this.startingNumber),
+            end: integerBytesToBound(this.endingNumber),
+        };
+    }
+
+    /**
+     * @summary Build a range from 1-D interval bounds.
+     * @param {Interval} interval Half-open bounds.
+     * @param {OCTET_STRING} [modulus] Shared modulus, if any.
+     * @returns {NumberRange} The corresponding range.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _fromInterval (
+        interval: Interval,
+        modulus?: OCTET_STRING,
+    ): NumberRange {
+        return new NumberRange(
+            boundToIntegerBytes(interval.start),
+            boundToIntegerBytes(interval.end),
+            modulus,
+        );
+    }
+
+    /**
+     * @summary Whether `other` uses the same modulus as this range.
+     * @param {NumberRange} other The other range.
+     * @returns {boolean} `true` iff both omitted or equal as integers.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public sameModulus (other: NumberRange): boolean {
+        return sameIntegerBytes(this.modulus, other.modulus);
+    }
+
+    /**
+     * @summary Compare this range to another for ordering.
+     * @description
+     *
+     * Orders by start, then end, then modulus (omitted first).
+     *
+     * @param {NumberRange} other The comparefn `b` argument.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: NumberRange): number {
+        const timeDiff = compareIntervals(
+            this._interval(),
+            other._interval(),
+        );
+        if (timeDiff !== 0) {
+            return timeDiff;
+        }
+        const aMod = integerBytesToBound(this.modulus);
+        const bMod = integerBytesToBound(other.modulus);
+        if (aMod === undefined && bMod === undefined) {
+            return 0;
+        }
+        if (aMod === undefined) {
+            return -1;
+        }
+        if (bMod === undefined) {
+            return 1;
+        }
+        if (aMod < bMod) {
+            return -1;
+        }
+        if (aMod > bMod) {
+            return 1;
+        }
+        return 0;
+    }
+
+    /**
+     * @summary Whether two ranges have the same bounds and modulus.
+     * @description
+     *
+     * Copies VS Code `Range.isEqual` (named `isEqualTo` like
+     * `DayTimeBand`). Compared numerically, not by DER encoding.
+     *
+     * @param {NumberRange} other The other range.
+     * @returns {boolean} `true` iff bounds and modulus match.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: NumberRange): boolean {
+        return (this.compare(other) === 0);
+    }
+
+    /**
+     * @summary Whether the half-open interval matches no integer.
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` in spirit. Empty when both
+     * bounds are present and `startingNumber >= endingNumber`
+     * (exclusive end). One-sided ranges are not empty.
+     *
+     * @returns {boolean} `true` iff the reduced interval is empty.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEmpty (): boolean {
+        return isEmptyInterval(this._interval(), true);
+    }
+
+    /**
+     * @summary Reduce `n` by this range's modulus, if any.
+     * @param {bigint} n The integer.
+     * @returns {bigint} `n` modulo `modulus`, or `n`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private _reduce (n: bigint): bigint {
+        const modulus = integerBytesToBound(this.modulus);
+        return (modulus === undefined) ? n : euclideanMod(n, modulus);
+    }
+
+    /**
+     * @summary Whether this range contains an integer or another range.
+     * @description
+     *
+     * Copies VS Code `Range.contains`. After optional modulus, a
+     * point is in-scope if ≥ `startingNumber` (when present) and
+     * < `endingNumber` (when present). Another `NumberRange` is
+     * contained only when moduli match and its reduced interval is
+     * a subset.
+     *
+     * @param {INTEGER | OCTET_STRING | NumberRange} valueOrRange
+     * A serial, INTEGER encoding, or range.
+     * @returns {boolean} `true` iff every included integer is in this.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public contains (
+        valueOrRange: INTEGER | OCTET_STRING | NumberRange,
+    ): boolean {
+        if (valueOrRange instanceof NumberRange) {
+            if (!this.sameModulus(valueOrRange)) {
+                return false;
+            }
+            return containsInterval(
+                this._interval(),
+                valueOrRange._interval(),
+                true,
+            );
+        }
+        const n = (valueOrRange instanceof Uint8Array)
+            ? integerBytesToBound(valueOrRange)
+            : integerToBound(valueOrRange);
+        if (n === undefined) {
+            return false;
+        }
+        return containsPoint(this._interval(), this._reduce(n), true);
+    }
+
+    /**
+     * @summary Whether this range shares any integer with `other`.
+     * @description
+     *
+     * False when moduli differ: the ranges are not on the same
+     * modular line.
+     *
+     * @param {NumberRange} other The other range.
+     * @returns {boolean} `true` iff the half-open ranges intersect.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public overlaps (other: NumberRange): boolean {
+        if (!this.sameModulus(other)) {
+            return false;
+        }
+        return overlapsInterval(this._interval(), other._interval(), true);
+    }
+
+    /**
+     * @summary Overlap of this range and `other`, if any.
+     * @description
+     *
+     * Copies VS Code `Range.intersection`. Returns `undefined` when
+     * moduli differ or the half-open intervals do not overlap.
+     *
+     * @param {NumberRange} other The other range.
+     * @returns {NumberRange | undefined} The overlap, or `undefined`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public intersection (other: NumberRange): NumberRange | undefined {
+        if (!this.sameModulus(other)) {
+            return undefined;
+        }
+        const overlap = intersectionOf(
+            this._interval(),
+            other._interval(),
+            true,
+        );
+        return overlap
+            ? NumberRange._fromInterval(overlap, this.modulus)
+            : undefined;
+    }
+
+    /**
+     * @summary Smallest range covering this range and `other`.
+     * @description
+     *
+     * Copies VS Code `Range.union`. A gap is filled. Throws if the
+     * moduli differ, because the result would not be one modular
+     * `NumberRange`.
+     *
+     * @param {NumberRange} other The other range.
+     * @returns {NumberRange} One range spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public union (other: NumberRange): NumberRange {
+        if (!this.sameModulus(other)) {
+            throw new Error("NumberRange.union: modulus values differ");
+        }
+        return this.merge(other);
+    }
+
+    /**
+     * @summary Copy this range, replacing selected fields.
+     * @description
+     *
+     * Copies VS Code `Range.with`.
+     *
+     * @param {OCTET_STRING | object} [startOrChange] New
+     * `startingNumber`, or a change object.
+     * @param {OCTET_STRING} [end] New `endingNumber` when positional.
+     * @returns {NumberRange} A new range, or `this` if unchanged.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public with (
+        startOrChange?: OCTET_STRING | {
+            startingNumber?: OCTET_STRING;
+            endingNumber?: OCTET_STRING;
+            modulus?: OCTET_STRING;
+        },
+        end?: OCTET_STRING,
+    ): NumberRange {
+        let start = this.startingNumber;
+        let nextEnd = this.endingNumber;
+        let modulus = this.modulus;
+        if (startOrChange instanceof Uint8Array) {
+            start = startOrChange;
+            nextEnd = (end !== undefined) ? end : this.endingNumber;
+        } else if (startOrChange === undefined) {
+            nextEnd = (end !== undefined) ? end : this.endingNumber;
+        } else {
+            start = (startOrChange.startingNumber !== undefined)
+                ? startOrChange.startingNumber
+                : this.startingNumber;
+            nextEnd = (startOrChange.endingNumber !== undefined)
+                ? startOrChange.endingNumber
+                : this.endingNumber;
+            modulus = (startOrChange.modulus !== undefined)
+                ? startOrChange.modulus
+                : this.modulus;
+        }
+        if (
+            (start === this.startingNumber)
+            && (nextEnd === this.endingNumber)
+            && (modulus === this.modulus)
+        ) {
+            return this;
+        }
+        return new NumberRange(
+            start,
+            nextEnd,
+            modulus,
+            this._unrecognizedExtensionsList,
+        );
+    }
+
+    /**
+     * @summary Whether `other` abuts this range with no gap or overlap.
+     * @description
+     *
+     * Adjacent means one exclusive end equals the other's start.
+     * False when moduli differ.
+     *
+     * @param {NumberRange} other The other range.
+     * @returns {number} `-1` if `other` is adjacent below; `1` if
+     * adjacent above; `0` if not adjacent.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isAdjacentTo (other: NumberRange): -1 | 0 | 1 {
+        if (!this.sameModulus(other)) {
+            return 0;
+        }
+        return adjacencyOf(this._interval(), other._interval(), true);
+    }
+
+    /**
+     * @summary Covering interval of this range and `other`.
+     * @description
+     *
+     * Assumes the same modulus. A gap is filled.
+     *
+     * @param {NumberRange} other The other range.
+     * @returns {NumberRange} One range spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public merge (other: NumberRange): NumberRange {
+        if (!this.sameModulus(other)) {
+            throw new Error("NumberRange.merge: modulus values differ");
+        }
+        return NumberRange._fromInterval(
+            unionOf(this._interval(), other._interval()),
+            this.modulus,
+        );
+    }
+
+    /**
+     * @summary Flatten overlapping and adjacent `NumberRange`s.
+     * @description
+     *
+     * Sorts by start, end, then modulus. Merges a pair only when
+     * they share a modulus and `overlap` or `isAdjacentTo`. Empty
+     * ranges are dropped. Ranges with different moduli stay
+     * separate even if their numeric bounds overlap.
+     *
+     * @param {readonly NumberRange[]} ranges Any order.
+     * @returns {NumberRange[]} Disjoint, non-adjacent ranges, sorted.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public static flatten (ranges: readonly NumberRange[]): NumberRange[] {
+        const sorted = ranges
+            .filter((range): boolean => !range.isEmpty())
+            .sort((a, b) => a.compare(b));
+        const count = sorted.length;
+        if (count === 0) {
+            return [];
+        }
+        if (count === 1) {
+            return [ sorted[0] ];
+        }
+        const out: NumberRange[] = [ sorted[0] ];
+        for (let i = 1; i < count; i++) {
+            const last = out[out.length - 1];
+            const next = sorted[i];
+            if (
+                last.sameModulus(next)
+                && (last.overlaps(next) || last.isAdjacentTo(next))
+            ) {
+                out[out.length - 1] = last.merge(next);
+            } else {
+                out.push(next);
+            }
+        }
+        return out;
     }
 }
 

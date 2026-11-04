@@ -14,9 +14,9 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * `hour` 0..23; `minute`/`second` DEFAULT 0 (0..59).
  *
- * Ordering, `translate`, `with`, `Min`, and `Max` are inspired by
- * the VS Code `Position` API. Unlike a text position, this value is
- * a clock time on a single civil day (0..86399 seconds).
+ * Ordering, `translate`, `with`, `Min`, and `Max` copy what works
+ * from the VS Code `Position` API. Unlike a text position, this
+ * value is a clock time on a single civil day (0..86399 seconds).
  *
  * @author Cursor Grok 4.6
  *
