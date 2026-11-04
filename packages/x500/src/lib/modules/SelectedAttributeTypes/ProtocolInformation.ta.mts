@@ -7,6 +7,15 @@ import {
     type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { octetStringToJSON } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link ProtocolInformation}.
+ */
+export type ProtocolInformationJSON = {
+    nAddress: string;
+    profiles: string[];
+};
 
 /**
  * @summary ProtocolInformation
@@ -72,6 +81,46 @@ export class ProtocolInformation {
         _o: { [_K in keyof ProtocolInformation]: ProtocolInformation[_K] }
     ): ProtocolInformation {
         return new ProtocolInformation(_o.nAddress, _o.profiles);
+    }
+
+    /**
+     * @summary RFC 4517 Protocol Information LDAP syntax
+     * @description
+     *
+     * Each profile OID is written as `numericoid$hex-nAddress`.
+     * Multiple profiles are joined with `$`. An empty `profiles` SET
+     * yields only the hexadecimal NSAP.
+     *
+     * @returns The LDAP protocol information
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const address = octetStringToJSON(this.nAddress);
+        if (this.profiles.length === 0) {
+            return address;
+        }
+        return this.profiles
+            .map((profile) => `${profile.toString()}$${address}`)
+            .join("$");
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `nAddress` is hexadecimal. `profiles` are dotted-decimal object
+     * identifiers.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): ProtocolInformationJSON {
+        return {
+            nAddress: octetStringToJSON(this.nAddress),
+            profiles: this.profiles.map((profile) => profile.toJSON()),
+        };
     }
 }
 

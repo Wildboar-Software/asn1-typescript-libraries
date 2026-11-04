@@ -18,6 +18,15 @@ import {
     overlapsInterval,
     unionOf,
 } from "../../utils/rangeAlgebra.mjs";
+import { isoInterval } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link PrivateKeyUsagePeriod}.
+ */
+export type PrivateKeyUsagePeriodJSON = {
+    notBefore?: string;
+    notAfter?: string;
+};
 
 /**
  * @summary PrivateKeyUsagePeriod
@@ -269,6 +278,44 @@ export class PrivateKeyUsagePeriod {
         return PrivateKeyUsagePeriod._fromInterval(
             unionOf(this._interval(), other._interval()),
         );
+    }
+
+    /**
+     * @summary ISO 8601 time interval for this period
+     * @description
+     *
+     * `notBefore/notAfter`, each an ISO 8601 instant in UTC. A missing
+     * bound is left empty (`/end` or `start/`). Both present bounds
+     * are inclusive. Unrecognized extensions are omitted.
+     *
+     * @returns The interval `start/end`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return isoInterval(this.notBefore, this.notAfter);
+    }
+
+    /**
+     * @summary Convert this `PrivateKeyUsagePeriod` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `GeneralizedTime` values are ISO 8601 timestamps. Absent optional
+     * components are omitted. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): PrivateKeyUsagePeriodJSON {
+        const json: PrivateKeyUsagePeriodJSON = {};
+        if (this.notBefore !== undefined) {
+            json.notBefore = this.notBefore.toISOString();
+        }
+        if (this.notAfter !== undefined) {
+            json.notAfter = this.notAfter.toISOString();
+        }
+        return json;
     }
 }
 

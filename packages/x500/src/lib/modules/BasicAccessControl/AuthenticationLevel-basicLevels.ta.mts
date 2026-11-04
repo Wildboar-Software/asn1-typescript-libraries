@@ -13,6 +13,44 @@ import {
     _encode_AuthenticationLevel_basicLevels_level,
     _enum_for_AuthenticationLevel_basicLevels_level,
 } from "../BasicAccessControl/AuthenticationLevel-basicLevels-level.ta.mjs";
+import { integerToJSON, integerToString } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link AuthenticationLevel_basicLevels}.
+ */
+export type AuthenticationLevel_basicLevelsJSON = {
+    level: "none" | "simple" | "strong" | number;
+    localQualifier?: number | string;
+    signed?: boolean;
+};
+
+function levelToString(level: AuthenticationLevel_basicLevels_level): string {
+    switch (level) {
+        case _enum_for_AuthenticationLevel_basicLevels_level.none:
+            return "none";
+        case _enum_for_AuthenticationLevel_basicLevels_level.simple:
+            return "simple";
+        case _enum_for_AuthenticationLevel_basicLevels_level.strong:
+            return "strong";
+        default:
+            return integerToString(level);
+    }
+}
+
+function levelToJSON(
+    level: AuthenticationLevel_basicLevels_level,
+): "none" | "simple" | "strong" | number {
+    switch (level) {
+        case _enum_for_AuthenticationLevel_basicLevels_level.none:
+            return "none";
+        case _enum_for_AuthenticationLevel_basicLevels_level.simple:
+            return "simple";
+        case _enum_for_AuthenticationLevel_basicLevels_level.strong:
+            return "strong";
+        default:
+            return Number(level);
+    }
+}
 /**
  * @summary AuthenticationLevel_basicLevels
  * @description
@@ -111,6 +149,54 @@ export class AuthenticationLevel_basicLevels {
      */
 
     public static _enum_for_level: typeof _enum_for_AuthenticationLevel_basicLevels_level = _enum_for_AuthenticationLevel_basicLevels_level;
+
+    /**
+     * @summary ASN.1 value notation for these basic authentication levels
+     * @description
+     *
+     * `level` is the identifier `none`, `simple`, or `strong` when
+     * known. DEFAULT `signed` FALSE is omitted. Unrecognized
+     * extensions are omitted.
+     *
+     * @returns `{ level strong, localQualifier 3, signed TRUE }` or a subset
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const parts: string[] = [ `level ${levelToString(this.level)}` ];
+        if (this.localQualifier !== undefined) {
+            parts.push(`localQualifier ${integerToString(this.localQualifier)}`);
+        }
+        if (this.signed === true) {
+            parts.push("signed TRUE");
+        }
+        return `{ ${parts.join(", ")} }`;
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * `level` is the identifier when it is a known enumeration, else
+     * the integer. DEFAULT `signed` FALSE is omitted. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): AuthenticationLevel_basicLevelsJSON {
+        const json: AuthenticationLevel_basicLevelsJSON = {
+            level: levelToJSON(this.level),
+        };
+        if (this.localQualifier !== undefined) {
+            json.localQualifier = integerToJSON(this.localQualifier);
+        }
+        if (this.signed === true) {
+            json.signed = true;
+        }
+        return json;
+    }
 }
 
 /**

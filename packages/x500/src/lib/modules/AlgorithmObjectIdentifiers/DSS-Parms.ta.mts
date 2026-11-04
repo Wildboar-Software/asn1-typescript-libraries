@@ -6,6 +6,16 @@ import {
     type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { integerToJSON, integerToString } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link DSS_Parms}.
+ */
+export type DSS_ParmsJSON = {
+    p: number | string;
+    q: number | string;
+    g: number | string;
+};
 
 /**
  * @summary DSS_Parms
@@ -80,6 +90,39 @@ export class DSS_Parms {
         _o: { [_K in keyof DSS_Parms]: DSS_Parms[_K] }
     ): DSS_Parms {
         return new DSS_Parms(_o.p, _o.q, _o.g, _o._unrecognizedExtensionsList);
+    }
+
+    /**
+     * @summary ASN.1 value notation for these DSA parameters
+     * @description
+     *
+     * `{ p ..., q ..., g ... }`. Unrecognized extensions are omitted.
+     *
+     * @returns The value notation
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return `{ p ${integerToString(this.p)}, q ${integerToString(this.q)}, g ${integerToString(this.g)} }`;
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * INTEGER components are JSON numbers, or decimal strings when they
+     * are not JSON-safe. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): DSS_ParmsJSON {
+        return {
+            p: integerToJSON(this.p),
+            q: integerToJSON(this.q),
+            g: integerToJSON(this.g),
+        };
     }
 }
 

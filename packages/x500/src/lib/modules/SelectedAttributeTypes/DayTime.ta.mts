@@ -7,6 +7,16 @@ import {
     type TIME_OF_DAY,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { pad2 } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link DayTime}.
+ */
+export type DayTimeJSON = {
+    hour: number;
+    minute?: number;
+    second?: number;
+};
 
 /**
  * @summary DayTime
@@ -481,6 +491,52 @@ export class DayTime {
             }
         }
         return max;
+    }
+
+    /**
+     * @summary ISO 8601 `TIME-OF-DAY` (`hh:mm:ss`)
+     * @description
+     *
+     * Missing `minute` and `second` use DEFAULT 0. Unrecognized
+     * extensions are omitted.
+     *
+     * @returns The time of day
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const hour = Number(this.hour);
+        const minute = Number(this.minute ?? DayTime._default_value_for_minute);
+        const second = Number(this.second ?? DayTime._default_value_for_second);
+        return `${pad2(hour)}:${pad2(minute)}:${pad2(second)}`;
+    }
+
+    /**
+     * @summary Convert this `DayTime` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * DEFAULT `minute` and `second` of 0 are omitted. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): DayTimeJSON {
+        const json: DayTimeJSON = { hour: Number(this.hour) };
+        if (
+            (this.minute !== undefined)
+            && (Number(this.minute) !== Number(DayTime._default_value_for_minute))
+        ) {
+            json.minute = Number(this.minute);
+        }
+        if (
+            (this.second !== undefined)
+            && (Number(this.second) !== Number(DayTime._default_value_for_second))
+        ) {
+            json.second = Number(this.second);
+        }
+        return json;
     }
 }
 

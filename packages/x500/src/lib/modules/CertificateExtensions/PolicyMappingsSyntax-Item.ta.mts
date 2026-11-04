@@ -10,6 +10,14 @@ import {
     _decode_CertPolicyId,
     _encode_CertPolicyId,
 } from "../CertificateExtensions/CertPolicyId.ta.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link PolicyMappingsSyntax_Item}.
+ */
+export type PolicyMappingsSyntax_ItemJSON = {
+    issuerDomainPolicy: string;
+    subjectDomainPolicy: string;
+};
 /**
  * @summary PolicyMappingsSyntax_Item
  * @description
@@ -87,6 +95,39 @@ export class PolicyMappingsSyntax_Item {
             _o.subjectDomainPolicy,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Issuer-domain policy mapped to subject-domain policy
+     * @description
+     *
+     * Dotted-decimal object identifiers, `issuer->subject`. Unrecognized
+     * extensions are omitted.
+     *
+     * @returns The mapping
+     * @function
+     * @public
+     */
+    public toString(): string {
+        return `${this.issuerDomainPolicy.toString()}->${this.subjectDomainPolicy.toString()}`;
+    }
+
+    /**
+     * @summary Convert this mapping to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Object identifiers are dotted-decimal strings. Unrecognized
+     * extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): PolicyMappingsSyntax_ItemJSON {
+        return {
+            issuerDomainPolicy: this.issuerDomainPolicy.toJSON(),
+            subjectDomainPolicy: this.subjectDomainPolicy.toJSON(),
+        };
     }
 }
 

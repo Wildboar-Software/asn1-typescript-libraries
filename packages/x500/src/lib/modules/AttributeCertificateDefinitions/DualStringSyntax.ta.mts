@@ -10,6 +10,19 @@ import {
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import {
+    directoryStringToString,
+    unboundedDirectoryStringToJSON,
+    type UnboundedDirectoryStringJSON,
+} from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link DualStringSyntax}.
+ */
+export type DualStringSyntaxJSON = {
+    operation: UnboundedDirectoryStringJSON;
+    object: UnboundedDirectoryStringJSON;
+};
 /**
  * @summary DualStringSyntax
  * @description
@@ -77,6 +90,41 @@ export class DualStringSyntax {
             _o.object,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Print this dual-string value
+     * @description
+     *
+     * `{ operation:"...", object:"..." }`. Strings are JSON-escaped.
+     * Unrecognized extensions are omitted.
+     *
+     * @returns The printed value
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const operation = JSON.stringify(directoryStringToString(this.operation));
+        const object = JSON.stringify(directoryStringToString(this.object));
+        return `{ operation:${operation}, object:${object} }`;
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Each directory string is a wrapped choice. TeletexString octets
+     * are hexadecimal. Unrecognized extensions are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): DualStringSyntaxJSON {
+        return {
+            operation: unboundedDirectoryStringToJSON(this.operation),
+            object: unboundedDirectoryStringToJSON(this.object),
+        };
     }
 }
 

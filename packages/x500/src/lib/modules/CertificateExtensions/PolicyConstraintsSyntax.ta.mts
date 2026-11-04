@@ -10,6 +10,15 @@ import {
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";
+import { integerToJSON, integerToString } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link PolicyConstraintsSyntax}.
+ */
+export type PolicyConstraintsSyntaxJSON = {
+    requireExplicitPolicy?: number | string;
+    inhibitPolicyMapping?: number | string;
+};
 /**
  * @summary PolicyConstraintsSyntax
  * @description
@@ -93,6 +102,49 @@ export class PolicyConstraintsSyntax {
             _o.inhibitPolicyMapping,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary ASN.1 value notation for these policy constraints
+     * @description
+     *
+     * Absent optional components and unrecognized extensions are omitted.
+     *
+     * @returns `{ requireExplicitPolicy 0, inhibitPolicyMapping 1 }` or a subset
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const parts: string[] = [];
+        if (this.requireExplicitPolicy !== undefined) {
+            parts.push(`requireExplicitPolicy ${integerToString(this.requireExplicitPolicy)}`);
+        }
+        if (this.inhibitPolicyMapping !== undefined) {
+            parts.push(`inhibitPolicyMapping ${integerToString(this.inhibitPolicyMapping)}`);
+        }
+        return parts.length ? `{ ${parts.join(", ")} }` : "{}";
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * Absent optional components are omitted. Unrecognized extensions
+     * are not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): PolicyConstraintsSyntaxJSON {
+        const json: PolicyConstraintsSyntaxJSON = {};
+        if (this.requireExplicitPolicy !== undefined) {
+            json.requireExplicitPolicy = integerToJSON(this.requireExplicitPolicy);
+        }
+        if (this.inhibitPolicyMapping !== undefined) {
+            json.inhibitPolicyMapping = integerToJSON(this.inhibitPolicyMapping);
+        }
+        return json;
     }
 }
 

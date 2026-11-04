@@ -7,6 +7,15 @@ import {
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { integerToJSON, integerToString } from "../../json.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link BasicConstraintsSyntax}.
+ */
+export type BasicConstraintsSyntaxJSON = {
+    cA?: boolean;
+    pathLenConstraint?: number | string;
+};
 
 /**
  * @summary BasicConstraintsSyntax
@@ -98,6 +107,49 @@ export class BasicConstraintsSyntax {
      */
     public static get _default_value_for_cA(): BOOLEAN {
         return false;
+    }
+
+    /**
+     * @summary ASN.1 value notation for these basic constraints
+     * @description
+     *
+     * DEFAULT `cA` FALSE is omitted. Unrecognized extensions are omitted.
+     *
+     * @returns `{ cA TRUE, pathLenConstraint 0 }` or a subset
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const parts: string[] = [];
+        if (this.cA === true) {
+            parts.push("cA TRUE");
+        }
+        if (this.pathLenConstraint !== undefined) {
+            parts.push(`pathLenConstraint ${integerToString(this.pathLenConstraint)}`);
+        }
+        return parts.length ? `{ ${parts.join(", ")} }` : "{}";
+    }
+
+    /**
+     * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * DEFAULT `cA` FALSE is omitted. Unrecognized extensions are not
+     * represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): BasicConstraintsSyntaxJSON {
+        const json: BasicConstraintsSyntaxJSON = {};
+        if (this.cA === true) {
+            json.cA = true;
+        }
+        if (this.pathLenConstraint !== undefined) {
+            json.pathLenConstraint = integerToJSON(this.pathLenConstraint);
+        }
+        return json;
     }
 }
 

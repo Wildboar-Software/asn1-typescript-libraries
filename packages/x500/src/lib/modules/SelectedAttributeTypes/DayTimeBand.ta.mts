@@ -7,9 +7,18 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import {
     DayTime,
+    type DayTimeJSON,
     _decode_DayTime,
     _encode_DayTime,
 } from "../SelectedAttributeTypes/DayTime.ta.mjs";
+
+/**
+ * JSON Encoding Rules encoding of {@link DayTimeBand}.
+ */
+export type DayTimeBandJSON = {
+    startDayTime?: DayTimeJSON;
+    endDayTime?: DayTimeJSON;
+};
 
 /**
  * @summary DayTimeBand
@@ -507,6 +516,45 @@ export class DayTimeBand {
             }
         }
         return out;
+    }
+
+    /**
+     * @summary ISO 8601 time interval of the start and end times of day
+     * @description
+     *
+     * `hh:mm:ss/hh:mm:ss`. Missing bounds use the ASN.1 DEFAULTs
+     * (`00:00:00` and `23:59:59`). Unrecognized extensions are omitted.
+     *
+     * @returns The interval `start/end`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const start = this.startDayTime ?? DayTimeBand.START_OF_DAY;
+        const end = this.endDayTime ?? DayTimeBand.END_OF_DAY;
+        return `${start.toString()}/${end.toString()}`;
+    }
+
+    /**
+     * @summary Convert this `DayTimeBand` to a JSON encoding loosely following ITU-T X.697 (JER)
+     * @description
+     *
+     * DEFAULT start and end are omitted. Unrecognized extensions are
+     * not represented.
+     *
+     * @returns The JSON Encoding Rules encoding of this value
+     * @function
+     * @public
+     */
+    public toJSON(): DayTimeBandJSON {
+        const json: DayTimeBandJSON = {};
+        if (this.startDayTime !== undefined) {
+            json.startDayTime = this.startDayTime.toJSON();
+        }
+        if (this.endDayTime !== undefined) {
+            json.endDayTime = this.endDayTime.toJSON();
+        }
+        return json;
     }
 }
 
