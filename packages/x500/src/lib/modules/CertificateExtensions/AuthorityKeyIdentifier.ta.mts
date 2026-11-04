@@ -3,8 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import {
     type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
@@ -118,6 +121,22 @@ export class AuthorityKeyIdentifier {
             _o.authorityCertSerialNumber,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Compare this authority key identifier with another
+     * @param other The other authority key identifier
+     * @param getEqualityMatcher A function that takes an attribute type and
+     *  returns a function that can equality-match two values of that type
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(
+        other: AuthorityKeyIdentifier,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+    ): boolean {
+        return compareAuthorityKeyIdentifier(this, other, getEqualityMatcher);
     }
 }
 

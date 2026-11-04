@@ -21,6 +21,8 @@ function identifier (
 function expectSymmetric (a: RoleSpecCertIdentifier, b: RoleSpecCertIdentifier, equal: boolean): void {
     expect(compareRoleSpecCertIdentifier(a, b)).toBe(equal);
     expect(compareRoleSpecCertIdentifier(b, a)).toBe(equal);
+    expect(a.isEqualTo(b)).toBe(equal);
+    expect(b.isEqualTo(a)).toBe(equal);
 }
 
 describe("compareRoleSpecCertIdentifier()", () => {
