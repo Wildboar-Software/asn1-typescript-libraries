@@ -2,7 +2,7 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
-import { ID } from "../VOPerson/ID.ta.mjs";
+import { type ID } from "../VOPerson/ID.ta.mjs";
 import { id_voPersonRoot } from "../VOPerson/id-voPersonRoot.va.mjs";
 
 

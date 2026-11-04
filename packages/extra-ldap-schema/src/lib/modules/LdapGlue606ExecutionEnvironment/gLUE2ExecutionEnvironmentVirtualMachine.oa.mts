@@ -2,7 +2,7 @@
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_gLUE2ExecutionEnvironmentVirtualMachine } from "../LdapGlue606ExecutionEnvironment/id-at-gLUE2ExecutionEnvironmentVirtualMachine.va.mjs";
-import { UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
+import { type UnboundedDirectoryString, _decode_UnboundedDirectoryString, _encode_UnboundedDirectoryString } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import { caseExactMatch } from "../SelectedAttributeTypes/caseExactMatch.oa.mjs";
 import { caseExactSubstringsMatch } from "../SelectedAttributeTypes/caseExactSubstringsMatch.oa.mjs";
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";

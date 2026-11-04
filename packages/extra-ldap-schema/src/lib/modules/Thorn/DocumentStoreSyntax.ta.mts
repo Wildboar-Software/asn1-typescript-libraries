@@ -6,7 +6,7 @@ import {
     type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DocumentStoreSyntax_method, _encode_DocumentStoreSyntax_method, DocumentStoreSyntax_method } from "../Thorn/DocumentStoreSyntax-method.ta.mjs";
+import { _decode_DocumentStoreSyntax_method, _encode_DocumentStoreSyntax_method, type DocumentStoreSyntax_method } from "../Thorn/DocumentStoreSyntax-method.ta.mjs";
 
 
 /**
