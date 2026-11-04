@@ -56,7 +56,7 @@ export type AttributeJSON = {
  * ```
  *
  */
-export class Attribute {
+export class Attribute implements Iterable<_Element> {
     /**
      * @summary `type_`.
      * @public
@@ -141,6 +141,33 @@ export class Attribute {
             json.valuesWithContext = this.valuesWithContext.map((item) => item.toJSON());
         }
         return json;
+    }
+
+    /**
+     * @summary Iterate over this attribute's values, ignoring contexts
+     * @description
+     *
+     * Yields each element of {@link values}, then the `value` of each
+     * {@link valuesWithContext} item. Contexts themselves are not yielded: a
+     * stored value appears in exactly one of the two sets, so this enumerates
+     * every value of the attribute exactly once.
+     *
+     * Both sets are unordered, so yield order is not significant. A
+     * transferred attribute may have zero values.
+     *
+     * @yields {_Element} One attribute value
+     * @returns An iterator over this attribute's values
+     * @public
+     * @method
+     * @generator
+     */
+    public *[Symbol.iterator](): IterableIterator<_Element> {
+        yield* this.values;
+        if (this.valuesWithContext) {
+            for (const item of this.valuesWithContext) {
+                yield item.value;
+            }
+        }
     }
 }
 
