@@ -243,14 +243,14 @@ function isLdifSafe(value: Uint8Array): boolean {
  * for the next line so a run of two or more spaces is not stripped (note 8).
  */
 function ldifFoldTake(line: string, index: number, max: number): number {
-    let take: number = Math.min(max, line.length - index);
+    let take: number = Math.max(1, Math.min(max, line.length - index));
     while (
         (take > 1)
         && (line.charCodeAt(index + take - 1) === SPACE)
     ) {
         take--;
     }
-    return take;
+    return Math.max(1, take);
 }
 
 function ldifLineEndsWithSpace(folded: string): boolean {
