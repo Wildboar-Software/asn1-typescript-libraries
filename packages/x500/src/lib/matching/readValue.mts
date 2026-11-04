@@ -67,7 +67,11 @@ export type DirectoryStringInput =
     | DirectoryString
     | string;
 
-type FastPreparation = "printable" | "visible" | "ia5";
+type FastPreparation =
+    | ASN1UniversalType.objectDescriptor
+    | ASN1UniversalType.ia5String
+    | ASN1UniversalType.printableString
+    | ASN1UniversalType.visibleString;
 
 /**
  * Whether every character is in the seven-bit IA5 alphabet.
@@ -92,26 +96,30 @@ function prepASCIIString (
     syntax: FastPreparation,
 ): string | undefined {
     const valid = (
-        (syntax === "printable" && isPrintableString(value))
-        || (syntax === "visible" && isVisibleString(value))
-        || (syntax === "ia5" && isIA5String(value))
+        (syntax === ASN1UniversalType.printableString && isPrintableString(value))
+        || (
+            (
+                syntax === ASN1UniversalType.visibleString
+                || syntax === ASN1UniversalType.objectDescriptor
+            )
+            && isVisibleString(value)
+        )
+        || (syntax === ASN1UniversalType.ia5String && isIA5String(value))
     );
     if (!valid) {
-        return prepString(value, options);
+        return undefined;
     }
     if (value.length === 0) {
         return undefined;
     }
-    const mapped = (syntax === "ia5")
-        ? value
-            .replace(/[\t\n\v\f\r]/g, " ")
-            .replace(/[\x00-\x08\x0e-\x1f\x7f]/g, "")
+    const mapped = (syntax === ASN1UniversalType.ia5String)
+        ? value.replace(/[\x00-\x08\x0e-\x1f\x7f]/g, "")
         : value;
     if (mapped.length === 0) {
         return undefined;
     }
     const trimmed = mapped.trim();
-    const compacted = trimmed.replace(/ +/g, " ");
+    const compacted = trimmed.replace(/\s+/g, " ");
     if (compacted.length === 0) {
         return " ";
     }
@@ -159,7 +167,7 @@ function readDirectoryString (
                 case ASN1UniversalType.printableString:
                     return finishDirectoryString(
                         value.printableString,
-                        "printable",
+                        ASN1UniversalType.printableString,
                         preparation,
                     );
                 case ASN1UniversalType.teletexString:
@@ -173,13 +181,21 @@ function readDirectoryString (
                 case ASN1UniversalType.universalString:
                     return finishDirectoryString(value.universalString, undefined, preparation);
                 case ASN1UniversalType.ia5String:
-                    return finishDirectoryString(value.ia5String, "ia5", preparation);
+                    return finishDirectoryString(
+                        value.ia5String,
+                        ASN1UniversalType.ia5String,
+                        preparation,
+                    );
                 case ASN1UniversalType.visibleString:
-                    return finishDirectoryString(value.visibleString, "visible", preparation);
+                    return finishDirectoryString(
+                        value.visibleString,
+                        ASN1UniversalType.visibleString,
+                        preparation,
+                    );
                 case ASN1UniversalType.objectDescriptor:
                     return finishDirectoryString(
                         value.objectDescriptor,
-                        "visible",
+                        ASN1UniversalType.objectDescriptor,
                         preparation,
                     );
             }
@@ -187,13 +203,17 @@ function readDirectoryString (
         const decoded = _decode_UnboundedDirectoryString(value);
         return finishDirectoryString(
             directoryStringToString(decoded),
-            "printableString" in decoded ? "printable" : undefined,
+            "printableString" in decoded
+                ? ASN1UniversalType.printableString
+                : undefined,
             preparation,
         );
     }
     return finishDirectoryString(
         directoryStringToString(value),
-        "printableString" in value ? "printable" : undefined,
+        "printableString" in value
+            ? ASN1UniversalType.printableString
+            : undefined,
         preparation,
     );
 }

@@ -96,12 +96,12 @@ describe("typed matching inputs", () => {
             expect(readDirectoryString(
                 { printableString: "Hello\tWORLD" },
                 { caseFold: true },
-            )).toBe("hello world");
+            )).toBeUndefined();
             expect(readDirectoryString(
                 _encodeUTF8String("ＦＯＯ", DER),
                 { caseFold: true },
             )).toBe("foo");
-            expect(normalize).toHaveBeenCalledTimes(2);
+            expect(normalize).toHaveBeenCalledTimes(1);
         } finally {
             normalize.mockRestore();
         }
