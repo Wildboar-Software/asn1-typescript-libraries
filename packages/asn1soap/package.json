@@ -12,6 +12,11 @@
         "email": "jonathan@wilbur.space"
     },
     "license": "MIT",
+    "files": [
+        "src",
+        "README.md",
+        "LICENSE.txt"
+    ],
     "author": {
         "name": "Jonathan M. Wilbur",
         "email": "jonathan@wilbur.space",

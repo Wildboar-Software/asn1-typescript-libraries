@@ -10,6 +10,11 @@
     "version": "1.0.3",
     "private": false,
     "license": "MIT",
+    "files": [
+        "src",
+        "README.md",
+        "LICENSE.txt"
+    ],
     "homepage": "https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/README.md",
     "bugs": {
         "email": "jonathan@wilbur.space"
