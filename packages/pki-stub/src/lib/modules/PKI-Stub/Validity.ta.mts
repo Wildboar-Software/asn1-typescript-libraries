@@ -39,9 +39,10 @@ export type ValidityJSON = {
  * Range algebra copies what works from the VS Code `Range` API, with
  * `Date` playing the role of `Position` (`notBefore` as `start`,
  * `notAfter` as `end`). Immutable bounds; `contains`, `isEqual` /
- * `isEqualTo`, `intersection`, `union`, and `with` derive new values
- * instead of mutating. Both bounds are inclusive. Unlike VS Code
- * `Range`, inverted bounds are **not** swapped.
+ * `isEqualTo`, `isEmpty`, `intersection`, `union`, and `with` derive
+ * new values instead of mutating. Both bounds are inclusive. Unlike
+ * VS Code `Range`, inverted bounds are **not** swapped: `notBefore`
+ * after `notAfter` is empty.
  *
  * ### ASN.1 Definition:
  */
@@ -139,12 +140,18 @@ export class Validity {
     }
 
     /**
-     * @summary `true` if `notBefore` and `notAfter` are the same instant.
-     * @returns {boolean} `true` if `notBefore` and `notAfter` are the same instant.
+     * @summary `true` if this period contains no positive duration.
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` for a zero-width closed interval.
+     * Because inverted bounds are not swapped, `notBefore` after
+     * `notAfter` is empty too.
+     *
+     * @returns {boolean} `true` if `notBefore` is at or after `notAfter`.
      * @method
      */
     public get isEmpty(): boolean {
-        return this.notBeforeAsDate().getTime() === this.notAfterAsDate().getTime();
+        return this.notBeforeAsDate().getTime() >= this.notAfterAsDate().getTime();
     }
 
     /**
@@ -278,12 +285,25 @@ export class Validity {
 
     /**
      * @summary Derive a new validity period from this one.
+     * @description
+     *
+     * Copies VS Code `Range.with`. Omitted arguments keep the current
+     * bound, including its `UTCTime` or `GeneralizedTime` alternative.
+     * Returns `this` when both instants are unchanged.
+     *
      * @param {Date} [notBefore] New start date; defaults to the current `notBefore`.
      * @param {Date} [notAfter] New end date; defaults to the current `notAfter`.
      * @returns {Validity} A validity period with the given bounds, or `this` if unchanged.
      * @method
      */
     public with(notBefore?: Date, notAfter?: Date): Validity {
+        const beforeUnchanged = (notBefore === undefined)
+            || (notBefore.getTime() === this.notBeforeAsDate().getTime());
+        const afterUnchanged = (notAfter === undefined)
+            || (notAfter.getTime() === this.notAfterAsDate().getTime());
+        if (beforeUnchanged && afterUnchanged) {
+            return this;
+        }
         return new Validity(
             notBefore !== undefined
                 ? getTimeFromDate(notBefore)
@@ -291,6 +311,7 @@ export class Validity {
             notAfter !== undefined
                 ? getTimeFromDate(notAfter)
                 : this.notAfter,
+            this._unrecognizedExtensionsList,
         );
     }
 

@@ -29,12 +29,12 @@ export type AttCertValidityPeriodJSON = {
  * public-key certificates, so there is no UTCTime year-window).
  *
  * Range algebra copies what works from the VS Code `Range` API:
- * immutable bounds; `contains`, `isEqual` / `isEqualTo`,
- * `intersection`, and `union` derive new values instead of
+ * immutable bounds; `contains`, `isEqual` / `isEqualTo`, `isEmpty`,
+ * `intersection`, `union`, and `with` derive new values instead of
  * mutating. `Date` plays the role of VS Code `Position`
  * (`notBeforeTime` as `start`, `notAfterTime` as `end`). Both bounds
  * are inclusive. Unlike VS Code `Range`, inverted bounds are **not**
- * swapped.
+ * swapped: `notBeforeTime` after `notAfterTime` is empty.
  *
  * ### ASN.1 Definition:
  *
@@ -151,13 +151,15 @@ export class AttCertValidityPeriod {
      * @description
      *
      * Copies VS Code `Range.isEmpty` for a zero-width closed interval.
+     * Because inverted bounds are not swapped, `notBeforeTime` after
+     * `notAfterTime` is empty too: that interval contains no instant.
      *
-     * @returns {boolean} `true` if `notBeforeTime` and `notAfterTime`
-     * are the same instant.
+     * @returns {boolean} `true` if `notBeforeTime` is at or after
+     * `notAfterTime`.
      * @method
      */
     public get isEmpty(): boolean {
-        return this.notBeforeTime.getTime() === this.notAfterTime.getTime();
+        return this.notBeforeTime.getTime() >= this.notAfterTime.getTime();
     }
 
     /**
@@ -276,6 +278,36 @@ export class AttCertValidityPeriod {
             other.notAfterTime.getTime(),
         );
         return new AttCertValidityPeriod(new Date(startMs), new Date(endMs));
+    }
+
+    /**
+     * @summary Derive a new period from this one.
+     * @description
+     *
+     * Copies VS Code `Range.with`. Omitted arguments keep the current
+     * bound. Returns `this` when both instants are unchanged.
+     *
+     * @param {Date} [notBeforeTime] New start; defaults to the current one.
+     * @param {Date} [notAfterTime] New end; defaults to the current one.
+     * @returns {AttCertValidityPeriod} The derived period, or `this`.
+     * @method
+     */
+    public with(
+        notBeforeTime?: Date,
+        notAfterTime?: Date,
+    ): AttCertValidityPeriod {
+        const beforeUnchanged = (notBeforeTime === undefined)
+            || (notBeforeTime.getTime() === this.notBeforeTime.getTime());
+        const afterUnchanged = (notAfterTime === undefined)
+            || (notAfterTime.getTime() === this.notAfterTime.getTime());
+        if (beforeUnchanged && afterUnchanged) {
+            return this;
+        }
+        return new AttCertValidityPeriod(
+            notBeforeTime ?? this.notBeforeTime,
+            notAfterTime ?? this.notAfterTime,
+            this._unrecognizedExtensionsList,
+        );
     }
 
     /**

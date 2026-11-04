@@ -26,6 +26,17 @@ describe("AttCertValidityPeriod Range API", () => {
         expect(year.isEqualTo(new AttCertValidityPeriod(jan, dec))).toBe(true);
         expect(year.isEmpty).toBe(false);
         expect(new AttCertValidityPeriod(jan, jan).isEmpty).toBe(true);
+        expect(inverted.isEmpty).toBe(true);
+        expect(new AttCertValidityPeriod(jan, jan).contains(jan)).toBe(true);
+    });
+
+    it("with copies VS Code Range and keeps unchanged bounds", () => {
+        expect(year.with()).toBe(year);
+        expect(year.with(jan, dec)).toBe(year);
+        const later = year.with(undefined, next);
+        expect(later.notBeforeTime).toBe(year.notBeforeTime);
+        expect(later.notAfterTime.getTime()).toBe(next.getTime());
+        expect(later.isEqualTo(new AttCertValidityPeriod(jan, next))).toBe(true);
     });
 
     it("intersection / union / overlaps copy VS Code Range", () => {
@@ -36,5 +47,14 @@ describe("AttCertValidityPeriod Range API", () => {
         expect(year.overlaps(mid)).toBe(true);
         expect(year.union(mid).isEqualTo(new AttCertValidityPeriod(jan, next)))
             .toBe(true);
+        const touch = year.intersection(new AttCertValidityPeriod(dec, next));
+        expect(touch?.isEqualTo(new AttCertValidityPeriod(dec, dec))).toBe(true);
+        expect(touch?.isEmpty).toBe(true);
+        const justAfter = new AttCertValidityPeriod(
+            t("2020-12-31T00:00:00.001Z"),
+            next,
+        );
+        expect(year.intersection(justAfter)).toBeUndefined();
+        expect(year.overlaps(justAfter)).toBe(false);
     });
 });

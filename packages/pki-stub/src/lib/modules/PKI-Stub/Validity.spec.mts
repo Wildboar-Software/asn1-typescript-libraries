@@ -34,8 +34,21 @@ describe("Validity Range API", () => {
         );
         expect(year.isEqual(same)).toBe(true);
         expect(year.isEqualTo(same)).toBe(true);
+        expect(year.isEmpty).toBe(false);
+        expect(new Validity({ utcTime: jan }, { utcTime: jan }).isEmpty)
+            .toBe(true);
+        expect(inverted.isEmpty).toBe(true);
         expect(year.overlaps(mid)).toBe(true);
         expect(year.overlaps(inverted)).toBe(false);
+    });
+
+    it("with copies VS Code Range and keeps an unchanged Time choice", () => {
+        expect(year.with()).toBe(year);
+        expect(year.with(jan, dec)).toBe(year);
+        const later = year.with(undefined, next);
+        expect(later.notBefore).toBe(year.notBefore);
+        expect(later.notAfterAsDate().getTime()).toBe(next.getTime());
+        expect("utcTime" in later.notAfter).toBe(true);
     });
 
     it("intersection / union copy VS Code Range", () => {
@@ -44,5 +57,12 @@ describe("Validity Range API", () => {
         expect(overlap?.notAfterAsDate().getTime()).toBe(dec.getTime());
         expect(year.union(mid).notBeforeAsDate().getTime()).toBe(jan.getTime());
         expect(year.union(mid).notAfterAsDate().getTime()).toBe(next.getTime());
+        const touch = year.intersection(new Validity(
+            { generalizedTime: dec },
+            { utcTime: next },
+        ));
+        expect(touch?.notBeforeAsDate().getTime()).toBe(dec.getTime());
+        expect(touch?.notAfterAsDate().getTime()).toBe(dec.getTime());
+        expect(touch?.isEmpty).toBe(true);
     });
 });
