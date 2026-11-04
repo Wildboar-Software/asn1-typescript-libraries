@@ -8,12 +8,16 @@ import {
 } from "@wildboar/asn1";
 import {
     DER,
+    _encodeBMPString,
     _encodeBoolean,
     _encodeIA5String,
     _encodeInteger,
     _encodeObjectDescriptor,
     _encodeOctetString,
     _encodePrintableString,
+    _encodeTeletexString,
+    _encodeUniversalString,
+    _encodeUTF8String,
     _encodeVisibleString,
 } from "@wildboar/asn1/functional";
 import { _encode_UnboundedDirectoryString } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -47,6 +51,14 @@ describe("typed matching inputs", () => {
         expect(caseIgnoreMatchTyped("hello", { uTF8String: "hello" })).toBe(true);
         expect(caseIgnoreMatchTyped("hello", uds("hello"))).toBe(true);
         expect(caseIgnoreMatchTyped("hello", { uTF8String: "world" })).toBe(false);
+        expect(caseIgnoreMatchTyped("hello", _encodeUTF8String("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodePrintableString("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped(
+            "hello",
+            _encodeTeletexString(Uint8Array.from([ 0x48, 0x65, 0x6c, 0x6c, 0x6f ]), DER),
+        )).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodeBMPString("Hello", DER))).toBe(true);
+        expect(caseIgnoreMatchTyped("hello", _encodeUniversalString("Hello", DER))).toBe(true);
         expect(caseIgnoreMatchTyped("hello", _encodeIA5String("Hello", DER))).toBe(true);
         expect(caseIgnoreMatchTyped("world", _encodeIA5String("Hello", DER))).toBe(false);
         expect(caseIgnoreMatchTyped("hello", _encodeVisibleString("Hello", DER))).toBe(true);

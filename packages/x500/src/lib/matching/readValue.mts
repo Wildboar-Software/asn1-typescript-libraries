@@ -7,6 +7,7 @@ import {
     type INTEGER,
     type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
+import teletexToString from "@wildboar/teletex";
 import {
     _decode_UnboundedDirectoryString,
 } from "../modules/SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -71,14 +72,23 @@ function readDirectoryString (value: DirectoryStringInput): string {
     }
     if (ASN1Element.isElement(value)) {
         if (value.tagClass === ASN1TagClass.universal) {
-            if (value.tagNumber === ASN1UniversalType.ia5String) {
-                return value.ia5String;
-            }
-            if (value.tagNumber === ASN1UniversalType.visibleString) {
-                return value.visibleString;
-            }
-            if (value.tagNumber === ASN1UniversalType.objectDescriptor) {
-                return value.objectDescriptor;
+            switch (value.tagNumber) {
+                case ASN1UniversalType.utf8String:
+                    return value.utf8String;
+                case ASN1UniversalType.printableString:
+                    return value.printableString;
+                case ASN1UniversalType.teletexString:
+                    return teletexToString(value.teletexString);
+                case ASN1UniversalType.bmpString:
+                    return value.bmpString;
+                case ASN1UniversalType.universalString:
+                    return value.universalString;
+                case ASN1UniversalType.ia5String:
+                    return value.ia5String;
+                case ASN1UniversalType.visibleString:
+                    return value.visibleString;
+                case ASN1UniversalType.objectDescriptor:
+                    return value.objectDescriptor;
             }
         }
         return directoryStringToString(_decode_UnboundedDirectoryString(value));
