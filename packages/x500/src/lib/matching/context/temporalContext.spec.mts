@@ -645,6 +645,7 @@ describe("evaluateTemporalContext", () => {
         )).toBe(true);
     });
 
+    // TODO: This is actually failing because of DST changes: a 25-hour day throws this off.
     it("relaxes the between+entirely cover-step limit with MATCH_FLAG_HIGH_WORK_BUDGET", () => {
         // Each day is covered by two occurrences, so 600 days take more
         // than the default limit of 1000 cover steps.

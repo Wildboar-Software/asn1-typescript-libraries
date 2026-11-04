@@ -8,7 +8,7 @@ import {
     type INTEGER,
 } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
+import { approximatelyEqualInts } from "../approximate.mjs";
 import { readInteger } from "../readValue.mjs";
 import { bytesEqual } from "../constantTime.mjs";
 import {
@@ -40,9 +40,10 @@ function integerMatchTyped (
     const a = readInteger(assertion);
     const v = readInteger(value);
     if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualBigInts(a, v);
+        return approximatelyEqualInts(a, v);
     }
-    return a === v;
+    // loose equal is intentional so bigint matches number.
+    return a == v;
 }
 
 integerMatchTyped satisfies TypedEquationFunction<INTEGER>;
@@ -104,7 +105,7 @@ function integerMatchOctets (
         : integerAssertionOctets(value);
     const aVal = BigInt.asIntN(assertion.length * 8, BigInt("0x" + Buffer.from(assertion).toString("hex")));
     const vVal = BigInt.asIntN(vOctets.length * 8, BigInt("0x" + Buffer.from(vOctets).toString("hex")));
-    return approximatelyEqualBigInts(aVal, vVal);
+    return approximatelyEqualInts(aVal, vVal);
 }
 
 integerMatchOctets satisfies TypedEquationFunction<Uint8Array>;

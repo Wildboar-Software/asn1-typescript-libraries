@@ -111,7 +111,18 @@ function integerOrderingMatchTyped (
             flags & MATCH_FLAG_CONSTANT_TIME,
         );
     }
-    return Number(readInteger(assertion) - readInteger(value));
+    const a = readInteger(assertion);
+    const v = readInteger(value);
+    if (a == v) {
+        return 0;
+    }
+    if (typeof a === "bigint" || typeof v === "bigint") {
+        if (a > v) {
+            return 1;
+        }
+        return -1;
+    }
+    return a - v;
 }
 
 integerOrderingMatchTyped satisfies TypedOrderingFunction<INTEGER>;

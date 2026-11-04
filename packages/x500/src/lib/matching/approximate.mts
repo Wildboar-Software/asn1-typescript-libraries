@@ -1,3 +1,5 @@
+import { type INTEGER } from "@wildboar/asn1";
+
 /**
  * True if two equal-length strings are identical or differ in at most 1 character.
  */
@@ -117,7 +119,11 @@ function approximatelyEqualBytes (
  * True if two bigints differ by at most 1 (`|a - b| <= 1n`).
  */
 export
-function approximatelyEqualBigInts (a: bigint, b: bigint): boolean {
+function approximatelyEqualInts (a: INTEGER, b: INTEGER): boolean {
+    if (typeof a === "bigint" || typeof b === "bigint") {
+        const diff = BigInt(a) - BigInt(b);
+        return diff >= -1n && diff <= 1n;
+    }
     const diff = a - b;
-    return diff >= -1n && diff <= 1n;
+    return diff >= -1 && diff <= 1;
 }

@@ -1,6 +1,6 @@
-import type { INTEGER } from "@wildboar/asn1";
+import { type INTEGER, ASN1TagClass, ASN1UniversalType, BERElement } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
+import { approximatelyEqualInts } from "../approximate.mjs";
 import type { IntegerInput } from "../readValue.mjs";
 import { readInteger } from "../readValue.mjs";
 import {
@@ -54,9 +54,10 @@ function integerFirstComponentMatchTyped (
     const a = readInteger(assertion);
     const v = readLeadingInteger(value);
     if (flags & MATCH_FLAG_APPROXIMATE) {
-        return approximatelyEqualBigInts(a, v);
+        return approximatelyEqualInts(a, v);
     }
-    return a === v;
+    // loose equal is intentional so bigint matches number.
+    return a == v;
 }
 
 integerFirstComponentMatchTyped satisfies TypedEquationFunction<INTEGER>;

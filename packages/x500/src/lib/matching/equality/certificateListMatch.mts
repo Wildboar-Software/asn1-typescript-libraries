@@ -102,7 +102,8 @@ function certificateListMatchTyped (
         if (crlNumber === undefined) {
             return false;
         }
-        if (readInteger(crlNumber) < (readInteger(a.minCRLNumber) - (approximate ? 1n : 0n))) {
+        const min = BigInt(readInteger(a.minCRLNumber));
+        if (readInteger(crlNumber) < (min - (approximate ? 1n : 0n))) {
             return false;
         }
     }
@@ -111,7 +112,8 @@ function certificateListMatchTyped (
         if (crlNumber === undefined) {
             return false;
         }
-        if (readInteger(crlNumber) > (readInteger(a.maxCRLNumber) + (approximate ? 1n : 0n))) {
+        const max = BigInt(readInteger(a.maxCRLNumber));
+        if (readInteger(crlNumber) > (max + (approximate ? 1n : 0n))) {
             return false;
         }
     }

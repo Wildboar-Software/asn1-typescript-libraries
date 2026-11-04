@@ -1,6 +1,6 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
-import { approximatelyEqualBigInts } from "../approximate.mjs";
+import { approximatelyEqualInts } from "../approximate.mjs";
 import { readDecoded, readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
@@ -64,12 +64,13 @@ function basicAttConstraintsMatchTyped (
         && a.pathLenConstraint !== undefined
         && storedValue.pathLenConstraint !== undefined
     ) {
-        return approximatelyEqualBigInts(
+        return approximatelyEqualInts(
             readInteger(a.pathLenConstraint),
             readInteger(storedValue.pathLenConstraint),
         );
     }
-    return (a.pathLenConstraint === storedValue.pathLenConstraint);
+    // loose equal is intentional so bigint matches number.
+    return (a.pathLenConstraint == storedValue.pathLenConstraint);
 }
 
 basicAttConstraintsMatchTyped satisfies TypedEquationFunction<BasicAttConstraintsSyntax>;
