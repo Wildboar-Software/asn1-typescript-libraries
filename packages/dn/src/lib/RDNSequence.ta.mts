@@ -7,6 +7,7 @@ import {
     _encode_RelativeDistinguishedName,
     relativeDistinguishedNameToKey,
 } from "./RelativeDistinguishedName.ta.mjs";
+import type { StringifyAttributeTypeAndValue } from "./atav/tostr.mjs";
 /**
  * @summary RDNSequence
  * @description
@@ -46,11 +47,19 @@ export {
  * of its subordinates. The key is not meant to be displayed.
  *
  * @param rdns The RDN sequence
+ * @param stringifyAtav Optional function that replaces conversion of each
+ *  attribute type and value to a key. Return `undefined` to use the built-in
+ *  key for that pair.
  * @returns A string of the form `rdnkey,rdnkey...`
  * @function
  */
-export function rdnSequenceToKey(rdns: RDNSequence): string {
-    return rdns.map(relativeDistinguishedNameToKey).join(",");
+export function rdnSequenceToKey(
+    rdns: RDNSequence,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
+    return rdns
+        .map((rdn) => relativeDistinguishedNameToKey(rdn, stringifyAtav))
+        .join(",");
 }
 
 /**

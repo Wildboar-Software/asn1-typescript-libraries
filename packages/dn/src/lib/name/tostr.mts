@@ -1,4 +1,5 @@
 import rdnSequenceToString from "../rdnseq/tostr.mjs";
+import type { StringifyAttributeTypeAndValue } from "../atav/tostr.mjs";
 import type { Name } from "../Name.ta.mjs";
 
 /**
@@ -16,15 +17,21 @@ import type { Name } from "../Name.ta.mjs";
  * This can be reversed with `nameFromStringX520`.
  *
  * @param name The directory name to stringify.
+ * @param stringifyAtav Optional function that replaces conversion of each
+ *  attribute type and value. Return `undefined` to use the built-in conversion
+ *  for that pair.
  * @returns A string of the form `rdnSequence:rdn,rdn...`
  * @throws {TypeError} If `name` uses an alternative this package does not
  * support.
  * @function
  */
 export
-function nameToString (name: Name): string {
+function nameToString (
+    name: Name,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
     if ("rdnSequence" in name) {
-        return "rdnSequence:" + rdnSequenceToString(name.rdnSequence);
+        return "rdnSequence:" + rdnSequenceToString(name.rdnSequence, stringifyAtav);
     }
     throw new TypeError("Unsupported Name alternative");
 }

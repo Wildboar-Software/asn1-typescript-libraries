@@ -16,6 +16,7 @@ import {
     _encode_RDNSequence,
     rdnSequenceToKey,
 } from "./RDNSequence.ta.mjs";
+import type { StringifyAttributeTypeAndValue } from "./atav/tostr.mjs";
 
 /**
  * @summary Name
@@ -57,14 +58,20 @@ export {
  * `rdnSequence`, that is {@link rdnSequenceToKey}.
  *
  * @param name The directory name
+ * @param stringifyAtav Optional function that replaces conversion of each
+ *  attribute type and value to a key. Return `undefined` to use the built-in
+ *  key for that pair.
  * @returns A string of the form `rdnSequence:rdnkey,rdnkey...`
  * @throws {TypeError} If `name` uses an alternative this package does not
  * support.
  * @function
  */
-export function nameToKey(name: Name): string {
+export function nameToKey(
+    name: Name,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
     if ("rdnSequence" in name) {
-        return "rdnSequence:" + rdnSequenceToKey(name.rdnSequence);
+        return "rdnSequence:" + rdnSequenceToKey(name.rdnSequence, stringifyAtav);
     }
     throw new TypeError("Unsupported Name alternative");
 }

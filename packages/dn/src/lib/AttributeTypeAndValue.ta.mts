@@ -14,6 +14,7 @@ import {
     attributeTypeAndValueToString,
     defaultValueEncoder,
     distinguishedValueToString,
+    type StringifyAttributeTypeAndValue,
 } from "./atav/tostr.mjs";
 import {
     compareAttributeTypeAndValue,
@@ -23,7 +24,11 @@ import {
 import attributeTypeAndValueToASN1String from "./atav/toasn1.mjs";
 import { getAttributeTypeAndValueEncodedLength } from "./atav/encodedLength.mjs";
 import { distinguishedTypeToFriendlyString } from "./atav/distinguishedTypeToString.mjs";
-import { atavFromString, atavFromStringX520 } from "./atav/fromstr.mjs";
+import {
+    atavFromString,
+    atavFromStringX520,
+    type ParseAttributeTypeAndValue,
+} from "./atav/fromstr.mjs";
 import {
     isAttributeTypeAndValueString,
     validateAttributeTypeAndValueString,
@@ -252,12 +257,18 @@ export class AttributeTypeAndValue {
      * identifier and the value is its hexadecimal BER encoding.
      *
      * @param escape Whether to escape the value as in IETF RFC 4514
+     * @param stringifyAtav Optional function that replaces conversion of this
+     *  attribute type and value. Return `undefined` to use the built-in
+     *  conversion.
      * @returns A string of the form `type=value`
      * @function
      * @public
      */
-    public toString(escape: boolean = false): string {
-        return attributeTypeAndValueToString(this, escape, false);
+    public toString(
+        escape: boolean = false,
+        stringifyAtav?: StringifyAttributeTypeAndValue,
+    ): string {
+        return attributeTypeAndValueToString(this, escape, false, stringifyAtav);
     }
 
     /**
@@ -269,12 +280,18 @@ export class AttributeTypeAndValue {
      * and the value is its hexadecimal BER encoding.
      *
      * @param escape Whether to escape the value as in IETF RFC 4514
+     * @param stringifyAtav Optional function that replaces conversion of this
+     *  attribute type and value. Return `undefined` to use the built-in
+     *  conversion.
      * @returns A string of the form `type=value`
      * @function
      * @public
      */
-    public toLdapString(escape: boolean = false): string {
-        return attributeTypeAndValueToString(this, escape, true);
+    public toLdapString(
+        escape: boolean = false,
+        stringifyAtav?: StringifyAttributeTypeAndValue,
+    ): string {
+        return attributeTypeAndValueToString(this, escape, true, stringifyAtav);
     }
 
     /**
@@ -330,12 +347,18 @@ export class AttributeTypeAndValue {
      * displayed.
      *
      * @param escape Whether to escape the value as in IETF RFC 4514
+     * @param stringifyAtav Optional function that replaces conversion of this
+     *  attribute type and value to a key. Return `undefined` to use the
+     *  built-in key.
      * @returns A string of the form `numericoid=normalizedvalue`
      * @function
      * @public
      */
-    public toKey(escape: boolean = false): string {
-        return attributeTypeAndValueToKey(this, escape);
+    public toKey(
+        escape: boolean = false,
+        stringifyAtav?: StringifyAttributeTypeAndValue,
+    ): string {
+        return attributeTypeAndValueToKey(this, escape, stringifyAtav);
     }
 
     /**
@@ -435,6 +458,9 @@ export class AttributeTypeAndValue {
      * {@link atavFromStringX520}.
      *
      * @param parsed The attribute type name and unescaped value
+     * @param parseAtav Optional function that replaces conversion of this
+     *  attribute type and value. Return `undefined` to use the built-in X.520
+     *  conversion.
      * @returns The `AttributeTypeAndValue`
      * @throws {SyntaxError} If the attribute type is not recognized or the
      *  value is invalid for its syntax
@@ -442,8 +468,11 @@ export class AttributeTypeAndValue {
      * @public
      * @static
      */
-    public static fromParsedX520(parsed: ParsedAttributeTypeAndValue): AttributeTypeAndValue {
-        return atavFromStringX520(parsed);
+    public static fromParsedX520(
+        parsed: ParsedAttributeTypeAndValue,
+        parseAtav?: ParseAttributeTypeAndValue,
+    ): AttributeTypeAndValue {
+        return atavFromStringX520(parsed, parseAtav);
     }
 
     /**
@@ -454,6 +483,9 @@ export class AttributeTypeAndValue {
      * {@link AttributeTypeAndValue.fromParsedX520}.
      *
      * @param str The attribute type and value, e.g. `cn=Smith`
+     * @param parseAtav Optional function that replaces conversion of this
+     *  attribute type and value. Return `undefined` to use the built-in X.520
+     *  conversion.
      * @returns The `AttributeTypeAndValue`
      * @throws {SyntaxError} If the string is malformed or the attribute type
      *  is not recognized
@@ -461,8 +493,11 @@ export class AttributeTypeAndValue {
      * @public
      * @static
      */
-    public static fromStringX520(str: string): AttributeTypeAndValue {
-        return atavFromStringX520(atavFromString(str));
+    public static fromStringX520(
+        str: string,
+        parseAtav?: ParseAttributeTypeAndValue,
+    ): AttributeTypeAndValue {
+        return atavFromStringX520(atavFromString(str), parseAtav);
     }
 
     /**

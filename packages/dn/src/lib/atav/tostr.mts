@@ -6,6 +6,27 @@ import { escapeDistinguishedValue } from "../escapeDistinguishedValue.mjs";
 import { id_at_postalAddress, id_at_registeredAddress } from "./distinguishedTypeToString.mjs";
 import { prepString } from "../prepString.mjs";
 
+/**
+ * @summary Convert one attribute type and value to a string
+ * @description
+ *
+ * Replaces the built-in conversion of a single {@link AttributeTypeAndValue}
+ * used by {@link attributeTypeAndValueToString} and the RDN, RDN sequence, and
+ * `Name` stringifiers that call it. Return `undefined` to use the built-in
+ * conversion for that pair.
+ *
+ * `escape` is `true` when the result will be embedded in an RDN or DN string,
+ * in which case the value should be escaped as in IETF RFC 4514.
+ *
+ * @param atav The attribute type and value
+ * @param escape Whether to escape the value as in IETF RFC 4514
+ * @returns The string form, or `undefined` to use the built-in conversion
+ */
+export type StringifyAttributeTypeAndValue = (
+    atav: AttributeTypeAndValue,
+    escape: boolean,
+) => string | undefined;
+
 // Polyfill for Node.js so we can use fewer Node.js-specific APIs.
 function domainToASCII(domain: string): string {
     return new URL(`http://${domain}`).hostname;
@@ -333,7 +354,12 @@ export function attributeTypeAndValueToString(
     atav: AttributeTypeAndValue,
     escape: boolean = false,
     ldapStrict: boolean = false,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
 ): string {
+    const custom: string | undefined = stringifyAtav?.(atav, escape);
+    if (custom !== undefined) {
+        return custom;
+    }
     const key: string | null = distinguishedTypeToFriendlyString(atav.type_, ldapStrict);
     if (key === null) {
         return unrecognizedToString(atav.type_, atav.value);
@@ -361,13 +387,20 @@ export function attributeTypeAndValueToString(
  *
  * @param atav The attribute type and value
  * @param escape Whether to escape the value as in IETF RFC 4514
+ * @param stringifyAtav Optional function that replaces conversion of this
+ *  attribute type and value. Return `undefined` to use the built-in key.
  * @returns A string of the form `numericoid=normalizedvalue`
  * @function
  */
 export function attributeTypeAndValueToKey(
     atav: AttributeTypeAndValue,
     escape: boolean = false,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
 ): string {
+    const custom: string | undefined = stringifyAtav?.(atav, escape);
+    if (custom !== undefined) {
+        return custom;
+    }
     const value: string | null = distinguishedValueToString(atav.type_, atav.value, true);
     if (value === null) {
         return unrecognizedToString(atav.type_, atav.value);

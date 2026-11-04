@@ -1,4 +1,7 @@
-import { attributeTypeAndValueToString } from "../atav/tostr.mjs";
+import {
+    attributeTypeAndValueToString,
+    type StringifyAttributeTypeAndValue,
+} from "../atav/tostr.mjs";
 import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 
 /**
@@ -12,21 +15,25 @@ import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
  * their existing order.
  * 
  * @param rdn The relative distinguished name to stringify.
+ * @param stringifyAtav Optional function that replaces conversion of each
+ *  attribute type and value. Return `undefined` to use the built-in conversion
+ *  for that pair.
  * @returns A string of the form `type=value+type=value...`
  * @function
  */
 export
 function relativeDistinguishedNameToString (
     rdn: AttributeTypeAndValue[],
+    stringifyAtav?: StringifyAttributeTypeAndValue,
 ): string {
     if (rdn.length === 0) {
         return "";
     }
     if (rdn.length === 1) {
-        return attributeTypeAndValueToString(rdn[0], true);
+        return attributeTypeAndValueToString(rdn[0], true, false, stringifyAtav);
     }
     return rdn
-        .map((atav) => attributeTypeAndValueToString(atav, true))
+        .map((atav) => attributeTypeAndValueToString(atav, true, false, stringifyAtav))
         .join("+");
 }
 
