@@ -35,7 +35,7 @@ import {
  * JSON encoding of {@link PartialAttribute}.
  *
  * `type` is the attribute description decoded from UTF-8. Each value is
- * UTF-8 text when that is lossless, otherwise `{ hex }`.
+ * `{ hex }`, plus `utf8` when the octets are well-formed UTF-8.
  */
 export type PartialAttributeJSON = {
   type: string;

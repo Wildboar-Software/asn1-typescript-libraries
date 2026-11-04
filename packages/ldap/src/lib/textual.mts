@@ -1,11 +1,14 @@
 import { Buffer } from "node:buffer";
 
 /**
- * A UTF-8 string when the octets are valid UTF-8, otherwise the lowercase
- * hexadecimal encoding of those octets. The hex form cannot be confused with
- * text, because text is always a JSON string.
+ * JSON encoding of an octet string. `hex` is always the lowercase
+ * hexadecimal octets. `utf8` is present when those octets are well-formed
+ * UTF-8.
  */
-export type OctetsJSON = string | { hex: string };
+export type OctetsJSON = {
+    hex: string;
+    utf8?: string;
+};
 
 const LDIF_LINE_LENGTH: number = 76;
 
@@ -178,18 +181,21 @@ export function rfc4515Extensible(options: {
 }
 
 /**
- * JSON for an octet string: the UTF-8 text when that is lossless, otherwise
- * `{ hex }`.
+ * JSON for an octet string: always `{ hex }`, plus `utf8` when the octets
+ * are well-formed UTF-8.
  *
  * @param octets The octets
  * @returns The JSON value
  */
 export function octetsToJSON(octets: Uint8Array): OctetsJSON {
+    const json: OctetsJSON = {
+        hex: asBuffer(octets).toString("hex"),
+    };
     const text: string | undefined = tryUtf8(octets);
     if (text !== undefined) {
-        return text;
+        json.utf8 = text;
     }
-    return { hex: asBuffer(octets).toString("hex") };
+    return json;
 }
 
 function isSafeInit(byte: number): boolean {

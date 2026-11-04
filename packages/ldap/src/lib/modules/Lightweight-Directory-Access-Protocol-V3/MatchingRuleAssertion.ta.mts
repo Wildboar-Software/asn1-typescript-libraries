@@ -39,8 +39,8 @@ import {
  *
  * `matchingRule` and `type` are decoded from UTF-8. Absent optional
  * components are omitted. `dnAttributes` is omitted when it is not `TRUE`
- * (the DEFAULT). `matchValue` is UTF-8 text when that is lossless,
- * otherwise `{ hex }`.
+ * (the DEFAULT). `matchValue` is always `{ hex }`, plus `utf8` when the
+ * octets are well-formed UTF-8.
  */
 export type MatchingRuleAssertionJSON = {
   matchingRule?: string;

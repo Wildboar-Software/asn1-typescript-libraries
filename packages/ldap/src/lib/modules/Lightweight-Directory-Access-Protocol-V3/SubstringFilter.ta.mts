@@ -31,8 +31,8 @@ import {
  * JSON encoding of {@link SubstringFilter}.
  *
  * `type` is the attribute description decoded from UTF-8. Each assertion
- * value is UTF-8 text when that is lossless, otherwise `{ hex }`. The
- * choice key `any` is the ASN.1 identifier (`any_` in TypeScript).
+ * value is `{ hex }`, plus `utf8` when the octets are well-formed UTF-8.
+ * The choice key `any` is the ASN.1 identifier (`any_` in TypeScript).
  * Unrecognized substring choices are omitted.
  */
 export type SubstringFilterJSON = {

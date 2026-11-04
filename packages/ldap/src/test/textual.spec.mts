@@ -20,7 +20,7 @@ describe("RFC 4515 strings", () => {
         expect(ava.toString()).toBe("cn=a\\2a\\28b\\29\\5c");
         expect(ava.toJSON()).toEqual({
             attributeDesc: "cn",
-            assertionValue: "a*(b)\\",
+            assertionValue: { hex: utf8("a*(b)\\").toString("hex"), utf8: "a*(b)\\" },
         });
     });
 
@@ -37,10 +37,10 @@ describe("RFC 4515 strings", () => {
         expect(filter.toJSON()).toEqual({
             type: "cn",
             substrings: [
-                { final: "qux" },
-                { any: "bar" },
-                { any: "b*z" },
-                { initial: "foo" },
+                { final: { hex: utf8("qux").toString("hex"), utf8: "qux" } },
+                { any: { hex: utf8("bar").toString("hex"), utf8: "bar" } },
+                { any: { hex: utf8("b*z").toString("hex"), utf8: "b*z" } },
+                { initial: { hex: utf8("foo").toString("hex"), utf8: "foo" } },
             ],
         });
         expect(stringifyFilter({ substrings: filter })).toBe(filter.toString());
@@ -84,13 +84,13 @@ describe("RFC 4515 strings", () => {
         expect(withDn.toJSON()).toEqual({
             matchingRule: "2.5.13.2",
             type: "cn",
-            matchValue: "A",
+            matchValue: { hex: utf8("A").toString("hex"), utf8: "A" },
             dnAttributes: true,
         });
         expect(new MatchingRuleAssertion(undefined, utf8("cn"), value, false).toJSON())
-            .toEqual({ type: "cn", matchValue: "A" });
+            .toEqual({ type: "cn", matchValue: { hex: utf8("A").toString("hex"), utf8: "A" } });
         expect(new MatchingRuleAssertion(utf8("x-ä"), undefined, value, false).toJSON())
-            .toEqual({ matchingRule: "x-ä", matchValue: "A" });
+            .toEqual({ matchingRule: "x-ä", matchValue: { hex: utf8("A").toString("hex"), utf8: "A" } });
     });
 
     it("base64-encodes an assertion value that is not UTF-8", () => {
@@ -140,7 +140,13 @@ describe("LDIF", () => {
         const cn = new PartialAttribute(utf8("cn"), [utf8("Ada"), utf8("A")]);
         const empty = new PartialAttribute(utf8("description"), []);
         expect(cn.toString()).toBe("cn: Ada\ncn: A");
-        expect(cn.toJSON()).toEqual({ type: "cn", vals: ["Ada", "A"] });
+        expect(cn.toJSON()).toEqual({
+            type: "cn",
+            vals: [
+                { hex: utf8("Ada").toString("hex"), utf8: "Ada" },
+                { hex: utf8("A").toString("hex"), utf8: "A" },
+            ],
+        });
         expect(empty.toString()).toBe("");
         expect(empty.toJSON()).toEqual({ type: "description", vals: [] });
 
@@ -155,7 +161,13 @@ describe("LDIF", () => {
         expect(entry.toJSON()).toEqual({
             objectName: "cn=Ada",
             attributes: [
-                { type: "cn", vals: ["Ada", "A"] },
+                {
+                    type: "cn",
+                    vals: [
+                        { hex: utf8("Ada").toString("hex"), utf8: "Ada" },
+                        { hex: utf8("A").toString("hex"), utf8: "A" },
+                    ],
+                },
                 { type: "jpegPhoto", vals: [{ hex: "ffd8" }] },
             ],
         });
@@ -191,7 +203,13 @@ describe("LDIF", () => {
         expect(modify.toJSON()).toEqual({
             object: "cn=Ada",
             changes: [
-                { operation: "add", modification: { type: "cn", vals: ["Augusta"] } },
+                {
+                    operation: "add",
+                    modification: {
+                        type: "cn",
+                        vals: [{ hex: utf8("Augusta").toString("hex"), utf8: "Augusta" }],
+                    },
+                },
                 { operation: "delete", modification: { type: "sn", vals: [] } },
             ],
         });

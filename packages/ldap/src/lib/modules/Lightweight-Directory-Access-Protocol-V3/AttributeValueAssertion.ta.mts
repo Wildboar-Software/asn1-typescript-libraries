@@ -31,7 +31,8 @@ import {
  * JSON encoding of {@link AttributeValueAssertion}.
  *
  * `attributeDesc` is the attribute description decoded from UTF-8.
- * `assertionValue` is UTF-8 text when that is lossless, otherwise `{ hex }`.
+ * `assertionValue` is always `{ hex }`, plus `utf8` when the octets are
+ * well-formed UTF-8.
  */
 export type AttributeValueAssertionJSON = {
   attributeDesc: string;
