@@ -36,9 +36,12 @@ export type ValidityJSON = {
  * {@link Time} values; UTCTime years must be expanded before comparison (see
  * {@link Time}).
  *
- * Treated analogously to VS Code's `Range`, with `Date` playing the role of
- * `Position` (`notBefore` as `start`, `notAfter` as `end`). Both bounds are
- * inclusive.
+ * Range algebra copies what works from the VS Code `Range` API, with
+ * `Date` playing the role of `Position` (`notBefore` as `start`,
+ * `notAfter` as `end`). Immutable bounds; `contains`, `isEqual` /
+ * `isEqualTo`, `intersection`, `union`, and `with` derive new values
+ * instead of mutating. Both bounds are inclusive. Unlike VS Code
+ * `Range`, inverted bounds are **not** swapped.
  *
  * ### ASN.1 Definition:
  */
@@ -175,6 +178,9 @@ export class Validity {
      */
     public contains(dateOrValidity: Date | Validity): boolean {
         if (dateOrValidity instanceof Validity) {
+            if (dateOrValidity.notBeforeAsDate().getTime() > dateOrValidity.notAfterAsDate().getTime()) {
+                return false;
+            }
             return (
                 this.contains(dateOrValidity.notBeforeAsDate())
                 && this.contains(dateOrValidity.notAfterAsDate())
@@ -198,6 +204,31 @@ export class Validity {
             (this.notBeforeAsDate().getTime() === other.notBeforeAsDate().getTime())
             && (this.notAfterAsDate().getTime() === other.notAfterAsDate().getTime())
         );
+    }
+
+    /**
+     * @summary Check if `other` equals this validity period.
+     * @description
+     *
+     * Alias of {@link Validity.isEqual} using the `isEqualTo` name
+     * from this repo's `DayTimeBand` API.
+     *
+     * @param {Validity} other A validity period.
+     * @returns {boolean} `true` when both bounds match as instants.
+     * @method
+     */
+    public isEqualTo(other: Validity): boolean {
+        return this.isEqual(other);
+    }
+
+    /**
+     * @summary Whether this period shares any instant with `other`.
+     * @param {Validity} other A validity period.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @method
+     */
+    public overlaps(other: Validity): boolean {
+        return this.intersection(other) !== undefined;
     }
 
     /**

@@ -6,6 +6,18 @@ import {
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type Interval,
+    boundToDate,
+    compareIntervals,
+    containsInterval,
+    containsPoint,
+    dateToBound,
+    intersectionOf,
+    isEmptyInterval,
+    overlapsInterval,
+    unionOf,
+} from "../../utils/rangeAlgebra.mjs";
 
 /**
  * @summary PrivateKeyUsagePeriod
@@ -14,6 +26,14 @@ import * as $ from "@wildboar/asn1/functional";
  * At least one of notBefore/notAfter (WITH COMPONENTS). Always
  * non-critical. GeneralizedTime. Period may differ from cert Validity;
  * typically the private-key sign period is shorter. Signing keys only.
+ *
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
+ * `intersection`, and `union` derive new values instead of
+ * mutating. `Date` plays the role of VS Code `Position`
+ * (`notBefore` as `start`, `notAfter` as `end`). Both present bounds
+ * are inclusive. An omitted bound is unbounded that side. Unlike
+ * VS Code `Range`, inverted bounds are **not** swapped.
  *
  * ### ASN.1 Definition:
  *
@@ -86,6 +106,168 @@ export class PrivateKeyUsagePeriod {
             _o.notBefore,
             _o.notAfter,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary This period as a 1-D interval.
+     * @returns {Interval} Inclusive `notBefore` / `notAfter` bounds.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private _interval (): Interval {
+        return {
+            start: dateToBound(this.notBefore),
+            end: dateToBound(this.notAfter),
+        };
+    }
+
+    /**
+     * @summary Build a period from 1-D interval bounds.
+     * @param {Interval} interval Inclusive bounds.
+     * @returns {PrivateKeyUsagePeriod} The corresponding period.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _fromInterval (
+        interval: Interval,
+    ): PrivateKeyUsagePeriod {
+        return new PrivateKeyUsagePeriod(
+            boundToDate(interval.start),
+            boundToDate(interval.end),
+        );
+    }
+
+    /**
+     * @summary Compare this period to another for ordering.
+     * @description
+     *
+     * Orders by `notBefore`, then `notAfter`. Omitted bounds are
+     * unbounded (−∞ start / +∞ end).
+     *
+     * @param {PrivateKeyUsagePeriod} other The comparefn `b` argument.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: PrivateKeyUsagePeriod): number {
+        return compareIntervals(this._interval(), other._interval());
+    }
+
+    /**
+     * @summary Whether two periods have the same bounds.
+     * @description
+     *
+     * Copies VS Code `Range.isEqual` (named `isEqualTo` like
+     * `DayTimeBand`). Omitted bounds match omitted bounds.
+     *
+     * @param {PrivateKeyUsagePeriod} other The other period.
+     * @returns {boolean} `true` iff both bounds match.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: PrivateKeyUsagePeriod): boolean {
+        return (this.compare(other) === 0);
+    }
+
+    /**
+     * @summary Whether start is after end (matches no instant).
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` in spirit. Emptiness here is
+     * inverted bounds, not a zero-width range. A period covering a
+     * single instant is not empty. A one-sided or unbounded period
+     * is not empty.
+     *
+     * @returns {boolean} `true` iff both bounds are present and inverted.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEmpty (): boolean {
+        return isEmptyInterval(this._interval(), false);
+    }
+
+    /**
+     * @summary Whether this period contains a date or another period.
+     * @description
+     *
+     * Copies VS Code `Range.contains`. Closed interval. An omitted
+     * bound does not constrain that side. An empty (inverted) period
+     * contains nothing. An empty `other` period is not contained.
+     *
+     * @param {Date | PrivateKeyUsagePeriod} dateOrPeriod A date or period.
+     * @returns {boolean} `true` iff every included instant is in this.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public contains (
+        dateOrPeriod: Date | PrivateKeyUsagePeriod,
+    ): boolean {
+        if (dateOrPeriod instanceof PrivateKeyUsagePeriod) {
+            return containsInterval(
+                this._interval(),
+                dateOrPeriod._interval(),
+                false,
+            );
+        }
+        return containsPoint(
+            this._interval(),
+            BigInt(dateOrPeriod.getTime()),
+            false,
+        );
+    }
+
+    /**
+     * @summary Whether this period shares any instant with `other`.
+     * @param {PrivateKeyUsagePeriod} other The other period.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public overlaps (other: PrivateKeyUsagePeriod): boolean {
+        return overlapsInterval(this._interval(), other._interval(), false);
+    }
+
+    /**
+     * @summary Overlap of this period and `other`, if any.
+     * @description
+     *
+     * Copies VS Code `Range.intersection`. Returns `undefined` when
+     * the periods do not share an instant.
+     *
+     * @param {PrivateKeyUsagePeriod} other The other period.
+     * @returns {PrivateKeyUsagePeriod | undefined} The overlap, or `undefined`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public intersection (
+        other: PrivateKeyUsagePeriod,
+    ): PrivateKeyUsagePeriod | undefined {
+        const overlap = intersectionOf(
+            this._interval(),
+            other._interval(),
+            false,
+        );
+        return overlap
+            ? PrivateKeyUsagePeriod._fromInterval(overlap)
+            : undefined;
+    }
+
+    /**
+     * @summary Smallest period covering this period and `other`.
+     * @description
+     *
+     * Copies VS Code `Range.union`. Start is the earlier start; end
+     * is the later end. A gap between the periods is filled.
+     *
+     * @param {PrivateKeyUsagePeriod} other The other period.
+     * @returns {PrivateKeyUsagePeriod} One period spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public union (other: PrivateKeyUsagePeriod): PrivateKeyUsagePeriod {
+        return PrivateKeyUsagePeriod._fromInterval(
+            unionOf(this._interval(), other._interval()),
         );
     }
 }

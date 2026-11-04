@@ -6,13 +6,32 @@ import {
     type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import {
+    type Interval,
+    boundToDate,
+    compareIntervals,
+    containsInterval,
+    containsPoint,
+    dateToBound,
+    intersectionOf,
+    isEmptyInterval,
+    overlapsInterval,
+    unionOf,
+} from "../../utils/rangeAlgebra.mjs";
 
 /**
  * @summary TimeSpecification_time_absolute
  * @description
  *
  * `startTime` = `endTime` ⇒ instant. Missing `endTime` ⇒ all times
- * after `startTime`.
+ * after `startTime`. Missing `startTime` ⇒ no lower bound.
+ *
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
+ * `intersection`, and `union` derive new values instead of
+ * mutating. `Date` plays the role of VS Code `Position`. Both
+ * present bounds are inclusive. Unlike VS Code `Range`, inverted
+ * bounds are **not** swapped.
  *
  * ### ASN.1 Definition:
  *
@@ -80,6 +99,161 @@ export class TimeSpecification_time_absolute {
             _o.startTime,
             _o.endTime,
             _o._unrecognizedExtensionsList
+        );
+    }
+
+    /**
+     * @summary This absolute time as a 1-D interval.
+     * @returns {Interval} Inclusive `startTime` / `endTime` bounds.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private _interval (): Interval {
+        return {
+            start: dateToBound(this.startTime),
+            end: dateToBound(this.endTime),
+        };
+    }
+
+    /**
+     * @summary Build an absolute time from 1-D interval bounds.
+     * @param {Interval} interval Inclusive bounds.
+     * @returns {TimeSpecification_time_absolute} The corresponding value.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _fromInterval (
+        interval: Interval,
+    ): TimeSpecification_time_absolute {
+        return new TimeSpecification_time_absolute(
+            boundToDate(interval.start),
+            boundToDate(interval.end),
+        );
+    }
+
+    /**
+     * @summary Compare this absolute time to another for ordering.
+     * @param {TimeSpecification_time_absolute} other The comparefn `b`.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: TimeSpecification_time_absolute): number {
+        return compareIntervals(this._interval(), other._interval());
+    }
+
+    /**
+     * @summary Whether two absolute times have the same bounds.
+     * @description
+     *
+     * Copies VS Code `Range.isEqual` (named `isEqualTo` like
+     * `DayTimeBand`).
+     *
+     * @param {TimeSpecification_time_absolute} other The other value.
+     * @returns {boolean} `true` iff both bounds match.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: TimeSpecification_time_absolute): boolean {
+        return (this.compare(other) === 0);
+    }
+
+    /**
+     * @summary Whether start is after end (matches no instant).
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` in spirit. A single instant
+     * (`startTime` = `endTime`) is not empty.
+     *
+     * @returns {boolean} `true` iff both bounds are present and inverted.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEmpty (): boolean {
+        return isEmptyInterval(this._interval(), false);
+    }
+
+    /**
+     * @summary Whether this absolute time contains a date or another value.
+     * @description
+     *
+     * Copies VS Code `Range.contains`. Closed interval.
+     *
+     * @param {Date | TimeSpecification_time_absolute} dateOrAbsolute
+     * A date or absolute time.
+     * @returns {boolean} `true` iff every included instant is in this.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public contains (
+        dateOrAbsolute: Date | TimeSpecification_time_absolute,
+    ): boolean {
+        if (dateOrAbsolute instanceof TimeSpecification_time_absolute) {
+            return containsInterval(
+                this._interval(),
+                dateOrAbsolute._interval(),
+                false,
+            );
+        }
+        return containsPoint(
+            this._interval(),
+            BigInt(dateOrAbsolute.getTime()),
+            false,
+        );
+    }
+
+    /**
+     * @summary Whether this absolute time shares any instant with `other`.
+     * @param {TimeSpecification_time_absolute} other The other value.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public overlaps (other: TimeSpecification_time_absolute): boolean {
+        return overlapsInterval(this._interval(), other._interval(), false);
+    }
+
+    /**
+     * @summary Overlap of this absolute time and `other`, if any.
+     * @description
+     *
+     * Copies VS Code `Range.intersection`.
+     *
+     * @param {TimeSpecification_time_absolute} other The other value.
+     * @returns {TimeSpecification_time_absolute | undefined} The overlap,
+     * or `undefined`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public intersection (
+        other: TimeSpecification_time_absolute,
+    ): TimeSpecification_time_absolute | undefined {
+        const overlap = intersectionOf(
+            this._interval(),
+            other._interval(),
+            false,
+        );
+        return overlap
+            ? TimeSpecification_time_absolute._fromInterval(overlap)
+            : undefined;
+    }
+
+    /**
+     * @summary Smallest absolute time covering this and `other`.
+     * @description
+     *
+     * Copies VS Code `Range.union`. A gap is filled.
+     *
+     * @param {TimeSpecification_time_absolute} other The other value.
+     * @returns {TimeSpecification_time_absolute} One value spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public union (
+        other: TimeSpecification_time_absolute,
+    ): TimeSpecification_time_absolute {
+        return TimeSpecification_time_absolute._fromInterval(
+            unionOf(this._interval(), other._interval()),
         );
     }
 }

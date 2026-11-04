@@ -15,6 +15,22 @@ import {
     _decode_Validity_validUntil,
     _encode_Validity_validUntil,
 } from "../OperationalBindingManagement/Validity-validUntil.ta.mjs";
+import {
+    type Time,
+} from "../OperationalBindingManagement/Time.ta.mjs";
+import {
+    type Bound,
+    type Interval,
+    boundToDate,
+    compareIntervals,
+    containsInterval,
+    containsPoint,
+    dateToBound,
+    intersectionOf,
+    isEmptyInterval,
+    overlapsInterval,
+    unionOf,
+} from "../../utils/rangeAlgebra.mjs";
 /**
  * @summary Validity
  * @description
@@ -23,6 +39,15 @@ import {
  * now until explicit termination. `validFrom` DEFAULT `now:NULL`; `validUntil`
  * DEFAULT `explicitTermination:NULL`. Explicit `time` uses `Time` (UTCTime year
  * window as on that type).
+ *
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqualTo` (VS Code: `isEqual`),
+ * `intersection`, and `union` derive new values instead of
+ * mutating. `Date` plays the role of VS Code `Position`. `now` and
+ * `explicitTermination` (and omitted components, which take those
+ * DEFAULTs) are treated as unbounded that side — they are not a
+ * specific instant without an establishment clock. Unlike VS Code
+ * `Range`, inverted `time` bounds are **not** swapped.
  *
  * ### ASN.1 Definition:
  *
@@ -109,6 +134,340 @@ export class Validity {
      */
     public static get _default_value_for_validUntil(): Validity_validUntil {
         return { explicitTermination: null };
+    }
+
+    /**
+     * @summary Instant of an operational-binding `Time` CHOICE.
+     * @param {Time} time UTCTime or GeneralizedTime.
+     * @returns {Bound} Milliseconds since epoch.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _timeToBound (time: Time): Bound {
+        if ("utcTime" in time) {
+            return dateToBound(time.utcTime);
+        }
+        if ("generalizedTime" in time) {
+            return dateToBound(time.generalizedTime);
+        }
+        throw new Error("unrecognized Validity Time alternative");
+    }
+
+    /**
+     * @summary `Time` CHOICE from a millisecond bound.
+     * @description
+     *
+     * Uses `utcTime` for years 1950–2049 and `generalizedTime`
+     * otherwise (same year window as the `Time` type).
+     *
+     * @param {bigint} bound Milliseconds since epoch.
+     * @returns {Time} The corresponding `Time`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _boundToTime (bound: bigint): Time {
+        const date = boundToDate(bound);
+        if (date === undefined) {
+            throw new Error("Validity Time bound is required");
+        }
+        const year = date.getUTCFullYear();
+        if ((year >= 1950) && (year <= 2049)) {
+            return { utcTime: date };
+        }
+        return { generalizedTime: date };
+    }
+
+    /**
+     * @summary Whether `validFrom` is the `now` alternative.
+     * @param {Validity_validFrom} value Start CHOICE.
+     * @returns {boolean} `true` iff the `now` arm is selected.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _isNow (
+        value: Validity_validFrom,
+    ): value is { now: null } {
+        return ("now" in value) && !("time" in value);
+    }
+
+    /**
+     * @summary Whether `validFrom` is the `time` alternative.
+     * @param {Validity_validFrom} value Start CHOICE.
+     * @returns {boolean} `true` iff the `time` arm is a `Time` object.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _isFromTime (
+        value: Validity_validFrom,
+    ): value is { time: Time } {
+        return ("time" in value)
+            && !("now" in value)
+            && (typeof value.time === "object")
+            && (value.time !== null);
+    }
+
+    /**
+     * @summary Whether `validUntil` is `explicitTermination`.
+     * @param {Validity_validUntil} value End CHOICE.
+     * @returns {boolean} `true` iff the `explicitTermination` arm is selected.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _isExplicitTermination (
+        value: Validity_validUntil,
+    ): value is { explicitTermination: null } {
+        return ("explicitTermination" in value) && !("time" in value);
+    }
+
+    /**
+     * @summary Whether `validUntil` is the `time` alternative.
+     * @param {Validity_validUntil} value End CHOICE.
+     * @returns {boolean} `true` iff the `time` arm is a `Time` object.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _isUntilTime (
+        value: Validity_validUntil,
+    ): value is { time: Time } {
+        return ("time" in value)
+            && !("explicitTermination" in value)
+            && (typeof value.time === "object")
+            && (value.time !== null);
+    }
+
+    /**
+     * @summary Lower bound: `now` / omitted ⇒ unbounded.
+     * @param {Validity_validFrom} [validFrom] Start CHOICE.
+     * @returns {Bound} Start instant, or unbounded.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _fromBound (
+        validFrom?: Validity_validFrom,
+    ): Bound {
+        const value = validFrom ?? Validity._default_value_for_validFrom;
+        if (Validity._isNow(value)) {
+            return undefined;
+        }
+        if (Validity._isFromTime(value)) {
+            return Validity._timeToBound(value.time);
+        }
+        throw new Error("unrecognized Validity.validFrom alternative");
+    }
+
+    /**
+     * @summary Upper bound: `explicitTermination` / omitted ⇒ unbounded.
+     * @param {Validity_validUntil} [validUntil] End CHOICE.
+     * @returns {Bound} End instant, or unbounded.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _untilBound (
+        validUntil?: Validity_validUntil,
+    ): Bound {
+        const value = validUntil ?? Validity._default_value_for_validUntil;
+        if (Validity._isExplicitTermination(value)) {
+            return undefined;
+        }
+        if (Validity._isUntilTime(value)) {
+            return Validity._timeToBound(value.time);
+        }
+        throw new Error("unrecognized Validity.validUntil alternative");
+    }
+
+    /**
+     * @summary This lifetime as a 1-D interval, if alternatives are known.
+     * @returns {Interval | undefined} Inclusive bounds, or `undefined`
+     * if an unrecognized extension alternative is present.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private _interval (): Interval | undefined {
+        try {
+            return {
+                start: Validity._fromBound(this.validFrom),
+                end: Validity._untilBound(this.validUntil),
+            };
+        } catch {
+            return undefined;
+        }
+    }
+
+    /**
+     * @summary Build a lifetime from 1-D interval bounds.
+     * @param {Interval} interval Inclusive bounds.
+     * @returns {Validity} DEFAULT `now` / `explicitTermination` omitted.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    private static _fromInterval (interval: Interval): Validity {
+        return new Validity(
+            (interval.start === undefined)
+                ? undefined
+                : { time: Validity._boundToTime(interval.start) },
+            (interval.end === undefined)
+                ? undefined
+                : { time: Validity._boundToTime(interval.end) },
+        );
+    }
+
+    /**
+     * @summary Compare this lifetime to another for ordering.
+     * @description
+     *
+     * Unrecognized CHOICE alternatives sort after known values and
+     * compare equal only to each other by object identity.
+     *
+     * @param {Validity} other The comparefn `b` argument.
+     * @returns {number} Negative, `0`, or positive.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public compare (other: Validity): number {
+        const a = this._interval();
+        const b = other._interval();
+        if ((a === undefined) && (b === undefined)) {
+            return 0;
+        }
+        if (a === undefined) {
+            return 1;
+        }
+        if (b === undefined) {
+            return -1;
+        }
+        return compareIntervals(a, b);
+    }
+
+    /**
+     * @summary Whether two lifetimes have the same effective bounds.
+     * @description
+     *
+     * Copies VS Code `Range.isEqual` (named `isEqualTo` like
+     * `DayTimeBand`). `now` equals omitted `validFrom`;
+     * `explicitTermination` equals omitted `validUntil`. Compared as
+     * instants for `time` alternatives.
+     *
+     * @param {Validity} other The other lifetime.
+     * @returns {boolean} `true` iff both bounds match.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEqualTo (other: Validity): boolean {
+        const a = this._interval();
+        const b = other._interval();
+        if ((a === undefined) || (b === undefined)) {
+            return false;
+        }
+        return (compareIntervals(a, b) === 0);
+    }
+
+    /**
+     * @summary Whether start is after end (matches no instant).
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` in spirit. `now` until
+     * `explicitTermination` is not empty. Unrecognized alternatives
+     * are treated as empty.
+     *
+     * @returns {boolean} `true` iff both `time` bounds are inverted.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public isEmpty (): boolean {
+        const interval = this._interval();
+        if (interval === undefined) {
+            return true;
+        }
+        return isEmptyInterval(interval, false);
+    }
+
+    /**
+     * @summary Whether this lifetime contains a date or another lifetime.
+     * @description
+     *
+     * Copies VS Code `Range.contains`. Closed interval. `now` and
+     * `explicitTermination` do not constrain that side.
+     *
+     * @param {Date | Validity} dateOrValidity A date or lifetime.
+     * @returns {boolean} `true` iff every included instant is in this.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public contains (dateOrValidity: Date | Validity): boolean {
+        const interval = this._interval();
+        if (interval === undefined) {
+            return false;
+        }
+        if (dateOrValidity instanceof Validity) {
+            const other = dateOrValidity._interval();
+            if (other === undefined) {
+                return false;
+            }
+            return containsInterval(interval, other, false);
+        }
+        return containsPoint(
+            interval,
+            BigInt(dateOrValidity.getTime()),
+            false,
+        );
+    }
+
+    /**
+     * @summary Whether this lifetime shares any instant with `other`.
+     * @param {Validity} other The other lifetime.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public overlaps (other: Validity): boolean {
+        const a = this._interval();
+        const b = other._interval();
+        if ((a === undefined) || (b === undefined)) {
+            return false;
+        }
+        return overlapsInterval(a, b, false);
+    }
+
+    /**
+     * @summary Overlap of this lifetime and `other`, if any.
+     * @description
+     *
+     * Copies VS Code `Range.intersection`.
+     *
+     * @param {Validity} other The other lifetime.
+     * @returns {Validity | undefined} The overlap, or `undefined`.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public intersection (other: Validity): Validity | undefined {
+        const a = this._interval();
+        const b = other._interval();
+        if ((a === undefined) || (b === undefined)) {
+            return undefined;
+        }
+        const overlap = intersectionOf(a, b, false);
+        return overlap ? Validity._fromInterval(overlap) : undefined;
+    }
+
+    /**
+     * @summary Smallest lifetime covering this lifetime and `other`.
+     * @description
+     *
+     * Copies VS Code `Range.union`. A gap is filled. `now` or
+     * `explicitTermination` on either side stays unbounded.
+     *
+     * @param {Validity} other The other lifetime.
+     * @returns {Validity} One lifetime spanning both.
+     * @function
+     * @author Cursor Grok 4.6
+     */
+    public union (other: Validity): Validity {
+        const a = this._interval();
+        const b = other._interval();
+        if ((a === undefined) || (b === undefined)) {
+            throw new Error("Validity.union: unrecognized Time alternative");
+        }
+        return Validity._fromInterval(unionOf(a, b));
     }
 }
 
