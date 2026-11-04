@@ -13,7 +13,12 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DataQualitySyntax-namespace-completeness ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DataQualitySyntax-namespace-completeness ::= ENUMERATED {
+ *     none        (1),
+ *     sample      (2),
+ *     selected    (3),
+ *     substantial (4),
+ *     full        (5) }
  * ```
  * 
  * @enum {number}
@@ -43,7 +48,12 @@ type _enum_for_DataQualitySyntax_namespace_completeness = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DataQualitySyntax-namespace-completeness ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DataQualitySyntax-namespace-completeness ::= ENUMERATED {
+ *     none        (1),
+ *     sample      (2),
+ *     selected    (3),
+ *     substantial (4),
+ *     full        (5) }
  * ```
  * 
  * @enum {number}
@@ -58,7 +68,12 @@ type DataQualitySyntax_namespace_completeness = _enum_for_DataQualitySyntax_name
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * DataQualitySyntax-namespace-completeness ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * DataQualitySyntax-namespace-completeness ::= ENUMERATED {
+ *     none        (1),
+ *     sample      (2),
+ *     selected    (3),
+ *     substantial (4),
+ *     full        (5) }
  * ```
  * 
  * @enum {number}

@@ -13,7 +13,11 @@ import * as $ from "@wildboar/asn1/functional";
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeQuality-maintenance-level ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeQuality-maintenance-level ::= ENUMERATED {
+ *     unknown           (1),
+ *     external          (2),
+ *     system-maintained (3),
+ *     user-supplied     (4) }
  * ```
  * 
  * @enum {number}
@@ -41,7 +45,11 @@ type _enum_for_AttributeQuality_maintenance_level = ENUMERATED;
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeQuality-maintenance-level ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeQuality-maintenance-level ::= ENUMERATED {
+ *     unknown           (1),
+ *     external          (2),
+ *     system-maintained (3),
+ *     user-supplied     (4) }
  * ```
  * 
  * @enum {number}
@@ -56,7 +64,11 @@ type AttributeQuality_maintenance_level = _enum_for_AttributeQuality_maintenance
  * ### ASN.1 Definition:
  * 
  * ```asn1
- * AttributeQuality-maintenance-level ::= ENUMERATED { -- REMOVED_FROM_UNNESTING -- }
+ * AttributeQuality-maintenance-level ::= ENUMERATED {
+ *     unknown           (1),
+ *     external          (2),
+ *     system-maintained (3),
+ *     user-supplied     (4) }
  * ```
  * 
  * @enum {number}
