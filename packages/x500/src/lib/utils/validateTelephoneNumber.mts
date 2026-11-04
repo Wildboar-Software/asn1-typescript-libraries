@@ -1,3 +1,9 @@
+const ASCII_PLUS: number = 0x2B;
+const ASCII_SPACE: number = 0x20;
+const ASCII_HYPHEN: number = 0x2D;
+const ASCII_DIGIT_ZERO: number = 0x30;
+const ASCII_DIGIT_NINE: number = 0x39;
+
 /**
  * Rec. ITU-T X.520 (2019), clause 6.7.1 `TelephoneNumber`.
  *
@@ -13,17 +19,17 @@
 export
 function validateTelephoneNumber (value: string): boolean {
     // ub-telephone-number INTEGER ::= 32
-    if (value.length < 2 || value.length > 32 || value.charCodeAt(0) !== 0x2B) {
+    if (value.length < 2 || value.length > 32 || value.charCodeAt(0) !== ASCII_PLUS) {
         return false;
     }
     let digits: number = 0;
     for (let i = 1; i < value.length; i++) {
         const code: number = value.charCodeAt(i);
-        if (code >= 0x30 && code <= 0x39) {
+        if (code >= ASCII_DIGIT_ZERO && code <= ASCII_DIGIT_NINE) {
             digits++;
             continue;
         }
-        if (code !== 0x20 && code !== 0x2D) {
+        if (code !== ASCII_SPACE && code !== ASCII_HYPHEN) {
             return false;
         }
     }
