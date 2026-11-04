@@ -73,49 +73,6 @@ export type SubtreeSpecificationJSON = {
     specificationFilter?: RefinementJSON;
 };
 
-function localNameOrDefault (name: OPTIONAL<LocalName>): LocalName {
-    return name ?? [];
-}
-
-function baseDistanceOrDefault (
-    distance: OPTIONAL<BaseDistance>,
-    defaultValue: BaseDistance,
-): BaseDistance {
-    return distance ?? defaultValue;
-}
-
-function baseDistancesEqual (
-    a: OPTIONAL<BaseDistance>,
-    b: OPTIONAL<BaseDistance>,
-    defaultValue?: BaseDistance,
-): boolean {
-    const left: OPTIONAL<BaseDistance> = (defaultValue === undefined)
-        ? a
-        : baseDistanceOrDefault(a, defaultValue);
-    const right: OPTIONAL<BaseDistance> = (defaultValue === undefined)
-        ? b
-        : baseDistanceOrDefault(b, defaultValue);
-    if (left === undefined && right === undefined) {
-        return true;
-    }
-    if (left === undefined || right === undefined) {
-        return false;
-    }
-    return BigInt(left) === BigInt(right);
-}
-
-function localNamesEqual (
-    a: OPTIONAL<LocalName>,
-    b: OPTIONAL<LocalName>,
-    getMatcher?: GetDistinguishedValueMatcher,
-): boolean {
-    return compareRDNSequence(
-        localNameOrDefault(a),
-        localNameOrDefault(b),
-        getMatcher,
-    );
-}
-
 function chopEquals (
     a: ChopSpecification_specificExclusions_Item,
     b: ChopSpecification_specificExclusions_Item,
@@ -437,7 +394,11 @@ export class SubtreeSpecification implements ChopSpecification {
         other: SubtreeSpecification,
         getMatcher?: GetDistinguishedValueMatcher,
     ): boolean {
-        if (!localNamesEqual(this.base, other.base, getMatcher)) {
+        if (!compareRDNSequence(
+            this.base ?? [],
+            other.base ?? [],
+            getMatcher,
+        )) {
             return false;
         }
         if (!setOfChopsEqual(
@@ -447,14 +408,20 @@ export class SubtreeSpecification implements ChopSpecification {
         )) {
             return false;
         }
-        if (!baseDistancesEqual(
-            this.minimum,
-            other.minimum,
-            SubtreeSpecification._default_value_for_minimum,
-        )) {
+        if (
+            BigInt(this.minimum ?? SubtreeSpecification._default_value_for_minimum)
+            !== BigInt(other.minimum ?? SubtreeSpecification._default_value_for_minimum)
+        ) {
             return false;
         }
-        if (!baseDistancesEqual(this.maximum, other.maximum)) {
+        if ((this.maximum === undefined) !== (other.maximum === undefined)) {
+            return false;
+        }
+        if (
+            (this.maximum !== undefined)
+            && (other.maximum !== undefined)
+            && (BigInt(this.maximum) !== BigInt(other.maximum))
+        ) {
             return false;
         }
         return refinementsEqual(
@@ -539,10 +506,8 @@ export class SubtreeSpecification implements ChopSpecification {
         }
         if (
             (this.minimum !== undefined)
-            && !baseDistancesEqual(
-                this.minimum,
-                SubtreeSpecification._default_value_for_minimum,
-            )
+            && (BigInt(this.minimum)
+                !== BigInt(SubtreeSpecification._default_value_for_minimum))
         ) {
             parts.push(`minimum ${integerToString(this.minimum)}`);
         }
@@ -588,10 +553,8 @@ export class SubtreeSpecification implements ChopSpecification {
         }
         if (
             (this.minimum !== undefined)
-            && !baseDistancesEqual(
-                this.minimum,
-                SubtreeSpecification._default_value_for_minimum,
-            )
+            && (BigInt(this.minimum)
+                !== BigInt(SubtreeSpecification._default_value_for_minimum))
         ) {
             json.minimum = integerToJSON(this.minimum);
         }
