@@ -7,12 +7,16 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax.mjs";
+import compareNameConstraintsSyntax, {
+    type CompareNameConstraintsSyntaxOptions,
+} from "../../comparators/compareNameConstraintsSyntax.mjs";
 import {
     type GeneralSubtrees,
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
+
+export type { CompareNameConstraintsSyntaxOptions };
 /**
  * @summary NameConstraintsSyntax
  * @description
@@ -101,6 +105,8 @@ export class NameConstraintsSyntax {
      * @param other The other name constraints
      * @param getEqualityMatcher A function that takes an attribute type and
      *  returns a function that can equality-match two values of that type
+     * @param options Comparison options. Set `ignoreSubtreeOrder` so the
+     *  order of permitted and excluded subtrees does not matter.
      * @returns `true` if they match
      * @function
      * @public
@@ -108,8 +114,9 @@ export class NameConstraintsSyntax {
     public isEqualTo(
         other: NameConstraintsSyntax,
         getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
+        options?: CompareNameConstraintsSyntaxOptions,
     ): boolean {
-        return compareNameConstraintsSyntax(this, other, getEqualityMatcher);
+        return compareNameConstraintsSyntax(this, other, getEqualityMatcher, options);
     }
 }
 
