@@ -56,4 +56,47 @@ describe("prepString()", () => {
         expect(prepString("STRASSE", { caseFold: true }))
             .toBe(prepString("Straße", { caseFold: true }));
     });
+
+    it("case-folds printable ASCII and collapses its spaces", () => {
+        expect(prepString("  AbC  DeF ", { caseFold: true })).toBe("abc def");
+        expect(prepString("already fine")).toBe("already fine");
+        expect(prepString("Already Fine", { caseFold: true })).toBe("already fine");
+    });
+
+    it("maps the clause 7.2 space controls, including NEL and VT", () => {
+        for (const ch of [ "\t", "\n", "\v", "\f", "\r", "\u0085" ]) {
+            expect(prepString(`a${ch}b`)).toBe("a b");
+            expect(prepString(ch)).toBe(" ");
+        }
+    });
+
+    it("maps clause 7.2 deletions to nothing and drops other controls", () => {
+        const deleted: string[] = [
+            "\u00AD", "\u1806", "\u034F", "\u180B", "\u180C", "\u180D",
+            "\uFE00", "\uFE0F", "\uFFFC", "\u200B", "\u200C", "\u200D",
+            "\u2060", "\uFEFF", "\u08E2", "\u0000", "\u0001", "\u007F", "\u009F",
+        ];
+        for (const ch of deleted) {
+            expect(prepString(`a${ch}b`)).toBe("ab");
+            expect(prepString(ch)).toBeUndefined();
+        }
+        expect(prepString("\u0001 \u0001 \u0001")).toBe(" ");
+    });
+
+    it("prepares long printable strings and long strings with a mapped character", () => {
+        const long = "Organizational Unit for the North American Sales Region covering enterprise accounts";
+        expect(long.length).toBeGreaterThan(64);
+        expect(prepString(long)).toBe(long);
+        expect(prepString(long, { caseFold: true })).toBe(long.toLowerCase());
+        expect(prepString(`${"A".repeat(70)}  B`, { caseFold: true })).toBe(`${"a".repeat(70)} b`);
+        expect(prepString(`${"a".repeat(80)}\u00AD`)).toBe("a".repeat(80));
+        expect(prepString(`${"a".repeat(80)}\u00A0b`)).toBe(`${"a".repeat(80)} b`);
+    });
+
+    it("still normalizes compatibility characters and no-break spaces", () => {
+        expect(prepString("\uFB01le")).toBe("file");
+        expect(prepString("\uFF21", { caseFold: true })).toBe("a");
+        expect(prepString("\u00A0\u00A0")).toBe(" ");
+        expect(prepString("Jos\u00E9 Garc\u00EDa", { caseFold: true })).toBe("jos\u00E9 garc\u00EDa");
+    });
 });

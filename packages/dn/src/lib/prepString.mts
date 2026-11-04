@@ -17,6 +17,32 @@ const controlsToSpace: RegExp = /[\t\n\v\f\r\u0085]/g;
  */
 const mappedToNothing: RegExp = /[\u00AD\u1806\u034F\u180B-\u180D\uFE00-\uFE0F\uFFFC\u200B\p{Cc}\p{Cf}]+/ug;
 
+/**
+ * Code units outside printable ASCII. Used only as a reject for the
+ * long-string scan, so it stays non-global and `test` cannot stick.
+ */
+const notPlainAscii: RegExp = /[^\u0020-\u007E]/;
+
+/**
+ * Leading whitespace, trailing whitespace, a whitespace run, or
+ * whitespace other than U+0020. When this does not match, replacing
+ * `/\s+/` with a single space and trimming would not change the string.
+ */
+const needsInsignificantSpaceRemoval: RegExp = /^\s|\s\s|\s$|[^\S ]/;
+
+const insignificantSpaces: RegExp = /\s+/g;
+
+const SPACE: number = 0x20;
+
+/**
+ * Above this length, a string that is not printable ASCII is prepared
+ * with the regexp steps directly. A character scan is faster for
+ * shorter strings and for printable ASCII of any length. It is slower
+ * when a mapped character sits near the end of a longer string: the
+ * scan walks the whole string and then so does `replace`.
+ */
+const SCAN_LIMIT: number = 64;
+
 export const prohibitedCharacters: RegExp = /[\uD800-\uDFFF\uFFFD]+/;
 
 /**
@@ -65,6 +91,44 @@ export interface PrepStringOptions {
 }
 
 /**
+ * Clause 7.6.1. A run of spaces becomes one SPACE, and leading and
+ * trailing SPACE are removed. A string of only spaces becomes one SPACE.
+ * Single internal U+0020s are already in that form; `replace` would
+ * still allocate a new string for them.
+ */
+function removeInsignificantSpaces (mapped: string): string {
+    if (!needsInsignificantSpaceRemoval.test(mapped)) {
+        return mapped;
+    }
+    const trimmed: string = mapped.replace(insignificantSpaces, " ").trim();
+    return trimmed.length === 0 ? " " : trimmed;
+}
+
+/**
+ * Map, prohibit, normalize, and insignificant-space removal, always
+ * running the regexp steps. Used for long strings that are not
+ * printable ASCII.
+ */
+function prepStringGeneral (str: string, caseFold: boolean): string | undefined {
+    if (prohibitedCharacters.test(str)) { // 7.4: Prohibit
+        return undefined;
+    }
+    // 7.2: Map. Controls that become SPACE are rewritten first so they
+    // are not deleted with the remaining Cc characters.
+    let mapped: string = str
+        .replace(controlsToSpace, " ")
+        .replace(mappedToNothing, "");
+    if (caseFold) {
+        mapped = foldCase(mapped);
+    }
+    mapped = mapped.normalize("NFKC"); // 7.3: Normalize
+    if (mapped.length === 0) {
+        return undefined;
+    }
+    return removeInsignificantSpaces(mapped);
+}
+
+/**
  * @summary Prepare a string for matching, per ITU Recommendation X.520, Section 7.
  * @description
  *
@@ -90,26 +154,72 @@ export interface PrepStringOptions {
  */
 export
 function prepString (str: string, options?: PrepStringOptions): string | undefined {
-    if (prohibitedCharacters.test(str)) { // 7.4: Prohibit
-        return undefined;
+    const caseFold: boolean = options?.caseFold === true;
+    // One pass records which `replace` calls can do anything. Printable
+    // ASCII never needs Map, Prohibit, or NFKC, and its case fold is
+    // `toLowerCase`. See `packages/dn/bench/prepString.mjs`.
+    if (str.length > SCAN_LIMIT && notPlainAscii.test(str)) {
+        return prepStringGeneral(str, caseFold);
     }
-    // 7.2: Map. Controls that become SPACE are rewritten first so they
-    // are not deleted with the remaining Cc characters.
-    let mapped = str
-        .replace(controlsToSpace, " ")
-        .replace(mappedToNothing, "");
-    if (options?.caseFold === true) {
+    const n: number = str.length;
+    let mapControls: boolean = false;
+    let maybeMappedToNothing: boolean = false;
+    let needsSpace: boolean = false;
+    let prevSpace: boolean = false;
+    let plain: boolean = true;
+    for (let i: number = 0; i < n; i++) {
+        const c: number = str.charCodeAt(i);
+        if (c === SPACE) {
+            if (prevSpace || i === 0 || i === (n - 1)) {
+                needsSpace = true;
+            }
+            prevSpace = true;
+            continue;
+        }
+        prevSpace = false;
+        if (c > 0x7E) {
+            plain = false;
+            if (c === 0x85) { // NEL maps to SPACE, not to nothing
+                mapControls = true;
+            } else if (c === 0xFFFD || (c >= 0xD800 && c <= 0xDFFF)) {
+                return undefined; // 7.4: Prohibit
+            } else {
+                maybeMappedToNothing = true;
+            }
+            continue;
+        }
+        if (c < SPACE) {
+            plain = false;
+            // TAB, LF, VT, FF, CR. Other C0 controls map to nothing.
+            if (c >= 0x09 && c <= 0x0D) {
+                mapControls = true;
+            } else {
+                maybeMappedToNothing = true;
+            }
+        }
+    }
+    if (plain) {
+        const mapped: string = caseFold ? str.toLowerCase() : str;
+        if (!needsSpace) {
+            return mapped.length === 0 ? undefined : mapped;
+        }
+        return removeInsignificantSpaces(mapped);
+    }
+    let mapped: string = str;
+    if (mapControls) {
+        mapped = mapped.replace(controlsToSpace, " ");
+    }
+    if (maybeMappedToNothing) {
+        mapped = mapped.replace(mappedToNothing, "");
+    }
+    if (caseFold) {
         mapped = foldCase(mapped);
     }
-    mapped = mapped.normalize("NFKC"); // 7.3: Normalize
+    mapped = mapped.normalize("NFKC");
     if (mapped.length === 0) {
         return undefined;
     }
-    // 7.6.1: consecutive whitespace is one SPACE; leading and
-    // trailing SPACE are removed; a string of only spaces becomes
-    // a single SPACE.
-    const trimmed = mapped.replace(/\s+/g, " ").trim();
-    return trimmed.length === 0 ? " " : trimmed;
+    return removeInsignificantSpaces(mapped);
 }
 
 /**
