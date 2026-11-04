@@ -261,7 +261,7 @@ are either deprecated or not intended for external use:
 - `selectFromEntry.mts` - Select information from an entry to produce `EntryInformation`
 - `splitIntoMastersAndShadows.mts` - Group access points into masters and shadows
 - `validateObjectClasses.mts` - Validate a set of object classes
-- `validateTelephoneNumber.mts` - E.123 international telephone number (`+`, digits, spaces, hyphens; at most 32 characters)
+- `validateTelephoneNumber.mts` - E.123 international telephone number (`+`, digits, spaces, non-repeated hyphens; at most 32 characters)
 
 ## ESM-Only
 
