@@ -3,6 +3,9 @@ import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
+import { compareGeneralName } from "@wildboar/gn";
+
+const DEFAULT_MINIMUM: number = 0;
 
 /**
  * @summary Compare two `GeneralSubtree` values
@@ -19,7 +22,13 @@ function compareGeneralSubtree (
     b: GeneralSubtree,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    return a.isEqualTo(b, getEqualityMatcher);
+    if ((a.minimum ?? DEFAULT_MINIMUM) !== (b.minimum ?? DEFAULT_MINIMUM)) {
+        return false;
+    }
+    if (a.maximum !== b.maximum) {
+        return false;
+    }
+    return compareGeneralName(a.base, b.base, getEqualityMatcher);
 }
 
 export default compareGeneralSubtree;

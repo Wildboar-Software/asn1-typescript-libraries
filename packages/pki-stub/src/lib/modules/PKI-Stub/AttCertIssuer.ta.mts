@@ -26,7 +26,6 @@ import {
     _decode_ObjectDigestInfo,
     _encode_ObjectDigestInfo,
 } from "../PKI-Stub/ObjectDigestInfo.ta.mjs";
-import { compareGeneralNames } from "../../../compareGeneralNames.mjs";
 
 /**
  * @summary AttCertIssuer
@@ -114,54 +113,6 @@ export class AttCertIssuer {
             _o.objectDigestInfo,
             _o._unrecognizedExtensionsList
         );
-    }
-
-    /**
-     * @summary Compare this attribute-certificate issuer with another
-     * @description
-     *
-     * Each of `issuerName`, `baseCertificateID`, and `objectDigestInfo` must
-     * be present on both sides or neither. Present components compare with
-     * `GeneralNames` multiset equality, {@link IssuerSerial.isEqualTo}, and
-     * {@link ObjectDigestInfo.isEqualTo} respectively.
-     *
-     * @param other The other attribute-certificate issuer
-     * @returns `true` if they match
-     * @function
-     * @public
-     */
-    public isEqualTo(other: AttCertIssuer): boolean {
-        if (Boolean(this.baseCertificateID) !== Boolean(other.baseCertificateID)) {
-            return false;
-        }
-        if (Boolean(this.issuerName) !== Boolean(other.issuerName)) {
-            return false;
-        }
-        if (Boolean(this.objectDigestInfo) !== Boolean(other.objectDigestInfo)) {
-            return false;
-        }
-        if (
-            this.baseCertificateID
-            && other.baseCertificateID
-            && !this.baseCertificateID.isEqualTo(other.baseCertificateID)
-        ) {
-            return false;
-        }
-        if (
-            this.issuerName
-            && other.issuerName
-            && !compareGeneralNames(this.issuerName, other.issuerName)
-        ) {
-            return false;
-        }
-        if (
-            this.objectDigestInfo
-            && other.objectDigestInfo
-            && !this.objectDigestInfo.isEqualTo(other.objectDigestInfo)
-        ) {
-            return false;
-        }
-        return true;
     }
 }
 

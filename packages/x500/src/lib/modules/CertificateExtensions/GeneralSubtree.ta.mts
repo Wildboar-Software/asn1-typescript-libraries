@@ -3,8 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import compareGeneralSubtree from "../../comparators/compareGeneralSubtree.mjs";
 import {
     type BaseDistance,
     _decode_BaseDistance,
@@ -15,8 +18,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-import { compareGeneralName } from "@wildboar/gn";
-import type { GetDistinguishedValueMatcher } from "@wildboar/dn";
 
 /**
  * @summary GeneralSubtree
@@ -121,32 +122,18 @@ export class GeneralSubtree {
 
     /**
      * @summary Compare this general subtree with another
-     * @description
-     *
-     * `minimum` uses DEFAULT 0. `maximum` must be present on both sides or
-     * neither. The `base` names compare with {@link compareGeneralName}.
-     *
      * @param other The other general subtree
-     * @param getEqualityMatcher Optional equality matcher for attribute types
-     *  inside a `directoryName`
+     * @param getEqualityMatcher A function that takes an attribute type and
+     *  returns a function that can equality-match two values of that type
      * @returns `true` if they match
      * @function
      * @public
      */
     public isEqualTo(
         other: GeneralSubtree,
-        getEqualityMatcher?: GetDistinguishedValueMatcher,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     ): boolean {
-        if (
-            (this.minimum ?? GeneralSubtree._default_value_for_minimum)
-            !== (other.minimum ?? GeneralSubtree._default_value_for_minimum)
-        ) {
-            return false;
-        }
-        if (this.maximum !== other.maximum) {
-            return false;
-        }
-        return compareGeneralName(this.base, other.base, getEqualityMatcher);
+        return compareGeneralSubtree(this, other, getEqualityMatcher);
     }
 }
 

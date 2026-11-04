@@ -142,35 +142,6 @@ export class AuthenticationLevel_basicLevels {
     public static get _default_value_for_signed(): BOOLEAN {
         return false;
     }
-
-    /**
-     * @summary Compare these basic authentication levels with another
-     * @description
-     *
-     * `level` must match. A missing `localQualifier` matches only another
-     * missing one. DEFAULT `signed` FALSE is applied, so omitted `signed`
-     * equals explicit `FALSE`.
-     *
-     * This is equality, not the threshold comparison implemented by
-     * `compareAuthenticationLevel`.
-     *
-     * @param other The other basic authentication levels
-     * @returns `true` if they match
-     * @function
-     * @public
-     */
-    public isEqualTo(other: AuthenticationLevel_basicLevels): boolean {
-        if (this.level !== other.level) {
-            return false;
-        }
-        if (this.localQualifier !== other.localQualifier) {
-            return false;
-        }
-        return (
-            (this.signed ?? AuthenticationLevel_basicLevels._default_value_for_signed)
-            === (other.signed ?? AuthenticationLevel_basicLevels._default_value_for_signed)
-        );
-    }
     /**
      * @summary The enum used as the type of the component `level`
      * @public

@@ -3,6 +3,7 @@ import type EqualityMatcher from "../types/EqualityMatcher.mjs";
 import type {
     GeneralSubtrees,
 } from "../modules/CertificateExtensions/GeneralSubtrees.ta.mjs";
+import compareGeneralSubtree from "./compareGeneralSubtree.mjs";
 
 /**
  * @summary Compare two `GeneralSubtrees` values
@@ -24,7 +25,7 @@ function compareGeneralSubtrees (
         return false;
     }
     for (let i = 0; i < a.length; i++) {
-        if (!a[i].isEqualTo(b[i], getEqualityMatcher)) {
+        if (!compareGeneralSubtree(a[i], b[i], getEqualityMatcher)) {
             return false;
         }
     }

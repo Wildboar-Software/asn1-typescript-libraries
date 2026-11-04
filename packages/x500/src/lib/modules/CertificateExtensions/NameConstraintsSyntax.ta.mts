@@ -3,15 +3,16 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import compareNameConstraintsSyntax from "../../comparators/compareNameConstraintsSyntax.mjs";
 import {
     type GeneralSubtrees,
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
-import type { GetDistinguishedValueMatcher } from "@wildboar/dn";
-import compareGeneralSubtrees from "../../comparators/compareGeneralSubtrees.mjs";
 /**
  * @summary NameConstraintsSyntax
  * @description
@@ -97,52 +98,18 @@ export class NameConstraintsSyntax {
 
     /**
      * @summary Compare this name constraints value with another
-     * @description
-     *
-     * Each of `permittedSubtrees` and `excludedSubtrees` must be present on
-     * both sides or neither. Present `GeneralSubtrees` compare in encoding
-     * order with {@link GeneralSubtree.isEqualTo}.
-     *
      * @param other The other name constraints
-     * @param getEqualityMatcher Optional equality matcher for attribute types
-     *  inside a `directoryName`
+     * @param getEqualityMatcher A function that takes an attribute type and
+     *  returns a function that can equality-match two values of that type
      * @returns `true` if they match
      * @function
      * @public
      */
     public isEqualTo(
         other: NameConstraintsSyntax,
-        getEqualityMatcher?: GetDistinguishedValueMatcher,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     ): boolean {
-        if (Boolean(this.permittedSubtrees) !== Boolean(other.permittedSubtrees)) {
-            return false;
-        }
-        if (Boolean(this.excludedSubtrees) !== Boolean(other.excludedSubtrees)) {
-            return false;
-        }
-        if (
-            this.permittedSubtrees
-            && other.permittedSubtrees
-            && !compareGeneralSubtrees(
-                this.permittedSubtrees,
-                other.permittedSubtrees,
-                getEqualityMatcher,
-            )
-        ) {
-            return false;
-        }
-        if (
-            this.excludedSubtrees
-            && other.excludedSubtrees
-            && !compareGeneralSubtrees(
-                this.excludedSubtrees,
-                other.excludedSubtrees,
-                getEqualityMatcher,
-            )
-        ) {
-            return false;
-        }
-        return true;
+        return compareNameConstraintsSyntax(this, other, getEqualityMatcher);
     }
 }
 

@@ -1,6 +1,7 @@
 import type {
     AlgorithmIdentifier,
 } from "../modules/AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
+import compareElements from "./compareElements.mjs";
 
 /**
  * @summary Compare two `AlgorithmIdentifier` values
@@ -11,7 +12,13 @@ import type {
  */
 export
 function compareAlgorithmIdentifier (a: AlgorithmIdentifier, b: AlgorithmIdentifier): boolean {
-    return a.isEqualTo(b);
+    const sameParameters = a.parameters === b.parameters
+        || (
+            a.parameters !== undefined
+            && b.parameters !== undefined
+            && compareElements(a.parameters, b.parameters)
+        );
+    return a.algorithm.isEqualTo(b.algorithm) && sameParameters;
 }
 
 export default compareAlgorithmIdentifier;

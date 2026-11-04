@@ -16,8 +16,6 @@ import {
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
-import { compareGeneralName } from "@wildboar/gn";
-import type { GetDistinguishedValueMatcher } from "@wildboar/dn";
 /**
  * @summary GeneralSubtree
  * @description
@@ -105,36 +103,6 @@ export class GeneralSubtree {
      */
     public static get _default_value_for_minimum(): INTEGER {
         return 0;
-    }
-
-    /**
-     * @summary Compare this general subtree with another
-     * @description
-     *
-     * `minimum` uses DEFAULT 0. `maximum` must be present on both sides or
-     * neither. The `base` names compare with {@link compareGeneralName}.
-     *
-     * @param other The other general subtree
-     * @param getEqualityMatcher Optional equality matcher for attribute types
-     *  inside a `directoryName`
-     * @returns `true` if they match
-     * @function
-     * @public
-     */
-    public isEqualTo(
-        other: GeneralSubtree,
-        getEqualityMatcher?: GetDistinguishedValueMatcher,
-    ): boolean {
-        if (
-            (this.minimum ?? GeneralSubtree._default_value_for_minimum)
-            !== (other.minimum ?? GeneralSubtree._default_value_for_minimum)
-        ) {
-            return false;
-        }
-        if (this.maximum !== other.maximum) {
-            return false;
-        }
-        return compareGeneralName(this.base, other.base, getEqualityMatcher);
     }
 }
 

@@ -12,7 +12,6 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { compareBytes } from "@wildboar/dn";
 
 /**
  * JSON Encoding Rules encoding of {@link AlgorithmIdentifier}.
@@ -21,21 +20,6 @@ export type AlgorithmIdentifierJSON = {
     algorithm: string;
     parameters?: unknown;
 };
-
-function parametersEqual(
-    a: OPTIONAL<_Element>,
-    b: OPTIONAL<_Element>,
-): boolean {
-    if (a === b) {
-        return true;
-    }
-    if (a === undefined || b === undefined) {
-        return false;
-    }
-    return (a.tagClass === b.tagClass)
-        && (a.tagNumber === b.tagNumber)
-        && (compareBytes(a.value, b.value) === 0);
-}
 
 /**
  * @summary AlgorithmIdentifier
@@ -114,24 +98,6 @@ export class AlgorithmIdentifier {
             _o.parameters,
             _o._unrecognizedExtensionsList
         );
-    }
-
-    /**
-     * @summary Compare this algorithm identifier with another
-     * @description
-     *
-     * The algorithm object identifiers must match. Absent `parameters` match
-     * only another absent `parameters`. Present parameters match when tag
-     * class, tag number, and content octets are identical.
-     *
-     * @param other The other algorithm identifier
-     * @returns `true` if they match
-     * @function
-     * @public
-     */
-    public isEqualTo(other: AlgorithmIdentifier): boolean {
-        return this.algorithm.isEqualTo(other.algorithm)
-            && parametersEqual(this.parameters, other.parameters);
     }
 
     /**

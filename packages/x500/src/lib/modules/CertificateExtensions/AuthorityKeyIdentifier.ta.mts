@@ -3,13 +3,11 @@ import {
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     type OPTIONAL,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import {
-    compareBytes,
-    type GetDistinguishedValueMatcher,
-} from "@wildboar/dn";
-import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKeyIdentifier.mjs";
 import {
     type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
@@ -127,62 +125,18 @@ export class AuthorityKeyIdentifier {
 
     /**
      * @summary Compare this authority key identifier with another
-     * @description
-     *
-     * Each of `keyIdentifier`, `authorityCertIssuer`, and
-     * `authorityCertSerialNumber` must be present on both sides or neither.
-     * Key identifiers and serial numbers compare octet-for-octet. Issuer
-     * names compare as a `GeneralNames` multiset.
-     *
      * @param other The other authority key identifier
-     * @param getEqualityMatcher Optional equality matcher for attribute types
-     *  inside a `directoryName`
+     * @param getEqualityMatcher A function that takes an attribute type and
+     *  returns a function that can equality-match two values of that type
      * @returns `true` if they match
      * @function
      * @public
      */
     public isEqualTo(
         other: AuthorityKeyIdentifier,
-        getEqualityMatcher?: GetDistinguishedValueMatcher,
+        getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
     ): boolean {
-        if (Boolean(this.keyIdentifier) !== Boolean(other.keyIdentifier)) {
-            return false;
-        }
-        if (Boolean(this.authorityCertIssuer) !== Boolean(other.authorityCertIssuer)) {
-            return false;
-        }
-        if (Boolean(this.authorityCertSerialNumber) !== Boolean(other.authorityCertSerialNumber)) {
-            return false;
-        }
-        if (
-            this.keyIdentifier
-            && other.keyIdentifier
-            && compareBytes(this.keyIdentifier, other.keyIdentifier) !== 0
-        ) {
-            return false;
-        }
-        if (
-            this.authorityCertIssuer
-            && other.authorityCertIssuer
-            && !compareGeneralNames(
-                this.authorityCertIssuer,
-                other.authorityCertIssuer,
-                getEqualityMatcher,
-            )
-        ) {
-            return false;
-        }
-        if (
-            this.authorityCertSerialNumber
-            && other.authorityCertSerialNumber
-            && compareBytes(
-                this.authorityCertSerialNumber,
-                other.authorityCertSerialNumber,
-            ) !== 0
-        ) {
-            return false;
-        }
-        return true;
+        return compareAuthorityKeyIdentifier(this, other, getEqualityMatcher);
     }
 }
 
