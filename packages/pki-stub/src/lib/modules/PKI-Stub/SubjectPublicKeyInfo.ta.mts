@@ -10,6 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { Buffer } from "node:buffer";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
@@ -125,6 +126,35 @@ export class SubjectPublicKeyInfo {
             algorithm: this.algorithm.toJSON(),
             subjectPublicKey: bitStringToJSON(this.subjectPublicKey),
         };
+    }
+
+    /**
+     * @summary PEM encoding of this public key (IETF RFC 7468)
+     * @description
+     *
+     * The label is `PUBLIC KEY`. The body is the base64 of the DER encoding,
+     * wrapped at 64 characters. The encoder writes definite-length BER, which
+     * for this type is the DER encoding. Unrecognized extensions are included
+     * in that encoding because they are part of the value the signature or
+     * the peer would see; they are still omitted from {@link toJSON}.
+     *
+     * @returns The PEM text, ending in a newline
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const der: Uint8Array = _encode_SubjectPublicKeyInfo(this, $.BER).toBytes();
+        const b64: string = Buffer.from(
+            der.buffer,
+            der.byteOffset,
+            der.byteLength,
+        ).toString("base64");
+        const lines: string[] = ["-----BEGIN PUBLIC KEY-----"];
+        for (let i: number = 0; i < b64.length; i += 64) {
+            lines.push(b64.slice(i, i + 64));
+        }
+        lines.push("-----END PUBLIC KEY-----");
+        return lines.join("\n") + "\n";
     }
 }
 

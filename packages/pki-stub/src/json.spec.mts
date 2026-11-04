@@ -1,3 +1,5 @@
+import { createPublicKey, generateKeyPairSync } from "node:crypto";
+import { Buffer } from "node:buffer";
 import { describe, expect, it } from "vitest";
 import {
     ASN1Construction,
@@ -15,7 +17,10 @@ import { FingerPrint } from "./lib/modules/PKI-Stub/FingerPrint.ta.mjs";
 import { HASH } from "./lib/modules/PKI-Stub/HASH.ta.mjs";
 import { ObjectDigestInfo } from "./lib/modules/PKI-Stub/ObjectDigestInfo.ta.mjs";
 import { ObjectDigestInfo_digestedObjectType } from "./lib/modules/PKI-Stub/ObjectDigestInfo-digestedObjectType.ta.mjs";
-import { SubjectPublicKeyInfo } from "./lib/modules/PKI-Stub/SubjectPublicKeyInfo.ta.mjs";
+import {
+    SubjectPublicKeyInfo,
+    _decode_SubjectPublicKeyInfo,
+} from "./lib/modules/PKI-Stub/SubjectPublicKeyInfo.ta.mjs";
 import { Validity } from "./lib/modules/PKI-Stub/Validity.ta.mjs";
 import { ScopeRestriction } from "./lib/modules/AuthenticationFramework/ScopeRestriction.ta.mjs";
 import { Attribute } from "./lib/modules/InformationFramework/Attribute.ta.mjs";
@@ -86,6 +91,15 @@ describe("Context JSON", () => {
 describe("Validity JSON", () => {
     const notBefore = new Date("2020-01-01T00:00:00.000Z");
     const notAfter = new Date("2021-01-01T00:00:00.000Z");
+    it("toString is an ISO 8601 interval of the two instants", () => {
+        const value = new Validity(
+            { utcTime: notBefore },
+            { generalizedTime: notAfter },
+        );
+        expect(value.toString()).toBe(
+            "2020-01-01T00:00:00.000Z/2021-01-01T00:00:00.000Z",
+        );
+    });
     it("toJSON encodes Time choices as ISO 8601 timestamps", () => {
         const value = new Validity(
             { utcTime: notBefore },
@@ -109,6 +123,11 @@ describe("Validity JSON", () => {
 describe("AttCertValidityPeriod JSON", () => {
     const notBeforeTime = new Date("2020-01-01T00:00:00.000Z");
     const notAfterTime = new Date("2021-01-01T00:00:00.000Z");
+    it("toString is an ISO 8601 interval", () => {
+        expect(new AttCertValidityPeriod(notBeforeTime, notAfterTime).toString()).toBe(
+            "2020-01-01T00:00:00.000Z/2021-01-01T00:00:00.000Z",
+        );
+    });
     it("toJSON encodes GeneralizedTime as ISO 8601 timestamps", () => {
         expect(new AttCertValidityPeriod(notBeforeTime, notAfterTime).toJSON()).toEqual({
             notBeforeTime: "2020-01-01T00:00:00.000Z",
@@ -174,6 +193,17 @@ describe("SubjectPublicKeyInfo JSON", () => {
     it("toJSON encodes the subject public key bit string", () => {
         const json = new SubjectPublicKeyInfo(new AlgorithmIdentifier(sha256), bits).toJSON();
         expect(json.subjectPublicKey).toEqual({ value: "b1", length: 8 });
+    });
+    it("toString is a PUBLIC KEY PEM that Node can read", () => {
+        const { publicKey } = generateKeyPairSync("ec", { namedCurve: "P-256" });
+        const der = publicKey.export({ type: "spki", format: "der" });
+        const el = new DERElement();
+        el.fromBytes(der);
+        const pem = _decode_SubjectPublicKeyInfo(el).toString();
+        expect(pem.startsWith("-----BEGIN PUBLIC KEY-----\n")).toBe(true);
+        expect(pem.endsWith("-----END PUBLIC KEY-----\n")).toBe(true);
+        const back = createPublicKey(pem).export({ type: "spki", format: "der" });
+        expect(Buffer.compare(back, der)).toBe(0);
     });
 });
 

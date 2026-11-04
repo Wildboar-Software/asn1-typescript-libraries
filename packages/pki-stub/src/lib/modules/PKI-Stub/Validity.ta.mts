@@ -263,6 +263,25 @@ export class Validity {
         );
     }
 
+    /**
+     * @summary ISO 8601 time interval for this validity period
+     * @description
+     *
+     * `notBefore/notAfter`, each an ISO 8601 instant in UTC. The string does
+     * not record whether a bound was `UTCTime` or `GeneralizedTime`;
+     * {@link toJSON} does. Both bounds are inclusive in the certificate.
+     * Unrecognized extensions are omitted.
+     *
+     * @returns The interval `start/end`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const start: string = this.notBeforeAsDate().toISOString();
+        const end: string = this.notAfterAsDate().toISOString();
+        return `${start}/${end}`;
+    }
+
 }
 
 /**
