@@ -34,7 +34,6 @@ import {
     asDITDescending,
     rdnSequenceToJSON,
     rdnSequenceToString,
-    toDITAscending,
     type DistinguishedName,
     type RDNSequenceDescending,
     type RDNSequenceJSON,
@@ -55,11 +54,13 @@ export type RefinementJSON =
 
 /**
  * JSON encoding of one `specificExclusions` alternative. The local
- * name is {@link RDNSequenceJSON} in X.500 order.
+ * name is {@link RDNSequenceJSON} in X.500 order. An unrecognized
+ * alternative is an empty object.
  */
 export type SpecificExclusionJSON =
     | { chopBefore: RDNSequenceJSON }
-    | { chopAfter: RDNSequenceJSON };
+    | { chopAfter: RDNSequenceJSON }
+    | Record<string, never>;
 
 /**
  * JSON Encoding Rules encoding of {@link SubtreeSpecification}.
@@ -91,24 +92,15 @@ function quoteGserString (text: string): string {
  * @summary GSER encoding of a local name
  * @description
  *
- * [RFC 3642](https://www.rfc-editor.org/rfc/rfc3642#section-6) encodes
- * a `LocalName` as a quoted LDAP distinguished name. `name` is X.500
- * order (superior first). {@link toDITAscending} reverses it, then
- * {@link rdnSequenceToString} prints it.
+ * Printed with {@link rdnSequenceToString} and quoted. The RDNs stay
+ * in X.500 DIT-descending order (the first RDN is the superior),
+ * rather than LDAP DIT-ascending order.
  *
  * @param name The local name, superior first
- * @returns A quoted LDAP DN
+ * @returns A quoted distinguished name in X.500 order
  */
 function localNameToGser (name: LocalName): string {
-    const ldap = rdnSequenceToString(toDITAscending(asDITDescending(name)));
-    return quoteGserString(ldap);
-}
-
-/**
- * @summary Whether `distance` is the default `minimum` of zero
- */
-function isDefaultMinimum (distance: BaseDistance): boolean {
-    return (distance === 0) || (distance === 0n);
+    return quoteGserString(rdnSequenceToString(name));
 }
 
 /**
@@ -204,7 +196,10 @@ function specificExclusionsToGser (
 }
 
 /**
- * @summary JSON of the recognized specific exclusions
+ * @summary JSON of the specific exclusions
+ * @description
+ *
+ * An unrecognized alternative is an empty object.
  */
 function specificExclusionsToJSON (
     exclusions: OPTIONAL<ChopSpecification_specificExclusions_Item[]>,
@@ -222,6 +217,8 @@ function specificExclusionsToJSON (
             json.push({
                 chopAfter: rdnSequenceToJSON(exclusion.chopAfter),
             });
+        } else {
+            json.push({});
         }
     }
     return (json.length > 0) ? json : undefined;
@@ -409,14 +406,12 @@ export class SubtreeSpecification implements ChopSpecification {
      * `base` of `{}` and `minimum` of `0` are omitted, as are absent
      * optional components. An empty specification is `{}`.
      *
-     * A local name is a quoted LDAP distinguished name
-     * ([RFC 3641 §3.20](https://www.rfc-editor.org/rfc/rfc3641#section-3.20),
-     * [RFC 3642 §6](https://www.rfc-editor.org/rfc/rfc3642#section-6)).
-     * The RDN sequence is reversed with {@link toDITAscending}, then
-     * printed with {@link rdnSequenceToString}. A quotation mark in
-     * that string is doubled. A `Refinement` is a GSER CHOICE
-     * (`item:`, `and:`, `or:`, `not:`) and each object class is a
-     * dotted decimal.
+     * A local name is printed with {@link rdnSequenceToString} and
+     * quoted. The RDNs stay in X.500 DIT-descending order (the first
+     * RDN is the superior), rather than LDAP DIT-ascending order. A
+     * quotation mark in that string is doubled. A `Refinement` is
+     * a GSER CHOICE (`item:`, `and:`, `or:`, `not:`), and each
+     * object class is a dotted decimal.
      *
      * Unrecognized extensions and unrecognized choice alternatives
      * are omitted.
@@ -435,8 +430,9 @@ export class SubtreeSpecification implements ChopSpecification {
             parts.push(`specificExclusions ${exclusions}`);
         }
         if (
-            this.minimum !== undefined
-            && !isDefaultMinimum(this.minimum)
+            (this.minimum !== undefined)
+            && (this.minimum !== 0)
+            && (this.minimum !== 0n)
         ) {
             parts.push(`minimum ${integerToString(this.minimum)}`);
         }
@@ -459,10 +455,12 @@ export class SubtreeSpecification implements ChopSpecification {
      * Absent optional components are omitted, as are `base` and
      * `minimum` when they are the defaults (`{}` and `0`). Local
      * names use the reversible RDN JSON from `@wildboar/dn`
-     * ({@link rdnSequenceToJSON}), in X.500 order: the first RDN is
-     * the superior. A `Refinement` is a one-member object whose key
-     * is the CHOICE alternative, and an object class is a dotted
-     * numeric string. Unrecognized extensions are not represented.
+     * ({@link rdnSequenceToJSON}), in X.500 DIT-descending order:
+     * the first RDN is the superior, rather than LDAP DIT-ascending
+     * order. A `Refinement` is a one-member object whose key is the
+     * CHOICE alternative, and an object class is a dotted numeric
+     * string. An unrecognized specific exclusion is `{}`.
+     * Unrecognized extensions are not represented.
      *
      * @returns The JSON Encoding Rules encoding of this value
      * @function
@@ -478,8 +476,9 @@ export class SubtreeSpecification implements ChopSpecification {
             json.specificExclusions = exclusions;
         }
         if (
-            this.minimum !== undefined
-            && !isDefaultMinimum(this.minimum)
+            (this.minimum !== undefined)
+            && (this.minimum !== 0)
+            && (this.minimum !== 0n)
         ) {
             json.minimum = integerToJSON(this.minimum);
         }

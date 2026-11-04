@@ -4,7 +4,6 @@ import {
     asDITDescending,
     rdnSequenceToJSON,
     rdnSequenceToString,
-    toDITAscending,
     type RDNSequenceDescending,
 } from "@wildboar/dn";
 import {
@@ -53,9 +52,9 @@ describe("SubtreeSpecification.toString()", () => {
         expect(new SubtreeSpecification(undefined, []).toString()).toBe("{}");
     });
 
-    it("prints a local name as a quoted LDAP DN, leaf first", () => {
+    it("prints a local name in X.500 order, superior first", () => {
         const spec = new SubtreeSpecification(people, undefined, 2);
-        expect(spec.toString()).toBe('{ base "cn=admin,ou=people", minimum 2 }');
+        expect(spec.toString()).toBe('{ base "ou=people,cn=admin", minimum 2 }');
     });
 
     it("doubles a quotation mark inside the LDAP DN", () => {
@@ -81,7 +80,7 @@ describe("SubtreeSpecification.toString()", () => {
             },
         );
         expect(spec.toString()).toBe(
-            "{ base \"cn=admin,ou=people\","
+            "{ base \"ou=people,cn=admin\","
             + " specificExclusions { chopBefore:\"cn=secret\", chopAfter:\"cn=keep\" },"
             + " minimum 1, maximum 4,"
             + " specificationFilter and:{ item:2.5.6.6, not:item:2.5.6.0, or:{ item:2.5.6.6 } } }",
@@ -105,10 +104,9 @@ describe("SubtreeSpecification.toString()", () => {
         expect(spec.toString()).toBe("{}");
     });
 
-    it("uses toDITAscending and rdnSequenceToString for the local name", () => {
+    it("prints the local name with rdnSequenceToString, without reversing it", () => {
         const spec = new SubtreeSpecification(people);
-        const ldap = rdnSequenceToString(toDITAscending(asDITDescending(people)));
-        expect(spec.toString()).toBe(`{ base "${ldap}" }`);
+        expect(spec.toString()).toBe(`{ base "${rdnSequenceToString(people)}" }`);
     });
 });
 
@@ -150,10 +148,21 @@ describe("SubtreeSpecification.toJSON()", () => {
             .toEqual({ minimum: huge.toString() });
     });
 
-    it("omits an unrecognized choice alternative", () => {
+    it("encodes an unrecognized specific exclusion as an empty object", () => {
         const element = new BERElement();
-        const spec = new SubtreeSpecification(undefined, [ element ], undefined, undefined, element);
-        expect(spec.toJSON()).toEqual({});
+        const spec = new SubtreeSpecification(
+            undefined,
+            [ element, { chopBefore: [ cn("secret") ] } ],
+            undefined,
+            undefined,
+            element,
+        );
+        expect(spec.toJSON()).toEqual({
+            specificExclusions: [
+                {},
+                { chopBefore: rdnSequenceToJSON([ cn("secret") ]) },
+            ],
+        });
     });
 });
 
