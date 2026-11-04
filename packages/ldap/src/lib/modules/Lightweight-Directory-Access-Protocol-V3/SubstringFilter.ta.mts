@@ -20,6 +20,27 @@ import {
   _decode_SubstringFilter_substrings_substring,
   _encode_SubstringFilter_substrings_substring,
 } from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter-substrings-substring.ta.mjs';
+import {
+  octetsToJSON,
+  rfc4515SubstringFilter,
+  type OctetsJSON,
+} from '../../textual.mjs';
+
+/**
+ * JSON encoding of {@link SubstringFilter}.
+ *
+ * Each assertion value is UTF-8 text when that is lossless, otherwise
+ * `{ hex }`. The choice key `any` is the ASN.1 identifier (`any_` in
+ * TypeScript). Unrecognized substring choices are omitted.
+ */
+export type SubstringFilterJSON = {
+  type: OctetsJSON;
+  substrings: Array<
+    | { initial: OctetsJSON }
+    | { any: OctetsJSON }
+    | { final: OctetsJSON }
+  >;
+};
 
 /**
  * @summary SubstringFilter
@@ -107,6 +128,48 @@ export class SubstringFilter {
       _o.substrings,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary RFC 4515 substring filter.
+   * @description
+   *
+   * Includes the surrounding parentheses. `initial` is written first and
+   * `final` last. Assertion values are escaped per RFC 4515, so a star
+   * inside a piece is not another substring separator.
+   *
+   * @returns The filter string
+   * @public
+   */
+  public toString(): string {
+    return rfc4515SubstringFilter(this.type_, this.substrings);
+  }
+
+  /**
+   * @summary JSON encoding of this substring filter.
+   * @description
+   *
+   * Preserves the SEQUENCE order. Unrecognized extensions and unrecognized
+   * substring choices are omitted.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): SubstringFilterJSON {
+    const substrings: SubstringFilterJSON['substrings'] = [];
+    for (const sub of this.substrings) {
+      if ('initial' in sub) {
+        substrings.push({ initial: octetsToJSON(sub.initial) });
+      } else if ('any_' in sub) {
+        substrings.push({ any: octetsToJSON(sub.any_) });
+      } else if ('final' in sub) {
+        substrings.push({ final: octetsToJSON(sub.final) });
+      }
+    }
+    return {
+      type: octetsToJSON(this.type_),
+      substrings,
+    };
   }
 }
 

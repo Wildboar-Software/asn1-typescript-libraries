@@ -22,6 +22,20 @@ import {
   _decode_PartialAttributeList,
   _encode_PartialAttributeList,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.mjs';
+import {
+  formatLdifAttribute,
+  octetsToJSON,
+  type OctetsJSON,
+} from '../../textual.mjs';
+import type { PartialAttributeJSON } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
+
+/**
+ * JSON encoding of {@link SearchResultEntry}.
+ */
+export type SearchResultEntryJSON = {
+  objectName: OctetsJSON;
+  attributes: PartialAttributeJSON[];
+};
 
 /**
  * @summary SearchResultEntry
@@ -103,6 +117,47 @@ export class SearchResultEntry {
       _o.attributes,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary LDIF content record (IETF RFC 2849).
+   * @description
+   *
+   * `dn` plus one line per attribute value. This is a search result, so
+   * there is no `changetype`. Attributes with no values are omitted.
+   * Unrecognized extensions are omitted.
+   *
+   * @returns The LDIF record
+   * @public
+   */
+  public toString(): string {
+    const lines: string[] = [
+      formatLdifAttribute('dn', this.objectName),
+    ];
+    for (const attribute of this.attributes) {
+      const text: string = attribute.toString();
+      if (text.length > 0) {
+        lines.push(text);
+      }
+    }
+    return lines.join('\n');
+  }
+
+  /**
+   * @summary JSON encoding of this search result entry.
+   * @description
+   *
+   * Unrecognized extensions are not represented. Empty attribute value
+   * sets are kept.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): SearchResultEntryJSON {
+    return {
+      objectName: octetsToJSON(this.objectName),
+      attributes: this.attributes.map((attribute) => attribute.toJSON()),
+    };
   }
 }
 

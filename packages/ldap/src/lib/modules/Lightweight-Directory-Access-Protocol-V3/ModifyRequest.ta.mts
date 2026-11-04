@@ -20,6 +20,16 @@ import {
   _decode_ModifyRequest_changes_change,
   _encode_ModifyRequest_changes_change,
 } from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change.ta.mjs';
+import { formatLdifAttribute, octetsToJSON, type OctetsJSON } from '../../textual.mjs';
+import type { ModifyRequest_changes_changeJSON } from '../Lightweight-Directory-Access-Protocol-V3/ModifyRequest-changes-change.ta.mjs';
+
+/**
+ * JSON encoding of {@link ModifyRequest}.
+ */
+export type ModifyRequestJSON = {
+  object: OctetsJSON;
+  changes: ModifyRequest_changes_changeJSON[];
+};
 
 /**
  * @summary ModifyRequest
@@ -104,6 +114,44 @@ export class ModifyRequest {
       _o.changes,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary LDIF modify record (IETF RFC 2849).
+   * @description
+   *
+   * `dn`, `changetype: modify`, then each change separated by `-`.
+   * Unrecognized extensions are omitted.
+   *
+   * @returns The LDIF record
+   * @public
+   */
+  public toString(): string {
+    const lines: string[] = [
+      formatLdifAttribute('dn', this.object),
+      'changetype: modify',
+    ];
+    if (this.changes.length > 0) {
+      lines.push(this.changes.map((change) => change.toString()).join('\n-\n'));
+      lines.push('-');
+    }
+    return lines.join('\n');
+  }
+
+  /**
+   * @summary JSON encoding of this modify request.
+   * @description
+   *
+   * Unrecognized extensions are not represented. Change order is kept.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): ModifyRequestJSON {
+    return {
+      object: octetsToJSON(this.object),
+      changes: this.changes.map((change) => change.toJSON()),
+    };
   }
 }
 

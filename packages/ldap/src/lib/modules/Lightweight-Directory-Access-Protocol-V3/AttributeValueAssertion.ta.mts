@@ -20,6 +20,23 @@ import {
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
+import {
+  ldapString,
+  octetsToJSON,
+  rfc4515Value,
+  type OctetsJSON,
+} from '../../textual.mjs';
+
+/**
+ * JSON encoding of {@link AttributeValueAssertion}.
+ *
+ * `attributeDesc` is the UTF-8 attribute description. `assertionValue` is
+ * UTF-8 text when that is lossless, otherwise `{ hex }`.
+ */
+export type AttributeValueAssertionJSON = {
+  attributeDesc: OctetsJSON;
+  assertionValue: OctetsJSON;
+};
 
 /**
  * @summary AttributeValueAssertion
@@ -99,6 +116,38 @@ export class AttributeValueAssertion {
       _o.assertionValue,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary RFC 4515 equality spelling of this assertion.
+   * @description
+   *
+   * `attributeDesc=assertionValue`, with the value escaped as in
+   * [IETF RFC 4515](https://www.rfc-editor.org/rfc/rfc4515). The type does
+   * not record whether a filter uses it for equality, ordering, or
+   * approximate match, so the operator here is `=`.
+   *
+   * @returns The assertion text
+   * @public
+   */
+  public toString(): string {
+    return `${ldapString(this.attributeDesc)}=${rfc4515Value(this.assertionValue)}`;
+  }
+
+  /**
+   * @summary JSON encoding of this assertion.
+   * @description
+   *
+   * Unrecognized extensions are not represented.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): AttributeValueAssertionJSON {
+    return {
+      attributeDesc: octetsToJSON(this.attributeDesc),
+      assertionValue: octetsToJSON(this.assertionValue),
+    };
   }
 }
 

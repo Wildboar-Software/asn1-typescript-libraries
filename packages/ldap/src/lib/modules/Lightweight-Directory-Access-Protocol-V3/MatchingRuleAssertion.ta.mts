@@ -27,6 +27,25 @@ import {
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
+import {
+  octetsToJSON,
+  rfc4515Extensible,
+  type OctetsJSON,
+} from '../../textual.mjs';
+
+/**
+ * JSON encoding of {@link MatchingRuleAssertion}.
+ *
+ * Absent optional components are omitted. `dnAttributes` is omitted when it
+ * is not `TRUE` (the DEFAULT). `matchValue` is UTF-8 text when that is
+ * lossless, otherwise `{ hex }`.
+ */
+export type MatchingRuleAssertionJSON = {
+  matchingRule?: OctetsJSON;
+  type?: OctetsJSON;
+  matchValue: OctetsJSON;
+  dnAttributes?: true;
+};
 
 /**
  * @summary MatchingRuleAssertion
@@ -149,6 +168,51 @@ export class MatchingRuleAssertion {
    */
   public static get _default_value_for_dnAttributes(): BOOLEAN {
     return false;
+  }
+
+  /**
+   * @summary RFC 4515 extensible match.
+   * @description
+   *
+   * Includes the surrounding parentheses: `attr:dn:rule:=value`, omitting
+   * any piece that is absent. `:dn` is written only when `dnAttributes` is
+   * `TRUE`.
+   *
+   * @returns The filter string
+   * @public
+   */
+  public toString(): string {
+    return rfc4515Extensible({
+      type_: this.type_,
+      matchingRule: this.matchingRule,
+      matchValue: this.matchValue,
+      dnAttributes: this.dnAttributes,
+    });
+  }
+
+  /**
+   * @summary JSON encoding of this extensible match.
+   * @description
+   *
+   * Unrecognized extensions are not represented.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): MatchingRuleAssertionJSON {
+    const json: MatchingRuleAssertionJSON = {
+      matchValue: octetsToJSON(this.matchValue),
+    };
+    if (this.matchingRule) {
+      json.matchingRule = octetsToJSON(this.matchingRule);
+    }
+    if (this.type_) {
+      json.type = octetsToJSON(this.type_);
+    }
+    if (this.dnAttributes) {
+      json.dnAttributes = true;
+    }
+    return json;
   }
 }
 
