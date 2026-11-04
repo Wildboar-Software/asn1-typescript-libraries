@@ -2,13 +2,35 @@ import type { INTEGER } from "@wildboar/asn1";
 import type { AttributeType } from "../../modules/InformationFramework/index.mjs";
 import { approximatelyEqualBigInts } from "../approximate.mjs";
 import type { IntegerInput } from "../readValue.mjs";
-import { readInteger, readLeadingInteger } from "../readValue.mjs";
+import { readInteger } from "../readValue.mjs";
 import {
     createEqualityMatcher,
     MATCH_FLAG_APPROXIMATE,
     type Matcher,
     type TypedEquationFunction,
 } from "../../types/matching.mjs";
+
+/**
+ * INTEGER assertion, or the INTEGER that is the first component of a
+ * SEQUENCE. A `number` or `bigint` is that integer already.
+ */
+function readLeadingInteger (value: IntegerInput): INTEGER {
+    if (typeof value === "number" || typeof value === "bigint") {
+        return value;
+    }
+    if (
+        value.tagClass === ASN1TagClass.universal
+        && (
+            value.tagNumber === ASN1UniversalType.integer
+            || value.tagNumber === ASN1UniversalType.enumerated
+        )
+    ) {
+        return readInteger(value);
+    }
+    const inner = new BERElement();
+    inner.fromBytes(value.value);
+    return readInteger(inner);
+}
 
 /**
  * Rec. ITU-T X.520 (10/2019), clause 8.4.1

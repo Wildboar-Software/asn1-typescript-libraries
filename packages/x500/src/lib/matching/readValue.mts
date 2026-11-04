@@ -147,38 +147,12 @@ export type IntegerInput = ASN1Element | number | bigint;
  * @returns The integer as `bigint`.
  */
 export
-function readInteger (value: IntegerInput): bigint {
-    if (typeof value === "number") {
-        return BigInt(value);
-    }
-    if (typeof value === "bigint") {
+function readInteger (value: IntegerInput): INTEGER {
+    if (typeof value === "number" || typeof value === "bigint") {
         return value;
     }
     const decoded: INTEGER = value.integer;
     return typeof decoded === "bigint" ? decoded : BigInt(decoded);
-}
-
-/**
- * INTEGER assertion, or the INTEGER that is the first component of a
- * SEQUENCE. A `number` or `bigint` is that integer already.
- */
-export
-function readLeadingInteger (value: IntegerInput): bigint {
-    if (typeof value === "number" || typeof value === "bigint") {
-        return readInteger(value);
-    }
-    if (
-        value.tagClass === ASN1TagClass.universal
-        && (
-            value.tagNumber === ASN1UniversalType.integer
-            || value.tagNumber === ASN1UniversalType.enumerated
-        )
-    ) {
-        return readInteger(value);
-    }
-    const inner = new BERElement();
-    inner.fromBytes(value.value);
-    return readInteger(inner);
 }
 
 /**

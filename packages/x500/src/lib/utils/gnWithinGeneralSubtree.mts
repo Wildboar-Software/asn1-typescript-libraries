@@ -8,11 +8,15 @@ import type {
     GeneralSubtree,
 } from "../modules/CertificateExtensions/GeneralSubtree.ta.mjs";
 import { compareRDNSequence } from "@wildboar/dn";
-import { domainToASCII } from "node:url";
 import { compareElements } from "../comparators/compareElements.mjs";
 import { compareGeneralName } from "@wildboar/gn";
 
 const ID_SRV_NAME = ObjectIdentifier.fromString("1.3.6.1.5.5.7.8.7");
+
+// Polyfill for Node.js so we can use fewer Node.js-specific APIs.
+function domainToASCII(domain: string): string {
+    return new URL(`http://${domain}`).hostname;
+}
 
 /**
  * IDNA-normalize a DNS name, strip one trailing dot, and reject empty/invalid.

@@ -1,11 +1,15 @@
 import { type ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
-import { domainToASCII } from "node:url";
 import type { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
 import { distinguishedTypeToFriendlyString } from "./distinguishedTypeToString.mjs";
 import teletexToString from "@wildboar/teletex";
 import { escapeDistinguishedValue } from "../escapeDistinguishedValue.mjs";
 import { id_at_postalAddress, id_at_registeredAddress } from "./distinguishedTypeToString.mjs";
 import { prepString } from "../prepString.mjs";
+
+// Polyfill for Node.js so we can use fewer Node.js-specific APIs.
+function domainToASCII(domain: string): string {
+    return new URL(`http://${domain}`).hostname;
+}
 
 /**
  * @internal
@@ -109,7 +113,11 @@ function looksLikeDomainName (str: string): boolean {
 function normalizeDomainName (str: string): string {
     const prepped = prepString(str) ?? str;
     const name = prepped.endsWith(".") ? prepped.slice(0, -1) : prepped;
-    return domainToASCII(name) || caseIgnore(name);
+    try {
+        return domainToASCII(name) || caseIgnore(name);
+    } catch (error) {
+        return caseIgnore(name);
+    }
 }
 
 function normalizeEmailAddress (str: string): string {

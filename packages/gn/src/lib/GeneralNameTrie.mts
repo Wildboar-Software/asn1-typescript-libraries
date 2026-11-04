@@ -1,8 +1,12 @@
 import type { GeneralName } from "./GeneralName.ta.mjs";
-import { domainToASCII } from "node:url";
 import { relativeDistinguishedNameToKey } from "@wildboar/dn";
 
 const ASCII_UNIT_SEPARATOR: "\x1F" = "\x1F";
+
+// Polyfill for Node.js so we can use fewer Node.js-specific APIs.
+function domainToASCII(domain: string): string {
+    return new URL(`http://${domain}`).hostname;
+}
 
 /**
  * @summary A prefix trie of hierarchical `GeneralName`s

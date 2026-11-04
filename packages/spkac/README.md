@@ -1,8 +1,4 @@
-# Signed Public Key and Challenge (SPKAC) in TypeScript
-
-ASN.1 data structures based on the ASN.1 definitions in
-[a draft IETF RFC](https://datatracker.ietf.org/doc/html/draft-leggett-spkac),
-which defines the Signed Public Key and Challenge (SPKAC).
+# Extra Schema for LDAP in Typescript
 
 See the
 [documentation](https://github.com/Wildboar-Software/asn1-typescript-libraries/blob/master/docs/all.md)
@@ -18,8 +14,3 @@ produced with it are released publicly under the
 If you would like to see additional ASN.1 libraries in TypeScript or other
 programming languages, or if you have any other questions, please contact us at
 [contact@wildboarsoftware.com](mailto:contact@wildboarsoftware.com).
-
-## ESM-Only
-
-As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
-longer be supported.
