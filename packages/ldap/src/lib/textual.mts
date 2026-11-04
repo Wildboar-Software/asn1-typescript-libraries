@@ -27,6 +27,21 @@ function asBuffer(octets: Uint8Array): Buffer {
 }
 
 /**
+ * Decode octets as UTF-8, or `undefined` if they are not well-formed.
+ *
+ * `Buffer.toString("utf8")` never throws: it replaces bad sequences with
+ * U+FFFD. A fatal {@link TextDecoder} throws instead, which is the same
+ * check used elsewhere in this repo.
+ */
+function tryUtf8(octets: Uint8Array): string | undefined {
+    try {
+        return new TextDecoder("utf-8", { fatal: true }).decode(octets);
+    } catch {
+        return undefined;
+    }
+}
+
+/**
  * Decode an `LDAPString` (UTF-8 octets) to a JavaScript string.
  *
  * @param octets The LDAP string
@@ -34,15 +49,6 @@ function asBuffer(octets: Uint8Array): Buffer {
  */
 export function ldapString(octets: Uint8Array): string {
     return asBuffer(octets).toString("utf8");
-}
-
-/**
- * `true` when decoding `octets` as UTF-8 and encoding that text again
- * yields the same octets.
- */
-function isWholeUtf8(octets: Uint8Array): boolean {
-    const buf: Buffer = asBuffer(octets);
-    return Buffer.compare(Buffer.from(buf.toString("utf8"), "utf8"), buf) === 0;
 }
 
 /**
@@ -76,11 +82,11 @@ function escapeFilterText(text: string): string {
  * @returns The filter value text
  */
 export function rfc4515Value(octets: Uint8Array): string {
-    const buf: Buffer = asBuffer(octets);
-    if (isWholeUtf8(octets)) {
-        return escapeFilterText(buf.toString("utf8"));
+    const text: string | undefined = tryUtf8(octets);
+    if (text !== undefined) {
+        return escapeFilterText(text);
     }
-    return buf.toString("base64");
+    return asBuffer(octets).toString("base64");
 }
 
 function isBytes(value: unknown): value is Uint8Array {
@@ -179,12 +185,11 @@ export function rfc4515Extensible(options: {
  * @returns The JSON value
  */
 export function octetsToJSON(octets: Uint8Array): OctetsJSON {
-    const buf: Buffer = asBuffer(octets);
-    const text: string = buf.toString("utf8");
-    if (Buffer.compare(Buffer.from(text, "utf8"), buf) === 0) {
+    const text: string | undefined = tryUtf8(octets);
+    if (text !== undefined) {
         return text;
     }
-    return { hex: buf.toString("hex") };
+    return { hex: asBuffer(octets).toString("hex") };
 }
 
 function isSafeInit(byte: number): boolean {
