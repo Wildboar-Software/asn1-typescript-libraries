@@ -153,6 +153,7 @@ export { objectClassesWithinRefinement } from "./lib/utils/objectClassesWithinRe
 export { selectFromEntry } from "./lib/utils/selectFromEntry.mjs";
 export { splitIntoMastersAndShadows } from "./lib/utils/splitIntoMastersAndShadows.mjs";
 export { validateObjectClasses } from "./lib/utils/validateObjectClasses.mjs";
+export { validateTelephoneNumber } from "./lib/utils/validateTelephoneNumber.mjs";
 export { prepString } from "./lib/utils/prepString.mjs";
 export type { TimingSafeEqual } from "./lib/matching/constantTime.mjs";
 export { setTimingSafeEqual } from "./lib/matching/constantTime.mjs";
