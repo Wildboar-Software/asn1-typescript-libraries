@@ -262,6 +262,24 @@ are either deprecated or not intended for external use:
 - `splitIntoMastersAndShadows.mts` - Group access points into masters and shadows
 - `validateObjectClasses.mts` - Validate a set of object classes
 
+## Syntax
+
+Validators for X.520 attribute syntaxes whose ASN.1 is only a string type plus a
+`CONSTRAINED BY` comment. Each returns `true` when the string conforms.
+
+- `syntax/validateTelephoneNumber` - E.123 international telephone number (`+`, digits, spaces, hyphens; at most 32 characters)
+- `syntax/validateInternationalISDNNumber` - E.164 number as NumericString, length 1..16
+- `syntax/validateX121Address` - X.121 address as NumericString, length 1..15
+- `syntax/validateDnsName` - DNS name: NR-LDH, A-label, or U-label; one optional leftmost `*`
+- `syntax/validateIntEmail` - Internationalized mailbox; domain as `validateDnsName` without `*`
+- `syntax/validateJid` - Jabber identifier (RFC 7622)
+- `syntax/validateUri` - Absolute URI (RFC 3986 / RFC 3987)
+- `syntax/validateUrl` - URL: absolute URI with an authority or a path, and not a URN
+- `syntax/validateUrn` - URN (RFC 3406 / RFC 2141)
+- `syntax/validateCountryName` and `syntax/validateCountryCode` - two ASCII letters (ISO 3166-1 alpha-2 shape; assigned codes are not checked)
+- `syntax/validateCountryCode3c` - three ASCII letters (alpha-3 shape)
+- `syntax/validateCountryCode3n` - three ASCII digits (numeric-3 shape)
+
 ## ESM-Only
 
 As of June 12th, 2025, this module is only compiled to ESM. CommonJS will no
