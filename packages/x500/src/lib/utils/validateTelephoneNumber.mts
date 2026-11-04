@@ -11,7 +11,8 @@ const ASCII_DIGIT_NINE: number = 0x39;
  * a PrintableString of at most `ub-telephone-number` (32) characters:
  * a leading `+`, then digits, spaces, and hyphens, with at least one
  * digit. No other PrintableString character is allowed. A hyphen is one
- * spacing symbol (E.123 clause 9), so two hyphens in a row are rejected.
+ * spacing symbol (E.123 clause 9), so another hyphen is rejected until a
+ * digit has appeared, including when only spaces sit between the hyphens.
  * Repeated spaces are allowed: clause 9.3 requires the gap between the
  * trunk code and the subscriber number to be wider than any other gap,
  * and a PrintableString can only show that with more than one space.
@@ -45,7 +46,6 @@ function validateTelephoneNumber (value: string): boolean {
         if (code !== ASCII_SPACE) {
             return false;
         }
-        precededByHyphen = false;
     }
     return digits > 0;
 }
