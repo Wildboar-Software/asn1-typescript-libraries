@@ -61,7 +61,6 @@ export * from "./id-at-mail.va.mjs";
 export * from "./id-at-mailPreferenceOption.va.mjs";
 export * from "./id-at-manager.va.mjs";
 export * from "./id-at-mobileTelephoneNumber.va.mjs";
-export * from "./id-at-mxRecord.va.mjs";
 export * from "./id-at-nSRecord.va.mjs";
 export * from "./id-at-organizationalStatus.va.mjs";
 export * from "./id-at-otherMailbox.va.mjs";
