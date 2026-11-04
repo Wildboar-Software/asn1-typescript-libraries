@@ -117,6 +117,16 @@ describe("LDIF", () => {
         expect(formatLdifAttribute("cn", long)).toBe(
             "cn: " + "a".repeat(72) + "\n " + "a".repeat(8),
         );
+        expect(formatLdifAttribute("cn", utf8("Ada "))).toBe(
+            `cn:: ${utf8("Ada ").toString("base64")}`,
+        );
+        const foldedSpace = utf8("a".repeat(71) + " " + "b".repeat(10));
+        const folded = formatLdifAttribute("cn", foldedSpace);
+        expect(folded.split("\n").every((physical) => !physical.endsWith(" ")))
+            .toBe(true);
+        expect(folded.replace(/\n /g, "")).toBe(
+            "cn: " + "a".repeat(71) + " " + "b".repeat(10),
+        );
     });
 
     it("stringifies an attribute, an add, and a search entry", () => {

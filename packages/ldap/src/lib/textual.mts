@@ -224,6 +224,11 @@ function isLdifSafe(value: Uint8Array): boolean {
     if (!isSafeInit(value[0])) {
         return false;
     }
+    // RFC 2849 note 8: a value that ends with SPACE SHOULD be base-64
+    // encoded. Physical-line parsers often strip that trailing space.
+    if (value[value.length - 1] === SPACE) {
+        return false;
+    }
     for (let i: number = 1; i < value.length; i++) {
         if (!isSafeChar(value[i])) {
             return false;
@@ -233,8 +238,26 @@ function isLdifSafe(value: Uint8Array): boolean {
 }
 
 /**
+ * How many characters of `line` starting at `index` belong on this physical
+ * line. RFC 2849 folds at 76. A SPACE at the end of a physical line is
+ * skipped so it is not stripped before unfolding (note 8).
+ */
+function ldifFoldTake(line: string, index: number, max: number): number {
+    let take: number = Math.min(max, line.length - index);
+    if (
+        (take > 1)
+        && (line.charCodeAt(index + take - 1) === SPACE)
+    ) {
+        take--;
+    }
+    return take;
+}
+
+/**
  * Fold an LDIF line at 76 characters, per IETF RFC 2849. Continuation lines
- * begin with a single space, which a parser removes.
+ * begin with a single space, which a parser removes. A fold is moved one
+ * character earlier when it would leave a SPACE at the end of a physical
+ * line.
  *
  * @param line One logical LDIF line
  * @returns The line, folded with `\n`
@@ -243,12 +266,14 @@ export function foldLdifLine(line: string): string {
     if (line.length <= LDIF_LINE_LENGTH) {
         return line;
     }
-    const chunks: string[] = [line.slice(0, LDIF_LINE_LENGTH)];
-    let index: number = LDIF_LINE_LENGTH;
+    const chunks: string[] = [];
+    let index: number = 0;
+    let max: number = LDIF_LINE_LENGTH;
     while (index < line.length) {
-        const take: number = Math.min(LDIF_LINE_LENGTH - 1, line.length - index);
+        const take: number = ldifFoldTake(line, index, max);
         chunks.push(line.slice(index, index + take));
         index += take;
+        max = LDIF_LINE_LENGTH - 1;
     }
     return chunks.join("\n ");
 }
