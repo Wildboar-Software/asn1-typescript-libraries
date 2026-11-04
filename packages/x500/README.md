@@ -252,6 +252,7 @@ are either deprecated or not intended for external use:
 - `getDateFromTime.mts` - Get a native ECMAScript `Date` from an X.509 `Time` value
 - `getMatchingRulesFromFilter.mts` - Get the OIDs of matching rules used in a `Filter`
 - `getOptionallyProtectedValue.mts` - Where `op` is `OPTIONALLY_PROTECTED<T>`, get `T`
+- `iterateListResultSubordinates.mts` - Yield subordinate entries from a `ListResult`, recursing into `uncorrelatedListInfo`
 - `getRDN.mts` - Get the relative distinguished name from a distinguished name.
 - `getValueTuplesFromAttribute.mts` - Get type-value-context tuples for an attribute
 - `groupByOID.mts` - Group items by object identifier

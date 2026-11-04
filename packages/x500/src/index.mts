@@ -143,6 +143,7 @@ export { getAttributeTypesFromFilter } from "./lib/utils/getAttributeTypesFromFi
 export { getDateFromTime } from "./lib/utils/getDateFromTime.mjs";
 export { getMatchingRulesFromFilter } from "./lib/utils/getMatchingRulesFromFilter.mjs";
 export { getOptionallyProtectedValue } from "./lib/utils/getOptionallyProtectedValue.mjs";
+export { iterateListResultSubordinates } from "./lib/utils/iterateListResultSubordinates.mjs";
 export { getRDN } from "./lib/utils/getRDN.mjs";
 export { getValueTuplesFromAttribute } from "./lib/utils/getValueTuplesFromAttribute.mjs";
 export { groupByOID } from "./lib/utils/groupByOID.mjs";
