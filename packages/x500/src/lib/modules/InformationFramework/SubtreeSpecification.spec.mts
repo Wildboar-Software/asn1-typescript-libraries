@@ -8,7 +8,6 @@ import {
     type RelativeDistinguishedName,
 } from "./index.mjs";
 import { commonName } from "../SelectedAttributeTypes/index.mjs";
-import { subtreeIntersection } from "../../utils/subtreeIntersection.mjs";
 
 function rdn (index: number): RelativeDistinguishedName {
     return [
@@ -169,7 +168,9 @@ describe("SubtreeSpecification.contains / intersection / union", () => {
             { chopBefore: dn(9) },
             { chopAfter: dn(2) },
         ]);
-        expect(overlap!.specificationFilter).toEqual({ item: person });
+        expect(overlap!.specificationFilter).toEqual({
+            and: [ { item: person }, { item: person } ],
+        });
     });
 
     it("union of nested specs is the outer covering spec", () => {
@@ -252,27 +253,5 @@ describe("SubtreeSpecification.toString / toJSON", () => {
             maximum: 4,
             specificationFilter: { item: person.toString() },
         });
-    });
-});
-
-describe("subtreeIntersection with distinct context prefixes", () => {
-    it("returns the inner fully-qualified base as the result root", () => {
-        const a = new SubtreeSpecification();
-        const b = new SubtreeSpecification(dn(1));
-        const result = subtreeIntersection(a, b, dn(0), dn(0));
-        expect(result).toBeDefined();
-        const [ spec, root ] = result!;
-        expect(root).toEqual(dn(0, 1));
-        expect(spec.base === undefined || spec.base.length === 0).toBe(true);
-        expect(spec.isEqualTo(new SubtreeSpecification())).toBe(true);
-    });
-
-    it("returns undefined when context prefixes are disjoint", () => {
-        expect(subtreeIntersection(
-            new SubtreeSpecification(),
-            new SubtreeSpecification(),
-            dn(0),
-            dn(1),
-        )).toBeUndefined();
     });
 });

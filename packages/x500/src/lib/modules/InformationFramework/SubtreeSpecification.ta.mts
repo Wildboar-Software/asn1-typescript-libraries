@@ -44,6 +44,7 @@ import {
     chopSetsAreEqual,
     refinementsAreEqual,
     subtreeIntersection,
+    subtreeIntersectionMatcherGetter,
     subtreeNamingMatcher,
     subtreeUnion,
     type SubtreeEqualityMatcherGetter,
@@ -432,13 +433,11 @@ export class SubtreeSpecification implements ChopSpecification {
         getEqualityMatcher?: SubtreeEqualityMatcherGetter,
     ): SubtreeSpecification | undefined {
         const result = subtreeIntersection(
+            subtreeIntersectionMatcherGetter(getEqualityMatcher),
             this,
             other,
-            [],
-            [],
-            getEqualityMatcher,
         );
-        if (result === undefined) {
+        if (result === null) {
             return undefined;
         }
         return withRootBase(result[0], result[1]);

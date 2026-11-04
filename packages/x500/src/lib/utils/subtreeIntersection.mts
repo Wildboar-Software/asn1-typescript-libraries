@@ -1,22 +1,31 @@
-import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import {
+    type ASN1Element,
+    type OBJECT_IDENTIFIER,
+} from "@wildboar/asn1";
+import {
+    asDITDescending,
+    AttributeTypeAndValue,
     compareRDNSequence,
+    dnStartsWith,
     type GetDistinguishedValueMatcher,
+    type RDNSequenceDescending,
 } from "@wildboar/dn";
-import type { EqualityMatcher } from "../types/EqualityMatcher.mjs";
 import compareElements from "../comparators/compareElements.mjs";
-import type {
-    DistinguishedName,
-} from "../modules/InformationFramework/DistinguishedName.ta.mjs";
-import {
-    SubtreeSpecification,
-} from "../modules/InformationFramework/SubtreeSpecification.ta.mjs";
+import type { AttributeType } from "../modules/InformationFramework/AttributeType.ta.mjs";
 import type {
     ChopSpecification_specificExclusions_Item,
 } from "../modules/InformationFramework/ChopSpecification-specificExclusions-Item.ta.mjs";
 import type {
+    DistinguishedName,
+} from "../modules/InformationFramework/DistinguishedName.ta.mjs";
+import type {
     Refinement,
 } from "../modules/InformationFramework/Refinement.ta.mjs";
+import {
+    SubtreeSpecification,
+} from "../modules/InformationFramework/SubtreeSpecification.ta.mjs";
+import type { EqualityMatcher as DistinguishedValueEqualityMatcher } from "../types/EqualityMatcher.mjs";
+import type { EqualityMatcher } from "../types/matching.mjs";
 
 /**
  * Optional getter for an attribute type's distinguished-value equality
@@ -24,7 +33,7 @@ import type {
  */
 export type SubtreeEqualityMatcherGetter = (
     attributeType: OBJECT_IDENTIFIER,
-) => EqualityMatcher | undefined;
+) => DistinguishedValueEqualityMatcher | undefined;
 
 /**
  * @summary Naming matcher used when comparing subtree `LocalName`s.
@@ -43,13 +52,75 @@ export function subtreeNamingMatcher (
     getEqualityMatcher?: SubtreeEqualityMatcherGetter,
 ): GetDistinguishedValueMatcher {
     if (getEqualityMatcher === undefined) {
-        return (): EqualityMatcher => compareElements;
+        return (): DistinguishedValueEqualityMatcher => compareElements;
     }
     return (
         attributeType: OBJECT_IDENTIFIER,
-    ): EqualityMatcher => (
+    ): DistinguishedValueEqualityMatcher => (
         getEqualityMatcher(attributeType) ?? compareElements
     );
+}
+
+/**
+ * Same bit as `MATCH_FLAG_USED_FOR_NAME` in `types/matching.mts`.
+ * Inlined so this module does not import that file (it loads the
+ * InformationFramework barrel and would cycle through this class).
+ */
+const MATCH_FLAG_USED_FOR_NAME = 1 << 0;
+
+/**
+ * Present a `Matcher` lookup as the single-value equality lookup used
+ * when comparing distinguished names. Same behavior as
+ * {@link valueEqualityMatcher}, without importing `matching.mts`.
+ */
+function namingMatcherFromDirectoryMatcher (
+    getEqualityMatcher: (attributeType: AttributeType) => EqualityMatcher | undefined,
+): GetDistinguishedValueMatcher {
+    return (attributeType) => {
+        const matcher = getEqualityMatcher(attributeType);
+        if (!matcher) {
+            return undefined;
+        }
+        return (assertion, value) => matcher(
+            assertion,
+            new AttributeTypeAndValue(attributeType, value),
+            getEqualityMatcher,
+            MATCH_FLAG_USED_FOR_NAME,
+        ) === true;
+    };
+}
+
+/**
+ * Present a distinguished-value getter as the `Matcher` lookup
+ * {@link subtreeIntersection} requires. When omitted, names compare
+ * with {@link compareElements}, matching {@link dnWithinSubtreeSpecification}.
+ */
+export function subtreeIntersectionMatcherGetter (
+    getEqualityMatcher?: SubtreeEqualityMatcherGetter,
+): (attributeType: AttributeType) => EqualityMatcher | undefined {
+    if (getEqualityMatcher === undefined) {
+        return (_type: AttributeType) => (
+            assertion,
+            valueOrValues,
+        ) => {
+            if (!(valueOrValues instanceof AttributeTypeAndValue)) {
+                return undefined;
+            }
+            return compareElements(assertion as ASN1Element, valueOrValues.value);
+        };
+    }
+    return (attributeType: AttributeType) => {
+        const eq = getEqualityMatcher(attributeType);
+        if (eq === undefined) {
+            return undefined;
+        }
+        return (assertion, valueOrValues) => {
+            if (!(valueOrValues instanceof AttributeTypeAndValue)) {
+                return undefined;
+            }
+            return eq(assertion as ASN1Element, valueOrValues.value);
+        };
+    };
 }
 
 /**
@@ -199,22 +270,6 @@ export function chopSetsAreEqual (
 }
 
 /**
- * Combine two refinements for intersection: both must hold.
- */
-function intersectionRefinement (
-    a: Refinement | undefined,
-    b: Refinement | undefined,
-): Refinement | undefined {
-    if (a && b) {
-        if (refinementsAreEqual(a, b)) {
-            return a;
-        }
-        return { and: [ a, b ] };
-    }
-    return a ?? b;
-}
-
-/**
  * Combine two refinements for union: either may hold. Absent means
  * unrestricted, so the union is unrestricted.
  */
@@ -273,53 +328,52 @@ function rebaseChopTo (
  * @description
  *
  * This function takes two subtree specifications and the distinguished names of
- * their roots and returns a single subtree specification that constitutes the
+ * their roots and returns a single subtree specification that consitutes the
  * intersection of the aforementioned, as well as its root distinguished name.
- * If there is no intersection, `undefined` is returned.
+ * If there is no intersection, `null` is returned.
  *
  * This function accounts for minimum, maximum, chops, base, and refinement.
  *
- * Inspired by the VS Code `Range.intersection` API: the overlap of two
- * immutable regions, or `undefined` when they do not overlap.
- *
- * @param {SubtreeSpecification} a A subtree specification
- * @param {SubtreeSpecification} b A subtree specification
- * @param {DistinguishedName} a_root The context prefix of the first subtree specification
- * @param {DistinguishedName} b_root The context prefix of the second subtree specification
- * @param {Function} [getEqualityMatcher] Optional naming equality matcher lookup
+ * @param ctx The context object
+ * @param a A subtree specification
+ * @param b A subtree specification
+ * @param a_root The context prefix of the first subtree specification
+ * @param b_root The context prefix of the second subtree specification
  * @returns The subtree specification and the DN of the root of said subtree
- * specification that constitutes the intersection of the supplied subtrees,
- * or `undefined` if there is no overlap.
+ *  specification that constitutes of the intersection of the supplied subtrees,
+ *  or `null` if there is no overlap.
  *
  * @function
  */
-export function subtreeIntersection (
+export
+function subtreeIntersection (
+    getEqualityMatcher: (attributeType: AttributeType) => EqualityMatcher | undefined,
     a: SubtreeSpecification,
     b: SubtreeSpecification,
-    a_root: DistinguishedName = [],
-    b_root: DistinguishedName = [],
-    getEqualityMatcher?: SubtreeEqualityMatcherGetter,
-): [ SubtreeSpecification, DistinguishedName ] | undefined {
-    const matcher = subtreeNamingMatcher(getEqualityMatcher);
-    const a_base_dn: DistinguishedName = [ ...a_root, ...(a.base ?? []) ];
-    const b_base_dn: DistinguishedName = [ ...b_root, ...(b.base ?? []) ];
-    const a_is_prefix = isPrefix(a_base_dn, b_base_dn, matcher);
-    const b_is_prefix = isPrefix(b_base_dn, a_base_dn, matcher);
+    a_root: RDNSequenceDescending = asDITDescending([]),
+    b_root: RDNSequenceDescending = asDITDescending([]),
+): [ SubtreeSpecification, DistinguishedName ] | null {
+    const matcher = namingMatcherFromDirectoryMatcher(getEqualityMatcher);
+    const a_base_dn: RDNSequenceDescending = asDITDescending([ ...a_root, ...(a.base ?? []) ]);
+    const b_base_dn: RDNSequenceDescending = asDITDescending([ ...b_root, ...(b.base ?? []) ]);
+    const a_is_prefix = dnStartsWith(b_base_dn, a_base_dn, matcher);
+    const b_is_prefix = dnStartsWith(a_base_dn, b_base_dn, matcher);
     if (!a_is_prefix && !b_is_prefix) {
         // If neither base is a prefix of each other, there is no overlap.
-        return undefined;
+        return null;
     }
     const prefix_fqdn = a_is_prefix ? a_base_dn : b_base_dn;
-    const inner_fqdn = a_is_prefix ? b_base_dn : a_base_dn;
+    const inner_fqdn  = a_is_prefix ? b_base_dn : a_base_dn;
 
     const prefix_subtree = a_is_prefix ? a : b;
-    const inner_subtree = a_is_prefix ? b : a;
+    const inner_subtree  = a_is_prefix ? b : a;
 
     // These need to be relative to the full Base DN so that they are comparable.
     const a_min = a_base_dn.length + Number(a.minimum ?? 0);
     const b_min = b_base_dn.length + Number(b.minimum ?? 0);
     // Absent `maximum` is unbounded. Do not add a length to
-    // `Number.MAX_SAFE_INTEGER`: the sum is not exactly representable.
+    // `Number.MAX_SAFE_INTEGER`: the sum is not exactly representable, so a
+    // nested unbounded intersection would get a bogus finite `maximum`.
     const a_max = (a.maximum === undefined)
         ? Number.POSITIVE_INFINITY
         : (a_base_dn.length + Number(a.maximum));
@@ -339,36 +393,36 @@ export function subtreeIntersection (
     if (minimum > maximum) {
         // If minimum is greater than maximum, it means there is no "vertical"
         // overlap between the subtrees.
-        return undefined;
+        return null;
     }
 
-    // If any specific exclusion from the prefix subtree names the inner subtree, return undefined.
+    // If any specific exclusion from the prefix subtree names the inner subtree, return null.
     // In addition, we adjust the specific exclusions to make them relative to the inner base.
     const prefix_specific_exclusions: NonNullable<SubtreeSpecification["specificExclusions"]> = [];
     for (const spex of prefix_subtree.specificExclusions ?? []) {
         if ("chopBefore" in spex) {
-            const chop_fqdn = [ ...prefix_fqdn, ...spex.chopBefore ];
-            if (isPrefix(chop_fqdn, inner_fqdn, matcher)) {
-                // If the chop excludes the whole intersection, return undefined.
-                return undefined;
+            const chop_fqdn = asDITDescending([ ...prefix_fqdn, ...spex.chopBefore ]);
+            if (dnStartsWith(inner_fqdn, chop_fqdn, matcher)) {
+                // If the chop excludes the whole intersection, return null.
+                return null;
             }
             // We have to make sure the chop actually appears in the intersection still.
-            if (isPrefix(inner_fqdn, chop_fqdn, matcher)) {
+            if (dnStartsWith(chop_fqdn, inner_fqdn, matcher)) {
                 const adjusted_chop = chop_fqdn.slice(inner_fqdn.length);
                 if (adjusted_chop.length === 0) {
-                    return undefined; // The whole intersection is excluded by a chop.
+                    return null; // The whole intersection is excluded by a chop.
                 }
                 prefix_specific_exclusions.push({ chopBefore: adjusted_chop });
             }
         }
         else if ("chopAfter" in spex) {
-            const chop_fqdn = [ ...prefix_fqdn, ...spex.chopAfter ];
-            if (isPrefix(chop_fqdn, inner_fqdn.slice(0, -1), matcher)) {
-                // If the chop excludes the whole intersection, return undefined.
-                return undefined;
+            const chop_fqdn = asDITDescending([ ...prefix_fqdn, ...spex.chopAfter ]);
+            if (dnStartsWith(asDITDescending(inner_fqdn.slice(0, -1)), chop_fqdn, matcher)) {
+                // If the chop excludes the whole intersection, return null.
+                return null;
             }
             // We have to make sure the chop actually appears in the intersection still.
-            if (isPrefix(inner_fqdn, chop_fqdn, matcher)) {
+            if (dnStartsWith(chop_fqdn, inner_fqdn, matcher)) {
                 const adjusted_chop = chop_fqdn.slice(inner_fqdn.length);
                 prefix_specific_exclusions.push({ chopAfter: adjusted_chop });
             }
@@ -378,10 +432,14 @@ export function subtreeIntersection (
         }
     }
 
-    const refinement: Refinement | undefined = intersectionRefinement(
-        a.specificationFilter,
-        b.specificationFilter,
-    );
+    const refinement: Refinement | undefined = a.specificationFilter && b.specificationFilter
+        ? {
+            and: [ // There may be duplicated conditions here, but that does not matter.
+                a.specificationFilter,
+                b.specificationFilter,
+            ]
+        }
+        : a.specificationFilter ?? b.specificationFilter;
     const adjusted_specific_exclusions = [
         ...prefix_specific_exclusions, // The prefix subtree SEs can only be included after having been "re-based."
         ...inner_subtree.specificExclusions ?? [], // The inner subtree SEs can remain.
@@ -390,9 +448,13 @@ export function subtreeIntersection (
     return [
         new SubtreeSpecification(
             undefined,
-            optionalChops(adjusted_specific_exclusions),
-            optionalMinimum(Math.max(0, minimum)),
-            optionalMaximum(maximum),
+            adjusted_specific_exclusions.length > 0
+                ? adjusted_specific_exclusions
+                : undefined,
+            minimum === 0 ? undefined : minimum,
+            (maximum === Number.MAX_SAFE_INTEGER || !Number.isFinite(maximum))
+                ? undefined
+                : maximum,
             refinement,
         ),
         inner_fqdn,
