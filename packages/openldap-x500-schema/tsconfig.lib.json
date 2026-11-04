@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "isolatedDeclarations": true,
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "types": [
+      "node"
+    ],
+    "strictNullChecks": true,
+    "rootDir": "."
+  },
+  "exclude": [
+    "**/*.spec.mts",
+    "**/*.test.mts"
+  ],
+  "include": [
+    "**/*.mts"
+  ]
+}

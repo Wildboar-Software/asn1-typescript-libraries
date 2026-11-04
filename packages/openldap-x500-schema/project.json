@@ -1,0 +1,25 @@
+{
+  "name": "openldap-x500-schema",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/openldap-x500-schema/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/openldap-x500-schema",
+        "tsConfig": "packages/openldap-x500-schema/tsconfig.lib.json",
+        "packageJson": "packages/openldap-x500-schema/package.json",
+        "main": "packages/openldap-x500-schema/src/index.mts",
+        "assets": [
+          "packages/openldap-x500-schema/*.md",
+          "packages/openldap-x500-schema/LICENSE.txt",
+          "packages/openldap-x500-schema/package.json"
+        ]
+      }
+    }
+  }
+}
