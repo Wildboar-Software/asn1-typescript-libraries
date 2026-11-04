@@ -28,6 +28,14 @@ export type AttCertValidityPeriodJSON = {
  * Both bounds are `GeneralizedTime` (not the {@link Time} CHOICE used in
  * public-key certificates, so there is no UTCTime year-window).
  *
+ * Range algebra copies what works from the VS Code `Range` API:
+ * immutable bounds; `contains`, `isEqual` / `isEqualTo`,
+ * `intersection`, `union`, and `with` derive new values instead of
+ * mutating. `Date` plays the role of VS Code `Position`
+ * (`notBeforeTime` as `start`, `notAfterTime` as `end`). Both bounds
+ * are inclusive. Unlike VS Code `Range`, inverted bounds are **not**
+ * swapped.
+ *
  * ### ASN.1 Definition:
  *
  * ```asn1
@@ -136,6 +144,182 @@ export class AttCertValidityPeriod {
             throw new Error("invalid AttCertValidityPeriod json");
         }
         return new AttCertValidityPeriod(notBeforeTime, notAfterTime);
+    }
+
+    /**
+     * @summary `true` if `notBeforeTime` and `notAfterTime` are the same instant.
+     * @description
+     *
+     * Copies VS Code `Range.isEmpty` for a zero-width closed interval.
+     *
+     * @returns {boolean} `true` if `notBeforeTime` and `notAfterTime`
+     * are the same instant.
+     * @method
+     */
+    public get isEmpty(): boolean {
+        return this.notBeforeTime.getTime() === this.notAfterTime.getTime();
+    }
+
+    /**
+     * @summary Check if a date or period is contained in this period.
+     * @description
+     *
+     * Copies VS Code `Range.contains`. Both bounds are inclusive.
+     * When given another `AttCertValidityPeriod`, both of its bounds
+     * must fall within this period.
+     *
+     * @param {Date | AttCertValidityPeriod} dateOrPeriod A date or period.
+     * @returns {boolean} `true` if the date or period is inside or equal.
+     * @method
+     */
+    public contains(dateOrPeriod: Date | AttCertValidityPeriod): boolean {
+        if (dateOrPeriod instanceof AttCertValidityPeriod) {
+            if (dateOrPeriod.notBeforeTime.getTime() > dateOrPeriod.notAfterTime.getTime()) {
+                return false;
+            }
+            return (
+                this.contains(dateOrPeriod.notBeforeTime)
+                && this.contains(dateOrPeriod.notAfterTime)
+            );
+        }
+        const t = dateOrPeriod.getTime();
+        return (
+            (t >= this.notBeforeTime.getTime())
+            && (t <= this.notAfterTime.getTime())
+        );
+    }
+
+    /**
+     * @summary Check if `other` equals this period.
+     * @description
+     *
+     * Copies VS Code `Range.isEqual`. Compared as instants.
+     *
+     * @param {AttCertValidityPeriod} other A period.
+     * @returns {boolean} `true` when both bounds match as instants.
+     * @method
+     */
+    public isEqual(other: AttCertValidityPeriod): boolean {
+        return (
+            (this.notBeforeTime.getTime() === other.notBeforeTime.getTime())
+            && (this.notAfterTime.getTime() === other.notAfterTime.getTime())
+        );
+    }
+
+    /**
+     * @summary Check if `other` equals this period.
+     * @description
+     *
+     * Alias of {@link AttCertValidityPeriod.isEqual} using the
+     * `isEqualTo` name from this repo's `DayTimeBand` API.
+     *
+     * @param {AttCertValidityPeriod} other A period.
+     * @returns {boolean} `true` when both bounds match as instants.
+     * @method
+     */
+    public isEqualTo(other: AttCertValidityPeriod): boolean {
+        return this.isEqual(other);
+    }
+
+    /**
+     * @summary Whether this period shares any instant with `other`.
+     * @param {AttCertValidityPeriod} other A period.
+     * @returns {boolean} `true` iff the closed ranges intersect.
+     * @method
+     */
+    public overlaps(other: AttCertValidityPeriod): boolean {
+        return this.intersection(other) !== undefined;
+    }
+
+    /**
+     * @summary Intersect `other` with this period.
+     * @description
+     *
+     * Copies VS Code `Range.intersection`.
+     *
+     * @param {AttCertValidityPeriod} other A period.
+     * @returns {AttCertValidityPeriod | undefined} The overlap, or `undefined`.
+     * @method
+     */
+    public intersection(other: AttCertValidityPeriod): AttCertValidityPeriod | undefined {
+        const startMs = Math.max(
+            this.notBeforeTime.getTime(),
+            other.notBeforeTime.getTime(),
+        );
+        const endMs = Math.min(
+            this.notAfterTime.getTime(),
+            other.notAfterTime.getTime(),
+        );
+        if (startMs > endMs) {
+            return undefined;
+        }
+        return new AttCertValidityPeriod(new Date(startMs), new Date(endMs));
+    }
+
+    /**
+     * @summary Compute the union of `other` with this period.
+     * @description
+     *
+     * Copies VS Code `Range.union`.
+     *
+     * @param {AttCertValidityPeriod} other A period.
+     * @returns {AttCertValidityPeriod} From the earlier start to the later end.
+     * @method
+     */
+    public union(other: AttCertValidityPeriod): AttCertValidityPeriod {
+        const startMs = Math.min(
+            this.notBeforeTime.getTime(),
+            other.notBeforeTime.getTime(),
+        );
+        const endMs = Math.max(
+            this.notAfterTime.getTime(),
+            other.notAfterTime.getTime(),
+        );
+        return new AttCertValidityPeriod(new Date(startMs), new Date(endMs));
+    }
+
+    /**
+     * @summary Derive a new period from this one.
+     * @description
+     *
+     * Copies VS Code `Range.with`. Returns `this` if unchanged.
+     *
+     * @param {Date | object} [startOrChange] New `notBeforeTime`, or a
+     * change object with optional `notBeforeTime` / `notAfterTime`.
+     * @param {Date} [end] New `notAfterTime` when using positional args.
+     * @returns {AttCertValidityPeriod} A period with the given bounds.
+     * @method
+     */
+    public with(
+        startOrChange?: Date | {
+            notBeforeTime?: Date;
+            notAfterTime?: Date;
+        },
+        end?: Date,
+    ): AttCertValidityPeriod {
+        let start = this.notBeforeTime;
+        let nextEnd = this.notAfterTime;
+        if (startOrChange instanceof Date) {
+            start = startOrChange;
+            nextEnd = (end !== undefined) ? end : this.notAfterTime;
+        } else if (startOrChange === undefined) {
+            nextEnd = (end !== undefined) ? end : this.notAfterTime;
+        } else {
+            start = (startOrChange.notBeforeTime !== undefined)
+                ? startOrChange.notBeforeTime
+                : this.notBeforeTime;
+            nextEnd = (startOrChange.notAfterTime !== undefined)
+                ? startOrChange.notAfterTime
+                : this.notAfterTime;
+        }
+        if ((start === this.notBeforeTime) && (nextEnd === this.notAfterTime)) {
+            return this;
+        }
+        return new AttCertValidityPeriod(
+            start,
+            nextEnd,
+            this._unrecognizedExtensionsList,
+        );
     }
 }
 
