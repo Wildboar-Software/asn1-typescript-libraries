@@ -103,8 +103,8 @@ export class NoticeReference {
      * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
      * @description
      *
-     * `organization` is a wrapped `DisplayText` choice. Notice numbers
-     * that are not JSON-safe are decimal strings.
+     * `organization` is the character content of `DisplayText`. Notice
+     * numbers that are not JSON-safe are decimal strings.
      *
      * @returns The JSON Encoding Rules encoding of this value
      * @function

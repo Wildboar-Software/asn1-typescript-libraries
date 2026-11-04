@@ -113,8 +113,9 @@ export class DualStringSyntax {
      * @summary Convert this value to a JSON encoding loosely following ITU-T X.697 (JER)
      * @description
      *
-     * Each directory string is a wrapped choice. TeletexString octets
-     * are hexadecimal. Unrecognized extensions are not represented.
+     * Each directory string is its character content. The CHOICE
+     * alternative is not preserved. Unrecognized extensions are not
+     * represented.
      *
      * @returns The JSON Encoding Rules encoding of this value
      * @function

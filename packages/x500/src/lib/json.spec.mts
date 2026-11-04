@@ -211,8 +211,8 @@ describe("DualStringSyntax toString / toJSON", () => {
         );
         expect(value.toString()).toBe('{ operation:"sign", object:"check" }');
         expect(value.toJSON()).toEqual({
-            operation: { uTF8String: "sign" },
-            object: { printableString: "check" },
+            operation: "sign",
+            object: "check",
         });
     });
 });
@@ -268,12 +268,12 @@ describe("NoticeReference / UserNotice toString / toJSON", () => {
             '{ organization:"Acme", noticeNumbers { 1, 2 } }',
         );
         expect(notice.toJSON()).toEqual({
-            organization: { utf8String: "Acme" },
+            organization: "Acme",
             noticeNumbers: [ 1, 2 ],
         });
         const user = new UserNotice(notice, { utf8String: "See 1" });
         expect(user.toString()).toContain("noticeRef");
-        expect(user.toJSON().explicitText).toEqual({ utf8String: "See 1" });
+        expect(user.toJSON().explicitText).toBe("See 1");
     });
 });
 

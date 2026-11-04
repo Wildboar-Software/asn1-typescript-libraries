@@ -19,22 +19,16 @@ export type BitStringJSON = {
 };
 
 /**
- * JSON Encoding Rules encoding of `UnboundedDirectoryString`.
+ * JSON encoding of `UnboundedDirectoryString`: the character content.
+ * The CHOICE alternative is not preserved.
  */
-export type UnboundedDirectoryStringJSON =
-    | { teletexString: string }
-    | { printableString: string }
-    | { bmpString: string }
-    | { universalString: string }
-    | { uTF8String: string };
+export type UnboundedDirectoryStringJSON = string;
 
 /**
- * JSON Encoding Rules encoding of `DisplayText`.
+ * JSON encoding of `DisplayText`: the character content.
+ * The CHOICE alternative is not preserved.
  */
-export type DisplayTextJSON =
-    | { visibleString: string }
-    | { bmpString: string }
-    | { utf8String: string };
+export type DisplayTextJSON = string;
 
 function bytesToHex(bytes: Uint8Array): string {
     return Array.from(bytes)
@@ -133,39 +127,23 @@ export function isoInterval(start?: Date, end?: Date): string {
 }
 
 /**
- * Encode `UnboundedDirectoryString` as a wrapped JSON choice.
+ * Encode `UnboundedDirectoryString` as its character content.
  *
- * TeletexString octets are hexadecimal.
+ * The CHOICE alternative is not preserved. TeletexString is transcoded.
  */
 export function unboundedDirectoryStringToJSON(
     value: UnboundedDirectoryString,
 ): UnboundedDirectoryStringJSON {
-    if ("teletexString" in value) {
-        return { teletexString: bytesToHex(value.teletexString) };
-    }
-    if ("printableString" in value) {
-        return { printableString: value.printableString };
-    }
-    if ("bmpString" in value) {
-        return { bmpString: value.bmpString };
-    }
-    if ("universalString" in value) {
-        return { universalString: value.universalString };
-    }
-    return { uTF8String: value.uTF8String };
+    return directoryStringToString(value);
 }
 
 /**
- * Encode `DisplayText` as a wrapped JSON choice.
+ * Encode `DisplayText` as its character content.
+ *
+ * The CHOICE alternative is not preserved.
  */
 export function displayTextToJSON(value: DisplayText): DisplayTextJSON {
-    if ("visibleString" in value) {
-        return { visibleString: value.visibleString };
-    }
-    if ("bmpString" in value) {
-        return { bmpString: value.bmpString };
-    }
-    return { utf8String: value.utf8String };
+    return displayTextToString(value);
 }
 
 /**
