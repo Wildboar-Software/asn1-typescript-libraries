@@ -134,6 +134,11 @@ export { determineStructuralObjectClass } from "./lib/utils/determineStructuralO
 export { gnWithinGeneralSubtree, evaluateSRVNameConstraints } from "./lib/utils/gnWithinGeneralSubtree.mjs";
 export { dnWithinSubtreeSpecification } from "./lib/utils/dnWithinSubtreeSpecification.mjs";
 export { dnWithinSubtree } from "./lib/utils/dnWithinSubtree.mjs";
+export {
+    subtreeIntersection,
+    subtreeUnion,
+} from "./lib/utils/subtreeIntersection.mjs";
+export type { SubtreeEqualityMatcherGetter } from "./lib/utils/subtreeIntersection.mjs";
 export { evaluateContextAssertion } from "./lib/utils/evaluateContextAssertion.mjs";
 export type { EvaluateFilterReturn, EvaluateFilterSettings } from "./lib/utils/evaluateFilter.mjs";
 export { evaluateFilter } from "./lib/utils/evaluateFilter.mjs";

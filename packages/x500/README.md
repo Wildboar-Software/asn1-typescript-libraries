@@ -244,6 +244,7 @@ are either deprecated or not intended for external use:
 - `gnWithinGeneralSubtree.mts` - Determine whether a general name falls within a `GeneralSubtree`.
 - `dnWithinSubtree.mts` - Determine whether a distinguished name falls within a subtree
 - `dnWithinSubtreeSpecification.mts` - Determine whether a distinguished name falls within a subtree specification.
+- `subtreeIntersection.mts` - Intersect or union two `SubtreeSpecification` values (VS Code `Range`-style), including when they have different context prefixes.
 - `evaluateContextAssertion.mts` - Evaluate a `ContextAssertion`
 - `evaluateFilter.mts` - Evaluate a `Filter`
 - `getAttributeSize.mts` - Get the size of an attribute
