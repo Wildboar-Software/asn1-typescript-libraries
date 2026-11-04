@@ -394,6 +394,14 @@ export class SubtreeSpecification implements ChopSpecification {
         other: SubtreeSpecification,
         getMatcher?: GetDistinguishedValueMatcher,
     ): boolean {
+        const min = this.minimum ?? SubtreeSpecification._default_value_for_minimum;
+        const max = this.maximum;
+        if (
+            (min != (other.minimum ?? SubtreeSpecification._default_value_for_minimum))
+            || (max != other.maximum)
+        ) {
+            return false;
+        }
         if (!compareRDNSequence(
             this.base ?? [],
             other.base ?? [],
@@ -406,22 +414,6 @@ export class SubtreeSpecification implements ChopSpecification {
             other.specificExclusions,
             getMatcher,
         )) {
-            return false;
-        }
-        if (
-            BigInt(this.minimum ?? SubtreeSpecification._default_value_for_minimum)
-            !== BigInt(other.minimum ?? SubtreeSpecification._default_value_for_minimum)
-        ) {
-            return false;
-        }
-        if ((this.maximum === undefined) !== (other.maximum === undefined)) {
-            return false;
-        }
-        if (
-            (this.maximum !== undefined)
-            && (other.maximum !== undefined)
-            && (BigInt(this.maximum) !== BigInt(other.maximum))
-        ) {
             return false;
         }
         return refinementsEqual(
