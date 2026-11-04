@@ -93,8 +93,11 @@ describe("RFC 4515 strings", () => {
             .toEqual({ matchingRule: "x-ä", matchValue: "A" });
     });
 
-    it("hex-encodes an assertion value that is not UTF-8", () => {
+    it("base64-encodes an assertion value that is not UTF-8", () => {
         const binary = Uint8Array.from([0xff, 0x00, 0xfe]);
+        const encoded = Buffer.from(binary).toString("base64");
+        expect(new AttributeValueAssertion(utf8("userPassword"), binary).toString())
+            .toBe(`userPassword=${encoded}`);
         expect(new AttributeValueAssertion(utf8("userPassword"), binary).toJSON())
             .toEqual({
                 attributeDesc: "userPassword",

@@ -26,62 +26,6 @@ function asBuffer(octets: Uint8Array): Buffer {
     return Buffer.from(octets.buffer, octets.byteOffset, octets.byteLength);
 }
 
-function escapeByte(byte: number): string {
-    return "\\" + byte.toString(16).padStart(2, "0");
-}
-
-/**
- * Length of one RFC 4515 UTF-8 character at `index`, or `0` when the octets
- * there are not a well-formed character.
- */
-function utf8SequenceLength(octets: Uint8Array, index: number): number {
-    const lead: number = octets[index];
-    if (lead <= DELETE) {
-        return 1;
-    }
-    let width: number = 0;
-    if ((lead >= 0xC2) && (lead <= 0xDF)) {
-        width = 2;
-    } else if (
-        (lead === 0xE0)
-        || ((lead >= 0xE1) && (lead <= 0xEC))
-        || (lead === 0xED)
-        || ((lead >= 0xEE) && (lead <= 0xEF))
-    ) {
-        width = 3;
-    } else if (
-        (lead === 0xF0)
-        || ((lead >= 0xF1) && (lead <= 0xF3))
-        || (lead === 0xF4)
-    ) {
-        width = 4;
-    } else {
-        return 0;
-    }
-    if ((index + width) > octets.length) {
-        return 0;
-    }
-    for (let i: number = 1; i < width; i++) {
-        if ((octets[index + i] & 0xC0) !== 0x80) {
-            return 0;
-        }
-    }
-    const second: number = octets[index + 1];
-    if ((lead === 0xE0) && (second < 0xA0)) {
-        return 0;
-    }
-    if ((lead === 0xED) && (second > 0x9F)) {
-        return 0;
-    }
-    if ((lead === 0xF0) && (second < 0x90)) {
-        return 0;
-    }
-    if ((lead === 0xF4) && (second > 0x8F)) {
-        return 0;
-    }
-    return width;
-}
-
 /**
  * Decode an `LDAPString` (UTF-8 octets) to a JavaScript string.
  *
@@ -93,42 +37,50 @@ export function ldapString(octets: Uint8Array): string {
 }
 
 /**
- * Encode octets the way IETF RFC 4515 encodes a filter `<value>`.
- *
- * Well-formed UTF-8 is written as characters. NUL, `(`, `)`, `*`, `\`, and
- * any octet that is not part of a well-formed UTF-8 character are written as
- * `\HH`.
- *
- * @param octets The assertion value
- * @returns The RFC 4515 value text
+ * `true` when decoding `octets` as UTF-8 and encoding that text again
+ * yields the same octets.
  */
-export function rfc4515Value(octets: Uint8Array): string {
+function isWholeUtf8(octets: Uint8Array): boolean {
+    const buf: Buffer = asBuffer(octets);
+    return Buffer.compare(Buffer.from(buf.toString("utf8"), "utf8"), buf) === 0;
+}
+
+/**
+ * Escape the RFC 4515 filter metacharacters in text that is already UTF-8.
+ */
+function escapeFilterText(text: string): string {
     let out: string = "";
-    let index: number = 0;
-    while (index < octets.length) {
-        const width: number = utf8SequenceLength(octets, index);
-        if (width === 0) {
-            out += escapeByte(octets[index]);
-            index++;
-            continue;
-        }
-        if (width === 1) {
-            const byte: number = octets[index];
-            const mustEscape: boolean = (byte === NUL)
-                || (byte === LEFT_PARENTHESIS)
-                || (byte === RIGHT_PARENTHESIS)
-                || (byte === ASTERISK)
-                || (byte === BACKSLASH);
-            out += mustEscape
-                ? escapeByte(byte)
-                : String.fromCharCode(byte);
-            index++;
-            continue;
-        }
-        out += asBuffer(octets.subarray(index, index + width)).toString("utf8");
-        index += width;
+    for (const char of text) {
+        const code: number = char.charCodeAt(0);
+        const escaped: boolean = (code === NUL)
+            || (code === LEFT_PARENTHESIS)
+            || (code === RIGHT_PARENTHESIS)
+            || (code === ASTERISK)
+            || (code === BACKSLASH);
+        out += escaped
+            ? "\\" + code.toString(16).padStart(2, "0")
+            : char;
     }
     return out;
+}
+
+/**
+ * Encode octets as an RFC 4515 filter `<value>`.
+ *
+ * The octets are decoded as one UTF-8 string. NUL, `(`, `)`, `*`, and `\`
+ * in that text are written as `\HH`. If the octets are not UTF-8, the whole
+ * value is base64, the same encoding LDIF uses for a value that is not a
+ * safe string.
+ *
+ * @param octets The assertion value
+ * @returns The filter value text
+ */
+export function rfc4515Value(octets: Uint8Array): string {
+    const buf: Buffer = asBuffer(octets);
+    if (isWholeUtf8(octets)) {
+        return escapeFilterText(buf.toString("utf8"));
+    }
+    return buf.toString("base64");
 }
 
 function isBytes(value: unknown): value is Uint8Array {
