@@ -3,6 +3,8 @@ import {
     ASN1TagClass,
     ASN1UniversalType,
     BERElement,
+    isPrintableString,
+    isVisibleString,
     ObjectIdentifier,
     type INTEGER,
     type OBJECT_IDENTIFIER,
@@ -65,39 +67,67 @@ export type DirectoryStringInput =
     | DirectoryString
     | string;
 
-const printableStringCharacters = /^[A-Za-z0-9 '()+,\-./:=?]*$/;
+type FastPreparation = "printable" | "visible" | "ia5";
 
 /**
- * String preparation for a valid PrintableString needs no Unicode
- * mapping, normalization, prohibited-character check, or full case fold.
+ * Whether every character is in the seven-bit IA5 alphabet.
  */
-function prepPrintableString (
+function isIA5String (value: string): boolean {
+    for (let i = 0; i < value.length; i++) {
+        if (value.charCodeAt(i) > 0x7f) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * Valid PrintableString, VisibleString, ObjectDescriptor, and IA5String
+ * values need no Unicode normalization, prohibited-character check, or
+ * full case fold. IA5 controls still undergo X.520 mapping.
+ */
+function prepASCIIString (
     value: string,
     options: PrepStringOptions,
-    validated: boolean,
+    syntax: FastPreparation,
 ): string | undefined {
-    if (!validated && !printableStringCharacters.test(value)) {
+    const valid = (
+        (syntax === "printable" && isPrintableString(value))
+        || (syntax === "visible" && isVisibleString(value))
+        || (syntax === "ia5" && isIA5String(value))
+    );
+    if (!valid) {
         return prepString(value, options);
     }
     if (value.length === 0) {
         return undefined;
     }
-    const folded = options.caseFold ? value.toLowerCase() : value;
-    const trimmed = folded.replace(/ +/g, " ").trim();
-    return trimmed.length > 0 ? trimmed : " ";
+    const mapped = (syntax === "ia5")
+        ? value
+            .replace(/[\t\n\v\f\r]/g, " ")
+            .replace(/[\x00-\x08\x0e-\x1f\x7f]/g, "")
+        : value;
+    if (mapped.length === 0) {
+        return undefined;
+    }
+    const trimmed = mapped.trim();
+    const compacted = trimmed.replace(/ +/g, " ");
+    if (compacted.length === 0) {
+        return " ";
+    }
+    return options.caseFold ? compacted.toLowerCase() : compacted;
 }
 
 function finishDirectoryString (
     value: string,
-    printable: boolean,
+    fastPreparation: FastPreparation | undefined,
     preparation: PrepStringOptions | undefined,
-    printableValidated: boolean = false,
 ): string | undefined {
     if (preparation === undefined) {
         return value;
     }
-    return printable
-        ? prepPrintableString(value, preparation, printableValidated)
+    return fastPreparation
+        ? prepASCIIString(value, preparation, fastPreparation)
         : prepString(value, preparation);
 }
 
@@ -119,48 +149,51 @@ function readDirectoryString (
     preparation?: PrepStringOptions,
 ): string | undefined {
     if (typeof value === "string") {
-        return finishDirectoryString(value, false, preparation);
+        return finishDirectoryString(value, undefined, preparation);
     }
     if (ASN1Element.isElement(value)) {
         if (value.tagClass === ASN1TagClass.universal) {
             switch (value.tagNumber) {
                 case ASN1UniversalType.utf8String:
-                    return finishDirectoryString(value.utf8String, false, preparation);
+                    return finishDirectoryString(value.utf8String, undefined, preparation);
                 case ASN1UniversalType.printableString:
                     return finishDirectoryString(
                         value.printableString,
-                        true,
+                        "printable",
                         preparation,
-                        true,
                     );
                 case ASN1UniversalType.teletexString:
                     return finishDirectoryString(
                         teletexToString(value.teletexString),
-                        false,
+                        undefined,
                         preparation,
                     );
                 case ASN1UniversalType.bmpString:
-                    return finishDirectoryString(value.bmpString, false, preparation);
+                    return finishDirectoryString(value.bmpString, undefined, preparation);
                 case ASN1UniversalType.universalString:
-                    return finishDirectoryString(value.universalString, false, preparation);
+                    return finishDirectoryString(value.universalString, undefined, preparation);
                 case ASN1UniversalType.ia5String:
-                    return finishDirectoryString(value.ia5String, false, preparation);
+                    return finishDirectoryString(value.ia5String, "ia5", preparation);
                 case ASN1UniversalType.visibleString:
-                    return finishDirectoryString(value.visibleString, false, preparation);
+                    return finishDirectoryString(value.visibleString, "visible", preparation);
                 case ASN1UniversalType.objectDescriptor:
-                    return finishDirectoryString(value.objectDescriptor, false, preparation);
+                    return finishDirectoryString(
+                        value.objectDescriptor,
+                        "visible",
+                        preparation,
+                    );
             }
         }
         const decoded = _decode_UnboundedDirectoryString(value);
         return finishDirectoryString(
             directoryStringToString(decoded),
-            "printableString" in decoded,
+            "printableString" in decoded ? "printable" : undefined,
             preparation,
         );
     }
     return finishDirectoryString(
         directoryStringToString(value),
-        "printableString" in value,
+        "printableString" in value ? "printable" : undefined,
         preparation,
     );
 }

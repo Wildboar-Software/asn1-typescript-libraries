@@ -70,15 +70,27 @@ describe("typed matching inputs", () => {
         )).toBe(true);
     });
 
-    it("prepares PrintableString values with the ASCII fast path", () => {
+    it("prepares ASCII string types without Unicode normalization", () => {
         const normalize = vi.spyOn(String.prototype, "normalize");
         try {
             const printable = _encodePrintableString("  Hello   WORLD  ", DER);
             expect(readDirectoryString(printable, { caseFold: true })).toBe("hello world");
             expect(readDirectoryString(
                 { printableString: "  Exact   Case  " },
-                {},
+                { caseFold: false },
             )).toBe("Exact Case");
+            expect(readDirectoryString(
+                _encodeIA5String("\t Hello\u0000   WORLD\r", DER),
+                { caseFold: true },
+            )).toBe("hello world");
+            expect(readDirectoryString(
+                _encodeVisibleString("  Visible   STRING  ", DER),
+                { caseFold: true },
+            )).toBe("visible string");
+            expect(readDirectoryString(
+                _encodeObjectDescriptor("  Object   DESCRIPTOR  ", DER),
+                { caseFold: true },
+            )).toBe("object descriptor");
             expect(normalize).not.toHaveBeenCalled();
 
             expect(readDirectoryString(
