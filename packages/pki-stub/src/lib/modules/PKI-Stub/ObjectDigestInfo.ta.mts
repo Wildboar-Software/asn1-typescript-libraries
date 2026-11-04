@@ -3,6 +3,7 @@ import {
     type OPTIONAL,
     type BIT_STRING,
     type OBJECT_IDENTIFIER,
+    compareBitStrings,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -146,6 +147,32 @@ export class ObjectDigestInfo {
             _o.objectDigest,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Compare this object digest info with another
+     * @description
+     *
+     * `digestedObjectType` and the digest bit string must match. A missing
+     * `otherObjectTypeID` matches only another missing one. Digest algorithms
+     * compare with {@link AlgorithmIdentifier.isEqualTo}.
+     *
+     * @param other The other object digest info
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(other: ObjectDigestInfo): boolean {
+        if (this.digestedObjectType !== other.digestedObjectType) {
+            return false;
+        }
+        if (this.otherObjectTypeID?.toString() !== other.otherObjectTypeID?.toString()) {
+            return false;
+        }
+        if (!this.digestAlgorithm.isEqualTo(other.digestAlgorithm)) {
+            return false;
+        }
+        return compareBitStrings(this.objectDigest, other.objectDigest);
     }
 
     /**

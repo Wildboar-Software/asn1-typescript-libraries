@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
     type OPTIONAL,
+    compareBitStrings,
     type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
@@ -11,6 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
+import { compareBytes } from "@wildboar/dn";
+import { compareGeneralNames } from "../../../compareGeneralNames.mjs";
 import {
     type GeneralNames,
     _decode_GeneralNames,
@@ -112,6 +115,36 @@ export class IssuerSerial {
             _o.issuerUID,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Compare this issuer-and-serial with another
+     * @description
+     *
+     * Serial numbers compare octet-for-octet. Issuer names compare as a
+     * `GeneralNames` multiset. `issuerUID` must be present on both sides or
+     * neither; when both are present the bit strings must match.
+     *
+     * @param other The other issuer and serial
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(other: IssuerSerial): boolean {
+        if (Boolean(this.issuerUID) !== Boolean(other.issuerUID)) {
+            return false;
+        }
+        if (
+            this.issuerUID
+            && other.issuerUID
+            && !compareBitStrings(this.issuerUID, other.issuerUID)
+        ) {
+            return false;
+        }
+        if (compareBytes(this.serial, other.serial) !== 0) {
+            return false;
+        }
+        return compareGeneralNames(this.issuer, other.issuer);
     }
 }
 
