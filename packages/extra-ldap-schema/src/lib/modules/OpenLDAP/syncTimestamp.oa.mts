@@ -6,6 +6,9 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { dSAOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
+import { generalizedTimeMatch } from "../SelectedAttributeTypes/generalizedTimeMatch.oa.mjs";
+import { generalizedTimeOrderingMatch } from "../SelectedAttributeTypes/generalizedTimeOrderingMatch.oa.mjs";
+import { generalizedTime } from "../SelectedAttributeTypes/generalizedTime.oa.mjs";
 
 
 /**

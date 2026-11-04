@@ -30,10 +30,12 @@
         "@wildboar/asn1": "npm:@jsr/wildboar__asn1@11.x.x",
         "@wildboar/pkcs": "npm:@jsr/wildboar__pkcs@^2.0.3",
         "@wildboar/pki-stub": "npm:@jsr/wildboar__pki-stub@2.x.x",
+        "@wildboar/x400": "npm:@jsr/wildboar__x400@^2.0.3",
         "@wildboar/x500": "npm:@jsr/wildboar__x500@^2.0.9"
     },
     "exports": {
         ".": "./src/index.mts",
+        "./ApacheDirectorySchema": "./src/lib/modules/ApacheDirectorySchema/index.mts",
         "./AuthenticationFramework": "./src/lib/modules/AuthenticationFramework/index.mts",
         "./Cosine": "./src/lib/modules/Cosine/index.mts",
         "./DSEE": "./src/lib/modules/DSEE/index.mts",

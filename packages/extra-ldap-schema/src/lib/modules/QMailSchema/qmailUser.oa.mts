@@ -19,6 +19,11 @@ import { qmailAccountPurge } from "../QMailSchema/qmailAccountPurge.oa.mjs";
 import { qmailDotMode } from "../QMailSchema/qmailDotMode.oa.mjs";
 import { qmailGID } from "../QMailSchema/qmailGID.oa.mjs";
 import { qmailUID } from "../QMailSchema/qmailUID.oa.mjs";
+import { top } from "../InformationFramework/top.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
+import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
+import { homeDirectory } from "../NIS/homeDirectory.oa.mjs";
+import { userPassword } from "../AuthenticationFramework/userPassword.oa.mjs";
 
 
 /**

@@ -8,6 +8,7 @@ import { type UUID, _decode_UUID, _encode_UUID } from "../SelectedAttributeTypes
 import { octetStringMatch } from "../SelectedAttributeTypes/octetStringMatch.oa.mjs";
 import { octetStringOrderingMatch } from "../SelectedAttributeTypes/octetStringOrderingMatch.oa.mjs";
 import { octetStringSubstringsMatch } from "../SelectedAttributeTypes/octetStringSubstringsMatch.oa.mjs";
+import { octetString } from "../SelectedAttributeTypes/octetString.oa.mjs";
 
 
 /**

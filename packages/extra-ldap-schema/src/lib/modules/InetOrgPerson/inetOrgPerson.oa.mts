@@ -25,6 +25,7 @@ import { organizationName } from "../SelectedAttributeTypes/organizationName.oa.
 import { uid } from "../SelectedAttributeTypes/uid.oa.mjs";
 import { uniqueIdentifier } from "../SelectedAttributeTypes/uniqueIdentifier.oa.mjs";
 import { organizationalPerson } from "../SelectedObjectClasses/organizationalPerson.oa.mjs";
+import { mail } from "../Cosine/mail.oa.mjs";
 
 
 /**
