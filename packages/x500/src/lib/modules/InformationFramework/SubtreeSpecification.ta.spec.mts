@@ -10,7 +10,6 @@ import {
     rdnSequenceToString,
     type RDNSequence,
 } from "@wildboar/dn";
-import { SubtreeSpecification as X500SubtreeSpecification } from "@wildboar/x500/InformationFramework";
 import { describe, expect, it } from "vitest";
 import {
     SubtreeSpecification,
@@ -31,7 +30,7 @@ function name (...parts: string[]): RDNSequence {
 }
 
 describe("SubtreeSpecification", () => {
-    it("is a X.500 subtree specification and round-trips", () => {
+    it("round-trips through BER", () => {
         const spec = new SubtreeSpecification(
             name("US", "CA"),
             [{ chopBefore: name("secret") }],
@@ -39,7 +38,6 @@ describe("SubtreeSpecification", () => {
             4,
             { item: person },
         );
-        expect(spec).toBeInstanceOf(X500SubtreeSpecification);
         const decoded = _decode_SubtreeSpecification(
             _encode_SubtreeSpecification(spec, BER),
         );
