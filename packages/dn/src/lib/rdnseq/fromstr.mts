@@ -1,4 +1,4 @@
-import { atavFromStringX520 } from "../atav/fromstr.mjs";
+import { atavFromStringX520, type ParseAttributeTypeAndValue } from "../atav/fromstr.mjs";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
 import type { RDNSequence } from "../RDNSequence.ta.mjs";
 import type { RelativeDistinguishedName } from "../RelativeDistinguishedName.ta.mjs";
@@ -60,16 +60,22 @@ function* rdnSequenceFromString (
  * the first element of the result.
  *
  * @param str The distinguished name, in RFC 4514 string form.
+ * @param parseAtav Optional function that replaces conversion of each
+ *  attribute type and value. Return `undefined` to use the built-in X.520
+ *  conversion for that pair.
  * @returns The relative distinguished names, from left to right.
  * @function
  */
 export
-function rdnSequenceFromStringX520 (str: string): RDNSequence {
+function rdnSequenceFromStringX520 (
+    str: string,
+    parseAtav?: ParseAttributeTypeAndValue,
+): RDNSequence {
     const rdns: RDNSequence = [];
     for (const rdn of rdnSequenceFromString(str)) {
         const atavs: RelativeDistinguishedName = [];
         for (const atav of rdn) {
-            atavs.push(atavFromStringX520(atav));
+            atavs.push(atavFromStringX520(atav, parseAtav));
         }
         rdns.push(atavs);
     }

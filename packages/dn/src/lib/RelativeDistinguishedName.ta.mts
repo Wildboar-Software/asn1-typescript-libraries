@@ -6,7 +6,10 @@ import {
     _decode_AttributeTypeAndValue,
     _encode_AttributeTypeAndValue,
 } from "./AttributeTypeAndValue.ta.mjs";
-import { attributeTypeAndValueToKey } from "./atav/tostr.mjs";
+import {
+    attributeTypeAndValueToKey,
+    type StringifyAttributeTypeAndValue,
+} from "./atav/tostr.mjs";
 /**
  * @summary RelativeDistinguishedName
  * @description
@@ -46,12 +49,18 @@ export {
  * affect the result. The key is not meant to be displayed.
  *
  * @param rdn The relative distinguished name
+ * @param stringifyAtav Optional function that replaces conversion of each
+ *  attribute type and value to a key. Return `undefined` to use the built-in
+ *  key for that pair.
  * @returns A string of the form `numericoid=value+numericoid=value...`
  * @function
  */
-export function relativeDistinguishedNameToKey(rdn: RelativeDistinguishedName): string {
+export function relativeDistinguishedNameToKey(
+    rdn: RelativeDistinguishedName,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
     return rdn
-        .map((atav) => attributeTypeAndValueToKey(atav, true))
+        .map((atav) => attributeTypeAndValueToKey(atav, true, stringifyAtav))
         .sort()
         .join("+");
 }

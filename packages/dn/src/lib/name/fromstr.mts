@@ -1,5 +1,6 @@
 import type { Name } from "../Name.ta.mjs";
 import { rdnSequenceFromStringX520 } from "../rdnseq/fromstr.mjs";
+import type { ParseAttributeTypeAndValue } from "../atav/fromstr.mjs";
 
 const RDN_SEQUENCE_PREFIX: string = "rdnSequence:";
 
@@ -15,16 +16,25 @@ const RDN_SEQUENCE_PREFIX: string = "rdnSequence:";
  * prefix is rejected, rather than assumed to be an `rdnSequence`.
  *
  * @param str A string of the form `rdnSequence:rdn,rdn...`
+ * @param parseAtav Optional function that replaces conversion of each
+ *  attribute type and value. Return `undefined` to use the built-in X.520
+ *  conversion for that pair.
  * @returns The directory name.
  * @throws {SyntaxError} If the alternative is missing or not supported, or the
  * remainder is not a valid distinguished name.
  * @function
  */
 export
-function nameFromStringX520 (str: string): Name {
+function nameFromStringX520 (
+    str: string,
+    parseAtav?: ParseAttributeTypeAndValue,
+): Name {
     if (str.startsWith(RDN_SEQUENCE_PREFIX)) {
         return {
-            rdnSequence: rdnSequenceFromStringX520(str.slice(RDN_SEQUENCE_PREFIX.length)),
+            rdnSequence: rdnSequenceFromStringX520(
+                str.slice(RDN_SEQUENCE_PREFIX.length),
+                parseAtav,
+            ),
         };
     }
     throw new SyntaxError("Name string must begin with a supported alternative, such as 'rdnSequence:'");

@@ -17,6 +17,25 @@ import {
 } from "@wildboar/asn1/functional";
 import { ParsedAttributeTypeAndValue } from "../ParsedAttributeTypeAndValue.mjs";
 import { AttributeTypeAndValue } from "../AttributeTypeAndValue.ta.mjs";
+
+/**
+ * @summary Parse one attribute type and value from its string form
+ * @description
+ *
+ * Replaces the built-in X.520 conversion of a single
+ * {@link ParsedAttributeTypeAndValue} used by {@link atavFromStringX520} and
+ * the RDN sequence and `Name` parsers that call it. Return `undefined` to use
+ * the built-in conversion for that pair.
+ *
+ * `parsed.value` is already unescaped as in IETF RFC 4514.
+ *
+ * @param parsed The attribute type name and unescaped value
+ * @returns The `AttributeTypeAndValue`, or `undefined` to use the built-in
+ *  conversion
+ */
+export type ParseAttributeTypeAndValue = (
+    parsed: ParsedAttributeTypeAndValue,
+) => AttributeTypeAndValue | undefined;
 import { unescapeDistinguishedValue } from "../unescapeDistinguishedValue.mjs";
 import {
     id_at_commonName,
@@ -366,9 +385,19 @@ const x520AttributeSyntaxes: ReadonlyMap<string, X520AttributeSyntax> = new Map(
  * a BER element of the attribute's directory syntax.
  *
  * @param strings The attribute type name and unescaped value.
+ * @param parseAtav Optional function that replaces conversion of this
+ *  attribute type and value. Return `undefined` to use the built-in X.520
+ *  conversion.
  * @returns The attribute type OID and BER-encoded value.
  */
-export function atavFromStringX520(strings: ParsedAttributeTypeAndValue): AttributeTypeAndValue {
+export function atavFromStringX520(
+    strings: ParsedAttributeTypeAndValue,
+    parseAtav?: ParseAttributeTypeAndValue,
+): AttributeTypeAndValue {
+    const custom: AttributeTypeAndValue | undefined = parseAtav?.(strings);
+    if (custom !== undefined) {
+        return custom;
+    }
     const syntax = x520AttributeSyntaxes.get(strings.type.toLowerCase());
     if (!syntax) {
         throw new SyntaxError(`unrecognized attribute type ${JSON.stringify(strings.type)}`);

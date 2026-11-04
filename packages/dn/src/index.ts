@@ -23,6 +23,7 @@ export { default as distinguishedTypeToString } from "./lib/atav/distinguishedTy
 export {
     default as attributeTypeAndValueToString,
     attributeTypeAndValueToKey,
+    type StringifyAttributeTypeAndValue,
 } from "./lib/atav/tostr.mjs";
 export {
     compareAttributeTypeAndValue,
@@ -65,6 +66,7 @@ export { default as attributeTypesAndValues } from "./lib/rdn/fromstr.mjs";
 export {
     default as atavFromString,
     atavFromStringX520,
+    type ParseAttributeTypeAndValue,
 } from "./lib/atav/fromstr.mjs";
 export { ParsedAttributeTypeAndValue } from "./lib/ParsedAttributeTypeAndValue.mjs";
 export { default as hasOnlyAttributeTypes } from "./lib/hasOnlyAttributeTypes.mjs";

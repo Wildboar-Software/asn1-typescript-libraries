@@ -1,4 +1,5 @@
 import relativeDistinguishedNameToString from "../rdn/tostr.mjs";
+import type { StringifyAttributeTypeAndValue } from "../atav/tostr.mjs";
 import type { RDNSequence } from "../RDNSequence.ta.mjs";
 
 /**
@@ -13,19 +14,25 @@ import type { RDNSequence } from "../RDNSequence.ta.mjs";
  * distinguished values, and the results are joined with `,`.
  * 
  * @param rdns The RDN sequence to stringify.
+ * @param stringifyAtav Optional function that replaces conversion of each
+ *  attribute type and value. Return `undefined` to use the built-in conversion
+ *  for that pair.
  * @returns A string of the form `rdn,rdn...`
  * @function
  */
 export
-function rdnSequenceToString (rdns: RDNSequence): string {
+function rdnSequenceToString (
+    rdns: RDNSequence,
+    stringifyAtav?: StringifyAttributeTypeAndValue,
+): string {
     if (rdns.length === 0) {
         return "";
     }
     if (rdns.length === 1) {
-        return relativeDistinguishedNameToString(rdns[0]);
+        return relativeDistinguishedNameToString(rdns[0], stringifyAtav);
     }
     return rdns
-        .map((rdn) => relativeDistinguishedNameToString(rdn))
+        .map((rdn) => relativeDistinguishedNameToString(rdn, stringifyAtav))
         .join(",");
 }
 
