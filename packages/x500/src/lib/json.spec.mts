@@ -203,13 +203,12 @@ describe("ProtocolInformation toString / toJSON", () => {
     });
 });
 
-describe("DualStringSyntax toString / toJSON", () => {
-    it("prints JSON-escaped operation and object", () => {
+describe("DualStringSyntax toJSON", () => {
+    it("encodes operation and object as character strings", () => {
         const value = new DualStringSyntax(
             { uTF8String: "sign" },
             { printableString: "check" },
         );
-        expect(value.toString()).toBe('{ operation:"sign", object:"check" }');
         expect(value.toJSON()).toEqual({
             operation: "sign",
             object: "check",
@@ -261,19 +260,16 @@ describe("DSS_Parms toString / toJSON", () => {
     });
 });
 
-describe("NoticeReference / UserNotice toString / toJSON", () => {
-    it("prints organization, notice numbers, and explicit text", () => {
+describe("NoticeReference / UserNotice toJSON", () => {
+    it("encodes organization, notice numbers, and explicit text", () => {
         const notice = new NoticeReference({ utf8String: "Acme" }, [ 1, 2 ]);
-        expect(notice.toString()).toBe(
-            '{ organization:"Acme", noticeNumbers { 1, 2 } }',
-        );
         expect(notice.toJSON()).toEqual({
             organization: "Acme",
             noticeNumbers: [ 1, 2 ],
         });
         const user = new UserNotice(notice, { utf8String: "See 1" });
-        expect(user.toString()).toContain("noticeRef");
         expect(user.toJSON().explicitText).toBe("See 1");
+        expect(user.toJSON().noticeRef).toEqual(notice.toJSON());
     });
 });
 

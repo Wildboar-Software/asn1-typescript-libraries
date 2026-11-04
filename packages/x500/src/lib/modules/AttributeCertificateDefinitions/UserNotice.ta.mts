@@ -18,7 +18,6 @@ import {
 } from "../AttributeCertificateDefinitions/NoticeReference.ta.mjs";
 import {
     displayTextToJSON,
-    displayTextToString,
     type DisplayTextJSON,
 } from "../../json.mjs";
 
@@ -83,28 +82,6 @@ export class UserNotice {
         _o: { [_K in keyof UserNotice]: UserNotice[_K] }
     ): UserNotice {
         return new UserNotice(_o.noticeRef, _o.explicitText);
-    }
-
-    /**
-     * @summary Print this user notice
-     * @description
-     *
-     * `{ noticeRef ..., explicitText:"..." }`. Absent optional
-     * components are omitted.
-     *
-     * @returns The printed value
-     * @function
-     * @public
-     */
-    public toString(): string {
-        const parts: string[] = [];
-        if (this.noticeRef !== undefined) {
-            parts.push(`noticeRef ${this.noticeRef.toString()}`);
-        }
-        if (this.explicitText !== undefined) {
-            parts.push(`explicitText:${JSON.stringify(displayTextToString(this.explicitText))}`);
-        }
-        return parts.length ? `{ ${parts.join(", ")} }` : "{}";
     }
 
     /**

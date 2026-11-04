@@ -158,8 +158,3 @@ export function displayTextToString(value: DisplayText): string {
     }
     return value.utf8String;
 }
-
-/**
- * Character content of an `UnboundedDirectoryString`.
- */
-export { directoryStringToString };

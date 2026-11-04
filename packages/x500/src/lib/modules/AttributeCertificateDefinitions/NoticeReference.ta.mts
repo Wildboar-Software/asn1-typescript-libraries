@@ -13,9 +13,7 @@ import {
 } from "../AttributeCertificateDefinitions/DisplayText.ta.mjs";
 import {
     displayTextToJSON,
-    displayTextToString,
     integerToJSON,
-    integerToString,
     type DisplayTextJSON,
 } from "../../json.mjs";
 
@@ -80,23 +78,6 @@ export class NoticeReference {
         _o: { [_K in keyof NoticeReference]: NoticeReference[_K] }
     ): NoticeReference {
         return new NoticeReference(_o.organization, _o.noticeNumbers);
-    }
-
-    /**
-     * @summary Print this notice reference
-     * @description
-     *
-     * `{ organization:"...", noticeNumbers { 1, 2 } }`. The organization
-     * text is JSON-escaped. Unrecognized extensions are omitted.
-     *
-     * @returns The printed value
-     * @function
-     * @public
-     */
-    public toString(): string {
-        const organization = JSON.stringify(displayTextToString(this.organization));
-        const numbers = this.noticeNumbers.map(integerToString).join(", ");
-        return `{ organization:${organization}, noticeNumbers { ${numbers} } }`;
     }
 
     /**
