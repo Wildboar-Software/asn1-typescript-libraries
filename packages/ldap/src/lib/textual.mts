@@ -9,6 +9,19 @@ export type OctetsJSON = string | { hex: string };
 
 const LDIF_LINE_LENGTH: number = 76;
 
+const NUL: number = "\u0000".charCodeAt(0);
+const START_OF_HEADING: number = "\u0001".charCodeAt(0);
+const LINE_FEED: number = "\n".charCodeAt(0);
+const CARRIAGE_RETURN: number = "\r".charCodeAt(0);
+const SPACE: number = " ".charCodeAt(0);
+const LEFT_PARENTHESIS: number = "(".charCodeAt(0);
+const RIGHT_PARENTHESIS: number = ")".charCodeAt(0);
+const ASTERISK: number = "*".charCodeAt(0);
+const COLON: number = ":".charCodeAt(0);
+const LESS_THAN: number = "<".charCodeAt(0);
+const BACKSLASH: number = "\\".charCodeAt(0);
+const DELETE: number = "\u007F".charCodeAt(0);
+
 function asBuffer(octets: Uint8Array): Buffer {
     return Buffer.from(octets.buffer, octets.byteOffset, octets.byteLength);
 }
@@ -23,7 +36,7 @@ function escapeByte(byte: number): string {
  */
 function utf8SequenceLength(octets: Uint8Array, index: number): number {
     const lead: number = octets[index];
-    if (lead <= 0x7F) {
+    if (lead <= DELETE) {
         return 1;
     }
     let width: number = 0;
@@ -101,11 +114,11 @@ export function rfc4515Value(octets: Uint8Array): string {
         }
         if (width === 1) {
             const byte: number = octets[index];
-            const mustEscape: boolean = (byte === 0x00)
-                || (byte === 0x28)
-                || (byte === 0x29)
-                || (byte === 0x2A)
-                || (byte === 0x5C);
+            const mustEscape: boolean = (byte === NUL)
+                || (byte === LEFT_PARENTHESIS)
+                || (byte === RIGHT_PARENTHESIS)
+                || (byte === ASTERISK)
+                || (byte === BACKSLASH);
             out += mustEscape
                 ? escapeByte(byte)
                 : String.fromCharCode(byte);
@@ -224,23 +237,27 @@ export function octetsToJSON(octets: Uint8Array): OctetsJSON {
 
 function isSafeInit(byte: number): boolean {
     if (
-        (byte === 0x00)
-        || (byte === 0x0A)
-        || (byte === 0x0D)
-        || (byte === 0x20)
-        || (byte === 0x3A)
-        || (byte === 0x3C)
+        (byte === NUL)
+        || (byte === LINE_FEED)
+        || (byte === CARRIAGE_RETURN)
+        || (byte === SPACE)
+        || (byte === COLON)
+        || (byte === LESS_THAN)
     ) {
         return false;
     }
-    return (byte >= 0x01) && (byte <= 0x7F);
+    return (byte >= START_OF_HEADING) && (byte <= DELETE);
 }
 
 function isSafeChar(byte: number): boolean {
-    if ((byte === 0x00) || (byte === 0x0A) || (byte === 0x0D)) {
+    if (
+        (byte === NUL)
+        || (byte === LINE_FEED)
+        || (byte === CARRIAGE_RETURN)
+    ) {
         return false;
     }
-    return (byte >= 0x01) && (byte <= 0x7F);
+    return (byte >= START_OF_HEADING) && (byte <= DELETE);
 }
 
 function isLdifSafe(value: Uint8Array): boolean {
