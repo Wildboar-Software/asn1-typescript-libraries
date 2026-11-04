@@ -1,11 +1,8 @@
 import type { OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import type EqualityMatcher from "../types/EqualityMatcher.mjs";
-import {
+import type {
     RoleSpecCertIdentifier,
 } from "../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifier.ta.mjs";
-import { compareGeneralName } from "@wildboar/gn";
-import compareGeneralNames from "./compareGeneralNames.mjs";
-import { Buffer } from "node:buffer";
 
 /**
  * @summary Compare two `RoleSpecCertIdentifier` values
@@ -22,33 +19,7 @@ function compareRoleSpecCertIdentifier (
     b: RoleSpecCertIdentifier,
     getEqualityMatcher?: (attributeType: OBJECT_IDENTIFIER) => EqualityMatcher | undefined,
 ): boolean {
-    if (!compareGeneralName(a.roleName, b.roleName, getEqualityMatcher)) {
-        return false;
-    }
-    if (!compareGeneralName(a.roleCertIssuer, b.roleCertIssuer, getEqualityMatcher)) {
-        return false;
-    }
-    if (Boolean(a.roleCertSerialNumber) !== Boolean(b.roleCertSerialNumber)) {
-        return false;
-    }
-    if (
-        a.roleCertSerialNumber
-        && b.roleCertSerialNumber
-        && Buffer.compare(a.roleCertSerialNumber, b.roleCertSerialNumber)
-    ) {
-        return false;
-    }
-    if (Boolean(a.roleCertLocator) !== Boolean(b.roleCertLocator)) {
-        return false;
-    }
-    if (
-        a.roleCertLocator
-        && b.roleCertLocator
-        && !compareGeneralNames(a.roleCertLocator, b.roleCertLocator, getEqualityMatcher)
-    ) {
-        return false;
-    }
-    return true;
+    return a.isEqualTo(b, getEqualityMatcher);
 }
 
 export default compareRoleSpecCertIdentifier;

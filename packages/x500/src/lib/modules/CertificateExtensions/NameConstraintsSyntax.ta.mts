@@ -10,6 +10,8 @@ import {
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
+import type { GetDistinguishedValueMatcher } from "@wildboar/dn";
+import compareGeneralSubtrees from "../../comparators/compareGeneralSubtrees.mjs";
 /**
  * @summary NameConstraintsSyntax
  * @description
@@ -91,6 +93,56 @@ export class NameConstraintsSyntax {
             _o.excludedSubtrees,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Compare this name constraints value with another
+     * @description
+     *
+     * Each of `permittedSubtrees` and `excludedSubtrees` must be present on
+     * both sides or neither. Present `GeneralSubtrees` compare in encoding
+     * order with {@link GeneralSubtree.isEqualTo}.
+     *
+     * @param other The other name constraints
+     * @param getEqualityMatcher Optional equality matcher for attribute types
+     *  inside a `directoryName`
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(
+        other: NameConstraintsSyntax,
+        getEqualityMatcher?: GetDistinguishedValueMatcher,
+    ): boolean {
+        if (Boolean(this.permittedSubtrees) !== Boolean(other.permittedSubtrees)) {
+            return false;
+        }
+        if (Boolean(this.excludedSubtrees) !== Boolean(other.excludedSubtrees)) {
+            return false;
+        }
+        if (
+            this.permittedSubtrees
+            && other.permittedSubtrees
+            && !compareGeneralSubtrees(
+                this.permittedSubtrees,
+                other.permittedSubtrees,
+                getEqualityMatcher,
+            )
+        ) {
+            return false;
+        }
+        if (
+            this.excludedSubtrees
+            && other.excludedSubtrees
+            && !compareGeneralSubtrees(
+                this.excludedSubtrees,
+                other.excludedSubtrees,
+                getEqualityMatcher,
+            )
+        ) {
+            return false;
+        }
+        return true;
     }
 }
 

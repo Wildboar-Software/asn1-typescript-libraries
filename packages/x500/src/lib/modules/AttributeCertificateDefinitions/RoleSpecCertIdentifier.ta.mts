@@ -20,6 +20,9 @@ import {
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
+import { compareBytes, type GetDistinguishedValueMatcher } from "@wildboar/dn";
+import { compareGeneralName } from "@wildboar/gn";
+import compareGeneralNames from "../../comparators/compareGeneralNames.mjs";
 /**
  * @summary RoleSpecCertIdentifier
  * @description
@@ -107,6 +110,59 @@ export class RoleSpecCertIdentifier {
             _o.roleCertLocator,
             _o._unrecognizedExtensionsList
         );
+    }
+
+    /**
+     * @summary Compare this role-specification certificate identifier with another
+     * @description
+     *
+     * `roleName` and `roleCertIssuer` compare with {@link compareGeneralName}.
+     * `roleCertSerialNumber` and `roleCertLocator` must be present on both
+     * sides or neither. Serial numbers compare octet-for-octet. Locators
+     * compare as a `GeneralNames` multiset.
+     *
+     * @param other The other role-specification certificate identifier
+     * @param getEqualityMatcher Optional equality matcher for attribute types
+     *  inside a `directoryName`
+     * @returns `true` if they match
+     * @function
+     * @public
+     */
+    public isEqualTo(
+        other: RoleSpecCertIdentifier,
+        getEqualityMatcher?: GetDistinguishedValueMatcher,
+    ): boolean {
+        if (!compareGeneralName(this.roleName, other.roleName, getEqualityMatcher)) {
+            return false;
+        }
+        if (!compareGeneralName(this.roleCertIssuer, other.roleCertIssuer, getEqualityMatcher)) {
+            return false;
+        }
+        if (Boolean(this.roleCertSerialNumber) !== Boolean(other.roleCertSerialNumber)) {
+            return false;
+        }
+        if (
+            this.roleCertSerialNumber
+            && other.roleCertSerialNumber
+            && compareBytes(this.roleCertSerialNumber, other.roleCertSerialNumber) !== 0
+        ) {
+            return false;
+        }
+        if (Boolean(this.roleCertLocator) !== Boolean(other.roleCertLocator)) {
+            return false;
+        }
+        if (
+            this.roleCertLocator
+            && other.roleCertLocator
+            && !compareGeneralNames(
+                this.roleCertLocator,
+                other.roleCertLocator,
+                getEqualityMatcher,
+            )
+        ) {
+            return false;
+        }
+        return true;
     }
 }
 
