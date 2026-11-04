@@ -50,7 +50,7 @@ export class GeneralNameTrie<V> {
             return [ needle, this.dnsRoot ];
         } else if ("directoryName" in gn && ("rdnSequence" in gn.directoryName)) {
             const needle: string[] = gn.directoryName.rdnSequence
-                .map(relativeDistinguishedNameToKey);
+                .map((rdn) => relativeDistinguishedNameToKey(rdn));
             return [ needle, this.x500Root ];
         } else if ("registeredID" in gn) {
             const needle: string[] = gn.registeredID.nodes.map((n) => n.toString());

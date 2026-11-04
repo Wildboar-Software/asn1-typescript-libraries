@@ -36,8 +36,8 @@ function matchByNameKey (
     asserted: readonly Name[],
     stored: readonly Name[],
 ): boolean {
-    const assertedKeys = asserted.map(nameToKey).sort();
-    const storedKeys = stored.map(nameToKey).sort();
+    const assertedKeys = asserted.map((name) => nameToKey(name)).sort();
+    const storedKeys = stored.map((name) => nameToKey(name)).sort();
     for (let i = 0; i < assertedKeys.length; i++) {
         if (assertedKeys[i] !== storedKeys[i]) {
             return false;
@@ -58,8 +58,8 @@ function matchInConstantTime (
     stored: readonly Name[],
     flags: number,
 ): boolean {
-    const assertedKeys = asserted.map(nameToKey);
-    const storedKeys = stored.map(nameToKey);
+    const assertedKeys = asserted.map((name) => nameToKey(name));
+    const storedKeys = stored.map((name) => nameToKey(name));
     const used: boolean[] = new Array(storedKeys.length).fill(false);
     let matched = true;
     let iterations = 0;
