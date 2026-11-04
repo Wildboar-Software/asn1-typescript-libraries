@@ -27,6 +27,27 @@ import {
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
+import {
+  ldapString,
+  octetsToJSON,
+  rfc4515Extensible,
+  type OctetsJSON,
+} from '../../textual.mjs';
+
+/**
+ * JSON encoding of {@link MatchingRuleAssertion}.
+ *
+ * `matchingRule` and `type` are decoded from UTF-8. Absent optional
+ * components are omitted. `dnAttributes` is omitted when it is not `TRUE`
+ * (the DEFAULT). `matchValue` is always `{ hex }`, plus `utf8` when the
+ * octets are well-formed UTF-8.
+ */
+export type MatchingRuleAssertionJSON = {
+  matchingRule?: string;
+  type?: string;
+  matchValue: OctetsJSON;
+  dnAttributes?: true;
+};
 
 /**
  * @summary MatchingRuleAssertion
@@ -149,6 +170,52 @@ export class MatchingRuleAssertion {
    */
   public static get _default_value_for_dnAttributes(): BOOLEAN {
     return false;
+  }
+
+  /**
+   * @summary RFC 4515 extensible match.
+   * @description
+   *
+   * Includes the surrounding parentheses: `attr:dn:rule:=value`, omitting
+   * any piece that is absent. `:dn` is written only when `dnAttributes` is
+   * `TRUE`.
+   *
+   * @returns The filter string
+   * @public
+   */
+  public toString(): string {
+    return rfc4515Extensible({
+      type_: this.type_,
+      matchingRule: this.matchingRule,
+      matchValue: this.matchValue,
+      dnAttributes: this.dnAttributes,
+    });
+  }
+
+  /**
+   * @summary JSON encoding of this extensible match.
+   * @description
+   *
+   * `matchingRule` and `type` are UTF-8 strings. Unrecognized extensions
+   * are not represented.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): MatchingRuleAssertionJSON {
+    const json: MatchingRuleAssertionJSON = {
+      matchValue: octetsToJSON(this.matchValue),
+    };
+    if (this.matchingRule) {
+      json.matchingRule = ldapString(this.matchingRule);
+    }
+    if (this.type_) {
+      json.type = ldapString(this.type_);
+    }
+    if (this.dnAttributes) {
+      json.dnAttributes = true;
+    }
+    return json;
   }
 }
 

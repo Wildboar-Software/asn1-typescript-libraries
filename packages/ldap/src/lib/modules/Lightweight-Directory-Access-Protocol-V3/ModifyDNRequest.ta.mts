@@ -22,6 +22,23 @@ import {
   _decode_RelativeLDAPDN,
   _encode_RelativeLDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta.mjs';
+import {
+  formatLdifAttribute,
+  ldapString,
+} from '../../textual.mjs';
+
+/**
+ * JSON encoding of {@link ModifyDNRequest}.
+ *
+ * `entry`, `newrdn`, and `newSuperior` are decoded from their UTF-8 octets.
+ * `newSuperior` is omitted when absent.
+ */
+export type ModifyDNRequestJSON = {
+  entry: string;
+  newrdn: string;
+  deleteoldrdn: boolean;
+  newSuperior?: string;
+};
 
 /**
  * @summary ModifyDNRequest
@@ -132,6 +149,51 @@ export class ModifyDNRequest {
       _o.newSuperior,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary LDIF moddn record (IETF RFC 2849).
+   * @description
+   *
+   * Uses `changetype: moddn`. `newsuperior` is written only when
+   * `newSuperior` is present. `deleteoldrdn` is `1` or `0`.
+   * Unrecognized extensions are omitted.
+   *
+   * @returns The LDIF record
+   * @public
+   */
+  public toString(): string {
+    const lines: string[] = [
+      formatLdifAttribute('dn', this.entry),
+      'changetype: moddn',
+      formatLdifAttribute('newrdn', this.newrdn),
+      `deleteoldrdn: ${this.deleteoldrdn ? '1' : '0'}`,
+    ];
+    if (this.newSuperior) {
+      lines.push(formatLdifAttribute('newsuperior', this.newSuperior));
+    }
+    return lines.join('\n');
+  }
+
+  /**
+   * @summary JSON encoding of this modify-DN request.
+   * @description
+   *
+   * The DNs are UTF-8 strings. Unrecognized extensions are not represented.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): ModifyDNRequestJSON {
+    const json: ModifyDNRequestJSON = {
+      entry: ldapString(this.entry),
+      newrdn: ldapString(this.newrdn),
+      deleteoldrdn: this.deleteoldrdn,
+    };
+    if (this.newSuperior) {
+      json.newSuperior = ldapString(this.newSuperior);
+    }
+    return json;
   }
 }
 

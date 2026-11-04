@@ -277,6 +277,23 @@ export class AttCertValidityPeriod {
         );
         return new AttCertValidityPeriod(new Date(startMs), new Date(endMs));
     }
+
+    /**
+     * @summary ISO 8601 time interval for this validity period
+     * @description
+     *
+     * `notBeforeTime/notAfterTime`, each an ISO 8601 instant in UTC. Both
+     * bounds are inclusive. Unrecognized extensions are omitted.
+     *
+     * @returns The interval `start/end`
+     * @function
+     * @public
+     */
+    public toString(): string {
+        const start: string = this.notBeforeTime.toISOString();
+        const end: string = this.notAfterTime.toISOString();
+        return `${start}/${end}`;
+    }
 }
 
 /**

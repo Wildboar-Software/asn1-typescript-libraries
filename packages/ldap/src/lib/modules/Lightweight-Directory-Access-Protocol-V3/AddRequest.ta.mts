@@ -20,6 +20,21 @@ import {
   _decode_AttributeList,
   _encode_AttributeList,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeList.ta.mjs';
+import {
+  formatLdifAttribute,
+  ldapString,
+} from '../../textual.mjs';
+import type { PartialAttributeJSON } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
+
+/**
+ * JSON encoding of {@link AddRequest}.
+ *
+ * `entry` is the DN decoded from its UTF-8 octets.
+ */
+export type AddRequestJSON = {
+  entry: string;
+  attributes: PartialAttributeJSON[];
+};
 
 /**
  * @summary AddRequest
@@ -101,6 +116,47 @@ export class AddRequest {
       _o.attributes,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary LDIF add record (IETF RFC 2849).
+   * @description
+   *
+   * `dn`, `changetype: add`, then one line per attribute value. Attributes
+   * with no values are omitted. Unrecognized extensions are omitted.
+   *
+   * @returns The LDIF record
+   * @public
+   */
+  public toString(): string {
+    const lines: string[] = [
+      formatLdifAttribute('dn', this.entry),
+      'changetype: add',
+    ];
+    for (const attribute of this.attributes) {
+      const text: string = attribute.toString();
+      if (text.length > 0) {
+        lines.push(text);
+      }
+    }
+    return lines.join('\n');
+  }
+
+  /**
+   * @summary JSON encoding of this add request.
+   * @description
+   *
+   * `entry` is the DN as a UTF-8 string. Unrecognized extensions are not
+   * represented. Empty attribute value sets are kept.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): AddRequestJSON {
+    return {
+      entry: ldapString(this.entry),
+      attributes: this.attributes.map((attribute) => attribute.toJSON()),
+    };
   }
 }
 

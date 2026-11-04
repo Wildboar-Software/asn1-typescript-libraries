@@ -24,6 +24,23 @@ import {
   _decode_AttributeValue,
   _encode_AttributeValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.mjs';
+import {
+  formatLdifAttributes,
+  ldapString,
+  octetsToJSON,
+  type OctetsJSON,
+} from '../../textual.mjs';
+
+/**
+ * JSON encoding of {@link PartialAttribute}.
+ *
+ * `type` is the attribute description decoded from UTF-8. Each value is
+ * `{ hex }`, plus `utf8` when the octets are well-formed UTF-8.
+ */
+export type PartialAttributeJSON = {
+  type: string;
+  vals: OctetsJSON[];
+};
 
 /**
  * @summary PartialAttribute
@@ -104,6 +121,41 @@ export class PartialAttribute {
       _o.vals,
       _o._unrecognizedExtensionsList
     );
+  }
+
+  /**
+   * @summary LDIF lines for this attribute (IETF RFC 2849).
+   * @description
+   *
+   * One `type: value` or `type:: base64` line per value. Non-ASCII and
+   * other values that are not an LDIF SAFE-STRING are base64. A value set
+   * with no members produces an empty string: LDIF cannot spell a
+   * zero-value attribute. Unrecognized extensions are omitted.
+   *
+   * @returns The LDIF lines joined by `\n`
+   * @public
+   */
+  public toString(): string {
+    return formatLdifAttributes(ldapString(this.type_), this.vals);
+  }
+
+  /**
+   * @summary JSON encoding of this attribute.
+   * @description
+   *
+   * `type` is the attribute description as a UTF-8 string. Unrecognized
+   * extensions are not represented. An empty `vals` array is kept, which
+   * matters for `typesOnly` search results and for modify delete/replace
+   * of a whole attribute.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): PartialAttributeJSON {
+    return {
+      type: ldapString(this.type_),
+      vals: this.vals.map((value) => octetsToJSON(value)),
+    };
   }
 }
 

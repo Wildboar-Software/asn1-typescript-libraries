@@ -21,6 +21,23 @@ import {
   _decode_PartialAttribute,
   _encode_PartialAttribute,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
+import {
+  foldLdifLine,
+  ldapString,
+  ldifModifyOperation,
+} from '../../textual.mjs';
+import type { PartialAttributeJSON } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttribute.ta.mjs';
+
+/**
+ * JSON encoding of one {@link ModifyRequest_changes_change}.
+ *
+ * `operation` is `add`, `delete`, or `replace`. An unrecognized
+ * enumeration value is left as its number.
+ */
+export type ModifyRequest_changes_changeJSON = {
+  operation: 'add' | 'delete' | 'replace' | number;
+  modification: PartialAttributeJSON;
+};
 
 /**
  * @summary ModifyRequest_changes_change
@@ -107,6 +124,52 @@ export class ModifyRequest_changes_change {
    */
 
   public static _enum_for_operation: typeof _enum_for_ModifyRequest_changes_change_operation = _enum_for_ModifyRequest_changes_change_operation;
+
+  /**
+   * @summary One LDIF modify change, without the trailing separator.
+   * @description
+   *
+   * `add`, `delete`, or `replace`, then the attribute lines. An empty
+   * value set produces only the operation line, which is how LDIF deletes
+   * or replaces an entire attribute. The `-` separator belongs between
+   * changes and is written by {@link ModifyRequest.toString}.
+   *
+   * @returns The change text
+   * @public
+   */
+  public toString(): string {
+    const description: string = ldapString(this.modification.type_);
+    const header: string = foldLdifLine(
+      `${ldifModifyOperation(this.operation)}: ${description}`,
+    );
+    const values: string = this.modification.toString();
+    return (values.length > 0) ? `${header}\n${values}` : header;
+  }
+
+  /**
+   * @summary JSON encoding of this change.
+   * @description
+   *
+   * Unrecognized extensions are not represented.
+   *
+   * @returns The JSON encoding
+   * @public
+   */
+  public toJSON(): ModifyRequest_changes_changeJSON {
+    const operation: ModifyRequest_changes_changeJSON['operation'] = (
+      (this.operation === 0)
+        ? 'add'
+        : (this.operation === 1)
+          ? 'delete'
+          : (this.operation === 2)
+            ? 'replace'
+            : this.operation
+    );
+    return {
+      operation,
+      modification: this.modification.toJSON(),
+    };
+  }
 }
 
 
