@@ -27,6 +27,19 @@ function subordinate (label: string): ListResultData_listInfo_subordinates_Item 
     );
 }
 
+/** `wrappers` contained results around `leaf`, not counting `leaf`. */
+function wrap (wrappers: number, leaf: ListResult): ListResult {
+    let current: ListResult = leaf;
+    for (let i = 0; i < wrappers; i++) {
+        current = {
+            unsigned: {
+                uncorrelatedListInfo: [current],
+            },
+        };
+    }
+    return current;
+}
+
 function listInfo (
     items: ListResultData_listInfo_subordinates_Item[],
 ): ListResult {
@@ -142,5 +155,31 @@ describe("iterateListResultSubordinates", () => {
             sharedItem,
             sharedItem,
         ]);
+    });
+
+    it("yields an entry nested 100 ListResults deep", () => {
+        const within = subordinate("within");
+        const result = wrap(99, listInfo([within]));
+        expect([...iterateListResultSubordinates(result)]).toEqual([within]);
+    });
+
+    it("does not enter a 101st contained ListResult", () => {
+        const beyond = subordinate("beyond");
+        const result = wrap(100, listInfo([beyond]));
+        expect([...iterateListResultSubordinates(result)]).toEqual([]);
+    });
+
+    it("keeps entries at the depth cap when a sibling chain is deeper", () => {
+        const kept = subordinate("kept");
+        const dropped = subordinate("dropped");
+        const result: ListResult = {
+            unsigned: {
+                uncorrelatedListInfo: [
+                    wrap(98, listInfo([kept])),
+                    wrap(99, listInfo([dropped])),
+                ],
+            },
+        };
+        expect([...iterateListResultSubordinates(result)]).toEqual([kept]);
     });
 });
