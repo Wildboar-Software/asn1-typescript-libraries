@@ -56,7 +56,7 @@ export type AttributeJSON = {
  * ```
  *
  */
-export class Attribute implements Iterable<_Element> {
+export class Attribute {
     /**
      * @summary `type_`.
      * @public
@@ -161,7 +161,7 @@ export class Attribute implements Iterable<_Element> {
      * @method
      * @generator
      */
-    public *[Symbol.iterator](): IterableIterator<_Element> {
+    public *iterValuesOmittingContexts(): IterableIterator<_Element> {
         yield* this.values;
         if (this.valuesWithContext) {
             for (const item of this.valuesWithContext) {
