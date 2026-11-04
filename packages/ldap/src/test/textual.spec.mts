@@ -127,6 +127,13 @@ describe("LDIF", () => {
         expect(folded.replace(/\n /g, "")).toBe(
             "cn: " + "a".repeat(71) + " " + "b".repeat(10),
         );
+        const twoSpaces = utf8("a".repeat(70) + "  " + "b".repeat(10));
+        const foldedTwo = formatLdifAttribute("cn", twoSpaces);
+        expect(foldedTwo.split("\n").every((physical) => !physical.endsWith(" ")))
+            .toBe(true);
+        expect(foldedTwo.replace(/\n /g, "")).toBe(
+            "cn: " + "a".repeat(70) + "  " + "b".repeat(10),
+        );
     });
 
     it("stringifies an attribute, an add, and a search entry", () => {

@@ -239,12 +239,12 @@ function isLdifSafe(value: Uint8Array): boolean {
 
 /**
  * How many characters of `line` starting at `index` belong on this physical
- * line. RFC 2849 folds at 76. A SPACE at the end of a physical line is
- * skipped so it is not stripped before unfolding (note 8).
+ * line. RFC 2849 folds at 76. Every SPACE at the end of the slice is left
+ * for the next line so a run of two or more spaces is not stripped (note 8).
  */
 function ldifFoldTake(line: string, index: number, max: number): number {
     let take: number = Math.min(max, line.length - index);
-    if (
+    while (
         (take > 1)
         && (line.charCodeAt(index + take - 1) === SPACE)
     ) {
@@ -253,10 +253,14 @@ function ldifFoldTake(line: string, index: number, max: number): number {
     return take;
 }
 
+function ldifLineEndsWithSpace(folded: string): boolean {
+    return folded.split("\n").some((physical) => physical.endsWith(" "));
+}
+
 /**
  * Fold an LDIF line at 76 characters, per IETF RFC 2849. Continuation lines
- * begin with a single space, which a parser removes. A fold is moved one
- * character earlier when it would leave a SPACE at the end of a physical
+ * begin with a single space, which a parser removes. A fold is moved earlier
+ * when it would leave one or more SPACE characters at the end of a physical
  * line.
  *
  * @param line One logical LDIF line
@@ -297,7 +301,10 @@ export function formatLdifAttribute(
             ? ""
             : asBuffer(value).toString("latin1");
         const separator: string = (text.length === 0) ? "" : " ";
-        return foldLdifLine(`${description}:${separator}${text}`);
+        const folded: string = foldLdifLine(`${description}:${separator}${text}`);
+        if (!ldifLineEndsWithSpace(folded)) {
+            return folded;
+        }
     }
     return foldLdifLine(
         `${description}:: ${asBuffer(value).toString("base64")}`,
